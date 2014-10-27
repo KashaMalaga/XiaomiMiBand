@@ -156,7 +156,7 @@ Dirección: %2$s"</string>
     <string name="exit_login_1">"Sal de tu cuenta de Mi?"</string>
     <string name="failed_enable_bt">"Activar Bluetooth ahora."</string>
     <string name="feedback">"Sugerencias"</string>
-    <string name="female">"Hembra"</string>
+    <string name="female">"Mujer"</string>
     <string name="find_bracelet">"Encuentra banda"</string>
     <string name="find_bracelet_warning">"Encontrar tu Mi Banda consume más batería."</string>
     <string name="finding_bracelet">"Búsqueda..."</string>
@@ -304,7 +304,7 @@ Dirección: %2$s"</string>
     <string name="look_device_list">"Descubre bandas cercanas"</string>
     <string name="main_ui_share_tips">"Se entrenó %1$s%2$s hoy. %3$s"</string>
     <string name="main_ui_sleep_share_tips">"Sueño ligero: %1$s %2$s se durmió en %3$s | desperté a las %4$s"</string>
-    <string name="male">"Macho"</string>
+    <string name="male">"Hombre"</string>
     <string name="marathon_format_0">" sobre %1$s maratones."</string>
     <string name="marathon_format_1">" más de %1$s maratones."</string>
     <string name="mili_exit_login_info">"Sal de tu cuenta de Mi?"</string>
