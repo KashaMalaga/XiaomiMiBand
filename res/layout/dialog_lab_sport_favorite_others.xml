@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/bg_item" android:paddingLeft="@dimen/mili_margin" android:paddingRight="@dimen/mili_margin" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:id="@id/favorite_user_sport_name" android:padding="@dimen/mili_margin" android:layout_width="fill_parent" android:layout_height="100.0dip" android:hint="@string/lab_factory_sport_vote_others_hint" android:layout_centerVertical="true" />
+    <include android:layout_below="@id/favorite_user_sport_name" layout="@layout/dialog_bottom_bar" />
+</LinearLayout>

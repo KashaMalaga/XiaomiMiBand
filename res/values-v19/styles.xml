@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppBaseTheme" parent="@android:style/Theme.Holo.Light.NoActionBar" />
+    <style name="AppThemeTint" parent="@style/AppTheme">
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+    <style name="DimPanelTint" parent="@style/DimPanel">
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+    <style name="MenuPanelTint" parent="@style/MenuPanel">
+        <item name="android:fitsSystemWindows">false</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+</resources>

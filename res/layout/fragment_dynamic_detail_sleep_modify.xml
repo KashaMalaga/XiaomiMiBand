@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/dialog_empty_area" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:background="@color/main_ui_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/main_ui_content_size_2" android:textColor="@color/main_ui_content_color" android:id="@id/modify_sleep_title" android:paddingLeft="@dimen/mili_margin" android:paddingRight="@dimen/mili_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="6.0dip" />
+        <View android:background="@color/item_stroke" android:layout_width="fill_parent" android:layout_height="@dimen/round_bg_stroke" />
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="@dimen/wheel_hight">
+            <include layout="@layout/wheel_left_band" />
+            <LinearLayout android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:textSize="12.0sp" android:textColor="@color/bg_color_blue" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/modify_sleep_today_yesterday" android:layout_width="55.0dip" android:layout_height="wrap_content" />
+                    <kankan.wheel.widget.WheelView android:id="@id/modify_sleep_time_hour" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                </FrameLayout>
+                <View android:background="@color/item_stroke" android:layout_width="@dimen/round_bg_stroke" android:layout_height="fill_parent" />
+                <kankan.wheel.widget.WheelView android:id="@id/modify_sleep_time_minute" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="@color/item_stroke" android:layout_width="fill_parent" android:layout_height="@dimen/round_bg_stroke" />
+        <cn.com.smartdevices.bracelet.ui.widget.DimPanelBottomBar android:layout_width="fill_parent" android:layout_height="wrap_content" app:left_text="@string/cancel" app:right_text="@string/confirm" app:left_text_color="@color/button_cancel_color" app:right_text_color="@color/button_confirm_color" xmlns:app="http://schemas.android.com/apk/res-auto" />
+    </LinearLayout>
+</LinearLayout>

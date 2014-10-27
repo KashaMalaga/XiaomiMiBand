@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/bg_color_blue" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <cn.com.smartdevices.bracelet.chart.deprecated.DynamicDetailChartViewOld android:id="@id/day_active_chart" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="23.5dip" android:layout_marginRight="23.5dip" />
+</FrameLayout>

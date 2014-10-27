@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/dialog_empty_area" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:background="#fff4f5f5" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/info_content_size" android:textColor="@color/main_ui_content_color" android:paddingLeft="@dimen/mili_margin" android:paddingRight="@dimen/mili_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/setting_dlg_padding_top" android:layout_marginBottom="5.0dip" android:text="@string/select_image" />
+            <include layout="@layout/split_line_with_margin" />
+            <FrameLayout android:id="@id/select_image_camera_area" android:background="@drawable/bg_item" android:paddingLeft="@dimen/mili_margin" android:paddingRight="@dimen/mili_margin" android:clickable="true" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus">
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/info_gender_male" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/arrow_single_choice" />
+                <TextView android:textSize="@dimen/mili_normal_txt_size" android:textColor="@color/main_ui_title_color" android:layout_gravity="center_vertical" android:id="@id/info_gender_male_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/select_from_camera" />
+            </FrameLayout>
+            <include layout="@layout/split_line_with_margin" />
+            <FrameLayout android:id="@id/select_image_local_area" android:background="@drawable/bg_item" android:paddingLeft="@dimen/mili_margin" android:paddingRight="@dimen/mili_margin" android:clickable="true" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus">
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/info_gender_female" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/arrow_single_choice" />
+                <TextView android:textSize="@dimen/mili_normal_txt_size" android:textColor="@color/main_ui_title_color" android:layout_gravity="center_vertical" android:id="@id/info_gender_female_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/select_from_local" />
+            </FrameLayout>
+            <include layout="@layout/split_line_with_margin" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

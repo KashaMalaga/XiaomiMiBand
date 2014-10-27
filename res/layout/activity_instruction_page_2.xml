@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="85.0dip">
+        <com.xiaomi.hm.view.GifView android:id="@id/gif_view" android:layout_width="71.0dip" android:layout_height="311.59375dip" android:src="@drawable/intruction_2_1" />
+        <View android:id="@id/tip_bg" android:background="@drawable/intruction_tip_bg" android:layout_width="149.29999dip" android:layout_height="100.0dip" android:layout_marginLeft="14.0dip" android:layout_toRightOf="@id/gif_view" android:layout_centerVertical="true" />
+        <TextSwitcher android:id="@id/tip" android:layout_width="100.0dip" android:layout_height="100.0dip" android:layout_alignRight="@id/tip_bg" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</FrameLayout>

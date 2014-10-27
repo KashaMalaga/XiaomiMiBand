@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:id="@id/mili_rebind_top_area" android:background="@color/bg_color_grey" android:clickable="true" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <TextView android:id="@id/home_back" android:text="@string/unbind" style="@style/BackButton" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/not_binded" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_gravity="bottom" android:background="#fff4f5f5" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="250.0dip">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingLeft="7.0dip" android:paddingRight="7.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="14.0sp" android:textColor="@android:color/black" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:layout_marginBottom="@dimen/dialog_title_margin_bottom" android:text="@string/mili_unbind_question" />
+            <include layout="@layout/split_line" />
+            <TextView android:textSize="@dimen/info_content_size" android:textColor="#ff919394" android:gravity="center" android:id="@id/mili_unbind_info" android:paddingLeft="0.0dip" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:text="@string/mili_unbind_question_content" />
+            <TextView android:textSize="@dimen/info_content_size" android:textColor="#ff919394" android:gravity="center" android:id="@id/mili_unbind_info_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:text="@string/mili_unbind_question_content_1" />
+        </LinearLayout>
+        <cn.com.smartdevices.bracelet.ui.widget.DimPanelBottomBar android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:layout_alignParentBottom="true" app:left_text="@string/unbind_short" app:right_text="@string/cancel" app:left_text_color="@color/button_confirm_color" app:right_text_color="@color/button_cancel_color" xmlns:app="http://schemas.android.com/apk/res-auto" />
+    </RelativeLayout>
+</LinearLayout>

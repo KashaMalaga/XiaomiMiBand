@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/main_ui_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/home_back" android:background="@color/bg_color_blue" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_h" android:text="@string/action_pop_weixin_enter" style="@style/BackButton" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/bind_weixin_new_img_ll" android:background="@color/bg_color_blue" android:paddingLeft="@dimen/mili_margin" android:paddingRight="@dimen/mili_margin" android:layout_width="fill_parent" android:layout_height="321.0dip" android:layout_below="@id/home_back">
+        <ImageView android:id="@id/bind_weixin_new_help_iv" android:background="@drawable/bind_weixin_help_new" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/app_name" />
+        <TextView android:textSize="@dimen/info_content_size" android:textColor="@color/content_color" android:gravity="center" android:id="@id/bind_weixin_new_tips_tvx" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="19.0dip" android:text="@string/bind_weixin_title" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/info_content_size" android:textColor="#ff898989" android:gravity="center" android:id="@id/bind_weixin_new_tips_tv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="70.0dip" android:text="@string/bind_weixin_new_tips" android:layout_below="@id/bind_weixin_new_img_ll" />
+    <Button android:textSize="@dimen/click_button_text_size" android:textColor="#ff585858" android:layout_gravity="center_horizontal" android:id="@id/start_weixin_btn" android:background="@drawable/click_btn_bg_3" android:layout_width="@dimen/click_button_w" android:layout_height="@dimen/click_button_h" android:layout_marginLeft="@dimen/mili_margin" android:layout_marginRight="@dimen/mili_margin" android:layout_marginBottom="@dimen/single_button_padding" android:text="@string/action_pop_weixin_enter" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    <LinearLayout android:gravity="bottom" android:orientation="vertical" android:id="@id/mask_view" android:background="@color/bg_color_orange" android:visibility="gone" android:clickable="false" android:layout_width="fill_parent" android:layout_height="54.0dip" android:layout_alignParentBottom="true">
+        <LinearLayout android:gravity="center" android:background="@color/bg_color_orange" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textColor="@color/content_color_brighter" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/bin_weixin_device_not_connect" android:drawableLeft="@drawable/info" android:drawablePadding="5.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

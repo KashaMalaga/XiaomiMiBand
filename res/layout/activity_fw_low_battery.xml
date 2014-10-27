@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/bg_color_blue" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="27.0sp" android:textColor="@android:color/white" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="47.0dip" android:text="@string/fw_low_battery_title" />
+    <TextView android:textSize="12.0sp" android:textColor="#ffbbd9e9" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="13.0dip" android:text="@string/fw_low_battery_tips" />
+    <ImageView android:layout_gravity="center_horizontal" android:background="@drawable/fw_low_battery_icon" android:layout_width="131.0dip" android:layout_height="131.0dip" android:layout_marginTop="88.0dip" android:contentDescription="@string/app_name" />
+    <TextView android:textSize="12.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/fw_low_battery_help_tv" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="19.0dip" android:text="@string/fw_low_battery_view_help" android:textIsSelectable="false" />
+    <Button android:textSize="@dimen/click_button_text_size" android:textColor="@android:color/white" android:layout_gravity="bottom" android:id="@id/fw_low_battery_confirm_btn" android:background="@drawable/click_btn_bg" android:layout_width="fill_parent" android:layout_height="@dimen/click_button_h" android:layout_marginLeft="@dimen/single_button_padding" android:layout_marginTop="172.0dip" android:layout_marginRight="@dimen/single_button_padding" android:layout_marginBottom="@dimen/single_button_padding" android:text="@string/confirm" />
+</LinearLayout>

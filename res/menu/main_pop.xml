@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/action_pop_my_bracelet" android:title="@string/action_pop_my_bracelet" />
+    <item android:id="@id/action_pop_smart_alarms" android:title="@string/action_pop_smart_alarms" />
+    <item android:id="@id/action_pop_person_info" android:title="@string/action_pop_person_info" />
+    <item android:id="@id/action_pop_screen_unlock" android:title="@string/action_pop_unlock_screen" />
+    <item android:id="@id/action_pop_about" android:title="@string/action_pop_about" />
+</menu>

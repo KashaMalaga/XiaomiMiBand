@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="@color/item_bg_pressed" />
+            <stroke android:width="@dimen/round_bg_stroke" android:color="@color/item_stroke" />
+            <corners android:radius="@dimen/btn_bg_radius" />
+            <padding android:left="@dimen/round_bg_stroke" android:top="@dimen/round_bg_stroke" android:right="@dimen/round_bg_stroke" android:bottom="@dimen/round_bg_stroke" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="@android:color/white" />
+            <stroke android:width="@dimen/round_bg_stroke" android:color="@color/item_stroke" />
+            <corners android:radius="@dimen/btn_bg_radius" />
+            <padding android:left="@dimen/round_bg_stroke" android:top="@dimen/round_bg_stroke" android:right="@dimen/round_bg_stroke" android:bottom="@dimen/round_bg_stroke" />
+        </shape>
+    </item>
+</selector>

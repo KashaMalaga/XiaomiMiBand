@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/ruler_bg" android:layout_width="fill_parent" android:layout_height="@dimen/ruler_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <cn.com.smartdevices.bracelet.view.RulerScrollView android:scrollbarThumbHorizontal="@color/trans" android:id="@id/ruler_scroller_view" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/ruler_indicator" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <TextView android:textSize="@dimen/info_title_size" android:textColor="@color/normal" android:gravity="center" android:id="@id/ruler_indicator_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="sans-serif-thin" />
+        <TextView android:textSize="@dimen/info_content_size" android:textColor="@color/normal" android:gravity="center" android:id="@id/ruler_indicator_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cm" />
+    </LinearLayout>
+</RelativeLayout>

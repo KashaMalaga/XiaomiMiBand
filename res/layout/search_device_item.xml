@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/bg_item" android:layout_width="fill_parent" android:layout_height="57.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="56.0dip">
+        <TextView android:textSize="20.0sp" android:textColor="@android:color/black" android:ellipsize="middle" android:gravity="center_vertical" android:id="@id/searched_device_item_mac_tv" android:paddingLeft="23.0dip" android:layout_width="wrap_content" android:layout_height="57.0dip" android:minWidth="125.0dip" android:text="00:00:00" android:singleLine="true" />
+        <View android:background="@color/item_stroke" android:layout_width="@dimen/round_bg_stroke" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="18.0sp" android:textColor="@color/main_ui_content_color" android:id="@id/searched_device_item_signal_tv" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="xxxx" />
+            <View android:id="@id/searched_device_item_signal_bar" android:background="#ff16af50" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_marginRight="20.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+    <include layout="@layout/split_line_with_margin" />
+</LinearLayout>

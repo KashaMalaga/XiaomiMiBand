@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="@dimen/ruler_item_w" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/ruler_picece" android:background="@drawable/ruler_item_bg" android:layout_width="@dimen/ruler_item_w" android:layout_height="wrap_content" android:scaleType="fitXY" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="@dimen/ruler_item_w" android:layout_height="wrap_content" android:layout_below="@id/ruler_picece">
+        <TextView android:textSize="@dimen/info_content_size" android:textColor="@color/content_color" android:gravity="center" android:id="@id/ruler_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fontFamily="sans-serif-thin" />
+    </LinearLayout>
+</RelativeLayout>

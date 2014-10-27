@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="fortune">
+        <item>达成目标不难，难的是每天达成目标</item>
+        <item>每天我都在创造自己的新纪录</item>
+        <item>你只看到我的成绩，我却默默享受健康的成果</item>
+        <item>失败的人找借口，而我只会全力达成目标</item>
+        <item>平凡的事情持续做，结果将会不平凡</item>
+        <item>没有惊人的天赋，但可以每天给自己一个胜利</item>
+        <item>我不断的战胜自己，只为了那个明天更好的我</item>
+        <item>水滴石穿，我要把鞋底走穿</item>
+        <item>成功的道理很简单，坚持坚持再坚持</item>
+    </string-array>
+    <string-array name="months">
+        <item>一月</item>
+        <item>二月</item>
+        <item>三月</item>
+        <item>四月</item>
+        <item>五月</item>
+        <item>六月</item>
+        <item>七月</item>
+        <item>八月</item>
+        <item>九月</item>
+        <item>十月</item>
+        <item>十一月</item>
+        <item>十二月</item>
+    </string-array>
+    <string-array name="select_days_simple">
+        <item>只响一次</item>
+        <item>每天</item>
+        <item>周一至周五</item>
+        <item>自定义</item>
+    </string-array>
+    <string-array name="weather_aqi_descriptions">
+        <item>优</item>
+        <item>良</item>
+        <item>轻度污染</item>
+        <item>中度污染</item>
+        <item>重度污染</item>
+        <item>严重污染</item>
+    </string-array>
+    <string-array name="weeks">
+        <item>周一</item>
+        <item>周二</item>
+        <item>周三</item>
+        <item>周四</item>
+        <item>周五</item>
+        <item>周六</item>
+        <item>周日</item>
+    </string-array>
+    <string-array name="weeks_short">
+        <item>一</item>
+        <item>二</item>
+        <item>三</item>
+        <item>四</item>
+        <item>五</item>
+        <item>六</item>
+        <item>日</item>
+    </string-array>
+</resources>

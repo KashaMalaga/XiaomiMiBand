@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ff3c444f" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/header" android:layout_width="fill_parent" android:layout_height="45.0dip">
+        <TextView android:textSize="15.0sp" android:textColor="#fff1f1f2" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/home_back" android:paddingLeft="13.0dip" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/instruction_title" android:drawableLeft="@drawable/btn_prev_selector" android:drawablePadding="10.0dip" />
+    </FrameLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v4.view.ViewPager android:id="@id/view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" />
+        <cn.com.smartdevices.bracelet.ui.widget.CirclePageIndicator android:layout_gravity="bottom|center" android:id="@id/indicator" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="42.0dip" app:strokeWidth="0.0dip" app:fillColor="#ffffffff" app:pageColor="#33ffffff" app:radius="2.5dip" app:gap="4.5999756dip" xmlns:app="http://schemas.android.com/apk/res-auto" />
+    </FrameLayout>
+</LinearLayout>

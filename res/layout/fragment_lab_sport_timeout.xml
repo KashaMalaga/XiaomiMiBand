@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/dialog_empty_area" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:background="#fff4f5f5" android:paddingTop="@dimen/setting_dlg_padding_top" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/info_content_size" android:textColor="@color/main_ui_content_color" android:gravity="center" android:id="@id/sport_timeout_extra_notice_content" android:paddingLeft="@dimen/mili_margin" android:paddingRight="@dimen/mili_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/lab_factory_sport_finish_desc" />
+        <include layout="@layout/split_line_with_margin" />
+        <TextView android:textSize="@dimen/info_content_size" android:textColor="@color/main_ui_content_color" android:gravity="center" android:id="@id/sport_timeout_notice_content" android:paddingLeft="@dimen/mili_margin" android:paddingTop="10.0dip" android:paddingRight="@dimen/mili_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="27.0dip" android:text="@string/lab_factory_sport_timeout" />
+        <TextView android:textSize="16.0sp" android:textColor="#ff737373" android:gravity="center" android:id="@id/sport_timeout_operation_bn" android:background="@drawable/click_btn_bg_3" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="@dimen/mili_margin" android:layout_marginRight="@dimen/mili_margin" android:layout_marginBottom="26.699982dip" android:text="@string/confirm" android:layout_alignParentBottom="true" />
+        <cn.com.smartdevices.bracelet.ui.widget.DimPanelBottomBar android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/mili_margin" android:layout_marginRight="@dimen/mili_margin" android:layout_marginBottom="25.0dip" android:layout_alignParentBottom="true" app:left_text="@string/confirm" app:left_text_color="#ff737373" xmlns:app="http://schemas.android.com/apk/res-auto" />
+    </LinearLayout>
+</LinearLayout>

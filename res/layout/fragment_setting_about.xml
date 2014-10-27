@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:background="@color/bg_color_blue" android:layout_width="fill_parent" android:layout_height="350.0dip">
+                <TextView android:id="@id/home_back" android:text="@string/about" style="@style/BackButton" />
+                <ImageView android:id="@id/logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="120.0dip" android:src="@drawable/ic_about_logo" android:layout_centerHorizontal="true" />
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:minWidth="85.0dip" android:layout_below="@id/logo" android:layout_centerHorizontal="true">
+                    <LinearLayout android:id="@id/setting_about_bracelet_id" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_about_app" />
+                        <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:id="@id/setting_about_version_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="           " />
+                    </LinearLayout>
+                    <LinearLayout android:id="@id/setting_about_bracelet_firmware" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip">
+                        <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setting_about_fw" />
+                        <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:id="@id/setting_about_bracelet_firmware_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="..." />
+                    </LinearLayout>
+                    <LinearLayout android:id="@id/setting_about_bracelet_bluetooth_value" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip">
+                        <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bluetooth" />
+                        <TextView android:textSize="12.0sp" android:textColor="#ffffffff" android:id="@id/setting_about_bracelet_bluetooth_address" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="0.0dip">
+                <LinearLayout android:id="@id/setting_feedback" android:background="@drawable/bg_item" android:paddingLeft="@dimen/mili_margin" android:paddingTop="15.0dip" android:paddingRight="@dimen/mili_margin" android:paddingBottom="15.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus">
+                    <TextView android:textSize="15.0sp" android:textColor="#ff4d4d4d" android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/feedback" android:layout_weight="1.0" />
+                    <ImageView android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_indicator_right_arrow" />
+                </LinearLayout>
+                <include android:id="@id/split_line_1" layout="@layout/split_line_with_margin" />
+                <LinearLayout android:id="@id/setting_about_website" android:background="@drawable/bg_item" android:paddingLeft="@dimen/mili_margin" android:paddingTop="15.0dip" android:paddingRight="@dimen/mili_margin" android:paddingBottom="15.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus">
+                    <TextView android:textSize="15.0sp" android:textColor="#ff4d4d4d" android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/visit_micom" android:layout_weight="1.0" />
+                    <ImageView android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_indicator_right_arrow" />
+                </LinearLayout>
+                <include android:id="@id/split_line_0" layout="@layout/split_line_with_margin" />
+                <LinearLayout android:id="@id/setting_check_apk_upgrade" android:background="@drawable/bg_item" android:paddingLeft="@dimen/mili_margin" android:paddingTop="15.0dip" android:paddingRight="@dimen/mili_margin" android:paddingBottom="15.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus">
+                    <TextView android:textSize="15.0sp" android:textColor="#ff4d4d4d" android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/check_upgrade" android:layout_weight="1.0" />
+                    <ImageView android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_indicator_right_arrow" />
+                </LinearLayout>
+                <include android:id="@id/split_line_0" layout="@layout/split_line_with_margin" />
+                <LinearLayout android:id="@id/setting_about_user_agreement" android:background="@drawable/bg_item" android:paddingLeft="@dimen/mili_margin" android:paddingTop="15.0dip" android:paddingRight="@dimen/mili_margin" android:paddingBottom="15.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus">
+                    <TextView android:textSize="15.0sp" android:textColor="#ff4d4d4d" android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/user_agreement" android:layout_weight="1.0" />
+                    <ImageView android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_indicator_right_arrow" />
+                </LinearLayout>
+                <include android:id="@id/split_line_0" layout="@layout/split_line_with_margin" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

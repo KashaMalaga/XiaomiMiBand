@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/unlock_screen_header_fl" android:background="@color/bg_color_blue" android:layout_width="fill_parent" android:layout_height="352.0dip">
+        <TextView android:id="@id/unlock_screen_home_back" android:text="@string/action_pop_unlock_screen" style="@style/BackButton" />
+        <ImageView android:background="@drawable/unlock_screen_bg" android:layout_width="207.0dip" android:layout_height="245.0dip" android:layout_marginLeft="47.0dip" android:layout_marginTop="66.0dip" android:contentDescription="@string/app_name" />
+        <TextView android:textSize="14.0sp" android:textColor="#ffbbd9e9" android:gravity="center" android:layout_gravity="bottom" android:id="@id/unlock_screen_tips_tv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:text="@string/unlock_screen_help_tips" />
+    </FrameLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:id="@id/not_unlock_with_bracelet_ll" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textColor="#ffc5c5c5" android:id="@id/unlock_screen_set_password_tips" android:paddingLeft="@dimen/mili_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="34.0dip" android:layout_marginBottom="5.0dip" android:text="@string/unlock_screen_set_password_tips_set" />
+            <include layout="@layout/split_line_with_margin" />
+            <LinearLayout android:id="@id/unlock_screen_set_password_ll" android:background="@drawable/bg_item" android:paddingLeft="@dimen/mili_margin" android:paddingTop="6.0dip" android:paddingRight="@dimen/mili_margin" android:paddingBottom="6.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus" android:minHeight="@dimen/item_height">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:id="@id/unlock_screen_set_password_tv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/unlock_screen_set_password" style="@style/ListItemTitleText" />
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="9.0dip" android:text="" style="@style/ListItemValueText" />
+                <ImageView android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_indicator_right_arrow" />
+            </LinearLayout>
+            <include layout="@layout/split_line_with_margin" />
+            <TextView android:textColor="#ffc5c5c5" android:paddingLeft="@dimen/mili_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="34.0dip" android:layout_marginBottom="5.0dip" android:text="@string/unlock_screen_set_use_bracelet_tips" />
+            <include layout="@layout/split_line_with_margin" />
+            <LinearLayout android:id="@id/unlock_screen_set_unlock_ll" android:background="@drawable/bg_item" android:paddingLeft="@dimen/mili_margin" android:paddingTop="6.0dip" android:paddingRight="@dimen/mili_margin" android:paddingBottom="6.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus" android:minHeight="@dimen/item_height">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:id="@id/unlock_screen_set_unlock_tv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/unlock_screen_set_use_bracelet" style="@style/ListItemTitleText" />
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="9.0dip" android:text="" style="@style/ListItemValueText" />
+                <ImageView android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_indicator_right_arrow" />
+            </LinearLayout>
+            <include layout="@layout/split_line_with_margin" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/has_unlock_with_bracelet_ll" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="15.0sp" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="76.0dip" android:layout_marginBottom="13.0dip" android:text="@string/unlock_screen_set_success" />
+            <include layout="@layout/split_line_with_margin" />
+            <TextView android:textColor="#ffc5c5c5" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="13.0dip" android:text="@string/unlock_screen_modify_unlock" />
+            <TextView android:textColor="#ff60ace7" android:gravity="center" android:id="@id/unlock_screen_invalid_tv" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="50.0dip" android:text="@string/unlock_screen_invalid" />
+        </LinearLayout>
+        <LinearLayout android:gravity="bottom" android:orientation="vertical" android:id="@id/unlock_screen_mask_view" android:background="#90ffffff" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:gravity="center" android:background="@color/bg_color_orange" android:layout_width="fill_parent" android:layout_height="54.0dip">
+                <TextView android:textColor="@color/content_color_brighter" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/unlock_screen_not_connect" android:drawableLeft="@drawable/info" android:drawablePadding="5.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:textSize="15.0sp" android:textColor="@android:color/black" android:gravity="center_horizontal" android:id="@id/unlock_screen_miui_not_support_tv" android:paddingTop="76.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/unlock_screen_miui_version_low" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="bottom" android:orientation="vertical" android:background="@color/main_ui_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@color/bg_color_blue" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_h">
+        <Button android:textSize="@dimen/info_content_size" android:textColor="@color/content_color" android:id="@id/cancel" android:background="@drawable/click_btn_bg_small" android:layout_width="@dimen/btn_small_w" android:layout_height="@dimen/btn_small_h" android:layout_marginLeft="10.0dip" android:text="@string/cancel" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/main_ui_title_size" android:textColor="@color/title_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/alarm_setting" android:layout_centerInParent="true" />
+        <Button android:textSize="@dimen/info_content_size" android:textColor="@color/content_color" android:id="@id/confirm" android:background="@drawable/click_btn_bg_small" android:layout_width="@dimen/btn_small_w" android:layout_height="@dimen/btn_small_h" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/confirm" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:orientation="vertical" android:background="@color/main_ui_bg" android:paddingTop="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="@dimen/main_ui_content_size_2" android:textColor="@color/main_ui_content_color" android:id="@id/new_alarm_small_titile_0" android:paddingLeft="@dimen/mili_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip" android:text="@string/alarm_ring" />
+        <View android:id="@id/new_alarm_smart_splict_0" android:background="@color/split_color" android:layout_width="fill_parent" android:layout_height="@dimen/round_bg_stroke" android:layout_marginLeft="@dimen/mili_margin" android:layout_marginRight="@dimen/mili_margin" android:layout_marginBottom="7.0dip" android:layout_below="@id/new_alarm_small_titile_0" />
+        <RelativeLayout android:id="@id/new_alarm_smart_wakeup_area" android:background="@drawable/bg_item" android:clickable="true" android:layout_width="fill_parent" android:layout_height="73.0dip" android:layout_marginBottom="@dimen/stroke_width_minus" android:layout_below="@id/new_alarm_small_titile_0">
+            <TextView android:textSize="@dimen/setting_title_size" android:textColor="@color/main_ui_title_color" android:id="@id/new_alarm_smart_wakeup_title" android:paddingLeft="@dimen/mili_margin" android:paddingTop="10.0dip" android:paddingRight="@dimen/mili_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" android:text="@string/smart_wake_up" />
+            <TextView android:textSize="@dimen/info_content_size" android:textColor="@color/main_ui_content_color" android:paddingLeft="@dimen/mili_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/smart_wake_up_info" android:layout_below="@id/new_alarm_smart_wakeup_title" />
+            <Switch android:id="@id/new_alarm_smart_wakeup_switch" android:background="@drawable/switch_track_enable" android:focusable="false" android:focusableInTouchMode="false" android:clickable="true" android:layout_width="40.0dip" android:layout_height="21.0dip" android:layout_marginRight="@dimen/mili_margin" android:textOn="" android:textOff="" android:thumb="@drawable/switch_thumb" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:track="@drawable/switch_track_trans" android:switchMinWidth="38.0dip" android:thumbTextPadding="10.0dip" />
+        </RelativeLayout>
+        <View android:id="@id/new_alarm_smart_splict_1" android:background="@color/split_color" android:layout_width="fill_parent" android:layout_height="@dimen/round_bg_stroke" android:layout_marginLeft="@dimen/mili_margin" android:layout_marginRight="@dimen/mili_margin" android:layout_marginBottom="7.0dip" android:layout_below="@id/new_alarm_smart_wakeup_area" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/new_alarm_cycle_area" android:background="@drawable/bg_item" android:paddingLeft="@dimen/mili_margin" android:paddingRight="@dimen/mili_margin" android:paddingBottom="0.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus" android:layout_below="@id/new_alarm_smart_wakeup_area">
+            <LinearLayout android:orientation="vertical" android:paddingTop="11.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/setting_title_size" android:textColor="@color/main_ui_title_color" android:id="@id/alarm_days_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" android:text="@string/alarm_cycle" />
+                <TextView android:textSize="@dimen/info_content_size" android:textColor="@color/main_ui_content_color" android:id="@id/alarm_days_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="" />
+            </LinearLayout>
+            <ImageView android:id="@id/rightArrow" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/ic_indicator_right_arrow" />
+        </LinearLayout>
+        <LinearLayout android:background="@color/split_color" android:layout_width="fill_parent" android:layout_height="@dimen/round_bg_stroke" android:layout_marginLeft="@dimen/mili_margin" android:layout_marginRight="@dimen/mili_margin" android:layout_below="@id/new_alarm_cycle_area" />
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <TextView android:textSize="@dimen/main_ui_content_size_2" android:textColor="@color/main_ui_content_color" android:paddingLeft="@dimen/mili_margin" android:paddingRight="@dimen/mili_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" android:text="@string/set_alarm_time" />
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/wheel_hight" android:layout_marginTop="4.0dip">
+                <LinearLayout android:background="@drawable/bg_rect" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <kankan.wheel.widget.WheelView android:id="@id/setting_alarm_wheel_ampm" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                    <View android:background="@color/item_stroke" android:layout_width="@dimen/round_bg_stroke" android:layout_height="fill_parent" />
+                    <kankan.wheel.widget.WheelView android:id="@id/setting_alarm_wheel_hour" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                    <View android:background="@color/item_stroke" android:layout_width="@dimen/round_bg_stroke" android:layout_height="fill_parent" />
+                    <kankan.wheel.widget.WheelView android:id="@id/setting_alarm_wheel_minute" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                </LinearLayout>
+                <include layout="@layout/wheel_left_band" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

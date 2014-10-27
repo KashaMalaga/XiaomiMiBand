@@ -1,0 +1,19 @@
+version: 2.0.0-Beta9
+apkFileName: ????_1.1.372_239.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: '14'
+  targetSdkVersion: '19'
+packageInfo:
+  forced-package-id: '127'
+versionInfo:
+  versionCode: '239'
+  versionName: 1.1.372
+compressionType: false
+unknownFiles:
+  org/achartengine/image/zoom-1.png: '8'
+  org/achartengine/image/zoom_in.png: '8'
+  org/achartengine/image/zoom_out.png: '8'

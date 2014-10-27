@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:paddingLeft="@dimen/mili_margin" android:paddingRight="@dimen/mili_margin" android:layout_width="fill_parent" android:layout_height="@dimen/alarm_day_item_h"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/day_repeat_select_mark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/checkbox_unchecked" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <TextView android:textSize="@dimen/main_ui_title_size" android:textColor="#ff44474a" android:gravity="center_vertical" android:id="@id/week_tv" android:layout_width="wrap_content" android:layout_height="@dimen/alarm_day_item_h" android:text="" />
+    <View android:background="@color/split_color" android:layout_width="fill_parent" android:layout_height="@dimen/round_bg_stroke" android:layout_alignParentBottom="true" />
+</RelativeLayout>

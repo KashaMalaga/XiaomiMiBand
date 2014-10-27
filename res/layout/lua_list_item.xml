@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/bg_item" android:layout_width="fill_parent" android:layout_height="62.0dip" android:minHeight="62.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/lua_list_item_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/game_banner_icon" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/mili_margin" android:layout_marginTop="8.0dip" android:layout_toLeftOf="@id/rightArrow" android:layout_toRightOf="@id/lua_list_item_icon" android:layout_centerVertical="true">
+        <TextView android:textSize="14.0sp" android:textColor="@color/main_ui_title_color" android:id="@id/textView1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="Text1" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/main_ui_content_color" android:id="@id/textView2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Text2" />
+    </LinearLayout>
+    <ImageView android:id="@id/rightArrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/mili_margin" android:src="@drawable/ic_indicator_right_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <View android:id="@id/divider" android:background="@color/split_color" android:layout_width="wrap_content" android:layout_height="1.0px" android:layout_marginLeft="@dimen/mili_margin" android:layout_marginRight="@dimen/mili_margin" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

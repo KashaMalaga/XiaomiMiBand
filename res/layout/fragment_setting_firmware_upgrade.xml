@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:padding="13.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+            <TextView android:textSize="16.0sp" android:textColor="#ff44474a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="当前固件版本：" />
+            <TextView android:textSize="16.0sp" android:textColor="#ff44474a" android:id="@id/current_firmware_version" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="获取中..." />
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="30.0dip">
+            <TextView android:textSize="16.0sp" android:textColor="#ff44474a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="最新固件版本：" />
+            <TextView android:textSize="16.0sp" android:textColor="#ff44474a" android:id="@id/new_firmware_version" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="获取中..." />
+        </LinearLayout>
+        <FrameLayout android:background="@drawable/bg_round" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="20.0dip">
+            <TextView android:textSize="14.0sp" android:id="@id/firmware_change_log" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </FrameLayout>
+    </LinearLayout>
+    <View android:background="@color/item_stroke" android:layout_width="fill_parent" android:layout_height="@dimen/round_bg_stroke" />
+    <FrameLayout android:padding="13.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:textColor="@android:color/white" android:id="@id/firmware_upgrade" android:background="@drawable/bg_item_round_solid" android:layout_width="fill_parent" android:layout_height="@dimen/item_height" android:text="升级固件" />
+    </FrameLayout>
+</LinearLayout>

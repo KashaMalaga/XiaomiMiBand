@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:id="@id/float_sleep_info" android:layout_width="wrap_content" android:layout_height="30.0dip" android:layout_marginTop="24.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="15.5sp" android:textColor="#80ffffff" android:id="@id/float_sleep_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+    <LinearLayout android:gravity="center_vertical" android:id="@id/float_sleep_extra" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <View android:background="#33ffffff" android:layout_width="1.0dip" android:layout_height="16.5dip" android:layout_marginLeft="25.0dip" android:layout_marginRight="25.0dip" />
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.0dip">
+            <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:textSize="22.0sp" android:textColor="#ccffffff" android:id="@id/float_sleep_start_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:fontFamily="miui" />
+            <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#80ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="-1.5dip" android:layout_marginRight="2.0dip" android:text="@string/start" />
+        </LinearLayout>
+        <View android:background="#33ffffff" android:layout_width="1.0dip" android:layout_height="16.5dip" android:layout_marginLeft="25.0dip" android:layout_marginRight="25.0dip" />
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.0dip">
+            <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:textSize="22.0sp" android:textColor="#ccffffff" android:id="@id/float_sleep_end_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:fontFamily="miui" />
+            <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#80ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="-1.5dip" android:text="@string/stop" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

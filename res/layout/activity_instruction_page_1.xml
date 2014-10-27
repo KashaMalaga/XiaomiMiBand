@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/tip_bg" android:background="@drawable/intruction_tip_bg_vertical" android:layout_width="100.0dip" android:layout_height="170.0dip" android:layout_marginTop="85.0dip" android:layout_centerHorizontal="true" />
+    <TextSwitcher android:id="@id/tip" android:layout_width="100.0dip" android:layout_height="100.0dip" android:layout_alignTop="@id/tip_bg" android:layout_centerHorizontal="true" />
+    <ImageView android:paddingLeft="40.0dip" android:layout_width="282.29688dip" android:layout_height="121.29999dip" android:src="@drawable/intruction_1" android:layout_below="@id/tip_bg" android:layout_centerHorizontal="true" />
+</RelativeLayout>

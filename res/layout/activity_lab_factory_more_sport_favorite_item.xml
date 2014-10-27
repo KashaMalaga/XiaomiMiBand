@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:background="@drawable/lab_sport_vote_item_bg" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:gravity="center" android:id="@id/sport_item_img" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="29.0dip" android:src="@drawable/lab_favorite_vote_football_normal" android:layout_centerHorizontal="true" />
+    <TextView android:id="@id/sport_name" android:text="@string/lab_factory_sport_type_football" android:layout_below="@id/sport_item_img" style="@style/SportVoteItemText" />
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/bg_color_blue" android:layout_width="fill_parent" android:layout_height="@dimen/top_area_h"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/home_back" android:text="@string/action_pop_my_bracelet" style="@style/BackButton" />
+    <RelativeLayout android:id="@id/device_battery_area" android:layout_width="fill_parent" android:layout_height="200.0dip" android:layout_marginTop="20.0dip">
+        <cn.com.smartdevices.bracelet.chart.LinePieChartView android:id="@id/battery_pie_chart" android:layout_width="200.0dip" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+        <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:textSize="51.0sp" android:textColor="@color/person_page_user_info_main_color" android:ellipsize="middle" android:id="@id/device_battery_percent_text" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="160.0dip" android:text="100" android:singleLine="true" android:layout_centerInParent="true" android:fontFamily="miui" />
+        <LinearLayout android:orientation="vertical" android:id="@id/device_battery_percent_mark" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="8.0dip" android:layout_toRightOf="@id/device_battery_percent_text" android:layout_alignTop="@id/device_battery_percent_text">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/percent_mark" />
+            <TextView android:textSize="@dimen/mili_normal_txt_size" android:textColor="@color/person_page_user_info_main_color" android:id="@id/device_battery_battery_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" android:text="@string/battery" android:layout_alignBottom="@id/device_battery_percent_text" />
+        </LinearLayout>
+        <ImageView android:id="@id/device_battery_center_img" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/wrong_mark" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:textSize="17.0sp" android:textColor="@color/main_ui_bg" android:ellipsize="middle" android:gravity="center_horizontal" android:id="@id/device_battery_day_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxWidth="160.0dip" android:singleLine="true" android:fontFamily="miui-normal" />
+    <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:textSize="15.0sp" android:textColor="#99ffffff" android:ellipsize="middle" android:gravity="center_horizontal" android:id="@id/device_battery_low_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxWidth="160.0dip" android:text="@string/battery_low_info" android:singleLine="true" android:fontFamily="miui-normal" />
+</LinearLayout>

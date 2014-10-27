@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:title="手环固件" android:key="bracelet_info_fw" android:summary="@string/bracelet_info_fw_version" />
+    <Preference android:title="手环蓝牙" android:key="bracelet_info_bt" android:summary="@string/bracelet_info_mac_address" />
+    <Preference android:title="手环电量" android:key="bracelet_info_battery" android:summary="@string/bracelet_info_battery" />
+    <Preference android:title="手环设备ID" android:key="bracelet_info_deviceid" android:summary="@string/bracelet_info_deviceid" />
+    <Preference android:title="重置手环" android:key="bracelet_info_reset" android:summary="清除手环中的运动记录和个人信息" />
+    <Preference android:title="助手版本" android:key="app_info_version" android:summary="@string/app_info_version" />
+    <Preference android:title="清除助手数据" android:key="app_info_clear" android:summary="清除助手运动数据、登录信息及配置信息" />
+    <Preference android:title="设置手环连接间隔" android:key="bracelet_info_set_desired_latency" android:summary="有高、中、低三种传输延迟，越高传输速度越慢" />
+    <Preference android:title="固件升级" android:key="bracelet_info_fw_upgrade" />
+</PreferenceScreen>

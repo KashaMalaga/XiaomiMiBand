@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/dynamic_view" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v4.view.ViewPager android:id="@id/view_pager" android:background="@color/bg_mode_step" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" />
+    <cn.com.smartdevices.bracelet.ui.widget.CirclePageIndicator android:layout_gravity="center_horizontal" android:id="@id/indicator" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="352.0dip" app:strokeWidth="0.0dip" app:fillColor="#ffffffff" app:pageColor="#33ffffff" app:radius="2.5999756dip" app:gap="8.0dip" xmlns:app="http://schemas.android.com/apk/res-auto" />
+</FrameLayout>

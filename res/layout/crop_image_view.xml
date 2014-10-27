@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/ImageView_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerInside" android:adjustViewBounds="true" />
+    <com.edmodo.cropper.cropwindow.CropOverlayView android:id="@id/CropOverlayView" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</merge>

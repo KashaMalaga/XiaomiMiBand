@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/main_ui_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/home_back" android:background="@color/bg_color_blue" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_h" android:text="@string/action_pop_weixin_enter" style="@style/BackButton" />
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/mili_margin" android:paddingRight="@dimen/mili_margin" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="20.0dip" android:layout_below="@id/home_back">
+        <TextView android:textSize="14.0sp" android:textColor="@color/main_ui_title_color" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/bind_weixin_title" />
+        <ImageView android:id="@id/bind_weixin_help_iv" android:background="@drawable/bind_weixin_help" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="70.0dip" android:layout_marginTop="7.0dip" android:contentDescription="@string/app_name" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip">
+            <TextView android:textSize="@dimen/info_content_size" android:textColor="@color/main_ui_content_color" android:id="@id/bind_weixin_tips_tv_0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/step1" />
+            <TextView android:textSize="@dimen/info_content_size" android:textColor="@color/main_ui_content_color" android:id="@id/bind_weixin_tips_tv_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/bind_weixin_tips_1" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/info_content_size" android:textColor="@color/main_ui_content_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/step2" />
+            <TextView android:textSize="@dimen/info_content_size" android:textColor="@color/main_ui_content_color" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/bind_weixin_tips_2" />
+        </LinearLayout>
+    </LinearLayout>
+    <Button android:textSize="@dimen/click_button_text_size" android:textColor="@color/main_ui_content_color" android:layout_gravity="center_horizontal" android:id="@id/start_weixin_btn" android:background="@drawable/click_btn_bg_3" android:layout_width="@dimen/click_button_w" android:layout_height="@dimen/click_button_h" android:layout_marginBottom="@dimen/single_button_padding" android:text="@string/start_weixin" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    <Button android:textSize="@dimen/click_button_text_size" android:textColor="@color/main_ui_content_color" android:layout_gravity="center_horizontal" android:id="@id/gen_qr_code_btn" android:background="@drawable/click_btn_bg_3" android:layout_width="@dimen/click_button_w" android:layout_height="@dimen/click_button_h" android:layout_marginBottom="15.0dip" android:text="@string/gen_qr_code" android:layout_above="@id/start_weixin_btn" android:layout_centerHorizontal="true" />
+    <LinearLayout android:gravity="bottom" android:orientation="vertical" android:id="@id/mask_view" android:background="@color/mask_view_bg" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/action_bar_h">
+        <LinearLayout android:gravity="center" android:background="@color/bg_color_orange" android:layout_width="fill_parent" android:layout_height="54.0dip">
+            <TextView android:textColor="@color/content_color_brighter" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/bin_weixin_device_not_connect" android:drawableLeft="@drawable/info" android:drawablePadding="5.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

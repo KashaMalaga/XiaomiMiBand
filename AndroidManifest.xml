@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.xiaomi.hm.health">
+    <original-package android:name="cn.com.smartdevices.bracelet"/>
+    <uses-permission android:name="android.permission.REORDER_TASKS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="com.xiaomi.permission.AUTH_SERVICE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="com.xiaomi.market.sdk.UPDATE"/>
+    <application android:allowBackup="true" android:icon="@drawable/app_icon" android:label="@string/app_name" android:logo="@drawable/app_icon" android:name="cn.com.smartdevices.bracelet.BraceletApp" android:theme="@style/AppTheme">
+        <activity android:exported="true" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.hm.cheneehealth.wxapi.WXEntryActivity"/>
+        <activity android:launchMode="singleTask" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="1103177325"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.tencent.connect.common.AssistActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:name="cn.com.smartdevices.bracelet.activity.MainActivity" android:screenOrientation="portrait" android:theme="@style/MainActivityStyle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="hm.xiaomi.com" android:pathPrefix="/health" android:scheme="app"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="cn.com.smartdevices.bracelet.activity.WebActivity" android:screenOrientation="portrait"/>
+        <activity android:name="cn.com.smartdevices.bracelet.activity.LoginActivity" android:screenOrientation="portrait"/>
+        <activity android:name="cn.com.smartdevices.bracelet.ui.SearchSingleBraceletActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.xiaomi.account.openauth.AuthorizeActivity" android:screenOrientation="portrait"/>
+        <activity android:name="cn.com.smartdevices.bracelet.activity.BraceletNotFoundActivity" android:screenOrientation="portrait"/>
+        <activity android:name="cn.com.smartdevices.bracelet.activity.SystemLowActivity" android:screenOrientation="portrait"/>
+        <activity android:name="cn.com.smartdevices.bracelet.activity.SystemNotSupportActivity" android:screenOrientation="portrait"/>
+        <activity android:name="cn.com.smartdevices.bracelet.activity.MultiBraceletErrActivity" android:screenOrientation="portrait"/>
+        <activity android:name="cn.com.smartdevices.bracelet.ui.HelpActivity" android:screenOrientation="portrait"/>
+        <activity android:name="cn.com.smartdevices.bracelet.ui.InstructionActivity" android:screenOrientation="portrait"/>
+        <activity android:name="cn.com.smartdevices.bracelet.ui.FwUpgradeFailedActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="locale|layoutDirection" android:name="cn.com.smartdevices.bracelet.ui.MainUIActivity" android:screenOrientation="portrait"/>
+        <activity android:name="cn.com.smartdevices.bracelet.ui.person.PersonInfoSetGenderActivity" android:screenOrientation="portrait"/>
+        <activity android:name="cn.com.smartdevices.bracelet.ui.person.PersonInfoSetAgeActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
+        <activity android:name="cn.com.smartdevices.bracelet.ui.person.PersonInfoSetHeightActivity" android:screenOrientation="portrait"/>
+        <activity android:name="cn.com.smartdevices.bracelet.ui.person.PersonInfoSetWeightActivity" android:screenOrientation="portrait"/>
+        <activity android:name="cn.com.smartdevices.bracelet.ui.person.PersonInfoSetSportGoalActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/alarm" android:name="cn.com.smartdevices.bracelet.ui.AlarmActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/alarm" android:name="cn.com.smartdevices.bracelet.ui.NewAlarmActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/alarm" android:name="cn.com.smartdevices.bracelet.ui.AlarmRepeatActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/day_active_detail" android:name="cn.com.smartdevices.bracelet.ui.DynamicDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/statistic" android:name="cn.com.smartdevices.bracelet.ui.StatisticActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/feedback" android:name="cn.com.smartdevices.bracelet.ui.SettingFeedbackActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <activity android:label="@string/firmware_upgrade" android:name="cn.com.smartdevices.bracelet.ui.SettingFirmwareActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/about" android:name="cn.com.smartdevices.bracelet.ui.SettingAboutActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/set_person_goal" android:name="cn.com.smartdevices.bracelet.ui.HealthGoalsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="cn.com.smartdevices.bracelet.ui.ShareActivity" android:screenOrientation="portrait"/>
+        <activity android:name="cn.com.smartdevices.bracelet.ui.ShowImageActivity" android:screenOrientation="portrait"/>
+        <activity android:name="cn.com.smartdevices.bracelet.ui.CropImageActivity" android:screenOrientation="portrait"/>
+        <activity android:name="cn.com.smartdevices.bracelet.ui.UnBindActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="orientation" android:name="com.xiaomi.channel.openauth.AuthorizeActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="com.xiaomi.openauth.action.AUTH"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="org.achartengine.GraphicalActivity" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"/>
+        <service android:name="com.xiaomi.hm.bleservice.BLEService"/>
+        <service android:name="cn.com.smartdevices.bracelet.lab.datasync.SyncLabSportDataService"/>
+        <service android:name="cn.com.smartdevices.bracelet.upgrade.UpgradeService"/>
+        <receiver android:name="com.xiaomi.market.sdk.DownloadCompleteReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="cn.com.smartdevices.bracelet.SystemBindReceiver">
+            <intent-filter>
+                <action android:name="com.xiaomi.hm.health.ACTION_DEVICE_BIND_APPLICATION"/>
+                <action android:name="com.xiaomi.hm.health.ACTION_DEVICE_UNBIND_APPLICATION"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+            </intent-filter>
+        </receiver>
+        <activity android:label="@string/action_pop_person_info" android:name="cn.com.smartdevices.bracelet.ui.PersonInfoActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/action_pop_my_bracelet" android:launchMode="singleTop" android:name="cn.com.smartdevices.bracelet.ui.SettingActivity" android:screenOrientation="portrait">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="cn.com.smartdevices.bracelet.ui.MainUIActivity"/>
+        </activity>
+        <activity android:name="cn.com.smartdevices.bracelet.ui.FwUpgradeActivity" android:screenOrientation="portrait" android:theme="@style/FwUpgrade"/>
+        <activity android:name="cn.com.smartdevices.bracelet.ui.FwLowBatteryActivity" android:screenOrientation="portrait"/>
+        <activity android:name="cn.com.smartdevices.bracelet.ui.UnlockScreenHelperActivity" android:screenOrientation="portrait"/>
+        <activity android:name="cn.com.smartdevices.bracelet.ui.BindWeixinActivity" android:screenOrientation="portrait"/>
+        <activity android:name="cn.com.smartdevices.bracelet.ui.BindWeixinActivityNew" android:screenOrientation="portrait"/>
+        <activity android:name="cn.com.smartdevices.bracelet.ui.BindQQHealthActivity" android:screenOrientation="portrait"/>
+        <receiver android:name="cn.com.smartdevices.bracelet.PhoneStateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="cn.com.smartdevices.bracelet.ui.UnlockScreenInvalidHelperActivity" android:screenOrientation="portrait"/>
+        <activity android:name="cn.com.smartdevices.bracelet.model.ShareListDelegateActivity" android:screenOrientation="portrait"/>
+        <activity android:name="cn.com.smartdevices.bracelet.lab.ui.SportAnalyserActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Holo.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="cn.com.smartdevices.bracelet.action.START_LAB_SPORT_ANALYSE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:launchMode="singleTop" android:name="cn.com.smartdevices.bracelet.lab.ui.SportFactoryMainActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Holo.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="cn.com.smartdevices.bracelet.action.START_LAB_FACTORY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="cn.com.smartdevices.bracelet.lab.ui.LabFactoryReminderActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
+        <activity android:name="cn.com.smartdevices.bracelet.lab.ui.SportFavoriteVoteGridActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="cn.com.smartdevices.bracelet.lab.ui.LabFactoryTestActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="cn.com.smartdevices.bracele.action.START_LAB_FACTORY_TEST_ACTIVITY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:name="cn.com.smartdevices.bracelet.lab.ui.SportResultShareActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="cn.com.smartdevices.bracelet.action.SHOW_SPORT_RESULT_ACTIVITY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote"/>
+        <meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="dMGlsmpHOollXfGZ8jKfMpjQ"/>
+        <meta-data android:name="com.amap.api.v2.apikey" android:value="c0795b73d5df927742aac5b9a41ec327"/>
+        <meta-data android:name="UMENG_APPKEY" android:value="53eb6765fd98c559b700389d"/>
+        <meta-data android:name="UMENG_CHANNEL" android:value="Normal"/>
+        <provider android:authorities="cn.com.smartdevices.bracelet" android:exported="true" android:name="cn.com.smartdevices.bracelet.db.BraceletProvider"/>
+    </application>
+</manifest>

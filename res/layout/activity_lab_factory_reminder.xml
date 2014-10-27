@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/lab_factory_reminder_back" android:background="@color/bg_color_blue" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_h" android:text="@string/lab_factory_disconnected_reminder" style="@style/BackButton" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:id="@id/lab_factory_reminder" android:background="@drawable/bg_item" android:paddingLeft="@dimen/mili_margin" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus" android:minHeight="@dimen/item_height">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/lab_factory_disconnected_reminder" style="@style/ListItemTitleText" />
+                </LinearLayout>
+                <RelativeLayout android:gravity="center" android:paddingRight="@dimen/mili_margin" android:clickable="true" android:layout_width="63.0dip" android:layout_height="fill_parent">
+                    <Switch android:layout_gravity="center" android:id="@id/lab_factory_reminder_switch" android:background="@drawable/switch_track_enable" android:focusable="false" android:focusableInTouchMode="false" android:clickable="true" android:layout_width="40.0dip" android:layout_height="21.0dip" android:textOn="" android:textOff="" android:thumb="@drawable/switch_thumb" android:track="@drawable/switch_track_trans" android:switchMinWidth="38.0dip" android:thumbTextPadding="10.0dip" />
+                </RelativeLayout>
+            </LinearLayout>
+            <include layout="@layout/split_line_with_margin" />
+            <TextView android:textSize="@dimen/info_content_size" android:textColor="@color/main_ui_content_color" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/mili_margin" android:layout_marginTop="10.0dip" android:layout_marginRight="@dimen/mili_margin" android:text="@string/lab_factory_disconnected_reminder_tips" />
+        </LinearLayout>
+        <LinearLayout android:gravity="bottom" android:orientation="vertical" android:id="@id/lab_factory_reminder_mask_view" android:background="#90ffffff" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:gravity="center" android:background="@color/bg_color_orange" android:layout_width="fill_parent" android:layout_height="54.0dip">
+                <TextView android:textColor="@color/content_color_brighter" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/lab_factory_disconnected_reminder_disconnect" android:drawableLeft="@drawable/info" android:drawablePadding="5.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

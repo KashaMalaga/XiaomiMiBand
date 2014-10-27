@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/share_content_ll" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <View android:id="@id/share_background_v" android:background="#fff57130" android:layout_width="fill_parent" android:layout_height="372.0dip" />
+            <View android:background="@color/main_ui_bg" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        </LinearLayout>
+        <RelativeLayout android:id="@id/share_top_area" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="114.0dip">
+            <TextView android:textSize="20.0sp" android:textColor="#fffef1eb" android:id="@id/share_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Today" android:layout_centerHorizontal="true" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/share_main_content_area" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:layout_centerHorizontal="true">
+                <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:textSize="60.0sp" android:textColor="#ffffffff" android:id="@id/share_main_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="9527" />
+                <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:textSize="50.0sp" android:textColor="@color/share_unit_color" android:id="@id/share_main_content_hour_unit" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/unit_hour" android:layout_centerHorizontal="true" />
+                <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:textSize="60.0sp" android:textColor="#ffffffff" android:id="@id/share_main_content_minute" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:layout_centerHorizontal="true" />
+                <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:textSize="50.0sp" android:textColor="@color/share_unit_color" android:id="@id/share_main_content_minute_unit" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/unit_min_short" android:layout_centerHorizontal="true" />
+            </LinearLayout>
+            <TextView android:textSize="14.0sp" android:textColor="#9affffff" android:gravity="bottom" android:id="@id/share_main_content_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginBottom="13.0dip" android:text="Steps" android:layout_toRightOf="@id/share_main_content_area" android:layout_alignBottom="@id/share_main_content_area" />
+            <TextView android:textSize="14.0sp" android:textColor="#fffef1eb" android:id="@id/share_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-7.0dip" android:text="1/1" android:layout_below="@id/share_main_content_area" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="11.0sp" android:textColor="@color/content_color" android:id="@id/share_time_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="tips" android:layout_below="@id/share_time" android:layout_centerHorizontal="true" />
+            <View android:background="@drawable/share_split" android:layout_width="190.0dip" android:layout_height="5.6299744dip" android:layout_marginTop="46.0dip" android:layout_below="@id/share_time_tips" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <ImageView android:id="@id/share_pic_iv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="fitXY" android:contentDescription="@string/app_name" />
+        <TextView android:textSize="15.5sp" android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/dynamic_title" android:paddingTop="12.0dip" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="TITLE" />
+        <ImageView android:id="@id/share_person_avatar_iv" android:background="@drawable/person_avatar_default_share" android:layout_width="67.0dip" android:layout_height="67.0dip" android:layout_marginTop="335.0dip" android:src="@drawable/person_avatar_frame" android:layout_centerHorizontal="true" android:contentDescription="@string/app_name" />
+        <TextView android:textSize="14.0sp" android:textColor="#ff4a4a4a" android:id="@id/share_person_name_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="name" android:layout_below="@id/share_person_avatar_iv" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="14.0sp" android:textColor="#ff898989" android:gravity="center" android:id="@id/share_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22.0dip" android:text="Descriptions" android:layout_below="@id/share_person_name_tv" android:layout_centerHorizontal="true" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="55.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+            <ImageView android:layout_width="22.0dip" android:layout_height="22.0dip" android:src="@drawable/app_icon_small" />
+            <TextView android:textSize="13.0sp" android:textColor="@color/main_ui_content_color" android:id="@id/share_from_mi_band_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="9.0dip" android:text="@string/come_from_xiaomi_bracelet" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/action_bar" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_h">
+        <TextView android:id="@id/share_cancel_btn" android:text="@string/share" style="@style/BackButton" />
+        <TextView android:id="@id/share_photo" android:paddingRight="10.0dip" android:visibility="gone" android:text="@string/lab_factory_share_photo" android:drawableLeft="@null" android:layout_alignParentRight="true" style="@style/BackButton" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="#ffececec" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="63.0dip" android:baselineAligned="false" android:layout_alignParentBottom="true">
+        <ImageButton android:id="@id/share_to_weixin_btn" android:background="@color/trans" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/share_weixin_select" android:layout_weight="1.0" />
+        <ImageButton android:id="@id/share_to_pengyouquan_btn" android:background="@color/trans" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/share_pengyouquan_select" android:layout_weight="1.0" />
+        <ImageButton android:id="@id/share_to_miliao_btn" android:background="@color/trans" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/share_miliao" android:layout_weight="1.0" />
+        <ImageButton android:id="@id/share_to_weibo_btn" android:background="@color/trans" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/share_weibo_select" android:layout_weight="1.0" />
+        <ImageButton android:id="@id/share_to_qq_zone_btn" android:background="@color/trans" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/share_qq_zone_select" android:layout_weight="1.0" />
+        <ImageButton android:id="@id/share_to_qq_btn" android:background="@color/trans" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/share_qq_select" android:layout_weight="1.0" />
+        <ImageButton android:id="@id/share_to_line_btn" android:background="@color/trans" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/share_line" android:layout_weight="1.0" />
+        <ImageButton android:id="@id/share_to_facebook_btn" android:background="@color/trans" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/share_facebook" android:layout_weight="1.0" />
+    </LinearLayout>
+</RelativeLayout>

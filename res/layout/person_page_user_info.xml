@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/bg_color_blue" android:layout_width="fill_parent" android:layout_height="350.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/home_back" android:text="@string/personal_info" style="@style/BackButton" />
+    <RelativeLayout android:id="@id/person_page_center_area" android:paddingTop="80.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <ImageButton android:id="@id/person_page_icon" android:background="@drawable/person_avatar_default" android:clickable="true" android:layout_width="@dimen/person_avatar_size" android:layout_height="@dimen/person_avatar_size" android:layout_marginLeft="42.0dip" android:layout_marginRight="20.0dip" android:src="@drawable/person_avatar_frame_selector" android:scaleType="fitCenter" android:layout_centerHorizontal="true" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/person_page_center_right_area" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:layout_below="@id/person_page_icon" android:layout_centerHorizontal="true">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:textSize="16.0sp" android:textColor="@color/person_page_user_info_main_color" android:id="@id/person_page_nickname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_centerHorizontal="true" android:fontFamily="miui-normal" />
+                <ImageView android:id="@id/person_page_gender" android:paddingBottom="4.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:src="@drawable/gender_male" android:layout_toRightOf="@id/person_page_nickname" android:layout_alignBottom="@id/person_page_nickname" />
+            </RelativeLayout>
+            <TextView android:textSize="@dimen/main_ui_content_size_2" android:textColor="@color/content_color" android:id="@id/person_page_signiture" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="To believe is to win." />
+            <LinearLayout android:gravity="center_vertical" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="2.0dip" android:src="@drawable/location_icon" />
+                <TextView android:textSize="@dimen/info_content_size" android:textColor="@color/person_page_user_info_sub_color" android:layout_gravity="center" android:id="@id/person_page_location" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <ImageView android:gravity="center" android:layout_gravity="center" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="2.0dip" android:src="@drawable/user_id_icon" />
+                <TextView android:textSize="@dimen/person_page_text_small_size" android:textColor="@color/person_page_user_info_sub_color" android:layout_gravity="center" android:id="@id/person_page_uid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:paddingBottom="41.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/person_page_text_small_size" android:textColor="@color/content_color_darker" android:gravity="center" android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/daily_sporty" android:singleLine="true" />
+                <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:textSize="@dimen/person_page_digit_size" android:textColor="@color/person_page_digit_color" android:gravity="center" android:id="@id/person_page_ave_steps" android:paddingRight="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="--" android:fontFamily="miui-light" />
+            </LinearLayout>
+            <LinearLayout android:background="@color/content_color" android:layout_width="@dimen/round_bg_stroke" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" />
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/person_page_text_small_size" android:textColor="@color/content_color_darker" android:gravity="center" android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/weared_days" />
+                <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:textSize="@dimen/person_page_digit_size" android:textColor="@color/person_page_digit_color" android:gravity="center" android:id="@id/person_page_weared_days" android:paddingRight="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="--" android:fontFamily="miui-light" />
+            </LinearLayout>
+            <LinearLayout android:background="@color/content_color" android:visibility="visible" android:layout_width="@dimen/round_bg_stroke" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" />
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/person_page_text_small_size" android:textColor="@color/content_color_darker" android:gravity="center" android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/odo" />
+                <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:textSize="@dimen/person_page_digit_size" android:textColor="@color/person_page_digit_color" android:gravity="center" android:id="@id/person_page_odo" android:paddingRight="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="--" android:fontFamily="miui-light" />
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+            <LinearLayout android:orientation="vertical" android:id="@id/person_page_statistic_area" android:layout_width="80.0dip" android:layout_height="wrap_content">
+                <ImageButton android:textColor="@color/person_page_user_info_sub_color" android:id="@id/person_page_statistic_btn" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/btn_statistic" android:scaleType="fitCenter" android:layout_centerHorizontal="true" />
+                <TextView android:textSize="@dimen/info_content_size" android:textColor="@color/person_page_user_info_main_color" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/statistic" android:layout_below="@id/person_page_statistic_btn" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/person_page_exchange_area" android:visibility="gone" android:layout_width="80.0dip" android:layout_height="wrap_content" android:layout_toRightOf="@id/person_page_statistic_area">
+                <ImageButton android:textColor="@color/person_page_user_info_sub_color" android:id="@id/person_page_exchange_btn" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/btn_statistic" android:layout_centerHorizontal="true" />
+                <TextView android:textSize="@dimen/info_content_size" android:textColor="@color/person_page_user_info_main_color" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/points_exchange" android:layout_below="@id/person_page_exchange_btn" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

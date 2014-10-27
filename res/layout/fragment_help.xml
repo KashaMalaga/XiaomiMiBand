@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/webview_container" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:id="@id/webview_padding" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_h" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <WebView android:id="@id/webview" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            <ProgressBar android:id="@id/webview_progress" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-8.0dip" android:max="105" android:progress="5" style="?android:attr/progressBarStyleHorizontal" />
+            <TextView android:textSize="13.0sp" android:textColor="#ff898989" android:gravity="center" android:id="@id/web_error_tip" android:background="@color/window_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/no_network_connection_retry" />
+        </FrameLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@id/action_bar" android:background="@color/bg_color_blue" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_h">
+        <TextView android:id="@id/home_back" style="@style/BackButton" />
+        <Button android:textSize="@dimen/info_content_size" android:textColor="@color/content_color" android:id="@id/share" android:background="@drawable/click_btn_bg_small" android:visibility="gone" android:layout_width="@dimen/btn_small_w" android:layout_height="@dimen/btn_small_h" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/share" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ProgressBar android:id="@id/progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+</RelativeLayout>

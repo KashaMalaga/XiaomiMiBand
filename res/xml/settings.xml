@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:title="闹钟" android:key="settings_alarm_clock" android:summary="未开启">
+        <intent android:targetPackage="cn.com.smartdevices.bracelet" android:action="android.intent.action.MAIN" android:targetClass="cn.com.smartdevices.bracelet.ui.AlarmClockActivity" />
+    </Preference>
+    <Preference android:title="推送目标达成进度" android:key="settings_push_goals_progress" android:summary="50%,100%" />
+    <CheckBoxPreference android:title="推送手环低电量提醒" android:key="settings_push_low_battery" android:defaultValue="true" />
+    <Preference android:title="固件升级" android:key="settings_fw_upgrade" />
+    <Preference android:title="重置手环" android:key="settings_bracelet_reset" />
+    <Preference android:title="意见反馈" android:key="settings_feedback" />
+    <Preference android:title="关于" android:key="settings_about">
+        <intent android:targetPackage="cn.com.smartdevices.bracelet" android:action="android.intent.action.MAIN" android:targetClass="cn.com.smartdevices.bracelet.activity.BraceletInfoActivity" />
+    </Preference>
+</PreferenceScreen>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:background="@color/bg_color_grey" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/device_not_support_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/system_low_title" style="@style/InfoTitle" />
+    <TextView android:textSize="@dimen/info_content_size" android:textColor="@color/normal" android:gravity="center" android:id="@id/device_not_support_info" android:paddingLeft="@dimen/mili_margin" android:paddingTop="@dimen/multi_devices_txt_space" android:paddingRight="@dimen/mili_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/system_low_info" android:layout_below="@id/device_not_support_title" android:layout_centerHorizontal="true" />
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/error_mark" android:layout_centerInParent="true" />
+    <Button android:textColor="@color/normal" android:id="@id/confirm" android:background="@drawable/click_btn_bg" android:layout_width="@dimen/click_button_w" android:layout_height="@dimen/click_button_h" android:layout_marginBottom="@dimen/info_bottom_margin_bottom" android:text="@string/confirm" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

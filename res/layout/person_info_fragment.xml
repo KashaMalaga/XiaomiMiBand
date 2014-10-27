@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/main_ui_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.nirhart.parallaxscroll.views.ParallaxScrollView android:background="@android:color/white" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" app:parallax_factor="1.0"
+      xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include android:id="@id/person_info_user_info_area" layout="@layout/person_page_user_info" />
+            <LinearLayout android:orientation="vertical" android:id="@id/person_info_edit_area" android:background="#ffffffff" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:id="@id/info_gender" android:background="@drawable/bg_item" android:paddingLeft="@dimen/mili_margin" android:paddingRight="@dimen/mili_margin" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/item_height" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus">
+                        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                            <TextView android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/modify_gender" style="@style/ListItemTitleText" />
+                        </LinearLayout>
+                        <TextView android:id="@id/info_gender_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/male" style="@style/ListItemValueText" />
+                        <ImageView android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_indicator_right_arrow" />
+                    </LinearLayout>
+                    <include layout="@layout/split_line_with_margin" />
+                    <LinearLayout android:id="@id/info_age_area" android:background="@drawable/bg_item" android:paddingLeft="@dimen/mili_margin" android:paddingTop="6.0dip" android:paddingRight="@dimen/mili_margin" android:paddingBottom="6.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/item_height" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus">
+                        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/age" style="@style/ListItemTitleText" />
+                        </LinearLayout>
+                        <TextView android:id="@id/info_age_value" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/ListItemValueText" />
+                        <ImageView android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_indicator_right_arrow" />
+                    </LinearLayout>
+                    <include layout="@layout/split_line_with_margin" />
+                    <LinearLayout android:id="@id/info_height" android:background="@drawable/bg_item" android:paddingLeft="@dimen/mili_margin" android:paddingRight="@dimen/mili_margin" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/item_height" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus">
+                        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                            <TextView android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/modify_height" style="@style/ListItemTitleText" />
+                        </LinearLayout>
+                        <TextView android:id="@id/info_height_value" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/ListItemValueText" />
+                        <ImageView android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_indicator_right_arrow" />
+                    </LinearLayout>
+                    <include layout="@layout/split_line_with_margin" />
+                    <LinearLayout android:id="@id/info_weight" android:background="@drawable/bg_item" android:paddingLeft="@dimen/mili_margin" android:paddingTop="6.0dip" android:paddingRight="@dimen/mili_margin" android:paddingBottom="6.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/item_height" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus">
+                        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/modify_weight" style="@style/ListItemTitleText" />
+                        </LinearLayout>
+                        <TextView android:id="@id/info_weight_value" android:layout_width="wrap_content" android:layout_height="fill_parent" style="@style/ListItemValueText" />
+                        <ImageView android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_indicator_right_arrow" />
+                    </LinearLayout>
+                    <include layout="@layout/split_line_with_margin" />
+                </LinearLayout>
+            </LinearLayout>
+            <RelativeLayout android:paddingTop="4.0dip" android:paddingBottom="6.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/item_height" android:minHeight="@dimen/item_height">
+                <TextView android:textSize="@dimen/click_button_text_size" android:textColor="@color/alert_color" android:gravity="center" android:id="@id/mili_exit_login" android:background="@drawable/click_btn_bg_3" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="23.0dip" android:layout_marginRight="23.0dip" android:text="@string/exit_login" />
+            </RelativeLayout>
+        </LinearLayout>
+    </com.nirhart.parallaxscroll.views.ParallaxScrollView>
+</FrameLayout>

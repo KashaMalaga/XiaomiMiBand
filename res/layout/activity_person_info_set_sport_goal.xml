@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/bg_color_orange" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/person_info_part_1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/info_title_margin_bottom" android:text="@string/please_set_sport_goal" style="@style/InfoTitle" />
+        <TextView android:textSize="@dimen/info_content_size" android:textColor="@color/content_color" android:gravity="center" android:id="@id/bracelet_title_info" android:paddingLeft="35.0dip" android:paddingRight="35.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/person_info_goal_info" android:layout_below="@id/bracelet_login_title" android:layout_centerHorizontal="true" />
+        <kankan.wheel.widget.WheelView android:id="@id/person_info_goal_picker" android:layout_width="fill_parent" android:layout_height="@dimen/wheel_hight_large" android:layout_marginLeft="@dimen/wheel_large_padding_side" android:layout_marginTop="@dimen/wheel_margin_t" android:layout_marginRight="@dimen/wheel_large_padding_side" />
+    </LinearLayout>
+    <cn.com.smartdevices.bracelet.ui.widget.DimPanelBottomBar android:id="@id/bottom_bar" android:paddingBottom="@dimen/bottom_btn_maring_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" app:left_text="@string/prev_step" app:right_text="@string/next_step" app:left_text_color="@color/content_color" app:right_text_color="@color/title_color" app:show_style="dark" xmlns:app="http://schemas.android.com/apk/res-auto" />
+</RelativeLayout>

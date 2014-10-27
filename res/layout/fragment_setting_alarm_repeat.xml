@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/dialog_empty_area" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:background="#fff4f5f5" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <cn.com.smartdevices.bracelet.view.SelectDaysView android:id="@id/days_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <include layout="@layout/dialog_bottom_bar" />
+    </LinearLayout>
+</LinearLayout>
