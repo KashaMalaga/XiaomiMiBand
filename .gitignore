@@ -36,8 +36,12 @@ Icon
 .Trashes
 
 # Directories potentially created on remote AFP share
+
 .AppleDB
 .AppleDesktop
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Doesnt show compiled folder
+/build/apk/
