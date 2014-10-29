@@ -86,7 +86,7 @@
   <string name="date_from_to">%1$s a %2$s</string>
   <string name="date_from_to_short">%1$s-%2$s</string>
   <string name="date_last_month">El mes pasado</string>
-  <string name="date_last_week">Semana pasada</string>
+  <string name="date_last_week">Sem. Ant.</string>
   <string name="date_month">MMMM</string>
   <string name="date_month_day">d MMM</string>
   <string name="date_month_day_short">%1$d/%2$d</string>
@@ -131,11 +131,11 @@
   <string name="dynamic_pull_syncing_progress">Sincronizado %s%%</string>
   <string name="dynamic_pull_update_report">Actualizados %s registros</string>
   <string name="dynamic_sleep_active">Tiempo despierto</string>
-  <string name="dynamic_sleep_active_end">Listo para levantarse</string>
-  <string name="dynamic_sleep_active_start">Preparado para dormir</string>
-  <string name="dynamic_sleep_deep">Sueño profundo</string>
+  <string name="dynamic_sleep_active_end">Fin sueño</string>
+  <string name="dynamic_sleep_active_start">Inicio sueño</string>
+  <string name="dynamic_sleep_deep">Profundo</string>
   <string name="dynamic_sleep_deep_title">Sueño profundo %s</string>
-  <string name="dynamic_sleep_shallow">Sueño ligero</string>
+  <string name="dynamic_sleep_shallow">Ligero</string>
   <string name="dynamic_sleep_tip">Total</string>
   <string name="dynamic_step_tip">Pasos actuales</string>
   <string name="dynamic_tip_sleep_unsynced">No actualizado</string>
