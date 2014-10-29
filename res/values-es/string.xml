@@ -104,7 +104,7 @@
   <string name="device_list">Mi Band cercanas</string>
   <string name="device_not_found_not_knocked">Por favor, busque su Mi Band de nuevo. Olvidó golpearla cuando estaba parpadeando.</string>
   <string name="device_not_response">¿Las luces están parpadeando?</string>
-  <string name="disable_debug_log">¡Modo de depuración cerrado!</string>
+  <string name="disable_debug_log">¡Modo de depuración desactivado!</string>
   <string name="discard">Descartar</string>
   <string name="discard_alarm_change">¿Descartar cambios?</string>
   <string name="distance">Distancia</string>
@@ -129,7 +129,7 @@
   <string name="dynamic_pull_sync_error">Error al sincronizar, tire para refrescar.</string>
   <string name="dynamic_pull_syncing">Sincronizando...</string>
   <string name="dynamic_pull_syncing_progress">Sincronizado %s%%</string>
-  <string name="dynamic_pull_update_report">Actualizado %s registros</string>
+  <string name="dynamic_pull_update_report">Actualizados %s registros</string>
   <string name="dynamic_sleep_active">Tiempo despierto</string>
   <string name="dynamic_sleep_active_end">Listo para levantarse</string>
   <string name="dynamic_sleep_active_start">Preparado para dormir</string>
@@ -147,7 +147,7 @@
   <string name="dynamic_tip_unweared">No activado</string>
   <string name="dynamic_title_sleep">Anoche</string>
   <string name="dynamic_title_step">Hoy</string>
-  <string name="enable_debug_log">¡Modo de depuración abierto!</string>
+  <string name="enable_debug_log">¡Modo de depuración activado!</string>
   <string name="error_code">Error</string>
   <string name="everyday">A diario</string>
   <string name="exit_app">Salir</string>
