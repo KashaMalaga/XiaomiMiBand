@@ -295,6 +295,10 @@
   <string name="lab_factory_sport_type_table_tennis">Ping-pong</string>
   <string name="lab_factory_sport_type_tennis">Tenis</string>
   <string name="lab_factory_sport_unit">Tiempo</string>
+  <string name="lab_factory_sport_vote_desc">Por favor, vota por tu deporte favorito</string>
+    <string name="lab_factory_sport_vote_result_desc">Gracias por tu voto</string>
+    <string name="lab_factory_sport_vote_result_sub_desc">Usted votó por el</string>
+    <string name="lab_factory_sport_vote_sub_desc">Tal vez la próxima vez que se actualice la App,aparezca en el laboratorio deportes</string>
   <string name="lab_factory_sport_without_pb_info">&lt;font color=#f57130&gt;%1$s&lt;/font&gt;</string>
   <string name="lab_factory_title">Características Lab</string>
   <string name="left_hand">Izquierda</string>
