@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="weeks">
+        <item>"Lunes"</item>
+        <item>"Martes"</item>
+        <item>"Miércoles"</item>
+        <item>"Jueves"</item>
+        <item>"Viernes"</item>
+        <item>"Sábado"</item>
+        <item>"Domingo"</item>
+    </string-array>
+	<string-array name="weeks_short">
+        <item>"Lun."</item>
+        <item>"Mar."</item>
+        <item>"Mié."</item>
+        <item>"Jue."</item>
+        <item>"Vie."</item>
+        <item>"Sáb."</item>
+        <item>"Dom."</item>
+    </string-array>
+    <string-array name="months">
+        <item>"Enero"</item>
+        <item>"Febrero"</item>
+        <item>"Marzo"</item>
+        <item>"Abril"</item>
+        <item>"Mayo"</item>
+        <item>"Junio"</item>
+        <item>"Julio"</item>
+        <item>"Agosto"</item>
+        <item>"Septiembre"</item>
+        <item>"Octubre"</item>
+        <item>"Noviembre"</item>
+        <item>"Diciembre"</item>
+    </string-array>
+    <string-array name="select_days_simple">
+        <item>"Una vez"</item>
+        <item>"A diario"</item>
+        <item>"Días de la semana"</item>
+        <item>"Personalizar"</item>
+    </string-array>
+	<string-array name="fortune">
+        <item>"No hay sustituto para la consistencia."</item>
+        <item>"Lucha por el progreso, no la perfección."</item>
+        <item>"La repetición es el padre de éxito."</item>
+        <item>"La energía y la persistencia conquistan todas las cosas."</item>
+        <item>"El mundo no se formó en un día, ni tampoco nosotros. Establezca metas pequeñas y avance sobre ellas."</item>
+        <item>"Todo viaje comienza con un solo paso."</item>
+        <item>"Lograr una meta al día."</item>
+        <item>"No importa lo lento que vaya, usted todavía está lamiendo todo el mundo en el sofá."</item>
+        <item>"Corra cuando pueda. Camine si tiene que hacerlo. Camina a gatas si es necesario. Simplemente no te rindas nunca."</item>
+        <item>"Recuerde, la sensación que se obtiene tras una buena sesión de ejercicios es mucho mejor que la sensación que tienes al estar cruzado de brazos deseando haberte ejercitado."</item>
+    </string-array>
+    <string-array name="weather_aqi_descriptions">
+        <item>"Excelente"</item>
+        <item>"Bueno"</item>
+        <item>"Moderado"</item>
+        <item>"Precaución"</item>
+        <item>"No saludable"</item>
+        <item>"Muy poco saludables"</item>
+    </string-array>
+</resources>
