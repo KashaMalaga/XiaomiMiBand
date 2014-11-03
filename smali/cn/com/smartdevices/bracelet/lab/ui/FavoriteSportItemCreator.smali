@@ -57,13 +57,13 @@
 
     const-string v2, "sportNameResId"
 
-    const v3, 0x7f0d0115
+    const v3, 0x7f0c0237
 
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string v2, "sportImgResId"
 
-    const v3, 0x7f020090
+    const v3, 0x7f020079
 
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
@@ -85,13 +85,13 @@
 
     const-string v2, "sportNameResId"
 
-    const v3, 0x7f0d0113
+    const v3, 0x7f0c0238
 
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string v2, "sportImgResId"
 
-    const v3, 0x7f02008d
+    const v3, 0x7f020076
 
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
@@ -113,13 +113,13 @@
 
     const-string v2, "sportNameResId"
 
-    const v3, 0x7f0d011f
+    const v3, 0x7f0c0239
 
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string v2, "sportImgResId"
 
-    const v3, 0x7f020098
+    const v3, 0x7f020081
 
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
@@ -141,13 +141,13 @@
 
     const-string v2, "sportNameResId"
 
-    const v3, 0x7f0d0112
+    const v3, 0x7f0c023a
 
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string v2, "sportImgResId"
 
-    const v3, 0x7f02008c
+    const v3, 0x7f020075
 
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
@@ -169,13 +169,13 @@
 
     const-string v2, "sportNameResId"
 
-    const v3, 0x7f0d011e
+    const v3, 0x7f0c023b
 
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string v2, "sportImgResId"
 
-    const v3, 0x7f020097
+    const v3, 0x7f020080
 
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
@@ -197,13 +197,13 @@
 
     const-string v2, "sportNameResId"
 
-    const v3, 0x7f0d0117
+    const v3, 0x7f0c023c
 
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string v2, "sportImgResId"
 
-    const v3, 0x7f020092
+    const v3, 0x7f02007b
 
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
@@ -225,43 +225,15 @@
 
     const-string v2, "sportNameResId"
 
-    const v3, 0x7f0d0118
+    const v3, 0x7f0c023d
 
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string v2, "sportImgResId"
 
-    const v3, 0x7f020093
+    const v3, 0x7f02007c
 
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    new-instance v1, Landroid/os/Bundle;
-
-    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
-
-    const-string v2, "sportId"
-
-    const-string v3, "Swimming"
-
-    invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v2, "sportNameResId"
-
-    const v3, 0x7f0d011d
-
-    invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
-
-    const-string v2, "sportImgResId"
-
-    const v3, 0x7f020096
-
-    invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
-
-    const-string v2, "sportSelected"
-
-    invoke-virtual {v1, v2, v4}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -277,13 +249,41 @@
 
     const-string v2, "sportNameResId"
 
-    const v3, 0x7f0d0114
+    const v3, 0x7f0c0240
 
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string v2, "sportImgResId"
 
-    const v3, 0x7f02008f
+    const v3, 0x7f020078
+
+    invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+
+    const-string v2, "sportSelected"
+
+    invoke-virtual {v1, v2, v4}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    new-instance v1, Landroid/os/Bundle;
+
+    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
+
+    const-string v2, "sportId"
+
+    const-string v3, "Running"
+
+    invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v2, "sportNameResId"
+
+    const v3, 0x7f0c023e
+
+    invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+
+    const-string v2, "sportImgResId"
+
+    const v3, 0x7f02007d
 
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
@@ -305,13 +305,13 @@
 
     const-string v2, "sportNameResId"
 
-    const v3, 0x7f0d011b
+    const v3, 0x7f0c0241
 
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string v2, "sportImgResId"
 
-    const v3, 0x7f020094
+    const v3, 0x7f02007e
 
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
@@ -333,13 +333,13 @@
 
     const-string v2, "sportNameResId"
 
-    const v3, 0x7f0d011c
+    const v3, 0x7f0c0242
 
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string v2, "sportImgResId"
 
-    const v3, 0x7f020095
+    const v3, 0x7f02007f
 
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
@@ -361,13 +361,13 @@
 
     const-string v2, "sportNameResId"
 
-    const v3, 0x7f0d0116
+    const v3, 0x7f0c0243
 
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     const-string v2, "sportImgResId"
 
-    const v3, 0x7f020091
+    const v3, 0x7f02007a
 
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 

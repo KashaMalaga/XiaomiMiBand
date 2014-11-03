@@ -27,7 +27,7 @@
 
 .field public static final BLANK_STEP:B = 0x0t
 
-.field public static final CHECK_PCB_VERSION:Z = true
+.field public static final CHECK_PCB_VERSION:Z = false
 
 .field public static final CYCLE_METER:F = 400.0f
 
@@ -141,6 +141,8 @@
 
 .field public static final KEY_WEBURL:Ljava/lang/String; = "web_url"
 
+.field public static final LAZY_DAY_SPLIT:Ljava/lang/String; = ":"
+
 .field public static final LOAD_DATA_COMPLETE:I = 0x0
 
 .field public static final LOCALE_CHN_PARAM:Ljava/lang/String; = "_locale=zh_CN"
@@ -211,6 +213,10 @@
 
 .field public static final REF_GAME_FAILED:Ljava/lang/String; = "REF_GAME_FAILED"
 
+.field public static final REF_LAZY_DAYS:Ljava/lang/String; = "ref_lazy_days"
+
+.field public static final REF_LAZY_DAYS_ALGO_START_DATE:Ljava/lang/String; = "ref_manual_algo_start_date"
+
 .field public static final REF_LUA_VERSION:Ljava/lang/String; = "Lua_version"
 
 .field public static final REF_PIC_URL:Ljava/lang/String; = "pic_url"
@@ -269,7 +275,7 @@
 
 .field public static final WHEEL_CENTER_TEXT_SIZE_LARGE:I = 0x10
 
-.field public static final WHEEL_CENTER_UNIT_TEXT_COLOR:I = 0x7f090003
+.field public static final WHEEL_CENTER_UNIT_TEXT_COLOR:I = 0x7f08003c
 
 .field public static final WHEEL_CENTER_UNIT_TEXT_SIZE:I = 0xa
 

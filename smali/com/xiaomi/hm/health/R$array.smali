@@ -3,17 +3,17 @@
 
 
 # static fields
-.field public static final fortune:I = 0x7f070000
+.field public static final fortune:I = 0x7f0d0004
 
-.field public static final months:I = 0x7f070001
+.field public static final months:I = 0x7f0d0002
 
-.field public static final select_days_simple:I = 0x7f070002
+.field public static final select_days_simple:I = 0x7f0d0003
 
-.field public static final weather_aqi_descriptions:I = 0x7f070003
+.field public static final weather_aqi_descriptions:I = 0x7f0d0005
 
-.field public static final weeks:I = 0x7f070004
+.field public static final weeks:I = 0x7f0d0000
 
-.field public static final weeks_short:I = 0x7f070005
+.field public static final weeks_short:I = 0x7f0d0001
 
 
 # direct methods

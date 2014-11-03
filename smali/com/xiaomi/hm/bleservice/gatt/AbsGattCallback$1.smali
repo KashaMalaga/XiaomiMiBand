@@ -33,16 +33,12 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v1, "NEW THREAD: "
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     # getter for: Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->CALLBACK_QUEUE_THREAD_NAME:Ljava/lang/String;
-    invoke-static {}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$000()Ljava/lang/String;
+    invoke-static {}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$0()Ljava/lang/String;
 
     move-result-object v1
 
@@ -63,7 +59,7 @@
     new-instance v0, Ljava/lang/Thread;
 
     # getter for: Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->CALLBACK_QUEUE_THREAD_NAME:Ljava/lang/String;
-    invoke-static {}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$000()Ljava/lang/String;
+    invoke-static {}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$0()Ljava/lang/String;
 
     move-result-object v1
 

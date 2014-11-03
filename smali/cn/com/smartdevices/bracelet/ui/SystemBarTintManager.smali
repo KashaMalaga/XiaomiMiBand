@@ -194,7 +194,7 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v1, p1, v2, v3, v4}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintManager$SystemBarConfig;-><init>(Landroid/app/Activity;ZZLcn/com/smartdevices/bracelet/ui/ci;)V
+    invoke-direct {v1, p1, v2, v3, v4}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintManager$SystemBarConfig;-><init>(Landroid/app/Activity;ZZLcn/com/smartdevices/bracelet/ui/SystemBarTintManager$SystemBarConfig;)V
 
     iput-object v1, p0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintManager;->b:Lcn/com/smartdevices/bracelet/ui/SystemBarTintManager$SystemBarConfig;
 

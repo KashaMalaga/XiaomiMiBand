@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:enabled="false" android:gravity="center_vertical" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:enabled="false" android:textSize="11.299988sp" android:textColor="@color/lab_item_group_name" android:gravity="left|center" android:id="@id/lab_list_item_group_name" android:background="@color/lab_item_group_bg" android:paddingLeft="@dimen/mili_margin" android:paddingTop="22.0dip" android:paddingRight="@dimen/mili_margin" android:clickable="false" android:layout_width="fill_parent" android:layout_height="@dimen/item_height" />
+</RelativeLayout>

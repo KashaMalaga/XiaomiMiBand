@@ -5,12 +5,16 @@
 # instance fields
 .field final synthetic a:Lcn/com/smartdevices/bracelet/DataManager;
 
+.field private final synthetic b:Lcn/com/smartdevices/bracelet/DataTypeSource;
+
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/DataManager;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/DataManager;Lcn/com/smartdevices/bracelet/DataTypeSource;)V
     .locals 0
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/b;->a:Lcn/com/smartdevices/bracelet/DataManager;
+
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/b;->b:Lcn/com/smartdevices/bracelet/DataTypeSource;
 
     invoke-direct {p0}, Lcom/loopj/android/http/AsyncHttpResponseHandler;-><init>()V
 
@@ -28,13 +32,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "loadNetData onFailure:"
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -50,7 +50,7 @@
 .end method
 
 .method public onSuccess(I[Lorg/apache/http/Header;[B)V
-    .locals 4
+    .locals 5
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -78,20 +78,18 @@
 
     const/4 v3, 0x1
 
-    invoke-virtual {v2, v0, v3}, Lcn/com/smartdevices/bracelet/DataManager;->insertDatas(Ljava/util/ArrayList;I)V
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/b;->b:Lcn/com/smartdevices/bracelet/DataTypeSource;
+
+    invoke-virtual {v2, v0, v3, v4}, Lcn/com/smartdevices/bracelet/DataManager;->insertDatas(Ljava/util/ArrayList;ILcn/com/smartdevices/bracelet/DataTypeSource;)V
 
     :cond_0
     const-string v0, "DataManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v3, "loadNetData onSuccess:"
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget v1, v1, Lcn/com/smartdevices/bracelet/webapi/WebStatus;->code:I
 

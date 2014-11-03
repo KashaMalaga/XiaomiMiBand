@@ -22,7 +22,7 @@
 .method protected inflateLayout()I
     .locals 1
 
-    const v0, 0x7f03003e
+    const v0, 0x7f03003f
 
     return v0
 .end method
@@ -51,7 +51,7 @@
     goto :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x7f0a0120
+    .packed-switch 0x7f070121
         :pswitch_1
         :pswitch_0
         :pswitch_0
@@ -104,7 +104,7 @@
 
     invoke-super {p0, p1, p2}, Lcn/com/smartdevices/bracelet/ui/DimPanelFragment;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
-    const v0, 0x7f0a0120
+    const v0, 0x7f070121
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -116,7 +116,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a0123
+    const v0, 0x7f070124
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

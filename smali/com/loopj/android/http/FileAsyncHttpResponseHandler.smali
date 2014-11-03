@@ -150,22 +150,38 @@
     move-result-object v7
 
     invoke-virtual {v7}, Ljava/lang/Thread;->isInterrupted()Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v7
 
-    if-nez v7, :cond_0
+    if-eqz v7, :cond_2
 
+    :cond_0
+    invoke-static {v1}, Lcom/loopj/android/http/AsyncHttpClient;->silentCloseInputStream(Ljava/io/InputStream;)V
+
+    invoke-virtual {v4}, Ljava/io/FileOutputStream;->flush()V
+
+    invoke-static {v4}, Lcom/loopj/android/http/AsyncHttpClient;->silentCloseOutputStream(Ljava/io/OutputStream;)V
+
+    :cond_1
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :cond_2
     add-int/2addr v0, v6
 
     const/4 v7, 0x0
 
+    :try_start_1
     invoke-virtual {v4, v5, v7, v6}, Ljava/io/FileOutputStream;->write([BII)V
 
     long-to-int v6, v2
 
     invoke-virtual {p0, v0, v6}, Lcom/loopj/android/http/FileAsyncHttpResponseHandler;->sendProgressMessage(II)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
@@ -179,18 +195,6 @@
     invoke-static {v4}, Lcom/loopj/android/http/AsyncHttpClient;->silentCloseOutputStream(Ljava/io/OutputStream;)V
 
     throw v0
-
-    :cond_0
-    invoke-static {v1}, Lcom/loopj/android/http/AsyncHttpClient;->silentCloseInputStream(Ljava/io/InputStream;)V
-
-    invoke-virtual {v4}, Ljava/io/FileOutputStream;->flush()V
-
-    invoke-static {v4}, Lcom/loopj/android/http/AsyncHttpClient;->silentCloseOutputStream(Ljava/io/OutputStream;)V
-
-    :cond_1
-    const/4 v0, 0x0
-
-    return-object v0
 .end method
 
 .method protected getTargetFile()Ljava/io/File;

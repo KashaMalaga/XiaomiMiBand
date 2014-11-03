@@ -26,14 +26,10 @@
 
     if-eq p0, v1, :cond_0
 
-    if-ne p0, v0, :cond_1
+    if-eq p0, v0, :cond_0
 
-    :cond_0
-    :goto_0
-    return v0
-
-    :cond_1
     const/4 v0, 0x0
 
-    goto :goto_0
+    :cond_0
+    return v0
 .end method

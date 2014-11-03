@@ -38,7 +38,7 @@
     goto :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x7f0a007f
+    .packed-switch 0x7f070077
         :pswitch_0
     .end packed-switch
 .end method
@@ -52,7 +52,7 @@
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/SystemLowActivity;->setContentView(I)V
 
-    const v0, 0x7f0a007f
+    const v0, 0x7f070077
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/SystemLowActivity;->findViewById(I)Landroid/view/View;
 

@@ -80,11 +80,6 @@
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
@@ -106,15 +101,17 @@
 .end method
 
 .method public static values()[Lcn/com/smartdevices/bracelet/location/LocationOption$LocationMode;
-    .locals 1
+    .locals 4
+
+    const/4 v3, 0x0
 
     sget-object v0, Lcn/com/smartdevices/bracelet/location/LocationOption$LocationMode;->a:[Lcn/com/smartdevices/bracelet/location/LocationOption$LocationMode;
 
-    invoke-virtual {v0}, [Lcn/com/smartdevices/bracelet/location/LocationOption$LocationMode;->clone()Ljava/lang/Object;
+    array-length v1, v0
 
-    move-result-object v0
+    new-array v2, v1, [Lcn/com/smartdevices/bracelet/location/LocationOption$LocationMode;
 
-    check-cast v0, [Lcn/com/smartdevices/bracelet/location/LocationOption$LocationMode;
+    invoke-static {v0, v3, v2, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    return-object v0
+    return-object v2
 .end method

@@ -41,12 +41,126 @@
     return-void
 .end method
 
+.method public static formatBigDecimal(J)Ljava/lang/String;
+    .locals 2
+
+    const-string v0, "#,###,###"
+
+    new-instance v1, Ljava/text/DecimalFormat;
+
+    invoke-direct {v1, v0}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p0, p1}, Ljava/text/DecimalFormat;->format(J)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static formatDecimal(DI)Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "#,###"
+
+    if-gez p2, :cond_0
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Accuracy must >= 0"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_0
+    if-lez p2, :cond_1
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v0, "."
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v0, 0x0
+
+    move v3, v0
+
+    move-object v0, v1
+
+    move v1, v3
+
+    :goto_0
+    if-lt v1, p2, :cond_2
+
+    :cond_1
+    new-instance v1, Ljava/text/DecimalFormat;
+
+    invoke-direct {v1, v0}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p0, p1}, Ljava/text/DecimalFormat;->format(D)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_2
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v0, "#"
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    move-object v0, v2
+
+    goto :goto_0
+.end method
+
 .method public static formatDistance(Landroid/content/Context;I)[Ljava/lang/String;
-    .locals 7
+    .locals 1
 
-    const/4 v6, 0x1
+    const/4 v0, 0x2
 
-    const/4 v5, 0x0
+    invoke-static {p0, p1, v0}, Lcn/com/smartdevices/bracelet/chart/util/ChartData;->formatDistance(Landroid/content/Context;II)[Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static formatDistance(Landroid/content/Context;II)[Ljava/lang/String;
+    .locals 5
+
+    const/4 v4, 0x1
+
+    const/4 v3, 0x0
 
     const/4 v0, 0x2
 
@@ -58,31 +172,25 @@
 
     if-lt p1, v2, :cond_0
 
-    new-instance v2, Ljava/text/DecimalFormat;
+    const/high16 v2, 0x447a0000
 
-    const-string v3, "#.#"
+    div-float/2addr v1, v2
 
-    invoke-direct {v2, v3}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
+    float-to-double v1, v1
 
-    const/high16 v3, 0x447a0000
-
-    div-float/2addr v1, v3
-
-    float-to-double v3, v1
-
-    invoke-virtual {v2, v3, v4}, Ljava/text/DecimalFormat;->format(D)Ljava/lang/String;
+    invoke-static {v1, v2, p2}, Lcn/com/smartdevices/bracelet/chart/util/ChartData;->formatDecimal(DI)Ljava/lang/String;
 
     move-result-object v1
 
-    aput-object v1, v0, v5
+    aput-object v1, v0, v3
 
-    const v1, 0x7f0d020d
+    const v1, 0x7f0c0037
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    aput-object v1, v0, v6
+    aput-object v1, v0, v4
 
     :goto_0
     return-object v0
@@ -92,15 +200,15 @@
 
     move-result-object v1
 
-    aput-object v1, v0, v5
+    aput-object v1, v0, v3
 
-    const v1, 0x7f0d020e
+    const v1, 0x7f0c0038
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    aput-object v1, v0, v6
+    aput-object v1, v0, v4
 
     goto :goto_0
 .end method
@@ -114,15 +222,15 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const/4 v2, 0x0
 
     aget-object v2, v0, v2
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     const-string v2, ":"
 
@@ -183,13 +291,9 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v3, "0"
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
+    invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     aget-object v3, v2, v4
 
@@ -208,13 +312,9 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v1, "0"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     aget-object v1, v2, v5
 
@@ -265,13 +365,9 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v1, "0"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     aget-object v1, v2, v4
 
@@ -318,7 +414,7 @@
 
     if-nez v1, :cond_0
 
-    const v1, 0x7f0d0204
+    const v1, 0x7f0c011c
 
     const/4 v2, 0x2
 
@@ -340,7 +436,7 @@
     return-object v0
 
     :cond_0
-    const v1, 0x7f0d0205
+    const v1, 0x7f0c011d
 
     new-array v2, v5, [Ljava/lang/Object;
 
@@ -376,7 +472,7 @@
 
     if-nez v1, :cond_0
 
-    const v1, 0x7f0d0204
+    const v1, 0x7f0c011c
 
     const/4 v2, 0x2
 
@@ -398,7 +494,7 @@
     return-object v0
 
     :cond_0
-    const v1, 0x7f0d0205
+    const v1, 0x7f0c011d
 
     new-array v2, v5, [Ljava/lang/Object;
 
@@ -448,13 +544,9 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v1, "0"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     aget-object v1, v2, v5
 
@@ -483,7 +575,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0d0204
+    const v1, 0x7f0c011c
 
     const/4 v2, 0x2
 

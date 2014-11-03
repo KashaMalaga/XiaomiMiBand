@@ -44,6 +44,8 @@
 
 .field private luaAction:Lcn/com/smartdevices/bracelet/lua/LuaAction;
 
+.field private mDataStr:Ljava/lang/String;
+
 .field private mGameInfo:Ljava/lang/String;
 
 .field private mLuaVersion:Ljava/lang/String;
@@ -460,6 +462,14 @@
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->continueReport:Lcn/com/smartdevices/bracelet/model/ReportData;
+
+    return-object v0
+.end method
+
+.method public getDataStr()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->mDataStr:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -929,6 +939,14 @@
     return-void
 .end method
 
+.method public setDataStr(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->mDataStr:Ljava/lang/String;
+
+    return-void
+.end method
+
 .method public setDirty(Ljava/lang/Boolean;)V
     .locals 0
 
@@ -971,8 +989,6 @@
 
 .method public setLuaAction(Landroid/content/Context;)V
     .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->luaAction:Lcn/com/smartdevices/bracelet/lua/LuaAction;
 
     invoke-static {p1}, Lcn/com/smartdevices/bracelet/lua/LuaAction;->getInstance(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/lua/LuaAction;
 

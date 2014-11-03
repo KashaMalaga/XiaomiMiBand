@@ -3,9 +3,9 @@
 
 
 # instance fields
-.field public date:Ljava/lang/String;
+.field public dateFrom:Ljava/lang/String;
 
-.field public reportDate:Ljava/lang/String;
+.field public dateTo:Ljava/lang/String;
 
 
 # direct methods
@@ -16,11 +16,11 @@
 
     const-string v0, ""
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/ReportInfo;->reportDate:Ljava/lang/String;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/ReportInfo;->dateFrom:Ljava/lang/String;
 
     const-string v0, ""
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/ReportInfo;->date:Ljava/lang/String;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/ReportInfo;->dateTo:Ljava/lang/String;
 
     return-void
 .end method

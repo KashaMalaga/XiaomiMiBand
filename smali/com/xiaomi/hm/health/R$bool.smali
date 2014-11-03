@@ -3,11 +3,11 @@
 
 
 # static fields
-.field public static final default_circle_indicator_centered:I = 0x7f080000
+.field public static final default_circle_indicator_centered:I = 0x7f0b0001
 
-.field public static final default_circle_indicator_snap:I = 0x7f080001
+.field public static final default_circle_indicator_snap:I = 0x7f0b0002
 
-.field public static final default_title_indicator_selected_bold:I = 0x7f080002
+.field public static final default_title_indicator_selected_bold:I = 0x7f0b0000
 
 
 # direct methods

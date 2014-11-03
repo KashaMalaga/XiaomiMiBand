@@ -1,4 +1,4 @@
-.class final Lcn/com/smartdevices/bracelet/chart/util/e;
+.class Lcn/com/smartdevices/bracelet/chart/util/e;
 .super Landroid/animation/AnimatorListenerAdapter;
 
 

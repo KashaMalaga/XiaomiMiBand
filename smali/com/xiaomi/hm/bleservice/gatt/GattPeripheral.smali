@@ -88,13 +88,9 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v1, "FileLock: "
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/xiaomi/hm/bleservice/gatt/GattPeripheral;->__android_bug_FileLock:Ljava/nio/channels/FileLock;
 
@@ -324,8 +320,22 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-nez v0, :cond_2
 
+    invoke-virtual {p0}, Lcom/xiaomi/hm/bleservice/gatt/GattPeripheral;->init()Z
+
+    move-result v0
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Debug;->ASSERT_TRUE(Z)V
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {p0}, Lcom/xiaomi/hm/bleservice/gatt/GattPeripheral;->disconnectInternal()V
+
+    :cond_1
+    return-void
+
+    :cond_2
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -334,24 +344,24 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothGattService;->getType()I
 
     move-result v1
 
-    if-nez v1, :cond_2
+    if-nez v1, :cond_4
 
     const-string v1, "Primary"
 
     :goto_0
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    const-string v3, " service: "
+    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, " service: "
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -381,7 +391,7 @@
 
     move-result-object v1
 
-    :cond_1
+    :cond_3
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
@@ -396,13 +406,9 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v4, "  Characteristic: "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothGattCharacteristic;->getUuid()Ljava/util/UUID;
 
@@ -424,13 +430,9 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v4, "    - Properties: "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothGattCharacteristic;->getProperties()I
 
@@ -463,7 +465,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_3
 
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -473,13 +475,9 @@
 
     new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v5, "    Descriptor: "
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothGattDescriptor;->getUuid()Ljava/util/UUID;
 
@@ -501,24 +499,10 @@
 
     goto :goto_1
 
-    :cond_2
+    :cond_4
     const-string v1, "Secondary"
 
     goto/16 :goto_0
-
-    :cond_3
-    invoke-virtual {p0}, Lcom/xiaomi/hm/bleservice/gatt/GattPeripheral;->init()Z
-
-    move-result v0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Debug;->ASSERT_TRUE(Z)V
-
-    if-nez v0, :cond_4
-
-    invoke-virtual {p0}, Lcom/xiaomi/hm/bleservice/gatt/GattPeripheral;->disconnectInternal()V
-
-    :cond_4
-    return-void
 .end method
 
 .method public cleanup()V
@@ -548,13 +532,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "BluetoothAdapter state:"
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -618,13 +598,9 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v1, "         name: "
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcom/xiaomi/hm/bleservice/gatt/GattPeripheral;->getDevice()Landroid/bluetooth/BluetoothDevice;
 
@@ -646,13 +622,9 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v1, "      address: "
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcom/xiaomi/hm/bleservice/gatt/GattPeripheral;->getDevice()Landroid/bluetooth/BluetoothDevice;
 
@@ -875,34 +847,31 @@
 
     if-eqz p1, :cond_0
 
-    if-nez p2, :cond_2
+    if-nez p2, :cond_1
 
     :cond_0
-    move v1, v2
+    :goto_0
+    return v2
 
     :cond_1
-    :goto_0
-    return v1
-
-    :cond_2
     invoke-virtual {p0, p1, p2}, Lcom/xiaomi/hm/bleservice/gatt/GattPeripheral;->writeCharacteristic(Landroid/bluetooth/BluetoothGattCharacteristic;[B)I
 
     move-result v3
 
-    if-nez v3, :cond_3
+    if-nez v3, :cond_2
 
     move v0, v1
 
     :goto_1
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/Debug;->ASSERT_TRUE(Z)V
 
-    if-eqz v3, :cond_1
+    if-nez v3, :cond_0
 
-    move v1, v2
+    move v2, v1
 
     goto :goto_0
 
-    :cond_3
+    :cond_2
     move v0, v2
 
     goto :goto_1

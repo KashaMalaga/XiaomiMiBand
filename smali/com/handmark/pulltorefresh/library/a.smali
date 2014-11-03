@@ -1,66 +1,42 @@
-.class synthetic Lcom/handmark/pulltorefresh/library/a;
+.class Lcom/handmark/pulltorefresh/library/a;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Lcom/handmark/pulltorefresh/library/d;
 
-# static fields
-.field static final synthetic a:[I
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lcom/handmark/pulltorefresh/library/d;"
+    }
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/handmark/pulltorefresh/library/PullToRefreshBase;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/handmark/pulltorefresh/library/PullToRefreshBase;)V
+    .locals 0
 
-    invoke-static {}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Orientation;->values()[Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Orientation;
+    iput-object p1, p0, Lcom/handmark/pulltorefresh/library/a;->a:Lcom/handmark/pulltorefresh/library/PullToRefreshBase;
 
-    move-result-object v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    sput-object v0, Lcom/handmark/pulltorefresh/library/a;->a:[I
-
-    :try_start_0
-    sget-object v0, Lcom/handmark/pulltorefresh/library/a;->a:[I
-
-    sget-object v1, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Orientation;->HORIZONTAL:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Orientation;
-
-    invoke-virtual {v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Orientation;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_1
-
-    :goto_0
-    :try_start_1
-    sget-object v0, Lcom/handmark/pulltorefresh/library/a;->a:[I
-
-    sget-object v1, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Orientation;->VERTICAL:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Orientation;
-
-    invoke-virtual {v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Orientation;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_0
-
-    :goto_1
     return-void
+.end method
 
-    :catch_0
-    move-exception v0
 
-    goto :goto_1
+# virtual methods
+.method public a()V
+    .locals 1
 
-    :catch_1
-    move-exception v0
+    iget-object v0, p0, Lcom/handmark/pulltorefresh/library/a;->a:Lcom/handmark/pulltorefresh/library/PullToRefreshBase;
 
-    goto :goto_0
+    invoke-static {v0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->b(Lcom/handmark/pulltorefresh/library/PullToRefreshBase;)V
+
+    return-void
 .end method

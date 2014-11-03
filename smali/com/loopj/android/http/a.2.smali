@@ -59,8 +59,11 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-nez v0, :cond_1
 
+    return-void
+
+    :cond_1
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -71,7 +74,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     invoke-interface {p1, v0}, Lorg/apache/http/HttpRequest;->getFirstHeader(Ljava/lang/String;)Lorg/apache/http/Header;
 
@@ -125,7 +128,7 @@
 
     invoke-static {v3, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_1
+    :cond_2
     iget-object v1, p0, Lcom/loopj/android/http/a;->a:Lcom/loopj/android/http/AsyncHttpClient;
 
     invoke-static {v1}, Lcom/loopj/android/http/AsyncHttpClient;->a(Lcom/loopj/android/http/AsyncHttpClient;)Ljava/util/Map;
@@ -141,7 +144,4 @@
     invoke-interface {p1, v0, v1}, Lorg/apache/http/HttpRequest;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
-
-    :cond_2
-    return-void
 .end method

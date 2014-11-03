@@ -1,4 +1,4 @@
-.class final Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$2;
+.class Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$2;
 .super Ljava/lang/Object;
 
 # interfaces

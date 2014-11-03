@@ -8,9 +8,9 @@
 # instance fields
 .field final synthetic this$0:Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;
 
-.field final synthetic val$notifyCB:Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$INotifyCallback;
+.field private final synthetic val$notifyCB:Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$INotifyCallback;
 
-.field final synthetic val$value:[B
+.field private final synthetic val$value:[B
 
 
 # direct methods

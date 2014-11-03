@@ -277,8 +277,11 @@
     :goto_0
     array-length v2, v1
 
-    if-ge v0, v2, :cond_0
+    if-lt v0, v2, :cond_0
 
+    return-object v1
+
+    :cond_0
     new-instance v2, Ljava/lang/Integer;
 
     and-int/lit16 v3, p0, 0xff
@@ -296,9 +299,6 @@
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
-
-    :cond_0
-    return-object v1
 .end method
 
 .method public static longToByte(J)[B
@@ -313,8 +313,11 @@
     :goto_0
     array-length v2, v1
 
-    if-ge v0, v2, :cond_0
+    if-lt v0, v2, :cond_0
 
+    return-object v1
+
+    :cond_0
     new-instance v2, Ljava/lang/Long;
 
     const-wide/16 v3, 0xff
@@ -334,9 +337,6 @@
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
-
-    :cond_0
-    return-object v1
 .end method
 
 .method public static shortToByte(S)[B
@@ -351,8 +351,11 @@
     :goto_0
     array-length v2, v1
 
-    if-ge v0, v2, :cond_0
+    if-lt v0, v2, :cond_0
 
+    return-object v1
+
+    :cond_0
     new-instance v2, Ljava/lang/Integer;
 
     and-int/lit16 v3, p0, 0xff
@@ -370,7 +373,4 @@
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
-
-    :cond_0
-    return-object v1
 .end method

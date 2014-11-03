@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:id="@id/group_item_linker" android:background="@android:color/white" android:layout_width="30.0dip" android:layout_height="1.0px" android:layout_centerVertical="true" />
-    <cn.com.smartdevices.bracelet.lab.ui.view.LabCircleView android:gravity="center" android:id="@id/group_item_member" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_toRightOf="@id/group_item_linker" android:layout_centerVertical="true" labcircleview:labCircleWidth="40.0dip" labcircleview:labCircleHeight="40.0dip" labcircleview:labCircleStroke="true" labcircleview:labCircleStrokeWidth="1.0" xmlns:labcircleview="http://schemas.android.com/apk/res-auto" />
+    <TextView android:id="@id/group_item_linker" android:background="@android:color/white" android:layout_width="30.0dip" android:layout_height="2.0px" android:layout_centerVertical="true" />
+    <cn.com.smartdevices.bracelet.lab.ui.view.LabCircleView android:gravity="center" android:id="@id/group_item_member" android:layout_width="42.0dip" android:layout_height="42.0dip" android:layout_toRightOf="@id/group_item_linker" android:layout_centerVertical="true" labcircleview:labCircleWidth="40.0dip" labcircleview:labCircleHeight="40.0dip" labcircleview:labCircleStroke="true" labcircleview:labCircleStrokeWidth="2.0" xmlns:labcircleview="http://schemas.android.com/apk/res-auto" />
 </RelativeLayout>

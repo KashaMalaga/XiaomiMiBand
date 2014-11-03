@@ -17,6 +17,8 @@
 
 .field public static final API_TYPE_GET_GAME_REGISTER_IF:Ljava/lang/String; = "huami.health.detectuserwhetherjoinhuodong.json"
 
+.field public static final API_TYPE_GET_LAZY_DAY:Ljava/lang/String; = "huami.health.getUserLazyDay.json"
+
 .field public static final API_TYPE_GET_LUA_SCRIPT_IF:Ljava/lang/String; = "huami.health.getluapackdata.json"
 
 .field public static final API_TYPE_GET_LUA_VERSION_IF:Ljava/lang/String; = "huami.health.getlatestluaversion.json"
@@ -34,6 +36,8 @@
 .field public static final API_TYPE_SEND_LOGIN_INFO_IF:Ljava/lang/String; = "huami.health.apklogin.json"
 
 .field public static final API_TYPE_SEND_USER_LOCATION_IF:Ljava/lang/String; = "huami.health.backup.json"
+
+.field public static final API_TYPE_SET_LAZY_DAY:Ljava/lang/String; = "huami.health.setUserLazyDay.json"
 
 .field public static final API_TYPE_STATISTIC_BRACELET_IF:Ljava/lang/String; = "huami.health.uploadcollectdata.json"
 
@@ -113,6 +117,8 @@
 
 .field public static final PARAM_GET_USERINFO_UID:Ljava/lang/String; = "uid"
 
+.field public static final PARAM_LAZY_DAY_DETAILS:Ljava/lang/String; = "detail"
+
 .field public static final PARAM_MAC_TOKEN:Ljava/lang/String; = "mac_token"
 
 .field public static final PARAM_MESSAGE:Ljava/lang/String; = "message"
@@ -126,6 +132,8 @@
 .field public static final PARAM_MILIAO_ICON_320:Ljava/lang/String; = "miliaoIcon_320"
 
 .field public static final PARAM_MILIAO_NICK:Ljava/lang/String; = "miliaoNick"
+
+.field public static final PARAM_STATISTIC_APP:Ljava/lang/String; = "statistic_app"
 
 .field public static final PARAM_STATISTIC_BRACELET:Ljava/lang/String; = "statistic_bracelet"
 

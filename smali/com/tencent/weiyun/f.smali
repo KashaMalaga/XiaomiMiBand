@@ -124,6 +124,18 @@
     return-object p1
 .end method
 
+.method private a()V
+    .locals 1
+
+    new-instance v0, Lcom/tencent/weiyun/h;
+
+    invoke-direct {v0, p0}, Lcom/tencent/weiyun/h;-><init>(Lcom/tencent/weiyun/f;)V
+
+    invoke-virtual {v0}, Lcom/tencent/weiyun/h;->start()V
+
+    return-void
+.end method
+
 .method static synthetic a(Lcom/tencent/weiyun/f;[B)[B
     .locals 0
 
@@ -306,11 +318,11 @@
 .method private b()V
     .locals 1
 
-    new-instance v0, Lcom/tencent/weiyun/h;
+    new-instance v0, Lcom/tencent/weiyun/i;
 
-    invoke-direct {v0, p0}, Lcom/tencent/weiyun/h;-><init>(Lcom/tencent/weiyun/f;)V
+    invoke-direct {v0, p0}, Lcom/tencent/weiyun/i;-><init>(Lcom/tencent/weiyun/f;)V
 
-    invoke-virtual {v0}, Lcom/tencent/weiyun/h;->start()V
+    invoke-virtual {v0}, Lcom/tencent/weiyun/i;->start()V
 
     return-void
 .end method
@@ -318,7 +330,7 @@
 .method static synthetic b(Lcom/tencent/weiyun/f;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/tencent/weiyun/f;->c()V
+    invoke-direct {p0}, Lcom/tencent/weiyun/f;->b()V
 
     return-void
 .end method
@@ -329,18 +341,6 @@
     iget-object v0, p0, Lcom/tencent/weiyun/f;->j:Ljava/lang/String;
 
     return-object v0
-.end method
-
-.method private c()V
-    .locals 1
-
-    new-instance v0, Lcom/tencent/weiyun/i;
-
-    invoke-direct {v0, p0}, Lcom/tencent/weiyun/i;-><init>(Lcom/tencent/weiyun/f;)V
-
-    invoke-virtual {v0}, Lcom/tencent/weiyun/i;->start()V
-
-    return-void
 .end method
 
 .method static synthetic d(Lcom/tencent/weiyun/f;)Ljava/lang/String;
@@ -401,7 +401,7 @@
 
 
 # virtual methods
-.method public a()V
+.method public start()V
     .locals 7
 
     const/4 v6, -0x2
@@ -559,7 +559,7 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    invoke-direct {p0}, Lcom/tencent/weiyun/f;->b()V
+    invoke-direct {p0}, Lcom/tencent/weiyun/f;->a()V
 
     goto :goto_0
 
