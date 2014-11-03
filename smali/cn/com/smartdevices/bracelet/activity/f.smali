@@ -30,13 +30,9 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v3, "fail, content ="
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -60,7 +56,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/f;->a:Lcn/com/smartdevices/bracelet/activity/e;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/activity/e;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/activity/e;->a(Lcn/com/smartdevices/bracelet/activity/e;)Lcn/com/smartdevices/bracelet/activity/LoginActivity;
+
+    move-result-object v0
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->j(Lcn/com/smartdevices/bracelet/activity/LoginActivity;)V
 
@@ -80,13 +78,9 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v4, "login result content ="
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -110,25 +104,29 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/activity/f;->a:Lcn/com/smartdevices/bracelet/activity/e;
 
-    iget-object v1, v1, Lcn/com/smartdevices/bracelet/activity/e;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/activity/e;->a(Lcn/com/smartdevices/bracelet/activity/e;)Lcn/com/smartdevices/bracelet/activity/LoginActivity;
+
+    move-result-object v1
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
     iget-object v4, p0, Lcn/com/smartdevices/bracelet/activity/f;->a:Lcn/com/smartdevices/bracelet/activity/e;
 
-    iget-object v4, v4, Lcn/com/smartdevices/bracelet/activity/e;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
+    invoke-static {v4}, Lcn/com/smartdevices/bracelet/activity/e;->a(Lcn/com/smartdevices/bracelet/activity/e;)Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
-    const v5, 0x7f0d0129
+    move-result-object v4
+
+    const v5, 0x7f0c000c
 
     invoke-virtual {v4, v5}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     const-string v4, "\uff0c"
 
@@ -138,9 +136,11 @@
 
     iget-object v4, p0, Lcn/com/smartdevices/bracelet/activity/f;->a:Lcn/com/smartdevices/bracelet/activity/e;
 
-    iget-object v4, v4, Lcn/com/smartdevices/bracelet/activity/e;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
+    invoke-static {v4}, Lcn/com/smartdevices/bracelet/activity/e;->a(Lcn/com/smartdevices/bracelet/activity/e;)Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
-    const v5, 0x7f0d0092
+    move-result-object v4
+
+    const v5, 0x7f0c00cb
 
     invoke-virtual {v4, v5}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->getString(I)Ljava/lang/String;
 
@@ -174,7 +174,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/f;->a:Lcn/com/smartdevices/bracelet/activity/e;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/activity/e;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/activity/e;->a(Lcn/com/smartdevices/bracelet/activity/e;)Lcn/com/smartdevices/bracelet/activity/LoginActivity;
+
+    move-result-object v0
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->h(Lcn/com/smartdevices/bracelet/activity/LoginActivity;)V
 
@@ -182,13 +184,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v3, "Login webstatus fail, code = "
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget v2, v2, Lcn/com/smartdevices/bracelet/webapi/WebStatus;->code:I
 
@@ -288,7 +286,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/f;->a:Lcn/com/smartdevices/bracelet/activity/e;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/activity/e;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/activity/e;->a(Lcn/com/smartdevices/bracelet/activity/e;)Lcn/com/smartdevices/bracelet/activity/LoginActivity;
+
+    move-result-object v0
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->a(Lcn/com/smartdevices/bracelet/activity/LoginActivity;Z)V
     :try_end_0
@@ -303,13 +303,9 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v3, "Catched exception: "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -325,7 +321,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/f;->a:Lcn/com/smartdevices/bracelet/activity/e;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/activity/e;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/activity/e;->a(Lcn/com/smartdevices/bracelet/activity/e;)Lcn/com/smartdevices/bracelet/activity/LoginActivity;
+
+    move-result-object v0
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->j(Lcn/com/smartdevices/bracelet/activity/LoginActivity;)V
 

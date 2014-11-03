@@ -1,4 +1,4 @@
-.class final Lcn/com/smartdevices/bracelet/upgrade/a;
+.class Lcn/com/smartdevices/bracelet/upgrade/a;
 .super Ljava/lang/Object;
 
 # interfaces
@@ -35,7 +35,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, v1}, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;-><init>(Landroid/os/Parcel;Lcn/com/smartdevices/bracelet/upgrade/a;)V
+    invoke-direct {v0, p1, v1}, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;-><init>(Landroid/os/Parcel;Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;)V
 
     return-object v0
 .end method

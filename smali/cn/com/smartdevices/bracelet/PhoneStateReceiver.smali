@@ -43,14 +43,6 @@
     return-object v0
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/BleTask/BleInComingCallTask;)Lcn/com/smartdevices/bracelet/BleTask/BleInComingCallTask;
-    .locals 0
-
-    sput-object p0, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->d:Lcn/com/smartdevices/bracelet/BleTask/BleInComingCallTask;
-
-    return-object p0
-.end method
-
 .method private static a(Landroid/content/Context;I)V
     .locals 4
 
@@ -83,6 +75,14 @@
     int-to-long v2, p1
 
     invoke-virtual {v0, v1, v2, v3}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;J)V
+
+    return-void
+.end method
+
+.method static synthetic a(Lcn/com/smartdevices/bracelet/BleTask/BleInComingCallTask;)V
+    .locals 0
+
+    sput-object p0, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->d:Lcn/com/smartdevices/bracelet/BleTask/BleInComingCallTask;
 
     return-void
 .end method
@@ -209,13 +209,9 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v3, "RINGING :"
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     const-string v3, "incoming_number"
 
@@ -252,13 +248,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "incoming ACCEPT :"
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     const-string v2, "incoming_number"
 

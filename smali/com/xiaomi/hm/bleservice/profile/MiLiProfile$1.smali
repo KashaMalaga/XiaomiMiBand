@@ -51,7 +51,7 @@
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$1;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     # getter for: Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->miliCallback:Lcom/xiaomi/hm/bleservice/profile/MiLiCallback;
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$000(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)Lcom/xiaomi/hm/bleservice/profile/MiLiCallback;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$1(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)Lcom/xiaomi/hm/bleservice/profile/MiLiCallback;
 
     move-result-object v0
 
@@ -60,7 +60,7 @@
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$1;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     # getter for: Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->miliCallback:Lcom/xiaomi/hm/bleservice/profile/MiLiCallback;
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$000(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)Lcom/xiaomi/hm/bleservice/profile/MiLiCallback;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$1(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)Lcom/xiaomi/hm/bleservice/profile/MiLiCallback;
 
     move-result-object v0
 

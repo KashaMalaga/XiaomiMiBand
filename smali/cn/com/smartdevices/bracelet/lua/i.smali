@@ -34,8 +34,6 @@
 .method public onSuccess(I[Lorg/apache/http/Header;[B)V
     .locals 5
 
-    const/4 v3, 0x1
-
     invoke-static {p3}, Lcn/com/smartdevices/bracelet/Utils;->getStringFromBytes([B)Ljava/lang/String;
 
     move-result-object v0
@@ -55,19 +53,17 @@
 
     iget v1, v0, Lcn/com/smartdevices/bracelet/lua/j;->a:I
 
-    if-eq v1, v3, :cond_0
+    const/4 v2, 0x1
+
+    if-eq v1, v2, :cond_0
 
     const-string v1, "chenee"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v3, "get latest luaZipFile error (message:"
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget-object v0, v0, Lcn/com/smartdevices/bracelet/lua/j;->b:Ljava/lang/String;
 
@@ -133,13 +129,9 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v4, "save DB luaZipFile onSuccess====(version:"
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget-object v0, v0, Lcn/com/smartdevices/bracelet/lua/j;->c:Lcn/com/smartdevices/bracelet/lua/k;
 
@@ -167,37 +159,22 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/i;->a:Lcn/com/smartdevices/bracelet/lua/LuaManager;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->getLuaState()Lorg/keplerproject/luajava/LuaState;
+    # getter for: Lcn/com/smartdevices/bracelet/lua/LuaManager;->context:Landroid/content/Context;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->access$1(Lcn/com/smartdevices/bracelet/lua/LuaManager;)Landroid/content/Context;
 
     move-result-object v0
 
-    sget-object v2, Lorg/keplerproject/luajava/LuaState;->LUA_GLOBALSINDEX:Ljava/lang/Integer;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->getInstance(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/lua/LuaEvent;
 
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+    move-result-object v0
 
-    move-result v2
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->setCurLocale()V
 
-    const-string v3, "setLocale"
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->getLayDayStartDate()Ljava/lang/String;
 
-    invoke-virtual {v0, v2, v3}, Lorg/keplerproject/luajava/LuaState;->getField(ILjava/lang/String;)V
+    move-result-object v0
 
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/util/Locale;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Lorg/keplerproject/luajava/LuaState;->pushString(Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/i;->a:Lcn/com/smartdevices/bracelet/lua/LuaManager;
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v2, v3}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->callLua(II)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Keeper;->keepManualLazyDayAlgoStartDate(Ljava/lang/String;)V
 
     invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
 
@@ -213,13 +190,9 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v3, "zipfile count:"
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v1}, Lde/greenrobot/daobracelet/LuaZipFileDao;->count()J
 
@@ -246,13 +219,9 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v3, "get latest lua gson error!:"
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 

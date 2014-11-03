@@ -42,13 +42,13 @@
 
     const/4 v2, 0x0
 
-    const v0, 0x7f03003d
+    const v0, 0x7f03003e
 
     invoke-virtual {p1, v0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v3
 
-    const v0, 0x7f0a011f
+    const v0, 0x7f070120
 
     invoke-virtual {v3, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -56,7 +56,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v0, 0x7f0a011d
+    const v0, 0x7f07011e
 
     invoke-virtual {v3, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -64,7 +64,7 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    const v1, 0x7f0a011e
+    const v1, 0x7f07011f
 
     invoke-virtual {v3, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

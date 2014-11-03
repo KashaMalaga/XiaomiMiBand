@@ -17,6 +17,8 @@
 
 .field private final g:Ljava/io/File;
 
+.field private final h:Ljava/io/File;
+
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;)V
@@ -121,11 +123,25 @@
 
     move-result-object v1
 
-    const-string v2, "acceleration_lab_feature.txt"
+    const-string v2, "acceleration_lab_test_raw.txt"
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/StorageManager;->g:Ljava/io/File;
+
+    new-instance v0, Ljava/io/File;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/algorithm/data/StorageManager;->a:Ljava/io/File;
+
+    invoke-virtual {v1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "acceleration_lab_feature.txt"
+
+    invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/StorageManager;->h:Ljava/io/File;
 
     return-void
 .end method
@@ -213,6 +229,19 @@
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
     :cond_5
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/StorageManager;->h:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/StorageManager;->h:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->delete()Z
+
+    :cond_6
     return-void
 .end method
 
@@ -336,10 +365,22 @@
     return-object v0
 .end method
 
+.method public getAllStorageRawFilePath()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/StorageManager;->c:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public getFeatureStorageFilePath()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/StorageManager;->g:Ljava/io/File;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/StorageManager;->h:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -352,6 +393,18 @@
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/StorageManager;->f:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getTestStorageRawFilePath()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/StorageManager;->g:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -377,13 +430,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "\nActivity Name: "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget-object v2, p1, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->name:Ljava/lang/String;
 
@@ -421,13 +470,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     iget-object v2, p1, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->hand:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     const-string v2, ","
 
@@ -459,8 +508,6 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     sget-object v2, Lcn/com/smartdevices/bracelet/algorithm/data/Utils;->DateFormat:Ljava/text/SimpleDateFormat;
 
     iget-object v3, p1, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->start_time:Ljava/util/Date;
@@ -469,9 +516,11 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     const-string v2, "\n"
 
@@ -507,13 +556,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "\nActivity Name: "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget-object v2, p1, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->name:Ljava/lang/String;
 
@@ -551,13 +596,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     iget-object v2, p1, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->hand:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     const-string v2, ","
 
@@ -589,8 +634,6 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     sget-object v2, Lcn/com/smartdevices/bracelet/algorithm/data/Utils;->DateFormat:Ljava/text/SimpleDateFormat;
 
     iget-object v3, p1, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->start_time:Ljava/util/Date;
@@ -599,9 +642,11 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     const-string v2, "\n"
 
@@ -633,12 +678,101 @@
     return-void
 .end method
 
+.method public writeCorrectNumber(I)V
+    .locals 4
+
+    const/4 v3, 0x1
+
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/algorithm/data/Utils;->mPrintToFile:Z
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Ljava/io/FileOutputStream;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/algorithm/data/StorageManager;->b:Ljava/io/File;
+
+    invoke-direct {v0, v1, v3}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;Z)V
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Correct number: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "\n"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/io/FileOutputStream;->write([B)V
+
+    invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
+
+    new-instance v0, Ljava/io/FileOutputStream;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/algorithm/data/StorageManager;->c:Ljava/io/File;
+
+    invoke-direct {v0, v1, v3}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;Z)V
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Correct number: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "\n"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/io/FileOutputStream;->write([B)V
+
+    invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
+
+    :cond_0
+    return-void
+.end method
+
 .method public writeSamples([D[D[D[S[S[SI)V
     .locals 8
 
     sget-boolean v0, Lcn/com/smartdevices/bracelet/algorithm/data/Utils;->mPrintToFile:Z
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_0
 
     new-instance v1, Ljava/io/FileOutputStream;
 
@@ -651,11 +785,30 @@
     const/4 v0, 0x0
 
     :goto_0
-    if-ge v0, p7, :cond_0
+    if-lt v0, p7, :cond_1
 
+    invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
+
+    new-instance v1, Ljava/io/FileOutputStream;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/StorageManager;->e:Ljava/io/File;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v0, v2}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;Z)V
+
+    const/4 v0, 0x0
+
+    :goto_1
+    if-lt v0, p7, :cond_2
+
+    invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
+
+    :cond_0
+    return-void
+
+    :cond_1
     new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v3, "%.4f"
 
@@ -677,9 +830,11 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     const-string v3, "\t"
 
@@ -761,25 +916,8 @@
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
-
-    new-instance v1, Ljava/io/FileOutputStream;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/StorageManager;->e:Ljava/io/File;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, v0, v2}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;Z)V
-
-    const/4 v0, 0x0
-
-    :goto_1
-    if-ge v0, p7, :cond_1
-
+    :cond_2
     new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v3, "%d"
 
@@ -801,9 +939,11 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     const-string v3, "\t"
 
@@ -883,11 +1023,5 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
-
-    :cond_2
-    return-void
+    goto/16 :goto_1
 .end method

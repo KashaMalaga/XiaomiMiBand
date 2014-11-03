@@ -90,13 +90,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;->defaultUrl:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/Utils;->getPostUrl()Ljava/lang/String;
 
@@ -176,13 +176,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "getRegisterUrl = "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;->registerStage:Lcn/com/smartdevices/bracelet/model/game/GameStage;
 
@@ -443,13 +439,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "Registered = "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -495,13 +487,9 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v1, "\n\nname = "
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;->name:Ljava/lang/String;
 

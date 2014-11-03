@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+<RelativeLayout android:gravity="center_vertical" android:background="@drawable/bg_item_lab" android:layout_width="fill_parent" android:layout_height="wrap_content"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:textSize="14.0sp" android:textColor="@color/lab_item_group_name" android:gravity="left|center" android:id="@id/lab_list_item_group_name" android:background="@color/lab_item_group_bg" android:paddingLeft="@dimen/mili_margin" android:visibility="gone" android:clickable="false" android:layout_width="fill_parent" android:layout_height="24.0dip" />
-    <RelativeLayout android:gravity="center_vertical" android:background="@drawable/bg_item_lab" android:paddingLeft="@dimen/mili_margin" android:paddingRight="@dimen/mili_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/lab_list_item_group_name">
-        <TextView android:id="@id/lab_list_item_sport_name" android:layout_width="fill_parent" android:layout_height="@dimen/item_height" style="@style/ListItemTitleText" />
-        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:src="@drawable/ic_indicator_right_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-    </RelativeLayout>
+    <TextView android:textSize="13.299988sp" android:id="@id/lab_list_item_sport_name" android:paddingLeft="@dimen/mili_margin" android:layout_width="fill_parent" android:layout_height="@dimen/item_height" style="@style/ListItemTitleText" />
+    <ImageView android:paddingRight="@dimen/mili_margin" android:layout_width="wrap_content" android:layout_height="@dimen/item_height" android:layout_marginLeft="10.0dip" android:src="@drawable/ic_indicator_right_arrow" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
 </RelativeLayout>

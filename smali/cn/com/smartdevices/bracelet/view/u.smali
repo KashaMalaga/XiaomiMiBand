@@ -17,6 +17,14 @@
     return-void
 .end method
 
+.method static synthetic a(Lcn/com/smartdevices/bracelet/view/u;)Lcn/com/smartdevices/bracelet/view/RulerScrollView;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/u;->a:Lcn/com/smartdevices/bracelet/view/RulerScrollView;
+
+    return-object v0
+.end method
+
 
 # virtual methods
 .method public onFling(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
@@ -34,13 +42,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "fling end, vX:"
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 

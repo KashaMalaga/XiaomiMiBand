@@ -65,8 +65,34 @@
     move v1, v0
 
     :goto_0
-    if-ge v1, v3, :cond_0
+    if-lt v1, v3, :cond_2
 
+    monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BarChart;->mXAxis:Lcn/com/smartdevices/bracelet/chart/base/BarChart$Axis;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BarChart;->mXAxis:Lcn/com/smartdevices/bracelet/chart/base/BarChart$Axis;
+
+    invoke-virtual {v0, p1, p3}, Lcn/com/smartdevices/bracelet/chart/base/BarChart$Axis;->draw(Landroid/graphics/Canvas;F)V
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BarChart;->mYAxis:Lcn/com/smartdevices/bracelet/chart/base/BarChart$Axis;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BarChart;->mYAxis:Lcn/com/smartdevices/bracelet/chart/base/BarChart$Axis;
+
+    invoke-virtual {v0, p1, p3}, Lcn/com/smartdevices/bracelet/chart/base/BarChart$Axis;->draw(Landroid/graphics/Canvas;F)V
+
+    :cond_1
+    return-void
+
+    :cond_2
+    :try_start_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BarChart;->mItems:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -85,35 +111,9 @@
 
     goto :goto_0
 
-    :cond_0
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BarChart;->mXAxis:Lcn/com/smartdevices/bracelet/chart/base/BarChart$Axis;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BarChart;->mXAxis:Lcn/com/smartdevices/bracelet/chart/base/BarChart$Axis;
-
-    invoke-virtual {v0, p1, p3}, Lcn/com/smartdevices/bracelet/chart/base/BarChart$Axis;->draw(Landroid/graphics/Canvas;F)V
-
-    :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BarChart;->mYAxis:Lcn/com/smartdevices/bracelet/chart/base/BarChart$Axis;
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BarChart;->mYAxis:Lcn/com/smartdevices/bracelet/chart/base/BarChart$Axis;
-
-    invoke-virtual {v0, p1, p3}, Lcn/com/smartdevices/bracelet/chart/base/BarChart$Axis;->draw(Landroid/graphics/Canvas;F)V
-
-    :cond_2
-    return-void
-
     :catchall_0
     move-exception v0
 
-    :try_start_1
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -296,8 +296,15 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BarChart;->mNeedRealign:Z
+
+    return-void
+
+    :cond_0
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -313,13 +320,6 @@
     iput v2, v0, Lcn/com/smartdevices/bracelet/chart/base/BarChart$BarItem;->mDensityScale:F
 
     goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BarChart;->mNeedRealign:Z
-
-    return-void
 .end method
 
 .method protected onRectChanged(Landroid/graphics/RectF;)V
@@ -446,8 +446,13 @@
 
     move-result v0
 
-    if-eqz v0, :cond_8
+    if-nez v0, :cond_3
 
+    iput-boolean v7, p0, Lcn/com/smartdevices/bracelet/chart/base/BarChart;->mNeedRealign:Z
+
+    goto :goto_0
+
+    :cond_3
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -456,7 +461,7 @@
 
     iget-object v1, v0, Lcn/com/smartdevices/bracelet/chart/base/BarChart$BarItem;->mRect:Landroid/graphics/RectF;
 
-    if-nez v1, :cond_5
+    if-nez v1, :cond_6
 
     new-instance v1, Landroid/graphics/RectF;
 
@@ -467,13 +472,13 @@
     :goto_2
     iget-boolean v2, p0, Lcn/com/smartdevices/bracelet/chart/base/BarChart;->mNeedRealign:Z
 
-    if-nez v2, :cond_3
+    if-nez v2, :cond_4
 
     iget-object v2, v0, Lcn/com/smartdevices/bracelet/chart/base/BarChart$BarItem;->mRect:Landroid/graphics/RectF;
 
-    if-nez v2, :cond_6
+    if-nez v2, :cond_7
 
-    :cond_3
+    :cond_4
     invoke-virtual {p0, p1, v0}, Lcn/com/smartdevices/bracelet/chart/base/BarChart;->itemWidth(Landroid/graphics/RectF;Lcn/com/smartdevices/bracelet/chart/base/BarChart$BarItem;)F
 
     move-result v3
@@ -499,7 +504,7 @@
 
     iget-boolean v3, p0, Lcn/com/smartdevices/bracelet/chart/base/BarChart;->mMirrored:Z
 
-    if-nez v3, :cond_7
+    if-nez v3, :cond_8
 
     iget v3, p1, Landroid/graphics/RectF;->bottom:F
 
@@ -540,7 +545,7 @@
 
     cmpg-float v2, v2, v3
 
-    if-ltz v2, :cond_4
+    if-ltz v2, :cond_5
 
     iget v1, v1, Landroid/graphics/RectF;->left:F
 
@@ -554,17 +559,17 @@
 
     if-lez v1, :cond_2
 
-    :cond_4
+    :cond_5
     iput-boolean v7, v0, Lcn/com/smartdevices/bracelet/chart/base/BarChart$BarItem;->needDraw:Z
 
     goto :goto_1
 
-    :cond_5
+    :cond_6
     iget-object v1, v0, Lcn/com/smartdevices/bracelet/chart/base/BarChart$BarItem;->mRect:Landroid/graphics/RectF;
 
     goto :goto_2
 
-    :cond_6
+    :cond_7
     iget-object v2, v0, Lcn/com/smartdevices/bracelet/chart/base/BarChart$BarItem;->mRect:Landroid/graphics/RectF;
 
     invoke-virtual {v2}, Landroid/graphics/RectF;->width()F
@@ -579,7 +584,7 @@
 
     goto :goto_3
 
-    :cond_7
+    :cond_8
     iget v3, p1, Landroid/graphics/RectF;->top:F
 
     iget v5, p0, Lcn/com/smartdevices/bracelet/chart/base/BarChart;->mPaddingTop:F
@@ -595,11 +600,6 @@
     iput v2, v1, Landroid/graphics/RectF;->bottom:F
 
     goto :goto_4
-
-    :cond_8
-    iput-boolean v7, p0, Lcn/com/smartdevices/bracelet/chart/base/BarChart;->mNeedRealign:Z
-
-    goto/16 :goto_0
 .end method
 
 .method public setItemPadding(F)V

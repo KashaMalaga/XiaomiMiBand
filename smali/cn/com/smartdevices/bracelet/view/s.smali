@@ -67,7 +67,7 @@
 
     move-result v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->a(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;I)I
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->a(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/s;->a:Lcn/com/smartdevices/bracelet/view/RoundProgressBar;
 

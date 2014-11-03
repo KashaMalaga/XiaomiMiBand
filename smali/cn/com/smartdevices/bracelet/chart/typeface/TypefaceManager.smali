@@ -258,8 +258,15 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-nez v0, :cond_2
 
+    :cond_1
+    move-object v0, v1
+
+    :goto_0
+    return-object v0
+
+    :cond_2
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -275,12 +282,6 @@
     invoke-virtual {p0, p1, v0}, Lcn/com/smartdevices/bracelet/chart/typeface/TypefaceManager;->getTypeface(Landroid/content/Context;Lcn/com/smartdevices/bracelet/chart/typeface/TypefaceManager$TextStyle;)Landroid/graphics/Typeface;
 
     move-result-object v0
-
-    :goto_0
-    return-object v0
-
-    :cond_1
-    move-object v0, v1
 
     goto :goto_0
 .end method

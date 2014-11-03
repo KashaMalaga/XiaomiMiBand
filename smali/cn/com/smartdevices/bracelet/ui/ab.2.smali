@@ -1,5 +1,8 @@
 .class Lcn/com/smartdevices/bracelet/ui/ab;
-.super Landroid/os/Handler;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/view/animation/Animation$AnimationListener;
 
 
 # instance fields
@@ -12,40 +15,37 @@
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/ab;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
 
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public handleMessage(Landroid/os/Message;)V
-    .locals 1
+.method public onAnimationEnd(Landroid/view/animation/Animation;)V
+    .locals 2
 
-    iget v0, p1, Landroid/os/Message;->what:I
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ab;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->f(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Lcn/com/smartdevices/bracelet/view/RoundProgressBar;
 
-    :goto_0
+    move-result-object v0
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->setVisibility(I)V
+
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ab;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+.method public onAnimationRepeat(Landroid/view/animation/Animation;)V
+    .locals 0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->a(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)V
+    return-void
+.end method
 
-    goto :goto_0
+.method public onAnimationStart(Landroid/view/animation/Animation;)V
+    .locals 0
 
-    :pswitch_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ab;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->finishAnimation()V
-
-    goto :goto_0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
+    return-void
 .end method

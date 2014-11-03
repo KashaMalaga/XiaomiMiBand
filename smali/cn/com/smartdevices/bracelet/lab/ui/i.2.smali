@@ -20,6 +20,14 @@
     return-void
 .end method
 
+.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/i;)Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
+
+    return-object v0
+.end method
+
 
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
@@ -29,7 +37,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->h(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/Button;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->i(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/Button;
 
     move-result-object v0
 
@@ -39,19 +47,11 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->i(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/Button;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->j(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/Button;
 
     move-result-object v0
 
     invoke-virtual {v0, v2}, Landroid/widget/Button;->setEnabled(Z)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->j(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/Spinner;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Landroid/widget/Spinner;->setEnabled(Z)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
 
@@ -63,11 +63,11 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->l(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/Button;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->l(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/Spinner;
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Landroid/widget/Button;->setEnabled(Z)V
+    invoke-virtual {v0, v2}, Landroid/widget/Spinner;->setEnabled(Z)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
 
@@ -87,7 +87,15 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->o(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/EditText;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->o(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/Button;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Landroid/widget/Button;->setEnabled(Z)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->p(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/EditText;
 
     move-result-object v0
 
@@ -97,11 +105,19 @@
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->b(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;Z)Z
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->b(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;Z)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->p(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->q(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/Button;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Landroid/widget/Button;->setEnabled(Z)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->r(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/i;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
 

@@ -423,7 +423,7 @@
 
     iget-object v1, p0, Lcom/nostra13/universalimageloader/core/l;->z:Lcom/nostra13/universalimageloader/core/i;
 
-    invoke-virtual {v1}, Lcom/nostra13/universalimageloader/core/i;->d()Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-virtual {v1}, Lcom/nostra13/universalimageloader/core/i;->c()Ljava/util/concurrent/atomic/AtomicBoolean;
 
     move-result-object v1
 
@@ -435,7 +435,7 @@
 
     iget-object v2, p0, Lcom/nostra13/universalimageloader/core/l;->z:Lcom/nostra13/universalimageloader/core/i;
 
-    invoke-virtual {v2}, Lcom/nostra13/universalimageloader/core/i;->e()Ljava/lang/Object;
+    invoke-virtual {v2}, Lcom/nostra13/universalimageloader/core/i;->d()Ljava/lang/Object;
 
     move-result-object v2
 
@@ -467,7 +467,7 @@
     :try_start_1
     iget-object v1, p0, Lcom/nostra13/universalimageloader/core/l;->z:Lcom/nostra13/universalimageloader/core/i;
 
-    invoke-virtual {v1}, Lcom/nostra13/universalimageloader/core/i;->e()Ljava/lang/Object;
+    invoke-virtual {v1}, Lcom/nostra13/universalimageloader/core/i;->d()Ljava/lang/Object;
 
     move-result-object v1
 
@@ -1073,7 +1073,7 @@
 
     iget-object v0, p0, Lcom/nostra13/universalimageloader/core/l;->z:Lcom/nostra13/universalimageloader/core/i;
 
-    invoke-virtual {v0}, Lcom/nostra13/universalimageloader/core/i;->f()Z
+    invoke-virtual {v0}, Lcom/nostra13/universalimageloader/core/i;->e()Z
 
     move-result v0
 
@@ -1087,7 +1087,7 @@
     :cond_0
     iget-object v0, p0, Lcom/nostra13/universalimageloader/core/l;->z:Lcom/nostra13/universalimageloader/core/i;
 
-    invoke-virtual {v0}, Lcom/nostra13/universalimageloader/core/i;->g()Z
+    invoke-virtual {v0}, Lcom/nostra13/universalimageloader/core/i;->f()Z
 
     move-result v0
 

@@ -23,11 +23,13 @@
 
 # virtual methods
 .method public onClick(Landroid/view/View;)V
-    .locals 1
+    .locals 2
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/p;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->c(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->a(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;Z)V
 
     return-void
 .end method

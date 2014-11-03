@@ -44,13 +44,9 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v4, "a            = "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -66,13 +62,9 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v4, "b            = "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -88,13 +80,9 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v4, "Re(a)        = "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/algorithm/Complex;->re()D
 
@@ -114,13 +102,9 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v4, "Im(a)        = "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/algorithm/Complex;->im()D
 
@@ -140,13 +124,9 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v4, "b + a        = "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/algorithm/Complex;->plus(Lcn/com/smartdevices/bracelet/algorithm/Complex;)Lcn/com/smartdevices/bracelet/algorithm/Complex;
 
@@ -166,13 +146,9 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v4, "a - b        = "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/algorithm/Complex;->minus(Lcn/com/smartdevices/bracelet/algorithm/Complex;)Lcn/com/smartdevices/bracelet/algorithm/Complex;
 
@@ -192,13 +168,9 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v4, "a * b        = "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/algorithm/Complex;->times(Lcn/com/smartdevices/bracelet/algorithm/Complex;)Lcn/com/smartdevices/bracelet/algorithm/Complex;
 
@@ -218,13 +190,9 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v4, "b * a        = "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/algorithm/Complex;->times(Lcn/com/smartdevices/bracelet/algorithm/Complex;)Lcn/com/smartdevices/bracelet/algorithm/Complex;
 
@@ -244,13 +212,9 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v4, "a / b        = "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/algorithm/Complex;->divides(Lcn/com/smartdevices/bracelet/algorithm/Complex;)Lcn/com/smartdevices/bracelet/algorithm/Complex;
 
@@ -270,13 +234,9 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v4, "(a / b) * b  = "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/algorithm/Complex;->divides(Lcn/com/smartdevices/bracelet/algorithm/Complex;)Lcn/com/smartdevices/bracelet/algorithm/Complex;
 
@@ -300,13 +260,9 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v3, "conj(a)      = "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/algorithm/Complex;->conjugate()Lcn/com/smartdevices/bracelet/algorithm/Complex;
 
@@ -326,13 +282,9 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v3, "|a|          = "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/algorithm/Complex;->abs()D
 
@@ -352,13 +304,9 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v3, "tan(a)       = "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/algorithm/Complex;->tan()Lcn/com/smartdevices/bracelet/algorithm/Complex;
 
@@ -756,19 +704,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
     iget-wide v1, p0, Lcn/com/smartdevices/bracelet/algorithm/Complex;->a:D
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-static {v1, v2}, Ljava/lang/String;->valueOf(D)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    const-string v1, ""
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -786,13 +728,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
     iget-wide v1, p0, Lcn/com/smartdevices/bracelet/algorithm/Complex;->b:D
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-static {v1, v2}, Ljava/lang/String;->valueOf(D)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     const-string v1, "i"
 
@@ -815,13 +757,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
     iget-wide v1, p0, Lcn/com/smartdevices/bracelet/algorithm/Complex;->a:D
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-static {v1, v2}, Ljava/lang/String;->valueOf(D)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     const-string v1, " - "
 
@@ -852,13 +794,13 @@
     :cond_2
     new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
     iget-wide v1, p0, Lcn/com/smartdevices/bracelet/algorithm/Complex;->a:D
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-static {v1, v2}, Ljava/lang/String;->valueOf(D)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     const-string v1, " + "
 

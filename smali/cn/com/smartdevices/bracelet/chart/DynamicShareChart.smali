@@ -14,9 +14,9 @@
 
     invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/chart/base/BarChart;-><init>(Landroid/content/Context;)V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/chart/k;
+    new-instance v0, Lcn/com/smartdevices/bracelet/chart/j;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/chart/k;-><init>(Lcn/com/smartdevices/bracelet/chart/DynamicShareChart;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/chart/j;-><init>(Lcn/com/smartdevices/bracelet/chart/DynamicShareChart;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicShareChart;->mXAxis:Lcn/com/smartdevices/bracelet/chart/base/BarChart$Axis;
 
@@ -148,15 +148,15 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicShareChart;->mXAxis:Lcn/com/smartdevices/bracelet/chart/base/BarChart$Axis;
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/k;
+    check-cast v0, Lcn/com/smartdevices/bracelet/chart/j;
 
-    iget v1, v0, Lcn/com/smartdevices/bracelet/chart/k;->c:F
+    iget v1, v0, Lcn/com/smartdevices/bracelet/chart/j;->c:F
 
     check-cast p2, Lcn/com/smartdevices/bracelet/chart/DynamicShareChart$DynamicShareBarItem;
 
     iget v2, p2, Lcn/com/smartdevices/bracelet/chart/DynamicShareChart$DynamicShareBarItem;->index:I
 
-    iget v0, v0, Lcn/com/smartdevices/bracelet/chart/k;->offset:I
+    iget v0, v0, Lcn/com/smartdevices/bracelet/chart/j;->offset:I
 
     sub-int v0, v2, v0
 
@@ -194,9 +194,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicShareChart;->mXAxis:Lcn/com/smartdevices/bracelet/chart/base/BarChart$Axis;
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/k;
+    check-cast v0, Lcn/com/smartdevices/bracelet/chart/j;
 
-    iput p1, v0, Lcn/com/smartdevices/bracelet/chart/k;->offset:I
+    iput p1, v0, Lcn/com/smartdevices/bracelet/chart/j;->offset:I
 
     return-void
 .end method

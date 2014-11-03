@@ -18,7 +18,7 @@
 .method private initHomeBack()V
     .locals 2
 
-    const v0, 0x7f0a0024
+    const v0, 0x7f070024
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BaseActivity;->findViewById(I)Landroid/view/View;
 
@@ -79,7 +79,7 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_a
+    if-eqz v2, :cond_9
 
     invoke-virtual {v2}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
@@ -94,8 +94,163 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_4
 
+    const-string v0, "qqhealth"
+
+    const-string v5, "from"
+
+    invoke-virtual {v2, v5}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    const-string v5, "openid"
+
+    invoke-virtual {v2, v5}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->getTencent()Lcom/tencent/tauth/Tencent;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Lcom/tencent/tauth/Tencent;->getOpenId()Ljava/lang/String;
+
+    move-result-object v5
+
+    const-string v6, "QQ.Login"
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    const-string v8, "FromQQ OpenId : "
+
+    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    const-string v8, ", Last OpenId : "
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v6, v7}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    if-eqz v5, :cond_0
+
+    invoke-virtual {v5, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    :cond_0
+    invoke-virtual {v4, v3}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->setNeedLogin(Z)V
+
+    if-eqz v5, :cond_1
+
+    invoke-virtual {v4, v3}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->setNeedSwitchLogin(Z)V
+
+    :cond_1
+    new-instance v2, Landroid/content/Intent;
+
+    invoke-direct {v2}, Landroid/content/Intent;-><init>()V
+
+    invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/ui/BaseActivity;->setIntent(Landroid/content/Intent;)V
+
+    :cond_2
+    :goto_1
+    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->getTencent()Lcom/tencent/tauth/Tencent;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/tencent/tauth/Tencent;->getOpenId()Ljava/lang/String;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_5
+
+    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->isLoginValid()Z
+
+    move-result v2
+
+    if-nez v2, :cond_5
+
+    move v2, v3
+
+    :goto_2
+    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->isNeedLoginIn()Z
+
+    move-result v5
+
+    if-nez v5, :cond_6
+
+    if-nez v2, :cond_6
+
+    :goto_3
+    const-string v2, "QQ.Login"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v5, "Check Need Login : "
+
+    invoke-direct {v3, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    if-eqz v1, :cond_3
+
+    instance-of v1, p0, Lcn/com/smartdevices/bracelet/activity/LoginActivity;
+
+    if-eqz v1, :cond_7
+
+    if-eqz v0, :cond_7
+
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/BaseActivity$BindQQHealthTipFragment;
+
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/BaseActivity$BindQQHealthTipFragment;-><init>(Lcn/com/smartdevices/bracelet/ui/BaseActivity;)V
+
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/k;
+
+    invoke-direct {v1, p0, v0}, Lcn/com/smartdevices/bracelet/ui/k;-><init>(Lcn/com/smartdevices/bracelet/ui/BaseActivity;Lcn/com/smartdevices/bracelet/ui/BaseActivity$BindQQHealthTipFragment;)V
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/BaseActivity$BindQQHealthTipFragment;->setOpClickListener(Lcn/com/smartdevices/bracelet/ui/DimPanelFragment$OpClickListener;)V
+
+    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/ui/DimPanelFragment;->showPanel(Landroid/app/Activity;Landroid/app/DialogFragment;)V
+
+    const-class v0, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+
+    invoke-virtual {v4, v0}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->setLaunchActivity(Ljava/lang/Class;)V
+
+    :cond_3
+    :goto_4
+    return-void
+
+    :cond_4
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -106,13 +261,9 @@
 
     new-instance v7, Ljava/lang/StringBuilder;
 
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v8, "K : "
 
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
+    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -138,185 +289,24 @@
 
     invoke-static {v6, v0}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_0
-
-    :cond_0
-    const-string v0, "qqhealth"
-
-    const-string v5, "from"
-
-    invoke-virtual {v2, v5}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    const-string v5, "openid"
-
-    invoke-virtual {v2, v5}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->getTencent()Lcom/tencent/tauth/Tencent;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Lcom/tencent/tauth/Tencent;->getOpenId()Ljava/lang/String;
-
-    move-result-object v5
-
-    const-string v6, "QQ.Login"
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v8, "FromQQ OpenId : "
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    const-string v8, ", Last OpenId : "
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-static {v6, v7}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    if-eqz v5, :cond_1
-
-    invoke-virtual {v5, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    :cond_1
-    invoke-virtual {v4, v3}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->setNeedLogin(Z)V
-
-    if-eqz v5, :cond_2
-
-    invoke-virtual {v4, v3}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->setNeedSwitchLogin(Z)V
-
-    :cond_2
-    new-instance v2, Landroid/content/Intent;
-
-    invoke-direct {v2}, Landroid/content/Intent;-><init>()V
-
-    invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/ui/BaseActivity;->setIntent(Landroid/content/Intent;)V
-
-    :cond_3
-    :goto_1
-    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->getTencent()Lcom/tencent/tauth/Tencent;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/tencent/tauth/Tencent;->getOpenId()Ljava/lang/String;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_7
-
-    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->isLoginValid()Z
-
-    move-result v2
-
-    if-nez v2, :cond_7
-
-    move v2, v3
-
-    :goto_2
-    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->isNeedLoginIn()Z
-
-    move-result v5
-
-    if-nez v5, :cond_4
-
-    if-eqz v2, :cond_5
-
-    :cond_4
-    move v1, v3
+    goto/16 :goto_0
 
     :cond_5
-    const-string v2, "QQ.Login"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "Check Need Login : "
-
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    if-eqz v1, :cond_6
-
-    instance-of v1, p0, Lcn/com/smartdevices/bracelet/activity/LoginActivity;
-
-    if-eqz v1, :cond_8
-
-    if-eqz v0, :cond_8
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/BaseActivity$BindQQHealthTipFragment;
-
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/BaseActivity$BindQQHealthTipFragment;-><init>(Lcn/com/smartdevices/bracelet/ui/BaseActivity;)V
-
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/k;
-
-    invoke-direct {v1, p0, v0}, Lcn/com/smartdevices/bracelet/ui/k;-><init>(Lcn/com/smartdevices/bracelet/ui/BaseActivity;Lcn/com/smartdevices/bracelet/ui/BaseActivity$BindQQHealthTipFragment;)V
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/BaseActivity$BindQQHealthTipFragment;->setOpClickListener(Lcn/com/smartdevices/bracelet/ui/DimPanelFragment$OpClickListener;)V
-
-    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/ui/DimPanelFragment;->showPanel(Landroid/app/Activity;Landroid/app/DialogFragment;)V
-
-    const-class v0, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
-
-    invoke-virtual {v4, v0}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->setLaunchActivity(Ljava/lang/Class;)V
-
-    :cond_6
-    :goto_3
-    return-void
-
-    :cond_7
     move v2, v1
 
     goto :goto_2
 
-    :cond_8
+    :cond_6
+    move v1, v3
+
+    goto :goto_3
+
+    :cond_7
     invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->getLaunchActivity()Ljava/lang/Class;
 
     move-result-object v0
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_8
 
     invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->getLaunchActivity()Ljava/lang/Class;
 
@@ -326,16 +316,16 @@
 
     move-result-object v1
 
-    if-ne v0, v1, :cond_6
+    if-ne v0, v1, :cond_3
 
-    :cond_9
+    :cond_8
     const/4 v0, 0x0
 
     invoke-virtual {v4, v0}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->setLaunchActivity(Ljava/lang/Class;)V
 
     instance-of v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
-    if-nez v0, :cond_6
+    if-nez v0, :cond_3
 
     new-instance v0, Landroid/content/Intent;
 
@@ -345,12 +335,12 @@
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BaseActivity;->startActivity(Landroid/content/Intent;)V
 
-    goto :goto_3
+    goto :goto_4
 
-    :cond_a
+    :cond_9
     move v0, v1
 
-    goto :goto_1
+    goto/16 :goto_1
 .end method
 
 .method public setContentView(I)V

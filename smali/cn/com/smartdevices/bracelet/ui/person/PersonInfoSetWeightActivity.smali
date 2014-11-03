@@ -41,13 +41,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "weight = "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetWeightActivity;->mPersonInfo:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
@@ -87,19 +83,19 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 14
 
-    const v2, 0x7f090014
+    const v2, 0x7f080005
 
     const/16 v11, 0xf
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoBaseActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030019
+    const v0, 0x7f03001b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetWeightActivity;->setContentView(I)V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetWeightActivity;->initViews()V
 
-    const v0, 0x7f0a0097
+    const v0, 0x7f070097
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetWeightActivity;->findViewById(I)Landroid/view/View;
 
@@ -117,13 +113,13 @@
 
     move-result-object v0
 
-    const v1, 0x7f0200d1
+    const v1, 0x7f0200bb
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->setCenterDrawable(I)Lkankan/wheel/widget/WheelView;
 
     move-result-object v0
 
-    const v1, 0x7f0d00d7
+    const v1, 0x7f0c005e
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetWeightActivity;->getString(I)Ljava/lang/String;
 
@@ -151,7 +147,7 @@
 
     move-result-object v1
 
-    const v5, 0x7f09005c
+    const v5, 0x7f080004
 
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -169,7 +165,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f090016
+    const v2, 0x7f08002d
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 

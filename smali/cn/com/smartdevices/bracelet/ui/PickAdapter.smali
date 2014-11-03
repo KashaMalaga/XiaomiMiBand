@@ -332,11 +332,11 @@
     move-object v1, v0
 
     :goto_0
-    new-instance v3, Lcn/com/smartdevices/bracelet/ui/bm;
+    new-instance v3, Lcn/com/smartdevices/bracelet/ui/bi;
 
-    invoke-direct {v3, p0, v4}, Lcn/com/smartdevices/bracelet/ui/bm;-><init>(Lcn/com/smartdevices/bracelet/ui/PickAdapter;Lcn/com/smartdevices/bracelet/ui/bl;)V
+    invoke-direct {v3, p0, v4}, Lcn/com/smartdevices/bracelet/ui/bi;-><init>(Lcn/com/smartdevices/bracelet/ui/PickAdapter;Lcn/com/smartdevices/bracelet/ui/bi;)V
 
-    const v0, 0x7f0a022a
+    const v0, 0x7f070228
 
     invoke-virtual {v1, v0}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -344,9 +344,9 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, v3, Lcn/com/smartdevices/bracelet/ui/bm;->a:Landroid/widget/TextView;
+    iput-object v0, v3, Lcn/com/smartdevices/bracelet/ui/bi;->a:Landroid/widget/TextView;
 
-    iget-object v0, v3, Lcn/com/smartdevices/bracelet/ui/bm;->a:Landroid/widget/TextView;
+    iget-object v0, v3, Lcn/com/smartdevices/bracelet/ui/bi;->a:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -365,9 +365,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/bm;
+    check-cast v0, Lcn/com/smartdevices/bracelet/ui/bi;
 
-    iget-object v3, v0, Lcn/com/smartdevices/bracelet/ui/bm;->a:Landroid/widget/TextView;
+    iget-object v3, v0, Lcn/com/smartdevices/bracelet/ui/bi;->a:Landroid/widget/TextView;
 
     const-string v0, "%02d"
 
@@ -403,13 +403,9 @@
 
     new-instance v5, Ljava/lang/StringBuilder;
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v6, "realCurIndex ="
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -474,7 +470,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PickAdapter;->q:Landroid/content/Context;
 
-    const v5, 0x7f0d0016
+    const v5, 0x7f0c0141
 
     invoke-virtual {v0, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -500,7 +496,7 @@
     :cond_2
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PickAdapter;->q:Landroid/content/Context;
 
-    const v5, 0x7f0d0171
+    const v5, 0x7f0c0142
 
     invoke-virtual {v0, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

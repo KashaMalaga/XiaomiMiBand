@@ -1,33 +1,24 @@
-.class Lcn/com/smartdevices/bracelet/lab/ui/F;
+.class final Lcn/com/smartdevices/bracelet/lab/ui/F;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
+# static fields
+.field public static final a:I = 0x2
 
-# instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;
+.field public static final b:I = 0x3
+
+.field public static final c:I = 0x4
+
+.field public static final d:I = 0x5
+
+.field public static final e:I = 0x6
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;)V
+.method private constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/F;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/F;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->finish()V
 
     return-void
 .end method

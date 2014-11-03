@@ -62,7 +62,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f02007c
+    const v1, 0x7f020066
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -419,7 +419,7 @@
 
     const/4 v2, 0x1
 
-    if-ne v0, v2, :cond_6
+    if-ne v0, v2, :cond_4
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/chart/LinePieChart;->d:I
 
@@ -447,12 +447,7 @@
 
     goto :goto_1
 
-    :cond_6
-    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/LinePieChart;->h:I
-
-    if-nez v0, :cond_4
-
-    goto :goto_1
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

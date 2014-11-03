@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <FrameLayout android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <FrameLayout android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent">
         <view android:id="@id/sport_progresscircle_view" android:layout_width="fill_parent" android:layout_height="fill_parent" class="cn.com.smartdevices.bracelet.lab.ui.view.LabCircleView$CircleView" />
+        <ImageView android:layout_gravity="center" android:id="@id/bracelet_offline" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/wrong_mark" />
         <TextView android:textSize="60.0dip" android:textStyle="bold" android:textColor="@android:color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/circle_view_sport_progress_state" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" android:alpha="0.9" />
     </FrameLayout>
 </merge>

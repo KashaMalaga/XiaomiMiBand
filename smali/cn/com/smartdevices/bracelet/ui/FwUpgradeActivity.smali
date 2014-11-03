@@ -75,14 +75,6 @@
     return-void
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;Landroid/bluetooth/BluetoothDevice;)Landroid/bluetooth/BluetoothDevice;
-    .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->l:Landroid/bluetooth/BluetoothDevice;
-
-    return-object p1
-.end method
-
 .method static synthetic a()Ljava/lang/String;
     .locals 1
 
@@ -127,9 +119,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/aj;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/af;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/aj;-><init>(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/af;-><init>(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -152,12 +144,20 @@
     return-void
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;Z)Z
+.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;Landroid/bluetooth/BluetoothDevice;)V
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->l:Landroid/bluetooth/BluetoothDevice;
+
+    return-void
+.end method
+
+.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;Z)V
     .locals 0
 
     iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->g:Z
 
-    return p1
+    return-void
 .end method
 
 .method static synthetic b(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Landroid/os/Handler;
@@ -230,13 +230,9 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v4, "new fw length:"
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/io/InputStream;->available()I
 
@@ -268,9 +264,9 @@
 
     iget-object v0, v0, Lcn/com/smartdevices/bracelet/model/BraceletBtInfo;->address:Ljava/lang/String;
 
-    new-instance v3, Lcn/com/smartdevices/bracelet/ui/ac;
+    new-instance v3, Lcn/com/smartdevices/bracelet/ui/Z;
 
-    invoke-direct {v3, p0}, Lcn/com/smartdevices/bracelet/ui/ac;-><init>(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)V
+    invoke-direct {v3, p0}, Lcn/com/smartdevices/bracelet/ui/Z;-><init>(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)V
 
     invoke-direct {v1, v0, v2, v3}, Lcn/com/smartdevices/bracelet/BleTask/BleFwUpgradeTask;-><init>(Ljava/lang/String;[BLcn/com/smartdevices/bracelet/BleTask/BleCallBack;)V
 
@@ -306,7 +302,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->d:Landroid/content/Context;
 
-    const v1, 0x7f0d00af
+    const v1, 0x7f0c00c9
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->getString(I)Ljava/lang/String;
 
@@ -454,7 +450,7 @@
 .method public enterAnimation()V
     .locals 6
 
-    const v3, 0x7f040001
+    const v3, 0x7f040003
 
     invoke-static {p0, v3}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
@@ -488,9 +484,9 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/view/animation/Animation;->setStartOffset(J)V
 
-    new-instance v4, Lcn/com/smartdevices/bracelet/ui/ad;
+    new-instance v4, Lcn/com/smartdevices/bracelet/ui/aa;
 
-    invoke-direct {v4, p0}, Lcn/com/smartdevices/bracelet/ui/ad;-><init>(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)V
+    invoke-direct {v4, p0}, Lcn/com/smartdevices/bracelet/ui/aa;-><init>(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)V
 
     invoke-virtual {v3, v4}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
@@ -530,7 +526,7 @@
 .method public finishAnimation()V
     .locals 6
 
-    const v3, 0x7f040002
+    const v3, 0x7f040004
 
     invoke-static {p0, v3}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
@@ -564,27 +560,27 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/view/animation/Animation;->setStartOffset(J)V
 
-    new-instance v4, Lcn/com/smartdevices/bracelet/ui/ae;
+    new-instance v4, Lcn/com/smartdevices/bracelet/ui/ab;
 
-    invoke-direct {v4, p0}, Lcn/com/smartdevices/bracelet/ui/ae;-><init>(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)V
+    invoke-direct {v4, p0}, Lcn/com/smartdevices/bracelet/ui/ab;-><init>(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)V
 
     invoke-virtual {v0, v4}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    new-instance v4, Lcn/com/smartdevices/bracelet/ui/af;
+    new-instance v4, Lcn/com/smartdevices/bracelet/ui/ac;
 
-    invoke-direct {v4, p0}, Lcn/com/smartdevices/bracelet/ui/af;-><init>(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)V
+    invoke-direct {v4, p0}, Lcn/com/smartdevices/bracelet/ui/ac;-><init>(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)V
 
     invoke-virtual {v1, v4}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    new-instance v4, Lcn/com/smartdevices/bracelet/ui/ag;
+    new-instance v4, Lcn/com/smartdevices/bracelet/ui/ad;
 
-    invoke-direct {v4, p0}, Lcn/com/smartdevices/bracelet/ui/ag;-><init>(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)V
+    invoke-direct {v4, p0}, Lcn/com/smartdevices/bracelet/ui/ad;-><init>(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)V
 
     invoke-virtual {v2, v4}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    new-instance v4, Lcn/com/smartdevices/bracelet/ui/ah;
+    new-instance v4, Lcn/com/smartdevices/bracelet/ui/ae;
 
-    invoke-direct {v4, p0}, Lcn/com/smartdevices/bracelet/ui/ah;-><init>(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)V
+    invoke-direct {v4, p0}, Lcn/com/smartdevices/bracelet/ui/ae;-><init>(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)V
 
     invoke-virtual {v3, v4}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
@@ -647,11 +643,11 @@
 
     iput-object p0, p0, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->d:Landroid/content/Context;
 
-    const v0, 0x7f03003a
+    const v0, 0x7f03003b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->setContentView(I)V
 
-    const v0, 0x7f0a0114
+    const v0, 0x7f070115
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->findViewById(I)Landroid/view/View;
 
@@ -661,7 +657,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->j:Landroid/widget/TextView;
 
-    const v0, 0x7f0a0115
+    const v0, 0x7f070116
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->findViewById(I)Landroid/view/View;
 
@@ -671,7 +667,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->k:Landroid/widget/TextView;
 
-    const v0, 0x7f0a0117
+    const v0, 0x7f070118
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->findViewById(I)Landroid/view/View;
 
@@ -681,7 +677,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->h:Landroid/widget/TextView;
 
-    const v0, 0x7f0a0116
+    const v0, 0x7f070117
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->findViewById(I)Landroid/view/View;
 
@@ -691,9 +687,9 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->i:Lcn/com/smartdevices/bracelet/view/RoundProgressBar;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/ab;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/Y;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/ab;-><init>(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/Y;-><init>(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->f:Landroid/os/Handler;
 

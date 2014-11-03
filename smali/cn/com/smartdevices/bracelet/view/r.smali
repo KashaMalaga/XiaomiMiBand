@@ -1,4 +1,4 @@
-.class final Lcn/com/smartdevices/bracelet/view/r;
+.class Lcn/com/smartdevices/bracelet/view/r;
 .super Ljava/lang/Object;
 
 # interfaces
@@ -35,7 +35,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, v1}, Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip$SavedState;-><init>(Landroid/os/Parcel;Lcn/com/smartdevices/bracelet/view/o;)V
+    invoke-direct {v0, p1, v1}, Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip$SavedState;-><init>(Landroid/os/Parcel;Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip$SavedState;)V
 
     return-object v0
 .end method

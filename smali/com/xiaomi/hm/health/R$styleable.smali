@@ -288,7 +288,7 @@
 
     new-array v0, v4, [I
 
-    const v1, 0x7f010010
+    const v1, 0x7f010051
 
     aput v1, v0, v3
 
@@ -354,7 +354,7 @@
 
     new-array v0, v4, [I
 
-    const v1, 0x7f010055
+    const v1, 0x7f010001
 
     aput v1, v0, v3
 
@@ -388,45 +388,85 @@
     .array-data 4
         0x10100c4
         0x10100d4
-        0x7f010000
-        0x7f010003
-        0x7f010005
-        0x7f010006
-        0x7f010007
-        0x7f010008
-        0x7f010009
-        0x7f01000a
+        0x7f01002e
+        0x7f010030
+        0x7f01003d
+        0x7f01003e
+        0x7f01003f
+        0x7f010040
+        0x7f010041
+        0x7f010042
     .end array-data
 
     :array_1
     .array-data 4
+        0x7f010052
+        0x7f010053
+        0x7f010054
+        0x7f010055
+        0x7f010056
+    .end array-data
+
+    :array_2
+    .array-data 4
+        0x7f01004c
+        0x7f01004d
+        0x7f01004e
+        0x7f01004f
+        0x7f010050
+    .end array-data
+
+    :array_3
+    .array-data 4
+        0x7f010043
+        0x7f010044
+        0x7f010045
+        0x7f010046
+        0x7f010047
+    .end array-data
+
+    :array_4
+    .array-data 4
+        0x7f010067
+        0x7f010068
+        0x7f010069
+        0x7f01006a
+        0x7f01006b
+        0x7f01006c
+        0x7f01006d
+    .end array-data
+
+    :array_5
+    .array-data 4
+        0x7f01000a
         0x7f01000b
         0x7f01000c
         0x7f01000d
         0x7f01000e
         0x7f01000f
-    .end array-data
-
-    :array_2
-    .array-data 4
+        0x7f010010
         0x7f010011
         0x7f010012
         0x7f010013
         0x7f010014
-        0x7f010015
     .end array-data
 
-    :array_3
+    :array_6
     .array-data 4
+        0x7f010048
+        0x7f010049
+        0x7f01004a
+        0x7f01004b
+    .end array-data
+
+    :array_7
+    .array-data 4
+        0x7f010015
         0x7f010016
         0x7f010017
         0x7f010018
         0x7f010019
         0x7f01001a
-    .end array-data
-
-    :array_4
-    .array-data 4
         0x7f01001b
         0x7f01001c
         0x7f01001d
@@ -434,34 +474,56 @@
         0x7f01001f
         0x7f010020
         0x7f010021
-    .end array-data
-
-    :array_5
-    .array-data 4
         0x7f010022
         0x7f010023
         0x7f010024
         0x7f010025
         0x7f010026
         0x7f010027
-        0x7f010028
-        0x7f010029
-        0x7f01002a
-        0x7f01002b
-        0x7f01002c
     .end array-data
 
-    :array_6
+    :array_8
     .array-data 4
-        0x7f01002d
-        0x7f01002e
+        0x7f01005e
+        0x7f01005f
+        0x7f010060
+        0x7f010061
+        0x7f010062
+        0x7f010063
+        0x7f010064
+        0x7f010065
+        0x7f010066
+    .end array-data
+
+    :array_9
+    .array-data 4
+        0x7f010002
+        0x7f010003
+        0x7f010004
+        0x7f010005
+        0x7f010006
+        0x7f010007
+        0x7f010008
+        0x7f010009
+    .end array-data
+
+    :array_a
+    .array-data 4
+        0x7f010057
+        0x7f010058
+        0x7f010059
+        0x7f01005a
+        0x7f01005b
+        0x7f01005c
+        0x7f01005d
+    .end array-data
+
+    :array_b
+    .array-data 4
+        0x1010095
+        0x1010098
+        0x10100d4
         0x7f01002f
-        0x7f010030
-    .end array-data
-
-    :array_7
-    .array-data 4
-        0x7f010031
         0x7f010032
         0x7f010033
         0x7f010034
@@ -473,78 +535,16 @@
         0x7f01003a
         0x7f01003b
         0x7f01003c
-        0x7f01003d
-        0x7f01003e
-        0x7f01003f
-        0x7f010040
-        0x7f010041
-        0x7f010042
-        0x7f010043
-    .end array-data
-
-    :array_8
-    .array-data 4
-        0x7f010044
-        0x7f010045
-        0x7f010046
-        0x7f010047
-        0x7f010048
-        0x7f010049
-        0x7f01004a
-        0x7f01004b
-        0x7f01004c
-    .end array-data
-
-    :array_9
-    .array-data 4
-        0x7f01004d
-        0x7f01004e
-        0x7f01004f
-        0x7f010050
-        0x7f010051
-        0x7f010052
-        0x7f010053
-        0x7f010054
-    .end array-data
-
-    :array_a
-    .array-data 4
-        0x7f010056
-        0x7f010057
-        0x7f010058
-        0x7f010059
-        0x7f01005a
-        0x7f01005b
-        0x7f01005c
-    .end array-data
-
-    :array_b
-    .array-data 4
-        0x1010095
-        0x1010098
-        0x10100d4
-        0x7f010001
-        0x7f01005d
-        0x7f01005e
-        0x7f01005f
-        0x7f010060
-        0x7f010061
-        0x7f010062
-        0x7f010063
-        0x7f010064
-        0x7f010065
-        0x7f010066
-        0x7f010067
     .end array-data
 
     :array_c
     .array-data 4
-        0x7f010068
-        0x7f010069
-        0x7f01006a
-        0x7f01006b
-        0x7f01006c
-        0x7f01006d
+        0x7f010028
+        0x7f010029
+        0x7f01002a
+        0x7f01002b
+        0x7f01002c
+        0x7f01002d
     .end array-data
 .end method
 

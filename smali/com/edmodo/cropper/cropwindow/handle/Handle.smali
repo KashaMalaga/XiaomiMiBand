@@ -248,13 +248,6 @@
 
 .method private constructor <init>(Ljava/lang/String;ILcom/edmodo/cropper/cropwindow/handle/c;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/edmodo/cropper/cropwindow/handle/c;",
-            ")V"
-        }
-    .end annotation
 
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
@@ -278,17 +271,19 @@
 .end method
 
 .method public static values()[Lcom/edmodo/cropper/cropwindow/handle/Handle;
-    .locals 1
+    .locals 4
+
+    const/4 v3, 0x0
 
     sget-object v0, Lcom/edmodo/cropper/cropwindow/handle/Handle;->b:[Lcom/edmodo/cropper/cropwindow/handle/Handle;
 
-    invoke-virtual {v0}, [Lcom/edmodo/cropper/cropwindow/handle/Handle;->clone()Ljava/lang/Object;
+    array-length v1, v0
 
-    move-result-object v0
+    new-array v2, v1, [Lcom/edmodo/cropper/cropwindow/handle/Handle;
 
-    check-cast v0, [Lcom/edmodo/cropper/cropwindow/handle/Handle;
+    invoke-static {v0, v3, v2, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    return-object v0
+    return-object v2
 .end method
 
 

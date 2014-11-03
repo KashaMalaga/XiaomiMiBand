@@ -39,12 +39,20 @@
     return-void
 .end method
 
-.method static synthetic access$000(Lcn/com/smartdevices/bracelet/lua/LuaManager;)V
+.method static synthetic access$0(Lcn/com/smartdevices/bracelet/lua/LuaManager;)V
     .locals 0
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->getLatestLuaZipFile()V
 
     return-void
+.end method
+
+.method static synthetic access$1(Lcn/com/smartdevices/bracelet/lua/LuaManager;)Landroid/content/Context;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/LuaManager;->context:Landroid/content/Context;
+
+    return-object v0
 .end method
 
 .method private getDBLuaFileByVersion(Ljava/lang/String;)Ljava/lang/String;
@@ -70,13 +78,9 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v4, "lzipDao.count:"
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -132,13 +136,9 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v4, "luaZipFile.version:"
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -166,13 +166,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "read DB zip failed,version:"
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -224,8 +220,14 @@
 
     move-result-object v3
 
-    if-eqz v3, :cond_1
+    if-nez v3, :cond_1
 
+    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
+
+    :goto_0
+    return-object v0
+
+    :cond_1
     invoke-virtual {v3}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v4
@@ -251,16 +253,10 @@
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
 
     invoke-virtual {v2}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object v0
-
-    :goto_0
-    return-object v0
-
-    :cond_1
-    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
 
     goto :goto_0
 
@@ -353,13 +349,9 @@
 
     new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v5, "lzipDao.count:"
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -415,13 +407,9 @@
 
     new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v5, "version compare failed: version:"
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -451,13 +439,9 @@
 
     new-instance v5, Ljava/lang/StringBuilder;
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v6, "use latest script, version:"
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -559,8 +543,6 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
 
     move-result-object v1
@@ -569,9 +551,11 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -618,13 +602,9 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v3, "read failed: "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -651,8 +631,6 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
 
     move-result-object v3
@@ -661,9 +639,11 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -776,13 +756,9 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v3, "testLuaLoaded = "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -868,8 +844,14 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_1
 
+    :cond_0
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->luaSendApkVersion()V
+
+    return-void
+
+    :cond_1
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -880,13 +862,9 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v4, "\n\nLoad lua:"
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -909,11 +887,6 @@
     invoke-virtual {v2, v0}, Lorg/keplerproject/luajava/LuaState;->LdoString(Ljava/lang/String;)I
 
     goto :goto_0
-
-    :cond_0
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->luaSendApkVersion()V
-
-    return-void
 .end method
 
 .method private luaSendApkVersion()V
@@ -971,25 +944,25 @@
     :goto_0
     const/4 v2, -0x1
 
-    if-eq v0, v2, :cond_0
+    if-ne v0, v2, :cond_0
 
-    invoke-virtual {v1, v0}, Ljava/io/ByteArrayOutputStream;->write(I)V
-
-    invoke-virtual {p1}, Ljava/io/InputStream;->read()I
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_0
     invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->toString()Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v0
 
     :goto_1
     return-object v0
+
+    :cond_0
+    invoke-virtual {v1, v0}, Ljava/io/ByteArrayOutputStream;->write(I)V
+
+    invoke-virtual {p1}, Ljava/io/InputStream;->read()I
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result v0
+
+    goto :goto_0
 
     :catch_0
     move-exception v0
@@ -1032,13 +1005,9 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v4, "LuaERROR:("
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1146,8 +1115,13 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_5
+    if-nez v0, :cond_0
 
+    invoke-virtual {v2}, Ljava/util/zip/ZipInputStream;->close()V
+
+    return-object v1
+
+    :cond_0
     invoke-virtual {v0}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
 
     move-result-object v3
@@ -1156,7 +1130,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
@@ -1172,11 +1146,11 @@
 
     new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    invoke-virtual {v4, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v5
 
-    move-result-object v4
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     sget-object v5, Ljava/io/File;->separator:Ljava/lang/String;
 
@@ -1198,24 +1172,24 @@
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     const/4 v0, 0x0
 
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v4
 
-    if-nez v4, :cond_1
+    if-nez v4, :cond_2
 
     new-instance v4, Ljava/io/File;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v5
 
-    move-result-object v0
+    invoke-direct {v0, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     sget-object v5, Ljava/io/File;->separator:Ljava/lang/String;
 
@@ -1239,7 +1213,7 @@
 
     invoke-direct {v0, v4}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    :cond_1
+    :cond_2
     const/16 v3, 0x400
 
     new-array v3, v3, [B
@@ -1255,35 +1229,13 @@
 
     const/4 v6, -0x1
 
-    if-eq v5, v6, :cond_3
+    if-ne v5, v6, :cond_4
 
-    invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v6
-
-    if-nez v6, :cond_2
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0, v3, v7, v5}, Ljava/io/FileOutputStream;->write([BII)V
-
-    invoke-virtual {v0}, Ljava/io/FileOutputStream;->flush()V
-
-    :cond_2
-    new-instance v5, Ljava/lang/String;
-
-    invoke-direct {v5, v3}, Ljava/lang/String;-><init>([B)V
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    goto :goto_1
-
-    :cond_3
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_3
 
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
 
-    :cond_4
+    :cond_3
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -1292,10 +1244,27 @@
 
     goto/16 :goto_0
 
-    :cond_5
-    invoke-virtual {v2}, Ljava/util/zip/ZipInputStream;->close()V
+    :cond_4
+    invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    return-object v1
+    move-result v6
+
+    if-nez v6, :cond_5
+
+    if-eqz v0, :cond_5
+
+    invoke-virtual {v0, v3, v7, v5}, Ljava/io/FileOutputStream;->write([BII)V
+
+    invoke-virtual {v0}, Ljava/io/FileOutputStream;->flush()V
+
+    :cond_5
+    new-instance v5, Ljava/lang/String;
+
+    invoke-direct {v5, v3}, Ljava/lang/String;-><init>([B)V
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    goto :goto_1
 .end method
 
 .method public unzip([B)Ljava/lang/String;
@@ -1319,11 +1288,24 @@
     :goto_0
     :try_start_1
     invoke-virtual {v2}, Ljava/util/zip/ZipInputStream;->getNextEntry()Ljava/util/zip/ZipEntry;
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-object v1
 
-    if-eqz v1, :cond_1
+    if-nez v1, :cond_0
 
+    :try_start_2
+    invoke-virtual {v2}, Ljava/util/zip/ZipInputStream;->close()V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
+
+    :goto_1
+    return-object v0
+
+    :cond_0
+    :try_start_3
     new-instance v3, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v3}, Ljava/io/ByteArrayOutputStream;-><init>()V
@@ -1332,44 +1314,35 @@
 
     move-result v1
 
-    :goto_1
+    :goto_2
     const/4 v4, -0x1
 
-    if-eq v1, v4, :cond_0
+    if-ne v1, v4, :cond_1
 
-    invoke-virtual {v3, v1}, Ljava/io/ByteArrayOutputStream;->write(I)V
-
-    invoke-virtual {v2}, Ljava/util/zip/ZipInputStream;->read()I
-
-    move-result v1
-
-    goto :goto_1
-
-    :cond_0
     invoke-virtual {v2}, Ljava/util/zip/ZipInputStream;->closeEntry()V
 
     invoke-virtual {v3}, Ljava/io/ByteArrayOutputStream;->toString()Ljava/lang/String;
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-object v0
 
     goto :goto_0
 
     :cond_1
-    :try_start_2
-    invoke-virtual {v2}, Ljava/util/zip/ZipInputStream;->close()V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
+    invoke-virtual {v3, v1}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
-    :goto_2
-    return-object v0
+    invoke-virtual {v2}, Ljava/util/zip/ZipInputStream;->read()I
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    move-result v1
+
+    goto :goto_2
 
     :catch_0
     move-exception v1
 
-    :try_start_3
+    :try_start_4
     const-string v3, "chenee"
 
     invoke-virtual {v1}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
@@ -1379,15 +1352,15 @@
     invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/Debug;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :try_start_4
-    invoke-virtual {v2}, Ljava/util/zip/ZipInputStream;->close()V
     :try_end_4
-    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_1
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    goto :goto_2
+    :try_start_5
+    invoke-virtual {v2}, Ljava/util/zip/ZipInputStream;->close()V
+    :try_end_5
+    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
+
+    goto :goto_1
 
     :catch_1
     move-exception v1
@@ -1403,17 +1376,17 @@
 
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    goto :goto_2
+    goto :goto_1
 
     :catchall_0
     move-exception v1
 
-    :try_start_5
+    :try_start_6
     invoke-virtual {v2}, Ljava/util/zip/ZipInputStream;->close()V
 
     throw v1
-    :try_end_5
-    .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
+    :try_end_6
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_1
 
     :catch_2
     move-exception v0

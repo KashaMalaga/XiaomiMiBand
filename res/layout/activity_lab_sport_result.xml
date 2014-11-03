@@ -3,7 +3,7 @@
   xmlns:android="http://schemas.android.com/apk/res/android">
     <RelativeLayout android:id="@id/share_content_ll" android:layout_width="fill_parent" android:layout_height="fill_parent">
         <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
-            <View android:id="@id/share_background_v" android:background="#fff57130" android:layout_width="fill_parent" android:layout_height="372.0dip" />
+            <View android:id="@id/share_background_v" android:background="@color/lab_record_broken_bg" android:layout_width="fill_parent" android:layout_height="372.0dip" />
             <View android:background="@color/main_ui_bg" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
         </LinearLayout>
         <RelativeLayout android:id="@id/share_top_area" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="114.0dip">

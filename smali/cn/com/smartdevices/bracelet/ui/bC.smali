@@ -1,235 +1,67 @@
 .class Lcn/com/smartdevices/bracelet/ui/bC;
-.super Lcom/loopj/android/http/AsyncHttpResponseHandler;
+.super Landroid/os/Handler;
 
 
 # instance fields
-.field final synthetic a:Ljava/io/File;
-
-.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;Ljava/io/File;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bC;->b:Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bC;->a:Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment;
 
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/bC;->a:Ljava/io/File;
-
-    invoke-direct {p0}, Lcom/loopj/android/http/AsyncHttpResponseHandler;-><init>()V
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
+.method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    const-string v0, "WPJ"
+    iget v0, p1, Landroid/os/Message;->what:I
 
-    const-string v1, "onFailure"
+    sparse-switch v0, :sswitch_data_0
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bC;->b:Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;->e(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;)Landroid/os/Handler;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Landroid/os/Message;
-
-    invoke-direct {v0}, Landroid/os/Message;-><init>()V
-
-    const/4 v1, 0x3
-
-    iput v1, v0, Landroid/os/Message;->what:I
-
-    const/4 v1, 0x0
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    iput-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bC;->b:Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;->e(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;)Landroid/os/Handler;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bC;->a:Ljava/io/File;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bC;->a:Ljava/io/File;
-
-    invoke-virtual {v0}, Ljava/io/File;->exists()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bC;->a:Ljava/io/File;
-
-    invoke-virtual {v0}, Ljava/io/File;->delete()Z
-
-    :cond_0
-    return-void
-.end method
-
-.method public onProgress(II)V
-    .locals 2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bC;->b:Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;->e(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;)Landroid/os/Handler;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Landroid/os/Message;
-
-    invoke-direct {v0}, Landroid/os/Message;-><init>()V
-
-    const/4 v1, 0x2
-
-    iput v1, v0, Landroid/os/Message;->what:I
-
-    mul-int/lit8 v1, p1, 0x64
-
-    div-int/2addr v1, p2
-
-    iput v1, v0, Landroid/os/Message;->arg1:I
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bC;->b:Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;->e(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;)Landroid/os/Handler;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    :cond_0
-    return-void
-.end method
-
-.method public onSuccess(I[Lorg/apache/http/Header;[B)V
-    .locals 3
-
-    const-string v0, "WPJ"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "onSuccess:"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    new-instance v2, Ljava/lang/String;
-
-    invoke-direct {v2, p3}, Ljava/lang/String;-><init>([B)V
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bC;->b:Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;->e(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;)Landroid/os/Handler;
-
-    move-result-object v0
-
-    if-nez v0, :cond_1
-
-    :cond_0
     :goto_0
     return-void
 
-    :cond_1
-    new-instance v0, Landroid/os/Message;
+    :sswitch_0
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bC;->a:Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment;
 
-    invoke-direct {v0}, Landroid/os/Message;-><init>()V
+    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    const/4 v1, 0x3
+    check-cast v0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;
 
-    iput v1, v0, Landroid/os/Message;->what:I
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment;->b(Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment;Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;)V
 
-    if-eqz p3, :cond_2
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bC;->a:Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment;
 
-    new-instance v1, Ljava/lang/String;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bC;->a:Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment;
 
-    invoke-direct {v1, p3}, Ljava/lang/String;-><init>([B)V
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/webapi/WebRes;->getWebStatus(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/webapi/WebStatus;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment;->a(Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment;)Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/webapi/WebStatus;->success()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    const/4 v1, 0x1
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    iput-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    :goto_1
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bC;->b:Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;->e(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;)Landroid/os/Handler;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bC;->a:Ljava/io/File;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bC;->a:Ljava/io/File;
-
-    invoke-virtual {v0}, Ljava/io/File;->exists()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bC;->a:Ljava/io/File;
-
-    invoke-virtual {v0}, Ljava/io/File;->delete()Z
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment;->c(Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment;Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;)V
 
     goto :goto_0
 
-    :cond_2
-    const/4 v1, 0x0
+    :sswitch_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bC;->a:Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment;
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment;->b(Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment;)V
 
-    move-result-object v1
+    goto :goto_0
 
-    iput-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
+    nop
 
-    goto :goto_1
+    :sswitch_data_0
+    .sparse-switch
+        0x1 -> :sswitch_0
+        0x1002 -> :sswitch_1
+    .end sparse-switch
 .end method

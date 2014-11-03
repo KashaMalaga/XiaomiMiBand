@@ -5,7 +5,7 @@
 # instance fields
 .field final synthetic this$0:Lcn/com/smartdevices/bracelet/weather/WeatherManager;
 
-.field final synthetic val$finalCityCode:Ljava/lang/String;
+.field private final synthetic val$finalCityCode:Ljava/lang/String;
 
 
 # direct methods
@@ -52,13 +52,9 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v3, "Respone : "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -87,13 +83,9 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v3, "WeatherInfo : "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -128,7 +120,7 @@
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/weather/WeatherManager$4;->this$0:Lcn/com/smartdevices/bracelet/weather/WeatherManager;
 
     # getter for: Lcn/com/smartdevices/bracelet/weather/WeatherManager;->mContext:Landroid/content/Context;
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/weather/WeatherManager;->access$000(Lcn/com/smartdevices/bracelet/weather/WeatherManager;)Landroid/content/Context;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/weather/WeatherManager;->access$0(Lcn/com/smartdevices/bracelet/weather/WeatherManager;)Landroid/content/Context;
 
     move-result-object v2
 
@@ -187,7 +179,7 @@
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weather/WeatherManager$4;->this$0:Lcn/com/smartdevices/bracelet/weather/WeatherManager;
 
     # getter for: Lcn/com/smartdevices/bracelet/weather/WeatherManager;->mContext:Landroid/content/Context;
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/weather/WeatherManager;->access$000(Lcn/com/smartdevices/bracelet/weather/WeatherManager;)Landroid/content/Context;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/weather/WeatherManager;->access$0(Lcn/com/smartdevices/bracelet/weather/WeatherManager;)Landroid/content/Context;
 
     move-result-object v0
 
@@ -203,23 +195,18 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    :goto_0
     move-object v0, v1
 
-    :goto_1
+    :goto_0
     if-eqz v0, :cond_0
 
     const-string v1, "WeatherManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v3, "Weather : "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -240,7 +227,7 @@
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/weather/WeatherManager$4;->this$0:Lcn/com/smartdevices/bracelet/weather/WeatherManager;
 
     # getter for: Lcn/com/smartdevices/bracelet/weather/WeatherManager;->mWeatherListener:Lcn/com/smartdevices/bracelet/weather/WeatherListener;
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/weather/WeatherManager;->access$300(Lcn/com/smartdevices/bracelet/weather/WeatherManager;)Lcn/com/smartdevices/bracelet/weather/WeatherListener;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/weather/WeatherManager;->access$3(Lcn/com/smartdevices/bracelet/weather/WeatherManager;)Lcn/com/smartdevices/bracelet/weather/WeatherListener;
 
     move-result-object v1
 
@@ -249,7 +236,7 @@
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/weather/WeatherManager$4;->this$0:Lcn/com/smartdevices/bracelet/weather/WeatherManager;
 
     # getter for: Lcn/com/smartdevices/bracelet/weather/WeatherManager;->mWeatherListener:Lcn/com/smartdevices/bracelet/weather/WeatherListener;
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/weather/WeatherManager;->access$300(Lcn/com/smartdevices/bracelet/weather/WeatherManager;)Lcn/com/smartdevices/bracelet/weather/WeatherListener;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/weather/WeatherManager;->access$3(Lcn/com/smartdevices/bracelet/weather/WeatherManager;)Lcn/com/smartdevices/bracelet/weather/WeatherListener;
 
     move-result-object v1
 
@@ -263,35 +250,19 @@
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weather/WeatherManager$4;->this$0:Lcn/com/smartdevices/bracelet/weather/WeatherManager;
 
     # getter for: Lcn/com/smartdevices/bracelet/weather/WeatherManager;->mContext:Landroid/content/Context;
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/weather/WeatherManager;->access$000(Lcn/com/smartdevices/bracelet/weather/WeatherManager;)Landroid/content/Context;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/weather/WeatherManager;->access$0(Lcn/com/smartdevices/bracelet/weather/WeatherManager;)Landroid/content/Context;
 
     move-result-object v0
 
     const-string v2, "WeatherException"
 
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "Weather_NoAqi_"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/weather/WeatherManager$4;->val$finalCityCode:Ljava/lang/String;
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
+    const-string v3, "Weather_NoAqi"
 
     invoke-static {v0, v2, v3}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->event(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+
+    move-object v0, v1
 
     goto :goto_0
 
@@ -307,7 +278,7 @@
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/weather/WeatherManager$4;->this$0:Lcn/com/smartdevices/bracelet/weather/WeatherManager;
 
     # getter for: Lcn/com/smartdevices/bracelet/weather/WeatherManager;->mContext:Landroid/content/Context;
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/weather/WeatherManager;->access$000(Lcn/com/smartdevices/bracelet/weather/WeatherManager;)Landroid/content/Context;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/weather/WeatherManager;->access$0(Lcn/com/smartdevices/bracelet/weather/WeatherManager;)Landroid/content/Context;
 
     move-result-object v1
 
@@ -315,13 +286,9 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v4, "Weather_"
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget-object v4, p0, Lcn/com/smartdevices/bracelet/weather/WeatherManager$4;->val$finalCityCode:Ljava/lang/String;
 
@@ -338,7 +305,7 @@
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/weather/WeatherManager$4;->this$0:Lcn/com/smartdevices/bracelet/weather/WeatherManager;
 
     # getter for: Lcn/com/smartdevices/bracelet/weather/WeatherManager;->mContext:Landroid/content/Context;
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/weather/WeatherManager;->access$000(Lcn/com/smartdevices/bracelet/weather/WeatherManager;)Landroid/content/Context;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/weather/WeatherManager;->access$0(Lcn/com/smartdevices/bracelet/weather/WeatherManager;)Landroid/content/Context;
 
     move-result-object v1
 
@@ -346,5 +313,5 @@
 
     const/4 v0, 0x0
 
-    goto/16 :goto_1
+    goto :goto_0
 .end method

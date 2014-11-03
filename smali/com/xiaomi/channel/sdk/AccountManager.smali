@@ -623,7 +623,7 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/xiaomi/channel/sdk/a;-><init>(Lcom/xiaomi/channel/sdk/AccountManager;Landroid/app/Activity;Landroid/os/Handler;Landroid/accounts/AccountManagerCallback;Landroid/accounts/Account;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/xiaomi/channel/sdk/a;->b()Landroid/accounts/AccountManagerFuture;
+    invoke-virtual {v0}, Lcom/xiaomi/channel/sdk/a;->start()Landroid/accounts/AccountManagerFuture;
 
     move-result-object v0
 
@@ -668,7 +668,7 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/xiaomi/channel/sdk/c;-><init>(Lcom/xiaomi/channel/sdk/AccountManager;Landroid/app/Activity;Landroid/os/Handler;Landroid/accounts/AccountManagerCallback;Landroid/accounts/Account;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/xiaomi/channel/sdk/c;->b()Landroid/accounts/AccountManagerFuture;
+    invoke-virtual {v0}, Lcom/xiaomi/channel/sdk/c;->start()Landroid/accounts/AccountManagerFuture;
 
     move-result-object v0
 

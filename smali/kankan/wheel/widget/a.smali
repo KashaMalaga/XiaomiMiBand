@@ -26,17 +26,17 @@
 
     iget-object v0, p0, Lkankan/wheel/widget/a;->a:Lkankan/wheel/widget/WheelScroller;
 
-    invoke-static {v0, v1}, Lkankan/wheel/widget/WheelScroller;->a(Lkankan/wheel/widget/WheelScroller;I)I
+    invoke-static {v0, v1}, Lkankan/wheel/widget/WheelScroller;->a(Lkankan/wheel/widget/WheelScroller;I)V
 
     iget-object v0, p0, Lkankan/wheel/widget/a;->a:Lkankan/wheel/widget/WheelScroller;
 
-    invoke-static {v0}, Lkankan/wheel/widget/WheelScroller;->b(Lkankan/wheel/widget/WheelScroller;)Landroid/widget/Scroller;
+    invoke-static {v0}, Lkankan/wheel/widget/WheelScroller;->a(Lkankan/wheel/widget/WheelScroller;)Landroid/widget/Scroller;
 
     move-result-object v0
 
     iget-object v2, p0, Lkankan/wheel/widget/a;->a:Lkankan/wheel/widget/WheelScroller;
 
-    invoke-static {v2}, Lkankan/wheel/widget/WheelScroller;->a(Lkankan/wheel/widget/WheelScroller;)I
+    invoke-static {v2}, Lkankan/wheel/widget/WheelScroller;->b(Lkankan/wheel/widget/WheelScroller;)I
 
     move-result v2
 

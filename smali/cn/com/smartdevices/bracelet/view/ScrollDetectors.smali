@@ -69,9 +69,9 @@
 
     if-eqz v0, :cond_1
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/view/y;
+    new-instance v0, Lcn/com/smartdevices/bracelet/view/x;
 
-    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/view/y;-><init>(Lcn/com/smartdevices/bracelet/view/w;)V
+    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/view/x;-><init>(Lcn/com/smartdevices/bracelet/view/x;)V
 
     :goto_1
     sget-object v1, Lcn/com/smartdevices/bracelet/view/ScrollDetectors;->a:Ljava/util/WeakHashMap;
@@ -85,9 +85,9 @@
 
     if-eqz v0, :cond_2
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/view/x;
+    new-instance v0, Lcn/com/smartdevices/bracelet/view/w;
 
-    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/view/x;-><init>(Lcn/com/smartdevices/bracelet/view/w;)V
+    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/view/w;-><init>(Lcn/com/smartdevices/bracelet/view/w;)V
 
     goto :goto_1
 
@@ -96,9 +96,9 @@
 
     if-eqz v0, :cond_3
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/view/z;
+    new-instance v0, Lcn/com/smartdevices/bracelet/view/y;
 
-    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/view/z;-><init>(Lcn/com/smartdevices/bracelet/view/w;)V
+    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/view/y;-><init>(Lcn/com/smartdevices/bracelet/view/y;)V
 
     goto :goto_1
 

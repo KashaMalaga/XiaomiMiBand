@@ -135,7 +135,7 @@
     :try_start_2
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_5
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_9
 
     :cond_3
     :goto_1
@@ -173,7 +173,7 @@
     :try_start_5
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
     :try_end_5
-    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_6
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_5
 
     :cond_4
     :goto_3
@@ -211,7 +211,7 @@
     :try_start_8
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
     :try_end_8
-    .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_7
+    .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_6
 
     :cond_5
     :goto_5
@@ -238,7 +238,7 @@
     :try_start_a
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
     :try_end_a
-    .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_8
+    .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_7
 
     :cond_6
     :goto_7
@@ -247,7 +247,7 @@
     :try_start_b
     invoke-virtual {v3}, Ljava/io/InputStream;->close()V
     :try_end_b
-    .catch Ljava/io/IOException; {:try_start_b .. :try_end_b} :catch_9
+    .catch Ljava/io/IOException; {:try_start_b .. :try_end_b} :catch_8
 
     :cond_7
     :goto_8
@@ -256,27 +256,27 @@
     :catch_5
     move-exception v0
 
-    goto :goto_1
+    goto :goto_3
 
     :catch_6
     move-exception v0
 
-    goto :goto_3
-
-    :catch_7
-    move-exception v0
-
     goto :goto_5
 
-    :catch_8
+    :catch_7
     move-exception v1
 
     goto :goto_7
 
-    :catch_9
+    :catch_8
     move-exception v1
 
     goto :goto_8
+
+    :catch_9
+    move-exception v0
+
+    goto :goto_1
 
     :catchall_1
     move-exception v0
