@@ -55,26 +55,13 @@
     move v0, v1
 
     :goto_0
-    if-lt v0, v3, :cond_0
+    if-ge v0, v3, :cond_0
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$LayoutParams;->role:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "You must specified a layout_role for this view"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
     invoke-virtual {v2, v0}, Landroid/content/res/TypedArray;->getIndex(I)I
 
     move-result v4
 
-    packed-switch v4, :pswitch_data_1
+    packed-switch v4, :pswitch_data_0
 
     :goto_1
     add-int/lit8 v0, v0, 0x1
@@ -90,6 +77,19 @@
 
     goto :goto_1
 
+    :cond_0
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$LayoutParams;->role:I
+
+    packed-switch v0, :pswitch_data_1
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "You must specified a layout_role for this view"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
     :pswitch_1
     iput v5, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$LayoutParams;->width:I
 
@@ -102,14 +102,14 @@
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_2
+        :pswitch_0
     .end packed-switch
 
     :pswitch_data_1
     .packed-switch 0x0
-        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_2
     .end packed-switch
 .end method
 

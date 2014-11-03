@@ -58,45 +58,43 @@
 
     const/4 v5, 0x2
 
-    const/4 v4, 0x0
+    const/4 v4, 0x1
 
-    const/4 v3, 0x1
-
-    new-array v0, v5, [I
-
-    const/16 v1, 0x32
-
-    aput v1, v0, v3
-
-    sput-object v0, Lcn/com/smartdevices/bracelet/weather/WeatherInfo;->AQI_LEVEL_1:[I
+    const/4 v3, 0x0
 
     new-array v0, v5, [I
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcn/com/smartdevices/bracelet/weather/WeatherInfo;->AQI_LEVEL_2:[I
+    sput-object v0, Lcn/com/smartdevices/bracelet/weather/WeatherInfo;->AQI_LEVEL_1:[I
 
     new-array v0, v5, [I
 
     fill-array-data v0, :array_1
 
-    sput-object v0, Lcn/com/smartdevices/bracelet/weather/WeatherInfo;->AQI_LEVEL_3:[I
+    sput-object v0, Lcn/com/smartdevices/bracelet/weather/WeatherInfo;->AQI_LEVEL_2:[I
 
     new-array v0, v5, [I
 
     fill-array-data v0, :array_2
 
-    sput-object v0, Lcn/com/smartdevices/bracelet/weather/WeatherInfo;->AQI_LEVEL_4:[I
+    sput-object v0, Lcn/com/smartdevices/bracelet/weather/WeatherInfo;->AQI_LEVEL_3:[I
 
     new-array v0, v5, [I
 
     fill-array-data v0, :array_3
 
-    sput-object v0, Lcn/com/smartdevices/bracelet/weather/WeatherInfo;->AQI_LEVEL_5:[I
+    sput-object v0, Lcn/com/smartdevices/bracelet/weather/WeatherInfo;->AQI_LEVEL_4:[I
 
     new-array v0, v5, [I
 
     fill-array-data v0, :array_4
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/weather/WeatherInfo;->AQI_LEVEL_5:[I
+
+    new-array v0, v5, [I
+
+    fill-array-data v0, :array_5
 
     sput-object v0, Lcn/com/smartdevices/bracelet/weather/WeatherInfo;->AQI_LEVEL_6:[I
 
@@ -106,11 +104,11 @@
 
     const-string v1, "\u9635\u96e8"
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v3
 
     const-string v1, "\u96f7\u9635\u96e8"
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v4
 
     const-string v1, "\u5c0f\u96e8"
 
@@ -150,11 +148,11 @@
 
     sput-object v0, Lcn/com/smartdevices/bracelet/weather/WeatherInfo;->sWeatherRains:[Ljava/lang/String;
 
-    new-array v0, v3, [Ljava/lang/String;
+    new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "\u96e8\u5939\u96ea"
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v3
 
     sput-object v0, Lcn/com/smartdevices/bracelet/weather/WeatherInfo;->sWeatherRainSnows:[Ljava/lang/String;
 
@@ -164,11 +162,11 @@
 
     const-string v1, "\u9635\u96ea"
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v3
 
     const-string v1, "\u5c0f\u96ea"
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v4
 
     const-string v1, "\u4e2d\u96ea"
 
@@ -188,11 +186,11 @@
 
     const-string v1, "\u6d6e\u5c18"
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v3
 
     const-string v1, "\u626c\u6c99"
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v4
 
     const-string v1, "\u6c99\u5c18\u66b4"
 
@@ -204,75 +202,79 @@
 
     sput-object v0, Lcn/com/smartdevices/bracelet/weather/WeatherInfo;->sWeatherSands:[Ljava/lang/String;
 
-    new-array v0, v3, [Ljava/lang/String;
+    new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "\u6674"
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v3
 
     sput-object v0, Lcn/com/smartdevices/bracelet/weather/WeatherInfo;->sWeatherFine:[Ljava/lang/String;
 
-    new-array v0, v3, [Ljava/lang/String;
+    new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "\u591a\u4e91"
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v3
 
     sput-object v0, Lcn/com/smartdevices/bracelet/weather/WeatherInfo;->sWeatherCloudy:[Ljava/lang/String;
 
-    new-array v0, v3, [Ljava/lang/String;
+    new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "\u9634"
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v3
 
     sput-object v0, Lcn/com/smartdevices/bracelet/weather/WeatherInfo;->sWeatherOvercast:[Ljava/lang/String;
 
-    new-array v0, v3, [Ljava/lang/String;
+    new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "\u96fe"
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v3
 
     sput-object v0, Lcn/com/smartdevices/bracelet/weather/WeatherInfo;->sWeatherFog:[Ljava/lang/String;
 
-    new-array v0, v3, [Ljava/lang/String;
+    new-array v0, v4, [Ljava/lang/String;
 
     const-string v1, "\u973e"
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v3
 
     sput-object v0, Lcn/com/smartdevices/bracelet/weather/WeatherInfo;->sWeatherHaze:[Ljava/lang/String;
 
     return-void
 
-    nop
-
     :array_0
+    .array-data 4
+        0x0
+        0x32
+    .end array-data
+
+    :array_1
     .array-data 4
         0x33
         0x64
     .end array-data
 
-    :array_1
+    :array_2
     .array-data 4
         0x64
         0x96
     .end array-data
 
-    :array_2
+    :array_3
     .array-data 4
         0x97
         0xc8
     .end array-data
 
-    :array_3
+    :array_4
     .array-data 4
         0xc9
         0x12c
     .end array-data
 
-    :array_4
+    :array_5
     .array-data 4
         0x12c
         0x1f4
@@ -305,12 +307,8 @@
     move v1, v0
 
     :goto_0
-    if-lt v1, v2, :cond_0
+    if-ge v1, v2, :cond_0
 
-    :goto_1
-    return v0
-
-    :cond_0
     aget-object v3, p0, v1
 
     invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -321,7 +319,8 @@
 
     const/4 v0, 0x1
 
-    goto :goto_1
+    :cond_0
+    return v0
 
     :cond_1
     add-int/lit8 v1, v1, 0x1
@@ -338,7 +337,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0d0005
+    const v2, 0x7f070003
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -480,7 +479,7 @@
 
     if-eqz v1, :cond_1
 
-    const v0, 0x7f0c01d3
+    const v0, 0x7f0d0235
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -499,7 +498,7 @@
 
     if-eqz v1, :cond_2
 
-    const v0, 0x7f0c01d4
+    const v0, 0x7f0d0236
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -516,7 +515,7 @@
 
     if-eqz v1, :cond_3
 
-    const v0, 0x7f0c01d5
+    const v0, 0x7f0d0238
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -533,7 +532,7 @@
 
     if-eqz v1, :cond_4
 
-    const v0, 0x7f0c01d6
+    const v0, 0x7f0d0237
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -550,7 +549,7 @@
 
     if-eqz v1, :cond_5
 
-    const v0, 0x7f0c01d7
+    const v0, 0x7f0d0231
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -567,7 +566,7 @@
 
     if-eqz v1, :cond_6
 
-    const v0, 0x7f0c01d8
+    const v0, 0x7f0d0230
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -584,7 +583,7 @@
 
     if-eqz v1, :cond_7
 
-    const v0, 0x7f0c01d9
+    const v0, 0x7f0d0234
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -601,7 +600,7 @@
 
     if-eqz v1, :cond_8
 
-    const v0, 0x7f0c01da
+    const v0, 0x7f0d0232
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -618,7 +617,7 @@
 
     if-eqz v1, :cond_0
 
-    const v0, 0x7f0c01db
+    const v0, 0x7f0d0233
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

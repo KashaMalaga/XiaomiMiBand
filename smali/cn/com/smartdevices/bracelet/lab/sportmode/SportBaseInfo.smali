@@ -3,40 +3,44 @@
 
 
 # static fields
-.field public static final KEY_COST_TIME_IN_GROUP_OF_PB:Ljava/lang/String; = "gltc"
-
-.field public static final KEY_COUNT_IN_GROUP_OF_PB:Ljava/lang/String; = "glbr"
+.field public static final KEY_COUNT_OF_PB:Ljava/lang/String; = "br"
 
 .field public static final KEY_END_TIME:Ljava/lang/String; = "ed"
 
+.field public static final KEY_GROUPS_TOTAL_COUNT_OF_PB:Ljava/lang/String; = "glbr"
+
+.field public static final KEY_GROUPS_TOTAL_SPAN_TIME_OF_PB:Ljava/lang/String; = "gltc"
+
 .field public static final KEY_PB:Ljava/lang/String; = "pb"
 
-.field public static final KEY_ROUND_COST_TIME_OF_PB:Ljava/lang/String; = "tc"
-
-.field public static final KEY_ROUND_COUNT_OF_PB:Ljava/lang/String; = "br"
+.field public static final KEY_SPAN_TIME_OF_PB:Ljava/lang/String; = "tc"
 
 .field public static final KEY_START_TIME:Ljava/lang/String; = "st"
 
 .field public static final VERSION:Ljava/lang/String; = "v"
 
-.field public static final VERSION_CODE:I = 0x1
+.field private static final a:I = 0x1
 
 
 # instance fields
+.field protected mAGroupCountOfPB:I
+
+.field protected mAGroupSpanTimeOfPB:J
+
 .field protected mDataParserType:I
 
 .field protected mEndSecondTimeInDay:J
 
-.field protected mGroupCostTimeOfPB:J
+.field protected mGroupArrayCountOfPB:I
 
-.field protected mGroupCountOfPB:I
+.field protected mGroupArraySpanTimeOfPB:J
 
-.field protected mGroupItemInfoList:Ljava/util/List;
+.field protected mGroupBaseInfoList:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;",
+            "Lcn/com/smartdevices/bracelet/lab/sportmode/GroupBaseInfo;",
             ">;"
         }
     .end annotation
@@ -44,13 +48,9 @@
 
 .field protected mIsGroupType:Z
 
-.field protected mRoundCostTimeOfPB:J
+.field protected mPreAGroupCountOfPB:I
 
-.field protected mRoundCountOfPB:I
-
-.field protected mSavedGroupCountOfPB:I
-
-.field protected mSavedRoundCountOfPB:I
+.field protected mPregroupArrayCountOfBR:I
 
 .field protected mSportDay:Lcn/com/smartdevices/bracelet/model/SportDay;
 
@@ -79,21 +79,21 @@
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mDataParserType:I
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mSavedRoundCountOfPB:I
+    iput v1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mPreAGroupCountOfPB:I
 
-    iput v2, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mRoundCountOfPB:I
+    iput v2, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mAGroupCountOfPB:I
 
-    iput-wide v3, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupCostTimeOfPB:J
+    iput-wide v3, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupArraySpanTimeOfPB:J
 
-    iput v2, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupCountOfPB:I
+    iput v2, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupArrayCountOfPB:I
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mSavedGroupCountOfPB:I
+    iput v1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mPregroupArrayCountOfBR:I
 
-    iput-wide v3, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mRoundCostTimeOfPB:J
+    iput-wide v3, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mAGroupSpanTimeOfPB:J
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupItemInfoList:Ljava/util/List;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupBaseInfoList:Ljava/util/List;
 
     iput v1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mSportType:I
 
@@ -163,7 +163,7 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupItemInfoList:Ljava/util/List;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupBaseInfoList:Ljava/util/List;
 
     :cond_0
     return-void
@@ -257,11 +257,11 @@
 
     invoke-direct {v1}, Lorg/json/JSONArray;-><init>()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupItemInfoList:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupBaseInfoList:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupItemInfoList:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupBaseInfoList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -269,7 +269,7 @@
 
     if-lez v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupItemInfoList:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupBaseInfoList:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -280,30 +280,29 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_0
 
-    :cond_0
-    return-object v1
-
-    :cond_1
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;
+    check-cast v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupBaseInfo;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->getJsonObject()Lorg/json/JSONObject;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupBaseInfo;->getJsonObject()Lorg/json/JSONObject;
 
     move-result-object v0
 
     invoke-virtual {v1, v0}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
 
     goto :goto_0
+
+    :cond_0
+    return-object v1
 .end method
 
 
 # virtual methods
-.method public addGroupItem(Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;)V
+.method public addGroupItem(Lcn/com/smartdevices/bracelet/lab/sportmode/GroupBaseInfo;)V
     .locals 3
 
     if-nez p1, :cond_0
@@ -317,7 +316,7 @@
     throw v0
 
     :cond_0
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->getType()I
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupBaseInfo;->getType()I
 
     move-result v0
 
@@ -329,9 +328,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "This GroupBaseInfo is not type:"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mSportType:I
 
@@ -352,7 +355,7 @@
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupItemInfoList:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupBaseInfoList:Ljava/util/List;
 
     if-nez v0, :cond_3
 
@@ -366,21 +369,11 @@
     throw v0
 
     :cond_3
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->getCount()I
-
-    move-result v0
-
-    if-gtz v0, :cond_4
-
-    :goto_0
-    return-void
-
-    :cond_4
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupItemInfoList:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupBaseInfoList:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    goto :goto_0
+    return-void
 .end method
 
 .method public calculteTotalCount()I
@@ -388,19 +381,19 @@
 
     const/4 v0, 0x0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupItemInfoList:Ljava/util/List;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupBaseInfoList:Ljava/util/List;
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupItemInfoList:Ljava/util/List;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupBaseInfoList:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v1
 
-    if-lez v1, :cond_0
+    if-lez v1, :cond_1
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupItemInfoList:Ljava/util/List;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupBaseInfoList:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -413,21 +406,15 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_0
 
-    move v0, v1
-
-    :cond_0
-    return v0
-
-    :cond_1
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;
+    check-cast v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupBaseInfo;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->getCount()I
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupBaseInfo;->getCount()I
 
     move-result v0
 
@@ -436,6 +423,12 @@
     move v1, v0
 
     goto :goto_0
+
+    :cond_0
+    move v0, v1
+
+    :cond_1
+    return v0
 .end method
 
 .method public createJsonForDbData([B)Lorg/json/JSONObject;
@@ -535,6 +528,14 @@
     goto :goto_1
 .end method
 
+.method public getAGroupCountOfBR()I
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mAGroupCountOfPB:I
+
+    return v0
+.end method
+
 .method public getDay()Lcn/com/smartdevices/bracelet/model/SportDay;
     .locals 1
 
@@ -551,12 +552,50 @@
     return-wide v0
 .end method
 
-.method public getGroupCostTime()J
+.method public getGroupArrayCountOfBR()I
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupArrayCountOfPB:I
+
+    return v0
+.end method
+
+.method public getGroupArraySpanTimeOfBR()J
+    .locals 2
+
+    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupArraySpanTimeOfPB:J
+
+    return-wide v0
+.end method
+
+.method public getGroupListSize()I
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupBaseInfoList:Ljava/util/List;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupBaseInfoList:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    goto :goto_0
+.end method
+
+.method public getGroupListSpanTime()J
     .locals 8
 
     const-wide/16 v0, 0x0
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupItemInfoList:Ljava/util/List;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupBaseInfoList:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -569,20 +608,17 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    return-wide v1
-
-    :cond_0
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;
+    check-cast v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupBaseInfo;
 
-    iget-wide v4, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mEndSecondTimeInDay:J
+    iget-wide v4, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupBaseInfo;->mEndSecondTimeInDay:J
 
-    iget-wide v6, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mStartSecondTimeInDay:J
+    iget-wide v6, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupBaseInfo;->mStartSecondTimeInDay:J
 
     sub-long/2addr v4, v6
 
@@ -591,52 +627,21 @@
     move-wide v1, v0
 
     goto :goto_0
-.end method
 
-.method public getGroupCostTimeOfPB()J
-    .locals 2
+    :cond_0
+    const-wide/16 v3, 0x3e8
 
-    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupCostTimeOfPB:J
+    div-long v0, v1, v3
 
     return-wide v0
 .end method
 
-.method public getGroupCountOfPB()I
-    .locals 1
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupCountOfPB:I
-
-    return v0
-.end method
-
-.method public getGroupSize()I
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupItemInfoList:Ljava/util/List;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupItemInfoList:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    goto :goto_0
-.end method
-
-.method public getGroupSumInfo()[J
+.method public getGroupListSumInfo()[J
     .locals 12
 
     const-wide/16 v0, 0x0
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupItemInfoList:Ljava/util/List;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupBaseInfoList:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -653,8 +658,33 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
+    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupBaseInfo;
+
+    iget-wide v6, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupBaseInfo;->mEndSecondTimeInDay:J
+
+    iget-wide v8, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupBaseInfo;->mStartSecondTimeInDay:J
+
+    sub-long/2addr v6, v8
+
+    add-long/2addr v3, v6
+
+    iget v0, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupBaseInfo;->mCount:I
+
+    int-to-long v6, v0
+
+    add-long v0, v1, v6
+
+    move-wide v1, v0
+
+    goto :goto_0
+
+    :cond_0
     const/4 v0, 0x2
 
     new-array v0, v0, [J
@@ -668,47 +698,22 @@
     aput-wide v3, v0, v1
 
     return-object v0
-
-    :cond_0
-    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;
-
-    iget-wide v6, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mEndSecondTimeInDay:J
-
-    iget-wide v8, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mStartSecondTimeInDay:J
-
-    sub-long/2addr v6, v8
-
-    add-long/2addr v3, v6
-
-    iget v0, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mCount:I
-
-    int-to-long v6, v0
-
-    add-long v0, v1, v6
-
-    move-wide v1, v0
-
-    goto :goto_0
 .end method
 
-.method public getPBSummeryObject()Lorg/json/JSONObject;
+.method public getNewPBObject()Lorg/json/JSONObject;
     .locals 6
 
     const/4 v0, 0x0
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mRoundCountOfPB:I
+    iget v1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mAGroupCountOfPB:I
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mSavedRoundCountOfPB:I
+    iget v2, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mPreAGroupCountOfPB:I
 
     if-gt v1, v2, :cond_0
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupCountOfPB:I
+    iget v1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupArrayCountOfPB:I
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mSavedGroupCountOfPB:I
+    iget v2, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mPregroupArrayCountOfBR:I
 
     if-gt v1, v2, :cond_0
 
@@ -727,25 +732,25 @@
 
     const-string v3, "br"
 
-    iget v4, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mRoundCountOfPB:I
+    iget v4, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mAGroupCountOfPB:I
 
     invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
     const-string v3, "tc"
 
-    iget-wide v4, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mRoundCostTimeOfPB:J
+    iget-wide v4, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mAGroupSpanTimeOfPB:J
 
     invoke-virtual {v2, v3, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
     const-string v3, "glbr"
 
-    iget v4, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupCountOfPB:I
+    iget v4, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupArrayCountOfPB:I
 
     invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
     const-string v3, "gltc"
 
-    iget-wide v4, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupCostTimeOfPB:J
+    iget-wide v4, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupArraySpanTimeOfPB:J
 
     invoke-virtual {v2, v3, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
@@ -773,36 +778,20 @@
     goto :goto_0
 .end method
 
-.method public getRoundCostTimeOfPB()J
+.method public getPregroupArrayCountOfBR()I
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mPregroupArrayCountOfBR:I
+
+    return v0
+.end method
+
+.method public getSpanTimeOfBR()J
     .locals 2
 
-    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mRoundCostTimeOfPB:J
+    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mAGroupSpanTimeOfPB:J
 
     return-wide v0
-.end method
-
-.method public getRoundCountOfPB()I
-    .locals 1
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mRoundCountOfPB:I
-
-    return v0
-.end method
-
-.method public getSavedGroupCountOfPB()I
-    .locals 1
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mSavedGroupCountOfPB:I
-
-    return v0
-.end method
-
-.method public getSavedRoundCountOfPB()I
-    .locals 1
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mSavedRoundCountOfPB:I
-
-    return v0
 .end method
 
 .method public getSportType()I
@@ -836,7 +825,7 @@
 
     const/4 v0, 0x0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupItemInfoList:Ljava/util/List;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupBaseInfoList:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -853,48 +842,48 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_1
 
-    sub-long v0, v2, v6
-
-    cmp-long v2, v0, v4
-
-    if-lez v2, :cond_0
-
-    move-wide v4, v0
-
-    :cond_0
-    return-wide v4
-
-    :cond_1
     invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;
+    check-cast v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupBaseInfo;
 
-    if-nez v1, :cond_2
+    if-nez v1, :cond_0
 
-    iget-wide v6, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mStartSecondTimeInDay:J
+    iget-wide v6, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupBaseInfo;->mStartSecondTimeInDay:J
 
-    iget-wide v2, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mEndSecondTimeInDay:J
+    iget-wide v2, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupBaseInfo;->mEndSecondTimeInDay:J
 
-    :cond_2
+    :cond_0
     add-int/lit8 v1, v1, 0x1
 
-    iget-wide v9, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mStartSecondTimeInDay:J
+    iget-wide v9, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupBaseInfo;->mStartSecondTimeInDay:J
 
     invoke-static {v6, v7, v9, v10}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v6
 
-    iget-wide v9, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mEndSecondTimeInDay:J
+    iget-wide v9, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupBaseInfo;->mEndSecondTimeInDay:J
 
     invoke-static {v2, v3, v9, v10}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide v2
 
     goto :goto_0
+
+    :cond_1
+    sub-long v0, v2, v6
+
+    cmp-long v2, v0, v4
+
+    if-lez v2, :cond_2
+
+    move-wide v4, v0
+
+    :cond_2
+    return-wide v4
 .end method
 
 .method public isGroupType()Z
@@ -906,70 +895,105 @@
 .end method
 
 .method public loadPBInfo(Lorg/json/JSONObject;)V
-    .locals 6
+    .locals 8
 
-    if-nez p1, :cond_0
+    const-wide/16 v0, 0x0
 
-    :goto_0
-    return-void
+    const/4 v4, 0x0
 
-    :cond_0
+    if-eqz p1, :cond_0
+
     :try_start_0
-    const-string v0, "br"
+    const-string v2, "br"
 
-    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    const-string v1, "tc"
-
-    invoke-virtual {p1, v1}, Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
-
-    move-result-wide v1
-
-    const-string v3, "glbr"
-
-    invoke-virtual {p1, v3}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
-
-    move-result v3
-
-    const-string v4, "gltc"
-
-    invoke-virtual {p1, v4}, Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
-
-    move-result-wide v4
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->setSavedRoundCountOfPB(I)V
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->setRoundCountOfPB(I)V
-
-    invoke-virtual {p0, v1, v2}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->setRoundCostTimeOfPB(J)V
-
-    invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->setSavedGroupCountOfPB(I)V
-
-    invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->setGroupCountOfPB(I)V
-
-    invoke-virtual {p0, v4, v5}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->setGroupCostTimeOfPB(J)V
+    invoke-virtual {p1, v2}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    move-result v5
+
+    :try_start_1
+    const-string v2, "tc"
+
+    invoke-virtual {p1, v2}, Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
+    :try_end_1
+    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_1
+
+    move-result-wide v2
+
+    :try_start_2
+    const-string v6, "glbr"
+
+    invoke-virtual {p1, v6}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+
+    move-result v4
+
+    const-string v6, "gltc"
+
+    invoke-virtual {p1, v6}, Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
+    :try_end_2
+    .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_2
+
+    move-result-wide v0
+
+    :goto_0
+    invoke-virtual {p0, v5}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->setPreAGroupCountOfPB(I)V
+
+    invoke-virtual {p0, v5}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->setAGroupCountOfPB(I)V
+
+    invoke-virtual {p0, v4}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->setPregroupArrayCountOfBR(I)V
+
+    invoke-virtual {p0, v4}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->setGroupArrayCountOfPB(I)V
+
+    invoke-virtual {p0, v2, v3}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->setSpanTimeOfPB(J)V
+
+    invoke-virtual {p0, v0, v1}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->setGroupArraySpanTimeOfPB(J)V
+
+    return-void
 
     :catch_0
-    move-exception v0
+    move-exception v2
 
-    const-string v1, "Lab"
+    move-object v6, v2
 
-    invoke-virtual {v0}, Lorg/json/JSONException;->getMessage()Ljava/lang/String;
+    move v5, v4
 
-    move-result-object v0
+    move-wide v2, v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/Debug;->e(Ljava/lang/String;Ljava/lang/String;)V
+    :goto_1
+    const-string v7, "Lab"
+
+    invoke-virtual {v6}, Lorg/json/JSONException;->getMessage()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v7, v6}, Lcn/com/smartdevices/bracelet/Debug;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v2
+
+    move-object v6, v2
+
+    move-wide v2, v0
+
+    goto :goto_1
+
+    :catch_2
+    move-exception v6
+
+    goto :goto_1
+
+    :cond_0
+    move-wide v2, v0
+
+    move v5, v4
 
     goto :goto_0
 .end method
 
-.method public removeGroupItem(Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;)V
+.method public removeGroupItem(Lcn/com/smartdevices/bracelet/lab/sportmode/GroupBaseInfo;)V
     .locals 3
 
     if-nez p1, :cond_0
@@ -981,7 +1005,7 @@
     throw v0
 
     :cond_0
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->getType()I
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupBaseInfo;->getType()I
 
     move-result v0
 
@@ -993,9 +1017,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "This GroupBaseInfo is not type:"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mSportType:I
 
@@ -1016,7 +1044,7 @@
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupItemInfoList:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupBaseInfoList:Ljava/util/List;
 
     if-nez v0, :cond_3
 
@@ -1030,9 +1058,17 @@
     throw v0
 
     :cond_3
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupItemInfoList:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupBaseInfoList:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public setAGroupCountOfPB(I)V
+    .locals 0
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mAGroupCountOfPB:I
 
     return-void
 .end method
@@ -1053,30 +1089,30 @@
     return-void
 .end method
 
-.method public setGroupCostTimeOfPB(J)V
+.method public setGroupArrayCountOfPB(I)V
     .locals 0
 
-    iput-wide p1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupCostTimeOfPB:J
+    iput p1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupArrayCountOfPB:I
 
     return-void
 .end method
 
-.method public setGroupCountOfPB(I)V
+.method public setGroupArraySpanTimeOfPB(J)V
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupCountOfPB:I
+    iput-wide p1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupArraySpanTimeOfPB:J
 
     return-void
 .end method
 
-.method public setGroupItemInfoList(Ljava/util/List;)V
+.method public setGroupList(Ljava/util/List;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;",
+            "Lcn/com/smartdevices/bracelet/lab/sportmode/GroupBaseInfo;",
             ">;)V"
         }
     .end annotation
@@ -1105,39 +1141,31 @@
     throw v0
 
     :cond_1
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupItemInfoList:Ljava/util/List;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupBaseInfoList:Ljava/util/List;
 
     return-void
 .end method
 
-.method public setRoundCostTimeOfPB(J)V
+.method public setPreAGroupCountOfPB(I)V
     .locals 0
 
-    iput-wide p1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mRoundCostTimeOfPB:J
+    iput p1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mPreAGroupCountOfPB:I
 
     return-void
 .end method
 
-.method public setRoundCountOfPB(I)V
+.method public setPregroupArrayCountOfBR(I)V
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mRoundCountOfPB:I
+    iput p1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mPregroupArrayCountOfBR:I
 
     return-void
 .end method
 
-.method public setSavedGroupCountOfPB(I)V
+.method public setSpanTimeOfPB(J)V
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mSavedGroupCountOfPB:I
-
-    return-void
-.end method
-
-.method public setSavedRoundCountOfPB(I)V
-    .locals 0
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mSavedRoundCountOfPB:I
+    iput-wide p1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mAGroupSpanTimeOfPB:J
 
     return-void
 .end method
@@ -1166,14 +1194,14 @@
     return-void
 .end method
 
-.method public updateGroupCostTimeOfPB()V
+.method public updateGroupListSpanTime()V
     .locals 2
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->getGroupCostTime()J
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->getGroupListSpanTime()J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupCostTimeOfPB:J
+    iput-wide v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupArraySpanTimeOfPB:J
 
     return-void
 .end method

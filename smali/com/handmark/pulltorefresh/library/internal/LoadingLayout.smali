@@ -18,10 +18,6 @@
 
 .field static final c:Landroid/view/animation/Interpolator;
 
-.field private static synthetic j:[I
-
-.field private static synthetic k:[I
-
 
 # instance fields
 .field private a:Landroid/widget/FrameLayout;
@@ -79,9 +75,7 @@
 
     iput-object p3, p0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->mScrollDirection:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Orientation;
 
-    invoke-static {}, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->b()[I
-
-    move-result-object v0
+    sget-object v0, Lcom/handmark/pulltorefresh/library/internal/c;->a:[I
 
     invoke-virtual {p3}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Orientation;->ordinal()I
 
@@ -100,7 +94,7 @@
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     :goto_0
-    const v0, 0x7f0701b0
+    const v0, 0x7f0a01b4
 
     invoke-virtual {p0, v0}, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->findViewById(I)Landroid/view/View;
 
@@ -112,7 +106,7 @@
 
     iget-object v0, p0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->a:Landroid/widget/FrameLayout;
 
-    const v1, 0x7f0701b3
+    const v1, 0x7f0a01b7
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -124,7 +118,7 @@
 
     iget-object v0, p0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->a:Landroid/widget/FrameLayout;
 
-    const v1, 0x7f0701b2
+    const v1, 0x7f0a01b6
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -136,7 +130,7 @@
 
     iget-object v0, p0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->a:Landroid/widget/FrameLayout;
 
-    const v1, 0x7f0701b4
+    const v1, 0x7f0a01b8
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -148,7 +142,7 @@
 
     iget-object v0, p0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->a:Landroid/widget/FrameLayout;
 
-    const v1, 0x7f0701b1
+    const v1, 0x7f0a01b5
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
@@ -166,9 +160,7 @@
 
     check-cast v0, Landroid/widget/FrameLayout$LayoutParams;
 
-    invoke-static {}, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->c()[I
-
-    move-result-object v1
+    sget-object v1, Lcom/handmark/pulltorefresh/library/internal/c;->b:[I
 
     invoke-virtual {p2}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->ordinal()I
 
@@ -187,7 +179,7 @@
     :goto_1
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
-    const/high16 v0, 0x7f0c0000
+    const v0, 0x7f0d0176
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -195,7 +187,7 @@
 
     iput-object v0, p0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->g:Ljava/lang/CharSequence;
 
-    const v0, 0x7f0c0002
+    const v0, 0x7f0d0177
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -203,7 +195,7 @@
 
     iput-object v0, p0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->h:Ljava/lang/CharSequence;
 
-    const v0, 0x7f0c0001
+    const v0, 0x7f0d0178
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -312,9 +304,7 @@
     move-result-object v0
 
     :cond_5
-    invoke-static {}, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->c()[I
-
-    move-result-object v1
+    sget-object v1, Lcom/handmark/pulltorefresh/library/internal/c;->b:[I
 
     invoke-virtual {p2}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->ordinal()I
 
@@ -378,7 +368,7 @@
     :goto_4
     iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
-    const v0, 0x7f0c0003
+    const v0, 0x7f0d0173
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -386,7 +376,7 @@
 
     iput-object v0, p0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->g:Ljava/lang/CharSequence;
 
-    const v0, 0x7f0c0005
+    const v0, 0x7f0d0174
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -394,7 +384,7 @@
 
     iput-object v0, p0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->h:Ljava/lang/CharSequence;
 
-    const v0, 0x7f0c0004
+    const v0, 0x7f0d0175
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -477,20 +467,18 @@
 
     goto/16 :goto_3
 
-    nop
-
     :pswitch_data_0
-    .packed-switch 0x2
+    .packed-switch 0x1
         :pswitch_0
     .end packed-switch
 
     :pswitch_data_1
-    .packed-switch 0x3
+    .packed-switch 0x1
         :pswitch_1
     .end packed-switch
 
     :pswitch_data_2
-    .packed-switch 0x3
+    .packed-switch 0x1
         :pswitch_2
     .end packed-switch
 .end method
@@ -630,195 +618,12 @@
     return-void
 .end method
 
-.method static synthetic b()[I
-    .locals 3
-
-    sget-object v0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->j:[I
-
-    if-eqz v0, :cond_0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    invoke-static {}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Orientation;->values()[Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Orientation;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    :try_start_0
-    sget-object v1, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Orientation;->HORIZONTAL:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Orientation;
-
-    invoke-virtual {v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Orientation;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_1
-
-    :goto_1
-    :try_start_1
-    sget-object v1, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Orientation;->VERTICAL:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Orientation;
-
-    invoke-virtual {v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Orientation;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_0
-
-    :goto_2
-    sput-object v0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->j:[I
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v1
-
-    goto :goto_2
-
-    :catch_1
-    move-exception v1
-
-    goto :goto_1
-.end method
-
-.method static synthetic c()[I
-    .locals 3
-
-    sget-object v0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->k:[I
-
-    if-eqz v0, :cond_0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    invoke-static {}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->values()[Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    :try_start_0
-    sget-object v1, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->BOTH:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;
-
-    invoke-virtual {v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_4
-
-    :goto_1
-    :try_start_1
-    sget-object v1, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->DISABLED:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;
-
-    invoke-virtual {v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_3
-
-    :goto_2
-    :try_start_2
-    sget-object v1, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->MANUAL_REFRESH_ONLY:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;
-
-    invoke-virtual {v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x5
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :goto_3
-    :try_start_3
-    sget-object v1, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->PULL_FROM_END:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;
-
-    invoke-virtual {v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_1
-
-    :goto_4
-    :try_start_4
-    sget-object v1, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->PULL_FROM_START:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;
-
-    invoke-virtual {v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_0
-
-    :goto_5
-    sput-object v0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->k:[I
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v1
-
-    goto :goto_5
-
-    :catch_1
-    move-exception v1
-
-    goto :goto_4
-
-    :catch_2
-    move-exception v1
-
-    goto :goto_3
-
-    :catch_3
-    move-exception v1
-
-    goto :goto_2
-
-    :catch_4
-    move-exception v1
-
-    goto :goto_1
-.end method
-
 
 # virtual methods
 .method public final getContentSize()I
     .locals 2
 
-    invoke-static {}, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->b()[I
-
-    move-result-object v0
+    sget-object v0, Lcom/handmark/pulltorefresh/library/internal/c;->a:[I
 
     iget-object v1, p0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->mScrollDirection:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Orientation;
 
@@ -851,7 +656,7 @@
     nop
 
     :pswitch_data_0
-    .packed-switch 0x2
+    .packed-switch 0x1
         :pswitch_0
     .end packed-switch
 .end method

@@ -109,13 +109,13 @@
 
     const/4 v1, 0x0
 
-    if-eqz p1, :cond_5
+    if-eqz p1, :cond_4
 
     invoke-interface {p1}, Lorg/apache/http/HttpEntity;->getContent()Ljava/io/InputStream;
 
     move-result-object v5
 
-    if-eqz v5, :cond_5
+    if-eqz v5, :cond_4
 
     invoke-interface {p1}, Lorg/apache/http/HttpEntity;->getContentLength()J
 
@@ -138,7 +138,7 @@
     :cond_0
     cmp-long v1, v2, v8
 
-    if-gtz v1, :cond_2
+    if-gtz v1, :cond_1
 
     :goto_0
     :try_start_0
@@ -162,77 +162,70 @@
 
     const/4 v4, -0x1
 
-    if-eq v1, v4, :cond_1
+    if-eq v1, v4, :cond_3
 
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v4
 
     invoke-virtual {v4}, Ljava/lang/Thread;->isInterrupted()Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result v4
 
-    if-eqz v4, :cond_3
+    if-nez v4, :cond_3
 
-    :cond_1
-    :try_start_2
-    invoke-static {v5}, Lcom/loopj/android/http/AsyncHttpClient;->silentCloseInputStream(Ljava/io/InputStream;)V
-
-    invoke-virtual {v6}, Lorg/apache/http/util/ByteArrayBuffer;->toByteArray()[B
-    :try_end_2
-    .catch Ljava/lang/OutOfMemoryError; {:try_start_2 .. :try_end_2} :catch_0
-
-    move-result-object v0
-
-    :goto_2
-    return-object v0
-
-    :cond_2
-    long-to-int v0, v2
-
-    goto :goto_0
-
-    :cond_3
     add-int v4, v0, v1
 
     const/4 v0, 0x0
 
-    :try_start_3
     invoke-virtual {v6, v7, v0, v1}, Lorg/apache/http/util/ByteArrayBuffer;->append([BII)V
 
     cmp-long v0, v2, v8
 
-    if-gtz v0, :cond_4
+    if-gtz v0, :cond_2
 
     const-wide/16 v0, 0x1
 
-    :goto_3
+    :goto_2
     long-to-int v0, v0
 
     invoke-virtual {p0, v4, v0}, Lcom/loopj/android/http/AsyncHttpResponseHandler;->sendProgressMessage(II)V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move v0, v4
 
     goto :goto_1
 
-    :cond_4
+    :cond_1
+    long-to-int v0, v2
+
+    goto :goto_0
+
+    :cond_2
     move-wide v0, v2
 
-    goto :goto_3
+    goto :goto_2
+
+    :cond_3
+    :try_start_2
+    invoke-static {v5}, Lcom/loopj/android/http/AsyncHttpClient;->silentCloseInputStream(Ljava/io/InputStream;)V
+
+    invoke-virtual {v6}, Lorg/apache/http/util/ByteArrayBuffer;->toByteArray()[B
+
+    move-result-object v0
+
+    :goto_3
+    return-object v0
 
     :catchall_0
     move-exception v0
 
-    :try_start_4
     invoke-static {v5}, Lcom/loopj/android/http/AsyncHttpClient;->silentCloseInputStream(Ljava/io/InputStream;)V
 
     throw v0
-    :try_end_4
-    .catch Ljava/lang/OutOfMemoryError; {:try_start_4 .. :try_end_4} :catch_0
+    :try_end_2
+    .catch Ljava/lang/OutOfMemoryError; {:try_start_2 .. :try_end_2} :catch_0
 
     :catch_0
     move-exception v0
@@ -247,10 +240,10 @@
 
     throw v0
 
-    :cond_5
+    :cond_4
     move-object v0, v1
 
-    goto :goto_2
+    goto :goto_3
 .end method
 
 .method public getUseSynchronousMode()Z
@@ -284,6 +277,8 @@
 
     check-cast v0, [Ljava/lang/Object;
 
+    check-cast v0, [Ljava/lang/Object;
+
     if-eqz v0, :cond_0
 
     array-length v1, v0
@@ -302,7 +297,11 @@
 
     check-cast v1, [Lorg/apache/http/Header;
 
+    check-cast v1, [Lorg/apache/http/Header;
+
     aget-object v0, v0, v5
+
+    check-cast v0, [B
 
     check-cast v0, [B
 
@@ -321,6 +320,8 @@
 
     :pswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    check-cast v0, [Ljava/lang/Object;
 
     check-cast v0, [Ljava/lang/Object;
 
@@ -344,7 +345,11 @@
 
     check-cast v1, [Lorg/apache/http/Header;
 
+    check-cast v1, [Lorg/apache/http/Header;
+
     aget-object v2, v0, v5
+
+    check-cast v2, [B
 
     check-cast v2, [B
 
@@ -380,6 +385,8 @@
 
     check-cast v0, [Ljava/lang/Object;
 
+    check-cast v0, [Ljava/lang/Object;
+
     if-eqz v0, :cond_2
 
     array-length v1, v0
@@ -411,7 +418,7 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :catch_0
     move-exception v0
@@ -422,7 +429,7 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_2
     const-string v0, "AsyncHttpResponseHandler"
@@ -435,6 +442,8 @@
 
     :pswitch_5
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    check-cast v0, [Ljava/lang/Object;
 
     check-cast v0, [Ljava/lang/Object;
 

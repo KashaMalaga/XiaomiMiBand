@@ -97,11 +97,34 @@
 
 # virtual methods
 .method a()V
-    .locals 3
+    .locals 4
+
+    const/4 v3, 0x1
+
+    iget-boolean v0, p0, Landroid/support/v4/app/K;->i:Z
+
+    if-eqz v0, :cond_1
+
+    iget-boolean v0, p0, Landroid/support/v4/app/K;->j:Z
+
+    if-eqz v0, :cond_1
+
+    iput-boolean v3, p0, Landroid/support/v4/app/K;->h:Z
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    iget-boolean v0, p0, Landroid/support/v4/app/K;->h:Z
+
+    if-nez v0, :cond_0
+
+    iput-boolean v3, p0, Landroid/support/v4/app/K;->h:Z
 
     sget-boolean v0, Landroid/support/v4/app/J;->b:Z
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_2
 
     const-string v0, "LoaderManager"
 
@@ -109,7 +132,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "  Retaining: "
+    const-string v2, "  Starting: "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -125,24 +148,105 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    :cond_0
-    const/4 v0, 0x1
+    :cond_2
+    iget-object v0, p0, Landroid/support/v4/app/K;->d:Landroid/support/v4/content/Loader;
 
-    iput-boolean v0, p0, Landroid/support/v4/app/K;->i:Z
+    if-nez v0, :cond_3
 
-    iget-boolean v0, p0, Landroid/support/v4/app/K;->h:Z
+    iget-object v0, p0, Landroid/support/v4/app/K;->c:Landroid/support/v4/app/LoaderManager$LoaderCallbacks;
 
-    iput-boolean v0, p0, Landroid/support/v4/app/K;->j:Z
+    if-eqz v0, :cond_3
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Landroid/support/v4/app/K;->c:Landroid/support/v4/app/LoaderManager$LoaderCallbacks;
 
-    iput-boolean v0, p0, Landroid/support/v4/app/K;->h:Z
+    iget v1, p0, Landroid/support/v4/app/K;->a:I
 
-    const/4 v0, 0x0
+    iget-object v2, p0, Landroid/support/v4/app/K;->b:Landroid/os/Bundle;
 
-    iput-object v0, p0, Landroid/support/v4/app/K;->c:Landroid/support/v4/app/LoaderManager$LoaderCallbacks;
+    invoke-interface {v0, v1, v2}, Landroid/support/v4/app/LoaderManager$LoaderCallbacks;->onCreateLoader(ILandroid/os/Bundle;)Landroid/support/v4/content/Loader;
 
-    return-void
+    move-result-object v0
+
+    iput-object v0, p0, Landroid/support/v4/app/K;->d:Landroid/support/v4/content/Loader;
+
+    :cond_3
+    iget-object v0, p0, Landroid/support/v4/app/K;->d:Landroid/support/v4/content/Loader;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v4/app/K;->d:Landroid/support/v4/content/Loader;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Class;->isMemberClass()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, p0, Landroid/support/v4/app/K;->d:Landroid/support/v4/content/Loader;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getModifiers()I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/reflect/Modifier;->isStatic(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Object returned from onCreateLoader must not be a non-static inner member class: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Landroid/support/v4/app/K;->d:Landroid/support/v4/content/Loader;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_4
+    iget-boolean v0, p0, Landroid/support/v4/app/K;->m:Z
+
+    if-nez v0, :cond_5
+
+    iget-object v0, p0, Landroid/support/v4/app/K;->d:Landroid/support/v4/content/Loader;
+
+    iget v1, p0, Landroid/support/v4/app/K;->a:I
+
+    invoke-virtual {v0, v1, p0}, Landroid/support/v4/content/Loader;->registerListener(ILandroid/support/v4/content/Loader$OnLoadCompleteListener;)V
+
+    iput-boolean v3, p0, Landroid/support/v4/app/K;->m:Z
+
+    :cond_5
+    iget-object v0, p0, Landroid/support/v4/app/K;->d:Landroid/support/v4/content/Loader;
+
+    invoke-virtual {v0}, Landroid/support/v4/content/Loader;->startLoading()V
+
+    goto/16 :goto_0
 .end method
 
 .method a(Landroid/support/v4/content/Loader;Ljava/lang/Object;)V
@@ -493,6 +597,55 @@
 .method b()V
     .locals 3
 
+    sget-boolean v0, Landroid/support/v4/app/J;->b:Z
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "LoaderManager"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "  Retaining: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Landroid/support/v4/app/K;->i:Z
+
+    iget-boolean v0, p0, Landroid/support/v4/app/K;->h:Z
+
+    iput-boolean v0, p0, Landroid/support/v4/app/K;->j:Z
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Landroid/support/v4/app/K;->h:Z
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Landroid/support/v4/app/K;->c:Landroid/support/v4/app/LoaderManager$LoaderCallbacks;
+
+    return-void
+.end method
+
+.method c()V
+    .locals 3
+
     iget-boolean v0, p0, Landroid/support/v4/app/K;->i:Z
 
     if-eqz v0, :cond_1
@@ -538,7 +691,7 @@
 
     if-nez v0, :cond_1
 
-    invoke-virtual {p0}, Landroid/support/v4/app/K;->stop()V
+    invoke-virtual {p0}, Landroid/support/v4/app/K;->e()V
 
     :cond_1
     iget-boolean v0, p0, Landroid/support/v4/app/K;->h:Z
@@ -563,7 +716,7 @@
     return-void
 .end method
 
-.method c()V
+.method d()V
     .locals 2
 
     iget-boolean v0, p0, Landroid/support/v4/app/K;->h:Z
@@ -592,7 +745,67 @@
     return-void
 .end method
 
-.method d()V
+.method e()V
+    .locals 4
+
+    const/4 v3, 0x0
+
+    sget-boolean v0, Landroid/support/v4/app/J;->b:Z
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "LoaderManager"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "  Stopping: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_0
+    iput-boolean v3, p0, Landroid/support/v4/app/K;->h:Z
+
+    iget-boolean v0, p0, Landroid/support/v4/app/K;->i:Z
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Landroid/support/v4/app/K;->d:Landroid/support/v4/content/Loader;
+
+    if-eqz v0, :cond_1
+
+    iget-boolean v0, p0, Landroid/support/v4/app/K;->m:Z
+
+    if-eqz v0, :cond_1
+
+    iput-boolean v3, p0, Landroid/support/v4/app/K;->m:Z
+
+    iget-object v0, p0, Landroid/support/v4/app/K;->d:Landroid/support/v4/content/Loader;
+
+    invoke-virtual {v0, p0}, Landroid/support/v4/content/Loader;->unregisterListener(Landroid/support/v4/content/Loader$OnLoadCompleteListener;)V
+
+    iget-object v0, p0, Landroid/support/v4/app/K;->d:Landroid/support/v4/content/Loader;
+
+    invoke-virtual {v0}, Landroid/support/v4/content/Loader;->stopLoading()V
+
+    :cond_1
+    return-void
+.end method
+
+.method f()V
     .locals 5
 
     const/4 v2, 0x0
@@ -758,7 +971,7 @@
 
     iget-object v0, p0, Landroid/support/v4/app/K;->n:Landroid/support/v4/app/K;
 
-    invoke-virtual {v0}, Landroid/support/v4/app/K;->d()V
+    invoke-virtual {v0}, Landroid/support/v4/app/K;->f()V
 
     :cond_5
     return-void
@@ -917,7 +1130,7 @@
 
     invoke-virtual {v1, v2, v4}, Landroid/support/v4/util/SparseArrayCompat;->put(ILjava/lang/Object;)V
 
-    invoke-virtual {p0}, Landroid/support/v4/app/K;->d()V
+    invoke-virtual {p0}, Landroid/support/v4/app/K;->f()V
 
     iget-object v1, p0, Landroid/support/v4/app/K;->o:Landroid/support/v4/app/J;
 
@@ -968,7 +1181,7 @@
 
     iput-boolean v1, v0, Landroid/support/v4/app/K;->f:Z
 
-    invoke-virtual {v0}, Landroid/support/v4/app/K;->d()V
+    invoke-virtual {v0}, Landroid/support/v4/app/K;->f()V
 
     iget-object v0, p0, Landroid/support/v4/app/K;->o:Landroid/support/v4/app/J;
 
@@ -1002,219 +1215,6 @@
     invoke-virtual {v0}, Landroid/support/v4/app/v;->a()V
 
     goto/16 :goto_0
-.end method
-
-.method start()V
-    .locals 4
-
-    const/4 v3, 0x1
-
-    iget-boolean v0, p0, Landroid/support/v4/app/K;->i:Z
-
-    if-eqz v0, :cond_1
-
-    iget-boolean v0, p0, Landroid/support/v4/app/K;->j:Z
-
-    if-eqz v0, :cond_1
-
-    iput-boolean v3, p0, Landroid/support/v4/app/K;->h:Z
-
-    :cond_0
-    :goto_0
-    return-void
-
-    :cond_1
-    iget-boolean v0, p0, Landroid/support/v4/app/K;->h:Z
-
-    if-nez v0, :cond_0
-
-    iput-boolean v3, p0, Landroid/support/v4/app/K;->h:Z
-
-    sget-boolean v0, Landroid/support/v4/app/J;->b:Z
-
-    if-eqz v0, :cond_2
-
-    const-string v0, "LoaderManager"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "  Starting: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_2
-    iget-object v0, p0, Landroid/support/v4/app/K;->d:Landroid/support/v4/content/Loader;
-
-    if-nez v0, :cond_3
-
-    iget-object v0, p0, Landroid/support/v4/app/K;->c:Landroid/support/v4/app/LoaderManager$LoaderCallbacks;
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Landroid/support/v4/app/K;->c:Landroid/support/v4/app/LoaderManager$LoaderCallbacks;
-
-    iget v1, p0, Landroid/support/v4/app/K;->a:I
-
-    iget-object v2, p0, Landroid/support/v4/app/K;->b:Landroid/os/Bundle;
-
-    invoke-interface {v0, v1, v2}, Landroid/support/v4/app/LoaderManager$LoaderCallbacks;->onCreateLoader(ILandroid/os/Bundle;)Landroid/support/v4/content/Loader;
-
-    move-result-object v0
-
-    iput-object v0, p0, Landroid/support/v4/app/K;->d:Landroid/support/v4/content/Loader;
-
-    :cond_3
-    iget-object v0, p0, Landroid/support/v4/app/K;->d:Landroid/support/v4/content/Loader;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/v4/app/K;->d:Landroid/support/v4/content/Loader;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Class;->isMemberClass()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Landroid/support/v4/app/K;->d:Landroid/support/v4/content/Loader;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getModifiers()I
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/reflect/Modifier;->isStatic(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Object returned from onCreateLoader must not be a non-static inner member class: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Landroid/support/v4/app/K;->d:Landroid/support/v4/content/Loader;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_4
-    iget-boolean v0, p0, Landroid/support/v4/app/K;->m:Z
-
-    if-nez v0, :cond_5
-
-    iget-object v0, p0, Landroid/support/v4/app/K;->d:Landroid/support/v4/content/Loader;
-
-    iget v1, p0, Landroid/support/v4/app/K;->a:I
-
-    invoke-virtual {v0, v1, p0}, Landroid/support/v4/content/Loader;->registerListener(ILandroid/support/v4/content/Loader$OnLoadCompleteListener;)V
-
-    iput-boolean v3, p0, Landroid/support/v4/app/K;->m:Z
-
-    :cond_5
-    iget-object v0, p0, Landroid/support/v4/app/K;->d:Landroid/support/v4/content/Loader;
-
-    invoke-virtual {v0}, Landroid/support/v4/content/Loader;->startLoading()V
-
-    goto/16 :goto_0
-.end method
-
-.method stop()V
-    .locals 4
-
-    const/4 v3, 0x0
-
-    sget-boolean v0, Landroid/support/v4/app/J;->b:Z
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "LoaderManager"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "  Stopping: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
-
-    :cond_0
-    iput-boolean v3, p0, Landroid/support/v4/app/K;->h:Z
-
-    iget-boolean v0, p0, Landroid/support/v4/app/K;->i:Z
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Landroid/support/v4/app/K;->d:Landroid/support/v4/content/Loader;
-
-    if-eqz v0, :cond_1
-
-    iget-boolean v0, p0, Landroid/support/v4/app/K;->m:Z
-
-    if-eqz v0, :cond_1
-
-    iput-boolean v3, p0, Landroid/support/v4/app/K;->m:Z
-
-    iget-object v0, p0, Landroid/support/v4/app/K;->d:Landroid/support/v4/content/Loader;
-
-    invoke-virtual {v0, p0}, Landroid/support/v4/content/Loader;->unregisterListener(Landroid/support/v4/content/Loader$OnLoadCompleteListener;)V
-
-    iget-object v0, p0, Landroid/support/v4/app/K;->d:Landroid/support/v4/content/Loader;
-
-    invoke-virtual {v0}, Landroid/support/v4/content/Loader;->stopLoading()V
-
-    :cond_1
-    return-void
 .end method
 
 .method public toString()Ljava/lang/String;

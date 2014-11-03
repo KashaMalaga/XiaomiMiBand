@@ -32,9 +32,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "mDays ="
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/view/WeekAdapter;->mDays:I
 
@@ -108,7 +112,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f030076
+    const v1, 0x7f030077
 
     const/4 v2, 0x0
 
@@ -117,7 +121,7 @@
     move-result-object p2
 
     :cond_0
-    const v0, 0x7f070225
+    const v0, 0x7f0a0228
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -131,7 +135,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v1, 0x7f070224
+    const v1, 0x7f0a0227
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -139,7 +143,7 @@
 
     check-cast v1, Landroid/widget/ImageView;
 
-    const v2, 0x7f020006
+    const v2, 0x7f020009
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -166,7 +170,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f08000c
+    const v2, 0x7f090027
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -193,7 +197,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f080010
+    const v2, 0x7f090043
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 

@@ -3,7 +3,26 @@
 
 
 # static fields
-.field public static final DEBUG:Z
+.field public static final APPLICATION_ID:Ljava/lang/String; = "com.xiaomi.hm.health"
+
+.field public static final BUILD_TYPE:Ljava/lang/String; = "release"
+
+.field public static final CFG_MOTOR_VIBRATE_NOTIFICATION:Z = true
+
+.field public static final DEBUG:Z = false
+
+.field public static final ENGLISH_VERSION:Z = false
+
+.field public static final FLAVOR:Ljava/lang/String; = "Chinese"
+
+.field public static final PACKAGE_NAME:Ljava/lang/String; = "com.xiaomi.hm.health"
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end field
+
+.field public static final VERSION_CODE:I = 0xef
+
+.field public static final VERSION_NAME:Ljava/lang/String; = ""
 
 
 # direct methods

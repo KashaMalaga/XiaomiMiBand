@@ -300,11 +300,151 @@
 
     :cond_0
     :goto_0
-    if-nez v1, :cond_3
+    if-eqz v1, :cond_6
+
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->startIndex()I
+
+    move-result v2
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;->endIndex()I
+
+    move-result v3
+
+    sub-int/2addr v2, v3
+
+    iget v3, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->c:I
+
+    if-le v2, v3, :cond_2
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;->size()I
+
+    move-result v2
+
+    sget v3, Lcn/com/smartdevices/bracelet/algorithm/data/Utils;->MinValidPatternActionCount:I
+
+    if-lt v2, v3, :cond_1
+
+    sget-boolean v2, Lcn/com/smartdevices/bracelet/algorithm/data/Utils;->ForceTimeOverClean:Z
+
+    if-eqz v2, :cond_2
 
     :cond_1
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;->nextNode()Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;
+
+    move-result-object v2
+
+    invoke-direct {p0, v1}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->a(Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;)V
+
+    move-object v1, v2
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {v1, p1, p2}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;->getSimilarity(Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;)D
+
+    move-result-wide v2
+
+    iget-wide v4, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->e:D
+
+    const-wide/16 v6, 0x0
+
+    cmpg-double v4, v4, v6
+
+    if-gez v4, :cond_3
+
+    iput-wide v2, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->e:D
+
+    :cond_3
+    iget-wide v4, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->d:D
+
+    cmpl-double v2, v2, v4
+
+    if-ltz v2, :cond_a
+
+    invoke-virtual {v1, p1, p2}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;->averageWindow(Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_4
+
+    invoke-virtual {v1, p2, p1}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;->averageWindow(Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_a
+
+    :cond_4
     :goto_1
-    if-nez v1, :cond_2
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;->formerNode()Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_5
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;->size()I
+
+    move-result v2
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;->formerNode()Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;->size()I
+
+    move-result v3
+
+    if-le v2, v3, :cond_5
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;->formerNode()Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;
+
+    move-result-object v2
+
+    invoke-direct {p0, v2, v1}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->a(Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
+
+    :catch_0
+    move-exception v0
+
+    throw v0
+
+    :cond_5
+    :try_start_1
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->f:Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;
+
+    invoke-virtual {v2, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_6
+
+    iget v2, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->i:I
+
+    add-int/lit8 v2, v2, 0x1
+
+    iput v2, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->i:I
+
+    iget-boolean v2, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->h:Z
+
+    if-eqz v2, :cond_6
+
+    iget v2, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->i:I
+
+    if-ne v2, v8, :cond_8
+
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->startIndex()I
+
+    move-result v2
+
+    add-int/lit8 v2, v2, -0x1
+
+    iput v2, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->k:I
+
+    :cond_6
+    :goto_2
+    if-nez v1, :cond_7
 
     new-instance v1, Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;
 
@@ -312,7 +452,7 @@
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->a:I
 
-    if-gtz v2, :cond_d
+    if-gtz v2, :cond_b
 
     iput-object v1, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->f:Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;
 
@@ -338,165 +478,21 @@
 
     iput v2, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->a:I
 
-    :goto_2
+    :goto_3
     iput-object v1, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->g:Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;
 
-    :cond_2
+    :cond_7
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->f:Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;
 
-    if-nez v1, :cond_10
+    if-nez v1, :cond_e
 
-    :goto_3
+    :goto_4
     return v0
 
-    :cond_3
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->startIndex()I
-
-    move-result v2
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;->endIndex()I
-
-    move-result v3
-
-    sub-int/2addr v2, v3
-
-    iget v3, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->c:I
-
-    if-le v2, v3, :cond_5
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;->size()I
-
-    move-result v2
-
-    sget v3, Lcn/com/smartdevices/bracelet/algorithm/data/Utils;->MinValidPatternActionCount:I
-
-    if-lt v2, v3, :cond_4
-
-    sget-boolean v2, Lcn/com/smartdevices/bracelet/algorithm/data/Utils;->ForceTimeOverClean:Z
-
-    if-eqz v2, :cond_5
-
-    :cond_4
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;->nextNode()Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;
-
-    move-result-object v2
-
-    invoke-direct {p0, v1}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->a(Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;)V
-
-    move-object v1, v2
-
-    goto :goto_0
-
-    :cond_5
-    invoke-virtual {v1, p1, p2}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;->getSimilarity(Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;)D
-
-    move-result-wide v2
-
-    iget-wide v4, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->e:D
-
-    const-wide/16 v6, 0x0
-
-    cmpg-double v4, v4, v6
-
-    if-gez v4, :cond_6
-
-    iput-wide v2, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->e:D
-
-    :cond_6
-    iget-wide v4, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->d:D
-
-    cmpl-double v2, v2, v4
-
-    if-ltz v2, :cond_c
-
-    invoke-virtual {v1, p1, p2}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;->averageWindow(Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_7
-
-    invoke-virtual {v1, p2, p1}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;->averageWindow(Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_c
-
-    :cond_7
-    :goto_4
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;->formerNode()Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_8
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;->size()I
-
-    move-result v2
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;->formerNode()Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;->size()I
-
-    move-result v3
-
-    if-gt v2, v3, :cond_9
-
     :cond_8
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->f:Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;
-
-    invoke-virtual {v2, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
     iget v2, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->i:I
 
-    add-int/lit8 v2, v2, 0x1
-
-    iput v2, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->i:I
-
-    iget-boolean v2, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->h:Z
-
-    if-eqz v2, :cond_1
-
-    iget v2, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->i:I
-
-    if-ne v2, v8, :cond_a
-
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->startIndex()I
-
-    move-result v2
-
-    add-int/lit8 v2, v2, -0x1
-
-    iput v2, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->k:I
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto/16 :goto_1
-
-    :catch_0
-    move-exception v0
-
-    throw v0
-
-    :cond_9
-    :try_start_1
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;->formerNode()Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;
-
-    move-result-object v2
-
-    invoke-direct {p0, v2, v1}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->a(Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;)V
-
-    goto :goto_4
-
-    :cond_a
-    iget v2, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->i:I
-
-    if-lt v2, v9, :cond_1
+    if-lt v2, v9, :cond_6
 
     const/4 v2, 0x0
 
@@ -562,20 +558,20 @@
 
     cmpl-double v6, v4, v6
 
-    if-eqz v6, :cond_b
+    if-eqz v6, :cond_9
 
     const-wide/high16 v6, 0x4000000000000000L
 
     cmpl-double v6, v4, v6
 
-    if-nez v6, :cond_1
+    if-nez v6, :cond_6
 
-    :cond_b
+    :cond_9
     const-wide v6, 0x3fd70a3d70a3d70aL
 
     cmpg-double v2, v2, v6
 
-    if-gtz v2, :cond_1
+    if-gtz v2, :cond_6
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->f:Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;
 
@@ -583,9 +579,9 @@
 
     invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;->plusActionCount(I)V
 
-    goto/16 :goto_1
+    goto :goto_2
 
-    :cond_c
+    :cond_a
     invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;->nextNode()Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;
 
     move-result-object v1
@@ -614,12 +610,12 @@
 
     goto/16 :goto_0
 
-    :cond_d
+    :cond_b
     iget v2, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->a:I
 
     iget v3, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->b:I
 
-    if-ge v2, v3, :cond_e
+    if-ge v2, v3, :cond_c
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->g:Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;
 
@@ -635,16 +631,16 @@
 
     iput v2, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->a:I
 
-    goto/16 :goto_2
+    goto/16 :goto_3
 
-    :cond_e
+    :cond_c
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->g:Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;
 
     invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;->formerNode()Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;
 
     move-result-object v2
 
-    if-nez v2, :cond_f
+    if-nez v2, :cond_d
 
     const/4 v2, 0x0
 
@@ -656,9 +652,9 @@
 
     iput-object v1, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->f:Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;
 
-    goto/16 :goto_2
+    goto/16 :goto_3
 
-    :cond_f
+    :cond_d
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->g:Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;
 
     invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;->formerNode()Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;
@@ -675,9 +671,9 @@
 
     invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;->setFormerNode(Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;)V
 
-    goto/16 :goto_2
+    goto/16 :goto_3
 
-    :cond_10
+    :cond_e
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->f:Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;->size()I
@@ -686,7 +682,7 @@
 
     move-result v0
 
-    goto/16 :goto_3
+    goto/16 :goto_4
 .end method
 
 .method public getActionCount()I
@@ -761,11 +757,8 @@
     iput v1, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->k:I
 
     :goto_0
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    return-void
-
-    :cond_0
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;->zeroClearing()V
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;->nextNode()Lcn/com/smartdevices/bracelet/algorithm/data/PatternNode;
@@ -773,4 +766,7 @@
     move-result-object v0
 
     goto :goto_0
+
+    :cond_0
+    return-void
 .end method

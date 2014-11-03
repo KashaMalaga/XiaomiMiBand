@@ -90,11 +90,8 @@
     :goto_0
     sget v1, Lcn/com/smartdevices/bracelet/algorithm/data/Utils;->MaxAxisCount:I
 
-    if-lt v0, v1, :cond_0
+    if-ge v0, v1, :cond_0
 
-    return-void
-
-    :cond_0
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->_firstWindows:[Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;
 
     new-instance v2, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;
@@ -122,6 +119,9 @@
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    :cond_0
+    return-void
 .end method
 
 .method private a(I)Z
@@ -399,35 +399,15 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->mInputMinusAvgSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_2
 
     move v0, v1
 
     :goto_0
     sget v2, Lcn/com/smartdevices/bracelet/algorithm/data/Utils;->MaxAxisCount:I
 
-    if-lt v0, v2, :cond_1
+    if-ge v0, v2, :cond_2
 
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->mPreMinusAvgSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->mInputMinusAvgSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->mCurMinusAvgSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->mPreMinusAvgSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->mPreSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->mInputSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->mCurSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->mPreSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
-
-    return-void
-
-    :cond_1
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->mPreMinusAvgSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
 
     iget-object v2, v2, Lcn/com/smartdevices/bracelet/algorithm/data/Sample;->AxisValues:[D
@@ -442,7 +422,7 @@
 
     cmpg-double v2, v2, v4
 
-    if-ltz v2, :cond_2
+    if-ltz v2, :cond_0
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->mInputMinusAvgSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
 
@@ -460,7 +440,7 @@
 
     cmpl-double v2, v2, v6
 
-    if-lez v2, :cond_3
+    if-lez v2, :cond_1
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->mInputMinusAvgSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
 
@@ -478,9 +458,9 @@
 
     cmpg-double v2, v2, v6
 
-    if-gez v2, :cond_3
+    if-gez v2, :cond_1
 
-    :cond_2
+    :cond_0
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->mIsIgnoreValues:[Z
 
     const/4 v3, 0x1
@@ -504,12 +484,31 @@
 
     goto :goto_0
 
-    :cond_3
+    :cond_1
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->mIsIgnoreValues:[Z
 
     aput-boolean v1, v2, v0
 
     goto :goto_1
+
+    :cond_2
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->mPreMinusAvgSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->mInputMinusAvgSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->mCurMinusAvgSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->mPreMinusAvgSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->mPreSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->mInputSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->mCurSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->mPreSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
+
+    return-void
 .end method
 
 .method protected checkCheat()Z
@@ -540,25 +539,142 @@
     :goto_0
     sget v3, Lcn/com/smartdevices/bracelet/algorithm/data/Utils;->MaxAxisCount:I
 
-    if-lt v0, v3, :cond_1
+    if-ge v0, v3, :cond_0
 
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, "\t"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->c:[Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;
+
+    aget-object v3, v3, v0
+
+    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->getActionCount()I
+
+    move-result v3
+
+    int-to-double v3, v3
+
+    div-double/2addr v3, v5
+
+    invoke-static {v3, v4}, Ljava/lang/Double;->toString(D)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
     move v0, v1
 
     :goto_1
     sget v3, Lcn/com/smartdevices/bracelet/algorithm/data/Utils;->MaxAxisCount:I
 
-    if-lt v0, v3, :cond_2
+    if-ge v0, v3, :cond_1
 
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, "\t"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->_possible_pattern_similarity_scores:[D
+
+    aget-wide v3, v3, v0
+
+    mul-double/2addr v3, v5
+
+    invoke-static {v3, v4}, Ljava/lang/Double;->toString(D)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_1
+
+    :cond_1
     move v0, v1
 
     :goto_2
     sget v3, Lcn/com/smartdevices/bracelet/algorithm/data/Utils;->MaxAxisCount:I
 
-    if-lt v0, v3, :cond_3
+    if-ge v0, v3, :cond_2
 
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, "\t"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->d:[D
+
+    aget-wide v3, v3, v0
+
+    mul-double/2addr v3, v5
+
+    invoke-static {v3, v4}, Ljava/lang/Double;->toString(D)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_2
+
+    :cond_2
     sget v0, Lcn/com/smartdevices/bracelet/algorithm/data/Utils;->MaxAxisCount:I
 
-    if-eq v0, v7, :cond_0
+    if-eq v0, v7, :cond_3
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->_basic_features:[[D
 
@@ -614,25 +730,17 @@
 
     new-instance v5, Ljava/lang/StringBuilder;
 
-    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v5, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v2, "\t"
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
+    const-string v5, "\t"
 
-    move-result-wide v0
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v3, v4}, Ljava/lang/Math;->sqrt(D)D
-
-    move-result-wide v3
+    move-result-object v2
 
     div-double/2addr v0, v3
 
@@ -648,125 +756,8 @@
 
     move-result-object v2
 
-    :cond_0
-    return-object v2
-
-    :cond_1
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v2, "\t"
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->c:[Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;
-
-    aget-object v3, v3, v0
-
-    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;->getActionCount()I
-
-    move-result v3
-
-    int-to-double v3, v3
-
-    div-double/2addr v3, v5
-
-    invoke-static {v3, v4}, Ljava/lang/Double;->toString(D)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto/16 :goto_0
-
-    :cond_2
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v2, "\t"
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->_possible_pattern_similarity_scores:[D
-
-    aget-wide v3, v3, v0
-
-    mul-double/2addr v3, v5
-
-    invoke-static {v3, v4}, Ljava/lang/Double;->toString(D)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto/16 :goto_1
-
     :cond_3
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v2, "\t"
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->d:[D
-
-    aget-wide v3, v3, v0
-
-    mul-double/2addr v3, v5
-
-    invoke-static {v3, v4}, Ljava/lang/Double;->toString(D)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto/16 :goto_2
+    return-object v2
 .end method
 
 .method public getPatternLists()[Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;
@@ -871,7 +862,9 @@
     return v0
 
     :cond_0
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->calculateFeatureByNewSample()V
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->mInputMinusAvgSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
+
+    invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->calculateFeatureByNewSample(Lcn/com/smartdevices/bracelet/algorithm/data/Sample;)V
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->_valid_action_count:I
 
@@ -880,35 +873,30 @@
     :goto_1
     sget v2, Lcn/com/smartdevices/bracelet/algorithm/data/Utils;->MaxAxisCount:I
 
-    if-lt v0, v2, :cond_1
+    if-ge v0, v2, :cond_4
 
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_1
     iget-boolean v2, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->mIsIgnoreSingleBurr:Z
 
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_1
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->mIsIgnoreValues:[Z
 
     aget-boolean v2, v2, v0
 
-    if-nez v2, :cond_3
+    if-nez v2, :cond_2
 
-    :cond_2
+    :cond_1
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->mInputMinusAvgSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
 
     invoke-direct {p0, v2, v0}, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->a(Lcn/com/smartdevices/bracelet/algorithm/data/Sample;I)Z
 
     move-result v2
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_2
 
     const/4 v1, 0x1
 
-    :cond_3
+    :cond_2
     iget v2, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->_valid_action_count:I
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->c:[Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;
@@ -919,7 +907,7 @@
 
     move-result v3
 
-    if-ge v2, v3, :cond_4
+    if-ge v2, v3, :cond_3
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->c:[Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;
 
@@ -931,10 +919,15 @@
 
     iput v2, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->_valid_action_count:I
 
-    :cond_4
+    :cond_3
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
+
+    :cond_4
+    move v0, v1
+
+    goto :goto_0
 .end method
 
 .method public resetIsPossibleValidActions()V
@@ -947,11 +940,8 @@
     :goto_0
     sget v1, Lcn/com/smartdevices/bracelet/algorithm/data/Utils;->MaxAxisCount:I
 
-    if-lt v0, v1, :cond_0
+    if-ge v0, v1, :cond_0
 
-    return-void
-
-    :cond_0
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->_possible_pattern_similarity_scores:[D
 
     aput-wide v2, v1, v0
@@ -963,6 +953,9 @@
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    :cond_0
+    return-void
 .end method
 
 .method public zeroClearing()V
@@ -981,11 +974,8 @@
     :goto_0
     sget v2, Lcn/com/smartdevices/bracelet/algorithm/data/Utils;->MaxAxisCount:I
 
-    if-lt v0, v2, :cond_0
+    if-ge v0, v2, :cond_1
 
-    return-void
-
-    :cond_0
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->c:[Lcn/com/smartdevices/bracelet/algorithm/data/PatternList;
 
     aget-object v2, v2, v0
@@ -997,13 +987,8 @@
     :goto_1
     const/16 v3, 0xa
 
-    if-lt v2, v3, :cond_1
+    if-ge v2, v3, :cond_0
 
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineSport;->_basic_features:[[D
 
     aget-object v3, v3, v0
@@ -1015,4 +1000,12 @@
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
+
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-void
 .end method

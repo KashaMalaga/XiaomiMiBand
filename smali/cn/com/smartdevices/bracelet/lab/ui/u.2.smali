@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnLongClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/u;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/u;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,86 +22,45 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 4
+.method public onLongClick(Landroid/view/View;)Z
+    .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/u;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
+    new-instance v0, Landroid/content/Intent;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->e(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Z
+    const-string v1, "android.intent.action.GET_CONTENT"
 
-    move-result v0
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    if-eqz v0, :cond_0
+    const-string v1, "*/*"
 
-    const-string v0, " C"
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
+
+    const-string v1, "android.intent.category.OPENABLE"
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
+
+    :try_start_0
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/u;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
+
+    const-string v2, "Select one music"
+
+    invoke-static {v0, v2}, Landroid/content/Intent;->createChooser(Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;
+
+    move-result-object v0
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v0, v2}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->startActivityForResult(Landroid/content/Intent;I)V
+    :try_end_0
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
     :goto_0
-    new-instance v1, Ljava/lang/StringBuilder;
+    const/4 v0, 0x1
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    return v0
 
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/lab/debug/RawDataGetter;->ERROR:Z
-
-    if-eqz v0, :cond_1
-
-    const-string v0, " E"
-
-    :goto_1
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/u;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->f(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/TextView;
-
-    move-result-object v1
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/u;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
-
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->g(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)I
-
-    move-result v3
-
-    invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    return-void
-
-    :cond_0
-    const-string v0, ""
+    :catch_0
+    move-exception v0
 
     goto :goto_0
-
-    :cond_1
-    const-string v0, ""
-
-    goto :goto_1
 .end method

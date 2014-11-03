@@ -75,23 +75,8 @@
 
     move-result v0
 
-    if-lt v1, v0, :cond_2
+    if-ge v1, v0, :cond_3
 
-    invoke-static {v2, v3}, Ljava/lang/Math;->sqrt(D)D
-
-    move-result-wide v0
-
-    const-wide/high16 v2, 0x3ff0000000000000L
-
-    const-wide/high16 v4, 0x3ff0000000000000L
-
-    add-double/2addr v0, v4
-
-    div-double v0, v2, v0
-
-    goto :goto_0
-
-    :cond_2
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -128,7 +113,7 @@
 
     cmpl-double v0, v4, v6
 
-    if-lez v0, :cond_3
+    if-lez v0, :cond_2
 
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -164,10 +149,25 @@
 
     add-double/2addr v2, v4
 
-    :cond_3
+    :cond_2
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_1
+
+    :cond_3
+    invoke-static {v2, v3}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v0
+
+    const-wide/high16 v2, 0x3ff0000000000000L
+
+    const-wide/high16 v4, 0x3ff0000000000000L
+
+    add-double/2addr v0, v4
+
+    div-double v0, v2, v0
+
+    goto :goto_0
 .end method

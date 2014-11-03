@@ -32,7 +32,7 @@
 .method protected inflateLayout()I
     .locals 1
 
-    const v0, 0x7f030024
+    const v0, 0x7f030022
 
     return v0
 .end method
@@ -94,7 +94,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ApkUpgradeFragment;->d:Ljava/lang/String;
 
-    const v0, 0x7f0700c6
+    const v0, 0x7f0a00c6
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -140,7 +140,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0c00f7
+    const v1, 0x7f0d01ca
 
     invoke-static {v0, v1, v3}, Lcn/com/smartdevices/bracelet/view/CustomToast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -204,7 +204,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0c00f4
+    const v2, 0x7f0d006c
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

@@ -6,30 +6,18 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/loopj/android/http/j;
+.field final synthetic a:Ljava/lang/Throwable;
 
-.field private final synthetic b:I
-
-.field private final synthetic c:[Lorg/apache/http/Header;
-
-.field private final synthetic d:Ljava/lang/Throwable;
-
-.field private final synthetic e:Ljava/lang/String;
+.field final synthetic b:Lcom/loopj/android/http/j;
 
 
 # direct methods
-.method constructor <init>(Lcom/loopj/android/http/j;I[Lorg/apache/http/Header;Ljava/lang/Throwable;Ljava/lang/String;)V
+.method constructor <init>(Lcom/loopj/android/http/j;Ljava/lang/Throwable;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/loopj/android/http/l;->a:Lcom/loopj/android/http/j;
+    iput-object p1, p0, Lcom/loopj/android/http/l;->b:Lcom/loopj/android/http/j;
 
-    iput p2, p0, Lcom/loopj/android/http/l;->b:I
-
-    iput-object p3, p0, Lcom/loopj/android/http/l;->c:[Lorg/apache/http/Header;
-
-    iput-object p4, p0, Lcom/loopj/android/http/l;->d:Ljava/lang/Throwable;
-
-    iput-object p5, p0, Lcom/loopj/android/http/l;->e:Ljava/lang/String;
+    iput-object p2, p0, Lcom/loopj/android/http/l;->a:Ljava/lang/Throwable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,19 +29,23 @@
 .method public run()V
     .locals 6
 
-    iget-object v0, p0, Lcom/loopj/android/http/l;->a:Lcom/loopj/android/http/j;
+    iget-object v0, p0, Lcom/loopj/android/http/l;->b:Lcom/loopj/android/http/j;
 
-    invoke-static {v0}, Lcom/loopj/android/http/j;->a(Lcom/loopj/android/http/j;)Lcom/loopj/android/http/BaseJsonHttpResponseHandler;
+    iget-object v0, v0, Lcom/loopj/android/http/j;->d:Lcom/loopj/android/http/BaseJsonHttpResponseHandler;
 
-    move-result-object v0
+    iget-object v1, p0, Lcom/loopj/android/http/l;->b:Lcom/loopj/android/http/j;
 
-    iget v1, p0, Lcom/loopj/android/http/l;->b:I
+    iget v1, v1, Lcom/loopj/android/http/j;->b:I
 
-    iget-object v2, p0, Lcom/loopj/android/http/l;->c:[Lorg/apache/http/Header;
+    iget-object v2, p0, Lcom/loopj/android/http/l;->b:Lcom/loopj/android/http/j;
 
-    iget-object v3, p0, Lcom/loopj/android/http/l;->d:Ljava/lang/Throwable;
+    iget-object v2, v2, Lcom/loopj/android/http/j;->c:[Lorg/apache/http/Header;
 
-    iget-object v4, p0, Lcom/loopj/android/http/l;->e:Ljava/lang/String;
+    iget-object v3, p0, Lcom/loopj/android/http/l;->a:Ljava/lang/Throwable;
+
+    iget-object v4, p0, Lcom/loopj/android/http/l;->b:Lcom/loopj/android/http/j;
+
+    iget-object v4, v4, Lcom/loopj/android/http/j;->a:Ljava/lang/String;
 
     const/4 v5, 0x0
 

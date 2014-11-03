@@ -138,7 +138,7 @@
 
     invoke-direct {v2, p0}, Ljava/io/BufferedInputStream;-><init>(Ljava/io/InputStream;)V
     :try_end_0
-    .catch Ljava/security/cert/CertificateException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/security/cert/CertificateException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     :try_start_1
@@ -154,7 +154,7 @@
     :try_start_2
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_3
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
     :cond_0
     :goto_0
@@ -188,6 +188,13 @@
     return-object v0
 
     :catch_0
+    move-exception v2
+
+    invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_0
+
+    :catch_1
     move-exception v0
 
     move-object v2, v1
@@ -198,18 +205,19 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_1
 
     :try_start_6
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_6
-    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_1
+    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_2
 
+    :cond_1
     move-object v0, v1
 
     goto :goto_0
 
-    :catch_1
+    :catch_2
     move-exception v0
 
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
@@ -222,30 +230,23 @@
     move-exception v0
 
     :goto_3
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
     :try_start_7
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_7
-    .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_2
+    .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_3
 
-    :cond_1
+    :cond_2
     :goto_4
     throw v0
 
-    :catch_2
+    :catch_3
     move-exception v1
 
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_4
-
-    :catch_3
-    move-exception v2
-
-    invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
-
-    goto :goto_0
 
     :catch_4
     move-exception v0
@@ -283,11 +284,6 @@
     move-exception v0
 
     goto :goto_2
-
-    :cond_2
-    move-object v0, v1
-
-    goto :goto_0
 .end method
 
 .method public static getNewHttpClient(Ljava/security/KeyStore;)Lorg/apache/http/impl/client/DefaultHttpClient;

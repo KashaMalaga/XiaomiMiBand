@@ -20,18 +20,12 @@
                 <cn.com.smartdevices.bracelet.chart.StatisticChartView android:id="@id/next_statistic_chart" android:layout_width="fill_parent" android:layout_height="fill_parent" />
             </FrameLayout>
             <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
-                <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="160.0dip">
-                    <include android:layout_gravity="center" android:id="@id/info_sleep_daily_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/fragment_dynamic_detail_info_sleep" />
-                    <include android:layout_gravity="center" android:id="@id/info_sleep_weekly_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/fragment_statistic_info_weekly_monthly_sleep" />
-                    <include android:layout_gravity="center" android:id="@id/info_sleep_monthly_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/fragment_statistic_info_weekly_monthly_sleep" />
-                </FrameLayout>
-                <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="160.0dip">
-                    <include android:layout_gravity="center" android:id="@id/info_step_daily_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/fragment_dynamic_detail_info_step" />
-                    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="160.0dip">
-                        <include android:layout_gravity="center" android:id="@id/info_step_weekly_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/fragment_statistic_info_weekly_monthly_step" />
-                        <include android:layout_gravity="center" android:id="@id/info_step_monthly_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/fragment_statistic_info_weekly_monthly_step" />
-                    </FrameLayout>
-                </FrameLayout>
+                <include android:id="@id/info_sleep_daily_layout" layout="@layout/fragment_dynamic_detail_info_sleep" />
+                <include android:id="@id/info_sleep_weekly_layout" layout="@layout/fragment_statistic_info_weekly_monthly_sleep" />
+                <include android:id="@id/info_sleep_monthly_layout" layout="@layout/fragment_statistic_info_weekly_monthly_sleep" />
+                <include android:id="@id/info_step_daily_layout" layout="@layout/fragment_dynamic_detail_info_step" />
+                <include android:id="@id/info_step_weekly_layout" layout="@layout/fragment_statistic_info_weekly_monthly_step" />
+                <include android:id="@id/info_step_monthly_layout" layout="@layout/fragment_statistic_info_weekly_monthly_step" />
             </FrameLayout>
         </LinearLayout>
     </view>

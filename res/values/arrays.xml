@@ -1,22 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="weeks">
-        <item>Mon.</item>
-        <item>Tues.</item>
-        <item>Wed.</item>
-        <item>Thurs.</item>
-        <item>Fri.</item>
-        <item>Sat.</item>
-        <item>Sun.</item>
-    </string-array>
-    <string-array name="weeks_short">
-        <item>Mon.</item>
-        <item>Tues.</item>
-        <item>Wed.</item>
-        <item>Thurs.</item>
-        <item>Fri.</item>
-        <item>Sat.</item>
-        <item>Sun.</item>
+    <string-array name="fortune">
+        <item>There is no substitute for consistency.</item>
+        <item>Strive for progress, not perfection.</item>
+        <item>Repetition is the father of success.</item>
+        <item>Energy and persistence conquer all things.</item>
+        <item>"The world wasn't formed in a day, and neither were we. Set small goals and build upon them."</item>
+        <item>Every journey begins with a single step.</item>
+        <item>Achieve one goal a day.</item>
+        <item>"No matter how slow you go, you're still lapping everybody on the couch."</item>
+        <item>Run when you can. Walk if you have to. Crawl if you must. Just never give up.</item>
+        <item>Remember, the feeling you get from a good workout is far better than the feeling you get from sitting around wishing you had worked out.</item>
     </string-array>
     <string-array name="months">
         <item>January</item>
@@ -38,18 +32,6 @@
         <item>Weekdays</item>
         <item>Customize</item>
     </string-array>
-    <string-array name="fortune">
-        <item>There is no substitute for consistency.</item>
-        <item>Strive for progress, not perfection.</item>
-        <item>Repetition is the father of success.</item>
-        <item>Energy and persistence conquer all things.</item>
-        <item>"The world wasn't formed in a day, and neither were we. Set small goals and build upon them."</item>
-        <item>Every journey begins with a single step.</item>
-        <item>Achieve one goal a day.</item>
-        <item>"No matter how slow you go, you're still lapping everybody on the couch."</item>
-        <item>Run when you can. Walk if you have to. Crawl if you must. Just never give up.</item>
-        <item>Remember, the feeling you get from a good workout is far better than the feeling you get from sitting around wishing you had worked out.</item>
-    </string-array>
     <string-array name="weather_aqi_descriptions">
         <item>Great</item>
         <item>Good</item>
@@ -57,5 +39,23 @@
         <item>Caution</item>
         <item>Unhealthy</item>
         <item>Very Unhealthy</item>
+    </string-array>
+    <string-array name="weeks">
+        <item>Mon.</item>
+        <item>Tues.</item>
+        <item>Wed.</item>
+        <item>Thurs.</item>
+        <item>Fri.</item>
+        <item>Sat.</item>
+        <item>Sun.</item>
+    </string-array>
+    <string-array name="weeks_short">
+        <item>Mon.</item>
+        <item>Tues.</item>
+        <item>Wed.</item>
+        <item>Thurs.</item>
+        <item>Fri.</item>
+        <item>Sat.</item>
+        <item>Sun.</item>
     </string-array>
 </resources>

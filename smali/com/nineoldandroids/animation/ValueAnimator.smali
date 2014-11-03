@@ -300,6 +300,129 @@
     return-void
 .end method
 
+.method private a(Z)V
+    .locals 6
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Landroid/util/AndroidRuntimeException;
+
+    const-string v1, "Animators may only be run on Looper threads"
+
+    invoke-direct {v0, v1}, Landroid/util/AndroidRuntimeException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_0
+    iput-boolean p1, p0, Lcom/nineoldandroids/animation/ValueAnimator;->w:Z
+
+    iput v3, p0, Lcom/nineoldandroids/animation/ValueAnimator;->x:I
+
+    iput v3, p0, Lcom/nineoldandroids/animation/ValueAnimator;->i:I
+
+    iput-boolean v2, p0, Lcom/nineoldandroids/animation/ValueAnimator;->C:Z
+
+    iput-boolean v3, p0, Lcom/nineoldandroids/animation/ValueAnimator;->z:Z
+
+    sget-object v0, Lcom/nineoldandroids/animation/ValueAnimator;->p:Ljava/lang/ThreadLocal;
+
+    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iget-wide v0, p0, Lcom/nineoldandroids/animation/ValueAnimator;->E:J
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v0, v0, v4
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {p0}, Lcom/nineoldandroids/animation/ValueAnimator;->getCurrentPlayTime()J
+
+    move-result-wide v0
+
+    invoke-virtual {p0, v0, v1}, Lcom/nineoldandroids/animation/ValueAnimator;->setCurrentPlayTime(J)V
+
+    iput v3, p0, Lcom/nineoldandroids/animation/ValueAnimator;->i:I
+
+    iput-boolean v2, p0, Lcom/nineoldandroids/animation/ValueAnimator;->B:Z
+
+    iget-object v0, p0, Lcom/nineoldandroids/animation/ValueAnimator;->a:Ljava/util/ArrayList;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/nineoldandroids/animation/ValueAnimator;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v4
+
+    move v2, v3
+
+    :goto_0
+    if-lt v2, v4, :cond_3
+
+    :cond_1
+    sget-object v0, Lcom/nineoldandroids/animation/ValueAnimator;->n:Ljava/lang/ThreadLocal;
+
+    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/nineoldandroids/animation/H;
+
+    if-nez v0, :cond_2
+
+    new-instance v0, Lcom/nineoldandroids/animation/H;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lcom/nineoldandroids/animation/H;-><init>(Lcom/nineoldandroids/animation/H;)V
+
+    sget-object v1, Lcom/nineoldandroids/animation/ValueAnimator;->n:Ljava/lang/ThreadLocal;
+
+    invoke-virtual {v1, v0}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+
+    :cond_2
+    invoke-virtual {v0, v3}, Lcom/nineoldandroids/animation/H;->sendEmptyMessage(I)Z
+
+    return-void
+
+    :cond_3
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/nineoldandroids/animation/Animator$AnimatorListener;
+
+    invoke-interface {v1, p0}, Lcom/nineoldandroids/animation/Animator$AnimatorListener;->onAnimationStart(Lcom/nineoldandroids/animation/Animator;)V
+
+    add-int/lit8 v1, v2, 0x1
+
+    move v2, v1
+
+    goto :goto_0
+.end method
+
 .method static synthetic a(Lcom/nineoldandroids/animation/ValueAnimator;J)Z
     .locals 1
 
@@ -685,129 +808,6 @@
     sput-wide p0, Lcom/nineoldandroids/animation/ValueAnimator;->F:J
 
     return-void
-.end method
-
-.method private start(Z)V
-    .locals 6
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Landroid/util/AndroidRuntimeException;
-
-    const-string v1, "Animators may only be run on Looper threads"
-
-    invoke-direct {v0, v1}, Landroid/util/AndroidRuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
-    iput-boolean p1, p0, Lcom/nineoldandroids/animation/ValueAnimator;->w:Z
-
-    iput v3, p0, Lcom/nineoldandroids/animation/ValueAnimator;->x:I
-
-    iput v3, p0, Lcom/nineoldandroids/animation/ValueAnimator;->i:I
-
-    iput-boolean v2, p0, Lcom/nineoldandroids/animation/ValueAnimator;->C:Z
-
-    iput-boolean v3, p0, Lcom/nineoldandroids/animation/ValueAnimator;->z:Z
-
-    sget-object v0, Lcom/nineoldandroids/animation/ValueAnimator;->p:Ljava/lang/ThreadLocal;
-
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-wide v0, p0, Lcom/nineoldandroids/animation/ValueAnimator;->E:J
-
-    const-wide/16 v4, 0x0
-
-    cmp-long v0, v0, v4
-
-    if-nez v0, :cond_1
-
-    invoke-virtual {p0}, Lcom/nineoldandroids/animation/ValueAnimator;->getCurrentPlayTime()J
-
-    move-result-wide v0
-
-    invoke-virtual {p0, v0, v1}, Lcom/nineoldandroids/animation/ValueAnimator;->setCurrentPlayTime(J)V
-
-    iput v3, p0, Lcom/nineoldandroids/animation/ValueAnimator;->i:I
-
-    iput-boolean v2, p0, Lcom/nineoldandroids/animation/ValueAnimator;->B:Z
-
-    iget-object v0, p0, Lcom/nineoldandroids/animation/ValueAnimator;->a:Ljava/util/ArrayList;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/nineoldandroids/animation/ValueAnimator;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v4
-
-    move v2, v3
-
-    :goto_0
-    if-lt v2, v4, :cond_3
-
-    :cond_1
-    sget-object v0, Lcom/nineoldandroids/animation/ValueAnimator;->n:Ljava/lang/ThreadLocal;
-
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/nineoldandroids/animation/H;
-
-    if-nez v0, :cond_2
-
-    new-instance v0, Lcom/nineoldandroids/animation/H;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lcom/nineoldandroids/animation/H;-><init>(Lcom/nineoldandroids/animation/H;)V
-
-    sget-object v1, Lcom/nineoldandroids/animation/ValueAnimator;->n:Ljava/lang/ThreadLocal;
-
-    invoke-virtual {v1, v0}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
-
-    :cond_2
-    invoke-virtual {v0, v3}, Lcom/nineoldandroids/animation/H;->sendEmptyMessage(I)Z
-
-    return-void
-
-    :cond_3
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/nineoldandroids/animation/Animator$AnimatorListener;
-
-    invoke-interface {v1, p0}, Lcom/nineoldandroids/animation/Animator$AnimatorListener;->onAnimationStart(Lcom/nineoldandroids/animation/Animator;)V
-
-    add-int/lit8 v1, v2, 0x1
-
-    move v2, v1
-
-    goto :goto_0
 .end method
 
 
@@ -1679,7 +1679,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-direct {p0, v1}, Lcom/nineoldandroids/animation/ValueAnimator;->start(Z)V
+    invoke-direct {p0, v1}, Lcom/nineoldandroids/animation/ValueAnimator;->a(Z)V
 
     goto :goto_1
 .end method
@@ -2046,7 +2046,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/nineoldandroids/animation/ValueAnimator;->start(Z)V
+    invoke-direct {p0, v0}, Lcom/nineoldandroids/animation/ValueAnimator;->a(Z)V
 
     return-void
 .end method

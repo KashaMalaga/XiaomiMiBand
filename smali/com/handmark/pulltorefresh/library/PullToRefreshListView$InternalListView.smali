@@ -70,6 +70,16 @@
     goto :goto_0
 .end method
 
+.method public bridge synthetic setAdapter(Landroid/widget/Adapter;)V
+    .locals 0
+
+    check-cast p1, Landroid/widget/ListAdapter;
+
+    invoke-virtual {p0, p1}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView$InternalListView;->setAdapter(Landroid/widget/ListAdapter;)V
+
+    return-void
+.end method
+
 .method public setAdapter(Landroid/widget/ListAdapter;)V
     .locals 3
 

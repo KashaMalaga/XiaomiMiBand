@@ -2,16 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/handmark/pulltorefresh/library/d;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Lcom/handmark/pulltorefresh/library/d;"
-    }
-.end annotation
+.implements Lcom/handmark/pulltorefresh/library/g;
 
 
 # instance fields
@@ -32,19 +23,11 @@
 
 # virtual methods
 .method public a()V
-    .locals 7
+    .locals 1
 
     iget-object v0, p0, Lcom/handmark/pulltorefresh/library/c;->a:Lcom/handmark/pulltorefresh/library/PullToRefreshBase;
 
-    const/4 v1, 0x0
-
-    const-wide/16 v2, 0xc8
-
-    const-wide/16 v4, 0xe1
-
-    const/4 v6, 0x0
-
-    invoke-static/range {v0 .. v6}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->a(Lcom/handmark/pulltorefresh/library/PullToRefreshBase;IJJLcom/handmark/pulltorefresh/library/d;)V
+    invoke-static {v0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->a(Lcom/handmark/pulltorefresh/library/PullToRefreshBase;)V
 
     return-void
 .end method

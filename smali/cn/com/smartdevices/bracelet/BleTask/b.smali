@@ -22,7 +22,7 @@
 .method public run()V
     .locals 2
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/BleTask/BleSyncDataTaskNew;->TAG:Ljava/lang/String;
+    sget-object v0, Lcn/com/smartdevices/bracelet/BleTask/BleTask;->TAG:Ljava/lang/String;
 
     const-string v1, "run stopGetActivities!!!"
 

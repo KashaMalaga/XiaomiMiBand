@@ -29,25 +29,28 @@
 
     array-length v2, v2
 
-    if-lt v0, v2, :cond_1
+    if-ge v0, v2, :cond_1
 
-    const/4 v1, 0x1
-
-    :cond_0
-    return v1
-
-    :cond_1
     iget v2, p0, Lcn/com/smartdevices/bracelet/view/SimpleAlarmWeekAdapter;->mDays:I
 
     sget-object v3, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->FIXED_DAYS:[I
 
     aget v3, v3, v0
 
-    if-eq v2, v3, :cond_0
+    if-ne v2, v3, :cond_0
 
+    :goto_1
+    return v1
+
+    :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    :cond_1
+    const/4 v1, 0x1
+
+    goto :goto_1
 .end method
 
 
@@ -55,7 +58,7 @@
 .method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 7
 
-    const v6, 0x7f08003c
+    const v6, 0x7f090003
 
     const/4 v5, 0x0
 
@@ -67,7 +70,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f030076
+    const v1, 0x7f030077
 
     const/4 v2, 0x0
 
@@ -76,7 +79,7 @@
     move-result-object p2
 
     :cond_0
-    const v0, 0x7f070224
+    const v0, 0x7f0a0227
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -86,7 +89,7 @@
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    const v0, 0x7f070225
+    const v0, 0x7f0a0228
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -106,7 +109,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f080010
+    const v3, 0x7f090043
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -118,9 +121,13 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "Get view : mdays:"
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     iget v4, p0, Lcn/com/smartdevices/bracelet/view/SimpleAlarmWeekAdapter;->mDays:I
 

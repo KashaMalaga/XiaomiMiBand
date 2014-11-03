@@ -33,9 +33,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/view/A;
+    new-instance v0, Lcn/com/smartdevices/bracelet/view/B;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/view/A;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/view/B;-><init>()V
 
     sput-object v0, Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -86,7 +86,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Landroid/os/Parcel;Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;)V
+.method synthetic constructor <init>(Landroid/os/Parcel;Lcn/com/smartdevices/bracelet/view/A;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;-><init>(Landroid/os/Parcel;)V

@@ -9,7 +9,9 @@
 
 .field private c:I
 
-.field private d:Landroid/content/Context;
+.field private d:I
+
+.field private e:Landroid/content/Context;
 
 
 # direct methods
@@ -20,7 +22,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->d:Landroid/content/Context;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->e:Landroid/content/Context;
 
     invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->a(Landroid/content/Context;)V
 
@@ -34,7 +36,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->d:Landroid/content/Context;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->e:Landroid/content/Context;
 
     invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->a(Landroid/content/Context;)V
 
@@ -48,11 +50,23 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->d:Landroid/content/Context;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->e:Landroid/content/Context;
 
     invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->a(Landroid/content/Context;)V
 
     return-void
+.end method
+
+.method private a(Landroid/view/View;)I
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->a:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v0, p1}, Landroid/widget/LinearLayout;->indexOfChild(Landroid/view/View;)I
+
+    move-result v0
+
+    return v0
 .end method
 
 .method private a()Landroid/view/View;
@@ -126,13 +140,13 @@
 
     const/4 v2, -0x1
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->d:Landroid/content/Context;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->e:Landroid/content/Context;
 
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->setHorizontalScrollBarEnabled(Z)V
 
-    const/4 v0, 0x2
+    const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->setOverScrollMode(I)V
 
@@ -171,7 +185,92 @@
     return-void
 .end method
 
-.method private a(Landroid/view/View;)V
+.method private b()V
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->a:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v0}, Landroid/widget/LinearLayout;->removeAllViews()V
+
+    return-void
+.end method
+
+.method private b(I)V
+    .locals 4
+
+    const-string v0, "scroll"
+
+    const/4 v1, 0x2
+
+    new-array v1, v1, [I
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->getScrollX()I
+
+    move-result v3
+
+    aput v3, v1, v2
+
+    const/4 v2, 0x1
+
+    aput p1, v1, v2
+
+    invoke-static {p0, v0, v1}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Ljava/lang/String;[I)Landroid/animation/ObjectAnimator;
+
+    move-result-object v0
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->c:I
+
+    int-to-long v1, v1
+
+    invoke-virtual {v0, v1, v2}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
+
+    return-void
+.end method
+
+.method private b(Landroid/view/View;)V
+    .locals 2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->a:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v0, p1}, Landroid/widget/LinearLayout;->indexOfChild(Landroid/view/View;)I
+
+    move-result v0
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->b:I
+
+    if-ne v0, v1, :cond_1
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->b:I
+
+    :cond_0
+    :goto_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->a:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v0, p1}, Landroid/widget/LinearLayout;->removeView(Landroid/view/View;)V
+
+    return-void
+
+    :cond_1
+    iget v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->b:I
+
+    if-ge v0, v1, :cond_0
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->b:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->b:I
+
+    goto :goto_0
+.end method
+
+.method private c(Landroid/view/View;)V
     .locals 4
 
     if-nez p1, :cond_1
@@ -219,52 +318,14 @@
     goto :goto_0
 .end method
 
-.method private b(I)V
-    .locals 4
-
-    const-string v0, "scroll"
-
-    const/4 v1, 0x2
-
-    new-array v1, v1, [I
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->getScrollX()I
-
-    move-result v3
-
-    aput v3, v1, v2
-
-    const/4 v2, 0x1
-
-    aput p1, v1, v2
-
-    invoke-static {p0, v0, v1}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Ljava/lang/String;[I)Landroid/animation/ObjectAnimator;
-
-    move-result-object v0
-
-    iget v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->c:I
-
-    int-to-long v1, v1
-
-    invoke-virtual {v0, v1, v2}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
-
-    return-void
-.end method
-
 
 # virtual methods
 .method public addView(I)V
-    .locals 5
+    .locals 3
 
-    const v4, 0x7f070062
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->e:Landroid/content/Context;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->d:Landroid/content/Context;
-
-    const v1, 0x7f030012
+    const v1, 0x7f030010
 
     const/4 v2, 0x0
 
@@ -272,7 +333,9 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    const v0, 0x7f0a0061
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -288,20 +351,6 @@
 
     invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->setStateTextSize(F)V
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->d:Landroid/content/Context;
-
-    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    const v3, 0x7f08005b
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->setStateTextColor(I)V
-
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->a:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getChildCount()I
@@ -310,50 +359,17 @@
 
     if-nez v0, :cond_0
 
-    const v2, 0x7f070061
+    const v0, 0x7f0a0060
 
-    invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    move-result-object v2
+    move-result-object v0
 
-    const/16 v3, 0x8
+    const/16 v2, 0x8
 
-    invoke-virtual {v2, v3}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
     :cond_0
-    const/4 v2, 0x1
-
-    if-lt v0, v2, :cond_1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->d:Landroid/content/Context;
-
-    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    const v3, 0x106000b
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v2
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->a:Landroid/widget/LinearLayout;
-
-    add-int/lit8 v0, v0, -0x1
-
-    invoke-virtual {v3, v0}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;
-
-    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->setStateTextColor(I)V
-
-    :cond_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->a:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
@@ -410,12 +426,8 @@
     const/4 v0, 0x0
 
     :goto_0
-    if-lt v0, v1, :cond_1
+    if-ge v0, v1, :cond_0
 
-    :cond_0
-    return-void
-
-    :cond_1
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->a:Landroid/widget/LinearLayout;
 
     invoke-virtual {v2, v0}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
@@ -427,53 +439,9 @@
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
-.end method
-
-.method public release()V
-    .locals 4
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->a:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getChildCount()I
-
-    move-result v2
-
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_0
-    if-lt v1, v2, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->a:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->removeAllViews()V
-
-    return-void
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->a:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    instance-of v3, v0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;
-
-    if-eqz v3, :cond_1
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->destroy()V
-
-    :cond_1
-    add-int/lit8 v0, v1, 0x1
-
-    move v1, v0
-
-    goto :goto_0
+    return-void
 .end method
 
 .method public setScroll(I)V
@@ -495,7 +463,7 @@
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->a(Landroid/view/View;)V
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->c(Landroid/view/View;)V
 
     return-void
 .end method

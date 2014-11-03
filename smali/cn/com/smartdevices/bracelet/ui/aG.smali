@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
 
 
 # instance fields
@@ -22,30 +22,70 @@
 
 
 # virtual methods
-.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 3
+.method public onPreDraw()Z
+    .locals 7
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    const/4 v6, 0x1
 
-    move-result-object v0
+    const/4 v5, 0x0
 
-    check-cast v0, Ljava/lang/Float;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aG;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->c(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Z
 
     move-result v0
 
+    if-eqz v0, :cond_0
+
+    :goto_0
+    return v6
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aG;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+
+    invoke-static {v0, v6}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->a(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;Z)Z
+
+    invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
+
+    move-result-object v0
+
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aG;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->D(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Landroid/view/View;
+    const-string v2, "onBleStatusChanged"
 
-    move-result-object v1
+    const-class v3, Lcom/xiaomi/hm/bleservice/HwConnStatus;
 
-    const/high16 v2, 0x44480000
+    new-array v4, v5, [Ljava/lang/Class;
 
-    sub-float v0, v2, v0
+    invoke-virtual {v0, v1, v2, v3, v4}, Lde/greenrobot/event/EventBus;->registerSticky(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;)V
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->setTranslationY(F)V
+    invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
 
-    return-void
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aG;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+
+    const-string v2, "onBleSyncDataStatusChanged"
+
+    const-class v3, Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;
+
+    new-array v4, v5, [Ljava/lang/Class;
+
+    invoke-virtual {v0, v1, v2, v3, v4}, Lde/greenrobot/event/EventBus;->registerSticky(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;)V
+
+    invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aG;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+
+    const-string v2, "onBtOnOff"
+
+    const-class v3, Lcn/com/smartdevices/bracelet/eventbus/EventBtOnOff;
+
+    new-array v4, v5, [Ljava/lang/Class;
+
+    invoke-virtual {v0, v1, v2, v3, v4}, Lde/greenrobot/event/EventBus;->register(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;)V
+
+    goto :goto_0
 .end method

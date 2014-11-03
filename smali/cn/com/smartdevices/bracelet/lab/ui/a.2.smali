@@ -56,7 +56,7 @@
 .method public abstract b()V
 .end method
 
-.method public final declared-synchronized start()Lcn/com/smartdevices/bracelet/lab/ui/a;
+.method public final declared-synchronized c()Lcn/com/smartdevices/bracelet/lab/ui/a;
     .locals 4
 
     monitor-enter p0

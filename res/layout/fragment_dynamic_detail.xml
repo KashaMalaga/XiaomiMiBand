@@ -21,15 +21,9 @@
                 <TextView android:textSize="15.0sp" android:textColor="#ffaaabb6" android:layout_gravity="center_horizontal" android:id="@id/sleep_unwear_tip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="35.0dip" android:text="@string/no_wear_bracelet" />
             </FrameLayout>
             <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
-                <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="160.0dip">
-                    <include android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/fragment_dynamic_detail_info_sleep" />
-                </FrameLayout>
-                <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="160.0dip">
-                    <include android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/fragment_dynamic_detail_info_step" />
-                </FrameLayout>
-                <FrameLayout android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="220.0dip">
-                    <ViewStub android:layout_gravity="center" android:id="@id/info_step_piece_layout" android:layout="@layout/fragment_dynamic_detail_info_step_piece" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-                </FrameLayout>
+                <include layout="@layout/fragment_dynamic_detail_info_sleep" />
+                <include layout="@layout/fragment_dynamic_detail_info_step" />
+                <ViewStub android:layout_gravity="center_horizontal" android:id="@id/info_step_piece_layout" android:layout="@layout/fragment_dynamic_detail_info_step_piece" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" />
             </FrameLayout>
         </LinearLayout>
     </view>

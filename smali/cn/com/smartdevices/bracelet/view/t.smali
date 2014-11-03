@@ -39,7 +39,7 @@
 
     float-to-int v0, v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->b(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;I)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->b(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;I)I
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/t;->a:Lcn/com/smartdevices/bracelet/view/RoundProgressBar;
 

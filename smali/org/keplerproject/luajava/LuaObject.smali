@@ -459,14 +459,27 @@
 
     invoke-virtual {p0}, Lorg/keplerproject/luajava/LuaObject;->push()V
 
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_1
 
     array-length v0, p1
 
     :goto_0
-    if-lt v1, v0, :cond_1
+    if-ge v1, v0, :cond_2
 
-    :goto_1
+    aget-object v4, p1, v1
+
+    iget-object v5, p0, Lorg/keplerproject/luajava/LuaObject;->L:Lorg/keplerproject/luajava/LuaState;
+
+    invoke-virtual {v5, v4}, Lorg/keplerproject/luajava/LuaState;->pushObjectValue(Ljava/lang/Object;)V
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    move v0, v1
+
+    :cond_2
     iget-object v1, p0, Lorg/keplerproject/luajava/LuaObject;->L:Lorg/keplerproject/luajava/LuaState;
 
     const/4 v4, 0x0
@@ -501,7 +514,7 @@
 
     invoke-virtual {v3, v4}, Lorg/keplerproject/luajava/LuaState;->pop(I)V
 
-    :goto_2
+    :goto_1
     sget-object v3, Lorg/keplerproject/luajava/LuaState;->LUA_ERRRUN:Ljava/lang/Integer;
 
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
@@ -512,9 +525,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "Runtime error. "
 
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -524,33 +541,17 @@
 
     move-result-object v0
 
-    :goto_3
+    :goto_2
     new-instance v1, Lorg/keplerproject/luajava/LuaException;
 
     invoke-direct {v1, v0}, Lorg/keplerproject/luajava/LuaException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
-    :cond_1
-    aget-object v4, p1, v1
-
-    iget-object v5, p0, Lorg/keplerproject/luajava/LuaObject;->L:Lorg/keplerproject/luajava/LuaState;
-
-    invoke-virtual {v5, v4}, Lorg/keplerproject/luajava/LuaState;->pushObjectValue(Ljava/lang/Object;)V
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    move v0, v1
-
-    goto :goto_1
-
     :cond_3
     const-string v0, ""
 
-    goto :goto_2
+    goto :goto_1
 
     :cond_4
     sget-object v3, Lorg/keplerproject/luajava/LuaState;->LUA_ERRMEM:Ljava/lang/Integer;
@@ -563,9 +564,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "Memory allocation error. "
 
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -575,7 +580,7 @@
 
     move-result-object v0
 
-    goto :goto_3
+    goto :goto_2
 
     :cond_5
     sget-object v3, Lorg/keplerproject/luajava/LuaState;->LUA_ERRERR:Ljava/lang/Integer;
@@ -588,9 +593,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "Error while running the error handler function. "
 
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -600,14 +609,18 @@
 
     move-result-object v0
 
-    goto :goto_3
+    goto :goto_2
 
     :cond_6
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "Lua Error code "
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -627,7 +640,7 @@
 
     move-result-object v0
 
-    goto :goto_3
+    goto :goto_2
 
     :cond_7
     sget-object v0, Lorg/keplerproject/luajava/LuaState;->LUA_MULTRET:Ljava/lang/Integer;
@@ -646,7 +659,7 @@
 
     sub-int/2addr v0, v3
 
-    :goto_4
+    :goto_3
     iget-object v1, p0, Lorg/keplerproject/luajava/LuaObject;->L:Lorg/keplerproject/luajava/LuaState;
 
     invoke-virtual {v1}, Lorg/keplerproject/luajava/LuaState;->getTop()I
@@ -668,14 +681,9 @@
     :cond_8
     new-array v1, v0, [Ljava/lang/Object;
 
-    :goto_5
-    if-gtz v0, :cond_9
+    :goto_4
+    if-lez v0, :cond_9
 
-    monitor-exit v2
-
-    return-object v1
-
-    :cond_9
     add-int/lit8 v3, v0, -0x1
 
     iget-object v4, p0, Lorg/keplerproject/luajava/LuaObject;->L:Lorg/keplerproject/luajava/LuaState;
@@ -693,17 +701,22 @@
     const/4 v4, 0x1
 
     invoke-virtual {v3, v4}, Lorg/keplerproject/luajava/LuaState;->pop(I)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     add-int/lit8 v0, v0, -0x1
 
-    goto :goto_5
+    goto :goto_4
+
+    :cond_9
+    monitor-exit v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    return-object v1
 
     :cond_a
     move v0, p2
 
-    goto :goto_4
+    goto :goto_3
 .end method
 
 .method public createProxy(Ljava/lang/String;)Ljava/lang/Object;
@@ -758,8 +771,23 @@
 
     move-result v4
 
-    if-nez v4, :cond_1
+    if-eqz v4, :cond_1
 
+    invoke-virtual {v2}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v4
+
+    aput-object v4, v3, v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
     new-instance v0, Lorg/keplerproject/luajava/LuaInvocationHandler;
 
     invoke-direct {v0, p0}, Lorg/keplerproject/luajava/LuaInvocationHandler;-><init>(Lorg/keplerproject/luajava/LuaObject;)V
@@ -777,25 +805,10 @@
     move-result-object v0
 
     monitor-exit v1
-
-    return-object v0
-
-    :cond_1
-    invoke-virtual {v2}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v4}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v4
-
-    aput-object v4, v3, v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
+    return-object v0
 .end method
 
 .method protected finalize()V
@@ -862,9 +875,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "Unable to release object "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     iget-object v2, p0, Lorg/keplerproject/luajava/LuaObject;->ref:Ljava/lang/Integer;
 
@@ -1428,20 +1445,20 @@
 
     :try_start_0
     invoke-virtual {p0}, Lorg/keplerproject/luajava/LuaObject;->isNil()Z
-    :try_end_0
-    .catch Lorg/keplerproject/luajava/LuaException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v2
 
     if-eqz v2, :cond_0
 
+    const-string v0, "nil"
+    :try_end_0
+    .catch Lorg/keplerproject/luajava/LuaException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
     :try_start_1
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    const-string v0, "nil"
 
     :goto_0
     return-object v0
@@ -1530,20 +1547,20 @@
     :cond_3
     :try_start_8
     invoke-virtual {p0}, Lorg/keplerproject/luajava/LuaObject;->isFunction()Z
-    :try_end_8
-    .catch Lorg/keplerproject/luajava/LuaException; {:try_start_8 .. :try_end_8} :catch_0
-    .catchall {:try_start_8 .. :try_end_8} :catchall_0
 
     move-result v2
 
     if-eqz v2, :cond_4
 
+    const-string v0, "Lua Function"
+    :try_end_8
+    .catch Lorg/keplerproject/luajava/LuaException; {:try_start_8 .. :try_end_8} :catch_0
+    .catchall {:try_start_8 .. :try_end_8} :catchall_0
+
     :try_start_9
     monitor-exit v1
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_0
-
-    const-string v0, "Lua Function"
 
     goto :goto_0
 
@@ -1576,65 +1593,62 @@
     :cond_5
     :try_start_c
     invoke-virtual {p0}, Lorg/keplerproject/luajava/LuaObject;->isUserdata()Z
-    :try_end_c
-    .catch Lorg/keplerproject/luajava/LuaException; {:try_start_c .. :try_end_c} :catch_0
-    .catchall {:try_start_c .. :try_end_c} :catchall_0
 
     move-result v2
 
     if-eqz v2, :cond_6
+
+    const-string v0, "Userdata"
+    :try_end_c
+    .catch Lorg/keplerproject/luajava/LuaException; {:try_start_c .. :try_end_c} :catch_0
+    .catchall {:try_start_c .. :try_end_c} :catchall_0
 
     :try_start_d
     monitor-exit v1
     :try_end_d
     .catchall {:try_start_d .. :try_end_d} :catchall_0
 
-    const-string v0, "Userdata"
-
     goto :goto_0
 
     :cond_6
     :try_start_e
     invoke-virtual {p0}, Lorg/keplerproject/luajava/LuaObject;->isTable()Z
-    :try_end_e
-    .catch Lorg/keplerproject/luajava/LuaException; {:try_start_e .. :try_end_e} :catch_0
-    .catchall {:try_start_e .. :try_end_e} :catchall_0
 
     move-result v2
 
     if-eqz v2, :cond_7
+
+    const-string v0, "Lua Table"
+    :try_end_e
+    .catch Lorg/keplerproject/luajava/LuaException; {:try_start_e .. :try_end_e} :catch_0
+    .catchall {:try_start_e .. :try_end_e} :catchall_0
 
     :try_start_f
     monitor-exit v1
     :try_end_f
     .catchall {:try_start_f .. :try_end_f} :catchall_0
 
-    const-string v0, "Lua Table"
-
     goto :goto_0
 
     :cond_7
     :try_start_10
     invoke-virtual {p0}, Lorg/keplerproject/luajava/LuaObject;->isJavaFunction()Z
-    :try_end_10
-    .catch Lorg/keplerproject/luajava/LuaException; {:try_start_10 .. :try_end_10} :catch_0
-    .catchall {:try_start_10 .. :try_end_10} :catchall_0
 
     move-result v2
 
     if-eqz v2, :cond_8
 
+    const-string v0, "Java Function"
+    :try_end_10
+    .catch Lorg/keplerproject/luajava/LuaException; {:try_start_10 .. :try_end_10} :catch_0
+    .catchall {:try_start_10 .. :try_end_10} :catchall_0
+
     :try_start_11
     monitor-exit v1
-    :try_end_11
-    .catchall {:try_start_11 .. :try_end_11} :catchall_0
-
-    const-string v0, "Java Function"
 
     goto :goto_0
 
     :cond_8
-    :try_start_12
     monitor-exit v1
 
     goto :goto_0
@@ -1643,8 +1657,8 @@
     move-exception v2
 
     monitor-exit v1
-    :try_end_12
-    .catchall {:try_start_12 .. :try_end_12} :catchall_0
+    :try_end_11
+    .catchall {:try_start_11 .. :try_end_11} :catchall_0
 
     goto :goto_0
 .end method

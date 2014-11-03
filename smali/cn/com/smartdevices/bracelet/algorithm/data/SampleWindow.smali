@@ -59,11 +59,8 @@
     :goto_0
     iget v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/SampleWindow;->Length:I
 
-    if-lt v1, v0, :cond_0
+    if-ge v1, v0, :cond_0
 
-    return-wide v2
-
-    :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/SampleWindow;->Samples:Ljava/util/ArrayList;
 
     iget v4, p0, Lcn/com/smartdevices/bracelet/algorithm/data/SampleWindow;->StartIndex:I
@@ -103,6 +100,9 @@
     move v1, v0
 
     goto :goto_0
+
+    :cond_0
+    return-wide v2
 .end method
 
 .method private a([D)I
@@ -161,48 +161,8 @@
 
     add-int/lit8 v1, v1, -0x1
 
-    if-lt v0, v1, :cond_0
+    if-ge v0, v1, :cond_0
 
-    array-length v0, v4
-
-    add-int/lit8 v0, v0, -0x1
-
-    new-array v1, v0, [D
-
-    const/4 v0, 0x0
-
-    :goto_1
-    array-length v2, p1
-
-    add-int/lit8 v2, v2, -0x1
-
-    if-lt v0, v2, :cond_1
-
-    new-instance v5, Ljava/util/ArrayList;
-
-    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
-
-    const/4 v0, 0x0
-
-    :goto_2
-    array-length v2, v1
-
-    add-int/lit8 v2, v2, -0x1
-
-    if-lt v0, v2, :cond_2
-
-    invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    if-gtz v0, :cond_4
-
-    const/4 v0, -0x1
-
-    :goto_3
-    return v0
-
-    :cond_0
     add-int/lit8 v1, v0, -0x1
 
     aget-wide v1, p1, v1
@@ -227,7 +187,22 @@
 
     goto :goto_0
 
-    :cond_1
+    :cond_0
+    array-length v0, v4
+
+    add-int/lit8 v0, v0, -0x1
+
+    new-array v1, v0, [D
+
+    const/4 v0, 0x0
+
+    :goto_1
+    array-length v2, p1
+
+    add-int/lit8 v2, v2, -0x1
+
+    if-ge v0, v2, :cond_1
+
     add-int/lit8 v2, v0, 0x1
 
     aget-wide v2, v4, v2
@@ -242,14 +217,27 @@
 
     goto :goto_1
 
-    :cond_2
+    :cond_1
+    new-instance v5, Ljava/util/ArrayList;
+
+    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
+
+    const/4 v0, 0x0
+
+    :goto_2
+    array-length v2, v1
+
+    add-int/lit8 v2, v2, -0x1
+
+    if-ge v0, v2, :cond_3
+
     aget-wide v2, v1, v0
 
     const-wide/16 v6, 0x0
 
     cmpl-double v2, v2, v6
 
-    if-ltz v2, :cond_3
+    if-ltz v2, :cond_2
 
     add-int/lit8 v2, v0, 0x1
 
@@ -259,7 +247,7 @@
 
     cmpg-double v2, v2, v6
 
-    if-gtz v2, :cond_3
+    if-gtz v2, :cond_2
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -267,10 +255,22 @@
 
     invoke-virtual {v5, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    :cond_3
+    :cond_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
+
+    :cond_3
+    invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-gtz v0, :cond_4
+
+    const/4 v0, -0x1
+
+    :goto_3
+    return v0
 
     :cond_4
     const-wide/16 v1, 0x0
@@ -288,32 +288,8 @@
 
     move-result v0
 
-    if-lt v1, v0, :cond_5
+    if-ge v1, v0, :cond_5
 
-    invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    int-to-double v0, v0
-
-    div-double/2addr v2, v0
-
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_5
-    invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    if-lt v1, v0, :cond_6
-
-    const/4 v0, -0x1
-
-    goto :goto_3
-
-    :cond_5
     invoke-virtual {v5, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -336,7 +312,26 @@
 
     goto :goto_4
 
-    :cond_6
+    :cond_5
+    invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    int-to-double v0, v0
+
+    div-double/2addr v2, v0
+
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    :goto_5
+    invoke-virtual {v5}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-ge v1, v0, :cond_7
+
     invoke-virtual {v5, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -353,7 +348,7 @@
 
     cmpl-double v0, v6, v2
 
-    if-ltz v0, :cond_7
+    if-ltz v0, :cond_6
 
     invoke-virtual {v5, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -367,14 +362,19 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    goto/16 :goto_3
+    goto :goto_3
 
-    :cond_7
+    :cond_6
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_5
+
+    :cond_7
+    const/4 v0, -0x1
+
+    goto :goto_3
 .end method
 
 
@@ -393,26 +393,8 @@
     :goto_0
     iget v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/SampleWindow;->Length:I
 
-    if-lt v1, v0, :cond_0
+    if-ge v1, v0, :cond_0
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/algorithm/FFT;->get_fft_amplide_array([Lcn/com/smartdevices/bracelet/algorithm/Complex;)[D
-
-    move-result-object v4
-
-    const-wide/high16 v2, -0x4010000000000000L
-
-    const/4 v1, -0x1
-
-    const/4 v0, 0x1
-
-    :goto_1
-    array-length v5, v4
-
-    if-lt v0, v5, :cond_1
-
-    return v1
-
-    :cond_0
     new-instance v3, Lcn/com/smartdevices/bracelet/algorithm/Complex;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/SampleWindow;->Samples:Ljava/util/ArrayList;
@@ -443,21 +425,39 @@
 
     goto :goto_0
 
-    :cond_1
+    :cond_0
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/algorithm/FFT;->get_fft_amplide_array([Lcn/com/smartdevices/bracelet/algorithm/Complex;)[D
+
+    move-result-object v4
+
+    const-wide/high16 v2, -0x4010000000000000L
+
+    const/4 v1, -0x1
+
+    const/4 v0, 0x1
+
+    :goto_1
+    array-length v5, v4
+
+    if-ge v0, v5, :cond_2
+
     aget-wide v5, v4, v0
 
     cmpg-double v5, v2, v5
 
-    if-gez v5, :cond_2
+    if-gez v5, :cond_1
 
     aget-wide v2, v4, v0
 
     move v1, v0
 
-    :cond_2
+    :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
+
+    :cond_2
+    return v1
 .end method
 
 .method public GetCycleByShift()I
@@ -497,19 +497,8 @@
     move v1, v2
 
     :goto_1
-    if-le v1, v3, :cond_2
+    if-gt v1, v3, :cond_2
 
-    invoke-direct {p0, v4}, Lcn/com/smartdevices/bracelet/algorithm/data/SampleWindow;->a([D)I
-
-    move-result v1
-
-    if-lez v1, :cond_0
-
-    add-int v0, v1, v2
-
-    goto :goto_0
-
-    :cond_2
     sub-int v5, v1, v2
 
     invoke-direct {p0, v1}, Lcn/com/smartdevices/bracelet/algorithm/data/SampleWindow;->a(I)D
@@ -521,4 +510,15 @@
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
+
+    :cond_2
+    invoke-direct {p0, v4}, Lcn/com/smartdevices/bracelet/algorithm/data/SampleWindow;->a([D)I
+
+    move-result v1
+
+    if-lez v1, :cond_0
+
+    add-int v0, v1, v2
+
+    goto :goto_0
 .end method

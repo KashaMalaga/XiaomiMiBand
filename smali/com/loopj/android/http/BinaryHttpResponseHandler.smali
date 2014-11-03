@@ -151,8 +151,61 @@
     move v3, v0
 
     :goto_1
-    if-lt v3, v7, :cond_1
+    if-ge v3, v7, :cond_2
 
+    aget-object v8, v6, v3
+
+    :try_start_0
+    invoke-interface {v5}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v8, v2}, Ljava/util/regex/Pattern;->matches(Ljava/lang/String;Ljava/lang/CharSequence;)Z
+    :try_end_0
+    .catch Ljava/util/regex/PatternSyntaxException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    move v0, v1
+
+    :cond_1
+    :goto_2
+    add-int/lit8 v2, v3, 0x1
+
+    move v3, v2
+
+    goto :goto_1
+
+    :catch_0
+    move-exception v2
+
+    const-string v9, "BinaryHttpResponseHandler"
+
+    new-instance v10, Ljava/lang/StringBuilder;
+
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v11, "Given pattern is not valid: "
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v10
+
+    invoke-virtual {v10, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v9, v8, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_2
+
+    :cond_2
     if-nez v0, :cond_3
 
     invoke-interface {v4}, Lorg/apache/http/StatusLine;->getStatusCode()I
@@ -176,55 +229,6 @@
     invoke-virtual {p0, v0, v1, v12, v2}, Lcom/loopj/android/http/BinaryHttpResponseHandler;->sendFailureMessage(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
 
     goto :goto_0
-
-    :cond_1
-    aget-object v8, v6, v3
-
-    :try_start_0
-    invoke-interface {v5}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v8, v2}, Ljava/util/regex/Pattern;->matches(Ljava/lang/String;Ljava/lang/CharSequence;)Z
-    :try_end_0
-    .catch Ljava/util/regex/PatternSyntaxException; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    move v0, v1
-
-    :cond_2
-    :goto_2
-    add-int/lit8 v2, v3, 0x1
-
-    move v3, v2
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v2
-
-    const-string v9, "BinaryHttpResponseHandler"
-
-    new-instance v10, Ljava/lang/StringBuilder;
-
-    const-string v11, "Given pattern is not valid: "
-
-    invoke-direct {v10, v11}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v10, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-static {v9, v8, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    goto :goto_2
 
     :cond_3
     invoke-super {p0, p1}, Lcom/loopj/android/http/AsyncHttpResponseHandler;->sendResponseMessage(Lorg/apache/http/HttpResponse;)V

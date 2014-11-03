@@ -162,8 +162,19 @@
 
     const/4 v3, -0x1
 
-    if-ne v2, v3, :cond_0
+    if-eq v2, v3, :cond_0
 
+    const/4 v3, 0x0
+
+    invoke-virtual {p1, v1, v3, v2}, Ljava/io/OutputStream;->write([BII)V
+
+    iget-object v3, p0, Lcom/loopj/android/http/B;->c:Lcom/loopj/android/http/A;
+
+    invoke-static {v3, v2}, Lcom/loopj/android/http/A;->a(Lcom/loopj/android/http/A;I)V
+
+    goto :goto_0
+
+    :cond_0
     invoke-static {}, Lcom/loopj/android/http/A;->b()[B
 
     move-result-object v1
@@ -185,15 +196,4 @@
     invoke-static {v0}, Lcom/loopj/android/http/AsyncHttpClient;->silentCloseInputStream(Ljava/io/InputStream;)V
 
     return-void
-
-    :cond_0
-    const/4 v3, 0x0
-
-    invoke-virtual {p1, v1, v3, v2}, Ljava/io/OutputStream;->write([BII)V
-
-    iget-object v3, p0, Lcom/loopj/android/http/B;->c:Lcom/loopj/android/http/A;
-
-    invoke-static {v3, v2}, Lcom/loopj/android/http/A;->a(Lcom/loopj/android/http/A;I)V
-
-    goto :goto_0
 .end method

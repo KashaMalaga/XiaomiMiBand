@@ -271,7 +271,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/t;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
-    const v1, 0x7f0c0078
+    const v1, 0x7f0d01f1
 
     invoke-static {v0, v1, v3}, Lcn/com/smartdevices/bracelet/view/CustomToast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -365,7 +365,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/t;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
-    const v1, 0x7f0c0076
+    const v1, 0x7f0d01f2
 
     invoke-static {v0, v1, v3}, Lcn/com/smartdevices/bracelet/view/CustomToast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -383,7 +383,7 @@
     :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/t;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
-    const v1, 0x7f0c0078
+    const v1, 0x7f0d01f1
 
     invoke-static {v0, v1, v3}, Lcn/com/smartdevices/bracelet/view/CustomToast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -433,7 +433,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/t;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
-    const v1, 0x7f0c0078
+    const v1, 0x7f0d01f1
 
     invoke-static {v0, v1, v3}, Lcn/com/smartdevices/bracelet/view/CustomToast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 

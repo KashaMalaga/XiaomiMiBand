@@ -2,30 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
-
-.field private final synthetic b:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
-
-.field private final synthetic c:Z
-
-.field private final synthetic d:Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ISensorDataChangedCB;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;ZLcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ISensorDataChangedCB;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/v;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
-
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/lab/ui/v;->b:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
-
-    iput-boolean p3, p0, Lcn/com/smartdevices/bracelet/lab/ui/v;->c:Z
-
-    iput-object p4, p0, Lcn/com/smartdevices/bracelet/lab/ui/v;->d:Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ISensorDataChangedCB;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/v;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -34,57 +22,46 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 4
+.method public onClick(Landroid/view/View;)V
+    .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/v;->b:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/v;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
-    iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/v;->c:Z
+    const/4 v1, 0x1
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/v;->d:Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ISensorDataChangedCB;
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->b(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;Z)Z
 
-    invoke-virtual {v0, v1, v2}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->enableGetSensorData(ZLcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ISensorDataChangedCB;)Z
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/v;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
-    move-result v0
-
-    const-string v1, "Lab"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "isSucceeded = "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->q(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;)Landroid/widget/TextView;
 
     move-result-object v0
 
-    const-string v2, "   enable = "
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setEnabled(Z)V
 
-    move-result-object v0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/v;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
-    iget-boolean v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/v;->c:Z
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->n(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;)Lcn/com/smartdevices/bracelet/lab/ui/A;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/ui/A;->a()V
 
-    move-result-object v0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/v;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v1, 0x2
 
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/v;->c:Z
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->f(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;I)V
 
-    if-eqz v0, :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/v;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/v;->b:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->r(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;)V
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->startParseSensorData()V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/v;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
-    :cond_0
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->finish()V
+
     return-void
 .end method

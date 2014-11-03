@@ -71,7 +71,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/v;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
-    const v1, 0x7f0c0079
+    const v1, 0x7f0d01f4
 
     const/4 v2, 0x0
 

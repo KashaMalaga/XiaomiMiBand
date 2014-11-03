@@ -46,12 +46,10 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/weather/WeatherManager;->mPrefs:Landroid/content/SharedPreferences;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/weather/RSACryptor;->genRSAKeySafe()V
-
     return-void
 .end method
 
-.method static synthetic access$0(Lcn/com/smartdevices/bracelet/weather/WeatherManager;)Landroid/content/Context;
+.method static synthetic access$000(Lcn/com/smartdevices/bracelet/weather/WeatherManager;)Landroid/content/Context;
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weather/WeatherManager;->mContext:Landroid/content/Context;
@@ -59,7 +57,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$1(Lcn/com/smartdevices/bracelet/weather/WeatherManager;Lcn/com/smartdevices/bracelet/location/Location;)V
+.method static synthetic access$100(Lcn/com/smartdevices/bracelet/weather/WeatherManager;Lcn/com/smartdevices/bracelet/location/Location;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/weather/WeatherManager;->readOrRequestCityCode(Lcn/com/smartdevices/bracelet/location/Location;)V
@@ -67,7 +65,7 @@
     return-void
 .end method
 
-.method static synthetic access$2(Lcn/com/smartdevices/bracelet/weather/WeatherManager;Ljava/lang/String;)V
+.method static synthetic access$200(Lcn/com/smartdevices/bracelet/weather/WeatherManager;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/weather/WeatherManager;->readOrRequestWeather(Ljava/lang/String;)V
@@ -75,7 +73,7 @@
     return-void
 .end method
 
-.method static synthetic access$3(Lcn/com/smartdevices/bracelet/weather/WeatherManager;)Lcn/com/smartdevices/bracelet/weather/WeatherListener;
+.method static synthetic access$300(Lcn/com/smartdevices/bracelet/weather/WeatherManager;)Lcn/com/smartdevices/bracelet/weather/WeatherListener;
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weather/WeatherManager;->mWeatherListener:Lcn/com/smartdevices/bracelet/weather/WeatherListener;
@@ -168,9 +166,13 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "Read Weather Time Offset Hours : "
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -265,7 +267,7 @@
 
 
 # virtual methods
-.method public cleanSavedWeatherInfo()V
+.method public clearLastWeatherInfo()V
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weather/WeatherManager;->mPrefs:Landroid/content/SharedPreferences;
@@ -304,9 +306,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "Read Last City Code : "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -346,9 +352,13 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "Read Last Weather : "
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -431,9 +441,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "Request City : "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -445,112 +459,63 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    const-string v0, "http://weatherapi.market.xiaomi.com/wtr-v2/city/positioning?longitude=%s&latitude=%s&source=mihealth"
+
+    const/4 v1, 0x2
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const/4 v2, 0x0
+
     invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/location/Location;->getLongitude()D
 
-    move-result-wide v0
+    move-result-wide v3
 
-    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(D)Ljava/lang/String;
+    invoke-static {v3, v4}, Ljava/lang/String;->valueOf(D)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v3
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/weather/RSACryptor;->encode(Ljava/lang/String;)Ljava/lang/String;
+    aput-object v3, v1, v2
 
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
+    const/4 v2, 0x1
 
     invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/location/Location;->getLatitude()D
 
-    move-result-wide v2
+    move-result-wide v3
 
-    invoke-static {v2, v3}, Ljava/lang/String;->valueOf(D)Ljava/lang/String;
+    invoke-static {v3, v4}, Ljava/lang/String;->valueOf(D)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v3
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/weather/RSACryptor;->encode(Ljava/lang/String;)Ljava/lang/String;
+    aput-object v3, v1, v2
 
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v2, "http://weatherapi.market.xiaomi.com/wtr-v2/city/positioning?longitude=%s&latitude=%s&source=mihealth"
-
-    const/4 v3, 0x2
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    const/4 v4, 0x0
-
-    aput-object v1, v3, v4
-
-    const/4 v4, 0x1
-
-    aput-object v0, v3, v4
-
-    invoke-static {v2, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/location/Location;->getLongitude()D
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ljava/lang/String;->valueOf(D)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v0, "&encoded=latitude,longitude"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    :cond_0
     invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/location/Location;->getAddress()Lcn/com/smartdevices/bracelet/location/Location$Address;
 
     move-result-object v1
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_3
 
     invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/location/Location$Address;->getCountryCode()Ljava/lang/String;
 
     move-result-object v2
 
-    if-eqz v2, :cond_5
+    if-eqz v2, :cond_4
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v2, "&countryCode="
 
-    const-string v0, "&countryCode="
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -575,19 +540,19 @@
 
     move-result v2
 
-    if-nez v2, :cond_1
+    if-nez v2, :cond_0
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v2, "&adminArea="
 
-    const-string v0, "&adminArea="
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -607,8 +572,49 @@
 
     move-result-object v0
 
-    :cond_1
+    :cond_0
     invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/location/Location$Address;->getLocality()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v2, "&locality="
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/location/Location$Address;->getLocality()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_1
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/location/Location$Address;->getSubLocality()Ljava/lang/String;
 
     move-result-object v2
 
@@ -620,19 +626,19 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v0, "&locality="
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/location/Location$Address;->getLocality()Ljava/lang/String;
+    const-string v2, "&subLocality="
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/location/Location$Address;->getSubLocality()Ljava/lang/String;
 
     move-result-object v2
 
@@ -649,7 +655,7 @@
     move-result-object v0
 
     :cond_2
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/location/Location$Address;->getSubLocality()Ljava/lang/String;
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/location/Location$Address;->getThoroughfare()Ljava/lang/String;
 
     move-result-object v2
 
@@ -661,56 +667,15 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v0, "&subLocality="
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/location/Location$Address;->getSubLocality()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
+    const-string v2, "&thoroughfare="
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    :cond_3
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/location/Location$Address;->getThoroughfare()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_4
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v0, "&thoroughfare="
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -730,7 +695,7 @@
 
     move-result-object v0
 
-    :cond_4
+    :cond_3
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/weather/WeatherManager;->mContext:Landroid/content/Context;
 
     const-string v2, "WeatherRequestCity"
@@ -747,18 +712,18 @@
 
     return-void
 
-    :cond_5
+    :cond_4
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v2, "&countryCode=CN"
 
-    const-string v0, "&countryCode=CN"
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -768,15 +733,15 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v2, "&language=zh_CN"
 
-    const-string v0, "&language=zh_CN"
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -800,7 +765,7 @@
 
     move-result-object v4
 
-    if-eqz v4, :cond_0
+    if-eqz v4, :cond_1
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -813,41 +778,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_1
 
-    :cond_0
-    const-string v0, "WeatherManager"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v4, "Request City Code : "
-
-    invoke-direct {v1, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    :goto_1
-    return-void
-
-    :cond_1
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -902,137 +834,124 @@
 
     move-result v1
 
-    if-ge v0, v1, :cond_2
+    if-ge v0, v1, :cond_0
 
     const-string v1, "|"
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_2
+    :cond_0
     move v1, v0
 
     goto :goto_0
 
-    :cond_3
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/weather/OriginalCityInfos$CityInfo;->getMetaData()Lcn/com/smartdevices/bracelet/weather/OriginalCityInfos$MetaData;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/weather/OriginalCityInfos$MetaData;->getX()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/weather/RSACryptor;->encode(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/weather/OriginalCityInfos$CityInfo;->getMetaData()Lcn/com/smartdevices/bracelet/weather/OriginalCityInfos$MetaData;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/weather/OriginalCityInfos$MetaData;->getY()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/weather/RSACryptor;->encode(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v4, "http://weatherapi.market.xiaomi.com/wtr-v2/city/datasource?cityNames=%s&longitude=%s&latitude=%s&phoneCode=%s&areaCode=%s&source=mihealth"
-
-    const/4 v5, 0x5
-
-    new-array v5, v5, [Ljava/lang/Object;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    const-string v7, ";,"
-
-    invoke-static {v6, v7}, Landroid/net/Uri;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v6
-
-    aput-object v6, v5, v2
-
-    const/4 v2, 0x1
-
-    aput-object v1, v5, v2
-
-    const/4 v2, 0x2
-
-    aput-object v0, v5, v2
-
-    const/4 v0, 0x3
-
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/weather/OriginalCityInfos$CityInfo;->getMetaData()Lcn/com/smartdevices/bracelet/weather/OriginalCityInfos$MetaData;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/weather/OriginalCityInfos$MetaData;->getPhoneCode()Ljava/lang/String;
-
-    move-result-object v2
-
-    aput-object v2, v5, v0
-
-    const/4 v0, 0x4
-
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/weather/OriginalCityInfos$CityInfo;->getMetaData()Lcn/com/smartdevices/bracelet/weather/OriginalCityInfos$MetaData;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/weather/OriginalCityInfos$MetaData;->getAreaCode()Ljava/lang/String;
-
-    move-result-object v2
-
-    aput-object v2, v5, v0
-
-    invoke-static {v4, v5}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/weather/OriginalCityInfos$CityInfo;->getMetaData()Lcn/com/smartdevices/bracelet/weather/OriginalCityInfos$MetaData;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/weather/OriginalCityInfos$MetaData;->getX()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
+    :cond_1
+    const-string v0, "WeatherManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Request City Code : "
+
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    const-string v0, "&encoded=latitude,longitude"
+    move-result v0
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_2
+
+    :goto_1
+    return-void
+
+    :cond_2
+    const-string v0, "http://weatherapi.market.xiaomi.com/wtr-v2/city/datasource?cityNames=%s&longitude=%s&latitude=%s&phoneCode=%s&areaCode=%s&source=mihealth"
+
+    const/4 v1, 0x5
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string v5, ";,"
+
+    invoke-static {v4, v5}, Landroid/net/Uri;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v1, v2
+
+    const/4 v2, 0x1
+
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/weather/OriginalCityInfos$CityInfo;->getMetaData()Lcn/com/smartdevices/bracelet/weather/OriginalCityInfos$MetaData;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/weather/OriginalCityInfos$MetaData;->getX()Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v1, v2
+
+    const/4 v2, 0x2
+
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/weather/OriginalCityInfos$CityInfo;->getMetaData()Lcn/com/smartdevices/bracelet/weather/OriginalCityInfos$MetaData;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/weather/OriginalCityInfos$MetaData;->getY()Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v1, v2
+
+    const/4 v2, 0x3
+
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/weather/OriginalCityInfos$CityInfo;->getMetaData()Lcn/com/smartdevices/bracelet/weather/OriginalCityInfos$MetaData;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/weather/OriginalCityInfos$MetaData;->getPhoneCode()Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v1, v2
+
+    const/4 v2, 0x4
+
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/weather/OriginalCityInfos$CityInfo;->getMetaData()Lcn/com/smartdevices/bracelet/weather/OriginalCityInfos$MetaData;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/weather/OriginalCityInfos$MetaData;->getAreaCode()Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v1, v2
+
+    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    :cond_4
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/weather/WeatherManager;->mContext:Landroid/content/Context;
 
     const-string v2, "WeatherRequestCityCode"
@@ -1051,7 +970,7 @@
 
     invoke-virtual {v2, v0, v3}, Lcom/loopj/android/http/AsyncHttpClient;->get(Ljava/lang/String;Lcom/loopj/android/http/ResponseHandlerInterface;)Lcom/loopj/android/http/RequestHandle;
 
-    goto/16 :goto_1
+    goto :goto_1
 .end method
 
 .method public requestWeather(Ljava/lang/String;)V
@@ -1095,9 +1014,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "Save Last City Code : "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1147,9 +1070,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "Save Last Weather : "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

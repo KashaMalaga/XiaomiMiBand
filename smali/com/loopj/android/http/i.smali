@@ -290,7 +290,7 @@
 .end method
 
 .method public a([BIIZ)Z
-    .locals 11
+    .locals 10
 
     iget-object v6, p0, Lcom/loopj/android/http/i;->l:[B
 
@@ -314,7 +314,7 @@
     :goto_0
     const/4 v4, -0x1
 
-    if-eq v2, v4, :cond_14
+    if-eq v2, v4, :cond_12
 
     const/4 v4, 0x1
 
@@ -356,11 +356,11 @@
 
     add-int/lit8 v0, v0, -0x1
 
-    if-nez v0, :cond_14
+    if-nez v0, :cond_12
 
     iget-boolean v0, p0, Lcom/loopj/android/http/i;->g:Z
 
-    if-eqz v0, :cond_15
+    if-eqz v0, :cond_13
 
     const/4 v0, 0x5
 
@@ -384,117 +384,100 @@
     :goto_2
     add-int/lit8 v0, v3, 0x3
 
-    if-le v0, v8, :cond_5
+    if-gt v0, v8, :cond_1
 
-    if-eqz p4, :cond_c
+    aget-byte v0, p1, v3
 
-    iget v0, p0, Lcom/loopj/android/http/i;->d:I
-
-    sub-int v0, v3, v0
-
-    add-int/lit8 v1, v8, -0x1
-
-    if-ne v0, v1, :cond_7
-
-    const/4 v2, 0x0
-
-    iget v0, p0, Lcom/loopj/android/http/i;->d:I
-
-    if-lez v0, :cond_6
-
-    iget-object v0, p0, Lcom/loopj/android/http/i;->j:[B
-
-    const/4 v1, 0x1
-
-    aget-byte v0, v0, v2
-
-    move v2, v3
-
-    :goto_3
     and-int/lit16 v0, v0, 0xff
 
-    shl-int/lit8 v3, v0, 0x4
+    shl-int/lit8 v0, v0, 0x10
 
-    iget v0, p0, Lcom/loopj/android/http/i;->d:I
+    add-int/lit8 v1, v3, 0x1
 
-    sub-int/2addr v0, v1
+    aget-byte v1, p1, v1
 
-    iput v0, p0, Lcom/loopj/android/http/i;->d:I
+    and-int/lit16 v1, v1, 0xff
+
+    shl-int/lit8 v1, v1, 0x8
+
+    or-int/2addr v0, v1
+
+    add-int/lit8 v1, v3, 0x2
+
+    aget-byte v1, p1, v1
+
+    and-int/lit16 v1, v1, 0xff
+
+    or-int/2addr v0, v1
+
+    shr-int/lit8 v1, v0, 0x12
+
+    and-int/lit8 v1, v1, 0x3f
+
+    aget-byte v1, v6, v1
+
+    aput-byte v1, v7, v4
 
     add-int/lit8 v1, v4, 0x1
 
-    shr-int/lit8 v0, v3, 0x6
+    shr-int/lit8 v2, v0, 0xc
+
+    and-int/lit8 v2, v2, 0x3f
+
+    aget-byte v2, v6, v2
+
+    aput-byte v2, v7, v1
+
+    add-int/lit8 v1, v4, 0x2
+
+    shr-int/lit8 v2, v0, 0x6
+
+    and-int/lit8 v2, v2, 0x3f
+
+    aget-byte v2, v6, v2
+
+    aput-byte v2, v7, v1
+
+    add-int/lit8 v1, v4, 0x3
 
     and-int/lit8 v0, v0, 0x3f
 
     aget-byte v0, v6, v0
 
-    aput-byte v0, v7, v4
+    aput-byte v0, v7, v1
+
+    add-int/lit8 v3, v3, 0x3
+
+    add-int/lit8 v1, v4, 0x4
+
+    add-int/lit8 v0, v5, -0x1
+
+    if-nez v0, :cond_12
+
+    iget-boolean v0, p0, Lcom/loopj/android/http/i;->g:Z
+
+    if-eqz v0, :cond_11
 
     add-int/lit8 v0, v1, 0x1
 
-    and-int/lit8 v3, v3, 0x3f
+    const/16 v2, 0xd
 
-    aget-byte v3, v6, v3
+    aput-byte v2, v7, v1
 
-    aput-byte v3, v7, v1
-
-    iget-boolean v1, p0, Lcom/loopj/android/http/i;->e:Z
-
-    if-eqz v1, :cond_1
-
+    :goto_3
     add-int/lit8 v1, v0, 0x1
 
-    const/16 v3, 0x3d
+    const/16 v2, 0xa
 
-    aput-byte v3, v7, v0
+    aput-byte v2, v7, v0
 
-    add-int/lit8 v0, v1, 0x1
+    const/16 v0, 0x13
 
-    const/16 v3, 0x3d
+    move v5, v0
 
-    aput-byte v3, v7, v1
+    move v4, v1
 
-    :cond_1
-    iget-boolean v1, p0, Lcom/loopj/android/http/i;->f:Z
-
-    if-eqz v1, :cond_12
-
-    iget-boolean v1, p0, Lcom/loopj/android/http/i;->g:Z
-
-    if-eqz v1, :cond_2
-
-    add-int/lit8 v1, v0, 0x1
-
-    const/16 v3, 0xd
-
-    aput-byte v3, v7, v0
-
-    move v0, v1
-
-    :cond_2
-    add-int/lit8 v4, v0, 0x1
-
-    const/16 v1, 0xa
-
-    aput-byte v1, v7, v0
-
-    move v3, v2
-
-    :cond_3
-    :goto_4
-    iget v0, p0, Lcom/loopj/android/http/i;->d:I
-
-    if-nez v0, :cond_4
-
-    if-eq v3, v8, :cond_d
-
-    :cond_4
-    new-instance v0, Ljava/lang/AssertionError;
-
-    invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
-
-    throw v0
+    goto :goto_2
 
     :pswitch_0
     move v3, p2
@@ -583,112 +566,121 @@
 
     goto/16 :goto_0
 
-    :cond_5
-    aget-byte v0, p1, v3
+    :cond_1
+    if-eqz p4, :cond_d
 
+    iget v0, p0, Lcom/loopj/android/http/i;->d:I
+
+    sub-int v0, v3, v0
+
+    add-int/lit8 v1, v8, -0x1
+
+    if-ne v0, v1, :cond_7
+
+    const/4 v2, 0x0
+
+    iget v0, p0, Lcom/loopj/android/http/i;->d:I
+
+    if-lez v0, :cond_6
+
+    iget-object v0, p0, Lcom/loopj/android/http/i;->j:[B
+
+    const/4 v1, 0x1
+
+    aget-byte v0, v0, v2
+
+    :goto_4
     and-int/lit16 v0, v0, 0xff
 
-    shl-int/lit8 v0, v0, 0x10
+    shl-int/lit8 v2, v0, 0x4
 
-    add-int/lit8 v1, v3, 0x1
+    iget v0, p0, Lcom/loopj/android/http/i;->d:I
 
-    aget-byte v1, p1, v1
+    sub-int/2addr v0, v1
 
-    and-int/lit16 v1, v1, 0xff
-
-    shl-int/lit8 v1, v1, 0x8
-
-    or-int/2addr v0, v1
-
-    add-int/lit8 v1, v3, 0x2
-
-    aget-byte v1, p1, v1
-
-    and-int/lit16 v1, v1, 0xff
-
-    or-int/2addr v0, v1
-
-    shr-int/lit8 v1, v0, 0x12
-
-    and-int/lit8 v1, v1, 0x3f
-
-    aget-byte v1, v6, v1
-
-    aput-byte v1, v7, v4
+    iput v0, p0, Lcom/loopj/android/http/i;->d:I
 
     add-int/lit8 v1, v4, 0x1
 
-    shr-int/lit8 v2, v0, 0xc
-
-    and-int/lit8 v2, v2, 0x3f
-
-    aget-byte v2, v6, v2
-
-    aput-byte v2, v7, v1
-
-    add-int/lit8 v1, v4, 0x2
-
-    shr-int/lit8 v2, v0, 0x6
-
-    and-int/lit8 v2, v2, 0x3f
-
-    aget-byte v2, v6, v2
-
-    aput-byte v2, v7, v1
-
-    add-int/lit8 v1, v4, 0x3
+    shr-int/lit8 v0, v2, 0x6
 
     and-int/lit8 v0, v0, 0x3f
 
     aget-byte v0, v6, v0
 
-    aput-byte v0, v7, v1
-
-    add-int/lit8 v3, v3, 0x3
-
-    add-int/lit8 v1, v4, 0x4
-
-    add-int/lit8 v0, v5, -0x1
-
-    if-nez v0, :cond_14
-
-    iget-boolean v0, p0, Lcom/loopj/android/http/i;->g:Z
-
-    if-eqz v0, :cond_13
+    aput-byte v0, v7, v4
 
     add-int/lit8 v0, v1, 0x1
 
-    const/16 v2, 0xd
+    and-int/lit8 v2, v2, 0x3f
+
+    aget-byte v2, v6, v2
 
     aput-byte v2, v7, v1
 
-    :goto_5
+    iget-boolean v1, p0, Lcom/loopj/android/http/i;->e:Z
+
+    if-eqz v1, :cond_2
+
+    add-int/lit8 v1, v0, 0x1
+
+    const/16 v2, 0x3d
+
+    aput-byte v2, v7, v0
+
+    add-int/lit8 v0, v1, 0x1
+
+    const/16 v2, 0x3d
+
+    aput-byte v2, v7, v1
+
+    :cond_2
+    iget-boolean v1, p0, Lcom/loopj/android/http/i;->f:Z
+
+    if-eqz v1, :cond_4
+
+    iget-boolean v1, p0, Lcom/loopj/android/http/i;->g:Z
+
+    if-eqz v1, :cond_3
+
+    add-int/lit8 v1, v0, 0x1
+
+    const/16 v2, 0xd
+
+    aput-byte v2, v7, v0
+
+    move v0, v1
+
+    :cond_3
     add-int/lit8 v1, v0, 0x1
 
     const/16 v2, 0xa
 
     aput-byte v2, v7, v0
 
-    const/16 v0, 0x13
+    move v0, v1
 
-    move v5, v0
+    :cond_4
+    move v4, v0
 
-    move v4, v1
+    :cond_5
+    :goto_5
+    iput v4, p0, Lcom/loopj/android/http/i;->b:I
 
-    goto/16 :goto_2
+    iput v5, p0, Lcom/loopj/android/http/i;->k:I
+
+    const/4 v0, 0x1
+
+    return v0
 
     :cond_6
-    add-int/lit8 v1, v3, 0x1
+    add-int/lit8 v0, v3, 0x1
 
     aget-byte v0, p1, v3
 
-    move v10, v2
+    move v1, v2
 
-    move v2, v1
-
-    move v1, v10
-
-    goto/16 :goto_3
+    goto :goto_4
 
     :cond_7
     iget v0, p0, Lcom/loopj/android/http/i;->d:I
@@ -697,7 +689,7 @@
 
     add-int/lit8 v1, v8, -0x2
 
-    if-ne v0, v1, :cond_b
+    if-ne v0, v1, :cond_c
 
     const/4 v2, 0x0
 
@@ -705,7 +697,7 @@
 
     const/4 v1, 0x1
 
-    if-le v0, v1, :cond_9
+    if-le v0, v1, :cond_a
 
     iget-object v0, p0, Lcom/loopj/android/http/i;->j:[B
 
@@ -713,14 +705,16 @@
 
     aget-byte v0, v0, v2
 
+    move v2, v3
+
     :goto_6
     and-int/lit16 v0, v0, 0xff
 
-    shl-int/lit8 v9, v0, 0xa
+    shl-int/lit8 v3, v0, 0xa
 
     iget v0, p0, Lcom/loopj/android/http/i;->d:I
 
-    if-lez v0, :cond_a
+    if-lez v0, :cond_b
 
     iget-object v0, p0, Lcom/loopj/android/http/i;->j:[B
 
@@ -735,7 +729,7 @@
 
     shl-int/lit8 v0, v0, 0x2
 
-    or-int/2addr v0, v9
+    or-int/2addr v0, v3
 
     iget v2, p0, Lcom/loopj/android/http/i;->d:I
 
@@ -755,13 +749,13 @@
 
     add-int/lit8 v2, v1, 0x1
 
-    shr-int/lit8 v4, v0, 0x6
+    shr-int/lit8 v3, v0, 0x6
 
-    and-int/lit8 v4, v4, 0x3f
+    and-int/lit8 v3, v3, 0x3f
 
-    aget-byte v4, v6, v4
+    aget-byte v3, v6, v3
 
-    aput-byte v4, v7, v1
+    aput-byte v3, v7, v1
 
     add-int/lit8 v1, v2, 0x1
 
@@ -773,7 +767,7 @@
 
     iget-boolean v0, p0, Lcom/loopj/android/http/i;->e:Z
 
-    if-eqz v0, :cond_11
+    if-eqz v0, :cond_10
 
     add-int/lit8 v0, v1, 0x1
 
@@ -784,7 +778,7 @@
     :goto_8
     iget-boolean v1, p0, Lcom/loopj/android/http/i;->f:Z
 
-    if-eqz v1, :cond_10
+    if-eqz v1, :cond_9
 
     iget-boolean v1, p0, Lcom/loopj/android/http/i;->g:Z
 
@@ -799,44 +793,49 @@
     move v0, v1
 
     :cond_8
-    add-int/lit8 v4, v0, 0x1
+    add-int/lit8 v1, v0, 0x1
 
-    const/16 v1, 0xa
+    const/16 v2, 0xa
 
-    aput-byte v1, v7, v0
+    aput-byte v2, v7, v0
 
-    goto/16 :goto_4
+    move v0, v1
 
     :cond_9
+    move v4, v0
+
+    goto :goto_5
+
+    :cond_a
     add-int/lit8 v1, v3, 0x1
 
     aget-byte v0, p1, v3
 
-    move v3, v1
+    move v9, v2
 
-    move v1, v2
+    move v2, v1
+
+    move v1, v9
 
     goto :goto_6
 
-    :cond_a
-    add-int/lit8 v2, v3, 0x1
+    :cond_b
+    add-int/lit8 v0, v2, 0x1
 
-    aget-byte v0, p1, v3
-
-    move v3, v2
+    aget-byte v0, p1, v2
 
     goto :goto_7
 
-    :cond_b
+    :cond_c
     iget-boolean v0, p0, Lcom/loopj/android/http/i;->f:Z
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_5
 
-    if-lez v4, :cond_3
+    if-lez v4, :cond_5
 
     const/16 v0, 0x13
 
-    if-eq v5, v0, :cond_3
+    if-eq v5, v0, :cond_5
 
     iget-boolean v0, p0, Lcom/loopj/android/http/i;->g:Z
 
@@ -855,9 +854,9 @@
 
     aput-byte v1, v7, v0
 
-    goto/16 :goto_4
+    goto/16 :goto_5
 
-    :cond_c
+    :cond_d
     add-int/lit8 v0, v8, -0x1
 
     if-ne v3, v0, :cond_e
@@ -874,20 +873,12 @@
 
     aput-byte v2, v0, v1
 
-    :cond_d
-    :goto_a
-    iput v4, p0, Lcom/loopj/android/http/i;->b:I
-
-    iput v5, p0, Lcom/loopj/android/http/i;->k:I
-
-    const/4 v0, 0x1
-
-    return v0
+    goto/16 :goto_5
 
     :cond_e
     add-int/lit8 v0, v8, -0x2
 
-    if-ne v3, v0, :cond_d
+    if-ne v3, v0, :cond_5
 
     iget-object v0, p0, Lcom/loopj/android/http/i;->j:[B
 
@@ -915,7 +906,7 @@
 
     aput-byte v2, v0, v1
 
-    goto :goto_a
+    goto/16 :goto_5
 
     :cond_f
     move v0, v4
@@ -923,35 +914,23 @@
     goto :goto_9
 
     :cond_10
-    move v4, v0
-
-    goto/16 :goto_4
-
-    :cond_11
     move v0, v1
 
     goto :goto_8
 
-    :cond_12
-    move v3, v2
-
-    move v4, v0
-
-    goto/16 :goto_4
-
-    :cond_13
+    :cond_11
     move v0, v1
 
-    goto/16 :goto_5
+    goto/16 :goto_3
 
-    :cond_14
+    :cond_12
     move v5, v0
 
     move v4, v1
 
     goto/16 :goto_2
 
-    :cond_15
+    :cond_13
     move v0, v1
 
     goto/16 :goto_1

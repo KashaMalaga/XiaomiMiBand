@@ -24,9 +24,7 @@
 
 .field public static final enum TOP:Lcom/edmodo/cropper/cropwindow/edge/Edge;
 
-.field private static synthetic b:[I
-
-.field private static final synthetic c:[Lcom/edmodo/cropper/cropwindow/edge/Edge;
+.field private static final synthetic b:[Lcom/edmodo/cropper/cropwindow/edge/Edge;
 
 
 # instance fields
@@ -97,13 +95,18 @@
 
     aput-object v1, v0, v5
 
-    sput-object v0, Lcom/edmodo/cropper/cropwindow/edge/Edge;->c:[Lcom/edmodo/cropper/cropwindow/edge/Edge;
+    sput-object v0, Lcom/edmodo/cropper/cropwindow/edge/Edge;->b:[Lcom/edmodo/cropper/cropwindow/edge/Edge;
 
     return-void
 .end method
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
@@ -230,117 +233,18 @@
 
     cmpl-float v0, p4, v0
 
-    if-gtz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
+    if-lez v0, :cond_1
 
     :cond_0
     const/4 v0, 0x1
 
-    goto :goto_0
-.end method
-
-.method static synthetic a()[I
-    .locals 3
-
-    sget-object v0, Lcom/edmodo/cropper/cropwindow/edge/Edge;->b:[I
-
-    if-eqz v0, :cond_0
-
     :goto_0
-    return-object v0
+    return v0
 
-    :cond_0
-    invoke-static {}, Lcom/edmodo/cropper/cropwindow/edge/Edge;->values()[Lcom/edmodo/cropper/cropwindow/edge/Edge;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    :try_start_0
-    sget-object v1, Lcom/edmodo/cropper/cropwindow/edge/Edge;->BOTTOM:Lcom/edmodo/cropper/cropwindow/edge/Edge;
-
-    invoke-virtual {v1}, Lcom/edmodo/cropper/cropwindow/edge/Edge;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_3
-
-    :goto_1
-    :try_start_1
-    sget-object v1, Lcom/edmodo/cropper/cropwindow/edge/Edge;->LEFT:Lcom/edmodo/cropper/cropwindow/edge/Edge;
-
-    invoke-virtual {v1}, Lcom/edmodo/cropper/cropwindow/edge/Edge;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_2
-
-    :goto_2
-    :try_start_2
-    sget-object v1, Lcom/edmodo/cropper/cropwindow/edge/Edge;->RIGHT:Lcom/edmodo/cropper/cropwindow/edge/Edge;
-
-    invoke-virtual {v1}, Lcom/edmodo/cropper/cropwindow/edge/Edge;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_1
-
-    :goto_3
-    :try_start_3
-    sget-object v1, Lcom/edmodo/cropper/cropwindow/edge/Edge;->TOP:Lcom/edmodo/cropper/cropwindow/edge/Edge;
-
-    invoke-virtual {v1}, Lcom/edmodo/cropper/cropwindow/edge/Edge;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_0
-
-    :goto_4
-    sput-object v0, Lcom/edmodo/cropper/cropwindow/edge/Edge;->b:[I
+    :cond_1
+    const/4 v0, 0x0
 
     goto :goto_0
-
-    :catch_0
-    move-exception v1
-
-    goto :goto_4
-
-    :catch_1
-    move-exception v1
-
-    goto :goto_3
-
-    :catch_2
-    move-exception v1
-
-    goto :goto_2
-
-    :catch_3
-    move-exception v1
-
-    goto :goto_1
 .end method
 
 .method private static b(FLandroid/graphics/Rect;FF)F
@@ -659,19 +563,17 @@
 .end method
 
 .method public static values()[Lcom/edmodo/cropper/cropwindow/edge/Edge;
-    .locals 4
+    .locals 1
 
-    const/4 v3, 0x0
+    sget-object v0, Lcom/edmodo/cropper/cropwindow/edge/Edge;->b:[Lcom/edmodo/cropper/cropwindow/edge/Edge;
 
-    sget-object v0, Lcom/edmodo/cropper/cropwindow/edge/Edge;->c:[Lcom/edmodo/cropper/cropwindow/edge/Edge;
+    invoke-virtual {v0}, [Lcom/edmodo/cropper/cropwindow/edge/Edge;->clone()Ljava/lang/Object;
 
-    array-length v1, v0
+    move-result-object v0
 
-    new-array v2, v1, [Lcom/edmodo/cropper/cropwindow/edge/Edge;
+    check-cast v0, [Lcom/edmodo/cropper/cropwindow/edge/Edge;
 
-    invoke-static {v0, v3, v2, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    return-object v2
+    return-object v0
 .end method
 
 
@@ -703,9 +605,7 @@
 
     move-result v3
 
-    invoke-static {}, Lcom/edmodo/cropper/cropwindow/edge/Edge;->a()[I
-
-    move-result-object v4
+    sget-object v4, Lcom/edmodo/cropper/cropwindow/edge/a;->a:[I
 
     invoke-virtual {p0}, Lcom/edmodo/cropper/cropwindow/edge/Edge;->ordinal()I
 
@@ -766,9 +666,7 @@
 .method public adjustCoordinate(FFLandroid/graphics/Rect;FF)V
     .locals 2
 
-    invoke-static {}, Lcom/edmodo/cropper/cropwindow/edge/Edge;->a()[I
-
-    move-result-object v0
+    sget-object v0, Lcom/edmodo/cropper/cropwindow/edge/a;->a:[I
 
     invoke-virtual {p0}, Lcom/edmodo/cropper/cropwindow/edge/Edge;->ordinal()I
 
@@ -841,9 +739,7 @@
 
     move-result v0
 
-    invoke-static {}, Lcom/edmodo/cropper/cropwindow/edge/Edge;->a()[I
-
-    move-result-object v1
+    sget-object v1, Lcom/edmodo/cropper/cropwindow/edge/a;->a:[I
 
     invoke-virtual {p0}, Lcom/edmodo/cropper/cropwindow/edge/Edge;->ordinal()I
 
@@ -1205,9 +1101,7 @@
 
     const-wide/16 v2, 0x0
 
-    invoke-static {}, Lcom/edmodo/cropper/cropwindow/edge/Edge;->a()[I
-
-    move-result-object v4
+    sget-object v4, Lcom/edmodo/cropper/cropwindow/edge/a;->a:[I
 
     invoke-virtual {p0}, Lcom/edmodo/cropper/cropwindow/edge/Edge;->ordinal()I
 
@@ -1317,9 +1211,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {}, Lcom/edmodo/cropper/cropwindow/edge/Edge;->a()[I
-
-    move-result-object v2
+    sget-object v2, Lcom/edmodo/cropper/cropwindow/edge/a;->a:[I
 
     invoke-virtual {p0}, Lcom/edmodo/cropper/cropwindow/edge/Edge;->ordinal()I
 
@@ -1439,9 +1331,7 @@
 
     iget v1, p0, Lcom/edmodo/cropper/cropwindow/edge/Edge;->a:F
 
-    invoke-static {}, Lcom/edmodo/cropper/cropwindow/edge/Edge;->a()[I
-
-    move-result-object v0
+    sget-object v0, Lcom/edmodo/cropper/cropwindow/edge/a;->a:[I
 
     invoke-virtual {p0}, Lcom/edmodo/cropper/cropwindow/edge/Edge;->ordinal()I
 
@@ -1500,9 +1390,7 @@
 
     iget v0, p0, Lcom/edmodo/cropper/cropwindow/edge/Edge;->a:F
 
-    invoke-static {}, Lcom/edmodo/cropper/cropwindow/edge/Edge;->a()[I
-
-    move-result-object v1
+    sget-object v1, Lcom/edmodo/cropper/cropwindow/edge/a;->a:[I
 
     invoke-virtual {p0}, Lcom/edmodo/cropper/cropwindow/edge/Edge;->ordinal()I
 
@@ -1569,9 +1457,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {}, Lcom/edmodo/cropper/cropwindow/edge/Edge;->a()[I
-
-    move-result-object v0
+    sget-object v0, Lcom/edmodo/cropper/cropwindow/edge/a;->a:[I
 
     invoke-virtual {p0}, Lcom/edmodo/cropper/cropwindow/edge/Edge;->ordinal()I
 

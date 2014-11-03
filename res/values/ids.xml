@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item type="id" name="gridview" />
-    <item type="id" name="webview" />
     <item type="id" name="scrollview" />
+    <item type="id" name="webview" />
     <item type="id" name="home_back">false</item>
     <item type="id" name="bind_weixin_new_img_ll">false</item>
     <item type="id" name="bind_weixin_new_help_iv">false</item>
@@ -10,12 +10,12 @@
     <item type="id" name="bind_weixin_new_tips_tv">false</item>
     <item type="id" name="start_bind">false</item>
     <item type="id" name="binded_qq_nickname">false</item>
+    <item type="id" name="mask_view">false</item>
     <item type="id" name="bind_weixin_help_iv">false</item>
     <item type="id" name="bind_weixin_tips_tv_0">false</item>
     <item type="id" name="bind_weixin_tips_tv_1">false</item>
     <item type="id" name="start_weixin_btn">false</item>
     <item type="id" name="gen_qr_code_btn">false</item>
-    <item type="id" name="mask_view">false</item>
     <item type="id" name="fw_help_screen_home_back">false</item>
     <item type="id" name="fw_low_battery_help_tv">false</item>
     <item type="id" name="fw_low_battery_confirm_btn">false</item>
@@ -25,8 +25,8 @@
     <item type="id" name="tip_bg">false</item>
     <item type="id" name="tip">false</item>
     <item type="id" name="gif_view">false</item>
-    <item type="id" name="lab_list_item_sport_name">false</item>
     <item type="id" name="lab_list_item_group_name">false</item>
+    <item type="id" name="lab_list_item_sport_name">false</item>
     <item type="id" name="title_back">false</item>
     <item type="id" name="lab_factory_list">false</item>
     <item type="id" name="lab_sport_favorite_desc">false</item>
@@ -63,7 +63,6 @@
     <item type="id" name="test_button">false</item>
     <item type="id" name="test_button2">false</item>
     <item type="id" name="test_bluepackage_button">false</item>
-    <item type="id" name="correct_number_button">false</item>
     <item type="id" name="group_item_linker">false</item>
     <item type="id" name="group_item_member">false</item>
     <item type="id" name="share_content_ll">false</item>
@@ -84,9 +83,9 @@
     <item type="id" name="action_bar">false</item>
     <item type="id" name="back_btn">false</item>
     <item type="id" name="share">false</item>
-    <item type="id" name="sport_input_desc">false</item>
-    <item type="id" name="favorite_user_sport_name">false</item>
-    <item type="id" name="confirm">false</item>
+    <item type="id" name="share_info_history_betst_record_value">false</item>
+    <item type="id" name="share_info_group_record_value">false</item>
+    <item type="id" name="share_info_accumulated_time_value">false</item>
     <item type="id" name="bracelet_login_title">false</item>
     <item type="id" name="bracelet_login_webview">false</item>
     <item type="id" name="bracelet_login_title_info">false</item>
@@ -95,6 +94,7 @@
     <item type="id" name="bracelet_login_info">false</item>
     <item type="id" name="mi_register_btn">false</item>
     <item type="id" name="cancel">false</item>
+    <item type="id" name="confirm">false</item>
     <item type="id" name="new_alarm_small_titile_0">false</item>
     <item type="id" name="new_alarm_smart_splict_0">false</item>
     <item type="id" name="new_alarm_smart_wakeup_area">false</item>
@@ -131,7 +131,6 @@
     <item type="id" name="search_devices_not_response">false</item>
     <item type="id" name="search_single_device_list_area">false</item>
     <item type="id" name="device_list_lv">false</item>
-    <item type="id" name="listview">false</item>
     <item type="id" name="share_main_content_hour_unit">false</item>
     <item type="id" name="share_time">false</item>
     <item type="id" name="share_time_tips">false</item>
@@ -146,6 +145,7 @@
     <item type="id" name="share_to_qq_btn">false</item>
     <item type="id" name="share_to_line_btn">false</item>
     <item type="id" name="share_to_facebook_btn">false</item>
+    <item type="id" name="slideMenu">false</item>
     <item type="id" name="unlock_screen_header_fl">false</item>
     <item type="id" name="unlock_screen_home_back">false</item>
     <item type="id" name="unlock_screen_tips_tv">false</item>
@@ -182,13 +182,13 @@
     <item type="id" name="bottom_bar_frame_split">false</item>
     <item type="id" name="right_button">false</item>
     <item type="id" name="dlg_empty_area_btn">false</item>
+    <item type="id" name="favorite_user_sport_name">false</item>
     <item type="id" name="txtMsg">false</item>
     <item type="id" name="btn1">false</item>
     <item type="id" name="btn2">false</item>
-    <item type="id" name="useragreement_info">false</item>
+    <item type="id" name="day_active_chart">false</item>
     <item type="id" name="dynamic_view">false</item>
     <item type="id" name="header_sync_tip">false</item>
-    <item type="id" name="day_active_chart">false</item>
     <item type="id" name="sleep_unwear_tip">false</item>
     <item type="id" name="info_step_piece_layout">false</item>
     <item type="id" name="mode_switch">false</item>
@@ -239,7 +239,6 @@
     <item type="id" name="dynamic_header">false</item>
     <item type="id" name="header_nav_left">false</item>
     <item type="id" name="header_nav_right">false</item>
-    <item type="id" name="header_nav_right_new_sign">false</item>
     <item type="id" name="dynamic_subtitle">false</item>
     <item type="id" name="dynamic_lv">false</item>
     <item type="id" name="title">false</item>
@@ -353,9 +352,14 @@
     <item type="id" name="info_step_run_duration_average">false</item>
     <item type="id" name="info_step_run_calories_average">false</item>
     <item type="id" name="info_step_run_calories_average_unit">false</item>
+    <item type="id" name="pager">false</item>
+    <item type="id" name="tab_host">false</item>
+    <item type="id" name="tab_host_item_1">false</item>
+    <item type="id" name="tab_host_item_2">false</item>
+    <item type="id" name="tab_host_item_3">false</item>
+    <item type="id" name="useragreement_info">false</item>
     <item type="id" name="help_back_txt">false</item>
     <item type="id" name="sport_progresscircle_view">false</item>
-    <item type="id" name="bracelet_offline">false</item>
     <item type="id" name="circle_view_sport_progress_state">false</item>
     <item type="id" name="lua_list_item_icon">false</item>
     <item type="id" name="linearLayout1">false</item>
@@ -506,7 +510,6 @@
     <item type="id" name="menu_person_info">false</item>
     <item type="id" name="v3">false</item>
     <item type="id" name="menu_lab_factory">false</item>
-    <item type="id" name="menu_lab_factory_new_sign">false</item>
     <item type="id" name="v5">false</item>
     <item type="id" name="menu_item_unlock_screen_ll">false</item>
     <item type="id" name="menu_unlock_screen">false</item>
@@ -518,7 +521,6 @@
     <item type="id" name="select_marker">false</item>
     <item type="id" name="week_tv">false</item>
     <item type="id" name="day_repeat_select_mark">false</item>
-    <item type="id" name="time">false</item>
     <item type="id" name="content_txt">false</item>
     <item type="id" name="action_settings">false</item>
     <item type="id" name="action_pop_my_bracelet">false</item>

@@ -176,18 +176,6 @@
     return-object p1
 .end method
 
-.method private a()V
-    .locals 1
-
-    new-instance v0, Lcom/tencent/weiyun/c;
-
-    invoke-direct {v0, p0}, Lcom/tencent/weiyun/c;-><init>(Lcom/tencent/weiyun/a;)V
-
-    invoke-virtual {v0}, Lcom/tencent/weiyun/c;->start()V
-
-    return-void
-.end method
-
 .method static synthetic b(Lcom/tencent/weiyun/a;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
@@ -199,11 +187,11 @@
 .method private b()V
     .locals 1
 
-    new-instance v0, Lcom/tencent/weiyun/d;
+    new-instance v0, Lcom/tencent/weiyun/c;
 
-    invoke-direct {v0, p0}, Lcom/tencent/weiyun/d;-><init>(Lcom/tencent/weiyun/a;)V
+    invoke-direct {v0, p0}, Lcom/tencent/weiyun/c;-><init>(Lcom/tencent/weiyun/a;)V
 
-    invoke-virtual {v0}, Lcom/tencent/weiyun/d;->start()V
+    invoke-virtual {v0}, Lcom/tencent/weiyun/c;->start()V
 
     return-void
 .end method
@@ -211,7 +199,7 @@
 .method static synthetic b(Lcom/tencent/weiyun/a;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/tencent/weiyun/a;->b()V
+    invoke-direct {p0}, Lcom/tencent/weiyun/a;->c()V
 
     return-void
 .end method
@@ -230,6 +218,18 @@
     iput-object p1, p0, Lcom/tencent/weiyun/a;->y:Ljava/lang/String;
 
     return-object p1
+.end method
+
+.method private c()V
+    .locals 1
+
+    new-instance v0, Lcom/tencent/weiyun/d;
+
+    invoke-direct {v0, p0}, Lcom/tencent/weiyun/d;-><init>(Lcom/tencent/weiyun/a;)V
+
+    invoke-virtual {v0}, Lcom/tencent/weiyun/d;->start()V
+
+    return-void
 .end method
 
 .method static synthetic d(Lcom/tencent/weiyun/a;)Lcom/tencent/weiyun/WeiyunFile;
@@ -338,15 +338,7 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/tencent/weiyun/a;->C:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public start()V
+.method public a()V
     .locals 3
 
     iget-object v0, p0, Lcom/tencent/weiyun/a;->s:Ljava/lang/String;
@@ -441,7 +433,15 @@
 
     invoke-interface {v0}, Lcom/tencent/weiyun/IDownLoadFileCallBack;->onPrepareStart()V
 
-    invoke-direct {p0}, Lcom/tencent/weiyun/a;->a()V
+    invoke-direct {p0}, Lcom/tencent/weiyun/a;->b()V
 
     goto :goto_0
+.end method
+
+.method public a(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/tencent/weiyun/a;->C:Ljava/lang/String;
+
+    return-void
 .end method

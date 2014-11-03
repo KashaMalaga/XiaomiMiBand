@@ -28,7 +28,7 @@
 .method static synthetic a(Lcn/com/smartdevices/bracelet/tencent/health/HealthSleep$SleepDetail;)I
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/tencent/health/HealthSleep$SleepDetail;->a:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/tencent/health/HealthSleep$SleepDetail;->b:I
 
     return v0
 .end method
@@ -36,7 +36,7 @@
 .method static synthetic b(Lcn/com/smartdevices/bracelet/tencent/health/HealthSleep$SleepDetail;)I
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/tencent/health/HealthSleep$SleepDetail;->b:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/tencent/health/HealthSleep$SleepDetail;->a:I
 
     return v0
 .end method

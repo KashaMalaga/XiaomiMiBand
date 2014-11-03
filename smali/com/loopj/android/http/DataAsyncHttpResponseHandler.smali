@@ -131,30 +131,13 @@
     move-result-object v4
 
     invoke-virtual {v4}, Ljava/lang/Thread;->isInterrupted()Z
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result v4
 
-    if-eqz v4, :cond_4
+    if-nez v4, :cond_2
 
-    :cond_2
-    :try_start_2
-    invoke-static {v2}, Lcom/loopj/android/http/AsyncHttpClient;->silentCloseInputStream(Ljava/io/InputStream;)V
-
-    invoke-virtual {v3}, Lorg/apache/http/util/ByteArrayBuffer;->toByteArray()[B
-    :try_end_2
-    .catch Ljava/lang/OutOfMemoryError; {:try_start_2 .. :try_end_2} :catch_0
-
-    move-result-object v0
-
-    :cond_3
-    return-object v0
-
-    :cond_4
     const/4 v4, 0x0
 
-    :try_start_3
     invoke-virtual {v3, v0, v4, v1}, Lorg/apache/http/util/ByteArrayBuffer;->append([BII)V
 
     const/4 v4, 0x0
@@ -164,20 +147,20 @@
     move-result-object v1
 
     invoke-virtual {p0, v1}, Lcom/loopj/android/http/DataAsyncHttpResponseHandler;->sendProgressDataMessage([B)V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
     :catchall_0
     move-exception v0
 
-    :try_start_4
+    :try_start_2
     invoke-static {v2}, Lcom/loopj/android/http/AsyncHttpClient;->silentCloseInputStream(Ljava/io/InputStream;)V
 
     throw v0
-    :try_end_4
-    .catch Ljava/lang/OutOfMemoryError; {:try_start_4 .. :try_end_4} :catch_0
+    :try_end_2
+    .catch Ljava/lang/OutOfMemoryError; {:try_start_2 .. :try_end_2} :catch_0
 
     :catch_0
     move-exception v0
@@ -191,6 +174,19 @@
     invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
     throw v0
+
+    :cond_2
+    :try_start_3
+    invoke-static {v2}, Lcom/loopj/android/http/AsyncHttpClient;->silentCloseInputStream(Ljava/io/InputStream;)V
+
+    invoke-virtual {v3}, Lorg/apache/http/util/ByteArrayBuffer;->toByteArray()[B
+    :try_end_3
+    .catch Ljava/lang/OutOfMemoryError; {:try_start_3 .. :try_end_3} :catch_0
+
+    move-result-object v0
+
+    :cond_3
+    return-object v0
 .end method
 
 .method protected handleMessage(Landroid/os/Message;)V
@@ -210,6 +206,8 @@
 
     check-cast v0, [Ljava/lang/Object;
 
+    check-cast v0, [Ljava/lang/Object;
+
     if-eqz v0, :cond_0
 
     array-length v1, v0
@@ -222,6 +220,8 @@
 
     :try_start_0
     aget-object v0, v0, v1
+
+    check-cast v0, [B
 
     check-cast v0, [B
 

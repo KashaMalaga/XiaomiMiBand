@@ -20,7 +20,7 @@
 
     if-lt v0, v1, :cond_0
 
-    invoke-static {p0, p1}, Lcom/handmark/pulltorefresh/library/internal/b;->a(Landroid/view/View;Ljava/lang/Runnable;)V
+    invoke-static {p0, p1}, Lcom/handmark/pulltorefresh/library/internal/e;->a(Landroid/view/View;Ljava/lang/Runnable;)V
 
     :goto_0
     return-void
@@ -42,7 +42,7 @@
 
     if-lt v0, v1, :cond_0
 
-    invoke-static {p0, p1}, Lcom/handmark/pulltorefresh/library/internal/b;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
+    invoke-static {p0, p1}, Lcom/handmark/pulltorefresh/library/internal/e;->a(Landroid/view/View;Landroid/graphics/drawable/Drawable;)V
 
     :goto_0
     return-void
@@ -62,7 +62,7 @@
 
     if-lt v0, v1, :cond_0
 
-    invoke-static {p0, p1}, Lcom/handmark/pulltorefresh/library/internal/a;->a(Landroid/view/View;I)V
+    invoke-static {p0, p1}, Lcom/handmark/pulltorefresh/library/internal/d;->a(Landroid/view/View;I)V
 
     :cond_0
     return-void

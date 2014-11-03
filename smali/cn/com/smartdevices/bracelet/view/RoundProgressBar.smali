@@ -204,6 +204,14 @@
     return v0
 .end method
 
+.method static synthetic a(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;I)I
+    .locals 0
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->i:I
+
+    return p1
+.end method
+
 .method private a(IFF)V
     .locals 3
 
@@ -275,14 +283,6 @@
     goto :goto_0
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;I)V
-    .locals 0
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->i:I
-
-    return-void
-.end method
-
 .method static synthetic a(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;IFF)V
     .locals 0
 
@@ -299,12 +299,12 @@
     return v0
 .end method
 
-.method static synthetic b(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;I)V
+.method static synthetic b(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;I)I
     .locals 0
 
     iput p1, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->h:I
 
-    return-void
+    return p1
 .end method
 
 .method static synthetic c(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;)I
@@ -506,11 +506,11 @@
 
     new-instance v6, Ljava/lang/StringBuilder;
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v7
+    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v6
 
     const-string v7, "%"
 
@@ -538,15 +538,15 @@
 
     new-instance v6, Ljava/lang/StringBuilder;
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    invoke-direct {v6, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v6, "%"
 
-    const-string v1, "%"
-
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 

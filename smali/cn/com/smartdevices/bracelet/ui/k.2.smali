@@ -6,18 +6,18 @@
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/BaseActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/BaseActivity$BindQQHealthTipFragment;
 
-.field private final synthetic b:Lcn/com/smartdevices/bracelet/ui/BaseActivity$BindQQHealthTipFragment;
+.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/BaseActivity;
 
 
 # direct methods
 .method constructor <init>(Lcn/com/smartdevices/bracelet/ui/BaseActivity;Lcn/com/smartdevices/bracelet/ui/BaseActivity$BindQQHealthTipFragment;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/k;->a:Lcn/com/smartdevices/bracelet/ui/BaseActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/k;->b:Lcn/com/smartdevices/bracelet/ui/BaseActivity;
 
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/k;->b:Lcn/com/smartdevices/bracelet/ui/BaseActivity$BindQQHealthTipFragment;
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/k;->a:Lcn/com/smartdevices/bracelet/ui/BaseActivity$BindQQHealthTipFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 .method public onRightClicked(Landroid/app/DialogFragment;)V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/k;->b:Lcn/com/smartdevices/bracelet/ui/BaseActivity$BindQQHealthTipFragment;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/k;->a:Lcn/com/smartdevices/bracelet/ui/BaseActivity$BindQQHealthTipFragment;
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/BaseActivity$BindQQHealthTipFragment;->dismiss()V
 

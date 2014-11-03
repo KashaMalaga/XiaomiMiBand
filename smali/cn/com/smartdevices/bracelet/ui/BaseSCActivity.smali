@@ -107,24 +107,28 @@
     return-void
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;Ljava/lang/String;Ljava/lang/String;)V
+.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->a(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method private a(Ljava/lang/String;Ljava/lang/String;)V
+.method private a(Ljava/lang/String;)V
     .locals 3
 
     const-string v0, "BaseSCActivity"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "bracelet statistic info:"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -148,7 +152,7 @@
 
     invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/ui/r;-><init>(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
 
-    invoke-static {v0, v1, p1, p2, v2}, Lcn/com/smartdevices/bracelet/webapi/WebAPI;->statisticBracelet(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/loopj/android/http/AsyncHttpResponseHandler;)V
+    invoke-static {v0, v1, p1, v2}, Lcn/com/smartdevices/bracelet/webapi/WebAPI;->statisticBracelet(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Ljava/lang/String;Lcom/loopj/android/http/AsyncHttpResponseHandler;)V
 
     return-void
 .end method
@@ -391,9 +395,13 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "new fw length:"
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v1}, Ljava/io/InputStream;->available()I
 
@@ -435,9 +443,13 @@
 
     new-instance v4, Ljava/lang/StringBuilder;
 
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v5, "new fw version:"
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
 
     invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -473,9 +485,9 @@
 
     invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget v2, v2, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;->firmwareVersion:I
+    iget v3, v2, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;->firmwareVersion:I
 
-    if-gt v1, v2, :cond_2
+    if-gt v1, v3, :cond_2
 
     const-string v1, "BaseSCActivity"
 
@@ -496,9 +508,48 @@
 
     invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_2
+    iget v1, v2, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;->hardwareVersion:I
+
+    const/4 v3, 0x2
+
+    if-eq v1, v3, :cond_3
+
+    const-string v1, "BaseSCActivity"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "bracelet PCBVersion is : "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    iget v2, v2, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;->hardwareVersion:I
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ", not PCB 1.4,do nothing!"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto/16 :goto_0
+
+    :cond_3
     const/4 v0, 0x1
 
     goto/16 :goto_0
@@ -530,9 +581,25 @@
     :goto_0
     array-length v4, v3
 
-    if-lt v0, v4, :cond_1
+    if-ge v0, v4, :cond_4
 
-    move v2, v1
+    aget-object v4, v3, v0
+
+    invoke-virtual {v4}, Landroid/net/NetworkInfo;->getType()I
+
+    move-result v4
+
+    if-ne v4, v2, :cond_1
+
+    aget-object v4, v3, v0
+
+    invoke-virtual {v4}, Landroid/net/NetworkInfo;->isConnected()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_3
+
+    move v1, v2
 
     :goto_1
     if-eqz v1, :cond_0
@@ -551,7 +618,9 @@
 
     move-result v4
 
-    if-ne v4, v2, :cond_2
+    const/16 v5, 0x9
+
+    if-ne v4, v5, :cond_2
 
     aget-object v4, v3, v0
 
@@ -559,9 +628,13 @@
 
     move-result v4
 
-    if-eqz v4, :cond_4
+    if-eqz v4, :cond_3
 
-    move v1, v2
+    move v6, v2
+
+    move v2, v1
+
+    move v1, v6
 
     goto :goto_1
 
@@ -572,9 +645,7 @@
 
     move-result v4
 
-    const/16 v5, 0x9
-
-    if-ne v4, v5, :cond_3
+    if-nez v4, :cond_3
 
     aget-object v4, v3, v0
 
@@ -582,7 +653,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_4
+    if-eqz v4, :cond_3
 
     move v6, v2
 
@@ -593,42 +664,14 @@
     goto :goto_1
 
     :cond_3
-    aget-object v4, v3, v0
-
-    invoke-virtual {v4}, Landroid/net/NetworkInfo;->getType()I
-
-    move-result v4
-
-    if-nez v4, :cond_4
-
-    aget-object v4, v3, v0
-
-    invoke-virtual {v4}, Landroid/net/NetworkInfo;->isConnected()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_4
-
-    move v6, v2
-
-    move v2, v1
-
-    move v1, v6
-
-    goto :goto_1
-
-    :cond_4
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
-.end method
 
-.method static synthetic h(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
-    .locals 0
+    :cond_4
+    move v2, v1
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->l()V
-
-    return-void
+    goto :goto_1
 .end method
 
 .method private i()V
@@ -722,40 +765,17 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Lorg/json/JSONObject;
+    new-instance v0, Lcn/com/smartdevices/bracelet/BleTask/BleStatisticTask;
 
-    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/q;
 
-    :try_start_0
-    const-string v1, "is_use_unlock_by_bracelet"
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/q;-><init>(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->k:Landroid/content/Context;
+    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/BleTask/BleStatisticTask;-><init>(Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;)V
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/Utils;->isUseUnlockByBracelet(Landroid/content/Context;)Z
-
-    move-result v2
-
-    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_1
-    new-instance v1, Lcn/com/smartdevices/bracelet/BleTask/BleStatisticTask;
-
-    new-instance v2, Lcn/com/smartdevices/bracelet/ui/q;
-
-    invoke-direct {v2, p0, v0}, Lcn/com/smartdevices/bracelet/ui/q;-><init>(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;Lorg/json/JSONObject;)V
-
-    invoke-direct {v1, v2}, Lcn/com/smartdevices/bracelet/BleTask/BleStatisticTask;-><init>(Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;)V
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/BleTask/BleStatisticTask;->work()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/BleTask/BleStatisticTask;->work()V
 
     goto :goto_0
-
-    :catch_0
-    move-exception v1
-
-    goto :goto_1
 .end method
 
 .method private l()V
@@ -913,9 +933,13 @@
 
     new-instance v4, Ljava/lang/StringBuilder;
 
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v5, "topActivity:"
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
 
     invoke-virtual {v0}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
@@ -935,9 +959,13 @@
 
     new-instance v4, Ljava/lang/StringBuilder;
 
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v5, "topActivity:"
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
 
     invoke-virtual {v0}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
@@ -1011,7 +1039,7 @@
     goto :goto_0
 
     :pswitch_1
-    const v0, 0x7f0c000d
+    const v0, 0x7f0d0099
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->getString(I)Ljava/lang/String;
 
