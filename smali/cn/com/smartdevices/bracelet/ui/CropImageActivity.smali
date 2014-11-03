@@ -55,13 +55,9 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v5, "path = "
 
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
+    invoke-direct {v3, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -105,13 +101,9 @@
 
     new-instance v6, Ljava/lang/StringBuilder;
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v7, "selected image, origin width="
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
+    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -155,13 +147,9 @@
 
     new-instance v6, Ljava/lang/StringBuilder;
 
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v7, "selected image, new width="
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
+    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -211,7 +199,7 @@
     :goto_2
     if-nez v1, :cond_4
 
-    const v0, 0x7f0d00b7
+    const v0, 0x7f0c00e5
 
     invoke-static {p0, v0, v8}, Lcn/com/smartdevices/bracelet/view/CustomToast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -327,7 +315,7 @@
 
     if-nez v0, :cond_0
 
-    const v0, 0x7f0d00b7
+    const v0, 0x7f0c00e5
 
     const/4 v1, 0x1
 
@@ -346,8 +334,6 @@
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/CropImageActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
@@ -356,9 +342,11 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     const-string v1, "/bracelet_icon.jpg"
 
@@ -420,7 +408,7 @@
     goto :goto_1
 
     :pswitch_data_0
-    .packed-switch 0x7f0a00d3
+    .packed-switch 0x7f0700d3
         :pswitch_1
         :pswitch_0
         :pswitch_2
@@ -432,7 +420,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030024
+    const v0, 0x7f030026
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/CropImageActivity;->setContentView(I)V
 
@@ -452,7 +440,7 @@
 
     invoke-virtual {p0, v0, v1}, Lcn/com/smartdevices/bracelet/ui/CropImageActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    const v0, 0x7f0a00cd
+    const v0, 0x7f0700cd
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/CropImageActivity;->findViewById(I)Landroid/view/View;
 
@@ -462,7 +450,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/CropImageActivity;->c:Lcom/edmodo/cropper/CropImageView;
 
-    const v0, 0x7f0a00d5
+    const v0, 0x7f0700d5
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/CropImageActivity;->findViewById(I)Landroid/view/View;
 
@@ -474,7 +462,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a00d3
+    const v0, 0x7f0700d3
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/CropImageActivity;->findViewById(I)Landroid/view/View;
 

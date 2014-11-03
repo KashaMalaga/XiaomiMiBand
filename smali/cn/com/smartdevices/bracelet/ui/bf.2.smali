@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/ui/DimPanelFragment$OpClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
@@ -22,20 +22,8 @@
 
 
 # virtual methods
-.method public onEmptyAreaClicked(Landroid/app/DialogFragment;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onLeftClicked(Landroid/app/DialogFragment;)V
-    .locals 3
-
-    invoke-virtual {p1}, Landroid/app/DialogFragment;->dismiss()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bf;->a:Lcn/com/smartdevices/bracelet/ui/PersonInfoFragment;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/PersonInfoFragment;->c(Lcn/com/smartdevices/bracelet/ui/PersonInfoFragment;)V
+.method public run()V
+    .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bf;->a:Lcn/com/smartdevices/bracelet/ui/PersonInfoFragment;
 
@@ -43,31 +31,11 @@
 
     move-result-object v0
 
-    const-string v1, "UserLogout"
-
-    const-string v2, "Confirmed"
-
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->event(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public onRightClicked(Landroid/app/DialogFragment;)V
-    .locals 3
-
-    invoke-virtual {p1}, Landroid/app/DialogFragment;->dismiss()V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Utils;->hideProgressDialog(Landroid/app/Activity;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bf;->a:Lcn/com/smartdevices/bracelet/ui/PersonInfoFragment;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/PersonInfoFragment;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    const-string v1, "UserLogout"
-
-    const-string v2, "Canceled"
-
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->event(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/PersonInfoFragment;->e(Lcn/com/smartdevices/bracelet/ui/PersonInfoFragment;)V
 
     return-void
 .end method

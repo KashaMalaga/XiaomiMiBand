@@ -34,7 +34,7 @@
     :pswitch_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/a;->a:Lcn/com/smartdevices/bracelet/ui/AlarmActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->a(Lcn/com/smartdevices/bracelet/ui/AlarmActivity;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->g(Lcn/com/smartdevices/bracelet/ui/AlarmActivity;)V
 
     goto :goto_0
 

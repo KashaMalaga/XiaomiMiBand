@@ -21,7 +21,7 @@
 
     const/4 v1, 0x0
 
-    const v0, 0x7f0d0186
+    const v0, 0x7f0c0048
 
     invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/view/CustomToast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -92,7 +92,7 @@
     nop
 
     :pswitch_data_0
-    .packed-switch 0x7f0a00ca
+    .packed-switch 0x7f0700ca
         :pswitch_1
         :pswitch_2
         :pswitch_0
@@ -104,11 +104,11 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030023
+    const v0, 0x7f030025
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/BraceletNotFoundActivity;->setContentView(I)V
 
-    const v0, 0x7f0a00cc
+    const v0, 0x7f0700cc
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/BraceletNotFoundActivity;->findViewById(I)Landroid/view/View;
 
@@ -118,7 +118,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a00cb
+    const v0, 0x7f0700cb
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/BraceletNotFoundActivity;->findViewById(I)Landroid/view/View;
 
@@ -126,7 +126,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a00ca
+    const v0, 0x7f0700ca
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/BraceletNotFoundActivity;->findViewById(I)Landroid/view/View;
 
@@ -136,15 +136,11 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "<u>"
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object v1
-
-    const v2, 0x7f0d006a
+    const v2, 0x7f0c013e
 
     invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/activity/BraceletNotFoundActivity;->getString(I)Ljava/lang/String;
 

@@ -58,23 +58,9 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-nez v0, :cond_3
 
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    invoke-interface {v2, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
+    move-object v0, v1
 
     :goto_0
     if-nez v0, :cond_2
@@ -83,13 +69,9 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v3, "Not Found Value For : "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -106,13 +88,9 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v3, "Read : "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -137,7 +115,21 @@
     return-object v0
 
     :cond_3
-    move-object v0, v1
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    invoke-interface {v2, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
 
     goto :goto_0
 .end method
@@ -182,13 +174,9 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v3, "Save : "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -316,13 +304,9 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v4, "Not Support Value Type : "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -341,13 +325,9 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v4, "Not Support Value Type : "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/g;->a:Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->a(Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;)Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView$DynamicDetailChartLoadCallback;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->b(Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;)Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView$DynamicDetailChartLoadCallback;
 
     move-result-object v0
 
@@ -61,7 +61,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/g;->a:Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->a(Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;)Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView$DynamicDetailChartLoadCallback;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->b(Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;)Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView$DynamicDetailChartLoadCallback;
 
     move-result-object v0
 

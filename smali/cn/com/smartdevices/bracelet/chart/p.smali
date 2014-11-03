@@ -1,154 +1,186 @@
 .class Lcn/com/smartdevices/bracelet/chart/p;
-.super Lcn/com/smartdevices/bracelet/chart/base/BarChart;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lcn/com/smartdevices/bracelet/chart/base/ChartScroller$ScrollingListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/chart/StatisticChart;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
 
 # direct methods
-.method private constructor <init>(Lcn/com/smartdevices/bracelet/chart/StatisticChart;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/chart/p;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChart;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/chart/p;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/chart/base/BarChart;-><init>()V
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/chart/StatisticChart;Lcn/com/smartdevices/bracelet/chart/n;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/chart/p;-><init>(Lcn/com/smartdevices/bracelet/chart/StatisticChart;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/graphics/Canvas;FFFFF)V
-    .locals 9
+.method public onFinish()V
+    .locals 3
 
-    iget-object v7, p0, Lcn/com/smartdevices/bracelet/chart/p;->mItems:Ljava/util/List;
+    const/4 v2, 0x0
 
-    monitor-enter v7
+    const-string v0, "Chart.StatisticChartView"
 
-    :try_start_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/p;->mItems:Ljava/util/List;
+    const-string v1, "Scroll OnFinish!!"
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v8
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/p;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
-    :cond_0
-    :goto_0
-    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->d(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Lcn/com/smartdevices/bracelet/chart/data/ChartDataLoader;
 
-    move-result v0
+    move-result-object v1
 
-    if-eqz v0, :cond_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/p;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
-    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->a(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Lcn/com/smartdevices/bracelet/chart/base/BaseChart;
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/base/BarChart$BarItem;
+    check-cast v0, Lcn/com/smartdevices/bracelet/chart/StatisticChart;
 
-    iget-boolean v1, v0, Lcn/com/smartdevices/bracelet/chart/base/BarChart$BarItem;->needDraw:Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChart;->itemOffset()I
 
-    if-eqz v1, :cond_0
+    move-result v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/StatisticChart$StatisticBarItem;
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/chart/data/ChartDataLoader;->onToItem(I)V
 
-    move-object v1, p1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/p;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
-    move v2, p2
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->e(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Z
 
-    move v3, p3
+    move-result v0
 
-    move v4, p4
+    if-eqz v0, :cond_0
 
-    move v5, p5
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/p;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
-    move v6, p6
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->a(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;Z)V
 
-    invoke-virtual/range {v0 .. v6}, Lcn/com/smartdevices/bracelet/chart/StatisticChart$StatisticBarItem;->draw(Landroid/graphics/Canvas;FFFFF)V
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/p;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v7
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
-
-    :cond_1
-    :try_start_1
-    monitor-exit v7
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->a(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;I)V
 
     return-void
 .end method
 
-.method protected itemOffsetX(Landroid/graphics/RectF;Lcn/com/smartdevices/bracelet/chart/base/BarChart$BarItem;)F
+.method public onJustify()V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/p;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChart;
+    const-string v0, "Chart.StatisticChartView"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChart;->d(Lcn/com/smartdevices/bracelet/chart/StatisticChart;)I
+    const-string v1, "Scroll OnJustify!!"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/p;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->b(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)I
 
     move-result v0
 
-    iget v1, p2, Lcn/com/smartdevices/bracelet/chart/base/BarChart$BarItem;->index:I
+    invoke-static {v0}, Ljava/lang/Math;->abs(I)I
 
-    add-int/2addr v0, v1
+    move-result v0
 
-    int-to-float v0, v0
+    const/4 v1, 0x1
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/p;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChart;
+    if-le v0, v1, :cond_0
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/chart/StatisticChart;->a(Lcn/com/smartdevices/bracelet/chart/StatisticChart;)F
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/p;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
-    move-result v1
-
-    mul-float/2addr v0, v1
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/p;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChart;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/chart/StatisticChart;->e(Lcn/com/smartdevices/bracelet/chart/StatisticChart;)Lcn/com/smartdevices/bracelet/chart/base/BarChart$Axis;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->c(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Lcn/com/smartdevices/bracelet/chart/base/ChartScroller;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/chart/base/BarChart$Axis;->getScroll()F
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/p;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->a(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Lcn/com/smartdevices/bracelet/chart/base/BaseChart;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/chart/StatisticChart;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChart;->justified()I
+
+    move-result v0
+
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/chart/base/ChartScroller;->scrollX(I)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public onScrollX(I)Z
+    .locals 2
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "NewApi"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/p;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->a(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Lcn/com/smartdevices/bracelet/chart/base/BaseChart;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/chart/StatisticChart;
+
+    int-to-float v1, p1
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/StatisticChart;->scroll(F)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/p;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->postInvalidateOnAnimation()V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/p;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->b(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)I
 
     move-result v1
 
-    add-float/2addr v0, v1
+    add-int/2addr v1, p1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->a(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;I)V
+
+    const/4 v0, 0x1
 
     return v0
 .end method
 
-.method protected itemWidth(Landroid/graphics/RectF;Lcn/com/smartdevices/bracelet/chart/base/BarChart$BarItem;)F
-    .locals 3
+.method public onScrollY(I)Z
+    .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/p;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChart;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChart;->a(Lcn/com/smartdevices/bracelet/chart/StatisticChart;)F
-
-    move-result v0
-
-    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/p;->mItemPadding:F
-
-    const/high16 v2, 0x40000000
-
-    mul-float/2addr v1, v2
-
-    sub-float/2addr v0, v1
+    const/4 v0, 0x1
 
     return v0
+.end method
+
+.method public onStart()V
+    .locals 2
+
+    const-string v0, "Chart.StatisticChartView"
+
+    const-string v1, "Scroll OnStart!!"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/p;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->a(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;Z)V
+
+    return-void
 .end method

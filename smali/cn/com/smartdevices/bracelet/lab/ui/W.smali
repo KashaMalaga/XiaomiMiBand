@@ -1,190 +1,130 @@
-.class final Lcn/com/smartdevices/bracelet/lab/ui/W;
-.super Landroid/os/Handler;
+.class Lcn/com/smartdevices/bracelet/lab/ui/W;
+.super Ljava/lang/Object;
 
-
-# static fields
-.field static final a:I = 0x1
-
-.field static final b:I = 0x2
+# interfaces
+.implements Landroid/text/TextWatcher;
 
 
 # instance fields
-.field final synthetic c:Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/lab/ui/SportVoteOthersActivity;
+
+.field private b:I
+
+.field private c:Landroid/widget/EditText;
 
 
 # direct methods
-.method private constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;)V
-    .locals 0
+.method public constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/SportVoteOthersActivity;ILandroid/widget/EditText;)V
+    .locals 1
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/W;->c:Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/W;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportVoteOthersActivity;
 
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    const/4 v0, 0x0
 
-.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;Lcn/com/smartdevices/bracelet/lab/ui/V;)V
-    .locals 0
+    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/W;->b:I
 
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/lab/ui/W;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;)V
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/W;->c:Landroid/widget/EditText;
+
+    iput p2, p0, Lcn/com/smartdevices/bracelet/lab/ui/W;->b:I
+
+    iput-object p3, p0, Lcn/com/smartdevices/bracelet/lab/ui/W;->c:Landroid/widget/EditText;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/W;->removeMessages(I)V
-
-    const/4 v0, 0x2
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/W;->removeMessages(I)V
+.method public afterTextChanged(Landroid/text/Editable;)V
+    .locals 0
 
     return-void
 .end method
 
-.method public dispatchMessage(Landroid/os/Message;)V
-    .locals 7
+.method public beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
 
-    const/4 v4, 0x3
+    return-void
+.end method
 
-    const/4 v6, 0x1
+.method public onTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 4
 
-    const/4 v3, 0x0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/W;->c:Landroid/widget/EditText;
 
-    const/high16 v5, 0x3f800000
+    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
-    iget v0, p1, Landroid/os/Message;->what:I
+    move-result-object v0
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {v0}, Landroid/text/Editable;->length()I
 
-    :cond_0
+    move-result v1
+
+    iget v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/W;->b:I
+
+    if-gt v1, v2, :cond_0
+
     :goto_0
     return-void
 
-    :pswitch_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/W;->c:Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;
+    :cond_0
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/W;->c:Landroid/widget/EditText;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->a(Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;)Lcn/com/smartdevices/bracelet/lab/ui/O;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/W;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportVoteOthersActivity;
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/ui/O;->a()V
-
-    goto :goto_0
-
-    :pswitch_1
-    iget v0, p1, Landroid/os/Message;->arg1:I
-
-    if-nez v0, :cond_1
-
-    invoke-virtual {p0, v6}, Lcn/com/smartdevices/bracelet/lab/ui/W;->removeMessages(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/W;->c:Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->a(Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;)Lcn/com/smartdevices/bracelet/lab/ui/O;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/W;->c:Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->b(Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;)Landroid/content/Context;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/W;->c:Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->c(Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;)Landroid/net/Uri;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lab/ui/SportVoteOthersActivity;->a(Lcn/com/smartdevices/bracelet/lab/ui/SportVoteOthersActivity;)Landroid/view/animation/Animation;
 
     move-result-object v2
 
-    invoke-virtual/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/lab/ui/O;->a(Landroid/content/Context;Landroid/net/Uri;ZIF)V
+    invoke-virtual {v1, v2}, Landroid/widget/EditText;->startAnimation(Landroid/view/animation/Animation;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/W;->c:Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->d(Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;)Lcn/com/smartdevices/bracelet/lab/ui/W;
+    invoke-interface {v0}, Landroid/text/Editable;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/ui/W;->obtainMessage()Landroid/os/Message;
+    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
 
-    iput v6, v0, Landroid/os/Message;->what:I
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-    iget v1, p1, Landroid/os/Message;->arg1:I
+    move-result v1
 
-    iput v1, v0, Landroid/os/Message;->arg1:I
+    iget v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/W;->b:I
 
-    const-wide/16 v1, 0x7d0
+    if-gt v1, v2, :cond_1
 
-    invoke-virtual {p0, v0, v1, v2}, Lcn/com/smartdevices/bracelet/lab/ui/W;->sendMessageDelayed(Landroid/os/Message;J)Z
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/W;->c:Landroid/widget/EditText;
+
+    invoke-virtual {v2, v0}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/W;->c:Landroid/widget/EditText;
+
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setSelection(I)V
 
     goto :goto_0
 
     :cond_1
-    iget v0, p1, Landroid/os/Message;->arg1:I
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/W;->c:Landroid/widget/EditText;
 
-    if-ne v0, v6, :cond_2
+    const/4 v2, 0x0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/W;->c:Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;
+    iget v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/W;->b:I
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->f(Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;)Lcn/com/smartdevices/bracelet/lab/ui/O;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/W;->c:Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->b(Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;)Landroid/content/Context;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/W;->c:Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->e(Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;)Landroid/net/Uri;
-
-    move-result-object v2
-
-    invoke-virtual/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/lab/ui/O;->a(Landroid/content/Context;Landroid/net/Uri;ZIF)V
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p1, Landroid/os/Message;->arg1:I
-
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/W;->c:Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->h(Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;)Lcn/com/smartdevices/bracelet/lab/ui/O;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/W;->c:Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;
+    invoke-virtual {v1, v0}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->b(Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;)Landroid/content/Context;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/W;->c:Landroid/widget/EditText;
 
-    move-result-object v1
+    iget v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/W;->b:I
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/W;->c:Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->g(Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;)Landroid/net/Uri;
-
-    move-result-object v2
-
-    invoke-virtual/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/lab/ui/O;->a(Landroid/content/Context;Landroid/net/Uri;ZIF)V
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setSelection(I)V
 
     goto :goto_0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
 .end method

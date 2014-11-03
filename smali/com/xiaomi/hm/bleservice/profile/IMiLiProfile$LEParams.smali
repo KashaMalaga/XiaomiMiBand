@@ -52,13 +52,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "[[[ "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -86,13 +82,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "\n  connIntMin: "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget v2, p0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$LEParams;->connIntMin:I
 
@@ -120,13 +112,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "\n  connIntMax: "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget v2, p0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$LEParams;->connIntMax:I
 
@@ -154,13 +142,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "\n     latency: "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget v2, p0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$LEParams;->latency:I
 
@@ -182,13 +166,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "\n     timeout: "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget v2, p0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$LEParams;->timeout:I
 
@@ -212,13 +192,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "\n     connInt: "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget v2, p0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$LEParams;->connInt:I
 
@@ -246,13 +222,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "\n      advInt: "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget v2, p0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$LEParams;->advInt:I
 

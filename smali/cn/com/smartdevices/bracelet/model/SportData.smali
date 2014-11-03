@@ -186,13 +186,9 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v1, "<"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/model/SportData;->timeIndex:I
 

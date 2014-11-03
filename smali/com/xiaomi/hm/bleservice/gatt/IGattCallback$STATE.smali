@@ -14,8 +14,6 @@
 
 
 # static fields
-.field private static final synthetic $VALUES:[Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$STATE;
-
 .field public static final enum CONNECTED:Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$STATE;
 
 .field public static final enum CONNECTING:Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$STATE;
@@ -23,6 +21,8 @@
 .field public static final enum DISCONNECTED:Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$STATE;
 
 .field public static final enum DISCONNECTING:Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$STATE;
+
+.field private static final synthetic ENUM$VALUES:[Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$STATE;
 
 
 # direct methods
@@ -89,18 +89,13 @@
 
     aput-object v1, v0, v5
 
-    sput-object v0, Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$STATE;->$VALUES:[Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$STATE;
+    sput-object v0, Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$STATE;->ENUM$VALUES:[Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$STATE;
 
     return-void
 .end method
 
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I)V"
-        }
-    .end annotation
 
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
@@ -122,15 +117,17 @@
 .end method
 
 .method public static values()[Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$STATE;
-    .locals 1
+    .locals 4
 
-    sget-object v0, Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$STATE;->$VALUES:[Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$STATE;
+    const/4 v3, 0x0
 
-    invoke-virtual {v0}, [Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$STATE;->clone()Ljava/lang/Object;
+    sget-object v0, Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$STATE;->ENUM$VALUES:[Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$STATE;
 
-    move-result-object v0
+    array-length v1, v0
 
-    check-cast v0, [Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$STATE;
+    new-array v2, v1, [Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$STATE;
 
-    return-object v0
+    invoke-static {v0, v3, v2, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    return-object v2
 .end method

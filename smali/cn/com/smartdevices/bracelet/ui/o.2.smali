@@ -20,7 +20,7 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 3
+    .locals 4
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -78,7 +78,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_5
 
     sget-object v0, Lcom/xiaomi/hm/bleservice/BLEService;->INTENT_EXTRA_PARAM:Ljava/lang/String;
 
@@ -98,7 +98,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_4
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/o;->a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
 
@@ -110,6 +110,23 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/o;->a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->g(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Landroid/content/Context;
+
+    move-result-object v1
+
+    const-string v2, "BleSyncData"
+
+    const-string v3, "Successed"
+
+    invoke-static {v1, v2, v3}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->event(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_1
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/o;->a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->h(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
+
     :cond_3
     invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
 
@@ -120,13 +137,28 @@
     goto :goto_0
 
     :cond_4
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/o;->a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->g(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Landroid/content/Context;
+
+    move-result-object v1
+
+    const-string v2, "BleSyncData"
+
+    const-string v3, "Failed"
+
+    invoke-static {v1, v2, v3}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->event(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_1
+
+    :cond_5
     const-string v1, "android.bluetooth.adapter.action.STATE_CHANGED"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_5
+    if-eqz v1, :cond_6
 
     const-string v0, "android.bluetooth.adapter.extra.STATE"
 
@@ -152,7 +184,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :pswitch_2
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/o;->a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
@@ -165,16 +197,16 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    :cond_5
+    :cond_6
     sget-object v1, Lcom/xiaomi/hm/bleservice/BLEService;->INTENT_ACTION_SYNC_DYNAMIC_STATUS_CHANGED:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_7
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/o;->a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
 
@@ -188,7 +220,7 @@
 
     goto/16 :goto_0
 
-    :cond_6
+    :cond_7
     sget-object v1, Lcom/xiaomi/hm/bleservice/BLEService;->INTENT_ACTION_BATTERY_STATUS_CHANGED:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z

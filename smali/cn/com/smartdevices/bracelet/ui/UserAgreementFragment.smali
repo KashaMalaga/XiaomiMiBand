@@ -53,7 +53,7 @@
 
     move-result-object v1
 
-    const v0, 0x7f0a0186
+    const v0, 0x7f0700da
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -63,7 +63,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/UserAgreementFragment;->b:Landroid/widget/TextView;
 
-    const v0, 0x7f0d0228
+    const v0, 0x7f0c00ca
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UserAgreementFragment;->getString(I)Ljava/lang/String;
 
@@ -71,7 +71,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/UserAgreementFragment;->b:Landroid/widget/TextView;
 
-    const v3, 0x7f0d0229
+    const v3, 0x7f0c01f6
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
 
@@ -79,9 +79,9 @@
 
     invoke-direct {v2, v0}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
 
-    new-instance v3, Lcn/com/smartdevices/bracelet/ui/cl;
+    new-instance v3, Lcn/com/smartdevices/bracelet/ui/cg;
 
-    invoke-direct {v3, p0}, Lcn/com/smartdevices/bracelet/ui/cl;-><init>(Lcn/com/smartdevices/bracelet/ui/UserAgreementFragment;)V
+    invoke-direct {v3, p0}, Lcn/com/smartdevices/bracelet/ui/cg;-><init>(Lcn/com/smartdevices/bracelet/ui/UserAgreementFragment;)V
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 

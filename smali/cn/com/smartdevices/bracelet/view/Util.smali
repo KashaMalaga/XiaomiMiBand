@@ -47,7 +47,7 @@
 
     invoke-virtual {v1, v2}, Landroid/content/ContentResolver;->openInputStream(Landroid/net/Uri;)Ljava/io/InputStream;
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v1
@@ -67,7 +67,7 @@
     :try_start_2
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_3
 
     :cond_0
     :goto_0
@@ -82,33 +82,6 @@
     :catch_0
     move-exception v1
 
-    const-string v1, "ImageView"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "Unable to close content: "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/Debug;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :catch_1
-    move-exception v1
-
     move-object v1, v0
 
     :goto_1
@@ -117,13 +90,9 @@
 
     new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v5, "Unable to open content: "
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -142,24 +111,20 @@
     :try_start_4
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_4
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
 
     goto :goto_0
 
-    :catch_2
+    :catch_1
     move-exception v1
 
     const-string v1, "ImageView"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v4, "Unable to close content: "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -188,26 +153,22 @@
     :try_start_5
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_5
-    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_2
 
     :cond_1
     :goto_3
     throw v0
 
-    :catch_3
+    :catch_2
     move-exception v1
 
     const-string v1, "ImageView"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v4, "Unable to close content: "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -220,6 +181,29 @@
     invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/Debug;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_3
+
+    :catch_3
+    move-exception v1
+
+    const-string v1, "ImageView"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "Unable to close content: "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/Debug;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
 
     :catchall_1
     move-exception v0
@@ -263,13 +247,9 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v3, "round bitmap w="
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -471,13 +451,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "mPd = "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     sget-object v2, Lcn/com/smartdevices/bracelet/view/Util;->b:Landroid/app/ProgressDialog;
 
@@ -534,13 +510,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "Exception: mPd = "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     sget-object v2, Lcn/com/smartdevices/bracelet/view/Util;->b:Landroid/app/ProgressDialog;
 

@@ -244,7 +244,7 @@
 
     check-cast v0, Landroid/support/v4/app/K;
 
-    invoke-virtual {v0}, Landroid/support/v4/app/K;->a()V
+    invoke-virtual {v0}, Landroid/support/v4/app/K;->start()V
 
     add-int/lit8 v0, v1, -0x1
 
@@ -274,7 +274,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Landroid/support/v4/app/K;->a()V
+    invoke-virtual {p1}, Landroid/support/v4/app/K;->start()V
 
     :cond_0
     return-void
@@ -369,7 +369,7 @@
 
     check-cast v0, Landroid/support/v4/app/K;
 
-    invoke-virtual {v0}, Landroid/support/v4/app/K;->e()V
+    invoke-virtual {v0}, Landroid/support/v4/app/K;->stop()V
 
     add-int/lit8 v0, v1, -0x1
 
@@ -482,7 +482,7 @@
 
     check-cast v0, Landroid/support/v4/app/K;
 
-    invoke-virtual {v0}, Landroid/support/v4/app/K;->b()V
+    invoke-virtual {v0}, Landroid/support/v4/app/K;->a()V
 
     add-int/lit8 v0, v1, -0x1
 
@@ -550,7 +550,7 @@
 
     check-cast v0, Landroid/support/v4/app/K;
 
-    invoke-virtual {v0}, Landroid/support/v4/app/K;->c()V
+    invoke-virtual {v0}, Landroid/support/v4/app/K;->b()V
 
     add-int/lit8 v0, v1, -0x1
 
@@ -635,7 +635,7 @@
 
     invoke-virtual {v2, v1}, Landroid/support/v4/util/SparseArrayCompat;->removeAt(I)V
 
-    invoke-virtual {v0}, Landroid/support/v4/app/K;->f()V
+    invoke-virtual {v0}, Landroid/support/v4/app/K;->d()V
 
     :cond_2
     iget-object v0, p0, Landroid/support/v4/app/J;->d:Landroid/support/v4/util/SparseArrayCompat;
@@ -658,7 +658,7 @@
 
     invoke-virtual {v2, v1}, Landroid/support/v4/util/SparseArrayCompat;->removeAt(I)V
 
-    invoke-virtual {v0}, Landroid/support/v4/app/K;->f()V
+    invoke-virtual {v0}, Landroid/support/v4/app/K;->d()V
 
     :cond_3
     iget-object v0, p0, Landroid/support/v4/app/J;->f:Landroid/support/v4/app/FragmentActivity;
@@ -915,7 +915,7 @@
 
     check-cast v0, Landroid/support/v4/app/K;
 
-    invoke-virtual {v0}, Landroid/support/v4/app/K;->d()V
+    invoke-virtual {v0}, Landroid/support/v4/app/K;->c()V
 
     add-int/lit8 v0, v1, -0x1
 
@@ -982,7 +982,7 @@
 
     check-cast v0, Landroid/support/v4/app/K;
 
-    invoke-virtual {v0}, Landroid/support/v4/app/K;->f()V
+    invoke-virtual {v0}, Landroid/support/v4/app/K;->d()V
 
     add-int/lit8 v0, v1, -0x1
 
@@ -1044,7 +1044,7 @@
 
     check-cast v0, Landroid/support/v4/app/K;
 
-    invoke-virtual {v0}, Landroid/support/v4/app/K;->f()V
+    invoke-virtual {v0}, Landroid/support/v4/app/K;->d()V
 
     add-int/lit8 v0, v1, -0x1
 
@@ -1452,7 +1452,7 @@
 
     iput-boolean v2, v1, Landroid/support/v4/app/K;->f:Z
 
-    invoke-virtual {v1}, Landroid/support/v4/app/K;->f()V
+    invoke-virtual {v1}, Landroid/support/v4/app/K;->d()V
 
     iget-object v1, v0, Landroid/support/v4/app/K;->d:Landroid/support/v4/content/Loader;
 
@@ -1493,7 +1493,7 @@
 
     invoke-virtual {v1, p1, v4}, Landroid/support/v4/util/SparseArrayCompat;->put(ILjava/lang/Object;)V
 
-    invoke-virtual {v0}, Landroid/support/v4/app/K;->f()V
+    invoke-virtual {v0}, Landroid/support/v4/app/K;->d()V
 
     goto :goto_0
 
@@ -1533,7 +1533,7 @@
     :cond_7
     iget-object v1, v0, Landroid/support/v4/app/K;->n:Landroid/support/v4/app/K;
 
-    invoke-virtual {v1}, Landroid/support/v4/app/K;->f()V
+    invoke-virtual {v1}, Landroid/support/v4/app/K;->d()V
 
     iput-object v4, v0, Landroid/support/v4/app/K;->n:Landroid/support/v4/app/K;
 

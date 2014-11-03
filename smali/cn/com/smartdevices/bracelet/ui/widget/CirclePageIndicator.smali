@@ -61,7 +61,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    const v0, 0x7f010068
+    const v0, 0x7f010028
 
     invoke-direct {p0, p1, p2, v0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -117,49 +117,49 @@
 
     move-result-object v0
 
-    const v1, 0x7f09001a
+    const v1, 0x7f080061
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v1
 
-    const v2, 0x7f090019
+    const v2, 0x7f080060
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v2
 
-    const/high16 v3, 0x7f0c0000
+    const v3, 0x7f0a0002
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v3
 
-    const v4, 0x7f09001b
+    const v4, 0x7f080062
 
     invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v4
 
-    const v5, 0x7f0b0012
+    const v5, 0x7f090009
 
     invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v5
 
-    const v6, 0x7f0b0011
+    const v6, 0x7f090008
 
     invoke-virtual {v0, v6}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v6
 
-    const/high16 v7, 0x7f080000
+    const v7, 0x7f0b0001
 
     invoke-virtual {v0, v7}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v7
 
-    const v8, 0x7f080001
+    const v8, 0x7f0b0002
 
     invoke-virtual {v0, v8}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -612,7 +612,7 @@
     :cond_3
     iget v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->l:I
 
-    if-nez v0, :cond_8
+    if-nez v0, :cond_7
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->getWidth()I
 
@@ -710,64 +710,62 @@
 
     :cond_5
     :goto_2
-    if-ge v5, v6, :cond_a
+    if-lt v5, v6, :cond_8
 
-    int-to-float v2, v5
+    iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->n:Z
+
+    if-eqz v1, :cond_c
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->i:I
+
+    :goto_3
+    int-to-float v1, v1
+
+    iget v2, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->o:F
+
+    iget v3, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->b:F
+
+    mul-float/2addr v3, v10
+
+    add-float/2addr v2, v3
+
+    mul-float/2addr v1, v2
+
+    iget-boolean v2, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->n:Z
+
+    if-nez v2, :cond_6
+
+    iget v2, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->j:F
 
     iget v3, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->o:F
 
-    iget v7, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->b:F
+    iget v5, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->b:F
 
-    mul-float/2addr v7, v10
+    mul-float/2addr v5, v10
 
-    add-float/2addr v3, v7
+    add-float/2addr v3, v5
 
     mul-float/2addr v2, v3
 
-    add-float/2addr v2, v0
-
-    iget v3, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->l:I
-
-    if-nez v3, :cond_9
-
-    move v3, v2
-
-    move v2, v4
-
-    :goto_3
-    iget-object v7, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->c:Landroid/graphics/Paint;
-
-    invoke-virtual {v7}, Landroid/graphics/Paint;->getAlpha()I
-
-    move-result v7
-
-    if-lez v7, :cond_6
-
-    iget-object v7, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->c:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, v3, v2, v1, v7}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+    add-float/2addr v1, v2
 
     :cond_6
-    iget v7, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->b:F
+    iget v2, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->l:I
 
-    cmpl-float v7, v1, v7
+    if-nez v2, :cond_d
 
-    if-eqz v7, :cond_7
+    add-float/2addr v0, v1
 
-    iget v7, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->b:F
+    :goto_4
+    iget v1, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->b:F
 
-    iget-object v8, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->d:Landroid/graphics/Paint;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->e:Landroid/graphics/Paint;
 
-    invoke-virtual {p1, v3, v2, v7, v8}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+    invoke-virtual {p1, v0, v4, v1, v2}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+
+    goto/16 :goto_0
 
     :cond_7
-    add-int/lit8 v2, v5, 0x1
-
-    move v5, v2
-
-    goto :goto_2
-
-    :cond_8
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->getHeight()I
 
     move-result v3
@@ -786,69 +784,71 @@
 
     goto :goto_1
 
-    :cond_9
-    move v3, v4
-
-    goto :goto_3
-
-    :cond_a
-    iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->n:Z
-
-    if-eqz v1, :cond_c
-
-    iget v1, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->i:I
-
-    :goto_4
-    int-to-float v1, v1
-
-    iget v2, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->o:F
-
-    iget v3, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->b:F
-
-    mul-float/2addr v3, v10
-
-    add-float/2addr v2, v3
-
-    mul-float/2addr v1, v2
-
-    iget-boolean v2, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->n:Z
-
-    if-nez v2, :cond_b
-
-    iget v2, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->j:F
+    :cond_8
+    int-to-float v2, v5
 
     iget v3, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->o:F
 
-    iget v5, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->b:F
+    iget v7, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->b:F
 
-    mul-float/2addr v5, v10
+    mul-float/2addr v7, v10
 
-    add-float/2addr v3, v5
+    add-float/2addr v3, v7
 
     mul-float/2addr v2, v3
 
-    add-float/2addr v1, v2
+    add-float/2addr v2, v0
 
-    :cond_b
-    iget v2, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->l:I
+    iget v3, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->l:I
 
-    if-nez v2, :cond_d
+    if-nez v3, :cond_b
 
-    add-float/2addr v0, v1
+    move v3, v2
+
+    move v2, v4
 
     :goto_5
-    iget v1, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->b:F
+    iget-object v7, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->c:Landroid/graphics/Paint;
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->e:Landroid/graphics/Paint;
+    invoke-virtual {v7}, Landroid/graphics/Paint;->getAlpha()I
 
-    invoke-virtual {p1, v0, v4, v1, v2}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+    move-result v7
 
-    goto/16 :goto_0
+    if-lez v7, :cond_9
+
+    iget-object v7, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->c:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v3, v2, v1, v7}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+
+    :cond_9
+    iget v7, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->b:F
+
+    cmpl-float v7, v1, v7
+
+    if-eqz v7, :cond_a
+
+    iget v7, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->b:F
+
+    iget-object v8, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->d:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v3, v2, v7, v8}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+
+    :cond_a
+    add-int/lit8 v2, v5, 0x1
+
+    move v5, v2
+
+    goto :goto_2
+
+    :cond_b
+    move v3, v4
+
+    goto :goto_5
 
     :cond_c
     iget v1, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->h:I
 
-    goto :goto_4
+    goto :goto_3
 
     :cond_d
     add-float/2addr v0, v1
@@ -859,7 +859,7 @@
 
     move v4, v11
 
-    goto :goto_5
+    goto :goto_4
 .end method
 
 .method protected onMeasure(II)V

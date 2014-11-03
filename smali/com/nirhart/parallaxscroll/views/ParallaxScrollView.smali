@@ -193,7 +193,7 @@
 
     move-result v0
 
-    if-lez v0, :cond_1
+    if-lez v0, :cond_0
 
     invoke-virtual {p0, v2}, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->getChildAt(I)Landroid/view/View;
 
@@ -201,7 +201,7 @@
 
     instance-of v0, v0, Landroid/view/ViewGroup;
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     invoke-virtual {p0, v2}, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->getChildAt(I)Landroid/view/View;
 
@@ -222,8 +222,26 @@
     move v1, v2
 
     :goto_0
-    if-ge v1, v3, :cond_0
+    if-lt v1, v3, :cond_1
 
+    invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->j:Landroid/view/View;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->k:Landroid/view/View;
+
+    :cond_0
+    return-void
+
+    :cond_1
     new-instance v4, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView$ParallaxedScrollView;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
@@ -239,24 +257,6 @@
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->j:Landroid/view/View;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->k:Landroid/view/View;
-
-    :cond_1
-    return-void
 .end method
 
 .method private a(Landroid/view/View;Z)V
@@ -458,12 +458,8 @@
     invoke-interface {v0, p1, p2, p3, p4}, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView$OnScrollListener;->onScrollChanged(IIII)V
 
     :cond_0
-    if-gez p2, :cond_2
+    if-ltz p2, :cond_1
 
-    :cond_1
-    return-void
-
-    :cond_2
     iget v0, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->g:F
 
     iget-object v1, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->h:Ljava/util/ArrayList;
@@ -479,8 +475,12 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-nez v0, :cond_2
 
+    :cond_1
+    return-void
+
+    :cond_2
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0

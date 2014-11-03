@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="startService" android:onClick="start" />
+        <Button android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="stopService" android:onClick="stop" />
+        <Button android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="insertData" android:onClick="insertData" />
+    </LinearLayout>
+    <ListView android:id="@id/listview" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:choiceMode="singleChoice" android:layout_weight="1.0" />
+</LinearLayout>

@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/f;->a:Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->a(Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;)Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView$DynamicDetailChartLoadCallback;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->b(Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;)Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView$DynamicDetailChartLoadCallback;
 
     move-result-object v0
 
@@ -43,7 +43,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/f;->a:Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->a(Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;)Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView$DynamicDetailChartLoadCallback;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->b(Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;)Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView$DynamicDetailChartLoadCallback;
 
     move-result-object v0
 
@@ -65,7 +65,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/f;->a:Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->b(Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;)Ljava/util/ArrayList;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->c(Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;)Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -79,7 +79,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/f;->a:Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->b(Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;)Ljava/util/ArrayList;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->c(Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;)Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -91,7 +91,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/f;->a:Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->c(Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;)I
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->d(Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;)I
 
     move-result v1
 
@@ -103,7 +103,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/f;->a:Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->a(Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;)Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView$DynamicDetailChartLoadCallback;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->b(Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;)Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView$DynamicDetailChartLoadCallback;
 
     move-result-object v0
 
@@ -118,7 +118,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/f;->a:Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->a(Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;)Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView$DynamicDetailChartLoadCallback;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->b(Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;)Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView$DynamicDetailChartLoadCallback;
 
     move-result-object v0
 

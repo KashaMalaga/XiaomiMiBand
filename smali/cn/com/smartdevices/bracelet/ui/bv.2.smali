@@ -2,46 +2,34 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;
 
 
 # direct methods
-.method private constructor <init>(Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bv;->a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bv;->a:Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;Lcn/com/smartdevices/bracelet/ui/bn;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/ui/bv;-><init>(Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;)V
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 2
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 1
 
-    check-cast p1, Lcn/com/smartdevices/bracelet/ui/bt;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bv;->a:Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;
 
-    check-cast p2, Lcn/com/smartdevices/bracelet/ui/bt;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;->c(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;)V
 
-    iget v0, p2, Lcn/com/smartdevices/bracelet/ui/bt;->b:I
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    iget v1, p1, Lcn/com/smartdevices/bracelet/ui/bt;->b:I
-
-    sub-int/2addr v0, v1
-
-    return v0
+    return-void
 .end method

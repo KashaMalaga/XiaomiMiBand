@@ -278,21 +278,24 @@
 
     cmpg-float v2, v1, v2
 
-    if-gtz v2, :cond_1
+    if-lez v2, :cond_0
 
+    return-void
+
+    :cond_0
     add-int/lit8 v0, v0, 0x1
 
     const/4 v2, 0x0
 
     cmpg-float v2, v1, v2
 
-    if-gez v2, :cond_0
+    if-gez v2, :cond_1
 
     add-float/2addr v1, v5
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     iget v2, p0, Lcn/com/smartdevices/bracelet/view/RadioRuler;->s:I
 
     packed-switch v2, :pswitch_data_0
@@ -312,19 +315,13 @@
     :goto_1
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
     iget v3, p0, Lcn/com/smartdevices/bracelet/view/RadioRuler;->u:F
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-static {v3}, Ljava/lang/String;->valueOf(F)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    const-string v3, ""
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -354,9 +351,6 @@
     iput v2, p0, Lcn/com/smartdevices/bracelet/view/RadioRuler;->u:F
 
     goto :goto_1
-
-    :cond_1
-    return-void
 
     :pswitch_data_0
     .packed-switch 0x3ea
@@ -477,8 +471,11 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
+    return-void
+
+    :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/RadioRuler;->v:Landroid/widget/Scroller;
 
     invoke-virtual {v0}, Landroid/widget/Scroller;->getCurrX()I
@@ -492,9 +489,6 @@
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/RadioRuler;->invalidate()V
 
     goto :goto_0
-
-    :cond_0
-    return-void
 .end method
 
 
@@ -518,13 +512,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "startview position is "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/view/RadioRuler;->h:F
 
@@ -542,13 +532,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "scroll distance position is "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/view/RadioRuler;->g:F
 

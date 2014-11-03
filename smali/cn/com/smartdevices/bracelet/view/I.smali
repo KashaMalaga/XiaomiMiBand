@@ -1,25 +1,19 @@
-.class final Lcn/com/smartdevices/bracelet/view/I;
+.class Lcn/com/smartdevices/bracelet/view/i;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/support/v4/os/ParcelableCompatCreatorCallbacks;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Landroid/support/v4/os/ParcelableCompatCreatorCallbacks",
-        "<",
-        "Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;",
-        ">;"
-    }
-.end annotation
+# instance fields
+.field final synthetic a:Lcn/com/smartdevices/bracelet/view/DynamicView;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/view/DynamicView;)V
     .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/i;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -28,40 +22,34 @@
 
 
 # virtual methods
-.method public a(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;
-    .locals 1
+.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 2
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;
-
-    invoke-direct {v0, p1, p2}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object v0
-.end method
-
-.method public a(I)[Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;
-    .locals 1
-
-    new-array v0, p1, [Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;
-
-    return-object v0
-.end method
-
-.method public synthetic createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-virtual {p0, p1, p2}, Lcn/com/smartdevices/bracelet/view/I;->a(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    check-cast v0, Ljava/lang/Float;
 
-.method public synthetic newArray(I)[Ljava/lang/Object;
-    .locals 1
+    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
 
-    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/view/I;->a(I)[Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;
+    move-result v0
 
-    move-result-object v0
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/i;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
 
-    return-object v0
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/view/DynamicView;->d(Lcn/com/smartdevices/bracelet/view/DynamicView;)Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->setScaleX(F)V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/i;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/view/DynamicView;->d(Lcn/com/smartdevices/bracelet/view/DynamicView;)Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->setScaleY(F)V
+
+    return-void
 .end method

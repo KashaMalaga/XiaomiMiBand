@@ -90,13 +90,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "get user phone: "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -114,12 +110,12 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->a(Lcn/com/smartdevices/bracelet/activity/LoginActivity;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->a(Lcn/com/smartdevices/bracelet/activity/LoginActivity;Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method protected synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
+.method protected varargs synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
     check-cast p1, [Ljava/lang/Void;

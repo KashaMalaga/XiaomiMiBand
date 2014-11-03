@@ -64,8 +64,20 @@
 
     move-result v0
 
-    if-ge v7, v0, :cond_3
+    if-lt v7, v0, :cond_2
 
+    if-eqz p1, :cond_1
+
+    invoke-static {v9}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;->sendOnFinishMessage(Ljava/lang/Object;)V
+
+    :cond_1
+    return-void
+
+    :cond_2
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/BleTask/BleSetAlarmClockTask;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -80,13 +92,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "BleSetAlarmClockTask:"
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v6}, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->toJson()Ljava/lang/String;
 
@@ -108,7 +116,7 @@
 
     iget-object v0, v6, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->calendar:Ljava/util/Calendar;
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_3
 
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
@@ -116,18 +124,14 @@
 
     iput-object v0, v6, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->calendar:Ljava/util/Calendar;
 
-    :cond_1
+    :cond_3
     sget-object v0, Lcn/com/smartdevices/bracelet/BleTask/BleSetAlarmClockTask;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "Set alarm at: "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -157,13 +161,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "Set alarm at: "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -197,7 +197,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_4
 
     move v2, v9
 
@@ -224,20 +224,8 @@
 
     goto/16 :goto_0
 
-    :cond_2
+    :cond_4
     move v2, v8
 
     goto :goto_1
-
-    :cond_3
-    if-eqz p1, :cond_4
-
-    invoke-static {v9}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;->sendOnFinishMessage(Ljava/lang/Object;)V
-
-    :cond_4
-    return-void
 .end method

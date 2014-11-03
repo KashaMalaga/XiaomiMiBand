@@ -21,6 +21,14 @@
     return-void
 .end method
 
+.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/d;)Lcn/com/smartdevices/bracelet/lab/c;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/d;->b:Lcn/com/smartdevices/bracelet/lab/c;
+
+    return-object v0
+.end method
+
 
 # virtual methods
 .method public a()V
@@ -55,7 +63,9 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/d;->b:Lcn/com/smartdevices/bracelet/lab/c;
 
-    iget-object v2, v2, Lcn/com/smartdevices/bracelet/lab/c;->a:Lcn/com/smartdevices/bracelet/lab/LabSportAnalyserController;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lab/c;->c(Lcn/com/smartdevices/bracelet/lab/c;)Lcn/com/smartdevices/bracelet/lab/LabSportAnalyserController;
+
+    move-result-object v2
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/d;->b:Lcn/com/smartdevices/bracelet/lab/c;
 

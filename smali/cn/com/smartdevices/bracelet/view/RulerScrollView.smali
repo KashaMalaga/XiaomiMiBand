@@ -100,7 +100,7 @@
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const v0, 0x7f0a01bf
+    const v0, 0x7f0701bb
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/RulerScrollView;->findViewById(I)Landroid/view/View;
 
@@ -262,21 +262,15 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     iget v2, p0, Lcn/com/smartdevices/bracelet/view/RulerScrollView;->k:F
 
     float-to-int v2, v2
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    const-string v2, ""
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -304,13 +298,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "adjust left from:"
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/view/RulerScrollView;->p:I
 
@@ -360,13 +350,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "adjust left to:"
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/view/RulerScrollView;->p:I
 
@@ -398,7 +384,7 @@
 .method private b(I)V
     .locals 4
 
-    const v3, 0x7f0a01be
+    const v3, 0x7f0701ba
 
     int-to-float v0, p1
 
@@ -543,32 +529,27 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 2
 
-    const/4 v1, 0x1
-
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
-    move-result v0
-
-    if-ne v0, v1, :cond_0
-
-    :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/RulerScrollView;->c:Landroid/view/GestureDetector;
 
     invoke-virtual {v0, p1}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_0
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    if-ne v0, v1, :cond_1
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/view/RulerScrollView;->b()V
 
-    :cond_1
+    :cond_0
     invoke-super {p0, p1}, Landroid/widget/HorizontalScrollView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -648,7 +629,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/RulerScrollView;->l:Landroid/view/View;
 
-    const v1, 0x7f0a01bb
+    const v1, 0x7f0701b7
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -660,7 +641,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/RulerScrollView;->l:Landroid/view/View;
 
-    const v1, 0x7f0a01bc
+    const v1, 0x7f0701b8
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

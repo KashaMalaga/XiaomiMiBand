@@ -1,4 +1,4 @@
-.class final Lcn/com/smartdevices/bracelet/chart/util/h;
+.class Lcn/com/smartdevices/bracelet/chart/util/h;
 .super Ljava/lang/Object;
 
 # interfaces
@@ -6,7 +6,7 @@
 
 
 # instance fields
-.field final synthetic a:Landroid/widget/TextView;
+.field private final synthetic a:Landroid/widget/TextView;
 
 
 # direct methods

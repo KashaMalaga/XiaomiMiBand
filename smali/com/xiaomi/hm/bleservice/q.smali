@@ -1,4 +1,4 @@
-.class final Lcom/xiaomi/hm/bleservice/q;
+.class Lcom/xiaomi/hm/bleservice/q;
 .super Ljava/lang/Object;
 
 # interfaces
@@ -41,13 +41,13 @@
 
     move-result v2
 
-    invoke-static {v1, v2}, Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;->a(Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;I)I
+    invoke-static {v1, v2}, Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;->a(Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;I)V
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    invoke-static {v1, v2}, Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;->b(Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;I)I
+    invoke-static {v1, v2}, Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;->b(Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;I)V
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -56,7 +56,7 @@
     if-ne v2, v0, :cond_0
 
     :goto_0
-    invoke-static {v1, v0}, Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;->a(Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;Z)Z
+    invoke-static {v1, v0}, Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;->a(Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;Z)V
 
     return-object v1
 

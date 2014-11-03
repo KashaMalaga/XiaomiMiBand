@@ -2,26 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/animation/Animation$AnimationListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/Boolean;
-
-.field final synthetic b:Landroid/view/View;
-
-.field final synthetic c:Lcn/com/smartdevices/bracelet/ui/MainMenuFragment;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/as;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/MainMenuFragment;Ljava/lang/Boolean;Landroid/view/View;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/as;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/at;->c:Lcn/com/smartdevices/bracelet/ui/MainMenuFragment;
-
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/at;->a:Ljava/lang/Boolean;
-
-    iput-object p3, p0, Lcn/com/smartdevices/bracelet/ui/at;->b:Landroid/view/View;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/at;->a:Lcn/com/smartdevices/bracelet/ui/as;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -30,35 +22,18 @@
 
 
 # virtual methods
-.method public onAnimationEnd(Landroid/view/animation/Animation;)V
+.method public run()V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/at;->a:Ljava/lang/Boolean;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/at;->a:Lcn/com/smartdevices/bracelet/ui/as;
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/as;->a(Lcn/com/smartdevices/bracelet/ui/as;)Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    move-result v0
+    move-result-object v0
 
-    if-nez v0, :cond_0
+    const/4 v1, 0x0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/at;->b:Landroid/view/View;
-
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public onAnimationRepeat(Landroid/view/animation/Animation;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onAnimationStart(Landroid/view/animation/Animation;)V
-    .locals 0
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->updateDynamicList(Z)V
 
     return-void
 .end method

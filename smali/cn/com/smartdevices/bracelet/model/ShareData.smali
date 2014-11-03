@@ -290,16 +290,15 @@
 
     const/4 v1, 0x3
 
-    if-ne v0, v1, :cond_1
+    if-eq v0, v1, :cond_0
 
-    :cond_0
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    :cond_1
-    const/4 v0, 0x0
+    :cond_0
+    const/4 v0, 0x1
 
     goto :goto_0
 .end method
@@ -422,13 +421,9 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v1, "type:"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->type:I
 

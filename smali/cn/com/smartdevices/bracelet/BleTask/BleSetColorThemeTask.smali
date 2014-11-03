@@ -101,13 +101,9 @@
 
     new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v5, "r="
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

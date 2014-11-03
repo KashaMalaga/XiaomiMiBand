@@ -47,13 +47,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "goalStep = "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetSportGoalActivity;->mPersonInfo:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
@@ -135,13 +131,13 @@
 
     invoke-super/range {p0 .. p1}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoBaseActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030018
+    const v0, 0x7f03001a
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetSportGoalActivity;->setContentView(I)V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetSportGoalActivity;->initViews()V
 
-    const v0, 0x7f0a0096
+    const v0, 0x7f070096
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetSportGoalActivity;->findViewById(I)Landroid/view/View;
 
@@ -159,19 +155,19 @@
 
     move-result-object v0
 
-    const v1, 0x7f0200d1
+    const v1, 0x7f0200bb
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->setCenterDrawable(I)Lkankan/wheel/widget/WheelView;
 
     move-result-object v0
 
-    const v1, 0x7f0d01fa
+    const v1, 0x7f0c0071
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetSportGoalActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    const v2, 0x7f090014
+    const v2, 0x7f080005
 
     const/16 v3, 0xc
 
@@ -195,7 +191,7 @@
 
     move-result-object v1
 
-    const v5, 0x7f09005c
+    const v5, 0x7f080004
 
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -205,7 +201,7 @@
 
     move-result-object v1
 
-    const v6, 0x7f090014
+    const v6, 0x7f080005
 
     invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -215,7 +211,7 @@
 
     move-result-object v1
 
-    const v7, 0x7f090016
+    const v7, 0x7f08002d
 
     invoke-virtual {v1, v7}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -239,7 +235,7 @@
 
     invoke-virtual {v14, v0}, Lkankan/wheel/widget/WheelView;->setViewAdapter(Lkankan/wheel/widget/adapters/WheelViewAdapter;)Lkankan/wheel/widget/WheelView;
 
-    const v0, 0x7f0a0095
+    const v0, 0x7f070095
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetSportGoalActivity;->findViewById(I)Landroid/view/View;
 
@@ -259,7 +255,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetSportGoalActivity;->c:Landroid/widget/TextView;
 
-    const v1, 0x7f0d016b
+    const v1, 0x7f0c008e
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -293,13 +289,9 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v3, "curitem:"
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -320,7 +312,7 @@
     :cond_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetSportGoalActivity;->c:Landroid/widget/TextView;
 
-    const v1, 0x7f0d016a
+    const v1, 0x7f0c008d
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 

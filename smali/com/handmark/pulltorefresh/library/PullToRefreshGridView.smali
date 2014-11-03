@@ -67,21 +67,21 @@
 
     if-lt v0, v1, :cond_0
 
-    new-instance v0, Lcom/handmark/pulltorefresh/library/l;
+    new-instance v0, Lcom/handmark/pulltorefresh/library/i;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/handmark/pulltorefresh/library/l;-><init>(Lcom/handmark/pulltorefresh/library/PullToRefreshGridView;Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/handmark/pulltorefresh/library/i;-><init>(Lcom/handmark/pulltorefresh/library/PullToRefreshGridView;Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     :goto_0
-    const v1, 0x7f0a0021
+    const v1, 0x7f070021
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setId(I)V
 
     return-object v0
 
     :cond_0
-    new-instance v0, Lcom/handmark/pulltorefresh/library/k;
+    new-instance v0, Lcom/handmark/pulltorefresh/library/h;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/handmark/pulltorefresh/library/k;-><init>(Lcom/handmark/pulltorefresh/library/PullToRefreshGridView;Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/handmark/pulltorefresh/library/h;-><init>(Lcom/handmark/pulltorefresh/library/PullToRefreshGridView;Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     goto :goto_0
 .end method

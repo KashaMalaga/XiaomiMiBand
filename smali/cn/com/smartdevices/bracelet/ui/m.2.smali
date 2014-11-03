@@ -17,6 +17,14 @@
     return-void
 .end method
 
+.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/m;)Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/m;->a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
+
+    return-object v0
+.end method
+
 
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
@@ -37,13 +45,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "MSG_LOAD_DATA_COMPLETE......................"
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     new-instance v2, Ljava/util/Date;
 

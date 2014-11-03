@@ -1129,7 +1129,7 @@
 
     iget-object v0, p0, Lcom/nostra13/universalimageloader/core/ImageLoader;->i:Lcom/nostra13/universalimageloader/core/i;
 
-    invoke-virtual {v0}, Lcom/nostra13/universalimageloader/core/i;->c()V
+    invoke-virtual {v0}, Lcom/nostra13/universalimageloader/core/i;->stop()V
 
     return-void
 .end method

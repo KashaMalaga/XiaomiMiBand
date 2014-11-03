@@ -3,18 +3,18 @@
 
 
 # instance fields
-.field final synthetic b:I
+.field final synthetic b:Lcn/com/smartdevices/bracelet/lab/LabSportAnalyserController;
 
-.field final synthetic c:Lcn/com/smartdevices/bracelet/lab/LabSportAnalyserController;
+.field private final synthetic c:I
 
 
 # direct methods
 .method constructor <init>(Lcn/com/smartdevices/bracelet/lab/LabSportAnalyserController;I)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/a;->c:Lcn/com/smartdevices/bracelet/lab/LabSportAnalyserController;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/a;->b:Lcn/com/smartdevices/bracelet/lab/LabSportAnalyserController;
 
-    iput p2, p0, Lcn/com/smartdevices/bracelet/lab/a;->b:I
+    iput p2, p0, Lcn/com/smartdevices/bracelet/lab/a;->c:I
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;-><init>()V
 
@@ -50,15 +50,11 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "setLatency success......"
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object v1
-
-    iget v2, p0, Lcn/com/smartdevices/bracelet/lab/a;->b:I
+    iget v2, p0, Lcn/com/smartdevices/bracelet/lab/a;->c:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -78,15 +74,11 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "setLatency failed......"
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object v1
-
-    iget v2, p0, Lcn/com/smartdevices/bracelet/lab/a;->b:I
+    iget v2, p0, Lcn/com/smartdevices/bracelet/lab/a;->c:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

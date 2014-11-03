@@ -117,8 +117,11 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
+    return-void
+
+    :cond_0
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -134,9 +137,6 @@
     invoke-interface {v0, p1}, Lcn/com/smartdevices/bracelet/lab/SportAnalyserObserver;->onDeviceOpStateChanged(I)V
 
     goto :goto_0
-
-    :cond_0
-    return-void
 .end method
 
 .method static synthetic a(Lcn/com/smartdevices/bracelet/lab/LabSportAnalyserController;I)V
@@ -167,8 +167,12 @@
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-nez v1, :cond_1
 
+    :goto_1
+    return-void
+
+    :cond_1
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -224,8 +228,7 @@
     :catch_0
     move-exception v1
 
-    :cond_1
-    return-void
+    goto :goto_1
 .end method
 
 .method private b()Z
@@ -370,13 +373,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "SportAnalyserObserver "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
 
@@ -454,13 +453,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "SportAnalyserObserver "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
 
@@ -530,13 +525,9 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v3, "wanna enable sensor last opState = "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/LabSportAnalyserController;->a:Lcn/com/smartdevices/bracelet/lab/c;
 
@@ -917,13 +908,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "SportAnalyserObserver "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
 
@@ -982,13 +969,9 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v3, "wanna disable sensor last opState = "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/LabSportAnalyserController;->a:Lcn/com/smartdevices/bracelet/lab/c;
 
@@ -1047,8 +1030,12 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-nez v0, :cond_1
 
+    :goto_1
+    return-void
+
+    :cond_1
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -1076,6 +1063,5 @@
     :catch_0
     move-exception v0
 
-    :cond_1
-    return-void
+    goto :goto_1
 .end method

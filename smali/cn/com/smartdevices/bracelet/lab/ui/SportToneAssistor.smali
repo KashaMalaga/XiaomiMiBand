@@ -17,7 +17,7 @@
 
 
 # instance fields
-.field private d:Lcn/com/smartdevices/bracelet/lab/ui/W;
+.field private d:Lcn/com/smartdevices/bracelet/lab/ui/V;
 
 .field private e:Landroid/net/Uri;
 
@@ -25,13 +25,13 @@
 
 .field private g:Landroid/net/Uri;
 
-.field private h:Lcn/com/smartdevices/bracelet/lab/ui/O;
+.field private h:Lcn/com/smartdevices/bracelet/lab/ui/Q;
 
-.field private i:Lcn/com/smartdevices/bracelet/lab/ui/O;
+.field private i:Lcn/com/smartdevices/bracelet/lab/ui/Q;
 
-.field private j:Lcn/com/smartdevices/bracelet/lab/ui/O;
+.field private j:Lcn/com/smartdevices/bracelet/lab/ui/Q;
 
-.field private k:Lcn/com/smartdevices/bracelet/lab/PBRecordPref;
+.field private k:Lcn/com/smartdevices/bracelet/lab/LabFactoryPreference;
 
 .field private l:Landroid/content/Context;
 
@@ -44,7 +44,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->d:Lcn/com/smartdevices/bracelet/lab/ui/W;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->d:Lcn/com/smartdevices/bracelet/lab/ui/V;
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->e:Landroid/net/Uri;
 
@@ -52,13 +52,13 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->g:Landroid/net/Uri;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->h:Lcn/com/smartdevices/bracelet/lab/ui/O;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->h:Lcn/com/smartdevices/bracelet/lab/ui/Q;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->i:Lcn/com/smartdevices/bracelet/lab/ui/O;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->i:Lcn/com/smartdevices/bracelet/lab/ui/Q;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->j:Lcn/com/smartdevices/bracelet/lab/ui/O;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->j:Lcn/com/smartdevices/bracelet/lab/ui/Q;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->k:Lcn/com/smartdevices/bracelet/lab/PBRecordPref;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->k:Lcn/com/smartdevices/bracelet/lab/LabFactoryPreference;
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->l:Landroid/content/Context;
 
@@ -72,7 +72,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->d:Lcn/com/smartdevices/bracelet/lab/ui/W;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->d:Lcn/com/smartdevices/bracelet/lab/ui/V;
 
     iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->e:Landroid/net/Uri;
 
@@ -80,53 +80,53 @@
 
     iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->g:Landroid/net/Uri;
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->h:Lcn/com/smartdevices/bracelet/lab/ui/O;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->h:Lcn/com/smartdevices/bracelet/lab/ui/Q;
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->i:Lcn/com/smartdevices/bracelet/lab/ui/O;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->i:Lcn/com/smartdevices/bracelet/lab/ui/Q;
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->j:Lcn/com/smartdevices/bracelet/lab/ui/O;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->j:Lcn/com/smartdevices/bracelet/lab/ui/Q;
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->k:Lcn/com/smartdevices/bracelet/lab/PBRecordPref;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->k:Lcn/com/smartdevices/bracelet/lab/LabFactoryPreference;
 
     iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->l:Landroid/content/Context;
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->l:Landroid/content/Context;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/lab/PBRecordPref;
+    new-instance v0, Lcn/com/smartdevices/bracelet/lab/LabFactoryPreference;
 
-    invoke-direct {v0, p1}, Lcn/com/smartdevices/bracelet/lab/PBRecordPref;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcn/com/smartdevices/bracelet/lab/LabFactoryPreference;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->k:Lcn/com/smartdevices/bracelet/lab/PBRecordPref;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->k:Lcn/com/smartdevices/bracelet/lab/LabFactoryPreference;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/lab/ui/W;
+    new-instance v0, Lcn/com/smartdevices/bracelet/lab/ui/V;
 
-    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/W;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;Lcn/com/smartdevices/bracelet/lab/ui/V;)V
+    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/V;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;Lcn/com/smartdevices/bracelet/lab/ui/V;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->d:Lcn/com/smartdevices/bracelet/lab/ui/W;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->d:Lcn/com/smartdevices/bracelet/lab/ui/V;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/lab/ui/O;
+    new-instance v0, Lcn/com/smartdevices/bracelet/lab/ui/Q;
 
     const-string v1, "rhythm"
 
-    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/O;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/Q;-><init>(Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->h:Lcn/com/smartdevices/bracelet/lab/ui/O;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->h:Lcn/com/smartdevices/bracelet/lab/ui/Q;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/lab/ui/O;
+    new-instance v0, Lcn/com/smartdevices/bracelet/lab/ui/Q;
 
-    const-string v1, "greate"
+    const-string v1, "great"
 
-    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/O;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/Q;-><init>(Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->i:Lcn/com/smartdevices/bracelet/lab/ui/O;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->i:Lcn/com/smartdevices/bracelet/lab/ui/Q;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/lab/ui/O;
+    new-instance v0, Lcn/com/smartdevices/bracelet/lab/ui/Q;
 
     const-string v1, "wellDone"
 
-    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/O;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/Q;-><init>(Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->j:Lcn/com/smartdevices/bracelet/lab/ui/O;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->j:Lcn/com/smartdevices/bracelet/lab/ui/Q;
 
     const/4 v0, 0x0
 
@@ -171,13 +171,13 @@
     throw v0
 
     :cond_0
-    new-instance v1, Lcn/com/smartdevices/bracelet/lab/PBRecordPref;
+    new-instance v1, Lcn/com/smartdevices/bracelet/lab/LabFactoryPreference;
 
-    invoke-direct {v1, p1}, Lcn/com/smartdevices/bracelet/lab/PBRecordPref;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, p1}, Lcn/com/smartdevices/bracelet/lab/LabFactoryPreference;-><init>(Landroid/content/Context;)V
 
     if-nez p2, :cond_4
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/lab/PBRecordPref;->getRhythmToneUri()Landroid/net/Uri;
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/lab/LabFactoryPreference;->getRhythmToneUri()Landroid/net/Uri;
 
     move-result-object v1
 
@@ -226,7 +226,7 @@
 
     if-ne v2, p2, :cond_5
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/lab/PBRecordPref;->getRhythmNewPBUri()Landroid/net/Uri;
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/lab/LabFactoryPreference;->getRhythmNewPBUri()Landroid/net/Uri;
 
     move-result-object v1
 
@@ -243,7 +243,7 @@
     :cond_5
     if-ne v4, p2, :cond_6
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/lab/PBRecordPref;->getRhythmPitchToneUri()Landroid/net/Uri;
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/lab/LabFactoryPreference;->getRhythmPitchToneUri()Landroid/net/Uri;
 
     move-result-object v1
 
@@ -263,10 +263,10 @@
     goto :goto_0
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;)Lcn/com/smartdevices/bracelet/lab/ui/O;
+.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;)Lcn/com/smartdevices/bracelet/lab/ui/Q;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->h:Lcn/com/smartdevices/bracelet/lab/ui/O;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->h:Lcn/com/smartdevices/bracelet/lab/ui/Q;
 
     return-object v0
 .end method
@@ -459,15 +459,23 @@
     return-object v0
 .end method
 
-.method static synthetic d(Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;)Lcn/com/smartdevices/bracelet/lab/ui/W;
+.method static synthetic d(Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;)Lcn/com/smartdevices/bracelet/lab/ui/V;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->d:Lcn/com/smartdevices/bracelet/lab/ui/W;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->d:Lcn/com/smartdevices/bracelet/lab/ui/V;
 
     return-object v0
 .end method
 
-.method static synthetic e(Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;)Landroid/net/Uri;
+.method static synthetic e(Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;)Lcn/com/smartdevices/bracelet/lab/ui/Q;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->i:Lcn/com/smartdevices/bracelet/lab/ui/Q;
+
+    return-object v0
+.end method
+
+.method static synthetic f(Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;)Landroid/net/Uri;
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->f:Landroid/net/Uri;
@@ -475,18 +483,10 @@
     return-object v0
 .end method
 
-.method static synthetic f(Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;)Lcn/com/smartdevices/bracelet/lab/ui/O;
+.method static synthetic g(Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;)Lcn/com/smartdevices/bracelet/lab/ui/Q;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->i:Lcn/com/smartdevices/bracelet/lab/ui/O;
-
-    return-object v0
-.end method
-
-.method static synthetic g(Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;)Landroid/net/Uri;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->g:Landroid/net/Uri;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->j:Lcn/com/smartdevices/bracelet/lab/ui/Q;
 
     return-object v0
 .end method
@@ -540,13 +540,13 @@
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -580,13 +580,9 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v4, " isSucceeded = "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -612,10 +608,10 @@
     goto :goto_0
 .end method
 
-.method static synthetic h(Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;)Lcn/com/smartdevices/bracelet/lab/ui/O;
+.method static synthetic h(Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;)Landroid/net/Uri;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->j:Lcn/com/smartdevices/bracelet/lab/ui/O;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->g:Landroid/net/Uri;
 
     return-object v0
 .end method
@@ -627,9 +623,9 @@
 
     const/4 v2, 0x2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->d:Lcn/com/smartdevices/bracelet/lab/ui/W;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->d:Lcn/com/smartdevices/bracelet/lab/ui/V;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/ui/W;->obtainMessage()Landroid/os/Message;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/ui/V;->obtainMessage()Landroid/os/Message;
 
     move-result-object v0
 
@@ -642,9 +638,9 @@
     iput v1, v0, Landroid/os/Message;->arg1:I
 
     :goto_0
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->d:Lcn/com/smartdevices/bracelet/lab/ui/W;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->d:Lcn/com/smartdevices/bracelet/lab/ui/V;
 
-    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/lab/ui/W;->sendMessage(Landroid/os/Message;)Z
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/lab/ui/V;->sendMessage(Landroid/os/Message;)Z
 
     return-void
 
@@ -668,13 +664,13 @@
 .method public release()V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->d:Lcn/com/smartdevices/bracelet/lab/ui/W;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->d:Lcn/com/smartdevices/bracelet/lab/ui/V;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->d:Lcn/com/smartdevices/bracelet/lab/ui/W;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->d:Lcn/com/smartdevices/bracelet/lab/ui/V;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/ui/W;->a()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/ui/V;->a()V
 
     :cond_0
     return-void
@@ -683,54 +679,54 @@
 .method public stop()V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->h:Lcn/com/smartdevices/bracelet/lab/ui/O;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->h:Lcn/com/smartdevices/bracelet/lab/ui/Q;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->h:Lcn/com/smartdevices/bracelet/lab/ui/O;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->h:Lcn/com/smartdevices/bracelet/lab/ui/Q;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/ui/O;->c()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/ui/Q;->stop()V
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->i:Lcn/com/smartdevices/bracelet/lab/ui/O;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->i:Lcn/com/smartdevices/bracelet/lab/ui/Q;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->i:Lcn/com/smartdevices/bracelet/lab/ui/O;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->i:Lcn/com/smartdevices/bracelet/lab/ui/Q;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/ui/O;->c()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/ui/Q;->stop()V
 
     :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->j:Lcn/com/smartdevices/bracelet/lab/ui/O;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->j:Lcn/com/smartdevices/bracelet/lab/ui/Q;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->j:Lcn/com/smartdevices/bracelet/lab/ui/O;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->j:Lcn/com/smartdevices/bracelet/lab/ui/Q;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/ui/O;->c()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/ui/Q;->stop()V
 
     :cond_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->k:Lcn/com/smartdevices/bracelet/lab/PBRecordPref;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->k:Lcn/com/smartdevices/bracelet/lab/LabFactoryPreference;
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->k:Lcn/com/smartdevices/bracelet/lab/PBRecordPref;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->k:Lcn/com/smartdevices/bracelet/lab/LabFactoryPreference;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->e:Landroid/net/Uri;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lab/PBRecordPref;->setRhythmToneUri(Landroid/net/Uri;)Z
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lab/LabFactoryPreference;->setRhythmToneUri(Landroid/net/Uri;)Z
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->k:Lcn/com/smartdevices/bracelet/lab/PBRecordPref;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->k:Lcn/com/smartdevices/bracelet/lab/LabFactoryPreference;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->g:Landroid/net/Uri;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lab/PBRecordPref;->setRhythmPitchToneUri(Landroid/net/Uri;)Z
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lab/LabFactoryPreference;->setRhythmPitchToneUri(Landroid/net/Uri;)Z
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->k:Lcn/com/smartdevices/bracelet/lab/PBRecordPref;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->k:Lcn/com/smartdevices/bracelet/lab/LabFactoryPreference;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportToneAssistor;->f:Landroid/net/Uri;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lab/PBRecordPref;->setRhythmNewPBUri(Landroid/net/Uri;)Z
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lab/LabFactoryPreference;->setRhythmNewPBUri(Landroid/net/Uri;)Z
 
     :cond_3
     return-void

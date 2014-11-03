@@ -27,7 +27,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/j;->a:Lcn/com/smartdevices/bracelet/lab/ui/i;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/lab/ui/i;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/i;->a(Lcn/com/smartdevices/bracelet/lab/ui/i;)Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
+
+    move-result-object v0
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->f(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/TextView;
 

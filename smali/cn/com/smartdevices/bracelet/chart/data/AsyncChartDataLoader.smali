@@ -10,7 +10,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcn/com/smartdevices/bracelet/chart/data/b;",
+            "Lcn/com/smartdevices/bracelet/chart/data/a;",
             ">;"
         }
     .end annotation
@@ -71,25 +71,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/data/b;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/data/b;->isCancelled()Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/chart/data/b;->cancel(Z)Z
-
-    goto :goto_0
+    if-nez v0, :cond_2
 
     :cond_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/data/AsyncChartDataLoader;->b:Ljava/util/ArrayList;
@@ -97,6 +79,25 @@
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
     return-void
+
+    :cond_2
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/chart/data/a;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/data/a;->isCancelled()Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/chart/data/a;->cancel(Z)Z
+
+    goto :goto_0
 .end method
 
 .method public isCancelled()Z
@@ -121,15 +122,22 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-nez v0, :cond_2
 
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+
+    :cond_2
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/data/b;
+    check-cast v0, Lcn/com/smartdevices/bracelet/chart/data/a;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/data/b;->isCancelled()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/data/a;->isCancelled()Z
 
     move-result v0
 
@@ -137,23 +145,17 @@
 
     const/4 v0, 0x1
 
-    :goto_0
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
     goto :goto_0
 .end method
 
 .method public loadItemData(I)V
     .locals 5
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/chart/data/b;
+    new-instance v0, Lcn/com/smartdevices/bracelet/chart/data/a;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/chart/data/b;-><init>(Lcn/com/smartdevices/bracelet/chart/data/AsyncChartDataLoader;Lcn/com/smartdevices/bracelet/chart/data/a;)V
+    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/chart/data/a;-><init>(Lcn/com/smartdevices/bracelet/chart/data/AsyncChartDataLoader;Lcn/com/smartdevices/bracelet/chart/data/a;)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/data/AsyncChartDataLoader;->a:Ljava/util/concurrent/Executor;
 
@@ -169,7 +171,7 @@
 
     aput-object v4, v2, v3
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/chart/data/b;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/chart/data/a;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/data/AsyncChartDataLoader;->b:Ljava/util/ArrayList;
 
