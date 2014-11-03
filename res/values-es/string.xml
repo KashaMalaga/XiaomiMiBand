@@ -261,7 +261,7 @@
   <string name="lab_factory_sport_min">%s puntos</string>
   <string formatted="false" name="lab_factory_sport_min_second">%s puntos %s segundos</string>
   <string name="lab_factory_sport_monitor_bracelet_offline">La pulsera no está desconectada</string>
-  <string name="lab_factory_sport_monitor_bracelet_offline_notice">Can do %s after bracelet connected at once</string>
+  <string name="lab_factory_sport_monitor_bracelet_offline_notice">Puedes practicar %s cuando tengas la conectada la pulsera</string>
   <string name="lab_factory_sport_monitor_cancelled_notice">Se empezará a contar automáticamente cuando se haga %s con Xiaomi Ring</string>
   <string name="lab_factory_sport_monitor_timeout_notice">Ningún evento detectado en 2 minutos</string>
   <string name="lab_factory_sport_more_sport_favorite_notice">Por favor, elija solo un deporte</string>
@@ -287,7 +287,7 @@
   <string name="lab_factory_sport_type_muscle_exercise">Fitness</string>
   <string name="lab_factory_sport_type_others">Otros</string>
   <string name="lab_factory_sport_type_ropeskipping">Saltar la comba</string>
-  <string name="lab_factory_sport_type_situp">Sentarse</string>
+  <string name="lab_factory_sport_type_situp">Abdominales</string>
   <string name="lab_factory_sport_type_skidding">Patinar</string>
   <string name="lab_factory_sport_type_sliding">Skateboard</string>
   <string name="lab_factory_sport_type_surfing">Surfear</string>
