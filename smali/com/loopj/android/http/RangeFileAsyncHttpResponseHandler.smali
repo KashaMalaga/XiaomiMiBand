@@ -85,11 +85,27 @@
     move-result-object v6
 
     invoke-virtual {v6}, Ljava/lang/Thread;->isInterrupted()Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v6
 
-    if-nez v6, :cond_0
+    if-eqz v6, :cond_2
 
+    :cond_0
+    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
+
+    invoke-virtual {v4}, Ljava/io/FileOutputStream;->flush()V
+
+    invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
+
+    :cond_1
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :cond_2
+    :try_start_1
     iget-wide v6, p0, Lcom/loopj/android/http/RangeFileAsyncHttpResponseHandler;->c:J
 
     int-to-long v8, v5
@@ -109,8 +125,8 @@
     long-to-int v6, v2
 
     invoke-virtual {p0, v5, v6}, Lcom/loopj/android/http/RangeFileAsyncHttpResponseHandler;->sendProgressMessage(II)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
@@ -124,18 +140,6 @@
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
 
     throw v0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
-
-    invoke-virtual {v4}, Ljava/io/FileOutputStream;->flush()V
-
-    invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
-
-    :cond_1
-    const/4 v0, 0x0
-
-    return-object v0
 .end method
 
 .method public sendResponseMessage(Lorg/apache/http/HttpResponse;)V
@@ -285,13 +289,9 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v4, "Content-Rnage: "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-interface {v1}, Lorg/apache/http/Header;->getValue()Ljava/lang/String;
 
@@ -354,13 +354,9 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "bytes="
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget-wide v2, p0, Lcom/loopj/android/http/RangeFileAsyncHttpResponseHandler;->c:J
 

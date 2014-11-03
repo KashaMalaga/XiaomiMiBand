@@ -87,8 +87,25 @@
 
     move-result v1
 
-    if-ge v2, v1, :cond_3
+    if-lt v2, v1, :cond_2
 
+    mul-double v1, v5, v3
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v1
+
+    const-wide/16 v3, 0x0
+
+    cmpg-double v3, v1, v3
+
+    if-gtz v3, :cond_4
+
+    const-wide/16 v1, 0x0
+
+    goto :goto_0
+
+    :cond_2
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -129,7 +146,7 @@
 
     cmpl-double v1, v9, v11
 
-    if-lez v1, :cond_2
+    if-lez v1, :cond_3
 
     move-object/from16 v0, p1
 
@@ -171,29 +188,12 @@
 
     add-double/2addr v3, v9
 
-    :cond_2
+    :cond_3
     add-int/lit8 v1, v2, 0x1
 
     move v2, v1
 
     goto :goto_1
-
-    :cond_3
-    mul-double v1, v5, v3
-
-    invoke-static {v1, v2}, Ljava/lang/Math;->sqrt(D)D
-
-    move-result-wide v1
-
-    const-wide/16 v3, 0x0
-
-    cmpg-double v3, v1, v3
-
-    if-gtz v3, :cond_4
-
-    const-wide/16 v1, 0x0
-
-    goto :goto_0
 
     :cond_4
     div-double v1, v7, v1

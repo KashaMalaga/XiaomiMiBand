@@ -117,28 +117,28 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;I)I
+.method static synthetic a(Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;I)V
     .locals 0
 
     iput p1, p0, Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;->a:I
 
-    return p1
+    return-void
 .end method
 
-.method static synthetic a(Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;Z)Z
+.method static synthetic a(Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;Z)V
     .locals 0
 
     iput-boolean p1, p0, Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;->c:Z
 
-    return p1
+    return-void
 .end method
 
-.method static synthetic b(Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;I)I
+.method static synthetic b(Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;I)V
     .locals 0
 
     iput p1, p0, Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;->b:I
 
-    return p1
+    return-void
 .end method
 
 
@@ -240,16 +240,15 @@
 
     const/4 v1, 0x3
 
-    if-ne v0, v1, :cond_1
+    if-eq v0, v1, :cond_0
 
-    :cond_0
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    :cond_1
-    const/4 v0, 0x0
+    :cond_0
+    const/4 v0, 0x1
 
     goto :goto_0
 .end method
@@ -279,13 +278,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
     iget v1, p0, Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;->a:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     const-string v1, " : "
 

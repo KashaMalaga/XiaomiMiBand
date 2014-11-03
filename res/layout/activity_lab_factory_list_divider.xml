@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:enabled="false" android:gravity="center_vertical" android:paddingLeft="@dimen/mili_margin" android:paddingRight="@dimen/mili_margin" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:enabled="false" android:background="@color/lab_list_divider" android:clickable="false" android:layout_width="fill_parent" android:layout_height="1.0px" />
+</RelativeLayout>

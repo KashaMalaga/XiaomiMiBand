@@ -25,12 +25,12 @@
     return v0
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity$AlarmRepeatFragment;I)I
+.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity$AlarmRepeatFragment;I)V
     .locals 0
 
     iput p1, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity$AlarmRepeatFragment;->b:I
 
-    return p1
+    return-void
 .end method
 
 .method static synthetic b(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity$AlarmRepeatFragment;)Lcn/com/smartdevices/bracelet/view/SelectDaysView;
@@ -46,7 +46,7 @@
 .method protected inflateLayout()I
     .locals 1
 
-    const v0, 0x7f030050
+    const v0, 0x7f030051
 
     return v0
 .end method
@@ -58,7 +58,7 @@
 
     move-result-object v1
 
-    const v0, 0x7f0a00c5
+    const v0, 0x7f0700c5
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -84,13 +84,9 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v3, "Days : "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     iget v3, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity$AlarmRepeatFragment;->b:I
 
@@ -108,7 +104,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f070004
+    const/high16 v2, 0x7f0d0000
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -130,9 +126,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity$AlarmRepeatFragment;->a:Lcn/com/smartdevices/bracelet/view/SelectDaysView;
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/ui/ba;
+    new-instance v2, Lcn/com/smartdevices/bracelet/ui/aX;
 
-    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/ui/ba;-><init>(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity$AlarmRepeatFragment;)V
+    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/ui/aX;-><init>(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity$AlarmRepeatFragment;)V
 
     invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 

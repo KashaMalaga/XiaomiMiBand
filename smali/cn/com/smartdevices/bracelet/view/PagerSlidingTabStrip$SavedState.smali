@@ -46,7 +46,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Landroid/os/Parcel;Lcn/com/smartdevices/bracelet/view/o;)V
+.method synthetic constructor <init>(Landroid/os/Parcel;Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip$SavedState;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip$SavedState;-><init>(Landroid/os/Parcel;)V

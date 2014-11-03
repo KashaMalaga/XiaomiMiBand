@@ -25,7 +25,7 @@
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/a;->a:Lcom/xiaomi/hm/bleservice/BLEService;
 
     # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->onDeviceBatteryStatusChanged(II)V
-    invoke-static {v0, p2, p3}, Lcom/xiaomi/hm/bleservice/BLEService;->access$300(Lcom/xiaomi/hm/bleservice/BLEService;II)V
+    invoke-static {v0, p2, p3}, Lcom/xiaomi/hm/bleservice/BLEService;->access$3(Lcom/xiaomi/hm/bleservice/BLEService;II)V
 
     return-void
 .end method
@@ -44,7 +44,7 @@
     const/4 v1, 0x4
 
     # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->notifyConnStatusChanged(I)V
-    invoke-static {v0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->access$000(Lcom/xiaomi/hm/bleservice/BLEService;I)V
+    invoke-static {v0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->access$0(Lcom/xiaomi/hm/bleservice/BLEService;I)V
 
     return-void
 .end method
@@ -55,7 +55,7 @@
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/a;->a:Lcom/xiaomi/hm/bleservice/BLEService;
 
     # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->onDeviceStatusChanged(I)V
-    invoke-static {v0, p2}, Lcom/xiaomi/hm/bleservice/BLEService;->access$200(Lcom/xiaomi/hm/bleservice/BLEService;I)V
+    invoke-static {v0, p2}, Lcom/xiaomi/hm/bleservice/BLEService;->access$2(Lcom/xiaomi/hm/bleservice/BLEService;I)V
 
     return-void
 .end method
@@ -68,7 +68,7 @@
     const/4 v1, 0x5
 
     # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->notifyConnStatusChanged(I)V
-    invoke-static {v0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->access$000(Lcom/xiaomi/hm/bleservice/BLEService;I)V
+    invoke-static {v0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->access$0(Lcom/xiaomi/hm/bleservice/BLEService;I)V
 
     return-void
 .end method
@@ -85,7 +85,7 @@
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/a;->a:Lcom/xiaomi/hm/bleservice/BLEService;
 
     # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->onDeviceInitializationSuccess()V
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->access$100(Lcom/xiaomi/hm/bleservice/BLEService;)V
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->access$1(Lcom/xiaomi/hm/bleservice/BLEService;)V
 
     return-void
 .end method

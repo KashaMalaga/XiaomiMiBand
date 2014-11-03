@@ -62,7 +62,7 @@
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const v0, 0x7f0a01b9
+    const v0, 0x7f0701b5
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/HoriRulerView;->findViewById(I)Landroid/view/View;
 
@@ -72,7 +72,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/HoriRulerView;->b:Lcn/com/smartdevices/bracelet/view/RulerScrollView;
 
-    const v0, 0x7f0a01ba
+    const v0, 0x7f0701b6
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/HoriRulerView;->findViewById(I)Landroid/view/View;
 
@@ -142,7 +142,7 @@
 .end method
 
 .method public initRuler(IIILjava/lang/String;)V
-    .locals 4
+    .locals 3
 
     iput p1, p0, Lcn/com/smartdevices/bracelet/view/HoriRulerView;->f:I
 
@@ -151,8 +151,25 @@
     iput-object p4, p0, Lcn/com/smartdevices/bracelet/view/HoriRulerView;->e:Ljava/lang/String;
 
     :goto_0
-    if-ge p1, p2, :cond_0
+    if-lt p1, p2, :cond_0
 
+    const-string v0, "HoriRulerView"
+
+    const-string v1, "initRuler"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/HoriRulerView;->b:Lcn/com/smartdevices/bracelet/view/RulerScrollView;
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/view/HoriRulerView;->f:I
+
+    iget v2, p0, Lcn/com/smartdevices/bracelet/view/HoriRulerView;->g:I
+
+    invoke-virtual {v0, v1, v2, p4}, Lcn/com/smartdevices/bracelet/view/RulerScrollView;->setStartEnd(IILjava/lang/String;)V
+
+    return-void
+
+    :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/HoriRulerView;->d:Landroid/view/LayoutInflater;
 
     const v1, 0x7f030067
@@ -163,7 +180,7 @@
 
     move-result-object v1
 
-    const v0, 0x7f0a01be
+    const v0, 0x7f0701ba
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -174,12 +191,6 @@
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, ""
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -196,23 +207,6 @@
     add-int/2addr p1, p3
 
     goto :goto_0
-
-    :cond_0
-    const-string v0, "HoriRulerView"
-
-    const-string v1, "initRuler"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/HoriRulerView;->b:Lcn/com/smartdevices/bracelet/view/RulerScrollView;
-
-    iget v1, p0, Lcn/com/smartdevices/bracelet/view/HoriRulerView;->f:I
-
-    iget v2, p0, Lcn/com/smartdevices/bracelet/view/HoriRulerView;->g:I
-
-    invoke-virtual {v0, v1, v2, p4}, Lcn/com/smartdevices/bracelet/view/RulerScrollView;->setStartEnd(IILjava/lang/String;)V
-
-    return-void
 .end method
 
 .method public setScroll(I)V

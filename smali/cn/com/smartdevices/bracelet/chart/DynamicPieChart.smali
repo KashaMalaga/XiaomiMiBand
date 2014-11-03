@@ -60,7 +60,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f02006e
+    const v1, 0x7f020058
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -78,7 +78,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f02006d
+    const v1, 0x7f020057
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -338,8 +338,26 @@
     :goto_0
     const/16 v6, 0xc8
 
-    if-ge v2, v6, :cond_0
+    if-lt v2, v6, :cond_1
 
+    :cond_0
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChart;->p:[F
+
+    const/4 v3, 0x0
+
+    mul-int/lit8 v4, p6, 0x4
+
+    move-object/from16 v0, p1
+
+    move-object/from16 v1, p5
+
+    invoke-virtual {v0, v2, v3, v4, v1}, Landroid/graphics/Canvas;->drawLines([FIILandroid/graphics/Paint;)V
+
+    return-void
+
+    :cond_1
     int-to-float v6, v2
 
     mul-float/2addr v6, v3
@@ -457,23 +475,6 @@
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
-
-    :cond_0
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChart;->p:[F
-
-    const/4 v3, 0x0
-
-    mul-int/lit8 v4, p6, 0x4
-
-    move-object/from16 v0, p1
-
-    move-object/from16 v1, p5
-
-    invoke-virtual {v0, v2, v3, v4, v1}, Landroid/graphics/Canvas;->drawLines([FIILandroid/graphics/Paint;)V
-
-    return-void
 .end method
 
 

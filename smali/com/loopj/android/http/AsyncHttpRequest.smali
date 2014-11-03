@@ -127,8 +127,12 @@
 
     :cond_0
     :goto_0
-    if-eqz v2, :cond_2
+    if-nez v2, :cond_1
 
+    :goto_1
+    throw v0
+
+    :cond_1
     :try_start_0
     invoke-direct {p0}, Lcom/loopj/android/http/AsyncHttpRequest;->a()V
     :try_end_0
@@ -137,7 +141,7 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    :cond_1
+    :cond_2
     return-void
 
     :catch_0
@@ -148,13 +152,9 @@
 
     new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v5, "UnknownHostException exception: "
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0}, Ljava/net/UnknownHostException;->getMessage()Ljava/lang/String;
 
@@ -190,14 +190,14 @@
 
     move v0, v1
 
-    :goto_1
+    :goto_2
     move-object v6, v2
 
     move v2, v0
 
     move-object v0, v6
 
-    :goto_2
+    :goto_3
     if-eqz v2, :cond_0
 
     iget-object v4, p0, Lcom/loopj/android/http/AsyncHttpRequest;->d:Lcom/loopj/android/http/ResponseHandlerInterface;
@@ -229,13 +229,9 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v3, "Unhandled exception: "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
@@ -251,13 +247,12 @@
 
     invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    :cond_2
-    throw v0
+    goto :goto_1
 
     :cond_3
     const/4 v0, 0x0
 
-    goto :goto_1
+    goto :goto_2
 
     :catch_2
     move-exception v2
@@ -267,13 +262,9 @@
 
     new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v5, "NPE in HttpClient: "
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v2}, Ljava/lang/NullPointerException;->getMessage()Ljava/lang/String;
 
@@ -301,7 +292,7 @@
 
     move-result v2
 
-    goto :goto_2
+    goto :goto_3
 
     :catch_3
     move-exception v0
@@ -310,7 +301,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_1
+    if-nez v2, :cond_2
 
     iget v2, p0, Lcom/loopj/android/http/AsyncHttpRequest;->e:I
 
@@ -326,7 +317,7 @@
 
     move-result v2
 
-    goto :goto_2
+    goto :goto_3
 .end method
 
 .method private declared-synchronized c()V
@@ -420,16 +411,15 @@
 
     iget-boolean v0, p0, Lcom/loopj/android/http/AsyncHttpRequest;->h:Z
 
-    if-eqz v0, :cond_1
+    if-nez v0, :cond_0
 
-    :cond_0
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    :cond_1
-    const/4 v0, 0x0
+    :cond_0
+    const/4 v0, 0x1
 
     goto :goto_0
 .end method

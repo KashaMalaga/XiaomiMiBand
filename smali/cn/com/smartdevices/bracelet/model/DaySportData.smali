@@ -230,8 +230,11 @@
     const/4 v0, 0x0
 
     :goto_0
-    if-ge v0, v1, :cond_0
+    if-lt v0, v1, :cond_0
 
+    return-object v2
+
+    :cond_0
     new-instance v3, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityData;
 
     add-int/lit8 v4, v0, 0x1
@@ -253,9 +256,6 @@
     add-int/lit8 v0, v0, 0x3
 
     goto :goto_0
-
-    :cond_0
-    return-object v2
 .end method
 
 
@@ -337,8 +337,11 @@
     const/4 v0, 0x0
 
     :goto_0
-    if-ge v0, v1, :cond_0
+    if-lt v0, v1, :cond_0
 
+    return-void
+
+    :cond_0
     new-instance v2, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityData;
 
     add-int/lit8 v3, v0, 0x1
@@ -360,9 +363,6 @@
     add-int/lit8 v0, v0, 0x3
 
     goto :goto_0
-
-    :cond_0
-    return-void
 .end method
 
 .method public getAnalysisData()Ljava/util/ArrayList;
@@ -404,8 +404,11 @@
 
     move-result v0
 
-    if-ge v1, v0, :cond_0
+    if-lt v1, v0, :cond_0
 
+    return-object v3
+
+    :cond_0
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -445,9 +448,6 @@
     move v1, v0
 
     goto :goto_0
-
-    :cond_0
-    return-object v3
 .end method
 
 .method public getDay()I
@@ -478,8 +478,15 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
+    invoke-virtual {v1}, Lorg/json/JSONArray;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -493,13 +500,6 @@
     invoke-virtual {v1, v0}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
 
     goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Lorg/json/JSONArray;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method
 
 .method public getKey()Ljava/lang/String;
@@ -680,8 +680,11 @@
     move v1, v0
 
     :goto_0
-    if-ge v1, v3, :cond_1
+    if-lt v1, v3, :cond_0
 
+    return-void
+
+    :cond_0
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -692,25 +695,22 @@
 
     const/16 v5, 0x7e
 
-    if-eq v4, v5, :cond_0
+    if-eq v4, v5, :cond_1
 
     iget v4, v0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityData;->category:I
 
     const/16 v5, 0x7f
 
-    if-eq v4, v5, :cond_0
+    if-eq v4, v5, :cond_1
 
     invoke-virtual {p0, v1, v0}, Lcn/com/smartdevices/bracelet/model/DaySportData;->add(ILcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityData;)V
 
-    :cond_0
+    :cond_1
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_0
-
-    :cond_1
-    return-void
 .end method
 
 .method public setAnalysisData(Ljava/util/ArrayList;)V

@@ -3,30 +3,26 @@
 
 
 # instance fields
-.field final synthetic a:I
+.field final synthetic a:Lcn/com/smartdevices/bracelet/lab/datasync/SyncLabSportDataService;
 
-.field final synthetic b:Lcn/com/smartdevices/bracelet/DataManager;
+.field private final synthetic b:Lcn/com/smartdevices/bracelet/DataTypeSource;
 
-.field final synthetic c:Ljava/util/ArrayList;
+.field private final synthetic c:Lcn/com/smartdevices/bracelet/DataManager;
 
-.field final synthetic d:I
-
-.field final synthetic e:Lcn/com/smartdevices/bracelet/lab/datasync/SyncLabSportDataService;
+.field private final synthetic d:Ljava/util/ArrayList;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/lab/datasync/SyncLabSportDataService;ILcn/com/smartdevices/bracelet/DataManager;Ljava/util/ArrayList;I)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/lab/datasync/SyncLabSportDataService;Lcn/com/smartdevices/bracelet/DataTypeSource;Lcn/com/smartdevices/bracelet/DataManager;Ljava/util/ArrayList;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/datasync/a;->e:Lcn/com/smartdevices/bracelet/lab/datasync/SyncLabSportDataService;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/datasync/a;->a:Lcn/com/smartdevices/bracelet/lab/datasync/SyncLabSportDataService;
 
-    iput p2, p0, Lcn/com/smartdevices/bracelet/lab/datasync/a;->a:I
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/lab/datasync/a;->b:Lcn/com/smartdevices/bracelet/DataTypeSource;
 
-    iput-object p3, p0, Lcn/com/smartdevices/bracelet/lab/datasync/a;->b:Lcn/com/smartdevices/bracelet/DataManager;
+    iput-object p3, p0, Lcn/com/smartdevices/bracelet/lab/datasync/a;->c:Lcn/com/smartdevices/bracelet/DataManager;
 
-    iput-object p4, p0, Lcn/com/smartdevices/bracelet/lab/datasync/a;->c:Ljava/util/ArrayList;
-
-    iput p5, p0, Lcn/com/smartdevices/bracelet/lab/datasync/a;->d:I
+    iput-object p4, p0, Lcn/com/smartdevices/bracelet/lab/datasync/a;->d:Ljava/util/ArrayList;
 
     invoke-direct {p0}, Lcom/loopj/android/http/AsyncHttpResponseHandler;-><init>()V
 
@@ -46,13 +42,9 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v3, "syncToServer onFailure:"
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -82,13 +74,9 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v4, "syncToServer onSuccess:"
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -100,7 +88,11 @@
 
     move-result-object v0
 
-    iget v3, p0, Lcn/com/smartdevices/bracelet/lab/datasync/a;->a:I
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/datasync/a;->b:Lcn/com/smartdevices/bracelet/DataTypeSource;
+
+    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/DataTypeSource;->getType()I
+
+    move-result v3
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -130,17 +122,15 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/datasync/a;->b:Lcn/com/smartdevices/bracelet/DataManager;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/datasync/a;->c:Lcn/com/smartdevices/bracelet/DataManager;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/datasync/a;->c:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/datasync/a;->d:Ljava/util/ArrayList;
 
     const/4 v2, 0x1
 
-    iget v3, p0, Lcn/com/smartdevices/bracelet/lab/datasync/a;->a:I
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/datasync/a;->b:Lcn/com/smartdevices/bracelet/DataTypeSource;
 
-    iget v4, p0, Lcn/com/smartdevices/bracelet/lab/datasync/a;->d:I
-
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcn/com/smartdevices/bracelet/DataManager;->updateSyncState(Ljava/util/ArrayList;III)V
+    invoke-virtual {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/DataManager;->updateSyncState(Ljava/util/ArrayList;ILcn/com/smartdevices/bracelet/DataTypeSource;)V
 
     :cond_0
     return-void

@@ -20,20 +20,20 @@
 .method public equals(Ljava/lang/Object;)Z
     .locals 6
 
-    const/4 v0, 0x1
+    const/4 v1, 0x1
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
     if-nez p1, :cond_1
 
     :cond_0
     :goto_0
-    return v1
+    return v0
 
     :cond_1
     if-ne p1, p0, :cond_2
 
-    move v1, v0
+    move v0, v1
 
     goto :goto_0
 
@@ -54,17 +54,11 @@
 
     cmp-long v2, v2, v4
 
-    if-nez v2, :cond_3
+    if-nez v2, :cond_0
 
-    :goto_1
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_3
     move v0, v1
 
-    goto :goto_1
+    goto :goto_0
 .end method
 
 .method protected getPeer()J

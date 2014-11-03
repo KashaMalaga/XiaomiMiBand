@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcn/com/smartdevices/bracelet/ui/DimPanelFragment$OpClickListener;
 
 
 # instance fields
@@ -22,32 +22,32 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 3
+.method public onEmptyAreaClicked(Landroid/app/DialogFragment;)V
+    .locals 0
 
-    new-instance v0, Landroid/os/Bundle;
+    return-void
+.end method
 
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+.method public onLeftClicked(Landroid/app/DialogFragment;)V
+    .locals 0
 
-    const-string v1, "Days"
+    invoke-virtual {p1}, Landroid/app/DialogFragment;->dismiss()V
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/aW;->a:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
+    return-void
+.end method
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->a(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;)Lcn/com/smartdevices/bracelet/model/AlarmClockItem;
+.method public onRightClicked(Landroid/app/DialogFragment;)V
+    .locals 2
 
-    move-result-object v2
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aW;->a:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->getCoded()I
+    const/4 v1, 0x0
 
-    move-result v2
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->setResult(I)V
 
-    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aW;->a:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aW;->a:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
-
-    const-class v2, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity$AlarmSimpleRepeatFragment;
-
-    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/ui/DimPanelFragment;->showPanel(Landroid/app/Activity;Ljava/lang/Class;Landroid/os/Bundle;)V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->finish()V
 
     return-void
 .end method

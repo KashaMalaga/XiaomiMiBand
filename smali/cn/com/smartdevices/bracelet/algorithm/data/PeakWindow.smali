@@ -218,13 +218,16 @@
 
     iput-object v1, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->o:Ljava/util/ArrayList;
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_1
 
     :goto_0
     array-length v1, p1
 
-    if-ge v0, v1, :cond_1
+    if-lt v0, v1, :cond_0
 
+    return-void
+
+    :cond_0
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->o:Ljava/util/ArrayList;
 
     aget-wide v2, p1, v0
@@ -239,7 +242,7 @@
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Features cannot be null"
@@ -247,9 +250,6 @@
     invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw v0
-
-    :cond_1
-    return-void
 .end method
 
 .method private a(D)V
@@ -666,8 +666,13 @@
 
     move-result v0
 
-    if-ge v1, v0, :cond_4
+    if-lt v1, v0, :cond_4
 
+    move v0, v2
+
+    goto :goto_0
+
+    :cond_4
     iget-object v7, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->o:Ljava/util/ArrayList;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->o:Ljava/util/ArrayList;
@@ -703,11 +708,6 @@
     move v1, v0
 
     goto :goto_1
-
-    :cond_4
-    move v0, v2
-
-    goto/16 :goto_0
 .end method
 
 .method public axis()I
@@ -772,29 +772,8 @@
 
     move-result v0
 
-    if-ge v1, v0, :cond_0
+    if-lt v1, v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Double;
-
-    invoke-virtual {v0}, Ljava/lang/Double;->doubleValue()D
-
-    move-result-wide v7
-
-    add-double/2addr v3, v7
-
-    add-int/lit8 v0, v1, 0x1
-
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -820,35 +799,8 @@
 
     move-result v0
 
-    if-ge v2, v0, :cond_1
+    if-lt v2, v0, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Double;
-
-    invoke-virtual {v0}, Ljava/lang/Double;->doubleValue()D
-
-    move-result-wide v0
-
-    sub-double/2addr v0, v3
-
-    const-wide/high16 v7, 0x4000000000000000L
-
-    invoke-static {v0, v1, v7, v8}, Ljava/lang/Math;->pow(DD)D
-
-    move-result-wide v0
-
-    add-double/2addr v5, v0
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_1
-
-    :cond_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -918,6 +870,54 @@
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Double;
+
+    invoke-virtual {v0}, Ljava/lang/Double;->doubleValue()D
+
+    move-result-wide v7
+
+    add-double/2addr v3, v7
+
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Double;
+
+    invoke-virtual {v0}, Ljava/lang/Double;->doubleValue()D
+
+    move-result-wide v0
+
+    sub-double/2addr v0, v3
+
+    const-wide/high16 v7, 0x4000000000000000L
+
+    invoke-static {v0, v1, v7, v8}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v0
+
+    add-double/2addr v5, v0
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_1
 .end method
 
 .method public clear()V
@@ -959,79 +959,85 @@
 .end method
 
 .method public cloneProperties()Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;
-    .locals 4
+    .locals 5
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;
+    new-instance v2, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->e:I
 
-    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->h:D
+    iget-wide v3, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->h:D
 
-    invoke-direct {v1, v0, v2, v3}, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;-><init>(ID)V
+    invoke-direct {v2, v0, v3, v4}, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;-><init>(ID)V
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->d:I
 
-    iput v0, v1, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->d:I
+    iput v0, v2, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->d:I
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->b:I
 
-    iput v0, v1, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->b:I
+    iput v0, v2, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->b:I
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->c:I
 
-    iput v0, v1, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->c:I
+    iput v0, v2, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->c:I
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->f:I
 
-    iput v0, v1, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->f:I
+    iput v0, v2, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->f:I
 
-    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->g:D
+    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->g:D
 
-    iput-wide v2, v1, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->g:D
+    iput-wide v0, v2, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->g:D
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->i:I
 
-    iput v0, v1, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->i:I
+    iput v0, v2, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->i:I
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->j:I
 
-    iput v0, v1, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->j:I
+    iput v0, v2, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->j:I
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->k:I
 
-    iput v0, v1, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->k:I
+    iput v0, v2, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->k:I
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->n:Z
 
-    iput-boolean v0, v1, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->n:Z
+    iput-boolean v0, v2, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->n:Z
 
     const/4 v0, 0x0
 
+    move v1, v0
+
     :goto_0
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->o:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->o:Ljava/util/ArrayList;
 
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
-    move-result v2
+    move-result v0
 
-    if-ge v0, v2, :cond_0
+    if-lt v1, v0, :cond_0
 
-    iget-object v2, v1, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->o:Ljava/util/ArrayList;
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->o:Ljava/util/ArrayList;
-
-    invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
+    return-object v2
 
     :cond_0
-    return-object v1
+    iget-object v3, v2, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->o:Ljava/util/ArrayList;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/data/PeakWindow;->o:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Double;
+
+    invoke-virtual {v3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_0
 .end method
 
 .method public endIndex()I
@@ -1079,19 +1085,27 @@
 
     move-result v2
 
-    if-ge v0, v2, :cond_1
+    if-lt v0, v2, :cond_1
 
+    return-object v1
+
+    :cond_0
+    const-string v0, "\t-1"
+
+    goto :goto_0
+
+    :cond_1
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    const-string v2, "\t"
+    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, "\t"
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -1112,14 +1126,6 @@
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
-
-    :cond_0
-    const-string v0, "\t-1"
-
-    goto :goto_0
-
-    :cond_1
-    return-object v1
 .end method
 
 .method public getFeature(I)D
@@ -1246,8 +1252,11 @@
 
     move-result v0
 
-    if-ge v1, v0, :cond_0
+    if-lt v1, v0, :cond_0
 
+    return-void
+
+    :cond_0
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -1267,9 +1276,6 @@
     move v1, v0
 
     goto :goto_0
-
-    :cond_0
-    return-void
 .end method
 
 .method public isPositive()I

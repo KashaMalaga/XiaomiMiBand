@@ -110,33 +110,34 @@
 
     const/4 v8, 0x2
 
-    const/4 v0, 0x1
+    const/4 v1, 0x1
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineRopeSkipping;->getActionCount()I
 
     move-result v2
 
-    const/16 v3, 0xf
+    const/16 v3, 0xa
 
-    if-gt v2, v3, :cond_0
-
-    :goto_0
-    return v1
+    if-gt v2, v3, :cond_1
 
     :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineRopeSkipping;->_basic_features:[[D
 
-    aget-object v2, v2, v1
+    aget-object v2, v2, v0
 
-    aget-wide v2, v2, v1
+    aget-wide v2, v2, v0
 
     iget-object v4, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineRopeSkipping;->_basic_features:[[D
 
-    aget-object v4, v4, v0
+    aget-object v4, v4, v1
 
-    aget-wide v4, v4, v1
+    aget-wide v4, v4, v0
 
     invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->min(DD)D
 
@@ -146,7 +147,7 @@
 
     aget-object v4, v4, v8
 
-    aget-wide v4, v4, v1
+    aget-wide v4, v4, v0
 
     invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->min(DD)D
 
@@ -154,15 +155,15 @@
 
     iget-object v4, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineRopeSkipping;->_basic_features:[[D
 
-    aget-object v4, v4, v1
+    aget-object v4, v4, v0
 
-    aget-wide v4, v4, v1
+    aget-wide v4, v4, v0
 
     iget-object v6, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/OnlineRopeSkipping;->_basic_features:[[D
 
-    aget-object v6, v6, v0
+    aget-object v6, v6, v1
 
-    aget-wide v6, v6, v1
+    aget-wide v6, v6, v0
 
     invoke-static {v4, v5, v6, v7}, Ljava/lang/Math;->max(DD)D
 
@@ -172,11 +173,19 @@
 
     aget-object v6, v6, v8
 
-    aget-wide v6, v6, v1
+    aget-wide v6, v6, v0
 
     invoke-static {v4, v5, v6, v7}, Ljava/lang/Math;->max(DD)D
 
     move-result-wide v4
+
+    invoke-static {v4, v5}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v4
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v2
 
     div-double v2, v4, v2
 
@@ -184,17 +193,11 @@
 
     cmpl-double v2, v2, v4
 
-    if-ltz v2, :cond_1
+    if-lez v2, :cond_0
 
-    :goto_1
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_1
     move v0, v1
 
-    goto :goto_1
+    goto :goto_0
 .end method
 
 .method protected isPossibleValidAction(I)Z
@@ -295,7 +298,7 @@
 
     aget-wide v1, v1, p1
 
-    const-wide v3, 0x3fcae147ae147ae1L
+    const-wide v3, 0x3fc999999999999aL
 
     cmpl-double v1, v1, v3
 

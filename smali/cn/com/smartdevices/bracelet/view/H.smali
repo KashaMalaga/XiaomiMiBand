@@ -1,48 +1,67 @@
 .class Lcn/com/smartdevices/bracelet/view/H;
-.super Landroid/database/DataSetObserver;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/support/v4/os/ParcelableCompatCreatorCallbacks;
 
 
-# instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/view/VerticalViewPager;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/support/v4/os/ParcelableCompatCreatorCallbacks",
+        "<",
+        "Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method private constructor <init>(Lcn/com/smartdevices/bracelet/view/VerticalViewPager;)V
+.method constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/H;->a:Lcn/com/smartdevices/bracelet/view/VerticalViewPager;
-
-    invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/view/VerticalViewPager;Lcn/com/smartdevices/bracelet/view/C;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/view/H;-><init>(Lcn/com/smartdevices/bracelet/view/VerticalViewPager;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onChanged()V
+.method public a(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/H;->a:Lcn/com/smartdevices/bracelet/view/VerticalViewPager;
+    new-instance v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->b()V
+    invoke-direct {v0, p1, p2}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
-    return-void
+    return-object v0
 .end method
 
-.method public onInvalidated()V
+.method public a(I)[Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/H;->a:Lcn/com/smartdevices/bracelet/view/VerticalViewPager;
+    new-array v0, p1, [Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->b()V
+    return-object v0
+.end method
 
-    return-void
+.method public synthetic createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0, p1, p2}, Lcn/com/smartdevices/bracelet/view/H;->a(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public synthetic newArray(I)[Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/view/H;->a(I)[Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;
+
+    move-result-object v0
+
+    return-object v0
 .end method

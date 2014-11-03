@@ -48,9 +48,9 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/chart/base/c;
+    new-instance v0, Lcn/com/smartdevices/bracelet/chart/base/b;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/chart/base/c;-><init>(Lcn/com/smartdevices/bracelet/chart/base/ChartScroller;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/chart/base/b;-><init>(Lcn/com/smartdevices/bracelet/chart/base/ChartScroller;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/ChartScroller;->n:Landroid/view/GestureDetector$SimpleOnGestureListener;
 
@@ -82,21 +82,13 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/ChartScroller;->f:Landroid/widget/Scroller;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/chart/base/b;
+    new-instance v0, Lcn/com/smartdevices/bracelet/chart/base/c;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/chart/base/b;-><init>(Lcn/com/smartdevices/bracelet/chart/base/ChartScroller;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/chart/base/c;-><init>(Lcn/com/smartdevices/bracelet/chart/base/ChartScroller;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/ChartScroller;->m:Landroid/os/Handler;
 
     return-void
-.end method
-
-.method static synthetic a(Lcn/com/smartdevices/bracelet/chart/base/ChartScroller;I)I
-    .locals 0
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/base/ChartScroller;->g:I
-
-    return p1
 .end method
 
 .method static synthetic a(Lcn/com/smartdevices/bracelet/chart/base/ChartScroller;)Landroid/widget/Scroller;
@@ -119,20 +111,20 @@
     return-void
 .end method
 
+.method static synthetic a(Lcn/com/smartdevices/bracelet/chart/base/ChartScroller;I)V
+    .locals 0
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/base/ChartScroller;->g:I
+
+    return-void
+.end method
+
 .method static synthetic b(Lcn/com/smartdevices/bracelet/chart/base/ChartScroller;)I
     .locals 1
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/chart/base/ChartScroller;->g:I
 
     return v0
-.end method
-
-.method static synthetic b(Lcn/com/smartdevices/bracelet/chart/base/ChartScroller;I)I
-    .locals 0
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/base/ChartScroller;->i:I
-
-    return p1
 .end method
 
 .method private b()V
@@ -153,12 +145,20 @@
     return-void
 .end method
 
-.method static synthetic c(Lcn/com/smartdevices/bracelet/chart/base/ChartScroller;)Lcn/com/smartdevices/bracelet/chart/base/ChartScroller$ScrollingListener;
+.method static synthetic b(Lcn/com/smartdevices/bracelet/chart/base/ChartScroller;I)V
+    .locals 0
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/base/ChartScroller;->i:I
+
+    return-void
+.end method
+
+.method static synthetic c(Lcn/com/smartdevices/bracelet/chart/base/ChartScroller;)I
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/ChartScroller;->c:Lcn/com/smartdevices/bracelet/chart/base/ChartScroller$ScrollingListener;
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/base/ChartScroller;->i:I
 
-    return-object v0
+    return v0
 .end method
 
 .method private c()V
@@ -183,12 +183,12 @@
     return-void
 .end method
 
-.method static synthetic d(Lcn/com/smartdevices/bracelet/chart/base/ChartScroller;)I
+.method static synthetic d(Lcn/com/smartdevices/bracelet/chart/base/ChartScroller;)Lcn/com/smartdevices/bracelet/chart/base/ChartScroller$ScrollingListener;
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/base/ChartScroller;->i:I
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/ChartScroller;->c:Lcn/com/smartdevices/bracelet/chart/base/ChartScroller$ScrollingListener;
 
-    return v0
+    return-object v0
 .end method
 
 .method private d()V

@@ -6,18 +6,18 @@
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/String;
+.field final synthetic a:Lcom/xiaomi/hm/bleservice/BLEService;
 
-.field final synthetic b:Lcom/xiaomi/hm/bleservice/BLEService;
+.field private final synthetic b:Ljava/lang/String;
 
 
 # direct methods
 .method constructor <init>(Lcom/xiaomi/hm/bleservice/BLEService;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/xiaomi/hm/bleservice/j;->b:Lcom/xiaomi/hm/bleservice/BLEService;
+    iput-object p1, p0, Lcom/xiaomi/hm/bleservice/j;->a:Lcom/xiaomi/hm/bleservice/BLEService;
 
-    iput-object p2, p0, Lcom/xiaomi/hm/bleservice/j;->a:Ljava/lang/String;
+    iput-object p2, p0, Lcom/xiaomi/hm/bleservice/j;->b:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -32,19 +32,15 @@
     const/4 v3, 0x1
 
     # getter for: Lcom/xiaomi/hm/bleservice/BLEService;->TAG:Ljava/lang/String;
-    invoke-static {}, Lcom/xiaomi/hm/bleservice/BLEService;->access$900()Ljava/lang/String;
+    invoke-static {}, Lcom/xiaomi/hm/bleservice/BLEService;->access$10()Ljava/lang/String;
 
     move-result-object v0
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v2, "device: "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothDevice;->getName()Ljava/lang/String;
 
@@ -78,7 +74,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/xiaomi/hm/bleservice/j;->a:Ljava/lang/String;
+    iget-object v1, p0, Lcom/xiaomi/hm/bleservice/j;->b:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -86,12 +82,12 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/j;->b:Lcom/xiaomi/hm/bleservice/BLEService;
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/j;->a:Lcom/xiaomi/hm/bleservice/BLEService;
 
     # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->stopScan(Z)V
-    invoke-static {v0, v3}, Lcom/xiaomi/hm/bleservice/BLEService;->access$1000(Lcom/xiaomi/hm/bleservice/BLEService;Z)V
+    invoke-static {v0, v3}, Lcom/xiaomi/hm/bleservice/BLEService;->access$11(Lcom/xiaomi/hm/bleservice/BLEService;Z)V
 
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/j;->b:Lcom/xiaomi/hm/bleservice/BLEService;
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/j;->a:Lcom/xiaomi/hm/bleservice/BLEService;
 
     invoke-virtual {v0, p1, v3}, Lcom/xiaomi/hm/bleservice/BLEService;->doConnect(Landroid/bluetooth/BluetoothDevice;Z)V
 

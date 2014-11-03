@@ -53,7 +53,7 @@
     return-void
 .end method
 
-.method private a(Ljava/lang/String;II)[B
+.method private a(Ljava/lang/String;Lcn/com/smartdevices/bracelet/DataTypeSource;)[B
     .locals 9
 
     const/4 v6, 0x2
@@ -74,7 +74,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_4
 
     const-string v3, "date=? AND type=? AND source=?"
 
@@ -84,13 +84,21 @@
 
     aput-object p1, v4, v1
 
-    invoke-static {p2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/DataTypeSource;->getType()I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v4, v5
 
-    invoke-static {p3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/DataTypeSource;->getSource()I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -117,15 +125,58 @@
     move-result-object v1
 
     :cond_0
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_1
 
     :try_start_1
     invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-nez v0, :cond_5
 
+    :cond_1
+    if-eqz v1, :cond_2
+
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    :cond_2
+    move-object v0, v8
+
+    :cond_3
+    :goto_1
+    return-object v0
+
+    :cond_4
+    const-string v3, "type=? AND source=?"
+
+    new-array v4, v6, [Ljava/lang/String;
+
+    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/DataTypeSource;->getType()I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v4, v1
+
+    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/DataTypeSource;->getSource()I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v4, v5
+
+    goto :goto_0
+
+    :cond_5
+    :try_start_2
     const-string v0, "summary"
 
     invoke-interface {v1, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -139,45 +190,14 @@
     if-eqz v0, :cond_0
 
     array-length v2, v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     if-eqz v2, :cond_0
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_3
 
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    :cond_1
-    :goto_1
-    return-object v0
-
-    :cond_2
-    const-string v3, "type=? AND source=?"
-
-    new-array v4, v6, [Ljava/lang/String;
-
-    invoke-static {p2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    aput-object v0, v4, v1
-
-    invoke-static {p3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    aput-object v0, v4, v5
-
-    goto :goto_0
-
-    :cond_3
-    if-eqz v1, :cond_4
-
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    :cond_4
-    move-object v0, v8
 
     goto :goto_1
 
@@ -185,11 +205,11 @@
     move-exception v0
 
     :goto_2
-    if-eqz v8, :cond_5
+    if-eqz v8, :cond_6
 
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
-    :cond_5
+    :cond_6
     throw v0
 
     :catchall_1
@@ -319,60 +339,18 @@
     return-void
 .end method
 
-.method public getCount()I
-    .locals 8
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/db/BraceletDbHelper;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
-
-    move-result-object v0
-
-    const-string v1, "date_data"
-
-    move-object v3, v2
-
-    move-object v4, v2
-
-    move-object v5, v2
-
-    move-object v6, v2
-
-    move-object v7, v2
-
-    invoke-virtual/range {v0 .. v7}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v1}, Landroid/database/Cursor;->getCount()I
-
-    move-result v0
-
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public getSportPBJsonObject(Ljava/lang/String;II)Lorg/json/JSONObject;
+.method public getSportPBJsonObject(Ljava/lang/String;Lcn/com/smartdevices/bracelet/DataTypeSource;)Lorg/json/JSONObject;
     .locals 4
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/db/BraceletDbHelper;->a(Ljava/lang/String;II)[B
+    invoke-direct {p0, p1, p2}, Lcn/com/smartdevices/bracelet/db/BraceletDbHelper;->a(Ljava/lang/String;Lcn/com/smartdevices/bracelet/DataTypeSource;)[B
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    invoke-direct {p0, v0, p2, p3}, Lcn/com/smartdevices/bracelet/db/BraceletDbHelper;->a(Ljava/lang/String;II)[B
+    invoke-direct {p0, v0, p2}, Lcn/com/smartdevices/bracelet/db/BraceletDbHelper;->a(Ljava/lang/String;Lcn/com/smartdevices/bracelet/DataTypeSource;)[B
 
     move-result-object v1
 
@@ -433,10 +411,10 @@
     goto :goto_0
 .end method
 
-.method public getSportPBSummery(Ljava/lang/String;II)[B
+.method public getSportPBSummery(Ljava/lang/String;Lcn/com/smartdevices/bracelet/DataTypeSource;)[B
     .locals 2
 
-    invoke-direct {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/db/BraceletDbHelper;->a(Ljava/lang/String;II)[B
+    invoke-direct {p0, p1, p2}, Lcn/com/smartdevices/bracelet/db/BraceletDbHelper;->a(Ljava/lang/String;Lcn/com/smartdevices/bracelet/DataTypeSource;)[B
 
     move-result-object v0
 
@@ -449,7 +427,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0, p2, p3}, Lcn/com/smartdevices/bracelet/db/BraceletDbHelper;->a(Ljava/lang/String;II)[B
+    invoke-direct {p0, v0, p2}, Lcn/com/smartdevices/bracelet/db/BraceletDbHelper;->a(Ljava/lang/String;Lcn/com/smartdevices/bracelet/DataTypeSource;)[B
 
     move-result-object v0
 
@@ -457,36 +435,17 @@
     return-object v0
 .end method
 
-.method public insertDatas(Ljava/util/ArrayList;I)Z
-    .locals 1
+.method public insertDatas(Ljava/util/ArrayList;ILcn/com/smartdevices/bracelet/DataTypeSource;)Z
+    .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/ArrayList",
             "<",
             "Lcn/com/smartdevices/bracelet/model/UploadData;",
-            ">;I)Z"
-        }
-    .end annotation
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, p1, p2, v0, v0}, Lcn/com/smartdevices/bracelet/db/BraceletDbHelper;->insertDatas(Ljava/util/ArrayList;III)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public insertDatas(Ljava/util/ArrayList;III)Z
-    .locals 11
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcn/com/smartdevices/bracelet/model/UploadData;",
-            ">;III)Z"
+            ">;I",
+            "Lcn/com/smartdevices/bracelet/DataTypeSource;",
+            ")Z"
         }
     .end annotation
 
@@ -514,18 +473,30 @@
 
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    move-result-object v10
+    move-result-object v9
 
-    move v9, v0
+    move v8, v0
 
     :goto_1
-    invoke-interface {v10}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v9}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-nez v0, :cond_2
 
-    invoke-interface {v10}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
+
+    move v0, v8
+
+    goto :goto_0
+
+    :cond_2
+    :try_start_1
+    invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -535,36 +506,25 @@
 
     iget-object v3, v0, Lcn/com/smartdevices/bracelet/model/UploadData;->data:[B
 
-    iget-object v7, v0, Lcn/com/smartdevices/bracelet/model/UploadData;->summary:Ljava/lang/String;
+    iget-object v6, v0, Lcn/com/smartdevices/bracelet/model/UploadData;->summary:Ljava/lang/String;
 
-    iget-object v8, v0, Lcn/com/smartdevices/bracelet/model/UploadData;->indexs:Ljava/lang/String;
+    iget-object v7, v0, Lcn/com/smartdevices/bracelet/model/UploadData;->indexs:Ljava/lang/String;
 
     move-object v0, p0
 
-    move v4, p3
+    move-object v4, p3
 
-    move v5, p4
+    move v5, p2
 
-    move v6, p2
-
-    invoke-virtual/range {v0 .. v8}, Lcn/com/smartdevices/bracelet/db/BraceletDbHelper;->write(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;[BIIILjava/lang/String;Ljava/lang/String;)Z
+    invoke-virtual/range {v0 .. v7}, Lcn/com/smartdevices/bracelet/db/BraceletDbHelper;->write(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;[BLcn/com/smartdevices/bracelet/DataTypeSource;ILjava/lang/String;Ljava/lang/String;)Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result v0
 
-    and-int/2addr v9, v0
+    and-int/2addr v8, v0
 
     goto :goto_1
-
-    :cond_2
-    invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
-
-    move v0, v9
-
-    goto :goto_0
 
     :catchall_0
     move-exception v0
@@ -608,32 +568,13 @@
     return-void
 .end method
 
-.method public readNotSyncDatas()Ljava/util/ArrayList;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcn/com/smartdevices/bracelet/model/UploadData;",
-            ">;"
-        }
-    .end annotation
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0, v0}, Lcn/com/smartdevices/bracelet/db/BraceletDbHelper;->readNotSyncDatas(II)Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public readNotSyncDatas(II)Ljava/util/ArrayList;
+.method public readNotSyncDatas(Lcn/com/smartdevices/bracelet/DataTypeSource;)Ljava/util/ArrayList;
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(II)",
+            "(",
+            "Lcn/com/smartdevices/bracelet/DataTypeSource;",
+            ")",
             "Ljava/util/ArrayList",
             "<",
             "Lcn/com/smartdevices/bracelet/model/UploadData;",
@@ -679,13 +620,11 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, ""
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/DataTypeSource;->getType()I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v1
 
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -699,13 +638,11 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, ""
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/DataTypeSource;->getSource()I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v1
 
-    move-result-object v0
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -753,11 +690,21 @@
 
     :goto_1
     invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-nez v0, :cond_2
 
+    if-eqz v1, :cond_0
+
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    goto :goto_0
+
+    :cond_2
+    :try_start_1
     new-instance v0, Lcn/com/smartdevices/bracelet/model/UploadData;
 
     invoke-direct {v0}, Lcn/com/smartdevices/bracelet/model/UploadData;-><init>()V
@@ -811,42 +758,23 @@
     iput-object v2, v0, Lcn/com/smartdevices/bracelet/model/UploadData;->indexs:Ljava/lang/String;
 
     invoke-virtual {v5, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_1
 
     :catchall_0
     move-exception v0
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    :cond_2
-    throw v0
 
     :cond_3
-    if-eqz v1, :cond_0
-
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    goto :goto_0
+    throw v0
 .end method
 
-.method public readOriginData(Ljava/lang/String;)[B
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, p1, v0, v0}, Lcn/com/smartdevices/bracelet/db/BraceletDbHelper;->readOriginData(Ljava/lang/String;II)[B
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public readOriginData(Ljava/lang/String;II)[B
+.method public readOriginData(Ljava/lang/String;Lcn/com/smartdevices/bracelet/DataTypeSource;)[B
     .locals 8
 
     const/4 v6, 0x1
@@ -873,13 +801,11 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, ""
+    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/DataTypeSource;->getType()I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v1
 
-    move-result-object v0
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -895,13 +821,11 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, ""
+    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/DataTypeSource;->getSource()I
 
-    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v6
 
-    move-result-object v1
-
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -954,7 +878,7 @@
     return-object v5
 .end method
 
-.method public readOriginSummery(Ljava/lang/String;II)[B
+.method public readOriginSummery(Ljava/lang/String;Lcn/com/smartdevices/bracelet/DataTypeSource;)[B
     .locals 8
 
     const/4 v6, 0x1
@@ -981,13 +905,11 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, ""
+    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/DataTypeSource;->getType()I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v1
 
-    move-result-object v0
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -1003,13 +925,11 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, ""
+    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/DataTypeSource;->getSource()I
 
-    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v6
 
-    move-result-object v1
-
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -1062,7 +982,7 @@
     return-object v5
 .end method
 
-.method public readSummary(Ljava/lang/String;II)Ljava/lang/String;
+.method public readSummary(Ljava/lang/String;Lcn/com/smartdevices/bracelet/DataTypeSource;)Ljava/lang/String;
     .locals 9
 
     const/4 v1, 0x1
@@ -1085,7 +1005,11 @@
 
     aput-object p1, v4, v8
 
-    invoke-static {p2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/DataTypeSource;->getType()I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1093,7 +1017,11 @@
 
     const/4 v0, 0x2
 
-    invoke-static {p3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/DataTypeSource;->getSource()I
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1134,8 +1062,8 @@
     return-object v5
 .end method
 
-.method public updateFromUploadData(Lcn/com/smartdevices/bracelet/model/UploadData;III)Z
-    .locals 9
+.method public updateFromUploadData(Lcn/com/smartdevices/bracelet/model/UploadData;ILcn/com/smartdevices/bracelet/DataTypeSource;)Z
+    .locals 8
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/db/BraceletDbHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
@@ -1145,45 +1073,24 @@
 
     iget-object v3, p1, Lcn/com/smartdevices/bracelet/model/UploadData;->data:[B
 
-    iget-object v7, p1, Lcn/com/smartdevices/bracelet/model/UploadData;->summary:Ljava/lang/String;
+    iget-object v6, p1, Lcn/com/smartdevices/bracelet/model/UploadData;->summary:Ljava/lang/String;
 
-    iget-object v8, p1, Lcn/com/smartdevices/bracelet/model/UploadData;->indexs:Ljava/lang/String;
+    iget-object v7, p1, Lcn/com/smartdevices/bracelet/model/UploadData;->indexs:Ljava/lang/String;
 
     move-object v0, p0
 
-    move v4, p3
+    move-object v4, p3
 
-    move v5, p4
+    move v5, p2
 
-    move v6, p2
-
-    invoke-virtual/range {v0 .. v8}, Lcn/com/smartdevices/bracelet/db/BraceletDbHelper;->write(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;[BIIILjava/lang/String;Ljava/lang/String;)Z
+    invoke-virtual/range {v0 .. v7}, Lcn/com/smartdevices/bracelet/db/BraceletDbHelper;->write(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;[BLcn/com/smartdevices/bracelet/DataTypeSource;ILjava/lang/String;Ljava/lang/String;)Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public updateSyncState(Ljava/util/ArrayList;I)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcn/com/smartdevices/bracelet/model/UploadData;",
-            ">;I)V"
-        }
-    .end annotation
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, p1, p2, v0, v0}, Lcn/com/smartdevices/bracelet/db/BraceletDbHelper;->updateSyncState(Ljava/util/ArrayList;III)V
-
-    return-void
-.end method
-
-.method public updateSyncState(Ljava/util/ArrayList;III)V
+.method public updateSyncState(Ljava/util/ArrayList;ILcn/com/smartdevices/bracelet/DataTypeSource;)V
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1191,7 +1098,9 @@
             "Ljava/util/ArrayList",
             "<",
             "Lcn/com/smartdevices/bracelet/model/UploadData;",
-            ">;III)V"
+            ">;I",
+            "Lcn/com/smartdevices/bracelet/DataTypeSource;",
+            ")V"
         }
     .end annotation
 
@@ -1225,8 +1134,15 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-nez v0, :cond_2
 
+    invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
+
+    invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
+
+    goto :goto_0
+
+    :cond_2
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -1235,13 +1151,9 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v4, "update date_data set sync = "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1301,7 +1213,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p3}, Lcn/com/smartdevices/bracelet/DataTypeSource;->getType()I
+
+    move-result v3
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -1323,7 +1239,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p3}, Lcn/com/smartdevices/bracelet/DataTypeSource;->getSource()I
+
+    move-result v3
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -1339,52 +1259,19 @@
 
     invoke-virtual {v1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
-
-    invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
-
-    goto/16 :goto_0
+    goto/16 :goto_1
 .end method
 
-.method public write(Ljava/lang/String;[BLjava/lang/String;Ljava/lang/String;)V
-    .locals 7
-
-    const/4 v3, 0x0
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move v4, v3
-
-    move-object v5, p3
-
-    move-object v6, p4
-
-    invoke-virtual/range {v0 .. v6}, Lcn/com/smartdevices/bracelet/db/BraceletDbHelper;->write(Ljava/lang/String;[BIILjava/lang/String;Ljava/lang/String;)Z
-
-    return-void
-.end method
-
-.method public write(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;[BIIILjava/lang/String;Ljava/lang/String;)Z
+.method public write(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;[BLcn/com/smartdevices/bracelet/DataTypeSource;ILjava/lang/String;Ljava/lang/String;)Z
     .locals 11
 
     const-string v1, "BraceletDbHelper"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
     const-string v3, "1======write......"
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1402,7 +1289,11 @@
 
     const-string v1, "type"
 
-    invoke-static {p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {p4}, Lcn/com/smartdevices/bracelet/DataTypeSource;->getType()I
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
@@ -1410,7 +1301,11 @@
 
     const-string v1, "source"
 
-    invoke-static/range {p5 .. p5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {p4}, Lcn/com/smartdevices/bracelet/DataTypeSource;->getSource()I
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
@@ -1422,13 +1317,13 @@
 
     const-string v1, "summary"
 
-    move-object/from16 v0, p7
+    move-object/from16 v0, p6
 
     invoke-virtual {v10, v1, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "indexs"
 
-    move-object/from16 v0, p8
+    move-object/from16 v0, p7
 
     invoke-virtual {v10, v1, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -1438,7 +1333,7 @@
 
     const-string v1, "sync"
 
-    invoke-static/range {p6 .. p6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static/range {p5 .. p5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
@@ -1460,13 +1355,11 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, ""
+    invoke-virtual {p4}, Lcn/com/smartdevices/bracelet/DataTypeSource;->getType()I
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v3
 
-    move-result-object v2
-
-    invoke-virtual {v2, p4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -1482,15 +1375,11 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, ""
+    invoke-virtual {p4}, Lcn/com/smartdevices/bracelet/DataTypeSource;->getSource()I
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v3
 
-    move-result-object v2
-
-    move/from16 v0, p5
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -1607,218 +1496,218 @@
     goto :goto_3
 .end method
 
-.method public write(Ljava/lang/String;[BIILjava/lang/String;Ljava/lang/String;)Z
-    .locals 11
+.method public write(Ljava/lang/String;[BLjava/lang/String;Ljava/lang/String;Lcn/com/smartdevices/bracelet/DataTypeSource;)Z
+    .locals 10
 
-    new-instance v10, Landroid/content/ContentValues;
+    new-instance v9, Landroid/content/ContentValues;
 
-    invoke-direct {v10}, Landroid/content/ContentValues;-><init>()V
+    invoke-direct {v9}, Landroid/content/ContentValues;-><init>()V
 
-    const-string v1, "type"
+    const-string v0, "type"
 
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {p5}, Lcn/com/smartdevices/bracelet/DataTypeSource;->getType()I
 
-    move-result-object v2
+    move-result v1
 
-    invoke-virtual {v10, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
-
-    const-string v1, "source"
-
-    invoke-static {p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v10, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
-
-    const-string v1, "date"
-
-    invoke-virtual {v10, v1, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "summary"
-
-    move-object/from16 v0, p5
-
-    invoke-virtual {v10, v1, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "indexs"
-
-    move-object/from16 v0, p6
-
-    invoke-virtual {v10, v1, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "data"
-
-    invoke-virtual {v10, v1, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;[B)V
-
-    const-string v1, "sync"
-
-    const/4 v2, 0x0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v10, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/db/BraceletDbHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    const-string v4, "date=? AND type=? AND source=?"
+    invoke-virtual {v9, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    const/4 v2, 0x3
+    const-string v0, "source"
 
-    new-array v5, v2, [Ljava/lang/String;
+    invoke-virtual {p5}, Lcn/com/smartdevices/bracelet/DataTypeSource;->getSource()I
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v9, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+
+    const-string v0, "date"
+
+    invoke-virtual {v9, v0, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v0, "summary"
+
+    invoke-virtual {v9, v0, p3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v0, "indexs"
+
+    invoke-virtual {v9, v0, p4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v0, "data"
+
+    invoke-virtual {v9, v0, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;[B)V
+
+    const-string v0, "sync"
+
+    const/4 v1, 0x0
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v9, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/db/BraceletDbHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+
+    move-result-object v0
+
+    const-string v3, "date=? AND type=? AND source=?"
+
+    const/4 v1, 0x3
+
+    new-array v4, v1, [Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    aput-object p1, v4, v1
+
+    const/4 v1, 0x1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p5}, Lcn/com/smartdevices/bracelet/DataTypeSource;->getType()I
+
+    move-result v5
+
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    aput-object v2, v4, v1
+
+    const/4 v1, 0x2
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p5}, Lcn/com/smartdevices/bracelet/DataTypeSource;->getSource()I
+
+    move-result v5
+
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    aput-object v2, v4, v1
+
+    const/4 v8, 0x0
+
+    :try_start_0
+    const-string v1, "date_data"
 
     const/4 v2, 0x0
 
-    aput-object p1, v5, v2
-
-    const/4 v2, 0x1
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v6, ""
-
-    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    aput-object v3, v5, v2
-
-    const/4 v2, 0x2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v6, ""
-
-    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, p4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    aput-object v3, v5, v2
-
-    const/4 v9, 0x0
-
-    :try_start_0
-    const-string v2, "date_data"
-
-    const/4 v3, 0x0
+    const/4 v5, 0x0
 
     const/4 v6, 0x0
 
     const/4 v7, 0x0
 
-    const/4 v8, 0x0
-
-    invoke-virtual/range {v1 .. v8}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual/range {v0 .. v7}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-object v2
+    move-result-object v1
 
-    if-eqz v2, :cond_2
+    if-eqz v1, :cond_2
 
     :try_start_1
-    invoke-interface {v2}, Landroid/database/Cursor;->getCount()I
+    invoke-interface {v1}, Landroid/database/Cursor;->getCount()I
 
-    move-result v3
+    move-result v2
 
-    if-lez v3, :cond_2
+    if-lez v2, :cond_2
 
-    const-string v3, "date_data"
+    const-string v2, "date_data"
 
-    invoke-virtual {v1, v3, v10, v4, v5}, Landroid/database/sqlite/SQLiteDatabase;->update(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-virtual {v0, v2, v9, v3, v4}, Landroid/database/sqlite/SQLiteDatabase;->update(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    move-result v1
+    move-result v0
 
-    if-lez v1, :cond_1
+    if-lez v0, :cond_1
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
     :goto_0
-    if-eqz v2, :cond_0
+    if-eqz v1, :cond_0
 
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
     :cond_0
     :goto_1
-    return v1
+    return v0
 
     :cond_1
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
     goto :goto_0
 
     :cond_2
     :try_start_2
-    const-string v3, "date_data"
+    const-string v2, "date_data"
 
-    const/4 v4, 0x0
+    const/4 v3, 0x0
 
-    invoke-virtual {v1, v3, v4, v10}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
+    invoke-virtual {v0, v2, v3, v9}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    move-result-wide v3
+    move-result-wide v2
 
-    const-wide/16 v5, 0x0
+    const-wide/16 v4, 0x0
 
-    cmp-long v1, v3, v5
+    cmp-long v0, v2, v4
 
-    if-lez v1, :cond_3
+    if-lez v0, :cond_3
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
     :goto_2
-    if-eqz v2, :cond_0
+    if-eqz v1, :cond_0
 
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
     goto :goto_1
 
     :cond_3
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
     goto :goto_2
 
     :catchall_0
-    move-exception v1
+    move-exception v0
 
-    move-object v2, v9
+    move-object v1, v8
 
     :goto_3
-    if-eqz v2, :cond_4
+    if-eqz v1, :cond_4
 
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
     :cond_4
-    throw v1
+    throw v0
 
     :catchall_1
-    move-exception v1
+    move-exception v0
 
     goto :goto_3
 .end method

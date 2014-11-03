@@ -1,38 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AlarmCheckItem">
-        <item name="android:textSize">@dimen/info_content_size</item>
-        <item name="android:gravity">center</item>
-        <item name="android:background">@drawable/checked_text_bg</item>
-        <item name="android:clickable">true</item>
-        <item name="android:layout_width">0.0dip</item>
-        <item name="android:layout_height">fill_parent</item>
-        <item name="android:layout_weight">1.0</item>
-        <item name="android:checkable">true</item>
-        <item name="android:selectable">true</item>
-    </style>
-    <style name="AlarmCheckItemLeft">
-        <item name="android:textSize">@dimen/info_content_size</item>
-        <item name="android:gravity">center</item>
-        <item name="android:background">@drawable/checked_text_bg_left</item>
-        <item name="android:clickable">true</item>
-        <item name="android:layout_width">0.0dip</item>
-        <item name="android:layout_height">fill_parent</item>
-        <item name="android:layout_weight">1.0</item>
-        <item name="android:checkable">true</item>
-        <item name="android:selectable">true</item>
-    </style>
-    <style name="AlarmCheckItemRight">
-        <item name="android:textSize">@dimen/info_content_size</item>
-        <item name="android:gravity">center</item>
-        <item name="android:background">@drawable/checked_text_bg_right</item>
-        <item name="android:clickable">true</item>
-        <item name="android:layout_width">0.0dip</item>
-        <item name="android:layout_height">fill_parent</item>
-        <item name="android:layout_weight">1.0</item>
-        <item name="android:checkable">true</item>
-        <item name="android:selectable">true</item>
-    </style>
     <style name="AppBaseTheme" parent="@android:style/Theme.Light.NoTitleBar" />
     <style name="AppTheme" parent="@style/AppBaseTheme">
         <item name="android:windowBackground">@color/window_bg</item>
@@ -41,56 +8,6 @@
         <item name="android:actionBarStyle">@style/CustomActionBarStyle</item>
         <item name="android:homeAsUpIndicator">@drawable/ic_home_back</item>
     </style>
-    <style name="BackButton">
-        <item name="android:textSize">15.0sp</item>
-        <item name="android:textColor">#e6ffffff</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:paddingLeft">10.0dip</item>
-        <item name="android:clickable">true</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">@dimen/action_bar_h</item>
-        <item name="android:drawableLeft">@drawable/btn_prev_selector</item>
-        <item name="android:drawablePadding">10.0dip</item>
-    </style>
-    <style name="CustomActionBarStyle" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
-        <item name="android:background">@color/bg_color_blue</item>
-    </style>
-    <style name="CustomTitlePageIndicator">
-        <item name="android:textColor">#ff838383</item>
-        <item name="android:background">#fff2f2f2</item>
-        <item name="selectedColor">#ffe6691e</item>
-        <item name="footerColor">#ffffffff</item>
-        <item name="footerIndicatorHeight">3.0dip</item>
-        <item name="selectedBold">true</item>
-        <item name="leftPadding">80.0dip</item>
-        <item name="rightPadding">80.0dip</item>
-    </style>
-    <style name="DimPanel" parent="@style/DimPanelBase">
-        <item name="android:windowIsFloating">false</item>
-        <item name="android:windowAnimationStyle">@android:style/Animation.InputMethod</item>
-        <item name="android:backgroundDimEnabled">true</item>
-    </style>
-    <style name="DimPanelBase" parent="@android:style/Theme.Holo.Light.Panel">
-        <item name="android:backgroundDimEnabled">true</item>
-    </style>
-    <style name="FwUpgrade" parent="@style/AppTheme">
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowAnimationStyle">@style/FwUpgradeAnim</item>
-        <item name="android:windowFullscreen">true</item>
-    </style>
-    <style name="FwUpgradeAnim">
-        <item name="android:windowEnterAnimation">@anim/fw_in</item>
-        <item name="android:windowExitAnimation">@anim/fw_out</item>
-    </style>
-    <style name="FwUpgradePanel" parent="@style/DimPanel">
-        <item name="android:windowAnimationStyle">@style/FwUpgradeAnim</item>
-    </style>
-    <style name="InfoContent">
-        <item name="android:textSize">@dimen/info_content_size</item>
-        <item name="android:textColor">@color/content_color</item>
-        <item name="android:gravity">center</item>
-    </style>
     <style name="InfoTitle">
         <item name="android:textSize">@dimen/info_title_size</item>
         <item name="android:textStyle">bold</item>
@@ -98,49 +15,44 @@
         <item name="android:gravity">center</item>
         <item name="android:layout_marginTop">@dimen/info_title_margin_top</item>
     </style>
-    <style name="LikeAvatar">
-        <item name="android:gravity">center</item>
-        <item name="android:layout_marginLeft">@dimen/like_person_avatar_margin</item>
-        <item name="android:layout_marginRight">@dimen/like_person_avatar_margin</item>
-    </style>
-    <style name="ListItemTitleText">
-        <item name="android:textSize">@dimen/main_ui_item_title_size</item>
-        <item name="android:textColor">@color/main_ui_title_color</item>
-        <item name="android:gravity">center_vertical</item>
-    </style>
-    <style name="ListItemValueText">
+    <style name="InfoContent">
         <item name="android:textSize">@dimen/info_content_size</item>
-        <item name="android:textColor">@color/main_ui_content_color</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:layout_marginRight">@dimen/item_value_margin_right</item>
-        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/content_color</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="DimPanelBase" parent="@android:style/Theme.Holo.Light.Panel">
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="DimPanel" parent="@style/DimPanelBase">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.InputMethod</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="Menu">
+        <item name="android:windowEnterAnimation">@anim/menu_in</item>
+        <item name="android:windowExitAnimation">@anim/menu_out</item>
+    </style>
+    <style name="FwUpgradeAnim">
+        <item name="android:windowEnterAnimation">@anim/fw_in</item>
+        <item name="android:windowExitAnimation">@anim/fw_out</item>
+    </style>
+    <style name="NoneTransition">
+        <item name="android:windowEnterAnimation">@null</item>
+        <item name="android:windowExitAnimation">@null</item>
     </style>
     <style name="MainActivityStyle" parent="@style/AppTheme">
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowEnterAnimation">@null</item>
         <item name="android:windowExitAnimation">@null</item>
     </style>
-    <style name="Menu">
-        <item name="android:windowEnterAnimation">@anim/menu_in</item>
-        <item name="android:windowExitAnimation">@anim/menu_out</item>
-    </style>
     <style name="MenuPanel" parent="@style/DimPanel">
         <item name="android:windowAnimationStyle">@style/Menu</item>
     </style>
-    <style name="NoneTransition">
-        <item name="android:windowEnterAnimation">@null</item>
-        <item name="android:windowExitAnimation">@null</item>
+    <style name="FwUpgradePanel" parent="@style/DimPanel">
+        <item name="android:windowAnimationStyle">@style/FwUpgradeAnim</item>
     </style>
-    <style name="SportVoteItemText">
-        <item name="android:textSize">13.299988sp</item>
-        <item name="android:textColor">#ff737373</item>
-        <item name="android:gravity">center</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">10.0dip</item>
-        <item name="android:layout_marginBottom">13.0dip</item>
-        <item name="android:singleLine">true</item>
-        <item name="android:layout_centerHorizontal">true</item>
+    <style name="CustomActionBarStyle" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/bg_color_blue</item>
     </style>
     <style name="drawerMenuButton">
         <item name="android:textSize">16.0dip</item>
@@ -162,5 +74,93 @@
         <item name="android:layout_height">50.0dip</item>
         <item name="android:drawablePadding">8.0dip</item>
         <item name="android:layout_weight">1.0</item>
+    </style>
+    <style name="CustomTitlePageIndicator">
+        <item name="android:textColor">#ff838383</item>
+        <item name="android:background">#fff2f2f2</item>
+        <item name="selectedColor">#ffe6691e</item>
+        <item name="footerColor">#ffffffff</item>
+        <item name="footerIndicatorHeight">3.0dip</item>
+        <item name="selectedBold">true</item>
+        <item name="leftPadding">80.0dip</item>
+        <item name="rightPadding">80.0dip</item>
+    </style>
+    <style name="LikeAvatar">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginLeft">@dimen/like_person_avatar_margin</item>
+        <item name="android:layout_marginRight">@dimen/like_person_avatar_margin</item>
+    </style>
+    <style name="AlarmCheckItemLeft">
+        <item name="android:textSize">@dimen/info_content_size</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/checked_text_bg_left</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:checkable">true</item>
+        <item name="android:selectable">true</item>
+    </style>
+    <style name="AlarmCheckItem">
+        <item name="android:textSize">@dimen/info_content_size</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/checked_text_bg</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:checkable">true</item>
+        <item name="android:selectable">true</item>
+    </style>
+    <style name="AlarmCheckItemRight">
+        <item name="android:textSize">@dimen/info_content_size</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/checked_text_bg_right</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:checkable">true</item>
+        <item name="android:selectable">true</item>
+    </style>
+    <style name="FwUpgrade" parent="@style/AppTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/FwUpgradeAnim</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="ListItemTitleText">
+        <item name="android:textSize">@dimen/main_ui_item_title_size</item>
+        <item name="android:textColor">@color/main_ui_title_color</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="ListItemValueText">
+        <item name="android:textSize">@dimen/info_content_size</item>
+        <item name="android:textColor">@color/main_ui_content_color</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginRight">@dimen/item_value_margin_right</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="BackButton">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textColor">#e6ffffff</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">10.0dip</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/action_bar_h</item>
+        <item name="android:drawableLeft">@drawable/btn_prev_selector</item>
+        <item name="android:drawablePadding">10.0dip</item>
+    </style>
+    <style name="SportVoteItemText">
+        <item name="android:textSize">13.299988sp</item>
+        <item name="android:textColor">#ff737373</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10.0dip</item>
+        <item name="android:layout_marginBottom">13.0dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
     </style>
 </resources>

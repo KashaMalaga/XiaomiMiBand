@@ -1,8 +1,20 @@
-.class final Lcn/com/smartdevices/bracelet/view/A;
+.class Lcn/com/smartdevices/bracelet/view/A;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/animation/Interpolator;
+.implements Landroid/os/Parcelable$Creator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator",
+        "<",
+        "Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
@@ -16,22 +28,42 @@
 
 
 # virtual methods
-.method public getInterpolation(F)F
-    .locals 3
+.method public a(Landroid/os/Parcel;)Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;
+    .locals 2
 
-    const/high16 v2, 0x3f800000
+    new-instance v0, Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;
 
-    sub-float v0, p1, v2
+    const/4 v1, 0x0
 
-    mul-float v1, v0, v0
+    invoke-direct {v0, p1, v1}, Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;-><init>(Landroid/os/Parcel;Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;)V
 
-    mul-float/2addr v1, v0
+    return-object v0
+.end method
 
-    mul-float/2addr v1, v0
+.method public a(I)[Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;
+    .locals 1
 
-    mul-float/2addr v0, v1
+    new-array v0, p1, [Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;
 
-    add-float/2addr v0, v2
+    return-object v0
+.end method
 
-    return v0
+.method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/view/A;->a(Landroid/os/Parcel;)Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public synthetic newArray(I)[Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/view/A;->a(I)[Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;
+
+    move-result-object v0
+
+    return-object v0
 .end method
