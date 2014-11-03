@@ -1,4 +1,4 @@
-.class Lcn/com/smartdevices/bracelet/model/PersonInfo$1;
+.class final Lcn/com/smartdevices/bracelet/model/PersonInfo$1;
 .super Lcom/google/gson/reflect/TypeToken;
 
 

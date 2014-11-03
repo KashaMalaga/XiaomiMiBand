@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="weeks">
-        <item>週一</item>
-        <item>週二</item>
-        <item>週三</item>
-        <item>週四</item>
-        <item>週五</item>
-        <item>週六</item>
-        <item>週日</item>
-    </string-array>
-    <string-array name="weeks_short">
-        <item>一</item>
-        <item>二</item>
-        <item>三</item>
-        <item>四</item>
-        <item>五</item>
-        <item>六</item>
-        <item>日</item>
+    <string-array name="fortune">
+        <item>達成目標不難，難的是每 天達成目標</item>
+        <item>每天我都在創造自己的新紀錄</item>
+        <item>你只看到我的成績，我卻默默享受健康的成果</item>
+        <item>失敗的人找藉口，而我只會全力達成目標</item>
+        <item>平凡的事情持續做，結果將會不平凡</item>
+        <item>沒有驚人的天賦，但可以每天給自己一個勝利</item>
+        <item>我不斷的挑戰自己，只為了那個明天更好的我</item>
+        <item>水滴石穿，我要把鞋底走破</item>
+        <item>成功的道裡很簡單，堅持堅持再堅持</item>
     </string-array>
     <string-array name="months">
         <item>一月</item>
@@ -38,17 +31,6 @@
         <item>週一至週五</item>
         <item>自訂</item>
     </string-array>
-    <string-array name="fortune">
-        <item>達成目標不難，難的是每 天達成目標</item>
-        <item>每天我都在創造自己的新紀錄</item>
-        <item>你只看到我的成績，我卻默默享受健康的成果</item>
-        <item>失敗的人找藉口，而我只會全力達成目標</item>
-        <item>平凡的事情持續做，結果將會不平凡</item>
-        <item>沒有驚人的天賦，但可以每天給自己一個勝利</item>
-        <item>我不斷的挑戰自己，只為了那個明天更好的我</item>
-        <item>水滴石穿，我要把鞋底走破</item>
-        <item>成功的道裡很簡單，堅持堅持再堅持</item>
-    </string-array>
     <string-array name="weather_aqi_descriptions">
         <item>優</item>
         <item>良</item>
@@ -56,5 +38,23 @@
         <item>中度污染</item>
         <item>重度污染</item>
         <item>嚴重污染</item>
+    </string-array>
+    <string-array name="weeks">
+        <item>週一</item>
+        <item>週二</item>
+        <item>週三</item>
+        <item>週四</item>
+        <item>週五</item>
+        <item>週六</item>
+        <item>週日</item>
+    </string-array>
+    <string-array name="weeks_short">
+        <item>一</item>
+        <item>二</item>
+        <item>三</item>
+        <item>四</item>
+        <item>五</item>
+        <item>六</item>
+        <item>日</item>
     </string-array>
 </resources>

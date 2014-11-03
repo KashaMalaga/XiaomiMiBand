@@ -101,26 +101,6 @@
 
 
 # virtual methods
-.method public clearPartSportData()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/model/ReportData;->calories:I
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/model/ReportData;->steps:I
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/model/ReportData;->distance:I
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/model/ReportData;->runDistance:I
-
-    const-string v0, ""
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/ReportData;->timeFrom:Ljava/lang/String;
-
-    return-void
-.end method
-
 .method public getCalories()I
     .locals 1
 
@@ -283,16 +263,6 @@
     return-void
 .end method
 
-.method public setInValid()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/model/ReportData;->steps:I
-
-    return-void
-.end method
-
 .method public setMaxContinueDays(I)V
     .locals 0
 
@@ -408,9 +378,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "report data:\nsteps:"
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/model/ReportData;->steps:I
 

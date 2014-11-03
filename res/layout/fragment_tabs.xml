@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <cn.com.smartdevices.bracelet.view.CustomViewPager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:id="@id/tab_host" android:background="@drawable/bg_tab_host_round" android:layout_width="fill_parent" android:layout_height="26.5dip" android:layout_marginLeft="23.0dip" android:layout_marginTop="56.0dip" android:layout_marginRight="23.0dip" android:layout_marginBottom="10.0dip">
+        <TextView android:textSize="12.0sp" android:textColor="@color/tab_host_title" android:gravity="center" android:id="@id/tab_host_item_1" android:background="@drawable/bg_tab_host_item_round_left" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <View android:background="#99ffffff" android:layout_width="0.33000004dip" android:layout_height="fill_parent" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/tab_host_title" android:gravity="center" android:id="@id/tab_host_item_2" android:background="@drawable/bg_tab_host_item" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <View android:background="#99ffffff" android:layout_width="0.33000004dip" android:layout_height="fill_parent" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/tab_host_title" android:gravity="center" android:id="@id/tab_host_item_3" android:background="@drawable/bg_tab_host_item_round_right" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    </LinearLayout>
+</FrameLayout>

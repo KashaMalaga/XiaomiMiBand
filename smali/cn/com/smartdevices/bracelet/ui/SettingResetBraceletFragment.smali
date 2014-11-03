@@ -29,26 +29,26 @@
     return-object v0
 .end method
 
+.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/SettingResetBraceletFragment;Landroid/app/ProgressDialog;)Landroid/app/ProgressDialog;
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/SettingResetBraceletFragment;->b:Landroid/app/ProgressDialog;
+
+    return-object p1
+.end method
+
 .method private a()V
     .locals 2
 
     new-instance v0, Lcn/com/smartdevices/bracelet/BleTask/BleResetTask;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bO;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bS;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/bO;-><init>(Lcn/com/smartdevices/bracelet/ui/SettingResetBraceletFragment;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/bS;-><init>(Lcn/com/smartdevices/bracelet/ui/SettingResetBraceletFragment;)V
 
     invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/BleTask/BleResetTask;-><init>(Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;)V
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/BleTask/BleResetTask;->work()V
-
-    return-void
-.end method
-
-.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/SettingResetBraceletFragment;Landroid/app/ProgressDialog;)V
-    .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/SettingResetBraceletFragment;->b:Landroid/app/ProgressDialog;
 
     return-void
 .end method
@@ -78,9 +78,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "mContext = "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/SettingResetBraceletFragment;->a:Landroid/app/Activity;
 
@@ -94,7 +98,7 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    const v0, 0x7f030056
+    const v0, 0x7f030055
 
     return v0
 .end method

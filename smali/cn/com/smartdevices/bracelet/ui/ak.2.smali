@@ -1,106 +1,91 @@
 .class Lcn/com/smartdevices/bracelet/ui/ak;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/support/v4/view/ViewPager$OnPageChangeListener;
+.super Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/InstructionActivity;
+.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/InstructionActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/ak;->a:Lcn/com/smartdevices/bracelet/ui/InstructionActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/ak;->b:Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onPageScrollStateChanged(I)V
-    .locals 2
+.method public onFailed(Ljava/lang/Object;)V
+    .locals 3
 
-    packed-switch p1, :pswitch_data_0
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;->onFailed(Ljava/lang/Object;)V
 
-    :goto_0
-    return-void
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ak;->b:Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;
 
-    :pswitch_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ak;->a:Lcn/com/smartdevices/bracelet/ui/InstructionActivity;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/ak;->b:Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/InstructionActivity;->a(Lcn/com/smartdevices/bracelet/ui/InstructionActivity;)Ljava/util/ArrayList;
+    const v2, 0x7f0d0043
 
-    move-result-object v0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/ak;->a:Lcn/com/smartdevices/bracelet/ui/InstructionActivity;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/InstructionActivity;->b(Lcn/com/smartdevices/bracelet/ui/InstructionActivity;)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/InstructionActivity$InstructionBasePage;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/InstructionActivity$InstructionBasePage;->onPageScrollIdle()V
-
-    goto :goto_0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public onPageScrolled(IFI)V
-    .locals 2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ak;->a:Lcn/com/smartdevices/bracelet/ui/InstructionActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/InstructionActivity;->a(Lcn/com/smartdevices/bracelet/ui/InstructionActivity;)Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    const/4 v2, 0x0
+
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/CustomToast;->makeText(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    return-void
+.end method
+
+.method public onFinish(Ljava/lang/Object;)V
+    .locals 3
+
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;->onFinish(Ljava/lang/Object;)V
+
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    return-void
+    if-eqz v0, :cond_1
 
-    :cond_0
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const-string v0, "\u8bbe\u5b9a\u76ee\u6807\u6210\u529f!"
+
+    :goto_0
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/ak;->b:Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;
+
+    const/4 v2, 0x0
+
+    invoke-static {v1, v0, v2}, Lcn/com/smartdevices/bracelet/view/CustomToast;->makeText(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
 
     move-result-object v0
 
-    check-cast v0, Landroid/app/Fragment;
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/InstructionActivity$InstructionBasePage;
+    :cond_0
+    return-void
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/InstructionActivity$InstructionBasePage;->onPageScrolling()V
+    :cond_1
+    const-string v0, "\u8bbe\u5b9a\u76ee\u6807\u5931\u8d25!"
 
     goto :goto_0
 .end method
 
-.method public onPageSelected(I)V
-    .locals 1
+.method public onStart()V
+    .locals 0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ak;->a:Lcn/com/smartdevices/bracelet/ui/InstructionActivity;
-
-    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/ui/InstructionActivity;->a(Lcn/com/smartdevices/bracelet/ui/InstructionActivity;I)V
+    invoke-super {p0}, Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;->onStart()V
 
     return-void
 .end method

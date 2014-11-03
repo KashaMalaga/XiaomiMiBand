@@ -27,14 +27,8 @@
     move v1, v0
 
     :goto_0
-    if-lt v1, v3, :cond_1
+    if-ge v1, v3, :cond_1
 
-    const/4 v0, 0x0
-
-    :cond_0
-    return-object v0
-
-    :cond_1
     aget-object v0, v2, v1
 
     invoke-interface {v0}, Lcn/com/smartdevices/bracelet/chart/typeface/TypefaceManager$TextStyle;->getName()Ljava/lang/String;
@@ -45,13 +39,22 @@
 
     move-result v4
 
-    if-nez v4, :cond_0
+    if-eqz v4, :cond_0
 
+    :goto_1
+    return-object v0
+
+    :cond_0
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_1
 .end method
 
 .method public abstract getTextStyles()[Lcn/com/smartdevices/bracelet/chart/typeface/TypefaceManager$TextStyle;

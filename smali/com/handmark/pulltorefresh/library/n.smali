@@ -1,35 +1,87 @@
-.class Lcom/handmark/pulltorefresh/library/n;
-.super Landroid/webkit/WebChromeClient;
+.class synthetic Lcom/handmark/pulltorefresh/library/n;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field final synthetic a:Lcom/handmark/pulltorefresh/library/PullToRefreshWebView;
+# static fields
+.field static final synthetic a:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/handmark/pulltorefresh/library/PullToRefreshWebView;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Lcom/handmark/pulltorefresh/library/n;->a:Lcom/handmark/pulltorefresh/library/PullToRefreshWebView;
+    invoke-static {}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->values()[Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;
 
-    invoke-direct {p0}, Landroid/webkit/WebChromeClient;-><init>()V
+    move-result-object v0
 
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/handmark/pulltorefresh/library/n;->a:[I
+
+    :try_start_0
+    sget-object v0, Lcom/handmark/pulltorefresh/library/n;->a:[I
+
+    sget-object v1, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->MANUAL_REFRESH_ONLY:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;
+
+    invoke-virtual {v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_2
+
+    :goto_0
+    :try_start_1
+    sget-object v0, Lcom/handmark/pulltorefresh/library/n;->a:[I
+
+    sget-object v1, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->PULL_FROM_END:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;
+
+    invoke-virtual {v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcom/handmark/pulltorefresh/library/n;->a:[I
+
+    sget-object v1, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->PULL_FROM_START:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;
+
+    invoke-virtual {v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_0
+
+    :goto_2
     return-void
-.end method
 
+    :catch_0
+    move-exception v0
 
-# virtual methods
-.method public onProgressChanged(Landroid/webkit/WebView;I)V
-    .locals 1
+    goto :goto_2
 
-    const/16 v0, 0x64
+    :catch_1
+    move-exception v0
 
-    if-ne p2, v0, :cond_0
+    goto :goto_1
 
-    iget-object v0, p0, Lcom/handmark/pulltorefresh/library/n;->a:Lcom/handmark/pulltorefresh/library/PullToRefreshWebView;
+    :catch_2
+    move-exception v0
 
-    invoke-virtual {v0}, Lcom/handmark/pulltorefresh/library/PullToRefreshWebView;->onRefreshComplete()V
-
-    :cond_0
-    return-void
+    goto :goto_0
 .end method

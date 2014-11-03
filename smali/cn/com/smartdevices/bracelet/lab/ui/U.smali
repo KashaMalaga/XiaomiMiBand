@@ -6,24 +6,24 @@
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/lab/ui/SportResultActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/lab/ui/SportResultShareActivity;
 
 
 # direct methods
-.method private constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/SportResultActivity;)V
+.method private constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/SportResultShareActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/U;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportResultActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/U;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportResultShareActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/SportResultActivity;Lcn/com/smartdevices/bracelet/lab/ui/U;)V
+.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/SportResultShareActivity;Lcn/com/smartdevices/bracelet/lab/ui/T;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/lab/ui/U;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/SportResultActivity;)V
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/lab/ui/U;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/SportResultShareActivity;)V
 
     return-void
 .end method
@@ -33,11 +33,11 @@
 .method public onEmptyAreaClicked(Landroid/app/DialogFragment;)V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/U;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportResultActivity;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/U;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportResultShareActivity;
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportResultActivity;->a(Lcn/com/smartdevices/bracelet/lab/ui/SportResultActivity;Z)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportResultShareActivity;->a(Lcn/com/smartdevices/bracelet/lab/ui/SportResultShareActivity;Z)Z
 
     invoke-virtual {p1}, Landroid/app/DialogFragment;->dismiss()V
 
@@ -47,11 +47,11 @@
 .method public onLeftClicked(Landroid/app/DialogFragment;)V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/U;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportResultActivity;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/U;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportResultShareActivity;
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportResultActivity;->a(Lcn/com/smartdevices/bracelet/lab/ui/SportResultActivity;Z)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportResultShareActivity;->a(Lcn/com/smartdevices/bracelet/lab/ui/SportResultShareActivity;Z)Z
 
     invoke-virtual {p1}, Landroid/app/DialogFragment;->dismiss()V
 

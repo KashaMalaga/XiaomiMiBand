@@ -20,7 +20,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;Lcn/com/smartdevices/bracelet/view/q;)V
+.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;Lcn/com/smartdevices/bracelet/view/o;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/view/q;-><init>(Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;)V
@@ -39,7 +39,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/q;->a:Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;->b(Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;)Landroid/support/v4/view/ViewPager;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;->a(Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;)Landroid/support/v4/view/ViewPager;
 
     move-result-object v1
 
@@ -73,17 +73,17 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/q;->a:Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;
 
-    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;->a(Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;I)V
+    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;->a(Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;I)I
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/q;->a:Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;
 
-    invoke-static {v0, p2}, Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;->a(Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;F)V
+    invoke-static {v0, p2}, Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;->a(Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;F)F
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/q;->a:Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/q;->a:Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;->a(Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;)Landroid/widget/LinearLayout;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;->c(Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip;)Landroid/widget/LinearLayout;
 
     move-result-object v1
 

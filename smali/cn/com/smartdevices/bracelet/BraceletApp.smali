@@ -64,10 +64,6 @@
 
     invoke-static {p0}, Lcn/com/smartdevices/bracelet/Utils;->handleUUID(Landroid/content/Context;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/Utils;->saveAPKVersionIfNeeded(Landroid/content/Context;)V
-
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/lab/NewFeatureDetector;->clearFeatureVisitedIfNeeded(Landroid/content/Context;)V
-
     invoke-static {}, Lcn/com/smartdevices/bracelet/chart/typeface/MIUITextStyleExtractor;->getInstance()Lcn/com/smartdevices/bracelet/chart/typeface/TypefaceManager$TextStyleExtractor;
 
     move-result-object v0

@@ -67,9 +67,9 @@
 
     if-lt v0, v1, :cond_0
 
-    new-instance v0, Lcom/handmark/pulltorefresh/library/g;
+    new-instance v0, Lcom/handmark/pulltorefresh/library/j;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/handmark/pulltorefresh/library/g;-><init>(Lcom/handmark/pulltorefresh/library/PullToRefreshExpandableListView;Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/handmark/pulltorefresh/library/j;-><init>(Lcom/handmark/pulltorefresh/library/PullToRefreshExpandableListView;Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     :goto_0
     const v1, 0x102000a
@@ -79,9 +79,9 @@
     return-object v0
 
     :cond_0
-    new-instance v0, Lcom/handmark/pulltorefresh/library/f;
+    new-instance v0, Lcom/handmark/pulltorefresh/library/i;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/handmark/pulltorefresh/library/f;-><init>(Lcom/handmark/pulltorefresh/library/PullToRefreshExpandableListView;Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/handmark/pulltorefresh/library/i;-><init>(Lcom/handmark/pulltorefresh/library/PullToRefreshExpandableListView;Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     goto :goto_0
 .end method

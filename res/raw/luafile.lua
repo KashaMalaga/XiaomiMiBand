@@ -27,16 +27,6 @@ MODE_STEP = 0x01;
 MODE_SLEEP = 0x10;
 NEW_RECORD_MIN = 4000;
 
----=============== Colors ===============
-COLOR_NORMAL_BLUE = 0x1898c4
-COLOR_REGISTER = 0xe53c44
-COLOR_REACH_GOAL = 0xee5734
-COLOR_REACH_FAIL = 0x373d74
-COLOR_REACH_FAIL_APP = 0x000000
-COLOR_BONUS = 0xe53c44
-COLOR_NORMAL_BLACK =  0x000000
----=============== end of Colors ===============
-
 function getCaloriesString(calories)
     log('cal :'..calories)
     -- test
@@ -124,18 +114,6 @@ function clearDBOnceADay(ConfigInfo)
     t.t2 = ""..__javaVersion
     t.stype = "9999"
     setMessage(listDao,t)
-end
-
-function clearRecord(listDao, luaAction, stype)
-    log("Clear record, type=" .. stype)
-
-    qb = listDao:queryBuilder()
-    Properties = luajava.newInstance("de.greenrobot.daobracelet.LuaListDao$Properties")
-
-    where = Properties.Type:eq(stype)
-
-    luaAction:queryWhere(qb, where)
-    luaAction:queryDel(qb)
 end
 
 function clearDBOnceAVersion(ConfigInfo)
@@ -234,9 +212,9 @@ function getTimeString1(time)
     end
 end
 
-function getTimebyMinutes(minutes)
-    m1 = minutes % 60
-    h1 = (minutes - m1) / 60
+function getTimeString2(start, stop)
+    m1 = start % 60
+    h1 = (start - m1) / 60
 
     sm1=nil
     if m1 < 10 then
@@ -244,11 +222,18 @@ function getTimebyMinutes(minutes)
     else
         sm1 = ""..m1
     end
-    return ""..h1..":"..sm1
-end
 
-function getTimeString2(start, stop)
-    return (getTimebyMinutes(start).."-"..getTimebyMinutes(stop))
+    m2 = stop % 60
+    h2 = (stop - m2) /60
+
+    sm2=nil
+    if m2 < 10 then
+        sm2 = "0"..m2
+    else
+        sm2 = ""..m2
+    end
+
+    return (""..h1..":"..sm1.."-"..h2..":"..sm2)
 end
 
 ---------------------------------------------------
@@ -698,39 +683,13 @@ function weekComplete(listDao,ConfigInfo)
     uniqueMsg(listDao,ConfigInfo,t)
 end
 
-------================ Continue reach goals ===============---------
-STATUS_NOT_CONTINUE = 0;
-STATUS_CONTINUE = 1;
-STATUS_CONTINUE_ON_SKIP_DAY = 2;
-STATUS_CONTINUE_USED_SKIP_YTD = 3;
-STATUS_NEED_USE_SKIP = 4;
-STATUS_CONTINUE_USED_SKIP_TODAY = 5;
-STATUS_MANUAL_BROKEN_YTD = 6;
-MANUAL_ALGORITHM_START_DATE = "2014-10-31"
-SHARE_TYPE_CONTIUE_REACH_GOAL = "SHARE_TYPE_CONTIUE_REACH_GOAL";
-SHARE_TYPE_CONTIUE_REACH_GOAL_MANUAL = "SHARE_TYPE_CONTIUE_REACH_GOAL_MANUAL";
-
----- Show if time is after 10:00 pm
-START_SHOW_MANUAL_TIME_IN_HOUR = 22
-CONTINUE_MANUAL_TYPE = "2004_manual"
-
-function getManualLazyDayStartDate(Cinfo)
-    Cinfo:setDataStr(MANUAL_ALGORITHM_START_DATE);
-    log("get manual lazyday start date:" .. MANUAL_ALGORITHM_START_DATE)
-end
-
+ STATUS_NOT_CONTINUE = 0;
+ STATUS_CONTINUE = 1;
+ STATUS_CONTINUE_ON_SKIP_DAY = 2;
+ STATUS_CONTINUE_USED_SKIP = 3;
 --2004
 function challenge(listDao,ConfigInfo)
-    stype = "2004"
-
     cr = ConfigInfo:getContinueReport()
-
-    isValid = cr:isValid()
-    if (isValid == false) then
-        log("clear the continue record because it's invalid");
-        clearRecord(listDao, ConfigInfo:getLuaAction(), stype)
-        return
-    end
 
     contiueDays = cr:getContinueDays()
     maxDays = cr:getMaxContinueDays()
@@ -763,28 +722,42 @@ function challenge(listDao,ConfigInfo)
     end
 
     if (needNotify) then
-        needNotidyText = string.format(getString('challenge_to_get'), maxDays - contiueDays + 1)
+        t2 = string.format(getString('challenge_to_get'), maxDays - contiueDays + 1)
     end
 
-    if (maxDays == contiueDays) then
-        t2 = getString('record_reach_max')
-    elseif (contiueDays > maxDays) then
-        t2 = getString('new_record_born')
-    elseif (needNotifyText ~= nil) then
-        t2 = needNotify
-    else
-        t2 = string.format(getString('personal_best_format'), maxDays)
-    end
 
     log("skips = "..skips .. ", status ="..continueStatus)
     if (skips > 0) then
-        t_skips = string.format(getString('personal_best_with_skips_format'), skips)
-        t2 = t2.." "..t_skips
-    end
+        if (continueStatus == STATUS_CONTINUE_ON_SKIP_DAY) then
 
-    if (continueStatus == STATUS_MANUAL_BROKEN_YTD) then
-        t1 = getString("manual_fail_ytd_title")
-        t2 = string.format(getString("manual_fail_ytd_subtitle"), contiueDays);
+            t1 = string.format(getString('personal_best_on_skip_day_title'), contiueDays)
+            t2 = string.format(getString('personal_best_on_skip_day_info'))
+            log("on get skip day, t1 = "..t1..", t2 =".. t2)
+        elseif (continueStatus == STATUS_CONTINUE_USED_SKIP) then
+            t1 = getString('continue_with_skips_title')
+            t2 = string.format(getString('continue_used_n_skips_format'), contiueDays, skips)
+        else
+            if (contiueDays > maxDays) then
+                t2 = getString('new_record_born')
+            else
+                t2 = string.format(getString('personal_best_format'), maxDays)..", "
+            end
+            t_skips = string.format(getString('personal_best_with_skips_format'), skips)
+            t2 = t2..t_skips
+        end
+    else
+        if (skips == 0 and continueStatus == STATUS_CONTINUE_USED_SKIP) then
+            t1 = getString('continue_with_skips_title')
+            t2 = string.format(getString('continue_used_0_skips_format'), contiueDays)
+        else
+            if (maxDays == contiueDays) then
+                t2 = getString('record_reach_max')
+            elseif (contiueDays > maxDays) then
+                t2 = getString('new_record_born')
+            else
+                t2 = string.format(getString('personal_best_format'), maxDays)
+            end
+        end
     end
 
     if (contiueDays == 1) then
@@ -794,56 +767,21 @@ function challenge(listDao,ConfigInfo)
         t2 = string.gsub(t2, "days", "day")
     end
 
+    stype = "2004"
+
+--    uniqueMsg(listDao,ConfigInfo,t1,t2,stype)
     t = {}
     t.t1 = t1
     t.t2 = t2
-    t.stype = "2004"
+    t.stype = stype
     t.strScript = "function doAction(context, luaAction) \
         local intent = luaAction:getIntentFromString('cn.com.smartdevices.bracelet.model.ShareListDelegateActivity');\
         luaAction:putExtra(intent,'REF_REPORT_DATA','"..cr:toJsonStr().."')\
         context:startActivity(intent)\
     end"
 
+--    uniqueMsg(listDao,ConfigInfo,t)
     replaceMsgByType(listDao,ConfigInfo,t)
-
-    --- Generate manual proceed lazy days:
-    date = os.date("*t")
-    timeOk = date.hour >= START_SHOW_MANUAL_TIME_IN_HOUR
-    if (continueStatus == STATUS_NEED_USE_SKIP and timeOk) then
-        t.t1 = getString('manual_lazy_title')
-        t.t2 = getString('manual_lazy_subtitle')
-
-        listTxtColor = COLOR_REACH_GOAL
-        t.json = "{txtColor="..listTxtColor.."}"
-
-        t.stype = CONTINUE_MANUAL_TYPE
-        cr:setType(SHARE_TYPE_CONTIUE_REACH_GOAL_MANUAL)
-        t.strScript = "function doAction(context, luaAction) \
-        local intent = luaAction:getIntentFromString('cn.com.smartdevices.bracelet.model.ShareListDelegateActivity');\
-        luaAction:putExtra(intent,'REF_REPORT_DATA','"..cr:toJsonStr().."')\
-        context:startActivity(intent)\
-        end"
-
-        replaceMsgByType(listDao, ConfigInfo, t)
-    elseif (continueStatus == STATUS_CONTINUE_USED_SKIP_TODAY) then
-        t.t1 = getString('manual_lazy_title_used')
-        t.t2 = getString('manual_lazy_subtitle_used')
-
-        listTxtColor = COLOR_NORMAL_BLACK
-        t.json = "{txtColor="..listTxtColor.."}"
-
-        t.stype = CONTINUE_MANUAL_TYPE
-        cr:setType(SHARE_TYPE_CONTIUE_REACH_GOAL)
-        t.strScript = "function doAction(context, luaAction) \
-        local intent = luaAction:getIntentFromString('cn.com.smartdevices.bracelet.model.ShareListDelegateActivity');\
-        luaAction:putExtra(intent,'REF_REPORT_DATA','"..cr:toJsonStr().."')\
-        context:startActivity(intent)\
-        end"
-
-        replaceMsgByType(listDao,ConfigInfo,t)
-    else
-        clearRecord(listDao, ConfigInfo:getLuaAction(), CONTINUE_MANUAL_TYPE)
-    end
 end
 
 --2005
@@ -1026,20 +964,9 @@ function activityActivity(listDao,ConfigInfo)
     activityItem = ConfigInfo:getActiveItem()
 
     timestring1 = getTimeString1(activityItem:getActiveTime())
+    timestring2 = getTimeString2(activityItem:getStart(),activityItem:getStop()).." "
 
-    if (getCurLocale() == en_US) then
-        timestring2 = getTimebyMinutes(activityItem:getStart()).." "
-        runDis = activityItem:getRunDistance()
-        if (runDis > 0) then
-            t1 = string.format(getString('activity_activity_format_run'), timestring2, timestring1, getDistanceString(runDis))
-        else
-            t1 = string.format(getString('activity_activity_format'), timestring2, timestring1, getDistanceString(activityItem:getDistance()))
-        end
-    else
-        timestring2 = getTimeString2(activityItem:getStart(), activityItem:getStop()).." "
-        t1 = string.format(getString('activity_activity_format'), timestring2, timestring1, getDistanceString(activityItem:getDistance()))
-    end
-
+    t1 = string.format(getString('activity_activity_format'), timestring2, timestring1, getDistanceString(activityItem:getDistance()))
     t2 = string.format(getString('activity_walk_consumed_format'), activityItem:getCalories(), getCaloriesString(activityItem:getCalories()))
 
     stype = "3003"
@@ -1469,7 +1396,7 @@ end
 
 function getLuaVersion(Cinfo)
     Cinfo:setLuaVersion(""..__luaVersion);
-    log("get lua version:" .. __luaVersion)
+    log("set lua version:" .. __luaVersion)
 end
 
 ---======================================
@@ -1492,6 +1419,27 @@ STR_GAME_CLEAR_BANNER = "game_clear_banner";
 
 KEY_SHARE_CONTENT = "shareToContent"
 
+---=============== Colors ===============
+COLOR_NORMAL = 0x1898c4
+COLOR_REGISTER = 0xe53c44
+COLOR_REACH_GOAL = 0xee5734
+COLOR_REACH_FAIL = 0x373d74
+COLOR_REACH_FAIL_APP = 0x000000
+COLOR_BONUS = 0xe53c44
+
+function clearGameBanner(listDao, ConfigInfo)
+    log("Clear game banner, title = " .. ConfigInfo:getTitle() .. " type=" .. ConfigInfo:getType())
+
+    qb = listDao:queryBuilder()
+    luaAction = ConfigInfo:getLuaAction()
+    Properties = luajava.newInstance("de.greenrobot.daobracelet.LuaListDao$Properties")
+
+    stype = ConfigInfo:getType();
+    where = Properties.Type:eq(stype)
+
+    luaAction:queryWhere(qb, where)
+    luaAction:queryDel(qb)
+end
 
 function getDayDif1(y, m, d)
     date1 = os.date("*t")
@@ -1526,8 +1474,8 @@ end
 
 function showGameBanner(listDao, ConfigInfo)
     -- Defaults
-    actionBarColor = COLOR_NORMAL_BLUE
-    listTxtColor = COLOR_NORMAL_BLUE
+    actionBarColor = COLOR_NORMAL
+    listTxtColor = COLOR_NORMAL
     sharePageType = 0
     shareContent = getString("share_to_content_for_event")
 
@@ -1538,7 +1486,7 @@ function showGameBanner(listDao, ConfigInfo)
     title_str = ConfigInfo:getTitle();
 
     if (title_str == STR_GAME_CLEAR_BANNER) then
-        clearRecord(listDao, ConfigInfo:getLuaAction(), ConfigInfo:getType())
+        clearGameBanner(listDao, ConfigInfo)
         return
     end
 

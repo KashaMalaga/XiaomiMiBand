@@ -53,8 +53,6 @@
 
 .field public hand:Ljava/lang/String;
 
-.field public mCorrectNumber:I
-
 .field protected mCurMinusAvgSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
 
 .field protected mCurSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
@@ -342,22 +340,13 @@
 
     :goto_1
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    if-lt v8, v0, :cond_1
-
-    :goto_2
-    return-object v9
-
-    :cond_0
-    const-string v0, ""
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    move-result v0
 
-    :cond_1
+    if-ge v8, v0, :cond_1
+
     :try_start_1
     invoke-virtual {p0, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -365,46 +354,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    const-string v2, "Correct"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    const-string v2, ":"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v2, 0x1
-
-    aget-object v0, v0, v2
-
-    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    iput v0, v9, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->mCorrectNumber:I
-
-    :goto_3
-    add-int/lit8 v0, v8, 0x1
-
-    move v8, v0
-
-    goto :goto_1
-
-    :cond_2
     const-string v2, "\t"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -459,7 +408,20 @@
 
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_3
+    :goto_2
+    add-int/lit8 v0, v8, 0x1
+
+    move v8, v0
+
+    goto :goto_1
+
+    :cond_0
+    :try_start_2
+    const-string v0, ""
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+
+    goto :goto_0
 
     :catch_0
     move-exception v0
@@ -472,12 +434,13 @@
 
     invoke-virtual {v1, v0}, Ljava/io/PrintStream;->print(Ljava/lang/String;)V
 
-    goto :goto_2
+    :cond_1
+    return-object v9
 
     :catch_1
     move-exception v0
 
-    goto :goto_3
+    goto :goto_2
 .end method
 
 .method public static Parse(Ljava/lang/String;I)Ljava/util/ArrayList;
@@ -525,8 +488,47 @@
 
     move-result-object v5
 
-    if-nez v5, :cond_1
+    if-eqz v5, :cond_3
 
+    const-string v6, ""
+
+    if-eq v5, v6, :cond_0
+
+    const-string v6, "Activity"
+
+    invoke-virtual {v5, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_2
+
+    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
+
+    move-result v6
+
+    if-lez v6, :cond_1
+
+    invoke-static {v4, p1}, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->Parse(Ljava/util/ArrayList;I)Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;
+
+    move-result-object v6
+
+    invoke-virtual {v0, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_1
+    invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
+
+    :cond_2
+    invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v1
+
+    :goto_1
+    return-object v0
+
+    :cond_3
     invoke-static {v4, p1}, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->Parse(Ljava/util/ArrayList;I)Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;
 
     move-result-object v4
@@ -538,47 +540,8 @@
     invoke-virtual {v2}, Ljava/io/InputStreamReader;->close()V
 
     invoke-virtual {v1}, Ljava/io/FileInputStream;->close()V
-
-    :goto_1
-    return-object v0
-
-    :cond_1
-    const-string v6, ""
-
-    if-eq v5, v6, :cond_0
-
-    const-string v6, "Activity"
-
-    invoke-virtual {v5, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_3
-
-    invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
-
-    move-result v6
-
-    if-lez v6, :cond_2
-
-    invoke-static {v4, p1}, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->Parse(Ljava/util/ArrayList;I)Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;
-
-    move-result-object v6
-
-    invoke-virtual {v0, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_2
-    invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
-
-    :cond_3
-    invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v1
 
     goto :goto_1
 .end method
@@ -597,11 +560,8 @@
     :goto_0
     const/4 v1, 0x3
 
-    if-lt v0, v1, :cond_0
+    if-ge v0, v1, :cond_0
 
-    return-void
-
-    :cond_0
     sget-object v1, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->AverageAxisValues:[D
 
     aput-wide v2, v1, v0
@@ -613,6 +573,9 @@
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    :cond_0
+    return-void
 .end method
 
 
@@ -695,11 +658,8 @@
 
     move-result v3
 
-    if-lt v2, v3, :cond_4
+    if-ge v2, v3, :cond_4
 
-    return-void
-
-    :cond_4
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->Windows:Ljava/util/ArrayList;
 
     new-instance v3, Lcn/com/smartdevices/bracelet/algorithm/data/SampleWindow;
@@ -715,73 +675,65 @@
     add-int/2addr v0, v2
 
     goto :goto_0
+
+    :cond_4
+    return-void
 .end method
 
-.method protected calculateFeatureByNewSample()V
-    .locals 10
+.method protected calculateFeatureByNewSample(Lcn/com/smartdevices/bracelet/algorithm/data/Sample;)V
+    .locals 9
 
     const/4 v1, 0x0
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->getSampleCount()I
-
-    move-result v2
-
-    if-lez v2, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->mInputMinusAvgSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
-
-    if-eqz v0, :cond_0
 
     move v0, v1
 
     :goto_0
-    sget v3, Lcn/com/smartdevices/bracelet/algorithm/data/Utils;->MaxAxisCount:I
+    sget v2, Lcn/com/smartdevices/bracelet/algorithm/data/Utils;->MaxAxisCount:I
 
-    if-lt v0, v3, :cond_1
+    if-ge v0, v2, :cond_0
 
-    :cond_0
-    return-void
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->_basic_features:[[D
 
-    :cond_1
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->_basic_features:[[D
+    aget-object v2, v2, v0
 
-    aget-object v3, v3, v0
+    aget-wide v3, v2, v1
 
-    aget-wide v4, v3, v1
+    iget-object v5, p1, Lcn/com/smartdevices/bracelet/algorithm/data/Sample;->AxisValues:[D
 
-    iget-object v6, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->mInputMinusAvgSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
+    aget-wide v5, v5, v0
 
-    iget-object v6, v6, Lcn/com/smartdevices/bracelet/algorithm/data/Sample;->AxisValues:[D
+    iget-object v7, p1, Lcn/com/smartdevices/bracelet/algorithm/data/Sample;->AxisValues:[D
 
-    aget-wide v6, v6, v0
+    aget-wide v7, v7, v0
 
-    iget-object v8, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->mInputMinusAvgSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
+    mul-double/2addr v5, v7
 
-    iget-object v8, v8, Lcn/com/smartdevices/bracelet/algorithm/data/Sample;->AxisValues:[D
+    iget-object v7, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->_basic_features:[[D
 
-    aget-wide v8, v8, v0
+    aget-object v7, v7, v0
 
-    mul-double/2addr v6, v8
+    aget-wide v7, v7, v1
 
-    iget-object v8, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->_basic_features:[[D
+    sub-double/2addr v5, v7
 
-    aget-object v8, v8, v0
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->getSampleCount()I
 
-    aget-wide v8, v8, v1
+    move-result v7
 
-    sub-double/2addr v6, v8
+    int-to-double v7, v7
 
-    int-to-double v8, v2
+    div-double/2addr v5, v7
 
-    div-double/2addr v6, v8
+    add-double/2addr v3, v5
 
-    add-double/2addr v4, v6
-
-    aput-wide v4, v3, v1
+    aput-wide v3, v2, v1
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    :cond_0
+    return-void
 .end method
 
 .method public getActionCount()I
@@ -847,7 +799,7 @@
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->_sample_count:I
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->calculateFeatureByNewSample()V
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->calculateFeatureByNewSample(Lcn/com/smartdevices/bracelet/algorithm/data/Sample;)V
 
     const/4 v0, 0x0
 
@@ -869,50 +821,79 @@
 .end method
 
 .method protected setMinusAvgSample()V
-    .locals 12
+    .locals 11
 
-    const/4 v11, 0x2
+    const/4 v10, 0x2
 
-    const/4 v10, 0x1
+    const/4 v9, 0x1
 
     const/4 v2, 0x0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->mCurSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
+    sget-wide v0, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->AverageAmplitude:D
 
-    iget v0, v0, Lcn/com/smartdevices/bracelet/algorithm/data/Sample;->index:I
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->mCurSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->_last_reset_sample_num:I
+    iget-wide v3, v3, Lcn/com/smartdevices/bracelet/algorithm/data/Sample;->A:D
 
-    sub-int v1, v0, v1
+    sget-wide v5, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->AverageAmplitude:D
 
-    sget-wide v3, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->AverageAmplitude:D
+    sub-double/2addr v3, v5
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->mCurSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
+    iget-object v5, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->mCurSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
 
-    iget-wide v5, v0, Lcn/com/smartdevices/bracelet/algorithm/data/Sample;->A:D
+    iget v5, v5, Lcn/com/smartdevices/bracelet/algorithm/data/Sample;->index:I
 
-    sget-wide v7, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->AverageAmplitude:D
+    int-to-double v5, v5
+
+    div-double/2addr v3, v5
+
+    add-double/2addr v0, v3
+
+    sput-wide v0, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->AverageAmplitude:D
+
+    move v0, v2
+
+    :goto_0
+    sget v1, Lcn/com/smartdevices/bracelet/algorithm/data/Utils;->MaxAxisCount:I
+
+    if-ge v0, v1, :cond_0
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->AverageAxisValues:[D
+
+    aget-wide v3, v1, v0
+
+    iget-object v5, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->mCurSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
+
+    iget-object v5, v5, Lcn/com/smartdevices/bracelet/algorithm/data/Sample;->AxisValues:[D
+
+    aget-wide v5, v5, v0
+
+    sget-object v7, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->AverageAxisValues:[D
+
+    aget-wide v7, v7, v0
 
     sub-double/2addr v5, v7
 
-    int-to-double v7, v1
+    iget-object v7, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->mCurSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
+
+    iget v7, v7, Lcn/com/smartdevices/bracelet/algorithm/data/Sample;->index:I
+
+    int-to-double v7, v7
 
     div-double/2addr v5, v7
 
     add-double/2addr v3, v5
 
-    sput-wide v3, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->AverageAmplitude:D
+    aput-wide v3, v1, v0
 
-    move v0, v2
+    add-int/lit8 v0, v0, 0x1
 
-    :goto_0
-    sget v3, Lcn/com/smartdevices/bracelet/algorithm/data/Utils;->MaxAxisCount:I
+    goto :goto_0
 
-    if-lt v0, v3, :cond_1
-
+    :cond_0
     sget v0, Lcn/com/smartdevices/bracelet/algorithm/data/Utils;->MaxAxisCount:I
 
-    if-ne v0, v10, :cond_2
+    if-ne v0, v9, :cond_2
 
     new-instance v0, Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
 
@@ -936,7 +917,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->mCurMinusAvgSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
 
-    :cond_0
+    :cond_1
     :goto_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->mCurMinusAvgSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
 
@@ -950,51 +931,14 @@
 
     iput-wide v1, v0, Lcn/com/smartdevices/bracelet/algorithm/data/Sample;->A:D
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->mCurMinusAvgSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->mCurSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
-
-    iget v1, v1, Lcn/com/smartdevices/bracelet/algorithm/data/Sample;->index:I
-
-    iput v1, v0, Lcn/com/smartdevices/bracelet/algorithm/data/Sample;->index:I
-
     return-void
-
-    :cond_1
-    sget-object v3, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->AverageAxisValues:[D
-
-    aget-wide v4, v3, v0
-
-    iget-object v6, p0, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->mCurSample:Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
-
-    iget-object v6, v6, Lcn/com/smartdevices/bracelet/algorithm/data/Sample;->AxisValues:[D
-
-    aget-wide v6, v6, v0
-
-    sget-object v8, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->AverageAxisValues:[D
-
-    aget-wide v8, v8, v0
-
-    sub-double/2addr v6, v8
-
-    int-to-double v8, v1
-
-    div-double/2addr v6, v8
-
-    add-double/2addr v4, v6
-
-    aput-wide v4, v3, v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
 
     :cond_2
     sget v0, Lcn/com/smartdevices/bracelet/algorithm/data/Utils;->MaxAxisCount:I
 
     const/4 v1, 0x3
 
-    if-lt v0, v1, :cond_0
+    if-lt v0, v1, :cond_1
 
     new-instance v0, Lcn/com/smartdevices/bracelet/algorithm/data/Sample;
 
@@ -1018,11 +962,11 @@
 
     iget-object v4, v4, Lcn/com/smartdevices/bracelet/algorithm/data/Sample;->AxisValues:[D
 
-    aget-wide v4, v4, v10
+    aget-wide v4, v4, v9
 
     sget-object v6, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->AverageAxisValues:[D
 
-    aget-wide v6, v6, v10
+    aget-wide v6, v6, v9
 
     sub-double/2addr v4, v6
 
@@ -1030,11 +974,11 @@
 
     iget-object v6, v6, Lcn/com/smartdevices/bracelet/algorithm/data/Sample;->AxisValues:[D
 
-    aget-wide v6, v6, v11
+    aget-wide v6, v6, v10
 
     sget-object v8, Lcn/com/smartdevices/bracelet/algorithm/factory/Sport;->AverageAxisValues:[D
 
-    aget-wide v8, v8, v11
+    aget-wide v8, v8, v10
 
     sub-double/2addr v6, v8
 

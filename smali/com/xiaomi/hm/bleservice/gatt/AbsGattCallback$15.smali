@@ -8,7 +8,7 @@
 # instance fields
 .field final synthetic this$0:Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;
 
-.field private final synthetic val$rssi:I
+.field final synthetic val$rssi:I
 
 
 # direct methods

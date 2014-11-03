@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/chart/util/AnimUtil$AnimColorListener;
+.implements Lcom/tencent/tauth/IUiListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/ShareActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/ShareActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bV;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bV;->a:Lcn/com/smartdevices/bracelet/ui/ShareActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,21 +22,20 @@
 
 
 # virtual methods
-.method public onColorChanged(I)V
-    .locals 1
+.method public onCancel()V
+    .locals 0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bV;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+    return-void
+.end method
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->getActivity()Landroid/app/Activity;
+.method public onComplete(Ljava/lang/Object;)V
+    .locals 0
 
-    move-result-object v0
+    return-void
+.end method
 
-    if-eqz v0, :cond_0
+.method public onError(Lcom/tencent/tauth/UiError;)V
+    .locals 0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;
-
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->applyStatusBarTint(I)V
-
-    :cond_0
     return-void
 .end method

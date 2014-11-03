@@ -1,4 +1,4 @@
-.class Lcn/com/smartdevices/bracelet/chart/util/l;
+.class final Lcn/com/smartdevices/bracelet/chart/util/l;
 .super Ljava/lang/Object;
 
 # interfaces
@@ -6,21 +6,21 @@
 
 
 # instance fields
-.field private final synthetic a:I
+.field final synthetic a:I
 
-.field private final synthetic b:I
+.field final synthetic b:I
 
-.field private final synthetic c:I
+.field final synthetic c:I
 
-.field private final synthetic d:I
+.field final synthetic d:I
 
-.field private final synthetic e:I
+.field final synthetic e:I
 
-.field private final synthetic f:I
+.field final synthetic f:I
 
-.field private final synthetic g:[Landroid/view/View;
+.field final synthetic g:[Landroid/view/View;
 
-.field private final synthetic h:Lcn/com/smartdevices/bracelet/chart/util/AnimUtil$AnimColorListener;
+.field final synthetic h:Lcn/com/smartdevices/bracelet/chart/util/AnimUtil$AnimColorListener;
 
 
 # direct methods
@@ -130,20 +130,8 @@
     const/4 v0, 0x0
 
     :goto_0
-    if-lt v0, v3, :cond_1
+    if-ge v0, v3, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/util/l;->h:Lcn/com/smartdevices/bracelet/chart/util/AnimUtil$AnimColorListener;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/util/l;->h:Lcn/com/smartdevices/bracelet/chart/util/AnimUtil$AnimColorListener;
-
-    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/chart/util/AnimUtil$AnimColorListener;->onColorChanged(I)V
-
-    :cond_0
-    return-void
-
-    :cond_1
     aget-object v4, v2, v0
 
     invoke-virtual {v4, v1}, Landroid/view/View;->setBackgroundColor(I)V
@@ -151,4 +139,16 @@
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/util/l;->h:Lcn/com/smartdevices/bracelet/chart/util/AnimUtil$AnimColorListener;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/util/l;->h:Lcn/com/smartdevices/bracelet/chart/util/AnimUtil$AnimColorListener;
+
+    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/chart/util/AnimUtil$AnimColorListener;->onColorChanged(I)V
+
+    :cond_1
+    return-void
 .end method

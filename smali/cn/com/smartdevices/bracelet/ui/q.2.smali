@@ -5,16 +5,12 @@
 # instance fields
 .field final synthetic b:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
 
-.field private final synthetic c:Lorg/json/JSONObject;
-
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;Lorg/json/JSONObject;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
     .locals 0
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/q;->b:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
-
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/q;->c:Lorg/json/JSONObject;
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;-><init>()V
 
@@ -32,7 +28,7 @@
 .end method
 
 .method public onFinish(Ljava/lang/Object;)V
-    .locals 2
+    .locals 1
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;->onFinish(Ljava/lang/Object;)V
 
@@ -42,13 +38,7 @@
 
     check-cast p1, Ljava/lang/String;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/q;->c:Lorg/json/JSONObject;
-
-    invoke-virtual {v1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, p1, v1}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->a(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->a(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;Ljava/lang/String;)V
 
     :cond_0
     return-void

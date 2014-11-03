@@ -196,15 +196,8 @@
     const/4 v0, 0x0
 
     :goto_1
-    if-lt v0, v3, :cond_1
+    if-ge v0, v3, :cond_1
 
-    invoke-virtual {v2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_1
     aget-byte v4, v1, v0
 
     sget-object v5, Lcn/com/smartdevices/bracelet/lab/utils/MD5Helper;->c:[C
@@ -228,6 +221,13 @@
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
+
+    :cond_1
+    invoke-virtual {v2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
 .end method
 
 .method private b([B)V

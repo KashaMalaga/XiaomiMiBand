@@ -6,71 +6,55 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/loopj/android/http/BaseJsonHttpResponseHandler;
+.field final synthetic a:Ljava/lang/String;
 
-.field private final synthetic b:Ljava/lang/String;
+.field final synthetic b:I
 
-.field private final synthetic c:I
+.field final synthetic c:[Lorg/apache/http/Header;
 
-.field private final synthetic d:[Lorg/apache/http/Header;
+.field final synthetic d:Lcom/loopj/android/http/BaseJsonHttpResponseHandler;
 
 
 # direct methods
 .method constructor <init>(Lcom/loopj/android/http/BaseJsonHttpResponseHandler;Ljava/lang/String;I[Lorg/apache/http/Header;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/loopj/android/http/j;->a:Lcom/loopj/android/http/BaseJsonHttpResponseHandler;
+    iput-object p1, p0, Lcom/loopj/android/http/j;->d:Lcom/loopj/android/http/BaseJsonHttpResponseHandler;
 
-    iput-object p2, p0, Lcom/loopj/android/http/j;->b:Ljava/lang/String;
+    iput-object p2, p0, Lcom/loopj/android/http/j;->a:Ljava/lang/String;
 
-    iput p3, p0, Lcom/loopj/android/http/j;->c:I
+    iput p3, p0, Lcom/loopj/android/http/j;->b:I
 
-    iput-object p4, p0, Lcom/loopj/android/http/j;->d:[Lorg/apache/http/Header;
+    iput-object p4, p0, Lcom/loopj/android/http/j;->c:[Lorg/apache/http/Header;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/loopj/android/http/j;)Lcom/loopj/android/http/BaseJsonHttpResponseHandler;
-    .locals 1
-
-    iget-object v0, p0, Lcom/loopj/android/http/j;->a:Lcom/loopj/android/http/BaseJsonHttpResponseHandler;
-
-    return-object v0
-.end method
-
 
 # virtual methods
 .method public run()V
-    .locals 7
+    .locals 3
 
     :try_start_0
-    iget-object v0, p0, Lcom/loopj/android/http/j;->a:Lcom/loopj/android/http/BaseJsonHttpResponseHandler;
+    iget-object v0, p0, Lcom/loopj/android/http/j;->d:Lcom/loopj/android/http/BaseJsonHttpResponseHandler;
 
-    iget-object v1, p0, Lcom/loopj/android/http/j;->b:Ljava/lang/String;
+    iget-object v1, p0, Lcom/loopj/android/http/j;->a:Ljava/lang/String;
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v1, v2}, Lcom/loopj/android/http/BaseJsonHttpResponseHandler;->parseResponse(Ljava/lang/String;Z)Ljava/lang/Object;
 
-    move-result-object v5
+    move-result-object v0
 
-    iget-object v6, p0, Lcom/loopj/android/http/j;->a:Lcom/loopj/android/http/BaseJsonHttpResponseHandler;
+    iget-object v1, p0, Lcom/loopj/android/http/j;->d:Lcom/loopj/android/http/BaseJsonHttpResponseHandler;
 
-    new-instance v0, Lcom/loopj/android/http/k;
+    new-instance v2, Lcom/loopj/android/http/k;
 
-    iget v2, p0, Lcom/loopj/android/http/j;->c:I
+    invoke-direct {v2, p0, v0}, Lcom/loopj/android/http/k;-><init>(Lcom/loopj/android/http/j;Ljava/lang/Object;)V
 
-    iget-object v3, p0, Lcom/loopj/android/http/j;->d:[Lorg/apache/http/Header;
-
-    iget-object v4, p0, Lcom/loopj/android/http/j;->b:Ljava/lang/String;
-
-    move-object v1, p0
-
-    invoke-direct/range {v0 .. v5}, Lcom/loopj/android/http/k;-><init>(Lcom/loopj/android/http/j;I[Lorg/apache/http/Header;Ljava/lang/String;Ljava/lang/Object;)V
-
-    invoke-virtual {v6, v0}, Lcom/loopj/android/http/BaseJsonHttpResponseHandler;->postRunnable(Ljava/lang/Runnable;)V
+    invoke-virtual {v1, v2}, Lcom/loopj/android/http/BaseJsonHttpResponseHandler;->postRunnable(Ljava/lang/Runnable;)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -78,29 +62,21 @@
     return-void
 
     :catch_0
-    move-exception v4
+    move-exception v0
 
-    const-string v0, "BaseJsonHttpResponseHandler"
+    const-string v1, "BaseJsonHttpResponseHandler"
 
-    const-string v1, "parseResponse thrown an problem"
+    const-string v2, "parseResponse thrown an problem"
 
-    invoke-static {v0, v1, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+    invoke-static {v1, v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    iget-object v6, p0, Lcom/loopj/android/http/j;->a:Lcom/loopj/android/http/BaseJsonHttpResponseHandler;
+    iget-object v1, p0, Lcom/loopj/android/http/j;->d:Lcom/loopj/android/http/BaseJsonHttpResponseHandler;
 
-    new-instance v0, Lcom/loopj/android/http/l;
+    new-instance v2, Lcom/loopj/android/http/l;
 
-    iget v2, p0, Lcom/loopj/android/http/j;->c:I
+    invoke-direct {v2, p0, v0}, Lcom/loopj/android/http/l;-><init>(Lcom/loopj/android/http/j;Ljava/lang/Throwable;)V
 
-    iget-object v3, p0, Lcom/loopj/android/http/j;->d:[Lorg/apache/http/Header;
-
-    iget-object v5, p0, Lcom/loopj/android/http/j;->b:Ljava/lang/String;
-
-    move-object v1, p0
-
-    invoke-direct/range {v0 .. v5}, Lcom/loopj/android/http/l;-><init>(Lcom/loopj/android/http/j;I[Lorg/apache/http/Header;Ljava/lang/Throwable;Ljava/lang/String;)V
-
-    invoke-virtual {v6, v0}, Lcom/loopj/android/http/BaseJsonHttpResponseHandler;->postRunnable(Ljava/lang/Runnable;)V
+    invoke-virtual {v1, v2}, Lcom/loopj/android/http/BaseJsonHttpResponseHandler;->postRunnable(Ljava/lang/Runnable;)V
 
     goto :goto_0
 .end method

@@ -250,39 +250,7 @@
 .method public abstract a()V
 .end method
 
-.method public b()Landroid/os/Bundle;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0, v0}, Lcom/xiaomi/channel/sdk/e;->a(Ljava/lang/Long;Ljava/util/concurrent/TimeUnit;)Landroid/os/Bundle;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public synthetic getResult()Ljava/lang/Object;
-    .locals 1
-
-    invoke-virtual {p0}, Lcom/xiaomi/channel/sdk/e;->b()Landroid/os/Bundle;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public synthetic getResult(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-virtual {p0, p1, p2, p3}, Lcom/xiaomi/channel/sdk/e;->a(JLjava/util/concurrent/TimeUnit;)Landroid/os/Bundle;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final start()Landroid/accounts/AccountManagerFuture;
+.method public final b()Landroid/accounts/AccountManagerFuture;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -308,4 +276,36 @@
     invoke-virtual {p0, v0}, Lcom/xiaomi/channel/sdk/e;->setException(Ljava/lang/Throwable;)V
 
     goto :goto_0
+.end method
+
+.method public c()Landroid/os/Bundle;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0, v0}, Lcom/xiaomi/channel/sdk/e;->a(Ljava/lang/Long;Ljava/util/concurrent/TimeUnit;)Landroid/os/Bundle;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public synthetic getResult()Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/xiaomi/channel/sdk/e;->c()Landroid/os/Bundle;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public synthetic getResult(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0, p1, p2, p3}, Lcom/xiaomi/channel/sdk/e;->a(JLjava/util/concurrent/TimeUnit;)Landroid/os/Bundle;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -18,9 +18,7 @@
 
 .field public static final enum ROTATE:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$AnimationStyle;
 
-.field private static synthetic a:[I
-
-.field private static final synthetic b:[Lcom/handmark/pulltorefresh/library/PullToRefreshBase$AnimationStyle;
+.field private static final synthetic a:[Lcom/handmark/pulltorefresh/library/PullToRefreshBase$AnimationStyle;
 
 
 # direct methods
@@ -59,13 +57,18 @@
 
     aput-object v1, v0, v3
 
-    sput-object v0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$AnimationStyle;->b:[Lcom/handmark/pulltorefresh/library/PullToRefreshBase$AnimationStyle;
+    sput-object v0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$AnimationStyle;->a:[Lcom/handmark/pulltorefresh/library/PullToRefreshBase$AnimationStyle;
 
     return-void
 .end method
 
 .method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
@@ -103,68 +106,6 @@
     .end packed-switch
 .end method
 
-.method static synthetic b()[I
-    .locals 3
-
-    sget-object v0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$AnimationStyle;->a:[I
-
-    if-eqz v0, :cond_0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    invoke-static {}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$AnimationStyle;->values()[Lcom/handmark/pulltorefresh/library/PullToRefreshBase$AnimationStyle;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    :try_start_0
-    sget-object v1, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$AnimationStyle;->FLIP:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$AnimationStyle;
-
-    invoke-virtual {v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$AnimationStyle;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_1
-
-    :goto_1
-    :try_start_1
-    sget-object v1, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$AnimationStyle;->ROTATE:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$AnimationStyle;
-
-    invoke-virtual {v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$AnimationStyle;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_0
-
-    :goto_2
-    sput-object v0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$AnimationStyle;->a:[I
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v1
-
-    goto :goto_2
-
-    :catch_1
-    move-exception v1
-
-    goto :goto_1
-.end method
-
 .method public static valueOf(Ljava/lang/String;)Lcom/handmark/pulltorefresh/library/PullToRefreshBase$AnimationStyle;
     .locals 1
 
@@ -180,19 +121,17 @@
 .end method
 
 .method public static values()[Lcom/handmark/pulltorefresh/library/PullToRefreshBase$AnimationStyle;
-    .locals 4
+    .locals 1
 
-    const/4 v3, 0x0
+    sget-object v0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$AnimationStyle;->a:[Lcom/handmark/pulltorefresh/library/PullToRefreshBase$AnimationStyle;
 
-    sget-object v0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$AnimationStyle;->b:[Lcom/handmark/pulltorefresh/library/PullToRefreshBase$AnimationStyle;
+    invoke-virtual {v0}, [Lcom/handmark/pulltorefresh/library/PullToRefreshBase$AnimationStyle;->clone()Ljava/lang/Object;
 
-    array-length v1, v0
+    move-result-object v0
 
-    new-array v2, v1, [Lcom/handmark/pulltorefresh/library/PullToRefreshBase$AnimationStyle;
+    check-cast v0, [Lcom/handmark/pulltorefresh/library/PullToRefreshBase$AnimationStyle;
 
-    invoke-static {v0, v3, v2, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    return-object v2
+    return-object v0
 .end method
 
 
@@ -200,9 +139,7 @@
 .method a(Landroid/content/Context;Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Orientation;Landroid/content/res/TypedArray;)Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;
     .locals 2
 
-    invoke-static {}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$AnimationStyle;->b()[I
-
-    move-result-object v0
+    sget-object v0, Lcom/handmark/pulltorefresh/library/f;->d:[I
 
     invoke-virtual {p0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$AnimationStyle;->ordinal()I
 

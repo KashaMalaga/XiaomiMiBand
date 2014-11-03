@@ -13,8 +13,6 @@
 
 .field static final b:F = 1.0f
 
-.field private static synthetic c:[I
-
 
 # direct methods
 .method public constructor <init>()V
@@ -47,68 +45,6 @@
     goto :goto_0
 .end method
 
-.method static synthetic a()[I
-    .locals 3
-
-    sget-object v0, Lcom/handmark/pulltorefresh/library/OverscrollHelper;->c:[I
-
-    if-eqz v0, :cond_0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    invoke-static {}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Orientation;->values()[Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Orientation;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    :try_start_0
-    sget-object v1, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Orientation;->HORIZONTAL:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Orientation;
-
-    invoke-virtual {v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Orientation;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_1
-
-    :goto_1
-    :try_start_1
-    sget-object v1, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Orientation;->VERTICAL:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Orientation;
-
-    invoke-virtual {v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Orientation;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_0
-
-    :goto_2
-    sput-object v0, Lcom/handmark/pulltorefresh/library/OverscrollHelper;->c:[I
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v1
-
-    goto :goto_2
-
-    :catch_1
-    move-exception v1
-
-    goto :goto_1
-.end method
-
 .method public static overScrollBy(Lcom/handmark/pulltorefresh/library/PullToRefreshBase;IIIIIIFZ)V
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
@@ -121,9 +57,7 @@
 
     const/4 v6, 0x0
 
-    invoke-static {}, Lcom/handmark/pulltorefresh/library/OverscrollHelper;->a()[I
-
-    move-result-object v0
+    sget-object v0, Lcom/handmark/pulltorefresh/library/a;->a:[I
 
     invoke-virtual {p0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase;->getPullToRefreshScrollDirection()Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Orientation;
 
@@ -180,9 +114,13 @@
 
     new-instance v4, Ljava/lang/StringBuilder;
 
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v5, "OverScroll. DeltaX: "
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
 
     invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -380,7 +318,7 @@
     nop
 
     :pswitch_data_0
-    .packed-switch 0x2
+    .packed-switch 0x1
         :pswitch_0
     .end packed-switch
 .end method

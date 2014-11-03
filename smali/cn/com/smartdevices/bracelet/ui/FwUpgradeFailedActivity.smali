@@ -34,7 +34,7 @@
     goto :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x7f070031
+    .packed-switch 0x7f0a0031
         :pswitch_0
     .end packed-switch
 .end method
@@ -48,7 +48,7 @@
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeFailedActivity;->setContentView(I)V
 
-    const v0, 0x7f070031
+    const v0, 0x7f0a0031
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeFailedActivity;->findViewById(I)Landroid/view/View;
 

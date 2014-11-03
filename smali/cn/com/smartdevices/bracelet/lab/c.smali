@@ -43,6 +43,22 @@
     return-void
 .end method
 
+.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/c;I)I
+    .locals 0
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/lab/c;->e:I
+
+    return p1
+.end method
+
+.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/c;Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$LEParams;)Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$LEParams;
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/c;->f:Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$LEParams;
+
+    return-object p1
+.end method
+
 .method static synthetic a(Lcn/com/smartdevices/bracelet/lab/c;)Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
     .locals 1
 
@@ -51,36 +67,12 @@
     return-object v0
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/c;I)V
-    .locals 0
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/lab/c;->e:I
-
-    return-void
-.end method
-
-.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/c;Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$LEParams;)V
-    .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/c;->f:Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$LEParams;
-
-    return-void
-.end method
-
 .method static synthetic b(Lcn/com/smartdevices/bracelet/lab/c;)I
     .locals 1
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/lab/c;->e:I
 
     return v0
-.end method
-
-.method static synthetic c(Lcn/com/smartdevices/bracelet/lab/c;)Lcn/com/smartdevices/bracelet/lab/LabSportAnalyserController;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/c;->a:Lcn/com/smartdevices/bracelet/lab/LabSportAnalyserController;
-
-    return-object v0
 .end method
 
 .method private c()V

@@ -140,6 +140,11 @@
 
 .method private constructor <init>(Ljava/lang/String;II)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)V"
+        }
+    .end annotation
 
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
@@ -162,27 +167,30 @@
     move v1, v0
 
     :goto_0
-    if-lt v1, v3, :cond_1
+    if-ge v1, v3, :cond_1
 
-    sget-object v0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$State;->RESET:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$State;
-
-    :cond_0
-    return-object v0
-
-    :cond_1
     aget-object v0, v2, v1
 
     invoke-virtual {v0}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$State;->a()I
 
     move-result v4
 
-    if-eq p0, v4, :cond_0
+    if-ne p0, v4, :cond_0
 
+    :goto_1
+    return-object v0
+
+    :cond_0
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_0
+
+    :cond_1
+    sget-object v0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$State;->RESET:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$State;
+
+    goto :goto_1
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/handmark/pulltorefresh/library/PullToRefreshBase$State;
@@ -200,19 +208,17 @@
 .end method
 
 .method public static values()[Lcom/handmark/pulltorefresh/library/PullToRefreshBase$State;
-    .locals 4
-
-    const/4 v3, 0x0
+    .locals 1
 
     sget-object v0, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$State;->b:[Lcom/handmark/pulltorefresh/library/PullToRefreshBase$State;
 
-    array-length v1, v0
+    invoke-virtual {v0}, [Lcom/handmark/pulltorefresh/library/PullToRefreshBase$State;->clone()Ljava/lang/Object;
 
-    new-array v2, v1, [Lcom/handmark/pulltorefresh/library/PullToRefreshBase$State;
+    move-result-object v0
 
-    invoke-static {v0, v3, v2, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    check-cast v0, [Lcom/handmark/pulltorefresh/library/PullToRefreshBase$State;
 
-    return-object v2
+    return-object v0
 .end method
 
 

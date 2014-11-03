@@ -1266,15 +1266,8 @@
     const/4 v0, 0x1
 
     :goto_0
-    if-le v0, v1, :cond_0
+    if-gt v0, v1, :cond_2
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
     invoke-virtual {p0, v0}, Lorg/keplerproject/luajava/LuaState;->type(I)I
 
     move-result v3
@@ -1301,7 +1294,7 @@
 
     move-result v4
 
-    if-ne v3, v4, :cond_2
+    if-ne v3, v4, :cond_1
 
     const-string v3, " = "
 
@@ -1315,7 +1308,7 @@
 
     invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    :cond_1
+    :cond_0
     :goto_1
     const-string v3, "\n"
 
@@ -1325,14 +1318,14 @@
 
     goto :goto_0
 
-    :cond_2
+    :cond_1
     sget-object v4, Lorg/keplerproject/luajava/LuaState;->LUA_TSTRING:Ljava/lang/Integer;
 
     invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
 
     move-result v4
 
-    if-ne v3, v4, :cond_1
+    if-ne v3, v4, :cond_0
 
     const-string v3, " = \'"
 
@@ -1353,6 +1346,13 @@
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
+
+    :cond_2
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method public equal(II)I
@@ -2294,6 +2294,8 @@
     instance-of v0, p1, [B
 
     if-eqz v0, :cond_6
+
+    check-cast p1, [B
 
     check-cast p1, [B
 

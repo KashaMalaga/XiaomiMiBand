@@ -27,9 +27,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/v;->a:Lcn/com/smartdevices/bracelet/view/u;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/view/u;->a(Lcn/com/smartdevices/bracelet/view/u;)Lcn/com/smartdevices/bracelet/view/RulerScrollView;
-
-    move-result-object v0
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/view/u;->a:Lcn/com/smartdevices/bracelet/view/RulerScrollView;
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/view/RulerScrollView;->a(Lcn/com/smartdevices/bracelet/view/RulerScrollView;)V
 

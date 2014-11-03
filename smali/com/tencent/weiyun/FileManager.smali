@@ -162,7 +162,7 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/tencent/weiyun/a;-><init>(Lcom/tencent/weiyun/FileManager;Landroid/content/Context;Lcom/tencent/weiyun/FileManager$WeiyunFileType;Lcom/tencent/weiyun/WeiyunFile;Ljava/lang/String;Lcom/tencent/weiyun/IDownLoadFileCallBack;)V
 
-    invoke-virtual {v0}, Lcom/tencent/weiyun/a;->start()V
+    invoke-virtual {v0}, Lcom/tencent/weiyun/a;->a()V
 
     return-void
 .end method
@@ -188,7 +188,7 @@
 
     invoke-virtual {v0, p3}, Lcom/tencent/weiyun/a;->a(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/tencent/weiyun/a;->start()V
+    invoke-virtual {v0}, Lcom/tencent/weiyun/a;->a()V
 
     return-void
 .end method
@@ -256,7 +256,7 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/tencent/weiyun/f;-><init>(Lcom/tencent/weiyun/FileManager;Landroid/content/Context;Lcom/tencent/weiyun/FileManager$WeiyunFileType;Ljava/lang/String;Lcom/tencent/weiyun/IUploadFileCallBack;)V
 
-    invoke-virtual {v0}, Lcom/tencent/weiyun/f;->start()V
+    invoke-virtual {v0}, Lcom/tencent/weiyun/f;->a()V
 
     return-void
 .end method

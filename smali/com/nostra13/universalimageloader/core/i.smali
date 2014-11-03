@@ -114,7 +114,7 @@
 .method static synthetic a(Lcom/nostra13/universalimageloader/core/i;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/nostra13/universalimageloader/core/i;->g()V
+    invoke-direct {p0}, Lcom/nostra13/universalimageloader/core/i;->h()V
 
     return-void
 .end method
@@ -135,7 +135,7 @@
     return-object v0
 .end method
 
-.method private g()V
+.method private h()V
     .locals 1
 
     iget-object v0, p0, Lcom/nostra13/universalimageloader/core/i;->a:Lcom/nostra13/universalimageloader/core/ImageLoaderConfiguration;
@@ -154,7 +154,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0}, Lcom/nostra13/universalimageloader/core/i;->h()Ljava/util/concurrent/Executor;
+    invoke-direct {p0}, Lcom/nostra13/universalimageloader/core/i;->i()Ljava/util/concurrent/Executor;
 
     move-result-object v0
 
@@ -177,7 +177,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-direct {p0}, Lcom/nostra13/universalimageloader/core/i;->h()Ljava/util/concurrent/Executor;
+    invoke-direct {p0}, Lcom/nostra13/universalimageloader/core/i;->i()Ljava/util/concurrent/Executor;
 
     move-result-object v0
 
@@ -187,7 +187,7 @@
     return-void
 .end method
 
-.method private h()Ljava/util/concurrent/Executor;
+.method private i()Ljava/util/concurrent/Executor;
     .locals 3
 
     iget-object v0, p0, Lcom/nostra13/universalimageloader/core/i;->a:Lcom/nostra13/universalimageloader/core/ImageLoaderConfiguration;
@@ -305,7 +305,7 @@
 .method a(Lcom/nostra13/universalimageloader/core/q;)V
     .locals 1
 
-    invoke-direct {p0}, Lcom/nostra13/universalimageloader/core/i;->g()V
+    invoke-direct {p0}, Lcom/nostra13/universalimageloader/core/i;->h()V
 
     iget-object v0, p0, Lcom/nostra13/universalimageloader/core/i;->c:Ljava/util/concurrent/Executor;
 
@@ -394,47 +394,7 @@
     return-void
 .end method
 
-.method c()Ljava/util/concurrent/atomic/AtomicBoolean;
-    .locals 1
-
-    iget-object v0, p0, Lcom/nostra13/universalimageloader/core/i;->g:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    return-object v0
-.end method
-
-.method d()Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lcom/nostra13/universalimageloader/core/i;->j:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method e()Z
-    .locals 1
-
-    iget-object v0, p0, Lcom/nostra13/universalimageloader/core/i;->h:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method f()Z
-    .locals 1
-
-    iget-object v0, p0, Lcom/nostra13/universalimageloader/core/i;->i:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method stop()V
+.method c()V
     .locals 1
 
     iget-object v0, p0, Lcom/nostra13/universalimageloader/core/i;->a:Lcom/nostra13/universalimageloader/core/ImageLoaderConfiguration;
@@ -472,4 +432,44 @@
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
     return-void
+.end method
+
+.method d()Ljava/util/concurrent/atomic/AtomicBoolean;
+    .locals 1
+
+    iget-object v0, p0, Lcom/nostra13/universalimageloader/core/i;->g:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    return-object v0
+.end method
+
+.method e()Ljava/lang/Object;
+    .locals 1
+
+    iget-object v0, p0, Lcom/nostra13/universalimageloader/core/i;->j:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method f()Z
+    .locals 1
+
+    iget-object v0, p0, Lcom/nostra13/universalimageloader/core/i;->h:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method g()Z
+    .locals 1
+
+    iget-object v0, p0, Lcom/nostra13/universalimageloader/core/i;->i:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    return v0
 .end method

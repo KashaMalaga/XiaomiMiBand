@@ -8,16 +8,12 @@
 # instance fields
 .field final synthetic a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-.field private final synthetic b:Ljava/lang/String;
-
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;Ljava/lang/String;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)V
     .locals 0
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/aR;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
-
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/aR;->b:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,7 +23,7 @@
 
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 2
+    .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aR;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
@@ -35,9 +31,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aR;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/upgrade/UpgradeUtil;->downloadApkFile(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/upgrade/UpgradeUtil;->updateCheckState(Landroid/content/Context;)V
 
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 

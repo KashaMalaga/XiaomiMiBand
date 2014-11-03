@@ -88,26 +88,23 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_1
 
-    return-object p1
-
-    :cond_0
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lorg/apache/http/NameValuePair;
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v2
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v4, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v4
 
-    if-nez v1, :cond_1
+    if-nez v1, :cond_0
 
     const-string v2, "?"
 
@@ -148,10 +145,13 @@
 
     goto :goto_0
 
-    :cond_1
+    :cond_0
     const-string v2, "&"
 
     goto :goto_1
+
+    :cond_1
+    return-object p1
 .end method
 
 .method private a()Ljava/util/ArrayList;
@@ -192,6 +192,12 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
+    const-string v4, ""
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
     invoke-virtual {v1}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
 
     move-result-object v4
@@ -208,6 +214,12 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
+    const-string v5, ""
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
     invoke-virtual {v1}, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;
 
     move-result-object v1
@@ -220,9 +232,15 @@
 
     move-result-object v4
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, ""
+
+    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
 
     move-object/from16 v0, p0
 
@@ -255,6 +273,12 @@
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, ""
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
 
     move-object/from16 v0, p0
 
@@ -331,6 +355,12 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
+    const-string v5, ""
+
+    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
     sget v5, Landroid/os/Build$VERSION;->SDK_INT:I
 
     invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
@@ -355,7 +385,7 @@
 
     iget-object v1, v0, Lcn/com/smartdevices/bracelet/upgrade/WebServiceClient;->h:Landroid/content/Context;
 
-    const v8, 0x7f0c0006
+    const v8, 0x7f0d001b
 
     invoke-virtual {v1, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -364,6 +394,12 @@
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v9, ""
+
+    invoke-virtual {v1, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     move-object/from16 v0, p0
 
@@ -417,6 +453,12 @@
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
+    const-string v13, ""
+
+    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v12
+
     invoke-virtual {v1}, Landroid/view/Display;->getWidth()I
 
     move-result v13
@@ -432,6 +474,12 @@
     new-instance v13, Ljava/lang/StringBuilder;
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v14, ""
+
+    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v13
 
     invoke-virtual {v1}, Landroid/view/Display;->getHeight()I
 

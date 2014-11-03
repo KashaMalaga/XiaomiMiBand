@@ -75,7 +75,7 @@
 .method protected inflateLayout()I
     .locals 1
 
-    const v0, 0x7f030040
+    const v0, 0x7f03003f
 
     return v0
 .end method
@@ -93,7 +93,7 @@
 
     move-result-object v2
 
-    const v0, 0x7f070128
+    const v0, 0x7f0a0127
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -103,7 +103,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportTimeoutFragment;->a:Landroid/widget/TextView;
 
-    const v0, 0x7f070127
+    const v0, 0x7f0a0126
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -230,4 +230,36 @@
     move-object v1, v0
 
     goto :goto_2
+.end method
+
+.method public onDestroy()V
+    .locals 0
+
+    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/DimPanelFragment;->onDestroy()V
+
+    return-void
+.end method
+
+.method public onPause()V
+    .locals 1
+
+    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/DimPanelFragment;->onPause()V
+
+    const-string v0, "PageLabSportTimeout"
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->endPage(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public onResume()V
+    .locals 1
+
+    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/DimPanelFragment;->onResume()V
+
+    const-string v0, "PageLabSportTimeout"
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->startPage(Ljava/lang/String;)V
+
+    return-void
 .end method

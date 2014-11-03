@@ -1,50 +1,41 @@
-.class final Lcom/handmark/pulltorefresh/library/k;
-.super Lcom/handmark/pulltorefresh/library/PullToRefreshListView$InternalListView;
+.class Lcom/handmark/pulltorefresh/library/k;
+.super Landroid/widget/GridView;
 
-
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x9
-.end annotation
+# interfaces
+.implements Lcom/handmark/pulltorefresh/library/internal/EmptyViewMethodAccessor;
 
 
 # instance fields
-.field final synthetic b:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
+.field final synthetic a:Lcom/handmark/pulltorefresh/library/PullToRefreshGridView;
 
 
 # direct methods
-.method public constructor <init>(Lcom/handmark/pulltorefresh/library/PullToRefreshListView;Landroid/content/Context;Landroid/util/AttributeSet;)V
+.method public constructor <init>(Lcom/handmark/pulltorefresh/library/PullToRefreshGridView;Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/handmark/pulltorefresh/library/k;->b:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
+    iput-object p1, p0, Lcom/handmark/pulltorefresh/library/k;->a:Lcom/handmark/pulltorefresh/library/PullToRefreshGridView;
 
-    invoke-direct {p0, p1, p2, p3}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView$InternalListView;-><init>(Lcom/handmark/pulltorefresh/library/PullToRefreshListView;Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {p0, p2, p3}, Landroid/widget/GridView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected overScrollBy(IIIIIIIIZ)Z
-    .locals 7
+.method public setEmptyView(Landroid/view/View;)V
+    .locals 1
 
-    invoke-super/range {p0 .. p9}, Lcom/handmark/pulltorefresh/library/PullToRefreshListView$InternalListView;->overScrollBy(IIIIIIIIZ)Z
+    iget-object v0, p0, Lcom/handmark/pulltorefresh/library/k;->a:Lcom/handmark/pulltorefresh/library/PullToRefreshGridView;
 
-    move-result v6
+    invoke-virtual {v0, p1}, Lcom/handmark/pulltorefresh/library/PullToRefreshGridView;->setEmptyView(Landroid/view/View;)V
 
-    iget-object v0, p0, Lcom/handmark/pulltorefresh/library/k;->b:Lcom/handmark/pulltorefresh/library/PullToRefreshListView;
+    return-void
+.end method
 
-    move v1, p1
+.method public setEmptyViewInternal(Landroid/view/View;)V
+    .locals 0
 
-    move v2, p3
+    invoke-super {p0, p1}, Landroid/widget/GridView;->setEmptyView(Landroid/view/View;)V
 
-    move v3, p2
-
-    move v4, p4
-
-    move/from16 v5, p9
-
-    invoke-static/range {v0 .. v5}, Lcom/handmark/pulltorefresh/library/OverscrollHelper;->overScrollBy(Lcom/handmark/pulltorefresh/library/PullToRefreshBase;IIIIZ)V
-
-    return v6
+    return-void
 .end method

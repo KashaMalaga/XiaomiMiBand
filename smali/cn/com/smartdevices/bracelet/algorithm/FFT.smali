@@ -44,15 +44,8 @@
     const/4 v0, 0x0
 
     :goto_0
-    if-lt v0, v1, :cond_1
+    if-ge v0, v1, :cond_1
 
-    invoke-static {v4}, Lcn/com/smartdevices/bracelet/algorithm/FFT;->ifft([Lcn/com/smartdevices/bracelet/algorithm/Complex;)[Lcn/com/smartdevices/bracelet/algorithm/Complex;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_1
     aget-object v5, v2, v0
 
     aget-object v6, v3, v0
@@ -66,6 +59,13 @@
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    :cond_1
+    invoke-static {v4}, Lcn/com/smartdevices/bracelet/algorithm/FFT;->ifft([Lcn/com/smartdevices/bracelet/algorithm/Complex;)[Lcn/com/smartdevices/bracelet/algorithm/Complex;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method public static convolve([Lcn/com/smartdevices/bracelet/algorithm/Complex;[Lcn/com/smartdevices/bracelet/algorithm/Complex;)[Lcn/com/smartdevices/bracelet/algorithm/Complex;
@@ -90,8 +90,17 @@
     :goto_0
     array-length v4, p0
 
-    if-lt v0, v4, :cond_0
+    if-ge v0, v4, :cond_0
 
+    aget-object v4, p0, v0
+
+    aput-object v4, v3, v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
     array-length v0, p0
 
     :goto_1
@@ -99,8 +108,15 @@
 
     mul-int/lit8 v4, v4, 0x2
 
-    if-lt v0, v4, :cond_1
+    if-ge v0, v4, :cond_1
 
+    aput-object v2, v3, v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_1
+
+    :cond_1
     array-length v0, p1
 
     mul-int/lit8 v0, v0, 0x2
@@ -110,40 +126,8 @@
     :goto_2
     array-length v0, p1
 
-    if-lt v1, v0, :cond_2
+    if-ge v1, v0, :cond_2
 
-    array-length v0, p1
-
-    :goto_3
-    array-length v1, p1
-
-    mul-int/lit8 v1, v1, 0x2
-
-    if-lt v0, v1, :cond_3
-
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/algorithm/FFT;->cconvolve([Lcn/com/smartdevices/bracelet/algorithm/Complex;[Lcn/com/smartdevices/bracelet/algorithm/Complex;)[Lcn/com/smartdevices/bracelet/algorithm/Complex;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
-    aget-object v4, p0, v0
-
-    aput-object v4, v3, v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    aput-object v2, v3, v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_1
-
-    :cond_2
     aget-object v0, p1, v1
 
     aput-object v0, v4, v1
@@ -152,12 +136,28 @@
 
     goto :goto_2
 
-    :cond_3
+    :cond_2
+    array-length v0, p1
+
+    :goto_3
+    array-length v1, p1
+
+    mul-int/lit8 v1, v1, 0x2
+
+    if-ge v0, v1, :cond_3
+
     aput-object v2, v4, v0
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_3
+
+    :cond_3
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/algorithm/FFT;->cconvolve([Lcn/com/smartdevices/bracelet/algorithm/Complex;[Lcn/com/smartdevices/bracelet/algorithm/Complex;)[Lcn/com/smartdevices/bracelet/algorithm/Complex;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method public static fft([Lcn/com/smartdevices/bracelet/algorithm/Complex;)[Lcn/com/smartdevices/bracelet/algorithm/Complex;
@@ -203,8 +203,19 @@
     :goto_0
     div-int/lit8 v4, v2, 0x2
 
-    if-lt v0, v4, :cond_3
+    if-ge v0, v4, :cond_3
 
+    mul-int/lit8 v4, v0, 0x2
+
+    aget-object v4, p0, v4
+
+    aput-object v4, v3, v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_3
     invoke-static {v3}, Lcn/com/smartdevices/bracelet/algorithm/FFT;->fft([Lcn/com/smartdevices/bracelet/algorithm/Complex;)[Lcn/com/smartdevices/bracelet/algorithm/Complex;
 
     move-result-object v4
@@ -214,8 +225,21 @@
     :goto_1
     div-int/lit8 v5, v2, 0x2
 
-    if-lt v0, v5, :cond_4
+    if-ge v0, v5, :cond_4
 
+    mul-int/lit8 v5, v0, 0x2
+
+    add-int/lit8 v5, v5, 0x1
+
+    aget-object v5, p0, v5
+
+    aput-object v5, v3, v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_1
+
+    :cond_4
     invoke-static {v3}, Lcn/com/smartdevices/bracelet/algorithm/FFT;->fft([Lcn/com/smartdevices/bracelet/algorithm/Complex;)[Lcn/com/smartdevices/bracelet/algorithm/Complex;
 
     move-result-object v3
@@ -286,30 +310,6 @@
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
-
-    :cond_3
-    mul-int/lit8 v4, v0, 0x2
-
-    aget-object v4, p0, v4
-
-    aput-object v4, v3, v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_4
-    mul-int/lit8 v5, v0, 0x2
-
-    add-int/lit8 v5, v5, 0x1
-
-    aget-object v5, p0, v5
-
-    aput-object v5, v3, v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_1
 .end method
 
 .method public static get_fft_amplide_array([Lcn/com/smartdevices/bracelet/algorithm/Complex;)[D
@@ -328,11 +328,8 @@
     const/4 v0, 0x0
 
     :goto_0
-    if-lt v0, v2, :cond_0
+    if-ge v0, v2, :cond_0
 
-    return-object v3
-
-    :cond_0
     aget-object v4, v1, v0
 
     invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/algorithm/Complex;->re()D
@@ -368,6 +365,9 @@
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    :cond_0
+    return-object v3
 .end method
 
 .method public static ifft([Lcn/com/smartdevices/bracelet/algorithm/Complex;)[Lcn/com/smartdevices/bracelet/algorithm/Complex;
@@ -382,23 +382,8 @@
     move v1, v0
 
     :goto_0
-    if-lt v1, v2, :cond_0
+    if-ge v1, v2, :cond_0
 
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/algorithm/FFT;->fft([Lcn/com/smartdevices/bracelet/algorithm/Complex;)[Lcn/com/smartdevices/bracelet/algorithm/Complex;
-
-    move-result-object v3
-
-    move v1, v0
-
-    :goto_1
-    if-lt v1, v2, :cond_1
-
-    :goto_2
-    if-lt v0, v2, :cond_2
-
-    return-object v3
-
-    :cond_0
     aget-object v4, p0, v1
 
     invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/algorithm/Complex;->conjugate()Lcn/com/smartdevices/bracelet/algorithm/Complex;
@@ -411,7 +396,16 @@
 
     goto :goto_0
 
-    :cond_1
+    :cond_0
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/algorithm/FFT;->fft([Lcn/com/smartdevices/bracelet/algorithm/Complex;)[Lcn/com/smartdevices/bracelet/algorithm/Complex;
+
+    move-result-object v3
+
+    move v1, v0
+
+    :goto_1
+    if-ge v1, v2, :cond_1
+
     aget-object v4, v3, v1
 
     invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/algorithm/Complex;->conjugate()Lcn/com/smartdevices/bracelet/algorithm/Complex;
@@ -424,7 +418,10 @@
 
     goto :goto_1
 
-    :cond_2
+    :cond_1
+    :goto_2
+    if-ge v0, v2, :cond_2
+
     aget-object v1, v3, v0
 
     const-wide/high16 v4, 0x3ff0000000000000L
@@ -442,6 +439,9 @@
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
+
+    :cond_2
+    return-object v3
 .end method
 
 .method public static main([Ljava/lang/String;)V
@@ -484,9 +484,27 @@
 
     move-result-object v7
 
-    if-nez v7, :cond_1
+    if-eqz v7, :cond_1
 
-    :goto_0
+    invoke-static {v7}, Ljava/lang/Double;->valueOf(Ljava/lang/String;)Ljava/lang/Double;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/Double;->doubleValue()D
+
+    move-result-wide v7
+
+    new-instance v9, Lcn/com/smartdevices/bracelet/algorithm/Complex;
+
+    invoke-direct {v9, v7, v8, v10, v11}, Lcn/com/smartdevices/bracelet/algorithm/Complex;-><init>(DD)V
+
+    aput-object v9, v6, v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    if-lt v0, v5, :cond_0
+
+    :cond_1
     invoke-virtual {v4}, Ljava/io/BufferedReader;->close()V
 
     invoke-virtual {v3}, Ljava/io/InputStreamReader;->close()V
@@ -511,39 +529,11 @@
 
     new-array v2, v2, [Lcn/com/smartdevices/bracelet/algorithm/Complex;
 
-    :goto_1
+    :goto_0
     const/16 v3, 0x100
 
-    if-lt v1, v3, :cond_2
+    if-ge v1, v3, :cond_2
 
-    const-string v0, "L2"
-
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/algorithm/FFT;->show([Lcn/com/smartdevices/bracelet/algorithm/Complex;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_1
-    invoke-static {v7}, Ljava/lang/Double;->valueOf(Ljava/lang/String;)Ljava/lang/Double;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Ljava/lang/Double;->doubleValue()D
-
-    move-result-wide v7
-
-    new-instance v9, Lcn/com/smartdevices/bracelet/algorithm/Complex;
-
-    invoke-direct {v9, v7, v8, v10, v11}, Lcn/com/smartdevices/bracelet/algorithm/Complex;-><init>(DD)V
-
-    aput-object v9, v6, v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    if-lt v0, v5, :cond_0
-
-    goto :goto_0
-
-    :cond_2
     new-instance v3, Lcn/com/smartdevices/bracelet/algorithm/Complex;
 
     aget-object v4, v0, v1
@@ -582,7 +572,14 @@
 
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_1
+    goto :goto_0
+
+    :cond_2
+    const-string v0, "L2"
+
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/algorithm/FFT;->show([Lcn/com/smartdevices/bracelet/algorithm/Complex;Ljava/lang/String;)V
+
+    return-void
 .end method
 
 .method public static show([Lcn/com/smartdevices/bracelet/algorithm/Complex;Ljava/lang/String;)V
@@ -603,15 +600,8 @@
     :goto_0
     array-length v1, p0
 
-    if-lt v0, v1, :cond_0
+    if-ge v0, v1, :cond_0
 
-    sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
-
-    invoke-virtual {v0}, Ljava/io/PrintStream;->println()V
-
-    return-void
-
-    :cond_0
     sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     aget-object v2, p0, v0
@@ -621,4 +611,11 @@
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    :cond_0
+    sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
+
+    invoke-virtual {v0}, Ljava/io/PrintStream;->println()V
+
+    return-void
 .end method

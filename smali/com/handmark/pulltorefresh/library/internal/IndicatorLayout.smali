@@ -16,8 +16,6 @@
 # static fields
 .field static final a:I = 0x96
 
-.field private static synthetic g:[I
-
 
 # instance fields
 .field private b:Landroid/view/animation/Animation;
@@ -57,7 +55,7 @@
 
     move-result-object v0
 
-    const v5, 0x7f020067
+    const v5, 0x7f02007d
 
     invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -71,7 +69,7 @@
 
     move-result-object v0
 
-    const v5, 0x7f09003b
+    const v5, 0x7f0b002f
 
     invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -85,9 +83,7 @@
 
     invoke-virtual {p0, v0}, Lcom/handmark/pulltorefresh/library/internal/IndicatorLayout;->addView(Landroid/view/View;)V
 
-    invoke-static {}, Lcom/handmark/pulltorefresh/library/internal/IndicatorLayout;->a()[I
-
-    move-result-object v0
+    sget-object v0, Lcom/handmark/pulltorefresh/library/internal/b;->a:[I
 
     invoke-virtual {p2}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->ordinal()I
 
@@ -97,11 +93,11 @@
 
     packed-switch v0, :pswitch_data_0
 
-    const v5, 0x7f040011
+    const v5, 0x7f040010
 
-    const v0, 0x7f040013
+    const v0, 0x7f040012
 
-    const v6, 0x7f020069
+    const v6, 0x7f02007f
 
     invoke-virtual {p0, v6}, Lcom/handmark/pulltorefresh/library/internal/IndicatorLayout;->setBackgroundResource(I)V
 
@@ -189,11 +185,11 @@
     return-void
 
     :pswitch_0
-    const v5, 0x7f040010
+    const v5, 0x7f04000f
 
-    const v0, 0x7f040012
+    const v0, 0x7f040011
 
-    const v7, 0x7f020068
+    const v7, 0x7f02007e
 
     invoke-virtual {p0, v7}, Lcom/handmark/pulltorefresh/library/internal/IndicatorLayout;->setBackgroundResource(I)V
 
@@ -234,128 +230,9 @@
     goto/16 :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x3
+    .packed-switch 0x1
         :pswitch_0
     .end packed-switch
-.end method
-
-.method static synthetic a()[I
-    .locals 3
-
-    sget-object v0, Lcom/handmark/pulltorefresh/library/internal/IndicatorLayout;->g:[I
-
-    if-eqz v0, :cond_0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    invoke-static {}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->values()[Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    :try_start_0
-    sget-object v1, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->BOTH:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;
-
-    invoke-virtual {v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_4
-
-    :goto_1
-    :try_start_1
-    sget-object v1, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->DISABLED:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;
-
-    invoke-virtual {v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_3
-
-    :goto_2
-    :try_start_2
-    sget-object v1, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->MANUAL_REFRESH_ONLY:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;
-
-    invoke-virtual {v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x5
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :goto_3
-    :try_start_3
-    sget-object v1, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->PULL_FROM_END:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;
-
-    invoke-virtual {v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_1
-
-    :goto_4
-    :try_start_4
-    sget-object v1, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->PULL_FROM_START:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;
-
-    invoke-virtual {v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_0
-
-    :goto_5
-    sput-object v0, Lcom/handmark/pulltorefresh/library/internal/IndicatorLayout;->g:[I
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v1
-
-    goto :goto_5
-
-    :catch_1
-    move-exception v1
-
-    goto :goto_4
-
-    :catch_2
-    move-exception v1
-
-    goto :goto_3
-
-    :catch_3
-    move-exception v1
-
-    goto :goto_2
-
-    :catch_4
-    move-exception v1
-
-    goto :goto_1
 .end method
 
 

@@ -17,14 +17,6 @@
     .end annotation
 .end field
 
-.field public static final NOTIFY_LEVEL_0:I = 0x3
-
-.field public static final NOTIFY_LEVEL_10:I = 0x0
-
-.field public static final NOTIFY_LEVEL_2:I = 0x2
-
-.field public static final NOTIFY_LEVEL_5:I = 0x1
-
 
 # instance fields
 .field public level:I
@@ -75,95 +67,6 @@
     iput p2, p0, Lcom/xiaomi/hm/bleservice/HwBatteryStatus;->level:I
 
     return-void
-.end method
-
-.method public static getNofifyLevel(I)I
-    .locals 5
-
-    const/4 v4, 0x5
-
-    const/4 v2, 0x2
-
-    const/4 v1, 0x1
-
-    const/4 v0, 0x0
-
-    const/16 v3, 0xa
-
-    if-gt p0, v3, :cond_0
-
-    if-le p0, v4, :cond_0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    if-gt p0, v4, :cond_1
-
-    move v4, v1
-
-    :goto_1
-    if-le p0, v2, :cond_2
-
-    move v3, v1
-
-    :goto_2
-    and-int/2addr v3, v4
-
-    if-eqz v3, :cond_3
-
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_1
-    move v4, v0
-
-    goto :goto_1
-
-    :cond_2
-    move v3, v0
-
-    goto :goto_2
-
-    :cond_3
-    if-gt p0, v2, :cond_4
-
-    move v3, v1
-
-    :goto_3
-    if-lez p0, :cond_5
-
-    :goto_4
-    and-int v0, v3, v1
-
-    if-eqz v0, :cond_6
-
-    move v0, v2
-
-    goto :goto_0
-
-    :cond_4
-    move v3, v0
-
-    goto :goto_3
-
-    :cond_5
-    move v1, v0
-
-    goto :goto_4
-
-    :cond_6
-    if-nez p0, :cond_7
-
-    const/4 v0, 0x3
-
-    goto :goto_0
-
-    :cond_7
-    const/4 v0, -0x1
-
-    goto :goto_0
 .end method
 
 

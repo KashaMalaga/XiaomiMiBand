@@ -94,18 +94,11 @@ localization_Chinese_table = {
     challenge_format="你已连续%d天达成目标",
     personal_best_format="个人历史最高记录%d天",
     continue_with_skips_title="昨天未达标, 环环已经帮你使用假条过关啦！",
-    continue_with_skips_title_today="今天未达标, 环环已经帮你使用假条过关啦！",
     personal_best_with_skips_format="剩余%d张假条",
     continue_used_n_skips_format="连续达标%d天, 还有%d张假条可用",
     continue_used_0_skips_format="连续达标%d天, 假条已经用完了要加油咯～",
     personal_best_on_skip_day_title="恭喜获得假条一张, 你已连续%d天达标",
     personal_best_on_skip_day_info="连续达标每满7天即可获得假条, 未达标时会自动使用",
-    manual_lazy_title="今天还未达标哦, 是否要使用假条？",
-    manual_lazy_subtitle="使用假条即使今天没有达标也不会中断连续达标",
-    manual_lazy_title_used="今天已经使用假条, 好好放松一下吧",
-    manual_lazy_subtitle_used="要是一不小心今天达标了, 还是会计入连续达标的哦",
-    manual_fail_ytd_title = "很遗憾昨天未达标, 连续达标中断",
-    manual_fail_ytd_subtitle = "截至前天已连续%d天达标",
 
     active_time_format_0="%d分钟",
     active_time_format_1="%d小时",
@@ -124,7 +117,6 @@ localization_Chinese_table = {
     activity_consumed_format="消耗了%d千卡%s",
 
     activity_activity_format="%s活动了%s, 共%s",
-    activity_activity_format_run="%s活动了%s, 跑了%s",
     last_night_sleeped_good_format="昨晚睡了%s, 睡得不错哦",
     last_night_sleeped_normal_format="昨晚睡了%s",
     deep_sleep_format="深睡%s",
@@ -137,7 +129,7 @@ localization_Chinese_table = {
 
     challenge_to_get="还有%s天即将创造新的记录",
     record_reach_max="恭喜你已经追平了自己的最高记录",
-    new_record_born="新记录诞生",
+    new_record_born="新记录诞生！",
 
     --=================== Game =====================
     game_register="国庆七天日行万步, 赢取小米手机4",

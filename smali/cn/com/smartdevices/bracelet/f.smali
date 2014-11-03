@@ -1,4 +1,4 @@
-.class Lcn/com/smartdevices/bracelet/f;
+.class final Lcn/com/smartdevices/bracelet/f;
 .super Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;
 
 

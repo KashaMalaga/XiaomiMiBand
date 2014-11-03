@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Lcn/com/smartdevices/bracelet/ui/DimPanelFragment$OpClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/w;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/w;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,22 +22,30 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
+.method public onEmptyAreaClicked(Landroid/app/DialogFragment;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onLeftClicked(Landroid/app/DialogFragment;)V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/w;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/w;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->h(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Lcn/com/smartdevices/bracelet/gaocept/GaoceptManager;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->s(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;)Lcn/com/smartdevices/bracelet/lab/PBRecordPref;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gaocept/GaoceptManager;->cleanStorage()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/PBRecordPref;->setUserConfirmAutoCounter()Z
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/lab/debug/RawDataGetter;->cleanStorageFile()V
+    invoke-virtual {p1}, Landroid/app/DialogFragment;->dismiss()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/w;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
+    return-void
+.end method
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->update_storage()V
+.method public onRightClicked(Landroid/app/DialogFragment;)V
+    .locals 0
 
     return-void
 .end method

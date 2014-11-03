@@ -1,28 +1,66 @@
-.class Lcom/handmark/pulltorefresh/library/internal/a;
+.class synthetic Lcom/handmark/pulltorefresh/library/internal/a;
 .super Ljava/lang/Object;
 
 
-# annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0xb
-.end annotation
+# static fields
+.field static final synthetic a:[I
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->values()[Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;
 
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/handmark/pulltorefresh/library/internal/a;->a:[I
+
+    :try_start_0
+    sget-object v0, Lcom/handmark/pulltorefresh/library/internal/a;->a:[I
+
+    sget-object v1, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->PULL_FROM_END:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;
+
+    invoke-virtual {v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_1
+
+    :goto_0
+    :try_start_1
+    sget-object v0, Lcom/handmark/pulltorefresh/library/internal/a;->a:[I
+
+    sget-object v1, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->PULL_FROM_START:Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;
+
+    invoke-virtual {v1}, Lcom/handmark/pulltorefresh/library/PullToRefreshBase$Mode;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_0
+
+    :goto_1
     return-void
-.end method
 
-.method public static a(Landroid/view/View;I)V
-    .locals 1
+    :catch_0
+    move-exception v0
 
-    const/4 v0, 0x0
+    goto :goto_1
 
-    invoke-virtual {p0, p1, v0}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
+    :catch_1
+    move-exception v0
 
-    return-void
+    goto :goto_0
 .end method

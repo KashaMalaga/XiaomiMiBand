@@ -14,7 +14,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/view/x;)V
+.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/view/w;)V
     .locals 0
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/view/x;-><init>()V
@@ -25,19 +25,17 @@
 
 # virtual methods
 .method public canScrollHorizontal(Landroid/view/View;I)Z
-    .locals 3
+    .locals 4
 
     const/4 v0, 0x0
 
-    check-cast p1, Landroid/support/v4/view/ViewPager;
+    check-cast p1, Landroid/widget/HorizontalScrollView;
 
-    invoke-virtual {p1}, Landroid/support/v4/view/ViewPager;->getAdapter()Landroid/support/v4/view/PagerAdapter;
+    invoke-virtual {p1}, Landroid/widget/HorizontalScrollView;->getScrollX()I
 
-    move-result-object v1
+    move-result v1
 
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Landroid/support/v4/view/PagerAdapter;->getCount()I
+    invoke-virtual {p1}, Landroid/widget/HorizontalScrollView;->getChildCount()I
 
     move-result v2
 
@@ -48,24 +46,28 @@
     return v0
 
     :cond_1
-    invoke-virtual {p1}, Landroid/support/v4/view/ViewPager;->getCurrentItem()I
+    if-gez p2, :cond_2
+
+    invoke-virtual {p1, v0}, Landroid/widget/HorizontalScrollView;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/view/View;->getWidth()I
 
     move-result v2
 
-    if-gez p2, :cond_2
+    invoke-virtual {p1}, Landroid/widget/HorizontalScrollView;->getWidth()I
 
-    invoke-virtual {v1}, Landroid/support/v4/view/PagerAdapter;->getCount()I
+    move-result v3
 
-    move-result v1
+    sub-int/2addr v2, v3
 
-    add-int/lit8 v1, v1, -0x1
-
-    if-lt v2, v1, :cond_3
+    if-lt v1, v2, :cond_3
 
     :cond_2
     if-lez p2, :cond_0
 
-    if-lez v2, :cond_0
+    if-lez v1, :cond_0
 
     :cond_3
     const/4 v0, 0x1

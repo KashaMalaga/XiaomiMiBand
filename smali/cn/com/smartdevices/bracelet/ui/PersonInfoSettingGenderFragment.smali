@@ -36,9 +36,9 @@
 .method private a()V
     .locals 6
 
-    const v5, 0x7f080010
+    const v5, 0x7f090043
 
-    const v4, 0x7f08000c
+    const v4, 0x7f090027
 
     const/4 v3, 0x4
 
@@ -131,7 +131,7 @@
 .method protected inflateLayout()I
     .locals 1
 
-    const v0, 0x7f030047
+    const v0, 0x7f030046
 
     return v0
 .end method
@@ -176,7 +176,7 @@
     nop
 
     :pswitch_data_0
-    .packed-switch 0x7f07013c
+    .packed-switch 0x7f0a013b
         :pswitch_1
         :pswitch_0
         :pswitch_2
@@ -204,7 +204,7 @@
 
     move-result-object v1
 
-    const v0, 0x7f070092
+    const v0, 0x7f0a0092
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -212,7 +212,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingGenderFragment;->b:Landroid/view/View;
 
-    const v0, 0x7f070093
+    const v0, 0x7f0a0093
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -220,7 +220,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingGenderFragment;->c:Landroid/view/View;
 
-    const v0, 0x7f07013e
+    const v0, 0x7f0a013d
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -232,7 +232,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f07013c
+    const v0, 0x7f0a013b
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -244,7 +244,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f07013f
+    const v0, 0x7f0a013e
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -254,7 +254,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingGenderFragment;->f:Landroid/widget/TextView;
 
-    const v0, 0x7f07013d
+    const v0, 0x7f0a013c
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

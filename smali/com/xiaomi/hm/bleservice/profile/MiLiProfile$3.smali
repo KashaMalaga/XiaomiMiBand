@@ -29,7 +29,7 @@
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$3;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     # getter for: Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->m_DataSourceOutputStream:Ljava/io/PipedOutputStream;
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$3(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)Ljava/io/PipedOutputStream;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$200(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)Ljava/io/PipedOutputStream;
 
     move-result-object v0
 

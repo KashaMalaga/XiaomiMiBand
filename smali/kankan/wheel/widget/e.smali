@@ -1,8 +1,5 @@
 .class Lkankan/wheel/widget/e;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lkankan/wheel/widget/OnWheelChangedListener;
+.super Landroid/database/DataSetObserver;
 
 
 # instance fields
@@ -15,33 +12,27 @@
 
     iput-object p1, p0, Lkankan/wheel/widget/e;->a:Lkankan/wheel/widget/WheelView;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onChanged(Lkankan/wheel/widget/WheelView;II)V
-    .locals 3
+.method public onChanged()V
+    .locals 2
 
-    const-string v0, "WheelView"
+    iget-object v0, p0, Lkankan/wheel/widget/e;->a:Lkankan/wheel/widget/WheelView;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const/4 v1, 0x0
 
-    const-string v2, "newValue="
+    invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->invalidateWheel(Z)V
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    return-void
+.end method
 
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+.method public onInvalidated()V
+    .locals 2
 
     iget-object v0, p0, Lkankan/wheel/widget/e;->a:Lkankan/wheel/widget/WheelView;
 

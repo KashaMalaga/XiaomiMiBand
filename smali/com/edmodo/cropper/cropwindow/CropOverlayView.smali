@@ -1245,7 +1245,7 @@
     :goto_0
     iget v0, p0, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->F:I
 
-    if-ne v0, v7, :cond_2
+    if-ne v0, v7, :cond_3
 
     iget-object v5, p0, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->n:Landroid/graphics/Paint;
 
@@ -1263,7 +1263,7 @@
 
     const/4 v5, 0x1
 
-    if-ne v0, v5, :cond_0
+    if-ne v0, v5, :cond_2
 
     iget-object v0, p0, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->v:Lcom/edmodo/cropper/cropwindow/handle/Handle;
 
@@ -1274,6 +1274,13 @@
     goto :goto_0
 
     :cond_2
+    iget v0, p0, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->A:I
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_3
     sub-float v0, v3, v1
 
     div-float/2addr v0, v6

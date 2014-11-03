@@ -80,15 +80,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-eqz v0, :cond_1
 
-    :cond_1
-    move-object v0, v1
-
-    :goto_0
-    return-object v0
-
-    :cond_2
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -108,6 +101,12 @@
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/weather/OriginalCityCodes$DataSource;->getKey()Ljava/lang/String;
 
     move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :cond_1
+    move-object v0, v1
 
     goto :goto_0
 .end method
@@ -164,15 +163,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -188,4 +180,11 @@
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -70,9 +70,7 @@
 
     sput-boolean v2, Lcn/com/smartdevices/bracelet/algorithm/data/Utils;->ForceTimeOverClean:Z
 
-    const/4 v0, 0x1
-
-    sput-boolean v0, Lcn/com/smartdevices/bracelet/algorithm/data/Utils;->mPrintToFile:Z
+    sput-boolean v2, Lcn/com/smartdevices/bracelet/algorithm/data/Utils;->mPrintToFile:Z
 
     return-void
 .end method
@@ -279,25 +277,8 @@
 
     move-result v1
 
-    if-lt v2, v1, :cond_2
+    if-ge v2, v1, :cond_3
 
-    mul-double v1, v5, v3
-
-    invoke-static {v1, v2}, Ljava/lang/Math;->sqrt(D)D
-
-    move-result-wide v1
-
-    const-wide/16 v3, 0x0
-
-    cmpg-double v3, v1, v3
-
-    if-gtz v3, :cond_4
-
-    const-wide/16 v1, 0x0
-
-    goto :goto_0
-
-    :cond_2
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -338,7 +319,7 @@
 
     cmpl-double v1, v9, v11
 
-    if-lez v1, :cond_3
+    if-lez v1, :cond_2
 
     move-object/from16 v0, p0
 
@@ -380,12 +361,29 @@
 
     add-double/2addr v3, v9
 
-    :cond_3
+    :cond_2
     add-int/lit8 v1, v2, 0x1
 
     move v2, v1
 
     goto :goto_1
+
+    :cond_3
+    mul-double v1, v5, v3
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v1
+
+    const-wide/16 v3, 0x0
+
+    cmpg-double v3, v1, v3
+
+    if-gtz v3, :cond_4
+
+    const-wide/16 v1, 0x0
+
+    goto :goto_0
 
     :cond_4
     div-double v1, v7, v1
@@ -453,19 +451,8 @@
 
     move-result v0
 
-    if-lt v1, v0, :cond_2
+    if-ge v1, v0, :cond_3
 
-    invoke-static {v2, v3}, Ljava/lang/Math;->sqrt(D)D
-
-    move-result-wide v0
-
-    add-double/2addr v0, v12
-
-    div-double v4, v12, v0
-
-    goto :goto_0
-
-    :cond_2
     invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -500,7 +487,7 @@
 
     cmpl-double v0, v6, v4
 
-    if-lez v0, :cond_3
+    if-lez v0, :cond_2
 
     invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -544,10 +531,21 @@
 
     add-double/2addr v2, v6
 
-    :cond_3
+    :cond_2
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_1
+
+    :cond_3
+    invoke-static {v2, v3}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v0
+
+    add-double/2addr v0, v12
+
+    div-double v4, v12, v0
+
+    goto :goto_0
 .end method

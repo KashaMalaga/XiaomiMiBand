@@ -3,18 +3,18 @@
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-.field private final synthetic b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+.field final synthetic b:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;
 
 
 # direct methods
 .method constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/g;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/g;->b:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;
 
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/lab/ui/g;->b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/lab/ui/g;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     invoke-direct {p0}, Lcom/loopj/android/http/AsyncHttpResponseHandler;-><init>()V
 
@@ -26,7 +26,7 @@
 .method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
     .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/g;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/g;->b:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->c(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;)Ljava/lang/String;
 
@@ -34,9 +34,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "updateProfile onFailed: "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -54,15 +58,15 @@
 .method public onSuccess(I[Lorg/apache/http/Header;[B)V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/g;->b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/g;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->clearNeedSyncServer()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/g;->b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/g;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/Keeper;->keepPersonInfo(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/g;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/g;->b:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->c(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;)Ljava/lang/String;
 

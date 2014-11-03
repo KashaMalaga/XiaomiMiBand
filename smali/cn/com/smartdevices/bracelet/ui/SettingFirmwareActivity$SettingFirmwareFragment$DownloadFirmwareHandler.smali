@@ -156,9 +156,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment$DownloadFirmwareHandler;->g:Landroid/app/ProgressDialog;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bG;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bK;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/bG;-><init>(Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment$DownloadFirmwareHandler;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/bK;-><init>(Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment$DownloadFirmwareHandler;)V
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
@@ -166,12 +166,12 @@
     return-void
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment$DownloadFirmwareHandler;Z)V
+.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment$DownloadFirmwareHandler;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment$DownloadFirmwareHandler;->f:Z
 
-    return-void
+    return p1
 .end method
 
 .method private b()V
@@ -224,8 +224,20 @@
 
     move-result v4
 
-    if-gtz v4, :cond_1
+    if-lez v4, :cond_1
 
+    const/4 v5, 0x0
+
+    invoke-virtual {v3, v1, v5, v4}, Ljava/security/MessageDigest;->update([BII)V
+
+    goto :goto_1
+
+    :catch_0
+    move-exception v1
+
+    goto :goto_0
+
+    :cond_1
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
 
     invoke-virtual {v3}, Ljava/security/MessageDigest;->digest()[B
@@ -233,22 +245,10 @@
     move-result-object v1
 
     invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment$DownloadFirmwareHandler;->toHexString([B)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v5, 0x0
-
-    invoke-virtual {v3, v1, v5, v4}, Ljava/security/MessageDigest;->update([BII)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_1
-
-    :catch_0
-    move-exception v1
+    move-result-object v0
 
     goto :goto_0
 .end method
@@ -269,15 +269,8 @@
     :goto_0
     array-length v2, p0
 
-    if-lt v0, v2, :cond_0
+    if-ge v0, v2, :cond_0
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_0
     sget-object v2, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment$DownloadFirmwareHandler;->h:[C
 
     aget-byte v3, p0, v0
@@ -303,6 +296,13 @@
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 
@@ -316,9 +316,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "Download On Failure : "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment$DownloadFirmwareHandler;->d:Ljava/io/File;
 
@@ -351,32 +355,23 @@
     move v0, v1
 
     :goto_0
-    if-lt v0, v2, :cond_1
+    if-ge v0, v2, :cond_0
 
-    :cond_0
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment$DownloadFirmwareHandler;->f:Z
-
-    if-eqz v0, :cond_2
-
-    :goto_1
-    return-void
-
-    :cond_1
     aget-object v3, p2, v0
 
     const-string v4, "Setting.Firmware"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
     invoke-interface {v3}, Lorg/apache/http/Header;->getName()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-static {v6}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v6
-
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v5
 
     const-string v6, " : "
 
@@ -402,7 +397,15 @@
 
     goto :goto_0
 
-    :cond_2
+    :cond_0
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment$DownloadFirmwareHandler;->f:Z
+
+    if-eqz v0, :cond_1
+
+    :goto_1
+    return-void
+
+    :cond_1
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment$DownloadFirmwareHandler;->b()V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment$DownloadFirmwareHandler;->c:Landroid/content/Context;
@@ -452,9 +455,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "Download On Progress : "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -527,32 +534,23 @@
     move v0, v1
 
     :goto_0
-    if-lt v0, v2, :cond_1
+    if-ge v0, v2, :cond_0
 
-    :cond_0
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment$DownloadFirmwareHandler;->f:Z
-
-    if-eqz v0, :cond_2
-
-    :goto_1
-    return-void
-
-    :cond_1
     aget-object v3, p2, v0
 
     const-string v4, "Setting.Firmware"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
     invoke-interface {v3}, Lorg/apache/http/Header;->getName()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-static {v6}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v6
-
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v5
 
     const-string v6, " : "
 
@@ -578,7 +576,15 @@
 
     goto :goto_0
 
-    :cond_2
+    :cond_0
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment$DownloadFirmwareHandler;->f:Z
+
+    if-eqz v0, :cond_1
+
+    :goto_1
+    return-void
+
+    :cond_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment$DownloadFirmwareHandler;->d:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
@@ -609,11 +615,11 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
-    :cond_3
+    :cond_2
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment$DownloadFirmwareHandler;->d:Ljava/io/File;
 
     invoke-virtual {v0, v2}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
@@ -622,9 +628,13 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "FirmwareFile : "
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -672,9 +682,13 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "FirmwareMd5 : "
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -694,7 +708,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_3
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment$DownloadFirmwareHandler;->b:Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment;
 
@@ -702,7 +716,7 @@
 
     goto/16 :goto_1
 
-    :cond_4
+    :cond_3
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment$DownloadFirmwareHandler;->c:Landroid/content/Context;
 
     const-string v2, "\u56fa\u4ef6\u6821\u9a8c\u5931\u8d25\uff0c\u8bf7\u91cd\u8bd5"

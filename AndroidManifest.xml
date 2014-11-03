@@ -132,20 +132,18 @@
         </activity>
         <activity android:name="cn.com.smartdevices.bracelet.lab.ui.LabFactoryReminderActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
         <activity android:name="cn.com.smartdevices.bracelet.lab.ui.SportFavoriteVoteGridActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
-        <activity android:name="cn.com.smartdevices.bracelet.sensorhub.SensorhubDemoActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
         <activity android:configChanges="keyboardHidden|orientation" android:name="cn.com.smartdevices.bracelet.lab.ui.LabFactoryTestActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="cn.com.smartdevices.bracele.action.START_LAB_FACTORY_TEST_ACTIVITY"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:name="cn.com.smartdevices.bracelet.lab.ui.SportResultActivity" android:screenOrientation="portrait">
+        <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:name="cn.com.smartdevices.bracelet.lab.ui.SportResultShareActivity" android:screenOrientation="portrait">
             <intent-filter>
-                <action android:name="cn.com.smartdevices.bracele.action.SHOW_SPORT_RESULT_ACTIVITY"/>
+                <action android:name="cn.com.smartdevices.bracelet.action.SHOW_SPORT_RESULT_ACTIVITY"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:name="cn.com.smartdevices.bracelet.lab.ui.SportVoteOthersActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible|adjustResize"/>
         <service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote"/>
         <meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="dMGlsmpHOollXfGZ8jKfMpjQ"/>
         <meta-data android:name="com.amap.api.v2.apikey" android:value="c0795b73d5df927742aac5b9a41ec327"/>

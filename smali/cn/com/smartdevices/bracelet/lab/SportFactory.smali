@@ -32,6 +32,8 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-class v1, Lcn/com/smartdevices/bracelet/lab/SportFactory;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getPackage()Ljava/lang/Package;
@@ -42,11 +44,9 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     const-string v1, ".extra.SPORT_TYPE"
 
@@ -60,7 +60,7 @@
 
     sput-object v0, Lcn/com/smartdevices/bracelet/lab/SportFactory;->EXTRA_SPORT_TYPE:Ljava/lang/String;
 
-    const/4 v0, 0x5
+    const/4 v0, 0x4
 
     new-array v0, v0, [Ljava/lang/String;
 
@@ -72,23 +72,17 @@
 
     const/4 v1, 0x1
 
-    const-string v2, "Situps"
+    const-string v2, "MoreSportFavorite"
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x2
 
-    const-string v2, "MoreSportFavorite"
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x3
-
     const-string v2, "bind_weixin"
 
     aput-object v2, v0, v1
 
-    const/4 v1, 0x4
+    const/4 v1, 0x3
 
     const-string v2, "bind_qq"
 
@@ -114,7 +108,7 @@
 .end method
 
 .method public static getSportsArray(Landroid/content/Context;)Ljava/util/List;
-    .locals 6
+    .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -127,15 +121,15 @@
         }
     .end annotation
 
-    const/4 v4, 0x0
+    const/4 v6, 0x1
 
-    const/4 v5, 0x1
+    const/4 v5, 0x0
 
     if-nez p0, :cond_0
 
     new-instance v0, Ljava/util/ArrayList;
 
-    invoke-direct {v0, v4}, Ljava/util/ArrayList;-><init>(I)V
+    invoke-direct {v0, v5}, Ljava/util/ArrayList;-><init>(I)V
 
     :goto_0
     return-object v0
@@ -143,9 +137,7 @@
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/lab/SportFactory;->a:[Ljava/lang/String;
-
-    array-length v1, v1
+    const/4 v1, 0x4
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
@@ -155,35 +147,17 @@
 
     new-instance v2, Lcn/com/smartdevices/bracelet/lab/SportFactory$LabItem;
 
-    const v3, 0x7f0c0261
+    const v3, 0x7f0d00e5
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-direct {v2, v4, v3}, Lcn/com/smartdevices/bracelet/lab/SportFactory$LabItem;-><init>(ILjava/lang/String;)V
+    sget-object v4, Lcn/com/smartdevices/bracelet/lab/SportFactory;->a:[Ljava/lang/String;
 
-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    aget-object v4, v4, v5
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/lab/SportFactory$LabItem;
-
-    invoke-direct {v2, v5}, Lcn/com/smartdevices/bracelet/lab/SportFactory$LabItem;-><init>(Z)V
-
-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    new-instance v2, Lcn/com/smartdevices/bracelet/lab/SportFactory$LabItem;
-
-    sget-object v3, Lcn/com/smartdevices/bracelet/lab/SportFactory;->a:[Ljava/lang/String;
-
-    aget-object v3, v3, v4
-
-    invoke-direct {v2, v3}, Lcn/com/smartdevices/bracelet/lab/SportFactory$LabItem;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    new-instance v2, Lcn/com/smartdevices/bracelet/lab/SportFactory$LabItem;
-
-    invoke-direct {v2, v5}, Lcn/com/smartdevices/bracelet/lab/SportFactory$LabItem;-><init>(Z)V
+    invoke-direct {v2, v5, v3, v4}, Lcn/com/smartdevices/bracelet/lab/SportFactory$LabItem;-><init>(ILjava/lang/String;Ljava/lang/String;)V
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -191,7 +165,7 @@
 
     sget-object v3, Lcn/com/smartdevices/bracelet/lab/SportFactory;->a:[Ljava/lang/String;
 
-    aget-object v3, v3, v5
+    aget-object v3, v3, v6
 
     invoke-direct {v2, v3}, Lcn/com/smartdevices/bracelet/lab/SportFactory$LabItem;-><init>(Ljava/lang/String;)V
 
@@ -199,11 +173,11 @@
 
     new-instance v2, Lcn/com/smartdevices/bracelet/lab/SportFactory$LabItem;
 
-    invoke-direct {v2, v5}, Lcn/com/smartdevices/bracelet/lab/SportFactory$LabItem;-><init>(Z)V
+    const v3, 0x7f0d00e4
 
-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/lab/SportFactory$LabItem;
+    move-result-object v1
 
     sget-object v3, Lcn/com/smartdevices/bracelet/lab/SportFactory;->a:[Ljava/lang/String;
 
@@ -211,33 +185,9 @@
 
     aget-object v3, v3, v4
 
-    invoke-direct {v2, v3}, Lcn/com/smartdevices/bracelet/lab/SportFactory$LabItem;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v6, v1, v3}, Lcn/com/smartdevices/bracelet/lab/SportFactory$LabItem;-><init>(ILjava/lang/String;Ljava/lang/String;)V
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    new-instance v2, Lcn/com/smartdevices/bracelet/lab/SportFactory$LabItem;
-
-    invoke-direct {v2, v5}, Lcn/com/smartdevices/bracelet/lab/SportFactory$LabItem;-><init>(Z)V
-
-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    new-instance v2, Lcn/com/smartdevices/bracelet/lab/SportFactory$LabItem;
-
-    const v3, 0x7f0c0262
-
-    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v2, v5, v1}, Lcn/com/smartdevices/bracelet/lab/SportFactory$LabItem;-><init>(ILjava/lang/String;)V
-
-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    new-instance v1, Lcn/com/smartdevices/bracelet/lab/SportFactory$LabItem;
-
-    invoke-direct {v1, v5}, Lcn/com/smartdevices/bracelet/lab/SportFactory$LabItem;-><init>(Z)V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     new-instance v1, Lcn/com/smartdevices/bracelet/lab/SportFactory$LabItem;
 
@@ -251,25 +201,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/lab/SportFactory$LabItem;
-
-    invoke-direct {v1, v5}, Lcn/com/smartdevices/bracelet/lab/SportFactory$LabItem;-><init>(Z)V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    new-instance v1, Lcn/com/smartdevices/bracelet/lab/SportFactory$LabItem;
-
-    sget-object v2, Lcn/com/smartdevices/bracelet/lab/SportFactory;->a:[Ljava/lang/String;
-
-    const/4 v3, 0x4
-
-    aget-object v2, v2, v3
-
-    invoke-direct {v1, v2}, Lcn/com/smartdevices/bracelet/lab/SportFactory$LabItem;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    goto/16 :goto_0
+    goto :goto_0
 .end method
 
 .method public static loadSportActivity(Landroid/content/Context;Ljava/lang/String;)Z
@@ -417,7 +349,7 @@
     :catch_0
     move-exception v1
 
-    const v1, 0x7f0c021d
+    const v1, 0x7f0d00ea
 
     invoke-static {p0, v1, v0}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -472,9 +404,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "Dont support mSportName ="
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/SportFactory;->b:Ljava/lang/String;
 

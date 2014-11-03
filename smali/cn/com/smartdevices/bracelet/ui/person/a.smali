@@ -3,18 +3,18 @@
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetSportGoalActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-.field private final synthetic b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetSportGoalActivity;
 
 
 # direct methods
 .method constructor <init>(Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetSportGoalActivity;Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/person/a;->a:Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetSportGoalActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/person/a;->b:Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetSportGoalActivity;
 
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/person/a;->b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/person/a;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     invoke-direct {p0}, Lcom/loopj/android/http/AsyncHttpResponseHandler;-><init>()V
 
@@ -34,9 +34,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "statusCode="
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -78,11 +82,11 @@
 
     if-eqz v1, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/a;->b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/a;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->clearNeedSyncServer()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/a;->b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/a;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/Keeper;->keepPersonInfo(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 
@@ -94,9 +98,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "statusCode="
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

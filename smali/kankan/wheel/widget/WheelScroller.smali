@@ -83,12 +83,20 @@
     return-void
 .end method
 
-.method static synthetic a(Lkankan/wheel/widget/WheelScroller;)Landroid/widget/Scroller;
+.method static synthetic a(Lkankan/wheel/widget/WheelScroller;)I
     .locals 1
 
-    iget-object v0, p0, Lkankan/wheel/widget/WheelScroller;->e:Landroid/widget/Scroller;
+    iget v0, p0, Lkankan/wheel/widget/WheelScroller;->f:I
 
-    return-object v0
+    return v0
+.end method
+
+.method static synthetic a(Lkankan/wheel/widget/WheelScroller;I)I
+    .locals 0
+
+    iput p1, p0, Lkankan/wheel/widget/WheelScroller;->f:I
+
+    return p1
 .end method
 
 .method private a(I)V
@@ -103,20 +111,12 @@
     return-void
 .end method
 
-.method static synthetic a(Lkankan/wheel/widget/WheelScroller;I)V
-    .locals 0
-
-    iput p1, p0, Lkankan/wheel/widget/WheelScroller;->f:I
-
-    return-void
-.end method
-
-.method static synthetic b(Lkankan/wheel/widget/WheelScroller;)I
+.method static synthetic b(Lkankan/wheel/widget/WheelScroller;)Landroid/widget/Scroller;
     .locals 1
 
-    iget v0, p0, Lkankan/wheel/widget/WheelScroller;->f:I
+    iget-object v0, p0, Lkankan/wheel/widget/WheelScroller;->e:Landroid/widget/Scroller;
 
-    return v0
+    return-object v0
 .end method
 
 .method private b()V
