@@ -170,7 +170,7 @@
 
     move-result v2
 
-    add-int/lit8 v2, v2, -0x3
+    add-int/lit8 v2, v2, -0x0
 
     invoke-virtual {v1, v2}, Lkankan/wheel/widget/WheelView;->setCurrentItem(I)Lkankan/wheel/widget/WheelView;
 
