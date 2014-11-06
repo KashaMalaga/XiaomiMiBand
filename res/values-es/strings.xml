@@ -255,6 +255,7 @@ necesita una red disponible."</string>
   <string name="lab_factory_sport_continuous_situp">Contínuo</string>
   <string name="lab_factory_sport_device_preparing">Preparando</string>
   <string name="lab_factory_sport_finish_desc">Finalizado</string>
+  <string name="lab_factory_sport_average_rate_per_minute">Velocidad &lt;b>%d&lt;/b> vece(s)/minuto</string>
   <string name="lab_factory_sport_gb_count">PB contínuos %d veces(s)</string>
   <string name="lab_factory_sport_group_finish_desc">Tanda actual de %s completada</string>
   <string name="lab_factory_sport_group_record">Recuento de grupo:</string>
@@ -265,8 +266,8 @@ necesita una red disponible."</string>
   <string name="lab_factory_sport_hour_sec" formatted="false">%d H%d S</string>
   <string name="lab_factory_sport_min">%s puntos</string>
   <string formatted="false" name="lab_factory_sport_min_second">%s puntos %s segundos</string>
-  <string name="lab_factory_sport_monitor_bracelet_offline">La pulsera no está desconectada</string>
-  <string name="lab_factory_sport_monitor_bracelet_offline_notice">Can do %s after bracelet connected at once</string>
+  <string name="lab_factory_sport_monitor_bracelet_offline">La pulsera no está conectada</string>
+  <string name="lab_factory_sport_monitor_bracelet_offline_notice">Puede hacer %s después de conectar tu Mi Band</string>
   <string name="lab_factory_sport_monitor_cancelled_notice">Se empezará a contar automáticamente cuando se haga %s con Xiaomi Ring</string>
   <string name="lab_factory_sport_monitor_timeout_notice">Ningún evento detectado en 2 minutos</string>
   <string name="lab_factory_sport_more_sport_favorite_notice">Por favor, elija solo un deporte</string>
