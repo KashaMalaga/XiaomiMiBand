@@ -73,7 +73,7 @@
 
     invoke-direct {v1, p0}, Landroid/app/Dialog;-><init>(Landroid/content/Context;)V
 
-    const v0, 0x7f0c0243
+    const v0, 0x7f0c0229
 
     invoke-virtual {v1, v0}, Landroid/app/Dialog;->setTitle(I)V
 
@@ -91,7 +91,7 @@
 
     invoke-virtual {v1, v2}, Landroid/app/Dialog;->setContentView(Landroid/view/View;)V
 
-    const v0, 0x7f070076
+    const v0, 0x7f070075
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -226,7 +226,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->c:Landroid/widget/TextView;
 
-    const v2, 0x7f0c025c
+    const v2, 0x7f0c0242
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -236,7 +236,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->d:Landroid/widget/TextView;
 
-    const v2, 0x7f0c025d
+    const v2, 0x7f0c0243
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -315,7 +315,7 @@
 
     if-nez v1, :cond_0
 
-    const v1, 0x7f02007a
+    const v1, 0x7f02007f
 
     invoke-direct {p0, v1, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->a(ILjava/lang/String;)V
 

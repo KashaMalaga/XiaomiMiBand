@@ -7,6 +7,8 @@
 
 .field public static final CFG_LAB_FACTORY:Z = true
 
+.field public static final CFG_LAB_RUNNING_HELPER:Z = false
+
 .field public static final CFG_MOTOR_VIBRATE_NOTIFICATION:Z = false
 
 .field public static final CFG_NATIONAL_DAY_EVENT:Z = false

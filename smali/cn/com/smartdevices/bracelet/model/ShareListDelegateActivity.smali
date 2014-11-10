@@ -305,13 +305,17 @@
 
     new-instance v1, Ljava/text/SimpleDateFormat;
 
-    const-string v2, "MMMM, "
+    const v2, 0x7f0c0023
+
+    invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
 
     invoke-direct {v1, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    const v3, 0x7f0c01df
+    const v3, 0x7f0c01e0
 
     invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->getString(I)Ljava/lang/String;
 
@@ -808,7 +812,7 @@
 
     invoke-virtual {v10, v0}, Lcn/com/smartdevices/bracelet/model/ShareData;->setType(I)V
 
-    const v0, 0x7f0c01cd
+    const v0, 0x7f0c01ce
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->getString(I)Ljava/lang/String;
 
@@ -829,7 +833,7 @@
 
     iput-object v1, v10, Lcn/com/smartdevices/bracelet/model/ShareData;->contentUnit:Ljava/lang/String;
 
-    const v1, 0x7f0c01cc
+    const v1, 0x7f0c01cd
 
     new-array v3, v6, [Ljava/lang/Object;
 

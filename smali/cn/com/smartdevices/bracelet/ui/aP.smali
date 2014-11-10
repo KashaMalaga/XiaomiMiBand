@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/aO;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/aO;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/aP;->a:Lcn/com/smartdevices/bracelet/ui/aO;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/aP;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,18 +22,18 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aP;->a:Lcn/com/smartdevices/bracelet/ui/aO;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aP;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/aO;->a(Lcn/com/smartdevices/bracelet/ui/aO;)Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const/4 v1, 0x1
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/upgrade/UpgradeUtil;->updateCheckState(Landroid/content/Context;)V
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->updateDynamicList(Z)V
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
     return-void
 .end method

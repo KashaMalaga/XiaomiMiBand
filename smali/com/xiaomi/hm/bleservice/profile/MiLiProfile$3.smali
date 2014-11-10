@@ -23,13 +23,24 @@
 
 # virtual methods
 .method public notify([B)V
-    .locals 1
+    .locals 2
 
     :try_start_0
+    # getter for: Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->TAG:Ljava/lang/String;
+    invoke-static {}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$3()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p1}, Lcom/xiaomi/hm/bleservice/util/Helper;->bytesToHexString([B)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->fi(Ljava/lang/String;Ljava/lang/String;)V
+
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$3;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     # getter for: Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->m_DataSourceOutputStream:Ljava/io/PipedOutputStream;
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$3(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)Ljava/io/PipedOutputStream;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$4(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)Ljava/io/PipedOutputStream;
 
     move-result-object v0
 

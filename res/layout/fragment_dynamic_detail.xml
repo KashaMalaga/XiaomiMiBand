@@ -12,27 +12,27 @@
         <ImageButton android:layout_gravity="right|center" android:id="@id/share" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:src="@drawable/btn_share" />
         <View android:layout_gravity="bottom" android:background="#1affffff" android:layout_width="fill_parent" android:layout_height="1.0px" />
     </FrameLayout>
-    <view android:scrollbars="none" android:fadingEdgeLength="25.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:overScrollMode="never" android:requiresFadingEdge="vertical" class="cn.com.smartdevices.bracelet.ui.StatisticFragment$FadingEdgeScrollView">
-        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <FrameLayout android:layout_width="fill_parent" android:layout_height="355.0dip">
-                <cn.com.smartdevices.bracelet.chart.DynamicDetailChartView android:id="@id/day_active_chart" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-                <include android:visibility="invisible" layout="@layout/fragment_dynamic_detail_float_info_sleep" />
-                <include android:visibility="invisible" layout="@layout/fragment_dynamic_detail_float_info_step" />
-                <TextView android:textSize="15.0sp" android:textColor="#ffaaabb6" android:layout_gravity="center_horizontal" android:id="@id/sleep_unwear_tip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="35.0dip" android:text="@string/no_wear_bracelet" />
-            </FrameLayout>
-            <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
-                <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="160.0dip">
-                    <include android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/fragment_dynamic_detail_info_sleep" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <view android:scrollbars="none" android:fadingEdgeLength="25.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" android:requiresFadingEdge="vertical" class="cn.com.smartdevices.bracelet.ui.StatisticFragment$FadingEdgeScrollView">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <cn.com.smartdevices.bracelet.chart.DynamicDetailChartView android:id="@id/day_active_chart" android:layout_width="fill_parent" android:layout_height="355.0dip" />
+                <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="160.0dip">
+                        <include android:layout_gravity="center" android:id="@id/info_sleep_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/fragment_dynamic_detail_info_sleep" />
+                    </FrameLayout>
+                    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="160.0dip">
+                        <include android:layout_gravity="center" android:id="@id/info_step_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/fragment_dynamic_detail_info_step" />
+                    </FrameLayout>
+                    <FrameLayout android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="220.0dip">
+                        <ViewStub android:layout_gravity="center" android:id="@id/info_step_piece_layout" android:layout="@layout/fragment_dynamic_detail_info_step_piece" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    </FrameLayout>
                 </FrameLayout>
-                <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="160.0dip">
-                    <include android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/fragment_dynamic_detail_info_step" />
-                </FrameLayout>
-                <FrameLayout android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="220.0dip">
-                    <ViewStub android:layout_gravity="center" android:id="@id/info_step_piece_layout" android:layout="@layout/fragment_dynamic_detail_info_step_piece" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-                </FrameLayout>
-            </FrameLayout>
-        </LinearLayout>
-    </view>
+            </LinearLayout>
+        </view>
+        <include android:layout_gravity="center_horizontal" android:id="@id/float_sleep_info" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="30.0dip" android:layout_marginTop="22.0dip" layout="@layout/fragment_dynamic_detail_float_info_sleep" />
+        <include android:layout_gravity="center_horizontal" android:id="@id/float_step_info" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="30.0dip" android:layout_marginTop="22.0dip" layout="@layout/fragment_dynamic_detail_float_info_step" />
+        <TextView android:textSize="15.0sp" android:textColor="#ffaaabb6" android:layout_gravity="center_horizontal" android:id="@id/sleep_unwear_tip" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="35.0dip" android:text="@string/no_wear_bracelet" />
+    </FrameLayout>
     <FrameLayout android:layout_width="fill_parent" android:layout_height="60.0dip">
         <View android:background="#33000000" android:layout_width="fill_parent" android:layout_height="1.0px" />
         <ImageButton android:layout_gravity="center" android:id="@id/mode_switch" android:background="@null" android:padding="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />

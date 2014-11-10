@@ -176,7 +176,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/sensorhub/SensorhubDemoActivity;->b:Lcn/com/smartdevices/bracelet/sensorhub/StepsAdapter;
 
-    const v0, 0x7f0700a4
+    const v0, 0x7f0700a3
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/sensorhub/SensorhubDemoActivity;->findViewById(I)Landroid/view/View;
 

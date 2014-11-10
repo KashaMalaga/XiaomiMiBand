@@ -78,262 +78,28 @@
     return-object v0
 .end method
 
-.method private share()V
-    .locals 4
-
-    const-string v0, "WebActivity"
-
-    const-string v1, "Start Share!!"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v0
-
-    if-nez v0, :cond_1
-
-    :cond_0
-    :goto_0
-    return-void
-
-    :cond_1
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v0
-
-    const-string v1, "EventPageType"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-
-    move-result v2
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x1
-
-    if-ne v2, v1, :cond_2
-
-    :try_start_0
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->getAssets()Landroid/content/res/AssetManager;
-
-    move-result-object v1
-
-    const-string v3, "event_national_day_signup_share.jpg"
-
-    invoke-virtual {v1, v3}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
-
-    move-result-object v1
-
-    invoke-static {v1}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result-object v0
-
-    :goto_1
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v3, "/"
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v3, "share.jpg"
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    if-eqz v0, :cond_0
-
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/Utils;->saveBitmapToFile(Ljava/lang/String;Landroid/graphics/Bitmap;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebViewContainer:Landroid/view/View;
-
-    invoke-virtual {v0}, Landroid/view/View;->destroyDrawingCache()V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->getIntent()Landroid/content/Intent;
-
-    move-result-object v0
-
-    const-class v3, Lcn/com/smartdevices/bracelet/ui/ShareActivity;
-
-    invoke-virtual {v0, p0, v3}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
-
-    const-string v3, "pic_url"
-
-    invoke-virtual {v0, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    const-string v1, "EventPageType"
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    new-instance v1, Lcn/com/smartdevices/bracelet/model/ShareData;
-
-    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/model/ShareData;-><init>()V
-
-    const/16 v2, 0xb
-
-    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/model/ShareData;->setType(I)V
-
-    const-string v2, "share_data"
-
-    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->startActivity(Landroid/content/Intent;)V
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v1
-
-    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
-
-    goto :goto_1
-
-    :cond_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebViewContainer:Landroid/view/View;
-
-    invoke-virtual {v0}, Landroid/view/View;->buildDrawingCache()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebViewContainer:Landroid/view/View;
-
-    invoke-virtual {v0}, Landroid/view/View;->getDrawingCache()Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    goto :goto_1
-.end method
-
-
-# virtual methods
-.method public onClick(Landroid/view/View;)V
+.method static synthetic access$3(Lcn/com/smartdevices/bracelet/activity/WebActivity;)Landroid/webkit/WebView;
     .locals 1
 
-    invoke-virtual {p1}, Landroid/view/View;->getId()I
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->myWebView:Landroid/webkit/WebView;
 
-    move-result v0
-
-    packed-switch v0, :pswitch_data_0
-
-    :goto_0
-    return-void
-
-    :pswitch_0
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->share()V
-
-    goto :goto_0
-
-    :pswitch_data_0
-    .packed-switch 0x7f070074
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method
 
-.method protected onCreate(Landroid/os/Bundle;)V
+.method static synthetic access$4(Lcn/com/smartdevices/bracelet/activity/WebActivity;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->loadPages()V
+
+    return-void
+.end method
+
+.method private loadPages()V
     .locals 8
 
     const/4 v7, 0x0
 
     const/4 v6, 0x1
-
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
-
-    const v0, 0x7f03003d
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->setContentView(I)V
-
-    const v0, 0x7f070074
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mShare:Landroid/view/View;
-
-    const v0, 0x7f070072
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mActionBar:Landroid/view/View;
-
-    const v0, 0x7f070022
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/webkit/WebView;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->myWebView:Landroid/webkit/WebView;
-
-    const v0, 0x7f07011c
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebErrorTip:Landroid/widget/TextView;
-
-    const v0, 0x7f070119
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebViewContainer:Landroid/view/View;
-
-    const v0, 0x7f07011d
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ProgressBar;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebViewCenterProgress:Landroid/widget/ProgressBar;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mShare:Landroid/view/View;
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->myWebView:Landroid/webkit/WebView;
-
-    invoke-virtual {v0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v6}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->getIntent()Landroid/content/Intent;
 
@@ -517,30 +283,6 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     :cond_3
-    const v0, 0x7f07011b
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ProgressBar;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebViewProgress:Landroid/widget/ProgressBar;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->myWebView:Landroid/webkit/WebView;
-
-    new-instance v1, Lcn/com/smartdevices/bracelet/activity/j;
-
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/activity/j;-><init>(Lcn/com/smartdevices/bracelet/activity/WebActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->myWebView:Landroid/webkit/WebView;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mChromeClient:Landroid/webkit/WebChromeClient;
-
-    invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V
-
     return-void
 
     :cond_4
@@ -657,7 +399,7 @@
 
     invoke-virtual {v3, v2}, Landroid/view/View;->setBackgroundColor(I)V
 
-    const v3, 0x7f07011a
+    const v3, 0x7f070184
 
     invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -783,6 +525,306 @@
     invoke-virtual {v2, v0}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
     goto/16 :goto_1
+.end method
+
+.method private setupViews()V
+    .locals 2
+
+    const v0, 0x7f070072
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mShare:Landroid/view/View;
+
+    const v0, 0x7f0700a8
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mActionBar:Landroid/view/View;
+
+    const v0, 0x7f070022
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/webkit/WebView;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->myWebView:Landroid/webkit/WebView;
+
+    const v0, 0x7f070186
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebErrorTip:Landroid/widget/TextView;
+
+    const v0, 0x7f070183
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebViewContainer:Landroid/view/View;
+
+    const v0, 0x7f070187
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ProgressBar;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebViewCenterProgress:Landroid/widget/ProgressBar;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mShare:Landroid/view/View;
+
+    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->myWebView:Landroid/webkit/WebView;
+
+    invoke-virtual {v0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
+
+    const v0, 0x7f070185
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ProgressBar;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebViewProgress:Landroid/widget/ProgressBar;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->myWebView:Landroid/webkit/WebView;
+
+    new-instance v1, Lcn/com/smartdevices/bracelet/activity/j;
+
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/activity/j;-><init>(Lcn/com/smartdevices/bracelet/activity/WebActivity;)V
+
+    invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->myWebView:Landroid/webkit/WebView;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mChromeClient:Landroid/webkit/WebChromeClient;
+
+    invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebErrorTip:Landroid/widget/TextView;
+
+    new-instance v1, Lcn/com/smartdevices/bracelet/activity/k;
+
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/activity/k;-><init>(Lcn/com/smartdevices/bracelet/activity/WebActivity;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    return-void
+.end method
+
+.method private share()V
+    .locals 4
+
+    const-string v0, "WebActivity"
+
+    const-string v1, "Start Share!!"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    if-nez v0, :cond_1
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    const-string v1, "EventPageType"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result v2
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    if-ne v2, v1, :cond_2
+
+    :try_start_0
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->getAssets()Landroid/content/res/AssetManager;
+
+    move-result-object v1
+
+    const-string v3, "event_national_day_signup_share.jpg"
+
+    invoke-virtual {v1, v3}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
+
+    move-result-object v1
+
+    invoke-static {v1}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    :goto_1
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v3, "/"
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v3, "share.jpg"
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    if-eqz v0, :cond_0
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/Utils;->saveBitmapToFile(Ljava/lang/String;Landroid/graphics/Bitmap;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebViewContainer:Landroid/view/View;
+
+    invoke-virtual {v0}, Landroid/view/View;->destroyDrawingCache()V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    const-class v3, Lcn/com/smartdevices/bracelet/ui/ShareActivity;
+
+    invoke-virtual {v0, p0, v3}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
+
+    const-string v3, "pic_url"
+
+    invoke-virtual {v0, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    const-string v1, "EventPageType"
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    new-instance v1, Lcn/com/smartdevices/bracelet/model/ShareData;
+
+    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/model/ShareData;-><init>()V
+
+    const/16 v2, 0xb
+
+    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/model/ShareData;->setType(I)V
+
+    const-string v2, "share_data"
+
+    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->startActivity(Landroid/content/Intent;)V
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v1
+
+    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_1
+
+    :cond_2
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebViewContainer:Landroid/view/View;
+
+    invoke-virtual {v0}, Landroid/view/View;->buildDrawingCache()V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebViewContainer:Landroid/view/View;
+
+    invoke-virtual {v0}, Landroid/view/View;->getDrawingCache()Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    goto :goto_1
+.end method
+
+
+# virtual methods
+.method public onClick(Landroid/view/View;)V
+    .locals 1
+
+    invoke-virtual {p1}, Landroid/view/View;->getId()I
+
+    move-result v0
+
+    packed-switch v0, :pswitch_data_0
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->share()V
+
+    goto :goto_0
+
+    :pswitch_data_0
+    .packed-switch 0x7f070072
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method protected onCreate(Landroid/os/Bundle;)V
+    .locals 1
+
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
+
+    const v0, 0x7f03005d
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->setContentView(I)V
+
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->setupViews()V
+
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->loadPages()V
+
+    return-void
 .end method
 
 .method protected onDestroy()V

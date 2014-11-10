@@ -132,7 +132,7 @@
 .method private b()V
     .locals 4
 
-    const v0, 0x7f07007f
+    const v0, 0x7f07007e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->findViewById(I)Landroid/view/View;
 
@@ -140,7 +140,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070077
+    const v0, 0x7f070076
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->findViewById(I)Landroid/view/View;
 
@@ -267,8 +267,8 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f070077 -> :sswitch_1
-        0x7f07007f -> :sswitch_0
+        0x7f070076 -> :sswitch_1
+        0x7f07007e -> :sswitch_0
     .end sparse-switch
 .end method
 

@@ -253,7 +253,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/LoginData;->isValid()Z
 
@@ -286,7 +286,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/Utils;->checkDeviceCompatible()Z
 

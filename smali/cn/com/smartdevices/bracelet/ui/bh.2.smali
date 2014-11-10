@@ -1,76 +1,65 @@
 .class Lcn/com/smartdevices/bracelet/ui/bh;
-.super Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/widget/AdapterView$OnItemClickListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/widget/AdapterView$OnItemClickListener;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/PersonInfoFragment;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/PersonInfoFragment;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bh;->b:Lcn/com/smartdevices/bracelet/ui/PersonInfoFragment;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bh;->a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onFailed(Ljava/lang/Object;)V
-    .locals 3
-
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;->onFailed(Ljava/lang/Object;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bh;->b:Lcn/com/smartdevices/bracelet/ui/PersonInfoFragment;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/PersonInfoFragment;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bh;->b:Lcn/com/smartdevices/bracelet/ui/PersonInfoFragment;
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/ui/PersonInfoFragment;->getActivity()Landroid/app/Activity;
-
-    move-result-object v1
-
-    const v2, 0x7f0c0045
-
-    invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/CustomToast;->makeText(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    return-void
-.end method
-
-.method public onFinish(Ljava/lang/Object;)V
+.method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;->onFinish(Ljava/lang/Object;)V
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bh;->a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
 
-    const-string v0, "PersonInfoFragment"
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bh;->a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
 
-    const-string v1, "sync to bracelet ok"
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;->a(Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;)Ljava/util/ArrayList;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v0
 
-    return-void
-.end method
+    invoke-virtual {v0, p3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-.method public onStart()V
-    .locals 0
+    move-result-object v0
 
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;->onStart()V
+    check-cast v0, Lcn/com/smartdevices/bracelet/ui/bo;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/bo;->a:Landroid/bluetooth/BluetoothDevice;
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;->a(Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;Landroid/bluetooth/BluetoothDevice;)V
 
     return-void
 .end method

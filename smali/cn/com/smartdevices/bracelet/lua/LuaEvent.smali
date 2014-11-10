@@ -294,64 +294,6 @@
     return-object v0
 .end method
 
-.method public getLayDayStartDate()Ljava/lang/String;
-    .locals 4
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->getInstance()Lcn/com/smartdevices/bracelet/lua/LuaManager;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->getLuaState()Lorg/keplerproject/luajava/LuaState;
-
-    move-result-object v1
-
-    sget-object v2, Lorg/keplerproject/luajava/LuaState;->LUA_GLOBALSINDEX:Ljava/lang/Integer;
-
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    const-string v3, "getManualLazyDayStartDate"
-
-    invoke-virtual {v1, v2, v3}, Lorg/keplerproject/luajava/LuaState;->getField(ILjava/lang/String;)V
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->cInfo:Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
-
-    invoke-virtual {v1, v2}, Lorg/keplerproject/luajava/LuaState;->pushJavaObject(Ljava/lang/Object;)V
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->callLua(II)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->cInfo:Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->getDataStr()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "LuaEvent"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "get manual lazy day start date ="
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
 .method public getLuaEventMsg()Lcn/com/smartdevices/bracelet/lua/LuaEventMsgs;
     .locals 1
 

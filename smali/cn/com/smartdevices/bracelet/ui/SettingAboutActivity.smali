@@ -28,9 +28,9 @@
 .method private a()V
     .locals 3
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bs;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/br;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/bs;-><init>(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/br;-><init>(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;->c:Landroid/content/BroadcastReceiver;
 

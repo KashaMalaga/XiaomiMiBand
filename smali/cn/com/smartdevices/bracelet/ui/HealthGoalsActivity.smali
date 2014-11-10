@@ -41,7 +41,7 @@
 
     const/16 v11, 0xf
 
-    const v0, 0x7f070096
+    const v0, 0x7f070095
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->findViewById(I)Landroid/view/View;
 
@@ -59,7 +59,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0200bd
+    const v1, 0x7f0200c2
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->setCenterDrawable(I)Lkankan/wheel/widget/WheelView;
 
@@ -137,7 +137,7 @@
 
     invoke-virtual {v14, v0}, Lkankan/wheel/widget/WheelView;->setViewAdapter(Lkankan/wheel/widget/adapters/WheelViewAdapter;)Lkankan/wheel/widget/WheelView;
 
-    const v0, 0x7f070095
+    const v0, 0x7f070094
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->findViewById(I)Landroid/view/View;
 
@@ -209,7 +209,7 @@
 
     invoke-virtual {v1, v0}, Lkankan/wheel/widget/WheelView;->setCurrentItem(I)Lkankan/wheel/widget/WheelView;
 
-    const v0, 0x7f07007f
+    const v0, 0x7f07007e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->findViewById(I)Landroid/view/View;
 
@@ -217,7 +217,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070077
+    const v0, 0x7f070076
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->findViewById(I)Landroid/view/View;
 
@@ -383,8 +383,8 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f070077 -> :sswitch_1
-        0x7f07007f -> :sswitch_0
+        0x7f070076 -> :sswitch_1
+        0x7f07007e -> :sswitch_0
     .end sparse-switch
 .end method
 
@@ -393,7 +393,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f03005c
+    const v0, 0x7f030060
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->setContentView(I)V
 

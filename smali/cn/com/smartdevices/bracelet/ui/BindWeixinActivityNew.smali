@@ -109,7 +109,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->j:Landroid/widget/TextView;
 
-    const v1, 0x7f0c01cf
+    const v1, 0x7f0c01d0
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -157,7 +157,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->j:Landroid/widget/TextView;
 
-    const v1, 0x7f0c01d1
+    const v1, 0x7f0c01d2
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -221,7 +221,7 @@
 .method private f()V
     .locals 1
 
-    const v0, 0x7f0c01d0
+    const v0, 0x7f0c01d1
 
     invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/Utils;->showProgressDialog(Landroid/app/Activity;I)V
 

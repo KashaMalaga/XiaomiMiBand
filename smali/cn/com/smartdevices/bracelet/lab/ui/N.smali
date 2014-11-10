@@ -63,7 +63,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/N;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;
 
-    const v2, 0x7f02007a
+    const v2, 0x7f02007f
 
     invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 

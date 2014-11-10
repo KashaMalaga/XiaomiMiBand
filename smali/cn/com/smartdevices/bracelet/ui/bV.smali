@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/chart/util/AnimUtil$AnimColorListener;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
@@ -22,21 +22,44 @@
 
 
 # virtual methods
-.method public onColorChanged(I)V
-    .locals 1
+.method public onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 2
+
+    const/4 v1, 0x1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bV;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->getActivity()Landroid/app/Activity;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->F(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->setScrollable(Z)V
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bV;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->applyStatusBarTint(I)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->G(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
-    :cond_0
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->setScrollable(Z)V
+
+    return-void
+.end method
+
+.method public onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
+
     return-void
 .end method

@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
@@ -22,10 +22,12 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 0
+.method public run()V
+    .locals 1
 
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bw;->a:Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;->d(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;)V
 
     return-void
 .end method

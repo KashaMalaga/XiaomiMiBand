@@ -223,21 +223,6 @@
 .method public abstract enableRealtimeStepNotification(ZLcom/xiaomi/hm/bleservice/profile/IMiLiProfile$IRealtimeStepsChangedCB;)Z
 .end method
 
-.method public abstract getActivities()Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityDataFragment;",
-            ">;"
-        }
-    .end annotation
-.end method
-
-.method public abstract getActivitySyncingProgress()Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$Progress;
-.end method
-
 .method public abstract getDeviceInfo()Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;
 .end method
 

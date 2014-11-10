@@ -1006,6 +1006,12 @@
 
     invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->e:Landroid/content/Context;
+
+    const-string v4, "QQ_Health_SyncData"
+
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->event(Landroid/content/Context;Ljava/lang/String;)V
+
     sget-object v3, Lcn/com/smartdevices/bracelet/webapi/BraceletHttpClient;->syncClient:Lcom/loopj/android/http/SyncHttpClient;
 
     new-instance v4, Lcn/com/smartdevices/bracelet/tencent/health/b;
@@ -1013,12 +1019,6 @@
     invoke-direct {v4, p0, p1, v1}, Lcn/com/smartdevices/bracelet/tencent/health/b;-><init>(Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;Lcn/com/smartdevices/bracelet/model/SportDay;Ljava/lang/String;)V
 
     invoke-virtual {v3, v0, v2, v4}, Lcom/loopj/android/http/SyncHttpClient;->post(Ljava/lang/String;Lcom/loopj/android/http/RequestParams;Lcom/loopj/android/http/ResponseHandlerInterface;)Lcom/loopj/android/http/RequestHandle;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->e:Landroid/content/Context;
-
-    const-string v1, "QQ_Health_SyncData"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->event(Landroid/content/Context;Ljava/lang/String;)V
 
     goto/16 :goto_0
 .end method
@@ -1095,6 +1095,12 @@
 
     invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
 
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->e:Landroid/content/Context;
+
+    const-string v3, "QQ_Health_SyncData"
+
+    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->event(Landroid/content/Context;Ljava/lang/String;)V
+
     sget-object v1, Lcn/com/smartdevices/bracelet/webapi/BraceletHttpClient;->syncClient:Lcom/loopj/android/http/SyncHttpClient;
 
     new-instance v3, Lcn/com/smartdevices/bracelet/tencent/health/a;
@@ -1102,12 +1108,6 @@
     invoke-direct {v3, p0, p1}, Lcn/com/smartdevices/bracelet/tencent/health/a;-><init>(Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;Lcn/com/smartdevices/bracelet/model/SportDay;)V
 
     invoke-virtual {v1, v0, v2, v3}, Lcom/loopj/android/http/SyncHttpClient;->post(Ljava/lang/String;Lcom/loopj/android/http/RequestParams;Lcom/loopj/android/http/ResponseHandlerInterface;)Lcom/loopj/android/http/RequestHandle;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->e:Landroid/content/Context;
-
-    const-string v1, "QQ_Health_SyncData"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->event(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

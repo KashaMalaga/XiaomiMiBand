@@ -88,6 +88,7 @@
         <service android:name="com.xiaomi.hm.bleservice.BLEService"/>
         <service android:name="cn.com.smartdevices.bracelet.lab.datasync.SyncLabSportDataService"/>
         <service android:name="cn.com.smartdevices.bracelet.upgrade.UpgradeService"/>
+        <service android:name="cn.com.smartdevices.bracelet.gps.services.SubGPSSportService"/>
         <receiver android:name="com.xiaomi.market.sdk.DownloadCompleteReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
@@ -146,6 +147,8 @@
             </intent-filter>
         </activity>
         <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:name="cn.com.smartdevices.bracelet.lab.ui.SportVoteOthersActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:name="cn.com.smartdevices.bracelet.gps.ui.NewSportsGaodeActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:name="cn.com.smartdevices.bracelet.gps.ui.GaodeTestActivity" android:screenOrientation="portrait"/>
         <service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote"/>
         <meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="dMGlsmpHOollXfGZ8jKfMpjQ"/>
         <meta-data android:name="com.amap.api.v2.apikey" android:value="c0795b73d5df927742aac5b9a41ec327"/>

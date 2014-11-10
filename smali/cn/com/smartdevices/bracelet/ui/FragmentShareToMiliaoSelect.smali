@@ -19,7 +19,7 @@
 .method protected inflateLayout()I
     .locals 1
 
-    const v0, 0x7f030057
+    const v0, 0x7f030058
 
     return v0
 .end method
@@ -82,7 +82,7 @@
     goto :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x7f070165
+    .packed-switch 0x7f070166
         :pswitch_1
         :pswitch_2
         :pswitch_0
@@ -96,15 +96,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070167
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const v1, 0x7f070165
+    const v1, 0x7f070168
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -113,6 +105,14 @@
     invoke-virtual {v1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     const v1, 0x7f070166
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    const v1, 0x7f070167
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

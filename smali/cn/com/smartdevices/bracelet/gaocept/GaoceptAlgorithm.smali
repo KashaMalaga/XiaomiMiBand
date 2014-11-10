@@ -26,7 +26,7 @@
 .method public native checkCheat()Z
 .end method
 
-.method public native endToFreeSpaces()V
+.method public native endToFreeSpaces()Z
 .end method
 
 .method public native getDebugString(Z)Ljava/lang/String;

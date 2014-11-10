@@ -1,4 +1,4 @@
-__luaVersion=20141011003
+__luaVersion=20141104002
 --[[----------- NOTE: read me first if you want to modify it---------------
 1\
 the first line of this lua file _MUST_ be __luaVersion !!
@@ -661,6 +661,7 @@ function dayComplete(listDao,ConfigInfo)
     "function doAction(context, luaAction) \
         local intent = luaAction:getIntentFromString('cn.com.smartdevices.bracelet.ui.DynamicDetailActivity');\
         luaAction:putExtra(intent,'Mode',0x01)\
+        luaAction:putExtra(intent,'From','FromDynamicList')\
         luaAction:putExtra(intent,'Action','RefCompleteGoal')\
         context:startActivity(intent)\
     end"
@@ -706,18 +707,13 @@ STATUS_CONTINUE_USED_SKIP_YTD = 3;
 STATUS_NEED_USE_SKIP = 4;
 STATUS_CONTINUE_USED_SKIP_TODAY = 5;
 STATUS_MANUAL_BROKEN_YTD = 6;
-MANUAL_ALGORITHM_START_DATE = "2014-10-31"
 SHARE_TYPE_CONTIUE_REACH_GOAL = "SHARE_TYPE_CONTIUE_REACH_GOAL";
 SHARE_TYPE_CONTIUE_REACH_GOAL_MANUAL = "SHARE_TYPE_CONTIUE_REACH_GOAL_MANUAL";
 
 ---- Show if time is after 10:00 pm
 START_SHOW_MANUAL_TIME_IN_HOUR = 22
-CONTINUE_MANUAL_TYPE = "2004_manual"
 
-function getManualLazyDayStartDate(Cinfo)
-    Cinfo:setDataStr(MANUAL_ALGORITHM_START_DATE);
-    log("get manual lazyday start date:" .. MANUAL_ALGORITHM_START_DATE)
-end
+CONTINUE_MANUAL_TYPE = "2004_manual"
 
 --2004
 function challenge(listDao,ConfigInfo)
@@ -779,7 +775,7 @@ function challenge(listDao,ConfigInfo)
     log("skips = "..skips .. ", status ="..continueStatus)
     if (skips > 0) then
         t_skips = string.format(getString('personal_best_with_skips_format'), skips)
-        t2 = t2.." "..t_skips
+        t2 = t2..t_skips
     end
 
     if (continueStatus == STATUS_MANUAL_BROKEN_YTD) then
@@ -806,7 +802,9 @@ function challenge(listDao,ConfigInfo)
 
     replaceMsgByType(listDao,ConfigInfo,t)
 
+    --------------------------------------
     --- Generate manual proceed lazy days:
+    --------------------------------------
     date = os.date("*t")
     timeOk = date.hour >= START_SHOW_MANUAL_TIME_IN_HOUR
     if (continueStatus == STATUS_NEED_USE_SKIP and timeOk) then
@@ -897,6 +895,7 @@ function getActivityScript(activityItem, t2)
     strScript = "function doAction(context, luaAction) \
         local intent = luaAction:getIntentFromString('cn.com.smartdevices.bracelet.ui.DynamicDetailActivity');\
         luaAction:putExtra(intent,'Mode',0x01)\
+        luaAction:putExtra(intent,'From','FromDynamicList')\
         luaAction:putExtra(intent,'Action','DynamicView')\
 	luaAction:putExtra(intent,'Key',"..activityItem:getKey()..")\
 	luaAction:putExtra(intent,'DynamicActivitySubTitle','"..t2.."')\
@@ -929,6 +928,7 @@ function getActivityLabScript(activityItem)
         luaAction:putExtra(intent,'description','"..des.."')\
         luaAction:putExtra(intent,'time_tips','"..sharedata:getTimeTips().."')\
         luaAction:putExtra(intent,'color',"..sharedata:getColor()..")\
+        luaAction:putExtra(intent,'ranking','"..sharedata:getRanking().."')\
         context:startActivity(intent)\
     end"
     return strScript
@@ -1000,6 +1000,10 @@ function activityWalk(listDao,ConfigInfo)
     activityItem = ConfigInfo:getActiveItem()
 
     timestring = getTimeString2(activityItem:getStart(),activityItem:getStop()).." "
+
+    if (getCurLocale() == en_US) then
+        timestring = getTimebyMinutes(activityItem:getStart()).." "
+    end
 
     t1 = string.format(getString('activity_walk_format'), timestring, activityItem:getSteps(), getDistanceString(activityItem:getDistance()))
     t2 = string.format(getString('activity_walk_consumed_format'), activityItem:getCalories(), getCaloriesString(activityItem:getCalories()))
@@ -1091,6 +1095,7 @@ function sleepGood(listDao,ConfigInfo)
     strScript = "function doAction(context, luaAction) \
         local intent = luaAction:getIntentFromString('cn.com.smartdevices.bracelet.ui.DynamicDetailActivity');\
         luaAction:putExtra(intent,'Mode',0x10)\
+        luaAction:putExtra(intent,'From','FromDynamicList')\
         context:startActivity(intent)\
     end";
 --luaAction:putExtra(intent,'Action','DynamicView')\
@@ -1117,6 +1122,7 @@ function sleepNormal(listDao,ConfigInfo)
     strScript = "function doAction(context, luaAction) \
         local intent = luaAction:getIntentFromString('cn.com.smartdevices.bracelet.ui.DynamicDetailActivity');\
         luaAction:putExtra(intent,'Mode',0x10)\
+        luaAction:putExtra(intent,'From','FromDynamicList')\
         context:startActivity(intent)\
     end";
 --luaAction:putExtra(intent,'Action','DynamicView')\
@@ -1140,6 +1146,7 @@ function sleepBad(listDao,ConfigInfo)
     strScript = "function doAction(context, luaAction) \
         local intent = luaAction:getIntentFromString('cn.com.smartdevices.bracelet.ui.DynamicDetailActivity');\
         luaAction:putExtra(intent,'Mode',0x10)\
+        luaAction:putExtra(intent,'From','FromDynamicList')\
         context:startActivity(intent)\
     end";
 --luaAction:putExtra(intent,'Action','DynamicView')\

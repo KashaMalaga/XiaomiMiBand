@@ -165,6 +165,8 @@
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->i()V
 
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Utils;->getLazyDaysFromServer()V
+
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
@@ -383,7 +385,7 @@
 
     const/4 v4, 0x0
 
-    const v0, 0x7f070079
+    const v0, 0x7f070078
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->findViewById(I)Landroid/view/View;
 
@@ -393,7 +395,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->F:Landroid/webkit/WebView;
 
-    const v0, 0x7f07007b
+    const v0, 0x7f07007a
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->findViewById(I)Landroid/view/View;
 
@@ -401,7 +403,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->E:Landroid/view/View;
 
-    const v0, 0x7f070078
+    const v0, 0x7f070077
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->findViewById(I)Landroid/view/View;
 
@@ -409,7 +411,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->z:Landroid/view/View;
 
-    const v0, 0x7f07007a
+    const v0, 0x7f070079
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->findViewById(I)Landroid/view/View;
 
@@ -417,7 +419,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->B:Landroid/view/View;
 
-    const v0, 0x7f07007c
+    const v0, 0x7f07007b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->findViewById(I)Landroid/view/View;
 
@@ -431,7 +433,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f07007e
+    const v0, 0x7f07007d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->findViewById(I)Landroid/view/View;
 
@@ -445,7 +447,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f07007d
+    const v0, 0x7f07007c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->findViewById(I)Landroid/view/View;
 
@@ -1354,7 +1356,7 @@
     goto :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x7f07007c
+    .packed-switch 0x7f07007b
         :pswitch_1
         :pswitch_0
         :pswitch_2

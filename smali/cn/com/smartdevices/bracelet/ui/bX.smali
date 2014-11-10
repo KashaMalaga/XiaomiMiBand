@@ -145,9 +145,7 @@
 .end method
 
 .method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 4
-
-    const/4 v3, 0x0
+    .locals 3
 
     const-string v0, "Statistic.Main"
 
@@ -171,26 +169,11 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bX;->b:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
-    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->setVisibility(I)V
+    const/4 v1, 0x0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bX;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->setVisibility(I)V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->C(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)Lcn/com/smartdevices/bracelet/chart/base/BarChart$BarItem;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bX;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->C(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)Lcn/com/smartdevices/bracelet/chart/base/BarChart$BarItem;
-
-    move-result-object v0
-
-    iput-boolean v3, v0, Lcn/com/smartdevices/bracelet/chart/base/BarChart$BarItem;->needDraw:Z
-
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bX;->c:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bX;->b:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->refresh()V
 

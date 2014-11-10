@@ -1,53 +1,68 @@
 .class Lcn/com/smartdevices/bracelet/ui/aT;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.super Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
+.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
 
 
 # direct methods
 .method constructor <init>(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/aT;->a:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/aT;->b:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
+.method public onFailed(Ljava/lang/Object;)V
     .locals 3
 
-    new-instance v0, Landroid/os/Bundle;
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;->onFailed(Ljava/lang/Object;)V
 
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aT;->b:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
 
-    const-string v1, "Days"
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->b(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;)Landroid/content/Context;
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/aT;->a:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
+    move-result-object v0
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->a(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;)Lcn/com/smartdevices/bracelet/model/AlarmClockItem;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aT;->b:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
 
-    move-result-object v2
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->b(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;)Landroid/content/Context;
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->getCoded()I
+    move-result-object v1
 
-    move-result v2
+    const v2, 0x7f0c0045
 
-    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aT;->a:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
+    move-result-object v1
 
-    const-class v2, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity$AlarmSimpleRepeatFragment;
+    const/4 v2, 0x0
 
-    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/ui/DimPanelFragment;->showPanel(Landroid/app/Activity;Ljava/lang/Class;Landroid/os/Bundle;)V
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/CustomToast;->makeText(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    return-void
+.end method
+
+.method public onFinish(Ljava/lang/Object;)V
+    .locals 2
+
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;->onFinish(Ljava/lang/Object;)V
+
+    const-string v0, "NewAlarmActivity"
+
+    const-string v1, "set alarm to mili OK"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

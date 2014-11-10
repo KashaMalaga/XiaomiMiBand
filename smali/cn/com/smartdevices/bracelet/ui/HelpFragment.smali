@@ -72,7 +72,7 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 3
 
-    const v0, 0x7f03003d
+    const v0, 0x7f03005d
 
     const/4 v1, 0x0
 
@@ -94,7 +94,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/HelpFragment;->b:Landroid/webkit/WebView;
 
-    const v0, 0x7f07011b
+    const v0, 0x7f070185
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

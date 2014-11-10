@@ -1,41 +1,38 @@
 .class Lcn/com/smartdevices/bracelet/ui/bR;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lcom/tencent/tauth/IUiListener;
+.super Lcom/nostra13/universalimageloader/core/listener/SimpleImageLoadingListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/ShareActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/ShowImageActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/ShareActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/ShowImageActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bR;->a:Lcn/com/smartdevices/bracelet/ui/ShareActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bR;->a:Lcn/com/smartdevices/bracelet/ui/ShowImageActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/nostra13/universalimageloader/core/listener/SimpleImageLoadingListener;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onCancel()V
-    .locals 0
+.method public onLoadingComplete(Ljava/lang/String;Landroid/view/View;Landroid/graphics/Bitmap;)V
+    .locals 1
 
-    return-void
-.end method
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bR;->a:Lcn/com/smartdevices/bracelet/ui/ShowImageActivity;
 
-.method public onComplete(Ljava/lang/Object;)V
-    .locals 0
+    invoke-static {v0, p3}, Lcn/com/smartdevices/bracelet/ui/ShowImageActivity;->a(Lcn/com/smartdevices/bracelet/ui/ShowImageActivity;Landroid/graphics/Bitmap;)V
 
-    return-void
-.end method
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bR;->a:Lcn/com/smartdevices/bracelet/ui/ShowImageActivity;
 
-.method public onError(Lcom/tencent/tauth/UiError;)V
-    .locals 0
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ShowImageActivity;->a(Lcn/com/smartdevices/bracelet/ui/ShowImageActivity;)Landroid/widget/ImageView;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p3}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
     return-void
 .end method

@@ -113,15 +113,15 @@
 .end method
 
 .method public setMiliLatency(I)V
-    .locals 2
+    .locals 1
 
-    const/16 v1, 0x27
+    const/16 v0, 0x27
 
-    if-ne p1, v1, :cond_1
+    if-ne p1, v0, :cond_1
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/BLEServiceBinder;->a:Lcom/xiaomi/hm/bleservice/BLEService;
 
-    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->setLatency(I)V
+    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->setMinLatency()V
 
     :cond_0
     :goto_0
@@ -131,10 +131,6 @@
     const/16 v0, 0x1e0
 
     if-ne p1, v0, :cond_0
-
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/BLEServiceBinder;->a:Lcom/xiaomi/hm/bleservice/BLEService;
-
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->cancelSetMaxLatency()V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/BLEServiceBinder;->a:Lcom/xiaomi/hm/bleservice/BLEService;
 

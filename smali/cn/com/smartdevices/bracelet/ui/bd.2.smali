@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/ui/DimPanelFragment$OpClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
@@ -22,28 +22,20 @@
 
 
 # virtual methods
-.method public onEmptyAreaClicked(Landroid/app/DialogFragment;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onLeftClicked(Landroid/app/DialogFragment;)V
+.method public run()V
     .locals 1
-
-    invoke-virtual {p1}, Landroid/app/DialogFragment;->dismiss()V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bd;->a:Lcn/com/smartdevices/bracelet/ui/PersonInfoFragment;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/PersonInfoFragment;->d(Lcn/com/smartdevices/bracelet/ui/PersonInfoFragment;)V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/PersonInfoFragment;->getActivity()Landroid/app/Activity;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public onRightClicked(Landroid/app/DialogFragment;)V
-    .locals 0
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Utils;->hideProgressDialog(Landroid/app/Activity;)V
 
-    invoke-virtual {p1}, Landroid/app/DialogFragment;->dismiss()V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bd;->a:Lcn/com/smartdevices/bracelet/ui/PersonInfoFragment;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/PersonInfoFragment;->e(Lcn/com/smartdevices/bracelet/ui/PersonInfoFragment;)V
 
     return-void
 .end method

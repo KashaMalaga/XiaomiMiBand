@@ -31,7 +31,7 @@
 .method protected inflateLayout()I
     .locals 1
 
-    const v0, 0x7f03005b
+    const v0, 0x7f03005c
 
     return v0
 .end method
@@ -71,7 +71,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/UserAgreementFragment;->b:Landroid/widget/TextView;
 
-    const v3, 0x7f0c01f6
+    const v3, 0x7f0c01f7
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
 
@@ -79,9 +79,9 @@
 
     invoke-direct {v2, v0}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
 
-    new-instance v3, Lcn/com/smartdevices/bracelet/ui/cg;
+    new-instance v3, Lcn/com/smartdevices/bracelet/ui/cf;
 
-    invoke-direct {v3, p0}, Lcn/com/smartdevices/bracelet/ui/cg;-><init>(Lcn/com/smartdevices/bracelet/ui/UserAgreementFragment;)V
+    invoke-direct {v3, p0}, Lcn/com/smartdevices/bracelet/ui/cf;-><init>(Lcn/com/smartdevices/bracelet/ui/UserAgreementFragment;)V
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -99,6 +99,33 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->append(Ljava/lang/CharSequence;)V
 
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+
+    move-result-object v0
+
+    sget-object v2, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+
+    invoke-virtual {v2}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/UserAgreementFragment;->b:Landroid/widget/TextView;
+
+    const-string v2, "."
+
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->append(Ljava/lang/CharSequence;)V
+
+    :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/UserAgreementFragment;->b:Landroid/widget/TextView;
 
     invoke-static {}, Landroid/text/method/LinkMovementMethod;->getInstance()Landroid/text/method/MovementMethod;

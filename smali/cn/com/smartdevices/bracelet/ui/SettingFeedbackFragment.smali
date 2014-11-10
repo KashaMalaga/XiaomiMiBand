@@ -43,9 +43,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bA;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bz;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/bA;-><init>(Lcn/com/smartdevices/bracelet/ui/SettingFeedbackFragment;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/bz;-><init>(Lcn/com/smartdevices/bracelet/ui/SettingFeedbackFragment;)V
 
     invoke-static {v0, p1, p2, v1}, Lcn/com/smartdevices/bracelet/webapi/WebAPI;->sendFeedback(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Ljava/lang/String;Lcom/loopj/android/http/AsyncHttpResponseHandler;)V
 
@@ -212,7 +212,7 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 3
 
-    const v0, 0x7f030053
+    const v0, 0x7f030054
 
     const/4 v1, 0x0
 
@@ -220,7 +220,7 @@
 
     move-result-object v1
 
-    const v0, 0x7f07015e
+    const v0, 0x7f07015f
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -230,7 +230,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingFeedbackFragment;->a:Landroid/widget/EditText;
 
-    const v0, 0x7f07015d
+    const v0, 0x7f07015e
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -240,7 +240,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingFeedbackFragment;->b:Landroid/widget/EditText;
 
-    const v0, 0x7f07015f
+    const v0, 0x7f070160
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -254,9 +254,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingFeedbackFragment;->b:Landroid/widget/EditText;
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/ui/bz;
+    new-instance v2, Lcn/com/smartdevices/bracelet/ui/by;
 
-    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/ui/bz;-><init>(Lcn/com/smartdevices/bracelet/ui/SettingFeedbackFragment;)V
+    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/ui/by;-><init>(Lcn/com/smartdevices/bracelet/ui/SettingFeedbackFragment;)V
 
     invoke-virtual {v0, v2}, Landroid/widget/EditText;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
 

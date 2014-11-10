@@ -124,9 +124,9 @@
 
     move-result-object v2
 
-    new-instance v3, Lcn/com/smartdevices/bracelet/ui/bS;
+    new-instance v3, Lcn/com/smartdevices/bracelet/ui/bR;
 
-    invoke-direct {v3, p0}, Lcn/com/smartdevices/bracelet/ui/bS;-><init>(Lcn/com/smartdevices/bracelet/ui/ShowImageActivity;)V
+    invoke-direct {v3, p0}, Lcn/com/smartdevices/bracelet/ui/bR;-><init>(Lcn/com/smartdevices/bracelet/ui/ShowImageActivity;)V
 
     invoke-virtual {v0, v2, v1, v3}, Lcn/com/smartdevices/bracelet/BraceletImageLoader;->loadImageAsync(Ljava/lang/String;Lcom/nostra13/universalimageloader/core/assist/ImageSize;Lcom/nostra13/universalimageloader/core/listener/ImageLoadingListener;)V
 

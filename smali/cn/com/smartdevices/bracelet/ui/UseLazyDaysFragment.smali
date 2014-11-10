@@ -57,11 +57,19 @@
 .end method
 
 .method protected onRightButtomClicked()V
-    .locals 1
+    .locals 2
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/DimPanelFragment;->onRightButtomClicked()V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/UseLazyDaysFragment;->dismiss()V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/UseLazyDaysFragment;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    const-string v1, "confirm_manual_lazy_day"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->event(Landroid/content/Context;Ljava/lang/String;)V
 
     new-instance v0, Lcn/com/smartdevices/bracelet/model/SportDay;
 

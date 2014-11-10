@@ -26,7 +26,7 @@
 .method protected inflateLayout()I
     .locals 1
 
-    const v0, 0x7f030055
+    const v0, 0x7f030056
 
     return v0
 .end method
@@ -52,7 +52,7 @@
 
     move-result-object v15
 
-    const v1, 0x7f070164
+    const v1, 0x7f070165
 
     invoke-virtual {v15, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -74,13 +74,13 @@
 
     move-result-object v1
 
-    const v2, 0x7f0200bd
+    const v2, 0x7f0200c2
 
     invoke-virtual {v1, v2}, Lkankan/wheel/widget/WheelView;->setCenterDrawable(I)Lkankan/wheel/widget/WheelView;
 
     move-result-object v1
 
-    const v2, 0x7f0c01c7
+    const v2, 0x7f0c01c8
 
     move-object/from16 v0, p0
 
@@ -100,9 +100,9 @@
 
     move-result-object v2
 
-    const/4 v3, 0x0
+    const/4 v3, 0x3
 
-    const/16 v4, 0x3c
+    const/16 v4, 0x1e
 
     move-object/from16 v0, p0
 
@@ -170,7 +170,7 @@
 
     move-result v2
 
-    add-int/lit8 v2, v2, -0x0
+    add-int/lit8 v2, v2, -0x3
 
     invoke-virtual {v1, v2}, Lkankan/wheel/widget/WheelView;->setCurrentItem(I)Lkankan/wheel/widget/WheelView;
 
@@ -222,7 +222,7 @@
 
     move-result v2
 
-    add-int/lit8 v2, v2, 0x0
+    add-int/lit8 v2, v2, 0x3
 
     invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->setInComingCallTime(I)V
 

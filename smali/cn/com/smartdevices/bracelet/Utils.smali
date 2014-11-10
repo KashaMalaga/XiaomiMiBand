@@ -330,15 +330,9 @@
 
     if-le p1, v0, :cond_4
 
-    const-string v0, "1"
+    const v0, 0x7f0c015f
 
-    const v1, 0x7f0c015f
-
-    new-array v2, v7, [Ljava/lang/Object;
-
-    aput-object v0, v2, v6
-
-    invoke-virtual {p0, v1, v2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -402,6 +396,98 @@
     return-void
 .end method
 
+.method private static a(Ljava/util/ArrayList;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList",
+            "<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
+
+    if-nez p0, :cond_0
+
+    :goto_0
+    return-void
+
+    :cond_0
+    const/4 v2, 0x0
+
+    :try_start_0
+    new-instance v1, Lorg/json/JSONObject;
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readLazyDays()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :try_start_1
+    const-string v0, "lazydays"
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Utils;->getGson()Lcom/google/gson/Gson;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p0}, Lcom/google/gson/Gson;->toJson(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v0, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    :try_end_1
+    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_1
+
+    :goto_1
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Keeper;->keepLazyDays(Ljava/lang/String;)Ljava/lang/String;
+
+    :cond_1
+    const-string v0, "Utils"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "after cope with lazy days: "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    move-object v1, v2
+
+    :goto_2
+    invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
+
+    goto :goto_1
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_2
+.end method
+
 .method public static addLazyDays(Lcn/com/smartdevices/bracelet/model/SportDay;)Ljava/util/ArrayList;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
@@ -418,8 +504,17 @@
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/Utils;->getLazyDayList()Ljava/util/ArrayList;
 
-    move-result-object v1
+    move-result-object v0
 
+    if-nez v0, :cond_2
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    move-object v1, v0
+
+    :goto_0
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -437,20 +532,10 @@
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/Utils;->getGson()Lcom/google/gson/Gson;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/Utils;->a(Ljava/util/ArrayList;)V
 
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Lcom/google/gson/Gson;->toJson(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Keeper;->keepLazyDays(Ljava/lang/String;)Ljava/lang/String;
-
-    move-object v0, v1
-
-    :goto_0
-    return-object v0
+    :goto_1
+    return-object v1
 
     :cond_1
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -469,7 +554,10 @@
 
     if-eqz v0, :cond_0
 
-    move-object v0, v1
+    goto :goto_1
+
+    :cond_2
+    move-object v1, v0
 
     goto :goto_0
 .end method
@@ -1039,53 +1127,33 @@
 
     move-result-object v1
 
+    if-nez v1, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    :cond_0
-    :goto_0
+    :cond_1
+    :goto_1
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/Utils;->getGson()Lcom/google/gson/Gson;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/Utils;->a(Ljava/util/ArrayList;)V
 
-    move-result-object v0
+    move-object v0, v1
 
-    invoke-virtual {v0, v1}, Lcom/google/gson/Gson;->toJson(Ljava/lang/Object;)Ljava/lang/String;
+    goto :goto_0
 
-    move-result-object v0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Keeper;->keepLazyDays(Ljava/lang/String;)Ljava/lang/String;
-
-    const-string v0, "Utils"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "clear lazy days, list size = "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v1
-
-    :cond_1
+    :cond_2
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -1100,11 +1168,11 @@
 
     move-result v3
 
-    if-eqz v3, :cond_0
+    if-eqz v3, :cond_1
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    goto :goto_0
+    goto :goto_1
 .end method
 
 .method public static compaireDateCalendarA_before_B(Ljava/util/Calendar;Ljava/util/Calendar;)Z
@@ -1734,47 +1802,45 @@
     aget-object v0, v5, v0
 
     :cond_0
-    sub-int/2addr v1, v3
-
     invoke-static {p0, v1}, Lcn/com/smartdevices/bracelet/chart/util/ChartData;->formatDistance(Landroid/content/Context;I)[Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v5
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    aget-object v6, v1, v8
+    aget-object v7, v5, v8
 
-    invoke-static {v6}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v7}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v7
 
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    aget-object v1, v1, v9
+    aget-object v5, v5, v9
 
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    move-result-object v5
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v5
 
     if-gtz v3, :cond_1
 
-    const v3, 0x7f0c0160
+    const v1, 0x7f0c0160
 
-    new-array v5, v12, [Ljava/lang/Object;
+    new-array v3, v12, [Ljava/lang/Object;
 
-    aput-object v1, v5, v8
+    aput-object v5, v3, v8
 
-    aput-object v2, v5, v9
+    aput-object v2, v3, v9
 
-    aput-object v4, v5, v10
+    aput-object v4, v3, v10
 
-    aput-object v0, v5, v11
+    aput-object v0, v3, v11
 
-    invoke-virtual {p0, v3, v5}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v1, v3}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1786,9 +1852,35 @@
 
     move-result-object v2
 
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    aget-object v6, v2, v8
+
+    invoke-static {v6}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    aget-object v2, v2, v9
+
+    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    sub-int/2addr v1, v3
+
+    invoke-static {p0, v1}, Lcn/com/smartdevices/bracelet/chart/util/ChartData;->formatDistance(Landroid/content/Context;I)[Ljava/lang/String;
+
+    move-result-object v1
+
     new-instance v3, Ljava/lang/StringBuilder;
 
-    aget-object v5, v2, v8
+    aget-object v5, v1, v8
 
     invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
@@ -1796,15 +1888,15 @@
 
     invoke-direct {v3, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    aget-object v2, v2, v9
+    aget-object v1, v1, v9
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
     const v3, 0x7f0c0161
 
@@ -2118,6 +2210,32 @@
 
     if-lez p3, :cond_0
 
+    sub-int v0, p2, p3
+
+    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/chart/util/ChartData;->formatDistance(Landroid/content/Context;I)[Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    aget-object v3, v0, v6
+
+    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    aget-object v0, v0, v7
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
     invoke-static {p0, p3}, Lcn/com/smartdevices/bracelet/chart/util/ChartData;->formatDistance(Landroid/content/Context;I)[Ljava/lang/String;
 
     move-result-object v2
@@ -2369,7 +2487,7 @@
 .end method
 
 .method public static getLazyDayList()Ljava/util/ArrayList;
-    .locals 4
+    .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -2380,6 +2498,8 @@
         }
     .end annotation
 
+    const/4 v1, 0x0
+
     invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readLazyDays()Ljava/lang/String;
 
     move-result-object v0
@@ -2388,36 +2508,63 @@
 
     move-result-object v0
 
-    const-string v1, "Utils"
+    const-string v2, "Utils"
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    const-string v3, "get lazydays "
+    const-string v4, "get lazydays "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v1, 0x0
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     :try_start_0
+    new-instance v2, Lorg/json/JSONObject;
+
+    invoke-direct {v2, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+
+    const-string v0, "lazydays"
+
+    invoke-virtual {v2, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    :goto_0
+    if-nez v0, :cond_0
+
+    :goto_1
+    return-object v1
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
+
+    move-object v0, v1
+
+    goto :goto_0
+
+    :cond_0
+    :try_start_1
     invoke-static {}, Lcn/com/smartdevices/bracelet/Utils;->getGson()Lcom/google/gson/Gson;
 
     move-result-object v2
 
-    new-instance v3, Lcn/com/smartdevices/bracelet/j;
+    new-instance v3, Lcn/com/smartdevices/bracelet/k;
 
-    invoke-direct {v3}, Lcn/com/smartdevices/bracelet/j;-><init>()V
+    invoke-direct {v3}, Lcn/com/smartdevices/bracelet/k;-><init>()V
 
-    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/j;->getType()Ljava/lang/reflect/Type;
+    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/k;->getType()Ljava/lang/reflect/Type;
 
     move-result-object v3
 
@@ -2426,17 +2573,10 @@
     move-result-object v0
 
     check-cast v0, Ljava/util/ArrayList;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    :goto_0
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    :cond_0
+    :goto_2
     const-string v1, "Utils"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2455,16 +2595,30 @@
 
     invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    return-object v0
+    move-object v1, v0
 
-    :catch_0
+    goto :goto_1
+
+    :catch_1
     move-exception v0
 
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     move-object v0, v1
 
-    goto :goto_0
+    goto :goto_2
+.end method
+
+.method public static getLazyDaysFromServer()V
+    .locals 1
+
+    new-instance v0, Lcn/com/smartdevices/bracelet/i;
+
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/i;-><init>()V
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/webapi/WebAPI;->getUserLazyDay(Lcom/loopj/android/http/AsyncHttpResponseHandler;)V
+
+    return-void
 .end method
 
 .method public static getMainUIShareTips(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/DaySportData;Lcn/com/smartdevices/bracelet/model/ShareData;)V
@@ -2523,7 +2677,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const v1, 0x7f0c01e1
+    const v1, 0x7f0c01e2
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2581,7 +2735,7 @@
     invoke-virtual {p2, v8}, Lcn/com/smartdevices/bracelet/model/ShareData;->setType(I)V
 
     :cond_3
-    const v2, 0x7f0c01e0
+    const v2, 0x7f0c01e1
 
     new-array v4, v10, [Ljava/lang/Object;
 
@@ -2676,7 +2830,7 @@
 
     if-ne v5, v7, :cond_6
 
-    const v0, 0x7f0c01e4
+    const v0, 0x7f0c01e5
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2684,7 +2838,7 @@
 
     :cond_5
     :goto_1
-    const v1, 0x7f0c01e2
+    const v1, 0x7f0c01e3
 
     const/4 v5, 0x4
 
@@ -2709,7 +2863,7 @@
     :cond_6
     if-le v5, v7, :cond_5
 
-    const v0, 0x7f0c01e3
+    const v0, 0x7f0c01e4
 
     new-array v5, v7, [Ljava/lang/Object;
 
@@ -2783,61 +2937,89 @@
 
     const-string v0, ""
 
-    sub-int v0, p2, p6
+    invoke-static {p0, p2}, Lcn/com/smartdevices/bracelet/chart/util/ChartData;->formatDistance(Landroid/content/Context;I)[Ljava/lang/String;
 
-    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/chart/util/ChartData;->formatDistance(Landroid/content/Context;I)[Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v1
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    aget-object v2, v0, v2
 
-    aget-object v3, v1, v3
-
-    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const/4 v3, 0x1
-
-    aget-object v1, v1, v3
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    new-instance v2, Ljava/text/DecimalFormat;
-
-    const-string v3, "#.#"
-
-    invoke-direct {v2, v3}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
-
-    int-to-float v3, v0
-
-    const v4, 0x38d1b717
-
-    mul-float/2addr v3, v4
-
-    float-to-double v3, v3
-
-    invoke-virtual {v2, v3, v4}, Ljava/text/DecimalFormat;->format(D)Ljava/lang/String;
+    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/Utils;->a(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const/4 v2, 0x1
+
+    aget-object v0, v0, v2
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/text/DecimalFormat;
+
+    const-string v2, "#.#"
+
+    invoke-direct {v1, v2}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
+
+    int-to-float v2, p2
+
+    const v3, 0x38d1b717
+
+    mul-float/2addr v2, v3
+
+    float-to-double v2, v2
+
+    invoke-virtual {v1, v2, v3}, Ljava/text/DecimalFormat;->format(D)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {p0, p2}, Lcn/com/smartdevices/bracelet/Utils;->a(Landroid/content/Context;I)Ljava/lang/String;
+
+    move-result-object v2
 
     if-lez p6, :cond_0
 
     invoke-static {p0, p6}, Lcn/com/smartdevices/bracelet/chart/util/ChartData;->formatDistance(Landroid/content/Context;I)[Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const/4 v4, 0x0
+
+    aget-object v4, v0, v4
+
+    invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const/4 v4, 0x1
+
+    aget-object v0, v0, v4
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sub-int v3, p2, p6
+
+    invoke-static {p0, v3}, Lcn/com/smartdevices/bracelet/chart/util/ChartData;->formatDistance(Landroid/content/Context;I)[Ljava/lang/String;
 
     move-result-object v3
 
@@ -2873,19 +3055,19 @@
 
     const/4 v6, 0x0
 
-    aput-object v1, v5, v6
+    aput-object v3, v5, v6
 
-    const/4 v1, 0x1
+    const/4 v3, 0x1
 
-    aput-object v3, v5, v1
+    aput-object v0, v5, v3
 
-    const/4 v1, 0x2
+    const/4 v0, 0x2
 
-    aput-object v0, v5, v1
+    aput-object v2, v5, v0
 
     const/4 v0, 0x3
 
-    aput-object v2, v5, v0
+    aput-object v1, v5, v0
 
     const/4 v0, 0x4
 
@@ -2923,23 +3105,23 @@
 
     const/4 v5, 0x0
 
-    aput-object v1, v4, v5
+    aput-object v0, v4, v5
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    aput-object v0, v4, v1
+    aput-object v2, v4, v0
 
     const/4 v0, 0x2
 
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v1
+    move-result-object v2
 
-    aput-object v1, v4, v0
+    aput-object v2, v4, v0
 
     const/4 v0, 0x3
 
-    aput-object v2, v4, v0
+    aput-object v1, v4, v0
 
     const/4 v0, 0x4
 
@@ -3365,33 +3547,31 @@
 
     const/4 v5, 0x0
 
-    sub-int v0, p1, p5
+    invoke-static {p0, p1}, Lcn/com/smartdevices/bracelet/chart/util/ChartData;->formatDistance(Landroid/content/Context;I)[Ljava/lang/String;
 
-    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/chart/util/ChartData;->formatDistance(Landroid/content/Context;I)[Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v1
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    aget-object v2, v0, v5
 
-    aget-object v3, v1, v5
+    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    move-result-object v2
 
-    move-result-object v3
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    aget-object v0, v0, v6
 
-    aget-object v1, v1, v6
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/Utils;->a(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {p0, p1}, Lcn/com/smartdevices/bracelet/Utils;->a(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -3460,6 +3640,32 @@
     return-object v0
 
     :cond_1
+    sub-int v1, p1, p5
+
+    invoke-static {p0, v1}, Lcn/com/smartdevices/bracelet/chart/util/ChartData;->formatDistance(Landroid/content/Context;I)[Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    aget-object v3, v1, v5
+
+    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    aget-object v1, v1, v6
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
     invoke-static {p0, p5}, Lcn/com/smartdevices/bracelet/chart/util/ChartData;->formatDistance(Landroid/content/Context;I)[Ljava/lang/String;
 
     move-result-object v2
@@ -5160,9 +5366,9 @@
 .method public static updateLazyDay2Server()V
     .locals 2
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/i;
+    new-instance v0, Lcn/com/smartdevices/bracelet/j;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/i;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/j;-><init>()V
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readLazyDays()Ljava/lang/String;
 
@@ -5175,6 +5381,59 @@
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/webapi/WebAPI;->setUserLazyDay(Lcom/loopj/android/http/AsyncHttpResponseHandler;Ljava/lang/String;)V
 
     return-void
+.end method
+
+.method public static updateLazyDaysOnServerBySteps()V
+    .locals 3
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/DataManager;->getInstance()Lcn/com/smartdevices/bracelet/DataManager;
+
+    move-result-object v0
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/DataManager;->getInstance()Lcn/com/smartdevices/bracelet/DataManager;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/DataManager;->getCurDay()Lcn/com/smartdevices/bracelet/model/SportDay;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/DataManager;->get(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/DaySportData;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/DaySportData;->getStepsInfo()Lcn/com/smartdevices/bracelet/analysis/StepsInfo;
+
+    move-result-object v0
+
+    if-nez v0, :cond_1
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readPersonInfo()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getDaySportGoalSteps()I
+
+    move-result v2
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->getStepsCount()I
+
+    move-result v0
+
+    if-lt v0, v2, :cond_0
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/Utils;->clearLazyDays(Lcn/com/smartdevices/bracelet/model/SportDay;)Ljava/util/ArrayList;
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Utils;->updateLazyDay2Server()V
+
+    goto :goto_0
 .end method
 
 .method public static updateProfile(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V

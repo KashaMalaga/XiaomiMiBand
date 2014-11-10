@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.amap.api.maps.MapView android:id="@id/gaode_test_map" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <TextView android:textSize="16.0sp" android:textColor="#ff000000" android:gravity="center" android:id="@id/origin_distance_item" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="ORG" android:singleLine="true" />
+        <TextView android:textSize="16.0sp" android:textColor="#ff000000" android:gravity="center" android:id="@id/origin_distance_value" android:padding="5.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="10.0 KM" android:singleLine="true" android:layout_weight="1.0" />
+        <TextView android:textSize="16.0sp" android:textColor="#ff000000" android:gravity="center" android:id="@id/origin_speed" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="9.0 M/S" android:singleLine="true" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <TextView android:textSize="16.0sp" android:textColor="#ff000000" android:gravity="center" android:id="@id/corret_distance_item" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="NEW" android:singleLine="true" />
+        <TextView android:textSize="16.0sp" android:textColor="#ff000000" android:gravity="center" android:id="@id/correct_distance" android:padding="5.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="10.1 KM" android:singleLine="true" android:layout_weight="1.0" />
+        <TextView android:textSize="16.0sp" android:textColor="#ff000000" android:gravity="center" android:id="@id/correct_speed" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="10.0 M/S" android:singleLine="true" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

@@ -95,7 +95,7 @@
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;->initViews()V
 
-    const v0, 0x7f070094
+    const v0, 0x7f070093
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;->findViewById(I)Landroid/view/View;
 
@@ -113,7 +113,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0200bb
+    const v1, 0x7f0200c0
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->setCenterDrawable(I)Lkankan/wheel/widget/WheelView;
 

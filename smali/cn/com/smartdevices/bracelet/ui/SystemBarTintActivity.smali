@@ -115,9 +115,9 @@
     :cond_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mContentView:Landroid/view/View;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/cd;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/cc;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/cd;-><init>(Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/cc;-><init>(Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 

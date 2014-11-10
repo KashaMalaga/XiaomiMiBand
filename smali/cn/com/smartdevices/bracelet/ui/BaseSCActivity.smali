@@ -657,6 +657,8 @@
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/Utils;->updateProfile(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 
     :cond_0
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Utils;->updateLazyDaysOnServerBySteps()V
+
     return-void
 .end method
 

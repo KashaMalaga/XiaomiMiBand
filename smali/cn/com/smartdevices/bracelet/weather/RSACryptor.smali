@@ -198,7 +198,7 @@
 .end method
 
 .method public static genRSAKey()V
-    .locals 5
+    .locals 2
 
     const-string v0, "RSA"
 
@@ -222,89 +222,11 @@
 
     invoke-virtual {v1}, Ljava/security/KeyPair;->getPrivate()Ljava/security/PrivateKey;
 
-    move-result-object v1
-
-    check-cast v1, Ljava/security/interfaces/RSAPrivateKey;
-
-    const-string v2, "DDDD"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "PublicKey:"
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {v0}, Ljava/security/interfaces/RSAPublicKey;->getPublicExponent()Ljava/math/BigInteger;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/math/BigInteger;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v2, "DDDD"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "PrivateKey:"
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {v1}, Ljava/security/interfaces/RSAPrivateKey;->getPrivateExponent()Ljava/math/BigInteger;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/math/BigInteger;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v2, "DDDD"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "Modulus:"
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {v0}, Ljava/security/interfaces/RSAPublicKey;->getModulus()Ljava/math/BigInteger;
-
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/math/BigInteger;->toString()Ljava/lang/String;
+    check-cast v0, Ljava/security/interfaces/RSAPrivateKey;
 
-    move-result-object v0
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v1}, Ljava/security/interfaces/RSAPrivateKey;->getPrivateExponent()Ljava/math/BigInteger;
+    invoke-interface {v0}, Ljava/security/interfaces/RSAPrivateKey;->getPrivateExponent()Ljava/math/BigInteger;
 
     move-result-object v0
 

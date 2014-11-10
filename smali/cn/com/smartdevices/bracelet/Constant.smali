@@ -131,6 +131,10 @@
 
 .field public static final KEY_KEEP_UUID:Ljava/lang/String; = "push_uuid"
 
+.field public static final KEY_MANUAL_LAZY_DAYS:Ljava/lang/String; = "lazydays"
+
+.field public static final KEY_MANUAL_LAZY_DAY_START_DATE:Ljava/lang/String; = "algo_start_date"
+
 .field public static final KEY_MILIAO_ICON_URL:Ljava/lang/String; = "miliao_icon_url"
 
 .field public static final KEY_MILIAO_NICK_NAME:Ljava/lang/String; = "miliao_nick_name"
@@ -151,7 +155,7 @@
 
 .field public static final LOCALE_TW_PARAM:Ljava/lang/String; = "_locale=zh_TW"
 
-.field public static final LOW_BATTERY_LEVEL:I = 0x5
+.field public static final LOW_BATTERY_LEVEL:I = 0xa
 
 .field public static final MALE:I = 0x1
 

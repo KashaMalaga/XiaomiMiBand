@@ -34,9 +34,9 @@
 
     new-instance v0, Lcn/com/smartdevices/bracelet/BleTask/BleResetTask;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bO;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bN;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/bO;-><init>(Lcn/com/smartdevices/bracelet/ui/SettingResetBraceletFragment;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/bN;-><init>(Lcn/com/smartdevices/bracelet/ui/SettingResetBraceletFragment;)V
 
     invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/BleTask/BleResetTask;-><init>(Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;)V
 
@@ -94,7 +94,7 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    const v0, 0x7f030056
+    const v0, 0x7f030057
 
     return v0
 .end method

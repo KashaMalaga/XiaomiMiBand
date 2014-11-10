@@ -57,6 +57,8 @@
 
 .field public static final EVENT_CLICK_MAIN_MENU_ITEM:Ljava/lang/String; = "ClickMainMenuItem"
 
+.field public static final EVENT_CONFIRM_MANUAL_LAZY_DAY:Ljava/lang/String; = "confirm_manual_lazy_day"
+
 .field public static final EVENT_DYNAMIC_DETAIL_MODIFY_SLEEP_TIME:Ljava/lang/String; = "DynamicDetailModifySleepTime"
 
 .field public static final EVENT_DYNAMIC_DETAIL_VIEW_CHART_ITEM:Ljava/lang/String; = "DynamicDetailViewChartItem"
@@ -178,6 +180,8 @@
 .field public static final EVENT_WEATHER_REQUEST_WEATHER:Ljava/lang/String; = "WeatherRequestWeather"
 
 .field public static final EVENT_WEATHER_START:Ljava/lang/String; = "WeatherStart"
+
+.field public static final EVENT_WIFI_STATUS:Ljava/lang/String; = "WifiState"
 
 .field public static final PAGE_ABOUT:Ljava/lang/String; = "PageAbout"
 

@@ -84,7 +84,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aD;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    const v2, 0x7f0c01d2
+    const v2, 0x7f0c01d3
 
     const/4 v3, 0x1
 

@@ -70,9 +70,9 @@ localization_zh_rTW_table = {
 
     welcome_use='歡迎使用小米手環',
     last_week_walked_format='上周共行走%d步',
-    last_week_walked_info_format='共走了%d公里、消耗%d千卡',
+    last_week_walked_info_format='共走了%d公里、消耗%d大卡',
     last_month_walked_format='上月共行走%d步',
-    last_month_walked_info_format='共走了%d公里、消耗%d千卡',
+    last_month_walked_info_format='共走了%d公里、消耗%d大卡',
 
     get_over_format=", 輕鬆甩掉%d克肥肉",
     click_to_get_help="點擊查看如何玩轉小米手環",
@@ -91,11 +91,11 @@ localization_zh_rTW_table = {
     week_continue_reach_goal="連續一周達成目標, 贊！",
 
     -- Continue reach goals string
-    challenge_format="你已連續%d天達成目標。",
-    personal_best_format="個人歷史最高記錄%d天",
+    challenge_format="你已連續%d天達成目標",
+    personal_best_format="個人歷史最高紀錄%d天",
     continue_with_skips_title="昨天未達標, 環環已經幫你使用假單過關啦！",
     continue_with_skips_title_today="今天未達標, 環環已經幫你使用假單過關啦！",
-    personal_best_with_skips_format="剩餘%d張假單",
+    personal_best_with_skips_format=", 剩餘%d張假單",
     continue_used_n_skips_format="連續達標%d天, 還有%d張假單可用",
     continue_used_0_skips_format="連續達標%d天, 假單已經用完了要加油囉～",
     personal_best_on_skip_day_title="恭喜獲得假單一張, 你已連續%d天達標",
@@ -113,15 +113,15 @@ localization_zh_rTW_table = {
     activie_run_format_0="跑了%s, 讚！",
     activie_run_format_1="狂奔了%s, 好樣的！",
     activie_run_format_2="跑了%s, 好耐力！",
-    activie_run_consumed="消耗了%d千卡%s",
+    activie_run_consumed="消耗了%d大卡%s",
 
     get_distance_format="%d公尺",
     activity_walk_format="%s走了%d步, 共%s",
-    activity_walk_consumed_format="消耗了%d千卡%s",
+    activity_walk_consumed_format="消耗了%d大卡%s",
 
     activity_rope_skipping_format="%s跳繩%d次",
     activity_situp_format="%s做了%d個仰臥起坐",
-    activity_consumed_format="消耗了%d千卡%s",
+    activity_consumed_format="消耗了%d大卡%s",
 
     activity_activity_format="%s活動了%s, 共%s",
     activity_activity_format_run="%s活動了%s, 跑了%s",

@@ -1,5 +1,8 @@
 .class Lcn/com/smartdevices/bracelet/ui/bn;
-.super Lcom/loopj/android/http/AsyncHttpResponseHandler;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
@@ -12,34 +15,47 @@
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bn;->a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
 
-    invoke-direct {p0}, Lcom/loopj/android/http/AsyncHttpResponseHandler;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
-    .locals 0
+.method public run()V
+    .locals 3
 
-    return-void
-.end method
+    new-instance v0, Landroid/content/Intent;
 
-.method public onSuccess(I[Lorg/apache/http/Header;[B)V
-    .locals 1
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    if-eqz p3, :cond_0
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bn;->a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
 
-    new-instance v0, Ljava/lang/String;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;->b(Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;)Landroid/content/Context;
 
-    invoke-direct {v0, p3}, Ljava/lang/String;-><init>([B)V
+    move-result-object v1
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/webapi/WebRes;->getWebStatus(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/webapi/WebStatus;
+    const-class v2, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    move-result-object v0
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/webapi/WebStatus;->success()Z
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bn;->a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
 
-    :cond_0
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;->b(Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;)Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bn;->a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
+
+    const/4 v1, -0x1
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;->setResult(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bn;->a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;->finish()V
+
     return-void
 .end method

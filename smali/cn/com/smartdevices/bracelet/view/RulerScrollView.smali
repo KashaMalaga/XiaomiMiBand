@@ -96,11 +96,11 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/RulerScrollView;->d:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f030068
+    const v1, 0x7f03006c
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const v0, 0x7f0701bb
+    const v0, 0x7f0701cb
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/RulerScrollView;->findViewById(I)Landroid/view/View;
 
@@ -384,7 +384,7 @@
 .method private b(I)V
     .locals 4
 
-    const v3, 0x7f0701ba
+    const v3, 0x7f0701ca
 
     int-to-float v0, p1
 
@@ -629,7 +629,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/RulerScrollView;->l:Landroid/view/View;
 
-    const v1, 0x7f0701b7
+    const v1, 0x7f0701c7
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -641,7 +641,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/RulerScrollView;->l:Landroid/view/View;
 
-    const v1, 0x7f0701b8
+    const v1, 0x7f0701c8
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

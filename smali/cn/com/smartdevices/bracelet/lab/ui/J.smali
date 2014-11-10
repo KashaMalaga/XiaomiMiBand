@@ -355,7 +355,7 @@
 
     iget-object v0, v1, Lcn/com/smartdevices/bracelet/lab/ui/K;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f0c021b
+    const v1, 0x7f0c0201
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -372,7 +372,7 @@
 
     iget-object v0, v1, Lcn/com/smartdevices/bracelet/lab/ui/K;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f0c021c
+    const v1, 0x7f0c0202
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -389,7 +389,7 @@
 
     iget-object v0, v1, Lcn/com/smartdevices/bracelet/lab/ui/K;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f0c026b
+    const v1, 0x7f0c0261
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -406,7 +406,7 @@
 
     iget-object v0, v1, Lcn/com/smartdevices/bracelet/lab/ui/K;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f0c0235
+    const v1, 0x7f0c021b
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -423,7 +423,7 @@
 
     iget-object v0, v1, Lcn/com/smartdevices/bracelet/lab/ui/K;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f0c0268
+    const v1, 0x7f0c024e
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -451,13 +451,30 @@
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
+    move-result v2
+
+    if-eqz v2, :cond_c
+
+    iget-object v0, v1, Lcn/com/smartdevices/bracelet/lab/ui/K;->b:Landroid/widget/TextView;
+
+    const v1, 0x7f0c0123
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
+
+    goto/16 :goto_2
+
+    :cond_c
+    const-string v2, "RunningHelper"
+
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
     move-result v0
 
     if-eqz v0, :cond_0
 
     iget-object v0, v1, Lcn/com/smartdevices/bracelet/lab/ui/K;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f0c0123
+    const v1, 0x7f0c0251
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 

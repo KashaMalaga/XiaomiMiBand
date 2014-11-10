@@ -22,7 +22,7 @@
 .method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
     .locals 2
 
-    const-string v0, "chenee"
+    const-string v0, "LuaManager"
 
     const-string v1, "getLuaZipFile onFailure========================================="
 
@@ -57,7 +57,7 @@
 
     if-eq v1, v2, :cond_0
 
-    const-string v1, "chenee"
+    const-string v1, "LuaManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -119,13 +119,18 @@
 
     invoke-virtual {v1, v2}, Lde/greenrobot/daobracelet/LuaZipFileDao;->insertOrReplace(Ljava/lang/Object;)J
 
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/i;->a:Lcn/com/smartdevices/bracelet/lua/LuaManager;
+
+    # invokes: Lcn/com/smartdevices/bracelet/lua/LuaManager;->getLatestDBLuaFile()V
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->access$2(Lcn/com/smartdevices/bracelet/lua/LuaManager;)V
+
     iget-object v2, v0, Lcn/com/smartdevices/bracelet/lua/j;->c:Lcn/com/smartdevices/bracelet/lua/k;
 
     iget-object v2, v2, Lcn/com/smartdevices/bracelet/lua/k;->c:Ljava/lang/String;
 
     invoke-static {v2}, Lcn/com/smartdevices/bracelet/Keeper;->keepLatestDBLuaVersion(Ljava/lang/String;)V
 
-    const-string v2, "chenee"
+    const-string v2, "LuaManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -160,7 +165,7 @@
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/i;->a:Lcn/com/smartdevices/bracelet/lua/LuaManager;
 
     # getter for: Lcn/com/smartdevices/bracelet/lua/LuaManager;->context:Landroid/content/Context;
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->access$1(Lcn/com/smartdevices/bracelet/lua/LuaManager;)Landroid/content/Context;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->access$3(Lcn/com/smartdevices/bracelet/lua/LuaManager;)Landroid/content/Context;
 
     move-result-object v0
 
@@ -169,12 +174,6 @@
     move-result-object v0
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->setCurLocale()V
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->getLayDayStartDate()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Keeper;->keepManualLazyDayAlgoStartDate(Ljava/lang/String;)V
 
     invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
 
@@ -186,7 +185,7 @@
 
     invoke-virtual {v0, v2}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
 
-    const-string v0, "chenee"
+    const-string v0, "LuaManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -215,7 +214,7 @@
     :catch_0
     move-exception v0
 
-    const-string v1, "chenee"
+    const-string v1, "LuaManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
 

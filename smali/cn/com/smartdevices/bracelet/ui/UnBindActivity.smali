@@ -17,7 +17,7 @@
 .method private a()V
     .locals 5
 
-    const-wide/16 v3, -0x1
+    const-wide/16 v3, 0x0
 
     const/4 v2, 0x0
 
@@ -49,9 +49,9 @@
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/ce;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/cd;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/ce;-><init>(Lcn/com/smartdevices/bracelet/ui/UnBindActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/cd;-><init>(Lcn/com/smartdevices/bracelet/ui/UnBindActivity;)V
 
     const-wide/16 v2, 0xbb8
 
@@ -106,7 +106,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030044
+    const v0, 0x7f030043
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnBindActivity;->setContentView(I)V
 
@@ -132,7 +132,7 @@
 
     if-nez v0, :cond_0
 
-    const v0, 0x7f07012e
+    const v0, 0x7f070129
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnBindActivity;->findViewById(I)Landroid/view/View;
 

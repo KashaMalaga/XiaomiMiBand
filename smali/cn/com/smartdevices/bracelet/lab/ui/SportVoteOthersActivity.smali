@@ -140,7 +140,7 @@
     :sswitch_data_0
     .sparse-switch
         0x7f07003c -> :sswitch_0
-        0x7f070077 -> :sswitch_1
+        0x7f070076 -> :sswitch_1
     .end sparse-switch
 .end method
 
@@ -155,7 +155,7 @@
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/ui/SportVoteOthersActivity;->a()V
 
-    const v0, 0x7f070076
+    const v0, 0x7f070075
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportVoteOthersActivity;->findViewById(I)Landroid/view/View;
 
@@ -177,7 +177,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
-    const v0, 0x7f070077
+    const v0, 0x7f070076
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportVoteOthersActivity;->findViewById(I)Landroid/view/View;
 

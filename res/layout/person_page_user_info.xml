@@ -40,7 +40,7 @@
             </LinearLayout>
             <LinearLayout android:orientation="vertical" android:id="@id/person_page_exchange_area" android:visibility="gone" android:layout_width="80.0dip" android:layout_height="wrap_content" android:layout_toRightOf="@id/person_page_statistic_area">
                 <ImageButton android:textColor="@color/person_page_user_info_sub_color" android:id="@id/person_page_exchange_btn" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/btn_statistic" android:layout_centerHorizontal="true" />
-                <TextView android:textSize="@dimen/info_content_size" android:textColor="@color/person_page_user_info_main_color" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/points_exchange" android:layout_below="@id/person_page_exchange_btn" />
+                <TextView android:textSize="@dimen/info_content_size" android:textColor="@color/person_page_user_info_main_color" android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/person_page_exchange_btn" />
             </LinearLayout>
         </RelativeLayout>
     </RelativeLayout>

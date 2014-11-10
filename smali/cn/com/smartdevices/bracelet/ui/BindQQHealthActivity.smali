@@ -403,7 +403,7 @@
 
     const-string v2, "Msg"
 
-    const v3, 0x7f0c0210
+    const v3, 0x7f0c01fd
 
     invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->getString(I)Ljava/lang/String;
 

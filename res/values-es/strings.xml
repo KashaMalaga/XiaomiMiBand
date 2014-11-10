@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="about">Acerca de</string>
-  <string name="about_copyright"></string>
+  <string name="about_copyright">Acerca</string>
   <string name="accept">Aceptar</string>
   <string name="action_exit">Salir</string>
   <string name="action_local_ota">Elija una actualización</string>
@@ -383,6 +383,7 @@ necesita una red disponible."</string>
   <string name="one_min">Hace 1 min.</string>
   <string name="one_week">Durante esta semana,</string>
   <string name="orange">Naranja</string>
+ <string name="percent_mark">%</string>
   <string name="person_info_finished_info">Su Mi Band se ha configurado con éxito.</string>
   <string name="person_info_goal_info">Según estudios, le sugerimos que haga al menos 40 minutos de ejercicio al día. Son unos 8.000 pasos.</string>
   <string name="person_info_goal_info_young">Según estudios, le sugerimos que haga al menos 60 minutos de ejercicio al día. Son de unos 12.000 pasos.</string>

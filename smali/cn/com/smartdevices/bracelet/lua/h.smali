@@ -22,7 +22,7 @@
 .method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
     .locals 2
 
-    const-string v0, "chenee"
+    const-string v0, "LuaManager"
 
     const-string v1, "getLuaZipFile onFailure======================================================="
 
@@ -57,7 +57,7 @@
 
     if-eq v1, v2, :cond_1
 
-    const-string v1, "chenee"
+    const-string v1, "LuaManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -96,7 +96,7 @@
 
     move-result-object v1
 
-    const-string v2, "chenee"
+    const-string v2, "LuaManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -134,12 +134,20 @@
 
     move-result v0
 
-    if-lez v0, :cond_0
+    if-gtz v0, :cond_2
 
+    # getter for: Lcn/com/smartdevices/bracelet/lua/LuaManager;->TEST:Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->access$0()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    :cond_2
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/h;->a:Lcn/com/smartdevices/bracelet/lua/LuaManager;
 
     # invokes: Lcn/com/smartdevices/bracelet/lua/LuaManager;->getLatestLuaZipFile()V
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->access$0(Lcn/com/smartdevices/bracelet/lua/LuaManager;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->access$1(Lcn/com/smartdevices/bracelet/lua/LuaManager;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -148,7 +156,7 @@
     :catch_0
     move-exception v0
 
-    const-string v1, "chenee"
+    const-string v1, "LuaManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
 

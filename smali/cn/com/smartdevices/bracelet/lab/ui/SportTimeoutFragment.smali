@@ -75,7 +75,7 @@
 .method protected inflateLayout()I
     .locals 1
 
-    const v0, 0x7f030040
+    const v0, 0x7f03003f
 
     return v0
 .end method
@@ -93,7 +93,7 @@
 
     move-result-object v2
 
-    const v0, 0x7f070128
+    const v0, 0x7f070123
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -103,7 +103,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportTimeoutFragment;->a:Landroid/widget/TextView;
 
-    const v0, 0x7f070127
+    const v0, 0x7f070122
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

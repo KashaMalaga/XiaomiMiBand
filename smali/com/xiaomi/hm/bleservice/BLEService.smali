@@ -831,6 +831,36 @@
     return-void
 .end method
 
+.method private cancelSetMaxLatency()V
+    .locals 4
+
+    const/4 v3, 0x0
+
+    const-string v0, "alarm"
+
+    invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/AlarmManager;
+
+    new-instance v1, Landroid/content/Intent;
+
+    invoke-direct {v1}, Landroid/content/Intent;-><init>()V
+
+    const-string v2, "com.xiaomi.hm.health.set_max_latency"
+
+    invoke-virtual {v1, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    invoke-static {p0, v3, v1, v3}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
+
+    return-void
+.end method
+
 .method private checkFwVersion()Z
     .locals 6
 
@@ -1531,7 +1561,7 @@
     return-void
 
     :pswitch_0
-    const v0, 0x7f0c01e8
+    const v0, 0x7f0c01e9
 
     invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
 
@@ -1548,7 +1578,7 @@
 
     check-cast v0, Landroid/app/NotificationManager;
 
-    const v2, 0x7f0c01e7
+    const v2, 0x7f0c01e8
 
     invoke-virtual {p0, v2}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
 
@@ -1589,17 +1619,6 @@
     goto :goto_0
 
     :pswitch_1
-    const v0, 0x7f0c01e9
-
-    invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    move-object v1, v0
-
-    goto :goto_1
-
-    :pswitch_2
     const v0, 0x7f0c01ea
 
     invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
@@ -1610,7 +1629,7 @@
 
     goto :goto_1
 
-    :pswitch_3
+    :pswitch_2
     const v0, 0x7f0c01eb
 
     invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
@@ -1621,7 +1640,7 @@
 
     goto :goto_1
 
-    :pswitch_4
+    :pswitch_3
     const v0, 0x7f0c01ec
 
     invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
@@ -1632,7 +1651,7 @@
 
     goto :goto_1
 
-    :pswitch_5
+    :pswitch_4
     const v0, 0x7f0c01ed
 
     invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
@@ -1643,7 +1662,7 @@
 
     goto :goto_1
 
-    :pswitch_6
+    :pswitch_5
     const v0, 0x7f0c01ee
 
     invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
@@ -1654,7 +1673,7 @@
 
     goto :goto_1
 
-    :pswitch_7
+    :pswitch_6
     const v0, 0x7f0c01ef
 
     invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
@@ -1665,7 +1684,7 @@
 
     goto :goto_1
 
-    :pswitch_8
+    :pswitch_7
     const v0, 0x7f0c01f0
 
     invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
@@ -1676,8 +1695,19 @@
 
     goto :goto_1
 
-    :pswitch_9
+    :pswitch_8
     const v0, 0x7f0c01f1
+
+    invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    move-object v1, v0
+
+    goto :goto_1
+
+    :pswitch_9
+    const v0, 0x7f0c01f2
 
     invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
 
@@ -2120,9 +2150,7 @@
 .end method
 
 .method private onDeviceStatusChanged(I)V
-    .locals 4
-
-    const/16 v3, 0x27
+    .locals 3
 
     sget-object v0, Lcom/xiaomi/hm/bleservice/BLEService;->TAG:Ljava/lang/String;
 
@@ -2221,7 +2249,7 @@
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/BleTask/BleTogglePairTask;->waitingNotify(Ljava/lang/Object;)V
 
-    invoke-virtual {p0, v3}, Lcom/xiaomi/hm/bleservice/BLEService;->setLatency(I)V
+    invoke-virtual {p0}, Lcom/xiaomi/hm/bleservice/BLEService;->setMinLatency()V
 
     goto :goto_0
 
@@ -2267,7 +2295,7 @@
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/BleTask/BleTogglePairTask;->waitingNotifyReset(Ljava/lang/Object;)V
 
-    invoke-virtual {p0, v3}, Lcom/xiaomi/hm/bleservice/BLEService;->setLatency(I)V
+    invoke-virtual {p0}, Lcom/xiaomi/hm/bleservice/BLEService;->setMinLatency()V
 
     goto :goto_0
 
@@ -2339,7 +2367,7 @@
 
     const/16 v0, 0x1e0
 
-    invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->setLatency(I)V
+    invoke-direct {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->setLatency(I)V
 
     :cond_0
     :goto_0
@@ -2357,8 +2385,6 @@
     const-string v0, "#Broadcast# SCREEN_OFF "
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/Debug;->INFO(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lcom/xiaomi/hm/bleservice/BLEService;->cancelSetMaxLatency()V
 
     invoke-virtual {p0}, Lcom/xiaomi/hm/bleservice/BLEService;->alarmSetMaxLatency()V
 
@@ -2387,9 +2413,7 @@
 
     if-nez v0, :cond_0
 
-    const/16 v0, 0x27
-
-    invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->setLatency(I)V
+    invoke-virtual {p0}, Lcom/xiaomi/hm/bleservice/BLEService;->setMinLatency()V
 
     goto :goto_0
 
@@ -2856,6 +2880,8 @@
 
     goto/16 :goto_0
 
+    nop
+
     :pswitch_data_0
     .packed-switch 0xa
         :pswitch_1
@@ -2895,8 +2921,6 @@
     move-result-object v0
 
     check-cast v0, Landroid/os/PowerManager;
-
-    invoke-virtual {p0}, Lcom/xiaomi/hm/bleservice/BLEService;->cancelSetMaxLatency()V
 
     invoke-virtual {p0, p0}, Lcom/xiaomi/hm/bleservice/BLEService;->isApplicationBroughtToBackground(Landroid/content/Context;)Z
 
@@ -2980,9 +3004,7 @@
     goto :goto_0
 
     :cond_2
-    const/16 v0, 0x27
-
-    invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->setLatency(I)V
+    invoke-virtual {p0}, Lcom/xiaomi/hm/bleservice/BLEService;->setMinLatency()V
 
     invoke-virtual {p0}, Lcom/xiaomi/hm/bleservice/BLEService;->checkSyncData()V
 
@@ -3000,6 +3022,76 @@
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
+.end method
+
+.method private setLatency(I)V
+    .locals 4
+
+    sget-object v0, Lcom/xiaomi/hm/bleservice/BLEService;->TAG:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "current latency level set level:"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v0, "power"
+
+    invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/os/PowerManager;
+
+    const/4 v1, 0x1
+
+    const-string v2, "setLatency"
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/xiaomi/hm/bleservice/BLEService;->TAG:Ljava/lang/String;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "waklock acquire......"
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/Debug;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
+
+    new-instance v1, Lcn/com/smartdevices/bracelet/BleTask/BleSetDesiredLatency;
+
+    new-instance v2, Lcom/xiaomi/hm/bleservice/l;
+
+    invoke-direct {v2, p0, p1, v0}, Lcom/xiaomi/hm/bleservice/l;-><init>(Lcom/xiaomi/hm/bleservice/BLEService;ILandroid/os/PowerManager$WakeLock;)V
+
+    invoke-direct {v1, p1, v2}, Lcn/com/smartdevices/bracelet/BleTask/BleSetDesiredLatency;-><init>(ILcn/com/smartdevices/bracelet/BleTask/BleCallBack;)V
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/BleTask/BleSetDesiredLatency;->workOrderly()V
+
+    return-void
 .end method
 
 .method private stopScan(Z)V
@@ -3203,6 +3295,8 @@
 
     move-result-object v1
 
+    invoke-virtual {v0, v1}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
+
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x13
@@ -3230,36 +3324,6 @@
     invoke-virtual {v0, v4, v2, v3, v1}, Landroid/app/AlarmManager;->set(IJLandroid/app/PendingIntent;)V
 
     goto :goto_0
-.end method
-
-.method public cancelSetMaxLatency()V
-    .locals 4
-
-    const/4 v3, 0x0
-
-    const-string v0, "alarm"
-
-    invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/app/AlarmManager;
-
-    new-instance v1, Landroid/content/Intent;
-
-    invoke-direct {v1}, Landroid/content/Intent;-><init>()V
-
-    const-string v2, "com.xiaomi.hm.health.set_max_latency"
-
-    invoke-virtual {v1, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    invoke-static {p0, v3, v1, v3}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
-
-    return-void
 .end method
 
 .method public checkSyncData()V
@@ -4158,72 +4222,14 @@
     return v0
 .end method
 
-.method protected setLatency(I)V
-    .locals 4
+.method public setMinLatency()V
+    .locals 1
 
-    sget-object v0, Lcom/xiaomi/hm/bleservice/BLEService;->TAG:Ljava/lang/String;
+    invoke-direct {p0}, Lcom/xiaomi/hm/bleservice/BLEService;->cancelSetMaxLatency()V
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const/16 v0, 0x27
 
-    const-string v2, "current latency level set level:"
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v0, "power"
-
-    invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/os/PowerManager;
-
-    const/4 v1, 0x1
-
-    const-string v2, "setLatency"
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/xiaomi/hm/bleservice/BLEService;->TAG:Ljava/lang/String;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "waklock acquire......"
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/Debug;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
-
-    new-instance v1, Lcn/com/smartdevices/bracelet/BleTask/BleSetDesiredLatency;
-
-    new-instance v2, Lcom/xiaomi/hm/bleservice/l;
-
-    invoke-direct {v2, p0, p1, v0}, Lcom/xiaomi/hm/bleservice/l;-><init>(Lcom/xiaomi/hm/bleservice/BLEService;ILandroid/os/PowerManager$WakeLock;)V
-
-    invoke-direct {v1, p1, v2}, Lcn/com/smartdevices/bracelet/BleTask/BleSetDesiredLatency;-><init>(ILcn/com/smartdevices/bracelet/BleTask/BleCallBack;)V
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/BleTask/BleSetDesiredLatency;->workOrderly()V
+    invoke-direct {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->setLatency(I)V
 
     return-void
 .end method

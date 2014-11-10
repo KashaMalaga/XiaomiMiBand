@@ -71,6 +71,12 @@
 
     iput-object v1, v0, Lcn/com/smartdevices/bracelet/model/ShareData;->description:Ljava/lang/String;
 
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcn/com/smartdevices/bracelet/model/ShareData;->ranking:Ljava/lang/String;
+
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1

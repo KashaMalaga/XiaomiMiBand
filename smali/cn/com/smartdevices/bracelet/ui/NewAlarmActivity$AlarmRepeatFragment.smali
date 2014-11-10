@@ -46,7 +46,7 @@
 .method protected inflateLayout()I
     .locals 1
 
-    const v0, 0x7f030051
+    const v0, 0x7f030052
 
     return v0
 .end method
@@ -126,9 +126,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity$AlarmRepeatFragment;->a:Lcn/com/smartdevices/bracelet/view/SelectDaysView;
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/ui/aX;
+    new-instance v2, Lcn/com/smartdevices/bracelet/ui/aV;
 
-    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/ui/aX;-><init>(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity$AlarmRepeatFragment;)V
+    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/ui/aV;-><init>(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity$AlarmRepeatFragment;)V
 
     invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 

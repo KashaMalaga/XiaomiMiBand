@@ -49,7 +49,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetGenderActivity;->b:Landroid/widget/ImageView;
 
-    const v1, 0x7f020086
+    const v1, 0x7f02008b
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -103,7 +103,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetGenderActivity;->b:Landroid/widget/ImageView;
 
-    const v1, 0x7f020085
+    const v1, 0x7f02008a
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -210,7 +210,7 @@
     nop
 
     :pswitch_data_0
-    .packed-switch 0x7f070092
+    .packed-switch 0x7f070091
         :pswitch_0
         :pswitch_1
     .end packed-switch
@@ -275,7 +275,7 @@
     iput-object v0, v1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->nickname:Ljava/lang/String;
 
     :cond_1
-    const v0, 0x7f070092
+    const v0, 0x7f070091
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetGenderActivity;->findViewById(I)Landroid/view/View;
 
@@ -289,7 +289,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070093
+    const v0, 0x7f070092
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetGenderActivity;->findViewById(I)Landroid/view/View;
 
@@ -303,7 +303,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f07008f
+    const v0, 0x7f07008e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetGenderActivity;->findViewById(I)Landroid/view/View;
 
@@ -313,7 +313,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetGenderActivity;->e:Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;
 
-    const v0, 0x7f070090
+    const v0, 0x7f07008f
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetGenderActivity;->findViewById(I)Landroid/view/View;
 

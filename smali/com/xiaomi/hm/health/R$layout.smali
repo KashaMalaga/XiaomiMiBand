@@ -125,21 +125,21 @@
 
 .field public static final fragment_fw_upgrade_failed:I = 0x7f03003c
 
-.field public static final fragment_help:I = 0x7f03003d
+.field public static final fragment_lab:I = 0x7f03003d
 
-.field public static final fragment_lab:I = 0x7f03003e
+.field public static final fragment_lab_share_photo:I = 0x7f03003e
 
-.field public static final fragment_lab_share_photo:I = 0x7f03003f
+.field public static final fragment_lab_sport_timeout:I = 0x7f03003f
 
-.field public static final fragment_lab_sport_timeout:I = 0x7f030040
+.field public static final fragment_mili_exit_login:I = 0x7f030040
 
-.field public static final fragment_mili_exit_login:I = 0x7f030041
+.field public static final fragment_mili_exit_login_continue:I = 0x7f030041
 
-.field public static final fragment_mili_exit_login_continue:I = 0x7f030042
+.field public static final fragment_mili_rename:I = 0x7f030042
 
-.field public static final fragment_mili_rename:I = 0x7f030043
+.field public static final fragment_mili_unbind:I = 0x7f030043
 
-.field public static final fragment_mili_unbind:I = 0x7f030044
+.field public static final fragment_no_gps_prompt:I = 0x7f030044
 
 .field public static final fragment_person_info_set_light_color:I = 0x7f030045
 
@@ -161,95 +161,103 @@
 
 .field public static final fragment_ranking:I = 0x7f03004e
 
-.field public static final fragment_select_image_question:I = 0x7f03004f
+.field public static final fragment_running_set_speed:I = 0x7f03004f
 
-.field public static final fragment_setting_about:I = 0x7f030050
+.field public static final fragment_select_image_question:I = 0x7f030050
 
-.field public static final fragment_setting_alarm_repeat:I = 0x7f030051
+.field public static final fragment_setting_about:I = 0x7f030051
 
-.field public static final fragment_setting_alarm_repeat_simple:I = 0x7f030052
+.field public static final fragment_setting_alarm_repeat:I = 0x7f030052
 
-.field public static final fragment_setting_feedback:I = 0x7f030053
+.field public static final fragment_setting_alarm_repeat_simple:I = 0x7f030053
 
-.field public static final fragment_setting_firmware_upgrade:I = 0x7f030054
+.field public static final fragment_setting_feedback:I = 0x7f030054
 
-.field public static final fragment_setting_incomingcall:I = 0x7f030055
+.field public static final fragment_setting_firmware_upgrade:I = 0x7f030055
 
-.field public static final fragment_setting_reset_bracelet:I = 0x7f030056
+.field public static final fragment_setting_incomingcall:I = 0x7f030056
 
-.field public static final fragment_share_to_miliao_select:I = 0x7f030057
+.field public static final fragment_setting_reset_bracelet:I = 0x7f030057
 
-.field public static final fragment_statistic:I = 0x7f030058
+.field public static final fragment_share_to_miliao_select:I = 0x7f030058
 
-.field public static final fragment_statistic_info_weekly_monthly_sleep:I = 0x7f030059
+.field public static final fragment_statistic:I = 0x7f030059
 
-.field public static final fragment_statistic_info_weekly_monthly_step:I = 0x7f03005a
+.field public static final fragment_statistic_info_weekly_monthly_sleep:I = 0x7f03005a
 
-.field public static final fragment_useragreement:I = 0x7f03005b
+.field public static final fragment_statistic_info_weekly_monthly_step:I = 0x7f03005b
 
-.field public static final health_goal_activity:I = 0x7f03005c
+.field public static final fragment_useragreement:I = 0x7f03005c
 
-.field public static final help_activity:I = 0x7f03005d
+.field public static final fragment_webview:I = 0x7f03005d
 
-.field public static final layout_lab_circle_view:I = 0x7f03005e
+.field public static final gps_map_route_activity_test:I = 0x7f03005e
 
-.field public static final lua_list_item:I = 0x7f03005f
+.field public static final gps_map_route_activity_test_hao:I = 0x7f03005f
 
-.field public static final mili_top_bar:I = 0x7f030060
+.field public static final health_goal_activity:I = 0x7f030060
 
-.field public static final multi_devices_err:I = 0x7f030061
+.field public static final help_activity:I = 0x7f030061
 
-.field public static final person_info_fragment:I = 0x7f030062
+.field public static final layout_lab_circle_view:I = 0x7f030062
 
-.field public static final person_page_user_info:I = 0x7f030063
+.field public static final lua_list_item:I = 0x7f030063
 
-.field public static final pull_to_refresh_header_horizontal:I = 0x7f030064
+.field public static final mili_top_bar:I = 0x7f030064
 
-.field public static final pull_to_refresh_header_vertical:I = 0x7f030065
+.field public static final multi_devices_err:I = 0x7f030065
 
-.field public static final ruler_frame:I = 0x7f030066
+.field public static final person_info_fragment:I = 0x7f030066
 
-.field public static final ruler_item:I = 0x7f030067
+.field public static final person_page_user_info:I = 0x7f030067
 
-.field public static final ruler_scroller:I = 0x7f030068
+.field public static final pull_to_refresh_header_horizontal:I = 0x7f030068
 
-.field public static final search_device_item:I = 0x7f030069
+.field public static final pull_to_refresh_header_vertical:I = 0x7f030069
 
-.field public static final setting_fragment:I = 0x7f03006a
+.field public static final ruler_frame:I = 0x7f03006a
 
-.field public static final slide_pane:I = 0x7f03006b
+.field public static final ruler_item:I = 0x7f03006b
 
-.field public static final split_line:I = 0x7f03006c
+.field public static final ruler_scroller:I = 0x7f03006c
 
-.field public static final split_line_with_margin:I = 0x7f03006d
+.field public static final search_device_item:I = 0x7f03006d
 
-.field public static final system_low_activity:I = 0x7f03006e
+.field public static final setting_fragment:I = 0x7f03006e
 
-.field public static final system_not_support:I = 0x7f03006f
+.field public static final slide_pane:I = 0x7f03006f
 
-.field public static final view_active_share_data:I = 0x7f030070
+.field public static final split_line:I = 0x7f030070
 
-.field public static final view_alarm_clock_item:I = 0x7f030071
+.field public static final split_line_with_margin:I = 0x7f030071
 
-.field public static final view_alarm_select_days:I = 0x7f030072
+.field public static final system_low_activity:I = 0x7f030072
 
-.field public static final view_dynamic:I = 0x7f030073
+.field public static final system_not_support:I = 0x7f030073
 
-.field public static final view_dynamic_textswitcher:I = 0x7f030074
+.field public static final view_active_share_data:I = 0x7f030074
 
-.field public static final view_main_menu:I = 0x7f030075
+.field public static final view_alarm_clock_item:I = 0x7f030075
 
-.field public static final view_select_days_item:I = 0x7f030076
+.field public static final view_alarm_select_days:I = 0x7f030076
 
-.field public static final view_select_days_repeat_item:I = 0x7f030077
+.field public static final view_dynamic:I = 0x7f030077
 
-.field public static final view_sensorhub_item:I = 0x7f030078
+.field public static final view_dynamic_textswitcher:I = 0x7f030078
 
-.field public static final wheel_item_miui:I = 0x7f030079
+.field public static final view_main_menu:I = 0x7f030079
 
-.field public static final wheel_item_normal:I = 0x7f03007a
+.field public static final view_select_days_item:I = 0x7f03007a
 
-.field public static final wheel_left_band:I = 0x7f03007b
+.field public static final view_select_days_repeat_item:I = 0x7f03007b
+
+.field public static final view_sensorhub_item:I = 0x7f03007c
+
+.field public static final wheel_item_miui:I = 0x7f03007d
+
+.field public static final wheel_item_normal:I = 0x7f03007e
+
+.field public static final wheel_left_band:I = 0x7f03007f
 
 
 # direct methods

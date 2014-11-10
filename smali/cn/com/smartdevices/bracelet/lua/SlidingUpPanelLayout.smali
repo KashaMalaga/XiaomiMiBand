@@ -2702,6 +2702,10 @@
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mIsSlidingEnabled:Z
 
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mDragHelper:Landroid/support/v4/widget/ViewDragHelper;
+
     if-nez v0, :cond_2
 
     :cond_0

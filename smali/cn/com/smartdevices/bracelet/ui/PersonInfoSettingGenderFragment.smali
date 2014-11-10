@@ -176,7 +176,7 @@
     nop
 
     :pswitch_data_0
-    .packed-switch 0x7f07013c
+    .packed-switch 0x7f070138
         :pswitch_1
         :pswitch_0
         :pswitch_2
@@ -204,7 +204,7 @@
 
     move-result-object v1
 
-    const v0, 0x7f070092
+    const v0, 0x7f070091
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -212,7 +212,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingGenderFragment;->b:Landroid/view/View;
 
-    const v0, 0x7f070093
+    const v0, 0x7f070092
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -220,7 +220,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingGenderFragment;->c:Landroid/view/View;
 
-    const v0, 0x7f07013e
+    const v0, 0x7f07013a
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -232,7 +232,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f07013c
+    const v0, 0x7f070138
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -244,7 +244,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f07013f
+    const v0, 0x7f07013b
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -254,7 +254,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PersonInfoSettingGenderFragment;->f:Landroid/widget/TextView;
 
-    const v0, 0x7f07013d
+    const v0, 0x7f070139
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

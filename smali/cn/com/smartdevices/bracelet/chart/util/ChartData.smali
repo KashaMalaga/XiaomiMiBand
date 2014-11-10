@@ -19,6 +19,8 @@
 
 .field public static final KEY_DYNAMIC_ACTIVITY_SUB_TITLE:Ljava/lang/String; = "DynamicActivitySubTitle"
 
+.field public static final KEY_FROM:Ljava/lang/String; = "From"
+
 .field public static final MINUTES:I = 0x5a0
 
 .field public static final MODE:Ljava/lang/String; = "Mode"

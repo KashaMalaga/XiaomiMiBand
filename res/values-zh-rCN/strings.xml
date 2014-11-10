@@ -250,7 +250,7 @@
     <string name="fw_failed_help_title1">为什么要升级固件？</string>
     <string name="fw_failed_help_tips1">升级固件可以优化手环本身的性能, 同时也会配合相应的新功能提供支持。如果固件版本较低, 有可能导致手环的某些功能无法正常使用。</string>
     <string name="fw_failed_help_title2">我升级失败了怎么办？</string>
-    <string name="fw_failed_help_tips2">请首先确保手环电量不低于5%。在升级过程中, 不要断开手环和手机的连接。</string>
+    <string name="fw_failed_help_tips2">请首先确保手环电量不低于10%。在升级过程中, 不要断开手环和手机的连接。</string>
     <string name="clock_closed">未开启</string>
     <string name="new_version_available">检测到新版本</string>
     <string name="downloading_apk">小米手环</string>
@@ -371,7 +371,7 @@
     <string name="marathon_format_0">相当于%1$s个全程马拉松的赛程</string>
     <string name="marathon_format_1">超过%1$s个全程马拉松的赛程</string>
     <string name="half_marathon_format_0">相当于%1$s个半程马拉松的赛程</string>
-    <string name="half_marathon_format_1">超过%1$s个半程马拉松的赛程</string>
+    <string name="half_marathon_format_1">超过1个半程马拉松的赛程</string>
     <string name="share_continue_goal_format">"累计行走%1$s, 日均%2$s步
 %3$s
 %4$s"</string>
@@ -407,7 +407,7 @@
     <string name="bind_weixin_save">已保存至相册：</string>
     <string name="incoming_call_notify">来电提醒</string>
     <string name="incoming_call_notify_tips">来电%s秒钟未接提醒我</string>
-    <string name="share_step_walk">我共走了</string>
+    <string name="share_step_walk">, 我共走了</string>
     <string name="one_week">一周</string>
     <string name="walked">走了</string>
     <string name="come_from_xiaomi_bracelet">来自小米手环</string>
@@ -484,6 +484,7 @@
     <string name="share_to_miliao_target_friends">分享给好友</string>
     <string name="share_to_miliao_target_union">分享给公会</string>
     <string name="no_network_connection">网络未连接</string>
+    <string name="no_network_connection_retry">点击屏幕，重新加载</string>
     <string name="gen_qr_code">生成二维码</string>
     <string name="bin_weixin_device_not_connect">请先连接手环, 再进行微信接入设置</string>
     <string name="share_to_content_sleep">我的睡眠信息</string>
@@ -517,7 +518,7 @@
     <string name="weather_description_fog">雾</string>
     <string name="weather_description_haze">霾</string>
     <string name="fw_low_battery_title">请充电以升级新固件</string>
-    <string name="fw_low_battery_tips" formatted="false">"手环电量低于5%无法升级固件, 充电满5%后打开APP将
+    <string name="fw_low_battery_tips" formatted="false">"手环电量低于10%无法升级固件, 充电满10%后打开APP将
 自动开始固件升级"</string>
     <string name="fw_low_battery_view_help">查看帮助</string>
     <string name="in" />
@@ -542,8 +543,10 @@
     <string name="notify_status_motor_auth_success">原因：认证成功</string>
     <string name="notify_status_motor_test">原因：马达测试</string>
     <string name="body">挂坠</string>
+    <string name="wrong_system_time">系统时间不正确</string>
+    <string name="restart_bluetooth_tips">重启蓝牙</string>
     <string name="agree">同意</string>
-    <string name="user_agreement_prefix">点击同意以确认小米手环的&amp;#160;</string>
+    <string name="user_agreement_prefix">点击同意以确认小米手环的</string>
     <string name="battery">电量</string>
     <string name="signal_strength">信号强度：</string>
     <string name="confirm_lazy_day">确定使用假条?</string>
@@ -624,35 +627,28 @@
     <string name="lab_factory_sport_continuous_ropeskipping">连跳最好</string>
     <string name="lab_factory_sport_continuous_situp">连续最好</string>
     <string name="lab_factory_sport_accumulate">本次累计%d个</string>
-    <string name="description_list_icon">Item Icon</string>
-    <string name="friends_search_tips">小米ID/昵称/手机号</string>
-    <string name="friends_search">搜索</string>
-    <string name="friends_invite2">邀请</string>
-    <string name="about_copyright" />
+    <string name="lab_factory_disconnected_reminder">蓝牙断开连接提醒</string>
+    <string name="lab_factory_disconnected_reminder_tips">当手环与手机蓝牙连接断开时，手环会振动1次并且点亮白色指示灯进行提醒</string>
+    <string name="lab_factory_disconnected_reminder_disconnect">请先连接手环,再进行提醒设置</string>
+    <string name="sport_running_helper">跑步助手</string>
+    <string name="sport_share">立即分享</string>
+    <string name="sport_running_no_gps">打开GPS才能准确记录你的运动轨迹，是否打开？</string>
+    <string name="sport_running_set_speed">速度提醒</string>
+    <string name="sport_running_speed">时速</string>
+    <string name="sport_running_pace">配速</string>
+    <string name="sport_running_set_goal">跑步目标</string>
+    <string name="sport_running_set_dist">距离提醒</string>
+    <string name="sport_running_speed_detail">%d公里/小时</string>
+    <string name="sport_running_pace_detail">%s/公里</string>
+    <string name="sport_running_distance_detail">%s公里</string>
+    <string name="sport_ranking_desc_poor">您的成绩在所有%s用户中垫底，加油啊！</string>
+    <string name="sport_ranking_desc_normal" formatted="false">您打败了全国&lt;b>%s&lt;/b>的%s用户！</string>
+    <string name="sport_ranking_desc_great">您已经到了独孤求败的境界！</string>
+    <string name="sport_new_record_ropeskipping">连跳新纪录</string>
+    <string name="percent_mark">%</string>
     <string name="congrats">恭喜</string>
-    <string name="start_use">开始使用</string>
-    <string name="points_exchange">积分兑换</string>
-    <string name="unknown_location">未定位</string>
-    <string name="point">分</string>
-    <string name="unknown_mili">我的</string>
-    <string name="stat_steps">步数</string>
-    <string name="stat_steps_active_time">活动时长</string>
-    <string name="stat_steps_consecutive_active">最长活动</string>
-    <string name="stat_step_active_total">总计活动</string>
-    <string name="stat_steps_achievement">完成度</string>
-    <string name="stat_sleep_achievement">完成度</string>
-    <string name="bmenu_dynamic">动态</string>
-    <string name="bmenu_device">设备</string>
-    <string name="bmenu_my">我</string>
-    <string name="help_info_4">"你可以联系我们的客服, 获取更多帮助与支持。
-
-客服电话：400-100-5678
-周一至周日 8:00-18:00"</string>
     <string name="bind_qq_health_tip_init">登录后继续完成绑定QQ健康</string>
     <string name="bind_qq_health_tip_another_qq">需要切换至手机QQ当前登录的账号, 才能在健康看到数据</string>
-    <string name="no_network_connection_retry">网络未连接, 请先联网</string>
     <string name="share_to_content_for_event">我报名参加了“国庆七天,日行万步得小米手机4”的活动, 你愿意站在一旁默默祝福还是一起来参加呢？快来报名吧！</string>
     <string name="share_to_topic_for_event">\#小米手环日行万步#</string>
-    <string name="agree_first">"请先阅读并同意
-用户协议及隐私政策"</string>
 </resources>

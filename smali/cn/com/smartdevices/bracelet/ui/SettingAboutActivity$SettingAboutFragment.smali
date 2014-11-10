@@ -75,9 +75,9 @@
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;->n:I
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bt;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bs;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/bt;-><init>(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/bs;-><init>(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;->o:Landroid/os/Handler;
 
@@ -113,17 +113,17 @@
 
     const-string v1, "\u786e\u5b9a"
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/ui/bv;
+    new-instance v2, Lcn/com/smartdevices/bracelet/ui/bu;
 
-    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/ui/bv;-><init>(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;)V
+    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/ui/bu;-><init>(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     const-string v1, "\u53d6\u6d88"
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/ui/bw;
+    new-instance v2, Lcn/com/smartdevices/bracelet/ui/bv;
 
-    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/ui/bw;-><init>(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;)V
+    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/ui/bv;-><init>(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -147,7 +147,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;->b:Landroid/widget/TextView;
 
-    const v0, 0x7f07015c
+    const v0, 0x7f07015d
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -219,9 +219,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bu;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bt;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/bu;-><init>(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/bt;-><init>(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
@@ -261,9 +261,9 @@
 
     new-instance v0, Ljava/lang/Thread;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bx;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bw;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/bx;-><init>(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/bw;-><init>(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;)V
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
@@ -459,9 +459,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/by;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bx;
 
-    invoke-direct {v1, p0, v4}, Lcn/com/smartdevices/bracelet/ui/by;-><init>(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;Ljava/io/File;)V
+    invoke-direct {v1, p0, v4}, Lcn/com/smartdevices/bracelet/ui/bx;-><init>(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity$SettingAboutFragment;Ljava/io/File;)V
 
     invoke-static {v0, v4, v1}, Lcn/com/smartdevices/bracelet/webapi/WebAPI;->uploadLogFileBlock(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/io/File;Lcom/loopj/android/http/AsyncHttpResponseHandler;)V
 
@@ -802,14 +802,14 @@
         0x7f070157 -> :sswitch_3
         0x7f070159 -> :sswitch_1
         0x7f07015b -> :sswitch_2
-        0x7f07015c -> :sswitch_0
+        0x7f07015d -> :sswitch_0
     .end sparse-switch
 .end method
 
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 2
 
-    const v0, 0x7f030050
+    const v0, 0x7f030051
 
     const/4 v1, 0x0
 

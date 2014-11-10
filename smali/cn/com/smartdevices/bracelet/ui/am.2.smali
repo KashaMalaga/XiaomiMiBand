@@ -98,7 +98,7 @@
 
     iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/InstructionActivity$InstructionPage2;->mGifView:Lcom/xiaomi/hm/view/GifView;
 
-    const v1, 0x7f02006d
+    const v1, 0x7f020072
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/hm/view/GifView;->setGifImage(I)V
 
@@ -129,7 +129,7 @@
 
     iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/InstructionActivity$InstructionPage2;->mGifView:Lcom/xiaomi/hm/view/GifView;
 
-    const v1, 0x7f02006e
+    const v1, 0x7f020073
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/hm/view/GifView;->setGifImage(I)V
 
@@ -160,7 +160,7 @@
 
     iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/InstructionActivity$InstructionPage2;->mGifView:Lcom/xiaomi/hm/view/GifView;
 
-    const v1, 0x7f02006f
+    const v1, 0x7f020074
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/hm/view/GifView;->setGifImage(I)V
 
@@ -191,7 +191,7 @@
 
     iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/InstructionActivity$InstructionPage2;->mGifView:Lcom/xiaomi/hm/view/GifView;
 
-    const v1, 0x7f020070
+    const v1, 0x7f020075
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/hm/view/GifView;->setGifImage(I)V
 
@@ -236,7 +236,7 @@
 
     iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/InstructionActivity$InstructionPage2;->mGifView:Lcom/xiaomi/hm/view/GifView;
 
-    const v1, 0x7f02006c
+    const v1, 0x7f020071
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/hm/view/GifView;->setGifImage(I)V
 

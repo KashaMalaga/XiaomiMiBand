@@ -2191,7 +2191,7 @@
 
     const-string v1, "sync_real_step_time"
 
-    const-wide/16 v2, -0x1
+    const-wide/16 v2, 0x0
 
     invoke-interface {v0, v1, v2, v3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
 
@@ -2207,7 +2207,7 @@
 
     const-string v1, "sync_time"
 
-    const-wide/16 v2, -0x1
+    const-wide/16 v2, 0x0
 
     invoke-interface {v0, v1, v2, v3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
 

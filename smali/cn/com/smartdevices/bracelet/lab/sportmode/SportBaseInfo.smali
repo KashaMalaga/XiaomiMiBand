@@ -438,6 +438,24 @@
     goto :goto_0
 .end method
 
+.method public clear()V
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupItemInfoList:Ljava/util/List;
+
+    if-nez v0, :cond_0
+
+    :goto_0
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupItemInfoList:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->clear()V
+
+    goto :goto_0
+.end method
+
 .method public createJsonForDbData([B)Lorg/json/JSONObject;
     .locals 4
 

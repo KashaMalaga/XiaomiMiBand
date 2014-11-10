@@ -97,11 +97,11 @@
 
     move-result v4
 
-    const v0, 0x7f03005e
+    const v0, 0x7f030062
 
     invoke-static {p1, v0, p0}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const v0, 0x7f070183
+    const v0, 0x7f070193
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->findViewById(I)Landroid/view/View;
 
@@ -111,7 +111,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->b:Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView$CircleView;
 
-    const v0, 0x7f070185
+    const v0, 0x7f070195
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->findViewById(I)Landroid/view/View;
 
@@ -121,7 +121,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->c:Landroid/widget/TextView;
 
-    const v0, 0x7f070184
+    const v0, 0x7f070194
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->findViewById(I)Landroid/view/View;
 

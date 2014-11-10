@@ -321,7 +321,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PickAdapter;->p:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f03007a
+    const v1, 0x7f03007e
 
     invoke-virtual {v0, v1, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -332,11 +332,11 @@
     move-object v1, v0
 
     :goto_0
-    new-instance v3, Lcn/com/smartdevices/bracelet/ui/bi;
+    new-instance v3, Lcn/com/smartdevices/bracelet/ui/bg;
 
-    invoke-direct {v3, p0, v4}, Lcn/com/smartdevices/bracelet/ui/bi;-><init>(Lcn/com/smartdevices/bracelet/ui/PickAdapter;Lcn/com/smartdevices/bracelet/ui/bi;)V
+    invoke-direct {v3, p0, v4}, Lcn/com/smartdevices/bracelet/ui/bg;-><init>(Lcn/com/smartdevices/bracelet/ui/PickAdapter;Lcn/com/smartdevices/bracelet/ui/bg;)V
 
-    const v0, 0x7f070228
+    const v0, 0x7f070238
 
     invoke-virtual {v1, v0}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -344,9 +344,9 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, v3, Lcn/com/smartdevices/bracelet/ui/bi;->a:Landroid/widget/TextView;
+    iput-object v0, v3, Lcn/com/smartdevices/bracelet/ui/bg;->a:Landroid/widget/TextView;
 
-    iget-object v0, v3, Lcn/com/smartdevices/bracelet/ui/bi;->a:Landroid/widget/TextView;
+    iget-object v0, v3, Lcn/com/smartdevices/bracelet/ui/bg;->a:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -365,9 +365,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/bi;
+    check-cast v0, Lcn/com/smartdevices/bracelet/ui/bg;
 
-    iget-object v3, v0, Lcn/com/smartdevices/bracelet/ui/bi;->a:Landroid/widget/TextView;
+    iget-object v3, v0, Lcn/com/smartdevices/bracelet/ui/bg;->a:Landroid/widget/TextView;
 
     const-string v0, "%02d"
 
@@ -453,7 +453,7 @@
     :cond_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/PickAdapter;->p:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f030079
+    const v1, 0x7f03007d
 
     invoke-virtual {v0, v1, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 

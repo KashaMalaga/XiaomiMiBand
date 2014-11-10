@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/UnBindActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/UnlockScreenInvalidHelperActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/UnBindActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/UnlockScreenInvalidHelperActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/ce;->a:Lcn/com/smartdevices/bracelet/ui/UnBindActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/ce;->a:Lcn/com/smartdevices/bracelet/ui/UnlockScreenInvalidHelperActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,16 +22,12 @@
 
 
 # virtual methods
-.method public run()V
+.method public onClick(Landroid/view/View;)V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ce;->a:Lcn/com/smartdevices/bracelet/ui/UnBindActivity;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ce;->a:Lcn/com/smartdevices/bracelet/ui/UnlockScreenInvalidHelperActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Utils;->hideProgressDialog(Landroid/app/Activity;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ce;->a:Lcn/com/smartdevices/bracelet/ui/UnBindActivity;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/UnBindActivity;->finish()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenInvalidHelperActivity;->finish()V
 
     return-void
 .end method

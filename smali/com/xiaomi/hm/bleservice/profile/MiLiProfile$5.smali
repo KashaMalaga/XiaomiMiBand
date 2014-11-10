@@ -87,7 +87,7 @@
     iget-object v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     # getter for: Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->mLastSensorDataIndex:I
-    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$4(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)I
+    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$5(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)I
 
     move-result v2
 
@@ -101,7 +101,7 @@
     iget-object v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     # getter for: Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->mLastSensorDataIndex:I
-    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$4(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)I
+    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$5(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)I
 
     move-result v2
 
@@ -179,7 +179,7 @@
     :cond_3
     iget-object v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
-    invoke-static {v2, v1}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$5(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;I)V
+    invoke-static {v2, v1}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$6(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;I)V
 
     array-length v1, p1
 
@@ -200,7 +200,7 @@
     iget-object v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     # getter for: Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->m_SensorSourceOutputStream:Ljava/io/PipedOutputStream;
-    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$6(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)Ljava/io/PipedOutputStream;
+    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$7(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)Ljava/io/PipedOutputStream;
 
     move-result-object v2
 

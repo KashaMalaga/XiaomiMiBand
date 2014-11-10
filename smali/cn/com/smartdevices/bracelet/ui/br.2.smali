@@ -1,47 +1,54 @@
 .class Lcn/com/smartdevices/bracelet/ui/br;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/util/Comparator;
+.super Landroid/content/BroadcastReceiver;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;
 
 
 # direct methods
-.method private constructor <init>(Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/br;->a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/br;->a:Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;Lcn/com/smartdevices/bracelet/ui/br;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/ui/br;-><init>(Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;)V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 2
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 5
 
-    check-cast p1, Lcn/com/smartdevices/bracelet/ui/bp;
+    const-string v0, "intent"
 
-    check-cast p2, Lcn/com/smartdevices/bracelet/ui/bp;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    iget v0, p2, Lcn/com/smartdevices/bracelet/ui/bp;->b:I
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget v1, p1, Lcn/com/smartdevices/bracelet/ui/bp;->b:I
+    const-string v2, "extra_download_id"
 
-    sub-int/2addr v0, v1
+    const-wide/16 v3, 0x0
 
-    return v0
+    invoke-virtual {p2, v2, v3, v4}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
+
+    move-result-wide v2
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/br;->a:Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Utils;->queryDownloadStatus(Landroid/app/Activity;)V
+
+    return-void
 .end method

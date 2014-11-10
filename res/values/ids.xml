@@ -75,15 +75,14 @@
     <item type="id" name="share_main_content_minute">false</item>
     <item type="id" name="share_main_content_minute_unit">false</item>
     <item type="id" name="share_main_content_unit">false</item>
+    <item type="id" name="ranking">false</item>
     <item type="id" name="share_pic_iv">false</item>
     <item type="id" name="dynamic_title">false</item>
     <item type="id" name="share_person_avatar_iv">false</item>
     <item type="id" name="share_person_name_tv">false</item>
     <item type="id" name="share_description">false</item>
-    <item type="id" name="restart">false</item>
-    <item type="id" name="action_bar">false</item>
-    <item type="id" name="back_btn">false</item>
     <item type="id" name="share">false</item>
+    <item type="id" name="back_btn">false</item>
     <item type="id" name="sport_input_desc">false</item>
     <item type="id" name="favorite_user_sport_name">false</item>
     <item type="id" name="confirm">false</item>
@@ -136,6 +135,7 @@
     <item type="id" name="share_time">false</item>
     <item type="id" name="share_time_tips">false</item>
     <item type="id" name="share_from_mi_band_txt">false</item>
+    <item type="id" name="action_bar">false</item>
     <item type="id" name="share_cancel_btn">false</item>
     <item type="id" name="share_photo">false</item>
     <item type="id" name="share_to_weixin_btn">false</item>
@@ -189,15 +189,17 @@
     <item type="id" name="dynamic_view">false</item>
     <item type="id" name="header_sync_tip">false</item>
     <item type="id" name="day_active_chart">false</item>
-    <item type="id" name="sleep_unwear_tip">false</item>
+    <item type="id" name="info_sleep_layout">false</item>
+    <item type="id" name="info_step_layout">false</item>
     <item type="id" name="info_step_piece_layout">false</item>
-    <item type="id" name="mode_switch">false</item>
     <item type="id" name="float_sleep_info">false</item>
+    <item type="id" name="float_step_info">false</item>
+    <item type="id" name="sleep_unwear_tip">false</item>
+    <item type="id" name="mode_switch">false</item>
     <item type="id" name="float_sleep_type">false</item>
     <item type="id" name="float_sleep_extra">false</item>
     <item type="id" name="float_sleep_start_time">false</item>
     <item type="id" name="float_sleep_end_time">false</item>
-    <item type="id" name="float_step_info">false</item>
     <item type="id" name="float_step">false</item>
     <item type="id" name="info_step_unit">false</item>
     <item type="id" name="float_step_time_hour">false</item>
@@ -206,7 +208,6 @@
     <item type="id" name="info_step_time_unit_min">false</item>
     <item type="id" name="float_step_distance">false</item>
     <item type="id" name="info_step_distance_unit">false</item>
-    <item type="id" name="info_sleep_layout">false</item>
     <item type="id" name="info_sleep">false</item>
     <item type="id" name="info_sleep_deep">false</item>
     <item type="id" name="info_sleep_shallow">false</item>
@@ -217,7 +218,6 @@
     <item type="id" name="modify_sleep_end">false</item>
     <item type="id" name="info_sleep_rise_time">false</item>
     <item type="id" name="info_sleep_wake">false</item>
-    <item type="id" name="info_step_layout">false</item>
     <item type="id" name="info_step_distance">false</item>
     <item type="id" name="info_step">false</item>
     <item type="id" name="info_step_calorie">false</item>
@@ -248,11 +248,6 @@
     <item type="id" name="fw_tips_tv">false</item>
     <item type="id" name="fw_progress_pb">false</item>
     <item type="id" name="fw_progress_tv">false</item>
-    <item type="id" name="webview_container">false</item>
-    <item type="id" name="webview_padding">false</item>
-    <item type="id" name="webview_progress">false</item>
-    <item type="id" name="web_error_tip">false</item>
-    <item type="id" name="progress_bar">false</item>
     <item type="id" name="chart1">false</item>
     <item type="id" name="chart2">false</item>
     <item type="id" name="log_tv">false</item>
@@ -270,6 +265,7 @@
     <item type="id" name="mili_rebind_top_area">false</item>
     <item type="id" name="mili_unbind_info">false</item>
     <item type="id" name="mili_unbind_info_1">false</item>
+    <item type="id" name="description">false</item>
     <item type="id" name="person_info_light_color_blue_area">false</item>
     <item type="id" name="person_info_light_color_blue">false</item>
     <item type="id" name="person_info_light_color_blue_txt">false</item>
@@ -301,6 +297,10 @@
     <item type="id" name="person_info_body_txt">false</item>
     <item type="id" name="progress_txt">false</item>
     <item type="id" name="ranking_lv">false</item>
+    <item type="id" name="speed_desc">false</item>
+    <item type="id" name="set_speed">false</item>
+    <item type="id" name="pace_desc">false</item>
+    <item type="id" name="set_pace">false</item>
     <item type="id" name="select_image_camera_area">false</item>
     <item type="id" name="select_image_local_area">false</item>
     <item type="id" name="logo">false</item>
@@ -315,6 +315,7 @@
     <item type="id" name="setting_about_website">false</item>
     <item type="id" name="split_line_0">false</item>
     <item type="id" name="setting_check_apk_upgrade">false</item>
+    <item type="id" name="split_line_about_apk_upgrade">false</item>
     <item type="id" name="setting_about_user_agreement">false</item>
     <item type="id" name="feedback_email">false</item>
     <item type="id" name="feedback_content">false</item>
@@ -353,6 +354,21 @@
     <item type="id" name="info_step_run_duration_average">false</item>
     <item type="id" name="info_step_run_calories_average">false</item>
     <item type="id" name="info_step_run_calories_average_unit">false</item>
+    <item type="id" name="webview_container">false</item>
+    <item type="id" name="webview_padding">false</item>
+    <item type="id" name="webview_progress">false</item>
+    <item type="id" name="web_error_tip">false</item>
+    <item type="id" name="progress_bar">false</item>
+    <item type="id" name="start">false</item>
+    <item type="id" name="bg_of_map">false</item>
+    <item type="id" name="map">false</item>
+    <item type="id" name="gaode_test_map">false</item>
+    <item type="id" name="origin_distance_item">false</item>
+    <item type="id" name="origin_distance_value">false</item>
+    <item type="id" name="origin_speed">false</item>
+    <item type="id" name="corret_distance_item">false</item>
+    <item type="id" name="correct_distance">false</item>
+    <item type="id" name="correct_speed">false</item>
     <item type="id" name="help_back_txt">false</item>
     <item type="id" name="sport_progresscircle_view">false</item>
     <item type="id" name="bracelet_offline">false</item>

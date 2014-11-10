@@ -576,11 +576,11 @@
 
     const/4 v2, 0x0
 
-    const/4 v10, -0x1
-
     const/4 v5, 0x1
 
     const/4 v1, 0x0
+
+    const/4 v10, -0x1
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/DynamicFragment;->getActivity()Landroid/app/Activity;
 
@@ -595,7 +595,7 @@
     :cond_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/DynamicFragment;->d:Lcn/com/smartdevices/bracelet/DataManager;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/DataManager;->getStopDay()Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/DataManager;->getToday()Lcn/com/smartdevices/bracelet/model/SportDay;
 
     move-result-object v7
 
@@ -629,7 +629,7 @@
 
     move-result-object v3
 
-    if-eqz v3, :cond_12
+    if-eqz v3, :cond_13
 
     invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/model/DaySportData;->getStepsInfo()Lcn/com/smartdevices/bracelet/analysis/StepsInfo;
 
@@ -640,7 +640,7 @@
     move-result-object v2
 
     :goto_1
-    if-nez v0, :cond_11
+    if-nez v0, :cond_12
 
     new-instance v0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;
 
@@ -693,7 +693,7 @@
 
     invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_10
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/DynamicFragment;->d:Lcn/com/smartdevices/bracelet/DataManager;
 
@@ -713,7 +713,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_10
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/DaySportData;->getSleepInfo()Lcn/com/smartdevices/bracelet/analysis/SleepInfo;
 
@@ -795,15 +795,20 @@
 
     move-result v6
 
-    if-nez v6, :cond_4
-
-    iput v10, p0, Lcn/com/smartdevices/bracelet/ui/DynamicFragment;->e:I
+    if-eqz v6, :cond_9
 
     iget v6, p0, Lcn/com/smartdevices/bracelet/ui/DynamicFragment;->e:I
 
-    invoke-static {v6}, Lcn/com/smartdevices/bracelet/Keeper;->keepRealtimeSteps(I)V
+    if-ne v6, v10, :cond_4
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readRealtimeSteps()I
+
+    move-result v6
+
+    iput v6, p0, Lcn/com/smartdevices/bracelet/ui/DynamicFragment;->e:I
 
     :cond_4
+    :goto_5
     iget v6, p0, Lcn/com/smartdevices/bracelet/ui/DynamicFragment;->e:I
 
     if-eq v6, v10, :cond_6
@@ -812,7 +817,7 @@
 
     if-eq v4, v6, :cond_5
 
-    if-lez v4, :cond_9
+    if-lez v4, :cond_a
 
     iget v6, p0, Lcn/com/smartdevices/bracelet/ui/DynamicFragment;->e:I
 
@@ -826,49 +831,9 @@
 
     div-int/2addr v2, v4
 
-    :goto_5
-    const-string v4, "bxl"
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    const-string v7, "set Steps="
-
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v7, p0, Lcn/com/smartdevices/bracelet/ui/DynamicFragment;->e:I
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-static {v4, v6}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
-
     :cond_5
+    :goto_6
     iget v4, p0, Lcn/com/smartdevices/bracelet/ui/DynamicFragment;->e:I
-
-    const-string v6, "bxl"
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    const-string v8, "setRealtimeSteps="
-
-    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v8, p0, Lcn/com/smartdevices/bracelet/ui/DynamicFragment;->e:I
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-static {v6, v7}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v6, "Dynamic.Main"
 
@@ -925,7 +890,7 @@
 
     move-result v2
 
-    if-nez v2, :cond_c
+    if-nez v2, :cond_d
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->getNosleepReason()I
 
@@ -933,11 +898,11 @@
 
     sget v3, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->NOSLEEP_NONWEAR:I
 
-    if-ne v2, v3, :cond_c
+    if-ne v2, v3, :cond_d
 
     invoke-virtual {v6, v1}, Lcn/com/smartdevices/bracelet/chart/util/ChartData$DynamicData;->setWeared(Z)V
 
-    :goto_6
+    :goto_7
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->getSleepCount()I
 
     move-result v2
@@ -974,11 +939,11 @@
 
     move-result-object v2
 
-    if-eqz p1, :cond_d
+    if-eqz p1, :cond_e
 
     move v0, v1
 
-    :goto_7
+    :goto_8
     invoke-virtual {v2, v0}, Lcn/com/smartdevices/bracelet/ui/DynamicFragment$DynamicViewFragment;->notifyDataSetChanged(Z)V
 
     :cond_7
@@ -988,9 +953,9 @@
 
     move-result-object v0
 
-    if-eqz p1, :cond_e
+    if-eqz p1, :cond_f
 
-    :goto_8
+    :goto_9
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/DynamicFragment$DynamicViewFragment;->notifyDataSetChanged(Z)V
 
     goto/16 :goto_0
@@ -1000,27 +965,36 @@
 
     move-result v0
 
-    if-nez v0, :cond_10
+    if-nez v0, :cond_11
 
     move v0, v5
 
     goto/16 :goto_3
 
     :cond_9
+    iput v10, p0, Lcn/com/smartdevices/bracelet/ui/DynamicFragment;->e:I
+
+    iget v6, p0, Lcn/com/smartdevices/bracelet/ui/DynamicFragment;->e:I
+
+    invoke-static {v6}, Lcn/com/smartdevices/bracelet/Keeper;->keepRealtimeSteps(I)V
+
+    goto/16 :goto_5
+
+    :cond_a
     invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readPersonInfo()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v4
 
-    if-eqz v4, :cond_a
+    if-eqz v4, :cond_b
 
     iget v2, v4, Lcn/com/smartdevices/bracelet/model/PersonInfo;->height:I
 
-    if-gtz v2, :cond_b
+    if-gtz v2, :cond_c
 
-    :cond_a
+    :cond_b
     const-wide v2, 0x3fe6d916872b020cL
 
-    :goto_9
+    :goto_a
     iget v6, p0, Lcn/com/smartdevices/bracelet/ui/DynamicFragment;->e:I
 
     int-to-double v6, v6
@@ -1053,9 +1027,9 @@
 
     double-to-int v2, v6
 
-    goto/16 :goto_5
+    goto/16 :goto_6
 
-    :cond_b
+    :cond_c
     iget v2, v4, Lcn/com/smartdevices/bracelet/model/PersonInfo;->height:I
 
     int-to-double v2, v2
@@ -1068,39 +1042,39 @@
 
     div-double/2addr v2, v6
 
-    goto :goto_9
-
-    :cond_c
-    invoke-virtual {v6, v5}, Lcn/com/smartdevices/bracelet/chart/util/ChartData$DynamicData;->setWeared(Z)V
-
-    goto/16 :goto_6
+    goto :goto_a
 
     :cond_d
-    move v0, v5
+    invoke-virtual {v6, v5}, Lcn/com/smartdevices/bracelet/chart/util/ChartData$DynamicData;->setWeared(Z)V
 
-    goto :goto_7
+    goto/16 :goto_7
 
     :cond_e
-    move v1, v5
+    move v0, v5
 
     goto :goto_8
 
     :cond_f
+    move v1, v5
+
+    goto :goto_9
+
+    :cond_10
     move-object v0, v2
 
     goto/16 :goto_4
 
-    :cond_10
+    :cond_11
     move v0, v1
 
     goto/16 :goto_3
 
-    :cond_11
+    :cond_12
     move-object v6, v0
 
     goto/16 :goto_2
 
-    :cond_12
+    :cond_13
     move-object v0, v2
 
     goto/16 :goto_1

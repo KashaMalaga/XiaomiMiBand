@@ -92,10 +92,10 @@ localization_Chinese_table = {
 
     -- Continue reach goals string
     challenge_format="你已连续%d天达成目标",
-    personal_best_format="个人历史最高记录%d天",
+    personal_best_format="个人历史最高纪录%d天",
     continue_with_skips_title="昨天未达标, 环环已经帮你使用假条过关啦！",
     continue_with_skips_title_today="今天未达标, 环环已经帮你使用假条过关啦！",
-    personal_best_with_skips_format="剩余%d张假条",
+    personal_best_with_skips_format=", 剩余%d张假条",
     continue_used_n_skips_format="连续达标%d天, 还有%d张假条可用",
     continue_used_0_skips_format="连续达标%d天, 假条已经用完了要加油咯～",
     personal_best_on_skip_day_title="恭喜获得假条一张, 你已连续%d天达标",
@@ -135,9 +135,9 @@ localization_Chinese_table = {
     cannot_find_bracelet="无法查找到手环？",
     cannot_find_bracelet_info="请确保手环有电且在手机旁边",
 
-    challenge_to_get="还有%s天即将创造新的记录",
-    record_reach_max="恭喜你已经追平了自己的最高记录",
-    new_record_born="新记录诞生",
+    challenge_to_get="还有%s天即将创造新的纪录",
+    record_reach_max="恭喜你已经追平了自己的最高纪录",
+    new_record_born="新纪录诞生",
 
     --=================== Game =====================
     game_register="国庆七天日行万步, 赢取小米手机4",

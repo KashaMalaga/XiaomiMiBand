@@ -504,8 +504,6 @@
     :catch_0
     move-exception v0
 
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
-
     const-string v0, "Util"
 
     new-instance v1, Ljava/lang/StringBuilder;

@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcn/com/smartdevices/bracelet/ui/DimPanelFragment$OpClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/ba;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/PersonInfoFragment;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/ba;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/PersonInfoFragment;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bb;->a:Lcn/com/smartdevices/bracelet/ui/ba;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bb;->a:Lcn/com/smartdevices/bracelet/ui/PersonInfoFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,16 +22,28 @@
 
 
 # virtual methods
-.method public run()V
+.method public onEmptyAreaClicked(Landroid/app/DialogFragment;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onLeftClicked(Landroid/app/DialogFragment;)V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bb;->a:Lcn/com/smartdevices/bracelet/ui/ba;
+    invoke-virtual {p1}, Landroid/app/DialogFragment;->dismiss()V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ba;->a(Lcn/com/smartdevices/bracelet/ui/ba;)Lcn/com/smartdevices/bracelet/ui/PersonInfoFragment;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bb;->a:Lcn/com/smartdevices/bracelet/ui/PersonInfoFragment;
 
-    move-result-object v0
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/PersonInfoFragment;->d(Lcn/com/smartdevices/bracelet/ui/PersonInfoFragment;)V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/PersonInfoFragment;->b(Lcn/com/smartdevices/bracelet/ui/PersonInfoFragment;)V
+    return-void
+.end method
+
+.method public onRightClicked(Landroid/app/DialogFragment;)V
+    .locals 0
+
+    invoke-virtual {p1}, Landroid/app/DialogFragment;->dismiss()V
 
     return-void
 .end method
