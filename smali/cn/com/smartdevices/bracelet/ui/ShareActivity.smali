@@ -464,7 +464,6 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-	if-eqz p1, :cond_0
     new-instance v1, Landroid/content/ComponentName;
 
     iget-object v2, p1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
@@ -479,7 +478,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-	:cond_0
     const-string v1, "image/*"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
@@ -1665,19 +1663,19 @@
     goto/16 :goto_0
 
     :cond_9
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->m:Landroid/widget/ImageButton;
-
-    invoke-virtual {v0, v3}, Landroid/widget/ImageButton;->setVisibility(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->l:Landroid/widget/ImageButton;
-
-    invoke-virtual {v0, v3}, Landroid/widget/ImageButton;->setVisibility(I)V
-
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->q:Landroid/widget/ImageButton;
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageButton;->setVisibility(I)V
 
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->p:Landroid/widget/ImageButton;
+
+    invoke-virtual {v0, v3}, Landroid/widget/ImageButton;->setVisibility(I)V
+
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->o:Landroid/widget/ImageButton;
+
+    invoke-virtual {v0, v3}, Landroid/widget/ImageButton;->setVisibility(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->n:Landroid/widget/ImageButton;
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageButton;->setVisibility(I)V
 
@@ -1726,7 +1724,7 @@
 .end method
 
 .method private g()V
-    .locals 6
+    .locals 5
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->f()Ljava/util/List;
 
@@ -1742,11 +1740,11 @@
 
     move-result v0
 
-    if-eqz v0, :cond_7
+    if-nez v0, :cond_1
 
-    
+    return-void
 
-    
+    :cond_1
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -1763,13 +1761,13 @@
 
     iget-object v3, v3, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
-    const-string v4, "com.whatsapp"
+    const-string v4, "com.sina.weibo"
 
     invoke-virtual {v2, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v4
 
-    if-eqz v4, :cond_1
+    if-eqz v4, :cond_2
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->J:Ljava/util/HashMap;
 
@@ -1779,14 +1777,14 @@
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     const-string v4, "com.tencent.mm"
 
     invoke-virtual {v2, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v4
 
-    if-eqz v4, :cond_3
+    if-eqz v4, :cond_4
 
     const-string v2, "com.tencent.mm.ui.tools.ShareToTimeLineUI"
 
@@ -1794,7 +1792,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_3
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->J:Ljava/util/HashMap;
 
@@ -1804,7 +1802,7 @@
 
     goto :goto_0
 
-    :cond_2
+    :cond_3
     const-string v2, "com.tencent.mm.ui.tools.ShareImgUI"
 
     invoke-virtual {v3, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -1821,32 +1819,31 @@
 
     goto :goto_0
 
-    :cond_3
-    const-string v4, "com.android.bluetooth"
-
-    invoke-virtual {v2, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_4
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->J:Ljava/util/HashMap;
-
-    const-string v3, "share_qq_zone"
-	const/4 v5, 0x0
-
-    invoke-virtual {v2, v3, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_0
-
     :cond_4
-    const-string v4, "com.tencent.mobileqq"
+    const-string v4, "com.qzone"
 
     invoke-virtual {v2, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v4
 
     if-eqz v4, :cond_5
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->J:Ljava/util/HashMap;
+
+    const-string v3, "share_qq_zone"
+
+    invoke-virtual {v2, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_5
+    const-string v4, "com.tencent.mobileqq"
+
+    invoke-virtual {v2, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_6
 
     const-string v2, "com.tencent.mobileqq.activity.JumpActivity"
 
@@ -1864,14 +1861,14 @@
 
     goto :goto_0
 
-    :cond_5
+    :cond_6
     const-string v3, "jp.naver.line.android"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_6
+    if-eqz v3, :cond_7
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->J:Ljava/util/HashMap;
 
@@ -1881,7 +1878,7 @@
 
     goto/16 :goto_0
 
-    :cond_6
+    :cond_7
     const-string v3, "com.facebook.katana"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -1897,8 +1894,6 @@
     invoke-virtual {v2, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto/16 :goto_0
-	:cond_7
-    return-void
 .end method
 
 .method private h()Ljava/lang/String;

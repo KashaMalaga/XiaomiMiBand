@@ -39,9 +39,9 @@
         <ImageButton android:id="@id/share_to_pengyouquan_btn" android:background="@color/trans" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/share_pengyouquan_select" android:layout_weight="1.0" />
         <ImageButton android:id="@id/share_to_miliao_btn" android:background="@color/trans" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/share_miliao" android:layout_weight="1.0" />
         <ImageButton android:id="@id/share_to_weibo_btn" android:background="@color/trans" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/share_weibo_select" android:layout_weight="1.0" />
-		<ImageButton android:id="@id/share_to_line_btn" android:background="@color/trans" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/share_line" android:layout_weight="1.0" />
-		<ImageButton android:id="@id/share_to_qq_btn" android:background="@color/trans" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/share_qq_select" android:layout_weight="1.0" />            
+        <ImageButton android:id="@id/share_to_qq_zone_btn" android:background="@color/trans" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/share_qq_zone_select" android:layout_weight="1.0" />
+        <ImageButton android:id="@id/share_to_qq_btn" android:background="@color/trans" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/share_qq_select" android:layout_weight="1.0" />
+        <ImageButton android:id="@id/share_to_line_btn" android:background="@color/trans" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/share_line" android:layout_weight="1.0" />
         <ImageButton android:id="@id/share_to_facebook_btn" android:background="@color/trans" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/share_facebook" android:layout_weight="1.0" />
-		<ImageButton android:id="@id/share_to_qq_zone_btn" android:background="@color/trans" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/share_qq_zone_select" android:layout_weight="1.0" />
     </LinearLayout>
 </RelativeLayout>
