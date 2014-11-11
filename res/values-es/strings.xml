@@ -177,7 +177,7 @@ necesita una red disponible."</string>
   <string name="fw_failed_help_title1">¿Por qué debo actualizar el firmware?</string>
   <string name="fw_failed_help_title2">¿Qué puedo hacer cuando no puedo actualizar?</string>
   <string name="fw_low_battery_tips">"La batería debe estar por encima del 5% para poder actualizarse."</string>
-  <string name="fw_low_battery_title">Por favor, conétela a la corriente mientras se actualiza.</string>
+  <string name="fw_low_battery_title">Por favor, conéctela a la corriente mientras se actualiza.</string>
   <string name="fw_low_battery_view_help">Ayuda</string>
   <string name="fw_upgrade">Actualización del firmware</string>
   <string name="fw_upgrade_failed">No se pudo actualizar el Firmware.</string>
@@ -499,6 +499,21 @@ necesita una red disponible."</string>
   <string name="smart_wake_up">Alarma Inteligente</string>
   <string name="smart_wake_up_info">Por favor, despiértame 30 minutos antes de tiempo establecido 
   Me gustaría levantarme cuando mi cuerpo ya está despierto.</string>
+  <string name="sport_new_record_ropeskipping">Nuevo record</string>
+  <string name="sport_ranking_desc_great">Guau!, ¡Eres imbatible!</string>
+  <string name="sport_ranking_desc_normal" formatted="false">Has superado a &lt;b&gt;%s%&lt;/b&gt; de %s usuarios.</string>
+  <string name="sport_ranking_desc_poor"> %s pueden ganarte, ¡animo!</string>
+  <string name="sport_running_distance_detail">%s Kilometros</string>
+  <string name="sport_running_helper">Mejorar precisión</string>
+  <string name="sport_running_no_gps">El GPS debe de estar encendido para registar su ruta. ¿Desea encenderlo?</string>
+  <string name="sport_running_pace">Paso</string>
+  <string name="sport_running_pace_detail">%s/KM</string>
+  <string name="sport_running_set_dist">Recordatorio distancia</string>
+  <string name="sport_running_set_goal">Recordatorio objetivo</string>
+  <string name="sport_running_set_speed">Recordatorio velocidadr</string>
+  <string name="sport_running_speed">Velocidad</string>
+  <string name="sport_running_speed_detail">%dKM/H</string>
+  <string name="sport_share">Compartir</string>
   <string name="start">Inicio</string>
   <string name="start_download">Descargando en segundo plano...</string>
   <string name="start_weixin">Abrir WeChat</string>
