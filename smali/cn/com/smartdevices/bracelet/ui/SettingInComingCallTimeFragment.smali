@@ -100,9 +100,9 @@
 
     move-result-object v2
 
-    const/4 v3, 0x3
+    const/4 v3, 0x0
 
-    const/16 v4, 0x1e
+    const/16 v4, 0x3c
 
     move-object/from16 v0, p0
 
@@ -170,7 +170,7 @@
 
     move-result v2
 
-    add-int/lit8 v2, v2, -0x3
+    add-int/lit8 v2, v2, -0x0
 
     invoke-virtual {v1, v2}, Lkankan/wheel/widget/WheelView;->setCurrentItem(I)Lkankan/wheel/widget/WheelView;
 
@@ -222,7 +222,7 @@
 
     move-result v2
 
-    add-int/lit8 v2, v2, 0x3
+    add-int/lit8 v2, v2, 0x0
 
     invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->setInComingCallTime(I)V
 
