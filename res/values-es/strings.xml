@@ -439,7 +439,7 @@ necesita una red disponible."</string>
   <string name="share_blog_other">Compartir en</string>
   <string name="share_blog_pengyouquan">Momento</string>
   <string name="share_blog_qq">QQ</string>
-  <string name="share_blog_qq_zone">QQ Zone</string>
+  <string name="share_blog_qq_zone">Zona QQ</string>
   <string name="share_blog_share">Artículo</string>
   <string name="share_blog_title">Publicar actualizaciones</string>
   <string name="share_blog_weibo">Weibo</string>
@@ -609,10 +609,10 @@ necesita una red disponible."</string>
   <string name="weather_description_haze">Neblina,</string>
   <string name="weather_description_overcast">Cubierto,</string>
   <string name="weather_description_rain">Lluvioso,</string>
-  <string name="weather_description_rain_snow">Nieve,</string>
+  <string name="weather_description_rain_snow">Agua-nieve,</string>
   <string name="weather_description_sand">Polvoriento,</string>
   <string name="weather_description_snow">Nieve,</string>
-  <string name="week"></string>
+  <string name="week">Semana</string>
   <string name="welcom_back">Bienvenido de nuevo</string>
   <string name="welcome">Hola</string>
   <string name="wrong_system_time">La hora del sistema es incorrecta. Esto afectará a su Mi Band.</string>
