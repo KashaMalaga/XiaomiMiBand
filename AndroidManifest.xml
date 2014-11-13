@@ -155,5 +155,12 @@
         <meta-data android:name="UMENG_APPKEY" android:value="53eb6765fd98c559b700389d"/>
         <meta-data android:name="UMENG_CHANNEL" android:value="Normal"/>
         <provider android:authorities="cn.com.smartdevices.bracelet" android:exported="true" android:name="cn.com.smartdevices.bracelet.db.BraceletProvider"/>
+        <activity android:label="extend" android:name="cn.com.smartdevices.bracelet.ExtendActivity"/>
+        <provider android:authorities="cn.com.smartdevices.bracelet.extend.AppsSettingProvider" android:exported="true" android:name="cn.com.smartdevices.bracelet.extend.AppsSettingProvider"/>
+        <service android:label="@string/app_name" android:name="cn.com.smartdevices.bracelet.extend.BleNotifycationTask" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService"/>
+            </intent-filter>
+        </service>
     </application>
 </manifest>

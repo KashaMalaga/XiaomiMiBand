@@ -434,6 +434,7 @@
     <public type="layout" name="wheel_item_miui" id="0x7f03007d" />
     <public type="layout" name="wheel_item_normal" id="0x7f03007e" />
     <public type="layout" name="wheel_left_band" id="0x7f03007f" />
+    <public type="layout" name="list_app_item" id="0x7f030080" />
     <public type="anim" name="cycle_interpolator" id="0x7f040000" />
     <public type="anim" name="edit_shake" id="0x7f040001" />
     <public type="anim" name="fw_in" id="0x7f040002" />
