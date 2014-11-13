@@ -25,7 +25,7 @@
   <string name="am">AM</string>
   <string name="apk_download_ok">Descarga de la aplicación Mi Band completada.</string>
   <string name="apk_uptodate">En este momento está usando la última versión.</string>
-  <string name="app_exit_press_again">Toca el botón atrás de nuevo para salir</string>
+  <string name="app_exit_press_again">Toque atrás de nuevo para salir</string>
   <string name="app_info_version">Versión: %1$s Acuerdo: %2$s</string>
   <string name="app_name">Mi Band</string>
   <string name="awake_format">, despertado %1$s veces.</string>
@@ -193,7 +193,7 @@ necesita una red disponible."</string>
   <string name="goals_push_nine">Logrado el 90%</string>
   <string name="goals_push_none">Sin notificaciones push.</string>
   <string name="goals_push_ten">Logrado el 100%</string>
-  <string name="gram">g</string>
+  <string name="gram">gr</string>
   <string name="green">Verde</string>
   <string name="half_marathon_format_0">Son unas %1$s medias-maratones.</string>
   <string name="half_marathon_format_1">Más de %1$s medias-maratones.</string>
@@ -208,7 +208,7 @@ necesita una red disponible."</string>
   <string name="help_title_3">¿Su Mi Band se ha vinculado con otro teléfono?</string>
   <string name="hot_des">Energía</string>
   <string name="hour_1"></string>
-  <string name="in">En </string>
+  <string name="in">En</string>
   <string name="incoming_call_notify">Llamada Entrante</string>
   <string name="incoming_call_notify_tips">Avisar si tengo una llamada en %s segundos.</string>
   <string name="input_precise_person_info">Por favor, introduzca su información personal. Más detalles pueden ayudarnos a obtener resultados más precisos.</string>
@@ -400,7 +400,7 @@ necesita una red disponible."</string>
   <string name="pull_to_refresh_pull_label">Tire para actualizar</string>
   <string name="pull_to_refresh_refreshing_label">Cargando…</string>
   <string name="pull_to_refresh_release_label">Suelte para actualizar</string>
-  <string name="ran">corrido </string>
+  <string name="ran">corrido</string>
   <string name="red">Rojo</string>
   <string name="register">Registrarse</string>
   <string name="remain_days_format">%s días desde la última carga</string>
@@ -615,7 +615,7 @@ necesita una red disponible."</string>
   <string name="visit_micom">Visitar el sitio oficial</string>
   <string name="wait">Un momento...</string>
   <string name="walked">Caminado</string>
-  <string name="wear_hand">Muñeca</string>
+  <string name="wear_hand">Ubicación</string>
   <string name="weared_days">Días en total</string>
   <string name="weather_aqi">Calidad del aire %s</string>
   <string name="weather_description_cloudy">Nublado,</string>
