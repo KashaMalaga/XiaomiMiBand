@@ -126,10 +126,10 @@ necesita una red disponible."</string>
   <string name="dynamic_pull_connecting_bracelet">Conectando Mi Band...</string>
   <string name="dynamic_pull_last_sync_time">Última sincronización %s</string>
   <string name="dynamic_pull_not_sync_today">No se ha sincronizado hoy.</string>
-  <string name="dynamic_pull_pull_to_sync">Tire para sincronizar datos</string>
+  <string name="dynamic_pull_pull_to_sync">Arrastre para sincronizar datos</string>
   <string name="dynamic_pull_release_to_sync">Suelte para sincronizar</string>
   <string name="dynamic_pull_sync_after_connected">Sincronizar automáticamente una vez conectado.</string>
-  <string name="dynamic_pull_sync_error">Error al sincronizar, tire para refrescar.</string>
+  <string name="dynamic_pull_sync_error">Error al sincronizar, arrastre para refrescar.</string>
   <string name="dynamic_pull_syncing">Sincronizando...</string>
   <string name="dynamic_pull_syncing_progress">Sincronizado %s%%</string>
   <string name="dynamic_pull_update_report">Actualizados %s registros</string>
@@ -175,12 +175,12 @@ necesita una red disponible."</string>
   <string name="fw_failed_help_title">Preguntas frecuentes sobre Firmware</string>
   <string name="fw_failed_help_title0">¿Qué es el firmware?</string>
   <string name="fw_failed_help_title1">¿Por qué debo actualizar el firmware?</string>
-  <string name="fw_failed_help_title2">¿Qué puedo hacer cuando no puedo actualizar?</string>
+  <string name="fw_failed_help_title2">¿Qué debo hacer cuando no puedo actualizar?</string>
   <string name="fw_low_battery_tips">"La batería debe estar por encima del 5% para poder actualizarse."</string>
   <string name="fw_low_battery_title">Por favor, conéctela a la corriente mientras se actualiza.</string>
   <string name="fw_low_battery_view_help">Ayuda</string>
   <string name="fw_upgrade">Actualización del firmware</string>
-  <string name="fw_upgrade_failed">No se pudo actualizar el Firmware.</string>
+  <string name="fw_upgrade_failed">No se pudo actualizar el firmware.</string>
   <string name="fw_upgrade_failed_tips">Lo sentimos, no se pudo actualizar el firmware. Esto desactivará algunas funciones.</string>
   <string name="fw_upgrade_now">Actualizando el firmware...</string>
   <string name="fw_upgrade_progress">Completado %s%%</string>
@@ -198,10 +198,10 @@ necesita una red disponible."</string>
   <string name="half_marathon_format_0">Son unas %1$s medias-maratones.</string>
   <string name="half_marathon_format_1">Más de %1$s medias-maratones.</string>
   <string name="help">Ayuda</string>
-  <string name="help_info_0">La Mi Band se conecta a su teléfono a través de Bluetooth, asegúrese de que se encuentra cerca de su teléfono..</string>
-  <string name="help_info_1">Si su Mi Band está cerca del teléfono pero no la encuentra, asegúrese de que tiene la suficiente carga.</string>
-  <string name="help_info_2">Si su Mi Band tiene la batería cargada y está cerca de su teléfono, pruebe a reiniciar el bluetooth.</string>
-  <string name="help_info_3">Si su Mi Band está vinculada con otro teléfono y está cerca, puede probar a reiniciar si teléfono y buscar de nuevo.</string>
+  <string name="help_info_0">La Mi Band se conecta a su teléfono a través de Bluetooth, asegúrese de que ésta se encuentra cerca de su teléfono.</string>
+  <string name="help_info_1">Si su Mi Band está cerca del teléfono pero no la encuentra, asegúrese de que tiene suficiente carga.</string>
+  <string name="help_info_2">Si su Mi Band tiene la batería cargada y está cerca de su teléfono, reinicie el bluetooth.</string>
+  <string name="help_info_3">Si su Mi Band está vinculada con otro teléfono y está cerca, reinicie su teléfono y busque de nuevo.</string>
   <string name="help_title_0">¿Está el teléfono cerca de su Mi Band?</string>
   <string name="help_title_1">¿Está su Mi Band sin batería?</string>
   <string name="help_title_2">Reiniciar Bluetooth</string>
@@ -223,7 +223,7 @@ necesita una red disponible."</string>
   <string name="instruction_tip_2_4">"¡Buen trabajo!
 \u0009Ha logrado el objetivo de hoy."</string>
   <string name="instruction_tip_2_5">"Por encima de la meta establecida"</string>
-  <string name="instruction_tip_3">Batería baja. Por favor, cargue su Mi Band.</string>
+  <string name="instruction_tip_3">Batería baja. Por favor, conecte su Mi Band a la corriente.</string>
   <string name="instruction_title">Más cosas que hacer con Mi Band</string>
   <string name="kg">kg</string>
   <string name="kilogram">Kg</string>
@@ -236,12 +236,12 @@ necesita una red disponible."</string>
   <string name="lab_factory_exercise_state_ready">IR</string>
   <string name="lab_factory_exercise_state_stopped">Parar</string>
   <string name="lab_factory_exit_press_again">Pulse el botón atrás de nuevo</string>
-  <string name="lab_factory_internal_test">Aalizar el modo deportivo y pruebas</string>
+  <string name="lab_factory_internal_test">Analizar el modo deportivo y pruebas</string>
   <string name="lab_factory_item_group_others">Otros</string>
   <string name="lab_factory_item_group_social">Social</string>
   <string name="lab_factory_item_group_sport">Deportes</string>
   <string name="lab_factory_share_photo">Foto</string>
-  <string name="lab_factory_share_photo_menu_camera">Camara</string>
+  <string name="lab_factory_share_photo_menu_camera">Cámara</string>
   <string name="lab_factory_share_photo_menu_gallery">Galería</string>
   <string name="lab_factory_share_photo_menu_title">Seleccionar foto desde</string>
   <string name="lab_factory_sport_accumulate">Acumulada(s) %d vez(veces)</string>
@@ -330,7 +330,7 @@ necesita una red disponible."</string>
   <string name="mili_exit_login_info_continue">"Error de sincronización, compruebe la conexión de red. Si decide salir, perderá los datos que no se hayan sincronizado. ¿Quiere salir?"</string>
   <string name="mili_exit_login_info_continue_tip">¿Estás seguro de continuar?</string>
   <string name="mili_exit_login_info_exiting">Finalizando la sesión...</string>
-  <string name="mili_exit_login_info_unbind">Al salir desconectará su Mi Band de su teléfono,</string>
+  <string name="mili_exit_login_info_unbind">Al salir desconectará su Mi Band de su teléfono.</string>
   <string name="mili_exit_login_info_unlock">La característica de desbloqueo pantalla ya no será válida.</string>
   <string name="mili_name">Nombre de Mi Band</string>
   <string name="mili_name_too_long">El nombre es muy largo, por favor, cámbielo.</string>
@@ -339,7 +339,7 @@ necesita una red disponible."</string>
   <string name="mili_unbind_question">Su teléfono no tendrá acceso a los datos de su Mi Band una vez que se desvinculen.</string>
   <string name="mili_unbind_question_content">Una vez que desvinculas una Mi Band con un teléfono, es posible vincular otra Mi Band con él.</string>
   <string name="mili_unbind_question_content_1">Además, no será capaz de desbloquear la pantalla con esta Mi Band una vez que la desvincule de su teléfono.</string>
-  <string name="minute"></string>
+  <string name="minute">Minuto</string>
   <string name="modify_gender">Género</string>
   <string name="modify_height">Altura</string>
   <string name="modify_nickname">Editar nombre</string>
@@ -355,7 +355,7 @@ necesita una red disponible."</string>
   <string name="network_error">No somos capaces de conectarnos a la red, compruebe su conexión.</string>
   <string name="new_friend_accept">Aceptar</string>
   <string name="new_friend_cancel">Denegar</string>
-  <string name="new_record_born">¡Buen trabajo! Acaba de hacer un nuevo récord.</string>
+  <string name="new_record_born">¡Buen trabajo! Acaba de establecer un nuevo récord.</string>
   <string name="new_record_format_str">"%1$s consumidas %2$s kcal.
 ¡Buen trabajo!."</string>
   <string name="new_version_available">Encontrada una nueva versión</string>
@@ -374,7 +374,7 @@ necesita una red disponible."</string>
   <string name="notify_status_motor_auth_success">Verificado con éxito.</string>
   <string name="notify_status_motor_call">Usted tiene una llamada entrante...</string>
   <string name="notify_status_motor_disconnect">Desconectando Mi Band...</string>
-  <string name="notify_status_motor_goal">Ha alcanzado su META!</string>
+  <string name="notify_status_motor_goal">Ha alcanzado su meta!</string>
   <string name="notify_status_motor_notify">Buscando Mi Band...</string>
   <string name="notify_status_motor_shut_down">Su Mi Band se está apagando...</string>
   <string name="notify_status_motor_smart_alarm">La alarma inteligente está sonando...</string>
@@ -386,7 +386,7 @@ necesita una red disponible."</string>
  <string name="percent_mark">%</string>
   <string name="person_info_finished_info">Su Mi Band se ha configurado con éxito.</string>
   <string name="person_info_goal_info">Según estudios, le sugerimos que haga al menos 40 minutos de ejercicio al día. Son unos 8.000 pasos.</string>
-  <string name="person_info_goal_info_young">Según estudios, le sugerimos que haga al menos 60 minutos de ejercicio al día. Son de unos 12.000 pasos.</string>
+  <string name="person_info_goal_info_young">Según estudios, le sugerimos que haga al menos 60 minutos de ejercicio al día. Son unos 12.000 pasos.</string>
   <string name="personal_info">Perfil</string>
   <string name="please_input_age">Edad</string>
   <string name="please_input_gender">Seleccione su sexo</string>
@@ -397,7 +397,7 @@ necesita una red disponible."</string>
   <string name="pull_to_refresh_from_bottom_pull_label">Cargar más</string>
   <string name="pull_to_refresh_from_bottom_refreshing_label">@string/pull_to_refresh_refreshing_label</string>
   <string name="pull_to_refresh_from_bottom_release_label">@string/pull_to_refresh_release_label</string>
-  <string name="pull_to_refresh_pull_label">Tire para actualizar</string>
+  <string name="pull_to_refresh_pull_label">Arrastre para actualizar</string>
   <string name="pull_to_refresh_refreshing_label">Cargando…</string>
   <string name="pull_to_refresh_release_label">Suelte para actualizar</string>
   <string name="ran">corrido</string>
@@ -414,7 +414,7 @@ necesita una red disponible."</string>
   <string name="s_mili">Mi Band</string>
   <string name="search_bracelet">Buscando Mi Band</string>
   <string name="search_bracelet_again">Buscar de nuevo</string>
-  <string name="search_bracelet_ok">¡Encontrada su Mi Band!</string>
+  <string name="search_bracelet_ok">¡Mi Band encontrada!</string>
   <string name="search_devices_info">Por favor, ponga su Mi Band cerca del teléfono.</string>
   <string name="search_devices_title">Buscar Mi Band</string>
   <string name="second">Segundos</string>
@@ -428,7 +428,7 @@ necesita una red disponible."</string>
   <string name="set_mili_name_ok">Nuevo nombre guardado.</string>
   <string name="set_person_goal">Establecer Meta</string>
   <string name="set_sport_goal">Establecer Meta</string>
-  <string name="setting_about_app">Versión de la App </string>
+  <string name="setting_about_app">Versión de la app </string>
   <string name="setting_about_fw">Versión de firmware </string>
   <string name="setting_feedback_address">¿Cómo podemos contactar contigo?</string>
   <string name="setting_feedback_hint">Gracias por su tiempo. Su opinión es importante para nosotros.</string>
@@ -497,10 +497,9 @@ necesita una red disponible."</string>
   <string name="smart_alarm_clock">Alarma</string>
   <string name="smart_alarm_notify">Alarma Inteligente</string>
   <string name="smart_wake_up">Alarma Inteligente</string>
-  <string name="smart_wake_up_info">Por favor, despiértame 30 minutos antes de tiempo establecido 
-  Me gustaría levantarme cuando mi cuerpo ya está despierto.</string>
+  <string name="smart_wake_up_info">Por favor, despiértame 30 minutos antes de tiempo establecido. Me gustaría levantarme cuando mi cuerpo ya está despierto.</string>
   <string name="sport_new_record_ropeskipping">Nuevo record</string>
-  <string name="sport_ranking_desc_great">Guau!, ¡Eres imbatible!</string>
+  <string name="sport_ranking_desc_great">¡Guau!, ¡eres imbatible!</string>
   <string name="sport_ranking_desc_normal" formatted="false">Has superado a &lt;b&gt;%s%&lt;/b&gt; de %s usuarios.</string>
   <string name="sport_ranking_desc_poor"> %s pueden ganarte, ¡animo!</string>
   <string name="sport_running_distance_detail">%s Kilometros</string>
@@ -510,7 +509,7 @@ necesita una red disponible."</string>
   <string name="sport_running_pace_detail">%s/KM</string>
   <string name="sport_running_set_dist">Recordatorio distancia</string>
   <string name="sport_running_set_goal">Recordatorio objetivo</string>
-  <string name="sport_running_set_speed">Recordatorio velocidadr</string>
+  <string name="sport_running_set_speed">Recordatorio velocidad</string>
   <string name="sport_running_speed">Velocidad</string>
   <string name="sport_running_speed_detail">%dKM/H</string>
   <string name="sport_share">Compartir</string>
@@ -589,8 +588,8 @@ necesita una red disponible."</string>
   <string name="unit_step">pasos</string>
   <string name="unlock_screen">Desbloqueo de pantalla</string>
   <string name="unlock_screen_help_info0">Por favor, ponga su Mi Band muy cerca de su teléfono.</string>
-  <string name="unlock_screen_help_info1">Si su teléfono sigue bloqueado, intente reiniciar el Bluetooth para ver si soluciona su problema.</string>
-  <string name="unlock_screen_help_info2">Si no puede reiniciar el Bluetooth, por favor, vaya a Ajustes del Sistema-&gt;Seguridad para olvidar la Mi Band actual. Entonces, por favor, vaya a la aplicación Mi Band para restablecer el desbloqueo de pantalla.</string>
+  <string name="unlock_screen_help_info1">Si su teléfono sigue bloqueado, intente reiniciar el Bluetooth para intentar solucionar su problema.</string>
+  <string name="unlock_screen_help_info2">Si no puede reiniciar el Bluetooth, por favor, vaya a Ajustes del Sistema-&gt;Seguridad para olvidar la Mi Band actual. Entonces, vaya a la aplicación Mi Band para restablecer el desbloqueo de pantalla.</string>
   <string name="unlock_screen_help_tips">Sólo necesita dos pasos para desbloquear la pantalla con su Mi Band.</string>
   <string name="unlock_screen_help_title0">¿Estaba su Mi Band lo suficientemente cerca del teléfono?</string>
   <string name="unlock_screen_help_title1">Reinicie el Bluetooth</string>
