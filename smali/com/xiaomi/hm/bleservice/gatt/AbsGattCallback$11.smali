@@ -35,9 +35,14 @@
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$11;->val$notifyCB:Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$INotifyCallback;
 
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$11;->val$notifyCB:Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$INotifyCallback;
+
     iget-object v1, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$11;->val$value:[B
 
     invoke-interface {v0, v1}, Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$INotifyCallback;->notify([B)V
 
+    :cond_0
     return-void
 .end method

@@ -3,11 +3,11 @@
 
 
 # instance fields
-.field private a:Ljava/lang/String;
+.field private debugEnable:Z
 
-.field private b:Z
+.field private logLevel:I
 
-.field private c:I
+.field private tag:Ljava/lang/String;
 
 
 # direct methods
@@ -18,15 +18,15 @@
 
     const-string v0, "default"
 
-    iput-object v0, p0, Lcom/tencent/stat/common/StatLogger;->a:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/stat/common/StatLogger;->tag:Ljava/lang/String;
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/stat/common/StatLogger;->b:Z
+    iput-boolean v0, p0, Lcom/tencent/stat/common/StatLogger;->debugEnable:Z
 
     const/4 v0, 0x2
 
-    iput v0, p0, Lcom/tencent/stat/common/StatLogger;->c:I
+    iput v0, p0, Lcom/tencent/stat/common/StatLogger;->logLevel:I
 
     return-void
 .end method
@@ -38,22 +38,22 @@
 
     const-string v0, "default"
 
-    iput-object v0, p0, Lcom/tencent/stat/common/StatLogger;->a:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/stat/common/StatLogger;->tag:Ljava/lang/String;
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/stat/common/StatLogger;->b:Z
+    iput-boolean v0, p0, Lcom/tencent/stat/common/StatLogger;->debugEnable:Z
 
     const/4 v0, 0x2
 
-    iput v0, p0, Lcom/tencent/stat/common/StatLogger;->c:I
+    iput v0, p0, Lcom/tencent/stat/common/StatLogger;->logLevel:I
 
-    iput-object p1, p0, Lcom/tencent/stat/common/StatLogger;->a:Ljava/lang/String;
+    iput-object p1, p0, Lcom/tencent/stat/common/StatLogger;->tag:Ljava/lang/String;
 
     return-void
 .end method
 
-.method private a()Ljava/lang/String;
+.method private getLoggerClassInfo()Ljava/lang/String;
     .locals 7
 
     const/4 v0, 0x0
@@ -229,13 +229,13 @@
 .method public debug(Ljava/lang/Object;)V
     .locals 2
 
-    iget v0, p0, Lcom/tencent/stat/common/StatLogger;->c:I
+    iget v0, p0, Lcom/tencent/stat/common/StatLogger;->logLevel:I
 
     const/4 v1, 0x3
 
     if-gt v0, v1, :cond_0
 
-    invoke-direct {p0}, Lcom/tencent/stat/common/StatLogger;->a()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/tencent/stat/common/StatLogger;->getLoggerClassInfo()Ljava/lang/String;
 
     move-result-object v0
 
@@ -246,7 +246,7 @@
     move-result-object v0
 
     :goto_0
-    iget-object v1, p0, Lcom/tencent/stat/common/StatLogger;->a:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/stat/common/StatLogger;->tag:Ljava/lang/String;
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -312,7 +312,7 @@
 .method public error(Ljava/lang/Exception;)V
     .locals 7
 
-    iget v0, p0, Lcom/tencent/stat/common/StatLogger;->c:I
+    iget v0, p0, Lcom/tencent/stat/common/StatLogger;->logLevel:I
 
     const/4 v1, 0x6
 
@@ -322,7 +322,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
-    invoke-direct {p0}, Lcom/tencent/stat/common/StatLogger;->a()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/tencent/stat/common/StatLogger;->getLoggerClassInfo()Ljava/lang/String;
 
     move-result-object v0
 
@@ -453,7 +453,7 @@
     goto :goto_0
 
     :cond_2
-    iget-object v0, p0, Lcom/tencent/stat/common/StatLogger;->a:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/stat/common/StatLogger;->tag:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -468,13 +468,13 @@
 .method public error(Ljava/lang/Object;)V
     .locals 2
 
-    iget v0, p0, Lcom/tencent/stat/common/StatLogger;->c:I
+    iget v0, p0, Lcom/tencent/stat/common/StatLogger;->logLevel:I
 
     const/4 v1, 0x6
 
     if-gt v0, v1, :cond_0
 
-    invoke-direct {p0}, Lcom/tencent/stat/common/StatLogger;->a()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/tencent/stat/common/StatLogger;->getLoggerClassInfo()Ljava/lang/String;
 
     move-result-object v0
 
@@ -485,7 +485,7 @@
     move-result-object v0
 
     :goto_0
-    iget-object v1, p0, Lcom/tencent/stat/common/StatLogger;->a:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/stat/common/StatLogger;->tag:Ljava/lang/String;
 
     invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -521,7 +521,7 @@
 .method public getLogLevel()I
     .locals 1
 
-    iget v0, p0, Lcom/tencent/stat/common/StatLogger;->c:I
+    iget v0, p0, Lcom/tencent/stat/common/StatLogger;->logLevel:I
 
     return v0
 .end method
@@ -544,13 +544,13 @@
 .method public info(Ljava/lang/Object;)V
     .locals 2
 
-    iget v0, p0, Lcom/tencent/stat/common/StatLogger;->c:I
+    iget v0, p0, Lcom/tencent/stat/common/StatLogger;->logLevel:I
 
     const/4 v1, 0x4
 
     if-gt v0, v1, :cond_0
 
-    invoke-direct {p0}, Lcom/tencent/stat/common/StatLogger;->a()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/tencent/stat/common/StatLogger;->getLoggerClassInfo()Ljava/lang/String;
 
     move-result-object v0
 
@@ -561,7 +561,7 @@
     move-result-object v0
 
     :goto_0
-    iget-object v1, p0, Lcom/tencent/stat/common/StatLogger;->a:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/stat/common/StatLogger;->tag:Ljava/lang/String;
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -597,7 +597,7 @@
 .method public isDebugEnable()Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/tencent/stat/common/StatLogger;->b:Z
+    iget-boolean v0, p0, Lcom/tencent/stat/common/StatLogger;->debugEnable:Z
 
     return v0
 .end method
@@ -605,7 +605,7 @@
 .method public setDebugEnable(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lcom/tencent/stat/common/StatLogger;->b:Z
+    iput-boolean p1, p0, Lcom/tencent/stat/common/StatLogger;->debugEnable:Z
 
     return-void
 .end method
@@ -613,7 +613,7 @@
 .method public setLogLevel(I)V
     .locals 0
 
-    iput p1, p0, Lcom/tencent/stat/common/StatLogger;->c:I
+    iput p1, p0, Lcom/tencent/stat/common/StatLogger;->logLevel:I
 
     return-void
 .end method
@@ -621,7 +621,7 @@
 .method public setTag(Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/tencent/stat/common/StatLogger;->a:Ljava/lang/String;
+    iput-object p1, p0, Lcom/tencent/stat/common/StatLogger;->tag:Ljava/lang/String;
 
     return-void
 .end method
@@ -644,13 +644,13 @@
 .method public verbose(Ljava/lang/Object;)V
     .locals 2
 
-    iget v0, p0, Lcom/tencent/stat/common/StatLogger;->c:I
+    iget v0, p0, Lcom/tencent/stat/common/StatLogger;->logLevel:I
 
     const/4 v1, 0x2
 
     if-gt v0, v1, :cond_0
 
-    invoke-direct {p0}, Lcom/tencent/stat/common/StatLogger;->a()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/tencent/stat/common/StatLogger;->getLoggerClassInfo()Ljava/lang/String;
 
     move-result-object v0
 
@@ -661,7 +661,7 @@
     move-result-object v0
 
     :goto_0
-    iget-object v1, p0, Lcom/tencent/stat/common/StatLogger;->a:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/stat/common/StatLogger;->tag:Ljava/lang/String;
 
     invoke-static {v1, v0}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -712,13 +712,13 @@
 .method public warn(Ljava/lang/Object;)V
     .locals 2
 
-    iget v0, p0, Lcom/tencent/stat/common/StatLogger;->c:I
+    iget v0, p0, Lcom/tencent/stat/common/StatLogger;->logLevel:I
 
     const/4 v1, 0x5
 
     if-gt v0, v1, :cond_0
 
-    invoke-direct {p0}, Lcom/tencent/stat/common/StatLogger;->a()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/tencent/stat/common/StatLogger;->getLoggerClassInfo()Ljava/lang/String;
 
     move-result-object v0
 
@@ -729,7 +729,7 @@
     move-result-object v0
 
     :goto_0
-    iget-object v1, p0, Lcom/tencent/stat/common/StatLogger;->a:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/stat/common/StatLogger;->tag:Ljava/lang/String;
 
     invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 

@@ -3,9 +3,9 @@
 
 
 # static fields
-.field private static final a:Ljava/lang/String; = "MicroMsg.PaySdk.PayReq"
+.field private static final EXTDATA_MAX_LENGTH:I = 0x400
 
-.field private static final b:I = 0x400
+.field private static final TAG:Ljava/lang/String; = "MicroMsg.PaySdk.PayReq"
 
 
 # instance fields

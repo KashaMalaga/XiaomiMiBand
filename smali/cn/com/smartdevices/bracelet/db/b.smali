@@ -1,252 +1,79 @@
-.class Lcn/com/smartdevices/bracelet/db/b;
-.super Landroid/database/sqlite/SQLiteOpenHelper;
+.class public Lcn/com/smartdevices/bracelet/db/b;
+.super Ljava/lang/Object;
 
 
 # static fields
-.field private static a:Lcn/com/smartdevices/bracelet/db/b; = null
+.field public static final a:Ljava/lang/String; = "cloud_config"
 
-.field private static final b:Ljava/lang/String; = "exercises_db"
-
-.field private static final c:I = 0x1
-
-.field private static final d:Ljava/lang/String; = "exercises"
-
-.field private static final e:Ljava/lang/String; = "_id"
-
-.field private static final f:Ljava/lang/String; = "subtype"
-
-.field private static final g:Ljava/lang/String; = "type"
-
-.field private static final h:Ljava/lang/String; = "desc"
-
-.field private static final i:Ljava/lang/String; = "mets"
+.field static final b:Ljava/lang/String; = "CREATE TABLE IF NOT EXISTS cloud_config(_id INTEGER PRIMARY KEY AUTOINCREMENT,config TEXT,value TEXT,time_stamp BIGINT,dummy1 TEXT,dummy2 TEXT,dummy3 TEXT,dummy4 TEXT, dummy5 TEXT);"
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
-    const/4 v0, 0x0
-
-    sput-object v0, Lcn/com/smartdevices/bracelet/db/b;->a:Lcn/com/smartdevices/bracelet/db/b;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 3
-
-    const-string v0, "exercises_db"
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    invoke-direct {p0, p1, v0, v1, v2}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
-
-    return-void
-.end method
-
-.method private a(Z)Landroid/database/sqlite/SQLiteDatabase;
+.method static a(Ljava/lang/String;)Z
     .locals 1
 
-    if-eqz p1, :cond_0
+    const-string v0, "config"
 
-    :try_start_0
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/db/b;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result-object v0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/db/b;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/db/b;->close()V
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/db/b;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/db/b;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
-
-    move-result-object v0
-
-    goto :goto_0
-.end method
-
-.method public static a()Lcn/com/smartdevices/bracelet/db/b;
-    .locals 1
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/db/b;->a:Lcn/com/smartdevices/bracelet/db/b;
-
-    return-object v0
-.end method
-
-.method public static a(Landroid/content/Context;)V
-    .locals 1
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/db/b;->a:Lcn/com/smartdevices/bracelet/db/b;
+    move-result v0
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/db/b;
+    const-string v0, "time_stamp"
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/db/b;-><init>(Landroid/content/Context;)V
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    sput-object v0, Lcn/com/smartdevices/bracelet/db/b;->a:Lcn/com/smartdevices/bracelet/db/b;
+    move-result v0
 
-    :cond_0
-    return-void
-.end method
+    if-nez v0, :cond_0
 
+    const/4 v0, 0x0
 
-# virtual methods
-.method public a(Ljava/lang/String;)D
-    .locals 10
-
-    const/4 v4, 0x1
-
-    const-wide/16 v8, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v1, 0x0
-
-    new-array v2, v4, [Ljava/lang/String;
-
-    const-string v0, "mets"
-
-    aput-object v0, v2, v1
-
-    const-string v3, "desc=?"
-
-    new-array v4, v4, [Ljava/lang/String;
-
-    aput-object p1, v4, v1
-
-    invoke-direct {p0, v1}, Lcn/com/smartdevices/bracelet/db/b;->a(Z)Landroid/database/sqlite/SQLiteDatabase;
-
-    move-result-object v0
-
-    const-string v1, "exercises"
-
-    move-object v6, v5
-
-    move-object v7, v5
-
-    invoke-virtual/range {v0 .. v7}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v2
-
-    if-nez v2, :cond_1
-
-    move-wide v0, v8
-
-    :cond_0
     :goto_0
-    return-wide v0
+    return v0
 
-    :cond_1
-    :try_start_0
-    invoke-interface {v2}, Landroid/database/Cursor;->getCount()I
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {v2}, Landroid/database/Cursor;->moveToFirst()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    const-string v0, "mets"
-
-    invoke-interface {v2, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result v0
-
-    invoke-interface {v2, v0}, Landroid/database/Cursor;->getDouble(I)D
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    move-result-wide v8
-
-    move-wide v0, v8
-
-    :goto_1
-    if-eqz v2, :cond_0
-
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
+    :cond_0
+    const/4 v0, 0x1
 
     goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    if-eqz v2, :cond_2
-
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
-
-    :cond_2
-    throw v0
-
-    :cond_3
-    move-wide v0, v8
-
-    goto :goto_1
 .end method
 
-.method public b()V
-    .locals 2
+.method static a([Ljava/lang/String;)Z
+    .locals 4
+
+    const/4 v0, 0x0
+
+    array-length v2, p0
+
+    move v1, v0
+
+    :goto_0
+    if-lt v1, v2, :cond_1
 
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/db/b;->a(Z)Landroid/database/sqlite/SQLiteDatabase;
+    :cond_0
+    return v0
 
-    move-result-object v0
+    :cond_1
+    aget-object v3, p0, v1
 
-    const-string v1, "DELETE FROM exercises"
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/db/b;->a(Ljava/lang/String;)Z
 
-    invoke-virtual {v0, v1}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+    move-result v3
 
-    return-void
-.end method
+    if-eqz v3, :cond_0
 
-.method public onCreate(Landroid/database/sqlite/SQLiteDatabase;)V
-    .locals 1
+    add-int/lit8 v1, v1, 0x1
 
-    const-string v0, "CREATE TABLE IF NOT EXISTS exercises(_id INTEGER PRIMARY KEY AUTOINCREMENT, uuid INTEGER, type INTEGER DEFAULT -1, subtype INTEGER DEFAULT -1, desc TEXT, mets DOUBLE, reserved1 TEXT, reserved2 TEXT, reserved3 TEXT, reserved4 TEXT, reserved5 TEXT, reserved6 TEXT, reserved7 TEXT, reserved8 TEXT, reserved9 TEXT, reserved10 TEXT, reserved11 TEXT, reserved12 TEXT, reserved13 TEXT, reserved14 TEXT, reserved15 TEXT, reserved16 TEXT, reserved17 TEXT, reserved18 TEXT, reserved19 TEXT, reserved20 TEXT);"
-
-    invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public onDowngrade(Landroid/database/sqlite/SQLiteDatabase;II)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onUpgrade(Landroid/database/sqlite/SQLiteDatabase;II)V
-    .locals 0
-
-    return-void
+    goto :goto_0
 .end method

@@ -1,74 +1,45 @@
 .class Landroid/support/v4/view/ae;
-.super Landroid/support/v4/view/ad;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# instance fields
+.field final synthetic a:Landroid/support/v4/view/PagerTabStrip;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Landroid/support/v4/view/PagerTabStrip;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/support/v4/view/ad;-><init>()V
+    iput-object p1, p0, Landroid/support/v4/view/ae;->a:Landroid/support/v4/view/PagerTabStrip;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/view/View;Landroid/support/v4/view/AccessibilityDelegateCompat;)V
-    .locals 1
+.method public onClick(Landroid/view/View;)V
+    .locals 2
 
-    invoke-virtual {p2}, Landroid/support/v4/view/AccessibilityDelegateCompat;->a()Ljava/lang/Object;
+    iget-object v0, p0, Landroid/support/v4/view/ae;->a:Landroid/support/v4/view/PagerTabStrip;
 
-    move-result-object v0
+    iget-object v0, v0, Landroid/support/v4/view/PagerTabStrip;->a:Landroid/support/v4/view/ViewPager;
 
-    invoke-static {p1, v0}, Landroid/support/v4/view/al;->a(Landroid/view/View;Ljava/lang/Object;)V
+    iget-object v1, p0, Landroid/support/v4/view/ae;->a:Landroid/support/v4/view/PagerTabStrip;
 
-    return-void
-.end method
+    iget-object v1, v1, Landroid/support/v4/view/PagerTabStrip;->a:Landroid/support/v4/view/ViewPager;
 
-.method public a(Landroid/view/View;Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;)V
-    .locals 1
+    invoke-virtual {v1}, Landroid/support/v4/view/ViewPager;->c()I
 
-    invoke-virtual {p2}, Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;->getInfo()Ljava/lang/Object;
+    move-result v1
 
-    move-result-object v0
+    add-int/lit8 v1, v1, -0x1
 
-    invoke-static {p1, v0}, Landroid/support/v4/view/al;->b(Landroid/view/View;Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPager;->a(I)V
 
     return-void
-.end method
-
-.method public a(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
-    .locals 0
-
-    invoke-static {p1, p2}, Landroid/support/v4/view/al;->a(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
-
-    return-void
-.end method
-
-.method public a(Landroid/view/View;I)Z
-    .locals 1
-
-    invoke-static {p1, p2}, Landroid/support/v4/view/al;->a(Landroid/view/View;I)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public b(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
-    .locals 0
-
-    invoke-static {p1, p2}, Landroid/support/v4/view/al;->b(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
-
-    return-void
-.end method
-
-.method public b(Landroid/view/View;I)Z
-    .locals 1
-
-    invoke-static {p1, p2}, Landroid/support/v4/view/al;->b(Landroid/view/View;I)Z
-
-    move-result v0
-
-    return v0
 .end method

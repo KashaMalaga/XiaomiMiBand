@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
 
 
 # instance fields
@@ -22,18 +22,14 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method public onPreDraw()Z
+    .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aI;->a:Lcn/com/smartdevices/bracelet/ui/aH;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/aH;->a(Lcn/com/smartdevices/bracelet/ui/aH;)Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/aH;->a(Lcn/com/smartdevices/bracelet/ui/aH;)V
 
-    move-result-object v0
+    const/4 v0, 0x1
 
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->updateDynamicList(Z)V
-
-    return-void
+    return v0
 .end method

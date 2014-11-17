@@ -1,22 +1,22 @@
-.class Landroid/support/v4/view/as;
-.super Landroid/support/v4/view/av;
+.class Landroid/support/v4/view/aS;
+.super Ljava/lang/Object;
 
 
 # direct methods
 .method constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Landroid/support/v4/view/av;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method public static a(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
+    .locals 1
 
-# virtual methods
-.method public a(Landroid/view/ViewGroup;Z)V
-    .locals 0
+    invoke-virtual {p0, p1, p2}, Landroid/view/ViewGroup;->onRequestSendAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
 
-    invoke-static {p1, p2}, Landroid/support/v4/view/aw;->a(Landroid/view/ViewGroup;Z)V
+    move-result v0
 
-    return-void
+    return v0
 .end method

@@ -1,96 +1,42 @@
-.class Landroid/support/v4/content/q;
-.super Ljava/util/concurrent/FutureTask;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/util/concurrent/FutureTask",
-        "<TResult;>;"
-    }
-.end annotation
+.class public final Landroid/support/v4/content/q;
+.super Landroid/database/ContentObserver;
 
 
 # instance fields
-.field final synthetic a:Landroid/support/v4/content/ModernAsyncTask;
+.field final synthetic a:Landroid/support/v4/content/p;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/content/ModernAsyncTask;Ljava/util/concurrent/Callable;)V
-    .locals 0
+.method public constructor <init>(Landroid/support/v4/content/p;)V
+    .locals 1
 
-    iput-object p1, p0, Landroid/support/v4/content/q;->a:Landroid/support/v4/content/ModernAsyncTask;
+    iput-object p1, p0, Landroid/support/v4/content/q;->a:Landroid/support/v4/content/p;
 
-    invoke-direct {p0, p2}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/util/concurrent/Callable;)V
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
+
+    invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected done()V
-    .locals 3
+.method public deliverSelfNotifications()Z
+    .locals 1
 
-    :try_start_0
-    invoke-virtual {p0}, Landroid/support/v4/content/q;->get()Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    move-result-object v0
+    return v0
+.end method
 
-    iget-object v1, p0, Landroid/support/v4/content/q;->a:Landroid/support/v4/content/ModernAsyncTask;
+.method public onChange(Z)V
+    .locals 1
 
-    invoke-static {v1, v0}, Landroid/support/v4/content/ModernAsyncTask;->b(Landroid/support/v4/content/ModernAsyncTask;Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_3
+    iget-object v0, p0, Landroid/support/v4/content/q;->a:Landroid/support/v4/content/p;
 
-    :goto_0
+    invoke-virtual {v0}, Landroid/support/v4/content/p;->D()V
+
     return-void
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "AsyncTask"
-
-    invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    goto :goto_0
-
-    :catch_1
-    move-exception v0
-
-    new-instance v1, Ljava/lang/RuntimeException;
-
-    const-string v2, "An error occured while executing doInBackground()"
-
-    invoke-virtual {v0}, Ljava/util/concurrent/ExecutionException;->getCause()Ljava/lang/Throwable;
-
-    move-result-object v0
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v1
-
-    :catch_2
-    move-exception v0
-
-    iget-object v0, p0, Landroid/support/v4/content/q;->a:Landroid/support/v4/content/ModernAsyncTask;
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Landroid/support/v4/content/ModernAsyncTask;->b(Landroid/support/v4/content/ModernAsyncTask;Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :catch_3
-    move-exception v0
-
-    new-instance v1, Ljava/lang/RuntimeException;
-
-    const-string v2, "An error occured while executing doInBackground()"
-
-    invoke-direct {v1, v2, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v1
 .end method

@@ -3,15 +3,15 @@
 
 
 # static fields
-.field public static final ROLE_CONTENT:I = 0x0
+.field public static final a:I = 0x0
 
-.field public static final ROLE_PRIMARY_MENU:I = 0x1
+.field public static final b:I = 0x1
 
-.field public static final ROLE_SECONDARY_MENU:I = 0x2
+.field public static final c:I = 0x2
 
 
 # instance fields
-.field public role:I
+.field public d:I
 
 
 # direct methods
@@ -28,7 +28,7 @@
 
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
 
-    iput p3, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$LayoutParams;->role:I
+    iput p3, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$LayoutParams;->d:I
 
     return-void
 .end method
@@ -42,7 +42,7 @@
 
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget-object v0, Lcom/xiaomi/hm/health/R$styleable;->SlideMenu_Layout:[I
+    sget-object v0, Lcom/xiaomi/hm/a/s;->SlideMenu_Layout:[I
 
     invoke-virtual {p1, p2, v0, v1, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
@@ -57,7 +57,7 @@
     :goto_0
     if-lt v0, v3, :cond_0
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$LayoutParams;->role:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$LayoutParams;->d:I
 
     packed-switch v0, :pswitch_data_0
 
@@ -86,7 +86,7 @@
 
     move-result v4
 
-    iput v4, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$LayoutParams;->role:I
+    iput v4, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$LayoutParams;->d:I
 
     goto :goto_1
 
@@ -124,9 +124,9 @@
 
     check-cast p1, Lcn/com/smartdevices/bracelet/view/SlideMenu$LayoutParams;
 
-    iget v0, p1, Lcn/com/smartdevices/bracelet/view/SlideMenu$LayoutParams;->role:I
+    iget v0, p1, Lcn/com/smartdevices/bracelet/view/SlideMenu$LayoutParams;->d:I
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$LayoutParams;->role:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$LayoutParams;->d:I
 
     :cond_0
     return-void

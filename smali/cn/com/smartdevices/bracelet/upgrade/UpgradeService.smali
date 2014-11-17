@@ -3,11 +3,11 @@
 
 
 # static fields
-.field public static final REQUEST_APP_UPGRADE:I = 0x1
+.field public static final a:I = 0x1
 
-.field public static final REQUEST_FIRMWARE_OTA:I = 0x2
+.field public static final b:I = 0x2
 
-.field private static final a:Ljava/lang/String; = "UpgradeService"
+.field private static final c:Ljava/lang/String; = "UpgradeService"
 
 
 # direct methods
@@ -24,11 +24,11 @@
 .method private a()V
     .locals 6
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/upgrade/UpgradeUtil;->getUpgradeURL()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/upgrade/c;->a()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/upgrade/UpgradeUtil;->getNetVersionInfo(Landroid/content/Context;Ljava/lang/String;)Lcn/com/smartdevices/bracelet/upgrade/NewVersionInfo;
+    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/upgrade/c;->a(Landroid/content/Context;Ljava/lang/String;)Lcn/com/smartdevices/bracelet/upgrade/a;
 
     move-result-object v1
 
@@ -40,7 +40,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/upgrade/NewVersionInfo;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/upgrade/a;->toString()Ljava/lang/String;
 
     move-result-object v3
 
@@ -52,17 +52,17 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/upgrade/UpgradeService;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/upgrade/UpgradeUtil;->getApkVersionCode(Landroid/content/Context;Ljava/lang/String;)I
+    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/upgrade/c;->c(Landroid/content/Context;Ljava/lang/String;)I
 
     move-result v2
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/upgrade/NewVersionInfo;->getVersionCode()I
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/upgrade/a;->d()I
 
     move-result v0
 
@@ -82,7 +82,7 @@
 
     const-string v0, "ChangeLog"
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/upgrade/NewVersionInfo;->getChangeLog()Ljava/lang/String;
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/upgrade/a;->e()Ljava/lang/String;
 
     move-result-object v5
 
@@ -90,7 +90,7 @@
 
     const-string v0, "NewVersion"
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/upgrade/NewVersionInfo;->getVersionCode()I
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/upgrade/a;->d()I
 
     move-result v5
 
@@ -100,13 +100,13 @@
 
     invoke-direct {v0}, Ljava/lang/String;-><init>()V
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/upgrade/NewVersionInfo;->getVersionCode()I
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/upgrade/a;->d()I
 
     move-result v5
 
     if-ge v2, v5, :cond_0
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/upgrade/NewVersionInfo;->getFileUrl()Ljava/lang/String;
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/upgrade/a;->b()Ljava/lang/String;
 
     move-result-object v0
 
@@ -121,58 +121,7 @@
     return-void
 .end method
 
-.method private b()V
-    .locals 4
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/upgrade/UpgradeUtil;->getOtaUrl()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/upgrade/UpgradeUtil;->getOtaVersionInfo(Landroid/content/Context;Ljava/lang/String;)Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;
-
-    move-result-object v0
-
-    const-string v1, "DDDD"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "OTAInfo : "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/Debug;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment;->mHandler:Landroid/os/Handler;
-
-    if-eqz v1, :cond_0
-
-    new-instance v1, Landroid/os/Message;
-
-    invoke-direct {v1}, Landroid/os/Message;-><init>()V
-
-    const/4 v2, 0x1
-
-    iput v2, v1, Landroid/os/Message;->what:I
-
-    iput-object v0, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment;->mHandler:Landroid/os/Handler;
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    :cond_0
-    return-void
-.end method
-
-.method public static checkFirmwareUpgradeState(Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;)Z
+.method public static a(Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;)Z
     .locals 5
 
     const/4 v0, 0x0
@@ -193,7 +142,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/Debug;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -257,9 +206,9 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/Debug;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->firmwareVersionCode:F
+    iget v2, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->b:F
 
     invoke-static {v1}, Ljava/lang/Float;->valueOf(Ljava/lang/String;)Ljava/lang/Float;
 
@@ -295,7 +244,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->firmwareVersionCode:F
+    iget v2, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->b:F
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
@@ -305,12 +254,63 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
     :cond_0
     return v0
+.end method
+
+.method private b()V
+    .locals 4
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/upgrade/c;->b()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/upgrade/c;->b(Landroid/content/Context;Ljava/lang/String;)Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;
+
+    move-result-object v0
+
+    const-string v1, "DDDD"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "OTAInfo : "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/ui/cn;->d:Landroid/os/Handler;
+
+    if-eqz v1, :cond_0
+
+    new-instance v1, Landroid/os/Message;
+
+    invoke-direct {v1}, Landroid/os/Message;-><init>()V
+
+    const/4 v2, 0x1
+
+    iput v2, v1, Landroid/os/Message;->what:I
+
+    iput-object v0, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/ui/cn;->d:Landroid/os/Handler;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    :cond_0
+    return-void
 .end method
 
 .method public static start(Landroid/content/Context;I)V

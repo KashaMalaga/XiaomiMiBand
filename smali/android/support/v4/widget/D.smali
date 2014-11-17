@@ -1,35 +1,36 @@
-.class final Landroid/support/v4/widget/D;
+.class public abstract Landroid/support/v4/widget/D;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/widget/SearchView$OnCloseListener;
 
 
 # instance fields
-.field final synthetic a:Landroid/support/v4/widget/E;
+.field final a:Ljava/lang/Object;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/widget/E;)V
-    .locals 0
-
-    iput-object p1, p0, Landroid/support/v4/widget/D;->a:Landroid/support/v4/widget/E;
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {}, Landroid/support/v4/widget/C;->a()Landroid/support/v4/widget/J;
+
+    move-result-object v0
+
+    invoke-interface {v0, p0}, Landroid/support/v4/widget/J;->a(Landroid/support/v4/widget/D;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    iput-object v0, p0, Landroid/support/v4/widget/D;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onClose()Z
+.method public a()Z
     .locals 1
 
-    iget-object v0, p0, Landroid/support/v4/widget/D;->a:Landroid/support/v4/widget/E;
-
-    invoke-interface {v0}, Landroid/support/v4/widget/E;->a()Z
-
-    move-result v0
+    const/4 v0, 0x0
 
     return v0
 .end method

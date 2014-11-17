@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/amap/api/location/AMapLocationListener;
+.implements Lcom/amap/api/location/e;
 
 
 # instance fields
-.field final synthetic a:Lcom/amap/api/location/LocationManagerProxy;
+.field final synthetic a:Lcom/amap/api/location/f;
 
 
 # direct methods
-.method constructor <init>(Lcom/amap/api/location/LocationManagerProxy;)V
+.method constructor <init>(Lcom/amap/api/location/f;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/amap/api/location/h;->a:Lcom/amap/api/location/LocationManagerProxy;
+    iput-object p1, p0, Lcom/amap/api/location/h;->a:Lcom/amap/api/location/f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,21 +22,21 @@
 
 
 # virtual methods
-.method public onLocationChanged(Landroid/location/Location;)V
+.method public a(Lcom/amap/api/location/AMapLocation;)V
     .locals 5
 
     :try_start_0
-    iget-object v0, p0, Lcom/amap/api/location/h;->a:Lcom/amap/api/location/LocationManagerProxy;
+    iget-object v0, p0, Lcom/amap/api/location/h;->a:Lcom/amap/api/location/f;
 
-    invoke-static {v0}, Lcom/amap/api/location/LocationManagerProxy;->a(Lcom/amap/api/location/LocationManagerProxy;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lcom/amap/api/location/f;->a(Lcom/amap/api/location/f;)Ljava/util/ArrayList;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/amap/api/location/h;->a:Lcom/amap/api/location/LocationManagerProxy;
+    iget-object v0, p0, Lcom/amap/api/location/h;->a:Lcom/amap/api/location/f;
 
-    invoke-static {v0}, Lcom/amap/api/location/LocationManagerProxy;->a(Lcom/amap/api/location/LocationManagerProxy;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lcom/amap/api/location/f;->a(Lcom/amap/api/location/f;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -46,9 +46,9 @@
 
     if-lez v0, :cond_0
 
-    iget-object v0, p0, Lcom/amap/api/location/h;->a:Lcom/amap/api/location/LocationManagerProxy;
+    iget-object v0, p0, Lcom/amap/api/location/h;->a:Lcom/amap/api/location/f;
 
-    invoke-static {v0}, Lcom/amap/api/location/LocationManagerProxy;->a(Lcom/amap/api/location/LocationManagerProxy;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lcom/amap/api/location/f;->a(Lcom/amap/api/location/f;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -86,9 +86,9 @@
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
 
     :try_start_1
-    iget-object v3, p0, Lcom/amap/api/location/h;->a:Lcom/amap/api/location/LocationManagerProxy;
+    iget-object v3, p0, Lcom/amap/api/location/h;->a:Lcom/amap/api/location/f;
 
-    invoke-static {v3}, Lcom/amap/api/location/LocationManagerProxy;->b(Lcom/amap/api/location/LocationManagerProxy;)Landroid/content/Context;
+    invoke-static {v3}, Lcom/amap/api/location/f;->b(Lcom/amap/api/location/f;)Landroid/content/Context;
 
     move-result-object v3
 
@@ -120,21 +120,21 @@
     return-void
 .end method
 
-.method public onLocationChanged(Lcom/amap/api/location/AMapLocation;)V
+.method public onLocationChanged(Landroid/location/Location;)V
     .locals 5
 
     :try_start_0
-    iget-object v0, p0, Lcom/amap/api/location/h;->a:Lcom/amap/api/location/LocationManagerProxy;
+    iget-object v0, p0, Lcom/amap/api/location/h;->a:Lcom/amap/api/location/f;
 
-    invoke-static {v0}, Lcom/amap/api/location/LocationManagerProxy;->a(Lcom/amap/api/location/LocationManagerProxy;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lcom/amap/api/location/f;->a(Lcom/amap/api/location/f;)Ljava/util/ArrayList;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/amap/api/location/h;->a:Lcom/amap/api/location/LocationManagerProxy;
+    iget-object v0, p0, Lcom/amap/api/location/h;->a:Lcom/amap/api/location/f;
 
-    invoke-static {v0}, Lcom/amap/api/location/LocationManagerProxy;->a(Lcom/amap/api/location/LocationManagerProxy;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lcom/amap/api/location/f;->a(Lcom/amap/api/location/f;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -144,9 +144,9 @@
 
     if-lez v0, :cond_0
 
-    iget-object v0, p0, Lcom/amap/api/location/h;->a:Lcom/amap/api/location/LocationManagerProxy;
+    iget-object v0, p0, Lcom/amap/api/location/h;->a:Lcom/amap/api/location/f;
 
-    invoke-static {v0}, Lcom/amap/api/location/LocationManagerProxy;->a(Lcom/amap/api/location/LocationManagerProxy;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lcom/amap/api/location/f;->a(Lcom/amap/api/location/f;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -184,9 +184,9 @@
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
 
     :try_start_1
-    iget-object v3, p0, Lcom/amap/api/location/h;->a:Lcom/amap/api/location/LocationManagerProxy;
+    iget-object v3, p0, Lcom/amap/api/location/h;->a:Lcom/amap/api/location/f;
 
-    invoke-static {v3}, Lcom/amap/api/location/LocationManagerProxy;->b(Lcom/amap/api/location/LocationManagerProxy;)Landroid/content/Context;
+    invoke-static {v3}, Lcom/amap/api/location/f;->b(Lcom/amap/api/location/f;)Landroid/content/Context;
 
     move-result-object v3
 

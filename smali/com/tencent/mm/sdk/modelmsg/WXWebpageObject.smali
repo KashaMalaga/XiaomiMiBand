@@ -6,9 +6,9 @@
 
 
 # static fields
-.field private static final a:Ljava/lang/String; = "MicroMsg.SDK.WXWebpageObject"
+.field private static final LENGTH_LIMIT:I = 0x2800
 
-.field private static final b:I = 0x2800
+.field private static final TAG:Ljava/lang/String; = "MicroMsg.SDK.WXWebpageObject"
 
 
 # instance fields

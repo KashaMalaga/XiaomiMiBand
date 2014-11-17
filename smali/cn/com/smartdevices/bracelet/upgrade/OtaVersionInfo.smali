@@ -19,26 +19,26 @@
 
 
 # instance fields
-.field public firmwareInfo:Ljava/lang/String;
+.field public a:Ljava/lang/String;
 
-.field public firmwareMd5:Ljava/lang/String;
+.field public b:F
 
-.field public firmwareSize:I
+.field public c:Ljava/lang/String;
 
-.field public firmwareUrl:Ljava/lang/String;
+.field public d:Ljava/lang/String;
 
-.field public firmwareVersion:Ljava/lang/String;
+.field public e:I
 
-.field public firmwareVersionCode:F
+.field public f:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/upgrade/a;
+    new-instance v0, Lcn/com/smartdevices/bracelet/upgrade/b;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/upgrade/a;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/upgrade/b;-><init>()V
 
     sput-object v0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -62,37 +62,37 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->firmwareUrl:Ljava/lang/String;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->a:Ljava/lang/String;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->firmwareVersionCode:F
+    iput v0, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->b:F
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->firmwareVersion:Ljava/lang/String;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->c:Ljava/lang/String;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->firmwareInfo:Ljava/lang/String;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->d:Ljava/lang/String;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->firmwareSize:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->e:I
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->firmwareMd5:Ljava/lang/String;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->f:Ljava/lang/String;
 
     return-void
 .end method
@@ -124,7 +124,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->firmwareUrl:Ljava/lang/String;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->a:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -136,7 +136,7 @@
 
     move-result-object v0
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->firmwareVersionCode:F
+    iget v1, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->b:F
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
@@ -148,7 +148,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->firmwareVersion:Ljava/lang/String;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->c:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -160,7 +160,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->firmwareInfo:Ljava/lang/String;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->d:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -172,7 +172,7 @@
 
     move-result-object v0
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->firmwareSize:I
+    iget v1, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->e:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -184,7 +184,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->firmwareMd5:Ljava/lang/String;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->f:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -200,29 +200,29 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->firmwareUrl:Ljava/lang/String;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->a:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->firmwareVersionCode:F
+    iget v0, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->b:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->firmwareVersion:Ljava/lang/String;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->c:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->firmwareInfo:Ljava/lang/String;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->d:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->firmwareSize:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->e:I
 
     int-to-float v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->firmwareMd5:Ljava/lang/String;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->f:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 

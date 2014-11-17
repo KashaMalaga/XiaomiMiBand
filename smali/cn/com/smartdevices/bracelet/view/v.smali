@@ -1,19 +1,25 @@
-.class Lcn/com/smartdevices/bracelet/view/v;
+.class Lcn/com/smartdevices/bracelet/view/V;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/support/v4/h/c;
 
 
-# instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/view/u;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/support/v4/h/c",
+        "<",
+        "Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/view/u;)V
+.method constructor <init>()V
     .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/v;->a:Lcn/com/smartdevices/bracelet/view/u;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,16 +28,40 @@
 
 
 # virtual methods
-.method public run()V
+.method public synthetic a(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/v;->a:Lcn/com/smartdevices/bracelet/view/u;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/view/u;->a(Lcn/com/smartdevices/bracelet/view/u;)Lcn/com/smartdevices/bracelet/view/RulerScrollView;
+    invoke-virtual {p0, p1, p2}, Lcn/com/smartdevices/bracelet/view/V;->b(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/view/RulerScrollView;->a(Lcn/com/smartdevices/bracelet/view/RulerScrollView;)V
+    return-object v0
+.end method
 
-    return-void
+.method public synthetic a(I)[Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/view/V;->b(I)[Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public b(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;
+    .locals 1
+
+    new-instance v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;
+
+    invoke-direct {v0, p1, p2}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+
+    return-object v0
+.end method
+
+.method public b(I)[Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;
+    .locals 1
+
+    new-array v0, p1, [Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;
+
+    return-object v0
 .end method

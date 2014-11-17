@@ -1,5 +1,8 @@
 .class Lcom/tencent/connect/avatar/f;
-.super Landroid/view/View;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
@@ -7,126 +10,48 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/tencent/connect/avatar/ImageActivity;Landroid/content/Context;)V
+.method constructor <init>(Lcom/tencent/connect/avatar/ImageActivity;)V
     .locals 0
 
     iput-object p1, p0, Lcom/tencent/connect/avatar/f;->a:Lcom/tencent/connect/avatar/ImageActivity;
 
-    invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/widget/Button;)V
-    .locals 5
+.method public onClick(Landroid/view/View;)V
+    .locals 4
 
-    new-instance v0, Landroid/graphics/drawable/StateListDrawable;
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    invoke-direct {v0}, Landroid/graphics/drawable/StateListDrawable;-><init>()V
-
-    iget-object v1, p0, Lcom/tencent/connect/avatar/f;->a:Lcom/tencent/connect/avatar/ImageActivity;
-
-    const-string v2, "com.tencent.plus.blue_normal.png"
-
-    invoke-static {v1, v2}, Lcom/tencent/connect/avatar/ImageActivity;->a(Lcom/tencent/connect/avatar/ImageActivity;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
+    move-result-wide v0
 
     iget-object v2, p0, Lcom/tencent/connect/avatar/f;->a:Lcom/tencent/connect/avatar/ImageActivity;
 
-    const-string v3, "com.tencent.plus.blue_down.png"
+    invoke-static {v2}, Lcom/tencent/connect/avatar/ImageActivity;->i(Lcom/tencent/connect/avatar/ImageActivity;)J
 
-    invoke-static {v2, v3}, Lcom/tencent/connect/avatar/ImageActivity;->a(Lcom/tencent/connect/avatar/ImageActivity;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+    move-result-wide v2
 
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/tencent/connect/avatar/f;->a:Lcom/tencent/connect/avatar/ImageActivity;
-
-    const-string v4, "com.tencent.plus.blue_disable.png"
-
-    invoke-static {v3, v4}, Lcom/tencent/connect/avatar/ImageActivity;->a(Lcom/tencent/connect/avatar/ImageActivity;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v3
-
-    sget-object v4, Landroid/view/View;->PRESSED_ENABLED_STATE_SET:[I
-
-    invoke-virtual {v0, v4, v2}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
-
-    sget-object v2, Landroid/view/View;->ENABLED_FOCUSED_STATE_SET:[I
-
-    invoke-virtual {v0, v2, v1}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
-
-    sget-object v2, Landroid/view/View;->ENABLED_STATE_SET:[I
-
-    invoke-virtual {v0, v2, v1}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
-
-    sget-object v2, Landroid/view/View;->FOCUSED_STATE_SET:[I
-
-    invoke-virtual {v0, v2, v1}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
-
-    sget-object v1, Landroid/view/View;->EMPTY_STATE_SET:[I
-
-    invoke-virtual {v0, v1, v3}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
-
-    invoke-virtual {p1, v0}, Landroid/widget/Button;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    return-void
-.end method
-
-.method public b(Landroid/widget/Button;)V
-    .locals 5
-
-    new-instance v0, Landroid/graphics/drawable/StateListDrawable;
-
-    invoke-direct {v0}, Landroid/graphics/drawable/StateListDrawable;-><init>()V
-
-    iget-object v1, p0, Lcom/tencent/connect/avatar/f;->a:Lcom/tencent/connect/avatar/ImageActivity;
-
-    const-string v2, "com.tencent.plus.gray_normal.png"
-
-    invoke-static {v1, v2}, Lcom/tencent/connect/avatar/ImageActivity;->a(Lcom/tencent/connect/avatar/ImageActivity;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
+    sub-long/2addr v0, v2
 
     iget-object v2, p0, Lcom/tencent/connect/avatar/f;->a:Lcom/tencent/connect/avatar/ImageActivity;
 
-    const-string v3, "com.tencent.plus.gray_down.png"
+    const-string v3, "10656"
 
-    invoke-static {v2, v3}, Lcom/tencent/connect/avatar/ImageActivity;->a(Lcom/tencent/connect/avatar/ImageActivity;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v2, v3, v0, v1}, Lcom/tencent/connect/avatar/ImageActivity;->a(Ljava/lang/String;J)V
 
-    move-result-object v2
+    iget-object v0, p0, Lcom/tencent/connect/avatar/f;->a:Lcom/tencent/connect/avatar/ImageActivity;
 
-    iget-object v3, p0, Lcom/tencent/connect/avatar/f;->a:Lcom/tencent/connect/avatar/ImageActivity;
+    const/4 v1, 0x0
 
-    const-string v4, "com.tencent.plus.gray_disable.png"
+    invoke-virtual {v0, v1}, Lcom/tencent/connect/avatar/ImageActivity;->setResult(I)V
 
-    invoke-static {v3, v4}, Lcom/tencent/connect/avatar/ImageActivity;->a(Lcom/tencent/connect/avatar/ImageActivity;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/tencent/connect/avatar/f;->a:Lcom/tencent/connect/avatar/ImageActivity;
 
-    move-result-object v3
-
-    sget-object v4, Landroid/view/View;->PRESSED_ENABLED_STATE_SET:[I
-
-    invoke-virtual {v0, v4, v2}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
-
-    sget-object v2, Landroid/view/View;->ENABLED_FOCUSED_STATE_SET:[I
-
-    invoke-virtual {v0, v2, v1}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
-
-    sget-object v2, Landroid/view/View;->ENABLED_STATE_SET:[I
-
-    invoke-virtual {v0, v2, v1}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
-
-    sget-object v2, Landroid/view/View;->FOCUSED_STATE_SET:[I
-
-    invoke-virtual {v0, v2, v1}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
-
-    sget-object v1, Landroid/view/View;->EMPTY_STATE_SET:[I
-
-    invoke-virtual {v0, v1, v3}, Landroid/graphics/drawable/StateListDrawable;->addState([ILandroid/graphics/drawable/Drawable;)V
-
-    invoke-virtual {p1, v0}, Landroid/widget/Button;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-static {v0}, Lcom/tencent/connect/avatar/ImageActivity;->j(Lcom/tencent/connect/avatar/ImageActivity;)V
 
     return-void
 .end method

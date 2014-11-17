@@ -11,7 +11,7 @@
 
 
 # instance fields
-.field private final d:Lcn/com/smartdevices/bracelet/lab/datasync/c;
+.field private final d:Lcn/com/smartdevices/bracelet/lab/datasync/f;
 
 
 # direct methods
@@ -26,13 +26,13 @@
 
     invoke-direct {p0, v0}, Landroid/app/IntentService;-><init>(Ljava/lang/String;)V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/lab/datasync/c;
+    new-instance v0, Lcn/com/smartdevices/bracelet/lab/datasync/f;
 
     const/4 v1, 0x3
 
-    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/lab/datasync/c;-><init>(Lcn/com/smartdevices/bracelet/lab/datasync/SyncLabSportDataService;I)V
+    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/lab/datasync/f;-><init>(Lcn/com/smartdevices/bracelet/lab/datasync/SyncLabSportDataService;I)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/datasync/SyncLabSportDataService;->d:Lcn/com/smartdevices/bracelet/lab/datasync/c;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/datasync/SyncLabSportDataService;->d:Lcn/com/smartdevices/bracelet/lab/datasync/f;
 
     return-void
 .end method
@@ -87,14 +87,73 @@
     return-void
 .end method
 
-.method private a(Lcn/com/smartdevices/bracelet/DataTypeSource;)Z
+.method public static a(Landroid/content/Context;)Z
+    .locals 4
+
+    const/4 v1, 0x1
+
+    const/4 v0, 0x0
+
+    if-nez p0, :cond_0
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw v0
+
+    :cond_0
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/model/SyncServerDataInfo;->readInfoFromPref(I)Lcn/com/smartdevices/bracelet/model/SyncServerDataInfo;
+
+    move-result-object v2
+
+    const/4 v3, 0x2
+
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/model/SyncServerDataInfo;->readInfoFromPref(I)Lcn/com/smartdevices/bracelet/model/SyncServerDataInfo;
+
+    move-result-object v3
+
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/SyncServerDataInfo;->isSucceededToSaved()Z
+
+    move-result v2
+
+    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/model/SyncServerDataInfo;->isSucceededToSaved()Z
+
+    move-result v3
+
+    if-eqz v2, :cond_1
+
+    if-eqz v3, :cond_1
+
+    const-string v1, "Lab"
+
+    const-string v2, "isRopeDataSaved && isSkippingDataSaved"
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_0
+    return v0
+
+    :cond_1
+    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/lab/datasync/SyncLabSportDataService;->a(Landroid/content/Context;I)Landroid/content/Intent;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+
+    move v0, v1
+
+    goto :goto_0
+.end method
+
+.method private a(Lcn/com/smartdevices/bracelet/q;)Z
     .locals 6
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/DataManager;->getInstance()Lcn/com/smartdevices/bracelet/DataManager;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/o;->a()Lcn/com/smartdevices/bracelet/o;
 
     move-result-object v1
 
-    invoke-virtual {v1, p1}, Lcn/com/smartdevices/bracelet/DataManager;->getNeedSyncDatas(Lcn/com/smartdevices/bracelet/DataTypeSource;)Ljava/util/ArrayList;
+    invoke-virtual {v1, p1}, Lcn/com/smartdevices/bracelet/o;->a(Lcn/com/smartdevices/bracelet/q;)Ljava/util/ArrayList;
 
     move-result-object v2
 
@@ -115,7 +174,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/DataTypeSource;->getType()I
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/q;->a()I
 
     move-result v2
 
@@ -127,7 +186,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -150,11 +209,11 @@
 
     if-nez v0, :cond_2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readLoginData()Lcn/com/smartdevices/bracelet/model/LoginData;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->b()Lcn/com/smartdevices/bracelet/model/LoginData;
 
     move-result-object v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readDeviceId()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->o()Ljava/lang/String;
 
     move-result-object v4
 
@@ -162,11 +221,11 @@
 
     move-result-object v3
 
-    new-instance v5, Lcn/com/smartdevices/bracelet/lab/datasync/a;
+    new-instance v5, Lcn/com/smartdevices/bracelet/lab/datasync/d;
 
-    invoke-direct {v5, p0, p1, v1, v2}, Lcn/com/smartdevices/bracelet/lab/datasync/a;-><init>(Lcn/com/smartdevices/bracelet/lab/datasync/SyncLabSportDataService;Lcn/com/smartdevices/bracelet/DataTypeSource;Lcn/com/smartdevices/bracelet/DataManager;Ljava/util/ArrayList;)V
+    invoke-direct {v5, p0, p1, v1, v2}, Lcn/com/smartdevices/bracelet/lab/datasync/d;-><init>(Lcn/com/smartdevices/bracelet/lab/datasync/SyncLabSportDataService;Lcn/com/smartdevices/bracelet/q;Lcn/com/smartdevices/bracelet/o;Ljava/util/ArrayList;)V
 
-    invoke-static {v0, v4, p1, v3, v5}, Lcn/com/smartdevices/bracelet/webapi/WebAPI;->syncToServerSynchronized(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Lcn/com/smartdevices/bracelet/DataTypeSource;Ljava/lang/String;Lcom/loopj/android/http/AsyncHttpResponseHandler;)V
+    invoke-static {v0, v4, p1, v3, v5}, Lcn/com/smartdevices/bracelet/d/d;->b(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Lcn/com/smartdevices/bracelet/q;Ljava/lang/String;Lcom/c/a/a/h;)V
 
     const/4 v0, 0x1
 
@@ -219,36 +278,36 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
 
     :cond_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readLoginData()Lcn/com/smartdevices/bracelet/model/LoginData;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->b()Lcn/com/smartdevices/bracelet/model/LoginData;
 
     move-result-object v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readDeviceId()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->o()Ljava/lang/String;
 
     move-result-object v1
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/DataTypeSource;
+    new-instance v2, Lcn/com/smartdevices/bracelet/q;
 
-    invoke-direct {v2, p2}, Lcn/com/smartdevices/bracelet/DataTypeSource;-><init>(I)V
+    invoke-direct {v2, p2}, Lcn/com/smartdevices/bracelet/q;-><init>(I)V
 
-    new-instance v7, Lcn/com/smartdevices/bracelet/lab/datasync/b;
+    new-instance v7, Lcn/com/smartdevices/bracelet/lab/datasync/e;
 
-    invoke-direct {v7, p0, p2, p1}, Lcn/com/smartdevices/bracelet/lab/datasync/b;-><init>(Lcn/com/smartdevices/bracelet/lab/datasync/SyncLabSportDataService;ILandroid/content/Context;)V
+    invoke-direct {v7, p0, p2, p1}, Lcn/com/smartdevices/bracelet/lab/datasync/e;-><init>(Lcn/com/smartdevices/bracelet/lab/datasync/SyncLabSportDataService;ILandroid/content/Context;)V
 
     move-wide v5, v3
 
-    invoke-static/range {v0 .. v7}, Lcn/com/smartdevices/bracelet/webapi/WebAPI;->syncFromServerBeyondDays(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Lcn/com/smartdevices/bracelet/DataTypeSource;JJLcom/loopj/android/http/AsyncHttpResponseHandler;)V
+    invoke-static/range {v0 .. v7}, Lcn/com/smartdevices/bracelet/d/d;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Lcn/com/smartdevices/bracelet/q;JJLcom/c/a/a/h;)V
 
     goto :goto_0
 .end method
 
-.method public static syncFromOrToServerIfNeeded(Landroid/content/Context;)Z
+.method public static b(Landroid/content/Context;)Z
     .locals 1
 
     if-nez p0, :cond_0
@@ -260,13 +319,13 @@
     throw v0
 
     :cond_0
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/lab/datasync/SyncLabSportDataService;->syncFromServerIfNeeded(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/lab/datasync/SyncLabSportDataService;->a(Landroid/content/Context;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/lab/datasync/SyncLabSportDataService;->syncToServerIfNeeded(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/lab/datasync/SyncLabSportDataService;->c(Landroid/content/Context;)Z
 
     :cond_1
     const/4 v0, 0x1
@@ -274,66 +333,7 @@
     return v0
 .end method
 
-.method public static syncFromServerIfNeeded(Landroid/content/Context;)Z
-    .locals 4
-
-    const/4 v1, 0x1
-
-    const/4 v0, 0x0
-
-    if-nez p0, :cond_0
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw v0
-
-    :cond_0
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/model/SyncServerDataInfo;->readInfoFromPref(I)Lcn/com/smartdevices/bracelet/model/SyncServerDataInfo;
-
-    move-result-object v2
-
-    const/4 v3, 0x2
-
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/model/SyncServerDataInfo;->readInfoFromPref(I)Lcn/com/smartdevices/bracelet/model/SyncServerDataInfo;
-
-    move-result-object v3
-
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/SyncServerDataInfo;->isSucceededToSaved()Z
-
-    move-result v2
-
-    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/model/SyncServerDataInfo;->isSucceededToSaved()Z
-
-    move-result v3
-
-    if-eqz v2, :cond_1
-
-    if-eqz v3, :cond_1
-
-    const-string v1, "Lab"
-
-    const-string v2, "isRopeDataSaved && isSkippingDataSaved"
-
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    :goto_0
-    return v0
-
-    :cond_1
-    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/lab/datasync/SyncLabSportDataService;->a(Landroid/content/Context;I)Landroid/content/Intent;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
-
-    move v0, v1
-
-    goto :goto_0
-.end method
-
-.method public static syncToServerIfNeeded(Landroid/content/Context;)Z
+.method public static c(Landroid/content/Context;)Z
     .locals 2
 
     const/4 v1, 0x1
@@ -411,32 +411,32 @@
 
     invoke-direct {p0, p0, v2}, Lcn/com/smartdevices/bracelet/lab/datasync/SyncLabSportDataService;->b(Landroid/content/Context;I)V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/DataTypeSource;
+    new-instance v0, Lcn/com/smartdevices/bracelet/q;
 
-    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/DataTypeSource;-><init>(I)V
+    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/q;-><init>(I)V
 
-    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/lab/datasync/SyncLabSportDataService;->a(Lcn/com/smartdevices/bracelet/DataTypeSource;)Z
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/lab/datasync/SyncLabSportDataService;->a(Lcn/com/smartdevices/bracelet/q;)Z
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/DataTypeSource;
+    new-instance v0, Lcn/com/smartdevices/bracelet/q;
 
-    invoke-direct {v0, v2}, Lcn/com/smartdevices/bracelet/DataTypeSource;-><init>(I)V
+    invoke-direct {v0, v2}, Lcn/com/smartdevices/bracelet/q;-><init>(I)V
 
-    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/lab/datasync/SyncLabSportDataService;->a(Lcn/com/smartdevices/bracelet/DataTypeSource;)Z
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/lab/datasync/SyncLabSportDataService;->a(Lcn/com/smartdevices/bracelet/q;)Z
 
     goto :goto_0
 
     :pswitch_1
-    new-instance v0, Lcn/com/smartdevices/bracelet/DataTypeSource;
+    new-instance v0, Lcn/com/smartdevices/bracelet/q;
 
-    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/DataTypeSource;-><init>(I)V
+    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/q;-><init>(I)V
 
-    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/lab/datasync/SyncLabSportDataService;->a(Lcn/com/smartdevices/bracelet/DataTypeSource;)Z
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/lab/datasync/SyncLabSportDataService;->a(Lcn/com/smartdevices/bracelet/q;)Z
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/DataTypeSource;
+    new-instance v0, Lcn/com/smartdevices/bracelet/q;
 
-    invoke-direct {v0, v2}, Lcn/com/smartdevices/bracelet/DataTypeSource;-><init>(I)V
+    invoke-direct {v0, v2}, Lcn/com/smartdevices/bracelet/q;-><init>(I)V
 
-    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/lab/datasync/SyncLabSportDataService;->a(Lcn/com/smartdevices/bracelet/DataTypeSource;)Z
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/lab/datasync/SyncLabSportDataService;->a(Lcn/com/smartdevices/bracelet/q;)Z
 
     goto :goto_0
 

@@ -11,44 +11,30 @@
     return-void
 .end method
 
-.method public static a(Landroid/view/MenuItem;Landroid/support/v4/view/I;)Landroid/view/MenuItem;
+.method public static a(I)I
     .locals 1
 
-    new-instance v0, Landroid/support/v4/view/H;
-
-    invoke-direct {v0, p1}, Landroid/support/v4/view/H;-><init>(Landroid/support/v4/view/I;)V
-
-    invoke-interface {p0, v0}, Landroid/view/MenuItem;->setOnActionExpandListener(Landroid/view/MenuItem$OnActionExpandListener;)Landroid/view/MenuItem;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static a(Landroid/view/MenuItem;)Z
-    .locals 1
-
-    invoke-interface {p0}, Landroid/view/MenuItem;->expandActionView()Z
+    invoke-static {p0}, Landroid/view/KeyEvent;->normalizeMetaState(I)I
 
     move-result v0
 
     return v0
 .end method
 
-.method public static b(Landroid/view/MenuItem;)Z
+.method public static a(II)Z
     .locals 1
 
-    invoke-interface {p0}, Landroid/view/MenuItem;->collapseActionView()Z
+    invoke-static {p0, p1}, Landroid/view/KeyEvent;->metaStateHasModifiers(II)Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public static c(Landroid/view/MenuItem;)Z
+.method public static b(I)Z
     .locals 1
 
-    invoke-interface {p0}, Landroid/view/MenuItem;->isActionViewExpanded()Z
+    invoke-static {p0}, Landroid/view/KeyEvent;->metaStateHasNoModifiers(I)Z
 
     move-result v0
 

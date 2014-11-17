@@ -1,39 +1,88 @@
-.class Landroid/support/v4/view/aA;
+.class interface abstract Landroid/support/v4/view/aA;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field final synthetic a:Landroid/support/v4/view/ViewPager;
-
-
-# direct methods
-.method constructor <init>(Landroid/support/v4/view/ViewPager;)V
-    .locals 0
-
-    iput-object p1, p0, Landroid/support/v4/view/aA;->a:Landroid/support/v4/view/ViewPager;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method public abstract a(Landroid/view/View;)I
+.end method
 
-    iget-object v0, p0, Landroid/support/v4/view/aA;->a:Landroid/support/v4/view/ViewPager;
+.method public abstract a(Landroid/view/View;IIII)V
+.end method
 
-    const/4 v1, 0x0
+.method public abstract a(Landroid/view/View;ILandroid/graphics/Paint;)V
+.end method
 
-    invoke-static {v0, v1}, Landroid/support/v4/view/ViewPager;->a(Landroid/support/v4/view/ViewPager;I)V
+.method public abstract a(Landroid/view/View;Landroid/graphics/Paint;)V
+.end method
 
-    iget-object v0, p0, Landroid/support/v4/view/aA;->a:Landroid/support/v4/view/ViewPager;
+.method public abstract a(Landroid/view/View;Landroid/support/v4/view/a/o;)V
+.end method
 
-    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->c()V
+.method public abstract a(Landroid/view/View;Landroid/support/v4/view/a;)V
+.end method
 
-    return-void
+.method public abstract a(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+.end method
+
+.method public abstract a(Landroid/view/View;Ljava/lang/Runnable;)V
+.end method
+
+.method public abstract a(Landroid/view/View;Ljava/lang/Runnable;J)V
+.end method
+
+.method public abstract a(Landroid/view/View;Z)V
+.end method
+
+.method public abstract a(Landroid/view/View;I)Z
+.end method
+
+.method public abstract a(Landroid/view/View;ILandroid/os/Bundle;)Z
+.end method
+
+.method public abstract b(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+.end method
+
+.method public abstract b(Landroid/view/View;)Z
+.end method
+
+.method public abstract b(Landroid/view/View;I)Z
+.end method
+
+.method public abstract c(Landroid/view/View;)V
+.end method
+
+.method public abstract c(Landroid/view/View;I)V
+.end method
+
+.method public abstract d(Landroid/view/View;)I
+.end method
+
+.method public abstract d(Landroid/view/View;I)V
+.end method
+
+.method public abstract e(Landroid/view/View;)Landroid/support/v4/view/a/x;
+.end method
+
+.method public abstract e(Landroid/view/View;I)V
+.end method
+
+.method public abstract f(Landroid/view/View;)F
+.end method
+
+.method public abstract f(Landroid/view/View;I)V
+.end method
+
+.method public abstract g(Landroid/view/View;)I
+.end method
+
+.method public abstract h(Landroid/view/View;)I
+.end method
+
+.method public abstract i(Landroid/view/View;)I
+.end method
+
+.method public abstract j(Landroid/view/View;)Landroid/view/ViewParent;
+.end method
+
+.method public abstract k(Landroid/view/View;)Z
 .end method

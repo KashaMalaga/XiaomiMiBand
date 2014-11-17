@@ -3,11 +3,11 @@
 
 
 # instance fields
-.field a:Ljava/lang/String;
+.field args:[Ljava/lang/String;
 
-.field b:[Ljava/lang/String;
+.field id:Ljava/lang/String;
 
-.field c:Ljava/util/Properties;
+.field prop:Ljava/util/Properties;
 
 
 # direct methods
@@ -18,7 +18,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/stat/event/CustomEvent$Key;->c:Ljava/util/Properties;
+    iput-object v0, p0, Lcom/tencent/stat/event/CustomEvent$Key;->prop:Ljava/util/Properties;
 
     return-void
 .end method
@@ -45,9 +45,9 @@
 
     check-cast p1, Lcom/tencent/stat/event/CustomEvent$Key;
 
-    iget-object v0, p0, Lcom/tencent/stat/event/CustomEvent$Key;->a:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/stat/event/CustomEvent$Key;->id:Ljava/lang/String;
 
-    iget-object v3, p1, Lcom/tencent/stat/event/CustomEvent$Key;->a:Ljava/lang/String;
+    iget-object v3, p1, Lcom/tencent/stat/event/CustomEvent$Key;->id:Ljava/lang/String;
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -55,9 +55,9 @@
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcom/tencent/stat/event/CustomEvent$Key;->b:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/stat/event/CustomEvent$Key;->args:[Ljava/lang/String;
 
-    iget-object v3, p1, Lcom/tencent/stat/event/CustomEvent$Key;->b:[Ljava/lang/String;
+    iget-object v3, p1, Lcom/tencent/stat/event/CustomEvent$Key;->args:[Ljava/lang/String;
 
     invoke-static {v0, v3}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
 
@@ -68,15 +68,15 @@
     move v0, v1
 
     :goto_1
-    iget-object v3, p0, Lcom/tencent/stat/event/CustomEvent$Key;->c:Ljava/util/Properties;
+    iget-object v3, p0, Lcom/tencent/stat/event/CustomEvent$Key;->prop:Ljava/util/Properties;
 
     if-eqz v3, :cond_4
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/tencent/stat/event/CustomEvent$Key;->c:Ljava/util/Properties;
+    iget-object v0, p0, Lcom/tencent/stat/event/CustomEvent$Key;->prop:Ljava/util/Properties;
 
-    iget-object v3, p1, Lcom/tencent/stat/event/CustomEvent$Key;->c:Ljava/util/Properties;
+    iget-object v3, p1, Lcom/tencent/stat/event/CustomEvent$Key;->prop:Ljava/util/Properties;
 
     invoke-virtual {v0, v3}, Ljava/util/Properties;->equals(Ljava/lang/Object;)Z
 
@@ -97,7 +97,7 @@
     :cond_4
     if-eqz v0, :cond_5
 
-    iget-object v0, p1, Lcom/tencent/stat/event/CustomEvent$Key;->c:Ljava/util/Properties;
+    iget-object v0, p1, Lcom/tencent/stat/event/CustomEvent$Key;->prop:Ljava/util/Properties;
 
     if-eqz v0, :cond_0
 
@@ -117,22 +117,22 @@
 
     const/4 v0, 0x0
 
-    iget-object v1, p0, Lcom/tencent/stat/event/CustomEvent$Key;->a:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/stat/event/CustomEvent$Key;->id:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/stat/event/CustomEvent$Key;->a:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/stat/event/CustomEvent$Key;->id:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
     :cond_0
-    iget-object v1, p0, Lcom/tencent/stat/event/CustomEvent$Key;->b:[Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/stat/event/CustomEvent$Key;->args:[Ljava/lang/String;
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lcom/tencent/stat/event/CustomEvent$Key;->b:[Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/stat/event/CustomEvent$Key;->args:[Ljava/lang/String;
 
     invoke-static {v1}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
 
@@ -141,11 +141,11 @@
     xor-int/2addr v0, v1
 
     :cond_1
-    iget-object v1, p0, Lcom/tencent/stat/event/CustomEvent$Key;->c:Ljava/util/Properties;
+    iget-object v1, p0, Lcom/tencent/stat/event/CustomEvent$Key;->prop:Ljava/util/Properties;
 
     if-eqz v1, :cond_2
 
-    iget-object v1, p0, Lcom/tencent/stat/event/CustomEvent$Key;->c:Ljava/util/Properties;
+    iget-object v1, p0, Lcom/tencent/stat/event/CustomEvent$Key;->prop:Ljava/util/Properties;
 
     invoke-virtual {v1}, Ljava/util/Properties;->hashCode()I
 
@@ -160,15 +160,15 @@
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    iget-object v2, p0, Lcom/tencent/stat/event/CustomEvent$Key;->a:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/stat/event/CustomEvent$Key;->id:Ljava/lang/String;
 
     const-string v0, ""
 
-    iget-object v1, p0, Lcom/tencent/stat/event/CustomEvent$Key;->b:[Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/stat/event/CustomEvent$Key;->args:[Ljava/lang/String;
 
     if-eqz v1, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/stat/event/CustomEvent$Key;->b:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/stat/event/CustomEvent$Key;->args:[Ljava/lang/String;
 
     const/4 v1, 0x0
 
@@ -177,7 +177,7 @@
     const/4 v0, 0x1
 
     :goto_0
-    iget-object v3, p0, Lcom/tencent/stat/event/CustomEvent$Key;->b:[Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/stat/event/CustomEvent$Key;->args:[Ljava/lang/String;
 
     array-length v3, v3
 
@@ -197,7 +197,7 @@
 
     move-result-object v1
 
-    iget-object v3, p0, Lcom/tencent/stat/event/CustomEvent$Key;->b:[Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/stat/event/CustomEvent$Key;->args:[Ljava/lang/String;
 
     aget-object v3, v3, v0
 
@@ -239,7 +239,7 @@
     move-result-object v0
 
     :cond_1
-    iget-object v1, p0, Lcom/tencent/stat/event/CustomEvent$Key;->c:Ljava/util/Properties;
+    iget-object v1, p0, Lcom/tencent/stat/event/CustomEvent$Key;->prop:Ljava/util/Properties;
 
     if-eqz v1, :cond_2
 
@@ -251,7 +251,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/stat/event/CustomEvent$Key;->c:Ljava/util/Properties;
+    iget-object v1, p0, Lcom/tencent/stat/event/CustomEvent$Key;->prop:Ljava/util/Properties;
 
     invoke-virtual {v1}, Ljava/util/Properties;->toString()Ljava/lang/String;
 

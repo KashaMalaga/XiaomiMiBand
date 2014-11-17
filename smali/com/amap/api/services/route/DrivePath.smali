@@ -41,9 +41,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/services/route/i;
+    new-instance v0, Lcom/amap/api/services/route/j;
 
-    invoke-direct {v0}, Lcom/amap/api/services/route/i;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/services/route/j;-><init>()V
 
     sput-object v0, Lcom/amap/api/services/route/DrivePath;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -94,32 +94,7 @@
 
 
 # virtual methods
-.method public describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public getSteps()Ljava/util/List;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Lcom/amap/api/services/route/DriveStep;",
-            ">;"
-        }
-    .end annotation
-
-    iget-object v0, p0, Lcom/amap/api/services/route/DrivePath;->d:Ljava/util/List;
-
-    return-object v0
-.end method
-
-.method public getStrategy()Ljava/lang/String;
+.method public a()Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcom/amap/api/services/route/DrivePath;->a:Ljava/lang/String;
@@ -127,23 +102,23 @@
     return-object v0
 .end method
 
-.method public getTollDistance()F
-    .locals 1
+.method public a(F)V
+    .locals 0
 
-    iget v0, p0, Lcom/amap/api/services/route/DrivePath;->c:F
+    iput p1, p0, Lcom/amap/api/services/route/DrivePath;->b:F
 
-    return v0
+    return-void
 .end method
 
-.method public getTolls()F
-    .locals 1
+.method public a(Ljava/lang/String;)V
+    .locals 0
 
-    iget v0, p0, Lcom/amap/api/services/route/DrivePath;->b:F
+    iput-object p1, p0, Lcom/amap/api/services/route/DrivePath;->a:Ljava/lang/String;
 
-    return v0
+    return-void
 .end method
 
-.method public setSteps(Ljava/util/List;)V
+.method public a(Ljava/util/List;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -160,15 +135,15 @@
     return-void
 .end method
 
-.method public setStrategy(Ljava/lang/String;)V
-    .locals 0
+.method public b()F
+    .locals 1
 
-    iput-object p1, p0, Lcom/amap/api/services/route/DrivePath;->a:Ljava/lang/String;
+    iget v0, p0, Lcom/amap/api/services/route/DrivePath;->b:F
 
-    return-void
+    return v0
 .end method
 
-.method public setTollDistance(F)V
+.method public b(F)V
     .locals 0
 
     iput p1, p0, Lcom/amap/api/services/route/DrivePath;->c:F
@@ -176,12 +151,37 @@
     return-void
 .end method
 
-.method public setTolls(F)V
-    .locals 0
+.method public d()F
+    .locals 1
 
-    iput p1, p0, Lcom/amap/api/services/route/DrivePath;->b:F
+    iget v0, p0, Lcom/amap/api/services/route/DrivePath;->c:F
 
-    return-void
+    return v0
+.end method
+
+.method public describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public e()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcom/amap/api/services/route/DriveStep;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/amap/api/services/route/DrivePath;->d:Ljava/util/List;
+
+    return-object v0
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V

@@ -1,47 +1,42 @@
 .class Lcn/com/smartdevices/bracelet/gps/services/e;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/location/GpsStatus$Listener;
+.super Ljava/util/TimerTask;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/services/d;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/services/b;
+
+.field private final synthetic b:Landroid/content/Context;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/d;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/b;Landroid/content/Context;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/services/e;->a:Lcn/com/smartdevices/bracelet/gps/services/d;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/services/e;->a:Lcn/com/smartdevices/bracelet/gps/services/b;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/gps/services/e;->b:Landroid/content/Context;
+
+    invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onGpsStatusChanged(I)V
-    .locals 3
+.method public run()V
+    .locals 6
 
-    const-string v0, "Run"
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/e;->a:Lcn/com/smartdevices/bracelet/gps/services/b;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/e;->b:Landroid/content/Context;
 
-    const-string v2, "GpsStatusListener onGpsStatusChanged event = "
+    const-wide/16 v2, 0x0
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 v4, 0x0
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const-string v5, "passive"
 
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/gps/services/b;->a(Lcn/com/smartdevices/bracelet/gps/services/b;Landroid/content/Context;JFLjava/lang/String;)V
 
     return-void
 .end method

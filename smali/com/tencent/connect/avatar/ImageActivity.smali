@@ -80,27 +80,27 @@
 
     iput-object v0, p0, Lcom/tencent/connect/avatar/ImageActivity;->q:Landroid/graphics/Rect;
 
-    new-instance v0, Lcom/tencent/connect/avatar/l;
+    new-instance v0, Lcom/tencent/connect/avatar/d;
 
-    invoke-direct {v0, p0}, Lcom/tencent/connect/avatar/l;-><init>(Lcom/tencent/connect/avatar/ImageActivity;)V
+    invoke-direct {v0, p0}, Lcom/tencent/connect/avatar/d;-><init>(Lcom/tencent/connect/avatar/ImageActivity;)V
 
     iput-object v0, p0, Lcom/tencent/connect/avatar/ImageActivity;->t:Landroid/view/View$OnClickListener;
 
-    new-instance v0, Lcom/tencent/connect/avatar/o;
+    new-instance v0, Lcom/tencent/connect/avatar/f;
 
-    invoke-direct {v0, p0}, Lcom/tencent/connect/avatar/o;-><init>(Lcom/tencent/connect/avatar/ImageActivity;)V
+    invoke-direct {v0, p0}, Lcom/tencent/connect/avatar/f;-><init>(Lcom/tencent/connect/avatar/ImageActivity;)V
 
     iput-object v0, p0, Lcom/tencent/connect/avatar/ImageActivity;->u:Landroid/view/View$OnClickListener;
 
-    new-instance v0, Lcom/tencent/connect/avatar/n;
+    new-instance v0, Lcom/tencent/connect/avatar/e;
 
-    invoke-direct {v0, p0}, Lcom/tencent/connect/avatar/n;-><init>(Lcom/tencent/connect/avatar/ImageActivity;)V
+    invoke-direct {v0, p0}, Lcom/tencent/connect/avatar/e;-><init>(Lcom/tencent/connect/avatar/ImageActivity;)V
 
     iput-object v0, p0, Lcom/tencent/connect/avatar/ImageActivity;->v:Lcom/tencent/tauth/IUiListener;
 
-    new-instance v0, Lcom/tencent/connect/avatar/h;
+    new-instance v0, Lcom/tencent/connect/avatar/a;
 
-    invoke-direct {v0, p0}, Lcom/tencent/connect/avatar/h;-><init>(Lcom/tencent/connect/avatar/ImageActivity;)V
+    invoke-direct {v0, p0}, Lcom/tencent/connect/avatar/a;-><init>(Lcom/tencent/connect/avatar/ImageActivity;)V
 
     iput-object v0, p0, Lcom/tencent/connect/avatar/ImageActivity;->w:Lcom/tencent/tauth/IUiListener;
 
@@ -450,9 +450,9 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
-    new-instance v1, Lcom/tencent/connect/avatar/f;
+    new-instance v1, Lcom/tencent/connect/avatar/ImageActivity$a;
 
-    invoke-direct {v1, p0, p0}, Lcom/tencent/connect/avatar/f;-><init>(Lcom/tencent/connect/avatar/ImageActivity;Landroid/content/Context;)V
+    invoke-direct {v1, p0, p0}, Lcom/tencent/connect/avatar/ImageActivity$a;-><init>(Lcom/tencent/connect/avatar/ImageActivity;Landroid/content/Context;)V
 
     const/high16 v3, 0x41600000
 
@@ -512,7 +512,7 @@
 
     iget-object v5, p0, Lcom/tencent/connect/avatar/ImageActivity;->g:Landroid/widget/Button;
 
-    invoke-virtual {v1, v5}, Lcom/tencent/connect/avatar/f;->b(Landroid/widget/Button;)V
+    invoke-virtual {v1, v5}, Lcom/tencent/connect/avatar/ImageActivity$a;->b(Landroid/widget/Button;)V
 
     iget-object v5, p0, Lcom/tencent/connect/avatar/ImageActivity;->g:Landroid/widget/Button;
 
@@ -568,7 +568,7 @@
 
     iget-object v3, p0, Lcom/tencent/connect/avatar/ImageActivity;->f:Landroid/widget/Button;
 
-    invoke-virtual {v1, v3}, Lcom/tencent/connect/avatar/f;->a(Landroid/widget/Button;)V
+    invoke-virtual {v1, v3}, Lcom/tencent/connect/avatar/ImageActivity$a;->a(Landroid/widget/Button;)V
 
     iget-object v1, p0, Lcom/tencent/connect/avatar/ImageActivity;->f:Landroid/widget/Button;
 
@@ -686,15 +686,15 @@
 .method private a(Landroid/graphics/Bitmap;)V
     .locals 2
 
-    new-instance v0, Lcom/tencent/connect/avatar/e;
+    new-instance v0, Lcom/tencent/connect/avatar/ImageActivity$QQAvatarImp;
 
     iget-object v1, p0, Lcom/tencent/connect/avatar/ImageActivity;->b:Lcom/tencent/connect/auth/QQToken;
 
-    invoke-direct {v0, p0, p0, v1}, Lcom/tencent/connect/avatar/e;-><init>(Lcom/tencent/connect/avatar/ImageActivity;Landroid/content/Context;Lcom/tencent/connect/auth/QQToken;)V
+    invoke-direct {v0, p0, p0, v1}, Lcom/tencent/connect/avatar/ImageActivity$QQAvatarImp;-><init>(Lcom/tencent/connect/avatar/ImageActivity;Landroid/content/Context;Lcom/tencent/connect/auth/QQToken;)V
 
     iget-object v1, p0, Lcom/tencent/connect/avatar/ImageActivity;->v:Lcom/tencent/tauth/IUiListener;
 
-    invoke-virtual {v0, p1, v1}, Lcom/tencent/connect/avatar/e;->a(Landroid/graphics/Bitmap;Lcom/tencent/tauth/IUiListener;)V
+    invoke-virtual {v0, p1, v1}, Lcom/tencent/connect/avatar/ImageActivity$QQAvatarImp;->setAvator(Landroid/graphics/Bitmap;Lcom/tencent/tauth/IUiListener;)V
 
     return-void
 .end method
@@ -720,9 +720,9 @@
 
     iget-object v0, p0, Lcom/tencent/connect/avatar/ImageActivity;->d:Landroid/os/Handler;
 
-    new-instance v1, Lcom/tencent/connect/avatar/a;
+    new-instance v1, Lcom/tencent/connect/avatar/ImageActivity$1;
 
-    invoke-direct {v1, p0, p1, p2}, Lcom/tencent/connect/avatar/a;-><init>(Lcom/tencent/connect/avatar/ImageActivity;Ljava/lang/String;I)V
+    invoke-direct {v1, p0, p1, p2}, Lcom/tencent/connect/avatar/ImageActivity$1;-><init>(Lcom/tencent/connect/avatar/ImageActivity;Ljava/lang/String;I)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -885,9 +885,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/tencent/connect/avatar/d;
+    new-instance v1, Lcom/tencent/connect/avatar/ImageActivity$2;
 
-    invoke-direct {v1, p0}, Lcom/tencent/connect/avatar/d;-><init>(Lcom/tencent/connect/avatar/ImageActivity;)V
+    invoke-direct {v1, p0}, Lcom/tencent/connect/avatar/ImageActivity$2;-><init>(Lcom/tencent/connect/avatar/ImageActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 

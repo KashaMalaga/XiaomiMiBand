@@ -1,34 +1,5 @@
-.class final Landroid/support/v4/app/m;
+.class Landroid/support/v4/app/m;
 .super Ljava/lang/Object;
-
-
-# instance fields
-.field a:Landroid/support/v4/app/m;
-
-.field b:Landroid/support/v4/app/m;
-
-.field c:I
-
-.field d:Landroid/support/v4/app/Fragment;
-
-.field e:I
-
-.field f:I
-
-.field g:I
-
-.field h:I
-
-.field i:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList",
-            "<",
-            "Landroid/support/v4/app/Fragment;",
-            ">;"
-        }
-    .end annotation
-.end field
 
 
 # direct methods
@@ -36,6 +7,30 @@
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static a(Landroid/app/Activity;)V
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/Activity;->finishAffinity()V
+
+    return-void
+.end method
+
+.method public static a(Landroid/app/Activity;Landroid/content/Intent;ILandroid/os/Bundle;)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2, p3}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;ILandroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public static a(Landroid/content/Context;Landroid/content/Intent;Landroid/os/Bundle;)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;Landroid/os/Bundle;)V
 
     return-void
 .end method

@@ -3,9 +3,9 @@
 
 
 # instance fields
-.field public gravity:I
+.field public a:Z
 
-.field public isDecor:Z
+.field public b:I
 
 
 # direct methods
@@ -26,7 +26,7 @@
 
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$LayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->f()[I
+    invoke-static {}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m()[I
 
     move-result-object v0
 
@@ -38,7 +38,7 @@
 
     move-result v1
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;->gravity:I
+    iput v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;->b:I
 
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 

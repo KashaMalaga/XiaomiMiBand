@@ -135,7 +135,7 @@
 
     move-result-wide v0
 
-    invoke-direct {p0, v0, v1}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->a(J)J
+    invoke-direct {p0, v0, v1}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->getSecondInDay(J)J
 
     move-result-wide v0
 
@@ -145,7 +145,7 @@
 
     move-result-wide v0
 
-    invoke-direct {p0, v0, v1}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->a(J)J
+    invoke-direct {p0, v0, v1}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->getSecondInDay(J)J
 
     move-result-wide v0
 
@@ -169,31 +169,7 @@
     return-void
 .end method
 
-.method private a(J)J
-    .locals 4
-
-    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1, p2}, Ljava/util/Calendar;->setTimeInMillis(J)V
-
-    invoke-virtual {v0}, Ljava/util/Calendar;->getTimeInMillis()J
-
-    move-result-wide v0
-
-    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mSportDayStartMilis:J
-
-    sub-long/2addr v0, v2
-
-    const-wide/16 v2, 0x3e8
-
-    div-long/2addr v0, v2
-
-    return-wide v0
-.end method
-
-.method private a()Lorg/json/JSONObject;
+.method private createASampleJson()Lorg/json/JSONObject;
     .locals 5
 
     new-instance v1, Lorg/json/JSONObject;
@@ -225,7 +201,7 @@
 
     move-result-object v0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->b()Lorg/json/JSONArray;
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->createGroupJson()Lorg/json/JSONArray;
 
     move-result-object v2
 
@@ -245,12 +221,12 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/Debug;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
 
-.method private b()Lorg/json/JSONArray;
+.method private createGroupJson()Lorg/json/JSONArray;
     .locals 3
 
     new-instance v1, Lorg/json/JSONArray;
@@ -299,6 +275,30 @@
     invoke-virtual {v1, v0}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
 
     goto :goto_0
+.end method
+
+.method private getSecondInDay(J)J
+    .locals 4
+
+    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1, p2}, Ljava/util/Calendar;->setTimeInMillis(J)V
+
+    invoke-virtual {v0}, Ljava/util/Calendar;->getTimeInMillis()J
+
+    move-result-wide v0
+
+    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mSportDayStartMilis:J
+
+    sub-long/2addr v0, v2
+
+    const-wide/16 v2, 0x3e8
+
+    div-long/2addr v0, v2
+
+    return-wide v0
 .end method
 
 
@@ -469,7 +469,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->a()Lorg/json/JSONObject;
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->createASampleJson()Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -525,7 +525,7 @@
     return-object v0
 
     :cond_0
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->a()Lorg/json/JSONObject;
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->createASampleJson()Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -546,7 +546,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/Debug;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -786,7 +786,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/Debug;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -982,7 +982,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/Debug;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -1062,7 +1062,7 @@
 
     move-result-wide v0
 
-    invoke-direct {p0, v0, v1}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->a(J)J
+    invoke-direct {p0, v0, v1}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->getSecondInDay(J)J
 
     move-result-wide v0
 
@@ -1167,7 +1167,7 @@
 
     move-result-wide v0
 
-    invoke-direct {p0, v0, v1}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->a(J)J
+    invoke-direct {p0, v0, v1}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->getSecondInDay(J)J
 
     move-result-wide v0
 

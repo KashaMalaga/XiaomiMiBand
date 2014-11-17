@@ -1,25 +1,22 @@
-.class Landroid/support/v4/view/ao;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/support/v4/view/aq;
+.class Landroid/support/v4/view/aO;
+.super Landroid/support/v4/view/aN;
 
 
 # direct methods
 .method constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/support/v4/view/aN;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/view/ViewConfiguration;)I
+.method public a(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
     .locals 1
 
-    invoke-virtual {p1}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
+    invoke-static {p1, p2, p3}, Landroid/support/v4/view/aS;->a(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
 
     move-result v0
 

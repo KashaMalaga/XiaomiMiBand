@@ -1,42 +1,45 @@
-.class Lcn/com/smartdevices/bracelet/a;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/content/ServiceConnection;
+.class Lcn/com/smartdevices/bracelet/A;
+.super Lcn/com/smartdevices/bracelet/a/b;
 
 
 # direct methods
 .method constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/a/b;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
-    .locals 1
+.method public c(Ljava/lang/Object;)V
+    .locals 2
 
-    instance-of v0, p2, Lcom/xiaomi/hm/bleservice/BLEServiceBinder;
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->c(Ljava/lang/Object;)V
 
-    if-eqz v0, :cond_0
+    if-eqz p1, :cond_0
 
-    check-cast p2, Lcom/xiaomi/hm/bleservice/IBLEService;
+    const-string v0, "Utils"
 
-    invoke-static {p2}, Lcn/com/smartdevices/bracelet/BLEManager;->a(Lcom/xiaomi/hm/bleservice/IBLEService;)V
+    const-string v1, "     sendUserInfo2Mili ok!"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void
 .end method
 
-.method public onServiceDisconnected(Landroid/content/ComponentName;)V
-    .locals 1
+.method public d(Ljava/lang/Object;)V
+    .locals 2
 
-    const/4 v0, 0x0
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->d(Ljava/lang/Object;)V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/BLEManager;->a(Lcom/xiaomi/hm/bleservice/IBLEService;)V
+    const-string v0, "Utils"
+
+    const-string v1, "\n                 sendUserInfo2Mili fail"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

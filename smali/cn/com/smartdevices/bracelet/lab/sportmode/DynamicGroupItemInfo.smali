@@ -3,11 +3,11 @@
 
 
 # instance fields
-.field private a:I
+.field private mIsOnRoundFinished:Z
 
-.field private b:I
+.field private mNewRoundCountOfPBState:I
 
-.field private c:Z
+.field private mSaveRoundCountOfPB:I
 
 
 # direct methods
@@ -18,13 +18,13 @@
 
     invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;-><init>(I)V
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/DynamicGroupItemInfo;->a:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/DynamicGroupItemInfo;->mSaveRoundCountOfPB:I
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/DynamicGroupItemInfo;->b:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/DynamicGroupItemInfo;->mNewRoundCountOfPBState:I
 
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/DynamicGroupItemInfo;->c:Z
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/DynamicGroupItemInfo;->mIsOnRoundFinished:Z
 
-    iput p2, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/DynamicGroupItemInfo;->a:I
+    iput p2, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/DynamicGroupItemInfo;->mSaveRoundCountOfPB:I
 
     return-void
 .end method
@@ -34,7 +34,7 @@
 .method public isMarkedInGroup()Z
     .locals 1
 
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/DynamicGroupItemInfo;->c:Z
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/DynamicGroupItemInfo;->mIsOnRoundFinished:Z
 
     return v0
 .end method
@@ -42,7 +42,7 @@
 .method public isNewPBPoint()Z
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/DynamicGroupItemInfo;->b:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/DynamicGroupItemInfo;->mNewRoundCountOfPBState:I
 
     rem-int/lit8 v0, v0, 0x2
 
@@ -70,25 +70,25 @@
 
     invoke-virtual {p0, v0, v1}, Lcn/com/smartdevices/bracelet/lab/sportmode/DynamicGroupItemInfo;->setEndTime(J)V
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/DynamicGroupItemInfo;->a:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/DynamicGroupItemInfo;->mSaveRoundCountOfPB:I
 
     if-lez v0, :cond_0
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/DynamicGroupItemInfo;->b:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/DynamicGroupItemInfo;->mNewRoundCountOfPBState:I
 
     const/4 v1, 0x2
 
     if-ge v0, v1, :cond_0
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/DynamicGroupItemInfo;->a:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/DynamicGroupItemInfo;->mSaveRoundCountOfPB:I
 
     if-ge v0, p1, :cond_0
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/DynamicGroupItemInfo;->b:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/DynamicGroupItemInfo;->mNewRoundCountOfPBState:I
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/DynamicGroupItemInfo;->b:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/DynamicGroupItemInfo;->mNewRoundCountOfPBState:I
 
     :cond_0
     return-void
@@ -99,7 +99,7 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/DynamicGroupItemInfo;->c:Z
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/DynamicGroupItemInfo;->mIsOnRoundFinished:Z
 
     return-void
 .end method

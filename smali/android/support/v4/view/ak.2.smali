@@ -1,6 +1,9 @@
 .class Landroid/support/v4/view/ak;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Landroid/support/v4/view/ai;
+
 
 # direct methods
 .method constructor <init>()V
@@ -11,40 +14,12 @@
     return-void
 .end method
 
-.method public static a(Landroid/view/View;)F
-    .locals 1
 
-    invoke-virtual {p0}, Landroid/view/View;->getAlpha()F
-
-    move-result v0
-
-    return v0
-.end method
-
-.method static a()J
-    .locals 2
-
-    invoke-static {}, Landroid/animation/ValueAnimator;->getFrameDelay()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public static a(Landroid/view/View;ILandroid/graphics/Paint;)V
+# virtual methods
+.method public a(Landroid/widget/TextView;)V
     .locals 0
 
-    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
+    invoke-static {p1}, Landroid/support/v4/view/al;->a(Landroid/widget/TextView;)V
 
     return-void
-.end method
-
-.method public static b(Landroid/view/View;)I
-    .locals 1
-
-    invoke-virtual {p0}, Landroid/view/View;->getLayerType()I
-
-    move-result v0
-
-    return v0
 .end method

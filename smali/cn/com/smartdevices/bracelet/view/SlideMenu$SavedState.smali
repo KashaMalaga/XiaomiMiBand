@@ -16,26 +16,26 @@
 
 
 # instance fields
-.field public currentContentOffset:I
+.field public a:F
 
-.field public currentState:I
+.field public b:F
 
-.field public primaryShadowWidth:F
+.field public c:I
 
-.field public secondaryShadaryWidth:F
+.field public d:I
 
-.field public slideDirectionFlag:I
+.field public e:I
 
-.field public slideMode:I
+.field public f:I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/view/A;
+    new-instance v0, Lcn/com/smartdevices/bracelet/view/M;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/view/A;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/view/M;-><init>()V
 
     sput-object v0, Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -51,37 +51,37 @@
 
     move-result v0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;->primaryShadowWidth:F
+    iput v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;->a:F
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;->secondaryShadaryWidth:F
+    iput v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;->b:F
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;->slideDirectionFlag:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;->c:I
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;->slideMode:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;->d:I
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;->currentState:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;->e:I
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;->currentContentOffset:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;->f:I
 
     return-void
 .end method
@@ -109,27 +109,27 @@
 
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;->primaryShadowWidth:F
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;->a:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;->secondaryShadaryWidth:F
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;->b:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;->slideDirectionFlag:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;->c:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;->slideMode:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;->d:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;->currentState:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;->e:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;->currentContentOffset:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu$SavedState;->f:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 

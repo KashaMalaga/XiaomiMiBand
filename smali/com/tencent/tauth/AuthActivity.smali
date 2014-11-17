@@ -3,11 +3,11 @@
 
 
 # static fields
-.field private static final a:Ljava/lang/String; = "action"
+.field private static final ACTION_KEY:Ljava/lang/String; = "action"
 
-.field private static final b:Ljava/lang/String; = "shareToQQ"
+.field private static final ACTION_SHARE_TO_QQ:Ljava/lang/String; = "shareToQQ"
 
-.field private static final c:Ljava/lang/String; = "shareToQzone"
+.field private static final ACTION_SHARE_TO_QZONE:Ljava/lang/String; = "shareToQzone"
 
 
 # direct methods
@@ -19,91 +19,120 @@
     return-void
 .end method
 
-.method private a(Landroid/net/Uri;)V
-    .locals 4
+.method private execAuthCallback(Landroid/os/Bundle;Ljava/lang/String;)V
+    .locals 6
 
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/connect/auth/AuthMap;->getInstance()Lcom/tencent/connect/auth/AuthMap;
 
     move-result-object v0
 
-    const-string v1, ""
+    const-string v1, "serial"
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result v0
+    move-result-object v1
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v0, v1}, Lcom/tencent/connect/auth/AuthMap;->get(Ljava/lang/String;)Lcom/tencent/connect/auth/AuthMap$Auth;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_0
+
+    const-string v3, "://cancel"
+
+    invoke-virtual {p2, v3}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+
+    move-result v3
+
+    const/4 v4, -0x1
+
+    if-eq v3, v4, :cond_1
+
+    iget-object v3, v2, Lcom/tencent/connect/auth/AuthMap$Auth;->listener:Lcom/tencent/tauth/IUiListener;
+
+    invoke-interface {v3}, Lcom/tencent/tauth/IUiListener;->onCancel()V
+
+    iget-object v2, v2, Lcom/tencent/connect/auth/AuthMap$Auth;->dialog:Lcom/tencent/connect/auth/AuthDialog;
+
+    invoke-virtual {v2}, Lcom/tencent/connect/auth/AuthDialog;->dismiss()V
+
+    :goto_0
+    invoke-virtual {v0, v1}, Lcom/tencent/connect/auth/AuthMap;->remove(Ljava/lang/String;)V
 
     :cond_0
     invoke-virtual {p0}, Lcom/tencent/tauth/AuthActivity;->finish()V
 
-    :goto_0
     return-void
 
     :cond_1
-    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+    const-string v3, "access_token"
 
-    move-result-object v0
+    invoke-virtual {p1, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    const-string v1, "#"
+    move-result-object v3
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+    if-eqz v3, :cond_2
 
-    move-result v1
+    const-string v4, "access_token"
 
-    add-int/lit8 v1, v1, 0x1
+    iget-object v5, v2, Lcom/tencent/connect/auth/AuthMap$Auth;->key:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    invoke-virtual {v0, v3, v5}, Lcom/tencent/connect/auth/AuthMap;->decode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-static {v1}, Lcom/tencent/utils/Util;->decodeUrl(Ljava/lang/String;)Landroid/os/Bundle;
-
-    move-result-object v1
-
-    const-string v2, "action"
-
-    invoke-virtual {v1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    if-nez v2, :cond_2
-
-    invoke-direct {p0, v1, v0}, Lcom/tencent/tauth/AuthActivity;->a(Landroid/os/Bundle;Ljava/lang/String;)V
-
-    goto :goto_0
+    invoke-virtual {p1, v4, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
-    const-string v3, "shareToQQ"
+    invoke-static {p1}, Lcom/tencent/utils/Util;->encodeUrl(Landroid/os/Bundle;)Ljava/lang/String;
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object v3
 
-    move-result v3
+    new-instance v4, Lorg/json/JSONObject;
 
-    if-nez v3, :cond_3
+    invoke-direct {v4}, Lorg/json/JSONObject;-><init>()V
 
-    const-string v3, "shareToQzone"
+    invoke-static {v4, v3}, Lcom/tencent/utils/Util;->decodeUrlToJson(Lorg/json/JSONObject;Ljava/lang/String;)Lorg/json/JSONObject;
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object v3
 
-    move-result v2
+    const-string v4, "cb"
 
-    if-eqz v2, :cond_4
+    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
-    :cond_3
-    invoke-direct {p0, v1}, Lcom/tencent/tauth/AuthActivity;->a(Landroid/os/Bundle;)V
+    move-result-object v4
+
+    const-string v5, ""
+
+    invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_3
+
+    iget-object v2, v2, Lcom/tencent/connect/auth/AuthMap$Auth;->dialog:Lcom/tencent/connect/auth/AuthDialog;
+
+    invoke-virtual {v3}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v4, v3}, Lcom/tencent/connect/auth/AuthDialog;->callJs(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    :cond_4
-    invoke-direct {p0, v1, v0}, Lcom/tencent/tauth/AuthActivity;->a(Landroid/os/Bundle;Ljava/lang/String;)V
+    :cond_3
+    iget-object v4, v2, Lcom/tencent/connect/auth/AuthMap$Auth;->listener:Lcom/tencent/tauth/IUiListener;
+
+    invoke-interface {v4, v3}, Lcom/tencent/tauth/IUiListener;->onComplete(Ljava/lang/Object;)V
+
+    iget-object v2, v2, Lcom/tencent/connect/auth/AuthMap$Auth;->dialog:Lcom/tencent/connect/auth/AuthDialog;
+
+    invoke-virtual {v2}, Lcom/tencent/connect/auth/AuthDialog;->dismiss()V
 
     goto :goto_0
 .end method
 
-.method private a(Landroid/os/Bundle;)V
+.method private execShareToQQCallback(Landroid/os/Bundle;)V
     .locals 6
 
     const-string v0, "action"
@@ -261,115 +290,86 @@
     goto :goto_2
 .end method
 
-.method private a(Landroid/os/Bundle;Ljava/lang/String;)V
-    .locals 6
+.method private handleActionUri(Landroid/net/Uri;)V
+    .locals 4
 
-    invoke-static {}, Lcom/tencent/connect/auth/AuthMap;->getInstance()Lcom/tencent/connect/auth/AuthMap;
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "serial"
+    const-string v1, ""
 
-    invoke-virtual {p1, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result-object v1
+    move-result v0
 
-    invoke-virtual {v0, v1}, Lcom/tencent/connect/auth/AuthMap;->get(Ljava/lang/String;)Lcom/tencent/connect/auth/AuthMap$Auth;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_0
-
-    const-string v3, "://cancel"
-
-    invoke-virtual {p2, v3}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
-
-    move-result v3
-
-    const/4 v4, -0x1
-
-    if-eq v3, v4, :cond_1
-
-    iget-object v3, v2, Lcom/tencent/connect/auth/AuthMap$Auth;->listener:Lcom/tencent/tauth/IUiListener;
-
-    invoke-interface {v3}, Lcom/tencent/tauth/IUiListener;->onCancel()V
-
-    iget-object v2, v2, Lcom/tencent/connect/auth/AuthMap$Auth;->dialog:Lcom/tencent/connect/auth/AuthDialog;
-
-    invoke-virtual {v2}, Lcom/tencent/connect/auth/AuthDialog;->dismiss()V
-
-    :goto_0
-    invoke-virtual {v0, v1}, Lcom/tencent/connect/auth/AuthMap;->remove(Ljava/lang/String;)V
+    if-eqz v0, :cond_1
 
     :cond_0
     invoke-virtual {p0}, Lcom/tencent/tauth/AuthActivity;->finish()V
 
+    :goto_0
     return-void
 
     :cond_1
-    const-string v3, "access_token"
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
-    invoke-virtual {p1, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v3
+    const-string v1, "#"
 
-    if-eqz v3, :cond_2
+    invoke-virtual {v0, v1}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
-    const-string v4, "access_token"
+    move-result v1
 
-    iget-object v5, v2, Lcom/tencent/connect/auth/AuthMap$Auth;->key:Ljava/lang/String;
+    add-int/lit8 v1, v1, 0x1
 
-    invoke-virtual {v0, v3, v5}, Lcom/tencent/connect/auth/AuthMap;->decode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-virtual {p1, v4, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/tencent/utils/Util;->decodeUrl(Ljava/lang/String;)Landroid/os/Bundle;
 
-    :cond_2
-    invoke-static {p1}, Lcom/tencent/utils/Util;->encodeUrl(Landroid/os/Bundle;)Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v3
+    const-string v2, "action"
 
-    new-instance v4, Lorg/json/JSONObject;
+    invoke-virtual {v1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-direct {v4}, Lorg/json/JSONObject;-><init>()V
+    move-result-object v2
 
-    invoke-static {v4, v3}, Lcom/tencent/utils/Util;->decodeUrlToJson(Lorg/json/JSONObject;Ljava/lang/String;)Lorg/json/JSONObject;
+    if-nez v2, :cond_2
 
-    move-result-object v3
-
-    const-string v4, "cb"
-
-    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    const-string v5, ""
-
-    invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_3
-
-    iget-object v2, v2, Lcom/tencent/connect/auth/AuthMap$Auth;->dialog:Lcom/tencent/connect/auth/AuthDialog;
-
-    invoke-virtual {v3}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v4, v3}, Lcom/tencent/connect/auth/AuthDialog;->callJs(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {p0, v1, v0}, Lcom/tencent/tauth/AuthActivity;->execAuthCallback(Landroid/os/Bundle;Ljava/lang/String;)V
 
     goto :goto_0
 
+    :cond_2
+    const-string v3, "shareToQQ"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_3
+
+    const-string v3, "shareToQzone"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
     :cond_3
-    iget-object v4, v2, Lcom/tencent/connect/auth/AuthMap$Auth;->listener:Lcom/tencent/tauth/IUiListener;
+    invoke-direct {p0, v1}, Lcom/tencent/tauth/AuthActivity;->execShareToQQCallback(Landroid/os/Bundle;)V
 
-    invoke-interface {v4, v3}, Lcom/tencent/tauth/IUiListener;->onComplete(Ljava/lang/Object;)V
+    goto :goto_0
 
-    iget-object v2, v2, Lcom/tencent/connect/auth/AuthMap$Auth;->dialog:Lcom/tencent/connect/auth/AuthDialog;
-
-    invoke-virtual {v2}, Lcom/tencent/connect/auth/AuthDialog;->dismiss()V
+    :cond_4
+    invoke-direct {p0, v1, v0}, Lcom/tencent/tauth/AuthActivity;->execAuthCallback(Landroid/os/Bundle;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -389,7 +389,7 @@
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Lcom/tencent/tauth/AuthActivity;->a(Landroid/net/Uri;)V
+    invoke-direct {p0, v0}, Lcom/tencent/tauth/AuthActivity;->handleActionUri(Landroid/net/Uri;)V
 
     return-void
 .end method

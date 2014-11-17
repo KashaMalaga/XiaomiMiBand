@@ -475,11 +475,11 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v1, Lcom/tencent/utils/d;
+    new-instance v1, Lcom/tencent/utils/OpenConfig$1;
 
-    invoke-direct {v1, p0, v0}, Lcom/tencent/utils/d;-><init>(Lcom/tencent/utils/OpenConfig;Landroid/os/Bundle;)V
+    invoke-direct {v1, p0, v0}, Lcom/tencent/utils/OpenConfig$1;-><init>(Lcom/tencent/utils/OpenConfig;Landroid/os/Bundle;)V
 
-    invoke-virtual {v1}, Lcom/tencent/utils/d;->start()V
+    invoke-virtual {v1}, Lcom/tencent/utils/OpenConfig$1;->start()V
 
     goto :goto_0
 .end method

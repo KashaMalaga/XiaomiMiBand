@@ -11,6 +11,10 @@
 
 .field protected static final DEFAULT_PF:Ljava/lang/String; = "openmobile_android"
 
+.field private static final KEY_REQUEST_CODE:Ljava/lang/String; = "key_request_code"
+
+.field private static final MSG_COMPLETE:I = 0x0
+
 .field protected static final PARAM_ENCRY_EOKEN:Ljava/lang/String; = "encry_token"
 
 .field protected static final PLATFORM:Ljava/lang/String; = "desktop_m_qq"
@@ -18,10 +22,6 @@
 .field protected static final PREFERENCE_PF:Ljava/lang/String; = "pfStore"
 
 .field protected static final VERSION:Ljava/lang/String; = "android"
-
-.field private static final a:Ljava/lang/String; = "key_request_code"
-
-.field private static final b:I
 
 .field public static businessId:Ljava/lang/String;
 
@@ -118,7 +118,7 @@
     return-void
 .end method
 
-.method private a()Landroid/content/Intent;
+.method private getAssitIntent()Landroid/content/Intent;
     .locals 3
 
     new-instance v0, Landroid/content/Intent;
@@ -134,14 +134,6 @@
 
 
 # virtual methods
-.method b()Landroid/content/Intent;
-    .locals 1
-
-    iget-object v0, p0, Lcom/tencent/connect/common/BaseApi;->mActivityIntent:Landroid/content/Intent;
-
-    return-object v0
-.end method
-
 .method protected composeActivityParams()Landroid/os/Bundle;
     .locals 4
 
@@ -501,6 +493,14 @@
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
+.end method
+
+.method getActivityIntent()Landroid/content/Intent;
+    .locals 1
+
+    iget-object v0, p0, Lcom/tencent/connect/common/BaseApi;->mActivityIntent:Landroid/content/Intent;
+
+    return-object v0
 .end method
 
 .method protected getAgentIntent()Landroid/content/Intent;
@@ -954,7 +954,7 @@
 
     invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-direct {p0}, Lcom/tencent/connect/common/BaseApi;->a()Landroid/content/Intent;
+    invoke-direct {p0}, Lcom/tencent/connect/common/BaseApi;->getAssitIntent()Landroid/content/Intent;
 
     move-result-object v0
 

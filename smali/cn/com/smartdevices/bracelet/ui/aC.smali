@@ -1,51 +1,40 @@
-.class Lcn/com/smartdevices/bracelet/ui/aC;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lcn/com/smartdevices/bracelet/ui/MainMenuFragment$MenuListener;
-
-
-# instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+.class public Lcn/com/smartdevices/bracelet/ui/aC;
+.super Lcn/com/smartdevices/bracelet/ui/aB;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)V
+.method public constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/aC;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/aB;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onDismiss()V
-    .locals 2
+.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aC;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+    const v0, 0x7f030007
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->e(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;Z)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aC;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->y(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Landroid/view/View;
+    invoke-virtual {p1, v0, p2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/view/View;->destroyDrawingCache()V
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/aC;->a(Landroid/view/View;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aC;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aC;->c_:Landroid/widget/TextSwitcher;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->z(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Landroid/view/View;
+    const v2, 0x7f0c0188
 
-    move-result-object v0
+    invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/ui/aC;->getString(I)Ljava/lang/String;
 
-    invoke-virtual {v0}, Landroid/view/View;->destroyDrawingCache()V
+    move-result-object v2
 
-    return-void
+    invoke-virtual {v1, v2}, Landroid/widget/TextSwitcher;->setCurrentText(Ljava/lang/CharSequence;)V
+
+    return-object v0
 .end method

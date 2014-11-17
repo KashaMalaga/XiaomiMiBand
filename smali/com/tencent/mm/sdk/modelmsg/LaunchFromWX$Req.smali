@@ -3,11 +3,11 @@
 
 
 # static fields
-.field private static final a:Ljava/lang/String; = "MicroMsg.SDK.LaunchFromWX.Req"
+.field private static final MESSAGE_ACTION_LENGTH_LIMIT:I = 0x800
 
-.field private static final b:I = 0x800
+.field private static final MESSAGE_EXT_LENGTH_LIMIT:I = 0x800
 
-.field private static final c:I = 0x800
+.field private static final TAG:Ljava/lang/String; = "MicroMsg.SDK.LaunchFromWX.Req"
 
 
 # instance fields

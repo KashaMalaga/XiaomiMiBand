@@ -29,31 +29,31 @@
 
 
 # instance fields
-.field private a:Ljava/util/Date;
+.field private awakeCount:I
 
-.field private b:Ljava/util/Date;
+.field private awakeNum:I
 
-.field private c:Ljava/util/Date;
+.field private hasSleep:Z
 
-.field private d:Ljava/util/Date;
+.field private minutesOfNonRem:I
 
-.field private e:I
+.field private minutesOfRem:I
 
-.field private f:I
+.field private nosleepReason:I
 
-.field private g:I
+.field private sleepCount:I
 
-.field private h:I
+.field private startDate:Ljava/util/Date;
 
-.field private i:I
+.field private startOnBedDate:Ljava/util/Date;
 
-.field private j:I
+.field private stopDate:Ljava/util/Date;
 
-.field private k:I
+.field private stopOnBedDate:Ljava/util/Date;
 
-.field private l:I
+.field private userSleepEnd:I
 
-.field private m:Z
+.field private userSleepStart:I
 
 
 # direct methods
@@ -120,25 +120,25 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v2, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->e:I
+    iput v2, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->minutesOfRem:I
 
-    iput v2, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->f:I
+    iput v2, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->minutesOfNonRem:I
 
-    iput v2, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->g:I
+    iput v2, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->sleepCount:I
 
-    iput v2, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->h:I
+    iput v2, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->awakeCount:I
 
-    iput v2, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->i:I
+    iput v2, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->awakeNum:I
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->j:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->userSleepStart:I
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->k:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->userSleepEnd:I
 
     sget v0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->NOSLEEP_NONE:I
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->l:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->nosleepReason:I
 
-    iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->m:Z
+    iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->hasSleep:Z
 
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
@@ -164,7 +164,7 @@
 
     invoke-direct {v1, v2, v3}, Ljava/util/Date;-><init>(J)V
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->a:Ljava/util/Date;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->startDate:Ljava/util/Date;
 
     new-instance v1, Ljava/util/Date;
 
@@ -174,7 +174,7 @@
 
     invoke-direct {v1, v2, v3}, Ljava/util/Date;-><init>(J)V
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->b:Ljava/util/Date;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->startOnBedDate:Ljava/util/Date;
 
     new-instance v1, Ljava/util/Date;
 
@@ -184,7 +184,7 @@
 
     invoke-direct {v1, v2, v3}, Ljava/util/Date;-><init>(J)V
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->c:Ljava/util/Date;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->stopDate:Ljava/util/Date;
 
     new-instance v1, Ljava/util/Date;
 
@@ -194,7 +194,7 @@
 
     invoke-direct {v1, v2, v3}, Ljava/util/Date;-><init>(J)V
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->d:Ljava/util/Date;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->stopOnBedDate:Ljava/util/Date;
 
     return-void
 .end method
@@ -204,7 +204,7 @@
 .method public getAwakeCount()I
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->h:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->awakeCount:I
 
     return v0
 .end method
@@ -212,7 +212,7 @@
 .method public getAwakeNum()I
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->i:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->awakeNum:I
 
     return v0
 .end method
@@ -220,7 +220,7 @@
 .method public getHasSleep()Z
     .locals 1
 
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->m:Z
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->hasSleep:Z
 
     return v0
 .end method
@@ -228,7 +228,7 @@
 .method public getNonRemCount()I
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->f:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->minutesOfNonRem:I
 
     return v0
 .end method
@@ -236,7 +236,7 @@
 .method public getNosleepReason()I
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->l:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->nosleepReason:I
 
     return v0
 .end method
@@ -244,7 +244,7 @@
 .method public getRemCount()I
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->e:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->minutesOfRem:I
 
     return v0
 .end method
@@ -252,7 +252,7 @@
 .method public getSleepCount()I
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->g:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->sleepCount:I
 
     return v0
 .end method
@@ -260,7 +260,7 @@
 .method public getStartDate()Ljava/util/Date;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->a:Ljava/util/Date;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->startDate:Ljava/util/Date;
 
     return-object v0
 .end method
@@ -268,13 +268,13 @@
 .method public getStartDateMin()I
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->a:Ljava/util/Date;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->startDate:Ljava/util/Date;
 
     invoke-virtual {v0}, Ljava/util/Date;->getHours()I
 
     move-result v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->a:Ljava/util/Date;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->startDate:Ljava/util/Date;
 
     invoke-virtual {v1}, Ljava/util/Date;->getMinutes()I
 
@@ -292,13 +292,13 @@
 
     const/16 v5, 0xa
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->a:Ljava/util/Date;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->startDate:Ljava/util/Date;
 
     invoke-virtual {v0}, Ljava/util/Date;->getHours()I
 
     move-result v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->a:Ljava/util/Date;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->startDate:Ljava/util/Date;
 
     invoke-virtual {v1}, Ljava/util/Date;->getMinutes()I
 
@@ -380,7 +380,7 @@
 .method public getStartOnBedDate()Ljava/util/Date;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->b:Ljava/util/Date;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->startOnBedDate:Ljava/util/Date;
 
     return-object v0
 .end method
@@ -388,7 +388,7 @@
 .method public getStopDate()Ljava/util/Date;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->c:Ljava/util/Date;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->stopDate:Ljava/util/Date;
 
     return-object v0
 .end method
@@ -396,13 +396,13 @@
 .method public getStopDateMin()I
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->c:Ljava/util/Date;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->stopDate:Ljava/util/Date;
 
     invoke-virtual {v0}, Ljava/util/Date;->getHours()I
 
     move-result v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->c:Ljava/util/Date;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->stopDate:Ljava/util/Date;
 
     invoke-virtual {v1}, Ljava/util/Date;->getMinutes()I
 
@@ -420,13 +420,13 @@
 
     const/16 v5, 0xa
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->c:Ljava/util/Date;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->stopDate:Ljava/util/Date;
 
     invoke-virtual {v0}, Ljava/util/Date;->getHours()I
 
     move-result v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->c:Ljava/util/Date;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->stopDate:Ljava/util/Date;
 
     invoke-virtual {v1}, Ljava/util/Date;->getMinutes()I
 
@@ -508,7 +508,7 @@
 .method public getStopOnBedDate()Ljava/util/Date;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->d:Ljava/util/Date;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->stopOnBedDate:Ljava/util/Date;
 
     return-object v0
 .end method
@@ -525,7 +525,7 @@
     :try_start_0
     sget-object v1, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->KEY_START_DATE:Ljava/lang/String;
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->a:Ljava/util/Date;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->startDate:Ljava/util/Date;
 
     invoke-virtual {v2}, Ljava/util/Date;->getTime()J
 
@@ -539,7 +539,7 @@
 
     sget-object v1, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->KEY_END_DATE:Ljava/lang/String;
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->c:Ljava/util/Date;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->stopDate:Ljava/util/Date;
 
     invoke-virtual {v2}, Ljava/util/Date;->getTime()J
 
@@ -553,40 +553,40 @@
 
     sget-object v1, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->KEY_DEEP_MINUTES:Ljava/lang/String;
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->f:I
+    iget v2, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->minutesOfNonRem:I
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
     sget-object v1, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->KEY_LIGHT_MINUTES:Ljava/lang/String;
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->e:I
+    iget v2, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->minutesOfRem:I
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
     sget-object v1, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->KEY_AWAKE_MINUTES:Ljava/lang/String;
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->h:I
+    iget v2, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->awakeCount:I
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->j:I
+    iget v1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->userSleepStart:I
 
     if-le v1, v6, :cond_0
 
     sget-object v1, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->KEY_USER_SLEEP_START:Ljava/lang/String;
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->j:I
+    iget v2, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->userSleepStart:I
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
     :cond_0
-    iget v1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->k:I
+    iget v1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->userSleepEnd:I
 
     if-le v1, v6, :cond_1
 
     sget-object v1, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->KEY_USER_SLEEP_END:Ljava/lang/String;
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->k:I
+    iget v2, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->userSleepEnd:I
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
     :try_end_0
@@ -605,7 +605,7 @@
 .method public setAwakeCount(I)V
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->h:I
+    iput p1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->awakeCount:I
 
     return-void
 .end method
@@ -613,7 +613,7 @@
 .method public setAwakeNum(I)V
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->i:I
+    iput p1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->awakeNum:I
 
     return-void
 .end method
@@ -621,7 +621,7 @@
 .method public setHasSleep(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->m:Z
+    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->hasSleep:Z
 
     return-void
 .end method
@@ -629,7 +629,7 @@
 .method public setNonRemCount(I)V
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->f:I
+    iput p1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->minutesOfNonRem:I
 
     return-void
 .end method
@@ -637,7 +637,7 @@
 .method public setNosleepReason(I)V
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->l:I
+    iput p1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->nosleepReason:I
 
     return-void
 .end method
@@ -645,7 +645,7 @@
 .method public setRemCount(I)V
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->e:I
+    iput p1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->minutesOfRem:I
 
     return-void
 .end method
@@ -653,7 +653,7 @@
 .method public setSleepCount(I)V
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->g:I
+    iput p1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->sleepCount:I
 
     return-void
 .end method
@@ -661,7 +661,7 @@
 .method public setStartDate(Ljava/util/Date;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->a:Ljava/util/Date;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->startDate:Ljava/util/Date;
 
     return-void
 .end method
@@ -669,7 +669,7 @@
 .method public setStartOnBedDate(Ljava/util/Date;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->b:Ljava/util/Date;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->startOnBedDate:Ljava/util/Date;
 
     return-void
 .end method
@@ -677,7 +677,7 @@
 .method public setStopDate(Ljava/util/Date;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->c:Ljava/util/Date;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->stopDate:Ljava/util/Date;
 
     return-void
 .end method
@@ -685,7 +685,7 @@
 .method public setStopOnBedDate(Ljava/util/Date;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->d:Ljava/util/Date;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->stopOnBedDate:Ljava/util/Date;
 
     return-void
 .end method
@@ -693,7 +693,7 @@
 .method public setUserSleepEnd(I)V
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->k:I
+    iput p1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->userSleepEnd:I
 
     return-void
 .end method
@@ -701,7 +701,7 @@
 .method public setUserSleepStart(I)V
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->j:I
+    iput p1, p0, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;->userSleepStart:I
 
     return-void
 .end method

@@ -45,7 +45,7 @@
 
     iget-object v4, p0, Lcom/amap/api/services/route/c;->a:Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;
 
-    invoke-virtual {v0, v4}, Lcom/amap/api/services/route/RouteSearch;->calculateDriveRoute(Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;)Lcom/amap/api/services/route/DriveRouteResult;
+    invoke-virtual {v0, v4}, Lcom/amap/api/services/route/RouteSearch;->a(Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;)Lcom/amap/api/services/route/DriveRouteResult;
 
     move-result-object v1
 
@@ -55,7 +55,7 @@
 
     invoke-virtual {v3, v0, v4}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
     :try_end_0
-    .catch Lcom/amap/api/services/core/AMapException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Lcom/amap/api/services/core/a; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     iput-object v1, v2, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -64,7 +64,7 @@
 
     iget-object v0, p0, Lcom/amap/api/services/route/c;->b:Lcom/amap/api/services/route/RouteSearch;
 
-    iget-object v0, v0, Lcom/amap/api/services/route/RouteSearch;->a:Landroid/os/Handler;
+    iget-object v0, v0, Lcom/amap/api/services/route/RouteSearch;->s:Landroid/os/Handler;
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
@@ -77,7 +77,7 @@
     :try_start_1
     const-string v4, "errorCode"
 
-    invoke-virtual {v0}, Lcom/amap/api/services/core/AMapException;->getErrorCode()I
+    invoke-virtual {v0}, Lcom/amap/api/services/core/a;->b()I
 
     move-result v0
 
@@ -91,7 +91,7 @@
 
     iget-object v0, p0, Lcom/amap/api/services/route/c;->b:Lcom/amap/api/services/route/RouteSearch;
 
-    iget-object v0, v0, Lcom/amap/api/services/route/RouteSearch;->a:Landroid/os/Handler;
+    iget-object v0, v0, Lcom/amap/api/services/route/RouteSearch;->s:Landroid/os/Handler;
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
@@ -106,7 +106,7 @@
 
     iget-object v1, p0, Lcom/amap/api/services/route/c;->b:Lcom/amap/api/services/route/RouteSearch;
 
-    iget-object v1, v1, Lcom/amap/api/services/route/RouteSearch;->a:Landroid/os/Handler;
+    iget-object v1, v1, Lcom/amap/api/services/route/RouteSearch;->s:Landroid/os/Handler;
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 

@@ -82,13 +82,13 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    const v0, 0x7f030021
+    const v0, 0x7f030023
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/ShowImageActivity;->setContentView(I)V
 
-    const v0, 0x7f0700c1
+    const v0, 0x7f0700ce
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/ShowImageActivity;->findViewById(I)Landroid/view/View;
 
@@ -106,15 +106,15 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/nostra13/universalimageloader/core/assist/ImageSize;
+    new-instance v1, Lcom/e/a/b/a/f;
 
     iget v2, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
     iget v0, v0, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    invoke-direct {v1, v2, v0}, Lcom/nostra13/universalimageloader/core/assist/ImageSize;-><init>(II)V
+    invoke-direct {v1, v2, v0}, Lcom/e/a/b/a/f;-><init>(II)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/BraceletImageLoader;->getInstance()Lcn/com/smartdevices/bracelet/BraceletImageLoader;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/i;->a()Lcn/com/smartdevices/bracelet/i;
 
     move-result-object v0
 
@@ -124,11 +124,11 @@
 
     move-result-object v2
 
-    new-instance v3, Lcn/com/smartdevices/bracelet/ui/bR;
+    new-instance v3, Lcn/com/smartdevices/bracelet/ui/cM;
 
-    invoke-direct {v3, p0}, Lcn/com/smartdevices/bracelet/ui/bR;-><init>(Lcn/com/smartdevices/bracelet/ui/ShowImageActivity;)V
+    invoke-direct {v3, p0}, Lcn/com/smartdevices/bracelet/ui/cM;-><init>(Lcn/com/smartdevices/bracelet/ui/ShowImageActivity;)V
 
-    invoke-virtual {v0, v2, v1, v3}, Lcn/com/smartdevices/bracelet/BraceletImageLoader;->loadImageAsync(Ljava/lang/String;Lcom/nostra13/universalimageloader/core/assist/ImageSize;Lcom/nostra13/universalimageloader/core/listener/ImageLoadingListener;)V
+    invoke-virtual {v0, v2, v1, v3}, Lcn/com/smartdevices/bracelet/i;->a(Ljava/lang/String;Lcom/e/a/b/a/f;Lcom/e/a/b/f/a;)V
 
     return-void
 .end method

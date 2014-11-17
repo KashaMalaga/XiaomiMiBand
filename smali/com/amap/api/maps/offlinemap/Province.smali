@@ -43,9 +43,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/maps/offlinemap/j;
+    new-instance v0, Lcom/amap/api/maps/offlinemap/o;
 
-    invoke-direct {v0}, Lcom/amap/api/maps/offlinemap/j;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/maps/offlinemap/o;-><init>()V
 
     sput-object v0, Lcom/amap/api/maps/offlinemap/Province;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -102,6 +102,39 @@
 
 
 # virtual methods
+.method public a(Ljava/util/ArrayList;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/amap/api/maps/offlinemap/OfflineMapCity;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lcom/amap/api/maps/offlinemap/Province;->e:Ljava/util/ArrayList;
+
+    return-void
+.end method
+
+.method public c(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/maps/offlinemap/Province;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public d(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/maps/offlinemap/Province;->b:Ljava/lang/String;
+
+    return-void
+.end method
+
 .method public describeContents()I
     .locals 1
 
@@ -110,7 +143,55 @@
     return v0
 .end method
 
-.method public getCityList()Ljava/util/ArrayList;
+.method public e(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/maps/offlinemap/Province;->c:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public f()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/Province;->a:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public f(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/maps/offlinemap/Province;->d:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public g()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/Province;->b:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public h()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/Province;->c:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public i()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/Province;->d:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public j()Ljava/util/ArrayList;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -137,87 +218,6 @@
     iget-object v0, p0, Lcom/amap/api/maps/offlinemap/Province;->e:Ljava/util/ArrayList;
 
     goto :goto_0
-.end method
-
-.method public getJianpin()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/Province;->b:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getPinyin()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/Province;->c:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getProvinceCode()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/Province;->d:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getProvinceName()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/Province;->a:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public setCityList(Ljava/util/ArrayList;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcom/amap/api/maps/offlinemap/OfflineMapCity;",
-            ">;)V"
-        }
-    .end annotation
-
-    iput-object p1, p0, Lcom/amap/api/maps/offlinemap/Province;->e:Ljava/util/ArrayList;
-
-    return-void
-.end method
-
-.method public setJianpin(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/maps/offlinemap/Province;->b:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public setPinyin(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/maps/offlinemap/Province;->c:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public setProvinceCode(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/maps/offlinemap/Province;->d:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public setProvinceName(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/maps/offlinemap/Province;->a:Ljava/lang/String;
-
-    return-void
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V

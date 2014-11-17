@@ -3,7 +3,7 @@
 
 
 # instance fields
-.field a:Ljava/util/Map;
+.field map:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map",
@@ -34,9 +34,9 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/stat/event/AdditionEvent;->a:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/stat/event/AdditionEvent;->map:Ljava/util/Map;
 
-    iput-object p3, p0, Lcom/tencent/stat/event/AdditionEvent;->a:Ljava/util/Map;
+    iput-object p3, p0, Lcom/tencent/stat/event/AdditionEvent;->map:Ljava/util/Map;
 
     return-void
 .end method
@@ -62,11 +62,11 @@
 
     invoke-static {p1, v0, v1}, Lcom/tencent/stat/common/StatCommonHelper;->jsonPut(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/tencent/stat/event/AdditionEvent;->a:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/stat/event/AdditionEvent;->map:Ljava/util/Map;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/stat/event/AdditionEvent;->a:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/stat/event/AdditionEvent;->map:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->size()I
 
@@ -74,7 +74,7 @@
 
     if-lez v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/stat/event/AdditionEvent;->a:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/stat/event/AdditionEvent;->map:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 

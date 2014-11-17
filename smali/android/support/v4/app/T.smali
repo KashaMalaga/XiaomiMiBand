@@ -1,12 +1,25 @@
-.class Landroid/support/v4/app/T;
+.class public abstract Landroid/support/v4/app/T;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Landroid/support/v4/app/Q;
+
+# static fields
+.field public static final C:I = 0x1000
+
+.field public static final D:I = 0x2000
+
+.field public static final E:I = -0x1
+
+.field public static final F:I = 0x0
+
+.field public static final G:I = 0x1001
+
+.field public static final H:I = 0x2002
+
+.field public static final I:I = 0x1003
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -16,38 +29,74 @@
 
 
 # virtual methods
-.method public a(Landroid/support/v4/app/NotificationCompat$Builder;)Landroid/app/Notification;
-    .locals 13
+.method public abstract a(I)Landroid/support/v4/app/T;
+.end method
 
-    iget-object v0, p1, Landroid/support/v4/app/NotificationCompat$Builder;->a:Landroid/content/Context;
+.method public abstract a(II)Landroid/support/v4/app/T;
+.end method
 
-    iget-object v1, p1, Landroid/support/v4/app/NotificationCompat$Builder;->r:Landroid/app/Notification;
+.method public abstract a(IIII)Landroid/support/v4/app/T;
+.end method
 
-    iget-object v2, p1, Landroid/support/v4/app/NotificationCompat$Builder;->b:Ljava/lang/CharSequence;
+.method public abstract a(ILandroid/support/v4/app/Fragment;)Landroid/support/v4/app/T;
+.end method
 
-    iget-object v3, p1, Landroid/support/v4/app/NotificationCompat$Builder;->c:Ljava/lang/CharSequence;
+.method public abstract a(ILandroid/support/v4/app/Fragment;Ljava/lang/String;)Landroid/support/v4/app/T;
+.end method
 
-    iget-object v4, p1, Landroid/support/v4/app/NotificationCompat$Builder;->h:Ljava/lang/CharSequence;
+.method public abstract a(Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/T;
+.end method
 
-    iget-object v5, p1, Landroid/support/v4/app/NotificationCompat$Builder;->f:Landroid/widget/RemoteViews;
+.method public abstract a(Landroid/support/v4/app/Fragment;Ljava/lang/String;)Landroid/support/v4/app/T;
+.end method
 
-    iget v6, p1, Landroid/support/v4/app/NotificationCompat$Builder;->i:I
+.method public abstract a(Ljava/lang/CharSequence;)Landroid/support/v4/app/T;
+.end method
 
-    iget-object v7, p1, Landroid/support/v4/app/NotificationCompat$Builder;->d:Landroid/app/PendingIntent;
+.method public abstract a(Ljava/lang/String;)Landroid/support/v4/app/T;
+.end method
 
-    iget-object v8, p1, Landroid/support/v4/app/NotificationCompat$Builder;->e:Landroid/app/PendingIntent;
+.method public abstract b(I)Landroid/support/v4/app/T;
+.end method
 
-    iget-object v9, p1, Landroid/support/v4/app/NotificationCompat$Builder;->g:Landroid/graphics/Bitmap;
+.method public abstract b(ILandroid/support/v4/app/Fragment;)Landroid/support/v4/app/T;
+.end method
 
-    iget v10, p1, Landroid/support/v4/app/NotificationCompat$Builder;->n:I
+.method public abstract b(ILandroid/support/v4/app/Fragment;Ljava/lang/String;)Landroid/support/v4/app/T;
+.end method
 
-    iget v11, p1, Landroid/support/v4/app/NotificationCompat$Builder;->o:I
+.method public abstract b(Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/T;
+.end method
 
-    iget-boolean v12, p1, Landroid/support/v4/app/NotificationCompat$Builder;->p:Z
+.method public abstract b(Ljava/lang/CharSequence;)Landroid/support/v4/app/T;
+.end method
 
-    invoke-static/range {v0 .. v12}, Landroid/support/v4/app/W;->a(Landroid/content/Context;Landroid/app/Notification;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/widget/RemoteViews;ILandroid/app/PendingIntent;Landroid/app/PendingIntent;Landroid/graphics/Bitmap;IIZ)Landroid/app/Notification;
+.method public abstract c(I)Landroid/support/v4/app/T;
+.end method
 
-    move-result-object v0
+.method public abstract c(Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/T;
+.end method
 
-    return-object v0
+.method public abstract d(I)Landroid/support/v4/app/T;
+.end method
+
+.method public abstract d(Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/T;
+.end method
+
+.method public abstract e(Landroid/support/v4/app/Fragment;)Landroid/support/v4/app/T;
+.end method
+
+.method public abstract f()Z
+.end method
+
+.method public abstract g()Landroid/support/v4/app/T;
+.end method
+
+.method public abstract h()I
+.end method
+
+.method public abstract i()I
+.end method
+
+.method public abstract m()Z
 .end method

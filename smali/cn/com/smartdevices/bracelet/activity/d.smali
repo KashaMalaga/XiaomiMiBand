@@ -24,7 +24,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/d;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Utils;->showUserAgreement(Landroid/content/Context;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->j(Landroid/content/Context;)V
 
     return-void
 .end method

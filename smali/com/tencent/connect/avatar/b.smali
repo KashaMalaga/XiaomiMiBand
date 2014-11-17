@@ -543,9 +543,9 @@
 
     new-instance v0, Ljava/lang/Thread;
 
-    new-instance v1, Lcom/tencent/connect/avatar/j;
+    new-instance v1, Lcom/tencent/connect/avatar/b$1;
 
-    invoke-direct {v1, p0}, Lcom/tencent/connect/avatar/j;-><init>(Lcom/tencent/connect/avatar/b;)V
+    invoke-direct {v1, p0}, Lcom/tencent/connect/avatar/b$1;-><init>(Lcom/tencent/connect/avatar/b;)V
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 

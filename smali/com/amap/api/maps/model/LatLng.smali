@@ -7,26 +7,26 @@
 
 
 # static fields
-.field public static final CREATOR:Lcom/amap/api/maps/model/LatLngCreator;
+.field public static final a:Lcom/amap/api/maps/model/n;
 
-.field private static a:Ljava/text/DecimalFormat;
+.field private static d:Ljava/text/DecimalFormat;
 
 
 # instance fields
-.field public final latitude:D
+.field public final b:D
 
-.field public final longitude:D
+.field public final c:D
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 4
 
-    new-instance v0, Lcom/amap/api/maps/model/LatLngCreator;
+    new-instance v0, Lcom/amap/api/maps/model/n;
 
-    invoke-direct {v0}, Lcom/amap/api/maps/model/LatLngCreator;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/maps/model/n;-><init>()V
 
-    sput-object v0, Lcom/amap/api/maps/model/LatLng;->CREATOR:Lcom/amap/api/maps/model/LatLngCreator;
+    sput-object v0, Lcom/amap/api/maps/model/LatLng;->a:Lcom/amap/api/maps/model/n;
 
     new-instance v0, Ljava/text/DecimalFormat;
 
@@ -40,7 +40,7 @@
 
     invoke-direct {v0, v1, v2}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;Ljava/text/DecimalFormatSymbols;)V
 
-    sput-object v0, Lcom/amap/api/maps/model/LatLng;->a:Ljava/text/DecimalFormat;
+    sput-object v0, Lcom/amap/api/maps/model/LatLng;->d:Ljava/text/DecimalFormat;
 
     return-void
 .end method
@@ -68,7 +68,7 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iput-wide v0, p0, Lcom/amap/api/maps/model/LatLng;->c:D
 
     :goto_0
     const-wide v0, -0x3fa9800000000000L
@@ -87,7 +87,7 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iput-wide v0, p0, Lcom/amap/api/maps/model/LatLng;->b:D
 
     return-void
 
@@ -106,7 +106,7 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iput-wide v0, p0, Lcom/amap/api/maps/model/LatLng;->c:D
 
     goto :goto_0
 .end method
@@ -136,7 +136,7 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iput-wide v0, p0, Lcom/amap/api/maps/model/LatLng;->c:D
 
     :goto_0
     const-wide v0, -0x3fa9800000000000L
@@ -155,7 +155,7 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iput-wide v0, p0, Lcom/amap/api/maps/model/LatLng;->b:D
 
     :goto_1
     return-void
@@ -175,14 +175,14 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iput-wide v0, p0, Lcom/amap/api/maps/model/LatLng;->c:D
 
     goto :goto_0
 
     :cond_1
-    iput-wide p1, p0, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iput-wide p1, p0, Lcom/amap/api/maps/model/LatLng;->b:D
 
-    iput-wide p3, p0, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iput-wide p3, p0, Lcom/amap/api/maps/model/LatLng;->c:D
 
     goto :goto_1
 .end method
@@ -190,7 +190,7 @@
 .method private static a(D)D
     .locals 2
 
-    sget-object v0, Lcom/amap/api/maps/model/LatLng;->a:Ljava/text/DecimalFormat;
+    sget-object v0, Lcom/amap/api/maps/model/LatLng;->d:Ljava/text/DecimalFormat;
 
     invoke-virtual {v0, p0, p1}, Ljava/text/DecimalFormat;->format(D)Ljava/lang/String;
 
@@ -205,24 +205,24 @@
 
 
 # virtual methods
-.method public clone()Lcom/amap/api/maps/model/LatLng;
+.method public a()Lcom/amap/api/maps/model/LatLng;
     .locals 5
 
     new-instance v0, Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v1, p0, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v1, p0, Lcom/amap/api/maps/model/LatLng;->b:D
 
-    iget-wide v3, p0, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iget-wide v3, p0, Lcom/amap/api/maps/model/LatLng;->c:D
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     return-object v0
 .end method
 
-.method public bridge synthetic clone()Ljava/lang/Object;
+.method public synthetic clone()Ljava/lang/Object;
     .locals 1
 
-    invoke-virtual {p0}, Lcom/amap/api/maps/model/LatLng;->clone()Lcom/amap/api/maps/model/LatLng;
+    invoke-virtual {p0}, Lcom/amap/api/maps/model/LatLng;->a()Lcom/amap/api/maps/model/LatLng;
 
     move-result-object v0
 
@@ -262,13 +262,13 @@
     :cond_2
     check-cast p1, Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v2, p0, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v2, p0, Lcom/amap/api/maps/model/LatLng;->b:D
 
     invoke-static {v2, v3}, Ljava/lang/Double;->doubleToLongBits(D)J
 
     move-result-wide v2
 
-    iget-wide v4, p1, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v4, p1, Lcom/amap/api/maps/model/LatLng;->b:D
 
     invoke-static {v4, v5}, Ljava/lang/Double;->doubleToLongBits(D)J
 
@@ -278,13 +278,13 @@
 
     if-nez v2, :cond_3
 
-    iget-wide v2, p0, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iget-wide v2, p0, Lcom/amap/api/maps/model/LatLng;->c:D
 
     invoke-static {v2, v3}, Ljava/lang/Double;->doubleToLongBits(D)J
 
     move-result-wide v2
 
-    iget-wide v4, p1, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iget-wide v4, p1, Lcom/amap/api/maps/model/LatLng;->c:D
 
     invoke-static {v4, v5}, Ljava/lang/Double;->doubleToLongBits(D)J
 
@@ -307,7 +307,7 @@
 
     const/16 v0, 0x1f
 
-    iget-wide v1, p0, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v1, p0, Lcom/amap/api/maps/model/LatLng;->b:D
 
     invoke-static {v1, v2}, Ljava/lang/Double;->doubleToLongBits(D)J
 
@@ -321,7 +321,7 @@
 
     add-int/lit8 v1, v1, 0x1f
 
-    iget-wide v2, p0, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iget-wide v2, p0, Lcom/amap/api/maps/model/LatLng;->c:D
 
     invoke-static {v2, v3}, Ljava/lang/Double;->doubleToLongBits(D)J
 
@@ -353,7 +353,7 @@
 
     move-result-object v0
 
-    iget-wide v1, p0, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v1, p0, Lcom/amap/api/maps/model/LatLng;->b:D
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
@@ -365,7 +365,7 @@
 
     move-result-object v0
 
-    iget-wide v1, p0, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iget-wide v1, p0, Lcom/amap/api/maps/model/LatLng;->c:D
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
@@ -387,11 +387,11 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
 
-    iget-wide v0, p0, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iget-wide v0, p0, Lcom/amap/api/maps/model/LatLng;->c:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
-    iget-wide v0, p0, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v0, p0, Lcom/amap/api/maps/model/LatLng;->b:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 

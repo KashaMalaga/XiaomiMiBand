@@ -3,7 +3,7 @@
 
 
 # static fields
-.field private static a:Landroid/content/SharedPreferences;
+.field private static defaultPerferences:Landroid/content/SharedPreferences;
 
 
 # direct methods
@@ -12,15 +12,15 @@
 
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/stat/common/StatPreferences;->a:Landroid/content/SharedPreferences;
+    sput-object v0, Lcom/tencent/stat/common/StatPreferences;->defaultPerferences:Landroid/content/SharedPreferences;
 
     return-void
 .end method
 
-.method static a(Landroid/content/Context;)Landroid/content/SharedPreferences;
+.method static getInstance(Landroid/content/Context;)Landroid/content/SharedPreferences;
     .locals 1
 
-    sget-object v0, Lcom/tencent/stat/common/StatPreferences;->a:Landroid/content/SharedPreferences;
+    sget-object v0, Lcom/tencent/stat/common/StatPreferences;->defaultPerferences:Landroid/content/SharedPreferences;
 
     if-nez v0, :cond_0
 
@@ -28,10 +28,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/stat/common/StatPreferences;->a:Landroid/content/SharedPreferences;
+    sput-object v0, Lcom/tencent/stat/common/StatPreferences;->defaultPerferences:Landroid/content/SharedPreferences;
 
     :cond_0
-    sget-object v0, Lcom/tencent/stat/common/StatPreferences;->a:Landroid/content/SharedPreferences;
+    sget-object v0, Lcom/tencent/stat/common/StatPreferences;->defaultPerferences:Landroid/content/SharedPreferences;
 
     return-object v0
 .end method
@@ -57,7 +57,7 @@
 
     move-result-object v0
 
-    invoke-static {p0}, Lcom/tencent/stat/common/StatPreferences;->a(Landroid/content/Context;)Landroid/content/SharedPreferences;
+    invoke-static {p0}, Lcom/tencent/stat/common/StatPreferences;->getInstance(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
@@ -89,7 +89,7 @@
 
     move-result-object v0
 
-    invoke-static {p0}, Lcom/tencent/stat/common/StatPreferences;->a(Landroid/content/Context;)Landroid/content/SharedPreferences;
+    invoke-static {p0}, Lcom/tencent/stat/common/StatPreferences;->getInstance(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
@@ -121,7 +121,7 @@
 
     move-result-object v0
 
-    invoke-static {p0}, Lcom/tencent/stat/common/StatPreferences;->a(Landroid/content/Context;)Landroid/content/SharedPreferences;
+    invoke-static {p0}, Lcom/tencent/stat/common/StatPreferences;->getInstance(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
@@ -157,7 +157,7 @@
 
     move-result-object v0
 
-    invoke-static {p0}, Lcom/tencent/stat/common/StatPreferences;->a(Landroid/content/Context;)Landroid/content/SharedPreferences;
+    invoke-static {p0}, Lcom/tencent/stat/common/StatPreferences;->getInstance(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 

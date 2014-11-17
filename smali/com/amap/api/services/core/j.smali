@@ -11,434 +11,253 @@
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;Ljava/net/Proxy;)Ljava/net/HttpURLConnection;
+.method public static a(Landroid/content/Context;)Ljava/security/PublicKey;
     .locals 3
 
-    if-nez p0, :cond_0
-
-    new-instance v0, Lcom/amap/api/services/core/AMapException;
-
-    const-string v1, "\u65e0\u6548\u7684\u53c2\u6570 - IllegalArgumentException"
-
-    invoke-direct {v0, v1}, Lcom/amap/api/services/core/AMapException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
-    :try_start_0
-    new-instance v0, Ljava/net/URL;
-
-    invoke-direct {v0, p0}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {v0, p1}, Ljava/net/URL;->openConnection(Ljava/net/Proxy;)Ljava/net/URLConnection;
+    invoke-virtual {p0}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
     move-result-object v0
 
-    check-cast v0, Ljava/net/HttpURLConnection;
+    :try_start_0
+    const-string v1, "search_public_key.der"
+
+    invoke-virtual {v0, v1}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
+
+    move-result-object v0
+
+    const-string v1, "X.509"
+
+    invoke-static {v1}, Ljava/security/cert/CertificateFactory;->getInstance(Ljava/lang/String;)Ljava/security/cert/CertificateFactory;
+
+    move-result-object v1
+
+    const-string v2, "RSA"
+
+    invoke-static {v2}, Ljava/security/KeyFactory;->getInstance(Ljava/lang/String;)Ljava/security/KeyFactory;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v0}, Ljava/security/cert/CertificateFactory;->generateCertificate(Ljava/io/InputStream;)Ljava/security/cert/Certificate;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
+
+    new-instance v0, Ljava/security/spec/X509EncodedKeySpec;
+
+    invoke-virtual {v1}, Ljava/security/cert/Certificate;->getPublicKey()Ljava/security/PublicKey;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/security/PublicKey;->getEncoded()[B
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/security/spec/X509EncodedKeySpec;-><init>([B)V
+
+    invoke-virtual {v2, v0}, Ljava/security/KeyFactory;->generatePublic(Ljava/security/spec/KeySpec;)Ljava/security/PublicKey;
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_4
+    .catch Ljava/security/cert/CertificateException; {:try_start_0 .. :try_end_0} :catch_3
+    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/security/spec/InvalidKeySpecException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_2
+
+    move-result-object v0
 
     :goto_0
-    const-string v1, "GET"
-
-    invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
-
-    const/16 v1, 0x7530
-
-    invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
-
-    const v1, 0xc350
-
-    invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setReadTimeout(I)V
-
-    const-string v1, "Accept-Encoding"
-
-    const-string v2, "gzip"
-
-    invoke-virtual {v0, v1, v2}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "User-Agent"
-
-    const-string v2, "AMAP SDK Android Search 2.3.0"
-
-    invoke-virtual {v0, v1, v2}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "X-INFO"
-
-    const/4 v2, 0x0
-
-    invoke-static {v2}, Lcom/amap/api/services/core/d;->a(Landroid/content/Context;)Lcom/amap/api/services/core/d;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/amap/api/services/core/d;->a()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "ia"
-
-    const-string v2, "1"
-
-    invoke-virtual {v0, v1, v2}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "ec"
-
-    const-string v2, "1"
-
-    invoke-virtual {v0, v1, v2}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "key"
-
-    const/4 v2, 0x0
-
-    invoke-static {v2}, Lcom/amap/api/services/core/d;->a(Landroid/content/Context;)Lcom/amap/api/services/core/d;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/amap/api/services/core/d;->f()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Ljava/net/HttpURLConnection;->connect()V
-
-    invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getResponseCode()I
-
-    move-result v1
-
-    const/16 v2, 0xc8
-
-    if-eq v1, v2, :cond_2
-
-    new-instance v0, Lcom/amap/api/services/core/AMapException;
-
-    const-string v1, "http\u8fde\u63a5\u5931\u8d25 - ConnectionException"
-
-    invoke-direct {v0, v1}, Lcom/amap/api/services/core/AMapException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-    :try_end_0
-    .catch Ljava/net/UnknownHostException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/net/MalformedURLException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/net/ProtocolException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/net/SocketTimeoutException; {:try_start_0 .. :try_end_0} :catch_3
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_4
+    return-object v0
 
     :catch_0
     move-exception v0
 
-    new-instance v0, Lcom/amap/api/services/core/AMapException;
+    new-instance v0, Ljava/lang/Exception;
 
-    const-string v1, "\u672a\u77e5\u4e3b\u673a - UnKnowHostException"
+    const-string v1, "\u65e0\u6b64\u7b97\u6cd5"
 
-    invoke-direct {v0, v1}, Lcom/amap/api/services/core/AMapException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    :cond_1
-    :try_start_1
-    invoke-virtual {v0}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
+    :catch_1
+    move-exception v0
+
+    new-instance v0, Ljava/lang/Exception;
+
+    const-string v1, "\u516c\u94a5\u975e\u6cd5"
+
+    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :catch_2
+    move-exception v0
+
+    new-instance v0, Ljava/lang/Exception;
+
+    const-string v1, "\u516c\u94a5\u6570\u636e\u4e3a\u7a7a"
+
+    invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :catch_3
+    move-exception v0
+
+    :goto_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :catch_4
+    move-exception v0
+
+    goto :goto_1
+.end method
+
+.method public static a([B)[B
+    .locals 4
+
+    const/4 v1, 0x0
+
+    :try_start_0
+    new-instance v2, Ljava/io/ByteArrayOutputStream;
+
+    invoke-direct {v2}, Ljava/io/ByteArrayOutputStream;-><init>()V
+
+    new-instance v0, Ljava/util/zip/GZIPOutputStream;
+
+    invoke-direct {v0, v2}, Ljava/util/zip/GZIPOutputStream;-><init>(Ljava/io/OutputStream;)V
+
+    invoke-virtual {v0, p0}, Ljava/util/zip/GZIPOutputStream;->write([B)V
+
+    invoke-virtual {v0}, Ljava/util/zip/GZIPOutputStream;->finish()V
+
+    invoke-virtual {v0}, Ljava/util/zip/GZIPOutputStream;->close()V
+
+    invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v0
 
-    check-cast v0, Ljava/net/HttpURLConnection;
+    :try_start_1
+    invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->close()V
     :try_end_1
-    .catch Ljava/net/UnknownHostException; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Ljava/net/MalformedURLException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljava/net/ProtocolException; {:try_start_1 .. :try_end_1} :catch_2
-    .catch Ljava/net/SocketTimeoutException; {:try_start_1 .. :try_end_1} :catch_3
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+
+    :goto_0
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    move-object v3, v0
+
+    move-object v0, v1
+
+    move-object v1, v3
+
+    :goto_1
+    invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
     :catch_1
-    move-exception v0
+    move-exception v1
 
-    new-instance v0, Lcom/amap/api/services/core/AMapException;
+    goto :goto_1
+.end method
 
-    const-string v1, "url\u5f02\u5e38 - MalformedURLException"
+.method public static a([BLjava/security/Key;)[B
+    .locals 2
 
-    invoke-direct {v0, v1}, Lcom/amap/api/services/core/AMapException;-><init>(Ljava/lang/String;)V
+    const-string v0, "RSA/ECB/PKCS1Padding"
 
-    throw v0
+    invoke-static {v0}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
 
-    :catch_2
-    move-exception v0
+    move-result-object v0
 
-    new-instance v0, Lcom/amap/api/services/core/AMapException;
+    const/4 v1, 0x1
 
-    const-string v1, "\u534f\u8bae\u89e3\u6790\u9519\u8bef - ProtocolException"
+    invoke-virtual {v0, v1, p1}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
 
-    invoke-direct {v0, v1}, Lcom/amap/api/services/core/AMapException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, p0}, Ljavax/crypto/Cipher;->doFinal([B)[B
 
-    throw v0
+    move-result-object v0
 
-    :catch_3
-    move-exception v0
-
-    new-instance v0, Lcom/amap/api/services/core/AMapException;
-
-    const-string v1, "socket \u8fde\u63a5\u8d85\u65f6 - SocketTimeoutException"
-
-    invoke-direct {v0, v1}, Lcom/amap/api/services/core/AMapException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :catch_4
-    move-exception v0
-
-    new-instance v0, Lcom/amap/api/services/core/AMapException;
-
-    const-string v1, "IO \u64cd\u4f5c\u5f02\u5e38 - IOException"
-
-    invoke-direct {v0, v1}, Lcom/amap/api/services/core/AMapException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_2
     return-object v0
 .end method
 
-.method public static a(Ljava/lang/String;[BLjava/net/Proxy;)Ljava/net/HttpURLConnection;
-    .locals 3
+.method static a([B[B)[B
+    .locals 4
 
-    if-nez p0, :cond_0
+    const/4 v0, 0x0
 
-    new-instance v0, Lcom/amap/api/services/core/AMapException;
-
-    const-string v1, "\u65e0\u6548\u7684\u53c2\u6570 - IllegalArgumentException"
-
-    invoke-direct {v0, v1}, Lcom/amap/api/services/core/AMapException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
     :try_start_0
-    new-instance v0, Ljava/net/URL;
+    new-instance v1, Ljavax/crypto/spec/SecretKeySpec;
 
-    invoke-direct {v0, p0}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
+    const-string v2, "AES"
 
-    if-eqz p2, :cond_1
+    invoke-direct {v1, p0, v2}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
 
-    invoke-virtual {v0, p2}, Ljava/net/URL;->openConnection(Ljava/net/Proxy;)Ljava/net/URLConnection;
+    const-string v2, "AES/ECB/PKCS5Padding"
+
+    invoke-static {v2}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
+
+    move-result-object v2
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v2, v3, v1}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
+
+    invoke-virtual {v2, p1}, Ljavax/crypto/Cipher;->doFinal([B)[B
+    :try_end_0
+    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljavax/crypto/NoSuchPaddingException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_2
 
     move-result-object v0
-
-    check-cast v0, Ljava/net/HttpURLConnection;
 
     :goto_0
-    const-string v1, "POST"
-
-    invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setInstanceFollowRedirects(Z)V
-
-    const/16 v1, 0x7530
-
-    invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
-
-    const v1, 0xc350
-
-    invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setReadTimeout(I)V
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setDoInput(Z)V
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setDoOutput(Z)V
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setUseCaches(Z)V
-
-    const-string v1, "Content-Type"
-
-    const-string v2, "application/x-www-form-urlencoded"
-
-    invoke-virtual {v0, v1, v2}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "Content-Length"
-
-    array-length v2, p1
-
-    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "Accept-Encoding"
-
-    const-string v2, "gzip"
-
-    invoke-virtual {v0, v1, v2}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "Connection"
-
-    const-string v2, "Keep-Alive"
-
-    invoke-virtual {v0, v1, v2}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "User-Agent"
-
-    const-string v2, "AMAP SDK Android Search 2.3.0"
-
-    invoke-virtual {v0, v1, v2}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "X-INFO"
-
-    const/4 v2, 0x0
-
-    invoke-static {v2}, Lcom/amap/api/services/core/d;->a(Landroid/content/Context;)Lcom/amap/api/services/core/d;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/amap/api/services/core/d;->a()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "ia"
-
-    const-string v2, "1"
-
-    invoke-virtual {v0, v1, v2}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "ec"
-
-    const-string v2, "1"
-
-    invoke-virtual {v0, v1, v2}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "key"
-
-    const/4 v2, 0x0
-
-    invoke-static {v2}, Lcom/amap/api/services/core/d;->a(Landroid/content/Context;)Lcom/amap/api/services/core/d;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/amap/api/services/core/d;->f()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Ljava/net/HttpURLConnection;->connect()V
-
-    invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getOutputStream()Ljava/io/OutputStream;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/io/OutputStream;->write([B)V
-
-    invoke-virtual {v1}, Ljava/io/OutputStream;->flush()V
-
-    invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
-
-    invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getResponseCode()I
-
-    move-result v1
-
-    const/16 v2, 0xc8
-
-    if-eq v1, v2, :cond_2
-
-    new-instance v0, Lcom/amap/api/services/core/AMapException;
-
-    const-string v1, "http\u8fde\u63a5\u5931\u8d25 - ConnectionException"
-
-    invoke-direct {v0, v1}, Lcom/amap/api/services/core/AMapException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-    :try_end_0
-    .catch Ljava/net/UnknownHostException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/net/MalformedURLException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/net/ProtocolException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/net/SocketTimeoutException; {:try_start_0 .. :try_end_0} :catch_3
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_4
+    return-object v0
 
     :catch_0
-    move-exception v0
+    move-exception v1
 
-    new-instance v0, Lcom/amap/api/services/core/AMapException;
+    invoke-virtual {v1}, Ljava/security/NoSuchAlgorithmException;->printStackTrace()V
 
-    const-string v1, "\u672a\u77e5\u4e3b\u673a - UnKnowHostException"
+    goto :goto_0
 
-    invoke-direct {v0, v1}, Lcom/amap/api/services/core/AMapException;-><init>(Ljava/lang/String;)V
+    :catch_1
+    move-exception v1
 
-    throw v0
+    invoke-virtual {v1}, Ljavax/crypto/NoSuchPaddingException;->printStackTrace()V
 
-    :cond_1
-    :try_start_1
-    invoke-virtual {v0}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
+    goto :goto_0
+
+    :catch_2
+    move-exception v1
+
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
+
+    goto :goto_0
+.end method
+
+.method public static b([B)Ljava/lang/String;
+    .locals 1
+
+    if-eqz p0, :cond_0
+
+    invoke-static {p0}, Lcom/amap/api/services/core/c;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ljava/net/HttpURLConnection;
-    :try_end_1
-    .catch Ljava/net/UnknownHostException; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Ljava/net/MalformedURLException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljava/net/ProtocolException; {:try_start_1 .. :try_end_1} :catch_2
-    .catch Ljava/net/SocketTimeoutException; {:try_start_1 .. :try_end_1} :catch_3
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
-
-    goto/16 :goto_0
-
-    :catch_1
-    move-exception v0
-
-    new-instance v0, Lcom/amap/api/services/core/AMapException;
-
-    const-string v1, "url\u5f02\u5e38 - MalformedURLException"
-
-    invoke-direct {v0, v1}, Lcom/amap/api/services/core/AMapException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :catch_2
-    move-exception v0
-
-    new-instance v0, Lcom/amap/api/services/core/AMapException;
-
-    const-string v1, "\u534f\u8bae\u89e3\u6790\u9519\u8bef - ProtocolException"
-
-    invoke-direct {v0, v1}, Lcom/amap/api/services/core/AMapException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :catch_3
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/net/SocketTimeoutException;->printStackTrace()V
-
-    new-instance v0, Lcom/amap/api/services/core/AMapException;
-
-    const-string v1, "socket \u8fde\u63a5\u8d85\u65f6 - SocketTimeoutException"
-
-    invoke-direct {v0, v1}, Lcom/amap/api/services/core/AMapException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :catch_4
-    move-exception v0
-
-    new-instance v0, Lcom/amap/api/services/core/AMapException;
-
-    const-string v1, "IO \u64cd\u4f5c\u5f02\u5e38 - IOException"
-
-    invoke-direct {v0, v1}, Lcom/amap/api/services/core/AMapException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_2
+    :goto_0
     return-object v0
+
+    :cond_0
+    const-string v0, ""
+
+    goto :goto_0
 .end method

@@ -2,18 +2,12 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
-
-
-# instance fields
-.field final synthetic a:Landroid/support/v4/view/PagerTabStrip;
+.implements Landroid/support/v4/view/S;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/view/PagerTabStrip;)V
+.method constructor <init>()V
     .locals 0
-
-    iput-object p1, p0, Landroid/support/v4/view/O;->a:Landroid/support/v4/view/PagerTabStrip;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,24 +16,58 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 2
+.method public a(Landroid/view/MenuItem;Landroid/support/v4/view/T;)Landroid/view/MenuItem;
+    .locals 0
 
-    iget-object v0, p0, Landroid/support/v4/view/O;->a:Landroid/support/v4/view/PagerTabStrip;
+    return-object p1
+.end method
 
-    iget-object v0, v0, Landroid/support/v4/view/PagerTabStrip;->a:Landroid/support/v4/view/ViewPager;
+.method public a(Landroid/view/MenuItem;Landroid/view/View;)Landroid/view/MenuItem;
+    .locals 0
 
-    iget-object v1, p0, Landroid/support/v4/view/O;->a:Landroid/support/v4/view/PagerTabStrip;
+    return-object p1
+.end method
 
-    iget-object v1, v1, Landroid/support/v4/view/PagerTabStrip;->a:Landroid/support/v4/view/ViewPager;
+.method public a(Landroid/view/MenuItem;)Landroid/view/View;
+    .locals 1
 
-    invoke-virtual {v1}, Landroid/support/v4/view/ViewPager;->getCurrentItem()I
+    const/4 v0, 0x0
 
-    move-result v1
+    return-object v0
+.end method
 
-    add-int/lit8 v1, v1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPager;->setCurrentItem(I)V
+.method public a(Landroid/view/MenuItem;I)V
+    .locals 0
 
     return-void
+.end method
+
+.method public b(Landroid/view/MenuItem;I)Landroid/view/MenuItem;
+    .locals 0
+
+    return-object p1
+.end method
+
+.method public b(Landroid/view/MenuItem;)Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public c(Landroid/view/MenuItem;)Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public d(Landroid/view/MenuItem;)Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
 .end method

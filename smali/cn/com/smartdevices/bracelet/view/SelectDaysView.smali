@@ -11,7 +11,7 @@
 
 .field private d:[Ljava/lang/String;
 
-.field private e:Lcn/com/smartdevices/bracelet/view/WeekAdapter;
+.field private e:Lcn/com/smartdevices/bracelet/view/X;
 
 
 # direct methods
@@ -50,13 +50,13 @@
 
     move-result-object v0
 
-    const v1, 0x7f030076
+    const v1, 0x7f03007a
 
     invoke-virtual {v0, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v1
 
-    const v0, 0x7f070208
+    const v0, 0x7f070218
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -73,46 +73,46 @@
 
 
 # virtual methods
-.method public getDays()I
+.method public a()I
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->e:Lcn/com/smartdevices/bracelet/view/WeekAdapter;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->e:Lcn/com/smartdevices/bracelet/view/X;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/view/WeekAdapter;->getDays()I
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/view/X;->a()I
 
     move-result v0
 
     return v0
 .end method
 
-.method public setAdapter(Lcn/com/smartdevices/bracelet/view/WeekAdapter;)V
+.method public a(I)V
     .locals 1
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->e:Lcn/com/smartdevices/bracelet/view/WeekAdapter;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->e:Lcn/com/smartdevices/bracelet/view/X;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->a:Landroid/widget/ListView;
-
-    invoke-virtual {v0, p1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/view/X;->a(I)V
 
     return-void
 .end method
 
-.method public setDays(I)V
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->e:Lcn/com/smartdevices/bracelet/view/WeekAdapter;
-
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/view/WeekAdapter;->setDays(I)V
-
-    return-void
-.end method
-
-.method public setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
+.method public a(Landroid/widget/AdapterView$OnItemClickListener;)V
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->a:Landroid/widget/ListView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
+
+    return-void
+.end method
+
+.method public a(Lcn/com/smartdevices/bracelet/view/X;)V
+    .locals 1
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->e:Lcn/com/smartdevices/bracelet/view/X;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->a:Landroid/widget/ListView;
+
+    invoke-virtual {v0, p1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     return-void
 .end method

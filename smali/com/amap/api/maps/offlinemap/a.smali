@@ -1,24 +1,15 @@
-.class final Lcom/amap/api/maps/offlinemap/a;
+.class public Lcom/amap/api/maps/offlinemap/a;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Landroid/os/Parcelable$Creator;
 
+# instance fields
+.field a:Z
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Landroid/os/Parcelable$Creator",
-        "<",
-        "Lcom/amap/api/maps/offlinemap/City;",
-        ">;"
-    }
-.end annotation
+.field b:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,40 +19,34 @@
 
 
 # virtual methods
-.method public a(Landroid/os/Parcel;)Lcom/amap/api/maps/offlinemap/City;
-    .locals 1
+.method public a(Ljava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Lcom/amap/api/maps/offlinemap/City;
+    iput-object p1, p0, Lcom/amap/api/maps/offlinemap/a;->b:Ljava/lang/String;
 
-    invoke-direct {v0, p1}, Lcom/amap/api/maps/offlinemap/City;-><init>(Landroid/os/Parcel;)V
-
-    return-object v0
+    return-void
 .end method
 
-.method public a(I)[Lcom/amap/api/maps/offlinemap/City;
-    .locals 1
+.method public a(Z)V
+    .locals 0
 
-    new-array v0, p1, [Lcom/amap/api/maps/offlinemap/City;
+    iput-boolean p1, p0, Lcom/amap/api/maps/offlinemap/a;->a:Z
 
-    return-object v0
+    return-void
 .end method
 
-.method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+.method public a()Z
     .locals 1
 
-    invoke-virtual {p0, p1}, Lcom/amap/api/maps/offlinemap/a;->a(Landroid/os/Parcel;)Lcom/amap/api/maps/offlinemap/City;
+    iget-boolean v0, p0, Lcom/amap/api/maps/offlinemap/a;->a:Z
 
-    move-result-object v0
-
-    return-object v0
+    return v0
 .end method
 
-.method public synthetic newArray(I)[Ljava/lang/Object;
+.method public b()Ljava/lang/String;
     .locals 1
 
-    invoke-virtual {p0, p1}, Lcom/amap/api/maps/offlinemap/a;->a(I)[Lcom/amap/api/maps/offlinemap/City;
-
-    move-result-object v0
+    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/a;->b:Ljava/lang/String;
 
     return-object v0
 .end method

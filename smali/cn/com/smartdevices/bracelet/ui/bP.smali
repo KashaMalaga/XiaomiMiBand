@@ -1,41 +1,28 @@
 .class Lcn/com/smartdevices/bracelet/ui/bP;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Lcom/tencent/tauth/IUiListener;
-
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/ShareActivity;
+.field a:Landroid/widget/TextView;
+
+.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/bO;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/ShareActivity;)V
+.method private constructor <init>(Lcn/com/smartdevices/bracelet/ui/bO;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bP;->a:Lcn/com/smartdevices/bracelet/ui/ShareActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bP;->b:Lcn/com/smartdevices/bracelet/ui/bO;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public onCancel()V
+.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/ui/bO;Lcn/com/smartdevices/bracelet/ui/bP;)V
     .locals 0
 
-    return-void
-.end method
-
-.method public onComplete(Ljava/lang/Object;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onError(Lcom/tencent/tauth/UiError;)V
-    .locals 0
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/ui/bP;-><init>(Lcn/com/smartdevices/bracelet/ui/bO;)V
 
     return-void
 .end method

@@ -1,5 +1,17 @@
-.class Landroid/support/v4/view/ax;
+.class Landroid/support/v4/view/aX;
 .super Ljava/lang/Object;
+
+
+# instance fields
+.field a:Ljava/lang/Object;
+
+.field b:I
+
+.field c:Z
+
+.field d:F
+
+.field e:F
 
 
 # direct methods
@@ -9,14 +21,4 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-.end method
-
-.method public static a(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
-    .locals 1
-
-    invoke-virtual {p0, p1, p2}, Landroid/view/ViewGroup;->onRequestSendAccessibilityEvent(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
-
-    move-result v0
-
-    return v0
 .end method

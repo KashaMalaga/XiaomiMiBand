@@ -20,15 +20,15 @@
 
     invoke-direct {p0, p1, p2}, Lcom/tencent/connect/common/BaseApi;-><init>(Landroid/content/Context;Lcom/tencent/connect/auth/QQToken;)V
 
-    new-instance v0, Lcom/tencent/connect/auth/a;
+    new-instance v0, Lcom/tencent/connect/auth/AuthAgent$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/connect/auth/a;-><init>(Lcom/tencent/connect/auth/AuthAgent;)V
+    invoke-direct {v0, p0}, Lcom/tencent/connect/auth/AuthAgent$1;-><init>(Lcom/tencent/connect/auth/AuthAgent;)V
 
     iput-object v0, p0, Lcom/tencent/connect/auth/AuthAgent;->d:Lcom/tencent/tauth/IUiListener;
 
-    new-instance v0, Lcom/tencent/connect/auth/b;
+    new-instance v0, Lcom/tencent/connect/auth/AuthAgent$2;
 
-    invoke-direct {v0, p0}, Lcom/tencent/connect/auth/b;-><init>(Lcom/tencent/connect/auth/AuthAgent;)V
+    invoke-direct {v0, p0}, Lcom/tencent/connect/auth/AuthAgent$2;-><init>(Lcom/tencent/connect/auth/AuthAgent;)V
 
     iput-object v0, p0, Lcom/tencent/connect/auth/AuthAgent;->e:Landroid/os/Handler;
 
@@ -248,7 +248,7 @@
 
     move-result-object v7
 
-    new-instance v0, Lcom/tencent/connect/auth/i;
+    new-instance v0, Lcom/tencent/connect/auth/AuthAgent$TokenListener;
 
     iget-object v2, p0, Lcom/tencent/connect/auth/AuthAgent;->mContext:Landroid/content/Context;
 
@@ -260,7 +260,7 @@
 
     move-object v3, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/tencent/connect/auth/i;-><init>(Lcom/tencent/connect/auth/AuthAgent;Landroid/content/Context;Lcom/tencent/tauth/IUiListener;ZZ)V
+    invoke-direct/range {v0 .. v5}, Lcom/tencent/connect/auth/AuthAgent$TokenListener;-><init>(Lcom/tencent/connect/auth/AuthAgent;Landroid/content/Context;Lcom/tencent/tauth/IUiListener;ZZ)V
 
     const-string v1, "openSDK_LOG"
 
@@ -369,9 +369,9 @@
 
     const-string v4, "POST"
 
-    new-instance v5, Lcom/tencent/connect/auth/h;
+    new-instance v5, Lcom/tencent/connect/auth/AuthAgent$RequestListener;
 
-    invoke-direct {v5, p0}, Lcom/tencent/connect/auth/h;-><init>(Lcom/tencent/connect/auth/AuthAgent;)V
+    invoke-direct {v5, p0}, Lcom/tencent/connect/auth/AuthAgent$RequestListener;-><init>(Lcom/tencent/connect/auth/AuthAgent;)V
 
     invoke-static/range {v0 .. v5}, Lcom/tencent/utils/HttpUtils;->requestAsync(Lcom/tencent/connect/auth/QQToken;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/String;Lcom/tencent/tauth/IRequestListener;)V
 
@@ -557,11 +557,11 @@
 
     if-eqz v0, :cond_2
 
-    new-instance v0, Lcom/tencent/connect/auth/c;
+    new-instance v0, Lcom/tencent/connect/auth/AuthAgent$FeedConfirmListener;
 
     iget-object v1, p0, Lcom/tencent/connect/auth/AuthAgent;->a:Lcom/tencent/tauth/IUiListener;
 
-    invoke-direct {v0, p0, v1}, Lcom/tencent/connect/auth/c;-><init>(Lcom/tencent/connect/auth/AuthAgent;Lcom/tencent/tauth/IUiListener;)V
+    invoke-direct {v0, p0, v1}, Lcom/tencent/connect/auth/AuthAgent$FeedConfirmListener;-><init>(Lcom/tencent/connect/auth/AuthAgent;Lcom/tencent/tauth/IUiListener;)V
 
     iput-object v0, p0, Lcom/tencent/connect/auth/AuthAgent;->a:Lcom/tencent/tauth/IUiListener;
 
@@ -946,11 +946,11 @@
     goto :goto_1
 
     :cond_4
-    new-instance v0, Lcom/tencent/connect/auth/c;
+    new-instance v0, Lcom/tencent/connect/auth/AuthAgent$FeedConfirmListener;
 
     iget-object v1, p0, Lcom/tencent/connect/auth/AuthAgent;->a:Lcom/tencent/tauth/IUiListener;
 
-    invoke-direct {v0, p0, v1}, Lcom/tencent/connect/auth/c;-><init>(Lcom/tencent/connect/auth/AuthAgent;Lcom/tencent/tauth/IUiListener;)V
+    invoke-direct {v0, p0, v1}, Lcom/tencent/connect/auth/AuthAgent$FeedConfirmListener;-><init>(Lcom/tencent/connect/auth/AuthAgent;Lcom/tencent/tauth/IUiListener;)V
 
     iput-object v0, p0, Lcom/tencent/connect/auth/AuthAgent;->a:Lcom/tencent/tauth/IUiListener;
 

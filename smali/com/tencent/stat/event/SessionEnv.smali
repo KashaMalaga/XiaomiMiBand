@@ -3,9 +3,9 @@
 
 
 # instance fields
-.field private a:Lcom/tencent/stat/common/Env;
+.field private cfgJson:Lorg/json/JSONObject;
 
-.field private b:Lorg/json/JSONObject;
+.field private env:Lcom/tencent/stat/common/Env;
 
 
 # direct methods
@@ -16,15 +16,15 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/stat/event/SessionEnv;->b:Lorg/json/JSONObject;
+    iput-object v0, p0, Lcom/tencent/stat/event/SessionEnv;->cfgJson:Lorg/json/JSONObject;
 
     new-instance v0, Lcom/tencent/stat/common/Env;
 
     invoke-direct {v0, p1}, Lcom/tencent/stat/common/Env;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/tencent/stat/event/SessionEnv;->a:Lcom/tencent/stat/common/Env;
+    iput-object v0, p0, Lcom/tencent/stat/event/SessionEnv;->env:Lcom/tencent/stat/common/Env;
 
-    iput-object p3, p0, Lcom/tencent/stat/event/SessionEnv;->b:Lorg/json/JSONObject;
+    iput-object p3, p0, Lcom/tencent/stat/event/SessionEnv;->cfgJson:Lorg/json/JSONObject;
 
     return-void
 .end method
@@ -52,18 +52,18 @@
 
     invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    iget-object v0, p0, Lcom/tencent/stat/event/SessionEnv;->b:Lorg/json/JSONObject;
+    iget-object v0, p0, Lcom/tencent/stat/event/SessionEnv;->cfgJson:Lorg/json/JSONObject;
 
     if-eqz v0, :cond_0
 
     const-string v0, "cfg"
 
-    iget-object v1, p0, Lcom/tencent/stat/event/SessionEnv;->b:Lorg/json/JSONObject;
+    iget-object v1, p0, Lcom/tencent/stat/event/SessionEnv;->cfgJson:Lorg/json/JSONObject;
 
     invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/stat/event/SessionEnv;->a:Lcom/tencent/stat/common/Env;
+    iget-object v0, p0, Lcom/tencent/stat/event/SessionEnv;->env:Lcom/tencent/stat/common/Env;
 
     invoke-virtual {v0, p1}, Lcom/tencent/stat/common/Env;->encode(Lorg/json/JSONObject;)V
 

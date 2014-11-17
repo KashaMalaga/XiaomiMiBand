@@ -1,202 +1,247 @@
-.class Lcom/xiaomi/market/sdk/w;
-.super Ljava/lang/Object;
+.class public Lcom/xiaomi/market/sdk/w;
+.super Landroid/database/sqlite/SQLiteOpenHelper;
 
 
-# instance fields
-.field a:Ljava/lang/String;
+# static fields
+.field static final a:Ljava/lang/String; = "xiaomi_market_sdk_update.db"
 
-.field b:I
+.field static final b:I = 0x1
 
-.field c:Ljava/lang/String;
+.field private static c:Lcom/xiaomi/market/sdk/w; = null
 
-.field d:I
-
-.field e:Ljava/lang/String;
-
-.field f:Ljava/lang/String;
-
-.field g:Ljava/lang/String;
-
-.field h:J
-
-.field i:Ljava/lang/String;
-
-.field j:Ljava/lang/String;
-
-.field k:J
-
-.field l:I
+.field private static final d:Ljava/lang/String; = "MarketSDKDatabaseHelper"
 
 
 # direct methods
-.method constructor <init>()V
+.method private constructor <init>(Landroid/content/Context;)V
+    .locals 3
+
+    const-string v0, "xiaomi_market_sdk_update.db"
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    invoke-direct {p0, p1, v0, v1, v2}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
+
+    return-void
+.end method
+
+.method public static a(Landroid/content/Context;)Lcom/xiaomi/market/sdk/w;
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lcom/xiaomi/market/sdk/w;->c:Lcom/xiaomi/market/sdk/w;
 
-    const-string v0, ""
+    if-nez v0, :cond_0
 
-    iput-object v0, p0, Lcom/xiaomi/market/sdk/w;->i:Ljava/lang/String;
+    new-instance v0, Lcom/xiaomi/market/sdk/w;
 
-    const-string v0, ""
+    invoke-direct {v0, p0}, Lcom/xiaomi/market/sdk/w;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/xiaomi/market/sdk/w;->j:Ljava/lang/String;
+    sput-object v0, Lcom/xiaomi/market/sdk/w;->c:Lcom/xiaomi/market/sdk/w;
+
+    :cond_0
+    sget-object v0, Lcom/xiaomi/market/sdk/w;->c:Lcom/xiaomi/market/sdk/w;
+
+    return-object v0
+.end method
+
+.method private a(Landroid/database/sqlite/SQLiteDatabase;)V
+    .locals 1
+
+    const-string v0, "CREATE TABLE update_download (_id INTEGER PRIMARY KEY AUTOINCREMENT,package_name TEXT,download_id INTEGER, version_code INTEGER, apk_url TEXT, apk_hash TEXT, diff_url TEXT, diff_hash TEXT, apk_path TEXT, UNIQUE(package_name));"
+
+    invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public toString()Ljava/lang/String;
-    .locals 3
+.method public a(Landroid/content/ContentValues;)J
+    .locals 4
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "UpdateInfo:\nhost = "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcom/xiaomi/market/sdk/w;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0}, Lcom/xiaomi/market/sdk/w;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
-    const-string v1, "\nfitness = "
+    const-string v1, "INSERT OR REPLACE INTO update_download(package_name,download_id,version_code,apk_url,apk_hash,diff_url,diff_hash,apk_path) VALUES(?,?,?,?,?,?,?,?)"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v1, p0, Lcom/xiaomi/market/sdk/w;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Landroid/database/sqlite/SQLiteDatabase;->compileStatement(Ljava/lang/String;)Landroid/database/sqlite/SQLiteStatement;
 
     move-result-object v0
 
-    const-string v1, "\nupdateLog = "
+    const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, "package_name"
 
-    move-result-object v0
+    invoke-virtual {p1, v2}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/xiaomi/market/sdk/w;->c:Ljava/lang/String;
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2}, Landroid/database/sqlite/SQLiteStatement;->bindString(ILjava/lang/String;)V
 
-    move-result-object v0
+    const/4 v1, 0x2
 
-    const-string v1, "\nversionCode = "
+    const-string v2, "download_id"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v2}, Landroid/content/ContentValues;->getAsLong(Ljava/lang/String;)Ljava/lang/Long;
 
-    move-result-object v0
+    move-result-object v2
 
-    iget v1, p0, Lcom/xiaomi/market/sdk/w;->d:I
+    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result-wide v2
 
-    move-result-object v0
+    invoke-virtual {v0, v1, v2, v3}, Landroid/database/sqlite/SQLiteStatement;->bindLong(IJ)V
 
-    const-string v1, "\nversionName = "
+    const/4 v1, 0x3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, "version_code"
 
-    move-result-object v0
+    invoke-virtual {p1, v2}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
 
-    iget-object v1, p0, Lcom/xiaomi/market/sdk/w;->e:Ljava/lang/String;
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
-    move-result-object v0
+    move-result v2
 
-    const-string v1, "\napkUrl = "
+    int-to-long v2, v2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2, v3}, Landroid/database/sqlite/SQLiteStatement;->bindLong(IJ)V
 
-    move-result-object v0
+    const/4 v1, 0x4
 
-    iget-object v1, p0, Lcom/xiaomi/market/sdk/w;->f:Ljava/lang/String;
+    const-string v2, "apk_url"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v2}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v2
 
-    const-string v1, "\napkHash = "
+    invoke-virtual {v0, v1, v2}, Landroid/database/sqlite/SQLiteStatement;->bindString(ILjava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v1, 0x5
 
-    move-result-object v0
+    const-string v2, "apk_hash"
 
-    iget-object v1, p0, Lcom/xiaomi/market/sdk/w;->g:Ljava/lang/String;
+    invoke-virtual {p1, v2}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v2
 
-    move-result-object v0
+    invoke-virtual {v0, v1, v2}, Landroid/database/sqlite/SQLiteStatement;->bindString(ILjava/lang/String;)V
 
-    const-string v1, "\napkSize = "
+    const/4 v1, 0x6
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, "diff_url"
 
-    move-result-object v0
+    invoke-virtual {p1, v2}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
-    iget-wide v1, p0, Lcom/xiaomi/market/sdk/w;->h:J
+    move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2}, Landroid/database/sqlite/SQLiteStatement;->bindString(ILjava/lang/String;)V
 
-    move-result-object v0
+    const/4 v1, 0x7
 
-    const-string v1, "\ndiffUrl = "
+    const-string v2, "diff_hash"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, v2}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v2
 
-    iget-object v1, p0, Lcom/xiaomi/market/sdk/w;->i:Ljava/lang/String;
+    invoke-virtual {v0, v1, v2}, Landroid/database/sqlite/SQLiteStatement;->bindString(ILjava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/16 v1, 0x8
 
-    move-result-object v0
+    const-string v2, "apk_path"
 
-    const-string v1, "\ndiffHash = "
+    invoke-virtual {p1, v2}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v2
 
-    move-result-object v0
+    invoke-virtual {v0, v1, v2}, Landroid/database/sqlite/SQLiteStatement;->bindString(ILjava/lang/String;)V
 
-    iget-object v1, p0, Lcom/xiaomi/market/sdk/w;->j:Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteStatement;->execute()V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-wide/16 v0, 0x1
 
-    move-result-object v0
+    return-wide v0
+.end method
 
-    const-string v1, "\ndiffSize = "
+.method public declared-synchronized a(Ljava/lang/String;Landroid/content/ContentValues;)J
+    .locals 2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    monitor-enter p0
 
-    move-result-object v0
-
-    iget-wide v1, p0, Lcom/xiaomi/market/sdk/w;->k:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "\nsource = "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :try_start_0
+    invoke-virtual {p0}, Lcom/xiaomi/market/sdk/w;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
-    iget v1, p0, Lcom/xiaomi/market/sdk/w;->l:I
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1, v1, p2}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-result-wide v0
+
+    monitor-exit p0
+
+    return-wide v0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
+.method public a(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    .locals 8
+
+    invoke-virtual {p0}, Lcom/xiaomi/market/sdk/w;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    move-object v4, p4
+
+    move-object v5, p5
+
+    move-object v6, p6
+
+    move-object v7, p7
+
+    invoke-virtual/range {v0 .. v7}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public onCreate(Landroid/database/sqlite/SQLiteDatabase;)V
+    .locals 2
+
+    const-string v0, "MarketSDKDatabaseHelper"
+
+    const-string v1, "create database"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-direct {p0, p1}, Lcom/xiaomi/market/sdk/w;->a(Landroid/database/sqlite/SQLiteDatabase;)V
+
+    return-void
+.end method
+
+.method public onUpgrade(Landroid/database/sqlite/SQLiteDatabase;II)V
+    .locals 0
+
+    return-void
 .end method

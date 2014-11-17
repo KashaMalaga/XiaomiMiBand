@@ -1,41 +1,24 @@
 .class Landroid/support/v4/content/m;
-.super Ljava/lang/Object;
-
-
-# instance fields
-.field final a:Landroid/content/Intent;
-
-.field final b:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList",
-            "<",
-            "Landroid/support/v4/content/n;",
-            ">;"
-        }
-    .end annotation
-.end field
+.super Landroid/support/v4/content/l;
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Intent;Ljava/util/ArrayList;)V
+.method constructor <init>()V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/content/Intent;",
-            "Ljava/util/ArrayList",
-            "<",
-            "Landroid/support/v4/content/n;",
-            ">;)V"
-        }
-    .end annotation
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Landroid/support/v4/content/m;->a:Landroid/content/Intent;
-
-    iput-object p2, p0, Landroid/support/v4/content/m;->b:Ljava/util/ArrayList;
+    invoke-direct {p0}, Landroid/support/v4/content/l;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public a(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    .locals 1
+
+    invoke-static {p1, p2}, Landroid/support/v4/content/o;->a(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    move-result-object v0
+
+    return-object v0
 .end method

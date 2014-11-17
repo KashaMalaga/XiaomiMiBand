@@ -1,60 +1,42 @@
 .class Landroid/support/v4/widget/c;
-.super Landroid/database/DataSetObserver;
+.super Landroid/database/ContentObserver;
 
 
 # instance fields
-.field final synthetic a:Landroid/support/v4/widget/CursorAdapter;
+.field final synthetic a:Landroid/support/v4/widget/a;
 
 
 # direct methods
-.method private constructor <init>(Landroid/support/v4/widget/CursorAdapter;)V
-    .locals 0
+.method public constructor <init>(Landroid/support/v4/widget/a;)V
+    .locals 1
 
-    iput-object p1, p0, Landroid/support/v4/widget/c;->a:Landroid/support/v4/widget/CursorAdapter;
+    iput-object p1, p0, Landroid/support/v4/widget/c;->a:Landroid/support/v4/widget/a;
 
-    invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
+    new-instance v0, Landroid/os/Handler;
 
-    return-void
-.end method
+    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-.method synthetic constructor <init>(Landroid/support/v4/widget/CursorAdapter;Landroid/support/v4/widget/a;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Landroid/support/v4/widget/c;-><init>(Landroid/support/v4/widget/CursorAdapter;)V
+    invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onChanged()V
-    .locals 2
+.method public deliverSelfNotifications()Z
+    .locals 1
 
-    iget-object v0, p0, Landroid/support/v4/widget/c;->a:Landroid/support/v4/widget/CursorAdapter;
+    const/4 v0, 0x1
 
-    const/4 v1, 0x1
-
-    iput-boolean v1, v0, Landroid/support/v4/widget/CursorAdapter;->mDataValid:Z
-
-    iget-object v0, p0, Landroid/support/v4/widget/c;->a:Landroid/support/v4/widget/CursorAdapter;
-
-    invoke-virtual {v0}, Landroid/support/v4/widget/CursorAdapter;->notifyDataSetChanged()V
-
-    return-void
+    return v0
 .end method
 
-.method public onInvalidated()V
-    .locals 2
+.method public onChange(Z)V
+    .locals 1
 
-    iget-object v0, p0, Landroid/support/v4/widget/c;->a:Landroid/support/v4/widget/CursorAdapter;
+    iget-object v0, p0, Landroid/support/v4/widget/c;->a:Landroid/support/v4/widget/a;
 
-    const/4 v1, 0x0
-
-    iput-boolean v1, v0, Landroid/support/v4/widget/CursorAdapter;->mDataValid:Z
-
-    iget-object v0, p0, Landroid/support/v4/widget/c;->a:Landroid/support/v4/widget/CursorAdapter;
-
-    invoke-virtual {v0}, Landroid/support/v4/widget/CursorAdapter;->notifyDataSetInvalidated()V
+    invoke-virtual {v0}, Landroid/support/v4/widget/a;->c()V
 
     return-void
 .end method

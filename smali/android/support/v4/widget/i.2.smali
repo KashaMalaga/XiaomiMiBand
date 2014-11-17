@@ -1,19 +1,25 @@
-.class Landroid/support/v4/widget/i;
+.class final Landroid/support/v4/widget/i;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/os/Parcelable$Creator;
 
 
-# instance fields
-.field final synthetic a:Landroid/support/v4/widget/h;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator",
+        "<",
+        "Landroid/support/v4/widget/DrawerLayout$SavedState;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/widget/h;)V
+.method constructor <init>()V
     .locals 0
-
-    iput-object p1, p0, Landroid/support/v4/widget/i;->a:Landroid/support/v4/widget/h;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,12 +28,40 @@
 
 
 # virtual methods
-.method public run()V
+.method public a(Landroid/os/Parcel;)Landroid/support/v4/widget/DrawerLayout$SavedState;
     .locals 1
 
-    iget-object v0, p0, Landroid/support/v4/widget/i;->a:Landroid/support/v4/widget/h;
+    new-instance v0, Landroid/support/v4/widget/DrawerLayout$SavedState;
 
-    invoke-static {v0}, Landroid/support/v4/widget/h;->a(Landroid/support/v4/widget/h;)V
+    invoke-direct {v0, p1}, Landroid/support/v4/widget/DrawerLayout$SavedState;-><init>(Landroid/os/Parcel;)V
 
-    return-void
+    return-object v0
+.end method
+
+.method public a(I)[Landroid/support/v4/widget/DrawerLayout$SavedState;
+    .locals 1
+
+    new-array v0, p1, [Landroid/support/v4/widget/DrawerLayout$SavedState;
+
+    return-object v0
+.end method
+
+.method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0, p1}, Landroid/support/v4/widget/i;->a(Landroid/os/Parcel;)Landroid/support/v4/widget/DrawerLayout$SavedState;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public synthetic newArray(I)[Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0, p1}, Landroid/support/v4/widget/i;->a(I)[Landroid/support/v4/widget/DrawerLayout$SavedState;
+
+    move-result-object v0
+
+    return-object v0
 .end method

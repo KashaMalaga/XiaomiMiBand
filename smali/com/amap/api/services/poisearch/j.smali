@@ -1,102 +1,67 @@
-.class Lcom/amap/api/services/poisearch/j;
-.super Landroid/os/Handler;
+.class final Lcom/amap/api/services/poisearch/j;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/os/Parcelable$Creator;
 
 
-# instance fields
-.field final synthetic a:Lcom/amap/api/services/poisearch/PoiSearch;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator",
+        "<",
+        "Lcom/amap/api/services/poisearch/Cinema;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method constructor <init>(Lcom/amap/api/services/poisearch/PoiSearch;)V
+.method constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/j;->a:Lcom/amap/api/services/poisearch/PoiSearch;
-
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public handleMessage(Landroid/os/Message;)V
-    .locals 3
+.method public a(Landroid/os/Parcel;)Lcom/amap/api/services/poisearch/Cinema;
+    .locals 1
 
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/j;->a:Lcom/amap/api/services/poisearch/PoiSearch;
+    new-instance v0, Lcom/amap/api/services/poisearch/Cinema;
 
-    invoke-static {v0}, Lcom/amap/api/services/poisearch/PoiSearch;->a(Lcom/amap/api/services/poisearch/PoiSearch;)Lcom/amap/api/services/poisearch/PoiSearch$OnPoiSearchListener;
+    invoke-direct {v0, p1}, Lcom/amap/api/services/poisearch/Cinema;-><init>(Landroid/os/Parcel;)V
 
-    move-result-object v0
+    return-object v0
+.end method
 
-    if-nez v0, :cond_1
+.method public a(I)[Lcom/amap/api/services/poisearch/Cinema;
+    .locals 1
 
-    :cond_0
-    :goto_0
-    return-void
+    const/4 v0, 0x0
 
-    :cond_1
-    iget v0, p1, Landroid/os/Message;->what:I
+    return-object v0
+.end method
 
-    const/16 v1, 0x64
+.method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .locals 1
 
-    if-ne v0, v1, :cond_2
-
-    invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    const-string v1, "errorCode"
-
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v1
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/j;->a:Lcom/amap/api/services/poisearch/PoiSearch;
-
-    invoke-static {v0}, Lcom/amap/api/services/poisearch/PoiSearch;->a(Lcom/amap/api/services/poisearch/PoiSearch;)Lcom/amap/api/services/poisearch/PoiSearch$OnPoiSearchListener;
-
-    move-result-object v2
-
-    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast v0, Lcom/amap/api/services/poisearch/PoiResult;
-
-    invoke-interface {v2, v0, v1}, Lcom/amap/api/services/poisearch/PoiSearch$OnPoiSearchListener;->onPoiSearched(Lcom/amap/api/services/poisearch/PoiResult;I)V
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p1, Landroid/os/Message;->what:I
-
-    const/16 v1, 0x65
-
-    if-ne v0, v1, :cond_0
-
-    invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
+    invoke-virtual {p0, p1}, Lcom/amap/api/services/poisearch/j;->a(Landroid/os/Parcel;)Lcom/amap/api/services/poisearch/Cinema;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    return-object v0
+.end method
 
-    const-string v1, "errorCode"
+.method public synthetic newArray(I)[Ljava/lang/Object;
+    .locals 1
 
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+    invoke-virtual {p0, p1}, Lcom/amap/api/services/poisearch/j;->a(I)[Lcom/amap/api/services/poisearch/Cinema;
 
-    move-result v1
+    move-result-object v0
 
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/j;->a:Lcom/amap/api/services/poisearch/PoiSearch;
-
-    invoke-static {v0}, Lcom/amap/api/services/poisearch/PoiSearch;->a(Lcom/amap/api/services/poisearch/PoiSearch;)Lcom/amap/api/services/poisearch/PoiSearch$OnPoiSearchListener;
-
-    move-result-object v2
-
-    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast v0, Lcom/amap/api/services/poisearch/PoiItemDetail;
-
-    invoke-interface {v2, v0, v1}, Lcom/amap/api/services/poisearch/PoiSearch$OnPoiSearchListener;->onPoiItemDetailSearched(Lcom/amap/api/services/poisearch/PoiItemDetail;I)V
-
-    goto :goto_0
+    return-object v0
 .end method

@@ -1384,7 +1384,10 @@ function getAchievementMsgs(listDao, ConfigInfo)
 end
 
 function getActivityMsgs(listDao, ConfigInfo)
+    log('getActivityMsgs ')
+
     activityItem = ConfigInfo:getActiveItem()
+    log('getActivityMsgs s1')
     mode = activityItem:getMode()
     log('getActivityMsgs, mode='..mode)
 

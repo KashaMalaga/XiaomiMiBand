@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field private a:Lorg/achartengine/chart/AbstractChart;
+.field private a:Lorg/achartengine/a/a;
 
-.field private b:Lorg/achartengine/renderer/DefaultRenderer;
+.field private b:Lorg/achartengine/c/b;
 
 .field private c:Landroid/graphics/Rect;
 
@@ -25,15 +25,15 @@
 
 .field private i:I
 
-.field private k:Lorg/achartengine/tools/Zoom;
+.field private k:Lorg/achartengine/d/e;
 
-.field private l:Lorg/achartengine/tools/Zoom;
+.field private l:Lorg/achartengine/d/e;
 
-.field private m:Lorg/achartengine/tools/FitZoom;
+.field private m:Lorg/achartengine/d/b;
 
 .field private n:Landroid/graphics/Paint;
 
-.field private o:Lorg/achartengine/ITouchHandler;
+.field private o:Lorg/achartengine/d;
 
 .field private p:F
 
@@ -59,7 +59,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lorg/achartengine/chart/AbstractChart;)V
+.method public constructor <init>(Landroid/content/Context;Lorg/achartengine/a/a;)V
     .locals 5
 
     const/4 v1, 0x7
@@ -88,7 +88,7 @@
 
     iput-object v0, p0, Lorg/achartengine/GraphicalView;->n:Landroid/graphics/Paint;
 
-    iput-object p2, p0, Lorg/achartengine/GraphicalView;->a:Lorg/achartengine/chart/AbstractChart;
+    iput-object p2, p0, Lorg/achartengine/GraphicalView;->a:Lorg/achartengine/a/a;
 
     new-instance v0, Landroid/os/Handler;
 
@@ -96,26 +96,26 @@
 
     iput-object v0, p0, Lorg/achartengine/GraphicalView;->d:Landroid/os/Handler;
 
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->a:Lorg/achartengine/chart/AbstractChart;
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->a:Lorg/achartengine/a/a;
 
-    instance-of v0, v0, Lorg/achartengine/chart/XYChart;
+    instance-of v0, v0, Lorg/achartengine/a/v;
 
     if-eqz v0, :cond_5
 
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->a:Lorg/achartengine/chart/AbstractChart;
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->a:Lorg/achartengine/a/a;
 
-    check-cast v0, Lorg/achartengine/chart/XYChart;
+    check-cast v0, Lorg/achartengine/a/v;
 
-    invoke-virtual {v0}, Lorg/achartengine/chart/XYChart;->getRenderer()Lorg/achartengine/renderer/XYMultipleSeriesRenderer;
+    invoke-virtual {v0}, Lorg/achartengine/a/v;->g()Lorg/achartengine/c/f;
 
     move-result-object v0
 
-    iput-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/renderer/DefaultRenderer;
+    iput-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/c/b;
 
     :goto_0
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/renderer/DefaultRenderer;
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/c/b;
 
-    invoke-virtual {v0}, Lorg/achartengine/renderer/DefaultRenderer;->isZoomButtonsVisible()Z
+    invoke-virtual {v0}, Lorg/achartengine/c/b;->z()Z
 
     move-result v0
 
@@ -164,25 +164,25 @@
     iput-object v0, p0, Lorg/achartengine/GraphicalView;->h:Landroid/graphics/Bitmap;
 
     :cond_0
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/renderer/DefaultRenderer;
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/c/b;
 
-    instance-of v0, v0, Lorg/achartengine/renderer/XYMultipleSeriesRenderer;
+    instance-of v0, v0, Lorg/achartengine/c/f;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/renderer/DefaultRenderer;
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/c/b;
 
-    check-cast v0, Lorg/achartengine/renderer/XYMultipleSeriesRenderer;
+    check-cast v0, Lorg/achartengine/c/f;
 
-    invoke-virtual {v0}, Lorg/achartengine/renderer/XYMultipleSeriesRenderer;->getMarginsColor()I
+    invoke-virtual {v0}, Lorg/achartengine/c/f;->al()I
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/renderer/DefaultRenderer;
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/c/b;
 
-    check-cast v0, Lorg/achartengine/renderer/XYMultipleSeriesRenderer;
+    check-cast v0, Lorg/achartengine/c/f;
 
     iget-object v2, p0, Lorg/achartengine/GraphicalView;->n:Landroid/graphics/Paint;
 
@@ -190,74 +190,74 @@
 
     move-result v2
 
-    invoke-virtual {v0, v2}, Lorg/achartengine/renderer/XYMultipleSeriesRenderer;->setMarginsColor(I)V
+    invoke-virtual {v0, v2}, Lorg/achartengine/c/f;->v(I)V
 
     :cond_1
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/renderer/DefaultRenderer;
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/c/b;
 
-    invoke-virtual {v0}, Lorg/achartengine/renderer/DefaultRenderer;->isZoomEnabled()Z
+    invoke-virtual {v0}, Lorg/achartengine/c/b;->y()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/renderer/DefaultRenderer;
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/c/b;
 
-    invoke-virtual {v0}, Lorg/achartengine/renderer/DefaultRenderer;->isZoomButtonsVisible()Z
+    invoke-virtual {v0}, Lorg/achartengine/c/b;->z()Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
     :cond_2
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/renderer/DefaultRenderer;
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/c/b;
 
-    invoke-virtual {v0}, Lorg/achartengine/renderer/DefaultRenderer;->isExternalZoomEnabled()Z
+    invoke-virtual {v0}, Lorg/achartengine/c/b;->A()Z
 
     move-result v0
 
     if-eqz v0, :cond_4
 
     :cond_3
-    new-instance v0, Lorg/achartengine/tools/Zoom;
+    new-instance v0, Lorg/achartengine/d/e;
 
-    iget-object v2, p0, Lorg/achartengine/GraphicalView;->a:Lorg/achartengine/chart/AbstractChart;
+    iget-object v2, p0, Lorg/achartengine/GraphicalView;->a:Lorg/achartengine/a/a;
 
     const/4 v3, 0x1
 
-    iget-object v4, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/renderer/DefaultRenderer;
+    iget-object v4, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/c/b;
 
-    invoke-virtual {v4}, Lorg/achartengine/renderer/DefaultRenderer;->getZoomRate()F
+    invoke-virtual {v4}, Lorg/achartengine/c/b;->B()F
 
     move-result v4
 
-    invoke-direct {v0, v2, v3, v4}, Lorg/achartengine/tools/Zoom;-><init>(Lorg/achartengine/chart/AbstractChart;ZF)V
+    invoke-direct {v0, v2, v3, v4}, Lorg/achartengine/d/e;-><init>(Lorg/achartengine/a/a;ZF)V
 
-    iput-object v0, p0, Lorg/achartengine/GraphicalView;->k:Lorg/achartengine/tools/Zoom;
+    iput-object v0, p0, Lorg/achartengine/GraphicalView;->k:Lorg/achartengine/d/e;
 
-    new-instance v0, Lorg/achartengine/tools/Zoom;
+    new-instance v0, Lorg/achartengine/d/e;
 
-    iget-object v2, p0, Lorg/achartengine/GraphicalView;->a:Lorg/achartengine/chart/AbstractChart;
+    iget-object v2, p0, Lorg/achartengine/GraphicalView;->a:Lorg/achartengine/a/a;
 
     const/4 v3, 0x0
 
-    iget-object v4, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/renderer/DefaultRenderer;
+    iget-object v4, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/c/b;
 
-    invoke-virtual {v4}, Lorg/achartengine/renderer/DefaultRenderer;->getZoomRate()F
+    invoke-virtual {v4}, Lorg/achartengine/c/b;->B()F
 
     move-result v4
 
-    invoke-direct {v0, v2, v3, v4}, Lorg/achartengine/tools/Zoom;-><init>(Lorg/achartengine/chart/AbstractChart;ZF)V
+    invoke-direct {v0, v2, v3, v4}, Lorg/achartengine/d/e;-><init>(Lorg/achartengine/a/a;ZF)V
 
-    iput-object v0, p0, Lorg/achartengine/GraphicalView;->l:Lorg/achartengine/tools/Zoom;
+    iput-object v0, p0, Lorg/achartengine/GraphicalView;->l:Lorg/achartengine/d/e;
 
-    new-instance v0, Lorg/achartengine/tools/FitZoom;
+    new-instance v0, Lorg/achartengine/d/b;
 
-    iget-object v2, p0, Lorg/achartengine/GraphicalView;->a:Lorg/achartengine/chart/AbstractChart;
+    iget-object v2, p0, Lorg/achartengine/GraphicalView;->a:Lorg/achartengine/a/a;
 
-    invoke-direct {v0, v2}, Lorg/achartengine/tools/FitZoom;-><init>(Lorg/achartengine/chart/AbstractChart;)V
+    invoke-direct {v0, v2}, Lorg/achartengine/d/b;-><init>(Lorg/achartengine/a/a;)V
 
-    iput-object v0, p0, Lorg/achartengine/GraphicalView;->m:Lorg/achartengine/tools/FitZoom;
+    iput-object v0, p0, Lorg/achartengine/GraphicalView;->m:Lorg/achartengine/d/b;
 
     :cond_4
     :try_start_0
@@ -276,27 +276,27 @@
     :goto_1
     if-ge v0, v1, :cond_6
 
-    new-instance v0, Lorg/achartengine/TouchHandlerOld;
+    new-instance v0, Lorg/achartengine/f;
 
-    iget-object v1, p0, Lorg/achartengine/GraphicalView;->a:Lorg/achartengine/chart/AbstractChart;
+    iget-object v1, p0, Lorg/achartengine/GraphicalView;->a:Lorg/achartengine/a/a;
 
-    invoke-direct {v0, p0, v1}, Lorg/achartengine/TouchHandlerOld;-><init>(Lorg/achartengine/GraphicalView;Lorg/achartengine/chart/AbstractChart;)V
+    invoke-direct {v0, p0, v1}, Lorg/achartengine/f;-><init>(Lorg/achartengine/GraphicalView;Lorg/achartengine/a/a;)V
 
-    iput-object v0, p0, Lorg/achartengine/GraphicalView;->o:Lorg/achartengine/ITouchHandler;
+    iput-object v0, p0, Lorg/achartengine/GraphicalView;->o:Lorg/achartengine/d;
 
     :goto_2
     return-void
 
     :cond_5
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->a:Lorg/achartengine/chart/AbstractChart;
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->a:Lorg/achartengine/a/a;
 
-    check-cast v0, Lorg/achartengine/chart/RoundChart;
+    check-cast v0, Lorg/achartengine/a/r;
 
-    invoke-virtual {v0}, Lorg/achartengine/chart/RoundChart;->getRenderer()Lorg/achartengine/renderer/DefaultRenderer;
+    invoke-virtual {v0}, Lorg/achartengine/a/r;->a()Lorg/achartengine/c/b;
 
     move-result-object v0
 
-    iput-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/renderer/DefaultRenderer;
+    iput-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/c/b;
 
     goto/16 :goto_0
 
@@ -308,81 +308,324 @@
     goto :goto_1
 
     :cond_6
-    new-instance v0, Lorg/achartengine/TouchHandler;
+    new-instance v0, Lorg/achartengine/e;
 
-    iget-object v1, p0, Lorg/achartengine/GraphicalView;->a:Lorg/achartengine/chart/AbstractChart;
+    iget-object v1, p0, Lorg/achartengine/GraphicalView;->a:Lorg/achartengine/a/a;
 
-    invoke-direct {v0, p0, v1}, Lorg/achartengine/TouchHandler;-><init>(Lorg/achartengine/GraphicalView;Lorg/achartengine/chart/AbstractChart;)V
+    invoke-direct {v0, p0, v1}, Lorg/achartengine/e;-><init>(Lorg/achartengine/GraphicalView;Lorg/achartengine/a/a;)V
 
-    iput-object v0, p0, Lorg/achartengine/GraphicalView;->o:Lorg/achartengine/ITouchHandler;
+    iput-object v0, p0, Lorg/achartengine/GraphicalView;->o:Lorg/achartengine/d;
 
     goto :goto_2
 .end method
 
 
 # virtual methods
-.method public addPanListener(Lorg/achartengine/tools/PanListener;)V
-    .locals 1
-
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->o:Lorg/achartengine/ITouchHandler;
-
-    invoke-interface {v0, p1}, Lorg/achartengine/ITouchHandler;->addPanListener(Lorg/achartengine/tools/PanListener;)V
-
-    return-void
-.end method
-
-.method public addZoomListener(Lorg/achartengine/tools/ZoomListener;ZZ)V
-    .locals 1
-
-    if-eqz p2, :cond_1
-
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->k:Lorg/achartengine/tools/Zoom;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->k:Lorg/achartengine/tools/Zoom;
-
-    invoke-virtual {v0, p1}, Lorg/achartengine/tools/Zoom;->addZoomListener(Lorg/achartengine/tools/ZoomListener;)V
-
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->l:Lorg/achartengine/tools/Zoom;
-
-    invoke-virtual {v0, p1}, Lorg/achartengine/tools/Zoom;->addZoomListener(Lorg/achartengine/tools/ZoomListener;)V
-
-    :cond_0
-    if-eqz p3, :cond_1
-
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->o:Lorg/achartengine/ITouchHandler;
-
-    invoke-interface {v0, p1}, Lorg/achartengine/ITouchHandler;->addZoomListener(Lorg/achartengine/tools/ZoomListener;)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public getCurrentSeriesAndPoint()Lorg/achartengine/model/SeriesSelection;
+.method public a()Lorg/achartengine/b/e;
     .locals 4
 
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->a:Lorg/achartengine/chart/AbstractChart;
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->a:Lorg/achartengine/a/a;
 
-    new-instance v1, Lorg/achartengine/model/Point;
+    new-instance v1, Lorg/achartengine/b/c;
 
     iget v2, p0, Lorg/achartengine/GraphicalView;->p:F
 
     iget v3, p0, Lorg/achartengine/GraphicalView;->q:F
 
-    invoke-direct {v1, v2, v3}, Lorg/achartengine/model/Point;-><init>(FF)V
+    invoke-direct {v1, v2, v3}, Lorg/achartengine/b/c;-><init>(FF)V
 
-    invoke-virtual {v0, v1}, Lorg/achartengine/chart/AbstractChart;->getSeriesAndPointForScreenCoordinate(Lorg/achartengine/model/Point;)Lorg/achartengine/model/SeriesSelection;
+    invoke-virtual {v0, v1}, Lorg/achartengine/a/a;->a(Lorg/achartengine/b/c;)Lorg/achartengine/b/e;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method protected getZoomRectangle()Landroid/graphics/RectF;
+.method public a(F)V
+    .locals 1
+
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->k:Lorg/achartengine/d/e;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->l:Lorg/achartengine/d/e;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->k:Lorg/achartengine/d/e;
+
+    invoke-virtual {v0, p1}, Lorg/achartengine/d/e;->a(F)V
+
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->l:Lorg/achartengine/d/e;
+
+    invoke-virtual {v0, p1}, Lorg/achartengine/d/e;->a(F)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public a(IIII)V
+    .locals 7
+
+    iget-object v6, p0, Lorg/achartengine/GraphicalView;->d:Landroid/os/Handler;
+
+    new-instance v0, Lorg/achartengine/c;
+
+    move-object v1, p0
+
+    move v2, p1
+
+    move v3, p2
+
+    move v4, p3
+
+    move v5, p4
+
+    invoke-direct/range {v0 .. v5}, Lorg/achartengine/c;-><init>(Lorg/achartengine/GraphicalView;IIII)V
+
+    invoke-virtual {v6, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public a(Lorg/achartengine/d/d;)V
+    .locals 1
+
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->o:Lorg/achartengine/d;
+
+    invoke-interface {v0, p1}, Lorg/achartengine/d;->a(Lorg/achartengine/d/d;)V
+
+    return-void
+.end method
+
+.method public declared-synchronized a(Lorg/achartengine/d/g;)V
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->k:Lorg/achartengine/d/e;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->k:Lorg/achartengine/d/e;
+
+    invoke-virtual {v0, p1}, Lorg/achartengine/d/e;->b(Lorg/achartengine/d/g;)V
+
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->l:Lorg/achartengine/d/e;
+
+    invoke-virtual {v0, p1}, Lorg/achartengine/d/e;->b(Lorg/achartengine/d/g;)V
+
+    :cond_0
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->o:Lorg/achartengine/d;
+
+    invoke-interface {v0, p1}, Lorg/achartengine/d;->b(Lorg/achartengine/d/g;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
+.method public a(Lorg/achartengine/d/g;ZZ)V
+    .locals 1
+
+    if-eqz p2, :cond_1
+
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->k:Lorg/achartengine/d/e;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->k:Lorg/achartengine/d/e;
+
+    invoke-virtual {v0, p1}, Lorg/achartengine/d/e;->a(Lorg/achartengine/d/g;)V
+
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->l:Lorg/achartengine/d/e;
+
+    invoke-virtual {v0, p1}, Lorg/achartengine/d/e;->a(Lorg/achartengine/d/g;)V
+
+    :cond_0
+    if-eqz p3, :cond_1
+
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->o:Lorg/achartengine/d;
+
+    invoke-interface {v0, p1}, Lorg/achartengine/d;->a(Lorg/achartengine/d/g;)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public a(I)[D
+    .locals 3
+
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->a:Lorg/achartengine/a/a;
+
+    instance-of v0, v0, Lorg/achartengine/a/v;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->a:Lorg/achartengine/a/a;
+
+    check-cast v0, Lorg/achartengine/a/v;
+
+    iget v1, p0, Lorg/achartengine/GraphicalView;->p:F
+
+    iget v2, p0, Lorg/achartengine/GraphicalView;->q:F
+
+    invoke-virtual {v0, v1, v2, p1}, Lorg/achartengine/a/v;->a(FFI)[D
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public b()V
+    .locals 2
+
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->k:Lorg/achartengine/d/e;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->k:Lorg/achartengine/d/e;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lorg/achartengine/d/e;->b(I)V
+
+    invoke-virtual {p0}, Lorg/achartengine/GraphicalView;->f()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public b(Lorg/achartengine/d/d;)V
+    .locals 1
+
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->o:Lorg/achartengine/d;
+
+    invoke-interface {v0, p1}, Lorg/achartengine/d;->b(Lorg/achartengine/d/d;)V
+
+    return-void
+.end method
+
+.method public c()V
+    .locals 2
+
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->l:Lorg/achartengine/d/e;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->l:Lorg/achartengine/d/e;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lorg/achartengine/d/e;->b(I)V
+
+    invoke-virtual {p0}, Lorg/achartengine/GraphicalView;->f()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public d()V
+    .locals 1
+
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->m:Lorg/achartengine/d/b;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->m:Lorg/achartengine/d/b;
+
+    invoke-virtual {v0}, Lorg/achartengine/d/b;->a()V
+
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->k:Lorg/achartengine/d/e;
+
+    invoke-virtual {v0}, Lorg/achartengine/d/e;->a()V
+
+    invoke-virtual {p0}, Lorg/achartengine/GraphicalView;->f()V
+
+    :cond_0
+    return-void
+.end method
+
+.method protected e()Landroid/graphics/RectF;
     .locals 1
 
     iget-object v0, p0, Lorg/achartengine/GraphicalView;->e:Landroid/graphics/RectF;
+
+    return-object v0
+.end method
+
+.method public f()V
+    .locals 2
+
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->d:Landroid/os/Handler;
+
+    new-instance v1, Lorg/achartengine/b;
+
+    invoke-direct {v1, p0}, Lorg/achartengine/b;-><init>(Lorg/achartengine/GraphicalView;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public g()Landroid/graphics/Bitmap;
+    .locals 2
+
+    const/4 v1, 0x1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lorg/achartengine/GraphicalView;->setDrawingCacheEnabled(Z)V
+
+    invoke-virtual {p0}, Lorg/achartengine/GraphicalView;->isDrawingCacheEnabled()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0, v1}, Lorg/achartengine/GraphicalView;->setDrawingCacheEnabled(Z)V
+
+    :cond_0
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/c/b;
+
+    invoke-virtual {v0}, Lorg/achartengine/c/b;->g()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/c/b;
+
+    invoke-virtual {v0}, Lorg/achartengine/c/b;->f()I
+
+    move-result v0
+
+    invoke-virtual {p0, v0}, Lorg/achartengine/GraphicalView;->setDrawingCacheBackgroundColor(I)V
+
+    :cond_1
+    const/high16 v0, 0x100000
+
+    invoke-virtual {p0, v0}, Lorg/achartengine/GraphicalView;->setDrawingCacheQuality(I)V
+
+    invoke-virtual {p0, v1}, Lorg/achartengine/GraphicalView;->getDrawingCache(Z)Landroid/graphics/Bitmap;
+
+    move-result-object v0
 
     return-object v0
 .end method
@@ -420,9 +663,9 @@
 
     move-result v5
 
-    iget-object v1, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/renderer/DefaultRenderer;
+    iget-object v1, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/c/b;
 
-    invoke-virtual {v1}, Lorg/achartengine/renderer/DefaultRenderer;->isInScroll()Z
+    invoke-virtual {v1}, Lorg/achartengine/c/b;->H()Z
 
     move-result v1
 
@@ -439,29 +682,29 @@
     move v3, v2
 
     :goto_0
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->a:Lorg/achartengine/chart/AbstractChart;
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->a:Lorg/achartengine/a/a;
 
     iget-object v6, p0, Lorg/achartengine/GraphicalView;->n:Landroid/graphics/Paint;
 
     move-object v1, p1
 
-    invoke-virtual/range {v0 .. v6}, Lorg/achartengine/chart/AbstractChart;->draw(Landroid/graphics/Canvas;IIIILandroid/graphics/Paint;)V
+    invoke-virtual/range {v0 .. v6}, Lorg/achartengine/a/a;->a(Landroid/graphics/Canvas;IIIILandroid/graphics/Paint;)V
 
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/renderer/DefaultRenderer;
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/c/b;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/renderer/DefaultRenderer;
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/c/b;
 
-    invoke-virtual {v0}, Lorg/achartengine/renderer/DefaultRenderer;->isZoomEnabled()Z
+    invoke-virtual {v0}, Lorg/achartengine/c/b;->y()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/renderer/DefaultRenderer;
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/c/b;
 
-    invoke-virtual {v0}, Lorg/achartengine/renderer/DefaultRenderer;->isZoomButtonsVisible()Z
+    invoke-virtual {v0}, Lorg/achartengine/c/b;->z()Z
 
     move-result v0
 
@@ -644,7 +887,7 @@
     iput v0, p0, Lorg/achartengine/GraphicalView;->q:F
 
     :cond_0
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/renderer/DefaultRenderer;
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/c/b;
 
     if-eqz v0, :cond_2
 
@@ -652,26 +895,26 @@
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/renderer/DefaultRenderer;
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/c/b;
 
-    invoke-virtual {v0}, Lorg/achartengine/renderer/DefaultRenderer;->isPanEnabled()Z
+    invoke-virtual {v0}, Lorg/achartengine/c/b;->C()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/renderer/DefaultRenderer;
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/c/b;
 
-    invoke-virtual {v0}, Lorg/achartengine/renderer/DefaultRenderer;->isZoomEnabled()Z
+    invoke-virtual {v0}, Lorg/achartengine/c/b;->y()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
     :cond_1
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->o:Lorg/achartengine/ITouchHandler;
+    iget-object v0, p0, Lorg/achartengine/GraphicalView;->o:Lorg/achartengine/d;
 
-    invoke-interface {v0, p1}, Lorg/achartengine/ITouchHandler;->handleTouch(Landroid/view/MotionEvent;)Z
+    invoke-interface {v0, p1}, Lorg/achartengine/d;->a(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
@@ -688,247 +931,4 @@
     move-result v0
 
     goto :goto_0
-.end method
-
-.method public removePanListener(Lorg/achartengine/tools/PanListener;)V
-    .locals 1
-
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->o:Lorg/achartengine/ITouchHandler;
-
-    invoke-interface {v0, p1}, Lorg/achartengine/ITouchHandler;->removePanListener(Lorg/achartengine/tools/PanListener;)V
-
-    return-void
-.end method
-
-.method public declared-synchronized removeZoomListener(Lorg/achartengine/tools/ZoomListener;)V
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->k:Lorg/achartengine/tools/Zoom;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->k:Lorg/achartengine/tools/Zoom;
-
-    invoke-virtual {v0, p1}, Lorg/achartengine/tools/Zoom;->removeZoomListener(Lorg/achartengine/tools/ZoomListener;)V
-
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->l:Lorg/achartengine/tools/Zoom;
-
-    invoke-virtual {v0, p1}, Lorg/achartengine/tools/Zoom;->removeZoomListener(Lorg/achartengine/tools/ZoomListener;)V
-
-    :cond_0
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->o:Lorg/achartengine/ITouchHandler;
-
-    invoke-interface {v0, p1}, Lorg/achartengine/ITouchHandler;->removeZoomListener(Lorg/achartengine/tools/ZoomListener;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
-.end method
-
-.method public repaint()V
-    .locals 2
-
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->d:Landroid/os/Handler;
-
-    new-instance v1, Lorg/achartengine/a;
-
-    invoke-direct {v1, p0}, Lorg/achartengine/a;-><init>(Lorg/achartengine/GraphicalView;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-.end method
-
-.method public repaint(IIII)V
-    .locals 7
-
-    iget-object v6, p0, Lorg/achartengine/GraphicalView;->d:Landroid/os/Handler;
-
-    new-instance v0, Lorg/achartengine/b;
-
-    move-object v1, p0
-
-    move v2, p1
-
-    move v3, p2
-
-    move v4, p3
-
-    move v5, p4
-
-    invoke-direct/range {v0 .. v5}, Lorg/achartengine/b;-><init>(Lorg/achartengine/GraphicalView;IIII)V
-
-    invoke-virtual {v6, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-.end method
-
-.method public setZoomRate(F)V
-    .locals 1
-
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->k:Lorg/achartengine/tools/Zoom;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->l:Lorg/achartengine/tools/Zoom;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->k:Lorg/achartengine/tools/Zoom;
-
-    invoke-virtual {v0, p1}, Lorg/achartengine/tools/Zoom;->setZoomRate(F)V
-
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->l:Lorg/achartengine/tools/Zoom;
-
-    invoke-virtual {v0, p1}, Lorg/achartengine/tools/Zoom;->setZoomRate(F)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public toBitmap()Landroid/graphics/Bitmap;
-    .locals 2
-
-    const/4 v1, 0x1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lorg/achartengine/GraphicalView;->setDrawingCacheEnabled(Z)V
-
-    invoke-virtual {p0}, Lorg/achartengine/GraphicalView;->isDrawingCacheEnabled()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0, v1}, Lorg/achartengine/GraphicalView;->setDrawingCacheEnabled(Z)V
-
-    :cond_0
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/renderer/DefaultRenderer;
-
-    invoke-virtual {v0}, Lorg/achartengine/renderer/DefaultRenderer;->isApplyBackgroundColor()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->b:Lorg/achartengine/renderer/DefaultRenderer;
-
-    invoke-virtual {v0}, Lorg/achartengine/renderer/DefaultRenderer;->getBackgroundColor()I
-
-    move-result v0
-
-    invoke-virtual {p0, v0}, Lorg/achartengine/GraphicalView;->setDrawingCacheBackgroundColor(I)V
-
-    :cond_1
-    const/high16 v0, 0x100000
-
-    invoke-virtual {p0, v0}, Lorg/achartengine/GraphicalView;->setDrawingCacheQuality(I)V
-
-    invoke-virtual {p0, v1}, Lorg/achartengine/GraphicalView;->getDrawingCache(Z)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public toRealPoint(I)[D
-    .locals 3
-
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->a:Lorg/achartengine/chart/AbstractChart;
-
-    instance-of v0, v0, Lorg/achartengine/chart/XYChart;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->a:Lorg/achartengine/chart/AbstractChart;
-
-    check-cast v0, Lorg/achartengine/chart/XYChart;
-
-    iget v1, p0, Lorg/achartengine/GraphicalView;->p:F
-
-    iget v2, p0, Lorg/achartengine/GraphicalView;->q:F
-
-    invoke-virtual {v0, v1, v2, p1}, Lorg/achartengine/chart/XYChart;->toRealPoint(FFI)[D
-
-    move-result-object v0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public zoomIn()V
-    .locals 2
-
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->k:Lorg/achartengine/tools/Zoom;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->k:Lorg/achartengine/tools/Zoom;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lorg/achartengine/tools/Zoom;->apply(I)V
-
-    invoke-virtual {p0}, Lorg/achartengine/GraphicalView;->repaint()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public zoomOut()V
-    .locals 2
-
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->l:Lorg/achartengine/tools/Zoom;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->l:Lorg/achartengine/tools/Zoom;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lorg/achartengine/tools/Zoom;->apply(I)V
-
-    invoke-virtual {p0}, Lorg/achartengine/GraphicalView;->repaint()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public zoomReset()V
-    .locals 1
-
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->m:Lorg/achartengine/tools/FitZoom;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->m:Lorg/achartengine/tools/FitZoom;
-
-    invoke-virtual {v0}, Lorg/achartengine/tools/FitZoom;->apply()V
-
-    iget-object v0, p0, Lorg/achartengine/GraphicalView;->k:Lorg/achartengine/tools/Zoom;
-
-    invoke-virtual {v0}, Lorg/achartengine/tools/Zoom;->notifyZoomResetListeners()V
-
-    invoke-virtual {p0}, Lorg/achartengine/GraphicalView;->repaint()V
-
-    :cond_0
-    return-void
 .end method

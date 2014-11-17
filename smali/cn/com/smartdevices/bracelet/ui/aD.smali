@@ -1,152 +1,211 @@
-.class Lcn/com/smartdevices/bracelet/ui/aD;
-.super Ljava/lang/Object;
+.class public Lcn/com/smartdevices/bracelet/ui/aD;
+.super Lcn/com/smartdevices/bracelet/ui/aB;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/weather/WeatherListener;
+.implements Lcom/xiaomi/hm/view/g;
+
+
+# static fields
+.field private static d:I
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+.field private e:I
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)V
+.method static constructor <clinit>()V
+    .locals 1
+
+    const/4 v0, 0x4
+
+    sput v0, Lcn/com/smartdevices/bracelet/ui/aD;->d:I
+
+    return-void
+.end method
+
+.method public constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/aD;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/aB;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    return-void
+.end method
+
+.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/aD;)I
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/ui/aD;->e:I
+
+    return v0
+.end method
+
+.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/aD;I)V
+    .locals 0
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/ui/aD;->e:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onReceiveWeather(Lcn/com/smartdevices/bracelet/weather/WeatherInfo;)V
-    .locals 6
+.method public a(I)V
+    .locals 3
 
-    const-string v0, ""
+    sget v0, Lcn/com/smartdevices/bracelet/ui/aD;->d:I
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/weather/WeatherInfo;->getWeatherDescription()Ljava/lang/String;
+    if-ge p1, v0, :cond_0
 
-    move-result-object v1
-
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/weather/WeatherInfo;->getWeatherDescription()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    :goto_0
+    return-void
 
     :cond_0
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/weather/WeatherInfo;->getAqiDescription()Ljava/lang/String;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aD;->b_:Lcom/xiaomi/hm/view/GifView;
 
-    move-result-object v1
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/aE;
 
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    const/4 v2, 0x0
 
-    move-result v1
+    invoke-direct {v1, p0, v2}, Lcn/com/smartdevices/bracelet/ui/aE;-><init>(Lcn/com/smartdevices/bracelet/ui/aD;Lcn/com/smartdevices/bracelet/ui/aE;)V
 
-    if-nez v1, :cond_1
+    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/view/GifView;->post(Ljava/lang/Runnable;)Z
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    goto :goto_0
+.end method
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v0, " "
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aD;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
-
-    const v2, 0x7f0c01d3
-
-    const/4 v3, 0x1
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    const/4 v4, 0x0
-
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/weather/WeatherInfo;->getAqiDescription()Ljava/lang/String;
-
-    move-result-object v5
-
-    aput-object v5, v3, v4
-
-    invoke-virtual {v1, v2, v3}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    :cond_1
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aD;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->n(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Lcn/com/smartdevices/bracelet/weather/WeatherManager;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/weather/WeatherManager;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    const-string v2, "WeatherOK"
-
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->event(Landroid/content/Context;Ljava/lang/String;)V
-
-    :cond_2
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aD;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->o(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Landroid/widget/TextView;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aD;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
-
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/weather/WeatherInfo;->getAqiLevel()I
-
-    move-result v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->a(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;I)V
+.method public b(I)V
+    .locals 0
 
     return-void
+.end method
+
+.method public onCreate(Landroid/os/Bundle;)V
+    .locals 2
+
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/aB;->onCreate(Landroid/os/Bundle;)V
+
+    const-string v0, "DDDD"
+
+    const-string v1, "Load Gif!!"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/aD;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f020071
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
+
+    move-result-object v0
+
+    :try_start_0
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/InstructionActivity;->a(Ljava/io/InputStream;)[B
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aD;->a_:[B
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_0
+.end method
+
+.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    .locals 3
+
+    const v0, 0x7f030008
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, p2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/aD;->a(Landroid/view/View;)V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aD;->c_:Landroid/widget/TextSwitcher;
+
+    const v2, 0x7f0c0189
+
+    invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/ui/aD;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Landroid/widget/TextSwitcher;->setCurrentText(Ljava/lang/CharSequence;)V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aD;->b_:Lcom/xiaomi/hm/view/GifView;
+
+    sget-object v2, Lcom/xiaomi/hm/view/f;->c:Lcom/xiaomi/hm/view/f;
+
+    invoke-virtual {v1, v2}, Lcom/xiaomi/hm/view/GifView;->a(Lcom/xiaomi/hm/view/f;)V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aD;->b_:Lcom/xiaomi/hm/view/GifView;
+
+    sget v2, Lcn/com/smartdevices/bracelet/ui/aD;->d:I
+
+    invoke-virtual {v1, v2}, Lcom/xiaomi/hm/view/GifView;->b(I)V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aD;->b_:Lcom/xiaomi/hm/view/GifView;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, p0, v2}, Lcom/xiaomi/hm/view/GifView;->a(Lcom/xiaomi/hm/view/g;I)V
+
+    return-object v0
+.end method
+
+.method public setUserVisibleHint(Z)V
+    .locals 2
+
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/aB;->setUserVisibleHint(Z)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aD;->b_:Lcom/xiaomi/hm/view/GifView;
+
+    if-nez v0, :cond_0
+
+    :goto_0
+    return-void
+
+    :cond_0
+    if-eqz p1, :cond_1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aD;->c_:Landroid/widget/TextSwitcher;
+
+    const v1, 0x7f0c0189
+
+    invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/ui/aD;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextSwitcher;->setCurrentText(Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aD;->b_:Lcom/xiaomi/hm/view/GifView;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aD;->a_:[B
+
+    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/view/GifView;->a([B)V
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lcn/com/smartdevices/bracelet/ui/aD;->e:I
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aD;->b_:Lcom/xiaomi/hm/view/GifView;
+
+    invoke-virtual {v0}, Lcom/xiaomi/hm/view/GifView;->f()V
+
+    goto :goto_0
 .end method

@@ -11,74 +11,36 @@
     return-void
 .end method
 
-.method public static a(Landroid/view/ViewGroup$MarginLayoutParams;)I
+.method public static a(II)I
     .locals 1
 
-    invoke-virtual {p0}, Landroid/view/ViewGroup$MarginLayoutParams;->getMarginStart()I
+    invoke-static {p0, p1}, Landroid/view/Gravity;->getAbsoluteGravity(II)I
 
     move-result v0
 
     return v0
 .end method
 
-.method public static a(Landroid/view/ViewGroup$MarginLayoutParams;I)V
+.method public static a(IIILandroid/graphics/Rect;IILandroid/graphics/Rect;I)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginStart(I)V
+    invoke-static/range {p0 .. p7}, Landroid/view/Gravity;->apply(IIILandroid/graphics/Rect;IILandroid/graphics/Rect;I)V
 
     return-void
 .end method
 
-.method public static b(Landroid/view/ViewGroup$MarginLayoutParams;)I
-    .locals 1
-
-    invoke-virtual {p0}, Landroid/view/ViewGroup$MarginLayoutParams;->getMarginEnd()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static b(Landroid/view/ViewGroup$MarginLayoutParams;I)V
+.method public static a(IIILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;->setMarginEnd(I)V
+    invoke-static/range {p0 .. p5}, Landroid/view/Gravity;->apply(IIILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
 
     return-void
 .end method
 
-.method public static c(Landroid/view/ViewGroup$MarginLayoutParams;I)V
+.method public static a(ILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;->setLayoutDirection(I)V
-
-    return-void
-.end method
-
-.method public static c(Landroid/view/ViewGroup$MarginLayoutParams;)Z
-    .locals 1
-
-    invoke-virtual {p0}, Landroid/view/ViewGroup$MarginLayoutParams;->isMarginRelative()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static d(Landroid/view/ViewGroup$MarginLayoutParams;)I
-    .locals 1
-
-    invoke-virtual {p0}, Landroid/view/ViewGroup$MarginLayoutParams;->getLayoutDirection()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static d(Landroid/view/ViewGroup$MarginLayoutParams;I)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/view/ViewGroup$MarginLayoutParams;->resolveLayoutDirection(I)V
+    invoke-static {p0, p1, p2, p3}, Landroid/view/Gravity;->applyDisplay(ILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
 
     return-void
 .end method

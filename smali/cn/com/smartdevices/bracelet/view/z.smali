@@ -2,12 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/animation/Interpolator;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+
+
+# instance fields
+.field final synthetic a:Lcn/com/smartdevices/bracelet/view/RoundProgressBar;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;)V
     .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/z;->a:Lcn/com/smartdevices/bracelet/view/RoundProgressBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -16,22 +22,28 @@
 
 
 # virtual methods
-.method public getInterpolation(F)F
-    .locals 3
+.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 2
 
-    const/high16 v2, 0x3f800000
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    sub-float v0, p1, v2
+    move-result-object v0
 
-    mul-float v1, v0, v0
+    check-cast v0, Ljava/lang/Float;
 
-    mul-float/2addr v1, v0
+    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
 
-    mul-float/2addr v1, v0
+    move-result v0
 
-    mul-float/2addr v0, v1
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/z;->a:Lcn/com/smartdevices/bracelet/view/RoundProgressBar;
 
-    add-float/2addr v0, v2
+    float-to-int v0, v0
 
-    return v0
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->b(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/z;->a:Lcn/com/smartdevices/bracelet/view/RoundProgressBar;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->postInvalidate()V
+
+    return-void
 .end method

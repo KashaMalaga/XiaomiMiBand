@@ -1,38 +1,49 @@
-.class Lcom/amap/api/mapcore/f;
+.class public interface abstract Lcom/amap/api/mapcore/f;
 .super Ljava/lang/Object;
 
-
-# instance fields
-.field a:I
-
-.field b:Z
-
-
-# direct methods
-.method public constructor <init>(I)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lcom/amap/api/mapcore/f;->a:I
-
-    return-void
-.end method
+# interfaces
+.implements Lcom/amap/api/mapcore/g;
 
 
 # virtual methods
-.method public a(Z)Lcom/amap/api/mapcore/f;
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/amap/api/mapcore/f;->b:Z
-
-    return-object p0
+.method public abstract a()F
 .end method
 
-.method public a()Z
-    .locals 1
+.method public abstract a(F)V
+.end method
 
-    iget-boolean v0, p0, Lcom/amap/api/mapcore/f;->b:Z
+.method public abstract a(I)V
+.end method
 
-    return v0
+.method public abstract a(Ljava/util/List;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcom/amap/api/maps/model/LatLng;",
+            ">;)V"
+        }
+    .end annotation
+.end method
+
+.method public abstract b()I
+.end method
+
+.method public abstract b(I)V
+.end method
+
+.method public abstract c()I
+.end method
+
+.method public abstract d()Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcom/amap/api/maps/model/LatLng;",
+            ">;"
+        }
+    .end annotation
 .end method

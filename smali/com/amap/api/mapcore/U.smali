@@ -2,26 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/io/Serializable;
-.implements Ljava/util/Comparator;
+.implements Ljava/lang/Runnable;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/io/Serializable;",
-        "Ljava/util/Comparator",
-        "<",
-        "Ljava/lang/Object;",
-        ">;"
-    }
-.end annotation
+# instance fields
+.field final synthetic a:Lcom/amap/api/mapcore/e;
+
+.field final synthetic b:Lcom/amap/api/mapcore/T;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Lcom/amap/api/mapcore/T;Lcom/amap/api/mapcore/e;)V
     .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/mapcore/U;->b:Lcom/amap/api/mapcore/T;
+
+    iput-object p2, p0, Lcom/amap/api/mapcore/U;->a:Lcom/amap/api/mapcore/e;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -30,61 +26,27 @@
 
 
 # virtual methods
-.method public compare(Ljava/lang/Object;Ljava/lang/Object;)I
+.method public run()V
     .locals 2
 
-    check-cast p1, Lcom/amap/api/mapcore/ah;
-
-    check-cast p2, Lcom/amap/api/mapcore/ah;
-
-    if-eqz p1, :cond_1
-
-    if-eqz p2, :cond_1
-
     :try_start_0
-    invoke-interface {p1}, Lcom/amap/api/mapcore/ah;->d()F
+    iget-object v0, p0, Lcom/amap/api/mapcore/U;->b:Lcom/amap/api/mapcore/T;
 
-    move-result v0
+    iget-object v0, v0, Lcom/amap/api/mapcore/T;->e:Lcom/amap/api/mapcore/b;
 
-    invoke-interface {p2}, Lcom/amap/api/mapcore/ah;->d()F
+    iget-object v1, p0, Lcom/amap/api/mapcore/U;->a:Lcom/amap/api/mapcore/e;
 
-    move-result v1
-
-    cmpl-float v0, v0, v1
-
-    if-lez v0, :cond_0
-
-    const/4 v0, 0x1
+    invoke-virtual {v0, v1}, Lcom/amap/api/mapcore/b;->a(Lcom/amap/api/mapcore/e;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     :goto_0
-    return v0
-
-    :cond_0
-    invoke-interface {p1}, Lcom/amap/api/mapcore/ah;->d()F
-
-    move-result v0
-
-    invoke-interface {p2}, Lcom/amap/api/mapcore/ah;->d()F
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result v1
-
-    cmpg-float v0, v0, v1
-
-    if-gez v0, :cond_1
-
-    const/4 v0, -0x1
-
-    goto :goto_0
+    return-void
 
     :catch_0
     move-exception v0
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
-
-    :cond_1
-    const/4 v0, 0x0
+    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
 .end method

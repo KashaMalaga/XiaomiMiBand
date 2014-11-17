@@ -216,7 +216,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/compat/Compat;->postOnAnimationInvalidate(Landroid/view/View;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/a/a;->a(Landroid/view/View;)V
 
     return-void
 

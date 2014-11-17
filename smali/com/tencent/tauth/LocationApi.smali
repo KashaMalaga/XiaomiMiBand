@@ -6,39 +6,39 @@
 
 
 # static fields
-.field private static final a:Ljava/lang/String; = "http://fusion.qq.com/cgi-bin/qzapps/mapp_lbs_getnear.cgi"
+.field private static final ACTION_DELETE:Ljava/lang/String; = "delete_location"
 
-.field private static final b:Ljava/lang/String; = "http://fusion.qq.com/cgi-bin/qzapps/mapp_lbs_delete.cgi"
+.field private static final ACTION_SEARCH:Ljava/lang/String; = "search_nearby"
 
-.field private static final c:I = 0x65
+.field private static final CGI_DELETE_LOCATION:Ljava/lang/String; = "http://fusion.qq.com/cgi-bin/qzapps/mapp_lbs_delete.cgi"
 
-.field private static final d:I = 0x67
+.field private static final CGI_SEARCH_NEARBY:Ljava/lang/String; = "http://fusion.qq.com/cgi-bin/qzapps/mapp_lbs_getnear.cgi"
 
-.field private static final e:I = 0x68
+.field private static final EVENT_ID_DELETE:Ljava/lang/String; = "id_delete_location"
 
-.field private static final f:Ljava/lang/String; = "search_nearby"
+.field private static final EVENT_ID_SEARCH:Ljava/lang/String; = "id_search_nearby"
 
-.field private static final g:Ljava/lang/String; = "delete_location"
+.field private static final MSG_GET_LOCATION_TIMEOUT:I = 0x65
 
-.field private static final h:Ljava/lang/String; = "id_search_nearby"
+.field private static final MSG_VERIFY_SOSOCODE_FAILED:I = 0x68
 
-.field private static final i:Ljava/lang/String; = "id_delete_location"
+.field private static final MSG_VERIFY_SOSOCODE_SUCCESS:I = 0x67
 
-.field private static final j:I = 0x1
+.field private static final PAGE_DEFAULT:I = 0x1
 
 
 # instance fields
-.field private k:Landroid/os/HandlerThread;
+.field private mHandler:Landroid/os/Handler;
 
-.field private l:Landroid/os/Handler;
+.field private mHandlerThread:Landroid/os/HandlerThread;
 
-.field private m:Landroid/os/Handler;
+.field private mLbsAgent:Lcom/tencent/tauth/LbsAgent;
 
-.field private n:Lcom/tencent/tauth/LbsAgent;
+.field private mMainHandler:Landroid/os/Handler;
 
-.field private o:Landroid/os/Bundle;
+.field private mParams:Landroid/os/Bundle;
 
-.field private p:Lcom/tencent/tauth/IUiListener;
+.field private mSearchListener:Lcom/tencent/tauth/IUiListener;
 
 
 # direct methods
@@ -47,7 +47,7 @@
 
     invoke-direct {p0, p1, p2, p3}, Lcom/tencent/connect/common/BaseApi;-><init>(Landroid/content/Context;Lcom/tencent/connect/auth/QQAuth;Lcom/tencent/connect/auth/QQToken;)V
 
-    invoke-direct {p0}, Lcom/tencent/tauth/LocationApi;->a()V
+    invoke-direct {p0}, Lcom/tencent/tauth/LocationApi;->init()V
 
     return-void
 .end method
@@ -57,12 +57,12 @@
 
     invoke-direct {p0, p1, p2}, Lcom/tencent/connect/common/BaseApi;-><init>(Landroid/content/Context;Lcom/tencent/connect/auth/QQToken;)V
 
-    invoke-direct {p0}, Lcom/tencent/tauth/LocationApi;->a()V
+    invoke-direct {p0}, Lcom/tencent/tauth/LocationApi;->init()V
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/tencent/tauth/LocationApi;)Landroid/content/Context;
+.method static synthetic access$000(Lcom/tencent/tauth/LocationApi;)Landroid/content/Context;
     .locals 1
 
     iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->mContext:Landroid/content/Context;
@@ -70,100 +70,93 @@
     return-object v0
 .end method
 
-.method private a()V
-    .locals 2
+.method static synthetic access$100(Lcom/tencent/tauth/LocationApi;)Lcom/tencent/tauth/LbsAgent;
+    .locals 1
 
-    new-instance v0, Lcom/tencent/tauth/LbsAgent;
+    iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->mLbsAgent:Lcom/tencent/tauth/LbsAgent;
 
-    invoke-direct {v0}, Lcom/tencent/tauth/LbsAgent;-><init>()V
+    return-object v0
+.end method
 
-    iput-object v0, p0, Lcom/tencent/tauth/LocationApi;->n:Lcom/tencent/tauth/LbsAgent;
+.method static synthetic access$200(Lcom/tencent/tauth/LocationApi;)Landroid/os/Handler;
+    .locals 1
 
-    new-instance v0, Landroid/os/HandlerThread;
+    iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->mMainHandler:Landroid/os/Handler;
 
-    const-string v1, "get_location"
+    return-object v0
+.end method
 
-    invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+.method static synthetic access$300(Lcom/tencent/tauth/LocationApi;ILjava/lang/String;)V
+    .locals 0
 
-    iput-object v0, p0, Lcom/tencent/tauth/LocationApi;->k:Landroid/os/HandlerThread;
-
-    iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->k:Landroid/os/HandlerThread;
-
-    invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
-
-    new-instance v0, Landroid/os/Handler;
-
-    iget-object v1, p0, Lcom/tencent/tauth/LocationApi;->k:Landroid/os/HandlerThread;
-
-    invoke-virtual {v1}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    iput-object v0, p0, Lcom/tencent/tauth/LocationApi;->l:Landroid/os/Handler;
-
-    new-instance v0, Lcom/tencent/tauth/a;
-
-    iget-object v1, p0, Lcom/tencent/tauth/LocationApi;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    invoke-direct {v0, p0, v1}, Lcom/tencent/tauth/a;-><init>(Lcom/tencent/tauth/LocationApi;Landroid/os/Looper;)V
-
-    iput-object v0, p0, Lcom/tencent/tauth/LocationApi;->m:Landroid/os/Handler;
+    invoke-direct {p0, p1, p2}, Lcom/tencent/tauth/LocationApi;->locationFailed(ILjava/lang/String;)V
 
     return-void
 .end method
 
-.method private a(ILjava/lang/String;)V
-    .locals 2
+.method static synthetic access$400(Lcom/tencent/tauth/LocationApi;)Landroid/content/Context;
+    .locals 1
 
-    iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->n:Lcom/tencent/tauth/LbsAgent;
+    iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v0}, Lcom/tencent/tauth/LbsAgent;->removeUpdate()V
+    return-object v0
+.end method
 
-    iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->p:Lcom/tencent/tauth/IUiListener;
+.method static synthetic access$500(Lcom/tencent/tauth/LocationApi;)Lcom/tencent/connect/auth/QQToken;
+    .locals 1
 
-    if-nez v0, :cond_0
+    iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->mToken:Lcom/tencent/connect/auth/QQToken;
 
-    :goto_0
-    return-void
+    return-object v0
+.end method
+
+.method private checkNetworkAvailable()Z
+    .locals 3
+
+    const/4 v1, 0x0
+
+    iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->mContext:Landroid/content/Context;
+
+    const-string v2, "connectivity"
+
+    invoke-virtual {v0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/net/ConnectivityManager;
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/net/NetworkInfo;->isAvailable()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
 
     :cond_0
-    new-instance v1, Lorg/json/JSONObject;
+    move v0, v1
 
-    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
+    :goto_0
+    return v0
 
-    :try_start_0
-    const-string v0, "ret"
-
-    invoke-virtual {v1, v0, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
-
-    const-string v0, "errMsg"
-
-    invoke-virtual {v1, v0, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_1
-    iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->p:Lcom/tencent/tauth/IUiListener;
-
-    invoke-interface {v0, v1}, Lcom/tencent/tauth/IUiListener;->onComplete(Ljava/lang/Object;)V
+    :cond_1
+    const/4 v0, 0x1
 
     goto :goto_0
 
-    :catch_0
-    move-exception v0
+    :cond_2
+    move v0, v1
 
-    invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
-
-    goto :goto_1
+    goto :goto_0
 .end method
 
-.method private a(Landroid/location/Location;)V
+.method private doSearchNearby(Landroid/location/Location;)V
     .locals 6
 
     const-string v0, "openSDK_LOG"
@@ -178,7 +171,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/tauth/LocationApi;->o:Landroid/os/Bundle;
+    iget-object v2, p0, Lcom/tencent/tauth/LocationApi;->mParams:Landroid/os/Bundle;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -190,13 +183,13 @@
 
     invoke-static {v0, v1}, Lcom/tencent/a/a/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->o:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->mParams:Landroid/os/Bundle;
 
     if-eqz v0, :cond_3
 
     new-instance v3, Landroid/os/Bundle;
 
-    iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->o:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->mParams:Landroid/os/Bundle;
 
     invoke-direct {v3, v0}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
 
@@ -358,11 +351,11 @@
 
     invoke-static {v0, v1}, Lcom/tencent/a/a/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v5, Lcom/tencent/tauth/e;
+    new-instance v5, Lcom/tencent/tauth/LocationApi$TaskRequestListener;
 
-    iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->p:Lcom/tencent/tauth/IUiListener;
+    iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->mSearchListener:Lcom/tencent/tauth/IUiListener;
 
-    invoke-direct {v5, p0, v0}, Lcom/tencent/tauth/e;-><init>(Lcom/tencent/tauth/LocationApi;Lcom/tencent/tauth/IUiListener;)V
+    invoke-direct {v5, p0, v0}, Lcom/tencent/tauth/LocationApi$TaskRequestListener;-><init>(Lcom/tencent/tauth/LocationApi;Lcom/tencent/tauth/IUiListener;)V
 
     iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->mToken:Lcom/tencent/connect/auth/QQToken;
 
@@ -384,117 +377,124 @@
     goto/16 :goto_0
 .end method
 
-.method static synthetic a(Lcom/tencent/tauth/LocationApi;ILjava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcom/tencent/tauth/LocationApi;->a(ILjava/lang/String;)V
-
-    return-void
-.end method
-
-.method private varargs a(Ljava/lang/String;[Ljava/lang/String;)V
+.method private init()V
     .locals 2
 
-    iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->l:Landroid/os/Handler;
+    new-instance v0, Lcom/tencent/tauth/LbsAgent;
 
-    new-instance v1, Lcom/tencent/tauth/c;
+    invoke-direct {v0}, Lcom/tencent/tauth/LbsAgent;-><init>()V
 
-    invoke-direct {v1, p0, p2, p1}, Lcom/tencent/tauth/c;-><init>(Lcom/tencent/tauth/LocationApi;[Ljava/lang/String;Ljava/lang/String;)V
+    iput-object v0, p0, Lcom/tencent/tauth/LocationApi;->mLbsAgent:Lcom/tencent/tauth/LbsAgent;
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    new-instance v0, Landroid/os/HandlerThread;
+
+    const-string v1, "get_location"
+
+    invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+
+    iput-object v0, p0, Lcom/tencent/tauth/LocationApi;->mHandlerThread:Landroid/os/HandlerThread;
+
+    iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->mHandlerThread:Landroid/os/HandlerThread;
+
+    invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
+
+    new-instance v0, Landroid/os/Handler;
+
+    iget-object v1, p0, Lcom/tencent/tauth/LocationApi;->mHandlerThread:Landroid/os/HandlerThread;
+
+    invoke-virtual {v1}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object v0, p0, Lcom/tencent/tauth/LocationApi;->mHandler:Landroid/os/Handler;
+
+    new-instance v0, Lcom/tencent/tauth/LocationApi$1;
+
+    iget-object v1, p0, Lcom/tencent/tauth/LocationApi;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, p0, v1}, Lcom/tencent/tauth/LocationApi$1;-><init>(Lcom/tencent/tauth/LocationApi;Landroid/os/Looper;)V
+
+    iput-object v0, p0, Lcom/tencent/tauth/LocationApi;->mMainHandler:Landroid/os/Handler;
 
     return-void
 .end method
 
-.method static synthetic b(Lcom/tencent/tauth/LocationApi;)Lcom/tencent/tauth/LbsAgent;
-    .locals 1
+.method private locationFailed(ILjava/lang/String;)V
+    .locals 2
 
-    iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->n:Lcom/tencent/tauth/LbsAgent;
+    iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->mLbsAgent:Lcom/tencent/tauth/LbsAgent;
 
-    return-object v0
+    invoke-virtual {v0}, Lcom/tencent/tauth/LbsAgent;->removeUpdate()V
+
+    iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->mSearchListener:Lcom/tencent/tauth/IUiListener;
+
+    if-nez v0, :cond_0
+
+    :goto_0
+    return-void
+
+    :cond_0
+    new-instance v1, Lorg/json/JSONObject;
+
+    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
+
+    :try_start_0
+    const-string v0, "ret"
+
+    invoke-virtual {v1, v0, p1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
+
+    const-string v0, "errMsg"
+
+    invoke-virtual {v1, v0, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_1
+    iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->mSearchListener:Lcom/tencent/tauth/IUiListener;
+
+    invoke-interface {v0, v1}, Lcom/tencent/tauth/IUiListener;->onComplete(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
+
+    goto :goto_1
 .end method
 
-.method static synthetic c(Lcom/tencent/tauth/LocationApi;)Landroid/os/Handler;
+.method private locationSuccess()V
     .locals 1
 
-    iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->m:Landroid/os/Handler;
-
-    return-object v0
-.end method
-
-.method private c()V
-    .locals 1
-
-    iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->n:Lcom/tencent/tauth/LbsAgent;
+    iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->mLbsAgent:Lcom/tencent/tauth/LbsAgent;
 
     invoke-virtual {v0}, Lcom/tencent/tauth/LbsAgent;->removeUpdate()V
 
     return-void
 .end method
 
-.method static synthetic d(Lcom/tencent/tauth/LocationApi;)Landroid/content/Context;
-    .locals 1
+.method private varargs report(Ljava/lang/String;[Ljava/lang/String;)V
+    .locals 2
 
-    iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->mHandler:Landroid/os/Handler;
 
-    return-object v0
+    new-instance v1, Lcom/tencent/tauth/LocationApi$3;
+
+    invoke-direct {v1, p0, p2, p1}, Lcom/tencent/tauth/LocationApi$3;-><init>(Lcom/tencent/tauth/LocationApi;[Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
 .end method
 
-.method private d()Z
-    .locals 3
-
-    const/4 v1, 0x0
-
-    iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->mContext:Landroid/content/Context;
-
-    const-string v2, "connectivity"
-
-    invoke-virtual {v0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/net/ConnectivityManager;
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/net/NetworkInfo;->isAvailable()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    :cond_0
-    move v0, v1
-
-    :goto_0
-    return v0
-
-    :cond_1
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    move v0, v1
-
-    goto :goto_0
-.end method
-
-.method static synthetic e(Lcom/tencent/tauth/LocationApi;)Lcom/tencent/connect/auth/QQToken;
-    .locals 1
-
-    iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->mToken:Lcom/tencent/connect/auth/QQToken;
-
-    return-object v0
-.end method
-
-.method private e()Lorg/json/JSONObject;
+.method private unavailableNetworkJson()Lorg/json/JSONObject;
     .locals 3
 
     new-instance v1, Lorg/json/JSONObject;
@@ -532,7 +532,7 @@
 .method public deleteLocation(Landroid/app/Activity;Landroid/os/Bundle;Lcom/tencent/tauth/IUiListener;)V
     .locals 6
 
-    invoke-direct {p0}, Lcom/tencent/tauth/LocationApi;->d()Z
+    invoke-direct {p0}, Lcom/tencent/tauth/LocationApi;->checkNetworkAvailable()Z
 
     move-result v0
 
@@ -540,7 +540,7 @@
 
     if-eqz p3, :cond_0
 
-    invoke-direct {p0}, Lcom/tencent/tauth/LocationApi;->e()Lorg/json/JSONObject;
+    invoke-direct {p0}, Lcom/tencent/tauth/LocationApi;->unavailableNetworkJson()Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -666,9 +666,9 @@
 
     invoke-static {v0, v1}, Lcom/tencent/a/a/c;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v5, Lcom/tencent/tauth/e;
+    new-instance v5, Lcom/tencent/tauth/LocationApi$TaskRequestListener;
 
-    invoke-direct {v5, p0, p3}, Lcom/tencent/tauth/e;-><init>(Lcom/tencent/tauth/LocationApi;Lcom/tencent/tauth/IUiListener;)V
+    invoke-direct {v5, p0, p3}, Lcom/tencent/tauth/LocationApi$TaskRequestListener;-><init>(Lcom/tencent/tauth/LocationApi;Lcom/tencent/tauth/IUiListener;)V
 
     iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->mToken:Lcom/tencent/connect/auth/QQToken;
 
@@ -692,7 +692,7 @@
 
     aput-object v3, v1, v2
 
-    invoke-direct {p0, v0, v1}, Lcom/tencent/tauth/LocationApi;->a(Ljava/lang/String;[Ljava/lang/String;)V
+    invoke-direct {p0, v0, v1}, Lcom/tencent/tauth/LocationApi;->report(Ljava/lang/String;[Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -707,11 +707,11 @@
 .method public onLocationUpdate(Landroid/location/Location;)V
     .locals 2
 
-    invoke-direct {p0, p1}, Lcom/tencent/tauth/LocationApi;->a(Landroid/location/Location;)V
+    invoke-direct {p0, p1}, Lcom/tencent/tauth/LocationApi;->doSearchNearby(Landroid/location/Location;)V
 
-    invoke-direct {p0}, Lcom/tencent/tauth/LocationApi;->c()V
+    invoke-direct {p0}, Lcom/tencent/tauth/LocationApi;->locationSuccess()V
 
-    iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->m:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->mMainHandler:Landroid/os/Handler;
 
     const/16 v1, 0x65
 
@@ -723,7 +723,7 @@
 .method public searchNearby(Landroid/app/Activity;Landroid/os/Bundle;Lcom/tencent/tauth/IUiListener;)V
     .locals 2
 
-    invoke-direct {p0}, Lcom/tencent/tauth/LocationApi;->d()Z
+    invoke-direct {p0}, Lcom/tencent/tauth/LocationApi;->checkNetworkAvailable()Z
 
     move-result v0
 
@@ -731,7 +731,7 @@
 
     if-eqz p3, :cond_0
 
-    invoke-direct {p0}, Lcom/tencent/tauth/LocationApi;->e()Lorg/json/JSONObject;
+    invoke-direct {p0}, Lcom/tencent/tauth/LocationApi;->unavailableNetworkJson()Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -742,15 +742,15 @@
     return-void
 
     :cond_1
-    iput-object p2, p0, Lcom/tencent/tauth/LocationApi;->o:Landroid/os/Bundle;
+    iput-object p2, p0, Lcom/tencent/tauth/LocationApi;->mParams:Landroid/os/Bundle;
 
-    iput-object p3, p0, Lcom/tencent/tauth/LocationApi;->p:Lcom/tencent/tauth/IUiListener;
+    iput-object p3, p0, Lcom/tencent/tauth/LocationApi;->mSearchListener:Lcom/tencent/tauth/IUiListener;
 
-    iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->l:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/tencent/tauth/LocationApi;->mHandler:Landroid/os/Handler;
 
-    new-instance v1, Lcom/tencent/tauth/b;
+    new-instance v1, Lcom/tencent/tauth/LocationApi$2;
 
-    invoke-direct {v1, p0}, Lcom/tencent/tauth/b;-><init>(Lcom/tencent/tauth/LocationApi;)V
+    invoke-direct {v1, p0}, Lcom/tencent/tauth/LocationApi$2;-><init>(Lcom/tencent/tauth/LocationApi;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

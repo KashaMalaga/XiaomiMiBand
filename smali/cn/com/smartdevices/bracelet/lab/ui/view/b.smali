@@ -73,7 +73,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/chart/compat/Compat;->postOnAnimationInvalidate(Landroid/view/View;)V
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/chart/a/a;->a(Landroid/view/View;)V
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/b;->b:F
 

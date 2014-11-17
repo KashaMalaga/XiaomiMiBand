@@ -6,11 +6,11 @@
 
 
 # static fields
-.field private static final a:Ljava/lang/String; = "PersonInfoSetAgeActivity"
+.field private static final b:Ljava/lang/String; = "PersonInfoSetAgeActivity"
 
 
 # instance fields
-.field private b:Lkankan/wheel/widget/WheelView;
+.field private c:Lkankan/wheel/widget/WheelView;
 
 
 # direct methods
@@ -22,14 +22,14 @@
     return-void
 .end method
 
-.method private a()V
+.method private d()V
     .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->mPersonInfo:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->b:Lkankan/wheel/widget/WheelView;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->c:Lkankan/wheel/widget/WheelView;
 
-    invoke-virtual {v1}, Lkankan/wheel/widget/WheelView;->getCurrentItem()I
+    invoke-virtual {v1}, Lkankan/wheel/widget/WheelView;->f()I
 
     move-result v1
 
@@ -47,13 +47,13 @@
 
     move-result v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->mPersonInfo:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     iget v1, v1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->age:I
 
     sub-int/2addr v0, v1
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->mPersonInfo:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -89,7 +89,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->mPersonInfo:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     iget-object v2, v2, Lcn/com/smartdevices/bracelet/model/PersonInfo;->birthday:Ljava/lang/String;
 
@@ -103,7 +103,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->mPersonInfo:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     iget v2, v2, Lcn/com/smartdevices/bracelet/model/PersonInfo;->age:I
 
@@ -115,19 +115,41 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onCancel()V
+.method public b()V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->a()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->d()V
 
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoBaseActivity;->onCancel()V
+    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoBaseActivity;->b()V
+
+    return-void
+.end method
+
+.method public c()V
+    .locals 2
+
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->d()V
+
+    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoBaseActivity;->c()V
+
+    new-instance v0, Landroid/content/Intent;
+
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+
+    const-class v1, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;
+
+    invoke-virtual {v0, p0, v1}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
+
+    const/4 v1, 0x6
+
+    invoke-virtual {p0, v0, v1}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
     return-void
 .end method
@@ -143,13 +165,13 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoBaseActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030017
+    const v0, 0x7f030018
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->setContentView(I)V
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->initViews()V
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->a()V
 
-    const v0, 0x7f07008d
+    const v0, 0x7f070092
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->findViewById(I)Landroid/view/View;
 
@@ -157,17 +179,17 @@
 
     check-cast v0, Lkankan/wheel/widget/WheelView;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->b:Lkankan/wheel/widget/WheelView;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->c:Lkankan/wheel/widget/WheelView;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->b:Lkankan/wheel/widget/WheelView;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->c:Lkankan/wheel/widget/WheelView;
 
-    invoke-virtual {v0, v12}, Lkankan/wheel/widget/WheelView;->setVisibleItems(I)Lkankan/wheel/widget/WheelView;
+    invoke-virtual {v0, v12}, Lkankan/wheel/widget/WheelView;->a(I)Lkankan/wheel/widget/WheelView;
 
     move-result-object v0
 
-    const v1, 0x7f0200c0
+    const v1, 0x7f0200c7
 
-    invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->setCenterDrawable(I)Lkankan/wheel/widget/WheelView;
+    invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
     move-result-object v0
 
@@ -183,15 +205,15 @@
 
     const/high16 v5, 0x40b00000
 
-    invoke-virtual/range {v0 .. v5}, Lkankan/wheel/widget/WheelView;->setCenterStyle(Ljava/lang/String;IIFF)Lkankan/wheel/widget/WheelView;
+    invoke-virtual/range {v0 .. v5}, Lkankan/wheel/widget/WheelView;->a(Ljava/lang/String;IIFF)Lkankan/wheel/widget/WheelView;
 
     move-result-object v13
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/PickAdapter;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bO;
 
     const/16 v3, 0x64
 
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->b:Lkankan/wheel/widget/WheelView;
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->c:Lkankan/wheel/widget/WheelView;
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->getResources()Landroid/content/res/Resources;
 
@@ -233,25 +255,25 @@
 
     move v12, v11
 
-    invoke-direct/range {v0 .. v12}, Lcn/com/smartdevices/bracelet/ui/PickAdapter;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIII)V
+    invoke-direct/range {v0 .. v12}, Lcn/com/smartdevices/bracelet/ui/bO;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIII)V
 
-    invoke-virtual {v13, v0}, Lkankan/wheel/widget/WheelView;->setViewAdapter(Lkankan/wheel/widget/adapters/WheelViewAdapter;)Lkankan/wheel/widget/WheelView;
+    invoke-virtual {v13, v0}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/a/f;)Lkankan/wheel/widget/WheelView;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->mPersonInfo:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     iget v0, v0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->age:I
 
     if-lez v0, :cond_2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->b:Lkankan/wheel/widget/WheelView;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->c:Lkankan/wheel/widget/WheelView;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->mPersonInfo:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     iget v1, v1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->age:I
 
     add-int/lit8 v1, v1, -0x5
 
-    invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->setCurrentItem(I)Lkankan/wheel/widget/WheelView;
+    invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->c(I)Lkankan/wheel/widget/WheelView;
 
     :goto_0
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->getIntent()Landroid/content/Intent;
@@ -272,7 +294,7 @@
 
     if-lez v2, :cond_0
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->mPersonInfo:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     iput-object v1, v2, Lcn/com/smartdevices/bracelet/model/PersonInfo;->avatarUrl:Ljava/lang/String;
 
@@ -291,7 +313,7 @@
 
     if-lez v1, :cond_1
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->mPersonInfo:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     const-string v2, "miliao_nick_name"
 
@@ -305,33 +327,11 @@
     return-void
 
     :cond_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->b:Lkankan/wheel/widget/WheelView;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->c:Lkankan/wheel/widget/WheelView;
 
-    invoke-virtual {v0, v11}, Lkankan/wheel/widget/WheelView;->setCurrentItem(I)Lkankan/wheel/widget/WheelView;
+    invoke-virtual {v0, v11}, Lkankan/wheel/widget/WheelView;->c(I)Lkankan/wheel/widget/WheelView;
 
     goto :goto_0
-.end method
-
-.method public onNext()V
-    .locals 2
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->a()V
-
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoBaseActivity;->onNext()V
-
-    new-instance v0, Landroid/content/Intent;
-
-    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
-
-    const-class v1, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;
-
-    invoke-virtual {v0, p0, v1}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
-
-    const/4 v1, 0x6
-
-    invoke-virtual {p0, v0, v1}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetAgeActivity;->startActivityForResult(Landroid/content/Intent;I)V
-
-    return-void
 .end method
 
 .method protected onPause()V
@@ -341,9 +341,9 @@
 
     const-string v0, "PagePersonGuideAge"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->endPage(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->endSession(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->b(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -355,9 +355,9 @@
 
     const-string v0, "PagePersonGuideAge"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->startPage(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->startSession(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;)V
 
     return-void
 .end method

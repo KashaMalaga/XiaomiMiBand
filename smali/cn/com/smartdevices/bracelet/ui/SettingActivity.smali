@@ -17,23 +17,6 @@
 
 
 # virtual methods
-.method public extendSetting(Landroid/view/View;)V
-    .locals 2
-    .param p1, "view"    # Landroid/view/View;
-
-    .prologue
-    new-instance v0, Landroid/content/Intent;
-
-    const-class v1, Lcn/com/smartdevices/bracelet/ExtendActivity;
-
-    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .local v0, "intent":Landroid/content/Intent;
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->startActivity(Landroid/content/Intent;)V
-
-    return-void
-.end method
-
 .method protected onActivityResult(IILandroid/content/Intent;)V
     .locals 4
 
@@ -43,7 +26,7 @@
 
     move-result-object v0
 
-    const-class v1, Lcn/com/smartdevices/bracelet/ui/SettingFragment;
+    const-class v1, Lcn/com/smartdevices/bracelet/ui/cv;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -53,7 +36,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/SettingFragment;
+    check-cast v0, Lcn/com/smartdevices/bracelet/ui/cv;
 
     const-string v1, "SettingActivity"
 
@@ -71,11 +54,11 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/SettingFragment;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-virtual {v0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/cv;->onActivityResult(IILandroid/content/Intent;)V
 
     :cond_0
     return-void
@@ -96,11 +79,11 @@
 
     const v1, 0x1020002
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/ui/SettingFragment;->newInstance()Lcn/com/smartdevices/bracelet/ui/SettingFragment;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/ui/cv;->b()Lcn/com/smartdevices/bracelet/ui/cv;
 
     move-result-object v2
 
-    const-class v3, Lcn/com/smartdevices/bracelet/ui/SettingFragment;
+    const-class v3, Lcn/com/smartdevices/bracelet/ui/cv;
 
     invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -114,7 +97,7 @@
 
     const-string v1, "onCreate"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -128,7 +111,7 @@
 
     const-string v1, "onNewIntent"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -138,7 +121,7 @@
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onPause()V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->endSession(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->b(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -148,7 +131,7 @@
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onResume()V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->startSession(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;)V
 
     return-void
 .end method

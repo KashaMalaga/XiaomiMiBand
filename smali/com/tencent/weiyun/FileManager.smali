@@ -146,7 +146,7 @@
 .method public downLoadFile(Lcom/tencent/weiyun/FileManager$WeiyunFileType;Lcom/tencent/weiyun/WeiyunFile;Ljava/lang/String;Lcom/tencent/weiyun/IDownLoadFileCallBack;)V
     .locals 7
 
-    new-instance v0, Lcom/tencent/weiyun/a;
+    new-instance v0, Lcom/tencent/weiyun/FileManager$DownLoadImp;
 
     iget-object v2, p0, Lcom/tencent/weiyun/FileManager;->mContext:Landroid/content/Context;
 
@@ -160,9 +160,9 @@
 
     move-object v6, p4
 
-    invoke-direct/range {v0 .. v6}, Lcom/tencent/weiyun/a;-><init>(Lcom/tencent/weiyun/FileManager;Landroid/content/Context;Lcom/tencent/weiyun/FileManager$WeiyunFileType;Lcom/tencent/weiyun/WeiyunFile;Ljava/lang/String;Lcom/tencent/weiyun/IDownLoadFileCallBack;)V
+    invoke-direct/range {v0 .. v6}, Lcom/tencent/weiyun/FileManager$DownLoadImp;-><init>(Lcom/tencent/weiyun/FileManager;Landroid/content/Context;Lcom/tencent/weiyun/FileManager$WeiyunFileType;Lcom/tencent/weiyun/WeiyunFile;Ljava/lang/String;Lcom/tencent/weiyun/IDownLoadFileCallBack;)V
 
-    invoke-virtual {v0}, Lcom/tencent/weiyun/a;->start()V
+    invoke-virtual {v0}, Lcom/tencent/weiyun/FileManager$DownLoadImp;->start()V
 
     return-void
 .end method
@@ -170,7 +170,7 @@
 .method public downLoadThumb(Lcom/tencent/weiyun/WeiyunFile;Ljava/lang/String;Ljava/lang/String;Lcom/tencent/weiyun/IDownLoadFileCallBack;)V
     .locals 7
 
-    new-instance v0, Lcom/tencent/weiyun/a;
+    new-instance v0, Lcom/tencent/weiyun/FileManager$DownLoadImp;
 
     iget-object v2, p0, Lcom/tencent/weiyun/FileManager;->mContext:Landroid/content/Context;
 
@@ -184,11 +184,11 @@
 
     move-object v6, p4
 
-    invoke-direct/range {v0 .. v6}, Lcom/tencent/weiyun/a;-><init>(Lcom/tencent/weiyun/FileManager;Landroid/content/Context;Lcom/tencent/weiyun/FileManager$WeiyunFileType;Lcom/tencent/weiyun/WeiyunFile;Ljava/lang/String;Lcom/tencent/weiyun/IDownLoadFileCallBack;)V
+    invoke-direct/range {v0 .. v6}, Lcom/tencent/weiyun/FileManager$DownLoadImp;-><init>(Lcom/tencent/weiyun/FileManager;Landroid/content/Context;Lcom/tencent/weiyun/FileManager$WeiyunFileType;Lcom/tencent/weiyun/WeiyunFile;Ljava/lang/String;Lcom/tencent/weiyun/IDownLoadFileCallBack;)V
 
-    invoke-virtual {v0, p3}, Lcom/tencent/weiyun/a;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, p3}, Lcom/tencent/weiyun/FileManager$DownLoadImp;->setThumbSize(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/tencent/weiyun/a;->start()V
+    invoke-virtual {v0}, Lcom/tencent/weiyun/FileManager$DownLoadImp;->start()V
 
     return-void
 .end method
@@ -220,9 +220,9 @@
 
     invoke-virtual {v3, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v0, Lcom/tencent/weiyun/e;
+    new-instance v0, Lcom/tencent/weiyun/FileManager$GetFileListListener;
 
-    invoke-direct {v0, p0, p2}, Lcom/tencent/weiyun/e;-><init>(Lcom/tencent/weiyun/FileManager;Lcom/tencent/weiyun/IGetFileListListener;)V
+    invoke-direct {v0, p0, p2}, Lcom/tencent/weiyun/FileManager$GetFileListListener;-><init>(Lcom/tencent/weiyun/FileManager;Lcom/tencent/weiyun/IGetFileListListener;)V
 
     new-instance v5, Lcom/tencent/connect/common/BaseApi$TempRequestListener;
 
@@ -242,7 +242,7 @@
 .method public uploadFile(Lcom/tencent/weiyun/FileManager$WeiyunFileType;Ljava/lang/String;Lcom/tencent/weiyun/IUploadFileCallBack;)V
     .locals 6
 
-    new-instance v0, Lcom/tencent/weiyun/f;
+    new-instance v0, Lcom/tencent/weiyun/FileManager$UploadFileImp;
 
     iget-object v2, p0, Lcom/tencent/weiyun/FileManager;->mContext:Landroid/content/Context;
 
@@ -254,9 +254,9 @@
 
     move-object v5, p3
 
-    invoke-direct/range {v0 .. v5}, Lcom/tencent/weiyun/f;-><init>(Lcom/tencent/weiyun/FileManager;Landroid/content/Context;Lcom/tencent/weiyun/FileManager$WeiyunFileType;Ljava/lang/String;Lcom/tencent/weiyun/IUploadFileCallBack;)V
+    invoke-direct/range {v0 .. v5}, Lcom/tencent/weiyun/FileManager$UploadFileImp;-><init>(Lcom/tencent/weiyun/FileManager;Landroid/content/Context;Lcom/tencent/weiyun/FileManager$WeiyunFileType;Ljava/lang/String;Lcom/tencent/weiyun/IUploadFileCallBack;)V
 
-    invoke-virtual {v0}, Lcom/tencent/weiyun/f;->start()V
+    invoke-virtual {v0}, Lcom/tencent/weiyun/FileManager$UploadFileImp;->start()V
 
     return-void
 .end method

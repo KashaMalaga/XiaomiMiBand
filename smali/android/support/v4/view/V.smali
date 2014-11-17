@@ -1,62 +1,56 @@
 .class Landroid/support/v4/view/V;
-.super Landroid/text/method/SingleLineTransformationMethod;
-
-
-# static fields
-.field private static final a:Ljava/lang/String; = "SingleLineAllCapsTransform"
-
-
-# instance fields
-.field private b:Ljava/util/Locale;
+.super Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
+.method constructor <init>()V
+    .locals 0
 
-    invoke-direct {p0}, Landroid/text/method/SingleLineTransformationMethod;-><init>()V
-
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v0
-
-    iget-object v0, v0, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
-
-    iput-object v0, p0, Landroid/support/v4/view/V;->b:Ljava/util/Locale;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method public static a(Landroid/view/MenuItem;Landroid/support/v4/view/X;)Landroid/view/MenuItem;
+    .locals 1
 
-# virtual methods
-.method public getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
-    .locals 2
+    new-instance v0, Landroid/support/v4/view/W;
 
-    invoke-super {p0, p1, p2}, Landroid/text/method/SingleLineTransformationMethod;->getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
+    invoke-direct {v0, p1}, Landroid/support/v4/view/W;-><init>(Landroid/support/v4/view/X;)V
 
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-interface {p0, v0}, Landroid/view/MenuItem;->setOnActionExpandListener(Landroid/view/MenuItem$OnActionExpandListener;)Landroid/view/MenuItem;
 
     move-result-object v0
 
-    iget-object v1, p0, Landroid/support/v4/view/V;->b:Ljava/util/Locale;
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object v0
-
-    :goto_0
     return-object v0
+.end method
 
-    :cond_0
-    const/4 v0, 0x0
+.method public static a(Landroid/view/MenuItem;)Z
+    .locals 1
 
-    goto :goto_0
+    invoke-interface {p0}, Landroid/view/MenuItem;->expandActionView()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static b(Landroid/view/MenuItem;)Z
+    .locals 1
+
+    invoke-interface {p0}, Landroid/view/MenuItem;->collapseActionView()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static c(Landroid/view/MenuItem;)Z
+    .locals 1
+
+    invoke-interface {p0}, Landroid/view/MenuItem;->isActionViewExpanded()Z
+
+    move-result v0
+
+    return v0
 .end method

@@ -2,7 +2,31 @@
 .super Ljava/lang/Object;
 
 
+# static fields
+.field private static final a:Ljava/lang/String; = "ActionBarDrawerToggleHoneycomb"
+
+.field private static final b:[I
+
+
 # direct methods
+.method static constructor <clinit>()V
+    .locals 3
+
+    const/4 v0, 0x1
+
+    new-array v0, v0, [I
+
+    const/4 v1, 0x0
+
+    const v2, 0x101030b
+
+    aput v2, v0, v1
+
+    sput-object v0, Landroid/support/v4/app/i;->b:[I
+
+    return-void
+.end method
+
 .method constructor <init>()V
     .locals 0
 
@@ -11,26 +35,177 @@
     return-void
 .end method
 
-.method public static a(Landroid/app/Activity;)V
-    .locals 0
+.method public static a(Landroid/app/Activity;)Landroid/graphics/drawable/Drawable;
+    .locals 2
 
-    invoke-virtual {p0}, Landroid/app/Activity;->finishAffinity()V
+    sget-object v0, Landroid/support/v4/app/i;->b:[I
 
-    return-void
+    invoke-virtual {p0, v0}, Landroid/app/Activity;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
+
+    return-object v1
 .end method
 
-.method public static a(Landroid/app/Activity;Landroid/content/Intent;ILandroid/os/Bundle;)V
-    .locals 0
+.method public static a(Ljava/lang/Object;Landroid/app/Activity;I)Ljava/lang/Object;
+    .locals 6
 
-    invoke-virtual {p0, p1, p2, p3}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;ILandroid/os/Bundle;)V
+    if-nez p0, :cond_1
 
-    return-void
+    new-instance v1, Landroid/support/v4/app/j;
+
+    invoke-direct {v1, p1}, Landroid/support/v4/app/j;-><init>(Landroid/app/Activity;)V
+
+    :goto_0
+    move-object v0, v1
+
+    check-cast v0, Landroid/support/v4/app/j;
+
+    iget-object v2, v0, Landroid/support/v4/app/j;->a:Ljava/lang/reflect/Method;
+
+    if-eqz v2, :cond_0
+
+    :try_start_0
+    invoke-virtual {p1}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
+
+    move-result-object v2
+
+    iget-object v0, v0, Landroid/support/v4/app/j;->b:Ljava/lang/reflect/Method;
+
+    const/4 v3, 0x1
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    const/4 v4, 0x0
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    aput-object v5, v3, v4
+
+    invoke-virtual {v0, v2, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_0
+    :goto_1
+    return-object v1
+
+    :catch_0
+    move-exception v0
+
+    const-string v2, "ActionBarDrawerToggleHoneycomb"
+
+    const-string v3, "Couldn\'t set content description via JB-MR2 API"
+
+    invoke-static {v2, v3, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_1
+
+    :cond_1
+    move-object v1, p0
+
+    goto :goto_0
 .end method
 
-.method public static a(Landroid/content/Context;Landroid/content/Intent;Landroid/os/Bundle;)V
-    .locals 0
+.method public static a(Ljava/lang/Object;Landroid/app/Activity;Landroid/graphics/drawable/Drawable;I)Ljava/lang/Object;
+    .locals 6
 
-    invoke-virtual {p0, p1, p2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;Landroid/os/Bundle;)V
+    if-nez p0, :cond_2
 
-    return-void
+    new-instance v1, Landroid/support/v4/app/j;
+
+    invoke-direct {v1, p1}, Landroid/support/v4/app/j;-><init>(Landroid/app/Activity;)V
+
+    :goto_0
+    move-object v0, v1
+
+    check-cast v0, Landroid/support/v4/app/j;
+
+    iget-object v2, v0, Landroid/support/v4/app/j;->a:Ljava/lang/reflect/Method;
+
+    if-eqz v2, :cond_0
+
+    :try_start_0
+    invoke-virtual {p1}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
+
+    move-result-object v2
+
+    iget-object v3, v0, Landroid/support/v4/app/j;->a:Ljava/lang/reflect/Method;
+
+    const/4 v4, 0x1
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    const/4 v5, 0x0
+
+    aput-object p2, v4, v5
+
+    invoke-virtual {v3, v2, v4}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v0, v0, Landroid/support/v4/app/j;->b:Ljava/lang/reflect/Method;
+
+    const/4 v3, 0x1
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    const/4 v4, 0x0
+
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    aput-object v5, v3, v4
+
+    invoke-virtual {v0, v2, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_1
+    return-object v1
+
+    :catch_0
+    move-exception v0
+
+    const-string v2, "ActionBarDrawerToggleHoneycomb"
+
+    const-string v3, "Couldn\'t set home-as-up indicator via JB-MR2 API"
+
+    invoke-static {v2, v3, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    goto :goto_1
+
+    :cond_0
+    iget-object v2, v0, Landroid/support/v4/app/j;->c:Landroid/widget/ImageView;
+
+    if-eqz v2, :cond_1
+
+    iget-object v0, v0, Landroid/support/v4/app/j;->c:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, p2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    goto :goto_1
+
+    :cond_1
+    const-string v0, "ActionBarDrawerToggleHoneycomb"
+
+    const-string v2, "Couldn\'t set home-as-up indicator"
+
+    invoke-static {v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    goto :goto_1
+
+    :cond_2
+    move-object v1, p0
+
+    goto :goto_0
 .end method

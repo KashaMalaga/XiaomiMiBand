@@ -2,24 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Ljava/lang/Runnable;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator",
-        "<",
-        "Lcn/com/smartdevices/bracelet/view/E;",
-        ">;"
-    }
-.end annotation
+# instance fields
+.field final synthetic a:Lcn/com/smartdevices/bracelet/view/A;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/view/A;)V
     .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/B;->a:Lcn/com/smartdevices/bracelet/view/A;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -28,28 +22,16 @@
 
 
 # virtual methods
-.method public a(Lcn/com/smartdevices/bracelet/view/E;Lcn/com/smartdevices/bracelet/view/E;)I
-    .locals 2
-
-    iget v0, p1, Lcn/com/smartdevices/bracelet/view/E;->b:I
-
-    iget v1, p2, Lcn/com/smartdevices/bracelet/view/E;->b:I
-
-    sub-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+.method public run()V
     .locals 1
 
-    check-cast p1, Lcn/com/smartdevices/bracelet/view/E;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/B;->a:Lcn/com/smartdevices/bracelet/view/A;
 
-    check-cast p2, Lcn/com/smartdevices/bracelet/view/E;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/view/A;->a(Lcn/com/smartdevices/bracelet/view/A;)Lcn/com/smartdevices/bracelet/view/RulerScrollView;
 
-    invoke-virtual {p0, p1, p2}, Lcn/com/smartdevices/bracelet/view/B;->a(Lcn/com/smartdevices/bracelet/view/E;Lcn/com/smartdevices/bracelet/view/E;)I
+    move-result-object v0
 
-    move-result v0
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/view/RulerScrollView;->a(Lcn/com/smartdevices/bracelet/view/RulerScrollView;)V
 
-    return v0
+    return-void
 .end method

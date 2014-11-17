@@ -1,12 +1,41 @@
-.class Landroid/support/v4/view/A;
+.class public Landroid/support/v4/view/A;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Landroid/support/v4/view/E;
+
+# static fields
+.field static final a:Landroid/support/v4/view/E;
 
 
 # direct methods
-.method constructor <init>()V
+.method static constructor <clinit>()V
+    .locals 2
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0xb
+
+    if-lt v0, v1, :cond_0
+
+    new-instance v0, Landroid/support/v4/view/D;
+
+    invoke-direct {v0}, Landroid/support/v4/view/D;-><init>()V
+
+    sput-object v0, Landroid/support/v4/view/A;->a:Landroid/support/v4/view/E;
+
+    :goto_0
+    return-void
+
+    :cond_0
+    new-instance v0, Landroid/support/v4/view/B;
+
+    invoke-direct {v0}, Landroid/support/v4/view/B;-><init>()V
+
+    sput-object v0, Landroid/support/v4/view/A;->a:Landroid/support/v4/view/E;
+
+    goto :goto_0
+.end method
+
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -14,60 +43,116 @@
     return-void
 .end method
 
-
-# virtual methods
-.method public a(Landroid/view/MenuItem;Landroid/support/v4/view/MenuItemCompat$OnActionExpandListener;)Landroid/view/MenuItem;
-    .locals 0
-
-    return-object p1
-.end method
-
-.method public a(Landroid/view/MenuItem;Landroid/view/View;)Landroid/view/MenuItem;
-    .locals 0
-
-    return-object p1
-.end method
-
-.method public a(Landroid/view/MenuItem;)Landroid/view/View;
+.method public static a(I)I
     .locals 1
 
-    const/4 v0, 0x0
+    sget-object v0, Landroid/support/v4/view/A;->a:Landroid/support/v4/view/E;
+
+    invoke-interface {v0, p0}, Landroid/support/v4/view/E;->a(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static a(Landroid/view/View;)Ljava/lang/Object;
+    .locals 1
+
+    sget-object v0, Landroid/support/v4/view/A;->a:Landroid/support/v4/view/E;
+
+    invoke-interface {v0, p0}, Landroid/support/v4/view/E;->a(Landroid/view/View;)Ljava/lang/Object;
+
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method public a(Landroid/view/MenuItem;I)V
-    .locals 0
+.method public static a(II)Z
+    .locals 1
+
+    sget-object v0, Landroid/support/v4/view/A;->a:Landroid/support/v4/view/E;
+
+    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/E;->a(II)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static a(Landroid/view/KeyEvent;)Z
+    .locals 2
+
+    sget-object v0, Landroid/support/v4/view/A;->a:Landroid/support/v4/view/E;
+
+    invoke-virtual {p0}, Landroid/view/KeyEvent;->getMetaState()I
+
+    move-result v1
+
+    invoke-interface {v0, v1}, Landroid/support/v4/view/E;->b(I)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static a(Landroid/view/KeyEvent;I)Z
+    .locals 2
+
+    sget-object v0, Landroid/support/v4/view/A;->a:Landroid/support/v4/view/E;
+
+    invoke-virtual {p0}, Landroid/view/KeyEvent;->getMetaState()I
+
+    move-result v1
+
+    invoke-interface {v0, v1, p1}, Landroid/support/v4/view/E;->a(II)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static a(Landroid/view/KeyEvent;Landroid/view/KeyEvent$Callback;Ljava/lang/Object;Ljava/lang/Object;)Z
+    .locals 1
+
+    sget-object v0, Landroid/support/v4/view/A;->a:Landroid/support/v4/view/E;
+
+    invoke-interface {v0, p0, p1, p2, p3}, Landroid/support/v4/view/E;->a(Landroid/view/KeyEvent;Landroid/view/KeyEvent$Callback;Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static b(Landroid/view/KeyEvent;)V
+    .locals 1
+
+    sget-object v0, Landroid/support/v4/view/A;->a:Landroid/support/v4/view/E;
+
+    invoke-interface {v0, p0}, Landroid/support/v4/view/E;->a(Landroid/view/KeyEvent;)V
 
     return-void
 .end method
 
-.method public b(Landroid/view/MenuItem;I)Landroid/view/MenuItem;
-    .locals 0
-
-    return-object p1
-.end method
-
-.method public b(Landroid/view/MenuItem;)Z
+.method public static b(I)Z
     .locals 1
 
-    const/4 v0, 0x0
+    sget-object v0, Landroid/support/v4/view/A;->a:Landroid/support/v4/view/E;
+
+    invoke-interface {v0, p0}, Landroid/support/v4/view/E;->b(I)Z
+
+    move-result v0
 
     return v0
 .end method
 
-.method public c(Landroid/view/MenuItem;)Z
+.method public static c(Landroid/view/KeyEvent;)Z
     .locals 1
 
-    const/4 v0, 0x0
+    sget-object v0, Landroid/support/v4/view/A;->a:Landroid/support/v4/view/E;
 
-    return v0
-.end method
+    invoke-interface {v0, p0}, Landroid/support/v4/view/E;->b(Landroid/view/KeyEvent;)Z
 
-.method public d(Landroid/view/MenuItem;)Z
-    .locals 1
-
-    const/4 v0, 0x0
+    move-result v0
 
     return v0
 .end method

@@ -2,19 +2,17 @@
 .super Landroid/os/Handler;
 
 
+# instance fields
+.field final synthetic a:Landroid/support/v4/content/s;
+
+
 # direct methods
-.method private constructor <init>()V
+.method constructor <init>(Landroid/support/v4/content/s;Landroid/os/Looper;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+    iput-object p1, p0, Landroid/support/v4/content/t;->a:Landroid/support/v4/content/s;
 
-    return-void
-.end method
-
-.method synthetic constructor <init>(Landroid/support/v4/content/o;)V
-    .locals 0
-
-    invoke-direct {p0}, Landroid/support/v4/content/t;-><init>()V
+    invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     return-void
 .end method
@@ -22,38 +20,21 @@
 
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
-    .locals 3
+    .locals 1
 
-    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+    iget v0, p1, Landroid/os/Message;->what:I
 
-    check-cast v0, Landroid/support/v4/content/s;
+    packed-switch v0, :pswitch_data_0
 
-    iget v1, p1, Landroid/os/Message;->what:I
-
-    packed-switch v1, :pswitch_data_0
+    invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
     :goto_0
     return-void
 
     :pswitch_0
-    iget-object v1, v0, Landroid/support/v4/content/s;->a:Landroid/support/v4/content/ModernAsyncTask;
+    iget-object v0, p0, Landroid/support/v4/content/t;->a:Landroid/support/v4/content/s;
 
-    iget-object v0, v0, Landroid/support/v4/content/s;->b:[Ljava/lang/Object;
-
-    const/4 v2, 0x0
-
-    aget-object v0, v0, v2
-
-    invoke-static {v1, v0}, Landroid/support/v4/content/ModernAsyncTask;->c(Landroid/support/v4/content/ModernAsyncTask;Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :pswitch_1
-    iget-object v1, v0, Landroid/support/v4/content/s;->a:Landroid/support/v4/content/ModernAsyncTask;
-
-    iget-object v0, v0, Landroid/support/v4/content/s;->b:[Ljava/lang/Object;
-
-    invoke-virtual {v1, v0}, Landroid/support/v4/content/ModernAsyncTask;->b([Ljava/lang/Object;)V
+    invoke-static {v0}, Landroid/support/v4/content/s;->a(Landroid/support/v4/content/s;)V
 
     goto :goto_0
 
@@ -62,6 +43,5 @@
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
-        :pswitch_1
     .end packed-switch
 .end method

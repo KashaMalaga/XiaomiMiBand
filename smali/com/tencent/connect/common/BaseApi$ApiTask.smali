@@ -3,18 +3,18 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/tencent/connect/common/BaseApi;
-
 .field public mListener:Lcom/tencent/tauth/IUiListener;
 
 .field public mRequestCode:I
+
+.field final synthetic this$0:Lcom/tencent/connect/common/BaseApi;
 
 
 # direct methods
 .method public constructor <init>(Lcom/tencent/connect/common/BaseApi;ILcom/tencent/tauth/IUiListener;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/tencent/connect/common/BaseApi$ApiTask;->a:Lcom/tencent/connect/common/BaseApi;
+    iput-object p1, p0, Lcom/tencent/connect/common/BaseApi$ApiTask;->this$0:Lcom/tencent/connect/common/BaseApi;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

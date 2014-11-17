@@ -1,38 +1,65 @@
 .class Lcn/com/smartdevices/bracelet/ui/bR;
-.super Lcom/nostra13/universalimageloader/core/listener/SimpleImageLoadingListener;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/widget/AdapterView$OnItemClickListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/widget/AdapterView$OnItemClickListener;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/ShowImageActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/ShowImageActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bR;->a:Lcn/com/smartdevices/bracelet/ui/ShowImageActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bR;->a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
 
-    invoke-direct {p0}, Lcom/nostra13/universalimageloader/core/listener/SimpleImageLoadingListener;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onLoadingComplete(Ljava/lang/String;Landroid/view/View;Landroid/graphics/Bitmap;)V
-    .locals 1
+.method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bR;->a:Lcn/com/smartdevices/bracelet/ui/ShowImageActivity;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bR;->a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
 
-    invoke-static {v0, p3}, Lcn/com/smartdevices/bracelet/ui/ShowImageActivity;->a(Lcn/com/smartdevices/bracelet/ui/ShowImageActivity;Landroid/graphics/Bitmap;)V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bR;->a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bR;->a:Lcn/com/smartdevices/bracelet/ui/ShowImageActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ShowImageActivity;->a(Lcn/com/smartdevices/bracelet/ui/ShowImageActivity;)Landroid/widget/ImageView;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;->a(Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;)Ljava/util/ArrayList;
 
     move-result-object v0
 
-    invoke-virtual {v0, p3}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+    invoke-virtual {v0, p3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/ui/bY;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/bY;->a:Landroid/bluetooth/BluetoothDevice;
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;->a(Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;Landroid/bluetooth/BluetoothDevice;)V
 
     return-void
 .end method

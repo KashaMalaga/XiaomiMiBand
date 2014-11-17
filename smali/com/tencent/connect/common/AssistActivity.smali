@@ -3,11 +3,11 @@
 
 
 # static fields
-.field private static a:Lcom/tencent/connect/common/BaseApi;
+.field private static sApiObject:Lcom/tencent/connect/common/BaseApi;
 
 
 # instance fields
-.field private b:Lcom/tencent/connect/common/BaseApi;
+.field private mAPiObject:Lcom/tencent/connect/common/BaseApi;
 
 
 # direct methods
@@ -34,7 +34,7 @@
 .method public static setApiObject(Lcom/tencent/connect/common/BaseApi;)V
     .locals 0
 
-    sput-object p0, Lcom/tencent/connect/common/AssistActivity;->a:Lcom/tencent/connect/common/BaseApi;
+    sput-object p0, Lcom/tencent/connect/common/AssistActivity;->sApiObject:Lcom/tencent/connect/common/BaseApi;
 
     return-void
 .end method
@@ -46,11 +46,11 @@
 
     invoke-super {p0, p1, p2, p3}, Landroid/app/Activity;->onActivityResult(IILandroid/content/Intent;)V
 
-    iget-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->b:Lcom/tencent/connect/common/BaseApi;
+    iget-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->mAPiObject:Lcom/tencent/connect/common/BaseApi;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->b:Lcom/tencent/connect/common/BaseApi;
+    iget-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->mAPiObject:Lcom/tencent/connect/common/BaseApi;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/tencent/connect/common/BaseApi;->onActivityResult(IILandroid/content/Intent;)V
 
@@ -69,7 +69,7 @@
 
     invoke-virtual {p0, v0}, Lcom/tencent/connect/common/AssistActivity;->requestWindowFeature(I)Z
 
-    sget-object v0, Lcom/tencent/connect/common/AssistActivity;->a:Lcom/tencent/connect/common/BaseApi;
+    sget-object v0, Lcom/tencent/connect/common/AssistActivity;->sApiObject:Lcom/tencent/connect/common/BaseApi;
 
     if-nez v0, :cond_0
 
@@ -79,17 +79,17 @@
     return-void
 
     :cond_0
-    sget-object v0, Lcom/tencent/connect/common/AssistActivity;->a:Lcom/tencent/connect/common/BaseApi;
+    sget-object v0, Lcom/tencent/connect/common/AssistActivity;->sApiObject:Lcom/tencent/connect/common/BaseApi;
 
-    iput-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->b:Lcom/tencent/connect/common/BaseApi;
+    iput-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->mAPiObject:Lcom/tencent/connect/common/BaseApi;
 
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/connect/common/AssistActivity;->a:Lcom/tencent/connect/common/BaseApi;
+    sput-object v0, Lcom/tencent/connect/common/AssistActivity;->sApiObject:Lcom/tencent/connect/common/BaseApi;
 
-    iget-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->b:Lcom/tencent/connect/common/BaseApi;
+    iget-object v0, p0, Lcom/tencent/connect/common/AssistActivity;->mAPiObject:Lcom/tencent/connect/common/BaseApi;
 
-    invoke-virtual {v0}, Lcom/tencent/connect/common/BaseApi;->b()Landroid/content/Intent;
+    invoke-virtual {v0}, Lcom/tencent/connect/common/BaseApi;->getActivityIntent()Landroid/content/Intent;
 
     move-result-object v0
 
@@ -101,9 +101,9 @@
 
     move-result v0
 
-    iget-object v1, p0, Lcom/tencent/connect/common/AssistActivity;->b:Lcom/tencent/connect/common/BaseApi;
+    iget-object v1, p0, Lcom/tencent/connect/common/AssistActivity;->mAPiObject:Lcom/tencent/connect/common/BaseApi;
 
-    invoke-virtual {v1}, Lcom/tencent/connect/common/BaseApi;->b()Landroid/content/Intent;
+    invoke-virtual {v1}, Lcom/tencent/connect/common/BaseApi;->getActivityIntent()Landroid/content/Intent;
 
     move-result-object v1
 

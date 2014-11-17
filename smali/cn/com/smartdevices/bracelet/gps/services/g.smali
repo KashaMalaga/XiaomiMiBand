@@ -1,55 +1,42 @@
-.class final Lcn/com/smartdevices/bracelet/gps/services/g;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lcn/com/smartdevices/bracelet/gps/services/inteface/IMapLocationListener;
+.class Lcn/com/smartdevices/bracelet/gps/services/g;
+.super Ljava/util/TimerTask;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/services/d;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/services/b;
+
+.field private final synthetic b:Landroid/content/Context;
 
 
 # direct methods
-.method private constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/d;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/b;Landroid/content/Context;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/services/g;->a:Lcn/com/smartdevices/bracelet/gps/services/d;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/services/g;->a:Lcn/com/smartdevices/bracelet/gps/services/b;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/gps/services/g;->b:Landroid/content/Context;
 
-    return-void
-.end method
-
-.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/d;Lcn/com/smartdevices/bracelet/gps/services/g;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/gps/services/g;-><init>(Lcn/com/smartdevices/bracelet/gps/services/d;)V
+    invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onLocationChanged(Lcn/com/smartdevices/bracelet/gps/model/GPSPoint;)V
-    .locals 0
+.method public run()V
+    .locals 6
 
-    return-void
-.end method
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/g;->a:Lcn/com/smartdevices/bracelet/gps/services/b;
 
-.method public onProviderDisabled(Ljava/lang/String;)V
-    .locals 0
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/g;->b:Landroid/content/Context;
 
-    return-void
-.end method
+    const-wide/16 v2, 0x0
 
-.method public onProviderEnabled(Ljava/lang/String;)V
-    .locals 0
+    const/4 v4, 0x0
 
-    return-void
-.end method
+    const-string v5, "gps"
 
-.method public onStatusChanged(Ljava/lang/String;ILandroid/os/Bundle;)V
-    .locals 0
+    invoke-static/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/gps/services/b;->a(Lcn/com/smartdevices/bracelet/gps/services/b;Landroid/content/Context;JFLjava/lang/String;)V
 
     return-void
 .end method

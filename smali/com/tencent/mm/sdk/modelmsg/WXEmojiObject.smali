@@ -6,9 +6,9 @@
 
 
 # static fields
-.field private static final a:Ljava/lang/String; = "MicroMsg.SDK.WXEmojiObject"
+.field private static final CONTENT_LENGTH_LIMIT:I = 0xa00000
 
-.field private static final b:I = 0xa00000
+.field private static final TAG:Ljava/lang/String; = "MicroMsg.SDK.WXEmojiObject"
 
 
 # instance fields
@@ -52,7 +52,7 @@
     return-void
 .end method
 
-.method private a(Ljava/lang/String;)I
+.method private getFileSize(Ljava/lang/String;)I
     .locals 3
 
     const/4 v0, 0x0
@@ -157,7 +157,7 @@
 
     iget-object v1, p0, Lcom/tencent/mm/sdk/modelmsg/WXEmojiObject;->emojiPath:Ljava/lang/String;
 
-    invoke-direct {p0, v1}, Lcom/tencent/mm/sdk/modelmsg/WXEmojiObject;->a(Ljava/lang/String;)I
+    invoke-direct {p0, v1}, Lcom/tencent/mm/sdk/modelmsg/WXEmojiObject;->getFileSize(Ljava/lang/String;)I
 
     move-result v1
 

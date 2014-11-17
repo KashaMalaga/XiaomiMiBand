@@ -128,4 +128,8 @@
     <dimen name="select_item_txt_padding_left">5.0dip</dimen>
     <dimen name="single_button_padding">35.0dip</dimen>
     <dimen name="lab_factory_sport_progress_state">100.0dip</dimen>
+    <dimen name="sport_running_slider_panel_height">120.0dip</dimen>
+    <dimen name="sport_running_button_bottom">22.799988dip</dimen>
+    <dimen name="sport_running_time_cost_desc_size">10.0sp</dimen>
+    <dimen name="sport_running_time_cost_size">26.699982sp</dimen>
 </resources>

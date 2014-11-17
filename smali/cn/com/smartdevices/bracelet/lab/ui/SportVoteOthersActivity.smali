@@ -45,7 +45,7 @@
 .method private a()V
     .locals 1
 
-    const v0, 0x7f07003c
+    const v0, 0x7f070041
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportVoteOthersActivity;->findViewById(I)Landroid/view/View;
 
@@ -139,8 +139,8 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f07003c -> :sswitch_0
-        0x7f070076 -> :sswitch_1
+        0x7f070041 -> :sswitch_0
+        0x7f07007b -> :sswitch_1
     .end sparse-switch
 .end method
 
@@ -149,13 +149,13 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030014
+    const v0, 0x7f030015
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportVoteOthersActivity;->setContentView(I)V
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/ui/SportVoteOthersActivity;->a()V
 
-    const v0, 0x7f070075
+    const v0, 0x7f07007a
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportVoteOthersActivity;->findViewById(I)Landroid/view/View;
 
@@ -167,17 +167,17 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportVoteOthersActivity;->a:Landroid/widget/EditText;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/lab/ui/W;
+    new-instance v1, Lcn/com/smartdevices/bracelet/lab/ui/ae;
 
     const/16 v2, 0xa
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportVoteOthersActivity;->a:Landroid/widget/EditText;
 
-    invoke-direct {v1, p0, v2, v3}, Lcn/com/smartdevices/bracelet/lab/ui/W;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/SportVoteOthersActivity;ILandroid/widget/EditText;)V
+    invoke-direct {v1, p0, v2, v3}, Lcn/com/smartdevices/bracelet/lab/ui/ae;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/SportVoteOthersActivity;ILandroid/widget/EditText;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
-    const v0, 0x7f070076
+    const v0, 0x7f07007b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportVoteOthersActivity;->findViewById(I)Landroid/view/View;
 
@@ -213,9 +213,9 @@
 
     const-string v0, "PageLabSportVoteOthers"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->endPage(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->endSession(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->b(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -227,9 +227,9 @@
 
     const-string v0, "PageLabSportVoteOthers"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->startPage(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->startSession(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;)V
 
     return-void
 .end method

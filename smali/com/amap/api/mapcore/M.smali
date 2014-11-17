@@ -1,99 +1,56 @@
 .class Lcom/amap/api/mapcore/M;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lcom/amap/api/maps/AMap$CancelableCallback;
+.super Lcom/amap/api/mapcore/ao;
 
 
 # instance fields
-.field final synthetic a:Lcom/amap/api/maps/model/LatLngBounds;
-
-.field final synthetic b:I
-
-.field final synthetic c:I
-
-.field final synthetic d:I
-
-.field final synthetic e:J
-
-.field final synthetic f:Lcom/amap/api/maps/AMap$CancelableCallback;
-
-.field final synthetic g:Lcom/amap/api/mapcore/b;
+.field final synthetic a:Lcom/amap/api/mapcore/b;
 
 
 # direct methods
-.method constructor <init>(Lcom/amap/api/mapcore/b;Lcom/amap/api/maps/model/LatLngBounds;IIIJLcom/amap/api/maps/AMap$CancelableCallback;)V
+.method constructor <init>(Lcom/amap/api/mapcore/b;Landroid/content/Context;Lcom/amap/api/mapcore/aE;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/amap/api/mapcore/M;->g:Lcom/amap/api/mapcore/b;
+    iput-object p1, p0, Lcom/amap/api/mapcore/M;->a:Lcom/amap/api/mapcore/b;
 
-    iput-object p2, p0, Lcom/amap/api/mapcore/M;->a:Lcom/amap/api/maps/model/LatLngBounds;
-
-    iput p3, p0, Lcom/amap/api/mapcore/M;->b:I
-
-    iput p4, p0, Lcom/amap/api/mapcore/M;->c:I
-
-    iput p5, p0, Lcom/amap/api/mapcore/M;->d:I
-
-    iput-wide p6, p0, Lcom/amap/api/mapcore/M;->e:J
-
-    iput-object p8, p0, Lcom/amap/api/mapcore/M;->f:Lcom/amap/api/maps/AMap$CancelableCallback;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p3}, Lcom/amap/api/mapcore/ao;-><init>(Landroid/content/Context;Lcom/amap/api/mapcore/aE;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onCancel()V
-    .locals 1
+.method protected a()V
+    .locals 2
 
-    iget-object v0, p0, Lcom/amap/api/mapcore/M;->f:Lcom/amap/api/maps/AMap$CancelableCallback;
+    invoke-super {p0}, Lcom/amap/api/mapcore/ao;->a()V
 
-    if-eqz v0, :cond_0
+    iget-object v0, p0, Lcom/amap/api/mapcore/M;->a:Lcom/amap/api/mapcore/b;
 
-    iget-object v0, p0, Lcom/amap/api/mapcore/M;->f:Lcom/amap/api/maps/AMap$CancelableCallback;
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->e(Lcom/amap/api/mapcore/b;)Landroid/os/Handler;
 
-    invoke-interface {v0}, Lcom/amap/api/maps/AMap$CancelableCallback;->onCancel()V
+    move-result-object v0
 
-    :cond_0
-    return-void
-.end method
+    iget-object v1, p0, Lcom/amap/api/mapcore/M;->a:Lcom/amap/api/mapcore/b;
 
-.method public onFinish()V
-    .locals 5
-
-    :try_start_0
-    iget-object v0, p0, Lcom/amap/api/mapcore/M;->g:Lcom/amap/api/mapcore/b;
-
-    iget-object v1, p0, Lcom/amap/api/mapcore/M;->a:Lcom/amap/api/maps/model/LatLngBounds;
-
-    iget v2, p0, Lcom/amap/api/mapcore/M;->b:I
-
-    iget v3, p0, Lcom/amap/api/mapcore/M;->c:I
-
-    iget v4, p0, Lcom/amap/api/mapcore/M;->d:I
-
-    invoke-static {v1, v2, v3, v4}, Lcom/amap/api/mapcore/m;->a(Lcom/amap/api/maps/model/LatLngBounds;III)Lcom/amap/api/mapcore/m;
+    invoke-static {v1}, Lcom/amap/api/mapcore/b;->d(Lcom/amap/api/mapcore/b;)Ljava/lang/Runnable;
 
     move-result-object v1
 
-    iget-wide v2, p0, Lcom/amap/api/mapcore/M;->e:J
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    iget-object v4, p0, Lcom/amap/api/mapcore/M;->f:Lcom/amap/api/maps/AMap$CancelableCallback;
+    iget-object v0, p0, Lcom/amap/api/mapcore/M;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/amap/api/mapcore/b;->a(Lcom/amap/api/mapcore/m;JLcom/amap/api/maps/AMap$CancelableCallback;)V
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->e(Lcom/amap/api/mapcore/b;)Landroid/os/Handler;
 
-    :goto_0
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/amap/api/mapcore/M;->a:Lcom/amap/api/mapcore/b;
+
+    invoke-static {v1}, Lcom/amap/api/mapcore/b;->f(Lcom/amap/api/mapcore/b;)Ljava/lang/Runnable;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
     return-void
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
-
-    goto :goto_0
 .end method

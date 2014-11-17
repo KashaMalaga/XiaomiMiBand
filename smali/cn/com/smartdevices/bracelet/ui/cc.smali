@@ -1,4 +1,4 @@
-.class Lcn/com/smartdevices/bracelet/ui/cc;
+.class Lcn/com/smartdevices/bracelet/ui/cC;
 .super Ljava/lang/Object;
 
 # interfaces
@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/cv;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/cv;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cc;->a:Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cC;->a:Lcn/com/smartdevices/bracelet/ui/cv;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -23,112 +23,47 @@
 
 # virtual methods
 .method public run()V
-    .locals 4
+    .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cc;->a:Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cC;->a:Lcn/com/smartdevices/bracelet/ui/cv;
 
-    # getter for: Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mDisableStatusBarTintAuto:Z
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->access$0(Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;)Z
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/cv;->g(Lcn/com/smartdevices/bracelet/ui/cv;)Lcn/com/smartdevices/bracelet/chart/LinePieChartView;
 
-    move-result v0
+    move-result-object v0
 
-    if-eqz v0, :cond_0
+    const-wide/16 v1, 0x64
 
-    :goto_0
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/chart/LinePieChartView;->a(J)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cC;->a:Lcn/com/smartdevices/bracelet/ui/cv;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/cv;->g(Lcn/com/smartdevices/bracelet/ui/cv;)Lcn/com/smartdevices/bracelet/chart/LinePieChartView;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cC;->a:Lcn/com/smartdevices/bracelet/ui/cv;
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/cC;->a:Lcn/com/smartdevices/bracelet/ui/cv;
+
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/cv;->d(Lcn/com/smartdevices/bracelet/ui/cv;)Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$BatteryInfo;
+
+    move-result-object v2
+
+    iget v2, v2, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$BatteryInfo;->level:I
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/ui/cv;->a(Lcn/com/smartdevices/bracelet/ui/cv;I)J
+
+    move-result-wide v1
+
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/chart/LinePieChartView;->b(J)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cC;->a:Lcn/com/smartdevices/bracelet/ui/cv;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/cv;->i(Lcn/com/smartdevices/bracelet/ui/cv;)Landroid/animation/Animator;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/animation/Animator;->start()V
+
     return-void
-
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cc;->a:Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;
-
-    # getter for: Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mContentView:Landroid/view/View;
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->access$1(Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->buildDrawingCache()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cc;->a:Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;
-
-    # getter for: Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mContentView:Landroid/view/View;
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->access$1(Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->getDrawingCache()Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cc;->a:Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;
-
-    # getter for: Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mSystemBarTintManager:Lcn/com/smartdevices/bracelet/ui/SystemBarTintManager;
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->access$2(Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;)Lcn/com/smartdevices/bracelet/ui/SystemBarTintManager;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintManager;->getConfig()Lcn/com/smartdevices/bracelet/ui/SystemBarTintManager$SystemBarConfig;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintManager$SystemBarConfig;->getStatusBarHeight()I
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v2, v1}, Landroid/graphics/Bitmap;->getPixel(II)I
-
-    move-result v0
-
-    const-string v1, "DDDD"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "SystemStatusBar Tint Color : "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cc;->a:Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;
-
-    # getter for: Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mContentView:Landroid/view/View;
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->access$1(Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;)Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/view/View;->destroyDrawingCache()V
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cc;->a:Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;
-
-    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->applyStatusBarTint(I)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cc;->a:Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;
-
-    const/high16 v2, -0x1000000
-
-    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->applyStatusBarTint(I)V
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
-
-    goto :goto_0
 .end method

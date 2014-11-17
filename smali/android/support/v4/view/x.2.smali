@@ -16,62 +16,36 @@
 
 
 # virtual methods
-.method public a(Landroid/view/ViewGroup$MarginLayoutParams;)I
+.method public a(II)I
     .locals 1
 
-    iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+    const v0, -0x800001
+
+    and-int/2addr v0, p1
 
     return v0
 .end method
 
-.method public a(Landroid/view/ViewGroup$MarginLayoutParams;I)V
+.method public a(IIILandroid/graphics/Rect;IILandroid/graphics/Rect;I)V
     .locals 0
 
-    iput p2, p1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
+    invoke-static/range {p1 .. p7}, Landroid/view/Gravity;->apply(IIILandroid/graphics/Rect;IILandroid/graphics/Rect;)V
 
     return-void
 .end method
 
-.method public b(Landroid/view/ViewGroup$MarginLayoutParams;)I
-    .locals 1
-
-    iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
-
-    return v0
-.end method
-
-.method public b(Landroid/view/ViewGroup$MarginLayoutParams;I)V
+.method public a(IIILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
     .locals 0
 
-    iput p2, p1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
+    invoke-static {p1, p2, p3, p4, p5}, Landroid/view/Gravity;->apply(IIILandroid/graphics/Rect;Landroid/graphics/Rect;)V
 
     return-void
 .end method
 
-.method public c(Landroid/view/ViewGroup$MarginLayoutParams;I)V
+.method public a(ILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
     .locals 0
 
-    return-void
-.end method
-
-.method public c(Landroid/view/ViewGroup$MarginLayoutParams;)Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public d(Landroid/view/ViewGroup$MarginLayoutParams;)I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public d(Landroid/view/ViewGroup$MarginLayoutParams;I)V
-    .locals 0
+    invoke-static {p1, p2, p3}, Landroid/view/Gravity;->applyDisplay(ILandroid/graphics/Rect;Landroid/graphics/Rect;)V
 
     return-void
 .end method

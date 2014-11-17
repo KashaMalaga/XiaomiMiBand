@@ -38,9 +38,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/location/b;
+    new-instance v0, Lcn/com/smartdevices/bracelet/location/c;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/location/b;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/location/c;-><init>()V
 
     sput-object v0, Lcn/com/smartdevices/bracelet/location/Location$Address;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -115,6 +115,70 @@
 
 
 # virtual methods
+.method public a()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->a:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public a(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public b()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->b:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public b(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->b:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public c()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->c:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public c(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->c:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public d()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->d:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public d(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->d:Ljava/lang/String;
+
+    return-void
+.end method
+
 .method public describeContents()I
     .locals 1
 
@@ -123,31 +187,7 @@
     return v0
 .end method
 
-.method public getAdmin()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->c:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getCountry()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->a:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getCountryCode()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->b:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getLocality()Ljava/lang/String;
+.method public e()Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->e:Ljava/lang/String;
@@ -155,55 +195,7 @@
     return-object v0
 .end method
 
-.method public getSubAdmin()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->d:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getSubLocality()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->f:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getThoroughfare()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->g:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public setAdmin(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->c:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public setCountry(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public setCountryCode(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->b:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public setLocality(Ljava/lang/String;)V
+.method public e(Ljava/lang/String;)V
     .locals 0
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->e:Ljava/lang/String;
@@ -211,15 +203,15 @@
     return-void
 .end method
 
-.method public setSubAdmin(Ljava/lang/String;)V
-    .locals 0
+.method public f()Ljava/lang/String;
+    .locals 1
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->d:Ljava/lang/String;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->f:Ljava/lang/String;
 
-    return-void
+    return-object v0
 .end method
 
-.method public setSubLocality(Ljava/lang/String;)V
+.method public f(Ljava/lang/String;)V
     .locals 0
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->f:Ljava/lang/String;
@@ -227,12 +219,116 @@
     return-void
 .end method
 
-.method public setThoroughfare(Ljava/lang/String;)V
+.method public g()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->g:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public g(Ljava/lang/String;)V
     .locals 0
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->g:Ljava/lang/String;
 
     return-void
+.end method
+
+.method public h()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "Ctr:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->a:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, ",CtrCode:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->b:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, ",Admin:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->c:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, ",SubAdm:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->d:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, ",Loc:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->e:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, ",SubLoc:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->f:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, ",Thoro:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->g:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method public toString()Ljava/lang/String;
@@ -383,102 +479,6 @@
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public toStringShort()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "Ctr:"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ",CtrCode:"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->b:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ",Admin:"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->c:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ",SubAdm:"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->d:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ",Loc:"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->e:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ",SubLoc:"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->f:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ",Thoro:"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/location/Location$Address;->g:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

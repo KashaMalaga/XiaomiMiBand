@@ -34,9 +34,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/services/geocoder/f;
+    new-instance v0, Lcom/amap/api/services/geocoder/l;
 
-    invoke-direct {v0}, Lcom/amap/api/services/geocoder/f;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/services/geocoder/l;-><init>()V
 
     sput-object v0, Lcom/amap/api/services/geocoder/RegeocodeRoad;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -97,7 +97,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Landroid/os/Parcel;Lcom/amap/api/services/geocoder/f;)V
+.method synthetic constructor <init>(Landroid/os/Parcel;Lcom/amap/api/services/geocoder/l;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/amap/api/services/geocoder/RegeocodeRoad;-><init>(Landroid/os/Parcel;)V
@@ -107,6 +107,78 @@
 
 
 # virtual methods
+.method public a()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/geocoder/RegeocodeRoad;->a:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public a(F)V
+    .locals 0
+
+    iput p1, p0, Lcom/amap/api/services/geocoder/RegeocodeRoad;->c:F
+
+    return-void
+.end method
+
+.method public a(Lcom/amap/api/services/core/LatLonPoint;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/geocoder/RegeocodeRoad;->e:Lcom/amap/api/services/core/LatLonPoint;
+
+    return-void
+.end method
+
+.method public a(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/geocoder/RegeocodeRoad;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public b()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/geocoder/RegeocodeRoad;->b:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public b(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/geocoder/RegeocodeRoad;->b:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public c()F
+    .locals 1
+
+    iget v0, p0, Lcom/amap/api/services/geocoder/RegeocodeRoad;->c:F
+
+    return v0
+.end method
+
+.method public c(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/geocoder/RegeocodeRoad;->d:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public d()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/geocoder/RegeocodeRoad;->d:Ljava/lang/String;
+
+    return-object v0
+.end method
+
 .method public describeContents()I
     .locals 1
 
@@ -115,84 +187,12 @@
     return v0
 .end method
 
-.method public getDirection()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/geocoder/RegeocodeRoad;->d:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getDistance()F
-    .locals 1
-
-    iget v0, p0, Lcom/amap/api/services/geocoder/RegeocodeRoad;->c:F
-
-    return v0
-.end method
-
-.method public getId()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/geocoder/RegeocodeRoad;->a:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getLatLngPoint()Lcom/amap/api/services/core/LatLonPoint;
+.method public e()Lcom/amap/api/services/core/LatLonPoint;
     .locals 1
 
     iget-object v0, p0, Lcom/amap/api/services/geocoder/RegeocodeRoad;->e:Lcom/amap/api/services/core/LatLonPoint;
 
     return-object v0
-.end method
-
-.method public getName()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/geocoder/RegeocodeRoad;->b:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public setDirection(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/geocoder/RegeocodeRoad;->d:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public setDistance(F)V
-    .locals 0
-
-    iput p1, p0, Lcom/amap/api/services/geocoder/RegeocodeRoad;->c:F
-
-    return-void
-.end method
-
-.method public setId(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/geocoder/RegeocodeRoad;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public setLatLngPoint(Lcom/amap/api/services/core/LatLonPoint;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/geocoder/RegeocodeRoad;->e:Lcom/amap/api/services/core/LatLonPoint;
-
-    return-void
-.end method
-
-.method public setName(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/geocoder/RegeocodeRoad;->b:Ljava/lang/String;
-
-    return-void
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V

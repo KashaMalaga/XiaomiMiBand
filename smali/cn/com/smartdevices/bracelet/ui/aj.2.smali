@@ -1,36 +1,33 @@
 .class Lcn/com/smartdevices/bracelet/ui/aj;
-.super Landroid/webkit/WebChromeClient;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/HelpFragment;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/FwLowBatteryActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/HelpFragment;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/FwLowBatteryActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/aj;->a:Lcn/com/smartdevices/bracelet/ui/HelpFragment;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/aj;->a:Lcn/com/smartdevices/bracelet/ui/FwLowBatteryActivity;
 
-    invoke-direct {p0}, Landroid/webkit/WebChromeClient;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onProgressChanged(Landroid/webkit/WebView;I)V
-    .locals 2
+.method public onClick(Landroid/view/View;)V
+    .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aj;->a:Lcn/com/smartdevices/bracelet/ui/HelpFragment;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aj;->a:Lcn/com/smartdevices/bracelet/ui/FwLowBatteryActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/HelpFragment;->a(Lcn/com/smartdevices/bracelet/ui/HelpFragment;)Landroid/widget/ProgressBar;
-
-    move-result-object v0
-
-    add-int/lit8 v1, p2, 0x5
-
-    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setProgress(I)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/FwLowBatteryActivity;->a(Lcn/com/smartdevices/bracelet/ui/FwLowBatteryActivity;)V
 
     return-void
 .end method

@@ -1,76 +1,67 @@
-.class Landroid/support/v4/app/N;
-.super Landroid/support/v4/app/M;
+.class final Landroid/support/v4/app/N;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/os/Parcelable$Creator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator",
+        "<",
+        "Landroid/support/v4/app/FragmentState;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
 .method constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Landroid/support/v4/app/M;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/app/Activity;)Landroid/content/Intent;
+.method public a(Landroid/os/Parcel;)Landroid/support/v4/app/FragmentState;
     .locals 1
 
-    invoke-static {p1}, Landroid/support/v4/app/O;->a(Landroid/app/Activity;)Landroid/content/Intent;
+    new-instance v0, Landroid/support/v4/app/FragmentState;
 
-    move-result-object v0
+    invoke-direct {v0, p1}, Landroid/support/v4/app/FragmentState;-><init>(Landroid/os/Parcel;)V
 
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0, p1}, Landroid/support/v4/app/N;->b(Landroid/app/Activity;)Landroid/content/Intent;
-
-    move-result-object v0
-
-    :cond_0
     return-object v0
 .end method
 
-.method public a(Landroid/content/Context;Landroid/content/pm/ActivityInfo;)Ljava/lang/String;
+.method public a(I)[Landroid/support/v4/app/FragmentState;
     .locals 1
 
-    invoke-static {p2}, Landroid/support/v4/app/O;->a(Landroid/content/pm/ActivityInfo;)Ljava/lang/String;
+    new-array v0, p1, [Landroid/support/v4/app/FragmentState;
 
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    invoke-super {p0, p1, p2}, Landroid/support/v4/app/M;->a(Landroid/content/Context;Landroid/content/pm/ActivityInfo;)Ljava/lang/String;
-
-    move-result-object v0
-
-    :cond_0
     return-object v0
 .end method
 
-.method public a(Landroid/app/Activity;Landroid/content/Intent;)Z
+.method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 1
 
-    invoke-static {p1, p2}, Landroid/support/v4/app/O;->a(Landroid/app/Activity;Landroid/content/Intent;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method b(Landroid/app/Activity;)Landroid/content/Intent;
-    .locals 1
-
-    invoke-super {p0, p1}, Landroid/support/v4/app/M;->a(Landroid/app/Activity;)Landroid/content/Intent;
+    invoke-virtual {p0, p1}, Landroid/support/v4/app/N;->a(Landroid/os/Parcel;)Landroid/support/v4/app/FragmentState;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public b(Landroid/app/Activity;Landroid/content/Intent;)V
-    .locals 0
+.method public synthetic newArray(I)[Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {p1, p2}, Landroid/support/v4/app/O;->b(Landroid/app/Activity;Landroid/content/Intent;)V
+    invoke-virtual {p0, p1}, Landroid/support/v4/app/N;->a(I)[Landroid/support/v4/app/FragmentState;
 
-    return-void
+    move-result-object v0
+
+    return-object v0
 .end method

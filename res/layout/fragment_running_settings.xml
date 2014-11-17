@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/dialog_empty_area" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:background="#fff4f5f5" android:paddingLeft="@dimen/mili_margin" android:paddingRight="@dimen/mili_margin" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:id="@id/info_gender" android:background="@drawable/bg_item" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/item_height" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus">
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_running_set_goal" style="@style/ListItemTitleText" />
+                <TextView android:textSize="12.0sp" android:textColor="#ff919394" android:id="@id/goal_summary" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <ImageView android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_indicator_right_arrow" />
+        </LinearLayout>
+        <include layout="@layout/split_line_with_margin" />
+        <LinearLayout android:id="@id/info_age_area" android:background="@drawable/bg_item" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/item_height" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus">
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_running_set_dist" style="@style/ListItemTitleText" />
+                <TextView android:textSize="12.0sp" android:textColor="#ff919394" android:id="@id/dist_summary" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <ImageView android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_indicator_right_arrow" />
+        </LinearLayout>
+        <include layout="@layout/split_line_with_margin" />
+        <LinearLayout android:id="@id/info_height" android:background="@drawable/bg_item" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/item_height" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus">
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/sport_running_set_speed" style="@style/ListItemTitleText" />
+                <TextView android:textSize="12.0sp" android:textColor="#ff919394" android:id="@id/speed_summary" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <ImageView android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_indicator_right_arrow" />
+        </LinearLayout>
+        <include layout="@layout/split_line_with_margin" />
+        <cn.com.smartdevices.bracelet.ui.widget.DimPanelBottomBar android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:layout_below="@id/description" android:layout_alignParentBottom="true" app:left_text="@string/confirm" app:right_text="@string/cancel" app:left_text_color="@color/button_confirm_color" app:right_text_color="@color/button_cancel_color" xmlns:app="http://schemas.android.com/apk/res-auto" />
+    </LinearLayout>
+</LinearLayout>

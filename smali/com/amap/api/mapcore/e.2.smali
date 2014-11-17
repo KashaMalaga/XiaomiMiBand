@@ -1,143 +1,166 @@
-.class Lcom/amap/api/mapcore/e;
+.class public interface abstract Lcom/amap/api/mapcore/e;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/view/View$OnTouchListener;
-
-
-# instance fields
-.field final synthetic a:Lcom/amap/api/mapcore/d;
-
-
-# direct methods
-.method constructor <init>(Lcom/amap/api/mapcore/d;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/d;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 7
+.method public abstract A()Z
+.end method
 
-    const/4 v1, 0x1
+.method public abstract B()I
+.end method
 
-    const/4 v6, 0x0
+.method public abstract C()I
+.end method
 
-    iget-object v0, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/d;
+.method public abstract D()I
+.end method
 
-    iget-boolean v0, v0, Lcom/amap/api/mapcore/d;->i:Z
+.method public abstract E()I
+.end method
 
-    if-nez v0, :cond_1
+.method public abstract F()Z
+.end method
 
-    :cond_0
-    :goto_0
-    return v6
+.method public abstract a(F)V
+.end method
 
-    :cond_1
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+.method public abstract a(FF)V
+.end method
 
-    move-result v0
+.method public abstract a(I)V
+.end method
 
-    if-nez v0, :cond_2
+.method public abstract a(II)V
+.end method
 
-    iget-object v0, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/d;
+.method public abstract a(Lcom/amap/api/maps/model/BitmapDescriptor;)V
+.end method
 
-    iget-object v0, v0, Lcom/amap/api/mapcore/d;->g:Landroid/widget/ImageView;
+.method public abstract a(Lcom/amap/api/maps/model/LatLng;)V
+.end method
 
-    iget-object v1, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/d;
+.method public abstract a(Ljava/lang/Object;)V
+.end method
 
-    iget-object v1, v1, Lcom/amap/api/mapcore/d;->b:Landroid/graphics/Bitmap;
+.method public abstract a(Ljava/lang/String;)V
+.end method
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+.method public abstract a(Ljava/util/ArrayList;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/amap/api/maps/model/BitmapDescriptor;",
+            ">;)V"
+        }
+    .end annotation
+.end method
 
-    goto :goto_0
+.method public abstract a(Ljavax/microedition/khronos/opengles/GL10;Lcom/amap/api/mapcore/aE;)V
+.end method
 
-    :cond_2
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+.method public abstract a(Z)V
+.end method
 
-    move-result v0
+.method public abstract a()Z
+.end method
 
-    if-ne v0, v1, :cond_0
+.method public abstract a(Lcom/amap/api/mapcore/e;)Z
+.end method
 
-    :try_start_0
-    iget-object v0, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/d;
+.method public abstract b(Ljava/lang/String;)V
+.end method
 
-    iget-object v0, v0, Lcom/amap/api/mapcore/d;->g:Landroid/widget/ImageView;
+.method public abstract b(Z)V
+.end method
 
-    iget-object v1, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/d;
+.method public abstract b()Z
+.end method
 
-    iget-object v1, v1, Lcom/amap/api/mapcore/d;->a:Landroid/graphics/Bitmap;
+.method public abstract c()Landroid/graphics/Rect;
+.end method
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+.method public abstract c(Z)V
+.end method
 
-    iget-object v0, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/d;
+.method public abstract d()Lcom/amap/api/maps/model/LatLng;
+.end method
 
-    iget-object v0, v0, Lcom/amap/api/mapcore/d;->h:Lcom/amap/api/mapcore/v;
+.method public abstract d(Z)V
+.end method
 
-    const/4 v1, 0x1
+.method public abstract e()Lcom/autonavi/amap/mapcore/FPoint;
+.end method
 
-    invoke-interface {v0, v1}, Lcom/amap/api/mapcore/v;->g(Z)V
+.method public abstract f()Lcom/amap/api/maps/model/LatLng;
+.end method
 
-    iget-object v0, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/d;
+.method public abstract g()Ljava/lang/String;
+.end method
 
-    iget-object v0, v0, Lcom/amap/api/mapcore/d;->h:Lcom/amap/api/mapcore/v;
+.method public abstract h()I
+.end method
 
-    invoke-interface {v0}, Lcom/amap/api/mapcore/v;->t()Landroid/location/Location;
+.method public abstract i()Ljava/lang/String;
+.end method
 
-    move-result-object v0
+.method public abstract j()Ljava/lang/String;
+.end method
 
-    if-eqz v0, :cond_0
+.method public abstract k()Z
+.end method
 
-    new-instance v1, Lcom/amap/api/maps/model/LatLng;
+.method public abstract l()V
+.end method
 
-    invoke-virtual {v0}, Landroid/location/Location;->getLatitude()D
+.method public abstract m()V
+.end method
 
-    move-result-wide v2
+.method public abstract n()Z
+.end method
 
-    invoke-virtual {v0}, Landroid/location/Location;->getLongitude()D
+.method public abstract o()Z
+.end method
 
-    move-result-wide v4
+.method public abstract p()V
+.end method
 
-    invoke-direct {v1, v2, v3, v4, v5}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+.method public abstract q()I
+.end method
 
-    iget-object v2, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/d;
+.method public abstract r()Z
+.end method
 
-    iget-object v2, v2, Lcom/amap/api/mapcore/d;->h:Lcom/amap/api/mapcore/v;
+.method public abstract s()Ljava/lang/Object;
+.end method
 
-    invoke-interface {v2, v0}, Lcom/amap/api/mapcore/v;->a(Landroid/location/Location;)V
+.method public abstract t()Z
+.end method
 
-    iget-object v0, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/d;
+.method public abstract u()F
+.end method
 
-    iget-object v0, v0, Lcom/amap/api/mapcore/d;->h:Lcom/amap/api/mapcore/v;
+.method public abstract v()I
+.end method
 
-    iget-object v2, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/d;
+.method public abstract w()Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/amap/api/maps/model/BitmapDescriptor;",
+            ">;"
+        }
+    .end annotation
+.end method
 
-    iget-object v2, v2, Lcom/amap/api/mapcore/d;->h:Lcom/amap/api/mapcore/v;
+.method public abstract x()Z
+.end method
 
-    invoke-interface {v2}, Lcom/amap/api/mapcore/v;->z()F
+.method public abstract y()V
+.end method
 
-    move-result v2
-
-    invoke-static {v1, v2}, Lcom/amap/api/mapcore/m;->a(Lcom/amap/api/maps/model/LatLng;F)Lcom/amap/api/mapcore/m;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lcom/amap/api/mapcore/v;->a(Lcom/amap/api/mapcore/m;)V
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
-
-    goto :goto_0
+.method public abstract z()V
 .end method

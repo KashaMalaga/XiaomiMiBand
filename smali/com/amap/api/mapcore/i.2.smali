@@ -1,44 +1,58 @@
-.class Lcom/amap/api/mapcore/i;
+.class public interface abstract Lcom/amap/api/mapcore/i;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field final synthetic a:Lcom/amap/api/mapcore/h;
-
-
-# direct methods
-.method constructor <init>(Lcom/amap/api/mapcore/h;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/mapcore/i;->a:Lcom/amap/api/mapcore/h;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.implements Lcom/amap/api/mapcore/g;
 
 
 # virtual methods
-.method public run()V
-    .locals 1
+.method public abstract a()F
+.end method
 
-    :try_start_0
-    iget-object v0, p0, Lcom/amap/api/mapcore/i;->a:Lcom/amap/api/mapcore/h;
+.method public abstract a(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/LatLng;
+.end method
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/h;->a(Lcom/amap/api/mapcore/h;)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+.method public abstract a(F)V
+.end method
 
-    :goto_0
-    return-void
+.method public abstract a(I)V
+.end method
 
-    :catch_0
-    move-exception v0
+.method public abstract a(Ljava/util/List;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcom/amap/api/maps/model/LatLng;",
+            ">;)V"
+        }
+    .end annotation
+.end method
 
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
+.method public abstract b()I
+.end method
 
-    goto :goto_0
+.method public abstract b(Z)V
+.end method
+
+.method public abstract c()Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcom/amap/api/maps/model/LatLng;",
+            ">;"
+        }
+    .end annotation
+.end method
+
+.method public abstract c(Z)V
+.end method
+
+.method public abstract d()Z
+.end method
+
+.method public abstract n()Z
 .end method

@@ -67,11 +67,11 @@
     return-void
 
     :cond_1
-    invoke-static {p1}, Lcom/xiaomi/market/sdk/m;->i(Landroid/content/Context;)Lcom/xiaomi/market/sdk/m;
+    invoke-static {p1}, Lcom/xiaomi/market/sdk/r;->a(Landroid/content/Context;)Lcom/xiaomi/market/sdk/r;
 
     move-result-object v2
 
-    invoke-virtual {v2, v0, v1}, Lcom/xiaomi/market/sdk/m;->a(J)V
+    invoke-virtual {v2, v0, v1}, Lcom/xiaomi/market/sdk/r;->a(J)V
 
     goto :goto_0
 .end method

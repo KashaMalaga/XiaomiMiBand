@@ -30,9 +30,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/location/a;
+    new-instance v0, Lcn/com/smartdevices/bracelet/location/b;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/location/a;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/location/b;-><init>()V
 
     sput-object v0, Lcn/com/smartdevices/bracelet/location/Location;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -99,31 +99,7 @@
 
 
 # virtual methods
-.method public describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public getAddress()Lcn/com/smartdevices/bracelet/location/Location$Address;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/Location;->c:Lcn/com/smartdevices/bracelet/location/Location$Address;
-
-    return-object v0
-.end method
-
-.method public getLatitude()D
-    .locals 2
-
-    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/location/Location;->b:D
-
-    return-wide v0
-.end method
-
-.method public getLongitude()D
+.method public a()D
     .locals 2
 
     iget-wide v0, p0, Lcn/com/smartdevices/bracelet/location/Location;->a:D
@@ -131,7 +107,15 @@
     return-wide v0
 .end method
 
-.method public setAddress(Lcn/com/smartdevices/bracelet/location/Location$Address;)V
+.method public a(D)V
+    .locals 0
+
+    iput-wide p1, p0, Lcn/com/smartdevices/bracelet/location/Location;->a:D
+
+    return-void
+.end method
+
+.method public a(Lcn/com/smartdevices/bracelet/location/Location$Address;)V
     .locals 0
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/location/Location;->c:Lcn/com/smartdevices/bracelet/location/Location$Address;
@@ -139,7 +123,15 @@
     return-void
 .end method
 
-.method public setLatitude(D)V
+.method public b()D
+    .locals 2
+
+    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/location/Location;->b:D
+
+    return-wide v0
+.end method
+
+.method public b(D)V
     .locals 0
 
     iput-wide p1, p0, Lcn/com/smartdevices/bracelet/location/Location;->b:D
@@ -147,12 +139,75 @@
     return-void
 .end method
 
-.method public setLongitude(D)V
-    .locals 0
+.method public c()Lcn/com/smartdevices/bracelet/location/Location$Address;
+    .locals 1
 
-    iput-wide p1, p0, Lcn/com/smartdevices/bracelet/location/Location;->a:D
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/Location;->c:Lcn/com/smartdevices/bracelet/location/Location$Address;
 
-    return-void
+    return-object v0
+.end method
+
+.method public d()Ljava/lang/String;
+    .locals 4
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "Long:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/location/Location;->a:D
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, ",Lat:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/location/Location;->b:D
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/location/Location;->c:Lcn/com/smartdevices/bracelet/location/Location$Address;
+
+    if-eqz v1, :cond_0
+
+    const-string v1, ","
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/location/Location;->c:Lcn/com/smartdevices/bracelet/location/Location$Address;
+
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/location/Location$Address;->h()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
 .method public toString()Ljava/lang/String;
@@ -230,61 +285,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public toStringShort()Ljava/lang/String;
-    .locals 4
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "Long:"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/location/Location;->a:D
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ",Lat:"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/location/Location;->b:D
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/location/Location;->c:Lcn/com/smartdevices/bracelet/location/Location$Address;
-
-    if-eqz v1, :cond_0
-
-    const-string v1, ","
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/location/Location;->c:Lcn/com/smartdevices/bracelet/location/Location$Address;
-
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/location/Location$Address;->toStringShort()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0

@@ -303,18 +303,18 @@
 
     invoke-direct {v1}, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;-><init>()V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readConfigDynamicDataInfo()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->u()Ljava/lang/String;
 
     move-result-object v0
 
     :try_start_0
-    new-instance v2, Lcom/google/gson/Gson;
+    new-instance v2, Lcom/b/a/k;
 
-    invoke-direct {v2}, Lcom/google/gson/Gson;-><init>()V
+    invoke-direct {v2}, Lcom/b/a/k;-><init>()V
 
     const-class v3, Lcn/com/smartdevices/bracelet/lua/a;
 
-    invoke-virtual {v2, v0, v3}, Lcom/google/gson/Gson;->fromJson(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v2, v0, v3}, Lcom/b/a/k;->a(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -347,7 +347,7 @@
     iput-object v0, v1, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->showUnlockInfo:Ljava/lang/Boolean;
 
     :cond_2
-    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readApkVersion()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->w()Ljava/lang/String;
 
     move-result-object v0
 
@@ -380,7 +380,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/Debug;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -835,9 +835,9 @@
 .method public save()V
     .locals 3
 
-    new-instance v0, Lcom/google/gson/Gson;
+    new-instance v0, Lcom/b/a/k;
 
-    invoke-direct {v0}, Lcom/google/gson/Gson;-><init>()V
+    invoke-direct {v0}, Lcom/b/a/k;-><init>()V
 
     new-instance v1, Lcn/com/smartdevices/bracelet/lua/a;
 
@@ -857,11 +857,11 @@
 
     const-class v2, Lcn/com/smartdevices/bracelet/lua/a;
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/gson/Gson;->toJson(Ljava/lang/Object;Ljava/lang/reflect/Type;)Ljava/lang/String;
+    invoke-virtual {v0, v1, v2}, Lcom/b/a/k;->b(Ljava/lang/Object;Ljava/lang/reflect/Type;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Keeper;->keepConfigDynamicDataInfo(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/u;->d(Ljava/lang/String;)V
 
     return-void
 .end method

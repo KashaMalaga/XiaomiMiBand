@@ -3,15 +3,15 @@
 
 
 # static fields
-.field private static a:I
-
-.field private static b:Lcom/tencent/mm/sdk/b/a$a;
-
-.field private static c:Lcom/tencent/mm/sdk/b/a$a;
-
-.field private static final d:Ljava/lang/String;
-
 .field public static h:Lcom/tencent/mm/sdk/b/d;
+
+.field private static i:Lcom/tencent/mm/sdk/b/a$a;
+
+.field private static j:Lcom/tencent/mm/sdk/b/a$a;
+
+.field private static final k:Ljava/lang/String;
+
+.field private static level:I
 
 
 # direct methods
@@ -20,15 +20,15 @@
 
     const/4 v0, 0x6
 
-    sput v0, Lcom/tencent/mm/sdk/b/a;->a:I
+    sput v0, Lcom/tencent/mm/sdk/b/a;->level:I
 
     new-instance v0, Lcom/tencent/mm/sdk/b/b;
 
     invoke-direct {v0}, Lcom/tencent/mm/sdk/b/b;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/sdk/b/a;->b:Lcom/tencent/mm/sdk/b/a$a;
+    sput-object v0, Lcom/tencent/mm/sdk/b/a;->i:Lcom/tencent/mm/sdk/b/a$a;
 
-    sput-object v0, Lcom/tencent/mm/sdk/b/a;->c:Lcom/tencent/mm/sdk/b/a$a;
+    sput-object v0, Lcom/tencent/mm/sdk/b/a;->j:Lcom/tencent/mm/sdk/b/a$a;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -296,7 +296,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/sdk/b/a;->d:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/sdk/b/a;->k:Ljava/lang/String;
 
     return-void
 .end method
@@ -304,26 +304,9 @@
 .method static synthetic a()I
     .locals 1
 
-    sget v0, Lcom/tencent/mm/sdk/b/a;->a:I
+    sget v0, Lcom/tencent/mm/sdk/b/a;->level:I
 
     return v0
-.end method
-
-.method private static a(Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
-
-    sget-object v0, Lcom/tencent/mm/sdk/b/a;->h:Lcom/tencent/mm/sdk/b/d;
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lcom/tencent/mm/sdk/b/a;->h:Lcom/tencent/mm/sdk/b/d;
-
-    invoke-virtual {v0, p0}, Lcom/tencent/mm/sdk/b/d;->b(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    :cond_0
-    return-object p0
 .end method
 
 .method public static a(Ljava/lang/String;Ljava/lang/String;)V
@@ -339,11 +322,11 @@
 .method public static varargs a(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     .locals 4
 
-    sget-object v0, Lcom/tencent/mm/sdk/b/a;->c:Lcom/tencent/mm/sdk/b/a$a;
+    sget-object v0, Lcom/tencent/mm/sdk/b/a;->j:Lcom/tencent/mm/sdk/b/a$a;
 
     if-eqz v0, :cond_1
 
-    sget-object v0, Lcom/tencent/mm/sdk/b/a;->c:Lcom/tencent/mm/sdk/b/a$a;
+    sget-object v0, Lcom/tencent/mm/sdk/b/a;->j:Lcom/tencent/mm/sdk/b/a$a;
 
     invoke-interface {v0}, Lcom/tencent/mm/sdk/b/a$a;->b()I
 
@@ -363,11 +346,11 @@
     const-string v0, ""
 
     :cond_0
-    invoke-static {p0}, Lcom/tencent/mm/sdk/b/a;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/tencent/mm/sdk/b/a;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    sget-object v2, Lcom/tencent/mm/sdk/b/a;->c:Lcom/tencent/mm/sdk/b/a$a;
+    sget-object v2, Lcom/tencent/mm/sdk/b/a;->j:Lcom/tencent/mm/sdk/b/a$a;
 
     invoke-static {}, Landroid/os/Process;->myPid()I
 
@@ -400,14 +383,31 @@
     goto :goto_0
 .end method
 
+.method private static b(Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Lcom/tencent/mm/sdk/b/a;->h:Lcom/tencent/mm/sdk/b/d;
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lcom/tencent/mm/sdk/b/a;->h:Lcom/tencent/mm/sdk/b/d;
+
+    invoke-virtual {v0, p0}, Lcom/tencent/mm/sdk/b/d;->b(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    :cond_0
+    return-object p0
+.end method
+
 .method public static b(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
-    sget-object v0, Lcom/tencent/mm/sdk/b/a;->c:Lcom/tencent/mm/sdk/b/a$a;
+    sget-object v0, Lcom/tencent/mm/sdk/b/a;->j:Lcom/tencent/mm/sdk/b/a$a;
 
     if-eqz v0, :cond_1
 
-    sget-object v0, Lcom/tencent/mm/sdk/b/a;->c:Lcom/tencent/mm/sdk/b/a$a;
+    sget-object v0, Lcom/tencent/mm/sdk/b/a;->j:Lcom/tencent/mm/sdk/b/a$a;
 
     invoke-interface {v0}, Lcom/tencent/mm/sdk/b/a$a;->b()I
 
@@ -422,11 +422,11 @@
     const-string p1, ""
 
     :cond_0
-    invoke-static {p0}, Lcom/tencent/mm/sdk/b/a;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/tencent/mm/sdk/b/a;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    sget-object v1, Lcom/tencent/mm/sdk/b/a;->c:Lcom/tencent/mm/sdk/b/a$a;
+    sget-object v1, Lcom/tencent/mm/sdk/b/a;->j:Lcom/tencent/mm/sdk/b/a$a;
 
     invoke-static {}, Landroid/os/Process;->myPid()I
 
@@ -455,11 +455,11 @@
 .method public static c(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
-    sget-object v0, Lcom/tencent/mm/sdk/b/a;->c:Lcom/tencent/mm/sdk/b/a$a;
+    sget-object v0, Lcom/tencent/mm/sdk/b/a;->j:Lcom/tencent/mm/sdk/b/a$a;
 
     if-eqz v0, :cond_1
 
-    sget-object v0, Lcom/tencent/mm/sdk/b/a;->c:Lcom/tencent/mm/sdk/b/a$a;
+    sget-object v0, Lcom/tencent/mm/sdk/b/a;->j:Lcom/tencent/mm/sdk/b/a$a;
 
     invoke-interface {v0}, Lcom/tencent/mm/sdk/b/a$a;->b()I
 
@@ -474,11 +474,11 @@
     const-string p1, ""
 
     :cond_0
-    invoke-static {p0}, Lcom/tencent/mm/sdk/b/a;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/tencent/mm/sdk/b/a;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    sget-object v1, Lcom/tencent/mm/sdk/b/a;->c:Lcom/tencent/mm/sdk/b/a$a;
+    sget-object v1, Lcom/tencent/mm/sdk/b/a;->j:Lcom/tencent/mm/sdk/b/a$a;
 
     invoke-static {}, Landroid/os/Process;->myPid()I
 

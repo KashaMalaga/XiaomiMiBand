@@ -3,46 +3,46 @@
 
 
 # static fields
-.field private static final J:I = -0x1
+.field private static final M:I = -0x1
 
-.field public static final SCROLL_STATE_DRAGGING:I = 0x1
+.field public static final a:I = 0x0
 
-.field public static final SCROLL_STATE_IDLE:I = 0x0
+.field public static final b:I = 0x1
 
-.field public static final SCROLL_STATE_SETTLING:I = 0x2
+.field public static final c:I = 0x2
 
-.field private static final a:Ljava/lang/String; = "VerticalViewPager"
+.field private static final d:Ljava/lang/String; = "VerticalViewPager"
 
-.field private static final b:Z = false
+.field private static final e:Z = false
 
-.field private static final c:Z = false
+.field private static final f:Z = false
 
-.field private static final d:I = 0x1
+.field private static final g:I = 0x1
 
-.field private static final e:I = 0x258
+.field private static final h:I = 0x258
 
-.field private static final f:I = 0x19
+.field private static final i:I = 0x19
 
-.field private static final g:[I
+.field private static final j:[I
 
-.field private static final h:Ljava/util/Comparator;
+.field private static final k:Ljava/util/Comparator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Comparator",
             "<",
-            "Lcn/com/smartdevices/bracelet/view/E;",
+            "Lcn/com/smartdevices/bracelet/view/R;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private static final i:Landroid/view/animation/Interpolator;
+.field private static final l:Landroid/view/animation/Interpolator;
 
 
 # instance fields
 .field private A:Z
 
-.field private B:I
+.field private B:Z
 
 .field private C:Z
 
@@ -50,86 +50,86 @@
 
 .field private E:I
 
-.field private F:F
+.field private F:Z
 
-.field private G:F
+.field private G:Z
 
-.field private H:F
+.field private H:I
 
-.field private I:I
+.field private I:F
 
-.field private K:Landroid/view/VelocityTracker;
+.field private J:F
+
+.field private K:F
 
 .field private L:I
 
-.field private M:I
+.field private N:Landroid/view/VelocityTracker;
 
-.field private N:I
+.field private O:I
 
-.field private O:Z
+.field private P:I
 
-.field private P:J
+.field private Q:I
 
-.field private Q:Landroid/support/v4/widget/EdgeEffectCompat;
+.field private R:Z
 
-.field private R:Landroid/support/v4/widget/EdgeEffectCompat;
+.field private S:J
 
-.field private S:Z
+.field private T:Landroid/support/v4/widget/m;
 
-.field private T:Z
+.field private U:Landroid/support/v4/widget/m;
 
-.field private U:I
+.field private V:Z
 
-.field private V:Lcn/com/smartdevices/bracelet/view/VerticalViewPager$OnPageChangeListener;
+.field private W:Z
 
-.field private W:Lcn/com/smartdevices/bracelet/view/VerticalViewPager$OnPageChangeListener;
+.field private Z:I
 
-.field private Z:Lcn/com/smartdevices/bracelet/view/F;
+.field private aa:Lcn/com/smartdevices/bracelet/view/T;
 
-.field private aa:I
+.field private ab:Lcn/com/smartdevices/bracelet/view/T;
 
-.field private final j:Ljava/util/ArrayList;
+.field private ac:Lcn/com/smartdevices/bracelet/view/S;
+
+.field private ad:I
+
+.field private final m:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcn/com/smartdevices/bracelet/view/E;",
+            "Lcn/com/smartdevices/bracelet/view/R;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private k:Landroid/support/v4/view/PagerAdapter;
+.field private n:Landroid/support/v4/view/ad;
 
-.field private l:I
+.field private o:I
 
-.field private m:I
+.field private p:I
 
-.field private n:Landroid/os/Parcelable;
+.field private q:Landroid/os/Parcelable;
 
-.field private o:Ljava/lang/ClassLoader;
+.field private r:Ljava/lang/ClassLoader;
 
-.field private p:Landroid/widget/Scroller;
+.field private s:Landroid/widget/Scroller;
 
-.field private q:Lcn/com/smartdevices/bracelet/view/G;
-
-.field private r:I
-
-.field private s:Landroid/graphics/drawable/Drawable;
-
-.field private t:I
+.field private t:Lcn/com/smartdevices/bracelet/view/U;
 
 .field private u:I
 
-.field private v:I
+.field private v:Landroid/graphics/drawable/Drawable;
 
 .field private w:I
 
-.field private x:Z
+.field private x:I
 
-.field private y:Z
+.field private y:I
 
-.field private z:Z
+.field private z:I
 
 
 # direct methods
@@ -146,19 +146,19 @@
 
     aput v2, v0, v1
 
-    sput-object v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->g:[I
+    sput-object v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->j:[I
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/view/B;
+    new-instance v0, Lcn/com/smartdevices/bracelet/view/O;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/view/B;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/view/O;-><init>()V
 
-    sput-object v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->h:Ljava/util/Comparator;
+    sput-object v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Ljava/util/Comparator;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/view/C;
+    new-instance v0, Lcn/com/smartdevices/bracelet/view/P;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/view/C;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/view/P;-><init>()V
 
-    sput-object v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->i:Landroid/view/animation/Interpolator;
+    sput-object v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:Landroid/view/animation/Interpolator;
 
     return-void
 .end method
@@ -178,23 +178,23 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->j:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:Ljava/util/ArrayList;
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:I
+    iput v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->p:I
 
-    iput-object v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/os/Parcelable;
+    iput-object v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->q:Landroid/os/Parcelable;
 
-    iput-object v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:Ljava/lang/ClassLoader;
+    iput-object v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->r:Ljava/lang/ClassLoader;
 
-    iput v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->B:I
+    iput v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->E:I
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->I:I
+    iput v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->L:I
 
-    iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->S:Z
+    iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->V:Z
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->aa:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->ad:I
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a()V
 
@@ -216,23 +216,23 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->j:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:Ljava/util/ArrayList;
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:I
+    iput v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->p:I
 
-    iput-object v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/os/Parcelable;
+    iput-object v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->q:Landroid/os/Parcelable;
 
-    iput-object v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:Ljava/lang/ClassLoader;
+    iput-object v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->r:Ljava/lang/ClassLoader;
 
-    iput v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->B:I
+    iput v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->E:I
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->I:I
+    iput v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->L:I
 
-    iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->S:Z
+    iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->V:Z
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->aa:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->ad:I
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a()V
 
@@ -246,7 +246,7 @@
 
     move-result v0
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->N:I
+    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->Q:I
 
     if-le v0, v1, :cond_1
 
@@ -254,7 +254,7 @@
 
     move-result v0
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->L:I
+    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->O:I
 
     if-le v0, v1, :cond_1
 
@@ -278,31 +278,6 @@
     add-float/2addr v0, v1
 
     float-to-int p1, v0
-
-    goto :goto_0
-.end method
-
-.method private a(I)V
-    .locals 1
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->aa:I
-
-    if-ne v0, p1, :cond_1
-
-    :cond_0
-    :goto_0
-    return-void
-
-    :cond_1
-    iput p1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->aa:I
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->V:Lcn/com/smartdevices/bracelet/view/VerticalViewPager$OnPageChangeListener;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->V:Lcn/com/smartdevices/bracelet/view/VerticalViewPager$OnPageChangeListener;
-
-    invoke-interface {v0, p1}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$OnPageChangeListener;->onPageScrollStateChanged(I)V
 
     goto :goto_0
 .end method
@@ -348,7 +323,7 @@
 
     invoke-virtual {p0, v0, v2}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->scrollTo(II)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->p:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->s:Landroid/widget/Scroller;
 
     invoke-virtual {v0}, Landroid/widget/Scroller;->isFinished()Z
 
@@ -356,13 +331,13 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->p:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->s:Landroid/widget/Scroller;
 
     invoke-virtual {v0}, Landroid/widget/Scroller;->getDuration()I
 
     move-result v0
 
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->p:Landroid/widget/Scroller;
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->s:Landroid/widget/Scroller;
 
     invoke-virtual {v4}, Landroid/widget/Scroller;->timePassed()I
 
@@ -370,9 +345,9 @@
 
     sub-int v5, v0, v4
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->p:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->s:Landroid/widget/Scroller;
 
-    iget v4, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:I
+    iget v4, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:I
 
     mul-int/2addr v3, v4
 
@@ -385,7 +360,7 @@
     return-void
 
     :cond_1
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:I
 
     mul-int/2addr v0, v3
 
@@ -395,7 +370,7 @@
 
     if-eq v0, v1, :cond_0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->h()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o()V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getScrollX()I
 
@@ -409,15 +384,15 @@
 .method private a(Landroid/view/MotionEvent;)V
     .locals 3
 
-    invoke-static {p1}, Landroid/support/v4/view/MotionEventCompat;->getActionIndex(Landroid/view/MotionEvent;)I
+    invoke-static {p1}, Landroid/support/v4/view/Y;->b(Landroid/view/MotionEvent;)I
 
     move-result v0
 
-    invoke-static {p1, v0}, Landroid/support/v4/view/MotionEventCompat;->getPointerId(Landroid/view/MotionEvent;I)I
+    invoke-static {p1, v0}, Landroid/support/v4/view/Y;->b(Landroid/view/MotionEvent;I)I
 
     move-result v1
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->I:I
+    iget v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->L:I
 
     if-ne v1, v2, :cond_0
 
@@ -426,23 +401,23 @@
     const/4 v0, 0x1
 
     :goto_0
-    invoke-static {p1, v0}, Landroid/support/v4/view/MotionEventCompat;->getY(Landroid/view/MotionEvent;I)F
+    invoke-static {p1, v0}, Landroid/support/v4/view/Y;->d(Landroid/view/MotionEvent;I)F
 
     move-result v1
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->G:F
+    iput v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->J:F
 
-    invoke-static {p1, v0}, Landroid/support/v4/view/MotionEventCompat;->getPointerId(Landroid/view/MotionEvent;I)I
+    invoke-static {p1, v0}, Landroid/support/v4/view/Y;->b(Landroid/view/MotionEvent;I)I
 
     move-result v0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->I:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->L:I
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->K:Landroid/view/VelocityTracker;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->N:Landroid/view/VelocityTracker;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->K:Landroid/view/VelocityTracker;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->N:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0}, Landroid/view/VelocityTracker;->clear()V
 
@@ -458,24 +433,49 @@
 .method private a(Z)V
     .locals 1
 
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->y:Z
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->B:Z
 
     if-eq v0, p1, :cond_0
 
-    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->y:Z
+    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->B:Z
 
     :cond_0
     return-void
 .end method
 
-.method private b(I)V
+.method private f(I)V
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->ad:I
+
+    if-ne v0, p1, :cond_1
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    iput p1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->ad:I
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->aa:Lcn/com/smartdevices/bracelet/view/T;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->aa:Lcn/com/smartdevices/bracelet/view/T;
+
+    invoke-interface {v0, p1}, Lcn/com/smartdevices/bracelet/view/T;->b(I)V
+
+    goto :goto_0
+.end method
+
+.method private g(I)V
     .locals 4
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getHeight()I
 
     move-result v0
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->r:I
+    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->u:I
 
     add-int/2addr v0, v1
 
@@ -491,11 +491,11 @@
 
     const/4 v3, 0x0
 
-    iput-boolean v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->T:Z
+    iput-boolean v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->W:Z
 
-    invoke-virtual {p0, v1, v0, v2}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->onPageScrolled(IFI)V
+    invoke-virtual {p0, v1, v0, v2}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(IFI)V
 
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->T:Z
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->W:Z
 
     if-nez v0, :cond_0
 
@@ -511,15 +511,15 @@
     return-void
 .end method
 
-.method static synthetic f()[I
+.method static synthetic m()[I
     .locals 1
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->g:[I
+    sget-object v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->j:[I
 
     return-object v0
 .end method
 
-.method private g()V
+.method private n()V
     .locals 2
 
     const/4 v0, 0x0
@@ -546,7 +546,7 @@
 
     check-cast v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;
 
-    iget-boolean v0, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;->isDecor:Z
+    iget-boolean v0, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;->a:Z
 
     if-nez v0, :cond_1
 
@@ -562,18 +562,18 @@
     goto :goto_0
 .end method
 
-.method private h()V
+.method private o()V
     .locals 6
 
     const/4 v2, 0x0
 
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->A:Z
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->D:Z
 
     if-eqz v0, :cond_2
 
     invoke-direct {p0, v2}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(Z)V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->p:Landroid/widget/Scroller;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->s:Landroid/widget/Scroller;
 
     invoke-virtual {v1}, Landroid/widget/Scroller;->abortAnimation()V
 
@@ -585,13 +585,13 @@
 
     move-result v3
 
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->p:Landroid/widget/Scroller;
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->s:Landroid/widget/Scroller;
 
     invoke-virtual {v4}, Landroid/widget/Scroller;->getCurrX()I
 
     move-result v4
 
-    iget-object v5, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->p:Landroid/widget/Scroller;
+    iget-object v5, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->s:Landroid/widget/Scroller;
 
     invoke-virtual {v5}, Landroid/widget/Scroller;->getCurrY()I
 
@@ -605,19 +605,19 @@
     invoke-virtual {p0, v4, v5}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->scrollTo(II)V
 
     :cond_1
-    invoke-direct {p0, v2}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(I)V
+    invoke-direct {p0, v2}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->f(I)V
 
     :cond_2
-    iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->z:Z
+    iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->C:Z
 
-    iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->A:Z
+    iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->D:Z
 
     move v1, v2
 
     move v3, v0
 
     :goto_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->j:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -627,27 +627,27 @@
 
     if-eqz v3, :cond_3
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->c()V
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->g()V
 
     :cond_3
     return-void
 
     :cond_4
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->j:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/view/E;
+    check-cast v0, Lcn/com/smartdevices/bracelet/view/R;
 
-    iget-boolean v4, v0, Lcn/com/smartdevices/bracelet/view/E;->c:Z
+    iget-boolean v4, v0, Lcn/com/smartdevices/bracelet/view/R;->c:Z
 
     if-eqz v4, :cond_5
 
     const/4 v3, 0x1
 
-    iput-boolean v2, v0, Lcn/com/smartdevices/bracelet/view/E;->c:Z
+    iput-boolean v2, v0, Lcn/com/smartdevices/bracelet/view/R;->c:Z
 
     :cond_5
     add-int/lit8 v0, v1, 0x1
@@ -657,26 +657,26 @@
     goto :goto_0
 .end method
 
-.method private i()V
+.method private p()V
     .locals 1
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->C:Z
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->F:Z
 
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->D:Z
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->G:Z
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->K:Landroid/view/VelocityTracker;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->N:Landroid/view/VelocityTracker;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->K:Landroid/view/VelocityTracker;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->N:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0}, Landroid/view/VelocityTracker;->recycle()V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->K:Landroid/view/VelocityTracker;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->N:Landroid/view/VelocityTracker;
 
     :cond_0
     return-void
@@ -710,7 +710,7 @@
     return v0
 .end method
 
-.method a(Landroid/view/View;)Lcn/com/smartdevices/bracelet/view/E;
+.method a(Landroid/view/View;)Lcn/com/smartdevices/bracelet/view/R;
     .locals 4
 
     const/4 v0, 0x0
@@ -718,7 +718,7 @@
     move v1, v0
 
     :goto_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->j:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -732,19 +732,19 @@
     return-object v0
 
     :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->j:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/view/E;
+    check-cast v0, Lcn/com/smartdevices/bracelet/view/R;
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
 
-    iget-object v3, v0, Lcn/com/smartdevices/bracelet/view/E;->a:Ljava/lang/Object;
+    iget-object v3, v0, Lcn/com/smartdevices/bracelet/view/R;->a:Ljava/lang/Object;
 
-    invoke-virtual {v2, p1, v3}, Landroid/support/v4/view/PagerAdapter;->isViewFromObject(Landroid/view/View;Ljava/lang/Object;)Z
+    invoke-virtual {v2, p1, v3}, Landroid/support/v4/view/ad;->a(Landroid/view/View;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -755,16 +755,6 @@
     move v1, v0
 
     goto :goto_0
-.end method
-
-.method a(Lcn/com/smartdevices/bracelet/view/VerticalViewPager$OnPageChangeListener;)Lcn/com/smartdevices/bracelet/view/VerticalViewPager$OnPageChangeListener;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->W:Lcn/com/smartdevices/bracelet/view/VerticalViewPager$OnPageChangeListener;
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->W:Lcn/com/smartdevices/bracelet/view/VerticalViewPager$OnPageChangeListener;
-
-    return-object v0
 .end method
 
 .method a()V
@@ -788,45 +778,45 @@
 
     new-instance v1, Landroid/widget/Scroller;
 
-    sget-object v2, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->i:Landroid/view/animation/Interpolator;
+    sget-object v2, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:Landroid/view/animation/Interpolator;
 
     invoke-direct {v1, v0, v2}, Landroid/widget/Scroller;-><init>(Landroid/content/Context;Landroid/view/animation/Interpolator;)V
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->p:Landroid/widget/Scroller;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->s:Landroid/widget/Scroller;
 
     invoke-static {v0}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
 
     move-result-object v1
 
-    invoke-static {v1}, Landroid/support/v4/view/ViewConfigurationCompat;->getScaledPagingTouchSlop(Landroid/view/ViewConfiguration;)I
+    invoke-static {v1}, Landroid/support/v4/view/aH;->a(Landroid/view/ViewConfiguration;)I
 
     move-result v2
 
-    iput v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->E:I
+    iput v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->H:I
 
     invoke-virtual {v1}, Landroid/view/ViewConfiguration;->getScaledMinimumFlingVelocity()I
 
     move-result v2
 
-    iput v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->L:I
+    iput v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->O:I
 
     invoke-virtual {v1}, Landroid/view/ViewConfiguration;->getScaledMaximumFlingVelocity()I
 
     move-result v1
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->M:I
+    iput v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->P:I
 
-    new-instance v1, Landroid/support/v4/widget/EdgeEffectCompat;
+    new-instance v1, Landroid/support/v4/widget/m;
 
-    invoke-direct {v1, v0}, Landroid/support/v4/widget/EdgeEffectCompat;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v0}, Landroid/support/v4/widget/m;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->Q:Landroid/support/v4/widget/EdgeEffectCompat;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->T:Landroid/support/v4/widget/m;
 
-    new-instance v1, Landroid/support/v4/widget/EdgeEffectCompat;
+    new-instance v1, Landroid/support/v4/widget/m;
 
-    invoke-direct {v1, v0}, Landroid/support/v4/widget/EdgeEffectCompat;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v0}, Landroid/support/v4/widget/m;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->R:Landroid/support/v4/widget/EdgeEffectCompat;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->U:Landroid/support/v4/widget/m;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -844,9 +834,228 @@
 
     float-to-int v0, v0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->N:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->Q:I
 
     return-void
+.end method
+
+.method public a(I)V
+    .locals 2
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->C:Z
+
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->V:Z
+
+    if-eqz v0, :cond_0
+
+    move v0, v1
+
+    :goto_0
+    invoke-virtual {p0, p1, v0, v1}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(IZZ)V
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x1
+
+    goto :goto_0
+.end method
+
+.method protected a(IFI)V
+    .locals 10
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->Z:I
+
+    if-lez v0, :cond_0
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getScrollY()I
+
+    move-result v4
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getPaddingTop()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getPaddingBottom()I
+
+    move-result v2
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getHeight()I
+
+    move-result v5
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getChildCount()I
+
+    move-result v6
+
+    const/4 v0, 0x0
+
+    move v3, v0
+
+    :goto_0
+    if-lt v3, v6, :cond_3
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->aa:Lcn/com/smartdevices/bracelet/view/T;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->aa:Lcn/com/smartdevices/bracelet/view/T;
+
+    invoke-interface {v0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/view/T;->a(IFI)V
+
+    :cond_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->ab:Lcn/com/smartdevices/bracelet/view/T;
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->ab:Lcn/com/smartdevices/bracelet/view/T;
+
+    invoke-interface {v0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/view/T;->a(IFI)V
+
+    :cond_2
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->W:Z
+
+    return-void
+
+    :cond_3
+    invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;
+
+    iget-boolean v8, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;->a:Z
+
+    if-nez v8, :cond_5
+
+    move v9, v2
+
+    move v2, v1
+
+    move v1, v9
+
+    :cond_4
+    :goto_1
+    add-int/lit8 v0, v3, 0x1
+
+    move v3, v0
+
+    move v9, v1
+
+    move v1, v2
+
+    move v2, v9
+
+    goto :goto_0
+
+    :cond_5
+    iget v0, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;->b:I
+
+    and-int/lit8 v0, v0, 0x70
+
+    sparse-switch v0, :sswitch_data_0
+
+    move v0, v1
+
+    move v9, v2
+
+    move v2, v1
+
+    move v1, v9
+
+    :goto_2
+    add-int/2addr v0, v4
+
+    invoke-virtual {v7}, Landroid/view/View;->getTop()I
+
+    move-result v8
+
+    sub-int/2addr v0, v8
+
+    if-eqz v0, :cond_4
+
+    invoke-virtual {v7, v0}, Landroid/view/View;->offsetTopAndBottom(I)V
+
+    goto :goto_1
+
+    :sswitch_0
+    invoke-virtual {v7}, Landroid/view/View;->getHeight()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    move v9, v1
+
+    move v1, v2
+
+    move v2, v0
+
+    move v0, v9
+
+    goto :goto_2
+
+    :sswitch_1
+    invoke-virtual {v7}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v0
+
+    sub-int v0, v5, v0
+
+    div-int/lit8 v0, v0, 0x2
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    move v9, v2
+
+    move v2, v1
+
+    move v1, v9
+
+    goto :goto_2
+
+    :sswitch_2
+    sub-int v0, v5, v2
+
+    invoke-virtual {v7}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v8
+
+    sub-int/2addr v0, v8
+
+    invoke-virtual {v7}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v8
+
+    add-int/2addr v2, v8
+
+    move v9, v2
+
+    move v2, v1
+
+    move v1, v9
+
+    goto :goto_2
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        0x1 -> :sswitch_1
+        0x30 -> :sswitch_0
+        0x50 -> :sswitch_2
+    .end sparse-switch
 .end method
 
 .method a(II)V
@@ -896,20 +1105,20 @@
 
     if-nez v4, :cond_1
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->h()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o()V
 
-    invoke-direct {p0, v5}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(I)V
+    invoke-direct {p0, v5}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->f(I)V
 
     goto :goto_0
 
     :cond_1
     invoke-direct {p0, v6}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(Z)V
 
-    iput-boolean v6, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->A:Z
+    iput-boolean v6, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->D:Z
 
     const/4 v0, 0x2
 
-    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(I)V
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->f(I)V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getHeight()I
 
@@ -976,7 +1185,7 @@
 
     move-result v5
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->p:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->s:Landroid/widget/Scroller;
 
     invoke-virtual/range {v0 .. v5}, Landroid/widget/Scroller;->startScroll(IIIII)V
 
@@ -991,7 +1200,7 @@
 
     int-to-float v5, v5
 
-    iget v6, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->r:I
+    iget v6, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->u:I
 
     add-int/2addr v0, v6
 
@@ -1008,6 +1217,18 @@
     float-to-int v0, v0
 
     goto :goto_1
+.end method
+
+.method public a(IZ)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->C:Z
+
+    invoke-virtual {p0, p1, p2, v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(IZZ)V
+
+    return-void
 .end method
 
 .method a(IZZ)V
@@ -1027,13 +1248,13 @@
 
     const/4 v1, 0x0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
 
-    invoke-virtual {v0}, Landroid/support/v4/view/PagerAdapter;->getCount()I
+    invoke-virtual {v0}, Landroid/support/v4/view/ad;->b()I
 
     move-result v0
 
@@ -1049,11 +1270,11 @@
     :cond_2
     if-nez p3, :cond_3
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:I
 
     if-ne v0, p1, :cond_3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->j:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -1072,15 +1293,15 @@
 
     :cond_4
     :goto_1
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->B:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->E:I
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:I
+    iget v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:I
 
     add-int/2addr v2, v0
 
     if-gt p1, v2, :cond_5
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:I
+    iget v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:I
 
     sub-int v0, v2, v0
 
@@ -1090,7 +1311,7 @@
     move v2, v1
 
     :goto_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->j:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -1099,22 +1320,22 @@
     if-lt v2, v0, :cond_9
 
     :cond_6
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:I
 
     if-eq v0, p1, :cond_a
 
     move v0, v3
 
     :goto_3
-    iput p1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:I
+    iput p1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:I
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->c()V
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->g()V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getHeight()I
 
     move-result v2
 
-    iget v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->r:I
+    iget v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->u:I
 
     add-int/2addr v2, v3
 
@@ -1126,39 +1347,39 @@
 
     if-eqz v0, :cond_7
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->V:Lcn/com/smartdevices/bracelet/view/VerticalViewPager$OnPageChangeListener;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->aa:Lcn/com/smartdevices/bracelet/view/T;
 
     if-eqz v1, :cond_7
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->V:Lcn/com/smartdevices/bracelet/view/VerticalViewPager$OnPageChangeListener;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->aa:Lcn/com/smartdevices/bracelet/view/T;
 
-    invoke-interface {v1, p1}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$OnPageChangeListener;->onPageSelected(I)V
+    invoke-interface {v1, p1}, Lcn/com/smartdevices/bracelet/view/T;->a(I)V
 
     :cond_7
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->W:Lcn/com/smartdevices/bracelet/view/VerticalViewPager$OnPageChangeListener;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->ab:Lcn/com/smartdevices/bracelet/view/T;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->W:Lcn/com/smartdevices/bracelet/view/VerticalViewPager$OnPageChangeListener;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->ab:Lcn/com/smartdevices/bracelet/view/T;
 
-    invoke-interface {v0, p1}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$OnPageChangeListener;->onPageSelected(I)V
+    invoke-interface {v0, p1}, Lcn/com/smartdevices/bracelet/view/T;->a(I)V
 
     goto :goto_0
 
     :cond_8
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
 
-    invoke-virtual {v0}, Landroid/support/v4/view/PagerAdapter;->getCount()I
+    invoke-virtual {v0}, Landroid/support/v4/view/ad;->b()I
 
     move-result v0
 
     if-lt p1, v0, :cond_4
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
 
-    invoke-virtual {v0}, Landroid/support/v4/view/PagerAdapter;->getCount()I
+    invoke-virtual {v0}, Landroid/support/v4/view/ad;->b()I
 
     move-result v0
 
@@ -1167,15 +1388,15 @@
     goto :goto_1
 
     :cond_9
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->j:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/view/E;
+    check-cast v0, Lcn/com/smartdevices/bracelet/view/R;
 
-    iput-boolean v3, v0, Lcn/com/smartdevices/bracelet/view/E;->c:Z
+    iput-boolean v3, v0, Lcn/com/smartdevices/bracelet/view/R;->c:Z
 
     add-int/lit8 v0, v2, 0x1
 
@@ -1191,39 +1412,426 @@
     :cond_b
     if-eqz v0, :cond_c
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->V:Lcn/com/smartdevices/bracelet/view/VerticalViewPager$OnPageChangeListener;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->aa:Lcn/com/smartdevices/bracelet/view/T;
 
     if-eqz v3, :cond_c
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->V:Lcn/com/smartdevices/bracelet/view/VerticalViewPager$OnPageChangeListener;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->aa:Lcn/com/smartdevices/bracelet/view/T;
 
-    invoke-interface {v3, p1}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$OnPageChangeListener;->onPageSelected(I)V
+    invoke-interface {v3, p1}, Lcn/com/smartdevices/bracelet/view/T;->a(I)V
 
     :cond_c
     if-eqz v0, :cond_d
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->W:Lcn/com/smartdevices/bracelet/view/VerticalViewPager$OnPageChangeListener;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->ab:Lcn/com/smartdevices/bracelet/view/T;
 
     if-eqz v0, :cond_d
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->W:Lcn/com/smartdevices/bracelet/view/VerticalViewPager$OnPageChangeListener;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->ab:Lcn/com/smartdevices/bracelet/view/T;
 
-    invoke-interface {v0, p1}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$OnPageChangeListener;->onPageSelected(I)V
+    invoke-interface {v0, p1}, Lcn/com/smartdevices/bracelet/view/T;->a(I)V
 
     :cond_d
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->h()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o()V
 
     invoke-virtual {p0, v1, v2}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->scrollTo(II)V
 
     goto/16 :goto_0
 .end method
 
-.method a(Lcn/com/smartdevices/bracelet/view/F;)V
-    .locals 0
+.method public a(Landroid/graphics/drawable/Drawable;)V
+    .locals 1
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->Z:Lcn/com/smartdevices/bracelet/view/F;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->v:Landroid/graphics/drawable/Drawable;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->refreshDrawableState()V
+
+    :cond_0
+    if-nez p1, :cond_1
+
+    const/4 v0, 0x1
+
+    :goto_0
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->setWillNotDraw(Z)V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->invalidate()V
 
     return-void
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public a(Landroid/support/v4/view/ad;)V
+    .locals 6
+
+    const/4 v5, 0x0
+
+    const/4 v2, 0x0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->t:Lcn/com/smartdevices/bracelet/view/U;
+
+    invoke-virtual {v0, v1}, Landroid/support/v4/view/ad;->b(Landroid/database/DataSetObserver;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
+
+    invoke-virtual {v0, p0}, Landroid/support/v4/view/ad;->a(Landroid/view/ViewGroup;)V
+
+    move v1, v2
+
+    :goto_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-lt v1, v0, :cond_4
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
+
+    invoke-virtual {v0, p0}, Landroid/support/v4/view/ad;->b(Landroid/view/ViewGroup;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n()V
+
+    iput v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:I
+
+    invoke-virtual {p0, v2, v2}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->scrollTo(II)V
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->t:Lcn/com/smartdevices/bracelet/view/U;
+
+    if-nez v1, :cond_1
+
+    new-instance v1, Lcn/com/smartdevices/bracelet/view/U;
+
+    invoke-direct {v1, p0, v5}, Lcn/com/smartdevices/bracelet/view/U;-><init>(Lcn/com/smartdevices/bracelet/view/VerticalViewPager;Lcn/com/smartdevices/bracelet/view/U;)V
+
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->t:Lcn/com/smartdevices/bracelet/view/U;
+
+    :cond_1
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->t:Lcn/com/smartdevices/bracelet/view/U;
+
+    invoke-virtual {v1, v3}, Landroid/support/v4/view/ad;->a(Landroid/database/DataSetObserver;)V
+
+    iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->C:Z
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->p:I
+
+    if-ltz v1, :cond_5
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->q:Landroid/os/Parcelable;
+
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->r:Ljava/lang/ClassLoader;
+
+    invoke-virtual {v1, v3, v4}, Landroid/support/v4/view/ad;->a(Landroid/os/Parcelable;Ljava/lang/ClassLoader;)V
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->p:I
+
+    const/4 v3, 0x1
+
+    invoke-virtual {p0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(IZZ)V
+
+    const/4 v1, -0x1
+
+    iput v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->p:I
+
+    iput-object v5, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->q:Landroid/os/Parcelable;
+
+    iput-object v5, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->r:Ljava/lang/ClassLoader;
+
+    :cond_2
+    :goto_1
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->ac:Lcn/com/smartdevices/bracelet/view/S;
+
+    if-eqz v1, :cond_3
+
+    if-eq v0, p1, :cond_3
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->ac:Lcn/com/smartdevices/bracelet/view/S;
+
+    invoke-interface {v1, v0, p1}, Lcn/com/smartdevices/bracelet/view/S;->a(Landroid/support/v4/view/ad;Landroid/support/v4/view/ad;)V
+
+    :cond_3
+    return-void
+
+    :cond_4
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/view/R;
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
+
+    iget v4, v0, Lcn/com/smartdevices/bracelet/view/R;->b:I
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/view/R;->a:Ljava/lang/Object;
+
+    invoke-virtual {v3, p0, v4, v0}, Landroid/support/v4/view/ad;->a(Landroid/view/ViewGroup;ILjava/lang/Object;)V
+
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_5
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->g()V
+
+    goto :goto_1
+.end method
+
+.method a(Lcn/com/smartdevices/bracelet/view/S;)V
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->ac:Lcn/com/smartdevices/bracelet/view/S;
+
+    return-void
+.end method
+
+.method public a(Lcn/com/smartdevices/bracelet/view/T;)V
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->aa:Lcn/com/smartdevices/bracelet/view/T;
+
+    return-void
+.end method
+
+.method public a(Landroid/view/KeyEvent;)Z
+    .locals 4
+
+    const/4 v3, 0x1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
+
+    move-result v1
+
+    sparse-switch v1, :sswitch_data_0
+
+    :cond_0
+    :goto_0
+    return v0
+
+    :sswitch_0
+    const/16 v0, 0x21
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->e(I)Z
+
+    move-result v0
+
+    goto :goto_0
+
+    :sswitch_1
+    const/16 v0, 0x82
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->e(I)Z
+
+    move-result v0
+
+    goto :goto_0
+
+    :sswitch_2
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v2, 0xb
+
+    if-lt v1, v2, :cond_0
+
+    invoke-static {p1}, Landroid/support/v4/view/A;->a(Landroid/view/KeyEvent;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const/4 v0, 0x2
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->e(I)Z
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_1
+    invoke-static {p1, v3}, Landroid/support/v4/view/A;->a(Landroid/view/KeyEvent;I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->e(I)Z
+
+    move-result v0
+
+    goto :goto_0
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        0x13 -> :sswitch_0
+        0x14 -> :sswitch_1
+        0x3d -> :sswitch_2
+    .end sparse-switch
+.end method
+
+.method protected a(Landroid/view/View;ZIII)Z
+    .locals 10
+
+    const/4 v2, 0x1
+
+    instance-of v0, p1, Landroid/view/ViewGroup;
+
+    if-eqz v0, :cond_0
+
+    move-object v6, p1
+
+    check-cast v6, Landroid/view/ViewGroup;
+
+    invoke-virtual {p1}, Landroid/view/View;->getScrollX()I
+
+    move-result v8
+
+    invoke-virtual {p1}, Landroid/view/View;->getScrollY()I
+
+    move-result v9
+
+    invoke-virtual {v6}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x1
+
+    move v7, v0
+
+    :goto_0
+    if-gez v7, :cond_2
+
+    :cond_0
+    if-eqz p2, :cond_4
+
+    neg-int v0, p3
+
+    invoke-static {p1, v0}, Landroid/support/v4/view/as;->b(Landroid/view/View;I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    :cond_1
+    :goto_1
+    return v2
+
+    :cond_2
+    invoke-virtual {v6, v7}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v1
+
+    add-int v0, p4, v8
+
+    invoke-virtual {v1}, Landroid/view/View;->getLeft()I
+
+    move-result v3
+
+    if-lt v0, v3, :cond_3
+
+    add-int v0, p4, v8
+
+    invoke-virtual {v1}, Landroid/view/View;->getRight()I
+
+    move-result v3
+
+    if-ge v0, v3, :cond_3
+
+    add-int v0, p5, v9
+
+    invoke-virtual {v1}, Landroid/view/View;->getTop()I
+
+    move-result v3
+
+    if-lt v0, v3, :cond_3
+
+    add-int v0, p5, v9
+
+    invoke-virtual {v1}, Landroid/view/View;->getBottom()I
+
+    move-result v3
+
+    if-ge v0, v3, :cond_3
+
+    add-int v0, p4, v8
+
+    invoke-virtual {v1}, Landroid/view/View;->getLeft()I
+
+    move-result v3
+
+    sub-int v4, v0, v3
+
+    add-int v0, p5, v9
+
+    invoke-virtual {v1}, Landroid/view/View;->getTop()I
+
+    move-result v3
+
+    sub-int v5, v0, v3
+
+    move-object v0, p0
+
+    move v3, p3
+
+    invoke-virtual/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(Landroid/view/View;ZIII)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    :cond_3
+    add-int/lit8 v0, v7, -0x1
+
+    move v7, v0
+
+    goto :goto_0
+
+    :cond_4
+    const/4 v2, 0x0
+
+    goto :goto_1
 .end method
 
 .method public addFocusables(Ljava/util/ArrayList;II)V
@@ -1292,15 +1900,15 @@
 
     if-nez v4, :cond_4
 
-    invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(Landroid/view/View;)Lcn/com/smartdevices/bracelet/view/E;
+    invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(Landroid/view/View;)Lcn/com/smartdevices/bracelet/view/R;
 
     move-result-object v4
 
     if-eqz v4, :cond_4
 
-    iget v4, v4, Lcn/com/smartdevices/bracelet/view/E;->b:I
+    iget v4, v4, Lcn/com/smartdevices/bracelet/view/R;->b:I
 
-    iget v5, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:I
+    iget v5, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:I
 
     if-ne v4, v5, :cond_4
 
@@ -1372,15 +1980,15 @@
 
     if-nez v2, :cond_1
 
-    invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(Landroid/view/View;)Lcn/com/smartdevices/bracelet/view/E;
+    invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(Landroid/view/View;)Lcn/com/smartdevices/bracelet/view/R;
 
     move-result-object v2
 
     if-eqz v2, :cond_1
 
-    iget v2, v2, Lcn/com/smartdevices/bracelet/view/E;->b:I
+    iget v2, v2, Lcn/com/smartdevices/bracelet/view/R;->b:I
 
-    iget v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:I
+    iget v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:I
 
     if-ne v2, v3, :cond_1
 
@@ -1410,21 +2018,21 @@
 
     check-cast v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;
 
-    iget-boolean v2, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;->isDecor:Z
+    iget-boolean v2, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;->a:Z
 
-    instance-of v3, p1, Lcn/com/smartdevices/bracelet/view/D;
+    instance-of v3, p1, Lcn/com/smartdevices/bracelet/view/Q;
 
     or-int/2addr v2, v3
 
-    iput-boolean v2, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;->isDecor:Z
+    iput-boolean v2, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;->a:Z
 
-    iget-boolean v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->x:Z
+    iget-boolean v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->A:Z
 
     if-eqz v2, :cond_1
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;->isDecor:Z
+    iget-boolean v0, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;->a:Z
 
     if-eqz v0, :cond_0
 
@@ -1439,9 +2047,9 @@
     :cond_0
     invoke-virtual {p0, p1, p2, v1}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->addViewInLayout(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)Z
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->v:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->y:I
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->w:I
+    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->z:I
 
     invoke-virtual {p1, v0, v1}, Landroid/view/View;->measure(II)V
 
@@ -1459,136 +2067,15 @@
     goto :goto_0
 .end method
 
-.method public arrowScroll(I)Z
-    .locals 5
+.method public b()Landroid/support/v4/view/ad;
+    .locals 1
 
-    const/16 v4, 0x82
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
 
-    const/16 v3, 0x21
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->findFocus()Landroid/view/View;
-
-    move-result-object v0
-
-    if-ne v0, p0, :cond_0
-
-    const/4 v0, 0x0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    invoke-static {}, Landroid/view/FocusFinder;->getInstance()Landroid/view/FocusFinder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p0, v0, p1}, Landroid/view/FocusFinder;->findNextFocus(Landroid/view/ViewGroup;Landroid/view/View;I)Landroid/view/View;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_5
-
-    if-eq v2, v0, :cond_5
-
-    if-ne p1, v3, :cond_3
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v2}, Landroid/view/View;->getTop()I
-
-    move-result v1
-
-    invoke-virtual {v0}, Landroid/view/View;->getTop()I
-
-    move-result v0
-
-    if-lt v1, v0, :cond_2
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->d()Z
-
-    move-result v0
-
-    :goto_0
-    if-eqz v0, :cond_1
-
-    invoke-static {p1}, Landroid/view/SoundEffectConstants;->getContantForFocusDirection(I)I
-
-    move-result v1
-
-    invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->playSoundEffect(I)V
-
-    :cond_1
-    return v0
-
-    :cond_2
-    invoke-virtual {v2}, Landroid/view/View;->requestFocus()Z
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_3
-    if-ne p1, v4, :cond_9
-
-    if-eqz v0, :cond_4
-
-    invoke-virtual {v2}, Landroid/view/View;->getTop()I
-
-    move-result v1
-
-    invoke-virtual {v0}, Landroid/view/View;->getTop()I
-
-    move-result v0
-
-    if-gt v1, v0, :cond_4
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->e()Z
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {v2}, Landroid/view/View;->requestFocus()Z
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_5
-    if-eq p1, v3, :cond_6
-
-    const/4 v0, 0x1
-
-    if-ne p1, v0, :cond_7
-
-    :cond_6
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->d()Z
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_7
-    if-eq p1, v4, :cond_8
-
-    const/4 v0, 0x2
-
-    if-ne p1, v0, :cond_9
-
-    :cond_8
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->e()Z
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_9
-    move v0, v1
-
-    goto :goto_0
+    return-object v0
 .end method
 
-.method b(Landroid/view/View;)Lcn/com/smartdevices/bracelet/view/E;
+.method b(Landroid/view/View;)Lcn/com/smartdevices/bracelet/view/R;
     .locals 2
 
     :goto_0
@@ -1598,7 +2085,7 @@
 
     if-ne v0, p0, :cond_0
 
-    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(Landroid/view/View;)Lcn/com/smartdevices/bracelet/view/E;
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(Landroid/view/View;)Lcn/com/smartdevices/bracelet/view/R;
 
     move-result-object v0
 
@@ -1625,267 +2112,226 @@
     goto :goto_0
 .end method
 
-.method b()V
-    .locals 10
+.method b(Lcn/com/smartdevices/bracelet/view/T;)Lcn/com/smartdevices/bracelet/view/T;
+    .locals 1
 
-    const/4 v6, -0x1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->ab:Lcn/com/smartdevices/bracelet/view/T;
 
-    const/4 v2, 0x0
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->ab:Lcn/com/smartdevices/bracelet/view/T;
 
-    const/4 v1, 0x1
+    return-object v0
+.end method
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->j:Ljava/util/ArrayList;
+.method public b(F)V
+    .locals 8
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    const/4 v7, 0x0
+
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->R:Z
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "No fake drag in progress. Call beginFakeDrag first."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_0
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->J:F
+
+    add-float/2addr v0, p1
+
+    iput v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->J:F
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getScrollY()I
 
     move-result v0
 
-    const/4 v3, 0x3
+    int-to-float v0, v0
 
-    if-ge v0, v3, :cond_2
+    sub-float v2, v0, p1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->j:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getHeight()I
 
     move-result v0
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
+    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->u:I
 
-    invoke-virtual {v3}, Landroid/support/v4/view/PagerAdapter;->getCount()I
+    add-int/2addr v1, v0
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    mul-int/2addr v0, v1
+
+    invoke-static {v7, v0}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    iget v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:I
+
+    add-int/lit8 v3, v3, 0x1
+
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
+
+    invoke-virtual {v4}, Landroid/support/v4/view/ad;->b()I
+
+    move-result v4
+
+    add-int/lit8 v4, v4, -0x1
+
+    invoke-static {v3, v4}, Ljava/lang/Math;->min(II)I
 
     move-result v3
 
-    if-ge v0, v3, :cond_2
+    mul-int/2addr v1, v3
+
+    int-to-float v1, v1
+
+    cmpg-float v3, v2, v0
+
+    if-gez v3, :cond_1
+
+    :goto_0
+    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->J:F
+
+    float-to-int v2, v0
+
+    int-to-float v2, v2
+
+    sub-float v2, v0, v2
+
+    add-float/2addr v1, v2
+
+    iput v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->J:F
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getScrollX()I
+
+    move-result v1
+
+    float-to-int v2, v0
+
+    invoke-virtual {p0, v1, v2}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->scrollTo(II)V
+
+    float-to-int v0, v0
+
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->g(I)V
+
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v2
+
+    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->S:J
+
+    const/4 v4, 0x2
+
+    const/4 v5, 0x0
+
+    iget v6, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->J:F
+
+    invoke-static/range {v0 .. v7}, Landroid/view/MotionEvent;->obtain(JJIFFI)Landroid/view/MotionEvent;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->N:Landroid/view/VelocityTracker;
+
+    invoke-virtual {v1, v0}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
+
+    invoke-virtual {v0}, Landroid/view/MotionEvent;->recycle()V
+
+    return-void
+
+    :cond_1
+    cmpl-float v0, v2, v1
+
+    if-lez v0, :cond_2
 
     move v0, v1
 
-    :goto_0
-    move v3, v2
-
-    move v4, v2
-
-    move v5, v6
-
-    move v7, v0
-
-    :goto_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->j:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    if-lt v3, v0, :cond_3
-
-    if-eqz v4, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
-
-    invoke-virtual {v0, p0}, Landroid/support/v4/view/PagerAdapter;->finishUpdate(Landroid/view/ViewGroup;)V
-
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->j:Ljava/util/ArrayList;
-
-    sget-object v3, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->h:Ljava/util/Comparator;
-
-    invoke-static {v0, v3}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
-
-    if-ltz v5, :cond_8
-
-    invoke-virtual {p0, v5, v2, v1}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(IZZ)V
-
-    :goto_2
-    if-eqz v1, :cond_1
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->c()V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->requestLayout()V
-
-    :cond_1
-    return-void
+    goto :goto_0
 
     :cond_2
     move v0, v2
 
     goto :goto_0
+.end method
 
-    :cond_3
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->j:Ljava/util/ArrayList;
+.method public b(I)V
+    .locals 4
 
-    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    move-result-object v0
+    if-ge p1, v0, :cond_0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/view/E;
+    const-string v1, "VerticalViewPager"
 
-    iget-object v8, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    iget-object v9, v0, Lcn/com/smartdevices/bracelet/view/E;->a:Ljava/lang/Object;
+    const-string v3, "Requested offscreen page limit "
 
-    invoke-virtual {v8, v9}, Landroid/support/v4/view/PagerAdapter;->getItemPosition(Ljava/lang/Object;)I
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result v8
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    if-ne v8, v6, :cond_4
+    move-result-object v2
 
-    move v0, v3
+    const-string v3, " too small; defaulting to "
 
-    move v3, v4
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move v4, v5
+    move-result-object v2
 
-    move v5, v7
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    :goto_3
-    add-int/lit8 v0, v0, 0x1
+    move-result-object v2
 
-    move v7, v5
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move v5, v4
+    move-result-object v2
 
-    move v4, v3
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    move v3, v0
+    move p1, v0
 
-    goto :goto_1
+    :cond_0
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->E:I
 
-    :cond_4
-    const/4 v9, -0x2
+    if-eq p1, v0, :cond_1
 
-    if-ne v8, v9, :cond_6
+    iput p1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->E:I
 
-    iget-object v7, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->j:Ljava/util/ArrayList;
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->g()V
 
-    invoke-virtual {v7, v3}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
-
-    add-int/lit8 v3, v3, -0x1
-
-    if-nez v4, :cond_5
-
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
-
-    invoke-virtual {v4, p0}, Landroid/support/v4/view/PagerAdapter;->startUpdate(Landroid/view/ViewGroup;)V
-
-    move v4, v1
-
-    :cond_5
-    iget-object v7, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
-
-    iget v8, v0, Lcn/com/smartdevices/bracelet/view/E;->b:I
-
-    iget-object v9, v0, Lcn/com/smartdevices/bracelet/view/E;->a:Ljava/lang/Object;
-
-    invoke-virtual {v7, p0, v8, v9}, Landroid/support/v4/view/PagerAdapter;->destroyItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
-
-    iget v7, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:I
-
-    iget v0, v0, Lcn/com/smartdevices/bracelet/view/E;->b:I
-
-    if-ne v7, v0, :cond_a
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:I
-
-    iget-object v5, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
-
-    invoke-virtual {v5}, Landroid/support/v4/view/PagerAdapter;->getCount()I
-
-    move-result v5
-
-    add-int/lit8 v5, v5, -0x1
-
-    invoke-static {v0, v5}, Ljava/lang/Math;->min(II)I
-
-    move-result v0
-
-    invoke-static {v2, v0}, Ljava/lang/Math;->max(II)I
-
-    move-result v5
-
-    move v0, v3
-
-    move v3, v4
-
-    move v4, v5
-
-    move v5, v1
-
-    goto :goto_3
-
-    :cond_6
-    iget v9, v0, Lcn/com/smartdevices/bracelet/view/E;->b:I
-
-    if-eq v9, v8, :cond_9
-
-    iget v7, v0, Lcn/com/smartdevices/bracelet/view/E;->b:I
-
-    iget v9, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:I
-
-    if-ne v7, v9, :cond_7
-
-    move v5, v8
-
-    :cond_7
-    iput v8, v0, Lcn/com/smartdevices/bracelet/view/E;->b:I
-
-    move v0, v3
-
-    move v3, v4
-
-    move v4, v5
-
-    move v5, v1
-
-    goto :goto_3
-
-    :cond_8
-    move v1, v7
-
-    goto :goto_2
-
-    :cond_9
-    move v0, v3
-
-    move v3, v4
-
-    move v4, v5
-
-    move v5, v7
-
-    goto :goto_3
-
-    :cond_a
-    move v0, v3
-
-    move v3, v4
-
-    move v4, v5
-
-    move v5, v1
-
-    goto :goto_3
+    :cond_1
+    return-void
 .end method
 
 .method b(II)V
     .locals 2
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/view/E;
+    new-instance v0, Lcn/com/smartdevices/bracelet/view/R;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/view/E;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/view/R;-><init>()V
 
-    iput p1, v0, Lcn/com/smartdevices/bracelet/view/E;->b:I
+    iput p1, v0, Lcn/com/smartdevices/bracelet/view/R;->b:I
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
 
-    invoke-virtual {v1, p0, p1}, Landroid/support/v4/view/PagerAdapter;->instantiateItem(Landroid/view/ViewGroup;I)Ljava/lang/Object;
+    invoke-virtual {v1, p0, p1}, Landroid/support/v4/view/ad;->a(Landroid/view/ViewGroup;I)Ljava/lang/Object;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcn/com/smartdevices/bracelet/view/E;->a:Ljava/lang/Object;
+    iput-object v1, v0, Lcn/com/smartdevices/bracelet/view/R;->a:Ljava/lang/Object;
 
     if-gez p2, :cond_0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->j:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -1893,541 +2339,37 @@
     return-void
 
     :cond_0
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->j:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p2, v0}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
     goto :goto_0
 .end method
 
-.method public beginFakeDrag()Z
-    .locals 9
+.method public c()I
+    .locals 1
 
-    const/4 v8, 0x1
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:I
 
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->C:Z
-
-    if-eqz v0, :cond_0
-
-    :goto_0
-    return v4
-
-    :cond_0
-    iput-boolean v8, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->O:Z
-
-    invoke-direct {p0, v8}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(I)V
-
-    iput v5, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->G:F
-
-    iput v5, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->H:F
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->K:Landroid/view/VelocityTracker;
-
-    if-nez v0, :cond_1
-
-    invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->K:Landroid/view/VelocityTracker;
-
-    :goto_1
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v0
-
-    move-wide v2, v0
-
-    move v6, v5
-
-    move v7, v4
-
-    invoke-static/range {v0 .. v7}, Landroid/view/MotionEvent;->obtain(JJIFFI)Landroid/view/MotionEvent;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->K:Landroid/view/VelocityTracker;
-
-    invoke-virtual {v3, v2}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
-
-    invoke-virtual {v2}, Landroid/view/MotionEvent;->recycle()V
-
-    iput-wide v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->P:J
-
-    move v4, v8
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->K:Landroid/view/VelocityTracker;
-
-    invoke-virtual {v0}, Landroid/view/VelocityTracker;->clear()V
-
-    goto :goto_1
+    return v0
 .end method
 
-.method c()V
-    .locals 10
+.method public c(I)V
+    .locals 2
 
-    const/4 v6, 0x0
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->u:I
 
-    const/4 v4, -0x1
+    iput p1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->u:I
 
-    const/4 v2, 0x0
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getHeight()I
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
+    move-result v1
 
-    if-nez v0, :cond_1
+    invoke-direct {p0, v1, v1, p1, v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(IIII)V
 
-    :cond_0
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->requestLayout()V
+
     return-void
-
-    :cond_1
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->z:Z
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getWindowToken()Landroid/os/IBinder;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
-
-    invoke-virtual {v0, p0}, Landroid/support/v4/view/PagerAdapter;->startUpdate(Landroid/view/ViewGroup;)V
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->B:I
-
-    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:I
-
-    sub-int/2addr v1, v0
-
-    invoke-static {v2, v1}, Ljava/lang/Math;->max(II)I
-
-    move-result v5
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
-
-    invoke-virtual {v1}, Landroid/support/v4/view/PagerAdapter;->getCount()I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, -0x1
-
-    iget v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:I
-
-    add-int/2addr v0, v3
-
-    invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
-
-    move-result v7
-
-    move v1, v2
-
-    move v3, v4
-
-    :goto_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->j:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    if-lt v1, v0, :cond_6
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->j:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    if-lez v0, :cond_c
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->j:Ljava/util/ArrayList;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->j:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, -0x1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/view/E;
-
-    iget v0, v0, Lcn/com/smartdevices/bracelet/view/E;->b:I
-
-    :goto_1
-    if-ge v0, v7, :cond_2
-
-    add-int/lit8 v0, v0, 0x1
-
-    if-le v0, v5, :cond_d
-
-    :goto_2
-    if-le v0, v7, :cond_e
-
-    :cond_2
-    move v1, v2
-
-    :goto_3
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->j:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    if-lt v1, v0, :cond_f
-
-    move-object v0, v6
-
-    :goto_4
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
-
-    iget v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:I
-
-    if-eqz v0, :cond_11
-
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/view/E;->a:Ljava/lang/Object;
-
-    :goto_5
-    invoke-virtual {v1, p0, v3, v0}, Landroid/support/v4/view/PagerAdapter;->setPrimaryItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
-
-    invoke-virtual {v0, p0}, Landroid/support/v4/view/PagerAdapter;->finishUpdate(Landroid/view/ViewGroup;)V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->hasFocus()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->findFocus()Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->b(Landroid/view/View;)Lcn/com/smartdevices/bracelet/view/E;
-
-    move-result-object v6
-
-    :cond_3
-    if-eqz v6, :cond_4
-
-    iget v0, v6, Lcn/com/smartdevices/bracelet/view/E;->b:I
-
-    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:I
-
-    if-eq v0, v1, :cond_0
-
-    :cond_4
-    :goto_6
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getChildCount()I
-
-    move-result v0
-
-    if-ge v2, v0, :cond_0
-
-    invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(Landroid/view/View;)Lcn/com/smartdevices/bracelet/view/E;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_5
-
-    iget v1, v1, Lcn/com/smartdevices/bracelet/view/E;->b:I
-
-    iget v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:I
-
-    if-ne v1, v3, :cond_5
-
-    const/4 v1, 0x2
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->requestFocus(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    :cond_5
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_6
-
-    :cond_6
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->j:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/view/E;
-
-    iget v8, v0, Lcn/com/smartdevices/bracelet/view/E;->b:I
-
-    if-lt v8, v5, :cond_7
-
-    iget v8, v0, Lcn/com/smartdevices/bracelet/view/E;->b:I
-
-    if-le v8, v7, :cond_8
-
-    :cond_7
-    iget-boolean v8, v0, Lcn/com/smartdevices/bracelet/view/E;->c:Z
-
-    if-nez v8, :cond_8
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->j:Ljava/util/ArrayList;
-
-    invoke-virtual {v3, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
-
-    add-int/lit8 v1, v1, -0x1
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
-
-    iget v8, v0, Lcn/com/smartdevices/bracelet/view/E;->b:I
-
-    iget-object v9, v0, Lcn/com/smartdevices/bracelet/view/E;->a:Ljava/lang/Object;
-
-    invoke-virtual {v3, p0, v8, v9}, Landroid/support/v4/view/PagerAdapter;->destroyItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
-
-    move v3, v1
-
-    :goto_7
-    iget v1, v0, Lcn/com/smartdevices/bracelet/view/E;->b:I
-
-    add-int/lit8 v0, v3, 0x1
-
-    move v3, v1
-
-    move v1, v0
-
-    goto/16 :goto_0
-
-    :cond_8
-    if-ge v3, v7, :cond_a
-
-    iget v8, v0, Lcn/com/smartdevices/bracelet/view/E;->b:I
-
-    if-le v8, v5, :cond_a
-
-    add-int/lit8 v3, v3, 0x1
-
-    if-ge v3, v5, :cond_9
-
-    move v3, v5
-
-    :cond_9
-    :goto_8
-    if-gt v3, v7, :cond_a
-
-    iget v8, v0, Lcn/com/smartdevices/bracelet/view/E;->b:I
-
-    if-lt v3, v8, :cond_b
-
-    :cond_a
-    move v3, v1
-
-    goto :goto_7
-
-    :cond_b
-    invoke-virtual {p0, v3, v1}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->b(II)V
-
-    add-int/lit8 v3, v3, 0x1
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_8
-
-    :cond_c
-    move v0, v4
-
-    goto/16 :goto_1
-
-    :cond_d
-    move v0, v5
-
-    goto/16 :goto_2
-
-    :cond_e
-    invoke-virtual {p0, v0, v4}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->b(II)V
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto/16 :goto_2
-
-    :cond_f
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->j:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/view/E;
-
-    iget v0, v0, Lcn/com/smartdevices/bracelet/view/E;->b:I
-
-    iget v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:I
-
-    if-ne v0, v3, :cond_10
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->j:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/view/E;
-
-    goto/16 :goto_4
-
-    :cond_10
-    add-int/lit8 v0, v1, 0x1
-
-    move v1, v0
-
-    goto/16 :goto_3
-
-    :cond_11
-    move-object v0, v6
-
-    goto/16 :goto_5
-.end method
-
-.method protected canScroll(Landroid/view/View;ZIII)Z
-    .locals 10
-
-    const/4 v2, 0x1
-
-    instance-of v0, p1, Landroid/view/ViewGroup;
-
-    if-eqz v0, :cond_0
-
-    move-object v6, p1
-
-    check-cast v6, Landroid/view/ViewGroup;
-
-    invoke-virtual {p1}, Landroid/view/View;->getScrollX()I
-
-    move-result v8
-
-    invoke-virtual {p1}, Landroid/view/View;->getScrollY()I
-
-    move-result v9
-
-    invoke-virtual {v6}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, -0x1
-
-    move v7, v0
-
-    :goto_0
-    if-gez v7, :cond_2
-
-    :cond_0
-    if-eqz p2, :cond_4
-
-    neg-int v0, p3
-
-    invoke-static {p1, v0}, Landroid/support/v4/view/ViewCompat;->canScrollVertically(Landroid/view/View;I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    :cond_1
-    :goto_1
-    return v2
-
-    :cond_2
-    invoke-virtual {v6, v7}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v1
-
-    add-int v0, p4, v8
-
-    invoke-virtual {v1}, Landroid/view/View;->getLeft()I
-
-    move-result v3
-
-    if-lt v0, v3, :cond_3
-
-    add-int v0, p4, v8
-
-    invoke-virtual {v1}, Landroid/view/View;->getRight()I
-
-    move-result v3
-
-    if-ge v0, v3, :cond_3
-
-    add-int v0, p5, v9
-
-    invoke-virtual {v1}, Landroid/view/View;->getTop()I
-
-    move-result v3
-
-    if-lt v0, v3, :cond_3
-
-    add-int v0, p5, v9
-
-    invoke-virtual {v1}, Landroid/view/View;->getBottom()I
-
-    move-result v3
-
-    if-ge v0, v3, :cond_3
-
-    add-int v0, p4, v8
-
-    invoke-virtual {v1}, Landroid/view/View;->getLeft()I
-
-    move-result v3
-
-    sub-int v4, v0, v3
-
-    add-int v0, p5, v9
-
-    invoke-virtual {v1}, Landroid/view/View;->getTop()I
-
-    move-result v3
-
-    sub-int v5, v0, v3
-
-    move-object v0, p0
-
-    move v3, p3
-
-    invoke-virtual/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->canScroll(Landroid/view/View;ZIII)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    :cond_3
-    add-int/lit8 v0, v7, -0x1
-
-    move v7, v0
-
-    goto :goto_0
-
-    :cond_4
-    const/4 v2, 0x0
-
-    goto :goto_1
 .end method
 
 .method protected checkLayoutParams(Landroid/view/ViewGroup$LayoutParams;)Z
@@ -2457,7 +2399,7 @@
 .method public computeScroll()V
     .locals 4
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->p:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->s:Landroid/widget/Scroller;
 
     invoke-virtual {v0}, Landroid/widget/Scroller;->isFinished()Z
 
@@ -2465,7 +2407,7 @@
 
     if-nez v0, :cond_2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->p:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->s:Landroid/widget/Scroller;
 
     invoke-virtual {v0}, Landroid/widget/Scroller;->computeScrollOffset()Z
 
@@ -2481,13 +2423,13 @@
 
     move-result v1
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->p:Landroid/widget/Scroller;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->s:Landroid/widget/Scroller;
 
     invoke-virtual {v2}, Landroid/widget/Scroller;->getCurrX()I
 
     move-result v2
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->p:Landroid/widget/Scroller;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->s:Landroid/widget/Scroller;
 
     invoke-virtual {v3}, Landroid/widget/Scroller;->getCurrY()I
 
@@ -2500,7 +2442,7 @@
     :cond_0
     invoke-virtual {p0, v2, v3}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->scrollTo(II)V
 
-    invoke-direct {p0, v3}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->b(I)V
+    invoke-direct {p0, v3}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->g(I)V
 
     :cond_1
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->invalidate()V
@@ -2509,33 +2451,37 @@
     return-void
 
     :cond_2
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->h()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o()V
 
     goto :goto_0
 .end method
 
-.method d()Z
-    .locals 2
+.method public d()I
+    .locals 1
 
-    const/4 v0, 0x1
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->E:I
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:I
-
-    if-lez v1, :cond_0
-
-    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:I
-
-    add-int/lit8 v1, v1, -0x1
-
-    invoke-virtual {p0, v1, v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->setCurrentItem(IZ)V
-
-    :goto_0
     return v0
+.end method
 
-    :cond_0
-    const/4 v0, 0x0
+.method public d(I)V
+    .locals 1
 
-    goto :goto_0
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(Landroid/graphics/drawable/Drawable;)V
+
+    return-void
 .end method
 
 .method public dispatchKeyEvent(Landroid/view/KeyEvent;)Z
@@ -2547,7 +2493,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->executeKeyEvent(Landroid/view/KeyEvent;)Z
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(Landroid/view/KeyEvent;)Z
 
     move-result v0
 
@@ -2592,15 +2538,15 @@
 
     if-nez v4, :cond_1
 
-    invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(Landroid/view/View;)Lcn/com/smartdevices/bracelet/view/E;
+    invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(Landroid/view/View;)Lcn/com/smartdevices/bracelet/view/R;
 
     move-result-object v4
 
     if-eqz v4, :cond_1
 
-    iget v4, v4, Lcn/com/smartdevices/bracelet/view/E;->b:I
+    iget v4, v4, Lcn/com/smartdevices/bracelet/view/R;->b:I
 
-    iget v5, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:I
+    iget v5, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:I
 
     if-ne v4, v5, :cond_1
 
@@ -2629,7 +2575,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p0}, Landroid/support/v4/view/ViewCompat;->getOverScrollMode(Landroid/view/View;)I
+    invoke-static {p0}, Landroid/support/v4/view/as;->a(Landroid/view/View;)I
 
     move-result v2
 
@@ -2637,22 +2583,22 @@
 
     if-ne v2, v1, :cond_5
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
 
     if-eqz v2, :cond_5
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
 
-    invoke-virtual {v2}, Landroid/support/v4/view/PagerAdapter;->getCount()I
+    invoke-virtual {v2}, Landroid/support/v4/view/ad;->b()I
 
     move-result v2
 
     if-le v2, v1, :cond_5
 
     :cond_0
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->Q:Landroid/support/v4/widget/EdgeEffectCompat;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->T:Landroid/support/v4/widget/m;
 
-    invoke-virtual {v2}, Landroid/support/v4/widget/EdgeEffectCompat;->isFinished()Z
+    invoke-virtual {v2}, Landroid/support/v4/widget/m;->a()Z
 
     move-result v2
 
@@ -2682,17 +2628,17 @@
 
     invoke-virtual {p1, v4}, Landroid/graphics/Canvas;->rotate(F)V
 
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->Q:Landroid/support/v4/widget/EdgeEffectCompat;
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->T:Landroid/support/v4/widget/m;
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getHeight()I
 
     move-result v5
 
-    invoke-virtual {v4, v3, v5}, Landroid/support/v4/widget/EdgeEffectCompat;->setSize(II)V
+    invoke-virtual {v4, v3, v5}, Landroid/support/v4/widget/m;->a(II)V
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->Q:Landroid/support/v4/widget/EdgeEffectCompat;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->T:Landroid/support/v4/widget/m;
 
-    invoke-virtual {v3, p1}, Landroid/support/v4/widget/EdgeEffectCompat;->draw(Landroid/graphics/Canvas;)Z
+    invoke-virtual {v3, p1}, Landroid/support/v4/widget/m;->a(Landroid/graphics/Canvas;)Z
 
     move-result v3
 
@@ -2701,9 +2647,9 @@
     invoke-virtual {p1, v2}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
     :cond_1
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->R:Landroid/support/v4/widget/EdgeEffectCompat;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->U:Landroid/support/v4/widget/m;
 
-    invoke-virtual {v2}, Landroid/support/v4/widget/EdgeEffectCompat;->isFinished()Z
+    invoke-virtual {v2}, Landroid/support/v4/widget/m;->a()Z
 
     move-result v2
 
@@ -2733,13 +2679,13 @@
 
     move-result v4
 
-    iget-object v5, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
+    iget-object v5, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
 
     if-eqz v5, :cond_2
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
 
-    invoke-virtual {v1}, Landroid/support/v4/view/PagerAdapter;->getCount()I
+    invoke-virtual {v1}, Landroid/support/v4/view/ad;->b()I
 
     move-result v1
 
@@ -2760,13 +2706,13 @@
 
     neg-int v1, v1
 
-    iget v6, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->r:I
+    iget v6, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->u:I
 
     add-int/2addr v6, v4
 
     mul-int/2addr v1, v6
 
-    iget v6, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->r:I
+    iget v6, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->u:I
 
     add-int/2addr v1, v6
 
@@ -2774,13 +2720,13 @@
 
     invoke-virtual {p1, v5, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->R:Landroid/support/v4/widget/EdgeEffectCompat;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->U:Landroid/support/v4/widget/m;
 
-    invoke-virtual {v1, v3, v4}, Landroid/support/v4/widget/EdgeEffectCompat;->setSize(II)V
+    invoke-virtual {v1, v3, v4}, Landroid/support/v4/widget/m;->a(II)V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->R:Landroid/support/v4/widget/EdgeEffectCompat;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->U:Landroid/support/v4/widget/m;
 
-    invoke-virtual {v1, p1}, Landroid/support/v4/widget/EdgeEffectCompat;->draw(Landroid/graphics/Canvas;)Z
+    invoke-virtual {v1, p1}, Landroid/support/v4/widget/m;->a(Landroid/graphics/Canvas;)Z
 
     move-result v1
 
@@ -2798,13 +2744,13 @@
     return-void
 
     :cond_5
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->Q:Landroid/support/v4/widget/EdgeEffectCompat;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->T:Landroid/support/v4/widget/m;
 
-    invoke-virtual {v1}, Landroid/support/v4/widget/EdgeEffectCompat;->finish()V
+    invoke-virtual {v1}, Landroid/support/v4/widget/m;->b()V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->R:Landroid/support/v4/widget/EdgeEffectCompat;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->U:Landroid/support/v4/widget/m;
 
-    invoke-virtual {v1}, Landroid/support/v4/widget/EdgeEffectCompat;->finish()V
+    invoke-virtual {v1}, Landroid/support/v4/widget/m;->b()V
 
     goto :goto_0
 .end method
@@ -2814,7 +2760,7 @@
 
     invoke-super {p0}, Landroid/view/ViewGroup;->drawableStateChanged()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->s:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->v:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
@@ -2834,348 +2780,719 @@
     return-void
 .end method
 
-.method e()Z
-    .locals 3
+.method public e()I
+    .locals 1
 
-    const/4 v0, 0x1
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->u:I
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
-
-    if-eqz v1, :cond_0
-
-    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:I
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
-
-    invoke-virtual {v2}, Landroid/support/v4/view/PagerAdapter;->getCount()I
-
-    move-result v2
-
-    add-int/lit8 v2, v2, -0x1
-
-    if-ge v1, v2, :cond_0
-
-    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:I
-
-    add-int/lit8 v1, v1, 0x1
-
-    invoke-virtual {p0, v1, v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->setCurrentItem(IZ)V
-
-    :goto_0
     return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method
 
-.method public endFakeDrag()V
-    .locals 6
+.method public e(I)Z
+    .locals 5
 
-    const/4 v5, 0x1
+    const/16 v4, 0x82
 
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->O:Z
+    const/16 v3, 0x21
 
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "No fake drag in progress. Call beginFakeDrag first."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->K:Landroid/view/VelocityTracker;
-
-    const/16 v1, 0x3e8
-
-    iget v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->M:I
-
-    int-to-float v2, v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/view/VelocityTracker;->computeCurrentVelocity(IF)V
-
-    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->I:I
-
-    invoke-static {v0, v1}, Landroid/support/v4/view/VelocityTrackerCompat;->getXVelocity(Landroid/view/VelocityTracker;I)F
-
-    move-result v0
-
-    float-to-int v0, v0
-
-    iput-boolean v5, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->z:Z
-
-    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->G:F
-
-    iget v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->H:F
-
-    sub-float/2addr v1, v2
-
-    float-to-int v1, v1
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getScrollY()I
-
-    move-result v2
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getHeight()I
-
-    move-result v3
-
-    iget v4, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->r:I
-
-    add-int/2addr v3, v4
-
-    div-int v4, v2, v3
-
-    rem-int/2addr v2, v3
-
-    int-to-float v2, v2
-
-    int-to-float v3, v3
-
-    div-float/2addr v2, v3
-
-    invoke-direct {p0, v4, v2, v0, v1}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(IFII)I
-
-    move-result v1
-
-    invoke-virtual {p0, v1, v5, v5, v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(IZZI)V
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->i()V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->O:Z
-
-    return-void
-.end method
-
-.method public executeKeyEvent(Landroid/view/KeyEvent;)Z
-    .locals 4
-
-    const/4 v3, 0x1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
-
-    move-result v1
-
-    sparse-switch v1, :sswitch_data_0
-
-    :cond_0
-    :goto_0
-    return v0
-
-    :sswitch_0
-    const/16 v0, 0x21
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->arrowScroll(I)Z
-
-    move-result v0
-
-    goto :goto_0
-
-    :sswitch_1
-    const/16 v0, 0x82
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->arrowScroll(I)Z
-
-    move-result v0
-
-    goto :goto_0
-
-    :sswitch_2
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v2, 0xb
-
-    if-lt v1, v2, :cond_0
-
-    invoke-static {p1}, Landroid/support/v4/view/KeyEventCompat;->hasNoModifiers(Landroid/view/KeyEvent;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    const/4 v0, 0x2
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->arrowScroll(I)Z
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_1
-    invoke-static {p1, v3}, Landroid/support/v4/view/KeyEventCompat;->hasModifiers(Landroid/view/KeyEvent;I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->arrowScroll(I)Z
-
-    move-result v0
-
-    goto :goto_0
-
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        0x13 -> :sswitch_0
-        0x14 -> :sswitch_1
-        0x3d -> :sswitch_2
-    .end sparse-switch
-.end method
-
-.method public fakeDragBy(F)V
-    .locals 8
-
-    const/4 v7, 0x0
-
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->O:Z
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "No fake drag in progress. Call beginFakeDrag first."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->G:F
-
-    add-float/2addr v0, p1
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->G:F
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getScrollY()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    sub-float v2, v0, p1
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getHeight()I
-
-    move-result v0
-
-    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->r:I
-
-    add-int/2addr v1, v0
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:I
-
-    add-int/lit8 v0, v0, -0x1
-
-    mul-int/2addr v0, v1
-
-    invoke-static {v7, v0}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    iget v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:I
-
-    add-int/lit8 v3, v3, 0x1
-
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
-
-    invoke-virtual {v4}, Landroid/support/v4/view/PagerAdapter;->getCount()I
-
-    move-result v4
-
-    add-int/lit8 v4, v4, -0x1
-
-    invoke-static {v3, v4}, Ljava/lang/Math;->min(II)I
-
-    move-result v3
-
-    mul-int/2addr v1, v3
-
-    int-to-float v1, v1
-
-    cmpg-float v3, v2, v0
-
-    if-gez v3, :cond_1
-
-    :goto_0
-    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->G:F
-
-    float-to-int v2, v0
-
-    int-to-float v2, v2
-
-    sub-float v2, v0, v2
-
-    add-float/2addr v1, v2
-
-    iput v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->G:F
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getScrollX()I
-
-    move-result v1
-
-    float-to-int v2, v0
-
-    invoke-virtual {p0, v1, v2}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->scrollTo(II)V
-
-    float-to-int v0, v0
-
-    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->b(I)V
-
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v2
-
-    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->P:J
-
-    const/4 v4, 0x2
-
-    const/4 v5, 0x0
-
-    iget v6, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->G:F
-
-    invoke-static/range {v0 .. v7}, Landroid/view/MotionEvent;->obtain(JJIFFI)Landroid/view/MotionEvent;
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->findFocus()Landroid/view/View;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->K:Landroid/view/VelocityTracker;
+    if-ne v0, p0, :cond_0
 
-    invoke-virtual {v1, v0}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Landroid/view/MotionEvent;->recycle()V
+    :cond_0
+    const/4 v1, 0x0
 
-    return-void
+    invoke-static {}, Landroid/view/FocusFinder;->getInstance()Landroid/view/FocusFinder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p0, v0, p1}, Landroid/view/FocusFinder;->findNextFocus(Landroid/view/ViewGroup;Landroid/view/View;I)Landroid/view/View;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_5
+
+    if-eq v2, v0, :cond_5
+
+    if-ne p1, v3, :cond_3
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v2}, Landroid/view/View;->getTop()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Landroid/view/View;->getTop()I
+
+    move-result v0
+
+    if-lt v1, v0, :cond_2
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k()Z
+
+    move-result v0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    invoke-static {p1}, Landroid/view/SoundEffectConstants;->getContantForFocusDirection(I)I
+
+    move-result v1
+
+    invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->playSoundEffect(I)V
 
     :cond_1
-    cmpl-float v0, v2, v1
+    return v0
 
-    if-lez v0, :cond_2
+    :cond_2
+    invoke-virtual {v2}, Landroid/view/View;->requestFocus()Z
 
+    move-result v0
+
+    goto :goto_0
+
+    :cond_3
+    if-ne p1, v4, :cond_9
+
+    if-eqz v0, :cond_4
+
+    invoke-virtual {v2}, Landroid/view/View;->getTop()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Landroid/view/View;->getTop()I
+
+    move-result v0
+
+    if-gt v1, v0, :cond_4
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l()Z
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {v2}, Landroid/view/View;->requestFocus()Z
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_5
+    if-eq p1, v3, :cond_6
+
+    const/4 v0, 0x1
+
+    if-ne p1, v0, :cond_7
+
+    :cond_6
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k()Z
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_7
+    if-eq p1, v4, :cond_8
+
+    const/4 v0, 0x2
+
+    if-ne p1, v0, :cond_9
+
+    :cond_8
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l()Z
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_9
     move v0, v1
 
     goto :goto_0
+.end method
+
+.method f()V
+    .locals 10
+
+    const/4 v6, -0x1
+
+    const/4 v2, 0x0
+
+    const/4 v1, 0x1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    const/4 v3, 0x3
+
+    if-ge v0, v3, :cond_2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
+
+    invoke-virtual {v3}, Landroid/support/v4/view/ad;->b()I
+
+    move-result v3
+
+    if-ge v0, v3, :cond_2
+
+    move v0, v1
+
+    :goto_0
+    move v3, v2
+
+    move v4, v2
+
+    move v5, v6
+
+    move v7, v0
+
+    :goto_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-lt v3, v0, :cond_3
+
+    if-eqz v4, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
+
+    invoke-virtual {v0, p0}, Landroid/support/v4/view/ad;->b(Landroid/view/ViewGroup;)V
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:Ljava/util/ArrayList;
+
+    sget-object v3, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Ljava/util/Comparator;
+
+    invoke-static {v0, v3}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
+
+    if-ltz v5, :cond_8
+
+    invoke-virtual {p0, v5, v2, v1}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(IZZ)V
+
+    :goto_2
+    if-eqz v1, :cond_1
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->g()V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->requestLayout()V
+
+    :cond_1
+    return-void
 
     :cond_2
     move v0, v2
 
     goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/view/R;
+
+    iget-object v8, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
+
+    iget-object v9, v0, Lcn/com/smartdevices/bracelet/view/R;->a:Ljava/lang/Object;
+
+    invoke-virtual {v8, v9}, Landroid/support/v4/view/ad;->a(Ljava/lang/Object;)I
+
+    move-result v8
+
+    if-ne v8, v6, :cond_4
+
+    move v0, v3
+
+    move v3, v4
+
+    move v4, v5
+
+    move v5, v7
+
+    :goto_3
+    add-int/lit8 v0, v0, 0x1
+
+    move v7, v5
+
+    move v5, v4
+
+    move v4, v3
+
+    move v3, v0
+
+    goto :goto_1
+
+    :cond_4
+    const/4 v9, -0x2
+
+    if-ne v8, v9, :cond_6
+
+    iget-object v7, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:Ljava/util/ArrayList;
+
+    invoke-virtual {v7, v3}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    add-int/lit8 v3, v3, -0x1
+
+    if-nez v4, :cond_5
+
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
+
+    invoke-virtual {v4, p0}, Landroid/support/v4/view/ad;->a(Landroid/view/ViewGroup;)V
+
+    move v4, v1
+
+    :cond_5
+    iget-object v7, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
+
+    iget v8, v0, Lcn/com/smartdevices/bracelet/view/R;->b:I
+
+    iget-object v9, v0, Lcn/com/smartdevices/bracelet/view/R;->a:Ljava/lang/Object;
+
+    invoke-virtual {v7, p0, v8, v9}, Landroid/support/v4/view/ad;->a(Landroid/view/ViewGroup;ILjava/lang/Object;)V
+
+    iget v7, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:I
+
+    iget v0, v0, Lcn/com/smartdevices/bracelet/view/R;->b:I
+
+    if-ne v7, v0, :cond_a
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:I
+
+    iget-object v5, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
+
+    invoke-virtual {v5}, Landroid/support/v4/view/ad;->b()I
+
+    move-result v5
+
+    add-int/lit8 v5, v5, -0x1
+
+    invoke-static {v0, v5}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
+
+    invoke-static {v2, v0}, Ljava/lang/Math;->max(II)I
+
+    move-result v5
+
+    move v0, v3
+
+    move v3, v4
+
+    move v4, v5
+
+    move v5, v1
+
+    goto :goto_3
+
+    :cond_6
+    iget v9, v0, Lcn/com/smartdevices/bracelet/view/R;->b:I
+
+    if-eq v9, v8, :cond_9
+
+    iget v7, v0, Lcn/com/smartdevices/bracelet/view/R;->b:I
+
+    iget v9, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:I
+
+    if-ne v7, v9, :cond_7
+
+    move v5, v8
+
+    :cond_7
+    iput v8, v0, Lcn/com/smartdevices/bracelet/view/R;->b:I
+
+    move v0, v3
+
+    move v3, v4
+
+    move v4, v5
+
+    move v5, v1
+
+    goto :goto_3
+
+    :cond_8
+    move v1, v7
+
+    goto :goto_2
+
+    :cond_9
+    move v0, v3
+
+    move v3, v4
+
+    move v4, v5
+
+    move v5, v7
+
+    goto :goto_3
+
+    :cond_a
+    move v0, v3
+
+    move v3, v4
+
+    move v4, v5
+
+    move v5, v1
+
+    goto :goto_3
+.end method
+
+.method g()V
+    .locals 10
+
+    const/4 v6, 0x0
+
+    const/4 v4, -0x1
+
+    const/4 v2, 0x0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
+
+    if-nez v0, :cond_1
+
+    :cond_0
+    return-void
+
+    :cond_1
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->C:Z
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getWindowToken()Landroid/os/IBinder;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
+
+    invoke-virtual {v0, p0}, Landroid/support/v4/view/ad;->a(Landroid/view/ViewGroup;)V
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->E:I
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:I
+
+    sub-int/2addr v1, v0
+
+    invoke-static {v2, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result v5
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
+
+    invoke-virtual {v1}, Landroid/support/v4/view/ad;->b()I
+
+    move-result v1
+
+    add-int/lit8 v1, v1, -0x1
+
+    iget v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:I
+
+    add-int/2addr v0, v3
+
+    invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
+
+    move-result v7
+
+    move v1, v2
+
+    move v3, v4
+
+    :goto_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-lt v1, v0, :cond_6
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-lez v0, :cond_c
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:Ljava/util/ArrayList;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    add-int/lit8 v1, v1, -0x1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/view/R;
+
+    iget v0, v0, Lcn/com/smartdevices/bracelet/view/R;->b:I
+
+    :goto_1
+    if-ge v0, v7, :cond_2
+
+    add-int/lit8 v0, v0, 0x1
+
+    if-le v0, v5, :cond_d
+
+    :goto_2
+    if-le v0, v7, :cond_e
+
+    :cond_2
+    move v1, v2
+
+    :goto_3
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-lt v1, v0, :cond_f
+
+    move-object v0, v6
+
+    :goto_4
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
+
+    iget v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:I
+
+    if-eqz v0, :cond_11
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/view/R;->a:Ljava/lang/Object;
+
+    :goto_5
+    invoke-virtual {v1, p0, v3, v0}, Landroid/support/v4/view/ad;->b(Landroid/view/ViewGroup;ILjava/lang/Object;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
+
+    invoke-virtual {v0, p0}, Landroid/support/v4/view/ad;->b(Landroid/view/ViewGroup;)V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->hasFocus()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->findFocus()Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->b(Landroid/view/View;)Lcn/com/smartdevices/bracelet/view/R;
+
+    move-result-object v6
+
+    :cond_3
+    if-eqz v6, :cond_4
+
+    iget v0, v6, Lcn/com/smartdevices/bracelet/view/R;->b:I
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:I
+
+    if-eq v0, v1, :cond_0
+
+    :cond_4
+    :goto_6
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getChildCount()I
+
+    move-result v0
+
+    if-ge v2, v0, :cond_0
+
+    invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(Landroid/view/View;)Lcn/com/smartdevices/bracelet/view/R;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_5
+
+    iget v1, v1, Lcn/com/smartdevices/bracelet/view/R;->b:I
+
+    iget v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:I
+
+    if-ne v1, v3, :cond_5
+
+    const/4 v1, 0x2
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->requestFocus(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    :cond_5
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_6
+
+    :cond_6
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/view/R;
+
+    iget v8, v0, Lcn/com/smartdevices/bracelet/view/R;->b:I
+
+    if-lt v8, v5, :cond_7
+
+    iget v8, v0, Lcn/com/smartdevices/bracelet/view/R;->b:I
+
+    if-le v8, v7, :cond_8
+
+    :cond_7
+    iget-boolean v8, v0, Lcn/com/smartdevices/bracelet/view/R;->c:Z
+
+    if-nez v8, :cond_8
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:Ljava/util/ArrayList;
+
+    invoke-virtual {v3, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    add-int/lit8 v1, v1, -0x1
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
+
+    iget v8, v0, Lcn/com/smartdevices/bracelet/view/R;->b:I
+
+    iget-object v9, v0, Lcn/com/smartdevices/bracelet/view/R;->a:Ljava/lang/Object;
+
+    invoke-virtual {v3, p0, v8, v9}, Landroid/support/v4/view/ad;->a(Landroid/view/ViewGroup;ILjava/lang/Object;)V
+
+    move v3, v1
+
+    :goto_7
+    iget v1, v0, Lcn/com/smartdevices/bracelet/view/R;->b:I
+
+    add-int/lit8 v0, v3, 0x1
+
+    move v3, v1
+
+    move v1, v0
+
+    goto/16 :goto_0
+
+    :cond_8
+    if-ge v3, v7, :cond_a
+
+    iget v8, v0, Lcn/com/smartdevices/bracelet/view/R;->b:I
+
+    if-le v8, v5, :cond_a
+
+    add-int/lit8 v3, v3, 0x1
+
+    if-ge v3, v5, :cond_9
+
+    move v3, v5
+
+    :cond_9
+    :goto_8
+    if-gt v3, v7, :cond_a
+
+    iget v8, v0, Lcn/com/smartdevices/bracelet/view/R;->b:I
+
+    if-lt v3, v8, :cond_b
+
+    :cond_a
+    move v3, v1
+
+    goto :goto_7
+
+    :cond_b
+    invoke-virtual {p0, v3, v1}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->b(II)V
+
+    add-int/lit8 v3, v3, 0x1
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_8
+
+    :cond_c
+    move v0, v4
+
+    goto/16 :goto_1
+
+    :cond_d
+    move v0, v5
+
+    goto/16 :goto_2
+
+    :cond_e
+    invoke-virtual {p0, v0, v4}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->b(II)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto/16 :goto_2
+
+    :cond_f
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/view/R;
+
+    iget v0, v0, Lcn/com/smartdevices/bracelet/view/R;->b:I
+
+    iget v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:I
+
+    if-ne v0, v3, :cond_10
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/view/R;
+
+    goto/16 :goto_4
+
+    :cond_10
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto/16 :goto_3
+
+    :cond_11
+    move-object v0, v6
+
+    goto/16 :goto_5
 .end method
 
 .method protected generateDefaultLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -3212,44 +3529,225 @@
     return-object v0
 .end method
 
-.method public getAdapter()Landroid/support/v4/view/PagerAdapter;
-    .locals 1
+.method public h()Z
+    .locals 9
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
+    const/4 v8, 0x1
 
-    return-object v0
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->F:Z
+
+    if-eqz v0, :cond_0
+
+    :goto_0
+    return v4
+
+    :cond_0
+    iput-boolean v8, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->R:Z
+
+    invoke-direct {p0, v8}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->f(I)V
+
+    iput v5, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->J:F
+
+    iput v5, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->K:F
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->N:Landroid/view/VelocityTracker;
+
+    if-nez v0, :cond_1
+
+    invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->N:Landroid/view/VelocityTracker;
+
+    :goto_1
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v0
+
+    move-wide v2, v0
+
+    move v6, v5
+
+    move v7, v4
+
+    invoke-static/range {v0 .. v7}, Landroid/view/MotionEvent;->obtain(JJIFFI)Landroid/view/MotionEvent;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->N:Landroid/view/VelocityTracker;
+
+    invoke-virtual {v3, v2}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
+
+    invoke-virtual {v2}, Landroid/view/MotionEvent;->recycle()V
+
+    iput-wide v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->S:J
+
+    move v4, v8
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->N:Landroid/view/VelocityTracker;
+
+    invoke-virtual {v0}, Landroid/view/VelocityTracker;->clear()V
+
+    goto :goto_1
 .end method
 
-.method public getCurrentItem()I
+.method public i()V
+    .locals 6
+
+    const/4 v5, 0x1
+
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->R:Z
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "No fake drag in progress. Call beginFakeDrag first."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->N:Landroid/view/VelocityTracker;
+
+    const/16 v1, 0x3e8
+
+    iget v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->P:I
+
+    int-to-float v2, v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/view/VelocityTracker;->computeCurrentVelocity(IF)V
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->L:I
+
+    invoke-static {v0, v1}, Landroid/support/v4/view/an;->a(Landroid/view/VelocityTracker;I)F
+
+    move-result v0
+
+    float-to-int v0, v0
+
+    iput-boolean v5, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->C:Z
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->J:F
+
+    iget v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->K:F
+
+    sub-float/2addr v1, v2
+
+    float-to-int v1, v1
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getScrollY()I
+
+    move-result v2
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getHeight()I
+
+    move-result v3
+
+    iget v4, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->u:I
+
+    add-int/2addr v3, v4
+
+    div-int v4, v2, v3
+
+    rem-int/2addr v2, v3
+
+    int-to-float v2, v2
+
+    int-to-float v3, v3
+
+    div-float/2addr v2, v3
+
+    invoke-direct {p0, v4, v2, v0, v1}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(IFII)I
+
+    move-result v1
+
+    invoke-virtual {p0, v1, v5, v5, v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(IZZI)V
+
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->p()V
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->R:Z
+
+    return-void
+.end method
+
+.method public j()Z
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:I
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->R:Z
 
     return v0
 .end method
 
-.method public getOffscreenPageLimit()I
-    .locals 1
+.method k()Z
+    .locals 2
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->B:I
+    const/4 v0, 0x1
 
+    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:I
+
+    if-lez v1, :cond_0
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:I
+
+    add-int/lit8 v1, v1, -0x1
+
+    invoke-virtual {p0, v1, v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(IZ)V
+
+    :goto_0
     return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
 
-.method public getPageMargin()I
-    .locals 1
+.method l()Z
+    .locals 3
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->r:I
+    const/4 v0, 0x1
 
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
+
+    if-eqz v1, :cond_0
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:I
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
+
+    invoke-virtual {v2}, Landroid/support/v4/view/ad;->b()I
+
+    move-result v2
+
+    add-int/lit8 v2, v2, -0x1
+
+    if-ge v1, v2, :cond_0
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:I
+
+    add-int/lit8 v1, v1, 0x1
+
+    invoke-virtual {p0, v1, v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(IZ)V
+
+    :goto_0
     return v0
-.end method
 
-.method public isFakeDragging()Z
-    .locals 1
+    :cond_0
+    const/4 v0, 0x0
 
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->O:Z
-
-    return v0
+    goto :goto_0
 .end method
 
 .method protected onAttachedToWindow()V
@@ -3259,7 +3757,7 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->S:Z
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->V:Z
 
     return-void
 .end method
@@ -3269,11 +3767,11 @@
 
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->onDraw(Landroid/graphics/Canvas;)V
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->r:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->u:I
 
     if-lez v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->s:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->v:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
@@ -3285,7 +3783,7 @@
 
     move-result v1
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->r:I
+    iget v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->u:I
 
     add-int/2addr v2, v1
 
@@ -3297,19 +3795,19 @@
 
     add-int/2addr v0, v1
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->s:Landroid/graphics/drawable/Drawable;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->v:Landroid/graphics/drawable/Drawable;
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->t:I
+    iget v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->w:I
 
-    iget v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->u:I
+    iget v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->x:I
 
-    iget v4, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->r:I
+    iget v4, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->u:I
 
     add-int/2addr v4, v0
 
     invoke-virtual {v1, v2, v0, v3, v4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->s:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->v:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
@@ -3339,23 +3837,23 @@
     if-ne v0, v6, :cond_2
 
     :cond_0
-    iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->C:Z
+    iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->F:Z
 
-    iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->D:Z
+    iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->G:Z
 
-    iput v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->I:I
+    iput v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->L:I
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->K:Landroid/view/VelocityTracker;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->N:Landroid/view/VelocityTracker;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->K:Landroid/view/VelocityTracker;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->N:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0}, Landroid/view/VelocityTracker;->recycle()V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->K:Landroid/view/VelocityTracker;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->N:Landroid/view/VelocityTracker;
 
     :cond_1
     :goto_0
@@ -3364,7 +3862,7 @@
     :cond_2
     if-eqz v0, :cond_4
 
-    iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->C:Z
+    iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->F:Z
 
     if-eqz v1, :cond_3
 
@@ -3373,7 +3871,7 @@
     goto :goto_0
 
     :cond_3
-    iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->D:Z
+    iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->G:Z
 
     if-nez v1, :cond_1
 
@@ -3382,11 +3880,11 @@
 
     :cond_5
     :goto_1
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->C:Z
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->F:Z
 
     if-nez v0, :cond_7
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->K:Landroid/view/VelocityTracker;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->N:Landroid/view/VelocityTracker;
 
     if-nez v0, :cond_6
 
@@ -3394,32 +3892,32 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->K:Landroid/view/VelocityTracker;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->N:Landroid/view/VelocityTracker;
 
     :cond_6
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->K:Landroid/view/VelocityTracker;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->N:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
     :cond_7
-    iget-boolean v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->C:Z
+    iget-boolean v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->F:Z
 
     goto :goto_0
 
     :sswitch_0
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->I:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->L:I
 
     if-eq v0, v3, :cond_5
 
-    invoke-static {p1, v0}, Landroid/support/v4/view/MotionEventCompat;->findPointerIndex(Landroid/view/MotionEvent;I)I
+    invoke-static {p1, v0}, Landroid/support/v4/view/Y;->a(Landroid/view/MotionEvent;I)I
 
     move-result v0
 
-    invoke-static {p1, v0}, Landroid/support/v4/view/MotionEventCompat;->getX(Landroid/view/MotionEvent;I)F
+    invoke-static {p1, v0}, Landroid/support/v4/view/Y;->c(Landroid/view/MotionEvent;I)F
 
     move-result v7
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->F:F
+    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->I:F
 
     sub-float v1, v7, v1
 
@@ -3427,11 +3925,11 @@
 
     move-result v8
 
-    invoke-static {p1, v0}, Landroid/support/v4/view/MotionEventCompat;->getY(Landroid/view/MotionEvent;I)F
+    invoke-static {p1, v0}, Landroid/support/v4/view/Y;->d(Landroid/view/MotionEvent;I)F
 
     move-result v9
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->G:F
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->J:F
 
     sub-float v0, v9, v0
 
@@ -3449,22 +3947,22 @@
 
     move-object v1, p0
 
-    invoke-virtual/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->canScroll(Landroid/view/View;ZIII)Z
+    invoke-virtual/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(Landroid/view/View;ZIII)Z
 
     move-result v0
 
     if-eqz v0, :cond_8
 
-    iput v9, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->G:F
+    iput v9, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->J:F
 
-    iput v9, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->H:F
+    iput v9, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->K:F
 
-    iput v7, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->F:F
+    iput v7, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->I:F
 
     goto :goto_0
 
     :cond_8
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->E:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->H:I
 
     int-to-float v0, v0
 
@@ -3476,18 +3974,18 @@
 
     if-lez v0, :cond_9
 
-    iput-boolean v6, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->C:Z
+    iput-boolean v6, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->F:Z
 
-    invoke-direct {p0, v6}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(I)V
+    invoke-direct {p0, v6}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->f(I)V
 
-    iput v9, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->G:F
+    iput v9, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->J:F
 
     invoke-direct {p0, v6}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(Z)V
 
     goto :goto_1
 
     :cond_9
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->E:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->H:I
 
     int-to-float v0, v0
 
@@ -3495,7 +3993,7 @@
 
     if-lez v0, :cond_5
 
-    iput-boolean v6, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->D:Z
+    iput-boolean v6, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->G:Z
 
     goto :goto_1
 
@@ -3504,42 +4002,42 @@
 
     move-result v0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->F:F
+    iput v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->I:F
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->H:F
+    iput v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->K:F
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->G:F
+    iput v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->J:F
 
-    invoke-static {p1, v2}, Landroid/support/v4/view/MotionEventCompat;->getPointerId(Landroid/view/MotionEvent;I)I
+    invoke-static {p1, v2}, Landroid/support/v4/view/Y;->b(Landroid/view/MotionEvent;I)I
 
     move-result v0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->I:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->L:I
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->aa:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->ad:I
 
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_a
 
-    iput-boolean v6, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->C:Z
+    iput-boolean v6, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->F:Z
 
-    iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->D:Z
+    iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->G:Z
 
-    invoke-direct {p0, v6}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(I)V
+    invoke-direct {p0, v6}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->f(I)V
 
     goto/16 :goto_1
 
     :cond_a
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->h()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o()V
 
-    iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->C:Z
+    iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->F:Z
 
-    iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->D:Z
+    iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->G:Z
 
     goto/16 :goto_1
 
@@ -3563,15 +4061,15 @@
 
     move-object/from16 v0, p0
 
-    iput-boolean v1, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->x:Z
+    iput-boolean v1, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->A:Z
 
-    invoke-virtual/range {p0 .. p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->c()V
+    invoke-virtual/range {p0 .. p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->g()V
 
     const/4 v1, 0x0
 
     move-object/from16 v0, p0
 
-    iput-boolean v1, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->x:Z
+    iput-boolean v1, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->A:Z
 
     invoke-virtual/range {p0 .. p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getChildCount()I
 
@@ -3612,23 +4110,23 @@
 
     move-object/from16 v0, p0
 
-    iput v6, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->t:I
+    iput v6, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->w:I
 
     sub-int v1, v10, v5
 
     move-object/from16 v0, p0
 
-    iput v1, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->u:I
+    iput v1, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->x:I
 
     move-object/from16 v0, p0
 
-    iput v4, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->U:I
+    iput v4, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->Z:I
 
     const/4 v1, 0x0
 
     move-object/from16 v0, p0
 
-    iput-boolean v1, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->S:Z
+    iput-boolean v1, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->V:Z
 
     return-void
 
@@ -3653,15 +4151,15 @@
 
     check-cast v1, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;
 
-    iget-boolean v7, v1, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;->isDecor:Z
+    iget-boolean v7, v1, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;->a:Z
 
     if-eqz v7, :cond_1
 
-    iget v7, v1, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;->gravity:I
+    iget v7, v1, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;->b:I
 
     and-int/lit8 v7, v7, 0x7
 
-    iget v1, v1, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;->gravity:I
+    iget v1, v1, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;->b:I
 
     and-int/lit8 v14, v1, 0x70
 
@@ -3836,7 +4334,7 @@
     :cond_1
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v13}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(Landroid/view/View;)Lcn/com/smartdevices/bracelet/view/E;
+    invoke-virtual {v0, v13}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(Landroid/view/View;)Lcn/com/smartdevices/bracelet/view/R;
 
     move-result-object v1
 
@@ -3844,11 +4342,11 @@
 
     move-object/from16 v0, p0
 
-    iget v7, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->r:I
+    iget v7, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->u:I
 
     add-int/2addr v7, v11
 
-    iget v1, v1, Lcn/com/smartdevices/bracelet/view/E;->b:I
+    iget v1, v1, Lcn/com/smartdevices/bracelet/view/R;->b:I
 
     mul-int/2addr v1, v7
 
@@ -3964,7 +4462,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->v:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->y:I
 
     const/high16 v0, 0x40000000
 
@@ -3972,17 +4470,17 @@
 
     move-result v0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->w:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->z:I
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->x:Z
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->A:Z
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->c()V
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->g()V
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->x:Z
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->A:Z
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getChildCount()I
 
@@ -4018,15 +4516,15 @@
 
     if-eqz v0, :cond_9
 
-    iget-boolean v1, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;->isDecor:Z
+    iget-boolean v1, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;->a:Z
 
     if-eqz v1, :cond_9
 
-    iget v1, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;->gravity:I
+    iget v1, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;->b:I
 
     and-int/lit8 v9, v1, 0x7
 
-    iget v1, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;->gravity:I
+    iget v1, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;->b:I
 
     and-int/lit8 v4, v1, 0x70
 
@@ -4038,7 +4536,7 @@
 
     invoke-direct {v5, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v0, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;->gravity:I
+    iget v0, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;->b:I
 
     invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -4068,7 +4566,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/high16 v1, -0x80000000
 
@@ -4190,14 +4688,14 @@
 
     if-eqz v0, :cond_7
 
-    iget-boolean v0, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;->isDecor:Z
+    iget-boolean v0, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;->a:Z
 
     if-nez v0, :cond_8
 
     :cond_7
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->v:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->y:I
 
-    iget v4, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->w:I
+    iget v4, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->z:I
 
     invoke-virtual {v3, v0, v4}, Landroid/view/View;->measure(II)V
 
@@ -4214,201 +4712,6 @@
     move v1, v3
 
     goto :goto_5
-.end method
-
-.method protected onPageScrolled(IFI)V
-    .locals 10
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->U:I
-
-    if-lez v0, :cond_0
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getScrollY()I
-
-    move-result v4
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getPaddingTop()I
-
-    move-result v1
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getPaddingBottom()I
-
-    move-result v2
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getHeight()I
-
-    move-result v5
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getChildCount()I
-
-    move-result v6
-
-    const/4 v0, 0x0
-
-    move v3, v0
-
-    :goto_0
-    if-lt v3, v6, :cond_3
-
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->V:Lcn/com/smartdevices/bracelet/view/VerticalViewPager$OnPageChangeListener;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->V:Lcn/com/smartdevices/bracelet/view/VerticalViewPager$OnPageChangeListener;
-
-    invoke-interface {v0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$OnPageChangeListener;->onPageScrolled(IFI)V
-
-    :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->W:Lcn/com/smartdevices/bracelet/view/VerticalViewPager$OnPageChangeListener;
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->W:Lcn/com/smartdevices/bracelet/view/VerticalViewPager$OnPageChangeListener;
-
-    invoke-interface {v0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$OnPageChangeListener;->onPageScrolled(IFI)V
-
-    :cond_2
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->T:Z
-
-    return-void
-
-    :cond_3
-    invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;
-
-    iget-boolean v8, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;->isDecor:Z
-
-    if-nez v8, :cond_5
-
-    move v9, v2
-
-    move v2, v1
-
-    move v1, v9
-
-    :cond_4
-    :goto_1
-    add-int/lit8 v0, v3, 0x1
-
-    move v3, v0
-
-    move v9, v1
-
-    move v1, v2
-
-    move v2, v9
-
-    goto :goto_0
-
-    :cond_5
-    iget v0, v0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$LayoutParams;->gravity:I
-
-    and-int/lit8 v0, v0, 0x70
-
-    sparse-switch v0, :sswitch_data_0
-
-    move v0, v1
-
-    move v9, v2
-
-    move v2, v1
-
-    move v1, v9
-
-    :goto_2
-    add-int/2addr v0, v4
-
-    invoke-virtual {v7}, Landroid/view/View;->getTop()I
-
-    move-result v8
-
-    sub-int/2addr v0, v8
-
-    if-eqz v0, :cond_4
-
-    invoke-virtual {v7, v0}, Landroid/view/View;->offsetTopAndBottom(I)V
-
-    goto :goto_1
-
-    :sswitch_0
-    invoke-virtual {v7}, Landroid/view/View;->getHeight()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    move v9, v1
-
-    move v1, v2
-
-    move v2, v0
-
-    move v0, v9
-
-    goto :goto_2
-
-    :sswitch_1
-    invoke-virtual {v7}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v0
-
-    sub-int v0, v5, v0
-
-    div-int/lit8 v0, v0, 0x2
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
-
-    move-result v0
-
-    move v9, v2
-
-    move v2, v1
-
-    move v1, v9
-
-    goto :goto_2
-
-    :sswitch_2
-    sub-int v0, v5, v2
-
-    invoke-virtual {v7}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v8
-
-    sub-int/2addr v0, v8
-
-    invoke-virtual {v7}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v8
-
-    add-int/2addr v2, v8
-
-    move v9, v2
-
-    move v2, v1
-
-    move v1, v9
-
-    goto :goto_2
-
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        0x1 -> :sswitch_1
-        0x30 -> :sswitch_0
-        0x50 -> :sswitch_2
-    .end sparse-switch
 .end method
 
 .method protected onRequestFocusInDescendants(ILandroid/graphics/Rect;)Z
@@ -4460,15 +4763,15 @@
 
     if-nez v6, :cond_3
 
-    invoke-virtual {p0, v5}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(Landroid/view/View;)Lcn/com/smartdevices/bracelet/view/E;
+    invoke-virtual {p0, v5}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(Landroid/view/View;)Lcn/com/smartdevices/bracelet/view/R;
 
     move-result-object v6
 
     if-eqz v6, :cond_3
 
-    iget v6, v6, Lcn/com/smartdevices/bracelet/view/E;->b:I
+    iget v6, v6, Lcn/com/smartdevices/bracelet/view/R;->b:I
 
-    iget v7, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:I
+    iget v7, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:I
 
     if-ne v6, v7, :cond_3
 
@@ -4505,17 +4808,17 @@
 
     invoke-super {p0, v0}, Landroid/view/ViewGroup;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
 
     iget-object v1, p1, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;->b:Landroid/os/Parcelable;
 
     iget-object v2, p1, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;->c:Ljava/lang/ClassLoader;
 
-    invoke-virtual {v0, v1, v2}, Landroid/support/v4/view/PagerAdapter;->restoreState(Landroid/os/Parcelable;Ljava/lang/ClassLoader;)V
+    invoke-virtual {v0, v1, v2}, Landroid/support/v4/view/ad;->a(Landroid/os/Parcelable;Ljava/lang/ClassLoader;)V
 
     iget v0, p1, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;->a:I
 
@@ -4530,15 +4833,15 @@
     :cond_1
     iget v0, p1, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;->a:I
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->p:I
 
     iget-object v0, p1, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;->b:Landroid/os/Parcelable;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/os/Parcelable;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->q:Landroid/os/Parcelable;
 
     iget-object v0, p1, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;->c:Ljava/lang/ClassLoader;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:Ljava/lang/ClassLoader;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->r:Ljava/lang/ClassLoader;
 
     goto :goto_0
 .end method
@@ -4554,17 +4857,17 @@
 
     invoke-direct {v1, v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;-><init>(Landroid/os/Parcelable;)V
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:I
 
     iput v0, v1, Lcn/com/smartdevices/bracelet/view/VerticalViewPager$SavedState;->a:I
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
 
-    invoke-virtual {v0}, Landroid/support/v4/view/PagerAdapter;->saveState()Landroid/os/Parcelable;
+    invoke-virtual {v0}, Landroid/support/v4/view/ad;->a()Landroid/os/Parcelable;
 
     move-result-object v0
 
@@ -4581,9 +4884,9 @@
 
     if-eq p2, p4, :cond_0
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->r:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->u:I
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->r:I
+    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->u:I
 
     invoke-direct {p0, p2, p4, v0, v1}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(IIII)V
 
@@ -4600,7 +4903,7 @@
 
     const/4 v4, 0x1
 
-    iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->O:Z
+    iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->R:Z
 
     if-eqz v1, :cond_1
 
@@ -4624,19 +4927,19 @@
     if-nez v1, :cond_0
 
     :cond_2
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
 
-    invoke-virtual {v1}, Landroid/support/v4/view/PagerAdapter;->getCount()I
+    invoke-virtual {v1}, Landroid/support/v4/view/ad;->b()I
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->K:Landroid/view/VelocityTracker;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->N:Landroid/view/VelocityTracker;
 
     if-nez v1, :cond_3
 
@@ -4644,10 +4947,10 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->K:Landroid/view/VelocityTracker;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->N:Landroid/view/VelocityTracker;
 
     :cond_3
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->K:Landroid/view/VelocityTracker;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->N:Landroid/view/VelocityTracker;
 
     invoke-virtual {v1, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
@@ -4672,40 +4975,40 @@
     goto :goto_0
 
     :pswitch_1
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->h()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o()V
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v1
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->H:F
+    iput v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->K:F
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->G:F
+    iput v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->J:F
 
-    invoke-static {p1, v0}, Landroid/support/v4/view/MotionEventCompat;->getPointerId(Landroid/view/MotionEvent;I)I
+    invoke-static {p1, v0}, Landroid/support/v4/view/Y;->b(Landroid/view/MotionEvent;I)I
 
     move-result v1
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->I:I
+    iput v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->L:I
 
     goto :goto_1
 
     :pswitch_2
-    iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->C:Z
+    iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->F:Z
 
     if-nez v1, :cond_6
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->I:I
+    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->L:I
 
-    invoke-static {p1, v1}, Landroid/support/v4/view/MotionEventCompat;->findPointerIndex(Landroid/view/MotionEvent;I)I
+    invoke-static {p1, v1}, Landroid/support/v4/view/Y;->a(Landroid/view/MotionEvent;I)I
 
     move-result v1
 
-    invoke-static {p1, v1}, Landroid/support/v4/view/MotionEventCompat;->getX(Landroid/view/MotionEvent;I)F
+    invoke-static {p1, v1}, Landroid/support/v4/view/Y;->c(Landroid/view/MotionEvent;I)F
 
     move-result v2
 
-    iget v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->F:F
+    iget v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->I:F
 
     sub-float/2addr v2, v3
 
@@ -4713,11 +5016,11 @@
 
     move-result v2
 
-    invoke-static {p1, v1}, Landroid/support/v4/view/MotionEventCompat;->getY(Landroid/view/MotionEvent;I)F
+    invoke-static {p1, v1}, Landroid/support/v4/view/Y;->d(Landroid/view/MotionEvent;I)F
 
     move-result v1
 
-    iget v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->G:F
+    iget v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->J:F
 
     sub-float v3, v1, v3
 
@@ -4725,7 +5028,7 @@
 
     move-result v3
 
-    iget v5, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->E:I
+    iget v5, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->H:I
 
     int-to-float v5, v5
 
@@ -4737,34 +5040,34 @@
 
     if-lez v2, :cond_6
 
-    iput-boolean v4, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->C:Z
+    iput-boolean v4, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->F:Z
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->G:F
+    iput v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->J:F
 
-    invoke-direct {p0, v4}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(I)V
+    invoke-direct {p0, v4}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->f(I)V
 
     invoke-direct {p0, v4}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(Z)V
 
     :cond_6
-    iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->C:Z
+    iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->F:Z
 
     if-eqz v1, :cond_4
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->I:I
+    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->L:I
 
-    invoke-static {p1, v1}, Landroid/support/v4/view/MotionEventCompat;->findPointerIndex(Landroid/view/MotionEvent;I)I
-
-    move-result v1
-
-    invoke-static {p1, v1}, Landroid/support/v4/view/MotionEventCompat;->getY(Landroid/view/MotionEvent;I)F
+    invoke-static {p1, v1}, Landroid/support/v4/view/Y;->a(Landroid/view/MotionEvent;I)I
 
     move-result v1
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->G:F
+    invoke-static {p1, v1}, Landroid/support/v4/view/Y;->d(Landroid/view/MotionEvent;I)F
+
+    move-result v1
+
+    iget v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->J:F
 
     sub-float/2addr v2, v1
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->G:F
+    iput v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->J:F
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getScrollY()I
 
@@ -4778,19 +5081,19 @@
 
     move-result v5
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->r:I
+    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->u:I
 
     add-int v6, v5, v1
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/support/v4/view/ad;
 
-    invoke-virtual {v1}, Landroid/support/v4/view/PagerAdapter;->getCount()I
+    invoke-virtual {v1}, Landroid/support/v4/view/ad;->b()I
 
     move-result v1
 
     add-int/lit8 v7, v1, -0x1
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:I
+    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:I
 
     add-int/lit8 v1, v1, -0x1
 
@@ -4802,7 +5105,7 @@
 
     int-to-float v1, v1
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:I
+    iget v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:I
 
     add-int/lit8 v2, v2, 0x1
 
@@ -4826,13 +5129,13 @@
 
     neg-float v0, v3
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->Q:Landroid/support/v4/widget/EdgeEffectCompat;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->T:Landroid/support/v4/widget/m;
 
     int-to-float v3, v5
 
     div-float/2addr v0, v3
 
-    invoke-virtual {v2, v0}, Landroid/support/v4/widget/EdgeEffectCompat;->onPull(F)Z
+    invoke-virtual {v2, v0}, Landroid/support/v4/widget/m;->a(F)Z
 
     move-result v0
 
@@ -4844,7 +5147,7 @@
     move v0, v9
 
     :goto_2
-    iget v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->G:F
+    iget v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->J:F
 
     float-to-int v3, v0
 
@@ -4854,7 +5157,7 @@
 
     add-float/2addr v2, v3
 
-    iput v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->G:F
+    iput v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->J:F
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getScrollX()I
 
@@ -4866,7 +5169,7 @@
 
     float-to-int v0, v0
 
-    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->b(I)V
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->g(I)V
 
     move v0, v1
 
@@ -4887,13 +5190,13 @@
 
     sub-float v0, v3, v2
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->R:Landroid/support/v4/widget/EdgeEffectCompat;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->U:Landroid/support/v4/widget/m;
 
     int-to-float v3, v5
 
     div-float/2addr v0, v3
 
-    invoke-virtual {v1, v0}, Landroid/support/v4/widget/EdgeEffectCompat;->onPull(F)Z
+    invoke-virtual {v1, v0}, Landroid/support/v4/widget/m;->a(F)Z
 
     move-result v0
 
@@ -4905,35 +5208,35 @@
     goto :goto_2
 
     :pswitch_3
-    iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->C:Z
+    iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->F:Z
 
     if-eqz v1, :cond_4
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->K:Landroid/view/VelocityTracker;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->N:Landroid/view/VelocityTracker;
 
     const/16 v1, 0x3e8
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->M:I
+    iget v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->P:I
 
     int-to-float v2, v2
 
     invoke-virtual {v0, v1, v2}, Landroid/view/VelocityTracker;->computeCurrentVelocity(IF)V
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->I:I
+    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->L:I
 
-    invoke-static {v0, v1}, Landroid/support/v4/view/VelocityTrackerCompat;->getYVelocity(Landroid/view/VelocityTracker;I)F
+    invoke-static {v0, v1}, Landroid/support/v4/view/an;->b(Landroid/view/VelocityTracker;I)F
 
     move-result v0
 
     float-to-int v0, v0
 
-    iput-boolean v4, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->z:Z
+    iput-boolean v4, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->C:Z
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getHeight()I
 
     move-result v1
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->r:I
+    iget v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->u:I
 
     add-int/2addr v1, v2
 
@@ -4951,17 +5254,17 @@
 
     div-float v1, v2, v1
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->I:I
+    iget v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->L:I
 
-    invoke-static {p1, v2}, Landroid/support/v4/view/MotionEventCompat;->findPointerIndex(Landroid/view/MotionEvent;I)I
-
-    move-result v2
-
-    invoke-static {p1, v2}, Landroid/support/v4/view/MotionEventCompat;->getY(Landroid/view/MotionEvent;I)F
+    invoke-static {p1, v2}, Landroid/support/v4/view/Y;->a(Landroid/view/MotionEvent;I)I
 
     move-result v2
 
-    iget v5, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->H:F
+    invoke-static {p1, v2}, Landroid/support/v4/view/Y;->d(Landroid/view/MotionEvent;I)F
+
+    move-result v2
+
+    iget v5, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->K:F
 
     sub-float/2addr v2, v5
 
@@ -4973,19 +5276,19 @@
 
     invoke-virtual {p0, v1, v4, v4, v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(IZZI)V
 
-    iput v6, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->I:I
+    iput v6, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->L:I
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->i()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->p()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->Q:Landroid/support/v4/widget/EdgeEffectCompat;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->T:Landroid/support/v4/widget/m;
 
-    invoke-virtual {v0}, Landroid/support/v4/widget/EdgeEffectCompat;->onRelease()Z
+    invoke-virtual {v0}, Landroid/support/v4/widget/m;->c()Z
 
     move-result v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->R:Landroid/support/v4/widget/EdgeEffectCompat;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->U:Landroid/support/v4/widget/m;
 
-    invoke-virtual {v1}, Landroid/support/v4/widget/EdgeEffectCompat;->onRelease()Z
+    invoke-virtual {v1}, Landroid/support/v4/widget/m;->c()Z
 
     move-result v1
 
@@ -4994,27 +5297,27 @@
     goto/16 :goto_1
 
     :pswitch_4
-    iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->C:Z
+    iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->F:Z
 
     if-eqz v1, :cond_4
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:I
 
     invoke-virtual {p0, v0, v4, v4}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(IZZ)V
 
-    iput v6, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->I:I
+    iput v6, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->L:I
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->i()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->p()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->Q:Landroid/support/v4/widget/EdgeEffectCompat;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->T:Landroid/support/v4/widget/m;
 
-    invoke-virtual {v0}, Landroid/support/v4/widget/EdgeEffectCompat;->onRelease()Z
+    invoke-virtual {v0}, Landroid/support/v4/widget/m;->c()Z
 
     move-result v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->R:Landroid/support/v4/widget/EdgeEffectCompat;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->U:Landroid/support/v4/widget/m;
 
-    invoke-virtual {v1}, Landroid/support/v4/widget/EdgeEffectCompat;->onRelease()Z
+    invoke-virtual {v1}, Landroid/support/v4/widget/m;->c()Z
 
     move-result v1
 
@@ -5023,38 +5326,38 @@
     goto/16 :goto_1
 
     :pswitch_5
-    invoke-static {p1}, Landroid/support/v4/view/MotionEventCompat;->getActionIndex(Landroid/view/MotionEvent;)I
+    invoke-static {p1}, Landroid/support/v4/view/Y;->b(Landroid/view/MotionEvent;)I
 
     move-result v1
 
-    invoke-static {p1, v1}, Landroid/support/v4/view/MotionEventCompat;->getY(Landroid/view/MotionEvent;I)F
+    invoke-static {p1, v1}, Landroid/support/v4/view/Y;->d(Landroid/view/MotionEvent;I)F
 
     move-result v2
 
-    iput v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->G:F
+    iput v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->J:F
 
-    invoke-static {p1, v1}, Landroid/support/v4/view/MotionEventCompat;->getPointerId(Landroid/view/MotionEvent;I)I
+    invoke-static {p1, v1}, Landroid/support/v4/view/Y;->b(Landroid/view/MotionEvent;I)I
 
     move-result v1
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->I:I
+    iput v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->L:I
 
     goto/16 :goto_1
 
     :pswitch_6
     invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(Landroid/view/MotionEvent;)V
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->I:I
+    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->L:I
 
-    invoke-static {p1, v1}, Landroid/support/v4/view/MotionEventCompat;->findPointerIndex(Landroid/view/MotionEvent;I)I
-
-    move-result v1
-
-    invoke-static {p1, v1}, Landroid/support/v4/view/MotionEventCompat;->getY(Landroid/view/MotionEvent;I)F
+    invoke-static {p1, v1}, Landroid/support/v4/view/Y;->a(Landroid/view/MotionEvent;I)I
 
     move-result v1
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->G:F
+    invoke-static {p1, v1}, Landroid/support/v4/view/Y;->d(Landroid/view/MotionEvent;I)F
+
+    move-result v1
+
+    iput v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->J:F
 
     goto/16 :goto_1
 
@@ -5079,309 +5382,6 @@
     .end packed-switch
 .end method
 
-.method public setAdapter(Landroid/support/v4/view/PagerAdapter;)V
-    .locals 6
-
-    const/4 v5, 0x0
-
-    const/4 v2, 0x0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->q:Lcn/com/smartdevices/bracelet/view/G;
-
-    invoke-virtual {v0, v1}, Landroid/support/v4/view/PagerAdapter;->unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
-
-    invoke-virtual {v0, p0}, Landroid/support/v4/view/PagerAdapter;->startUpdate(Landroid/view/ViewGroup;)V
-
-    move v1, v2
-
-    :goto_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->j:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    if-lt v1, v0, :cond_4
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
-
-    invoke-virtual {v0, p0}, Landroid/support/v4/view/PagerAdapter;->finishUpdate(Landroid/view/ViewGroup;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->j:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->g()V
-
-    iput v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->l:I
-
-    invoke-virtual {p0, v2, v2}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->scrollTo(II)V
-
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->q:Lcn/com/smartdevices/bracelet/view/G;
-
-    if-nez v1, :cond_1
-
-    new-instance v1, Lcn/com/smartdevices/bracelet/view/G;
-
-    invoke-direct {v1, p0, v5}, Lcn/com/smartdevices/bracelet/view/G;-><init>(Lcn/com/smartdevices/bracelet/view/VerticalViewPager;Lcn/com/smartdevices/bracelet/view/G;)V
-
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->q:Lcn/com/smartdevices/bracelet/view/G;
-
-    :cond_1
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->q:Lcn/com/smartdevices/bracelet/view/G;
-
-    invoke-virtual {v1, v3}, Landroid/support/v4/view/PagerAdapter;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
-
-    iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->z:Z
-
-    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:I
-
-    if-ltz v1, :cond_5
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/os/Parcelable;
-
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:Ljava/lang/ClassLoader;
-
-    invoke-virtual {v1, v3, v4}, Landroid/support/v4/view/PagerAdapter;->restoreState(Landroid/os/Parcelable;Ljava/lang/ClassLoader;)V
-
-    iget v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:I
-
-    const/4 v3, 0x1
-
-    invoke-virtual {p0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(IZZ)V
-
-    const/4 v1, -0x1
-
-    iput v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->m:I
-
-    iput-object v5, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->n:Landroid/os/Parcelable;
-
-    iput-object v5, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->o:Ljava/lang/ClassLoader;
-
-    :cond_2
-    :goto_1
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->Z:Lcn/com/smartdevices/bracelet/view/F;
-
-    if-eqz v1, :cond_3
-
-    if-eq v0, p1, :cond_3
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->Z:Lcn/com/smartdevices/bracelet/view/F;
-
-    invoke-interface {v1, v0, p1}, Lcn/com/smartdevices/bracelet/view/F;->a(Landroid/support/v4/view/PagerAdapter;Landroid/support/v4/view/PagerAdapter;)V
-
-    :cond_3
-    return-void
-
-    :cond_4
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->j:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/view/E;
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->k:Landroid/support/v4/view/PagerAdapter;
-
-    iget v4, v0, Lcn/com/smartdevices/bracelet/view/E;->b:I
-
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/view/E;->a:Ljava/lang/Object;
-
-    invoke-virtual {v3, p0, v4, v0}, Landroid/support/v4/view/PagerAdapter;->destroyItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
-
-    add-int/lit8 v0, v1, 0x1
-
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_5
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->c()V
-
-    goto :goto_1
-.end method
-
-.method public setCurrentItem(I)V
-    .locals 2
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->z:Z
-
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->S:Z
-
-    if-eqz v0, :cond_0
-
-    move v0, v1
-
-    :goto_0
-    invoke-virtual {p0, p1, v0, v1}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(IZZ)V
-
-    return-void
-
-    :cond_0
-    const/4 v0, 0x1
-
-    goto :goto_0
-.end method
-
-.method public setCurrentItem(IZ)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->z:Z
-
-    invoke-virtual {p0, p1, p2, v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(IZZ)V
-
-    return-void
-.end method
-
-.method public setOffscreenPageLimit(I)V
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ge p1, v0, :cond_0
-
-    const-string v1, "VerticalViewPager"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "Requested offscreen page limit "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, " too small; defaulting to "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/Debug;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    move p1, v0
-
-    :cond_0
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->B:I
-
-    if-eq p1, v0, :cond_1
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->B:I
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->c()V
-
-    :cond_1
-    return-void
-.end method
-
-.method public setOnPageChangeListener(Lcn/com/smartdevices/bracelet/view/VerticalViewPager$OnPageChangeListener;)V
-    .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->V:Lcn/com/smartdevices/bracelet/view/VerticalViewPager$OnPageChangeListener;
-
-    return-void
-.end method
-
-.method public setPageMargin(I)V
-    .locals 2
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->r:I
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->r:I
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getHeight()I
-
-    move-result v1
-
-    invoke-direct {p0, v1, v1, p1, v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->a(IIII)V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->requestLayout()V
-
-    return-void
-.end method
-
-.method public setPageMarginDrawable(I)V
-    .locals 1
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->setPageMarginDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    return-void
-.end method
-
-.method public setPageMarginDrawable(Landroid/graphics/drawable/Drawable;)V
-    .locals 1
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->s:Landroid/graphics/drawable/Drawable;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->refreshDrawableState()V
-
-    :cond_0
-    if-nez p1, :cond_1
-
-    const/4 v0, 0x1
-
-    :goto_0
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->setWillNotDraw(Z)V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->invalidate()V
-
-    return-void
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
 .method protected verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
     .locals 1
 
@@ -5391,7 +5391,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->s:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->v:Landroid/graphics/drawable/Drawable;
 
     if-eq p1, v0, :cond_0
 

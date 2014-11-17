@@ -3,7 +3,7 @@
 
 
 # static fields
-.field static final a:[B
+.field static final key:[B
 
 
 # direct methods
@@ -16,12 +16,46 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/stat/common/RC4;->a:[B
+    sput-object v0, Lcom/tencent/stat/common/RC4;->key:[B
 
     return-void
 .end method
 
-.method static a([B[B)[B
+.method public static decrypt([B)[B
+    .locals 1
+
+    sget-object v0, Lcom/tencent/stat/common/RC4;->key:[B
+
+    invoke-static {p0, v0}, Lcom/tencent/stat/common/RC4;->decrypt([B[B)[B
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static decrypt([B[B)[B
+    .locals 1
+
+    invoke-static {p0, p1}, Lcom/tencent/stat/common/RC4;->encrypt([B[B)[B
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static encrypt([B)[B
+    .locals 1
+
+    sget-object v0, Lcom/tencent/stat/common/RC4;->key:[B
+
+    invoke-static {p0, v0}, Lcom/tencent/stat/common/RC4;->encrypt([B[B)[B
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static encrypt([B[B)[B
     .locals 8
 
     const/16 v7, 0x100
@@ -153,38 +187,4 @@
 
     :cond_4
     return-object v4
-.end method
-
-.method static b([B[B)[B
-    .locals 1
-
-    invoke-static {p0, p1}, Lcom/tencent/stat/common/RC4;->a([B[B)[B
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static decrypt([B)[B
-    .locals 1
-
-    sget-object v0, Lcom/tencent/stat/common/RC4;->a:[B
-
-    invoke-static {p0, v0}, Lcom/tencent/stat/common/RC4;->b([B[B)[B
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static encrypt([B)[B
-    .locals 1
-
-    sget-object v0, Lcom/tencent/stat/common/RC4;->a:[B
-
-    invoke-static {p0, v0}, Lcom/tencent/stat/common/RC4;->a([B[B)[B
-
-    move-result-object v0
-
-    return-object v0
 .end method

@@ -3,7 +3,7 @@
 
 
 # instance fields
-.field private a:Z
+.field private d:Z
 
 
 # direct methods
@@ -20,7 +20,7 @@
 
     invoke-direct {p0, p1, p2}, Landroid/support/v4/view/ViewPager;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget-object v0, Lcom/xiaomi/hm/health/R$styleable;->CustomViewPager:[I
+    sget-object v0, Lcom/xiaomi/hm/a/s;->CustomViewPager:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -35,7 +35,7 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/CustomViewPager;->a:Z
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/CustomViewPager;->d:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -53,10 +53,18 @@
 
 
 # virtual methods
-.method public isSwipeable()Z
+.method public b(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/view/CustomViewPager;->d:Z
+
+    return-void
+.end method
+
+.method public n()Z
     .locals 1
 
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/CustomViewPager;->a:Z
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/CustomViewPager;->d:Z
 
     return v0
 .end method
@@ -64,7 +72,7 @@
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 1
 
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/CustomViewPager;->a:Z
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/CustomViewPager;->d:Z
 
     if-eqz v0, :cond_0
 
@@ -84,7 +92,7 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 1
 
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/CustomViewPager;->a:Z
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/view/CustomViewPager;->d:Z
 
     if-eqz v0, :cond_0
 
@@ -99,12 +107,4 @@
     const/4 v0, 0x0
 
     goto :goto_0
-.end method
-
-.method public setSwipeable(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/view/CustomViewPager;->a:Z
-
-    return-void
 .end method

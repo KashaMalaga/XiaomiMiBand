@@ -54,22 +54,22 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readBraceletBtInfo()Lcn/com/smartdevices/bracelet/model/BraceletBtInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->g()Lcn/com/smartdevices/bracelet/model/BraceletBtInfo;
 
     move-result-object v1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readLoginData()Lcn/com/smartdevices/bracelet/model/LoginData;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->b()Lcn/com/smartdevices/bracelet/model/LoginData;
 
     move-result-object v2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readPersonInfoBase()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->j()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v3
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/Debug;->isEnabled()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/r;->a()Z
 
     move-result v4
 
@@ -101,7 +101,7 @@
 
     move-result-object v5
 
-    invoke-static {v4, v5}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     if-eqz v2, :cond_1
@@ -131,7 +131,7 @@
 
     const-string v2, "extras is null!"
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -163,7 +163,7 @@
     if-nez v1, :cond_7
 
     :cond_6
-    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readNeedBind()I
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->A()I
 
     move-result v1
 
@@ -239,7 +239,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Landroid/content/Intent;
 
@@ -249,7 +249,7 @@
 
     if-ne v0, v4, :cond_1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readLoginData()Lcn/com/smartdevices/bracelet/model/LoginData;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->b()Lcn/com/smartdevices/bracelet/model/LoginData;
 
     move-result-object v0
 
@@ -282,13 +282,13 @@
 
     if-ge v0, v4, :cond_3
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/BLEManager;->isSupportBle(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/b;->c(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/Utils;->checkDeviceCompatible()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->b()Z
 
     move-result v0
 

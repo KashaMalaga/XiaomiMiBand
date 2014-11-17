@@ -1,20 +1,46 @@
-.class Landroid/support/v4/content/b;
+.class Landroid/support/v4/content/B;
 .super Ljava/lang/Object;
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<Data:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
+
+
+# instance fields
+.field final a:Landroid/support/v4/content/w;
+
+.field final b:[Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "[TData;"
+        }
+    .end annotation
+.end field
+
+
 # direct methods
-.method constructor <init>()V
+.method varargs constructor <init>(Landroid/support/v4/content/w;[Ljava/lang/Object;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/support/v4/content/w;",
+            "[TData;)V"
+        }
+    .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-object p1, p0, Landroid/support/v4/content/B;->a:Landroid/support/v4/content/w;
 
-.method static a(Landroid/content/Context;[Landroid/content/Intent;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/content/Context;->startActivities([Landroid/content/Intent;)V
+    iput-object p2, p0, Landroid/support/v4/content/B;->b:[Ljava/lang/Object;
 
     return-void
 .end method

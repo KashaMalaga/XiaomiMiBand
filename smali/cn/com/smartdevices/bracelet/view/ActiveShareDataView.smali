@@ -42,11 +42,11 @@
 
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    const v0, 0x7f030074
+    const v0, 0x7f030078
 
     invoke-static {p1, v0, p0}, Lcn/com/smartdevices/bracelet/view/ActiveShareDataView;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const v0, 0x7f070201
+    const v0, 0x7f070211
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/ActiveShareDataView;->findViewById(I)Landroid/view/View;
 
@@ -56,7 +56,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/ActiveShareDataView;->a:Lcn/com/smartdevices/bracelet/chart/DynamicShareChartView;
 
-    const v0, 0x7f0701fa
+    const v0, 0x7f07020a
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/ActiveShareDataView;->findViewById(I)Landroid/view/View;
 
@@ -66,7 +66,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/ActiveShareDataView;->b:Landroid/widget/TextView;
 
-    const v0, 0x7f0701fc
+    const v0, 0x7f07020c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/ActiveShareDataView;->findViewById(I)Landroid/view/View;
 
@@ -76,7 +76,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/ActiveShareDataView;->c:Landroid/widget/TextView;
 
-    const v0, 0x7f070200
+    const v0, 0x7f070210
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/ActiveShareDataView;->findViewById(I)Landroid/view/View;
 
@@ -86,7 +86,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/ActiveShareDataView;->d:Landroid/widget/TextView;
 
-    const v0, 0x7f0701ff
+    const v0, 0x7f07020f
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/ActiveShareDataView;->findViewById(I)Landroid/view/View;
 
@@ -217,7 +217,7 @@
     return-object v0
 .end method
 
-.method public static formatDistance(Landroid/content/Context;I)[Ljava/lang/String;
+.method public static a(Landroid/content/Context;I)[Ljava/lang/String;
     .locals 6
 
     const/4 v5, 0x1
@@ -287,7 +287,21 @@
 
 
 # virtual methods
-.method public bindStepData(Ljava/util/HashMap;)V
+.method public a(I)V
+    .locals 2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/ActiveShareDataView;->b:Landroid/widget/TextView;
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public a(Ljava/util/HashMap;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -302,47 +316,19 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/ActiveShareDataView;->a:Lcn/com/smartdevices/bracelet/chart/DynamicShareChartView;
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/chart/DynamicShareChartView;->bindStepData(Ljava/util/HashMap;)V
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/chart/DynamicShareChartView;->a(Ljava/util/HashMap;)V
 
     return-void
 .end method
 
-.method public setStepCalorie(I)V
-    .locals 2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/ActiveShareDataView;->e:Landroid/widget/TextView;
-
-    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    return-void
-.end method
-
-.method public setStepCount(I)V
-    .locals 2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/ActiveShareDataView;->b:Landroid/widget/TextView;
-
-    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    return-void
-.end method
-
-.method public setStepDistance(I)V
+.method public b(I)V
     .locals 3
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/ActiveShareDataView;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/view/ActiveShareDataView;->formatDistance(Landroid/content/Context;I)[Ljava/lang/String;
+    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/view/ActiveShareDataView;->a(Landroid/content/Context;I)[Ljava/lang/String;
 
     move-result-object v0
 
@@ -361,6 +347,20 @@
     aget-object v0, v0, v2
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public c(I)V
+    .locals 2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/ActiveShareDataView;->e:Landroid/widget/TextView;
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     return-void
 .end method

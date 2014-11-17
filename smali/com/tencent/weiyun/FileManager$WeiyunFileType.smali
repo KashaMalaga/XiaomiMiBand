@@ -14,17 +14,17 @@
 
 
 # static fields
+.field private static final synthetic $VALUES:[Lcom/tencent/weiyun/FileManager$WeiyunFileType;
+
 .field public static final enum ImageFile:Lcom/tencent/weiyun/FileManager$WeiyunFileType;
 
 .field public static final enum MusicFile:Lcom/tencent/weiyun/FileManager$WeiyunFileType;
 
 .field public static final enum VideoFile:Lcom/tencent/weiyun/FileManager$WeiyunFileType;
 
-.field private static final synthetic b:[Lcom/tencent/weiyun/FileManager$WeiyunFileType;
-
 
 # instance fields
-.field private final a:I
+.field private final mType:I
 
 
 # direct methods
@@ -77,7 +77,7 @@
 
     aput-object v1, v0, v4
 
-    sput-object v0, Lcom/tencent/weiyun/FileManager$WeiyunFileType;->b:[Lcom/tencent/weiyun/FileManager$WeiyunFileType;
+    sput-object v0, Lcom/tencent/weiyun/FileManager$WeiyunFileType;->$VALUES:[Lcom/tencent/weiyun/FileManager$WeiyunFileType;
 
     return-void
 .end method
@@ -92,7 +92,7 @@
 
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput p3, p0, Lcom/tencent/weiyun/FileManager$WeiyunFileType;->a:I
+    iput p3, p0, Lcom/tencent/weiyun/FileManager$WeiyunFileType;->mType:I
 
     return-void
 .end method
@@ -114,7 +114,7 @@
 .method public static values()[Lcom/tencent/weiyun/FileManager$WeiyunFileType;
     .locals 1
 
-    sget-object v0, Lcom/tencent/weiyun/FileManager$WeiyunFileType;->b:[Lcom/tencent/weiyun/FileManager$WeiyunFileType;
+    sget-object v0, Lcom/tencent/weiyun/FileManager$WeiyunFileType;->$VALUES:[Lcom/tencent/weiyun/FileManager$WeiyunFileType;
 
     invoke-virtual {v0}, [Lcom/tencent/weiyun/FileManager$WeiyunFileType;->clone()Ljava/lang/Object;
 
@@ -130,7 +130,7 @@
 .method public value()I
     .locals 1
 
-    iget v0, p0, Lcom/tencent/weiyun/FileManager$WeiyunFileType;->a:I
+    iget v0, p0, Lcom/tencent/weiyun/FileManager$WeiyunFileType;->mType:I
 
     return v0
 .end method

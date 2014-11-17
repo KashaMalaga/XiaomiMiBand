@@ -28,9 +28,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/services/route/n;
+    new-instance v0, Lcom/amap/api/services/route/o;
 
-    invoke-direct {v0}, Lcom/amap/api/services/route/n;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/services/route/o;-><init>()V
 
     sput-object v0, Lcom/amap/api/services/route/RouteBusWalkItem;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -83,23 +83,7 @@
 
 
 # virtual methods
-.method public describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public getDestination()Lcom/amap/api/services/core/LatLonPoint;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/route/RouteBusWalkItem;->b:Lcom/amap/api/services/core/LatLonPoint;
-
-    return-object v0
-.end method
-
-.method public getOrigin()Lcom/amap/api/services/core/LatLonPoint;
+.method public a()Lcom/amap/api/services/core/LatLonPoint;
     .locals 1
 
     iget-object v0, p0, Lcom/amap/api/services/route/RouteBusWalkItem;->a:Lcom/amap/api/services/core/LatLonPoint;
@@ -107,7 +91,23 @@
     return-object v0
 .end method
 
-.method public setDestination(Lcom/amap/api/services/core/LatLonPoint;)V
+.method public a(Lcom/amap/api/services/core/LatLonPoint;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/route/RouteBusWalkItem;->a:Lcom/amap/api/services/core/LatLonPoint;
+
+    return-void
+.end method
+
+.method public b()Lcom/amap/api/services/core/LatLonPoint;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/route/RouteBusWalkItem;->b:Lcom/amap/api/services/core/LatLonPoint;
+
+    return-object v0
+.end method
+
+.method public b(Lcom/amap/api/services/core/LatLonPoint;)V
     .locals 0
 
     iput-object p1, p0, Lcom/amap/api/services/route/RouteBusWalkItem;->b:Lcom/amap/api/services/core/LatLonPoint;
@@ -115,12 +115,12 @@
     return-void
 .end method
 
-.method public setOrigin(Lcom/amap/api/services/core/LatLonPoint;)V
-    .locals 0
+.method public describeContents()I
+    .locals 1
 
-    iput-object p1, p0, Lcom/amap/api/services/route/RouteBusWalkItem;->a:Lcom/amap/api/services/core/LatLonPoint;
+    const/4 v0, 0x0
 
-    return-void
+    return v0
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V

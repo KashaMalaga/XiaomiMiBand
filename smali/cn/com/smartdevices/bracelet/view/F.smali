@@ -1,7 +1,10 @@
-.class interface abstract Lcn/com/smartdevices/bracelet/view/F;
+.class public interface abstract Lcn/com/smartdevices/bracelet/view/F;
 .super Ljava/lang/Object;
 
 
 # virtual methods
-.method public abstract a(Landroid/support/v4/view/PagerAdapter;Landroid/support/v4/view/PagerAdapter;)V
+.method public abstract a(Landroid/view/View;I)Z
+.end method
+
+.method public abstract b(Landroid/view/View;I)Z
 .end method

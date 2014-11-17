@@ -63,42 +63,14 @@
     return-void
 .end method
 
-.method private a()V
-    .locals 2
-
-    const-string v0, "BaseSCActivity"
-
-    const-string v1, "==============================enterInForeground=========================="
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v0, "BaseSCActivity"
-
-    const-string v1, "==============================enterInForeground=========================="
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->c()V
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/BLEManager;->checkMiliSyncData()V
-
-    const/16 v0, 0x27
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/BLEManager;->setMiliLatency(I)V
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->j()V
-
-    return-void
-.end method
-
 .method private a(II)V
     .locals 2
 
     new-instance v0, Ljava/lang/Thread;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/s;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/v;
 
-    invoke-direct {v1, p0, p1, p2}, Lcn/com/smartdevices/bracelet/ui/s;-><init>(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;II)V
+    invoke-direct {v1, p0, p1, p2}, Lcn/com/smartdevices/bracelet/ui/v;-><init>(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;II)V
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
@@ -134,21 +106,21 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readLoginData()Lcn/com/smartdevices/bracelet/model/LoginData;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->b()Lcn/com/smartdevices/bracelet/model/LoginData;
 
     move-result-object v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readDeviceId()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->o()Ljava/lang/String;
 
     move-result-object v1
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/ui/r;
+    new-instance v2, Lcn/com/smartdevices/bracelet/ui/u;
 
-    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/ui/r;-><init>(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
+    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/ui/u;-><init>(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
 
-    invoke-static {v0, v1, p1, p2, v2}, Lcn/com/smartdevices/bracelet/webapi/WebAPI;->statisticBracelet(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/loopj/android/http/AsyncHttpResponseHandler;)V
+    invoke-static {v0, v1, p1, p2, v2}, Lcn/com/smartdevices/bracelet/d/d;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/c/a/a/h;)V
 
     return-void
 .end method
@@ -156,7 +128,7 @@
 .method static synthetic a(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Z
     .locals 1
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->g()Z
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->h()Z
 
     move-result v0
 
@@ -168,19 +140,25 @@
 
     const-string v0, "BaseSCActivity"
 
-    const-string v1, "==============================enterInBackground=========================="
+    const-string v1, "==============================enterInForeground=========================="
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "BaseSCActivity"
 
-    const-string v1, "==============================enterInBackground=========================="
+    const-string v1, "==============================enterInForeground=========================="
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    const/16 v0, 0x1e0
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->d()V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/BLEManager;->setMiliLatency(I)V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->j()V
+
+    const/16 v0, 0x27
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/b;->a(I)V
+
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->k()V
 
     return-void
 .end method
@@ -188,7 +166,7 @@
 .method static synthetic b(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->f()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->g()V
 
     return-void
 .end method
@@ -198,19 +176,49 @@
 
     const-string v0, "BaseSCActivity"
 
+    const-string v1, "==============================enterInBackground=========================="
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v0, "BaseSCActivity"
+
+    const-string v1, "==============================enterInBackground=========================="
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/16 v0, 0x1e0
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/b;->a(I)V
+
+    return-void
+.end method
+
+.method static synthetic c(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->f()V
+
+    return-void
+.end method
+
+.method private d()V
+    .locals 2
+
+    const-string v0, "BaseSCActivity"
+
     const-string v1, "in initBleStatus......"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/BLEManager;->getMiliConnStatus()Lcom/xiaomi/hm/bleservice/HwConnStatus;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->k()Lcom/xiaomi/hm/bleservice/HwConnStatus;
 
     move-result-object v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/BLEManager;->getMiliSyncDataStatus()Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->m()Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;->isSyncing()Z
+    invoke-virtual {v1}, Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;->e()Z
 
     move-result v1
 
@@ -229,31 +237,31 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/BLEManager;->startBLEService(Landroid/content/Context;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/b;->b(Landroid/content/Context;)V
 
     return-void
 .end method
 
-.method static synthetic c(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
+.method static synthetic d(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->e()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->l()V
 
     return-void
 .end method
 
-.method private d()V
+.method private e()V
     .locals 2
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/m;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/p;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/m;-><init>(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/p;-><init>(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->h:Landroid/os/Handler;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/o;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/r;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/o;-><init>(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/r;-><init>(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->j:Landroid/content/BroadcastReceiver;
 
@@ -292,34 +300,10 @@
     return-void
 .end method
 
-.method static synthetic d(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->k()V
-
-    return-void
-.end method
-
-.method private e()V
-    .locals 2
-
-    new-instance v0, Landroid/content/Intent;
-
-    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
-
-    const-class v1, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
-
-    invoke-virtual {v0, p0, v1}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->startActivity(Landroid/content/Intent;)V
-
-    return-void
-.end method
-
 .method static synthetic e(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->h()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->i()V
 
     return-void
 .end method
@@ -339,7 +323,7 @@
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    const-class v1, Lcn/com/smartdevices/bracelet/ui/FwLowBatteryActivity;
+    const-class v1, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
 
     invoke-virtual {v0, p0, v1}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
@@ -356,12 +340,36 @@
     return-object v0
 .end method
 
-.method private g()Z
+.method private g()V
+    .locals 2
+
+    new-instance v0, Landroid/content/Intent;
+
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+
+    const-class v1, Lcn/com/smartdevices/bracelet/ui/FwLowBatteryActivity;
+
+    invoke-virtual {v0, p0, v1}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->startActivity(Landroid/content/Intent;)V
+
+    return-void
+.end method
+
+.method static synthetic h(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->m()V
+
+    return-void
+.end method
+
+.method private h()Z
     .locals 6
 
     const/4 v0, 0x0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/BLEManager;->isMiliConnected()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->c()Z
 
     move-result v1
 
@@ -407,7 +415,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/io/InputStream;->available()I
 
@@ -421,11 +429,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/Utils;->getFwVersion([B)I
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/y;->b([B)I
 
     move-result v1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/BLEManager;->getMiliCachedDeviceInfo()Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->g()Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;
 
     move-result-object v2
 
@@ -471,7 +479,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget v2, v2, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;->firmwareVersion:I
 
@@ -481,7 +489,7 @@
 
     const-string v2, "bracelet firmware is the lastest,do nothing!"
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -494,7 +502,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -504,7 +512,7 @@
     goto/16 :goto_0
 .end method
 
-.method private h()V
+.method private i()V
     .locals 7
 
     const/4 v1, 0x0
@@ -539,7 +547,7 @@
 
     if-eqz v2, :cond_0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->i()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->j()V
 
     :cond_0
     return-void
@@ -623,18 +631,10 @@
     goto :goto_0
 .end method
 
-.method static synthetic h(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->l()V
-
-    return-void
-.end method
-
-.method private i()V
+.method private j()V
     .locals 2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readPersonInfoBaseNeedSync()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->l()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v0
 
@@ -648,36 +648,16 @@
 
     const-string v1, "Sync person info when net connected"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readPersonInfo()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->h()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Utils;->updateProfile(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 
     :cond_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/Utils;->updateLazyDaysOnServerBySteps()V
-
-    return-void
-.end method
-
-.method private j()V
-    .locals 4
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v0
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readLoginData()Lcn/com/smartdevices/bracelet/model/LoginData;
-
-    move-result-object v2
-
-    new-instance v3, Lcn/com/smartdevices/bracelet/ui/p;
-
-    invoke-direct {v3, p0, v0, v1}, Lcn/com/smartdevices/bracelet/ui/p;-><init>(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;J)V
-
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/webapi/WebAPI;->getServerTime(Lcn/com/smartdevices/bracelet/model/LoginData;Lcom/loopj/android/http/AsyncHttpResponseHandler;)V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->m()V
 
     return-void
 .end method
@@ -685,17 +665,37 @@
 .method private k()V
     .locals 4
 
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v0
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->b()Lcn/com/smartdevices/bracelet/model/LoginData;
+
+    move-result-object v2
+
+    new-instance v3, Lcn/com/smartdevices/bracelet/ui/s;
+
+    invoke-direct {v3, p0, v0, v1}, Lcn/com/smartdevices/bracelet/ui/s;-><init>(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;J)V
+
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/d/d;->d(Lcn/com/smartdevices/bracelet/model/LoginData;Lcom/c/a/a/h;)V
+
+    return-void
+.end method
+
+.method private l()V
+    .locals 4
+
     const-string v0, "BaseSCActivity"
 
     const-string v1, "in statisticBracelet"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readBraceletStatisticTime()J
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->C()J
 
     move-result-wide v2
 
@@ -712,13 +712,13 @@
     return-void
 
     :cond_1
-    invoke-static {}, Lcn/com/smartdevices/bracelet/BLEManager;->isMiliConnected()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->c()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/Utils;->isNetworkConnected(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -733,7 +733,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->k:Landroid/content/Context;
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/Utils;->isUseUnlockByBracelet(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/y;->d(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -742,15 +742,15 @@
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
     :goto_1
-    new-instance v1, Lcn/com/smartdevices/bracelet/BleTask/BleStatisticTask;
+    new-instance v1, Lcn/com/smartdevices/bracelet/a/r;
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/ui/q;
+    new-instance v2, Lcn/com/smartdevices/bracelet/ui/t;
 
-    invoke-direct {v2, p0, v0}, Lcn/com/smartdevices/bracelet/ui/q;-><init>(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;Lorg/json/JSONObject;)V
+    invoke-direct {v2, p0, v0}, Lcn/com/smartdevices/bracelet/ui/t;-><init>(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;Lorg/json/JSONObject;)V
 
-    invoke-direct {v1, v2}, Lcn/com/smartdevices/bracelet/BleTask/BleStatisticTask;-><init>(Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;)V
+    invoke-direct {v1, v2}, Lcn/com/smartdevices/bracelet/a/r;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/BleTask/BleStatisticTask;->work()V
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/a/r;->c()V
 
     goto :goto_0
 
@@ -760,7 +760,7 @@
     goto :goto_1
 .end method
 
-.method private l()V
+.method private m()V
     .locals 6
 
     const/4 v5, 0x6
@@ -769,7 +769,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readSyncTime()J
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->c()J
 
     move-result-wide v1
 
@@ -779,7 +779,7 @@
 
     if-lez v1, :cond_0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readSyncTime()J
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->c()J
 
     move-result-wide v1
 
@@ -810,7 +810,7 @@
 
     const-string v2, "BleSyncDataFirst"
 
-    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->event(Landroid/content/Context;Ljava/lang/String;I)V
+    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;I)V
 
     :cond_1
     return-void
@@ -818,65 +818,19 @@
 
 
 # virtual methods
-.method public enableBluetooth(Z)Z
-    .locals 3
+.method protected a()V
+    .locals 0
 
-    const/4 v1, 0x1
-
-    const/4 v0, 0x0
-
-    invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_2
-
-    invoke-virtual {v2}, Landroid/bluetooth/BluetoothAdapter;->isEnabled()Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    if-nez p1, :cond_0
-
-    iget-boolean v2, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->n:Z
-
-    if-eqz v2, :cond_0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/BLEManager;->isBluetoothRestarting()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_1
-    new-instance v1, Landroid/content/Intent;
-
-    const-string v2, "android.bluetooth.adapter.action.REQUEST_ENABLE"
-
-    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    const/16 v2, 0x2001
-
-    invoke-virtual {p0, v1, v2}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->startActivityForResult(Landroid/content/Intent;I)V
-
-    goto :goto_0
-
-    :cond_2
-    move v0, v1
-
-    goto :goto_0
+    return-void
 .end method
 
-.method public isApplicationBroughtToBackground(Landroid/content/Context;)Z
+.method protected a(Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public a(Landroid/content/Context;)Z
     .locals 6
 
     const/4 v1, 0x1
@@ -931,7 +885,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v3, "BaseSCActivity"
 
@@ -953,7 +907,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/Debug;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/r;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
@@ -980,6 +934,64 @@
     goto :goto_0
 .end method
 
+.method public b(Z)Z
+    .locals 3
+
+    const/4 v1, 0x1
+
+    const/4 v0, 0x0
+
+    invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v2}, Landroid/bluetooth/BluetoothAdapter;->isEnabled()Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    if-nez p1, :cond_0
+
+    iget-boolean v2, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->n:Z
+
+    if-eqz v2, :cond_0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->n()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v1, Landroid/content/Intent;
+
+    const-string v2, "android.bluetooth.adapter.action.REQUEST_ENABLE"
+
+    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const/16 v2, 0x2001
+
+    invoke-virtual {p0, v1, v2}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->startActivityForResult(Landroid/content/Intent;I)V
+
+    goto :goto_0
+
+    :cond_2
+    move v0, v1
+
+    goto :goto_0
+.end method
+
 .method protected onActivityResult(IILandroid/content/Intent;)V
     .locals 3
 
@@ -991,7 +1003,7 @@
 
     const-string v1, "onActivityResult"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/16 v0, 0x2001
 
@@ -1004,7 +1016,7 @@
     return-void
 
     :pswitch_0
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->c()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->d()V
 
     const/4 v0, 0x0
 
@@ -1019,7 +1031,7 @@
 
     move-result-object v0
 
-    invoke-static {p0, v0, v2}, Lcn/com/smartdevices/bracelet/view/CustomToast;->makeText(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
+    invoke-static {p0, v0, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
 
     move-result-object v0
 
@@ -1061,7 +1073,7 @@
 
     iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->m:Z
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->d()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->e()V
 
     invoke-direct {p0, v1, v1}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->a(II)V
 
@@ -1083,7 +1095,7 @@
 
     const-string v1, "onDestory.........................................."
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->h:Landroid/os/Handler;
 
@@ -1115,13 +1127,13 @@
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onResume()V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/Utils;->isBinded()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->c()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->onUnbind()V
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->a()V
 
     :cond_0
     :goto_0
@@ -1130,7 +1142,7 @@
     :cond_1
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->enableBluetooth(Z)Z
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->b(Z)Z
 
     move-result v0
 
@@ -1145,7 +1157,7 @@
     if-eqz v0, :cond_0
 
     :cond_2
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->a()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->b()V
 
     goto :goto_0
 .end method
@@ -1157,7 +1169,7 @@
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onStop()V
 
-    invoke-virtual {p0, p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->isApplicationBroughtToBackground(Landroid/content/Context;)Z
+    invoke-virtual {p0, p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->a(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -1171,20 +1183,8 @@
 
     iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->n:Z
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->b()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->c()V
 
     :cond_0
-    return-void
-.end method
-
-.method protected onUnbind()V
-    .locals 0
-
-    return-void
-.end method
-
-.method protected updateDynamicList(Z)V
-    .locals 0
-
     return-void
 .end method

@@ -3,26 +3,23 @@
 
 
 # virtual methods
-.method public abstract a(Landroid/view/MenuItem;Landroid/support/v4/view/MenuItemCompat$OnActionExpandListener;)Landroid/view/MenuItem;
+.method public abstract a(I)I
 .end method
 
-.method public abstract a(Landroid/view/MenuItem;Landroid/view/View;)Landroid/view/MenuItem;
+.method public abstract a(Landroid/view/View;)Ljava/lang/Object;
 .end method
 
-.method public abstract a(Landroid/view/MenuItem;)Landroid/view/View;
+.method public abstract a(Landroid/view/KeyEvent;)V
 .end method
 
-.method public abstract a(Landroid/view/MenuItem;I)V
+.method public abstract a(II)Z
 .end method
 
-.method public abstract b(Landroid/view/MenuItem;I)Landroid/view/MenuItem;
+.method public abstract a(Landroid/view/KeyEvent;Landroid/view/KeyEvent$Callback;Ljava/lang/Object;Ljava/lang/Object;)Z
 .end method
 
-.method public abstract b(Landroid/view/MenuItem;)Z
+.method public abstract b(I)Z
 .end method
 
-.method public abstract c(Landroid/view/MenuItem;)Z
-.end method
-
-.method public abstract d(Landroid/view/MenuItem;)Z
+.method public abstract b(Landroid/view/KeyEvent;)Z
 .end method

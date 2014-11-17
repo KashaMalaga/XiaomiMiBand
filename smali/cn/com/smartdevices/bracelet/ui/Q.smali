@@ -2,18 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/chart/util/AnimUtil$AnimColorListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/DynamicFragment;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/M;
+
+.field private final synthetic b:Landroid/view/View;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/DynamicFragment;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/M;Landroid/view/View;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/Q;->a:Lcn/com/smartdevices/bracelet/ui/DynamicFragment;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/Q;->a:Lcn/com/smartdevices/bracelet/ui/M;
+
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/Q;->b:Landroid/view/View;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,18 +26,20 @@
 
 
 # virtual methods
-.method public onColorChanged(I)V
-    .locals 1
+.method public run()V
+    .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/Q;->a:Lcn/com/smartdevices/bracelet/ui/DynamicFragment;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/Q;->a:Lcn/com/smartdevices/bracelet/ui/M;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/DynamicFragment;->getActivity()Landroid/app/Activity;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/Q;->b:Landroid/view/View;
 
-    move-result-object v0
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/Q;->a:Lcn/com/smartdevices/bracelet/ui/M;
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/M;->i(Lcn/com/smartdevices/bracelet/ui/M;)Landroid/view/View;
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->applyStatusBarTint(I)V
+    move-result-object v2
+
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/ui/M;->a(Lcn/com/smartdevices/bracelet/ui/M;Landroid/view/View;Landroid/view/View;)V
 
     return-void
 .end method

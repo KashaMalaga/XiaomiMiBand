@@ -2,7 +2,7 @@
 .super Landroid/view/View;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/ui/widget/PageIndicator;
+.implements Lcn/com/smartdevices/bracelet/ui/widget/b;
 
 
 # static fields
@@ -20,7 +20,7 @@
 
 .field private d:Landroid/support/v4/view/ViewPager;
 
-.field private e:Landroid/support/v4/view/ViewPager$OnPageChangeListener;
+.field private e:Landroid/support/v4/view/ba;
 
 .field private f:I
 
@@ -204,7 +204,7 @@
 
     move-result v0
 
-    sget-object v9, Lcom/xiaomi/hm/health/R$styleable;->TitlePageIndicator:[I
+    sget-object v9, Lcom/xiaomi/hm/a/s;->TitlePageIndicator:[I
 
     const/4 v10, 0x0
 
@@ -337,7 +337,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Landroid/support/v4/view/ViewConfigurationCompat;->getScaledPagingTouchSlop(Landroid/view/ViewConfiguration;)I
+    invoke-static {v0}, Landroid/support/v4/view/aH;->a(Landroid/view/ViewConfiguration;)I
 
     move-result v0
 
@@ -353,7 +353,7 @@
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->a(I)Ljava/lang/CharSequence;
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->f(I)Ljava/lang/CharSequence;
 
     move-result-object v1
 
@@ -388,27 +388,6 @@
     return-object v0
 .end method
 
-.method private a(I)Ljava/lang/CharSequence;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
-
-    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->getAdapter()Landroid/support/v4/view/PagerAdapter;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/support/v4/view/PagerAdapter;->getPageTitle(I)Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    const-string v0, ""
-
-    :cond_0
-    return-object v0
-.end method
-
 .method private a(Landroid/graphics/Paint;)Ljava/util/ArrayList;
     .locals 10
     .annotation system Ldalvik/annotation/Signature;
@@ -431,11 +410,11 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
 
-    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->getAdapter()Landroid/support/v4/view/PagerAdapter;
+    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->b()Landroid/support/v4/view/ad;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/support/v4/view/PagerAdapter;->getCount()I
+    invoke-virtual {v0}, Landroid/support/v4/view/ad;->b()I
 
     move-result v3
 
@@ -514,9 +493,30 @@
     goto :goto_0
 .end method
 
+.method private f(I)Ljava/lang/CharSequence;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
+
+    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->b()Landroid/support/v4/view/ad;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/support/v4/view/ad;->c(I)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, ""
+
+    :cond_0
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public clearBadges()V
+.method public a()V
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->A:Ljava/util/Set;
@@ -526,7 +526,197 @@
     return-void
 .end method
 
-.method public clearBadges(Ljava/lang/Integer;)V
+.method public a(F)V
+    .locals 0
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->p:F
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->invalidate()V
+
+    return-void
+.end method
+
+.method public a(I)V
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->h:I
+
+    if-nez v0, :cond_0
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->f:I
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->invalidate()V
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->e:Landroid/support/v4/view/ba;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->e:Landroid/support/v4/view/ba;
+
+    invoke-interface {v0, p1}, Landroid/support/v4/view/ba;->a(I)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public a(IFI)V
+    .locals 1
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->f:I
+
+    iput p2, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->g:F
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->invalidate()V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->e:Landroid/support/v4/view/ba;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->e:Landroid/support/v4/view/ba;
+
+    invoke-interface {v0, p1, p2, p3}, Landroid/support/v4/view/ba;->a(IFI)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public a(Landroid/graphics/Typeface;)V
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->i:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->invalidate()V
+
+    return-void
+.end method
+
+.method public a(Landroid/support/v4/view/ViewPager;)V
+    .locals 2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
+
+    if-ne v0, p1, :cond_0
+
+    :goto_0
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPager;->a(Landroid/support/v4/view/ba;)V
+
+    :cond_1
+    invoke-virtual {p1}, Landroid/support/v4/view/ViewPager;->b()Landroid/support/v4/view/ad;
+
+    move-result-object v0
+
+    if-nez v0, :cond_2
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "ViewPager does not have adapter instance."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_2
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
+
+    invoke-virtual {v0, p0}, Landroid/support/v4/view/ViewPager;->a(Landroid/support/v4/view/ba;)V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->invalidate()V
+
+    goto :goto_0
+.end method
+
+.method public a(Landroid/support/v4/view/ViewPager;I)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->a(Landroid/support/v4/view/ViewPager;)V
+
+    invoke-virtual {p0, p2}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->g(I)V
+
+    return-void
+.end method
+
+.method public a(Landroid/support/v4/view/ba;)V
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->e:Landroid/support/v4/view/ba;
+
+    return-void
+.end method
+
+.method public a(Ljava/lang/Integer;)V
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->A:Ljava/util/Set;
+
+    invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public a(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->j:Z
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->invalidate()V
+
+    return-void
+.end method
+
+.method public b()F
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->p:F
+
+    return v0
+.end method
+
+.method public b(F)V
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->i:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setTextSize(F)V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->invalidate()V
+
+    return-void
+.end method
+
+.method public b(I)V
+    .locals 1
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->h:I
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->e:Landroid/support/v4/view/ba;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->e:Landroid/support/v4/view/ba;
+
+    invoke-interface {v0, p1}, Landroid/support/v4/view/ba;->b(I)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public b(Ljava/lang/Integer;)V
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->A:Ljava/util/Set;
@@ -536,7 +726,162 @@
     return-void
 .end method
 
-.method public getCount()I
+.method public c()I
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->l:I
+
+    return v0
+.end method
+
+.method public c(F)V
+    .locals 0
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->r:F
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->invalidate()V
+
+    return-void
+.end method
+
+.method public c(I)V
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->o:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->invalidate()V
+
+    return-void
+.end method
+
+.method public d(F)V
+    .locals 0
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->u:F
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->invalidate()V
+
+    return-void
+.end method
+
+.method public d(I)V
+    .locals 0
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->l:I
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->invalidate()V
+
+    return-void
+.end method
+
+.method public d()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->j:Z
+
+    return v0
+.end method
+
+.method public e()I
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->k:I
+
+    return v0
+.end method
+
+.method public e(I)V
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->i:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->k:I
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->invalidate()V
+
+    return-void
+.end method
+
+.method public f()F
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->i:Landroid/graphics/Paint;
+
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getTextSize()F
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public g()F
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->r:F
+
+    return v0
+.end method
+
+.method public g(I)V
+    .locals 2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "ViewPager has not been bound."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
+
+    invoke-virtual {v0, p1}, Landroid/support/v4/view/ViewPager;->a(I)V
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->f:I
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->invalidate()V
+
+    return-void
+.end method
+
+.method public h()F
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->u:F
+
+    return v0
+.end method
+
+.method public i()V
+    .locals 0
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->invalidate()V
+
+    return-void
+.end method
+
+.method public j()Landroid/graphics/Typeface;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->i:Landroid/graphics/Paint;
+
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getTypeface()Landroid/graphics/Typeface;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public k()I
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
@@ -551,103 +896,23 @@
     :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
 
-    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->getAdapter()Landroid/support/v4/view/PagerAdapter;
+    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->b()Landroid/support/v4/view/ad;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/support/v4/view/PagerAdapter;->getCount()I
+    invoke-virtual {v0}, Landroid/support/v4/view/ad;->b()I
 
     move-result v0
 
     goto :goto_0
 .end method
 
-.method public getFooterIndicatorHeight()F
-    .locals 1
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->p:F
-
-    return v0
-.end method
-
-.method public getOffset()I
+.method public l()I
     .locals 1
 
     const/4 v0, 0x0
 
     return v0
-.end method
-
-.method public getSelectedColor()I
-    .locals 1
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->l:I
-
-    return v0
-.end method
-
-.method public getTextColor()I
-    .locals 1
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->k:I
-
-    return v0
-.end method
-
-.method public getTextSize()F
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->i:Landroid/graphics/Paint;
-
-    invoke-virtual {v0}, Landroid/graphics/Paint;->getTextSize()F
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public getTitlePadding()F
-    .locals 1
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->r:F
-
-    return v0
-.end method
-
-.method public getTopPadding()F
-    .locals 1
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->u:F
-
-    return v0
-.end method
-
-.method public getTypeface()Landroid/graphics/Typeface;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->i:Landroid/graphics/Paint;
-
-    invoke-virtual {v0}, Landroid/graphics/Paint;->getTypeface()Landroid/graphics/Typeface;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public isSelectedBold()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->j:Z
-
-    return v0
-.end method
-
-.method public notifyDataSetChanged()V
-    .locals 0
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->invalidate()V
-
-    return-void
 .end method
 
 .method protected onDraw(Landroid/graphics/Canvas;)V
@@ -670,11 +935,11 @@
 
     iget-object v1, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
 
-    invoke-virtual {v1}, Landroid/support/v4/view/ViewPager;->getAdapter()Landroid/support/v4/view/PagerAdapter;
+    invoke-virtual {v1}, Landroid/support/v4/view/ViewPager;->b()Landroid/support/v4/view/ad;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/support/v4/view/PagerAdapter;->getCount()I
+    invoke-virtual {v1}, Landroid/support/v4/view/ad;->b()I
 
     move-result v14
 
@@ -698,7 +963,7 @@
 
     iget-object v1, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
 
-    invoke-virtual {v1}, Landroid/support/v4/view/ViewPager;->getCurrentItem()I
+    invoke-virtual {v1}, Landroid/support/v4/view/ViewPager;->c()I
 
     move-result v1
 
@@ -733,7 +998,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->setCurrentItem(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->g(I)V
 
     goto :goto_0
 
@@ -1013,7 +1278,7 @@
     :goto_5
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v11}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->a(I)Ljava/lang/CharSequence;
+    invoke-direct {v0, v11}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->f(I)Ljava/lang/CharSequence;
 
     move-result-object v2
 
@@ -1387,68 +1652,6 @@
     goto :goto_0
 .end method
 
-.method public onPageScrollStateChanged(I)V
-    .locals 1
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->h:I
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->e:Landroid/support/v4/view/ViewPager$OnPageChangeListener;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->e:Landroid/support/v4/view/ViewPager$OnPageChangeListener;
-
-    invoke-interface {v0, p1}, Landroid/support/v4/view/ViewPager$OnPageChangeListener;->onPageScrollStateChanged(I)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public onPageScrolled(IFI)V
-    .locals 1
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->f:I
-
-    iput p2, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->g:F
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->invalidate()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->e:Landroid/support/v4/view/ViewPager$OnPageChangeListener;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->e:Landroid/support/v4/view/ViewPager$OnPageChangeListener;
-
-    invoke-interface {v0, p1, p2, p3}, Landroid/support/v4/view/ViewPager$OnPageChangeListener;->onPageScrolled(IFI)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public onPageSelected(I)V
-    .locals 1
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->h:I
-
-    if-nez v0, :cond_0
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->f:I
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->invalidate()V
-
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->e:Landroid/support/v4/view/ViewPager$OnPageChangeListener;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->e:Landroid/support/v4/view/ViewPager$OnPageChangeListener;
-
-    invoke-interface {v0, p1}, Landroid/support/v4/view/ViewPager$OnPageChangeListener;->onPageSelected(I)V
-
-    :cond_1
-    return-void
-.end method
-
 .method public onRestoreInstanceState(Landroid/os/Parcelable;)V
     .locals 1
 
@@ -1511,11 +1714,11 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
 
-    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->getAdapter()Landroid/support/v4/view/PagerAdapter;
+    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->b()Landroid/support/v4/view/ad;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/support/v4/view/PagerAdapter;->getCount()I
+    invoke-virtual {v0}, Landroid/support/v4/view/ad;->b()I
 
     move-result v0
 
@@ -1539,7 +1742,7 @@
     goto :goto_0
 
     :pswitch_1
-    invoke-static {p1, v2}, Landroid/support/v4/view/MotionEventCompat;->getPointerId(Landroid/view/MotionEvent;I)I
+    invoke-static {p1, v2}, Landroid/support/v4/view/Y;->b(Landroid/view/MotionEvent;I)I
 
     move-result v0
 
@@ -1556,11 +1759,11 @@
     :pswitch_2
     iget v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->y:I
 
-    invoke-static {p1, v0}, Landroid/support/v4/view/MotionEventCompat;->findPointerIndex(Landroid/view/MotionEvent;I)I
+    invoke-static {p1, v0}, Landroid/support/v4/view/Y;->a(Landroid/view/MotionEvent;I)I
 
     move-result v0
 
-    invoke-static {p1, v0}, Landroid/support/v4/view/MotionEventCompat;->getX(Landroid/view/MotionEvent;I)F
+    invoke-static {p1, v0}, Landroid/support/v4/view/Y;->c(Landroid/view/MotionEvent;I)F
 
     move-result v0
 
@@ -1595,7 +1798,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
 
-    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->isFakeDragging()Z
+    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->j()Z
 
     move-result v0
 
@@ -1603,7 +1806,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
 
-    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->beginFakeDrag()Z
+    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->h()Z
 
     move-result v0
 
@@ -1612,7 +1815,7 @@
     :cond_5
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
 
-    invoke-virtual {v0, v2}, Landroid/support/v4/view/ViewPager;->fakeDragBy(F)V
+    invoke-virtual {v0, v2}, Landroid/support/v4/view/ViewPager;->b(F)V
 
     goto :goto_0
 
@@ -1652,7 +1855,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
 
-    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->isFakeDragging()Z
+    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->j()Z
 
     move-result v0
 
@@ -1660,7 +1863,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
 
-    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->endFakeDrag()V
+    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->i()V
 
     goto/16 :goto_0
 
@@ -1681,7 +1884,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
 
-    invoke-virtual {v0, v3}, Landroid/support/v4/view/ViewPager;->setCurrentItem(I)V
+    invoke-virtual {v0, v3}, Landroid/support/v4/view/ViewPager;->a(I)V
 
     goto :goto_2
 
@@ -1693,17 +1896,17 @@
     goto :goto_1
 
     :pswitch_4
-    invoke-static {p1}, Landroid/support/v4/view/MotionEventCompat;->getActionIndex(Landroid/view/MotionEvent;)I
+    invoke-static {p1}, Landroid/support/v4/view/Y;->b(Landroid/view/MotionEvent;)I
 
     move-result v0
 
-    invoke-static {p1, v0}, Landroid/support/v4/view/MotionEventCompat;->getX(Landroid/view/MotionEvent;I)F
+    invoke-static {p1, v0}, Landroid/support/v4/view/Y;->c(Landroid/view/MotionEvent;I)F
 
     move-result v2
 
     iput v2, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->x:F
 
-    invoke-static {p1, v0}, Landroid/support/v4/view/MotionEventCompat;->getPointerId(Landroid/view/MotionEvent;I)I
+    invoke-static {p1, v0}, Landroid/support/v4/view/Y;->b(Landroid/view/MotionEvent;I)I
 
     move-result v0
 
@@ -1712,11 +1915,11 @@
     goto/16 :goto_0
 
     :pswitch_5
-    invoke-static {p1}, Landroid/support/v4/view/MotionEventCompat;->getActionIndex(Landroid/view/MotionEvent;)I
+    invoke-static {p1}, Landroid/support/v4/view/Y;->b(Landroid/view/MotionEvent;)I
 
     move-result v0
 
-    invoke-static {p1, v0}, Landroid/support/v4/view/MotionEventCompat;->getPointerId(Landroid/view/MotionEvent;I)I
+    invoke-static {p1, v0}, Landroid/support/v4/view/Y;->b(Landroid/view/MotionEvent;I)I
 
     move-result v3
 
@@ -1729,7 +1932,7 @@
     move v0, v1
 
     :goto_3
-    invoke-static {p1, v0}, Landroid/support/v4/view/MotionEventCompat;->getPointerId(Landroid/view/MotionEvent;I)I
+    invoke-static {p1, v0}, Landroid/support/v4/view/Y;->b(Landroid/view/MotionEvent;I)I
 
     move-result v0
 
@@ -1738,11 +1941,11 @@
     :cond_9
     iget v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->y:I
 
-    invoke-static {p1, v0}, Landroid/support/v4/view/MotionEventCompat;->findPointerIndex(Landroid/view/MotionEvent;I)I
+    invoke-static {p1, v0}, Landroid/support/v4/view/Y;->a(Landroid/view/MotionEvent;I)I
 
     move-result v0
 
-    invoke-static {p1, v0}, Landroid/support/v4/view/MotionEventCompat;->getX(Landroid/view/MotionEvent;I)F
+    invoke-static {p1, v0}, Landroid/support/v4/view/Y;->c(Landroid/view/MotionEvent;I)F
 
     move-result v0
 
@@ -1765,207 +1968,4 @@
         :pswitch_4
         :pswitch_5
     .end packed-switch
-.end method
-
-.method public setBadges(Ljava/lang/Integer;)V
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->A:Ljava/util/Set;
-
-    invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    return-void
-.end method
-
-.method public setCurrentItem(I)V
-    .locals 2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "ViewPager has not been bound."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
-
-    invoke-virtual {v0, p1}, Landroid/support/v4/view/ViewPager;->setCurrentItem(I)V
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->f:I
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->invalidate()V
-
-    return-void
-.end method
-
-.method public setFooterColor(I)V
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->o:Landroid/graphics/Paint;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->invalidate()V
-
-    return-void
-.end method
-
-.method public setFooterIndicatorHeight(F)V
-    .locals 0
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->p:F
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->invalidate()V
-
-    return-void
-.end method
-
-.method public setOnPageChangeListener(Landroid/support/v4/view/ViewPager$OnPageChangeListener;)V
-    .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->e:Landroid/support/v4/view/ViewPager$OnPageChangeListener;
-
-    return-void
-.end method
-
-.method public setSelectedBold(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->j:Z
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->invalidate()V
-
-    return-void
-.end method
-
-.method public setSelectedColor(I)V
-    .locals 0
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->l:I
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->invalidate()V
-
-    return-void
-.end method
-
-.method public setTextColor(I)V
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->i:Landroid/graphics/Paint;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->k:I
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->invalidate()V
-
-    return-void
-.end method
-
-.method public setTextSize(F)V
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->i:Landroid/graphics/Paint;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setTextSize(F)V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->invalidate()V
-
-    return-void
-.end method
-
-.method public setTitlePadding(F)V
-    .locals 0
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->r:F
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->invalidate()V
-
-    return-void
-.end method
-
-.method public setTopPadding(F)V
-    .locals 0
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->u:F
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->invalidate()V
-
-    return-void
-.end method
-
-.method public setTypeface(Landroid/graphics/Typeface;)V
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->i:Landroid/graphics/Paint;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->invalidate()V
-
-    return-void
-.end method
-
-.method public setViewPager(Landroid/support/v4/view/ViewPager;)V
-    .locals 2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
-
-    if-ne v0, p1, :cond_0
-
-    :goto_0
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPager;->setOnPageChangeListener(Landroid/support/v4/view/ViewPager$OnPageChangeListener;)V
-
-    :cond_1
-    invoke-virtual {p1}, Landroid/support/v4/view/ViewPager;->getAdapter()Landroid/support/v4/view/PagerAdapter;
-
-    move-result-object v0
-
-    if-nez v0, :cond_2
-
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "ViewPager does not have adapter instance."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_2
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
-
-    invoke-virtual {v0, p0}, Landroid/support/v4/view/ViewPager;->setOnPageChangeListener(Landroid/support/v4/view/ViewPager$OnPageChangeListener;)V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->invalidate()V
-
-    goto :goto_0
-.end method
-
-.method public setViewPager(Landroid/support/v4/view/ViewPager;I)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->setViewPager(Landroid/support/v4/view/ViewPager;)V
-
-    invoke-virtual {p0, p2}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->setCurrentItem(I)V
-
-    return-void
 .end method

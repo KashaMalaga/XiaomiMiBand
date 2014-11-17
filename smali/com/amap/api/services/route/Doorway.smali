@@ -28,9 +28,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/services/route/h;
+    new-instance v0, Lcom/amap/api/services/route/i;
 
-    invoke-direct {v0}, Lcom/amap/api/services/route/h;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/services/route/i;-><init>()V
 
     sput-object v0, Lcom/amap/api/services/route/Doorway;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -75,23 +75,7 @@
 
 
 # virtual methods
-.method public describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public getLatLonPoint()Lcom/amap/api/services/core/LatLonPoint;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/route/Doorway;->b:Lcom/amap/api/services/core/LatLonPoint;
-
-    return-object v0
-.end method
-
-.method public getName()Ljava/lang/String;
+.method public a()Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcom/amap/api/services/route/Doorway;->a:Ljava/lang/String;
@@ -99,7 +83,7 @@
     return-object v0
 .end method
 
-.method public setLatLonPoint(Lcom/amap/api/services/core/LatLonPoint;)V
+.method public a(Lcom/amap/api/services/core/LatLonPoint;)V
     .locals 0
 
     iput-object p1, p0, Lcom/amap/api/services/route/Doorway;->b:Lcom/amap/api/services/core/LatLonPoint;
@@ -107,12 +91,28 @@
     return-void
 .end method
 
-.method public setName(Ljava/lang/String;)V
+.method public a(Ljava/lang/String;)V
     .locals 0
 
     iput-object p1, p0, Lcom/amap/api/services/route/Doorway;->a:Ljava/lang/String;
 
     return-void
+.end method
+
+.method public b()Lcom/amap/api/services/core/LatLonPoint;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/route/Doorway;->b:Lcom/amap/api/services/core/LatLonPoint;
+
+    return-object v0
+.end method
+
+.method public describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V

@@ -2,26 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/support/v4/app/B;
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/String;
-
-.field final synthetic b:I
-
-.field final synthetic c:Landroid/support/v4/app/v;
+.field final synthetic a:Landroid/support/v4/app/FragmentActivity;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/app/v;Ljava/lang/String;I)V
+.method constructor <init>(Landroid/support/v4/app/FragmentActivity;)V
     .locals 0
 
-    iput-object p1, p0, Landroid/support/v4/app/y;->c:Landroid/support/v4/app/v;
-
-    iput-object p2, p0, Landroid/support/v4/app/y;->a:Ljava/lang/String;
-
-    iput p3, p0, Landroid/support/v4/app/y;->b:I
+    iput-object p1, p0, Landroid/support/v4/app/y;->a:Landroid/support/v4/app/FragmentActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -30,24 +22,14 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 5
+.method public a(I)Landroid/view/View;
+    .locals 1
 
-    iget-object v0, p0, Landroid/support/v4/app/y;->c:Landroid/support/v4/app/v;
+    iget-object v0, p0, Landroid/support/v4/app/y;->a:Landroid/support/v4/app/FragmentActivity;
 
-    iget-object v1, p0, Landroid/support/v4/app/y;->c:Landroid/support/v4/app/v;
+    invoke-virtual {v0, p1}, Landroid/support/v4/app/FragmentActivity;->findViewById(I)Landroid/view/View;
 
-    iget-object v1, v1, Landroid/support/v4/app/v;->t:Landroid/support/v4/app/FragmentActivity;
+    move-result-object v0
 
-    iget-object v1, v1, Landroid/support/v4/app/FragmentActivity;->d:Landroid/os/Handler;
-
-    iget-object v2, p0, Landroid/support/v4/app/y;->a:Ljava/lang/String;
-
-    const/4 v3, -0x1
-
-    iget v4, p0, Landroid/support/v4/app/y;->b:I
-
-    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/support/v4/app/v;->a(Landroid/os/Handler;Ljava/lang/String;II)Z
-
-    return-void
+    return-object v0
 .end method

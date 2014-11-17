@@ -3,7 +3,7 @@
 
 
 # static fields
-.field private static final a:Ljava/lang/String; = "MicroMsg.SDK.GetMessageFromWX.Resp"
+.field private static final TAG:Ljava/lang/String; = "MicroMsg.SDK.GetMessageFromWX.Resp"
 
 
 # instance fields
@@ -52,7 +52,7 @@
     :cond_0
     iget-object v0, p0, Lcom/tencent/mm/sdk/modelmsg/GetMessageFromWX$Resp;->message:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->a()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->checkArgs()Z
 
     move-result v0
 

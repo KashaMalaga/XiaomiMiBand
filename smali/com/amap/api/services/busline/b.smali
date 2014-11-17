@@ -1,87 +1,104 @@
-.class Lcom/amap/api/services/busline/b;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.class public final enum Lcom/amap/api/services/busline/b;
+.super Ljava/lang/Enum;
 
 
-# instance fields
-.field final synthetic a:Lcom/amap/api/services/busline/BusStationSearch;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/amap/api/services/busline/b;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field public static final enum a:Lcom/amap/api/services/busline/b;
+
+.field public static final enum b:Lcom/amap/api/services/busline/b;
+
+.field private static final synthetic c:[Lcom/amap/api/services/busline/b;
 
 
 # direct methods
-.method constructor <init>(Lcom/amap/api/services/busline/BusStationSearch;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput-object p1, p0, Lcom/amap/api/services/busline/b;->a:Lcom/amap/api/services/busline/BusStationSearch;
+    const/4 v3, 0x1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    new-instance v0, Lcom/amap/api/services/busline/b;
+
+    const-string v1, "BY_LINE_ID"
+
+    invoke-direct {v0, v1, v2}, Lcom/amap/api/services/busline/b;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/amap/api/services/busline/b;->a:Lcom/amap/api/services/busline/b;
+
+    new-instance v0, Lcom/amap/api/services/busline/b;
+
+    const-string v1, "BY_LINE_NAME"
+
+    invoke-direct {v0, v1, v3}, Lcom/amap/api/services/busline/b;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/amap/api/services/busline/b;->b:Lcom/amap/api/services/busline/b;
+
+    const/4 v0, 0x2
+
+    new-array v0, v0, [Lcom/amap/api/services/busline/b;
+
+    sget-object v1, Lcom/amap/api/services/busline/b;->a:Lcom/amap/api/services/busline/b;
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/amap/api/services/busline/b;->b:Lcom/amap/api/services/busline/b;
+
+    aput-object v1, v0, v3
+
+    sput-object v0, Lcom/amap/api/services/busline/b;->c:[Lcom/amap/api/services/busline/b;
 
     return-void
 .end method
 
+.method private constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 
-# virtual methods
-.method public run()V
-    .locals 3
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    new-instance v1, Landroid/os/Message;
+    return-void
+.end method
 
-    invoke-direct {v1}, Landroid/os/Message;-><init>()V
+.method public static valueOf(Ljava/lang/String;)Lcom/amap/api/services/busline/b;
+    .locals 1
 
-    :try_start_0
-    iget-object v0, p0, Lcom/amap/api/services/busline/b;->a:Lcom/amap/api/services/busline/BusStationSearch;
+    const-class v0, Lcom/amap/api/services/busline/b;
 
-    invoke-virtual {v0}, Lcom/amap/api/services/busline/BusStationSearch;->searchBusStation()Lcom/amap/api/services/busline/BusStationResult;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object v0
 
-    const/4 v2, 0x0
+    check-cast v0, Lcom/amap/api/services/busline/b;
 
-    iput v2, v1, Landroid/os/Message;->what:I
+    return-object v0
+.end method
 
-    iput-object v0, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
-    :try_end_0
-    .catch Lcom/amap/api/services/core/AMapException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+.method public static values()[Lcom/amap/api/services/busline/b;
+    .locals 1
 
-    iget-object v0, p0, Lcom/amap/api/services/busline/b;->a:Lcom/amap/api/services/busline/BusStationSearch;
+    sget-object v0, Lcom/amap/api/services/busline/b;->c:[Lcom/amap/api/services/busline/b;
 
-    iget-object v0, v0, Lcom/amap/api/services/busline/BusStationSearch;->a:Landroid/os/Handler;
+    invoke-virtual {v0}, [Lcom/amap/api/services/busline/b;->clone()Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+    move-result-object v0
 
-    :goto_0
-    return-void
+    check-cast v0, [Lcom/amap/api/services/busline/b;
 
-    :catch_0
-    move-exception v0
-
-    :try_start_1
-    invoke-virtual {v0}, Lcom/amap/api/services/core/AMapException;->getErrorCode()I
-
-    move-result v0
-
-    iput v0, v1, Landroid/os/Message;->what:I
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    iget-object v0, p0, Lcom/amap/api/services/busline/b;->a:Lcom/amap/api/services/busline/BusStationSearch;
-
-    iget-object v0, v0, Lcom/amap/api/services/busline/BusStationSearch;->a:Landroid/os/Handler;
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    iget-object v2, p0, Lcom/amap/api/services/busline/b;->a:Lcom/amap/api/services/busline/BusStationSearch;
-
-    iget-object v2, v2, Lcom/amap/api/services/busline/BusStationSearch;->a:Landroid/os/Handler;
-
-    invoke-virtual {v2, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    throw v0
+    return-object v0
 .end method

@@ -1,154 +1,69 @@
-.class Lcn/com/smartdevices/bracelet/ui/m;
-.super Landroid/os/Handler;
+.class public Lcn/com/smartdevices/bracelet/ui/m;
+.super Lcn/com/smartdevices/bracelet/ui/J;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/BaseActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
+.method public constructor <init>(Lcn/com/smartdevices/bracelet/ui/BaseActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/m;->a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/m;->a:Lcn/com/smartdevices/bracelet/ui/BaseActivity;
 
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/J;-><init>()V
 
     return-void
-.end method
-
-.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/m;)Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/m;->a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public handleMessage(Landroid/os/Message;)V
-    .locals 3
+.method protected a()I
+    .locals 1
 
-    const/4 v2, 0x0
+    const v0, 0x7f03002b
 
-    iget v0, p1, Landroid/os/Message;->what:I
+    return v0
+.end method
 
-    packed-switch v0, :pswitch_data_0
+.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    .locals 4
 
-    :goto_0
-    :pswitch_0
-    return-void
+    invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/J;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
-    :pswitch_1
-    const-string v0, "BaseSCActivity"
+    move-result-object v1
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "MSG_LOAD_DATA_COMPLETE......................"
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    new-instance v2, Ljava/util/Date;
-
-    invoke-direct {v2}, Ljava/util/Date;-><init>()V
-
-    invoke-virtual {v2}, Ljava/util/Date;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/m;->getArguments()Landroid/os/Bundle;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v2, :cond_0
 
-    move-result-object v1
+    const-string v0, "Msg"
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
+    invoke-virtual {v2, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
-
-    new-instance v1, Lcn/com/smartdevices/bracelet/eventbus/EventLoadDataComplete;
-
-    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/eventbus/EventLoadDataComplete;-><init>()V
-
-    invoke-virtual {v0, v1}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :pswitch_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/m;->a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->a(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Z
-
-    move-result v0
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/BleTask/BleGetBatteryInfoTask;
+    const v0, 0x7f0700de
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/n;
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/n;-><init>(Lcn/com/smartdevices/bracelet/ui/m;)V
+    move-result-object v0
 
-    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/BleTask/BleGetBatteryInfoTask;-><init>(Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;)V
+    check-cast v0, Landroid/widget/TextView;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/BleTask/BleGetBatteryInfoTask;->work()V
+    const-string v3, "Msg"
 
-    goto :goto_0
+    invoke-virtual {v2, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/m;->a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->d(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
-
-    goto :goto_0
-
-    :pswitch_3
-    invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
-
-    move-result-object v0
-
-    new-instance v1, Lcn/com/smartdevices/bracelet/eventbus/EventBtOnOff;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, v2}, Lcn/com/smartdevices/bracelet/eventbus/EventBtOnOff;-><init>(I)V
-
-    invoke-virtual {v0, v1}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :pswitch_4
-    invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
-
-    move-result-object v0
-
-    new-instance v1, Lcn/com/smartdevices/bracelet/eventbus/EventBtOnOff;
-
-    invoke-direct {v1, v2}, Lcn/com/smartdevices/bracelet/eventbus/EventBtOnOff;-><init>(I)V
-
-    invoke-virtual {v0, v1}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :pswitch_5
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/m;->a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
-
-    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->updateDynamicList(Z)V
-
-    goto :goto_0
-
-    :pswitch_data_0
-    .packed-switch 0x1002
-        :pswitch_1
-        :pswitch_2
-        :pswitch_0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_5
-    .end packed-switch
+    return-object v1
 .end method

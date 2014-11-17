@@ -25,7 +25,7 @@
     return-void
 .end method
 
-.method private a(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;Lcom/tencent/tauth/IUiListener;)Lcom/tencent/open/j;
+.method private a(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;Lcom/tencent/tauth/IUiListener;)Lcom/tencent/open/SocialApiIml$b;
     .locals 3
 
     new-instance v0, Landroid/content/Intent;
@@ -38,19 +38,19 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    new-instance v1, Lcom/tencent/open/j;
+    new-instance v1, Lcom/tencent/open/SocialApiIml$b;
 
-    invoke-direct {v1}, Lcom/tencent/open/j;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/open/SocialApiIml$b;-><init>()V
 
-    iput-object v0, v1, Lcom/tencent/open/j;->a:Landroid/content/Intent;
+    iput-object v0, v1, Lcom/tencent/open/SocialApiIml$b;->a:Landroid/content/Intent;
 
-    iput-object p1, v1, Lcom/tencent/open/j;->c:Landroid/os/Bundle;
+    iput-object p1, v1, Lcom/tencent/open/SocialApiIml$b;->c:Landroid/os/Bundle;
 
-    iput-object p3, v1, Lcom/tencent/open/j;->d:Ljava/lang/String;
+    iput-object p3, v1, Lcom/tencent/open/SocialApiIml$b;->d:Ljava/lang/String;
 
-    iput-object p4, v1, Lcom/tencent/open/j;->e:Lcom/tencent/tauth/IUiListener;
+    iput-object p4, v1, Lcom/tencent/open/SocialApiIml$b;->e:Lcom/tencent/tauth/IUiListener;
 
-    iput-object p2, v1, Lcom/tencent/open/j;->b:Ljava/lang/String;
+    iput-object p2, v1, Lcom/tencent/open/SocialApiIml$b;->b:Ljava/lang/String;
 
     return-object v1
 .end method
@@ -125,7 +125,7 @@
 
     move-result-object v6
 
-    new-instance v0, Lcom/tencent/open/k;
+    new-instance v0, Lcom/tencent/open/SocialApiIml$c;
 
     move-object v1, p0
 
@@ -137,7 +137,7 @@
 
     move-object v5, p4
 
-    invoke-direct/range {v0 .. v5}, Lcom/tencent/open/k;-><init>(Lcom/tencent/open/SocialApiIml;Lcom/tencent/tauth/IUiListener;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-direct/range {v0 .. v5}, Lcom/tencent/open/SocialApiIml$c;-><init>(Lcom/tencent/open/SocialApiIml;Lcom/tencent/tauth/IUiListener;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
 
     const-string v1, "com.tencent.open.agent.EncryTokenActivity"
 
@@ -298,7 +298,7 @@
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
     :goto_1
-    invoke-virtual {v0, v2}, Lcom/tencent/open/k;->onComplete(Ljava/lang/Object;)V
+    invoke-virtual {v0, v2}, Lcom/tencent/open/SocialApiIml$c;->onComplete(Ljava/lang/Object;)V
 
     goto/16 :goto_0
 
@@ -371,7 +371,7 @@
     :cond_1
     const-string v0, "action_voice"
 
-    invoke-direct {p0, p2, v0, v5, p3}, Lcom/tencent/open/SocialApiIml;->a(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;Lcom/tencent/tauth/IUiListener;)Lcom/tencent/open/j;
+    invoke-direct {p0, p2, v0, v5, p3}, Lcom/tencent/open/SocialApiIml;->a(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;Lcom/tencent/tauth/IUiListener;)Lcom/tencent/open/SocialApiIml$b;
 
     move-result-object v0
 
@@ -379,7 +379,7 @@
 
     new-instance v2, Lcom/tencent/open/SocialApiIml$a;
 
-    invoke-direct {v2, p0, v0}, Lcom/tencent/open/SocialApiIml$a;-><init>(Lcom/tencent/open/SocialApiIml;Lcom/tencent/open/j;)V
+    invoke-direct {v2, p0, v0}, Lcom/tencent/open/SocialApiIml$a;-><init>(Lcom/tencent/open/SocialApiIml;Lcom/tencent/open/SocialApiIml$b;)V
 
     invoke-virtual {p0, p1, v1, v2}, Lcom/tencent/open/SocialApiIml;->a(Landroid/app/Activity;Ljava/lang/String;Lcom/tencent/tauth/IUiListener;)V
 
@@ -654,7 +654,7 @@
 .method static synthetic a(Lcom/tencent/open/SocialApiIml;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/tencent/open/SocialApiIml;->c()V
+    invoke-direct {p0}, Lcom/tencent/open/SocialApiIml;->b()V
 
     return-void
 .end method
@@ -691,15 +691,7 @@
     return-object v0
 .end method
 
-.method static synthetic c(Lcom/tencent/open/SocialApiIml;)Landroid/content/Context;
-    .locals 1
-
-    iget-object v0, p0, Lcom/tencent/open/SocialApiIml;->mContext:Landroid/content/Context;
-
-    return-object v0
-.end method
-
-.method private c()V
+.method private b()V
     .locals 1
 
     iget-object v0, p0, Lcom/tencent/open/SocialApiIml;->b:Landroid/app/Activity;
@@ -732,6 +724,14 @@
 
     :cond_0
     return-void
+.end method
+
+.method static synthetic c(Lcom/tencent/open/SocialApiIml;)Landroid/content/Context;
+    .locals 1
+
+    iget-object v0, p0, Lcom/tencent/open/SocialApiIml;->mContext:Landroid/content/Context;
+
+    return-object v0
 .end method
 
 
@@ -957,7 +957,7 @@
 
     const-string v1, "action_grade"
 
-    invoke-direct {p0, p2, v1, v0, p3}, Lcom/tencent/open/SocialApiIml;->a(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;Lcom/tencent/tauth/IUiListener;)Lcom/tencent/open/j;
+    invoke-direct {p0, p2, v1, v0, p3}, Lcom/tencent/open/SocialApiIml;->a(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;Lcom/tencent/tauth/IUiListener;)Lcom/tencent/open/SocialApiIml$b;
 
     move-result-object v0
 
@@ -965,7 +965,7 @@
 
     new-instance v2, Lcom/tencent/open/SocialApiIml$a;
 
-    invoke-direct {v2, p0, v0}, Lcom/tencent/open/SocialApiIml$a;-><init>(Lcom/tencent/open/SocialApiIml;Lcom/tencent/open/j;)V
+    invoke-direct {v2, p0, v0}, Lcom/tencent/open/SocialApiIml$a;-><init>(Lcom/tencent/open/SocialApiIml;Lcom/tencent/open/SocialApiIml$b;)V
 
     invoke-virtual {p0, p1, v1, v2}, Lcom/tencent/open/SocialApiIml;->a(Landroid/app/Activity;Ljava/lang/String;Lcom/tencent/tauth/IUiListener;)V
 
@@ -1095,7 +1095,7 @@
 
     const-string v0, "action_reactive"
 
-    invoke-direct {p0, p2, v0, v5, p3}, Lcom/tencent/open/SocialApiIml;->a(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;Lcom/tencent/tauth/IUiListener;)Lcom/tencent/open/j;
+    invoke-direct {p0, p2, v0, v5, p3}, Lcom/tencent/open/SocialApiIml;->a(Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;Lcom/tencent/tauth/IUiListener;)Lcom/tencent/open/SocialApiIml$b;
 
     move-result-object v0
 
@@ -1103,7 +1103,7 @@
 
     new-instance v2, Lcom/tencent/open/SocialApiIml$a;
 
-    invoke-direct {v2, p0, v0}, Lcom/tencent/open/SocialApiIml$a;-><init>(Lcom/tencent/open/SocialApiIml;Lcom/tencent/open/j;)V
+    invoke-direct {v2, p0, v0}, Lcom/tencent/open/SocialApiIml$a;-><init>(Lcom/tencent/open/SocialApiIml;Lcom/tencent/open/SocialApiIml$b;)V
 
     invoke-virtual {p0, p1, v1, v2}, Lcom/tencent/open/SocialApiIml;->a(Landroid/app/Activity;Ljava/lang/String;Lcom/tencent/tauth/IUiListener;)V
 
@@ -1283,9 +1283,9 @@
 
     new-instance v1, Lcom/tencent/open/b;
 
-    new-instance v2, Lcom/tencent/open/i;
+    new-instance v2, Lcom/tencent/open/SocialApiIml$1;
 
-    invoke-direct {v2, p0, p2, p1, p3}, Lcom/tencent/open/i;-><init>(Lcom/tencent/open/SocialApiIml;Landroid/os/Bundle;Landroid/app/Activity;Lcom/tencent/tauth/IUiListener;)V
+    invoke-direct {v2, p0, p2, p1, p3}, Lcom/tencent/open/SocialApiIml$1;-><init>(Lcom/tencent/open/SocialApiIml;Landroid/os/Bundle;Landroid/app/Activity;Lcom/tencent/tauth/IUiListener;)V
 
     invoke-direct {v1, v2}, Lcom/tencent/open/b;-><init>(Lcom/tencent/open/b$a;)V
 

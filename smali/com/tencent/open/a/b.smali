@@ -1166,11 +1166,11 @@
 .method private a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
     .locals 1
 
-    new-instance v0, Lcom/tencent/open/a/e;
+    new-instance v0, Lcom/tencent/open/a/b$1;
 
-    invoke-direct {v0, p0, p2, p1, p4}, Lcom/tencent/open/a/e;-><init>(Lcom/tencent/open/a/b;Ljava/lang/String;Landroid/content/Context;Landroid/os/Bundle;)V
+    invoke-direct {v0, p0, p2, p1, p4}, Lcom/tencent/open/a/b$1;-><init>(Lcom/tencent/open/a/b;Ljava/lang/String;Landroid/content/Context;Landroid/os/Bundle;)V
 
-    invoke-virtual {v0}, Lcom/tencent/open/a/e;->start()V
+    invoke-virtual {v0}, Lcom/tencent/open/a/b$1;->start()V
 
     return-void
 .end method

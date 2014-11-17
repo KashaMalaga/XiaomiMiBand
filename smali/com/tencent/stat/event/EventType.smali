@@ -14,6 +14,8 @@
 
 
 # static fields
+.field private static final synthetic $VALUES:[Lcom/tencent/stat/event/EventType;
+
 .field public static final enum ADDITION:Lcom/tencent/stat/event/EventType;
 
 .field public static final enum CUSTOM:Lcom/tencent/stat/event/EventType;
@@ -26,11 +28,9 @@
 
 .field public static final enum SESSION_ENV:Lcom/tencent/stat/event/EventType;
 
-.field private static final synthetic b:[Lcom/tencent/stat/event/EventType;
-
 
 # instance fields
-.field private a:I
+.field private v:I
 
 
 # direct methods
@@ -133,7 +133,7 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/tencent/stat/event/EventType;->b:[Lcom/tencent/stat/event/EventType;
+    sput-object v0, Lcom/tencent/stat/event/EventType;->$VALUES:[Lcom/tencent/stat/event/EventType;
 
     return-void
 .end method
@@ -148,7 +148,7 @@
 
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput p3, p0, Lcom/tencent/stat/event/EventType;->a:I
+    iput p3, p0, Lcom/tencent/stat/event/EventType;->v:I
 
     return-void
 .end method
@@ -158,7 +158,7 @@
 .method public GetIntValue()I
     .locals 1
 
-    iget v0, p0, Lcom/tencent/stat/event/EventType;->a:I
+    iget v0, p0, Lcom/tencent/stat/event/EventType;->v:I
 
     return v0
 .end method

@@ -6,13 +6,13 @@
 
 
 # static fields
-.field private static final a:Ljava/lang/String; = "MicroMsg.SDK.WXImageObject"
+.field private static final CONTENT_LENGTH_LIMIT:I = 0xa00000
 
-.field private static final b:I = 0xa00000
+.field private static final PATH_LENGTH_LIMIT:I = 0x2800
 
-.field private static final c:I = 0x2800
+.field private static final TAG:Ljava/lang/String; = "MicroMsg.SDK.WXImageObject"
 
-.field private static final d:I = 0x2800
+.field private static final URL_LENGTH_LIMIT:I = 0x2800
 
 
 # instance fields
@@ -79,7 +79,7 @@
     return-void
 .end method
 
-.method private a(Ljava/lang/String;)I
+.method private getFileSize(Ljava/lang/String;)I
     .locals 3
 
     const/4 v0, 0x0
@@ -220,7 +220,7 @@
 
     iget-object v1, p0, Lcom/tencent/mm/sdk/modelmsg/WXImageObject;->imagePath:Ljava/lang/String;
 
-    invoke-direct {p0, v1}, Lcom/tencent/mm/sdk/modelmsg/WXImageObject;->a(Ljava/lang/String;)I
+    invoke-direct {p0, v1}, Lcom/tencent/mm/sdk/modelmsg/WXImageObject;->getFileSize(Ljava/lang/String;)I
 
     move-result v1
 

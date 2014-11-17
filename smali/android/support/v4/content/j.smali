@@ -1,32 +1,13 @@
-.class Landroid/support/v4/content/j;
+.class interface abstract Landroid/support/v4/content/j;
 .super Ljava/lang/Object;
 
 
-# direct methods
-.method constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
+# virtual methods
+.method public abstract a(Landroid/content/ComponentName;)Landroid/content/Intent;
 .end method
 
-.method public static a(Landroid/content/ComponentName;)Landroid/content/Intent;
-    .locals 1
-
-    invoke-static {p0}, Landroid/content/Intent;->makeMainActivity(Landroid/content/ComponentName;)Landroid/content/Intent;
-
-    move-result-object v0
-
-    return-object v0
+.method public abstract a(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 .end method
 
-.method public static b(Landroid/content/ComponentName;)Landroid/content/Intent;
-    .locals 1
-
-    invoke-static {p0}, Landroid/content/Intent;->makeRestartActivityTask(Landroid/content/ComponentName;)Landroid/content/Intent;
-
-    move-result-object v0
-
-    return-object v0
+.method public abstract b(Landroid/content/ComponentName;)Landroid/content/Intent;
 .end method

@@ -1,12 +1,12 @@
-.class Landroid/support/v4/widget/j;
+.class public abstract Landroid/support/v4/widget/j;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/support/v4/widget/l;
+.implements Landroid/support/v4/widget/h;
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -16,62 +16,26 @@
 
 
 # virtual methods
-.method public a(Landroid/content/Context;)Ljava/lang/Object;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public a(Ljava/lang/Object;II)V
+.method public a(I)V
     .locals 0
 
     return-void
 .end method
 
-.method public a(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public a(Ljava/lang/Object;F)Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public a(Ljava/lang/Object;I)Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public a(Ljava/lang/Object;Landroid/graphics/Canvas;)Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public b(Ljava/lang/Object;)V
+.method public a(Landroid/view/View;)V
     .locals 0
 
     return-void
 .end method
 
-.method public c(Ljava/lang/Object;)Z
-    .locals 1
+.method public a(Landroid/view/View;F)V
+    .locals 0
 
-    const/4 v0, 0x0
+    return-void
+.end method
 
-    return v0
+.method public b(Landroid/view/View;)V
+    .locals 0
+
+    return-void
 .end method

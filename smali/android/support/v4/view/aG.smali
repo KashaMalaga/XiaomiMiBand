@@ -1,20 +1,5 @@
-.class final Landroid/support/v4/view/aG;
+.class Landroid/support/v4/view/aG;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/support/v4/os/ParcelableCompatCreatorCallbacks;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Landroid/support/v4/os/ParcelableCompatCreatorCallbacks",
-        "<",
-        "Landroid/support/v4/view/ViewPager$SavedState;",
-        ">;"
-    }
-.end annotation
 
 
 # direct methods
@@ -26,42 +11,46 @@
     return-void
 .end method
 
-
-# virtual methods
-.method public a(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Landroid/support/v4/view/ViewPager$SavedState;
+.method public static a(Landroid/view/View;)I
     .locals 1
 
-    new-instance v0, Landroid/support/v4/view/ViewPager$SavedState;
+    invoke-virtual {p0}, Landroid/view/View;->getLabelFor()I
 
-    invoke-direct {v0, p1, p2}, Landroid/support/v4/view/ViewPager$SavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+    move-result v0
 
-    return-object v0
+    return v0
 .end method
 
-.method public a(I)[Landroid/support/v4/view/ViewPager$SavedState;
-    .locals 1
+.method public static a(Landroid/view/View;I)V
+    .locals 0
 
-    new-array v0, p1, [Landroid/support/v4/view/ViewPager$SavedState;
+    invoke-virtual {p0, p1}, Landroid/view/View;->setLabelFor(I)V
 
-    return-object v0
+    return-void
 .end method
 
-.method public synthetic createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
-    .locals 1
+.method public static a(Landroid/view/View;Landroid/graphics/Paint;)V
+    .locals 0
 
-    invoke-virtual {p0, p1, p2}, Landroid/support/v4/view/aG;->a(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Landroid/support/v4/view/ViewPager$SavedState;
+    invoke-virtual {p0, p1}, Landroid/view/View;->setLayerPaint(Landroid/graphics/Paint;)V
 
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method
 
-.method public synthetic newArray(I)[Ljava/lang/Object;
+.method public static b(Landroid/view/View;)I
     .locals 1
 
-    invoke-virtual {p0, p1}, Landroid/support/v4/view/aG;->a(I)[Landroid/support/v4/view/ViewPager$SavedState;
+    invoke-virtual {p0}, Landroid/view/View;->getLayoutDirection()I
 
-    move-result-object v0
+    move-result v0
 
-    return-object v0
+    return v0
+.end method
+
+.method public static b(Landroid/view/View;I)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setLayoutDirection(I)V
+
+    return-void
 .end method

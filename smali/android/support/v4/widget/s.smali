@@ -1,24 +1,7 @@
-.class Landroid/support/v4/widget/s;
-.super Landroid/support/v4/widget/r;
-
-
-# direct methods
-.method constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Landroid/support/v4/widget/r;-><init>()V
-
-    return-void
-.end method
+.class public interface abstract Landroid/support/v4/widget/S;
+.super Ljava/lang/Object;
 
 
 # virtual methods
-.method public d(Ljava/lang/Object;)F
-    .locals 1
-
-    invoke-static {p1}, Landroid/support/v4/widget/u;->a(Ljava/lang/Object;)F
-
-    move-result v0
-
-    return v0
+.method public abstract a(Landroid/view/View;Landroid/database/Cursor;I)Z
 .end method

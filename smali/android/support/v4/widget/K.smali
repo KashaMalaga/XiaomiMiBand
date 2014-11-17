@@ -1,20 +1,8 @@
-.class final Landroid/support/v4/widget/K;
+.class Landroid/support/v4/widget/K;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/os/Parcelable$Creator;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Landroid/os/Parcelable$Creator",
-        "<",
-        "Landroid/support/v4/widget/SlidingPaneLayout$SavedState;",
-        ">;"
-    }
-.end annotation
+.implements Landroid/support/v4/widget/J;
 
 
 # direct methods
@@ -28,42 +16,124 @@
 
 
 # virtual methods
-.method public a(Landroid/os/Parcel;)Landroid/support/v4/widget/SlidingPaneLayout$SavedState;
-    .locals 2
+.method public a(Landroid/content/Context;)Landroid/view/View;
+    .locals 1
 
-    new-instance v0, Landroid/support/v4/widget/SlidingPaneLayout$SavedState;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v1}, Landroid/support/v4/widget/SlidingPaneLayout$SavedState;-><init>(Landroid/os/Parcel;Landroid/support/v4/widget/G;)V
+    const/4 v0, 0x0
 
     return-object v0
 .end method
 
-.method public a(I)[Landroid/support/v4/widget/SlidingPaneLayout$SavedState;
+.method public a(Landroid/view/View;)Ljava/lang/CharSequence;
     .locals 1
 
-    new-array v0, p1, [Landroid/support/v4/widget/SlidingPaneLayout$SavedState;
+    const/4 v0, 0x0
 
     return-object v0
 .end method
 
-.method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+.method public a(Landroid/support/v4/widget/D;)Ljava/lang/Object;
     .locals 1
 
-    invoke-virtual {p0, p1}, Landroid/support/v4/widget/K;->a(Landroid/os/Parcel;)Landroid/support/v4/widget/SlidingPaneLayout$SavedState;
-
-    move-result-object v0
+    const/4 v0, 0x0
 
     return-object v0
 .end method
 
-.method public synthetic newArray(I)[Ljava/lang/Object;
+.method public a(Landroid/support/v4/widget/E;)Ljava/lang/Object;
     .locals 1
 
-    invoke-virtual {p0, p1}, Landroid/support/v4/widget/K;->a(I)[Landroid/support/v4/widget/SlidingPaneLayout$SavedState;
-
-    move-result-object v0
+    const/4 v0, 0x0
 
     return-object v0
+.end method
+
+.method public a(Landroid/view/View;I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public a(Landroid/view/View;Landroid/content/ComponentName;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public a(Landroid/view/View;Ljava/lang/CharSequence;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public a(Landroid/view/View;Ljava/lang/CharSequence;Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public a(Landroid/view/View;Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public a(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public b(Landroid/view/View;I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public b(Landroid/view/View;Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public b(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public b(Landroid/view/View;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public c(Landroid/view/View;I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public c(Landroid/view/View;Z)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public c(Landroid/view/View;)Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public d(Landroid/view/View;)Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
 .end method

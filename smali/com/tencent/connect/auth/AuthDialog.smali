@@ -29,7 +29,7 @@
 # instance fields
 .field private b:Ljava/lang/String;
 
-.field private c:Lcom/tencent/connect/auth/m;
+.field private c:Lcom/tencent/connect/auth/AuthDialog$OnTimeListener;
 
 .field private d:Lcom/tencent/tauth/IUiListener;
 
@@ -74,7 +74,7 @@
 
     iput-object p3, p0, Lcom/tencent/connect/auth/AuthDialog;->b:Ljava/lang/String;
 
-    new-instance v0, Lcom/tencent/connect/auth/m;
+    new-instance v0, Lcom/tencent/connect/auth/AuthDialog$OnTimeListener;
 
     invoke-virtual {p5}, Lcom/tencent/connect/auth/QQToken;->getAppId()Ljava/lang/String;
 
@@ -88,19 +88,19 @@
 
     move-object v5, p4
 
-    invoke-direct/range {v0 .. v5}, Lcom/tencent/connect/auth/m;-><init>(Lcom/tencent/connect/auth/AuthDialog;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/tencent/tauth/IUiListener;)V
+    invoke-direct/range {v0 .. v5}, Lcom/tencent/connect/auth/AuthDialog$OnTimeListener;-><init>(Lcom/tencent/connect/auth/AuthDialog;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/tencent/tauth/IUiListener;)V
 
-    iput-object v0, p0, Lcom/tencent/connect/auth/AuthDialog;->c:Lcom/tencent/connect/auth/m;
+    iput-object v0, p0, Lcom/tencent/connect/auth/AuthDialog;->c:Lcom/tencent/connect/auth/AuthDialog$OnTimeListener;
 
-    new-instance v0, Lcom/tencent/connect/auth/n;
+    new-instance v0, Lcom/tencent/connect/auth/AuthDialog$THandler;
 
-    iget-object v1, p0, Lcom/tencent/connect/auth/AuthDialog;->c:Lcom/tencent/connect/auth/m;
+    iget-object v1, p0, Lcom/tencent/connect/auth/AuthDialog;->c:Lcom/tencent/connect/auth/AuthDialog$OnTimeListener;
 
     invoke-virtual {p1}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v2
 
-    invoke-direct {v0, v1, v2}, Lcom/tencent/connect/auth/n;-><init>(Lcom/tencent/connect/auth/m;Landroid/os/Looper;)V
+    invoke-direct {v0, v1, v2}, Lcom/tencent/connect/auth/AuthDialog$THandler;-><init>(Lcom/tencent/connect/auth/AuthDialog$OnTimeListener;Landroid/os/Looper;)V
 
     iput-object v0, p0, Lcom/tencent/connect/auth/AuthDialog;->e:Landroid/os/Handler;
 
@@ -524,10 +524,10 @@
     goto :goto_0
 .end method
 
-.method static synthetic e(Lcom/tencent/connect/auth/AuthDialog;)Lcom/tencent/connect/auth/m;
+.method static synthetic e(Lcom/tencent/connect/auth/AuthDialog;)Lcom/tencent/connect/auth/AuthDialog$OnTimeListener;
     .locals 1
 
-    iget-object v0, p0, Lcom/tencent/connect/auth/AuthDialog;->c:Lcom/tencent/connect/auth/m;
+    iget-object v0, p0, Lcom/tencent/connect/auth/AuthDialog;->c:Lcom/tencent/connect/auth/AuthDialog$OnTimeListener;
 
     return-object v0
 .end method
@@ -556,9 +556,9 @@
 
     iget-object v0, p0, Lcom/tencent/connect/auth/AuthDialog;->k:Landroid/webkit/WebView;
 
-    new-instance v1, Lcom/tencent/connect/auth/l;
+    new-instance v1, Lcom/tencent/connect/auth/AuthDialog$LoginWebViewClient;
 
-    invoke-direct {v1, p0, v2}, Lcom/tencent/connect/auth/l;-><init>(Lcom/tencent/connect/auth/AuthDialog;Lcom/tencent/connect/auth/j;)V
+    invoke-direct {v1, p0, v2}, Lcom/tencent/connect/auth/AuthDialog$LoginWebViewClient;-><init>(Lcom/tencent/connect/auth/AuthDialog;Lcom/tencent/connect/auth/AuthDialog$1;)V
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
@@ -674,11 +674,11 @@
 
     const/4 v3, 0x0
 
-    new-instance v4, Lcom/tencent/connect/auth/k;
+    new-instance v4, Lcom/tencent/connect/auth/AuthDialog$JsListener;
 
     const/4 v5, 0x0
 
-    invoke-direct {v4, p0, v5}, Lcom/tencent/connect/auth/k;-><init>(Lcom/tencent/connect/auth/AuthDialog;Lcom/tencent/connect/auth/j;)V
+    invoke-direct {v4, p0, v5}, Lcom/tencent/connect/auth/AuthDialog$JsListener;-><init>(Lcom/tencent/connect/auth/AuthDialog;Lcom/tencent/connect/auth/AuthDialog$1;)V
 
     aput-object v4, v2, v3
 
@@ -973,9 +973,9 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/connect/auth/AuthDialog;->c:Lcom/tencent/connect/auth/m;
+    iget-object v0, p0, Lcom/tencent/connect/auth/AuthDialog;->c:Lcom/tencent/connect/auth/AuthDialog$OnTimeListener;
 
-    invoke-virtual {v0}, Lcom/tencent/connect/auth/m;->onCancel()V
+    invoke-virtual {v0}, Lcom/tencent/connect/auth/AuthDialog$OnTimeListener;->onCancel()V
 
     :cond_0
     invoke-super {p0}, Landroid/app/Dialog;->onStop()V

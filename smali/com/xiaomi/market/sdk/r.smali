@@ -1,46 +1,92 @@
 .class public Lcom/xiaomi/market/sdk/r;
-.super Landroid/database/sqlite/SQLiteOpenHelper;
+.super Ljava/lang/Object;
 
 
 # static fields
-.field static final a:Ljava/lang/String; = "xiaomi_market_sdk_update.db"
+.field public static a:Lcom/xiaomi/market/sdk/r;
 
-.field static final b:I = 0x1
 
-.field private static c:Lcom/xiaomi/market/sdk/r; = null
+# instance fields
+.field private b:Landroid/content/Context;
 
-.field private static final d:Ljava/lang/String; = "MarketSDKDatabaseHelper"
+.field private c:Lcom/xiaomi/market/sdk/B;
+
+.field private d:Lcom/xiaomi/market/sdk/v;
+
+.field private e:J
+
+.field private f:Ljava/io/File;
+
+.field private g:Landroid/app/DownloadManager;
+
+.field private h:Landroid/os/HandlerThread;
+
+.field private i:Lcom/xiaomi/market/sdk/s;
 
 
 # direct methods
 .method private constructor <init>(Landroid/content/Context;)V
-    .locals 3
+    .locals 2
 
-    const-string v0, "xiaomi_market_sdk_update.db"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
+    const-wide/16 v0, -0x1
 
-    const/4 v2, 0x1
+    iput-wide v0, p0, Lcom/xiaomi/market/sdk/r;->e:J
 
-    invoke-direct {p0, p1, v0, v1, v2}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
+    iput-object p1, p0, Lcom/xiaomi/market/sdk/r;->b:Landroid/content/Context;
+
+    iget-object v0, p0, Lcom/xiaomi/market/sdk/r;->b:Landroid/content/Context;
+
+    const-string v1, "download"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/DownloadManager;
+
+    iput-object v0, p0, Lcom/xiaomi/market/sdk/r;->g:Landroid/app/DownloadManager;
+
+    new-instance v0, Landroid/os/HandlerThread;
+
+    const-string v1, "Worker Thread"
+
+    invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+
+    iput-object v0, p0, Lcom/xiaomi/market/sdk/r;->h:Landroid/os/HandlerThread;
+
+    iget-object v0, p0, Lcom/xiaomi/market/sdk/r;->h:Landroid/os/HandlerThread;
+
+    invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
+
+    new-instance v0, Lcom/xiaomi/market/sdk/s;
+
+    iget-object v1, p0, Lcom/xiaomi/market/sdk/r;->h:Landroid/os/HandlerThread;
+
+    invoke-virtual {v1}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, p0, v1}, Lcom/xiaomi/market/sdk/s;-><init>(Lcom/xiaomi/market/sdk/r;Landroid/os/Looper;)V
+
+    iput-object v0, p0, Lcom/xiaomi/market/sdk/r;->i:Lcom/xiaomi/market/sdk/s;
 
     return-void
 .end method
 
-.method private a(Landroid/database/sqlite/SQLiteDatabase;)V
+.method static synthetic a(Lcom/xiaomi/market/sdk/r;)Landroid/content/Context;
     .locals 1
 
-    const-string v0, "CREATE TABLE update_download (_id INTEGER PRIMARY KEY AUTOINCREMENT,package_name TEXT,download_id INTEGER, version_code INTEGER, apk_url TEXT, apk_hash TEXT, diff_url TEXT, diff_hash TEXT, apk_path TEXT, UNIQUE(package_name));"
+    iget-object v0, p0, Lcom/xiaomi/market/sdk/r;->b:Landroid/content/Context;
 
-    invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
-
-    return-void
+    return-object v0
 .end method
 
-.method public static j(Landroid/content/Context;)Lcom/xiaomi/market/sdk/r;
+.method public static a(Landroid/content/Context;)Lcom/xiaomi/market/sdk/r;
     .locals 1
 
-    sget-object v0, Lcom/xiaomi/market/sdk/r;->c:Lcom/xiaomi/market/sdk/r;
+    sget-object v0, Lcom/xiaomi/market/sdk/r;->a:Lcom/xiaomi/market/sdk/r;
 
     if-nez v0, :cond_0
 
@@ -48,200 +94,309 @@
 
     invoke-direct {v0, p0}, Lcom/xiaomi/market/sdk/r;-><init>(Landroid/content/Context;)V
 
-    sput-object v0, Lcom/xiaomi/market/sdk/r;->c:Lcom/xiaomi/market/sdk/r;
+    sput-object v0, Lcom/xiaomi/market/sdk/r;->a:Lcom/xiaomi/market/sdk/r;
 
     :cond_0
-    sget-object v0, Lcom/xiaomi/market/sdk/r;->c:Lcom/xiaomi/market/sdk/r;
+    sget-object v0, Lcom/xiaomi/market/sdk/r;->a:Lcom/xiaomi/market/sdk/r;
 
     return-object v0
 .end method
 
+.method static synthetic a(Lcom/xiaomi/market/sdk/r;J)V
+    .locals 0
 
-# virtual methods
-.method public a(Landroid/content/ContentValues;)J
-    .locals 4
+    iput-wide p1, p0, Lcom/xiaomi/market/sdk/r;->e:J
 
-    invoke-virtual {p0}, Lcom/xiaomi/market/sdk/r;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    return-void
+.end method
 
-    move-result-object v0
+.method static synthetic a(Lcom/xiaomi/market/sdk/r;Lcom/xiaomi/market/sdk/B;)V
+    .locals 0
 
-    const-string v1, "INSERT OR REPLACE INTO update_download(package_name,download_id,version_code,apk_url,apk_hash,diff_url,diff_hash,apk_path) VALUES(?,?,?,?,?,?,?,?)"
+    iput-object p1, p0, Lcom/xiaomi/market/sdk/r;->c:Lcom/xiaomi/market/sdk/B;
 
-    invoke-virtual {v0, v1}, Landroid/database/sqlite/SQLiteDatabase;->compileStatement(Ljava/lang/String;)Landroid/database/sqlite/SQLiteStatement;
+    return-void
+.end method
 
-    move-result-object v0
+.method static synthetic a(Lcom/xiaomi/market/sdk/r;Lcom/xiaomi/market/sdk/v;)V
+    .locals 0
 
-    const/4 v1, 0x1
+    iput-object p1, p0, Lcom/xiaomi/market/sdk/r;->d:Lcom/xiaomi/market/sdk/v;
 
-    const-string v2, "package_name"
+    return-void
+.end method
 
-    invoke-virtual {p1, v2}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
+.method static synthetic a(Lcom/xiaomi/market/sdk/r;Ljava/io/File;)V
+    .locals 0
 
-    move-result-object v2
+    iput-object p1, p0, Lcom/xiaomi/market/sdk/r;->f:Ljava/io/File;
 
-    invoke-virtual {v0, v1, v2}, Landroid/database/sqlite/SQLiteStatement;->bindString(ILjava/lang/String;)V
+    return-void
+.end method
 
-    const/4 v1, 0x2
+.method static synthetic b(Lcom/xiaomi/market/sdk/r;)Landroid/app/DownloadManager;
+    .locals 1
 
-    const-string v2, "download_id"
+    iget-object v0, p0, Lcom/xiaomi/market/sdk/r;->g:Landroid/app/DownloadManager;
 
-    invoke-virtual {p1, v2}, Landroid/content/ContentValues;->getAsLong(Ljava/lang/String;)Ljava/lang/Long;
+    return-object v0
+.end method
 
-    move-result-object v2
+.method static synthetic c(Lcom/xiaomi/market/sdk/r;)Lcom/xiaomi/market/sdk/B;
+    .locals 1
 
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+    iget-object v0, p0, Lcom/xiaomi/market/sdk/r;->c:Lcom/xiaomi/market/sdk/B;
 
-    move-result-wide v2
+    return-object v0
+.end method
 
-    invoke-virtual {v0, v1, v2, v3}, Landroid/database/sqlite/SQLiteStatement;->bindLong(IJ)V
+.method static synthetic d(Lcom/xiaomi/market/sdk/r;)Lcom/xiaomi/market/sdk/v;
+    .locals 1
 
-    const/4 v1, 0x3
+    iget-object v0, p0, Lcom/xiaomi/market/sdk/r;->d:Lcom/xiaomi/market/sdk/v;
 
-    const-string v2, "version_code"
+    return-object v0
+.end method
 
-    invoke-virtual {p1, v2}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
+.method static synthetic e(Lcom/xiaomi/market/sdk/r;)Ljava/io/File;
+    .locals 1
 
-    move-result-object v2
+    iget-object v0, p0, Lcom/xiaomi/market/sdk/r;->f:Ljava/io/File;
 
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+    return-object v0
+.end method
 
-    move-result v2
+.method static synthetic f(Lcom/xiaomi/market/sdk/r;)J
+    .locals 2
 
-    int-to-long v2, v2
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/database/sqlite/SQLiteStatement;->bindLong(IJ)V
-
-    const/4 v1, 0x4
-
-    const-string v2, "apk_url"
-
-    invoke-virtual {p1, v2}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/database/sqlite/SQLiteStatement;->bindString(ILjava/lang/String;)V
-
-    const/4 v1, 0x5
-
-    const-string v2, "apk_hash"
-
-    invoke-virtual {p1, v2}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/database/sqlite/SQLiteStatement;->bindString(ILjava/lang/String;)V
-
-    const/4 v1, 0x6
-
-    const-string v2, "diff_url"
-
-    invoke-virtual {p1, v2}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/database/sqlite/SQLiteStatement;->bindString(ILjava/lang/String;)V
-
-    const/4 v1, 0x7
-
-    const-string v2, "diff_hash"
-
-    invoke-virtual {p1, v2}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/database/sqlite/SQLiteStatement;->bindString(ILjava/lang/String;)V
-
-    const/16 v1, 0x8
-
-    const-string v2, "apk_path"
-
-    invoke-virtual {p1, v2}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/database/sqlite/SQLiteStatement;->bindString(ILjava/lang/String;)V
-
-    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteStatement;->execute()V
-
-    const-wide/16 v0, 0x1
+    iget-wide v0, p0, Lcom/xiaomi/market/sdk/r;->e:J
 
     return-wide v0
 .end method
 
-.method public declared-synchronized a(Ljava/lang/String;Landroid/content/ContentValues;)J
-    .locals 2
 
-    monitor-enter p0
+# virtual methods
+.method public a(J)V
+    .locals 4
 
-    :try_start_0
-    invoke-virtual {p0}, Lcom/xiaomi/market/sdk/r;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    iget-wide v0, p0, Lcom/xiaomi/market/sdk/r;->e:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-lez v0, :cond_0
+
+    iget-wide v0, p0, Lcom/xiaomi/market/sdk/r;->e:J
+
+    cmp-long v0, v0, p1
+
+    if-eqz v0, :cond_0
+
+    :goto_0
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lcom/xiaomi/market/sdk/r;->i:Lcom/xiaomi/market/sdk/s;
+
+    invoke-virtual {v0}, Lcom/xiaomi/market/sdk/s;->b()V
+
+    goto :goto_0
+.end method
+
+.method public a(Lcom/xiaomi/market/sdk/v;Lcom/xiaomi/market/sdk/B;)V
+    .locals 1
+
+    if-eqz p2, :cond_0
+
+    if-nez p1, :cond_1
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    iput-object p2, p0, Lcom/xiaomi/market/sdk/r;->c:Lcom/xiaomi/market/sdk/B;
+
+    iput-object p1, p0, Lcom/xiaomi/market/sdk/r;->d:Lcom/xiaomi/market/sdk/v;
+
+    iget-object v0, p0, Lcom/xiaomi/market/sdk/r;->i:Lcom/xiaomi/market/sdk/s;
+
+    invoke-virtual {v0}, Lcom/xiaomi/market/sdk/s;->a()V
+
+    goto :goto_0
+.end method
+
+.method public a(Lcom/xiaomi/market/sdk/v;)Z
+    .locals 12
+
+    const-wide/16 v10, -0x1
+
+    const/4 v5, 0x0
+
+    const/4 v9, 0x1
+
+    const/4 v8, 0x0
+
+    iget-object v0, p0, Lcom/xiaomi/market/sdk/r;->b:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/xiaomi/market/sdk/w;->a(Landroid/content/Context;)Lcom/xiaomi/market/sdk/w;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    const-string v1, "update_download"
 
-    invoke-virtual {v0, p1, v1, p2}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
+    sget-object v2, Lcom/xiaomi/market/sdk/q;->l:[Ljava/lang/String;
+
+    const-string v3, "package_name=?"
+
+    new-array v4, v9, [Ljava/lang/String;
+
+    iget-object v6, p1, Lcom/xiaomi/market/sdk/v;->a:Ljava/lang/String;
+
+    aput-object v6, v4, v8
+
+    move-object v6, v5
+
+    move-object v7, v5
+
+    invoke-virtual/range {v0 .. v7}, Lcom/xiaomi/market/sdk/w;->a(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_9
+
+    :try_start_0
+    invoke-interface {v2}, Landroid/database/Cursor;->moveToFirst()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_9
+
+    const-string v0, "download_id"
+
+    invoke-interface {v2, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v0
+
+    invoke-interface {v2, v0}, Landroid/database/Cursor;->getLong(I)J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-wide v0
 
-    monitor-exit p0
+    :goto_0
+    cmp-long v3, v0, v10
 
-    return-wide v0
+    if-nez v3, :cond_2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v2}, Landroid/database/Cursor;->close()V
+
+    :cond_0
+    move v0, v8
+
+    :goto_1
+    return v0
 
     :catchall_0
     move-exception v0
 
-    monitor-exit p0
+    if-eqz v2, :cond_1
 
+    invoke-interface {v2}, Landroid/database/Cursor;->close()V
+
+    :cond_1
     throw v0
-.end method
 
-.method public onCreate(Landroid/database/sqlite/SQLiteDatabase;)V
-    .locals 2
+    :cond_2
+    if-eqz v2, :cond_3
 
-    const-string v0, "MarketSDKDatabaseHelper"
+    invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
-    const-string v1, "create database"
+    :cond_3
+    new-instance v2, Landroid/app/DownloadManager$Query;
 
-    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-direct {v2}, Landroid/app/DownloadManager$Query;-><init>()V
 
-    invoke-direct {p0, p1}, Lcom/xiaomi/market/sdk/r;->a(Landroid/database/sqlite/SQLiteDatabase;)V
+    new-array v3, v9, [J
 
-    return-void
-.end method
+    aput-wide v0, v3, v8
 
-.method public onUpgrade(Landroid/database/sqlite/SQLiteDatabase;II)V
-    .locals 0
+    invoke-virtual {v2, v3}, Landroid/app/DownloadManager$Query;->setFilterById([J)Landroid/app/DownloadManager$Query;
 
-    return-void
-.end method
+    iget-object v0, p0, Lcom/xiaomi/market/sdk/r;->g:Landroid/app/DownloadManager;
 
-.method public query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-    .locals 8
+    invoke-virtual {v0, v2}, Landroid/app/DownloadManager;->query(Landroid/app/DownloadManager$Query;)Landroid/database/Cursor;
 
-    invoke-virtual {p0}, Lcom/xiaomi/market/sdk/r;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    move-result-object v1
 
-    move-result-object v0
+    const/4 v0, -0x1
 
-    move-object v1, p1
+    if-eqz v1, :cond_4
 
-    move-object v2, p2
+    :try_start_1
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
 
-    move-object v3, p3
+    move-result v2
 
-    move-object v4, p4
+    if-eqz v2, :cond_4
 
-    move-object v5, p5
+    const-string v0, "status"
 
-    move-object v6, p6
+    invoke-interface {v1, v0}, Landroid/database/Cursor;->getColumnIndexOrThrow(Ljava/lang/String;)I
 
-    move-object v7, p7
+    move-result v0
 
-    invoke-virtual/range {v0 .. v7}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-interface {v1, v0}, Landroid/database/Cursor;->getInt(I)I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    move-result-object v0
+    move-result v0
 
-    return-object v0
+    :cond_4
+    const/4 v2, 0x4
+
+    if-eq v0, v2, :cond_7
+
+    if-eq v0, v9, :cond_7
+
+    const/4 v2, 0x2
+
+    if-eq v0, v2, :cond_7
+
+    if-eqz v1, :cond_5
+
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    :cond_5
+    move v0, v8
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception v0
+
+    if-eqz v1, :cond_6
+
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    :cond_6
+    throw v0
+
+    :cond_7
+    if-eqz v1, :cond_8
+
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    :cond_8
+    move v0, v9
+
+    goto :goto_1
+
+    :cond_9
+    move-wide v0, v10
+
+    goto :goto_0
 .end method

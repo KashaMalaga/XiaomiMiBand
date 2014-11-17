@@ -1,166 +1,114 @@
-.class public interface abstract Lcom/amap/api/mapcore/aa;
-.super Ljava/lang/Object;
+.class Lcom/amap/api/mapcore/aa;
+.super Landroid/os/Handler;
+
+
+# instance fields
+.field final synthetic a:Lcom/amap/api/mapcore/Z;
+
+
+# direct methods
+.method constructor <init>(Lcom/amap/api/mapcore/Z;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/mapcore/aa;->a:Lcom/amap/api/mapcore/Z;
+
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract A()V
-.end method
+.method public handleMessage(Landroid/os/Message;)V
+    .locals 2
 
-.method public abstract B()Z
-.end method
+    if-nez p1, :cond_0
 
-.method public abstract C()I
-.end method
+    :goto_0
+    return-void
 
-.method public abstract D()I
-.end method
+    :cond_0
+    iget v0, p1, Landroid/os/Message;->what:I
 
-.method public abstract E()I
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public abstract F()I
-.end method
+    goto :goto_0
 
-.method public abstract G()Z
-.end method
+    :pswitch_0
+    iget-object v0, p0, Lcom/amap/api/mapcore/aa;->a:Lcom/amap/api/mapcore/Z;
 
-.method public abstract a(F)V
-.end method
+    invoke-static {v0}, Lcom/amap/api/mapcore/Z;->b(Lcom/amap/api/mapcore/Z;)Lcom/amap/api/mapcore/aE;
 
-.method public abstract a(FF)V
-.end method
+    move-result-object v0
 
-.method public abstract a(I)V
-.end method
+    iget-object v1, p0, Lcom/amap/api/mapcore/aa;->a:Lcom/amap/api/mapcore/Z;
 
-.method public abstract a(II)V
-.end method
+    invoke-static {v1}, Lcom/amap/api/mapcore/Z;->a(Lcom/amap/api/mapcore/Z;)Z
 
-.method public abstract a(Lcom/amap/api/maps/model/BitmapDescriptor;)V
-.end method
+    move-result v1
 
-.method public abstract a(Lcom/amap/api/maps/model/LatLng;)V
-.end method
+    invoke-interface {v0, v1}, Lcom/amap/api/mapcore/aE;->a(Z)V
 
-.method public abstract a(Ljava/lang/Object;)V
-.end method
+    goto :goto_0
 
-.method public abstract a(Ljava/lang/String;)V
-.end method
+    :pswitch_1
+    iget-object v0, p0, Lcom/amap/api/mapcore/aa;->a:Lcom/amap/api/mapcore/Z;
 
-.method public abstract a(Ljava/util/ArrayList;)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcom/amap/api/maps/model/BitmapDescriptor;",
-            ">;)V"
-        }
-    .end annotation
-.end method
+    invoke-static {v0}, Lcom/amap/api/mapcore/Z;->b(Lcom/amap/api/mapcore/Z;)Lcom/amap/api/mapcore/aE;
 
-.method public abstract a(Ljavax/microedition/khronos/opengles/GL10;Lcom/amap/api/mapcore/v;)V
-.end method
+    move-result-object v0
 
-.method public abstract a(Z)V
-.end method
+    iget-object v1, p0, Lcom/amap/api/mapcore/aa;->a:Lcom/amap/api/mapcore/Z;
 
-.method public abstract a(Lcom/amap/api/mapcore/aa;)Z
-.end method
+    invoke-static {v1}, Lcom/amap/api/mapcore/Z;->c(Lcom/amap/api/mapcore/Z;)Z
 
-.method public abstract b(Ljava/lang/String;)V
-.end method
+    move-result v1
 
-.method public abstract b(Z)V
-.end method
+    invoke-interface {v0, v1}, Lcom/amap/api/mapcore/aE;->d(Z)V
 
-.method public abstract b()Z
-.end method
+    goto :goto_0
 
-.method public abstract c(Z)V
-.end method
+    :pswitch_2
+    iget-object v0, p0, Lcom/amap/api/mapcore/aa;->a:Lcom/amap/api/mapcore/Z;
 
-.method public abstract c()Z
-.end method
+    invoke-static {v0}, Lcom/amap/api/mapcore/Z;->b(Lcom/amap/api/mapcore/Z;)Lcom/amap/api/mapcore/aE;
 
-.method public abstract d()Landroid/graphics/Rect;
-.end method
+    move-result-object v0
 
-.method public abstract d(Z)V
-.end method
+    iget-object v1, p0, Lcom/amap/api/mapcore/aa;->a:Lcom/amap/api/mapcore/Z;
 
-.method public abstract e()Lcom/amap/api/maps/model/LatLng;
-.end method
+    invoke-static {v1}, Lcom/amap/api/mapcore/Z;->d(Lcom/amap/api/mapcore/Z;)Z
 
-.method public abstract f()Lcom/autonavi/amap/mapcore/FPoint;
-.end method
+    move-result v1
 
-.method public abstract g()Lcom/amap/api/maps/model/LatLng;
-.end method
+    invoke-interface {v0, v1}, Lcom/amap/api/mapcore/aE;->c(Z)V
 
-.method public abstract h()Ljava/lang/String;
-.end method
+    goto :goto_0
 
-.method public abstract i()I
-.end method
+    :pswitch_3
+    iget-object v0, p0, Lcom/amap/api/mapcore/aa;->a:Lcom/amap/api/mapcore/Z;
 
-.method public abstract j()Ljava/lang/String;
-.end method
+    invoke-static {v0}, Lcom/amap/api/mapcore/Z;->b(Lcom/amap/api/mapcore/Z;)Lcom/amap/api/mapcore/aE;
 
-.method public abstract k()Ljava/lang/String;
-.end method
+    move-result-object v0
 
-.method public abstract l()Z
-.end method
+    iget-object v1, p0, Lcom/amap/api/mapcore/aa;->a:Lcom/amap/api/mapcore/Z;
 
-.method public abstract m()V
-.end method
+    invoke-static {v1}, Lcom/amap/api/mapcore/Z;->e(Lcom/amap/api/mapcore/Z;)Z
 
-.method public abstract n()V
-.end method
+    move-result v1
 
-.method public abstract o()Z
-.end method
+    invoke-interface {v0, v1}, Lcom/amap/api/mapcore/aE;->b(Z)V
 
-.method public abstract p()Z
-.end method
+    goto :goto_0
 
-.method public abstract q()V
-.end method
+    nop
 
-.method public abstract r()I
-.end method
-
-.method public abstract s()Z
-.end method
-
-.method public abstract t()Ljava/lang/Object;
-.end method
-
-.method public abstract u()Z
-.end method
-
-.method public abstract v()F
-.end method
-
-.method public abstract w()I
-.end method
-
-.method public abstract x()Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcom/amap/api/maps/model/BitmapDescriptor;",
-            ">;"
-        }
-    .end annotation
-.end method
-
-.method public abstract y()Z
-.end method
-
-.method public abstract z()V
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+    .end packed-switch
 .end method

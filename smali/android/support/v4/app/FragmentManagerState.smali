@@ -30,9 +30,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Landroid/support/v4/app/B;
+    new-instance v0, Landroid/support/v4/app/L;
 
-    invoke-direct {v0}, Landroid/support/v4/app/B;-><init>()V
+    invoke-direct {v0}, Landroid/support/v4/app/L;-><init>()V
 
     sput-object v0, Landroid/support/v4/app/FragmentManagerState;->CREATOR:Landroid/os/Parcelable$Creator;
 

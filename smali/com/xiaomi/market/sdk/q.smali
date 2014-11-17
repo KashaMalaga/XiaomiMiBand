@@ -1,117 +1,99 @@
-.class public Lcom/xiaomi/market/sdk/q;
+.class public final Lcom/xiaomi/market/sdk/q;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Lcom/xiaomi/market/sdk/p;
 
-# instance fields
-.field public aU:Ljava/lang/String;
 
-.field public aV:Ljava/lang/String;
+# static fields
+.field public static final b:Ljava/lang/String; = "update_download"
 
-.field public aW:Ljava/lang/String;
+.field public static final c:Ljava/lang/String; = "package_name"
 
-.field public aX:Z
+.field public static final d:Ljava/lang/String; = "download_id"
 
-.field public packageName:Ljava/lang/String;
+.field public static final e:Ljava/lang/String; = "version_code"
 
-.field public sourceDir:Ljava/lang/String;
+.field public static final f:Ljava/lang/String; = "apk_url"
 
-.field public versionCode:I
+.field public static final g:Ljava/lang/String; = "apk_hash"
 
-.field public versionName:Ljava/lang/String;
+.field public static final h:Ljava/lang/String; = "diff_url"
+
+.field public static final i:Ljava/lang/String; = "diff_hash"
+
+.field public static final j:Ljava/lang/String; = "apk_path"
+
+.field public static final k:Ljava/lang/String; = "CREATE TABLE update_download (_id INTEGER PRIMARY KEY AUTOINCREMENT,package_name TEXT,download_id INTEGER, version_code INTEGER, apk_url TEXT, apk_hash TEXT, diff_url TEXT, diff_hash TEXT, apk_path TEXT, UNIQUE(package_name));"
+
+.field public static final l:[Ljava/lang/String;
 
 
 # direct methods
-.method private constructor <init>()V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
+
+    const/16 v0, 0x8
+
+    new-array v0, v0, [Ljava/lang/String;
 
     const/4 v1, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v2, "update_download.package_name"
 
-    const-string v0, ""
+    aput-object v2, v0, v1
 
-    iput-object v0, p0, Lcom/xiaomi/market/sdk/q;->packageName:Ljava/lang/String;
+    const/4 v1, 0x1
 
-    const-string v0, ""
+    const-string v2, "update_download.download_id"
 
-    iput-object v0, p0, Lcom/xiaomi/market/sdk/q;->aU:Ljava/lang/String;
+    aput-object v2, v0, v1
 
-    iput v1, p0, Lcom/xiaomi/market/sdk/q;->versionCode:I
+    const/4 v1, 0x2
 
-    const-string v0, ""
+    const-string v2, "update_download.version_code"
 
-    iput-object v0, p0, Lcom/xiaomi/market/sdk/q;->versionName:Ljava/lang/String;
+    aput-object v2, v0, v1
 
-    const-string v0, ""
+    const/4 v1, 0x3
 
-    iput-object v0, p0, Lcom/xiaomi/market/sdk/q;->aV:Ljava/lang/String;
+    const-string v2, "update_download.apk_url"
 
-    const-string v0, ""
+    aput-object v2, v0, v1
 
-    iput-object v0, p0, Lcom/xiaomi/market/sdk/q;->sourceDir:Ljava/lang/String;
+    const/4 v1, 0x4
 
-    const-string v0, ""
+    const-string v2, "update_download.apk_hash"
 
-    iput-object v0, p0, Lcom/xiaomi/market/sdk/q;->aW:Ljava/lang/String;
+    aput-object v2, v0, v1
 
-    iput-boolean v1, p0, Lcom/xiaomi/market/sdk/q;->aX:Z
+    const/4 v1, 0x5
+
+    const-string v2, "update_download.diff_url"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x6
+
+    const-string v2, "update_download.diff_hash"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x7
+
+    const-string v2, "update_download.apk_path"
+
+    aput-object v2, v0, v1
+
+    sput-object v0, Lcom/xiaomi/market/sdk/q;->l:[Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static h(Ljava/lang/String;)Lcom/xiaomi/market/sdk/q;
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
-    new-instance v0, Lcom/xiaomi/market/sdk/q;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lcom/xiaomi/market/sdk/q;-><init>()V
-
-    iput-object p0, v0, Lcom/xiaomi/market/sdk/q;->packageName:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public n()Ljava/lang/String;
-    .locals 2
-
-    iget-object v0, p0, Lcom/xiaomi/market/sdk/q;->sourceDir:Ljava/lang/String;
-
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    iget-object v0, p0, Lcom/xiaomi/market/sdk/q;->aW:Ljava/lang/String;
-
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    new-instance v0, Ljava/io/File;
-
-    iget-object v1, p0, Lcom/xiaomi/market/sdk/q;->sourceDir:Ljava/lang/String;
-
-    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v0}, Lcom/xiaomi/market/sdk/b;->a(Ljava/io/File;)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v0, p0, Lcom/xiaomi/market/sdk/q;->aW:Ljava/lang/String;
-
-    goto :goto_0
+    return-void
 .end method

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/bottom_bar_frame" android:background="@drawable/click_btn_bg_3" android:layout_width="fill_parent" android:layout_height="@dimen/click_button_h" android:layout_centerHorizontal="true">
+        <TextView android:textSize="@dimen/click_button_text_size" android:textColor="@color/main_ui_title_color" android:gravity="center" android:id="@id/left_button" android:background="@drawable/click_btn_bg_3_left_round" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/round_bg_stroke" android:layout_marginTop="@dimen/round_bg_stroke" android:layout_marginBottom="@dimen/round_bg_stroke" android:text="@string/cancel" android:layout_weight="1.0" />
+        <View android:id="@id/bottom_bar_frame_split" android:background="@color/item_stroke" android:layout_width="@dimen/round_bg_stroke" android:layout_height="fill_parent" />
+        <TextView android:textSize="@dimen/click_button_text_size" android:textColor="@color/main_ui_title_color" android:gravity="center" android:id="@id/right_button" android:background="@drawable/click_btn_bg_3_right_round" android:clickable="true" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="@dimen/round_bg_stroke" android:layout_marginRight="@dimen/round_bg_stroke" android:layout_marginBottom="@dimen/round_bg_stroke" android:text="@string/confirm" android:layout_weight="1.0" />
+    </LinearLayout>
+</FrameLayout>

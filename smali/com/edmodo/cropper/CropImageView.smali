@@ -3,45 +3,45 @@
 
 
 # static fields
-.field public static final DEFAULT_ASPECT_RATIO_X:I = 0x1
+.field public static final a:I = 0x1
 
-.field public static final DEFAULT_ASPECT_RATIO_Y:I = 0x1
+.field public static final b:Z = false
 
-.field public static final DEFAULT_FIXED_ASPECT_RATIO:Z = false
+.field public static final c:I = 0x1
 
-.field public static final DEFAULT_GUIDELINES:I = 0x1
+.field public static final d:I = 0x1
 
-.field private static final a:Landroid/graphics/Rect;
+.field private static final e:Landroid/graphics/Rect;
 
-.field private static final b:I = 0x0
+.field private static final f:I = 0x0
 
-.field private static final c:Ljava/lang/String; = "DEGREES_ROTATED"
+.field private static final g:Ljava/lang/String; = "DEGREES_ROTATED"
 
-.field private static final d:Ljava/lang/String; = "CropImageView"
+.field private static final h:Ljava/lang/String; = "CropImageView"
 
 
 # instance fields
-.field private e:Landroid/widget/ImageView;
+.field private i:Landroid/widget/ImageView;
 
-.field private f:Lcom/edmodo/cropper/cropwindow/CropOverlayView;
+.field private j:Lcom/edmodo/cropper/cropwindow/CropOverlayView;
 
-.field private g:Landroid/graphics/Bitmap;
+.field private k:Landroid/graphics/Bitmap;
 
-.field private h:I
-
-.field private i:I
-
-.field private j:I
-
-.field private k:I
-
-.field private l:Z
+.field private l:I
 
 .field private m:I
 
 .field private n:I
 
 .field private o:I
+
+.field private p:Z
+
+.field private q:I
+
+.field private r:I
+
+.field private s:I
 
 
 # direct methods
@@ -52,7 +52,7 @@
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    sput-object v0, Lcom/edmodo/cropper/CropImageView;->a:Landroid/graphics/Rect;
+    sput-object v0, Lcom/edmodo/cropper/CropImageView;->e:Landroid/graphics/Rect;
 
     return-void
 .end method
@@ -66,17 +66,17 @@
 
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    iput v0, p0, Lcom/edmodo/cropper/CropImageView;->h:I
+    iput v0, p0, Lcom/edmodo/cropper/CropImageView;->l:I
 
-    iput v1, p0, Lcom/edmodo/cropper/CropImageView;->k:I
+    iput v1, p0, Lcom/edmodo/cropper/CropImageView;->o:I
 
-    iput-boolean v0, p0, Lcom/edmodo/cropper/CropImageView;->l:Z
+    iput-boolean v0, p0, Lcom/edmodo/cropper/CropImageView;->p:Z
 
-    iput v1, p0, Lcom/edmodo/cropper/CropImageView;->m:I
+    iput v1, p0, Lcom/edmodo/cropper/CropImageView;->q:I
 
-    iput v1, p0, Lcom/edmodo/cropper/CropImageView;->n:I
+    iput v1, p0, Lcom/edmodo/cropper/CropImageView;->r:I
 
-    iput v0, p0, Lcom/edmodo/cropper/CropImageView;->o:I
+    iput v0, p0, Lcom/edmodo/cropper/CropImageView;->s:I
 
     invoke-direct {p0, p1}, Lcom/edmodo/cropper/CropImageView;->a(Landroid/content/Context;)V
 
@@ -92,19 +92,19 @@
 
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    iput v1, p0, Lcom/edmodo/cropper/CropImageView;->h:I
+    iput v1, p0, Lcom/edmodo/cropper/CropImageView;->l:I
 
-    iput v0, p0, Lcom/edmodo/cropper/CropImageView;->k:I
+    iput v0, p0, Lcom/edmodo/cropper/CropImageView;->o:I
 
-    iput-boolean v1, p0, Lcom/edmodo/cropper/CropImageView;->l:Z
+    iput-boolean v1, p0, Lcom/edmodo/cropper/CropImageView;->p:Z
 
-    iput v0, p0, Lcom/edmodo/cropper/CropImageView;->m:I
+    iput v0, p0, Lcom/edmodo/cropper/CropImageView;->q:I
 
-    iput v0, p0, Lcom/edmodo/cropper/CropImageView;->n:I
+    iput v0, p0, Lcom/edmodo/cropper/CropImageView;->r:I
 
-    iput v1, p0, Lcom/edmodo/cropper/CropImageView;->o:I
+    iput v1, p0, Lcom/edmodo/cropper/CropImageView;->s:I
 
-    sget-object v0, Lcom/xiaomi/hm/health/R$styleable;->CropImageView:[I
+    sget-object v0, Lcom/xiaomi/hm/a/s;->CropImageView:[I
 
     invoke-virtual {p1, p2, v0, v1, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
@@ -119,7 +119,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/edmodo/cropper/CropImageView;->k:I
+    iput v0, p0, Lcom/edmodo/cropper/CropImageView;->o:I
 
     const/4 v0, 0x1
 
@@ -129,7 +129,7 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/edmodo/cropper/CropImageView;->l:Z
+    iput-boolean v0, p0, Lcom/edmodo/cropper/CropImageView;->p:Z
 
     const/4 v0, 0x2
 
@@ -139,7 +139,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/edmodo/cropper/CropImageView;->m:I
+    iput v0, p0, Lcom/edmodo/cropper/CropImageView;->q:I
 
     const/4 v0, 0x3
 
@@ -149,7 +149,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/edmodo/cropper/CropImageView;->n:I
+    iput v0, p0, Lcom/edmodo/cropper/CropImageView;->r:I
 
     const/4 v0, 0x4
 
@@ -159,7 +159,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/edmodo/cropper/CropImageView;->o:I
+    iput v0, p0, Lcom/edmodo/cropper/CropImageView;->s:I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -225,7 +225,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f030027
+    const v1, 0x7f030029
 
     const/4 v2, 0x1
 
@@ -233,7 +233,7 @@
 
     move-result-object v1
 
-    const v0, 0x7f0700ce
+    const v0, 0x7f0700db
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -241,13 +241,13 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/edmodo/cropper/CropImageView;->e:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/edmodo/cropper/CropImageView;->i:Landroid/widget/ImageView;
 
-    iget v0, p0, Lcom/edmodo/cropper/CropImageView;->o:I
+    iget v0, p0, Lcom/edmodo/cropper/CropImageView;->s:I
 
-    invoke-virtual {p0, v0}, Lcom/edmodo/cropper/CropImageView;->setImageResource(I)V
+    invoke-virtual {p0, v0}, Lcom/edmodo/cropper/CropImageView;->a(I)V
 
-    const v0, 0x7f0700cf
+    const v0, 0x7f0700dc
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -255,159 +255,39 @@
 
     check-cast v0, Lcom/edmodo/cropper/cropwindow/CropOverlayView;
 
-    iput-object v0, p0, Lcom/edmodo/cropper/CropImageView;->f:Lcom/edmodo/cropper/cropwindow/CropOverlayView;
+    iput-object v0, p0, Lcom/edmodo/cropper/CropImageView;->j:Lcom/edmodo/cropper/cropwindow/CropOverlayView;
 
-    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->f:Lcom/edmodo/cropper/cropwindow/CropOverlayView;
+    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->j:Lcom/edmodo/cropper/cropwindow/CropOverlayView;
 
-    iget v1, p0, Lcom/edmodo/cropper/CropImageView;->k:I
+    iget v1, p0, Lcom/edmodo/cropper/CropImageView;->o:I
 
-    iget-boolean v2, p0, Lcom/edmodo/cropper/CropImageView;->l:Z
+    iget-boolean v2, p0, Lcom/edmodo/cropper/CropImageView;->p:Z
 
-    iget v3, p0, Lcom/edmodo/cropper/CropImageView;->m:I
+    iget v3, p0, Lcom/edmodo/cropper/CropImageView;->q:I
 
-    iget v4, p0, Lcom/edmodo/cropper/CropImageView;->n:I
+    iget v4, p0, Lcom/edmodo/cropper/CropImageView;->r:I
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->setInitialAttributeValues(IZII)V
+    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->a(IZII)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public getActualCropRect()Landroid/graphics/RectF;
-    .locals 7
+.method public a()I
+    .locals 1
 
-    const/4 v6, 0x0
+    iget v0, p0, Lcom/edmodo/cropper/CropImageView;->s:I
 
-    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->g:Landroid/graphics/Bitmap;
-
-    iget-object v1, p0, Lcom/edmodo/cropper/CropImageView;->e:Landroid/widget/ImageView;
-
-    invoke-static {v0, v1}, Lcom/edmodo/cropper/util/ImageViewUtil;->getBitmapRectCenterInside(Landroid/graphics/Bitmap;Landroid/view/View;)Landroid/graphics/Rect;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/edmodo/cropper/CropImageView;->g:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
-
-    move-result v2
-
-    int-to-float v2, v2
-
-    div-float/2addr v1, v2
-
-    iget-object v2, p0, Lcom/edmodo/cropper/CropImageView;->g:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v2
-
-    int-to-float v2, v2
-
-    invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
-
-    move-result v3
-
-    int-to-float v3, v3
-
-    div-float/2addr v2, v3
-
-    sget-object v3, Lcom/edmodo/cropper/cropwindow/edge/Edge;->LEFT:Lcom/edmodo/cropper/cropwindow/edge/Edge;
-
-    invoke-virtual {v3}, Lcom/edmodo/cropper/cropwindow/edge/Edge;->getCoordinate()F
-
-    move-result v3
-
-    iget v4, v0, Landroid/graphics/Rect;->left:I
-
-    int-to-float v4, v4
-
-    sub-float/2addr v3, v4
-
-    sget-object v4, Lcom/edmodo/cropper/cropwindow/edge/Edge;->TOP:Lcom/edmodo/cropper/cropwindow/edge/Edge;
-
-    invoke-virtual {v4}, Lcom/edmodo/cropper/cropwindow/edge/Edge;->getCoordinate()F
-
-    move-result v4
-
-    iget v0, v0, Landroid/graphics/Rect;->top:I
-
-    int-to-float v0, v0
-
-    sub-float v0, v4, v0
-
-    invoke-static {}, Lcom/edmodo/cropper/cropwindow/edge/Edge;->getWidth()F
-
-    move-result v4
-
-    invoke-static {}, Lcom/edmodo/cropper/cropwindow/edge/Edge;->getHeight()F
-
-    move-result v5
-
-    mul-float/2addr v3, v1
-
-    mul-float/2addr v0, v2
-
-    mul-float/2addr v1, v4
-
-    add-float/2addr v1, v3
-
-    mul-float/2addr v2, v5
-
-    add-float/2addr v2, v0
-
-    invoke-static {v6, v3}, Ljava/lang/Math;->max(FF)F
-
-    move-result v3
-
-    invoke-static {v6, v0}, Ljava/lang/Math;->max(FF)F
-
-    move-result v0
-
-    iget-object v4, p0, Lcom/edmodo/cropper/CropImageView;->g:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v4}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v4
-
-    int-to-float v4, v4
-
-    invoke-static {v4, v1}, Ljava/lang/Math;->min(FF)F
-
-    move-result v1
-
-    iget-object v4, p0, Lcom/edmodo/cropper/CropImageView;->g:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v4}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v4
-
-    int-to-float v4, v4
-
-    invoke-static {v4, v2}, Ljava/lang/Math;->min(FF)F
-
-    move-result v2
-
-    new-instance v4, Landroid/graphics/RectF;
-
-    invoke-direct {v4, v3, v0, v1, v2}, Landroid/graphics/RectF;-><init>(FFFF)V
-
-    return-object v4
+    return v0
 .end method
 
-.method public getCroppedImage(II)Landroid/graphics/Bitmap;
+.method public a(II)Landroid/graphics/Bitmap;
     .locals 10
 
     const/high16 v8, 0x42c80000
 
-    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->g:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
 
     if-nez v0, :cond_0
 
@@ -417,15 +297,15 @@
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->g:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
 
-    iget-object v1, p0, Lcom/edmodo/cropper/CropImageView;->e:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/edmodo/cropper/CropImageView;->i:Landroid/widget/ImageView;
 
-    invoke-static {v0, v1}, Lcom/edmodo/cropper/util/ImageViewUtil;->getBitmapRectCenterInside(Landroid/graphics/Bitmap;Landroid/view/View;)Landroid/graphics/Rect;
+    invoke-static {v0, v1}, Lcom/edmodo/cropper/a/c;->a(Landroid/graphics/Bitmap;Landroid/view/View;)Landroid/graphics/Rect;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/edmodo/cropper/CropImageView;->g:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
 
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -441,7 +321,7 @@
 
     div-float/2addr v1, v2
 
-    iget-object v2, p0, Lcom/edmodo/cropper/CropImageView;->g:Landroid/graphics/Bitmap;
+    iget-object v2, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -457,9 +337,9 @@
 
     div-float/2addr v2, v3
 
-    sget-object v3, Lcom/edmodo/cropper/cropwindow/edge/Edge;->LEFT:Lcom/edmodo/cropper/cropwindow/edge/Edge;
+    sget-object v3, Lcom/edmodo/cropper/cropwindow/a/a;->a:Lcom/edmodo/cropper/cropwindow/a/a;
 
-    invoke-virtual {v3}, Lcom/edmodo/cropper/cropwindow/edge/Edge;->getCoordinate()F
+    invoke-virtual {v3}, Lcom/edmodo/cropper/cropwindow/a/a;->a()F
 
     move-result v3
 
@@ -469,9 +349,9 @@
 
     sub-float/2addr v3, v4
 
-    sget-object v4, Lcom/edmodo/cropper/cropwindow/edge/Edge;->TOP:Lcom/edmodo/cropper/cropwindow/edge/Edge;
+    sget-object v4, Lcom/edmodo/cropper/cropwindow/a/a;->b:Lcom/edmodo/cropper/cropwindow/a/a;
 
-    invoke-virtual {v4}, Lcom/edmodo/cropper/cropwindow/edge/Edge;->getCoordinate()F
+    invoke-virtual {v4}, Lcom/edmodo/cropper/cropwindow/a/a;->a()F
 
     move-result v4
 
@@ -481,11 +361,11 @@
 
     sub-float v0, v4, v0
 
-    invoke-static {}, Lcom/edmodo/cropper/cropwindow/edge/Edge;->getWidth()F
+    invoke-static {}, Lcom/edmodo/cropper/cropwindow/a/a;->b()F
 
     move-result v4
 
-    invoke-static {}, Lcom/edmodo/cropper/cropwindow/edge/Edge;->getHeight()F
+    invoke-static {}, Lcom/edmodo/cropper/cropwindow/a/a;->c()F
 
     move-result v5
 
@@ -523,7 +403,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     cmpg-float v0, v4, v8
 
@@ -534,7 +414,7 @@
     if-gez v0, :cond_2
 
     :cond_1
-    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->g:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
 
     goto :goto_0
 
@@ -590,12 +470,12 @@
 
     move-result-object v8
 
-    invoke-static {v2, v8}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v8}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v5, v0, v1}, Landroid/graphics/Matrix;->postScale(FF)Z
 
     :cond_4
-    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->g:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
 
     float-to-int v1, v3
 
@@ -614,475 +494,49 @@
     goto/16 :goto_0
 .end method
 
-.method public getImageResource()I
+.method public a(I)V
     .locals 1
 
-    iget v0, p0, Lcom/edmodo/cropper/CropImageView;->o:I
+    if-eqz p1, :cond_0
 
-    return v0
-.end method
-
-.method protected onLayout(ZIIII)V
-    .locals 2
-
-    invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
-
-    iget v0, p0, Lcom/edmodo/cropper/CropImageView;->i:I
-
-    if-lez v0, :cond_0
-
-    iget v0, p0, Lcom/edmodo/cropper/CropImageView;->j:I
-
-    if-lez v0, :cond_0
-
-    invoke-virtual {p0}, Lcom/edmodo/cropper/CropImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {p0}, Lcom/edmodo/cropper/CropImageView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    iget v1, p0, Lcom/edmodo/cropper/CropImageView;->i:I
+    invoke-static {v0, p1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
-    iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
+    move-result-object v0
 
-    iget v1, p0, Lcom/edmodo/cropper/CropImageView;->j:I
-
-    iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    invoke-virtual {p0, v0}, Lcom/edmodo/cropper/CropImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p0, v0}, Lcom/edmodo/cropper/CropImageView;->a(Landroid/graphics/Bitmap;)V
 
     :cond_0
     return-void
 .end method
 
-.method protected onMeasure(II)V
-    .locals 12
-
-    const-wide/high16 v3, 0x7ff0000000000000L
-
-    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
-
-    move-result v8
-
-    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
-
-    move-result v5
-
-    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
-
-    move-result v9
-
-    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
-
-    move-result v0
-
-    iget-object v1, p0, Lcom/edmodo/cropper/CropImageView;->g:Landroid/graphics/Bitmap;
-
-    if-eqz v1, :cond_4
-
-    invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->g:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v0
-
-    :cond_0
-    iget-object v1, p0, Lcom/edmodo/cropper/CropImageView;->g:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v1
-
-    if-ge v5, v1, :cond_6
-
-    int-to-double v1, v5
-
-    iget-object v6, p0, Lcom/edmodo/cropper/CropImageView;->g:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v6}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v6
-
-    int-to-double v6, v6
-
-    div-double/2addr v1, v6
-
-    :goto_0
-    iget-object v6, p0, Lcom/edmodo/cropper/CropImageView;->g:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v6}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v6
-
-    if-ge v0, v6, :cond_5
-
-    int-to-double v6, v0
-
-    iget-object v10, p0, Lcom/edmodo/cropper/CropImageView;->g:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v10}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v10
-
-    int-to-double v10, v10
-
-    div-double/2addr v6, v10
-
-    :goto_1
-    cmpl-double v10, v1, v3
-
-    if-nez v10, :cond_1
-
-    cmpl-double v3, v6, v3
-
-    if-eqz v3, :cond_3
-
-    :cond_1
-    cmpg-double v3, v1, v6
-
-    if-gtz v3, :cond_2
-
-    iget-object v3, p0, Lcom/edmodo/cropper/CropImageView;->g:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v3}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v3
-
-    int-to-double v3, v3
-
-    mul-double/2addr v1, v3
-
-    double-to-int v1, v1
-
-    move v2, v5
-
-    :goto_2
-    invoke-static {v8, v5, v2}, Lcom/edmodo/cropper/CropImageView;->a(III)I
-
-    move-result v2
-
-    invoke-static {v9, v0, v1}, Lcom/edmodo/cropper/CropImageView;->a(III)I
-
-    move-result v0
-
-    iput v2, p0, Lcom/edmodo/cropper/CropImageView;->i:I
-
-    iput v0, p0, Lcom/edmodo/cropper/CropImageView;->j:I
-
-    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->g:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v0
-
-    iget-object v1, p0, Lcom/edmodo/cropper/CropImageView;->g:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v1
-
-    iget v2, p0, Lcom/edmodo/cropper/CropImageView;->i:I
-
-    iget v3, p0, Lcom/edmodo/cropper/CropImageView;->j:I
-
-    invoke-static {v0, v1, v2, v3}, Lcom/edmodo/cropper/util/ImageViewUtil;->getBitmapRectCenterInside(IIII)Landroid/graphics/Rect;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/edmodo/cropper/CropImageView;->f:Lcom/edmodo/cropper/cropwindow/CropOverlayView;
-
-    invoke-virtual {v1, v0}, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->setBitmapRect(Landroid/graphics/Rect;)V
-
-    iget v0, p0, Lcom/edmodo/cropper/CropImageView;->i:I
-
-    iget v1, p0, Lcom/edmodo/cropper/CropImageView;->j:I
-
-    invoke-virtual {p0, v0, v1}, Lcom/edmodo/cropper/CropImageView;->setMeasuredDimension(II)V
-
-    :goto_3
-    return-void
-
-    :cond_2
-    iget-object v1, p0, Lcom/edmodo/cropper/CropImageView;->g:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v1
-
-    int-to-double v1, v1
-
-    mul-double/2addr v1, v6
-
-    double-to-int v1, v1
-
-    move v2, v1
-
-    move v1, v0
-
-    goto :goto_2
-
-    :cond_3
-    iget-object v1, p0, Lcom/edmodo/cropper/CropImageView;->g:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v2
-
-    iget-object v1, p0, Lcom/edmodo/cropper/CropImageView;->g:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v1
-
-    goto :goto_2
-
-    :cond_4
-    iget-object v1, p0, Lcom/edmodo/cropper/CropImageView;->f:Lcom/edmodo/cropper/cropwindow/CropOverlayView;
-
-    sget-object v2, Lcom/edmodo/cropper/CropImageView;->a:Landroid/graphics/Rect;
-
-    invoke-virtual {v1, v2}, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->setBitmapRect(Landroid/graphics/Rect;)V
-
-    invoke-virtual {p0, v5, v0}, Lcom/edmodo/cropper/CropImageView;->setMeasuredDimension(II)V
-
-    goto :goto_3
-
-    :cond_5
-    move-wide v6, v3
-
-    goto :goto_1
-
-    :cond_6
-    move-wide v1, v3
-
-    goto :goto_0
-.end method
-
-.method public onRestoreInstanceState(Landroid/os/Parcelable;)V
+.method public a(Landroid/graphics/Bitmap;)V
     .locals 2
 
-    instance-of v0, p1, Landroid/os/Bundle;
+    iput-object p1, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
 
-    if-eqz v0, :cond_1
+    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->i:Landroid/widget/ImageView;
 
-    check-cast p1, Landroid/os/Bundle;
-
-    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->g:Landroid/graphics/Bitmap;
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "DEGREES_ROTATED"
-
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/edmodo/cropper/CropImageView;->h:I
-
-    iget v0, p0, Lcom/edmodo/cropper/CropImageView;->h:I
-
-    iget v1, p0, Lcom/edmodo/cropper/CropImageView;->h:I
-
-    invoke-virtual {p0, v1}, Lcom/edmodo/cropper/CropImageView;->rotateImage(I)V
-
-    iput v0, p0, Lcom/edmodo/cropper/CropImageView;->h:I
-
-    :cond_0
-    const-string v0, "instanceState"
-
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
-
-    move-result-object v0
-
-    invoke-super {p0, v0}, Landroid/widget/FrameLayout;->onRestoreInstanceState(Landroid/os/Parcelable;)V
-
-    :goto_0
-    return-void
-
-    :cond_1
-    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onRestoreInstanceState(Landroid/os/Parcelable;)V
-
-    goto :goto_0
-.end method
-
-.method public onSaveInstanceState()Landroid/os/Parcelable;
-    .locals 3
-
-    new-instance v0, Landroid/os/Bundle;
-
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
-
-    const-string v1, "instanceState"
-
-    invoke-super {p0}, Landroid/widget/FrameLayout;->onSaveInstanceState()Landroid/os/Parcelable;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
-
-    const-string v1, "DEGREES_ROTATED"
-
-    iget v2, p0, Lcom/edmodo/cropper/CropImageView;->h:I
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
-
-    return-object v0
-.end method
-
-.method protected onSizeChanged(IIII)V
-    .locals 2
-
-    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->g:Landroid/graphics/Bitmap;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->g:Landroid/graphics/Bitmap;
-
-    invoke-static {v0, p0}, Lcom/edmodo/cropper/util/ImageViewUtil;->getBitmapRectCenterInside(Landroid/graphics/Bitmap;Landroid/view/View;)Landroid/graphics/Rect;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/edmodo/cropper/CropImageView;->f:Lcom/edmodo/cropper/cropwindow/CropOverlayView;
-
-    invoke-virtual {v1, v0}, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->setBitmapRect(Landroid/graphics/Rect;)V
-
-    :goto_0
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->f:Lcom/edmodo/cropper/cropwindow/CropOverlayView;
-
-    sget-object v1, Lcom/edmodo/cropper/CropImageView;->a:Landroid/graphics/Rect;
-
-    invoke-virtual {v0, v1}, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->setBitmapRect(Landroid/graphics/Rect;)V
-
-    goto :goto_0
-.end method
-
-.method public rotateImage(I)V
-    .locals 7
-
-    const/4 v1, 0x0
-
-    new-instance v5, Landroid/graphics/Matrix;
-
-    invoke-direct {v5}, Landroid/graphics/Matrix;-><init>()V
-
-    int-to-float v0, p1
-
-    invoke-virtual {v5, v0}, Landroid/graphics/Matrix;->postRotate(F)Z
-
-    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->g:Landroid/graphics/Bitmap;
-
-    iget-object v2, p0, Lcom/edmodo/cropper/CropImageView;->g:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v3
-
-    iget-object v2, p0, Lcom/edmodo/cropper/CropImageView;->g:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v4
-
-    const/4 v6, 0x1
-
-    move v2, v1
-
-    invoke-static/range {v0 .. v6}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;Z)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/edmodo/cropper/CropImageView;->g:Landroid/graphics/Bitmap;
-
-    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->g:Landroid/graphics/Bitmap;
-
-    invoke-virtual {p0, v0}, Lcom/edmodo/cropper/CropImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
-
-    iget v0, p0, Lcom/edmodo/cropper/CropImageView;->h:I
-
-    add-int/2addr v0, p1
-
-    iput v0, p0, Lcom/edmodo/cropper/CropImageView;->h:I
-
-    iget v0, p0, Lcom/edmodo/cropper/CropImageView;->h:I
-
-    rem-int/lit16 v0, v0, 0x168
-
-    iput v0, p0, Lcom/edmodo/cropper/CropImageView;->h:I
-
-    return-void
-.end method
-
-.method public setAspectRatio(II)V
-    .locals 2
-
-    iput p1, p0, Lcom/edmodo/cropper/CropImageView;->m:I
-
-    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->f:Lcom/edmodo/cropper/cropwindow/CropOverlayView;
-
-    iget v1, p0, Lcom/edmodo/cropper/CropImageView;->m:I
-
-    invoke-virtual {v0, v1}, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->setAspectRatioX(I)V
-
-    iput p2, p0, Lcom/edmodo/cropper/CropImageView;->n:I
-
-    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->f:Lcom/edmodo/cropper/cropwindow/CropOverlayView;
-
-    iget v1, p0, Lcom/edmodo/cropper/CropImageView;->n:I
-
-    invoke-virtual {v0, v1}, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->setAspectRatioY(I)V
-
-    return-void
-.end method
-
-.method public setFixedAspectRatio(Z)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->f:Lcom/edmodo/cropper/cropwindow/CropOverlayView;
-
-    invoke-virtual {v0, p1}, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->setFixedAspectRatio(Z)V
-
-    return-void
-.end method
-
-.method public setGuidelines(I)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->f:Lcom/edmodo/cropper/cropwindow/CropOverlayView;
-
-    invoke-virtual {v0, p1}, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->setGuidelines(I)V
-
-    return-void
-.end method
-
-.method public setImageBitmap(Landroid/graphics/Bitmap;)V
-    .locals 2
-
-    iput-object p1, p0, Lcom/edmodo/cropper/CropImageView;->g:Landroid/graphics/Bitmap;
-
-    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->e:Landroid/widget/ImageView;
-
-    iget-object v1, p0, Lcom/edmodo/cropper/CropImageView;->g:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->f:Lcom/edmodo/cropper/cropwindow/CropOverlayView;
+    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->j:Lcom/edmodo/cropper/cropwindow/CropOverlayView;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->f:Lcom/edmodo/cropper/cropwindow/CropOverlayView;
+    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->j:Lcom/edmodo/cropper/cropwindow/CropOverlayView;
 
-    invoke-virtual {v0}, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->resetCropOverlayView()V
+    invoke-virtual {v0}, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->a()V
 
     :cond_0
     return-void
 .end method
 
-.method public setImageBitmap(Landroid/graphics/Bitmap;Landroid/media/ExifInterface;)V
+.method public a(Landroid/graphics/Bitmap;Landroid/media/ExifInterface;)V
     .locals 7
 
     const/4 v6, 0x1
@@ -1099,7 +553,7 @@
     :cond_0
     if-nez p2, :cond_1
 
-    invoke-virtual {p0, p1}, Lcom/edmodo/cropper/CropImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+    invoke-virtual {p0, p1}, Lcom/edmodo/cropper/CropImageView;->a(Landroid/graphics/Bitmap;)V
 
     goto :goto_0
 
@@ -1122,7 +576,7 @@
     :goto_1
     if-ne v0, v2, :cond_2
 
-    invoke-virtual {p0, p1}, Lcom/edmodo/cropper/CropImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+    invoke-virtual {p0, p1}, Lcom/edmodo/cropper/CropImageView;->a(Landroid/graphics/Bitmap;)V
 
     goto :goto_0
 
@@ -1162,7 +616,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/edmodo/cropper/CropImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+    invoke-virtual {p0, v0}, Lcom/edmodo/cropper/CropImageView;->a(Landroid/graphics/Bitmap;)V
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->recycle()V
 
@@ -1181,21 +635,567 @@
     .end packed-switch
 .end method
 
-.method public setImageResource(I)V
+.method public a(Z)V
     .locals 1
 
-    if-eqz p1, :cond_0
+    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->j:Lcom/edmodo/cropper/cropwindow/CropOverlayView;
 
-    invoke-virtual {p0}, Lcom/edmodo/cropper/CropImageView;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0, p1}, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->a(Z)V
+
+    return-void
+.end method
+
+.method public b()Landroid/graphics/RectF;
+    .locals 7
+
+    const/4 v6, 0x0
+
+    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
+
+    iget-object v1, p0, Lcom/edmodo/cropper/CropImageView;->i:Landroid/widget/ImageView;
+
+    invoke-static {v0, v1}, Lcom/edmodo/cropper/a/c;->a(Landroid/graphics/Bitmap;Landroid/view/View;)Landroid/graphics/Rect;
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    div-float/2addr v1, v2
+
+    iget-object v2, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    div-float/2addr v2, v3
+
+    sget-object v3, Lcom/edmodo/cropper/cropwindow/a/a;->a:Lcom/edmodo/cropper/cropwindow/a/a;
+
+    invoke-virtual {v3}, Lcom/edmodo/cropper/cropwindow/a/a;->a()F
+
+    move-result v3
+
+    iget v4, v0, Landroid/graphics/Rect;->left:I
+
+    int-to-float v4, v4
+
+    sub-float/2addr v3, v4
+
+    sget-object v4, Lcom/edmodo/cropper/cropwindow/a/a;->b:Lcom/edmodo/cropper/cropwindow/a/a;
+
+    invoke-virtual {v4}, Lcom/edmodo/cropper/cropwindow/a/a;->a()F
+
+    move-result v4
+
+    iget v0, v0, Landroid/graphics/Rect;->top:I
+
+    int-to-float v0, v0
+
+    sub-float v0, v4, v0
+
+    invoke-static {}, Lcom/edmodo/cropper/cropwindow/a/a;->b()F
+
+    move-result v4
+
+    invoke-static {}, Lcom/edmodo/cropper/cropwindow/a/a;->c()F
+
+    move-result v5
+
+    mul-float/2addr v3, v1
+
+    mul-float/2addr v0, v2
+
+    mul-float/2addr v1, v4
+
+    add-float/2addr v1, v3
+
+    mul-float/2addr v2, v5
+
+    add-float/2addr v2, v0
+
+    invoke-static {v6, v3}, Ljava/lang/Math;->max(FF)F
+
+    move-result v3
+
+    invoke-static {v6, v0}, Ljava/lang/Math;->max(FF)F
+
+    move-result v0
+
+    iget-object v4, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v4}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    invoke-static {v4, v1}, Ljava/lang/Math;->min(FF)F
+
+    move-result v1
+
+    iget-object v4, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v4}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    invoke-static {v4, v2}, Ljava/lang/Math;->min(FF)F
+
+    move-result v2
+
+    new-instance v4, Landroid/graphics/RectF;
+
+    invoke-direct {v4, v3, v0, v1, v2}, Landroid/graphics/RectF;-><init>(FFFF)V
+
+    return-object v4
+.end method
+
+.method public b(I)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->j:Lcom/edmodo/cropper/cropwindow/CropOverlayView;
+
+    invoke-virtual {v0, p1}, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->a(I)V
+
+    return-void
+.end method
+
+.method public b(II)V
+    .locals 2
+
+    iput p1, p0, Lcom/edmodo/cropper/CropImageView;->q:I
+
+    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->j:Lcom/edmodo/cropper/cropwindow/CropOverlayView;
+
+    iget v1, p0, Lcom/edmodo/cropper/CropImageView;->q:I
+
+    invoke-virtual {v0, v1}, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->b(I)V
+
+    iput p2, p0, Lcom/edmodo/cropper/CropImageView;->r:I
+
+    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->j:Lcom/edmodo/cropper/cropwindow/CropOverlayView;
+
+    iget v1, p0, Lcom/edmodo/cropper/CropImageView;->r:I
+
+    invoke-virtual {v0, v1}, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->c(I)V
+
+    return-void
+.end method
+
+.method public c(I)V
+    .locals 7
+
+    const/4 v1, 0x0
+
+    new-instance v5, Landroid/graphics/Matrix;
+
+    invoke-direct {v5}, Landroid/graphics/Matrix;-><init>()V
+
+    int-to-float v0, p1
+
+    invoke-virtual {v5, v0}, Landroid/graphics/Matrix;->postRotate(F)Z
+
+    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
+
+    iget-object v2, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v3
+
+    iget-object v2, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v4
+
+    const/4 v6, 0x1
+
+    move v2, v1
+
+    invoke-static/range {v0 .. v6}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;Z)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/edmodo/cropper/CropImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+    iput-object v0, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
+
+    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
+
+    invoke-virtual {p0, v0}, Lcom/edmodo/cropper/CropImageView;->a(Landroid/graphics/Bitmap;)V
+
+    iget v0, p0, Lcom/edmodo/cropper/CropImageView;->l:I
+
+    add-int/2addr v0, p1
+
+    iput v0, p0, Lcom/edmodo/cropper/CropImageView;->l:I
+
+    iget v0, p0, Lcom/edmodo/cropper/CropImageView;->l:I
+
+    rem-int/lit16 v0, v0, 0x168
+
+    iput v0, p0, Lcom/edmodo/cropper/CropImageView;->l:I
+
+    return-void
+.end method
+
+.method protected onLayout(ZIIII)V
+    .locals 2
+
+    invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
+
+    iget v0, p0, Lcom/edmodo/cropper/CropImageView;->m:I
+
+    if-lez v0, :cond_0
+
+    iget v0, p0, Lcom/edmodo/cropper/CropImageView;->n:I
+
+    if-lez v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/edmodo/cropper/CropImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    iget v1, p0, Lcom/edmodo/cropper/CropImageView;->m:I
+
+    iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    iget v1, p0, Lcom/edmodo/cropper/CropImageView;->n:I
+
+    iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    invoke-virtual {p0, v0}, Lcom/edmodo/cropper/CropImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     :cond_0
     return-void
+.end method
+
+.method protected onMeasure(II)V
+    .locals 12
+
+    const-wide/high16 v3, 0x7ff0000000000000L
+
+    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
+
+    move-result v8
+
+    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
+
+    move-result v5
+
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
+
+    move-result v9
+
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
+
+    if-eqz v1, :cond_4
+
+    invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v0
+
+    :cond_0
+    iget-object v1, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v1
+
+    if-ge v5, v1, :cond_6
+
+    int-to-double v1, v5
+
+    iget-object v6, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v6}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v6
+
+    int-to-double v6, v6
+
+    div-double/2addr v1, v6
+
+    :goto_0
+    iget-object v6, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v6}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v6
+
+    if-ge v0, v6, :cond_5
+
+    int-to-double v6, v0
+
+    iget-object v10, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v10}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v10
+
+    int-to-double v10, v10
+
+    div-double/2addr v6, v10
+
+    :goto_1
+    cmpl-double v10, v1, v3
+
+    if-nez v10, :cond_1
+
+    cmpl-double v3, v6, v3
+
+    if-eqz v3, :cond_3
+
+    :cond_1
+    cmpg-double v3, v1, v6
+
+    if-gtz v3, :cond_2
+
+    iget-object v3, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v3}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v3
+
+    int-to-double v3, v3
+
+    mul-double/2addr v1, v3
+
+    double-to-int v1, v1
+
+    move v2, v5
+
+    :goto_2
+    invoke-static {v8, v5, v2}, Lcom/edmodo/cropper/CropImageView;->a(III)I
+
+    move-result v2
+
+    invoke-static {v9, v0, v1}, Lcom/edmodo/cropper/CropImageView;->a(III)I
+
+    move-result v0
+
+    iput v2, p0, Lcom/edmodo/cropper/CropImageView;->m:I
+
+    iput v0, p0, Lcom/edmodo/cropper/CropImageView;->n:I
+
+    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v1
+
+    iget v2, p0, Lcom/edmodo/cropper/CropImageView;->m:I
+
+    iget v3, p0, Lcom/edmodo/cropper/CropImageView;->n:I
+
+    invoke-static {v0, v1, v2, v3}, Lcom/edmodo/cropper/a/c;->a(IIII)Landroid/graphics/Rect;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/edmodo/cropper/CropImageView;->j:Lcom/edmodo/cropper/cropwindow/CropOverlayView;
+
+    invoke-virtual {v1, v0}, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->a(Landroid/graphics/Rect;)V
+
+    iget v0, p0, Lcom/edmodo/cropper/CropImageView;->m:I
+
+    iget v1, p0, Lcom/edmodo/cropper/CropImageView;->n:I
+
+    invoke-virtual {p0, v0, v1}, Lcom/edmodo/cropper/CropImageView;->setMeasuredDimension(II)V
+
+    :goto_3
+    return-void
+
+    :cond_2
+    iget-object v1, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v1
+
+    int-to-double v1, v1
+
+    mul-double/2addr v1, v6
+
+    double-to-int v1, v1
+
+    move v2, v1
+
+    move v1, v0
+
+    goto :goto_2
+
+    :cond_3
+    iget-object v1, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v2
+
+    iget-object v1, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v1
+
+    goto :goto_2
+
+    :cond_4
+    iget-object v1, p0, Lcom/edmodo/cropper/CropImageView;->j:Lcom/edmodo/cropper/cropwindow/CropOverlayView;
+
+    sget-object v2, Lcom/edmodo/cropper/CropImageView;->e:Landroid/graphics/Rect;
+
+    invoke-virtual {v1, v2}, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->a(Landroid/graphics/Rect;)V
+
+    invoke-virtual {p0, v5, v0}, Lcom/edmodo/cropper/CropImageView;->setMeasuredDimension(II)V
+
+    goto :goto_3
+
+    :cond_5
+    move-wide v6, v3
+
+    goto :goto_1
+
+    :cond_6
+    move-wide v1, v3
+
+    goto :goto_0
+.end method
+
+.method public onRestoreInstanceState(Landroid/os/Parcelable;)V
+    .locals 2
+
+    instance-of v0, p1, Landroid/os/Bundle;
+
+    if-eqz v0, :cond_1
+
+    check-cast p1, Landroid/os/Bundle;
+
+    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "DEGREES_ROTATED"
+
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/edmodo/cropper/CropImageView;->l:I
+
+    iget v0, p0, Lcom/edmodo/cropper/CropImageView;->l:I
+
+    iget v1, p0, Lcom/edmodo/cropper/CropImageView;->l:I
+
+    invoke-virtual {p0, v1}, Lcom/edmodo/cropper/CropImageView;->c(I)V
+
+    iput v0, p0, Lcom/edmodo/cropper/CropImageView;->l:I
+
+    :cond_0
+    const-string v0, "instanceState"
+
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+
+    move-result-object v0
+
+    invoke-super {p0, v0}, Landroid/widget/FrameLayout;->onRestoreInstanceState(Landroid/os/Parcelable;)V
+
+    :goto_0
+    return-void
+
+    :cond_1
+    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onRestoreInstanceState(Landroid/os/Parcelable;)V
+
+    goto :goto_0
+.end method
+
+.method public onSaveInstanceState()Landroid/os/Parcelable;
+    .locals 3
+
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    const-string v1, "instanceState"
+
+    invoke-super {p0}, Landroid/widget/FrameLayout;->onSaveInstanceState()Landroid/os/Parcelable;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+
+    const-string v1, "DEGREES_ROTATED"
+
+    iget v2, p0, Lcom/edmodo/cropper/CropImageView;->l:I
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+
+    return-object v0
+.end method
+
+.method protected onSizeChanged(IIII)V
+    .locals 2
+
+    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
+
+    invoke-static {v0, p0}, Lcom/edmodo/cropper/a/c;->a(Landroid/graphics/Bitmap;Landroid/view/View;)Landroid/graphics/Rect;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/edmodo/cropper/CropImageView;->j:Lcom/edmodo/cropper/cropwindow/CropOverlayView;
+
+    invoke-virtual {v1, v0}, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->a(Landroid/graphics/Rect;)V
+
+    :goto_0
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->j:Lcom/edmodo/cropper/cropwindow/CropOverlayView;
+
+    sget-object v1, Lcom/edmodo/cropper/CropImageView;->e:Landroid/graphics/Rect;
+
+    invoke-virtual {v0, v1}, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->a(Landroid/graphics/Rect;)V
+
+    goto :goto_0
 .end method

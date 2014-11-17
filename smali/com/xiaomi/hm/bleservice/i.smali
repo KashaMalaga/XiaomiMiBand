@@ -96,7 +96,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Debug;->WARN(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/i;->a:Lcom/xiaomi/hm/bleservice/BLEService;
 
@@ -115,7 +115,7 @@
     :cond_1
     const-string v0, "Quiting HandlerThread..."
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Debug;->DEBUG(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->b(Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/i;->a:Lcom/xiaomi/hm/bleservice/BLEService;
 

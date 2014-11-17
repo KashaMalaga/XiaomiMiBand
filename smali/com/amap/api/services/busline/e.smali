@@ -1,25 +1,19 @@
-.class final Lcom/amap/api/services/busline/e;
+.class Lcom/amap/api/services/busline/e;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/os/Parcelable$Creator;
+.implements Ljava/lang/Runnable;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Landroid/os/Parcelable$Creator",
-        "<",
-        "Lcom/amap/api/services/busline/BusStationItem;",
-        ">;"
-    }
-.end annotation
+# instance fields
+.field final synthetic a:Lcom/amap/api/services/busline/d;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Lcom/amap/api/services/busline/d;)V
     .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/busline/e;->a:Lcom/amap/api/services/busline/d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -28,42 +22,66 @@
 
 
 # virtual methods
-.method public a(Landroid/os/Parcel;)Lcom/amap/api/services/busline/BusStationItem;
-    .locals 2
+.method public run()V
+    .locals 3
 
-    new-instance v0, Lcom/amap/api/services/busline/BusStationItem;
+    new-instance v1, Landroid/os/Message;
 
-    const/4 v1, 0x0
+    invoke-direct {v1}, Landroid/os/Message;-><init>()V
 
-    invoke-direct {v0, p1, v1}, Lcom/amap/api/services/busline/BusStationItem;-><init>(Landroid/os/Parcel;Lcom/amap/api/services/busline/e;)V
+    :try_start_0
+    iget-object v0, p0, Lcom/amap/api/services/busline/e;->a:Lcom/amap/api/services/busline/d;
 
-    return-object v0
-.end method
-
-.method public a(I)[Lcom/amap/api/services/busline/BusStationItem;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-virtual {p0, p1}, Lcom/amap/api/services/busline/e;->a(Landroid/os/Parcel;)Lcom/amap/api/services/busline/BusStationItem;
+    invoke-virtual {v0}, Lcom/amap/api/services/busline/d;->a()Lcom/amap/api/services/busline/c;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    const/4 v2, 0x0
 
-.method public synthetic newArray(I)[Ljava/lang/Object;
-    .locals 1
+    iput v2, v1, Landroid/os/Message;->what:I
 
-    invoke-virtual {p0, p1}, Lcom/amap/api/services/busline/e;->a(I)[Lcom/amap/api/services/busline/BusStationItem;
+    iput-object v0, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
+    :try_end_0
+    .catch Lcom/amap/api/services/core/a; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-object v0
+    iget-object v0, p0, Lcom/amap/api/services/busline/e;->a:Lcom/amap/api/services/busline/d;
 
-    return-object v0
+    iget-object v0, v0, Lcom/amap/api/services/busline/d;->a:Landroid/os/Handler;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    :try_start_1
+    invoke-virtual {v0}, Lcom/amap/api/services/core/a;->b()I
+
+    move-result v0
+
+    iput v0, v1, Landroid/os/Message;->what:I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    iget-object v0, p0, Lcom/amap/api/services/busline/e;->a:Lcom/amap/api/services/busline/d;
+
+    iget-object v0, v0, Lcom/amap/api/services/busline/d;->a:Landroid/os/Handler;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    iget-object v2, p0, Lcom/amap/api/services/busline/e;->a:Lcom/amap/api/services/busline/d;
+
+    iget-object v2, v2, Lcom/amap/api/services/busline/d;->a:Landroid/os/Handler;
+
+    invoke-virtual {v2, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    throw v0
 .end method

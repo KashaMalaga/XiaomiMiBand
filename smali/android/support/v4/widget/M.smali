@@ -1,13 +1,19 @@
-.class Landroid/support/v4/widget/M;
+.class final Landroid/support/v4/widget/M;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/support/v4/widget/L;
+.implements Landroid/widget/SearchView$OnQueryTextListener;
+
+
+# instance fields
+.field final synthetic a:Landroid/support/v4/widget/P;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Landroid/support/v4/widget/P;)V
     .locals 0
+
+    iput-object p1, p0, Landroid/support/v4/widget/M;->a:Landroid/support/v4/widget/P;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -16,26 +22,26 @@
 
 
 # virtual methods
-.method public a(Landroid/support/v4/widget/SlidingPaneLayout;Landroid/view/View;)V
-    .locals 4
+.method public onQueryTextChange(Ljava/lang/String;)Z
+    .locals 1
 
-    invoke-virtual {p2}, Landroid/view/View;->getLeft()I
+    iget-object v0, p0, Landroid/support/v4/widget/M;->a:Landroid/support/v4/widget/P;
+
+    invoke-interface {v0, p1}, Landroid/support/v4/widget/P;->b(Ljava/lang/String;)Z
 
     move-result v0
 
-    invoke-virtual {p2}, Landroid/view/View;->getTop()I
+    return v0
+.end method
 
-    move-result v1
+.method public onQueryTextSubmit(Ljava/lang/String;)Z
+    .locals 1
 
-    invoke-virtual {p2}, Landroid/view/View;->getRight()I
+    iget-object v0, p0, Landroid/support/v4/widget/M;->a:Landroid/support/v4/widget/P;
 
-    move-result v2
+    invoke-interface {v0, p1}, Landroid/support/v4/widget/P;->a(Ljava/lang/String;)Z
 
-    invoke-virtual {p2}, Landroid/view/View;->getBottom()I
+    move-result v0
 
-    move-result v3
-
-    invoke-static {p1, v0, v1, v2, v3}, Landroid/support/v4/view/ViewCompat;->postInvalidateOnAnimation(Landroid/view/View;IIII)V
-
-    return-void
+    return v0
 .end method

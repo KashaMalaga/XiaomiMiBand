@@ -69,7 +69,7 @@
     :cond_0
     iget-object v1, p0, Lcom/xiaomi/channel/openauth/a;->a:Lcom/xiaomi/channel/openauth/AuthorizeActivity;
 
-    sget v2, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->RESULT_SUCCESS:I
+    sget v2, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->a:I
 
     invoke-static {v1, v2, v0}, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->a(Lcom/xiaomi/channel/openauth/AuthorizeActivity;ILjava/lang/String;)V
 
@@ -97,7 +97,7 @@
     :cond_3
     iget-object v1, p0, Lcom/xiaomi/channel/openauth/a;->a:Lcom/xiaomi/channel/openauth/AuthorizeActivity;
 
-    sget v2, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->RESULT_FAIL:I
+    sget v2, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->b:I
 
     invoke-static {v1, v2, v0}, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->a(Lcom/xiaomi/channel/openauth/AuthorizeActivity;ILjava/lang/String;)V
 
@@ -137,7 +137,7 @@
     :cond_5
     iget-object v1, p0, Lcom/xiaomi/channel/openauth/a;->a:Lcom/xiaomi/channel/openauth/AuthorizeActivity;
 
-    sget v2, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->RESULT_SUCCESS:I
+    sget v2, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->a:I
 
     const-string v3, "#"
 
@@ -171,7 +171,7 @@
     :cond_7
     iget-object v1, p0, Lcom/xiaomi/channel/openauth/a;->a:Lcom/xiaomi/channel/openauth/AuthorizeActivity;
 
-    sget v2, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->RESULT_FAIL:I
+    sget v2, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->b:I
 
     const-string v3, "#"
 

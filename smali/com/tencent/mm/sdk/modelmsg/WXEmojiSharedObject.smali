@@ -6,7 +6,7 @@
 
 
 # static fields
-.field private static final a:Ljava/lang/String; = "MicroMsg.SDK.WXEmojiSharedObject"
+.field private static final TAG:Ljava/lang/String; = "MicroMsg.SDK.WXEmojiSharedObject"
 
 
 # instance fields

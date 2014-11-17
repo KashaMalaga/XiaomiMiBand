@@ -3,17 +3,17 @@
 
 
 # static fields
-.field private static a:Ljava/lang/String;
+.field private static appkey:Ljava/lang/String;
 
-.field private static b:Ljava/lang/String;
+.field private static deviceModel:Ljava/lang/String;
 
-.field private static c:Ljava/lang/String;
+.field private static logger:Lcom/tencent/stat/common/StatLogger;
 
-.field private static d:Ljava/lang/String;
+.field private static macId:Ljava/lang/String;
 
-.field private static e:Ljava/util/Random;
+.field private static random:Ljava/util/Random;
 
-.field private static f:Lcom/tencent/stat/common/StatLogger;
+.field private static userId:Ljava/lang/String;
 
 
 # direct methods
@@ -22,38 +22,19 @@
 
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/stat/common/StatCommonHelper;->a:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/stat/common/StatCommonHelper;->userId:Ljava/lang/String;
 
-    sput-object v0, Lcom/tencent/stat/common/StatCommonHelper;->b:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/stat/common/StatCommonHelper;->appkey:Ljava/lang/String;
 
-    sput-object v0, Lcom/tencent/stat/common/StatCommonHelper;->c:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/stat/common/StatCommonHelper;->macId:Ljava/lang/String;
 
-    sput-object v0, Lcom/tencent/stat/common/StatCommonHelper;->d:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/stat/common/StatCommonHelper;->deviceModel:Ljava/lang/String;
 
-    sput-object v0, Lcom/tencent/stat/common/StatCommonHelper;->e:Ljava/util/Random;
+    sput-object v0, Lcom/tencent/stat/common/StatCommonHelper;->random:Ljava/util/Random;
 
-    sput-object v0, Lcom/tencent/stat/common/StatCommonHelper;->f:Lcom/tencent/stat/common/StatLogger;
+    sput-object v0, Lcom/tencent/stat/common/StatCommonHelper;->logger:Lcom/tencent/stat/common/StatLogger;
 
     return-void
-.end method
-
-.method private static a()Ljava/util/Random;
-    .locals 1
-
-    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->e:Ljava/util/Random;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/util/Random;
-
-    invoke-direct {v0}, Ljava/util/Random;-><init>()V
-
-    sput-object v0, Lcom/tencent/stat/common/StatCommonHelper;->e:Ljava/util/Random;
-
-    :cond_0
-    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->e:Ljava/util/Random;
-
-    return-object v0
 .end method
 
 .method public static checkPermission(Landroid/content/Context;Ljava/lang/String;)Z
@@ -285,7 +266,7 @@
     :catch_0
     move-exception v0
 
-    sget-object v1, Lcom/tencent/stat/common/StatCommonHelper;->f:Lcom/tencent/stat/common/StatLogger;
+    sget-object v1, Lcom/tencent/stat/common/StatCommonHelper;->logger:Lcom/tencent/stat/common/StatLogger;
 
     invoke-virtual {v1, v0}, Lcom/tencent/stat/common/StatLogger;->e(Ljava/lang/Object;)V
 
@@ -388,7 +369,7 @@
     :catch_0
     move-exception v0
 
-    sget-object v1, Lcom/tencent/stat/common/StatCommonHelper;->f:Lcom/tencent/stat/common/StatLogger;
+    sget-object v1, Lcom/tencent/stat/common/StatCommonHelper;->logger:Lcom/tencent/stat/common/StatLogger;
 
     invoke-virtual {v1, v0}, Lcom/tencent/stat/common/StatLogger;->e(Ljava/lang/Object;)V
 
@@ -420,11 +401,11 @@
 .method public static getAppKey(Landroid/content/Context;)Ljava/lang/String;
     .locals 3
 
-    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->b:Ljava/lang/String;
+    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->appkey:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->b:Ljava/lang/String;
+    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->appkey:Ljava/lang/String;
 
     :goto_0
     return-object v0
@@ -457,7 +438,7 @@
 
     if-eqz v0, :cond_2
 
-    sput-object v0, Lcom/tencent/stat/common/StatCommonHelper;->b:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/stat/common/StatCommonHelper;->appkey:Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -466,7 +447,7 @@
     :catch_0
     move-exception v0
 
-    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->f:Lcom/tencent/stat/common/StatLogger;
+    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->logger:Lcom/tencent/stat/common/StatLogger;
 
     const-string v1, "Could not read APPKEY meta-data from AndroidManifest.xml"
 
@@ -480,7 +461,7 @@
 
     :cond_2
     :try_start_1
-    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->f:Lcom/tencent/stat/common/StatLogger;
+    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->logger:Lcom/tencent/stat/common/StatLogger;
 
     const-string v1, "Could not read APPKEY meta-data from AndroidManifest.xml"
 
@@ -543,7 +524,7 @@
     move-object v1, v4
 
     :goto_1
-    sget-object v2, Lcom/tencent/stat/common/StatCommonHelper;->f:Lcom/tencent/stat/common/StatLogger;
+    sget-object v2, Lcom/tencent/stat/common/StatCommonHelper;->logger:Lcom/tencent/stat/common/StatLogger;
 
     invoke-virtual {v2, v1}, Lcom/tencent/stat/common/StatLogger;->e(Ljava/lang/Exception;)V
 
@@ -600,7 +581,7 @@
     move-object v1, v4
 
     :goto_1
-    sget-object v2, Lcom/tencent/stat/common/StatCommonHelper;->f:Lcom/tencent/stat/common/StatLogger;
+    sget-object v2, Lcom/tencent/stat/common/StatCommonHelper;->logger:Lcom/tencent/stat/common/StatLogger;
 
     invoke-virtual {v2, v1}, Lcom/tencent/stat/common/StatLogger;->e(Ljava/lang/Exception;)V
 
@@ -672,7 +653,7 @@
     return-object v0
 
     :cond_1
-    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->f:Lcom/tencent/stat/common/StatLogger;
+    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->logger:Lcom/tencent/stat/common/StatLogger;
 
     const-string v2, "deviceId is null"
 
@@ -683,7 +664,7 @@
     goto :goto_0
 
     :cond_2
-    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->f:Lcom/tencent/stat/common/StatLogger;
+    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->logger:Lcom/tencent/stat/common/StatLogger;
 
     const-string v2, "Could not get permission of android.permission.READ_PHONE_STATE"
 
@@ -836,7 +817,7 @@
     goto :goto_0
 
     :cond_2
-    sget-object v1, Lcom/tencent/stat/common/StatCommonHelper;->f:Lcom/tencent/stat/common/StatLogger;
+    sget-object v1, Lcom/tencent/stat/common/StatCommonHelper;->logger:Lcom/tencent/stat/common/StatLogger;
 
     const-string v2, "can not get the permission of android.permission.WRITE_EXTERNAL_STORAGE"
 
@@ -980,7 +961,7 @@
     :catch_0
     move-exception v0
 
-    sget-object v2, Lcom/tencent/stat/common/StatCommonHelper;->f:Lcom/tencent/stat/common/StatLogger;
+    sget-object v2, Lcom/tencent/stat/common/StatCommonHelper;->logger:Lcom/tencent/stat/common/StatLogger;
 
     invoke-virtual {v2, v0}, Lcom/tencent/stat/common/StatLogger;->e(Ljava/lang/Exception;)V
 
@@ -1050,7 +1031,7 @@
     return-object v0
 
     :cond_0
-    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->f:Lcom/tencent/stat/common/StatLogger;
+    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->logger:Lcom/tencent/stat/common/StatLogger;
 
     const-string v1, "Could not read InstallChannel meta-data from AndroidManifest.xml"
 
@@ -1067,7 +1048,7 @@
     :catch_0
     move-exception v0
 
-    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->f:Lcom/tencent/stat/common/StatLogger;
+    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->logger:Lcom/tencent/stat/common/StatLogger;
 
     const-string v1, "Could not read InstallChannel meta-data from AndroidManifest.xml"
 
@@ -1156,7 +1137,7 @@
     goto :goto_0
 
     :cond_3
-    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->f:Lcom/tencent/stat/common/StatLogger;
+    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->logger:Lcom/tencent/stat/common/StatLogger;
 
     const-string v1, "can not get the permission of android.permission.ACCESS_WIFI_STATE"
 
@@ -1171,7 +1152,7 @@
 .method public static getLogger()Lcom/tencent/stat/common/StatLogger;
     .locals 2
 
-    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->f:Lcom/tencent/stat/common/StatLogger;
+    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->logger:Lcom/tencent/stat/common/StatLogger;
 
     if-nez v0, :cond_0
 
@@ -1181,16 +1162,16 @@
 
     invoke-direct {v0, v1}, Lcom/tencent/stat/common/StatLogger;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lcom/tencent/stat/common/StatCommonHelper;->f:Lcom/tencent/stat/common/StatLogger;
+    sput-object v0, Lcom/tencent/stat/common/StatCommonHelper;->logger:Lcom/tencent/stat/common/StatLogger;
 
-    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->f:Lcom/tencent/stat/common/StatLogger;
+    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->logger:Lcom/tencent/stat/common/StatLogger;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/tencent/stat/common/StatLogger;->setDebugEnable(Z)V
 
     :cond_0
-    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->f:Lcom/tencent/stat/common/StatLogger;
+    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->logger:Lcom/tencent/stat/common/StatLogger;
 
     return-object v0
 .end method
@@ -1198,13 +1179,13 @@
 .method public static getMacId(Landroid/content/Context;)Ljava/lang/String;
     .locals 2
 
-    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->c:Ljava/lang/String;
+    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->macId:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
     const-string v0, ""
 
-    sget-object v1, Lcom/tencent/stat/common/StatCommonHelper;->c:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/stat/common/StatCommonHelper;->macId:Ljava/lang/String;
 
     if-ne v0, v1, :cond_1
 
@@ -1213,10 +1194,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/stat/common/StatCommonHelper;->c:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/stat/common/StatCommonHelper;->macId:Ljava/lang/String;
 
     :cond_1
-    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->c:Ljava/lang/String;
+    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->macId:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -1224,7 +1205,7 @@
 .method public static getNextSessionID()I
     .locals 2
 
-    invoke-static {}, Lcom/tencent/stat/common/StatCommonHelper;->a()Ljava/util/Random;
+    invoke-static {}, Lcom/tencent/stat/common/StatCommonHelper;->getRandom()Ljava/util/Random;
 
     move-result-object v0
 
@@ -1235,6 +1216,25 @@
     move-result v0
 
     return v0
+.end method
+
+.method private static getRandom()Ljava/util/Random;
+    .locals 1
+
+    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->random:Ljava/util/Random;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Ljava/util/Random;
+
+    invoke-direct {v0}, Ljava/util/Random;-><init>()V
+
+    sput-object v0, Lcom/tencent/stat/common/StatCommonHelper;->random:Ljava/util/Random;
+
+    :cond_0
+    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->random:Ljava/util/Random;
+
+    return-object v0
 .end method
 
 .method public static getSDKLongVersion(Ljava/lang/String;)J
@@ -1307,7 +1307,7 @@
     :catch_0
     move-exception v0
 
-    sget-object v2, Lcom/tencent/stat/common/StatCommonHelper;->f:Lcom/tencent/stat/common/StatLogger;
+    sget-object v2, Lcom/tencent/stat/common/StatCommonHelper;->logger:Lcom/tencent/stat/common/StatLogger;
 
     invoke-virtual {v2, v0}, Lcom/tencent/stat/common/StatLogger;->e(Ljava/lang/Exception;)V
 
@@ -1316,7 +1316,7 @@
     goto :goto_0
 
     :cond_1
-    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->f:Lcom/tencent/stat/common/StatLogger;
+    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->logger:Lcom/tencent/stat/common/StatLogger;
 
     const-string v2, "Could not get permission of android.permission.READ_PHONE_STATE"
 
@@ -1394,11 +1394,11 @@
 .method public static getUserID(Landroid/content/Context;)Ljava/lang/String;
     .locals 2
 
-    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->a:Ljava/lang/String;
+    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->userId:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->a:Ljava/lang/String;
+    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->userId:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -1410,7 +1410,7 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->a:Ljava/lang/String;
+    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->userId:Ljava/lang/String;
 
     :goto_0
     return-object v0
@@ -1420,13 +1420,13 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/stat/common/StatCommonHelper;->a:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/stat/common/StatCommonHelper;->userId:Ljava/lang/String;
 
-    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->a:Ljava/lang/String;
+    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->userId:Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
-    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->a:Ljava/lang/String;
+    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->userId:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -1439,7 +1439,7 @@
     if-nez v0, :cond_2
 
     :cond_1
-    invoke-static {}, Lcom/tencent/stat/common/StatCommonHelper;->a()Ljava/util/Random;
+    invoke-static {}, Lcom/tencent/stat/common/StatCommonHelper;->getRandom()Ljava/util/Random;
 
     move-result-object v0
 
@@ -1453,10 +1453,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/stat/common/StatCommonHelper;->a:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/stat/common/StatCommonHelper;->userId:Ljava/lang/String;
 
     :cond_2
-    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->a:Ljava/lang/String;
+    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->userId:Ljava/lang/String;
 
     goto :goto_0
 .end method
@@ -1504,7 +1504,7 @@
     :catch_0
     move-exception v0
 
-    sget-object v1, Lcom/tencent/stat/common/StatCommonHelper;->f:Lcom/tencent/stat/common/StatLogger;
+    sget-object v1, Lcom/tencent/stat/common/StatCommonHelper;->logger:Lcom/tencent/stat/common/StatLogger;
 
     invoke-virtual {v1, v0}, Lcom/tencent/stat/common/StatLogger;->e(Ljava/lang/Exception;)V
 
@@ -1513,7 +1513,7 @@
     goto :goto_0
 
     :cond_1
-    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->f:Lcom/tencent/stat/common/StatLogger;
+    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->logger:Lcom/tencent/stat/common/StatLogger;
 
     const-string v1, "Could not get permission of android.permission.ACCESS_WIFI_STATE"
 
@@ -1527,7 +1527,7 @@
 .method public static hasRootAccess(Landroid/content/Context;)I
     .locals 1
 
-    invoke-static {}, Lcom/tencent/stat/common/f;->a()Z
+    invoke-static {}, Lcom/tencent/stat/common/StatCommonHelper$RootCmd;->isRootSystem()Z
 
     move-result v0
 
@@ -1583,7 +1583,7 @@
     return v0
 
     :cond_0
-    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->f:Lcom/tencent/stat/common/StatLogger;
+    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->logger:Lcom/tencent/stat/common/StatLogger;
 
     const-string v2, "Network error"
 
@@ -1594,7 +1594,7 @@
     goto :goto_0
 
     :cond_1
-    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->f:Lcom/tencent/stat/common/StatLogger;
+    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->logger:Lcom/tencent/stat/common/StatLogger;
 
     const-string v2, "can not get the permisson of android.permission.INTERNET"
 
@@ -1679,7 +1679,7 @@
     goto :goto_0
 
     :cond_2
-    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->f:Lcom/tencent/stat/common/StatLogger;
+    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->logger:Lcom/tencent/stat/common/StatLogger;
 
     const-string v2, "can not get the permission of android.permission.ACCESS_WIFI_STATE"
 
@@ -1744,7 +1744,7 @@
     goto :goto_0
 
     :cond_1
-    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->f:Lcom/tencent/stat/common/StatLogger;
+    sget-object v0, Lcom/tencent/stat/common/StatCommonHelper;->logger:Lcom/tencent/stat/common/StatLogger;
 
     const-string v2, "can not get the permisson of android.permission.INTERNET"
 
@@ -1839,7 +1839,7 @@
     :catch_0
     move-exception v0
 
-    sget-object v1, Lcom/tencent/stat/common/StatCommonHelper;->f:Lcom/tencent/stat/common/StatLogger;
+    sget-object v1, Lcom/tencent/stat/common/StatCommonHelper;->logger:Lcom/tencent/stat/common/StatLogger;
 
     invoke-virtual {v1, v0}, Lcom/tencent/stat/common/StatLogger;->e(Ljava/lang/Exception;)V
 

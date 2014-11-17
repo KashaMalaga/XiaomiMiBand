@@ -9,7 +9,7 @@
 
 .field private static c:Ljava/util/TimerTask;
 
-.field private static d:Lcn/com/smartdevices/bracelet/BleTask/BleInComingCallTask;
+.field private static d:Lcn/com/smartdevices/bracelet/a/g;
 
 
 # direct methods
@@ -22,7 +22,7 @@
 
     sput-object v0, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->c:Ljava/util/TimerTask;
 
-    sput-object v0, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->d:Lcn/com/smartdevices/bracelet/BleTask/BleInComingCallTask;
+    sput-object v0, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->d:Lcn/com/smartdevices/bracelet/a/g;
 
     return-void
 .end method
@@ -35,10 +35,10 @@
     return-void
 .end method
 
-.method static synthetic a()Lcn/com/smartdevices/bracelet/BleTask/BleInComingCallTask;
+.method static synthetic a()Lcn/com/smartdevices/bracelet/a/g;
     .locals 1
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->d:Lcn/com/smartdevices/bracelet/BleTask/BleInComingCallTask;
+    sget-object v0, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->d:Lcn/com/smartdevices/bracelet/a/g;
 
     return-object v0
 .end method
@@ -50,7 +50,7 @@
 
     const-string v1, "in startTimerTask"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Ljava/lang/ref/WeakReference;
 
@@ -62,9 +62,9 @@
 
     sput-object v1, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->b:Ljava/util/Timer;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/d;
+    new-instance v1, Lcn/com/smartdevices/bracelet/w;
 
-    invoke-direct {v1, v0}, Lcn/com/smartdevices/bracelet/d;-><init>(Ljava/lang/ref/WeakReference;)V
+    invoke-direct {v1, v0}, Lcn/com/smartdevices/bracelet/w;-><init>(Ljava/lang/ref/WeakReference;)V
 
     sput-object v1, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->c:Ljava/util/TimerTask;
 
@@ -79,10 +79,10 @@
     return-void
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/BleTask/BleInComingCallTask;)V
+.method static synthetic a(Lcn/com/smartdevices/bracelet/a/g;)V
     .locals 0
 
-    sput-object p0, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->d:Lcn/com/smartdevices/bracelet/BleTask/BleInComingCallTask;
+    sput-object p0, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->d:Lcn/com/smartdevices/bracelet/a/g;
 
     return-void
 .end method
@@ -96,7 +96,7 @@
 
     const-string v1, "in stopTimerTask"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v0, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->b:Ljava/util/Timer;
 
@@ -106,7 +106,7 @@
 
     const-string v1, "cancel timer..."
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v0, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->b:Ljava/util/Timer;
 
@@ -127,7 +127,7 @@
 
     const-string v1, "canel task..."
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v0, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->c:Ljava/util/TimerTask;
 
@@ -136,19 +136,19 @@
     sput-object v2, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->c:Ljava/util/TimerTask;
 
     :cond_1
-    sget-object v0, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->d:Lcn/com/smartdevices/bracelet/BleTask/BleInComingCallTask;
+    sget-object v0, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->d:Lcn/com/smartdevices/bracelet/a/g;
 
     if-eqz v0, :cond_2
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/BleTask/BleInComingCallTask;
+    new-instance v0, Lcn/com/smartdevices/bracelet/a/g;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v2, v1}, Lcn/com/smartdevices/bracelet/BleTask/BleInComingCallTask;-><init>(Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;I)V
+    invoke-direct {v0, v2, v1}, Lcn/com/smartdevices/bracelet/a/g;-><init>(Lcn/com/smartdevices/bracelet/a/b;I)V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/BleTask/BleInComingCallTask;->workImmediately()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/a/g;->d()V
 
-    sput-object v2, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->d:Lcn/com/smartdevices/bracelet/BleTask/BleInComingCallTask;
+    sput-object v2, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->d:Lcn/com/smartdevices/bracelet/a/g;
 
     :cond_2
     return-void
@@ -159,7 +159,7 @@
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readPersonInfo()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->h()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v1
 
@@ -194,11 +194,11 @@
 
     const-string v1, "incoming IDLE"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "Call_Idle"
 
-    invoke-static {p1, v0}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->event(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->b()V
 
@@ -227,11 +227,11 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "Call_Ring"
 
-    invoke-static {p1, v0}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->event(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getInComingCallTime()I
 
@@ -266,11 +266,11 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "Call_Offhook"
 
-    invoke-static {p1, v0}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->event(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->b()V
 

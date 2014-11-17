@@ -8,6 +8,8 @@
 # static fields
 .field private static final MAX_Y_OVERSCROLL_DISTANCE:I = 0xc8
 
+.field private static final TAG:Ljava/lang/String; = "MyListView"
+
 
 # instance fields
 .field private disableDrag:Ljava/lang/Boolean;
@@ -171,6 +173,34 @@
 
 .method protected overScrollBy(IIIIIIIIZ)Z
     .locals 10
+
+    const-string v0, "MyListView"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "overscroll: deltaY = "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " scrollY = "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/MyListView;->disableDrag:Ljava/lang/Boolean;
 

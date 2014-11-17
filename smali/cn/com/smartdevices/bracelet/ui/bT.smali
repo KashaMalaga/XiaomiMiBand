@@ -1,107 +1,132 @@
 .class Lcn/com/smartdevices/bracelet/ui/bT;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+.super Landroid/content/BroadcastReceiver;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
-
-.field private final synthetic b:J
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;J)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bT;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bT;->a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
 
-    iput-wide p2, p0, Lcn/com/smartdevices/bracelet/ui/bT;->b:J
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 2
 
-    return-void
-.end method
-
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 5
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bT;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->F(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bT;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+    sget-object v1, Lcom/xiaomi/hm/bleservice/BLEService;->INTENT_ACTION_CONN_STATUS_CHANGED:Ljava/lang/String;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->A(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)I
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->setMode(I)V
+    if-eqz v1, :cond_3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bT;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+    sget-object v0, Lcom/xiaomi/hm/bleservice/BLEService;->INTENT_EXTRA_PARAM:Ljava/lang/String;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->G(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
+    invoke-virtual {p2, v0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bT;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+    check-cast v0, Lcom/xiaomi/hm/bleservice/HwConnStatus;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->A(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)I
+    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->g()Z
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->setMode(I)V
+    if-nez v1, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bT;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->f()Z
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->r(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    :cond_0
+    invoke-static {}, Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;->f()Landroid/os/Handler;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->animRefresh()Landroid/animation/Animator;
+    const/16 v1, 0x1005
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :cond_2
+    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->h()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;->f()Landroid/os/Handler;
 
     move-result-object v0
 
-    iget-wide v1, p0, Lcn/com/smartdevices/bracelet/ui/bT;->b:J
+    const/16 v1, 0x1006
 
-    const-wide/16 v3, 0x2
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    div-long/2addr v1, v3
+    goto :goto_0
 
-    invoke-virtual {v0, v1, v2}, Landroid/animation/Animator;->setDuration(J)Landroid/animation/Animator;
+    :cond_3
+    sget-object v1, Lcom/xiaomi/hm/bleservice/BLEService;->INTENT_ACTION_DEVICE_STATUS_CHANGED:Ljava/lang/String;
 
-    new-instance v1, Landroid/view/animation/DecelerateInterpolator;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    const/high16 v2, 0x3fc00000
+    move-result v0
 
-    invoke-direct {v1, v2}, Landroid/view/animation/DecelerateInterpolator;-><init>(F)V
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v0, v1}, Landroid/animation/Animator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
+    sget-object v0, Lcom/xiaomi/hm/bleservice/BLEService;->INTENT_EXTRA_PARAM:Ljava/lang/String;
 
-    invoke-virtual {v0}, Landroid/animation/Animator;->start()V
+    const/4 v1, -0x1
 
-    return-void
-.end method
+    invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
-.method public onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
+    move-result v0
 
-    return-void
-.end method
+    const/4 v1, 0x6
 
-.method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
+    if-ne v0, v1, :cond_4
 
-    return-void
+    invoke-static {}, Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;->f()Landroid/os/Handler;
+
+    move-result-object v0
+
+    const/16 v1, 0x1007
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    goto :goto_0
+
+    :cond_4
+    const/16 v1, 0x9
+
+    if-ne v0, v1, :cond_1
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;->f()Landroid/os/Handler;
+
+    move-result-object v0
+
+    const/16 v1, 0x1008
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    goto :goto_0
 .end method

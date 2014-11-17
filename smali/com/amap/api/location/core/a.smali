@@ -1,448 +1,299 @@
 .class public Lcom/amap/api/location/core/a;
-.super Ljava/lang/Object;
+.super Ljava/lang/Exception;
 
 
 # static fields
-.field static a:Ljava/lang/String;
+.field public static final a:Ljava/lang/String; = "IO \u64cd\u4f5c\u5f02\u5e38 - IOException"
 
-.field private static b:I
+.field public static final b:Ljava/lang/String; = "socket \u8fde\u63a5\u5f02\u5e38 - SocketException"
+
+.field public static final c:Ljava/lang/String; = "socket \u8fde\u63a5\u8d85\u65f6 - SocketTimeoutException"
+
+.field public static final d:Ljava/lang/String; = "\u65e0\u6548\u7684\u53c2\u6570 - IllegalArgumentException"
+
+.field public static final e:Ljava/lang/String; = "\u7a7a\u6307\u9488\u5f02\u5e38 - NullPointException"
+
+.field public static final f:Ljava/lang/String; = "url\u5f02\u5e38 - MalformedURLException"
+
+.field public static final g:Ljava/lang/String; = "\u672a\u77e5\u4e3b\u673a - UnKnowHostException"
+
+.field public static final h:Ljava/lang/String; = "\u670d\u52a1\u5668\u8fde\u63a5\u5931\u8d25 - UnknownServiceException"
+
+.field public static final i:Ljava/lang/String; = "\u534f\u8bae\u89e3\u6790\u9519\u8bef - ProtocolException"
+
+.field public static final j:Ljava/lang/String; = "http\u8fde\u63a5\u5931\u8d25 - ConnectionException"
+
+.field public static final k:Ljava/lang/String; = "\u672a\u77e5\u7684\u9519\u8bef"
+
+.field public static final l:Ljava/lang/String; = "key\u9274\u6743\u5931\u8d25"
+
+.field public static final m:I = 0x15
+
+.field public static final n:I = 0x16
+
+.field public static final o:I = 0x17
+
+.field public static final p:I = 0x18
+
+.field public static final q:I = 0x19
+
+.field public static final r:I = 0x1a
+
+.field public static final s:I = 0x1b
+
+.field public static final t:I = 0x1c
+
+.field public static final u:I = 0x1d
+
+.field public static final v:I = 0x1e
+
+.field public static final w:I = 0x1f
+
+.field public static final x:I = 0x20
+
+
+# instance fields
+.field private y:Ljava/lang/String;
+
+.field private z:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const/4 v0, -0x1
-
-    sput v0, Lcom/amap/api/location/core/a;->b:I
-
-    const-string v0, ""
-
-    sput-object v0, Lcom/amap/api/location/core/a;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
+
+    const-string v0, "\u6b63\u5e38"
+
+    iput-object v0, p0, Lcom/amap/api/location/core/a;->y:Ljava/lang/String;
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/amap/api/location/core/a;->z:I
 
     return-void
 .end method
 
-.method public static a()I
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
-    sget v0, Lcom/amap/api/location/core/a;->b:I
+    invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
 
-    return v0
+    const-string v0, "\u6b63\u5e38"
+
+    iput-object v0, p0, Lcom/amap/api/location/core/a;->y:Ljava/lang/String;
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/amap/api/location/core/a;->z:I
+
+    iput-object p1, p0, Lcom/amap/api/location/core/a;->y:Ljava/lang/String;
+
+    invoke-direct {p0, p1}, Lcom/amap/api/location/core/a;->a(Ljava/lang/String;)V
+
+    return-void
 .end method
 
-.method public static a(Ljava/lang/String;)Ljava/lang/String;
-    .locals 6
+.method private a(Ljava/lang/String;)V
+    .locals 1
 
-    const/4 v1, 0x0
+    const-string v0, "IO \u64cd\u4f5c\u5f02\u5e38 - IOException"
 
-    const-string v0, "&"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Ljava/util/Arrays;->sort([Ljava/lang/Object;)V
-
-    new-instance v3, Ljava/lang/StringBuffer;
-
-    invoke-direct {v3}, Ljava/lang/StringBuffer;-><init>()V
-
-    array-length v4, v2
-
-    move v0, v1
-
-    :goto_0
-    if-ge v0, v4, :cond_0
-
-    aget-object v5, v2, v0
-
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    const-string v5, "&"
-
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v3}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    const/4 v3, 0x1
-
-    if-le v2, v3, :cond_1
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v2
-
-    add-int/lit8 v2, v2, -0x1
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->subSequence(II)Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    :goto_1
-    return-object v0
-
-    :cond_1
-    move-object v0, p0
-
-    goto :goto_1
-.end method
-
-.method public static declared-synchronized a(Landroid/content/Context;)Z
-    .locals 6
-
-    const/4 v1, 0x1
-
-    const-class v2, Lcom/amap/api/location/core/a;
-
-    monitor-enter v2
-
-    :try_start_0
-    invoke-static {}, Lcom/amap/api/location/core/a;->c()[B
-
-    move-result-object v0
-
-    invoke-static {}, Lcom/amap/api/location/core/a;->b()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {}, Lcom/aps/l;->a()Lcom/aps/l;
-
-    move-result-object v4
-
-    const-string v5, "loc"
-
-    invoke-virtual {v4, p0, v3, v0, v5}, Lcom/aps/l;->a(Landroid/content/Context;Ljava/lang/String;[BLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    invoke-static {v0}, Lcom/amap/api/location/core/a;->c(Ljava/lang/String;)Z
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    :goto_0
-    :try_start_1
-    sget v3, Lcom/amap/api/location/core/a;->b:I
+    if-eqz v0, :cond_1
 
-    if-eq v3, v1, :cond_0
+    const/16 v0, 0x15
 
-    const/4 v1, 0x0
-
-    sput v1, Lcom/amap/api/location/core/a;->b:I
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :cond_0
-    :goto_1
-    monitor-exit v2
-
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    :try_start_2
-    sput v0, Lcom/amap/api/location/core/a;->b:I
-    :try_end_2
-    .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    move v0, v1
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    const/4 v3, 0x0
-
-    :try_start_3
-    sput v3, Lcom/amap/api/location/core/a;->b:I
-
-    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :try_start_4
-    sget v0, Lcom/amap/api/location/core/a;->b:I
-
-    if-eq v0, v1, :cond_2
-
-    const/4 v0, 0x0
-
-    sput v0, Lcom/amap/api/location/core/a;->b:I
-
-    :cond_2
-    move v0, v1
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception v0
-
-    sget v3, Lcom/amap/api/location/core/a;->b:I
-
-    if-eq v3, v1, :cond_3
-
-    const/4 v1, 0x0
-
-    sput v1, Lcom/amap/api/location/core/a;->b:I
-
-    :cond_3
-    throw v0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
-
-    :catchall_1
-    move-exception v0
-
-    monitor-exit v2
-
-    throw v0
-.end method
-
-.method private static b()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "http://apiinit.amap.com/v3/log/init"
-
-    return-object v0
-.end method
-
-.method public static b(Ljava/lang/String;)Ljava/lang/String;
-    .locals 4
-
-    new-instance v0, Ljava/lang/StringBuffer;
-
-    invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    invoke-static {}, Lcom/amap/api/location/core/d;->a()Ljava/lang/String;
-
-    move-result-object v1
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "&ts="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "&scode="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-static {v1, p0}, Lcom/amap/api/location/core/d;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method private static c(Ljava/lang/String;)Z
-    .locals 4
-
-    const/4 v1, 0x0
-
-    const/4 v0, 0x1
-
-    :try_start_0
-    new-instance v2, Lorg/json/JSONObject;
-
-    invoke-direct {v2, p0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
-
-    const-string v3, "status"
-
-    invoke-virtual {v2, v3}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    const-string v3, "status"
-
-    invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
-
-    move-result v3
-
-    if-ne v3, v0, :cond_3
-
-    const/4 v3, 0x1
-
-    sput v3, Lcom/amap/api/location/core/a;->b:I
+    iput v0, p0, Lcom/amap/api/location/core/a;->z:I
 
     :cond_0
     :goto_0
-    const-string v3, "info"
-
-    invoke-virtual {v2, v3}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    const-string v3, "info"
-
-    invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    sput-object v2, Lcom/amap/api/location/core/a;->a:Ljava/lang/String;
+    return-void
 
     :cond_1
-    sget v2, Lcom/amap/api/location/core/a;->b:I
+    const-string v0, "socket \u8fde\u63a5\u5f02\u5e38 - SocketException"
 
-    if-nez v2, :cond_2
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    const-string v2, "AuthFailure"
+    move-result v0
 
-    sget-object v3, Lcom/amap/api/location/core/a;->a:Ljava/lang/String;
+    if-eqz v0, :cond_2
 
-    invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    const/16 v0, 0x16
 
-    :cond_2
-    :goto_1
-    sget v2, Lcom/amap/api/location/core/a;->b:I
-
-    if-ne v2, v0, :cond_4
-
-    :goto_2
-    return v0
-
-    :cond_3
-    if-nez v3, :cond_0
-
-    const/4 v3, 0x0
-
-    :try_start_1
-    sput v3, Lcom/amap/api/location/core/a;->b:I
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    iput v0, p0, Lcom/amap/api/location/core/a;->z:I
 
     goto :goto_0
 
-    :catch_0
-    move-exception v2
+    :cond_2
+    const-string v0, "socket \u8fde\u63a5\u8d85\u65f6 - SocketTimeoutException"
 
-    invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    sput v1, Lcom/amap/api/location/core/a;->b:I
+    move-result v0
 
-    goto :goto_1
+    if-eqz v0, :cond_3
+
+    const/16 v0, 0x17
+
+    iput v0, p0, Lcom/amap/api/location/core/a;->z:I
+
+    goto :goto_0
+
+    :cond_3
+    const-string v0, "\u65e0\u6548\u7684\u53c2\u6570 - IllegalArgumentException"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    const/16 v0, 0x18
+
+    iput v0, p0, Lcom/amap/api/location/core/a;->z:I
+
+    goto :goto_0
 
     :cond_4
-    move v0, v1
+    const-string v0, "\u7a7a\u6307\u9488\u5f02\u5e38 - NullPointException"
 
-    goto :goto_2
-.end method
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-.method private static c()[B
-    .locals 2
+    move-result v0
 
-    :try_start_0
-    new-instance v0, Ljava/lang/StringBuffer;
+    if-eqz v0, :cond_5
 
-    invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
+    const/16 v0, 0x19
 
-    const-string v1, "resType=json&encode=UTF-8&ec=1"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/amap/api/location/core/a;->a(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/amap/api/location/core/a;->b(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "UTF-8"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result-object v0
-
-    :goto_0
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
-
-    const/4 v0, 0x0
+    iput v0, p0, Lcom/amap/api/location/core/a;->z:I
 
     goto :goto_0
+
+    :cond_5
+    const-string v0, "url\u5f02\u5e38 - MalformedURLException"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    const/16 v0, 0x1a
+
+    iput v0, p0, Lcom/amap/api/location/core/a;->z:I
+
+    goto :goto_0
+
+    :cond_6
+    const-string v0, "\u672a\u77e5\u4e3b\u673a - UnKnowHostException"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    const/16 v0, 0x1b
+
+    iput v0, p0, Lcom/amap/api/location/core/a;->z:I
+
+    goto :goto_0
+
+    :cond_7
+    const-string v0, "\u670d\u52a1\u5668\u8fde\u63a5\u5931\u8d25 - UnknownServiceException"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_8
+
+    const/16 v0, 0x1c
+
+    iput v0, p0, Lcom/amap/api/location/core/a;->z:I
+
+    goto :goto_0
+
+    :cond_8
+    const-string v0, "\u534f\u8bae\u89e3\u6790\u9519\u8bef - ProtocolException"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_9
+
+    const/16 v0, 0x1d
+
+    iput v0, p0, Lcom/amap/api/location/core/a;->z:I
+
+    goto :goto_0
+
+    :cond_9
+    const-string v0, "http\u8fde\u63a5\u5931\u8d25 - ConnectionException"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_a
+
+    const/16 v0, 0x1e
+
+    iput v0, p0, Lcom/amap/api/location/core/a;->z:I
+
+    goto :goto_0
+
+    :cond_a
+    const-string v0, "\u672a\u77e5\u7684\u9519\u8bef"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_b
+
+    const/16 v0, 0x1f
+
+    iput v0, p0, Lcom/amap/api/location/core/a;->z:I
+
+    goto/16 :goto_0
+
+    :cond_b
+    const-string v0, "key\u9274\u6743\u5931\u8d25"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/16 v0, 0x20
+
+    iput v0, p0, Lcom/amap/api/location/core/a;->z:I
+
+    goto/16 :goto_0
+.end method
+
+
+# virtual methods
+.method public a()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/location/core/a;->y:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public b()I
+    .locals 1
+
+    iget v0, p0, Lcom/amap/api/location/core/a;->z:I
+
+    return v0
 .end method

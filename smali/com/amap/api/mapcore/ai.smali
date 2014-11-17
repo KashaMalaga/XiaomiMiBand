@@ -1,67 +1,40 @@
-.class public interface abstract Lcom/amap/api/mapcore/ai;
+.class public interface abstract Lcom/amap/api/mapcore/aI;
 .super Ljava/lang/Object;
 
 
 # virtual methods
-.method public abstract a(I)V
+.method public abstract a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 .end method
 
-.method public abstract a(Z)V
+.method public abstract a()Lcom/amap/api/mapcore/aE;
 .end method
 
-.method public abstract a()Z
+.method public abstract a(Landroid/app/Activity;Lcom/amap/api/maps/AMapOptions;Landroid/os/Bundle;)V
 .end method
 
-.method public abstract b(I)V
+.method public abstract a(Landroid/content/Context;)V
 .end method
 
-.method public abstract b(Z)V
+.method public abstract a(Landroid/os/Bundle;)V
 .end method
 
-.method public abstract b()Z
+.method public abstract a(Lcom/amap/api/maps/AMapOptions;)V
 .end method
 
-.method public abstract c(Z)V
+.method public abstract b()V
 .end method
 
-.method public abstract c()Z
+.method public abstract b(Landroid/os/Bundle;)V
 .end method
 
-.method public abstract d(Z)V
+.method public abstract c()V
 .end method
 
-.method public abstract d()Z
+.method public abstract d()V
 .end method
 
-.method public abstract e(Z)V
+.method public abstract e()V
 .end method
 
-.method public abstract e()Z
-.end method
-
-.method public abstract f(Z)V
-.end method
-
-.method public abstract f()Z
-.end method
-
-.method public abstract g(Z)V
-.end method
-
-.method public abstract g()Z
-.end method
-
-.method public abstract h(Z)V
-.end method
-
-.method public abstract h()Z
-.end method
-
-.method public abstract i()I
-.end method
-
-.method public abstract i(Z)V
-.end method
-
-.method public abstract j()I
+.method public abstract f()V
 .end method

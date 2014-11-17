@@ -5,19 +5,19 @@
 # static fields
 .field public static final ACTION_WXAPPMESSAGE:Ljava/lang/String; = "com.tencent.mm.sdk.openapi.Intent.ACTION_WXAPPMESSAGE"
 
+.field private static final DESCRIPTION_LENGTH_LIMIT:I = 0x400
+
+.field private static final MEDIA_TAG_NAME_LENGTH_LIMIT:I = 0x40
+
+.field private static final MESSAGE_ACTION_LENGTH_LIMIT:I = 0x800
+
+.field private static final MESSAGE_EXT_LENGTH_LIMIT:I = 0x800
+
+.field private static final TAG:Ljava/lang/String; = "MicroMsg.SDK.WXMediaMessage"
+
 .field public static final THUMB_LENGTH_LIMIT:I = 0x8000
 
-.field private static final a:Ljava/lang/String; = "MicroMsg.SDK.WXMediaMessage"
-
-.field private static final b:I = 0x200
-
-.field private static final c:I = 0x400
-
-.field private static final d:I = 0x40
-
-.field private static final e:I = 0x800
-
-.field private static final f:I = 0x800
+.field private static final TITLE_LENGTH_LIMIT:I = 0x200
 
 
 # instance fields
@@ -61,7 +61,7 @@
 
 
 # virtual methods
-.method final a()Z
+.method final checkArgs()Z
     .locals 4
 
     const/16 v3, 0x800

@@ -103,7 +103,7 @@
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readUserAgreement()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->N()Z
 
     return-void
 

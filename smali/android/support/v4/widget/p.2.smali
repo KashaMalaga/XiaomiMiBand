@@ -3,50 +3,26 @@
 
 
 # virtual methods
-.method public abstract a(Landroid/content/Context;Landroid/view/animation/Interpolator;)Ljava/lang/Object;
+.method public abstract a(Landroid/content/Context;)Ljava/lang/Object;
 .end method
 
-.method public abstract a(Ljava/lang/Object;III)V
-.end method
-
-.method public abstract a(Ljava/lang/Object;IIII)V
-.end method
-
-.method public abstract a(Ljava/lang/Object;IIIII)V
-.end method
-
-.method public abstract a(Ljava/lang/Object;IIIIIIII)V
-.end method
-
-.method public abstract a(Ljava/lang/Object;IIIIIIIIII)V
+.method public abstract a(Ljava/lang/Object;II)V
 .end method
 
 .method public abstract a(Ljava/lang/Object;)Z
 .end method
 
-.method public abstract b(Ljava/lang/Object;)I
+.method public abstract a(Ljava/lang/Object;F)Z
 .end method
 
-.method public abstract b(Ljava/lang/Object;III)V
+.method public abstract a(Ljava/lang/Object;I)Z
 .end method
 
-.method public abstract c(Ljava/lang/Object;)I
+.method public abstract a(Ljava/lang/Object;Landroid/graphics/Canvas;)Z
 .end method
 
-.method public abstract d(Ljava/lang/Object;)F
+.method public abstract b(Ljava/lang/Object;)V
 .end method
 
-.method public abstract e(Ljava/lang/Object;)Z
-.end method
-
-.method public abstract f(Ljava/lang/Object;)V
-.end method
-
-.method public abstract g(Ljava/lang/Object;)Z
-.end method
-
-.method public abstract h(Ljava/lang/Object;)I
-.end method
-
-.method public abstract i(Ljava/lang/Object;)I
+.method public abstract c(Ljava/lang/Object;)Z
 .end method

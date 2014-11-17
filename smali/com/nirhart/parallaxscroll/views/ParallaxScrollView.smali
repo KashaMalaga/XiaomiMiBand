@@ -30,7 +30,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/nirhart/parallaxscroll/views/ParallaxedView;",
+            "Lcom/nirhart/parallaxscroll/views/d;",
             ">;"
         }
     .end annotation
@@ -46,7 +46,7 @@
 
 .field private n:I
 
-.field private q:Lcom/nirhart/parallaxscroll/views/ParallaxScrollView$OnScrollListener;
+.field private q:Lcom/nirhart/parallaxscroll/views/b;
 
 
 # direct methods
@@ -141,7 +141,7 @@
 
     iput v0, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->l:I
 
-    invoke-virtual {p0, p1, p2}, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->init(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-virtual {p0, p1, p2}, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->a(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
 .end method
@@ -179,7 +179,7 @@
 
     iput v0, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->l:I
 
-    invoke-virtual {p0, p1, p2}, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->init(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-virtual {p0, p1, p2}, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->a(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     return-void
 .end method
@@ -242,13 +242,13 @@
     return-void
 
     :cond_1
-    new-instance v4, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView$ParallaxedScrollView;
+    new-instance v4, Lcom/nirhart/parallaxscroll/views/c;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v5
 
-    invoke-direct {v4, p0, v5}, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView$ParallaxedScrollView;-><init>(Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;Landroid/view/View;)V
+    invoke-direct {v4, p0, v5}, Lcom/nirhart/parallaxscroll/views/c;-><init>(Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;Landroid/view/View;)V
 
     iget-object v5, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->h:Ljava/util/ArrayList;
 
@@ -299,71 +299,14 @@
 
 
 # virtual methods
-.method public draw(Landroid/graphics/Canvas;)V
-    .locals 5
-
-    invoke-super {p0, p1}, Landroid/widget/ScrollView;->draw(Landroid/graphics/Canvas;)V
-
-    iget-object v0, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->k:Landroid/view/View;
-
-    if-nez v0, :cond_1
-
-    :cond_0
-    :goto_0
-    return-void
-
-    :cond_1
-    iget-object v0, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->k:Landroid/view/View;
-
-    invoke-virtual {v0}, Landroid/view/View;->getRight()I
-
-    move-result v0
-
-    iget-object v1, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->k:Landroid/view/View;
-
-    invoke-virtual {v1}, Landroid/view/View;->getTop()I
-
-    move-result v1
-
-    iget v2, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->l:I
-
-    sub-int/2addr v1, v2
-
-    iget-object v2, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->k:Landroid/view/View;
-
-    invoke-virtual {v2}, Landroid/view/View;->getTop()I
-
-    move-result v2
-
-    iget-object v3, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->k:Landroid/view/View;
-
-    invoke-virtual {v3}, Landroid/view/View;->getLeft()I
-
-    move-result v3
-
-    iget-object v4, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->i:Landroid/graphics/drawable/Drawable;
-
-    if-eqz v4, :cond_0
-
-    iget-object v4, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->i:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v4, v3, v1, v0, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
-
-    iget-object v0, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->i:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
-
-    goto :goto_0
-.end method
-
-.method protected init(Landroid/content/Context;Landroid/util/AttributeSet;)V
+.method protected a(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 4
 
     const/4 v3, 0x1
 
     const v2, 0x3ff33333
 
-    sget-object v0, Lcom/xiaomi/hm/health/R$styleable;->ParallaxScroll:[I
+    sget-object v0, Lcom/xiaomi/hm/a/s;->ParallaxScroll:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -434,6 +377,71 @@
     return-void
 .end method
 
+.method public a(Lcom/nirhart/parallaxscroll/views/b;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->q:Lcom/nirhart/parallaxscroll/views/b;
+
+    return-void
+.end method
+
+.method public draw(Landroid/graphics/Canvas;)V
+    .locals 5
+
+    invoke-super {p0, p1}, Landroid/widget/ScrollView;->draw(Landroid/graphics/Canvas;)V
+
+    iget-object v0, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->k:Landroid/view/View;
+
+    if-nez v0, :cond_1
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    iget-object v0, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->k:Landroid/view/View;
+
+    invoke-virtual {v0}, Landroid/view/View;->getRight()I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->k:Landroid/view/View;
+
+    invoke-virtual {v1}, Landroid/view/View;->getTop()I
+
+    move-result v1
+
+    iget v2, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->l:I
+
+    sub-int/2addr v1, v2
+
+    iget-object v2, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->k:Landroid/view/View;
+
+    invoke-virtual {v2}, Landroid/view/View;->getTop()I
+
+    move-result v2
+
+    iget-object v3, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->k:Landroid/view/View;
+
+    invoke-virtual {v3}, Landroid/view/View;->getLeft()I
+
+    move-result v3
+
+    iget-object v4, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->i:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v4, :cond_0
+
+    iget-object v4, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->i:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v4, v3, v1, v0, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    iget-object v0, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->i:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+
+    goto :goto_0
+.end method
+
 .method protected onFinishInflate()V
     .locals 0
 
@@ -449,13 +457,13 @@
 
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/ScrollView;->onScrollChanged(IIII)V
 
-    iget-object v0, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->q:Lcom/nirhart/parallaxscroll/views/ParallaxScrollView$OnScrollListener;
+    iget-object v0, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->q:Lcom/nirhart/parallaxscroll/views/b;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->q:Lcom/nirhart/parallaxscroll/views/ParallaxScrollView$OnScrollListener;
+    iget-object v0, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->q:Lcom/nirhart/parallaxscroll/views/b;
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView$OnScrollListener;->onScrollChanged(IIII)V
+    invoke-interface {v0, p1, p2, p3, p4}, Lcom/nirhart/parallaxscroll/views/b;->a(IIII)V
 
     :cond_0
     if-ltz p2, :cond_1
@@ -485,13 +493,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/nirhart/parallaxscroll/views/ParallaxedView;
+    check-cast v0, Lcom/nirhart/parallaxscroll/views/d;
 
     int-to-float v3, p2
 
     div-float/2addr v3, v1
 
-    invoke-virtual {v0, v3}, Lcom/nirhart/parallaxscroll/views/ParallaxedView;->setOffset(F)V
+    invoke-virtual {v0, v3}, Lcom/nirhart/parallaxscroll/views/d;->a(F)V
 
     iget v0, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->f:F
 
@@ -562,12 +570,4 @@
     move-result v0
 
     goto :goto_0
-.end method
-
-.method public setOnScrollListener(Lcom/nirhart/parallaxscroll/views/ParallaxScrollView$OnScrollListener;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/nirhart/parallaxscroll/views/ParallaxScrollView;->q:Lcom/nirhart/parallaxscroll/views/ParallaxScrollView$OnScrollListener;
-
-    return-void
 .end method

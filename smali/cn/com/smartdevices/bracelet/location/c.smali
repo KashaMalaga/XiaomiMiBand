@@ -2,18 +2,24 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/location/LocationListener;
+.implements Landroid/os/Parcelable$Creator;
 
 
-# instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/location/LocationManager;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator",
+        "<",
+        "Lcn/com/smartdevices/bracelet/location/Location$Address;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/location/LocationManager;)V
+.method constructor <init>()V
     .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/location/c;->a:Lcn/com/smartdevices/bracelet/location/LocationManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,58 +28,42 @@
 
 
 # virtual methods
-.method public onReceiveLocation(Lcn/com/smartdevices/bracelet/location/Location;)V
-    .locals 3
+.method public a(Landroid/os/Parcel;)Lcn/com/smartdevices/bracelet/location/Location$Address;
+    .locals 2
 
-    const-string v0, "LocationManager"
+    new-instance v0, Lcn/com/smartdevices/bracelet/location/Location$Address;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const/4 v1, 0x0
 
-    const-string v2, "Location Received : "
+    invoke-direct {v0, p1, v1}, Lcn/com/smartdevices/bracelet/location/Location$Address;-><init>(Landroid/os/Parcel;Lcn/com/smartdevices/bracelet/location/Location$Address;)V
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    return-object v0
+.end method
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+.method public a(I)[Lcn/com/smartdevices/bracelet/location/Location$Address;
+    .locals 1
 
-    move-result-object v1
+    new-array v0, p1, [Lcn/com/smartdevices/bracelet/location/Location$Address;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    return-object v0
+.end method
 
-    move-result-object v1
+.method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/c;->a:Lcn/com/smartdevices/bracelet/location/LocationManager;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/location/LocationManager;->a(Lcn/com/smartdevices/bracelet/location/LocationManager;)Landroid/content/Context;
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/location/c;->a(Landroid/os/Parcel;)Lcn/com/smartdevices/bracelet/location/Location$Address;
 
     move-result-object v0
 
-    const-string v1, "LocationOK"
+    return-object v0
+.end method
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->event(Landroid/content/Context;Ljava/lang/String;)V
+.method public synthetic newArray(I)[Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Landroid/content/Intent;
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/location/c;->a(I)[Lcn/com/smartdevices/bracelet/location/Location$Address;
 
-    const-string v1, "com.xiaomi.hm.health.LocationReceived"
+    move-result-object v0
 
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    const-string v1, "Location"
-
-    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/location/c;->a:Lcn/com/smartdevices/bracelet/location/LocationManager;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/location/LocationManager;->a(Lcn/com/smartdevices/bracelet/location/LocationManager;)Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-static {v1}, Landroid/support/v4/content/LocalBroadcastManager;->getInstance(Landroid/content/Context;)Landroid/support/v4/content/LocalBroadcastManager;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/support/v4/content/LocalBroadcastManager;->sendBroadcast(Landroid/content/Intent;)Z
-
-    return-void
+    return-object v0
 .end method

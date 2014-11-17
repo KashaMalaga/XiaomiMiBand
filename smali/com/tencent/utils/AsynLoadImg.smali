@@ -26,21 +26,21 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lcom/tencent/utils/b;
+    new-instance v0, Lcom/tencent/utils/AsynLoadImg$2;
 
-    invoke-direct {v0, p0}, Lcom/tencent/utils/b;-><init>(Lcom/tencent/utils/AsynLoadImg;)V
+    invoke-direct {v0, p0}, Lcom/tencent/utils/AsynLoadImg$2;-><init>(Lcom/tencent/utils/AsynLoadImg;)V
 
     iput-object v0, p0, Lcom/tencent/utils/AsynLoadImg;->g:Ljava/lang/Runnable;
 
     iput-object p1, p0, Lcom/tencent/utils/AsynLoadImg;->a:Landroid/app/Activity;
 
-    new-instance v0, Lcom/tencent/utils/a;
+    new-instance v0, Lcom/tencent/utils/AsynLoadImg$1;
 
     invoke-virtual {p1}, Landroid/app/Activity;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v1
 
-    invoke-direct {v0, p0, v1}, Lcom/tencent/utils/a;-><init>(Lcom/tencent/utils/AsynLoadImg;Landroid/os/Looper;)V
+    invoke-direct {v0, p0, v1}, Lcom/tencent/utils/AsynLoadImg$1;-><init>(Lcom/tencent/utils/AsynLoadImg;Landroid/os/Looper;)V
 
     iput-object v0, p0, Lcom/tencent/utils/AsynLoadImg;->f:Landroid/os/Handler;
 

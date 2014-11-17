@@ -23,9 +23,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Landroid/support/v13/app/i;
+    new-instance v0, Landroid/support/v13/app/l;
 
-    invoke-direct {v0}, Landroid/support/v13/app/i;-><init>()V
+    invoke-direct {v0}, Landroid/support/v13/app/l;-><init>()V
 
     sput-object v0, Landroid/support/v13/app/FragmentTabHost$SavedState;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -46,7 +46,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Landroid/os/Parcel;Landroid/support/v13/app/g;)V
+.method synthetic constructor <init>(Landroid/os/Parcel;Landroid/support/v13/app/j;)V
     .locals 0
 
     invoke-direct {p0, p1}, Landroid/support/v13/app/FragmentTabHost$SavedState;-><init>(Landroid/os/Parcel;)V

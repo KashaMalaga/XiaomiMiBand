@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/Utils$OperationCallback;
+.implements Lcn/com/smartdevices/bracelet/G;
 
 
 # instance fields
@@ -22,14 +22,14 @@
 
 
 # virtual methods
-.method public onFailure()V
+.method public a()V
     .locals 2
 
     const-string v0, "LoginActivity"
 
-    const-string v1, "Update sh fail "
+    const-string v1, "Update sh ok"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/h;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
@@ -38,14 +38,14 @@
     return-void
 .end method
 
-.method public onSuccess()V
+.method public b()V
     .locals 2
 
     const-string v0, "LoginActivity"
 
-    const-string v1, "Update sh ok"
+    const-string v1, "Update sh fail "
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/h;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 

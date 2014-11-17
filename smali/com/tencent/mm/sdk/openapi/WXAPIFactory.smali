@@ -3,7 +3,7 @@
 
 
 # static fields
-.field private static final a:Ljava/lang/String; = "MicroMsg.PaySdk.WXFactory"
+.field private static final TAG:Ljava/lang/String; = "MicroMsg.PaySdk.WXFactory"
 
 
 # direct methods
@@ -126,9 +126,9 @@
 
     invoke-static {v0, v1}, Lcom/tencent/mm/sdk/b/a;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v0, Lcom/tencent/mm/sdk/openapi/d;
+    new-instance v0, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/tencent/mm/sdk/openapi/d;-><init>(Landroid/content/Context;Ljava/lang/String;Z)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/tencent/mm/sdk/openapi/WXApiImplV10;-><init>(Landroid/content/Context;Ljava/lang/String;Z)V
 
     return-object v0
 .end method

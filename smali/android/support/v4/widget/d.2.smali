@@ -1,101 +1,60 @@
 .class Landroid/support/v4/widget/d;
-.super Landroid/widget/Filter;
+.super Landroid/database/DataSetObserver;
 
 
 # instance fields
-.field a:Landroid/support/v4/widget/e;
+.field final synthetic a:Landroid/support/v4/widget/a;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/widget/e;)V
+.method private constructor <init>(Landroid/support/v4/widget/a;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/widget/Filter;-><init>()V
+    iput-object p1, p0, Landroid/support/v4/widget/d;->a:Landroid/support/v4/widget/a;
 
-    iput-object p1, p0, Landroid/support/v4/widget/d;->a:Landroid/support/v4/widget/e;
+    invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
+
+    return-void
+.end method
+
+.method synthetic constructor <init>(Landroid/support/v4/widget/a;Landroid/support/v4/widget/b;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Landroid/support/v4/widget/d;-><init>(Landroid/support/v4/widget/a;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public convertResultToString(Ljava/lang/Object;)Ljava/lang/CharSequence;
-    .locals 1
-
-    iget-object v0, p0, Landroid/support/v4/widget/d;->a:Landroid/support/v4/widget/e;
-
-    check-cast p1, Landroid/database/Cursor;
-
-    invoke-interface {v0, p1}, Landroid/support/v4/widget/e;->convertToString(Landroid/database/Cursor;)Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method protected performFiltering(Ljava/lang/CharSequence;)Landroid/widget/Filter$FilterResults;
-    .locals 3
-
-    iget-object v0, p0, Landroid/support/v4/widget/d;->a:Landroid/support/v4/widget/e;
-
-    invoke-interface {v0, p1}, Landroid/support/v4/widget/e;->runQueryOnBackgroundThread(Ljava/lang/CharSequence;)Landroid/database/Cursor;
-
-    move-result-object v0
-
-    new-instance v1, Landroid/widget/Filter$FilterResults;
-
-    invoke-direct {v1}, Landroid/widget/Filter$FilterResults;-><init>()V
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Landroid/database/Cursor;->getCount()I
-
-    move-result v2
-
-    iput v2, v1, Landroid/widget/Filter$FilterResults;->count:I
-
-    iput-object v0, v1, Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;
-
-    :goto_0
-    return-object v1
-
-    :cond_0
-    const/4 v0, 0x0
-
-    iput v0, v1, Landroid/widget/Filter$FilterResults;->count:I
-
-    const/4 v0, 0x0
-
-    iput-object v0, v1, Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;
-
-    goto :goto_0
-.end method
-
-.method protected publishResults(Ljava/lang/CharSequence;Landroid/widget/Filter$FilterResults;)V
+.method public onChanged()V
     .locals 2
 
-    iget-object v0, p0, Landroid/support/v4/widget/d;->a:Landroid/support/v4/widget/e;
+    iget-object v0, p0, Landroid/support/v4/widget/d;->a:Landroid/support/v4/widget/a;
 
-    invoke-interface {v0}, Landroid/support/v4/widget/e;->getCursor()Landroid/database/Cursor;
+    const/4 v1, 0x1
 
-    move-result-object v0
+    iput-boolean v1, v0, Landroid/support/v4/widget/a;->a:Z
 
-    iget-object v1, p2, Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;
+    iget-object v0, p0, Landroid/support/v4/widget/d;->a:Landroid/support/v4/widget/a;
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v0}, Landroid/support/v4/widget/a;->notifyDataSetChanged()V
 
-    iget-object v1, p2, Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;
+    return-void
+.end method
 
-    if-eq v1, v0, :cond_0
+.method public onInvalidated()V
+    .locals 2
 
-    iget-object v1, p0, Landroid/support/v4/widget/d;->a:Landroid/support/v4/widget/e;
+    iget-object v0, p0, Landroid/support/v4/widget/d;->a:Landroid/support/v4/widget/a;
 
-    iget-object v0, p2, Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;
+    const/4 v1, 0x0
 
-    check-cast v0, Landroid/database/Cursor;
+    iput-boolean v1, v0, Landroid/support/v4/widget/a;->a:Z
 
-    invoke-interface {v1, v0}, Landroid/support/v4/widget/e;->changeCursor(Landroid/database/Cursor;)V
+    iget-object v0, p0, Landroid/support/v4/widget/d;->a:Landroid/support/v4/widget/a;
 
-    :cond_0
+    invoke-virtual {v0}, Landroid/support/v4/widget/a;->notifyDataSetInvalidated()V
+
     return-void
 .end method

@@ -1,164 +1,126 @@
 .class Lcn/com/smartdevices/bracelet/ui/Z;
-.super Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;
+.super Landroid/os/Handler;
 
 
 # instance fields
-.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/W;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/W;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/Z;->b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/Z;->a:Lcn/com/smartdevices/bracelet/ui/W;
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;-><init>()V
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onFailed(Ljava/lang/Object;)V
+.method public handleMessage(Landroid/os/Message;)V
     .locals 3
 
-    const/4 v1, 0x1
+    iget v0, p1, Landroid/os/Message;->what:I
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;->onFailed(Ljava/lang/Object;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/Z;->b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->a(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;Z)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/Z;->b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->b(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Landroid/os/Handler;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/Z;->b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->d(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/Z;->b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->c(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Landroid/content/Context;
-
-    move-result-object v0
-
-    const-string v1, "FirmwareUpgrade"
-
-    const-string v2, "Failed_2"
-
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->event(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public onFinish(Ljava/lang/Object;)V
-    .locals 4
-
-    const/4 v3, 0x2
-
-    const/4 v1, 0x1
-
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;->onFinish(Ljava/lang/Object;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/Z;->b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->a(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;Z)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/Z;->b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->b(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Landroid/os/Handler;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    if-ne v0, v3, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/Z;->b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->b(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Landroid/os/Handler;
-
-    move-result-object v0
-
-    const-wide/16 v1, 0x3e8
-
-    invoke-virtual {v0, v3, v1, v2}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/Z;->b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->c(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Landroid/content/Context;
-
-    move-result-object v0
-
-    const-string v1, "FirmwareUpgrade"
-
-    const-string v2, "Successed"
-
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->event(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    packed-switch v0, :pswitch_data_0
 
     :goto_0
     return-void
 
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/Z;->b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+    :pswitch_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/Z;->a:Lcn/com/smartdevices/bracelet/ui/W;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->d(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)V
+    const-string v1, "\u52a0\u8f7d\u8fd0\u52a8\u6570\u636e"
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/Z;->b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+    const-string v2, "\u6b63\u5728\u52a0\u8f7d\u8fd0\u52a8\u6570\u636e\uff0c\u8bf7\u7a0d\u5019..."
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->c(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Landroid/content/Context;
-
-    move-result-object v0
-
-    const-string v1, "FirmwareUpgrade"
-
-    const-string v2, "Failed_1"
-
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->event(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/ui/W;->a(Lcn/com/smartdevices/bracelet/ui/W;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
-.end method
 
-.method public onStart()V
-    .locals 2
+    :pswitch_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/Z;->a:Lcn/com/smartdevices/bracelet/ui/W;
 
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;->onStart()V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/W;->d(Lcn/com/smartdevices/bracelet/ui/W;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/Z;->b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+    const-string v0, "DDDD"
+
+    const-string v1, "Dynamic Update : Data Loaded,Prev/Next Day,Animation"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/Z;->a:Lcn/com/smartdevices/bracelet/ui/W;
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->a(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;Z)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/W;->a(Lcn/com/smartdevices/bracelet/ui/W;Z)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/Z;->b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+    goto :goto_0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/BLEManager;->getMiliDevice()Landroid/bluetooth/BluetoothDevice;
+    :pswitch_2
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/Z;->a:Lcn/com/smartdevices/bracelet/ui/W;
 
-    move-result-object v1
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/W;->e(Lcn/com/smartdevices/bracelet/ui/W;)I
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->a(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;Landroid/bluetooth/BluetoothDevice;)V
+    move-result v0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/Z;->b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+    iget v1, p1, Landroid/os/Message;->arg1:I
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->b(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Landroid/os/Handler;
+    if-eq v0, v1, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/Z;->a:Lcn/com/smartdevices/bracelet/ui/W;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/W;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
+    const-string v1, "DynamicRealStepUpdate"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;)V
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/Z;->a:Lcn/com/smartdevices/bracelet/ui/W;
+
+    iget v1, p1, Landroid/os/Message;->arg1:I
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/W;->c(Lcn/com/smartdevices/bracelet/ui/W;I)V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/u;->b(J)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/Z;->a:Lcn/com/smartdevices/bracelet/ui/W;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/W;->e(Lcn/com/smartdevices/bracelet/ui/W;)I
+
+    move-result v0
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/u;->a(I)V
+
+    const-string v0, "DDDD"
+
+    const-string v1, "Dynamic Update : Real Steps."
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/Z;->a:Lcn/com/smartdevices/bracelet/ui/W;
+
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/W;->a(Lcn/com/smartdevices/bracelet/ui/W;Z)V
 
-    return-void
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1011
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+    .end packed-switch
 .end method

@@ -3,7 +3,7 @@
 
 
 # instance fields
-.field private a:Lcom/tencent/tauth/LbsAgent$OnGetLocationListener;
+.field private listener:Lcom/tencent/tauth/LbsAgent$OnGetLocationListener;
 
 
 # direct methods
@@ -18,7 +18,7 @@
 
     invoke-direct {p0, v0, v2, v2, v1}, Lcom/tencent/b/a/a/b;-><init>(IIII)V
 
-    iput-object p1, p0, Lcom/tencent/tauth/SosoLocationListener;->a:Lcom/tencent/tauth/LbsAgent$OnGetLocationListener;
+    iput-object p1, p0, Lcom/tencent/tauth/SosoLocationListener;->listener:Lcom/tencent/tauth/LbsAgent$OnGetLocationListener;
 
     return-void
 .end method
@@ -103,11 +103,11 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/location/Location;->setLongitude(D)V
 
-    iget-object v1, p0, Lcom/tencent/tauth/SosoLocationListener;->a:Lcom/tencent/tauth/LbsAgent$OnGetLocationListener;
+    iget-object v1, p0, Lcom/tencent/tauth/SosoLocationListener;->listener:Lcom/tencent/tauth/LbsAgent$OnGetLocationListener;
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/tencent/tauth/SosoLocationListener;->a:Lcom/tencent/tauth/LbsAgent$OnGetLocationListener;
+    iget-object v1, p0, Lcom/tencent/tauth/SosoLocationListener;->listener:Lcom/tencent/tauth/LbsAgent$OnGetLocationListener;
 
     invoke-interface {v1, v0}, Lcom/tencent/tauth/LbsAgent$OnGetLocationListener;->onLocationUpdate(Landroid/location/Location;)V
 

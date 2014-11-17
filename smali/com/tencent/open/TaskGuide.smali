@@ -77,11 +77,11 @@
 
 .field private g:Landroid/os/Handler;
 
-.field private h:Lcom/tencent/open/E;
+.field private h:Lcom/tencent/open/TaskGuide$i;
 
-.field private i:Lcom/tencent/open/z;
+.field private i:Lcom/tencent/open/TaskGuide$d;
 
-.field private j:Lcom/tencent/open/z;
+.field private j:Lcom/tencent/open/TaskGuide$d;
 
 
 # direct methods
@@ -168,13 +168,13 @@
 
     iput-object v0, p0, Lcom/tencent/open/TaskGuide;->g:Landroid/os/Handler;
 
-    sget-object v0, Lcom/tencent/open/z;->a:Lcom/tencent/open/z;
+    sget-object v0, Lcom/tencent/open/TaskGuide$d;->a:Lcom/tencent/open/TaskGuide$d;
 
-    iput-object v0, p0, Lcom/tencent/open/TaskGuide;->i:Lcom/tencent/open/z;
+    iput-object v0, p0, Lcom/tencent/open/TaskGuide;->i:Lcom/tencent/open/TaskGuide$d;
 
-    sget-object v0, Lcom/tencent/open/z;->a:Lcom/tencent/open/z;
+    sget-object v0, Lcom/tencent/open/TaskGuide$d;->a:Lcom/tencent/open/TaskGuide$d;
 
-    iput-object v0, p0, Lcom/tencent/open/TaskGuide;->j:Lcom/tencent/open/z;
+    iput-object v0, p0, Lcom/tencent/open/TaskGuide;->j:Lcom/tencent/open/TaskGuide$d;
 
     iput v2, p0, Lcom/tencent/open/TaskGuide;->A:I
 
@@ -212,7 +212,7 @@
 
     iput-object v0, p0, Lcom/tencent/open/TaskGuide;->f:Landroid/view/WindowManager;
 
-    invoke-direct {p0}, Lcom/tencent/open/TaskGuide;->d()V
+    invoke-direct {p0}, Lcom/tencent/open/TaskGuide;->c()V
 
     return-void
 .end method
@@ -240,13 +240,13 @@
 
     iput-object v0, p0, Lcom/tencent/open/TaskGuide;->g:Landroid/os/Handler;
 
-    sget-object v0, Lcom/tencent/open/z;->a:Lcom/tencent/open/z;
+    sget-object v0, Lcom/tencent/open/TaskGuide$d;->a:Lcom/tencent/open/TaskGuide$d;
 
-    iput-object v0, p0, Lcom/tencent/open/TaskGuide;->i:Lcom/tencent/open/z;
+    iput-object v0, p0, Lcom/tencent/open/TaskGuide;->i:Lcom/tencent/open/TaskGuide$d;
 
-    sget-object v0, Lcom/tencent/open/z;->a:Lcom/tencent/open/z;
+    sget-object v0, Lcom/tencent/open/TaskGuide$d;->a:Lcom/tencent/open/TaskGuide$d;
 
-    iput-object v0, p0, Lcom/tencent/open/TaskGuide;->j:Lcom/tencent/open/z;
+    iput-object v0, p0, Lcom/tencent/open/TaskGuide;->j:Lcom/tencent/open/TaskGuide$d;
 
     iput v2, p0, Lcom/tencent/open/TaskGuide;->A:I
 
@@ -284,7 +284,7 @@
 
     iput-object v0, p0, Lcom/tencent/open/TaskGuide;->f:Landroid/view/WindowManager;
 
-    invoke-direct {p0}, Lcom/tencent/open/TaskGuide;->d()V
+    invoke-direct {p0}, Lcom/tencent/open/TaskGuide;->c()V
 
     return-void
 .end method
@@ -503,30 +503,30 @@
     return-object p1
 .end method
 
-.method static synthetic a(Lcom/tencent/open/TaskGuide;Lcom/tencent/open/E;)Lcom/tencent/open/E;
-    .locals 0
-
-    iput-object p1, p0, Lcom/tencent/open/TaskGuide;->h:Lcom/tencent/open/E;
-
-    return-object p1
-.end method
-
-.method static synthetic a(Lcom/tencent/open/TaskGuide;I)Lcom/tencent/open/z;
+.method static synthetic a(Lcom/tencent/open/TaskGuide;I)Lcom/tencent/open/TaskGuide$d;
     .locals 1
 
-    invoke-direct {p0, p1}, Lcom/tencent/open/TaskGuide;->c(I)Lcom/tencent/open/z;
+    invoke-direct {p0, p1}, Lcom/tencent/open/TaskGuide;->c(I)Lcom/tencent/open/TaskGuide$d;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method private a(ILcom/tencent/open/z;)V
+.method static synthetic a(Lcom/tencent/open/TaskGuide;Lcom/tencent/open/TaskGuide$i;)Lcom/tencent/open/TaskGuide$i;
+    .locals 0
+
+    iput-object p1, p0, Lcom/tencent/open/TaskGuide;->h:Lcom/tencent/open/TaskGuide$i;
+
+    return-object p1
+.end method
+
+.method private a(ILcom/tencent/open/TaskGuide$d;)V
     .locals 1
 
     if-nez p1, :cond_0
 
-    iput-object p2, p0, Lcom/tencent/open/TaskGuide;->i:Lcom/tencent/open/z;
+    iput-object p2, p0, Lcom/tencent/open/TaskGuide;->i:Lcom/tencent/open/TaskGuide$d;
 
     :goto_0
     return-void
@@ -536,22 +536,22 @@
 
     if-ne p1, v0, :cond_1
 
-    iput-object p2, p0, Lcom/tencent/open/TaskGuide;->j:Lcom/tencent/open/z;
+    iput-object p2, p0, Lcom/tencent/open/TaskGuide;->j:Lcom/tencent/open/TaskGuide$d;
 
     goto :goto_0
 
     :cond_1
-    iput-object p2, p0, Lcom/tencent/open/TaskGuide;->i:Lcom/tencent/open/z;
+    iput-object p2, p0, Lcom/tencent/open/TaskGuide;->i:Lcom/tencent/open/TaskGuide$d;
 
-    iput-object p2, p0, Lcom/tencent/open/TaskGuide;->j:Lcom/tencent/open/z;
+    iput-object p2, p0, Lcom/tencent/open/TaskGuide;->j:Lcom/tencent/open/TaskGuide$d;
 
     goto :goto_0
 .end method
 
-.method static synthetic a(Lcom/tencent/open/TaskGuide;ILcom/tencent/open/z;)V
+.method static synthetic a(Lcom/tencent/open/TaskGuide;ILcom/tencent/open/TaskGuide$d;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/tencent/open/TaskGuide;->a(ILcom/tencent/open/z;)V
+    invoke-direct {p0, p1, p2}, Lcom/tencent/open/TaskGuide;->a(ILcom/tencent/open/TaskGuide$d;)V
 
     return-void
 .end method
@@ -569,9 +569,9 @@
 
     iget-object v0, p0, Lcom/tencent/open/TaskGuide;->g:Landroid/os/Handler;
 
-    new-instance v1, Lcom/tencent/open/r;
+    new-instance v1, Lcom/tencent/open/TaskGuide$2;
 
-    invoke-direct {v1, p0, p1}, Lcom/tencent/open/r;-><init>(Lcom/tencent/open/TaskGuide;Ljava/lang/String;)V
+    invoke-direct {v1, p0, p1}, Lcom/tencent/open/TaskGuide$2;-><init>(Lcom/tencent/open/TaskGuide;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -646,6 +646,14 @@
     return p1
 .end method
 
+.method static synthetic b()I
+    .locals 1
+
+    sget v0, Lcom/tencent/open/TaskGuide;->q:I
+
+    return v0
+.end method
+
 .method private b(Landroid/content/Context;)Landroid/view/ViewGroup;
     .locals 10
 
@@ -659,25 +667,25 @@
 
     const/4 v6, 0x0
 
-    new-instance v0, Lcom/tencent/open/F;
+    new-instance v0, Lcom/tencent/open/TaskGuide$j;
 
-    invoke-direct {v0, p0, p1}, Lcom/tencent/open/F;-><init>(Lcom/tencent/open/TaskGuide;Landroid/content/Context;)V
+    invoke-direct {v0, p0, p1}, Lcom/tencent/open/TaskGuide$j;-><init>(Lcom/tencent/open/TaskGuide;Landroid/content/Context;)V
 
-    iget-object v1, p0, Lcom/tencent/open/TaskGuide;->h:Lcom/tencent/open/E;
+    iget-object v1, p0, Lcom/tencent/open/TaskGuide;->h:Lcom/tencent/open/TaskGuide$i;
 
-    iget-object v1, v1, Lcom/tencent/open/E;->c:[Lcom/tencent/open/A;
+    iget-object v1, v1, Lcom/tencent/open/TaskGuide$i;->c:[Lcom/tencent/open/TaskGuide$e;
 
     array-length v2, v1
 
     if-ne v2, v7, :cond_0
 
-    new-instance v2, Lcom/tencent/open/D;
+    new-instance v2, Lcom/tencent/open/TaskGuide$h;
 
     aget-object v1, v1, v6
 
-    invoke-direct {v2, p0, p1, v1}, Lcom/tencent/open/D;-><init>(Lcom/tencent/open/TaskGuide;Landroid/content/Context;Lcom/tencent/open/A;)V
+    invoke-direct {v2, p0, p1, v1}, Lcom/tencent/open/TaskGuide$h;-><init>(Lcom/tencent/open/TaskGuide;Landroid/content/Context;Lcom/tencent/open/TaskGuide$e;)V
 
-    invoke-virtual {v2, v7}, Lcom/tencent/open/D;->setId(I)V
+    invoke-virtual {v2, v7}, Lcom/tencent/open/TaskGuide$h;->setId(I)V
 
     new-instance v1, Landroid/widget/RelativeLayout$LayoutParams;
 
@@ -687,35 +695,35 @@
 
     invoke-virtual {v1, v3}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    invoke-virtual {v0, v2, v1}, Lcom/tencent/open/F;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v0, v2, v1}, Lcom/tencent/open/TaskGuide$j;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     :goto_0
-    invoke-direct {p0}, Lcom/tencent/open/TaskGuide;->f()Landroid/graphics/drawable/Drawable;
+    invoke-direct {p0}, Lcom/tencent/open/TaskGuide;->e()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/open/F;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/open/TaskGuide$j;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     return-object v0
 
     :cond_0
-    new-instance v2, Lcom/tencent/open/D;
+    new-instance v2, Lcom/tencent/open/TaskGuide$h;
 
     aget-object v3, v1, v6
 
-    invoke-direct {v2, p0, p1, v3}, Lcom/tencent/open/D;-><init>(Lcom/tencent/open/TaskGuide;Landroid/content/Context;Lcom/tencent/open/A;)V
+    invoke-direct {v2, p0, p1, v3}, Lcom/tencent/open/TaskGuide$h;-><init>(Lcom/tencent/open/TaskGuide;Landroid/content/Context;Lcom/tencent/open/TaskGuide$e;)V
 
-    invoke-virtual {v2, v7}, Lcom/tencent/open/D;->setId(I)V
+    invoke-virtual {v2, v7}, Lcom/tencent/open/TaskGuide$h;->setId(I)V
 
-    new-instance v3, Lcom/tencent/open/D;
+    new-instance v3, Lcom/tencent/open/TaskGuide$h;
 
     aget-object v1, v1, v7
 
-    invoke-direct {v3, p0, p1, v1}, Lcom/tencent/open/D;-><init>(Lcom/tencent/open/TaskGuide;Landroid/content/Context;Lcom/tencent/open/A;)V
+    invoke-direct {v3, p0, p1, v1}, Lcom/tencent/open/TaskGuide$h;-><init>(Lcom/tencent/open/TaskGuide;Landroid/content/Context;Lcom/tencent/open/TaskGuide$e;)V
 
     const/4 v1, 0x2
 
-    invoke-virtual {v3, v1}, Lcom/tencent/open/D;->setId(I)V
+    invoke-virtual {v3, v1}, Lcom/tencent/open/TaskGuide$h;->setId(I)V
 
     new-instance v1, Landroid/widget/RelativeLayout$LayoutParams;
 
@@ -753,9 +761,9 @@
 
     invoke-virtual {v4, v5, v7}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    invoke-virtual {v0, v2, v1}, Lcom/tencent/open/F;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v0, v2, v1}, Lcom/tencent/open/TaskGuide$j;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-virtual {v0, v3, v4}, Lcom/tencent/open/F;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v0, v3, v4}, Lcom/tencent/open/TaskGuide$j;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     goto :goto_0
 .end method
@@ -787,9 +795,9 @@
 
     iget-object v0, p0, Lcom/tencent/open/TaskGuide;->g:Landroid/os/Handler;
 
-    new-instance v1, Lcom/tencent/open/t;
+    new-instance v1, Lcom/tencent/open/TaskGuide$4;
 
-    invoke-direct {v1, p0, p1}, Lcom/tencent/open/t;-><init>(Lcom/tencent/open/TaskGuide;I)V
+    invoke-direct {v1, p0, p1}, Lcom/tencent/open/TaskGuide$4;-><init>(Lcom/tencent/open/TaskGuide;I)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -805,20 +813,12 @@
     return-void
 .end method
 
-.method static synthetic c()I
-    .locals 1
-
-    sget v0, Lcom/tencent/open/TaskGuide;->q:I
-
-    return v0
-.end method
-
-.method private c(I)Lcom/tencent/open/z;
+.method private c(I)Lcom/tencent/open/TaskGuide$d;
     .locals 1
 
     if-nez p1, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/open/TaskGuide;->i:Lcom/tencent/open/z;
+    iget-object v0, p0, Lcom/tencent/open/TaskGuide;->i:Lcom/tencent/open/TaskGuide$d;
 
     :goto_0
     return-object v0
@@ -828,51 +828,25 @@
 
     if-ne p1, v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/open/TaskGuide;->j:Lcom/tencent/open/z;
+    iget-object v0, p0, Lcom/tencent/open/TaskGuide;->j:Lcom/tencent/open/TaskGuide$d;
 
     goto :goto_0
 
     :cond_1
-    sget-object v0, Lcom/tencent/open/z;->a:Lcom/tencent/open/z;
+    sget-object v0, Lcom/tencent/open/TaskGuide$d;->a:Lcom/tencent/open/TaskGuide$d;
 
     goto :goto_0
 .end method
 
-.method static synthetic c(Lcom/tencent/open/TaskGuide;)Lcom/tencent/open/z;
+.method static synthetic c(Lcom/tencent/open/TaskGuide;)Lcom/tencent/open/TaskGuide$d;
     .locals 1
 
-    iget-object v0, p0, Lcom/tencent/open/TaskGuide;->i:Lcom/tencent/open/z;
+    iget-object v0, p0, Lcom/tencent/open/TaskGuide;->i:Lcom/tencent/open/TaskGuide$d;
 
     return-object v0
 .end method
 
-.method static synthetic c(Lcom/tencent/open/TaskGuide;I)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/tencent/open/TaskGuide;->b(I)V
-
-    return-void
-.end method
-
-.method static synthetic d(Lcom/tencent/open/TaskGuide;I)I
-    .locals 1
-
-    invoke-direct {p0, p1}, Lcom/tencent/open/TaskGuide;->a(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method static synthetic d(Lcom/tencent/open/TaskGuide;)Lcom/tencent/open/z;
-    .locals 1
-
-    iget-object v0, p0, Lcom/tencent/open/TaskGuide;->j:Lcom/tencent/open/z;
-
-    return-object v0
-.end method
-
-.method private d()V
+.method private c()V
     .locals 2
 
     new-instance v0, Landroid/util/DisplayMetrics;
@@ -902,31 +876,33 @@
     return-void
 .end method
 
-.method private d(I)V
-    .locals 4
+.method static synthetic c(Lcom/tencent/open/TaskGuide;I)V
+    .locals 0
 
-    invoke-direct {p0}, Lcom/tencent/open/TaskGuide;->i()V
-
-    new-instance v0, Lcom/tencent/open/G;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Lcom/tencent/open/G;-><init>(Lcom/tencent/open/TaskGuide;Lcom/tencent/open/t;)V
-
-    iput-object v0, p0, Lcom/tencent/open/TaskGuide;->M:Ljava/lang/Runnable;
-
-    iget-object v0, p0, Lcom/tencent/open/TaskGuide;->g:Landroid/os/Handler;
-
-    iget-object v1, p0, Lcom/tencent/open/TaskGuide;->M:Ljava/lang/Runnable;
-
-    int-to-long v2, p1
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-direct {p0, p1}, Lcom/tencent/open/TaskGuide;->b(I)V
 
     return-void
 .end method
 
-.method private e()V
+.method static synthetic d(Lcom/tencent/open/TaskGuide;I)I
+    .locals 1
+
+    invoke-direct {p0, p1}, Lcom/tencent/open/TaskGuide;->a(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method static synthetic d(Lcom/tencent/open/TaskGuide;)Lcom/tencent/open/TaskGuide$d;
+    .locals 1
+
+    iget-object v0, p0, Lcom/tencent/open/TaskGuide;->j:Lcom/tencent/open/TaskGuide$d;
+
+    return-object v0
+.end method
+
+.method private d()V
     .locals 2
 
     iget-object v0, p0, Lcom/tencent/open/TaskGuide;->d:Landroid/view/WindowManager$LayoutParams;
@@ -947,6 +923,53 @@
     return-void
 .end method
 
+.method private d(I)V
+    .locals 4
+
+    invoke-direct {p0}, Lcom/tencent/open/TaskGuide;->h()V
+
+    new-instance v0, Lcom/tencent/open/TaskGuide$k;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lcom/tencent/open/TaskGuide$k;-><init>(Lcom/tencent/open/TaskGuide;Lcom/tencent/open/TaskGuide$4;)V
+
+    iput-object v0, p0, Lcom/tencent/open/TaskGuide;->M:Ljava/lang/Runnable;
+
+    iget-object v0, p0, Lcom/tencent/open/TaskGuide;->g:Landroid/os/Handler;
+
+    iget-object v1, p0, Lcom/tencent/open/TaskGuide;->M:Ljava/lang/Runnable;
+
+    int-to-long v2, p1
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    return-void
+.end method
+
+.method private e()Landroid/graphics/drawable/Drawable;
+    .locals 2
+
+    sget-object v0, Lcom/tencent/open/TaskGuide;->k:Landroid/graphics/drawable/Drawable;
+
+    if-nez v0, :cond_0
+
+    const-string v0, "background.9.png"
+
+    iget-object v1, p0, Lcom/tencent/open/TaskGuide;->mContext:Landroid/content/Context;
+
+    invoke-direct {p0, v0, v1}, Lcom/tencent/open/TaskGuide;->a(Ljava/lang/String;Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/tencent/open/TaskGuide;->k:Landroid/graphics/drawable/Drawable;
+
+    :cond_0
+    sget-object v0, Lcom/tencent/open/TaskGuide;->k:Landroid/graphics/drawable/Drawable;
+
+    return-object v0
+.end method
+
 .method private e(I)V
     .locals 6
 
@@ -962,9 +985,9 @@
 
     const-string v0, "task_id"
 
-    iget-object v1, p0, Lcom/tencent/open/TaskGuide;->h:Lcom/tencent/open/E;
+    iget-object v1, p0, Lcom/tencent/open/TaskGuide;->h:Lcom/tencent/open/TaskGuide$i;
 
-    iget-object v1, v1, Lcom/tencent/open/E;->a:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/open/TaskGuide$i;->a:Ljava/lang/String;
 
     invoke-virtual {v3, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -990,9 +1013,9 @@
 
     invoke-virtual {v3, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v5, Lcom/tencent/open/u;
+    new-instance v5, Lcom/tencent/open/TaskGuide$a;
 
-    invoke-direct {v5, p0, p1}, Lcom/tencent/open/u;-><init>(Lcom/tencent/open/TaskGuide;I)V
+    invoke-direct {v5, p0, p1}, Lcom/tencent/open/TaskGuide$a;-><init>(Lcom/tencent/open/TaskGuide;I)V
 
     iget-object v0, p0, Lcom/tencent/open/TaskGuide;->mToken:Lcom/tencent/connect/auth/QQToken;
 
@@ -1004,9 +1027,9 @@
 
     invoke-static/range {v0 .. v5}, Lcom/tencent/utils/HttpUtils;->requestAsync(Lcom/tencent/connect/auth/QQToken;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/String;Lcom/tencent/tauth/IRequestListener;)V
 
-    sget-object v0, Lcom/tencent/open/z;->c:Lcom/tencent/open/z;
+    sget-object v0, Lcom/tencent/open/TaskGuide$d;->c:Lcom/tencent/open/TaskGuide$d;
 
-    invoke-direct {p0, p1, v0}, Lcom/tencent/open/TaskGuide;->a(ILcom/tencent/open/z;)V
+    invoke-direct {p0, p1, v0}, Lcom/tencent/open/TaskGuide;->a(ILcom/tencent/open/TaskGuide$d;)V
 
     iget-object v0, p0, Lcom/tencent/open/TaskGuide;->mContext:Landroid/content/Context;
 
@@ -1032,7 +1055,7 @@
 .method static synthetic e(Lcom/tencent/open/TaskGuide;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/tencent/open/TaskGuide;->i()V
+    invoke-direct {p0}, Lcom/tencent/open/TaskGuide;->h()V
 
     return-void
 .end method
@@ -1056,37 +1079,6 @@
 .method private f()Landroid/graphics/drawable/Drawable;
     .locals 2
 
-    sget-object v0, Lcom/tencent/open/TaskGuide;->k:Landroid/graphics/drawable/Drawable;
-
-    if-nez v0, :cond_0
-
-    const-string v0, "background.9.png"
-
-    iget-object v1, p0, Lcom/tencent/open/TaskGuide;->mContext:Landroid/content/Context;
-
-    invoke-direct {p0, v0, v1}, Lcom/tencent/open/TaskGuide;->a(Ljava/lang/String;Landroid/content/Context;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/tencent/open/TaskGuide;->k:Landroid/graphics/drawable/Drawable;
-
-    :cond_0
-    sget-object v0, Lcom/tencent/open/TaskGuide;->k:Landroid/graphics/drawable/Drawable;
-
-    return-object v0
-.end method
-
-.method static synthetic g(Lcom/tencent/open/TaskGuide;)Landroid/content/Context;
-    .locals 1
-
-    iget-object v0, p0, Lcom/tencent/open/TaskGuide;->mContext:Landroid/content/Context;
-
-    return-object v0
-.end method
-
-.method private g()Landroid/graphics/drawable/Drawable;
-    .locals 2
-
     sget-object v0, Lcom/tencent/open/TaskGuide;->l:Landroid/graphics/drawable/Drawable;
 
     if-nez v0, :cond_0
@@ -1107,7 +1099,15 @@
     return-object v0
 .end method
 
-.method private h()Landroid/graphics/drawable/Drawable;
+.method static synthetic g(Lcom/tencent/open/TaskGuide;)Landroid/content/Context;
+    .locals 1
+
+    iget-object v0, p0, Lcom/tencent/open/TaskGuide;->mContext:Landroid/content/Context;
+
+    return-object v0
+.end method
+
+.method private g()Landroid/graphics/drawable/Drawable;
     .locals 2
 
     sget-object v0, Lcom/tencent/open/TaskGuide;->m:Landroid/graphics/drawable/Drawable;
@@ -1130,23 +1130,7 @@
     return-object v0
 .end method
 
-.method static synthetic h(Lcom/tencent/open/TaskGuide;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/tencent/open/TaskGuide;->e()V
-
-    return-void
-.end method
-
-.method static synthetic i(Lcom/tencent/open/TaskGuide;)Landroid/content/Context;
-    .locals 1
-
-    iget-object v0, p0, Lcom/tencent/open/TaskGuide;->mContext:Landroid/content/Context;
-
-    return-object v0
-.end method
-
-.method private i()V
+.method private h()V
     .locals 2
 
     iget-object v0, p0, Lcom/tencent/open/TaskGuide;->g:Landroid/os/Handler;
@@ -1155,7 +1139,7 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    invoke-direct {p0}, Lcom/tencent/open/TaskGuide;->k()Z
+    invoke-direct {p0}, Lcom/tencent/open/TaskGuide;->j()Z
 
     move-result v0
 
@@ -1171,7 +1155,15 @@
     return-void
 .end method
 
-.method static synthetic j(Lcom/tencent/open/TaskGuide;)Landroid/content/Context;
+.method static synthetic h(Lcom/tencent/open/TaskGuide;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/tencent/open/TaskGuide;->d()V
+
+    return-void
+.end method
+
+.method static synthetic i(Lcom/tencent/open/TaskGuide;)Landroid/content/Context;
     .locals 1
 
     iget-object v0, p0, Lcom/tencent/open/TaskGuide;->mContext:Landroid/content/Context;
@@ -1179,7 +1171,7 @@
     return-object v0
 .end method
 
-.method private j()V
+.method private i()V
     .locals 4
 
     const/4 v3, 0x0
@@ -1226,15 +1218,15 @@
     goto :goto_0
 .end method
 
-.method static synthetic k(Lcom/tencent/open/TaskGuide;)Landroid/view/WindowManager$LayoutParams;
+.method static synthetic j(Lcom/tencent/open/TaskGuide;)Landroid/content/Context;
     .locals 1
 
-    iget-object v0, p0, Lcom/tencent/open/TaskGuide;->d:Landroid/view/WindowManager$LayoutParams;
+    iget-object v0, p0, Lcom/tencent/open/TaskGuide;->mContext:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method private k()Z
+.method private j()Z
     .locals 1
 
     iget-boolean v0, p0, Lcom/tencent/open/TaskGuide;->F:Z
@@ -1257,12 +1249,20 @@
     goto :goto_0
 .end method
 
-.method private l()V
+.method static synthetic k(Lcom/tencent/open/TaskGuide;)Landroid/view/WindowManager$LayoutParams;
+    .locals 1
+
+    iget-object v0, p0, Lcom/tencent/open/TaskGuide;->d:Landroid/view/WindowManager$LayoutParams;
+
+    return-object v0
+.end method
+
+.method private k()V
     .locals 3
 
     const/4 v2, 0x1
 
-    invoke-direct {p0}, Lcom/tencent/open/TaskGuide;->k()Z
+    invoke-direct {p0}, Lcom/tencent/open/TaskGuide;->j()Z
 
     move-result v0
 
@@ -1280,9 +1280,50 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    new-instance v0, Lcom/tencent/open/w;
+    new-instance v0, Lcom/tencent/open/TaskGuide$b;
 
-    invoke-direct {v0, p0, v2}, Lcom/tencent/open/w;-><init>(Lcom/tencent/open/TaskGuide;Z)V
+    invoke-direct {v0, p0, v2}, Lcom/tencent/open/TaskGuide$b;-><init>(Lcom/tencent/open/TaskGuide;Z)V
+
+    iput-object v0, p0, Lcom/tencent/open/TaskGuide;->L:Ljava/lang/Runnable;
+
+    invoke-direct {p0, v2}, Lcom/tencent/open/TaskGuide;->a(Z)V
+
+    iget-object v0, p0, Lcom/tencent/open/TaskGuide;->g:Landroid/os/Handler;
+
+    iget-object v1, p0, Lcom/tencent/open/TaskGuide;->L:Ljava/lang/Runnable;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    :cond_0
+    return-void
+.end method
+
+.method private l()V
+    .locals 3
+
+    const/4 v2, 0x0
+
+    invoke-direct {p0}, Lcom/tencent/open/TaskGuide;->j()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/tencent/open/TaskGuide;->g:Landroid/os/Handler;
+
+    iget-object v1, p0, Lcom/tencent/open/TaskGuide;->M:Ljava/lang/Runnable;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    iget-object v0, p0, Lcom/tencent/open/TaskGuide;->g:Landroid/os/Handler;
+
+    iget-object v1, p0, Lcom/tencent/open/TaskGuide;->L:Ljava/lang/Runnable;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    new-instance v0, Lcom/tencent/open/TaskGuide$b;
+
+    invoke-direct {v0, p0, v2}, Lcom/tencent/open/TaskGuide$b;-><init>(Lcom/tencent/open/TaskGuide;Z)V
 
     iput-object v0, p0, Lcom/tencent/open/TaskGuide;->L:Ljava/lang/Runnable;
 
@@ -1301,7 +1342,7 @@
 .method static synthetic l(Lcom/tencent/open/TaskGuide;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/tencent/open/TaskGuide;->l()V
+    invoke-direct {p0}, Lcom/tencent/open/TaskGuide;->k()V
 
     return-void
 .end method
@@ -1312,47 +1353,6 @@
     iget-object v0, p0, Lcom/tencent/open/TaskGuide;->mContext:Landroid/content/Context;
 
     return-object v0
-.end method
-
-.method private m()V
-    .locals 3
-
-    const/4 v2, 0x0
-
-    invoke-direct {p0}, Lcom/tencent/open/TaskGuide;->k()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcom/tencent/open/TaskGuide;->g:Landroid/os/Handler;
-
-    iget-object v1, p0, Lcom/tencent/open/TaskGuide;->M:Ljava/lang/Runnable;
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
-
-    iget-object v0, p0, Lcom/tencent/open/TaskGuide;->g:Landroid/os/Handler;
-
-    iget-object v1, p0, Lcom/tencent/open/TaskGuide;->L:Ljava/lang/Runnable;
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
-
-    new-instance v0, Lcom/tencent/open/w;
-
-    invoke-direct {v0, p0, v2}, Lcom/tencent/open/w;-><init>(Lcom/tencent/open/TaskGuide;Z)V
-
-    iput-object v0, p0, Lcom/tencent/open/TaskGuide;->L:Ljava/lang/Runnable;
-
-    invoke-direct {p0, v2}, Lcom/tencent/open/TaskGuide;->a(Z)V
-
-    iget-object v0, p0, Lcom/tencent/open/TaskGuide;->g:Landroid/os/Handler;
-
-    iget-object v1, p0, Lcom/tencent/open/TaskGuide;->L:Ljava/lang/Runnable;
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :cond_0
-    return-void
 .end method
 
 .method static synthetic n(Lcom/tencent/open/TaskGuide;)Landroid/content/Context;
@@ -1366,7 +1366,7 @@
 .method static synthetic o(Lcom/tencent/open/TaskGuide;)Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    invoke-direct {p0}, Lcom/tencent/open/TaskGuide;->g()Landroid/graphics/drawable/Drawable;
+    invoke-direct {p0}, Lcom/tencent/open/TaskGuide;->f()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -1376,7 +1376,7 @@
 .method static synthetic p(Lcom/tencent/open/TaskGuide;)Landroid/graphics/drawable/Drawable;
     .locals 1
 
-    invoke-direct {p0}, Lcom/tencent/open/TaskGuide;->h()Landroid/graphics/drawable/Drawable;
+    invoke-direct {p0}, Lcom/tencent/open/TaskGuide;->g()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -1386,7 +1386,7 @@
 .method static synthetic q(Lcom/tencent/open/TaskGuide;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/tencent/open/TaskGuide;->m()V
+    invoke-direct {p0}, Lcom/tencent/open/TaskGuide;->l()V
 
     return-void
 .end method
@@ -1426,7 +1426,7 @@
 .method static synthetic v(Lcom/tencent/open/TaskGuide;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/tencent/open/TaskGuide;->j()V
+    invoke-direct {p0}, Lcom/tencent/open/TaskGuide;->i()V
 
     return-void
 .end method
@@ -1447,10 +1447,10 @@
     return-object v0
 .end method
 
-.method static synthetic y(Lcom/tencent/open/TaskGuide;)Lcom/tencent/open/E;
+.method static synthetic y(Lcom/tencent/open/TaskGuide;)Lcom/tencent/open/TaskGuide$i;
     .locals 1
 
-    iget-object v0, p0, Lcom/tencent/open/TaskGuide;->h:Lcom/tencent/open/E;
+    iget-object v0, p0, Lcom/tencent/open/TaskGuide;->h:Lcom/tencent/open/TaskGuide$i;
 
     return-object v0
 .end method
@@ -1495,15 +1495,15 @@
 
     iput-object p3, p0, Lcom/tencent/open/TaskGuide;->c:Lcom/tencent/tauth/IUiListener;
 
-    iget-object v0, p0, Lcom/tencent/open/TaskGuide;->i:Lcom/tencent/open/z;
+    iget-object v0, p0, Lcom/tencent/open/TaskGuide;->i:Lcom/tencent/open/TaskGuide$d;
 
-    sget-object v1, Lcom/tencent/open/z;->b:Lcom/tencent/open/z;
+    sget-object v1, Lcom/tencent/open/TaskGuide$d;->b:Lcom/tencent/open/TaskGuide$d;
 
     if-eq v0, v1, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/open/TaskGuide;->j:Lcom/tencent/open/z;
+    iget-object v0, p0, Lcom/tencent/open/TaskGuide;->j:Lcom/tencent/open/TaskGuide$d;
 
-    sget-object v1, Lcom/tencent/open/z;->b:Lcom/tencent/open/z;
+    sget-object v1, Lcom/tencent/open/TaskGuide$d;->b:Lcom/tencent/open/TaskGuide$d;
 
     if-eq v0, v1, :cond_0
 
@@ -1516,7 +1516,7 @@
     return-void
 
     :cond_1
-    iput-object v2, p0, Lcom/tencent/open/TaskGuide;->h:Lcom/tencent/open/E;
+    iput-object v2, p0, Lcom/tencent/open/TaskGuide;->h:Lcom/tencent/open/TaskGuide$i;
 
     if-eqz p2, :cond_2
 
@@ -1531,9 +1531,9 @@
     invoke-virtual {v3, v0}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
 
     :goto_1
-    new-instance v5, Lcom/tencent/open/x;
+    new-instance v5, Lcom/tencent/open/TaskGuide$c;
 
-    invoke-direct {v5, p0, v2}, Lcom/tencent/open/x;-><init>(Lcom/tencent/open/TaskGuide;Lcom/tencent/open/t;)V
+    invoke-direct {v5, p0, v2}, Lcom/tencent/open/TaskGuide$c;-><init>(Lcom/tencent/open/TaskGuide;Lcom/tencent/open/TaskGuide$4;)V
 
     const-string v0, "action"
 
@@ -1569,9 +1569,9 @@
 
     const/4 v0, 0x2
 
-    sget-object v1, Lcom/tencent/open/z;->b:Lcom/tencent/open/z;
+    sget-object v1, Lcom/tencent/open/TaskGuide$d;->b:Lcom/tencent/open/TaskGuide$d;
 
-    invoke-direct {p0, v0, v1}, Lcom/tencent/open/TaskGuide;->a(ILcom/tencent/open/z;)V
+    invoke-direct {p0, v0, v1}, Lcom/tencent/open/TaskGuide;->a(ILcom/tencent/open/TaskGuide$d;)V
 
     goto :goto_0
 
@@ -1599,9 +1599,9 @@
 
     invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    new-instance v1, Lcom/tencent/open/s;
+    new-instance v1, Lcom/tencent/open/TaskGuide$3;
 
-    invoke-direct {v1, p0}, Lcom/tencent/open/s;-><init>(Lcom/tencent/open/TaskGuide;)V
+    invoke-direct {v1, p0}, Lcom/tencent/open/TaskGuide$3;-><init>(Lcom/tencent/open/TaskGuide;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

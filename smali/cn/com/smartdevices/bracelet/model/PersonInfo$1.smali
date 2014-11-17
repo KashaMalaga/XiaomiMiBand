@@ -1,11 +1,11 @@
 .class Lcn/com/smartdevices/bracelet/model/PersonInfo$1;
-.super Lcom/google/gson/reflect/TypeToken;
+.super Lcom/b/a/c/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/google/gson/reflect/TypeToken",
+        "Lcom/b/a/c/a",
         "<",
         "Ljava/util/ArrayList",
         "<",
@@ -19,7 +19,7 @@
 .method constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lcom/google/gson/reflect/TypeToken;-><init>()V
+    invoke-direct {p0}, Lcom/b/a/c/a;-><init>()V
 
     return-void
 .end method

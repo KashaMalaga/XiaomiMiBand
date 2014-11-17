@@ -1,74 +1,94 @@
-.class Lkankan/wheel/widget/a;
-.super Landroid/view/GestureDetector$SimpleOnGestureListener;
+.class public Lkankan/wheel/widget/a;
+.super Ljava/lang/Object;
 
 
 # instance fields
-.field final synthetic a:Lkankan/wheel/widget/WheelScroller;
+.field private a:I
+
+.field private b:I
 
 
 # direct methods
-.method constructor <init>(Lkankan/wheel/widget/WheelScroller;)V
+.method public constructor <init>()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0, v0}, Lkankan/wheel/widget/a;-><init>(II)V
+
+    return-void
+.end method
+
+.method public constructor <init>(II)V
     .locals 0
 
-    iput-object p1, p0, Lkankan/wheel/widget/a;->a:Lkankan/wheel/widget/WheelScroller;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
+    iput p1, p0, Lkankan/wheel/widget/a;->a:I
+
+    iput p2, p0, Lkankan/wheel/widget/a;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onFling(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
-    .locals 9
+.method public a()I
+    .locals 1
 
-    const/4 v1, 0x0
-
-    iget-object v0, p0, Lkankan/wheel/widget/a;->a:Lkankan/wheel/widget/WheelScroller;
-
-    invoke-static {v0, v1}, Lkankan/wheel/widget/WheelScroller;->a(Lkankan/wheel/widget/WheelScroller;I)V
-
-    iget-object v0, p0, Lkankan/wheel/widget/a;->a:Lkankan/wheel/widget/WheelScroller;
-
-    invoke-static {v0}, Lkankan/wheel/widget/WheelScroller;->a(Lkankan/wheel/widget/WheelScroller;)Landroid/widget/Scroller;
-
-    move-result-object v0
-
-    iget-object v2, p0, Lkankan/wheel/widget/a;->a:Lkankan/wheel/widget/WheelScroller;
-
-    invoke-static {v2}, Lkankan/wheel/widget/WheelScroller;->b(Lkankan/wheel/widget/WheelScroller;)I
-
-    move-result v2
-
-    neg-float v3, p4
-
-    float-to-int v4, v3
-
-    const v7, -0x7fffffff
-
-    const v8, 0x7fffffff
-
-    move v3, v1
-
-    move v5, v1
-
-    move v6, v1
-
-    invoke-virtual/range {v0 .. v8}, Landroid/widget/Scroller;->fling(IIIIIIII)V
-
-    iget-object v0, p0, Lkankan/wheel/widget/a;->a:Lkankan/wheel/widget/WheelScroller;
-
-    invoke-static {v0, v1}, Lkankan/wheel/widget/WheelScroller;->b(Lkankan/wheel/widget/WheelScroller;I)V
-
-    const/4 v0, 0x1
+    iget v0, p0, Lkankan/wheel/widget/a;->a:I
 
     return v0
 .end method
 
-.method public onScroll(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
+.method public a(I)Z
     .locals 1
 
+    invoke-virtual {p0}, Lkankan/wheel/widget/a;->a()I
+
+    move-result v0
+
+    if-lt p1, v0, :cond_0
+
+    invoke-virtual {p0}, Lkankan/wheel/widget/a;->b()I
+
+    move-result v0
+
+    if-gt p1, v0, :cond_0
+
     const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public b()I
+    .locals 2
+
+    invoke-virtual {p0}, Lkankan/wheel/widget/a;->a()I
+
+    move-result v0
+
+    invoke-virtual {p0}, Lkankan/wheel/widget/a;->c()I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    add-int/lit8 v0, v0, -0x1
+
+    return v0
+.end method
+
+.method public c()I
+    .locals 1
+
+    iget v0, p0, Lkankan/wheel/widget/a;->b:I
 
     return v0
 .end method

@@ -19,6 +19,11 @@
     <item type="id" name="fw_help_screen_home_back">false</item>
     <item type="id" name="fw_low_battery_help_tv">false</item>
     <item type="id" name="fw_low_battery_confirm_btn">false</item>
+    <item type="id" name="start">false</item>
+    <item type="id" name="bg_of_map">false</item>
+    <item type="id" name="map">false</item>
+    <item type="id" name="time_cost_desc">false</item>
+    <item type="id" name="time_cost">false</item>
     <item type="id" name="header">false</item>
     <item type="id" name="view_pager">false</item>
     <item type="id" name="indicator">false</item>
@@ -118,6 +123,14 @@
     <item type="id" name="bracelet_title_info">false</item>
     <item type="id" name="person_info_goal_picker">false</item>
     <item type="id" name="person_info_weight_picker">false</item>
+    <item type="id" name="dynamic_header">false</item>
+    <item type="id" name="header_nav_left">false</item>
+    <item type="id" name="header_nav_right">false</item>
+    <item type="id" name="header_nav_right_new_sign">false</item>
+    <item type="id" name="button_area">false</item>
+    <item type="id" name="running_lock">false</item>
+    <item type="id" name="slider_container">false</item>
+    <item type="id" name="unlock_slider">false</item>
     <item type="id" name="search_single_frame">false</item>
     <item type="id" name="toggle_display_mode_btn">false</item>
     <item type="id" name="search_devices_title">false</item>
@@ -236,10 +249,6 @@
     <item type="id" name="modify_sleep_today_yesterday">false</item>
     <item type="id" name="modify_sleep_time_hour">false</item>
     <item type="id" name="modify_sleep_time_minute">false</item>
-    <item type="id" name="dynamic_header">false</item>
-    <item type="id" name="header_nav_left">false</item>
-    <item type="id" name="header_nav_right">false</item>
-    <item type="id" name="header_nav_right_new_sign">false</item>
     <item type="id" name="dynamic_subtitle">false</item>
     <item type="id" name="dynamic_lv">false</item>
     <item type="id" name="title">false</item>
@@ -265,7 +274,6 @@
     <item type="id" name="mili_rebind_top_area">false</item>
     <item type="id" name="mili_unbind_info">false</item>
     <item type="id" name="mili_unbind_info_1">false</item>
-    <item type="id" name="description">false</item>
     <item type="id" name="person_info_light_color_blue_area">false</item>
     <item type="id" name="person_info_light_color_blue">false</item>
     <item type="id" name="person_info_light_color_blue_txt">false</item>
@@ -297,10 +305,18 @@
     <item type="id" name="person_info_body_txt">false</item>
     <item type="id" name="progress_txt">false</item>
     <item type="id" name="ranking_lv">false</item>
+    <item type="id" name="description">false</item>
+    <item type="id" name="switcher">false</item>
     <item type="id" name="speed_desc">false</item>
     <item type="id" name="set_speed">false</item>
     <item type="id" name="pace_desc">false</item>
     <item type="id" name="set_pace">false</item>
+    <item type="id" name="info_gender">false</item>
+    <item type="id" name="goal_summary">false</item>
+    <item type="id" name="info_age_area">false</item>
+    <item type="id" name="dist_summary">false</item>
+    <item type="id" name="info_height">false</item>
+    <item type="id" name="speed_summary">false</item>
     <item type="id" name="select_image_camera_area">false</item>
     <item type="id" name="select_image_local_area">false</item>
     <item type="id" name="logo">false</item>
@@ -359,16 +375,16 @@
     <item type="id" name="webview_progress">false</item>
     <item type="id" name="web_error_tip">false</item>
     <item type="id" name="progress_bar">false</item>
-    <item type="id" name="start">false</item>
-    <item type="id" name="bg_of_map">false</item>
-    <item type="id" name="map">false</item>
     <item type="id" name="gaode_test_map">false</item>
-    <item type="id" name="origin_distance_item">false</item>
-    <item type="id" name="origin_distance_value">false</item>
-    <item type="id" name="origin_speed">false</item>
-    <item type="id" name="corret_distance_item">false</item>
-    <item type="id" name="correct_distance">false</item>
-    <item type="id" name="correct_speed">false</item>
+    <item type="id" name="gps_raw_distance_item">false</item>
+    <item type="id" name="gps_raw_distance_text">false</item>
+    <item type="id" name="gps_raw_speed_text">false</item>
+    <item type="id" name="gps_new_distance_item">false</item>
+    <item type="id" name="gps_new_distance_text">false</item>
+    <item type="id" name="gps_new_speed_text">false</item>
+    <item type="id" name="gps_start_button">false</item>
+    <item type="id" name="gps_clean_button">false</item>
+    <item type="id" name="gps_test_button">false</item>
     <item type="id" name="help_back_txt">false</item>
     <item type="id" name="sport_progresscircle_view">false</item>
     <item type="id" name="bracelet_offline">false</item>
@@ -391,11 +407,8 @@
     <item type="id" name="multi_devices_err_search_again">false</item>
     <item type="id" name="person_info_user_info_area">false</item>
     <item type="id" name="person_info_edit_area">false</item>
-    <item type="id" name="info_gender">false</item>
     <item type="id" name="info_gender_value">false</item>
-    <item type="id" name="info_age_area">false</item>
     <item type="id" name="info_age_value">false</item>
-    <item type="id" name="info_height">false</item>
     <item type="id" name="info_height_value">false</item>
     <item type="id" name="info_weight">false</item>
     <item type="id" name="info_weight_value">false</item>
@@ -447,6 +460,9 @@
     <item type="id" name="incoming_call_notify">false</item>
     <item type="id" name="incoming_call_notify_text">false</item>
     <item type="id" name="incoming_call_notify_switch">false</item>
+    <item type="id" name="vibrate_notify">false</item>
+    <item type="id" name="vibrate_notify_text">false</item>
+    <item type="id" name="vibrate_notify_switch">false</item>
     <item type="id" name="device_qq_health">false</item>
     <item type="id" name="bind_qq_heath_state">false</item>
     <item type="id" name="device_weixin_enter_ll">false</item>

@@ -1622,9 +1622,9 @@
 
     if-ltz v0, :cond_13
 
-    new-instance v0, Lcom/tencent/connect/share/d;
+    new-instance v0, Lcom/tencent/connect/share/QzoneShare$1;
 
-    invoke-direct {v0, p0, p2, p1, p3}, Lcom/tencent/connect/share/d;-><init>(Lcom/tencent/connect/share/QzoneShare;Landroid/os/Bundle;Landroid/app/Activity;Lcom/tencent/tauth/IUiListener;)V
+    invoke-direct {v0, p0, p2, p1, p3}, Lcom/tencent/connect/share/QzoneShare$1;-><init>(Lcom/tencent/connect/share/QzoneShare;Landroid/os/Bundle;Landroid/app/Activity;Lcom/tencent/tauth/IUiListener;)V
 
     invoke-static {p1, v5, v0}, Lcom/tencent/connect/share/a;->a(Landroid/content/Context;Ljava/util/ArrayList;Lcom/tencent/utils/AsynLoadImgBack;)V
 

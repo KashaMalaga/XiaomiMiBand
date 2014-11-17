@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnTouchListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/amap/api/mapcore/Y;
+.field final synthetic a:Lcom/amap/api/mapcore/b;
 
 
 # direct methods
-.method constructor <init>(Lcom/amap/api/mapcore/Y;)V
+.method constructor <init>(Lcom/amap/api/mapcore/b;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/amap/api/mapcore/aj;->a:Lcom/amap/api/mapcore/Y;
+    iput-object p1, p0, Lcom/amap/api/mapcore/aj;->a:Lcom/amap/api/mapcore/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,118 +22,33 @@
 
 
 # virtual methods
-.method public onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 3
+.method public run()V
+    .locals 2
 
-    const/4 v2, 0x0
+    iget-object v0, p0, Lcom/amap/api/mapcore/aj;->a:Lcom/amap/api/mapcore/b;
 
-    iget-object v0, p0, Lcom/amap/api/mapcore/aj;->a:Lcom/amap/api/mapcore/Y;
-
-    invoke-static {v0}, Lcom/amap/api/mapcore/Y;->a(Lcom/amap/api/mapcore/Y;)Lcom/amap/api/mapcore/v;
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->b(Lcom/amap/api/mapcore/b;)Landroid/view/View;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/amap/api/mapcore/v;->z()F
+    if-eqz v0, :cond_0
 
-    move-result v0
+    iget-object v0, p0, Lcom/amap/api/mapcore/aj;->a:Lcom/amap/api/mapcore/b;
 
-    iget-object v1, p0, Lcom/amap/api/mapcore/aj;->a:Lcom/amap/api/mapcore/Y;
+    const/4 v1, 0x0
 
-    invoke-static {v1}, Lcom/amap/api/mapcore/Y;->a(Lcom/amap/api/mapcore/Y;)Lcom/amap/api/mapcore/v;
+    invoke-static {v0, v1}, Lcom/amap/api/mapcore/b;->a(Lcom/amap/api/mapcore/b;Z)Z
 
-    move-result-object v1
+    iget-object v0, p0, Lcom/amap/api/mapcore/aj;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-interface {v1}, Lcom/amap/api/mapcore/v;->n()F
-
-    move-result v1
-
-    cmpg-float v0, v0, v1
-
-    if-lez v0, :cond_0
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/aj;->a:Lcom/amap/api/mapcore/Y;
-
-    invoke-static {v0}, Lcom/amap/api/mapcore/Y;->a(Lcom/amap/api/mapcore/Y;)Lcom/amap/api/mapcore/v;
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->b(Lcom/amap/api/mapcore/b;)Landroid/view/View;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/amap/api/mapcore/v;->M()Z
+    const/16 v1, 0x8
 
-    move-result v0
-
-    if-nez v0, :cond_1
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     :cond_0
-    :goto_0
-    return v2
-
-    :cond_1
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/aj;->a:Lcom/amap/api/mapcore/Y;
-
-    invoke-static {v0}, Lcom/amap/api/mapcore/Y;->f(Lcom/amap/api/mapcore/Y;)Landroid/widget/ImageView;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/amap/api/mapcore/aj;->a:Lcom/amap/api/mapcore/Y;
-
-    invoke-static {v1}, Lcom/amap/api/mapcore/Y;->e(Lcom/amap/api/mapcore/Y;)Landroid/graphics/Bitmap;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/aj;->a:Lcom/amap/api/mapcore/Y;
-
-    invoke-static {v0}, Lcom/amap/api/mapcore/Y;->f(Lcom/amap/api/mapcore/Y;)Landroid/widget/ImageView;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/amap/api/mapcore/aj;->a:Lcom/amap/api/mapcore/Y;
-
-    invoke-static {v1}, Lcom/amap/api/mapcore/Y;->g(Lcom/amap/api/mapcore/Y;)Landroid/graphics/Bitmap;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
-
-    :try_start_0
-    iget-object v0, p0, Lcom/amap/api/mapcore/aj;->a:Lcom/amap/api/mapcore/Y;
-
-    invoke-static {v0}, Lcom/amap/api/mapcore/Y;->a(Lcom/amap/api/mapcore/Y;)Lcom/amap/api/mapcore/v;
-
-    move-result-object v0
-
-    invoke-static {}, Lcom/amap/api/mapcore/m;->c()Lcom/amap/api/mapcore/m;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lcom/amap/api/mapcore/v;->b(Lcom/amap/api/mapcore/m;)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
-
-    goto :goto_0
+    return-void
 .end method

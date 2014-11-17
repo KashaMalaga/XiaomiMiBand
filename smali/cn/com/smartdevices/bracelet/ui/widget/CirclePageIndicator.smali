@@ -2,7 +2,7 @@
 .super Landroid/view/View;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/ui/widget/PageIndicator;
+.implements Lcn/com/smartdevices/bracelet/ui/widget/b;
 
 
 # static fields
@@ -20,7 +20,7 @@
 
 .field private f:Landroid/support/v4/view/ViewPager;
 
-.field private g:Landroid/support/v4/view/ViewPager$OnPageChangeListener;
+.field private g:Landroid/support/v4/view/ba;
 
 .field private h:I
 
@@ -165,7 +165,7 @@
 
     move-result v0
 
-    sget-object v8, Lcom/xiaomi/hm/health/R$styleable;->CirclePageIndicator:[I
+    sget-object v8, Lcom/xiaomi/hm/a/s;->CirclePageIndicator:[I
 
     invoke-virtual {p1, p2, v8, p3, v11}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
@@ -284,7 +284,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Landroid/support/v4/view/ViewConfigurationCompat;->getScaledPagingTouchSlop(Landroid/view/ViewConfiguration;)I
+    invoke-static {v0}, Landroid/support/v4/view/aH;->a(Landroid/view/ViewConfiguration;)I
 
     move-result v0
 
@@ -293,7 +293,7 @@
     goto/16 :goto_0
 .end method
 
-.method private a(I)I
+.method private h(I)I
     .locals 6
 
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
@@ -320,7 +320,7 @@
     return v0
 
     :cond_2
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->getCount()I
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->k()I
 
     move-result v0
 
@@ -373,7 +373,7 @@
     goto :goto_0
 .end method
 
-.method private b(I)I
+.method private i(I)I
     .locals 4
 
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
@@ -438,7 +438,396 @@
 
 
 # virtual methods
-.method public getCount()I
+.method public a(F)V
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->d:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->invalidate()V
+
+    return-void
+.end method
+
+.method public a(I)V
+    .locals 1
+
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->n:Z
+
+    if-nez v0, :cond_0
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->k:I
+
+    if-nez v0, :cond_1
+
+    :cond_0
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->l()I
+
+    move-result v0
+
+    sub-int v0, p1, v0
+
+    iput v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->h:I
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->l()I
+
+    move-result v0
+
+    sub-int v0, p1, v0
+
+    iput v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->i:I
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->invalidate()V
+
+    :cond_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->g:Landroid/support/v4/view/ba;
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->g:Landroid/support/v4/view/ba;
+
+    invoke-interface {v0, p1}, Landroid/support/v4/view/ba;->a(I)V
+
+    :cond_2
+    return-void
+.end method
+
+.method public a(IFI)V
+    .locals 1
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->l()I
+
+    move-result v0
+
+    sub-int v0, p1, v0
+
+    iput v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->h:I
+
+    iput p2, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->j:F
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->invalidate()V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->g:Landroid/support/v4/view/ba;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->g:Landroid/support/v4/view/ba;
+
+    invoke-interface {v0, p1, p2, p3}, Landroid/support/v4/view/ba;->a(IFI)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public a(Landroid/support/v4/view/ViewPager;)V
+    .locals 2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->f:Landroid/support/v4/view/ViewPager;
+
+    if-ne v0, p1, :cond_0
+
+    :goto_0
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->f:Landroid/support/v4/view/ViewPager;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->f:Landroid/support/v4/view/ViewPager;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPager;->a(Landroid/support/v4/view/ba;)V
+
+    :cond_1
+    invoke-virtual {p1}, Landroid/support/v4/view/ViewPager;->b()Landroid/support/v4/view/ad;
+
+    move-result-object v0
+
+    if-nez v0, :cond_2
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "ViewPager does not have adapter instance."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_2
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->f:Landroid/support/v4/view/ViewPager;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->f:Landroid/support/v4/view/ViewPager;
+
+    invoke-virtual {v0, p0}, Landroid/support/v4/view/ViewPager;->a(Landroid/support/v4/view/ba;)V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->invalidate()V
+
+    goto :goto_0
+.end method
+
+.method public a(Landroid/support/v4/view/ViewPager;I)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->a(Landroid/support/v4/view/ViewPager;)V
+
+    invoke-virtual {p0, p2}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->g(I)V
+
+    return-void
+.end method
+
+.method public a(Landroid/support/v4/view/ba;)V
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->g:Landroid/support/v4/view/ba;
+
+    return-void
+.end method
+
+.method public a(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->m:Z
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->invalidate()V
+
+    return-void
+.end method
+
+.method public a()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->m:Z
+
+    return v0
+.end method
+
+.method public b()I
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->c:Landroid/graphics/Paint;
+
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getColor()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public b(F)V
+    .locals 0
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->b:F
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->invalidate()V
+
+    return-void
+.end method
+
+.method public b(I)V
+    .locals 1
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->k:I
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->g:Landroid/support/v4/view/ba;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->g:Landroid/support/v4/view/ba;
+
+    invoke-interface {v0, p1}, Landroid/support/v4/view/ba;->b(I)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public b(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->n:Z
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->invalidate()V
+
+    return-void
+.end method
+
+.method public c()I
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->e:Landroid/graphics/Paint;
+
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getColor()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public c(I)V
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->c:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->invalidate()V
+
+    return-void
+.end method
+
+.method public d()I
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->l:I
+
+    return v0
+.end method
+
+.method public d(I)V
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->e:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->invalidate()V
+
+    return-void
+.end method
+
+.method public e()I
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->d:Landroid/graphics/Paint;
+
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getColor()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public e(I)V
+    .locals 2
+
+    packed-switch p1, :pswitch_data_0
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Orientation must be either HORIZONTAL or VERTICAL."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :pswitch_0
+    iput p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->l:I
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->requestLayout()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public f()F
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->d:Landroid/graphics/Paint;
+
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getStrokeWidth()F
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public f(I)V
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->d:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->invalidate()V
+
+    return-void
+.end method
+
+.method public g()F
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->b:F
+
+    return v0
+.end method
+
+.method public g(I)V
+    .locals 2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->f:Landroid/support/v4/view/ViewPager;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "ViewPager has not been bound."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->f:Landroid/support/v4/view/ViewPager;
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->l()I
+
+    move-result v1
+
+    add-int/2addr v1, p1
+
+    invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPager;->a(I)V
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->h:I
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->invalidate()V
+
+    return-void
+.end method
+
+.method public h()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->n:Z
+
+    return v0
+.end method
+
+.method public i()V
+    .locals 0
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->invalidate()V
+
+    return-void
+.end method
+
+.method public j()Landroid/support/v4/view/ViewPager;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->f:Landroid/support/v4/view/ViewPager;
+
+    return-object v0
+.end method
+
+.method public k()I
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->f:Landroid/support/v4/view/ViewPager;
@@ -453,119 +842,23 @@
     :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->f:Landroid/support/v4/view/ViewPager;
 
-    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->getAdapter()Landroid/support/v4/view/PagerAdapter;
+    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->b()Landroid/support/v4/view/ad;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/support/v4/view/PagerAdapter;->getCount()I
+    invoke-virtual {v0}, Landroid/support/v4/view/ad;->b()I
 
     move-result v0
 
     goto :goto_0
 .end method
 
-.method public getFillColor()I
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->e:Landroid/graphics/Paint;
-
-    invoke-virtual {v0}, Landroid/graphics/Paint;->getColor()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public getOffset()I
+.method public l()I
     .locals 1
 
     const/4 v0, 0x0
 
     return v0
-.end method
-
-.method public getOrientation()I
-    .locals 1
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->l:I
-
-    return v0
-.end method
-
-.method public getPageColor()I
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->c:Landroid/graphics/Paint;
-
-    invoke-virtual {v0}, Landroid/graphics/Paint;->getColor()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public getRadius()F
-    .locals 1
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->b:F
-
-    return v0
-.end method
-
-.method public getStrokeColor()I
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->d:Landroid/graphics/Paint;
-
-    invoke-virtual {v0}, Landroid/graphics/Paint;->getColor()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public getStrokeWidth()F
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->d:Landroid/graphics/Paint;
-
-    invoke-virtual {v0}, Landroid/graphics/Paint;->getStrokeWidth()F
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public getViewPager()Landroid/support/v4/view/ViewPager;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->f:Landroid/support/v4/view/ViewPager;
-
-    return-object v0
-.end method
-
-.method public isCentered()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->m:Z
-
-    return v0
-.end method
-
-.method public isSnap()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->n:Z
-
-    return v0
-.end method
-
-.method public notifyDataSetChanged()V
-    .locals 0
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->invalidate()V
-
-    return-void
 .end method
 
 .method protected onDraw(Landroid/graphics/Canvas;)V
@@ -586,7 +879,7 @@
     return-void
 
     :cond_1
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->getCount()I
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->k()I
 
     move-result v6
 
@@ -596,7 +889,7 @@
 
     if-gez v0, :cond_2
 
-    invoke-virtual {p0, v5}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->setCurrentItem(I)V
+    invoke-virtual {p0, v5}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->g(I)V
 
     :cond_2
     iget v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->h:I
@@ -605,7 +898,7 @@
 
     add-int/lit8 v0, v6, -0x1
 
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->setCurrentItem(I)V
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->g(I)V
 
     goto :goto_0
 
@@ -869,11 +1162,11 @@
 
     if-nez v0, :cond_0
 
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->a(I)I
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->h(I)I
 
     move-result v0
 
-    invoke-direct {p0, p2}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->b(I)I
+    invoke-direct {p0, p2}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->i(I)I
 
     move-result v1
 
@@ -883,104 +1176,17 @@
     return-void
 
     :cond_0
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->b(I)I
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->i(I)I
 
     move-result v0
 
-    invoke-direct {p0, p2}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->a(I)I
+    invoke-direct {p0, p2}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->h(I)I
 
     move-result v1
 
     invoke-virtual {p0, v0, v1}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->setMeasuredDimension(II)V
 
     goto :goto_0
-.end method
-
-.method public onPageScrollStateChanged(I)V
-    .locals 1
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->k:I
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->g:Landroid/support/v4/view/ViewPager$OnPageChangeListener;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->g:Landroid/support/v4/view/ViewPager$OnPageChangeListener;
-
-    invoke-interface {v0, p1}, Landroid/support/v4/view/ViewPager$OnPageChangeListener;->onPageScrollStateChanged(I)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public onPageScrolled(IFI)V
-    .locals 1
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->getOffset()I
-
-    move-result v0
-
-    sub-int v0, p1, v0
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->h:I
-
-    iput p2, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->j:F
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->invalidate()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->g:Landroid/support/v4/view/ViewPager$OnPageChangeListener;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->g:Landroid/support/v4/view/ViewPager$OnPageChangeListener;
-
-    invoke-interface {v0, p1, p2, p3}, Landroid/support/v4/view/ViewPager$OnPageChangeListener;->onPageScrolled(IFI)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public onPageSelected(I)V
-    .locals 1
-
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->n:Z
-
-    if-nez v0, :cond_0
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->k:I
-
-    if-nez v0, :cond_1
-
-    :cond_0
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->getOffset()I
-
-    move-result v0
-
-    sub-int v0, p1, v0
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->h:I
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->getOffset()I
-
-    move-result v0
-
-    sub-int v0, p1, v0
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->i:I
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->invalidate()V
-
-    :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->g:Landroid/support/v4/view/ViewPager$OnPageChangeListener;
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->g:Landroid/support/v4/view/ViewPager$OnPageChangeListener;
-
-    invoke-interface {v0, p1}, Landroid/support/v4/view/ViewPager$OnPageChangeListener;->onPageSelected(I)V
-
-    :cond_2
-    return-void
 .end method
 
 .method public onRestoreInstanceState(Landroid/os/Parcelable;)V
@@ -1023,210 +1229,4 @@
     iput v0, v1, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator$SavedState;->a:I
 
     return-object v1
-.end method
-
-.method public setCentered(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->m:Z
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->invalidate()V
-
-    return-void
-.end method
-
-.method public setCurrentItem(I)V
-    .locals 2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->f:Landroid/support/v4/view/ViewPager;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "ViewPager has not been bound."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->f:Landroid/support/v4/view/ViewPager;
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->getOffset()I
-
-    move-result v1
-
-    add-int/2addr v1, p1
-
-    invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPager;->setCurrentItem(I)V
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->h:I
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->invalidate()V
-
-    return-void
-.end method
-
-.method public setFillColor(I)V
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->e:Landroid/graphics/Paint;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->invalidate()V
-
-    return-void
-.end method
-
-.method public setOnPageChangeListener(Landroid/support/v4/view/ViewPager$OnPageChangeListener;)V
-    .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->g:Landroid/support/v4/view/ViewPager$OnPageChangeListener;
-
-    return-void
-.end method
-
-.method public setOrientation(I)V
-    .locals 2
-
-    packed-switch p1, :pswitch_data_0
-
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Orientation must be either HORIZONTAL or VERTICAL."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :pswitch_0
-    iput p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->l:I
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->requestLayout()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public setPageColor(I)V
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->c:Landroid/graphics/Paint;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->invalidate()V
-
-    return-void
-.end method
-
-.method public setRadius(F)V
-    .locals 0
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->b:F
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->invalidate()V
-
-    return-void
-.end method
-
-.method public setSnap(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->n:Z
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->invalidate()V
-
-    return-void
-.end method
-
-.method public setStrokeColor(I)V
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->d:Landroid/graphics/Paint;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->invalidate()V
-
-    return-void
-.end method
-
-.method public setStrokeWidth(F)V
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->d:Landroid/graphics/Paint;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->invalidate()V
-
-    return-void
-.end method
-
-.method public setViewPager(Landroid/support/v4/view/ViewPager;)V
-    .locals 2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->f:Landroid/support/v4/view/ViewPager;
-
-    if-ne v0, p1, :cond_0
-
-    :goto_0
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->f:Landroid/support/v4/view/ViewPager;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->f:Landroid/support/v4/view/ViewPager;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPager;->setOnPageChangeListener(Landroid/support/v4/view/ViewPager$OnPageChangeListener;)V
-
-    :cond_1
-    invoke-virtual {p1}, Landroid/support/v4/view/ViewPager;->getAdapter()Landroid/support/v4/view/PagerAdapter;
-
-    move-result-object v0
-
-    if-nez v0, :cond_2
-
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "ViewPager does not have adapter instance."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_2
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->f:Landroid/support/v4/view/ViewPager;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->f:Landroid/support/v4/view/ViewPager;
-
-    invoke-virtual {v0, p0}, Landroid/support/v4/view/ViewPager;->setOnPageChangeListener(Landroid/support/v4/view/ViewPager$OnPageChangeListener;)V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->invalidate()V
-
-    goto :goto_0
-.end method
-
-.method public setViewPager(Landroid/support/v4/view/ViewPager;I)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->setViewPager(Landroid/support/v4/view/ViewPager;)V
-
-    invoke-virtual {p0, p2}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;->setCurrentItem(I)V
-
-    return-void
 .end method

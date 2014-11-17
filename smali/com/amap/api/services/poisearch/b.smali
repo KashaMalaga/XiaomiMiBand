@@ -1,114 +1,152 @@
-.class Lcom/amap/api/services/poisearch/b;
-.super Ljava/lang/Thread;
+.class public final enum Lcom/amap/api/services/poisearch/b;
+.super Ljava/lang/Enum;
 
 
-# instance fields
-.field final synthetic a:Ljava/lang/String;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/amap/api/services/poisearch/b;",
+        ">;"
+    }
+.end annotation
 
-.field final synthetic b:Lcom/amap/api/services/poisearch/PoiSearch;
+
+# static fields
+.field public static final enum a:Lcom/amap/api/services/poisearch/b;
+
+.field public static final enum b:Lcom/amap/api/services/poisearch/b;
+
+.field public static final enum c:Lcom/amap/api/services/poisearch/b;
+
+.field public static final enum d:Lcom/amap/api/services/poisearch/b;
+
+.field public static final enum e:Lcom/amap/api/services/poisearch/b;
+
+.field private static final synthetic f:[Lcom/amap/api/services/poisearch/b;
 
 
 # direct methods
-.method constructor <init>(Lcom/amap/api/services/poisearch/PoiSearch;Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/b;->b:Lcom/amap/api/services/poisearch/PoiSearch;
+    const/4 v6, 0x4
 
-    iput-object p2, p0, Lcom/amap/api/services/poisearch/b;->a:Ljava/lang/String;
+    const/4 v5, 0x3
 
-    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
+    const/4 v4, 0x2
+
+    const/4 v3, 0x1
+
+    const/4 v2, 0x0
+
+    new-instance v0, Lcom/amap/api/services/poisearch/b;
+
+    const-string v1, "UNKNOWN"
+
+    invoke-direct {v0, v1, v2}, Lcom/amap/api/services/poisearch/b;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/amap/api/services/poisearch/b;->a:Lcom/amap/api/services/poisearch/b;
+
+    new-instance v0, Lcom/amap/api/services/poisearch/b;
+
+    const-string v1, "DINING"
+
+    invoke-direct {v0, v1, v3}, Lcom/amap/api/services/poisearch/b;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/amap/api/services/poisearch/b;->b:Lcom/amap/api/services/poisearch/b;
+
+    new-instance v0, Lcom/amap/api/services/poisearch/b;
+
+    const-string v1, "HOTEL"
+
+    invoke-direct {v0, v1, v4}, Lcom/amap/api/services/poisearch/b;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/amap/api/services/poisearch/b;->c:Lcom/amap/api/services/poisearch/b;
+
+    new-instance v0, Lcom/amap/api/services/poisearch/b;
+
+    const-string v1, "CINEMA"
+
+    invoke-direct {v0, v1, v5}, Lcom/amap/api/services/poisearch/b;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/amap/api/services/poisearch/b;->d:Lcom/amap/api/services/poisearch/b;
+
+    new-instance v0, Lcom/amap/api/services/poisearch/b;
+
+    const-string v1, "SCENIC"
+
+    invoke-direct {v0, v1, v6}, Lcom/amap/api/services/poisearch/b;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/amap/api/services/poisearch/b;->e:Lcom/amap/api/services/poisearch/b;
+
+    const/4 v0, 0x5
+
+    new-array v0, v0, [Lcom/amap/api/services/poisearch/b;
+
+    sget-object v1, Lcom/amap/api/services/poisearch/b;->a:Lcom/amap/api/services/poisearch/b;
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/amap/api/services/poisearch/b;->b:Lcom/amap/api/services/poisearch/b;
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcom/amap/api/services/poisearch/b;->c:Lcom/amap/api/services/poisearch/b;
+
+    aput-object v1, v0, v4
+
+    sget-object v1, Lcom/amap/api/services/poisearch/b;->d:Lcom/amap/api/services/poisearch/b;
+
+    aput-object v1, v0, v5
+
+    sget-object v1, Lcom/amap/api/services/poisearch/b;->e:Lcom/amap/api/services/poisearch/b;
+
+    aput-object v1, v0, v6
+
+    sput-object v0, Lcom/amap/api/services/poisearch/b;->f:[Lcom/amap/api/services/poisearch/b;
 
     return-void
 .end method
 
+.method private constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 
-# virtual methods
-.method public run()V
-    .locals 5
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    new-instance v2, Landroid/os/Message;
-
-    invoke-direct {v2}, Landroid/os/Message;-><init>()V
-
-    const/16 v0, 0x65
-
-    iput v0, v2, Landroid/os/Message;->what:I
-
-    new-instance v3, Landroid/os/Bundle;
-
-    invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
-
-    const/4 v1, 0x0
-
-    :try_start_0
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/b;->b:Lcom/amap/api/services/poisearch/PoiSearch;
-
-    iget-object v4, p0, Lcom/amap/api/services/poisearch/b;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v4}, Lcom/amap/api/services/poisearch/PoiSearch;->searchPOIDetail(Ljava/lang/String;)Lcom/amap/api/services/poisearch/PoiItemDetail;
-
-    move-result-object v1
-
-    const-string v0, "errorCode"
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v3, v0, v4}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
-    :try_end_0
-    .catch Lcom/amap/api/services/core/AMapException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    iput-object v1, v2, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    invoke-virtual {v2, v3}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/b;->b:Lcom/amap/api/services/poisearch/PoiSearch;
-
-    iget-object v0, v0, Lcom/amap/api/services/poisearch/PoiSearch;->a:Landroid/os/Handler;
-
-    invoke-virtual {v0, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    :goto_0
     return-void
+.end method
 
-    :catch_0
-    move-exception v0
+.method public static valueOf(Ljava/lang/String;)Lcom/amap/api/services/poisearch/b;
+    .locals 1
 
-    :try_start_1
-    const-string v4, "errorCode"
+    const-class v0, Lcom/amap/api/services/poisearch/b;
 
-    invoke-virtual {v0}, Lcom/amap/api/services/core/AMapException;->getErrorCode()I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    move-result v0
+    move-result-object v0
 
-    invoke-virtual {v3, v4, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    check-cast v0, Lcom/amap/api/services/poisearch/b;
 
-    iput-object v1, v2, Landroid/os/Message;->obj:Ljava/lang/Object;
+    return-object v0
+.end method
 
-    invoke-virtual {v2, v3}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
+.method public static values()[Lcom/amap/api/services/poisearch/b;
+    .locals 1
 
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/b;->b:Lcom/amap/api/services/poisearch/PoiSearch;
+    sget-object v0, Lcom/amap/api/services/poisearch/b;->f:[Lcom/amap/api/services/poisearch/b;
 
-    iget-object v0, v0, Lcom/amap/api/services/poisearch/PoiSearch;->a:Landroid/os/Handler;
+    invoke-virtual {v0}, [Lcom/amap/api/services/poisearch/b;->clone()Ljava/lang/Object;
 
-    invoke-virtual {v0, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+    move-result-object v0
 
-    goto :goto_0
+    check-cast v0, [Lcom/amap/api/services/poisearch/b;
 
-    :catchall_0
-    move-exception v0
-
-    iput-object v1, v2, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    invoke-virtual {v2, v3}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
-
-    iget-object v1, p0, Lcom/amap/api/services/poisearch/b;->b:Lcom/amap/api/services/poisearch/PoiSearch;
-
-    iget-object v1, v1, Lcom/amap/api/services/poisearch/PoiSearch;->a:Landroid/os/Handler;
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    throw v0
+    return-object v0
 .end method

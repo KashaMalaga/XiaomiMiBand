@@ -2,18 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcn/com/smartdevices/bracelet/ui/L;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/BaseFragment;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/BaseActivity;
+
+.field private final synthetic b:Lcn/com/smartdevices/bracelet/ui/m;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/BaseFragment;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/BaseActivity;Lcn/com/smartdevices/bracelet/ui/m;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/l;->a:Lcn/com/smartdevices/bracelet/ui/BaseFragment;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/l;->a:Lcn/com/smartdevices/bracelet/ui/BaseActivity;
+
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/l;->b:Lcn/com/smartdevices/bracelet/ui/m;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,12 +26,24 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
+.method public a(Landroid/app/DialogFragment;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public b(Landroid/app/DialogFragment;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public c(Landroid/app/DialogFragment;)V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/l;->a:Lcn/com/smartdevices/bracelet/ui/BaseFragment;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/l;->b:Lcn/com/smartdevices/bracelet/ui/m;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/BaseFragment;->onHomeBackPressed()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/m;->dismiss()V
 
     return-void
 .end method

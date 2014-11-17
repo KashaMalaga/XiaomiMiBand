@@ -163,4 +163,7 @@
         <item name="android:singleLine">true</item>
         <item name="android:layout_centerHorizontal">true</item>
     </style>
+    <style name="Switcher" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/switch_selector</item>
+    </style>
 </resources>

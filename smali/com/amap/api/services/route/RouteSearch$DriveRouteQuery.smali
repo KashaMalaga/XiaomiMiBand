@@ -55,9 +55,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/services/route/r;
+    new-instance v0, Lcom/amap/api/services/route/s;
 
-    invoke-direct {v0}, Lcom/amap/api/services/route/r;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/services/route/s;-><init>()V
 
     sput-object v0, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -193,45 +193,64 @@
 
 
 # virtual methods
-.method public clone()Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;
-    .locals 6
-
-    :try_start_0
-    invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-    :try_end_0
-    .catch Ljava/lang/CloneNotSupportedException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_0
-    new-instance v0, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;
-
-    iget-object v1, p0, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->a:Lcom/amap/api/services/route/RouteSearch$FromAndTo;
-
-    iget v2, p0, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->b:I
-
-    iget-object v3, p0, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->c:Ljava/util/List;
-
-    iget-object v4, p0, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->d:Ljava/util/List;
-
-    iget-object v5, p0, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->e:Ljava/lang/String;
-
-    invoke-direct/range {v0 .. v5}, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;-><init>(Lcom/amap/api/services/route/RouteSearch$FromAndTo;ILjava/util/List;Ljava/util/List;Ljava/lang/String;)V
-
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/lang/CloneNotSupportedException;->printStackTrace()V
-
-    goto :goto_0
-.end method
-
-.method public bridge synthetic clone()Ljava/lang/Object;
+.method public a()Lcom/amap/api/services/route/RouteSearch$FromAndTo;
     .locals 1
 
-    invoke-virtual {p0}, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->clone()Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;
+    iget-object v0, p0, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->a:Lcom/amap/api/services/route/RouteSearch$FromAndTo;
+
+    return-object v0
+.end method
+
+.method public b()I
+    .locals 1
+
+    iget v0, p0, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->b:I
+
+    return v0
+.end method
+
+.method public c()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcom/amap/api/services/core/LatLonPoint;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->c:Ljava/util/List;
+
+    return-object v0
+.end method
+
+.method public synthetic clone()Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->k()Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;
 
     move-result-object v0
+
+    return-object v0
+.end method
+
+.method public d()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Ljava/util/List",
+            "<",
+            "Lcom/amap/api/services/core/LatLonPoint;",
+            ">;>;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->d:Ljava/util/List;
 
     return-object v0
 .end method
@@ -242,6 +261,14 @@
     const/4 v0, 0x0
 
     return v0
+.end method
+
+.method public e()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->e:Ljava/lang/String;
+
+    return-object v0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -405,34 +432,123 @@
     goto :goto_0
 .end method
 
-.method public getAvoidRoad()Ljava/lang/String;
-    .locals 1
+.method public f()Ljava/lang/String;
+    .locals 5
 
-    iget-object v0, p0, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->e:Ljava/lang/String;
+    new-instance v2, Ljava/lang/StringBuffer;
 
+    invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
+
+    iget-object v0, p0, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->c:Ljava/util/List;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->c:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
     return-object v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    :goto_1
+    iget-object v0, p0, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->c:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-ge v1, v0, :cond_3
+
+    iget-object v0, p0, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->c:Ljava/util/List;
+
+    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/amap/api/services/core/LatLonPoint;
+
+    invoke-virtual {v0}, Lcom/amap/api/services/core/LatLonPoint;->a()D
+
+    move-result-wide v3
+
+    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuffer;->append(D)Ljava/lang/StringBuffer;
+
+    const-string v3, ","
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    invoke-virtual {v0}, Lcom/amap/api/services/core/LatLonPoint;->b()D
+
+    move-result-wide v3
+
+    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuffer;->append(D)Ljava/lang/StringBuffer;
+
+    iget-object v0, p0, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->c:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x1
+
+    if-ge v1, v0, :cond_2
+
+    const-string v0, ";"
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    :cond_2
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_1
+
+    :cond_3
+    invoke-virtual {v2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
 .end method
 
-.method public getAvoidpolygons()Ljava/util/List;
+.method public g()Z
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Ljava/util/List",
-            "<",
-            "Lcom/amap/api/services/core/LatLonPoint;",
-            ">;>;"
-        }
-    .end annotation
 
-    iget-object v0, p0, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->d:Ljava/util/List;
+    invoke-virtual {p0}, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->f()Ljava/lang/String;
 
-    return-object v0
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/amap/api/services/core/g;->a(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x1
+
+    goto :goto_0
 .end method
 
-.method public getAvoidpolygonsStr()Ljava/lang/String;
+.method public h()Ljava/lang/String;
     .locals 8
 
     const/4 v3, 0x0
@@ -494,7 +610,7 @@
 
     check-cast v1, Lcom/amap/api/services/core/LatLonPoint;
 
-    invoke-virtual {v1}, Lcom/amap/api/services/core/LatLonPoint;->getLongitude()D
+    invoke-virtual {v1}, Lcom/amap/api/services/core/LatLonPoint;->a()D
 
     move-result-wide v6
 
@@ -504,7 +620,7 @@
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-virtual {v1}, Lcom/amap/api/services/core/LatLonPoint;->getLatitude()D
+    invoke-virtual {v1}, Lcom/amap/api/services/core/LatLonPoint;->b()D
 
     move-result-wide v6
 
@@ -555,203 +671,6 @@
     invoke-virtual {v5}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v0
-
-    goto :goto_0
-.end method
-
-.method public getFromAndTo()Lcom/amap/api/services/route/RouteSearch$FromAndTo;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->a:Lcom/amap/api/services/route/RouteSearch$FromAndTo;
-
-    return-object v0
-.end method
-
-.method public getMode()I
-    .locals 1
-
-    iget v0, p0, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->b:I
-
-    return v0
-.end method
-
-.method public getPassedByPoints()Ljava/util/List;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Lcom/amap/api/services/core/LatLonPoint;",
-            ">;"
-        }
-    .end annotation
-
-    iget-object v0, p0, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->c:Ljava/util/List;
-
-    return-object v0
-.end method
-
-.method public getPassedPointStr()Ljava/lang/String;
-    .locals 5
-
-    new-instance v2, Ljava/lang/StringBuffer;
-
-    invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
-
-    iget-object v0, p0, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->c:Ljava/util/List;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->c:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    return-object v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_1
-    iget-object v0, p0, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->c:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-ge v1, v0, :cond_3
-
-    iget-object v0, p0, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->c:Ljava/util/List;
-
-    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/amap/api/services/core/LatLonPoint;
-
-    invoke-virtual {v0}, Lcom/amap/api/services/core/LatLonPoint;->getLongitude()D
-
-    move-result-wide v3
-
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuffer;->append(D)Ljava/lang/StringBuffer;
-
-    const-string v3, ","
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    invoke-virtual {v0}, Lcom/amap/api/services/core/LatLonPoint;->getLatitude()D
-
-    move-result-wide v3
-
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuffer;->append(D)Ljava/lang/StringBuffer;
-
-    iget-object v0, p0, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->c:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, -0x1
-
-    if-ge v1, v0, :cond_2
-
-    const-string v0, ";"
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    :cond_2
-    add-int/lit8 v0, v1, 0x1
-
-    move v1, v0
-
-    goto :goto_1
-
-    :cond_3
-    invoke-virtual {v2}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
-.end method
-
-.method public hasAvoidRoad()Z
-    .locals 1
-
-    invoke-virtual {p0}, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->getAvoidRoad()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/amap/api/services/core/e;->a(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x1
-
-    goto :goto_0
-.end method
-
-.method public hasAvoidpolygons()Z
-    .locals 1
-
-    invoke-virtual {p0}, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->getAvoidpolygonsStr()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/amap/api/services/core/e;->a(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x1
-
-    goto :goto_0
-.end method
-
-.method public hasPassPoint()Z
-    .locals 1
-
-    invoke-virtual {p0}, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->getPassedPointStr()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/amap/api/services/core/e;->a(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x1
 
     goto :goto_0
 .end method
@@ -844,6 +763,87 @@
     move-result v1
 
     goto :goto_3
+.end method
+
+.method public i()Z
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->h()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/amap/api/services/core/g;->a(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x1
+
+    goto :goto_0
+.end method
+
+.method public j()Z
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->e()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/amap/api/services/core/g;->a(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x1
+
+    goto :goto_0
+.end method
+
+.method public k()Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;
+    .locals 6
+
+    :try_start_0
+    invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    :try_end_0
+    .catch Ljava/lang/CloneNotSupportedException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    new-instance v0, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;
+
+    iget-object v1, p0, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->a:Lcom/amap/api/services/route/RouteSearch$FromAndTo;
+
+    iget v2, p0, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->b:I
+
+    iget-object v3, p0, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->c:Ljava/util/List;
+
+    iget-object v4, p0, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->d:Ljava/util/List;
+
+    iget-object v5, p0, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;->e:Ljava/lang/String;
+
+    invoke-direct/range {v0 .. v5}, Lcom/amap/api/services/route/RouteSearch$DriveRouteQuery;-><init>(Lcom/amap/api/services/route/RouteSearch$FromAndTo;ILjava/util/List;Ljava/util/List;Ljava/lang/String;)V
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/CloneNotSupportedException;->printStackTrace()V
+
+    goto :goto_0
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V

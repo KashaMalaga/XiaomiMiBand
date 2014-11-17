@@ -703,7 +703,7 @@
 
     new-instance v1, Ljava/text/SimpleDateFormat;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/BraceletApp;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/BraceletApp;->a()Landroid/content/Context;
 
     move-result-object v2
 
@@ -745,7 +745,7 @@
 
     new-instance v1, Ljava/text/SimpleDateFormat;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/BraceletApp;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/BraceletApp;->a()Landroid/content/Context;
 
     move-result-object v2
 

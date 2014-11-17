@@ -3,7 +3,7 @@
 
 
 # static fields
-.field static a:J
+.field static valueNotSet:J
 
 
 # direct methods
@@ -12,27 +12,7 @@
 
     const-wide/16 v0, -0x1
 
-    sput-wide v0, Lcom/tencent/stat/common/SdkProtection;->a:J
-
-    return-void
-.end method
-
-.method static a(Landroid/content/Context;Ljava/lang/String;)J
-    .locals 2
-
-    sget-wide v0, Lcom/tencent/stat/common/SdkProtection;->a:J
-
-    invoke-static {p0, p1, v0, v1}, Lcom/tencent/stat/common/StatPreferences;->getLong(Landroid/content/Context;Ljava/lang/String;J)J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method static a(Landroid/content/Context;Ljava/lang/String;J)V
-    .locals 0
-
-    invoke-static {p0, p1, p2, p3}, Lcom/tencent/stat/common/StatPreferences;->putLong(Landroid/content/Context;Ljava/lang/String;J)V
+    sput-wide v0, Lcom/tencent/stat/common/SdkProtection;->valueNotSet:J
 
     return-void
 .end method
@@ -42,13 +22,13 @@
 
     const-string v0, "1.0.0_begin_protection"
 
-    invoke-static {p0, v0}, Lcom/tencent/stat/common/SdkProtection;->a(Landroid/content/Context;Ljava/lang/String;)J
+    invoke-static {p0, v0}, Lcom/tencent/stat/common/SdkProtection;->getPreferencesValue(Landroid/content/Context;Ljava/lang/String;)J
 
     move-result-wide v0
 
     const-string v2, "1.0.0_end__protection"
 
-    invoke-static {p0, v2}, Lcom/tencent/stat/common/SdkProtection;->a(Landroid/content/Context;Ljava/lang/String;)J
+    invoke-static {p0, v2}, Lcom/tencent/stat/common/SdkProtection;->getPreferencesValue(Landroid/content/Context;Ljava/lang/String;)J
 
     move-result-wide v2
 
@@ -58,7 +38,7 @@
 
     if-lez v4, :cond_0
 
-    sget-wide v4, Lcom/tencent/stat/common/SdkProtection;->a:J
+    sget-wide v4, Lcom/tencent/stat/common/SdkProtection;->valueNotSet:J
 
     cmp-long v2, v2, v4
 
@@ -70,7 +50,7 @@
     return v0
 
     :cond_0
-    sget-wide v2, Lcom/tencent/stat/common/SdkProtection;->a:J
+    sget-wide v2, Lcom/tencent/stat/common/SdkProtection;->valueNotSet:J
 
     cmp-long v0, v0, v2
 
@@ -82,7 +62,7 @@
 
     move-result-wide v1
 
-    invoke-static {p0, v0, v1, v2}, Lcom/tencent/stat/common/SdkProtection;->a(Landroid/content/Context;Ljava/lang/String;J)V
+    invoke-static {p0, v0, v1, v2}, Lcom/tencent/stat/common/SdkProtection;->setPreferencesValue(Landroid/content/Context;Ljava/lang/String;J)V
 
     :cond_1
     const/4 v0, 0x1
@@ -95,11 +75,11 @@
 
     const-string v0, "1.0.0_end__protection"
 
-    invoke-static {p0, v0}, Lcom/tencent/stat/common/SdkProtection;->a(Landroid/content/Context;Ljava/lang/String;)J
+    invoke-static {p0, v0}, Lcom/tencent/stat/common/SdkProtection;->getPreferencesValue(Landroid/content/Context;Ljava/lang/String;)J
 
     move-result-wide v0
 
-    sget-wide v2, Lcom/tencent/stat/common/SdkProtection;->a:J
+    sget-wide v2, Lcom/tencent/stat/common/SdkProtection;->valueNotSet:J
 
     cmp-long v0, v0, v2
 
@@ -111,8 +91,28 @@
 
     move-result-wide v1
 
-    invoke-static {p0, v0, v1, v2}, Lcom/tencent/stat/common/SdkProtection;->a(Landroid/content/Context;Ljava/lang/String;J)V
+    invoke-static {p0, v0, v1, v2}, Lcom/tencent/stat/common/SdkProtection;->setPreferencesValue(Landroid/content/Context;Ljava/lang/String;J)V
 
     :cond_0
+    return-void
+.end method
+
+.method static getPreferencesValue(Landroid/content/Context;Ljava/lang/String;)J
+    .locals 2
+
+    sget-wide v0, Lcom/tencent/stat/common/SdkProtection;->valueNotSet:J
+
+    invoke-static {p0, p1, v0, v1}, Lcom/tencent/stat/common/StatPreferences;->getLong(Landroid/content/Context;Ljava/lang/String;J)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method static setPreferencesValue(Landroid/content/Context;Ljava/lang/String;J)V
+    .locals 0
+
+    invoke-static {p0, p1, p2, p3}, Lcom/tencent/stat/common/StatPreferences;->putLong(Landroid/content/Context;Ljava/lang/String;J)V
+
     return-void
 .end method

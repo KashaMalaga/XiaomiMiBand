@@ -49,9 +49,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/services/poisearch/c;
+    new-instance v0, Lcom/amap/api/services/poisearch/j;
 
-    invoke-direct {v0}, Lcom/amap/api/services/poisearch/c;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/services/poisearch/j;-><init>()V
 
     sput-object v0, Lcom/amap/api/services/poisearch/Cinema;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -132,12 +132,117 @@
 
 
 # virtual methods
+.method public a(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Cinema;->b:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public a(Ljava/util/List;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcom/amap/api/services/poisearch/Photo;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Cinema;->h:Ljava/util/List;
+
+    return-void
+.end method
+
+.method public a(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/amap/api/services/poisearch/Cinema;->a:Z
+
+    return-void
+.end method
+
+.method public a()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/amap/api/services/poisearch/Cinema;->a:Z
+
+    return v0
+.end method
+
+.method public b()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Cinema;->b:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public b(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Cinema;->c:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public c()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Cinema;->c:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public c(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Cinema;->d:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public d()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Cinema;->d:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public d(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Cinema;->e:Ljava/lang/String;
+
+    return-void
+.end method
+
 .method public describeContents()I
     .locals 1
 
     const/4 v0, 0x0
 
     return v0
+.end method
+
+.method public e()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Cinema;->e:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public e(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Cinema;->f:Ljava/lang/String;
+
+    return-void
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -385,31 +490,7 @@
     goto/16 :goto_0
 .end method
 
-.method public getDeepsrc()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Cinema;->d:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getIntro()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Cinema;->b:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getOpentime()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Cinema;->g:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getOpentimeGDF()Ljava/lang/String;
+.method public f()Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcom/amap/api/services/poisearch/Cinema;->f:Ljava/lang/String;
@@ -417,15 +498,23 @@
     return-object v0
 .end method
 
-.method public getParking()Ljava/lang/String;
+.method public f(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Cinema;->g:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public g()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Cinema;->e:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Cinema;->g:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public getPhotos()Ljava/util/List;
+.method public h()Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -438,14 +527,6 @@
     .end annotation
 
     iget-object v0, p0, Lcom/amap/api/services/poisearch/Cinema;->h:Ljava/util/List;
-
-    return-object v0
-.end method
-
-.method public getRating()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Cinema;->c:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -608,87 +689,6 @@
     const/16 v0, 0x4d5
 
     goto :goto_7
-.end method
-
-.method public isSeatOrdering()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/amap/api/services/poisearch/Cinema;->a:Z
-
-    return v0
-.end method
-
-.method public setDeepsrc(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Cinema;->d:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public setIntro(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Cinema;->b:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public setOpentime(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Cinema;->g:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public setOpentimeGDF(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Cinema;->f:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public setParking(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Cinema;->e:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public setPhotos(Ljava/util/List;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcom/amap/api/services/poisearch/Photo;",
-            ">;)V"
-        }
-    .end annotation
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Cinema;->h:Ljava/util/List;
-
-    return-void
-.end method
-
-.method public setRating(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Cinema;->c:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public setSeatOrdering(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/amap/api/services/poisearch/Cinema;->a:Z
-
-    return-void
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V

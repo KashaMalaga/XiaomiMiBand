@@ -11,18 +11,40 @@
     return-void
 .end method
 
-.method public static a(Landroid/widget/TextView;)V
-    .locals 2
+.method public static a(Landroid/view/MenuItem;Landroid/view/View;)Landroid/view/MenuItem;
+    .locals 1
 
-    new-instance v0, Landroid/support/v4/view/V;
+    invoke-interface {p0, p1}, Landroid/view/MenuItem;->setActionView(Landroid/view/View;)Landroid/view/MenuItem;
 
-    invoke-virtual {p0}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
+    move-result-object v0
 
-    move-result-object v1
+    return-object v0
+.end method
 
-    invoke-direct {v0, v1}, Landroid/support/v4/view/V;-><init>(Landroid/content/Context;)V
+.method public static a(Landroid/view/MenuItem;)Landroid/view/View;
+    .locals 1
 
-    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setTransformationMethod(Landroid/text/method/TransformationMethod;)V
+    invoke-interface {p0}, Landroid/view/MenuItem;->getActionView()Landroid/view/View;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static a(Landroid/view/MenuItem;I)V
+    .locals 0
+
+    invoke-interface {p0, p1}, Landroid/view/MenuItem;->setShowAsAction(I)V
 
     return-void
+.end method
+
+.method public static b(Landroid/view/MenuItem;I)Landroid/view/MenuItem;
+    .locals 1
+
+    invoke-interface {p0, p1}, Landroid/view/MenuItem;->setActionView(I)Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    return-object v0
 .end method

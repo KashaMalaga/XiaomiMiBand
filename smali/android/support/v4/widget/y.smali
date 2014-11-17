@@ -1,40 +1,69 @@
-.class Landroid/support/v4/widget/y;
-.super Landroid/support/v4/widget/v;
+.class final Landroid/support/v4/widget/Y;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/os/Parcelable$Creator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator",
+        "<",
+        "Landroid/support/v4/widget/SlidingPaneLayout$SavedState;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
 .method constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Landroid/support/v4/widget/v;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/content/Context;)Landroid/view/View;
+.method public a(Landroid/os/Parcel;)Landroid/support/v4/widget/SlidingPaneLayout$SavedState;
+    .locals 2
+
+    new-instance v0, Landroid/support/v4/widget/SlidingPaneLayout$SavedState;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, v1}, Landroid/support/v4/widget/SlidingPaneLayout$SavedState;-><init>(Landroid/os/Parcel;Landroid/support/v4/widget/T;)V
+
+    return-object v0
+.end method
+
+.method public a(I)[Landroid/support/v4/widget/SlidingPaneLayout$SavedState;
     .locals 1
 
-    invoke-static {p1}, Landroid/support/v4/widget/SearchViewCompatIcs;->a(Landroid/content/Context;)Landroid/view/View;
+    new-array v0, p1, [Landroid/support/v4/widget/SlidingPaneLayout$SavedState;
+
+    return-object v0
+.end method
+
+.method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0, p1}, Landroid/support/v4/widget/Y;->a(Landroid/os/Parcel;)Landroid/support/v4/widget/SlidingPaneLayout$SavedState;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public b(Landroid/view/View;I)V
-    .locals 0
+.method public synthetic newArray(I)[Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {p1, p2}, Landroid/support/v4/widget/SearchViewCompatIcs;->a(Landroid/view/View;I)V
+    invoke-virtual {p0, p1}, Landroid/support/v4/widget/Y;->a(I)[Landroid/support/v4/widget/SlidingPaneLayout$SavedState;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public c(Landroid/view/View;I)V
-    .locals 0
-
-    invoke-static {p1, p2}, Landroid/support/v4/widget/SearchViewCompatIcs;->b(Landroid/view/View;I)V
-
-    return-void
+    return-object v0
 .end method

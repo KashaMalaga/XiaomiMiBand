@@ -49,9 +49,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/services/route/y;
+    new-instance v0, Lcom/amap/api/services/route/z;
 
-    invoke-direct {v0}, Lcom/amap/api/services/route/y;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/services/route/z;-><init>()V
 
     sput-object v0, Lcom/amap/api/services/route/WalkStep;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -126,47 +126,7 @@
 
 
 # virtual methods
-.method public describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public getAction()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/route/WalkStep;->g:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getAssistantAction()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/route/WalkStep;->h:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getDistance()F
-    .locals 1
-
-    iget v0, p0, Lcom/amap/api/services/route/WalkStep;->d:F
-
-    return v0
-.end method
-
-.method public getDuration()F
-    .locals 1
-
-    iget v0, p0, Lcom/amap/api/services/route/WalkStep;->e:F
-
-    return v0
-.end method
-
-.method public getInstruction()Ljava/lang/String;
+.method public a()Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcom/amap/api/services/route/WalkStep;->a:Ljava/lang/String;
@@ -174,56 +134,7 @@
     return-object v0
 .end method
 
-.method public getOrientation()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/route/WalkStep;->b:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getPolyline()Ljava/util/List;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Lcom/amap/api/services/core/LatLonPoint;",
-            ">;"
-        }
-    .end annotation
-
-    iget-object v0, p0, Lcom/amap/api/services/route/WalkStep;->f:Ljava/util/List;
-
-    return-object v0
-.end method
-
-.method public getRoad()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/route/WalkStep;->c:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public setAction(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/route/WalkStep;->g:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public setAssistantAction(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/route/WalkStep;->h:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public setDistance(F)V
+.method public a(F)V
     .locals 0
 
     iput p1, p0, Lcom/amap/api/services/route/WalkStep;->d:F
@@ -231,15 +142,7 @@
     return-void
 .end method
 
-.method public setDuration(F)V
-    .locals 0
-
-    iput p1, p0, Lcom/amap/api/services/route/WalkStep;->e:F
-
-    return-void
-.end method
-
-.method public setInstruction(Ljava/lang/String;)V
+.method public a(Ljava/lang/String;)V
     .locals 0
 
     iput-object p1, p0, Lcom/amap/api/services/route/WalkStep;->a:Ljava/lang/String;
@@ -247,15 +150,7 @@
     return-void
 .end method
 
-.method public setOrientation(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/route/WalkStep;->b:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public setPolyline(Ljava/util/List;)V
+.method public a(Ljava/util/List;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -272,12 +167,117 @@
     return-void
 .end method
 
-.method public setRoad(Ljava/lang/String;)V
+.method public b()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/route/WalkStep;->b:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public b(F)V
+    .locals 0
+
+    iput p1, p0, Lcom/amap/api/services/route/WalkStep;->e:F
+
+    return-void
+.end method
+
+.method public b(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/route/WalkStep;->b:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public c()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/route/WalkStep;->c:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public c(Ljava/lang/String;)V
     .locals 0
 
     iput-object p1, p0, Lcom/amap/api/services/route/WalkStep;->c:Ljava/lang/String;
 
     return-void
+.end method
+
+.method public d()F
+    .locals 1
+
+    iget v0, p0, Lcom/amap/api/services/route/WalkStep;->d:F
+
+    return v0
+.end method
+
+.method public d(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/route/WalkStep;->g:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public e()F
+    .locals 1
+
+    iget v0, p0, Lcom/amap/api/services/route/WalkStep;->e:F
+
+    return v0
+.end method
+
+.method public e(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/route/WalkStep;->h:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public f()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcom/amap/api/services/core/LatLonPoint;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/amap/api/services/route/WalkStep;->f:Ljava/util/List;
+
+    return-object v0
+.end method
+
+.method public g()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/route/WalkStep;->g:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public h()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/route/WalkStep;->h:Ljava/lang/String;
+
+    return-object v0
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V

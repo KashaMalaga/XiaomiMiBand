@@ -404,7 +404,7 @@
 
     const/16 v9, 0x3ea
 
-    invoke-static {}, Lcom/amap/api/maps/MapsInitializer;->getNetWorkEnable()Z
+    invoke-static {}, Lcom/amap/api/maps/y;->a()Z
 
     move-result v0
 
@@ -504,7 +504,7 @@
 
     const-string v7, "User-Agent"
 
-    sget-object v8, Lcom/amap/api/mapcore/p;->b:Ljava/lang/String;
+    sget-object v8, Lcom/amap/api/mapcore/av;->b:Ljava/lang/String;
 
     invoke-interface {v5, v7, v8}, Lorg/apache/http/params/HttpParams;->setParameter(Ljava/lang/String;Ljava/lang/Object;)Lorg/apache/http/params/HttpParams;
 

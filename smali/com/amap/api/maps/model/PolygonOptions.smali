@@ -6,13 +6,13 @@
 
 
 # static fields
-.field public static final CREATOR:Lcom/amap/api/maps/model/PolygonOptionsCreator;
+.field public static final a:Lcom/amap/api/maps/model/v;
 
 
 # instance fields
-.field a:Ljava/lang/String;
+.field b:Ljava/lang/String;
 
-.field private final b:Ljava/util/List;
+.field private final c:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List",
@@ -23,26 +23,26 @@
     .end annotation
 .end field
 
-.field private c:F
-
-.field private d:I
+.field private d:F
 
 .field private e:I
 
-.field private f:F
+.field private f:I
 
-.field private g:Z
+.field private g:F
+
+.field private h:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/maps/model/PolygonOptionsCreator;
+    new-instance v0, Lcom/amap/api/maps/model/v;
 
-    invoke-direct {v0}, Lcom/amap/api/maps/model/PolygonOptionsCreator;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/maps/model/v;-><init>()V
 
-    sput-object v0, Lcom/amap/api/maps/model/PolygonOptions;->CREATOR:Lcom/amap/api/maps/model/PolygonOptionsCreator;
+    sput-object v0, Lcom/amap/api/maps/model/PolygonOptions;->a:Lcom/amap/api/maps/model/v;
 
     return-void
 .end method
@@ -56,56 +56,58 @@
 
     const/high16 v0, 0x41200000
 
-    iput v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->c:F
-
-    iput v1, p0, Lcom/amap/api/maps/model/PolygonOptions;->d:I
+    iput v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->d:F
 
     iput v1, p0, Lcom/amap/api/maps/model/PolygonOptions;->e:I
 
+    iput v1, p0, Lcom/amap/api/maps/model/PolygonOptions;->f:I
+
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->f:F
+    iput v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->g:F
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->g:Z
+    iput-boolean v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->h:Z
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->b:Ljava/util/List;
+    iput-object v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->c:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public add(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/PolygonOptions;
+.method public a(F)Lcom/amap/api/maps/model/PolygonOptions;
+    .locals 0
+
+    iput p1, p0, Lcom/amap/api/maps/model/PolygonOptions;->d:F
+
+    return-object p0
+.end method
+
+.method public a(I)Lcom/amap/api/maps/model/PolygonOptions;
+    .locals 0
+
+    iput p1, p0, Lcom/amap/api/maps/model/PolygonOptions;->e:I
+
+    return-object p0
+.end method
+
+.method public a(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/PolygonOptions;
     .locals 1
 
-    iget-object v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->b:Ljava/util/List;
+    iget-object v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->c:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-object p0
 .end method
 
-.method public varargs add([Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/PolygonOptions;
-    .locals 2
-
-    iget-object v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->b:Ljava/util/List;
-
-    invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
-
-    return-object p0
-.end method
-
-.method public addAll(Ljava/lang/Iterable;)Lcom/amap/api/maps/model/PolygonOptions;
+.method public a(Ljava/lang/Iterable;)Lcom/amap/api/maps/model/PolygonOptions;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -135,7 +137,7 @@
 
     check-cast v0, Lcom/amap/api/maps/model/LatLng;
 
-    iget-object v2, p0, Lcom/amap/api/maps/model/PolygonOptions;->b:Ljava/util/List;
+    iget-object v2, p0, Lcom/amap/api/maps/model/PolygonOptions;->c:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -145,31 +147,29 @@
     return-object p0
 .end method
 
-.method public describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public fillColor(I)Lcom/amap/api/maps/model/PolygonOptions;
+.method public a(Z)Lcom/amap/api/maps/model/PolygonOptions;
     .locals 0
 
-    iput p1, p0, Lcom/amap/api/maps/model/PolygonOptions;->e:I
+    iput-boolean p1, p0, Lcom/amap/api/maps/model/PolygonOptions;->h:Z
 
     return-object p0
 .end method
 
-.method public getFillColor()I
-    .locals 1
+.method public varargs a([Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/PolygonOptions;
+    .locals 2
 
-    iget v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->e:I
+    iget-object v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->c:Ljava/util/List;
 
-    return v0
+    invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+
+    return-object p0
 .end method
 
-.method public getPoints()Ljava/util/List;
+.method public a()Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -181,91 +181,99 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->b:Ljava/util/List;
+    iget-object v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->c:Ljava/util/List;
 
     return-object v0
 .end method
 
-.method public getStrokeColor()I
+.method public b()F
     .locals 1
 
-    iget v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->d:I
+    iget v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->d:F
 
     return v0
 .end method
 
-.method public getStrokeWidth()F
-    .locals 1
-
-    iget v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->c:F
-
-    return v0
-.end method
-
-.method public getZIndex()F
-    .locals 1
-
-    iget v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->f:F
-
-    return v0
-.end method
-
-.method public isVisible()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->g:Z
-
-    return v0
-.end method
-
-.method public strokeColor(I)Lcom/amap/api/maps/model/PolygonOptions;
+.method public b(F)Lcom/amap/api/maps/model/PolygonOptions;
     .locals 0
 
-    iput p1, p0, Lcom/amap/api/maps/model/PolygonOptions;->d:I
+    iput p1, p0, Lcom/amap/api/maps/model/PolygonOptions;->g:F
 
     return-object p0
 .end method
 
-.method public strokeWidth(F)Lcom/amap/api/maps/model/PolygonOptions;
+.method public b(I)Lcom/amap/api/maps/model/PolygonOptions;
     .locals 0
 
-    iput p1, p0, Lcom/amap/api/maps/model/PolygonOptions;->c:F
+    iput p1, p0, Lcom/amap/api/maps/model/PolygonOptions;->f:I
 
     return-object p0
 .end method
 
-.method public visible(Z)Lcom/amap/api/maps/model/PolygonOptions;
-    .locals 0
+.method public c()I
+    .locals 1
 
-    iput-boolean p1, p0, Lcom/amap/api/maps/model/PolygonOptions;->g:Z
+    iget v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->e:I
 
-    return-object p0
+    return v0
+.end method
+
+.method public d()I
+    .locals 1
+
+    iget v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->f:I
+
+    return v0
+.end method
+
+.method public describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public e()F
+    .locals 1
+
+    iget v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->g:F
+
+    return v0
+.end method
+
+.method public f()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->h:Z
+
+    return v0
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
-    iget-object v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->b:Ljava/util/List;
+    iget-object v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->c:Ljava/util/List;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeTypedList(Ljava/util/List;)V
 
-    iget v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->c:F
+    iget v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->d:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
-
-    iget v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->d:I
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     iget v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->e:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->f:F
+    iget v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->f:I
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->g:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    iget-boolean v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->g:Z
+    iget-boolean v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->h:Z
 
     if-eqz v0, :cond_0
 
@@ -276,7 +284,7 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    iget-object v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->a:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amap/api/maps/model/PolygonOptions;->b:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
@@ -286,12 +294,4 @@
     const/4 v0, 0x0
 
     goto :goto_0
-.end method
-
-.method public zIndex(F)Lcom/amap/api/maps/model/PolygonOptions;
-    .locals 0
-
-    iput p1, p0, Lcom/amap/api/maps/model/PolygonOptions;->f:F
-
-    return-object p0
 .end method

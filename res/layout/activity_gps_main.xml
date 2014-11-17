@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:textSize="16.0sp" android:textColor="#ff000000" android:id="@id/start" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Start" android:singleLine="true" android:maxLength="20" />
+    <RelativeLayout android:id="@id/bg_of_map" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.amap.api.maps.MapView android:id="@id/map" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="150.0dip">
+        <TextView android:textSize="@dimen/sport_running_time_cost_desc_size" android:id="@id/time_cost_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_running_time_desc" />
+        <TextView android:textSize="@dimen/sport_running_time_cost_size" android:id="@id/time_cost" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00:00:00" android:layout_toRightOf="@id/time_cost_desc" />
+    </RelativeLayout>
+</LinearLayout>

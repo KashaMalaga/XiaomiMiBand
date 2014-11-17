@@ -42,9 +42,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Landroid/support/v4/app/n;
+    new-instance v0, Landroid/support/v4/app/s;
 
-    invoke-direct {v0}, Landroid/support/v4/app/n;-><init>()V
+    invoke-direct {v0}, Landroid/support/v4/app/s;-><init>()V
 
     sput-object v0, Landroid/support/v4/app/BackStackState;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -121,14 +121,14 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/support/v4/app/v;Landroid/support/v4/app/l;)V
+.method public constructor <init>(Landroid/support/v4/app/F;Landroid/support/v4/app/q;)V
     .locals 8
 
     const/4 v3, 0x0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p2, Landroid/support/v4/app/l;->k:Landroid/support/v4/app/m;
+    iget-object v0, p2, Landroid/support/v4/app/q;->k:Landroid/support/v4/app/r;
 
     move-object v1, v0
 
@@ -137,11 +137,11 @@
     :goto_0
     if-eqz v1, :cond_1
 
-    iget-object v2, v1, Landroid/support/v4/app/m;->i:Ljava/util/ArrayList;
+    iget-object v2, v1, Landroid/support/v4/app/r;->i:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_0
 
-    iget-object v2, v1, Landroid/support/v4/app/m;->i:Ljava/util/ArrayList;
+    iget-object v2, v1, Landroid/support/v4/app/r;->i:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
@@ -150,12 +150,12 @@
     add-int/2addr v0, v2
 
     :cond_0
-    iget-object v1, v1, Landroid/support/v4/app/m;->a:Landroid/support/v4/app/m;
+    iget-object v1, v1, Landroid/support/v4/app/r;->a:Landroid/support/v4/app/r;
 
     goto :goto_0
 
     :cond_1
-    iget v1, p2, Landroid/support/v4/app/l;->m:I
+    iget v1, p2, Landroid/support/v4/app/q;->m:I
 
     mul-int/lit8 v1, v1, 0x7
 
@@ -165,7 +165,7 @@
 
     iput-object v0, p0, Landroid/support/v4/app/BackStackState;->a:[I
 
-    iget-boolean v0, p2, Landroid/support/v4/app/l;->t:Z
+    iget-boolean v0, p2, Landroid/support/v4/app/q;->t:Z
 
     if-nez v0, :cond_2
 
@@ -178,7 +178,7 @@
     throw v0
 
     :cond_2
-    iget-object v0, p2, Landroid/support/v4/app/l;->k:Landroid/support/v4/app/m;
+    iget-object v0, p2, Landroid/support/v4/app/q;->k:Landroid/support/v4/app/r;
 
     move-object v5, v0
 
@@ -191,7 +191,7 @@
 
     add-int/lit8 v2, v0, 0x1
 
-    iget v4, v5, Landroid/support/v4/app/m;->c:I
+    iget v4, v5, Landroid/support/v4/app/r;->c:I
 
     aput v4, v1, v0
 
@@ -199,13 +199,13 @@
 
     add-int/lit8 v4, v2, 0x1
 
-    iget-object v0, v5, Landroid/support/v4/app/m;->d:Landroid/support/v4/app/Fragment;
+    iget-object v0, v5, Landroid/support/v4/app/r;->d:Landroid/support/v4/app/Fragment;
 
     if-eqz v0, :cond_3
 
-    iget-object v0, v5, Landroid/support/v4/app/m;->d:Landroid/support/v4/app/Fragment;
+    iget-object v0, v5, Landroid/support/v4/app/r;->d:Landroid/support/v4/app/Fragment;
 
-    iget v0, v0, Landroid/support/v4/app/Fragment;->u:I
+    iget v0, v0, Landroid/support/v4/app/Fragment;->y:I
 
     :goto_2
     aput v0, v1, v2
@@ -214,7 +214,7 @@
 
     add-int/lit8 v1, v4, 0x1
 
-    iget v2, v5, Landroid/support/v4/app/m;->e:I
+    iget v2, v5, Landroid/support/v4/app/r;->e:I
 
     aput v2, v0, v4
 
@@ -222,7 +222,7 @@
 
     add-int/lit8 v2, v1, 0x1
 
-    iget v4, v5, Landroid/support/v4/app/m;->f:I
+    iget v4, v5, Landroid/support/v4/app/r;->f:I
 
     aput v4, v0, v1
 
@@ -230,7 +230,7 @@
 
     add-int/lit8 v1, v2, 0x1
 
-    iget v4, v5, Landroid/support/v4/app/m;->g:I
+    iget v4, v5, Landroid/support/v4/app/r;->g:I
 
     aput v4, v0, v2
 
@@ -238,15 +238,15 @@
 
     add-int/lit8 v2, v1, 0x1
 
-    iget v4, v5, Landroid/support/v4/app/m;->h:I
+    iget v4, v5, Landroid/support/v4/app/r;->h:I
 
     aput v4, v0, v1
 
-    iget-object v0, v5, Landroid/support/v4/app/m;->i:Ljava/util/ArrayList;
+    iget-object v0, v5, Landroid/support/v4/app/r;->i:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_5
 
-    iget-object v0, v5, Landroid/support/v4/app/m;->i:Ljava/util/ArrayList;
+    iget-object v0, v5, Landroid/support/v4/app/r;->i:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -267,7 +267,7 @@
 
     add-int/lit8 v4, v1, 0x1
 
-    iget-object v0, v5, Landroid/support/v4/app/m;->i:Ljava/util/ArrayList;
+    iget-object v0, v5, Landroid/support/v4/app/r;->i:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -275,7 +275,7 @@
 
     check-cast v0, Landroid/support/v4/app/Fragment;
 
-    iget v0, v0, Landroid/support/v4/app/Fragment;->u:I
+    iget v0, v0, Landroid/support/v4/app/Fragment;->y:I
 
     aput v0, v7, v1
 
@@ -296,7 +296,7 @@
     move v0, v1
 
     :goto_4
-    iget-object v1, v5, Landroid/support/v4/app/m;->a:Landroid/support/v4/app/m;
+    iget-object v1, v5, Landroid/support/v4/app/r;->a:Landroid/support/v4/app/r;
 
     move-object v5, v1
 
@@ -312,35 +312,35 @@
     goto :goto_4
 
     :cond_6
-    iget v0, p2, Landroid/support/v4/app/l;->r:I
+    iget v0, p2, Landroid/support/v4/app/q;->r:I
 
     iput v0, p0, Landroid/support/v4/app/BackStackState;->b:I
 
-    iget v0, p2, Landroid/support/v4/app/l;->s:I
+    iget v0, p2, Landroid/support/v4/app/q;->s:I
 
     iput v0, p0, Landroid/support/v4/app/BackStackState;->c:I
 
-    iget-object v0, p2, Landroid/support/v4/app/l;->v:Ljava/lang/String;
+    iget-object v0, p2, Landroid/support/v4/app/q;->v:Ljava/lang/String;
 
     iput-object v0, p0, Landroid/support/v4/app/BackStackState;->d:Ljava/lang/String;
 
-    iget v0, p2, Landroid/support/v4/app/l;->x:I
+    iget v0, p2, Landroid/support/v4/app/q;->x:I
 
     iput v0, p0, Landroid/support/v4/app/BackStackState;->e:I
 
-    iget v0, p2, Landroid/support/v4/app/l;->y:I
+    iget v0, p2, Landroid/support/v4/app/q;->y:I
 
     iput v0, p0, Landroid/support/v4/app/BackStackState;->f:I
 
-    iget-object v0, p2, Landroid/support/v4/app/l;->z:Ljava/lang/CharSequence;
+    iget-object v0, p2, Landroid/support/v4/app/q;->z:Ljava/lang/CharSequence;
 
     iput-object v0, p0, Landroid/support/v4/app/BackStackState;->g:Ljava/lang/CharSequence;
 
-    iget v0, p2, Landroid/support/v4/app/l;->A:I
+    iget v0, p2, Landroid/support/v4/app/q;->A:I
 
     iput v0, p0, Landroid/support/v4/app/BackStackState;->h:I
 
-    iget-object v0, p2, Landroid/support/v4/app/l;->B:Ljava/lang/CharSequence;
+    iget-object v0, p2, Landroid/support/v4/app/q;->B:Ljava/lang/CharSequence;
 
     iput-object v0, p0, Landroid/support/v4/app/BackStackState;->i:Ljava/lang/CharSequence;
 
@@ -349,16 +349,16 @@
 
 
 # virtual methods
-.method public a(Landroid/support/v4/app/v;)Landroid/support/v4/app/l;
+.method public a(Landroid/support/v4/app/F;)Landroid/support/v4/app/q;
     .locals 11
 
     const/4 v10, 0x1
 
     const/4 v2, 0x0
 
-    new-instance v6, Landroid/support/v4/app/l;
+    new-instance v6, Landroid/support/v4/app/q;
 
-    invoke-direct {v6, p1}, Landroid/support/v4/app/l;-><init>(Landroid/support/v4/app/v;)V
+    invoke-direct {v6, p1}, Landroid/support/v4/app/q;-><init>(Landroid/support/v4/app/F;)V
 
     move v1, v2
 
@@ -371,9 +371,9 @@
 
     if-ge v0, v3, :cond_4
 
-    new-instance v7, Landroid/support/v4/app/m;
+    new-instance v7, Landroid/support/v4/app/r;
 
-    invoke-direct {v7}, Landroid/support/v4/app/m;-><init>()V
+    invoke-direct {v7}, Landroid/support/v4/app/r;-><init>()V
 
     iget-object v3, p0, Landroid/support/v4/app/BackStackState;->a:[I
 
@@ -381,9 +381,9 @@
 
     aget v0, v3, v0
 
-    iput v0, v7, Landroid/support/v4/app/m;->c:I
+    iput v0, v7, Landroid/support/v4/app/r;->c:I
 
-    sget-boolean v0, Landroid/support/v4/app/v;->a:Z
+    sget-boolean v0, Landroid/support/v4/app/F;->b:Z
 
     if-eqz v0, :cond_0
 
@@ -442,7 +442,7 @@
 
     if-ltz v0, :cond_2
 
-    iget-object v4, p1, Landroid/support/v4/app/v;->k:Ljava/util/ArrayList;
+    iget-object v4, p1, Landroid/support/v4/app/F;->l:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -450,7 +450,7 @@
 
     check-cast v0, Landroid/support/v4/app/Fragment;
 
-    iput-object v0, v7, Landroid/support/v4/app/m;->d:Landroid/support/v4/app/Fragment;
+    iput-object v0, v7, Landroid/support/v4/app/r;->d:Landroid/support/v4/app/Fragment;
 
     :goto_1
     iget-object v0, p0, Landroid/support/v4/app/BackStackState;->a:[I
@@ -459,7 +459,7 @@
 
     aget v0, v0, v3
 
-    iput v0, v7, Landroid/support/v4/app/m;->e:I
+    iput v0, v7, Landroid/support/v4/app/r;->e:I
 
     iget-object v0, p0, Landroid/support/v4/app/BackStackState;->a:[I
 
@@ -467,7 +467,7 @@
 
     aget v0, v0, v4
 
-    iput v0, v7, Landroid/support/v4/app/m;->f:I
+    iput v0, v7, Landroid/support/v4/app/r;->f:I
 
     iget-object v0, p0, Landroid/support/v4/app/BackStackState;->a:[I
 
@@ -475,7 +475,7 @@
 
     aget v0, v0, v3
 
-    iput v0, v7, Landroid/support/v4/app/m;->g:I
+    iput v0, v7, Landroid/support/v4/app/r;->g:I
 
     iget-object v0, p0, Landroid/support/v4/app/BackStackState;->a:[I
 
@@ -483,7 +483,7 @@
 
     aget v0, v0, v4
 
-    iput v0, v7, Landroid/support/v4/app/m;->h:I
+    iput v0, v7, Landroid/support/v4/app/r;->h:I
 
     iget-object v0, p0, Landroid/support/v4/app/BackStackState;->a:[I
 
@@ -497,14 +497,14 @@
 
     invoke-direct {v0, v8}, Ljava/util/ArrayList;-><init>(I)V
 
-    iput-object v0, v7, Landroid/support/v4/app/m;->i:Ljava/util/ArrayList;
+    iput-object v0, v7, Landroid/support/v4/app/r;->i:Ljava/util/ArrayList;
 
     move v4, v2
 
     :goto_2
     if-ge v4, v8, :cond_3
 
-    sget-boolean v0, Landroid/support/v4/app/v;->a:Z
+    sget-boolean v0, Landroid/support/v4/app/F;->b:Z
 
     if-eqz v0, :cond_1
 
@@ -545,7 +545,7 @@
     invoke-static {v0, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
-    iget-object v0, p1, Landroid/support/v4/app/v;->k:Ljava/util/ArrayList;
+    iget-object v0, p1, Landroid/support/v4/app/F;->l:Ljava/util/ArrayList;
 
     iget-object v9, p0, Landroid/support/v4/app/BackStackState;->a:[I
 
@@ -559,7 +559,7 @@
 
     check-cast v0, Landroid/support/v4/app/Fragment;
 
-    iget-object v3, v7, Landroid/support/v4/app/m;->i:Ljava/util/ArrayList;
+    iget-object v3, v7, Landroid/support/v4/app/r;->i:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -574,12 +574,12 @@
     :cond_2
     const/4 v0, 0x0
 
-    iput-object v0, v7, Landroid/support/v4/app/m;->d:Landroid/support/v4/app/Fragment;
+    iput-object v0, v7, Landroid/support/v4/app/r;->d:Landroid/support/v4/app/Fragment;
 
     goto :goto_1
 
     :cond_3
-    invoke-virtual {v6, v7}, Landroid/support/v4/app/l;->a(Landroid/support/v4/app/m;)V
+    invoke-virtual {v6, v7}, Landroid/support/v4/app/q;->a(Landroid/support/v4/app/r;)V
 
     add-int/lit8 v0, v1, 0x1
 
@@ -592,39 +592,39 @@
     :cond_4
     iget v0, p0, Landroid/support/v4/app/BackStackState;->b:I
 
-    iput v0, v6, Landroid/support/v4/app/l;->r:I
+    iput v0, v6, Landroid/support/v4/app/q;->r:I
 
     iget v0, p0, Landroid/support/v4/app/BackStackState;->c:I
 
-    iput v0, v6, Landroid/support/v4/app/l;->s:I
+    iput v0, v6, Landroid/support/v4/app/q;->s:I
 
     iget-object v0, p0, Landroid/support/v4/app/BackStackState;->d:Ljava/lang/String;
 
-    iput-object v0, v6, Landroid/support/v4/app/l;->v:Ljava/lang/String;
+    iput-object v0, v6, Landroid/support/v4/app/q;->v:Ljava/lang/String;
 
     iget v0, p0, Landroid/support/v4/app/BackStackState;->e:I
 
-    iput v0, v6, Landroid/support/v4/app/l;->x:I
+    iput v0, v6, Landroid/support/v4/app/q;->x:I
 
-    iput-boolean v10, v6, Landroid/support/v4/app/l;->t:Z
+    iput-boolean v10, v6, Landroid/support/v4/app/q;->t:Z
 
     iget v0, p0, Landroid/support/v4/app/BackStackState;->f:I
 
-    iput v0, v6, Landroid/support/v4/app/l;->y:I
+    iput v0, v6, Landroid/support/v4/app/q;->y:I
 
     iget-object v0, p0, Landroid/support/v4/app/BackStackState;->g:Ljava/lang/CharSequence;
 
-    iput-object v0, v6, Landroid/support/v4/app/l;->z:Ljava/lang/CharSequence;
+    iput-object v0, v6, Landroid/support/v4/app/q;->z:Ljava/lang/CharSequence;
 
     iget v0, p0, Landroid/support/v4/app/BackStackState;->h:I
 
-    iput v0, v6, Landroid/support/v4/app/l;->A:I
+    iput v0, v6, Landroid/support/v4/app/q;->A:I
 
     iget-object v0, p0, Landroid/support/v4/app/BackStackState;->i:Ljava/lang/CharSequence;
 
-    iput-object v0, v6, Landroid/support/v4/app/l;->B:Ljava/lang/CharSequence;
+    iput-object v0, v6, Landroid/support/v4/app/q;->B:Ljava/lang/CharSequence;
 
-    invoke-virtual {v6, v10}, Landroid/support/v4/app/l;->a(I)V
+    invoke-virtual {v6, v10}, Landroid/support/v4/app/q;->e(I)V
 
     return-object v6
 .end method

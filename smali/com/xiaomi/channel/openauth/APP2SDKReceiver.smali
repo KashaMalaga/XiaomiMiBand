@@ -3,9 +3,9 @@
 
 
 # static fields
-.field public static AUTH_ACTION_NAME:Ljava/lang/String;
+.field public static a:Ljava/lang/String;
 
-.field public static availableApp:Ljava/util/List;
+.field public static b:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List",
@@ -23,13 +23,13 @@
 
     const-string v0, "com.xiaomi.openauth.action.APP2SDK"
 
-    sput-object v0, Lcom/xiaomi/channel/openauth/APP2SDKReceiver;->AUTH_ACTION_NAME:Ljava/lang/String;
+    sput-object v0, Lcom/xiaomi/channel/openauth/APP2SDKReceiver;->a:Ljava/lang/String;
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    sput-object v0, Lcom/xiaomi/channel/openauth/APP2SDKReceiver;->availableApp:Ljava/util/List;
+    sput-object v0, Lcom/xiaomi/channel/openauth/APP2SDKReceiver;->b:Ljava/util/List;
 
     return-void
 .end method
@@ -59,7 +59,7 @@
 
     if-nez v0, :cond_0
 
-    sget-object v0, Lcom/xiaomi/channel/openauth/APP2SDKReceiver;->availableApp:Ljava/util/List;
+    sget-object v0, Lcom/xiaomi/channel/openauth/APP2SDKReceiver;->b:Ljava/util/List;
 
     const-string v1, "pkg"
 

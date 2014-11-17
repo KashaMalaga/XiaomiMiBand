@@ -1,67 +1,49 @@
 .class Lcn/com/smartdevices/bracelet/ui/bB;
-.super Landroid/os/Handler;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lcn/com/smartdevices/bracelet/ui/L;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/bw;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/bw;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bB;->a:Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bB;->a:Lcn/com/smartdevices/bracelet/ui/bw;
 
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public handleMessage(Landroid/os/Message;)V
-    .locals 2
+.method public a(Landroid/app/DialogFragment;)V
+    .locals 0
 
-    iget v0, p1, Landroid/os/Message;->what:I
-
-    sparse-switch v0, :sswitch_data_0
-
-    :goto_0
     return-void
+.end method
 
-    :sswitch_0
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bB;->a:Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment;
+.method public b(Landroid/app/DialogFragment;)V
+    .locals 1
 
-    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/app/DialogFragment;->dismiss()V
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bB;->a:Lcn/com/smartdevices/bracelet/ui/bw;
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment;->b(Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment;Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/bw;->d(Lcn/com/smartdevices/bracelet/ui/bw;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bB;->a:Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment;
+    return-void
+.end method
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bB;->a:Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment;
+.method public c(Landroid/app/DialogFragment;)V
+    .locals 0
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment;->a(Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment;)Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;
+    invoke-virtual {p1}, Landroid/app/DialogFragment;->dismiss()V
 
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment;->c(Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment;Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;)V
-
-    goto :goto_0
-
-    :sswitch_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bB;->a:Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment;->b(Lcn/com/smartdevices/bracelet/ui/SettingFirmwareActivity$SettingFirmwareFragment;)V
-
-    goto :goto_0
-
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        0x1 -> :sswitch_0
-        0x1002 -> :sswitch_1
-    .end sparse-switch
+    return-void
 .end method

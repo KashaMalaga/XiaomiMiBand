@@ -1,19 +1,13 @@
-.class Lcn/com/smartdevices/bracelet/view/j;
+.class Lcn/com/smartdevices/bracelet/view/J;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
-
-
-# instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/view/DynamicView;
+.implements Landroid/view/animation/Interpolator;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/view/DynamicView;)V
+.method constructor <init>()V
     .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/j;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,36 +16,22 @@
 
 
 # virtual methods
-.method public onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
+.method public getInterpolation(F)F
+    .locals 3
 
-    return-void
-.end method
+    const/high16 v2, 0x3f800000
 
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 0
+    sub-float v0, p1, v2
 
-    return-void
-.end method
+    mul-float v1, v0, v0
 
-.method public onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
+    mul-float/2addr v1, v0
 
-    return-void
-.end method
+    mul-float/2addr v1, v0
 
-.method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 2
+    mul-float/2addr v0, v1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/j;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
+    add-float/2addr v0, v2
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->d(Lcn/com/smartdevices/bracelet/view/DynamicView;)Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->setRotationY(F)V
-
-    return-void
+    return v0
 .end method

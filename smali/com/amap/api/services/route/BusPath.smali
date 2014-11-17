@@ -43,9 +43,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/services/route/d;
+    new-instance v0, Lcom/amap/api/services/route/e;
 
-    invoke-direct {v0}, Lcom/amap/api/services/route/d;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/services/route/e;-><init>()V
 
     sput-object v0, Lcom/amap/api/services/route/BusPath;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -108,23 +108,7 @@
 
 
 # virtual methods
-.method public describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public getBusDistance()F
-    .locals 1
-
-    iget v0, p0, Lcom/amap/api/services/route/BusPath;->d:F
-
-    return v0
-.end method
-
-.method public getCost()F
+.method public a()F
     .locals 1
 
     iget v0, p0, Lcom/amap/api/services/route/BusPath;->a:F
@@ -132,60 +116,7 @@
     return v0
 .end method
 
-.method public getDistance()F
-    .locals 2
-
-    iget v0, p0, Lcom/amap/api/services/route/BusPath;->c:F
-
-    iget v1, p0, Lcom/amap/api/services/route/BusPath;->d:F
-
-    add-float/2addr v0, v1
-
-    return v0
-.end method
-
-.method public getSteps()Ljava/util/List;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Lcom/amap/api/services/route/BusStep;",
-            ">;"
-        }
-    .end annotation
-
-    iget-object v0, p0, Lcom/amap/api/services/route/BusPath;->e:Ljava/util/List;
-
-    return-object v0
-.end method
-
-.method public getWalkDistance()F
-    .locals 1
-
-    iget v0, p0, Lcom/amap/api/services/route/BusPath;->c:F
-
-    return v0
-.end method
-
-.method public isNightBus()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/amap/api/services/route/BusPath;->b:Z
-
-    return v0
-.end method
-
-.method public setBusDistance(F)V
-    .locals 0
-
-    iput p1, p0, Lcom/amap/api/services/route/BusPath;->d:F
-
-    return-void
-.end method
-
-.method public setCost(F)V
+.method public a(F)V
     .locals 0
 
     iput p1, p0, Lcom/amap/api/services/route/BusPath;->a:F
@@ -193,15 +124,7 @@
     return-void
 .end method
 
-.method public setNightBus(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/amap/api/services/route/BusPath;->b:Z
-
-    return-void
-.end method
-
-.method public setSteps(Ljava/util/List;)V
+.method public a(Ljava/util/List;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -218,12 +141,89 @@
     return-void
 .end method
 
-.method public setWalkDistance(F)V
+.method public a(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/amap/api/services/route/BusPath;->b:Z
+
+    return-void
+.end method
+
+.method public b(F)V
     .locals 0
 
     iput p1, p0, Lcom/amap/api/services/route/BusPath;->c:F
 
     return-void
+.end method
+
+.method public b()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/amap/api/services/route/BusPath;->b:Z
+
+    return v0
+.end method
+
+.method public c()F
+    .locals 2
+
+    iget v0, p0, Lcom/amap/api/services/route/BusPath;->c:F
+
+    iget v1, p0, Lcom/amap/api/services/route/BusPath;->d:F
+
+    add-float/2addr v0, v1
+
+    return v0
+.end method
+
+.method public c(F)V
+    .locals 0
+
+    iput p1, p0, Lcom/amap/api/services/route/BusPath;->d:F
+
+    return-void
+.end method
+
+.method public d()F
+    .locals 1
+
+    iget v0, p0, Lcom/amap/api/services/route/BusPath;->c:F
+
+    return v0
+.end method
+
+.method public describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public e()F
+    .locals 1
+
+    iget v0, p0, Lcom/amap/api/services/route/BusPath;->d:F
+
+    return v0
+.end method
+
+.method public f()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcom/amap/api/services/route/BusStep;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/amap/api/services/route/BusPath;->e:Ljava/util/List;
+
+    return-object v0
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V

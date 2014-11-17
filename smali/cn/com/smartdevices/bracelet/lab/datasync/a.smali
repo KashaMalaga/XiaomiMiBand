@@ -1,137 +1,72 @@
-.class Lcn/com/smartdevices/bracelet/lab/datasync/a;
-.super Lcom/loopj/android/http/AsyncHttpResponseHandler;
+.class public abstract Lcn/com/smartdevices/bracelet/lab/datasync/a;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# static fields
+.field public static b:Ljava/lang/String;
+
+.field private static c:Ljava/util/concurrent/ExecutorService;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/lab/datasync/SyncLabSportDataService;
-
-.field private final synthetic b:Lcn/com/smartdevices/bracelet/DataTypeSource;
-
-.field private final synthetic c:Lcn/com/smartdevices/bracelet/DataManager;
-
-.field private final synthetic d:Ljava/util/ArrayList;
+.field protected a:Lcn/com/smartdevices/bracelet/a/b;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/lab/datasync/SyncLabSportDataService;Lcn/com/smartdevices/bracelet/DataTypeSource;Lcn/com/smartdevices/bracelet/DataManager;Ljava/util/ArrayList;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/datasync/a;->a:Lcn/com/smartdevices/bracelet/lab/datasync/SyncLabSportDataService;
+    const-string v0, "BleTask"
 
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/lab/datasync/a;->b:Lcn/com/smartdevices/bracelet/DataTypeSource;
+    sput-object v0, Lcn/com/smartdevices/bracelet/lab/datasync/a;->b:Ljava/lang/String;
 
-    iput-object p3, p0, Lcn/com/smartdevices/bracelet/lab/datasync/a;->c:Lcn/com/smartdevices/bracelet/DataManager;
+    invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
 
-    iput-object p4, p0, Lcn/com/smartdevices/bracelet/lab/datasync/a;->d:Ljava/util/ArrayList;
+    move-result-object v0
 
-    invoke-direct {p0}, Lcom/loopj/android/http/AsyncHttpResponseHandler;-><init>()V
+    sput-object v0, Lcn/com/smartdevices/bracelet/lab/datasync/a;->c:Ljava/util/concurrent/ExecutorService;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lcn/com/smartdevices/bracelet/a/b;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/datasync/a;->a:Lcn/com/smartdevices/bracelet/a/b;
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/datasync/a;->a:Lcn/com/smartdevices/bracelet/a/b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
-    .locals 4
+.method public a()V
+    .locals 1
 
-    invoke-static {p3}, Lcn/com/smartdevices/bracelet/Utils;->getStringFromBytes([B)Ljava/lang/String;
+    sget-object v0, Lcn/com/smartdevices/bracelet/lab/datasync/a;->c:Ljava/util/concurrent/ExecutorService;
 
-    move-result-object v0
-
-    const-string v1, "Lab"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "syncToServer onFailure:"
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/Debug;->fi(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, p0}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
 
     return-void
 .end method
 
-.method public onSuccess(I[Lorg/apache/http/Header;[B)V
-    .locals 5
+.method public abstract a(Lcn/com/smartdevices/bracelet/a/b;)V
+.end method
 
-    invoke-static {p3}, Lcn/com/smartdevices/bracelet/Utils;->getStringFromBytes([B)Ljava/lang/String;
+.method public run()V
+    .locals 1
 
-    move-result-object v0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/datasync/a;->a:Lcn/com/smartdevices/bracelet/a/b;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/webapi/WebRes;->getWebStatus(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/webapi/WebStatus;
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/datasync/a;->a(Lcn/com/smartdevices/bracelet/a/b;)V
 
-    move-result-object v1
-
-    const-string v2, "Lab"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "syncToServer onSuccess:"
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v3, "  type = "
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/datasync/a;->b:Lcn/com/smartdevices/bracelet/DataTypeSource;
-
-    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/DataTypeSource;->getType()I
-
-    move-result v3
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v3, " code = "
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v3, v1, Lcn/com/smartdevices/bracelet/webapi/WebStatus;->code:I
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/Debug;->fi(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/webapi/WebStatus;->success()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/datasync/a;->c:Lcn/com/smartdevices/bracelet/DataManager;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/datasync/a;->d:Ljava/util/ArrayList;
-
-    const/4 v2, 0x1
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/datasync/a;->b:Lcn/com/smartdevices/bracelet/DataTypeSource;
-
-    invoke-virtual {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/DataManager;->updateSyncState(Ljava/util/ArrayList;ILcn/com/smartdevices/bracelet/DataTypeSource;)V
-
-    :cond_0
     return-void
 .end method

@@ -3,7 +3,7 @@
 
 
 # instance fields
-.field private a:J
+.field private duration:J
 
 .field protected key:Lcom/tencent/stat/event/CustomEvent$Key;
 
@@ -22,11 +22,11 @@
 
     const-wide/16 v0, -0x1
 
-    iput-wide v0, p0, Lcom/tencent/stat/event/CustomEvent;->a:J
+    iput-wide v0, p0, Lcom/tencent/stat/event/CustomEvent;->duration:J
 
     iget-object v0, p0, Lcom/tencent/stat/event/CustomEvent;->key:Lcom/tencent/stat/event/CustomEvent$Key;
 
-    iput-object p3, v0, Lcom/tencent/stat/event/CustomEvent$Key;->a:Ljava/lang/String;
+    iput-object p3, v0, Lcom/tencent/stat/event/CustomEvent$Key;->id:Ljava/lang/String;
 
     return-void
 .end method
@@ -56,11 +56,11 @@
 
     iget-object v1, p0, Lcom/tencent/stat/event/CustomEvent;->key:Lcom/tencent/stat/event/CustomEvent$Key;
 
-    iget-object v1, v1, Lcom/tencent/stat/event/CustomEvent$Key;->a:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/stat/event/CustomEvent$Key;->id:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    iget-wide v0, p0, Lcom/tencent/stat/event/CustomEvent;->a:J
+    iget-wide v0, p0, Lcom/tencent/stat/event/CustomEvent;->duration:J
 
     const-wide/16 v2, 0x0
 
@@ -70,14 +70,14 @@
 
     const-string v0, "du"
 
-    iget-wide v1, p0, Lcom/tencent/stat/event/CustomEvent;->a:J
+    iget-wide v1, p0, Lcom/tencent/stat/event/CustomEvent;->duration:J
 
     invoke-virtual {p1, v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
     :cond_0
     iget-object v0, p0, Lcom/tencent/stat/event/CustomEvent;->key:Lcom/tencent/stat/event/CustomEvent$Key;
 
-    iget-object v0, v0, Lcom/tencent/stat/event/CustomEvent$Key;->b:[Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/stat/event/CustomEvent$Key;->args:[Ljava/lang/String;
 
     if-eqz v0, :cond_2
 
@@ -87,7 +87,7 @@
 
     iget-object v0, p0, Lcom/tencent/stat/event/CustomEvent;->key:Lcom/tencent/stat/event/CustomEvent$Key;
 
-    iget-object v2, v0, Lcom/tencent/stat/event/CustomEvent$Key;->b:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/stat/event/CustomEvent$Key;->args:[Ljava/lang/String;
 
     array-length v3, v2
 
@@ -112,7 +112,7 @@
     :cond_2
     iget-object v0, p0, Lcom/tencent/stat/event/CustomEvent;->key:Lcom/tencent/stat/event/CustomEvent$Key;
 
-    iget-object v0, v0, Lcom/tencent/stat/event/CustomEvent$Key;->c:Ljava/util/Properties;
+    iget-object v0, v0, Lcom/tencent/stat/event/CustomEvent$Key;->prop:Ljava/util/Properties;
 
     if-eqz v0, :cond_3
 
@@ -120,7 +120,7 @@
 
     iget-object v1, p0, Lcom/tencent/stat/event/CustomEvent;->key:Lcom/tencent/stat/event/CustomEvent$Key;
 
-    iget-object v1, v1, Lcom/tencent/stat/event/CustomEvent$Key;->c:Ljava/util/Properties;
+    iget-object v1, v1, Lcom/tencent/stat/event/CustomEvent$Key;->prop:Ljava/util/Properties;
 
     invoke-direct {v0, v1}, Lorg/json/JSONObject;-><init>(Ljava/util/Map;)V
 
@@ -139,7 +139,7 @@
 
     iget-object v0, p0, Lcom/tencent/stat/event/CustomEvent;->key:Lcom/tencent/stat/event/CustomEvent$Key;
 
-    iput-object p1, v0, Lcom/tencent/stat/event/CustomEvent$Key;->b:[Ljava/lang/String;
+    iput-object p1, v0, Lcom/tencent/stat/event/CustomEvent$Key;->args:[Ljava/lang/String;
 
     return-void
 .end method
@@ -147,7 +147,7 @@
 .method public setDuration(J)V
     .locals 0
 
-    iput-wide p1, p0, Lcom/tencent/stat/event/CustomEvent;->a:J
+    iput-wide p1, p0, Lcom/tencent/stat/event/CustomEvent;->duration:J
 
     return-void
 .end method
@@ -157,7 +157,7 @@
 
     iget-object v0, p0, Lcom/tencent/stat/event/CustomEvent;->key:Lcom/tencent/stat/event/CustomEvent$Key;
 
-    iput-object p1, v0, Lcom/tencent/stat/event/CustomEvent$Key;->c:Ljava/util/Properties;
+    iput-object p1, v0, Lcom/tencent/stat/event/CustomEvent$Key;->prop:Ljava/util/Properties;
 
     return-void
 .end method

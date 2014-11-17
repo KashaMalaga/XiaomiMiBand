@@ -15,72 +15,6 @@
     return-void
 .end method
 
-.method private static a(Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    :cond_0
-    const-string v0, "MicroMsg.SDK.WXMediaMessage"
-
-    const-string v1, "pathNewToOld fail, newPath is null"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/b/a;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    :goto_0
-    return-object p0
-
-    :cond_1
-    const-string v0, "com.tencent.mm.sdk.modelmsg"
-
-    const-string v1, "com.tencent.mm.sdk.openapi"
-
-    invoke-virtual {p0, v0, v1}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
-
-    move-result-object p0
-
-    goto :goto_0
-.end method
-
-.method private static b(Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    :cond_0
-    const-string v0, "MicroMsg.SDK.WXMediaMessage"
-
-    const-string v1, "pathOldToNew fail, oldPath is null"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/b/a;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    :goto_0
-    return-object p0
-
-    :cond_1
-    const-string v0, "com.tencent.mm.sdk.openapi"
-
-    const-string v1, "com.tencent.mm.sdk.modelmsg"
-
-    invoke-virtual {p0, v0, v1}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
-
-    move-result-object p0
-
-    goto :goto_0
-.end method
-
 .method public static fromBundle(Landroid/os/Bundle;)Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
     .locals 6
 
@@ -150,7 +84,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage$Builder;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage$Builder;->pathOldToNew(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -234,6 +168,72 @@
     goto :goto_0
 .end method
 
+.method private static pathNewToOld(Ljava/lang/String;)Ljava/lang/String;
+    .locals 2
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    :cond_0
+    const-string v0, "MicroMsg.SDK.WXMediaMessage"
+
+    const-string v1, "pathNewToOld fail, newPath is null"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/b/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_0
+    return-object p0
+
+    :cond_1
+    const-string v0, "com.tencent.mm.sdk.modelmsg"
+
+    const-string v1, "com.tencent.mm.sdk.openapi"
+
+    invoke-virtual {p0, v0, v1}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object p0
+
+    goto :goto_0
+.end method
+
+.method private static pathOldToNew(Ljava/lang/String;)Ljava/lang/String;
+    .locals 2
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    :cond_0
+    const-string v0, "MicroMsg.SDK.WXMediaMessage"
+
+    const-string v1, "pathOldToNew fail, oldPath is null"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/b/a;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_0
+    return-object p0
+
+    :cond_1
+    const-string v0, "com.tencent.mm.sdk.openapi"
+
+    const-string v1, "com.tencent.mm.sdk.modelmsg"
+
+    invoke-virtual {p0, v0, v1}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object p0
+
+    goto :goto_0
+.end method
+
 .method public static toBundle(Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;)Landroid/os/Bundle;
     .locals 3
 
@@ -281,7 +281,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage$Builder;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage$Builder;->pathNewToOld(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 

@@ -69,7 +69,7 @@
 
     iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->i:Landroid/widget/ImageView;
 
-    sget-object v0, Lcom/xiaomi/hm/health/R$styleable;->LabCircleView:[I
+    sget-object v0, Lcom/xiaomi/hm/a/s;->LabCircleView:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -97,11 +97,11 @@
 
     move-result v4
 
-    const v0, 0x7f030062
+    const v0, 0x7f030066
 
     invoke-static {p1, v0, p0}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const v0, 0x7f070193
+    const v0, 0x7f0701a3
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->findViewById(I)Landroid/view/View;
 
@@ -111,7 +111,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->b:Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView$CircleView;
 
-    const v0, 0x7f070195
+    const v0, 0x7f0701a5
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->findViewById(I)Landroid/view/View;
 
@@ -121,7 +121,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->c:Landroid/widget/TextView;
 
-    const v0, 0x7f070194
+    const v0, 0x7f0701a4
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->findViewById(I)Landroid/view/View;
 
@@ -146,20 +146,6 @@
     invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void
-.end method
-
-.method private a(F)Landroid/animation/Animator;
-    .locals 1
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/lab/ui/view/a;
-
-    invoke-direct {v0, p0, p1}, Lcn/com/smartdevices/bracelet/lab/ui/view/a;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;F)V
-
-    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->a(Landroid/animation/ValueAnimator$AnimatorUpdateListener;F)Landroid/animation/Animator;
-
-    move-result-object v0
-
-    return-object v0
 .end method
 
 .method private a(FF)Landroid/animation/Animator;
@@ -219,7 +205,7 @@
 .method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;F)Landroid/animation/Animator;
     .locals 1
 
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->a(F)Landroid/animation/Animator;
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->b(F)Landroid/animation/Animator;
 
     move-result-object v0
 
@@ -236,7 +222,85 @@
     return-object v0
 .end method
 
-.method private a(I)V
+.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;I)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->f(I)V
+
+    return-void
+.end method
+
+.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;Landroid/animation/Animator;)V
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->e:Landroid/animation/Animator;
+
+    return-void
+.end method
+
+.method private b(F)Landroid/animation/Animator;
+    .locals 1
+
+    new-instance v0, Lcn/com/smartdevices/bracelet/lab/ui/view/a;
+
+    invoke-direct {v0, p0, p1}, Lcn/com/smartdevices/bracelet/lab/ui/view/a;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;F)V
+
+    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->a(Landroid/animation/ValueAnimator$AnimatorUpdateListener;F)Landroid/animation/Animator;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method static synthetic b(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;)Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView$CircleView;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->b:Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView$CircleView;
+
+    return-object v0
+.end method
+
+.method static synthetic b(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;Landroid/animation/Animator;)V
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->d:Landroid/animation/Animator;
+
+    return-void
+.end method
+
+.method static synthetic c(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;)Landroid/animation/Animator;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->d:Landroid/animation/Animator;
+
+    return-object v0
+.end method
+
+.method static synthetic d(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;)Lcn/com/smartdevices/bracelet/lab/ui/view/c;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->g:Lcn/com/smartdevices/bracelet/lab/ui/view/c;
+
+    return-object v0
+.end method
+
+.method static synthetic e(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;)I
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->f:I
+
+    return v0
+.end method
+
+.method static synthetic f(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;)I
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->h:I
+
+    return v0
+.end method
+
+.method private f(I)V
     .locals 2
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->h:I
@@ -293,73 +357,9 @@
     goto :goto_0
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;I)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->a(I)V
-
-    return-void
-.end method
-
-.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;Landroid/animation/Animator;)V
-    .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->e:Landroid/animation/Animator;
-
-    return-void
-.end method
-
-.method static synthetic b(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;)Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView$CircleView;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->b:Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView$CircleView;
-
-    return-object v0
-.end method
-
-.method static synthetic b(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;Landroid/animation/Animator;)V
-    .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->d:Landroid/animation/Animator;
-
-    return-void
-.end method
-
-.method static synthetic c(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;)Landroid/animation/Animator;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->d:Landroid/animation/Animator;
-
-    return-object v0
-.end method
-
-.method static synthetic d(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;)Lcn/com/smartdevices/bracelet/lab/ui/view/c;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->g:Lcn/com/smartdevices/bracelet/lab/ui/view/c;
-
-    return-object v0
-.end method
-
-.method static synthetic e(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;)I
-    .locals 1
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->f:I
-
-    return v0
-.end method
-
-.method static synthetic f(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;)I
-    .locals 1
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->h:I
-
-    return v0
-.end method
-
 
 # virtual methods
-.method public destroy()V
+.method public a()V
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->g:Lcn/com/smartdevices/bracelet/lab/ui/view/c;
@@ -392,39 +392,62 @@
     return-void
 .end method
 
-.method public initInflatingConfig(I)V
-    .locals 2
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/lab/ui/view/c;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/view/c;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;Lcn/com/smartdevices/bracelet/lab/ui/view/c;)V
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->g:Lcn/com/smartdevices/bracelet/lab/ui/view/c;
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->h:I
-
-    return-void
-.end method
-
-.method public makeView()Landroid/view/View;
+.method public a(F)V
     .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->c:Landroid/widget/TextView;
 
-    return-object v0
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->c:Landroid/widget/TextView;
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextSize(F)V
+
+    :cond_0
+    return-void
 .end method
 
-.method protected onAttachedToWindow()V
-    .locals 0
+.method public a(I)V
+    .locals 1
 
-    invoke-super {p0}, Landroid/widget/FrameLayout;->onAttachedToWindow()V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->c:Landroid/widget/TextView;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->c:Landroid/widget/TextView;
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(I)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public a(Landroid/view/animation/Animation;)V
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->c:Landroid/widget/TextView;
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->startAnimation(Landroid/view/animation/Animation;)V
 
     return-void
 .end method
 
-.method public setOfflineVisible(Z)V
+.method public a(Ljava/lang/String;)V
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->c:Landroid/widget/TextView;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->c:Landroid/widget/TextView;
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public a(Z)V
     .locals 4
 
     const/16 v2, 0x8
@@ -465,37 +488,7 @@
     goto :goto_1
 .end method
 
-.method public setStateText(I)V
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->c:Landroid/widget/TextView;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->c:Landroid/widget/TextView;
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(I)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public setStateText(Ljava/lang/String;)V
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->c:Landroid/widget/TextView;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->c:Landroid/widget/TextView;
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public setStateTextColor(I)V
+.method public b(I)V
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->c:Landroid/widget/TextView;
@@ -510,22 +503,23 @@
     return-void
 .end method
 
-.method public setStateTextSize(F)V
-    .locals 1
+.method public c(I)V
+    .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->c:Landroid/widget/TextView;
+    new-instance v0, Lcn/com/smartdevices/bracelet/lab/ui/view/c;
 
-    if-eqz v0, :cond_0
+    const/4 v1, 0x0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->c:Landroid/widget/TextView;
+    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/view/c;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;Lcn/com/smartdevices/bracelet/lab/ui/view/c;)V
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextSize(F)V
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->g:Lcn/com/smartdevices/bracelet/lab/ui/view/c;
 
-    :cond_0
+    iput p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->h:I
+
     return-void
 .end method
 
-.method public startInflatingAnim(I)V
+.method public d(I)V
     .locals 2
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->h:I
@@ -547,7 +541,7 @@
     goto :goto_0
 .end method
 
-.method public startShrinkingAnim(I)V
+.method public e(I)V
     .locals 2
 
     const/4 v1, 0x1
@@ -571,12 +565,18 @@
     return-void
 .end method
 
-.method public startStateViewAnimation(Landroid/view/animation/Animation;)V
+.method public makeView()Landroid/view/View;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->c:Landroid/widget/TextView;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->startAnimation(Landroid/view/animation/Animation;)V
+    return-object v0
+.end method
+
+.method protected onAttachedToWindow()V
+    .locals 0
+
+    invoke-super {p0}, Landroid/widget/FrameLayout;->onAttachedToWindow()V
 
     return-void
 .end method

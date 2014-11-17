@@ -3,11 +3,11 @@
 
 
 # instance fields
-.field private a:Ljava/lang/String;
+.field private error:Ljava/lang/String;
 
-.field private b:I
+.field private errorAttr:I
 
-.field private c:I
+.field private maxErrorLength:I
 
 
 # direct methods
@@ -18,7 +18,7 @@
 
     const/16 v0, 0x64
 
-    iput v0, p0, Lcom/tencent/stat/event/ErrorEvent;->c:I
+    iput v0, p0, Lcom/tencent/stat/event/ErrorEvent;->maxErrorLength:I
 
     invoke-virtual {p4}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
 
@@ -28,18 +28,18 @@
 
     array-length v0, v1
 
-    iget v2, p0, Lcom/tencent/stat/event/ErrorEvent;->c:I
+    iget v2, p0, Lcom/tencent/stat/event/ErrorEvent;->maxErrorLength:I
 
     if-le v0, v2, :cond_1
 
-    iget v0, p0, Lcom/tencent/stat/event/ErrorEvent;->c:I
+    iget v0, p0, Lcom/tencent/stat/event/ErrorEvent;->maxErrorLength:I
 
     new-array v2, v0, [Ljava/lang/StackTraceElement;
 
     const/4 v0, 0x0
 
     :goto_0
-    iget v3, p0, Lcom/tencent/stat/event/ErrorEvent;->c:I
+    iget v3, p0, Lcom/tencent/stat/event/ErrorEvent;->maxErrorLength:I
 
     if-ge v0, v3, :cond_0
 
@@ -69,9 +69,9 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/stat/event/ErrorEvent;->a:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/stat/event/ErrorEvent;->error:Ljava/lang/String;
 
-    iput p3, p0, Lcom/tencent/stat/event/ErrorEvent;->b:I
+    iput p3, p0, Lcom/tencent/stat/event/ErrorEvent;->errorAttr:I
 
     invoke-virtual {v1}, Ljava/io/PrintWriter;->close()V
 
@@ -85,13 +85,13 @@
 
     const/16 v0, 0x64
 
-    iput v0, p0, Lcom/tencent/stat/event/ErrorEvent;->c:I
+    iput v0, p0, Lcom/tencent/stat/event/ErrorEvent;->maxErrorLength:I
 
-    iput-object p3, p0, Lcom/tencent/stat/event/ErrorEvent;->a:Ljava/lang/String;
+    iput-object p3, p0, Lcom/tencent/stat/event/ErrorEvent;->error:Ljava/lang/String;
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/stat/event/ErrorEvent;->b:I
+    iput v0, p0, Lcom/tencent/stat/event/ErrorEvent;->errorAttr:I
 
     return-void
 .end method
@@ -111,13 +111,13 @@
 
     const-string v0, "er"
 
-    iget-object v1, p0, Lcom/tencent/stat/event/ErrorEvent;->a:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/stat/event/ErrorEvent;->error:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string v0, "ea"
 
-    iget v1, p0, Lcom/tencent/stat/event/ErrorEvent;->b:I
+    iget v1, p0, Lcom/tencent/stat/event/ErrorEvent;->errorAttr:I
 
     invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 

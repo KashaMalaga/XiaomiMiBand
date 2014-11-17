@@ -28,9 +28,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/services/route/g;
+    new-instance v0, Lcom/amap/api/services/route/h;
 
-    invoke-direct {v0}, Lcom/amap/api/services/route/g;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/services/route/h;-><init>()V
 
     sput-object v0, Lcom/amap/api/services/route/District;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -67,23 +67,7 @@
 
 
 # virtual methods
-.method public describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public getDistrictAdcode()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/route/District;->b:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getDistrictName()Ljava/lang/String;
+.method public a()Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcom/amap/api/services/route/District;->a:Ljava/lang/String;
@@ -91,7 +75,23 @@
     return-object v0
 .end method
 
-.method public setDistrictAdcode(Ljava/lang/String;)V
+.method public a(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/route/District;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public b()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/route/District;->b:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public b(Ljava/lang/String;)V
     .locals 0
 
     iput-object p1, p0, Lcom/amap/api/services/route/District;->b:Ljava/lang/String;
@@ -99,12 +99,12 @@
     return-void
 .end method
 
-.method public setDistrictName(Ljava/lang/String;)V
-    .locals 0
+.method public describeContents()I
+    .locals 1
 
-    iput-object p1, p0, Lcom/amap/api/services/route/District;->a:Ljava/lang/String;
+    const/4 v0, 0x0
 
-    return-void
+    return v0
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V

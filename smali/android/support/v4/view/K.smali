@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/support/v4/view/L;
+.implements Landroid/support/v4/view/I;
 
 
 # direct methods
@@ -16,52 +16,74 @@
 
 
 # virtual methods
-.method public a(Landroid/view/MotionEvent;)I
+.method public a(Landroid/view/ViewGroup$MarginLayoutParams;)I
     .locals 1
 
-    invoke-static {p1}, Landroid/support/v4/view/M;->a(Landroid/view/MotionEvent;)I
+    invoke-static {p1}, Landroid/support/v4/view/L;->a(Landroid/view/ViewGroup$MarginLayoutParams;)I
 
     move-result v0
 
     return v0
 .end method
 
-.method public a(Landroid/view/MotionEvent;I)I
+.method public a(Landroid/view/ViewGroup$MarginLayoutParams;I)V
+    .locals 0
+
+    invoke-static {p1, p2}, Landroid/support/v4/view/L;->a(Landroid/view/ViewGroup$MarginLayoutParams;I)V
+
+    return-void
+.end method
+
+.method public b(Landroid/view/ViewGroup$MarginLayoutParams;)I
     .locals 1
 
-    invoke-static {p1, p2}, Landroid/support/v4/view/M;->a(Landroid/view/MotionEvent;I)I
+    invoke-static {p1}, Landroid/support/v4/view/L;->b(Landroid/view/ViewGroup$MarginLayoutParams;)I
 
     move-result v0
 
     return v0
 .end method
 
-.method public b(Landroid/view/MotionEvent;I)I
+.method public b(Landroid/view/ViewGroup$MarginLayoutParams;I)V
+    .locals 0
+
+    invoke-static {p1, p2}, Landroid/support/v4/view/L;->b(Landroid/view/ViewGroup$MarginLayoutParams;I)V
+
+    return-void
+.end method
+
+.method public c(Landroid/view/ViewGroup$MarginLayoutParams;I)V
+    .locals 0
+
+    invoke-static {p1, p2}, Landroid/support/v4/view/L;->c(Landroid/view/ViewGroup$MarginLayoutParams;I)V
+
+    return-void
+.end method
+
+.method public c(Landroid/view/ViewGroup$MarginLayoutParams;)Z
     .locals 1
 
-    invoke-static {p1, p2}, Landroid/support/v4/view/M;->b(Landroid/view/MotionEvent;I)I
+    invoke-static {p1}, Landroid/support/v4/view/L;->c(Landroid/view/ViewGroup$MarginLayoutParams;)Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public c(Landroid/view/MotionEvent;I)F
+.method public d(Landroid/view/ViewGroup$MarginLayoutParams;)I
     .locals 1
 
-    invoke-static {p1, p2}, Landroid/support/v4/view/M;->c(Landroid/view/MotionEvent;I)F
+    invoke-static {p1}, Landroid/support/v4/view/L;->d(Landroid/view/ViewGroup$MarginLayoutParams;)I
 
     move-result v0
 
     return v0
 .end method
 
-.method public d(Landroid/view/MotionEvent;I)F
-    .locals 1
+.method public d(Landroid/view/ViewGroup$MarginLayoutParams;I)V
+    .locals 0
 
-    invoke-static {p1, p2}, Landroid/support/v4/view/M;->d(Landroid/view/MotionEvent;I)F
+    invoke-static {p1, p2}, Landroid/support/v4/view/L;->d(Landroid/view/ViewGroup$MarginLayoutParams;I)V
 
-    move-result v0
-
-    return v0
+    return-void
 .end method

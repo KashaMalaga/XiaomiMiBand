@@ -11,7 +11,7 @@
         "Ljava/lang/Object;",
         "Landroid/os/Parcelable$Creator",
         "<",
-        "Lcom/amap/api/services/route/SearchCity;",
+        "Lcom/amap/api/services/route/RouteSearchCity;",
         ">;"
     }
 .end annotation
@@ -28,17 +28,17 @@
 
 
 # virtual methods
-.method public a(Landroid/os/Parcel;)Lcom/amap/api/services/route/SearchCity;
+.method public a(Landroid/os/Parcel;)Lcom/amap/api/services/route/RouteSearchCity;
     .locals 1
 
-    new-instance v0, Lcom/amap/api/services/route/SearchCity;
+    new-instance v0, Lcom/amap/api/services/route/RouteSearchCity;
 
-    invoke-direct {v0, p1}, Lcom/amap/api/services/route/SearchCity;-><init>(Landroid/os/Parcel;)V
+    invoke-direct {v0, p1}, Lcom/amap/api/services/route/RouteSearchCity;-><init>(Landroid/os/Parcel;)V
 
     return-object v0
 .end method
 
-.method public a(I)[Lcom/amap/api/services/route/SearchCity;
+.method public a(I)[Lcom/amap/api/services/route/RouteSearchCity;
     .locals 1
 
     const/4 v0, 0x0
@@ -49,7 +49,7 @@
 .method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 1
 
-    invoke-virtual {p0, p1}, Lcom/amap/api/services/route/v;->a(Landroid/os/Parcel;)Lcom/amap/api/services/route/SearchCity;
+    invoke-virtual {p0, p1}, Lcom/amap/api/services/route/v;->a(Landroid/os/Parcel;)Lcom/amap/api/services/route/RouteSearchCity;
 
     move-result-object v0
 
@@ -59,7 +59,7 @@
 .method public synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
 
-    invoke-virtual {p0, p1}, Lcom/amap/api/services/route/v;->a(I)[Lcom/amap/api/services/route/SearchCity;
+    invoke-virtual {p0, p1}, Lcom/amap/api/services/route/v;->a(I)[Lcom/amap/api/services/route/RouteSearchCity;
 
     move-result-object v0
 

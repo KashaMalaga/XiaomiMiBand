@@ -17,28 +17,28 @@
     .end annotation
 .end field
 
-.field public static final NOTIFY_LEVEL_0:I = 0x3
+.field public static final a:I = 0x0
 
-.field public static final NOTIFY_LEVEL_10:I = 0x0
+.field public static final b:I = 0x1
 
-.field public static final NOTIFY_LEVEL_2:I = 0x2
+.field public static final c:I = 0x2
 
-.field public static final NOTIFY_LEVEL_5:I = 0x1
+.field public static final d:I = 0x3
 
 
 # instance fields
-.field public level:I
+.field public e:I
 
-.field public status:I
+.field public f:I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/xiaomi/hm/bleservice/o;
+    new-instance v0, Lcom/xiaomi/hm/bleservice/q;
 
-    invoke-direct {v0}, Lcom/xiaomi/hm/bleservice/o;-><init>()V
+    invoke-direct {v0}, Lcom/xiaomi/hm/bleservice/q;-><init>()V
 
     sput-object v0, Lcom/xiaomi/hm/bleservice/HwBatteryStatus;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -52,9 +52,9 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Lcom/xiaomi/hm/bleservice/HwBatteryStatus;->status:I
+    iput v0, p0, Lcom/xiaomi/hm/bleservice/HwBatteryStatus;->e:I
 
-    iput v0, p0, Lcom/xiaomi/hm/bleservice/HwBatteryStatus;->level:I
+    iput v0, p0, Lcom/xiaomi/hm/bleservice/HwBatteryStatus;->f:I
 
     return-void
 .end method
@@ -66,18 +66,18 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Lcom/xiaomi/hm/bleservice/HwBatteryStatus;->status:I
+    iput v0, p0, Lcom/xiaomi/hm/bleservice/HwBatteryStatus;->e:I
 
-    iput v0, p0, Lcom/xiaomi/hm/bleservice/HwBatteryStatus;->level:I
+    iput v0, p0, Lcom/xiaomi/hm/bleservice/HwBatteryStatus;->f:I
 
-    iput p1, p0, Lcom/xiaomi/hm/bleservice/HwBatteryStatus;->status:I
+    iput p1, p0, Lcom/xiaomi/hm/bleservice/HwBatteryStatus;->e:I
 
-    iput p2, p0, Lcom/xiaomi/hm/bleservice/HwBatteryStatus;->level:I
+    iput p2, p0, Lcom/xiaomi/hm/bleservice/HwBatteryStatus;->f:I
 
     return-void
 .end method
 
-.method public static getNofifyLevel(I)I
+.method public static a(I)I
     .locals 5
 
     const/4 v4, 0x5
@@ -179,11 +179,11 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
-    iget v0, p0, Lcom/xiaomi/hm/bleservice/HwBatteryStatus;->status:I
+    iget v0, p0, Lcom/xiaomi/hm/bleservice/HwBatteryStatus;->e:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget v0, p0, Lcom/xiaomi/hm/bleservice/HwBatteryStatus;->level:I
+    iget v0, p0, Lcom/xiaomi/hm/bleservice/HwBatteryStatus;->f:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 

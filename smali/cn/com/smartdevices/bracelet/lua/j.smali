@@ -4,20 +4,20 @@
 
 # instance fields
 .field public a:I
-    .annotation runtime Lcom/google/gson/annotations/SerializedName;
-        value = "code"
+    .annotation runtime Lcom/b/a/a/b;
+        a = "code"
     .end annotation
 .end field
 
 .field public b:Ljava/lang/String;
-    .annotation runtime Lcom/google/gson/annotations/SerializedName;
-        value = "message"
+    .annotation runtime Lcom/b/a/a/b;
+        a = "message"
     .end annotation
 .end field
 
 .field public c:Lcn/com/smartdevices/bracelet/lua/k;
-    .annotation runtime Lcom/google/gson/annotations/SerializedName;
-        value = "data"
+    .annotation runtime Lcom/b/a/a/b;
+        a = "data"
     .end annotation
 .end field
 

@@ -1,68 +1,129 @@
 .class Lcom/amap/api/maps/offlinemap/g;
-.super Landroid/os/Handler;
+.super Ljava/lang/Object;
 
 
 # instance fields
-.field final synthetic a:Lcom/amap/api/maps/offlinemap/OfflineMapManager;
+.field a:Ljava/io/RandomAccessFile;
 
 
 # direct methods
-.method constructor <init>(Lcom/amap/api/maps/offlinemap/OfflineMapManager;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 3
 
-    iput-object p1, p0, Lcom/amap/api/maps/offlinemap/g;->a:Lcom/amap/api/maps/offlinemap/OfflineMapManager;
+    const-string v0, ""
 
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+    const-wide/16 v1, 0x0
+
+    invoke-direct {p0, v0, v1, v2}, Lcom/amap/api/maps/offlinemap/g;-><init>(Ljava/lang/String;J)V
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;J)V
+    .locals 2
 
-# virtual methods
-.method public handleMessage(Landroid/os/Message;)V
-    .locals 5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/g;->a:Lcom/amap/api/maps/offlinemap/OfflineMapManager;
+    new-instance v0, Ljava/io/File;
 
-    invoke-static {v0}, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->a(Lcom/amap/api/maps/offlinemap/OfflineMapManager;)Lcom/amap/api/maps/offlinemap/OfflineMapManager$OfflineMapDownloadListener;
+    invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    move-result-object v0
-
-    invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
-
-    move-result-object v1
-
-    const-string v2, "status"
-
-    invoke-virtual {v1, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v1
 
-    invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
+    if-nez v1, :cond_1
 
-    move-result-object v2
+    invoke-virtual {v0}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
-    const-string v3, "completepercent"
+    move-result-object v1
 
-    invoke-virtual {v2, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+    invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
-    move-result v2
+    move-result v1
 
-    invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
+    if-nez v1, :cond_0
 
-    move-result-object v3
+    invoke-virtual {v0}, Ljava/io/File;->getParentFile()Ljava/io/File;
 
-    const-string v4, "name"
+    move-result-object v1
 
-    invoke-virtual {v3, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/io/File;->mkdirs()Z
 
-    move-result-object v3
+    :cond_0
+    :try_start_0
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
-    invoke-interface {v0, v1, v2, v3}, Lcom/amap/api/maps/offlinemap/OfflineMapManager$OfflineMapDownloadListener;->onDownload(IILjava/lang/String;)V
+    move-result v1
 
-    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/g;->a:Lcom/amap/api/maps/offlinemap/OfflineMapManager;
+    if-nez v1, :cond_1
 
-    invoke-static {v0, p1}, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->a(Lcom/amap/api/maps/offlinemap/OfflineMapManager;Landroid/os/Message;)V
+    invoke-virtual {v0}, Ljava/io/File;->createNewFile()Z
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_1
+    :goto_0
+    new-instance v0, Ljava/io/RandomAccessFile;
+
+    const-string v1, "rw"
+
+    invoke-direct {v0, p1, v1}, Ljava/io/RandomAccessFile;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    iput-object v0, p0, Lcom/amap/api/maps/offlinemap/g;->a:Ljava/io/RandomAccessFile;
+
+    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/g;->a:Ljava/io/RandomAccessFile;
+
+    invoke-virtual {v0, p2, p3}, Ljava/io/RandomAccessFile;->seek(J)V
 
     return-void
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_0
+.end method
+
+
+# virtual methods
+.method public declared-synchronized a([BII)I
+    .locals 2
+
+    monitor-enter p0
+
+    const/4 v0, -0x1
+
+    :try_start_0
+    iget-object v1, p0, Lcom/amap/api/maps/offlinemap/g;->a:Ljava/io/RandomAccessFile;
+
+    invoke-virtual {v1, p1, p2, p3}, Ljava/io/RandomAccessFile;->write([BII)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :goto_0
+    monitor-exit p0
+
+    return p3
+
+    :catch_0
+    move-exception v1
+
+    :try_start_1
+    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    move p3, v0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
 .end method

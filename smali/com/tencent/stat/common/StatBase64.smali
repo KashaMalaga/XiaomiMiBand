@@ -3,7 +3,7 @@
 
 
 # static fields
-.field static final synthetic a:Z
+.field static final synthetic $assertionsDisabled:Z
 
 
 # direct methods
@@ -21,7 +21,7 @@
     const/4 v0, 0x1
 
     :goto_0
-    sput-boolean v0, Lcom/tencent/stat/common/StatBase64;->a:Z
+    sput-boolean v0, Lcom/tencent/stat/common/StatBase64;->$assertionsDisabled:Z
 
     return-void
 
@@ -58,7 +58,7 @@
 
     const/4 v3, 0x0
 
-    new-instance v1, Lcom/tencent/stat/common/d;
+    new-instance v1, Lcom/tencent/stat/common/StatBase64$Decoder;
 
     mul-int/lit8 v0, p2, 0x3
 
@@ -66,11 +66,11 @@
 
     new-array v0, v0, [B
 
-    invoke-direct {v1, p3, v0}, Lcom/tencent/stat/common/d;-><init>(I[B)V
+    invoke-direct {v1, p3, v0}, Lcom/tencent/stat/common/StatBase64$Decoder;-><init>(I[B)V
 
     const/4 v0, 0x1
 
-    invoke-virtual {v1, p0, p1, p2, v0}, Lcom/tencent/stat/common/d;->a([BIIZ)Z
+    invoke-virtual {v1, p0, p1, p2, v0}, Lcom/tencent/stat/common/StatBase64$Decoder;->process([BIIZ)Z
 
     move-result v0
 
@@ -85,27 +85,27 @@
     throw v0
 
     :cond_0
-    iget v0, v1, Lcom/tencent/stat/common/d;->b:I
+    iget v0, v1, Lcom/tencent/stat/common/StatBase64$Decoder;->op:I
 
-    iget-object v2, v1, Lcom/tencent/stat/common/d;->a:[B
+    iget-object v2, v1, Lcom/tencent/stat/common/StatBase64$Decoder;->output:[B
 
     array-length v2, v2
 
     if-ne v0, v2, :cond_1
 
-    iget-object v0, v1, Lcom/tencent/stat/common/d;->a:[B
+    iget-object v0, v1, Lcom/tencent/stat/common/StatBase64$Decoder;->output:[B
 
     :goto_0
     return-object v0
 
     :cond_1
-    iget v0, v1, Lcom/tencent/stat/common/d;->b:I
+    iget v0, v1, Lcom/tencent/stat/common/StatBase64$Decoder;->op:I
 
     new-array v0, v0, [B
 
-    iget-object v2, v1, Lcom/tencent/stat/common/d;->a:[B
+    iget-object v2, v1, Lcom/tencent/stat/common/StatBase64$Decoder;->output:[B
 
-    iget v1, v1, Lcom/tencent/stat/common/d;->b:I
+    iget v1, v1, Lcom/tencent/stat/common/StatBase64$Decoder;->op:I
 
     invoke-static {v2, v3, v0, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
@@ -131,17 +131,17 @@
 
     const/4 v2, 0x1
 
-    new-instance v3, Lcom/tencent/stat/common/e;
+    new-instance v3, Lcom/tencent/stat/common/StatBase64$Encoder;
 
     const/4 v0, 0x0
 
-    invoke-direct {v3, p3, v0}, Lcom/tencent/stat/common/e;-><init>(I[B)V
+    invoke-direct {v3, p3, v0}, Lcom/tencent/stat/common/StatBase64$Encoder;-><init>(I[B)V
 
     div-int/lit8 v0, p2, 0x3
 
     mul-int/lit8 v0, v0, 0x4
 
-    iget-boolean v1, v3, Lcom/tencent/stat/common/e;->d:Z
+    iget-boolean v1, v3, Lcom/tencent/stat/common/StatBase64$Encoder;->do_padding:Z
 
     if-eqz v1, :cond_2
 
@@ -154,7 +154,7 @@
     :cond_0
     :goto_0
     :pswitch_0
-    iget-boolean v1, v3, Lcom/tencent/stat/common/e;->e:Z
+    iget-boolean v1, v3, Lcom/tencent/stat/common/StatBase64$Encoder;->do_newline:Z
 
     if-eqz v1, :cond_1
 
@@ -166,7 +166,7 @@
 
     add-int/lit8 v4, v1, 0x1
 
-    iget-boolean v1, v3, Lcom/tencent/stat/common/e;->f:Z
+    iget-boolean v1, v3, Lcom/tencent/stat/common/StatBase64$Encoder;->do_cr:Z
 
     if-eqz v1, :cond_3
 
@@ -180,15 +180,15 @@
     :cond_1
     new-array v1, v0, [B
 
-    iput-object v1, v3, Lcom/tencent/stat/common/e;->a:[B
+    iput-object v1, v3, Lcom/tencent/stat/common/StatBase64$Encoder;->output:[B
 
-    invoke-virtual {v3, p0, p1, p2, v2}, Lcom/tencent/stat/common/e;->a([BIIZ)Z
+    invoke-virtual {v3, p0, p1, p2, v2}, Lcom/tencent/stat/common/StatBase64$Encoder;->process([BIIZ)Z
 
-    sget-boolean v1, Lcom/tencent/stat/common/StatBase64;->a:Z
+    sget-boolean v1, Lcom/tencent/stat/common/StatBase64;->$assertionsDisabled:Z
 
     if-nez v1, :cond_4
 
-    iget v1, v3, Lcom/tencent/stat/common/e;->b:I
+    iget v1, v3, Lcom/tencent/stat/common/StatBase64$Encoder;->op:I
 
     if-eq v1, v0, :cond_4
 
@@ -221,7 +221,7 @@
     goto :goto_1
 
     :cond_4
-    iget-object v0, v3, Lcom/tencent/stat/common/e;->a:[B
+    iget-object v0, v3, Lcom/tencent/stat/common/StatBase64$Encoder;->output:[B
 
     return-object v0
 

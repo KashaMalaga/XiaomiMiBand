@@ -2,47 +2,25 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/ScaleGestureDetector$OnScaleGestureListener;
+.implements Landroid/view/GestureDetector$OnDoubleTapListener;
 
 
 # instance fields
-.field a:Lcom/amap/api/mapcore/m;
-
-.field final synthetic b:Lcom/amap/api/mapcore/b;
-
-.field private c:F
-
-.field private d:Lcom/autonavi/amap/mapcore/IPoint;
+.field final synthetic a:Lcom/amap/api/mapcore/b;
 
 
 # direct methods
 .method private constructor <init>(Lcom/amap/api/mapcore/b;)V
-    .locals 1
+    .locals 0
 
-    iput-object p1, p0, Lcom/amap/api/mapcore/S;->b:Lcom/amap/api/mapcore/b;
+    iput-object p1, p0, Lcom/amap/api/mapcore/S;->a:Lcom/amap/api/mapcore/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/amap/api/mapcore/S;->c:F
-
-    new-instance v0, Lcom/autonavi/amap/mapcore/IPoint;
-
-    invoke-direct {v0}, Lcom/autonavi/amap/mapcore/IPoint;-><init>()V
-
-    iput-object v0, p0, Lcom/amap/api/mapcore/S;->d:Lcom/autonavi/amap/mapcore/IPoint;
-
-    invoke-static {}, Lcom/amap/api/mapcore/m;->a()Lcom/amap/api/mapcore/m;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/amap/api/mapcore/S;->a:Lcom/amap/api/mapcore/m;
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/amap/api/mapcore/b;Lcom/amap/api/mapcore/al;)V
+.method synthetic constructor <init>(Lcom/amap/api/mapcore/b;Lcom/amap/api/mapcore/af;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/amap/api/mapcore/S;-><init>(Lcom/amap/api/mapcore/b;)V
@@ -52,194 +30,49 @@
 
 
 # virtual methods
-.method public onScale(Landroid/view/ScaleGestureDetector;)Z
-    .locals 6
-
-    const/4 v5, 0x0
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/S;->b:Lcom/amap/api/mapcore/b;
-
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->i(Lcom/amap/api/mapcore/b;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    :goto_0
-    return v5
-
-    :cond_1
-    invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getScaleFactor()F
-
-    move-result v0
-
-    iget-object v1, p0, Lcom/amap/api/mapcore/S;->b:Lcom/amap/api/mapcore/b;
-
-    invoke-static {v1}, Lcom/amap/api/mapcore/b;->j(Lcom/amap/api/mapcore/b;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    float-to-double v1, v0
-
-    const-wide v3, 0x3ff147ae147ae148L
-
-    cmpl-double v1, v1, v3
-
-    if-gtz v1, :cond_2
-
-    float-to-double v1, v0
-
-    const-wide v3, 0x3fed70a3d70a3d71L
-
-    cmpg-double v1, v1, v3
-
-    if-gez v1, :cond_0
-
-    :cond_2
-    iget-object v1, p0, Lcom/amap/api/mapcore/S;->b:Lcom/amap/api/mapcore/b;
-
-    const/4 v2, 0x1
-
-    invoke-static {v1, v2}, Lcom/amap/api/mapcore/b;->d(Lcom/amap/api/mapcore/b;Z)Z
-
-    float-to-double v0, v0
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->log(D)D
-
-    move-result-wide v0
-
-    invoke-static {}, Lcom/amap/api/mapcore/b;->P()D
-
-    move-result-wide v2
-
-    div-double/2addr v0, v2
-
-    double-to-float v0, v0
-
-    iget-object v1, p0, Lcom/amap/api/mapcore/S;->a:Lcom/amap/api/mapcore/m;
-
-    iget v2, p0, Lcom/amap/api/mapcore/S;->c:F
-
-    add-float/2addr v0, v2
-
-    invoke-static {v0}, Lcom/amap/api/mapcore/util/w;->b(F)F
-
-    move-result v0
-
-    iput v0, v1, Lcom/amap/api/mapcore/m;->d:F
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/S;->b:Lcom/amap/api/mapcore/b;
-
-    iget-object v0, v0, Lcom/amap/api/mapcore/b;->a:Lcom/amap/api/mapcore/g;
-
-    iget-object v1, p0, Lcom/amap/api/mapcore/S;->a:Lcom/amap/api/mapcore/m;
-
-    invoke-virtual {v0, v1}, Lcom/amap/api/mapcore/g;->a(Lcom/amap/api/mapcore/m;)V
-
-    goto :goto_0
-.end method
-
-.method public onScaleBegin(Landroid/view/ScaleGestureDetector;)Z
+.method public onDoubleTap(Landroid/view/MotionEvent;)Z
     .locals 5
 
-    const/4 v0, 0x0
+    const/4 v4, 0x1
 
     :try_start_0
-    iget-object v1, p0, Lcom/amap/api/mapcore/S;->b:Lcom/amap/api/mapcore/b;
+    iget-object v0, p0, Lcom/amap/api/mapcore/S;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v1}, Lcom/amap/api/mapcore/b;->k(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/ai;
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->k(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/n;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-interface {v1}, Lcom/amap/api/mapcore/ai;->f()Z
+    invoke-interface {v0}, Lcom/amap/api/mapcore/n;->f()Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result v1
+    move-result v0
 
-    if-nez v1, :cond_1
+    if-nez v0, :cond_1
 
     :cond_0
     :goto_0
-    return v0
+    return v4
 
     :catch_0
-    move-exception v1
+    move-exception v0
 
-    invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
+    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     :cond_1
-    iget-object v1, p0, Lcom/amap/api/mapcore/S;->b:Lcom/amap/api/mapcore/b;
+    iget-object v0, p0, Lcom/amap/api/mapcore/S;->a:Lcom/amap/api/mapcore/b;
 
-    const/4 v2, 0x2
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->A(Lcom/amap/api/mapcore/b;)I
 
-    invoke-static {v1, v2}, Lcom/amap/api/mapcore/b;->a(Lcom/amap/api/mapcore/b;I)I
+    move-result v0
 
-    iget-object v1, p0, Lcom/amap/api/mapcore/S;->b:Lcom/amap/api/mapcore/b;
+    if-gt v0, v4, :cond_0
 
-    invoke-static {v1}, Lcom/amap/api/mapcore/b;->i(Lcom/amap/api/mapcore/b;)Z
+    iget-object v0, p0, Lcom/amap/api/mapcore/S;->a:Lcom/amap/api/mapcore/b;
 
-    move-result v1
+    invoke-static {v0, v4}, Lcom/amap/api/mapcore/b;->f(Lcom/amap/api/mapcore/b;Z)Z
 
-    if-nez v1, :cond_0
-
-    iget-object v1, p0, Lcom/amap/api/mapcore/S;->b:Lcom/amap/api/mapcore/b;
-
-    invoke-static {v1}, Lcom/amap/api/mapcore/b;->l(Lcom/amap/api/mapcore/b;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget-object v1, p0, Lcom/amap/api/mapcore/S;->a:Lcom/amap/api/mapcore/m;
-
-    iget-object v2, p0, Lcom/amap/api/mapcore/S;->b:Lcom/amap/api/mapcore/b;
-
-    invoke-static {v2}, Lcom/amap/api/mapcore/b;->l(Lcom/amap/api/mapcore/b;)Z
-
-    move-result v2
-
-    iput-boolean v2, v1, Lcom/amap/api/mapcore/m;->n:Z
-
-    iget-object v1, p0, Lcom/amap/api/mapcore/S;->a:Lcom/amap/api/mapcore/m;
-
-    sget-object v2, Lcom/amap/api/mapcore/au;->g:Lcom/amap/api/mapcore/au;
-
-    iput-object v2, v1, Lcom/amap/api/mapcore/m;->a:Lcom/amap/api/mapcore/au;
-
-    iget-object v1, p0, Lcom/amap/api/mapcore/S;->b:Lcom/amap/api/mapcore/b;
-
-    iget-object v2, p0, Lcom/amap/api/mapcore/S;->b:Lcom/amap/api/mapcore/b;
-
-    invoke-static {v2}, Lcom/amap/api/mapcore/b;->m(Lcom/amap/api/mapcore/b;)I
-
-    move-result v2
-
-    iget-object v3, p0, Lcom/amap/api/mapcore/S;->b:Lcom/amap/api/mapcore/b;
-
-    invoke-static {v3}, Lcom/amap/api/mapcore/b;->n(Lcom/amap/api/mapcore/b;)I
-
-    move-result v3
-
-    iget-object v4, p0, Lcom/amap/api/mapcore/S;->d:Lcom/autonavi/amap/mapcore/IPoint;
-
-    invoke-virtual {v1, v2, v3, v4}, Lcom/amap/api/mapcore/b;->a(IILcom/autonavi/amap/mapcore/IPoint;)V
-
-    iget-object v1, p0, Lcom/amap/api/mapcore/S;->a:Lcom/amap/api/mapcore/m;
-
-    iget-object v2, p0, Lcom/amap/api/mapcore/S;->d:Lcom/autonavi/amap/mapcore/IPoint;
-
-    iput-object v2, v1, Lcom/amap/api/mapcore/m;->o:Lcom/autonavi/amap/mapcore/IPoint;
-
-    :goto_1
-    iget-object v1, p0, Lcom/amap/api/mapcore/S;->b:Lcom/amap/api/mapcore/b;
-
-    invoke-static {v1, v0}, Lcom/amap/api/mapcore/b;->d(Lcom/amap/api/mapcore/b;Z)Z
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/S;->b:Lcom/amap/api/mapcore/b;
+    iget-object v0, p0, Lcom/amap/api/mapcore/S;->a:Lcom/amap/api/mapcore/b;
 
     invoke-static {v0}, Lcom/amap/api/mapcore/b;->o(Lcom/amap/api/mapcore/b;)Lcom/autonavi/amap/mapcore/MapProjection;
 
@@ -249,61 +82,67 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/amap/api/mapcore/S;->c:F
+    iget-object v1, p0, Lcom/amap/api/mapcore/S;->a:Lcom/amap/api/mapcore/b;
 
-    const/4 v0, 0x1
+    invoke-virtual {v1}, Lcom/amap/api/mapcore/b;->m()F
 
-    goto :goto_0
+    move-result v1
 
-    :cond_2
-    iget-object v1, p0, Lcom/amap/api/mapcore/S;->a:Lcom/amap/api/mapcore/m;
-
-    sget-object v2, Lcom/amap/api/mapcore/au;->i:Lcom/amap/api/mapcore/au;
-
-    iput-object v2, v1, Lcom/amap/api/mapcore/m;->a:Lcom/amap/api/mapcore/au;
-
-    goto :goto_1
-.end method
-
-.method public onScaleEnd(Landroid/view/ScaleGestureDetector;)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/amap/api/mapcore/S;->c:F
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/S;->b:Lcom/amap/api/mapcore/b;
-
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->j(Lcom/amap/api/mapcore/b;)Z
-
-    move-result v0
+    cmpl-float v0, v0, v1
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/amap/api/mapcore/S;->b:Lcom/amap/api/mapcore/b;
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
-    const/4 v1, 0x0
+    move-result v0
 
-    invoke-static {v0, v1}, Lcom/amap/api/mapcore/b;->d(Lcom/amap/api/mapcore/b;Z)Z
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
-    invoke-static {}, Lcom/amap/api/mapcore/m;->a()Lcom/amap/api/mapcore/m;
+    move-result v1
+
+    float-to-int v0, v0
+
+    float-to-int v1, v1
+
+    const/high16 v2, 0x3f800000
+
+    new-instance v3, Landroid/graphics/Point;
+
+    invoke-direct {v3, v0, v1}, Landroid/graphics/Point;-><init>(II)V
+
+    invoke-static {v2, v3}, Lcom/amap/api/mapcore/aq;->a(FLandroid/graphics/Point;)Lcom/amap/api/mapcore/aq;
 
     move-result-object v0
 
-    const/4 v1, 0x1
+    :try_start_1
+    iget-object v1, p0, Lcom/amap/api/mapcore/S;->a:Lcom/amap/api/mapcore/b;
 
-    iput-boolean v1, v0, Lcom/amap/api/mapcore/m;->p:Z
+    invoke-virtual {v1, v0}, Lcom/amap/api/mapcore/b;->b(Lcom/amap/api/mapcore/aq;)V
+    :try_end_1
+    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
-    iget-object v1, p0, Lcom/amap/api/mapcore/S;->b:Lcom/amap/api/mapcore/b;
+    goto :goto_0
 
-    iget-object v1, v1, Lcom/amap/api/mapcore/b;->a:Lcom/amap/api/mapcore/g;
+    :catch_1
+    move-exception v0
 
-    invoke-virtual {v1, v0}, Lcom/amap/api/mapcore/g;->a(Lcom/amap/api/mapcore/m;)V
+    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
-    :cond_0
-    iget-object v0, p0, Lcom/amap/api/mapcore/S;->b:Lcom/amap/api/mapcore/b;
+    goto :goto_0
+.end method
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->p(Lcom/amap/api/mapcore/b;)V
+.method public onDoubleTapEvent(Landroid/view/MotionEvent;)Z
+    .locals 1
 
-    return-void
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public onSingleTapConfirmed(Landroid/view/MotionEvent;)Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
 .end method

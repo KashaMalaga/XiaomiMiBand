@@ -3,13 +3,13 @@
 
 
 # static fields
-.field private static b:Ljava/lang/String;
+.field private static appVersion:Ljava/lang/String;
 
-.field private static c:Ljava/lang/String;
+.field private static simOperator:Ljava/lang/String;
 
 
 # instance fields
-.field private a:Lcom/tencent/stat/StatAppMonitor;
+.field private monitor:Lcom/tencent/stat/StatAppMonitor;
 
 
 # direct methods
@@ -18,9 +18,9 @@
 
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/stat/event/MonitorStatEvent;->b:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/stat/event/MonitorStatEvent;->simOperator:Ljava/lang/String;
 
-    sput-object v0, Lcom/tencent/stat/event/MonitorStatEvent;->c:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/stat/event/MonitorStatEvent;->appVersion:Ljava/lang/String;
 
     return-void
 .end method
@@ -32,9 +32,9 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/stat/event/MonitorStatEvent;->a:Lcom/tencent/stat/StatAppMonitor;
+    iput-object v0, p0, Lcom/tencent/stat/event/MonitorStatEvent;->monitor:Lcom/tencent/stat/StatAppMonitor;
 
-    iput-object p3, p0, Lcom/tencent/stat/event/MonitorStatEvent;->a:Lcom/tencent/stat/StatAppMonitor;
+    iput-object p3, p0, Lcom/tencent/stat/event/MonitorStatEvent;->monitor:Lcom/tencent/stat/StatAppMonitor;
 
     return-void
 .end method
@@ -52,7 +52,7 @@
 .method public onEncode(Lorg/json/JSONObject;)Z
     .locals 3
 
-    iget-object v0, p0, Lcom/tencent/stat/event/MonitorStatEvent;->a:Lcom/tencent/stat/StatAppMonitor;
+    iget-object v0, p0, Lcom/tencent/stat/event/MonitorStatEvent;->monitor:Lcom/tencent/stat/StatAppMonitor;
 
     if-nez v0, :cond_0
 
@@ -64,7 +64,7 @@
     :cond_0
     const-string v0, "na"
 
-    iget-object v1, p0, Lcom/tencent/stat/event/MonitorStatEvent;->a:Lcom/tencent/stat/StatAppMonitor;
+    iget-object v1, p0, Lcom/tencent/stat/event/MonitorStatEvent;->monitor:Lcom/tencent/stat/StatAppMonitor;
 
     invoke-virtual {v1}, Lcom/tencent/stat/StatAppMonitor;->getInterfaceName()Ljava/lang/String;
 
@@ -74,7 +74,7 @@
 
     const-string v0, "rq"
 
-    iget-object v1, p0, Lcom/tencent/stat/event/MonitorStatEvent;->a:Lcom/tencent/stat/StatAppMonitor;
+    iget-object v1, p0, Lcom/tencent/stat/event/MonitorStatEvent;->monitor:Lcom/tencent/stat/StatAppMonitor;
 
     invoke-virtual {v1}, Lcom/tencent/stat/StatAppMonitor;->getReqSize()J
 
@@ -84,7 +84,7 @@
 
     const-string v0, "rp"
 
-    iget-object v1, p0, Lcom/tencent/stat/event/MonitorStatEvent;->a:Lcom/tencent/stat/StatAppMonitor;
+    iget-object v1, p0, Lcom/tencent/stat/event/MonitorStatEvent;->monitor:Lcom/tencent/stat/StatAppMonitor;
 
     invoke-virtual {v1}, Lcom/tencent/stat/StatAppMonitor;->getRespSize()J
 
@@ -94,7 +94,7 @@
 
     const-string v0, "rt"
 
-    iget-object v1, p0, Lcom/tencent/stat/event/MonitorStatEvent;->a:Lcom/tencent/stat/StatAppMonitor;
+    iget-object v1, p0, Lcom/tencent/stat/event/MonitorStatEvent;->monitor:Lcom/tencent/stat/StatAppMonitor;
 
     invoke-virtual {v1}, Lcom/tencent/stat/StatAppMonitor;->getResultType()I
 
@@ -104,7 +104,7 @@
 
     const-string v0, "tm"
 
-    iget-object v1, p0, Lcom/tencent/stat/event/MonitorStatEvent;->a:Lcom/tencent/stat/StatAppMonitor;
+    iget-object v1, p0, Lcom/tencent/stat/event/MonitorStatEvent;->monitor:Lcom/tencent/stat/StatAppMonitor;
 
     invoke-virtual {v1}, Lcom/tencent/stat/StatAppMonitor;->getMillisecondsConsume()J
 
@@ -114,7 +114,7 @@
 
     const-string v0, "rc"
 
-    iget-object v1, p0, Lcom/tencent/stat/event/MonitorStatEvent;->a:Lcom/tencent/stat/StatAppMonitor;
+    iget-object v1, p0, Lcom/tencent/stat/event/MonitorStatEvent;->monitor:Lcom/tencent/stat/StatAppMonitor;
 
     invoke-virtual {v1}, Lcom/tencent/stat/StatAppMonitor;->getReturnCode()I
 
@@ -124,7 +124,7 @@
 
     const-string v0, "sp"
 
-    iget-object v1, p0, Lcom/tencent/stat/event/MonitorStatEvent;->a:Lcom/tencent/stat/StatAppMonitor;
+    iget-object v1, p0, Lcom/tencent/stat/event/MonitorStatEvent;->monitor:Lcom/tencent/stat/StatAppMonitor;
 
     invoke-virtual {v1}, Lcom/tencent/stat/StatAppMonitor;->getSampling()I
 
@@ -132,7 +132,7 @@
 
     invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    sget-object v0, Lcom/tencent/stat/event/MonitorStatEvent;->c:Ljava/lang/String;
+    sget-object v0, Lcom/tencent/stat/event/MonitorStatEvent;->appVersion:Ljava/lang/String;
 
     if-nez v0, :cond_1
 
@@ -142,16 +142,16 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/stat/event/MonitorStatEvent;->c:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/stat/event/MonitorStatEvent;->appVersion:Ljava/lang/String;
 
     :cond_1
     const-string v0, "av"
 
-    sget-object v1, Lcom/tencent/stat/event/MonitorStatEvent;->c:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/stat/event/MonitorStatEvent;->appVersion:Ljava/lang/String;
 
     invoke-static {p1, v0, v1}, Lcom/tencent/stat/common/StatCommonHelper;->jsonPut(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object v0, Lcom/tencent/stat/event/MonitorStatEvent;->b:Ljava/lang/String;
+    sget-object v0, Lcom/tencent/stat/event/MonitorStatEvent;->simOperator:Ljava/lang/String;
 
     if-nez v0, :cond_2
 
@@ -161,12 +161,12 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/stat/event/MonitorStatEvent;->b:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/stat/event/MonitorStatEvent;->simOperator:Ljava/lang/String;
 
     :cond_2
     const-string v0, "op"
 
-    sget-object v1, Lcom/tencent/stat/event/MonitorStatEvent;->b:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/stat/event/MonitorStatEvent;->simOperator:Ljava/lang/String;
 
     invoke-static {p1, v0, v1}, Lcom/tencent/stat/common/StatCommonHelper;->jsonPut(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)V
 

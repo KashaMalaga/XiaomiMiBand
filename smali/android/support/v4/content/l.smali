@@ -1,47 +1,34 @@
 .class Landroid/support/v4/content/l;
-.super Landroid/os/Handler;
-
-
-# instance fields
-.field final synthetic a:Landroid/support/v4/content/LocalBroadcastManager;
+.super Landroid/support/v4/content/k;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/content/LocalBroadcastManager;Landroid/os/Looper;)V
+.method constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Landroid/support/v4/content/l;->a:Landroid/support/v4/content/LocalBroadcastManager;
-
-    invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    invoke-direct {p0}, Landroid/support/v4/content/k;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public handleMessage(Landroid/os/Message;)V
+.method public a(Landroid/content/ComponentName;)Landroid/content/Intent;
     .locals 1
 
-    iget v0, p1, Landroid/os/Message;->what:I
+    invoke-static {p1}, Landroid/support/v4/content/n;->a(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v0
 
-    invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
+    return-object v0
+.end method
 
-    :goto_0
-    return-void
+.method public b(Landroid/content/ComponentName;)Landroid/content/Intent;
+    .locals 1
 
-    :pswitch_0
-    iget-object v0, p0, Landroid/support/v4/content/l;->a:Landroid/support/v4/content/LocalBroadcastManager;
+    invoke-static {p1}, Landroid/support/v4/content/n;->b(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    invoke-static {v0}, Landroid/support/v4/content/LocalBroadcastManager;->a(Landroid/support/v4/content/LocalBroadcastManager;)V
+    move-result-object v0
 
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

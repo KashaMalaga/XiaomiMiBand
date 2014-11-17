@@ -3,13 +3,13 @@
 
 
 # instance fields
-.field private a:I
+.field private mReqDelay:I
 
-.field private b:I
+.field private mReqGeoType:I
 
-.field private c:I
+.field private mReqLevel:I
 
-.field private d:I
+.field private mReqType:I
 
 
 # direct methods
@@ -22,15 +22,15 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v2, p0, Lcom/tencent/b/a/a/b;->a:I
+    iput v2, p0, Lcom/tencent/b/a/a/b;->mReqType:I
 
-    iput v3, p0, Lcom/tencent/b/a/a/b;->b:I
+    iput v3, p0, Lcom/tencent/b/a/a/b;->mReqLevel:I
 
     const/16 v0, 0xc
 
-    iput v0, p0, Lcom/tencent/b/a/a/b;->c:I
+    iput v0, p0, Lcom/tencent/b/a/a/b;->mReqDelay:I
 
-    iput v2, p0, Lcom/tencent/b/a/a/b;->d:I
+    iput v2, p0, Lcom/tencent/b/a/a/b;->mReqGeoType:I
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -38,7 +38,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v1, p0, Lcom/tencent/b/a/a/b;->a:I
+    iget v1, p0, Lcom/tencent/b/a/a/b;->mReqType:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -50,7 +50,7 @@
 
     move-result-object v0
 
-    iget v1, p0, Lcom/tencent/b/a/a/b;->d:I
+    iget v1, p0, Lcom/tencent/b/a/a/b;->mReqGeoType:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -62,7 +62,7 @@
 
     move-result-object v0
 
-    iget v1, p0, Lcom/tencent/b/a/a/b;->b:I
+    iget v1, p0, Lcom/tencent/b/a/a/b;->mReqLevel:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -78,14 +78,14 @@
 
     if-gt p1, v2, :cond_0
 
-    iput p1, p0, Lcom/tencent/b/a/a/b;->a:I
+    iput p1, p0, Lcom/tencent/b/a/a/b;->mReqType:I
 
     :cond_0
     if-ltz p2, :cond_1
 
     if-gt p2, v2, :cond_1
 
-    iput p2, p0, Lcom/tencent/b/a/a/b;->d:I
+    iput p2, p0, Lcom/tencent/b/a/a/b;->mReqGeoType:I
 
     :cond_1
     if-eqz p3, :cond_2
@@ -103,17 +103,17 @@
     if-ne p3, v0, :cond_3
 
     :cond_2
-    iput p3, p0, Lcom/tencent/b/a/a/b;->b:I
+    iput p3, p0, Lcom/tencent/b/a/a/b;->mReqLevel:I
 
     :cond_3
-    iget v0, p0, Lcom/tencent/b/a/a/b;->d:I
+    iget v0, p0, Lcom/tencent/b/a/a/b;->mReqGeoType:I
 
     if-nez v0, :cond_4
 
-    iput v3, p0, Lcom/tencent/b/a/a/b;->b:I
+    iput v3, p0, Lcom/tencent/b/a/a/b;->mReqLevel:I
 
     :cond_4
-    iput p4, p0, Lcom/tencent/b/a/a/b;->c:I
+    iput p4, p0, Lcom/tencent/b/a/a/b;->mReqDelay:I
 
     return-void
 .end method
@@ -123,7 +123,7 @@
 .method public getReqDelay()I
     .locals 1
 
-    iget v0, p0, Lcom/tencent/b/a/a/b;->c:I
+    iget v0, p0, Lcom/tencent/b/a/a/b;->mReqDelay:I
 
     return v0
 .end method
@@ -131,7 +131,7 @@
 .method public getReqGeoType()I
     .locals 1
 
-    iget v0, p0, Lcom/tencent/b/a/a/b;->d:I
+    iget v0, p0, Lcom/tencent/b/a/a/b;->mReqGeoType:I
 
     return v0
 .end method
@@ -139,7 +139,7 @@
 .method public getReqLevel()I
     .locals 1
 
-    iget v0, p0, Lcom/tencent/b/a/a/b;->b:I
+    iget v0, p0, Lcom/tencent/b/a/a/b;->mReqLevel:I
 
     return v0
 .end method
@@ -147,7 +147,7 @@
 .method public getReqType()I
     .locals 1
 
-    iget v0, p0, Lcom/tencent/b/a/a/b;->a:I
+    iget v0, p0, Lcom/tencent/b/a/a/b;->mReqType:I
 
     return v0
 .end method

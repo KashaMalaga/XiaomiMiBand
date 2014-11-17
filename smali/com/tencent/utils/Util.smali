@@ -1709,11 +1709,11 @@
     invoke-virtual {v0, v1, p2, p3}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
     :cond_0
-    new-instance v1, Lcom/tencent/utils/e;
+    new-instance v1, Lcom/tencent/utils/Util$1;
 
-    invoke-direct {v1, p0, v0}, Lcom/tencent/utils/e;-><init>(Landroid/content/Context;Landroid/os/Bundle;)V
+    invoke-direct {v1, p0, v0}, Lcom/tencent/utils/Util$1;-><init>(Landroid/content/Context;Landroid/os/Bundle;)V
 
-    invoke-virtual {v1}, Lcom/tencent/utils/e;->start()V
+    invoke-virtual {v1}, Lcom/tencent/utils/Util$1;->start()V
 
     return-void
 .end method

@@ -1,5 +1,5 @@
 .class Lcn/com/smartdevices/bracelet/weather/WeatherManager$2;
-.super Lcom/loopj/android/http/AsyncHttpResponseHandler;
+.super Lcom/c/a/a/h;
 
 
 # instance fields
@@ -16,7 +16,7 @@
 
     iput-object p2, p0, Lcn/com/smartdevices/bracelet/weather/WeatherManager$2;->val$finalLoc:Lcn/com/smartdevices/bracelet/location/Location;
 
-    invoke-direct {p0}, Lcom/loopj/android/http/AsyncHttpResponseHandler;-><init>()V
+    invoke-direct {p0}, Lcom/c/a/a/h;-><init>()V
 
     return-void
 .end method
@@ -30,7 +30,7 @@
 
     const-string v1, "Request CityInfos Failed!!"
 
-    invoke-static {v0, v1, p4}, Lcn/com/smartdevices/bracelet/Debug;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, v1, p4}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -44,7 +44,7 @@
 
     const-string v2, "Request CityInfos Successed!!"
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Ljava/lang/String;
 
@@ -66,16 +66,16 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :try_start_0
-    new-instance v2, Lcom/google/gson/Gson;
+    new-instance v2, Lcom/b/a/k;
 
-    invoke-direct {v2}, Lcom/google/gson/Gson;-><init>()V
+    invoke-direct {v2}, Lcom/b/a/k;-><init>()V
 
     const-class v3, Lcn/com/smartdevices/bracelet/weather/OriginalCityInfos;
 
-    invoke-virtual {v2, v0, v3}, Lcom/google/gson/Gson;->fromJson(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v2, v0, v3}, Lcom/b/a/k;->a(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -101,7 +101,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/weather/OriginalCityInfos;->getCityInfos()Ljava/util/ArrayList;
 
@@ -146,7 +146,7 @@
 
     const-string v3, "Parse CityInfos Error!!"
 
-    invoke-static {v2, v3, v0}, Lcn/com/smartdevices/bracelet/Debug;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v2, v3, v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/weather/WeatherManager$2;->this$0:Lcn/com/smartdevices/bracelet/weather/WeatherManager;
 
@@ -165,7 +165,7 @@
 
     iget-object v5, p0, Lcn/com/smartdevices/bracelet/weather/WeatherManager$2;->val$finalLoc:Lcn/com/smartdevices/bracelet/location/Location;
 
-    invoke-virtual {v5}, Lcn/com/smartdevices/bracelet/location/Location;->toStringShort()Ljava/lang/String;
+    invoke-virtual {v5}, Lcn/com/smartdevices/bracelet/location/Location;->d()Ljava/lang/String;
 
     move-result-object v5
 
@@ -177,7 +177,7 @@
 
     move-result-object v4
 
-    invoke-static {v2, v3, v4}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->event(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3, v4}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/weather/WeatherManager$2;->this$0:Lcn/com/smartdevices/bracelet/weather/WeatherManager;
 
@@ -186,7 +186,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->exception(Landroid/content/Context;Ljava/lang/Exception;)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/Exception;)V
 
     move-object v0, v1
 

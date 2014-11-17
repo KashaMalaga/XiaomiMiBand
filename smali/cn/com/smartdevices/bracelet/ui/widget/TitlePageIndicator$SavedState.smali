@@ -23,9 +23,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/widget/b;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/widget/c;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/widget/b;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/widget/c;-><init>()V
 
     sput-object v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator$SavedState;->CREATOR:Landroid/os/Parcelable$Creator;
 

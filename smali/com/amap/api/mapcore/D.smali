@@ -1,180 +1,363 @@
 .class Lcom/amap/api/mapcore/D;
-.super Lcom/amap/api/mapcore/util/f;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/amap/api/mapcore/util/f",
-        "<",
-        "Lcom/amap/api/mapcore/v;",
-        "Ljava/lang/Void;",
-        "Ljava/util/List",
-        "<",
-        "Lcom/amap/api/mapcore/az$a;",
-        ">;>;"
-    }
-.end annotation
+.super Landroid/view/View;
 
 
 # instance fields
-.field final synthetic a:Lcom/amap/api/mapcore/az;
+.field private a:Ljava/lang/String;
 
-.field private e:I
+.field private b:I
 
-.field private f:Z
+.field private c:Lcom/amap/api/mapcore/b;
+
+.field private d:Landroid/graphics/Paint;
+
+.field private e:Landroid/graphics/Paint;
+
+.field private f:Landroid/graphics/Rect;
 
 
 # direct methods
-.method public constructor <init>(Lcom/amap/api/mapcore/az;Z)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
 
-    iput-object p1, p0, Lcom/amap/api/mapcore/D;->a:Lcom/amap/api/mapcore/az;
+    invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p0}, Lcom/amap/api/mapcore/util/f;-><init>()V
+    const-string v0, ""
 
-    iput-boolean p2, p0, Lcom/amap/api/mapcore/D;->f:Z
+    iput-object v0, p0, Lcom/amap/api/mapcore/D;->a:Ljava/lang/String;
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/amap/api/mapcore/D;->b:I
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Lcom/amap/api/mapcore/b;)V
+    .locals 5
+
+    const/4 v4, 0x1
+
+    const/high16 v3, -0x1000000
+
+    invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lcom/amap/api/mapcore/D;->a:Ljava/lang/String;
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/amap/api/mapcore/D;->b:I
+
+    iput-object p2, p0, Lcom/amap/api/mapcore/D;->c:Lcom/amap/api/mapcore/b;
+
+    new-instance v0, Landroid/graphics/Paint;
+
+    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
+
+    iput-object v0, p0, Lcom/amap/api/mapcore/D;->d:Landroid/graphics/Paint;
+
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    iput-object v0, p0, Lcom/amap/api/mapcore/D;->f:Landroid/graphics/Rect;
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/D;->d:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, v4}, Landroid/graphics/Paint;->setAntiAlias(Z)V
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/D;->d:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setColor(I)V
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/D;->d:Landroid/graphics/Paint;
+
+    const/high16 v1, 0x40000000
+
+    sget v2, Lcom/amap/api/mapcore/av;->a:F
+
+    mul-float/2addr v1, v2
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/D;->d:Landroid/graphics/Paint;
+
+    sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+
+    new-instance v0, Landroid/graphics/Paint;
+
+    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
+
+    iput-object v0, p0, Lcom/amap/api/mapcore/D;->e:Landroid/graphics/Paint;
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/D;->e:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, v4}, Landroid/graphics/Paint;->setAntiAlias(Z)V
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/D;->e:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setColor(I)V
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/D;->e:Landroid/graphics/Paint;
+
+    const/high16 v1, 0x41a00000
+
+    sget v2, Lcom/amap/api/mapcore/av;->a:F
+
+    mul-float/2addr v1, v2
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextSize(F)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected bridge synthetic a([Ljava/lang/Object;)Ljava/lang/Object;
+.method public a()V
     .locals 1
 
-    check-cast p1, [Lcom/amap/api/mapcore/v;
+    const/4 v0, 0x0
 
-    invoke-virtual {p0, p1}, Lcom/amap/api/mapcore/D;->a([Lcom/amap/api/mapcore/v;)Ljava/util/List;
+    iput-object v0, p0, Lcom/amap/api/mapcore/D;->d:Landroid/graphics/Paint;
 
-    move-result-object v0
+    iput-object v0, p0, Lcom/amap/api/mapcore/D;->e:Landroid/graphics/Paint;
 
-    return-object v0
+    iput-object v0, p0, Lcom/amap/api/mapcore/D;->f:Landroid/graphics/Rect;
+
+    iput-object v0, p0, Lcom/amap/api/mapcore/D;->a:Ljava/lang/String;
+
+    return-void
 .end method
 
-.method protected varargs a([Lcom/amap/api/mapcore/v;)Ljava/util/List;
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "([",
-            "Lcom/amap/api/mapcore/v;",
-            ")",
-            "Ljava/util/List",
-            "<",
-            "Lcom/amap/api/mapcore/az$a;",
-            ">;"
-        }
-    .end annotation
+.method public a(I)V
+    .locals 0
 
-    const/4 v1, 0x0
+    iput p1, p0, Lcom/amap/api/mapcore/D;->b:I
 
-    const/4 v0, 0x0
+    return-void
+.end method
 
-    :try_start_0
-    aget-object v0, p1, v0
+.method public a(Ljava/lang/String;)V
+    .locals 0
 
-    invoke-interface {v0}, Lcom/amap/api/mapcore/v;->h()I
+    iput-object p1, p0, Lcom/amap/api/mapcore/D;->a:Ljava/lang/String;
 
-    move-result v2
+    return-void
+.end method
 
-    const/4 v0, 0x0
+.method protected onDraw(Landroid/graphics/Canvas;)V
+    .locals 8
 
-    aget-object v0, p1, v0
+    iget-object v0, p0, Lcom/amap/api/mapcore/D;->a:Ljava/lang/String;
 
-    invoke-interface {v0}, Lcom/amap/api/mapcore/v;->i()I
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
+
+    if-nez v0, :cond_0
+
+    iget v0, p0, Lcom/amap/api/mapcore/D;->b:I
+
+    if-nez v0, :cond_1
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    iget-object v0, p0, Lcom/amap/api/mapcore/D;->c:Lcom/amap/api/mapcore/b;
+
+    invoke-virtual {v0}, Lcom/amap/api/mapcore/b;->D()Landroid/graphics/Point;
+
+    move-result-object v1
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/D;->e:Landroid/graphics/Paint;
+
+    iget-object v2, p0, Lcom/amap/api/mapcore/D;->a:Ljava/lang/String;
 
     const/4 v3, 0x0
 
-    aget-object v3, p1, v3
+    iget-object v4, p0, Lcom/amap/api/mapcore/D;->a:Ljava/lang/String;
 
-    invoke-interface {v3}, Lcom/amap/api/mapcore/v;->z()F
+    invoke-virtual {v4}, Ljava/lang/String;->length()I
 
-    move-result v3
+    move-result v4
 
-    float-to-int v3, v3
+    iget-object v5, p0, Lcom/amap/api/mapcore/D;->f:Landroid/graphics/Rect;
 
-    iput v3, p0, Lcom/amap/api/mapcore/D;->e:I
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v0, v2, v3, v4, v5}, Landroid/graphics/Paint;->getTextBounds(Ljava/lang/String;IILandroid/graphics/Rect;)V
 
-    move v1, v2
+    iget v0, v1, Landroid/graphics/Point;->x:I
 
-    :goto_0
-    if-lez v1, :cond_0
+    iget v2, p0, Lcom/amap/api/mapcore/D;->b:I
 
-    if-gtz v0, :cond_1
+    add-int/2addr v0, v2
 
-    :cond_0
-    const/4 v0, 0x0
+    iget-object v2, p0, Lcom/amap/api/mapcore/D;->c:Lcom/amap/api/mapcore/b;
 
-    :goto_1
-    return-object v0
+    invoke-virtual {v2}, Lcom/amap/api/mapcore/b;->getWidth()I
 
-    :catch_0
-    move-exception v0
+    move-result v2
 
-    move v0, v1
+    add-int/lit8 v2, v2, -0xa
 
-    goto :goto_0
+    if-le v0, v2, :cond_2
 
-    :cond_1
-    iget-object v2, p0, Lcom/amap/api/mapcore/D;->a:Lcom/amap/api/mapcore/az;
+    iget-object v0, p0, Lcom/amap/api/mapcore/D;->c:Lcom/amap/api/mapcore/b;
 
-    iget v3, p0, Lcom/amap/api/mapcore/D;->e:I
-
-    invoke-static {v2, v3, v1, v0}, Lcom/amap/api/mapcore/az;->a(Lcom/amap/api/mapcore/az;III)Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    goto :goto_1
-.end method
-
-.method protected bridge synthetic a(Ljava/lang/Object;)V
-    .locals 0
-
-    check-cast p1, Ljava/util/List;
-
-    invoke-virtual {p0, p1}, Lcom/amap/api/mapcore/D;->a(Ljava/util/List;)V
-
-    return-void
-.end method
-
-.method protected a(Ljava/util/List;)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcom/amap/api/mapcore/az$a;",
-            ">;)V"
-        }
-    .end annotation
-
-    if-nez p1, :cond_1
-
-    :cond_0
-    :goto_0
-    return-void
-
-    :cond_1
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    invoke-virtual {v0}, Lcom/amap/api/mapcore/b;->getWidth()I
 
     move-result v0
 
-    if-lez v0, :cond_0
+    add-int/lit8 v0, v0, -0xa
 
-    iget-object v0, p0, Lcom/amap/api/mapcore/D;->a:Lcom/amap/api/mapcore/az;
+    iget v2, p0, Lcom/amap/api/mapcore/D;->b:I
 
-    iget v1, p0, Lcom/amap/api/mapcore/D;->e:I
+    iget-object v3, p0, Lcom/amap/api/mapcore/D;->f:Landroid/graphics/Rect;
 
-    iget-boolean v2, p0, Lcom/amap/api/mapcore/D;->f:Z
+    invoke-virtual {v3}, Landroid/graphics/Rect;->width()I
 
-    invoke-static {v0, p1, v1, v2}, Lcom/amap/api/mapcore/az;->a(Lcom/amap/api/mapcore/az;Ljava/util/List;IZ)Z
+    move-result v3
 
-    invoke-interface {p1}, Ljava/util/List;->clear()V
+    add-int/2addr v2, v3
 
-    goto :goto_0
+    div-int/lit8 v2, v2, 0x2
+
+    sub-int/2addr v0, v2
+
+    :goto_1
+    iget v1, v1, Landroid/graphics/Point;->y:I
+
+    iget-object v2, p0, Lcom/amap/api/mapcore/D;->f:Landroid/graphics/Rect;
+
+    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
+
+    move-result v2
+
+    sub-int/2addr v1, v2
+
+    add-int/lit8 v1, v1, 0x5
+
+    iget-object v2, p0, Lcom/amap/api/mapcore/D;->a:Ljava/lang/String;
+
+    int-to-float v3, v0
+
+    int-to-float v4, v1
+
+    iget-object v5, p0, Lcom/amap/api/mapcore/D;->e:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v2, v3, v4, v5}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
+
+    iget v2, p0, Lcom/amap/api/mapcore/D;->b:I
+
+    iget-object v3, p0, Lcom/amap/api/mapcore/D;->f:Landroid/graphics/Rect;
+
+    invoke-virtual {v3}, Landroid/graphics/Rect;->width()I
+
+    move-result v3
+
+    sub-int/2addr v2, v3
+
+    div-int/lit8 v2, v2, 0x2
+
+    sub-int v6, v0, v2
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/D;->f:Landroid/graphics/Rect;
+
+    invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x5
+
+    add-int v7, v1, v0
+
+    int-to-float v1, v6
+
+    add-int/lit8 v0, v7, -0x2
+
+    int-to-float v2, v0
+
+    int-to-float v3, v6
+
+    add-int/lit8 v0, v7, 0x2
+
+    int-to-float v4, v0
+
+    iget-object v5, p0, Lcom/amap/api/mapcore/D;->d:Landroid/graphics/Paint;
+
+    move-object v0, p1
+
+    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
+
+    int-to-float v1, v6
+
+    int-to-float v2, v7
+
+    iget v0, p0, Lcom/amap/api/mapcore/D;->b:I
+
+    add-int/2addr v0, v6
+
+    int-to-float v3, v0
+
+    int-to-float v4, v7
+
+    iget-object v5, p0, Lcom/amap/api/mapcore/D;->d:Landroid/graphics/Paint;
+
+    move-object v0, p1
+
+    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
+
+    iget v0, p0, Lcom/amap/api/mapcore/D;->b:I
+
+    add-int/2addr v0, v6
+
+    int-to-float v1, v0
+
+    add-int/lit8 v0, v7, -0x2
+
+    int-to-float v2, v0
+
+    iget v0, p0, Lcom/amap/api/mapcore/D;->b:I
+
+    add-int/2addr v0, v6
+
+    int-to-float v3, v0
+
+    add-int/lit8 v0, v7, 0x2
+
+    int-to-float v4, v0
+
+    iget-object v5, p0, Lcom/amap/api/mapcore/D;->d:Landroid/graphics/Paint;
+
+    move-object v0, p1
+
+    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
+
+    goto/16 :goto_0
+
+    :cond_2
+    iget v0, v1, Landroid/graphics/Point;->x:I
+
+    iget v2, p0, Lcom/amap/api/mapcore/D;->b:I
+
+    iget-object v3, p0, Lcom/amap/api/mapcore/D;->f:Landroid/graphics/Rect;
+
+    invoke-virtual {v3}, Landroid/graphics/Rect;->width()I
+
+    move-result v3
+
+    sub-int/2addr v2, v3
+
+    div-int/lit8 v2, v2, 0x2
+
+    add-int/2addr v0, v2
+
+    goto :goto_1
 .end method

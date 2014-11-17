@@ -3,13 +3,13 @@
 
 
 # static fields
-.field private static final a:Ljava/lang/String; = "OpenSdk"
+.field private static final SOSO_VERIFY_CODE:Ljava/lang/String; = "WQMPF-XMH66-ISQXP-OIGMM-BNL7M"
 
-.field private static final b:Ljava/lang/String; = "WQMPF-XMH66-ISQXP-OIGMM-BNL7M"
+.field private static final SOSO_VERIFY_NAME:Ljava/lang/String; = "OpenSdk"
 
 
 # instance fields
-.field private c:Lcom/tencent/tauth/SosoLocationListener;
+.field private sosoListener:Lcom/tencent/tauth/SosoLocationListener;
 
 
 # direct methods
@@ -34,7 +34,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/tauth/LbsAgent;->c:Lcom/tencent/tauth/SosoLocationListener;
+    iput-object v0, p0, Lcom/tencent/tauth/LbsAgent;->sosoListener:Lcom/tencent/tauth/SosoLocationListener;
 
     return-void
 .end method
@@ -46,13 +46,13 @@
 
     invoke-direct {v0, p2}, Lcom/tencent/tauth/SosoLocationListener;-><init>(Lcom/tencent/tauth/LbsAgent$OnGetLocationListener;)V
 
-    iput-object v0, p0, Lcom/tencent/tauth/LbsAgent;->c:Lcom/tencent/tauth/SosoLocationListener;
+    iput-object v0, p0, Lcom/tencent/tauth/LbsAgent;->sosoListener:Lcom/tencent/tauth/SosoLocationListener;
 
     invoke-static {}, Lcom/tencent/b/a/a/a;->a()Lcom/tencent/b/a/a/a;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/tauth/LbsAgent;->c:Lcom/tencent/tauth/SosoLocationListener;
+    iget-object v1, p0, Lcom/tencent/tauth/LbsAgent;->sosoListener:Lcom/tencent/tauth/SosoLocationListener;
 
     invoke-virtual {v0, p1, v1}, Lcom/tencent/b/a/a/a;->a(Landroid/content/Context;Lcom/tencent/b/a/a/b;)Z
 

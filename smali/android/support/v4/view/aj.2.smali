@@ -1,6 +1,9 @@
 .class Landroid/support/v4/view/aj;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Landroid/support/v4/view/ai;
+
 
 # direct methods
 .method constructor <init>()V
@@ -11,20 +14,12 @@
     return-void
 .end method
 
-.method public static a(Landroid/view/View;)I
-    .locals 1
 
-    invoke-virtual {p0}, Landroid/view/View;->getOverScrollMode()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static a(Landroid/view/View;I)V
+# virtual methods
+.method public a(Landroid/widget/TextView;)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setOverScrollMode(I)V
+    invoke-virtual {p1}, Landroid/widget/TextView;->setSingleLine()V
 
     return-void
 .end method

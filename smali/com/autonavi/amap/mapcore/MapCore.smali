@@ -103,7 +103,7 @@
 
     iput-object v1, p0, Lcom/autonavi/amap/mapcore/MapCore;->mGL:Ljavax/microedition/khronos/opengles/GL10;
 
-    invoke-static {p1}, Lcom/amap/api/mapcore/util/w;->a(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/amap/api/mapcore/a/P;->a(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 

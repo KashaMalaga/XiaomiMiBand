@@ -3,7 +3,7 @@
 
 
 # static fields
-.field public static AUTH_ACTION_NAME:Ljava/lang/String;
+.field public static a:Ljava/lang/String;
 
 
 # direct methods
@@ -12,7 +12,7 @@
 
     const-string v0, "com.xiaomi.openauth.action.SDK2APP"
 
-    sput-object v0, Lcom/xiaomi/channel/openauth/SDK2APPReceiver;->AUTH_ACTION_NAME:Ljava/lang/String;
+    sput-object v0, Lcom/xiaomi/channel/openauth/SDK2APPReceiver;->a:Ljava/lang/String;
 
     return-void
 .end method
@@ -154,7 +154,7 @@
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
-    sget-object v1, Lcom/xiaomi/channel/openauth/APP2SDKReceiver;->AUTH_ACTION_NAME:Ljava/lang/String;
+    sget-object v1, Lcom/xiaomi/channel/openauth/APP2SDKReceiver;->a:Ljava/lang/String;
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 

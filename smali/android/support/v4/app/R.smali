@@ -1,8 +1,20 @@
-.class Landroid/support/v4/app/R;
+.class final Landroid/support/v4/app/R;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/support/v4/app/Q;
+.implements Landroid/os/Parcelable$Creator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator",
+        "<",
+        "Landroid/support/v4/app/FragmentTabHost$SavedState;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
@@ -16,31 +28,42 @@
 
 
 # virtual methods
-.method public a(Landroid/support/v4/app/NotificationCompat$Builder;)Landroid/app/Notification;
-    .locals 5
+.method public a(Landroid/os/Parcel;)Landroid/support/v4/app/FragmentTabHost$SavedState;
+    .locals 2
 
-    iget-object v0, p1, Landroid/support/v4/app/NotificationCompat$Builder;->r:Landroid/app/Notification;
+    new-instance v0, Landroid/support/v4/app/FragmentTabHost$SavedState;
 
-    iget-object v1, p1, Landroid/support/v4/app/NotificationCompat$Builder;->a:Landroid/content/Context;
+    const/4 v1, 0x0
 
-    iget-object v2, p1, Landroid/support/v4/app/NotificationCompat$Builder;->b:Ljava/lang/CharSequence;
+    invoke-direct {v0, p1, v1}, Landroid/support/v4/app/FragmentTabHost$SavedState;-><init>(Landroid/os/Parcel;Landroid/support/v4/app/P;)V
 
-    iget-object v3, p1, Landroid/support/v4/app/NotificationCompat$Builder;->c:Ljava/lang/CharSequence;
+    return-object v0
+.end method
 
-    iget-object v4, p1, Landroid/support/v4/app/NotificationCompat$Builder;->d:Landroid/app/PendingIntent;
+.method public a(I)[Landroid/support/v4/app/FragmentTabHost$SavedState;
+    .locals 1
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/app/Notification;->setLatestEventInfo(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
+    new-array v0, p1, [Landroid/support/v4/app/FragmentTabHost$SavedState;
 
-    iget v1, p1, Landroid/support/v4/app/NotificationCompat$Builder;->j:I
+    return-object v0
+.end method
 
-    if-lez v1, :cond_0
+.method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .locals 1
 
-    iget v1, v0, Landroid/app/Notification;->flags:I
+    invoke-virtual {p0, p1}, Landroid/support/v4/app/R;->a(Landroid/os/Parcel;)Landroid/support/v4/app/FragmentTabHost$SavedState;
 
-    or-int/lit16 v1, v1, 0x80
+    move-result-object v0
 
-    iput v1, v0, Landroid/app/Notification;->flags:I
+    return-object v0
+.end method
 
-    :cond_0
+.method public synthetic newArray(I)[Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0, p1}, Landroid/support/v4/app/R;->a(I)[Landroid/support/v4/app/FragmentTabHost$SavedState;
+
+    move-result-object v0
+
     return-object v0
 .end method

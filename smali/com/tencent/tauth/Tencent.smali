@@ -3,11 +3,11 @@
 
 
 # instance fields
-.field private a:Lcom/tencent/connect/auth/QQAuth;
+.field private mContext:Landroid/content/Context;
 
-.field private b:Landroid/content/Context;
+.field private mLocationApi:Lcom/tencent/tauth/LocationApi;
 
-.field private c:Lcom/tencent/tauth/LocationApi;
+.field private mQQAuth:Lcom/tencent/connect/auth/QQAuth;
 
 
 # direct methods
@@ -16,18 +16,18 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lcom/tencent/tauth/Tencent;->b:Landroid/content/Context;
+    iput-object p2, p0, Lcom/tencent/tauth/Tencent;->mContext:Landroid/content/Context;
 
     invoke-static {p1, p2}, Lcom/tencent/connect/auth/QQAuth;->createInstance(Ljava/lang/String;Landroid/content/Context;)Lcom/tencent/connect/auth/QQAuth;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/tauth/Tencent;->a:Lcom/tencent/connect/auth/QQAuth;
+    iput-object v0, p0, Lcom/tencent/tauth/Tencent;->mQQAuth:Lcom/tencent/connect/auth/QQAuth;
 
     return-void
 .end method
 
-.method private static a(Landroid/content/Context;Ljava/lang/String;)Z
+.method private static checkManifestConfig(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 4
 
     const/4 v0, 0x0
@@ -193,7 +193,7 @@
 
     invoke-direct {v0, p0, p1}, Lcom/tencent/tauth/Tencent;-><init>(Ljava/lang/String;Landroid/content/Context;)V
 
-    invoke-static {p1, p0}, Lcom/tencent/tauth/Tencent;->a(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p1, p0}, Lcom/tencent/tauth/Tencent;->checkManifestConfig(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
@@ -221,7 +221,7 @@
 
     new-instance v0, Lcom/tencent/open/SocialApi;
 
-    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->a:Lcom/tencent/connect/auth/QQAuth;
+    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->mQQAuth:Lcom/tencent/connect/auth/QQAuth;
 
     invoke-virtual {v1}, Lcom/tencent/connect/auth/QQAuth;->getQQToken()Lcom/tencent/connect/auth/QQToken;
 
@@ -241,7 +241,7 @@
 
     new-instance v0, Lcom/tencent/open/SocialApi;
 
-    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->a:Lcom/tencent/connect/auth/QQAuth;
+    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->mQQAuth:Lcom/tencent/connect/auth/QQAuth;
 
     invoke-virtual {v1}, Lcom/tencent/connect/auth/QQAuth;->getQQToken()Lcom/tencent/connect/auth/QQToken;
 
@@ -261,7 +261,7 @@
 
     new-instance v0, Lcom/tencent/open/SocialApi;
 
-    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->a:Lcom/tencent/connect/auth/QQAuth;
+    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->mQQAuth:Lcom/tencent/connect/auth/QQAuth;
 
     invoke-virtual {v1}, Lcom/tencent/connect/auth/QQAuth;->getQQToken()Lcom/tencent/connect/auth/QQToken;
 
@@ -279,13 +279,13 @@
 .method public deleteLocation(Landroid/app/Activity;Landroid/os/Bundle;Lcom/tencent/tauth/IUiListener;)I
     .locals 2
 
-    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->c:Lcom/tencent/tauth/LocationApi;
+    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->mLocationApi:Lcom/tencent/tauth/LocationApi;
 
     if-nez v0, :cond_0
 
     new-instance v0, Lcom/tencent/tauth/LocationApi;
 
-    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->a:Lcom/tencent/connect/auth/QQAuth;
+    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->mQQAuth:Lcom/tencent/connect/auth/QQAuth;
 
     invoke-virtual {v1}, Lcom/tencent/connect/auth/QQAuth;->getQQToken()Lcom/tencent/connect/auth/QQToken;
 
@@ -293,10 +293,10 @@
 
     invoke-direct {v0, p1, v1}, Lcom/tencent/tauth/LocationApi;-><init>(Landroid/content/Context;Lcom/tencent/connect/auth/QQToken;)V
 
-    iput-object v0, p0, Lcom/tencent/tauth/Tencent;->c:Lcom/tencent/tauth/LocationApi;
+    iput-object v0, p0, Lcom/tencent/tauth/Tencent;->mLocationApi:Lcom/tencent/tauth/LocationApi;
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->c:Lcom/tencent/tauth/LocationApi;
+    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->mLocationApi:Lcom/tencent/tauth/LocationApi;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/tencent/tauth/LocationApi;->deleteLocation(Landroid/app/Activity;Landroid/os/Bundle;Lcom/tencent/tauth/IUiListener;)V
 
@@ -308,7 +308,7 @@
 .method public getAccessToken()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->a:Lcom/tencent/connect/auth/QQAuth;
+    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->mQQAuth:Lcom/tencent/connect/auth/QQAuth;
 
     invoke-virtual {v0}, Lcom/tencent/connect/auth/QQAuth;->getQQToken()Lcom/tencent/connect/auth/QQToken;
 
@@ -324,7 +324,7 @@
 .method public getAppId()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->a:Lcom/tencent/connect/auth/QQAuth;
+    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->mQQAuth:Lcom/tencent/connect/auth/QQAuth;
 
     invoke-virtual {v0}, Lcom/tencent/connect/auth/QQAuth;->getQQToken()Lcom/tencent/connect/auth/QQToken;
 
@@ -340,7 +340,7 @@
 .method public getExpiresIn()J
     .locals 2
 
-    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->a:Lcom/tencent/connect/auth/QQAuth;
+    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->mQQAuth:Lcom/tencent/connect/auth/QQAuth;
 
     invoke-virtual {v0}, Lcom/tencent/connect/auth/QQAuth;->getQQToken()Lcom/tencent/connect/auth/QQToken;
 
@@ -356,7 +356,7 @@
 .method public getOpenId()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->a:Lcom/tencent/connect/auth/QQAuth;
+    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->mQQAuth:Lcom/tencent/connect/auth/QQAuth;
 
     invoke-virtual {v0}, Lcom/tencent/connect/auth/QQAuth;->getQQToken()Lcom/tencent/connect/auth/QQToken;
 
@@ -372,7 +372,7 @@
 .method public getQQToken()Lcom/tencent/connect/auth/QQToken;
     .locals 1
 
-    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->a:Lcom/tencent/connect/auth/QQAuth;
+    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->mQQAuth:Lcom/tencent/connect/auth/QQAuth;
 
     invoke-virtual {v0}, Lcom/tencent/connect/auth/QQAuth;->getQQToken()Lcom/tencent/connect/auth/QQToken;
 
@@ -386,7 +386,7 @@
 
     new-instance v0, Lcom/tencent/open/SocialApi;
 
-    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->a:Lcom/tencent/connect/auth/QQAuth;
+    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->mQQAuth:Lcom/tencent/connect/auth/QQAuth;
 
     invoke-virtual {v1}, Lcom/tencent/connect/auth/QQAuth;->getQQToken()Lcom/tencent/connect/auth/QQToken;
 
@@ -406,7 +406,7 @@
 
     new-instance v0, Lcom/tencent/open/SocialApi;
 
-    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->a:Lcom/tencent/connect/auth/QQAuth;
+    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->mQQAuth:Lcom/tencent/connect/auth/QQAuth;
 
     invoke-virtual {v1}, Lcom/tencent/connect/auth/QQAuth;->getQQToken()Lcom/tencent/connect/auth/QQToken;
 
@@ -424,7 +424,7 @@
 
     new-instance v0, Lcom/tencent/open/SocialApi;
 
-    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->a:Lcom/tencent/connect/auth/QQAuth;
+    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->mQQAuth:Lcom/tencent/connect/auth/QQAuth;
 
     invoke-virtual {v1}, Lcom/tencent/connect/auth/QQAuth;->getQQToken()Lcom/tencent/connect/auth/QQToken;
 
@@ -468,7 +468,7 @@
 .method public isSessionValid()Z
     .locals 1
 
-    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->a:Lcom/tencent/connect/auth/QQAuth;
+    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->mQQAuth:Lcom/tencent/connect/auth/QQAuth;
 
     invoke-virtual {v0}, Lcom/tencent/connect/auth/QQAuth;->isSessionValid()Z
 
@@ -535,7 +535,7 @@
 .method public login(Landroid/app/Activity;Ljava/lang/String;Lcom/tencent/tauth/IUiListener;)I
     .locals 1
 
-    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->a:Lcom/tencent/connect/auth/QQAuth;
+    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->mQQAuth:Lcom/tencent/connect/auth/QQAuth;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/tencent/connect/auth/QQAuth;->login(Landroid/app/Activity;Ljava/lang/String;Lcom/tencent/tauth/IUiListener;)I
 
@@ -547,7 +547,7 @@
 .method public loginWithOEM(Landroid/app/Activity;Ljava/lang/String;Lcom/tencent/tauth/IUiListener;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
     .locals 7
 
-    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->a:Lcom/tencent/connect/auth/QQAuth;
+    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->mQQAuth:Lcom/tencent/connect/auth/QQAuth;
 
     move-object v1, p1
 
@@ -573,7 +573,7 @@
 
     const/4 v2, 0x0
 
-    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->a:Lcom/tencent/connect/auth/QQAuth;
+    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->mQQAuth:Lcom/tencent/connect/auth/QQAuth;
 
     invoke-virtual {v0}, Lcom/tencent/connect/auth/QQAuth;->getQQToken()Lcom/tencent/connect/auth/QQToken;
 
@@ -583,7 +583,7 @@
 
     invoke-virtual {v0, v2, v1}, Lcom/tencent/connect/auth/QQToken;->setAccessToken(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->a:Lcom/tencent/connect/auth/QQAuth;
+    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->mQQAuth:Lcom/tencent/connect/auth/QQAuth;
 
     invoke-virtual {v0}, Lcom/tencent/connect/auth/QQAuth;->getQQToken()Lcom/tencent/connect/auth/QQToken;
 
@@ -605,7 +605,7 @@
 .method public reAuth(Landroid/app/Activity;Ljava/lang/String;Lcom/tencent/tauth/IUiListener;)I
     .locals 1
 
-    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->a:Lcom/tencent/connect/auth/QQAuth;
+    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->mQQAuth:Lcom/tencent/connect/auth/QQAuth;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/tencent/connect/auth/QQAuth;->reAuth(Landroid/app/Activity;Ljava/lang/String;Lcom/tencent/tauth/IUiListener;)I
 
@@ -619,7 +619,7 @@
 
     new-instance v0, Lcom/tencent/open/SocialApi;
 
-    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->a:Lcom/tencent/connect/auth/QQAuth;
+    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->mQQAuth:Lcom/tencent/connect/auth/QQAuth;
 
     invoke-virtual {v1}, Lcom/tencent/connect/auth/QQAuth;->getQQToken()Lcom/tencent/connect/auth/QQToken;
 
@@ -637,13 +637,13 @@
 .method public request(Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/String;)Lorg/json/JSONObject;
     .locals 2
 
-    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->a:Lcom/tencent/connect/auth/QQAuth;
+    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->mQQAuth:Lcom/tencent/connect/auth/QQAuth;
 
     invoke-virtual {v0}, Lcom/tencent/connect/auth/QQAuth;->getQQToken()Lcom/tencent/connect/auth/QQToken;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->b:Landroid/content/Context;
+    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->mContext:Landroid/content/Context;
 
     invoke-static {v0, v1, p1, p2, p3}, Lcom/tencent/utils/HttpUtils;->request(Lcom/tencent/connect/auth/QQToken;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/String;)Lorg/json/JSONObject;
 
@@ -655,13 +655,13 @@
 .method public requestAsync(Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/String;Lcom/tencent/tauth/IRequestListener;Ljava/lang/Object;)V
     .locals 6
 
-    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->a:Lcom/tencent/connect/auth/QQAuth;
+    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->mQQAuth:Lcom/tencent/connect/auth/QQAuth;
 
     invoke-virtual {v0}, Lcom/tencent/connect/auth/QQAuth;->getQQToken()Lcom/tencent/connect/auth/QQToken;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->b:Landroid/content/Context;
+    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->mContext:Landroid/content/Context;
 
     move-object v2, p1
 
@@ -679,13 +679,13 @@
 .method public searchNearby(Landroid/app/Activity;Landroid/os/Bundle;Lcom/tencent/tauth/IUiListener;)I
     .locals 2
 
-    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->c:Lcom/tencent/tauth/LocationApi;
+    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->mLocationApi:Lcom/tencent/tauth/LocationApi;
 
     if-nez v0, :cond_0
 
     new-instance v0, Lcom/tencent/tauth/LocationApi;
 
-    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->a:Lcom/tencent/connect/auth/QQAuth;
+    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->mQQAuth:Lcom/tencent/connect/auth/QQAuth;
 
     invoke-virtual {v1}, Lcom/tencent/connect/auth/QQAuth;->getQQToken()Lcom/tencent/connect/auth/QQToken;
 
@@ -693,10 +693,10 @@
 
     invoke-direct {v0, p1, v1}, Lcom/tencent/tauth/LocationApi;-><init>(Landroid/content/Context;Lcom/tencent/connect/auth/QQToken;)V
 
-    iput-object v0, p0, Lcom/tencent/tauth/Tencent;->c:Lcom/tencent/tauth/LocationApi;
+    iput-object v0, p0, Lcom/tencent/tauth/Tencent;->mLocationApi:Lcom/tencent/tauth/LocationApi;
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->c:Lcom/tencent/tauth/LocationApi;
+    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->mLocationApi:Lcom/tencent/tauth/LocationApi;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/tencent/tauth/LocationApi;->searchNearby(Landroid/app/Activity;Landroid/os/Bundle;Lcom/tencent/tauth/IUiListener;)V
 
@@ -736,7 +736,7 @@
 
     invoke-static {v0, v1}, Lcom/tencent/a/a/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->a:Lcom/tencent/connect/auth/QQAuth;
+    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->mQQAuth:Lcom/tencent/connect/auth/QQAuth;
 
     invoke-virtual {v0, p1, p2}, Lcom/tencent/connect/auth/QQAuth;->setAccessToken(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -760,9 +760,9 @@
 
     new-instance v2, Lcom/tencent/connect/avatar/QQAvatar;
 
-    iget-object v3, p0, Lcom/tencent/tauth/Tencent;->b:Landroid/content/Context;
+    iget-object v3, p0, Lcom/tencent/tauth/Tencent;->mContext:Landroid/content/Context;
 
-    iget-object v4, p0, Lcom/tencent/tauth/Tencent;->a:Lcom/tencent/connect/auth/QQAuth;
+    iget-object v4, p0, Lcom/tencent/tauth/Tencent;->mQQAuth:Lcom/tencent/connect/auth/QQAuth;
 
     invoke-virtual {v4}, Lcom/tencent/connect/auth/QQAuth;->getQQToken()Lcom/tencent/connect/auth/QQToken;
 
@@ -804,9 +804,9 @@
 
     invoke-static {v0, v1}, Lcom/tencent/a/a/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->a:Lcom/tencent/connect/auth/QQAuth;
+    iget-object v0, p0, Lcom/tencent/tauth/Tencent;->mQQAuth:Lcom/tencent/connect/auth/QQAuth;
 
-    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->b:Landroid/content/Context;
+    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, v1, p1}, Lcom/tencent/connect/auth/QQAuth;->setOpenId(Landroid/content/Context;Ljava/lang/String;)V
 
@@ -824,7 +824,7 @@
 
     new-instance v0, Lcom/tencent/connect/share/QQShare;
 
-    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->a:Lcom/tencent/connect/auth/QQAuth;
+    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->mQQAuth:Lcom/tencent/connect/auth/QQAuth;
 
     invoke-virtual {v1}, Lcom/tencent/connect/auth/QQAuth;->getQQToken()Lcom/tencent/connect/auth/QQToken;
 
@@ -842,7 +842,7 @@
 
     new-instance v0, Lcom/tencent/connect/share/QzoneShare;
 
-    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->a:Lcom/tencent/connect/auth/QQAuth;
+    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->mQQAuth:Lcom/tencent/connect/auth/QQAuth;
 
     invoke-virtual {v1}, Lcom/tencent/connect/auth/QQAuth;->getQQToken()Lcom/tencent/connect/auth/QQToken;
 
@@ -860,7 +860,7 @@
 
     new-instance v0, Lcom/tencent/open/TaskGuide;
 
-    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->a:Lcom/tencent/connect/auth/QQAuth;
+    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->mQQAuth:Lcom/tencent/connect/auth/QQAuth;
 
     invoke-virtual {v1}, Lcom/tencent/connect/auth/QQAuth;->getQQToken()Lcom/tencent/connect/auth/QQToken;
 
@@ -878,7 +878,7 @@
 
     new-instance v0, Lcom/tencent/open/SocialApi;
 
-    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->a:Lcom/tencent/connect/auth/QQAuth;
+    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->mQQAuth:Lcom/tencent/connect/auth/QQAuth;
 
     invoke-virtual {v1}, Lcom/tencent/connect/auth/QQAuth;->getQQToken()Lcom/tencent/connect/auth/QQToken;
 
@@ -898,7 +898,7 @@
 
     new-instance v0, Lcom/tencent/open/SocialApi;
 
-    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->a:Lcom/tencent/connect/auth/QQAuth;
+    iget-object v1, p0, Lcom/tencent/tauth/Tencent;->mQQAuth:Lcom/tencent/connect/auth/QQAuth;
 
     invoke-virtual {v1}, Lcom/tencent/connect/auth/QQAuth;->getQQToken()Lcom/tencent/connect/auth/QQToken;
 

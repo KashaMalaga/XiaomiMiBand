@@ -3,13 +3,13 @@
 
 
 # static fields
-.field public static final S:Z = false
+.field public static final a:Z = false
 
-.field private static final a:Ljava/lang/String; = "BraceletProvider"
+.field private static final b:Ljava/lang/String; = "BraceletProvider"
 
 
 # instance fields
-.field private b:Lcn/com/smartdevices/bracelet/db/BraceletDbHelper;
+.field private c:Lcn/com/smartdevices/bracelet/db/n;
 
 
 # direct methods
@@ -54,11 +54,11 @@
 
     const/4 v1, 0x0
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/db/a;
+    new-instance v0, Lcn/com/smartdevices/bracelet/db/o;
 
-    invoke-direct {v0, p1, v1, v1}, Lcn/com/smartdevices/bracelet/db/a;-><init>(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)V
+    invoke-direct {v0, p1, v1, v1}, Lcn/com/smartdevices/bracelet/db/o;-><init>(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)V
 
-    iget-object v1, v0, Lcn/com/smartdevices/bracelet/db/a;->b:Ljava/lang/String;
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/db/o;->b:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -72,7 +72,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/db/a;->a:Ljava/lang/String;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/db/o;->a:Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -92,7 +92,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/db/a;->a:Ljava/lang/String;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/db/o;->a:Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -120,7 +120,7 @@
 
     const-string v1, "onCreate"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 

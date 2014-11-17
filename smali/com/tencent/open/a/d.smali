@@ -7,7 +7,7 @@
 
 .field private b:Landroid/database/sqlite/SQLiteDatabase;
 
-.field private c:Lcom/tencent/open/a/f;
+.field private c:Lcom/tencent/open/a/d$a;
 
 .field private d:I
 
@@ -20,7 +20,7 @@
 
     iput-object p1, p0, Lcom/tencent/open/a/d;->a:Landroid/content/Context;
 
-    new-instance v0, Lcom/tencent/open/a/f;
+    new-instance v0, Lcom/tencent/open/a/d$a;
 
     const-string v3, "sdk_cgi_report.db"
 
@@ -32,9 +32,9 @@
 
     move-object v2, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/tencent/open/a/f;-><init>(Lcom/tencent/open/a/d;Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
+    invoke-direct/range {v0 .. v5}, Lcom/tencent/open/a/d$a;-><init>(Lcom/tencent/open/a/d;Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
 
-    iput-object v0, p0, Lcom/tencent/open/a/d;->c:Lcom/tencent/open/a/f;
+    iput-object v0, p0, Lcom/tencent/open/a/d;->c:Lcom/tencent/open/a/d$a;
 
     invoke-virtual {p0}, Lcom/tencent/open/a/d;->c()Ljava/util/ArrayList;
 
@@ -192,9 +192,9 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     :try_start_1
-    iget-object v0, p0, Lcom/tencent/open/a/d;->c:Lcom/tencent/open/a/f;
+    iget-object v0, p0, Lcom/tencent/open/a/d;->c:Lcom/tencent/open/a/d$a;
 
-    invoke-virtual {v0}, Lcom/tencent/open/a/f;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v0}, Lcom/tencent/open/a/d$a;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -287,9 +287,9 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     :try_start_1
-    iget-object v1, p0, Lcom/tencent/open/a/d;->c:Lcom/tencent/open/a/f;
+    iget-object v1, p0, Lcom/tencent/open/a/d;->c:Lcom/tencent/open/a/d$a;
 
-    invoke-virtual {v1}, Lcom/tencent/open/a/f;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v1}, Lcom/tencent/open/a/d$a;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v1
 
@@ -710,9 +710,9 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     :try_start_1
-    iget-object v2, p0, Lcom/tencent/open/a/d;->c:Lcom/tencent/open/a/f;
+    iget-object v2, p0, Lcom/tencent/open/a/d;->c:Lcom/tencent/open/a/d$a;
 
-    invoke-virtual {v2}, Lcom/tencent/open/a/f;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v2}, Lcom/tencent/open/a/d$a;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v2
 
@@ -803,9 +803,9 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     :try_start_1
-    iget-object v1, p0, Lcom/tencent/open/a/d;->c:Lcom/tencent/open/a/f;
+    iget-object v1, p0, Lcom/tencent/open/a/d;->c:Lcom/tencent/open/a/d$a;
 
-    invoke-virtual {v1}, Lcom/tencent/open/a/f;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v1}, Lcom/tencent/open/a/d$a;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v1
 
@@ -911,9 +911,9 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     :try_start_1
-    iget-object v0, p0, Lcom/tencent/open/a/d;->c:Lcom/tencent/open/a/f;
+    iget-object v0, p0, Lcom/tencent/open/a/d;->c:Lcom/tencent/open/a/d$a;
 
-    invoke-virtual {v0}, Lcom/tencent/open/a/f;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v0}, Lcom/tencent/open/a/d$a;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -1137,9 +1137,9 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     :try_start_1
-    iget-object v0, p0, Lcom/tencent/open/a/d;->c:Lcom/tencent/open/a/f;
+    iget-object v0, p0, Lcom/tencent/open/a/d;->c:Lcom/tencent/open/a/d$a;
 
-    invoke-virtual {v0}, Lcom/tencent/open/a/f;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v0}, Lcom/tencent/open/a/d$a;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 

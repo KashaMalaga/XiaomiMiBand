@@ -42,9 +42,9 @@
 
     iput-object v1, p0, Lcom/tencent/b/b/f;->d:Landroid/os/Handler;
 
-    new-instance v0, Lcom/tencent/b/b/w;
+    new-instance v0, Lcom/tencent/b/b/g;
 
-    invoke-direct {v0, p0}, Lcom/tencent/b/b/w;-><init>(Lcom/tencent/b/b/f;)V
+    invoke-direct {v0, p0}, Lcom/tencent/b/b/g;-><init>(Lcom/tencent/b/b/f;)V
 
     iput-object v0, p0, Lcom/tencent/b/b/f;->e:Ljava/lang/Runnable;
 

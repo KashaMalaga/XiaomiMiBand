@@ -38,7 +38,7 @@
     goto :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x7f070076
+    .packed-switch 0x7f07007b
         :pswitch_0
     .end packed-switch
 .end method
@@ -48,11 +48,11 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030072
+    const v0, 0x7f030076
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/SystemLowActivity;->setContentView(I)V
 
-    const v0, 0x7f070076
+    const v0, 0x7f07007b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/SystemLowActivity;->findViewById(I)Landroid/view/View;
 
@@ -72,9 +72,9 @@
 
     const-string v0, "PageSystemLow"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->endPage(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->endSession(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->b(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -86,9 +86,9 @@
 
     const-string v0, "PageSystemLow"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->startPage(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->startSession(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;)V
 
     return-void
 .end method

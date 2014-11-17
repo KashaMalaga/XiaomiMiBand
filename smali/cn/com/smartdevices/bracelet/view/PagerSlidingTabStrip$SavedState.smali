@@ -23,9 +23,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/view/r;
+    new-instance v0, Lcn/com/smartdevices/bracelet/view/v;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/view/r;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/view/v;-><init>()V
 
     sput-object v0, Lcn/com/smartdevices/bracelet/view/PagerSlidingTabStrip$SavedState;->CREATOR:Landroid/os/Parcelable$Creator;
 

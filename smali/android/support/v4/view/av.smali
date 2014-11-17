@@ -1,13 +1,19 @@
-.class Landroid/support/v4/view/av;
+.class Landroid/support/v4/view/aV;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/support/v4/view/au;
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field final synthetic a:Landroid/support/v4/view/ViewPager;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Landroid/support/v4/view/ViewPager;)V
     .locals 0
+
+    iput-object p1, p0, Landroid/support/v4/view/aV;->a:Landroid/support/v4/view/ViewPager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -16,16 +22,18 @@
 
 
 # virtual methods
-.method public a(Landroid/view/ViewGroup;Z)V
-    .locals 0
+.method public run()V
+    .locals 2
+
+    iget-object v0, p0, Landroid/support/v4/view/aV;->a:Landroid/support/v4/view/ViewPager;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Landroid/support/v4/view/ViewPager;->a(Landroid/support/v4/view/ViewPager;I)V
+
+    iget-object v0, p0, Landroid/support/v4/view/aV;->a:Landroid/support/v4/view/ViewPager;
+
+    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->g()V
 
     return-void
-.end method
-
-.method public a(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
 .end method

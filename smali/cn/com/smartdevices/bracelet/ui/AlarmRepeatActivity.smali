@@ -66,7 +66,7 @@
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->d:Landroid/widget/TextView;
 
@@ -132,7 +132,7 @@
 .method private b()V
     .locals 4
 
-    const v0, 0x7f07007e
+    const v0, 0x7f070083
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->findViewById(I)Landroid/view/View;
 
@@ -140,7 +140,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070076
+    const v0, 0x7f07007b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->findViewById(I)Landroid/view/View;
 
@@ -148,7 +148,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700c4
+    const v0, 0x7f0700d1
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->findViewById(I)Landroid/view/View;
 
@@ -158,7 +158,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->d:Landroid/widget/TextView;
 
-    const v0, 0x7f0700c5
+    const v0, 0x7f0700d2
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->findViewById(I)Landroid/view/View;
 
@@ -186,7 +186,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->getResources()Landroid/content/res/Resources;
 
@@ -200,13 +200,13 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->b:Lcn/com/smartdevices/bracelet/view/SelectDaysView;
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/view/DayRepeatAdapter;
+    new-instance v2, Lcn/com/smartdevices/bracelet/view/c;
 
     iget v3, p0, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->c:I
 
-    invoke-direct {v2, p0, v0, v3}, Lcn/com/smartdevices/bracelet/view/DayRepeatAdapter;-><init>(Landroid/content/Context;[Ljava/lang/String;I)V
+    invoke-direct {v2, p0, v0, v3}, Lcn/com/smartdevices/bracelet/view/c;-><init>(Landroid/content/Context;[Ljava/lang/String;I)V
 
-    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->setAdapter(Lcn/com/smartdevices/bracelet/view/WeekAdapter;)V
+    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->a(Lcn/com/smartdevices/bracelet/view/X;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->b:Lcn/com/smartdevices/bracelet/view/SelectDaysView;
 
@@ -214,7 +214,7 @@
 
     invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/i;-><init>(Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;)V
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->a(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     return-void
 .end method
@@ -267,8 +267,8 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f070076 -> :sswitch_1
-        0x7f07007e -> :sswitch_0
+        0x7f07007b -> :sswitch_1
+        0x7f070083 -> :sswitch_0
     .end sparse-switch
 .end method
 
@@ -279,7 +279,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030023
+    const v0, 0x7f030025
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->setContentView(I)V
 
@@ -314,9 +314,9 @@
 
     const-string v0, "PageAlarmNewRepeatCustom"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->endPage(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->endSession(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->b(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -328,9 +328,9 @@
 
     const-string v0, "PageAlarmNewRepeatCustom"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->startPage(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->startSession(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;)V
 
     return-void
 .end method

@@ -371,17 +371,17 @@ Great work!"</string>
   <string name="noti_bracelet_low_battery_content_mid">You need to recharge your band.</string>
   <string name="noti_bracelet_low_battery_title">Low battery</string>
   <string name="noti_bracelet_low_battery_title_low">Band has powered off</string>
-  <string name="notify_status_motor">Vibrating…</string>
-  <string name="notify_status_motor_alarm">Alarm clock ringing…</string>
-  <string name="notify_status_motor_auth">Pairing…</string>
-  <string name="notify_status_motor_auth_success">Verified</string>
-  <string name="notify_status_motor_call">Incoming call…</string>
-  <string name="notify_status_motor_disconnect">Disconnecting…</string>
-  <string name="notify_status_motor_goal">"You've reached your goal!"</string>
-  <string name="notify_status_motor_notify">Locating…</string>
-  <string name="notify_status_motor_shut_down">Powering off…</string>
-  <string name="notify_status_motor_smart_alarm">Alarm clock ringing…</string>
-  <string name="notify_status_motor_test">Testing…</string>
+  <string name="notify_status_motor">"Vibrating: "</string>
+  <string name="notify_status_motor_alarm">Alarm.</string>
+  <string name="notify_status_motor_auth">Band detected.</string>
+  <string name="notify_status_motor_auth_success">Band paired.</string>
+  <string name="notify_status_motor_call">Incoming call.</string>
+  <string name="notify_status_motor_disconnect">Bluetooth disconnected.</string>
+  <string name="notify_status_motor_goal">Reached goal!</string>
+  <string name="notify_status_motor_notify">Searching for band.</string>
+  <string name="notify_status_motor_shut_down">Powering off band.</string>
+  <string name="notify_status_motor_smart_alarm">Early bird alarm.</string>
+  <string name="notify_status_motor_test">Test.</string>
   <string name="odo">Total distance</string>
   <string name="one_min">1 min ago</string>
   <string name="one_week">This week </string>
@@ -457,11 +457,11 @@ or about 12,000 steps a day for a healthy lifestyle."</string>
   <string name="share_goal_tips_fail">Chill day for me.</string>
   <string name="share_goal_tips_succ">I reached my goal today!</string>
   <string name="share_miliao_too_old">"The version of Mi Talk you're using is too old."</string>
-  <string name="share_play_ground_format">" or about %1$s laps around the track."</string>
-  <string name="share_sleep_description">"Deep sleep: %1$sh %2$sm | Light sleep: %3$sh %4$sm.
+  <string name="share_play_ground_format">" or about %1$s laps around the track"</string>
+  <string name="share_sleep_description">"Deep sleep: %1$sh %2$sm | Light sleep: %3$sh %4$sm
 Fell asleep at %5$s | Woke up at %6$s"</string>
   <string name="share_sleep_description_average">"Sleep averages
-Deep sleep: %1$sh %2$sm | Light sleep: %3$sh %4$sm.
+Deep sleep: %1$sh %2$sm | Light sleep: %3$sh %4$sm
 Fell asleep at %5$s | Woke up at %6$s"</string>
   <string name="share_sleep_title">Last night</string>
   <string name="share_sleep_title_average">Avg. sleep</string>
@@ -482,6 +482,7 @@ Burned %3$s cal. Previous record was %5$s steps, set on %4$s."</string>
   <string name="share_step_goal_failed_title_today">Today</string>
   <string name="share_step_goal_succ_title">Way to go!</string>
   <string name="share_step_goal_succ_title_today">I reached my goal today!</string>
+  <string name="share_step_ranking">You beated &lt;b&gt;%s&lt;/b&gt; users.</string>
   <string name="share_step_walk"></string>
   <string name="share_to_content">Share your progress.</string>
   <string name="share_to_content_sleep">My sleep data</string>
@@ -503,15 +504,23 @@ Burned %3$s cal. Previous record was %5$s steps, set on %4$s."</string>
   <string name="sport_ranking_desc_normal" formatted="false">You beated &lt;b&gt;%s%&lt;/b&gt; of %s users.</string>
   <string name="sport_ranking_desc_poor">Every %s user can beat you, come on!</string>
   <string name="sport_running_distance_detail">%s Kilometers</string>
+  <string name="sport_running_gps_cancel">Cancel</string>
+  <string name="sport_running_gps_turnon">Turn on</string>
   <string name="sport_running_helper">Running helper</string>
+  <string name="sport_running_helper_test">Running helper test</string>
+  <string name="sport_running_history">History</string>
   <string name="sport_running_no_gps">GPS should be turned on to record your trace. Turn on?</string>
   <string name="sport_running_pace">Pace</string>
   <string name="sport_running_pace_detail">%s/KM</string>
   <string name="sport_running_set_dist">Distance reminder</string>
   <string name="sport_running_set_goal">Goal reminder</string>
   <string name="sport_running_set_speed">Speed reminder</string>
+  <string name="sport_running_settings">Settings</string>
+  <string name="sport_running_slider_prompt">&gt;&gt;&gt;Slide right to unlock</string>
   <string name="sport_running_speed">Speed</string>
   <string name="sport_running_speed_detail">%dKM/H</string>
+  <string name="sport_running_start">Start</string>
+  <string name="sport_running_time_desc">Time cost</string>
   <string name="sport_share">Share now</string>
   <string name="start">Start</string>
   <string name="start_download">Downloading…</string>
@@ -612,6 +621,8 @@ Settings &gt; Security."</string>
   <string name="user_agreement">Terms of Service and Privacy Policy</string>
   <string name="user_agreement_prefix">"To use this product, you must agree to our 
 "</string>
+  <string name="vibrate_notify">Vibrate for notifications</string>
+  <string name="vibrate_notify_tips">Vibrate band when a you receive a notification</string>
   <string name="visit_micom">Visit website</string>
   <string name="wait">Working…</string>
   <string name="walked">Walked </string>

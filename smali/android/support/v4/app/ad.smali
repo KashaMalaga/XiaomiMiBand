@@ -1,22 +1,32 @@
-.class Landroid/support/v4/app/ad;
-.super Ljava/lang/Object;
+.class Landroid/support/v4/app/aD;
+.super Landroid/support/v4/app/aC;
 
 
 # direct methods
 .method constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/support/v4/app/aC;-><init>()V
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/CharSequence;)Ljava/lang/String;
+
+# virtual methods
+.method public a(Ljava/lang/CharSequence;)Ljava/lang/String;
     .locals 1
 
-    invoke-static {p0}, Landroid/text/Html;->escapeHtml(Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-static {p1}, Landroid/support/v4/app/aF;->a(Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method a(Landroid/view/MenuItem;)Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
 .end method

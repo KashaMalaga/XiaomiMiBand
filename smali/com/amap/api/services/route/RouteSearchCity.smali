@@ -35,9 +35,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/services/route/u;
+    new-instance v0, Lcom/amap/api/services/route/v;
 
-    invoke-direct {v0}, Lcom/amap/api/services/route/u;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/services/route/v;-><init>()V
 
     sput-object v0, Lcom/amap/api/services/route/RouteSearchCity;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -70,15 +70,7 @@
 
 
 # virtual methods
-.method public describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public getDistricts()Ljava/util/List;
+.method public a()Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -95,7 +87,7 @@
     return-object v0
 .end method
 
-.method public setDistricts(Ljava/util/List;)V
+.method public a(Ljava/util/List;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -110,6 +102,14 @@
     iput-object p1, p0, Lcom/amap/api/services/route/RouteSearchCity;->a:Ljava/util/List;
 
     return-void
+.end method
+
+.method public describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V

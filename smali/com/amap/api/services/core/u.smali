@@ -1,249 +1,659 @@
-.class public Lcom/amap/api/services/core/u;
-.super Lcom/amap/api/services/core/s;
+.class public abstract Lcom/amap/api/services/core/u;
+.super Ljava/lang/Object;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/amap/api/services/core/s",
-        "<",
-        "Lcom/amap/api/services/geocoder/RegeocodeQuery;",
-        "Lcom/amap/api/services/geocoder/RegeocodeAddress;",
-        ">;"
+        "<T:",
+        "Ljava/lang/Object;",
+        "V:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
     }
 .end annotation
 
 
-# direct methods
-.method public constructor <init>(Lcom/amap/api/services/geocoder/RegeocodeQuery;Ljava/net/Proxy;)V
-    .locals 0
+# instance fields
+.field protected a:Ljava/net/Proxy;
 
-    invoke-direct {p0, p1, p2}, Lcom/amap/api/services/core/s;-><init>(Ljava/lang/Object;Ljava/net/Proxy;)V
+.field protected b:Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "TT;"
+        }
+    .end annotation
+.end field
+
+.field protected c:I
+
+.field protected d:Ljava/lang/String;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/Object;Ljava/net/Proxy;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;",
+            "Ljava/net/Proxy;",
+            ")V"
+        }
+    .end annotation
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lcom/amap/api/services/core/u;->c:I
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lcom/amap/api/services/core/u;->d:Ljava/lang/String;
+
+    invoke-direct {p0, p1, p2}, Lcom/amap/api/services/core/u;->a(Ljava/lang/Object;Ljava/net/Proxy;)V
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/net/Proxy;)V
+    .locals 1
 
-# virtual methods
-.method protected a(Ljava/lang/String;)Lcom/amap/api/services/geocoder/RegeocodeAddress;
-    .locals 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v1, Lcom/amap/api/services/geocoder/RegeocodeAddress;
+    const/4 v0, 0x1
 
-    invoke-direct {v1}, Lcom/amap/api/services/geocoder/RegeocodeAddress;-><init>()V
+    iput v0, p0, Lcom/amap/api/services/core/u;->c:I
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lcom/amap/api/services/core/u;->d:Ljava/lang/String;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0, p1}, Lcom/amap/api/services/core/u;->a(Ljava/lang/Object;Ljava/net/Proxy;)V
+
+    return-void
+.end method
+
+.method private a(Ljava/lang/Object;Ljava/net/Proxy;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;",
+            "Ljava/net/Proxy;",
+            ")V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lcom/amap/api/services/core/u;->b:Ljava/lang/Object;
+
+    iput-object p2, p0, Lcom/amap/api/services/core/u;->a:Ljava/net/Proxy;
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lcom/amap/api/services/core/u;->c:I
+
+    return-void
+.end method
+
+.method private b()Ljava/lang/Object;
+    .locals 9
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TV;"
+        }
+    .end annotation
+
+    const/4 v4, 0x0
+
+    const/4 v0, 0x0
+
+    move-object v1, v4
+
+    move-object v2, v4
+
+    move-object v3, v4
+
+    :cond_0
+    :goto_0
+    iget v5, p0, Lcom/amap/api/services/core/u;->c:I
+
+    if-ge v0, v5, :cond_5
 
     :try_start_0
-    new-instance v0, Lorg/json/JSONObject;
+    invoke-virtual {p0}, Lcom/amap/api/services/core/u;->a()Ljava/lang/String;
 
-    invoke-direct {v0, p1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+    move-result-object v5
 
-    const-string v2, "regeocode"
+    iput-object v5, p0, Lcom/amap/api/services/core/u;->d:Ljava/lang/String;
 
-    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+    invoke-virtual {p0}, Lcom/amap/api/services/core/u;->i()[B
 
-    move-result-object v0
+    move-result-object v5
 
-    const-string v2, "formatted_address"
+    if-nez v5, :cond_1
 
-    invoke-static {v0, v2}, Lcom/amap/api/services/core/m;->b(Lorg/json/JSONObject;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v5, p0, Lcom/amap/api/services/core/u;->d:Ljava/lang/String;
 
-    move-result-object v2
+    iget-object v6, p0, Lcom/amap/api/services/core/u;->a:Ljava/net/Proxy;
 
-    invoke-virtual {v1, v2}, Lcom/amap/api/services/geocoder/RegeocodeAddress;->setFormatAddress(Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lcom/amap/api/services/core/l;->a(Ljava/lang/String;Ljava/net/Proxy;)Ljava/net/HttpURLConnection;
 
-    const-string v2, "addressComponent"
+    move-result-object v3
 
-    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
-
-    move-result-object v2
-
-    invoke-static {v2, v1}, Lcom/amap/api/services/core/m;->a(Lorg/json/JSONObject;Lcom/amap/api/services/geocoder/RegeocodeAddress;)V
-
-    const-string v2, "pois"
-
-    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
-
-    move-result-object v2
-
-    invoke-static {v2, v1}, Lcom/amap/api/services/core/m;->c(Lorg/json/JSONArray;Lcom/amap/api/services/geocoder/RegeocodeAddress;)V
-
-    const-string v2, "roads"
-
-    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
-
-    move-result-object v2
-
-    invoke-static {v2, v1}, Lcom/amap/api/services/core/m;->b(Lorg/json/JSONArray;Lcom/amap/api/services/geocoder/RegeocodeAddress;)V
-
-    const-string v2, "roadinters"
-
-    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
-
-    move-result-object v0
-
-    invoke-static {v0, v1}, Lcom/amap/api/services/core/m;->a(Lorg/json/JSONArray;Lcom/amap/api/services/geocoder/RegeocodeAddress;)V
+    :goto_1
+    invoke-virtual {p0, v3}, Lcom/amap/api/services/core/u;->a(Ljava/net/HttpURLConnection;)Ljava/io/InputStream;
     :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Lcom/amap/api/services/core/a; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    :goto_0
-    return-object v1
+    move-result-object v5
+
+    :try_start_1
+    invoke-direct {p0, v5}, Lcom/amap/api/services/core/u;->b(Ljava/io/InputStream;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    iget v0, p0, Lcom/amap/api/services/core/u;->c:I
+    :try_end_1
+    .catch Lcom/amap/api/services/core/a; {:try_start_1 .. :try_end_1} :catch_4
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-eqz v5, :cond_7
+
+    :try_start_2
+    invoke-virtual {v5}, Ljava/io/InputStream;->close()V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
+
+    move-object v2, v4
+
+    :goto_2
+    if-eqz v3, :cond_0
+
+    invoke-virtual {v3}, Ljava/net/HttpURLConnection;->disconnect()V
+
+    move-object v3, v4
+
+    goto :goto_0
+
+    :cond_1
+    :try_start_3
+    iget-object v6, p0, Lcom/amap/api/services/core/u;->d:Ljava/lang/String;
+
+    iget-object v7, p0, Lcom/amap/api/services/core/u;->a:Ljava/net/Proxy;
+
+    invoke-static {v6, v5, v7}, Lcom/amap/api/services/core/l;->a(Ljava/lang/String;[BLjava/net/Proxy;)Ljava/net/HttpURLConnection;
+    :try_end_3
+    .catch Lcom/amap/api/services/core/a; {:try_start_3 .. :try_end_3} :catch_1
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    move-result-object v3
+
+    goto :goto_1
 
     :catch_0
     move-exception v0
 
-    invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
+    new-instance v0, Lcom/amap/api/services/core/a;
+
+    const-string v1, "IO \u64cd\u4f5c\u5f02\u5e38 - IOException"
+
+    invoke-direct {v0, v1}, Lcom/amap/api/services/core/a;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :catch_1
+    move-exception v5
+
+    move-object v8, v5
+
+    move-object v5, v2
+
+    move-object v2, v8
+
+    :goto_3
+    add-int/lit8 v0, v0, 0x1
+
+    :try_start_4
+    iget v6, p0, Lcom/amap/api/services/core/u;->c:I
+
+    if-lt v0, v6, :cond_4
+
+    new-instance v0, Lcom/amap/api/services/core/a;
+
+    invoke-virtual {v2}, Lcom/amap/api/services/core/a;->a()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/amap/api/services/core/a;-><init>(Ljava/lang/String;)V
+
+    throw v0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    :catchall_0
+    move-exception v0
+
+    move-object v2, v5
+
+    :goto_4
+    if-eqz v2, :cond_2
+
+    :try_start_5
+    invoke-virtual {v2}, Ljava/io/InputStream;->close()V
+    :try_end_5
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
+
+    :cond_2
+    if-eqz v3, :cond_3
+
+    invoke-virtual {v3}, Ljava/net/HttpURLConnection;->disconnect()V
+
+    :cond_3
+    throw v0
+
+    :cond_4
+    if-eqz v5, :cond_6
+
+    :try_start_6
+    invoke-virtual {v5}, Ljava/io/InputStream;->close()V
+    :try_end_6
+    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_2
+
+    move-object v2, v4
+
+    :goto_5
+    if-eqz v3, :cond_0
+
+    invoke-virtual {v3}, Ljava/net/HttpURLConnection;->disconnect()V
+
+    move-object v3, v4
+
+    goto :goto_0
+
+    :catch_2
+    move-exception v0
+
+    new-instance v0, Lcom/amap/api/services/core/a;
+
+    const-string v1, "IO \u64cd\u4f5c\u5f02\u5e38 - IOException"
+
+    invoke-direct {v0, v1}, Lcom/amap/api/services/core/a;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :catch_3
+    move-exception v0
+
+    new-instance v0, Lcom/amap/api/services/core/a;
+
+    const-string v1, "IO \u64cd\u4f5c\u5f02\u5e38 - IOException"
+
+    invoke-direct {v0, v1}, Lcom/amap/api/services/core/a;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_5
+    return-object v1
+
+    :catchall_1
+    move-exception v0
+
+    goto :goto_4
+
+    :catch_4
+    move-exception v2
+
+    goto :goto_3
+
+    :cond_6
+    move-object v2, v5
+
+    goto :goto_5
+
+    :cond_7
+    move-object v2, v5
+
+    goto :goto_2
+.end method
+
+.method private b(Ljava/io/InputStream;)Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/io/InputStream;",
+            ")TV;"
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1}, Lcom/amap/api/services/core/u;->a(Ljava/io/InputStream;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method protected a(Ljava/net/HttpURLConnection;)Ljava/io/InputStream;
+    .locals 4
+
+    const/4 v3, 0x2
+
+    :try_start_0
+    invoke-virtual {p1}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
+
+    move-result-object v1
+
+    new-instance v0, Ljava/io/PushbackInputStream;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v1, v2}, Ljava/io/PushbackInputStream;-><init>(Ljava/io/InputStream;I)V
+
+    const/4 v1, 0x2
+
+    new-array v1, v1, [B
+
+    invoke-virtual {v0, v1}, Ljava/io/PushbackInputStream;->read([B)I
+
+    move-result v2
+
+    if-eq v2, v3, :cond_1
+
+    :cond_0
+    :goto_0
+    return-object v0
+
+    :cond_1
+    invoke-virtual {v0, v1}, Ljava/io/PushbackInputStream;->unread([B)V
+
+    const/4 v2, 0x0
+
+    aget-byte v2, v1, v2
+
+    const/16 v3, 0x1f
+
+    if-ne v2, v3, :cond_0
+
+    const/4 v2, 0x1
+
+    aget-byte v1, v1, v2
+
+    const/16 v2, -0x75
+
+    if-ne v1, v2, :cond_0
+
+    new-instance v1, Ljava/util/zip/GZIPInputStream;
+
+    invoke-direct {v1, v0}, Ljava/util/zip/GZIPInputStream;-><init>(Ljava/io/InputStream;)V
+    :try_end_0
+    .catch Ljava/net/ProtocolException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/net/UnknownHostException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/net/UnknownServiceException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
+
+    move-object v0, v1
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v0, Lcom/amap/api/services/core/a;
+
+    const-string v1, "\u534f\u8bae\u89e3\u6790\u9519\u8bef - ProtocolException"
+
+    invoke-direct {v0, v1}, Lcom/amap/api/services/core/a;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :catch_1
+    move-exception v0
+
+    new-instance v0, Lcom/amap/api/services/core/a;
+
+    const-string v1, "\u672a\u77e5\u4e3b\u673a - UnKnowHostException"
+
+    invoke-direct {v0, v1}, Lcom/amap/api/services/core/a;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :catch_2
+    move-exception v0
+
+    new-instance v0, Lcom/amap/api/services/core/a;
+
+    const-string v1, "\u670d\u52a1\u5668\u8fde\u63a5\u5931\u8d25 - UnknownServiceException"
+
+    invoke-direct {v0, v1}, Lcom/amap/api/services/core/a;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :catch_3
+    move-exception v0
+
+    new-instance v0, Lcom/amap/api/services/core/a;
+
+    const-string v1, "IO \u64cd\u4f5c\u5f02\u5e38 - IOException"
+
+    invoke-direct {v0, v1}, Lcom/amap/api/services/core/a;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method protected a(Ljava/io/InputStream;)Ljava/lang/Object;
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/io/InputStream;",
+            ")TV;"
+        }
+    .end annotation
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    new-instance v1, Ljava/lang/String;
+
+    invoke-static {p1}, Lcom/amap/api/services/core/g;->a(Ljava/io/InputStream;)[B
+
+    move-result-object v2
+
+    const-string v3, "utf-8"
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    if-eqz v1, :cond_0
+
+    const-string v2, ""
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    :cond_0
+    :goto_1
+    return-object v0
+
+    :catch_0
+    move-exception v1
+
+    invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
+
+    move-object v1, v0
+
+    goto :goto_0
+
+    :cond_1
+    invoke-static {v1}, Lcom/amap/api/services/core/g;->b(Ljava/lang/String;)V
+
+    invoke-virtual {p0, v1}, Lcom/amap/api/services/core/u;->b(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    goto :goto_1
+.end method
+
+.method protected abstract a()Ljava/lang/String;
+.end method
+
+.method protected a(Ljava/lang/String;Z)Ljava/lang/String;
+    .locals 2
+
+    const-string v0, ""
+
+    if-eqz p2, :cond_0
+
+    :try_start_0
+    const-string v1, "utf-8"
+
+    invoke-static {p1, v1}, Ljava/net/URLEncoder;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+
+    move-result-object p1
+
+    :cond_0
+    :goto_0
+    return-object p1
+
+    :catch_0
+    move-exception v1
+
+    invoke-virtual {v1}, Ljava/io/UnsupportedEncodingException;->printStackTrace()V
+
+    move-object p1, v0
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v1
+
+    move-object p1, v0
 
     goto :goto_0
 .end method
 
-.method protected getRequestString(Z)Ljava/lang/String;
-    .locals 5
+.method protected abstract a(Z)Ljava/lang/String;
+.end method
 
-    new-instance v1, Ljava/lang/StringBuffer;
+.method protected abstract b(Ljava/lang/String;)Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")TV;"
+        }
+    .end annotation
+.end method
 
-    invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
+.method protected h()[B
+    .locals 2
 
-    const-string v0, "output=json"
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    move-result-object v0
-
-    const-string v2, "&extensions=all"
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    move-result-object v0
-
-    const-string v2, "&location="
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    move-result-object v2
-
-    iget-object v0, p0, Lcom/amap/api/services/core/u;->task:Ljava/lang/Object;
-
-    check-cast v0, Lcom/amap/api/services/geocoder/RegeocodeQuery;
-
-    invoke-virtual {v0}, Lcom/amap/api/services/geocoder/RegeocodeQuery;->getPoint()Lcom/amap/api/services/core/LatLonPoint;
+    :try_start_0
+    invoke-virtual {p0}, Lcom/amap/api/services/core/u;->k()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/amap/api/services/core/LatLonPoint;->getLongitude()D
+    const-string v1, "utf-8"
 
-    move-result-wide v3
-
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuffer;->append(D)Ljava/lang/StringBuffer;
-
-    move-result-object v0
-
-    const-string v2, ","
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    move-result-object v2
-
-    iget-object v0, p0, Lcom/amap/api/services/core/u;->task:Ljava/lang/Object;
-
-    check-cast v0, Lcom/amap/api/services/geocoder/RegeocodeQuery;
-
-    invoke-virtual {v0}, Lcom/amap/api/services/geocoder/RegeocodeQuery;->getPoint()Lcom/amap/api/services/core/LatLonPoint;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
+    :try_end_0
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/amap/api/services/core/LatLonPoint;->getLatitude()D
+    :goto_0
+    return-object v0
 
-    move-result-wide v3
+    :catch_0
+    move-exception v0
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuffer;->append(D)Ljava/lang/StringBuffer;
+    invoke-virtual {v0}, Ljava/io/UnsupportedEncodingException;->printStackTrace()V
 
-    const-string v0, "&radius="
+    const/4 v0, 0x0
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    goto :goto_0
+.end method
 
-    move-result-object v2
+.method protected i()[B
+    .locals 1
 
-    iget-object v0, p0, Lcom/amap/api/services/core/u;->task:Ljava/lang/Object;
-
-    check-cast v0, Lcom/amap/api/services/geocoder/RegeocodeQuery;
-
-    invoke-virtual {v0}, Lcom/amap/api/services/geocoder/RegeocodeQuery;->getRadius()F
-
-    move-result v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuffer;->append(F)Ljava/lang/StringBuffer;
-
-    const-string v0, "&coordsys="
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    move-result-object v2
-
-    iget-object v0, p0, Lcom/amap/api/services/core/u;->task:Ljava/lang/Object;
-
-    check-cast v0, Lcom/amap/api/services/geocoder/RegeocodeQuery;
-
-    invoke-virtual {v0}, Lcom/amap/api/services/geocoder/RegeocodeQuery;->getLatLonType()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "&key="
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const/4 v2, 0x0
-
-    invoke-static {v2}, Lcom/amap/api/services/core/d;->a(Landroid/content/Context;)Lcom/amap/api/services/core/d;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/amap/api/services/core/d;->f()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/amap/api/services/core/e;->f(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amap/api/services/core/u;->h()[B
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method protected getUrl()Ljava/lang/String;
+.method public j()Ljava/lang/Object;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TV;"
+        }
+    .end annotation
 
-    const-string v0, "http://restapi.amap.com/v3/geocode/regeo?"
+    iget-object v0, p0, Lcom/amap/api/services/core/u;->b:Ljava/lang/Object;
+
+    if-eqz v0, :cond_0
+
+    invoke-direct {p0}, Lcom/amap/api/services/core/u;->b()Ljava/lang/Object;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method protected k()Ljava/lang/String;
+    .locals 2
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lcom/amap/api/services/core/u;->a(Z)Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p0, v1}, Lcom/amap/api/services/core/u;->a(Z)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/amap/api/services/core/g;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method protected synthetic paseJSON(Ljava/lang/String;)Ljava/lang/Object;
+.method protected l()Ljava/lang/Object;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TV;"
+        }
+    .end annotation
 
-    invoke-virtual {p0, p1}, Lcom/amap/api/services/core/u;->a(Ljava/lang/String;)Lcom/amap/api/services/geocoder/RegeocodeAddress;
-
-    move-result-object v0
+    const/4 v0, 0x0
 
     return-object v0
 .end method

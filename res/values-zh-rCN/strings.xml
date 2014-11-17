@@ -350,24 +350,24 @@
     <string name="share_step_goal_succ_title">目标达成</string>
     <string name="share_step_goal_failed_title_today">今天一共走了</string>
     <string name="share_step_goal_failed_title">一共走了</string>
-    <string name="share_step_description">"行走%1$s, 消耗热量%2$s千卡
+    <string name="share_step_description">"走路%1$s, 消耗热量%2$s千卡
 "</string>
     <string name="share_step_description_run">"走路%1$s, 跑步%2$s
 消耗热量%3$s千卡
 "</string>
     <string name="share_step_description_weekly">"行程%1$s%2$s
 总计消耗%3$s千卡
-最高记录%4$s一天走了%5$s步"</string>
+最高纪录%4$s一天走了%5$s步"</string>
     <string name="share_step_description_weekly_run">"走路%1$s, 跑步%2$s
 %3$s
-最高记录%4$s一天走了%5$s步"</string>
+最高纪录%4$s一天走了%5$s步"</string>
     <string name="share_play_ground_format">相当于绕标准操场%1$s圈</string>
     <string name="share_step_description_monthly">"行程%1$s, %2$s
 总计消耗%3$s千卡, 节省%4$s升汽油
-最高记录%5$s一天走了%6$s步"</string>
+最高纪录%5$s一天走了%6$s步"</string>
     <string name="share_step_description_monthly_run">"走路%1$s, 跑步%2$s
 %3$s, 节省%4$s升汽油
-最高记录%5$s一天走了%6$s步"</string>
+最高纪录%5$s一天走了%6$s步"</string>
     <string name="marathon_format_0">相当于%1$s个全程马拉松的赛程</string>
     <string name="marathon_format_1">超过%1$s个全程马拉松的赛程</string>
     <string name="half_marathon_format_0">相当于%1$s个半程马拉松的赛程</string>
@@ -436,10 +436,10 @@
 请及时充电"</string>
     <string name="new_record_born">太棒了, 新纪录诞生</string>
     <string name="new_record_format_str">"行程%1$s, 消耗热量%2$s千卡
-新的记录不过是我漫漫征程上的一个脚印
+新的纪录不过是我漫漫征程上的一个脚印
 梦想的脚步永远不会停下"</string>
     <string name="continue_reach_goal">已连续达标</string>
-    <string name="continue_tips_format">最高记录连续%1$s天达成目标</string>
+    <string name="continue_tips_format">最高纪录连续%1$s天达成目标</string>
     <string name="gram">克</string>
     <string name="kilogram">千克</string>
     <string name="sync_to_server">正在同步数据到云端……</string>
@@ -499,7 +499,7 @@
     <string name="first_use_days_today_format">已使用小于1天</string>
     <string name="first_use_remain_days_format">已使用%s天</string>
     <string name="until_hit_goals">截至%s连续达标</string>
-    <string name="continue_reach_goal_new_record">创造个人新记录</string>
+    <string name="continue_reach_goal_new_record">创造个人新纪录</string>
     <string name="bind_qq_health_tip">"每次完成手环数据同步时会将步数和睡眠数据同步
 至QQ健康, 同步时需联网"</string>
     <string name="bind_weixin_new_tips">"点击“微信接入”启动微信进入小米手环帐号页面, 
@@ -531,17 +531,19 @@
     <string name="awake_format_1">, 清醒1次</string>
     <string name="discard">舍弃更改</string>
     <string name="discard_alarm_change">要舍弃对该闹钟的更改吗？</string>
-    <string name="notify_status_motor">手环震动</string>
-    <string name="notify_status_motor_notify">原因：查找手环</string>
-    <string name="notify_status_motor_call">原因：来电提醒</string>
-    <string name="notify_status_motor_disconnect">原因：断开连接</string>
-    <string name="notify_status_motor_smart_alarm">原因：智能闹钟</string>
-    <string name="notify_status_motor_alarm">原因：普通闹钟</string>
-    <string name="notify_status_motor_goal">原因：目标达成</string>
-    <string name="notify_status_motor_auth">原因：敲击配对</string>
-    <string name="notify_status_motor_shut_down">原因：手环关机</string>
-    <string name="notify_status_motor_auth_success">原因：认证成功</string>
-    <string name="notify_status_motor_test">原因：马达测试</string>
+    <string name="notify_status_motor">手环振动：</string>
+    <string name="notify_status_motor_notify">查找手环</string>
+    <string name="notify_status_motor_call">来电提醒</string>
+    <string name="notify_status_motor_disconnect">蓝牙连接断开</string>
+    <string name="notify_status_motor_smart_alarm">智能唤醒振动</string>
+    <string name="notify_status_motor_alarm">闹钟到点振动</string>
+    <string name="notify_status_motor_goal">目标达成</string>
+    <string name="notify_status_motor_auth">发现手环提醒敲击</string>
+    <string name="notify_status_motor_shut_down">手环关机</string>
+    <string name="notify_status_motor_auth_success">敲击手环绑定成功</string>
+    <string name="notify_status_motor_test">手环马达测试</string>
+    <string name="vibrate_notify">手环振动通知</string>
+    <string name="vibrate_notify_tips">手环振动时在手机通知栏中通知振动原因</string>
     <string name="body">挂坠</string>
     <string name="wrong_system_time">系统时间不正确</string>
     <string name="restart_bluetooth_tips">重启蓝牙</string>
@@ -641,11 +643,20 @@
     <string name="sport_running_speed_detail">%d公里/小时</string>
     <string name="sport_running_pace_detail">%s/公里</string>
     <string name="sport_running_distance_detail">%s公里</string>
+    <string name="sport_running_time_desc">用时</string>
+    <string name="sport_running_start">开始</string>
+    <string name="sport_running_gps_turnon">打开</string>
+    <string name="sport_running_gps_cancel">取消</string>
+    <string name="sport_running_settings">设置</string>
+    <string name="sport_running_history">历史</string>
+    <string name="sport_running_slider_prompt">>>>向右滑动解锁</string>
     <string name="sport_ranking_desc_poor">您的成绩在所有%s用户中垫底，加油啊！</string>
-    <string name="sport_ranking_desc_normal" formatted="false">您打败了全国&lt;b>%s&lt;/b>的%s用户！</string>
+    <string name="sport_ranking_desc_normal" formatted="false">您打败了全国 &lt;b>%s&lt;/b> 的%s用户！</string>
     <string name="sport_ranking_desc_great">您已经到了独孤求败的境界！</string>
     <string name="sport_new_record_ropeskipping">连跳新纪录</string>
     <string name="percent_mark">%</string>
+    <string name="share_step_ranking">超过全国 &lt;b>%s&lt;/b> 的用户！</string>
+    <string name="sport_running_helper_test">跑步助手测试</string>
     <string name="congrats">恭喜</string>
     <string name="bind_qq_health_tip_init">登录后继续完成绑定QQ健康</string>
     <string name="bind_qq_health_tip_another_qq">需要切换至手机QQ当前登录的账号, 才能在健康看到数据</string>

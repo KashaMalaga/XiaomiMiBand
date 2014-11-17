@@ -6,16 +6,24 @@
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/aD;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)V
+.method private constructor <init>(Lcn/com/smartdevices/bracelet/ui/aD;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/aD;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/ui/aD;Lcn/com/smartdevices/bracelet/ui/aE;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/ui/aE;-><init>(Lcn/com/smartdevices/bracelet/ui/aD;)V
 
     return-void
 .end method
@@ -25,93 +33,21 @@
 .method public run()V
     .locals 4
 
-    const/4 v2, 0x0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->A(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Landroid/widget/TextView;
-
-    move-result-object v0
-
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->z(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->buildDrawingCache()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->z(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->getDrawingCache()Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->B(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->C(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->r(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->A(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Landroid/widget/TextView;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setVisibility(I)V
+    const-string v0, "DDDD"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
+    const-string v2, "Gif End : "
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const-string v2, "/"
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/aD;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/aD;->a(Lcn/com/smartdevices/bracelet/ui/aD;)I
 
-    move-result-object v1
+    move-result v2
 
-    const-string v2, "share.jpg"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -119,9 +55,13 @@
 
     move-result-object v1
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/Utils;->saveBitmapToFile(Ljava/lang/String;Landroid/graphics/Bitmap;)Z
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result v0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/aD;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/aD;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
 
     if-nez v0, :cond_0
 
@@ -129,41 +69,191 @@
     return-void
 
     :cond_0
-    new-instance v0, Landroid/content/Intent;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/aD;
 
-    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/aD;->a(Lcn/com/smartdevices/bracelet/ui/aD;)I
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+    move-result v0
 
-    const-class v3, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;
-
-    invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
-
-    new-instance v2, Lcn/com/smartdevices/bracelet/model/ReportData;
-
-    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/model/ReportData;-><init>()V
-
-    const-string v3, "SHARE_TYPE_MAIN_UI_SHARE"
-
-    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/model/ReportData;->setType(Ljava/lang/String;)V
-
-    iput-object v1, v2, Lcn/com/smartdevices/bracelet/model/ReportData;->picture_url:Ljava/lang/String;
-
-    const-string v1, "REF_REPORT_DATA"
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/Utils;->getGson()Lcom/google/gson/Gson;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v2}, Lcom/google/gson/Gson;->toJson(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
-
-    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->startActivity(Landroid/content/Intent;)V
+    packed-switch v0, :pswitch_data_0
 
     goto :goto_0
+
+    :pswitch_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/aD;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/aD;->c_:Landroid/widget/TextSwitcher;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/aD;
+
+    const v2, 0x7f0c018a
+
+    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/ui/aD;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextSwitcher;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/aD;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/aD;->b_:Lcom/xiaomi/hm/view/GifView;
+
+    const v1, 0x7f020072
+
+    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/view/GifView;->c(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/aD;
+
+    const/4 v1, 0x2
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/aD;->a(Lcn/com/smartdevices/bracelet/ui/aD;I)V
+
+    goto :goto_0
+
+    :pswitch_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/aD;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/aD;->c_:Landroid/widget/TextSwitcher;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/aD;
+
+    const v2, 0x7f0c018b
+
+    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/ui/aD;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextSwitcher;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/aD;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/aD;->b_:Lcom/xiaomi/hm/view/GifView;
+
+    const v1, 0x7f020073
+
+    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/view/GifView;->c(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/aD;
+
+    const/4 v1, 0x3
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/aD;->a(Lcn/com/smartdevices/bracelet/ui/aD;I)V
+
+    goto :goto_0
+
+    :pswitch_2
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/aD;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/aD;->c_:Landroid/widget/TextSwitcher;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/aD;
+
+    const v2, 0x7f0c018c
+
+    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/ui/aD;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextSwitcher;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/aD;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/aD;->b_:Lcom/xiaomi/hm/view/GifView;
+
+    const v1, 0x7f020074
+
+    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/view/GifView;->c(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/aD;
+
+    const/4 v1, 0x4
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/aD;->a(Lcn/com/smartdevices/bracelet/ui/aD;I)V
+
+    goto :goto_0
+
+    :pswitch_3
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/aD;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/aD;->c_:Landroid/widget/TextSwitcher;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/aD;
+
+    const v2, 0x7f0c018d
+
+    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/ui/aD;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextSwitcher;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/aD;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/aD;->b_:Lcom/xiaomi/hm/view/GifView;
+
+    const v1, 0x7f020075
+
+    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/view/GifView;->c(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/aD;
+
+    const/4 v1, 0x5
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/aD;->a(Lcn/com/smartdevices/bracelet/ui/aD;I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/aD;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/aD;->b_:Lcom/xiaomi/hm/view/GifView;
+
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/aE;
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/aD;
+
+    invoke-direct {v1, v2}, Lcn/com/smartdevices/bracelet/ui/aE;-><init>(Lcn/com/smartdevices/bracelet/ui/aD;)V
+
+    const-wide/16 v2, 0x7d0
+
+    invoke-virtual {v0, v1, v2, v3}, Lcom/xiaomi/hm/view/GifView;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    goto/16 :goto_0
+
+    :pswitch_4
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/aD;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/aD;->c_:Landroid/widget/TextSwitcher;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/aD;
+
+    const v2, 0x7f0c0189
+
+    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/ui/aD;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextSwitcher;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/aD;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/aD;->b_:Lcom/xiaomi/hm/view/GifView;
+
+    const v1, 0x7f020071
+
+    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/view/GifView;->c(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aE;->a:Lcn/com/smartdevices/bracelet/ui/aD;
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/aD;->a(Lcn/com/smartdevices/bracelet/ui/aD;I)V
+
+    goto/16 :goto_0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+        :pswitch_4
+    .end packed-switch
 .end method

@@ -1,45 +1,70 @@
 .class Landroid/support/v4/app/x;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.super Landroid/os/Handler;
 
 
 # instance fields
-.field final synthetic a:Landroid/support/v4/app/v;
+.field final synthetic a:Landroid/support/v4/app/FragmentActivity;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/app/v;)V
+.method constructor <init>(Landroid/support/v4/app/FragmentActivity;)V
     .locals 0
 
-    iput-object p1, p0, Landroid/support/v4/app/x;->a:Landroid/support/v4/app/v;
+    iput-object p1, p0, Landroid/support/v4/app/x;->a:Landroid/support/v4/app/FragmentActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 5
+.method public handleMessage(Landroid/os/Message;)V
+    .locals 2
 
-    iget-object v0, p0, Landroid/support/v4/app/x;->a:Landroid/support/v4/app/v;
+    iget v0, p1, Landroid/os/Message;->what:I
 
-    iget-object v1, p0, Landroid/support/v4/app/x;->a:Landroid/support/v4/app/v;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v1, v1, Landroid/support/v4/app/v;->t:Landroid/support/v4/app/FragmentActivity;
+    invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    iget-object v1, v1, Landroid/support/v4/app/FragmentActivity;->d:Landroid/os/Handler;
-
-    const/4 v2, 0x0
-
-    const/4 v3, -0x1
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/support/v4/app/v;->a(Landroid/os/Handler;Ljava/lang/String;II)Z
-
+    :cond_0
+    :goto_0
     return-void
+
+    :pswitch_0
+    iget-object v0, p0, Landroid/support/v4/app/x;->a:Landroid/support/v4/app/FragmentActivity;
+
+    iget-boolean v0, v0, Landroid/support/v4/app/FragmentActivity;->i:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/support/v4/app/x;->a:Landroid/support/v4/app/FragmentActivity;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/support/v4/app/FragmentActivity;->a(Z)V
+
+    goto :goto_0
+
+    :pswitch_1
+    iget-object v0, p0, Landroid/support/v4/app/x;->a:Landroid/support/v4/app/FragmentActivity;
+
+    invoke-virtual {v0}, Landroid/support/v4/app/FragmentActivity;->a()V
+
+    iget-object v0, p0, Landroid/support/v4/app/x;->a:Landroid/support/v4/app/FragmentActivity;
+
+    iget-object v0, v0, Landroid/support/v4/app/FragmentActivity;->e:Landroid/support/v4/app/F;
+
+    invoke-virtual {v0}, Landroid/support/v4/app/F;->i()Z
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method

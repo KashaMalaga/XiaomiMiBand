@@ -16,7 +16,7 @@
 
 
 # instance fields
-.field private final a:Ljava/util/LinkedHashMap;
+.field private final l:Ljava/util/LinkedHashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/LinkedHashMap",
@@ -25,32 +25,32 @@
     .end annotation
 .end field
 
-.field private b:I
+.field private m:I
 
-.field private c:I
+.field private n:I
 
-.field private d:I
+.field private o:I
 
-.field private e:I
+.field private p:I
 
-.field private f:I
+.field private q:I
 
-.field private g:I
+.field private size:I
 
 
 # direct methods
-.method private a(I)V
+.method private trimToSize(I)V
     .locals 3
 
     :goto_0
     monitor-enter p0
 
     :try_start_0
-    iget v0, p0, Lcom/tencent/mm/sdk/b/c;->b:I
+    iget v0, p0, Lcom/tencent/mm/sdk/b/c;->size:I
 
     if-ltz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/sdk/b/c;->a:Ljava/util/LinkedHashMap;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/b/c;->l:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v0}, Ljava/util/LinkedHashMap;->isEmpty()Z
 
@@ -58,7 +58,7 @@
 
     if-eqz v0, :cond_1
 
-    iget v0, p0, Lcom/tencent/mm/sdk/b/c;->b:I
+    iget v0, p0, Lcom/tencent/mm/sdk/b/c;->size:I
 
     if-eqz v0, :cond_1
 
@@ -106,11 +106,11 @@
 
     :cond_1
     :try_start_1
-    iget v0, p0, Lcom/tencent/mm/sdk/b/c;->b:I
+    iget v0, p0, Lcom/tencent/mm/sdk/b/c;->size:I
 
     if-le v0, p1, :cond_2
 
-    iget-object v0, p0, Lcom/tencent/mm/sdk/b/c;->a:Ljava/util/LinkedHashMap;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/b/c;->l:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v0}, Ljava/util/LinkedHashMap;->isEmpty()Z
 
@@ -124,7 +124,7 @@
     return-void
 
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/sdk/b/c;->a:Ljava/util/LinkedHashMap;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/b/c;->l:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v0}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
 
@@ -146,21 +146,21 @@
 
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-    iget-object v0, p0, Lcom/tencent/mm/sdk/b/c;->a:Ljava/util/LinkedHashMap;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/b/c;->l:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v0, v1}, Ljava/util/LinkedHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget v0, p0, Lcom/tencent/mm/sdk/b/c;->b:I
+    iget v0, p0, Lcom/tencent/mm/sdk/b/c;->size:I
 
     add-int/lit8 v0, v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/sdk/b/c;->b:I
+    iput v0, p0, Lcom/tencent/mm/sdk/b/c;->size:I
 
-    iget v0, p0, Lcom/tencent/mm/sdk/b/c;->e:I
+    iget v0, p0, Lcom/tencent/mm/sdk/b/c;->o:I
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/sdk/b/c;->e:I
+    iput v0, p0, Lcom/tencent/mm/sdk/b/c;->o:I
 
     monitor-exit p0
     :try_end_1
@@ -182,7 +182,7 @@
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/sdk/b/c;->a:Ljava/util/LinkedHashMap;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/b/c;->l:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/LinkedHashMap;->containsKey(Ljava/lang/Object;)Z
     :try_end_0
@@ -224,7 +224,7 @@
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/sdk/b/c;->a:Ljava/util/LinkedHashMap;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/b/c;->l:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -232,11 +232,11 @@
 
     if-eqz v0, :cond_1
 
-    iget v1, p0, Lcom/tencent/mm/sdk/b/c;->f:I
+    iget v1, p0, Lcom/tencent/mm/sdk/b/c;->p:I
 
     add-int/lit8 v1, v1, 0x1
 
-    iput v1, p0, Lcom/tencent/mm/sdk/b/c;->f:I
+    iput v1, p0, Lcom/tencent/mm/sdk/b/c;->p:I
 
     monitor-exit p0
 
@@ -244,11 +244,11 @@
     return-object v0
 
     :cond_1
-    iget v0, p0, Lcom/tencent/mm/sdk/b/c;->g:I
+    iget v0, p0, Lcom/tencent/mm/sdk/b/c;->q:I
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/sdk/b/c;->g:I
+    iput v0, p0, Lcom/tencent/mm/sdk/b/c;->q:I
 
     monitor-exit p0
     :try_end_0
@@ -291,19 +291,19 @@
     monitor-enter p0
 
     :try_start_0
-    iget v0, p0, Lcom/tencent/mm/sdk/b/c;->d:I
+    iget v0, p0, Lcom/tencent/mm/sdk/b/c;->n:I
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/sdk/b/c;->d:I
+    iput v0, p0, Lcom/tencent/mm/sdk/b/c;->n:I
 
-    iget v0, p0, Lcom/tencent/mm/sdk/b/c;->b:I
+    iget v0, p0, Lcom/tencent/mm/sdk/b/c;->size:I
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/sdk/b/c;->b:I
+    iput v0, p0, Lcom/tencent/mm/sdk/b/c;->size:I
 
-    iget-object v0, p0, Lcom/tencent/mm/sdk/b/c;->a:Ljava/util/LinkedHashMap;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/b/c;->l:Ljava/util/LinkedHashMap;
 
     invoke-virtual {v0, p1, p2}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -311,20 +311,20 @@
 
     if-eqz v0, :cond_2
 
-    iget v1, p0, Lcom/tencent/mm/sdk/b/c;->b:I
+    iget v1, p0, Lcom/tencent/mm/sdk/b/c;->size:I
 
     add-int/lit8 v1, v1, -0x1
 
-    iput v1, p0, Lcom/tencent/mm/sdk/b/c;->b:I
+    iput v1, p0, Lcom/tencent/mm/sdk/b/c;->size:I
 
     :cond_2
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget v1, p0, Lcom/tencent/mm/sdk/b/c;->c:I
+    iget v1, p0, Lcom/tencent/mm/sdk/b/c;->m:I
 
-    invoke-direct {p0, v1}, Lcom/tencent/mm/sdk/b/c;->a(I)V
+    invoke-direct {p0, v1}, Lcom/tencent/mm/sdk/b/c;->trimToSize(I)V
 
     return-object v0
 
@@ -344,15 +344,15 @@
     monitor-enter p0
 
     :try_start_0
-    iget v1, p0, Lcom/tencent/mm/sdk/b/c;->f:I
+    iget v1, p0, Lcom/tencent/mm/sdk/b/c;->p:I
 
-    iget v2, p0, Lcom/tencent/mm/sdk/b/c;->g:I
+    iget v2, p0, Lcom/tencent/mm/sdk/b/c;->q:I
 
     add-int/2addr v1, v2
 
     if-eqz v1, :cond_0
 
-    iget v0, p0, Lcom/tencent/mm/sdk/b/c;->f:I
+    iget v0, p0, Lcom/tencent/mm/sdk/b/c;->p:I
 
     mul-int/lit8 v0, v0, 0x64
 
@@ -367,7 +367,7 @@
 
     const/4 v3, 0x0
 
-    iget v4, p0, Lcom/tencent/mm/sdk/b/c;->c:I
+    iget v4, p0, Lcom/tencent/mm/sdk/b/c;->m:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -377,7 +377,7 @@
 
     const/4 v3, 0x1
 
-    iget v4, p0, Lcom/tencent/mm/sdk/b/c;->f:I
+    iget v4, p0, Lcom/tencent/mm/sdk/b/c;->p:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -387,7 +387,7 @@
 
     const/4 v3, 0x2
 
-    iget v4, p0, Lcom/tencent/mm/sdk/b/c;->g:I
+    iget v4, p0, Lcom/tencent/mm/sdk/b/c;->q:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

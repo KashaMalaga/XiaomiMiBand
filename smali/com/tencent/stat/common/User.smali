@@ -3,11 +3,11 @@
 
 
 # instance fields
-.field private a:Ljava/lang/String;
+.field private mac:Ljava/lang/String;
 
-.field private b:Ljava/lang/String;
+.field private type:I
 
-.field private c:I
+.field private uid:Ljava/lang/String;
 
 
 # direct methods
@@ -18,15 +18,15 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/stat/common/User;->a:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/stat/common/User;->uid:Ljava/lang/String;
 
-    iput-object v0, p0, Lcom/tencent/stat/common/User;->b:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/stat/common/User;->mac:Ljava/lang/String;
 
-    iput-object p1, p0, Lcom/tencent/stat/common/User;->a:Ljava/lang/String;
+    iput-object p1, p0, Lcom/tencent/stat/common/User;->uid:Ljava/lang/String;
 
-    iput-object p2, p0, Lcom/tencent/stat/common/User;->b:Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/stat/common/User;->mac:Ljava/lang/String;
 
-    iput p3, p0, Lcom/tencent/stat/common/User;->c:I
+    iput p3, p0, Lcom/tencent/stat/common/User;->type:I
 
     return-void
 .end method
@@ -36,7 +36,7 @@
 .method public getMac()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/tencent/stat/common/User;->b:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/stat/common/User;->mac:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -44,7 +44,7 @@
 .method public getType()I
     .locals 1
 
-    iget v0, p0, Lcom/tencent/stat/common/User;->c:I
+    iget v0, p0, Lcom/tencent/stat/common/User;->type:I
 
     return v0
 .end method
@@ -52,7 +52,7 @@
 .method public getUid()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/tencent/stat/common/User;->a:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/stat/common/User;->uid:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -60,7 +60,7 @@
 .method public setType(I)V
     .locals 0
 
-    iput p1, p0, Lcom/tencent/stat/common/User;->c:I
+    iput p1, p0, Lcom/tencent/stat/common/User;->type:I
 
     return-void
 .end method

@@ -28,9 +28,9 @@
 
     move-result-object v3
 
-    new-instance v0, Lcom/tencent/weiyun/o;
+    new-instance v0, Lcom/tencent/weiyun/RecordManager$6;
 
-    invoke-direct {v0, p0, p2}, Lcom/tencent/weiyun/o;-><init>(Lcom/tencent/weiyun/RecordManager;Lcom/tencent/tauth/IUiListener;)V
+    invoke-direct {v0, p0, p2}, Lcom/tencent/weiyun/RecordManager$6;-><init>(Lcom/tencent/weiyun/RecordManager;Lcom/tencent/tauth/IUiListener;)V
 
     new-instance v5, Lcom/tencent/connect/common/BaseApi$TempRequestListener;
 
@@ -64,9 +64,9 @@
 
     move-result-object v3
 
-    new-instance v0, Lcom/tencent/weiyun/j;
+    new-instance v0, Lcom/tencent/weiyun/RecordManager$1;
 
-    invoke-direct {v0, p0, p3}, Lcom/tencent/weiyun/j;-><init>(Lcom/tencent/weiyun/RecordManager;Lcom/tencent/tauth/IUiListener;)V
+    invoke-direct {v0, p0, p3}, Lcom/tencent/weiyun/RecordManager$1;-><init>(Lcom/tencent/weiyun/RecordManager;Lcom/tencent/tauth/IUiListener;)V
 
     new-instance v5, Lcom/tencent/connect/common/BaseApi$TempRequestListener;
 
@@ -112,9 +112,9 @@
 
     move-result-object v3
 
-    new-instance v0, Lcom/tencent/weiyun/k;
+    new-instance v0, Lcom/tencent/weiyun/RecordManager$2;
 
-    invoke-direct {v0, p0, p2}, Lcom/tencent/weiyun/k;-><init>(Lcom/tencent/weiyun/RecordManager;Lcom/tencent/tauth/IUiListener;)V
+    invoke-direct {v0, p0, p2}, Lcom/tencent/weiyun/RecordManager$2;-><init>(Lcom/tencent/weiyun/RecordManager;Lcom/tencent/tauth/IUiListener;)V
 
     new-instance v5, Lcom/tencent/connect/common/BaseApi$TempRequestListener;
 
@@ -148,9 +148,9 @@
 
     move-result-object v3
 
-    new-instance v0, Lcom/tencent/weiyun/l;
+    new-instance v0, Lcom/tencent/weiyun/RecordManager$3;
 
-    invoke-direct {v0, p0, p2}, Lcom/tencent/weiyun/l;-><init>(Lcom/tencent/weiyun/RecordManager;Lcom/tencent/tauth/IUiListener;)V
+    invoke-direct {v0, p0, p2}, Lcom/tencent/weiyun/RecordManager$3;-><init>(Lcom/tencent/weiyun/RecordManager;Lcom/tencent/tauth/IUiListener;)V
 
     new-instance v5, Lcom/tencent/connect/common/BaseApi$TempRequestListener;
 
@@ -184,9 +184,9 @@
 
     move-result-object v3
 
-    new-instance v0, Lcom/tencent/weiyun/m;
+    new-instance v0, Lcom/tencent/weiyun/RecordManager$4;
 
-    invoke-direct {v0, p0, p3}, Lcom/tencent/weiyun/m;-><init>(Lcom/tencent/weiyun/RecordManager;Lcom/tencent/tauth/IUiListener;)V
+    invoke-direct {v0, p0, p3}, Lcom/tencent/weiyun/RecordManager$4;-><init>(Lcom/tencent/weiyun/RecordManager;Lcom/tencent/tauth/IUiListener;)V
 
     new-instance v5, Lcom/tencent/connect/common/BaseApi$TempRequestListener;
 
@@ -232,9 +232,9 @@
 
     move-result-object v3
 
-    new-instance v0, Lcom/tencent/weiyun/n;
+    new-instance v0, Lcom/tencent/weiyun/RecordManager$5;
 
-    invoke-direct {v0, p0, p1}, Lcom/tencent/weiyun/n;-><init>(Lcom/tencent/weiyun/RecordManager;Lcom/tencent/tauth/IUiListener;)V
+    invoke-direct {v0, p0, p1}, Lcom/tencent/weiyun/RecordManager$5;-><init>(Lcom/tencent/weiyun/RecordManager;Lcom/tencent/tauth/IUiListener;)V
 
     new-instance v5, Lcom/tencent/connect/common/BaseApi$TempRequestListener;
 

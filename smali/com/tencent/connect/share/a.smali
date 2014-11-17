@@ -330,19 +330,19 @@
     goto :goto_0
 
     :cond_1
-    new-instance v0, Lcom/tencent/connect/share/e;
+    new-instance v0, Lcom/tencent/connect/share/a$1;
 
     invoke-virtual {p0}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v1
 
-    invoke-direct {v0, v1, p2}, Lcom/tencent/connect/share/e;-><init>(Landroid/os/Looper;Lcom/tencent/utils/AsynLoadImgBack;)V
+    invoke-direct {v0, v1, p2}, Lcom/tencent/connect/share/a$1;-><init>(Landroid/os/Looper;Lcom/tencent/utils/AsynLoadImgBack;)V
 
     new-instance v1, Ljava/lang/Thread;
 
-    new-instance v2, Lcom/tencent/connect/share/f;
+    new-instance v2, Lcom/tencent/connect/share/a$2;
 
-    invoke-direct {v2, p1, v0}, Lcom/tencent/connect/share/f;-><init>(Ljava/lang/String;Landroid/os/Handler;)V
+    invoke-direct {v2, p1, v0}, Lcom/tencent/connect/share/a$2;-><init>(Ljava/lang/String;Landroid/os/Handler;)V
 
     invoke-direct {v1, v2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
@@ -397,19 +397,19 @@
     goto :goto_0
 
     :cond_1
-    new-instance v0, Lcom/tencent/connect/share/g;
+    new-instance v0, Lcom/tencent/connect/share/a$3;
 
     invoke-virtual {p0}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v1
 
-    invoke-direct {v0, v1, p2}, Lcom/tencent/connect/share/g;-><init>(Landroid/os/Looper;Lcom/tencent/utils/AsynLoadImgBack;)V
+    invoke-direct {v0, v1, p2}, Lcom/tencent/connect/share/a$3;-><init>(Landroid/os/Looper;Lcom/tencent/utils/AsynLoadImgBack;)V
 
     new-instance v1, Ljava/lang/Thread;
 
-    new-instance v2, Lcom/tencent/connect/share/h;
+    new-instance v2, Lcom/tencent/connect/share/a$4;
 
-    invoke-direct {v2, p1, v0}, Lcom/tencent/connect/share/h;-><init>(Ljava/util/ArrayList;Landroid/os/Handler;)V
+    invoke-direct {v2, p1, v0}, Lcom/tencent/connect/share/a$4;-><init>(Ljava/util/ArrayList;Landroid/os/Handler;)V
 
     invoke-direct {v1, v2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 

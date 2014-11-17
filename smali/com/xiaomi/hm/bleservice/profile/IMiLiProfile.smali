@@ -94,7 +94,7 @@
 
     const-string v0, "FEE0"
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/util/Helper;->UUID16(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
@@ -102,7 +102,7 @@
 
     const-string v0, "FF01"
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/util/Helper;->UUID16(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
@@ -110,7 +110,7 @@
 
     const-string v0, "FF02"
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/util/Helper;->UUID16(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
@@ -118,7 +118,7 @@
 
     const-string v0, "FF03"
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/util/Helper;->UUID16(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
@@ -126,7 +126,7 @@
 
     const-string v0, "FF04"
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/util/Helper;->UUID16(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
@@ -134,7 +134,7 @@
 
     const-string v0, "FF05"
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/util/Helper;->UUID16(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
@@ -142,7 +142,7 @@
 
     const-string v0, "FF06"
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/util/Helper;->UUID16(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
@@ -150,7 +150,7 @@
 
     const-string v0, "FF07"
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/util/Helper;->UUID16(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
@@ -158,7 +158,7 @@
 
     const-string v0, "FF08"
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/util/Helper;->UUID16(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
@@ -166,7 +166,7 @@
 
     const-string v0, "FF09"
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/util/Helper;->UUID16(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
@@ -174,7 +174,7 @@
 
     const-string v0, "FF0A"
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/util/Helper;->UUID16(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
@@ -182,7 +182,7 @@
 
     const-string v0, "FF0B"
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/util/Helper;->UUID16(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
@@ -190,7 +190,7 @@
 
     const-string v0, "FF0C"
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/util/Helper;->UUID16(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
@@ -198,7 +198,7 @@
 
     const-string v0, "FF0D"
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/util/Helper;->UUID16(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
@@ -206,7 +206,7 @@
 
     const-string v0, "FF0E"
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/util/Helper;->UUID16(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 

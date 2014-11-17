@@ -118,7 +118,7 @@
 
     move-result-object v1
 
-    invoke-static {p0, v1}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->exception(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Landroid/content/Context;Ljava/lang/String;)V
 
     :cond_0
     return-object v0
@@ -186,7 +186,7 @@
 
     const-string v1, "intent of mReportData is null"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->finish()V
 
@@ -215,7 +215,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->mReportData:Lcn/com/smartdevices/bracelet/model/ReportData;
 
@@ -375,7 +375,7 @@
 
     move-object v0, p0
 
-    invoke-static/range {v0 .. v6}, Lcn/com/smartdevices/bracelet/Utils;->getMonthShareTips(Landroid/content/Context;IIILjava/lang/String;II)Ljava/lang/String;
+    invoke-static/range {v0 .. v6}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;IIILjava/lang/String;II)Ljava/lang/String;
 
     move-result-object v0
 
@@ -452,7 +452,7 @@
 
     const-string v1, "ShareFromDynamicList"
 
-    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/UmengAnalytics;->event(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->finish()V
 
@@ -577,7 +577,7 @@
 
     move-object v1, p0
 
-    invoke-static/range {v1 .. v6}, Lcn/com/smartdevices/bracelet/Utils;->getWeekShareTips(Landroid/content/Context;IILjava/lang/String;II)Ljava/lang/String;
+    invoke-static/range {v1 .. v6}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;IILjava/lang/String;II)Ljava/lang/String;
 
     move-result-object v0
 
@@ -674,7 +674,7 @@
 
     move-result v1
 
-    invoke-static {p0, v1}, Lcn/com/smartdevices/bracelet/chart/util/ChartData;->formatDistance(Landroid/content/Context;I)[Ljava/lang/String;
+    invoke-static {p0, v1}, Lcn/com/smartdevices/bracelet/chart/c/q;->c(Landroid/content/Context;I)[Ljava/lang/String;
 
     move-result-object v1
 
@@ -792,7 +792,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->mReportData:Lcn/com/smartdevices/bracelet/model/ReportData;
 
@@ -855,7 +855,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->mReportData:Lcn/com/smartdevices/bracelet/model/ReportData;
 
-    invoke-static {p0, v1}, Lcn/com/smartdevices/bracelet/Utils;->getContinueReachGoalShareTips(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/ReportData;)Ljava/lang/String;
+    invoke-static {p0, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/ReportData;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -889,23 +889,23 @@
 
     if-eqz v0, :cond_b
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/DataManager;->getInstance()Lcn/com/smartdevices/bracelet/DataManager;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/o;->a()Lcn/com/smartdevices/bracelet/o;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/DataManager;->getCurDay()Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/o;->k()Lcn/com/smartdevices/bracelet/model/SportDay;
 
     move-result-object v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/DataManager;->getInstance()Lcn/com/smartdevices/bracelet/DataManager;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/o;->a()Lcn/com/smartdevices/bracelet/o;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/DataManager;->get(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/DaySportData;
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/o;->f(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/DaySportData;
 
     move-result-object v0
 
-    invoke-static {p0, v0, v10}, Lcn/com/smartdevices/bracelet/Utils;->getMainUIShareTips(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/DaySportData;Lcn/com/smartdevices/bracelet/model/ShareData;)V
+    invoke-static {p0, v0, v10}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/DaySportData;Lcn/com/smartdevices/bracelet/model/ShareData;)V
 
     const-string v0, "pic_url"
 

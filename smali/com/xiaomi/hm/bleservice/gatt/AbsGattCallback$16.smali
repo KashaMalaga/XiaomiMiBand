@@ -29,18 +29,18 @@
 .method public run()V
     .locals 2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/Debug;->TRACE()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/r;->d()V
 
     # getter for: Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_GattQueueThread:Landroid/os/HandlerThread;
     invoke-static {}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$1()Landroid/os/HandlerThread;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Debug;->ASSERT_RUN_ON_THREAD(Ljava/lang/Thread;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/Thread;)V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$16;->val$gatt:Landroid/bluetooth/BluetoothGatt;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Debug;->ASSERT_NOT_NULL(Ljava/lang/Object;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/Object;)V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$16;->val$gatt:Landroid/bluetooth/BluetoothGatt;
 
@@ -77,7 +77,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Debug;->DEBUG_LOCK(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -124,7 +124,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Debug;->ASSERT_TRUE(Z)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->c(Z)V
 
     if-nez v0, :cond_0
 
@@ -159,7 +159,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Debug;->DEBUG_LOCK(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 

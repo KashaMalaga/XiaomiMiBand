@@ -3,9 +3,9 @@
 
 
 # static fields
-.field private static final a:Ljava/lang/String; = "MicroMsg.SDK.JumpToBizProfile.Req"
+.field private static final EXT_MSG_LENGTH:I = 0x400
 
-.field private static final b:I = 0x400
+.field private static final TAG:Ljava/lang/String; = "MicroMsg.SDK.JumpToBizProfile.Req"
 
 
 # instance fields

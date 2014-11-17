@@ -3,15 +3,15 @@
 
 
 # static fields
-.field private static final a:Ljava/lang/String; = "MicroMsg.SDK.JumpToBizWebview.Req"
+.field private static final EXT_MSG_LENGTH:I = 0x400
 
-.field private static final b:I = 0x400
+.field private static final TAG:Ljava/lang/String; = "MicroMsg.SDK.JumpToBizWebview.Req"
 
 
 # instance fields
-.field private c:I
-
 .field public extMsg:Ljava/lang/String;
+
+.field private scene:I
 
 .field public toUserName:Ljava/lang/String;
 
@@ -26,7 +26,7 @@
 
     const/4 v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/sdk/modelbiz/JumpToBizWebview$Req;->c:I
+    iput v0, p0, Lcom/tencent/mm/sdk/modelbiz/JumpToBizWebview$Req;->scene:I
 
     return-void
 .end method
@@ -135,7 +135,7 @@
 
     const-string v0, "_wxapi_jump_to_biz_webview_req_scene"
 
-    iget v1, p0, Lcom/tencent/mm/sdk/modelbiz/JumpToBizWebview$Req;->c:I
+    iget v1, p0, Lcom/tencent/mm/sdk/modelbiz/JumpToBizWebview$Req;->scene:I
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 

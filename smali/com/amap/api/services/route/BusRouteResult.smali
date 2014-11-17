@@ -39,9 +39,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/services/route/e;
+    new-instance v0, Lcom/amap/api/services/route/f;
 
-    invoke-direct {v0}, Lcom/amap/api/services/route/e;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/services/route/f;-><init>()V
 
     sput-object v0, Lcom/amap/api/services/route/BusRouteResult;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -94,40 +94,7 @@
 
 
 # virtual methods
-.method public describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public getBusQuery()Lcom/amap/api/services/route/RouteSearch$BusRouteQuery;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/route/BusRouteResult;->c:Lcom/amap/api/services/route/RouteSearch$BusRouteQuery;
-
-    return-object v0
-.end method
-
-.method public getPaths()Ljava/util/List;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Lcom/amap/api/services/route/BusPath;",
-            ">;"
-        }
-    .end annotation
-
-    iget-object v0, p0, Lcom/amap/api/services/route/BusRouteResult;->b:Ljava/util/List;
-
-    return-object v0
-.end method
-
-.method public getTaxiCost()F
+.method public a()F
     .locals 1
 
     iget v0, p0, Lcom/amap/api/services/route/BusRouteResult;->a:F
@@ -135,7 +102,15 @@
     return v0
 .end method
 
-.method public setBusQuery(Lcom/amap/api/services/route/RouteSearch$BusRouteQuery;)V
+.method public a(F)V
+    .locals 0
+
+    iput p1, p0, Lcom/amap/api/services/route/BusRouteResult;->a:F
+
+    return-void
+.end method
+
+.method public a(Lcom/amap/api/services/route/RouteSearch$BusRouteQuery;)V
     .locals 0
 
     iput-object p1, p0, Lcom/amap/api/services/route/BusRouteResult;->c:Lcom/amap/api/services/route/RouteSearch$BusRouteQuery;
@@ -143,7 +118,7 @@
     return-void
 .end method
 
-.method public setPaths(Ljava/util/List;)V
+.method public a(Ljava/util/List;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -160,12 +135,37 @@
     return-void
 .end method
 
-.method public setTaxiCost(F)V
-    .locals 0
+.method public b()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcom/amap/api/services/route/BusPath;",
+            ">;"
+        }
+    .end annotation
 
-    iput p1, p0, Lcom/amap/api/services/route/BusRouteResult;->a:F
+    iget-object v0, p0, Lcom/amap/api/services/route/BusRouteResult;->b:Ljava/util/List;
 
-    return-void
+    return-object v0
+.end method
+
+.method public c()Lcom/amap/api/services/route/RouteSearch$BusRouteQuery;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/route/BusRouteResult;->c:Lcom/amap/api/services/route/RouteSearch$BusRouteQuery;
+
+    return-object v0
+.end method
+
+.method public describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V

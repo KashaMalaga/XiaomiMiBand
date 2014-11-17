@@ -44,9 +44,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/services/geocoder/c;
+    new-instance v0, Lcom/amap/api/services/geocoder/i;
 
-    invoke-direct {v0}, Lcom/amap/api/services/geocoder/c;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/services/geocoder/i;-><init>()V
 
     sput-object v0, Lcom/amap/api/services/geocoder/GeocodeAddress;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -137,7 +137,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Landroid/os/Parcel;Lcom/amap/api/services/geocoder/c;)V
+.method synthetic constructor <init>(Landroid/os/Parcel;Lcom/amap/api/services/geocoder/i;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/amap/api/services/geocoder/GeocodeAddress;-><init>(Landroid/os/Parcel;)V
@@ -147,6 +147,78 @@
 
 
 # virtual methods
+.method public a()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->a:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public a(Lcom/amap/api/services/core/LatLonPoint;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->i:Lcom/amap/api/services/core/LatLonPoint;
+
+    return-void
+.end method
+
+.method public a(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public b()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->b:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public b(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->b:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public c()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->c:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public c(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->c:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public d()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->d:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public d(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->d:Ljava/lang/String;
+
+    return-void
+.end method
+
 .method public describeContents()I
     .locals 1
 
@@ -155,79 +227,7 @@
     return v0
 .end method
 
-.method public getAdcode()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->h:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getBuilding()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->g:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getCity()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->c:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getDistrict()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->d:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getFormatAddress()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->a:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getLatLonPoint()Lcom/amap/api/services/core/LatLonPoint;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->i:Lcom/amap/api/services/core/LatLonPoint;
-
-    return-object v0
-.end method
-
-.method public getLevel()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->j:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getNeighborhood()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->f:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getProvince()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->b:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getTownship()Ljava/lang/String;
+.method public e()Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->e:Ljava/lang/String;
@@ -235,63 +235,23 @@
     return-object v0
 .end method
 
-.method public setAdcode(Ljava/lang/String;)V
+.method public e(Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->h:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->e:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public setBuilding(Ljava/lang/String;)V
-    .locals 0
+.method public f()Ljava/lang/String;
+    .locals 1
 
-    iput-object p1, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->g:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->f:Ljava/lang/String;
 
-    return-void
+    return-object v0
 .end method
 
-.method public setCity(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->c:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public setDistrict(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->d:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public setFormatAddress(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public setLatLonPoint(Lcom/amap/api/services/core/LatLonPoint;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->i:Lcom/amap/api/services/core/LatLonPoint;
-
-    return-void
-.end method
-
-.method public setLevel(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->j:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public setNeighborhood(Ljava/lang/String;)V
+.method public f(Ljava/lang/String;)V
     .locals 0
 
     iput-object p1, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->f:Ljava/lang/String;
@@ -299,20 +259,60 @@
     return-void
 .end method
 
-.method public setProvince(Ljava/lang/String;)V
+.method public g()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->g:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public g(Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->b:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->g:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public setTownship(Ljava/lang/String;)V
+.method public h()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->h:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public h(Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->e:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->h:Ljava/lang/String;
 
     return-void
+.end method
+
+.method public i()Lcom/amap/api/services/core/LatLonPoint;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->i:Lcom/amap/api/services/core/LatLonPoint;
+
+    return-object v0
+.end method
+
+.method public i(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->j:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public j()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/geocoder/GeocodeAddress;->j:Ljava/lang/String;
+
+    return-object v0
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V

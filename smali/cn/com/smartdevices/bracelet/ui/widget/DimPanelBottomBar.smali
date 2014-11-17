@@ -32,11 +32,11 @@
 
     move-result-object v0
 
-    const v1, 0x7f03002a
+    const v1, 0x7f03002c
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const v0, 0x7f0700d3
+    const v0, 0x7f0700e0
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->findViewById(I)Landroid/view/View;
 
@@ -46,7 +46,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->c:Landroid/widget/TextView;
 
-    const v0, 0x7f0700d5
+    const v0, 0x7f0700e2
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->findViewById(I)Landroid/view/View;
 
@@ -56,13 +56,13 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->b:Landroid/widget/TextView;
 
-    const v0, 0x7f0700d2
+    const v0, 0x7f0700df
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
-    const v0, 0x7f0700d4
+    const v0, 0x7f0700e1
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->findViewById(I)Landroid/view/View;
 
@@ -72,7 +72,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/xiaomi/hm/health/R$styleable;->DimPanelFragmentBottomBar:[I
+    sget-object v1, Lcom/xiaomi/hm/a/s;->DimPanelFragmentBottomBar:[I
 
     invoke-virtual {v0, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -160,7 +160,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const v2, 0x7f02003d
 
@@ -300,7 +300,7 @@
 
 
 # virtual methods
-.method public setLeftButtonTextColor(I)V
+.method public a(I)V
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->c:Landroid/widget/TextView;
@@ -310,7 +310,7 @@
     return-void
 .end method
 
-.method public setRightButtonTextColor(I)V
+.method public b(I)V
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->b:Landroid/widget/TextView;

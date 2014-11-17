@@ -6,13 +6,13 @@
 
 
 # static fields
-.field private static final a:Ljava/lang/String; = "MicroMsg.SDK.WXFileObject"
+.field private static final CONTENT_LENGTH_LIMIT:I = 0xa00000
 
-.field private static final b:I = 0xa00000
+.field private static final TAG:Ljava/lang/String; = "MicroMsg.SDK.WXFileObject"
 
 
 # instance fields
-.field private c:I
+.field private contentLengthLimit:I
 
 .field public fileData:[B
 
@@ -29,7 +29,7 @@
 
     const/high16 v0, 0xa00000
 
-    iput v0, p0, Lcom/tencent/mm/sdk/modelmsg/WXFileObject;->c:I
+    iput v0, p0, Lcom/tencent/mm/sdk/modelmsg/WXFileObject;->contentLengthLimit:I
 
     iput-object v1, p0, Lcom/tencent/mm/sdk/modelmsg/WXFileObject;->fileData:[B
 
@@ -45,7 +45,7 @@
 
     const/high16 v0, 0xa00000
 
-    iput v0, p0, Lcom/tencent/mm/sdk/modelmsg/WXFileObject;->c:I
+    iput v0, p0, Lcom/tencent/mm/sdk/modelmsg/WXFileObject;->contentLengthLimit:I
 
     iput-object p1, p0, Lcom/tencent/mm/sdk/modelmsg/WXFileObject;->filePath:Ljava/lang/String;
 
@@ -59,14 +59,14 @@
 
     const/high16 v0, 0xa00000
 
-    iput v0, p0, Lcom/tencent/mm/sdk/modelmsg/WXFileObject;->c:I
+    iput v0, p0, Lcom/tencent/mm/sdk/modelmsg/WXFileObject;->contentLengthLimit:I
 
     iput-object p1, p0, Lcom/tencent/mm/sdk/modelmsg/WXFileObject;->fileData:[B
 
     return-void
 .end method
 
-.method private a(Ljava/lang/String;)I
+.method private getFileSize(Ljava/lang/String;)I
     .locals 3
 
     const/4 v0, 0x0
@@ -152,7 +152,7 @@
 
     array-length v1, v1
 
-    iget v2, p0, Lcom/tencent/mm/sdk/modelmsg/WXFileObject;->c:I
+    iget v2, p0, Lcom/tencent/mm/sdk/modelmsg/WXFileObject;->contentLengthLimit:I
 
     if-le v1, v2, :cond_3
 
@@ -171,11 +171,11 @@
 
     iget-object v1, p0, Lcom/tencent/mm/sdk/modelmsg/WXFileObject;->filePath:Ljava/lang/String;
 
-    invoke-direct {p0, v1}, Lcom/tencent/mm/sdk/modelmsg/WXFileObject;->a(Ljava/lang/String;)I
+    invoke-direct {p0, v1}, Lcom/tencent/mm/sdk/modelmsg/WXFileObject;->getFileSize(Ljava/lang/String;)I
 
     move-result v1
 
-    iget v2, p0, Lcom/tencent/mm/sdk/modelmsg/WXFileObject;->c:I
+    iget v2, p0, Lcom/tencent/mm/sdk/modelmsg/WXFileObject;->contentLengthLimit:I
 
     if-le v1, v2, :cond_4
 
@@ -214,7 +214,7 @@
 .method public setContentLengthLimit(I)V
     .locals 0
 
-    iput p1, p0, Lcom/tencent/mm/sdk/modelmsg/WXFileObject;->c:I
+    iput p1, p0, Lcom/tencent/mm/sdk/modelmsg/WXFileObject;->contentLengthLimit:I
 
     return-void
 .end method

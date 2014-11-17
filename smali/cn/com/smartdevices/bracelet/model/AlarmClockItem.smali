@@ -232,13 +232,13 @@
 .method public static fromJson(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/model/AlarmClockItem;
     .locals 2
 
-    new-instance v0, Lcom/google/gson/Gson;
+    new-instance v0, Lcom/b/a/k;
 
-    invoke-direct {v0}, Lcom/google/gson/Gson;-><init>()V
+    invoke-direct {v0}, Lcom/b/a/k;-><init>()V
 
     const-class v1, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;
 
-    invoke-virtual {v0, p0, v1}, Lcom/google/gson/Gson;->fromJson(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v0, p0, v1}, Lcom/b/a/k;->a(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -461,11 +461,11 @@
 .method public toJson()Ljava/lang/String;
     .locals 1
 
-    new-instance v0, Lcom/google/gson/Gson;
+    new-instance v0, Lcom/b/a/k;
 
-    invoke-direct {v0}, Lcom/google/gson/Gson;-><init>()V
+    invoke-direct {v0}, Lcom/b/a/k;-><init>()V
 
-    invoke-virtual {v0, p0}, Lcom/google/gson/Gson;->toJson(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, p0}, Lcom/b/a/k;->b(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 

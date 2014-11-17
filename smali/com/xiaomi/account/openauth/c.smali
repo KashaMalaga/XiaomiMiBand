@@ -1,265 +1,857 @@
-.class Lcom/xiaomi/account/openauth/c;
-.super Landroid/os/AsyncTask;
+.class public Lcom/xiaomi/account/openauth/c;
+.super Ljava/lang/Object;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Landroid/os/AsyncTask",
-        "<",
-        "Landroid/os/Bundle;",
-        "Landroid/os/Bundle;",
-        "Landroid/os/Bundle;",
-        ">;"
-    }
-.end annotation
+# static fields
+.field public static final a:Z
 
+.field public static final b:Ljava/lang/String;
 
-# instance fields
-.field final synthetic a:Lcom/xiaomi/account/openauth/XiaomiOAuthorize;
+.field protected static final c:Ljava/lang/String;
 
-.field private final synthetic b:J
+.field protected static final d:Ljava/lang/String; = "authorization_code"
 
-.field private final synthetic c:Ljava/lang/String;
+.field protected static final e:Ljava/lang/String; = "refresh_token"
 
-.field private final synthetic d:Ljava/lang/String;
+.field protected static final f:Ljava/lang/String; = "&&&START&&&"
 
-.field private final synthetic e:Landroid/os/Bundle;
+.field public static g:Ljava/lang/String; = null
 
-.field private final synthetic f:Landroid/app/Activity;
+.field protected static final h:Ljava/lang/String; = "com.xiaomi.account.openauth.action.AUTH"
 
-.field private final synthetic g:[Landroid/accounts/Account;
+.field private static final i:Ljava/lang/String; = "HmacSHA1"
 
-.field private final synthetic h:I
+.field private static final j:Ljava/lang/String; = "UTF-8"
+
+.field private static k:Ljava/util/Random;
 
 
 # direct methods
-.method constructor <init>(Lcom/xiaomi/account/openauth/XiaomiOAuthorize;JLjava/lang/String;Ljava/lang/String;Landroid/os/Bundle;Landroid/app/Activity;[Landroid/accounts/Account;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lcom/xiaomi/account/openauth/c;->a:Lcom/xiaomi/account/openauth/XiaomiOAuthorize;
+    new-instance v0, Ljava/io/File;
 
-    iput-wide p2, p0, Lcom/xiaomi/account/openauth/c;->b:J
+    const-string v1, "/data/system/oauth_staging_preview"
 
-    iput-object p4, p0, Lcom/xiaomi/account/openauth/c;->c:Ljava/lang/String;
+    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    iput-object p5, p0, Lcom/xiaomi/account/openauth/c;->d:Ljava/lang/String;
-
-    iput-object p6, p0, Lcom/xiaomi/account/openauth/c;->e:Landroid/os/Bundle;
-
-    iput-object p7, p0, Lcom/xiaomi/account/openauth/c;->f:Landroid/app/Activity;
-
-    iput-object p8, p0, Lcom/xiaomi/account/openauth/c;->g:[Landroid/accounts/Account;
-
-    iput p9, p0, Lcom/xiaomi/account/openauth/c;->h:I
-
-    invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method protected varargs a([Landroid/os/Bundle;)Landroid/os/Bundle;
-    .locals 4
-
-    new-instance v0, Landroid/os/Bundle;
-
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
-
-    const-string v1, "extra_client_id"
-
-    iget-wide v2, p0, Lcom/xiaomi/account/openauth/c;->b:J
-
-    invoke-static {v2, v3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "extra_redirect_uri"
-
-    iget-object v2, p0, Lcom/xiaomi/account/openauth/c;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "extra_response_type"
-
-    iget-object v2, p0, Lcom/xiaomi/account/openauth/c;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcom/xiaomi/account/openauth/c;->e:Landroid/os/Bundle;
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, p0, Lcom/xiaomi/account/openauth/c;->e:Landroid/os/Bundle;
-
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->putAll(Landroid/os/Bundle;)V
-
-    :cond_0
-    iget-object v1, p0, Lcom/xiaomi/account/openauth/c;->a:Lcom/xiaomi/account/openauth/XiaomiOAuthorize;
-
-    iget-object v2, p0, Lcom/xiaomi/account/openauth/c;->f:Landroid/app/Activity;
-
-    iget-object v3, p0, Lcom/xiaomi/account/openauth/c;->g:[Landroid/accounts/Account;
-
-    invoke-virtual {v1, v2, v3, v0}, Lcom/xiaomi/account/openauth/XiaomiOAuthorize;->getAccessToken(Landroid/app/Activity;[Landroid/accounts/Account;Landroid/os/Bundle;)Landroid/os/Bundle;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method protected a(Landroid/os/Bundle;)V
-    .locals 8
-
-    const-string v0, "extra_error_code"
-
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    sput-boolean v0, Lcom/xiaomi/account/openauth/c;->a:Z
 
-    invoke-static {}, Lcom/xiaomi/account/openauth/XiaomiOAuthorize;->a()Lcom/xiaomi/account/openauth/XiaomiOAuthorize$OnOAuthInterface;
-
-    move-result-object v0
+    sget-boolean v0, Lcom/xiaomi/account/openauth/c;->a:Z
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Landroid/os/Bundle;
+    const-string v0, "http://account.preview.n.xiaomi.net"
 
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+    :goto_0
+    sput-object v0, Lcom/xiaomi/account/openauth/c;->b:Ljava/lang/String;
 
-    const-string v1, "access_token"
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v2, "extra_access_token"
+    sget-object v1, Lcom/xiaomi/account/openauth/c;->b:Ljava/lang/String;
 
-    invoke-virtual {p1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "token_type"
-
-    const-string v2, "extra_token_type"
-
-    invoke-virtual {p1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "expires_in"
-
-    const-string v2, "extra_expires_in"
-
-    invoke-virtual {p1, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v2
-
-    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "mac_key"
-
-    const-string v2, "extra_mac_key"
-
-    invoke-virtual {p1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "mac_algorithm"
-
-    const-string v2, "extra_mac_algorithm"
-
-    invoke-virtual {p1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {}, Lcom/xiaomi/account/openauth/XiaomiOAuthorize;->a()Lcom/xiaomi/account/openauth/XiaomiOAuthorize$OnOAuthInterface;
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-interface {v1, v0}, Lcom/xiaomi/account/openauth/XiaomiOAuthorize$OnOAuthInterface;->onGetAccessTokenDirectly(Landroid/os/Bundle;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :goto_0
-    return-void
+    const-string v1, "/oauth2/token"
 
-    :cond_0
-    const-string v0, "extra_error_code"
-
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v0
-
-    const/16 v1, -0x3e9
-
-    if-ne v0, v1, :cond_1
-
-    const-string v0, "extra_intent"
-
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    check-cast v0, Landroid/content/Intent;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/xiaomi/account/openauth/c;->f:Landroid/app/Activity;
+    move-result-object v0
 
-    iget v2, p0, Lcom/xiaomi/account/openauth/c;->h:I
+    sput-object v0, Lcom/xiaomi/account/openauth/c;->c:Ljava/lang/String;
 
-    invoke-virtual {v1, v0, v2}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
+    const-string v0, "com.xiaomi.account.openauth.AuthorizeActivity"
 
-    goto :goto_0
+    sput-object v0, Lcom/xiaomi/account/openauth/c;->g:Ljava/lang/String;
 
-    :cond_1
-    iget-object v0, p0, Lcom/xiaomi/account/openauth/c;->a:Lcom/xiaomi/account/openauth/XiaomiOAuthorize;
+    new-instance v0, Ljava/util/Random;
 
-    iget-object v1, p0, Lcom/xiaomi/account/openauth/c;->f:Landroid/app/Activity;
+    invoke-direct {v0}, Ljava/util/Random;-><init>()V
 
-    iget-wide v2, p0, Lcom/xiaomi/account/openauth/c;->b:J
+    sput-object v0, Lcom/xiaomi/account/openauth/c;->k:Ljava/util/Random;
 
-    iget-object v4, p0, Lcom/xiaomi/account/openauth/c;->c:Ljava/lang/String;
+    return-void
 
-    iget-object v5, p0, Lcom/xiaomi/account/openauth/c;->d:Ljava/lang/String;
-
-    iget-object v6, p0, Lcom/xiaomi/account/openauth/c;->e:Landroid/os/Bundle;
-
-    iget v7, p0, Lcom/xiaomi/account/openauth/c;->h:I
-
-    invoke-virtual/range {v0 .. v7}, Lcom/xiaomi/account/openauth/XiaomiOAuthorize;->startAuthorizeActivityFroResult(Landroid/app/Activity;JLjava/lang/String;Ljava/lang/String;Landroid/os/Bundle;I)V
+    :cond_0
+    const-string v0, "https://account.xiaomi.com"
 
     goto :goto_0
 .end method
 
-.method protected varargs synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
-    check-cast p1, [Landroid/os/Bundle;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0, p1}, Lcom/xiaomi/account/openauth/c;->a([Landroid/os/Bundle;)Landroid/os/Bundle;
+    return-void
+.end method
+
+.method private static a(Landroid/content/Context;)Landroid/content/Intent;
+    .locals 2
+
+    new-instance v0, Landroid/content/Intent;
+
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+
+    const-class v1, Lcom/xiaomi/account/openauth/AuthorizeActivity;
+
+    invoke-virtual {v0, p0, v1}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
+
+    return-object v0
+.end method
+
+.method protected static a()Ljava/lang/String;
+    .locals 6
+
+    sget-object v0, Lcom/xiaomi/account/openauth/c;->k:Ljava/util/Random;
+
+    invoke-virtual {v0}, Ljava/util/Random;->nextLong()J
+
+    move-result-wide v0
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    const-wide/32 v4, 0xea60
+
+    div-long/2addr v2, v4
+
+    long-to-int v2, v2
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v0, ":"
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method protected synthetic onPostExecute(Ljava/lang/Object;)V
-    .locals 0
+.method protected static a(Landroid/content/Context;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 4
 
-    check-cast p1, Landroid/os/Bundle;
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-virtual {p0, p1}, Lcom/xiaomi/account/openauth/c;->a(Landroid/os/Bundle;)V
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v1, Lorg/apache/http/message/BasicNameValuePair;
+
+    const-string v2, "client_id"
+
+    invoke-static {p2, p3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v1, v2, v3}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    new-instance v1, Lorg/apache/http/message/BasicNameValuePair;
+
+    const-string v2, "grant_type"
+
+    const-string v3, "authorization_code"
+
+    invoke-direct {v1, v2, v3}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    new-instance v1, Lorg/apache/http/message/BasicNameValuePair;
+
+    const-string v2, "client_secret"
+
+    invoke-direct {v1, v2, p4}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    new-instance v1, Lorg/apache/http/message/BasicNameValuePair;
+
+    const-string v2, "token_type"
+
+    const-string v3, "mac"
+
+    invoke-direct {v1, v2, v3}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    new-instance v1, Lorg/apache/http/message/BasicNameValuePair;
+
+    const-string v2, "redirect_uri"
+
+    invoke-direct {v1, v2, p5}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    new-instance v1, Lorg/apache/http/message/BasicNameValuePair;
+
+    const-string v2, "code"
+
+    invoke-direct {v1, v2, p1}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    new-instance v1, Ljava/net/URL;
+
+    sget-object v2, Lcom/xiaomi/account/openauth/c;->c:Ljava/lang/String;
+
+    invoke-static {v2, v0}, Lcom/xiaomi/account/openauth/c;->a(Ljava/lang/String;Ljava/util/List;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p0, v1}, Lcom/xiaomi/account/openauth/a/b;->b(Landroid/content/Context;Ljava/net/URL;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    const-string v1, "&&&START&&&"
+
+    const-string v2, ""
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_0
+    return-object v0
+.end method
+
+.method protected static a(Landroid/content/Context;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 4
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v1, Lorg/apache/http/message/BasicNameValuePair;
+
+    const-string v2, "client_id"
+
+    invoke-static {p2, p3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v1, v2, v3}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    new-instance v1, Lorg/apache/http/message/BasicNameValuePair;
+
+    const-string v2, "grant_type"
+
+    const-string v3, "refresh_token"
+
+    invoke-direct {v1, v2, v3}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    new-instance v1, Lorg/apache/http/message/BasicNameValuePair;
+
+    const-string v2, "client_secret"
+
+    invoke-direct {v1, v2, p4}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    new-instance v1, Lorg/apache/http/message/BasicNameValuePair;
+
+    const-string v2, "token_type"
+
+    const-string v3, "mac"
+
+    invoke-direct {v1, v2, v3}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    new-instance v1, Lorg/apache/http/message/BasicNameValuePair;
+
+    const-string v2, "redirect_uri"
+
+    invoke-direct {v1, v2, p5}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    new-instance v1, Lorg/apache/http/message/BasicNameValuePair;
+
+    const-string v2, "refresh_token"
+
+    invoke-direct {v1, v2, p1}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    new-instance v1, Lorg/apache/http/message/BasicNameValuePair;
+
+    const-string v2, "token_type"
+
+    invoke-direct {v1, v2, p6}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    new-instance v1, Lorg/apache/http/message/BasicNameValuePair;
+
+    const-string v2, "mac_key"
+
+    invoke-direct {v1, v2, p7}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    new-instance v1, Lorg/apache/http/message/BasicNameValuePair;
+
+    const-string v2, "mac_algorithm"
+
+    invoke-direct {v1, v2, p8}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    new-instance v1, Ljava/net/URL;
+
+    sget-object v2, Lcom/xiaomi/account/openauth/c;->c:Ljava/lang/String;
+
+    invoke-static {v2, v0}, Lcom/xiaomi/account/openauth/c;->a(Ljava/lang/String;Ljava/util/List;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p0, v1}, Lcom/xiaomi/account/openauth/a/b;->b(Landroid/content/Context;Ljava/net/URL;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    const-string v1, "&&&START&&&"
+
+    const-string v2, ""
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_0
+    return-object v0
+.end method
+
+.method protected static a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "HmacSHA1"
+
+    invoke-virtual {v0, p6}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, ""
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v2, "\n"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v2, "\n"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-static {p2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v2, "\n"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-static {p3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v2, "\n"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-static {p4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Ljava/lang/StringBuffer;
+
+    invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v3, Ljava/util/Scanner;
+
+    invoke-direct {v3, p4}, Ljava/util/Scanner;-><init>(Ljava/lang/String;)V
+
+    const-string v4, "UTF-8"
+
+    invoke-static {v2, v3, v4}, Lorg/apache/http/client/utils/URLEncodedUtils;->parse(Ljava/util/List;Ljava/util/Scanner;Ljava/lang/String;)V
+
+    new-instance v3, Lcom/xiaomi/account/openauth/d;
+
+    invoke-direct {v3}, Lcom/xiaomi/account/openauth/d;-><init>()V
+
+    invoke-static {v2, v3}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
+
+    const-string v3, "UTF-8"
+
+    invoke-static {v2, v3}, Lorg/apache/http/client/utils/URLEncodedUtils;->format(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v2, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v1, "\n"
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "UTF-8"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
+
+    move-result-object v0
+
+    const-string v1, "UTF-8"
+
+    invoke-virtual {p5, v1}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/xiaomi/account/openauth/c;->a([B[B)[B
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/xiaomi/account/openauth/c;->a([B)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_1
+    new-instance v0, Ljava/security/NoSuchAlgorithmException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "error mac algorithm : "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/security/NoSuchAlgorithmException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method protected static a(Ljava/lang/String;Ljava/util/List;)Ljava/lang/String;
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/util/List",
+            "<",
+            "Lorg/apache/http/NameValuePair;",
+            ">;)",
+            "Ljava/lang/String;"
+        }
+    .end annotation
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
+
+    move-result-object v1
+
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {v1}, Landroid/net/Uri$Builder;->build()Landroid/net/Uri;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    :cond_0
+    return-object p0
+
+    :cond_1
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lorg/apache/http/NameValuePair;
+
+    invoke-interface {v0}, Lorg/apache/http/NameValuePair;->getName()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-interface {v0}, Lorg/apache/http/NameValuePair;->getValue()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v3, v0}, Landroid/net/Uri$Builder;->appendQueryParameter(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri$Builder;
+
+    goto :goto_0
+.end method
+
+.method protected static a([B)Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/String;
+
+    invoke-static {p0}, Lcom/xiaomi/account/openauth/a/a;->b([B)[C
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/String;-><init>([C)V
+
+    return-object v0
+.end method
+
+.method protected static a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/HashMap;
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    const-string v0, "MAC access_token=\"%s\", nonce=\"%s\",mac=\"%s\""
+
+    const/4 v1, 0x3
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const/4 v2, 0x0
+
+    const-string v3, "UTF-8"
+
+    invoke-static {p0, v3}, Ljava/net/URLEncoder;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    aput-object v3, v1, v2
+
+    const/4 v2, 0x1
+
+    const-string v3, "UTF-8"
+
+    invoke-static {p1, v3}, Ljava/net/URLEncoder;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    aput-object v3, v1, v2
+
+    const/4 v2, 0x2
+
+    const-string v3, "UTF-8"
+
+    invoke-static {p2, v3}, Ljava/net/URLEncoder;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    aput-object v3, v1, v2
+
+    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/util/HashMap;
+
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+
+    const-string v2, "Authorization"
+
+    invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object v1
+.end method
+
+.method protected static a(Landroid/app/Activity;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+    .locals 4
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, p1, v0
+
+    if-gez v0, :cond_0
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "client id is error!!!"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_0
+    invoke-static {p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "redirect url is empty!!!"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    invoke-static {p4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "responseType is empty!!!"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_2
+    invoke-static {p0}, Lcom/xiaomi/account/openauth/c;->a(Landroid/content/Context;)Landroid/content/Intent;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Landroid/app/Activity;->getPackageName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+
+    new-instance v1, Landroid/os/Bundle;
+
+    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
+
+    const-string v2, "client_id"
+
+    invoke-static {p1, p2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v2, "redirect_uri"
+
+    invoke-virtual {v1, v2, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v2, "response_type"
+
+    invoke-virtual {v1, v2, p4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v2, "scope"
+
+    invoke-virtual {v1, v2, p5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v2, "state"
+
+    invoke-virtual {v1, v2, p6}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v2, "url_param"
+
+    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
+
+    invoke-virtual {p0, v0, p7}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
 
     return-void
+.end method
+
+.method protected static a([B[B)[B
+    .locals 2
+
+    new-instance v0, Ljavax/crypto/spec/SecretKeySpec;
+
+    const-string v1, "HmacSHA1"
+
+    invoke-direct {v0, p1, v1}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
+
+    const-string v1, "HmacSHA1"
+
+    invoke-static {v1}, Ljavax/crypto/Mac;->getInstance(Ljava/lang/String;)Ljavax/crypto/Mac;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ljavax/crypto/Mac;->init(Ljava/security/Key;)V
+
+    invoke-virtual {v1, p0}, Ljavax/crypto/Mac;->update([B)V
+
+    invoke-virtual {v1}, Ljavax/crypto/Mac;->doFinal()[B
+
+    move-result-object v0
+
+    return-object v0
 .end method

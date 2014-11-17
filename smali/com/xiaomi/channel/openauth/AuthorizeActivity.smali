@@ -3,23 +3,23 @@
 
 
 # static fields
-.field public static RESULT_CANCEL:I = 0x0
+.field public static a:I = 0x0
 
-.field public static RESULT_FAIL:I = 0x0
+.field public static b:I = 0x0
 
-.field public static RESULT_SUCCESS:I = 0x0
+.field public static c:I = 0x0
 
-.field private static final a:Ljava/lang/String; = "https://account.xiaomi.com/oauth2/authorize"
+.field private static final d:Ljava/lang/String; = "https://account.xiaomi.com/oauth2/authorize"
 
-.field private static final b:Ljava/lang/String; = "UTF-8"
+.field private static final e:Ljava/lang/String; = "UTF-8"
 
 
 # instance fields
-.field private c:Landroid/webkit/WebView;
+.field private f:Landroid/webkit/WebView;
 
-.field private d:Landroid/webkit/WebSettings;
+.field private g:Landroid/webkit/WebSettings;
 
-.field private e:Ljava/lang/String;
+.field private h:Ljava/lang/String;
 
 
 # direct methods
@@ -28,15 +28,15 @@
 
     const/4 v0, -0x1
 
-    sput v0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->RESULT_SUCCESS:I
+    sput v0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->a:I
 
     const/4 v0, 0x1
 
-    sput v0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->RESULT_FAIL:I
+    sput v0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->b:I
 
     const/4 v0, 0x0
 
-    sput v0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->RESULT_CANCEL:I
+    sput v0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->c:I
 
     return-void
 .end method
@@ -165,9 +165,9 @@
 
     invoke-direct {v1, p0}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->c:Landroid/webkit/WebView;
+    iput-object v1, p0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->f:Landroid/webkit/WebView;
 
-    iget-object v1, p0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->c:Landroid/webkit/WebView;
+    iget-object v1, p0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->f:Landroid/webkit/WebView;
 
     new-instance v2, Landroid/view/ViewGroup$LayoutParams;
 
@@ -282,7 +282,7 @@
 .method public onBackPressed()V
     .locals 2
 
-    iget-object v0, p0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->c:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->f:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->canGoBack()Z
 
@@ -290,7 +290,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->c:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->f:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->goBack()V
 
@@ -298,7 +298,7 @@
     return-void
 
     :cond_0
-    sget v0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->RESULT_CANCEL:I
+    sget v0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->c:I
 
     const/4 v1, 0x0
 
@@ -320,25 +320,25 @@
 
     invoke-virtual {p0, v0}, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->setContentView(Landroid/view/View;)V
 
-    iget-object v0, p0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->c:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->f:Landroid/webkit/WebView;
 
     invoke-virtual {v0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->d:Landroid/webkit/WebSettings;
+    iput-object v0, p0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->g:Landroid/webkit/WebSettings;
 
-    iget-object v0, p0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->d:Landroid/webkit/WebSettings;
+    iget-object v0, p0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->g:Landroid/webkit/WebSettings;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
 
-    iget-object v0, p0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->d:Landroid/webkit/WebSettings;
+    iget-object v0, p0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->g:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, v2}, Landroid/webkit/WebSettings;->setSavePassword(Z)V
 
-    iget-object v0, p0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->d:Landroid/webkit/WebSettings;
+    iget-object v0, p0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->g:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, v2}, Landroid/webkit/WebSettings;->setSaveFormData(Z)V
 
@@ -370,11 +370,11 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->e:Ljava/lang/String;
+    iput-object v0, p0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->h:Ljava/lang/String;
 
-    iget-object v0, p0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->c:Landroid/webkit/WebView;
+    iget-object v0, p0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->f:Landroid/webkit/WebView;
 
-    iget-object v1, p0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->e:Ljava/lang/String;
+    iget-object v1, p0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->h:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
@@ -382,7 +382,7 @@
 
     invoke-direct {v0, p0}, Lcom/xiaomi/channel/openauth/a;-><init>(Lcom/xiaomi/channel/openauth/AuthorizeActivity;)V
 
-    iget-object v1, p0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->c:Landroid/webkit/WebView;
+    iget-object v1, p0, Lcom/xiaomi/channel/openauth/AuthorizeActivity;->f:Landroid/webkit/WebView;
 
     invoke-virtual {v1, v0}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 

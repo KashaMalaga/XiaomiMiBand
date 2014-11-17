@@ -33,9 +33,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/services/route/q;
+    new-instance v0, Lcom/amap/api/services/route/r;
 
-    invoke-direct {v0}, Lcom/amap/api/services/route/q;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/services/route/r;-><init>()V
 
     sput-object v0, Lcom/amap/api/services/route/RouteSearch$BusRouteQuery;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -108,7 +108,57 @@
 
 
 # virtual methods
-.method public clone()Lcom/amap/api/services/route/RouteSearch$BusRouteQuery;
+.method public a()Lcom/amap/api/services/route/RouteSearch$FromAndTo;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/route/RouteSearch$BusRouteQuery;->a:Lcom/amap/api/services/route/RouteSearch$FromAndTo;
+
+    return-object v0
+.end method
+
+.method public b()I
+    .locals 1
+
+    iget v0, p0, Lcom/amap/api/services/route/RouteSearch$BusRouteQuery;->b:I
+
+    return v0
+.end method
+
+.method public c()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/route/RouteSearch$BusRouteQuery;->c:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public synthetic clone()Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/amap/api/services/route/RouteSearch$BusRouteQuery;->e()Lcom/amap/api/services/route/RouteSearch$BusRouteQuery;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public d()I
+    .locals 1
+
+    iget v0, p0, Lcom/amap/api/services/route/RouteSearch$BusRouteQuery;->d:I
+
+    return v0
+.end method
+
+.method public describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public e()Lcom/amap/api/services/route/RouteSearch$BusRouteQuery;
     .locals 5
 
     :try_start_0
@@ -137,24 +187,6 @@
     invoke-virtual {v0}, Ljava/lang/CloneNotSupportedException;->printStackTrace()V
 
     goto :goto_0
-.end method
-
-.method public bridge synthetic clone()Ljava/lang/Object;
-    .locals 1
-
-    invoke-virtual {p0}, Lcom/amap/api/services/route/RouteSearch$BusRouteQuery;->clone()Lcom/amap/api/services/route/RouteSearch$BusRouteQuery;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -271,38 +303,6 @@
     move v0, v1
 
     goto :goto_0
-.end method
-
-.method public getCity()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/route/RouteSearch$BusRouteQuery;->c:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getFromAndTo()Lcom/amap/api/services/route/RouteSearch$FromAndTo;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/route/RouteSearch$BusRouteQuery;->a:Lcom/amap/api/services/route/RouteSearch$FromAndTo;
-
-    return-object v0
-.end method
-
-.method public getMode()I
-    .locals 1
-
-    iget v0, p0, Lcom/amap/api/services/route/RouteSearch$BusRouteQuery;->b:I
-
-    return v0
-.end method
-
-.method public getNightFlag()I
-    .locals 1
-
-    iget v0, p0, Lcom/amap/api/services/route/RouteSearch$BusRouteQuery;->d:I
-
-    return v0
 .end method
 
 .method public hashCode()I

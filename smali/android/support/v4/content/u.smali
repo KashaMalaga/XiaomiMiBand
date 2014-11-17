@@ -1,48 +1,41 @@
-.class abstract Landroid/support/v4/content/u;
+.class Landroid/support/v4/content/u;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/util/concurrent/Callable;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<Params:",
-        "Ljava/lang/Object;",
-        "Result:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;",
-        "Ljava/util/concurrent/Callable",
-        "<TResult;>;"
-    }
-.end annotation
 
 
 # instance fields
-.field b:[Ljava/lang/Object;
+.field final a:Landroid/content/Intent;
+
+.field final b:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "[TParams;"
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/support/v4/content/v;",
+            ">;"
         }
     .end annotation
 .end field
 
 
 # direct methods
-.method private constructor <init>()V
+.method constructor <init>(Landroid/content/Intent;Ljava/util/ArrayList;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Intent;",
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/support/v4/content/v;",
+            ">;)V"
+        }
+    .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-object p1, p0, Landroid/support/v4/content/u;->a:Landroid/content/Intent;
 
-.method synthetic constructor <init>(Landroid/support/v4/content/o;)V
-    .locals 0
-
-    invoke-direct {p0}, Landroid/support/v4/content/u;-><init>()V
+    iput-object p2, p0, Landroid/support/v4/content/u;->b:Ljava/util/ArrayList;
 
     return-void
 .end method

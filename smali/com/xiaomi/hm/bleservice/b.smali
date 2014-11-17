@@ -1,5 +1,5 @@
 .class Lcom/xiaomi/hm/bleservice/b;
-.super Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;
+.super Lcn/com/smartdevices/bracelet/a/b;
 
 
 # instance fields
@@ -12,28 +12,28 @@
 
     iput-object p1, p0, Lcom/xiaomi/hm/bleservice/b;->b:Lcom/xiaomi/hm/bleservice/BLEService;
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;-><init>()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/a/b;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onFailed(Ljava/lang/Object;)V
+.method public b()V
     .locals 4
 
-    const/4 v3, 0x0
+    const/4 v3, 0x1
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;->onFailed(Ljava/lang/Object;)V
+    invoke-super {p0}, Lcn/com/smartdevices/bracelet/a/b;->b()V
 
     # getter for: Lcom/xiaomi/hm/bleservice/BLEService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/xiaomi/hm/bleservice/BLEService;->access$10()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "START SYNC DATA...onFailed"
+    const-string v1, "START SYNC DATA...onStart"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->fi(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/b;->b:Lcom/xiaomi/hm/bleservice/BLEService;
 
@@ -41,14 +41,15 @@
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/b;->b:Lcom/xiaomi/hm/bleservice/BLEService;
 
-    # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->syncToServerNew()V
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->access$17(Lcom/xiaomi/hm/bleservice/BLEService;)V
+    const/16 v1, 0xc
+
+    invoke-static {v0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->access$15(Lcom/xiaomi/hm/bleservice/BLEService;I)V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/b;->b:Lcom/xiaomi/hm/bleservice/BLEService;
 
-    const/4 v1, 0x4
+    const/4 v1, 0x2
 
-    const/16 v2, 0x64
+    const/4 v2, 0x0
 
     # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->notifySyncDataStatusChanged(IIZ)V
     invoke-static {v0, v1, v2, v3}, Lcom/xiaomi/hm/bleservice/BLEService;->access$16(Lcom/xiaomi/hm/bleservice/BLEService;IIZ)V
@@ -56,7 +57,24 @@
     return-void
 .end method
 
-.method public onFinish(Ljava/lang/Object;)V
+.method public b(I)V
+    .locals 3
+
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->b(I)V
+
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/b;->b:Lcom/xiaomi/hm/bleservice/BLEService;
+
+    const/4 v1, 0x3
+
+    const/4 v2, 0x1
+
+    # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->notifySyncDataStatusChanged(IIZ)V
+    invoke-static {v0, v1, p1, v2}, Lcom/xiaomi/hm/bleservice/BLEService;->access$16(Lcom/xiaomi/hm/bleservice/BLEService;IIZ)V
+
+    return-void
+.end method
+
+.method public c(Ljava/lang/Object;)V
     .locals 8
 
     const/16 v7, 0xc
@@ -65,7 +83,7 @@
 
     const/4 v2, 0x0
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;->onFinish(Ljava/lang/Object;)V
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->c(Ljava/lang/Object;)V
 
     # getter for: Lcom/xiaomi/hm/bleservice/BLEService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/xiaomi/hm/bleservice/BLEService;->access$10()Ljava/lang/String;
@@ -74,7 +92,7 @@
 
     const-string v3, "START SYNC DATA...onFinish"
 
-    invoke-static {v0, v3}, Lcn/com/smartdevices/bracelet/Debug;->fi(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/b;->b:Lcom/xiaomi/hm/bleservice/BLEService;
 
@@ -124,7 +142,7 @@
 
     const-string v2, "not synced data,we will sync again!"
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/Debug;->fi(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/b;->b:Lcom/xiaomi/hm/bleservice/BLEService;
 
@@ -163,7 +181,7 @@
 
     move-result-wide v3
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/Keeper;->keepSyncTime(J)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/u;->a(J)V
 
     check-cast p1, Ljava/lang/Long;
 
@@ -171,7 +189,7 @@
 
     move-result-wide v3
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/Keeper;->keepSyncBraceletTime(J)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/u;->c(J)V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/b;->b:Lcom/xiaomi/hm/bleservice/BLEService;
 
@@ -182,38 +200,21 @@
     goto :goto_0
 .end method
 
-.method public onProgress(I)V
-    .locals 3
-
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;->onProgress(I)V
-
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/b;->b:Lcom/xiaomi/hm/bleservice/BLEService;
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x1
-
-    # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->notifySyncDataStatusChanged(IIZ)V
-    invoke-static {v0, v1, p1, v2}, Lcom/xiaomi/hm/bleservice/BLEService;->access$16(Lcom/xiaomi/hm/bleservice/BLEService;IIZ)V
-
-    return-void
-.end method
-
-.method public onStart()V
+.method public d(Ljava/lang/Object;)V
     .locals 4
 
-    const/4 v3, 0x1
+    const/4 v3, 0x0
 
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;->onStart()V
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->d(Ljava/lang/Object;)V
 
     # getter for: Lcom/xiaomi/hm/bleservice/BLEService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/xiaomi/hm/bleservice/BLEService;->access$10()Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "START SYNC DATA...onStart"
+    const-string v1, "START SYNC DATA...onFailed"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->fi(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/b;->b:Lcom/xiaomi/hm/bleservice/BLEService;
 
@@ -221,15 +222,14 @@
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/b;->b:Lcom/xiaomi/hm/bleservice/BLEService;
 
-    const/16 v1, 0xc
-
-    invoke-static {v0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->access$15(Lcom/xiaomi/hm/bleservice/BLEService;I)V
+    # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->syncToServerNew()V
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->access$17(Lcom/xiaomi/hm/bleservice/BLEService;)V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/b;->b:Lcom/xiaomi/hm/bleservice/BLEService;
 
-    const/4 v1, 0x2
+    const/4 v1, 0x4
 
-    const/4 v2, 0x0
+    const/16 v2, 0x64
 
     # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->notifySyncDataStatusChanged(IIZ)V
     invoke-static {v0, v1, v2, v3}, Lcom/xiaomi/hm/bleservice/BLEService;->access$16(Lcom/xiaomi/hm/bleservice/BLEService;IIZ)V

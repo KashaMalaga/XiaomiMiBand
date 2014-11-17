@@ -339,7 +339,7 @@
 
     invoke-direct {v8, p1}, Lcom/tencent/utils/AsynLoadImg;-><init>(Landroid/app/Activity;)V
 
-    new-instance v0, Lcom/tencent/connect/share/c;
+    new-instance v0, Lcom/tencent/connect/share/QQShare$2;
 
     move-object v1, p0
 
@@ -349,7 +349,7 @@
 
     move-object v6, p1
 
-    invoke-direct/range {v0 .. v6}, Lcom/tencent/connect/share/c;-><init>(Lcom/tencent/connect/share/QQShare;Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;Lcom/tencent/tauth/IUiListener;Landroid/app/Activity;)V
+    invoke-direct/range {v0 .. v6}, Lcom/tencent/connect/share/QQShare$2;-><init>(Lcom/tencent/connect/share/QQShare;Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;Lcom/tencent/tauth/IUiListener;Landroid/app/Activity;)V
 
     invoke-virtual {v8, v7, v0}, Lcom/tencent/utils/AsynLoadImg;->save(Ljava/lang/String;Lcom/tencent/utils/AsynLoadImgBack;)V
 
@@ -373,7 +373,7 @@
     goto :goto_1
 
     :cond_4
-    new-instance v0, Lcom/tencent/connect/share/b;
+    new-instance v0, Lcom/tencent/connect/share/QQShare$1;
 
     move-object v1, p0
 
@@ -383,7 +383,7 @@
 
     move-object v6, p1
 
-    invoke-direct/range {v0 .. v6}, Lcom/tencent/connect/share/b;-><init>(Lcom/tencent/connect/share/QQShare;Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;Lcom/tencent/tauth/IUiListener;Landroid/app/Activity;)V
+    invoke-direct/range {v0 .. v6}, Lcom/tencent/connect/share/QQShare$1;-><init>(Lcom/tencent/connect/share/QQShare;Landroid/os/Bundle;Ljava/lang/String;Ljava/lang/String;Lcom/tencent/tauth/IUiListener;Landroid/app/Activity;)V
 
     invoke-static {p1, v7, v0}, Lcom/tencent/connect/share/a;->a(Landroid/content/Context;Ljava/lang/String;Lcom/tencent/utils/AsynLoadImgBack;)V
 

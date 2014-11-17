@@ -1,55 +1,47 @@
-.class final Lcn/com/smartdevices/bracelet/gps/services/l;
+.class Lcn/com/smartdevices/bracelet/gps/services/l;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/gps/services/inteface/IMapLocationListener;
+.implements Landroid/location/GpsStatus$Listener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/services/j;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/services/k;
 
 
 # direct methods
-.method private constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/j;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/k;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/services/l;->a:Lcn/com/smartdevices/bracelet/gps/services/j;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/services/l;->a:Lcn/com/smartdevices/bracelet/gps/services/k;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/j;Lcn/com/smartdevices/bracelet/gps/services/l;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/gps/services/l;-><init>(Lcn/com/smartdevices/bracelet/gps/services/j;)V
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public onLocationChanged(Lcn/com/smartdevices/bracelet/gps/model/GPSPoint;)V
-    .locals 0
+.method public onGpsStatusChanged(I)V
+    .locals 3
 
-    return-void
-.end method
+    const-string v0, "Run"
 
-.method public onProviderDisabled(Ljava/lang/String;)V
-    .locals 0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    const-string v2, "GpsStatusListener onGpsStatusChanged event = "
 
-.method public onProviderEnabled(Ljava/lang/String;)V
-    .locals 0
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return-void
-.end method
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-.method public onStatusChanged(Ljava/lang/String;ILandroid/os/Bundle;)V
-    .locals 0
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

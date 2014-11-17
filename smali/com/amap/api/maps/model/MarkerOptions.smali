@@ -6,33 +6,33 @@
 
 
 # static fields
-.field public static final CREATOR:Lcom/amap/api/maps/model/MarkerOptionsCreator;
+.field public static final a:Lcom/amap/api/maps/model/p;
 
 
 # instance fields
-.field a:Ljava/lang/String;
+.field b:Ljava/lang/String;
 
-.field private b:Lcom/amap/api/maps/model/LatLng;
-
-.field private c:Ljava/lang/String;
+.field private c:Lcom/amap/api/maps/model/LatLng;
 
 .field private d:Ljava/lang/String;
 
-.field private e:F
+.field private e:Ljava/lang/String;
 
 .field private f:F
 
-.field private g:Z
+.field private g:F
 
 .field private h:Z
 
 .field private i:Z
 
-.field private j:I
+.field private j:Z
 
 .field private k:I
 
-.field private l:Ljava/util/ArrayList;
+.field private l:I
+
+.field private m:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList",
@@ -43,22 +43,22 @@
     .end annotation
 .end field
 
-.field private m:I
-
-.field private n:Z
+.field private n:I
 
 .field private o:Z
+
+.field private p:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/maps/model/MarkerOptionsCreator;
+    new-instance v0, Lcom/amap/api/maps/model/p;
 
-    invoke-direct {v0}, Lcom/amap/api/maps/model/MarkerOptionsCreator;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/maps/model/p;-><init>()V
 
-    sput-object v0, Lcom/amap/api/maps/model/MarkerOptions;->CREATOR:Lcom/amap/api/maps/model/MarkerOptionsCreator;
+    sput-object v0, Lcom/amap/api/maps/model/MarkerOptions;->a:Lcom/amap/api/maps/model/p;
 
     return-void
 .end method
@@ -72,45 +72,45 @@
 
     const/high16 v0, 0x3f000000
 
-    iput v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->e:F
+    iput v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->f:F
 
     const/high16 v0, 0x3f800000
 
-    iput v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->f:F
+    iput v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->g:F
 
-    iput-boolean v1, p0, Lcom/amap/api/maps/model/MarkerOptions;->g:Z
+    iput-boolean v1, p0, Lcom/amap/api/maps/model/MarkerOptions;->h:Z
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->h:Z
+    iput-boolean v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->i:Z
 
-    iput-boolean v1, p0, Lcom/amap/api/maps/model/MarkerOptions;->i:Z
-
-    iput v1, p0, Lcom/amap/api/maps/model/MarkerOptions;->j:I
+    iput-boolean v1, p0, Lcom/amap/api/maps/model/MarkerOptions;->j:Z
 
     iput v1, p0, Lcom/amap/api/maps/model/MarkerOptions;->k:I
+
+    iput v1, p0, Lcom/amap/api/maps/model/MarkerOptions;->l:I
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->l:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->m:Ljava/util/ArrayList;
 
     const/16 v0, 0x14
 
-    iput v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->m:I
-
-    iput-boolean v1, p0, Lcom/amap/api/maps/model/MarkerOptions;->n:Z
+    iput v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->n:I
 
     iput-boolean v1, p0, Lcom/amap/api/maps/model/MarkerOptions;->o:Z
+
+    iput-boolean v1, p0, Lcom/amap/api/maps/model/MarkerOptions;->p:Z
 
     return-void
 .end method
 
-.method private a()V
+.method private p()V
     .locals 1
 
-    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->l:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->m:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
 
@@ -118,7 +118,7 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->l:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->m:Ljava/util/ArrayList;
 
     :cond_0
     return-void
@@ -126,12 +126,171 @@
 
 
 # virtual methods
-.method public anchor(FF)Lcom/amap/api/maps/model/MarkerOptions;
+.method public a(FF)Lcom/amap/api/maps/model/MarkerOptions;
     .locals 0
 
-    iput p1, p0, Lcom/amap/api/maps/model/MarkerOptions;->e:F
+    iput p1, p0, Lcom/amap/api/maps/model/MarkerOptions;->f:F
 
-    iput p2, p0, Lcom/amap/api/maps/model/MarkerOptions;->f:F
+    iput p2, p0, Lcom/amap/api/maps/model/MarkerOptions;->g:F
+
+    return-object p0
+.end method
+
+.method public a(I)Lcom/amap/api/maps/model/MarkerOptions;
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-gt p1, v0, :cond_0
+
+    iput v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->n:I
+
+    :goto_0
+    return-object p0
+
+    :cond_0
+    iput p1, p0, Lcom/amap/api/maps/model/MarkerOptions;->n:I
+
+    goto :goto_0
+.end method
+
+.method public a(II)Lcom/amap/api/maps/model/MarkerOptions;
+    .locals 0
+
+    iput p1, p0, Lcom/amap/api/maps/model/MarkerOptions;->k:I
+
+    iput p2, p0, Lcom/amap/api/maps/model/MarkerOptions;->l:I
+
+    return-object p0
+.end method
+
+.method public a(Lcom/amap/api/maps/model/BitmapDescriptor;)Lcom/amap/api/maps/model/MarkerOptions;
+    .locals 1
+
+    invoke-direct {p0}, Lcom/amap/api/maps/model/MarkerOptions;->p()V
+
+    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->m:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+
+    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->m:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    return-object p0
+.end method
+
+.method public a(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/MarkerOptions;
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/maps/model/MarkerOptions;->c:Lcom/amap/api/maps/model/LatLng;
+
+    return-object p0
+.end method
+
+.method public a(Ljava/lang/String;)Lcom/amap/api/maps/model/MarkerOptions;
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/maps/model/MarkerOptions;->d:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method public a(Ljava/util/ArrayList;)Lcom/amap/api/maps/model/MarkerOptions;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/amap/api/maps/model/BitmapDescriptor;",
+            ">;)",
+            "Lcom/amap/api/maps/model/MarkerOptions;"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lcom/amap/api/maps/model/MarkerOptions;->m:Ljava/util/ArrayList;
+
+    return-object p0
+.end method
+
+.method public a(Z)Lcom/amap/api/maps/model/MarkerOptions;
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/amap/api/maps/model/MarkerOptions;->j:Z
+
+    return-object p0
+.end method
+
+.method public a()Ljava/util/ArrayList;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/amap/api/maps/model/BitmapDescriptor;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->m:Ljava/util/ArrayList;
+
+    return-object v0
+.end method
+
+.method public b()I
+    .locals 1
+
+    iget v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->n:I
+
+    return v0
+.end method
+
+.method public b(Ljava/lang/String;)Lcom/amap/api/maps/model/MarkerOptions;
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/maps/model/MarkerOptions;->e:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method public b(Z)Lcom/amap/api/maps/model/MarkerOptions;
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/amap/api/maps/model/MarkerOptions;->p:Z
+
+    return-object p0
+.end method
+
+.method public c(Z)Lcom/amap/api/maps/model/MarkerOptions;
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/amap/api/maps/model/MarkerOptions;->h:Z
+
+    return-object p0
+.end method
+
+.method public c()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->j:Z
+
+    return v0
+.end method
+
+.method public d()Lcom/amap/api/maps/model/LatLng;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->c:Lcom/amap/api/maps/model/LatLng;
+
+    return-object v0
+.end method
+
+.method public d(Z)Lcom/amap/api/maps/model/MarkerOptions;
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/amap/api/maps/model/MarkerOptions;->i:Z
 
     return-object p0
 .end method
@@ -144,38 +303,38 @@
     return v0
 .end method
 
-.method public draggable(Z)Lcom/amap/api/maps/model/MarkerOptions;
+.method public e(Z)Lcom/amap/api/maps/model/MarkerOptions;
     .locals 0
 
-    iput-boolean p1, p0, Lcom/amap/api/maps/model/MarkerOptions;->g:Z
+    iput-boolean p1, p0, Lcom/amap/api/maps/model/MarkerOptions;->o:Z
 
     return-object p0
 .end method
 
-.method public getAnchorU()F
+.method public e()Ljava/lang/String;
     .locals 1
 
-    iget v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->e:F
+    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->d:Ljava/lang/String;
 
-    return v0
+    return-object v0
 .end method
 
-.method public getAnchorV()F
+.method public f()Ljava/lang/String;
     .locals 1
 
-    iget v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->f:F
+    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->e:Ljava/lang/String;
 
-    return v0
+    return-object v0
 .end method
 
-.method public getIcon()Lcom/amap/api/maps/model/BitmapDescriptor;
+.method public g()Lcom/amap/api/maps/model/BitmapDescriptor;
     .locals 2
 
-    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->l:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->m:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->l:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->m:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -183,7 +342,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->l:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->m:Ljava/util/ArrayList;
 
     const/4 v1, 0x0
 
@@ -202,32 +361,15 @@
     goto :goto_0
 .end method
 
-.method public getIcons()Ljava/util/ArrayList;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcom/amap/api/maps/model/BitmapDescriptor;",
-            ">;"
-        }
-    .end annotation
-
-    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->l:Ljava/util/ArrayList;
-
-    return-object v0
-.end method
-
-.method public getInfoWindowOffsetX()I
+.method public h()F
     .locals 1
 
-    iget v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->j:I
+    iget v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->f:F
 
     return v0
 .end method
 
-.method public getInfoWindowOffsetY()I
+.method public i()I
     .locals 1
 
     iget v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->k:I
@@ -235,105 +377,23 @@
     return v0
 .end method
 
-.method public getPeriod()I
+.method public j()I
     .locals 1
 
-    iget v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->m:I
+    iget v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->l:I
 
     return v0
 .end method
 
-.method public getPosition()Lcom/amap/api/maps/model/LatLng;
+.method public k()F
     .locals 1
 
-    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->b:Lcom/amap/api/maps/model/LatLng;
-
-    return-object v0
-.end method
-
-.method public getSnippet()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->d:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getTitle()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->c:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public icon(Lcom/amap/api/maps/model/BitmapDescriptor;)Lcom/amap/api/maps/model/MarkerOptions;
-    .locals 1
-
-    invoke-direct {p0}, Lcom/amap/api/maps/model/MarkerOptions;->a()V
-
-    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->l:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
-
-    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->l:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-object p0
-.end method
-
-.method public icons(Ljava/util/ArrayList;)Lcom/amap/api/maps/model/MarkerOptions;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcom/amap/api/maps/model/BitmapDescriptor;",
-            ">;)",
-            "Lcom/amap/api/maps/model/MarkerOptions;"
-        }
-    .end annotation
-
-    iput-object p1, p0, Lcom/amap/api/maps/model/MarkerOptions;->l:Ljava/util/ArrayList;
-
-    return-object p0
-.end method
-
-.method public isDraggable()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->g:Z
+    iget v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->g:F
 
     return v0
 .end method
 
-.method public isFlat()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->o:Z
-
-    return v0
-.end method
-
-.method public isGps()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->n:Z
-
-    return v0
-.end method
-
-.method public isPerspective()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->i:Z
-
-    return v0
-.end method
-
-.method public isVisible()Z
+.method public l()Z
     .locals 1
 
     iget-boolean v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->h:Z
@@ -341,88 +401,28 @@
     return v0
 .end method
 
-.method public period(I)Lcom/amap/api/maps/model/MarkerOptions;
+.method public m()Z
     .locals 1
 
-    const/4 v0, 0x1
+    iget-boolean v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->i:Z
 
-    if-gt p1, v0, :cond_0
-
-    iput v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->m:I
-
-    :goto_0
-    return-object p0
-
-    :cond_0
-    iput p1, p0, Lcom/amap/api/maps/model/MarkerOptions;->m:I
-
-    goto :goto_0
+    return v0
 .end method
 
-.method public perspective(Z)Lcom/amap/api/maps/model/MarkerOptions;
-    .locals 0
+.method public n()Z
+    .locals 1
 
-    iput-boolean p1, p0, Lcom/amap/api/maps/model/MarkerOptions;->i:Z
+    iget-boolean v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->o:Z
 
-    return-object p0
+    return v0
 .end method
 
-.method public position(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/MarkerOptions;
-    .locals 0
+.method public o()Z
+    .locals 1
 
-    iput-object p1, p0, Lcom/amap/api/maps/model/MarkerOptions;->b:Lcom/amap/api/maps/model/LatLng;
+    iget-boolean v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->p:Z
 
-    return-object p0
-.end method
-
-.method public setFlat(Z)Lcom/amap/api/maps/model/MarkerOptions;
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/amap/api/maps/model/MarkerOptions;->o:Z
-
-    return-object p0
-.end method
-
-.method public setGps(Z)Lcom/amap/api/maps/model/MarkerOptions;
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/amap/api/maps/model/MarkerOptions;->n:Z
-
-    return-object p0
-.end method
-
-.method public setInfoWindowOffset(II)Lcom/amap/api/maps/model/MarkerOptions;
-    .locals 0
-
-    iput p1, p0, Lcom/amap/api/maps/model/MarkerOptions;->j:I
-
-    iput p2, p0, Lcom/amap/api/maps/model/MarkerOptions;->k:I
-
-    return-object p0
-.end method
-
-.method public snippet(Ljava/lang/String;)Lcom/amap/api/maps/model/MarkerOptions;
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/maps/model/MarkerOptions;->d:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public title(Ljava/lang/String;)Lcom/amap/api/maps/model/MarkerOptions;
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/maps/model/MarkerOptions;->c:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public visible(Z)Lcom/amap/api/maps/model/MarkerOptions;
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/amap/api/maps/model/MarkerOptions;->h:Z
-
-    return-object p0
+    return v0
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
@@ -430,15 +430,15 @@
 
     const/4 v2, 0x0
 
-    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->b:Lcom/amap/api/maps/model/LatLng;
+    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->c:Lcom/amap/api/maps/model/LatLng;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->l:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->m:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->l:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->m:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -446,7 +446,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->l:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->m:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -457,27 +457,27 @@
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
     :cond_0
-    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->c:Ljava/lang/String;
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
     iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->d:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    iget v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->e:F
+    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->e:Ljava/lang/String;
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     iget v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->f:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    iget v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->j:I
+    iget v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->g:F
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
+
+    iget v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->k:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->k:I
+    iget v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->l:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
@@ -485,39 +485,39 @@
 
     new-array v0, v0, [Z
 
-    iget-boolean v1, p0, Lcom/amap/api/maps/model/MarkerOptions;->h:Z
+    iget-boolean v1, p0, Lcom/amap/api/maps/model/MarkerOptions;->i:Z
 
     aput-boolean v1, v0, v2
 
     const/4 v1, 0x1
 
-    iget-boolean v2, p0, Lcom/amap/api/maps/model/MarkerOptions;->g:Z
+    iget-boolean v2, p0, Lcom/amap/api/maps/model/MarkerOptions;->h:Z
 
     aput-boolean v2, v0, v1
 
     const/4 v1, 0x2
 
-    iget-boolean v2, p0, Lcom/amap/api/maps/model/MarkerOptions;->n:Z
+    iget-boolean v2, p0, Lcom/amap/api/maps/model/MarkerOptions;->o:Z
 
     aput-boolean v2, v0, v1
 
     const/4 v1, 0x3
 
-    iget-boolean v2, p0, Lcom/amap/api/maps/model/MarkerOptions;->o:Z
+    iget-boolean v2, p0, Lcom/amap/api/maps/model/MarkerOptions;->p:Z
 
     aput-boolean v2, v0, v1
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBooleanArray([Z)V
 
-    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->a:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->b:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    iget v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->m:I
+    iget v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->n:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->l:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/amap/api/maps/model/MarkerOptions;->m:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeList(Ljava/util/List;)V
 

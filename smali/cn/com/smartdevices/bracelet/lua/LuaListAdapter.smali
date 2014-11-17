@@ -634,7 +634,7 @@
 
     move-result-object v1
 
-    const v4, 0x7f030063
+    const v4, 0x7f030067
 
     const/4 v5, 0x0
 
@@ -642,7 +642,7 @@
 
     move-result-object p2
 
-    const v1, 0x7f070198
+    const v1, 0x7f0701a8
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -660,7 +660,7 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;I)V
 
-    const v1, 0x7f070199
+    const v1, 0x7f0701a9
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -670,7 +670,7 @@
 
     iput-object v1, v2, Lcn/com/smartdevices/bracelet/lua/d;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f070196
+    const v1, 0x7f0701a6
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -680,7 +680,7 @@
 
     iput-object v1, v2, Lcn/com/smartdevices/bracelet/lua/d;->c:Landroid/widget/ImageView;
 
-    const v1, 0x7f070088
+    const v1, 0x7f07008d
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -873,7 +873,7 @@
 
     invoke-virtual {v1, v6}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    const v1, 0x7f070197
+    const v1, 0x7f0701a7
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -939,11 +939,11 @@
 
     const/4 v3, 0x0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/DaoManager;->getInstance()Lcn/com/smartdevices/bracelet/DaoManager;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/l;->a()Lcn/com/smartdevices/bracelet/l;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/DaoManager;->getLuaListDao()Lde/greenrobot/daobracelet/LuaListDao;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/l;->b()Lde/greenrobot/daobracelet/LuaListDao;
 
     move-result-object v0
 

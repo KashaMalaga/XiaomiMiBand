@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Lcn/com/smartdevices/bracelet/chart/b/e;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/chart/i;->a:Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/chart/i;->a:Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,32 +22,50 @@
 
 
 # virtual methods
-.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 2
+.method public a(Lcn/com/smartdevices/bracelet/chart/b/d;)V
+    .locals 0
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object v0
+.method public a(I)Z
+    .locals 1
 
-    check-cast v0, Ljava/lang/Float;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/i;->a:Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;
 
-    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
-
-    move-result v1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/i;->a:Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->a(Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;)Lcn/com/smartdevices/bracelet/chart/base/BaseChart;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->b(Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;)Lcn/com/smartdevices/bracelet/chart/k;
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChart;
+    invoke-interface {v0, p1}, Lcn/com/smartdevices/bracelet/chart/k;->a(I)Z
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/DynamicPieChart;->rotate(F)V
+    move-result v0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/i;->a:Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;
+    return v0
+.end method
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->postInvalidateOnAnimation()V
+.method public b(I)Lcn/com/smartdevices/bracelet/chart/b/d;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/i;->a:Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;
+
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->b(I)Lcn/com/smartdevices/bracelet/chart/b/d;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public c(I)V
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/i;->a:Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->b(Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;)Lcn/com/smartdevices/bracelet/chart/k;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Lcn/com/smartdevices/bracelet/chart/k;->c(I)V
 
     return-void
 .end method

@@ -4,26 +4,26 @@
 
 # instance fields
 .field private startTime:J
-    .annotation runtime Lcom/google/gson/annotations/SerializedName;
-        value = "stime"
+    .annotation runtime Lcom/b/a/a/b;
+        a = "stime"
     .end annotation
 .end field
 
 .field private status:I
-    .annotation runtime Lcom/google/gson/annotations/SerializedName;
-        value = "status"
+    .annotation runtime Lcom/b/a/a/b;
+        a = "status"
     .end annotation
 .end field
 
 .field private stopTime:J
-    .annotation runtime Lcom/google/gson/annotations/SerializedName;
-        value = "etime"
+    .annotation runtime Lcom/b/a/a/b;
+        a = "etime"
     .end annotation
 .end field
 
 .field private url:Ljava/lang/String;
-    .annotation runtime Lcom/google/gson/annotations/SerializedName;
-        value = "url"
+    .annotation runtime Lcom/b/a/a/b;
+        a = "url"
     .end annotation
 .end field
 
@@ -124,7 +124,7 @@
 .method public getUrl()Ljava/lang/String;
     .locals 3
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/Utils;->getPostUrl()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->i()Ljava/lang/String;
 
     move-result-object v0
 

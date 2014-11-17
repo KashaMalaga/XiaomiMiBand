@@ -98,7 +98,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/Utils;->getPostUrl()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->i()Ljava/lang/String;
 
     move-result-object v1
 
@@ -194,7 +194,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;->registerStage:Lcn/com/smartdevices/bracelet/model/game/GameStage;
 
@@ -451,7 +451,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;->registered:Z
 

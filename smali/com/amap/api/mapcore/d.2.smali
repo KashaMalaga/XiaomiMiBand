@@ -1,278 +1,318 @@
-.class Lcom/amap/api/mapcore/d;
-.super Landroid/widget/LinearLayout;
+.class synthetic Lcom/amap/api/mapcore/d;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field a:Landroid/graphics/Bitmap;
-
-.field b:Landroid/graphics/Bitmap;
-
-.field c:Landroid/graphics/Bitmap;
-
-.field d:Landroid/graphics/Bitmap;
-
-.field e:Landroid/graphics/Bitmap;
-
-.field f:Landroid/graphics/Bitmap;
-
-.field g:Landroid/widget/ImageView;
-
-.field h:Lcom/amap/api/mapcore/v;
-
-.field i:Z
+# static fields
+.field static final synthetic a:[I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
+    invoke-static {}, Lcom/amap/api/mapcore/ar;->values()[Lcom/amap/api/mapcore/ar;
 
-    const/4 v0, 0x0
+    move-result-object v0
 
-    iput-boolean v0, p0, Lcom/amap/api/mapcore/d;->i:Z
+    array-length v0, v0
 
-    return-void
-.end method
+    new-array v0, v0, [I
 
-.method public constructor <init>(Landroid/content/Context;Lcom/amap/api/mapcore/g;Lcom/amap/api/mapcore/v;)V
-    .locals 4
-
-    const/16 v3, 0x14
-
-    const/4 v2, 0x0
-
-    invoke-direct {p0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
-
-    iput-boolean v2, p0, Lcom/amap/api/mapcore/d;->i:Z
-
-    iput-object p3, p0, Lcom/amap/api/mapcore/d;->h:Lcom/amap/api/mapcore/v;
+    sput-object v0, Lcom/amap/api/mapcore/d;->a:[I
 
     :try_start_0
-    const-string v0, "location_selected.png"
+    sget-object v0, Lcom/amap/api/mapcore/d;->a:[I
 
-    invoke-static {p1, v0}, Lcom/amap/api/mapcore/util/w;->a(Landroid/content/Context;Ljava/lang/String;)Landroid/graphics/Bitmap;
+    sget-object v1, Lcom/amap/api/mapcore/ar;->c:Lcom/amap/api/mapcore/ar;
 
-    move-result-object v0
+    invoke-virtual {v1}, Lcom/amap/api/mapcore/ar;->ordinal()I
 
-    iput-object v0, p0, Lcom/amap/api/mapcore/d;->d:Landroid/graphics/Bitmap;
+    move-result v1
 
-    iget-object v0, p0, Lcom/amap/api/mapcore/d;->d:Landroid/graphics/Bitmap;
+    const/4 v2, 0x1
 
-    sget v1, Lcom/amap/api/mapcore/p;->a:F
-
-    invoke-static {v0, v1}, Lcom/amap/api/mapcore/util/w;->a(Landroid/graphics/Bitmap;F)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/amap/api/mapcore/d;->a:Landroid/graphics/Bitmap;
-
-    const-string v0, "location_pressed.png"
-
-    invoke-static {p1, v0}, Lcom/amap/api/mapcore/util/w;->a(Landroid/content/Context;Ljava/lang/String;)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/amap/api/mapcore/d;->e:Landroid/graphics/Bitmap;
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/d;->e:Landroid/graphics/Bitmap;
-
-    sget v1, Lcom/amap/api/mapcore/p;->a:F
-
-    invoke-static {v0, v1}, Lcom/amap/api/mapcore/util/w;->a(Landroid/graphics/Bitmap;F)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/amap/api/mapcore/d;->b:Landroid/graphics/Bitmap;
-
-    const-string v0, "location_unselected.png"
-
-    invoke-static {p1, v0}, Lcom/amap/api/mapcore/util/w;->a(Landroid/content/Context;Ljava/lang/String;)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/amap/api/mapcore/d;->f:Landroid/graphics/Bitmap;
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/d;->f:Landroid/graphics/Bitmap;
-
-    sget v1, Lcom/amap/api/mapcore/p;->a:F
-
-    invoke-static {v0, v1}, Lcom/amap/api/mapcore/util/w;->a(Landroid/graphics/Bitmap;F)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/amap/api/mapcore/d;->c:Landroid/graphics/Bitmap;
+    aput v2, v0, v1
     :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_d
 
     :goto_0
-    new-instance v0, Landroid/widget/ImageView;
+    :try_start_1
+    sget-object v0, Lcom/amap/api/mapcore/d;->a:[I
 
-    invoke-direct {v0, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
+    sget-object v1, Lcom/amap/api/mapcore/ar;->e:Lcom/amap/api/mapcore/ar;
 
-    iput-object v0, p0, Lcom/amap/api/mapcore/d;->g:Landroid/widget/ImageView;
+    invoke-virtual {v1}, Lcom/amap/api/mapcore/ar;->ordinal()I
 
-    iget-object v0, p0, Lcom/amap/api/mapcore/d;->g:Landroid/widget/ImageView;
+    move-result v1
 
-    iget-object v1, p0, Lcom/amap/api/mapcore/d;->a:Landroid/graphics/Bitmap;
+    const/4 v2, 0x2
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_c
 
-    iget-object v0, p0, Lcom/amap/api/mapcore/d;->g:Landroid/widget/ImageView;
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcom/amap/api/mapcore/d;->a:[I
 
-    const/4 v1, 0x1
+    sget-object v1, Lcom/amap/api/mapcore/ar;->f:Lcom/amap/api/mapcore/ar;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setClickable(Z)V
+    invoke-virtual {v1}, Lcom/amap/api/mapcore/ar;->ordinal()I
 
-    iget-object v0, p0, Lcom/amap/api/mapcore/d;->g:Landroid/widget/ImageView;
+    move-result v1
 
-    invoke-virtual {v0, v2, v3, v3, v2}, Landroid/widget/ImageView;->setPadding(IIII)V
+    const/4 v2, 0x3
 
-    iget-object v0, p0, Lcom/amap/api/mapcore/d;->g:Landroid/widget/ImageView;
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_b
 
-    new-instance v1, Lcom/amap/api/mapcore/e;
+    :goto_2
+    :try_start_3
+    sget-object v0, Lcom/amap/api/mapcore/d;->a:[I
 
-    invoke-direct {v1, p0}, Lcom/amap/api/mapcore/e;-><init>(Lcom/amap/api/mapcore/d;)V
+    sget-object v1, Lcom/amap/api/mapcore/ar;->d:Lcom/amap/api/mapcore/ar;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+    invoke-virtual {v1}, Lcom/amap/api/mapcore/ar;->ordinal()I
 
-    iget-object v0, p0, Lcom/amap/api/mapcore/d;->g:Landroid/widget/ImageView;
+    move-result v1
 
-    invoke-virtual {p0, v0}, Lcom/amap/api/mapcore/d;->addView(Landroid/view/View;)V
+    const/4 v2, 0x4
 
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_a
+
+    :goto_3
+    :try_start_4
+    sget-object v0, Lcom/amap/api/mapcore/d;->a:[I
+
+    sget-object v1, Lcom/amap/api/mapcore/ar;->g:Lcom/amap/api/mapcore/ar;
+
+    invoke-virtual {v1}, Lcom/amap/api/mapcore/ar;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_9
+
+    :goto_4
+    :try_start_5
+    sget-object v0, Lcom/amap/api/mapcore/d;->a:[I
+
+    sget-object v1, Lcom/amap/api/mapcore/ar;->l:Lcom/amap/api/mapcore/ar;
+
+    invoke-virtual {v1}, Lcom/amap/api/mapcore/ar;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x6
+
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_8
+
+    :goto_5
+    :try_start_6
+    sget-object v0, Lcom/amap/api/mapcore/d;->a:[I
+
+    sget-object v1, Lcom/amap/api/mapcore/ar;->b:Lcom/amap/api/mapcore/ar;
+
+    invoke-virtual {v1}, Lcom/amap/api/mapcore/ar;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x7
+
+    aput v2, v0, v1
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_7
+
+    :goto_6
+    :try_start_7
+    sget-object v0, Lcom/amap/api/mapcore/d;->a:[I
+
+    sget-object v1, Lcom/amap/api/mapcore/ar;->h:Lcom/amap/api/mapcore/ar;
+
+    invoke-virtual {v1}, Lcom/amap/api/mapcore/ar;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0x8
+
+    aput v2, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_6
+
+    :goto_7
+    :try_start_8
+    sget-object v0, Lcom/amap/api/mapcore/d;->a:[I
+
+    sget-object v1, Lcom/amap/api/mapcore/ar;->i:Lcom/amap/api/mapcore/ar;
+
+    invoke-virtual {v1}, Lcom/amap/api/mapcore/ar;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0x9
+
+    aput v2, v0, v1
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_5
+
+    :goto_8
+    :try_start_9
+    sget-object v0, Lcom/amap/api/mapcore/d;->a:[I
+
+    sget-object v1, Lcom/amap/api/mapcore/ar;->j:Lcom/amap/api/mapcore/ar;
+
+    invoke-virtual {v1}, Lcom/amap/api/mapcore/ar;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0xa
+
+    aput v2, v0, v1
+    :try_end_9
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_4
+
+    :goto_9
+    :try_start_a
+    sget-object v0, Lcom/amap/api/mapcore/d;->a:[I
+
+    sget-object v1, Lcom/amap/api/mapcore/ar;->k:Lcom/amap/api/mapcore/ar;
+
+    invoke-virtual {v1}, Lcom/amap/api/mapcore/ar;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0xb
+
+    aput v2, v0, v1
+    :try_end_a
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_3
+
+    :goto_a
+    :try_start_b
+    sget-object v0, Lcom/amap/api/mapcore/d;->a:[I
+
+    sget-object v1, Lcom/amap/api/mapcore/ar;->m:Lcom/amap/api/mapcore/ar;
+
+    invoke-virtual {v1}, Lcom/amap/api/mapcore/ar;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0xc
+
+    aput v2, v0, v1
+    :try_end_b
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_b .. :try_end_b} :catch_2
+
+    :goto_b
+    :try_start_c
+    sget-object v0, Lcom/amap/api/mapcore/d;->a:[I
+
+    sget-object v1, Lcom/amap/api/mapcore/ar;->n:Lcom/amap/api/mapcore/ar;
+
+    invoke-virtual {v1}, Lcom/amap/api/mapcore/ar;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0xd
+
+    aput v2, v0, v1
+    :try_end_c
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_c .. :try_end_c} :catch_1
+
+    :goto_c
+    :try_start_d
+    sget-object v0, Lcom/amap/api/mapcore/d;->a:[I
+
+    sget-object v1, Lcom/amap/api/mapcore/ar;->o:Lcom/amap/api/mapcore/ar;
+
+    invoke-virtual {v1}, Lcom/amap/api/mapcore/ar;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0xe
+
+    aput v2, v0, v1
+    :try_end_d
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_d .. :try_end_d} :catch_0
+
+    :goto_d
     return-void
 
     :catch_0
     move-exception v0
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
+    goto :goto_d
 
-    goto :goto_0
-.end method
-
-
-# virtual methods
-.method public a()V
-    .locals 1
-
-    :try_start_0
-    iget-object v0, p0, Lcom/amap/api/mapcore/d;->a:Landroid/graphics/Bitmap;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/d;->a:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
-
-    :cond_0
-    iget-object v0, p0, Lcom/amap/api/mapcore/d;->b:Landroid/graphics/Bitmap;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/d;->b:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
-
-    :cond_1
-    iget-object v0, p0, Lcom/amap/api/mapcore/d;->b:Landroid/graphics/Bitmap;
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/d;->c:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
-
-    :cond_2
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/amap/api/mapcore/d;->a:Landroid/graphics/Bitmap;
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/amap/api/mapcore/d;->b:Landroid/graphics/Bitmap;
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/amap/api/mapcore/d;->c:Landroid/graphics/Bitmap;
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/d;->d:Landroid/graphics/Bitmap;
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/d;->d:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/amap/api/mapcore/d;->d:Landroid/graphics/Bitmap;
-
-    :cond_3
-    iget-object v0, p0, Lcom/amap/api/mapcore/d;->e:Landroid/graphics/Bitmap;
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/d;->e:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/amap/api/mapcore/d;->e:Landroid/graphics/Bitmap;
-
-    :cond_4
-    iget-object v0, p0, Lcom/amap/api/mapcore/d;->f:Landroid/graphics/Bitmap;
-
-    if-eqz v0, :cond_5
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/d;->f:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/amap/api/mapcore/d;->f:Landroid/graphics/Bitmap;
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
-
-    :cond_5
-    :goto_0
-    return-void
-
-    :catch_0
+    :catch_1
     move-exception v0
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
+    goto :goto_c
 
-    goto :goto_0
-.end method
+    :catch_2
+    move-exception v0
 
-.method public a(Z)V
-    .locals 2
+    goto :goto_b
 
-    iput-boolean p1, p0, Lcom/amap/api/mapcore/d;->i:Z
+    :catch_3
+    move-exception v0
 
-    if-eqz p1, :cond_0
+    goto :goto_a
 
-    iget-object v0, p0, Lcom/amap/api/mapcore/d;->g:Landroid/widget/ImageView;
+    :catch_4
+    move-exception v0
 
-    iget-object v1, p0, Lcom/amap/api/mapcore/d;->a:Landroid/graphics/Bitmap;
+    goto :goto_9
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+    :catch_5
+    move-exception v0
 
-    :goto_0
-    iget-object v0, p0, Lcom/amap/api/mapcore/d;->g:Landroid/widget/ImageView;
+    goto :goto_8
 
-    invoke-virtual {v0}, Landroid/widget/ImageView;->invalidate()V
+    :catch_6
+    move-exception v0
 
-    return-void
+    goto :goto_7
 
-    :cond_0
-    iget-object v0, p0, Lcom/amap/api/mapcore/d;->g:Landroid/widget/ImageView;
+    :catch_7
+    move-exception v0
 
-    iget-object v1, p0, Lcom/amap/api/mapcore/d;->c:Landroid/graphics/Bitmap;
+    goto :goto_6
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+    :catch_8
+    move-exception v0
 
-    goto :goto_0
+    goto :goto_5
+
+    :catch_9
+    move-exception v0
+
+    goto :goto_4
+
+    :catch_a
+    move-exception v0
+
+    goto/16 :goto_3
+
+    :catch_b
+    move-exception v0
+
+    goto/16 :goto_2
+
+    :catch_c
+    move-exception v0
+
+    goto/16 :goto_1
+
+    :catch_d
+    move-exception v0
+
+    goto/16 :goto_0
 .end method

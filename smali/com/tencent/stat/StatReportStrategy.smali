@@ -14,6 +14,8 @@
 
 
 # static fields
+.field private static final synthetic $VALUES:[Lcom/tencent/stat/StatReportStrategy;
+
 .field public static final enum APP_LAUNCH:Lcom/tencent/stat/StatReportStrategy;
 
 .field public static final enum BATCH:Lcom/tencent/stat/StatReportStrategy;
@@ -28,11 +30,9 @@
 
 .field public static final enum PERIOD:Lcom/tencent/stat/StatReportStrategy;
 
-.field private static final synthetic b:[Lcom/tencent/stat/StatReportStrategy;
-
 
 # instance fields
-.field a:I
+.field v:I
 
 
 # direct methods
@@ -149,7 +149,7 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/tencent/stat/StatReportStrategy;->b:[Lcom/tencent/stat/StatReportStrategy;
+    sput-object v0, Lcom/tencent/stat/StatReportStrategy;->$VALUES:[Lcom/tencent/stat/StatReportStrategy;
 
     return-void
 .end method
@@ -164,7 +164,7 @@
 
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput p3, p0, Lcom/tencent/stat/StatReportStrategy;->a:I
+    iput p3, p0, Lcom/tencent/stat/StatReportStrategy;->v:I
 
     return-void
 .end method
@@ -226,7 +226,7 @@
 .method public static values()[Lcom/tencent/stat/StatReportStrategy;
     .locals 1
 
-    sget-object v0, Lcom/tencent/stat/StatReportStrategy;->b:[Lcom/tencent/stat/StatReportStrategy;
+    sget-object v0, Lcom/tencent/stat/StatReportStrategy;->$VALUES:[Lcom/tencent/stat/StatReportStrategy;
 
     invoke-virtual {v0}, [Lcom/tencent/stat/StatReportStrategy;->clone()Ljava/lang/Object;
 
@@ -242,7 +242,7 @@
 .method public getIntValue()I
     .locals 1
 
-    iget v0, p0, Lcom/tencent/stat/StatReportStrategy;->a:I
+    iget v0, p0, Lcom/tencent/stat/StatReportStrategy;->v:I
 
     return v0
 .end method

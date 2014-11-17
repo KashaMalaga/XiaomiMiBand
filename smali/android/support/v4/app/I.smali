@@ -2,18 +2,26 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Landroid/support/v4/app/ListFragment;
+.field final synthetic a:Ljava/lang/String;
+
+.field final synthetic b:I
+
+.field final synthetic c:Landroid/support/v4/app/F;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/app/ListFragment;)V
+.method constructor <init>(Landroid/support/v4/app/F;Ljava/lang/String;I)V
     .locals 0
 
-    iput-object p1, p0, Landroid/support/v4/app/I;->a:Landroid/support/v4/app/ListFragment;
+    iput-object p1, p0, Landroid/support/v4/app/I;->c:Landroid/support/v4/app/F;
+
+    iput-object p2, p0, Landroid/support/v4/app/I;->a:Ljava/lang/String;
+
+    iput p3, p0, Landroid/support/v4/app/I;->b:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,31 +30,24 @@
 
 
 # virtual methods
-.method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
+.method public run()V
+    .locals 5
 
-    iget-object v0, p0, Landroid/support/v4/app/I;->a:Landroid/support/v4/app/ListFragment;
+    iget-object v0, p0, Landroid/support/v4/app/I;->c:Landroid/support/v4/app/F;
 
-    move-object v1, p1
+    iget-object v1, p0, Landroid/support/v4/app/I;->c:Landroid/support/v4/app/F;
 
-    check-cast v1, Landroid/widget/ListView;
+    iget-object v1, v1, Landroid/support/v4/app/F;->u:Landroid/support/v4/app/FragmentActivity;
 
-    move-object v2, p2
+    iget-object v1, v1, Landroid/support/v4/app/FragmentActivity;->d:Landroid/os/Handler;
 
-    move v3, p3
+    iget-object v2, p0, Landroid/support/v4/app/I;->a:Ljava/lang/String;
 
-    move-wide v4, p4
+    const/4 v3, -0x1
 
-    invoke-virtual/range {v0 .. v5}, Landroid/support/v4/app/ListFragment;->onListItemClick(Landroid/widget/ListView;Landroid/view/View;IJ)V
+    iget v4, p0, Landroid/support/v4/app/I;->b:I
+
+    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/support/v4/app/F;->a(Landroid/os/Handler;Ljava/lang/String;II)Z
 
     return-void
 .end method

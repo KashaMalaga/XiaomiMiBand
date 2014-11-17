@@ -1,48 +1,82 @@
 .class Lcn/com/smartdevices/bracelet/view/G;
-.super Landroid/database/DataSetObserver;
+.super Ljava/lang/Object;
 
-
-# instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/view/VerticalViewPager;
+# interfaces
+.implements Lcn/com/smartdevices/bracelet/view/F;
 
 
 # direct methods
-.method private constructor <init>(Lcn/com/smartdevices/bracelet/view/VerticalViewPager;)V
+.method private constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/G;->a:Lcn/com/smartdevices/bracelet/view/VerticalViewPager;
-
-    invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/view/VerticalViewPager;Lcn/com/smartdevices/bracelet/view/G;)V
+.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/view/G;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/view/G;-><init>(Lcn/com/smartdevices/bracelet/view/VerticalViewPager;)V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/view/G;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onChanged()V
-    .locals 1
+.method public a(Landroid/view/View;I)Z
+    .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/G;->a:Lcn/com/smartdevices/bracelet/view/VerticalViewPager;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->b()V
+    check-cast p1, Landroid/support/v4/view/ViewPager;
 
-    return-void
+    invoke-virtual {p1}, Landroid/support/v4/view/ViewPager;->b()Landroid/support/v4/view/ad;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Landroid/support/v4/view/ad;->b()I
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
+    invoke-virtual {p1}, Landroid/support/v4/view/ViewPager;->c()I
+
+    move-result v2
+
+    if-gez p2, :cond_2
+
+    invoke-virtual {v1}, Landroid/support/v4/view/ad;->b()I
+
+    move-result v1
+
+    add-int/lit8 v1, v1, -0x1
+
+    if-lt v2, v1, :cond_3
+
+    :cond_2
+    if-lez p2, :cond_0
+
+    if-lez v2, :cond_0
+
+    :cond_3
+    const/4 v0, 0x1
+
+    goto :goto_0
 .end method
 
-.method public onInvalidated()V
+.method public b(Landroid/view/View;I)Z
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/G;->a:Lcn/com/smartdevices/bracelet/view/VerticalViewPager;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/view/VerticalViewPager;->b()V
-
-    return-void
+    return v0
 .end method

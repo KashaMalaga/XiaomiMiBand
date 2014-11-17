@@ -70,15 +70,15 @@
 .method private a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
     .locals 2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readLoginData()Lcn/com/smartdevices/bracelet/model/LoginData;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->b()Lcn/com/smartdevices/bracelet/model/LoginData;
 
     move-result-object v0
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/lab/ui/g;
+    new-instance v1, Lcn/com/smartdevices/bracelet/lab/ui/i;
 
-    invoke-direct {v1, p0, p1}, Lcn/com/smartdevices/bracelet/lab/ui/g;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
+    invoke-direct {v1, p0, p1}, Lcn/com/smartdevices/bracelet/lab/ui/i;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 
-    invoke-static {v0, p1, v1}, Lcn/com/smartdevices/bracelet/webapi/WebAPI;->updateProfile(Lcn/com/smartdevices/bracelet/model/LoginData;Lcn/com/smartdevices/bracelet/model/PersonInfo;Lcom/loopj/android/http/AsyncHttpResponseHandler;)V
+    invoke-static {v0, p1, v1}, Lcn/com/smartdevices/bracelet/d/d;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Lcn/com/smartdevices/bracelet/model/PersonInfo;Lcom/c/a/a/h;)V
 
     return-void
 .end method
@@ -86,20 +86,20 @@
 .method private a(Z)V
     .locals 3
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/BleTask/BleDisconnectedReminderTask;
+    new-instance v1, Lcn/com/smartdevices/bracelet/a/d;
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/lab/ui/f;
+    new-instance v2, Lcn/com/smartdevices/bracelet/lab/ui/h;
 
-    invoke-direct {v2, p0, p1}, Lcn/com/smartdevices/bracelet/lab/ui/f;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;Z)V
+    invoke-direct {v2, p0, p1}, Lcn/com/smartdevices/bracelet/lab/ui/h;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;Z)V
 
     if-eqz p1, :cond_0
 
     const/4 v0, 0x1
 
     :goto_0
-    invoke-direct {v1, v2, v0}, Lcn/com/smartdevices/bracelet/BleTask/BleDisconnectedReminderTask;-><init>(Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;B)V
+    invoke-direct {v1, v2, v0}, Lcn/com/smartdevices/bracelet/a/d;-><init>(Lcn/com/smartdevices/bracelet/a/b;B)V
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/BleTask/BleDisconnectedReminderTask;->work()V
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/a/d;->c()V
 
     return-void
 
@@ -151,52 +151,36 @@
 
 
 # virtual methods
-.method public onBleStatusChanged(Lcom/xiaomi/hm/bleservice/HwConnStatus;)V
-    .locals 1
-
-    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->isConnectedSucc()Z
-
-    move-result v0
-
-    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->b(Z)V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->applyStatusBarTintAuto()V
-
-    return-void
-.end method
-
 .method protected onCreate(Landroid/os/Bundle;)V
-    .locals 5
+    .locals 4
 
     const/4 v1, 0x1
 
-    const/4 v2, 0x0
-
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f03000f
+    const v0, 0x7f030010
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->setContentView(I)V
 
-    const v0, 0x7f070046
+    const v0, 0x7f07004b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    new-instance v3, Lcn/com/smartdevices/bracelet/lab/ui/c;
+    new-instance v2, Lcn/com/smartdevices/bracelet/lab/ui/e;
 
-    invoke-direct {v3, p0}, Lcn/com/smartdevices/bracelet/lab/ui/c;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;)V
+    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/lab/ui/e;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;)V
 
-    invoke-virtual {v0, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/Keeper;->readPersonInfo()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->h()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v0
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-    const v0, 0x7f070047
+    const v0, 0x7f07004c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->findViewById(I)Landroid/view/View;
 
@@ -208,13 +192,13 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->c:Landroid/widget/LinearLayout;
 
-    new-instance v3, Lcn/com/smartdevices/bracelet/lab/ui/d;
+    new-instance v2, Lcn/com/smartdevices/bracelet/lab/ui/f;
 
-    invoke-direct {v3, p0}, Lcn/com/smartdevices/bracelet/lab/ui/d;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;)V
+    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/lab/ui/f;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;)V
 
-    invoke-virtual {v0, v3}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070048
+    const v0, 0x7f07004d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->findViewById(I)Landroid/view/View;
 
@@ -226,29 +210,29 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->a:Ljava/lang/String;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string v4, "reminder:"
+    const-string v3, "reminder:"
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getMiliDisconnectedReminder()I
+    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getMiliDisconnectedReminder()I
 
-    move-result v4
+    move-result v3
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-static {v0, v3}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->d:Landroid/widget/Switch;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->d:Landroid/widget/Switch;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
@@ -261,17 +245,17 @@
     move v0, v1
 
     :goto_0
-    invoke-virtual {v3, v0}, Landroid/widget/Switch;->setChecked(Z)V
+    invoke-virtual {v2, v0}, Landroid/widget/Switch;->setChecked(Z)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->d:Landroid/widget/Switch;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/lab/ui/e;
+    new-instance v1, Lcn/com/smartdevices/bracelet/lab/ui/g;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/lab/ui/e;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/lab/ui/g;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    const v0, 0x7f070049
+    const v0, 0x7f07004e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->findViewById(I)Landroid/view/View;
 
@@ -283,18 +267,12 @@
 
     move-result-object v0
 
-    const-string v1, "onBleStatusChanged"
-
-    const-class v3, Lcom/xiaomi/hm/bleservice/HwConnStatus;
-
-    new-array v2, v2, [Ljava/lang/Class;
-
-    invoke-virtual {v0, p0, v1, v3, v2}, Lde/greenrobot/event/EventBus;->register(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Class;)V
+    invoke-virtual {v0, p0}, Lde/greenrobot/event/EventBus;->register(Ljava/lang/Object;)V
 
     return-void
 
     :cond_0
-    move v0, v2
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method
@@ -309,6 +287,20 @@
     move-result-object v0
 
     invoke-virtual {v0, p0}, Lde/greenrobot/event/EventBus;->unregister(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public onEvent(Lcom/xiaomi/hm/bleservice/HwConnStatus;)V
+    .locals 1
+
+    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->h()Z
+
+    move-result v0
+
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->b(Z)V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->applyStatusBarTintAuto()V
 
     return-void
 .end method
@@ -337,7 +329,7 @@
     invoke-virtual {v0, v1}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
 
     :cond_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/BLEManager;->isMiliConnected()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->c()Z
 
     move-result v0
 

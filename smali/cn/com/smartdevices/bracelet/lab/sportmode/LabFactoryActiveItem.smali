@@ -3,19 +3,19 @@
 
 
 # instance fields
-.field private a:Lcn/com/smartdevices/bracelet/lua/LuaAction;
+.field private mCalories:I
 
-.field private b:I
+.field private mCount:I
 
-.field private c:I
+.field private mLuaAction:Lcn/com/smartdevices/bracelet/lua/LuaAction;
 
-.field private d:I
+.field private mMode:I
 
-.field private e:I
+.field private mShareData:Lcn/com/smartdevices/bracelet/model/ShareData;
 
-.field private f:I
+.field private mStartTime:I
 
-.field private g:Lcn/com/smartdevices/bracelet/model/ShareData;
+.field private mStopTime:I
 
 
 # direct methods
@@ -28,21 +28,21 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->a:Lcn/com/smartdevices/bracelet/lua/LuaAction;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->mLuaAction:Lcn/com/smartdevices/bracelet/lua/LuaAction;
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->b:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->mStartTime:I
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->c:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->mStopTime:I
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->d:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->mMode:I
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->e:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->mCalories:I
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->f:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->mCount:I
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->g:Lcn/com/smartdevices/bracelet/model/ShareData;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->mShareData:Lcn/com/smartdevices/bracelet/model/ShareData;
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->d:I
+    iput p1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->mMode:I
 
     return-void
 .end method
@@ -54,19 +54,19 @@
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->b:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->mStartTime:I
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->c:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->mStopTime:I
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->d:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->mMode:I
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->e:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->mCalories:I
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->f:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->mCount:I
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->g:Lcn/com/smartdevices/bracelet/model/ShareData;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->mShareData:Lcn/com/smartdevices/bracelet/model/ShareData;
 
     return-void
 .end method
@@ -74,7 +74,7 @@
 .method public getCalories()I
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->e:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->mCalories:I
 
     return v0
 .end method
@@ -82,7 +82,7 @@
 .method public getCount()I
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->f:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->mCount:I
 
     return v0
 .end method
@@ -90,11 +90,11 @@
 .method public getKey()I
     .locals 2
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->b:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->mStartTime:I
 
     shl-int/lit8 v0, v0, 0x10
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->c:I
+    iget v1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->mStopTime:I
 
     or-int/2addr v0, v1
 
@@ -104,7 +104,7 @@
 .method public getLuaAction()Lcn/com/smartdevices/bracelet/lua/LuaAction;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->a:Lcn/com/smartdevices/bracelet/lua/LuaAction;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->mLuaAction:Lcn/com/smartdevices/bracelet/lua/LuaAction;
 
     return-object v0
 .end method
@@ -112,7 +112,7 @@
 .method public getMode()I
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->d:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->mMode:I
 
     return v0
 .end method
@@ -120,7 +120,7 @@
 .method public getShareData()Lcn/com/smartdevices/bracelet/model/ShareData;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->g:Lcn/com/smartdevices/bracelet/model/ShareData;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->mShareData:Lcn/com/smartdevices/bracelet/model/ShareData;
 
     return-object v0
 .end method
@@ -128,7 +128,7 @@
 .method public getStart()I
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->b:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->mStartTime:I
 
     return v0
 .end method
@@ -136,7 +136,7 @@
 .method public getStop()I
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->c:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->mStopTime:I
 
     return v0
 .end method
@@ -144,7 +144,7 @@
 .method public setCalories(I)V
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->e:I
+    iput p1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->mCalories:I
 
     return-void
 .end method
@@ -152,7 +152,7 @@
 .method public setCount(I)V
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->f:I
+    iput p1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->mCount:I
 
     return-void
 .end method
@@ -164,7 +164,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->a:Lcn/com/smartdevices/bracelet/lua/LuaAction;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->mLuaAction:Lcn/com/smartdevices/bracelet/lua/LuaAction;
 
     return-void
 .end method
@@ -172,7 +172,7 @@
 .method public setMode(I)V
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->d:I
+    iput p1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->mMode:I
 
     return-void
 .end method
@@ -180,7 +180,7 @@
 .method public setShareData(Lcn/com/smartdevices/bracelet/model/ShareData;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->g:Lcn/com/smartdevices/bracelet/model/ShareData;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->mShareData:Lcn/com/smartdevices/bracelet/model/ShareData;
 
     return-void
 .end method
@@ -188,7 +188,7 @@
 .method public setStart(I)V
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->b:I
+    iput p1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->mStartTime:I
 
     return-void
 .end method
@@ -196,7 +196,7 @@
 .method public setStop(I)V
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->c:I
+    iput p1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;->mStopTime:I
 
     return-void
 .end method

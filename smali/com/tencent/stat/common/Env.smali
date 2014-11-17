@@ -3,15 +3,15 @@
 
 
 # static fields
-.field static a:Lcom/tencent/stat/common/b;
+.field private static attr_json:Lorg/json/JSONObject;
 
-.field private static d:Lorg/json/JSONObject;
+.field static basicEnv:Lcom/tencent/stat/common/Env$BasicEnv;
 
 
 # instance fields
-.field b:Ljava/lang/Integer;
+.field conn:Ljava/lang/String;
 
-.field c:Ljava/lang/String;
+.field tel_network:Ljava/lang/Integer;
 
 
 # direct methods
@@ -20,7 +20,7 @@
 
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/stat/common/Env;->d:Lorg/json/JSONObject;
+    sput-object v0, Lcom/tencent/stat/common/Env;->attr_json:Lorg/json/JSONObject;
 
     return-void
 .end method
@@ -32,11 +32,11 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/stat/common/Env;->b:Ljava/lang/Integer;
+    iput-object v0, p0, Lcom/tencent/stat/common/Env;->tel_network:Ljava/lang/Integer;
 
-    iput-object v0, p0, Lcom/tencent/stat/common/Env;->c:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/stat/common/Env;->conn:Ljava/lang/String;
 
-    invoke-static {p1}, Lcom/tencent/stat/common/Env;->a(Landroid/content/Context;)Lcom/tencent/stat/common/b;
+    invoke-static {p1}, Lcom/tencent/stat/common/Env;->getBasicEnv(Landroid/content/Context;)Lcom/tencent/stat/common/Env$BasicEnv;
 
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
@@ -46,40 +46,15 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/stat/common/Env;->b:Ljava/lang/Integer;
+    iput-object v0, p0, Lcom/tencent/stat/common/Env;->tel_network:Ljava/lang/Integer;
 
     invoke-static {p1}, Lcom/tencent/stat/common/StatCommonHelper;->getLinkedWay(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/stat/common/Env;->c:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/stat/common/Env;->conn:Ljava/lang/String;
 
     return-void
-.end method
-
-.method static a(Landroid/content/Context;)Lcom/tencent/stat/common/b;
-    .locals 3
-
-    sget-object v0, Lcom/tencent/stat/common/Env;->a:Lcom/tencent/stat/common/b;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Lcom/tencent/stat/common/b;
-
-    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lcom/tencent/stat/common/b;-><init>(Landroid/content/Context;Lcom/tencent/stat/common/a;)V
-
-    sput-object v0, Lcom/tencent/stat/common/Env;->a:Lcom/tencent/stat/common/b;
-
-    :cond_0
-    sget-object v0, Lcom/tencent/stat/common/Env;->a:Lcom/tencent/stat/common/b;
-
-    return-object v0
 .end method
 
 .method public static appendEnvAttr(Landroid/content/Context;Ljava/util/Map;)V
@@ -102,7 +77,7 @@
     return-void
 
     :cond_1
-    sget-object v0, Lcom/tencent/stat/common/Env;->d:Lorg/json/JSONObject;
+    sget-object v0, Lcom/tencent/stat/common/Env;->attr_json:Lorg/json/JSONObject;
 
     if-nez v0, :cond_2
 
@@ -110,7 +85,7 @@
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    sput-object v0, Lcom/tencent/stat/common/Env;->d:Lorg/json/JSONObject;
+    sput-object v0, Lcom/tencent/stat/common/Env;->attr_json:Lorg/json/JSONObject;
 
     :cond_2
     invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
@@ -134,7 +109,7 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    sget-object v3, Lcom/tencent/stat/common/Env;->d:Lorg/json/JSONObject;
+    sget-object v3, Lcom/tencent/stat/common/Env;->attr_json:Lorg/json/JSONObject;
 
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -151,6 +126,31 @@
     goto :goto_0
 .end method
 
+.method static getBasicEnv(Landroid/content/Context;)Lcom/tencent/stat/common/Env$BasicEnv;
+    .locals 3
+
+    sget-object v0, Lcom/tencent/stat/common/Env;->basicEnv:Lcom/tencent/stat/common/Env$BasicEnv;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lcom/tencent/stat/common/Env$BasicEnv;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lcom/tencent/stat/common/Env$BasicEnv;-><init>(Landroid/content/Context;Lcom/tencent/stat/common/Env$1;)V
+
+    sput-object v0, Lcom/tencent/stat/common/Env;->basicEnv:Lcom/tencent/stat/common/Env$BasicEnv;
+
+    :cond_0
+    sget-object v0, Lcom/tencent/stat/common/Env;->basicEnv:Lcom/tencent/stat/common/Env$BasicEnv;
+
+    return-object v0
+.end method
+
 
 # virtual methods
 .method public encode(Lorg/json/JSONObject;)V
@@ -160,28 +160,28 @@
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    sget-object v1, Lcom/tencent/stat/common/Env;->a:Lcom/tencent/stat/common/b;
+    sget-object v1, Lcom/tencent/stat/common/Env;->basicEnv:Lcom/tencent/stat/common/Env$BasicEnv;
 
     if-eqz v1, :cond_0
 
-    sget-object v1, Lcom/tencent/stat/common/Env;->a:Lcom/tencent/stat/common/b;
+    sget-object v1, Lcom/tencent/stat/common/Env;->basicEnv:Lcom/tencent/stat/common/Env$BasicEnv;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/stat/common/b;->a(Lorg/json/JSONObject;)V
+    invoke-virtual {v1, v0}, Lcom/tencent/stat/common/Env$BasicEnv;->encode(Lorg/json/JSONObject;)V
 
     :cond_0
     const-string v1, "cn"
 
-    iget-object v2, p0, Lcom/tencent/stat/common/Env;->c:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/stat/common/Env;->conn:Ljava/lang/String;
 
     invoke-static {v0, v1, v2}, Lcom/tencent/stat/common/StatCommonHelper;->jsonPut(Lorg/json/JSONObject;Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/tencent/stat/common/Env;->b:Ljava/lang/Integer;
+    iget-object v1, p0, Lcom/tencent/stat/common/Env;->tel_network:Ljava/lang/Integer;
 
     if-eqz v1, :cond_1
 
     const-string v1, "tn"
 
-    iget-object v2, p0, Lcom/tencent/stat/common/Env;->b:Ljava/lang/Integer;
+    iget-object v2, p0, Lcom/tencent/stat/common/Env;->tel_network:Ljava/lang/Integer;
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
@@ -190,11 +190,11 @@
 
     invoke-virtual {p1, v1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    sget-object v0, Lcom/tencent/stat/common/Env;->d:Lorg/json/JSONObject;
+    sget-object v0, Lcom/tencent/stat/common/Env;->attr_json:Lorg/json/JSONObject;
 
     if-eqz v0, :cond_2
 
-    sget-object v0, Lcom/tencent/stat/common/Env;->d:Lorg/json/JSONObject;
+    sget-object v0, Lcom/tencent/stat/common/Env;->attr_json:Lorg/json/JSONObject;
 
     invoke-virtual {v0}, Lorg/json/JSONObject;->length()I
 
@@ -204,7 +204,7 @@
 
     const-string v0, "eva"
 
-    sget-object v1, Lcom/tencent/stat/common/Env;->d:Lorg/json/JSONObject;
+    sget-object v1, Lcom/tencent/stat/common/Env;->attr_json:Lorg/json/JSONObject;
 
     invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 

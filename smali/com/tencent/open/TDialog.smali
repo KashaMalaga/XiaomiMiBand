@@ -44,7 +44,7 @@
 # instance fields
 .field private f:Ljava/lang/String;
 
-.field private g:Lcom/tencent/open/o;
+.field private g:Lcom/tencent/open/TDialog$OnTimeListener;
 
 .field private h:Lcom/tencent/tauth/IUiListener;
 
@@ -105,7 +105,7 @@
 
     iput-object p3, p0, Lcom/tencent/open/TDialog;->f:Ljava/lang/String;
 
-    new-instance v0, Lcom/tencent/open/o;
+    new-instance v0, Lcom/tencent/open/TDialog$OnTimeListener;
 
     invoke-virtual {p5}, Lcom/tencent/connect/auth/QQToken;->getAppId()Ljava/lang/String;
 
@@ -119,19 +119,19 @@
 
     move-object v5, p4
 
-    invoke-direct/range {v0 .. v5}, Lcom/tencent/open/o;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/tencent/tauth/IUiListener;)V
+    invoke-direct/range {v0 .. v5}, Lcom/tencent/open/TDialog$OnTimeListener;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/tencent/tauth/IUiListener;)V
 
-    iput-object v0, p0, Lcom/tencent/open/TDialog;->g:Lcom/tencent/open/o;
+    iput-object v0, p0, Lcom/tencent/open/TDialog;->g:Lcom/tencent/open/TDialog$OnTimeListener;
 
-    new-instance v0, Lcom/tencent/open/p;
+    new-instance v0, Lcom/tencent/open/TDialog$THandler;
 
-    iget-object v1, p0, Lcom/tencent/open/TDialog;->g:Lcom/tencent/open/o;
+    iget-object v1, p0, Lcom/tencent/open/TDialog;->g:Lcom/tencent/open/TDialog$OnTimeListener;
 
     invoke-virtual {p1}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v2
 
-    invoke-direct {v0, v1, v2}, Lcom/tencent/open/p;-><init>(Lcom/tencent/open/o;Landroid/os/Looper;)V
+    invoke-direct {v0, v1, v2}, Lcom/tencent/open/TDialog$THandler;-><init>(Lcom/tencent/open/TDialog$OnTimeListener;Landroid/os/Looper;)V
 
     iput-object v0, p0, Lcom/tencent/open/TDialog;->m:Landroid/os/Handler;
 
@@ -166,10 +166,10 @@
     return-void
 .end method
 
-.method static synthetic b(Lcom/tencent/open/TDialog;)Lcom/tencent/open/o;
+.method static synthetic b(Lcom/tencent/open/TDialog;)Lcom/tencent/open/TDialog$OnTimeListener;
     .locals 1
 
-    iget-object v0, p0, Lcom/tencent/open/TDialog;->g:Lcom/tencent/open/o;
+    iget-object v0, p0, Lcom/tencent/open/TDialog;->g:Lcom/tencent/open/TDialog$OnTimeListener;
 
     return-object v0
 .end method
@@ -514,9 +514,9 @@
 
     iget-object v0, p0, Lcom/tencent/open/TDialog;->j:Landroid/webkit/WebView;
 
-    new-instance v1, Lcom/tencent/open/m;
+    new-instance v1, Lcom/tencent/open/TDialog$FbWebViewClient;
 
-    invoke-direct {v1, p0, v5}, Lcom/tencent/open/m;-><init>(Lcom/tencent/open/TDialog;Lcom/tencent/open/l;)V
+    invoke-direct {v1, p0, v5}, Lcom/tencent/open/TDialog$FbWebViewClient;-><init>(Lcom/tencent/open/TDialog;Lcom/tencent/open/TDialog$1;)V
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
@@ -599,9 +599,9 @@
 
     iget-object v0, p0, Lcom/tencent/open/TDialog;->jsBridge:Lcom/tencent/open/a;
 
-    new-instance v1, Lcom/tencent/open/n;
+    new-instance v1, Lcom/tencent/open/TDialog$JsListener;
 
-    invoke-direct {v1, p0, v5}, Lcom/tencent/open/n;-><init>(Lcom/tencent/open/TDialog;Lcom/tencent/open/l;)V
+    invoke-direct {v1, p0, v5}, Lcom/tencent/open/TDialog$JsListener;-><init>(Lcom/tencent/open/TDialog;Lcom/tencent/open/TDialog$1;)V
 
     const-string v2, "sdk_js_if"
 
@@ -836,9 +836,9 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/open/TDialog;->g:Lcom/tencent/open/o;
+    iget-object v0, p0, Lcom/tencent/open/TDialog;->g:Lcom/tencent/open/TDialog$OnTimeListener;
 
-    invoke-virtual {v0}, Lcom/tencent/open/o;->onCancel()V
+    invoke-virtual {v0}, Lcom/tencent/open/TDialog$OnTimeListener;->onCancel()V
 
     :cond_0
     invoke-super {p0}, Lcom/tencent/open/d;->onStop()V

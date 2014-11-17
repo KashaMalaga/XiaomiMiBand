@@ -1,44 +1,42 @@
 .class Lcn/com/smartdevices/bracelet/ui/S;
-.super Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lcn/com/smartdevices/bracelet/chart/c/o;
 
 
 # instance fields
-.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/DynamicFragment;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/M;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/DynamicFragment;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/M;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/S;->b:Lcn/com/smartdevices/bracelet/ui/DynamicFragment;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/S;->a:Lcn/com/smartdevices/bracelet/ui/M;
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onFailed(Ljava/lang/Object;)V
-    .locals 0
+.method public a(I)V
+    .locals 1
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;->onFailed(Ljava/lang/Object;)V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/S;->a:Lcn/com/smartdevices/bracelet/ui/M;
 
-    return-void
-.end method
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/M;->getActivity()Landroid/app/Activity;
 
-.method public onFinish(Ljava/lang/Object;)V
-    .locals 0
+    move-result-object v0
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;->onFinish(Ljava/lang/Object;)V
+    if-eqz v0, :cond_0
 
-    return-void
-.end method
+    check-cast v0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;
 
-.method public onStart()V
-    .locals 0
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->applyStatusBarTint(I)V
 
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;->onStart()V
-
+    :cond_0
     return-void
 .end method

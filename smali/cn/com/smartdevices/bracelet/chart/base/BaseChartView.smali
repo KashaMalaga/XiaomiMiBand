@@ -6,9 +6,9 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "<T:",
-        "Lcn/com/smartdevices/bracelet/chart/base/BaseChart",
+        "Lcn/com/smartdevices/bracelet/chart/base/g",
         "<+",
-        "Lcn/com/smartdevices/bracelet/chart/base/Chart$Item;",
+        "Lcn/com/smartdevices/bracelet/chart/base/k;",
         ">;>",
         "Landroid/view/View;"
     }
@@ -16,15 +16,11 @@
 
 
 # static fields
-.field private static final a:Ljava/lang/String; = "Chart.BaseView"
+.field private static final l:Ljava/lang/String; = "Chart.BaseView"
 
 
 # instance fields
-.field protected mAnim:Landroid/animation/Animator;
-
-.field protected mAnimFactor:F
-
-.field protected mChart:Lcn/com/smartdevices/bracelet/chart/base/BaseChart;
+.field protected a:Lcn/com/smartdevices/bracelet/chart/base/g;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "TT;"
@@ -32,21 +28,25 @@
     .end annotation
 .end field
 
-.field protected mDuration:J
+.field protected b:Lcn/com/smartdevices/bracelet/chart/b/c;
 
-.field protected mInterpolator:Landroid/view/animation/Interpolator;
+.field protected c:Z
 
-.field protected mIsAttached:Z
+.field protected d:Lcn/com/smartdevices/bracelet/chart/base/l;
 
-.field protected mIsScrollingPerformed:Z
+.field protected e:Z
 
-.field protected mLoader:Lcn/com/smartdevices/bracelet/chart/data/ChartDataLoader;
+.field protected f:I
 
-.field protected mScrollable:Z
+.field protected g:Z
 
-.field protected mScroller:Lcn/com/smartdevices/bracelet/chart/base/ChartScroller;
+.field protected h:Landroid/view/animation/Interpolator;
 
-.field protected mScrollingOffset:I
+.field protected i:J
+
+.field protected j:F
+
+.field protected k:Landroid/animation/Animator;
 
 
 # direct methods
@@ -77,21 +77,21 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->mIsAttached:Z
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->g:Z
 
     const/high16 v0, 0x3f800000
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->mAnimFactor:F
+    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->j:F
 
     new-instance v0, Landroid/view/animation/LinearInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->mInterpolator:Landroid/view/animation/Interpolator;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->h:Landroid/view/animation/Interpolator;
 
     const-wide/16 v0, 0x1f4
 
-    iput-wide v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->mDuration:J
+    iput-wide v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->i:J
 
     return-void
 .end method
@@ -106,9 +106,9 @@
 
     if-eqz p2, :cond_1
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->animRefresh()Landroid/animation/Animator;
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->a()Landroid/animation/Animator;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->mAnim:Landroid/animation/Animator;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->k:Landroid/animation/Animator;
 
     invoke-virtual {v0}, Landroid/animation/Animator;->isStarted()Z
 
@@ -116,7 +116,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->mAnim:Landroid/animation/Animator;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->k:Landroid/animation/Animator;
 
     invoke-virtual {v0}, Landroid/animation/Animator;->start()V
 
@@ -125,7 +125,7 @@
     return-void
 
     :cond_1
-    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->mAnimFactor:F
+    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->j:F
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->postInvalidateOnAnimation()V
 
@@ -134,28 +134,84 @@
 
 
 # virtual methods
-.method public animRefresh()Landroid/animation/Animator;
+.method public a()Landroid/animation/Animator;
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->mAnim:Landroid/animation/Animator;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->k:Landroid/animation/Animator;
 
     if-nez v0, :cond_0
 
-    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->mDuration:J
+    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->i:J
 
-    invoke-virtual {p0, v0, v1}, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->animRefresh(J)Landroid/animation/Animator;
+    invoke-virtual {p0, v0, v1}, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->d(J)Landroid/animation/Animator;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->mAnim:Landroid/animation/Animator;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->k:Landroid/animation/Animator;
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->mAnim:Landroid/animation/Animator;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->k:Landroid/animation/Animator;
 
     return-object v0
 .end method
 
-.method public animRefresh(J)Landroid/animation/Animator;
+.method public a(F)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->a(FZ)V
+
+    return-void
+.end method
+
+.method public a(Lcn/com/smartdevices/bracelet/chart/b/c;)V
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->b:Lcn/com/smartdevices/bracelet/chart/b/c;
+
+    return-void
+.end method
+
+.method public a(Z)V
+    .locals 1
+
+    if-eqz p1, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-direct {p0, v0, p1}, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->a(FZ)V
+
+    return-void
+
+    :cond_0
+    const/high16 v0, 0x3f800000
+
+    goto :goto_0
+.end method
+
+.method public b(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->c:Z
+
+    return-void
+.end method
+
+.method public c()V
+    .locals 2
+
+    const/high16 v0, 0x3f800000
+
+    const/4 v1, 0x0
+
+    invoke-direct {p0, v0, v1}, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->a(FZ)V
+
+    return-void
+.end method
+
+.method public d(J)Landroid/animation/Animator;
     .locals 3
 
     const/4 v0, 0x1
@@ -174,63 +230,63 @@
 
     invoke-virtual {v0, p1, p2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->mInterpolator:Landroid/view/animation/Interpolator;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->h:Landroid/view/animation/Interpolator;
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/chart/base/a;
+    new-instance v1, Lcn/com/smartdevices/bracelet/chart/base/h;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/chart/base/a;-><init>(Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/chart/base/h;-><init>(Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
     return-object v0
 .end method
 
-.method public attach()V
+.method public e()V
     .locals 1
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->mIsAttached:Z
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->g:Z
 
     return-void
 .end method
 
-.method public detach()V
+.method public f()V
     .locals 1
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->mIsAttached:Z
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->g:Z
 
     return-void
 .end method
 
-.method public getDataLoader()Lcn/com/smartdevices/bracelet/chart/data/ChartDataLoader;
+.method public g()Z
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->mLoader:Lcn/com/smartdevices/bracelet/chart/data/ChartDataLoader;
-
-    return-object v0
-.end method
-
-.method public isAttached()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->mIsAttached:Z
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->g:Z
 
     return v0
+.end method
+
+.method public h()Lcn/com/smartdevices/bracelet/chart/b/c;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->b:Lcn/com/smartdevices/bracelet/chart/b/c;
+
+    return-object v0
 .end method
 
 .method protected onDraw(Landroid/graphics/Canvas;)V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->mChart:Lcn/com/smartdevices/bracelet/chart/base/BaseChart;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->mAnimFactor:F
+    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->j:F
 
-    invoke-virtual {v0, p1, v1}, Lcn/com/smartdevices/bracelet/chart/base/BaseChart;->draw(Landroid/graphics/Canvas;F)V
+    invoke-virtual {v0, p1, v1}, Lcn/com/smartdevices/bracelet/chart/base/g;->a(Landroid/graphics/Canvas;F)V
 
     return-void
 .end method
@@ -270,65 +326,9 @@
 
     iput v1, v0, Landroid/graphics/Rect;->bottom:I
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->mChart:Lcn/com/smartdevices/bracelet/chart/base/BaseChart;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
 
-    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/chart/base/BaseChart;->setRect(Landroid/graphics/Rect;)V
-
-    return-void
-.end method
-
-.method public refresh()V
-    .locals 2
-
-    const/high16 v0, 0x3f800000
-
-    const/4 v1, 0x0
-
-    invoke-direct {p0, v0, v1}, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->a(FZ)V
-
-    return-void
-.end method
-
-.method public refresh(F)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->a(FZ)V
-
-    return-void
-.end method
-
-.method public refresh(Z)V
-    .locals 1
-
-    if-eqz p1, :cond_0
-
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-direct {p0, v0, p1}, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->a(FZ)V
-
-    return-void
-
-    :cond_0
-    const/high16 v0, 0x3f800000
-
-    goto :goto_0
-.end method
-
-.method public setDataLoader(Lcn/com/smartdevices/bracelet/chart/data/ChartDataLoader;)V
-    .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->mLoader:Lcn/com/smartdevices/bracelet/chart/data/ChartDataLoader;
-
-    return-void
-.end method
-
-.method public setScrollable(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->mScrollable:Z
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/chart/base/g;->a(Landroid/graphics/Rect;)V
 
     return-void
 .end method

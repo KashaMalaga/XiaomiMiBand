@@ -1,711 +1,223 @@
-.class final Lcom/tencent/b/b/A;
-.super Ljava/lang/Thread;
+.class public final Lcom/tencent/b/b/a;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field private a:Lcom/tencent/b/b/e$a;
-
-.field private b:Lcom/tencent/b/b/m$b;
-
-.field private c:Lcom/tencent/b/b/f$b;
-
-.field private synthetic d:Lcom/tencent/b/b/n;
+# static fields
+.field private static a:Lcom/tencent/b/b/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/b/b/n;Lcom/tencent/b/b/e$a;Lcom/tencent/b/b/m$b;Lcom/tencent/b/b/f$b;)V
+.method static constructor <clinit>()V
     .locals 1
 
     const/4 v0, 0x0
 
-    iput-object p1, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
+    sput-object v0, Lcom/tencent/b/b/a;->a:Lcom/tencent/b/b/a;
 
-    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
+    return-void
+.end method
 
-    iput-object v0, p0, Lcom/tencent/b/b/A;->a:Lcom/tencent/b/b/e$a;
+.method private constructor <init>()V
+    .locals 0
 
-    iput-object v0, p0, Lcom/tencent/b/b/A;->b:Lcom/tencent/b/b/m$b;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/b/b/A;->c:Lcom/tencent/b/b/f$b;
+    return-void
+.end method
 
-    if-eqz p2, :cond_0
+.method static synthetic a(Lcom/tencent/b/b/a;Ljava/lang/String;)I
+    .locals 4
 
-    invoke-virtual {p2}, Lcom/tencent/b/b/e$a;->clone()Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
 
-    check-cast v0, Lcom/tencent/b/b/e$a;
+    move-result v2
 
-    iput-object v0, p0, Lcom/tencent/b/b/A;->a:Lcom/tencent/b/b/e$a;
+    move v1, v0
+
+    :goto_0
+    if-ge v0, v2, :cond_0
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->charAt(I)C
+
+    move-result v3
+
+    invoke-static {v3}, Lcom/tencent/b/b/s;->a(C)I
+
+    move-result v3
+
+    add-int/2addr v1, v3
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
 
     :cond_0
-    if-eqz p3, :cond_1
+    shl-int/lit8 v0, v2, 0x7
 
-    invoke-virtual {p3}, Lcom/tencent/b/b/m$b;->clone()Ljava/lang/Object;
+    add-int/2addr v0, v2
 
-    move-result-object v0
+    xor-int/2addr v0, v1
 
-    check-cast v0, Lcom/tencent/b/b/m$b;
+    return v0
+.end method
 
-    iput-object v0, p0, Lcom/tencent/b/b/A;->b:Lcom/tencent/b/b/m$b;
+.method public static declared-synchronized a()Lcom/tencent/b/b/a;
+    .locals 2
 
-    :cond_1
-    if-eqz p4, :cond_2
+    const-class v1, Lcom/tencent/b/b/a;
 
-    invoke-virtual {p4}, Lcom/tencent/b/b/f$b;->clone()Ljava/lang/Object;
+    monitor-enter v1
 
-    move-result-object v0
+    :try_start_0
+    sget-object v0, Lcom/tencent/b/b/a;->a:Lcom/tencent/b/b/a;
 
-    check-cast v0, Lcom/tencent/b/b/f$b;
+    if-nez v0, :cond_0
 
-    iput-object v0, p0, Lcom/tencent/b/b/A;->c:Lcom/tencent/b/b/f$b;
+    new-instance v0, Lcom/tencent/b/b/a;
 
-    :cond_2
-    return-void
+    invoke-direct {v0}, Lcom/tencent/b/b/a;-><init>()V
+
+    sput-object v0, Lcom/tencent/b/b/a;->a:Lcom/tencent/b/b/a;
+
+    :cond_0
+    sget-object v0, Lcom/tencent/b/b/a;->a:Lcom/tencent/b/b/a;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit v1
+
+    return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v1
+
+    throw v0
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 7
+.method public final a(Ljava/lang/String;Ljava/lang/String;)Z
+    .locals 8
 
-    invoke-static {}, Lcom/tencent/b/b/n;->c()Z
+    const/16 v7, 0x1b
 
-    move-result v0
+    const/4 v1, 0x1
 
-    if-nez v0, :cond_0
+    const/4 v0, 0x0
 
-    :try_start_0
-    iget-object v0, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
+    invoke-static {p1}, Lcom/tencent/b/b/s;->a(Ljava/lang/String;)Z
 
-    invoke-static {v0}, Lcom/tencent/b/b/n;->k(Lcom/tencent/b/b/n;)Landroid/content/Context;
+    move-result v2
 
-    move-result-object v0
-
-    const-string v1, "phone"
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/telephony/TelephonyManager;
-
-    iget-object v1, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/tencent/b/b/n;->c(Lcom/tencent/b/b/n;Ljava/lang/String;)Ljava/lang/String;
-
-    iget-object v1, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/tencent/b/b/n;->d(Lcom/tencent/b/b/n;Ljava/lang/String;)Ljava/lang/String;
-
-    iget-object v1, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcom/tencent/b/b/n;->e(Lcom/tencent/b/b/n;Ljava/lang/String;)Ljava/lang/String;
-
-    const-string v0, "[0-9a-zA-Z+-]*"
-
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    iget-object v0, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-static {v0}, Lcom/tencent/b/b/n;->l(Lcom/tencent/b/b/n;)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-nez v0, :cond_1
-
-    const-string v0, ""
-
-    :goto_0
-    invoke-static {v2, v0}, Lcom/tencent/b/b/n;->c(Lcom/tencent/b/b/n;Ljava/lang/String;)Ljava/lang/String;
-
-    iget-object v0, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-static {v0}, Lcom/tencent/b/b/n;->l(Lcom/tencent/b/b/n;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    iget-object v2, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    iget-object v0, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-static {v0}, Lcom/tencent/b/b/n;->l(Lcom/tencent/b/b/n;)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-nez v0, :cond_2
-
-    const-string v0, ""
-
-    :goto_1
-    invoke-static {v2, v0}, Lcom/tencent/b/b/n;->c(Lcom/tencent/b/b/n;Ljava/lang/String;)Ljava/lang/String;
-
-    :goto_2
-    iget-object v2, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    iget-object v0, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-static {v0}, Lcom/tencent/b/b/n;->m(Lcom/tencent/b/b/n;)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-nez v0, :cond_4
-
-    const-string v0, ""
-
-    :goto_3
-    invoke-static {v2, v0}, Lcom/tencent/b/b/n;->d(Lcom/tencent/b/b/n;Ljava/lang/String;)Ljava/lang/String;
-
-    iget-object v0, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-static {v0}, Lcom/tencent/b/b/n;->m(Lcom/tencent/b/b/n;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    iget-object v2, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    iget-object v0, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-static {v0}, Lcom/tencent/b/b/n;->m(Lcom/tencent/b/b/n;)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-nez v0, :cond_5
-
-    const-string v0, ""
-
-    :goto_4
-    invoke-static {v2, v0}, Lcom/tencent/b/b/n;->d(Lcom/tencent/b/b/n;Ljava/lang/String;)Ljava/lang/String;
-
-    :goto_5
-    iget-object v2, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    iget-object v0, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-static {v0}, Lcom/tencent/b/b/n;->n(Lcom/tencent/b/b/n;)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-nez v0, :cond_7
-
-    const-string v0, ""
-
-    :goto_6
-    invoke-static {v2, v0}, Lcom/tencent/b/b/n;->e(Lcom/tencent/b/b/n;Ljava/lang/String;)Ljava/lang/String;
-
-    iget-object v0, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-static {v0}, Lcom/tencent/b/b/n;->n(Lcom/tencent/b/b/n;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_9
-
-    iget-object v1, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    iget-object v0, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-static {v0}, Lcom/tencent/b/b/n;->n(Lcom/tencent/b/b/n;)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-nez v0, :cond_8
-
-    const-string v0, ""
-
-    :goto_7
-    invoke-static {v1, v0}, Lcom/tencent/b/b/n;->e(Lcom/tencent/b/b/n;Ljava/lang/String;)Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_8
-    const/4 v0, 0x1
-
-    invoke-static {v0}, Lcom/tencent/b/b/n;->a(Z)Z
-
-    iget-object v1, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    iget-object v0, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-static {v0}, Lcom/tencent/b/b/n;->l(Lcom/tencent/b/b/n;)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-nez v0, :cond_a
-
-    const-string v0, ""
-
-    :goto_9
-    invoke-static {v1, v0}, Lcom/tencent/b/b/n;->c(Lcom/tencent/b/b/n;Ljava/lang/String;)Ljava/lang/String;
-
-    iget-object v1, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    iget-object v0, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-static {v0}, Lcom/tencent/b/b/n;->m(Lcom/tencent/b/b/n;)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-nez v0, :cond_b
-
-    const-string v0, ""
-
-    :goto_a
-    invoke-static {v1, v0}, Lcom/tencent/b/b/n;->d(Lcom/tencent/b/b/n;Ljava/lang/String;)Ljava/lang/String;
-
-    iget-object v1, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    iget-object v0, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-static {v0}, Lcom/tencent/b/b/n;->n(Lcom/tencent/b/b/n;)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-nez v0, :cond_c
-
-    const-string v0, ""
-
-    :goto_b
-    invoke-static {v1, v0}, Lcom/tencent/b/b/n;->e(Lcom/tencent/b/b/n;Ljava/lang/String;)Ljava/lang/String;
-
-    iget-object v1, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    iget-object v0, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-static {v0}, Lcom/tencent/b/b/n;->l(Lcom/tencent/b/b/n;)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-nez v0, :cond_d
-
-    const-string v0, "0123456789ABCDEF"
-
-    :goto_c
-    invoke-static {v0}, Lcom/tencent/b/b/r;->a(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcom/tencent/b/b/n;->f(Lcom/tencent/b/b/n;Ljava/lang/String;)Ljava/lang/String;
+    if-nez v2, :cond_1
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
+    :goto_0
+    return v0
 
-    invoke-static {v0}, Lcom/tencent/b/b/n;->o(Lcom/tencent/b/b/n;)I
+    :cond_1
+    invoke-static {p2}, Lcom/tencent/b/b/s;->b(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result v2
 
-    const/4 v1, 0x4
+    if-eqz v2, :cond_0
 
-    if-ne v0, v1, :cond_e
+    new-instance v2, Lcom/tencent/b/b/a$1;
 
-    iget-object v0, p0, Lcom/tencent/b/b/A;->c:Lcom/tencent/b/b/f$b;
+    invoke-direct {v2, p0, v0}, Lcom/tencent/b/b/a$1;-><init>(Lcom/tencent/b/b/a;B)V
 
-    invoke-static {v0}, Lcom/tencent/b/b/s;->a(Lcom/tencent/b/b/f$b;)Ljava/lang/String;
+    invoke-virtual {v2, p1, p2}, Lcom/tencent/b/b/a$1;->a(Ljava/lang/String;Ljava/lang/String;)Z
 
-    move-result-object v0
+    move-result v2
 
-    :goto_d
-    iget-object v1, p0, Lcom/tencent/b/b/A;->b:Lcom/tencent/b/b/m$b;
+    if-eqz v2, :cond_0
 
-    iget-object v2, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
+    move v2, v0
 
-    invoke-static {v2}, Lcom/tencent/b/b/n;->p(Lcom/tencent/b/b/n;)Lcom/tencent/b/b/m;
+    move v3, v0
 
-    move-result-object v2
+    :goto_1
+    if-ge v2, v7, :cond_2
 
-    invoke-virtual {v2}, Lcom/tencent/b/b/m;->b()Ljava/util/List;
+    shr-int/lit8 v4, v3, 0x8
 
-    move-result-object v2
+    and-int/lit16 v4, v4, 0xff
 
-    invoke-static {v1, v2}, Lcom/tencent/b/b/s;->a(Lcom/tencent/b/b/m$b;Ljava/util/List;)Ljava/lang/String;
+    sget-object v5, Lcom/tencent/b/b/s;->b:[I
 
-    move-result-object v2
-
-    iget-object v1, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-static {v1}, Lcom/tencent/b/b/n;->l(Lcom/tencent/b/b/n;)Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-object v3, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-static {v3}, Lcom/tencent/b/b/n;->m(Lcom/tencent/b/b/n;)Ljava/lang/String;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-static {v4}, Lcom/tencent/b/b/n;->n(Lcom/tencent/b/b/n;)Ljava/lang/String;
-
-    move-result-object v4
-
-    iget-object v5, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-static {v5}, Lcom/tencent/b/b/n;->q(Lcom/tencent/b/b/n;)Ljava/lang/String;
-
-    move-result-object v5
-
-    iget-object v6, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-static {v6}, Lcom/tencent/b/b/n;->r(Lcom/tencent/b/b/n;)Z
+    invoke-virtual {p2, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v6
 
-    invoke-static {v1, v3, v4, v5, v6}, Lcom/tencent/b/b/s;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-static {v6}, Lcom/tencent/b/b/s;->a(C)I
 
-    move-result-object v3
+    move-result v6
 
-    iget-object v1, p0, Lcom/tencent/b/b/A;->a:Lcom/tencent/b/b/e$a;
+    xor-int/2addr v3, v6
 
-    if-eqz v1, :cond_f
+    and-int/lit16 v3, v3, 0xff
 
-    iget-object v1, p0, Lcom/tencent/b/b/A;->a:Lcom/tencent/b/b/e$a;
+    aget v3, v5, v3
 
-    invoke-virtual {v1}, Lcom/tencent/b/b/e$a;->a()Z
+    xor-int/2addr v3, v4
 
-    move-result v1
+    add-int/lit8 v2, v2, 0x1
 
-    if-eqz v1, :cond_f
-
-    iget-object v1, p0, Lcom/tencent/b/b/A;->a:Lcom/tencent/b/b/e$a;
-
-    invoke-static {v1}, Lcom/tencent/b/b/s;->a(Lcom/tencent/b/b/e$a;)Ljava/lang/String;
-
-    move-result-object v1
-
-    :goto_e
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "{\"version\":\"1.1.8\",\"address\":"
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v5, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-static {v5}, Lcom/tencent/b/b/n;->s(Lcom/tencent/b/b/n;)I
-
-    move-result v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    const-string v5, ",\"source\":203,\"access_token\":\""
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    iget-object v5, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-static {v5}, Lcom/tencent/b/b/n;->t(Lcom/tencent/b/b/n;)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    const-string v5, "\",\"app_name\":"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    const-string v5, "\""
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    iget-object v5, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-static {v5}, Lcom/tencent/b/b/n;->u(Lcom/tencent/b/b/n;)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    const-string v5, "\",\"bearing\":1"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    const-string v5, ",\"attribute\":"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string v4, ",\"location\":"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v3, ",\"cells\":"
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ",\"wifis\":"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-static {v1}, Lcom/tencent/b/b/n;->d(Lcom/tencent/b/b/n;)Lcom/tencent/b/b/y;
-
-    move-result-object v1
-
-    const/16 v2, 0x10
-
-    invoke-virtual {v1, v2, v0}, Lcom/tencent/b/b/y;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-static {v1}, Lcom/tencent/b/b/n;->d(Lcom/tencent/b/b/n;)Lcom/tencent/b/b/y;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lcom/tencent/b/b/y;->sendMessage(Landroid/os/Message;)Z
-
-    return-void
-
-    :cond_1
-    :try_start_1
-    iget-object v0, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-static {v0}, Lcom/tencent/b/b/n;->l(Lcom/tencent/b/b/n;)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto/16 :goto_0
+    goto :goto_1
 
     :cond_2
-    iget-object v0, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
+    and-int/lit8 v2, v3, 0x1f
 
-    invoke-static {v0}, Lcom/tencent/b/b/n;->l(Lcom/tencent/b/b/n;)Ljava/lang/String;
+    invoke-virtual {p2, v7}, Ljava/lang/String;->charAt(I)C
 
-    move-result-object v0
+    move-result v4
 
-    goto/16 :goto_1
+    sget-object v5, Lcom/tencent/b/b/s;->a:Ljava/lang/String;
+
+    invoke-virtual {v5, v2}, Ljava/lang/String;->charAt(I)C
+
+    move-result v2
+
+    if-eq v4, v2, :cond_3
+
+    move v2, v0
+
+    :goto_2
+    if-eqz v2, :cond_0
+
+    move v0, v1
+
+    goto :goto_0
 
     :cond_3
-    iget-object v0, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
+    shr-int/lit8 v2, v3, 0x5
 
-    const-string v2, ""
+    and-int/lit8 v2, v2, 0x1f
 
-    invoke-static {v0, v2}, Lcom/tencent/b/b/n;->c(Lcom/tencent/b/b/n;Ljava/lang/String;)Ljava/lang/String;
+    const/16 v3, 0x1c
 
-    goto/16 :goto_2
+    invoke-virtual {p2, v3}, Ljava/lang/String;->charAt(I)C
 
-    :catch_0
-    move-exception v0
+    move-result v3
 
-    goto/16 :goto_8
+    sget-object v4, Lcom/tencent/b/b/s;->a:Ljava/lang/String;
+
+    invoke-virtual {v4, v2}, Ljava/lang/String;->charAt(I)C
+
+    move-result v2
+
+    if-eq v3, v2, :cond_4
+
+    move v2, v0
+
+    goto :goto_2
 
     :cond_4
-    iget-object v0, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
+    move v2, v1
 
-    invoke-static {v0}, Lcom/tencent/b/b/n;->m(Lcom/tencent/b/b/n;)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto/16 :goto_3
-
-    :cond_5
-    iget-object v0, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-static {v0}, Lcom/tencent/b/b/n;->m(Lcom/tencent/b/b/n;)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto/16 :goto_4
-
-    :cond_6
-    iget-object v0, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    const-string v2, ""
-
-    invoke-static {v0, v2}, Lcom/tencent/b/b/n;->d(Lcom/tencent/b/b/n;Ljava/lang/String;)Ljava/lang/String;
-
-    goto/16 :goto_5
-
-    :cond_7
-    iget-object v0, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-static {v0}, Lcom/tencent/b/b/n;->n(Lcom/tencent/b/b/n;)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto/16 :goto_6
-
-    :cond_8
-    iget-object v0, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-static {v0}, Lcom/tencent/b/b/n;->n(Lcom/tencent/b/b/n;)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto/16 :goto_7
-
-    :cond_9
-    iget-object v0, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    const-string v1, ""
-
-    invoke-static {v0, v1}, Lcom/tencent/b/b/n;->e(Lcom/tencent/b/b/n;Ljava/lang/String;)Ljava/lang/String;
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-
-    goto/16 :goto_8
-
-    :cond_a
-    iget-object v0, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-static {v0}, Lcom/tencent/b/b/n;->l(Lcom/tencent/b/b/n;)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto/16 :goto_9
-
-    :cond_b
-    iget-object v0, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-static {v0}, Lcom/tencent/b/b/n;->m(Lcom/tencent/b/b/n;)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto/16 :goto_a
-
-    :cond_c
-    iget-object v0, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-static {v0}, Lcom/tencent/b/b/n;->n(Lcom/tencent/b/b/n;)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto/16 :goto_b
-
-    :cond_d
-    iget-object v0, p0, Lcom/tencent/b/b/A;->d:Lcom/tencent/b/b/n;
-
-    invoke-static {v0}, Lcom/tencent/b/b/n;->l(Lcom/tencent/b/b/n;)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto/16 :goto_c
-
-    :cond_e
-    const-string v0, "[]"
-
-    goto/16 :goto_d
-
-    :cond_f
-    const-string v1, "{}"
-
-    goto/16 :goto_e
+    goto :goto_2
 .end method

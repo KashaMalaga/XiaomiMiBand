@@ -2,721 +2,1780 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/amap/api/mapcore/aa;
+.implements Lcom/amap/api/mapcore/i;
 
 
 # instance fields
-.field private a:Z
+.field private A:Landroid/graphics/Bitmap;
 
-.field private b:I
+.field private B:Z
 
-.field private c:I
+.field a:F
 
-.field private d:Ljava/nio/FloatBuffer;
+.field b:F
 
-.field private e:Ljava/lang/String;
+.field c:F
 
-.field private f:Lcom/autonavi/amap/mapcore/FPoint;
+.field d:F
 
-.field private g:Lcom/amap/api/maps/model/BitmapDescriptor;
+.field e:[F
 
-.field private h:Z
+.field private f:Lcom/amap/api/mapcore/aE;
 
-.field private i:Ljava/nio/FloatBuffer;
+.field private g:F
 
-.field private j:Ljava/lang/Object;
+.field private h:I
 
-.field private k:I
+.field private i:F
 
-.field private l:Lcom/amap/api/mapcore/v;
+.field private j:Z
 
-.field private m:Lcom/autonavi/amap/mapcore/MapProjection;
+.field private k:Ljava/lang/String;
 
-.field private n:F
+.field private l:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/autonavi/amap/mapcore/IPoint;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private o:F
+.field private m:Ljava/nio/FloatBuffer;
+
+.field private n:I
+
+.field private o:Z
 
 .field private p:Z
 
-.field private q:Z
+.field private q:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Lcom/amap/api/maps/model/LatLng;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 .field private r:Z
 
-.field private s:I
+.field private s:F
+
+.field private t:Ljava/lang/Object;
+
+.field private u:Z
+
+.field private v:Lcom/amap/api/maps/model/LatLngBounds;
+
+.field private w:Z
+
+.field private x:I
+
+.field private y:Z
+
+.field private z:Z
 
 
 # direct methods
-.method public constructor <init>(Lcom/amap/api/maps/model/MarkerOptions;Lcom/amap/api/mapcore/v;)V
-    .locals 3
+.method public constructor <init>(Lcom/amap/api/mapcore/aE;)V
+    .locals 5
+
+    const/4 v4, 0x0
+
+    const/4 v3, 0x0
 
     const/4 v2, 0x1
-
-    const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean v1, p0, Lcom/amap/api/mapcore/A;->a:Z
+    const/high16 v0, 0x41200000
 
-    iput v1, p0, Lcom/amap/api/mapcore/A;->b:I
+    iput v0, p0, Lcom/amap/api/mapcore/A;->g:F
 
-    iput v1, p0, Lcom/amap/api/mapcore/A;->c:I
+    const/high16 v0, -0x1000000
 
-    iput-object v0, p0, Lcom/amap/api/mapcore/A;->d:Ljava/nio/FloatBuffer;
+    iput v0, p0, Lcom/amap/api/mapcore/A;->h:I
 
-    iput-boolean v2, p0, Lcom/amap/api/mapcore/A;->h:Z
+    iput v3, p0, Lcom/amap/api/mapcore/A;->i:F
 
-    iput-object v0, p0, Lcom/amap/api/mapcore/A;->l:Lcom/amap/api/mapcore/v;
+    iput-boolean v2, p0, Lcom/amap/api/mapcore/A;->j:Z
 
-    iput-object v0, p0, Lcom/amap/api/mapcore/A;->m:Lcom/autonavi/amap/mapcore/MapProjection;
+    new-instance v0, Ljava/util/ArrayList;
 
-    const/high16 v0, 0x3f000000
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput v0, p0, Lcom/amap/api/mapcore/A;->n:F
+    iput-object v0, p0, Lcom/amap/api/mapcore/A;->l:Ljava/util/ArrayList;
 
-    const/high16 v0, 0x3f800000
+    iput v1, p0, Lcom/amap/api/mapcore/A;->n:I
 
-    iput v0, p0, Lcom/amap/api/mapcore/A;->o:F
+    iput-boolean v1, p0, Lcom/amap/api/mapcore/A;->o:Z
 
-    iput-boolean v1, p0, Lcom/amap/api/mapcore/A;->q:Z
+    iput-boolean v1, p0, Lcom/amap/api/mapcore/A;->p:Z
 
-    iput-boolean v2, p0, Lcom/amap/api/mapcore/A;->r:Z
+    new-instance v0, Ljava/util/ArrayList;
 
-    const/16 v0, 0x14
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput v0, p0, Lcom/amap/api/mapcore/A;->s:I
+    iput-object v0, p0, Lcom/amap/api/mapcore/A;->q:Ljava/util/List;
 
-    iput-object p2, p0, Lcom/amap/api/mapcore/A;->l:Lcom/amap/api/mapcore/v;
+    iput-boolean v1, p0, Lcom/amap/api/mapcore/A;->r:Z
 
-    invoke-interface {p2}, Lcom/amap/api/mapcore/v;->c()Lcom/autonavi/amap/mapcore/MapProjection;
+    iput v3, p0, Lcom/amap/api/mapcore/A;->s:F
 
-    move-result-object v0
+    new-instance v0, Ljava/lang/Object;
 
-    iput-object v0, p0, Lcom/amap/api/mapcore/A;->m:Lcom/autonavi/amap/mapcore/MapProjection;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Lcom/amap/api/maps/model/MarkerOptions;->getIcon()Lcom/amap/api/maps/model/BitmapDescriptor;
+    iput-object v0, p0, Lcom/amap/api/mapcore/A;->t:Ljava/lang/Object;
 
-    move-result-object v0
+    iput-boolean v2, p0, Lcom/amap/api/mapcore/A;->u:Z
 
-    invoke-direct {p0, v0}, Lcom/amap/api/mapcore/A;->b(Lcom/amap/api/maps/model/BitmapDescriptor;)V
+    iput-object v4, p0, Lcom/amap/api/mapcore/A;->v:Lcom/amap/api/maps/model/LatLngBounds;
 
-    invoke-virtual {p1}, Lcom/amap/api/maps/model/MarkerOptions;->getInfoWindowOffsetX()I
+    iput v1, p0, Lcom/amap/api/mapcore/A;->x:I
 
-    move-result v0
+    iput-boolean v2, p0, Lcom/amap/api/mapcore/A;->y:Z
 
-    iput v0, p0, Lcom/amap/api/mapcore/A;->b:I
+    iput-boolean v1, p0, Lcom/amap/api/mapcore/A;->z:Z
 
-    invoke-virtual {p1}, Lcom/amap/api/maps/model/MarkerOptions;->getInfoWindowOffsetY()I
+    iput-object v4, p0, Lcom/amap/api/mapcore/A;->A:Landroid/graphics/Bitmap;
 
-    move-result v0
+    iput-object p1, p0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
 
-    iput v0, p0, Lcom/amap/api/mapcore/A;->c:I
-
-    invoke-virtual {p1}, Lcom/amap/api/maps/model/MarkerOptions;->isVisible()Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lcom/amap/api/mapcore/A;->h:Z
-
-    invoke-virtual {p0}, Lcom/amap/api/mapcore/A;->h()Ljava/lang/String;
+    :try_start_0
+    invoke-virtual {p0}, Lcom/amap/api/mapcore/A;->f()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/amap/api/mapcore/A;->e:Ljava/lang/String;
+    iput-object v0, p0, Lcom/amap/api/mapcore/A;->k:Ljava/lang/String;
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {p0}, Lcom/amap/api/mapcore/A;->s()Z
-
-    return-void
-.end method
-
-.method private K()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/A;->l:Lcom/amap/api/mapcore/v;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/A;->l:Lcom/amap/api/mapcore/v;
-
-    const/4 v1, 0x0
-
-    invoke-interface {v0, v1}, Lcom/amap/api/mapcore/v;->e(Z)V
-
-    :cond_0
-    return-void
-.end method
-
-.method private a(Ljavax/microedition/khronos/opengles/GL10;ILjava/nio/FloatBuffer;Ljava/nio/FloatBuffer;)V
-    .locals 7
-
-    const/16 v6, 0x1406
-
-    const/16 v5, 0xbe2
-
-    const/16 v4, 0xde1
-
-    const/4 v3, 0x0
-
-    const/high16 v2, 0x3f800000
-
-    if-eqz p3, :cond_0
-
-    if-nez p4, :cond_1
-
-    :cond_0
     :goto_0
     return-void
 
-    :cond_1
-    invoke-interface {p1, v5}, Ljavax/microedition/khronos/opengles/GL10;->glEnable(I)V
+    :catch_0
+    move-exception v0
 
-    const/4 v0, 0x1
-
-    const/16 v1, 0x303
-
-    invoke-interface {p1, v0, v1}, Ljavax/microedition/khronos/opengles/GL10;->glBlendFunc(II)V
-
-    invoke-interface {p1, v2, v2, v2, v2}, Ljavax/microedition/khronos/opengles/GL10;->glColor4f(FFFF)V
-
-    invoke-interface {p1, v4}, Ljavax/microedition/khronos/opengles/GL10;->glEnable(I)V
-
-    const v0, 0x8074
-
-    invoke-interface {p1, v0}, Ljavax/microedition/khronos/opengles/GL10;->glEnableClientState(I)V
-
-    const v0, 0x8078
-
-    invoke-interface {p1, v0}, Ljavax/microedition/khronos/opengles/GL10;->glEnableClientState(I)V
-
-    invoke-interface {p1, v4, p2}, Ljavax/microedition/khronos/opengles/GL10;->glBindTexture(II)V
-
-    const/4 v0, 0x3
-
-    invoke-interface {p1, v0, v6, v3, p3}, Ljavax/microedition/khronos/opengles/GL10;->glVertexPointer(IIILjava/nio/Buffer;)V
-
-    const/4 v0, 0x2
-
-    invoke-interface {p1, v0, v6, v3, p4}, Ljavax/microedition/khronos/opengles/GL10;->glTexCoordPointer(IIILjava/nio/Buffer;)V
-
-    const/4 v0, 0x6
-
-    const/4 v1, 0x4
-
-    invoke-interface {p1, v0, v3, v1}, Ljavax/microedition/khronos/opengles/GL10;->glDrawArrays(III)V
-
-    const v0, 0x8074
-
-    invoke-interface {p1, v0}, Ljavax/microedition/khronos/opengles/GL10;->glDisableClientState(I)V
-
-    const v0, 0x8078
-
-    invoke-interface {p1, v0}, Ljavax/microedition/khronos/opengles/GL10;->glDisableClientState(I)V
-
-    invoke-interface {p1, v4}, Ljavax/microedition/khronos/opengles/GL10;->glDisable(I)V
-
-    invoke-interface {p1, v5}, Ljavax/microedition/khronos/opengles/GL10;->glDisable(I)V
+    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
 .end method
 
-.method private b(Ljavax/microedition/khronos/opengles/GL10;)I
-    .locals 3
+.method private o()Z
+    .locals 27
 
+    const/4 v2, 0x0
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v3
+
+    :try_start_0
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    invoke-interface {v2}, Lcom/amap/api/mapcore/aE;->l()Lcom/amap/api/maps/model/CameraPosition;
+
+    move-result-object v2
+
+    iget v2, v2, Lcom/amap/api/maps/model/CameraPosition;->c:F
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    const/high16 v4, 0x41200000
+
+    cmpg-float v2, v2, v4
+
+    if-gtz v2, :cond_0
+
+    const/4 v2, 0x0
+
+    :goto_0
+    return v2
+
+    :catch_0
+    move-exception v2
+
+    invoke-virtual {v2}, Landroid/os/RemoteException;->printStackTrace()V
+
+    :cond_0
+    :try_start_1
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    if-eqz v2, :cond_2
+
+    new-instance v26, Landroid/graphics/Rect;
+
+    const/16 v2, -0x64
+
+    const/16 v3, -0x64
+
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    invoke-interface {v4}, Lcom/amap/api/mapcore/aE;->h()I
+
+    move-result v4
+
+    add-int/lit8 v4, v4, 0x64
+
+    move-object/from16 v0, p0
+
+    iget-object v5, v0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    invoke-interface {v5}, Lcom/amap/api/mapcore/aE;->i()I
+
+    move-result v5
+
+    add-int/lit8 v5, v5, 0x64
+
+    move-object/from16 v0, v26
+
+    invoke-direct {v0, v2, v3, v4, v5}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/amap/api/mapcore/A;->v:Lcom/amap/api/maps/model/LatLngBounds;
+
+    iget-object v0, v2, Lcom/amap/api/maps/model/LatLngBounds;->c:Lcom/amap/api/maps/model/LatLng;
+
+    move-object/from16 v17, v0
+
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/amap/api/mapcore/A;->v:Lcom/amap/api/maps/model/LatLngBounds;
+
+    iget-object v0, v2, Lcom/amap/api/maps/model/LatLngBounds;->b:Lcom/amap/api/maps/model/LatLng;
+
+    move-object/from16 v23, v0
+
+    new-instance v7, Lcom/autonavi/amap/mapcore/IPoint;
+
+    invoke-direct {v7}, Lcom/autonavi/amap/mapcore/IPoint;-><init>()V
+
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    move-object/from16 v0, v17
+
+    iget-wide v3, v0, Lcom/amap/api/maps/model/LatLng;->b:D
+
+    move-object/from16 v0, v23
+
+    iget-wide v5, v0, Lcom/amap/api/maps/model/LatLng;->c:D
+
+    invoke-interface/range {v2 .. v7}, Lcom/amap/api/mapcore/aE;->b(DDLcom/autonavi/amap/mapcore/IPoint;)V
+
+    new-instance v13, Lcom/autonavi/amap/mapcore/IPoint;
+
+    invoke-direct {v13}, Lcom/autonavi/amap/mapcore/IPoint;-><init>()V
+
+    move-object/from16 v0, p0
+
+    iget-object v8, v0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    move-object/from16 v0, v17
+
+    iget-wide v9, v0, Lcom/amap/api/maps/model/LatLng;->b:D
+
+    move-object/from16 v0, v17
+
+    iget-wide v11, v0, Lcom/amap/api/maps/model/LatLng;->c:D
+
+    invoke-interface/range {v8 .. v13}, Lcom/amap/api/mapcore/aE;->b(DDLcom/autonavi/amap/mapcore/IPoint;)V
+
+    new-instance v19, Lcom/autonavi/amap/mapcore/IPoint;
+
+    invoke-direct/range {v19 .. v19}, Lcom/autonavi/amap/mapcore/IPoint;-><init>()V
+
+    move-object/from16 v0, p0
+
+    iget-object v14, v0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    move-object/from16 v0, v23
+
+    iget-wide v15, v0, Lcom/amap/api/maps/model/LatLng;->b:D
+
+    move-object/from16 v0, v17
+
+    iget-wide v0, v0, Lcom/amap/api/maps/model/LatLng;->c:D
+
+    move-wide/from16 v17, v0
+
+    invoke-interface/range {v14 .. v19}, Lcom/amap/api/mapcore/aE;->b(DDLcom/autonavi/amap/mapcore/IPoint;)V
+
+    new-instance v25, Lcom/autonavi/amap/mapcore/IPoint;
+
+    invoke-direct/range {v25 .. v25}, Lcom/autonavi/amap/mapcore/IPoint;-><init>()V
+
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    move-object/from16 v20, v0
+
+    move-object/from16 v0, v23
+
+    iget-wide v0, v0, Lcom/amap/api/maps/model/LatLng;->b:D
+
+    move-wide/from16 v21, v0
+
+    move-object/from16 v0, v23
+
+    iget-wide v0, v0, Lcom/amap/api/maps/model/LatLng;->c:D
+
+    move-wide/from16 v23, v0
+
+    invoke-interface/range {v20 .. v25}, Lcom/amap/api/mapcore/aE;->b(DDLcom/autonavi/amap/mapcore/IPoint;)V
+
+    iget v2, v7, Lcom/autonavi/amap/mapcore/IPoint;->x:I
+
+    iget v3, v7, Lcom/autonavi/amap/mapcore/IPoint;->y:I
+
+    move-object/from16 v0, v26
+
+    invoke-virtual {v0, v2, v3}, Landroid/graphics/Rect;->contains(II)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    iget v2, v13, Lcom/autonavi/amap/mapcore/IPoint;->x:I
+
+    iget v3, v13, Lcom/autonavi/amap/mapcore/IPoint;->y:I
+
+    move-object/from16 v0, v26
+
+    invoke-virtual {v0, v2, v3}, Landroid/graphics/Rect;->contains(II)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    move-object/from16 v0, v19
+
+    iget v2, v0, Lcom/autonavi/amap/mapcore/IPoint;->x:I
+
+    move-object/from16 v0, v19
+
+    iget v3, v0, Lcom/autonavi/amap/mapcore/IPoint;->y:I
+
+    move-object/from16 v0, v26
+
+    invoke-virtual {v0, v2, v3}, Landroid/graphics/Rect;->contains(II)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    move-object/from16 v0, v25
+
+    iget v2, v0, Lcom/autonavi/amap/mapcore/IPoint;->x:I
+
+    move-object/from16 v0, v25
+
+    iget v3, v0, Lcom/autonavi/amap/mapcore/IPoint;->y:I
+
+    move-object/from16 v0, v26
+
+    invoke-virtual {v0, v2, v3}, Landroid/graphics/Rect;->contains(II)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    const/4 v2, 0x0
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    :goto_1
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    goto/16 :goto_0
+
+    :cond_1
     const/4 v2, 0x1
 
-    const/4 v1, 0x0
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    :try_end_1
+    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
 
-    iget-object v0, p0, Lcom/amap/api/mapcore/A;->l:Lcom/amap/api/mapcore/v;
+    move-result-object v2
 
-    invoke-interface {v0}, Lcom/amap/api/mapcore/v;->F()I
+    goto :goto_1
 
-    move-result v0
+    :catch_1
+    move-exception v2
 
-    if-nez v0, :cond_0
+    const/4 v2, 0x0
 
-    new-array v0, v2, [I
+    goto/16 :goto_0
 
-    aput v1, v0, v1
+    :cond_2
+    move-object v2, v3
 
-    invoke-interface {p1, v2, v0, v1}, Ljavax/microedition/khronos/opengles/GL10;->glGenTextures(I[II)V
-
-    aget v0, v0, v1
-
-    :cond_0
-    return v0
-.end method
-
-.method private b(Lcom/amap/api/maps/model/BitmapDescriptor;)V
-    .locals 1
-
-    if-eqz p1, :cond_0
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/amap/api/mapcore/A;->k:I
-
-    iput-object p1, p0, Lcom/amap/api/mapcore/A;->g:Lcom/amap/api/maps/model/BitmapDescriptor;
-
-    :cond_0
-    return-void
+    goto :goto_1
 .end method
 
 
 # virtual methods
-.method public A()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public B()Z
+.method public a()F
     .locals 1
 
-    const/4 v0, 0x0
+    iget v0, p0, Lcom/amap/api/mapcore/A;->g:F
 
     return v0
 .end method
 
-.method public C()I
-    .locals 1
+.method public a(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/LatLng;
+    .locals 6
 
-    iget v0, p0, Lcom/amap/api/mapcore/A;->b:I
+    const/4 v3, 0x0
 
-    return v0
-.end method
-
-.method public D()I
-    .locals 1
-
-    iget v0, p0, Lcom/amap/api/mapcore/A;->c:I
-
-    return v0
-.end method
-
-.method public E()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public F()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public G()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public H()I
-    .locals 1
-
-    :try_start_0
-    invoke-virtual {p0}, Lcom/amap/api/mapcore/A;->I()Lcom/amap/api/maps/model/BitmapDescriptor;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/amap/api/maps/model/BitmapDescriptor;->getHeight()I
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result v0
-
-    :goto_0
-    return v0
-
-    :catch_0
-    move-exception v0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public I()Lcom/amap/api/maps/model/BitmapDescriptor;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/A;->g:Lcom/amap/api/maps/model/BitmapDescriptor;
-
-    return-object v0
-.end method
-
-.method public J()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public a()I
-    .locals 1
-
-    :try_start_0
-    invoke-virtual {p0}, Lcom/amap/api/mapcore/A;->I()Lcom/amap/api/maps/model/BitmapDescriptor;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/amap/api/maps/model/BitmapDescriptor;->getWidth()I
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result v0
-
-    :goto_0
-    return v0
-
-    :catch_0
-    move-exception v0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public a(F)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public a(FF)V
-    .locals 1
-
-    iget v0, p0, Lcom/amap/api/mapcore/A;->n:F
-
-    cmpl-float v0, v0, p1
-
-    if-nez v0, :cond_0
-
-    iget v0, p0, Lcom/amap/api/mapcore/A;->o:F
-
-    cmpl-float v0, v0, p2
-
-    if-nez v0, :cond_0
-
-    :goto_0
-    return-void
-
-    :cond_0
-    iput p1, p0, Lcom/amap/api/mapcore/A;->n:F
-
-    iput p2, p0, Lcom/amap/api/mapcore/A;->o:F
-
-    invoke-direct {p0}, Lcom/amap/api/mapcore/A;->K()V
-
-    goto :goto_0
-.end method
-
-.method public a(I)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-gt p1, v0, :cond_0
-
-    iput v0, p0, Lcom/amap/api/mapcore/A;->s:I
-
-    :goto_0
-    return-void
-
-    :cond_0
-    iput p1, p0, Lcom/amap/api/mapcore/A;->s:I
-
-    goto :goto_0
-.end method
-
-.method public a(II)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public a(Lcom/amap/api/maps/model/BitmapDescriptor;)V
-    .locals 1
+    const/4 v4, 0x0
 
     if-nez p1, :cond_0
 
+    move-object v0, v4
+
     :goto_0
-    return-void
+    return-object v0
 
     :cond_0
-    iput-object p1, p0, Lcom/amap/api/mapcore/A;->g:Lcom/amap/api/maps/model/BitmapDescriptor;
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/amap/api/mapcore/A;->q:Z
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/A;->i:Ljava/nio/FloatBuffer;
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->q:Ljava/util/List;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/amap/api/mapcore/A;->i:Ljava/nio/FloatBuffer;
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->q:Ljava/util/List;
 
-    invoke-virtual {v0}, Ljava/nio/FloatBuffer;->clear()Ljava/nio/Buffer;
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/amap/api/mapcore/A;->i:Ljava/nio/FloatBuffer;
-
-    :cond_1
-    invoke-direct {p0}, Lcom/amap/api/mapcore/A;->K()V
-
-    goto :goto_0
-.end method
-
-.method public a(Lcom/amap/api/maps/model/LatLng;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public a(Lcom/autonavi/amap/mapcore/FPoint;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/A;->f:Lcom/autonavi/amap/mapcore/FPoint;
-
-    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
-
-    :goto_0
-    return-void
-
-    :cond_0
-    iput-object p1, p0, Lcom/amap/api/mapcore/A;->f:Lcom/autonavi/amap/mapcore/FPoint;
-
-    invoke-direct {p0}, Lcom/amap/api/mapcore/A;->K()V
-
-    goto :goto_0
-.end method
-
-.method public a(Ljava/lang/Object;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/mapcore/A;->j:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public a(Ljava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public a(Ljava/util/ArrayList;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcom/amap/api/maps/model/BitmapDescriptor;",
-            ">;)V"
-        }
-    .end annotation
-
-    return-void
-.end method
-
-.method public a(Ljavax/microedition/khronos/opengles/GL10;)V
-    .locals 8
-
-    const/4 v1, 0x0
-
-    const/4 v7, 0x0
-
-    iget-boolean v0, p0, Lcom/amap/api/mapcore/A;->h:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/A;->f:Lcom/autonavi/amap/mapcore/FPoint;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lcom/amap/api/mapcore/A;->I()Lcom/amap/api/maps/model/BitmapDescriptor;
-
-    move-result-object v0
-
-    if-nez v0, :cond_1
-
-    :cond_0
-    :goto_0
-    return-void
+    if-nez v0, :cond_2
 
     :cond_1
-    iget-boolean v0, p0, Lcom/amap/api/mapcore/A;->q:Z
+    move-object v0, v4
 
-    if-nez v0, :cond_4
-
-    :try_start_0
-    iget v0, p0, Lcom/amap/api/mapcore/A;->k:I
-
-    if-eqz v0, :cond_2
-
-    const/4 v0, 0x1
-
-    const/4 v2, 0x1
-
-    new-array v2, v2, [I
-
-    const/4 v3, 0x0
-
-    iget v4, p0, Lcom/amap/api/mapcore/A;->k:I
-
-    aput v4, v2, v3
-
-    const/4 v3, 0x0
-
-    invoke-interface {p1, v0, v2, v3}, Ljavax/microedition/khronos/opengles/GL10;->glDeleteTextures(I[II)V
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/A;->l:Lcom/amap/api/mapcore/v;
-
-    iget v2, p0, Lcom/amap/api/mapcore/A;->k:I
-
-    invoke-interface {v0, v2}, Lcom/amap/api/mapcore/v;->f(I)V
+    goto :goto_0
 
     :cond_2
-    invoke-direct {p0, p1}, Lcom/amap/api/mapcore/A;->b(Ljavax/microedition/khronos/opengles/GL10;)I
+    const/4 v1, 0x0
+
+    move v2, v3
+
+    :goto_1
+    :try_start_0
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->q:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    iput v0, p0, Lcom/amap/api/mapcore/A;->k:I
+    if-ge v3, v0, :cond_4
 
-    iget-object v0, p0, Lcom/amap/api/mapcore/A;->g:Lcom/amap/api/maps/model/BitmapDescriptor;
+    if-nez v3, :cond_3
 
-    if-eqz v0, :cond_4
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->q:Ljava/util/List;
 
-    iget-object v0, p0, Lcom/amap/api/mapcore/A;->g:Lcom/amap/api/maps/model/BitmapDescriptor;
-
-    invoke-virtual {v0}, Lcom/amap/api/maps/model/BitmapDescriptor;->getBitmap()Landroid/graphics/Bitmap;
+    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    if-eqz v0, :cond_3
+    check-cast v0, Lcom/amap/api/maps/model/LatLng;
 
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
+    invoke-static {p1, v0}, Lcom/amap/api/maps/r;->a(Lcom/amap/api/maps/model/LatLng;Lcom/amap/api/maps/model/LatLng;)F
 
-    move-result v2
+    move-result v0
 
-    if-nez v2, :cond_3
+    move v1, v2
 
-    iget v2, p0, Lcom/amap/api/mapcore/A;->k:I
+    :goto_2
+    add-int/lit8 v3, v3, 0x1
 
-    invoke-static {p1, v2, v0}, Lcom/amap/api/mapcore/util/w;->a(Ljavax/microedition/khronos/opengles/GL10;ILandroid/graphics/Bitmap;)I
+    move v2, v1
+
+    move v1, v0
+
+    goto :goto_1
 
     :cond_3
-    const/4 v0, 0x1
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->q:Ljava/util/List;
 
-    iput-boolean v0, p0, Lcom/amap/api/mapcore/A;->q:Z
+    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/amap/api/maps/model/LatLng;
+
+    invoke-static {p1, v0}, Lcom/amap/api/maps/r;->a(Lcom/amap/api/maps/model/LatLng;Lcom/amap/api/maps/model/LatLng;)F
+
+    move-result v0
+
+    cmpl-float v5, v1, v0
+
+    if-lez v5, :cond_5
+
+    move v1, v3
+
+    goto :goto_2
+
+    :cond_4
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->q:Ljava/util/List;
+
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/amap/api/maps/model/LatLng;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    :cond_4
-    invoke-virtual {p0}, Lcom/amap/api/mapcore/A;->s()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p1}, Ljavax/microedition/khronos/opengles/GL10;->glLoadIdentity()V
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/A;->l:Lcom/amap/api/mapcore/v;
-
-    invoke-interface {v0}, Lcom/amap/api/mapcore/v;->h()I
-
-    move-result v0
-
-    iget-object v2, p0, Lcom/amap/api/mapcore/A;->l:Lcom/amap/api/mapcore/v;
-
-    invoke-interface {v2}, Lcom/amap/api/mapcore/v;->i()I
-
-    move-result v2
-
-    invoke-interface {p1, v7, v7, v0, v2}, Ljavax/microedition/khronos/opengles/GL10;->glViewport(IIII)V
-
-    const/16 v0, 0x1701
-
-    invoke-interface {p1, v0}, Ljavax/microedition/khronos/opengles/GL10;->glMatrixMode(I)V
-
-    invoke-interface {p1}, Ljavax/microedition/khronos/opengles/GL10;->glLoadIdentity()V
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/A;->l:Lcom/amap/api/mapcore/v;
-
-    invoke-interface {v0}, Lcom/amap/api/mapcore/v;->h()I
-
-    move-result v0
-
-    int-to-float v2, v0
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/A;->l:Lcom/amap/api/mapcore/v;
-
-    invoke-interface {v0}, Lcom/amap/api/mapcore/v;->i()I
-
-    move-result v0
-
-    int-to-float v4, v0
-
-    const/high16 v5, 0x3f800000
-
-    const/high16 v6, -0x40800000
-
-    move-object v0, p1
-
-    move v3, v1
-
-    invoke-interface/range {v0 .. v6}, Ljavax/microedition/khronos/opengles/GL10;->glOrthof(FFFFFF)V
-
-    iget v0, p0, Lcom/amap/api/mapcore/A;->k:I
-
-    iget-object v1, p0, Lcom/amap/api/mapcore/A;->d:Ljava/nio/FloatBuffer;
-
-    iget-object v2, p0, Lcom/amap/api/mapcore/A;->i:Ljava/nio/FloatBuffer;
-
-    invoke-direct {p0, p1, v0, v1, v2}, Lcom/amap/api/mapcore/A;->a(Ljavax/microedition/khronos/opengles/GL10;ILjava/nio/FloatBuffer;Ljava/nio/FloatBuffer;)V
-
-    iget-boolean v0, p0, Lcom/amap/api/mapcore/A;->p:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lcom/amap/api/mapcore/A;->J()V
-
-    iput-boolean v7, p0, Lcom/amap/api/mapcore/A;->p:Z
-
-    goto/16 :goto_0
+    goto :goto_0
 
     :catch_0
     move-exception v0
 
     invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
+    move-object v0, v4
+
+    goto :goto_0
+
+    :cond_5
+    move v0, v1
+
+    move v1, v2
+
+    goto :goto_2
+.end method
+
+.method a(Lcom/autonavi/amap/mapcore/IPoint;Lcom/autonavi/amap/mapcore/IPoint;Lcom/autonavi/amap/mapcore/IPoint;DI)Lcom/autonavi/amap/mapcore/IPoint;
+    .locals 9
+
+    new-instance v0, Lcom/autonavi/amap/mapcore/IPoint;
+
+    invoke-direct {v0}, Lcom/autonavi/amap/mapcore/IPoint;-><init>()V
+
+    iget v1, p2, Lcom/autonavi/amap/mapcore/IPoint;->x:I
+
+    iget v2, p1, Lcom/autonavi/amap/mapcore/IPoint;->x:I
+
+    sub-int/2addr v1, v2
+
+    int-to-double v1, v1
+
+    iget v3, p2, Lcom/autonavi/amap/mapcore/IPoint;->y:I
+
+    iget v4, p1, Lcom/autonavi/amap/mapcore/IPoint;->y:I
+
+    sub-int/2addr v3, v4
+
+    int-to-double v3, v3
+
+    mul-double v5, v3, v3
+
+    mul-double v7, v1, v1
+
+    div-double/2addr v5, v7
+
+    const-wide/high16 v7, 0x3ff0000000000000L
+
+    add-double/2addr v5, v7
+
+    int-to-double v7, p6
+
+    mul-double/2addr v7, p4
+
+    invoke-static {v5, v6}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v5
+
+    div-double v5, v7, v5
+
+    iget v7, p3, Lcom/autonavi/amap/mapcore/IPoint;->y:I
+
+    int-to-double v7, v7
+
+    add-double/2addr v5, v7
+
+    double-to-int v5, v5
+
+    iput v5, v0, Lcom/autonavi/amap/mapcore/IPoint;->y:I
+
+    iget v5, p3, Lcom/autonavi/amap/mapcore/IPoint;->y:I
+
+    iget v6, v0, Lcom/autonavi/amap/mapcore/IPoint;->y:I
+
+    sub-int/2addr v5, v6
+
+    int-to-double v5, v5
+
+    mul-double/2addr v3, v5
+
+    div-double v1, v3, v1
+
+    iget v3, p3, Lcom/autonavi/amap/mapcore/IPoint;->x:I
+
+    int-to-double v3, v3
+
+    add-double/2addr v1, v3
+
+    double-to-int v1, v1
+
+    iput v1, v0, Lcom/autonavi/amap/mapcore/IPoint;->x:I
+
+    return-object v0
+.end method
+
+.method public a(F)V
+    .locals 2
+
+    iput p1, p0, Lcom/amap/api/mapcore/A;->g:F
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    const/4 v1, 0x0
+
+    invoke-interface {v0, v1}, Lcom/amap/api/mapcore/aE;->e(Z)V
+
+    return-void
+.end method
+
+.method public a(I)V
+    .locals 2
+
+    const/high16 v1, 0x437f0000
+
+    iput p1, p0, Lcom/amap/api/mapcore/A;->h:I
+
+    invoke-static {p1}, Landroid/graphics/Color;->alpha(I)I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    div-float/2addr v0, v1
+
+    iput v0, p0, Lcom/amap/api/mapcore/A;->a:F
+
+    invoke-static {p1}, Landroid/graphics/Color;->red(I)I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    div-float/2addr v0, v1
+
+    iput v0, p0, Lcom/amap/api/mapcore/A;->b:F
+
+    invoke-static {p1}, Landroid/graphics/Color;->green(I)I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    div-float/2addr v0, v1
+
+    iput v0, p0, Lcom/amap/api/mapcore/A;->c:F
+
+    invoke-static {p1}, Landroid/graphics/Color;->blue(I)I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    div-float/2addr v0, v1
+
+    iput v0, p0, Lcom/amap/api/mapcore/A;->d:F
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    const/4 v1, 0x0
+
+    invoke-interface {v0, v1}, Lcom/amap/api/mapcore/aE;->e(Z)V
+
+    return-void
+.end method
+
+.method public a(Landroid/graphics/Bitmap;)V
+    .locals 2
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, p0, Lcom/amap/api/mapcore/A;->y:Z
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/amap/api/mapcore/A;->z:Z
+
+    iput-object p1, p0, Lcom/amap/api/mapcore/A;->A:Landroid/graphics/Bitmap;
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    invoke-interface {v0, v1}, Lcom/amap/api/mapcore/aE;->e(Z)V
+
+    return-void
+.end method
+
+.method a(Lcom/amap/api/maps/model/LatLng;Lcom/amap/api/maps/model/LatLng;Ljava/util/List;Lcom/amap/api/maps/model/l;)V
+    .locals 23
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/amap/api/maps/model/LatLng;",
+            "Lcom/amap/api/maps/model/LatLng;",
+            "Ljava/util/List",
+            "<",
+            "Lcom/autonavi/amap/mapcore/IPoint;",
+            ">;",
+            "Lcom/amap/api/maps/model/l;",
+            ")V"
+        }
+    .end annotation
+
+    move-object/from16 v0, p1
+
+    iget-wide v2, v0, Lcom/amap/api/maps/model/LatLng;->c:D
+
+    move-object/from16 v0, p2
+
+    iget-wide v4, v0, Lcom/amap/api/maps/model/LatLng;->c:D
+
+    sub-double/2addr v2, v4
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->abs(D)D
+
+    move-result-wide v2
+
+    const-wide v4, 0x400921fb54442d18L
+
+    mul-double/2addr v2, v4
+
+    const-wide v4, 0x4066800000000000L
+
+    div-double v20, v2, v4
+
+    new-instance v17, Lcom/amap/api/maps/model/LatLng;
+
+    move-object/from16 v0, p2
+
+    iget-wide v2, v0, Lcom/amap/api/maps/model/LatLng;->b:D
+
+    move-object/from16 v0, p1
+
+    iget-wide v4, v0, Lcom/amap/api/maps/model/LatLng;->b:D
+
+    add-double/2addr v2, v4
+
+    const-wide/high16 v4, 0x4000000000000000L
+
+    div-double/2addr v2, v4
+
+    move-object/from16 v0, p2
+
+    iget-wide v4, v0, Lcom/amap/api/maps/model/LatLng;->c:D
+
+    move-object/from16 v0, p1
+
+    iget-wide v6, v0, Lcom/amap/api/maps/model/LatLng;->c:D
+
+    add-double/2addr v4, v6
+
+    const-wide/high16 v6, 0x4000000000000000L
+
+    div-double/2addr v4, v6
+
+    move-object/from16 v0, v17
+
+    invoke-direct {v0, v2, v3, v4, v5}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+
+    move-object/from16 v0, p4
+
+    move-object/from16 v1, p1
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/model/l;->a(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/l;
+
+    move-result-object v2
+
+    move-object/from16 v0, v17
+
+    invoke-virtual {v2, v0}, Lcom/amap/api/maps/model/l;->a(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/l;
+
+    move-result-object v2
+
+    move-object/from16 v0, p2
+
+    invoke-virtual {v2, v0}, Lcom/amap/api/maps/model/l;->a(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/l;
+
+    move-object/from16 v0, v17
+
+    iget-wide v2, v0, Lcom/amap/api/maps/model/LatLng;->b:D
+
+    const-wide/16 v4, 0x0
+
+    cmpl-double v2, v2, v4
+
+    if-lez v2, :cond_0
+
+    const/16 v22, -0x1
+
+    :goto_0
+    new-instance v7, Lcom/autonavi/amap/mapcore/IPoint;
+
+    invoke-direct {v7}, Lcom/autonavi/amap/mapcore/IPoint;-><init>()V
+
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    move-object/from16 v0, p1
+
+    iget-wide v3, v0, Lcom/amap/api/maps/model/LatLng;->b:D
+
+    move-object/from16 v0, p1
+
+    iget-wide v5, v0, Lcom/amap/api/maps/model/LatLng;->c:D
+
+    invoke-interface/range {v2 .. v7}, Lcom/amap/api/mapcore/aE;->a(DDLcom/autonavi/amap/mapcore/IPoint;)V
+
+    new-instance v13, Lcom/autonavi/amap/mapcore/IPoint;
+
+    invoke-direct {v13}, Lcom/autonavi/amap/mapcore/IPoint;-><init>()V
+
+    move-object/from16 v0, p0
+
+    iget-object v8, v0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    move-object/from16 v0, p2
+
+    iget-wide v9, v0, Lcom/amap/api/maps/model/LatLng;->b:D
+
+    move-object/from16 v0, p2
+
+    iget-wide v11, v0, Lcom/amap/api/maps/model/LatLng;->c:D
+
+    invoke-interface/range {v8 .. v13}, Lcom/amap/api/mapcore/aE;->a(DDLcom/autonavi/amap/mapcore/IPoint;)V
+
+    new-instance v19, Lcom/autonavi/amap/mapcore/IPoint;
+
+    invoke-direct/range {v19 .. v19}, Lcom/autonavi/amap/mapcore/IPoint;-><init>()V
+
+    move-object/from16 v0, p0
+
+    iget-object v14, v0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    move-object/from16 v0, v17
+
+    iget-wide v15, v0, Lcom/amap/api/maps/model/LatLng;->b:D
+
+    move-object/from16 v0, v17
+
+    iget-wide v0, v0, Lcom/amap/api/maps/model/LatLng;->c:D
+
+    move-wide/from16 v17, v0
+
+    invoke-interface/range {v14 .. v19}, Lcom/amap/api/mapcore/aE;->a(DDLcom/autonavi/amap/mapcore/IPoint;)V
+
+    const-wide/high16 v2, 0x3fe0000000000000L
+
+    mul-double v2, v2, v20
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->cos(D)D
+
+    move-result-wide v2
+
+    iget v4, v7, Lcom/autonavi/amap/mapcore/IPoint;->x:I
+
+    iget v5, v13, Lcom/autonavi/amap/mapcore/IPoint;->x:I
+
+    sub-int/2addr v4, v5
+
+    int-to-double v4, v4
+
+    iget v6, v7, Lcom/autonavi/amap/mapcore/IPoint;->y:I
+
+    iget v8, v13, Lcom/autonavi/amap/mapcore/IPoint;->y:I
+
+    sub-int/2addr v6, v8
+
+    int-to-double v8, v6
+
+    invoke-static {v4, v5, v8, v9}, Ljava/lang/Math;->hypot(DD)D
+
+    move-result-wide v4
+
+    const-wide/high16 v8, 0x3fe0000000000000L
+
+    mul-double/2addr v4, v8
+
+    const-wide/high16 v8, 0x3fe0000000000000L
+
+    mul-double v8, v8, v20
+
+    invoke-static {v8, v9}, Ljava/lang/Math;->tan(D)D
+
+    move-result-wide v8
+
+    mul-double v20, v4, v8
+
+    move-object/from16 v16, p0
+
+    move-object/from16 v17, v7
+
+    move-object/from16 v18, v13
+
+    invoke-virtual/range {v16 .. v22}, Lcom/amap/api/mapcore/A;->a(Lcom/autonavi/amap/mapcore/IPoint;Lcom/autonavi/amap/mapcore/IPoint;Lcom/autonavi/amap/mapcore/IPoint;DI)Lcom/autonavi/amap/mapcore/IPoint;
+
+    move-result-object v4
+
+    new-instance v5, Ljava/util/ArrayList;
+
+    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-interface {v5, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    invoke-interface {v5, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    invoke-interface {v5, v13}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    move-object/from16 v0, p0
+
+    move-object/from16 v1, p3
+
+    invoke-virtual {v0, v5, v1, v2, v3}, Lcom/amap/api/mapcore/A;->a(Ljava/util/List;Ljava/util/List;D)V
+
+    return-void
+
+    :cond_0
+    const/16 v22, 0x1
+
     goto/16 :goto_0
 .end method
 
-.method public a(Ljavax/microedition/khronos/opengles/GL10;Lcom/amap/api/mapcore/v;)V
-    .locals 0
+.method public a(Ljava/util/List;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcom/amap/api/maps/model/LatLng;",
+            ">;)V"
+        }
+    .end annotation
 
+    :try_start_0
+    iput-object p1, p0, Lcom/amap/api/mapcore/A;->q:Ljava/util/List;
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/amap/api/mapcore/A;->w:Z
+
+    iget-object v1, p0, Lcom/amap/api/mapcore/A;->t:Ljava/lang/Object;
+
+    monitor-enter v1
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    :try_start_1
+    invoke-virtual {p0, p1}, Lcom/amap/api/mapcore/A;->b(Ljava/util/List;)V
+
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    const/4 v0, 0x0
+
+    :try_start_2
+    iput-boolean v0, p0, Lcom/amap/api/mapcore/A;->w:Z
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    const/4 v1, 0x0
+
+    invoke-interface {v0, v1}, Lcom/amap/api/mapcore/aE;->e(Z)V
+    :try_end_2
+    .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
+
+    :goto_0
     return-void
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_3
+    monitor-exit v1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :try_start_4
+    throw v0
+    :try_end_4
+    .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_0
+
+    :catch_0
+    move-exception v0
+
+    iget-object v1, p0, Lcom/amap/api/mapcore/A;->l:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
+
+    goto :goto_0
+.end method
+
+.method a(Ljava/util/List;Ljava/util/List;D)V
+    .locals 21
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcom/autonavi/amap/mapcore/IPoint;",
+            ">;",
+            "Ljava/util/List",
+            "<",
+            "Lcom/autonavi/amap/mapcore/IPoint;",
+            ">;D)V"
+        }
+    .end annotation
+
+    invoke-interface/range {p1 .. p1}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    const/4 v3, 0x3
+
+    if-eq v2, v3, :cond_1
+
+    :cond_0
+    return-void
+
+    :cond_1
+    const/high16 v4, 0x3f800000
+
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    :goto_0
+    const/16 v2, 0xa
+
+    if-gt v3, v2, :cond_0
+
+    int-to-float v2, v3
+
+    const/high16 v5, 0x41200000
+
+    div-float v5, v2, v5
+
+    new-instance v6, Lcom/autonavi/amap/mapcore/IPoint;
+
+    invoke-direct {v6}, Lcom/autonavi/amap/mapcore/IPoint;-><init>()V
+
+    const-wide/high16 v7, 0x3ff0000000000000L
+
+    float-to-double v9, v5
+
+    sub-double/2addr v7, v9
+
+    const-wide/high16 v9, 0x3ff0000000000000L
+
+    float-to-double v11, v5
+
+    sub-double/2addr v9, v11
+
+    mul-double/2addr v7, v9
+
+    const/4 v2, 0x0
+
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/autonavi/amap/mapcore/IPoint;
+
+    iget v2, v2, Lcom/autonavi/amap/mapcore/IPoint;->x:I
+
+    int-to-double v9, v2
+
+    mul-double/2addr v7, v9
+
+    const/high16 v2, 0x40000000
+
+    mul-float/2addr v2, v5
+
+    float-to-double v9, v2
+
+    const-wide/high16 v11, 0x3ff0000000000000L
+
+    float-to-double v13, v5
+
+    sub-double/2addr v11, v13
+
+    mul-double/2addr v9, v11
+
+    const/4 v2, 0x1
+
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/autonavi/amap/mapcore/IPoint;
+
+    iget v2, v2, Lcom/autonavi/amap/mapcore/IPoint;->x:I
+
+    int-to-double v11, v2
+
+    mul-double/2addr v9, v11
+
+    mul-double v9, v9, p3
+
+    add-double/2addr v7, v9
+
+    mul-float v9, v5, v5
+
+    const/4 v2, 0x2
+
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/autonavi/amap/mapcore/IPoint;
+
+    iget v2, v2, Lcom/autonavi/amap/mapcore/IPoint;->x:I
+
+    int-to-float v2, v2
+
+    mul-float/2addr v2, v9
+
+    float-to-double v9, v2
+
+    add-double/2addr v7, v9
+
+    const-wide/high16 v9, 0x3ff0000000000000L
+
+    float-to-double v11, v5
+
+    sub-double/2addr v9, v11
+
+    const-wide/high16 v11, 0x3ff0000000000000L
+
+    float-to-double v13, v5
+
+    sub-double/2addr v11, v13
+
+    mul-double/2addr v9, v11
+
+    const/4 v2, 0x0
+
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/autonavi/amap/mapcore/IPoint;
+
+    iget v2, v2, Lcom/autonavi/amap/mapcore/IPoint;->y:I
+
+    int-to-double v11, v2
+
+    mul-double/2addr v9, v11
+
+    const/high16 v2, 0x40000000
+
+    mul-float/2addr v2, v5
+
+    float-to-double v11, v2
+
+    const-wide/high16 v13, 0x3ff0000000000000L
+
+    float-to-double v15, v5
+
+    sub-double/2addr v13, v15
+
+    mul-double/2addr v11, v13
+
+    const/4 v2, 0x1
+
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/autonavi/amap/mapcore/IPoint;
+
+    iget v2, v2, Lcom/autonavi/amap/mapcore/IPoint;->y:I
+
+    int-to-double v13, v2
+
+    mul-double/2addr v11, v13
+
+    mul-double v11, v11, p3
+
+    add-double/2addr v9, v11
+
+    mul-float v11, v5, v5
+
+    const/4 v2, 0x2
+
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/autonavi/amap/mapcore/IPoint;
+
+    iget v2, v2, Lcom/autonavi/amap/mapcore/IPoint;->y:I
+
+    int-to-float v2, v2
+
+    mul-float/2addr v2, v11
+
+    float-to-double v11, v2
+
+    add-double/2addr v9, v11
+
+    const-wide/high16 v11, 0x3ff0000000000000L
+
+    float-to-double v13, v5
+
+    sub-double/2addr v11, v13
+
+    const-wide/high16 v13, 0x3ff0000000000000L
+
+    float-to-double v15, v5
+
+    sub-double/2addr v13, v15
+
+    mul-double/2addr v11, v13
+
+    const/high16 v2, 0x40000000
+
+    mul-float/2addr v2, v5
+
+    float-to-double v13, v2
+
+    const-wide/high16 v15, 0x3ff0000000000000L
+
+    float-to-double v0, v5
+
+    move-wide/from16 v17, v0
+
+    sub-double v15, v15, v17
+
+    mul-double/2addr v13, v15
+
+    mul-double v13, v13, p3
+
+    add-double/2addr v11, v13
+
+    mul-float v2, v5, v5
+
+    float-to-double v13, v2
+
+    add-double/2addr v11, v13
+
+    const-wide/high16 v13, 0x3ff0000000000000L
+
+    float-to-double v15, v5
+
+    sub-double/2addr v13, v15
+
+    const-wide/high16 v15, 0x3ff0000000000000L
+
+    float-to-double v0, v5
+
+    move-wide/from16 v17, v0
+
+    sub-double v15, v15, v17
+
+    mul-double/2addr v13, v15
+
+    const/high16 v2, 0x40000000
+
+    mul-float/2addr v2, v5
+
+    float-to-double v15, v2
+
+    const-wide/high16 v17, 0x3ff0000000000000L
+
+    float-to-double v0, v5
+
+    move-wide/from16 v19, v0
+
+    sub-double v17, v17, v19
+
+    mul-double v15, v15, v17
+
+    mul-double v15, v15, p3
+
+    add-double/2addr v13, v15
+
+    mul-float v2, v5, v5
+
+    float-to-double v15, v2
+
+    add-double/2addr v13, v15
+
+    div-double/2addr v7, v11
+
+    double-to-int v2, v7
+
+    iput v2, v6, Lcom/autonavi/amap/mapcore/IPoint;->x:I
+
+    div-double v7, v9, v13
+
+    double-to-int v2, v7
+
+    iput v2, v6, Lcom/autonavi/amap/mapcore/IPoint;->y:I
+
+    move-object/from16 v0, p2
+
+    invoke-interface {v0, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    int-to-float v2, v3
+
+    add-float/2addr v2, v4
+
+    float-to-int v2, v2
+
+    move v3, v2
+
+    goto/16 :goto_0
+.end method
+
+.method public a(Ljavax/microedition/khronos/opengles/GL10;)V
+    .locals 12
+
+    const/high16 v3, 0x41200000
+
+    const/high16 v5, 0x40000000
+
+    const/4 v11, 0x1
+
+    const/4 v1, 0x0
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->l:Ljava/util/ArrayList;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->l:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lcom/amap/api/mapcore/A;->g:F
+
+    const/4 v2, 0x0
+
+    cmpg-float v0, v0, v2
+
+    if-gtz v0, :cond_1
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    iget-boolean v0, p0, Lcom/amap/api/mapcore/A;->w:Z
+
+    if-nez v0, :cond_0
+
+    iget-boolean v0, p0, Lcom/amap/api/mapcore/A;->p:Z
+
+    if-nez v0, :cond_2
+
+    iget-boolean v0, p0, Lcom/amap/api/mapcore/A;->y:Z
+
+    if-nez v0, :cond_3
+
+    :cond_2
+    invoke-direct {p0}, Lcom/amap/api/mapcore/A;->o()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_b
+
+    iget-object v2, p0, Lcom/amap/api/mapcore/A;->t:Ljava/lang/Object;
+
+    monitor-enter v2
+
+    :try_start_0
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    iget-object v4, p0, Lcom/amap/api/mapcore/A;->l:Ljava/util/ArrayList;
+
+    invoke-static {v0, v4}, Lcom/amap/api/mapcore/a/P;->a(Lcom/amap/api/mapcore/aE;Ljava/util/List;)[F
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/amap/api/mapcore/A;->e:[F
+
+    monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->e:[F
+
+    if-eqz v0, :cond_a
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->e:[F
+
+    array-length v0, v0
+
+    div-int/lit8 v0, v0, 0x3
+
+    :goto_1
+    iput v0, p0, Lcom/amap/api/mapcore/A;->n:I
+
+    iput-boolean v11, p0, Lcom/amap/api/mapcore/A;->B:Z
+
+    :cond_3
+    :goto_2
+    iget v0, p0, Lcom/amap/api/mapcore/A;->n:I
+
+    if-nez v0, :cond_4
+
+    invoke-virtual {p0}, Lcom/amap/api/mapcore/A;->j()V
+
+    :cond_4
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->e:[F
+
+    if-eqz v0, :cond_9
+
+    iget v0, p0, Lcom/amap/api/mapcore/A;->n:I
+
+    if-lez v0, :cond_9
+
+    iget-boolean v0, p0, Lcom/amap/api/mapcore/A;->u:Z
+
+    if-eqz v0, :cond_10
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    invoke-interface {v0}, Lcom/amap/api/mapcore/aE;->c()Lcom/autonavi/amap/mapcore/MapProjection;
+
+    move-result-object v0
+
+    iget v2, p0, Lcom/amap/api/mapcore/A;->g:F
+
+    float-to-int v2, v2
+
+    invoke-virtual {v0, v2}, Lcom/autonavi/amap/mapcore/MapProjection;->getMapLenWithWin(I)F
+
+    move-result v2
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    invoke-interface {v0}, Lcom/amap/api/mapcore/aE;->c()Lcom/autonavi/amap/mapcore/MapProjection;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/autonavi/amap/mapcore/MapProjection;->getMapZoomer()F
+
+    move-result v0
+
+    iput v0, p0, Lcom/amap/api/mapcore/A;->s:F
+
+    iget v0, p0, Lcom/amap/api/mapcore/A;->n:I
+
+    const/16 v4, 0x1388
+
+    if-le v0, v4, :cond_d
+
+    iget v0, p0, Lcom/amap/api/mapcore/A;->s:F
+
+    cmpg-float v0, v0, v3
+
+    if-gtz v0, :cond_d
+
+    iget v0, p0, Lcom/amap/api/mapcore/A;->g:F
+
+    div-float/2addr v0, v5
+
+    iget v4, p0, Lcom/amap/api/mapcore/A;->s:F
+
+    div-float/2addr v4, v5
+
+    add-float/2addr v0, v4
+
+    cmpg-float v0, v0, v3
+
+    if-gtz v0, :cond_c
+
+    iget v0, p0, Lcom/amap/api/mapcore/A;->g:F
+
+    div-float/2addr v0, v5
+
+    iget v3, p0, Lcom/amap/api/mapcore/A;->s:F
+
+    div-float/2addr v3, v5
+
+    add-float/2addr v0, v3
+
+    :goto_3
+    iget-object v3, p0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    invoke-interface {v3}, Lcom/amap/api/mapcore/aE;->c()Lcom/autonavi/amap/mapcore/MapProjection;
+
+    move-result-object v3
+
+    float-to-int v0, v0
+
+    invoke-virtual {v3, v0}, Lcom/autonavi/amap/mapcore/MapProjection;->getMapLenWithWin(I)F
+
+    move-result v8
+
+    :goto_4
+    iget-boolean v0, p0, Lcom/amap/api/mapcore/A;->y:Z
+
+    if-nez v0, :cond_e
+
+    iget-boolean v0, p0, Lcom/amap/api/mapcore/A;->z:Z
+
+    if-eqz v0, :cond_8
+
+    iget v0, p0, Lcom/amap/api/mapcore/A;->x:I
+
+    if-eqz v0, :cond_5
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    iget v3, p0, Lcom/amap/api/mapcore/A;->x:I
+
+    invoke-interface {v0, v3}, Lcom/amap/api/mapcore/aE;->f(I)V
+
+    new-array v0, v11, [I
+
+    iget v3, p0, Lcom/amap/api/mapcore/A;->x:I
+
+    aput v3, v0, v1
+
+    invoke-interface {p1, v11, v0, v1}, Ljavax/microedition/khronos/opengles/GL10;->glDeleteTextures(I[II)V
+
+    :cond_5
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    invoke-interface {v0}, Lcom/amap/api/mapcore/aE;->F()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/amap/api/mapcore/A;->x:I
+
+    iget v0, p0, Lcom/amap/api/mapcore/A;->x:I
+
+    if-nez v0, :cond_6
+
+    new-array v0, v11, [I
+
+    aput v1, v0, v1
+
+    invoke-interface {p1, v11, v0, v1}, Ljavax/microedition/khronos/opengles/GL10;->glGenTextures(I[II)V
+
+    aget v0, v0, v1
+
+    iput v0, p0, Lcom/amap/api/mapcore/A;->x:I
+
+    :cond_6
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->A:Landroid/graphics/Bitmap;
+
+    if-eqz v0, :cond_7
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->A:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    iget v0, p0, Lcom/amap/api/mapcore/A;->x:I
+
+    iget-object v3, p0, Lcom/amap/api/mapcore/A;->A:Landroid/graphics/Bitmap;
+
+    invoke-static {p1, v0, v3, v11}, Lcom/amap/api/mapcore/a/P;->a(Ljavax/microedition/khronos/opengles/GL10;ILandroid/graphics/Bitmap;Z)I
+
+    :cond_7
+    iput-boolean v1, p0, Lcom/amap/api/mapcore/A;->z:Z
+
+    :cond_8
+    :goto_5
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->e:[F
+
+    iget-object v1, p0, Lcom/amap/api/mapcore/A;->e:[F
+
+    array-length v1, v1
+
+    iget v3, p0, Lcom/amap/api/mapcore/A;->x:I
+
+    iget v4, p0, Lcom/amap/api/mapcore/A;->b:F
+
+    iget v5, p0, Lcom/amap/api/mapcore/A;->c:F
+
+    iget v6, p0, Lcom/amap/api/mapcore/A;->d:F
+
+    iget v7, p0, Lcom/amap/api/mapcore/A;->a:F
+
+    iget-boolean v9, p0, Lcom/amap/api/mapcore/A;->p:Z
+
+    iget-boolean v10, p0, Lcom/amap/api/mapcore/A;->y:Z
+
+    invoke-static/range {v0 .. v10}, Lcom/amap/api/maps/p;->a([FIFIFFFFFZZ)V
+
+    :cond_9
+    :goto_6
+    iput-boolean v11, p0, Lcom/amap/api/mapcore/A;->r:Z
+
+    goto/16 :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+
+    :cond_a
+    move v0, v1
+
+    goto/16 :goto_1
+
+    :cond_b
+    iget-boolean v0, p0, Lcom/amap/api/mapcore/A;->B:Z
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {p0}, Lcom/amap/api/mapcore/A;->j()V
+
+    iput-boolean v1, p0, Lcom/amap/api/mapcore/A;->B:Z
+
+    goto/16 :goto_2
+
+    :cond_c
+    move v0, v3
+
+    goto :goto_3
+
+    :cond_d
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    invoke-interface {v0}, Lcom/amap/api/mapcore/aE;->c()Lcom/autonavi/amap/mapcore/MapProjection;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v11}, Lcom/autonavi/amap/mapcore/MapProjection;->getMapLenWithWin(I)F
+
+    move-result v8
+
+    goto :goto_4
+
+    :cond_e
+    iget-boolean v0, p0, Lcom/amap/api/mapcore/A;->p:Z
+
+    if-eqz v0, :cond_f
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    invoke-interface {v0}, Lcom/amap/api/mapcore/aE;->j()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/amap/api/mapcore/A;->x:I
+
+    goto :goto_5
+
+    :cond_f
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    invoke-interface {v0}, Lcom/amap/api/mapcore/aE;->b()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/amap/api/mapcore/A;->x:I
+
+    goto :goto_5
+
+    :cond_10
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->m:Ljava/nio/FloatBuffer;
+
+    if-nez v0, :cond_11
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->e:[F
+
+    invoke-static {v0}, Lcom/amap/api/mapcore/a/P;->a([F)Ljava/nio/FloatBuffer;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/amap/api/mapcore/A;->m:Ljava/nio/FloatBuffer;
+
+    :cond_11
+    const/4 v1, 0x3
+
+    iget v2, p0, Lcom/amap/api/mapcore/A;->h:I
+
+    iget-object v3, p0, Lcom/amap/api/mapcore/A;->m:Ljava/nio/FloatBuffer;
+
+    iget v4, p0, Lcom/amap/api/mapcore/A;->g:F
+
+    iget v5, p0, Lcom/amap/api/mapcore/A;->n:I
+
+    move-object v0, p1
+
+    invoke-static/range {v0 .. v5}, Lcom/amap/api/mapcore/az;->a(Ljavax/microedition/khronos/opengles/GL10;IILjava/nio/FloatBuffer;FI)V
+
+    goto :goto_6
 .end method
 
 .method public a(Z)V
-    .locals 0
+    .locals 2
+
+    iput-boolean p1, p0, Lcom/amap/api/mapcore/A;->j:Z
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    const/4 v1, 0x0
+
+    invoke-interface {v0, v1}, Lcom/amap/api/mapcore/aE;->e(Z)V
 
     return-void
 .end method
 
-.method public a(Lcom/amap/api/mapcore/aa;)Z
+.method public a(Lcom/amap/api/mapcore/g;)Z
     .locals 2
 
     invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
@@ -725,11 +1784,11 @@
 
     if-nez v0, :cond_0
 
-    invoke-interface {p1}, Lcom/amap/api/mapcore/aa;->h()Ljava/lang/String;
+    invoke-interface {p1}, Lcom/amap/api/mapcore/g;->f()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lcom/amap/api/mapcore/A;->h()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/amap/api/mapcore/A;->f()Ljava/lang/String;
 
     move-result-object v1
 
@@ -751,202 +1810,324 @@
     goto :goto_0
 .end method
 
-.method public b(II)V
-    .locals 0
+.method public b()I
+    .locals 1
 
-    iput p1, p0, Lcom/amap/api/mapcore/A;->b:I
+    iget v0, p0, Lcom/amap/api/mapcore/A;->h:I
 
-    iput p2, p0, Lcom/amap/api/mapcore/A;->c:I
+    return v0
+.end method
+
+.method public b(F)V
+    .locals 2
+
+    iput p1, p0, Lcom/amap/api/mapcore/A;->i:F
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    invoke-interface {v0}, Lcom/amap/api/mapcore/aE;->H()V
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    const/4 v1, 0x0
+
+    invoke-interface {v0, v1}, Lcom/amap/api/mapcore/aE;->e(Z)V
 
     return-void
 .end method
 
-.method public b(Ljava/lang/String;)V
-    .locals 0
+.method b(Ljava/util/List;)V
+    .locals 12
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcom/amap/api/maps/model/LatLng;",
+            ">;)V"
+        }
+    .end annotation
+
+    const/4 v11, 0x0
+
+    new-instance v8, Ljava/util/ArrayList;
+
+    invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-static {}, Lcom/amap/api/maps/model/LatLngBounds;->b()Lcom/amap/api/maps/model/l;
+
+    move-result-object v9
+
+    if-eqz p1, :cond_4
+
+    const/4 v6, 0x0
+
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v10
+
+    move-object v7, v6
+
+    :cond_0
+    :goto_0
+    invoke-interface {v10}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    invoke-interface {v10}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v6, v0
+
+    check-cast v6, Lcom/amap/api/maps/model/LatLng;
+
+    if-eqz v6, :cond_0
+
+    invoke-virtual {v6, v7}, Lcom/amap/api/maps/model/LatLng;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-boolean v0, p0, Lcom/amap/api/mapcore/A;->o:Z
+
+    if-nez v0, :cond_2
+
+    new-instance v5, Lcom/autonavi/amap/mapcore/IPoint;
+
+    invoke-direct {v5}, Lcom/autonavi/amap/mapcore/IPoint;-><init>()V
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    iget-wide v1, v6, Lcom/amap/api/maps/model/LatLng;->b:D
+
+    iget-wide v3, v6, Lcom/amap/api/maps/model/LatLng;->c:D
+
+    invoke-interface/range {v0 .. v5}, Lcom/amap/api/mapcore/aE;->a(DDLcom/autonavi/amap/mapcore/IPoint;)V
+
+    invoke-virtual {v8, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v9, v6}, Lcom/amap/api/maps/model/l;->a(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/l;
+
+    :cond_1
+    :goto_1
+    move-object v7, v6
+
+    goto :goto_0
+
+    :cond_2
+    if-eqz v7, :cond_1
+
+    iget-wide v0, v6, Lcom/amap/api/maps/model/LatLng;->c:D
+
+    iget-wide v2, v7, Lcom/amap/api/maps/model/LatLng;->c:D
+
+    sub-double/2addr v0, v2
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->abs(D)D
+
+    move-result-wide v0
+
+    const-wide v2, 0x3f847ae147ae147bL
+
+    cmpg-double v0, v0, v2
+
+    if-gez v0, :cond_3
+
+    new-instance v5, Lcom/autonavi/amap/mapcore/IPoint;
+
+    invoke-direct {v5}, Lcom/autonavi/amap/mapcore/IPoint;-><init>()V
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    iget-wide v1, v7, Lcom/amap/api/maps/model/LatLng;->b:D
+
+    iget-wide v3, v7, Lcom/amap/api/maps/model/LatLng;->c:D
+
+    invoke-interface/range {v0 .. v5}, Lcom/amap/api/mapcore/aE;->a(DDLcom/autonavi/amap/mapcore/IPoint;)V
+
+    invoke-virtual {v8, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v9, v7}, Lcom/amap/api/maps/model/l;->a(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/l;
+
+    new-instance v5, Lcom/autonavi/amap/mapcore/IPoint;
+
+    invoke-direct {v5}, Lcom/autonavi/amap/mapcore/IPoint;-><init>()V
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    iget-wide v1, v6, Lcom/amap/api/maps/model/LatLng;->b:D
+
+    iget-wide v3, v6, Lcom/amap/api/maps/model/LatLng;->c:D
+
+    invoke-interface/range {v0 .. v5}, Lcom/amap/api/mapcore/aE;->a(DDLcom/autonavi/amap/mapcore/IPoint;)V
+
+    invoke-virtual {v8, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v9, v6}, Lcom/amap/api/maps/model/l;->a(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/l;
+
+    goto :goto_1
+
+    :cond_3
+    invoke-virtual {p0, v7, v6, v8, v9}, Lcom/amap/api/mapcore/A;->a(Lcom/amap/api/maps/model/LatLng;Lcom/amap/api/maps/model/LatLng;Ljava/util/List;Lcom/amap/api/maps/model/l;)V
+
+    goto :goto_1
+
+    :cond_4
+    iput-object v8, p0, Lcom/amap/api/mapcore/A;->l:Ljava/util/ArrayList;
+
+    iput v11, p0, Lcom/amap/api/mapcore/A;->n:I
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->l:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-lez v0, :cond_5
+
+    invoke-virtual {v9}, Lcom/amap/api/maps/model/l;->a()Lcom/amap/api/maps/model/LatLngBounds;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/amap/api/mapcore/A;->v:Lcom/amap/api/maps/model/LatLngBounds;
+
+    :cond_5
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    invoke-interface {v0, v11}, Lcom/amap/api/mapcore/aE;->e(Z)V
 
     return-void
 .end method
 
 .method public b(Z)V
-    .locals 1
+    .locals 2
 
-    iget-boolean v0, p0, Lcom/amap/api/mapcore/A;->h:Z
+    iput-boolean p1, p0, Lcom/amap/api/mapcore/A;->o:Z
 
-    if-nez v0, :cond_0
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
 
-    if-eqz p1, :cond_0
+    const/4 v1, 0x0
 
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/amap/api/mapcore/A;->p:Z
-
-    :cond_0
-    iput-boolean p1, p0, Lcom/amap/api/mapcore/A;->h:Z
-
-    invoke-direct {p0}, Lcom/amap/api/mapcore/A;->K()V
+    invoke-interface {v0, v1}, Lcom/amap/api/mapcore/aE;->e(Z)V
 
     return-void
 .end method
 
-.method public b()Z
-    .locals 2
+.method public c()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcom/amap/api/maps/model/LatLng;",
+            ">;"
+        }
+    .end annotation
 
-    invoke-direct {p0}, Lcom/amap/api/mapcore/A;->K()V
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->q:Ljava/util/List;
 
-    iget v0, p0, Lcom/amap/api/mapcore/A;->k:I
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/A;->l:Lcom/amap/api/mapcore/v;
-
-    iget v1, p0, Lcom/amap/api/mapcore/A;->k:I
-
-    invoke-interface {v0, v1}, Lcom/amap/api/mapcore/v;->f(I)V
-
-    :cond_0
-    const/4 v0, 0x1
-
-    return v0
+    return-object v0
 .end method
 
 .method public c(Z)V
-    .locals 0
+    .locals 2
+
+    iput-boolean p1, p0, Lcom/amap/api/mapcore/A;->p:Z
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    const/4 v1, 0x0
+
+    invoke-interface {v0, v1}, Lcom/amap/api/mapcore/aE;->e(Z)V
 
     return-void
-.end method
-
-.method public c()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/amap/api/mapcore/A;->r:Z
-
-    return v0
-.end method
-
-.method public d()Landroid/graphics/Rect;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
 .end method
 
 .method public d(Z)V
-    .locals 0
+    .locals 2
 
-    invoke-direct {p0}, Lcom/amap/api/mapcore/A;->K()V
+    iput-boolean p1, p0, Lcom/amap/api/mapcore/A;->u:Z
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    const/4 v1, 0x0
+
+    invoke-interface {v0, v1}, Lcom/amap/api/mapcore/aE;->e(Z)V
 
     return-void
 .end method
 
-.method public e()Lcom/amap/api/maps/model/LatLng;
+.method public d()Z
     .locals 1
 
-    const/4 v0, 0x0
+    iget-boolean v0, p0, Lcom/amap/api/mapcore/A;->o:Z
 
-    return-object v0
+    return v0
 .end method
 
-.method public f()Lcom/autonavi/amap/mapcore/FPoint;
-    .locals 1
+.method public e()V
+    .locals 2
 
-    iget-object v0, p0, Lcom/amap/api/mapcore/A;->f:Lcom/autonavi/amap/mapcore/FPoint;
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
 
-    return-object v0
+    invoke-virtual {p0}, Lcom/amap/api/mapcore/A;->f()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Lcom/amap/api/mapcore/aE;->a(Ljava/lang/String;)Z
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    const/4 v1, 0x0
+
+    invoke-interface {v0, v1}, Lcom/amap/api/mapcore/aE;->e(Z)V
+
+    return-void
 .end method
 
-.method public g()Lcom/amap/api/maps/model/LatLng;
+.method public f()Ljava/lang/String;
     .locals 1
 
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public h()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/A;->e:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->k:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    const-string v0, "PopupOverlay"
+    const-string v0, "Polyline"
 
-    iput-object v0, p0, Lcom/amap/api/mapcore/A;->e:Ljava/lang/String;
+    invoke-static {v0}, Lcom/amap/api/mapcore/aB;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/amap/api/mapcore/A;->k:Ljava/lang/String;
 
     :cond_0
-    iget-object v0, p0, Lcom/amap/api/mapcore/A;->e:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->k:Ljava/lang/String;
 
     return-object v0
+.end method
+
+.method public g()F
+    .locals 1
+
+    iget v0, p0, Lcom/amap/api/mapcore/A;->i:F
+
+    return v0
+.end method
+
+.method public h()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/amap/api/mapcore/A;->j:Z
+
+    return v0
 .end method
 
 .method public i()I
-    .locals 1
-
-    iget v0, p0, Lcom/amap/api/mapcore/A;->k:I
-
-    return v0
-.end method
-
-.method public j()Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public k()Ljava/lang/String;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public l()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public m()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public n()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public o()Z
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public p()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/amap/api/mapcore/A;->h:Z
-
-    return v0
-.end method
-
-.method public q()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public r()I
     .locals 1
 
     invoke-super {p0}, Ljava/lang/Object;->hashCode()I
@@ -956,469 +2137,172 @@
     return v0
 .end method
 
-.method public s()Z
-    .locals 12
-
-    const/4 v11, 0x3
-
-    const/4 v10, 0x2
-
-    const/4 v1, 0x1
+.method public j()V
+    .locals 7
 
     const/4 v0, 0x0
 
-    const/4 v9, 0x0
+    iget-boolean v1, p0, Lcom/amap/api/mapcore/A;->w:Z
 
-    iget-object v2, p0, Lcom/amap/api/mapcore/A;->f:Lcom/autonavi/amap/mapcore/FPoint;
+    if-eqz v1, :cond_0
 
-    if-nez v2, :cond_1
+    :goto_0
+    return-void
 
     :cond_0
-    :goto_0
-    return v0
+    iput-boolean v0, p0, Lcom/amap/api/mapcore/A;->r:Z
 
-    :cond_1
-    new-instance v2, Lcom/autonavi/amap/mapcore/IPoint;
+    iget-object v2, p0, Lcom/amap/api/mapcore/A;->t:Ljava/lang/Object;
 
-    invoke-direct {v2}, Lcom/autonavi/amap/mapcore/IPoint;-><init>()V
+    monitor-enter v2
 
-    iget-object v3, p0, Lcom/amap/api/mapcore/A;->l:Lcom/amap/api/mapcore/v;
+    :try_start_0
+    new-instance v3, Lcom/autonavi/amap/mapcore/FPoint;
 
-    invoke-interface {v3}, Lcom/amap/api/mapcore/v;->c()Lcom/autonavi/amap/mapcore/MapProjection;
+    invoke-direct {v3}, Lcom/autonavi/amap/mapcore/FPoint;-><init>()V
 
-    move-result-object v3
+    iget-object v1, p0, Lcom/amap/api/mapcore/A;->l:Ljava/util/ArrayList;
 
-    iget-object v4, p0, Lcom/amap/api/mapcore/A;->f:Lcom/autonavi/amap/mapcore/FPoint;
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
-    iget v4, v4, Lcom/autonavi/amap/mapcore/FPoint;->x:F
+    move-result v1
 
-    iget-object v5, p0, Lcom/amap/api/mapcore/A;->f:Lcom/autonavi/amap/mapcore/FPoint;
+    mul-int/lit8 v1, v1, 0x3
 
-    iget v5, v5, Lcom/autonavi/amap/mapcore/FPoint;->y:F
+    new-array v1, v1, [F
 
-    invoke-virtual {v3, v4, v5, v2}, Lcom/autonavi/amap/mapcore/MapProjection;->map2Win(FFLcom/autonavi/amap/mapcore/IPoint;)V
+    iput-object v1, p0, Lcom/amap/api/mapcore/A;->e:[F
 
-    invoke-virtual {p0}, Lcom/amap/api/mapcore/A;->a()I
+    iget-object v1, p0, Lcom/amap/api/mapcore/A;->l:Ljava/util/ArrayList;
 
-    move-result v3
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {p0}, Lcom/amap/api/mapcore/A;->H()I
+    move-result-object v4
 
-    move-result v4
+    move v1, v0
 
-    iget v5, v2, Lcom/autonavi/amap/mapcore/IPoint;->x:I
-
-    iget v6, p0, Lcom/amap/api/mapcore/A;->b:I
-
-    add-int/2addr v5, v6
-
-    int-to-float v5, v5
-
-    int-to-float v6, v3
-
-    iget v7, p0, Lcom/amap/api/mapcore/A;->n:F
-
-    mul-float/2addr v6, v7
-
-    sub-float/2addr v5, v6
-
-    float-to-int v5, v5
-
-    iget v2, v2, Lcom/autonavi/amap/mapcore/IPoint;->y:I
-
-    iget v6, p0, Lcom/amap/api/mapcore/A;->c:I
-
-    add-int/2addr v2, v6
-
-    int-to-float v2, v2
-
-    int-to-float v6, v4
-
-    const/high16 v7, 0x3f800000
-
-    iget v8, p0, Lcom/amap/api/mapcore/A;->o:F
-
-    sub-float/2addr v7, v8
-
-    mul-float/2addr v6, v7
-
-    add-float/2addr v2, v6
-
-    float-to-int v2, v2
-
-    sub-int v6, v5, v3
-
-    iget-object v7, p0, Lcom/amap/api/mapcore/A;->l:Lcom/amap/api/mapcore/v;
-
-    invoke-interface {v7}, Lcom/amap/api/mapcore/v;->h()I
-
-    move-result v7
-
-    if-gt v6, v7, :cond_0
-
-    neg-int v3, v3
-
-    mul-int/lit8 v3, v3, 0x2
-
-    if-lt v5, v3, :cond_0
-
-    neg-int v3, v4
-
-    mul-int/lit8 v3, v3, 0x2
-
-    if-lt v2, v3, :cond_0
-
-    sub-int v3, v2, v4
-
-    iget-object v4, p0, Lcom/amap/api/mapcore/A;->l:Lcom/amap/api/mapcore/v;
-
-    invoke-interface {v4}, Lcom/amap/api/mapcore/v;->i()I
-
-    move-result v4
-
-    if-gt v3, v4, :cond_0
-
-    iget-object v3, p0, Lcom/amap/api/mapcore/A;->g:Lcom/amap/api/maps/model/BitmapDescriptor;
-
-    if-eqz v3, :cond_0
-
-    iget-object v3, p0, Lcom/amap/api/mapcore/A;->g:Lcom/amap/api/maps/model/BitmapDescriptor;
-
-    invoke-virtual {v3}, Lcom/amap/api/maps/model/BitmapDescriptor;->getWidth()I
-
-    move-result v3
-
-    iget-object v4, p0, Lcom/amap/api/mapcore/A;->g:Lcom/amap/api/maps/model/BitmapDescriptor;
-
-    invoke-virtual {v4}, Lcom/amap/api/maps/model/BitmapDescriptor;->getHeight()I
-
-    move-result v4
-
-    iget-object v6, p0, Lcom/amap/api/mapcore/A;->g:Lcom/amap/api/maps/model/BitmapDescriptor;
-
-    invoke-virtual {v6}, Lcom/amap/api/maps/model/BitmapDescriptor;->getBitmap()Landroid/graphics/Bitmap;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v6
-
-    iget-object v7, p0, Lcom/amap/api/mapcore/A;->g:Lcom/amap/api/maps/model/BitmapDescriptor;
-
-    invoke-virtual {v7}, Lcom/amap/api/maps/model/BitmapDescriptor;->getBitmap()Landroid/graphics/Bitmap;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v7
-
-    int-to-float v8, v3
-
-    int-to-float v7, v7
-
-    div-float v7, v8, v7
-
-    int-to-float v8, v4
-
-    int-to-float v6, v6
-
-    div-float v6, v8, v6
-
-    iget-object v8, p0, Lcom/amap/api/mapcore/A;->i:Ljava/nio/FloatBuffer;
-
-    if-nez v8, :cond_2
-
-    const/16 v8, 0x8
-
-    new-array v8, v8, [F
-
-    aput v9, v8, v0
-
-    aput v6, v8, v1
-
-    aput v7, v8, v10
-
-    aput v6, v8, v11
-
-    const/4 v6, 0x4
-
-    aput v7, v8, v6
-
-    const/4 v6, 0x5
-
-    aput v9, v8, v6
-
-    const/4 v6, 0x6
-
-    aput v9, v8, v6
-
-    const/4 v6, 0x7
-
-    aput v9, v8, v6
-
-    invoke-static {v8}, Lcom/amap/api/mapcore/util/w;->a([F)Ljava/nio/FloatBuffer;
-
-    move-result-object v6
-
-    iput-object v6, p0, Lcom/amap/api/mapcore/A;->i:Ljava/nio/FloatBuffer;
-
-    :cond_2
-    const/16 v6, 0xc
-
-    new-array v6, v6, [F
-
-    int-to-float v7, v5
-
-    aput v7, v6, v0
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/A;->l:Lcom/amap/api/mapcore/v;
-
-    invoke-interface {v0}, Lcom/amap/api/mapcore/v;->i()I
+    :goto_1
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    sub-int/2addr v0, v2
+    if-eqz v0, :cond_1
 
-    int-to-float v0, v0
-
-    aput v0, v6, v1
-
-    aput v9, v6, v10
-
-    add-int v0, v5, v3
-
-    int-to-float v0, v0
-
-    aput v0, v6, v11
-
-    const/4 v0, 0x4
-
-    iget-object v7, p0, Lcom/amap/api/mapcore/A;->l:Lcom/amap/api/mapcore/v;
-
-    invoke-interface {v7}, Lcom/amap/api/mapcore/v;->i()I
-
-    move-result v7
-
-    sub-int/2addr v7, v2
-
-    int-to-float v7, v7
-
-    aput v7, v6, v0
-
-    const/4 v0, 0x5
-
-    aput v9, v6, v0
-
-    const/4 v0, 0x6
-
-    add-int/2addr v3, v5
-
-    int-to-float v3, v3
-
-    aput v3, v6, v0
-
-    const/4 v0, 0x7
-
-    iget-object v3, p0, Lcom/amap/api/mapcore/A;->l:Lcom/amap/api/mapcore/v;
-
-    invoke-interface {v3}, Lcom/amap/api/mapcore/v;->i()I
-
-    move-result v3
-
-    sub-int/2addr v3, v2
-
-    add-int/2addr v3, v4
-
-    int-to-float v3, v3
-
-    aput v3, v6, v0
-
-    const/16 v0, 0x8
-
-    aput v9, v6, v0
-
-    const/16 v0, 0x9
-
-    int-to-float v3, v5
-
-    aput v3, v6, v0
-
-    const/16 v0, 0xa
-
-    iget-object v3, p0, Lcom/amap/api/mapcore/A;->l:Lcom/amap/api/mapcore/v;
-
-    invoke-interface {v3}, Lcom/amap/api/mapcore/v;->i()I
-
-    move-result v3
-
-    sub-int v2, v3, v2
-
-    add-int/2addr v2, v4
-
-    int-to-float v2, v2
-
-    aput v2, v6, v0
-
-    const/16 v0, 0xb
-
-    aput v9, v6, v0
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/A;->d:Ljava/nio/FloatBuffer;
-
-    if-nez v0, :cond_3
-
-    invoke-static {v6}, Lcom/amap/api/mapcore/util/w;->a([F)Ljava/nio/FloatBuffer;
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/amap/api/mapcore/A;->d:Ljava/nio/FloatBuffer;
+    check-cast v0, Lcom/autonavi/amap/mapcore/IPoint;
 
-    :goto_1
-    move v0, v1
+    iget-object v5, p0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
 
-    goto/16 :goto_0
+    iget v6, v0, Lcom/autonavi/amap/mapcore/IPoint;->y:I
 
-    :cond_3
-    iget-object v0, p0, Lcom/amap/api/mapcore/A;->d:Ljava/nio/FloatBuffer;
+    iget v0, v0, Lcom/autonavi/amap/mapcore/IPoint;->x:I
 
-    invoke-static {v6, v0}, Lcom/amap/api/mapcore/util/w;->a([FLjava/nio/FloatBuffer;)Ljava/nio/FloatBuffer;
+    invoke-interface {v5, v6, v0, v3}, Lcom/amap/api/mapcore/aE;->b(IILcom/autonavi/amap/mapcore/FPoint;)V
 
-    move-result-object v0
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->e:[F
 
-    iput-object v0, p0, Lcom/amap/api/mapcore/A;->d:Ljava/nio/FloatBuffer;
+    mul-int/lit8 v5, v1, 0x3
+
+    iget v6, v3, Lcom/autonavi/amap/mapcore/FPoint;->x:F
+
+    aput v6, v0, v5
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->e:[F
+
+    mul-int/lit8 v5, v1, 0x3
+
+    add-int/lit8 v5, v5, 0x1
+
+    iget v6, v3, Lcom/autonavi/amap/mapcore/FPoint;->y:F
+
+    aput v6, v0, v5
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->e:[F
+
+    mul-int/lit8 v5, v1, 0x3
+
+    add-int/lit8 v5, v5, 0x2
+
+    const/4 v6, 0x0
+
+    aput v6, v0, v5
+
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
 
     goto :goto_1
-.end method
 
-.method public t()Ljava/lang/Object;
-    .locals 1
+    :cond_1
+    monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object v0, p0, Lcom/amap/api/mapcore/A;->j:Ljava/lang/Object;
+    iget-boolean v0, p0, Lcom/amap/api/mapcore/A;->u:Z
 
-    return-object v0
-.end method
+    if-nez v0, :cond_2
 
-.method public u()Z
-    .locals 1
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->e:[F
 
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public v()F
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public w()I
-    .locals 1
-
-    iget v0, p0, Lcom/amap/api/mapcore/A;->s:I
-
-    return v0
-.end method
-
-.method public x()Ljava/util/ArrayList;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcom/amap/api/maps/model/BitmapDescriptor;",
-            ">;"
-        }
-    .end annotation
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public y()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/amap/api/mapcore/A;->a:Z
-
-    return v0
-.end method
-
-.method public z()V
-    .locals 2
-
-    iget-boolean v0, p0, Lcom/amap/api/mapcore/A;->a:Z
-
-    if-eqz v0, :cond_3
-
-    :try_start_0
-    invoke-virtual {p0}, Lcom/amap/api/mapcore/A;->b()Z
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/A;->g:Lcom/amap/api/maps/model/BitmapDescriptor;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/A;->g:Lcom/amap/api/maps/model/BitmapDescriptor;
-
-    invoke-virtual {v0}, Lcom/amap/api/maps/model/BitmapDescriptor;->getBitmap()Landroid/graphics/Bitmap;
+    invoke-static {v0}, Lcom/amap/api/mapcore/a/P;->a([F)Ljava/nio/FloatBuffer;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    iput-object v0, p0, Lcom/amap/api/mapcore/A;->m:Ljava/nio/FloatBuffer;
 
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
+    :cond_2
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->l:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/amap/api/mapcore/A;->n:I
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public k()V
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->e:[F
+
+    if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/amap/api/mapcore/A;->g:Lcom/amap/api/maps/model/BitmapDescriptor;
+    iput-object v0, p0, Lcom/amap/api/mapcore/A;->e:[F
 
     :cond_0
-    iget-object v0, p0, Lcom/amap/api/mapcore/A;->i:Ljava/nio/FloatBuffer;
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->m:Ljava/nio/FloatBuffer;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/amap/api/mapcore/A;->i:Ljava/nio/FloatBuffer;
+    iget-object v0, p0, Lcom/amap/api/mapcore/A;->m:Ljava/nio/FloatBuffer;
 
     invoke-virtual {v0}, Ljava/nio/FloatBuffer;->clear()Ljava/nio/Buffer;
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/amap/api/mapcore/A;->i:Ljava/nio/FloatBuffer;
-
-    :cond_1
-    iget-object v0, p0, Lcom/amap/api/mapcore/A;->d:Ljava/nio/FloatBuffer;
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/A;->d:Ljava/nio/FloatBuffer;
-
-    invoke-virtual {v0}, Ljava/nio/FloatBuffer;->clear()Ljava/nio/Buffer;
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/amap/api/mapcore/A;->d:Ljava/nio/FloatBuffer;
-
-    :cond_2
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/amap/api/mapcore/A;->f:Lcom/autonavi/amap/mapcore/FPoint;
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/amap/api/mapcore/A;->j:Ljava/lang/Object;
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/amap/api/mapcore/A;->k:I
+    iput-object v0, p0, Lcom/amap/api/mapcore/A;->m:Ljava/nio/FloatBuffer;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    :cond_3
+    :cond_1
     :goto_0
     return-void
 
@@ -1429,9 +2313,76 @@
 
     const-string v0, "destroy erro"
 
-    const-string v1, "MarkerDelegateImp destroy"
+    const-string v1, "PolylineDelegateImp destroy"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
+.end method
+
+.method public l()Z
+    .locals 4
+
+    const/4 v1, 0x1
+
+    const/4 v0, 0x0
+
+    iget-object v2, p0, Lcom/amap/api/mapcore/A;->v:Lcom/amap/api/maps/model/LatLngBounds;
+
+    if-nez v2, :cond_1
+
+    :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
+    iget-object v2, p0, Lcom/amap/api/mapcore/A;->f:Lcom/amap/api/mapcore/aE;
+
+    invoke-interface {v2}, Lcom/amap/api/mapcore/aE;->B()Lcom/amap/api/maps/model/LatLngBounds;
+
+    move-result-object v2
+
+    if-nez v2, :cond_2
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v3, p0, Lcom/amap/api/mapcore/A;->v:Lcom/amap/api/maps/model/LatLngBounds;
+
+    invoke-virtual {v2, v3}, Lcom/amap/api/maps/model/LatLngBounds;->a(Lcom/amap/api/maps/model/LatLngBounds;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_3
+
+    iget-object v3, p0, Lcom/amap/api/mapcore/A;->v:Lcom/amap/api/maps/model/LatLngBounds;
+
+    invoke-virtual {v3, v2}, Lcom/amap/api/maps/model/LatLngBounds;->b(Lcom/amap/api/maps/model/LatLngBounds;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    :cond_3
+    move v0, v1
+
+    goto :goto_0
+.end method
+
+.method public m()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/amap/api/mapcore/A;->r:Z
+
+    return v0
+.end method
+
+.method public n()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/amap/api/mapcore/A;->p:Z
+
+    return v0
 .end method

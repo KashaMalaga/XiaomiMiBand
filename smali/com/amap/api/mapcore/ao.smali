@@ -3,7 +3,7 @@
 
 
 # instance fields
-.field private a:Lcom/amap/api/mapcore/v;
+.field private a:Lcom/amap/api/mapcore/aE;
 
 
 # direct methods
@@ -15,12 +15,12 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/amap/api/mapcore/v;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/amap/api/mapcore/aE;)V
     .locals 1
 
     invoke-direct {p0, p1}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;)V
 
-    iput-object p2, p0, Lcom/amap/api/mapcore/ao;->a:Lcom/amap/api/mapcore/v;
+    iput-object p2, p0, Lcom/amap/api/mapcore/ao;->a:Lcom/amap/api/mapcore/aE;
 
     const/4 v0, -0x1
 
@@ -244,7 +244,7 @@
 
     invoke-direct {p0, p1, v1, v2, v0}, Lcom/amap/api/mapcore/ao;->a(Landroid/view/View;II[I)V
 
-    instance-of v1, p1, Lcom/amap/api/mapcore/Y;
+    instance-of v1, p1, Lcom/amap/api/mapcore/ac;
 
     if-eqz v1, :cond_1
 
@@ -277,7 +277,7 @@
     return-void
 
     :cond_1
-    instance-of v1, p1, Lcom/amap/api/mapcore/d;
+    instance-of v1, p1, Lcom/amap/api/mapcore/o;
 
     if-eqz v1, :cond_2
 
@@ -306,7 +306,7 @@
     goto :goto_0
 
     :cond_2
-    instance-of v1, p1, Lcom/amap/api/mapcore/aw;
+    instance-of v1, p1, Lcom/amap/api/mapcore/at;
 
     if-eqz v1, :cond_3
 
@@ -335,9 +335,9 @@
 
     invoke-direct {v1}, Lcom/autonavi/amap/mapcore/IPoint;-><init>()V
 
-    iget-object v2, p0, Lcom/amap/api/mapcore/ao;->a:Lcom/amap/api/mapcore/v;
+    iget-object v2, p0, Lcom/amap/api/mapcore/ao;->a:Lcom/amap/api/mapcore/aE;
 
-    invoke-interface {v2}, Lcom/amap/api/mapcore/v;->c()Lcom/autonavi/amap/mapcore/MapProjection;
+    invoke-interface {v2}, Lcom/amap/api/mapcore/aE;->c()Lcom/autonavi/amap/mapcore/MapProjection;
 
     move-result-object v2
 

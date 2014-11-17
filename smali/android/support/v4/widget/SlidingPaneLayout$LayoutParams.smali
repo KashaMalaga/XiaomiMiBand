@@ -3,17 +3,17 @@
 
 
 # static fields
-.field private static final d:[I
+.field private static final e:[I
 
 
 # instance fields
-.field a:Z
+.field public a:F
 
 .field b:Z
 
-.field c:Landroid/graphics/Paint;
+.field c:Z
 
-.field public weight:F
+.field d:Landroid/graphics/Paint;
 
 
 # direct methods
@@ -30,7 +30,7 @@
 
     aput v2, v0, v1
 
-    sput-object v0, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->d:[I
+    sput-object v0, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->e:[I
 
     return-void
 .end method
@@ -44,7 +44,7 @@
 
     const/4 v0, 0x0
 
-    iput v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->weight:F
+    iput v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->a:F
 
     return-void
 .end method
@@ -56,7 +56,7 @@
 
     const/4 v0, 0x0
 
-    iput v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->weight:F
+    iput v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->a:F
 
     return-void
 .end method
@@ -68,9 +68,9 @@
 
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    iput v2, p0, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->weight:F
+    iput v2, p0, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->a:F
 
-    sget-object v0, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->d:[I
+    sget-object v0, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->e:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -82,7 +82,7 @@
 
     move-result v1
 
-    iput v1, p0, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->weight:F
+    iput v1, p0, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->a:F
 
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
@@ -96,11 +96,11 @@
 
     const/4 v0, 0x0
 
-    iput v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->weight:F
+    iput v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->a:F
 
-    iget v0, p1, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->weight:F
+    iget v0, p1, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->a:F
 
-    iput v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->weight:F
+    iput v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->a:F
 
     return-void
 .end method
@@ -112,7 +112,7 @@
 
     const/4 v0, 0x0
 
-    iput v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->weight:F
+    iput v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->a:F
 
     return-void
 .end method
@@ -124,7 +124,7 @@
 
     const/4 v0, 0x0
 
-    iput v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->weight:F
+    iput v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->a:F
 
     return-void
 .end method

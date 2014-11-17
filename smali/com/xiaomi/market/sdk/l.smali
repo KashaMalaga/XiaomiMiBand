@@ -1,99 +1,192 @@
-.class public final Lcom/xiaomi/market/sdk/l;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lcom/xiaomi/market/sdk/k;
+.class public final enum Lcom/xiaomi/market/sdk/l;
+.super Ljava/lang/Enum;
 
 
 # static fields
-.field public static final aA:Ljava/lang/String; = "diff_url"
+.field public static final enum a:Lcom/xiaomi/market/sdk/l;
 
-.field public static final aB:Ljava/lang/String; = "diff_hash"
+.field public static final enum b:Lcom/xiaomi/market/sdk/l;
 
-.field public static final aE:Ljava/lang/String; = "update_download"
+.field public static final enum c:Lcom/xiaomi/market/sdk/l;
 
-.field public static final aF:Ljava/lang/String; = "package_name"
+.field public static final enum d:Lcom/xiaomi/market/sdk/l;
 
-.field public static final aG:Ljava/lang/String; = "download_id"
+.field public static final enum e:Lcom/xiaomi/market/sdk/l;
 
-.field public static final aH:Ljava/lang/String; = "apk_path"
+.field public static final enum f:Lcom/xiaomi/market/sdk/l;
 
-.field public static final aI:Ljava/lang/String; = "CREATE TABLE update_download (_id INTEGER PRIMARY KEY AUTOINCREMENT,package_name TEXT,download_id INTEGER, version_code INTEGER, apk_url TEXT, apk_hash TEXT, diff_url TEXT, diff_hash TEXT, apk_path TEXT, UNIQUE(package_name));"
+.field public static final enum g:Lcom/xiaomi/market/sdk/l;
 
-.field public static final aJ:[Ljava/lang/String;
+.field public static final enum h:Lcom/xiaomi/market/sdk/l;
 
-.field public static final av:Ljava/lang/String; = "version_code"
-
-.field public static final ax:Ljava/lang/String; = "apk_url"
-
-.field public static final ay:Ljava/lang/String; = "apk_hash"
+.field private static final synthetic i:[Lcom/xiaomi/market/sdk/l;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 8
+
+    const/4 v7, 0x4
+
+    const/4 v6, 0x3
+
+    const/4 v5, 0x2
+
+    const/4 v4, 0x1
+
+    const/4 v3, 0x0
+
+    new-instance v0, Lcom/xiaomi/market/sdk/l;
+
+    const-string v1, "OK"
+
+    invoke-direct {v0, v1, v3}, Lcom/xiaomi/market/sdk/l;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/xiaomi/market/sdk/l;->a:Lcom/xiaomi/market/sdk/l;
+
+    new-instance v0, Lcom/xiaomi/market/sdk/l;
+
+    const-string v1, "URL_ERROR"
+
+    invoke-direct {v0, v1, v4}, Lcom/xiaomi/market/sdk/l;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/xiaomi/market/sdk/l;->b:Lcom/xiaomi/market/sdk/l;
+
+    new-instance v0, Lcom/xiaomi/market/sdk/l;
+
+    const-string v1, "NETWORK_ERROR"
+
+    invoke-direct {v0, v1, v5}, Lcom/xiaomi/market/sdk/l;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/xiaomi/market/sdk/l;->c:Lcom/xiaomi/market/sdk/l;
+
+    new-instance v0, Lcom/xiaomi/market/sdk/l;
+
+    const-string v1, "AUTH_ERROR"
+
+    invoke-direct {v0, v1, v6}, Lcom/xiaomi/market/sdk/l;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/xiaomi/market/sdk/l;->d:Lcom/xiaomi/market/sdk/l;
+
+    new-instance v0, Lcom/xiaomi/market/sdk/l;
+
+    const-string v1, "CLIENT_ERROR"
+
+    invoke-direct {v0, v1, v7}, Lcom/xiaomi/market/sdk/l;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/xiaomi/market/sdk/l;->e:Lcom/xiaomi/market/sdk/l;
+
+    new-instance v0, Lcom/xiaomi/market/sdk/l;
+
+    const-string v1, "SERVER_ERROR"
+
+    const/4 v2, 0x5
+
+    invoke-direct {v0, v1, v2}, Lcom/xiaomi/market/sdk/l;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/xiaomi/market/sdk/l;->f:Lcom/xiaomi/market/sdk/l;
+
+    new-instance v0, Lcom/xiaomi/market/sdk/l;
+
+    const-string v1, "RESULT_ERROR"
+
+    const/4 v2, 0x6
+
+    invoke-direct {v0, v1, v2}, Lcom/xiaomi/market/sdk/l;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/xiaomi/market/sdk/l;->g:Lcom/xiaomi/market/sdk/l;
+
+    new-instance v0, Lcom/xiaomi/market/sdk/l;
+
+    const-string v1, "UNKNOWN_ERROR"
+
+    const/4 v2, 0x7
+
+    invoke-direct {v0, v1, v2}, Lcom/xiaomi/market/sdk/l;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/xiaomi/market/sdk/l;->h:Lcom/xiaomi/market/sdk/l;
 
     const/16 v0, 0x8
 
-    new-array v0, v0, [Ljava/lang/String;
+    new-array v0, v0, [Lcom/xiaomi/market/sdk/l;
 
-    const/4 v1, 0x0
+    sget-object v1, Lcom/xiaomi/market/sdk/l;->a:Lcom/xiaomi/market/sdk/l;
 
-    const-string v2, "update_download.package_name"
+    aput-object v1, v0, v3
 
-    aput-object v2, v0, v1
+    sget-object v1, Lcom/xiaomi/market/sdk/l;->b:Lcom/xiaomi/market/sdk/l;
 
-    const/4 v1, 0x1
+    aput-object v1, v0, v4
 
-    const-string v2, "update_download.download_id"
+    sget-object v1, Lcom/xiaomi/market/sdk/l;->c:Lcom/xiaomi/market/sdk/l;
 
-    aput-object v2, v0, v1
+    aput-object v1, v0, v5
 
-    const/4 v1, 0x2
+    sget-object v1, Lcom/xiaomi/market/sdk/l;->d:Lcom/xiaomi/market/sdk/l;
 
-    const-string v2, "update_download.version_code"
+    aput-object v1, v0, v6
 
-    aput-object v2, v0, v1
+    sget-object v1, Lcom/xiaomi/market/sdk/l;->e:Lcom/xiaomi/market/sdk/l;
 
-    const/4 v1, 0x3
-
-    const-string v2, "update_download.apk_url"
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x4
-
-    const-string v2, "update_download.apk_hash"
-
-    aput-object v2, v0, v1
+    aput-object v1, v0, v7
 
     const/4 v1, 0x5
 
-    const-string v2, "update_download.diff_url"
+    sget-object v2, Lcom/xiaomi/market/sdk/l;->f:Lcom/xiaomi/market/sdk/l;
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x6
 
-    const-string v2, "update_download.diff_hash"
+    sget-object v2, Lcom/xiaomi/market/sdk/l;->g:Lcom/xiaomi/market/sdk/l;
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x7
 
-    const-string v2, "update_download.apk_path"
+    sget-object v2, Lcom/xiaomi/market/sdk/l;->h:Lcom/xiaomi/market/sdk/l;
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/xiaomi/market/sdk/l;->aJ:[Ljava/lang/String;
+    sput-object v0, Lcom/xiaomi/market/sdk/l;->i:[Lcom/xiaomi/market/sdk/l;
 
     return-void
 .end method
 
-.method public constructor <init>()V
+.method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lcom/xiaomi/market/sdk/l;
+    .locals 1
+
+    const-class v0, Lcom/xiaomi/market/sdk/l;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/xiaomi/market/sdk/l;
+
+    return-object v0
+.end method
+
+.method public static values()[Lcom/xiaomi/market/sdk/l;
+    .locals 4
+
+    const/4 v3, 0x0
+
+    sget-object v0, Lcom/xiaomi/market/sdk/l;->i:[Lcom/xiaomi/market/sdk/l;
+
+    array-length v1, v0
+
+    new-array v2, v1, [Lcom/xiaomi/market/sdk/l;
+
+    invoke-static {v0, v3, v2, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    return-object v2
 .end method

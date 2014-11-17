@@ -53,7 +53,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->setAlarmItems(Lcn/com/smartdevices/bracelet/model/AlarmClockItem;Landroid/content/Context;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->a(Lcn/com/smartdevices/bracelet/model/AlarmClockItem;Landroid/content/Context;)V
 
     const-string v0, "AlarmAdapter"
 
@@ -77,13 +77,13 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/Debug;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/f;->a:Lcn/com/smartdevices/bracelet/ui/e;
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/e;->notifyDataSetChanged()V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/BleTask/BleSetAlarmClockTask;
+    new-instance v0, Lcn/com/smartdevices/bracelet/a/k;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/f;->a:Lcn/com/smartdevices/bracelet/ui/e;
 
@@ -101,9 +101,9 @@
 
     invoke-direct {v2, p0, v3, p2}, Lcn/com/smartdevices/bracelet/ui/g;-><init>(Lcn/com/smartdevices/bracelet/ui/f;Lcn/com/smartdevices/bracelet/model/AlarmClockItem;Z)V
 
-    invoke-direct {v0, v1, v2}, Lcn/com/smartdevices/bracelet/BleTask/BleSetAlarmClockTask;-><init>(Ljava/util/ArrayList;Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;)V
+    invoke-direct {v0, v1, v2}, Lcn/com/smartdevices/bracelet/a/k;-><init>(Ljava/util/ArrayList;Lcn/com/smartdevices/bracelet/a/b;)V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/BleTask/BleSetAlarmClockTask;->work()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/a/k;->c()V
 
     return-void
 .end method

@@ -5,7 +5,7 @@
 # instance fields
 .field private a:Lorg/achartengine/GraphicalView;
 
-.field private b:Lorg/achartengine/chart/AbstractChart;
+.field private b:Lorg/achartengine/a/a;
 
 
 # direct methods
@@ -38,15 +38,15 @@
 
     move-result-object v0
 
-    check-cast v0, Lorg/achartengine/chart/AbstractChart;
+    check-cast v0, Lorg/achartengine/a/a;
 
-    iput-object v0, p0, Lorg/achartengine/GraphicalActivity;->b:Lorg/achartengine/chart/AbstractChart;
+    iput-object v0, p0, Lorg/achartengine/GraphicalActivity;->b:Lorg/achartengine/a/a;
 
     new-instance v0, Lorg/achartengine/GraphicalView;
 
-    iget-object v2, p0, Lorg/achartengine/GraphicalActivity;->b:Lorg/achartengine/chart/AbstractChart;
+    iget-object v2, p0, Lorg/achartengine/GraphicalActivity;->b:Lorg/achartengine/a/a;
 
-    invoke-direct {v0, p0, v2}, Lorg/achartengine/GraphicalView;-><init>(Landroid/content/Context;Lorg/achartengine/chart/AbstractChart;)V
+    invoke-direct {v0, p0, v2}, Lorg/achartengine/GraphicalView;-><init>(Landroid/content/Context;Lorg/achartengine/a/a;)V
 
     iput-object v0, p0, Lorg/achartengine/GraphicalActivity;->a:Lorg/achartengine/GraphicalView;
 

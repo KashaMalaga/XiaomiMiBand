@@ -27,9 +27,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Landroid/support/v4/widget/g;
+    new-instance v0, Landroid/support/v4/widget/i;
 
-    invoke-direct {v0}, Landroid/support/v4/widget/g;-><init>()V
+    invoke-direct {v0}, Landroid/support/v4/widget/i;-><init>()V
 
     sput-object v0, Landroid/support/v4/widget/DrawerLayout$SavedState;->CREATOR:Landroid/os/Parcelable$Creator;
 

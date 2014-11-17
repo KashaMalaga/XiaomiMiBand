@@ -1,60 +1,37 @@
-.class Landroid/support/v4/view/d;
-.super Landroid/support/v4/view/a;
-
-
-# direct methods
-.method constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Landroid/support/v4/view/a;-><init>()V
-
-    return-void
-.end method
+.class interface abstract Landroid/support/v4/view/d;
+.super Ljava/lang/Object;
 
 
 # virtual methods
-.method public a(Ljava/lang/Object;Landroid/view/View;)Landroid/support/v4/view/accessibility/AccessibilityNodeProviderCompat;
-    .locals 2
-
-    invoke-static {p1, p2}, Landroid/support/v4/view/AccessibilityDelegateCompatJellyBean;->a(Ljava/lang/Object;Landroid/view/View;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    new-instance v0, Landroid/support/v4/view/accessibility/AccessibilityNodeProviderCompat;
-
-    invoke-direct {v0, v1}, Landroid/support/v4/view/accessibility/AccessibilityNodeProviderCompat;-><init>(Ljava/lang/Object;)V
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
+.method public abstract a(Ljava/lang/Object;Landroid/view/View;)Landroid/support/v4/view/a/x;
 .end method
 
-.method public a(Landroid/support/v4/view/AccessibilityDelegateCompat;)Ljava/lang/Object;
-    .locals 1
-
-    new-instance v0, Landroid/support/v4/view/e;
-
-    invoke-direct {v0, p0, p1}, Landroid/support/v4/view/e;-><init>(Landroid/support/v4/view/d;Landroid/support/v4/view/AccessibilityDelegateCompat;)V
-
-    invoke-static {v0}, Landroid/support/v4/view/AccessibilityDelegateCompatJellyBean;->a(Landroid/support/v4/view/AccessibilityDelegateCompatJellyBean$AccessibilityDelegateBridgeJellyBean;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
+.method public abstract a()Ljava/lang/Object;
 .end method
 
-.method public a(Ljava/lang/Object;Landroid/view/View;ILandroid/os/Bundle;)Z
-    .locals 1
+.method public abstract a(Landroid/support/v4/view/a;)Ljava/lang/Object;
+.end method
 
-    invoke-static {p1, p2, p3, p4}, Landroid/support/v4/view/AccessibilityDelegateCompatJellyBean;->a(Ljava/lang/Object;Landroid/view/View;ILandroid/os/Bundle;)Z
+.method public abstract a(Ljava/lang/Object;Landroid/view/View;I)V
+.end method
 
-    move-result v0
+.method public abstract a(Ljava/lang/Object;Landroid/view/View;Landroid/support/v4/view/a/o;)V
+.end method
 
-    return v0
+.method public abstract a(Ljava/lang/Object;Landroid/view/View;ILandroid/os/Bundle;)Z
+.end method
+
+.method public abstract a(Ljava/lang/Object;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
+.end method
+
+.method public abstract a(Ljava/lang/Object;Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
+.end method
+
+.method public abstract b(Ljava/lang/Object;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+.end method
+
+.method public abstract c(Ljava/lang/Object;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+.end method
+
+.method public abstract d(Ljava/lang/Object;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
 .end method

@@ -3,15 +3,15 @@
 
 
 # static fields
-.field private static final a:[J
+.field private static final GMT:Ljava/util/TimeZone;
 
-.field private static final b:[J
+.field private static final t:[J
 
-.field private static final c:Ljava/util/TimeZone;
+.field private static final u:[J
 
-.field private static final d:[C
+.field private static final v:[C
 
-.field private static final e:[Ljava/lang/String;
+.field private static final w:[Ljava/lang/String;
 
 
 # direct methods
@@ -26,13 +26,13 @@
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/tencent/mm/sdk/b/e;->a:[J
+    sput-object v0, Lcom/tencent/mm/sdk/b/e;->t:[J
 
     new-array v0, v3, [J
 
     fill-array-data v0, :array_1
 
-    sput-object v0, Lcom/tencent/mm/sdk/b/e;->b:[J
+    sput-object v0, Lcom/tencent/mm/sdk/b/e;->u:[J
 
     const-string v0, "GMT"
 
@@ -40,13 +40,13 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/sdk/b/e;->c:Ljava/util/TimeZone;
+    sput-object v0, Lcom/tencent/mm/sdk/b/e;->GMT:Ljava/util/TimeZone;
 
     new-array v0, v1, [C
 
     fill-array-data v0, :array_2
 
-    sput-object v0, Lcom/tencent/mm/sdk/b/e;->d:[C
+    sput-object v0, Lcom/tencent/mm/sdk/b/e;->v:[C
 
     new-array v0, v1, [Ljava/lang/String;
 
@@ -78,7 +78,7 @@
 
     aput-object v1, v0, v3
 
-    sput-object v0, Lcom/tencent/mm/sdk/b/e;->e:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/sdk/b/e;->w:[Ljava/lang/String;
 
     return-void
 

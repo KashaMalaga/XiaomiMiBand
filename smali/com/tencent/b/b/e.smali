@@ -11,7 +11,7 @@
 # instance fields
 .field private a:Landroid/content/Context;
 
-.field private c:Lcom/tencent/b/b/p;
+.field private c:Lcom/tencent/b/b/e$c;
 
 .field private e:Lcom/tencent/b/b/e$b;
 
@@ -58,7 +58,7 @@
 
     iput-object v0, p0, Lcom/tencent/b/b/e;->a:Landroid/content/Context;
 
-    iput-object v0, p0, Lcom/tencent/b/b/e;->c:Lcom/tencent/b/b/p;
+    iput-object v0, p0, Lcom/tencent/b/b/e;->c:Lcom/tencent/b/b/e$c;
 
     iput-object v0, p0, Lcom/tencent/b/b/e;->e:Lcom/tencent/b/b/e$b;
 
@@ -297,19 +297,19 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/b/b/e;->c:Lcom/tencent/b/b/p;
+    iget-object v0, p0, Lcom/tencent/b/b/e;->c:Lcom/tencent/b/b/e$c;
 
     if-eqz v0, :cond_1
 
     sget-object v0, Lcom/tencent/b/b/e;->b:Landroid/location/LocationManager;
 
-    iget-object v2, p0, Lcom/tencent/b/b/e;->c:Lcom/tencent/b/b/p;
+    iget-object v2, p0, Lcom/tencent/b/b/e;->c:Lcom/tencent/b/b/e$c;
 
     invoke-virtual {v0, v2}, Landroid/location/LocationManager;->removeGpsStatusListener(Landroid/location/GpsStatus$Listener;)V
 
     sget-object v0, Lcom/tencent/b/b/e;->b:Landroid/location/LocationManager;
 
-    iget-object v2, p0, Lcom/tencent/b/b/e;->c:Lcom/tencent/b/b/p;
+    iget-object v2, p0, Lcom/tencent/b/b/e;->c:Lcom/tencent/b/b/e$c;
 
     invoke-virtual {v0, v2}, Landroid/location/LocationManager;->removeUpdates(Landroid/location/LocationListener;)V
 
@@ -388,19 +388,19 @@
 
     sput-object v0, Lcom/tencent/b/b/e;->b:Landroid/location/LocationManager;
 
-    new-instance v0, Lcom/tencent/b/b/p;
+    new-instance v0, Lcom/tencent/b/b/e$c;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lcom/tencent/b/b/p;-><init>(Lcom/tencent/b/b/e;B)V
+    invoke-direct {v0, p0, v1}, Lcom/tencent/b/b/e$c;-><init>(Lcom/tencent/b/b/e;B)V
 
-    iput-object v0, p0, Lcom/tencent/b/b/e;->c:Lcom/tencent/b/b/p;
+    iput-object v0, p0, Lcom/tencent/b/b/e;->c:Lcom/tencent/b/b/e$c;
 
     sget-object v0, Lcom/tencent/b/b/e;->b:Landroid/location/LocationManager;
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcom/tencent/b/b/e;->c:Lcom/tencent/b/b/p;
+    iget-object v0, p0, Lcom/tencent/b/b/e;->c:Lcom/tencent/b/b/e$c;
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -436,13 +436,13 @@
 
     const/4 v4, 0x0
 
-    iget-object v5, p0, Lcom/tencent/b/b/e;->c:Lcom/tencent/b/b/p;
+    iget-object v5, p0, Lcom/tencent/b/b/e;->c:Lcom/tencent/b/b/e$c;
 
     invoke-virtual/range {v0 .. v5}, Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String;JFLandroid/location/LocationListener;)V
 
     sget-object v0, Lcom/tencent/b/b/e;->b:Landroid/location/LocationManager;
 
-    iget-object v1, p0, Lcom/tencent/b/b/e;->c:Lcom/tencent/b/b/p;
+    iget-object v1, p0, Lcom/tencent/b/b/e;->c:Lcom/tencent/b/b/e$c;
 
     invoke-virtual {v0, v1}, Landroid/location/LocationManager;->addGpsStatusListener(Landroid/location/GpsStatus$Listener;)Z
 

@@ -3,26 +3,14 @@
 
 
 # virtual methods
-.method public abstract a(Landroid/view/ViewGroup$MarginLayoutParams;)I
+.method public abstract a(II)I
 .end method
 
-.method public abstract a(Landroid/view/ViewGroup$MarginLayoutParams;I)V
+.method public abstract a(IIILandroid/graphics/Rect;IILandroid/graphics/Rect;I)V
 .end method
 
-.method public abstract b(Landroid/view/ViewGroup$MarginLayoutParams;)I
+.method public abstract a(IIILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
 .end method
 
-.method public abstract b(Landroid/view/ViewGroup$MarginLayoutParams;I)V
-.end method
-
-.method public abstract c(Landroid/view/ViewGroup$MarginLayoutParams;I)V
-.end method
-
-.method public abstract c(Landroid/view/ViewGroup$MarginLayoutParams;)Z
-.end method
-
-.method public abstract d(Landroid/view/ViewGroup$MarginLayoutParams;)I
-.end method
-
-.method public abstract d(Landroid/view/ViewGroup$MarginLayoutParams;I)V
+.method public abstract a(ILandroid/graphics/Rect;Landroid/graphics/Rect;I)V
 .end method

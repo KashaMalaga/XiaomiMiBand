@@ -1,20 +1,67 @@
-.class Landroid/support/v4/content/c;
-.super Ljava/lang/Object;
+.class Landroid/support/v4/content/C;
+.super Landroid/os/Handler;
 
 
 # direct methods
-.method constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;[Landroid/content/Intent;Landroid/os/Bundle;)V
+.method synthetic constructor <init>(Landroid/support/v4/content/x;)V
     .locals 0
 
-    invoke-virtual {p0, p1, p2}, Landroid/content/Context;->startActivities([Landroid/content/Intent;Landroid/os/Bundle;)V
+    invoke-direct {p0}, Landroid/support/v4/content/C;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public handleMessage(Landroid/os/Message;)V
+    .locals 3
+
+    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    check-cast v0, Landroid/support/v4/content/B;
+
+    iget v1, p1, Landroid/os/Message;->what:I
+
+    packed-switch v1, :pswitch_data_0
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object v1, v0, Landroid/support/v4/content/B;->a:Landroid/support/v4/content/w;
+
+    iget-object v0, v0, Landroid/support/v4/content/B;->b:[Ljava/lang/Object;
+
+    const/4 v2, 0x0
+
+    aget-object v0, v0, v2
+
+    invoke-static {v1, v0}, Landroid/support/v4/content/w;->c(Landroid/support/v4/content/w;Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :pswitch_1
+    iget-object v1, v0, Landroid/support/v4/content/B;->a:Landroid/support/v4/content/w;
+
+    iget-object v0, v0, Landroid/support/v4/content/B;->b:[Ljava/lang/Object;
+
+    invoke-virtual {v1, v0}, Landroid/support/v4/content/w;->b([Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method

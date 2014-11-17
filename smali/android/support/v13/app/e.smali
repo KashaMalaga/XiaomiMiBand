@@ -1,20 +1,22 @@
 .class Landroid/support/v13/app/e;
-.super Ljava/lang/Object;
+.super Landroid/support/v13/app/d;
 
 
 # direct methods
 .method constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/support/v13/app/d;-><init>()V
 
     return-void
 .end method
 
-.method public static a(Landroid/app/Fragment;Z)V
+
+# virtual methods
+.method public b(Landroid/app/Fragment;Z)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/app/Fragment;->setMenuVisibility(Z)V
+    invoke-static {p1, p2}, Landroid/support/v13/app/g;->a(Landroid/app/Fragment;Z)V
 
     return-void
 .end method

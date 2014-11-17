@@ -185,11 +185,11 @@
 
     iput-boolean v1, p0, Lcom/tencent/b/b/m;->j:Z
 
-    new-instance v0, Lcom/tencent/b/b/x;
+    new-instance v0, Lcom/tencent/b/b/l;
 
-    invoke-direct {v0, p0}, Lcom/tencent/b/b/x;-><init>(Lcom/tencent/b/b/m;)V
+    invoke-direct {v0, p0}, Lcom/tencent/b/b/l;-><init>(Lcom/tencent/b/b/m;)V
 
-    invoke-virtual {v0}, Lcom/tencent/b/b/x;->start()V
+    invoke-virtual {v0}, Lcom/tencent/b/b/l;->start()V
 
     :cond_0
     return-void

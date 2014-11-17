@@ -34,19 +34,19 @@
     if-ne v2, v0, :cond_1
 
     :goto_0
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Debug;->ASSERT_TRUE(Z)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->c(Z)V
 
     const-string v0, "================================================="
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Debug;->INFO(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->c(Ljava/lang/String;)V
 
     const-string v0, "========== NOTIFICATION STATUS CHANGED =========="
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Debug;->INFO(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->c(Ljava/lang/String;)V
 
     const-string v0, "================================================="
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/Debug;->INFO(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->c(Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$1;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 

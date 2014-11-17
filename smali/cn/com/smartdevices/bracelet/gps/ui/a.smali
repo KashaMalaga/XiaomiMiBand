@@ -1,83 +1,43 @@
 .class Lcn/com/smartdevices/bracelet/gps/ui/a;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/widget/SeekBar$OnSeekBarChangeListener;
+.super Landroid/os/Handler;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/SpeedSettingsFragment;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/SpeedSettingsFragment;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->a:Lcn/com/smartdevices/bracelet/gps/ui/SpeedSettingsFragment;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onProgressChanged(Landroid/widget/SeekBar;IZ)V
-    .locals 6
+.method public handleMessage(Landroid/os/Message;)V
+    .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->a:Lcn/com/smartdevices/bracelet/gps/ui/SpeedSettingsFragment;
+    sget v0, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->a:I
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/SpeedSettingsFragment;->a(Lcn/com/smartdevices/bracelet/gps/ui/SpeedSettingsFragment;)Landroid/widget/TextView;
+    iget v1, p1, Landroid/os/Message;->what:I
 
-    move-result-object v0
+    if-ne v0, v1, :cond_0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->a:Lcn/com/smartdevices/bracelet/gps/ui/SpeedSettingsFragment;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/ui/SpeedSettingsFragment;->getResources()Landroid/content/res/Resources;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->a(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)V
 
-    move-result-object v1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
 
-    const v2, 0x7f0c0259
+    const/4 v1, 0x0
 
-    const/4 v3, 0x1
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->a(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;Z)V
 
-    new-array v3, v3, [Ljava/lang/Object;
-
-    const/4 v4, 0x0
-
-    add-int/lit8 v5, p2, 0x5
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    aput-object v5, v3, v4
-
-    invoke-virtual {v1, v2, v3}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->a:Lcn/com/smartdevices/bracelet/gps/ui/SpeedSettingsFragment;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/SpeedSettingsFragment;->b(Lcn/com/smartdevices/bracelet/gps/ui/SpeedSettingsFragment;)Lcn/com/smartdevices/bracelet/gps/data/RunningReminderInfo;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p2}, Lcn/com/smartdevices/bracelet/gps/data/RunningReminderInfo;->setSpeed(I)V
-
-    return-void
-.end method
-
-.method public onStartTrackingTouch(Landroid/widget/SeekBar;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onStopTrackingTouch(Landroid/widget/SeekBar;)V
-    .locals 0
-
+    :cond_0
     return-void
 .end method

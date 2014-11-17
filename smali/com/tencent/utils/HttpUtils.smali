@@ -1294,7 +1294,7 @@
 
     new-instance v0, Lcom/tencent/utils/HttpUtils$NetworkProxy;
 
-    invoke-direct {v0, v2, v3, v1}, Lcom/tencent/utils/HttpUtils$NetworkProxy;-><init>(Ljava/lang/String;ILcom/tencent/utils/c;)V
+    invoke-direct {v0, v2, v3, v1}, Lcom/tencent/utils/HttpUtils$NetworkProxy;-><init>(Ljava/lang/String;ILcom/tencent/utils/HttpUtils$1;)V
 
     goto :goto_0
 
@@ -2383,7 +2383,7 @@
 
     invoke-static {v0, v1}, Lcom/tencent/a/a/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v0, Lcom/tencent/utils/c;
+    new-instance v0, Lcom/tencent/utils/HttpUtils$1;
 
     move-object v1, p0
 
@@ -2397,9 +2397,9 @@
 
     move-object v6, p5
 
-    invoke-direct/range {v0 .. v6}, Lcom/tencent/utils/c;-><init>(Lcom/tencent/connect/auth/QQToken;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/String;Lcom/tencent/tauth/IRequestListener;)V
+    invoke-direct/range {v0 .. v6}, Lcom/tencent/utils/HttpUtils$1;-><init>(Lcom/tencent/connect/auth/QQToken;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/String;Lcom/tencent/tauth/IRequestListener;)V
 
-    invoke-virtual {v0}, Lcom/tencent/utils/c;->start()V
+    invoke-virtual {v0}, Lcom/tencent/utils/HttpUtils$1;->start()V
 
     return-void
 .end method

@@ -1,5 +1,8 @@
-.class Landroid/support/v4/app/ak;
+.class Landroid/support/v4/app/aK;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/support/v4/app/aJ;
 
 
 # direct methods
@@ -11,10 +14,26 @@
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;I[Landroid/content/Intent;ILandroid/os/Bundle;)Landroid/app/PendingIntent;
-    .locals 1
 
-    invoke-static {p0, p1, p2, p3, p4}, Landroid/app/PendingIntent;->getActivities(Landroid/content/Context;I[Landroid/content/Intent;ILandroid/os/Bundle;)Landroid/app/PendingIntent;
+# virtual methods
+.method public a(Landroid/content/Context;[Landroid/content/Intent;IILandroid/os/Bundle;)Landroid/app/PendingIntent;
+    .locals 2
+
+    new-instance v0, Landroid/content/Intent;
+
+    array-length v1, p2
+
+    add-int/lit8 v1, v1, -0x1
+
+    aget-object v1, p2, v1
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
+
+    const/high16 v1, 0x10000000
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    invoke-static {p1, p3, v0, p4}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object v0
 

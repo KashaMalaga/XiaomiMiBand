@@ -26,9 +26,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/tencent/connect/dataprovider/c;
+    new-instance v0, Lcom/tencent/connect/dataprovider/DataType$TextOnly$1;
 
-    invoke-direct {v0}, Lcom/tencent/connect/dataprovider/c;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/connect/dataprovider/DataType$TextOnly$1;-><init>()V
 
     sput-object v0, Lcom/tencent/connect/dataprovider/DataType$TextOnly;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -49,7 +49,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Landroid/os/Parcel;Lcom/tencent/connect/dataprovider/a;)V
+.method synthetic constructor <init>(Landroid/os/Parcel;Lcom/tencent/connect/dataprovider/DataType$1;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/tencent/connect/dataprovider/DataType$TextOnly;-><init>(Landroid/os/Parcel;)V
