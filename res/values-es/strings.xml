@@ -612,6 +612,8 @@ Me gustaría levantarme cuando mi cuerpo ya está despierto.</string>
   <string name="upgrade_tip">Notificación de actualizaciones</string>
   <string name="user_agreement">Declaración de usuario y Política de privacidad</string>
   <string name="user_agreement_prefix">"Para usar este producto, debe aceptar nuestro "</string>
+  <string name="vibrate_notify">Vibrar para las notificaciones</string>
+  <string name="vibrate_notify_tips">Vibrar cuando se recibe una notificación</string>
   <string name="visit_micom">Visitar el sitio oficial</string>
   <string name="wait">Un momento...</string>
   <string name="walked">Caminado</string>
