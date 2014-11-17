@@ -179,5 +179,12 @@
                 <action android:name="com.xiaomi.mipush.ERROR"/>
             </intent-filter>
         </receiver>
+		 <activity android:label="extend" android:name="cn.com.smartdevices.bracelet.ExtendActivity"/>
+        <provider android:authorities="cn.com.smartdevices.bracelet.extend.AppsSettingProvider" android:exported="true" android:name="cn.com.smartdevices.bracelet.extend.AppsSettingProvider"/>
+        <service android:label="@string/app_name" android:name="cn.com.smartdevices.bracelet.extend.BleNotifycationTask" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService"/>
+            </intent-filter>
+        </service>
     </application>
 </manifest>

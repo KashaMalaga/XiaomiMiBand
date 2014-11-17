@@ -97,6 +97,13 @@
                     <TextView android:textSize="@dimen/info_content_size" android:textColor="@color/main_ui_content_color" android:gravity="center_vertical" android:id="@id/device_firmware_version_text" android:layout_width="wrap_content" android:layout_height="fill_parent" />
                     <ImageView android:layout_gravity="right|center" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="9.0dip" android:src="@drawable/ic_indicator_right_arrow" />
                 </LinearLayout>
+				<include layout="@layout/split_line_with_margin" />
+                <LinearLayout android:background="@drawable/bg_item" android:paddingLeft="@dimen/mili_margin" android:paddingTop="6.0dip" android:paddingRight="@dimen/mili_margin" android:paddingBottom="6.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/item_height" android:onClick="extendSetting">
+                    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Configurar notificaciones" style="@style/ListItemTitleText" />
+                    </LinearLayout>
+                    <ImageView android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="9.0dip" android:src="@drawable/ic_indicator_right_arrow" />
+                </LinearLayout>
             </LinearLayout>
             <RelativeLayout android:gravity="bottom" android:orientation="vertical" android:id="@id/mask_view" android:background="#90ffffff" android:paddingBottom="@dimen/item_height" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
                 <LinearLayout android:id="@id/device_unbind_in_mask" android:background="@drawable/bg_item" android:paddingLeft="@dimen/mili_margin" android:paddingRight="@dimen/mili_margin" android:paddingBottom="6.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/stroke_width_minus" android:minHeight="@dimen/item_height">

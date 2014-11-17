@@ -3,6 +3,8 @@
 
 
 # static fields
+.field public static final list_app_item:I = 0x7f030084
+
 .field public static final activity_bind_qq_health:I = 0x7f030000
 
 .field public static final activity_bind_weixin:I = 0x7f030001
