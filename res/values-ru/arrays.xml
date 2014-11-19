@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="weeks">
+        <item>Пн.</item>
+        <item>Вт.</item>
+        <item>Ср.</item>
+        <item>Чт.</item>
+        <item>Пт.</item>
+        <item>Сб.</item>
+        <item>Вс.</item>
+    </string-array>
+    <string-array name="weeks_short">
+        <item>Пн.</item>
+        <item>Вт.</item>
+        <item>Ср.</item>
+        <item>Чт.</item>
+        <item>Пт.</item>
+        <item>Сб.</item>
+        <item>Вс.</item>
+    </string-array>
+    <string-array name="months">
+        <item>Январь</item>
+        <item>Февраль</item>
+        <item>Март</item>
+        <item>Апрель</item>
+        <item>Май</item>
+        <item>Июнь</item>
+        <item>Июль</item>
+        <item>Август</item>
+        <item>Сентябрь</item>
+        <item>Октябрь</item>
+        <item>Ноябрь</item>
+        <item>Декабрь</item>
+    </string-array>
+    <string-array name="select_days_simple">
+        <item>Один раз</item>
+        <item>Каждый день</item>
+        <item>С Пн. по Пт.</item>
+        <item>Настроить</item>
+    </string-array>
+    <string-array name="fortune">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="weather_aqi_descriptions">
+        <item>Отлично</item>
+        <item>Хорошо</item>
+        <item>Низкое загрязнение</item>
+        <item>Среднее загрязнение</item>
+        <item>Тяжелое загрязнение</item>
+        <item>Сильное загрязнение</item>
+    </string-array>
+</resources>

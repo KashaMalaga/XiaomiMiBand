@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="weeks">
+        <item>Seg.</item>
+        <item>Ter.</item>
+        <item>Qua.</item>
+        <item>Qui.</item>
+        <item>Sex.</item>
+        <item>Sáb.</item>
+        <item>Dom.</item>
+    </string-array>
+    <string-array name="weeks_short">
+        <item>Seg.</item>
+        <item>Ter.</item>
+        <item>Qua.</item>
+        <item>Qui.</item>
+        <item>Sex.</item>
+        <item>Sáb.</item>
+        <item>Dom.</item>
+    </string-array>
+    <string-array name="months">
+        <item>Janeiro</item>
+        <item>Fevereiro</item>
+        <item>Março</item>
+        <item>Abril</item>
+        <item>Maio</item>
+        <item>Junho</item>
+        <item>Julho</item>
+        <item>Agosto</item>
+        <item>Setembro</item>
+        <item>Outubro</item>
+        <item>Novembro</item>
+        <item>Dezembro</item>
+    </string-array>
+    <string-array name="select_days_simple">
+        <item>Uma vez</item>
+        <item>Todos os dias</item>
+        <item>De seg. a sex.</item>
+        <item>Personalizar</item>
+    </string-array>
+    <string-array name="fortune">
+        <item>Não há nenhum substituto para a consistência.</item>
+        <item>Esforce-se para o progresso e não para a perfeição.</item>
+        <item>A repetição é a fonte do sucesso.</item>
+        <item>A força e persistência conquistam tudo.</item>
+        <item>O mundo não foi criado em um só dia e nós também não. Defina pequenas metas e conquiste-as.</item>
+        <item>Todas as jornadas começam com um simples passo.</item>
+        <item>Atinja um objectivo por dia.</item>
+        <item>Não importa o quão devagar vai, continue.</item>
+        <item>Corra quando puder. Ande se tiver de ser. Rasteje se necessário. Nunca desista.</item>
+        <item>Lembre-se, a satisfação após um bom exercício é muito melhor que o sentimento de culpa por não o ter feito.</item>
+    </string-array>
+    <string-array name="weather_aqi_descriptions">
+        <item>Excelente</item>
+        <item>Bom</item>
+        <item>Moderado</item>
+        <item>Atenção</item>
+        <item>Mau</item>
+        <item>Muito mau</item>
+    </string-array>
+</resources>

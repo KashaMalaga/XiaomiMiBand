@@ -11,6 +11,10 @@ zh_CN = 'zh_CN'
 zh_TW = 'zh_TW'
 en_US = 'en_US'
 en_GB = 'en_GB'
+it_IT = 'it_IT'
+es_ES = 'es_ES'
+ru_RU = 'ru_RU'
+pt_PT = 'pt_PT'
 en = 'en'
 g_CurLocale = ""
 DEBUG = true
@@ -46,6 +50,10 @@ localization_table = {
     en = localization_English_table,
     zh_CN = localization_Chinese_table,
     zh_TW = localization_zh_rTW_table,
+	it_IT = localization_Italian_table,
+	es_ES = localization_Spanish_table,
+	ru_RU = localization_Russian_table,
+	pt_PT = localization_Portuguese_table,
 }
 
 function getString(string_locale)
@@ -57,6 +65,14 @@ function getString(string_locale)
         curTable = localization_table[en];
     elseif (getCurLocale() == zh_TW) then
         curTable = localization_table[zh_TW];
+	elseif (getCurLocale() == it_IT) then
+        curTable = localization_table[it_IT];
+    elseif (getCurLocale() == it_IT) then
+        curTable = localization_table[es_ES];	
+	elseif (getCurLocale() == ru_RU) then
+        curTable = localization_table[ru_RU];
+	elseif (getCurLocale() == pt_PT) then
+        curTable = localization_table[pt_PT];
     end
 
     return curTable[string_locale];
