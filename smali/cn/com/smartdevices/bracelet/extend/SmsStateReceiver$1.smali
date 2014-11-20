@@ -34,13 +34,13 @@
     const/4 v2, 0x0
 
     .line 46
-    new-instance v0, Lcn/com/smartdevices/bracelet/BleTask/BleInComingCallTask;
+    new-instance v0, Lcn/com/smartdevices/bracelet/a/g;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v2, v1}, Lcn/com/smartdevices/bracelet/BleTask/BleInComingCallTask;-><init>(Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;I)V
+    invoke-direct {v0, v2, v1}, Lcn/com/smartdevices/bracelet/a/g;-><init>(Lcn/com/smartdevices/bracelet/a/b;I)V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/BleTask/BleInComingCallTask;->workImmediately()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/a/u;->c()V
 
     .line 48
     const-wide/16 v0, 0x1f4
@@ -52,13 +52,13 @@
 
     .line 50
     :goto_0
-    new-instance v0, Lcn/com/smartdevices/bracelet/BleTask/BleInComingCallTask;
+    new-instance v0, Lcn/com/smartdevices/bracelet/a/g;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v2, v1}, Lcn/com/smartdevices/bracelet/BleTask/BleInComingCallTask;-><init>(Lcn/com/smartdevices/bracelet/BleTask/BleCallBack;I)V
+    invoke-direct {v0, v2, v1}, Lcn/com/smartdevices/bracelet/a/g;-><init>(Lcn/com/smartdevices/bracelet/a/b;I)V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/BleTask/BleInComingCallTask;->workImmediately()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/a/u;->c()V
 
     .line 51
     return-void

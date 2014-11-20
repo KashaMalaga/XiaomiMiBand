@@ -8,6 +8,9 @@
   <string name="action_pop_about">Acerca de</string>
   <string name="action_pop_lab">Ajustes de Laboratorio</string>
   <string name="action_pop_my_bracelet">Ajustes Mi Band</string>
+  <string name="notifications">Notificaciones</string>
+  <string name="insert_number_vibrations">Inserta el numero de vibraciones:</string>
+  <string name="set_notifications_app">Configurar notificaciones</string>
   <string name="action_pop_person_info">Mi perfil</string>
   <string name="action_pop_smart_alarms">Alarmas</string>
   <string name="action_pop_unlock_screen">Desbloqueo de pantalla</string>

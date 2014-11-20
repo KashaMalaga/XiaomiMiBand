@@ -53,6 +53,20 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 31
+  .line 31
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ExtendActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    const-string v2, "From KashaMalaga and Mksaint13"
+
+    const/4 v3, 0x0
+
+    invoke-static {v1, v2, v3}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/widget/Toast;->show()V
+    .line 32
     return-void
 .end method

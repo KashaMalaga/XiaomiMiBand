@@ -171,12 +171,12 @@
 
     .line 54
     .local v0, "alert":Landroid/app/AlertDialog$Builder;
-    const-string v6, "Notificaciones"
+    const-string v6, "notifications"
 
     invoke-virtual {v0, v6}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
     .line 55
-    const-string v6, "Inserta el numero de vibraciones:"
+    const-string v6, "insert_number_vibrations"
 
     invoke-virtual {v0, v6}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 

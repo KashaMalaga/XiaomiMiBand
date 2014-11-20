@@ -17,6 +17,13 @@
 
 .field public static final action_pop_my_bracelet:I = 0x7f0c011e
 
+.field public static final notifications:I = 0x7f0c0270
+
+.field public static final insert_number_vibrations:I = 0x7f0c0271
+
+.field public static final set_notifications_app:I = 0x7f0c0272
+
+
 .field public static final action_pop_person_info:I = 0x7f0c0120
 
 .field public static final action_pop_smart_alarms:I = 0x7f0c011f
