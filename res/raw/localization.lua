@@ -59,7 +59,7 @@ localization_table = {
 }
 
 function getString(string_locale)
-    curTable = localization_table[en]
+    curTable = localization_table[es]
 
     if (getCurLocale() == zh_CN) then
         curTable = localization_table[zh_CN];

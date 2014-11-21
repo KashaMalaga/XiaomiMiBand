@@ -431,7 +431,10 @@ Necesita una red disponible."</string>
   <string name="set_mili_name_ok">Nuevo nombre guardado.</string>
   <string name="set_person_goal">Establecer Meta</string>
   <string name="set_sport_goal">Establecer Meta</string>
-  <string name="setting_about_app">Versión de la app </string>
+  <string name="setting_about_app">"Version de la app:
+Tweaked by dezmen3
+Notifications by mksaint13
+Modded ES KashaMalaga"</string>
   <string name="setting_about_fw">Versión de firmware </string>
   <string name="setting_feedback_address">¿Cómo podemos contactar contigo?</string>
   <string name="setting_feedback_hint">Gracias por su tiempo. Su opinión es importante para nosotros.</string>

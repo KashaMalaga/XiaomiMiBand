@@ -436,7 +436,10 @@ or about 12,000 steps a day for a healthy lifestyle."</string>
   <string name="set_mili_name_ok">Name saved</string>
   <string name="set_person_goal">Set goal</string>
   <string name="set_sport_goal">Set goal</string>
-  <string name="setting_about_app">App version </string>
+  <string name="setting_about_app">"App version:
+Tweaked by dezmen3
+Notifications by mksaint13
+Modded ES KashaMalaga"</string>
   <string name="setting_about_fw">Version </string>
   <string name="setting_feedback_address">Contact info</string>
   <string name="setting_feedback_hint">We love feedback.</string>
@@ -624,8 +627,8 @@ Settings &gt; Security."</string>
   <string name="user_agreement">Terms of Service and Privacy Policy</string>
   <string name="user_agreement_prefix">"To use this product, you must agree to our 
 "</string>
-  <string name="vibrate_notify">Vibrate for notifications</string>
-  <string name="vibrate_notify_tips">Vibrate band when a you receive a notification</string>
+  <string name="vibrate_notify">Vibration Status</string>
+  <string name="vibrate_notify_tips">Show bracelet vibration info in status bar</string>
   <string name="visit_micom">Visit website</string>
   <string name="wait">Working…</string>
   <string name="walked">Walked </string>

@@ -34,13 +34,13 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 28
+    .line 30
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 29
+    .line 31
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/extend/AppsAdapter;->context:Landroid/content/Context;
 
-    .line 30
+    .line 32
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.MAIN"
@@ -49,20 +49,20 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 31
+    .line 33
     .local v0, "mainIntent":Landroid/content/Intent;
     const-string v1, "android.intent.category.LAUNCHER"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 32
+    .line 34
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v1
 
     iput-object v1, p0, Lcn/com/smartdevices/bracelet/extend/AppsAdapter;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 33
+    .line 35
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
@@ -75,8 +75,19 @@
 
     iput-object v1, p0, Lcn/com/smartdevices/bracelet/extend/AppsAdapter;->mApps:Ljava/util/List;
 
-    .line 34
+    .line 36
     return-void
+.end method
+
+.method static synthetic access$000(Lcn/com/smartdevices/bracelet/extend/AppsAdapter;)Landroid/content/Context;
+    .locals 1
+    .param p0, "x0"    # Lcn/com/smartdevices/bracelet/extend/AppsAdapter;
+
+    .prologue
+    .line 24
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/extend/AppsAdapter;->context:Landroid/content/Context;
+
+    return-object v0
 .end method
 
 
@@ -85,7 +96,7 @@
     .locals 1
 
     .prologue
-    .line 96
+    .line 145
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/extend/AppsAdapter;->mApps:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -100,7 +111,7 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 100
+    .line 149
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/extend/AppsAdapter;->mApps:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -115,7 +126,7 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 104
+    .line 153
     int-to-long v0, p1
 
     return-wide v0
@@ -128,17 +139,17 @@
     .param p3, "parent"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 39
+    .line 41
     if-nez p2, :cond_2
 
-    .line 40
+    .line 42
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/extend/AppsAdapter;->context:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const-string v3, "list_app_item"
+    const-string v3, "mks_list_app_item"
 
     const-string v4, "layout"
 
@@ -152,7 +163,7 @@
 
     move-result v14
 
-    .line 45
+    .line 44
     .local v14, "resourceId":I
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/extend/AppsAdapter;->mInflater:Landroid/view/LayoutInflater;
 
@@ -162,7 +173,7 @@
 
     move-result-object p2
 
-    .line 46
+    .line 45
     new-instance v11, Lcn/com/smartdevices/bracelet/extend/AppsAdapter$ViewHolder;
 
     invoke-direct {v11, p0}, Lcn/com/smartdevices/bracelet/extend/AppsAdapter$ViewHolder;-><init>(Lcn/com/smartdevices/bracelet/extend/AppsAdapter;)V
@@ -170,7 +181,7 @@
     .local v11, "holder":Lcn/com/smartdevices/bracelet/extend/AppsAdapter$ViewHolder;
     move-object/from16 v1, p2
 
-    .line 47
+    .line 46
     check-cast v1, Landroid/view/ViewGroup;
 
     const/4 v3, 0x0
@@ -185,7 +196,7 @@
 
     move-object/from16 v1, p2
 
-    .line 48
+    .line 47
     check-cast v1, Landroid/view/ViewGroup;
 
     const/4 v3, 0x1
@@ -194,9 +205,24 @@
 
     move-result-object v1
 
+    check-cast v1, Landroid/widget/TextView;
+
+    iput-object v1, v11, Lcn/com/smartdevices/bracelet/extend/AppsAdapter$ViewHolder;->text:Landroid/widget/TextView;
+
+    move-object/from16 v1, p2
+
+    .line 48
+    check-cast v1, Landroid/view/ViewGroup;
+
+    const/4 v3, 0x2
+
+    invoke-virtual {v1, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v1
+
     check-cast v1, Landroid/widget/CheckedTextView;
 
-    iput-object v1, v11, Lcn/com/smartdevices/bracelet/extend/AppsAdapter$ViewHolder;->text:Landroid/widget/CheckedTextView;
+    iput-object v1, v11, Lcn/com/smartdevices/bracelet/extend/AppsAdapter$ViewHolder;->checked:Landroid/widget/CheckedTextView;
 
     .line 49
     move-object/from16 v0, p2
@@ -242,7 +268,7 @@
     .line 63
     .local v7, "ai":Landroid/content/pm/ApplicationInfo;
     :goto_1
-    iget-object v3, v11, Lcn/com/smartdevices/bracelet/extend/AppsAdapter$ViewHolder;->text:Landroid/widget/CheckedTextView;
+    iget-object v3, v11, Lcn/com/smartdevices/bracelet/extend/AppsAdapter$ViewHolder;->text:Landroid/widget/TextView;
 
     if-eqz v7, :cond_3
 
@@ -251,16 +277,23 @@
     move-result-object v1
 
     :goto_2
-    invoke-virtual {v3, v1}, Landroid/widget/CheckedTextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v3, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 64
-    iget-object v1, v11, Lcn/com/smartdevices/bracelet/extend/AppsAdapter$ViewHolder;->text:Landroid/widget/CheckedTextView;
+    iget-object v1, v11, Lcn/com/smartdevices/bracelet/extend/AppsAdapter$ViewHolder;->checked:Landroid/widget/CheckedTextView;
 
     const/4 v3, 0x0
 
     invoke-virtual {v1, v3}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
     .line 65
+    iget-object v1, v11, Lcn/com/smartdevices/bracelet/extend/AppsAdapter$ViewHolder;->checked:Landroid/widget/CheckedTextView;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v3}, Landroid/widget/CheckedTextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 66
     iget-object v1, v11, Lcn/com/smartdevices/bracelet/extend/AppsAdapter$ViewHolder;->icon:Landroid/widget/ImageView;
 
     iget-object v3, v12, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
@@ -277,15 +310,15 @@
 
     invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 66
+    .line 67
     const/4 v1, 0x0
 
-    iput-object v1, v11, Lcn/com/smartdevices/bracelet/extend/AppsAdapter$ViewHolder;->appSetting:Lcn/com/smartdevices/bracelet/extend/AppSetting;
+    iput-object v1, v11, Lcn/com/smartdevices/bracelet/extend/AppsAdapter$ViewHolder;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
-    .line 67
+    .line 68
     iput-object v12, v11, Lcn/com/smartdevices/bracelet/extend/AppsAdapter$ViewHolder;->resolveInfo:Landroid/content/pm/ResolveInfo;
 
-    .line 69
+    .line 70
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -322,7 +355,7 @@
 
     move-result-object v2
 
-    .line 70
+    .line 71
     .local v2, "uri":Landroid/net/Uri;
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/extend/AppsAdapter;->context:Landroid/content/Context;
 
@@ -342,7 +375,7 @@
 
     move-result-object v9
 
-    .line 72
+    .line 73
     .local v9, "cursor":Landroid/database/Cursor;
     if-eqz v9, :cond_0
 
@@ -353,26 +386,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 73
-    new-instance v8, Lcn/com/smartdevices/bracelet/extend/AppSetting;
-
-    invoke-direct {v8}, Lcn/com/smartdevices/bracelet/extend/AppSetting;-><init>()V
-
     .line 74
-    .local v8, "appSetting":Lcn/com/smartdevices/bracelet/extend/AppSetting;
-    const-string v1, "name"
+    new-instance v8, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
-    invoke-interface {v9, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    invoke-direct {v8}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;-><init>()V
 
-    move-result v1
-
-    invoke-interface {v9, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v8, v1}, Lcn/com/smartdevices/bracelet/extend/AppSetting;->setPackageName(Ljava/lang/String;)V
-
-    .line 75
+    .line 76
+    .local v8, "appSettingInfo":Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
     const-string v1, "notify_started"
 
     invoke-interface {v9, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -388,46 +408,20 @@
     const/4 v1, 0x0
 
     :goto_3
-    invoke-virtual {v8, v1}, Lcn/com/smartdevices/bracelet/extend/AppSetting;->setNotifyStarted(Z)V
+    invoke-virtual {v8, v1}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setNotifyStarted(Z)V
 
-    .line 76
-    const-string v1, "notify_started_count"
+    .line 89
+    iput-object v8, v11, Lcn/com/smartdevices/bracelet/extend/AppsAdapter$ViewHolder;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
-    invoke-interface {v9, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result v1
-
-    invoke-interface {v9, v1}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v1
-
-    invoke-virtual {v8, v1}, Lcn/com/smartdevices/bracelet/extend/AppSetting;->setCount(I)V
-
-    .line 77
-    const-string v1, "notify_started_delay"
-
-    invoke-interface {v9, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result v1
-
-    invoke-interface {v9, v1}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v1
-
-    invoke-virtual {v8, v1}, Lcn/com/smartdevices/bracelet/extend/AppSetting;->setDelay(I)V
-
-    .line 78
-    iput-object v8, v11, Lcn/com/smartdevices/bracelet/extend/AppsAdapter$ViewHolder;->appSetting:Lcn/com/smartdevices/bracelet/extend/AppSetting;
-
-    .line 80
-    invoke-virtual {v8}, Lcn/com/smartdevices/bracelet/extend/AppSetting;->isNotifyStarted()Z
+    .line 91
+    invoke-virtual {v8}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->isNotifyStarted()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 81
-    iget-object v1, v11, Lcn/com/smartdevices/bracelet/extend/AppsAdapter$ViewHolder;->text:Landroid/widget/CheckedTextView;
+    .line 92
+    iget-object v1, v11, Lcn/com/smartdevices/bracelet/extend/AppsAdapter$ViewHolder;->checked:Landroid/widget/CheckedTextView;
 
     const/4 v3, 0x1
 
@@ -435,19 +429,28 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 86
-    .end local v8    # "appSetting":Lcn/com/smartdevices/bracelet/extend/AppSetting;
+    .line 97
+    .end local v8    # "appSettingInfo":Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
     :cond_0
     if-eqz v9, :cond_1
 
-    .line 87
+    .line 98
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 88
+    .line 99
     const/4 v9, 0x0
 
-    .line 92
+    .line 103
     :cond_1
+    iget-object v1, v11, Lcn/com/smartdevices/bracelet/extend/AppsAdapter$ViewHolder;->checked:Landroid/widget/CheckedTextView;
+
+    new-instance v3, Lcn/com/smartdevices/bracelet/extend/AppsAdapter$1;
+
+    invoke-direct {v3, p0, v11}, Lcn/com/smartdevices/bracelet/extend/AppsAdapter$1;-><init>(Lcn/com/smartdevices/bracelet/extend/AppsAdapter;Lcn/com/smartdevices/bracelet/extend/AppsAdapter$ViewHolder;)V
+
+    invoke-virtual {v1, v3}, Landroid/widget/CheckedTextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 141
     return-object p2
 
     .line 51
@@ -487,26 +490,26 @@
 
     goto/16 :goto_2
 
-    .line 75
+    .line 76
     .restart local v2    # "uri":Landroid/net/Uri;
-    .restart local v8    # "appSetting":Lcn/com/smartdevices/bracelet/extend/AppSetting;
+    .restart local v8    # "appSettingInfo":Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
     .restart local v9    # "cursor":Landroid/database/Cursor;
     :cond_4
     const/4 v1, 0x1
 
     goto :goto_3
 
-    .line 86
-    .end local v8    # "appSetting":Lcn/com/smartdevices/bracelet/extend/AppSetting;
+    .line 97
+    .end local v8    # "appSettingInfo":Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
     :catchall_0
     move-exception v1
 
     if-eqz v9, :cond_5
 
-    .line 87
+    .line 98
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 88
+    .line 99
     const/4 v9, 0x0
 
     :cond_5

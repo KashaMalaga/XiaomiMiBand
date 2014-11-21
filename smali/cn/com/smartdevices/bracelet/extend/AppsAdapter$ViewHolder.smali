@@ -15,13 +15,15 @@
 
 
 # instance fields
-.field public appSetting:Lcn/com/smartdevices/bracelet/extend/AppSetting;
+.field public appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
+
+.field public checked:Landroid/widget/CheckedTextView;
 
 .field public icon:Landroid/widget/ImageView;
 
 .field public resolveInfo:Landroid/content/pm/ResolveInfo;
 
-.field public text:Landroid/widget/CheckedTextView;
+.field public text:Landroid/widget/TextView;
 
 .field final synthetic this$0:Lcn/com/smartdevices/bracelet/extend/AppsAdapter;
 
@@ -31,7 +33,7 @@
     .locals 0
 
     .prologue
-    .line 107
+    .line 156
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/extend/AppsAdapter$ViewHolder;->this$0:Lcn/com/smartdevices/bracelet/extend/AppsAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
