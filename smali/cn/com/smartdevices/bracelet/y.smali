@@ -2918,7 +2918,7 @@
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const/16 v1, 0x12
+    const/16 v1, 0xF
 
     if-lt v0, v1, :cond_0
 
@@ -4189,7 +4189,7 @@
 .method public static c(Landroid/content/Context;)Z
     .locals 6
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
     invoke-static {p0}, Lcn/com/smartdevices/bracelet/b;->c(Landroid/content/Context;)Z
 
