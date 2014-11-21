@@ -11,13 +11,20 @@ zh_CN = 'zh_CN'
 zh_TW = 'zh_TW'
 en_US = 'en_US'
 en_GB = 'en_GB'
-it_IT = 'it_IT'
+fr_FR = 'fr_FR'
+fr_BE = 'fr_BE'
+fr_CA = 'fr_CA'
+fr_CH = 'fr_CH'
 es_ES = 'es_ES'
+hr_HR = 'hr_HR'
 ru_RU = 'ru_RU'
-pt_PT = 'pt_PT'
 en = 'en'
+fr = 'fr'
 es = 'es'
+hr = 'hr'
+ru = 'ru'
 g_CurLocale = ""
+-------------Globals----------------
 DEBUG = true
 -------------Globals----------------
 
@@ -49,32 +56,31 @@ end
 
 localization_table = {
     en = localization_English_table,
+	fr = localization_French_table,
 	es = localization_Spanish_table,
+	hr = localization_Croatian_table,
+	ru = localization_Russian_table,
     zh_CN = localization_Chinese_table,
     zh_TW = localization_zh_rTW_table,
-	it_IT = localization_Italian_table,
-	es_ES = localization_Spanish_table,
-	ru_RU = localization_Russian_table,
-	pt_PT = localization_Portuguese_table,
 }
 
 function getString(string_locale)
-    curTable = localization_table[es]
+    curTable = localization_table[en]
 
     if (getCurLocale() == zh_CN) then
         curTable = localization_table[zh_CN];
     elseif (getCurLocale() == en_US or getCurLocale() == en_GB) then
         curTable = localization_table[en];
-    elseif (getCurLocale() == zh_TW) then
-        curTable = localization_table[zh_TW];
-	elseif (getCurLocale() == it_IT) then
-        curTable = localization_table[it_IT];
-    elseif (getCurLocale() == es_ES) or getCurLocale() == es) then
-        curTable = localization_table[es_ES];	
+	elseif (getCurLocale() == fr_FR or getCurLocale() == fr_BE or getCurLocale() == fr_CA or getCurLocale() == fr_CH) then
+        curTable = localization_table[fr];
+	elseif (getCurLocale() == es_ES) then
+        curTable = localization_table[es];
+    elseif (getCurLocale() == hr_HR) then
+        curTable = localization_table[hr];
 	elseif (getCurLocale() == ru_RU) then
-        curTable = localization_table[ru_RU];
-	elseif (getCurLocale() == pt_PT) then
-        curTable = localization_table[pt_PT];
+        curTable = localization_table[ru];
+	elseif (getCurLocale() == zh_TW) then
+        curTable = localization_table[zh_TW];
     end
 
     return curTable[string_locale];
