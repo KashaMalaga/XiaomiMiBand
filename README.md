@@ -1,8 +1,9 @@
 XiaomiMiBand
 ============
 
-Xiaomi Mi Band ES App
-
+Xiaomi Mi Band App
+- Patch and ExtendActivity to allow send Notifications to MiBand from 3rds apps, still in Beta Stage (KashaMalaga and Mksaint13)
+- Lua scripting to allow more native language and translations (ES,IT,PT,RU)
 - Patch for allow execution under Android 4.0+ instead 4.4
 - Patch to allow getting running app without Bluetooth 4.0 (For sure u couldnt find miBand)
 - Patch for set timing missing calls from 0 sec to 1 minute (Xiaomi told us 3sec until 15sec - no thanks :P)
