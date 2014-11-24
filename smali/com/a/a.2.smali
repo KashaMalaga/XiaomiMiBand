@@ -297,9 +297,9 @@
     move-result-object v0
 
     :try_start_0
-    invoke-static {v0}, Lcom/amap/api/location/core/f;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/amap/api/location/core/d;->a(Ljava/lang/String;)V
     :try_end_0
-    .catch Lcom/amap/api/location/core/a; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Lcom/amap/api/location/core/AMapLocException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
     :goto_1
@@ -346,11 +346,11 @@
 
     if-nez v1, :cond_4
 
-    new-instance v0, Lcom/amap/api/location/core/a;
+    new-instance v0, Lcom/amap/api/location/core/AMapLocException;
 
     const-string v1, "\u672a\u77e5\u7684\u9519\u8bef"
 
-    invoke-direct {v0, v1}, Lcom/amap/api/location/core/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/amap/api/location/core/AMapLocException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
@@ -1558,7 +1558,7 @@
 
     iput-object v5, v9, Lcom/a/ae;->u:Ljava/lang/String;
 
-    invoke-static {}, Lcom/amap/api/location/core/e;->e()Ljava/lang/String;
+    invoke-static {}, Lcom/amap/api/location/core/c;->e()Ljava/lang/String;
 
     move-result-object v7
 
@@ -1574,7 +1574,7 @@
 
     move-result-object v7
 
-    invoke-static {}, Lcom/amap/api/location/core/e;->d()Ljava/lang/String;
+    invoke-static {}, Lcom/amap/api/location/core/c;->d()Ljava/lang/String;
 
     move-result-object v15
 
@@ -1588,7 +1588,7 @@
 
     iput-object v7, v9, Lcom/a/ae;->g:Ljava/lang/String;
 
-    invoke-static {}, Lcom/amap/api/location/core/e;->g()Ljava/lang/String;
+    invoke-static {}, Lcom/amap/api/location/core/c;->g()Ljava/lang/String;
 
     move-result-object v7
 
@@ -5138,11 +5138,11 @@
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lcom/amap/api/location/core/a;
+    new-instance v0, Lcom/amap/api/location/core/AMapLocException;
 
     const-string v1, "\u672a\u77e5\u7684\u9519\u8bef"
 
-    invoke-direct {v0, v1}, Lcom/amap/api/location/core/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/amap/api/location/core/AMapLocException;-><init>(Ljava/lang/String;)V
 
     throw v0
     :try_end_0
@@ -5165,11 +5165,11 @@
 
     if-eqz v0, :cond_1
 
-    new-instance v0, Lcom/amap/api/location/core/a;
+    new-instance v0, Lcom/amap/api/location/core/AMapLocException;
 
     const-string v1, "key\u9274\u6743\u5931\u8d25"
 
-    invoke-direct {v0, v1}, Lcom/amap/api/location/core/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/amap/api/location/core/AMapLocException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
@@ -5182,11 +5182,11 @@
 
     if-eqz v0, :cond_2
 
-    new-instance v0, Lcom/amap/api/location/core/a;
+    new-instance v0, Lcom/amap/api/location/core/AMapLocException;
 
     const-string v1, "key\u9274\u6743\u5931\u8d25"
 
-    invoke-direct {v0, v1}, Lcom/amap/api/location/core/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/amap/api/location/core/AMapLocException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
@@ -5215,11 +5215,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    new-instance v0, Lcom/amap/api/location/core/a;
+    new-instance v0, Lcom/amap/api/location/core/AMapLocException;
 
     const-string v1, "key\u9274\u6743\u5931\u8d25"
 
-    invoke-direct {v0, v1}, Lcom/amap/api/location/core/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/amap/api/location/core/AMapLocException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
@@ -5444,7 +5444,7 @@
     :try_start_3
     invoke-direct {p0}, Lcom/a/a;->t()Lcom/a/K;
     :try_end_3
-    .catch Lcom/amap/api/location/core/a; {:try_start_3 .. :try_end_3} :catch_0
+    .catch Lcom/amap/api/location/core/AMapLocException; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     move-result-object v0
@@ -5528,7 +5528,7 @@
     goto :goto_0
 .end method
 
-.method public a(Landroid/content/Context;Lcom/amap/api/location/q;)V
+.method public a(Landroid/content/Context;Lcom/amap/api/location/d;)V
     .locals 2
 
     if-nez p1, :cond_1

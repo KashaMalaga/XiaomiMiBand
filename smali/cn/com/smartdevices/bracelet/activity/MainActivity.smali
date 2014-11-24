@@ -288,7 +288,7 @@
 
     if-eqz v0, :cond_3
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->b()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->b()Z
 
     move-result v0
 

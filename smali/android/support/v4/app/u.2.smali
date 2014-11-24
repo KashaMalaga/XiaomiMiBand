@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Landroid/support/v4/app/u;->a:Landroid/support/v4/app/Fragment;
 
-    iget-object v0, v0, Landroid/support/v4/app/Fragment;->ab:Landroid/view/View;
+    iget-object v0, v0, Landroid/support/v4/app/Fragment;->mView:Landroid/view/View;
 
     if-nez v0, :cond_0
 
@@ -42,7 +42,7 @@
     :cond_0
     iget-object v0, p0, Landroid/support/v4/app/u;->a:Landroid/support/v4/app/Fragment;
 
-    iget-object v0, v0, Landroid/support/v4/app/Fragment;->ab:Landroid/view/View;
+    iget-object v0, v0, Landroid/support/v4/app/Fragment;->mView:Landroid/view/View;
 
     invoke-virtual {v0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

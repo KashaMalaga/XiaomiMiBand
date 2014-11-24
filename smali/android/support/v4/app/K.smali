@@ -33,7 +33,7 @@
 
     iget-object v0, p0, Landroid/support/v4/app/K;->a:Landroid/support/v4/app/Fragment;
 
-    iget-object v0, v0, Landroid/support/v4/app/Fragment;->u:Landroid/view/View;
+    iget-object v0, v0, Landroid/support/v4/app/Fragment;->mAnimatingAway:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
@@ -41,7 +41,7 @@
 
     const/4 v1, 0x0
 
-    iput-object v1, v0, Landroid/support/v4/app/Fragment;->u:Landroid/view/View;
+    iput-object v1, v0, Landroid/support/v4/app/Fragment;->mAnimatingAway:Landroid/view/View;
 
     iget-object v0, p0, Landroid/support/v4/app/K;->b:Landroid/support/v4/app/F;
 
@@ -49,7 +49,7 @@
 
     iget-object v2, p0, Landroid/support/v4/app/K;->a:Landroid/support/v4/app/Fragment;
 
-    iget v2, v2, Landroid/support/v4/app/Fragment;->v:I
+    iget v2, v2, Landroid/support/v4/app/Fragment;->mStateAfterAnimating:I
 
     move v4, v3
 

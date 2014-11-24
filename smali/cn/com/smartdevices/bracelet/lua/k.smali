@@ -3,38 +3,32 @@
 
 
 # instance fields
-.field public a:Ljava/lang/String;
+.field public a:I
     .annotation runtime Lcom/b/a/a/b;
-        a = "content"
+        a = "code"
     .end annotation
 .end field
 
 .field public b:Ljava/lang/String;
     .annotation runtime Lcom/b/a/a/b;
-        a = "packdata"
+        a = "message"
     .end annotation
 .end field
 
-.field public c:Ljava/lang/String;
+.field public c:Lcn/com/smartdevices/bracelet/lua/l;
     .annotation runtime Lcom/b/a/a/b;
-        a = "version"
+        a = "data"
     .end annotation
 .end field
 
-.field public d:Ljava/lang/String;
-    .annotation runtime Lcom/b/a/a/b;
-        a = "sync_time"
-    .end annotation
-.end field
-
-.field final synthetic e:Lcn/com/smartdevices/bracelet/lua/LuaManager;
+.field final synthetic d:Lcn/com/smartdevices/bracelet/lua/LuaManager;
 
 
 # direct methods
 .method constructor <init>(Lcn/com/smartdevices/bracelet/lua/LuaManager;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lua/k;->e:Lcn/com/smartdevices/bracelet/lua/LuaManager;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lua/k;->d:Lcn/com/smartdevices/bracelet/lua/LuaManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

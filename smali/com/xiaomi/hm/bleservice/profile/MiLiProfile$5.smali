@@ -438,17 +438,13 @@
 
     :cond_1
     :try_start_1
-    iget v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->firstHeadDataType:I
+    iget v1, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->firstHeadDataType:I
 
-    if-ne v11, v2, :cond_4
+    if-ne v11, v1, :cond_4
 
-    iget v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->firstHeadTotalLen:I
+    iget v1, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->firstHeadTotalLen:I
 
-    if-ne v10, v2, :cond_4
-
-    iget v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->firstHeadYear:I
-
-    if-ne v1, v2, :cond_4
+    if-ne v10, v1, :cond_4
 
     iget v1, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->currentDataLen:I
 

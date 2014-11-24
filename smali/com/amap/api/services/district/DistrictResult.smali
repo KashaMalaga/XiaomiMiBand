@@ -6,7 +6,7 @@
 
 
 # instance fields
-.field public a:Landroid/os/Parcelable$Creator;
+.field public CREATOR:Landroid/os/Parcelable$Creator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/os/Parcelable$Creator",
@@ -17,9 +17,9 @@
     .end annotation
 .end field
 
-.field private b:Lcom/amap/api/services/district/DistrictSearchQuery;
+.field private a:Lcom/amap/api/services/district/DistrictSearchQuery;
 
-.field private c:Ljava/util/ArrayList;
+.field private b:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList",
@@ -30,9 +30,9 @@
     .end annotation
 .end field
 
-.field private d:I
+.field private c:I
 
-.field private e:Lcom/amap/api/services/core/a;
+.field private d:Lcom/amap/api/services/core/AMapException;
 
 
 # direct methods
@@ -41,11 +41,11 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lcom/amap/api/services/district/e;
+    new-instance v0, Lcom/amap/api/services/district/b;
 
-    invoke-direct {v0, p0}, Lcom/amap/api/services/district/e;-><init>(Lcom/amap/api/services/district/DistrictResult;)V
+    invoke-direct {v0, p0}, Lcom/amap/api/services/district/b;-><init>(Lcom/amap/api/services/district/DistrictResult;)V
 
-    iput-object v0, p0, Lcom/amap/api/services/district/DistrictResult;->a:Landroid/os/Parcelable$Creator;
+    iput-object v0, p0, Lcom/amap/api/services/district/DistrictResult;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
@@ -55,11 +55,11 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lcom/amap/api/services/district/e;
+    new-instance v0, Lcom/amap/api/services/district/b;
 
-    invoke-direct {v0, p0}, Lcom/amap/api/services/district/e;-><init>(Lcom/amap/api/services/district/DistrictResult;)V
+    invoke-direct {v0, p0}, Lcom/amap/api/services/district/b;-><init>(Lcom/amap/api/services/district/DistrictResult;)V
 
-    iput-object v0, p0, Lcom/amap/api/services/district/DistrictResult;->a:Landroid/os/Parcelable$Creator;
+    iput-object v0, p0, Lcom/amap/api/services/district/DistrictResult;->CREATOR:Landroid/os/Parcelable$Creator;
 
     const-class v0, Lcom/amap/api/services/district/DistrictSearchQuery;
 
@@ -73,7 +73,7 @@
 
     check-cast v0, Lcom/amap/api/services/district/DistrictSearchQuery;
 
-    iput-object v0, p0, Lcom/amap/api/services/district/DistrictResult;->b:Lcom/amap/api/services/district/DistrictSearchQuery;
+    iput-object v0, p0, Lcom/amap/api/services/district/DistrictResult;->a:Lcom/amap/api/services/district/DistrictSearchQuery;
 
     sget-object v0, Lcom/amap/api/services/district/DistrictItem;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -81,7 +81,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/amap/api/services/district/DistrictResult;->c:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/amap/api/services/district/DistrictResult;->b:Ljava/util/ArrayList;
 
     return-void
 .end method
@@ -101,103 +101,21 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lcom/amap/api/services/district/e;
+    new-instance v0, Lcom/amap/api/services/district/b;
 
-    invoke-direct {v0, p0}, Lcom/amap/api/services/district/e;-><init>(Lcom/amap/api/services/district/DistrictResult;)V
+    invoke-direct {v0, p0}, Lcom/amap/api/services/district/b;-><init>(Lcom/amap/api/services/district/DistrictResult;)V
 
-    iput-object v0, p0, Lcom/amap/api/services/district/DistrictResult;->a:Landroid/os/Parcelable$Creator;
+    iput-object v0, p0, Lcom/amap/api/services/district/DistrictResult;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    iput-object p1, p0, Lcom/amap/api/services/district/DistrictResult;->b:Lcom/amap/api/services/district/DistrictSearchQuery;
+    iput-object p1, p0, Lcom/amap/api/services/district/DistrictResult;->a:Lcom/amap/api/services/district/DistrictSearchQuery;
 
-    iput-object p2, p0, Lcom/amap/api/services/district/DistrictResult;->c:Ljava/util/ArrayList;
+    iput-object p2, p0, Lcom/amap/api/services/district/DistrictResult;->b:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Ljava/util/ArrayList;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcom/amap/api/services/district/DistrictItem;",
-            ">;"
-        }
-    .end annotation
-
-    iget-object v0, p0, Lcom/amap/api/services/district/DistrictResult;->c:Ljava/util/ArrayList;
-
-    return-object v0
-.end method
-
-.method public a(I)V
-    .locals 0
-
-    iput p1, p0, Lcom/amap/api/services/district/DistrictResult;->d:I
-
-    return-void
-.end method
-
-.method public a(Lcom/amap/api/services/core/a;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/district/DistrictResult;->e:Lcom/amap/api/services/core/a;
-
-    return-void
-.end method
-
-.method public a(Lcom/amap/api/services/district/DistrictSearchQuery;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/district/DistrictResult;->b:Lcom/amap/api/services/district/DistrictSearchQuery;
-
-    return-void
-.end method
-
-.method public a(Ljava/util/ArrayList;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcom/amap/api/services/district/DistrictItem;",
-            ">;)V"
-        }
-    .end annotation
-
-    iput-object p1, p0, Lcom/amap/api/services/district/DistrictResult;->c:Ljava/util/ArrayList;
-
-    return-void
-.end method
-
-.method public b()Lcom/amap/api/services/district/DistrictSearchQuery;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/district/DistrictResult;->b:Lcom/amap/api/services/district/DistrictSearchQuery;
-
-    return-object v0
-.end method
-
-.method public c()I
-    .locals 1
-
-    iget v0, p0, Lcom/amap/api/services/district/DistrictResult;->d:I
-
-    return v0
-.end method
-
-.method public d()Lcom/amap/api/services/core/a;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/district/DistrictResult;->e:Lcom/amap/api/services/core/a;
-
-    return-object v0
-.end method
-
 .method public describeContents()I
     .locals 1
 
@@ -244,11 +162,11 @@
     :cond_3
     check-cast p1, Lcom/amap/api/services/district/DistrictResult;
 
-    iget-object v2, p0, Lcom/amap/api/services/district/DistrictResult;->b:Lcom/amap/api/services/district/DistrictSearchQuery;
+    iget-object v2, p0, Lcom/amap/api/services/district/DistrictResult;->a:Lcom/amap/api/services/district/DistrictSearchQuery;
 
     if-nez v2, :cond_4
 
-    iget-object v2, p1, Lcom/amap/api/services/district/DistrictResult;->b:Lcom/amap/api/services/district/DistrictSearchQuery;
+    iget-object v2, p1, Lcom/amap/api/services/district/DistrictResult;->a:Lcom/amap/api/services/district/DistrictSearchQuery;
 
     if-eqz v2, :cond_5
 
@@ -257,9 +175,9 @@
     goto :goto_0
 
     :cond_4
-    iget-object v2, p0, Lcom/amap/api/services/district/DistrictResult;->b:Lcom/amap/api/services/district/DistrictSearchQuery;
+    iget-object v2, p0, Lcom/amap/api/services/district/DistrictResult;->a:Lcom/amap/api/services/district/DistrictSearchQuery;
 
-    iget-object v3, p1, Lcom/amap/api/services/district/DistrictResult;->b:Lcom/amap/api/services/district/DistrictSearchQuery;
+    iget-object v3, p1, Lcom/amap/api/services/district/DistrictResult;->a:Lcom/amap/api/services/district/DistrictSearchQuery;
 
     invoke-virtual {v2, v3}, Lcom/amap/api/services/district/DistrictSearchQuery;->equals(Ljava/lang/Object;)Z
 
@@ -272,11 +190,11 @@
     goto :goto_0
 
     :cond_5
-    iget-object v2, p0, Lcom/amap/api/services/district/DistrictResult;->c:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/amap/api/services/district/DistrictResult;->b:Ljava/util/ArrayList;
 
     if-nez v2, :cond_6
 
-    iget-object v2, p1, Lcom/amap/api/services/district/DistrictResult;->c:Ljava/util/ArrayList;
+    iget-object v2, p1, Lcom/amap/api/services/district/DistrictResult;->b:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_0
 
@@ -285,9 +203,9 @@
     goto :goto_0
 
     :cond_6
-    iget-object v2, p0, Lcom/amap/api/services/district/DistrictResult;->c:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/amap/api/services/district/DistrictResult;->b:Ljava/util/ArrayList;
 
-    iget-object v3, p1, Lcom/amap/api/services/district/DistrictResult;->c:Ljava/util/ArrayList;
+    iget-object v3, p1, Lcom/amap/api/services/district/DistrictResult;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->equals(Ljava/lang/Object;)Z
 
@@ -300,12 +218,53 @@
     goto :goto_0
 .end method
 
+.method public getAMapException()Lcom/amap/api/services/core/AMapException;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/district/DistrictResult;->d:Lcom/amap/api/services/core/AMapException;
+
+    return-object v0
+.end method
+
+.method public getDistrict()Ljava/util/ArrayList;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/amap/api/services/district/DistrictItem;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/amap/api/services/district/DistrictResult;->b:Ljava/util/ArrayList;
+
+    return-object v0
+.end method
+
+.method public getPageCount()I
+    .locals 1
+
+    iget v0, p0, Lcom/amap/api/services/district/DistrictResult;->c:I
+
+    return v0
+.end method
+
+.method public getQuery()Lcom/amap/api/services/district/DistrictSearchQuery;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/district/DistrictResult;->a:Lcom/amap/api/services/district/DistrictSearchQuery;
+
+    return-object v0
+.end method
+
 .method public hashCode()I
     .locals 3
 
     const/4 v1, 0x0
 
-    iget-object v0, p0, Lcom/amap/api/services/district/DistrictResult;->b:Lcom/amap/api/services/district/DistrictSearchQuery;
+    iget-object v0, p0, Lcom/amap/api/services/district/DistrictResult;->a:Lcom/amap/api/services/district/DistrictSearchQuery;
 
     if-nez v0, :cond_0
 
@@ -316,7 +275,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v2, p0, Lcom/amap/api/services/district/DistrictResult;->c:Ljava/util/ArrayList;
+    iget-object v2, p0, Lcom/amap/api/services/district/DistrictResult;->b:Ljava/util/ArrayList;
 
     if-nez v2, :cond_1
 
@@ -326,7 +285,7 @@
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/amap/api/services/district/DistrictResult;->b:Lcom/amap/api/services/district/DistrictSearchQuery;
+    iget-object v0, p0, Lcom/amap/api/services/district/DistrictResult;->a:Lcom/amap/api/services/district/DistrictSearchQuery;
 
     invoke-virtual {v0}, Lcom/amap/api/services/district/DistrictSearchQuery;->hashCode()I
 
@@ -335,13 +294,54 @@
     goto :goto_0
 
     :cond_1
-    iget-object v1, p0, Lcom/amap/api/services/district/DistrictResult;->c:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/amap/api/services/district/DistrictResult;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->hashCode()I
 
     move-result v1
 
     goto :goto_1
+.end method
+
+.method public setAMapException(Lcom/amap/api/services/core/AMapException;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/district/DistrictResult;->d:Lcom/amap/api/services/core/AMapException;
+
+    return-void
+.end method
+
+.method public setDistrict(Ljava/util/ArrayList;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/amap/api/services/district/DistrictItem;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lcom/amap/api/services/district/DistrictResult;->b:Ljava/util/ArrayList;
+
+    return-void
+.end method
+
+.method public setPageCount(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/amap/api/services/district/DistrictResult;->c:I
+
+    return-void
+.end method
+
+.method public setQuery(Lcom/amap/api/services/district/DistrictSearchQuery;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/district/DistrictResult;->a:Lcom/amap/api/services/district/DistrictSearchQuery;
+
+    return-void
 .end method
 
 .method public toString()Ljava/lang/String;
@@ -357,7 +357,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/amap/api/services/district/DistrictResult;->b:Lcom/amap/api/services/district/DistrictSearchQuery;
+    iget-object v1, p0, Lcom/amap/api/services/district/DistrictResult;->a:Lcom/amap/api/services/district/DistrictSearchQuery;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -369,7 +369,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/amap/api/services/district/DistrictResult;->c:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/amap/api/services/district/DistrictResult;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -391,11 +391,11 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
-    iget-object v0, p0, Lcom/amap/api/services/district/DistrictResult;->b:Lcom/amap/api/services/district/DistrictSearchQuery;
+    iget-object v0, p0, Lcom/amap/api/services/district/DistrictResult;->a:Lcom/amap/api/services/district/DistrictSearchQuery;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    iget-object v0, p0, Lcom/amap/api/services/district/DistrictResult;->c:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/amap/api/services/district/DistrictResult;->b:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeTypedList(Ljava/util/List;)V
 

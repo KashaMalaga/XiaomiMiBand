@@ -1,23 +1,25 @@
-.class Lcom/amap/api/services/geocoder/d;
+.class final Lcom/amap/api/services/geocoder/d;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/os/Parcelable$Creator;
 
 
-# instance fields
-.field final synthetic a:Lcom/amap/api/services/geocoder/g;
-
-.field final synthetic b:Lcom/amap/api/services/geocoder/c;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator",
+        "<",
+        "Lcom/amap/api/services/geocoder/RegeocodeRoad;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method constructor <init>(Lcom/amap/api/services/geocoder/c;Lcom/amap/api/services/geocoder/g;)V
+.method constructor <init>()V
     .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/geocoder/d;->b:Lcom/amap/api/services/geocoder/c;
-
-    iput-object p2, p0, Lcom/amap/api/services/geocoder/d;->a:Lcom/amap/api/services/geocoder/g;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,78 +28,42 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 4
+.method public a(Landroid/os/Parcel;)Lcom/amap/api/services/geocoder/RegeocodeRoad;
+    .locals 2
 
-    new-instance v1, Landroid/os/Message;
+    new-instance v0, Lcom/amap/api/services/geocoder/RegeocodeRoad;
 
-    invoke-direct {v1}, Landroid/os/Message;-><init>()V
+    const/4 v1, 0x0
 
-    const/16 v0, 0x65
+    invoke-direct {v0, p1, v1}, Lcom/amap/api/services/geocoder/RegeocodeRoad;-><init>(Landroid/os/Parcel;Lcom/amap/api/services/geocoder/d;)V
 
-    :try_start_0
-    iput v0, v1, Landroid/os/Message;->what:I
+    return-object v0
+.end method
 
-    iget-object v0, p0, Lcom/amap/api/services/geocoder/d;->b:Lcom/amap/api/services/geocoder/c;
+.method public a(I)[Lcom/amap/api/services/geocoder/RegeocodeRoad;
+    .locals 1
 
-    iget-object v2, p0, Lcom/amap/api/services/geocoder/d;->a:Lcom/amap/api/services/geocoder/g;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v2}, Lcom/amap/api/services/geocoder/c;->a(Lcom/amap/api/services/geocoder/g;)Lcom/amap/api/services/geocoder/RegeocodeAddress;
+    return-object v0
+.end method
+
+.method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0, p1}, Lcom/amap/api/services/geocoder/d;->a(Landroid/os/Parcel;)Lcom/amap/api/services/geocoder/RegeocodeRoad;
 
     move-result-object v0
 
-    const/4 v2, 0x0
+    return-object v0
+.end method
 
-    iput v2, v1, Landroid/os/Message;->arg1:I
+.method public synthetic newArray(I)[Ljava/lang/Object;
+    .locals 1
 
-    new-instance v2, Lcom/amap/api/services/geocoder/h;
+    invoke-virtual {p0, p1}, Lcom/amap/api/services/geocoder/d;->a(I)[Lcom/amap/api/services/geocoder/RegeocodeRoad;
 
-    iget-object v3, p0, Lcom/amap/api/services/geocoder/d;->a:Lcom/amap/api/services/geocoder/g;
+    move-result-object v0
 
-    invoke-direct {v2, v3, v0}, Lcom/amap/api/services/geocoder/h;-><init>(Lcom/amap/api/services/geocoder/g;Lcom/amap/api/services/geocoder/RegeocodeAddress;)V
-
-    iput-object v2, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
-    :try_end_0
-    .catch Lcom/amap/api/services/core/a; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    iget-object v0, p0, Lcom/amap/api/services/geocoder/d;->b:Lcom/amap/api/services/geocoder/c;
-
-    iget-object v0, v0, Lcom/amap/api/services/geocoder/c;->c:Landroid/os/Handler;
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    :goto_0
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    :try_start_1
-    invoke-virtual {v0}, Lcom/amap/api/services/core/a;->b()I
-
-    move-result v0
-
-    iput v0, v1, Landroid/os/Message;->arg1:I
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    iget-object v0, p0, Lcom/amap/api/services/geocoder/d;->b:Lcom/amap/api/services/geocoder/c;
-
-    iget-object v0, v0, Lcom/amap/api/services/geocoder/c;->c:Landroid/os/Handler;
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    iget-object v2, p0, Lcom/amap/api/services/geocoder/d;->b:Lcom/amap/api/services/geocoder/c;
-
-    iget-object v2, v2, Lcom/amap/api/services/geocoder/c;->c:Landroid/os/Handler;
-
-    invoke-virtual {v2, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    throw v0
+    return-object v0
 .end method

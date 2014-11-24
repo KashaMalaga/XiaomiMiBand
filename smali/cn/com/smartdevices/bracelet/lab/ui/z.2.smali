@@ -140,7 +140,7 @@
 
     if-ne v0, p2, :cond_0
 
-    const v0, 0x7f0c0204
+    const v0, 0x7f0c0207
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -154,7 +154,7 @@
 
     if-ne v0, p2, :cond_1
 
-    const v0, 0x7f0c0203
+    const v0, 0x7f0c0206
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -225,7 +225,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/z;->a:Landroid/content/Context;
 
-    const v1, 0x7f0c0268
+    const v1, 0x7f0c0277
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -244,7 +244,7 @@
     :goto_2
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/z;->a:Landroid/content/Context;
 
-    const v1, 0x7f0c0230
+    const v1, 0x7f0c0233
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -300,7 +300,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/z;->a:Landroid/content/Context;
 
-    const v1, 0x7f0c0214
+    const v1, 0x7f0c0217
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -321,7 +321,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/z;->a:Landroid/content/Context;
 
-    const v1, 0x7f0c024d
+    const v1, 0x7f0c0250
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -350,7 +350,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/z;->a:Landroid/content/Context;
 
-    const v1, 0x7f0c024e
+    const v1, 0x7f0c0251
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -381,11 +381,11 @@
 .method public a(IJ)Ljava/lang/String;
     .locals 12
 
-    const v11, 0x7f0c023e
+    const v11, 0x7f0c0241
 
-    const v10, 0x7f0c0237
+    const v10, 0x7f0c023a
 
-    const v9, 0x7f0c0213
+    const v9, 0x7f0c0216
 
     const/4 v8, 0x1
 
@@ -419,7 +419,7 @@
 
     iget-object v4, p0, Lcn/com/smartdevices/bracelet/lab/ui/z;->a:Landroid/content/Context;
 
-    const v5, 0x7f0c024f
+    const v5, 0x7f0c0252
 
     new-array v6, v8, [Ljava/lang/Object;
 
@@ -560,7 +560,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/z;->a:Landroid/content/Context;
 
-    const v5, 0x7f0c023f
+    const v5, 0x7f0c0242
 
     new-array v6, v8, [Ljava/lang/Object;
 

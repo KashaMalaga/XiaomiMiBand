@@ -151,4 +151,5 @@
     <attr name="labCircleHeight" format="dimension" />
     <attr name="labCircleStroke" format="boolean" />
     <attr name="labCircleStrokeWidth" format="float" />
+    <attr name="slidepanel_height" format="dimension" />
 </resources>

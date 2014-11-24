@@ -189,6 +189,8 @@
 
 .field public static final slideMenuStyle:I = 0x7f010000
 
+.field public static final slidepanel_height:I = 0x7f01006e
+
 .field public static final snap:I = 0x7f010040
 
 .field public static final strokeColor:I = 0x7f010041

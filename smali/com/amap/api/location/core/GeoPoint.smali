@@ -32,9 +32,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/location/core/h;
+    new-instance v0, Lcom/amap/api/location/core/f;
 
-    invoke-direct {v0}, Lcom/amap/api/location/core/h;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/location/core/f;-><init>()V
 
     sput-object v0, Lcom/amap/api/location/core/GeoPoint;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -151,7 +151,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Landroid/os/Parcel;Lcom/amap/api/location/core/h;)V
+.method synthetic constructor <init>(Landroid/os/Parcel;Lcom/amap/api/location/core/f;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/amap/api/location/core/GeoPoint;-><init>(Landroid/os/Parcel;)V
@@ -161,26 +161,6 @@
 
 
 # virtual methods
-.method public a()I
-    .locals 2
-
-    iget-wide v0, p0, Lcom/amap/api/location/core/GeoPoint;->b:J
-
-    long-to-int v0, v0
-
-    return v0
-.end method
-
-.method public b()I
-    .locals 2
-
-    iget-wide v0, p0, Lcom/amap/api/location/core/GeoPoint;->a:J
-
-    long-to-int v0, v0
-
-    return v0
-.end method
-
 .method public describeContents()I
     .locals 1
 
@@ -248,6 +228,26 @@
     const/4 v0, 0x1
 
     goto :goto_0
+.end method
+
+.method public getLatitudeE6()I
+    .locals 2
+
+    iget-wide v0, p0, Lcom/amap/api/location/core/GeoPoint;->a:J
+
+    long-to-int v0, v0
+
+    return v0
+.end method
+
+.method public getLongitudeE6()I
+    .locals 2
+
+    iget-wide v0, p0, Lcom/amap/api/location/core/GeoPoint;->b:J
+
+    long-to-int v0, v0
+
+    return v0
 .end method
 
 .method public hashCode()I

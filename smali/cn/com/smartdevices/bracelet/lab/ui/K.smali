@@ -2,7 +2,16 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/widget/AdapterView$OnItemClickListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/widget/AdapterView$OnItemClickListener;"
+    }
+.end annotation
 
 
 # instance fields
@@ -22,12 +31,41 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 1
+.method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/K;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->finish()V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->a(Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;)Lcn/com/smartdevices/bracelet/lab/ui/M;
 
+    move-result-object v0
+
+    invoke-virtual {v0, p3}, Lcn/com/smartdevices/bracelet/lab/ui/M;->a(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    :goto_0
     return-void
+
+    :cond_0
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/K;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/lab/n;->a(Landroid/content/Context;Ljava/lang/String;)Z
+
+    goto :goto_0
 .end method

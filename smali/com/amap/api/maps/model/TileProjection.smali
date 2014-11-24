@@ -6,17 +6,17 @@
 
 
 # instance fields
-.field public final a:I
+.field public final maxX:I
 
-.field public final b:I
+.field public final maxY:I
 
-.field public final c:I
+.field public final minX:I
 
-.field public final d:I
+.field public final minY:I
 
-.field public final e:I
+.field public final offsetX:I
 
-.field public final f:I
+.field public final offsetY:I
 
 
 # direct methods
@@ -25,17 +25,17 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lcom/amap/api/maps/model/TileProjection;->a:I
+    iput p1, p0, Lcom/amap/api/maps/model/TileProjection;->offsetX:I
 
-    iput p2, p0, Lcom/amap/api/maps/model/TileProjection;->b:I
+    iput p2, p0, Lcom/amap/api/maps/model/TileProjection;->offsetY:I
 
-    iput p3, p0, Lcom/amap/api/maps/model/TileProjection;->c:I
+    iput p3, p0, Lcom/amap/api/maps/model/TileProjection;->minX:I
 
-    iput p4, p0, Lcom/amap/api/maps/model/TileProjection;->d:I
+    iput p4, p0, Lcom/amap/api/maps/model/TileProjection;->maxX:I
 
-    iput p5, p0, Lcom/amap/api/maps/model/TileProjection;->e:I
+    iput p5, p0, Lcom/amap/api/maps/model/TileProjection;->minY:I
 
-    iput p6, p0, Lcom/amap/api/maps/model/TileProjection;->f:I
+    iput p6, p0, Lcom/amap/api/maps/model/TileProjection;->maxY:I
 
     return-void
 .end method
@@ -53,27 +53,27 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
-    iget v0, p0, Lcom/amap/api/maps/model/TileProjection;->a:I
+    iget v0, p0, Lcom/amap/api/maps/model/TileProjection;->offsetX:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget v0, p0, Lcom/amap/api/maps/model/TileProjection;->b:I
+    iget v0, p0, Lcom/amap/api/maps/model/TileProjection;->offsetY:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget v0, p0, Lcom/amap/api/maps/model/TileProjection;->c:I
+    iget v0, p0, Lcom/amap/api/maps/model/TileProjection;->minX:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget v0, p0, Lcom/amap/api/maps/model/TileProjection;->d:I
+    iget v0, p0, Lcom/amap/api/maps/model/TileProjection;->maxX:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget v0, p0, Lcom/amap/api/maps/model/TileProjection;->d:I
+    iget v0, p0, Lcom/amap/api/maps/model/TileProjection;->maxX:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget v0, p0, Lcom/amap/api/maps/model/TileProjection;->f:I
+    iget v0, p0, Lcom/amap/api/maps/model/TileProjection;->maxY:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 

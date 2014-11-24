@@ -1,46 +1,46 @@
-.class public interface abstract Lcom/amap/api/mapcore/aH;
+.class public interface abstract Lcom/amap/api/mapcore/ah;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Lcom/amap/api/mapcore/g;
 
 
 # virtual methods
-.method public abstract a()Lcom/amap/api/maps/model/LatLng;
+.method public abstract a()V
 .end method
 
 .method public abstract a(F)V
 .end method
 
-.method public abstract a(FF)V
+.method public abstract a(Ljavax/microedition/khronos/opengles/GL10;)V
 .end method
 
-.method public abstract a(Lcom/amap/api/maps/model/BitmapDescriptor;)V
+.method public abstract a(Z)V
 .end method
 
-.method public abstract a(Lcom/amap/api/maps/model/LatLng;)V
+.method public abstract a(Lcom/amap/api/mapcore/ah;)Z
 .end method
 
-.method public abstract a(Lcom/amap/api/maps/model/LatLngBounds;)V
+.method public abstract b()V
 .end method
 
-.method public abstract b()F
+.method public abstract b(Z)V
 .end method
 
-.method public abstract c()F
+.method public abstract c()Ljava/lang/String;
 .end method
 
-.method public abstract c(F)V
+.method public abstract c(Z)V
 .end method
 
-.method public abstract d()Lcom/amap/api/maps/model/LatLngBounds;
+.method public abstract d()F
 .end method
 
-.method public abstract d(F)V
+.method public abstract e()Z
 .end method
 
-.method public abstract n()F
+.method public abstract f()I
 .end method
 
-.method public abstract o()F
+.method public abstract g()V
+.end method
+
+.method public abstract h()V
 .end method

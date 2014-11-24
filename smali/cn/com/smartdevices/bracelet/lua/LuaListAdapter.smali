@@ -3,6 +3,8 @@
 
 
 # static fields
+.field private static final TAG:Ljava/lang/String; = "LuaListAdapter"
+
 .field private static final TYPE_WEATHER_TIPS:Ljava/lang/String; = "6001"
 
 .field private static isFirstTimeBoolean:Ljava/lang/Boolean;
@@ -15,12 +17,24 @@
 
 .field private animT2B:Landroid/view/animation/Animation;
 
+.field private iconCacheMap:Ljava/util/HashMap;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/HashMap",
+            "<",
+            "Ljava/lang/String;",
+            "Landroid/graphics/Bitmap;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 .field private infoList:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/lua/c;",
+            "Lcn/com/smartdevices/bracelet/lua/d;",
             ">;"
         }
     .end annotation
@@ -70,6 +84,12 @@
     const/4 v1, 0x0
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
+
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->iconCacheMap:Ljava/util/HashMap;
 
     iput-object v1, p0, Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->mContext:Landroid/content/Context;
 
@@ -337,9 +357,9 @@
     goto :goto_0
 
     :cond_4
-    new-instance v4, Lcn/com/smartdevices/bracelet/lua/c;
+    new-instance v4, Lcn/com/smartdevices/bracelet/lua/d;
 
-    invoke-direct {v4, p0}, Lcn/com/smartdevices/bracelet/lua/c;-><init>(Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;)V
+    invoke-direct {v4, p0}, Lcn/com/smartdevices/bracelet/lua/d;-><init>(Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;)V
 
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -347,13 +367,13 @@
 
     check-cast v0, Lde/greenrobot/daobracelet/LuaList;
 
-    iput-object v0, v4, Lcn/com/smartdevices/bracelet/lua/c;->a:Lde/greenrobot/daobracelet/LuaList;
+    iput-object v0, v4, Lcn/com/smartdevices/bracelet/lua/d;->a:Lde/greenrobot/daobracelet/LuaList;
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
-    iput-object v0, v4, Lcn/com/smartdevices/bracelet/lua/c;->b:Ljava/lang/Boolean;
+    iput-object v0, v4, Lcn/com/smartdevices/bracelet/lua/d;->b:Ljava/lang/Boolean;
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -373,9 +393,9 @@
 
     if-ge v1, v0, :cond_3
 
-    new-instance v4, Lcn/com/smartdevices/bracelet/lua/c;
+    new-instance v4, Lcn/com/smartdevices/bracelet/lua/d;
 
-    invoke-direct {v4, p0}, Lcn/com/smartdevices/bracelet/lua/c;-><init>(Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;)V
+    invoke-direct {v4, p0}, Lcn/com/smartdevices/bracelet/lua/d;-><init>(Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;)V
 
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -383,9 +403,9 @@
 
     check-cast v0, Lde/greenrobot/daobracelet/LuaList;
 
-    iput-object v0, v4, Lcn/com/smartdevices/bracelet/lua/c;->a:Lde/greenrobot/daobracelet/LuaList;
+    iput-object v0, v4, Lcn/com/smartdevices/bracelet/lua/d;->a:Lde/greenrobot/daobracelet/LuaList;
 
-    iget-object v0, v4, Lcn/com/smartdevices/bracelet/lua/c;->a:Lde/greenrobot/daobracelet/LuaList;
+    iget-object v0, v4, Lcn/com/smartdevices/bracelet/lua/d;->a:Lde/greenrobot/daobracelet/LuaList;
 
     invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->judgeIsNew(Lde/greenrobot/daobracelet/LuaList;)Ljava/lang/Boolean;
 
@@ -409,7 +429,7 @@
 
     move-result-object v0
 
-    iput-object v0, v4, Lcn/com/smartdevices/bracelet/lua/c;->b:Ljava/lang/Boolean;
+    iput-object v0, v4, Lcn/com/smartdevices/bracelet/lua/d;->b:Ljava/lang/Boolean;
 
     :goto_3
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -425,7 +445,7 @@
 
     move-result-object v0
 
-    iput-object v0, v4, Lcn/com/smartdevices/bracelet/lua/c;->b:Ljava/lang/Boolean;
+    iput-object v0, v4, Lcn/com/smartdevices/bracelet/lua/d;->b:Ljava/lang/Boolean;
 
     goto :goto_3
 .end method
@@ -462,9 +482,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/lua/c;
+    check-cast v0, Lcn/com/smartdevices/bracelet/lua/d;
 
-    iget-object v3, v0, Lcn/com/smartdevices/bracelet/lua/c;->a:Lde/greenrobot/daobracelet/LuaList;
+    iget-object v3, v0, Lcn/com/smartdevices/bracelet/lua/d;->a:Lde/greenrobot/daobracelet/LuaList;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->infoList:Ljava/util/List;
 
@@ -472,9 +492,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/lua/c;
+    check-cast v0, Lcn/com/smartdevices/bracelet/lua/d;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/lua/c;->b:Ljava/lang/Boolean;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/lua/d;->b:Ljava/lang/Boolean;
 
     invoke-virtual {p1}, Lde/greenrobot/daobracelet/LuaList;->getId()Ljava/lang/Long;
 
@@ -606,11 +626,15 @@
 .end method
 
 .method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 8
+    .locals 11
 
-    const/16 v7, 0x8
+    const/4 v3, 0x0
 
-    const/4 v6, 0x0
+    const v10, 0x7f0701c1
+
+    const/16 v9, 0x8
+
+    const/4 v8, 0x0
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->infoList:Ljava/util/List;
 
@@ -618,15 +642,15 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/lua/c;
+    check-cast v0, Lcn/com/smartdevices/bracelet/lua/d;
 
-    iget-object v3, v0, Lcn/com/smartdevices/bracelet/lua/c;->a:Lde/greenrobot/daobracelet/LuaList;
+    iget-object v5, v0, Lcn/com/smartdevices/bracelet/lua/d;->a:Lde/greenrobot/daobracelet/LuaList;
 
     if-nez p2, :cond_3
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/lua/d;
+    new-instance v2, Lcn/com/smartdevices/bracelet/lua/e;
 
-    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/lua/d;-><init>(Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;)V
+    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/lua/e;-><init>(Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->mContext:Landroid/content/Context;
 
@@ -634,15 +658,13 @@
 
     move-result-object v1
 
-    const v4, 0x7f030067
+    const v4, 0x7f03006c
 
-    const/4 v5, 0x0
-
-    invoke-virtual {v1, v4, v5}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+    invoke-virtual {v1, v4, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p2
 
-    const v1, 0x7f0701a8
+    const v1, 0x7f0701c2
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -650,17 +672,17 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    iput-object v1, v2, Lcn/com/smartdevices/bracelet/lua/d;->a:Landroid/widget/TextView;
+    iput-object v1, v2, Lcn/com/smartdevices/bracelet/lua/e;->a:Landroid/widget/TextView;
 
-    iget-object v1, v2, Lcn/com/smartdevices/bracelet/lua/d;->a:Landroid/widget/TextView;
+    iget-object v1, v2, Lcn/com/smartdevices/bracelet/lua/e;->a:Landroid/widget/TextView;
 
     sget-object v4, Landroid/graphics/Typeface;->DEFAULT:Landroid/graphics/Typeface;
 
-    const/4 v5, 0x1
+    const/4 v6, 0x1
 
-    invoke-virtual {v1, v4, v5}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;I)V
+    invoke-virtual {v1, v4, v6}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;I)V
 
-    const v1, 0x7f0701a9
+    const v1, 0x7f0701c3
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -668,19 +690,9 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    iput-object v1, v2, Lcn/com/smartdevices/bracelet/lua/d;->b:Landroid/widget/TextView;
+    iput-object v1, v2, Lcn/com/smartdevices/bracelet/lua/e;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f0701a6
-
-    invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/ImageView;
-
-    iput-object v1, v2, Lcn/com/smartdevices/bracelet/lua/d;->c:Landroid/widget/ImageView;
-
-    const v1, 0x7f07008d
+    const v1, 0x7f0701c0
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -688,20 +700,26 @@
 
     check-cast v1, Landroid/widget/ImageView;
 
-    iput-object v1, v2, Lcn/com/smartdevices/bracelet/lua/d;->d:Landroid/widget/ImageView;
+    iput-object v1, v2, Lcn/com/smartdevices/bracelet/lua/e;->c:Landroid/widget/ImageView;
+
+    const v1, 0x7f070088
+
+    invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/ImageView;
+
+    iput-object v1, v2, Lcn/com/smartdevices/bracelet/lua/e;->d:Landroid/widget/ImageView;
 
     invoke-virtual {p2, v2}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     :goto_0
-    iget-object v1, v2, Lcn/com/smartdevices/bracelet/lua/d;->c:Landroid/widget/ImageView;
+    iget-object v1, v2, Lcn/com/smartdevices/bracelet/lua/e;->d:Landroid/widget/ImageView;
 
-    invoke-virtual {v1, v7}, Landroid/widget/ImageView;->setVisibility(I)V
+    invoke-virtual {v1, v8}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    iget-object v1, v2, Lcn/com/smartdevices/bracelet/lua/d;->d:Landroid/widget/ImageView;
-
-    invoke-virtual {v1, v6}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    invoke-virtual {v3}, Lde/greenrobot/daobracelet/LuaList;->getType()Ljava/lang/String;
+    invoke-virtual {v5}, Lde/greenrobot/daobracelet/LuaList;->getType()Ljava/lang/String;
 
     move-result-object v1
 
@@ -713,7 +731,7 @@
 
     if-eqz v1, :cond_4
 
-    iget-object v1, v2, Lcn/com/smartdevices/bracelet/lua/d;->a:Landroid/widget/TextView;
+    iget-object v1, v2, Lcn/com/smartdevices/bracelet/lua/e;->a:Landroid/widget/TextView;
 
     iget-object v4, p0, Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->mContext:Landroid/content/Context;
 
@@ -721,86 +739,149 @@
 
     move-result-object v4
 
-    const v5, 0x7f080027
+    const v6, 0x7f080027
 
-    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-virtual {v4, v6}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v4
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setTextColor(I)V
 
-    iget-object v1, v2, Lcn/com/smartdevices/bracelet/lua/d;->b:Landroid/widget/TextView;
+    iget-object v1, v2, Lcn/com/smartdevices/bracelet/lua/e;->b:Landroid/widget/TextView;
 
-    invoke-virtual {v1, v7}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v1, v9}, Landroid/widget/TextView;->setVisibility(I)V
 
     :cond_0
     :goto_1
-    invoke-virtual {v3}, Lde/greenrobot/daobracelet/LuaList;->getJsonString()Ljava/lang/String;
-
-    move-result-object v4
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v5}, Lde/greenrobot/daobracelet/LuaList;->getJsonString()Ljava/lang/String;
 
     move-result-object v1
 
-    const v5, 0x7f080010
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v1
-
-    :try_start_0
-    new-instance v5, Lorg/json/JSONObject;
-
-    invoke-direct {v5, v4}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
-
-    const-string v4, "txtColor"
-
-    invoke-virtual {v5, v4}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result v1
-
-    :goto_2
-    iget-object v4, v2, Lcn/com/smartdevices/bracelet/lua/d;->a:Landroid/widget/TextView;
-
-    const/high16 v5, -0x34000000
-
-    or-int/2addr v5, v1
-
-    invoke-virtual {v4, v5}, Landroid/widget/TextView;->setTextColor(I)V
-
-    iget-object v4, v2, Lcn/com/smartdevices/bracelet/lua/d;->b:Landroid/widget/TextView;
-
-    const v5, 0xffffff
-
-    and-int/2addr v1, v5
-
-    const/high16 v5, 0x78000000
-
-    or-int/2addr v1, v5
-
-    invoke-virtual {v4, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    new-instance v1, Lcn/com/smartdevices/bracelet/lua/b;
-
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/lua/b;-><init>(Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;)V
-
-    invoke-virtual {p2, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v1, v2, Lcn/com/smartdevices/bracelet/lua/d;->a:Landroid/widget/TextView;
-
-    invoke-virtual {v3}, Lde/greenrobot/daobracelet/LuaList;->getText1()Ljava/lang/String;
+    invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    invoke-virtual {v1, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    const v6, 0x7f080010
 
-    invoke-virtual {v3}, Lde/greenrobot/daobracelet/LuaList;->getText2()Ljava/lang/String;
+    invoke-virtual {v4, v6}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v4
+
+    :try_start_0
+    new-instance v6, Lorg/json/JSONObject;
+
+    invoke-direct {v6, v1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+
+    const-string v1, "txtColor"
+
+    invoke-virtual {v6, v1}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
+
+    move-result v4
+
+    const-string v1, "iconUri"
+
+    invoke-virtual {v6, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_1
+
+    move-result-object v1
+
+    move-object v3, v1
+
+    :goto_2
+    const-string v1, "LuaListAdapter"
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    const-string v7, "iconUri = "
+
+    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v1, v6}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    iget-object v1, v2, Lcn/com/smartdevices/bracelet/lua/e;->c:Landroid/widget/ImageView;
+
+    invoke-virtual {v1, v8}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    invoke-virtual {p2, v10}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/RelativeLayout$LayoutParams;
+
+    iput v8, v1, Landroid/widget/RelativeLayout$LayoutParams;->leftMargin:I
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/i;->a()Lcn/com/smartdevices/bracelet/i;
+
+    move-result-object v1
+
+    iget-object v6, v2, Lcn/com/smartdevices/bracelet/lua/e;->c:Landroid/widget/ImageView;
+
+    new-instance v7, Lcn/com/smartdevices/bracelet/lua/b;
+
+    invoke-direct {v7, p0}, Lcn/com/smartdevices/bracelet/lua/b;-><init>(Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;)V
+
+    invoke-virtual {v1, v3, v6, v7}, Lcn/com/smartdevices/bracelet/i;->a(Ljava/lang/String;Landroid/widget/ImageView;Lcom/e/a/b/f/a;)V
+
+    :goto_3
+    iget-object v1, v2, Lcn/com/smartdevices/bracelet/lua/e;->a:Landroid/widget/TextView;
+
+    const/high16 v3, -0x34000000
+
+    or-int/2addr v3, v4
+
+    invoke-virtual {v1, v3}, Landroid/widget/TextView;->setTextColor(I)V
+
+    iget-object v1, v2, Lcn/com/smartdevices/bracelet/lua/e;->b:Landroid/widget/TextView;
+
+    const v3, 0xffffff
+
+    and-int/2addr v3, v4
+
+    const/high16 v4, 0x78000000
+
+    or-int/2addr v3, v4
+
+    invoke-virtual {v1, v3}, Landroid/widget/TextView;->setTextColor(I)V
+
+    new-instance v1, Lcn/com/smartdevices/bracelet/lua/c;
+
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/lua/c;-><init>(Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;)V
+
+    invoke-virtual {p2, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v1, v2, Lcn/com/smartdevices/bracelet/lua/e;->a:Landroid/widget/TextView;
+
+    invoke-virtual {v5}, Lde/greenrobot/daobracelet/LuaList;->getText1()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {v5}, Lde/greenrobot/daobracelet/LuaList;->getText2()Ljava/lang/String;
 
     move-result-object v1
 
@@ -808,23 +889,23 @@
 
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
-    move-result v4
+    move-result v3
 
-    if-nez v4, :cond_6
+    if-nez v3, :cond_6
 
     :cond_1
-    iget-object v1, v2, Lcn/com/smartdevices/bracelet/lua/d;->b:Landroid/widget/TextView;
+    iget-object v1, v2, Lcn/com/smartdevices/bracelet/lua/e;->b:Landroid/widget/TextView;
 
-    invoke-virtual {v1, v7}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v1, v9}, Landroid/widget/TextView;->setVisibility(I)V
 
-    :goto_3
+    :goto_4
     invoke-virtual {p2, v2}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    iget-object v1, v2, Lcn/com/smartdevices/bracelet/lua/d;->a:Landroid/widget/TextView;
+    iget-object v1, v2, Lcn/com/smartdevices/bracelet/lua/e;->a:Landroid/widget/TextView;
 
-    invoke-virtual {v1, v3}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
+    invoke-virtual {v1, v5}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    iget-object v1, v0, Lcn/com/smartdevices/bracelet/lua/c;->b:Ljava/lang/Boolean;
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/lua/d;->b:Ljava/lang/Boolean;
 
     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -837,11 +918,11 @@
     invoke-virtual {p2, v1}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
     :cond_2
-    invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v8}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcn/com/smartdevices/bracelet/lua/c;->b:Ljava/lang/Boolean;
+    iput-object v1, v0, Lcn/com/smartdevices/bracelet/lua/d;->b:Ljava/lang/Boolean;
 
     return-object p2
 
@@ -850,14 +931,14 @@
 
     move-result-object v1
 
-    check-cast v1, Lcn/com/smartdevices/bracelet/lua/d;
+    check-cast v1, Lcn/com/smartdevices/bracelet/lua/e;
 
     move-object v2, v1
 
     goto/16 :goto_0
 
     :cond_4
-    invoke-virtual {v3}, Lde/greenrobot/daobracelet/LuaList;->getType()Ljava/lang/String;
+    invoke-virtual {v5}, Lde/greenrobot/daobracelet/LuaList;->getType()Ljava/lang/String;
 
     move-result-object v1
 
@@ -867,32 +948,9 @@
 
     move-result v1
 
-    if-eqz v1, :cond_5
+    if-nez v1, :cond_0
 
-    iget-object v1, v2, Lcn/com/smartdevices/bracelet/lua/d;->c:Landroid/widget/ImageView;
-
-    invoke-virtual {v1, v6}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    const v1, 0x7f0701a7
-
-    invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/LinearLayout;
-
-    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/RelativeLayout$LayoutParams;
-
-    iput v6, v1, Landroid/widget/RelativeLayout$LayoutParams;->leftMargin:I
-
-    goto/16 :goto_1
-
-    :cond_5
-    invoke-virtual {v3}, Lde/greenrobot/daobracelet/LuaList;->getType()Ljava/lang/String;
+    invoke-virtual {v5}, Lde/greenrobot/daobracelet/LuaList;->getType()Ljava/lang/String;
 
     move-result-object v1
 
@@ -904,7 +962,7 @@
 
     if-eqz v1, :cond_0
 
-    iget-object v1, v2, Lcn/com/smartdevices/bracelet/lua/d;->d:Landroid/widget/ImageView;
+    iget-object v1, v2, Lcn/com/smartdevices/bracelet/lua/e;->d:Landroid/widget/ImageView;
 
     const/4 v4, 0x4
 
@@ -912,26 +970,69 @@
 
     goto/16 :goto_1
 
-    :cond_6
-    iget-object v4, v2, Lcn/com/smartdevices/bracelet/lua/d;->b:Landroid/widget/TextView;
-
-    invoke-virtual {v4, v6}, Landroid/widget/TextView;->setVisibility(I)V
-
-    iget-object v4, v2, Lcn/com/smartdevices/bracelet/lua/d;->b:Landroid/widget/TextView;
-
-    invoke-virtual {v4, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    goto :goto_3
-
     :catch_0
-    move-exception v4
+    move-exception v1
+
+    move v1, v4
+
+    move v4, v1
 
     goto/16 :goto_2
 
     :catch_1
-    move-exception v4
+    move-exception v1
+
+    move v1, v4
+
+    move v4, v1
 
     goto/16 :goto_2
+
+    :cond_5
+    iget-object v1, v2, Lcn/com/smartdevices/bracelet/lua/e;->c:Landroid/widget/ImageView;
+
+    invoke-virtual {v1, v9}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    invoke-virtual {p2, v10}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/RelativeLayout$LayoutParams;
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    const v6, 0x7f090047
+
+    invoke-virtual {v3, v6}, Landroid/content/res/Resources;->getDimension(I)F
+
+    move-result v3
+
+    float-to-int v3, v3
+
+    iput v3, v1, Landroid/widget/RelativeLayout$LayoutParams;->leftMargin:I
+
+    goto/16 :goto_3
+
+    :cond_6
+    iget-object v3, v2, Lcn/com/smartdevices/bracelet/lua/e;->b:Landroid/widget/TextView;
+
+    invoke-virtual {v3, v8}, Landroid/widget/TextView;->setVisibility(I)V
+
+    iget-object v3, v2, Lcn/com/smartdevices/bracelet/lua/e;->b:Landroid/widget/TextView;
+
+    invoke-virtual {v3, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    goto :goto_4
 .end method
 
 .method public refreshList()V
@@ -1047,13 +1148,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/lua/c;
+    check-cast v0, Lcn/com/smartdevices/bracelet/lua/d;
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v3
 
-    iput-object v3, v0, Lcn/com/smartdevices/bracelet/lua/c;->b:Ljava/lang/Boolean;
+    iput-object v3, v0, Lcn/com/smartdevices/bracelet/lua/d;->b:Ljava/lang/Boolean;
 
     add-int/lit8 v0, v1, 0x1
 

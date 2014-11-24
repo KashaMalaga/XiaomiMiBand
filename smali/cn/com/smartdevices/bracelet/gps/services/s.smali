@@ -1,187 +1,531 @@
-.class final Lcn/com/smartdevices/bracelet/gps/services/s;
+.class Lcn/com/smartdevices/bracelet/gps/services/s;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Lcn/com/smartdevices/bracelet/gps/services/a/c;
 
+# static fields
+.field static final a:D = 6378245.0
 
-# instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;
-
-.field private b:I
+.field static final b:D = 0.006693421622965943
 
 
 # direct methods
-.method public constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;I)V
-    .locals 1
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/services/s;->a:Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;
+.method constructor <init>()V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/services/s;->b:I
-
-    iput p2, p0, Lcn/com/smartdevices/bracelet/gps/services/s;->b:I
-
     return-void
 .end method
 
+.method public static a(DD[D)V
+    .locals 14
 
-# virtual methods
-.method public a(Lcn/com/smartdevices/bracelet/gps/model/c;)V
-    .locals 4
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/s;->a:Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->d(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;)Lcn/com/smartdevices/bracelet/gps/services/q;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/gps/services/q;->b(Lcn/com/smartdevices/bracelet/gps/model/c;)Z
+    invoke-static/range {p0 .. p3}, Lcn/com/smartdevices/bracelet/gps/services/s;->a(DD)Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    const-string v0, "Run"
+    const-wide v0, 0x405a400000000000L
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    sub-double v0, p2, v0
 
-    const-string v2, "onLocationChanged accuracy = "
+    const-wide v2, 0x4041800000000000L
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    sub-double v2, p0, v2
 
-    iget v2, p1, Lcn/com/smartdevices/bracelet/gps/model/c;->j:F
+    invoke-static {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/gps/services/s;->b(DD)D
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    move-result-wide v0
 
-    move-result-object v1
+    const-wide v2, 0x405a400000000000L
 
-    const-string v2, ",latitude = "
+    sub-double v2, p2, v2
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-wide v4, 0x4041800000000000L
 
-    move-result-object v1
+    sub-double v4, p0, v4
 
-    iget-wide v2, p1, Lcn/com/smartdevices/bracelet/gps/model/c;->c:D
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ",longitude = "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-wide v2, p1, Lcn/com/smartdevices/bracelet/gps/model/c;->d:D
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ",time = "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/model/c;->b()J
+    invoke-static {v2, v3, v4, v5}, Lcn/com/smartdevices/bracelet/gps/services/s;->c(DD)D
 
     move-result-wide v2
 
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    const-wide v4, 0x400921fb54442d18L
 
-    move-result-object v1
+    const-wide v6, 0x4066800000000000L
 
-    const-string v2, ",provider = "
+    div-double v6, p0, v6
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    mul-double/2addr v4, v6
 
-    move-result-object v1
+    invoke-static {v4, v5}, Ljava/lang/Math;->sin(D)D
 
-    iget v2, p1, Lcn/com/smartdevices/bracelet/gps/model/c;->h:I
+    move-result-wide v6
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const-wide/high16 v8, 0x3ff0000000000000L
 
-    move-result-object v1
+    const-wide v10, 0x3f7b6a8faf80ef0bL
 
-    const-string v2, ",speed = "
+    mul-double/2addr v10, v6
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    mul-double/2addr v6, v10
 
-    move-result-object v1
+    sub-double v6, v8, v6
 
-    iget v2, p1, Lcn/com/smartdevices/bracelet/gps/model/c;->g:F
+    invoke-static {v6, v7}, Ljava/lang/Math;->sqrt(D)D
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    move-result-wide v8
 
-    move-result-object v1
+    const-wide v10, 0x4066800000000000L
 
-    const-string v2, ",source = "
+    mul-double/2addr v0, v10
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-wide v10, 0x400921fb54442d18L
 
-    move-result-object v1
+    const-wide v12, 0x41582b102de355c1L
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/gps/services/s;->b:I
+    mul-double/2addr v6, v8
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    div-double v6, v12, v6
 
-    move-result-object v1
+    mul-double/2addr v6, v10
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    div-double/2addr v0, v6
 
-    move-result-object v1
+    const-wide v6, 0x4066800000000000L
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    mul-double/2addr v2, v6
+
+    const-wide v6, 0x400921fb54442d18L
+
+    const-wide v10, 0x415854c140000000L
+
+    div-double v8, v10, v8
+
+    invoke-static {v4, v5}, Ljava/lang/Math;->cos(D)D
+
+    move-result-wide v4
+
+    mul-double/2addr v4, v8
+
+    mul-double/2addr v4, v6
+
+    div-double/2addr v2, v4
+
+    const/4 v4, 0x0
+
+    add-double/2addr v0, p0
+
+    aput-wide v0, p4, v4
+
+    const/4 v0, 0x1
+
+    add-double v1, p2, v2
+
+    aput-wide v1, p4, v0
+
+    :goto_0
+    return-void
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/s;->a:Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->d(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;)Lcn/com/smartdevices/bracelet/gps/services/q;
+    aput-wide p0, p4, v0
 
-    move-result-object v0
+    const/4 v0, 0x1
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/gps/services/q;->b(Lcn/com/smartdevices/bracelet/gps/model/c;)Z
+    aput-wide p2, p4, v0
 
-    move-result v0
+    goto :goto_0
+.end method
 
-    if-nez v0, :cond_1
+.method private static a(DD)Z
+    .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/s;->a:Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;
+    const-wide v0, 0x4052004189374bc7L
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->a(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;)Lcn/com/smartdevices/bracelet/gps/services/j;
+    cmpg-double v0, p2, v0
 
-    move-result-object v0
+    if-ltz v0, :cond_0
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/gps/services/j;->a(Lcn/com/smartdevices/bracelet/gps/model/c;)V
+    const-wide v0, 0x40613ab5dcc63f14L
+
+    cmpl-double v0, p2, v0
+
+    if-gtz v0, :cond_0
+
+    const-wide v0, 0x3fea89a027525461L
+
+    cmpg-double v0, p0, v0
+
+    if-ltz v0, :cond_0
+
+    const-wide v0, 0x404be9de69ad42c4L
+
+    cmpl-double v0, p0, v0
+
+    if-lez v0, :cond_1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
 
     :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/s;->a:Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;
+    const/4 v0, 0x0
 
-    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->a(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;Lcn/com/smartdevices/bracelet/gps/model/c;)Z
-
-    return-void
+    goto :goto_0
 .end method
 
-.method public a(Ljava/lang/String;)V
-    .locals 0
+.method private static b(DD)D
+    .locals 12
 
-    return-void
+    const-wide/high16 v0, -0x3fa7000000000000L
+
+    const-wide/high16 v2, 0x4000000000000000L
+
+    mul-double/2addr v2, p0
+
+    add-double/2addr v0, v2
+
+    const-wide/high16 v2, 0x4008000000000000L
+
+    mul-double/2addr v2, p2
+
+    add-double/2addr v0, v2
+
+    const-wide v2, 0x3fc999999999999aL
+
+    mul-double/2addr v2, p2
+
+    mul-double/2addr v2, p2
+
+    add-double/2addr v0, v2
+
+    const-wide v2, 0x3fb999999999999aL
+
+    mul-double/2addr v2, p0
+
+    mul-double/2addr v2, p2
+
+    add-double/2addr v0, v2
+
+    const-wide v2, 0x3fc999999999999aL
+
+    invoke-static {p0, p1}, Ljava/lang/Math;->abs(D)D
+
+    move-result-wide v4
+
+    invoke-static {v4, v5}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v4
+
+    mul-double/2addr v2, v4
+
+    add-double/2addr v0, v2
+
+    const-wide/high16 v2, 0x4000000000000000L
+
+    const-wide/high16 v4, 0x4034000000000000L
+
+    const-wide v6, 0x400921fb54442d18L
+
+    const-wide/high16 v8, 0x4018000000000000L
+
+    mul-double/2addr v8, p0
+
+    mul-double/2addr v6, v8
+
+    invoke-static {v6, v7}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v6
+
+    mul-double/2addr v4, v6
+
+    const-wide/high16 v6, 0x4034000000000000L
+
+    const-wide v8, 0x400921fb54442d18L
+
+    const-wide/high16 v10, 0x4000000000000000L
+
+    mul-double/2addr v10, p0
+
+    mul-double/2addr v8, v10
+
+    invoke-static {v8, v9}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v8
+
+    mul-double/2addr v6, v8
+
+    add-double/2addr v4, v6
+
+    mul-double/2addr v2, v4
+
+    const-wide/high16 v4, 0x4008000000000000L
+
+    div-double/2addr v2, v4
+
+    add-double/2addr v0, v2
+
+    const-wide/high16 v2, 0x4000000000000000L
+
+    const-wide/high16 v4, 0x4034000000000000L
+
+    const-wide v6, 0x400921fb54442d18L
+
+    mul-double/2addr v6, p2
+
+    invoke-static {v6, v7}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v6
+
+    mul-double/2addr v4, v6
+
+    const-wide/high16 v6, 0x4044000000000000L
+
+    const-wide v8, 0x400921fb54442d18L
+
+    const-wide/high16 v10, 0x4008000000000000L
+
+    div-double v10, p2, v10
+
+    mul-double/2addr v8, v10
+
+    invoke-static {v8, v9}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v8
+
+    mul-double/2addr v6, v8
+
+    add-double/2addr v4, v6
+
+    mul-double/2addr v2, v4
+
+    const-wide/high16 v4, 0x4008000000000000L
+
+    div-double/2addr v2, v4
+
+    add-double/2addr v0, v2
+
+    const-wide/high16 v2, 0x4000000000000000L
+
+    const-wide/high16 v4, 0x4064000000000000L
+
+    const-wide v6, 0x400921fb54442d18L
+
+    const-wide/high16 v8, 0x4028000000000000L
+
+    div-double v8, p2, v8
+
+    mul-double/2addr v6, v8
+
+    invoke-static {v6, v7}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v6
+
+    mul-double/2addr v4, v6
+
+    const-wide/high16 v6, 0x4074000000000000L
+
+    const-wide v8, 0x400921fb54442d18L
+
+    mul-double/2addr v8, p2
+
+    const-wide/high16 v10, 0x403e000000000000L
+
+    div-double/2addr v8, v10
+
+    invoke-static {v8, v9}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v8
+
+    mul-double/2addr v6, v8
+
+    add-double/2addr v4, v6
+
+    mul-double/2addr v2, v4
+
+    const-wide/high16 v4, 0x4008000000000000L
+
+    div-double/2addr v2, v4
+
+    add-double/2addr v0, v2
+
+    return-wide v0
 .end method
 
-.method public a(Ljava/lang/String;ILandroid/os/Bundle;)V
-    .locals 0
+.method private static c(DD)D
+    .locals 12
 
-    return-void
-.end method
+    const-wide v0, 0x4072c00000000000L
 
-.method public b(Ljava/lang/String;)V
-    .locals 0
+    add-double/2addr v0, p0
 
-    return-void
+    const-wide/high16 v2, 0x4000000000000000L
+
+    mul-double/2addr v2, p2
+
+    add-double/2addr v0, v2
+
+    const-wide v2, 0x3fb999999999999aL
+
+    mul-double/2addr v2, p0
+
+    mul-double/2addr v2, p0
+
+    add-double/2addr v0, v2
+
+    const-wide v2, 0x3fb999999999999aL
+
+    mul-double/2addr v2, p0
+
+    mul-double/2addr v2, p2
+
+    add-double/2addr v0, v2
+
+    const-wide v2, 0x3fb999999999999aL
+
+    invoke-static {p0, p1}, Ljava/lang/Math;->abs(D)D
+
+    move-result-wide v4
+
+    invoke-static {v4, v5}, Ljava/lang/Math;->sqrt(D)D
+
+    move-result-wide v4
+
+    mul-double/2addr v2, v4
+
+    add-double/2addr v0, v2
+
+    const-wide/high16 v2, 0x4000000000000000L
+
+    const-wide/high16 v4, 0x4034000000000000L
+
+    const-wide v6, 0x400921fb54442d18L
+
+    const-wide/high16 v8, 0x4018000000000000L
+
+    mul-double/2addr v8, p0
+
+    mul-double/2addr v6, v8
+
+    invoke-static {v6, v7}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v6
+
+    mul-double/2addr v4, v6
+
+    const-wide/high16 v6, 0x4034000000000000L
+
+    const-wide v8, 0x400921fb54442d18L
+
+    const-wide/high16 v10, 0x4000000000000000L
+
+    mul-double/2addr v10, p0
+
+    mul-double/2addr v8, v10
+
+    invoke-static {v8, v9}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v8
+
+    mul-double/2addr v6, v8
+
+    add-double/2addr v4, v6
+
+    mul-double/2addr v2, v4
+
+    const-wide/high16 v4, 0x4008000000000000L
+
+    div-double/2addr v2, v4
+
+    add-double/2addr v0, v2
+
+    const-wide/high16 v2, 0x4000000000000000L
+
+    const-wide/high16 v4, 0x4034000000000000L
+
+    const-wide v6, 0x400921fb54442d18L
+
+    mul-double/2addr v6, p0
+
+    invoke-static {v6, v7}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v6
+
+    mul-double/2addr v4, v6
+
+    const-wide/high16 v6, 0x4044000000000000L
+
+    const-wide v8, 0x400921fb54442d18L
+
+    const-wide/high16 v10, 0x4008000000000000L
+
+    div-double v10, p0, v10
+
+    mul-double/2addr v8, v10
+
+    invoke-static {v8, v9}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v8
+
+    mul-double/2addr v6, v8
+
+    add-double/2addr v4, v6
+
+    mul-double/2addr v2, v4
+
+    const-wide/high16 v4, 0x4008000000000000L
+
+    div-double/2addr v2, v4
+
+    add-double/2addr v0, v2
+
+    const-wide/high16 v2, 0x4000000000000000L
+
+    const-wide v4, 0x4062c00000000000L
+
+    const-wide v6, 0x400921fb54442d18L
+
+    const-wide/high16 v8, 0x4028000000000000L
+
+    div-double v8, p0, v8
+
+    mul-double/2addr v6, v8
+
+    invoke-static {v6, v7}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v6
+
+    mul-double/2addr v4, v6
+
+    const-wide v6, 0x4072c00000000000L
+
+    const-wide v8, 0x400921fb54442d18L
+
+    const-wide/high16 v10, 0x403e000000000000L
+
+    div-double v10, p0, v10
+
+    mul-double/2addr v8, v10
+
+    invoke-static {v8, v9}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v8
+
+    mul-double/2addr v6, v8
+
+    add-double/2addr v4, v6
+
+    mul-double/2addr v2, v4
+
+    const-wide/high16 v4, 0x4008000000000000L
+
+    div-double/2addr v2, v4
+
+    add-double/2addr v0, v2
+
+    return-wide v0
 .end method

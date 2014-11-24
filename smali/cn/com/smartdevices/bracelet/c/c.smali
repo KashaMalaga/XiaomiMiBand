@@ -131,7 +131,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/c/c;->a:Lcn/com/smartdevices/bracelet/c/a;
@@ -162,7 +162,7 @@
 
     const-string v1, "QQ_Request_UserInfo_Error"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

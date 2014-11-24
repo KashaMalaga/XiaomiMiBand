@@ -96,7 +96,7 @@
 .method private a(Landroid/view/View;)V
     .locals 14
 
-    const v0, 0x7f070116
+    const v0, 0x7f070122
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -106,7 +106,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/V;->b:Landroid/widget/TextView;
 
-    const v0, 0x7f070117
+    const v0, 0x7f070123
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -116,7 +116,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/V;->c:Landroid/widget/TextView;
 
-    const v0, 0x7f070118
+    const v0, 0x7f070124
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -126,7 +126,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/V;->f:Lkankan/wheel/widget/WheelView;
 
-    const v0, 0x7f070119
+    const v0, 0x7f070125
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -222,7 +222,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     :goto_1
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bO;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bW;
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/V;->getActivity()Landroid/app/Activity;
 
@@ -268,11 +268,11 @@
 
     const/4 v13, 0x1
 
-    invoke-direct/range {v0 .. v13}, Lcn/com/smartdevices/bracelet/ui/bO;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
+    invoke-direct/range {v0 .. v13}, Lcn/com/smartdevices/bracelet/ui/bW;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
 
     const/16 v1, 0x9
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/bO;->a(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/bW;->a(I)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/V;->f:Lkankan/wheel/widget/WheelView;
 
@@ -282,7 +282,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0200c9
+    const v2, 0x7f0200cb
 
     invoke-virtual {v1, v2}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
@@ -316,7 +316,7 @@
 
     invoke-virtual {v0, p0}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/d;)V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bO;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bW;
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/V;->getActivity()Landroid/app/Activity;
 
@@ -362,7 +362,7 @@
 
     const/4 v13, 0x1
 
-    invoke-direct/range {v0 .. v13}, Lcn/com/smartdevices/bracelet/ui/bO;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
+    invoke-direct/range {v0 .. v13}, Lcn/com/smartdevices/bracelet/ui/bW;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/V;->g:Lkankan/wheel/widget/WheelView;
 
@@ -372,7 +372,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0200c9
+    const v2, 0x7f0200cb
 
     invoke-virtual {v1, v2}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
@@ -411,7 +411,7 @@
     :sswitch_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/V;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f0c011a
+    const v1, 0x7f0c0118
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -420,7 +420,7 @@
     :sswitch_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/V;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f0c011b
+    const v1, 0x7f0c0119
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -599,7 +599,7 @@
 .method protected a()I
     .locals 1
 
-    const v0, 0x7f030039
+    const v0, 0x7f03003b
 
     return v0
 .end method
@@ -680,7 +680,7 @@
 
     const-string v2, "DynamicDetailModifySleepTime"
 
-    invoke-static {v0, v2, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/util/HashMap;)V
+    invoke-static {v0, v2, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/util/HashMap;)V
 
     return-void
 
@@ -1028,7 +1028,7 @@
 
     const-string v2, "DynamicDetailModifySleepTime"
 
-    invoke-static {v0, v2, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/util/HashMap;)V
+    invoke-static {v0, v2, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/util/HashMap;)V
 
     return-void
 
@@ -1154,7 +1154,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/V;->h:Lcn/com/smartdevices/bracelet/model/SportDay;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/c/r;->a(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/chart/c/t;
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/c/r;->a(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/UserSleepModify;
 
     move-result-object v0
 
@@ -1169,7 +1169,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/V;->h:Lcn/com/smartdevices/bracelet/model/SportDay;
 
-    invoke-virtual {v1, v2, v0}, Lcn/com/smartdevices/bracelet/chart/c/r;->a(Lcn/com/smartdevices/bracelet/model/SportDay;Lcn/com/smartdevices/bracelet/chart/c/t;)V
+    invoke-virtual {v1, v2, v0}, Lcn/com/smartdevices/bracelet/chart/c/r;->a(Lcn/com/smartdevices/bracelet/model/SportDay;Lcn/com/smartdevices/bracelet/model/UserSleepModify;)V
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/o;->a()Lcn/com/smartdevices/bracelet/o;
 
@@ -1234,7 +1234,7 @@
 
     const-string v2, "DynamicDetailModifySleepTime"
 
-    invoke-static {v0, v2, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/util/HashMap;)V
+    invoke-static {v0, v2, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/util/HashMap;)V
 
     :cond_3
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/V;->dismiss()V
@@ -1242,12 +1242,12 @@
     return-void
 
     :sswitch_0
-    iput v2, v0, Lcn/com/smartdevices/bracelet/chart/c/t;->a:I
+    iput v2, v0, Lcn/com/smartdevices/bracelet/model/UserSleepModify;->sleepStart:I
 
     goto :goto_0
 
     :sswitch_1
-    iput v2, v0, Lcn/com/smartdevices/bracelet/chart/c/t;->b:I
+    iput v2, v0, Lcn/com/smartdevices/bracelet/model/UserSleepModify;->sleepEnd:I
 
     goto :goto_0
 
@@ -1302,7 +1302,7 @@
 
     :cond_0
     :goto_0
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->b(Ljava/lang/String;)V
 
     return-void
 
@@ -1335,7 +1335,7 @@
 
     :cond_0
     :goto_0
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->a(Ljava/lang/String;)V
 
     return-void
 

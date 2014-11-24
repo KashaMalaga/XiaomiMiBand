@@ -1,19 +1,22 @@
-.class public interface abstract Lcom/amap/api/mapcore/aF;
+.class public interface abstract Lcom/amap/api/mapcore/af;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Lcom/amap/api/mapcore/g;
 
 
 # virtual methods
-.method public abstract a()F
+.method public abstract a(I)F
 .end method
 
-.method public abstract a(F)V
+.method public abstract a(Lcom/amap/api/maps/model/LatLng;)Landroid/graphics/Point;
 .end method
 
-.method public abstract a(I)V
+.method public abstract a(Landroid/graphics/Point;)Lcom/amap/api/maps/model/LatLng;
 .end method
 
-.method public abstract b()I
+.method public abstract a(Lcom/amap/api/maps/model/LatLngBounds;II)Lcom/amap/api/maps/model/TileProjection;
+.end method
+
+.method public abstract a()Lcom/amap/api/maps/model/VisibleRegion;
+.end method
+
+.method public abstract b(Lcom/amap/api/maps/model/LatLng;)Landroid/graphics/PointF;
 .end method

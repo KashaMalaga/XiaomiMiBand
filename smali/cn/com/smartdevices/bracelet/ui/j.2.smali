@@ -32,7 +32,7 @@
 .method protected a()I
     .locals 1
 
-    const v0, 0x7f030026
+    const v0, 0x7f030028
 
     return v0
 .end method
@@ -233,7 +233,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/j;->h:Ljava/lang/String;
 
-    const v0, 0x7f0700d3
+    const v0, 0x7f0700df
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

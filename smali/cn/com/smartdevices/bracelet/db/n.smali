@@ -117,7 +117,7 @@
 
     aput-object p1, v4, v1
 
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/q;->a()I
+    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/q;->b()I
 
     move-result v0
 
@@ -127,7 +127,7 @@
 
     aput-object v0, v4, v5
 
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/q;->b()I
+    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/q;->a()I
 
     move-result v0
 
@@ -188,7 +188,7 @@
 
     new-array v4, v6, [Ljava/lang/String;
 
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/q;->a()I
+    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/q;->b()I
 
     move-result v0
 
@@ -198,7 +198,7 @@
 
     aput-object v0, v4, v1
 
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/q;->b()I
+    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/q;->a()I
 
     move-result v0
 
@@ -319,7 +319,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/q;->a()I
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/q;->b()I
 
     move-result v1
 
@@ -337,7 +337,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/q;->b()I
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/q;->a()I
 
     move-result v1
 
@@ -712,7 +712,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p3}, Lcn/com/smartdevices/bracelet/q;->a()I
+    invoke-virtual {p3}, Lcn/com/smartdevices/bracelet/q;->b()I
 
     move-result v3
 
@@ -738,7 +738,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p3}, Lcn/com/smartdevices/bracelet/q;->b()I
+    invoke-virtual {p3}, Lcn/com/smartdevices/bracelet/q;->a()I
 
     move-result v3
 
@@ -770,7 +770,7 @@
 
     const-string v1, "type"
 
-    invoke-virtual {p4}, Lcn/com/smartdevices/bracelet/q;->a()I
+    invoke-virtual {p4}, Lcn/com/smartdevices/bracelet/q;->b()I
 
     move-result v2
 
@@ -782,7 +782,7 @@
 
     const-string v1, "source"
 
-    invoke-virtual {p4}, Lcn/com/smartdevices/bracelet/q;->b()I
+    invoke-virtual {p4}, Lcn/com/smartdevices/bracelet/q;->a()I
 
     move-result v2
 
@@ -836,7 +836,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p4}, Lcn/com/smartdevices/bracelet/q;->a()I
+    invoke-virtual {p4}, Lcn/com/smartdevices/bracelet/q;->b()I
 
     move-result v3
 
@@ -856,7 +856,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p4}, Lcn/com/smartdevices/bracelet/q;->b()I
+    invoke-virtual {p4}, Lcn/com/smartdevices/bracelet/q;->a()I
 
     move-result v3
 
@@ -1016,7 +1016,7 @@
 
     const-string v0, "type"
 
-    invoke-virtual {p5}, Lcn/com/smartdevices/bracelet/q;->a()I
+    invoke-virtual {p5}, Lcn/com/smartdevices/bracelet/q;->b()I
 
     move-result v1
 
@@ -1028,7 +1028,7 @@
 
     const-string v0, "source"
 
-    invoke-virtual {p5}, Lcn/com/smartdevices/bracelet/q;->b()I
+    invoke-virtual {p5}, Lcn/com/smartdevices/bracelet/q;->a()I
 
     move-result v1
 
@@ -1086,7 +1086,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p5}, Lcn/com/smartdevices/bracelet/q;->a()I
+    invoke-virtual {p5}, Lcn/com/smartdevices/bracelet/q;->b()I
 
     move-result v5
 
@@ -1106,7 +1106,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p5}, Lcn/com/smartdevices/bracelet/q;->b()I
+    invoke-virtual {p5}, Lcn/com/smartdevices/bracelet/q;->a()I
 
     move-result v5
 
@@ -1531,7 +1531,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/q;->a()I
+    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/q;->b()I
 
     move-result v1
 
@@ -1551,7 +1551,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/q;->b()I
+    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/q;->a()I
 
     move-result v6
 
@@ -1642,7 +1642,7 @@
 
     aput-object p1, v4, v6
 
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/q;->a()I
+    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/q;->b()I
 
     move-result v0
 
@@ -1654,7 +1654,7 @@
 
     const/4 v0, 0x2
 
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/q;->b()I
+    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/q;->a()I
 
     move-result v1
 
@@ -1832,7 +1832,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/q;->a()I
+    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/q;->b()I
 
     move-result v1
 
@@ -1852,7 +1852,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/q;->b()I
+    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/q;->a()I
 
     move-result v6
 

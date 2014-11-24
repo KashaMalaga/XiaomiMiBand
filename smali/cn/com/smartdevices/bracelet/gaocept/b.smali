@@ -644,6 +644,24 @@
     move-result-object v0
 
     :cond_10
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v0, "\tstdevRatio"
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->b:Lcn/com/smartdevices/bracelet/gaocept/c;
 
     new-instance v11, Ljava/lang/StringBuilder;

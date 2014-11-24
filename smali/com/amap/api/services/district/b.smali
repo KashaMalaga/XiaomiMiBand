@@ -1,98 +1,73 @@
 .class Lcom/amap/api/services/district/b;
-.super Ljava/lang/Thread;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/os/Parcelable$Creator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator",
+        "<",
+        "Lcom/amap/api/services/district/DistrictResult;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/amap/api/services/district/a;
+.field final synthetic a:Lcom/amap/api/services/district/DistrictResult;
 
 
 # direct methods
-.method constructor <init>(Lcom/amap/api/services/district/a;)V
+.method constructor <init>(Lcom/amap/api/services/district/DistrictResult;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/amap/api/services/district/b;->a:Lcom/amap/api/services/district/a;
+    iput-object p1, p0, Lcom/amap/api/services/district/b;->a:Lcom/amap/api/services/district/DistrictResult;
 
-    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 3
+.method public a(Landroid/os/Parcel;)Lcom/amap/api/services/district/DistrictResult;
+    .locals 1
 
-    new-instance v2, Landroid/os/Message;
+    new-instance v0, Lcom/amap/api/services/district/DistrictResult;
 
-    invoke-direct {v2}, Landroid/os/Message;-><init>()V
+    invoke-direct {v0, p1}, Lcom/amap/api/services/district/DistrictResult;-><init>(Landroid/os/Parcel;)V
 
-    new-instance v1, Lcom/amap/api/services/district/DistrictResult;
+    return-object v0
+.end method
 
-    invoke-direct {v1}, Lcom/amap/api/services/district/DistrictResult;-><init>()V
+.method public a(I)[Lcom/amap/api/services/district/DistrictResult;
+    .locals 1
 
-    iget-object v0, p0, Lcom/amap/api/services/district/b;->a:Lcom/amap/api/services/district/a;
+    new-array v0, p1, [Lcom/amap/api/services/district/DistrictResult;
 
-    invoke-static {v0}, Lcom/amap/api/services/district/a;->a(Lcom/amap/api/services/district/a;)Lcom/amap/api/services/district/DistrictSearchQuery;
+    return-object v0
+.end method
+
+.method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0, p1}, Lcom/amap/api/services/district/b;->a(Landroid/os/Parcel;)Lcom/amap/api/services/district/DistrictResult;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/amap/api/services/district/DistrictResult;->a(Lcom/amap/api/services/district/DistrictSearchQuery;)V
+    return-object v0
+.end method
 
-    :try_start_0
-    iget-object v0, p0, Lcom/amap/api/services/district/b;->a:Lcom/amap/api/services/district/a;
+.method public synthetic newArray(I)[Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {v0}, Lcom/amap/api/services/district/a;->b(Lcom/amap/api/services/district/a;)Lcom/amap/api/services/district/DistrictResult;
+    invoke-virtual {p0, p1}, Lcom/amap/api/services/district/b;->a(I)[Lcom/amap/api/services/district/DistrictResult;
 
-    move-result-object v1
+    move-result-object v0
 
-    new-instance v0, Lcom/amap/api/services/core/a;
-
-    invoke-direct {v0}, Lcom/amap/api/services/core/a;-><init>()V
-
-    invoke-virtual {v1, v0}, Lcom/amap/api/services/district/DistrictResult;->a(Lcom/amap/api/services/core/a;)V
-    :try_end_0
-    .catch Lcom/amap/api/services/core/a; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    iput-object v1, v2, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    iget-object v0, p0, Lcom/amap/api/services/district/b;->a:Lcom/amap/api/services/district/a;
-
-    iget-object v0, v0, Lcom/amap/api/services/district/a;->a:Landroid/os/Handler;
-
-    invoke-virtual {v0, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    :goto_0
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    :try_start_1
-    invoke-virtual {v1, v0}, Lcom/amap/api/services/district/DistrictResult;->a(Lcom/amap/api/services/core/a;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    iput-object v1, v2, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    iget-object v0, p0, Lcom/amap/api/services/district/b;->a:Lcom/amap/api/services/district/a;
-
-    iget-object v0, v0, Lcom/amap/api/services/district/a;->a:Landroid/os/Handler;
-
-    invoke-virtual {v0, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    iput-object v1, v2, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    iget-object v1, p0, Lcom/amap/api/services/district/b;->a:Lcom/amap/api/services/district/a;
-
-    iget-object v1, v1, Lcom/amap/api/services/district/a;->a:Landroid/os/Handler;
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    throw v0
+    return-object v0
 .end method

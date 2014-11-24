@@ -281,7 +281,7 @@
 
     move-result v4
 
-    invoke-static {v1, v2, v3, v4}, Lcn/com/smartdevices/bracelet/chart/c/u;->a(IIFI)F
+    invoke-static {v1, v2, v3, v4}, Lcn/com/smartdevices/bracelet/chart/c/t;->a(IIFI)F
 
     move-result v1
 

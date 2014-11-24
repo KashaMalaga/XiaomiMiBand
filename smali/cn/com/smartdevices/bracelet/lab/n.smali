@@ -182,7 +182,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0c0249
+    const v2, 0x7f0c024c
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -210,7 +210,7 @@
 
     invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/lab/n;->a(Ljava/util/List;Ljava/lang/String;)V
 
-    const v2, 0x7f0c024a
+    const v2, 0x7f0c024d
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -410,7 +410,7 @@
 
     if-eqz v1, :cond_6
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->k(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/z;->k(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -500,7 +500,7 @@
     :catch_0
     move-exception v1
 
-    const v1, 0x7f0c0205
+    const v1, 0x7f0c0208
 
     invoke-static {p0, v1, v0}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 

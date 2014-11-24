@@ -6,38 +6,38 @@
 
 
 # static fields
-.field public static final a:Lcom/amap/api/maps/model/A;
+.field public static final CREATOR:Lcom/amap/api/maps/model/TileOverlayOptionsCreator;
 
 
 # instance fields
-.field private final b:I
+.field private final a:I
 
-.field private c:Lcom/amap/api/maps/model/C;
+.field private b:Lcom/amap/api/maps/model/TileProvider;
 
-.field private d:Z
+.field private c:Z
 
-.field private e:F
+.field private d:F
+
+.field private e:I
 
 .field private f:I
 
-.field private g:I
+.field private g:Ljava/lang/String;
 
-.field private h:Ljava/lang/String;
+.field private h:Z
 
 .field private i:Z
-
-.field private j:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/maps/model/A;
+    new-instance v0, Lcom/amap/api/maps/model/TileOverlayOptionsCreator;
 
-    invoke-direct {v0}, Lcom/amap/api/maps/model/A;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/maps/model/TileOverlayOptionsCreator;-><init>()V
 
-    sput-object v0, Lcom/amap/api/maps/model/TileOverlayOptions;->a:Lcom/amap/api/maps/model/A;
+    sput-object v0, Lcom/amap/api/maps/model/TileOverlayOptions;->CREATOR:Lcom/amap/api/maps/model/TileOverlayOptionsCreator;
 
     return-void
 .end method
@@ -49,25 +49,25 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean v1, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->d:Z
+    iput-boolean v1, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->c:Z
 
     const/16 v0, 0x1400
 
-    iput v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->f:I
+    iput v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->e:I
 
     const/16 v0, 0x5000
 
-    iput v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->g:I
+    iput v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->f:I
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->h:Ljava/lang/String;
+    iput-object v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->g:Ljava/lang/String;
+
+    iput-boolean v1, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->h:Z
 
     iput-boolean v1, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->i:Z
 
-    iput-boolean v1, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->j:Z
-
-    iput v1, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->b:I
+    iput v1, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->a:I
 
     return-void
 .end method
@@ -79,133 +79,35 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean v1, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->d:Z
+    iput-boolean v1, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->c:Z
 
     const/16 v0, 0x1400
 
-    iput v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->f:I
+    iput v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->e:I
 
     const/16 v0, 0x5000
 
-    iput v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->g:I
+    iput v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->f:I
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->h:Ljava/lang/String;
+    iput-object v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->g:Ljava/lang/String;
+
+    iput-boolean v1, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->h:Z
 
     iput-boolean v1, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->i:Z
 
-    iput-boolean v1, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->j:Z
+    iput p1, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->a:I
 
-    iput p1, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->b:I
+    iput-boolean p3, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->c:Z
 
-    iput-boolean p3, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->d:Z
-
-    iput p4, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->e:F
+    iput p4, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->d:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Lcom/amap/api/maps/model/C;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->c:Lcom/amap/api/maps/model/C;
-
-    return-object v0
-.end method
-
-.method public a(F)Lcom/amap/api/maps/model/TileOverlayOptions;
-    .locals 0
-
-    iput p1, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->e:F
-
-    return-object p0
-.end method
-
-.method public a(I)Lcom/amap/api/maps/model/TileOverlayOptions;
-    .locals 0
-
-    iput p1, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->f:I
-
-    return-object p0
-.end method
-
-.method public a(Lcom/amap/api/maps/model/C;)Lcom/amap/api/maps/model/TileOverlayOptions;
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->c:Lcom/amap/api/maps/model/C;
-
-    return-object p0
-.end method
-
-.method public a(Ljava/lang/String;)Lcom/amap/api/maps/model/TileOverlayOptions;
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->h:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public a(Z)Lcom/amap/api/maps/model/TileOverlayOptions;
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->d:Z
-
-    return-object p0
-.end method
-
-.method public b()F
-    .locals 1
-
-    iget v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->e:F
-
-    return v0
-.end method
-
-.method public b(I)Lcom/amap/api/maps/model/TileOverlayOptions;
-    .locals 1
-
-    mul-int/lit16 v0, p1, 0x400
-
-    iput v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->g:I
-
-    return-object p0
-.end method
-
-.method public b(Z)Lcom/amap/api/maps/model/TileOverlayOptions;
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->i:Z
-
-    return-object p0
-.end method
-
-.method public c(Z)Lcom/amap/api/maps/model/TileOverlayOptions;
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->j:Z
-
-    return-object p0
-.end method
-
-.method public c()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->d:Z
-
-    return v0
-.end method
-
-.method public d()I
-    .locals 1
-
-    iget v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->f:I
-
-    return v0
-.end method
-
 .method public describeContents()I
     .locals 1
 
@@ -214,23 +116,41 @@
     return v0
 .end method
 
-.method public e()I
-    .locals 1
+.method public diskCacheDir(Ljava/lang/String;)Lcom/amap/api/maps/model/TileOverlayOptions;
+    .locals 0
 
-    iget v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->g:I
+    iput-object p1, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->g:Ljava/lang/String;
 
-    return v0
+    return-object p0
 .end method
 
-.method public f()Ljava/lang/String;
+.method public diskCacheEnabled(Z)Lcom/amap/api/maps/model/TileOverlayOptions;
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->i:Z
+
+    return-object p0
+.end method
+
+.method public diskCacheSize(I)Lcom/amap/api/maps/model/TileOverlayOptions;
     .locals 1
 
-    iget-object v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->h:Ljava/lang/String;
+    mul-int/lit16 v0, p1, 0x400
+
+    iput v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->f:I
+
+    return-object p0
+.end method
+
+.method public getDiskCacheDir()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->g:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public g()Z
+.method public getDiskCacheEnabled()Z
     .locals 1
 
     iget-boolean v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->i:Z
@@ -238,12 +158,84 @@
     return v0
 .end method
 
-.method public h()Z
+.method public getDiskCacheSize()I
     .locals 1
 
-    iget-boolean v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->j:Z
+    iget v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->f:I
 
     return v0
+.end method
+
+.method public getMemCacheSize()I
+    .locals 1
+
+    iget v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->e:I
+
+    return v0
+.end method
+
+.method public getMemoryCacheEnabled()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->h:Z
+
+    return v0
+.end method
+
+.method public getTileProvider()Lcom/amap/api/maps/model/TileProvider;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->b:Lcom/amap/api/maps/model/TileProvider;
+
+    return-object v0
+.end method
+
+.method public getZIndex()F
+    .locals 1
+
+    iget v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->d:F
+
+    return v0
+.end method
+
+.method public isVisible()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->c:Z
+
+    return v0
+.end method
+
+.method public memCacheSize(I)Lcom/amap/api/maps/model/TileOverlayOptions;
+    .locals 0
+
+    iput p1, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->e:I
+
+    return-object p0
+.end method
+
+.method public memoryCacheEnabled(Z)Lcom/amap/api/maps/model/TileOverlayOptions;
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->h:Z
+
+    return-object p0
+.end method
+
+.method public tileProvider(Lcom/amap/api/maps/model/TileProvider;)Lcom/amap/api/maps/model/TileOverlayOptions;
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->b:Lcom/amap/api/maps/model/TileProvider;
+
+    return-object p0
+.end method
+
+.method public visible(Z)Lcom/amap/api/maps/model/TileOverlayOptions;
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->c:Z
+
+    return-object p0
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
@@ -253,15 +245,15 @@
 
     const/4 v2, 0x0
 
-    iget v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->b:I
+    iget v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->a:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget-object v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->c:Lcom/amap/api/maps/model/C;
+    iget-object v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->b:Lcom/amap/api/maps/model/TileProvider;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
 
-    iget-boolean v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->d:Z
+    iget-boolean v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->c:Z
 
     if-eqz v0, :cond_0
 
@@ -272,23 +264,23 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    iget v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->e:F
+    iget v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->d:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
+
+    iget v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->e:I
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     iget v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->f:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->g:I
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-object v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->h:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->g:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    iget-boolean v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->i:Z
+    iget-boolean v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->h:Z
 
     if-eqz v0, :cond_1
 
@@ -299,7 +291,7 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    iget-boolean v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->j:Z
+    iget-boolean v0, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->i:Z
 
     if-eqz v0, :cond_2
 
@@ -324,4 +316,12 @@
     move v1, v2
 
     goto :goto_2
+.end method
+
+.method public zIndex(F)Lcom/amap/api/maps/model/TileOverlayOptions;
+    .locals 0
+
+    iput p1, p0, Lcom/amap/api/maps/model/TileOverlayOptions;->d:F
+
+    return-object p0
 .end method

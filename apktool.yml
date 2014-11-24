@@ -1,5 +1,5 @@
 version: 2.0.0-Beta9
-apkFileName: ????_1.1.712_264.apk
+apkFileName: ????_1.1.762_274.apk
 isFrameworkApk: false
 usesFramework:
   ids:
@@ -10,8 +10,8 @@ sdkInfo:
 packageInfo:
   forced-package-id: '127'
 versionInfo:
-  versionCode: '264'
-  versionName: 1.1.712
+  versionCode: '274'
+  versionName: 1.1.762
 compressionType: false
 unknownFiles:
   version: '0'

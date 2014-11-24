@@ -24,7 +24,7 @@
 
     const-string v0, "LuaManager"
 
-    const-string v1, "getLuaZipFile onFailure========================================="
+    const-string v1, "getLuaZipFile onFailure======================================================="
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -34,38 +34,38 @@
 .method public onSuccess(I[Lorg/apache/http/Header;[B)V
     .locals 5
 
-    invoke-static {p3}, Lcn/com/smartdevices/bracelet/y;->a([B)Ljava/lang/String;
+    invoke-static {p3}, Lcn/com/smartdevices/bracelet/z;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
     :try_start_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->g()Lcom/b/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->g()Lcom/b/a/k;
 
     move-result-object v1
 
-    const-class v2, Lcn/com/smartdevices/bracelet/lua/j;
+    const-class v2, Lcn/com/smartdevices/bracelet/lua/k;
 
     invoke-virtual {v1, v0, v2}, Lcom/b/a/k;->a(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/lua/j;
+    check-cast v0, Lcn/com/smartdevices/bracelet/lua/k;
 
-    iget v1, v0, Lcn/com/smartdevices/bracelet/lua/j;->a:I
+    iget v1, v0, Lcn/com/smartdevices/bracelet/lua/k;->a:I
 
     const/4 v2, 0x1
 
-    if-eq v1, v2, :cond_0
+    if-eq v1, v2, :cond_1
 
     const-string v1, "LuaManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string v3, "get latest luaZipFile error (message:"
+    const-string v3, "get latest luaZipFileVersion error (message:"
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/lua/j;->b:Ljava/lang/String;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/lua/k;->b:Ljava/lang/String;
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -83,133 +83,75 @@
 
     invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    :cond_0
     :goto_0
     return-void
 
-    :cond_0
-    iget-object v1, v0, Lcn/com/smartdevices/bracelet/lua/j;->c:Lcn/com/smartdevices/bracelet/lua/k;
+    :cond_1
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/lua/k;->c:Lcn/com/smartdevices/bracelet/lua/l;
 
-    iget-object v1, v1, Lcn/com/smartdevices/bracelet/lua/k;->b:Ljava/lang/String;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/lua/l;->c:Ljava/lang/String;
 
-    const/4 v2, 0x2
-
-    invoke-static {v1, v2}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->v()Ljava/lang/String;
 
     move-result-object v1
-
-    new-instance v2, Lde/greenrobot/daobracelet/LuaZipFile;
-
-    invoke-direct {v2}, Lde/greenrobot/daobracelet/LuaZipFile;-><init>()V
-
-    iget-object v3, v0, Lcn/com/smartdevices/bracelet/lua/j;->c:Lcn/com/smartdevices/bracelet/lua/k;
-
-    iget-object v3, v3, Lcn/com/smartdevices/bracelet/lua/k;->c:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Lde/greenrobot/daobracelet/LuaZipFile;->setVersion(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v1}, Lde/greenrobot/daobracelet/LuaZipFile;->setZipFile([B)V
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/l;->a()Lcn/com/smartdevices/bracelet/l;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/l;->c()Lde/greenrobot/daobracelet/LuaZipFileDao;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v2}, Lde/greenrobot/daobracelet/LuaZipFileDao;->insertOrReplace(Ljava/lang/Object;)J
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/i;->a:Lcn/com/smartdevices/bracelet/lua/LuaManager;
-
-    # invokes: Lcn/com/smartdevices/bracelet/lua/LuaManager;->getLatestDBLuaFile()V
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->access$2(Lcn/com/smartdevices/bracelet/lua/LuaManager;)V
-
-    iget-object v2, v0, Lcn/com/smartdevices/bracelet/lua/j;->c:Lcn/com/smartdevices/bracelet/lua/k;
-
-    iget-object v2, v2, Lcn/com/smartdevices/bracelet/lua/k;->c:Ljava/lang/String;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/u;->e(Ljava/lang/String;)V
 
     const-string v2, "LuaManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    const-string v4, "save DB luaZipFile onSuccess====(version:"
+    const-string v4, "getLuaZipFileVersion onSuccess====(server version:"
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/lua/j;->c:Lcn/com/smartdevices/bracelet/lua/k;
-
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/lua/k;->c:Ljava/lang/String;
-
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    move-result-object v3
 
-    const-string v3, ")"
+    const-string v4, ", cur version:"
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    move-result-object v3
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    move-result-object v3
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    const-string v4, ")"
 
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+
+    move-result v0
+
+    if-gtz v0, :cond_2
+
+    # getter for: Lcn/com/smartdevices/bracelet/lua/LuaManager;->TEST:Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->access$0()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    :cond_2
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/i;->a:Lcn/com/smartdevices/bracelet/lua/LuaManager;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->resetLuaState()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/i;->a:Lcn/com/smartdevices/bracelet/lua/LuaManager;
-
-    # getter for: Lcn/com/smartdevices/bracelet/lua/LuaManager;->context:Landroid/content/Context;
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->access$3(Lcn/com/smartdevices/bracelet/lua/LuaManager;)Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->getInstance(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/lua/LuaEvent;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->setCurLocale()V
-
-    invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
-
-    move-result-object v0
-
-    new-instance v2, Lcn/com/smartdevices/bracelet/eventbus/EventLuaUpdated;
-
-    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/eventbus/EventLuaUpdated;-><init>()V
-
-    invoke-virtual {v0, v2}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
-
-    const-string v0, "LuaManager"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "zipfile count:"
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Lde/greenrobot/daobracelet/LuaZipFileDao;->count()J
-
-    move-result-wide v3
-
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    # invokes: Lcn/com/smartdevices/bracelet/lua/LuaManager;->getLatestLuaZipFile()V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->access$1(Lcn/com/smartdevices/bracelet/lua/LuaManager;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto/16 :goto_0
+    goto :goto_0
 
     :catch_0
     move-exception v0
@@ -236,5 +178,5 @@
 
     invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto/16 :goto_0
+    goto :goto_0
 .end method

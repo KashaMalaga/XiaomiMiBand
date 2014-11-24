@@ -73,9 +73,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/services/poisearch/k;
+    new-instance v0, Lcom/amap/api/services/poisearch/b;
 
-    invoke-direct {v0}, Lcom/amap/api/services/poisearch/k;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/services/poisearch/b;-><init>()V
 
     sput-object v0, Lcom/amap/api/services/poisearch/Dining;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -228,117 +228,12 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->b:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public a(Ljava/util/List;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcom/amap/api/services/poisearch/Photo;",
-            ">;)V"
-        }
-    .end annotation
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->t:Ljava/util/List;
-
-    return-void
-.end method
-
-.method public a(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/amap/api/services/poisearch/Dining;->a:Z
-
-    return-void
-.end method
-
-.method public a()Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/amap/api/services/poisearch/Dining;->a:Z
-
-    return v0
-.end method
-
-.method public b()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->b:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public b(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->c:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public c()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->c:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public c(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->d:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public d()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->d:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public d(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->e:Ljava/lang/String;
-
-    return-void
-.end method
-
 .method public describeContents()I
     .locals 1
 
     const/4 v0, 0x0
 
     return v0
-.end method
-
-.method public e()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->e:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public e(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->f:Ljava/lang/String;
-
-    return-void
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -922,7 +817,31 @@
     goto/16 :goto_0
 .end method
 
-.method public f()Ljava/lang/String;
+.method public getAddition()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->s:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getAtmosphere()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->m:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getCost()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->k:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getCpRating()Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->f:Ljava/lang/String;
@@ -930,15 +849,15 @@
     return-object v0
 .end method
 
-.method public f(Ljava/lang/String;)V
-    .locals 0
+.method public getCuisines()Ljava/lang/String;
+    .locals 1
 
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->g:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->b:Ljava/lang/String;
 
-    return-void
+    return-object v0
 .end method
 
-.method public g()Ljava/lang/String;
+.method public getDeepsrc()Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->g:Ljava/lang/String;
@@ -946,28 +865,117 @@
     return-object v0
 .end method
 
-.method public g(Ljava/lang/String;)V
-    .locals 0
+.method public getEnvironmentRating()Ljava/lang/String;
+    .locals 1
 
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->h:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->i:Ljava/lang/String;
 
-    return-void
+    return-object v0
 .end method
 
-.method public h()Ljava/lang/String;
+.method public getIntro()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->d:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getOpentime()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->r:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getOpentimeGDF()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->q:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getOrderinAppUrl()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->p:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getOrderingWapUrl()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->n:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getOrderingWebUrl()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->o:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getPhotos()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcom/amap/api/services/poisearch/Photo;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->t:Ljava/util/List;
+
+    return-object v0
+.end method
+
+.method public getRating()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->e:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getRecommend()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->l:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getServiceRating()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->j:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getTag()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->c:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getTasteRating()Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->h:Ljava/lang/String;
 
     return-object v0
-.end method
-
-.method public h(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->i:Ljava/lang/String;
-
-    return-void
 .end method
 
 .method public hashCode()I
@@ -1370,159 +1378,15 @@
     goto/16 :goto_13
 .end method
 
-.method public i()Ljava/lang/String;
+.method public isMealOrdering()Z
     .locals 1
 
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->i:Ljava/lang/String;
+    iget-boolean v0, p0, Lcom/amap/api/services/poisearch/Dining;->a:Z
 
-    return-object v0
+    return v0
 .end method
 
-.method public i(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->j:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public j()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->j:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public j(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->k:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public k()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->k:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public k(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->l:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public l()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->l:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public l(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->m:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public m()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->m:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public m(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->n:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public n()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->n:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public n(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->o:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public o()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->o:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public o(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->p:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public p()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->p:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public p(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->q:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public q()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->q:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public q(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->r:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public r()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->r:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public r(Ljava/lang/String;)V
+.method public setAddition(Ljava/lang/String;)V
     .locals 0
 
     iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->s:Ljava/lang/String;
@@ -1530,29 +1394,165 @@
     return-void
 .end method
 
-.method public s()Ljava/lang/String;
-    .locals 1
+.method public setAtmosphere(Ljava/lang/String;)V
+    .locals 0
 
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->s:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->m:Ljava/lang/String;
 
-    return-object v0
+    return-void
 .end method
 
-.method public t()Ljava/util/List;
-    .locals 1
+.method public setCost(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->k:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setCpRating(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->f:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setCuisines(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->b:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setDeepsrc(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->g:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setEnvironmentRating(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->i:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setIntro(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->d:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setMealOrdering(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/amap/api/services/poisearch/Dining;->a:Z
+
+    return-void
+.end method
+
+.method public setOpentime(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->r:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setOpentimeGDF(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->q:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setOrderinAppUrl(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->p:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setOrderingWapUrl(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->n:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setOrderingWebUrl(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->o:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setPhotos(Ljava/util/List;)V
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "()",
+            "(",
             "Ljava/util/List",
             "<",
             "Lcom/amap/api/services/poisearch/Photo;",
-            ">;"
+            ">;)V"
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Dining;->t:Ljava/util/List;
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->t:Ljava/util/List;
 
-    return-object v0
+    return-void
+.end method
+
+.method public setRating(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->e:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setRecommend(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->l:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setServiceRating(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->j:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setTag(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->c:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setTasteRating(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Dining;->h:Ljava/lang/String;
+
+    return-void
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V

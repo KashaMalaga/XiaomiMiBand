@@ -13,128 +13,106 @@
 
 
 # virtual methods
-.method public writeSamples(Lcn/com/smartdevices/bracelet/gps/model/c;)V
-    .locals 8
+.method public writeSample(Lcn/com/smartdevices/bracelet/gps/model/c;Ljava/io/File;)V
+    .locals 4
 
-    const/4 v7, 0x0
+    new-instance v0, Ljava/io/FileOutputStream;
 
-    const/4 v6, 0x1
+    const/4 v1, 0x1
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/gaocept/d;->a:Z
+    invoke-direct {v0, p2, v1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;Z)V
 
-    if-eqz v0, :cond_1
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    new-instance v1, Ljava/io/FileOutputStream;
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/model/c;->d()J
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->mTempFile:Ljava/io/File;
+    move-result-wide v2
 
-    invoke-direct {v1, v0, v6}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;Z)V
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v2, "%d"
-
-    new-array v3, v6, [Ljava/lang/Object;
-
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/model/c;->b()J
-
-    move-result-wide v4
-
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v4
-
-    aput-object v4, v3, v7
-
-    invoke-static {v2, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v2, v3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object v2
+    const-string v2, ", "
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v2, "\t"
+    move-result-object v1
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-wide v2, p1, Lcn/com/smartdevices/bracelet/gps/model/c;->h:D
 
-    move-result-object v0
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    const-string v2, "%f"
+    move-result-object v1
 
-    new-array v3, v6, [Ljava/lang/Object;
+    const-string v2, ", "
 
-    iget-wide v4, p1, Lcn/com/smartdevices/bracelet/gps/model/c;->d:D
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v4, v5}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    move-result-object v1
 
-    move-result-object v4
+    iget-wide v2, p1, Lcn/com/smartdevices/bracelet/gps/model/c;->g:D
 
-    aput-object v4, v3, v7
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v2
+    const-string v2, ", "
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    move-result-object v1
 
-    const-string v2, "\t"
+    iget-wide v2, p1, Lcn/com/smartdevices/bracelet/gps/model/c;->f:D
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    move-result-object v1
 
-    const-string v2, "%f"
+    const-string v2, ", "
 
-    new-array v3, v6, [Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v4, p1, Lcn/com/smartdevices/bracelet/gps/model/c;->c:D
+    move-result-object v1
 
-    invoke-static {v4, v5}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    iget v2, p1, Lcn/com/smartdevices/bracelet/gps/model/c;->j:F
 
-    move-result-object v4
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    aput-object v4, v3, v7
+    move-result-object v1
 
-    invoke-static {v2, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    const-string v2, ", "
 
-    move-result-object v2
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    move-result-object v0
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/model/c;->e()F
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     const-string v2, "\n"
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    sget-boolean v2, Lcn/com/smartdevices/bracelet/gaocept/d;->b:Z
+    invoke-virtual {v1}, Ljava/lang/String;->getBytes()[B
 
-    if-eqz v2, :cond_0
+    move-result-object v1
 
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->encodeSampleLine(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/io/FileOutputStream;->write([B)V
 
-    move-result-object v0
+    invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
 
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/io/FileOutputStream;->write([B)V
-
-    invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
-
-    :cond_1
     return-void
 .end method

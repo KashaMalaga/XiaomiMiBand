@@ -399,7 +399,7 @@
 
     invoke-virtual {v3, v2}, Landroid/view/View;->setBackgroundColor(I)V
 
-    const v3, 0x7f070194
+    const v3, 0x7f0701ad
 
     invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -430,7 +430,7 @@
 
     const-string v2, "Game_ViewSignup"
 
-    invoke-static {p0, v2}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p0, v2}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     :cond_9
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->myWebView:Landroid/webkit/WebView;
@@ -530,7 +530,7 @@
 .method private setupViews()V
     .locals 2
 
-    const v0, 0x7f070077
+    const v0, 0x7f070072
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -538,7 +538,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mShare:Landroid/view/View;
 
-    const v0, 0x7f0700b5
+    const v0, 0x7f0700c1
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -556,7 +556,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->myWebView:Landroid/webkit/WebView;
 
-    const v0, 0x7f070196
+    const v0, 0x7f0701af
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -566,7 +566,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebErrorTip:Landroid/widget/TextView;
 
-    const v0, 0x7f070193
+    const v0, 0x7f0701ac
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -574,7 +574,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebViewContainer:Landroid/view/View;
 
-    const v0, 0x7f070197
+    const v0, 0x7f0701b0
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -598,7 +598,7 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
 
-    const v0, 0x7f070195
+    const v0, 0x7f0701ae
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -723,7 +723,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/y;->a(Ljava/lang/String;Landroid/graphics/Bitmap;)Z
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/z;->a(Ljava/lang/String;Landroid/graphics/Bitmap;)Z
 
     move-result v0
 
@@ -806,7 +806,7 @@
     goto :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x7f070077
+    .packed-switch 0x7f070072
         :pswitch_0
     .end packed-switch
 .end method
@@ -816,7 +816,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030061
+    const v0, 0x7f030066
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->setContentView(I)V
 
@@ -836,7 +836,47 @@
 .end method
 
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
-    .locals 1
+    .locals 3
+
+    const-string v0, "WebActivity"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "can go back:"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->myWebView:Landroid/webkit/WebView;
+
+    invoke-virtual {v2}, Landroid/webkit/WebView;->canGoBack()Z
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->myWebView:Landroid/webkit/WebView;
+
+    invoke-virtual {v2}, Landroid/webkit/WebView;->copyBackForwardList()Landroid/webkit/WebBackForwardList;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x4
 
@@ -907,9 +947,9 @@
     :cond_0
     :goto_0
     :pswitch_0
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->b(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->b(Landroid/content/Context;)V
 
     return-void
 
@@ -959,9 +999,9 @@
     :cond_0
     :goto_0
     :pswitch_0
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->a(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;)V
 
     return-void
 

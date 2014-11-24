@@ -1,145 +1,69 @@
-.class public final Lcom/amap/api/services/geocoder/c;
+.class final Lcom/amap/api/services/geocoder/c;
 .super Ljava/lang/Object;
 
-
-# static fields
-.field public static final a:Ljava/lang/String; = "gps"
-
-.field public static final b:Ljava/lang/String; = "autonavi"
+# interfaces
+.implements Landroid/os/Parcelable$Creator;
 
 
-# instance fields
-.field c:Landroid/os/Handler;
-
-.field private d:Landroid/content/Context;
-
-.field private e:Lcom/amap/api/services/geocoder/f;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator",
+        "<",
+        "Lcom/amap/api/services/geocoder/RegeocodeAddress;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
+.method constructor <init>()V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lcom/amap/api/services/geocoder/j;
-
-    invoke-direct {v0, p0}, Lcom/amap/api/services/geocoder/j;-><init>(Lcom/amap/api/services/geocoder/c;)V
-
-    iput-object v0, p0, Lcom/amap/api/services/geocoder/c;->c:Landroid/os/Handler;
-
-    invoke-static {p1}, Lcom/amap/api/services/core/f;->a(Landroid/content/Context;)Lcom/amap/api/services/core/f;
-
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/amap/api/services/geocoder/c;->d:Landroid/content/Context;
-
     return-void
-.end method
-
-.method static synthetic a(Lcom/amap/api/services/geocoder/c;)Lcom/amap/api/services/geocoder/f;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/geocoder/c;->e:Lcom/amap/api/services/geocoder/f;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public a(Lcom/amap/api/services/geocoder/g;)Lcom/amap/api/services/geocoder/RegeocodeAddress;
+.method public a(Landroid/os/Parcel;)Lcom/amap/api/services/geocoder/RegeocodeAddress;
     .locals 2
 
-    new-instance v0, Lcom/amap/api/services/core/w;
+    new-instance v0, Lcom/amap/api/services/geocoder/RegeocodeAddress;
 
-    iget-object v1, p0, Lcom/amap/api/services/geocoder/c;->d:Landroid/content/Context;
+    const/4 v1, 0x0
 
-    invoke-static {v1}, Lcom/amap/api/services/core/g;->a(Landroid/content/Context;)Ljava/net/Proxy;
-
-    move-result-object v1
-
-    invoke-direct {v0, p1, v1}, Lcom/amap/api/services/core/w;-><init>(Lcom/amap/api/services/geocoder/g;Ljava/net/Proxy;)V
-
-    invoke-virtual {v0}, Lcom/amap/api/services/core/w;->j()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/amap/api/services/geocoder/RegeocodeAddress;
+    invoke-direct {v0, p1, v1}, Lcom/amap/api/services/geocoder/RegeocodeAddress;-><init>(Landroid/os/Parcel;Lcom/amap/api/services/geocoder/c;)V
 
     return-object v0
 .end method
 
-.method public a(Lcom/amap/api/services/geocoder/a;)Ljava/util/List;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/amap/api/services/geocoder/a;",
-            ")",
-            "Ljava/util/List",
-            "<",
-            "Lcom/amap/api/services/geocoder/GeocodeAddress;",
-            ">;"
-        }
-    .end annotation
+.method public a(I)[Lcom/amap/api/services/geocoder/RegeocodeAddress;
+    .locals 1
 
-    new-instance v0, Lcom/amap/api/services/core/k;
-
-    iget-object v1, p0, Lcom/amap/api/services/geocoder/c;->d:Landroid/content/Context;
-
-    invoke-static {v1}, Lcom/amap/api/services/core/g;->a(Landroid/content/Context;)Ljava/net/Proxy;
-
-    move-result-object v1
-
-    invoke-direct {v0, p1, v1}, Lcom/amap/api/services/core/k;-><init>(Lcom/amap/api/services/geocoder/a;Ljava/net/Proxy;)V
-
-    invoke-virtual {v0}, Lcom/amap/api/services/core/k;->j()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/List;
+    const/4 v0, 0x0
 
     return-object v0
 .end method
 
-.method public a(Lcom/amap/api/services/geocoder/f;)V
-    .locals 0
+.method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .locals 1
 
-    iput-object p1, p0, Lcom/amap/api/services/geocoder/c;->e:Lcom/amap/api/services/geocoder/f;
+    invoke-virtual {p0, p1}, Lcom/amap/api/services/geocoder/c;->a(Landroid/os/Parcel;)Lcom/amap/api/services/geocoder/RegeocodeAddress;
 
-    return-void
+    move-result-object v0
+
+    return-object v0
 .end method
 
-.method public b(Lcom/amap/api/services/geocoder/a;)V
-    .locals 2
+.method public synthetic newArray(I)[Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Ljava/lang/Thread;
+    invoke-virtual {p0, p1}, Lcom/amap/api/services/geocoder/c;->a(I)[Lcom/amap/api/services/geocoder/RegeocodeAddress;
 
-    new-instance v1, Lcom/amap/api/services/geocoder/e;
+    move-result-object v0
 
-    invoke-direct {v1, p0, p1}, Lcom/amap/api/services/geocoder/e;-><init>(Lcom/amap/api/services/geocoder/c;Lcom/amap/api/services/geocoder/a;)V
-
-    invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
-
-    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
-
-    return-void
-.end method
-
-.method public b(Lcom/amap/api/services/geocoder/g;)V
-    .locals 2
-
-    new-instance v0, Ljava/lang/Thread;
-
-    new-instance v1, Lcom/amap/api/services/geocoder/d;
-
-    invoke-direct {v1, p0, p1}, Lcom/amap/api/services/geocoder/d;-><init>(Lcom/amap/api/services/geocoder/c;Lcom/amap/api/services/geocoder/g;)V
-
-    invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
-
-    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
-
-    return-void
+    return-object v0
 .end method

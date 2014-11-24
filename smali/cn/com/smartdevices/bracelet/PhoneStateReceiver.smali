@@ -62,9 +62,9 @@
 
     sput-object v1, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->b:Ljava/util/Timer;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/w;
+    new-instance v1, Lcn/com/smartdevices/bracelet/x;
 
-    invoke-direct {v1, v0}, Lcn/com/smartdevices/bracelet/w;-><init>(Ljava/lang/ref/WeakReference;)V
+    invoke-direct {v1, v0}, Lcn/com/smartdevices/bracelet/x;-><init>(Ljava/lang/ref/WeakReference;)V
 
     sput-object v1, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->c:Ljava/util/TimerTask;
 
@@ -198,7 +198,7 @@
 
     const-string v0, "Call_Idle"
 
-    invoke-static {p1, v0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->b()V
 
@@ -231,7 +231,7 @@
 
     const-string v0, "Call_Ring"
 
-    invoke-static {p1, v0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getInComingCallTime()I
 
@@ -270,7 +270,7 @@
 
     const-string v0, "Call_Offhook"
 
-    invoke-static {p1, v0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->b()V
 

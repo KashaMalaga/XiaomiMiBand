@@ -28,10 +28,7 @@
         <item name="android:windowAnimationStyle">@android:style/Animation.InputMethod</item>
         <item name="android:backgroundDimEnabled">true</item>
     </style>
-    <style name="Menu">
-        <item name="android:windowEnterAnimation">@anim/menu_in</item>
-        <item name="android:windowExitAnimation">@anim/menu_out</item>
-    </style>
+    <style name="Menu" />
     <style name="FwUpgradeAnim">
         <item name="android:windowEnterAnimation">@anim/fw_in</item>
         <item name="android:windowExitAnimation">@anim/fw_out</item>

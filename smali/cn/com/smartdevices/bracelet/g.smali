@@ -1,10 +1,25 @@
-.class public interface abstract Lcn/com/smartdevices/bracelet/G;
-.super Ljava/lang/Object;
+.class Lcn/com/smartdevices/bracelet/G;
+.super Lcom/b/a/c/a;
 
 
-# virtual methods
-.method public abstract a()V
-.end method
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/b/a/c/a",
+        "<",
+        "Ljava/util/ArrayList",
+        "<",
+        "Ljava/lang/String;",
+        ">;>;"
+    }
+.end annotation
 
-.method public abstract b()V
+
+# direct methods
+.method constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/b/a/c/a;-><init>()V
+
+    return-void
 .end method

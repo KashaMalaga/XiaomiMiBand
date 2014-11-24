@@ -99,7 +99,7 @@
 
     :cond_0
     :try_start_0
-    invoke-static {p0}, Lcom/amap/api/location/core/d;->a([B)Ljava/lang/String;
+    invoke-static {p0}, Lcom/amap/api/location/core/b;->a([B)Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 

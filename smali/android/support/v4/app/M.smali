@@ -127,9 +127,9 @@
 
     if-eq v0, v1, :cond_1
 
-    invoke-virtual {v0, v6}, Landroid/support/v4/app/Fragment;->g(Z)V
+    invoke-virtual {v0, v6}, Landroid/support/v4/app/Fragment;->setMenuVisibility(Z)V
 
-    invoke-virtual {v0, v6}, Landroid/support/v4/app/Fragment;->h(Z)V
+    invoke-virtual {v0, v6}, Landroid/support/v4/app/Fragment;->setUserVisibleHint(Z)V
 
     :cond_1
     return-object v0
@@ -200,7 +200,7 @@
 
     check-cast p2, Landroid/support/v4/app/Fragment;
 
-    invoke-virtual {p2}, Landroid/support/v4/app/Fragment;->H()Landroid/view/View;
+    invoke-virtual {p2}, Landroid/support/v4/app/Fragment;->getView()Landroid/view/View;
 
     move-result-object v0
 
@@ -267,18 +267,18 @@
 
     iget-object v0, p0, Landroid/support/v4/app/M;->g:Landroid/support/v4/app/Fragment;
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/app/Fragment;->g(Z)V
+    invoke-virtual {v0, v1}, Landroid/support/v4/app/Fragment;->setMenuVisibility(Z)V
 
     iget-object v0, p0, Landroid/support/v4/app/M;->g:Landroid/support/v4/app/Fragment;
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/app/Fragment;->h(Z)V
+    invoke-virtual {v0, v1}, Landroid/support/v4/app/Fragment;->setUserVisibleHint(Z)V
 
     :cond_0
     if-eqz p3, :cond_1
 
-    invoke-virtual {p3, v2}, Landroid/support/v4/app/Fragment;->g(Z)V
+    invoke-virtual {p3, v2}, Landroid/support/v4/app/Fragment;->setMenuVisibility(Z)V
 
-    invoke-virtual {p3, v2}, Landroid/support/v4/app/Fragment;->h(Z)V
+    invoke-virtual {p3, v2}, Landroid/support/v4/app/Fragment;->setUserVisibleHint(Z)V
 
     :cond_1
     iput-object p3, p0, Landroid/support/v4/app/M;->g:Landroid/support/v4/app/Fragment;

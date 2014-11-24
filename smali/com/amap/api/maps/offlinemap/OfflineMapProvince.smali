@@ -31,9 +31,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/maps/offlinemap/m;
+    new-instance v0, Lcom/amap/api/maps/offlinemap/h;
 
-    invoke-direct {v0}, Lcom/amap/api/maps/offlinemap/m;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/maps/offlinemap/h;-><init>()V
 
     sput-object v0, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -96,78 +96,6 @@
 
 
 # virtual methods
-.method public a()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->a:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public a(I)V
-    .locals 0
-
-    iput p1, p0, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->b:I
-
-    return-void
-.end method
-
-.method public a(J)V
-    .locals 0
-
-    iput-wide p1, p0, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->c:J
-
-    return-void
-.end method
-
-.method public a(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public b()I
-    .locals 1
-
-    iget v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->b:I
-
-    return v0
-.end method
-
-.method public b(I)V
-    .locals 0
-
-    iput p1, p0, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->e:I
-
-    return-void
-.end method
-
-.method public b(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->d:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public c()J
-    .locals 2
-
-    iget-wide v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->c:J
-
-    return-wide v0
-.end method
-
-.method public d()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->d:Ljava/lang/String;
-
-    return-object v0
-.end method
-
 .method public describeContents()I
     .locals 1
 
@@ -176,12 +104,84 @@
     return v0
 .end method
 
-.method public e()I
+.method public getSize()J
+    .locals 2
+
+    iget-wide v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->c:J
+
+    return-wide v0
+.end method
+
+.method public getState()I
+    .locals 1
+
+    iget v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->b:I
+
+    return v0
+.end method
+
+.method public getUrl()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->a:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getVersion()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->d:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getcompleteCode()I
     .locals 1
 
     iget v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->e:I
 
     return v0
+.end method
+
+.method public setCompleteCode(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->e:I
+
+    return-void
+.end method
+
+.method public setSize(J)V
+    .locals 0
+
+    iput-wide p1, p0, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->c:J
+
+    return-void
+.end method
+
+.method public setState(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->b:I
+
+    return-void
+.end method
+
+.method public setUrl(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setVersion(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->d:Ljava/lang/String;
+
+    return-void
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V

@@ -33,9 +33,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/services/route/t;
+    new-instance v0, Lcom/amap/api/services/route/p;
 
-    invoke-direct {v0}, Lcom/amap/api/services/route/t;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/services/route/p;-><init>()V
 
     sput-object v0, Lcom/amap/api/services/route/RouteSearch$FromAndTo;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -112,73 +112,7 @@
 
 
 # virtual methods
-.method public a()Lcom/amap/api/services/core/LatLonPoint;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/route/RouteSearch$FromAndTo;->a:Lcom/amap/api/services/core/LatLonPoint;
-
-    return-object v0
-.end method
-
-.method public a(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/route/RouteSearch$FromAndTo;->c:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public b()Lcom/amap/api/services/core/LatLonPoint;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/route/RouteSearch$FromAndTo;->b:Lcom/amap/api/services/core/LatLonPoint;
-
-    return-object v0
-.end method
-
-.method public b(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/route/RouteSearch$FromAndTo;->d:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public c()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/route/RouteSearch$FromAndTo;->c:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public synthetic clone()Ljava/lang/Object;
-    .locals 1
-
-    invoke-virtual {p0}, Lcom/amap/api/services/route/RouteSearch$FromAndTo;->e()Lcom/amap/api/services/route/RouteSearch$FromAndTo;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public d()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/route/RouteSearch$FromAndTo;->d:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public e()Lcom/amap/api/services/route/RouteSearch$FromAndTo;
+.method public clone()Lcom/amap/api/services/route/RouteSearch$FromAndTo;
     .locals 3
 
     :try_start_0
@@ -197,11 +131,11 @@
 
     iget-object v1, p0, Lcom/amap/api/services/route/RouteSearch$FromAndTo;->c:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/amap/api/services/route/RouteSearch$FromAndTo;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/amap/api/services/route/RouteSearch$FromAndTo;->setStartPoiID(Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/amap/api/services/route/RouteSearch$FromAndTo;->d:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/amap/api/services/route/RouteSearch$FromAndTo;->b(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/amap/api/services/route/RouteSearch$FromAndTo;->setDestinationPoiID(Ljava/lang/String;)V
 
     return-object v0
 
@@ -211,6 +145,24 @@
     invoke-virtual {v0}, Ljava/lang/CloneNotSupportedException;->printStackTrace()V
 
     goto :goto_0
+.end method
+
+.method public bridge synthetic clone()Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/amap/api/services/route/RouteSearch$FromAndTo;->clone()Lcom/amap/api/services/route/RouteSearch$FromAndTo;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -363,6 +315,38 @@
     goto :goto_0
 .end method
 
+.method public getDestinationPoiID()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/route/RouteSearch$FromAndTo;->d:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getFrom()Lcom/amap/api/services/core/LatLonPoint;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/route/RouteSearch$FromAndTo;->a:Lcom/amap/api/services/core/LatLonPoint;
+
+    return-object v0
+.end method
+
+.method public getStartPoiID()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/route/RouteSearch$FromAndTo;->c:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getTo()Lcom/amap/api/services/core/LatLonPoint;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/route/RouteSearch$FromAndTo;->b:Lcom/amap/api/services/core/LatLonPoint;
+
+    return-object v0
+.end method
+
 .method public hashCode()I
     .locals 3
 
@@ -445,6 +429,22 @@
     move-result v1
 
     goto :goto_3
+.end method
+
+.method public setDestinationPoiID(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/route/RouteSearch$FromAndTo;->d:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setStartPoiID(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/route/RouteSearch$FromAndTo;->c:Ljava/lang/String;
+
+    return-void
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V

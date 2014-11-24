@@ -6,28 +6,28 @@
 
 
 # static fields
-.field public static final a:Lcom/amap/api/maps/model/F;
+.field public static final CREATOR:Lcom/amap/api/maps/model/a;
 
 
 # instance fields
-.field public final b:I
+.field private final a:I
 
-.field public final c:I
+.field public final data:[B
 
-.field public final d:[B
+.field public final height:I
 
-.field private final e:I
+.field public final width:I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/maps/model/F;
+    new-instance v0, Lcom/amap/api/maps/model/a;
 
-    invoke-direct {v0}, Lcom/amap/api/maps/model/F;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/maps/model/a;-><init>()V
 
-    sput-object v0, Lcom/amap/api/maps/model/Tile;->a:Lcom/amap/api/maps/model/F;
+    sput-object v0, Lcom/amap/api/maps/model/Tile;->CREATOR:Lcom/amap/api/maps/model/a;
 
     return-void
 .end method
@@ -37,13 +37,13 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lcom/amap/api/maps/model/Tile;->e:I
+    iput p1, p0, Lcom/amap/api/maps/model/Tile;->a:I
 
-    iput p2, p0, Lcom/amap/api/maps/model/Tile;->b:I
+    iput p2, p0, Lcom/amap/api/maps/model/Tile;->width:I
 
-    iput p3, p0, Lcom/amap/api/maps/model/Tile;->c:I
+    iput p3, p0, Lcom/amap/api/maps/model/Tile;->height:I
 
-    iput-object p4, p0, Lcom/amap/api/maps/model/Tile;->d:[B
+    iput-object p4, p0, Lcom/amap/api/maps/model/Tile;->data:[B
 
     return-void
 .end method
@@ -71,19 +71,19 @@
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
-    iget v0, p0, Lcom/amap/api/maps/model/Tile;->e:I
+    iget v0, p0, Lcom/amap/api/maps/model/Tile;->a:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget v0, p0, Lcom/amap/api/maps/model/Tile;->b:I
+    iget v0, p0, Lcom/amap/api/maps/model/Tile;->width:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget v0, p0, Lcom/amap/api/maps/model/Tile;->c:I
+    iget v0, p0, Lcom/amap/api/maps/model/Tile;->height:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget-object v0, p0, Lcom/amap/api/maps/model/Tile;->d:[B
+    iget-object v0, p0, Lcom/amap/api/maps/model/Tile;->data:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 

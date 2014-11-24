@@ -30,9 +30,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/services/route/w;
+    new-instance v0, Lcom/amap/api/services/route/s;
 
-    invoke-direct {v0}, Lcom/amap/api/services/route/w;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/services/route/s;-><init>()V
 
     sput-object v0, Lcom/amap/api/services/route/SearchCity;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -75,47 +75,15 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/route/SearchCity;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public b()Ljava/lang/String;
+.method public describeContents()I
     .locals 1
 
-    iget-object v0, p0, Lcom/amap/api/services/route/SearchCity;->a:Ljava/lang/String;
+    const/4 v0, 0x0
 
-    return-object v0
+    return v0
 .end method
 
-.method public b(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/route/SearchCity;->b:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public c()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/route/SearchCity;->b:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public c(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/route/SearchCity;->c:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public d()Ljava/lang/String;
+.method public getSearchCityAdCode()Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcom/amap/api/services/route/SearchCity;->c:Ljava/lang/String;
@@ -123,12 +91,44 @@
     return-object v0
 .end method
 
-.method public describeContents()I
+.method public getSearchCityName()Ljava/lang/String;
     .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcom/amap/api/services/route/SearchCity;->a:Ljava/lang/String;
 
-    return v0
+    return-object v0
+.end method
+
+.method public getSearchCitycode()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/route/SearchCity;->b:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public setSearchCityName(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/route/SearchCity;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setSearchCitycode(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/route/SearchCity;->b:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setSearchCityhAdCode(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/route/SearchCity;->c:Ljava/lang/String;
+
+    return-void
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V

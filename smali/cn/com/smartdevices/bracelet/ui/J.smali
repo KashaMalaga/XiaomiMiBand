@@ -57,6 +57,7 @@
         }
     .end annotation
 
+    :try_start_0
     invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v0
@@ -80,8 +81,18 @@
     move-result-object v2
 
     invoke-virtual {v0, v1, v2}, Landroid/app/DialogFragment;->show(Landroid/app/FragmentTransaction;Ljava/lang/String;)I
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    :goto_0
     return-void
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    goto :goto_0
 .end method
 
 .method public static a(Landroid/app/Activity;Ljava/lang/Class;Landroid/os/Bundle;)V
@@ -220,7 +231,7 @@
     goto :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x7f0700e0
+    .packed-switch 0x7f0700ec
         :pswitch_1
         :pswitch_0
         :pswitch_2
@@ -267,7 +278,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0700e0
+    const v1, 0x7f0700ec
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -275,7 +286,7 @@
 
     iput-object v1, p0, Lcn/com/smartdevices/bracelet/ui/J;->d:Landroid/view/View;
 
-    const v1, 0x7f0700e2
+    const v1, 0x7f0700ee
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -309,7 +320,7 @@
 
     invoke-virtual {v1, v2}, Landroid/app/Dialog;->setCanceledOnTouchOutside(Z)V
 
-    const v1, 0x7f0700e3
+    const v1, 0x7f0700ef
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

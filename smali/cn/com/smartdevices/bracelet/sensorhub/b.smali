@@ -94,7 +94,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/sensorhub/b;->b:Landroid/view/LayoutInflater;
 
-    const v2, 0x7f030080
+    const v2, 0x7f030086
 
     const/4 v3, 0x0
 
@@ -103,7 +103,7 @@
     move-result-object p2
 
     :cond_0
-    const v1, 0x7f070247
+    const v1, 0x7f07025c
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -135,7 +135,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v1, 0x7f07021e
+    const v1, 0x7f070237
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

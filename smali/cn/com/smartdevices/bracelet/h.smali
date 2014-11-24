@@ -1,28 +1,25 @@
-.class public Lcn/com/smartdevices/bracelet/h;
+.class Lcn/com/smartdevices/bracelet/H;
 .super Ljava/lang/Object;
 
-
-# static fields
-.field public static final a:Z = false
-
-.field public static final b:Z = false
-
-.field public static final c:Z = true
-
-.field public static final d:Z = true
-
-.field public static final e:Z
-
-.field public static final f:Z
-
-.field public static final g:Z
+# interfaces
+.implements Landroid/view/View$OnLongClickListener;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public onLongClick(Landroid/view/View;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
 .end method

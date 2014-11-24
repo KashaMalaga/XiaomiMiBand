@@ -54,9 +54,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/services/route/n;
+    new-instance v0, Lcom/amap/api/services/route/j;
 
-    invoke-direct {v0}, Lcom/amap/api/services/route/n;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/services/route/j;-><init>()V
 
     sput-object v0, Lcom/amap/api/services/route/RouteBusLineItem;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -137,78 +137,12 @@
 
 
 # virtual methods
-.method public a(I)V
-    .locals 0
-
-    iput p1, p0, Lcom/amap/api/services/route/RouteBusLineItem;->d:I
-
-    return-void
-.end method
-
-.method public a(Lcom/amap/api/services/busline/BusStationItem;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/route/RouteBusLineItem;->a:Lcom/amap/api/services/busline/BusStationItem;
-
-    return-void
-.end method
-
-.method public b(Lcom/amap/api/services/busline/BusStationItem;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/route/RouteBusLineItem;->b:Lcom/amap/api/services/busline/BusStationItem;
-
-    return-void
-.end method
-
-.method public d(F)V
-    .locals 0
-
-    iput p1, p0, Lcom/amap/api/services/route/RouteBusLineItem;->f:F
-
-    return-void
-.end method
-
-.method public d(Ljava/util/List;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcom/amap/api/services/core/LatLonPoint;",
-            ">;)V"
-        }
-    .end annotation
-
-    iput-object p1, p0, Lcom/amap/api/services/route/RouteBusLineItem;->c:Ljava/util/List;
-
-    return-void
-.end method
-
 .method public describeContents()I
     .locals 1
 
     const/4 v0, 0x0
 
     return v0
-.end method
-
-.method public e(Ljava/util/List;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcom/amap/api/services/busline/BusStationItem;",
-            ">;)V"
-        }
-    .end annotation
-
-    iput-object p1, p0, Lcom/amap/api/services/route/RouteBusLineItem;->e:Ljava/util/List;
-
-    return-void
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -309,6 +243,72 @@
     goto :goto_0
 .end method
 
+.method public getArrivalBusStation()Lcom/amap/api/services/busline/BusStationItem;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/route/RouteBusLineItem;->b:Lcom/amap/api/services/busline/BusStationItem;
+
+    return-object v0
+.end method
+
+.method public getDepartureBusStation()Lcom/amap/api/services/busline/BusStationItem;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/route/RouteBusLineItem;->a:Lcom/amap/api/services/busline/BusStationItem;
+
+    return-object v0
+.end method
+
+.method public getDuration()F
+    .locals 1
+
+    iget v0, p0, Lcom/amap/api/services/route/RouteBusLineItem;->f:F
+
+    return v0
+.end method
+
+.method public getPassStationNum()I
+    .locals 1
+
+    iget v0, p0, Lcom/amap/api/services/route/RouteBusLineItem;->d:I
+
+    return v0
+.end method
+
+.method public getPassStations()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcom/amap/api/services/busline/BusStationItem;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/amap/api/services/route/RouteBusLineItem;->e:Ljava/util/List;
+
+    return-object v0
+.end method
+
+.method public getPolyline()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcom/amap/api/services/core/LatLonPoint;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/amap/api/services/route/RouteBusLineItem;->c:Ljava/util/List;
+
+    return-object v0
+.end method
+
 .method public hashCode()I
     .locals 3
 
@@ -359,70 +359,70 @@
     goto :goto_1
 .end method
 
-.method public p()Lcom/amap/api/services/busline/BusStationItem;
-    .locals 1
+.method public setArrivalBusStation(Lcom/amap/api/services/busline/BusStationItem;)V
+    .locals 0
 
-    iget-object v0, p0, Lcom/amap/api/services/route/RouteBusLineItem;->a:Lcom/amap/api/services/busline/BusStationItem;
+    iput-object p1, p0, Lcom/amap/api/services/route/RouteBusLineItem;->b:Lcom/amap/api/services/busline/BusStationItem;
 
-    return-object v0
+    return-void
 .end method
 
-.method public q()Lcom/amap/api/services/busline/BusStationItem;
-    .locals 1
+.method public setDepartureBusStation(Lcom/amap/api/services/busline/BusStationItem;)V
+    .locals 0
 
-    iget-object v0, p0, Lcom/amap/api/services/route/RouteBusLineItem;->b:Lcom/amap/api/services/busline/BusStationItem;
+    iput-object p1, p0, Lcom/amap/api/services/route/RouteBusLineItem;->a:Lcom/amap/api/services/busline/BusStationItem;
 
-    return-object v0
+    return-void
 .end method
 
-.method public r()Ljava/util/List;
-    .locals 1
+.method public setDuration(F)V
+    .locals 0
+
+    iput p1, p0, Lcom/amap/api/services/route/RouteBusLineItem;->f:F
+
+    return-void
+.end method
+
+.method public setPassStationNum(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/amap/api/services/route/RouteBusLineItem;->d:I
+
+    return-void
+.end method
+
+.method public setPassStations(Ljava/util/List;)V
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Lcom/amap/api/services/core/LatLonPoint;",
-            ">;"
-        }
-    .end annotation
-
-    iget-object v0, p0, Lcom/amap/api/services/route/RouteBusLineItem;->c:Ljava/util/List;
-
-    return-object v0
-.end method
-
-.method public s()I
-    .locals 1
-
-    iget v0, p0, Lcom/amap/api/services/route/RouteBusLineItem;->d:I
-
-    return v0
-.end method
-
-.method public t()Ljava/util/List;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
+            "(",
             "Ljava/util/List",
             "<",
             "Lcom/amap/api/services/busline/BusStationItem;",
-            ">;"
+            ">;)V"
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/amap/api/services/route/RouteBusLineItem;->e:Ljava/util/List;
+    iput-object p1, p0, Lcom/amap/api/services/route/RouteBusLineItem;->e:Ljava/util/List;
 
-    return-object v0
+    return-void
 .end method
 
-.method public u()F
-    .locals 1
+.method public setPolyline(Ljava/util/List;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcom/amap/api/services/core/LatLonPoint;",
+            ">;)V"
+        }
+    .end annotation
 
-    iget v0, p0, Lcom/amap/api/services/route/RouteBusLineItem;->f:F
+    iput-object p1, p0, Lcom/amap/api/services/route/RouteBusLineItem;->c:Ljava/util/List;
 
-    return v0
+    return-void
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V

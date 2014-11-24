@@ -120,7 +120,7 @@
 
     invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/ui/u;-><init>(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
 
-    invoke-static {v0, v1, p1, p2, v2}, Lcn/com/smartdevices/bracelet/d/d;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/c/a/a/h;)V
+    invoke-static {v0, v1, p1, p2, v2}, Lcn/com/smartdevices/bracelet/d/f;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/c/a/a/h;)V
 
     return-void
 .end method
@@ -429,7 +429,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/y;->b([B)I
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/z;->b([B)I
 
     move-result v1
 
@@ -654,10 +654,10 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 
     :cond_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->m()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->m()V
 
     return-void
 .end method
@@ -677,7 +677,7 @@
 
     invoke-direct {v3, p0, v0, v1}, Lcn/com/smartdevices/bracelet/ui/s;-><init>(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;J)V
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/d/d;->d(Lcn/com/smartdevices/bracelet/model/LoginData;Lcom/c/a/a/h;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/d/f;->d(Lcn/com/smartdevices/bracelet/model/LoginData;Lcom/c/a/a/h;)V
 
     return-void
 .end method
@@ -718,7 +718,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/z;->a(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -733,7 +733,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->k:Landroid/content/Context;
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/y;->d(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/z;->d(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -810,7 +810,7 @@
 
     const-string v2, "BleSyncDataFirst"
 
-    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;I)V
+    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;I)V
 
     :cond_1
     return-void
@@ -1127,7 +1127,7 @@
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onResume()V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->c()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->c()Z
 
     move-result v0
 

@@ -164,7 +164,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/c/a/d;->h:Landroid/content/Context;
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/Exception;)V
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/Exception;)V
 
     goto :goto_0
 .end method
@@ -291,7 +291,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/c/a/d;->h:Landroid/content/Context;
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/Exception;)V
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/Exception;)V
 
     goto :goto_1
 .end method
@@ -495,7 +495,7 @@
 
     const-string v2, "QQ_Health_SyncData_Success"
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     :cond_0
     :goto_0
@@ -506,7 +506,7 @@
 
     const-string v2, "QQ_Health_SyncData_Fail"
 
-    invoke-static {v1, v2, p2}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, p2}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -519,7 +519,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/c/a/d;->h:Landroid/content/Context;
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/Exception;)V
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/Exception;)V
 
     goto :goto_0
 .end method
@@ -903,7 +903,7 @@
 
     const-string v4, "QQ_Health_SyncData"
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     sget-object v3, Lcn/com/smartdevices/bracelet/d/a;->b:Lcom/c/a/a/X;
 
@@ -992,7 +992,7 @@
 
     const-string v3, "QQ_Health_SyncData"
 
-    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     sget-object v1, Lcn/com/smartdevices/bracelet/d/a;->b:Lcom/c/a/a/X;
 
@@ -1232,7 +1232,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/c/a/d;->h:Landroid/content/Context;
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/Exception;)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/Exception;)V
 
     goto :goto_1
 .end method

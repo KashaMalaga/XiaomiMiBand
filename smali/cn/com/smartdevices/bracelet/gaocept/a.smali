@@ -508,10 +508,6 @@
 .method public endWritingSport()V
     .locals 4
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/gaocept/d;->a:Z
-
-    if-eqz v0, :cond_0
-
     new-instance v0, Ljava/io/FileInputStream;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->mTempFile:Ljava/io/File;
@@ -540,7 +536,6 @@
 
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
 
-    :cond_0
     return-void
 .end method
 
@@ -758,10 +753,6 @@
 .method public writeCorrectNumber(I)V
     .locals 3
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/gaocept/d;->a:Z
-
-    if-eqz v0, :cond_0
-
     new-instance v0, Ljava/io/FileOutputStream;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/gaocept/a;->mAllFile:Ljava/io/File;
@@ -802,16 +793,11 @@
 
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
 
-    :cond_0
     return-void
 .end method
 
 .method public writeString(Ljava/lang/String;Ljava/io/File;Z)V
     .locals 2
-
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/gaocept/d;->a:Z
-
-    if-eqz v0, :cond_0
 
     new-instance v0, Ljava/io/FileOutputStream;
 
@@ -825,6 +811,5 @@
 
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
 
-    :cond_0
     return-void
 .end method

@@ -16,16 +16,16 @@
 
 
 # instance fields
-.field a:Lcn/com/smartdevices/bracelet/lua/n;
+.field a:Lcn/com/smartdevices/bracelet/lua/o;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/lua/m;
+    new-instance v0, Lcn/com/smartdevices/bracelet/lua/n;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/lua/m;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/lua/n;-><init>()V
 
     sput-object v0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$SavedState;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -38,7 +38,7 @@
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
     :try_start_0
-    const-class v0, Lcn/com/smartdevices/bracelet/lua/n;
+    const-class v0, Lcn/com/smartdevices/bracelet/lua/o;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -48,9 +48,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/lua/n;
+    check-cast v0, Lcn/com/smartdevices/bracelet/lua/o;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$SavedState;->a:Lcn/com/smartdevices/bracelet/lua/n;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$SavedState;->a:Lcn/com/smartdevices/bracelet/lua/o;
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -60,9 +60,9 @@
     :catch_0
     move-exception v0
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/lua/n;->b:Lcn/com/smartdevices/bracelet/lua/n;
+    sget-object v0, Lcn/com/smartdevices/bracelet/lua/o;->b:Lcn/com/smartdevices/bracelet/lua/o;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$SavedState;->a:Lcn/com/smartdevices/bracelet/lua/n;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$SavedState;->a:Lcn/com/smartdevices/bracelet/lua/o;
 
     goto :goto_0
 .end method
@@ -90,9 +90,9 @@
 
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$SavedState;->a:Lcn/com/smartdevices/bracelet/lua/n;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$SavedState;->a:Lcn/com/smartdevices/bracelet/lua/o;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lua/n;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lua/o;->toString()Ljava/lang/String;
 
     move-result-object v0
 

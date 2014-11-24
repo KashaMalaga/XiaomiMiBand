@@ -63,9 +63,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/services/poisearch/m;
+    new-instance v0, Lcom/amap/api/services/poisearch/d;
 
-    invoke-direct {v0}, Lcom/amap/api/services/poisearch/m;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/services/poisearch/d;-><init>()V
 
     sput-object v0, Lcom/amap/api/services/poisearch/Groupbuy;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -119,7 +119,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/amap/api/services/core/g;->e(Ljava/lang/String;)Ljava/util/Date;
+    invoke-static {v0}, Lcom/amap/api/services/core/e;->e(Ljava/lang/String;)Ljava/util/Date;
 
     move-result-object v0
 
@@ -129,7 +129,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/amap/api/services/core/g;->e(Ljava/lang/String;)Ljava/util/Date;
+    invoke-static {v0}, Lcom/amap/api/services/core/e;->e(Ljava/lang/String;)Ljava/util/Date;
 
     move-result-object v0
 
@@ -202,232 +202,12 @@
 
 
 # virtual methods
-.method public a()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->a:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public a(F)V
-    .locals 0
-
-    iput p1, p0, Lcom/amap/api/services/poisearch/Groupbuy;->h:F
-
-    return-void
-.end method
-
-.method public a(I)V
-    .locals 0
-
-    iput p1, p0, Lcom/amap/api/services/poisearch/Groupbuy;->f:I
-
-    return-void
-.end method
-
-.method public a(Lcom/amap/api/services/poisearch/Photo;)V
+.method public addPhotos(Lcom/amap/api/services/poisearch/Photo;)V
     .locals 1
 
     iget-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->m:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    return-void
-.end method
-
-.method public a(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Groupbuy;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public a(Ljava/util/Date;)V
-    .locals 1
-
-    if-nez p1, :cond_0
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->d:Ljava/util/Date;
-
-    :goto_0
-    return-void
-
-    :cond_0
-    invoke-virtual {p1}, Ljava/util/Date;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/Date;
-
-    iput-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->d:Ljava/util/Date;
-
-    goto :goto_0
-.end method
-
-.method public a(Ljava/util/List;)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcom/amap/api/services/poisearch/Photo;",
-            ">;)V"
-        }
-    .end annotation
-
-    if-eqz p1, :cond_0
-
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    :cond_0
-    return-void
-
-    :cond_1
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->m:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->clear()V
-
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/amap/api/services/poisearch/Photo;
-
-    iget-object v2, p0, Lcom/amap/api/services/poisearch/Groupbuy;->m:Ljava/util/List;
-
-    invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-.end method
-
-.method public b()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->b:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public b(F)V
-    .locals 0
-
-    iput p1, p0, Lcom/amap/api/services/poisearch/Groupbuy;->i:F
-
-    return-void
-.end method
-
-.method public b(I)V
-    .locals 0
-
-    iput p1, p0, Lcom/amap/api/services/poisearch/Groupbuy;->g:I
-
-    return-void
-.end method
-
-.method public b(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Groupbuy;->b:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public b(Ljava/util/Date;)V
-    .locals 1
-
-    if-nez p1, :cond_0
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->e:Ljava/util/Date;
-
-    :goto_0
-    return-void
-
-    :cond_0
-    invoke-virtual {p1}, Ljava/util/Date;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/Date;
-
-    iput-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->e:Ljava/util/Date;
-
-    goto :goto_0
-.end method
-
-.method public c()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->c:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public c(F)V
-    .locals 0
-
-    iput p1, p0, Lcom/amap/api/services/poisearch/Groupbuy;->j:F
-
-    return-void
-.end method
-
-.method public c(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Groupbuy;->c:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public d()Ljava/util/Date;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->d:Ljava/util/Date;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->d:Ljava/util/Date;
-
-    invoke-virtual {v0}, Ljava/util/Date;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/Date;
-
-    goto :goto_0
-.end method
-
-.method public d(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Groupbuy;->k:Ljava/lang/String;
 
     return-void
 .end method
@@ -438,38 +218,6 @@
     const/4 v0, 0x0
 
     return v0
-.end method
-
-.method public e()Ljava/util/Date;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->e:Ljava/util/Date;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->e:Ljava/util/Date;
-
-    invoke-virtual {v0}, Ljava/util/Date;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/Date;
-
-    goto :goto_0
-.end method
-
-.method public e(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Groupbuy;->l:Ljava/lang/String;
-
-    return-void
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -869,7 +617,7 @@
     goto/16 :goto_0
 .end method
 
-.method public f()I
+.method public getCount()I
     .locals 1
 
     iget v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->f:I
@@ -877,15 +625,88 @@
     return v0
 .end method
 
-.method public f(Ljava/lang/String;)V
-    .locals 0
+.method public getDetail()Ljava/lang/String;
+    .locals 1
 
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Groupbuy;->n:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->c:Ljava/lang/String;
 
-    return-void
+    return-object v0
 .end method
 
-.method public g()I
+.method public getDiscount()F
+    .locals 1
+
+    iget v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->j:F
+
+    return v0
+.end method
+
+.method public getEndTime()Ljava/util/Date;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->e:Ljava/util/Date;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->e:Ljava/util/Date;
+
+    invoke-virtual {v0}, Ljava/util/Date;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Date;
+
+    goto :goto_0
+.end method
+
+.method public getGroupbuyPrice()F
+    .locals 1
+
+    iget v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->i:F
+
+    return v0
+.end method
+
+.method public getOriginalPrice()F
+    .locals 1
+
+    iget v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->h:F
+
+    return v0
+.end method
+
+.method public getPhotos()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcom/amap/api/services/poisearch/Photo;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->m:Ljava/util/List;
+
+    return-object v0
+.end method
+
+.method public getProvider()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->o:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getSoldCount()I
     .locals 1
 
     iget v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->g:I
@@ -893,20 +714,68 @@
     return v0
 .end method
 
-.method public g(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Groupbuy;->o:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public h()F
+.method public getStartTime()Ljava/util/Date;
     .locals 1
 
-    iget v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->h:F
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->d:Ljava/util/Date;
 
-    return v0
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->d:Ljava/util/Date;
+
+    invoke-virtual {v0}, Ljava/util/Date;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Date;
+
+    goto :goto_0
+.end method
+
+.method public getTicketAddress()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->k:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getTicketTel()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->l:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getTypeCode()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->a:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getTypeDes()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->b:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getUrl()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->n:Ljava/lang/String;
+
+    return-object v0
 .end method
 
 .method public hashCode()I
@@ -1155,69 +1024,200 @@
     goto :goto_9
 .end method
 
-.method public i()F
-    .locals 1
-
-    iget v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->i:F
-
-    return v0
-.end method
-
-.method public j()F
-    .locals 1
-
-    iget v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->j:F
-
-    return v0
-.end method
-
-.method public k()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->k:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public l()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->l:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public m()Ljava/util/List;
-    .locals 1
+.method public initPhotos(Ljava/util/List;)V
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "()",
+            "(",
             "Ljava/util/List",
             "<",
             "Lcom/amap/api/services/poisearch/Photo;",
-            ">;"
+            ">;)V"
         }
     .end annotation
 
+    if-eqz p1, :cond_0
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    :cond_0
+    return-void
+
+    :cond_1
     iget-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->m:Ljava/util/List;
 
-    return-object v0
+    invoke-interface {v0}, Ljava/util/List;->clear()V
+
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/amap/api/services/poisearch/Photo;
+
+    iget-object v2, p0, Lcom/amap/api/services/poisearch/Groupbuy;->m:Ljava/util/List;
+
+    invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
 .end method
 
-.method public n()Ljava/lang/String;
-    .locals 1
+.method public setCount(I)V
+    .locals 0
 
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->n:Ljava/lang/String;
+    iput p1, p0, Lcom/amap/api/services/poisearch/Groupbuy;->f:I
 
-    return-object v0
+    return-void
 .end method
 
-.method public o()Ljava/lang/String;
+.method public setDetail(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Groupbuy;->c:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setDiscount(F)V
+    .locals 0
+
+    iput p1, p0, Lcom/amap/api/services/poisearch/Groupbuy;->j:F
+
+    return-void
+.end method
+
+.method public setEndTime(Ljava/util/Date;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->o:Ljava/lang/String;
+    if-nez p1, :cond_0
 
-    return-object v0
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->e:Ljava/util/Date;
+
+    :goto_0
+    return-void
+
+    :cond_0
+    invoke-virtual {p1}, Ljava/util/Date;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Date;
+
+    iput-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->e:Ljava/util/Date;
+
+    goto :goto_0
+.end method
+
+.method public setGroupbuyPrice(F)V
+    .locals 0
+
+    iput p1, p0, Lcom/amap/api/services/poisearch/Groupbuy;->i:F
+
+    return-void
+.end method
+
+.method public setOriginalPrice(F)V
+    .locals 0
+
+    iput p1, p0, Lcom/amap/api/services/poisearch/Groupbuy;->h:F
+
+    return-void
+.end method
+
+.method public setProvider(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Groupbuy;->o:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setSoldCount(I)V
+    .locals 0
+
+    iput p1, p0, Lcom/amap/api/services/poisearch/Groupbuy;->g:I
+
+    return-void
+.end method
+
+.method public setStartTime(Ljava/util/Date;)V
+    .locals 1
+
+    if-nez p1, :cond_0
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->d:Ljava/util/Date;
+
+    :goto_0
+    return-void
+
+    :cond_0
+    invoke-virtual {p1}, Ljava/util/Date;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Date;
+
+    iput-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->d:Ljava/util/Date;
+
+    goto :goto_0
+.end method
+
+.method public setTicketAddress(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Groupbuy;->k:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setTicketTel(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Groupbuy;->l:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setTypeCode(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Groupbuy;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setTypeDes(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Groupbuy;->b:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setUrl(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Groupbuy;->n:Ljava/lang/String;
+
+    return-void
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
@@ -1237,7 +1237,7 @@
 
     iget-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->d:Ljava/util/Date;
 
-    invoke-static {v0}, Lcom/amap/api/services/core/g;->a(Ljava/util/Date;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/amap/api/services/core/e;->a(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1245,7 +1245,7 @@
 
     iget-object v0, p0, Lcom/amap/api/services/poisearch/Groupbuy;->e:Ljava/util/Date;
 
-    invoke-static {v0}, Lcom/amap/api/services/core/g;->a(Ljava/util/Date;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/amap/api/services/core/e;->a(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object v0
 

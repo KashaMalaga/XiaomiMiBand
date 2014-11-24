@@ -93,7 +93,7 @@
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/ui/as;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
 
-    const v4, 0x7f0c01b8
+    const v4, 0x7f0c01b6
 
     const/4 v5, 0x1
 

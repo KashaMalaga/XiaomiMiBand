@@ -78,7 +78,7 @@
 
     const-string v1, "DynamicRealStepUpdate"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/Z;->a:Lcn/com/smartdevices/bracelet/ui/W;
@@ -87,6 +87,75 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/W;->c(Lcn/com/smartdevices/bracelet/ui/W;I)V
 
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->h()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getDaySportGoalSteps()I
+
+    move-result v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/Z;->a:Lcn/com/smartdevices/bracelet/ui/W;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/W;->f(Lcn/com/smartdevices/bracelet/ui/W;)Lcn/com/smartdevices/bracelet/o;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/Z;->a:Lcn/com/smartdevices/bracelet/ui/W;
+
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/W;->f(Lcn/com/smartdevices/bracelet/ui/W;)Lcn/com/smartdevices/bracelet/o;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/o;->l()Lcn/com/smartdevices/bracelet/model/SportDay;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/o;->f(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/DaySportData;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/DaySportData;->getStepsInfo()Lcn/com/smartdevices/bracelet/analysis/StepsInfo;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/Z;->a:Lcn/com/smartdevices/bracelet/ui/W;
+
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/W;->e(Lcn/com/smartdevices/bracelet/ui/W;)I
+
+    move-result v2
+
+    if-le v2, v0, :cond_1
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->getStepsCount()I
+
+    move-result v1
+
+    if-ge v1, v0, :cond_1
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->m()Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;->e()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const-string v0, "Dynamic.Main"
+
+    const-string v1, "sync data for realtime step large than synced steps!!!"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->i()V
+
+    :cond_1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -113,9 +182,7 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/W;->a(Lcn/com/smartdevices/bracelet/ui/W;Z)V
 
-    goto :goto_0
-
-    nop
+    goto/16 :goto_0
 
     :pswitch_data_0
     .packed-switch 0x1011

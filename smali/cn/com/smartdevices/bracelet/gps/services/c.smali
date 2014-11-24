@@ -3,16 +3,16 @@
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/services/b;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/services/a;
 
 .field private final synthetic b:Landroid/content/Context;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/b;Landroid/content/Context;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/a;Landroid/content/Context;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/services/c;->a:Lcn/com/smartdevices/bracelet/gps/services/b;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/services/c;->a:Lcn/com/smartdevices/bracelet/gps/services/a;
 
     iput-object p2, p0, Lcn/com/smartdevices/bracelet/gps/services/c;->b:Landroid/content/Context;
 
@@ -26,7 +26,7 @@
 .method public run()V
     .locals 6
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/c;->a:Lcn/com/smartdevices/bracelet/gps/services/b;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/c;->a:Lcn/com/smartdevices/bracelet/gps/services/a;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/c;->b:Landroid/content/Context;
 
@@ -36,7 +36,7 @@
 
     const-string v5, "gps"
 
-    invoke-static/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/gps/services/b;->a(Lcn/com/smartdevices/bracelet/gps/services/b;Landroid/content/Context;JFLjava/lang/String;)V
+    invoke-static/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/gps/services/a;->a(Lcn/com/smartdevices/bracelet/gps/services/a;Landroid/content/Context;JFLjava/lang/String;)V
 
     return-void
 .end method

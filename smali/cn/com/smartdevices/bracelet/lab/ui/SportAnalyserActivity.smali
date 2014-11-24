@@ -347,7 +347,7 @@
 .method private a()Ljava/lang/String;
     .locals 5
 
-    const v4, 0x7f0c0238
+    const v4, 0x7f0c023b
 
     const/4 v3, 0x1
 
@@ -365,7 +365,7 @@
 
     new-array v0, v3, [Ljava/lang/Object;
 
-    const v1, 0x7f0c0239
+    const v1, 0x7f0c023c
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->getString(I)Ljava/lang/String;
 
@@ -393,7 +393,7 @@
 
     new-array v0, v3, [Ljava/lang/Object;
 
-    const v1, 0x7f0c023a
+    const v1, 0x7f0c023d
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->getString(I)Ljava/lang/String;
 
@@ -502,7 +502,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->K:Landroid/widget/TextView;
 
-    const v1, 0x7f0c0240
+    const v1, 0x7f0c0243
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->getString(I)Ljava/lang/String;
 
@@ -662,7 +662,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0c0204
+    const v0, 0x7f0c0207
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->getString(I)Ljava/lang/String;
 
@@ -682,7 +682,7 @@
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f0c0203
+    const v0, 0x7f0c0206
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->getString(I)Ljava/lang/String;
 
@@ -701,7 +701,7 @@
 
     const/4 v4, 0x0
 
-    const v0, 0x7f07004f
+    const v0, 0x7f07004a
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->findViewById(I)Landroid/view/View;
 
@@ -709,7 +709,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->x:Landroid/view/View;
 
-    const v0, 0x7f070041
+    const v0, 0x7f07003c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->findViewById(I)Landroid/view/View;
 
@@ -735,7 +735,7 @@
 
     invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->f(I)V
 
-    const v0, 0x7f070056
+    const v0, 0x7f070051
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->findViewById(I)Landroid/view/View;
 
@@ -745,7 +745,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->k:Landroid/widget/TextView;
 
-    const v0, 0x7f070052
+    const v0, 0x7f07004d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->findViewById(I)Landroid/view/View;
 
@@ -755,7 +755,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->y:Landroid/widget/TextView;
 
-    const v0, 0x7f070058
+    const v0, 0x7f070053
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->findViewById(I)Landroid/view/View;
 
@@ -765,7 +765,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->l:Landroid/widget/TextView;
 
-    const v0, 0x7f070050
+    const v0, 0x7f07004b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->findViewById(I)Landroid/view/View;
 
@@ -775,7 +775,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->v:Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;
 
-    const v0, 0x7f070053
+    const v0, 0x7f07004e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->findViewById(I)Landroid/view/View;
 
@@ -787,7 +787,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->y:Landroid/widget/TextView;
 
-    const v1, 0x7f0c023d
+    const v1, 0x7f0c0240
 
     const/4 v2, 0x1
 
@@ -823,7 +823,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    const v0, 0x7f070057
+    const v0, 0x7f070052
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->findViewById(I)Landroid/view/View;
 
@@ -863,7 +863,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    const v0, 0x7f070051
+    const v0, 0x7f07004c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->findViewById(I)Landroid/view/View;
 
@@ -873,7 +873,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->J:Landroid/widget/TextView;
 
-    const v0, 0x7f070055
+    const v0, 0x7f070050
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->findViewById(I)Landroid/view/View;
 
@@ -1002,7 +1002,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->K:Landroid/widget/TextView;
 
-    const v1, 0x7f0c0240
+    const v1, 0x7f0c0243
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->getString(I)Ljava/lang/String;
 
@@ -1062,7 +1062,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->v:Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;
 
-    const v1, 0x7f0c0208
+    const v1, 0x7f0c020b
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->a(I)V
 
@@ -1141,7 +1141,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->v:Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;
 
-    const v1, 0x7f0c0206
+    const v1, 0x7f0c0209
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->a(I)V
 
@@ -1214,7 +1214,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->v:Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;
 
-    const v1, 0x7f0c020d
+    const v1, 0x7f0c0210
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->a(I)V
 
@@ -1227,7 +1227,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->v:Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;
 
-    const v1, 0x7f0c0207
+    const v1, 0x7f0c020a
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->a(I)V
 
@@ -1277,7 +1277,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->J:Landroid/widget/TextView;
 
-    const v2, 0x7f0c0248
+    const v2, 0x7f0c024b
 
     const/4 v3, 0x2
 
@@ -1602,7 +1602,7 @@
 
     const-string v1, "mainNotice"
 
-    const v2, 0x7f0c020a
+    const v2, 0x7f0c020d
 
     const/4 v3, 0x1
 
@@ -1622,7 +1622,7 @@
 
     const-string v1, "extraNotice"
 
-    const v2, 0x7f0c0209
+    const v2, 0x7f0c020c
 
     invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->getString(I)Ljava/lang/String;
 
@@ -1768,7 +1768,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->J:Landroid/widget/TextView;
 
-    const v1, 0x7f0c024c
+    const v1, 0x7f0c024f
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->getString(I)Ljava/lang/String;
 
@@ -1889,7 +1889,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->y:Landroid/widget/TextView;
 
-    const v3, 0x7f0c023d
+    const v3, 0x7f0c0240
 
     new-array v2, v2, [Ljava/lang/Object;
 
@@ -2201,7 +2201,7 @@
 
     if-nez v2, :cond_2
 
-    const v2, 0x7f0c0241
+    const v2, 0x7f0c0244
 
     const/4 v3, 0x0
 
@@ -2246,7 +2246,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030011
+    const v0, 0x7f030010
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->setContentView(I)V
 
@@ -2364,7 +2364,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->o:Ljava/lang/String;
 
-    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -2404,7 +2404,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->D:Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;
 
-    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/lab/datasync/b;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;Lcn/com/smartdevices/bracelet/model/ShareData;)Z
+    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/lab/datasync/a;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;Lcn/com/smartdevices/bracelet/model/ShareData;)Z
 
     :cond_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->d:Lcn/com/smartdevices/bracelet/lab/ui/ac;
@@ -2476,9 +2476,9 @@
 
     const-string v0, "PageLabSportIn"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->b(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->b(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -2490,9 +2490,9 @@
 
     const-string v0, "PageLabSportIn"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->a(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;)V
 
     return-void
 .end method

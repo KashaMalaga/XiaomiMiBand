@@ -29,9 +29,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/services/route/u;
+    new-instance v0, Lcom/amap/api/services/route/q;
 
-    invoke-direct {v0}, Lcom/amap/api/services/route/u;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/services/route/q;-><init>()V
 
     sput-object v0, Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -88,23 +88,7 @@
 
 
 # virtual methods
-.method public a()Lcom/amap/api/services/route/RouteSearch$FromAndTo;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;->a:Lcom/amap/api/services/route/RouteSearch$FromAndTo;
-
-    return-object v0
-.end method
-
-.method public b()I
-    .locals 1
-
-    iget v0, p0, Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;->b:I
-
-    return v0
-.end method
-
-.method public c()Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;
+.method public clone()Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;
     .locals 3
 
     :try_start_0
@@ -131,10 +115,10 @@
     goto :goto_0
 .end method
 
-.method public synthetic clone()Ljava/lang/Object;
+.method public bridge synthetic clone()Ljava/lang/Object;
     .locals 1
 
-    invoke-virtual {p0}, Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;->c()Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;
+    invoke-virtual {p0}, Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;->clone()Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;
 
     move-result-object v0
 
@@ -224,6 +208,22 @@
     move v0, v1
 
     goto :goto_0
+.end method
+
+.method public getFromAndTo()Lcom/amap/api/services/route/RouteSearch$FromAndTo;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;->a:Lcom/amap/api/services/route/RouteSearch$FromAndTo;
+
+    return-object v0
+.end method
+
+.method public getMode()I
+    .locals 1
+
+    iget v0, p0, Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;->b:I
+
+    return v0
 .end method
 
 .method public hashCode()I

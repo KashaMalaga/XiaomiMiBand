@@ -12,7 +12,7 @@
         value = {
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/lua/f;",
+            "Lcn/com/smartdevices/bracelet/lua/g;",
             ">;"
         }
     .end annotation
@@ -201,13 +201,13 @@
 .method public add(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/lua/f;
+    new-instance v0, Lcn/com/smartdevices/bracelet/lua/g;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/lua/f;-><init>(Lcn/com/smartdevices/bracelet/lua/LuaListAdapterFake;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/lua/g;-><init>(Lcn/com/smartdevices/bracelet/lua/LuaListAdapterFake;)V
 
-    iput-object p1, v0, Lcn/com/smartdevices/bracelet/lua/f;->a:Ljava/lang/String;
+    iput-object p1, v0, Lcn/com/smartdevices/bracelet/lua/g;->a:Ljava/lang/String;
 
-    iput-object p2, v0, Lcn/com/smartdevices/bracelet/lua/f;->b:Ljava/lang/String;
+    iput-object p2, v0, Lcn/com/smartdevices/bracelet/lua/g;->b:Ljava/lang/String;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/LuaListAdapterFake;->infoList:Ljava/util/List;
 
@@ -289,11 +289,11 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/lua/f;
+    check-cast v0, Lcn/com/smartdevices/bracelet/lua/g;
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/lua/g;
+    new-instance v2, Lcn/com/smartdevices/bracelet/lua/h;
 
-    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/lua/g;-><init>(Lcn/com/smartdevices/bracelet/lua/LuaListAdapterFake;)V
+    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/lua/h;-><init>(Lcn/com/smartdevices/bracelet/lua/LuaListAdapterFake;)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/LuaListAdapterFake;->mContext:Landroid/content/Context;
 
@@ -301,7 +301,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f030067
+    const v3, 0x7f03006c
 
     const/4 v4, 0x0
 
@@ -309,7 +309,7 @@
 
     move-result-object v3
 
-    const v1, 0x7f0701a8
+    const v1, 0x7f0701c2
 
     invoke-virtual {v3, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -317,15 +317,15 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    iput-object v1, v2, Lcn/com/smartdevices/bracelet/lua/g;->a:Landroid/widget/TextView;
+    iput-object v1, v2, Lcn/com/smartdevices/bracelet/lua/h;->a:Landroid/widget/TextView;
 
-    iget-object v1, v2, Lcn/com/smartdevices/bracelet/lua/g;->a:Landroid/widget/TextView;
+    iget-object v1, v2, Lcn/com/smartdevices/bracelet/lua/h;->a:Landroid/widget/TextView;
 
     sget-object v4, Landroid/graphics/Typeface;->DEFAULT:Landroid/graphics/Typeface;
 
     invoke-virtual {v1, v4, v5}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;I)V
 
-    const v1, 0x7f0701a9
+    const v1, 0x7f0701c3
 
     invoke-virtual {v3, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -333,15 +333,15 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    iput-object v1, v2, Lcn/com/smartdevices/bracelet/lua/g;->b:Landroid/widget/TextView;
+    iput-object v1, v2, Lcn/com/smartdevices/bracelet/lua/h;->b:Landroid/widget/TextView;
 
-    iget-object v1, v2, Lcn/com/smartdevices/bracelet/lua/g;->b:Landroid/widget/TextView;
+    iget-object v1, v2, Lcn/com/smartdevices/bracelet/lua/h;->b:Landroid/widget/TextView;
 
     sget-object v4, Landroid/graphics/Typeface;->DEFAULT:Landroid/graphics/Typeface;
 
     invoke-virtual {v1, v4, v5}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;I)V
 
-    const v1, 0x7f07008d
+    const v1, 0x7f070088
 
     invoke-virtual {v3, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -353,19 +353,19 @@
 
     invoke-virtual {v1, v4}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/lua/e;
+    new-instance v1, Lcn/com/smartdevices/bracelet/lua/f;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/lua/e;-><init>(Lcn/com/smartdevices/bracelet/lua/LuaListAdapterFake;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/lua/f;-><init>(Lcn/com/smartdevices/bracelet/lua/LuaListAdapterFake;)V
 
     invoke-virtual {v3, v1}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    iget-object v1, v2, Lcn/com/smartdevices/bracelet/lua/g;->a:Landroid/widget/TextView;
+    iget-object v1, v2, Lcn/com/smartdevices/bracelet/lua/h;->a:Landroid/widget/TextView;
 
     const-string v4, ""
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v1, v2, Lcn/com/smartdevices/bracelet/lua/g;->b:Landroid/widget/TextView;
+    iget-object v1, v2, Lcn/com/smartdevices/bracelet/lua/h;->b:Landroid/widget/TextView;
 
     const-string v4, ""
 
@@ -373,7 +373,7 @@
 
     invoke-virtual {v3, v2}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    iget-object v1, v2, Lcn/com/smartdevices/bracelet/lua/g;->a:Landroid/widget/TextView;
+    iget-object v1, v2, Lcn/com/smartdevices/bracelet/lua/h;->a:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
@@ -387,7 +387,7 @@
             "(",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/lua/f;",
+            "Lcn/com/smartdevices/bracelet/lua/g;",
             ">;)V"
         }
     .end annotation

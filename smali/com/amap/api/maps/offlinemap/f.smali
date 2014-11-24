@@ -11,7 +11,7 @@
         "Ljava/lang/Object;",
         "Landroid/os/Parcelable$Creator",
         "<",
-        "Lcom/amap/api/maps/offlinemap/City;",
+        "Lcom/amap/api/maps/offlinemap/OfflineMapCity;",
         ">;"
     }
 .end annotation
@@ -28,20 +28,20 @@
 
 
 # virtual methods
-.method public a(Landroid/os/Parcel;)Lcom/amap/api/maps/offlinemap/City;
+.method public a(Landroid/os/Parcel;)Lcom/amap/api/maps/offlinemap/OfflineMapCity;
     .locals 1
 
-    new-instance v0, Lcom/amap/api/maps/offlinemap/City;
+    new-instance v0, Lcom/amap/api/maps/offlinemap/OfflineMapCity;
 
-    invoke-direct {v0, p1}, Lcom/amap/api/maps/offlinemap/City;-><init>(Landroid/os/Parcel;)V
+    invoke-direct {v0, p1}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;-><init>(Landroid/os/Parcel;)V
 
     return-object v0
 .end method
 
-.method public a(I)[Lcom/amap/api/maps/offlinemap/City;
+.method public a(I)[Lcom/amap/api/maps/offlinemap/OfflineMapCity;
     .locals 1
 
-    new-array v0, p1, [Lcom/amap/api/maps/offlinemap/City;
+    new-array v0, p1, [Lcom/amap/api/maps/offlinemap/OfflineMapCity;
 
     return-object v0
 .end method
@@ -49,7 +49,7 @@
 .method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 1
 
-    invoke-virtual {p0, p1}, Lcom/amap/api/maps/offlinemap/f;->a(Landroid/os/Parcel;)Lcom/amap/api/maps/offlinemap/City;
+    invoke-virtual {p0, p1}, Lcom/amap/api/maps/offlinemap/f;->a(Landroid/os/Parcel;)Lcom/amap/api/maps/offlinemap/OfflineMapCity;
 
     move-result-object v0
 
@@ -59,7 +59,7 @@
 .method public synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
 
-    invoke-virtual {p0, p1}, Lcom/amap/api/maps/offlinemap/f;->a(I)[Lcom/amap/api/maps/offlinemap/City;
+    invoke-virtual {p0, p1}, Lcom/amap/api/maps/offlinemap/f;->a(I)[Lcom/amap/api/maps/offlinemap/OfflineMapCity;
 
     move-result-object v0
 

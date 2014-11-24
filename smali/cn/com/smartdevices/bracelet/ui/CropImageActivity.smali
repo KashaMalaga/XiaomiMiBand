@@ -338,7 +338,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/y;->l(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/z;->l(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -408,7 +408,7 @@
     goto :goto_1
 
     :pswitch_data_0
-    .packed-switch 0x7f0700e0
+    .packed-switch 0x7f0700ec
         :pswitch_1
         :pswitch_0
         :pswitch_2
@@ -420,7 +420,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030028
+    const v0, 0x7f03002a
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/CropImageActivity;->setContentView(I)V
 
@@ -440,7 +440,7 @@
 
     invoke-virtual {p0, v0, v1}, Lcn/com/smartdevices/bracelet/ui/CropImageActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    const v0, 0x7f0700da
+    const v0, 0x7f0700e6
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/CropImageActivity;->findViewById(I)Landroid/view/View;
 
@@ -450,7 +450,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/CropImageActivity;->d:Lcom/edmodo/cropper/CropImageView;
 
-    const v0, 0x7f0700e2
+    const v0, 0x7f0700ee
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/CropImageActivity;->findViewById(I)Landroid/view/View;
 
@@ -462,7 +462,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700e0
+    const v0, 0x7f0700ec
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/CropImageActivity;->findViewById(I)Landroid/view/View;
 
@@ -484,7 +484,7 @@
 
     const-string v0, "PagePersonInfoAvatarCrop"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->b(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -496,7 +496,7 @@
 
     const-string v0, "PagePersonInfoAvatarCrop"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->a(Ljava/lang/String;)V
 
     return-void
 .end method

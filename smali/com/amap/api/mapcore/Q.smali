@@ -1,99 +1,97 @@
-.class Lcom/amap/api/mapcore/Q;
+.class Lcom/amap/api/mapcore/q;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Lcom/amap/api/maps/b;
 
 
 # instance fields
-.field final synthetic a:Lcom/amap/api/maps/model/LatLngBounds;
+.field a:Lcom/amap/api/mapcore/q$a;
 
-.field final synthetic b:I
-
-.field final synthetic c:I
-
-.field final synthetic d:I
-
-.field final synthetic e:J
-
-.field final synthetic f:Lcom/amap/api/maps/b;
-
-.field final synthetic g:Lcom/amap/api/mapcore/b;
+.field private b:Ljava/util/concurrent/CopyOnWriteArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/concurrent/CopyOnWriteArrayList",
+            "<",
+            "Lcom/amap/api/mapcore/s;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method constructor <init>(Lcom/amap/api/mapcore/b;Lcom/amap/api/maps/model/LatLngBounds;IIIJLcom/amap/api/maps/b;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/mapcore/Q;->g:Lcom/amap/api/mapcore/b;
-
-    iput-object p2, p0, Lcom/amap/api/mapcore/Q;->a:Lcom/amap/api/maps/model/LatLngBounds;
-
-    iput p3, p0, Lcom/amap/api/mapcore/Q;->b:I
-
-    iput p4, p0, Lcom/amap/api/mapcore/Q;->c:I
-
-    iput p5, p0, Lcom/amap/api/mapcore/Q;->d:I
-
-    iput-wide p6, p0, Lcom/amap/api/mapcore/Q;->e:J
-
-    iput-object p8, p0, Lcom/amap/api/mapcore/Q;->f:Lcom/amap/api/maps/b;
+.method constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/amap/api/mapcore/q;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    new-instance v0, Lcom/amap/api/mapcore/q$a;
+
+    invoke-direct {v0}, Lcom/amap/api/mapcore/q$a;-><init>()V
+
+    iput-object v0, p0, Lcom/amap/api/mapcore/q;->a:Lcom/amap/api/mapcore/q$a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()V
-    .locals 5
+.method public a(Ljavax/microedition/khronos/opengles/GL10;)V
+    .locals 2
 
-    :try_start_0
-    iget-object v0, p0, Lcom/amap/api/mapcore/Q;->g:Lcom/amap/api/mapcore/b;
+    iget-object v0, p0, Lcom/amap/api/mapcore/q;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    iget-object v1, p0, Lcom/amap/api/mapcore/Q;->a:Lcom/amap/api/maps/model/LatLngBounds;
-
-    iget v2, p0, Lcom/amap/api/mapcore/Q;->b:I
-
-    iget v3, p0, Lcom/amap/api/mapcore/Q;->c:I
-
-    iget v4, p0, Lcom/amap/api/mapcore/Q;->d:I
-
-    invoke-static {v1, v2, v3, v4}, Lcom/amap/api/mapcore/aq;->a(Lcom/amap/api/maps/model/LatLngBounds;III)Lcom/amap/api/mapcore/aq;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    iget-wide v2, p0, Lcom/amap/api/mapcore/Q;->e:J
-
-    iget-object v4, p0, Lcom/amap/api/mapcore/Q;->f:Lcom/amap/api/maps/b;
-
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/amap/api/mapcore/b;->a(Lcom/amap/api/mapcore/aq;JLcom/amap/api/maps/b;)V
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
-
     :goto_0
-    return-void
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
-
-    goto :goto_0
-.end method
-
-.method public b()V
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/Q;->f:Lcom/amap/api/maps/b;
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/amap/api/mapcore/Q;->f:Lcom/amap/api/maps/b;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-interface {v0}, Lcom/amap/api/maps/b;->b()V
+    move-result-object v0
+
+    check-cast v0, Lcom/amap/api/mapcore/s;
+
+    invoke-virtual {v0, p1}, Lcom/amap/api/mapcore/s;->onDrawFrame(Ljavax/microedition/khronos/opengles/GL10;)V
+
+    goto :goto_0
 
     :cond_0
     return-void
+.end method
+
+.method public a(Lcom/amap/api/mapcore/s;)Z
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/q;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/q;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

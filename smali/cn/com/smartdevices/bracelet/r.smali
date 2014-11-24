@@ -131,6 +131,18 @@
 .method public static a(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
+    sget v0, Lcn/com/smartdevices/bracelet/r;->e:I
+
+    sget v1, Lcn/com/smartdevices/bracelet/r;->a:I
+
+    if-le v0, v1, :cond_0
+
+    sget v0, Lcn/com/smartdevices/bracelet/r;->e:I
+
+    sget v1, Lcn/com/smartdevices/bracelet/r;->c:I
+
+    if-ge v0, v1, :cond_0
+
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/r;->e()Ljava/lang/String;
@@ -153,6 +165,7 @@
 
     invoke-static {p0, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
+    :cond_0
     return-void
 .end method
 

@@ -34,7 +34,7 @@
 .method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
     .locals 4
 
-    invoke-static {p3}, Lcn/com/smartdevices/bracelet/y;->a([B)Ljava/lang/String;
+    invoke-static {p3}, Lcn/com/smartdevices/bracelet/z;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
@@ -63,7 +63,7 @@
 
     iget-object v1, p0, Lcom/xiaomi/hm/bleservice/d;->b:Lcn/com/smartdevices/bracelet/q;
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/q;->a()I
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/q;->b()I
 
     move-result v1
 
@@ -76,15 +76,15 @@
 .method public onSuccess(I[Lorg/apache/http/Header;[B)V
     .locals 4
 
-    invoke-static {p3}, Lcn/com/smartdevices/bracelet/y;->a([B)Ljava/lang/String;
+    invoke-static {p3}, Lcn/com/smartdevices/bracelet/z;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/d/e;->b(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/d/f;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/d/g;->b(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/d/h;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/d/f;->a()Z
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/d/h;->a()Z
 
     move-result v1
 
@@ -113,7 +113,7 @@
 
     iget-object v2, p0, Lcom/xiaomi/hm/bleservice/d;->b:Lcn/com/smartdevices/bracelet/q;
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/q;->a()I
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/q;->b()I
 
     move-result v2
 
@@ -136,7 +136,7 @@
 
     iget-object v1, p0, Lcom/xiaomi/hm/bleservice/d;->b:Lcn/com/smartdevices/bracelet/q;
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/q;->a()I
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/q;->b()I
 
     move-result v1
 
@@ -154,6 +154,12 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/o;->b(Ljava/util/ArrayList;ILcn/com/smartdevices/bracelet/q;)V
 
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/u;->f(J)V
+
     :goto_0
     return-void
 
@@ -162,7 +168,7 @@
 
     iget-object v1, p0, Lcom/xiaomi/hm/bleservice/d;->b:Lcn/com/smartdevices/bracelet/q;
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/q;->a()I
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/q;->b()I
 
     move-result v1
 

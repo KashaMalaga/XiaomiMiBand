@@ -28,9 +28,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/services/route/m;
+    new-instance v0, Lcom/amap/api/services/route/i;
 
-    invoke-direct {v0}, Lcom/amap/api/services/route/m;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/services/route/i;-><init>()V
 
     sput-object v0, Lcom/amap/api/services/route/Path;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -67,30 +67,6 @@
 
 
 # virtual methods
-.method public a(J)V
-    .locals 0
-
-    iput-wide p1, p0, Lcom/amap/api/services/route/Path;->b:J
-
-    return-void
-.end method
-
-.method public c()F
-    .locals 1
-
-    iget v0, p0, Lcom/amap/api/services/route/Path;->a:F
-
-    return v0
-.end method
-
-.method public d(F)V
-    .locals 0
-
-    iput p1, p0, Lcom/amap/api/services/route/Path;->a:F
-
-    return-void
-.end method
-
 .method public describeContents()I
     .locals 1
 
@@ -99,12 +75,36 @@
     return v0
 .end method
 
-.method public g()J
+.method public getDistance()F
+    .locals 1
+
+    iget v0, p0, Lcom/amap/api/services/route/Path;->a:F
+
+    return v0
+.end method
+
+.method public getDuration()J
     .locals 2
 
     iget-wide v0, p0, Lcom/amap/api/services/route/Path;->b:J
 
     return-wide v0
+.end method
+
+.method public setDistance(F)V
+    .locals 0
+
+    iput p1, p0, Lcom/amap/api/services/route/Path;->a:F
+
+    return-void
+.end method
+
+.method public setDuration(J)V
+    .locals 0
+
+    iput-wide p1, p0, Lcom/amap/api/services/route/Path;->b:J
+
+    return-void
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V

@@ -1,337 +1,302 @@
-.class Lcom/amap/api/mapcore/V;
+.class public interface abstract Lcom/amap/api/mapcore/v;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Lcom/amap/api/mapcore/a/e;
-
-
-# instance fields
-.field a:F
-
-.field b:F
-
-.field c:Lcom/autonavi/amap/mapcore/IPoint;
-
-.field d:Lcom/amap/api/mapcore/aq;
-
-.field final synthetic e:Lcom/amap/api/mapcore/b;
-
-
-# direct methods
-.method private constructor <init>(Lcom/amap/api/mapcore/b;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput-object p1, p0, Lcom/amap/api/mapcore/V;->e:Lcom/amap/api/mapcore/b;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput v0, p0, Lcom/amap/api/mapcore/V;->a:F
-
-    iput v0, p0, Lcom/amap/api/mapcore/V;->b:F
-
-    new-instance v0, Lcom/autonavi/amap/mapcore/IPoint;
-
-    invoke-direct {v0}, Lcom/autonavi/amap/mapcore/IPoint;-><init>()V
-
-    iput-object v0, p0, Lcom/amap/api/mapcore/V;->c:Lcom/autonavi/amap/mapcore/IPoint;
-
-    invoke-static {}, Lcom/amap/api/mapcore/aq;->a()Lcom/amap/api/mapcore/aq;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/amap/api/mapcore/V;->d:Lcom/amap/api/mapcore/aq;
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Lcom/amap/api/mapcore/b;Lcom/amap/api/mapcore/af;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/amap/api/mapcore/V;-><init>(Lcom/amap/api/mapcore/b;)V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public a(Lcom/amap/api/mapcore/a/d;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    iget-object v1, p0, Lcom/amap/api/mapcore/V;->e:Lcom/amap/api/mapcore/b;
-
-    invoke-static {v1}, Lcom/amap/api/mapcore/b;->i(Lcom/amap/api/mapcore/b;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    const/4 v0, 0x0
-
-    :cond_0
-    :goto_0
-    return v0
-
-    :cond_1
-    invoke-virtual {p1}, Lcom/amap/api/mapcore/a/d;->b()F
-
-    move-result v1
-
-    iget v2, p0, Lcom/amap/api/mapcore/V;->a:F
-
-    add-float/2addr v2, v1
-
-    iput v2, p0, Lcom/amap/api/mapcore/V;->a:F
-
-    iget-object v2, p0, Lcom/amap/api/mapcore/V;->e:Lcom/amap/api/mapcore/b;
-
-    invoke-static {v2}, Lcom/amap/api/mapcore/b;->F(Lcom/amap/api/mapcore/b;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_2
-
-    iget v2, p0, Lcom/amap/api/mapcore/V;->a:F
-
-    invoke-static {v2}, Ljava/lang/Math;->abs(F)F
-
-    move-result v2
-
-    const/high16 v3, 0x41f00000
-
-    cmpl-float v2, v2, v3
-
-    if-gtz v2, :cond_2
-
-    iget v2, p0, Lcom/amap/api/mapcore/V;->a:F
-
-    invoke-static {v2}, Ljava/lang/Math;->abs(F)F
-
-    move-result v2
-
-    const/high16 v3, 0x43af0000
-
-    cmpl-float v2, v2, v3
-
-    if-lez v2, :cond_0
-
-    :cond_2
-    iget-object v2, p0, Lcom/amap/api/mapcore/V;->e:Lcom/amap/api/mapcore/b;
-
-    invoke-static {v2, v0}, Lcom/amap/api/mapcore/b;->i(Lcom/amap/api/mapcore/b;Z)Z
-
-    iget-object v2, p0, Lcom/amap/api/mapcore/V;->e:Lcom/amap/api/mapcore/b;
-
-    invoke-static {v2}, Lcom/amap/api/mapcore/b;->o(Lcom/amap/api/mapcore/b;)Lcom/autonavi/amap/mapcore/MapProjection;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/autonavi/amap/mapcore/MapProjection;->getMapAngle()F
-
-    move-result v2
-
-    add-float/2addr v1, v2
-
-    iput v1, p0, Lcom/amap/api/mapcore/V;->b:F
-
-    iget-object v1, p0, Lcom/amap/api/mapcore/V;->d:Lcom/amap/api/mapcore/aq;
-
-    iget v2, p0, Lcom/amap/api/mapcore/V;->b:F
-
-    iput v2, v1, Lcom/amap/api/mapcore/aq;->g:F
-
-    iget-object v1, p0, Lcom/amap/api/mapcore/V;->e:Lcom/amap/api/mapcore/b;
-
-    iget-object v1, v1, Lcom/amap/api/mapcore/b;->a:Lcom/amap/api/mapcore/s;
-
-    iget-object v2, p0, Lcom/amap/api/mapcore/V;->d:Lcom/amap/api/mapcore/aq;
-
-    invoke-virtual {v1, v2}, Lcom/amap/api/mapcore/s;->a(Lcom/amap/api/mapcore/aq;)V
-
-    const/4 v1, 0x0
-
-    iput v1, p0, Lcom/amap/api/mapcore/V;->a:F
-
-    goto :goto_0
+.method public abstract B()Lcom/amap/api/maps/model/LatLngBounds;
 .end method
 
-.method public b(Lcom/amap/api/mapcore/a/d;)Z
-    .locals 5
-
-    const/4 v0, 0x0
-
-    :try_start_0
-    iget-object v1, p0, Lcom/amap/api/mapcore/V;->e:Lcom/amap/api/mapcore/b;
-
-    invoke-static {v1}, Lcom/amap/api/mapcore/b;->k(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/n;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lcom/amap/api/mapcore/n;->h()Z
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    :cond_0
-    :goto_0
-    return v0
-
-    :catch_0
-    move-exception v1
-
-    invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
-
-    :cond_1
-    iget-object v1, p0, Lcom/amap/api/mapcore/V;->e:Lcom/amap/api/mapcore/b;
-
-    invoke-static {v1}, Lcom/amap/api/mapcore/b;->l(Lcom/amap/api/mapcore/b;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    iget-object v1, p0, Lcom/amap/api/mapcore/V;->d:Lcom/amap/api/mapcore/aq;
-
-    sget-object v2, Lcom/amap/api/mapcore/ar;->e:Lcom/amap/api/mapcore/ar;
-
-    iput-object v2, v1, Lcom/amap/api/mapcore/aq;->a:Lcom/amap/api/mapcore/ar;
-
-    :goto_1
-    iget-object v1, p0, Lcom/amap/api/mapcore/V;->e:Lcom/amap/api/mapcore/b;
-
-    invoke-static {v1, v0}, Lcom/amap/api/mapcore/b;->i(Lcom/amap/api/mapcore/b;Z)Z
-
-    const/4 v1, 0x0
-
-    iput v1, p0, Lcom/amap/api/mapcore/V;->a:F
-
-    iget-object v1, p0, Lcom/amap/api/mapcore/V;->e:Lcom/amap/api/mapcore/b;
-
-    const/4 v2, 0x2
-
-    invoke-static {v1, v2}, Lcom/amap/api/mapcore/b;->a(Lcom/amap/api/mapcore/b;I)I
-
-    iget-object v1, p0, Lcom/amap/api/mapcore/V;->e:Lcom/amap/api/mapcore/b;
-
-    invoke-static {v1}, Lcom/amap/api/mapcore/b;->i(Lcom/amap/api/mapcore/b;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    iget-object v1, p0, Lcom/amap/api/mapcore/V;->e:Lcom/amap/api/mapcore/b;
-
-    invoke-virtual {v1}, Lcom/amap/api/mapcore/b;->getWidth()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    const/high16 v2, 0x40800000
-
-    div-float/2addr v1, v2
-
-    invoke-virtual {p1}, Lcom/amap/api/mapcore/a/d;->c()F
-
-    move-result v2
-
-    cmpg-float v1, v1, v2
-
-    if-gez v1, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v1, p0, Lcom/amap/api/mapcore/V;->d:Lcom/amap/api/mapcore/aq;
-
-    iget-object v2, p0, Lcom/amap/api/mapcore/V;->e:Lcom/amap/api/mapcore/b;
-
-    invoke-static {v2}, Lcom/amap/api/mapcore/b;->l(Lcom/amap/api/mapcore/b;)Z
-
-    move-result v2
-
-    iput-boolean v2, v1, Lcom/amap/api/mapcore/aq;->n:Z
-
-    iget-object v1, p0, Lcom/amap/api/mapcore/V;->d:Lcom/amap/api/mapcore/aq;
-
-    sget-object v2, Lcom/amap/api/mapcore/ar;->f:Lcom/amap/api/mapcore/ar;
-
-    iput-object v2, v1, Lcom/amap/api/mapcore/aq;->a:Lcom/amap/api/mapcore/ar;
-
-    iget-object v1, p0, Lcom/amap/api/mapcore/V;->e:Lcom/amap/api/mapcore/b;
-
-    iget-object v2, p0, Lcom/amap/api/mapcore/V;->e:Lcom/amap/api/mapcore/b;
-
-    invoke-static {v2}, Lcom/amap/api/mapcore/b;->m(Lcom/amap/api/mapcore/b;)I
-
-    move-result v2
-
-    iget-object v3, p0, Lcom/amap/api/mapcore/V;->e:Lcom/amap/api/mapcore/b;
-
-    invoke-static {v3}, Lcom/amap/api/mapcore/b;->n(Lcom/amap/api/mapcore/b;)I
-
-    move-result v3
-
-    iget-object v4, p0, Lcom/amap/api/mapcore/V;->c:Lcom/autonavi/amap/mapcore/IPoint;
-
-    invoke-virtual {v1, v2, v3, v4}, Lcom/amap/api/mapcore/b;->a(IILcom/autonavi/amap/mapcore/IPoint;)V
-
-    iget-object v1, p0, Lcom/amap/api/mapcore/V;->d:Lcom/amap/api/mapcore/aq;
-
-    iget-object v2, p0, Lcom/amap/api/mapcore/V;->c:Lcom/autonavi/amap/mapcore/IPoint;
-
-    iput-object v2, v1, Lcom/amap/api/mapcore/aq;->o:Lcom/autonavi/amap/mapcore/IPoint;
-
-    goto :goto_1
+.method public abstract E()F
 .end method
 
-.method public c(Lcom/amap/api/mapcore/a/d;)V
-    .locals 2
+.method public abstract F()I
+.end method
 
-    const/4 v0, 0x0
+.method public abstract G()Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcom/amap/api/maps/model/Marker;",
+            ">;"
+        }
+    .end annotation
+.end method
 
-    iput v0, p0, Lcom/amap/api/mapcore/V;->a:F
+.method public abstract H()V
+.end method
 
-    iget-object v0, p0, Lcom/amap/api/mapcore/V;->e:Lcom/amap/api/mapcore/b;
+.method public abstract I()V
+.end method
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->F(Lcom/amap/api/mapcore/b;)Z
+.method public abstract L()I
+.end method
 
-    move-result v0
+.method public abstract M()Z
+.end method
 
-    if-eqz v0, :cond_0
+.method public abstract N()Lcom/amap/api/mapcore/l;
+.end method
 
-    iget-object v0, p0, Lcom/amap/api/mapcore/V;->e:Lcom/amap/api/mapcore/b;
+.method public abstract a(Lcom/amap/api/maps/model/NavigateArrowOptions;)Lcom/amap/api/mapcore/ab;
+.end method
 
-    const/4 v1, 0x0
+.method public abstract a(Lcom/amap/api/maps/model/PolygonOptions;)Lcom/amap/api/mapcore/ad;
+.end method
 
-    invoke-static {v0, v1}, Lcom/amap/api/mapcore/b;->i(Lcom/amap/api/mapcore/b;Z)Z
+.method public abstract a(Lcom/amap/api/maps/model/PolylineOptions;)Lcom/amap/api/mapcore/ae;
+.end method
 
-    invoke-static {}, Lcom/amap/api/mapcore/aq;->a()Lcom/amap/api/mapcore/aq;
+.method public abstract a(Lcom/amap/api/maps/model/ArcOptions;)Lcom/amap/api/mapcore/w;
+.end method
 
-    move-result-object v0
+.method public abstract a(Lcom/amap/api/maps/model/CircleOptions;)Lcom/amap/api/mapcore/x;
+.end method
 
-    const/4 v1, 0x1
+.method public abstract a(Lcom/amap/api/maps/model/GroundOverlayOptions;)Lcom/amap/api/mapcore/y;
+.end method
 
-    iput-boolean v1, v0, Lcom/amap/api/mapcore/aq;->p:Z
+.method public abstract a(Lcom/amap/api/maps/model/MarkerOptions;)Lcom/amap/api/maps/model/Marker;
+.end method
 
-    iget-object v1, p0, Lcom/amap/api/mapcore/V;->e:Lcom/amap/api/mapcore/b;
+.method public abstract a(Lcom/amap/api/maps/model/TileOverlayOptions;)Lcom/amap/api/maps/model/TileOverlay;
+.end method
 
-    iget-object v1, v1, Lcom/amap/api/mapcore/b;->a:Lcom/amap/api/mapcore/s;
+.method public abstract a(Ljava/util/ArrayList;Z)Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/amap/api/maps/model/MarkerOptions;",
+            ">;Z)",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/amap/api/maps/model/Marker;",
+            ">;"
+        }
+    .end annotation
+.end method
 
-    invoke-virtual {v1, v0}, Lcom/amap/api/mapcore/s;->a(Lcom/amap/api/mapcore/aq;)V
+.method public abstract a(DDLcom/autonavi/amap/mapcore/FPoint;)V
+.end method
 
-    :cond_0
-    iget-object v0, p0, Lcom/amap/api/mapcore/V;->e:Lcom/amap/api/mapcore/b;
+.method public abstract a(DDLcom/autonavi/amap/mapcore/IPoint;)V
+.end method
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->p(Lcom/amap/api/mapcore/b;)V
+.method public abstract a(F)V
+.end method
 
-    return-void
+.method public abstract a(I)V
+.end method
+
+.method public abstract a(II)V
+.end method
+
+.method public abstract a(IIII)V
+.end method
+
+.method public abstract a(IILcom/autonavi/amap/mapcore/DPoint;)V
+.end method
+
+.method public abstract a(IILcom/autonavi/amap/mapcore/FPoint;)V
+.end method
+
+.method public abstract a(Landroid/location/Location;)V
+.end method
+
+.method public abstract a(Lcom/amap/api/mapcore/aa;)V
+.end method
+
+.method public abstract a(Lcom/amap/api/mapcore/m;)V
+.end method
+
+.method public abstract a(Lcom/amap/api/mapcore/m;JLcom/amap/api/maps/AMap$CancelableCallback;)V
+.end method
+
+.method public abstract a(Lcom/amap/api/mapcore/m;Lcom/amap/api/maps/AMap$CancelableCallback;)V
+.end method
+
+.method public abstract a(Lcom/amap/api/mapcore/s;)V
+.end method
+
+.method public abstract a(Lcom/amap/api/maps/AMap$InfoWindowAdapter;)V
+.end method
+
+.method public abstract a(Lcom/amap/api/maps/AMap$OnCameraChangeListener;)V
+.end method
+
+.method public abstract a(Lcom/amap/api/maps/AMap$OnInfoWindowClickListener;)V
+.end method
+
+.method public abstract a(Lcom/amap/api/maps/AMap$OnMapClickListener;)V
+.end method
+
+.method public abstract a(Lcom/amap/api/maps/AMap$OnMapLoadedListener;)V
+.end method
+
+.method public abstract a(Lcom/amap/api/maps/AMap$OnMapLongClickListener;)V
+.end method
+
+.method public abstract a(Lcom/amap/api/maps/AMap$OnMapScreenShotListener;)V
+.end method
+
+.method public abstract a(Lcom/amap/api/maps/AMap$OnMapTouchListener;)V
+.end method
+
+.method public abstract a(Lcom/amap/api/maps/AMap$OnMarkerClickListener;)V
+.end method
+
+.method public abstract a(Lcom/amap/api/maps/AMap$OnMarkerDragListener;)V
+.end method
+
+.method public abstract a(Lcom/amap/api/maps/AMap$OnMyLocationChangeListener;)V
+.end method
+
+.method public abstract a(Lcom/amap/api/maps/AMap$onMapPrintScreenListener;)V
+.end method
+
+.method public abstract a(Lcom/amap/api/maps/CustomRenderer;)V
+.end method
+
+.method public abstract a(Lcom/amap/api/maps/LocationSource;)V
+.end method
+
+.method public abstract a(Lcom/amap/api/maps/model/MyLocationStyle;)V
+.end method
+
+.method public abstract a(Z)V
+.end method
+
+.method public abstract a(Ljava/lang/String;)Z
+.end method
+
+.method public abstract b()I
+.end method
+
+.method public abstract b(DDLcom/autonavi/amap/mapcore/IPoint;)V
+.end method
+
+.method public abstract b(I)V
+.end method
+
+.method public abstract b(IILcom/autonavi/amap/mapcore/DPoint;)V
+.end method
+
+.method public abstract b(IILcom/autonavi/amap/mapcore/FPoint;)V
+.end method
+
+.method public abstract b(Lcom/amap/api/mapcore/m;)V
+.end method
+
+.method public abstract b(Z)V
+.end method
+
+.method public abstract b(Lcom/amap/api/mapcore/aa;)Z
+.end method
+
+.method public abstract c(I)F
+.end method
+
+.method public abstract c()Lcom/autonavi/amap/mapcore/MapProjection;
+.end method
+
+.method public abstract c(Z)V
+.end method
+
+.method public abstract d()V
+.end method
+
+.method public abstract d(I)V
+.end method
+
+.method public abstract d(Z)V
+.end method
+
+.method public abstract e(I)V
+.end method
+
+.method public abstract e(Z)V
+.end method
+
+.method public abstract f(I)V
+.end method
+
+.method public abstract f(Z)V
+.end method
+
+.method public abstract g(I)V
+.end method
+
+.method public abstract g(Z)V
+.end method
+
+.method public abstract h()I
+.end method
+
+.method public abstract h(Z)Lcom/amap/api/maps/model/CameraPosition;
+.end method
+
+.method public abstract i()I
+.end method
+
+.method public abstract j()I
+.end method
+
+.method public abstract k()V
+.end method
+
+.method public abstract k(Z)V
+.end method
+
+.method public abstract l()Lcom/amap/api/maps/model/CameraPosition;
+.end method
+
+.method public abstract m()F
+.end method
+
+.method public abstract n()F
+.end method
+
+.method public abstract o()V
+.end method
+
+.method public abstract onPause()V
+.end method
+
+.method public abstract onResume()V
+.end method
+
+.method public abstract p()V
+.end method
+
+.method public abstract q()I
+.end method
+
+.method public abstract r()Z
+.end method
+
+.method public abstract s()Z
+.end method
+
+.method public abstract setZOrderOnTop(Z)V
+.end method
+
+.method public abstract t()Landroid/location/Location;
+.end method
+
+.method public abstract u()Lcom/amap/api/mapcore/ai;
+.end method
+
+.method public abstract v()Lcom/amap/api/mapcore/af;
+.end method
+
+.method public abstract x()Landroid/view/View;
+.end method
+
+.method public abstract y()V
+.end method
+
+.method public abstract z()F
 .end method

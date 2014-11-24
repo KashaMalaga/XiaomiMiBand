@@ -1,67 +1,31 @@
 .class Lcn/com/smartdevices/bracelet/ui/cp;
-.super Landroid/os/Handler;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/cn;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/cl;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/cn;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/cl;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cp;->a:Lcn/com/smartdevices/bracelet/ui/cn;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cp;->a:Lcn/com/smartdevices/bracelet/ui/cl;
 
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public handleMessage(Landroid/os/Message;)V
-    .locals 2
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 0
 
-    iget v0, p1, Landroid/os/Message;->what:I
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    sparse-switch v0, :sswitch_data_0
-
-    :goto_0
     return-void
-
-    :sswitch_0
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cp;->a:Lcn/com/smartdevices/bracelet/ui/cn;
-
-    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;
-
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/ui/cn;->b(Lcn/com/smartdevices/bracelet/ui/cn;Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cp;->a:Lcn/com/smartdevices/bracelet/ui/cn;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cp;->a:Lcn/com/smartdevices/bracelet/ui/cn;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/cn;->a(Lcn/com/smartdevices/bracelet/ui/cn;)Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/cn;->c(Lcn/com/smartdevices/bracelet/ui/cn;Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;)V
-
-    goto :goto_0
-
-    :sswitch_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cp;->a:Lcn/com/smartdevices/bracelet/ui/cn;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/cn;->b(Lcn/com/smartdevices/bracelet/ui/cn;)V
-
-    goto :goto_0
-
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        0x1 -> :sswitch_0
-        0x1002 -> :sswitch_1
-    .end sparse-switch
 .end method

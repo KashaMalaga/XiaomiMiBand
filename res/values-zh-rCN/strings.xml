@@ -261,8 +261,6 @@
     <string name="bracelet_login_info_2">登录则表示您同意遵守小米的</string>
     <string name="please_input_gender">请选择你的性别</string>
     <string name="input_precise_person_info">请输入准确的个人信息, 以便精确计算运动和睡眠结果</string>
-    <string name="age">年龄</string>
-    <string name="ages">岁</string>
     <string name="check_upgrade">检查更新</string>
     <string name="visit_micom">访问官网</string>
     <string name="apk_uptodate">已经是最新版本</string>
@@ -322,7 +320,7 @@
     <string name="green">绿色</string>
     <string name="orange">橙色</string>
     <string name="fw_upgrade_now">正在更新固件</string>
-    <string name="please_input_age">你的年龄</string>
+    <string name="please_input_birthday">你的出生年月</string>
     <string name="your_height">你的身高</string>
     <string name="your_weight">你的体重</string>
     <string name="please_set_sport_goal">请设定运动目标</string>
@@ -406,7 +404,7 @@
     <string name="bind_weixin_succ">绑定成功, 赶快用微信体验吧！</string>
     <string name="bind_weixin_save">已保存至相册：</string>
     <string name="incoming_call_notify">来电提醒</string>
-    <string name="incoming_call_notify_tips">来电%s秒钟未接提醒我</string>
+    <string name="incoming_call_notify_tips">%s秒钟未接提醒我</string>
     <string name="share_step_walk">, 我共走了</string>
     <string name="one_week">一周</string>
     <string name="walked">走了</string>
@@ -552,6 +550,8 @@
     <string name="battery">电量</string>
     <string name="signal_strength">信号强度：</string>
     <string name="confirm_lazy_day">确定使用假条?</string>
+    <string name="closed">关闭</string>
+    <string name="birthday">出生年月</string>
     <string name="lab_factory_title">实验室</string>
     <string name="lab_factory_sport_type_situp">仰卧起坐</string>
     <string name="lab_factory_sport_type_ropeskipping">跳绳</string>
@@ -632,7 +632,7 @@
     <string name="lab_factory_disconnected_reminder">蓝牙断开连接提醒</string>
     <string name="lab_factory_disconnected_reminder_tips">当手环与手机蓝牙连接断开时，手环会振动1次并且点亮白色指示灯进行提醒</string>
     <string name="lab_factory_disconnected_reminder_disconnect">请先连接手环,再进行提醒设置</string>
-    <string name="sport_running_helper">跑步助手</string>
+    <string name="sport_running_helper">跑步伴侣</string>
     <string name="sport_share">立即分享</string>
     <string name="sport_running_no_gps">打开GPS才能准确记录你的运动轨迹，是否打开？</string>
     <string name="sport_running_set_speed">速度提醒</string>
@@ -640,9 +640,9 @@
     <string name="sport_running_pace">配速</string>
     <string name="sport_running_set_goal">跑步目标</string>
     <string name="sport_running_set_dist">距离提醒</string>
-    <string name="sport_running_speed_detail">%d公里/小时</string>
+    <string name="sport_running_speed_detail">%.0f公里/时</string>
     <string name="sport_running_pace_detail">%s/公里</string>
-    <string name="sport_running_distance_detail">%s公里</string>
+    <string name="sport_running_distance_detail">%.1f公里</string>
     <string name="sport_running_time_desc">用时</string>
     <string name="sport_running_start">开始</string>
     <string name="sport_running_gps_turnon">打开</string>
@@ -650,16 +650,33 @@
     <string name="sport_running_settings">设置</string>
     <string name="sport_running_history">历史</string>
     <string name="sport_running_slider_prompt">>>>向右滑动解锁</string>
+    <string name="sport_running_distance">距离</string>
+    <string name="sport_running_average_speed">匀速</string>
+    <string name="sport_running_step">步数</string>
+    <string name="sport_running_altitude">海拔</string>
+    <string name="sport_running_burn">消耗</string>
+    <string name="sport_running_start_time">开始时间</string>
+    <string name="sport_running_end_time">结束时间</string>
+    <string name="sport_running_history_title">历史记录</string>
+    <string name="sport_running_history_date" formatted="false">"%d月%d日
+%d年"</string>
+    <string name="sport_running_history_no_data">暂无数据</string>
+    <string name="sport_running_cost_cal">%.1f千卡</string>
+    <string name="sport_running_prepare_map">正在准备地图数据，请稍候……</string>
     <string name="sport_ranking_desc_poor">您的成绩在所有%s用户中垫底，加油啊！</string>
     <string name="sport_ranking_desc_normal" formatted="false">您打败了全国 &lt;b>%s&lt;/b> 的%s用户！</string>
     <string name="sport_ranking_desc_great">您已经到了独孤求败的境界！</string>
     <string name="sport_new_record_ropeskipping">连跳新纪录</string>
     <string name="percent_mark">%</string>
     <string name="share_step_ranking">超过全国 &lt;b>%s&lt;/b> 的用户！</string>
-    <string name="sport_running_helper_test">跑步助手测试</string>
+    <string name="buy_bracelet_desc">先买个手环吧</string>
+    <string name="bracelet_store_desc">手环商城</string>
     <string name="congrats">恭喜</string>
     <string name="bind_qq_health_tip_init">登录后继续完成绑定QQ健康</string>
     <string name="bind_qq_health_tip_another_qq">需要切换至手机QQ当前登录的账号, 才能在健康看到数据</string>
     <string name="share_to_content_for_event">我报名参加了“国庆七天,日行万步得小米手机4”的活动, 你愿意站在一旁默默祝福还是一起来参加呢？快来报名吧！</string>
     <string name="share_to_topic_for_event">\#小米手环日行万步#</string>
+    <string name="sport_running_pause">暂停</string>
+    <string name="sport_running_resume">继续</string>
+    <string name="sport_running_stop">停止</string>
 </resources>

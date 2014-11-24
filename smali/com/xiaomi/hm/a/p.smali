@@ -11,9 +11,13 @@
 
 .field public static final localization_english:I = 0x7f060003
 
-.field public static final localization_traditional_chinese:I = 0x7f060004
+.field public static final localization_indo:I = 0x7f060004
 
-.field public static final luafile:I = 0x7f060005
+.field public static final localization_traditional_chinese:I = 0x7f060005
+
+.field public static final luafile:I = 0x7f060006
+
+.field public static final string_utils:I = 0x7f060007
 
 
 # direct methods

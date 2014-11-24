@@ -128,7 +128,7 @@
 
     move-object v0, p1
 
-    invoke-static/range {v0 .. v7}, Lcn/com/smartdevices/bracelet/chart/c/u;->a(Landroid/graphics/Canvas;FFFZZLandroid/graphics/Bitmap;Landroid/graphics/Paint;)V
+    invoke-static/range {v0 .. v7}, Lcn/com/smartdevices/bracelet/chart/c/t;->a(Landroid/graphics/Canvas;FFFZZLandroid/graphics/Bitmap;Landroid/graphics/Paint;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/b;->a:Lcn/com/smartdevices/bracelet/chart/a;
 
@@ -192,7 +192,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/chart/b;->d:Landroid/graphics/Paint;
 
-    invoke-static {p1, v1, v0, v2}, Lcn/com/smartdevices/bracelet/chart/c/u;->a(Landroid/graphics/Canvas;Landroid/graphics/RectF;Ljava/lang/String;Landroid/graphics/Paint;)V
+    invoke-static {p1, v1, v0, v2}, Lcn/com/smartdevices/bracelet/chart/c/t;->a(Landroid/graphics/Canvas;Landroid/graphics/RectF;Ljava/lang/String;Landroid/graphics/Paint;)V
 
     iget v0, p2, Landroid/graphics/RectF;->right:F
 
@@ -234,7 +234,7 @@
 
     move-object v0, p1
 
-    invoke-static/range {v0 .. v7}, Lcn/com/smartdevices/bracelet/chart/c/u;->a(Landroid/graphics/Canvas;FFFZZLandroid/graphics/Bitmap;Landroid/graphics/Paint;)V
+    invoke-static/range {v0 .. v7}, Lcn/com/smartdevices/bracelet/chart/c/t;->a(Landroid/graphics/Canvas;FFFZZLandroid/graphics/Bitmap;Landroid/graphics/Paint;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/b;->a:Lcn/com/smartdevices/bracelet/chart/a;
 
@@ -306,7 +306,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/chart/b;->d:Landroid/graphics/Paint;
 
-    invoke-static {p1, v1, v0, v2}, Lcn/com/smartdevices/bracelet/chart/c/u;->a(Landroid/graphics/Canvas;Landroid/graphics/RectF;Ljava/lang/String;Landroid/graphics/Paint;)V
+    invoke-static {p1, v1, v0, v2}, Lcn/com/smartdevices/bracelet/chart/c/t;->a(Landroid/graphics/Canvas;Landroid/graphics/RectF;Ljava/lang/String;Landroid/graphics/Paint;)V
 
     goto/16 :goto_0
 .end method

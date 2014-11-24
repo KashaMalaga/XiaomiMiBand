@@ -99,7 +99,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->g:Landroid/widget/TextView;
 
-    const v2, 0x7f0c016a
+    const v2, 0x7f0c0168
 
     invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->getString(I)Ljava/lang/String;
 
@@ -166,7 +166,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->g:Landroid/widget/TextView;
 
-    const v2, 0x7f0c0169
+    const v2, 0x7f0c0167
 
     invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->getString(I)Ljava/lang/String;
 
@@ -489,7 +489,7 @@
 .method private d()Z
     .locals 1
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->i(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/z;->i(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -544,10 +544,10 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f0700c1 -> :sswitch_1
-        0x7f0700c5 -> :sswitch_2
-        0x7f0700c7 -> :sswitch_0
-        0x7f0700ca -> :sswitch_3
+        0x7f0700cd -> :sswitch_1
+        0x7f0700d1 -> :sswitch_2
+        0x7f0700d3 -> :sswitch_0
+        0x7f0700d6 -> :sswitch_3
     .end sparse-switch
 .end method
 
@@ -556,11 +556,11 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030021
+    const v0, 0x7f030023
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->setContentView(I)V
 
-    const v0, 0x7f0700c5
+    const v0, 0x7f0700d1
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->findViewById(I)Landroid/view/View;
 
@@ -572,7 +572,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700c7
+    const v0, 0x7f0700d3
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->findViewById(I)Landroid/view/View;
 
@@ -584,7 +584,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700c8
+    const v0, 0x7f0700d4
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->findViewById(I)Landroid/view/View;
 
@@ -594,7 +594,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->f:Landroid/widget/TextView;
 
-    const v0, 0x7f0700c1
+    const v0, 0x7f0700cd
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->findViewById(I)Landroid/view/View;
 
@@ -604,7 +604,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700c9
+    const v0, 0x7f0700d5
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->findViewById(I)Landroid/view/View;
 
@@ -614,7 +614,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->i:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f0700c3
+    const v0, 0x7f0700cf
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->findViewById(I)Landroid/view/View;
 
@@ -624,7 +624,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->j:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f0700cb
+    const v0, 0x7f0700d7
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->findViewById(I)Landroid/view/View;
 
@@ -632,7 +632,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->l:Landroid/view/View;
 
-    const v0, 0x7f0700c2
+    const v0, 0x7f0700ce
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->findViewById(I)Landroid/view/View;
 
@@ -642,7 +642,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->k:Landroid/widget/TextView;
 
-    const v0, 0x7f0700ca
+    const v0, 0x7f0700d6
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->findViewById(I)Landroid/view/View;
 
@@ -676,7 +676,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700c4
+    const v0, 0x7f0700d0
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->findViewById(I)Landroid/view/View;
 
@@ -686,7 +686,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->g:Landroid/widget/TextView;
 
-    const v0, 0x7f0700c6
+    const v0, 0x7f0700d2
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->findViewById(I)Landroid/view/View;
 
@@ -696,7 +696,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->h:Landroid/widget/TextView;
 
-    const v0, 0x7f0700c0
+    const v0, 0x7f0700cc
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->findViewById(I)Landroid/view/View;
 
@@ -706,7 +706,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->n:Landroid/widget/FrameLayout;
 
-    const v0, 0x7f0700cc
+    const v0, 0x7f0700d8
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->findViewById(I)Landroid/view/View;
 
@@ -736,7 +736,7 @@
 
     invoke-virtual {v0, p0}, Lde/greenrobot/event/EventBus;->unregister(Ljava/lang/Object;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->d(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/z;->d(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -746,7 +746,7 @@
 
     const-string v1, "ON"
 
-    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -756,7 +756,7 @@
 
     const-string v1, "OFF"
 
-    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -806,9 +806,9 @@
 
     const-string v0, "PageUnlockHelp"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->b(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->b(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -822,9 +822,9 @@
 
     const-string v0, "PageUnlockHelp"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->a(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;)V
 
     return-void
 .end method

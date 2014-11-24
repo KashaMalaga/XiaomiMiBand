@@ -9,7 +9,7 @@
 .method public abstract a(Landroid/app/PendingIntent;)V
 .end method
 
-.method public abstract a(Landroid/content/Context;Lcom/amap/api/location/q;)V
+.method public abstract a(Landroid/content/Context;Lcom/amap/api/location/d;)V
 .end method
 
 .method public abstract a(Lcom/a/W;Landroid/app/PendingIntent;)V

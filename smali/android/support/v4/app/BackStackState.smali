@@ -205,7 +205,7 @@
 
     iget-object v0, v5, Landroid/support/v4/app/r;->d:Landroid/support/v4/app/Fragment;
 
-    iget v0, v0, Landroid/support/v4/app/Fragment;->y:I
+    iget v0, v0, Landroid/support/v4/app/Fragment;->mIndex:I
 
     :goto_2
     aput v0, v1, v2
@@ -275,7 +275,7 @@
 
     check-cast v0, Landroid/support/v4/app/Fragment;
 
-    iget v0, v0, Landroid/support/v4/app/Fragment;->y:I
+    iget v0, v0, Landroid/support/v4/app/Fragment;->mIndex:I
 
     aput v0, v7, v1
 

@@ -15,7 +15,9 @@
 
 .field public static final f:Ljava/lang/String; = "data"
 
-.field public static final g:Ljava/lang/String; = "sync"
+.field public static final g:Ljava/lang/String; = "groupCnt"
+
+.field public static final h:Ljava/lang/String; = "sync"
 
 
 # direct methods

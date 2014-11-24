@@ -495,6 +495,54 @@
     return v0
 .end method
 
+.method public static U()Ljava/lang/String;
+    .locals 3
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/u;->c:Landroid/content/SharedPreferences;
+
+    const-string v1, "push_lua_item"
+
+    const-string v2, ""
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static V()Ljava/lang/String;
+    .locals 3
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/u;->c:Landroid/content/SharedPreferences;
+
+    const-string v1, "push_intent"
+
+    const-string v2, ""
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static W()J
+    .locals 4
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/u;->c:Landroid/content/SharedPreferences;
+
+    const-string v1, "sync_to_server_timestamp"
+
+    const-wide/16 v2, -0x1
+
+    invoke-interface {v0, v1, v2, v3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
 .method public static a()Landroid/content/SharedPreferences;
     .locals 1
 
@@ -745,6 +793,14 @@
 
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
+    const-string v1, "person_info_birthday"
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getBirthday()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
 
     if-eqz v1, :cond_0
@@ -963,7 +1019,7 @@
 
     move-result-object v1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->g()Lcom/b/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->g()Lcom/b/a/k;
 
     move-result-object v0
 
@@ -1398,6 +1454,24 @@
     return-wide v0
 .end method
 
+.method public static f(J)V
+    .locals 2
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/u;->c:Landroid/content/SharedPreferences;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string v1, "sync_to_server_timestamp"
+
+    invoke-interface {v0, v1, p0, p1}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    return-void
+.end method
+
 .method public static f(Ljava/lang/String;)V
     .locals 2
 
@@ -1691,6 +1765,18 @@
 
     iput-object v1, v0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->alarmClockItems:Ljava/util/ArrayList;
 
+    sget-object v1, Lcn/com/smartdevices/bracelet/u;->c:Landroid/content/SharedPreferences;
+
+    const-string v2, "person_info_birthday"
+
+    const-string v3, ""
+
+    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->setBirthday(Ljava/lang/String;)V
+
     return-object v0
 .end method
 
@@ -1812,6 +1898,20 @@
     move-result v1
 
     iput v1, v0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->age:I
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/u;->c:Landroid/content/SharedPreferences;
+
+    const-string v2, "person_info_birthday"
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getBirthday()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->birthday:Ljava/lang/String;
 
     sget-object v1, Lcn/com/smartdevices/bracelet/u;->c:Landroid/content/SharedPreferences;
 
@@ -1948,6 +2048,24 @@
     return-object v0
 .end method
 
+.method public static l(Ljava/lang/String;)V
+    .locals 2
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/u;->c:Landroid/content/SharedPreferences;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string v1, "push_lua_item"
+
+    invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    return-void
+.end method
+
 .method public static m()Lcn/com/smartdevices/bracelet/model/PersonInfo;
     .locals 4
 
@@ -1972,6 +2090,24 @@
     iput-object v1, v0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
 
     return-object v0
+.end method
+
+.method public static m(Ljava/lang/String;)V
+    .locals 2
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/u;->c:Landroid/content/SharedPreferences;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string v1, "push_intent"
+
+    invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    return-void
 .end method
 
 .method public static n()Ljava/util/ArrayList;
@@ -2095,7 +2231,7 @@
 
     const-string v2, "UPDATE_DATE_REF"
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->g()Lcom/b/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->g()Lcom/b/a/k;
 
     move-result-object v3
 
@@ -2141,7 +2277,7 @@
 
     invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->g()Lcom/b/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->g()Lcom/b/a/k;
 
     move-result-object v1
 
@@ -2265,7 +2401,7 @@
     const/4 v1, 0x0
 
     :try_start_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->g()Lcom/b/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->g()Lcom/b/a/k;
 
     move-result-object v2
 

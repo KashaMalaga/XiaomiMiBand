@@ -45,7 +45,7 @@
 .method private a()V
     .locals 1
 
-    const v0, 0x7f070041
+    const v0, 0x7f07003c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportVoteOthersActivity;->findViewById(I)Landroid/view/View;
 
@@ -139,8 +139,8 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f070041 -> :sswitch_0
-        0x7f07007b -> :sswitch_1
+        0x7f07003c -> :sswitch_0
+        0x7f070076 -> :sswitch_1
     .end sparse-switch
 .end method
 
@@ -149,13 +149,13 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030015
+    const v0, 0x7f030014
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportVoteOthersActivity;->setContentView(I)V
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/ui/SportVoteOthersActivity;->a()V
 
-    const v0, 0x7f07007a
+    const v0, 0x7f070075
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportVoteOthersActivity;->findViewById(I)Landroid/view/View;
 
@@ -177,7 +177,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
-    const v0, 0x7f07007b
+    const v0, 0x7f070076
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportVoteOthersActivity;->findViewById(I)Landroid/view/View;
 
@@ -213,9 +213,9 @@
 
     const-string v0, "PageLabSportVoteOthers"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->b(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->b(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -227,9 +227,9 @@
 
     const-string v0, "PageLabSportVoteOthers"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->a(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;)V
 
     return-void
 .end method

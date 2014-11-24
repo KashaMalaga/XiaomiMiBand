@@ -1,43 +1,22 @@
-.class public interface abstract Lcn/com/smartdevices/bracelet/gps/b/k;
+.class public final Lcn/com/smartdevices/bracelet/gps/b/k;
 .super Ljava/lang/Object;
 
 
-# virtual methods
-.method public abstract a()V
-.end method
+# static fields
+.field public static final a:I = 0x1
 
-.method public abstract a(F)V
-.end method
+.field public static final b:I = 0x2
 
-.method public abstract a(I)V
-.end method
+.field public static final c:I = 0x3
 
-.method public abstract a(Lcn/com/smartdevices/bracelet/gps/model/c;)V
-.end method
+.field public static final d:I = 0x4
 
-.method public abstract a(Ljava/util/List;Z)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcn/com/smartdevices/bracelet/gps/model/c;",
-            ">;Z)V"
-        }
-    .end annotation
-.end method
 
-.method public abstract a(Z)V
-.end method
+# direct methods
+.method public constructor <init>()V
+    .locals 0
 
-.method public abstract b(Lcn/com/smartdevices/bracelet/gps/model/c;)V
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract c(Lcn/com/smartdevices/bracelet/gps/model/c;)V
-.end method
-
-.method public abstract d(Lcn/com/smartdevices/bracelet/gps/model/c;)V
-.end method
-
-.method public abstract e(Lcn/com/smartdevices/bracelet/gps/model/c;)V
+    return-void
 .end method

@@ -35,7 +35,7 @@
             "Ljava/util/HashMap",
             "<",
             "Ljava/lang/String;",
-            "Lcn/com/smartdevices/bracelet/chart/c/t;",
+            "Lcn/com/smartdevices/bracelet/model/UserSleepModify;",
             ">;"
         }
     .end annotation
@@ -82,7 +82,7 @@
 
 
 # virtual methods
-.method public a(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/chart/c/t;
+.method public a(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/UserSleepModify;
     .locals 4
 
     invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/model/SportDay;->getKey()Ljava/lang/String;
@@ -103,7 +103,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/c/t;
+    check-cast v0, Lcn/com/smartdevices/bracelet/model/UserSleepModify;
 
     :cond_0
     :goto_0
@@ -118,9 +118,9 @@
 
     move-result-object v2
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/chart/c/t;
+    new-instance v0, Lcn/com/smartdevices/bracelet/model/UserSleepModify;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/chart/c/t;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/model/UserSleepModify;-><init>()V
 
     if-eqz v2, :cond_0
 
@@ -128,15 +128,15 @@
 
     move-result v3
 
-    iput v3, v0, Lcn/com/smartdevices/bracelet/chart/c/t;->a:I
+    iput v3, v0, Lcn/com/smartdevices/bracelet/model/UserSleepModify;->sleepStart:I
 
     invoke-interface {v2}, Lcn/com/smartdevices/bracelet/model/DaySportData$Summary;->getUserSleepEnd()I
 
     move-result v2
 
-    iput v2, v0, Lcn/com/smartdevices/bracelet/chart/c/t;->b:I
+    iput v2, v0, Lcn/com/smartdevices/bracelet/model/UserSleepModify;->sleepEnd:I
 
-    invoke-virtual {p0, p1, v0}, Lcn/com/smartdevices/bracelet/chart/c/r;->a(Lcn/com/smartdevices/bracelet/model/SportDay;Lcn/com/smartdevices/bracelet/chart/c/t;)V
+    invoke-virtual {p0, p1, v0}, Lcn/com/smartdevices/bracelet/chart/c/r;->a(Lcn/com/smartdevices/bracelet/model/SportDay;Lcn/com/smartdevices/bracelet/model/UserSleepModify;)V
 
     invoke-virtual {v1, p1}, Lcn/com/smartdevices/bracelet/o;->d(Lcn/com/smartdevices/bracelet/model/SportDay;)V
 
@@ -151,7 +151,7 @@
     return-void
 .end method
 
-.method public a(Lcn/com/smartdevices/bracelet/model/SportDay;Lcn/com/smartdevices/bracelet/chart/c/t;)V
+.method public a(Lcn/com/smartdevices/bracelet/model/SportDay;Lcn/com/smartdevices/bracelet/model/UserSleepModify;)V
     .locals 2
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->l:Ljava/util/HashMap;

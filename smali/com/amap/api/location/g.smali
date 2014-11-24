@@ -1,453 +1,122 @@
-.class Lcom/amap/api/location/g;
+.class public Lcom/amap/api/location/g;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Lcom/amap/api/location/e;
 
 
 # instance fields
-.field final synthetic a:Lcom/amap/api/location/f;
+.field a:J
+
+.field public b:Lcom/amap/api/location/AMapLocationListener;
+
+.field c:Ljava/lang/Boolean;
 
 
 # direct methods
-.method constructor <init>(Lcom/amap/api/location/f;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
+.method public constructor <init>(JFLcom/amap/api/location/AMapLocationListener;Ljava/lang/String;Z)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lcom/amap/api/location/g;->a:J
+
+    iput-object p4, p0, Lcom/amap/api/location/g;->b:Lcom/amap/api/location/AMapLocationListener;
+
+    invoke-static {p6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/amap/api/location/g;->c:Ljava/lang/Boolean;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcom/amap/api/location/AMapLocation;)V
-    .locals 0
+.method public equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    return-void
-.end method
-
-.method public onLocationChanged(Landroid/location/Location;)V
-    .locals 8
-
-    const-wide/16 v6, -0x1
+    const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    if-eqz p1, :cond_5
-
-    :try_start_0
-    new-instance v3, Lcom/amap/api/location/AMapLocation;
-
-    invoke-direct {v3, p1}, Lcom/amap/api/location/AMapLocation;-><init>(Landroid/location/Location;)V
-
-    move v2, v1
-
-    :goto_0
-    iget-object v0, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
-
-    invoke-static {v0}, Lcom/amap/api/location/f;->c(Lcom/amap/api/location/f;)Ljava/util/Vector;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
-
-    invoke-static {v0}, Lcom/amap/api/location/f;->c(Lcom/amap/api/location/f;)Ljava/util/Vector;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/Vector;->size()I
-
-    move-result v0
-
-    if-ge v2, v0, :cond_2
-
-    iget-object v0, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
-
-    invoke-static {v0}, Lcom/amap/api/location/f;->c(Lcom/amap/api/location/f;)Ljava/util/Vector;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/amap/api/location/t;
-
-    if-eqz v0, :cond_0
-
-    iget-object v4, v0, Lcom/amap/api/location/t;->b:Lcom/amap/api/location/e;
-
-    if-eqz v4, :cond_0
-
-    iget-object v4, v0, Lcom/amap/api/location/t;->b:Lcom/amap/api/location/e;
-
-    invoke-interface {v4, v3}, Lcom/amap/api/location/e;->a(Lcom/amap/api/location/AMapLocation;)V
+    if-ne p0, p1, :cond_1
 
     :cond_0
-    if-eqz v0, :cond_1
-
-    iget-wide v4, v0, Lcom/amap/api/location/t;->a:J
-
-    cmp-long v4, v4, v6
-
-    if-nez v4, :cond_1
-
-    iget-object v4, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
-
-    invoke-static {v4}, Lcom/amap/api/location/f;->d(Lcom/amap/api/location/f;)Ljava/util/Vector;
-
-    move-result-object v4
-
-    if-eqz v4, :cond_1
-
-    iget-object v4, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
-
-    invoke-static {v4}, Lcom/amap/api/location/f;->d(Lcom/amap/api/location/f;)Ljava/util/Vector;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v0}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
+    :goto_0
+    return v0
 
     :cond_1
-    add-int/lit8 v0, v2, 0x1
+    if-nez p1, :cond_2
 
-    move v2, v0
+    move v0, v1
 
     goto :goto_0
 
     :cond_2
-    iget-object v0, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
-
-    invoke-static {v0}, Lcom/amap/api/location/f;->d(Lcom/amap/api/location/f;)Ljava/util/Vector;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
-
-    invoke-static {v0}, Lcom/amap/api/location/f;->d(Lcom/amap/api/location/f;)Ljava/util/Vector;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/Vector;->size()I
-
-    move-result v0
-
-    if-lez v0, :cond_4
-
-    iget-object v0, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
-
-    invoke-static {v0}, Lcom/amap/api/location/f;->c(Lcom/amap/api/location/f;)Ljava/util/Vector;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_4
-
-    :goto_1
-    iget-object v0, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
-
-    invoke-static {v0}, Lcom/amap/api/location/f;->d(Lcom/amap/api/location/f;)Ljava/util/Vector;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/Vector;->size()I
-
-    move-result v0
-
-    if-ge v1, v0, :cond_3
-
-    iget-object v0, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
-
-    invoke-static {v0}, Lcom/amap/api/location/f;->c(Lcom/amap/api/location/f;)Ljava/util/Vector;
-
-    move-result-object v0
-
-    iget-object v2, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
-
-    invoke-static {v2}, Lcom/amap/api/location/f;->d(Lcom/amap/api/location/f;)Ljava/util/Vector;
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/util/Vector;->remove(Ljava/lang/Object;)Z
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_1
-
-    :cond_3
-    iget-object v0, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
-
-    invoke-static {v0}, Lcom/amap/api/location/f;->d(Lcom/amap/api/location/f;)Ljava/util/Vector;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/Vector;->clear()V
-
-    iget-object v0, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
-
-    invoke-static {v0}, Lcom/amap/api/location/f;->c(Lcom/amap/api/location/f;)Ljava/util/Vector;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/Vector;->size()I
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    iget-object v0, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
-
-    invoke-static {v0}, Lcom/amap/api/location/f;->e(Lcom/amap/api/location/f;)Landroid/location/LocationManager;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
-
-    invoke-static {v0}, Lcom/amap/api/location/f;->f(Lcom/amap/api/location/f;)Lcom/amap/api/location/g;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
-
-    invoke-static {v0}, Lcom/amap/api/location/f;->e(Lcom/amap/api/location/f;)Landroid/location/LocationManager;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
-
-    invoke-static {v1}, Lcom/amap/api/location/f;->f(Lcom/amap/api/location/f;)Lcom/amap/api/location/g;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/location/LocationManager;->removeUpdates(Landroid/location/LocationListener;)V
-
-    :cond_4
-    :goto_2
-    return-void
-
-    :cond_5
-    move v2, v1
-
-    :goto_3
-    iget-object v0, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
-
-    invoke-static {v0}, Lcom/amap/api/location/f;->c(Lcom/amap/api/location/f;)Ljava/util/Vector;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_7
-
-    iget-object v0, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
-
-    invoke-static {v0}, Lcom/amap/api/location/f;->c(Lcom/amap/api/location/f;)Ljava/util/Vector;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/Vector;->size()I
-
-    move-result v0
-
-    if-ge v2, v0, :cond_7
-
-    iget-object v0, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
-
-    invoke-static {v0}, Lcom/amap/api/location/f;->c(Lcom/amap/api/location/f;)Ljava/util/Vector;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/amap/api/location/t;
-
-    if-eqz v0, :cond_6
-
-    iget-wide v3, v0, Lcom/amap/api/location/t;->a:J
-
-    cmp-long v3, v3, v6
-
-    if-nez v3, :cond_6
-
-    iget-object v3, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
-
-    invoke-static {v3}, Lcom/amap/api/location/f;->d(Lcom/amap/api/location/f;)Ljava/util/Vector;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v3
 
-    if-eqz v3, :cond_6
-
-    iget-object v3, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
-
-    invoke-static {v3}, Lcom/amap/api/location/f;->d(Lcom/amap/api/location/f;)Ljava/util/Vector;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v0}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
-
-    :cond_6
-    add-int/lit8 v0, v2, 0x1
-
-    move v2, v0
-
-    goto :goto_3
-
-    :cond_7
-    iget-object v0, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
-
-    invoke-static {v0}, Lcom/amap/api/location/f;->d(Lcom/amap/api/location/f;)Ljava/util/Vector;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
-
-    invoke-static {v0}, Lcom/amap/api/location/f;->d(Lcom/amap/api/location/f;)Ljava/util/Vector;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/Vector;->size()I
-
-    move-result v0
-
-    if-lez v0, :cond_4
-
-    iget-object v0, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
-
-    invoke-static {v0}, Lcom/amap/api/location/f;->c(Lcom/amap/api/location/f;)Ljava/util/Vector;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_4
+    if-eq v2, v3, :cond_3
 
     move v0, v1
 
-    :goto_4
-    iget-object v1, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
+    goto :goto_0
 
-    invoke-static {v1}, Lcom/amap/api/location/f;->d(Lcom/amap/api/location/f;)Ljava/util/Vector;
+    :cond_3
+    check-cast p1, Lcom/amap/api/location/g;
 
-    move-result-object v1
+    iget-object v2, p0, Lcom/amap/api/location/g;->b:Lcom/amap/api/location/AMapLocationListener;
 
-    invoke-virtual {v1}, Ljava/util/Vector;->size()I
+    if-nez v2, :cond_4
 
-    move-result v1
+    iget-object v2, p1, Lcom/amap/api/location/g;->b:Lcom/amap/api/location/AMapLocationListener;
 
-    if-ge v0, v1, :cond_8
+    if-eqz v2, :cond_0
 
-    iget-object v1, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
+    move v0, v1
 
-    invoke-static {v1}, Lcom/amap/api/location/f;->c(Lcom/amap/api/location/f;)Ljava/util/Vector;
+    goto :goto_0
 
-    move-result-object v1
+    :cond_4
+    iget-object v2, p0, Lcom/amap/api/location/g;->b:Lcom/amap/api/location/AMapLocationListener;
 
-    iget-object v2, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
+    iget-object v3, p1, Lcom/amap/api/location/g;->b:Lcom/amap/api/location/AMapLocationListener;
 
-    invoke-static {v2}, Lcom/amap/api/location/f;->d(Lcom/amap/api/location/f;)Ljava/util/Vector;
+    invoke-virtual {v2, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    move-result-object v2
+    move-result v2
 
-    invoke-virtual {v2, v0}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
+    if-nez v2, :cond_0
 
-    move-result-object v2
+    move v0, v1
 
-    invoke-virtual {v1, v2}, Ljava/util/Vector;->remove(Ljava/lang/Object;)Z
+    goto :goto_0
+.end method
 
-    add-int/lit8 v0, v0, 0x1
+.method public hashCode()I
+    .locals 1
 
-    goto :goto_4
+    iget-object v0, p0, Lcom/amap/api/location/g;->b:Lcom/amap/api/location/AMapLocationListener;
 
-    :cond_8
-    iget-object v0, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
+    if-nez v0, :cond_0
 
-    invoke-static {v0}, Lcom/amap/api/location/f;->d(Lcom/amap/api/location/f;)Ljava/util/Vector;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    :goto_0
+    add-int/lit8 v0, v0, 0x1f
 
-    invoke-virtual {v0}, Ljava/util/Vector;->clear()V
+    return v0
 
-    iget-object v0, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
+    :cond_0
+    iget-object v0, p0, Lcom/amap/api/location/g;->b:Lcom/amap/api/location/AMapLocationListener;
 
-    invoke-static {v0}, Lcom/amap/api/location/f;->c(Lcom/amap/api/location/f;)Ljava/util/Vector;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/Vector;->size()I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    if-nez v0, :cond_4
-
-    iget-object v0, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
-
-    invoke-static {v0}, Lcom/amap/api/location/f;->e(Lcom/amap/api/location/f;)Landroid/location/LocationManager;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
-
-    invoke-static {v0}, Lcom/amap/api/location/f;->f(Lcom/amap/api/location/f;)Lcom/amap/api/location/g;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
-
-    invoke-static {v0}, Lcom/amap/api/location/f;->e(Lcom/amap/api/location/f;)Landroid/location/LocationManager;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/amap/api/location/g;->a:Lcom/amap/api/location/f;
-
-    invoke-static {v1}, Lcom/amap/api/location/f;->f(Lcom/amap/api/location/f;)Lcom/amap/api/location/g;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/location/LocationManager;->removeUpdates(Landroid/location/LocationListener;)V
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto/16 :goto_2
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
-
-    goto/16 :goto_2
-.end method
-
-.method public onProviderDisabled(Ljava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onProviderEnabled(Ljava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onStatusChanged(Ljava/lang/String;ILandroid/os/Bundle;)V
-    .locals 0
-
-    return-void
+    goto :goto_0
 .end method

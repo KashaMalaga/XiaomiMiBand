@@ -1,448 +1,18 @@
 .class Lcom/amap/api/maps/offlinemap/n;
-.super Lcom/amap/api/maps/offlinemap/e;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/amap/api/maps/offlinemap/e",
-        "<",
-        "Ljava/lang/String;",
-        "Ljava/util/List",
-        "<",
-        "Lcom/amap/api/maps/offlinemap/OfflineMapProvince;",
-        ">;>;"
-    }
-.end annotation
-
-
-# instance fields
-.field private e:Landroid/content/Context;
+.super Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/net/Proxy;)V
+.method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/amap/api/maps/offlinemap/e;-><init>(Ljava/lang/Object;Ljava/net/Proxy;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method private h(Ljava/lang/String;)V
-    .locals 5
-
-    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/n;->e:Landroid/content/Context;
-
-    invoke-static {v0}, Lcom/amap/api/mapcore/a/P;->b(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, ""
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    :goto_0
-    return-void
-
-    :cond_1
-    new-instance v0, Ljava/io/File;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v2, p0, Lcom/amap/api/maps/offlinemap/n;->e:Landroid/content/Context;
-
-    invoke-static {v2}, Lcom/amap/api/mapcore/a/P;->b(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "offlinemap2"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ".png"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Ljava/io/File;->exists()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    :try_start_0
-    invoke-virtual {v0}, Ljava/io/File;->createNewFile()Z
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
-
-    :cond_2
-    :goto_1
-    invoke-virtual {p0}, Lcom/amap/api/maps/offlinemap/n;->g()J
-
-    move-result-wide v1
-
-    const-wide/32 v3, 0x100000
-
-    cmp-long v1, v1, v3
-
-    if-lez v1, :cond_0
-
-    const/4 v2, 0x0
-
-    :try_start_1
-    new-instance v1, Ljava/io/FileOutputStream;
-
-    invoke-direct {v1, v0}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
-    :try_end_1
-    .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_2
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :try_start_2
-    const-string v0, "utf-8"
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/io/OutputStream;->write([B)V
-    :try_end_2
-    .catch Ljava/io/FileNotFoundException; {:try_start_2 .. :try_end_2} :catch_8
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_7
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    if-eqz v1, :cond_0
-
-    :try_start_3
-    invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
-    :try_end_3
-    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
-
-    goto :goto_0
-
-    :catch_1
-    move-exception v1
-
-    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
-
-    goto :goto_1
-
-    :catch_2
-    move-exception v0
-
-    move-object v1, v2
-
-    :goto_2
-    :try_start_4
-    invoke-virtual {v0}, Ljava/io/FileNotFoundException;->printStackTrace()V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
-
-    if-eqz v1, :cond_0
-
-    :try_start_5
-    invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
-    :try_end_5
-    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
-
-    goto :goto_0
-
-    :catch_3
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
-
-    goto :goto_0
-
-    :catch_4
-    move-exception v0
-
-    move-object v1, v2
-
-    :goto_3
-    :try_start_6
-    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_1
-
-    if-eqz v1, :cond_0
-
-    :try_start_7
-    invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
-    :try_end_7
-    .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_5
-
-    goto :goto_0
-
-    :catch_5
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    move-object v1, v2
-
-    :goto_4
-    if-eqz v1, :cond_3
-
-    :try_start_8
-    invoke-virtual {v1}, Ljava/io/OutputStream;->close()V
-    :try_end_8
-    .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_6
-
-    :cond_3
-    :goto_5
-    throw v0
-
-    :catch_6
-    move-exception v1
-
-    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
-
-    goto :goto_5
-
-    :catchall_1
-    move-exception v0
-
-    goto :goto_4
-
-    :catch_7
-    move-exception v0
-
-    goto :goto_3
-
-    :catch_8
-    move-exception v0
-
-    goto :goto_2
-.end method
-
-
-# virtual methods
-.method protected synthetic a(Ljava/io/InputStream;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-virtual {p0, p1}, Lcom/amap/api/maps/offlinemap/n;->c(Ljava/io/InputStream;)Ljava/util/List;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public a(Landroid/content/Context;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/maps/offlinemap/n;->e:Landroid/content/Context;
-
-    return-void
-.end method
-
-.method protected a()[B
-    .locals 2
-
-    :try_start_0
-    invoke-virtual {p0}, Lcom/amap/api/maps/offlinemap/n;->b()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "utf-8"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
-    :try_end_0
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result-object v0
-
-    :goto_0
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    const/4 v0, 0x0
-
-    new-array v0, v0, [B
-
-    goto :goto_0
-.end method
-
-.method protected b()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "&output=json"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "&dp_package=true"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "&key="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    sget-object v2, Lcom/amap/api/mapcore/a/t;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method protected c()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "http://apimanifest.amap.com/r/config/offlinemap?"
-
-    return-object v0
-.end method
-
-.method protected c(Ljava/io/InputStream;)Ljava/util/List;
+.method public static a()J
     .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/io/InputStream;",
-            ")",
-            "Ljava/util/List",
-            "<",
-            "Lcom/amap/api/maps/offlinemap/OfflineMapProvince;",
-            ">;"
-        }
-    .end annotation
-
-    const/4 v1, 0x0
-
-    :try_start_0
-    new-instance v0, Ljava/lang/String;
-
-    invoke-static {p1}, Lcom/amap/api/mapcore/a/t;->a(Ljava/io/InputStream;)[B
-
-    move-result-object v2
-
-    const-string v3, "utf-8"
-
-    invoke-direct {v0, v2, v3}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
-
-    :try_start_1
-    iget-object v2, p0, Lcom/amap/api/maps/offlinemap/n;->e:Landroid/content/Context;
-
-    if-eqz v2, :cond_0
-
-    invoke-direct {p0, v0}, Lcom/amap/api/maps/offlinemap/n;->h(Ljava/lang/String;)V
-    :try_end_1
-    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_2
-
-    :cond_0
-    :goto_0
-    invoke-static {v0}, Lcom/amap/api/mapcore/a/P;->a(Ljava/lang/String;)V
-
-    :try_start_2
-    invoke-static {v0}, Lcom/amap/api/maps/offlinemap/s;->c(Ljava/lang/String;)Ljava/util/List;
-    :try_end_2
-    .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_1
-
-    move-result-object v0
-
-    :goto_1
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    move-object v2, v0
-
-    move-object v0, v1
-
-    :goto_2
-    invoke-virtual {v2}, Ljava/lang/Throwable;->printStackTrace()V
-
-    goto :goto_0
-
-    :catch_1
-    move-exception v0
-
-    invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
-
-    move-object v0, v1
-
-    goto :goto_1
-
-    :catch_2
-    move-exception v2
-
-    goto :goto_2
-.end method
-
-.method public g()J
-    .locals 4
-
-    invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "mounted"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
 
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
 
@@ -462,7 +32,7 @@
 
     int-to-long v2, v0
 
-    invoke-virtual {v1}, Landroid/os/StatFs;->getAvailableBlocks()I
+    invoke-virtual {v1}, Landroid/os/StatFs;->getFreeBlocks()I
 
     move-result v0
 
@@ -470,11 +40,551 @@
 
     mul-long/2addr v0, v2
 
-    :goto_0
     return-wide v0
+.end method
 
-    :cond_0
-    const-wide/16 v0, 0x0
+.method public static a(Lorg/json/JSONObject;)Lcom/amap/api/maps/offlinemap/OfflineMapProvince;
+    .locals 3
+
+    new-instance v0, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;
+
+    invoke-direct {v0}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;-><init>()V
+
+    const-string v1, "url"
+
+    invoke-virtual {p0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->setUrl(Ljava/lang/String;)V
+
+    const-string v1, "name"
+
+    invoke-virtual {p0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->setProvinceName(Ljava/lang/String;)V
+
+    const-string v1, "jianpin"
+
+    invoke-virtual {p0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->setJianpin(Ljava/lang/String;)V
+
+    const-string v1, "pinyin"
+
+    invoke-virtual {p0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->setPinyin(Ljava/lang/String;)V
+
+    const-string v1, "adcode"
+
+    invoke-virtual {p0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->setProvinceCode(Ljava/lang/String;)V
+
+    const-string v1, "version"
+
+    invoke-virtual {p0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->setVersion(Ljava/lang/String;)V
+
+    const-string v1, "size"
+
+    invoke-virtual {p0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v1
+
+    invoke-virtual {v0, v1, v2}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->setSize(J)V
+
+    invoke-static {p0}, Lcom/amap/api/maps/offlinemap/n;->b(Lorg/json/JSONObject;)Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->setCityList(Ljava/util/ArrayList;)V
+
+    return-object v0
+.end method
+
+.method public static a(I)V
+    .locals 2
+
+    int-to-long v0, p0
+
+    :try_start_0
+    invoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
+.end method
+
+.method public static a(Ljava/lang/String;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public static b(Lorg/json/JSONObject;)Ljava/util/ArrayList;
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lorg/json/JSONObject;",
+            ")",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/amap/api/maps/offlinemap/OfflineMapCity;",
+            ">;"
+        }
+    .end annotation
+
+    const-string v0, "cities"
+
+    invoke-virtual {p0, v0}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+
+    move-result-object v2
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    if-nez v2, :cond_0
+
+    move-object v0, v1
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-static {p0}, Lcom/amap/api/maps/offlinemap/n;->c(Lorg/json/JSONObject;)Lcom/amap/api/maps/offlinemap/OfflineMapCity;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_1
+    invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
+
+    move-result v3
+
+    if-ge v0, v3, :cond_2
+
+    invoke-virtual {v2, v0}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lcom/amap/api/maps/offlinemap/n;->c(Lorg/json/JSONObject;)Lcom/amap/api/maps/offlinemap/OfflineMapCity;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_1
+
+    :cond_2
+    move-object v0, v1
+
+    goto :goto_0
+.end method
+
+.method public static b(I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public static b(Ljava/lang/String;)V
+    .locals 6
+
+    new-instance v0, Ljava/text/SimpleDateFormat;
+
+    const-string v1, "yyyy-MM-dd hh:mm:ss"
+
+    invoke-direct {v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
+
+    new-instance v1, Ljava/util/Date;
+
+    invoke-direct {v1}, Ljava/util/Date;-><init>()V
+
+    invoke-virtual {v0, v1}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "  "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {}, Lcom/amap/api/maps/offlinemap/d;->a()Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v3, Ljava/io/File;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "error.txt"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v3, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    const/4 v2, 0x0
+
+    :try_start_0
+    new-instance v1, Ljava/io/OutputStreamWriter;
+
+    new-instance v4, Ljava/io/FileOutputStream;
+
+    const/4 v5, 0x1
+
+    invoke-direct {v4, v3, v5}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;Z)V
+
+    const-string v3, "utf-8"
+
+    invoke-direct {v1, v4, v3}, Ljava/io/OutputStreamWriter;-><init>(Ljava/io/OutputStream;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :try_start_1
+    invoke-virtual {v1, v0}, Ljava/io/OutputStreamWriter;->write(Ljava/lang/String;)V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    if-eqz v1, :cond_0
+
+    :try_start_2
+    invoke-virtual {v1}, Ljava/io/OutputStreamWriter;->close()V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v0
+
+    move-object v1, v2
+
+    :goto_1
+    :try_start_3
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    if-eqz v1, :cond_0
+
+    :try_start_4
+    invoke-virtual {v1}, Ljava/io/OutputStreamWriter;->close()V
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
+
+    goto :goto_0
+
+    :catch_2
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    :goto_2
+    if-eqz v2, :cond_1
+
+    :try_start_5
+    invoke-virtual {v2}, Ljava/io/OutputStreamWriter;->close()V
+    :try_end_5
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
+
+    :cond_1
+    :goto_3
+    throw v0
+
+    :catch_3
+    move-exception v1
+
+    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_3
+
+    :catchall_1
+    move-exception v0
+
+    move-object v2, v1
+
+    goto :goto_2
+
+    :catch_4
+    move-exception v0
+
+    goto :goto_1
+.end method
+
+.method public static b()Z
+    .locals 2
+
+    invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "mounted"
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static c(Lorg/json/JSONObject;)Lcom/amap/api/maps/offlinemap/OfflineMapCity;
+    .locals 3
+
+    new-instance v0, Lcom/amap/api/maps/offlinemap/OfflineMapCity;
+
+    invoke-direct {v0}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;-><init>()V
+
+    const-string v1, "adcode"
+
+    invoke-virtual {p0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->setAdcode(Ljava/lang/String;)V
+
+    const-string v1, "url"
+
+    invoke-virtual {p0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->setUrl(Ljava/lang/String;)V
+
+    const-string v1, "name"
+
+    invoke-virtual {p0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->setCity(Ljava/lang/String;)V
+
+    const-string v1, "citycode"
+
+    invoke-virtual {p0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->setCode(Ljava/lang/String;)V
+
+    const-string v1, "pinyin"
+
+    invoke-virtual {p0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->setPinyin(Ljava/lang/String;)V
+
+    const-string v1, "jianpin"
+
+    invoke-virtual {p0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->setJianpin(Ljava/lang/String;)V
+
+    const-string v1, "version"
+
+    invoke-virtual {p0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->setVersion(Ljava/lang/String;)V
+
+    const-string v1, "size"
+
+    invoke-virtual {p0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v1
+
+    invoke-virtual {v0, v1, v2}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->setSize(J)V
+
+    return-object v0
+.end method
+
+.method public static c(Ljava/lang/String;)Ljava/util/List;
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/util/List",
+            "<",
+            "Lcom/amap/api/maps/offlinemap/OfflineMapProvince;",
+            ">;"
+        }
+    .end annotation
+
+    new-instance v1, Lorg/json/JSONObject;
+
+    invoke-direct {v1, p0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    const-string v0, "version"
+
+    invoke-virtual {v1, v0}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "version"
+
+    invoke-virtual {v1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->a:Ljava/lang/String;
+
+    :cond_0
+    const-string v0, "provinces"
+
+    invoke-virtual {v1, v0}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+
+    move-result-object v3
+
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-virtual {v3}, Lorg/json/JSONArray;->length()I
+
+    move-result v4
+
+    if-ge v0, v4, :cond_1
+
+    invoke-virtual {v3, v0}, Lorg/json/JSONArray;->optJSONObject(I)Lorg/json/JSONObject;
+
+    move-result-object v4
+
+    invoke-static {v4}, Lcom/amap/api/maps/offlinemap/n;->a(Lorg/json/JSONObject;)Lcom/amap/api/maps/offlinemap/OfflineMapProvince;
+
+    move-result-object v4
+
+    invoke-interface {v2, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const-string v0, "others"
+
+    invoke-virtual {v1, v0}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    const-string v1, "other"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/amap/api/maps/offlinemap/n;->a(Lorg/json/JSONObject;)Lcom/amap/api/maps/offlinemap/OfflineMapProvince;
+
+    move-result-object v0
+
+    invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    return-object v2
 .end method

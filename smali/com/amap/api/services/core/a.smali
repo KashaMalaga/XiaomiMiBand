@@ -1,309 +1,257 @@
 .class public Lcom/amap/api/services/core/a;
-.super Ljava/lang/Exception;
+.super Ljava/lang/Object;
 
 
 # static fields
-.field public static final a:Ljava/lang/String; = "IO \u64cd\u4f5c\u5f02\u5e38 - IOException"
-
-.field public static final b:Ljava/lang/String; = "socket \u8fde\u63a5\u5f02\u5e38 - SocketException"
-
-.field public static final c:Ljava/lang/String; = "socket \u8fde\u63a5\u8d85\u65f6 - SocketTimeoutException"
-
-.field public static final d:Ljava/lang/String; = "\u65e0\u6548\u7684\u53c2\u6570 - IllegalArgumentException"
-
-.field public static final e:Ljava/lang/String; = "\u7a7a\u6307\u9488\u5f02\u5e38 - NullPointException"
-
-.field public static final f:Ljava/lang/String; = "url\u5f02\u5e38 - MalformedURLException"
-
-.field public static final g:Ljava/lang/String; = "\u672a\u77e5\u4e3b\u673a - UnKnowHostException"
-
-.field public static final h:Ljava/lang/String; = "\u670d\u52a1\u5668\u8fde\u63a5\u5931\u8d25 - UnknownServiceException"
-
-.field public static final i:Ljava/lang/String; = "\u534f\u8bae\u89e3\u6790\u9519\u8bef - ProtocolException"
-
-.field public static final j:Ljava/lang/String; = "http\u8fde\u63a5\u5931\u8d25 - ConnectionException"
-
-.field public static final k:Ljava/lang/String; = "\u672a\u77e5\u7684\u9519\u8bef"
-
-.field public static final l:Ljava/lang/String; = "key\u9274\u6743\u5931\u8d25"
-
-.field public static final m:Ljava/lang/String; = "\u670d\u52a1\u5668\u8fd4\u56de\u7684\u9519\u8bef"
-
-.field public static final n:I = 0x15
-
-.field public static final o:I = 0x16
-
-.field public static final p:I = 0x17
-
-.field public static final q:I = 0x18
-
-.field public static final r:I = 0x19
-
-.field public static final s:I = 0x1a
-
-.field public static final t:I = 0x1b
-
-.field public static final u:I = 0x1c
-
-.field public static final v:I = 0x1d
-
-.field public static final w:I = 0x1e
-
-.field public static final x:I = 0x1f
-
-.field public static final y:I = 0x20
-
-.field public static final z:I = 0x21
-
-
-# instance fields
-.field private A:Ljava/lang/String;
-
-.field private B:I
+.field private static final a:[C
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
+    const/16 v0, 0x40
 
-    const-string v0, ""
+    new-array v0, v0, [C
 
-    iput-object v0, p0, Lcom/amap/api/services/core/a;->A:Ljava/lang/String;
+    fill-array-data v0, :array_0
 
-    const/4 v0, 0x0
+    sput-object v0, Lcom/amap/api/services/core/a;->a:[C
 
-    iput v0, p0, Lcom/amap/api/services/core/a;->B:I
+    return-void
+
+    :array_0
+    .array-data 2
+        0x41s
+        0x42s
+        0x43s
+        0x44s
+        0x45s
+        0x46s
+        0x47s
+        0x48s
+        0x49s
+        0x4as
+        0x4bs
+        0x4cs
+        0x4ds
+        0x4es
+        0x4fs
+        0x50s
+        0x51s
+        0x52s
+        0x53s
+        0x54s
+        0x55s
+        0x56s
+        0x57s
+        0x58s
+        0x59s
+        0x5as
+        0x61s
+        0x62s
+        0x63s
+        0x64s
+        0x65s
+        0x66s
+        0x67s
+        0x68s
+        0x69s
+        0x6as
+        0x6bs
+        0x6cs
+        0x6ds
+        0x6es
+        0x6fs
+        0x70s
+        0x71s
+        0x72s
+        0x73s
+        0x74s
+        0x75s
+        0x76s
+        0x77s
+        0x78s
+        0x79s
+        0x7as
+        0x30s
+        0x31s
+        0x32s
+        0x33s
+        0x34s
+        0x35s
+        0x36s
+        0x37s
+        0x38s
+        0x39s
+        0x2bs
+        0x2fs
+    .end array-data
+.end method
+
+.method private constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 1
+.method public static a([B)Ljava/lang/String;
+    .locals 8
 
-    invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
+    new-instance v1, Ljava/lang/StringBuffer;
 
-    const-string v0, ""
+    invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
-    iput-object v0, p0, Lcom/amap/api/services/core/a;->A:Ljava/lang/String;
+    array-length v2, p0
 
     const/4 v0, 0x0
-
-    iput v0, p0, Lcom/amap/api/services/core/a;->B:I
-
-    iput-object p1, p0, Lcom/amap/api/services/core/a;->A:Ljava/lang/String;
-
-    invoke-direct {p0, p1}, Lcom/amap/api/services/core/a;->a(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method private a(Ljava/lang/String;)V
-    .locals 1
-
-    const-string v0, "IO \u64cd\u4f5c\u5f02\u5e38 - IOException"
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/16 v0, 0x15
-
-    iput v0, p0, Lcom/amap/api/services/core/a;->B:I
 
     :goto_0
-    return-void
+    if-ge v0, v2, :cond_0
+
+    add-int/lit8 v3, v0, 0x1
+
+    aget-byte v0, p0, v0
+
+    and-int/lit16 v4, v0, 0xff
+
+    if-ne v3, v2, :cond_1
+
+    sget-object v0, Lcom/amap/api/services/core/a;->a:[C
+
+    ushr-int/lit8 v2, v4, 0x2
+
+    aget-char v0, v0, v2
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
+
+    sget-object v0, Lcom/amap/api/services/core/a;->a:[C
+
+    and-int/lit8 v2, v4, 0x3
+
+    shl-int/lit8 v2, v2, 0x4
+
+    aget-char v0, v0, v2
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
+
+    const-string v0, "=="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     :cond_0
-    const-string v0, "socket \u8fde\u63a5\u5f02\u5e38 - SocketException"
+    :goto_1
+    invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/16 v0, 0x16
-
-    iput v0, p0, Lcom/amap/api/services/core/a;->B:I
-
-    goto :goto_0
-
-    :cond_1
-    const-string v0, "socket \u8fde\u63a5\u8d85\u65f6 - SocketTimeoutException"
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const/16 v0, 0x17
-
-    iput v0, p0, Lcom/amap/api/services/core/a;->B:I
-
-    goto :goto_0
-
-    :cond_2
-    const-string v0, "\u65e0\u6548\u7684\u53c2\u6570 - IllegalArgumentException"
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    const/16 v0, 0x18
-
-    iput v0, p0, Lcom/amap/api/services/core/a;->B:I
-
-    goto :goto_0
-
-    :cond_3
-    const-string v0, "\u7a7a\u6307\u9488\u5f02\u5e38 - NullPointException"
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    const/16 v0, 0x19
-
-    iput v0, p0, Lcom/amap/api/services/core/a;->B:I
-
-    goto :goto_0
-
-    :cond_4
-    const-string v0, "url\u5f02\u5e38 - MalformedURLException"
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    const/16 v0, 0x1a
-
-    iput v0, p0, Lcom/amap/api/services/core/a;->B:I
-
-    goto :goto_0
-
-    :cond_5
-    const-string v0, "\u672a\u77e5\u4e3b\u673a - UnKnowHostException"
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    const/16 v0, 0x1b
-
-    iput v0, p0, Lcom/amap/api/services/core/a;->B:I
-
-    goto :goto_0
-
-    :cond_6
-    const-string v0, "\u670d\u52a1\u5668\u8fde\u63a5\u5931\u8d25 - UnknownServiceException"
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_7
-
-    const/16 v0, 0x1c
-
-    iput v0, p0, Lcom/amap/api/services/core/a;->B:I
-
-    goto :goto_0
-
-    :cond_7
-    const-string v0, "\u534f\u8bae\u89e3\u6790\u9519\u8bef - ProtocolException"
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_8
-
-    const/16 v0, 0x1d
-
-    iput v0, p0, Lcom/amap/api/services/core/a;->B:I
-
-    goto :goto_0
-
-    :cond_8
-    const-string v0, "http\u8fde\u63a5\u5931\u8d25 - ConnectionException"
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_9
-
-    const/16 v0, 0x1e
-
-    iput v0, p0, Lcom/amap/api/services/core/a;->B:I
-
-    goto :goto_0
-
-    :cond_9
-    const-string v0, "\u672a\u77e5\u7684\u9519\u8bef"
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_a
-
-    const/16 v0, 0x1f
-
-    iput v0, p0, Lcom/amap/api/services/core/a;->B:I
-
-    goto/16 :goto_0
-
-    :cond_a
-    const-string v0, "key\u9274\u6743\u5931\u8d25"
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_b
-
-    const/16 v0, 0x20
-
-    iput v0, p0, Lcom/amap/api/services/core/a;->B:I
-
-    goto/16 :goto_0
-
-    :cond_b
-    const/16 v0, 0x21
-
-    iput v0, p0, Lcom/amap/api/services/core/a;->B:I
-
-    goto/16 :goto_0
-.end method
-
-
-# virtual methods
-.method public a()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/core/a;->A:Ljava/lang/String;
+    move-result-object v0
 
     return-object v0
-.end method
 
-.method public b()I
-    .locals 1
+    :cond_1
+    add-int/lit8 v5, v3, 0x1
 
-    iget v0, p0, Lcom/amap/api/services/core/a;->B:I
+    aget-byte v0, p0, v3
 
-    return v0
+    and-int/lit16 v3, v0, 0xff
+
+    if-ne v5, v2, :cond_2
+
+    sget-object v0, Lcom/amap/api/services/core/a;->a:[C
+
+    ushr-int/lit8 v2, v4, 0x2
+
+    aget-char v0, v0, v2
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
+
+    sget-object v0, Lcom/amap/api/services/core/a;->a:[C
+
+    and-int/lit8 v2, v4, 0x3
+
+    shl-int/lit8 v2, v2, 0x4
+
+    and-int/lit16 v4, v3, 0xf0
+
+    ushr-int/lit8 v4, v4, 0x4
+
+    or-int/2addr v2, v4
+
+    aget-char v0, v0, v2
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
+
+    sget-object v0, Lcom/amap/api/services/core/a;->a:[C
+
+    and-int/lit8 v2, v3, 0xf
+
+    shl-int/lit8 v2, v2, 0x2
+
+    aget-char v0, v0, v2
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
+
+    const-string v0, "="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    goto :goto_1
+
+    :cond_2
+    add-int/lit8 v0, v5, 0x1
+
+    aget-byte v5, p0, v5
+
+    and-int/lit16 v5, v5, 0xff
+
+    sget-object v6, Lcom/amap/api/services/core/a;->a:[C
+
+    ushr-int/lit8 v7, v4, 0x2
+
+    aget-char v6, v6, v7
+
+    invoke-virtual {v1, v6}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
+
+    sget-object v6, Lcom/amap/api/services/core/a;->a:[C
+
+    and-int/lit8 v4, v4, 0x3
+
+    shl-int/lit8 v4, v4, 0x4
+
+    and-int/lit16 v7, v3, 0xf0
+
+    ushr-int/lit8 v7, v7, 0x4
+
+    or-int/2addr v4, v7
+
+    aget-char v4, v6, v4
+
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
+
+    sget-object v4, Lcom/amap/api/services/core/a;->a:[C
+
+    and-int/lit8 v3, v3, 0xf
+
+    shl-int/lit8 v3, v3, 0x2
+
+    and-int/lit16 v6, v5, 0xc0
+
+    ushr-int/lit8 v6, v6, 0x6
+
+    or-int/2addr v3, v6
+
+    aget-char v3, v4, v3
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
+
+    sget-object v3, Lcom/amap/api/services/core/a;->a:[C
+
+    and-int/lit8 v4, v5, 0x3f
+
+    aget-char v3, v3, v4
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
+
+    goto/16 :goto_0
 .end method

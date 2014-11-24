@@ -1,56 +1,37 @@
-.class public Lcn/com/smartdevices/bracelet/gps/ui/f;
-.super Lcn/com/smartdevices/bracelet/ui/J;
+.class Lcn/com/smartdevices/bracelet/gps/ui/f;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# instance fields
+.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;)V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/J;-><init>()V
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/f;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected a()I
+.method public onClick(Landroid/view/View;)V
     .locals 1
 
-    const v0, 0x7f030051
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/f;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;
 
-    return v0
-.end method
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->a()V
 
-.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 3
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/f;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;
 
-    invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/J;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->finish()V
 
-    move-result-object v0
-
-    const v1, 0x7f0700e0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    new-instance v2, Lcn/com/smartdevices/bracelet/gps/ui/g;
-
-    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/gps/ui/g;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/f;)V
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const v1, 0x7f0700e2
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    new-instance v2, Lcn/com/smartdevices/bracelet/gps/ui/h;
-
-    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/gps/ui/h;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/f;)V
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    return-object v0
+    return-void
 .end method

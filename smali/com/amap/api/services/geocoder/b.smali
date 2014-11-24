@@ -1,93 +1,87 @@
-.class public Lcom/amap/api/services/geocoder/b;
-.super Ljava/lang/Object;
+.class Lcom/amap/api/services/geocoder/b;
+.super Landroid/os/Handler;
 
 
 # instance fields
-.field private a:Lcom/amap/api/services/geocoder/a;
-
-.field private b:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List",
-            "<",
-            "Lcom/amap/api/services/geocoder/GeocodeAddress;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field final synthetic a:Lcom/amap/api/services/geocoder/GeocodeSearch;
 
 
 # direct methods
-.method public constructor <init>(Lcom/amap/api/services/geocoder/a;Ljava/util/List;)V
+.method constructor <init>(Lcom/amap/api/services/geocoder/GeocodeSearch;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/amap/api/services/geocoder/a;",
-            "Ljava/util/List",
-            "<",
-            "Lcom/amap/api/services/geocoder/GeocodeAddress;",
-            ">;)V"
-        }
-    .end annotation
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lcom/amap/api/services/geocoder/b;->a:Lcom/amap/api/services/geocoder/GeocodeSearch;
 
-    iput-object p1, p0, Lcom/amap/api/services/geocoder/b;->a:Lcom/amap/api/services/geocoder/a;
-
-    iput-object p2, p0, Lcom/amap/api/services/geocoder/b;->b:Ljava/util/List;
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Lcom/amap/api/services/geocoder/a;
-    .locals 1
+.method public handleMessage(Landroid/os/Message;)V
+    .locals 3
 
-    iget-object v0, p0, Lcom/amap/api/services/geocoder/b;->a:Lcom/amap/api/services/geocoder/a;
+    const/4 v0, 0x0
 
-    return-object v0
-.end method
+    iget-object v1, p0, Lcom/amap/api/services/geocoder/b;->a:Lcom/amap/api/services/geocoder/GeocodeSearch;
 
-.method public a(Lcom/amap/api/services/geocoder/a;)V
-    .locals 0
+    invoke-static {v1}, Lcom/amap/api/services/geocoder/GeocodeSearch;->a(Lcom/amap/api/services/geocoder/GeocodeSearch;)Lcom/amap/api/services/geocoder/GeocodeSearch$OnGeocodeSearchListener;
 
-    iput-object p1, p0, Lcom/amap/api/services/geocoder/b;->a:Lcom/amap/api/services/geocoder/a;
+    move-result-object v1
 
+    if-nez v1, :cond_0
+
+    :goto_0
     return-void
-.end method
 
-.method public a(Ljava/util/List;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcom/amap/api/services/geocoder/GeocodeAddress;",
-            ">;)V"
-        }
-    .end annotation
+    :cond_0
+    iget v1, p1, Landroid/os/Message;->what:I
 
-    iput-object p1, p0, Lcom/amap/api/services/geocoder/b;->b:Ljava/util/List;
+    const/16 v2, 0x65
 
-    return-void
-.end method
+    if-ne v1, v2, :cond_2
 
-.method public b()Ljava/util/List;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Lcom/amap/api/services/geocoder/GeocodeAddress;",
-            ">;"
-        }
-    .end annotation
+    iget v1, p1, Landroid/os/Message;->arg2:I
 
-    iget-object v0, p0, Lcom/amap/api/services/geocoder/b;->b:Ljava/util/List;
+    if-nez v1, :cond_1
 
-    return-object v0
+    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    check-cast v0, Lcom/amap/api/services/geocoder/RegeocodeResult;
+
+    :cond_1
+    iget-object v1, p0, Lcom/amap/api/services/geocoder/b;->a:Lcom/amap/api/services/geocoder/GeocodeSearch;
+
+    invoke-static {v1}, Lcom/amap/api/services/geocoder/GeocodeSearch;->a(Lcom/amap/api/services/geocoder/GeocodeSearch;)Lcom/amap/api/services/geocoder/GeocodeSearch$OnGeocodeSearchListener;
+
+    move-result-object v1
+
+    iget v2, p1, Landroid/os/Message;->arg1:I
+
+    invoke-interface {v1, v0, v2}, Lcom/amap/api/services/geocoder/GeocodeSearch$OnGeocodeSearchListener;->onRegeocodeSearched(Lcom/amap/api/services/geocoder/RegeocodeResult;I)V
+
+    goto :goto_0
+
+    :cond_2
+    iget v1, p1, Landroid/os/Message;->arg2:I
+
+    if-nez v1, :cond_3
+
+    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    check-cast v0, Lcom/amap/api/services/geocoder/GeocodeResult;
+
+    :cond_3
+    iget-object v1, p0, Lcom/amap/api/services/geocoder/b;->a:Lcom/amap/api/services/geocoder/GeocodeSearch;
+
+    invoke-static {v1}, Lcom/amap/api/services/geocoder/GeocodeSearch;->a(Lcom/amap/api/services/geocoder/GeocodeSearch;)Lcom/amap/api/services/geocoder/GeocodeSearch$OnGeocodeSearchListener;
+
+    move-result-object v1
+
+    iget v2, p1, Landroid/os/Message;->arg1:I
+
+    invoke-interface {v1, v0, v2}, Lcom/amap/api/services/geocoder/GeocodeSearch$OnGeocodeSearchListener;->onGeocodeSearched(Lcom/amap/api/services/geocoder/GeocodeResult;I)V
+
+    goto :goto_0
 .end method

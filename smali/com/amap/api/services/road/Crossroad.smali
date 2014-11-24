@@ -107,78 +107,6 @@
 
 
 # virtual methods
-.method public a()F
-    .locals 1
-
-    iget v0, p0, Lcom/amap/api/services/road/Crossroad;->a:F
-
-    return v0
-.end method
-
-.method public a(F)V
-    .locals 0
-
-    iput p1, p0, Lcom/amap/api/services/road/Crossroad;->a:F
-
-    return-void
-.end method
-
-.method public a(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/road/Crossroad;->b:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public b()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/road/Crossroad;->b:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public b(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/road/Crossroad;->c:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public c()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/road/Crossroad;->c:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public c(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/road/Crossroad;->d:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public d()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/road/Crossroad;->d:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public d(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/road/Crossroad;->e:Ljava/lang/String;
-
-    return-void
-.end method
-
 .method public describeContents()I
     .locals 1
 
@@ -187,7 +115,39 @@
     return v0
 .end method
 
-.method public e()Ljava/lang/String;
+.method public getDirection()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/road/Crossroad;->b:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getDistance()F
+    .locals 1
+
+    iget v0, p0, Lcom/amap/api/services/road/Crossroad;->a:F
+
+    return v0
+.end method
+
+.method public getFirstRoadId()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/road/Crossroad;->c:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getFirstRoadName()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/road/Crossroad;->d:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getSecondRoadId()Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcom/amap/api/services/road/Crossroad;->e:Ljava/lang/String;
@@ -195,20 +155,60 @@
     return-object v0
 .end method
 
-.method public e(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/road/Crossroad;->f:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public f()Ljava/lang/String;
+.method public getSecondRoadName()Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcom/amap/api/services/road/Crossroad;->f:Ljava/lang/String;
 
     return-object v0
+.end method
+
+.method public setDirection(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/road/Crossroad;->b:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setDistance(F)V
+    .locals 0
+
+    iput p1, p0, Lcom/amap/api/services/road/Crossroad;->a:F
+
+    return-void
+.end method
+
+.method public setFirstRoadId(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/road/Crossroad;->c:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setFirstRoadName(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/road/Crossroad;->d:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setSecondRoadId(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/road/Crossroad;->e:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setSecondRoadName(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/road/Crossroad;->f:Ljava/lang/String;
+
+    return-void
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V

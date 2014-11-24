@@ -1,43 +1,35 @@
-.class public interface abstract Lcn/com/smartdevices/bracelet/gps/b/i;
+.class public final Lcn/com/smartdevices/bracelet/gps/b/i;
 .super Ljava/lang/Object;
 
 
-# virtual methods
-.method public abstract b(ILcn/com/smartdevices/bracelet/gps/model/c;)Lcom/amap/api/maps/model/LatLngBounds;
+# static fields
+.field public static final a:I = 0x1
+
+.field public static final b:I = 0x2
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
 .end method
 
-.method public abstract c(Ljava/util/List;)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcom/amap/api/maps/model/w;",
-            ">;)V"
-        }
-    .end annotation
-.end method
+.method public static a(I)Z
+    .locals 2
 
-.method public abstract d()Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Lcom/amap/api/maps/model/j;",
-            ">;"
-        }
-    .end annotation
-.end method
+    const/4 v0, 0x1
 
-.method public abstract e()Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Lcom/amap/api/maps/model/w;",
-            ">;"
-        }
-    .end annotation
+    if-eq v0, p0, :cond_0
+
+    const/4 v1, 0x2
+
+    if-eq p0, v1, :cond_0
+
+    const/4 v0, 0x0
+
+    :cond_0
+    return v0
 .end method

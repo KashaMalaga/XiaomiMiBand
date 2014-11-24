@@ -21,6 +21,8 @@
 
 .field private static final STEPLENGTHCOEFF:D = 0.42
 
+.field private static USE_NATIVE:Z
+
 .field private static final calList:[[D
 
 .field private static final coffe:[[D
@@ -34,13 +36,13 @@
 
     const/4 v6, 0x3
 
-    const/4 v5, 0x0
+    const/4 v5, 0x1
 
-    const/4 v4, 0x1
+    const/4 v4, 0x0
 
     const/4 v3, 0x2
 
-    sput-boolean v4, Lcn/com/smartdevices/bracelet/analysis/DataAnalysis;->DEBUG:Z
+    sput-boolean v5, Lcn/com/smartdevices/bracelet/analysis/DataAnalysis;->DEBUG:Z
 
     const/16 v0, 0xb
 
@@ -50,13 +52,13 @@
 
     fill-array-data v1, :array_0
 
-    aput-object v1, v0, v5
+    aput-object v1, v0, v4
 
     new-array v1, v3, [D
 
     fill-array-data v1, :array_1
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v5
 
     new-array v1, v3, [D
 
@@ -134,13 +136,13 @@
 
     fill-array-data v1, :array_b
 
-    aput-object v1, v0, v5
+    aput-object v1, v0, v4
 
     new-array v1, v3, [D
 
     fill-array-data v1, :array_c
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v5
 
     new-array v1, v3, [D
 
@@ -258,7 +260,28 @@
 
     sput-object v0, Lcn/com/smartdevices/bracelet/analysis/DataAnalysis;->calList:[[D
 
+    sput-boolean v4, Lcn/com/smartdevices/bracelet/analysis/DataAnalysis;->USE_NATIVE:Z
+
+    :try_start_0
+    const-string v0, "dataProcess"
+
+    invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+
+    const/4 v0, 0x1
+
+    sput-boolean v0, Lcn/com/smartdevices/bracelet/analysis/DataAnalysis;->USE_NATIVE:Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
     return-void
+
+    :catch_0
+    move-exception v0
+
+    sput-boolean v4, Lcn/com/smartdevices/bracelet/analysis/DataAnalysis;->USE_NATIVE:Z
+
+    goto :goto_0
 
     :array_0
     .array-data 8
@@ -440,6 +463,17 @@
 .method public static dataPostProcess(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/DaySportData;Lcn/com/smartdevices/bracelet/model/DaySportData;Lcn/com/smartdevices/bracelet/model/DaySportData;)V
     .locals 66
 
+    sget-boolean v2, Lcn/com/smartdevices/bracelet/analysis/DataAnalysis;->USE_NATIVE:Z
+
+    if-eqz v2, :cond_1
+
+    invoke-static/range {p0 .. p3}, Lcn/com/smartdevices/bracelet/analysis/DataAnalysis;->dataPostProcessNative(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/DaySportData;Lcn/com/smartdevices/bracelet/model/DaySportData;Lcn/com/smartdevices/bracelet/model/DaySportData;)V
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
     const/16 v43, 0x0
 
     const/16 v36, 0x0
@@ -498,34 +532,34 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/y;->b(Ljava/util/ArrayList;)Ljava/util/ArrayList;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/z;->b(Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
     move-result-object v2
 
-    :goto_0
-    if-eqz p2, :cond_0
+    :goto_1
+    if-eqz p2, :cond_2
 
     invoke-virtual/range {p2 .. p2}, Lcn/com/smartdevices/bracelet/model/DaySportData;->data()Ljava/util/ArrayList;
 
     move-result-object v4
 
-    invoke-static {v4}, Lcn/com/smartdevices/bracelet/y;->b(Ljava/util/ArrayList;)Ljava/util/ArrayList;
+    invoke-static {v4}, Lcn/com/smartdevices/bracelet/z;->b(Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
     move-result-object v4
 
-    :cond_0
-    if-eqz p3, :cond_1
+    :cond_2
+    if-eqz p3, :cond_3
 
     invoke-virtual/range {p3 .. p3}, Lcn/com/smartdevices/bracelet/model/DaySportData;->data()Ljava/util/ArrayList;
 
     move-result-object v5
 
-    invoke-static {v5}, Lcn/com/smartdevices/bracelet/y;->b(Ljava/util/ArrayList;)Ljava/util/ArrayList;
+    invoke-static {v5}, Lcn/com/smartdevices/bracelet/z;->b(Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
     move-result-object v5
 
-    :cond_1
-    if-eqz v4, :cond_2
+    :cond_3
+    if-eqz v4, :cond_0
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
@@ -533,13 +567,8 @@
 
     const/4 v7, 0x1
 
-    if-ge v6, v7, :cond_3
+    if-lt v6, v7, :cond_0
 
-    :cond_2
-    :goto_1
-    return-void
-
-    :cond_3
     if-eqz v2, :cond_4
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
@@ -588,7 +617,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/chart/c/r;->a(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/chart/c/t;
+    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/chart/c/r;->a(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/UserSleepModify;
 
     move-result-object v10
 
@@ -602,7 +631,7 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v4, v10, Lcn/com/smartdevices/bracelet/chart/c/t;->a:I
+    iget v4, v10, Lcn/com/smartdevices/bracelet/model/UserSleepModify;->sleepStart:I
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -614,7 +643,7 @@
 
     move-result-object v3
 
-    iget v4, v10, Lcn/com/smartdevices/bracelet/chart/c/t;->b:I
+    iget v4, v10, Lcn/com/smartdevices/bracelet/model/UserSleepModify;->sleepEnd:I
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -626,26 +655,26 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    iget v2, v10, Lcn/com/smartdevices/bracelet/chart/c/t;->a:I
+    iget v2, v10, Lcn/com/smartdevices/bracelet/model/UserSleepModify;->sleepStart:I
 
     const/16 v3, -0x5a0
 
     if-lt v2, v3, :cond_6
 
-    iget v2, v10, Lcn/com/smartdevices/bracelet/chart/c/t;->a:I
+    iget v2, v10, Lcn/com/smartdevices/bracelet/model/UserSleepModify;->sleepStart:I
 
     const/16 v3, 0x5a0
 
     if-lt v2, v3, :cond_8
 
     :cond_6
-    iget v2, v10, Lcn/com/smartdevices/bracelet/chart/c/t;->b:I
+    iget v2, v10, Lcn/com/smartdevices/bracelet/model/UserSleepModify;->sleepEnd:I
 
     const/16 v3, -0x5a0
 
     if-lt v2, v3, :cond_7
 
-    iget v2, v10, Lcn/com/smartdevices/bracelet/chart/c/t;->b:I
+    iget v2, v10, Lcn/com/smartdevices/bracelet/model/UserSleepModify;->sleepEnd:I
 
     const/16 v3, 0x5a0
 
@@ -671,7 +700,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/chart/c/r;->a(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/chart/c/t;
+    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/chart/c/r;->a(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/UserSleepModify;
 
     move-result-object v19
 
@@ -687,7 +716,7 @@
 
     move-object/from16 v0, v19
 
-    iget v4, v0, Lcn/com/smartdevices/bracelet/chart/c/t;->a:I
+    iget v4, v0, Lcn/com/smartdevices/bracelet/model/UserSleepModify;->sleepStart:I
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -701,7 +730,7 @@
 
     move-object/from16 v0, v19
 
-    iget v4, v0, Lcn/com/smartdevices/bracelet/chart/c/t;->b:I
+    iget v4, v0, Lcn/com/smartdevices/bracelet/model/UserSleepModify;->sleepEnd:I
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -715,7 +744,7 @@
 
     move-object/from16 v0, v19
 
-    iget v2, v0, Lcn/com/smartdevices/bracelet/chart/c/t;->a:I
+    iget v2, v0, Lcn/com/smartdevices/bracelet/model/UserSleepModify;->sleepStart:I
 
     const/16 v3, -0x5a0
 
@@ -723,7 +752,7 @@
 
     move-object/from16 v0, v19
 
-    iget v2, v0, Lcn/com/smartdevices/bracelet/chart/c/t;->a:I
+    iget v2, v0, Lcn/com/smartdevices/bracelet/model/UserSleepModify;->sleepStart:I
 
     const/16 v3, 0x5a0
 
@@ -732,7 +761,7 @@
     :cond_9
     move-object/from16 v0, v19
 
-    iget v2, v0, Lcn/com/smartdevices/bracelet/chart/c/t;->b:I
+    iget v2, v0, Lcn/com/smartdevices/bracelet/model/UserSleepModify;->sleepEnd:I
 
     const/16 v3, -0x5a0
 
@@ -740,7 +769,7 @@
 
     move-object/from16 v0, v19
 
-    iget v2, v0, Lcn/com/smartdevices/bracelet/chart/c/t;->b:I
+    iget v2, v0, Lcn/com/smartdevices/bracelet/model/UserSleepModify;->sleepEnd:I
 
     const/16 v3, 0x5a0
 
@@ -1087,7 +1116,7 @@
 
     move-object/from16 v5, v18
 
-    invoke-static/range {v2 .. v11}, Lcn/com/smartdevices/bracelet/analysis/DataAnalysis;->sleepAnalyze(Ljava/util/ArrayList;IILandroid/content/SharedPreferences;ZIZZLcn/com/smartdevices/bracelet/chart/c/t;I)Lcn/com/smartdevices/bracelet/analysis/DataAnalysis$sleepResult;
+    invoke-static/range {v2 .. v11}, Lcn/com/smartdevices/bracelet/analysis/DataAnalysis;->sleepAnalyze(Ljava/util/ArrayList;IILandroid/content/SharedPreferences;ZIZZLcn/com/smartdevices/bracelet/model/UserSleepModify;I)Lcn/com/smartdevices/bracelet/analysis/DataAnalysis$sleepResult;
 
     move-result-object v51
 
@@ -1237,7 +1266,7 @@
 
     move/from16 v18, v9
 
-    invoke-static/range {v11 .. v20}, Lcn/com/smartdevices/bracelet/analysis/DataAnalysis;->sleepAnalyze(Ljava/util/ArrayList;IILandroid/content/SharedPreferences;ZIZZLcn/com/smartdevices/bracelet/chart/c/t;I)Lcn/com/smartdevices/bracelet/analysis/DataAnalysis$sleepResult;
+    invoke-static/range {v11 .. v20}, Lcn/com/smartdevices/bracelet/analysis/DataAnalysis;->sleepAnalyze(Ljava/util/ArrayList;IILandroid/content/SharedPreferences;ZIZZLcn/com/smartdevices/bracelet/model/UserSleepModify;I)Lcn/com/smartdevices/bracelet/analysis/DataAnalysis$sleepResult;
 
     move-result-object v2
 
@@ -1982,13 +2011,13 @@
 
     if-eqz v10, :cond_23
 
-    iget v3, v10, Lcn/com/smartdevices/bracelet/chart/c/t;->a:I
+    iget v3, v10, Lcn/com/smartdevices/bracelet/model/UserSleepModify;->sleepStart:I
 
     const/high16 v5, -0x80000000
 
     if-le v3, v5, :cond_23
 
-    iget v3, v10, Lcn/com/smartdevices/bracelet/chart/c/t;->a:I
+    iget v3, v10, Lcn/com/smartdevices/bracelet/model/UserSleepModify;->sleepStart:I
 
     move-object/from16 v0, v17
 
@@ -1997,13 +2026,13 @@
     :cond_23
     if-eqz v10, :cond_24
 
-    iget v3, v10, Lcn/com/smartdevices/bracelet/chart/c/t;->b:I
+    iget v3, v10, Lcn/com/smartdevices/bracelet/model/UserSleepModify;->sleepEnd:I
 
     const/high16 v5, -0x80000000
 
     if-le v3, v5, :cond_24
 
-    iget v3, v10, Lcn/com/smartdevices/bracelet/chart/c/t;->b:I
+    iget v3, v10, Lcn/com/smartdevices/bracelet/model/UserSleepModify;->sleepEnd:I
 
     move-object/from16 v0, v17
 
@@ -2246,7 +2275,7 @@
 
     if-nez v9, :cond_26
 
-    iget v2, v10, Lcn/com/smartdevices/bracelet/chart/c/t;->a:I
+    iget v2, v10, Lcn/com/smartdevices/bracelet/model/UserSleepModify;->sleepStart:I
 
     if-gez v2, :cond_26
 
@@ -2279,7 +2308,7 @@
     :cond_26
     sget-boolean v2, Lcn/com/smartdevices/bracelet/analysis/DataAnalysis;->DEBUG:Z
 
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_0
 
     const-string v2, "DataAnalysis"
 
@@ -2311,7 +2340,7 @@
 
     invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto/16 :goto_1
+    goto/16 :goto_0
 
     :cond_27
     const/16 v3, 0x438
@@ -4663,7 +4692,60 @@
     :cond_75
     move-object v2, v6
 
-    goto/16 :goto_0
+    goto/16 :goto_1
+.end method
+
+.method public static dataPostProcessNative(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/DaySportData;Lcn/com/smartdevices/bracelet/model/DaySportData;Lcn/com/smartdevices/bracelet/model/DaySportData;)V
+    .locals 6
+
+    const/4 v5, 0x0
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->h()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    move-result-object v0
+
+    if-eqz p2, :cond_1
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/chart/c/q;->a()Lcn/com/smartdevices/bracelet/chart/c/r;
+
+    move-result-object v1
+
+    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/model/DaySportData;->getSportDay()Lcn/com/smartdevices/bracelet/model/SportDay;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/chart/c/r;->a(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/UserSleepModify;
+
+    move-result-object v4
+
+    :goto_0
+    if-eqz p3, :cond_0
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/chart/c/q;->a()Lcn/com/smartdevices/bracelet/chart/c/r;
+
+    move-result-object v1
+
+    invoke-virtual {p3}, Lcn/com/smartdevices/bracelet/model/DaySportData;->getSportDay()Lcn/com/smartdevices/bracelet/model/SportDay;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/chart/c/r;->a(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/UserSleepModify;
+
+    :cond_0
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    invoke-static/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/analysis/DataAnalysis;->processData(Lcn/com/smartdevices/bracelet/model/PersonInfo;Lcn/com/smartdevices/bracelet/model/DaySportData;Lcn/com/smartdevices/bracelet/model/DaySportData;Lcn/com/smartdevices/bracelet/model/DaySportData;Lcn/com/smartdevices/bracelet/model/UserSleepModify;Lcn/com/smartdevices/bracelet/model/UserSleepModify;)V
+
+    return-void
+
+    :cond_1
+    move-object v4, v5
+
+    goto :goto_0
 .end method
 
 .method private static filterData(Ljava/util/ArrayList;IILjava/util/ArrayList;Z)V
@@ -6771,6 +6853,9 @@
     goto :goto_2
 .end method
 
+.method public static native processData(Lcn/com/smartdevices/bracelet/model/PersonInfo;Lcn/com/smartdevices/bracelet/model/DaySportData;Lcn/com/smartdevices/bracelet/model/DaySportData;Lcn/com/smartdevices/bracelet/model/DaySportData;Lcn/com/smartdevices/bracelet/model/UserSleepModify;Lcn/com/smartdevices/bracelet/model/UserSleepModify;)V
+.end method
+
 .method private static resetData(Ljava/util/ArrayList;II)V
     .locals 5
     .annotation system Ldalvik/annotation/Signature;
@@ -7100,7 +7185,7 @@
     goto :goto_1
 .end method
 
-.method private static sleepAnalyze(Ljava/util/ArrayList;IILandroid/content/SharedPreferences;ZIZZLcn/com/smartdevices/bracelet/chart/c/t;I)Lcn/com/smartdevices/bracelet/analysis/DataAnalysis$sleepResult;
+.method private static sleepAnalyze(Ljava/util/ArrayList;IILandroid/content/SharedPreferences;ZIZZLcn/com/smartdevices/bracelet/model/UserSleepModify;I)Lcn/com/smartdevices/bracelet/analysis/DataAnalysis$sleepResult;
     .locals 37
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -7111,7 +7196,7 @@
             ">;II",
             "Landroid/content/SharedPreferences;",
             "ZIZZ",
-            "Lcn/com/smartdevices/bracelet/chart/c/t;",
+            "Lcn/com/smartdevices/bracelet/model/UserSleepModify;",
             "I)",
             "Lcn/com/smartdevices/bracelet/analysis/DataAnalysis$sleepResult;"
         }
@@ -7150,7 +7235,7 @@
 
     move-object/from16 v0, p8
 
-    iget v6, v0, Lcn/com/smartdevices/bracelet/chart/c/t;->a:I
+    iget v6, v0, Lcn/com/smartdevices/bracelet/model/UserSleepModify;->sleepStart:I
 
     const/16 v8, -0x5a0
 
@@ -7158,7 +7243,7 @@
 
     move-object/from16 v0, p8
 
-    iget v6, v0, Lcn/com/smartdevices/bracelet/chart/c/t;->a:I
+    iget v6, v0, Lcn/com/smartdevices/bracelet/model/UserSleepModify;->sleepStart:I
 
     const/16 v8, 0x5a0
 
@@ -7168,13 +7253,13 @@
 
     move-object/from16 v0, p8
 
-    iget v3, v0, Lcn/com/smartdevices/bracelet/chart/c/t;->a:I
+    iget v3, v0, Lcn/com/smartdevices/bracelet/model/UserSleepModify;->sleepStart:I
 
     if-ltz v3, :cond_20
 
     move-object/from16 v0, p8
 
-    iget v3, v0, Lcn/com/smartdevices/bracelet/chart/c/t;->a:I
+    iget v3, v0, Lcn/com/smartdevices/bracelet/model/UserSleepModify;->sleepStart:I
 
     :goto_1
     const/4 v4, 0x1
@@ -7188,7 +7273,7 @@
     :cond_0
     move-object/from16 v0, p8
 
-    iget v6, v0, Lcn/com/smartdevices/bracelet/chart/c/t;->b:I
+    iget v6, v0, Lcn/com/smartdevices/bracelet/model/UserSleepModify;->sleepEnd:I
 
     const/16 v8, -0x5a0
 
@@ -7196,7 +7281,7 @@
 
     move-object/from16 v0, p8
 
-    iget v6, v0, Lcn/com/smartdevices/bracelet/chart/c/t;->b:I
+    iget v6, v0, Lcn/com/smartdevices/bracelet/model/UserSleepModify;->sleepEnd:I
 
     const/16 v8, 0x5a0
 
@@ -7206,7 +7291,7 @@
 
     move-object/from16 v0, p8
 
-    iget v5, v0, Lcn/com/smartdevices/bracelet/chart/c/t;->b:I
+    iget v5, v0, Lcn/com/smartdevices/bracelet/model/UserSleepModify;->sleepEnd:I
 
     invoke-virtual/range {p0 .. p0}, Ljava/util/ArrayList;->size()I
 
@@ -7216,7 +7301,7 @@
 
     move-object/from16 v0, p8
 
-    iget v5, v0, Lcn/com/smartdevices/bracelet/chart/c/t;->b:I
+    iget v5, v0, Lcn/com/smartdevices/bracelet/model/UserSleepModify;->sleepEnd:I
 
     :goto_2
     add-int/lit8 v3, v3, 0x2
@@ -8489,7 +8574,7 @@
     :cond_21
     move-object/from16 v0, p8
 
-    iget v3, v0, Lcn/com/smartdevices/bracelet/chart/c/t;->a:I
+    iget v3, v0, Lcn/com/smartdevices/bracelet/model/UserSleepModify;->sleepStart:I
 
     add-int v3, v3, p9
 
@@ -8507,7 +8592,7 @@
     :cond_23
     move-object/from16 v0, p8
 
-    iget v5, v0, Lcn/com/smartdevices/bracelet/chart/c/t;->b:I
+    iget v5, v0, Lcn/com/smartdevices/bracelet/model/UserSleepModify;->sleepEnd:I
 
     add-int v5, v5, p9
 

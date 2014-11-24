@@ -6,13 +6,13 @@
 
 
 # static fields
-.field public static final a:Lcom/amap/api/maps/model/t;
+.field public static final CREATOR:Lcom/amap/api/maps/model/NavigateArrowOptionsCreator;
 
 
 # instance fields
-.field b:Ljava/lang/String;
+.field a:Ljava/lang/String;
 
-.field private final c:Ljava/util/List;
+.field private final b:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List",
@@ -23,26 +23,26 @@
     .end annotation
 .end field
 
-.field private d:F
+.field private c:F
+
+.field private d:I
 
 .field private e:I
 
-.field private f:I
+.field private f:F
 
-.field private g:F
-
-.field private h:Z
+.field private g:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/maps/model/t;
+    new-instance v0, Lcom/amap/api/maps/model/NavigateArrowOptionsCreator;
 
-    invoke-direct {v0}, Lcom/amap/api/maps/model/t;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/maps/model/NavigateArrowOptionsCreator;-><init>()V
 
-    sput-object v0, Lcom/amap/api/maps/model/NavigateArrowOptions;->a:Lcom/amap/api/maps/model/t;
+    sput-object v0, Lcom/amap/api/maps/model/NavigateArrowOptions;->CREATOR:Lcom/amap/api/maps/model/NavigateArrowOptionsCreator;
 
     return-void
 .end method
@@ -54,7 +54,7 @@
 
     const/high16 v0, 0x41200000
 
-    iput v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->d:F
+    iput v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->c:F
 
     const/16 v0, 0xdd
 
@@ -68,7 +68,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->e:I
+    iput v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->d:I
 
     const/16 v0, 0xaa
 
@@ -82,54 +82,52 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->f:I
+    iput v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->e:I
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->g:F
+    iput v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->f:F
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->h:Z
+    iput-boolean v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->g:Z
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->c:Ljava/util/List;
+    iput-object v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->b:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(F)Lcom/amap/api/maps/model/NavigateArrowOptions;
-    .locals 0
-
-    iput p1, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->d:F
-
-    return-object p0
-.end method
-
-.method public a(I)Lcom/amap/api/maps/model/NavigateArrowOptions;
-    .locals 0
-
-    iput p1, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->e:I
-
-    return-object p0
-.end method
-
-.method public a(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/NavigateArrowOptions;
+.method public add(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/NavigateArrowOptions;
     .locals 1
 
-    iget-object v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->c:Ljava/util/List;
+    iget-object v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->b:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-object p0
 .end method
 
-.method public a(Ljava/lang/Iterable;)Lcom/amap/api/maps/model/NavigateArrowOptions;
+.method public varargs add([Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/NavigateArrowOptions;
+    .locals 2
+
+    iget-object v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->b:Ljava/util/List;
+
+    invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+
+    return-object p0
+.end method
+
+.method public addAll(Ljava/lang/Iterable;)Lcom/amap/api/maps/model/NavigateArrowOptions;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -159,7 +157,7 @@
 
     check-cast v0, Lcom/amap/api/maps/model/LatLng;
 
-    iget-object v2, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->c:Ljava/util/List;
+    iget-object v2, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->b:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -169,29 +167,15 @@
     return-object p0
 .end method
 
-.method public a(Z)Lcom/amap/api/maps/model/NavigateArrowOptions;
-    .locals 0
+.method public describeContents()I
+    .locals 1
 
-    iput-boolean p1, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->h:Z
+    const/4 v0, 0x0
 
-    return-object p0
+    return v0
 .end method
 
-.method public varargs a([Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/NavigateArrowOptions;
-    .locals 2
-
-    iget-object v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->c:Ljava/util/List;
-
-    invoke-static {p1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
-
-    return-object p0
-.end method
-
-.method public a()Ljava/util/List;
+.method public getPoints()Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -203,36 +187,12 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->c:Ljava/util/List;
+    iget-object v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->b:Ljava/util/List;
 
     return-object v0
 .end method
 
-.method public b()F
-    .locals 1
-
-    iget v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->d:F
-
-    return v0
-.end method
-
-.method public b(F)Lcom/amap/api/maps/model/NavigateArrowOptions;
-    .locals 0
-
-    iput p1, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->g:F
-
-    return-object p0
-.end method
-
-.method public b(I)Lcom/amap/api/maps/model/NavigateArrowOptions;
-    .locals 0
-
-    iput p1, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->f:I
-
-    return-object p0
-.end method
-
-.method public c()I
+.method public getSideColor()I
     .locals 1
 
     iget v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->e:I
@@ -240,62 +200,94 @@
     return v0
 .end method
 
-.method public d()I
+.method public getTopColor()I
     .locals 1
 
-    iget v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->f:I
+    iget v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->d:I
 
     return v0
 .end method
 
-.method public describeContents()I
+.method public getWidth()F
     .locals 1
 
-    const/4 v0, 0x0
+    iget v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->c:F
 
     return v0
 .end method
 
-.method public e()F
+.method public getZIndex()F
     .locals 1
 
-    iget v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->g:F
+    iget v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->f:F
 
     return v0
 .end method
 
-.method public f()Z
+.method public isVisible()Z
     .locals 1
 
-    iget-boolean v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->h:Z
+    iget-boolean v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->g:Z
 
     return v0
+.end method
+
+.method public sideColor(I)Lcom/amap/api/maps/model/NavigateArrowOptions;
+    .locals 0
+
+    iput p1, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->e:I
+
+    return-object p0
+.end method
+
+.method public topColor(I)Lcom/amap/api/maps/model/NavigateArrowOptions;
+    .locals 0
+
+    iput p1, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->d:I
+
+    return-object p0
+.end method
+
+.method public visible(Z)Lcom/amap/api/maps/model/NavigateArrowOptions;
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->g:Z
+
+    return-object p0
+.end method
+
+.method public width(F)Lcom/amap/api/maps/model/NavigateArrowOptions;
+    .locals 0
+
+    iput p1, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->c:F
+
+    return-object p0
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
-    iget-object v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->c:Ljava/util/List;
+    iget-object v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->b:Ljava/util/List;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeTypedList(Ljava/util/List;)V
 
-    iget v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->d:F
+    iget v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->c:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
+
+    iget v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->d:I
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     iget v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->e:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->f:I
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->g:F
+    iget v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->f:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    iget-boolean v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->h:Z
+    iget-boolean v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->g:Z
 
     if-eqz v0, :cond_0
 
@@ -306,7 +298,7 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    iget-object v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->b:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->a:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
@@ -316,4 +308,12 @@
     const/4 v0, 0x0
 
     goto :goto_0
+.end method
+
+.method public zIndex(F)Lcom/amap/api/maps/model/NavigateArrowOptions;
+    .locals 0
+
+    iput p1, p0, Lcom/amap/api/maps/model/NavigateArrowOptions;->f:F
+
+    return-object p0
 .end method

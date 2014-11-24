@@ -6,52 +6,52 @@
 
 
 # static fields
-.field public static final a:Lcom/amap/api/maps/q;
+.field public static final CREATOR:Lcom/amap/api/maps/AMapOptionsCreator;
 
-.field public static final b:I = 0x0
+.field public static final LOGO_POSITION_BOTTOM_CENTER:I = 0x1
 
-.field public static final c:I = 0x1
+.field public static final LOGO_POSITION_BOTTOM_LEFT:I = 0x0
 
-.field public static final d:I = 0x2
+.field public static final LOGO_POSITION_BOTTOM_RIGHT:I = 0x2
 
-.field public static final e:I = 0x0
+.field public static final ZOOM_POSITION_RIGHT_BUTTOM:I = 0x1
 
-.field public static final f:I = 0x1
+.field public static final ZOOM_POSITION_RIGHT_CENTER:I
 
 
 # instance fields
-.field private g:I
+.field private a:I
 
-.field private h:Z
+.field private b:Z
+
+.field private c:Z
+
+.field private d:Z
+
+.field private e:Z
+
+.field private f:Z
+
+.field private g:Z
+
+.field private h:Lcom/amap/api/maps/model/CameraPosition;
 
 .field private i:Z
 
 .field private j:Z
 
-.field private k:Z
-
-.field private l:Z
-
-.field private m:Z
-
-.field private n:Lcom/amap/api/maps/model/CameraPosition;
-
-.field private o:Z
-
-.field private p:Z
-
-.field private q:I
+.field private k:I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/maps/q;
+    new-instance v0, Lcom/amap/api/maps/AMapOptionsCreator;
 
-    invoke-direct {v0}, Lcom/amap/api/maps/q;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/maps/AMapOptionsCreator;-><init>()V
 
-    sput-object v0, Lcom/amap/api/maps/AMapOptions;->a:Lcom/amap/api/maps/q;
+    sput-object v0, Lcom/amap/api/maps/AMapOptions;->CREATOR:Lcom/amap/api/maps/AMapOptionsCreator;
 
     return-void
 .end method
@@ -65,121 +65,45 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Lcom/amap/api/maps/AMapOptions;->g:I
+    iput v0, p0, Lcom/amap/api/maps/AMapOptions;->a:I
 
-    iput-boolean v0, p0, Lcom/amap/api/maps/AMapOptions;->h:Z
+    iput-boolean v0, p0, Lcom/amap/api/maps/AMapOptions;->b:Z
 
-    iput-boolean v0, p0, Lcom/amap/api/maps/AMapOptions;->i:Z
+    iput-boolean v0, p0, Lcom/amap/api/maps/AMapOptions;->c:Z
 
-    iput-boolean v0, p0, Lcom/amap/api/maps/AMapOptions;->j:Z
+    iput-boolean v0, p0, Lcom/amap/api/maps/AMapOptions;->d:Z
 
-    iput-boolean v0, p0, Lcom/amap/api/maps/AMapOptions;->k:Z
+    iput-boolean v0, p0, Lcom/amap/api/maps/AMapOptions;->e:Z
 
-    iput-boolean v0, p0, Lcom/amap/api/maps/AMapOptions;->l:Z
+    iput-boolean v0, p0, Lcom/amap/api/maps/AMapOptions;->f:Z
 
-    iput-boolean v1, p0, Lcom/amap/api/maps/AMapOptions;->m:Z
+    iput-boolean v1, p0, Lcom/amap/api/maps/AMapOptions;->g:Z
 
-    iput-boolean v1, p0, Lcom/amap/api/maps/AMapOptions;->o:Z
+    iput-boolean v1, p0, Lcom/amap/api/maps/AMapOptions;->i:Z
 
-    iput-boolean v1, p0, Lcom/amap/api/maps/AMapOptions;->p:Z
+    iput-boolean v1, p0, Lcom/amap/api/maps/AMapOptions;->j:Z
 
-    iput v1, p0, Lcom/amap/api/maps/AMapOptions;->q:I
+    iput v1, p0, Lcom/amap/api/maps/AMapOptions;->k:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()I
-    .locals 1
-
-    iget v0, p0, Lcom/amap/api/maps/AMapOptions;->q:I
-
-    return v0
-.end method
-
-.method public a(I)Lcom/amap/api/maps/AMapOptions;
+.method public camera(Lcom/amap/api/maps/model/CameraPosition;)Lcom/amap/api/maps/AMapOptions;
     .locals 0
 
-    iput p1, p0, Lcom/amap/api/maps/AMapOptions;->q:I
+    iput-object p1, p0, Lcom/amap/api/maps/AMapOptions;->h:Lcom/amap/api/maps/model/CameraPosition;
 
     return-object p0
 .end method
 
-.method public a(Lcom/amap/api/maps/model/CameraPosition;)Lcom/amap/api/maps/AMapOptions;
+.method public compassEnabled(Z)Lcom/amap/api/maps/AMapOptions;
     .locals 0
 
-    iput-object p1, p0, Lcom/amap/api/maps/AMapOptions;->n:Lcom/amap/api/maps/model/CameraPosition;
+    iput-boolean p1, p0, Lcom/amap/api/maps/AMapOptions;->i:Z
 
     return-object p0
-.end method
-
-.method public a(Z)Lcom/amap/api/maps/AMapOptions;
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/amap/api/maps/AMapOptions;->m:Z
-
-    return-object p0
-.end method
-
-.method public b(I)Lcom/amap/api/maps/AMapOptions;
-    .locals 0
-
-    iput p1, p0, Lcom/amap/api/maps/AMapOptions;->g:I
-
-    return-object p0
-.end method
-
-.method public b(Z)Lcom/amap/api/maps/AMapOptions;
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/amap/api/maps/AMapOptions;->p:Z
-
-    return-object p0
-.end method
-
-.method public b()Ljava/lang/Boolean;
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/amap/api/maps/AMapOptions;->m:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public c()I
-    .locals 1
-
-    iget v0, p0, Lcom/amap/api/maps/AMapOptions;->g:I
-
-    return v0
-.end method
-
-.method public c(Z)Lcom/amap/api/maps/AMapOptions;
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/amap/api/maps/AMapOptions;->l:Z
-
-    return-object p0
-.end method
-
-.method public d(Z)Lcom/amap/api/maps/AMapOptions;
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/amap/api/maps/AMapOptions;->o:Z
-
-    return-object p0
-.end method
-
-.method public d()Lcom/amap/api/maps/model/CameraPosition;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/maps/AMapOptions;->n:Lcom/amap/api/maps/model/CameraPosition;
-
-    return-object v0
 .end method
 
 .method public describeContents()I
@@ -190,75 +114,15 @@
     return v0
 .end method
 
-.method public e(Z)Lcom/amap/api/maps/AMapOptions;
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/amap/api/maps/AMapOptions;->i:Z
-
-    return-object p0
-.end method
-
-.method public e()Ljava/lang/Boolean;
+.method public getCamera()Lcom/amap/api/maps/model/CameraPosition;
     .locals 1
 
-    iget-boolean v0, p0, Lcom/amap/api/maps/AMapOptions;->p:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
+    iget-object v0, p0, Lcom/amap/api/maps/AMapOptions;->h:Lcom/amap/api/maps/model/CameraPosition;
 
     return-object v0
 .end method
 
-.method public f(Z)Lcom/amap/api/maps/AMapOptions;
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/amap/api/maps/AMapOptions;->k:Z
-
-    return-object p0
-.end method
-
-.method public f()Ljava/lang/Boolean;
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/amap/api/maps/AMapOptions;->l:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public g(Z)Lcom/amap/api/maps/AMapOptions;
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/amap/api/maps/AMapOptions;->j:Z
-
-    return-object p0
-.end method
-
-.method public g()Ljava/lang/Boolean;
-    .locals 1
-
-    iget-boolean v0, p0, Lcom/amap/api/maps/AMapOptions;->o:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public h(Z)Lcom/amap/api/maps/AMapOptions;
-    .locals 0
-
-    iput-boolean p1, p0, Lcom/amap/api/maps/AMapOptions;->h:Z
-
-    return-object p0
-.end method
-
-.method public h()Ljava/lang/Boolean;
+.method public getCompassEnabled()Ljava/lang/Boolean;
     .locals 1
 
     iget-boolean v0, p0, Lcom/amap/api/maps/AMapOptions;->i:Z
@@ -270,10 +134,26 @@
     return-object v0
 .end method
 
-.method public i()Ljava/lang/Boolean;
+.method public getLogoPosition()I
     .locals 1
 
-    iget-boolean v0, p0, Lcom/amap/api/maps/AMapOptions;->k:Z
+    iget v0, p0, Lcom/amap/api/maps/AMapOptions;->k:I
+
+    return v0
+.end method
+
+.method public getMapType()I
+    .locals 1
+
+    iget v0, p0, Lcom/amap/api/maps/AMapOptions;->a:I
+
+    return v0
+.end method
+
+.method public getRotateGesturesEnabled()Ljava/lang/Boolean;
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/amap/api/maps/AMapOptions;->b:Z
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -282,7 +162,7 @@
     return-object v0
 .end method
 
-.method public j()Ljava/lang/Boolean;
+.method public getScaleControlsEnabled()Ljava/lang/Boolean;
     .locals 1
 
     iget-boolean v0, p0, Lcom/amap/api/maps/AMapOptions;->j:Z
@@ -294,10 +174,10 @@
     return-object v0
 .end method
 
-.method public k()Ljava/lang/Boolean;
+.method public getScrollGesturesEnabled()Ljava/lang/Boolean;
     .locals 1
 
-    iget-boolean v0, p0, Lcom/amap/api/maps/AMapOptions;->h:Z
+    iget-boolean v0, p0, Lcom/amap/api/maps/AMapOptions;->c:Z
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -306,14 +186,110 @@
     return-object v0
 .end method
 
+.method public getTiltGesturesEnabled()Ljava/lang/Boolean;
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/amap/api/maps/AMapOptions;->d:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getZOrderOnTop()Ljava/lang/Boolean;
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/amap/api/maps/AMapOptions;->g:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getZoomControlsEnabled()Ljava/lang/Boolean;
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/amap/api/maps/AMapOptions;->f:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getZoomGesturesEnabled()Ljava/lang/Boolean;
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/amap/api/maps/AMapOptions;->e:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public logoPosition(I)Lcom/amap/api/maps/AMapOptions;
+    .locals 0
+
+    iput p1, p0, Lcom/amap/api/maps/AMapOptions;->k:I
+
+    return-object p0
+.end method
+
+.method public mapType(I)Lcom/amap/api/maps/AMapOptions;
+    .locals 0
+
+    iput p1, p0, Lcom/amap/api/maps/AMapOptions;->a:I
+
+    return-object p0
+.end method
+
+.method public rotateGesturesEnabled(Z)Lcom/amap/api/maps/AMapOptions;
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/amap/api/maps/AMapOptions;->b:Z
+
+    return-object p0
+.end method
+
+.method public scaleControlsEnabled(Z)Lcom/amap/api/maps/AMapOptions;
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/amap/api/maps/AMapOptions;->j:Z
+
+    return-object p0
+.end method
+
+.method public scrollGesturesEnabled(Z)Lcom/amap/api/maps/AMapOptions;
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/amap/api/maps/AMapOptions;->c:Z
+
+    return-object p0
+.end method
+
+.method public tiltGesturesEnabled(Z)Lcom/amap/api/maps/AMapOptions;
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/amap/api/maps/AMapOptions;->d:Z
+
+    return-object p0
+.end method
+
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 3
 
-    iget-object v0, p0, Lcom/amap/api/maps/AMapOptions;->n:Lcom/amap/api/maps/model/CameraPosition;
+    iget-object v0, p0, Lcom/amap/api/maps/AMapOptions;->h:Lcom/amap/api/maps/model/CameraPosition;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    iget v0, p0, Lcom/amap/api/maps/AMapOptions;->g:I
+    iget v0, p0, Lcom/amap/api/maps/AMapOptions;->a:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
@@ -323,53 +299,77 @@
 
     const/4 v1, 0x0
 
-    iget-boolean v2, p0, Lcom/amap/api/maps/AMapOptions;->h:Z
+    iget-boolean v2, p0, Lcom/amap/api/maps/AMapOptions;->b:Z
 
     aput-boolean v2, v0, v1
 
     const/4 v1, 0x1
 
-    iget-boolean v2, p0, Lcom/amap/api/maps/AMapOptions;->i:Z
+    iget-boolean v2, p0, Lcom/amap/api/maps/AMapOptions;->c:Z
 
     aput-boolean v2, v0, v1
 
     const/4 v1, 0x2
 
-    iget-boolean v2, p0, Lcom/amap/api/maps/AMapOptions;->j:Z
+    iget-boolean v2, p0, Lcom/amap/api/maps/AMapOptions;->d:Z
 
     aput-boolean v2, v0, v1
 
     const/4 v1, 0x3
 
-    iget-boolean v2, p0, Lcom/amap/api/maps/AMapOptions;->k:Z
+    iget-boolean v2, p0, Lcom/amap/api/maps/AMapOptions;->e:Z
 
     aput-boolean v2, v0, v1
 
     const/4 v1, 0x4
 
-    iget-boolean v2, p0, Lcom/amap/api/maps/AMapOptions;->l:Z
+    iget-boolean v2, p0, Lcom/amap/api/maps/AMapOptions;->f:Z
 
     aput-boolean v2, v0, v1
 
     const/4 v1, 0x5
 
-    iget-boolean v2, p0, Lcom/amap/api/maps/AMapOptions;->m:Z
+    iget-boolean v2, p0, Lcom/amap/api/maps/AMapOptions;->g:Z
 
     aput-boolean v2, v0, v1
 
     const/4 v1, 0x6
 
-    iget-boolean v2, p0, Lcom/amap/api/maps/AMapOptions;->o:Z
+    iget-boolean v2, p0, Lcom/amap/api/maps/AMapOptions;->i:Z
 
     aput-boolean v2, v0, v1
 
     const/4 v1, 0x7
 
-    iget-boolean v2, p0, Lcom/amap/api/maps/AMapOptions;->p:Z
+    iget-boolean v2, p0, Lcom/amap/api/maps/AMapOptions;->j:Z
 
     aput-boolean v2, v0, v1
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBooleanArray([Z)V
 
     return-void
+.end method
+
+.method public zOrderOnTop(Z)Lcom/amap/api/maps/AMapOptions;
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/amap/api/maps/AMapOptions;->g:Z
+
+    return-object p0
+.end method
+
+.method public zoomControlsEnabled(Z)Lcom/amap/api/maps/AMapOptions;
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/amap/api/maps/AMapOptions;->f:Z
+
+    return-object p0
+.end method
+
+.method public zoomGesturesEnabled(Z)Lcom/amap/api/maps/AMapOptions;
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/amap/api/maps/AMapOptions;->e:Z
+
+    return-object p0
 .end method

@@ -155,13 +155,13 @@
 
     invoke-static {p0}, Lcn/com/smartdevices/bracelet/l;->a(Landroid/content/Context;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/d/e;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/d/g;->a(Landroid/content/Context;)V
 
     invoke-static {p0}, Lcn/com/smartdevices/bracelet/b;->a(Landroid/content/Context;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->m(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/z;->m(Landroid/content/Context;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->o(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/z;->o(Landroid/content/Context;)V
 
     invoke-static {p0}, Lcn/com/smartdevices/bracelet/lab/j;->a(Landroid/content/Context;)V
 
@@ -177,7 +177,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v2, v2, v1}, Lcn/com/smartdevices/bracelet/x;->a(ZZZLandroid/content/Context;)V
+    invoke-static {v0, v2, v2, v1}, Lcn/com/smartdevices/bracelet/y;->a(ZZZLandroid/content/Context;)V
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/BraceletApp;->b()V
 

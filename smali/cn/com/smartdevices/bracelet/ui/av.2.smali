@@ -36,7 +36,7 @@
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/u;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 
-    invoke-static {p3}, Lcn/com/smartdevices/bracelet/y;->a([B)Ljava/lang/String;
+    invoke-static {p3}, Lcn/com/smartdevices/bracelet/z;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
@@ -74,11 +74,11 @@
 .method public onSuccess(I[Lorg/apache/http/Header;[B)V
     .locals 5
 
-    invoke-static {p3}, Lcn/com/smartdevices/bracelet/y;->a([B)Ljava/lang/String;
+    invoke-static {p3}, Lcn/com/smartdevices/bracelet/z;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/d/e;->b(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/d/f;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/d/g;->b(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/d/h;
 
     move-result-object v1
 
@@ -110,7 +110,7 @@
 
     invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/d/f;->a()Z
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/d/h;->a()Z
 
     move-result v0
 

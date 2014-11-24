@@ -28,9 +28,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/services/core/p;
+    new-instance v0, Lcom/amap/api/services/core/n;
 
-    invoke-direct {v0}, Lcom/amap/api/services/core/p;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/services/core/n;-><init>()V
 
     sput-object v0, Lcom/amap/api/services/core/LatLonPoint;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -69,7 +69,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Landroid/os/Parcel;Lcom/amap/api/services/core/p;)V
+.method synthetic constructor <init>(Landroid/os/Parcel;Lcom/amap/api/services/core/n;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/amap/api/services/core/LatLonPoint;-><init>(Landroid/os/Parcel;)V
@@ -79,39 +79,7 @@
 
 
 # virtual methods
-.method public a()D
-    .locals 2
-
-    iget-wide v0, p0, Lcom/amap/api/services/core/LatLonPoint;->b:D
-
-    return-wide v0
-.end method
-
-.method public a(D)V
-    .locals 0
-
-    iput-wide p1, p0, Lcom/amap/api/services/core/LatLonPoint;->b:D
-
-    return-void
-.end method
-
-.method public b()D
-    .locals 2
-
-    iget-wide v0, p0, Lcom/amap/api/services/core/LatLonPoint;->a:D
-
-    return-wide v0
-.end method
-
-.method public b(D)V
-    .locals 0
-
-    iput-wide p1, p0, Lcom/amap/api/services/core/LatLonPoint;->a:D
-
-    return-void
-.end method
-
-.method public c()Lcom/amap/api/services/core/LatLonPoint;
+.method public copy()Lcom/amap/api/services/core/LatLonPoint;
     .locals 5
 
     new-instance v0, Lcom/amap/api/services/core/LatLonPoint;
@@ -213,6 +181,22 @@
     goto :goto_0
 .end method
 
+.method public getLatitude()D
+    .locals 2
+
+    iget-wide v0, p0, Lcom/amap/api/services/core/LatLonPoint;->a:D
+
+    return-wide v0
+.end method
+
+.method public getLongitude()D
+    .locals 2
+
+    iget-wide v0, p0, Lcom/amap/api/services/core/LatLonPoint;->b:D
+
+    return-wide v0
+.end method
+
 .method public hashCode()I
     .locals 5
 
@@ -249,6 +233,22 @@
     add-int/2addr v0, v1
 
     return v0
+.end method
+
+.method public setLatitude(D)V
+    .locals 0
+
+    iput-wide p1, p0, Lcom/amap/api/services/core/LatLonPoint;->a:D
+
+    return-void
+.end method
+
+.method public setLongitude(D)V
+    .locals 0
+
+    iput-wide p1, p0, Lcom/amap/api/services/core/LatLonPoint;->b:D
+
+    return-void
 .end method
 
 .method public toString()Ljava/lang/String;

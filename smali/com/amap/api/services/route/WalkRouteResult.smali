@@ -37,9 +37,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/services/route/y;
+    new-instance v0, Lcom/amap/api/services/route/u;
 
-    invoke-direct {v0}, Lcom/amap/api/services/route/y;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/services/route/u;-><init>()V
 
     sput-object v0, Lcom/amap/api/services/route/WalkRouteResult;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -86,7 +86,15 @@
 
 
 # virtual methods
-.method public a()Ljava/util/List;
+.method public describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getPaths()Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -103,15 +111,15 @@
     return-object v0
 .end method
 
-.method public a(Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;)V
-    .locals 0
+.method public getWalkQuery()Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;
+    .locals 1
 
-    iput-object p1, p0, Lcom/amap/api/services/route/WalkRouteResult;->b:Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;
+    iget-object v0, p0, Lcom/amap/api/services/route/WalkRouteResult;->b:Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;
 
-    return-void
+    return-object v0
 .end method
 
-.method public a(Ljava/util/List;)V
+.method public setPaths(Ljava/util/List;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -128,20 +136,12 @@
     return-void
 .end method
 
-.method public b()Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;
-    .locals 1
+.method public setWalkQuery(Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;)V
+    .locals 0
 
-    iget-object v0, p0, Lcom/amap/api/services/route/WalkRouteResult;->b:Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;
+    iput-object p1, p0, Lcom/amap/api/services/route/WalkRouteResult;->b:Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;
 
-    return-object v0
-.end method
-
-.method public describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
+    return-void
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V

@@ -400,7 +400,7 @@
 
     move-object v0, p1
 
-    invoke-static/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/chart/c/u;->a(Landroid/graphics/Canvas;FFFLandroid/graphics/Bitmap;Landroid/graphics/Paint;)V
+    invoke-static/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/chart/c/t;->a(Landroid/graphics/Canvas;FFFLandroid/graphics/Bitmap;Landroid/graphics/Paint;)V
 
     const/16 v0, 0x12
 

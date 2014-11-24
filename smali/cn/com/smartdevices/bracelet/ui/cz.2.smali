@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
@@ -22,58 +22,10 @@
 
 
 # virtual methods
-.method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .locals 2
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 0
 
-    if-eqz p2, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cz;->a:Lcn/com/smartdevices/bracelet/ui/cv;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/cv;->b(Lcn/com/smartdevices/bracelet/ui/cv;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->enableInComingCallTime()V
-
-    :goto_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cz;->a:Lcn/com/smartdevices/bracelet/ui/cv;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/cv;->b(Lcn/com/smartdevices/bracelet/ui/cv;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    move-result-object v0
-
-    const/4 v1, 0x2
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->setNeedSyncServer(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cz;->a:Lcn/com/smartdevices/bracelet/ui/cv;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/cv;->b(Lcn/com/smartdevices/bracelet/ui/cv;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/u;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
-
-    invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
-
-    move-result-object v0
-
-    new-instance v1, Lcn/com/smartdevices/bracelet/eventbus/EventSettingFragmentUpdate;
-
-    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/eventbus/EventSettingFragmentUpdate;-><init>()V
-
-    invoke-virtual {v0, v1}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
     return-void
-
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cz;->a:Lcn/com/smartdevices/bracelet/ui/cv;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/cv;->b(Lcn/com/smartdevices/bracelet/ui/cv;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->disableInComingCallTime()V
-
-    goto :goto_0
 .end method

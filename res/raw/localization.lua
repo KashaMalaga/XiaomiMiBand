@@ -11,6 +11,8 @@ zh_CN = 'zh_CN'
 zh_TW = 'zh_TW'
 en_US = 'en_US'
 en_GB = 'en_GB'
+en = 'en'
+indo = 'in'
 fr_FR = 'fr_FR'
 fr_BE = 'fr_BE'
 fr_CA = 'fr_CA'
@@ -24,7 +26,6 @@ es = 'es'
 hr = 'hr'
 ru = 'ru'
 g_CurLocale = ""
--------------Globals----------------
 DEBUG = true
 -------------Globals----------------
 
@@ -50,27 +51,31 @@ function getCurLocale()
     return g_CurLocale;
 end
 
-function setCurLocale(locale)
-    g_CurLocale = locale;
-end
 
 localization_table = {
     en = localization_English_table,
+    zh_CN = localization_Chinese_table,
+    zh_TW = localization_zh_rTW_table,
 	fr = localization_French_table,
 	es = localization_Spanish_table,
 	hr = localization_Croatian_table,
 	ru = localization_Russian_table,
-    zh_CN = localization_Chinese_table,
-    zh_TW = localization_zh_rTW_table,
+    indo = localization_indonisia_table,
 }
 
-function getString(string_locale)
-    curTable = localization_table[en]
+g_curTable = localization_table[en]
+
+function setCurLocale(locale)
+    g_CurLocale = locale;
 
     if (getCurLocale() == zh_CN) then
-        curTable = localization_table[zh_CN];
+        g_curTable = localization_table[zh_CN];
     elseif (getCurLocale() == en_US or getCurLocale() == en_GB) then
-        curTable = localization_table[en];
+        g_curTable = localization_table[en];
+    elseif (getCurLocale() == zh_TW) then
+        g_curTable = localization_table[zh_TW];
+    elseif string.find(getCurLocale(), indo) == 1 then
+        g_curTable = localization_indonisia_table;
 	elseif (getCurLocale() == fr_FR or getCurLocale() == fr_BE or getCurLocale() == fr_CA or getCurLocale() == fr_CH) then
         curTable = localization_table[fr];
 	elseif (getCurLocale() == es_ES) then
@@ -79,11 +84,14 @@ function getString(string_locale)
         curTable = localization_table[hr];
 	elseif (getCurLocale() == ru_RU) then
         curTable = localization_table[ru];
-	elseif (getCurLocale() == zh_TW) then
-        curTable = localization_table[zh_TW];
     end
+    if (g_curTable == nil) then
+        log('g curTable is nil')
+    end
+end
 
-    return curTable[string_locale];
+function getString(string_locale)
+    return g_curTable[string_locale];
 end
 
 function getEnglishMonthStr(month)

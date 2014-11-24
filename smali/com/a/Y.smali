@@ -682,7 +682,7 @@
 
     if-eqz p0, :cond_0
 
-    invoke-static {}, Lcom/amap/api/location/core/e;->j()Ljava/lang/String;
+    invoke-static {}, Lcom/amap/api/location/core/c;->j()Ljava/lang/String;
 
     move-result-object v1
 
@@ -937,13 +937,13 @@
 
     const/4 v11, 0x0
 
-    invoke-static {v11}, Lcom/amap/api/location/core/e;->a(Landroid/content/Context;)Lcom/amap/api/location/core/e;
+    invoke-static {v11}, Lcom/amap/api/location/core/c;->a(Landroid/content/Context;)Lcom/amap/api/location/core/c;
 
     move-result-object v11
 
     move-object/from16 v0, p4
 
-    invoke-virtual {v11, v0}, Lcom/amap/api/location/core/e;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v11, v0}, Lcom/amap/api/location/core/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v11
 
@@ -957,7 +957,7 @@
 
     const-string v10, "key"
 
-    invoke-static {}, Lcom/amap/api/location/core/e;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/amap/api/location/core/c;->a()Ljava/lang/String;
 
     move-result-object v11
 
@@ -1132,11 +1132,11 @@
 
     :goto_5
     :try_start_7
-    new-instance v7, Lcom/amap/api/location/core/a;
+    new-instance v7, Lcom/amap/api/location/core/AMapLocException;
 
     const-string v8, "\u672a\u77e5\u4e3b\u673a - UnKnowHostException"
 
-    invoke-direct {v7, v8}, Lcom/amap/api/location/core/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v7, v8}, Lcom/amap/api/location/core/AMapLocException;-><init>(Ljava/lang/String;)V
 
     throw v7
     :try_end_7
@@ -1330,11 +1330,11 @@
     if-ne v5, v9, :cond_14
 
     :try_start_12
-    new-instance v5, Lcom/amap/api/location/core/a;
+    new-instance v5, Lcom/amap/api/location/core/AMapLocException;
 
     const-string v8, "\u670d\u52a1\u5668\u8fde\u63a5\u5931\u8d25 - UnknownServiceException"
 
-    invoke-direct {v5, v8}, Lcom/amap/api/location/core/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v5, v8}, Lcom/amap/api/location/core/AMapLocException;-><init>(Ljava/lang/String;)V
 
     throw v5
     :try_end_12
@@ -1363,11 +1363,11 @@
 
     :goto_10
     :try_start_13
-    new-instance v5, Lcom/amap/api/location/core/a;
+    new-instance v5, Lcom/amap/api/location/core/AMapLocException;
 
     const-string v8, "socket \u8fde\u63a5\u5f02\u5e38 - SocketException"
 
-    invoke-direct {v5, v8}, Lcom/amap/api/location/core/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v5, v8}, Lcom/amap/api/location/core/AMapLocException;-><init>(Ljava/lang/String;)V
 
     throw v5
 
@@ -1396,11 +1396,11 @@
     move-object v6, v5
 
     :goto_11
-    new-instance v5, Lcom/amap/api/location/core/a;
+    new-instance v5, Lcom/amap/api/location/core/AMapLocException;
 
     const-string v8, "socket \u8fde\u63a5\u8d85\u65f6 - SocketTimeoutException"
 
-    invoke-direct {v5, v8}, Lcom/amap/api/location/core/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v5, v8}, Lcom/amap/api/location/core/AMapLocException;-><init>(Ljava/lang/String;)V
 
     throw v5
 
@@ -1412,11 +1412,11 @@
     move-object v6, v5
 
     :goto_12
-    new-instance v5, Lcom/amap/api/location/core/a;
+    new-instance v5, Lcom/amap/api/location/core/AMapLocException;
 
     const-string v8, "http\u8fde\u63a5\u5931\u8d25 - ConnectionException"
 
-    invoke-direct {v5, v8}, Lcom/amap/api/location/core/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v5, v8}, Lcom/amap/api/location/core/AMapLocException;-><init>(Ljava/lang/String;)V
 
     throw v5
     :try_end_13
@@ -1445,11 +1445,11 @@
     :try_start_14
     invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
 
-    new-instance v1, Lcom/amap/api/location/core/a;
+    new-instance v1, Lcom/amap/api/location/core/AMapLocException;
 
     const-string v8, "\u672a\u77e5\u7684\u9519\u8bef"
 
-    invoke-direct {v1, v8}, Lcom/amap/api/location/core/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v8}, Lcom/amap/api/location/core/AMapLocException;-><init>(Ljava/lang/String;)V
 
     throw v1
     :try_end_14
@@ -2872,11 +2872,11 @@
 
     if-ne v1, v2, :cond_0
 
-    new-instance v1, Lcom/amap/api/location/core/a;
+    new-instance v1, Lcom/amap/api/location/core/AMapLocException;
 
     const-string v2, "http\u8fde\u63a5\u5931\u8d25 - ConnectionException"
 
-    invoke-direct {v1, v2}, Lcom/amap/api/location/core/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Lcom/amap/api/location/core/AMapLocException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
@@ -2954,7 +2954,7 @@
 
     new-instance v6, Lorg/apache/http/client/methods/HttpPost;
 
-    invoke-static {}, Lcom/amap/api/location/core/e;->j()Ljava/lang/String;
+    invoke-static {}, Lcom/amap/api/location/core/c;->j()Ljava/lang/String;
 
     move-result-object v14
 
@@ -3063,7 +3063,7 @@
     invoke-virtual {v6, v14, v0}, Lorg/apache/http/client/methods/HttpPost;->addHeader(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_4
-    invoke-static {}, Lcom/amap/api/location/core/f;->a()Ljava/lang/String;
+    invoke-static {}, Lcom/amap/api/location/core/d;->a()Ljava/lang/String;
 
     move-result-object v14
 
@@ -3091,7 +3091,7 @@
 
     move-result-object v13
 
-    invoke-static {v14, v13}, Lcom/amap/api/location/core/f;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v14, v13}, Lcom/amap/api/location/core/d;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v13
 
@@ -3248,11 +3248,11 @@
 
     :goto_4
     :try_start_4
-    new-instance v7, Lcom/amap/api/location/core/a;
+    new-instance v7, Lcom/amap/api/location/core/AMapLocException;
 
     const-string v8, "\u672a\u77e5\u4e3b\u673a - UnKnowHostException"
 
-    invoke-direct {v7, v8}, Lcom/amap/api/location/core/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v7, v8}, Lcom/amap/api/location/core/AMapLocException;-><init>(Ljava/lang/String;)V
 
     throw v7
     :try_end_4
@@ -3461,11 +3461,11 @@
     if-ne v14, v7, :cond_16
 
     :try_start_b
-    new-instance v1, Lcom/amap/api/location/core/a;
+    new-instance v1, Lcom/amap/api/location/core/AMapLocException;
 
     const-string v7, "\u670d\u52a1\u5668\u8fde\u63a5\u5931\u8d25 - UnknownServiceException"
 
-    invoke-direct {v1, v7}, Lcom/amap/api/location/core/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v7}, Lcom/amap/api/location/core/AMapLocException;-><init>(Ljava/lang/String;)V
 
     throw v1
     :try_end_b
@@ -3500,11 +3500,11 @@
 
     :goto_b
     :try_start_c
-    new-instance v1, Lcom/amap/api/location/core/a;
+    new-instance v1, Lcom/amap/api/location/core/AMapLocException;
 
     const-string v7, "socket \u8fde\u63a5\u5f02\u5e38 - SocketException"
 
-    invoke-direct {v1, v7}, Lcom/amap/api/location/core/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v7}, Lcom/amap/api/location/core/AMapLocException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
@@ -3519,11 +3519,11 @@
     move-object v2, v1
 
     :goto_c
-    new-instance v1, Lcom/amap/api/location/core/a;
+    new-instance v1, Lcom/amap/api/location/core/AMapLocException;
 
     const-string v7, "socket \u8fde\u63a5\u8d85\u65f6 - SocketTimeoutException"
 
-    invoke-direct {v1, v7}, Lcom/amap/api/location/core/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v7}, Lcom/amap/api/location/core/AMapLocException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
@@ -3533,11 +3533,11 @@
     move-object v2, v1
 
     :goto_d
-    new-instance v1, Lcom/amap/api/location/core/a;
+    new-instance v1, Lcom/amap/api/location/core/AMapLocException;
 
     const-string v7, "http\u8fde\u63a5\u5931\u8d25 - ConnectionException"
 
-    invoke-direct {v1, v7}, Lcom/amap/api/location/core/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v7}, Lcom/amap/api/location/core/AMapLocException;-><init>(Ljava/lang/String;)V
 
     throw v1
 
@@ -3547,11 +3547,11 @@
     move-object v2, v1
 
     :goto_e
-    new-instance v1, Lcom/amap/api/location/core/a;
+    new-instance v1, Lcom/amap/api/location/core/AMapLocException;
 
     const-string v7, "http\u8fde\u63a5\u5931\u8d25 - ConnectionException"
 
-    invoke-direct {v1, v7}, Lcom/amap/api/location/core/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v7}, Lcom/amap/api/location/core/AMapLocException;-><init>(Ljava/lang/String;)V
 
     throw v1
     :try_end_c

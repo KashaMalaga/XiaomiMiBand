@@ -88,7 +88,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v3, Lcn/com/smartdevices/bracelet/d/b;->d:Ljava/lang/Long;
+    sget-object v3, Lcn/com/smartdevices/bracelet/d/b;->e:Ljava/lang/Long;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -152,7 +152,7 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "https://hm.xiaomi.com/"
+    const-string v1, "http://bao-sport-test.app-xae.xiaomi.com/"
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
@@ -472,7 +472,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v3, Lcn/com/smartdevices/bracelet/d/b;->d:Ljava/lang/Long;
+    sget-object v3, Lcn/com/smartdevices/bracelet/d/b;->e:Ljava/lang/Long;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

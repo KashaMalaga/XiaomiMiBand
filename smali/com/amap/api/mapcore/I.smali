@@ -1,43 +1,50 @@
-.class Lcom/amap/api/mapcore/I;
+.class Lcom/amap/api/mapcore/i;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/amap/api/maps/LocationSource$OnLocationChangedListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/amap/api/mapcore/b;
+.field a:Landroid/location/Location;
+
+.field private b:Lcom/amap/api/mapcore/v;
 
 
 # direct methods
-.method constructor <init>(Lcom/amap/api/mapcore/b;)V
+.method constructor <init>(Lcom/amap/api/mapcore/v;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/amap/api/mapcore/I;->a:Lcom/amap/api/mapcore/b;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/amap/api/mapcore/i;->b:Lcom/amap/api/mapcore/v;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method public onLocationChanged(Landroid/location/Location;)V
+    .locals 1
+
+    iput-object p1, p0, Lcom/amap/api/mapcore/i;->a:Landroid/location/Location;
 
     :try_start_0
-    iget-object v0, p0, Lcom/amap/api/mapcore/I;->a:Lcom/amap/api/mapcore/b;
+    iget-object v0, p0, Lcom/amap/api/mapcore/i;->b:Lcom/amap/api/mapcore/v;
 
-    iget-object v1, p0, Lcom/amap/api/mapcore/I;->a:Lcom/amap/api/mapcore/b;
+    invoke-interface {v0}, Lcom/amap/api/mapcore/v;->s()Z
 
-    invoke-static {v1}, Lcom/amap/api/mapcore/b;->s(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/e;
+    move-result v0
 
-    move-result-object v1
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1}, Lcom/amap/api/mapcore/b;->a(Lcom/amap/api/mapcore/e;)V
+    iget-object v0, p0, Lcom/amap/api/mapcore/i;->b:Lcom/amap/api/mapcore/v;
+
+    invoke-interface {v0, p1}, Lcom/amap/api/mapcore/v;->a(Landroid/location/Location;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
+    :cond_0
     :goto_0
     return-void
 

@@ -22,7 +22,7 @@
 .method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
     .locals 4
 
-    invoke-static {p3}, Lcn/com/smartdevices/bracelet/y;->a([B)Ljava/lang/String;
+    invoke-static {p3}, Lcn/com/smartdevices/bracelet/z;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
@@ -48,6 +48,16 @@
 
     move-result-object v0
 
+    const-string v2, ", error = "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -70,7 +80,7 @@
 
     const/4 v0, 0x1
 
-    invoke-static {p3}, Lcn/com/smartdevices/bracelet/y;->a([B)Ljava/lang/String;
+    invoke-static {p3}, Lcn/com/smartdevices/bracelet/z;->a([B)Ljava/lang/String;
 
     move-result-object v1
 
@@ -92,11 +102,11 @@
 
     invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/d/e;->b(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/d/f;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/d/g;->b(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/d/h;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/d/f;->a()Z
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/d/h;->a()Z
 
     move-result v3
 
@@ -156,7 +166,7 @@
 
     move-result-object v3
 
-    iget v4, v2, Lcn/com/smartdevices/bracelet/d/f;->f:I
+    iget v4, v2, Lcn/com/smartdevices/bracelet/d/h;->f:I
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -188,7 +198,7 @@
 
     invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, v2, Lcn/com/smartdevices/bracelet/d/f;->f:I
+    iget v2, v2, Lcn/com/smartdevices/bracelet/d/h;->f:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -271,7 +281,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/d/e;->c(Ljava/lang/String;Lcn/com/smartdevices/bracelet/model/PersonInfo;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/d/g;->c(Ljava/lang/String;Lcn/com/smartdevices/bracelet/model/PersonInfo;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v0
 

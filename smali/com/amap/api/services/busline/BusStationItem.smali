@@ -45,9 +45,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/services/busline/n;
+    new-instance v0, Lcom/amap/api/services/busline/c;
 
-    invoke-direct {v0}, Lcom/amap/api/services/busline/n;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/services/busline/c;-><init>()V
 
     sput-object v0, Lcom/amap/api/services/busline/BusStationItem;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -120,7 +120,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Landroid/os/Parcel;Lcom/amap/api/services/busline/n;)V
+.method synthetic constructor <init>(Landroid/os/Parcel;Lcom/amap/api/services/busline/c;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/amap/api/services/busline/BusStationItem;-><init>(Landroid/os/Parcel;)V
@@ -128,7 +128,7 @@
     return-void
 .end method
 
-.method private b(Ljava/util/List;)Ljava/lang/String;
+.method private a(Ljava/util/List;)Ljava/lang/String;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -164,7 +164,7 @@
 
     check-cast v0, Lcom/amap/api/services/busline/BusLineItem;
 
-    invoke-virtual {v0}, Lcom/amap/api/services/busline/BusLineItem;->b()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/amap/api/services/busline/BusLineItem;->getBusLineName()Ljava/lang/String;
 
     move-result-object v0
 
@@ -199,109 +199,12 @@
 
 
 # virtual methods
-.method public a()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/busline/BusStationItem;->a:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public a(Lcom/amap/api/services/core/LatLonPoint;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/busline/BusStationItem;->c:Lcom/amap/api/services/core/LatLonPoint;
-
-    return-void
-.end method
-
-.method public a(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/busline/BusStationItem;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public a(Ljava/util/List;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcom/amap/api/services/busline/BusLineItem;",
-            ">;)V"
-        }
-    .end annotation
-
-    iput-object p1, p0, Lcom/amap/api/services/busline/BusStationItem;->f:Ljava/util/List;
-
-    return-void
-.end method
-
-.method public b()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/busline/BusStationItem;->b:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public b(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/busline/BusStationItem;->b:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public c()Lcom/amap/api/services/core/LatLonPoint;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/busline/BusStationItem;->c:Lcom/amap/api/services/core/LatLonPoint;
-
-    return-object v0
-.end method
-
-.method public c(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/busline/BusStationItem;->d:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public d()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/busline/BusStationItem;->d:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public d(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/busline/BusStationItem;->e:Ljava/lang/String;
-
-    return-void
-.end method
-
 .method public describeContents()I
     .locals 1
 
     const/4 v0, 0x0
 
     return v0
-.end method
-
-.method public e()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/busline/BusStationItem;->e:Ljava/lang/String;
-
-    return-object v0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -370,7 +273,15 @@
     goto :goto_0
 .end method
 
-.method public f()Ljava/util/List;
+.method public getAdCode()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/busline/BusStationItem;->e:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getBusLineItems()Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -383,6 +294,38 @@
     .end annotation
 
     iget-object v0, p0, Lcom/amap/api/services/busline/BusStationItem;->f:Ljava/util/List;
+
+    return-object v0
+.end method
+
+.method public getBusStationId()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/busline/BusStationItem;->a:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getBusStationName()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/busline/BusStationItem;->b:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getCityCode()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/busline/BusStationItem;->d:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getLatLonPoint()Lcom/amap/api/services/core/LatLonPoint;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/busline/BusStationItem;->c:Lcom/amap/api/services/core/LatLonPoint;
 
     return-object v0
 .end method
@@ -409,6 +352,63 @@
     move-result v0
 
     goto :goto_0
+.end method
+
+.method public setAdCode(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/busline/BusStationItem;->e:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setBusLineItems(Ljava/util/List;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcom/amap/api/services/busline/BusLineItem;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lcom/amap/api/services/busline/BusStationItem;->f:Ljava/util/List;
+
+    return-void
+.end method
+
+.method public setBusStationId(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/busline/BusStationItem;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setBusStationName(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/busline/BusStationItem;->b:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setCityCode(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/busline/BusStationItem;->d:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setLatLonPoint(Lcom/amap/api/services/core/LatLonPoint;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/busline/BusStationItem;->c:Lcom/amap/api/services/core/LatLonPoint;
+
+    return-void
 .end method
 
 .method public toString()Ljava/lang/String;
@@ -454,7 +454,7 @@
 
     iget-object v1, p0, Lcom/amap/api/services/busline/BusStationItem;->f:Ljava/util/List;
 
-    invoke-direct {p0, v1}, Lcom/amap/api/services/busline/BusStationItem;->b(Ljava/util/List;)Ljava/lang/String;
+    invoke-direct {p0, v1}, Lcom/amap/api/services/busline/BusStationItem;->a(Ljava/util/List;)Ljava/lang/String;
 
     move-result-object v1
 

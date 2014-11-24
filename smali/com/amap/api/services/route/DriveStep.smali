@@ -66,9 +66,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/services/route/l;
+    new-instance v0, Lcom/amap/api/services/route/h;
 
-    invoke-direct {v0}, Lcom/amap/api/services/route/l;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/services/route/h;-><init>()V
 
     sput-object v0, Lcom/amap/api/services/route/DriveStep;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -169,136 +169,6 @@
 
 
 # virtual methods
-.method public a()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/route/DriveStep;->a:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public a(F)V
-    .locals 0
-
-    iput p1, p0, Lcom/amap/api/services/route/DriveStep;->d:F
-
-    return-void
-.end method
-
-.method public a(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/route/DriveStep;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public a(Ljava/util/List;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcom/amap/api/services/core/LatLonPoint;",
-            ">;)V"
-        }
-    .end annotation
-
-    iput-object p1, p0, Lcom/amap/api/services/route/DriveStep;->i:Ljava/util/List;
-
-    return-void
-.end method
-
-.method public b()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/route/DriveStep;->b:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public b(F)V
-    .locals 0
-
-    iput p1, p0, Lcom/amap/api/services/route/DriveStep;->e:F
-
-    return-void
-.end method
-
-.method public b(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/route/DriveStep;->b:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public b(Ljava/util/List;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcom/amap/api/services/route/RouteSearchCity;",
-            ">;)V"
-        }
-    .end annotation
-
-    iput-object p1, p0, Lcom/amap/api/services/route/DriveStep;->l:Ljava/util/List;
-
-    return-void
-.end method
-
-.method public c()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/route/DriveStep;->c:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public c(F)V
-    .locals 0
-
-    iput p1, p0, Lcom/amap/api/services/route/DriveStep;->f:F
-
-    return-void
-.end method
-
-.method public c(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/route/DriveStep;->c:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public d()F
-    .locals 1
-
-    iget v0, p0, Lcom/amap/api/services/route/DriveStep;->d:F
-
-    return v0
-.end method
-
-.method public d(F)V
-    .locals 0
-
-    iput p1, p0, Lcom/amap/api/services/route/DriveStep;->h:F
-
-    return-void
-.end method
-
-.method public d(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/route/DriveStep;->g:Ljava/lang/String;
-
-    return-void
-.end method
-
 .method public describeContents()I
     .locals 1
 
@@ -307,47 +177,31 @@
     return v0
 .end method
 
-.method public e()F
+.method public getAction()Ljava/lang/String;
     .locals 1
 
-    iget v0, p0, Lcom/amap/api/services/route/DriveStep;->e:F
-
-    return v0
-.end method
-
-.method public e(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/route/DriveStep;->j:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public f()F
-    .locals 1
-
-    iget v0, p0, Lcom/amap/api/services/route/DriveStep;->f:F
-
-    return v0
-.end method
-
-.method public f(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/route/DriveStep;->k:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public g()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/route/DriveStep;->g:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amap/api/services/route/DriveStep;->j:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public h()F
+.method public getAssistantAction()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/route/DriveStep;->k:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getDistance()F
+    .locals 1
+
+    iget v0, p0, Lcom/amap/api/services/route/DriveStep;->d:F
+
+    return v0
+.end method
+
+.method public getDuration()F
     .locals 1
 
     iget v0, p0, Lcom/amap/api/services/route/DriveStep;->h:F
@@ -355,7 +209,23 @@
     return v0
 .end method
 
-.method public i()Ljava/util/List;
+.method public getInstruction()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/route/DriveStep;->a:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getOrientation()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/route/DriveStep;->b:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getPolyline()Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -372,23 +242,15 @@
     return-object v0
 .end method
 
-.method public j()Ljava/lang/String;
+.method public getRoad()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/amap/api/services/route/DriveStep;->j:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amap/api/services/route/DriveStep;->c:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public k()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/route/DriveStep;->k:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public l()Ljava/util/List;
+.method public getRouteSearchCityList()Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -403,6 +265,144 @@
     iget-object v0, p0, Lcom/amap/api/services/route/DriveStep;->l:Ljava/util/List;
 
     return-object v0
+.end method
+
+.method public getTollDistance()F
+    .locals 1
+
+    iget v0, p0, Lcom/amap/api/services/route/DriveStep;->f:F
+
+    return v0
+.end method
+
+.method public getTollRoad()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/route/DriveStep;->g:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getTolls()F
+    .locals 1
+
+    iget v0, p0, Lcom/amap/api/services/route/DriveStep;->e:F
+
+    return v0
+.end method
+
+.method public setAction(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/route/DriveStep;->j:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setAssistantAction(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/route/DriveStep;->k:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setDistance(F)V
+    .locals 0
+
+    iput p1, p0, Lcom/amap/api/services/route/DriveStep;->d:F
+
+    return-void
+.end method
+
+.method public setDuration(F)V
+    .locals 0
+
+    iput p1, p0, Lcom/amap/api/services/route/DriveStep;->h:F
+
+    return-void
+.end method
+
+.method public setInstruction(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/route/DriveStep;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setOrientation(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/route/DriveStep;->b:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setPolyline(Ljava/util/List;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcom/amap/api/services/core/LatLonPoint;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lcom/amap/api/services/route/DriveStep;->i:Ljava/util/List;
+
+    return-void
+.end method
+
+.method public setRoad(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/route/DriveStep;->c:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setRouteSearchCityList(Ljava/util/List;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcom/amap/api/services/route/RouteSearchCity;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lcom/amap/api/services/route/DriveStep;->l:Ljava/util/List;
+
+    return-void
+.end method
+
+.method public setTollDistance(F)V
+    .locals 0
+
+    iput p1, p0, Lcom/amap/api/services/route/DriveStep;->f:F
+
+    return-void
+.end method
+
+.method public setTollRoad(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/route/DriveStep;->g:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setTolls(F)V
+    .locals 0
+
+    iput p1, p0, Lcom/amap/api/services/route/DriveStep;->e:F
+
+    return-void
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V

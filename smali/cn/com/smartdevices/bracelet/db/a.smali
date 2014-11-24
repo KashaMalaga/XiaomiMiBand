@@ -24,8 +24,9 @@
 .end method
 
 .method private a(Landroid/database/sqlite/SQLiteDatabase;)V
-    .locals 1
+    .locals 2
 
+    :try_start_0
     const-string v0, "DELETE FROM sportconfig"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
@@ -45,8 +46,24 @@
     const-string v0, "DELETE FROM cloud_config"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
+    :goto_0
     return-void
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "DB"
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
 .end method
 
 .method private b(Landroid/database/sqlite/SQLiteDatabase;)V
@@ -56,7 +73,7 @@
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    const-string v0, "CREATE TABLE IF NOT EXISTS trackinfo(_id INTEGER PRIMARY KEY AUTOINCREMENT,type INTEGER, INTEGER DEFAULT 0,date TEXT,trackid INTEGER,summary TEXT,data TEXT,sync INTEGER DEFAULT 0, UNIQUE (trackid) ON CONFLICT REPLACE)"
+    const-string v0, "CREATE TABLE IF NOT EXISTS trackinfo(_id INTEGER PRIMARY KEY AUTOINCREMENT,type INTEGER DEFAULT 0,date TEXT,trackid INTEGER,summary TEXT,data TEXT DEFAULT NULL,groupCnt INTEGER,sync INTEGER DEFAULT 0, UNIQUE (trackid) ON CONFLICT REPLACE);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
@@ -64,7 +81,7 @@
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    const-string v0, "CREATE TABLE IF NOT EXISTS trackloc(_id INTEGER PRIMARY KEY AUTOINCREMENT,type INTEGER,trackid INTEGER,latitude REAL,longitude REAL,altitude REAL,accuracy REAL,time INTEGER,sync INTEGER DEFAULT 0);"
+    const-string v0, "CREATE TABLE IF NOT EXISTS trackloc(_id INTEGER PRIMARY KEY AUTOINCREMENT,trackid INTEGER,latitude REAL,longitude REAL,altitude REAL,time INTEGER,extra TEXT, UNIQUE (time) ON CONFLICT REPLACE);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
@@ -98,6 +115,16 @@
     invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
+.end method
+
+.method private c(Landroid/database/sqlite/SQLiteDatabase;)V
+    .locals 1
+
+    const-string v0, "CREATE TABLE IF NOT EXISTS trackinfo(_id INTEGER PRIMARY KEY AUTOINCREMENT,type INTEGER DEFAULT 0,date TEXT,trackid INTEGER,summary TEXT,data TEXT DEFAULT NULL,groupCnt INTEGER,sync INTEGER DEFAULT 0, UNIQUE (trackid) ON CONFLICT REPLACE);"
+
+    invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+
+    return-void
 .end method
 
 
@@ -170,6 +197,8 @@
 
     invoke-virtual {v0, v1}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/db/a;->a(Landroid/database/sqlite/SQLiteDatabase;)V
+
     return-void
 .end method
 
@@ -214,6 +243,8 @@
     const-string v0, "CREATE TABLE IF NOT EXISTS date_data(id INTEGER PRIMARY KEY AUTOINCREMENT,type INTEGER,source INTEGER,date TEXT,summary TEXT,indexs TEXT,data BLOB,sync INTEGER);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/db/a;->b(Landroid/database/sqlite/SQLiteDatabase;)V
 
     return-void
 .end method
@@ -294,5 +325,31 @@
     invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/db/a;->b(Landroid/database/sqlite/SQLiteDatabase;)V
 
     :cond_0
+    const/4 v0, 0x3
+
+    if-lt p3, v0, :cond_1
+
+    :try_start_0
+    const-string v0, "ALTER TABLE trackinfo ADD COLUMN groupCnt INTEGER"
+
+    invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_1
+    :goto_0
     return-void
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "DB"
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
 .end method

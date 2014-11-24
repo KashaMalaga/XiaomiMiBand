@@ -93,6 +93,7 @@
     <color name="lab_circle_dynamic_color">#ffffff00</color>
     <color name="lab_group_item_current_round">#ffffd700</color>
     <color name="lab_list_divider">#ffdfdfdf</color>
+    <color name="buy_bracelet_stuff">#ff138bf2</color>
     <color name="default_title_indicator_footer_color">#ff33b5e5</color>
     <color name="default_title_indicator_selected_color">#ffffffff</color>
     <color name="default_title_indicator_text_color">#bbffffff</color>

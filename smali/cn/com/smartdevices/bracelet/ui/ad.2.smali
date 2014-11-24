@@ -115,7 +115,7 @@
 
     const/4 v6, 0x0
 
-    const v0, 0x7f03003b
+    const v0, 0x7f03003d
 
     invoke-virtual {p1, v0, p2, v6}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -145,7 +145,7 @@
 
     move-result-object v5
 
-    invoke-static {v5}, Lcn/com/smartdevices/bracelet/chart/c/u;->a(Landroid/content/Context;)F
+    invoke-static {v5}, Lcn/com/smartdevices/bracelet/chart/c/t;->a(Landroid/content/Context;)F
 
     move-result v5
 

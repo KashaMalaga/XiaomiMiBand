@@ -98,7 +98,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->i()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->i()Ljava/lang/String;
 
     move-result-object v1
 

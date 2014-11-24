@@ -76,7 +76,7 @@
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/chart/C;->w:I
 
-    invoke-static {v1, v0, v2}, Lcn/com/smartdevices/bracelet/chart/c/u;->a(IFI)F
+    invoke-static {v1, v0, v2}, Lcn/com/smartdevices/bracelet/chart/c/t;->a(IFI)F
 
     move-result v0
 
@@ -119,7 +119,7 @@
 
     iget v3, p0, Lcn/com/smartdevices/bracelet/chart/C;->w:I
 
-    invoke-static {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/chart/c/u;->a(IIFI)F
+    invoke-static {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/chart/c/t;->a(IIFI)F
 
     move-result v0
 

@@ -2,56 +2,53 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+.field a:Z
+
+.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
 
 # direct methods
 .method constructor <init>(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)V
-    .locals 0
+    .locals 1
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bd;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bd;->b:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/bd;->a:Z
+
     return-void
-.end method
-
-.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/bd;)Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bd;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method public onPreDraw()Z
+    .locals 3
 
-    invoke-static {}, Lcom/xiaomi/hm/bleservice/p;->a()Lcom/xiaomi/hm/bleservice/p;
+    const/4 v2, 0x1
 
-    move-result-object v0
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/bd;->a:Z
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bd;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+    if-nez v0, :cond_0
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->q(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Landroid/content/Context;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bd;->b:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bd;->b:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->w(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Lcom/xiaomi/hm/bleservice/HwConnStatus;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/bleservice/p;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->onEvent(Lcom/xiaomi/hm/bleservice/HwConnStatus;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bd;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+    iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/ui/bd;->a:Z
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/be;
-
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/be;-><init>(Lcn/com/smartdevices/bracelet/ui/bd;)V
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->runOnUiThread(Ljava/lang/Runnable;)V
-
-    return-void
+    :cond_0
+    return v2
 .end method

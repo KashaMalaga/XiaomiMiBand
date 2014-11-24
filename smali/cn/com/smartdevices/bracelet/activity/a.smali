@@ -36,7 +36,7 @@
 
     const v1, 0x7f0c00d9
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/app/Activity;I)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/z;->a(Landroid/app/Activity;I)V
 
     goto :goto_0
 

@@ -1,608 +1,993 @@
-.class public Lcom/amap/api/mapcore/an;
-.super Ljava/lang/Object;
+.class Lcom/amap/api/mapcore/an;
+.super Landroid/view/View;
 
 
-# static fields
-.field public static a:I
+# instance fields
+.field a:Lcom/amap/api/mapcore/v;
 
-.field static b:Ljava/lang/String;
+.field private b:Ljava/util/concurrent/CopyOnWriteArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/concurrent/CopyOnWriteArrayList",
+            "<",
+            "Lcom/amap/api/mapcore/aa;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field static c:Ljava/net/HttpURLConnection;
+.field private c:Lcom/autonavi/amap/mapcore/IPoint;
+
+.field private d:Lcom/amap/api/mapcore/aa;
+
+.field private e:Landroid/graphics/Rect;
+
+.field private final f:Landroid/os/Handler;
+
+.field private g:Ljava/util/concurrent/CopyOnWriteArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/concurrent/CopyOnWriteArrayList",
+            "<",
+            "Ljava/lang/Integer;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    const/4 v0, -0x1
+    invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    sput v0, Lcom/amap/api/mapcore/an;->a:I
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    const-string v0, ""
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
 
-    sput-object v0, Lcom/amap/api/mapcore/an;->b:Ljava/lang/String;
+    iput-object v0, p0, Lcom/amap/api/mapcore/an;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    const/4 v0, 0x0
+    new-instance v0, Landroid/os/Handler;
 
-    sput-object v0, Lcom/amap/api/mapcore/an;->c:Ljava/net/HttpURLConnection;
+    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
+
+    iput-object v0, p0, Lcom/amap/api/mapcore/an;->f:Landroid/os/Handler;
+
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/amap/api/mapcore/an;->g:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     return-void
 .end method
 
-.method public constructor <init>()V
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;Lcom/amap/api/mapcore/v;)V
+    .locals 1
+
+    invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/amap/api/mapcore/an;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
+
+    iput-object v0, p0, Lcom/amap/api/mapcore/an;->f:Landroid/os/Handler;
+
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/amap/api/mapcore/an;->g:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    iput-object p3, p0, Lcom/amap/api/mapcore/an;->a:Lcom/amap/api/mapcore/v;
+
+    return-void
+.end method
+
+.method static synthetic a(Lcom/amap/api/mapcore/an;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/amap/api/mapcore/an;->h()V
 
     return-void
 .end method
 
-.method protected static a(Ljava/net/HttpURLConnection;)Ljava/io/InputStream;
-    .locals 4
-
-    :try_start_0
-    invoke-virtual {p0}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/io/PushbackInputStream;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v1, v0, v2}, Ljava/io/PushbackInputStream;-><init>(Ljava/io/InputStream;I)V
-
-    const/4 v0, 0x2
-
-    new-array v0, v0, [B
-
-    invoke-virtual {v1, v0}, Ljava/io/PushbackInputStream;->read([B)I
-
-    invoke-virtual {v1, v0}, Ljava/io/PushbackInputStream;->unread([B)V
-
-    const/4 v2, 0x0
-
-    aget-byte v2, v0, v2
-
-    const/16 v3, 0x1f
-
-    if-ne v2, v3, :cond_0
-
-    const/4 v2, 0x1
-
-    aget-byte v0, v0, v2
-
-    const/16 v2, -0x75
-
-    if-ne v0, v2, :cond_0
-
-    new-instance v0, Ljava/util/zip/GZIPInputStream;
-
-    invoke-direct {v0, v1}, Ljava/util/zip/GZIPInputStream;-><init>(Ljava/io/InputStream;)V
-    :try_end_0
-    .catch Ljava/net/ProtocolException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/net/UnknownHostException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/net/UnknownServiceException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    move-object v0, v1
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    new-instance v0, Lcom/amap/api/maps/o;
-
-    const-string v1, "\u534f\u8bae\u89e3\u6790\u9519\u8bef - ProtocolException"
-
-    invoke-direct {v0, v1}, Lcom/amap/api/maps/o;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :catch_1
-    move-exception v0
-
-    new-instance v0, Lcom/amap/api/maps/o;
-
-    const-string v1, "\u672a\u77e5\u4e3b\u673a - UnKnowHostException"
-
-    invoke-direct {v0, v1}, Lcom/amap/api/maps/o;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :catch_2
-    move-exception v0
-
-    new-instance v0, Lcom/amap/api/maps/o;
-
-    const-string v1, "\u670d\u52a1\u5668\u8fde\u63a5\u5931\u8d25 - UnknownServiceException"
-
-    invoke-direct {v0, v1}, Lcom/amap/api/maps/o;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :catch_3
-    move-exception v0
-
-    new-instance v0, Lcom/amap/api/maps/o;
-
-    const-string v1, "IO \u64cd\u4f5c\u5f02\u5e38 - IOException"
-
-    invoke-direct {v0, v1}, Lcom/amap/api/maps/o;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method private static a()Ljava/lang/String;
-    .locals 1
-
-    const-string v0, "http://restapi.amap.com/v3/log/init"
-
-    return-object v0
-.end method
-
-.method public static a(Ljava/lang/String;)Ljava/lang/String;
-    .locals 4
-
-    new-instance v0, Ljava/lang/StringBuffer;
-
-    invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    invoke-static {}, Lcom/amap/api/mapcore/a/t;->h()Ljava/lang/String;
-
-    move-result-object v1
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "&ts="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "&scode="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-static {v1, p0}, Lcom/amap/api/mapcore/a/t;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static declared-synchronized a(Landroid/content/Context;)Z
+.method private h()V
     .locals 5
 
-    const/4 v1, 0x0
+    iget-object v0, p0, Lcom/amap/api/mapcore/an;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    const-class v2, Lcom/amap/api/mapcore/an;
-
-    monitor-enter v2
-
-    :try_start_0
-    invoke-static {}, Lcom/amap/api/mapcore/an;->b()[B
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    move-result-object v0
-
-    :try_start_1
-    invoke-static {}, Lcom/amap/api/mapcore/an;->a()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {p0}, Lcom/amap/api/mapcore/a/t;->c(Landroid/content/Context;)Ljava/net/Proxy;
-
-    move-result-object v4
-
-    invoke-static {v3, v0, v4}, Lcom/amap/api/mapcore/a/B;->a(Ljava/lang/String;[BLjava/net/Proxy;)Ljava/net/HttpURLConnection;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/amap/api/mapcore/an;->c:Ljava/net/HttpURLConnection;
-
-    sget-object v0, Lcom/amap/api/mapcore/an;->c:Ljava/net/HttpURLConnection;
-
-    invoke-static {v0}, Lcom/amap/api/mapcore/an;->a(Ljava/net/HttpURLConnection;)Ljava/io/InputStream;
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/amap/api/mapcore/an;->a(Ljava/io/InputStream;)Z
-    :try_end_1
-    .catch Lcom/amap/api/maps/o; {:try_start_1 .. :try_end_1} :catch_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    :cond_0
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_1
 
-    :try_start_2
-    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
-    :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :cond_0
-    :try_start_3
-    sget-object v1, Lcom/amap/api/mapcore/an;->c:Ljava/net/HttpURLConnection;
-
-    if-eqz v1, :cond_1
-
-    sget-object v1, Lcom/amap/api/mapcore/an;->c:Ljava/net/HttpURLConnection;
-
-    invoke-virtual {v1}, Ljava/net/HttpURLConnection;->disconnect()V
-
-    const/4 v1, 0x0
-
-    sput-object v1, Lcom/amap/api/mapcore/an;->c:Ljava/net/HttpURLConnection;
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :cond_1
-    monitor-exit v2
-
-    return v0
-
-    :catch_0
-    move-exception v0
-
-    :try_start_4
-    new-instance v0, Lcom/amap/api/maps/o;
-
-    const-string v1, "IO \u64cd\u4f5c\u5f02\u5e38 - IOException"
-
-    invoke-direct {v0, v1}, Lcom/amap/api/maps/o;-><init>(Ljava/lang/String;)V
-
-    throw v0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v2
-
-    throw v0
-
-    :catch_1
-    move-exception v0
-
-    :try_start_5
-    const-string v3, "AuthFailure"
-
-    invoke-virtual {v0}, Lcom/amap/api/maps/o;->a()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    invoke-virtual {v0}, Lcom/amap/api/maps/o;->printStackTrace()V
-
-    new-instance v3, Lcom/amap/api/maps/o;
-
-    invoke-virtual {v0}, Lcom/amap/api/maps/o;->a()Ljava/lang/String;
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-direct {v3, v0}, Lcom/amap/api/maps/o;-><init>(Ljava/lang/String;)V
+    check-cast v0, Lcom/amap/api/mapcore/aa;
 
-    throw v3
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+    iget-object v2, p0, Lcom/amap/api/mapcore/an;->d:Lcom/amap/api/mapcore/aa;
 
-    :catchall_1
-    move-exception v0
+    if-eqz v2, :cond_0
 
-    if-eqz v1, :cond_2
+    iget-object v2, p0, Lcom/amap/api/mapcore/an;->d:Lcom/amap/api/mapcore/aa;
 
-    :try_start_6
-    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
-    :try_end_6
-    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_2
-    .catchall {:try_start_6 .. :try_end_6} :catchall_0
+    invoke-interface {v2}, Lcom/amap/api/mapcore/aa;->h()Ljava/lang/String;
 
-    :cond_2
-    :try_start_7
-    sget-object v1, Lcom/amap/api/mapcore/an;->c:Ljava/net/HttpURLConnection;
+    move-result-object v2
 
-    if-eqz v1, :cond_3
-
-    sget-object v1, Lcom/amap/api/mapcore/an;->c:Ljava/net/HttpURLConnection;
-
-    invoke-virtual {v1}, Ljava/net/HttpURLConnection;->disconnect()V
-
-    const/4 v1, 0x0
-
-    sput-object v1, Lcom/amap/api/mapcore/an;->c:Ljava/net/HttpURLConnection;
-
-    :cond_3
-    throw v0
-
-    :catch_2
-    move-exception v0
-
-    new-instance v0, Lcom/amap/api/maps/o;
-
-    const-string v1, "IO \u64cd\u4f5c\u5f02\u5e38 - IOException"
-
-    invoke-direct {v0, v1}, Lcom/amap/api/maps/o;-><init>(Ljava/lang/String;)V
-
-    throw v0
-    :try_end_7
-    .catchall {:try_start_7 .. :try_end_7} :catchall_0
-.end method
-
-.method private static a(Ljava/io/InputStream;)Z
-    .locals 5
-
-    const/4 v1, 0x0
-
-    const/4 v0, 0x1
-
-    :try_start_0
-    new-instance v2, Ljava/lang/String;
-
-    invoke-static {p0}, Lcom/amap/api/mapcore/a/t;->a(Ljava/io/InputStream;)[B
+    invoke-interface {v0}, Lcom/amap/api/mapcore/aa;->h()Ljava/lang/String;
 
     move-result-object v3
 
-    const-string v4, "utf-8"
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
-
-    new-instance v3, Lorg/json/JSONObject;
-
-    invoke-direct {v3, v2}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
-
-    const-string v2, "status"
-
-    invoke-virtual {v3, v2}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    const-string v2, "status"
+    iget-object v2, p0, Lcom/amap/api/mapcore/an;->d:Lcom/amap/api/mapcore/aa;
 
-    invoke-virtual {v3, v2}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
-
-    move-result v2
-
-    if-ne v2, v0, :cond_3
-
-    const/4 v2, 0x1
-
-    sput v2, Lcom/amap/api/mapcore/an;->a:I
-
-    :cond_0
-    :goto_0
-    sget v2, Lcom/amap/api/mapcore/an;->a:I
-
-    if-nez v2, :cond_4
-
-    const-string v2, "info"
-
-    invoke-virtual {v3, v2}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+    invoke-interface {v2}, Lcom/amap/api/mapcore/aa;->G()Z
 
     move-result v2
 
-    if-eqz v2, :cond_1
-
-    const-string v2, "info"
-
-    invoke-virtual {v3, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    sput-object v2, Lcom/amap/api/mapcore/an;->b:Ljava/lang/String;
+    if-eqz v2, :cond_2
 
     :cond_1
-    const-string v2, "AuthFailure"
-
-    sget-object v3, Lcom/amap/api/mapcore/an;->b:Ljava/lang/String;
-
-    invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    new-instance v2, Lcom/amap/api/maps/o;
-
-    const-string v3, "key\u9274\u6743\u5931\u8d25"
-
-    invoke-direct {v2, v3}, Lcom/amap/api/maps/o;-><init>(Ljava/lang/String;)V
-
-    throw v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :catchall_0
-    move-exception v2
-
-    sget v2, Lcom/amap/api/mapcore/an;->a:I
-
-    if-ne v2, v0, :cond_5
+    return-void
 
     :cond_2
-    :goto_1
-    return v0
+    invoke-interface {v0}, Lcom/amap/api/mapcore/aa;->d()Landroid/graphics/Rect;
 
-    :cond_3
+    move-result-object v0
+
+    new-instance v2, Lcom/autonavi/amap/mapcore/IPoint;
+
+    invoke-virtual {v0}, Landroid/graphics/Rect;->centerX()I
+
+    move-result v3
+
+    iget v4, v0, Landroid/graphics/Rect;->top:I
+
+    invoke-direct {v2, v3, v4}, Lcom/autonavi/amap/mapcore/IPoint;-><init>(II)V
+
+    iput-object v2, p0, Lcom/amap/api/mapcore/an;->c:Lcom/autonavi/amap/mapcore/IPoint;
+
+    iget-object v2, p0, Lcom/amap/api/mapcore/an;->e:Landroid/graphics/Rect;
+
+    if-eqz v2, :cond_3
+
+    iget-object v2, p0, Lcom/amap/api/mapcore/an;->e:Landroid/graphics/Rect;
+
+    invoke-virtual {v2, v0}, Landroid/graphics/Rect;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
     if-nez v2, :cond_0
 
-    const/4 v2, 0x0
+    :cond_3
+    iget-object v2, p0, Lcom/amap/api/mapcore/an;->a:Lcom/amap/api/mapcore/v;
 
-    :try_start_1
-    sput v2, Lcom/amap/api/mapcore/an;->a:I
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    invoke-interface {v2}, Lcom/amap/api/mapcore/v;->k()V
+
+    iput-object v0, p0, Lcom/amap/api/mapcore/an;->e:Landroid/graphics/Rect;
 
     goto :goto_0
-
-    :cond_4
-    sget v2, Lcom/amap/api/mapcore/an;->a:I
-
-    if-eq v2, v0, :cond_2
-
-    move v0, v1
-
-    goto :goto_1
-
-    :cond_5
-    move v0, v1
-
-    goto :goto_1
 .end method
 
-.method public static b(Ljava/lang/String;)Ljava/lang/String;
+
+# virtual methods
+.method protected a()I
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/an;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->size()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public a(Landroid/view/MotionEvent;)Lcom/amap/api/mapcore/aa;
     .locals 6
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/an;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->size()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x1
 
     const/4 v1, 0x0
 
-    const-string v0, "&"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Ljava/util/Arrays;->sort([Ljava/lang/Object;)V
-
-    new-instance v3, Ljava/lang/StringBuffer;
-
-    invoke-direct {v3}, Ljava/lang/StringBuffer;-><init>()V
-
-    array-length v4, v2
-
-    move v0, v1
+    move v2, v0
 
     :goto_0
-    if-ge v0, v4, :cond_0
+    if-ltz v2, :cond_1
 
-    aget-object v5, v2, v0
+    iget-object v0, p0, Lcom/amap/api/mapcore/an;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    const-string v5, "&"
-
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v3}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {v0, v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    check-cast v0, Lcom/amap/api/mapcore/aa;
 
-    move-result v2
+    invoke-interface {v0}, Lcom/amap/api/mapcore/aa;->d()Landroid/graphics/Rect;
 
-    const/4 v3, 0x1
+    move-result-object v3
 
-    if-le v2, v3, :cond_1
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    move-result v4
 
-    move-result v2
+    float-to-int v4, v4
 
-    add-int/lit8 v2, v2, -0x1
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->subSequence(II)Ljava/lang/CharSequence;
+    move-result v5
 
-    move-result-object v0
+    float-to-int v5, v5
 
-    check-cast v0, Ljava/lang/String;
+    invoke-virtual {p0, v3, v4, v5}, Lcom/amap/api/mapcore/an;->a(Landroid/graphics/Rect;II)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
 
     :goto_1
     return-object v0
 
+    :cond_0
+    add-int/lit8 v0, v2, -0x1
+
+    move v2, v0
+
+    goto :goto_0
+
     :cond_1
-    move-object v0, p0
+    move-object v0, v1
 
     goto :goto_1
 .end method
 
-.method private static b()[B
-    .locals 2
+.method public a(Lcom/amap/api/mapcore/aa;)V
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuffer;
+    invoke-virtual {p0, p1}, Lcom/amap/api/mapcore/an;->e(Lcom/amap/api/mapcore/aa;)V
 
-    invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
+    iget-object v0, p0, Lcom/amap/api/mapcore/an;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    const-string v1, "resType=json&encode=UTF-8&ec=1"
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    iget-object v0, p0, Lcom/amap/api/mapcore/an;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    :try_start_0
-    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
-    move-result-object v0
+    return-void
+.end method
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/an;->b(Ljava/lang/String;)Ljava/lang/String;
+.method a(Ljava/lang/Integer;)V
+    .locals 1
 
-    move-result-object v0
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/an;->a(Ljava/lang/String;)Ljava/lang/String;
+    move-result v0
 
-    move-result-object v0
+    if-eqz v0, :cond_0
 
-    const-string v1, "utf-8"
+    iget-object v0, p0, Lcom/amap/api/mapcore/an;->g:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
-    :try_end_0
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
-    move-result-object v0
+    :cond_0
+    return-void
+.end method
+
+.method public a(Ljavax/microedition/khronos/opengles/GL10;Z)V
+    .locals 4
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/an;->g:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
 
     :goto_0
-    return-object v0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    invoke-static {p1, v0}, Lcom/amap/api/mapcore/util/w;->a(Ljavax/microedition/khronos/opengles/GL10;I)V
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lcom/amap/api/mapcore/an;->g:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->clear()V
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/an;->f:Landroid/os/Handler;
+
+    new-instance v1, Lcom/amap/api/mapcore/an$1;
+
+    invoke-direct {v1, p0}, Lcom/amap/api/mapcore/an$1;-><init>(Lcom/amap/api/mapcore/an;)V
+
+    const-wide/16 v2, 0x0
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/an;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :cond_1
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/amap/api/mapcore/aa;
+
+    if-eqz p2, :cond_2
+
+    invoke-interface {v0}, Lcom/amap/api/mapcore/aa;->c()Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    iget-object v2, p0, Lcom/amap/api/mapcore/an;->a:Lcom/amap/api/mapcore/v;
+
+    invoke-interface {v0, p1, v2}, Lcom/amap/api/mapcore/aa;->a(Ljavax/microedition/khronos/opengles/GL10;Lcom/amap/api/mapcore/v;)V
+
+    goto :goto_1
+
+    :cond_2
+    iget-object v2, p0, Lcom/amap/api/mapcore/an;->a:Lcom/amap/api/mapcore/v;
+
+    invoke-interface {v0, p1, v2}, Lcom/amap/api/mapcore/aa;->a(Ljavax/microedition/khronos/opengles/GL10;Lcom/amap/api/mapcore/v;)V
+
+    goto :goto_1
+
+    :cond_3
+    return-void
+.end method
+
+.method public a(Landroid/graphics/Rect;II)Z
+    .locals 1
+
+    invoke-virtual {p1, p2, p3}, Landroid/graphics/Rect;->contains(II)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public b()V
+    .locals 3
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/an;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/amap/api/mapcore/aa;
+
+    invoke-interface {v0}, Lcom/amap/api/mapcore/aa;->i()I
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {p0, v2}, Lcom/amap/api/mapcore/an;->a(Ljava/lang/Integer;)V
+
+    iget-object v2, p0, Lcom/amap/api/mapcore/an;->a:Lcom/amap/api/mapcore/v;
+
+    invoke-interface {v0}, Lcom/amap/api/mapcore/aa;->i()I
+
+    move-result v0
+
+    invoke-interface {v2, v0}, Lcom/amap/api/mapcore/v;->f(I)V
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lcom/amap/api/mapcore/an;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->clear()V
+
+    return-void
+.end method
+
+.method public b(Landroid/view/MotionEvent;)Z
+    .locals 6
+
+    const/4 v2, 0x0
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/an;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->size()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x1
+
+    move v3, v0
+
+    :goto_0
+    if-ltz v3, :cond_1
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/an;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0, v3}, Ljava/util/concurrent/CopyOnWriteArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/amap/api/mapcore/aa;
+
+    invoke-interface {v0}, Lcom/amap/api/mapcore/aa;->d()Landroid/graphics/Rect;
+
+    move-result-object v4
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
+
+    move-result v1
+
+    float-to-int v1, v1
+
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
+
+    move-result v5
+
+    float-to-int v5, v5
+
+    invoke-virtual {p0, v4, v1, v5}, Lcom/amap/api/mapcore/an;->a(Landroid/graphics/Rect;II)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    new-instance v2, Lcom/autonavi/amap/mapcore/IPoint;
+
+    iget v3, v4, Landroid/graphics/Rect;->left:I
+
+    invoke-virtual {v4}, Landroid/graphics/Rect;->width()I
+
+    move-result v5
+
+    div-int/lit8 v5, v5, 0x2
+
+    add-int/2addr v3, v5
+
+    iget v4, v4, Landroid/graphics/Rect;->top:I
+
+    invoke-direct {v2, v3, v4}, Lcom/autonavi/amap/mapcore/IPoint;-><init>(II)V
+
+    iput-object v2, p0, Lcom/amap/api/mapcore/an;->c:Lcom/autonavi/amap/mapcore/IPoint;
+
+    iput-object v0, p0, Lcom/amap/api/mapcore/an;->d:Lcom/amap/api/mapcore/aa;
+
+    move v0, v1
+
+    :goto_1
+    return v0
+
+    :cond_0
+    add-int/lit8 v0, v3, -0x1
+
+    move v3, v0
+
+    goto :goto_0
+
+    :cond_1
+    move v0, v2
+
+    goto :goto_1
+.end method
+
+.method public b(Lcom/amap/api/mapcore/aa;)Z
+    .locals 1
+
+    invoke-interface {p1}, Lcom/amap/api/mapcore/aa;->i()I
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1}, Lcom/amap/api/mapcore/aa;->i()I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/amap/api/mapcore/an;->a(Ljava/lang/Integer;)V
+
+    :cond_0
+    invoke-virtual {p0, p1}, Lcom/amap/api/mapcore/an;->e(Lcom/amap/api/mapcore/aa;)V
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/an;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public c()V
+    .locals 3
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/an;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :cond_0
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/amap/api/mapcore/aa;
+
+    :try_start_0
+    invoke-interface {v0}, Lcom/amap/api/mapcore/aa;->p()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v0}, Lcom/amap/api/mapcore/aa;->s()Z
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
 
     :catch_0
     move-exception v0
 
-    invoke-virtual {v0}, Ljava/io/UnsupportedEncodingException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
+
+    goto :goto_0
+
+    :cond_1
+    return-void
+.end method
+
+.method public c(Lcom/amap/api/mapcore/aa;)V
+    .locals 4
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/an;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->indexOf(Ljava/lang/Object;)I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/amap/api/mapcore/an;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->size()I
+
+    move-result v1
+
+    add-int/lit8 v1, v1, -0x1
+
+    iget-object v2, p0, Lcom/amap/api/mapcore/an;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    iget-object v3, p0, Lcom/amap/api/mapcore/an;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v3, v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v0, v3}, Ljava/util/concurrent/CopyOnWriteArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/an;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0, v1, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public d()Lcom/amap/api/mapcore/aa;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/an;->d:Lcom/amap/api/mapcore/aa;
+
+    return-object v0
+.end method
+
+.method public d(Lcom/amap/api/mapcore/aa;)V
+    .locals 4
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/an;->c:Lcom/autonavi/amap/mapcore/IPoint;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lcom/autonavi/amap/mapcore/IPoint;
+
+    invoke-direct {v0}, Lcom/autonavi/amap/mapcore/IPoint;-><init>()V
+
+    iput-object v0, p0, Lcom/amap/api/mapcore/an;->c:Lcom/autonavi/amap/mapcore/IPoint;
+
+    :cond_0
+    invoke-interface {p1}, Lcom/amap/api/mapcore/aa;->d()Landroid/graphics/Rect;
+
+    move-result-object v0
+
+    new-instance v1, Lcom/autonavi/amap/mapcore/IPoint;
+
+    iget v2, v0, Landroid/graphics/Rect;->left:I
+
+    invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
+
+    move-result v3
+
+    div-int/lit8 v3, v3, 0x2
+
+    add-int/2addr v2, v3
+
+    iget v0, v0, Landroid/graphics/Rect;->top:I
+
+    invoke-direct {v1, v2, v0}, Lcom/autonavi/amap/mapcore/IPoint;-><init>(II)V
+
+    iput-object v1, p0, Lcom/amap/api/mapcore/an;->c:Lcom/autonavi/amap/mapcore/IPoint;
+
+    iput-object p1, p0, Lcom/amap/api/mapcore/an;->d:Lcom/amap/api/mapcore/aa;
+
+    :try_start_0
+    iget-object v0, p0, Lcom/amap/api/mapcore/an;->a:Lcom/amap/api/mapcore/v;
+
+    iget-object v1, p0, Lcom/amap/api/mapcore/an;->d:Lcom/amap/api/mapcore/aa;
+
+    invoke-interface {v0, v1}, Lcom/amap/api/mapcore/v;->a(Lcom/amap/api/mapcore/aa;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
+
+    goto :goto_0
+.end method
+
+.method public e()V
+    .locals 4
+
+    :try_start_0
+    iget-object v0, p0, Lcom/amap/api/mapcore/an;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :cond_0
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/amap/api/mapcore/aa;
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v0}, Lcom/amap/api/mapcore/aa;->q()V
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
+
+    const-string v1, "amapApi"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "MapOverlayImageView clear erro"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :goto_1
+    return-void
+
+    :cond_1
+    :try_start_1
+    invoke-virtual {p0}, Lcom/amap/api/mapcore/an;->b()V
+    :try_end_1
+    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
+
+    goto :goto_1
+.end method
+
+.method public e(Lcom/amap/api/mapcore/aa;)V
+    .locals 1
+
+    invoke-virtual {p0, p1}, Lcom/amap/api/mapcore/an;->f(Lcom/amap/api/mapcore/aa;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/an;->a:Lcom/amap/api/mapcore/v;
+
+    invoke-interface {v0}, Lcom/amap/api/mapcore/v;->y()V
 
     const/4 v0, 0x0
 
-    new-array v0, v0, [B
+    iput-object v0, p0, Lcom/amap/api/mapcore/an;->d:Lcom/amap/api/mapcore/aa;
+
+    :cond_0
+    return-void
+.end method
+
+.method public f()Ljava/util/List;
+    .locals 9
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcom/amap/api/maps/model/Marker;",
+            ">;"
+        }
+    .end annotation
+
+    const/4 v0, 0x0
+
+    new-instance v7, Ljava/util/ArrayList;
+
+    invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
+
+    :try_start_0
+    new-instance v8, Landroid/graphics/Rect;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lcom/amap/api/mapcore/an;->a:Lcom/amap/api/mapcore/v;
+
+    invoke-interface {v3}, Lcom/amap/api/mapcore/v;->h()I
+
+    move-result v3
+
+    iget-object v4, p0, Lcom/amap/api/mapcore/an;->a:Lcom/amap/api/mapcore/v;
+
+    invoke-interface {v4}, Lcom/amap/api/mapcore/v;->i()I
+
+    move-result v4
+
+    invoke-direct {v8, v1, v2, v3, v4}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    new-instance v5, Lcom/autonavi/amap/mapcore/IPoint;
+
+    invoke-direct {v5}, Lcom/autonavi/amap/mapcore/IPoint;-><init>()V
+
+    move v6, v0
+
+    :goto_0
+    iget-object v0, p0, Lcom/amap/api/mapcore/an;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->size()I
+
+    move-result v0
+
+    if-ge v6, v0, :cond_1
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/an;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0, v6}, Ljava/util/concurrent/CopyOnWriteArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/amap/api/mapcore/aa;
+
+    invoke-interface {v0}, Lcom/amap/api/mapcore/aa;->g()Lcom/amap/api/maps/model/LatLng;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/an;->a:Lcom/amap/api/mapcore/v;
+
+    iget-wide v1, v3, Lcom/amap/api/maps/model/LatLng;->latitude:D
+
+    iget-wide v3, v3, Lcom/amap/api/maps/model/LatLng;->longitude:D
+
+    invoke-interface/range {v0 .. v5}, Lcom/amap/api/mapcore/v;->b(DDLcom/autonavi/amap/mapcore/IPoint;)V
+
+    iget v0, v5, Lcom/autonavi/amap/mapcore/IPoint;->x:I
+
+    iget v1, v5, Lcom/autonavi/amap/mapcore/IPoint;->y:I
+
+    invoke-virtual {p0, v8, v0, v1}, Lcom/amap/api/mapcore/an;->a(Landroid/graphics/Rect;II)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v1, Lcom/amap/api/maps/model/Marker;
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/an;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0, v6}, Ljava/util/concurrent/CopyOnWriteArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/amap/api/mapcore/aa;
+
+    invoke-direct {v1, v0}, Lcom/amap/api/maps/model/Marker;-><init>(Lcom/amap/api/mapcore/aa;)V
+
+    invoke-interface {v7, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_0
+    add-int/lit8 v0, v6, 0x1
+
+    move v6, v0
 
     goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
+
+    :cond_1
+    return-object v7
+.end method
+
+.method public f(Lcom/amap/api/mapcore/aa;)Z
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lcom/amap/api/mapcore/an;->a:Lcom/amap/api/mapcore/v;
+
+    invoke-interface {v0, p1}, Lcom/amap/api/mapcore/v;->b(Lcom/amap/api/mapcore/aa;)Z
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result v0
+
+    return v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/amap/api/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v1, v0}, Lcom/amap/api/maps/model/RuntimeRemoteException;-><init>(Landroid/os/RemoteException;)V
+
+    throw v1
+.end method
+
+.method public g()V
+    .locals 3
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/an;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :cond_0
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/amap/api/mapcore/aa;
+
+    invoke-interface {v0}, Lcom/amap/api/mapcore/aa;->y()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v0}, Lcom/amap/api/mapcore/aa;->z()V
+
+    goto :goto_0
+
+    :cond_1
+    return-void
 .end method

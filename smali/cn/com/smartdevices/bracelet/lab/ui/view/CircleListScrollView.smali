@@ -272,11 +272,11 @@
 .method public a(I)V
     .locals 5
 
-    const v4, 0x7f070067
+    const v4, 0x7f070062
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->d:Landroid/content/Context;
 
-    const v1, 0x7f030013
+    const v1, 0x7f030012
 
     const/4 v2, 0x0
 
@@ -322,7 +322,7 @@
 
     if-nez v0, :cond_0
 
-    const v2, 0x7f070066
+    const v2, 0x7f070061
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

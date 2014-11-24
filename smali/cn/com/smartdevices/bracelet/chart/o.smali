@@ -238,7 +238,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/o;->F:Landroid/graphics/RectF;
 
-    invoke-static {p4, v0}, Lcn/com/smartdevices/bracelet/chart/c/u;->a(Landroid/graphics/Canvas;Landroid/graphics/RectF;)V
+    invoke-static {p4, v0}, Lcn/com/smartdevices/bracelet/chart/c/t;->a(Landroid/graphics/Canvas;Landroid/graphics/RectF;)V
 
     :cond_0
     iget-object v5, p0, Lcn/com/smartdevices/bracelet/chart/o;->C:Landroid/graphics/Paint;
@@ -628,7 +628,7 @@
 
     move-object v0, p1
 
-    invoke-static/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/chart/c/u;->a(Landroid/graphics/Canvas;FFFLandroid/graphics/Bitmap;Landroid/graphics/Paint;)V
+    invoke-static/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/chart/c/t;->a(Landroid/graphics/Canvas;FFFLandroid/graphics/Bitmap;Landroid/graphics/Paint;)V
 
     goto :goto_1
 
@@ -653,7 +653,7 @@
 
     move-object v0, p1
 
-    invoke-static/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/chart/c/u;->a(Landroid/graphics/Canvas;FFFLandroid/graphics/Bitmap;Landroid/graphics/Paint;)V
+    invoke-static/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/chart/c/t;->a(Landroid/graphics/Canvas;FFFLandroid/graphics/Bitmap;Landroid/graphics/Paint;)V
 
     goto :goto_1
 

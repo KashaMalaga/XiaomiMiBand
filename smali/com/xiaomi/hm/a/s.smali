@@ -175,6 +175,10 @@
 
 .field public static final RoundProgressBar_textSize:I = 0x4
 
+.field public static final SlidableTwoPanelLayout:[I
+
+.field public static final SlidableTwoPanelLayout_slidepanel_height:I = 0x0
+
 .field public static final SlideMenu:[I
 
 .field public static final SlideMenu_Layout:[I
@@ -266,11 +270,11 @@
 
     const/4 v5, 0x7
 
-    const/4 v4, 0x1
+    const/4 v4, 0x5
 
-    const/4 v3, 0x0
+    const/4 v3, 0x1
 
-    const/4 v2, 0x5
+    const/4 v2, 0x0
 
     const/16 v0, 0xa
 
@@ -280,27 +284,27 @@
 
     sput-object v0, Lcom/xiaomi/hm/a/s;->CirclePageIndicator:[I
 
-    new-array v0, v2, [I
+    new-array v0, v4, [I
 
     fill-array-data v0, :array_1
 
     sput-object v0, Lcom/xiaomi/hm/a/s;->CropImageView:[I
 
-    new-array v0, v4, [I
+    new-array v0, v3, [I
 
     const v1, 0x7f010051
 
-    aput v1, v0, v3
+    aput v1, v0, v2
 
     sput-object v0, Lcom/xiaomi/hm/a/s;->CustomViewPager:[I
 
-    new-array v0, v2, [I
+    new-array v0, v4, [I
 
     fill-array-data v0, :array_2
 
     sput-object v0, Lcom/xiaomi/hm/a/s;->DimPanelFragmentBottomBar:[I
 
-    new-array v0, v2, [I
+    new-array v0, v4, [I
 
     fill-array-data v0, :array_3
 
@@ -344,6 +348,14 @@
 
     sput-object v0, Lcom/xiaomi/hm/a/s;->RoundProgressBar:[I
 
+    new-array v0, v3, [I
+
+    const v1, 0x7f01006e
+
+    aput v1, v0, v2
+
+    sput-object v0, Lcom/xiaomi/hm/a/s;->SlidableTwoPanelLayout:[I
+
     const/16 v0, 0x8
 
     new-array v0, v0, [I
@@ -352,11 +364,11 @@
 
     sput-object v0, Lcom/xiaomi/hm/a/s;->SlideMenu:[I
 
-    new-array v0, v4, [I
+    new-array v0, v3, [I
 
     const v1, 0x7f010001
 
-    aput v1, v0, v3
+    aput v1, v0, v2
 
     sput-object v0, Lcom/xiaomi/hm/a/s;->SlideMenu_Layout:[I
 
@@ -383,6 +395,8 @@
     sput-object v0, Lcom/xiaomi/hm/a/s;->ViewPagerIndicator:[I
 
     return-void
+
+    nop
 
     :array_0
     .array-data 4

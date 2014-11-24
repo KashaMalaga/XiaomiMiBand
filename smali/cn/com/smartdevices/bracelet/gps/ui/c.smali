@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/view/View$OnLongClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/GaodeTestActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/GaodeTestActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/c;->a:Lcn/com/smartdevices/bracelet/gps/ui/GaodeTestActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/c;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,12 +22,20 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 1
+.method public onLongClick(Landroid/view/View;)Z
+    .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/c;->a:Lcn/com/smartdevices/bracelet/gps/ui/GaodeTestActivity;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/c;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GaodeTestActivity;->b()V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->d(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)Lcn/com/smartdevices/bracelet/gps/b/a;
 
-    return-void
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/c;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/b/a;->b(Landroid/content/Context;)V
+
+    const/4 v0, 0x0
+
+    return v0
 .end method

@@ -242,7 +242,7 @@
     move-result v0
 
     :goto_5
-    invoke-static {v9, v5, p3}, Lcn/com/smartdevices/bracelet/chart/c/u;->a(IIF)I
+    invoke-static {v9, v5, p3}, Lcn/com/smartdevices/bracelet/chart/c/t;->a(IIF)I
 
     move-result v3
 
@@ -254,7 +254,7 @@
 
     if-eqz v6, :cond_4
 
-    invoke-static {v8, v0, p3}, Lcn/com/smartdevices/bracelet/chart/c/u;->a(IIF)I
+    invoke-static {v8, v0, p3}, Lcn/com/smartdevices/bracelet/chart/c/t;->a(IIF)I
 
     move-result v0
 
@@ -432,7 +432,7 @@
     :cond_c
     div-float/2addr v7, v8
 
-    invoke-static {v5, v3, v7}, Lcn/com/smartdevices/bracelet/chart/c/u;->a(IIF)I
+    invoke-static {v5, v3, v7}, Lcn/com/smartdevices/bracelet/chart/c/t;->a(IIF)I
 
     move-result v3
 
@@ -444,7 +444,7 @@
 
     move-result v0
 
-    invoke-static {v5, v0, v7}, Lcn/com/smartdevices/bracelet/chart/c/u;->a(IIF)I
+    invoke-static {v5, v0, v7}, Lcn/com/smartdevices/bracelet/chart/c/t;->a(IIF)I
 
     move-result v0
 

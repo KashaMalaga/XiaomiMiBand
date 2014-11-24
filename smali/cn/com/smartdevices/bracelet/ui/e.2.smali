@@ -118,7 +118,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f030079
+    const v2, 0x7f03007f
 
     const/4 v3, 0x0
 
@@ -126,7 +126,7 @@
 
     move-result-object v5
 
-    const v1, 0x7f070213
+    const v1, 0x7f07022c
 
     invoke-virtual {v5, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -134,7 +134,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f070215
+    const v2, 0x7f07022e
 
     invoke-virtual {v5, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -142,7 +142,7 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    const v3, 0x7f070214
+    const v3, 0x7f07022d
 
     invoke-virtual {v5, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -150,7 +150,7 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    const v4, 0x7f070216
+    const v4, 0x7f07022f
 
     invoke-virtual {v5, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -226,7 +226,7 @@
     invoke-virtual {v4, v8}, Landroid/widget/TextView;->setVisibility(I)V
 
     :goto_1
-    const v1, 0x7f070217
+    const v1, 0x7f070230
 
     invoke-virtual {v5, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -246,7 +246,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    const v0, 0x7f070212
+    const v0, 0x7f07022b
 
     invoke-virtual {v5, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -283,14 +283,14 @@
 
     if-nez v6, :cond_1
 
-    const v6, 0x7f0c0141
+    const v6, 0x7f0c013f
 
     invoke-virtual {v3, v6}, Landroid/widget/TextView;->setText(I)V
 
     goto/16 :goto_0
 
     :cond_1
-    const v6, 0x7f0c0142
+    const v6, 0x7f0c0140
 
     invoke-virtual {v3, v6}, Landroid/widget/TextView;->setText(I)V
 

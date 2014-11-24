@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$PanelSlideListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
@@ -22,105 +22,18 @@
 
 
 # virtual methods
-.method public onGetPullDownDistance()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public onGetPullDownDockEnable()Ljava/lang/Boolean;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public onGetThreshhold()F
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public onGetThreshhold2()F
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public onLastSlideOffset(Landroid/view/View;F)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onPanelAnchored(Landroid/view/View;)V
+.method public onClick(Landroid/view/View;)V
     .locals 2
-
-    const-string v0, "SettingFragment"
-
-    const-string v1, "onPanelAnchored"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public onPanelCollapsed(Landroid/view/View;)V
-    .locals 2
-
-    const-string v0, "SettingFragment"
-
-    const-string v1, "onPanelCollapsed"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public onPanelExpanded(Landroid/view/View;)V
-    .locals 2
-
-    const-string v0, "SettingFragment"
-
-    const-string v1, "onPanelExpanded"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cw;->a:Lcn/com/smartdevices/bracelet/ui/cv;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/cv;->a(Lcn/com/smartdevices/bracelet/ui/cv;)Landroid/widget/ImageView;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cw;->a:Lcn/com/smartdevices/bracelet/ui/cv;
 
-    move-result-object v0
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/cv;->a(Lcn/com/smartdevices/bracelet/ui/cv;)Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;
 
-    invoke-virtual {v0}, Landroid/widget/ImageView;->invalidate()V
+    move-result-object v1
 
-    return-void
-.end method
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/cv;->a(Lcn/com/smartdevices/bracelet/ui/cv;Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;)V
 
-.method public onPanelSlide(Landroid/view/View;Ljava/lang/Boolean;F)V
-    .locals 1
-
-    const/high16 v0, 0x3f800000
-
-    cmpg-float v0, p3, v0
-
-    if-gtz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cw;->a:Lcn/com/smartdevices/bracelet/ui/cv;
-
-    invoke-static {v0, p3}, Lcn/com/smartdevices/bracelet/ui/cv;->a(Lcn/com/smartdevices/bracelet/ui/cv;F)V
-
-    :cond_0
     return-void
 .end method

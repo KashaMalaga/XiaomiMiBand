@@ -3,9 +3,9 @@
 
 
 # static fields
-.field public static final INCOMING_CALL_DEFAULT:I = 0x114
+.field public static final INCOMING_CALL_DEFAULT:I = 0x102
 
-.field public static final INCOMING_CALL_DEFAULT_SEC:I = 0x14
+.field public static final INCOMING_CALL_DEFAULT_SEC:I = 0x2
 
 .field public static final INCOMING_CALL_DISABLE_BIT:I = 0x100
 
@@ -20,6 +20,9 @@
 
 # instance fields
 .field public age:I
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end field
 
 .field public alarmClockItems:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
@@ -37,9 +40,6 @@
 .field public avatarUrl:Ljava/lang/String;
 
 .field public birthday:Ljava/lang/String;
-    .annotation runtime Ljava/lang/Deprecated;
-    .end annotation
-.end field
 
 .field public createTime:Ljava/lang/String;
 
@@ -74,6 +74,8 @@
 .field public totalSportData:Lcn/com/smartdevices/bracelet/model/UserTotalSportData;
 
 .field public uid:J
+
+.field private version:I
 
 .field public weight:I
 
@@ -148,6 +150,8 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->deviceId:Ljava/lang/String;
 
+    iput v3, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->version:I
+
     new-instance v0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;
 
     invoke-direct {v0}, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;-><init>()V
@@ -194,7 +198,7 @@
     const/4 v1, 0x0
 
     :try_start_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->g()Lcom/b/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->g()Lcom/b/a/k;
 
     move-result-object v0
 
@@ -313,6 +317,14 @@
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
+.end method
+
+.method public getAge()I
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->age:I
+
+    return v0
 .end method
 
 .method public getAlarmClockItems()Ljava/util/ArrayList;
@@ -438,6 +450,14 @@
     goto :goto_1
 .end method
 
+.method public getBirthday()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->birthday:Ljava/lang/String;
+
+    return-object v0
+.end method
+
 .method public getDaySportGoalSteps()I
     .locals 1
 
@@ -504,6 +524,14 @@
     .locals 1
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->needSyncServer:I
+
+    return v0
+.end method
+
+.method public getVersion()I
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->version:I
 
     return v0
 .end method
@@ -593,6 +621,40 @@
     const/4 v0, 0x1
 
     goto :goto_0
+.end method
+
+.method public setAge(I)V
+    .locals 3
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->age:I
+
+    const-string v0, "PersonInfo"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "setAge = "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public setBirthday(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->birthday:Ljava/lang/String;
+
+    return-void
 .end method
 
 .method public setDaySportGoals(I)V
@@ -705,10 +767,18 @@
     return-void
 .end method
 
+.method public setVersion(I)V
+    .locals 0
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->version:I
+
+    return-void
+.end method
+
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->g()Lcom/b/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->g()Lcom/b/a/k;
 
     move-result-object v0
 

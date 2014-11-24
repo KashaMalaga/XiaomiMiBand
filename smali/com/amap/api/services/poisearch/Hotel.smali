@@ -57,9 +57,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/services/poisearch/n;
+    new-instance v0, Lcom/amap/api/services/poisearch/e;
 
-    invoke-direct {v0}, Lcom/amap/api/services/poisearch/n;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/services/poisearch/e;-><init>()V
 
     sput-object v0, Lcom/amap/api/services/poisearch/Hotel;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -158,109 +158,12 @@
 
 
 # virtual methods
-.method public a()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Hotel;->a:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public a(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Hotel;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public a(Ljava/util/List;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcom/amap/api/services/poisearch/Photo;",
-            ">;)V"
-        }
-    .end annotation
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Hotel;->l:Ljava/util/List;
-
-    return-void
-.end method
-
-.method public b()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Hotel;->b:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public b(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Hotel;->b:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public c()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Hotel;->c:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public c(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Hotel;->c:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public d()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Hotel;->d:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public d(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Hotel;->d:Ljava/lang/String;
-
-    return-void
-.end method
-
 .method public describeContents()I
     .locals 1
 
     const/4 v0, 0x0
 
     return v0
-.end method
-
-.method public e()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Hotel;->e:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public e(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Hotel;->e:Ljava/lang/String;
-
-    return-void
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -637,23 +540,23 @@
     goto/16 :goto_0
 .end method
 
-.method public f()Ljava/lang/String;
+.method public getAddition()Ljava/lang/String;
     .locals 1
 
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Hotel;->f:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Hotel;->j:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public f(Ljava/lang/String;)V
-    .locals 0
+.method public getDeepsrc()Ljava/lang/String;
+    .locals 1
 
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Hotel;->f:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Hotel;->k:Ljava/lang/String;
 
-    return-void
+    return-object v0
 .end method
 
-.method public g()Ljava/lang/String;
+.method public getEnvironmentRating()Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcom/amap/api/services/poisearch/Hotel;->g:Ljava/lang/String;
@@ -661,15 +564,64 @@
     return-object v0
 .end method
 
-.method public g(Ljava/lang/String;)V
-    .locals 0
+.method public getFaciRating()Ljava/lang/String;
+    .locals 1
 
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Hotel;->g:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Hotel;->e:Ljava/lang/String;
 
-    return-void
+    return-object v0
 .end method
 
-.method public h()Ljava/lang/String;
+.method public getHealthRating()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Hotel;->f:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getIntro()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Hotel;->c:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getLowestPrice()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Hotel;->d:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getPhotos()Ljava/util/List;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcom/amap/api/services/poisearch/Photo;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Hotel;->l:Ljava/util/List;
+
+    return-object v0
+.end method
+
+.method public getRating()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Hotel;->a:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getServiceRating()Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcom/amap/api/services/poisearch/Hotel;->h:Ljava/lang/String;
@@ -677,12 +629,20 @@
     return-object v0
 .end method
 
-.method public h(Ljava/lang/String;)V
-    .locals 0
+.method public getStar()Ljava/lang/String;
+    .locals 1
 
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Hotel;->h:Ljava/lang/String;
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Hotel;->b:Ljava/lang/String;
 
-    return-void
+    return-object v0
+.end method
+
+.method public getTraffic()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/poisearch/Hotel;->i:Ljava/lang/String;
+
+    return-object v0
 .end method
 
 .method public hashCode()I
@@ -929,31 +889,7 @@
     goto :goto_b
 .end method
 
-.method public i()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Hotel;->i:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public i(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Hotel;->i:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public j()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Hotel;->j:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public j(Ljava/lang/String;)V
+.method public setAddition(Ljava/lang/String;)V
     .locals 0
 
     iput-object p1, p0, Lcom/amap/api/services/poisearch/Hotel;->j:Ljava/lang/String;
@@ -961,15 +897,7 @@
     return-void
 .end method
 
-.method public k()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Hotel;->k:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public k(Ljava/lang/String;)V
+.method public setDeepsrc(Ljava/lang/String;)V
     .locals 0
 
     iput-object p1, p0, Lcom/amap/api/services/poisearch/Hotel;->k:Ljava/lang/String;
@@ -977,21 +905,93 @@
     return-void
 .end method
 
-.method public l()Ljava/util/List;
-    .locals 1
+.method public setEnvironmentRating(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Hotel;->g:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setFaciRating(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Hotel;->e:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setHealthRating(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Hotel;->f:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setIntro(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Hotel;->c:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setLowestPrice(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Hotel;->d:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setPhotos(Ljava/util/List;)V
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "()",
+            "(",
             "Ljava/util/List",
             "<",
             "Lcom/amap/api/services/poisearch/Photo;",
-            ">;"
+            ">;)V"
         }
     .end annotation
 
-    iget-object v0, p0, Lcom/amap/api/services/poisearch/Hotel;->l:Ljava/util/List;
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Hotel;->l:Ljava/util/List;
 
-    return-object v0
+    return-void
+.end method
+
+.method public setRating(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Hotel;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setServiceRating(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Hotel;->h:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setStar(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Hotel;->b:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setTraffic(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Hotel;->i:Ljava/lang/String;
+
+    return-void
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V

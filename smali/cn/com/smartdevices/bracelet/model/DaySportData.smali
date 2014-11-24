@@ -638,6 +638,18 @@
     goto :goto_0
 .end method
 
+.method public getTimestamp()J
+    .locals 2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/DaySportData;->sDay:Lcn/com/smartdevices/bracelet/model/SportDay;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/SportDay;->getTimestamp()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
 .method public getYear()I
     .locals 1
 
@@ -728,6 +740,28 @@
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/model/DaySportData;->analysisDatas:Ljava/util/ArrayList;
 
     return-void
+.end method
+
+.method public setInfos(Lcn/com/smartdevices/bracelet/analysis/StepsInfo;Lcn/com/smartdevices/bracelet/analysis/SleepInfo;I)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/model/DaySportData;->mStepsInfo:Lcn/com/smartdevices/bracelet/analysis/StepsInfo;
+
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/model/DaySportData;->mSleepInfo:Lcn/com/smartdevices/bracelet/analysis/SleepInfo;
+
+    if-ne p3, v0, :cond_0
+
+    :goto_0
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/model/DaySportData;->needPostProcess:Z
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
 
 .method public setLocalNeedSync(Z)V

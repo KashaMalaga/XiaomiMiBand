@@ -261,7 +261,6 @@ end
 --generate msg & insert into DB
 --
 function setMessage(listDao,table)
-    log('setMsg: '..table.t1)
     log('setMsg: '..table.t1.." / "..table.t2,'d')
 
     listItem = table.listItem
@@ -517,6 +516,7 @@ function unlockHint(listDao,ConfigInfo)
 
     uniqueMsg(listDao,ConfigInfo,t)
 end
+
 function clearUnlockHint(listDao,ConfigInfo)
     qb = listDao:queryBuilder()
     luaAction = ConfigInfo:getLuaAction()
@@ -1514,6 +1514,8 @@ function getDayDif1(y, m, d)
 end
 
 function getDayDif(timeStamp)
+    timeStamp = timeStamp + 1  -- +1s to fix bug: date.yday is yesterday if cur time is 0:00:00
+
     date1 = os.date("*t")
     date2 = os.date("*t", timeStamp)
 
@@ -1558,7 +1560,7 @@ function showGameBanner(listDao, ConfigInfo)
 
         daydif = 1
         if (ConfigInfo:getTimeStamp() > 0) then
-            daydif = getDayDif(ConfigInfo:getTimeStamp() + 1) -- +1 to fix bug: date.yday is yesterday if cur time is 0:00:00
+            daydif = getDayDif(ConfigInfo:getTimeStamp())
         end
 
         if (daydif == 0) then
@@ -1781,3 +1783,41 @@ function setLocale(locale)
     log("Test locale "..'ok'..'='..getString('ok'));
 end
 
+-----====================== Mi Push ==============================----
+function showLuaItem(listDao, configInfo, luaItem)
+    log("============= showLuaItem =============")
+    t = {}
+    t.t1 = luaItem:getT1();
+    t.t2 = luaItem:getT2();
+    t.stype = luaItem:getStype();
+    t.strScript = luaItem:getScript();
+    t.json = luaItem:getStyleJson();
+    t.right = luaItem:getRight();
+    expiredStamp = luaItem:getExpire();
+
+    daydif = 0;
+    if (expiredStamp > 0) then
+        daydif = getDayDif(expiredStamp)
+    end
+
+    delMsgByType(listDao, configInfo, t.stype)
+
+    if (daydif <= 0) then
+        delMsgByType(listDao, configInfo, t.stype)
+    else
+        replaceMsgByType(listDao, configInfo, t)
+    end
+
+
+    ------test
+    strScript = "function doAction(context, luaAction) \
+        ConfigInfo = luaAction:getConfigInfo()\
+        ConfigInfo:setShowUnlockInfo(false)\
+        ConfigInfo:save()\
+        local intent = luaAction:getIntentFromString('cn.com.smartdevices.bracelet.ui.UnlockScreenHelperActivity');\
+        context:startActivity(intent)\
+    end"
+    log("good script = " .. strScript)
+
+    log("cur script = " .. t.strScript)
+end

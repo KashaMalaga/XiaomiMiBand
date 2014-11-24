@@ -149,7 +149,7 @@
 
     const-string v0, "WifiState"
 
-    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/util/HashMap;)V
+    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/util/HashMap;)V
 
     goto :goto_0
 .end method
@@ -224,7 +224,7 @@
 
     if-nez v0, :cond_0
 
-    const v0, 0x7f0c0265
+    const v0, 0x7f0c0274
 
     const/4 v2, 0x1
 
@@ -258,7 +258,7 @@
 
     if-ltz v0, :cond_1
 
-    const v0, 0x7f0c0267
+    const v0, 0x7f0c0276
 
     invoke-virtual {v1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -298,7 +298,7 @@
 
     invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const v0, 0x7f0c0269
+    const v0, 0x7f0c0278
 
     invoke-virtual {v1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

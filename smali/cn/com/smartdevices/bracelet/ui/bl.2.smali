@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
@@ -20,20 +20,38 @@
     return-void
 .end method
 
-
-# virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
+.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/bl;)Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bl;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->getApplicationContext()Landroid/content/Context;
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public run()V
+    .locals 2
+
+    invoke-static {}, Lcom/xiaomi/hm/bleservice/p;->a()Lcom/xiaomi/hm/bleservice/p;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/upgrade/c;->b(Landroid/content/Context;)V
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bl;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->q(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/bleservice/p;->a(Landroid/content/Context;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bl;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bm;
+
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/bm;-><init>(Lcn/com/smartdevices/bracelet/ui/bl;)V
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->runOnUiThread(Ljava/lang/Runnable;)V
 
     return-void
 .end method

@@ -52,7 +52,7 @@
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->goalStepsCount:I
 
-    const/16 v0, 0x114
+    const/16 v0, 0x102
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->inComingCallNotifyTime:I
 
@@ -66,7 +66,7 @@
 .method public static fromJsonStr(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/model/MiliConfig;
     .locals 2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->g()Lcom/b/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->g()Lcom/b/a/k;
 
     move-result-object v0
 
@@ -178,7 +178,7 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->g()Lcom/b/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->g()Lcom/b/a/k;
 
     move-result-object v0
 

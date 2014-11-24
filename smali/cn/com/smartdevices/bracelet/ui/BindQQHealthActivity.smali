@@ -78,7 +78,7 @@
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f0c012e
+    const v0, 0x7f0c012c
 
     invoke-virtual {p1, v0}, Landroid/widget/Button;->setText(I)V
 
@@ -133,7 +133,7 @@
     goto :goto_0
 
     :cond_1
-    const v0, 0x7f0c0124
+    const v0, 0x7f0c0122
 
     invoke-virtual {p1, v0}, Landroid/widget/Button;->setText(I)V
 
@@ -309,9 +309,9 @@
 
     const-string v0, "PageBindQQHealth"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->b(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->b(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -403,7 +403,7 @@
 
     const-string v2, "Msg"
 
-    const v3, 0x7f0c01ff
+    const v3, 0x7f0c0202
 
     invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->getString(I)Ljava/lang/String;
 
@@ -417,11 +417,11 @@
 
     :cond_0
     :goto_2
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;)V
 
     const-string v0, "PageBindQQHealth"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->a(Ljava/lang/String;)V
 
     return-void
 

@@ -196,7 +196,7 @@
 
     move-result-object v3
 
-    invoke-static {v0, v2, v3}, Landroid/support/v4/app/Fragment;->a(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/support/v4/app/Fragment;
+    invoke-static {v0, v2, v3}, Landroid/support/v4/app/Fragment;->instantiate(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/support/v4/app/Fragment;
 
     move-result-object v0
 
@@ -492,7 +492,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/support/v4/app/Fragment;->w()Z
+    invoke-virtual {v0}, Landroid/support/v4/app/Fragment;->isDetached()Z
 
     move-result v0
 
@@ -576,7 +576,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v4}, Landroid/support/v4/app/Fragment;->w()Z
+    invoke-virtual {v4}, Landroid/support/v4/app/Fragment;->isDetached()Z
 
     move-result v4
 

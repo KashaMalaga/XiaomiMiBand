@@ -3,7 +3,7 @@
 
 # interfaces
 .implements Lcn/com/smartdevices/bracelet/location/i;
-.implements Lcom/amap/api/location/e;
+.implements Lcom/amap/api/location/AMapLocationListener;
 
 
 # static fields
@@ -13,7 +13,7 @@
 # instance fields
 .field private b:Landroid/content/Context;
 
-.field private c:Lcom/amap/api/location/f;
+.field private c:Lcom/amap/api/location/LocationManagerProxy;
 
 .field private d:Lcn/com/smartdevices/bracelet/location/d;
 
@@ -28,11 +28,11 @@
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/location/a;->b:Landroid/content/Context;
 
-    invoke-static {p1}, Lcom/amap/api/location/f;->a(Landroid/content/Context;)Lcom/amap/api/location/f;
+    invoke-static {p1}, Lcom/amap/api/location/LocationManagerProxy;->getInstance(Landroid/content/Context;)Lcom/amap/api/location/LocationManagerProxy;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/location/a;->c:Lcom/amap/api/location/f;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/location/a;->c:Lcom/amap/api/location/LocationManagerProxy;
 
     return-void
 .end method
@@ -48,7 +48,7 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/a;->c:Lcom/amap/api/location/f;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/a;->c:Lcom/amap/api/location/LocationManagerProxy;
 
     const-string v1, "lbs"
 
@@ -60,7 +60,7 @@
 
     move-object v5, p0
 
-    invoke-virtual/range {v0 .. v5}, Lcom/amap/api/location/f;->b(Ljava/lang/String;JFLcom/amap/api/location/e;)V
+    invoke-virtual/range {v0 .. v5}, Lcom/amap/api/location/LocationManagerProxy;->requestLocationData(Ljava/lang/String;JFLcom/amap/api/location/AMapLocationListener;)V
 
     return-void
 .end method
@@ -86,9 +86,9 @@
 
     if-ne v0, v1, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/a;->c:Lcom/amap/api/location/f;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/a;->c:Lcom/amap/api/location/LocationManagerProxy;
 
-    invoke-virtual {v0, v2}, Lcom/amap/api/location/f;->a(Z)V
+    invoke-virtual {v0, v2}, Lcom/amap/api/location/LocationManagerProxy;->setGpsEnable(Z)V
 
     :cond_0
     :goto_0
@@ -109,11 +109,11 @@
 
     if-ne v0, v1, :cond_2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/a;->c:Lcom/amap/api/location/f;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/a;->c:Lcom/amap/api/location/LocationManagerProxy;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/amap/api/location/f;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/amap/api/location/LocationManagerProxy;->setGpsEnable(Z)V
 
     goto :goto_0
 
@@ -126,23 +126,49 @@
 
     if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/a;->c:Lcom/amap/api/location/f;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/a;->c:Lcom/amap/api/location/LocationManagerProxy;
 
-    invoke-virtual {v0, v2}, Lcom/amap/api/location/f;->a(Z)V
+    invoke-virtual {v0, v2}, Lcom/amap/api/location/LocationManagerProxy;->setGpsEnable(Z)V
 
     goto :goto_0
 .end method
 
-.method public a(Lcom/amap/api/location/AMapLocation;)V
+.method public b()V
+    .locals 2
+
+    const-string v0, "AmapLocationService"
+
+    const-string v1, "Stop Location!!"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/a;->c:Lcom/amap/api/location/LocationManagerProxy;
+
+    invoke-virtual {v0, p0}, Lcom/amap/api/location/LocationManagerProxy;->removeUpdates(Lcom/amap/api/location/AMapLocationListener;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/a;->c:Lcom/amap/api/location/LocationManagerProxy;
+
+    invoke-virtual {v0}, Lcom/amap/api/location/LocationManagerProxy;->destroy()V
+
+    return-void
+.end method
+
+.method public onLocationChanged(Landroid/location/Location;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onLocationChanged(Lcom/amap/api/location/AMapLocation;)V
     .locals 5
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lcom/amap/api/location/AMapLocation;->a()Lcom/amap/api/location/core/a;
+    invoke-virtual {p1}, Lcom/amap/api/location/AMapLocation;->getAMapException()Lcom/amap/api/location/core/AMapLocException;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/amap/api/location/core/a;->b()I
+    invoke-virtual {v0}, Lcom/amap/api/location/core/AMapLocException;->getErrorCode()I
 
     move-result v0
 
@@ -166,7 +192,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     :goto_0
@@ -301,7 +327,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/amap/api/location/AMapLocation;->i()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amap/api/location/AMapLocation;->getAddress()Ljava/lang/String;
 
     move-result-object v2
 
@@ -323,7 +349,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/amap/api/location/AMapLocation;->d()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amap/api/location/AMapLocation;->getProvince()Ljava/lang/String;
 
     move-result-object v2
 
@@ -345,7 +371,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/amap/api/location/AMapLocation;->e()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amap/api/location/AMapLocation;->getCity()Ljava/lang/String;
 
     move-result-object v2
 
@@ -367,7 +393,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/amap/api/location/AMapLocation;->g()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amap/api/location/AMapLocation;->getCityCode()Ljava/lang/String;
 
     move-result-object v2
 
@@ -389,7 +415,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/amap/api/location/AMapLocation;->f()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amap/api/location/AMapLocation;->getDistrict()Ljava/lang/String;
 
     move-result-object v2
 
@@ -411,7 +437,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/amap/api/location/AMapLocation;->j()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amap/api/location/AMapLocation;->getStreet()Ljava/lang/String;
 
     move-result-object v2
 
@@ -433,7 +459,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/amap/api/location/AMapLocation;->h()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amap/api/location/AMapLocation;->getAdCode()Ljava/lang/String;
 
     move-result-object v2
 
@@ -471,25 +497,25 @@
 
     invoke-direct {v1}, Lcn/com/smartdevices/bracelet/location/Location$Address;-><init>()V
 
-    invoke-virtual {p1}, Lcom/amap/api/location/AMapLocation;->d()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amap/api/location/AMapLocation;->getProvince()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/location/Location$Address;->c(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/amap/api/location/AMapLocation;->e()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amap/api/location/AMapLocation;->getCity()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/location/Location$Address;->e(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/amap/api/location/AMapLocation;->f()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amap/api/location/AMapLocation;->getDistrict()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/location/Location$Address;->f(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/amap/api/location/AMapLocation;->j()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/amap/api/location/AMapLocation;->getStreet()Ljava/lang/String;
 
     move-result-object v2
 
@@ -502,32 +528,6 @@
     invoke-interface {v1, v0}, Lcn/com/smartdevices/bracelet/location/d;->a(Lcn/com/smartdevices/bracelet/location/Location;)V
 
     goto/16 :goto_0
-.end method
-
-.method public b()V
-    .locals 2
-
-    const-string v0, "AmapLocationService"
-
-    const-string v1, "Stop Location!!"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/a;->c:Lcom/amap/api/location/f;
-
-    invoke-virtual {v0, p0}, Lcom/amap/api/location/f;->a(Lcom/amap/api/location/e;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/a;->c:Lcom/amap/api/location/f;
-
-    invoke-virtual {v0}, Lcom/amap/api/location/f;->c()V
-
-    return-void
-.end method
-
-.method public onLocationChanged(Landroid/location/Location;)V
-    .locals 0
-
-    return-void
 .end method
 
 .method public onProviderDisabled(Ljava/lang/String;)V

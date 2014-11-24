@@ -5,7 +5,7 @@
 # static fields
 .field public static final a:Ljava/lang/String; = "trackloc"
 
-.field static final b:Ljava/lang/String; = "CREATE TABLE IF NOT EXISTS trackloc(_id INTEGER PRIMARY KEY AUTOINCREMENT,type INTEGER,trackid INTEGER,latitude REAL,longitude REAL,altitude REAL,accuracy REAL,time INTEGER,sync INTEGER DEFAULT 0);"
+.field static final b:Ljava/lang/String; = "CREATE TABLE IF NOT EXISTS trackloc(_id INTEGER PRIMARY KEY AUTOINCREMENT,trackid INTEGER,latitude REAL,longitude REAL,altitude REAL,time INTEGER,extra TEXT, UNIQUE (time) ON CONFLICT REPLACE);"
 
 
 # direct methods

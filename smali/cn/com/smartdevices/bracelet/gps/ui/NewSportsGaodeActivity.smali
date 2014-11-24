@@ -23,7 +23,7 @@
     :try_start_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/NewSportsGaodeActivity;->b:Lcom/amap/api/maps/MapView;
 
-    invoke-virtual {v0}, Lcom/amap/api/maps/MapView;->e()V
+    invoke-virtual {v0}, Lcom/amap/api/maps/MapView;->onDestroy()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -51,11 +51,11 @@
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030062
+    const v0, 0x7f030067
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/NewSportsGaodeActivity;->setContentView(I)V
 
-    const v0, 0x7f070036
+    const v0, 0x7f07009d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/NewSportsGaodeActivity;->findViewById(I)Landroid/view/View;
 
@@ -67,21 +67,21 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/NewSportsGaodeActivity;->b:Lcom/amap/api/maps/MapView;
 
-    invoke-virtual {v0, p1}, Lcom/amap/api/maps/MapView;->a(Landroid/os/Bundle;)V
+    invoke-virtual {v0, p1}, Lcom/amap/api/maps/MapView;->onCreate(Landroid/os/Bundle;)V
 
     new-instance v0, Lcn/com/smartdevices/bracelet/gps/b/a;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/gps/b/n;
+    new-instance v1, Lcn/com/smartdevices/bracelet/gps/b/u;
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/NewSportsGaodeActivity;->b:Lcom/amap/api/maps/MapView;
 
-    invoke-virtual {v2}, Lcom/amap/api/maps/MapView;->b()Lcom/amap/api/maps/a;
+    invoke-virtual {v2}, Lcom/amap/api/maps/MapView;->getMap()Lcom/amap/api/maps/AMap;
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Lcn/com/smartdevices/bracelet/gps/b/n;-><init>(Lcom/amap/api/maps/a;)V
+    invoke-direct {v1, v2}, Lcn/com/smartdevices/bracelet/gps/b/u;-><init>(Lcom/amap/api/maps/AMap;)V
 
-    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/gps/b/a;-><init>(Landroid/content/Context;Lcn/com/smartdevices/bracelet/gps/b/n;)V
+    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/gps/b/a;-><init>(Landroid/content/Context;Lcn/com/smartdevices/bracelet/gps/b/u;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/NewSportsGaodeActivity;->a:Lcn/com/smartdevices/bracelet/gps/b/a;
 
@@ -89,11 +89,11 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/NewSportsGaodeActivity;->b:Lcom/amap/api/maps/MapView;
 
-    invoke-virtual {v1}, Lcom/amap/api/maps/MapView;->b()Lcom/amap/api/maps/a;
+    invoke-virtual {v1}, Lcom/amap/api/maps/MapView;->getMap()Lcom/amap/api/maps/AMap;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/b/a;->a(Lcom/amap/api/maps/a;)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/b/a;->a(Lcom/amap/api/maps/AMap;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/NewSportsGaodeActivity;->a:Lcn/com/smartdevices/bracelet/gps/b/a;
 
@@ -115,11 +115,11 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/NewSportsGaodeActivity;->a:Lcn/com/smartdevices/bracelet/gps/b/a;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/b/a;->c()V
+    invoke-virtual {v0, p0}, Lcn/com/smartdevices/bracelet/gps/b/a;->a(Landroid/content/Context;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/NewSportsGaodeActivity;->b:Lcom/amap/api/maps/MapView;
 
-    invoke-virtual {v0}, Lcom/amap/api/maps/MapView;->e()V
+    invoke-virtual {v0}, Lcom/amap/api/maps/MapView;->onDestroy()V
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/NewSportsGaodeActivity;->a()V
 
@@ -145,7 +145,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/NewSportsGaodeActivity;->b:Lcom/amap/api/maps/MapView;
 
-    invoke-virtual {v0}, Lcom/amap/api/maps/MapView;->d()V
+    invoke-virtual {v0}, Lcom/amap/api/maps/MapView;->onPause()V
 
     invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
@@ -167,9 +167,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/NewSportsGaodeActivity;->b:Lcom/amap/api/maps/MapView;
 
-    invoke-virtual {v0}, Lcom/amap/api/maps/MapView;->c()V
+    invoke-virtual {v0}, Lcom/amap/api/maps/MapView;->onResume()V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/gps/a/c;->b(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/gps/a/b;->b(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -267,7 +267,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/NewSportsGaodeActivity;->b:Lcom/amap/api/maps/MapView;
 
-    invoke-virtual {v0, p1}, Lcom/amap/api/maps/MapView;->b(Landroid/os/Bundle;)V
+    invoke-virtual {v0, p1}, Lcom/amap/api/maps/MapView;->onSaveInstanceState(Landroid/os/Bundle;)V
 
     return-void
 .end method

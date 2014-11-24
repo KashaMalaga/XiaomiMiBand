@@ -7,7 +7,7 @@
 
 .field public static final b:I = 0x2
 
-.field public static final c:I = 0x3
+.field public static final c:I = 0x4
 
 
 # direct methods
@@ -29,6 +29,10 @@
     if-eq p0, v1, :cond_0
 
     if-eq p0, v0, :cond_0
+
+    const/4 v1, 0x4
+
+    if-eq p0, v1, :cond_0
 
     const/4 v0, 0x0
 

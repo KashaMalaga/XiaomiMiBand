@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/aO;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/aN;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/aO;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/aN;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/aP;->a:Lcn/com/smartdevices/bracelet/ui/aO;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/aP;->a:Lcn/com/smartdevices/bracelet/ui/aN;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -23,17 +23,15 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aP;->a:Lcn/com/smartdevices/bracelet/ui/aO;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aP;->a:Lcn/com/smartdevices/bracelet/ui/aN;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/aO;->a(Lcn/com/smartdevices/bracelet/ui/aO;)Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/aN;->a(Lcn/com/smartdevices/bracelet/ui/aN;)Lcn/com/smartdevices/bracelet/ui/aI;
 
     move-result-object v0
 
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->a(Z)V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/aI;->dismiss()V
 
     return-void
 .end method

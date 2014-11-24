@@ -177,7 +177,7 @@
 
     move-result-object v4
 
-    invoke-static {v2, v3, v4}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3, v4}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/weather/WeatherManager$2;->this$0:Lcn/com/smartdevices/bracelet/weather/WeatherManager;
 
@@ -186,7 +186,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/Exception;)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/Exception;)V
 
     move-object v0, v1
 

@@ -1,90 +1,153 @@
-.class public Lcn/com/smartdevices/bracelet/gps/c/c;
-.super Ljava/lang/Object;
+.class Lcn/com/smartdevices/bracelet/gps/c/c;
+.super Lcom/c/a/a/h;
+
+
+# instance fields
+.field private final synthetic a:I
+
+.field private final synthetic b:Landroid/content/Context;
 
 
 # direct methods
-.method private constructor <init>()V
+.method constructor <init>(ILandroid/content/Context;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/c/c;->a:I
+
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/gps/c/c;->b:Landroid/content/Context;
+
+    invoke-direct {p0}, Lcom/c/a/a/h;-><init>()V
 
     return-void
 .end method
 
-.method public static a()Landroid/content/Intent;
-    .locals 2
 
-    new-instance v0, Landroid/content/Intent;
+# virtual methods
+.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
+    .locals 4
 
-    const-string v1, "android.settings.LOCATION_SOURCE_SETTINGS"
-
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public static a(Landroid/content/Context;)Z
-    .locals 2
-
-    const-string v0, "location"
-
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {p3}, Lcn/com/smartdevices/bracelet/z;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Landroid/location/LocationManager;
+    const-string v1, "Sync"
 
-    const-string v1, "gps"
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Landroid/location/LocationManager;->isProviderEnabled(Ljava/lang/String;)Z
+    const-string v3, "syncSportConfigToSever onFailure:"
 
-    move-result v0
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return v0
-.end method
-
-.method public static b(Landroid/content/Context;)Z
-    .locals 2
-
-    const-string v0, "location"
-
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    check-cast v0, Landroid/location/LocationManager;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const-string v1, "network"
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Landroid/location/LocationManager;->isProviderEnabled(Ljava/lang/String;)Z
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result v0
-
-    return v0
+    return-void
 .end method
 
-.method public static c(Landroid/content/Context;)Z
-    .locals 1
+.method public onSuccess(I[Lorg/apache/http/Header;[B)V
+    .locals 5
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/gps/c/c;->a(Landroid/content/Context;)Z
+    invoke-static {p3}, Lcn/com/smartdevices/bracelet/z;->a([B)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/d/g;->b(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/d/h;
+
+    move-result-object v1
+
+    const-string v2, "Sync"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "syncSportConfigToSever onSuccess:"
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v3, " code = "
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget v3, v1, Lcn/com/smartdevices/bracelet/d/h;->f:I
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v3, ",sportType = "
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget v3, p0, Lcn/com/smartdevices/bracelet/gps/c/c;->a:I
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/d/h;->a()Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/gps/c/c;->b(Landroid/content/Context;)Z
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/c/c;->b:Landroid/content/Context;
+
+    const/4 v1, 0x4
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/a/a;->d(Landroid/content/Context;I)Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    const-string v1, "Sync"
 
-    const/4 v0, 0x0
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    :goto_0
-    return v0
+    const-string v3, "syncSportConfigToSever isSucceededToUpdateDBState = "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v2, ",sportType = "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget v2, p0, Lcn/com/smartdevices/bracelet/gps/c/c;->a:I
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
-    const/4 v0, 0x1
-
-    goto :goto_0
+    return-void
 .end method

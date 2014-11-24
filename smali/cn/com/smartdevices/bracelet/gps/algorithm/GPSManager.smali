@@ -2,9 +2,25 @@
 .super Ljava/lang/Object;
 
 
-# instance fields
-.field mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+# annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "Assert"
+    }
+.end annotation
 
+
+# static fields
+.field static final synthetic $assertionsDisabled:Z
+
+.field public static final RING_SIZE:I
+
+.field public static final STEP_SIZE:I
+
+.field static final mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+
+
+# instance fields
 .field mHeaderPrinted:Z
 
 .field mHeaderString:Ljava/lang/String;
@@ -24,12 +40,60 @@
     .end annotation
 .end field
 
+.field mPrevPoint:Lcn/com/smartdevices/bracelet/gps/model/c;
+
 .field mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    const-class v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->desiredAssertionStatus()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    sput-boolean v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->$assertionsDisabled:Z
+
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;-><init>()V
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getRingSize()I
+
+    move-result v0
+
+    sput v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->RING_SIZE:I
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getStepSize()I
+
+    move-result v0
+
+    sput v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->STEP_SIZE:I
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 .method public constructor <init>(Ljava/lang/String;)V
-    .locals 4
+    .locals 3
 
     const/4 v0, 0x0
 
@@ -53,51 +117,43 @@
 
     iput-object v1, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
-
-    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;-><init>()V
-
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
-
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v1, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mPointRing:Ljava/util/ArrayList;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getRingSize()I
-
-    move-result v1
-
     :goto_0
+    sget v1, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->RING_SIZE:I
+
     if-lt v0, v1, :cond_0
 
     return-void
 
     :cond_0
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mPointRing:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mPointRing:Ljava/util/ArrayList;
 
-    new-instance v3, Lcn/com/smartdevices/bracelet/gps/model/c;
+    new-instance v2, Lcn/com/smartdevices/bracelet/gps/model/c;
 
-    invoke-direct {v3}, Lcn/com/smartdevices/bracelet/gps/model/c;-><init>()V
+    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/gps/model/c;-><init>()V
 
-    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 .end method
 
-.method private updatePoint(I)Z
+.method private updatePoint(III)Z
     .locals 10
 
     const/4 v2, 0x1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mPointRing:Ljava/util/ArrayList;
 
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    rem-int v1, p1, p3
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -105,25 +161,25 @@
 
     const/4 v1, 0x0
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+    sget-object v3, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
 
-    invoke-virtual {v3, p1}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getGlobalIndex(I)I
+    invoke-virtual {v3, p2}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getGlobalIndex(I)I
 
     move-result v3
 
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+    sget-object v4, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
 
-    invoke-virtual {v4, p1}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getNewLongitude(I)D
+    invoke-virtual {v4, p2}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getNewLongitude(I)D
 
     move-result-wide v4
 
-    iget-object v6, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+    sget-object v6, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
 
-    invoke-virtual {v6, p1}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getNewLatitude(I)D
+    invoke-virtual {v6, p2}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getNewLatitude(I)D
 
     move-result-wide v6
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/model/c;->a()I
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/model/c;->c()I
 
     move-result v8
 
@@ -134,24 +190,24 @@
     move v1, v2
 
     :cond_0
-    iget-wide v8, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->d:D
+    iget-wide v8, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->h:D
 
     cmpl-double v3, v8, v4
 
     if-eqz v3, :cond_1
 
-    iput-wide v4, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->d:D
+    iput-wide v4, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->h:D
 
     move v1, v2
 
     :cond_1
-    iget-wide v3, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->c:D
+    iget-wide v3, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->g:D
 
     cmpl-double v3, v3, v6
 
     if-eqz v3, :cond_2
 
-    iput-wide v6, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->c:D
+    iput-wide v6, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->g:D
 
     :goto_0
     return v2
@@ -164,6 +220,27 @@
 
 
 # virtual methods
+.method public FreeAllMemory()V
+    .locals 2
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->endToFreeSpaces()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, "gps"
+
+    const-string v1, "memory leak in C"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public cleanStorage()V
     .locals 1
 
@@ -242,27 +319,35 @@
 
     :cond_1
     :try_start_2
+    sget-object v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getLength()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->endWritingSport()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+    sget-object v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->stop()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+    sget-object v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getRelStartIndex()I
 
     move-result v4
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+    sget-object v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getRingSize()I
 
     move-result v5
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+    sget-object v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getLength()I
 
@@ -271,43 +356,29 @@
     move v1, v2
 
     :goto_1
-    if-lt v1, v6, :cond_2
+    if-ge v1, v6, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->endToFreeSpaces()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const-string v0, "gps"
-
-    const-string v1, "memory leak in C"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_0
-
-    :cond_2
     add-int v0, v4, v1
 
     rem-int/2addr v0, v5
 
-    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->updatePoint(I)Z
+    sget-object v7, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+
+    invoke-virtual {v7, v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getGlobalIndex(I)I
 
     move-result v7
 
-    if-eqz v7, :cond_3
+    invoke-direct {p0, v7, v0, v5}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->updatePoint(III)Z
 
-    iget-object v7, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mPointRing:Ljava/util/ArrayList;
+    move-result v0
 
-    invoke-virtual {v7, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mPointRing:Ljava/util/ArrayList;
+
+    rem-int/2addr v7, v5
+
+    invoke-virtual {v0, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -318,12 +389,29 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    :cond_3
+    :cond_2
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_1
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_0
+.end method
+
+.method public getAllFile()Ljava/io/File;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->getAllFile()Ljava/io/File;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method public getAllFileLength()I
@@ -338,13 +426,154 @@
     return v0
 .end method
 
-.method public receivePoint(Lcn/com/smartdevices/bracelet/gps/model/c;)Ljava/util/ArrayList;
-    .locals 7
+.method public getDistance(I)D
+    .locals 2
+
+    sget v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->RING_SIZE:I
+
+    rem-int v0, p1, v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mPointRing:Ljava/util/ArrayList;
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/gps/model/c;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/model/c;->e()F
+
+    move-result v0
+
+    float-to-double v0, v0
+
+    return-wide v0
+.end method
+
+.method public getIsRunning()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mIsRunning:Z
+
+    return v0
+.end method
+
+.method public getPace(I)D
+    .locals 4
+
+    const-wide/high16 v0, 0x3ff0000000000000L
+
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->getSpeed(I)D
+
+    move-result-wide v2
+
+    div-double/2addr v0, v2
+
+    return-wide v0
+.end method
+
+.method public getRunParameter(Lcn/com/smartdevices/bracelet/gps/algorithm/RunParameter;)V
+    .locals 1
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getUploadPara(Lcn/com/smartdevices/bracelet/gps/algorithm/RunParameter;)V
+
+    return-void
+.end method
+
+.method public getSpeed(I)D
+    .locals 2
+
+    sget v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->RING_SIZE:I
+
+    rem-int v0, p1, v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mPointRing:Ljava/util/ArrayList;
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/gps/model/c;
+
+    iget v0, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->j:F
+
+    float-to-double v0, v0
+
+    return-wide v0
+.end method
+
+.method public getTempFile()Ljava/io/File;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->getTempFile()Ljava/io/File;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getTestFile()Ljava/io/File;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->getTestFile()Ljava/io/File;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public isCauseWavelet()Z
+    .locals 3
+
+    const/4 v0, 0x0
+
+    iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mIsRunning:Z
+
+    if-eqz v1, :cond_0
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getLength()I
+
+    move-result v1
+
+    if-lez v1, :cond_0
+
+    sget v2, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->STEP_SIZE:I
+
+    rem-int/2addr v1, v2
+
+    if-nez v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :cond_0
+    return v0
+.end method
+
+.method public pauseRunning()V
+    .locals 1
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->pause()V
+
+    return-void
+.end method
+
+.method public receivePoint(Lcn/com/smartdevices/bracelet/gps/model/c;Z)Ljava/util/ArrayList;
+    .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcn/com/smartdevices/bracelet/gps/model/c;",
-            ")",
+            "Z)",
             "Ljava/util/ArrayList",
             "<",
             "Lcn/com/smartdevices/bracelet/gps/model/c;",
@@ -352,20 +581,56 @@
         }
     .end annotation
 
-    const/4 v0, 0x0
+    new-instance v7, Ljava/util/ArrayList;
 
-    new-instance v2, Ljava/util/ArrayList;
+    invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+    const-string v0, "gps"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "receiveSample-in, index: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/model/c;->c()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :try_start_0
-    iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mIsRunning:Z
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mIsRunning:Z
 
-    if-nez v1, :cond_1
+    if-nez v0, :cond_0
 
     new-instance v0, Ljava/lang/Exception;
 
-    const-string v1, "receive sample when there is not sport"
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "receive sample when not running, index: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/model/c;->c()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
 
     invoke-direct {v0, v1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
@@ -392,149 +657,326 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    :cond_0
     :goto_0
-    return-object v2
+    const-string v0, "gps"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "receiveSample-out, index: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/model/c;->c()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v7
+
+    :cond_0
+    :try_start_2
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
+
+    if-eqz v0, :cond_2
+
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/gaocept/d;->a:Z
+
+    if-eqz v0, :cond_2
+
+    if-eqz p2, :cond_2
+
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mHeaderPrinted:Z
+
+    if-nez v0, :cond_1
+
+    const-string v0, "gps"
+
+    const-string v1, "start writing raw samples"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mHeaderString:Ljava/lang/String;
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
+
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->getTempFile()Ljava/io/File;
+
+    move-result-object v2
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->writeString(Ljava/lang/String;Ljava/io/File;Z)V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mHeaderPrinted:Z
 
     :cond_1
-    :try_start_2
-    iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mHeaderPrinted:Z
+    const-string v0, "gps"
 
-    if-nez v1, :cond_2
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v1, "gps"
+    const-string v2, "wrote-sample-in, index: "
 
-    const-string v3, "start receiving samples"
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/model/c;->c()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/model/c;->a()Lcn/com/smartdevices/bracelet/gps/model/c;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mPrevPoint:Lcn/com/smartdevices/bracelet/gps/model/c;
+
+    if-nez v1, :cond_4
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/model/c;->a(F)V
+
+    :goto_1
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mPrevPoint:Lcn/com/smartdevices/bracelet/gps/model/c;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mPrevPoint:Lcn/com/smartdevices/bracelet/gps/model/c;
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
+
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->getTempFile()Ljava/io/File;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->writeSample(Lcn/com/smartdevices/bracelet/gps/model/c;Ljava/io/File;)V
+
+    const-string v0, "gps"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "wrote-sample-out, index: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/model/c;->c()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
+    const-string v0, "gps"
 
-    if-eqz v1, :cond_4
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mHeaderPrinted:Z
+    const-string v2, "filter-sample-in, index: "
 
-    if-nez v1, :cond_3
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/model/c;->c()I
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mHeaderString:Ljava/lang/String;
+    move-result v2
 
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->getTempFile()Ljava/io/File;
+    move-result-object v1
 
-    move-result-object v4
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const/4 v5, 0x0
+    move-result-object v1
 
-    invoke-virtual {v1, v3, v4, v5}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->writeString(Ljava/lang/String;Ljava/io/File;Z)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    const/4 v1, 0x1
+    sget-object v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
 
-    iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mHeaderPrinted:Z
+    iget-wide v1, p1, Lcn/com/smartdevices/bracelet/gps/model/c;->h:D
 
-    :cond_3
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
+    iget-wide v3, p1, Lcn/com/smartdevices/bracelet/gps/model/c;->g:D
 
-    invoke-virtual {v1, p1}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->writeSamples(Lcn/com/smartdevices/bracelet/gps/model/c;)V
+    iget-wide v5, p1, Lcn/com/smartdevices/bracelet/gps/model/c;->i:J
 
-    :cond_4
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+    invoke-virtual/range {v0 .. v6}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->receiveSample(DDJ)Z
 
-    iget-wide v3, p1, Lcn/com/smartdevices/bracelet/gps/model/c;->d:D
+    move-result v0
 
-    iget-wide v5, p1, Lcn/com/smartdevices/bracelet/gps/model/c;->c:D
+    sget-object v1, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
 
-    invoke-virtual {v1, v3, v4, v5, v6}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->receiveSample(DD)Z
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getLength()I
 
-    move-result v1
+    move-result v2
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+    sget-object v1, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
 
-    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getLength()I
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getRelStartIndex()I
 
     move-result v3
 
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+    sget-object v1, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
 
-    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getRelStartIndex()I
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getRingSize()I
 
     move-result v4
 
-    iget-object v5, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+    if-eqz v0, :cond_7
 
-    invoke-virtual {v5}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getRingSize()I
-
-    move-result v5
-
-    if-eqz v1, :cond_6
+    const/4 v0, 0x0
 
     move v1, v0
 
-    :goto_1
-    if-ge v1, v3, :cond_0
+    :goto_2
+    if-lt v1, v2, :cond_5
 
-    add-int v0, v4, v1
+    :cond_3
+    :goto_3
+    const-string v0, "gps"
 
-    rem-int/2addr v0, v5
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->updatePoint(I)Z
+    const-string v2, "filtering-sample-out, index: "
 
-    move-result v6
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-eqz v6, :cond_5
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/model/c;->c()I
 
-    iget-object v6, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mPointRing:Ljava/util/ArrayList;
+    move-result v2
 
-    invoke-virtual {v6, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    move-result-object v1
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/gps/model/c;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move-result-object v1
 
-    :cond_5
-    add-int/lit8 v0, v1, 0x1
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    move v1, v0
-
-    goto :goto_1
-
-    :cond_6
-    add-int v0, v4, v3
-
-    add-int/lit8 v0, v0, -0x1
-
-    rem-int/2addr v0, v5
-
-    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->updatePoint(I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mPointRing:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/gps/model/c;
-
-    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    goto :goto_0
+    goto/16 :goto_0
 
     :catchall_0
     move-exception v0
 
-    goto :goto_0
+    goto/16 :goto_0
+
+    :cond_4
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mPrevPoint:Lcn/com/smartdevices/bracelet/gps/model/c;
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/model/c;->e()F
+
+    move-result v1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mPrevPoint:Lcn/com/smartdevices/bracelet/gps/model/c;
+
+    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/gps/model/c;->d(Lcn/com/smartdevices/bracelet/gps/model/c;)F
+
+    move-result v2
+
+    add-float/2addr v1, v2
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/model/c;->a(F)V
+
+    goto/16 :goto_1
+
+    :cond_5
+    add-int v0, v3, v1
+
+    rem-int/2addr v0, v4
+
+    sget-object v5, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+
+    invoke-virtual {v5, v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getGlobalIndex(I)I
+
+    move-result v5
+
+    invoke-direct {p0, v5, v0, v4}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->updatePoint(III)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mPointRing:Ljava/util/ArrayList;
+
+    rem-int/2addr v5, v4
+
+    invoke-virtual {v0, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/gps/model/c;
+
+    invoke-virtual {v7, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_6
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_2
+
+    :cond_7
+    add-int v0, v3, v2
+
+    add-int/lit8 v0, v0, -0x1
+
+    rem-int/2addr v0, v4
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getGlobalIndex(I)I
+
+    move-result v1
+
+    invoke-direct {p0, v1, v0, v4}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->updatePoint(III)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mPointRing:Ljava/util/ArrayList;
+
+    rem-int/2addr v1, v4
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/gps/model/c;
+
+    invoke-virtual {v7, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    goto :goto_3
 .end method
 
 .method public reset()V
@@ -544,7 +986,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+    sget-object v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->reset()V
 
@@ -552,10 +994,26 @@
     return-void
 .end method
 
+.method public resumeRunning()V
+    .locals 1
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->resume()V
+
+    return-void
+.end method
+
 .method public start(Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
 
     const/4 v2, 0x0
+
+    const-string v0, "gps"
+
+    const-string v1, "start-in"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :try_start_0
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mIsRunning:Z
@@ -586,25 +1044,21 @@
     iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mIsRunning:Z
 
     :goto_0
+    const-string v0, "gps"
+
+    const-string v1, "start-out"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
     return-void
 
     :cond_0
     :try_start_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mHeaderString:Ljava/lang/String;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const-string v1, "\nGPS Activity:"
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v0, "GPS Activity: "
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -642,65 +1096,6 @@
 
     move-result-object v0
 
-    sget-boolean v1, Lcn/com/smartdevices/bracelet/gaocept/d;->b:Z
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
-
-    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->setCodeByTimeStamp(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mHeaderString:Ljava/lang/String;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v1, "Start: "
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "\n"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mHeaderString:Ljava/lang/String;
-
-    :goto_1
-    move v1, v2
-
-    :goto_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mPointRing:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    if-lt v1, v0, :cond_2
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mIsRunning:Z
-
-    goto :goto_0
-
-    :cond_1
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mHeaderString:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -727,9 +1122,54 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mHeaderString:Ljava/lang/String;
 
-    goto :goto_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mHeaderString:Ljava/lang/String;
 
-    :cond_2
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v0, "TimeStamp, Longitude, Latitude, Altitude, Speed, Distance\n"
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mHeaderString:Ljava/lang/String;
+
+    move v1, v2
+
+    :goto_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mPointRing:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-lt v1, v0, :cond_1
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->start()V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mIsRunning:Z
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mPrevPoint:Lcn/com/smartdevices/bracelet/gps/model/c;
+
+    goto :goto_0
+
+    :cond_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mPointRing:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -748,789 +1188,737 @@
 
     move v1, v0
 
-    goto :goto_2
+    goto :goto_1
 .end method
 
 .method public test()I
-    .locals 15
+    .locals 18
 
-    const/4 v1, 0x1
+    new-instance v11, Ljava/io/FileInputStream;
+
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->getAllFile()Ljava/io/File;
+
+    move-result-object v1
+
+    invoke-direct {v11, v1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+
+    new-instance v12, Ljava/io/InputStreamReader;
+
+    const-string v1, "UTF-8"
+
+    invoke-direct {v12, v11, v1}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;Ljava/lang/String;)V
+
+    new-instance v13, Ljava/io/BufferedReader;
+
+    invoke-direct {v13, v12}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
+
+    const-string v1, ""
+
+    const/4 v10, -0x1
+
+    const/4 v9, 0x0
 
     const/4 v2, 0x0
 
-    new-instance v7, Ljava/io/FileInputStream;
+    sget-object v1, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getRingSize()I
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->getAllFile()Ljava/io/File;
+    move-result v14
 
-    move-result-object v0
+    sget-boolean v1, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->$assertionsDisabled:Z
 
-    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    if-nez v1, :cond_2
 
-    move-result-object v0
+    move-object/from16 v0, p0
 
-    invoke-direct {v7, v0}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mPointRing:Ljava/util/ArrayList;
 
-    new-instance v8, Ljava/io/InputStreamReader;
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
-    const-string v0, "UTF-8"
+    move-result v1
 
-    invoke-direct {v8, v7, v0}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;Ljava/lang/String;)V
+    if-eq v14, v1, :cond_2
 
-    new-instance v9, Ljava/io/BufferedReader;
+    new-instance v1, Ljava/lang/AssertionError;
 
-    invoke-direct {v9, v8}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
+    invoke-direct {v1}, Ljava/lang/AssertionError;-><init>()V
 
-    const/4 v5, -0x1
+    throw v1
 
-    const-string v0, ""
+    :cond_0
+    :try_start_0
+    const-string v1, "\n"
 
-    move v4, v2
+    if-eq v4, v1, :cond_b
 
-    :goto_0
-    invoke-virtual {v9}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
+    const-string v1, ""
 
-    move-result-object v3
+    if-eq v4, v1, :cond_b
 
-    if-nez v3, :cond_2
+    invoke-virtual {v4}, Ljava/lang/String;->length()I
 
-    if-ltz v5, :cond_0
+    move-result v1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+    if-lez v1, :cond_b
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->stop()V
+    const-string v1, "GPS"
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+    invoke-virtual {v4, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getLength()I
+    move-result v1
 
-    move-result v4
+    if-eqz v1, :cond_7
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+    if-lez v10, :cond_1
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getRelStartIndex()I
+    sget-object v1, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->stop()V
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getLength()I
+
+    move-result v5
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getRelStartIndex()I
 
     move-result v6
 
-    move v3, v2
+    const/4 v1, 0x0
 
-    :goto_1
-    if-lt v3, v4, :cond_c
+    move v3, v1
 
-    :cond_0
-    invoke-virtual {v9}, Ljava/io/BufferedReader;->close()V
-
-    invoke-virtual {v8}, Ljava/io/InputStreamReader;->close()V
-
-    invoke-virtual {v7}, Ljava/io/FileInputStream;->close()V
-
-    const-string v0, "gps"
-
-    const-string v1, "finish gps test"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->endToFreeSpaces()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    const-string v0, "gaocept"
-
-    const-string v1, "memory leak in C"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    :goto_0
+    if-lt v3, v5, :cond_5
 
     :cond_1
-    return v5
+    sget-object v1, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
 
-    :cond_2
-    const-string v0, ""
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->start()V
 
-    if-eq v3, v0, :cond_9
+    const-string v1, "[:]"
 
-    const-string v0, "GPS"
+    invoke-virtual {v4, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
-    invoke-virtual {v3, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    move-result-object v1
 
-    move-result v0
-
-    if-eqz v0, :cond_8
-
-    if-ltz v5, :cond_3
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->stop()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getLength()I
-
-    move-result v10
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getRelStartIndex()I
-
-    move-result v11
-
-    move v6, v2
-
-    :goto_2
-    if-lt v6, v10, :cond_4
-
-    :cond_3
-    const-string v0, "[:]"
-
-    invoke-virtual {v3, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v5, "gps"
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    const-string v10, "start test activity: "
-
-    invoke-direct {v6, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    aget-object v0, v0, v1
-
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v6, "/"
-
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v5, v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v5, "\n"
-
-    invoke-direct {v0, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mHeaderString:Ljava/lang/String;
-
-    invoke-virtual {v9}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mHeaderString:Ljava/lang/String;
+    const-string v3, "gps"
 
     new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string v6, "start test activity: "
+
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const/4 v6, 0x1
+
+    aget-object v1, v1, v6
+
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v5, "/"
+
+    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v3, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v3, "\n"
+
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    move-object/from16 v0, p0
+
+    iput-object v1, v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mHeaderString:Ljava/lang/String;
+
+    invoke-virtual {v13}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
+
+    move-result-object v1
+
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mHeaderString:Ljava/lang/String;
+
+    new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-direct {v5, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v4, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     const-string v3, "\n"
 
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    move-object/from16 v0, p0
+
+    iput-object v1, v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mHeaderString:Ljava/lang/String;
+
+    invoke-virtual {v13}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
+
+    move-result-object v1
+
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mHeaderString:Ljava/lang/String;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {v4, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v3, "\n"
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mHeaderString:Ljava/lang/String;
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
+    move-result-object v1
 
-    invoke-virtual {v3, v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->setCodeByTimeStamp(Ljava/lang/String;)V
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const-string v3, "Start"
+    move-result-object v1
 
-    invoke-virtual {v0, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    move-object/from16 v0, p0
 
-    move-result v0
+    iput-object v1, v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mHeaderString:Ljava/lang/String;
 
-    if-eqz v0, :cond_6
+    move-object/from16 v0, p0
 
-    sput-boolean v1, Lcn/com/smartdevices/bracelet/gaocept/d;->b:Z
+    iget-object v3, v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
 
-    :goto_3
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->start()V
+    move-object/from16 v0, p0
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
+    iget-object v4, v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mHeaderString:Ljava/lang/String;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    iget-object v5, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mHeaderString:Ljava/lang/String;
+    move-result-object v4
 
-    invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-direct {v1, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v4, "\n"
+
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->getTestFile()Ljava/io/File;
 
     move-result-object v5
 
-    invoke-direct {v0, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-lez v10, :cond_6
 
-    const-string v5, "\n"
+    const/4 v1, 0x1
 
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :goto_1
+    invoke-virtual {v3, v4, v5, v1}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->writeString(Ljava/lang/String;Ljava/io/File;Z)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-object v0
+    const/4 v1, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->getTestFile()Ljava/io/File;
-
-    move-result-object v6
-
-    if-lez v4, :cond_7
-
-    move v0, v1
-
-    :goto_4
-    invoke-virtual {v3, v5, v6, v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->writeString(Ljava/lang/String;Ljava/io/File;Z)V
-
-    const-string v0, "gps"
+    :try_start_1
+    const-string v2, "gps"
 
     const-string v3, "receive test gps samples"
 
-    invoke-static {v0, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    move v0, v4
+    move v2, v9
 
-    :goto_5
-    add-int/lit8 v4, v4, 0x1
+    :goto_2
+    add-int/lit8 v9, v9, 0x1
 
-    move v5, v0
+    move v10, v2
 
-    goto/16 :goto_0
+    move v2, v1
 
-    :cond_4
-    new-instance v0, Ljava/lang/StringBuilder;
+    :cond_2
+    :goto_3
+    invoke-virtual {v13}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
-    iget-object v12, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+    move-result-object v4
 
-    add-int v13, v11, v6
+    if-nez v4, :cond_0
 
-    invoke-virtual {v12, v13}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getGlobalIndex(I)I
+    if-lez v2, :cond_3
 
-    move-result v12
+    sget-object v1, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
 
-    invoke-static {v12}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->stop()V
 
-    move-result-object v12
+    sget-object v1, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
 
-    invoke-direct {v0, v12}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v12, "\t"
-
-    invoke-virtual {v0, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v12, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
-
-    add-int v13, v11, v6
-
-    invoke-virtual {v12, v13}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getRawLongitude(I)I
-
-    move-result v12
-
-    invoke-virtual {v0, v12}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v12, "\t"
-
-    invoke-virtual {v0, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v12, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
-
-    add-int v13, v11, v6
-
-    invoke-virtual {v12, v13}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getRawLatitude(I)D
-
-    move-result-wide v12
-
-    invoke-virtual {v0, v12, v13}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v12, "\t"
-
-    invoke-virtual {v0, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v12, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
-
-    add-int v13, v11, v6
-
-    invoke-virtual {v12, v13}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getNewLongitude(I)D
-
-    move-result-wide v12
-
-    invoke-virtual {v0, v12, v13}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v12, "\t"
-
-    invoke-virtual {v0, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v12, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
-
-    add-int v13, v11, v6
-
-    invoke-virtual {v12, v13}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getNewLatitude(I)D
-
-    move-result-wide v12
-
-    invoke-virtual {v0, v12, v13}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v12, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
-
-    new-instance v13, Ljava/lang/StringBuilder;
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v13, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v0, "\n"
-
-    invoke-virtual {v13, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v13
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->getTestFile()Ljava/io/File;
-
-    move-result-object v14
-
-    if-lez v5, :cond_5
-
-    move v0, v1
-
-    :goto_6
-    invoke-virtual {v12, v13, v14, v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->writeString(Ljava/lang/String;Ljava/io/File;Z)V
-
-    add-int/lit8 v0, v6, 0x1
-
-    move v6, v0
-
-    goto/16 :goto_2
-
-    :cond_5
-    move v0, v2
-
-    goto :goto_6
-
-    :cond_6
-    sput-boolean v2, Lcn/com/smartdevices/bracelet/gaocept/d;->b:Z
-
-    goto/16 :goto_3
-
-    :cond_7
-    move v0, v2
-
-    goto/16 :goto_4
-
-    :cond_8
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/gaocept/d;->b:Z
-
-    if-eqz v0, :cond_e
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
-
-    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->decodeSampleLine(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    :goto_7
-    const-string v3, "\t"
-
-    invoke-virtual {v0, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
-
-    aget-object v6, v0, v1
-
-    invoke-static {v6}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
-
-    move-result-wide v10
-
-    const/4 v6, 0x2
-
-    aget-object v0, v0, v6
-
-    invoke-static {v0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
-
-    move-result-wide v12
-
-    invoke-virtual {v3, v10, v11, v12, v13}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->receiveSample(DD)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_9
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getLength()I
-
-    move-result v0
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
-
-    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getRingSize()I
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getLength()I
 
     move-result v3
 
-    iget-object v6, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+    sget-object v1, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
 
-    invoke-virtual {v6}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getStepSize()I
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getRelStartIndex()I
 
-    move-result v6
+    move-result v4
 
-    iget-object v10, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+    const/4 v1, 0x0
 
-    invoke-virtual {v10}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getRelStartIndex()I
+    move v2, v1
 
-    move-result v10
+    :goto_4
+    if-lt v2, v3, :cond_a
 
-    if-ne v0, v3, :cond_9
+    :cond_3
+    invoke-virtual {v13}, Ljava/io/BufferedReader;->close()V
 
-    move v3, v2
+    invoke-virtual {v12}, Ljava/io/InputStreamReader;->close()V
 
-    :goto_8
-    if-lt v3, v6, :cond_a
+    invoke-virtual {v11}, Ljava/io/FileInputStream;->close()V
 
-    :cond_9
-    move v0, v5
+    const-string v1, "gps"
 
-    goto/16 :goto_5
+    const-string v2, "finish gps test"
 
-    :cond_a
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v11, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+    sget-object v1, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
 
-    add-int v12, v10, v3
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->endToFreeSpaces()Z
 
-    invoke-virtual {v11, v12}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getGlobalIndex(I)I
+    move-result v1
 
-    move-result v11
+    if-nez v1, :cond_4
 
-    invoke-static {v11}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    const-string v1, "gaocept"
 
-    move-result-object v11
+    const-string v2, "memory leak in C"
 
-    invoke-direct {v0, v11}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v11, "\t"
+    :cond_4
+    return v10
 
-    invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_5
+    add-int v1, v6, v3
 
-    move-result-object v0
+    :try_start_2
+    rem-int v7, v1, v14
 
-    iget-object v11, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+    sget-object v1, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
 
-    add-int v12, v10, v3
+    invoke-virtual {v1, v7}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getGlobalIndex(I)I
 
-    invoke-virtual {v11, v12}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getRawLongitude(I)I
+    move-result v1
 
-    move-result v11
+    move-object/from16 v0, p0
 
-    invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget-object v8, v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mPointRing:Ljava/util/ArrayList;
 
-    move-result-object v0
+    rem-int/2addr v1, v14
 
-    const-string v11, "\t"
+    invoke-virtual {v8, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    move-result-object v0
+    check-cast v1, Lcn/com/smartdevices/bracelet/gps/model/c;
 
-    iget-object v11, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+    sget-object v8, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
 
-    add-int v12, v10, v3
+    invoke-virtual {v8, v7}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getNewLongitude(I)D
 
-    invoke-virtual {v11, v12}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getRawLatitude(I)D
+    move-result-wide v15
 
-    move-result-wide v11
+    iput-wide v15, v1, Lcn/com/smartdevices/bracelet/gps/model/c;->h:D
 
-    invoke-virtual {v0, v11, v12}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    sget-object v8, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
 
-    move-result-object v0
+    invoke-virtual {v8, v7}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getNewLatitude(I)D
 
-    const-string v11, "\t"
+    move-result-wide v7
 
-    invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput-wide v7, v1, Lcn/com/smartdevices/bracelet/gps/model/c;->g:D
 
-    move-result-object v0
+    move-object/from16 v0, p0
 
-    iget-object v11, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+    iget-object v7, v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
 
-    add-int v12, v10, v3
+    move-object/from16 v0, p0
 
-    invoke-virtual {v11, v12}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getNewLongitude(I)D
+    iget-object v8, v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
 
-    move-result-wide v11
+    invoke-virtual {v8}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->getTestFile()Ljava/io/File;
 
-    invoke-virtual {v0, v11, v12}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    move-result-object v8
 
-    move-result-object v0
+    invoke-virtual {v7, v1, v8}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->writeSample(Lcn/com/smartdevices/bracelet/gps/model/c;Ljava/io/File;)V
 
-    const-string v11, "\t"
+    add-int/lit8 v1, v3, 0x1
 
-    invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move v3, v1
 
-    move-result-object v0
+    goto/16 :goto_0
 
-    iget-object v11, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
-
-    add-int v12, v10, v3
-
-    invoke-virtual {v11, v12}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getNewLatitude(I)D
-
-    move-result-wide v11
-
-    invoke-virtual {v0, v11, v12}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v11, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
-
-    new-instance v12, Ljava/lang/StringBuilder;
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v12, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v0, "\n"
-
-    invoke-virtual {v12, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v12
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->getTestFile()Ljava/io/File;
-
-    move-result-object v13
-
-    if-lez v5, :cond_b
-
-    move v0, v1
-
-    :goto_9
-    invoke-virtual {v11, v12, v13, v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->writeString(Ljava/lang/String;Ljava/io/File;Z)V
-
-    add-int/lit8 v0, v3, 0x1
-
-    move v3, v0
-
-    goto/16 :goto_8
-
-    :cond_b
-    move v0, v2
-
-    goto :goto_9
-
-    :cond_c
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    iget-object v10, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
-
-    add-int v11, v6, v3
-
-    invoke-virtual {v10, v11}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getGlobalIndex(I)I
-
-    move-result v10
-
-    invoke-static {v10}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v10
-
-    invoke-direct {v0, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v10, "\t"
-
-    invoke-virtual {v0, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v10, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
-
-    add-int v11, v6, v3
-
-    invoke-virtual {v10, v11}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getRawLongitude(I)I
-
-    move-result v10
-
-    invoke-virtual {v0, v10}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v10, "\t"
-
-    invoke-virtual {v0, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v10, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
-
-    add-int v11, v6, v3
-
-    invoke-virtual {v10, v11}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getRawLatitude(I)D
-
-    move-result-wide v10
-
-    invoke-virtual {v0, v10, v11}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v10, "\t"
-
-    invoke-virtual {v0, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v10, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
-
-    add-int v11, v6, v3
-
-    invoke-virtual {v10, v11}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getNewLongitude(I)D
-
-    move-result-wide v10
-
-    invoke-virtual {v0, v10, v11}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v10, "\t"
-
-    invoke-virtual {v0, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v10, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
-
-    add-int v11, v6, v3
-
-    invoke-virtual {v10, v11}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getNewLatitude(I)D
-
-    move-result-wide v10
-
-    invoke-virtual {v0, v10, v11}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v10, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
-
-    new-instance v11, Ljava/lang/StringBuilder;
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v11, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v0, "\n"
-
-    invoke-virtual {v11, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v11
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->getTestFile()Ljava/io/File;
-
-    move-result-object v12
-
-    if-lez v5, :cond_d
-
-    move v0, v1
-
-    :goto_a
-    invoke-virtual {v10, v11, v12, v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->writeString(Ljava/lang/String;Ljava/io/File;Z)V
-
-    add-int/lit8 v0, v3, 0x1
-
-    move v3, v0
+    :cond_6
+    const/4 v1, 0x0
 
     goto/16 :goto_1
 
-    :cond_d
-    move v0, v2
+    :cond_7
+    const-string v1, ", "
 
-    goto :goto_a
+    invoke-virtual {v4, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
-    :cond_e
-    move-object v0, v3
+    move-result-object v3
 
-    goto/16 :goto_7
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mPointRing:Ljava/util/ArrayList;
+
+    rem-int v4, v2, v14
+
+    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v0, v1
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/gps/model/c;
+
+    move-object v6, v0
+
+    invoke-virtual {v6, v2}, Lcn/com/smartdevices/bracelet/gps/model/c;->a(I)V
+
+    const/4 v1, 0x0
+
+    aget-object v1, v3, v1
+
+    invoke-static {v1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v4
+
+    invoke-virtual {v6, v4, v5}, Lcn/com/smartdevices/bracelet/gps/model/c;->a(J)V
+
+    const/4 v1, 0x1
+
+    aget-object v1, v3, v1
+
+    invoke-static {v1}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
+
+    move-result-wide v4
+
+    iput-wide v4, v6, Lcn/com/smartdevices/bracelet/gps/model/c;->h:D
+
+    const/4 v1, 0x2
+
+    aget-object v1, v3, v1
+
+    invoke-static {v1}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
+
+    move-result-wide v4
+
+    iput-wide v4, v6, Lcn/com/smartdevices/bracelet/gps/model/c;->g:D
+
+    const/4 v1, 0x3
+
+    aget-object v1, v3, v1
+
+    invoke-static {v1}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
+
+    move-result-wide v4
+
+    iput-wide v4, v6, Lcn/com/smartdevices/bracelet/gps/model/c;->f:D
+
+    const/4 v1, 0x4
+
+    aget-object v1, v3, v1
+
+    invoke-static {v1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result v1
+
+    iput v1, v6, Lcn/com/smartdevices/bracelet/gps/model/c;->j:F
+
+    const/4 v1, 0x5
+
+    aget-object v1, v3, v1
+
+    invoke-static {v1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result v1
+
+    invoke-virtual {v6, v1}, Lcn/com/smartdevices/bracelet/gps/model/c;->a(F)V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+
+    add-int/lit8 v8, v2, 0x1
+
+    :try_start_3
+    sget-object v1, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+
+    iget-wide v2, v6, Lcn/com/smartdevices/bracelet/gps/model/c;->h:D
+
+    iget-wide v4, v6, Lcn/com/smartdevices/bracelet/gps/model/c;->g:D
+
+    iget-wide v6, v6, Lcn/com/smartdevices/bracelet/gps/model/c;->i:J
+
+    invoke-virtual/range {v1 .. v7}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->receiveSample(DDJ)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_8
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getLength()I
+
+    move-result v1
+
+    sget-object v2, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getStepSize()I
+
+    move-result v3
+
+    sget-object v2, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getRelStartIndex()I
+
+    move-result v4
+
+    new-instance v2, Lcn/com/smartdevices/bracelet/gps/algorithm/RunParameter;
+
+    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/gps/algorithm/RunParameter;-><init>()V
+
+    sget-object v5, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+
+    invoke-virtual {v5, v2}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getUploadPara(Lcn/com/smartdevices/bracelet/gps/algorithm/RunParameter;)V
+
+    if-ne v1, v14, :cond_8
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_5
+    if-lt v2, v3, :cond_9
+
+    :cond_8
+    move v1, v8
+
+    move v2, v10
+
+    goto/16 :goto_2
+
+    :cond_9
+    add-int v1, v4, v2
+
+    rem-int v5, v1, v14
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+
+    invoke-virtual {v1, v5}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getGlobalIndex(I)I
+
+    move-result v1
+
+    move-object/from16 v0, p0
+
+    iget-object v6, v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mPointRing:Ljava/util/ArrayList;
+
+    rem-int/2addr v1, v14
+
+    invoke-virtual {v6, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcn/com/smartdevices/bracelet/gps/model/c;
+
+    sget-object v6, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+
+    invoke-virtual {v6, v5}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getNewLongitude(I)D
+
+    move-result-wide v6
+
+    iput-wide v6, v1, Lcn/com/smartdevices/bracelet/gps/model/c;->h:D
+
+    sget-object v6, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+
+    invoke-virtual {v6, v5}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getNewLatitude(I)D
+
+    move-result-wide v5
+
+    iput-wide v5, v1, Lcn/com/smartdevices/bracelet/gps/model/c;->g:D
+
+    move-object/from16 v0, p0
+
+    iget-object v5, v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
+
+    move-object/from16 v0, p0
+
+    iget-object v6, v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
+
+    invoke-virtual {v6}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->getTestFile()Ljava/io/File;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v1, v6}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->writeSample(Lcn/com/smartdevices/bracelet/gps/model/c;Ljava/io/File;)V
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
+
+    add-int/lit8 v1, v2, 0x1
+
+    move v2, v1
+
+    goto :goto_5
+
+    :catch_0
+    move-exception v1
+
+    :goto_6
+    const-string v3, "gps"
+
+    invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v3, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto/16 :goto_3
+
+    :cond_a
+    add-int v1, v4, v2
+
+    rem-int v5, v1, v14
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+
+    invoke-virtual {v1, v5}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getGlobalIndex(I)I
+
+    move-result v1
+
+    move-object/from16 v0, p0
+
+    iget-object v6, v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mPointRing:Ljava/util/ArrayList;
+
+    rem-int/2addr v1, v14
+
+    invoke-virtual {v6, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcn/com/smartdevices/bracelet/gps/model/c;
+
+    sget-object v6, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+
+    invoke-virtual {v6, v5}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getNewLongitude(I)D
+
+    move-result-wide v6
+
+    iput-wide v6, v1, Lcn/com/smartdevices/bracelet/gps/model/c;->h:D
+
+    sget-object v6, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mGPSAlgorithm:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;
+
+    invoke-virtual {v6, v5}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSAlgorithm;->getNewLatitude(I)D
+
+    move-result-wide v5
+
+    iput-wide v5, v1, Lcn/com/smartdevices/bracelet/gps/model/c;->g:D
+
+    move-object/from16 v0, p0
+
+    iget-object v5, v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
+
+    move-object/from16 v0, p0
+
+    iget-object v6, v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->mStorageManager:Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;
+
+    invoke-virtual {v6}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->getTestFile()Ljava/io/File;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v1, v6}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSStorageManager;->writeSample(Lcn/com/smartdevices/bracelet/gps/model/c;Ljava/io/File;)V
+
+    add-int/lit8 v1, v2, 0x1
+
+    move v2, v1
+
+    goto/16 :goto_4
+
+    :catch_1
+    move-exception v2
+
+    move v10, v9
+
+    move/from16 v17, v1
+
+    move-object v1, v2
+
+    move/from16 v2, v17
+
+    goto :goto_6
+
+    :catch_2
+    move-exception v1
+
+    move v2, v8
+
+    goto :goto_6
+
+    :cond_b
+    move v1, v2
+
+    move v2, v10
+
+    goto/16 :goto_2
 .end method

@@ -66,7 +66,7 @@
 
     const v1, 0x3faa3d71
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/chart/c/u;->a()F
+    invoke-static {}, Lcn/com/smartdevices/bracelet/chart/c/t;->a()F
 
     move-result v2
 
@@ -82,7 +82,7 @@
 
     if-nez v1, :cond_0
 
-    const v1, 0x7f0c011c
+    const v1, 0x7f0c011a
 
     const/4 v2, 0x2
 
@@ -104,7 +104,7 @@
     return-object v0
 
     :cond_0
-    const v1, 0x7f0c011d
+    const v1, 0x7f0c011b
 
     new-array v2, v5, [Ljava/lang/Object;
 
@@ -282,7 +282,7 @@
 
     if-nez v1, :cond_0
 
-    const v1, 0x7f0c011c
+    const v1, 0x7f0c011a
 
     const/4 v2, 0x2
 
@@ -304,7 +304,7 @@
     return-object v0
 
     :cond_0
-    const v1, 0x7f0c011d
+    const v1, 0x7f0c011b
 
     new-array v2, v5, [Ljava/lang/Object;
 
@@ -330,7 +330,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0c011c
+    const v1, 0x7f0c011a
 
     const/4 v2, 0x2
 

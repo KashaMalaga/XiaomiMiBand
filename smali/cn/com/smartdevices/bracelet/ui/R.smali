@@ -224,7 +224,7 @@
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/ui/R;->a:Lcn/com/smartdevices/bracelet/ui/M;
 
-    const v4, 0x7f0c010b
+    const v4, 0x7f0c0109
 
     new-array v5, v7, [Ljava/lang/Object;
 
@@ -1013,7 +1013,7 @@
 
     move-result-object v0
 
-    const v5, 0x7f0c01a0
+    const v5, 0x7f0c019e
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setText(I)V
 

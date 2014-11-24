@@ -17,7 +17,7 @@
 
 .field private g:J
 
-.field private h:Lcom/amap/api/location/core/a;
+.field private h:Lcom/amap/api/location/core/AMapLocException;
 
 .field private i:Ljava/lang/String;
 
@@ -76,11 +76,11 @@
 
     iput-wide v0, p0, Lcom/a/K;->g:J
 
-    new-instance v0, Lcom/amap/api/location/core/a;
+    new-instance v0, Lcom/amap/api/location/core/AMapLocException;
 
-    invoke-direct {v0}, Lcom/amap/api/location/core/a;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/location/core/AMapLocException;-><init>()V
 
-    iput-object v0, p0, Lcom/a/K;->h:Lcom/amap/api/location/core/a;
+    iput-object v0, p0, Lcom/a/K;->h:Lcom/amap/api/location/core/AMapLocException;
 
     const-string v0, "new"
 
@@ -168,11 +168,11 @@
 
     iput-wide v0, p0, Lcom/a/K;->g:J
 
-    new-instance v0, Lcom/amap/api/location/core/a;
+    new-instance v0, Lcom/amap/api/location/core/AMapLocException;
 
-    invoke-direct {v0}, Lcom/amap/api/location/core/a;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/location/core/AMapLocException;-><init>()V
 
-    iput-object v0, p0, Lcom/a/K;->h:Lcom/amap/api/location/core/a;
+    iput-object v0, p0, Lcom/a/K;->h:Lcom/amap/api/location/core/AMapLocException;
 
     const-string v0, "new"
 
@@ -409,10 +409,10 @@
 
 
 # virtual methods
-.method public a()Lcom/amap/api/location/core/a;
+.method public a()Lcom/amap/api/location/core/AMapLocException;
     .locals 1
 
-    iget-object v0, p0, Lcom/a/K;->h:Lcom/amap/api/location/core/a;
+    iget-object v0, p0, Lcom/a/K;->h:Lcom/amap/api/location/core/AMapLocException;
 
     return-object v0
 .end method
@@ -441,10 +441,10 @@
     return-void
 .end method
 
-.method public a(Lcom/amap/api/location/core/a;)V
+.method public a(Lcom/amap/api/location/core/AMapLocException;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/a/K;->h:Lcom/amap/api/location/core/a;
+    iput-object p1, p0, Lcom/a/K;->h:Lcom/amap/api/location/core/AMapLocException;
 
     return-void
 .end method

@@ -220,7 +220,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f060005
+    const v2, 0x7f060006
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
 
@@ -334,7 +334,7 @@
     sput-object v0, Lcn/com/smartdevices/bracelet/lua/LuaManager;->__instance:Lcn/com/smartdevices/bracelet/lua/LuaManager;
 
     :cond_0
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->l(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/z;->l(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -550,11 +550,11 @@
 
     move-result-object v0
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/lua/i;
+    new-instance v1, Lcn/com/smartdevices/bracelet/lua/j;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/lua/i;-><init>(Lcn/com/smartdevices/bracelet/lua/LuaManager;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/lua/j;-><init>(Lcn/com/smartdevices/bracelet/lua/LuaManager;)V
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/d/d;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Lcom/c/a/a/h;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/d/f;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Lcom/c/a/a/h;)V
 
     return-void
 .end method
@@ -566,11 +566,11 @@
 
     move-result-object v0
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/lua/h;
+    new-instance v1, Lcn/com/smartdevices/bracelet/lua/i;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/lua/h;-><init>(Lcn/com/smartdevices/bracelet/lua/LuaManager;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/lua/i;-><init>(Lcn/com/smartdevices/bracelet/lua/LuaManager;)V
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/d/d;->b(Lcn/com/smartdevices/bracelet/model/LoginData;Lcom/c/a/a/h;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/d/f;->b(Lcn/com/smartdevices/bracelet/model/LoginData;Lcom/c/a/a/h;)V
 
     return-void
 .end method
@@ -767,7 +767,7 @@
 .end method
 
 .method private loadLocalLua()Z
-    .locals 6
+    .locals 7
 
     const/4 v0, 0x0
 
@@ -789,19 +789,25 @@
 
     move-result-object v3
 
-    const-string v4, "/localization.lua"
+    const-string v4, "/localization_indo.lua"
 
     invoke-direct {p0, v4}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->getSDCardLuaFile(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    const-string v5, "/luafile.lua"
+    const-string v5, "/localization.lua"
 
     invoke-direct {p0, v5}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->getSDCardLuaFile(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    if-eqz v4, :cond_1
+    const-string v6, "/luafile.lua"
+
+    invoke-direct {p0, v6}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->getSDCardLuaFile(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    if-eqz v5, :cond_1
 
     if-eqz v1, :cond_1
 
@@ -827,6 +833,10 @@
 
     invoke-virtual {v0, v5}, Lorg/keplerproject/luajava/LuaState;->LdoString(Ljava/lang/String;)I
 
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/LuaManager;->mLuaState:Lorg/keplerproject/luajava/LuaState;
+
+    invoke-virtual {v0, v6}, Lorg/keplerproject/luajava/LuaState;->LdoString(Ljava/lang/String;)I
+
     const/4 v0, 0x1
 
     :cond_0
@@ -851,7 +861,7 @@
     return v0
 
     :cond_1
-    const/4 v1, 0x5
+    const/4 v1, 0x6
 
     new-array v2, v1, [I
 
@@ -888,13 +898,16 @@
 
     goto :goto_0
 
+    nop
+
     :array_0
     .array-data 4
         0x7f060002
         0x7f060003
+        0x7f060005
         0x7f060004
         0x7f060001
-        0x7f060005
+        0x7f060006
     .end array-data
 .end method
 

@@ -341,7 +341,7 @@
 
     invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/model/game/GameManager$1;-><init>(Lcn/com/smartdevices/bracelet/model/game/GameManager;)V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/d/d;->a(Lcom/c/a/a/h;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/d/f;->a(Lcom/c/a/a/h;)V
 
     const-string v0, "GameManager"
 
@@ -375,7 +375,7 @@
 
     invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/model/game/GameManager$2;-><init>(Lcn/com/smartdevices/bracelet/model/game/GameManager;)V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/d/d;->b(Lcom/c/a/a/h;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/d/f;->b(Lcom/c/a/a/h;)V
 
     return-void
 .end method

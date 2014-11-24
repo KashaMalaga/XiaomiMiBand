@@ -75,7 +75,7 @@
 .method protected a()I
     .locals 1
 
-    const v0, 0x7f030042
+    const v0, 0x7f030044
 
     return v0
 .end method
@@ -93,7 +93,7 @@
 
     move-result-object v2
 
-    const v0, 0x7f07012c
+    const v0, 0x7f070138
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -103,7 +103,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/ab;->f:Landroid/widget/TextView;
 
-    const v0, 0x7f07012b
+    const v0, 0x7f070137
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

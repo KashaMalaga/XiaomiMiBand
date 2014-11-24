@@ -411,7 +411,7 @@
     :cond_2
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/e;->c:[B
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->b([B)I
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->b([B)I
 
     move-result v0
 

@@ -735,7 +735,7 @@
 
     const-string v2, "WeatherRequestCity"
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     sget-object v1, Lcn/com/smartdevices/bracelet/d/a;->a:Lcom/c/a/a/a;
 
@@ -1037,7 +1037,7 @@
 
     const-string v2, "WeatherRequestCityCode"
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -1075,7 +1075,7 @@
 
     const-string v2, "WeatherRequestWeather"
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     sget-object v1, Lcn/com/smartdevices/bracelet/d/a;->a:Lcom/c/a/a/a;
 

@@ -15,8 +15,6 @@
 
 .field public calories:I
 
-.field public dateString:Ljava/lang/String;
-
 .field public distance:I
 
 .field public flag:I
@@ -74,10 +72,6 @@
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/analysis/ActiveItem;->runCalories:I
 
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/analysis/ActiveItem;->dateString:Ljava/lang/String;
-
     return-void
 .end method
 
@@ -97,14 +91,6 @@
     iget v0, p0, Lcn/com/smartdevices/bracelet/analysis/ActiveItem;->calories:I
 
     return v0
-.end method
-
-.method public getDateString()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/analysis/ActiveItem;->dateString:Ljava/lang/String;
-
-    return-object v0
 .end method
 
 .method public getDistance()I
@@ -217,18 +203,42 @@
     return-void
 .end method
 
-.method public setDateString(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/analysis/ActiveItem;->dateString:Ljava/lang/String;
-
-    return-void
-.end method
-
 .method public setDistance(I)V
     .locals 0
 
     iput p1, p0, Lcn/com/smartdevices/bracelet/analysis/ActiveItem;->distance:I
+
+    return-void
+.end method
+
+.method public setInfos(IIIIIIIIIIIII)V
+    .locals 0
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/analysis/ActiveItem;->start:I
+
+    iput p2, p0, Lcn/com/smartdevices/bracelet/analysis/ActiveItem;->stop:I
+
+    iput p3, p0, Lcn/com/smartdevices/bracelet/analysis/ActiveItem;->mode:I
+
+    iput p4, p0, Lcn/com/smartdevices/bracelet/analysis/ActiveItem;->distance:I
+
+    iput p5, p0, Lcn/com/smartdevices/bracelet/analysis/ActiveItem;->calories:I
+
+    iput p6, p0, Lcn/com/smartdevices/bracelet/analysis/ActiveItem;->runtime:I
+
+    iput p7, p0, Lcn/com/smartdevices/bracelet/analysis/ActiveItem;->steps:I
+
+    iput p8, p0, Lcn/com/smartdevices/bracelet/analysis/ActiveItem;->flag:I
+
+    iput p9, p0, Lcn/com/smartdevices/bracelet/analysis/ActiveItem;->activeTime:I
+
+    iput p10, p0, Lcn/com/smartdevices/bracelet/analysis/ActiveItem;->walkDistance:I
+
+    iput p11, p0, Lcn/com/smartdevices/bracelet/analysis/ActiveItem;->walkCalories:I
+
+    iput p12, p0, Lcn/com/smartdevices/bracelet/analysis/ActiveItem;->runDistance:I
+
+    iput p13, p0, Lcn/com/smartdevices/bracelet/analysis/ActiveItem;->runCalories:I
 
     return-void
 .end method

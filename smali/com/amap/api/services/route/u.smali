@@ -11,7 +11,7 @@
         "Ljava/lang/Object;",
         "Landroid/os/Parcelable$Creator",
         "<",
-        "Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;",
+        "Lcom/amap/api/services/route/WalkRouteResult;",
         ">;"
     }
 .end annotation
@@ -28,20 +28,20 @@
 
 
 # virtual methods
-.method public a(Landroid/os/Parcel;)Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;
+.method public a(Landroid/os/Parcel;)Lcom/amap/api/services/route/WalkRouteResult;
     .locals 1
 
-    new-instance v0, Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;
+    new-instance v0, Lcom/amap/api/services/route/WalkRouteResult;
 
-    invoke-direct {v0, p1}, Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;-><init>(Landroid/os/Parcel;)V
+    invoke-direct {v0, p1}, Lcom/amap/api/services/route/WalkRouteResult;-><init>(Landroid/os/Parcel;)V
 
     return-object v0
 .end method
 
-.method public a(I)[Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;
+.method public a(I)[Lcom/amap/api/services/route/WalkRouteResult;
     .locals 1
 
-    new-array v0, p1, [Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;
+    new-array v0, p1, [Lcom/amap/api/services/route/WalkRouteResult;
 
     return-object v0
 .end method
@@ -49,7 +49,7 @@
 .method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 1
 
-    invoke-virtual {p0, p1}, Lcom/amap/api/services/route/u;->a(Landroid/os/Parcel;)Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;
+    invoke-virtual {p0, p1}, Lcom/amap/api/services/route/u;->a(Landroid/os/Parcel;)Lcom/amap/api/services/route/WalkRouteResult;
 
     move-result-object v0
 
@@ -59,7 +59,7 @@
 .method public synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
 
-    invoke-virtual {p0, p1}, Lcom/amap/api/services/route/u;->a(I)[Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;
+    invoke-virtual {p0, p1}, Lcom/amap/api/services/route/u;->a(I)[Lcom/amap/api/services/route/WalkRouteResult;
 
     move-result-object v0
 

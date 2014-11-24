@@ -144,7 +144,7 @@
 
     check-cast v0, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    const v1, 0x7f0c0104
+    const v1, 0x7f0c0102
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->a(I)V
 
@@ -158,7 +158,7 @@
 
     const-string v3, "ModeSleep"
 
-    invoke-static {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -169,7 +169,7 @@
 
     check-cast v0, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    const v1, 0x7f0c0105
+    const v1, 0x7f0c0103
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->a(I)V
 
@@ -183,7 +183,7 @@
 
     const-string v3, "ModeStep"
 
-    invoke-static {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/W;->l:Lcn/com/smartdevices/bracelet/ui/ab;
 
@@ -327,7 +327,7 @@
 
     if-lt v0, v10, :cond_2
 
-    const v0, 0x7f0c0114
+    const v0, 0x7f0c0112
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/W;->getString(I)Ljava/lang/String;
 
@@ -387,7 +387,7 @@
 
     if-ge v2, v3, :cond_5
 
-    const v0, 0x7f0c0115
+    const v0, 0x7f0c0113
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/W;->getString(I)Ljava/lang/String;
 
@@ -410,7 +410,7 @@
 
     if-nez v0, :cond_3
 
-    const v0, 0x7f0c0113
+    const v0, 0x7f0c0111
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/W;->getString(I)Ljava/lang/String;
 
@@ -419,7 +419,7 @@
     goto :goto_1
 
     :cond_3
-    const v0, 0x7f0c0107
+    const v0, 0x7f0c0105
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/W;->getString(I)Ljava/lang/String;
 
@@ -463,7 +463,7 @@
 
     if-ltz v2, :cond_6
 
-    const v2, 0x7f0c0116
+    const v2, 0x7f0c0114
 
     new-array v3, v9, [Ljava/lang/Object;
 
@@ -484,7 +484,7 @@
     goto :goto_3
 
     :cond_6
-    const v2, 0x7f0c0117
+    const v2, 0x7f0c0115
 
     new-array v3, v9, [Ljava/lang/Object;
 
@@ -501,7 +501,7 @@
     goto :goto_3
 
     :cond_7
-    const v0, 0x7f0c0106
+    const v0, 0x7f0c0104
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/W;->getString(I)Ljava/lang/String;
 
@@ -786,6 +786,10 @@
 
     if-eq v4, v6, :cond_5
 
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->h()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    move-result-object v6
+
     if-lez v4, :cond_a
 
     iget v6, p0, Lcn/com/smartdevices/bracelet/ui/W;->i:I
@@ -950,13 +954,9 @@
     goto/16 :goto_5
 
     :cond_a
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->h()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    if-eqz v6, :cond_b
 
-    move-result-object v4
-
-    if-eqz v4, :cond_b
-
-    iget v2, v4, Lcn/com/smartdevices/bracelet/model/PersonInfo;->height:I
+    iget v2, v6, Lcn/com/smartdevices/bracelet/model/PersonInfo;->height:I
 
     if-gtz v2, :cond_c
 
@@ -964,15 +964,15 @@
     const-wide v2, 0x3fe6d916872b020cL
 
     :goto_a
-    iget v6, p0, Lcn/com/smartdevices/bracelet/ui/W;->i:I
+    iget v4, p0, Lcn/com/smartdevices/bracelet/ui/W;->i:I
 
-    int-to-double v6, v6
+    int-to-double v7, v4
 
-    mul-double/2addr v2, v6
+    mul-double/2addr v2, v7
 
     double-to-int v3, v2
 
-    iget v2, v4, Lcn/com/smartdevices/bracelet/model/PersonInfo;->weight:I
+    iget v2, v6, Lcn/com/smartdevices/bracelet/model/PersonInfo;->weight:I
 
     int-to-double v6, v2
 
@@ -999,17 +999,17 @@
     goto/16 :goto_6
 
     :cond_c
-    iget v2, v4, Lcn/com/smartdevices/bracelet/model/PersonInfo;->height:I
+    iget v2, v6, Lcn/com/smartdevices/bracelet/model/PersonInfo;->height:I
 
     int-to-double v2, v2
 
-    const-wide v6, 0x3fdae147ae147ae1L
+    const-wide v7, 0x3fdae147ae147ae1L
 
-    mul-double/2addr v2, v6
+    mul-double/2addr v2, v7
 
-    const-wide/high16 v6, 0x4059000000000000L
+    const-wide/high16 v7, 0x4059000000000000L
 
-    div-double/2addr v2, v6
+    div-double/2addr v2, v7
 
     goto :goto_a
 
@@ -1180,6 +1180,14 @@
     return-void
 .end method
 
+.method static synthetic f(Lcn/com/smartdevices/bracelet/ui/W;)Lcn/com/smartdevices/bracelet/o;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/W;->h:Lcn/com/smartdevices/bracelet/o;
+
+    return-object v0
+.end method
+
 .method private f()V
     .locals 0
 
@@ -1334,7 +1342,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/y;->a(FLandroid/content/Context;)F
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/z;->a(FLandroid/content/Context;)F
 
     move-result v1
 
@@ -1354,7 +1362,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->c()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->c()Z
 
     move-result v0
 
@@ -1530,7 +1538,7 @@
 
     const/4 v3, 0x1
 
-    const v0, 0x7f030032
+    const v0, 0x7f030034
 
     const/4 v1, 0x0
 
@@ -1538,7 +1546,7 @@
 
     move-result-object v1
 
-    const v0, 0x7f07003a
+    const v0, 0x7f070035
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1548,7 +1556,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/W;->j:Landroid/support/v4/view/ViewPager;
 
-    const v0, 0x7f07003b
+    const v0, 0x7f070036
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1844,11 +1852,11 @@
 
     const-string v1, "ViewDynamic"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/y;->c(Landroid/content/Context;Ljava/lang/String;)V
 
     const-string v0, "PageDynamic"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->b(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1893,7 +1901,7 @@
     :cond_0
     const-string v0, "PageDynamic"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->a(Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/W;->getActivity()Landroid/app/Activity;
 
@@ -1901,7 +1909,7 @@
 
     const-string v1, "ViewDynamic"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/y;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     return-void
 .end method

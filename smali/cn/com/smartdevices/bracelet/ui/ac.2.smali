@@ -322,7 +322,7 @@
 
     invoke-super {p0}, Landroid/app/Fragment;->onResume()V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->c()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->c()Z
 
     move-result v0
 

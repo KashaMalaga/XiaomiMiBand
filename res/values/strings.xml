@@ -7,15 +7,10 @@
   <string name="action_pop_about">About</string>
   <string name="action_pop_lab">Activities</string>
   <string name="action_pop_my_bracelet">Settings</string>
-  <string name="notifications">Notifications</string>
-  <string name="insert_number_vibrations">Insert number of notifications:</string>
-  <string name="set_notifications_app">Configure notifications</string>
   <string name="action_pop_person_info">Profile</string>
   <string name="action_pop_smart_alarms">Alarm</string>
   <string name="action_pop_unlock_screen">Screen Unlock</string>
   <string name="action_pop_weixin_enter">Add WeChat</string>
-  <string name="age">Age</string>
-  <string name="ages">years</string>
   <string name="agree">Agree</string>
   <string name="alarm">Alarm</string>
   <string name="alarm_cycle">Repeat</string>
@@ -62,6 +57,7 @@ then tap Follow."</string>
   <string name="bind_weixin_tips_1">Tap Generate to create and save a QR code in Gallery.</string>
   <string name="bind_weixin_tips_2">Tap Open WeChat, then go to Scan QR code and tap Album to select the QR code you saved.</string>
   <string name="bind_weixin_title">Add WeChat Account</string>
+  <string name="birthday">Birthday</string>
   <string name="blue">Blue</string>
   <string name="bluetooth">Bluetooth </string>
   <string name="body">Neck</string>
@@ -77,12 +73,15 @@ Address: %2$s"</string>
   <string name="bracelet_not_connected_bat_unknown">No band detected</string>
   <string name="bracelet_not_found_info">"Try searching again when you see one of the band light's start blinking red."</string>
   <string name="bracelet_not_found_title">"Make sure your band's battery is charged."</string>
+  <string name="bracelet_store_desc">Band store</string>
   <string name="bt_operation_failed_tips">Bluetooth is not working properly. Wait a minute or two and try again.</string>
+  <string name="buy_bracelet_desc">Buy a band.</string>
   <string name="cal">cal</string>
   <string name="cancel">Cancel</string>
   <string name="check_upgrade">Check for updates</string>
   <string name="checking_new_apk">Checking for updates…</string>
   <string name="clock_closed">Off</string>
+  <string name="closed">Closed</string>
   <string name="cm">cm</string>
   <string name="come_from_xiaomi_bracelet">Mi Band</string>
   <string name="confirm">OK</string>
@@ -353,7 +352,7 @@ Fell asleep at %3$s | Woke up at %4$s"</string>
   <string name="modify_weight">Weight</string>
   <string name="mon_fri">Weekdays</string>
   <string name="mon_sat">Mon to Sat</string>
-  <string name="month">Month</string>
+  <string name="month"></string>
   <string name="move_and_capture">Move and capture</string>
   <string name="multi_devices_info">"Make sure you're at least 10 meters away from other bands and try again."</string>
   <string name="multi_devices_title">Too many bands nearby</string>
@@ -396,7 +395,7 @@ or about 8,000 steps a day for a healthy lifestyle."</string>
   <string name="person_info_goal_info_young">"Experts recommend 60 minutes of exercise
 or about 12,000 steps a day for a healthy lifestyle."</string>
   <string name="personal_info">Profile</string>
-  <string name="please_input_age">Age</string>
+  <string name="please_input_birthday">Birthday</string>
   <string name="please_input_gender">Select a gender</string>
   <string name="please_knock_bracelet">To pair, tap the band.</string>
   <string name="please_set_sport_goal">Set a goal</string>
@@ -505,28 +504,41 @@ Burned %3$s cal. Previous record was %5$s steps, set on %4$s."</string>
   <string name="smart_alarm_notify">Alarm</string>
   <string name="smart_wake_up">Early bird alarm</string>
   <string name="smart_wake_up_info">Wake me up 30 minutes before set alarm time</string>
+  <string name="sport_coming_soon">正加急赶工中，敬请期待！</string>
   <string name="sport_new_record_ropeskipping">New record</string>
   <string name="sport_ranking_desc_great">WOW, you are unbeatable now!</string>
   <string name="sport_ranking_desc_normal" formatted="false">You beated &lt;b&gt;%s%&lt;/b&gt; of %s users.</string>
   <string name="sport_ranking_desc_poor">Every %s user can beat you, come on!</string>
-  <string name="sport_running_distance_detail">%s Kilometers</string>
+  <string name="sport_running_altitude">Altitude</string>
+  <string name="sport_running_average_speed">Average</string>
+  <string name="sport_running_burn">Burn</string>
+  <string name="sport_running_cost_cal">%.1f Kcal</string>
+  <string name="sport_running_distance">Distance</string>
+  <string name="sport_running_distance_detail">%skm</string>
+  <string name="sport_running_end_time">End</string>
   <string name="sport_running_gps_cancel">Cancel</string>
   <string name="sport_running_gps_turnon">Turn on</string>
-  <string name="sport_running_helper">Running helper</string>
-  <string name="sport_running_helper_test">Running helper test</string>
+  <string name="sport_running_helper">Running partner</string>
+  <string name="sport_running_helper_test">跑步助手测试</string>
   <string name="sport_running_history">History</string>
-  <string name="sport_running_no_gps">GPS should be turned on to record your trace. Turn on?</string>
+  <string name="sport_running_history_date" formatted="false">%d/%d/%d</string>
+  <string name="sport_running_history_no_data">No data</string>
+  <string name="sport_running_history_title">History</string>
+  <string name="sport_running_no_gps">Use GPS to keep track of your route.</string>
   <string name="sport_running_pace">Pace</string>
-  <string name="sport_running_pace_detail">%s/KM</string>
+  <string name="sport_running_pace_detail">%s/km</string>
+  <string name="sport_running_prepare_map">Preparing map for share...</string>
   <string name="sport_running_set_dist">Distance reminder</string>
   <string name="sport_running_set_goal">Goal reminder</string>
-  <string name="sport_running_set_speed">Speed reminder</string>
+  <string name="sport_running_set_speed">Set speed</string>
   <string name="sport_running_settings">Settings</string>
   <string name="sport_running_slider_prompt">&gt;&gt;&gt;Slide right to unlock</string>
   <string name="sport_running_speed">Speed</string>
-  <string name="sport_running_speed_detail">%dKM/H</string>
+  <string name="sport_running_speed_detail">%.0fkm/h</string>
   <string name="sport_running_start">Start</string>
-  <string name="sport_running_time_desc">Time cost</string>
+  <string name="sport_running_start_time">Start</string>
+  <string name="sport_running_step">Steps</string>
+  <string name="sport_running_time_desc">Time</string>
   <string name="sport_share">Share now</string>
   <string name="start">Start</string>
   <string name="start_download">Downloading…</string>
@@ -627,8 +639,8 @@ Settings &gt; Security."</string>
   <string name="user_agreement">Terms of Service and Privacy Policy</string>
   <string name="user_agreement_prefix">"To use this product, you must agree to our 
 "</string>
-  <string name="vibrate_notify">Vibration Status</string>
-  <string name="vibrate_notify_tips">Show bracelet vibration info in status bar</string>
+  <string name="vibrate_notify">Vibrate for notifications</string>
+  <string name="vibrate_notify_tips">Vibrate band when a you receive a notification</string>
   <string name="visit_micom">Visit website</string>
   <string name="wait">Working…</string>
   <string name="walked">Walked </string>
@@ -648,7 +660,7 @@ Settings &gt; Security."</string>
   <string name="welcom_back">Welcome back!</string>
   <string name="welcome">Hello</string>
   <string name="wrong_system_time">"Your device's system time is incorrect."</string>
-  <string name="year">Year</string>
+  <string name="year"></string>
   <string name="your_gender">Gender</string>
   <string name="your_height">Height</string>
   <string name="your_weight">Weight</string>

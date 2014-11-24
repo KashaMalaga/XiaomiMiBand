@@ -46,7 +46,7 @@
     :try_start_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/e;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->b()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->c()Ljava/lang/String;
 
     move-result-object v1
 
@@ -213,7 +213,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/d/e;->a(Lcn/com/smartdevices/bracelet/model/LoginInfo;Ljava/lang/String;)Lcn/com/smartdevices/bracelet/model/LoginInfo;
+    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/d/g;->a(Lcn/com/smartdevices/bracelet/model/LoginInfo;Ljava/lang/String;)Lcn/com/smartdevices/bracelet/model/LoginInfo;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/e;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
@@ -287,7 +287,7 @@
 
     invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/activity/f;-><init>(Lcn/com/smartdevices/bracelet/activity/e;)V
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/d/d;->a(Lcn/com/smartdevices/bracelet/model/LoginInfo;Ljava/lang/String;Lcom/c/a/a/h;)V
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/d/f;->a(Lcn/com/smartdevices/bracelet/model/LoginInfo;Ljava/lang/String;Lcom/c/a/a/h;)V
 
     goto/16 :goto_0
 .end method

@@ -34,9 +34,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/model/i;
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/model/f;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/gps/model/i;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/gps/model/f;-><init>()V
 
     sput-object v0, Lcn/com/smartdevices/bracelet/gps/model/RunningReminderInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 

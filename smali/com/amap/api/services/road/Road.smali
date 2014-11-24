@@ -127,22 +127,6 @@
 
 
 # virtual methods
-.method public a(Lcom/amap/api/services/core/LatLonPoint;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/road/Road;->f:Lcom/amap/api/services/core/LatLonPoint;
-
-    return-void
-.end method
-
-.method public b(F)V
-    .locals 0
-
-    iput p1, p0, Lcom/amap/api/services/road/Road;->d:F
-
-    return-void
-.end method
-
 .method public describeContents()I
     .locals 1
 
@@ -151,63 +135,7 @@
     return v0
 .end method
 
-.method public f(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/road/Road;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public g()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/road/Road;->c:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public g(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/road/Road;->b:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public h()F
-    .locals 1
-
-    iget v0, p0, Lcom/amap/api/services/road/Road;->d:F
-
-    return v0
-.end method
-
-.method public h(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/road/Road;->c:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public i()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/services/road/Road;->e:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public i(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/road/Road;->e:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public j()Lcom/amap/api/services/core/LatLonPoint;
+.method public getCenterPoint()Lcom/amap/api/services/core/LatLonPoint;
     .locals 1
 
     iget-object v0, p0, Lcom/amap/api/services/road/Road;->f:Lcom/amap/api/services/core/LatLonPoint;
@@ -215,7 +143,15 @@
     return-object v0
 .end method
 
-.method public k()Ljava/lang/String;
+.method public getCityCode()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/road/Road;->c:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getId()Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcom/amap/api/services/road/Road;->a:Ljava/lang/String;
@@ -223,12 +159,76 @@
     return-object v0
 .end method
 
-.method public l()Ljava/lang/String;
+.method public getName()Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcom/amap/api/services/road/Road;->b:Ljava/lang/String;
 
     return-object v0
+.end method
+
+.method public getRoadWidth()F
+    .locals 1
+
+    iget v0, p0, Lcom/amap/api/services/road/Road;->d:F
+
+    return v0
+.end method
+
+.method public getType()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/services/road/Road;->e:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public setCenterPoint(Lcom/amap/api/services/core/LatLonPoint;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/road/Road;->f:Lcom/amap/api/services/core/LatLonPoint;
+
+    return-void
+.end method
+
+.method public setCityCode(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/road/Road;->c:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setId(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/road/Road;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setName(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/road/Road;->b:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setRoadWidth(F)V
+    .locals 0
+
+    iput p1, p0, Lcom/amap/api/services/road/Road;->d:F
+
+    return-void
+.end method
+
+.method public setType(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/road/Road;->e:Ljava/lang/String;
+
+    return-void
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V

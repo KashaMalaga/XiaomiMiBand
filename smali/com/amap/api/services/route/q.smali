@@ -1,135 +1,67 @@
-.class Lcom/amap/api/services/route/q;
-.super Landroid/os/Handler;
+.class final Lcom/amap/api/services/route/q;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/os/Parcelable$Creator;
 
 
-# instance fields
-.field final synthetic a:Lcom/amap/api/services/route/RouteSearch;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator",
+        "<",
+        "Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method constructor <init>(Lcom/amap/api/services/route/RouteSearch;)V
+.method constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lcom/amap/api/services/route/q;->a:Lcom/amap/api/services/route/RouteSearch;
-
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public handleMessage(Landroid/os/Message;)V
-    .locals 3
+.method public a(Landroid/os/Parcel;)Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;
+    .locals 1
 
-    iget-object v0, p0, Lcom/amap/api/services/route/q;->a:Lcom/amap/api/services/route/RouteSearch;
+    new-instance v0, Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;
 
-    invoke-static {v0}, Lcom/amap/api/services/route/RouteSearch;->a(Lcom/amap/api/services/route/RouteSearch;)Lcom/amap/api/services/route/d;
+    invoke-direct {v0, p1}, Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;-><init>(Landroid/os/Parcel;)V
 
-    move-result-object v0
+    return-object v0
+.end method
 
-    if-nez v0, :cond_1
+.method public a(I)[Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;
+    .locals 1
 
-    :cond_0
-    :goto_0
-    return-void
+    new-array v0, p1, [Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;
 
-    :cond_1
-    iget v0, p1, Landroid/os/Message;->what:I
+    return-object v0
+.end method
 
-    const/16 v1, 0xa
+.method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .locals 1
 
-    if-ne v0, v1, :cond_2
-
-    invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    const-string v1, "errorCode"
-
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v1
-
-    iget-object v0, p0, Lcom/amap/api/services/route/q;->a:Lcom/amap/api/services/route/RouteSearch;
-
-    invoke-static {v0}, Lcom/amap/api/services/route/RouteSearch;->a(Lcom/amap/api/services/route/RouteSearch;)Lcom/amap/api/services/route/d;
-
-    move-result-object v2
-
-    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast v0, Lcom/amap/api/services/route/BusRouteResult;
-
-    invoke-interface {v2, v0, v1}, Lcom/amap/api/services/route/d;->a(Lcom/amap/api/services/route/BusRouteResult;I)V
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p1, Landroid/os/Message;->what:I
-
-    const/16 v1, 0xb
-
-    if-ne v0, v1, :cond_3
-
-    invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
+    invoke-virtual {p0, p1}, Lcom/amap/api/services/route/q;->a(Landroid/os/Parcel;)Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    return-object v0
+.end method
 
-    const-string v1, "errorCode"
+.method public synthetic newArray(I)[Ljava/lang/Object;
+    .locals 1
 
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v1
-
-    iget-object v0, p0, Lcom/amap/api/services/route/q;->a:Lcom/amap/api/services/route/RouteSearch;
-
-    invoke-static {v0}, Lcom/amap/api/services/route/RouteSearch;->a(Lcom/amap/api/services/route/RouteSearch;)Lcom/amap/api/services/route/d;
-
-    move-result-object v2
-
-    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast v0, Lcom/amap/api/services/route/DriveRouteResult;
-
-    invoke-interface {v2, v0, v1}, Lcom/amap/api/services/route/d;->a(Lcom/amap/api/services/route/DriveRouteResult;I)V
-
-    goto :goto_0
-
-    :cond_3
-    iget v0, p1, Landroid/os/Message;->what:I
-
-    const/16 v1, 0xc
-
-    if-ne v0, v1, :cond_0
-
-    invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
+    invoke-virtual {p0, p1}, Lcom/amap/api/services/route/q;->a(I)[Lcom/amap/api/services/route/RouteSearch$WalkRouteQuery;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
-
-    const-string v1, "errorCode"
-
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v1
-
-    iget-object v0, p0, Lcom/amap/api/services/route/q;->a:Lcom/amap/api/services/route/RouteSearch;
-
-    invoke-static {v0}, Lcom/amap/api/services/route/RouteSearch;->a(Lcom/amap/api/services/route/RouteSearch;)Lcom/amap/api/services/route/d;
-
-    move-result-object v2
-
-    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast v0, Lcom/amap/api/services/route/WalkRouteResult;
-
-    invoke-interface {v2, v0, v1}, Lcom/amap/api/services/route/d;->a(Lcom/amap/api/services/route/WalkRouteResult;I)V
-
-    goto :goto_0
+    return-object v0
 .end method

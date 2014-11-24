@@ -92,7 +92,7 @@
     nop
 
     :pswitch_data_0
-    .packed-switch 0x7f0700d7
+    .packed-switch 0x7f0700e3
         :pswitch_1
         :pswitch_2
         :pswitch_0
@@ -104,11 +104,11 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030027
+    const v0, 0x7f030029
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/BraceletNotFoundActivity;->setContentView(I)V
 
-    const v0, 0x7f0700d9
+    const v0, 0x7f0700e5
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/BraceletNotFoundActivity;->findViewById(I)Landroid/view/View;
 
@@ -118,7 +118,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700d8
+    const v0, 0x7f0700e4
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/BraceletNotFoundActivity;->findViewById(I)Landroid/view/View;
 
@@ -126,7 +126,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700d7
+    const v0, 0x7f0700e3
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/BraceletNotFoundActivity;->findViewById(I)Landroid/view/View;
 
@@ -140,7 +140,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const v2, 0x7f0c013e
+    const v2, 0x7f0c013c
 
     invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/activity/BraceletNotFoundActivity;->getString(I)Ljava/lang/String;
 
@@ -178,9 +178,9 @@
 
     const-string v0, "PageBraceletNotFound"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->b(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->b(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -192,9 +192,9 @@
 
     const-string v0, "PageBraceletNotFound"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->a(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;)V
 
     return-void
 .end method

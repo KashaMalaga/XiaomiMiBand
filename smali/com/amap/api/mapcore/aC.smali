@@ -1,90 +1,43 @@
-.class Lcom/amap/api/mapcore/aC;
+.class public interface abstract Lcom/amap/api/mapcore/ac;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/io/Serializable;
-.implements Ljava/util/Comparator;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/io/Serializable;",
-        "Ljava/util/Comparator",
-        "<",
-        "Ljava/lang/Object;",
-        ">;"
-    }
-.end annotation
-
-
-# direct methods
-.method constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 2
+.method public abstract a(F)V
+.end method
 
-    check-cast p1, Lcom/amap/api/mapcore/g;
+.method public abstract a(Ljavax/microedition/khronos/opengles/GL10;)V
+.end method
 
-    check-cast p2, Lcom/amap/api/mapcore/g;
+.method public abstract a(Z)V
+.end method
 
-    if-eqz p1, :cond_1
+.method public abstract a()Z
+.end method
 
-    if-eqz p2, :cond_1
+.method public abstract a(Lcom/amap/api/mapcore/ac;)Z
+.end method
 
-    :try_start_0
-    invoke-interface {p1}, Lcom/amap/api/mapcore/g;->g()F
+.method public abstract b()V
+.end method
 
-    move-result v0
+.method public abstract c()Ljava/lang/String;
+.end method
 
-    invoke-interface {p2}, Lcom/amap/api/mapcore/g;->g()F
+.method public abstract d()F
+.end method
 
-    move-result v1
+.method public abstract e()Z
+.end method
 
-    cmpl-float v0, v0, v1
+.method public abstract f()I
+.end method
 
-    if-lez v0, :cond_0
+.method public abstract g()V
+.end method
 
-    const/4 v0, 0x1
+.method public abstract j()V
+.end method
 
-    :goto_0
-    return v0
-
-    :cond_0
-    invoke-interface {p1}, Lcom/amap/api/mapcore/g;->g()F
-
-    move-result v0
-
-    invoke-interface {p2}, Lcom/amap/api/mapcore/g;->g()F
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result v1
-
-    cmpg-float v0, v0, v1
-
-    if-gez v0, :cond_1
-
-    const/4 v0, -0x1
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
+.method public abstract k()Z
 .end method

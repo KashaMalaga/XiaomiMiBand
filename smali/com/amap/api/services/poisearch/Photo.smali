@@ -28,9 +28,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/services/poisearch/o;
+    new-instance v0, Lcom/amap/api/services/poisearch/f;
 
-    invoke-direct {v0}, Lcom/amap/api/services/poisearch/o;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/services/poisearch/f;-><init>()V
 
     sput-object v0, Lcom/amap/api/services/poisearch/Photo;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -79,7 +79,15 @@
 
 
 # virtual methods
-.method public a()Ljava/lang/String;
+.method public describeContents()I
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public getTitle()Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcom/amap/api/services/poisearch/Photo;->a:Ljava/lang/String;
@@ -87,15 +95,7 @@
     return-object v0
 .end method
 
-.method public a(Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/amap/api/services/poisearch/Photo;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public b()Ljava/lang/String;
+.method public getUrl()Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcom/amap/api/services/poisearch/Photo;->b:Ljava/lang/String;
@@ -103,20 +103,20 @@
     return-object v0
 .end method
 
-.method public b(Ljava/lang/String;)V
+.method public setTitle(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/services/poisearch/Photo;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setUrl(Ljava/lang/String;)V
     .locals 0
 
     iput-object p1, p0, Lcom/amap/api/services/poisearch/Photo;->b:Ljava/lang/String;
 
     return-void
-.end method
-
-.method public describeContents()I
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V

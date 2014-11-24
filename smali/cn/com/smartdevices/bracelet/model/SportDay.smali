@@ -894,6 +894,30 @@
     return-object v1
 .end method
 
+.method public getTimestamp()J
+    .locals 4
+
+    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/Calendar;->clear()V
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/model/SportDay;->year:I
+
+    iget v2, p0, Lcn/com/smartdevices/bracelet/model/SportDay;->mon:I
+
+    iget v3, p0, Lcn/com/smartdevices/bracelet/model/SportDay;->day:I
+
+    invoke-virtual {v0, v1, v2, v3}, Ljava/util/Calendar;->set(III)V
+
+    invoke-virtual {v0}, Ljava/util/Calendar;->getTimeInMillis()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
 .method public getWeek()I
     .locals 2
 

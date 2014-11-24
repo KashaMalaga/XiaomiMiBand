@@ -166,7 +166,7 @@
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f03001f
+    const v0, 0x7f030021
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/sensorhub/SensorhubDemoActivity;->setContentView(I)V
 
@@ -176,7 +176,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/sensorhub/SensorhubDemoActivity;->b:Lcn/com/smartdevices/bracelet/sensorhub/f;
 
-    const v0, 0x7f0700b0
+    const v0, 0x7f0700bd
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/sensorhub/SensorhubDemoActivity;->findViewById(I)Landroid/view/View;
 

@@ -331,83 +331,87 @@
 
 .field public static final ruler_item_bg:I = 0x7f0200a3
 
-.field public static final running_lock_bg:I = 0x7f0200a4
+.field public static final running_detail_end:I = 0x7f0200a4
 
-.field public static final running_screen_lock:I = 0x7f0200a5
+.field public static final running_detail_star:I = 0x7f0200a5
 
-.field public static final running_screen_unlock:I = 0x7f0200a6
+.field public static final running_lock_bg:I = 0x7f0200a6
 
-.field public static final running_screen_unlock_holder:I = 0x7f0200a7
+.field public static final running_screen_lock:I = 0x7f0200a7
 
-.field public static final searching_mili_icon:I = 0x7f0200a8
+.field public static final running_screen_unlock:I = 0x7f0200a8
 
-.field public static final share_facebook:I = 0x7f0200a9
+.field public static final running_screen_unlock_holder:I = 0x7f0200a9
 
-.field public static final share_facebook_uninstall:I = 0x7f0200aa
+.field public static final searching_mili_icon:I = 0x7f0200aa
 
-.field public static final share_line:I = 0x7f0200ab
+.field public static final share_facebook:I = 0x7f0200ab
 
-.field public static final share_line_uninstall:I = 0x7f0200ac
+.field public static final share_facebook_uninstall:I = 0x7f0200ac
 
-.field public static final share_miliao:I = 0x7f0200ad
+.field public static final share_line:I = 0x7f0200ad
 
-.field public static final share_miliao_uninstall:I = 0x7f0200ae
+.field public static final share_line_uninstall:I = 0x7f0200ae
 
-.field public static final share_pengyouquan_select:I = 0x7f0200af
+.field public static final share_miliao:I = 0x7f0200af
 
-.field public static final share_pengyouquan_uninstall:I = 0x7f0200b0
+.field public static final share_miliao_uninstall:I = 0x7f0200b0
 
-.field public static final share_qq_select:I = 0x7f0200b1
+.field public static final share_pengyouquan_select:I = 0x7f0200b1
 
-.field public static final share_qq_uninstall:I = 0x7f0200b2
+.field public static final share_pengyouquan_uninstall:I = 0x7f0200b2
 
-.field public static final share_qq_zone_select:I = 0x7f0200b3
+.field public static final share_qq_select:I = 0x7f0200b3
 
-.field public static final share_qq_zone_uninstall:I = 0x7f0200b4
+.field public static final share_qq_uninstall:I = 0x7f0200b4
 
-.field public static final share_split:I = 0x7f0200b5
+.field public static final share_qq_zone_select:I = 0x7f0200b5
 
-.field public static final share_weibo_select:I = 0x7f0200b6
+.field public static final share_qq_zone_uninstall:I = 0x7f0200b6
 
-.field public static final share_weibo_uninstall:I = 0x7f0200b7
+.field public static final share_split:I = 0x7f0200b7
 
-.field public static final share_weixin_select:I = 0x7f0200b8
+.field public static final share_weibo_select:I = 0x7f0200b8
 
-.field public static final share_weixin_uninstall:I = 0x7f0200b9
+.field public static final share_weibo_uninstall:I = 0x7f0200b9
 
-.field public static final sleep_icon:I = 0x7f0200ba
+.field public static final share_weixin_select:I = 0x7f0200ba
 
-.field public static final switch_off:I = 0x7f0200bb
+.field public static final share_weixin_uninstall:I = 0x7f0200bb
 
-.field public static final switch_on:I = 0x7f0200bc
+.field public static final sleep_icon:I = 0x7f0200bc
 
-.field public static final switch_selector:I = 0x7f0200bd
+.field public static final switch_off:I = 0x7f0200bd
 
-.field public static final switch_thumb:I = 0x7f0200be
+.field public static final switch_on:I = 0x7f0200be
 
-.field public static final switch_thumb_disable:I = 0x7f0200bf
+.field public static final switch_selector:I = 0x7f0200bf
 
-.field public static final switch_thumb_enable:I = 0x7f0200c0
+.field public static final switch_thumb:I = 0x7f0200c0
 
-.field public static final switch_track_enable:I = 0x7f0200c1
+.field public static final switch_thumb_disable:I = 0x7f0200c1
 
-.field public static final switch_track_trans:I = 0x7f0200c2
+.field public static final switch_thumb_enable:I = 0x7f0200c2
 
-.field public static final texture:I = 0x7f0200c3
+.field public static final switch_track_enable:I = 0x7f0200c3
 
-.field public static final tile:I = 0x7f0200c4
+.field public static final switch_track_trans:I = 0x7f0200c4
 
-.field public static final unlock_screen_bg:I = 0x7f0200c5
+.field public static final texture:I = 0x7f0200c5
 
-.field public static final user_id_icon:I = 0x7f0200c6
+.field public static final tile:I = 0x7f0200c6
 
-.field public static final wheel_custom_val_dark_0:I = 0x7f0200c7
+.field public static final unlock_screen_bg:I = 0x7f0200c7
 
-.field public static final wheel_custom_val_default:I = 0x7f0200c8
+.field public static final user_id_icon:I = 0x7f0200c8
 
-.field public static final wheel_custom_val_white_1:I = 0x7f0200c9
+.field public static final wheel_custom_val_dark_0:I = 0x7f0200c9
 
-.field public static final wrong_mark:I = 0x7f0200ca
+.field public static final wheel_custom_val_default:I = 0x7f0200ca
+
+.field public static final wheel_custom_val_white_1:I = 0x7f0200cb
+
+.field public static final wrong_mark:I = 0x7f0200cc
 
 
 # direct methods

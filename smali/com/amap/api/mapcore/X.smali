@@ -1,30 +1,40 @@
-.class Lcom/amap/api/mapcore/X;
-.super Ljava/util/TimerTask;
+.class public interface abstract Lcom/amap/api/mapcore/x;
+.super Ljava/lang/Object;
 
-
-# instance fields
-.field a:Lcom/amap/api/mapcore/b;
-
-
-# direct methods
-.method public constructor <init>(Lcom/amap/api/mapcore/b;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
-
-    iput-object p1, p0, Lcom/amap/api/mapcore/X;->a:Lcom/amap/api/mapcore/b;
-
-    return-void
-.end method
+# interfaces
+.implements Lcom/amap/api/mapcore/ac;
 
 
 # virtual methods
-.method public run()V
-    .locals 1
+.method public abstract a(D)V
+.end method
 
-    iget-object v0, p0, Lcom/amap/api/mapcore/X;->a:Lcom/amap/api/mapcore/b;
+.method public abstract a(I)V
+.end method
 
-    invoke-virtual {v0}, Lcom/amap/api/mapcore/b;->requestRender()V
+.method public abstract a(Lcom/amap/api/maps/model/LatLng;)V
+.end method
 
-    return-void
+.method public abstract b(F)V
+.end method
+
+.method public abstract b(I)V
+.end method
+
+.method public abstract b(Lcom/amap/api/maps/model/LatLng;)Z
+.end method
+
+.method public abstract i()Lcom/amap/api/maps/model/LatLng;
+.end method
+
+.method public abstract l()D
+.end method
+
+.method public abstract m()F
+.end method
+
+.method public abstract n()I
+.end method
+
+.method public abstract o()I
 .end method

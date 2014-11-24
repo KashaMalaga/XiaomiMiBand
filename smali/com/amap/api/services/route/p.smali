@@ -11,7 +11,7 @@
         "Ljava/lang/Object;",
         "Landroid/os/Parcelable$Creator",
         "<",
-        "Lcom/amap/api/services/route/RouteResult;",
+        "Lcom/amap/api/services/route/RouteSearch$FromAndTo;",
         ">;"
     }
 .end annotation
@@ -28,20 +28,20 @@
 
 
 # virtual methods
-.method public a(Landroid/os/Parcel;)Lcom/amap/api/services/route/RouteResult;
+.method public a(Landroid/os/Parcel;)Lcom/amap/api/services/route/RouteSearch$FromAndTo;
     .locals 1
 
-    new-instance v0, Lcom/amap/api/services/route/RouteResult;
+    new-instance v0, Lcom/amap/api/services/route/RouteSearch$FromAndTo;
 
-    invoke-direct {v0, p1}, Lcom/amap/api/services/route/RouteResult;-><init>(Landroid/os/Parcel;)V
+    invoke-direct {v0, p1}, Lcom/amap/api/services/route/RouteSearch$FromAndTo;-><init>(Landroid/os/Parcel;)V
 
     return-object v0
 .end method
 
-.method public a(I)[Lcom/amap/api/services/route/RouteResult;
+.method public a(I)[Lcom/amap/api/services/route/RouteSearch$FromAndTo;
     .locals 1
 
-    new-array v0, p1, [Lcom/amap/api/services/route/RouteResult;
+    new-array v0, p1, [Lcom/amap/api/services/route/RouteSearch$FromAndTo;
 
     return-object v0
 .end method
@@ -49,7 +49,7 @@
 .method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 1
 
-    invoke-virtual {p0, p1}, Lcom/amap/api/services/route/p;->a(Landroid/os/Parcel;)Lcom/amap/api/services/route/RouteResult;
+    invoke-virtual {p0, p1}, Lcom/amap/api/services/route/p;->a(Landroid/os/Parcel;)Lcom/amap/api/services/route/RouteSearch$FromAndTo;
 
     move-result-object v0
 
@@ -59,7 +59,7 @@
 .method public synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
 
-    invoke-virtual {p0, p1}, Lcom/amap/api/services/route/p;->a(I)[Lcom/amap/api/services/route/RouteResult;
+    invoke-virtual {p0, p1}, Lcom/amap/api/services/route/p;->a(I)[Lcom/amap/api/services/route/RouteSearch$FromAndTo;
 
     move-result-object v0
 

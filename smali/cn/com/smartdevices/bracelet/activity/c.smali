@@ -69,7 +69,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->g(Lcn/com/smartdevices/bracelet/activity/LoginActivity;)Landroid/view/View;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->g(Lcn/com/smartdevices/bracelet/activity/LoginActivity;)Landroid/widget/TextView;
 
     move-result-object v1
 
@@ -77,7 +77,7 @@
 
     move-result v0
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->setAlpha(F)V
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setAlpha(F)V
 
     return-void
 .end method

@@ -19,7 +19,7 @@
 .method protected a()I
     .locals 1
 
-    const v0, 0x7f03005c
+    const v0, 0x7f030061
 
     return v0
 .end method
@@ -41,11 +41,11 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;
+    check-cast v0, Lcn/com/smartdevices/bracelet/ui/az;
 
     const v1, 0x18769
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->a(I)Z
+    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/ui/az;->a(I)Z
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/ai;->dismiss()V
 
@@ -56,11 +56,11 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;
+    check-cast v0, Lcn/com/smartdevices/bracelet/ui/az;
 
     const v1, 0x18768
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->a(I)Z
+    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/ui/az;->a(I)Z
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/ai;->dismiss()V
 
@@ -71,18 +71,18 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;
+    check-cast v0, Lcn/com/smartdevices/bracelet/ui/az;
 
     const v1, 0x1876a
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->a(I)Z
+    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/ui/az;->a(I)Z
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/ai;->dismiss()V
 
     goto :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x7f070176
+    .packed-switch 0x7f07018f
         :pswitch_1
         :pswitch_2
         :pswitch_0
@@ -96,7 +96,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070178
+    const v1, 0x7f070191
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -104,7 +104,7 @@
 
     invoke-virtual {v1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v1, 0x7f070176
+    const v1, 0x7f07018f
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -112,7 +112,7 @@
 
     invoke-virtual {v1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v1, 0x7f070177
+    const v1, 0x7f070190
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

@@ -70,7 +70,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->d:Landroid/widget/TextView;
 
-    const v3, 0x7f0c0146
+    const v3, 0x7f0c0144
 
     invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->getString(I)Ljava/lang/String;
 
@@ -132,7 +132,7 @@
 .method private b()V
     .locals 4
 
-    const v0, 0x7f070083
+    const v0, 0x7f07007e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->findViewById(I)Landroid/view/View;
 
@@ -140,7 +140,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f07007b
+    const v0, 0x7f070076
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->findViewById(I)Landroid/view/View;
 
@@ -148,7 +148,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700d1
+    const v0, 0x7f0700dd
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->findViewById(I)Landroid/view/View;
 
@@ -158,7 +158,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->d:Landroid/widget/TextView;
 
-    const v0, 0x7f0700d2
+    const v0, 0x7f0700de
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->findViewById(I)Landroid/view/View;
 
@@ -267,8 +267,8 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f07007b -> :sswitch_1
-        0x7f070083 -> :sswitch_0
+        0x7f070076 -> :sswitch_1
+        0x7f07007e -> :sswitch_0
     .end sparse-switch
 .end method
 
@@ -279,7 +279,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030025
+    const v0, 0x7f030027
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->setContentView(I)V
 
@@ -314,9 +314,9 @@
 
     const-string v0, "PageAlarmNewRepeatCustom"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->b(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->b(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -328,9 +328,9 @@
 
     const-string v0, "PageAlarmNewRepeatCustom"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->a(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;)V
 
     return-void
 .end method

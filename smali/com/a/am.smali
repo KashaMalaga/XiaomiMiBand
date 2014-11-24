@@ -142,7 +142,7 @@
     const-string p1, "null"
 
     :cond_0
-    invoke-static {}, Lcom/amap/api/location/core/e;->j()Ljava/lang/String;
+    invoke-static {}, Lcom/amap/api/location/core/c;->j()Ljava/lang/String;
 
     move-result-object v0
 
@@ -194,7 +194,7 @@
     :cond_3
     const/4 v0, 0x0
 
-    invoke-static {}, Lcom/amap/api/location/core/e;->j()Ljava/lang/String;
+    invoke-static {}, Lcom/amap/api/location/core/c;->j()Ljava/lang/String;
 
     move-result-object v3
 
@@ -204,7 +204,7 @@
 
     if-lez v3, :cond_4
 
-    invoke-static {}, Lcom/amap/api/location/core/e;->j()Ljava/lang/String;
+    invoke-static {}, Lcom/amap/api/location/core/c;->j()Ljava/lang/String;
 
     move-result-object v0
 

@@ -105,6 +105,31 @@
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/u;->N()Z
 
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->b()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/b;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->isDestroyed()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/b;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
+
+    const-class v1, Lcn/com/smartdevices/bracelet/ui/do;
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/J;->a(Landroid/app/Activity;Ljava/lang/Class;)V
+
+    :cond_0
     return-void
 
     nop

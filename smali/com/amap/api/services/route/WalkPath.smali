@@ -35,9 +35,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/amap/api/services/route/x;
+    new-instance v0, Lcom/amap/api/services/route/t;
 
-    invoke-direct {v0}, Lcom/amap/api/services/route/x;-><init>()V
+    invoke-direct {v0}, Lcom/amap/api/services/route/t;-><init>()V
 
     sput-object v0, Lcom/amap/api/services/route/WalkPath;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -70,24 +70,15 @@
 
 
 # virtual methods
-.method public a(Ljava/util/List;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcom/amap/api/services/route/WalkStep;",
-            ">;)V"
-        }
-    .end annotation
+.method public describeContents()I
+    .locals 1
 
-    iput-object p1, p0, Lcom/amap/api/services/route/WalkPath;->a:Ljava/util/List;
+    const/4 v0, 0x0
 
-    return-void
+    return v0
 .end method
 
-.method public d()Ljava/util/List;
+.method public getSteps()Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -104,12 +95,21 @@
     return-object v0
 .end method
 
-.method public describeContents()I
-    .locals 1
+.method public setSteps(Ljava/util/List;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcom/amap/api/services/route/WalkStep;",
+            ">;)V"
+        }
+    .end annotation
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lcom/amap/api/services/route/WalkPath;->a:Ljava/util/List;
 
-    return v0
+    return-void
 .end method
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
