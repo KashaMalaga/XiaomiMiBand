@@ -268,6 +268,8 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
+    if-eqz p1, :cond_0
+
     new-instance v1, Landroid/content/ComponentName;
 
     iget-object v2, p1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
@@ -282,6 +284,7 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
+    :cond_0
     const-string v1, "image/*"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
@@ -1708,7 +1711,7 @@
 .end method
 
 .method private h()V
-    .locals 5
+    .locals 6
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->g()Ljava/util/List;
 
@@ -1863,7 +1866,7 @@
     goto/16 :goto_0
 
     :cond_7
-    const-string v3, "com.facebook.katana"
+    const-string v3, "com.android.bluetooth"
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -1875,7 +1878,9 @@
 
     const-string v3, "share_facebook"
 
-    invoke-virtual {v2, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v5, 0x0
+
+    invoke-virtual {v2, v3, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto/16 :goto_0
 .end method

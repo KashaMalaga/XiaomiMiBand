@@ -63,7 +63,7 @@ localization_table = {
     indo = localization_indonisia_table,
 }
 
-g_curTable = localization_table[en]
+g_curTable = localization_table[es]
 
 function setCurLocale(locale)
     g_CurLocale = locale;
