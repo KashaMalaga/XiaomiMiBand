@@ -20,8 +20,10 @@ fr_CH = 'fr_CH'
 es_ES = 'es_ES'
 hr_HR = 'hr_HR'
 ru_RU = 'ru_RU'
+it_IT = 'it_IT'
 en = 'en'
 fr = 'fr'
+it = 'it'
 es = 'es'
 hr = 'hr'
 ru = 'ru'
@@ -54,6 +56,7 @@ end
 
 localization_table = {
     en = localization_English_table,
+	it = localization_Italian_table
     zh_CN = localization_Chinese_table,
     zh_TW = localization_zh_rTW_table,
 	fr = localization_French_table,
@@ -78,6 +81,8 @@ function setCurLocale(locale)
         g_curTable = localization_indonisia_table;
 	elseif (getCurLocale() == fr_FR or getCurLocale() == fr_BE or getCurLocale() == fr_CA or getCurLocale() == fr_CH) then
         curTable = localization_table[fr];
+		elseif (getCurLocale() == it_IT) then
+        curTable = localization_table[it];
 	elseif (getCurLocale() == es_ES) then
         curTable = localization_table[es];
     elseif (getCurLocale() == hr_HR) then

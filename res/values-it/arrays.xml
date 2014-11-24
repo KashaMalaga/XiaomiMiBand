@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="weeks">
+        <item>Lunedì</item>
+        <item>Martedì</item>
+        <item>Mercoledì</item>
+        <item>Giovedì</item>
+        <item>Venerdì</item>
+        <item>Sabato</item>
+        <item>Domenica</item>
+    </string-array>
+    <string-array name="weeks_short">
+        <item>Lun</item>
+        <item>Mar</item>
+        <item>Mer</item>
+        <item>Gio</item>
+        <item>Ven</item>
+        <item>Sab</item>
+        <item>Dom</item>
+    </string-array>
+    <string-array name="months">
+        <item>Gennaio</item>
+        <item>Febbraio</item>
+        <item>Marzo</item>
+        <item>Aprile</item>
+        <item>Maggio</item>
+        <item>Giugno</item>
+        <item>Luglio</item>
+        <item>Agosto</item>
+        <item>Settembre</item>
+        <item>Ottobre</item>
+        <item>Novembre</item>
+        <item>Dicembre</item>
+    </string-array>
+    <string-array name="select_days_simple">
+        <item>Solo una volta</item>
+        <item>Ogni giorno</item>
+        <item>Da lunedì a venerdì</item>
+        <item>Personalizza</item>
+    </string-array>
+    <string-array name="fortune">
+        <item>"E' facile raggiungere l'obiettivo una volta ma non è facile farlo ogni giorno."</item>
+        <item>Non è semplice raggiungere il proprio obiettivo tutti i giorni.</item>
+        <item>Stai facendo un record ogni giorno!</item>
+        <item>Continua a migliorarti!</item>
+        <item>Non sarai mai un perdente finché non smetterai di provare.</item>
+        <item>"Noi siamo ciò che facciamo ripetutamente. L'eccellenza quindi, non è un'azione ma un'abitudine."</item>
+        <item>Raggiungi un obiettivo ogni giorno.</item>
+        <item>Continua a sfidare te stesso per migliorare il record!</item>
+        <item>Fallo e basta.</item>
+        <item>Continua ad allenarti, la vittoria arriverà da sola.</item>
+    </string-array>
+    <string-array name="weather_aqi_descriptions">
+        <item>Eccellente</item>
+        <item>Buono</item>
+        <item>Leggero inquinamento</item>
+        <item>Inquinamento moderato</item>
+        <item>Molto inquinato</item>
+        <item>Estremamente inquinato</item>
+    </string-array>
+    <string-array name="weather_rains">
+        <item>Piogge leggere</item>
+        <item>Temporale</item>
+        <item>Pioggia leggera</item>
+        <item>Pioggia</item>
+        <item>Pioggia intensa</item>
+        <item>Forte pioggia</item>
+        <item>Pioggia molto forte</item>
+        <item>Grandine</item>
+        <item>Temporale con grandine</item>
+    </string-array>
+    <string-array name="weather_rain_snows">
+        <item>Nevischio</item>
+    </string-array>
+    <string-array name="weather_snows">
+        <item>Neve leggera</item>
+        <item>Neve</item>
+        <item>Neve intensa</item>
+        <item>Forti nevicate</item>
+        <item>Tempesta di neve</item>
+    </string-array>
+    <string-array name="weather_sands">
+        <item>Polvere</item>
+        <item>Jansa</item>
+        <item>Tempesta di sabbia</item>
+        <item>Forti tempeste</item>
+    </string-array>
+    <string-array name="weather_fine">
+        <item>Sereno</item>
+    </string-array>
+    <string-array name="weather_cloudy">
+        <item>Nuvoloso</item>
+    </string-array>
+    <string-array name="weather_overcast">
+        <item>Coperto</item>
+    </string-array>
+    <string-array name="weather_fog">
+        <item>Nebbia</item>
+    </string-array>
+    <string-array name="weather_haze">
+        <item>Foschia</item>
+    </string-array>
+</resources>
