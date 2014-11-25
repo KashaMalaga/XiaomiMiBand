@@ -42,7 +42,7 @@
 .method protected d()V
     .locals 5
 
-    const/4 v4, 0x2
+    const/4 v4, 0x0
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cL;->f:Lkankan/wheel/widget/WheelView;
 
@@ -50,7 +50,7 @@
 
     move-result v0
 
-    add-int/lit8 v0, v0, 0x2
+    add-int/lit8 v0, v0, 0x0
 
     const-string v1, "SettingInComingCallTimeFragment"
 
@@ -76,7 +76,9 @@
 
     move-result v1
 
-    if-nez v1, :cond_0
+	const/16 v2, 0x12
+	  
+    if-nez v2, :cond_0
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/ui/cL;->g:I
 
@@ -166,9 +168,9 @@
 
     move-result-object v1
 
-    const/4 v2, 0x2
+    const/4 v2, 0x0
 
-    const/16 v3, 0x1e
+    const/16 v3, 0x3c
 
     iget-object v4, p0, Lcn/com/smartdevices/bracelet/ui/cL;->f:Lkankan/wheel/widget/WheelView;
 
@@ -272,7 +274,7 @@
 
     move-result v1
 
-    add-int/lit8 v1, v1, -0x2
+    add-int/lit8 v1, v1, -0x0
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->c(I)Lkankan/wheel/widget/WheelView;
 
