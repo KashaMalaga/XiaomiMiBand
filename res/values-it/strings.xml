@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="pull_to_refresh_pull_label">AGGIORNAMENTO</string>
     <string name="pull_to_refresh_release_label">ALLENTARE IL CARICO</string>
@@ -15,7 +15,7 @@
     <string name="login_failed">Errore nel Login, riprova</string>
     <string name="failed_enable_bt">Attiva Bluetooth</string>
     <string name="search_bracelet">Cerco MiBand</string>
-    <string name="connect_bracelet_now">Collegamento…</string>
+    <string name="connect_bracelet_now">Collegamento …</string>
     <string name="firmware_upgrade">Aggiornamento del Firmware</string>
     <string name="bracelet_info_fw_version">Firmware: %1$s Licenza: %2$s</string>
     <string name="bracelet_info_mac_address">Nome: %1$s Indirizzo: %2$s</string>
@@ -43,7 +43,7 @@
     <string name="cancel">Annulla</string>
     <string name="accept">Accetta</string>
     <string name="set_sport_goal">"Imposta l'obiettivo"</string>
-    <string name="alarm_once">Una volta</string>
+    <string name="alarm_once">Una Volta</string>
     <string name="goals_push_none">Non inviare notifiche Push</string>
     <string name="goals_push_five">Obiettivo 50%</string>
     <string name="goals_push_nine">Obiettivo 90%</string>
@@ -51,7 +51,7 @@
     <string name="statistic_total">Totale</string>
     <string name="statistic_day_average">Media / giorno</string>
     <string name="statistic_detail">Dettagli</string>
-    <string name="day_active_detail">Dettagli diurni</string>
+    <string name="day_active_detail">Dettagli Diurni</string>
     <string name="alarm">Sveglia</string>
     <string name="unlock_screen">Sblocca schermo</string>
     <string name="about">Info su</string>
@@ -123,21 +123,22 @@
     <string name="exit_app_tips">Sicuro di uscire? Il collegamento sarà interrotto</string>
     <string name="set_mili_name">Nome MiBand</string>
     <string name="mili_name">Nome MiBand</string>
-    <string name="set_mili_name_ok">MiBand rinominato</string>
+    <string name="set_mili_name_ok">MiBand Rinominato</string>
     <string name="set_mili_name_fail">Errore nel rinominare MiBand</string>
     <string name="mili_name_too_long">Il nome scelto è troppo lungo</string>
     <string name="mili_rename_fail">"Errore nell'assegnazione del nome"</string>
-    <string name="mili_unbind_question">Una volta scollegato il tuo telefono non avrà accesso ai dati di MiBand</string>
+    <string name="mili_unbind_question">Una volta scollegati il tuo telefono non avrà accesso ai dati di MiBand</string>
     <string name="share_to_title">MiBand</string>
     <string name="share_to_content">Condividi la vita con MiBand</string>
     <string name="share_goal_tips_succ">Hai grandi obiettivi? Fai il primo passo</string>
     <string name="share_goal_tips_fail">"Ho quasi raggiunto l'obiettivo"</string>
     <string name="person_info_goal_info">Secondo gli studi, ti suggeriamo di fare almeno 40 min di esercizio tutti i giorni. Equivalgono circa a 8000 passi</string>
     <string name="person_info_goal_info_young">Secondo gli studi, ti suggeriamo di fare almeno 60 min di esercizio tutti i giorni. Equivalgono circa a 12000 passi</string>
-    <string name="set_person_goal">Imposta obiettivo</string>
+    <string name="set_person_goal">Imposta Obiettivo</string>
     <string name="feedback">Feedback</string>
     <string name="smart_wake_up">Sveglia intelligente</string>
-    <string name="smart_wake_up_info">"Svegliami fino a mezz'ora prima così che il risveglio sia dolce"</string>
+    <string name="smart_wake_up_info">"Svegliami fino a mezz'ora prima
+Così che il risveglio sia dolce"</string>
     <string name="alarm_cycle">Ripeti</string>
     <string name="login_failed_check_sys_time">"Errore nel Login, controlla che l'ora sia esatta e imposta l'aggiornamento automatico"</string>
     <string name="everyday">Tutti i giorni</string>
@@ -150,12 +151,12 @@
     <string name="mili_reset_info">Cancella tutti i dati ed esegue un reset alle impostazioni di fabbrica. Sei sicuro?</string>
     <string name="mili_exit_login_info">"Ti stai scollegando dall'account Mi. Sei sicuro?"</string>
     <string name="mili_exit_login_info_continue">Errore, controlla la connettività ad internet. Se esci perderai i dati non sincronizzati. Sei sicuro di uscire?</string>
-    <string name="modify_signiture">Moditica stato</string>
+    <string name="modify_signiture">Moditica Stato</string>
     <string name="modify_signiture_hint">Stato</string>
-    <string name="modify_nickname">Modifica nickname</string>
+    <string name="modify_nickname">Modifica Nickname</string>
     <string name="personal_info">Profilo</string>
     <string name="confirm">Ok</string>
-    <string name="stat_step_daily">Totale passi</string>
+    <string name="stat_step_daily">Totale Passi</string>
     <string name="stat_step_distance_daily">Distanza totale giornaliera</string>
     <string name="stat_step_calorie_daily">Consumo giornaliero</string>
     <string name="stat_step_piece">Passi</string>
@@ -167,8 +168,8 @@
     <string name="stat_step_run_calorie">Bruciato correndo</string>
     <string name="stat_step_walk_duration">Camminato per</string>
     <string name="stat_step_run_duration">Corso</string>
-    <string name="stat_step_average">Media passi</string>
-    <string name="stat_step_distance_average">Distanza media</string>
+    <string name="stat_step_average">Media Passi</string>
+    <string name="stat_step_distance_average">Distanza Media</string>
     <string name="stat_step_calorie_average">Consumo medio</string>
     <string name="stat_step_walk_distance_average">Media percorsa camminando</string>
     <string name="stat_step_run_distance_average">Media percorsa correndo</string>
@@ -176,12 +177,12 @@
     <string name="stat_step_run_duration_average">Media in corsa</string>
     <string name="stat_step_walk_calories_average">Consumo medio</string>
     <string name="stat_step_run_calories_average">Consumo medio</string>
-    <string name="stat_step_total">Passi totali</string>
+    <string name="stat_step_total">Passi Totali</string>
     <string name="stat_step_distance_total">Distanza totale</string>
     <string name="stat_step_calorie_total">Consumo totale</string>
-    <string name="stat_sleep">Durata del sonno</string>
-    <string name="stat_sleep_deep">Sonno profondo</string>
-    <string name="stat_sleep_shallow">Sonno leggero</string>
+    <string name="stat_sleep">Durata del Sonno</string>
+    <string name="stat_sleep_deep">Sonno Profondo</string>
+    <string name="stat_sleep_shallow">Sonno Leggero</string>
     <string name="stat_sleep_time">Inizio alle</string>
     <string name="stat_sleep_rise_time">Fine alle</string>
     <string name="stat_sleep_wake">Dormiveglia</string>
@@ -195,7 +196,7 @@
     <string name="fw_upgrade_failed">"Errore nell'aggiornamento del Firmware"</string>
     <string name="user_agreement">"Licenza d'utilizzo e trattamento dei dati"</string>
     <string name="error_code">Errore</string>
-    <string name="alarm_setting">Impostazioni sveglia</string>
+    <string name="alarm_setting">Impostazioni Sveglia</string>
     <string name="set_alarm_time">"Imposta l'orario della sveglia"</string>
     <string name="minute" />
     <string name="modify_height">Altezza</string>
@@ -221,7 +222,7 @@
     <string name="help_title_3">MiBand è associato ad un altro telefono?</string>
     <string name="help_info_3">Se il tuo MiBand è già collegato ad un altro telefono oppure non è vicino, spegnilo</string>
     <string name="get_image_file_fail">"Errore nella creazione dell'immagine"</string>
-    <string name="select_image">Modifica avatar</string>
+    <string name="select_image">Modifica Avatar</string>
     <string name="select_from_camera">Fotocamera</string>
     <string name="select_from_local">Galleria</string>
     <string name="fw_upgrade_failed_tips">"Errore nell'aggiornamento del Firmware. Alcune funzioni saranno disabilitate"</string>
@@ -257,7 +258,7 @@
     <string name="dynamic_sleep_tip">Totale</string>
     <string name="dynamic_sleep_deep_title">Sonno profondo %s</string>
     <string name="dynamic_detail_sleep_title">%s</string>
-    <string name="dynamic_detail_sleep_title_yesterday">Notte scorsa</string>
+    <string name="dynamic_detail_sleep_title_yesterday">Ultimo Sonno</string>
     <string name="dynamic_detail_step_title">%s</string>
     <string name="dynamic_detail_step_share_title">%s attività</string>
     <string name="dynamic_detail_step_title_today">Oggi</string>
@@ -288,7 +289,7 @@
     <string name="start_weixin_not_installed">WeChat non è installato</string>
     <string name="action_pop_about">Info su</string>
     <string name="find_bracelet">Trova MiBand</string>
-    <string name="light_color">Colore del led</string>
+    <string name="light_color">Colore del Led</string>
     <string name="light_color_title">"Scegli il colore per l'obiettivo"</string>
     <string name="wear_hand">Indossato</string>
     <string name="left_hand">Mano sinistra</string>
@@ -328,8 +329,8 @@
     <string name="share_sleep_title">Statistiche della notte scorsa</string>
     <string name="share_sleep_title_average">Media del sonno</string>
     <string name="share_sleep_title_daily">Sonno</string>
-    <string name="share_step_goal_succ_title_today">Obiettivo raggiunto!</string>
-    <string name="share_step_goal_succ_title">Obiettivo raggiunto</string>
+    <string name="share_step_goal_succ_title_today">Obbiettivo raggiunto!</string>
+    <string name="share_step_goal_succ_title">Obiettivo Raggiunto</string>
     <string name="share_step_goal_failed_title_today">Oggi</string>
     <string name="share_step_goal_failed_title">Totale</string>
     <string name="share_step_description">Hai camminato %1$s bruciando %2$s cal.</string>
@@ -342,8 +343,8 @@
     <string name="share_play_ground_format">"E' come %1$s giri di campo"</string>
     <string name="share_step_description_monthly">%1$s %2$s bruciando %3$s cal, hai risparmiato %4$s litri di benzina. Il record più alto è stato di %5$s, hai fatto %6$s passi</string>
     <string name="share_step_description_monthly_run">"Distanza coperta totale %1$s, 
-\u0009dei quali %2$s di corsa, 
-\u0009risparmiando l'equivalente di %4$s litri di benzina. 
+\u0009dei quali %2$s di corsa 
+\u0009Risparmiando l'equivalente di %4$s litri di benzina. 
 \u0009Il risultato migliore è stato il %5$s
 \u0009quando ho fatto %6$s passi"</string>
     <string name="marathon_format_0">"E' come %1$s maratona"</string>
@@ -352,13 +353,13 @@
     <string name="half_marathon_format_1">"%1$s E' più di una mezza maratona"</string>
     <string name="share_continue_goal_format">Hai camminato per %1$s, %2$s passi al giorno. %3$s %4$s</string>
     <string name="share_continue_goal_format_run">Hai camminato per %1$s, correndo per %2$s.%3$s.%4$s</string>
-    <string name="share_sleep_description">"Questa notte mi sono addormentato alle %5$s, 
+    <string name="share_sleep_description">"Questa Notte mi sono addormentato alle %5$s, 
 \u0009risvegliandomi alle %6$s.
 \u0009Sonno profondo %1$s ore e %2$s min, 
-\u0009sonno leggero %3$s ore e %4$s min. 
+\u0009Sonno leggero %3$s ore e %4$s min. 
 "</string>
     <string name="share_sleep_description_average">Hai passato una media di %1$s:%2$s ore in sonno profondo e %3$s:%4$s ore in sonno leggero. Sei andato a dormire verso le %5$s, mediamente ti svegli alle %6$s.</string>
-    <string name="smart_alarm_notify">Allarme intelligente</string>
+    <string name="smart_alarm_notify">Allarme Intelligente</string>
     <string name="battery_charge_full">Batteria ricaricata</string>
     <string name="battery_low_info">Batteria scarica, ricaricare</string>
     <string name="battery_charging">In carica…</string>
@@ -369,17 +370,17 @@
     <string name="unlock_screen_set_use_bracelet_tips">Conferma la password</string>
     <string name="unlock_screen_set_use_bracelet">2) Imposta MiBand per sbloccare lo schermo</string>
     <string name="unlock_screen_set_success">Hai impostato correttamente lo sblocco dello schermo tramite MiBand</string>
-    <string name="unlock_screen_modify_unlock">Se vuoi apportare modifiche vai in Impostazioni -> Sicurezza</string>
+    <string name="unlock_screen_modify_unlock">Se vuoi apportare modifiche vai a Impostazioni -> Sicurezza</string>
     <string name="bind_weixin_title">Sincronizza per condividere e competere con gli amici</string>
     <string name="bind_qq_health_title">Aggiungi un account QQ</string>
     <string name="step1">Passo 1) </string>
     <string name="step2">Passo 2) </string>
-    <string name="bind_weixin_tips_1">"Seleziona 'Crea QR code', crea e salva un QR code in galleria"</string>
-    <string name="bind_weixin_tips_2">"Seleziona 'Apri WeChat' -> Scansiona QR code -> Album, selezionando il QR code precedentemente salvato"</string>
+    <string name="bind_weixin_tips_1">"Seleziona 'Crea QR code', crea e salva un QR code in Galleria"</string>
+    <string name="bind_weixin_tips_2">"Seleziona 'Apri WeChat' -> Scansiona QR code -> Album selezionando il QR code precedentemente salvato"</string>
     <string name="bind_weixin_now">Genero il QR code…</string>
     <string name="bind_weixin_failed">Errore, riprova</string>
     <string name="bind_weixin_succ">Collegamento effettuato!</string>
-    <string name="bind_weixin_save">Salvato in galleria,</string>
+    <string name="bind_weixin_save">Salvato in Galleria,</string>
     <string name="incoming_call_notify">Chiamate in arrivo</string>
     <string name="incoming_call_notify_tips">Notifica la chiamata dopo %s sec</string>
     <string name="share_step_walk">" ho fatto"</string>
@@ -394,17 +395,17 @@
     <string name="unlock_screen_help_info1">Se il telefono rimane bloccato prova a riavviare il Bluetooth.</string>
     <string name="unlock_screen_help_info2">"Se non risolvi, vai in Sistema -> Sicurezza e scollega MiBand. Ripeti poi tutta la procedura dall'app MiBand"</string>
     <string name="instruction_title">Tutorial MiBand</string>
-    <string name="instruction_tip_1">"Dai un'occhiata. Controlla i progressi"</string>
+    <string name="instruction_tip_1">"Dai un'occhiata Controlla i progressi"</string>
     <string name="instruction_tip_2_1">"Meno di un terzo dell'obiettivo"</string>
     <string name="instruction_tip_2_2">Quasi alla metà</string>
     <string name="instruction_tip_2_3">"Hai quasi raggiunto l'obiettivo"</string>
     <string name="instruction_tip_2_4">Complimenti! Hai appena raggiunto il tuo obiettivo</string>
-    <string name="instruction_tip_2_5">Obiettivo raggiunto!</string>
+    <string name="instruction_tip_2_5">Obiettivo Raggiunto!</string>
     <string name="instruction_tip_3">Il livello di carica è basso</string>
     <string name="new_record_born">Complimenti! Hai appena fatto un nuovo record!</string>
     <string name="new_record_format_str">%1$s Hai bruciato %2$s cal. Ogni nuovo record ti rende migliore. Non fermarti, continua a migliorarti.</string>
-    <string name="continue_reach_goal">Obiettivo raggiunto!</string>
-    <string name="continue_tips_format">"Il tuo miglior record è stato centrare l'obiettivo per %1$s giorni"</string>
+    <string name="continue_reach_goal">Obiettivo Raggiunto!</string>
+    <string name="continue_tips_format">"Il tuo miglior Record è stato centrare l'obiettivo per %1$s giorni"</string>
     <string name="gram">g</string>
     <string name="kilogram">kg</string>
     <string name="sync_to_server">Sincronizzazione con MiCloud…</string>
@@ -443,10 +444,10 @@
     <string name="fw_upgrade">Aggiornamento Firmware</string>
     <string name="fw_upgrade_tips">Tieni MiBand il più possibile vicino al telefono</string>
     <string name="fw_upgrade_progress">%s%% completato</string>
-    <string name="runed">"Hai corso "</string>
+    <string name="runed">"Hai coorso "</string>
     <string name="share_to_miliao_path">Condividi con</string>
     <string name="share_to_miliao_target_feeds">Circle</string>
-    <string name="share_to_miliao_target_friends">Amici</string>
+    <string name="share_to_miliao_target_friends">amici</string>
     <string name="share_to_miliao_target_union">Allenatevi amici</string>
     <string name="no_network_connection">Network disconnessa</string>
     <string name="gen_qr_code">Crea QR code</string>
@@ -463,19 +464,19 @@
     <string name="first_use_days_today_format">Meno di un giorno dalla ricarica</string>
     <string name="first_use_remain_days_format">"%s giorni dall'ultima ricarica"</string>
     <string name="until_hit_goals">Continua a raggiungere gli obiettivi fino al %s</string>
-    <string name="continue_reach_goal_new_record">Nuovo record!</string>
+    <string name="continue_reach_goal_new_record">Nuovo Record!</string>
     <string name="bind_qq_health_tip">Sincronizza passi e statistiche del sonno sulla piattaforma QQ Health Center</string>
     <string name="bind_weixin_new_tips">"Seleziona 'Collega a WeChat' per cominciare, poi seleziona 'Successivo' per completare la sincronizzazione."</string>
     <string name="bind_weixin_new_now">Sincronizzando con WeChat, attendere…</string>
     <string name="bind_weixin_new_disable_tips">"Dopo aver collegato l'account Mi a WeChat, puoi controllare le informazioni come il numero dei passi effettuati attraverso WeChat. Puoi anche vedere i tuoi risultati tra gli amici"</string>
     <string name="weather_aqi">"Qualità dell'aria %s"</string>
     <string name="weather_description_rain">Pioggia,</string>
-    <string name="weather_description_rain_snow">Pioggia e neve,</string>
+    <string name="weather_description_rain_snow">Pioggia e Neve,</string>
     <string name="weather_description_snow">Neve,</string>
     <string name="weather_description_sand">Polveroso,</string>
-    <string name="weather_description_fine">Sereno,</string>
+    <string name="weather_description_fine">Soleggiato,</string>
     <string name="weather_description_cloudy">Nuvoloso,</string>
-    <string name="weather_description_overcast">Coperto,</string>
+    <string name="weather_description_overcast">Nuvoloso,</string>
     <string name="weather_description_fog">Nebbia,</string>
     <string name="weather_description_haze">Foschia,</string>
     <string name="fw_low_battery_title">"Collega l'alimentazione quando aggiorni"</string>
@@ -484,7 +485,7 @@
     <string name="in">In </string>
     <string name="main_ui_share_tips">Oggi mi sono esercitato per %1$s %2$s %3$s.</string>
     <string name="ran">"Hai corso "</string>
-    <string name="main_ui_sleep_share_tips">"Sonno leggero %1$s, %2$s. 
+    <string name="main_ui_sleep_share_tips">"Sonno leggero %1$s, %2$s 
 \u0009Mi sono addormentato alle %3$s e alzato alle %4$s."</string>
     <string name="awake_format">, svegliato %1$s volte</string>
     <string name="awake_format_1">, svegliato una volta</string>
@@ -494,27 +495,25 @@
     <string name="notify_status_motor_notify">Trova MiBand</string>
     <string name="notify_status_motor_call">Chiamata persa</string>
     <string name="notify_status_motor_disconnect">MOTIVO:DISCONNESSO</string>
-    <string name="notify_status_motor_smart_alarm">Sveglia intelligente</string>
+    <string name="notify_status_motor_smart_alarm">Sveglia Intelligente</string>
     <string name="notify_status_motor_alarm">Sveglia</string>
     <string name="notify_status_motor_goal">Obiettvo giornaliero raggiunto!</string>
     <string name="notify_status_motor_auth">Accoppiamento BT</string>
     <string name="notify_status_motor_shut_down">MOTIVO:MIBAND OFF</string>
     <string name="notify_status_motor_auth_success">AUTENTICAZIONE RIUSCITA</string>
     <string name="notify_status_motor_test">MOTIVO:TESTING</string>
-    <string name="vibrate_notify">Notifiche</string>
-    <string name="vibrate_notify_tips">Notifica il motivo della vibrazione</string>
     <string name="body">Collo</string>
     <string name="wrong_system_time">"L'ora di sistema è errata. Pregiudicherà le rilevazioni di MiBand"</string>
     <string name="lab_factory_title">Attività sportive</string>
     <string name="lab_factory_sport_type_situp">Addominali</string>
     <string name="lab_factory_sport_type_ropeskipping">Corda</string>
-    <string name="lab_factory_sport_analyser_activity_not_found">"ATTIVITÀ NON RICONOSCIUTA"</string>
+    <string name="lab_factory_sport_analyser_activity_not_found">"ATTIVITA' NON RICONOSCIUTA"</string>
     <string name="lab_factory_exercise_state_ready">Via</string>
     <string name="lab_factory_exercise_state_paused">Pausa</string>
     <string name="lab_factory_exercise_state_stopped">Stop</string>
     <string name="lab_factory_sport_monitor_bracelet_offline">MiBand è scollegato</string>
     <string name="lab_factory_sport_monitor_bracelet_offline_notice">Puoi partire %s dopo la sincronizzazione</string>
-    <string name="lab_factory_sport_monitor_cancelled_notice">"COMINCERÀ AUTOMATICAMENTE IL CONTEGGIO QUANDO FA %s CON XIAOMI RING"</string>
+    <string name="lab_factory_sport_monitor_cancelled_notice">"COMINCERA' AUTOMATICAMENTE IL CONTEGGIO QUANDO FA %s CON XIAOMI RING"</string>
     <string name="lab_factory_sport_monitor_timeout_notice">NESSUN EVENTO RILEVATO IN 2 MINUTI</string>
     <string name="lab_factory_sport_device_preparing">Attendi…</string>
     <string name="lab_factory_sport_best_record">Miglior record personale</string>
@@ -523,7 +522,7 @@
     <string name="lab_factory_sport_share_info_group_record">RECORD DI GRUPPO</string>
     <string name="lab_factory_sport_share_info_accumulated_time">ACCUMULATO</string>
     <string name="lab_factory_sport_share_info_accumulated_time_once">"Durata sessione "</string>
-    <string name="lab_factory_sport_share_info_new_record">Nuovo record!</string>
+    <string name="lab_factory_sport_share_info_new_record">Nuovo Record!</string>
     <string name="lab_factory_sport_share_info_current_accumulation">ACCUMULATO CORRENTE</string>
     <string name="lab_factory_sport_hour">%d Ore</string>
     <string name="lab_factory_sport_min">%d Min</string>
@@ -555,7 +554,7 @@
     <string name="lab_factory_share_photo_menu_camera">Fotocamera</string>
     <string name="lab_factory_share_photo_menu_gallery">Galleria</string>
     <string name="lab_factory_sport_result_cost_cal">" bruciate %d Kcal"</string>
-    <string name="lab_factory_sport_pb_desc">Il tuo miglior record di %s è</string>
+    <string name="lab_factory_sport_pb_desc">il tuo miglior record di %s è</string>
     <string name="lab_factory_sport_pb_ropeskipping">Arrampicata con la corda</string>
     <string name="lab_factory_sport_pb_situp">addominali</string>
     <string name="lab_factory_sport_gb_count">Miglior sessione %d volte</string>
@@ -575,13 +574,15 @@
     <string name="lab_factory_sport_continuous_ropeskipping">Fine sessione</string>
     <string name="lab_factory_sport_continuous_situp">Fine sessione</string>
     <string name="lab_factory_sport_accumulate">%d Ripetizioni</string>
-    <string name="lab_factory_internal_test">SPORT ANALISI MODALITÀ TEST</string>
+    <string name="lab_factory_internal_test">SPORT ANALISI MODALITA TEST</string>
     <string name="congrats">Congratulazioni!</string>
-    <string name="about_copyright">Copyright</string>
+    <string name="about_copyright" />
+    <string name="lab_factory_sport_average_rate_perm_mimute">Velocità media %d t/m</string>
+    <string name="lab_factory_sport_min_second" formatted="false">MINIMO SECONDI %s A %s B</string>
     <string name="bmenu_device">Device</string>
     <string name="bmenu_dynamic">Aggiornamenti</string>
     <string name="bmenu_my">Io</string>
-    <string name="description_list_icon">Icona oggetto</string>
+    <string name="description_list_icon">Icona Oggetto</string>
     <string name="friends_invite2">Invita</string>
     <string name="friends_search">Cerca</string>
     <string name="friends_search_tips">Account/Username/Tel</string>
@@ -593,7 +594,7 @@
     <string name="points_exchange">Riscatta i punti</string>
     <string name="start_use">INFIAMMA</string>
     <string name="stat_sleep_achievement">Progressi</string>
-    <string name="stat_step_active_average">Esercizio medio</string>
+    <string name="stat_step_active_average">Esercizio Medio</string>
     <string name="stat_step_active_total">Totale esercizi</string>
     <string name="stat_step_run">In corsa</string>
     <string name="stat_step_run_average">Media</string>
@@ -605,7 +606,6 @@
     <string name="stat_steps_consecutive_active">Più lungo</string>
     <string name="unknown_location">Non localizzato</string>
     <string name="unknown_mili">Mio</string>
-    <string name="lab_factory_sport_min_second" formatted="false">MINIMO SECONDI %s A %s B</string>
     <string name="lab_factory_sport_attention_punish_cheating"><font color="#ff0000">Io Piaojian si può barare Oh! Cura punizione finale, il gruppo ha registrato riesce. Eyes on you！</font></string>
     <string name="lab_factory_sport_type_car">GUIDA AUTO</string>
     <string name="lab_factory_sport_type_surfing">SURF</string>
@@ -614,6 +614,7 @@
     <string name="lab_factory_sport_type_muscle_exercise">BODY BULDING</string>
     <string name="lab_factory_sport_favorite_report_confirm">Vota</string>
     <string name="lab_factory_sport_favorite_report_succeeded">Il tuo voto è stato registrato! Grazie!</string>
-    <string name="lab_factory_sport_pb_cnt">%d volte</string>
-    <string name="lab_factory_sport_average_rate_perm_mimute">Velocità media %d t/m</string>
+    <string name="lab_factory_sport_pb_cnt">%d Volte</string>
+    <string name="vibrate_notify">Notifiche</string>
+    <string name="vibrate_notify_tips">Notifica il motivo della vibrazione</string>
 </resources>

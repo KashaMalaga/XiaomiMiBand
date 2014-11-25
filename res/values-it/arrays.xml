@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="weeks">
         <item>Lunedì</item>
@@ -44,9 +44,9 @@
         <item>Stai facendo un record ogni giorno!</item>
         <item>Continua a migliorarti!</item>
         <item>Non sarai mai un perdente finché non smetterai di provare.</item>
-        <item>"Noi siamo ciò che facciamo ripetutamente. L'eccellenza quindi, non è un'azione ma un'abitudine."</item>
+        <item>"Noi siamo ciò che facciamo ripetutamente. L'eccellenza quindi, non è un azione ma un'abitudine."</item>
         <item>Raggiungi un obiettivo ogni giorno.</item>
-        <item>Continua a sfidare te stesso per migliorare il record!</item>
+        <item>Continua a sfidare te stesso per migliorare il Record!</item>
         <item>Fallo e basta.</item>
         <item>Continua ad allenarti, la vittoria arriverà da sola.</item>
     </string-array>
@@ -59,7 +59,7 @@
         <item>Estremamente inquinato</item>
     </string-array>
     <string-array name="weather_rains">
-        <item>Piogge leggere</item>
+        <item>Pioggia leggere</item>
         <item>Temporale</item>
         <item>Pioggia leggera</item>
         <item>Pioggia</item>
@@ -83,13 +83,13 @@
         <item>Polvere</item>
         <item>Jansa</item>
         <item>Tempesta di sabbia</item>
-        <item>Forti tempeste</item>
+        <item>Fortti tempeste</item>
     </string-array>
     <string-array name="weather_fine">
         <item>Sereno</item>
     </string-array>
     <string-array name="weather_cloudy">
-        <item>Nuvoloso</item>
+        <item>Coperto</item>
     </string-array>
     <string-array name="weather_overcast">
         <item>Coperto</item>
