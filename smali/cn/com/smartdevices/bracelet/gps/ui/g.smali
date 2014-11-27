@@ -39,9 +39,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "Clean "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/g;->a:Lcn/com/smartdevices/bracelet/gps/ui/GaodeTestActivity;
 
@@ -75,9 +79,9 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
     :goto_0
     invoke-virtual {v1, v0}, Landroid/widget/Button;->setEnabled(Z)V
@@ -85,7 +89,7 @@
     return-void
 
     :cond_0
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method

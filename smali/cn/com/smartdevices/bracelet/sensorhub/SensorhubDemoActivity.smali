@@ -129,21 +129,8 @@
 
     cmp-long v3, v3, v1
 
-    if-ltz v3, :cond_0
+    if-gez v3, :cond_0
 
-    const-string v0, "insert over"
-
-    const/4 v1, 0x1
-
-    invoke-static {p0, v0, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    return-void
-
-    :cond_0
     new-instance v3, Lcn/com/smartdevices/bracelet/sensorhub/d;
 
     const/4 v4, -0x1
@@ -159,6 +146,19 @@
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    :cond_0
+    const-string v0, "insert over"
+
+    const/4 v1, 0x1
+
+    invoke-static {p0, v0, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    return-void
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V

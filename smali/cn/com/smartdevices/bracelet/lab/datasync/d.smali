@@ -3,22 +3,22 @@
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/lab/datasync/SyncSportDataService;
+.field final synthetic a:I
 
-.field private final synthetic b:I
+.field final synthetic b:Landroid/content/Context;
 
-.field private final synthetic c:Landroid/content/Context;
+.field final synthetic c:Lcn/com/smartdevices/bracelet/lab/datasync/SyncSportDataService;
 
 
 # direct methods
 .method constructor <init>(Lcn/com/smartdevices/bracelet/lab/datasync/SyncSportDataService;ILandroid/content/Context;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/datasync/d;->a:Lcn/com/smartdevices/bracelet/lab/datasync/SyncSportDataService;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/datasync/d;->c:Lcn/com/smartdevices/bracelet/lab/datasync/SyncSportDataService;
 
-    iput p2, p0, Lcn/com/smartdevices/bracelet/lab/datasync/d;->b:I
+    iput p2, p0, Lcn/com/smartdevices/bracelet/lab/datasync/d;->a:I
 
-    iput-object p3, p0, Lcn/com/smartdevices/bracelet/lab/datasync/d;->c:Landroid/content/Context;
+    iput-object p3, p0, Lcn/com/smartdevices/bracelet/lab/datasync/d;->b:Landroid/content/Context;
 
     invoke-direct {p0}, Lcom/c/a/a/h;-><init>()V
 
@@ -34,9 +34,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/datasync/d;->a:Lcn/com/smartdevices/bracelet/lab/datasync/SyncSportDataService;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/datasync/d;->c:Lcn/com/smartdevices/bracelet/lab/datasync/SyncSportDataService;
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/lab/datasync/d;->b:I
+    iget v2, p0, Lcn/com/smartdevices/bracelet/lab/datasync/d;->a:I
 
     const/4 v3, 0x0
 
@@ -46,9 +46,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "syncFromServer onFailure statusCode = "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -70,7 +74,7 @@
 
     move-result-object v0
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/lab/datasync/d;->b:I
+    iget v2, p0, Lcn/com/smartdevices/bracelet/lab/datasync/d;->a:I
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -92,7 +96,7 @@
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/datasync/d;->b:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/datasync/d;->a:I
 
     new-instance v2, Ljava/lang/String;
 
@@ -110,9 +114,9 @@
 
     if-eqz v3, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/datasync/d;->c:Landroid/content/Context;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/datasync/d;->b:Landroid/content/Context;
 
-    iget v3, p0, Lcn/com/smartdevices/bracelet/lab/datasync/d;->b:I
+    iget v3, p0, Lcn/com/smartdevices/bracelet/lab/datasync/d;->a:I
 
     const/4 v4, 0x1
 
@@ -121,15 +125,15 @@
     move-result v0
 
     :cond_0
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/datasync/d;->a:Lcn/com/smartdevices/bracelet/lab/datasync/SyncSportDataService;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/datasync/d;->c:Lcn/com/smartdevices/bracelet/lab/datasync/SyncSportDataService;
 
-    iget v3, p0, Lcn/com/smartdevices/bracelet/lab/datasync/d;->b:I
+    iget v3, p0, Lcn/com/smartdevices/bracelet/lab/datasync/d;->a:I
 
     invoke-static {v1, v3, v0}, Lcn/com/smartdevices/bracelet/lab/datasync/SyncSportDataService;->a(Lcn/com/smartdevices/bracelet/lab/datasync/SyncSportDataService;IZ)V
 
     if-eqz v0, :cond_1
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/datasync/d;->c:Landroid/content/Context;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/datasync/d;->b:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/xiaomi/hm/bleservice/BLEService;->notifyDynamicStatusChanged(Landroid/content/Context;)V
 
@@ -138,9 +142,13 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "syncFromServer onSuccess = "
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/d/h;->a()Z
 
@@ -178,7 +186,7 @@
 
     move-result-object v0
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/lab/datasync/d;->b:I
+    iget v2, p0, Lcn/com/smartdevices/bracelet/lab/datasync/d;->a:I
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

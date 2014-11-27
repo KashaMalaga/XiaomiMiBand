@@ -5,15 +5,6 @@
 .implements Landroid/widget/AdapterView$OnItemClickListener;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Landroid/widget/AdapterView$OnItemClickListener;"
-    }
-.end annotation
-
-
 # instance fields
 .field final synthetic a:Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;
 
@@ -115,9 +106,9 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-nez v0, :cond_3
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
     :goto_1
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/O;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;
@@ -171,7 +162,7 @@
     goto :goto_0
 
     :cond_3
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     goto :goto_1
 .end method

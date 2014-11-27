@@ -215,7 +215,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/o;->a:Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;
 
-    invoke-direct {v1, v0, v2}, Lcn/com/smartdevices/bracelet/gps/ui/p;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;Lcn/com/smartdevices/bracelet/gps/ui/p;)V
+    invoke-direct {v1, v0, v2}, Lcn/com/smartdevices/bracelet/gps/ui/p;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;Lcn/com/smartdevices/bracelet/gps/ui/k;)V
 
     const v0, 0x7f0700aa
 

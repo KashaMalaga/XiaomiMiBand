@@ -182,16 +182,8 @@
 
     sub-int/2addr v1, v2
 
-    if-gez v1, :cond_1
+    if-ltz v1, :cond_0
 
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/Double;->doubleValue()D
-
-    move-result-wide v0
-
-    return-wide v0
-
-    :cond_1
     sget-object v0, Lcn/com/smartdevices/bracelet/b/a;->a:Ljava/util/Map;
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -205,6 +197,13 @@
     check-cast v0, Ljava/lang/Double;
 
     goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Double;->doubleValue()D
+
+    move-result-wide v0
+
+    return-wide v0
 .end method
 
 .method public a(Landroid/content/Context;I)Ljava/lang/String;
@@ -244,7 +243,7 @@
 
     move-result-object v0
 
-    invoke-interface {v0}, Landroid/text/Spanned;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -268,7 +267,7 @@
 
     move-result-object v0
 
-    invoke-interface {v0}, Landroid/text/Spanned;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
 
@@ -292,19 +291,19 @@
     :goto_1
     new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const v0, 0x7f0c0278
-
-    invoke-virtual {v1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const v2, 0x7f0c0278
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

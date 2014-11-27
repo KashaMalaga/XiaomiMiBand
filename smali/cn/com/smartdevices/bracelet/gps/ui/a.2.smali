@@ -52,7 +52,7 @@
     :pswitch_0
     const/4 v0, 0x0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->b(I)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->b(I)I
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
 
@@ -77,13 +77,7 @@
     goto :goto_0
 
     :pswitch_1
-    invoke-static {}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->a()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->b(I)V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->b()I
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
 

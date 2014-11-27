@@ -1,4 +1,4 @@
-.class Lcn/com/smartdevices/bracelet/location/b;
+.class final Lcn/com/smartdevices/bracelet/location/b;
 .super Ljava/lang/Object;
 
 # interfaces
@@ -35,7 +35,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, v1}, Lcn/com/smartdevices/bracelet/location/Location;-><init>(Landroid/os/Parcel;Lcn/com/smartdevices/bracelet/location/Location;)V
+    invoke-direct {v0, p1, v1}, Lcn/com/smartdevices/bracelet/location/Location;-><init>(Landroid/os/Parcel;Lcn/com/smartdevices/bracelet/location/b;)V
 
     return-object v0
 .end method

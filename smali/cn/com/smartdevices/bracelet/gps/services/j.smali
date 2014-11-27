@@ -83,11 +83,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    return-void
-
-    :cond_0
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -97,6 +94,9 @@
     invoke-interface {v0, p1}, Lcn/com/smartdevices/bracelet/gps/services/a/a;->a(I)V
 
     goto :goto_0
+
+    :cond_0
+    return-void
 .end method
 
 .method a(Lcn/com/smartdevices/bracelet/gps/model/c;)V
@@ -113,11 +113,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    return-void
-
-    :cond_0
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -127,6 +124,9 @@
     invoke-interface {v0, p1}, Lcn/com/smartdevices/bracelet/gps/services/a/b;->b(Lcn/com/smartdevices/bracelet/gps/model/c;)V
 
     goto :goto_0
+
+    :cond_0
+    return-void
 .end method
 
 .method a(Lcn/com/smartdevices/bracelet/gps/model/c;Lcn/com/smartdevices/bracelet/gps/model/c;Lcn/com/smartdevices/bracelet/gps/b/t;)V
@@ -143,11 +143,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    return-void
-
-    :cond_0
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -157,6 +154,9 @@
     invoke-interface {v0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/gps/services/a/b;->a(Lcn/com/smartdevices/bracelet/gps/model/c;Lcn/com/smartdevices/bracelet/gps/model/c;Lcn/com/smartdevices/bracelet/gps/b/t;)V
 
     goto :goto_0
+
+    :cond_0
+    return-void
 .end method
 
 .method public a(Lcn/com/smartdevices/bracelet/gps/services/a/a;)V
@@ -239,11 +239,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    return-void
-
-    :cond_0
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -253,6 +250,9 @@
     invoke-interface {v0, p1}, Lcn/com/smartdevices/bracelet/gps/services/a/a;->a(Lcn/com/smartdevices/bracelet/gps/services/n;)V
 
     goto :goto_0
+
+    :cond_0
+    return-void
 .end method
 
 .method a(Ljava/util/List;Lcn/com/smartdevices/bracelet/gps/b/t;)V
@@ -280,11 +280,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    return-void
-
-    :cond_0
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -294,6 +291,9 @@
     invoke-interface {v0, p1, p2}, Lcn/com/smartdevices/bracelet/gps/services/a/b;->a(Ljava/util/List;Lcn/com/smartdevices/bracelet/gps/b/t;)V
 
     goto :goto_0
+
+    :cond_0
+    return-void
 .end method
 
 .method b(I)V
@@ -310,11 +310,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    return-void
-
-    :cond_0
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -324,6 +321,9 @@
     invoke-interface {v0, p1}, Lcn/com/smartdevices/bracelet/gps/services/a/b;->b(I)V
 
     goto :goto_0
+
+    :cond_0
+    return-void
 .end method
 
 .method public b(Lcn/com/smartdevices/bracelet/gps/services/a/a;)V

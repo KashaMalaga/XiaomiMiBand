@@ -27,13 +27,13 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ap;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->g(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Landroid/widget/TextView;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->f(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Lcn/com/smartdevices/bracelet/view/RoundProgressBar;
 
     move-result-object v0
 
     const/4 v1, 0x4
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->setVisibility(I)V
 
     return-void
 .end method

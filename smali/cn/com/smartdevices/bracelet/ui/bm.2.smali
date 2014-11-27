@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/bl;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/bl;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bm;->a:Lcn/com/smartdevices/bracelet/ui/bl;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bm;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,18 +22,30 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bm;->a:Lcn/com/smartdevices/bracelet/ui/bl;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/bl;->a(Lcn/com/smartdevices/bracelet/ui/bl;)Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    check-cast v0, Ljava/lang/Float;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->a(Z)V
+    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
+
+    move-result v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bm;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->D(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Landroid/view/View;
+
+    move-result-object v1
+
+    const/high16 v2, 0x44480000
+
+    sub-float v0, v2, v0
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->setTranslationY(F)V
 
     return-void
 .end method

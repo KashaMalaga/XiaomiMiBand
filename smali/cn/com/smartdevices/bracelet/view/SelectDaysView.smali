@@ -11,7 +11,7 @@
 
 .field private d:[Ljava/lang/String;
 
-.field private e:Lcn/com/smartdevices/bracelet/view/X;
+.field private e:Lcn/com/smartdevices/bracelet/view/Y;
 
 
 # direct methods
@@ -76,9 +76,9 @@
 .method public a()I
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->e:Lcn/com/smartdevices/bracelet/view/X;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->e:Lcn/com/smartdevices/bracelet/view/Y;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/view/X;->a()I
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/view/Y;->a()I
 
     move-result v0
 
@@ -88,9 +88,9 @@
 .method public a(I)V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->e:Lcn/com/smartdevices/bracelet/view/X;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->e:Lcn/com/smartdevices/bracelet/view/Y;
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/view/X;->a(I)V
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/view/Y;->a(I)V
 
     return-void
 .end method
@@ -105,10 +105,10 @@
     return-void
 .end method
 
-.method public a(Lcn/com/smartdevices/bracelet/view/X;)V
+.method public a(Lcn/com/smartdevices/bracelet/view/Y;)V
     .locals 1
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->e:Lcn/com/smartdevices/bracelet/view/X;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->e:Lcn/com/smartdevices/bracelet/view/Y;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->a:Landroid/widget/ListView;
 

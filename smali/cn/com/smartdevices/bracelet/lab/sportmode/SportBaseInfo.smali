@@ -256,12 +256,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_0
 
-    :cond_0
-    return-object v1
-
-    :cond_1
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -275,6 +271,9 @@
     invoke-virtual {v1, v0}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
 
     goto :goto_0
+
+    :cond_0
+    return-object v1
 .end method
 
 .method private getSecondInDay(J)J
@@ -329,9 +328,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "This GroupBaseInfo is not type:"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mSportType:I
 
@@ -390,7 +393,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupItemInfoList:Ljava/util/List;
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupItemInfoList:Ljava/util/List;
 
@@ -398,7 +401,7 @@
 
     move-result v1
 
-    if-lez v1, :cond_0
+    if-lez v1, :cond_1
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupItemInfoList:Ljava/util/List;
 
@@ -413,14 +416,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_0
 
-    move v0, v1
-
-    :cond_0
-    return v0
-
-    :cond_1
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -436,6 +433,12 @@
     move v1, v0
 
     goto :goto_0
+
+    :cond_0
+    move v0, v1
+
+    :cond_1
+    return v0
 .end method
 
 .method public clear()V
@@ -587,11 +590,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    return-wide v1
-
-    :cond_0
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -609,6 +609,9 @@
     move-wide v1, v0
 
     goto :goto_0
+
+    :cond_0
+    return-wide v1
 .end method
 
 .method public getGroupCostTimeOfPB()J
@@ -671,23 +674,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    const/4 v0, 0x2
-
-    new-array v0, v0, [J
-
-    const/4 v5, 0x0
-
-    aput-wide v1, v0, v5
-
-    const/4 v1, 0x1
-
-    aput-wide v3, v0, v1
-
-    return-object v0
-
-    :cond_0
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -711,6 +699,21 @@
     move-wide v1, v0
 
     goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x2
+
+    new-array v0, v0, [J
+
+    const/4 v5, 0x0
+
+    aput-wide v1, v0, v5
+
+    const/4 v1, 0x1
+
+    aput-wide v3, v0, v1
+
+    return-object v0
 .end method
 
 .method public getPBSummeryObject()Lorg/json/JSONObject;
@@ -871,33 +874,21 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_1
 
-    sub-long v0, v2, v6
-
-    cmp-long v2, v0, v4
-
-    if-lez v2, :cond_0
-
-    move-wide v4, v0
-
-    :cond_0
-    return-wide v4
-
-    :cond_1
     invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;
 
-    if-nez v1, :cond_2
+    if-nez v1, :cond_0
 
     iget-wide v6, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mStartSecondTimeInDay:J
 
     iget-wide v2, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mEndSecondTimeInDay:J
 
-    :cond_2
+    :cond_0
     add-int/lit8 v1, v1, 0x1
 
     iget-wide v9, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mStartSecondTimeInDay:J
@@ -913,6 +904,18 @@
     move-result-wide v2
 
     goto :goto_0
+
+    :cond_1
+    sub-long v0, v2, v6
+
+    cmp-long v2, v0, v4
+
+    if-lez v2, :cond_2
+
+    move-wide v4, v0
+
+    :cond_2
+    return-wide v4
 .end method
 
 .method public isGroupType()Z
@@ -1011,9 +1014,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "This GroupBaseInfo is not type:"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mSportType:I
 

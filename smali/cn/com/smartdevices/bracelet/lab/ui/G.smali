@@ -74,7 +74,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/G;->c:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->b(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;Z)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->b(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;Z)Z
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/G;->c:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 

@@ -94,13 +94,13 @@
 .method public a(Z)I
     .locals 13
 
-    const/4 v7, 0x2
+    const/4 v6, 0x2
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    new-instance v8, Ljava/io/FileInputStream;
+    new-instance v7, Ljava/io/FileInputStream;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->b:Lcn/com/smartdevices/bracelet/gaocept/c;
 
@@ -112,17 +112,17 @@
 
     move-result-object v0
 
-    invoke-direct {v8, v0}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
+    invoke-direct {v7, v0}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
 
-    new-instance v9, Ljava/io/InputStreamReader;
+    new-instance v8, Ljava/io/InputStreamReader;
 
     const-string v0, "UTF-8"
 
-    invoke-direct {v9, v8, v0}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;Ljava/lang/String;)V
+    invoke-direct {v8, v7, v0}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    new-instance v10, Ljava/io/BufferedReader;
+    new-instance v9, Ljava/io/BufferedReader;
 
-    invoke-direct {v10, v9}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
+    invoke-direct {v9, v8}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->a:Lcn/com/smartdevices/bracelet/gaocept/GaoceptAlgorithm;
 
@@ -130,137 +130,53 @@
 
     const-string v0, ""
 
-    move v4, v2
+    move v0, v1
 
-    move v5, v2
+    move v3, v1
 
-    move v6, v2
+    move v4, v1
 
     :cond_0
     :goto_0
-    invoke-virtual {v10}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
+    invoke-virtual {v9}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v5
 
-    if-nez v3, :cond_3
+    if-eqz v5, :cond_11
 
-    invoke-virtual {v10}, Ljava/io/BufferedReader;->close()V
+    const-string v10, ""
 
-    invoke-virtual {v9}, Ljava/io/InputStreamReader;->close()V
+    if-eq v5, v10, :cond_0
 
-    invoke-virtual {v8}, Ljava/io/FileInputStream;->close()V
+    const-string v10, "Activity"
 
-    const-string v0, "gaocept"
+    invoke-virtual {v5, v10}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    const-string v3, "finish test"
+    move-result v10
 
-    invoke-static {v0, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    if-eqz v10, :cond_f
 
-    if-lez v5, :cond_1
+    if-lez v3, :cond_1
 
-    if-nez v4, :cond_1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->b:Lcn/com/smartdevices/bracelet/gaocept/c;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->m:Ljava/lang/String;
-
-    invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v4, "\n"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->a:Lcn/com/smartdevices/bracelet/gaocept/GaoceptAlgorithm;
-
-    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/gaocept/GaoceptAlgorithm;->getFeatureString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->b:Lcn/com/smartdevices/bracelet/gaocept/c;
-
-    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/gaocept/c;->a()Ljava/io/File;
-
-    move-result-object v4
-
-    if-le v5, v1, :cond_13
-
-    :goto_1
-    invoke-virtual {v0, v3, v4, v1}, Lcn/com/smartdevices/bracelet/gaocept/c;->writeString(Ljava/lang/String;Ljava/io/File;Z)V
-
-    :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->a:Lcn/com/smartdevices/bracelet/gaocept/GaoceptAlgorithm;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gaocept/GaoceptAlgorithm;->getTotalMotionCount()I
-
-    move-result v0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->a:Lcn/com/smartdevices/bracelet/gaocept/GaoceptAlgorithm;
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gaocept/GaoceptAlgorithm;->endToFreeSpaces()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    const-string v1, "gaocept"
-
-    const-string v2, "memory leak in C"
-
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_2
-    return v0
-
-    :cond_3
-    const-string v0, ""
-
-    if-eq v3, v0, :cond_0
-
-    const-string v0, "Activity"
-
-    invoke-virtual {v3, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_12
-
-    if-lez v5, :cond_4
-
-    if-nez v4, :cond_4
+    if-nez v0, :cond_1
 
     const-string v0, "gaocept"
 
-    const-string v4, "print test feature"
+    const-string v10, "print test feature"
 
-    invoke-static {v0, v4}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v10}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->b:Lcn/com/smartdevices/bracelet/gaocept/c;
+    iget-object v10, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->b:Lcn/com/smartdevices/bracelet/gaocept/c;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     iget-object v11, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->m:Ljava/lang/String;
 
-    invoke-static {v11}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v11
-
-    invoke-direct {v0, v11}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     const-string v11, "\n"
 
@@ -288,29 +204,33 @@
 
     move-result-object v12
 
-    if-le v5, v1, :cond_5
+    if-le v3, v2, :cond_2
 
-    move v0, v1
+    move v0, v2
 
-    :goto_2
-    invoke-virtual {v4, v11, v12, v0}, Lcn/com/smartdevices/bracelet/gaocept/c;->writeString(Ljava/lang/String;Ljava/io/File;Z)V
+    :goto_1
+    invoke-virtual {v10, v11, v12, v0}, Lcn/com/smartdevices/bracelet/gaocept/c;->writeString(Ljava/lang/String;Ljava/io/File;Z)V
 
-    :cond_4
+    :cond_1
     const-string v0, "[:/]"
 
-    invoke-virtual {v3, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    invoke-virtual {v5, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v4, "gaocept"
+    const-string v10, "gaocept"
 
     new-instance v11, Ljava/lang/StringBuilder;
 
+    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v12, "start test activity: "
 
-    invoke-direct {v11, v12}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    aget-object v12, v0, v1
+    move-result-object v11
+
+    aget-object v12, v0, v2
 
     invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -320,455 +240,457 @@
 
     move-result-object v11
 
-    invoke-static {v4, v11}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v10, v11}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    aget-object v4, v0, v1
+    aget-object v10, v0, v2
 
     const-string v11, "Walk"
 
-    invoke-virtual {v4, v11}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    invoke-virtual {v10, v11}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
-    move-result v4
+    move-result v10
 
-    if-eqz v4, :cond_6
+    if-eqz v10, :cond_3
+
+    move v0, v1
 
     move v4, v2
 
-    move v6, v1
+    :goto_2
+    if-nez v0, :cond_0
 
-    :goto_3
-    if-nez v4, :cond_0
+    new-instance v10, Ljava/lang/StringBuilder;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v11, "\n"
 
-    invoke-direct {v0, v11}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v10
 
-    move-result-object v0
+    invoke-virtual {v10, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v5
 
-    move-result-object v0
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->m:Ljava/lang/String;
+    move-result-object v5
 
-    invoke-virtual {v10}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
+    iput-object v5, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->m:Ljava/lang/String;
 
-    move-result-object v0
+    invoke-virtual {v9}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->m:Ljava/lang/String;
+    move-result-object v5
 
-    new-instance v11, Ljava/lang/StringBuilder;
+    new-instance v10, Ljava/lang/StringBuilder;
 
-    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v3
+    iget-object v11, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->m:Ljava/lang/String;
 
-    invoke-direct {v11, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v3, "\n"
+    move-result-object v10
 
-    invoke-virtual {v11, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v11, "\n"
 
-    move-result-object v3
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v10
 
-    move-result-object v0
+    invoke-virtual {v10, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v5
 
-    move-result-object v0
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->m:Ljava/lang/String;
+    move-result-object v5
 
-    invoke-virtual {v10}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
+    iput-object v5, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->m:Ljava/lang/String;
 
-    move-result-object v0
+    invoke-virtual {v9}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->m:Ljava/lang/String;
+    move-result-object v5
 
-    new-instance v11, Ljava/lang/StringBuilder;
+    new-instance v10, Ljava/lang/StringBuilder;
 
-    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v3
+    iget-object v11, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->m:Ljava/lang/String;
 
-    invoke-direct {v11, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v3, "\n"
+    move-result-object v10
 
-    invoke-virtual {v11, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v11, "\n"
 
-    move-result-object v3
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v10
 
-    move-result-object v3
+    invoke-virtual {v10, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v10
 
-    move-result-object v3
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->m:Ljava/lang/String;
+    move-result-object v10
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->b:Lcn/com/smartdevices/bracelet/gaocept/c;
+    iput-object v10, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->m:Ljava/lang/String;
 
-    invoke-virtual {v3, v0}, Lcn/com/smartdevices/bracelet/gaocept/c;->setCodeByTimeStamp(Ljava/lang/String;)V
+    iget-object v10, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->b:Lcn/com/smartdevices/bracelet/gaocept/c;
 
-    const-string v3, "Start"
+    invoke-virtual {v10, v5}, Lcn/com/smartdevices/bracelet/gaocept/c;->setCodeByTimeStamp(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    const-string v10, "Start"
 
-    move-result v0
+    invoke-virtual {v5, v10}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    if-eqz v0, :cond_b
+    move-result v5
 
-    sput-boolean v1, Lcn/com/smartdevices/bracelet/gaocept/d;->b:Z
+    if-eqz v5, :cond_8
 
-    :goto_4
-    invoke-virtual {v10}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
+    sput-boolean v2, Lcn/com/smartdevices/bracelet/gaocept/d;->b:Z
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->a:Lcn/com/smartdevices/bracelet/gaocept/GaoceptAlgorithm;
+    :goto_3
+    invoke-virtual {v9}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
-    invoke-virtual {v0, v6}, Lcn/com/smartdevices/bracelet/gaocept/GaoceptAlgorithm;->initializeSpecifiedSport(I)V
+    iget-object v5, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->a:Lcn/com/smartdevices/bracelet/gaocept/GaoceptAlgorithm;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->a:Lcn/com/smartdevices/bracelet/gaocept/GaoceptAlgorithm;
+    invoke-virtual {v5, v4}, Lcn/com/smartdevices/bracelet/gaocept/GaoceptAlgorithm;->initializeSpecifiedSport(I)V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gaocept/GaoceptAlgorithm;->getSpecifiedAxis()I
+    iget-object v5, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->a:Lcn/com/smartdevices/bracelet/gaocept/GaoceptAlgorithm;
 
-    move-result v3
+    invoke-virtual {v5}, Lcn/com/smartdevices/bracelet/gaocept/GaoceptAlgorithm;->getSpecifiedAxis()I
 
-    if-nez v3, :cond_c
+    move-result v10
 
-    move v4, v1
+    if-nez v10, :cond_9
+
+    move v0, v2
 
     goto/16 :goto_0
 
+    :cond_2
+    move v0, v1
+
+    goto/16 :goto_1
+
+    :cond_3
+    aget-object v10, v0, v2
+
+    const-string v11, "RopeSkipping"
+
+    invoke-virtual {v10, v11}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v10
+
+    if-eqz v10, :cond_4
+
+    move v0, v1
+
+    move v4, v6
+
+    goto/16 :goto_2
+
+    :cond_4
+    aget-object v10, v0, v2
+
+    const-string v11, "Situp"
+
+    invoke-virtual {v10, v11}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v10
+
+    if-eqz v10, :cond_5
+
+    const/4 v4, 0x4
+
+    move v0, v1
+
+    goto/16 :goto_2
+
     :cond_5
-    move v0, v2
+    aget-object v10, v0, v2
+
+    const-string v11, "Pushup"
+
+    invoke-virtual {v10, v11}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v10
+
+    if-eqz v10, :cond_6
+
+    const/16 v4, 0x8
+
+    move v0, v1
 
     goto/16 :goto_2
 
     :cond_6
-    aget-object v4, v0, v1
+    aget-object v0, v0, v2
 
-    const-string v11, "RopeSkipping"
+    const-string v10, "DoubleClick"
 
-    invoke-virtual {v4, v11}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_7
-
-    move v4, v2
-
-    move v6, v7
-
-    goto/16 :goto_3
-
-    :cond_7
-    aget-object v4, v0, v1
-
-    const-string v11, "Situp"
-
-    invoke-virtual {v4, v11}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_8
-
-    const/4 v6, 0x4
-
-    move v4, v2
-
-    goto/16 :goto_3
-
-    :cond_8
-    aget-object v4, v0, v1
-
-    const-string v11, "Pushup"
-
-    invoke-virtual {v4, v11}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_9
-
-    const/16 v6, 0x8
-
-    move v4, v2
-
-    goto/16 :goto_3
-
-    :cond_9
-    aget-object v0, v0, v1
-
-    const-string v4, "DoubleClick"
-
-    invoke-virtual {v0, v4}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    invoke-virtual {v0, v10}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_7
 
-    const/16 v6, 0x100
-
-    move v4, v2
-
-    goto/16 :goto_3
-
-    :cond_a
-    move v4, v1
-
-    goto/16 :goto_3
-
-    :cond_b
-    sput-boolean v2, Lcn/com/smartdevices/bracelet/gaocept/d;->b:Z
-
-    goto :goto_4
-
-    :cond_c
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    iget-object v11, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->m:Ljava/lang/String;
-
-    invoke-static {v11}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v11
-
-    invoke-direct {v0, v11}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v11, "\nno.\tA\tx\ty\tz\tAa\txa\tya\tza\tvalid"
-
-    invoke-virtual {v0, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    and-int/lit8 v11, v3, 0x1
-
-    if-lez v11, :cond_d
-
-    new-instance v11, Ljava/lang/StringBuilder;
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v11, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v0, "\tva\tca\tpa\tsa"
-
-    invoke-virtual {v11, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    :cond_d
-    and-int/lit8 v11, v3, 0x2
-
-    if-lez v11, :cond_e
-
-    new-instance v11, Ljava/lang/StringBuilder;
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v11, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v0, "\tvx\tcx\tpx\tsx"
-
-    invoke-virtual {v11, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    :cond_e
-    and-int/lit8 v11, v3, 0x4
-
-    if-lez v11, :cond_f
-
-    new-instance v11, Ljava/lang/StringBuilder;
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v11, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v0, "\tvy\tcy\tpy\tsy"
-
-    invoke-virtual {v11, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    :cond_f
-    and-int/lit8 v3, v3, 0x8
-
-    if-lez v3, :cond_10
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v0, "\tvz\tcz\tpz\tsz"
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    :cond_10
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v0, "\tstdevRatio"
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->b:Lcn/com/smartdevices/bracelet/gaocept/c;
-
-    new-instance v11, Ljava/lang/StringBuilder;
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v11, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v0, "\n"
-
-    invoke-virtual {v11, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v11
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->b:Lcn/com/smartdevices/bracelet/gaocept/c;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gaocept/c;->getTestFile()Ljava/io/File;
-
-    move-result-object v12
-
-    if-lez v5, :cond_11
+    const/16 v4, 0x100
 
     move v0, v1
 
-    :goto_5
-    invoke-virtual {v3, v11, v12, v0}, Lcn/com/smartdevices/bracelet/gaocept/c;->writeString(Ljava/lang/String;Ljava/io/File;Z)V
+    goto/16 :goto_2
 
-    add-int/lit8 v0, v5, 0x1
+    :cond_7
+    move v0, v2
 
-    const-string v3, "gaocept"
+    goto/16 :goto_2
 
-    const-string v5, "receive test samples"
+    :cond_8
+    sput-boolean v1, Lcn/com/smartdevices/bracelet/gaocept/d;->b:Z
 
-    invoke-static {v3, v5}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    goto :goto_3
 
-    move v5, v0
+    :cond_9
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v11, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->m:Ljava/lang/String;
+
+    invoke-virtual {v5, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    const-string v11, "\nno.\tA\tx\ty\tz\tAa\txa\tya\tza\tvalid"
+
+    invoke-virtual {v5, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    and-int/lit8 v11, v10, 0x1
+
+    if-lez v11, :cond_a
+
+    new-instance v11, Ljava/lang/StringBuilder;
+
+    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v11, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    const-string v11, "\tva\tca\tpa\tsa"
+
+    invoke-virtual {v5, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    :cond_a
+    and-int/lit8 v11, v10, 0x2
+
+    if-lez v11, :cond_b
+
+    new-instance v11, Ljava/lang/StringBuilder;
+
+    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v11, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    const-string v11, "\tvx\tcx\tpx\tsx"
+
+    invoke-virtual {v5, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    :cond_b
+    and-int/lit8 v11, v10, 0x4
+
+    if-lez v11, :cond_c
+
+    new-instance v11, Ljava/lang/StringBuilder;
+
+    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v11, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    const-string v11, "\tvy\tcy\tpy\tsy"
+
+    invoke-virtual {v5, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    :cond_c
+    and-int/lit8 v10, v10, 0x8
+
+    if-lez v10, :cond_d
+
+    new-instance v10, Ljava/lang/StringBuilder;
+
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v10, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    const-string v10, "\tvz\tcz\tpz\tsz"
+
+    invoke-virtual {v5, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    :cond_d
+    new-instance v10, Ljava/lang/StringBuilder;
+
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v10, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    const-string v10, "\tstdevRatio"
+
+    invoke-virtual {v5, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    iget-object v10, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->b:Lcn/com/smartdevices/bracelet/gaocept/c;
+
+    new-instance v11, Ljava/lang/StringBuilder;
+
+    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v11, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    const-string v11, "\n"
+
+    invoke-virtual {v5, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v11
+
+    iget-object v5, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->b:Lcn/com/smartdevices/bracelet/gaocept/c;
+
+    invoke-virtual {v5}, Lcn/com/smartdevices/bracelet/gaocept/c;->getTestFile()Ljava/io/File;
+
+    move-result-object v12
+
+    if-lez v3, :cond_e
+
+    move v5, v2
+
+    :goto_4
+    invoke-virtual {v10, v11, v12, v5}, Lcn/com/smartdevices/bracelet/gaocept/c;->writeString(Ljava/lang/String;Ljava/io/File;Z)V
+
+    add-int/lit8 v3, v3, 0x1
+
+    const-string v5, "gaocept"
+
+    const-string v10, "receive test samples"
+
+    invoke-static {v5, v10}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    :cond_11
-    move v0, v2
+    :cond_e
+    move v5, v1
 
-    goto :goto_5
+    goto :goto_4
 
-    :cond_12
-    if-nez v4, :cond_0
+    :cond_f
+    if-nez v0, :cond_0
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/gaocept/d;->b:Z
+    sget-boolean v10, Lcn/com/smartdevices/bracelet/gaocept/d;->b:Z
 
-    if-eqz v0, :cond_14
+    if-eqz v10, :cond_10
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->b:Lcn/com/smartdevices/bracelet/gaocept/c;
+    iget-object v10, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->b:Lcn/com/smartdevices/bracelet/gaocept/c;
 
-    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/gaocept/c;->decodeSampleLine(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v10, v5}, Lcn/com/smartdevices/bracelet/gaocept/c;->decodeSampleLine(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v5
 
-    :goto_6
-    const-string v3, "\t"
+    :cond_10
+    const-string v10, "\t"
 
-    invoke-virtual {v0, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    invoke-virtual {v5, v10}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v5
 
-    array-length v3, v0
+    array-length v10, v5
 
     const/4 v11, 0x3
 
-    if-ne v3, v11, :cond_0
+    if-ne v10, v11, :cond_0
 
-    aget-object v3, v0, v2
+    aget-object v10, v5, v1
 
-    invoke-static {v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+    invoke-static {v10}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    move-result v3
+    move-result v10
 
-    aget-object v11, v0, v1
+    aget-object v11, v5, v2
 
     invoke-static {v11}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v11
 
-    aget-object v0, v0, v7
+    aget-object v5, v5, v6
 
-    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+    invoke-static {v5}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    move-result v0
+    move-result v5
 
     iget-object v12, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->a:Lcn/com/smartdevices/bracelet/gaocept/GaoceptAlgorithm;
 
-    invoke-virtual {v12, v3, v11, v0}, Lcn/com/smartdevices/bracelet/gaocept/GaoceptAlgorithm;->receive(III)Z
+    invoke-virtual {v12, v10, v11, v5}, Lcn/com/smartdevices/bracelet/gaocept/GaoceptAlgorithm;->receive(III)Z
 
-    move-result v0
+    move-result v5
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->a:Lcn/com/smartdevices/bracelet/gaocept/GaoceptAlgorithm;
+    iget-object v10, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->a:Lcn/com/smartdevices/bracelet/gaocept/GaoceptAlgorithm;
 
-    invoke-virtual {v3, v0}, Lcn/com/smartdevices/bracelet/gaocept/GaoceptAlgorithm;->getDebugString(Z)Ljava/lang/String;
+    invoke-virtual {v10, v5}, Lcn/com/smartdevices/bracelet/gaocept/GaoceptAlgorithm;->getDebugString(Z)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v5
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->b:Lcn/com/smartdevices/bracelet/gaocept/c;
+    iget-object v10, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->b:Lcn/com/smartdevices/bracelet/gaocept/c;
 
     iget-object v11, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->b:Lcn/com/smartdevices/bracelet/gaocept/c;
 
@@ -776,19 +698,98 @@
 
     move-result-object v11
 
-    invoke-virtual {v3, v0, v11, v1}, Lcn/com/smartdevices/bracelet/gaocept/c;->writeString(Ljava/lang/String;Ljava/io/File;Z)V
+    invoke-virtual {v10, v5, v11, v2}, Lcn/com/smartdevices/bracelet/gaocept/c;->writeString(Ljava/lang/String;Ljava/io/File;Z)V
 
     goto/16 :goto_0
 
-    :cond_13
-    move v1, v2
+    :cond_11
+    invoke-virtual {v9}, Ljava/io/BufferedReader;->close()V
 
-    goto/16 :goto_1
+    invoke-virtual {v8}, Ljava/io/InputStreamReader;->close()V
+
+    invoke-virtual {v7}, Ljava/io/FileInputStream;->close()V
+
+    const-string v4, "gaocept"
+
+    const-string v5, "finish test"
+
+    invoke-static {v4, v5}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    if-lez v3, :cond_12
+
+    if-nez v0, :cond_12
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->b:Lcn/com/smartdevices/bracelet/gaocept/c;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v5, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->m:Ljava/lang/String;
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, "\n"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    iget-object v5, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->a:Lcn/com/smartdevices/bracelet/gaocept/GaoceptAlgorithm;
+
+    invoke-virtual {v5}, Lcn/com/smartdevices/bracelet/gaocept/GaoceptAlgorithm;->getFeatureString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    iget-object v5, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->b:Lcn/com/smartdevices/bracelet/gaocept/c;
+
+    invoke-virtual {v5}, Lcn/com/smartdevices/bracelet/gaocept/c;->a()Ljava/io/File;
+
+    move-result-object v5
+
+    if-le v3, v2, :cond_14
+
+    :goto_5
+    invoke-virtual {v0, v4, v5, v2}, Lcn/com/smartdevices/bracelet/gaocept/c;->writeString(Ljava/lang/String;Ljava/io/File;Z)V
+
+    :cond_12
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->a:Lcn/com/smartdevices/bracelet/gaocept/GaoceptAlgorithm;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gaocept/GaoceptAlgorithm;->getTotalMotionCount()I
+
+    move-result v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->a:Lcn/com/smartdevices/bracelet/gaocept/GaoceptAlgorithm;
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gaocept/GaoceptAlgorithm;->endToFreeSpaces()Z
+
+    move-result v1
+
+    if-nez v1, :cond_13
+
+    const-string v1, "gaocept"
+
+    const-string v2, "memory leak in C"
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_13
+    return v0
 
     :cond_14
-    move-object v0, v3
+    move v2, v1
 
-    goto :goto_6
+    goto :goto_5
 .end method
 
 .method public a()V
@@ -1242,9 +1243,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "start: "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1307,9 +1312,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "Start: "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1326,9 +1335,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "\nActivity Name: "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

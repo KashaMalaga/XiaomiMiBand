@@ -28,7 +28,7 @@
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/i;->a:Lcom/xiaomi/hm/bleservice/BLEService;
 
     # getter for: Lcom/xiaomi/hm/bleservice/BLEService;->miliProfile:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->access$7(Lcom/xiaomi/hm/bleservice/BLEService;)Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->access$700(Lcom/xiaomi/hm/bleservice/BLEService;)Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     move-result-object v0
 
@@ -37,7 +37,7 @@
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/i;->a:Lcom/xiaomi/hm/bleservice/BLEService;
 
     # getter for: Lcom/xiaomi/hm/bleservice/BLEService;->miliProfile:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->access$7(Lcom/xiaomi/hm/bleservice/BLEService;)Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->access$700(Lcom/xiaomi/hm/bleservice/BLEService;)Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     move-result-object v0
 
@@ -52,7 +52,7 @@
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/i;->a:Lcom/xiaomi/hm/bleservice/BLEService;
 
     # getter for: Lcom/xiaomi/hm/bleservice/BLEService;->miliProfile:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->access$7(Lcom/xiaomi/hm/bleservice/BLEService;)Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->access$700(Lcom/xiaomi/hm/bleservice/BLEService;)Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     move-result-object v0
 
@@ -67,14 +67,18 @@
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "Quiting HandlerThread postponed for 500ms... (due to m_State="
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     iget-object v1, p0, Lcom/xiaomi/hm/bleservice/i;->a:Lcom/xiaomi/hm/bleservice/BLEService;
 
     # getter for: Lcom/xiaomi/hm/bleservice/BLEService;->miliProfile:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
-    invoke-static {v1}, Lcom/xiaomi/hm/bleservice/BLEService;->access$7(Lcom/xiaomi/hm/bleservice/BLEService;)Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    invoke-static {v1}, Lcom/xiaomi/hm/bleservice/BLEService;->access$700(Lcom/xiaomi/hm/bleservice/BLEService;)Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     move-result-object v1
 
@@ -101,7 +105,7 @@
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/i;->a:Lcom/xiaomi/hm/bleservice/BLEService;
 
     # getter for: Lcom/xiaomi/hm/bleservice/BLEService;->m_Handler:Landroid/os/Handler;
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->access$5(Lcom/xiaomi/hm/bleservice/BLEService;)Landroid/os/Handler;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->access$600(Lcom/xiaomi/hm/bleservice/BLEService;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -120,7 +124,7 @@
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/i;->a:Lcom/xiaomi/hm/bleservice/BLEService;
 
     # getter for: Lcom/xiaomi/hm/bleservice/BLEService;->m_HandlerThread:Landroid/os/HandlerThread;
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->access$8(Lcom/xiaomi/hm/bleservice/BLEService;)Landroid/os/HandlerThread;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->access$800(Lcom/xiaomi/hm/bleservice/BLEService;)Landroid/os/HandlerThread;
 
     move-result-object v0
 
@@ -130,7 +134,8 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->access$9(Lcom/xiaomi/hm/bleservice/BLEService;Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)V
+    # setter for: Lcom/xiaomi/hm/bleservice/BLEService;->miliProfile:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    invoke-static {v0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->access$702(Lcom/xiaomi/hm/bleservice/BLEService;Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     goto :goto_0
 .end method

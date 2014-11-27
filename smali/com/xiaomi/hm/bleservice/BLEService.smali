@@ -132,17 +132,17 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-class v1, Lcom/xiaomi/hm/bleservice/BLEService;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     const-string v1, ".VERSION: "
 
@@ -192,13 +192,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     sget-object v1, Lcom/xiaomi/hm/bleservice/BLEService;->PACKAGE_NAME:Ljava/lang/String;
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     const-string v1, "."
 
@@ -220,13 +220,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     sget-object v1, Lcom/xiaomi/hm/bleservice/BLEService;->INTENT_PREFIX:Ljava/lang/String;
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     const-string v1, ".INTENT_ACTION_DEVICE_FOUND"
 
@@ -242,13 +242,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     sget-object v1, Lcom/xiaomi/hm/bleservice/BLEService;->INTENT_PREFIX:Ljava/lang/String;
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     const-string v1, ".INTENT_ACTION_DEVICE_CONNECTED"
 
@@ -264,13 +264,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     sget-object v1, Lcom/xiaomi/hm/bleservice/BLEService;->INTENT_PREFIX:Ljava/lang/String;
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     const-string v1, ".INTENT_ACTION_DEVICE_DISCONNECTED"
 
@@ -286,13 +286,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     sget-object v1, Lcom/xiaomi/hm/bleservice/BLEService;->INTENT_PREFIX:Ljava/lang/String;
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     const-string v1, ".INTENT_ACTION_DEVICE_CONNECTION_FAILED"
 
@@ -308,13 +308,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     sget-object v1, Lcom/xiaomi/hm/bleservice/BLEService;->INTENT_PREFIX:Ljava/lang/String;
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     const-string v1, ".INTENT_ACTION_DEVICE_CONNECTION_RESET"
 
@@ -330,13 +330,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     sget-object v1, Lcom/xiaomi/hm/bleservice/BLEService;->INTENT_PREFIX:Ljava/lang/String;
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     const-string v1, ".INTENT_ACTION_CONN_STATUS_CHANGED"
 
@@ -352,13 +352,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     sget-object v1, Lcom/xiaomi/hm/bleservice/BLEService;->INTENT_PREFIX:Ljava/lang/String;
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     const-string v1, ".INTENT_ACTION_SYNC_DATA_STATUS_CHANGED"
 
@@ -374,13 +374,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     sget-object v1, Lcom/xiaomi/hm/bleservice/BLEService;->INTENT_PREFIX:Ljava/lang/String;
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     const-string v1, ".INTENT_ACTION_DYNAMIC_STATUS_CHANGED"
 
@@ -396,13 +396,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     sget-object v1, Lcom/xiaomi/hm/bleservice/BLEService;->INTENT_PREFIX:Ljava/lang/String;
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     const-string v1, ".INTENT_ACTION_DEVICE_STATUS_CHANGED"
 
@@ -418,13 +418,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     sget-object v1, Lcom/xiaomi/hm/bleservice/BLEService;->INTENT_PREFIX:Ljava/lang/String;
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     const-string v1, ".INTENT_ACTION_BATTERY_STATUS_CHANGED"
 
@@ -440,13 +440,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     sget-object v1, Lcom/xiaomi/hm/bleservice/BLEService;->INTENT_PREFIX:Ljava/lang/String;
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     const-string v1, ".INTENT_EXTRA_DEVICE"
 
@@ -462,13 +462,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     sget-object v1, Lcom/xiaomi/hm/bleservice/BLEService;->INTENT_PREFIX:Ljava/lang/String;
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     const-string v1, ".INTENT_EXTRA_PARAM"
 
@@ -484,13 +484,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     sget-object v1, Lcom/xiaomi/hm/bleservice/BLEService;->INTENT_PREFIX:Ljava/lang/String;
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     const-string v1, ".INTENT_EXTRA_PARAM_EXT"
 
@@ -627,7 +627,7 @@
     return-void
 .end method
 
-.method static synthetic access$0(Lcom/xiaomi/hm/bleservice/BLEService;I)V
+.method static synthetic access$000(Lcom/xiaomi/hm/bleservice/BLEService;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/xiaomi/hm/bleservice/BLEService;->notifyConnStatusChanged(I)V
@@ -635,7 +635,7 @@
     return-void
 .end method
 
-.method static synthetic access$1(Lcom/xiaomi/hm/bleservice/BLEService;)V
+.method static synthetic access$100(Lcom/xiaomi/hm/bleservice/BLEService;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/xiaomi/hm/bleservice/BLEService;->onDeviceInitializationSuccess()V
@@ -643,15 +643,7 @@
     return-void
 .end method
 
-.method static synthetic access$10()Ljava/lang/String;
-    .locals 1
-
-    sget-object v0, Lcom/xiaomi/hm/bleservice/BLEService;->TAG:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method static synthetic access$11(Lcom/xiaomi/hm/bleservice/BLEService;Z)V
+.method static synthetic access$1000(Lcom/xiaomi/hm/bleservice/BLEService;Z)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/xiaomi/hm/bleservice/BLEService;->stopScan(Z)V
@@ -659,7 +651,7 @@
     return-void
 .end method
 
-.method static synthetic access$12(Lcom/xiaomi/hm/bleservice/BLEService;Ljava/lang/String;)Landroid/bluetooth/BluetoothDevice;
+.method static synthetic access$1100(Lcom/xiaomi/hm/bleservice/BLEService;Ljava/lang/String;)Landroid/bluetooth/BluetoothDevice;
     .locals 1
 
     invoke-direct {p0, p1}, Lcom/xiaomi/hm/bleservice/BLEService;->getConnectedDeviceByAddress(Ljava/lang/String;)Landroid/bluetooth/BluetoothDevice;
@@ -669,7 +661,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$13(Lcom/xiaomi/hm/bleservice/BLEService;Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;)V
+.method static synthetic access$1200(Lcom/xiaomi/hm/bleservice/BLEService;Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/xiaomi/hm/bleservice/BLEService;->onTogglePairResult(Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;)V
@@ -677,23 +669,23 @@
     return-void
 .end method
 
-.method static synthetic access$14(Lcom/xiaomi/hm/bleservice/BLEService;Z)V
+.method static synthetic access$1302(Lcom/xiaomi/hm/bleservice/BLEService;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcom/xiaomi/hm/bleservice/BLEService;->isSyncDataRunning:Z
 
-    return-void
+    return p1
 .end method
 
-.method static synthetic access$15(Lcom/xiaomi/hm/bleservice/BLEService;I)V
+.method static synthetic access$1402(Lcom/xiaomi/hm/bleservice/BLEService;I)I
     .locals 0
 
     iput p1, p0, Lcom/xiaomi/hm/bleservice/BLEService;->mSyncBlockCount:I
 
-    return-void
+    return p1
 .end method
 
-.method static synthetic access$16(Lcom/xiaomi/hm/bleservice/BLEService;IIZ)V
+.method static synthetic access$1500(Lcom/xiaomi/hm/bleservice/BLEService;IIZ)V
     .locals 0
 
     invoke-direct {p0, p1, p2, p3}, Lcom/xiaomi/hm/bleservice/BLEService;->notifySyncDataStatusChanged(IIZ)V
@@ -701,7 +693,7 @@
     return-void
 .end method
 
-.method static synthetic access$17(Lcom/xiaomi/hm/bleservice/BLEService;)V
+.method static synthetic access$1600(Lcom/xiaomi/hm/bleservice/BLEService;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/xiaomi/hm/bleservice/BLEService;->syncToServerNew()V
@@ -709,7 +701,7 @@
     return-void
 .end method
 
-.method static synthetic access$18(Lcom/xiaomi/hm/bleservice/BLEService;)V
+.method static synthetic access$1700(Lcom/xiaomi/hm/bleservice/BLEService;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/xiaomi/hm/bleservice/BLEService;->syncToQQHealth()V
@@ -717,31 +709,19 @@
     return-void
 .end method
 
-.method static synthetic access$19(Lcom/xiaomi/hm/bleservice/BLEService;)I
-    .locals 1
+.method static synthetic access$1810(Lcom/xiaomi/hm/bleservice/BLEService;)I
+    .locals 2
 
     iget v0, p0, Lcom/xiaomi/hm/bleservice/BLEService;->mNoDataSyncCount:I
+
+    add-int/lit8 v1, v0, -0x1
+
+    iput v1, p0, Lcom/xiaomi/hm/bleservice/BLEService;->mNoDataSyncCount:I
 
     return v0
 .end method
 
-.method static synthetic access$2(Lcom/xiaomi/hm/bleservice/BLEService;I)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcom/xiaomi/hm/bleservice/BLEService;->onDeviceStatusChanged(I)V
-
-    return-void
-.end method
-
-.method static synthetic access$20(Lcom/xiaomi/hm/bleservice/BLEService;I)V
-    .locals 0
-
-    iput p1, p0, Lcom/xiaomi/hm/bleservice/BLEService;->mNoDataSyncCount:I
-
-    return-void
-.end method
-
-.method static synthetic access$21(Lcom/xiaomi/hm/bleservice/BLEService;)Lcom/xiaomi/hm/bleservice/n;
+.method static synthetic access$1900(Lcom/xiaomi/hm/bleservice/BLEService;)Lcom/xiaomi/hm/bleservice/n;
     .locals 1
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/BLEService;->mSyncRetryTimes:Lcom/xiaomi/hm/bleservice/n;
@@ -749,7 +729,15 @@
     return-object v0
 .end method
 
-.method static synthetic access$22(Lcom/xiaomi/hm/bleservice/BLEService;I)V
+.method static synthetic access$200(Lcom/xiaomi/hm/bleservice/BLEService;I)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcom/xiaomi/hm/bleservice/BLEService;->onDeviceStatusChanged(I)V
+
+    return-void
+.end method
+
+.method static synthetic access$2000(Lcom/xiaomi/hm/bleservice/BLEService;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/xiaomi/hm/bleservice/BLEService;->handleSyncDataToServerFailed(I)V
@@ -757,7 +745,7 @@
     return-void
 .end method
 
-.method static synthetic access$3(Lcom/xiaomi/hm/bleservice/BLEService;II)V
+.method static synthetic access$300(Lcom/xiaomi/hm/bleservice/BLEService;II)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/xiaomi/hm/bleservice/BLEService;->onDeviceBatteryStatusChanged(II)V
@@ -765,7 +753,7 @@
     return-void
 .end method
 
-.method static synthetic access$4(Lcom/xiaomi/hm/bleservice/BLEService;Landroid/os/Message;)V
+.method static synthetic access$400(Lcom/xiaomi/hm/bleservice/BLEService;Landroid/os/Message;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcom/xiaomi/hm/bleservice/BLEService;->handleMessage(Landroid/os/Message;)V
@@ -773,15 +761,7 @@
     return-void
 .end method
 
-.method static synthetic access$5(Lcom/xiaomi/hm/bleservice/BLEService;)Landroid/os/Handler;
-    .locals 1
-
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/BLEService;->m_Handler:Landroid/os/Handler;
-
-    return-object v0
-.end method
-
-.method static synthetic access$6(Lcom/xiaomi/hm/bleservice/BLEService;Landroid/content/Context;Landroid/content/Intent;)V
+.method static synthetic access$500(Lcom/xiaomi/hm/bleservice/BLEService;Landroid/content/Context;Landroid/content/Intent;)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcom/xiaomi/hm/bleservice/BLEService;->onReceive(Landroid/content/Context;Landroid/content/Intent;)V
@@ -789,7 +769,15 @@
     return-void
 .end method
 
-.method static synthetic access$7(Lcom/xiaomi/hm/bleservice/BLEService;)Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+.method static synthetic access$600(Lcom/xiaomi/hm/bleservice/BLEService;)Landroid/os/Handler;
+    .locals 1
+
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/BLEService;->m_Handler:Landroid/os/Handler;
+
+    return-object v0
+.end method
+
+.method static synthetic access$700(Lcom/xiaomi/hm/bleservice/BLEService;)Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
     .locals 1
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/BLEService;->miliProfile:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
@@ -797,7 +785,15 @@
     return-object v0
 .end method
 
-.method static synthetic access$8(Lcom/xiaomi/hm/bleservice/BLEService;)Landroid/os/HandlerThread;
+.method static synthetic access$702(Lcom/xiaomi/hm/bleservice/BLEService;Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    .locals 0
+
+    iput-object p1, p0, Lcom/xiaomi/hm/bleservice/BLEService;->miliProfile:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+
+    return-object p1
+.end method
+
+.method static synthetic access$800(Lcom/xiaomi/hm/bleservice/BLEService;)Landroid/os/HandlerThread;
     .locals 1
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/BLEService;->m_HandlerThread:Landroid/os/HandlerThread;
@@ -805,12 +801,12 @@
     return-object v0
 .end method
 
-.method static synthetic access$9(Lcom/xiaomi/hm/bleservice/BLEService;Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)V
-    .locals 0
+.method static synthetic access$900()Ljava/lang/String;
+    .locals 1
 
-    iput-object p1, p0, Lcom/xiaomi/hm/bleservice/BLEService;->miliProfile:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    sget-object v0, Lcom/xiaomi/hm/bleservice/BLEService;->TAG:Ljava/lang/String;
 
-    return-void
+    return-object v0
 .end method
 
 .method private cancelBatteryLowNotification()V
@@ -915,9 +911,13 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "checkFwVersion exception:"
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
@@ -940,9 +940,13 @@
 
     new-instance v4, Ljava/lang/StringBuilder;
 
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v5, "new fw version:"
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
 
     invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1068,15 +1072,15 @@
     :pswitch_0
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothDevice;->getAddress()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     const-string v1, "[CONNECTED]"
 
@@ -1095,15 +1099,15 @@
     :pswitch_1
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothDevice;->getAddress()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     const-string v1, "[CONNECTING]"
 
@@ -1122,15 +1126,15 @@
     :pswitch_2
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothDevice;->getAddress()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     const-string v1, "[DISCONNECTED]"
 
@@ -1149,15 +1153,15 @@
     :pswitch_3
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothDevice;->getAddress()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     const-string v1, "[DISCONNECTING]"
 
@@ -1208,14 +1212,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_1
 
-    const/4 v0, 0x0
-
-    :goto_0
-    return-object v0
-
-    :cond_1
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -1226,9 +1224,13 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "conneted device: "
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothDevice;->getName()Ljava/lang/String;
 
@@ -1267,6 +1269,12 @@
     move-result v2
 
     if-eqz v2, :cond_0
+
+    :goto_0
+    return-object v0
+
+    :cond_1
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method
@@ -1380,9 +1388,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "Try sync data to server type:"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1423,9 +1435,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "Stop try sync data to server type:"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1489,9 +1505,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "notifyBatteryStatusChanged:"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1539,9 +1559,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "notifyBraceletVibrated:"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1596,13 +1620,13 @@
 
     new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    invoke-direct {v4, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -1751,9 +1775,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "notifyStatusChanged:"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1797,9 +1825,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "notifyDeviceStatusChanged:"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1862,9 +1894,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "notifySyncDataStatusChanged:"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1906,9 +1942,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "onBatteryLowNotification:"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2067,9 +2107,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "onDeviceBatteryStatusChanged:"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2095,9 +2139,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "onDeviceBatteryStatusChanged:"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2168,9 +2216,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "onDeviceStatusChanged:"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2186,9 +2238,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "onDeviceStatusChanged:"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2366,9 +2422,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "#Broadcast# Intent: "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -2556,9 +2616,13 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "#Broadcast# state: "
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2615,9 +2679,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "#Broadcast# device: "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothDevice;->getAddress()Ljava/lang/String;
 
@@ -2654,9 +2722,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "#Broadcast# device: "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothDevice;->getAddress()Ljava/lang/String;
 
@@ -2693,9 +2765,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "#Broadcast# device: "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothDevice;->getAddress()Ljava/lang/String;
 
@@ -2744,9 +2820,13 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "#Broadcast# bond state: "
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2811,9 +2891,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "#Broadcast# device: "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothDevice;->getAddress()Ljava/lang/String;
 
@@ -2870,9 +2954,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "#Broadcast# device: "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothDevice;->getAddress()Ljava/lang/String;
 
@@ -2961,9 +3049,13 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "isEnterInBackground:"
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -2993,9 +3085,13 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "isEnterInBackground:"
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -3052,7 +3148,7 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_0
+    goto/16 :goto_0
 .end method
 
 .method private setLatency(I)V
@@ -3062,9 +3158,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "current latency level set level:"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -3096,9 +3196,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "waklock acquire......"
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -3240,8 +3344,23 @@
 
     move-result v0
 
-    if-nez v0, :cond_3
+    if-eqz v0, :cond_3
 
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/model/UploadData;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/UploadData;->toJSONObject()Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+
+    goto :goto_1
+
+    :cond_3
     sget-object v0, Lcom/xiaomi/hm/bleservice/BLEService;->TAG:Ljava/lang/String;
 
     invoke-virtual {v3}, Lorg/json/JSONArray;->toString()Ljava/lang/String;
@@ -3269,21 +3388,6 @@
     invoke-static {v0, v4, p1, v3, v5}, Lcn/com/smartdevices/bracelet/d/f;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Lcn/com/smartdevices/bracelet/q;Ljava/lang/String;Lcom/c/a/a/h;)V
 
     goto :goto_0
-
-    :cond_3
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/model/UploadData;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/UploadData;->toJSONObject()Lorg/json/JSONObject;
-
-    move-result-object v0
-
-    invoke-virtual {v3, v0}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
-
-    goto :goto_1
 .end method
 
 .method private syncToQQHealth()V
@@ -3391,9 +3495,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "last sync time:"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     new-instance v2, Ljava/util/Date;
 
@@ -3439,9 +3547,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "last sync time:"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     new-instance v2, Ljava/util/Date;
 
@@ -3568,9 +3680,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "miliProfile != null, miliProfile.getState() = "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     iget-object v3, p0, Lcom/xiaomi/hm/bleservice/BLEService;->miliProfile:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
@@ -3628,9 +3744,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "miliProfile has device:"
 
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v2}, Landroid/bluetooth/BluetoothDevice;->getName()Ljava/lang/String;
 
@@ -3716,9 +3836,13 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "device type:"
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothDevice;->getType()I
 
@@ -3931,9 +4055,13 @@
 
     new-instance v4, Ljava/lang/StringBuilder;
 
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v5, "topActivity:"
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
 
     invoke-virtual {v0}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
@@ -3953,9 +4081,13 @@
 
     new-instance v4, Ljava/lang/StringBuilder;
 
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v5, "topActivity:"
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
 
     invoke-virtual {v0}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
@@ -4210,9 +4342,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "onStartCommand Intent: "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -4372,9 +4508,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "startSyncData isSyncDataRunning:"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     iget-boolean v2, p0, Lcom/xiaomi/hm/bleservice/BLEService;->isSyncDataRunning:Z
 

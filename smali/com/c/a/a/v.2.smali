@@ -8,28 +8,12 @@
 # instance fields
 .field final synthetic a:Lcom/c/a/a/t;
 
-.field private final synthetic b:I
-
-.field private final synthetic c:[Lorg/apache/http/Header;
-
-.field private final synthetic d:Ljava/lang/Throwable;
-
-.field private final synthetic e:Ljava/lang/String;
-
 
 # direct methods
-.method constructor <init>(Lcom/c/a/a/t;I[Lorg/apache/http/Header;Ljava/lang/Throwable;Ljava/lang/String;)V
+.method constructor <init>(Lcom/c/a/a/t;)V
     .locals 0
 
     iput-object p1, p0, Lcom/c/a/a/v;->a:Lcom/c/a/a/t;
-
-    iput p2, p0, Lcom/c/a/a/v;->b:I
-
-    iput-object p3, p0, Lcom/c/a/a/v;->c:[Lorg/apache/http/Header;
-
-    iput-object p4, p0, Lcom/c/a/a/v;->d:Ljava/lang/Throwable;
-
-    iput-object p5, p0, Lcom/c/a/a/v;->e:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,17 +27,23 @@
 
     iget-object v0, p0, Lcom/c/a/a/v;->a:Lcom/c/a/a/t;
 
-    invoke-static {v0}, Lcom/c/a/a/t;->a(Lcom/c/a/a/t;)Lcom/c/a/a/p;
+    iget-object v0, v0, Lcom/c/a/a/t;->e:Lcom/c/a/a/p;
 
-    move-result-object v0
+    iget-object v1, p0, Lcom/c/a/a/v;->a:Lcom/c/a/a/t;
 
-    iget v1, p0, Lcom/c/a/a/v;->b:I
+    iget v1, v1, Lcom/c/a/a/t;->b:I
 
-    iget-object v2, p0, Lcom/c/a/a/v;->c:[Lorg/apache/http/Header;
+    iget-object v2, p0, Lcom/c/a/a/v;->a:Lcom/c/a/a/t;
 
-    iget-object v3, p0, Lcom/c/a/a/v;->d:Ljava/lang/Throwable;
+    iget-object v2, v2, Lcom/c/a/a/t;->c:[Lorg/apache/http/Header;
 
-    iget-object v4, p0, Lcom/c/a/a/v;->e:Ljava/lang/String;
+    iget-object v3, p0, Lcom/c/a/a/v;->a:Lcom/c/a/a/t;
+
+    iget-object v3, v3, Lcom/c/a/a/t;->d:Ljava/lang/Throwable;
+
+    iget-object v4, p0, Lcom/c/a/a/v;->a:Lcom/c/a/a/t;
+
+    iget-object v4, v4, Lcom/c/a/a/t;->a:Ljava/lang/String;
 
     const/4 v5, 0x0
 

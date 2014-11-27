@@ -49,7 +49,7 @@
 
 .field protected s:Landroid/content/Context;
 
-.field protected t:Lcn/com/smartdevices/bracelet/chart/b/e;
+.field protected t:Lcn/com/smartdevices/bracelet/chart/b/f;
 
 .field protected u:Lcn/com/smartdevices/bracelet/chart/base/g;
     .annotation system Ldalvik/annotation/Signature;
@@ -207,10 +207,10 @@
     return-void
 .end method
 
-.method public a(Lcn/com/smartdevices/bracelet/chart/b/e;)V
+.method public a(Lcn/com/smartdevices/bracelet/chart/b/f;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->t:Lcn/com/smartdevices/bracelet/chart/b/e;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->t:Lcn/com/smartdevices/bracelet/chart/b/f;
 
     return-void
 .end method

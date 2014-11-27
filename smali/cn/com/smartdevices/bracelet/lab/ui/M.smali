@@ -222,7 +222,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/M;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;
 
-    invoke-direct {v3, v1, v4}, Lcn/com/smartdevices/bracelet/lab/ui/N;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;Lcn/com/smartdevices/bracelet/lab/ui/N;)V
+    invoke-direct {v3, v1, v4}, Lcn/com/smartdevices/bracelet/lab/ui/N;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;Lcn/com/smartdevices/bracelet/lab/ui/K;)V
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/o;->c()Z
 

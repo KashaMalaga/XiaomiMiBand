@@ -27,7 +27,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;Lcn/com/smartdevices/bracelet/lab/ui/view/c;)V
+.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;Lcn/com/smartdevices/bracelet/lab/ui/view/a;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/lab/ui/view/c;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;)V
@@ -113,7 +113,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->a(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;Landroid/animation/Animator;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->a(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;Landroid/animation/Animator;)Landroid/animation/Animator;
 
     :goto_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/c;->e:Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;
@@ -151,7 +151,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->a(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;Landroid/animation/Animator;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->a(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;Landroid/animation/Animator;)Landroid/animation/Animator;
 
     goto :goto_1
 
@@ -198,7 +198,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->b(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;Landroid/animation/Animator;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->b(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;Landroid/animation/Animator;)Landroid/animation/Animator;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/c;->e:Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;
 
@@ -213,14 +213,14 @@
     :pswitch_2
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/c;->e:Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->b(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;Landroid/animation/Animator;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->b(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;Landroid/animation/Animator;)Landroid/animation/Animator;
 
     goto/16 :goto_0
 
     :pswitch_3
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/c;->e:Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->a(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;Landroid/animation/Animator;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->a(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;Landroid/animation/Animator;)Landroid/animation/Animator;
 
     goto/16 :goto_0
 

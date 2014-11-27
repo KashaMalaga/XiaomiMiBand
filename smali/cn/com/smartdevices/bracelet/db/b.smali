@@ -34,15 +34,16 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_1
 
-    const/4 v0, 0x0
+    :cond_0
+    const/4 v0, 0x1
 
     :goto_0
     return v0
 
-    :cond_0
-    const/4 v0, 0x1
+    :cond_1
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method
@@ -57,23 +58,23 @@
     move v1, v0
 
     :goto_0
-    if-lt v1, v2, :cond_1
+    if-ge v1, v2, :cond_0
 
-    const/4 v0, 0x1
-
-    :cond_0
-    return v0
-
-    :cond_1
     aget-object v3, p0, v1
 
     invoke-static {v3}, Lcn/com/smartdevices/bracelet/db/b;->a(Ljava/lang/String;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_0
+    if-eqz v3, :cond_1
 
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x1
+
+    :cond_1
+    return v0
 .end method

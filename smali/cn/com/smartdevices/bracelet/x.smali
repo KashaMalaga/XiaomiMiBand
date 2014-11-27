@@ -1,9 +1,9 @@
-.class Lcn/com/smartdevices/bracelet/x;
+.class final Lcn/com/smartdevices/bracelet/x;
 .super Ljava/util/TimerTask;
 
 
 # instance fields
-.field private final synthetic a:Ljava/lang/ref/WeakReference;
+.field final synthetic a:Ljava/lang/ref/WeakReference;
 
 
 # direct methods
@@ -51,7 +51,7 @@
 
     invoke-direct {v0, v1, v2}, Lcn/com/smartdevices/bracelet/a/g;-><init>(Lcn/com/smartdevices/bracelet/a/b;I)V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->a(Lcn/com/smartdevices/bracelet/a/g;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->a(Lcn/com/smartdevices/bracelet/a/g;)Lcn/com/smartdevices/bracelet/a/g;
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/PhoneStateReceiver;->a()Lcn/com/smartdevices/bracelet/a/g;
 

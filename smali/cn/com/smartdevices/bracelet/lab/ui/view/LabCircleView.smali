@@ -222,18 +222,18 @@
     return-object v0
 .end method
 
+.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;Landroid/animation/Animator;)Landroid/animation/Animator;
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->e:Landroid/animation/Animator;
+
+    return-object p1
+.end method
+
 .method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;I)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->f(I)V
-
-    return-void
-.end method
-
-.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;Landroid/animation/Animator;)V
-    .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->e:Landroid/animation/Animator;
 
     return-void
 .end method
@@ -252,20 +252,20 @@
     return-object v0
 .end method
 
+.method static synthetic b(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;Landroid/animation/Animator;)Landroid/animation/Animator;
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->d:Landroid/animation/Animator;
+
+    return-object p1
+.end method
+
 .method static synthetic b(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;)Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView$CircleView;
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->b:Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView$CircleView;
 
     return-object v0
-.end method
-
-.method static synthetic b(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;Landroid/animation/Animator;)V
-    .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->d:Landroid/animation/Animator;
-
-    return-void
 .end method
 
 .method static synthetic c(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;)Landroid/animation/Animator;
@@ -510,7 +510,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/view/c;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;Lcn/com/smartdevices/bracelet/lab/ui/view/c;)V
+    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/view/c;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;Lcn/com/smartdevices/bracelet/lab/ui/view/a;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->g:Lcn/com/smartdevices/bracelet/lab/ui/view/c;
 

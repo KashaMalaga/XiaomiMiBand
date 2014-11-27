@@ -9,7 +9,7 @@
 
 .field private c:I
 
-.field private d:Lcn/com/smartdevices/bracelet/ui/widget/b;
+.field private d:Lcn/com/smartdevices/bracelet/ui/widget/c;
 
 
 # direct methods
@@ -20,7 +20,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ac;->d:Lcn/com/smartdevices/bracelet/ui/widget/b;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ac;->d:Lcn/com/smartdevices/bracelet/ui/widget/c;
 
     return-void
 .end method
@@ -90,9 +90,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "BindData : "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/ac;->b:Lcn/com/smartdevices/bracelet/chart/c/r;
 
@@ -179,10 +183,10 @@
     return-void
 .end method
 
-.method public a(Lcn/com/smartdevices/bracelet/ui/widget/b;)V
+.method public a(Lcn/com/smartdevices/bracelet/ui/widget/c;)V
     .locals 1
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/ac;->d:Lcn/com/smartdevices/bracelet/ui/widget/b;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/ac;->d:Lcn/com/smartdevices/bracelet/ui/widget/c;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ac;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
 
@@ -190,7 +194,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ac;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/view/DynamicView;->a(Lcn/com/smartdevices/bracelet/ui/widget/b;)V
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/view/DynamicView;->a(Lcn/com/smartdevices/bracelet/ui/widget/c;)V
 
     :cond_0
     return-void
@@ -310,9 +314,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ac;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/ac;->d:Lcn/com/smartdevices/bracelet/ui/widget/b;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/ac;->d:Lcn/com/smartdevices/bracelet/ui/widget/c;
 
-    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/view/DynamicView;->a(Lcn/com/smartdevices/bracelet/ui/widget/b;)V
+    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/view/DynamicView;->a(Lcn/com/smartdevices/bracelet/ui/widget/c;)V
 
     return-object v1
 .end method

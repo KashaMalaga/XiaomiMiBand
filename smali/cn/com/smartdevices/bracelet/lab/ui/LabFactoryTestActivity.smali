@@ -178,26 +178,26 @@
     return-void
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->d()V
-
-    return-void
-.end method
-
-.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;I)V
+.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;I)I
     .locals 0
 
     iput p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->w:I
 
-    return-void
+    return p1
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;Ljava/lang/String;)V
+.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->q:Ljava/lang/String;
+
+    return-object p1
+.end method
+
+.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->d()V
 
     return-void
 .end method
@@ -264,9 +264,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "last action count: "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -348,9 +352,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, " enable = "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -391,6 +399,14 @@
     goto :goto_0
 .end method
 
+.method static synthetic b(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;Ljava/lang/String;)Ljava/lang/String;
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->b:Ljava/lang/String;
+
+    return-object p1
+.end method
+
 .method static synthetic b(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
     .locals 0
 
@@ -399,20 +415,12 @@
     return-void
 .end method
 
-.method static synthetic b(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;Ljava/lang/String;)V
-    .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->b:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method static synthetic b(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;Z)V
+.method static synthetic b(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;Z)Z
     .locals 0
 
     iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->a:Z
 
-    return-void
+    return p1
 .end method
 
 .method static synthetic b()[Ljava/lang/String;
@@ -463,9 +471,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "Count: "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -586,12 +598,12 @@
     return v0
 .end method
 
-.method static synthetic f(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/TextView;
+.method static synthetic f(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)I
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->k:Landroid/widget/TextView;
+    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->w:I
 
-    return-object v0
+    return v0
 .end method
 
 .method private f()V
@@ -624,12 +636,12 @@
     return-void
 .end method
 
-.method static synthetic g(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)I
+.method static synthetic g(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/TextView;
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->w:I
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->k:Landroid/widget/TextView;
 
-    return v0
+    return-object v0
 .end method
 
 .method private g()V
@@ -748,7 +760,7 @@
 
     move-result-object v3
 
-    invoke-interface {v3}, Landroid/text/Editable;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v3
 
@@ -996,22 +1008,19 @@
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->g:Landroid/widget/Button;
 
-    if-eqz v2, :cond_0
+    if-nez v2, :cond_0
 
-    :goto_0
+    move v0, v1
+
+    :cond_0
     invoke-virtual {v3, v0}, Landroid/widget/Button;->setEnabled(Z)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->l:Landroid/widget/Button;
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setEnabled(Z)V
 
-    :goto_1
+    :goto_0
     return-void
-
-    :cond_0
-    move v0, v1
-
-    goto :goto_0
 
     :cond_1
     new-instance v0, Landroid/app/AlertDialog$Builder;
@@ -1026,9 +1035,9 @@
 
     const v1, 0x1040013
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/lab/ui/k;
+    new-instance v2, Lcn/com/smartdevices/bracelet/lab/ui/l;
 
-    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/lab/ui/k;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
+    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/lab/ui/l;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1036,9 +1045,9 @@
 
     const/high16 v1, 0x1040000
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/lab/ui/m;
+    new-instance v2, Lcn/com/smartdevices/bracelet/lab/ui/k;
 
-    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/lab/ui/m;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
+    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/lab/ui/k;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1046,7 +1055,7 @@
 
     invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
 
-    goto :goto_1
+    goto :goto_0
 .end method
 
 .method static synthetic p(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/EditText;
@@ -1151,19 +1160,19 @@
 
     new-instance v6, Ljava/lang/StringBuilder;
 
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
     invoke-static {v1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    invoke-direct {v6, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v6, " "
 
-    const-string v1, " "
-
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -1682,9 +1691,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "mTotalCount = "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->w:I
 
@@ -1702,9 +1715,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "mIsCheat = "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     iget-boolean v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->x:Z
 
@@ -1732,9 +1749,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "Failed to analyse this time, current mTotalCount = "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->w:I
 

@@ -222,7 +222,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     :goto_1
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bW;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bY;
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/V;->getActivity()Landroid/app/Activity;
 
@@ -268,11 +268,11 @@
 
     const/4 v13, 0x1
 
-    invoke-direct/range {v0 .. v13}, Lcn/com/smartdevices/bracelet/ui/bW;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
+    invoke-direct/range {v0 .. v13}, Lcn/com/smartdevices/bracelet/ui/bY;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
 
     const/16 v1, 0x9
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/bW;->a(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/bY;->a(I)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/V;->f:Lkankan/wheel/widget/WheelView;
 
@@ -316,7 +316,7 @@
 
     invoke-virtual {v0, p0}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/d;)V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bW;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bY;
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/V;->getActivity()Landroid/app/Activity;
 
@@ -362,7 +362,7 @@
 
     const/4 v13, 0x1
 
-    invoke-direct/range {v0 .. v13}, Lcn/com/smartdevices/bracelet/ui/bW;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
+    invoke-direct/range {v0 .. v13}, Lcn/com/smartdevices/bracelet/ui/bY;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/V;->g:Lkankan/wheel/widget/WheelView;
 
@@ -721,9 +721,13 @@
 
     new-instance v4, Ljava/lang/StringBuilder;
 
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v5, "Selection Time : "
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
 
     invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -789,9 +793,13 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "Selection Time Is Before : "
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     aget v4, v0, v8
 
@@ -871,9 +879,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "Selection Time Is After : "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     aget v3, v0, v8
 
@@ -946,9 +958,13 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "Selection Time Is After : "
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     aget v4, v0, v8
 
@@ -1074,9 +1090,13 @@
 
     new-instance v4, Ljava/lang/StringBuilder;
 
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v5, "Sleep Time Modified : "
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
 
     invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

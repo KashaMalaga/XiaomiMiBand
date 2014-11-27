@@ -5,8 +5,6 @@
 # static fields
 .field private static final a:I = 0x18
 
-.field private static synthetic b:[I
-
 
 # direct methods
 .method public constructor <init>()V
@@ -66,9 +64,7 @@
     return-object v0
 
     :cond_0
-    invoke-static {}, Lcom/edmodo/cropper/a/b;->a()[I
-
-    move-result-object v1
+    sget-object v1, Lcom/edmodo/cropper/a/c;->a:[I
 
     invoke-virtual {p0}, Lcom/edmodo/cropper/cropwindow/b/c;->ordinal()I
 
@@ -242,7 +238,7 @@
 
     if-eqz v0, :cond_4
 
-    invoke-static {}, Lcom/edmodo/cropper/a/b;->b()Z
+    invoke-static {}, Lcom/edmodo/cropper/a/b;->a()Z
 
     move-result v0
 
@@ -351,7 +347,7 @@
 
     if-eqz v0, :cond_9
 
-    invoke-static {}, Lcom/edmodo/cropper/a/b;->b()Z
+    invoke-static {}, Lcom/edmodo/cropper/a/b;->a()Z
 
     move-result v0
 
@@ -363,6 +359,26 @@
 
     :cond_9
     move-object v0, v6
+
+    goto :goto_0
+.end method
+
+.method private static a()Z
+    .locals 1
+
+    invoke-static {}, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->b()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method
@@ -429,221 +445,6 @@
 
     :cond_0
     const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method static synthetic a()[I
-    .locals 3
-
-    sget-object v0, Lcom/edmodo/cropper/a/b;->b:[I
-
-    if-eqz v0, :cond_0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    invoke-static {}, Lcom/edmodo/cropper/cropwindow/b/c;->values()[Lcom/edmodo/cropper/cropwindow/b/c;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    :try_start_0
-    sget-object v1, Lcom/edmodo/cropper/cropwindow/b/c;->h:Lcom/edmodo/cropper/cropwindow/b/c;
-
-    invoke-virtual {v1}, Lcom/edmodo/cropper/cropwindow/b/c;->ordinal()I
-
-    move-result v1
-
-    const/16 v2, 0x8
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_8
-
-    :goto_1
-    :try_start_1
-    sget-object v1, Lcom/edmodo/cropper/cropwindow/b/c;->c:Lcom/edmodo/cropper/cropwindow/b/c;
-
-    invoke-virtual {v1}, Lcom/edmodo/cropper/cropwindow/b/c;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_7
-
-    :goto_2
-    :try_start_2
-    sget-object v1, Lcom/edmodo/cropper/cropwindow/b/c;->d:Lcom/edmodo/cropper/cropwindow/b/c;
-
-    invoke-virtual {v1}, Lcom/edmodo/cropper/cropwindow/b/c;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_6
-
-    :goto_3
-    :try_start_3
-    sget-object v1, Lcom/edmodo/cropper/cropwindow/b/c;->i:Lcom/edmodo/cropper/cropwindow/b/c;
-
-    invoke-virtual {v1}, Lcom/edmodo/cropper/cropwindow/b/c;->ordinal()I
-
-    move-result v1
-
-    const/16 v2, 0x9
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_5
-
-    :goto_4
-    :try_start_4
-    sget-object v1, Lcom/edmodo/cropper/cropwindow/b/c;->e:Lcom/edmodo/cropper/cropwindow/b/c;
-
-    invoke-virtual {v1}, Lcom/edmodo/cropper/cropwindow/b/c;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x5
-
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :goto_5
-    :try_start_5
-    sget-object v1, Lcom/edmodo/cropper/cropwindow/b/c;->g:Lcom/edmodo/cropper/cropwindow/b/c;
-
-    invoke-virtual {v1}, Lcom/edmodo/cropper/cropwindow/b/c;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x7
-
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_3
-
-    :goto_6
-    :try_start_6
-    sget-object v1, Lcom/edmodo/cropper/cropwindow/b/c;->f:Lcom/edmodo/cropper/cropwindow/b/c;
-
-    invoke-virtual {v1}, Lcom/edmodo/cropper/cropwindow/b/c;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x6
-
-    aput v2, v0, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_2
-
-    :goto_7
-    :try_start_7
-    sget-object v1, Lcom/edmodo/cropper/cropwindow/b/c;->a:Lcom/edmodo/cropper/cropwindow/b/c;
-
-    invoke-virtual {v1}, Lcom/edmodo/cropper/cropwindow/b/c;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_1
-
-    :goto_8
-    :try_start_8
-    sget-object v1, Lcom/edmodo/cropper/cropwindow/b/c;->b:Lcom/edmodo/cropper/cropwindow/b/c;
-
-    invoke-virtual {v1}, Lcom/edmodo/cropper/cropwindow/b/c;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_8
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_0
-
-    :goto_9
-    sput-object v0, Lcom/edmodo/cropper/a/b;->b:[I
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v1
-
-    goto :goto_9
-
-    :catch_1
-    move-exception v1
-
-    goto :goto_8
-
-    :catch_2
-    move-exception v1
-
-    goto :goto_7
-
-    :catch_3
-    move-exception v1
-
-    goto :goto_6
-
-    :catch_4
-    move-exception v1
-
-    goto :goto_5
-
-    :catch_5
-    move-exception v1
-
-    goto :goto_4
-
-    :catch_6
-    move-exception v1
-
-    goto :goto_3
-
-    :catch_7
-    move-exception v1
-
-    goto :goto_2
-
-    :catch_8
-    move-exception v1
-
-    goto :goto_1
-.end method
-
-.method private static b()Z
-    .locals 1
-
-    invoke-static {}, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->b()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x1
 
     goto :goto_0
 .end method

@@ -5,15 +5,6 @@
 .implements Landroid/widget/AdapterView$OnItemSelectedListener;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Landroid/widget/AdapterView$OnItemSelectedListener;"
-    }
-.end annotation
-
-
 # instance fields
 .field final synthetic a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
 
@@ -51,7 +42,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/q;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->b(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->b(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;Ljava/lang/String;)Ljava/lang/String;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/q;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
 

@@ -455,13 +455,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     iget-wide v3, p0, Lcn/com/smartdevices/bracelet/gps/services/m;->p:D
 
-    invoke-static {v3, v4}, Ljava/lang/String;->valueOf(D)Ljava/lang/String;
+    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v2
 
     const-string v3, ":"
 
@@ -485,13 +485,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     iget-wide v3, p0, Lcn/com/smartdevices/bracelet/gps/services/m;->r:D
 
-    invoke-static {v3, v4}, Ljava/lang/String;->valueOf(D)Ljava/lang/String;
+    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v2
 
     const-string v3, ":"
 

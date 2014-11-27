@@ -81,9 +81,9 @@
 
 .field private P:I
 
-.field private Q:Lcn/com/smartdevices/bracelet/view/L;
+.field private Q:Lcn/com/smartdevices/bracelet/view/M;
 
-.field private R:Lcn/com/smartdevices/bracelet/view/K;
+.field private R:Lcn/com/smartdevices/bracelet/view/L;
 
 .field private S:Landroid/view/VelocityTracker;
 
@@ -116,9 +116,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/view/J;
+    new-instance v0, Lcn/com/smartdevices/bracelet/view/K;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/view/J;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/view/K;-><init>()V
 
     sput-object v0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->k:Landroid/view/animation/Interpolator;
 
@@ -232,6 +232,8 @@
 
     new-array v3, v7, [I
 
+    aput v5, v3, v5
+
     const/16 v4, 0x63
 
     invoke-static {v4, v5, v5, v5}, Landroid/graphics/Color;->argb(IIII)I
@@ -266,6 +268,8 @@
     move-result v4
 
     aput v4, v3, v5
+
+    aput v5, v3, v6
 
     invoke-direct {v0, v2, v3}, Landroid/graphics/drawable/GradientDrawable;-><init>(Landroid/graphics/drawable/GradientDrawable$Orientation;[I)V
 
@@ -596,7 +600,7 @@
 
     iput v1, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->y:I
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->Q:Lcn/com/smartdevices/bracelet/view/L;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->Q:Lcn/com/smartdevices/bracelet/view/M;
 
     if-eqz v0, :cond_2
 
@@ -616,9 +620,9 @@
 
     :cond_1
     :goto_1
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->Q:Lcn/com/smartdevices/bracelet/view/L;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->Q:Lcn/com/smartdevices/bracelet/view/M;
 
-    invoke-interface {v1, v0}, Lcn/com/smartdevices/bracelet/view/L;->a(F)V
+    invoke-interface {v1, v0}, Lcn/com/smartdevices/bracelet/view/M;->a(F)V
 
     :cond_2
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/view/SlideMenu;->r()V
@@ -1112,18 +1116,18 @@
     return-void
 .end method
 
-.method public a(Lcn/com/smartdevices/bracelet/view/K;)V
+.method public a(Lcn/com/smartdevices/bracelet/view/L;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->R:Lcn/com/smartdevices/bracelet/view/K;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->R:Lcn/com/smartdevices/bracelet/view/L;
 
     return-void
 .end method
 
-.method public a(Lcn/com/smartdevices/bracelet/view/L;)V
+.method public a(Lcn/com/smartdevices/bracelet/view/M;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->Q:Lcn/com/smartdevices/bracelet/view/L;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->Q:Lcn/com/smartdevices/bracelet/view/M;
 
     return-void
 .end method
@@ -1192,7 +1196,7 @@
 
     instance-of v0, p1, Landroid/view/ViewGroup;
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_2
 
     move-object v0, p1
 
@@ -1213,19 +1217,8 @@
     const/4 v1, 0x0
 
     :goto_0
-    if-lt v1, v4, :cond_1
+    if-ge v1, v4, :cond_2
 
-    :cond_0
-    neg-int v0, p2
-
-    invoke-static {p1, v0}, Landroid/support/v4/view/as;->a(Landroid/view/View;I)Z
-
-    move-result v0
-
-    :goto_1
-    return v0
-
-    :cond_1
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v5
@@ -1240,7 +1233,7 @@
 
     add-int v8, p3, v2
 
-    if-lt v8, v6, :cond_3
+    if-lt v8, v6, :cond_1
 
     add-int v8, p3, v2
 
@@ -1248,11 +1241,11 @@
 
     move-result v9
 
-    if-ge v8, v9, :cond_3
+    if-ge v8, v9, :cond_1
 
     add-int v8, p4, v3
 
-    if-lt v8, v7, :cond_3
+    if-lt v8, v7, :cond_1
 
     add-int v8, p4, v3
 
@@ -1260,19 +1253,19 @@
 
     move-result v9
 
-    if-ge v8, v9, :cond_3
+    if-ge v8, v9, :cond_1
 
     invoke-virtual {v5}, Landroid/view/View;->getVisibility()I
 
     move-result v8
 
-    if-nez v8, :cond_3
+    if-nez v8, :cond_1
 
     invoke-static {v5, p2}, Lcn/com/smartdevices/bracelet/view/D;->a(Landroid/view/View;I)Z
 
     move-result v8
 
-    if-nez v8, :cond_2
+    if-nez v8, :cond_0
 
     add-int v8, p3, v2
 
@@ -1286,17 +1279,27 @@
 
     move-result v5
 
-    if-eqz v5, :cond_3
+    if-eqz v5, :cond_1
 
-    :cond_2
+    :cond_0
     const/4 v0, 0x1
 
-    goto :goto_1
+    :goto_1
+    return v0
 
-    :cond_3
+    :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
+
+    :cond_2
+    neg-int v0, p2
+
+    invoke-static {p1, v0}, Landroid/support/v4/view/as;->a(Landroid/view/View;I)Z
+
+    move-result v0
+
+    goto :goto_1
 .end method
 
 .method public addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
@@ -1669,7 +1672,7 @@
 .method protected d(I)V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->Q:Lcn/com/smartdevices/bracelet/view/L;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->Q:Lcn/com/smartdevices/bracelet/view/M;
 
     if-eqz v0, :cond_0
 
@@ -1677,9 +1680,9 @@
 
     if-eq p1, v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->Q:Lcn/com/smartdevices/bracelet/view/L;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->Q:Lcn/com/smartdevices/bracelet/view/M;
 
-    invoke-interface {v0, p1}, Lcn/com/smartdevices/bracelet/view/L;->a(I)V
+    invoke-interface {v0, p1}, Lcn/com/smartdevices/bracelet/view/M;->a(I)V
 
     :cond_0
     iput p1, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->r:I
@@ -1857,18 +1860,18 @@
     return v0
 .end method
 
-.method public j()Lcn/com/smartdevices/bracelet/view/L;
+.method public j()Lcn/com/smartdevices/bracelet/view/M;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->Q:Lcn/com/smartdevices/bracelet/view/L;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->Q:Lcn/com/smartdevices/bracelet/view/M;
 
     return-object v0
 .end method
 
-.method public k()Lcn/com/smartdevices/bracelet/view/K;
+.method public k()Lcn/com/smartdevices/bracelet/view/L;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->R:Lcn/com/smartdevices/bracelet/view/K;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->R:Lcn/com/smartdevices/bracelet/view/L;
 
     return-object v0
 .end method
@@ -1915,13 +1918,13 @@
     return-void
 
     :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->R:Lcn/com/smartdevices/bracelet/view/K;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->R:Lcn/com/smartdevices/bracelet/view/L;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->R:Lcn/com/smartdevices/bracelet/view/K;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SlideMenu;->R:Lcn/com/smartdevices/bracelet/view/L;
 
-    invoke-interface {v0, p0}, Lcn/com/smartdevices/bracelet/view/K;->a(Lcn/com/smartdevices/bracelet/view/SlideMenu;)V
+    invoke-interface {v0, p0}, Lcn/com/smartdevices/bracelet/view/L;->a(Lcn/com/smartdevices/bracelet/view/SlideMenu;)V
 
     goto :goto_0
 .end method
@@ -2097,18 +2100,8 @@
     move v2, v0
 
     :goto_1
-    if-lt v2, v3, :cond_1
+    if-ge v2, v3, :cond_1
 
-    return-void
-
-    :cond_0
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_1
     invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/view/SlideMenu;->getChildAt(I)Landroid/view/View;
 
     move-result-object v7
@@ -2137,6 +2130,13 @@
     move v2, v0
 
     goto :goto_1
+
+    :cond_0
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    goto :goto_0
 
     :pswitch_0
     invoke-virtual {v7}, Landroid/view/View;->bringToFront()V
@@ -2193,6 +2193,9 @@
 
     goto :goto_2
 
+    :cond_1
+    return-void
+
     nop
 
     :pswitch_data_0
@@ -2223,45 +2226,8 @@
     move v3, v0
 
     :goto_0
-    if-lt v1, v4, :cond_0
+    if-ge v1, v4, :cond_1
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/SlideMenu;->getPaddingLeft()I
-
-    move-result v0
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/SlideMenu;->getPaddingRight()I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    add-int/2addr v0, v3
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/SlideMenu;->getPaddingTop()I
-
-    move-result v1
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/SlideMenu;->getPaddingBottom()I
-
-    move-result v3
-
-    add-int/2addr v1, v3
-
-    add-int/2addr v1, v2
-
-    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/view/SlideMenu;->resolveSize(II)I
-
-    move-result v0
-
-    invoke-static {v1, p2}, Lcn/com/smartdevices/bracelet/view/SlideMenu;->resolveSize(II)I
-
-    move-result v1
-
-    invoke-virtual {p0, v0, v1}, Lcn/com/smartdevices/bracelet/view/SlideMenu;->setMeasuredDimension(II)V
-
-    return-void
-
-    :cond_0
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/view/SlideMenu;->getChildAt(I)Landroid/view/View;
 
     move-result-object v7
@@ -2307,7 +2273,7 @@
     :pswitch_1
     const/4 v0, 0x1
 
-    if-ne v5, v0, :cond_1
+    if-ne v5, v0, :cond_0
 
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
@@ -2328,10 +2294,47 @@
 
     goto :goto_1
 
-    :cond_1
+    :cond_0
     move v0, p2
 
     goto :goto_2
+
+    :cond_1
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/SlideMenu;->getPaddingLeft()I
+
+    move-result v0
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/SlideMenu;->getPaddingRight()I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    add-int/2addr v0, v3
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/SlideMenu;->getPaddingTop()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/view/SlideMenu;->getPaddingBottom()I
+
+    move-result v3
+
+    add-int/2addr v1, v3
+
+    add-int/2addr v1, v2
+
+    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/view/SlideMenu;->resolveSize(II)I
+
+    move-result v0
+
+    invoke-static {v1, p2}, Lcn/com/smartdevices/bracelet/view/SlideMenu;->resolveSize(II)I
+
+    move-result v1
+
+    invoke-virtual {p0, v0, v1}, Lcn/com/smartdevices/bracelet/view/SlideMenu;->setMeasuredDimension(II)V
+
+    return-void
 
     nop
 

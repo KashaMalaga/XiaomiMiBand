@@ -1,4 +1,4 @@
-.class Lcn/com/smartdevices/bracelet/c;
+.class final Lcn/com/smartdevices/bracelet/c;
 .super Ljava/lang/Object;
 
 # interfaces
@@ -25,7 +25,7 @@
 
     check-cast p2, Lcom/xiaomi/hm/bleservice/t;
 
-    invoke-static {p2}, Lcn/com/smartdevices/bracelet/b;->a(Lcom/xiaomi/hm/bleservice/t;)V
+    invoke-static {p2}, Lcn/com/smartdevices/bracelet/b;->a(Lcom/xiaomi/hm/bleservice/t;)Lcom/xiaomi/hm/bleservice/t;
 
     :cond_0
     return-void
@@ -36,7 +36,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/b;->a(Lcom/xiaomi/hm/bleservice/t;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/b;->a(Lcom/xiaomi/hm/bleservice/t;)Lcom/xiaomi/hm/bleservice/t;
 
     return-void
 .end method

@@ -11,7 +11,7 @@
 
 .field private c:Lcom/edmodo/cropper/cropwindow/a/a;
 
-.field private d:Lcom/edmodo/cropper/cropwindow/a/b;
+.field private d:Lcom/edmodo/cropper/cropwindow/a/c;
 
 
 # direct methods
@@ -24,15 +24,15 @@
 
     iput-object p2, p0, Lcom/edmodo/cropper/cropwindow/b/d;->c:Lcom/edmodo/cropper/cropwindow/a/a;
 
-    new-instance v0, Lcom/edmodo/cropper/cropwindow/a/b;
+    new-instance v0, Lcom/edmodo/cropper/cropwindow/a/c;
 
     iget-object v1, p0, Lcom/edmodo/cropper/cropwindow/b/d;->b:Lcom/edmodo/cropper/cropwindow/a/a;
 
     iget-object v2, p0, Lcom/edmodo/cropper/cropwindow/b/d;->c:Lcom/edmodo/cropper/cropwindow/a/a;
 
-    invoke-direct {v0, v1, v2}, Lcom/edmodo/cropper/cropwindow/a/b;-><init>(Lcom/edmodo/cropper/cropwindow/a/a;Lcom/edmodo/cropper/cropwindow/a/a;)V
+    invoke-direct {v0, v1, v2}, Lcom/edmodo/cropper/cropwindow/a/c;-><init>(Lcom/edmodo/cropper/cropwindow/a/a;Lcom/edmodo/cropper/cropwindow/a/a;)V
 
-    iput-object v0, p0, Lcom/edmodo/cropper/cropwindow/b/d;->d:Lcom/edmodo/cropper/cropwindow/a/b;
+    iput-object v0, p0, Lcom/edmodo/cropper/cropwindow/b/d;->d:Lcom/edmodo/cropper/cropwindow/a/c;
 
     return-void
 .end method
@@ -117,15 +117,15 @@
 
 
 # virtual methods
-.method a()Lcom/edmodo/cropper/cropwindow/a/b;
+.method a()Lcom/edmodo/cropper/cropwindow/a/c;
     .locals 1
 
-    iget-object v0, p0, Lcom/edmodo/cropper/cropwindow/b/d;->d:Lcom/edmodo/cropper/cropwindow/a/b;
+    iget-object v0, p0, Lcom/edmodo/cropper/cropwindow/b/d;->d:Lcom/edmodo/cropper/cropwindow/a/c;
 
     return-object v0
 .end method
 
-.method a(FFF)Lcom/edmodo/cropper/cropwindow/a/b;
+.method a(FFF)Lcom/edmodo/cropper/cropwindow/a/c;
     .locals 2
 
     invoke-direct {p0, p1, p2}, Lcom/edmodo/cropper/cropwindow/b/d;->a(FF)F
@@ -136,35 +136,35 @@
 
     if-lez v0, :cond_0
 
-    iget-object v0, p0, Lcom/edmodo/cropper/cropwindow/b/d;->d:Lcom/edmodo/cropper/cropwindow/a/b;
+    iget-object v0, p0, Lcom/edmodo/cropper/cropwindow/b/d;->d:Lcom/edmodo/cropper/cropwindow/a/c;
 
     iget-object v1, p0, Lcom/edmodo/cropper/cropwindow/b/d;->c:Lcom/edmodo/cropper/cropwindow/a/a;
 
-    iput-object v1, v0, Lcom/edmodo/cropper/cropwindow/a/b;->a:Lcom/edmodo/cropper/cropwindow/a/a;
+    iput-object v1, v0, Lcom/edmodo/cropper/cropwindow/a/c;->a:Lcom/edmodo/cropper/cropwindow/a/a;
 
-    iget-object v0, p0, Lcom/edmodo/cropper/cropwindow/b/d;->d:Lcom/edmodo/cropper/cropwindow/a/b;
+    iget-object v0, p0, Lcom/edmodo/cropper/cropwindow/b/d;->d:Lcom/edmodo/cropper/cropwindow/a/c;
 
     iget-object v1, p0, Lcom/edmodo/cropper/cropwindow/b/d;->b:Lcom/edmodo/cropper/cropwindow/a/a;
 
-    iput-object v1, v0, Lcom/edmodo/cropper/cropwindow/a/b;->b:Lcom/edmodo/cropper/cropwindow/a/a;
+    iput-object v1, v0, Lcom/edmodo/cropper/cropwindow/a/c;->b:Lcom/edmodo/cropper/cropwindow/a/a;
 
     :goto_0
-    iget-object v0, p0, Lcom/edmodo/cropper/cropwindow/b/d;->d:Lcom/edmodo/cropper/cropwindow/a/b;
+    iget-object v0, p0, Lcom/edmodo/cropper/cropwindow/b/d;->d:Lcom/edmodo/cropper/cropwindow/a/c;
 
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/edmodo/cropper/cropwindow/b/d;->d:Lcom/edmodo/cropper/cropwindow/a/b;
+    iget-object v0, p0, Lcom/edmodo/cropper/cropwindow/b/d;->d:Lcom/edmodo/cropper/cropwindow/a/c;
 
     iget-object v1, p0, Lcom/edmodo/cropper/cropwindow/b/d;->b:Lcom/edmodo/cropper/cropwindow/a/a;
 
-    iput-object v1, v0, Lcom/edmodo/cropper/cropwindow/a/b;->a:Lcom/edmodo/cropper/cropwindow/a/a;
+    iput-object v1, v0, Lcom/edmodo/cropper/cropwindow/a/c;->a:Lcom/edmodo/cropper/cropwindow/a/a;
 
-    iget-object v0, p0, Lcom/edmodo/cropper/cropwindow/b/d;->d:Lcom/edmodo/cropper/cropwindow/a/b;
+    iget-object v0, p0, Lcom/edmodo/cropper/cropwindow/b/d;->d:Lcom/edmodo/cropper/cropwindow/a/c;
 
     iget-object v1, p0, Lcom/edmodo/cropper/cropwindow/b/d;->c:Lcom/edmodo/cropper/cropwindow/a/a;
 
-    iput-object v1, v0, Lcom/edmodo/cropper/cropwindow/a/b;->b:Lcom/edmodo/cropper/cropwindow/a/a;
+    iput-object v1, v0, Lcom/edmodo/cropper/cropwindow/a/c;->b:Lcom/edmodo/cropper/cropwindow/a/a;
 
     goto :goto_0
 .end method
@@ -177,13 +177,13 @@
 
     const/high16 v5, 0x3f800000
 
-    invoke-virtual {p0}, Lcom/edmodo/cropper/cropwindow/b/d;->a()Lcom/edmodo/cropper/cropwindow/a/b;
+    invoke-virtual {p0}, Lcom/edmodo/cropper/cropwindow/b/d;->a()Lcom/edmodo/cropper/cropwindow/a/c;
 
     move-result-object v1
 
-    iget-object v0, v1, Lcom/edmodo/cropper/cropwindow/a/b;->a:Lcom/edmodo/cropper/cropwindow/a/a;
+    iget-object v0, v1, Lcom/edmodo/cropper/cropwindow/a/c;->a:Lcom/edmodo/cropper/cropwindow/a/a;
 
-    iget-object v6, v1, Lcom/edmodo/cropper/cropwindow/a/b;->b:Lcom/edmodo/cropper/cropwindow/a/a;
+    iget-object v6, v1, Lcom/edmodo/cropper/cropwindow/a/c;->b:Lcom/edmodo/cropper/cropwindow/a/a;
 
     if-eqz v0, :cond_0
 

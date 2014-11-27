@@ -27,13 +27,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/i;->a:Lcn/com/smartdevices/bracelet/lab/h;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/h;->a(Lcn/com/smartdevices/bracelet/lab/h;)Lcn/com/smartdevices/bracelet/lab/g;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/lab/h;->c:Lcn/com/smartdevices/bracelet/lab/g;
 
-    move-result-object v0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/g;->a(Lcn/com/smartdevices/bracelet/lab/g;)Lcn/com/smartdevices/bracelet/lab/f;
-
-    move-result-object v0
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/lab/g;->b:Lcn/com/smartdevices/bracelet/lab/f;
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/f;->a(Lcn/com/smartdevices/bracelet/lab/f;)Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 

@@ -54,11 +54,8 @@
     :goto_0
     sget v1, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->RING_SIZE:I
 
-    if-lt v0, v1, :cond_0
+    if-ge v0, v1, :cond_0
 
-    return-void
-
-    :cond_0
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->b:Ljava/util/ArrayList;
 
     new-instance v2, Lcn/com/smartdevices/bracelet/gps/b/n;
@@ -70,6 +67,9 @@
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    :cond_0
+    return-void
 .end method
 
 

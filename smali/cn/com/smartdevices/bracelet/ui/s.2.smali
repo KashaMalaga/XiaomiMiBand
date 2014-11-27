@@ -3,18 +3,18 @@
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
+.field final synthetic a:J
 
-.field private final synthetic b:J
+.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
 
 
 # direct methods
 .method constructor <init>(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;J)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/s;->a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/s;->b:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
 
-    iput-wide p2, p0, Lcn/com/smartdevices/bracelet/ui/s;->b:J
+    iput-wide p2, p0, Lcn/com/smartdevices/bracelet/ui/s;->a:J
 
     invoke-direct {p0}, Lcom/c/a/a/h;-><init>()V
 
@@ -126,9 +126,13 @@
 
     new-instance v7, Ljava/lang/StringBuilder;
 
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v8, "ntp tz:"
 
-    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
 
     invoke-virtual {v7, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -154,9 +158,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v6, "ntp ts:"
 
-    invoke-direct {v2, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -190,7 +198,7 @@
 
     move-result-wide v2
 
-    iget-wide v6, p0, Lcn/com/smartdevices/bracelet/ui/s;->b:J
+    iget-wide v6, p0, Lcn/com/smartdevices/bracelet/ui/s;->a:J
 
     sub-long/2addr v2, v6
 
@@ -224,9 +232,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "\n=========================ERROR=========================\nserver time:"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v4}, Ljava/util/Date;->toString()Ljava/lang/String;
 
@@ -274,7 +286,7 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/s;->a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/s;->b:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->g(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Landroid/content/Context;
 

@@ -1,11 +1,11 @@
-.class Lcn/com/smartdevices/bracelet/gps/c/b;
+.class final Lcn/com/smartdevices/bracelet/gps/c/b;
 .super Lcom/c/a/a/h;
 
 
 # instance fields
-.field private final synthetic a:I
+.field final synthetic a:I
 
-.field private final synthetic b:Landroid/content/Context;
+.field final synthetic b:Landroid/content/Context;
 
 
 # direct methods
@@ -34,9 +34,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "syncSportConfigFromServer onFailure statusCode = "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -108,9 +112,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "syncSportConfigFromServer onFailure statusCode = "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

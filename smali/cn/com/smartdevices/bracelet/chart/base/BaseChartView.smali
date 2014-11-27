@@ -28,7 +28,7 @@
     .end annotation
 .end field
 
-.field protected b:Lcn/com/smartdevices/bracelet/chart/b/c;
+.field protected b:Lcn/com/smartdevices/bracelet/chart/b/d;
 
 .field protected c:Z
 
@@ -165,10 +165,10 @@
     return-void
 .end method
 
-.method public a(Lcn/com/smartdevices/bracelet/chart/b/c;)V
+.method public a(Lcn/com/smartdevices/bracelet/chart/b/d;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->b:Lcn/com/smartdevices/bracelet/chart/b/c;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->b:Lcn/com/smartdevices/bracelet/chart/b/d;
 
     return-void
 .end method
@@ -271,10 +271,10 @@
     return v0
 .end method
 
-.method public h()Lcn/com/smartdevices/bracelet/chart/b/c;
+.method public h()Lcn/com/smartdevices/bracelet/chart/b/d;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->b:Lcn/com/smartdevices/bracelet/chart/b/c;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->b:Lcn/com/smartdevices/bracelet/chart/b/d;
 
     return-object v0
 .end method

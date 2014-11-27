@@ -1,91 +1,129 @@
 .class Lcn/com/smartdevices/bracelet/ui/au;
-.super Lcn/com/smartdevices/bracelet/a/b;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/au;->b:Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/au;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/a/b;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b()V
-    .locals 0
+.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 7
 
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/a/b;->b()V
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public c(Ljava/lang/Object;)V
-    .locals 3
+    check-cast v0, Ljava/lang/Integer;
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->c(Ljava/lang/Object;)V
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
-    if-nez v0, :cond_0
+    mul-int/lit8 v1, v0, 0x64
 
-    if-eqz v0, :cond_1
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/au;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
 
-    const-string v0, "\u8bbe\u5b9a\u76ee\u6807\u6210\u529f!"
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->f(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Lcn/com/smartdevices/bracelet/view/RoundProgressBar;
 
-    :goto_0
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/au;->b:Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;
+    move-result-object v2
 
-    const/4 v2, 0x0
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->a()I
 
-    invoke-static {v1, v0, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
+    move-result v2
 
-    move-result-object v0
+    div-int/2addr v1, v2
 
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->c()Ljava/lang/String;
 
-    :cond_0
-    return-void
+    move-result-object v2
 
-    :cond_1
-    const-string v0, "\u8bbe\u5b9a\u76ee\u6807\u5931\u8d25!"
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    goto :goto_0
-.end method
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-.method public d(Ljava/lang/Object;)V
-    .locals 3
+    const-string v4, "fw upgrade progress:"
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->d(Ljava/lang/Object;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/au;->b:Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;
+    move-result-object v3
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/au;->b:Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const v2, 0x7f0c0045
+    move-result-object v3
 
-    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->getString(I)Ljava/lang/String;
+    const-string v4, ", "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, "%"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/au;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->i(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Landroid/widget/TextView;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/ui/au;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+
+    const v4, 0x7f0c01b6
+
+    const/4 v5, 0x1
+
+    new-array v5, v5, [Ljava/lang/Object;
+
+    const/4 v6, 0x0
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    const/4 v2, 0x0
+    aput-object v1, v5, v6
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
+    invoke-virtual {v3, v4, v5}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/au;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->f(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Lcn/com/smartdevices/bracelet/view/RoundProgressBar;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->b(I)V
 
     return-void
 .end method

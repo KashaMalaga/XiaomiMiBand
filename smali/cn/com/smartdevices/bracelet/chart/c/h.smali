@@ -1,4 +1,4 @@
-.class Lcn/com/smartdevices/bracelet/chart/c/h;
+.class final Lcn/com/smartdevices/bracelet/chart/c/h;
 .super Ljava/lang/Object;
 
 # interfaces

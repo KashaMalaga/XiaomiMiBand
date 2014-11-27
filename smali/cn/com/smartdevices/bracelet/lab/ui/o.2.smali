@@ -36,7 +36,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/o;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->g(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)I
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->f(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)I
 
     move-result v1
 

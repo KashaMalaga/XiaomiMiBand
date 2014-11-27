@@ -530,9 +530,13 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "0"
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -557,9 +561,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "0"
 
-    invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -684,8 +692,20 @@
     move v0, v4
 
     :goto_1
-    if-gtz v1, :cond_5
+    if-lez v1, :cond_5
 
+    and-int/lit8 v2, v1, 0x1
+
+    if-ne v2, v8, :cond_4
+
+    add-int/lit8 v0, v0, 0x1
+
+    :cond_4
+    shr-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
+
+    :cond_5
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -716,15 +736,46 @@
     :goto_3
     const/4 v6, 0x7
 
-    if-lt v3, v6, :cond_8
+    if-ge v3, v6, :cond_8
 
+    iget v6, p0, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->mDays:I
+
+    shl-int v7, v8, v3
+
+    and-int/2addr v6, v7
+
+    if-eqz v6, :cond_6
+
+    aget-object v6, v1, v3
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v2, v2, -0x1
+
+    if-lez v2, :cond_6
+
+    const-string v6, " "
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_6
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_3
+
+    :cond_7
+    move-object v1, v2
+
+    goto :goto_2
+
+    :cond_8
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->length()I
 
     move-result v1
 
-    if-lez v1, :cond_4
+    if-lez v1, :cond_9
 
-    if-le v0, v8, :cond_4
+    if-le v0, v8, :cond_9
 
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -738,53 +789,10 @@
 
     invoke-virtual {v5, v4, v0}, Ljava/lang/StringBuilder;->insert(ILjava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_4
+    :cond_9
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    goto :goto_0
-
-    :cond_5
-    and-int/lit8 v2, v1, 0x1
-
-    if-ne v2, v8, :cond_6
-
-    add-int/lit8 v0, v0, 0x1
-
-    :cond_6
-    shr-int/lit8 v1, v1, 0x1
-
-    goto :goto_1
-
-    :cond_7
-    move-object v1, v2
-
-    goto :goto_2
-
-    :cond_8
-    iget v6, p0, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->mDays:I
-
-    shl-int v7, v8, v3
-
-    and-int/2addr v6, v7
-
-    if-eqz v6, :cond_9
-
-    aget-object v6, v1, v3
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v2, v2, -0x1
-
-    if-lez v2, :cond_9
-
-    const-string v6, " "
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_9
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_3
+    goto/16 :goto_0
 .end method

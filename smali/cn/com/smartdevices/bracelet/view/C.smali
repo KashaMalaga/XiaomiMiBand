@@ -3,5 +3,5 @@
 
 
 # virtual methods
-.method public abstract a(Landroid/view/View;)Lcn/com/smartdevices/bracelet/view/F;
+.method public abstract a(Landroid/view/View;)Lcn/com/smartdevices/bracelet/view/G;
 .end method

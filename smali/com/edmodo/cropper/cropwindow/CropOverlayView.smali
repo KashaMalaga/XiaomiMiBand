@@ -88,13 +88,13 @@
 
     const/high16 v2, 0x40000000
 
-    invoke-static {}, Lcom/edmodo/cropper/a/d;->b()F
+    invoke-static {}, Lcom/edmodo/cropper/a/e;->b()F
 
     move-result v0
 
     sput v0, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->c:F
 
-    invoke-static {}, Lcom/edmodo/cropper/a/d;->c()F
+    invoke-static {}, Lcom/edmodo/cropper/a/e;->c()F
 
     move-result v0
 
@@ -294,25 +294,25 @@
 
     iput v1, p0, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->u:F
 
-    invoke-static {p1}, Lcom/edmodo/cropper/a/d;->a(Landroid/content/Context;)Landroid/graphics/Paint;
+    invoke-static {p1}, Lcom/edmodo/cropper/a/e;->a(Landroid/content/Context;)Landroid/graphics/Paint;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->o:Landroid/graphics/Paint;
 
-    invoke-static {}, Lcom/edmodo/cropper/a/d;->a()Landroid/graphics/Paint;
+    invoke-static {}, Lcom/edmodo/cropper/a/e;->a()Landroid/graphics/Paint;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->p:Landroid/graphics/Paint;
 
-    invoke-static {p1}, Lcom/edmodo/cropper/a/d;->b(Landroid/content/Context;)Landroid/graphics/Paint;
+    invoke-static {p1}, Lcom/edmodo/cropper/a/e;->b(Landroid/content/Context;)Landroid/graphics/Paint;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->r:Landroid/graphics/Paint;
 
-    invoke-static {p1}, Lcom/edmodo/cropper/a/d;->c(Landroid/content/Context;)Landroid/graphics/Paint;
+    invoke-static {p1}, Lcom/edmodo/cropper/a/e;->c(Landroid/content/Context;)Landroid/graphics/Paint;
 
     move-result-object v1
 
@@ -1488,7 +1488,7 @@
     :goto_0
     iget v0, p0, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->G:I
 
-    if-ne v0, v7, :cond_2
+    if-ne v0, v7, :cond_3
 
     iget-object v5, p0, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->o:Landroid/graphics/Paint;
 
@@ -1506,7 +1506,7 @@
 
     const/4 v5, 0x1
 
-    if-ne v0, v5, :cond_0
+    if-ne v0, v5, :cond_2
 
     iget-object v0, p0, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->w:Lcom/edmodo/cropper/cropwindow/b/c;
 
@@ -1517,6 +1517,13 @@
     goto :goto_0
 
     :cond_2
+    iget v0, p0, Lcom/edmodo/cropper/cropwindow/CropOverlayView;->B:I
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_3
     sub-float v0, v3, v1
 
     div-float/2addr v0, v6

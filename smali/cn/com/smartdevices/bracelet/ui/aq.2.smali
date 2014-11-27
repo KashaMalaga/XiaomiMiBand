@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aq;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->h(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Landroid/widget/TextView;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->g(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Landroid/widget/TextView;
 
     move-result-object v0
 

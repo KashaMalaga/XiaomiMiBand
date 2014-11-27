@@ -387,9 +387,13 @@
 
     new-instance v4, Ljava/lang/StringBuilder;
 
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v5, "lastRi date from ="
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
 
     iget-object v5, v0, Lcn/com/smartdevices/bracelet/model/ReportInfo;->dateFrom:Ljava/lang/String;
 
@@ -419,9 +423,13 @@
 
     new-instance v4, Ljava/lang/StringBuilder;
 
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v5, "report date from ="
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
 
     iget-object v5, v1, Lcn/com/smartdevices/bracelet/model/ReportData;->timeFrom:Ljava/lang/String;
 
@@ -621,9 +629,13 @@
 
     new-instance v4, Ljava/lang/StringBuilder;
 
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v5, "steps:"
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
 
     invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

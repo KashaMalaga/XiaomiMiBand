@@ -2,20 +2,6 @@
 .super Ljava/lang/Object;
 
 
-# static fields
-.field private static final a:I = -0x1
-
-.field private static final b:Ljava/lang/String; = "#AAFFFFFF"
-
-.field private static final c:Ljava/lang/String; = "#B0000000"
-
-.field private static final d:F = 1.0f
-
-.field private static final e:F = 2.0f
-
-.field private static final f:F = 1.0f
-
-
 # direct methods
 .method public constructor <init>()V
     .locals 0
@@ -25,136 +11,225 @@
     return-void
 .end method
 
-.method public static a()Landroid/graphics/Paint;
-    .locals 2
+.method public static a(IIII)Landroid/graphics/Rect;
+    .locals 1
 
-    new-instance v0, Landroid/graphics/Paint;
+    invoke-static {p0, p1, p2, p3}, Lcom/edmodo/cropper/a/d;->b(IIII)Landroid/graphics/Rect;
 
-    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
-
-    const-string v1, "#AAFFFFFF"
-
-    invoke-static {v1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
-
-    const/high16 v1, 0x3f800000
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method public static a(Landroid/content/Context;)Landroid/graphics/Paint;
+.method public static a(Landroid/graphics/Bitmap;Landroid/view/View;)Landroid/graphics/Rect;
     .locals 4
 
-    const/4 v3, 0x1
-
-    const/high16 v0, 0x3f800000
-
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    invoke-static {v3, v0, v1}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
+    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
 
-    new-instance v1, Landroid/graphics/Paint;
+    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
 
-    invoke-direct {v1}, Landroid/graphics/Paint;-><init>()V
+    move-result v1
 
-    const-string v2, "#AAFFFFFF"
-
-    invoke-static {v2}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
 
     move-result v2
 
-    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
+    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
 
-    invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+    move-result v3
 
-    sget-object v0, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
+    invoke-static {v0, v1, v2, v3}, Lcom/edmodo/cropper/a/d;->b(IIII)Landroid/graphics/Rect;
 
-    invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
-
-    invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setAntiAlias(Z)V
-
-    return-object v1
-.end method
-
-.method public static b()F
-    .locals 1
-
-    const/high16 v0, 0x40000000
-
-    return v0
-.end method
-
-.method public static b(Landroid/content/Context;)Landroid/graphics/Paint;
-    .locals 2
-
-    new-instance v0, Landroid/graphics/Paint;
-
-    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
-
-    const-string v1, "#B0000000"
-
-    invoke-static {v1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method public static c()F
-    .locals 1
+.method private static b(IIII)Landroid/graphics/Rect;
+    .locals 10
 
-    const/high16 v0, 0x3f800000
+    const-wide/high16 v2, 0x7ff0000000000000L
 
-    return v0
-.end method
+    const-wide/high16 v0, 0x7ff0000000000000L
 
-.method public static c(Landroid/content/Context;)Landroid/graphics/Paint;
-    .locals 3
+    if-ge p2, p0, :cond_0
 
-    const/4 v0, 0x1
+    int-to-double v2, p2
 
-    const/high16 v1, 0x40000000
+    int-to-double v4, p0
 
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    div-double/2addr v2, v4
 
-    move-result-object v2
+    :cond_0
+    if-ge p3, p1, :cond_1
 
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    int-to-double v0, p3
 
-    move-result-object v2
+    int-to-double v4, p1
 
-    invoke-static {v0, v1, v2}, Landroid/util/TypedValue;->applyDimension(IFLandroid/util/DisplayMetrics;)F
+    div-double/2addr v0, v4
 
-    move-result v0
+    :cond_1
+    const-wide/high16 v4, 0x7ff0000000000000L
 
-    new-instance v1, Landroid/graphics/Paint;
+    cmpl-double v4, v2, v4
 
-    invoke-direct {v1}, Landroid/graphics/Paint;-><init>()V
+    if-nez v4, :cond_2
 
-    const/4 v2, -0x1
+    const-wide/high16 v4, 0x7ff0000000000000L
 
-    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
+    cmpl-double v4, v0, v4
 
-    invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+    if-eqz v4, :cond_4
 
-    sget-object v0, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
+    :cond_2
+    cmpg-double v0, v2, v0
 
-    invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+    if-gtz v0, :cond_3
 
-    return-object v1
+    int-to-double v2, p2
+
+    int-to-double v0, p1
+
+    mul-double/2addr v0, v2
+
+    int-to-double v4, p0
+
+    div-double/2addr v0, v4
+
+    move-wide v4, v2
+
+    move-wide v2, v0
+
+    :goto_0
+    int-to-double v0, p2
+
+    cmpl-double v0, v4, v0
+
+    if-nez v0, :cond_5
+
+    const/4 v1, 0x0
+
+    int-to-double v6, p3
+
+    sub-double/2addr v6, v2
+
+    const-wide/high16 v8, 0x4000000000000000L
+
+    div-double/2addr v6, v8
+
+    invoke-static {v6, v7}, Ljava/lang/Math;->round(D)J
+
+    move-result-wide v6
+
+    long-to-int v0, v6
+
+    :goto_1
+    new-instance v6, Landroid/graphics/Rect;
+
+    invoke-static {v4, v5}, Ljava/lang/Math;->ceil(D)D
+
+    move-result-wide v4
+
+    double-to-int v4, v4
+
+    add-int/2addr v4, v1
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->ceil(D)D
+
+    move-result-wide v2
+
+    double-to-int v2, v2
+
+    add-int/2addr v2, v0
+
+    invoke-direct {v6, v1, v0, v4, v2}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    return-object v6
+
+    :cond_3
+    int-to-double v0, p3
+
+    int-to-double v2, p0
+
+    mul-double/2addr v2, v0
+
+    int-to-double v4, p1
+
+    div-double/2addr v2, v4
+
+    move-wide v4, v2
+
+    move-wide v2, v0
+
+    goto :goto_0
+
+    :cond_4
+    int-to-double v0, p1
+
+    int-to-double v2, p0
+
+    move-wide v4, v2
+
+    move-wide v2, v0
+
+    goto :goto_0
+
+    :cond_5
+    int-to-double v0, p3
+
+    cmpl-double v0, v2, v0
+
+    if-nez v0, :cond_6
+
+    int-to-double v0, p2
+
+    sub-double/2addr v0, v4
+
+    const-wide/high16 v6, 0x4000000000000000L
+
+    div-double/2addr v0, v6
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->round(D)J
+
+    move-result-wide v0
+
+    long-to-int v1, v0
+
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_6
+    int-to-double v0, p2
+
+    sub-double/2addr v0, v4
+
+    const-wide/high16 v6, 0x4000000000000000L
+
+    div-double/2addr v0, v6
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->round(D)J
+
+    move-result-wide v0
+
+    long-to-int v1, v0
+
+    int-to-double v6, p3
+
+    sub-double/2addr v6, v2
+
+    const-wide/high16 v8, 0x4000000000000000L
+
+    div-double/2addr v6, v8
+
+    invoke-static {v6, v7}, Ljava/lang/Math;->round(D)J
+
+    move-result-wide v6
+
+    long-to-int v0, v6
+
+    goto :goto_1
 .end method

@@ -5,15 +5,6 @@
 .implements Landroid/widget/AdapterView$OnItemClickListener;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Landroid/widget/AdapterView$OnItemClickListener;"
-    }
-.end annotation
-
-
 # instance fields
 .field final synthetic a:Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;
 
@@ -47,9 +38,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "onItemClick: "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -83,9 +78,13 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "thebit at position: "
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v3, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -120,7 +119,7 @@
     or-int/2addr v0, v1
 
     :goto_0
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->a(Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;I)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->a(Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;I)I
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/i;->a:Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;
 

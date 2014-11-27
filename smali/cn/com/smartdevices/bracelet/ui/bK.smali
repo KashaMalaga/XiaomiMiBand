@@ -1,54 +1,73 @@
 .class Lcn/com/smartdevices/bracelet/ui/bK;
-.super Lcom/c/a/a/h;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lcn/com/smartdevices/bracelet/ui/L;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/bE;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/bG;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/bE;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/bG;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bK;->a:Lcn/com/smartdevices/bracelet/ui/bE;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bK;->a:Lcn/com/smartdevices/bracelet/ui/bG;
 
-    invoke-direct {p0}, Lcom/c/a/a/h;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
+.method public a(Landroid/app/DialogFragment;)V
     .locals 0
 
     return-void
 .end method
 
-.method public onSuccess(I[Lorg/apache/http/Header;[B)V
+.method public b(Landroid/app/DialogFragment;)V
     .locals 3
 
-    const-string v0, "switch"
+    invoke-virtual {p1}, Landroid/app/DialogFragment;->dismiss()V
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bK;->a:Lcn/com/smartdevices/bracelet/ui/bG;
 
-    const-string v2, "loginOut:"
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/bG;->c(Lcn/com/smartdevices/bracelet/ui/bG;)V
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bK;->a:Lcn/com/smartdevices/bracelet/ui/bG;
 
-    invoke-static {p3}, Lcn/com/smartdevices/bracelet/z;->a([B)Ljava/lang/String;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/bG;->getActivity()Landroid/app/Activity;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, "UserLogout"
 
-    move-result-object v1
+    const-string v2, "Confirmed"
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v1
+    return-void
+.end method
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+.method public c(Landroid/app/DialogFragment;)V
+    .locals 3
+
+    invoke-virtual {p1}, Landroid/app/DialogFragment;->dismiss()V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bK;->a:Lcn/com/smartdevices/bracelet/ui/bG;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/bG;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    const-string v1, "UserLogout"
+
+    const-string v2, "Canceled"
+
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

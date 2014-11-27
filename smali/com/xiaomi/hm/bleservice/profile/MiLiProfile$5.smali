@@ -24,7 +24,7 @@
 
 .field final synthetic this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
-.field private final synthetic val$cb:Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ISyncActivitiesCB;
+.field final synthetic val$cb:Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ISyncActivitiesCB;
 
 
 # direct methods
@@ -95,9 +95,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "currentDataLen: "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     iget v3, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->currentDataLen:I
 
@@ -170,9 +174,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "currentDataLen: "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     iget v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->currentDataLen:I
 
@@ -202,9 +210,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "timestamp: "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     iget-object v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->currentTimestamp:Ljava/util/Calendar;
 
@@ -230,9 +242,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "totalLen: "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     div-int/lit8 v2, p2, 0x3
 
@@ -256,9 +272,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "current: "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     iget v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->currentDataTotalLen:I
 
@@ -403,7 +423,7 @@
 
     :goto_1
     # getter for: Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->TAG:Ljava/lang/String;
-    invoke-static {}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$6()Ljava/lang/String;
+    invoke-static {}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$400()Ljava/lang/String;
 
     move-result-object v1
 
@@ -418,7 +438,7 @@
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     # getter for: Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->m_DataSourceOutputStream:Ljava/io/PipedOutputStream;
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$7(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)Ljava/io/PipedOutputStream;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$500(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)Ljava/io/PipedOutputStream;
 
     move-result-object v0
 

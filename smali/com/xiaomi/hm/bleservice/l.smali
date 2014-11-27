@@ -3,22 +3,22 @@
 
 
 # instance fields
-.field final synthetic b:Lcom/xiaomi/hm/bleservice/BLEService;
+.field final synthetic b:I
 
-.field private final synthetic c:I
+.field final synthetic c:Landroid/os/PowerManager$WakeLock;
 
-.field private final synthetic d:Landroid/os/PowerManager$WakeLock;
+.field final synthetic d:Lcom/xiaomi/hm/bleservice/BLEService;
 
 
 # direct methods
 .method constructor <init>(Lcom/xiaomi/hm/bleservice/BLEService;ILandroid/os/PowerManager$WakeLock;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/xiaomi/hm/bleservice/l;->b:Lcom/xiaomi/hm/bleservice/BLEService;
+    iput-object p1, p0, Lcom/xiaomi/hm/bleservice/l;->d:Lcom/xiaomi/hm/bleservice/BLEService;
 
-    iput p2, p0, Lcom/xiaomi/hm/bleservice/l;->c:I
+    iput p2, p0, Lcom/xiaomi/hm/bleservice/l;->b:I
 
-    iput-object p3, p0, Lcom/xiaomi/hm/bleservice/l;->d:Landroid/os/PowerManager$WakeLock;
+    iput-object p3, p0, Lcom/xiaomi/hm/bleservice/l;->c:Landroid/os/PowerManager$WakeLock;
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/a/b;-><init>()V
 
@@ -51,17 +51,21 @@
     if-ne v0, v1, :cond_1
 
     # getter for: Lcom/xiaomi/hm/bleservice/BLEService;->TAG:Ljava/lang/String;
-    invoke-static {}, Lcom/xiaomi/hm/bleservice/BLEService;->access$10()Ljava/lang/String;
+    invoke-static {}, Lcom/xiaomi/hm/bleservice/BLEService;->access$900()Ljava/lang/String;
 
     move-result-object v0
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "setLatency success......"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v2, p0, Lcom/xiaomi/hm/bleservice/l;->c:I
+    move-result-object v1
+
+    iget v2, p0, Lcom/xiaomi/hm/bleservice/l;->b:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -75,17 +79,21 @@
 
     :goto_0
     # getter for: Lcom/xiaomi/hm/bleservice/BLEService;->TAG:Ljava/lang/String;
-    invoke-static {}, Lcom/xiaomi/hm/bleservice/BLEService;->access$10()Ljava/lang/String;
+    invoke-static {}, Lcom/xiaomi/hm/bleservice/BLEService;->access$900()Ljava/lang/String;
 
     move-result-object v0
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "waklock release......"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v2, p0, Lcom/xiaomi/hm/bleservice/l;->c:I
+    move-result-object v1
+
+    iget v2, p0, Lcom/xiaomi/hm/bleservice/l;->b:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -97,7 +105,7 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/l;->d:Landroid/os/PowerManager$WakeLock;
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/l;->c:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
 
@@ -105,7 +113,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/l;->d:Landroid/os/PowerManager$WakeLock;
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/l;->c:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
@@ -114,17 +122,21 @@
 
     :cond_1
     # getter for: Lcom/xiaomi/hm/bleservice/BLEService;->TAG:Ljava/lang/String;
-    invoke-static {}, Lcom/xiaomi/hm/bleservice/BLEService;->access$10()Ljava/lang/String;
+    invoke-static {}, Lcom/xiaomi/hm/bleservice/BLEService;->access$900()Ljava/lang/String;
 
     move-result-object v0
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "setLatency failed......"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v2, p0, Lcom/xiaomi/hm/bleservice/l;->c:I
+    move-result-object v1
+
+    iget v2, p0, Lcom/xiaomi/hm/bleservice/l;->b:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -145,17 +157,21 @@
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->d(Ljava/lang/Object;)V
 
     # getter for: Lcom/xiaomi/hm/bleservice/BLEService;->TAG:Ljava/lang/String;
-    invoke-static {}, Lcom/xiaomi/hm/bleservice/BLEService;->access$10()Ljava/lang/String;
+    invoke-static {}, Lcom/xiaomi/hm/bleservice/BLEService;->access$900()Ljava/lang/String;
 
     move-result-object v0
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "setLatency failed......"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v2, p0, Lcom/xiaomi/hm/bleservice/l;->c:I
+    move-result-object v1
+
+    iget v2, p0, Lcom/xiaomi/hm/bleservice/l;->b:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -168,17 +184,21 @@
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     # getter for: Lcom/xiaomi/hm/bleservice/BLEService;->TAG:Ljava/lang/String;
-    invoke-static {}, Lcom/xiaomi/hm/bleservice/BLEService;->access$10()Ljava/lang/String;
+    invoke-static {}, Lcom/xiaomi/hm/bleservice/BLEService;->access$900()Ljava/lang/String;
 
     move-result-object v0
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "waklock release......"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v2, p0, Lcom/xiaomi/hm/bleservice/l;->c:I
+    move-result-object v1
+
+    iget v2, p0, Lcom/xiaomi/hm/bleservice/l;->b:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -190,7 +210,7 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/l;->d:Landroid/os/PowerManager$WakeLock;
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/l;->c:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
 
@@ -198,7 +218,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/l;->d:Landroid/os/PowerManager$WakeLock;
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/l;->c:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 

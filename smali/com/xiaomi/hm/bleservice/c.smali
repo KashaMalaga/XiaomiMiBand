@@ -6,18 +6,18 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/xiaomi/hm/bleservice/BLEService;
+.field final synthetic a:Z
 
-.field private final synthetic b:Z
+.field final synthetic b:Lcom/xiaomi/hm/bleservice/BLEService;
 
 
 # direct methods
 .method constructor <init>(Lcom/xiaomi/hm/bleservice/BLEService;Z)V
     .locals 0
 
-    iput-object p1, p0, Lcom/xiaomi/hm/bleservice/c;->a:Lcom/xiaomi/hm/bleservice/BLEService;
+    iput-object p1, p0, Lcom/xiaomi/hm/bleservice/c;->b:Lcom/xiaomi/hm/bleservice/BLEService;
 
-    iput-boolean p2, p0, Lcom/xiaomi/hm/bleservice/c;->b:Z
+    iput-boolean p2, p0, Lcom/xiaomi/hm/bleservice/c;->a:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -33,13 +33,13 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/xiaomi/hm/bleservice/c;->a:Lcom/xiaomi/hm/bleservice/BLEService;
+    iget-object v1, p0, Lcom/xiaomi/hm/bleservice/c;->b:Lcom/xiaomi/hm/bleservice/BLEService;
 
-    iget-boolean v2, p0, Lcom/xiaomi/hm/bleservice/c;->b:Z
+    iget-boolean v2, p0, Lcom/xiaomi/hm/bleservice/c;->a:Z
 
     invoke-virtual {v0, v1, v2}, Lcom/xiaomi/hm/bleservice/p;->a(Landroid/content/Context;Z)V
 
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/c;->a:Lcom/xiaomi/hm/bleservice/BLEService;
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/c;->b:Lcom/xiaomi/hm/bleservice/BLEService;
 
     invoke-static {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->notifyDynamicStatusChanged(Landroid/content/Context;)V
 

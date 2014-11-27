@@ -5,15 +5,6 @@
 .implements Landroid/widget/AdapterView$OnItemClickListener;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Landroid/widget/AdapterView$OnItemClickListener;"
-    }
-.end annotation
-
-
 # instance fields
 .field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;
 

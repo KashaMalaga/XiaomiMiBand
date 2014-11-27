@@ -1,213 +1,168 @@
-.class public Lcn/com/smartdevices/bracelet/view/I;
-.super Lcn/com/smartdevices/bracelet/view/X;
+.class Lcn/com/smartdevices/bracelet/view/I;
+.super Ljava/lang/Object;
 
-
-# static fields
-.field private static final e:I = 0x3
-
-.field private static final f:Ljava/lang/String; = "SimpleAlarmWeekAdapter"
+# interfaces
+.implements Lcn/com/smartdevices/bracelet/view/G;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;[Ljava/lang/String;I)V
+.method private constructor <init>()V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/view/X;-><init>(Landroid/content/Context;[Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method private b()Z
-    .locals 4
+.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/view/E;)V
+    .locals 0
 
-    const/4 v1, 0x0
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/view/I;-><init>()V
 
-    move v0, v1
-
-    :goto_0
-    sget-object v2, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->a:[I
-
-    array-length v2, v2
-
-    if-lt v0, v2, :cond_1
-
-    const/4 v1, 0x1
-
-    :cond_0
-    return v1
-
-    :cond_1
-    iget v2, p0, Lcn/com/smartdevices/bracelet/view/I;->b:I
-
-    sget-object v3, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->a:[I
-
-    aget v3, v3, v0
-
-    if-eq v2, v3, :cond_0
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
+    return-void
 .end method
 
 
 # virtual methods
-.method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 7
+.method public a(Landroid/view/View;I)Z
+    .locals 6
 
-    const v6, 0x7f08003c
-
-    const/4 v5, 0x0
-
-    if-nez p2, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/I;->a:Landroid/content/Context;
-
-    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object v0
-
-    const v1, 0x7f030084
+    const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+    :try_start_0
+    const-class v0, Landroid/webkit/WebView;
 
-    move-result-object p2
+    const-string v3, "computeHorizontalScrollOffset"
 
-    :cond_0
-    const v0, 0x7f070259
+    const/4 v4, 0x0
 
-    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    new-array v4, v4, [Ljava/lang/Class;
 
-    move-result-object v1
-
-    const/4 v0, 0x4
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    const v0, 0x7f07025a
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v3, v4}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/TextView;
+    const-class v3, Landroid/webkit/WebView;
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/view/I;->d:[Ljava/lang/String;
+    const-string v4, "computeHorizontalScrollRange"
 
-    aget-object v2, v2, p1
+    const/4 v5, 0x0
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    new-array v5, v5, [Ljava/lang/Class;
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/view/I;->a:Landroid/content/Context;
-
-    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    const v3, 0x7f080010
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextColor(I)V
-
-    const-string v2, "SimpleAlarmWeekAdapter"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "Get view : mdays:"
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v4, p0, Lcn/com/smartdevices/bracelet/view/I;->b:I
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4, v5}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v3
 
-    const-string v4, ", pos:"
+    const/4 v4, 0x1
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v4}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    move-result-object v3
+    const/4 v4, 0x1
 
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    move-result-object v3
+    const/4 v4, 0x0
 
-    const-string v4, ", day:"
+    new-array v4, v4, [Ljava/lang/Object;
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1, v4}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object v0
 
-    sget-object v4, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->a:[I
+    check-cast v0, Ljava/lang/Integer;
 
-    aget v4, v4, p1
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result v4
 
-    move-result-object v3
+    const/4 v0, 0x0
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    new-array v0, v0, [Ljava/lang/Object;
 
-    move-result-object v3
+    invoke-virtual {v3, p1, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v0
 
-    const/4 v2, 0x3
+    check-cast v0, Ljava/lang/Integer;
 
-    if-ne p1, v2, :cond_2
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/view/I;->b()Z
+    move-result v0
 
-    move-result v2
+    if-lez p2, :cond_0
 
-    if-eqz v2, :cond_1
+    invoke-virtual {p1}, Landroid/view/View;->getScrollX()I
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/view/I;->a:Landroid/content/Context;
+    move-result v3
 
-    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    if-gtz v3, :cond_1
 
-    move-result-object v2
+    :cond_0
+    if-gez p2, :cond_2
 
-    invoke-virtual {v2, v6}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_3
 
-    move-result v2
+    move-result v3
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextColor(I)V
+    sub-int/2addr v0, v3
 
-    invoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V
+    if-ge v4, v0, :cond_2
 
     :cond_1
+    move v0, v1
+
     :goto_0
-    return-object p2
+    return v0
 
     :cond_2
-    iget v2, p0, Lcn/com/smartdevices/bracelet/view/I;->b:I
-
-    sget-object v3, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->a:[I
-
-    aget v3, v3, p1
-
-    if-ne v2, v3, :cond_1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/view/I;->a:Landroid/content/Context;
-
-    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v6}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextColor(I)V
-
-    invoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V
+    move v0, v2
 
     goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/NoSuchMethodException;->printStackTrace()V
+
+    :goto_1
+    move v0, v2
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
+
+    goto :goto_1
+
+    :catch_2
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/IllegalAccessException;->printStackTrace()V
+
+    goto :goto_1
+
+    :catch_3
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/reflect/InvocationTargetException;->printStackTrace()V
+
+    goto :goto_1
+.end method
+
+.method public b(Landroid/view/View;I)Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
 .end method

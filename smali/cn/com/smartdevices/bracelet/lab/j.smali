@@ -88,12 +88,8 @@
     move v1, v0
 
     :goto_0
-    if-lt v1, v4, :cond_0
+    if-ge v1, v4, :cond_0
 
-    :goto_1
-    return v0
-
-    :cond_0
     aget-object v5, v3, v1
 
     invoke-virtual {v5}, Lcn/com/smartdevices/bracelet/lab/k;->toString()Ljava/lang/String;
@@ -108,7 +104,8 @@
 
     const/4 v0, 0x1
 
-    goto :goto_1
+    :cond_0
+    return v0
 
     :cond_1
     add-int/lit8 v1, v1, 0x1

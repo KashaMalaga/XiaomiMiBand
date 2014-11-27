@@ -7,7 +7,7 @@
     value = {
         "Lcn/com/smartdevices/bracelet/chart/base/BaseChartView",
         "<",
-        "Lcn/com/smartdevices/bracelet/chart/o;",
+        "Lcn/com/smartdevices/bracelet/chart/p;",
         ">;"
     }
 .end annotation
@@ -51,9 +51,9 @@
 
     invoke-direct {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/chart/o;
+    new-instance v0, Lcn/com/smartdevices/bracelet/chart/p;
 
-    invoke-direct {v0, p1, p0}, Lcn/com/smartdevices/bracelet/chart/o;-><init>(Landroid/content/Context;Landroid/view/View;)V
+    invoke-direct {v0, p1, p0}, Lcn/com/smartdevices/bracelet/chart/p;-><init>(Landroid/content/Context;Landroid/view/View;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
 
@@ -71,6 +71,30 @@
 .end method
 
 .method static synthetic a(Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;)Lcn/com/smartdevices/bracelet/chart/base/g;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
+
+    return-object v0
+.end method
+
+.method static synthetic b(Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;)Lcn/com/smartdevices/bracelet/chart/base/g;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
+
+    return-object v0
+.end method
+
+.method static synthetic c(Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;)Lcn/com/smartdevices/bracelet/chart/base/g;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
+
+    return-object v0
+.end method
+
+.method static synthetic d(Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;)Lcn/com/smartdevices/bracelet/chart/base/g;
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
@@ -97,9 +121,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/o;
+    check-cast v0, Lcn/com/smartdevices/bracelet/chart/p;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/o;->c()F
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/p;->c()F
 
     move-result v0
 
@@ -150,6 +174,14 @@
     return-void
 .end method
 
+.method static synthetic e(Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;)Lcn/com/smartdevices/bracelet/chart/base/g;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
+
+    return-object v0
+.end method
+
 .method private i()Landroid/animation/Animator;
     .locals 3
     .annotation build Landroid/annotation/SuppressLint;
@@ -168,15 +200,15 @@
 
     move-result-object v0
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/chart/p;
-
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/chart/p;-><init>(Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;)V
-
-    invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
     new-instance v1, Lcn/com/smartdevices/bracelet/chart/q;
 
     invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/chart/q;-><init>(Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;)V
+
+    invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    new-instance v1, Lcn/com/smartdevices/bracelet/chart/r;
+
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/chart/r;-><init>(Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
@@ -214,9 +246,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/o;
+    check-cast v0, Lcn/com/smartdevices/bracelet/chart/p;
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/chart/o;->a(I)V
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/chart/p;->a(I)V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->invalidate()V
 
@@ -228,9 +260,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/o;
+    check-cast v0, Lcn/com/smartdevices/bracelet/chart/p;
 
-    invoke-virtual {v0, p1, p2}, Lcn/com/smartdevices/bracelet/chart/o;->a(J)V
+    invoke-virtual {v0, p1, p2}, Lcn/com/smartdevices/bracelet/chart/p;->a(J)V
 
     return-void
 .end method
@@ -342,17 +374,17 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/o;
+    check-cast v0, Lcn/com/smartdevices/bracelet/chart/p;
 
     long-to-float v1, v1
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/o;->b(F)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/p;->b(F)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/o;
+    check-cast v0, Lcn/com/smartdevices/bracelet/chart/p;
 
-    invoke-virtual {v0, p1, v6}, Lcn/com/smartdevices/bracelet/chart/o;->a(Landroid/graphics/Canvas;F)V
+    invoke-virtual {v0, p1, v6}, Lcn/com/smartdevices/bracelet/chart/p;->a(Landroid/graphics/Canvas;F)V
 
     :goto_0
     return-void
@@ -362,19 +394,19 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/o;
+    check-cast v0, Lcn/com/smartdevices/bracelet/chart/p;
 
     long-to-float v1, v1
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/o;->b(F)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/p;->b(F)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/o;
+    check-cast v0, Lcn/com/smartdevices/bracelet/chart/p;
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->j:F
 
-    invoke-virtual {v0, p1, v1}, Lcn/com/smartdevices/bracelet/chart/o;->a(Landroid/graphics/Canvas;F)V
+    invoke-virtual {v0, p1, v1}, Lcn/com/smartdevices/bracelet/chart/p;->a(Landroid/graphics/Canvas;F)V
 
     goto :goto_0
 .end method

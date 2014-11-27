@@ -5,15 +5,6 @@
 .implements Landroid/widget/AdapterView$OnItemClickListener;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Landroid/widget/AdapterView$OnItemClickListener;"
-    }
-.end annotation
-
-
 # instance fields
 .field final synthetic a:Lcn/com/smartdevices/bracelet/ui/bC;
 
@@ -32,7 +23,7 @@
 
 # virtual methods
 .method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 3
+    .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -47,9 +38,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "onItemClick: "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -61,56 +56,13 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    packed-switch p3, :pswitch_data_0
+    sget-object v0, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->WEEK_MASK:[I
 
-    :goto_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bD;->a:Lcn/com/smartdevices/bracelet/ui/bC;
+    aget v0, v0, p3
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/bC;->dismiss()V
+    const/4 v1, 0x1
 
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bD;->a:Lcn/com/smartdevices/bracelet/ui/bC;
-
-    sget-object v1, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->a:[I
-
-    aget v1, v1, p3
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/bC;->a(Lcn/com/smartdevices/bracelet/ui/bC;I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bD;->a:Lcn/com/smartdevices/bracelet/ui/bC;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/bC;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bD;->a:Lcn/com/smartdevices/bracelet/ui/bC;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/bC;->a(Lcn/com/smartdevices/bracelet/ui/bC;)I
-
-    move-result v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->a(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;I)V
-
-    goto :goto_0
-
-    :pswitch_1
-    new-instance v0, Landroid/content/Intent;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bD;->a:Lcn/com/smartdevices/bracelet/ui/bC;
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/ui/bC;->getActivity()Landroid/app/Activity;
-
-    move-result-object v1
-
-    const-class v2, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;
-
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const-string v1, "Days"
+    shl-int/2addr v1, p3
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/bD;->a:Lcn/com/smartdevices/bracelet/ui/bC;
 
@@ -118,27 +70,83 @@
 
     move-result v2
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    and-int/2addr v1, v2
+
+    shr-int/2addr v1, p3
+
+    const-string v2, "NewAlarmActivity"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "thebit at position: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, ", thebit="
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/bD;->a:Lcn/com/smartdevices/bracelet/ui/bC;
+
+    if-nez v1, :cond_0
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bD;->a:Lcn/com/smartdevices/bracelet/ui/bC;
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/ui/bC;->getActivity()Landroid/app/Activity;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/bC;->a(Lcn/com/smartdevices/bracelet/ui/bC;)I
 
-    move-result-object v1
+    move-result v1
 
-    const/4 v2, 0x1
+    or-int/2addr v0, v1
 
-    invoke-virtual {v1, v0, v2}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
+    :goto_0
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/ui/bC;->a(Lcn/com/smartdevices/bracelet/ui/bC;I)I
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bD;->a:Lcn/com/smartdevices/bracelet/ui/bC;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/bC;->b(Lcn/com/smartdevices/bracelet/ui/bC;)Lcn/com/smartdevices/bracelet/view/SelectDaysView;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bD;->a:Lcn/com/smartdevices/bracelet/ui/bC;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/bC;->a(Lcn/com/smartdevices/bracelet/ui/bC;)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->a(I)V
+
+    return-void
+
+    :cond_0
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bD;->a:Lcn/com/smartdevices/bracelet/ui/bC;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/bC;->a(Lcn/com/smartdevices/bracelet/ui/bC;)I
+
+    move-result v1
+
+    xor-int/lit8 v0, v0, -0x1
+
+    and-int/2addr v0, v1
 
     goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
 .end method

@@ -323,12 +323,12 @@
     return-object v0
 .end method
 
-.method public static a(ILcn/com/smartdevices/bracelet/chart/j;)Ljava/util/ArrayList;
+.method public static a(ILcn/com/smartdevices/bracelet/chart/k;)Ljava/util/ArrayList;
     .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lcn/com/smartdevices/bracelet/chart/j;",
+            "Lcn/com/smartdevices/bracelet/chart/k;",
             ")",
             "Ljava/util/ArrayList",
             "<",
@@ -345,7 +345,7 @@
 
     const/4 v0, 0x0
 
-    iget-object v1, p1, Lcn/com/smartdevices/bracelet/chart/j;->c:Ljava/util/List;
+    iget-object v1, p1, Lcn/com/smartdevices/bracelet/chart/k;->c:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -361,33 +361,30 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_3
 
-    return-object v4
-
-    :cond_1
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/l;
+    check-cast v0, Lcn/com/smartdevices/bracelet/chart/m;
 
-    if-eq v2, v3, :cond_2
+    if-eq v2, v3, :cond_1
 
-    iget-object v6, p1, Lcn/com/smartdevices/bracelet/chart/j;->c:Ljava/util/List;
+    iget-object v6, p1, Lcn/com/smartdevices/bracelet/chart/k;->c:Ljava/util/List;
 
     invoke-interface {v6}, Ljava/util/List;->size()I
 
     move-result v6
 
-    if-ne v2, v6, :cond_3
+    if-ne v2, v6, :cond_2
 
-    :cond_2
-    iget v6, v0, Lcn/com/smartdevices/bracelet/chart/l;->e:I
+    :cond_1
+    iget v6, v0, Lcn/com/smartdevices/bracelet/chart/m;->e:I
 
     if-eq v6, v3, :cond_0
 
-    :cond_3
+    :cond_2
     new-instance v6, Lcn/com/smartdevices/bracelet/c/a/b;
 
     invoke-direct {v6}, Lcn/com/smartdevices/bracelet/c/a/b;-><init>()V
@@ -398,11 +395,11 @@
 
     invoke-virtual {v6, v7}, Lcn/com/smartdevices/bracelet/c/a/b;->a(I)V
 
-    iget v7, v0, Lcn/com/smartdevices/bracelet/chart/l;->g:I
+    iget v7, v0, Lcn/com/smartdevices/bracelet/chart/m;->g:I
 
     add-int/2addr v1, v7
 
-    iget v0, v0, Lcn/com/smartdevices/bracelet/chart/l;->e:I
+    iget v0, v0, Lcn/com/smartdevices/bracelet/chart/m;->e:I
 
     packed-switch v0, :pswitch_data_0
 
@@ -433,6 +430,9 @@
     invoke-virtual {v6, v0}, Lcn/com/smartdevices/bracelet/c/a/b;->b(I)V
 
     goto :goto_1
+
+    :cond_3
+    return-object v4
 
     :pswitch_data_0
     .packed-switch 0x1
@@ -543,15 +543,15 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/model/SportDay;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v1
 
     const-string v2, "_"
 
@@ -641,7 +641,7 @@
 
     const/16 v1, 0x10
 
-    invoke-static {v2, p1, v1}, Lcn/com/smartdevices/bracelet/ui/M;->a(Lcn/com/smartdevices/bracelet/o;Lcn/com/smartdevices/bracelet/model/SportDay;I)Lcn/com/smartdevices/bracelet/chart/j;
+    invoke-static {v2, p1, v1}, Lcn/com/smartdevices/bracelet/ui/M;->a(Lcn/com/smartdevices/bracelet/o;Lcn/com/smartdevices/bracelet/model/SportDay;I)Lcn/com/smartdevices/bracelet/chart/k;
 
     move-result-object v1
 
@@ -649,7 +649,7 @@
 
     move-result v2
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/c/a/d;->a(ILcn/com/smartdevices/bracelet/chart/j;)Ljava/util/ArrayList;
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/c/a/d;->a(ILcn/com/smartdevices/bracelet/chart/k;)Ljava/util/ArrayList;
 
     move-result-object v1
 
@@ -704,18 +704,36 @@
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-eqz v0, :cond_1
 
-    :goto_0
-    if-eqz p1, :cond_1
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/model/SportDay;
+
+    invoke-virtual {p1, v0}, Lcn/com/smartdevices/bracelet/model/SportDay;->equals(Lcn/com/smartdevices/bracelet/model/SportDay;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 p1, 0x0
+
+    :cond_1
+    if-eqz p1, :cond_2
 
     const-string v0, "QQ.Health"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "Add Need Sync Day : "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -735,25 +753,8 @@
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/c/a/d;->a(Ljava/util/List;)V
 
-    :cond_1
-    return-void
-
     :cond_2
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/model/SportDay;
-
-    invoke-virtual {p1, v0}, Lcn/com/smartdevices/bracelet/model/SportDay;->equals(Lcn/com/smartdevices/bracelet/model/SportDay;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 p1, 0x0
-
-    goto :goto_0
+    return-void
 .end method
 
 .method public a(Lcn/com/smartdevices/bracelet/model/SportDay;Lcn/com/smartdevices/bracelet/c/a/a;)V
@@ -806,15 +807,15 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/model/SportDay;->toString()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v4
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v3
 
     const-string v4, "_"
 
@@ -844,9 +845,13 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "Already Post Sleep : "
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -875,9 +880,13 @@
 
     new-instance v4, Ljava/lang/StringBuilder;
 
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v5, "Post Sleep : "
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
 
     invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -964,9 +973,13 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "Post Step : "
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1017,15 +1030,19 @@
         }
     .end annotation
 
-    if-eqz p1, :cond_0
+    if-eqz p1, :cond_1
 
     const-string v0, "QQ.Health"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "Save Need Sync Days : "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1062,15 +1079,34 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_0
 
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/model/SportDay;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/SportDay;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+
+    goto :goto_0
+
+    :cond_0
     const-string v0, "QQ.Health"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "Days Json : "
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v2}, Lorg/json/JSONArray;->toString()Ljava/lang/String;
 
@@ -1097,23 +1133,8 @@
     :goto_1
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    :cond_0
-    return-void
-
     :cond_1
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/model/SportDay;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/SportDay;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
-
-    goto :goto_0
+    return-void
 
     :cond_2
     const-string v0, "NeedSyncDays"
@@ -1149,9 +1170,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "Days Json : "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1178,37 +1203,11 @@
 
     :goto_0
     invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v3
 
-    if-lt v0, v3, :cond_1
+    if-ge v0, v3, :cond_0
 
-    :cond_0
-    :goto_1
-    const-string v0, "QQ.Health"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "Read Need Sync Days : "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v1
-
-    :cond_1
-    :try_start_1
     invoke-virtual {v2, v0}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
 
     move-result-object v3
@@ -1218,8 +1217,8 @@
     move-result-object v3
 
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     add-int/lit8 v0, v0, 0x1
 
@@ -1234,7 +1233,30 @@
 
     invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/Exception;)V
 
-    goto :goto_1
+    :cond_0
+    const-string v0, "QQ.Health"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Read Need Sync Days : "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v1
 .end method
 
 .method public b(Lcn/com/smartdevices/bracelet/model/SportDay;)V
@@ -1253,9 +1275,19 @@
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-eqz v0, :cond_2
 
-    move-object p1, v1
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/model/SportDay;
+
+    invoke-virtual {p1, v0}, Lcn/com/smartdevices/bracelet/model/SportDay;->equals(Lcn/com/smartdevices/bracelet/model/SportDay;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     :goto_0
     if-eqz p1, :cond_1
@@ -1264,9 +1296,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "Remove Need Sync Day : "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1290,17 +1326,7 @@
     return-void
 
     :cond_2
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/model/SportDay;
-
-    invoke-virtual {p1, v0}, Lcn/com/smartdevices/bracelet/model/SportDay;->equals(Lcn/com/smartdevices/bracelet/model/SportDay;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
+    move-object p1, v1
 
     goto :goto_0
 .end method
@@ -1326,15 +1352,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/c/a/d;->k:Ljava/util/List;
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/c/a/d;->a(Ljava/util/List;)V
-
-    return-void
-
-    :cond_0
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -1347,20 +1366,39 @@
 
     move-result-object v3
 
-    :cond_1
+    :cond_0
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    if-nez v1, :cond_2
+    if-eqz v1, :cond_1
 
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcn/com/smartdevices/bracelet/model/SportDay;
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/model/SportDay;->equals(Lcn/com/smartdevices/bracelet/model/SportDay;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    :cond_1
     const-string v1, "QQ.Health"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "Add Need Sync Day : "
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1379,19 +1417,11 @@
     goto :goto_0
 
     :cond_2
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/c/a/d;->k:Ljava/util/List;
 
-    move-result-object v1
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/c/a/d;->a(Ljava/util/List;)V
 
-    check-cast v1, Lcn/com/smartdevices/bracelet/model/SportDay;
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/model/SportDay;->equals(Lcn/com/smartdevices/bracelet/model/SportDay;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    goto :goto_0
+    return-void
 .end method
 
 .method public c()Ljava/lang/String;
@@ -1440,7 +1470,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/c/a/g;-><init>(Lcn/com/smartdevices/bracelet/c/a/d;Lcn/com/smartdevices/bracelet/c/a/g;)V
+    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/c/a/g;-><init>(Lcn/com/smartdevices/bracelet/c/a/d;Lcn/com/smartdevices/bracelet/c/a/e;)V
 
     const/4 v1, 0x1
 
@@ -1514,19 +1544,8 @@
 
     move-result v0
 
-    if-lt v1, v0, :cond_3
+    if-ge v1, v0, :cond_3
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/c/a/g;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/c/a/g;-><init>(Lcn/com/smartdevices/bracelet/c/a/d;Lcn/com/smartdevices/bracelet/c/a/g;)V
-
-    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/c/a/g;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
-
-    goto :goto_0
-
-    :cond_3
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -1540,6 +1559,17 @@
     move v1, v0
 
     goto :goto_1
+
+    :cond_3
+    new-instance v0, Lcn/com/smartdevices/bracelet/c/a/g;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/c/a/g;-><init>(Lcn/com/smartdevices/bracelet/c/a/d;Lcn/com/smartdevices/bracelet/c/a/e;)V
+
+    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/c/a/g;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+
+    goto :goto_0
 .end method
 
 .method public d()V

@@ -85,9 +85,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "get birthday:"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetBirthActivity;->e:Lcn/com/smartdevices/bracelet/model/Birthday;
 
@@ -165,9 +169,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "onCreate, birthday:"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetBirthActivity;->e:Lcn/com/smartdevices/bracelet/model/Birthday;
 
@@ -239,7 +247,7 @@
 
     move-result-object v14
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bW;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bY;
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetBirthActivity;->f:I
 
@@ -289,7 +297,7 @@
 
     move v3, v13
 
-    invoke-direct/range {v0 .. v12}, Lcn/com/smartdevices/bracelet/ui/bW;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIII)V
+    invoke-direct/range {v0 .. v12}, Lcn/com/smartdevices/bracelet/ui/bY;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIII)V
 
     invoke-virtual {v14, v0}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/a/f;)Lkankan/wheel/widget/WheelView;
 
@@ -335,7 +343,7 @@
 
     move-result-object v13
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bW;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bY;
 
     const/4 v2, 0x1
 
@@ -385,7 +393,7 @@
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v12}, Lcn/com/smartdevices/bracelet/ui/bW;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIII)V
+    invoke-direct/range {v0 .. v12}, Lcn/com/smartdevices/bracelet/ui/bY;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIII)V
 
     invoke-virtual {v13, v0}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/a/f;)Lkankan/wheel/widget/WheelView;
 

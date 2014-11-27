@@ -1,20 +1,23 @@
 .class public Lcn/com/smartdevices/bracelet/chart/m;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Ljava/util/Comparator;
+
+# static fields
+.field public static final a:I = 0x3
+
+.field public static final b:I = 0x2
+
+.field public static final c:I = 0x1
+
+.field public static final d:I = 0x4
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator",
-        "<",
-        "Lcn/com/smartdevices/bracelet/chart/l;",
-        ">;"
-    }
-.end annotation
+# instance fields
+.field public e:I
+
+.field public f:I
+
+.field public g:I
 
 
 # direct methods
@@ -24,32 +27,4 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-.end method
-
-
-# virtual methods
-.method public a(Lcn/com/smartdevices/bracelet/chart/l;Lcn/com/smartdevices/bracelet/chart/l;)I
-    .locals 2
-
-    iget v0, p1, Lcn/com/smartdevices/bracelet/chart/l;->f:I
-
-    iget v1, p2, Lcn/com/smartdevices/bracelet/chart/l;->f:I
-
-    sub-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 1
-
-    check-cast p1, Lcn/com/smartdevices/bracelet/chart/l;
-
-    check-cast p2, Lcn/com/smartdevices/bracelet/chart/l;
-
-    invoke-virtual {p0, p1, p2}, Lcn/com/smartdevices/bracelet/chart/m;->a(Lcn/com/smartdevices/bracelet/chart/l;Lcn/com/smartdevices/bracelet/chart/l;)I
-
-    move-result v0
-
-    return v0
 .end method

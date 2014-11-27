@@ -37,7 +37,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/analysis/DataAnalysis$itemDetail;)V
+.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/analysis/DataAnalysis$1;)V
     .locals 0
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/analysis/DataAnalysis$itemDetail;-><init>()V

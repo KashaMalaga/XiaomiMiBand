@@ -162,8 +162,19 @@
 
     const/4 v3, -0x1
 
-    if-ne v2, v3, :cond_0
+    if-eq v2, v3, :cond_0
 
+    const/4 v3, 0x0
+
+    invoke-virtual {p1, v1, v3, v2}, Ljava/io/OutputStream;->write([BII)V
+
+    iget-object v3, p0, Lcom/c/a/a/W;->c:Lcom/c/a/a/V;
+
+    invoke-static {v3, v2}, Lcom/c/a/a/V;->a(Lcom/c/a/a/V;I)V
+
+    goto :goto_0
+
+    :cond_0
     invoke-static {}, Lcom/c/a/a/V;->b()[B
 
     move-result-object v1
@@ -185,15 +196,4 @@
     invoke-static {v0}, Lcom/c/a/a/a;->a(Ljava/io/InputStream;)V
 
     return-void
-
-    :cond_0
-    const/4 v3, 0x0
-
-    invoke-virtual {p1, v1, v3, v2}, Ljava/io/OutputStream;->write([BII)V
-
-    iget-object v3, p0, Lcom/c/a/a/W;->c:Lcom/c/a/a/V;
-
-    invoke-static {v3, v2}, Lcom/c/a/a/V;->a(Lcom/c/a/a/V;I)V
-
-    goto :goto_0
 .end method

@@ -201,7 +201,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/e;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->c(Lcn/com/smartdevices/bracelet/view/DynamicView;)Lcn/com/smartdevices/bracelet/ui/widget/b;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->c(Lcn/com/smartdevices/bracelet/view/DynamicView;)Lcn/com/smartdevices/bracelet/ui/widget/c;
 
     move-result-object v0
 

@@ -3,30 +3,22 @@
 
 
 # instance fields
-.field final synthetic b:Lcn/com/smartdevices/bracelet/lab/g;
+.field final synthetic b:Z
 
-.field private final synthetic c:Z
+.field final synthetic c:Lcn/com/smartdevices/bracelet/lab/g;
 
 
 # direct methods
 .method constructor <init>(Lcn/com/smartdevices/bracelet/lab/g;Z)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/h;->b:Lcn/com/smartdevices/bracelet/lab/g;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/h;->c:Lcn/com/smartdevices/bracelet/lab/g;
 
-    iput-boolean p2, p0, Lcn/com/smartdevices/bracelet/lab/h;->c:Z
+    iput-boolean p2, p0, Lcn/com/smartdevices/bracelet/lab/h;->b:Z
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/a/b;-><init>()V
 
     return-void
-.end method
-
-.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/h;)Lcn/com/smartdevices/bracelet/lab/g;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/h;->b:Lcn/com/smartdevices/bracelet/lab/g;
-
-    return-object v0
 .end method
 
 
@@ -46,28 +38,30 @@
 
     move-result v2
 
-    iget-boolean v3, p0, Lcn/com/smartdevices/bracelet/lab/h;->c:Z
+    iget-boolean v3, p0, Lcn/com/smartdevices/bracelet/lab/h;->b:Z
 
     if-eqz v3, :cond_3
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/h;->b:Lcn/com/smartdevices/bracelet/lab/g;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/h;->c:Lcn/com/smartdevices/bracelet/lab/g;
 
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/lab/g;->a(Lcn/com/smartdevices/bracelet/lab/g;)Lcn/com/smartdevices/bracelet/lab/f;
-
-    move-result-object v3
+    iget-object v3, v3, Lcn/com/smartdevices/bracelet/lab/g;->b:Lcn/com/smartdevices/bracelet/lab/f;
 
     if-eqz v2, :cond_2
 
     :goto_0
-    invoke-static {v3, v0}, Lcn/com/smartdevices/bracelet/lab/f;->a(Lcn/com/smartdevices/bracelet/lab/f;I)V
+    invoke-static {v3, v0}, Lcn/com/smartdevices/bracelet/lab/f;->a(Lcn/com/smartdevices/bracelet/lab/f;I)I
 
     const-string v0, "Lab"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "MSG_SWITCH_DEVICE_SAMPLE isSucceeded = "
 
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -79,7 +73,7 @@
 
     move-result-object v1
 
-    iget-boolean v3, p0, Lcn/com/smartdevices/bracelet/lab/h;->c:Z
+    iget-boolean v3, p0, Lcn/com/smartdevices/bracelet/lab/h;->b:Z
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -91,11 +85,9 @@
 
     move-result-object v1
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/h;->b:Lcn/com/smartdevices/bracelet/lab/g;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/h;->c:Lcn/com/smartdevices/bracelet/lab/g;
 
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/lab/g;->a(Lcn/com/smartdevices/bracelet/lab/g;)Lcn/com/smartdevices/bracelet/lab/f;
-
-    move-result-object v3
+    iget-object v3, v3, Lcn/com/smartdevices/bracelet/lab/g;->b:Lcn/com/smartdevices/bracelet/lab/f;
 
     invoke-static {v3}, Lcn/com/smartdevices/bracelet/lab/f;->b(Lcn/com/smartdevices/bracelet/lab/f;)I
 
@@ -111,21 +103,15 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/h;->b:Lcn/com/smartdevices/bracelet/lab/g;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/h;->c:Lcn/com/smartdevices/bracelet/lab/g;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/g;->a(Lcn/com/smartdevices/bracelet/lab/g;)Lcn/com/smartdevices/bracelet/lab/f;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/lab/g;->b:Lcn/com/smartdevices/bracelet/lab/f;
 
-    move-result-object v0
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/lab/f;->a:Lcn/com/smartdevices/bracelet/lab/b;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/f;->c(Lcn/com/smartdevices/bracelet/lab/f;)Lcn/com/smartdevices/bracelet/lab/b;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/h;->c:Lcn/com/smartdevices/bracelet/lab/g;
 
-    move-result-object v0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/h;->b:Lcn/com/smartdevices/bracelet/lab/g;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lab/g;->a(Lcn/com/smartdevices/bracelet/lab/g;)Lcn/com/smartdevices/bracelet/lab/f;
-
-    move-result-object v1
+    iget-object v1, v1, Lcn/com/smartdevices/bracelet/lab/g;->b:Lcn/com/smartdevices/bracelet/lab/f;
 
     invoke-static {v1}, Lcn/com/smartdevices/bracelet/lab/f;->b(Lcn/com/smartdevices/bracelet/lab/f;)I
 
@@ -135,17 +121,13 @@
 
     if-eqz v2, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/h;->b:Lcn/com/smartdevices/bracelet/lab/g;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/h;->c:Lcn/com/smartdevices/bracelet/lab/g;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/g;->a(Lcn/com/smartdevices/bracelet/lab/g;)Lcn/com/smartdevices/bracelet/lab/f;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/lab/g;->b:Lcn/com/smartdevices/bracelet/lab/f;
 
-    move-result-object v0
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/h;->c:Lcn/com/smartdevices/bracelet/lab/g;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/h;->b:Lcn/com/smartdevices/bracelet/lab/g;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lab/g;->a(Lcn/com/smartdevices/bracelet/lab/g;)Lcn/com/smartdevices/bracelet/lab/f;
-
-    move-result-object v1
+    iget-object v1, v1, Lcn/com/smartdevices/bracelet/lab/g;->b:Lcn/com/smartdevices/bracelet/lab/f;
 
     invoke-static {v1}, Lcn/com/smartdevices/bracelet/lab/f;->a(Lcn/com/smartdevices/bracelet/lab/f;)Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
@@ -155,17 +137,13 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/f;->a(Lcn/com/smartdevices/bracelet/lab/f;Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$LEParams;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/f;->a(Lcn/com/smartdevices/bracelet/lab/f;Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$LEParams;)Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$LEParams;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/h;->b:Lcn/com/smartdevices/bracelet/lab/g;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/h;->c:Lcn/com/smartdevices/bracelet/lab/g;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/g;->a(Lcn/com/smartdevices/bracelet/lab/g;)Lcn/com/smartdevices/bracelet/lab/f;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/lab/g;->b:Lcn/com/smartdevices/bracelet/lab/f;
 
-    move-result-object v0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/f;->c(Lcn/com/smartdevices/bracelet/lab/f;)Lcn/com/smartdevices/bracelet/lab/b;
-
-    move-result-object v0
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/lab/f;->a:Lcn/com/smartdevices/bracelet/lab/b;
 
     const/16 v1, 0x27
 
@@ -191,35 +169,27 @@
     :cond_2
     move v0, v1
 
-    goto/16 :goto_0
+    goto :goto_0
 
     :cond_3
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/h;->b:Lcn/com/smartdevices/bracelet/lab/g;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/h;->c:Lcn/com/smartdevices/bracelet/lab/g;
 
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/lab/g;->a(Lcn/com/smartdevices/bracelet/lab/g;)Lcn/com/smartdevices/bracelet/lab/f;
-
-    move-result-object v3
+    iget-object v3, v3, Lcn/com/smartdevices/bracelet/lab/g;->b:Lcn/com/smartdevices/bracelet/lab/f;
 
     if-nez v2, :cond_4
 
     :goto_2
-    invoke-static {v3, v0}, Lcn/com/smartdevices/bracelet/lab/f;->a(Lcn/com/smartdevices/bracelet/lab/f;I)V
+    invoke-static {v3, v0}, Lcn/com/smartdevices/bracelet/lab/f;->a(Lcn/com/smartdevices/bracelet/lab/f;I)I
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/h;->b:Lcn/com/smartdevices/bracelet/lab/g;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/h;->c:Lcn/com/smartdevices/bracelet/lab/g;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/g;->a(Lcn/com/smartdevices/bracelet/lab/g;)Lcn/com/smartdevices/bracelet/lab/f;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/lab/g;->b:Lcn/com/smartdevices/bracelet/lab/f;
 
-    move-result-object v0
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/lab/f;->a:Lcn/com/smartdevices/bracelet/lab/b;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/f;->c(Lcn/com/smartdevices/bracelet/lab/f;)Lcn/com/smartdevices/bracelet/lab/b;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/h;->c:Lcn/com/smartdevices/bracelet/lab/g;
 
-    move-result-object v0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/h;->b:Lcn/com/smartdevices/bracelet/lab/g;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lab/g;->a(Lcn/com/smartdevices/bracelet/lab/g;)Lcn/com/smartdevices/bracelet/lab/f;
-
-    move-result-object v1
+    iget-object v1, v1, Lcn/com/smartdevices/bracelet/lab/g;->b:Lcn/com/smartdevices/bracelet/lab/f;
 
     invoke-static {v1}, Lcn/com/smartdevices/bracelet/lab/f;->b(Lcn/com/smartdevices/bracelet/lab/f;)I
 
@@ -231,9 +201,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "MSG_SWITCH_DEVICE_SAMPLE isSucceeded = "
 
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -245,7 +219,7 @@
 
     move-result-object v1
 
-    iget-boolean v2, p0, Lcn/com/smartdevices/bracelet/lab/h;->c:Z
+    iget-boolean v2, p0, Lcn/com/smartdevices/bracelet/lab/h;->b:Z
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -257,11 +231,9 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/h;->b:Lcn/com/smartdevices/bracelet/lab/g;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/h;->c:Lcn/com/smartdevices/bracelet/lab/g;
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lab/g;->a(Lcn/com/smartdevices/bracelet/lab/g;)Lcn/com/smartdevices/bracelet/lab/f;
-
-    move-result-object v2
+    iget-object v2, v2, Lcn/com/smartdevices/bracelet/lab/g;->b:Lcn/com/smartdevices/bracelet/lab/f;
 
     invoke-static {v2}, Lcn/com/smartdevices/bracelet/lab/f;->b(Lcn/com/smartdevices/bracelet/lab/f;)I
 

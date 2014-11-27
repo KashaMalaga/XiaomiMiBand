@@ -21,7 +21,7 @@
         value = {
             "Ljava/util/LinkedList",
             "<",
-            "Lcn/com/smartdevices/bracelet/lab/ui/X;",
+            "Lcn/com/smartdevices/bracelet/lab/ui/Y;",
             ">;"
         }
     .end annotation
@@ -33,9 +33,9 @@
 
 .field private final h:Ljava/lang/String;
 
-.field private i:Lcn/com/smartdevices/bracelet/lab/ui/W;
+.field private i:Lcn/com/smartdevices/bracelet/lab/ui/X;
 
-.field private j:Lcn/com/smartdevices/bracelet/lab/ui/Y;
+.field private j:Lcn/com/smartdevices/bracelet/lab/ui/Z;
 
 .field private final k:Ljava/lang/Object;
 
@@ -79,6 +79,38 @@
     return-void
 .end method
 
+.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/V;Landroid/media/AudioManager;)Landroid/media/AudioManager;
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/V;->m:Landroid/media/AudioManager;
+
+    return-object p1
+.end method
+
+.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/V;Landroid/media/MediaPlayer;)Landroid/media/MediaPlayer;
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/V;->g:Landroid/media/MediaPlayer;
+
+    return-object p1
+.end method
+
+.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/V;Landroid/os/Looper;)Landroid/os/Looper;
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/V;->f:Landroid/os/Looper;
+
+    return-object p1
+.end method
+
+.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/V;Lcn/com/smartdevices/bracelet/lab/ui/X;)Lcn/com/smartdevices/bracelet/lab/ui/X;
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/V;->i:Lcn/com/smartdevices/bracelet/lab/ui/X;
+
+    return-object p1
+.end method
+
 .method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/V;)Ljava/lang/String;
     .locals 1
 
@@ -87,68 +119,36 @@
     return-object v0
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/V;Landroid/media/AudioManager;)V
+.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/V;Lcn/com/smartdevices/bracelet/lab/ui/Y;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/V;->m:Landroid/media/AudioManager;
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/lab/ui/V;->b(Lcn/com/smartdevices/bracelet/lab/ui/Y;)V
 
     return-void
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/V;Landroid/media/MediaPlayer;)V
-    .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/V;->g:Landroid/media/MediaPlayer;
-
-    return-void
-.end method
-
-.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/V;Landroid/os/Looper;)V
-    .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/V;->f:Landroid/os/Looper;
-
-    return-void
-.end method
-
-.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/V;Lcn/com/smartdevices/bracelet/lab/ui/W;)V
-    .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/V;->i:Lcn/com/smartdevices/bracelet/lab/ui/W;
-
-    return-void
-.end method
-
-.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/V;Lcn/com/smartdevices/bracelet/lab/ui/X;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/lab/ui/V;->b(Lcn/com/smartdevices/bracelet/lab/ui/X;)V
-
-    return-void
-.end method
-
-.method private a(Lcn/com/smartdevices/bracelet/lab/ui/X;)V
+.method private a(Lcn/com/smartdevices/bracelet/lab/ui/Y;)V
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/V;->e:Ljava/util/LinkedList;
 
     invoke-virtual {v0, p1}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/V;->i:Lcn/com/smartdevices/bracelet/lab/ui/W;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/V;->i:Lcn/com/smartdevices/bracelet/lab/ui/X;
 
     if-nez v0, :cond_0
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/ui/V;->c()V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/lab/ui/W;
+    new-instance v0, Lcn/com/smartdevices/bracelet/lab/ui/X;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/lab/ui/W;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/V;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/lab/ui/X;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/V;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/V;->i:Lcn/com/smartdevices/bracelet/lab/ui/W;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/V;->i:Lcn/com/smartdevices/bracelet/lab/ui/X;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/V;->i:Lcn/com/smartdevices/bracelet/lab/ui/W;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/V;->i:Lcn/com/smartdevices/bracelet/lab/ui/X;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/ui/W;->start()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/ui/X;->start()V
 
     :cond_0
     return-void
@@ -162,7 +162,7 @@
     return-object v0
 .end method
 
-.method private b(Lcn/com/smartdevices/bracelet/lab/ui/X;)V
+.method private b(Lcn/com/smartdevices/bracelet/lab/ui/Y;)V
     .locals 3
 
     :try_start_0
@@ -196,24 +196,24 @@
     invoke-virtual {v0}, Landroid/os/Looper;->quit()V
 
     :cond_0
-    new-instance v0, Lcn/com/smartdevices/bracelet/lab/ui/Y;
+    new-instance v0, Lcn/com/smartdevices/bracelet/lab/ui/Z;
 
-    invoke-direct {v0, p0, p1}, Lcn/com/smartdevices/bracelet/lab/ui/Y;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/V;Lcn/com/smartdevices/bracelet/lab/ui/X;)V
+    invoke-direct {v0, p0, p1}, Lcn/com/smartdevices/bracelet/lab/ui/Z;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/V;Lcn/com/smartdevices/bracelet/lab/ui/Y;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/V;->j:Lcn/com/smartdevices/bracelet/lab/ui/Y;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/V;->j:Lcn/com/smartdevices/bracelet/lab/ui/Z;
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/V;->j:Lcn/com/smartdevices/bracelet/lab/ui/Y;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/V;->j:Lcn/com/smartdevices/bracelet/lab/ui/Z;
 
     monitor-enter v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     :try_start_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/V;->j:Lcn/com/smartdevices/bracelet/lab/ui/Y;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/V;->j:Lcn/com/smartdevices/bracelet/lab/ui/Z;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/ui/Y;->start()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/ui/Z;->start()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/V;->j:Lcn/com/smartdevices/bracelet/lab/ui/Y;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/V;->j:Lcn/com/smartdevices/bracelet/lab/ui/Z;
 
     invoke-virtual {v0}, Ljava/lang/Object;->wait()V
 
@@ -344,23 +344,23 @@
 
     if-eq v0, v2, :cond_0
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/lab/ui/X;
+    new-instance v0, Lcn/com/smartdevices/bracelet/lab/ui/Y;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v2}, Lcn/com/smartdevices/bracelet/lab/ui/X;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/X;)V
+    invoke-direct {v0, v2}, Lcn/com/smartdevices/bracelet/lab/ui/Y;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/W;)V
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    iput-wide v2, v0, Lcn/com/smartdevices/bracelet/lab/ui/X;->g:J
+    iput-wide v2, v0, Lcn/com/smartdevices/bracelet/lab/ui/Y;->g:J
 
     const/4 v2, 0x3
 
-    iput v2, v0, Lcn/com/smartdevices/bracelet/lab/ui/X;->a:I
+    iput v2, v0, Lcn/com/smartdevices/bracelet/lab/ui/Y;->a:I
 
-    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/V;->a(Lcn/com/smartdevices/bracelet/lab/ui/X;)V
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/V;->a(Lcn/com/smartdevices/bracelet/lab/ui/Y;)V
 
     const/4 v0, 0x3
 
@@ -388,7 +388,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/V;->i:Lcn/com/smartdevices/bracelet/lab/ui/W;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/V;->i:Lcn/com/smartdevices/bracelet/lab/ui/X;
 
     if-eqz v0, :cond_1
 
@@ -397,9 +397,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "assertion failed mWakeLock="
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/V;->l:Landroid/os/PowerManager$WakeLock;
 
@@ -413,7 +417,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/V;->i:Lcn/com/smartdevices/bracelet/lab/ui/W;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/V;->i:Lcn/com/smartdevices/bracelet/lab/ui/X;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -454,36 +458,36 @@
 
     const/4 v3, 0x1
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/lab/ui/X;
+    new-instance v0, Lcn/com/smartdevices/bracelet/lab/ui/Y;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/X;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/X;)V
+    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/Y;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/W;)V
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v1
 
-    iput-wide v1, v0, Lcn/com/smartdevices/bracelet/lab/ui/X;->g:J
+    iput-wide v1, v0, Lcn/com/smartdevices/bracelet/lab/ui/Y;->g:J
 
-    iput v3, v0, Lcn/com/smartdevices/bracelet/lab/ui/X;->a:I
+    iput v3, v0, Lcn/com/smartdevices/bracelet/lab/ui/Y;->a:I
 
-    iput-object p1, v0, Lcn/com/smartdevices/bracelet/lab/ui/X;->b:Landroid/content/Context;
+    iput-object p1, v0, Lcn/com/smartdevices/bracelet/lab/ui/Y;->b:Landroid/content/Context;
 
-    iput-object p2, v0, Lcn/com/smartdevices/bracelet/lab/ui/X;->c:Landroid/net/Uri;
+    iput-object p2, v0, Lcn/com/smartdevices/bracelet/lab/ui/Y;->c:Landroid/net/Uri;
 
-    iput-boolean p3, v0, Lcn/com/smartdevices/bracelet/lab/ui/X;->d:Z
+    iput-boolean p3, v0, Lcn/com/smartdevices/bracelet/lab/ui/Y;->d:Z
 
-    iput p4, v0, Lcn/com/smartdevices/bracelet/lab/ui/X;->e:I
+    iput p4, v0, Lcn/com/smartdevices/bracelet/lab/ui/Y;->e:I
 
-    iput p5, v0, Lcn/com/smartdevices/bracelet/lab/ui/X;->f:F
+    iput p5, v0, Lcn/com/smartdevices/bracelet/lab/ui/Y;->f:F
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/V;->e:Ljava/util/LinkedList;
 
     monitor-enter v1
 
     :try_start_0
-    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/V;->a(Lcn/com/smartdevices/bracelet/lab/ui/X;)V
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/V;->a(Lcn/com/smartdevices/bracelet/lab/ui/Y;)V
 
     const/4 v0, 0x1
 
@@ -517,23 +521,23 @@
 
     if-eq v0, v2, :cond_0
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/lab/ui/X;
+    new-instance v0, Lcn/com/smartdevices/bracelet/lab/ui/Y;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v2}, Lcn/com/smartdevices/bracelet/lab/ui/X;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/X;)V
+    invoke-direct {v0, v2}, Lcn/com/smartdevices/bracelet/lab/ui/Y;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/W;)V
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    iput-wide v2, v0, Lcn/com/smartdevices/bracelet/lab/ui/X;->g:J
+    iput-wide v2, v0, Lcn/com/smartdevices/bracelet/lab/ui/Y;->g:J
 
     const/4 v2, 0x4
 
-    iput v2, v0, Lcn/com/smartdevices/bracelet/lab/ui/X;->a:I
+    iput v2, v0, Lcn/com/smartdevices/bracelet/lab/ui/Y;->a:I
 
-    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/V;->a(Lcn/com/smartdevices/bracelet/lab/ui/X;)V
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/V;->a(Lcn/com/smartdevices/bracelet/lab/ui/Y;)V
 
     const/4 v0, 0x4
 
@@ -599,7 +603,7 @@
     :cond_1
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/V;->j:Lcn/com/smartdevices/bracelet/lab/ui/Y;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/V;->j:Lcn/com/smartdevices/bracelet/lab/ui/Z;
 
     monitor-exit v2
     :try_end_1
@@ -648,23 +652,23 @@
 
     if-eq v0, v2, :cond_0
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/lab/ui/X;
+    new-instance v0, Lcn/com/smartdevices/bracelet/lab/ui/Y;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v2}, Lcn/com/smartdevices/bracelet/lab/ui/X;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/X;)V
+    invoke-direct {v0, v2}, Lcn/com/smartdevices/bracelet/lab/ui/Y;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/W;)V
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    iput-wide v2, v0, Lcn/com/smartdevices/bracelet/lab/ui/X;->g:J
+    iput-wide v2, v0, Lcn/com/smartdevices/bracelet/lab/ui/Y;->g:J
 
     const/4 v2, 0x2
 
-    iput v2, v0, Lcn/com/smartdevices/bracelet/lab/ui/X;->a:I
+    iput v2, v0, Lcn/com/smartdevices/bracelet/lab/ui/Y;->a:I
 
-    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/V;->a(Lcn/com/smartdevices/bracelet/lab/ui/X;)V
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/V;->a(Lcn/com/smartdevices/bracelet/lab/ui/Y;)V
 
     const/4 v0, 0x2
 

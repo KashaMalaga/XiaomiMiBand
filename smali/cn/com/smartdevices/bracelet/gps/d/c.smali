@@ -101,8 +101,29 @@
     add-int/lit8 v2, v2, -0x1
 
     :goto_0
-    if-gez v3, :cond_0
+    if-ltz v3, :cond_1
 
+    if-ltz v2, :cond_0
+
+    aget-byte v5, p0, v2
+
+    aput-byte v5, v4, v3
+
+    :goto_1
+    add-int/lit8 v3, v3, -0x1
+
+    add-int/lit8 v2, v2, -0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v5, 0x0
+
+    aput-byte v5, v4, v3
+
+    goto :goto_1
+
+    :cond_1
     const/4 v2, 0x0
 
     aget-byte v2, v4, v2
@@ -212,27 +233,6 @@
     add-long v2, v2, v17
 
     return-wide v2
-
-    :cond_0
-    if-ltz v2, :cond_1
-
-    aget-byte v5, p0, v2
-
-    aput-byte v5, v4, v3
-
-    :goto_1
-    add-int/lit8 v3, v3, -0x1
-
-    add-int/lit8 v2, v2, -0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v5, 0x0
-
-    aput-byte v5, v4, v3
-
-    goto :goto_1
 .end method
 
 .method public static a(J[BI)V
@@ -363,11 +363,8 @@
     :goto_0
     const/4 v3, 0x4
 
-    if-lt v0, v3, :cond_0
+    if-ge v0, v3, :cond_0
 
-    return-void
-
-    :cond_0
     add-int v3, p3, v0
 
     new-instance v4, Ljava/lang/Long;
@@ -387,6 +384,9 @@
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    :cond_0
+    return-void
 .end method
 
 .method public static a([BFI)V
@@ -401,11 +401,8 @@
     :goto_0
     const/4 v2, 0x4
 
-    if-lt v0, v2, :cond_0
+    if-ge v0, v2, :cond_0
 
-    return-void
-
-    :cond_0
     add-int v2, p2, v0
 
     new-instance v3, Ljava/lang/Integer;
@@ -423,6 +420,9 @@
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    :cond_0
+    return-void
 .end method
 
 .method public static a(D)[B
@@ -441,11 +441,8 @@
     :goto_0
     array-length v4, v3
 
-    if-lt v0, v4, :cond_0
+    if-ge v0, v4, :cond_0
 
-    return-object v3
-
-    :cond_0
     new-instance v4, Ljava/lang/Long;
 
     invoke-direct {v4, v1, v2}, Ljava/lang/Long;-><init>(J)V
@@ -461,6 +458,9 @@
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    :cond_0
+    return-object v3
 .end method
 
 .method public static a(I)[B
@@ -515,11 +515,8 @@
     const/4 v0, 0x0
 
     :goto_0
-    if-lt v0, v2, :cond_0
+    if-ge v0, v2, :cond_0
 
-    return-object v1
-
-    :cond_0
     sub-int v3, v2, v0
 
     mul-int/lit8 v3, v3, 0x8
@@ -539,6 +536,9 @@
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    :cond_0
+    return-object v1
 .end method
 
 .method public static b([B)J
@@ -917,11 +917,8 @@
     :goto_0
     array-length v3, v2
 
-    if-lt v0, v3, :cond_0
+    if-ge v0, v3, :cond_0
 
-    return-object v2
-
-    :cond_0
     mul-int/lit8 v3, v0, 0x8
 
     add-int/lit8 v3, v3, 0x0
@@ -1051,4 +1048,7 @@
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    :cond_0
+    return-object v2
 .end method

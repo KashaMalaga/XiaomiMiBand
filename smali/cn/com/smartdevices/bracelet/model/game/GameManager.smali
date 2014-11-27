@@ -55,7 +55,7 @@
     return-void
 .end method
 
-.method static synthetic access$0(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
+.method static synthetic access$100(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
     .locals 1
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->getGameBriefInfo()Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
@@ -65,7 +65,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$1(Lcn/com/smartdevices/bracelet/model/game/GameManager;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
+.method static synthetic access$200(Lcn/com/smartdevices/bracelet/model/game/GameManager;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->clearGameUI(Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
@@ -73,7 +73,7 @@
     return-void
 .end method
 
-.method static synthetic access$2(Lcn/com/smartdevices/bracelet/model/game/GameManager;)V
+.method static synthetic access$300(Lcn/com/smartdevices/bracelet/model/game/GameManager;)V
     .locals 0
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->getRegisterInfo()V
@@ -81,7 +81,7 @@
     return-void
 .end method
 
-.method static synthetic access$3(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
+.method static synthetic access$400(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager;->mGameBriefInfo:Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
@@ -89,7 +89,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$4(Lcn/com/smartdevices/bracelet/model/game/GameManager;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
+.method static synthetic access$500(Lcn/com/smartdevices/bracelet/model/game/GameManager;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->showGameRecord(Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
@@ -97,7 +97,7 @@
     return-void
 .end method
 
-.method static synthetic access$5(Lcn/com/smartdevices/bracelet/model/game/GameManager;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
+.method static synthetic access$600(Lcn/com/smartdevices/bracelet/model/game/GameManager;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->showBonusBanner(Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
@@ -105,7 +105,7 @@
     return-void
 .end method
 
-.method static synthetic access$6(Lcn/com/smartdevices/bracelet/model/game/GameManager;Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;[B)V
+.method static synthetic access$700(Lcn/com/smartdevices/bracelet/model/game/GameManager;Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;[B)V
     .locals 0
 
     invoke-direct {p0, p1, p2}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->parseGameBriefInfo(Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;[B)V
@@ -128,9 +128,13 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "Check continus reach goal,  startDay = "
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -184,9 +188,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "Game start/stop time illegal : start = "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -248,9 +256,13 @@
 
     new-instance v6, Ljava/lang/StringBuilder;
 
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v7, "sumary step = "
 
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
 
     invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -286,9 +298,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "First failed at "
 
-    invoke-direct {v2, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -347,9 +363,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "get game briefInfo = "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager;->mGameBriefInfo:Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
 
@@ -417,9 +437,13 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "parseGameBriefInfo error code ="
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -462,9 +486,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "dataObj = "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
@@ -556,7 +584,7 @@
 
     invoke-direct {v1, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    if-nez v1, :cond_5
+    if-nez v1, :cond_6
 
     const-string v0, "GameManager"
 
@@ -566,16 +594,22 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :catch_0
     move-exception v0
 
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
+    :cond_5
+    :goto_1
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager;->TEST:Z
+
+    if-eqz v0, :cond_2
+
     goto/16 :goto_0
 
-    :cond_5
+    :cond_6
     :try_start_1
     const-string v0, "global"
 
@@ -601,7 +635,7 @@
 
     move-result-object v1
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     const-string v4, "no"
 
@@ -627,8 +661,8 @@
 
     invoke-virtual {p1, v0}, Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;->setStopTime(I)V
 
-    :cond_6
-    if-eqz v2, :cond_7
+    :cond_7
+    if-eqz v2, :cond_8
 
     invoke-static {v2}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->fromJson(Lorg/json/JSONObject;)Lcn/com/smartdevices/bracelet/model/game/GameStage;
 
@@ -636,8 +670,8 @@
 
     invoke-virtual {p1, v0}, Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;->setRegisterStage(Lcn/com/smartdevices/bracelet/model/game/GameStage;)V
 
-    :cond_7
-    if-eqz v3, :cond_8
+    :cond_8
+    if-eqz v3, :cond_9
 
     invoke-static {v3}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->fromJson(Lorg/json/JSONObject;)Lcn/com/smartdevices/bracelet/model/game/GameStage;
 
@@ -645,8 +679,8 @@
 
     invoke-virtual {p1, v0}, Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;->setPlayingStage(Lcn/com/smartdevices/bracelet/model/game/GameStage;)V
 
-    :cond_8
-    if-eqz v1, :cond_2
+    :cond_9
+    if-eqz v1, :cond_5
 
     invoke-static {v1}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->fromJson(Lorg/json/JSONObject;)Lcn/com/smartdevices/bracelet/model/game/GameStage;
 
@@ -656,7 +690,7 @@
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
 
-    goto/16 :goto_0
+    goto :goto_1
 .end method
 
 .method private showBonusBanner(Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
@@ -714,9 +748,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "showBonusBanner, illegal playing stage time: "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->getStartTime()J
 
@@ -759,9 +797,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "showBonusBanner continueRecord = "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -959,9 +1001,13 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "playing start time ="
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->getStartTime()J
 
@@ -1035,9 +1081,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "steps = "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-interface {v0}, Lcn/com/smartdevices/bracelet/model/DaySportData$Summary;->getSteps()I
 
@@ -1138,7 +1188,7 @@
 
     new-instance v0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;
 
-    invoke-direct {v0, p0, v3}, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;-><init>(Lcn/com/smartdevices/bracelet/model/game/GameManager;Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;)V
+    invoke-direct {v0, p0, v3}, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;-><init>(Lcn/com/smartdevices/bracelet/model/game/GameManager;Lcn/com/smartdevices/bracelet/model/game/GameManager$1;)V
 
     const/4 v1, 0x3
 

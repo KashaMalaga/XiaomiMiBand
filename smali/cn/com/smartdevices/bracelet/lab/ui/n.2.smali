@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/n;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
 
-    invoke-static {v0, p3}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->a(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;I)V
+    invoke-static {v0, p3}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->a(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;I)I
 
     return-void
 .end method

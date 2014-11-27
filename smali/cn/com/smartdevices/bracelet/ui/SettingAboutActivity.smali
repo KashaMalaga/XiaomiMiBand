@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private b:Lcn/com/smartdevices/bracelet/ui/cl;
+.field private b:Lcn/com/smartdevices/bracelet/ui/co;
 
 .field private c:Landroid/content/BroadcastReceiver;
 
@@ -20,7 +20,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;->b:Lcn/com/smartdevices/bracelet/ui/cl;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;->b:Lcn/com/smartdevices/bracelet/ui/co;
 
     return-void
 .end method
@@ -28,9 +28,9 @@
 .method private a()V
     .locals 3
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/ck;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cn;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/ck;-><init>(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/cn;-><init>(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;->c:Landroid/content/BroadcastReceiver;
 
@@ -68,7 +68,7 @@
 
     move-result-object v1
 
-    const-class v0, Lcn/com/smartdevices/bracelet/ui/cl;
+    const-class v0, Lcn/com/smartdevices/bracelet/ui/co;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -78,13 +78,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/cl;
+    check-cast v0, Lcn/com/smartdevices/bracelet/ui/co;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;->b:Lcn/com/smartdevices/bracelet/ui/cl;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;->b:Lcn/com/smartdevices/bracelet/ui/co;
 
     const v0, 0x1020002
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;->b:Lcn/com/smartdevices/bracelet/ui/cl;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;->b:Lcn/com/smartdevices/bracelet/ui/co;
 
     invoke-virtual {v1, v0, v2}, Landroid/app/FragmentTransaction;->add(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
 
@@ -124,9 +124,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "onEvent force="
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/eventbus/EventApkupgrade;->isForceCheck()Z
 

@@ -146,11 +146,11 @@
 
     new-instance v6, Ljava/lang/StringBuilder;
 
-    invoke-static {v5}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v7
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v6
 
     const-string v7, " "
 
@@ -237,8 +237,17 @@
     :goto_2
     mul-int/lit16 v7, v6, 0x100
 
-    if-lt v4, v7, :cond_3
+    if-ge v4, v7, :cond_3
 
+    div-int v7, v4, v6
+
+    aput v7, v28, v4
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_2
+
+    :cond_3
     const/4 v6, 0x0
 
     const/4 v4, 0x3
@@ -270,73 +279,8 @@
     :goto_3
     move/from16 v0, v20
 
-    if-lt v0, v9, :cond_4
+    if-ge v0, v9, :cond_8
 
-    const/4 v15, 0x0
-
-    :goto_4
-    if-lt v15, v5, :cond_9
-
-    const-string v4, "pix"
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-static {v5}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-string v7, " "
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    const-string v7, " "
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    array-length v7, v3
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-static {v4, v6}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v4, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    move v8, v5
-
-    invoke-virtual/range {v2 .. v9}, Landroid/graphics/Bitmap;->setPixels([IIIIIII)V
-
-    goto/16 :goto_0
-
-    :cond_3
-    div-int v7, v4, v6
-
-    aput v7, v28, v4
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_2
-
-    :cond_4
     const/4 v6, 0x0
 
     move/from16 v0, p2
@@ -361,41 +305,11 @@
 
     move v7, v6
 
-    :goto_5
+    :goto_4
     move/from16 v0, p2
 
-    if-le v14, v0, :cond_5
+    if-gt v14, v0, :cond_5
 
-    const/4 v14, 0x0
-
-    move/from16 v18, v17
-
-    move/from16 v17, v16
-
-    move/from16 v16, v15
-
-    move v15, v14
-
-    move v14, v13
-
-    move/from16 v13, p2
-
-    :goto_6
-    if-lt v15, v5, :cond_7
-
-    add-int v6, v19, v5
-
-    add-int/lit8 v7, v20, 0x1
-
-    move/from16 v19, v6
-
-    move v13, v14
-
-    move/from16 v20, v7
-
-    goto :goto_3
-
-    :cond_5
     const/16 v18, 0x0
 
     move/from16 v0, v18
@@ -480,7 +394,7 @@
 
     add-int v15, v15, v18
 
-    if-lez v14, :cond_6
+    if-lez v14, :cond_4
 
     const/16 v18, 0x0
 
@@ -500,12 +414,12 @@
 
     add-int v6, v6, v18
 
-    :goto_7
+    :goto_5
     add-int/lit8 v14, v14, 0x1
 
-    goto/16 :goto_5
+    goto :goto_4
 
-    :cond_6
+    :cond_4
     const/16 v18, 0x0
 
     aget v18, v30, v18
@@ -524,9 +438,26 @@
 
     add-int v10, v10, v18
 
-    goto :goto_7
+    goto :goto_5
 
-    :cond_7
+    :cond_5
+    const/4 v14, 0x0
+
+    move/from16 v18, v17
+
+    move/from16 v17, v16
+
+    move/from16 v16, v15
+
+    move v15, v14
+
+    move v14, v13
+
+    move/from16 v13, p2
+
+    :goto_6
+    if-ge v15, v5, :cond_7
+
     aget v30, v28, v18
 
     aput v30, v24, v14
@@ -571,7 +502,7 @@
 
     sub-int v10, v10, v31
 
-    if-nez v20, :cond_8
+    if-nez v20, :cond_6
 
     add-int v31, v15, p2
 
@@ -587,7 +518,7 @@
 
     aput v31, v27, v15
 
-    :cond_8
+    :cond_6
     aget v31, v27, v15
 
     add-int v31, v31, v19
@@ -698,7 +629,25 @@
 
     goto/16 :goto_6
 
-    :cond_9
+    :cond_7
+    add-int v6, v19, v5
+
+    add-int/lit8 v7, v20, 0x1
+
+    move/from16 v19, v6
+
+    move v13, v14
+
+    move/from16 v20, v7
+
+    goto/16 :goto_3
+
+    :cond_8
+    const/4 v15, 0x0
+
+    :goto_7
+    if-ge v15, v5, :cond_e
+
     const/4 v7, 0x0
 
     move/from16 v0, p2
@@ -734,44 +683,8 @@
 
     move/from16 v1, p2
 
-    if-le v0, v1, :cond_a
+    if-gt v0, v1, :cond_b
 
-    const/4 v6, 0x0
-
-    move/from16 v18, v16
-
-    move/from16 v19, v17
-
-    move/from16 v16, v6
-
-    move/from16 v17, v14
-
-    move v14, v15
-
-    move v6, v7
-
-    move v7, v8
-
-    move v8, v10
-
-    move v10, v11
-
-    move v11, v12
-
-    move v12, v13
-
-    move/from16 v13, p2
-
-    :goto_9
-    move/from16 v0, v16
-
-    if-lt v0, v9, :cond_d
-
-    add-int/lit8 v15, v15, 0x1
-
-    goto/16 :goto_4
-
-    :cond_a
     const/16 v19, 0x0
 
     move/from16 v0, v19
@@ -828,7 +741,7 @@
 
     add-int v16, v16, v14
 
-    if-lez v18, :cond_c
+    if-lez v18, :cond_a
 
     const/4 v14, 0x0
 
@@ -848,16 +761,16 @@
 
     add-int/2addr v7, v14
 
-    :goto_a
+    :goto_9
     move/from16 v0, v18
 
     move/from16 v1, v22
 
-    if-ge v0, v1, :cond_b
+    if-ge v0, v1, :cond_9
 
     add-int/2addr v6, v5
 
-    :cond_b
+    :cond_9
     add-int/lit8 v14, v18, 0x1
 
     move/from16 v18, v14
@@ -870,7 +783,7 @@
 
     goto :goto_8
 
-    :cond_c
+    :cond_a
     const/4 v14, 0x0
 
     aget v14, v21, v14
@@ -889,9 +802,40 @@
 
     add-int/2addr v11, v14
 
-    goto :goto_a
+    goto :goto_9
 
-    :cond_d
+    :cond_b
+    const/4 v6, 0x0
+
+    move/from16 v18, v16
+
+    move/from16 v19, v17
+
+    move/from16 v16, v6
+
+    move/from16 v17, v14
+
+    move v14, v15
+
+    move v6, v7
+
+    move v7, v8
+
+    move v8, v10
+
+    move v10, v11
+
+    move v11, v12
+
+    move v12, v13
+
+    move/from16 v13, p2
+
+    :goto_a
+    move/from16 v0, v16
+
+    if-ge v0, v9, :cond_d
+
     const/high16 v20, -0x1000000
 
     aget v21, v3, v14
@@ -948,7 +892,7 @@
 
     sub-int v10, v10, v21
 
-    if-nez v15, :cond_e
+    if-nez v15, :cond_c
 
     add-int v21, v16, v29
 
@@ -960,7 +904,7 @@
 
     aput v21, v27, v16
 
-    :cond_e
+    :cond_c
     aget v21, v27, v16
 
     add-int v21, v21, v15
@@ -1053,7 +997,63 @@
 
     add-int/lit8 v16, v16, 0x1
 
-    goto/16 :goto_9
+    goto/16 :goto_a
+
+    :cond_d
+    add-int/lit8 v15, v15, 0x1
+
+    goto/16 :goto_7
+
+    :cond_e
+    const-string v4, "pix"
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    const-string v7, " "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    const-string v7, " "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    array-length v7, v3
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v4, v6}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v4, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    move v8, v5
+
+    invoke-virtual/range {v2 .. v9}, Landroid/graphics/Bitmap;->setPixels([IIIIIII)V
+
+    goto/16 :goto_0
 
     :cond_f
     move-object/from16 v2, p1

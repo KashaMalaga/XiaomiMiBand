@@ -39,43 +39,42 @@ COLOR_NORMAL_BLACK =  0x000000
 
 function getCaloriesString(calories)
     log('cal :'..calories)
+    -- test
+    --calories = math.random(100, 1000);
 
     defautMsg  = ""
-    threshHoldValue = 14
+    threshHoldValue = 96
 
     if calories < threshHoldValue then
         return defautMsg
     end
-	
- t = {}
 
-    best = 999999
-
-    for i,item in ipairs(getString('calories_table')) do
-        _c = item["calories"]
-        if math.abs(calories - _c) < best then
-            best = math.abs(calories - _c)
-        end
+    min = calories - 10
+    if min < threshHoldValue then
+        min  = threshHoldValue
     end
+    max = calories + 10
 
-    lesscalfound = false
-
+    t = {}
     for i,item in ipairs(getString('calories_table')) do
         _s = item["str"]
         _c = item["calories"]
-        if _c == calories - best then
-            table.insert(t,_s)
-            lesscalfound = true
-        elseif _c == calories + best and lesscalfound == false then
+        if _c >= min and _c <= max then
             table.insert(t,_s)
         end
     end
-	
+
     if #t > 0 then
         r = math.random(1,#t)
         return t[r]
     end
 
+    mod = calories % 9
+    fat = (calories - mod) / 9
+    msg = string.format(getString('get_over_format'), fat);
+
+    log('cal mod='..mod..', fat='..fat..', msg='..msg);
+    return msg
 end
 
 ---------------------------------------------------
@@ -1481,6 +1480,249 @@ end
 function getLuaVersion(Cinfo)
     Cinfo:setLuaVersion(""..__luaVersion);
     log("get lua version:" .. __luaVersion)
+end
+
+---======================================
+--              GAME AREA
+---======================================
+KEY_WEBTYPE = "web_type";
+KEY_WEBURL = "web_url";
+KEY_ACTION_BAR_COLOR = "ActionBarColor";
+KEY_SHOW_SHARE = "ShowShare";
+KEY_EVENT_PAGE_TYPE = "EventPageType";
+WEBTYPE_SYSTEM_BLOG = 2;
+STR_GAME_REGISTER = "game_registered";
+STR_GAME_NOT_REGISTER = "game_not_registered";
+STR_GAME_DEFAULT = "game_default";
+STR_GAME_PLAYING = "game_playing";
+STR_GAME_PLAYING_FAIL = "game_playing_fail";
+STR_GAME_PLAYING_FAILED = "game_playing_failed";
+STR_GAME_BONUS = "game_bonus";
+STR_GAME_CLEAR_BANNER = "game_clear_banner";
+
+KEY_SHARE_CONTENT = "shareToContent"
+
+
+function getDayDif1(y, m, d)
+    date1 = os.date("*t")
+
+    time2 = os.time{year=y, month = m, day = d}
+    log("time 2 = ".. time2)
+    date2 = os.date("*t", time2)
+
+    return (date1.yday - date2.yday)
+end
+
+function getDayDif(timeStamp)
+    timeStamp = timeStamp + 1  -- +1s to fix bug: date.yday is yesterday if cur time is 0:00:00
+
+    date1 = os.date("*t")
+    date2 = os.date("*t", timeStamp)
+
+    log("date2 yday = "..date2.yday.." date1 yday="..date1.yday )
+
+    return (date2.yday - date1.yday)
+end
+
+function getDayDifElapsed(timeStamp)
+    date1 = os.date("*t")
+    date2 = os.date("*t", timeStamp)
+
+    return (date1.yday - date2.yday)
+end
+
+function getTimeStamp(date1)
+    timeStamp = ((date1 - 1970) * 365 + date1.yday) * 24 * 3600 + ((date1.hour * 60) + date1.min) * 60 + date1.sec
+    return timeStamp
+end
+
+function showGameBanner(listDao, ConfigInfo)
+    -- Defaults
+    actionBarColor = COLOR_NORMAL_BLUE
+    listTxtColor = COLOR_NORMAL_BLUE
+    sharePageType = 0
+    shareContent = getString("share_to_content_for_event")
+
+    t = {}
+    t.t1 = getString("game_register")
+    t.t2 = getString("game_not_register_info")
+
+    title_str = ConfigInfo:getTitle();
+
+    if (title_str == STR_GAME_CLEAR_BANNER) then
+        clearRecord(listDao, ConfigInfo:getLuaAction(), ConfigInfo:getType())
+        return
+    end
+
+    if title_str == STR_GAME_REGISTER then
+        actionBarColor = COLOR_REGISTER
+        sharePageType = 1
+
+        daydif = 1
+        if (ConfigInfo:getTimeStamp() > 0) then
+            daydif = getDayDif(ConfigInfo:getTimeStamp())
+        end
+
+        if (daydif == 0) then
+            daydif = getString("less_than_one")
+        end
+        t.t1 = getString("game_register")
+        t.t2 = string.format(getString("game_register_info"), daydif)
+
+        shareContent = string.format(getString("game_share_to_registered"), daydif)
+
+    elseif title_str == STR_GAME_NOT_REGISTER then
+        actionBarColor = COLOR_REGISTER
+        sharePageType = 1
+
+        t.t1 = getString("game_register")
+        t.t2 = getString("game_not_register_info")
+        shareContent = getString("share_to_content_for_event")
+
+    elseif title_str == STR_GAME_PLAYING then
+        t.t2 = getString("click_to_show_result")
+
+        steps = ConfigInfo:getRecordStep()
+        startTime = ConfigInfo:getTimeStamp()
+        stopTime = ConfigInfo:getTimeStamp1()
+        bonusOpenTime = ConfigInfo:getTimeStamp2()
+        log("Game playing steps = "..steps.." starttime="..startTime)
+        goal = ConfigInfo:getGoal();
+        if (getDayDif(stopTime) == 0) then
+            if (steps >= goal) then
+                t.t1 = getString("game_playing_lastday_done")
+                if (bonusOpenTime ~= nil) then
+                    log("bonus open time =" .. bonusOpenTime)
+                    t.t2 = string.format(getString("game_playing_bonus_info"), os.date("%m", bonusOpenTime), os.date("%d", bonusOpenTime))
+                end
+                actionBarColor = COLOR_REACH_GOAL
+                listTxtColor =  COLOR_REACH_GOAL
+                shareContent = getString("game_share_to_finished")
+            else
+                t.t1 = getString("game_playing_lastday")
+                shareContent = getString("game_share_to_not_finished")
+            end
+        else
+            if (steps >= goal) then
+                t.t1 = string.format(getString("game_playing_done"), getDayDifElapsed(startTime) + 1)
+                actionBarColor = COLOR_REACH_GOAL
+                listTxtColor =  COLOR_REACH_GOAL
+                shareContent = getString("game_share_to_finished")
+            else
+                t.t1 = string.format(getString("game_playing"), getDayDifElapsed(startTime) + 1)
+                shareContent = getString("game_share_to_not_finished")
+            end
+        end
+
+    elseif title_str == STR_GAME_PLAYING_FAIL then
+        actionBarColor = COLOR_REACH_FAIL
+        listTxtColor =  COLOR_REACH_FAIL_APP
+        t.right = "";
+        timeStamp = ConfigInfo:getTimeStamp()
+        if (getDayDif(timeStamp) == -1) then
+            t.t1 = getString("game_fail_title_ytd")
+        else
+            t.t1 = string.format(getString("game_fail_title"), os.date("%m", timeStamp), os.date("%d", timeStamp))
+        end
+        t.t2 = getString("game_fail_info")
+        shareContent = getString("game_share_to_failed")
+
+    elseif title_str == STR_GAME_PLAYING_FAILED then
+        actionBarColor = COLOR_REACH_FAIL
+        listTxtColor =  COLOR_REACH_FAIL_APP
+        t.right = "";
+        t.t1 = getString("game_failed_title")
+        t.t2 = getString("game_fail_info")
+        shareContent = getString("game_share_to_failed")
+
+    elseif title_str == STR_GAME_BONUS then
+        bonusTime = ConfigInfo:getTimeStamp()
+        serverTime = ConfigInfo:getServerTimeStamp()
+        actionBarColor = COLOR_BONUS
+        totalSteps = ConfigInfo:getRecordStep();
+
+        continueReachGoal = ConfigInfo:getIsBind()
+        if (continueReachGoal) then
+            listTxtColor =  COLOR_REACH_GOAL
+            shareContent = string.format(getString("game_share_to_success"), totalSteps)
+        else
+            actionBarColor = COLOR_REACH_FAIL
+            listTxtColor =  COLOR_REACH_FAIL_APP
+            shareContent = getString("game_share_to_failed")
+        end
+
+        if (serverTime >= bonusTime) then
+            if (ConfigInfo:getBonus() > 0) then
+                t.t1 = getString("game_bonus_hit")
+                t.t2 = getString("game_bonus_hit_info")
+                shareContent = getString("game_share_to_hit_bonus")
+            else
+                t.t1 = getString("game_bonus_miss")
+                t.t2 = getString("game_bonus_miss_info")
+
+                if (continueReachGoal) then
+                    shareContent = getString("game_share_to_not_hit_bonus")
+                else
+                    shareContent = getString("game_share_to_failed")
+                end
+            end
+        else -- Before bonus open
+            if (getDayDif(bonusTime) == 1) then
+                t.t1 = getString("game_bonus_open_tomorrow")
+                t.t2 = getString("game_not_register_info")
+            elseif (getDayDif(bonusTime) == 0) then
+                t.t1 = getString("game_bonus_open_today")
+                t.t2 = getString("game_not_register_info")
+            else
+                t.t1 = string.format(getString("game_bonus_open"), os.date("%m", bonusTime), os.date("%d", bonusTime))
+            end
+        end
+    end
+
+    url = ConfigInfo:getUrl();
+    t.stype = ConfigInfo:getType();
+    t.right = ConfigInfo:getRight();
+
+    if (t.stype == nil) then
+        t.stype = ""
+    end
+    if (t.right == nil) then
+        t.right = ""
+    end
+    if (url == nil) then
+        url = ""
+    end
+
+    ---Uniform action bar color to RED
+    actionBarColor = COLOR_REGISTER
+    shareContent = shareContent .. " http://bbs.xiaomi.cn/thread-10683448-1-1.html"
+
+    t.json = "{txtColor="..listTxtColor.."}"
+
+    log("showGameBanner type =" .. title_str .. ", Title="..t.t1.."    "..t.t2..", type="..t.stype..", right="..t.right..",url=".. url)
+    log("shareContent =" .. shareContent)
+
+    t.strScript = "function doAction(context, luaAction) \
+        local intent = luaAction:getIntentFromString('cn.com.smartdevices.bracelet.activity.WebActivity');\
+        luaAction:putExtra(intent,'"..KEY_WEBTYPE.."',"..WEBTYPE_SYSTEM_BLOG..")\
+        luaAction:putExtra(intent,'"..KEY_WEBURL.."','"..url.."')\
+        luaAction:putExtra(intent,'"..KEY_SHOW_SHARE.."',1)\
+        luaAction:putExtra(intent,'"..KEY_EVENT_PAGE_TYPE.."',"..sharePageType..")\
+        luaAction:putExtra(intent,'"..KEY_ACTION_BAR_COLOR.."',"..actionBarColor..")\
+        luaAction:putExtra(intent,'"..KEY_SHARE_CONTENT.."','"..shareContent.."')\
+        context:startActivity(intent)\
+    end";
+
+    replaceMsgByType(listDao,ConfigInfo,t)
+    end
+
+function getGameInfo(Cinfo)
+    log("getGameInfo locale = "..getCurLocale())
+    if (getCurLocale() == zh_CN) then
+        Cinfo:setGameInfo("NewGame");
+    else
+        Cinfo:setGameInfo("NewGame_Only_in_Chinese_Mainland");
+    end
 end
 
 function getLabFactoryActivityMsgs(listDao, activityItem)

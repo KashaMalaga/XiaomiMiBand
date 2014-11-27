@@ -94,9 +94,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "bracelet statistic info:"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -399,9 +403,13 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "new fw length:"
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v1}, Ljava/io/InputStream;->available()I
 
@@ -443,9 +451,13 @@
 
     new-instance v4, Ljava/lang/StringBuilder;
 
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v5, "new fw version:"
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
 
     invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -504,7 +516,7 @@
 
     invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_2
     const/4 v0, 0x1
@@ -538,9 +550,25 @@
     :goto_0
     array-length v4, v3
 
-    if-lt v0, v4, :cond_1
+    if-ge v0, v4, :cond_4
 
-    move v2, v1
+    aget-object v4, v3, v0
+
+    invoke-virtual {v4}, Landroid/net/NetworkInfo;->getType()I
+
+    move-result v4
+
+    if-ne v4, v2, :cond_1
+
+    aget-object v4, v3, v0
+
+    invoke-virtual {v4}, Landroid/net/NetworkInfo;->isConnected()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_3
+
+    move v1, v2
 
     :goto_1
     if-eqz v1, :cond_0
@@ -559,7 +587,9 @@
 
     move-result v4
 
-    if-ne v4, v2, :cond_2
+    const/16 v5, 0x9
+
+    if-ne v4, v5, :cond_2
 
     aget-object v4, v3, v0
 
@@ -567,9 +597,13 @@
 
     move-result v4
 
-    if-eqz v4, :cond_4
+    if-eqz v4, :cond_3
 
-    move v1, v2
+    move v6, v2
+
+    move v2, v1
+
+    move v1, v6
 
     goto :goto_1
 
@@ -580,9 +614,7 @@
 
     move-result v4
 
-    const/16 v5, 0x9
-
-    if-ne v4, v5, :cond_3
+    if-nez v4, :cond_3
 
     aget-object v4, v3, v0
 
@@ -590,7 +622,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_4
+    if-eqz v4, :cond_3
 
     move v6, v2
 
@@ -601,34 +633,14 @@
     goto :goto_1
 
     :cond_3
-    aget-object v4, v3, v0
-
-    invoke-virtual {v4}, Landroid/net/NetworkInfo;->getType()I
-
-    move-result v4
-
-    if-nez v4, :cond_4
-
-    aget-object v4, v3, v0
-
-    invoke-virtual {v4}, Landroid/net/NetworkInfo;->isConnected()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_4
-
-    move v6, v2
-
-    move v2, v1
-
-    move v1, v6
-
-    goto :goto_1
-
-    :cond_4
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    :cond_4
+    move v2, v1
+
+    goto :goto_1
 .end method
 
 .method private j()V
@@ -869,9 +881,13 @@
 
     new-instance v4, Ljava/lang/StringBuilder;
 
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v5, "topActivity:"
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
 
     invoke-virtual {v0}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
@@ -891,9 +907,13 @@
 
     new-instance v4, Ljava/lang/StringBuilder;
 
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v5, "topActivity:"
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
 
     invoke-virtual {v0}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 

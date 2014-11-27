@@ -297,7 +297,47 @@
 
     move-result v0
 
-    if-nez v0, :cond_3
+    if-eqz v0, :cond_1
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/c/a/b;
+
+    const/16 v4, 0x5b
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/c/a/b;->b(Lcn/com/smartdevices/bracelet/c/a/b;)I
+
+    move-result v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const/16 v5, 0x2c
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/c/a/b;->a(Lcn/com/smartdevices/bracelet/c/a/b;)I
+
+    move-result v0
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v4, "],"
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    goto :goto_0
 
     :cond_1
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -328,45 +368,4 @@
     invoke-interface {v1, v0, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object v1
-
-    :cond_3
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/c/a/b;
-
-    const/16 v4, 0x5b
-
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/c/a/b;->a(Lcn/com/smartdevices/bracelet/c/a/b;)I
-
-    move-result v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    const/16 v5, 0x2c
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/c/a/b;->b(Lcn/com/smartdevices/bracelet/c/a/b;)I
-
-    move-result v0
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v4, "],"
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    goto :goto_0
 .end method

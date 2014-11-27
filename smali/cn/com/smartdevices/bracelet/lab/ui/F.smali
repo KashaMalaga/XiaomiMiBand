@@ -29,7 +29,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;Lcn/com/smartdevices/bracelet/lab/ui/F;)V
+.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;Lcn/com/smartdevices/bracelet/lab/ui/A;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/lab/ui/F;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;)V
@@ -119,7 +119,7 @@
 
     invoke-direct {v2, v3, v4}, Lcn/com/smartdevices/bracelet/lab/sportmode/DynamicGroupItemInfo;-><init>(II)V
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->a(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;Lcn/com/smartdevices/bracelet/lab/sportmode/DynamicGroupItemInfo;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->a(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;Lcn/com/smartdevices/bracelet/lab/sportmode/DynamicGroupItemInfo;)Lcn/com/smartdevices/bracelet/lab/sportmode/DynamicGroupItemInfo;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/F;->f:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
@@ -182,7 +182,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/F;->f:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->e(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;)Lcn/com/smartdevices/bracelet/lab/ui/ac;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->e(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;)Lcn/com/smartdevices/bracelet/lab/ui/ae;
 
     move-result-object v1
 
@@ -196,7 +196,7 @@
 
     move-result v2
 
-    invoke-virtual {v1, v0, v2}, Lcn/com/smartdevices/bracelet/lab/ui/ac;->a(IZ)V
+    invoke-virtual {v1, v0, v2}, Lcn/com/smartdevices/bracelet/lab/ui/ae;->a(IZ)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/F;->f:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
@@ -254,7 +254,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/F;->f:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
-    invoke-static {v0, v5}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->b(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;I)V
+    invoke-static {v0, v5}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->b(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;I)I
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/F;->f:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
@@ -316,23 +316,17 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/F;->f:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->h(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;)I
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/F;->f:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->b(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;)Lcn/com/smartdevices/bracelet/lab/sportmode/DynamicGroupItemInfo;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/lab/sportmode/DynamicGroupItemInfo;->getCount()I
 
     move-result v1
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/F;->f:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->b(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;)Lcn/com/smartdevices/bracelet/lab/sportmode/DynamicGroupItemInfo;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/lab/sportmode/DynamicGroupItemInfo;->getCount()I
-
-    move-result v2
-
-    add-int/2addr v1, v2
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->c(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;I)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->c(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;I)I
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/F;->f:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
@@ -459,7 +453,7 @@
 
     iget v1, p1, Landroid/os/Message;->arg1:I
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->e(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;I)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->e(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;I)I
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/F;->f:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
@@ -500,7 +494,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/F;->f:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
-    invoke-static {v0, v5}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->b(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;I)V
+    invoke-static {v0, v5}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->b(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;I)I
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/F;->f:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
@@ -523,6 +517,8 @@
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->l(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;)V
 
     goto/16 :goto_0
+
+    nop
 
     :sswitch_data_0
     .sparse-switch

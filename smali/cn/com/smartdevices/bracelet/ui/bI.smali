@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/ui/L;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/bE;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/bG;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/bE;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/bG;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bI;->a:Lcn/com/smartdevices/bracelet/ui/bE;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bI;->a:Lcn/com/smartdevices/bracelet/ui/bG;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,52 +22,62 @@
 
 
 # virtual methods
-.method public a(Landroid/app/DialogFragment;)V
-    .locals 0
+.method public run()V
+    .locals 2
 
-    return-void
-.end method
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bI;->a:Lcn/com/smartdevices/bracelet/ui/bG;
 
-.method public b(Landroid/app/DialogFragment;)V
-    .locals 3
-
-    invoke-virtual {p1}, Landroid/app/DialogFragment;->dismiss()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bI;->a:Lcn/com/smartdevices/bracelet/ui/bE;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/bE;->c(Lcn/com/smartdevices/bracelet/ui/bE;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bI;->a:Lcn/com/smartdevices/bracelet/ui/bE;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/bE;->getActivity()Landroid/app/Activity;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/bG;->a(Lcn/com/smartdevices/bracelet/ui/bG;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v0
 
-    const-string v1, "UserLogout"
+    invoke-static {}, Lcn/com/smartdevices/bracelet/o;->a()Lcn/com/smartdevices/bracelet/o;
 
-    const-string v2, "Confirmed"
+    move-result-object v1
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/o;->d()Lcn/com/smartdevices/bracelet/model/UserTotalSportData;
 
-    return-void
-.end method
+    move-result-object v1
 
-.method public c(Landroid/app/DialogFragment;)V
-    .locals 3
+    iput-object v1, v0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->totalSportData:Lcn/com/smartdevices/bracelet/model/UserTotalSportData;
 
-    invoke-virtual {p1}, Landroid/app/DialogFragment;->dismiss()V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bI;->a:Lcn/com/smartdevices/bracelet/ui/bG;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bI;->a:Lcn/com/smartdevices/bracelet/ui/bE;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/bE;->getActivity()Landroid/app/Activity;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/bG;->a(Lcn/com/smartdevices/bracelet/ui/bG;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v0
 
-    const-string v1, "UserLogout"
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/u;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 
-    const-string v2, "Canceled"
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bI;->a:Lcn/com/smartdevices/bracelet/ui/bG;
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/bG;->getActivity()Landroid/app/Activity;
 
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const-string v0, "PersonInfoFragment"
+
+    const-string v1, "getActivity is null"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_0
     return-void
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bI;->a:Lcn/com/smartdevices/bracelet/ui/bG;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/bG;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bJ;
+
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/bJ;-><init>(Lcn/com/smartdevices/bracelet/ui/bI;)V
+
+    invoke-virtual {v0, v1}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
+
+    goto :goto_0
 .end method

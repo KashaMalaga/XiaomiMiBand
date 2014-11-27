@@ -1,4 +1,4 @@
-.class Lcn/com/smartdevices/bracelet/chart/c/k;
+.class final Lcn/com/smartdevices/bracelet/chart/c/k;
 .super Ljava/lang/Object;
 
 # interfaces
@@ -6,7 +6,7 @@
 
 
 # instance fields
-.field private final synthetic a:Landroid/widget/TextView;
+.field final synthetic a:Landroid/widget/TextView;
 
 
 # direct methods
@@ -37,9 +37,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "Text : "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

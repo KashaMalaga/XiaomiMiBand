@@ -1,50 +1,37 @@
 .class Lcn/com/smartdevices/bracelet/ui/dp;
-.super Landroid/text/style/ClickableSpan;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/do;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/UnBindActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/do;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/UnBindActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dp;->a:Lcn/com/smartdevices/bracelet/ui/do;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dp;->a:Lcn/com/smartdevices/bracelet/ui/UnBindActivity;
 
-    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
+.method public run()V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dp;->a:Lcn/com/smartdevices/bracelet/ui/do;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dp;->a:Lcn/com/smartdevices/bracelet/ui/UnBindActivity;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/do;->getActivity()Landroid/app/Activity;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->b(Landroid/app/Activity;)V
 
-    move-result-object v0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dp;->a:Lcn/com/smartdevices/bracelet/ui/UnBindActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->j(Landroid/content/Context;)V
-
-    return-void
-.end method
-
-.method public updateDrawState(Landroid/text/TextPaint;)V
-    .locals 1
-
-    invoke-super {p0, p1}, Landroid/text/style/ClickableSpan;->updateDrawState(Landroid/text/TextPaint;)V
-
-    const/high16 v0, -0x1000000
-
-    invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setColor(I)V
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setUnderlineText(Z)V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/UnBindActivity;->finish()V
 
     return-void
 .end method

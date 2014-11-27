@@ -335,7 +335,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_3
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->b:Lcn/com/smartdevices/bracelet/c/a;
 
@@ -343,7 +343,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_3
 
     move v0, v1
 
@@ -354,18 +354,25 @@
 
     move-result v3
 
-    if-nez v3, :cond_2
+    if-nez v3, :cond_0
 
-    if-nez v0, :cond_2
+    if-eqz v0, :cond_1
 
-    :goto_1
+    :cond_0
+    move v2, v1
+
+    :cond_1
     const-string v0, "QQ.Login"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "Check Need Login : "
 
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -377,7 +384,7 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_2
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->b:Lcn/com/smartdevices/bracelet/c/a;
 
@@ -385,7 +392,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     new-instance v0, Lcn/com/smartdevices/bracelet/ui/m;
 
@@ -415,8 +422,8 @@
 
     invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/ui/J;->a(Landroid/app/Activity;Landroid/app/DialogFragment;)V
 
-    :cond_0
-    :goto_2
+    :cond_2
+    :goto_1
     invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;)V
 
     const-string v0, "PageBindQQHealth"
@@ -425,18 +432,13 @@
 
     return-void
 
-    :cond_1
+    :cond_3
     move v0, v2
 
     goto :goto_0
 
-    :cond_2
-    move v2, v1
-
-    goto :goto_1
-
-    :cond_3
+    :cond_4
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a()V
 
-    goto :goto_2
+    goto :goto_1
 .end method

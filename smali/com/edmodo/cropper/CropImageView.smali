@@ -301,7 +301,7 @@
 
     iget-object v1, p0, Lcom/edmodo/cropper/CropImageView;->i:Landroid/widget/ImageView;
 
-    invoke-static {v0, v1}, Lcom/edmodo/cropper/a/c;->a(Landroid/graphics/Bitmap;Landroid/view/View;)Landroid/graphics/Rect;
+    invoke-static {v0, v1}, Lcom/edmodo/cropper/a/d;->a(Landroid/graphics/Bitmap;Landroid/view/View;)Landroid/graphics/Rect;
 
     move-result-object v0
 
@@ -381,9 +381,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, ", actualCropWidth="
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
@@ -448,9 +452,13 @@
 
     new-instance v8, Ljava/lang/StringBuilder;
 
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v9, "scaleWidth = "
 
-    invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
 
     invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
@@ -654,7 +662,7 @@
 
     iget-object v1, p0, Lcom/edmodo/cropper/CropImageView;->i:Landroid/widget/ImageView;
 
-    invoke-static {v0, v1}, Lcom/edmodo/cropper/a/c;->a(Landroid/graphics/Bitmap;Landroid/view/View;)Landroid/graphics/Rect;
+    invoke-static {v0, v1}, Lcom/edmodo/cropper/a/d;->a(Landroid/graphics/Bitmap;Landroid/view/View;)Landroid/graphics/Rect;
 
     move-result-object v0
 
@@ -1026,7 +1034,7 @@
 
     iget v3, p0, Lcom/edmodo/cropper/CropImageView;->n:I
 
-    invoke-static {v0, v1, v2, v3}, Lcom/edmodo/cropper/a/c;->a(IIII)Landroid/graphics/Rect;
+    invoke-static {v0, v1, v2, v3}, Lcom/edmodo/cropper/a/d;->a(IIII)Landroid/graphics/Rect;
 
     move-result-object v0
 
@@ -1179,7 +1187,7 @@
 
     iget-object v0, p0, Lcom/edmodo/cropper/CropImageView;->k:Landroid/graphics/Bitmap;
 
-    invoke-static {v0, p0}, Lcom/edmodo/cropper/a/c;->a(Landroid/graphics/Bitmap;Landroid/view/View;)Landroid/graphics/Rect;
+    invoke-static {v0, p0}, Lcom/edmodo/cropper/a/d;->a(Landroid/graphics/Bitmap;Landroid/view/View;)Landroid/graphics/Rect;
 
     move-result-object v0
 

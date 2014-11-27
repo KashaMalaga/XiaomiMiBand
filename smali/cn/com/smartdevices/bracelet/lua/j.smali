@@ -61,9 +61,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "get latest luaZipFile error (message:"
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     iget-object v0, v0, Lcn/com/smartdevices/bracelet/lua/k;->b:Ljava/lang/String;
 
@@ -122,7 +126,7 @@
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/j;->a:Lcn/com/smartdevices/bracelet/lua/LuaManager;
 
     # invokes: Lcn/com/smartdevices/bracelet/lua/LuaManager;->getLatestDBLuaFile()V
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->access$2(Lcn/com/smartdevices/bracelet/lua/LuaManager;)V
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->access$200(Lcn/com/smartdevices/bracelet/lua/LuaManager;)V
 
     iget-object v2, v0, Lcn/com/smartdevices/bracelet/lua/k;->c:Lcn/com/smartdevices/bracelet/lua/l;
 
@@ -134,9 +138,13 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "save DB luaZipFile onSuccess====(version:"
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     iget-object v0, v0, Lcn/com/smartdevices/bracelet/lua/k;->c:Lcn/com/smartdevices/bracelet/lua/l;
 
@@ -165,7 +173,7 @@
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/j;->a:Lcn/com/smartdevices/bracelet/lua/LuaManager;
 
     # getter for: Lcn/com/smartdevices/bracelet/lua/LuaManager;->context:Landroid/content/Context;
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->access$3(Lcn/com/smartdevices/bracelet/lua/LuaManager;)Landroid/content/Context;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->access$300(Lcn/com/smartdevices/bracelet/lua/LuaManager;)Landroid/content/Context;
 
     move-result-object v0
 
@@ -189,9 +197,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "zipfile count:"
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {v1}, Lde/greenrobot/daobracelet/LuaZipFileDao;->count()J
 
@@ -218,9 +230,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "get latest lua gson error!:"
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 

@@ -4,7 +4,7 @@
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 .implements Lcn/com/smartdevices/bracelet/gps/services/a/a;
-.implements Lcn/com/smartdevices/bracelet/gps/ui/v;
+.implements Lcn/com/smartdevices/bracelet/gps/ui/w;
 
 
 # static fields
@@ -218,52 +218,32 @@
     goto :goto_0
 .end method
 
+.method static synthetic b()I
+    .locals 2
+
+    sget v0, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->y:I
+
+    add-int/lit8 v1, v0, 0x1
+
+    sput v1, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->y:I
+
+    return v0
+.end method
+
+.method static synthetic b(I)I
+    .locals 0
+
+    sput p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->y:I
+
+    return p0
+.end method
+
 .method static synthetic b(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)Landroid/os/Handler;
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->C:Landroid/os/Handler;
 
     return-object v0
-.end method
-
-.method private b()V
-    .locals 2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->l:Lcom/amap/api/maps/MapView;
-
-    if-eqz v0, :cond_0
-
-    :try_start_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->l:Lcom/amap/api/maps/MapView;
-
-    invoke-virtual {v0}, Lcom/amap/api/maps/MapView;->onDestroy()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :cond_0
-    :goto_0
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "Run"
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-.end method
-
-.method static synthetic b(I)V
-    .locals 0
-
-    sput p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->y:I
-
-    return-void
 .end method
 
 .method private b(Lcn/com/smartdevices/bracelet/gps/services/n;)V
@@ -421,6 +401,54 @@
 .end method
 
 .method private c()V
+    .locals 2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->l:Lcom/amap/api/maps/MapView;
+
+    if-eqz v0, :cond_0
+
+    :try_start_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->l:Lcom/amap/api/maps/MapView;
+
+    invoke-virtual {v0}, Lcom/amap/api/maps/MapView;->onDestroy()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "Run"
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+.end method
+
+.method static synthetic c(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->i()V
+
+    return-void
+.end method
+
+.method static synthetic d(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)Lcn/com/smartdevices/bracelet/gps/b/a;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->k:Lcn/com/smartdevices/bracelet/gps/b/a;
+
+    return-object v0
+.end method
+
+.method private d()V
     .locals 1
 
     const v0, 0x7f0700a1
@@ -496,23 +524,7 @@
     return-void
 .end method
 
-.method static synthetic c(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->h()V
-
-    return-void
-.end method
-
-.method static synthetic d(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)Lcn/com/smartdevices/bracelet/gps/b/a;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->k:Lcn/com/smartdevices/bracelet/gps/b/a;
-
-    return-object v0
-.end method
-
-.method private d()V
+.method private e()V
     .locals 2
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->C:Landroid/os/Handler;
@@ -536,7 +548,7 @@
     return-void
 .end method
 
-.method private e()V
+.method private f()V
     .locals 3
 
     const/4 v2, 0x2
@@ -558,7 +570,7 @@
     return-void
 .end method
 
-.method private f()V
+.method private g()V
     .locals 2
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->C:Landroid/os/Handler;
@@ -582,7 +594,7 @@
     return-void
 .end method
 
-.method private g()V
+.method private h()V
     .locals 2
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->C:Landroid/os/Handler;
@@ -606,7 +618,7 @@
     return-void
 .end method
 
-.method private h()V
+.method private i()V
     .locals 3
 
     const-string v0, "vibrator"
@@ -730,7 +742,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->A:Lcn/com/smartdevices/bracelet/gps/ui/d;
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->d()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->e()V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->x:Landroid/widget/TextView;
 
@@ -749,7 +761,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->A:Lcn/com/smartdevices/bracelet/gps/ui/d;
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->e()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->f()V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->x:Landroid/widget/TextView;
 
@@ -770,7 +782,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->A:Lcn/com/smartdevices/bracelet/gps/ui/d;
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->g()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->h()V
 
     new-instance v0, Landroid/content/Intent;
 
@@ -809,7 +821,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->A:Lcn/com/smartdevices/bracelet/gps/ui/d;
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->f()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->g()V
 
     invoke-direct {p0, v2}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->a(Z)V
 
@@ -911,7 +923,7 @@
 
     invoke-virtual {v0, p0}, Lcn/com/smartdevices/bracelet/gps/b/a;->a(Lcn/com/smartdevices/bracelet/gps/services/a/a;)V
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->c()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->d()V
 
     const v0, 0x7f0700a7
 
@@ -1015,7 +1027,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->p:Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;
 
-    invoke-virtual {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->a(Lcn/com/smartdevices/bracelet/gps/ui/v;)V
+    invoke-virtual {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->a(Lcn/com/smartdevices/bracelet/gps/ui/w;)V
 
     invoke-static {p0}, Lcn/com/smartdevices/bracelet/gps/d/b;->a(Landroid/content/Context;)Z
 
@@ -1043,7 +1055,7 @@
     invoke-virtual {v0, p0}, Lcn/com/smartdevices/bracelet/gps/b/a;->a(Landroid/content/Context;)V
 
     :cond_0
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->b()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->c()V
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onDestroy()V
 

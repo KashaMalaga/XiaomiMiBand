@@ -185,6 +185,8 @@
 
     const/4 v0, 0x0
 
+    check-cast v0, Lorg/json/JSONObject;
+
     invoke-virtual {p0, p1, p2, p4, v0}, Lcom/c/a/a/z;->a(I[Lorg/apache/http/Header;Ljava/lang/Throwable;Lorg/json/JSONObject;)V
 
     goto :goto_0

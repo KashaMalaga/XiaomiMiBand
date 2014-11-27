@@ -105,13 +105,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_3
+    if-eqz v0, :cond_3
 
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_3
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -131,6 +126,11 @@
     move v1, v0
 
     goto :goto_1
+
+    :cond_3
+    move v0, v1
+
+    goto :goto_0
 .end method
 
 .method private a(Landroid/content/Context;I)Ljava/lang/String;

@@ -61,12 +61,12 @@
     return v0
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView$CircleView;F)V
+.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView$CircleView;F)F
     .locals 0
 
     iput p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView$CircleView;->e:F
 
-    return-void
+    return p1
 .end method
 
 

@@ -20,7 +20,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/y;Lcn/com/smartdevices/bracelet/gps/services/A;)V
+.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/y;Lcn/com/smartdevices/bracelet/gps/services/z;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/gps/services/A;-><init>(Lcn/com/smartdevices/bracelet/gps/services/y;)V

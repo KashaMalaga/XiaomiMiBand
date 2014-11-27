@@ -91,12 +91,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_0
 
-    :cond_0
-    return-void
-
-    :cond_1
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -106,6 +102,9 @@
     invoke-virtual {v0}, Landroid/database/DataSetObserver;->onChanged()V
 
     goto :goto_0
+
+    :cond_0
+    return-void
 .end method
 
 .method protected f()V
@@ -126,12 +125,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_0
 
-    :cond_0
-    return-void
-
-    :cond_1
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -141,4 +136,7 @@
     invoke-virtual {v0}, Landroid/database/DataSetObserver;->onInvalidated()V
 
     goto :goto_0
+
+    :cond_0
+    return-void
 .end method

@@ -29,7 +29,7 @@
     check-cast p1, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;
 
     # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->onTogglePairResult(Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;)V
-    invoke-static {v0, p1}, Lcom/xiaomi/hm/bleservice/BLEService;->access$13(Lcom/xiaomi/hm/bleservice/BLEService;Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;)V
+    invoke-static {v0, p1}, Lcom/xiaomi/hm/bleservice/BLEService;->access$1200(Lcom/xiaomi/hm/bleservice/BLEService;Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;)V
 
     return-void
 .end method
@@ -44,7 +44,7 @@
     const/4 v1, 0x0
 
     # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->onTogglePairResult(Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;)V
-    invoke-static {v0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->access$13(Lcom/xiaomi/hm/bleservice/BLEService;Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;)V
+    invoke-static {v0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->access$1200(Lcom/xiaomi/hm/bleservice/BLEService;Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;)V
 
     return-void
 .end method

@@ -90,7 +90,7 @@
 
     move-result-object v0
 
-    invoke-interface {v0}, Landroid/text/Editable;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -167,13 +167,13 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportVoteOthersActivity;->a:Landroid/widget/EditText;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/lab/ui/ae;
+    new-instance v1, Lcn/com/smartdevices/bracelet/lab/ui/ah;
 
     const/16 v2, 0xa
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportVoteOthersActivity;->a:Landroid/widget/EditText;
 
-    invoke-direct {v1, p0, v2, v3}, Lcn/com/smartdevices/bracelet/lab/ui/ae;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/SportVoteOthersActivity;ILandroid/widget/EditText;)V
+    invoke-direct {v1, p0, v2, v3}, Lcn/com/smartdevices/bracelet/lab/ui/ah;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/SportVoteOthersActivity;ILandroid/widget/EditText;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 

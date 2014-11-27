@@ -34,7 +34,7 @@
 
     new-instance v0, Lcn/com/smartdevices/bracelet/gps/services/r;
 
-    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/gps/services/r;-><init>(Lcn/com/smartdevices/bracelet/gps/services/o;Lcn/com/smartdevices/bracelet/gps/services/r;)V
+    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/gps/services/r;-><init>(Lcn/com/smartdevices/bracelet/gps/services/o;Lcn/com/smartdevices/bracelet/gps/services/p;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->e:Lcn/com/smartdevices/bracelet/gps/services/a/c;
 
@@ -240,7 +240,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/gps/services/r;-><init>(Lcn/com/smartdevices/bracelet/gps/services/o;Lcn/com/smartdevices/bracelet/gps/services/r;)V
+    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/gps/services/r;-><init>(Lcn/com/smartdevices/bracelet/gps/services/o;Lcn/com/smartdevices/bracelet/gps/services/p;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->e:Lcn/com/smartdevices/bracelet/gps/services/a/c;
 

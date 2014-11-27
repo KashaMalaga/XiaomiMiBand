@@ -106,9 +106,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "(ShareListDelegateActivity) Wrong sportday format: "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -146,7 +150,7 @@
 
     const/4 v6, 0x1
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
@@ -156,7 +160,7 @@
 
     const-string v4, ""
 
-    if-eqz v9, :cond_c
+    if-eqz v9, :cond_d
 
     const-string v1, "REF_REPORT_DATA"
 
@@ -195,11 +199,15 @@
     :cond_1
     const-string v1, "ShareListDelegateActivity"
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v5, "mReportData = "
 
-    invoke-direct {v3, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     iget-object v5, p0, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->mReportData:Lcn/com/smartdevices/bracelet/model/ReportData;
 
@@ -207,15 +215,15 @@
 
     move-result-object v5
 
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->mReportData:Lcn/com/smartdevices/bracelet/model/ReportData;
 
@@ -225,9 +233,9 @@
 
     const-string v1, "SHARE_TYPE_LAST_WEEK"
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->mShareType:Ljava/lang/String;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->mShareType:Ljava/lang/String;
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -235,13 +243,13 @@
 
     const-string v1, "SHARE_TYPE_LAST_MONTH"
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->mShareType:Ljava/lang/String;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->mShareType:Ljava/lang/String;
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_4
 
     :cond_2
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->mReportData:Lcn/com/smartdevices/bracelet/model/ReportData;
@@ -250,7 +258,7 @@
 
     invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->getSportDayFromDateStr(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/model/SportDay;
 
-    move-result-object v1
+    move-result-object v2
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->mReportData:Lcn/com/smartdevices/bracelet/model/ReportData;
 
@@ -258,27 +266,30 @@
 
     invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->getSportDayFromDateStr(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/model/SportDay;
 
-    move-result-object v0
+    move-result-object v1
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->mReportData:Lcn/com/smartdevices/bracelet/model/ReportData;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->mReportData:Lcn/com/smartdevices/bracelet/model/ReportData;
 
-    iget-object v3, v3, Lcn/com/smartdevices/bracelet/model/ReportData;->maxDateStr:Ljava/lang/String;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/model/ReportData;->maxDateStr:Ljava/lang/String;
 
-    invoke-direct {p0, v3}, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->getSportDayFromDateStr(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/model/SportDay;
-
-    move-result-object v3
-
-    const-string v4, ""
-
-    if-eqz v3, :cond_d
-
-    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/model/SportDay;->formatStringDay()Ljava/lang/String;
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->getSportDayFromDateStr(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/model/SportDay;
 
     move-result-object v4
 
-    move-object v7, v0
+    const-string v0, ""
 
-    move-object v8, v1
+    if-eqz v4, :cond_3
+
+    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/model/SportDay;->formatStringDay()Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_3
+    move-object v4, v0
+
+    move-object v7, v1
+
+    move-object v8, v2
 
     :goto_1
     new-instance v10, Lcn/com/smartdevices/bracelet/model/ShareData;
@@ -293,7 +304,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     new-instance v0, Ljava/util/Date;
 
@@ -315,17 +326,17 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const v3, 0x7f0c01de
 
     invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v2
 
     invoke-virtual {v1, v0}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
@@ -393,15 +404,15 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     invoke-virtual {v8}, Lcn/com/smartdevices/bracelet/model/SportDay;->formatStringDayShort()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v1
 
     const-string v2, "-"
 
@@ -427,6 +438,12 @@
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, ""
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -458,16 +475,16 @@
 
     goto/16 :goto_0
 
-    :cond_3
+    :cond_4
     const-string v1, "SHARE_TYPE_NEW_RECORD"
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->mShareType:Ljava/lang/String;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->mShareType:Ljava/lang/String;
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_5
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->mReportData:Lcn/com/smartdevices/bracelet/model/ReportData;
 
@@ -483,16 +500,16 @@
 
     goto/16 :goto_1
 
-    :cond_4
+    :cond_5
     const-string v1, "SHARE_TYPE_CONTIUE_REACH_GOAL"
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->mShareType:Ljava/lang/String;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->mShareType:Ljava/lang/String;
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_c
+    if-eqz v1, :cond_d
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->mReportData:Lcn/com/smartdevices/bracelet/model/ReportData;
 
@@ -516,7 +533,7 @@
 
     goto/16 :goto_1
 
-    :cond_5
+    :cond_6
     const-string v0, "SHARE_TYPE_LAST_WEEK"
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->mShareType:Ljava/lang/String;
@@ -525,9 +542,11 @@
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     const v1, 0x7f0c017b
 
@@ -535,11 +554,9 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     invoke-virtual {p0, v12}, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->getString(I)Ljava/lang/String;
 
@@ -595,15 +612,15 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     invoke-virtual {v8}, Lcn/com/smartdevices/bracelet/model/SportDay;->formatStringDayShort()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v1
 
     const-string v2, "-"
 
@@ -627,7 +644,7 @@
 
     goto/16 :goto_2
 
-    :cond_6
+    :cond_7
     const-string v0, "SHARE_TYPE_NEW_RECORD"
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->mShareType:Ljava/lang/String;
@@ -636,7 +653,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_8
 
     const/4 v0, 0x5
 
@@ -678,19 +695,19 @@
 
     move-result-object v1
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    aget-object v4, v1, v2
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    aget-object v4, v1, v3
 
-    move-result-object v4
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v2
 
     aget-object v1, v1, v6
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -698,9 +715,15 @@
 
     move-result-object v1
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, ""
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     iget-object v4, p0, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->mReportData:Lcn/com/smartdevices/bracelet/model/ReportData;
 
@@ -708,13 +731,13 @@
 
     move-result v4
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
     const v4, 0x7f0c018e
 
@@ -722,9 +745,9 @@
 
     new-array v5, v5, [Ljava/lang/Object;
 
-    aput-object v1, v5, v2
+    aput-object v1, v5, v3
 
-    aput-object v3, v5, v6
+    aput-object v2, v5, v6
 
     invoke-virtual {p0, v4, v5}, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -734,7 +757,7 @@
 
     goto/16 :goto_2
 
-    :cond_7
+    :cond_8
     const-string v0, "SHARE_TYPE_CONTIUE_REACH_GOAL_MANUAL"
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->mShareType:Ljava/lang/String;
@@ -743,7 +766,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_9
 
     invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
 
@@ -759,7 +782,7 @@
 
     goto/16 :goto_0
 
-    :cond_8
+    :cond_9
     const-string v0, "SHARE_TYPE_CONTIUE_REACH_GOAL"
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->mShareType:Ljava/lang/String;
@@ -768,7 +791,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_a
+    if-eqz v0, :cond_b
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->mReportData:Lcn/com/smartdevices/bracelet/model/ReportData;
 
@@ -778,13 +801,17 @@
 
     const-string v1, "ShareListDelegateActivity"
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v4, "Continue status = "
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -806,7 +833,7 @@
 
     move-result v1
 
-    if-le v0, v1, :cond_9
+    if-le v0, v1, :cond_a
 
     const/16 v0, 0xa
 
@@ -835,15 +862,15 @@
 
     const v1, 0x7f0c01cb
 
-    new-array v3, v6, [Ljava/lang/Object;
+    new-array v2, v6, [Ljava/lang/Object;
 
     invoke-virtual {v7}, Lcn/com/smartdevices/bracelet/model/SportDay;->formatStringDayShort()Ljava/lang/String;
 
     move-result-object v4
 
-    aput-object v4, v3, v2
+    aput-object v4, v2, v3
 
-    invoke-virtual {p0, v1, v3}, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v1, v2}, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -863,7 +890,7 @@
 
     goto/16 :goto_2
 
-    :cond_9
+    :cond_a
     const/16 v0, 0x8
 
     invoke-virtual {v10, v0}, Lcn/com/smartdevices/bracelet/model/ShareData;->setType(I)V
@@ -878,7 +905,7 @@
 
     goto :goto_3
 
-    :cond_a
+    :cond_b
     const-string v0, "SHARE_TYPE_MAIN_UI_SHARE"
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->mShareType:Ljava/lang/String;
@@ -887,7 +914,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_c
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/o;->a()Lcn/com/smartdevices/bracelet/o;
 
@@ -915,22 +942,15 @@
 
     invoke-virtual {v9, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    :cond_b
-    move v0, v2
+    :cond_c
+    move v0, v3
 
     goto/16 :goto_2
-
-    :cond_c
-    move-object v7, v0
-
-    move-object v8, v0
-
-    goto/16 :goto_1
 
     :cond_d
     move-object v7, v0
 
-    move-object v8, v1
+    move-object v8, v0
 
     goto/16 :goto_1
 .end method

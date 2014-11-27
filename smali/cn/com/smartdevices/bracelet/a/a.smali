@@ -44,9 +44,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "gh_f65f9f1aa87a"
 
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     iget-object v0, v0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;->deviceID:Ljava/lang/String;
 
@@ -93,15 +97,45 @@
     array-length v5, v3
 
     :goto_0
-    if-lt v2, v5, :cond_3
+    if-ge v2, v5, :cond_3
 
+    aget-byte v6, v3, v2
+
+    and-int/lit16 v7, v6, 0xff
+
+    const/16 v8, 0x10
+
+    if-ge v7, v8, :cond_2
+
+    const-string v7, "0"
+
+    invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :cond_2
+    and-int/lit16 v6, v6, 0xff
+
+    invoke-static {v6}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_3
     sget-object v2, Lcn/com/smartdevices/bracelet/a/a;->l:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v5, "string:"
 
-    invoke-direct {v3, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -130,7 +164,7 @@
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_1 .. :try_end_1} :catch_1
 
     :goto_1
-    if-eqz p1, :cond_2
+    if-eqz p1, :cond_4
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -138,37 +172,8 @@
 
     invoke-virtual {p1, v0}, Lcn/com/smartdevices/bracelet/a/b;->a(Ljava/lang/Object;)V
 
-    :cond_2
-    return-void
-
-    :cond_3
-    :try_start_2
-    aget-byte v6, v3, v2
-
-    and-int/lit16 v7, v6, 0xff
-
-    const/16 v8, 0x10
-
-    if-ge v7, v8, :cond_4
-
-    const-string v7, "0"
-
-    invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
     :cond_4
-    and-int/lit16 v6, v6, 0xff
-
-    invoke-static {v6}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    :try_end_2
-    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_2 .. :try_end_2} :catch_1
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
+    return-void
 
     :catch_0
     move-exception v0

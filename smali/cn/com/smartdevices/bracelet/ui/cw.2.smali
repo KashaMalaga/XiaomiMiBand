@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/widget/TextView$OnEditorActionListener;
 
 
 # instance fields
@@ -22,18 +22,30 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
+.method public onEditorAction(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
     .locals 2
+
+    const/4 v0, 0x6
+
+    if-ne v0, p2, :cond_0
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cw;->a:Lcn/com/smartdevices/bracelet/ui/cv;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cw;->a:Lcn/com/smartdevices/bracelet/ui/cv;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/cv;->a(Lcn/com/smartdevices/bracelet/ui/cv;)Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/cv;->a(Lcn/com/smartdevices/bracelet/ui/cv;)Landroid/view/View;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/cv;->a(Lcn/com/smartdevices/bracelet/ui/cv;Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/cv;->onClick(Landroid/view/View;)V
 
-    return-void
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

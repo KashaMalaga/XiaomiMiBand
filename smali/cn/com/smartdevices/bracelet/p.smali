@@ -3,18 +3,18 @@
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/o;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/q;
 
-.field private final synthetic b:Lcn/com/smartdevices/bracelet/q;
+.field final synthetic b:Lcn/com/smartdevices/bracelet/o;
 
 
 # direct methods
 .method constructor <init>(Lcn/com/smartdevices/bracelet/o;Lcn/com/smartdevices/bracelet/q;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/p;->a:Lcn/com/smartdevices/bracelet/o;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/p;->b:Lcn/com/smartdevices/bracelet/o;
 
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/p;->b:Lcn/com/smartdevices/bracelet/q;
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/p;->a:Lcn/com/smartdevices/bracelet/q;
 
     invoke-direct {p0}, Lcom/c/a/a/h;-><init>()V
 
@@ -32,9 +32,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "loadNetData onFailure:"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -78,7 +82,7 @@
 
     const/4 v3, 0x1
 
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/p;->b:Lcn/com/smartdevices/bracelet/q;
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/p;->a:Lcn/com/smartdevices/bracelet/q;
 
     invoke-virtual {v2, v0, v3, v4}, Lcn/com/smartdevices/bracelet/o;->a(Ljava/util/ArrayList;ILcn/com/smartdevices/bracelet/q;)V
 
@@ -87,9 +91,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "loadNetData onSuccess:"
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     iget v1, v1, Lcn/com/smartdevices/bracelet/d/h;->f:I
 

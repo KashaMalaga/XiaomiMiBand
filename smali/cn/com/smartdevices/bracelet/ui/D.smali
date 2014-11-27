@@ -61,7 +61,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/D;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;Ljava/lang/String;)Ljava/lang/String;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/D;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
 

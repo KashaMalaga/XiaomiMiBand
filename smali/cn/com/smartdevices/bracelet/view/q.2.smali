@@ -59,7 +59,7 @@
 
     int-to-float v0, v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView$FlowBgView;->a(Lcn/com/smartdevices/bracelet/view/DynamicView$FlowBgView;F)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView$FlowBgView;->a(Lcn/com/smartdevices/bracelet/view/DynamicView$FlowBgView;F)F
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/q;->a:Lcn/com/smartdevices/bracelet/view/DynamicView$FlowBgView;
 

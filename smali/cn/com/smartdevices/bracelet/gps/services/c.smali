@@ -3,18 +3,18 @@
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/services/a;
+.field final synthetic a:Landroid/content/Context;
 
-.field private final synthetic b:Landroid/content/Context;
+.field final synthetic b:Lcn/com/smartdevices/bracelet/gps/services/a;
 
 
 # direct methods
 .method constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/a;Landroid/content/Context;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/services/c;->a:Lcn/com/smartdevices/bracelet/gps/services/a;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/services/c;->b:Lcn/com/smartdevices/bracelet/gps/services/a;
 
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/gps/services/c;->b:Landroid/content/Context;
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/gps/services/c;->a:Landroid/content/Context;
 
     invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
 
@@ -26,9 +26,9 @@
 .method public run()V
     .locals 6
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/c;->a:Lcn/com/smartdevices/bracelet/gps/services/a;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/c;->b:Lcn/com/smartdevices/bracelet/gps/services/a;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/c;->b:Landroid/content/Context;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/c;->a:Landroid/content/Context;
 
     const-wide/16 v2, 0x1388
 

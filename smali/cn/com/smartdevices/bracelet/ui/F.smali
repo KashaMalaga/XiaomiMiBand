@@ -27,13 +27,13 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/F;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->l(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;)Landroid/media/MediaScannerConnection;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->m(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;)Landroid/media/MediaScannerConnection;
 
     move-result-object v0
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/F;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->m(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;)Ljava/lang/String;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->l(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;)Ljava/lang/String;
 
     move-result-object v1
 

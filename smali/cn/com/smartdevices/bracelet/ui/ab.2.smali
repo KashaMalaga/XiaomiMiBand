@@ -33,7 +33,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ab;->d:Ljava/util/ArrayList;
 
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/ui/W;->a(Lcn/com/smartdevices/bracelet/ui/W;)Z
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/ui/W;->c(Lcn/com/smartdevices/bracelet/ui/W;)Z
 
     move-result v0
 
@@ -176,7 +176,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ab;->c:Lcn/com/smartdevices/bracelet/ui/W;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/W;->a(Lcn/com/smartdevices/bracelet/ui/W;)Z
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/W;->c(Lcn/com/smartdevices/bracelet/ui/W;)Z
 
     move-result v0
 
@@ -218,7 +218,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ab;->c:Lcn/com/smartdevices/bracelet/ui/W;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/W;->a(Lcn/com/smartdevices/bracelet/ui/W;)Z
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/W;->c(Lcn/com/smartdevices/bracelet/ui/W;)Z
 
     move-result v0
 

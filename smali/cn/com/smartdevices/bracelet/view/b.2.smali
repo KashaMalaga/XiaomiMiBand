@@ -52,6 +52,8 @@
 
     check-cast v0, Landroid/widget/TextView;
 
+    check-cast v0, Landroid/widget/TextView;
+
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/view/b;->setView(Landroid/view/View;)V

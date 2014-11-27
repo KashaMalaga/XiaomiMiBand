@@ -1,99 +1,620 @@
-.class Lcn/com/smartdevices/bracelet/chart/v;
-.super Ljava/lang/Object;
+.class public Lcn/com/smartdevices/bracelet/chart/v;
+.super Lcn/com/smartdevices/bracelet/chart/base/q;
 
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+
+# static fields
+.field private static final f:Ljava/lang/String; = "LinePieChart"
+
+.field private static final g:F = 1.33f
+
+.field private static final h:F = 16.33f
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/chart/LinePieChartView;
+.field private A:Landroid/graphics/Bitmap;
+
+.field private B:Landroid/graphics/Paint;
+
+.field private C:Landroid/graphics/Paint;
+
+.field private D:F
+
+.field private E:Landroid/graphics/Paint;
+
+.field private F:Landroid/graphics/Paint;
+
+.field private G:Landroid/graphics/RectF;
+
+.field private H:Landroid/graphics/Bitmap;
+
+.field private I:Landroid/graphics/Canvas;
+
+.field private J:Z
+
+.field private v:I
+
+.field private final w:Landroid/graphics/Paint;
+
+.field private x:Landroid/graphics/SweepGradient;
+
+.field private y:Z
+
+.field private z:I
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/chart/LinePieChartView;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 5
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/chart/v;->a:Lcn/com/smartdevices/bracelet/chart/LinePieChartView;
+    const v4, 0x3faa3d71
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/high16 v3, 0x40800000
+
+    const/4 v2, 0x1
+
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/chart/base/q;-><init>(Landroid/content/Context;)V
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->v:I
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f02006b
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/graphics/drawable/BitmapDrawable;
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->A:Landroid/graphics/Bitmap;
+
+    new-instance v0, Landroid/graphics/Paint;
+
+    invoke-direct {v0, v2}, Landroid/graphics/Paint;-><init>(I)V
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->B:Landroid/graphics/Paint;
+
+    new-instance v0, Landroid/graphics/Paint;
+
+    invoke-direct {v0, v2}, Landroid/graphics/Paint;-><init>(I)V
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->C:Landroid/graphics/Paint;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->B:Landroid/graphics/Paint;
+
+    const-string v1, "#e8edf3"
+
+    invoke-static {v1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->B:Landroid/graphics/Paint;
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/v;->o:F
+
+    mul-float/2addr v1, v4
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->B:Landroid/graphics/Paint;
+
+    sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->C:Landroid/graphics/Paint;
+
+    const-string v1, "#33e8edf3"
+
+    invoke-static {v1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->C:Landroid/graphics/Paint;
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/v;->o:F
+
+    mul-float/2addr v1, v4
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->C:Landroid/graphics/Paint;
+
+    sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+
+    const v0, 0x4182a3d7
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/v;->o:F
+
+    mul-float/2addr v0, v1
+
+    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->D:F
+
+    new-instance v0, Landroid/graphics/Paint;
+
+    invoke-direct {v0, v2}, Landroid/graphics/Paint;-><init>(I)V
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->E:Landroid/graphics/Paint;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->E:Landroid/graphics/Paint;
+
+    const-string v1, "#33e8edf3"
+
+    invoke-static {v1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->E:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->E:Landroid/graphics/Paint;
+
+    sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+
+    new-instance v0, Landroid/graphics/Paint;
+
+    invoke-direct {v0, v2}, Landroid/graphics/Paint;-><init>(I)V
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->F:Landroid/graphics/Paint;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->F:Landroid/graphics/Paint;
+
+    const-string v1, "#ffffffff"
+
+    invoke-static {v1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->F:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->F:Landroid/graphics/Paint;
+
+    sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+
+    new-instance v0, Landroid/graphics/Paint;
+
+    invoke-direct {v0, v2}, Landroid/graphics/Paint;-><init>(I)V
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->w:Landroid/graphics/Paint;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->w:Landroid/graphics/Paint;
+
+    invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->w:Landroid/graphics/Paint;
+
+    sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
+.method public a()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->y:Z
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->J:Z
 
     return-void
 .end method
 
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 2
+.method public a(I)V
+    .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->a:Lcn/com/smartdevices/bracelet/chart/LinePieChartView;
+    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/v;->z:I
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/LinePieChartView;->a(Lcn/com/smartdevices/bracelet/chart/LinePieChartView;)Lcn/com/smartdevices/bracelet/chart/base/g;
+    const/4 v0, 0x0
 
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/u;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/u;->b()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->a:Lcn/com/smartdevices/bracelet/chart/LinePieChartView;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/LinePieChartView;->a(Lcn/com/smartdevices/bracelet/chart/LinePieChartView;)Lcn/com/smartdevices/bracelet/chart/base/g;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/u;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/u;->c(F)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->a:Lcn/com/smartdevices/bracelet/chart/LinePieChartView;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/LinePieChartView;->postInvalidateOnAnimation()V
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->J:Z
 
     return-void
 .end method
 
-.method public onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
+.method protected a(Landroid/graphics/Canvas;Landroid/graphics/RectF;FFFFF)V
+    .locals 6
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->z:I
+
+    packed-switch v0, :pswitch_data_0
+
+    :goto_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->E:Landroid/graphics/Paint;
+
+    invoke-virtual {v0}, Landroid/graphics/Paint;->getStrokeWidth()F
+
+    move-result v0
+
+    const/high16 v1, 0x40000000
+
+    div-float/2addr v0, v1
+
+    sub-float v0, p5, v0
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/v;->D:F
+
+    sub-float/2addr v0, v1
+
+    new-instance v1, Landroid/graphics/RectF;
+
+    sub-float v2, p3, v0
+
+    sub-float v3, p4, v0
+
+    add-float v4, p3, v0
+
+    add-float/2addr v0, p4
+
+    invoke-direct {v1, v2, v3, v4, v0}, Landroid/graphics/RectF;-><init>(FFFF)V
+
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->J:Z
+
+    if-nez v0, :cond_1
+
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->y:Z
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Landroid/graphics/SweepGradient;
+
+    const/4 v2, 0x2
+
+    new-array v2, v2, [I
+
+    fill-array-data v2, :array_0
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, p3, p4, v2, v3}, Landroid/graphics/SweepGradient;-><init>(FF[I[F)V
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->x:Landroid/graphics/SweepGradient;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->w:Landroid/graphics/Paint;
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/chart/v;->x:Landroid/graphics/SweepGradient;
+
+    invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->J:Z
+
+    :cond_1
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->z:I
+
+    const/4 v2, 0x1
+
+    if-eq v0, v2, :cond_2
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->z:I
+
+    if-nez v0, :cond_3
+
+    :cond_2
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->v:I
+
+    div-int/lit8 v0, v0, 0x2
+
+    add-int/lit16 v0, v0, 0x10e
+
+    int-to-float v2, v0
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->v:I
+
+    rsub-int v0, v0, 0x168
+
+    int-to-float v3, v0
+
+    const/4 v4, 0x0
+
+    iget-object v5, p0, Lcn/com/smartdevices/bracelet/chart/v;->E:Landroid/graphics/Paint;
+
+    move-object v0, p1
+
+    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
+
+    :cond_3
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->y:Z
+
+    if-eqz v0, :cond_5
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->e:F
+
+    const/high16 v2, 0x43b40000
+
+    mul-float/2addr v0, v2
+
+    invoke-virtual {p1, v0, p3, p4}, Landroid/graphics/Canvas;->rotate(FFF)V
+
+    const/high16 v2, 0x43870000
+
+    const/high16 v3, 0x43b40000
+
+    const/4 v4, 0x0
+
+    iget-object v5, p0, Lcn/com/smartdevices/bracelet/chart/v;->w:Landroid/graphics/Paint;
+
+    move-object v0, p1
+
+    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
+
+    :cond_4
+    :goto_1
+    return-void
+
+    :pswitch_0
+    const/high16 v0, 0x3f800000
+
+    sub-float p6, v0, p6
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->G:Landroid/graphics/RectF;
+
+    invoke-virtual {v0}, Landroid/graphics/RectF;->centerX()F
+
+    move-result v1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->G:Landroid/graphics/RectF;
+
+    invoke-virtual {v0}, Landroid/graphics/RectF;->centerY()F
+
+    move-result v2
+
+    iget v3, p0, Lcn/com/smartdevices/bracelet/chart/v;->p:F
+
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/chart/v;->A:Landroid/graphics/Bitmap;
+
+    const/4 v5, 0x0
+
+    move-object v0, p1
+
+    invoke-static/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/chart/c/t;->a(Landroid/graphics/Canvas;FFFLandroid/graphics/Bitmap;Landroid/graphics/Paint;)V
+
+    const/16 v0, 0x12
+
+    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->v:I
+
+    goto/16 :goto_0
+
+    :pswitch_1
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->v:I
+
+    goto/16 :goto_0
+
+    :pswitch_2
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->v:I
+
+    goto/16 :goto_0
+
+    :cond_5
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->z:I
+
+    const/4 v2, 0x1
+
+    if-ne v0, v2, :cond_6
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->v:I
+
+    div-int/lit8 v0, v0, 0x2
+
+    add-int/lit16 v0, v0, 0x10e
+
+    int-to-float v2, v0
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->v:I
+
+    rsub-int v0, v0, 0x168
+
+    int-to-float v0, v0
+
+    mul-float v3, v0, p6
+
+    const/4 v4, 0x0
+
+    iget-object v5, p0, Lcn/com/smartdevices/bracelet/chart/v;->F:Landroid/graphics/Paint;
+
+    move-object v0, p1
+
+    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
+
+    goto :goto_1
+
+    :cond_6
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->z:I
+
+    if-nez v0, :cond_4
+
+    goto :goto_1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+
+    :array_0
+    .array-data 4
+        0x44ffffff
+        -0x1
+    .end array-data
+.end method
+
+.method protected a(Landroid/graphics/RectF;)V
+    .locals 6
+
+    const/4 v5, 0x0
+
+    const/high16 v4, 0x41f80000
+
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/chart/base/q;->a(Landroid/graphics/RectF;)V
+
+    new-instance v0, Landroid/graphics/RectF;
+
+    invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->G:Landroid/graphics/RectF;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->G:Landroid/graphics/RectF;
+
+    invoke-virtual {p1}, Landroid/graphics/RectF;->centerX()F
+
+    move-result v1
+
+    const/high16 v2, 0x41780000
+
+    iget v3, p0, Lcn/com/smartdevices/bracelet/chart/v;->o:F
+
+    mul-float/2addr v2, v3
+
+    sub-float/2addr v1, v2
+
+    iput v1, v0, Landroid/graphics/RectF;->left:F
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->G:Landroid/graphics/RectF;
+
+    iget v1, p1, Landroid/graphics/RectF;->top:F
+
+    const/high16 v2, 0x40000000
+
+    iget v3, p0, Lcn/com/smartdevices/bracelet/chart/v;->o:F
+
+    mul-float/2addr v2, v3
+
+    add-float/2addr v1, v2
+
+    iput v1, v0, Landroid/graphics/RectF;->top:F
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->G:Landroid/graphics/RectF;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/v;->G:Landroid/graphics/RectF;
+
+    iget v1, v1, Landroid/graphics/RectF;->left:F
+
+    iget v2, p0, Lcn/com/smartdevices/bracelet/chart/v;->o:F
+
+    mul-float/2addr v2, v4
+
+    add-float/2addr v1, v2
+
+    iput v1, v0, Landroid/graphics/RectF;->right:F
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->G:Landroid/graphics/RectF;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/v;->G:Landroid/graphics/RectF;
+
+    iget v1, v1, Landroid/graphics/RectF;->top:F
+
+    iget v2, p0, Lcn/com/smartdevices/bracelet/chart/v;->o:F
+
+    mul-float/2addr v2, v4
+
+    add-float/2addr v1, v2
+
+    iput v1, v0, Landroid/graphics/RectF;->bottom:F
+
+    invoke-virtual {p1}, Landroid/graphics/RectF;->width()F
+
+    move-result v0
+
+    float-to-int v0, v0
+
+    invoke-virtual {p1}, Landroid/graphics/RectF;->height()F
+
+    move-result v1
+
+    float-to-int v1, v1
+
+    sget-object v2, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
+
+    invoke-static {v0, v1, v2}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->H:Landroid/graphics/Bitmap;
+
+    iput-boolean v5, p0, Lcn/com/smartdevices/bracelet/chart/v;->J:Z
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->I:Landroid/graphics/Canvas;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Landroid/graphics/Canvas;
+
+    invoke-direct {v0}, Landroid/graphics/Canvas;-><init>()V
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->I:Landroid/graphics/Canvas;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->I:Landroid/graphics/Canvas;
+
+    new-instance v1, Landroid/graphics/PaintFlagsDrawFilter;
+
+    const/4 v2, 0x7
+
+    invoke-direct {v1, v5, v2}, Landroid/graphics/PaintFlagsDrawFilter;-><init>(II)V
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Canvas;->setDrawFilter(Landroid/graphics/DrawFilter;)V
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->I:Landroid/graphics/Canvas;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/v;->H:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Canvas;->setBitmap(Landroid/graphics/Bitmap;)V
 
     return-void
 .end method
 
-.method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 2
+.method public b()V
+    .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->a:Lcn/com/smartdevices/bracelet/chart/LinePieChartView;
+    const/4 v2, 0x0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/LinePieChartView;->a(Lcn/com/smartdevices/bracelet/chart/LinePieChartView;)Lcn/com/smartdevices/bracelet/chart/base/g;
+    const-string v0, "LinePieChart"
 
-    move-result-object v0
+    const-string v1, "dismissLoading."
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/u;
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/u;->a()V
+    iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/chart/v;->y:Z
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->a:Lcn/com/smartdevices/bracelet/chart/LinePieChartView;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/LinePieChartView;->a(Lcn/com/smartdevices/bracelet/chart/LinePieChartView;)Lcn/com/smartdevices/bracelet/chart/base/g;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/u;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/u;->c(F)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->a:Lcn/com/smartdevices/bracelet/chart/LinePieChartView;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/LinePieChartView;->postInvalidateOnAnimation()V
+    iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/chart/v;->J:Z
 
     return-void
 .end method

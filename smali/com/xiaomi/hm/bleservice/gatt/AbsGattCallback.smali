@@ -89,13 +89,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     sget-object v1, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->CLASS_NAME:Ljava/lang/String;
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     const-string v1, "*"
 
@@ -159,9 +159,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "NEW THREAD: "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     sget-object v1, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->GATT_QUEUE_THREAD_NAME:Ljava/lang/String;
 
@@ -250,7 +254,7 @@
     return-void
 .end method
 
-.method static synthetic access$0()Ljava/lang/String;
+.method static synthetic access$000()Ljava/lang/String;
     .locals 1
 
     sget-object v0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->CALLBACK_QUEUE_THREAD_NAME:Ljava/lang/String;
@@ -258,7 +262,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$1()Landroid/os/HandlerThread;
+.method static synthetic access$100()Landroid/os/HandlerThread;
     .locals 1
 
     sget-object v0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_GattQueueThread:Landroid/os/HandlerThread;
@@ -266,7 +270,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$2()Ljava/util/concurrent/locks/ReentrantLock;
+.method static synthetic access$200()Ljava/util/concurrent/locks/ReentrantLock;
     .locals 1
 
     sget-object v0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_GattOperationLock:Ljava/util/concurrent/locks/ReentrantLock;
@@ -274,15 +278,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$3(I)V
-    .locals 0
-
-    sput p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_ReturnValue:I
-
-    return-void
-.end method
-
-.method static synthetic access$4()I
+.method static synthetic access$300()I
     .locals 1
 
     sget v0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_ReturnValue:I
@@ -290,15 +286,23 @@
     return v0
 .end method
 
-.method static synthetic access$5(Z)V
+.method static synthetic access$302(I)I
+    .locals 0
+
+    sput p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_ReturnValue:I
+
+    return p0
+.end method
+
+.method static synthetic access$402(Z)Z
     .locals 0
 
     sput-boolean p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_isGattOperationLocking:Z
 
-    return-void
+    return p0
 .end method
 
-.method static synthetic access$6()Ljava/util/concurrent/locks/Condition;
+.method static synthetic access$500()Ljava/util/concurrent/locks/Condition;
     .locals 1
 
     sget-object v0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_condGattOperationComplete:Ljava/util/concurrent/locks/Condition;
@@ -343,9 +347,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "mClientIf = "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -409,9 +417,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "mClientIf = "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     invoke-direct {p0, p1}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->getClientIf(Landroid/bluetooth/BluetoothGatt;)I
 
@@ -442,9 +454,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "gatt="
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -491,29 +507,9 @@
 
     :goto_0
     sget-boolean v0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_isGattOperationLocking:Z
-    :try_end_1
-    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    :goto_1
-    :try_start_2
-    sget-object v0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_GattOperationLock:Ljava/util/concurrent/locks/ReentrantLock;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    :goto_2
-    sget v0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_ReturnValue:I
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    monitor-exit v1
-
-    return v0
-
-    :cond_0
-    :try_start_3
     invoke-static {p0}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->isConnected(Landroid/bluetooth/BluetoothGatt;)Z
 
     move-result v0
@@ -522,9 +518,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "WAIT: synchronizedReadCharacteristic(): "
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothGattCharacteristic;->getUuid()Ljava/util/UUID;
 
@@ -562,9 +562,62 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "CONTINUE: synchronizedReadCharacteristic(): "
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Landroid/bluetooth/BluetoothGattCharacteristic;->getUuid()Ljava/util/UUID;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/util/UUID;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;)V
+    :try_end_1
+    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :cond_0
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_GattOperationLock:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    :goto_2
+    sget v0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_ReturnValue:I
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    monitor-exit v1
+
+    return v0
+
+    :cond_1
+    :try_start_3
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "CONTINUE: synchronizedReadCharacteristic(): "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothGattCharacteristic;->getUuid()Ljava/util/UUID;
 
@@ -587,7 +640,7 @@
     .catch Ljava/lang/InterruptedException; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    goto :goto_1
+    goto :goto_0
 
     :catch_0
     move-exception v0
@@ -613,36 +666,16 @@
 
     throw v0
 
-    :cond_1
+    :cond_2
     :try_start_6
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "NO CONNECTION"
 
-    const-string v2, "CONTINUE: synchronizedReadCharacteristic(): "
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Landroid/bluetooth/BluetoothGattCharacteristic;->getUuid()Ljava/util/UUID;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/util/UUID;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;)V
     :try_end_6
     .catch Ljava/lang/InterruptedException; {:try_start_6 .. :try_end_6} :catch_0
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    goto/16 :goto_0
+    goto :goto_1
 
     :catchall_1
     move-exception v0
@@ -655,17 +688,6 @@
     throw v0
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
-
-    :cond_2
-    :try_start_8
-    const-string v0, "NO CONNECTION"
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;)V
-    :try_end_8
-    .catch Ljava/lang/InterruptedException; {:try_start_8 .. :try_end_8} :catch_0
-    .catchall {:try_start_8 .. :try_end_8} :catchall_1
-
-    goto/16 :goto_1
 .end method
 
 .method private static declared-synchronized synchronizedReadDescriptor(Landroid/bluetooth/BluetoothGatt;Landroid/bluetooth/BluetoothGattDescriptor;)I
@@ -680,9 +702,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "gatt="
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -729,29 +755,9 @@
 
     :goto_0
     sget-boolean v0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_isGattOperationLocking:Z
-    :try_end_1
-    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    :goto_1
-    :try_start_2
-    sget-object v0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_GattOperationLock:Ljava/util/concurrent/locks/ReentrantLock;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    :goto_2
-    sget v0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_ReturnValue:I
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    monitor-exit v1
-
-    return v0
-
-    :cond_0
-    :try_start_3
     invoke-static {p0}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->isConnected(Landroid/bluetooth/BluetoothGatt;)Z
 
     move-result v0
@@ -760,9 +766,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "WAIT: synchronizedReadDescriptor(): "
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothGattDescriptor;->getUuid()Ljava/util/UUID;
 
@@ -800,9 +810,62 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "CONTINUE: synchronizedReadDescriptor(): "
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Landroid/bluetooth/BluetoothGattDescriptor;->getUuid()Ljava/util/UUID;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/util/UUID;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;)V
+    :try_end_1
+    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :cond_0
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_GattOperationLock:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    :goto_2
+    sget v0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_ReturnValue:I
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    monitor-exit v1
+
+    return v0
+
+    :cond_1
+    :try_start_3
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "CONTINUE: synchronizedReadDescriptor(): "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothGattDescriptor;->getUuid()Ljava/util/UUID;
 
@@ -825,7 +888,7 @@
     .catch Ljava/lang/InterruptedException; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    goto :goto_1
+    goto :goto_0
 
     :catch_0
     move-exception v0
@@ -851,36 +914,16 @@
 
     throw v0
 
-    :cond_1
+    :cond_2
     :try_start_6
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "NO CONNECTION"
 
-    const-string v2, "CONTINUE: synchronizedReadDescriptor(): "
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Landroid/bluetooth/BluetoothGattDescriptor;->getUuid()Ljava/util/UUID;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/util/UUID;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;)V
     :try_end_6
     .catch Ljava/lang/InterruptedException; {:try_start_6 .. :try_end_6} :catch_0
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    goto/16 :goto_0
+    goto :goto_1
 
     :catchall_1
     move-exception v0
@@ -893,17 +936,6 @@
     throw v0
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
-
-    :cond_2
-    :try_start_8
-    const-string v0, "NO CONNECTION"
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;)V
-    :try_end_8
-    .catch Ljava/lang/InterruptedException; {:try_start_8 .. :try_end_8} :catch_0
-    .catchall {:try_start_8 .. :try_end_8} :catchall_1
-
-    goto/16 :goto_1
 .end method
 
 .method private static declared-synchronized synchronizedWriteCharacteristic(Landroid/bluetooth/BluetoothGatt;Landroid/bluetooth/BluetoothGattCharacteristic;[B)I
@@ -918,9 +950,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "gatt="
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -979,29 +1015,9 @@
 
     :goto_0
     sget-boolean v0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_isGattOperationLocking:Z
-    :try_end_1
-    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    :goto_1
-    :try_start_2
-    sget-object v0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_GattOperationLock:Ljava/util/concurrent/locks/ReentrantLock;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    :goto_2
-    sget v0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_ReturnValue:I
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    monitor-exit v1
-
-    return v0
-
-    :cond_0
-    :try_start_3
     invoke-static {p0}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->isConnected(Landroid/bluetooth/BluetoothGatt;)Z
 
     move-result v0
@@ -1010,9 +1026,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "WAIT: synchronizedWriteCharacteristic(): "
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothGattCharacteristic;->getUuid()Ljava/util/UUID;
 
@@ -1050,9 +1070,62 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "CONTINUE: synchronizedWriteCharacteristic(): "
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Landroid/bluetooth/BluetoothGattCharacteristic;->getUuid()Ljava/util/UUID;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/util/UUID;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;)V
+    :try_end_1
+    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :cond_0
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_GattOperationLock:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    :goto_2
+    sget v0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_ReturnValue:I
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    monitor-exit v1
+
+    return v0
+
+    :cond_1
+    :try_start_3
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "CONTINUE: synchronizedWriteCharacteristic(): "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothGattCharacteristic;->getUuid()Ljava/util/UUID;
 
@@ -1075,7 +1148,7 @@
     .catch Ljava/lang/InterruptedException; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    goto :goto_1
+    goto :goto_0
 
     :catch_0
     move-exception v0
@@ -1101,36 +1174,16 @@
 
     throw v0
 
-    :cond_1
+    :cond_2
     :try_start_6
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "NO CONNECTION"
 
-    const-string v2, "CONTINUE: synchronizedWriteCharacteristic(): "
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Landroid/bluetooth/BluetoothGattCharacteristic;->getUuid()Ljava/util/UUID;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/util/UUID;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;)V
     :try_end_6
     .catch Ljava/lang/InterruptedException; {:try_start_6 .. :try_end_6} :catch_0
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    goto/16 :goto_0
+    goto :goto_1
 
     :catchall_1
     move-exception v0
@@ -1143,17 +1196,6 @@
     throw v0
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
-
-    :cond_2
-    :try_start_8
-    const-string v0, "NO CONNECTION"
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;)V
-    :try_end_8
-    .catch Ljava/lang/InterruptedException; {:try_start_8 .. :try_end_8} :catch_0
-    .catchall {:try_start_8 .. :try_end_8} :catchall_1
-
-    goto/16 :goto_1
 .end method
 
 .method private static declared-synchronized synchronizedWriteDescriptor(Landroid/bluetooth/BluetoothGatt;Landroid/bluetooth/BluetoothGattDescriptor;[B)I
@@ -1168,9 +1210,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "gatt="
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1229,29 +1275,9 @@
 
     :goto_0
     sget-boolean v0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_isGattOperationLocking:Z
-    :try_end_1
-    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    :goto_1
-    :try_start_2
-    sget-object v0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_GattOperationLock:Ljava/util/concurrent/locks/ReentrantLock;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
-
-    :goto_2
-    sget v0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_ReturnValue:I
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    monitor-exit v1
-
-    return v0
-
-    :cond_0
-    :try_start_3
     invoke-static {p0}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->isConnected(Landroid/bluetooth/BluetoothGatt;)Z
 
     move-result v0
@@ -1260,9 +1286,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "WAIT: synchronizedWriteDescriptor(): "
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothGattDescriptor;->getUuid()Ljava/util/UUID;
 
@@ -1300,9 +1330,62 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "CONTINUE: synchronizedWriteDescriptor(): "
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Landroid/bluetooth/BluetoothGattDescriptor;->getUuid()Ljava/util/UUID;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/util/UUID;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;)V
+    :try_end_1
+    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :cond_0
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_GattOperationLock:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    :goto_2
+    sget v0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_ReturnValue:I
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    monitor-exit v1
+
+    return v0
+
+    :cond_1
+    :try_start_3
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "CONTINUE: synchronizedWriteDescriptor(): "
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothGattDescriptor;->getUuid()Ljava/util/UUID;
 
@@ -1325,7 +1408,7 @@
     .catch Ljava/lang/InterruptedException; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    goto :goto_1
+    goto :goto_0
 
     :catch_0
     move-exception v0
@@ -1351,36 +1434,16 @@
 
     throw v0
 
-    :cond_1
+    :cond_2
     :try_start_6
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "NO CONNECTION"
 
-    const-string v2, "CONTINUE: synchronizedWriteDescriptor(): "
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Landroid/bluetooth/BluetoothGattDescriptor;->getUuid()Ljava/util/UUID;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/util/UUID;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;)V
     :try_end_6
     .catch Ljava/lang/InterruptedException; {:try_start_6 .. :try_end_6} :catch_0
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    goto/16 :goto_0
+    goto :goto_1
 
     :catchall_1
     move-exception v0
@@ -1393,17 +1456,6 @@
     throw v0
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
-
-    :cond_2
-    :try_start_8
-    const-string v0, "NO CONNECTION"
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;)V
-    :try_end_8
-    .catch Ljava/lang/InterruptedException; {:try_start_8 .. :try_end_8} :catch_0
-    .catchall {:try_start_8 .. :try_end_8} :catchall_1
-
-    goto/16 :goto_1
 .end method
 
 
@@ -1445,9 +1497,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "m_State: "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     iget-object v1, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->m_State:Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$STATE;
 
@@ -1469,9 +1525,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "Illegal state: m_State = "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     iget-object v1, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->m_State:Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$STATE;
 
@@ -1608,9 +1668,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "m_State: "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     iget-object v1, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->m_State:Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$STATE;
 
@@ -1632,9 +1696,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "Illegal state: m_State = "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     iget-object v1, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->m_State:Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$STATE;
 
@@ -1721,9 +1789,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "m_State: "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     iget-object v1, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->m_State:Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$STATE;
 
@@ -1881,9 +1953,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "Characteristic Changed: "
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     invoke-static {v1}, Lcom/xiaomi/hm/bleservice/a/a;->b([B)Ljava/lang/String;
 
@@ -1958,9 +2034,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "Characteristic Read: "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     invoke-virtual {p2}, Landroid/bluetooth/BluetoothGattCharacteristic;->getValue()[B
 
@@ -1989,9 +2069,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "NOTIFY: onCharacteristicRead(): "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     sget v1, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_ReturnValue:I
 
@@ -2077,9 +2161,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "Characteristic Write: "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     invoke-virtual {p2}, Landroid/bluetooth/BluetoothGattCharacteristic;->getValue()[B
 
@@ -2108,9 +2196,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "NOTIFY: onCharacteristicWrite(): "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     sget v1, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_ReturnValue:I
 
@@ -2189,9 +2281,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "m_Gatt: "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     iget-object v1, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->m_Gatt:Landroid/bluetooth/BluetoothGatt;
 
@@ -2207,9 +2303,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "  gatt: "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -2225,11 +2325,15 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v0, "m_Gatt.getDevice(): "
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v1, "m_Gatt.getDevice(): "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->m_Gatt:Landroid/bluetooth/BluetoothGatt;
 
@@ -2259,11 +2363,15 @@
     :cond_0
     if-eqz p1, :cond_1
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v0, "  gatt.getDevice(): "
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v1, "  gatt.getDevice(): "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     if-eqz p1, :cond_6
 
@@ -2304,7 +2412,7 @@
     :cond_4
     const/4 v0, 0x0
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_5
     const-string v0, ""
@@ -2377,9 +2485,13 @@
     :cond_7
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "m_Gatt: "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     iget-object v1, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->m_Gatt:Landroid/bluetooth/BluetoothGatt;
 
@@ -2405,9 +2517,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "  gatt: "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -2423,11 +2539,15 @@
 
     if-eqz v0, :cond_8
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v0, "m_Gatt.getDevice(): "
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v1, "m_Gatt.getDevice(): "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->m_Gatt:Landroid/bluetooth/BluetoothGatt;
 
@@ -2457,11 +2577,15 @@
     :cond_8
     if-eqz p1, :cond_9
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v0, "  gatt.getDevice(): "
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v1, "  gatt.getDevice(): "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     if-eqz p1, :cond_c
 
@@ -2524,9 +2648,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "clientIf is "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2555,7 +2683,7 @@
     :cond_b
     const-string v0, ""
 
-    goto :goto_4
+    goto/16 :goto_4
 
     :cond_c
     const-string v0, ""
@@ -2597,9 +2725,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "Descriptor Read: "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     invoke-virtual {p2}, Landroid/bluetooth/BluetoothGattDescriptor;->getValue()[B
 
@@ -2628,9 +2760,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "NOTIFY: onDescriptorRead(): "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     sget v1, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_ReturnValue:I
 
@@ -2716,9 +2852,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "Descriptor Write: "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     invoke-virtual {p2}, Landroid/bluetooth/BluetoothGattDescriptor;->getValue()[B
 
@@ -2747,9 +2887,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "NOTIFY: onDescriptorWrite(): "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     sget v1, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_ReturnValue:I
 
@@ -2835,9 +2979,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "RSSI: "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -2860,9 +3008,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "NOTIFY: onReadRemoteRssi(): "
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     sget v2, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_RSSIStatus:I
 
@@ -3071,33 +3223,9 @@
     :goto_1
     :try_start_0
     sget-boolean v1, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_isRSSILocking:Z
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-nez v1, :cond_2
+    if-eqz v1, :cond_2
 
-    :goto_2
-    :try_start_1
-    sget v1, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_RSSIStatus:I
-
-    if-eqz v1, :cond_4
-
-    monitor-exit v2
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-
-    :cond_2
-    :try_start_2
     const-string v1, "WAIT: readRemoteRSSI()"
 
     invoke-static {v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;)V
@@ -3119,40 +3247,55 @@
     const-string v1, "CONTINUE: readRemoteRSSI()"
 
     invoke-static {v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :cond_2
+    :goto_2
+    :try_start_1
+    sget v1, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_RSSIStatus:I
+
+    if-eqz v1, :cond_4
+
+    monitor-exit v2
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+
+    :cond_3
+    :try_start_2
+    const-string v1, "CONTINUE: readRemoteRSSI()"
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;)V
     :try_end_2
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    goto :goto_2
+    goto :goto_1
 
     :catch_0
     move-exception v1
 
     :try_start_3
     invoke-virtual {v1}, Ljava/lang/InterruptedException;->printStackTrace()V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     goto :goto_2
 
-    :cond_3
-    :try_start_4
-    const-string v1, "CONTINUE: readRemoteRSSI()"
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;)V
-    :try_end_4
-    .catch Ljava/lang/InterruptedException; {:try_start_4 .. :try_end_4} :catch_0
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    goto :goto_1
-
     :cond_4
-    :try_start_5
     sget v0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_RSSI:I
 
     monitor-exit v2
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     goto :goto_0
 .end method
@@ -3161,21 +3304,25 @@
     .locals 3
 
     :try_start_0
-    const-class v0, Landroid/bluetooth/BluetoothGatt;
+    const-class v1, Landroid/bluetooth/BluetoothGatt;
 
-    const-string v1, "refresh"
+    const-string v2, "refresh"
 
-    const/4 v2, 0x0
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    check-cast v0, [Ljava/lang/Class;
 
-    move-result-object v0
+    invoke-virtual {v1, v2, v0}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-    iget-object v1, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->m_Gatt:Landroid/bluetooth/BluetoothGatt;
+    move-result-object v1
 
-    const/4 v2, 0x0
+    iget-object v2, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->m_Gatt:Landroid/bluetooth/BluetoothGatt;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v0, 0x0
+
+    check-cast v0, [Ljava/lang/Object;
+
+    invoke-virtual {v1, v2, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -3212,9 +3359,9 @@
 .method public final registerNotification(Landroid/bluetooth/BluetoothGattCharacteristic;Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$INotifyCallback;)Z
     .locals 5
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/r;->d()V
 
@@ -3227,7 +3374,7 @@
     :cond_0
     iget-object v2, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->m_Gatt:Landroid/bluetooth/BluetoothGatt;
 
-    invoke-virtual {v2, p1, v1}, Landroid/bluetooth/BluetoothGatt;->setCharacteristicNotification(Landroid/bluetooth/BluetoothGattCharacteristic;Z)Z
+    invoke-virtual {v2, p1, v0}, Landroid/bluetooth/BluetoothGatt;->setCharacteristicNotification(Landroid/bluetooth/BluetoothGattCharacteristic;Z)Z
 
     move-result v2
 
@@ -3237,7 +3384,7 @@
 
     :cond_1
     :goto_0
-    return v0
+    return v1
 
     :cond_2
     sget-object v2, Lcom/xiaomi/hm/bleservice/a/a;->a:Ljava/util/UUID;
@@ -3256,7 +3403,7 @@
 
     and-int/lit8 v3, v3, 0x10
 
-    if-lez v3, :cond_3
+    if-lez v3, :cond_4
 
     iget-object v3, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->m_Gatt:Landroid/bluetooth/BluetoothGatt;
 
@@ -3266,13 +3413,19 @@
 
     move-result v2
 
-    if-nez v2, :cond_1
+    if-nez v2, :cond_3
 
-    move v0, v1
+    :goto_1
+    move v1, v0
 
     goto :goto_0
 
     :cond_3
+    move v0, v1
+
+    goto :goto_1
+
+    :cond_4
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothGattCharacteristic;->getProperties()I
 
     move-result v3
@@ -3289,11 +3442,17 @@
 
     move-result v2
 
-    if-nez v2, :cond_1
+    if-nez v2, :cond_5
 
-    move v0, v1
+    :goto_2
+    move v1, v0
 
     goto :goto_0
+
+    :cond_5
+    move v0, v1
+
+    goto :goto_2
 .end method
 
 .method public final unRegisterCallback(Landroid/bluetooth/BluetoothGattCharacteristic;)V
@@ -3309,9 +3468,9 @@
 .method public final unregisterNotification(Landroid/bluetooth/BluetoothGattCharacteristic;)Z
     .locals 5
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/r;->d()V
 
@@ -3339,7 +3498,7 @@
 
     iget-object v2, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->m_Gatt:Landroid/bluetooth/BluetoothGatt;
 
-    invoke-virtual {v2, p1, v0}, Landroid/bluetooth/BluetoothGatt;->setCharacteristicNotification(Landroid/bluetooth/BluetoothGattCharacteristic;Z)Z
+    invoke-virtual {v2, p1, v1}, Landroid/bluetooth/BluetoothGatt;->setCharacteristicNotification(Landroid/bluetooth/BluetoothGattCharacteristic;Z)Z
 
     move-result v2
 
@@ -3349,10 +3508,10 @@
 
     :cond_0
     :goto_0
-    return v0
+    return v1
 
     :cond_1
-    move v0, v1
+    move v1, v0
 
     goto :goto_0
 
@@ -3363,7 +3522,7 @@
 
     iget-object v2, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->m_Gatt:Landroid/bluetooth/BluetoothGatt;
 
-    invoke-virtual {v2, p1, v0}, Landroid/bluetooth/BluetoothGatt;->setCharacteristicNotification(Landroid/bluetooth/BluetoothGattCharacteristic;Z)Z
+    invoke-virtual {v2, p1, v1}, Landroid/bluetooth/BluetoothGatt;->setCharacteristicNotification(Landroid/bluetooth/BluetoothGattCharacteristic;Z)Z
 
     move-result v2
 
@@ -3389,11 +3548,17 @@
 
     move-result v2
 
-    if-nez v2, :cond_0
+    if-nez v2, :cond_3
 
-    move v0, v1
+    :goto_1
+    move v1, v0
 
     goto :goto_0
+
+    :cond_3
+    move v0, v1
+
+    goto :goto_1
 .end method
 
 .method public final writeCharacteristic(Landroid/bluetooth/BluetoothGattCharacteristic;[B)I

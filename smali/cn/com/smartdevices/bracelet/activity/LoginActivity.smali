@@ -126,6 +126,14 @@
     return-void
 .end method
 
+.method static synthetic a(Lcn/com/smartdevices/bracelet/activity/LoginActivity;Landroid/animation/ValueAnimator;)Landroid/animation/ValueAnimator;
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->C:Landroid/animation/ValueAnimator;
+
+    return-object p1
+.end method
+
 .method static synthetic a(Lcn/com/smartdevices/bracelet/activity/LoginActivity;)Landroid/widget/TextView;
     .locals 1
 
@@ -134,20 +142,12 @@
     return-object v0
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/activity/LoginActivity;Landroid/animation/ValueAnimator;)V
-    .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->C:Landroid/animation/ValueAnimator;
-
-    return-void
-.end method
-
-.method static synthetic a(Lcn/com/smartdevices/bracelet/activity/LoginActivity;Ljava/lang/String;)V
+.method static synthetic a(Lcn/com/smartdevices/bracelet/activity/LoginActivity;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->A:Ljava/lang/String;
 
-    return-void
+    return-object p1
 .end method
 
 .method static synthetic a(Lcn/com/smartdevices/bracelet/activity/LoginActivity;Z)V
@@ -749,9 +749,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "personSH = "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->A:Ljava/lang/String;
 
@@ -813,9 +817,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "encode personSH = "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->A:Ljava/lang/String;
 
@@ -963,9 +971,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "onActivityResult requestCode ="
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1113,9 +1125,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "accessToken="
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->j:Ljava/lang/String;
 
@@ -1257,9 +1273,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "result cancel="
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     sget v2, Lcom/xiaomi/account/openauth/AuthorizeActivity;->c:I
 
@@ -1440,9 +1460,9 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
     :goto_0
     sput-boolean v0, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->s:Z
@@ -1472,7 +1492,7 @@
     return-void
 
     :cond_0
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method

@@ -80,6 +80,8 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/B;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
 
     const v3, 0x7f0c0177
@@ -88,11 +90,9 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v1
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/B;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
 

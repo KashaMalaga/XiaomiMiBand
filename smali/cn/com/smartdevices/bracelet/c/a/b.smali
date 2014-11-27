@@ -28,7 +28,7 @@
 .method static synthetic a(Lcn/com/smartdevices/bracelet/c/a/b;)I
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/c/a/b;->d:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/c/a/b;->e:I
 
     return v0
 .end method
@@ -36,7 +36,7 @@
 .method static synthetic b(Lcn/com/smartdevices/bracelet/c/a/b;)I
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/c/a/b;->e:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/c/a/b;->d:I
 
     return v0
 .end method

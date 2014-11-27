@@ -990,6 +990,8 @@
 .method public setLuaAction(Landroid/content/Context;)V
     .locals 1
 
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->luaAction:Lcn/com/smartdevices/bracelet/lua/LuaAction;
+
     invoke-static {p1}, Lcn/com/smartdevices/bracelet/lua/LuaAction;->getInstance(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/lua/LuaAction;
 
     move-result-object v0

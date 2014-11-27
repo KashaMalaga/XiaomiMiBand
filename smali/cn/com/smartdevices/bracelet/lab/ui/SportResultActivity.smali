@@ -199,6 +199,8 @@
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
 
     move-result-object v1
@@ -207,11 +209,9 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     const-string v1, "/"
 
@@ -246,14 +246,6 @@
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
     :cond_1
-    return-void
-.end method
-
-.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/SportResultActivity;Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportResultActivity;->q:Z
-
     return-void
 .end method
 
@@ -370,6 +362,14 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto :goto_0
+.end method
+
+.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/SportResultActivity;Z)Z
+    .locals 0
+
+    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportResultActivity;->q:Z
+
+    return p1
 .end method
 
 .method private b()V
@@ -628,17 +628,17 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const v3, 0x7f0c017d
 
     invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/lab/ui/SportResultActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v2
 
     const-string v3, " "
 
@@ -913,15 +913,15 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-class v1, Lcn/com/smartdevices/bracelet/lab/ui/ab;
+    const-class v1, Lcn/com/smartdevices/bracelet/lab/ui/ad;
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/lab/ui/Z;
+    new-instance v2, Lcn/com/smartdevices/bracelet/lab/ui/ab;
 
     const/4 v3, 0x0
 
-    invoke-direct {v2, p0, v3}, Lcn/com/smartdevices/bracelet/lab/ui/Z;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/SportResultActivity;Lcn/com/smartdevices/bracelet/lab/ui/Z;)V
+    invoke-direct {v2, p0, v3}, Lcn/com/smartdevices/bracelet/lab/ui/ab;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/SportResultActivity;Lcn/com/smartdevices/bracelet/lab/ui/aa;)V
 
-    invoke-static {p0, v1, v0, v2}, Lcn/com/smartdevices/bracelet/lab/ui/ab;->a(Landroid/app/Activity;Ljava/lang/Class;Landroid/os/Bundle;Lcn/com/smartdevices/bracelet/ui/L;)V
+    invoke-static {p0, v1, v0, v2}, Lcn/com/smartdevices/bracelet/lab/ui/ad;->a(Landroid/app/Activity;Ljava/lang/Class;Landroid/os/Bundle;Lcn/com/smartdevices/bracelet/ui/L;)V
 
     :cond_0
     const-string v0, "PageLabSportResult"

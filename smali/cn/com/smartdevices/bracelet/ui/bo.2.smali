@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/bn;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/bn;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bo;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bo;->a:Lcn/com/smartdevices/bracelet/ui/bn;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,26 +22,16 @@
 
 
 # virtual methods
-.method public onPreDraw()Z
+.method public run()V
     .locals 2
 
-    const/4 v1, 0x1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bo;->a:Lcn/com/smartdevices/bracelet/ui/bn;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bo;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/bn;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->p(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Z
+    const/4 v1, 0x0
 
-    move-result v0
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->a(Z)V
 
-    if-eqz v0, :cond_0
-
-    :goto_0
-    return v1
-
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bo;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->c(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;Z)V
-
-    goto :goto_0
+    return-void
 .end method

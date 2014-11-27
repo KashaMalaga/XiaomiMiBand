@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/hm/bleservice/r;
+.class final Lcom/xiaomi/hm/bleservice/r;
 .super Ljava/lang/Object;
 
 # interfaces
@@ -39,7 +39,7 @@
 
     move-result v1
 
-    invoke-static {v0, v1}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->a(Lcom/xiaomi/hm/bleservice/HwConnStatus;I)V
+    invoke-static {v0, v1}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->a(Lcom/xiaomi/hm/bleservice/HwConnStatus;I)I
 
     return-object v0
 .end method

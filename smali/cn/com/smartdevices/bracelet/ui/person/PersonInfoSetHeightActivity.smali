@@ -41,9 +41,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "height = "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
@@ -163,7 +167,7 @@
 
     move-result-object v13
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bW;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bY;
 
     const/16 v12, 0x5a
 
@@ -211,7 +215,7 @@
 
     move v12, v11
 
-    invoke-direct/range {v0 .. v12}, Lcn/com/smartdevices/bracelet/ui/bW;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIII)V
+    invoke-direct/range {v0 .. v12}, Lcn/com/smartdevices/bracelet/ui/bY;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIII)V
 
     invoke-virtual {v13, v0}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/a/f;)Lkankan/wheel/widget/WheelView;
 

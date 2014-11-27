@@ -340,36 +340,36 @@
     return-wide v0
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/gps/services/n;D)V
+.method static synthetic a(Lcn/com/smartdevices/bracelet/gps/services/n;D)D
     .locals 0
 
     iput-wide p1, p0, Lcn/com/smartdevices/bracelet/gps/services/n;->B:D
 
-    return-void
+    return-wide p1
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/gps/services/n;F)V
+.method static synthetic a(Lcn/com/smartdevices/bracelet/gps/services/n;F)F
     .locals 0
 
     iput p1, p0, Lcn/com/smartdevices/bracelet/gps/services/n;->D:F
 
-    return-void
+    return p1
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/gps/services/n;I)V
+.method static synthetic a(Lcn/com/smartdevices/bracelet/gps/services/n;I)I
     .locals 0
 
     iput p1, p0, Lcn/com/smartdevices/bracelet/gps/services/n;->G:I
 
-    return-void
+    return p1
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/gps/services/n;J)V
+.method static synthetic a(Lcn/com/smartdevices/bracelet/gps/services/n;J)J
     .locals 0
 
     iput-wide p1, p0, Lcn/com/smartdevices/bracelet/gps/services/n;->F:J
 
-    return-void
+    return-wide p1
 .end method
 
 .method static synthetic b(Lcn/com/smartdevices/bracelet/gps/services/n;)D
@@ -380,20 +380,20 @@
     return-wide v0
 .end method
 
-.method static synthetic b(Lcn/com/smartdevices/bracelet/gps/services/n;D)V
+.method static synthetic b(Lcn/com/smartdevices/bracelet/gps/services/n;D)D
     .locals 0
 
     iput-wide p1, p0, Lcn/com/smartdevices/bracelet/gps/services/n;->C:D
 
-    return-void
+    return-wide p1
 .end method
 
-.method static synthetic b(Lcn/com/smartdevices/bracelet/gps/services/n;F)V
+.method static synthetic b(Lcn/com/smartdevices/bracelet/gps/services/n;F)F
     .locals 0
 
     iput p1, p0, Lcn/com/smartdevices/bracelet/gps/services/n;->H:F
 
-    return-void
+    return p1
 .end method
 
 .method static synthetic c(Lcn/com/smartdevices/bracelet/gps/services/n;)F
@@ -404,12 +404,12 @@
     return v0
 .end method
 
-.method static synthetic c(Lcn/com/smartdevices/bracelet/gps/services/n;F)V
+.method static synthetic c(Lcn/com/smartdevices/bracelet/gps/services/n;F)F
     .locals 0
 
     iput p1, p0, Lcn/com/smartdevices/bracelet/gps/services/n;->I:F
 
-    return-void
+    return p1
 .end method
 
 .method static synthetic d(Lcn/com/smartdevices/bracelet/gps/services/n;)F
@@ -490,13 +490,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     iget-wide v3, p0, Lcn/com/smartdevices/bracelet/gps/services/n;->B:D
 
-    invoke-static {v3, v4}, Ljava/lang/String;->valueOf(D)Ljava/lang/String;
+    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v2
 
     const-string v3, ":"
 

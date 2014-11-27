@@ -30,7 +30,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/model/game/GameManager;Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;)V
+.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/model/game/GameManager;Lcn/com/smartdevices/bracelet/model/game/GameManager$1;)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;-><init>(Lcn/com/smartdevices/bracelet/model/game/GameManager;)V
@@ -40,7 +40,7 @@
 
 
 # virtual methods
-.method protected bridge varargs synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
+.method protected bridge synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
     check-cast p1, [Ljava/lang/String;
@@ -62,7 +62,7 @@
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->this$0:Lcn/com/smartdevices/bracelet/model/game/GameManager;
 
     # invokes: Lcn/com/smartdevices/bracelet/model/game/GameManager;->getGameBriefInfo()Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$0(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$100(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
 
     move-result-object v0
 
@@ -76,9 +76,13 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "GAME_"
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;->getId()I
 
@@ -106,9 +110,13 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "mark = "
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     aget-object v4, p1, v6
 
@@ -142,7 +150,7 @@
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->this$0:Lcn/com/smartdevices/bracelet/model/game/GameManager;
 
     # invokes: Lcn/com/smartdevices/bracelet/model/game/GameManager;->clearGameUI(Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$1(Lcn/com/smartdevices/bracelet/model/game/GameManager;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$200(Lcn/com/smartdevices/bracelet/model/game/GameManager;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
 
     :goto_0
     return-object v5
@@ -157,7 +165,7 @@
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->this$0:Lcn/com/smartdevices/bracelet/model/game/GameManager;
 
     # invokes: Lcn/com/smartdevices/bracelet/model/game/GameManager;->getRegisterInfo()V
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$2(Lcn/com/smartdevices/bracelet/model/game/GameManager;)V
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$300(Lcn/com/smartdevices/bracelet/model/game/GameManager;)V
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;->isInRegisterStage()Z
 
@@ -168,7 +176,7 @@
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->this$0:Lcn/com/smartdevices/bracelet/model/game/GameManager;
 
     # getter for: Lcn/com/smartdevices/bracelet/model/game/GameManager;->mGameBriefInfo:Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$3(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$400(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
 
     move-result-object v0
 
@@ -193,7 +201,7 @@
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->this$0:Lcn/com/smartdevices/bracelet/model/game/GameManager;
 
     # getter for: Lcn/com/smartdevices/bracelet/model/game/GameManager;->mGameBriefInfo:Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$3(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$400(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
 
     move-result-object v2
 
@@ -210,7 +218,7 @@
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->this$0:Lcn/com/smartdevices/bracelet/model/game/GameManager;
 
     # getter for: Lcn/com/smartdevices/bracelet/model/game/GameManager;->mGameBriefInfo:Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$3(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$400(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
 
     move-result-object v2
 
@@ -244,7 +252,7 @@
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->this$0:Lcn/com/smartdevices/bracelet/model/game/GameManager;
 
     # getter for: Lcn/com/smartdevices/bracelet/model/game/GameManager;->mGameBriefInfo:Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$3(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$400(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
 
     move-result-object v2
 
@@ -272,7 +280,7 @@
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->this$0:Lcn/com/smartdevices/bracelet/model/game/GameManager;
 
     # getter for: Lcn/com/smartdevices/bracelet/model/game/GameManager;->mGameBriefInfo:Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$3(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$400(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
 
     move-result-object v0
 
@@ -285,7 +293,7 @@
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->this$0:Lcn/com/smartdevices/bracelet/model/game/GameManager;
 
     # invokes: Lcn/com/smartdevices/bracelet/model/game/GameManager;->clearGameUI(Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$1(Lcn/com/smartdevices/bracelet/model/game/GameManager;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$200(Lcn/com/smartdevices/bracelet/model/game/GameManager;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
 
     goto/16 :goto_0
 
@@ -293,7 +301,7 @@
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->this$0:Lcn/com/smartdevices/bracelet/model/game/GameManager;
 
     # invokes: Lcn/com/smartdevices/bracelet/model/game/GameManager;->showGameRecord(Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$4(Lcn/com/smartdevices/bracelet/model/game/GameManager;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$500(Lcn/com/smartdevices/bracelet/model/game/GameManager;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
 
     goto/16 :goto_0
 
@@ -307,7 +315,7 @@
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->this$0:Lcn/com/smartdevices/bracelet/model/game/GameManager;
 
     # getter for: Lcn/com/smartdevices/bracelet/model/game/GameManager;->mGameBriefInfo:Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$3(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$400(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
 
     move-result-object v0
 
@@ -320,7 +328,7 @@
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->this$0:Lcn/com/smartdevices/bracelet/model/game/GameManager;
 
     # invokes: Lcn/com/smartdevices/bracelet/model/game/GameManager;->clearGameUI(Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$1(Lcn/com/smartdevices/bracelet/model/game/GameManager;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$200(Lcn/com/smartdevices/bracelet/model/game/GameManager;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
 
     goto/16 :goto_0
 
@@ -328,7 +336,7 @@
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->this$0:Lcn/com/smartdevices/bracelet/model/game/GameManager;
 
     # invokes: Lcn/com/smartdevices/bracelet/model/game/GameManager;->showBonusBanner(Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$5(Lcn/com/smartdevices/bracelet/model/game/GameManager;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$600(Lcn/com/smartdevices/bracelet/model/game/GameManager;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
 
     goto/16 :goto_0
 
@@ -348,7 +356,7 @@
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->this$0:Lcn/com/smartdevices/bracelet/model/game/GameManager;
 
     # getter for: Lcn/com/smartdevices/bracelet/model/game/GameManager;->mGameBriefInfo:Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$3(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$400(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
 
     move-result-object v2
 
@@ -370,7 +378,7 @@
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->this$0:Lcn/com/smartdevices/bracelet/model/game/GameManager;
 
     # invokes: Lcn/com/smartdevices/bracelet/model/game/GameManager;->clearGameUI(Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$1(Lcn/com/smartdevices/bracelet/model/game/GameManager;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$200(Lcn/com/smartdevices/bracelet/model/game/GameManager;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
 
     goto/16 :goto_0
 .end method

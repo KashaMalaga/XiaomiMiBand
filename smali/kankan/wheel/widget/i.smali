@@ -26,7 +26,7 @@
 
     iget-object v0, p0, Lkankan/wheel/widget/i;->a:Lkankan/wheel/widget/g;
 
-    invoke-static {v0}, Lkankan/wheel/widget/g;->a(Lkankan/wheel/widget/g;)Landroid/widget/Scroller;
+    invoke-static {v0}, Lkankan/wheel/widget/g;->b(Lkankan/wheel/widget/g;)Landroid/widget/Scroller;
 
     move-result-object v0
 
@@ -34,7 +34,7 @@
 
     iget-object v0, p0, Lkankan/wheel/widget/i;->a:Lkankan/wheel/widget/g;
 
-    invoke-static {v0}, Lkankan/wheel/widget/g;->a(Lkankan/wheel/widget/g;)Landroid/widget/Scroller;
+    invoke-static {v0}, Lkankan/wheel/widget/g;->b(Lkankan/wheel/widget/g;)Landroid/widget/Scroller;
 
     move-result-object v0
 
@@ -44,7 +44,7 @@
 
     iget-object v1, p0, Lkankan/wheel/widget/i;->a:Lkankan/wheel/widget/g;
 
-    invoke-static {v1}, Lkankan/wheel/widget/g;->b(Lkankan/wheel/widget/g;)I
+    invoke-static {v1}, Lkankan/wheel/widget/g;->a(Lkankan/wheel/widget/g;)I
 
     move-result v1
 
@@ -52,7 +52,7 @@
 
     iget-object v2, p0, Lkankan/wheel/widget/i;->a:Lkankan/wheel/widget/g;
 
-    invoke-static {v2, v0}, Lkankan/wheel/widget/g;->a(Lkankan/wheel/widget/g;I)V
+    invoke-static {v2, v0}, Lkankan/wheel/widget/g;->a(Lkankan/wheel/widget/g;I)I
 
     if-eqz v1, :cond_0
 
@@ -67,7 +67,7 @@
     :cond_0
     iget-object v1, p0, Lkankan/wheel/widget/i;->a:Lkankan/wheel/widget/g;
 
-    invoke-static {v1}, Lkankan/wheel/widget/g;->a(Lkankan/wheel/widget/g;)Landroid/widget/Scroller;
+    invoke-static {v1}, Lkankan/wheel/widget/g;->b(Lkankan/wheel/widget/g;)Landroid/widget/Scroller;
 
     move-result-object v1
 
@@ -85,7 +85,7 @@
 
     iget-object v0, p0, Lkankan/wheel/widget/i;->a:Lkankan/wheel/widget/g;
 
-    invoke-static {v0}, Lkankan/wheel/widget/g;->a(Lkankan/wheel/widget/g;)Landroid/widget/Scroller;
+    invoke-static {v0}, Lkankan/wheel/widget/g;->b(Lkankan/wheel/widget/g;)Landroid/widget/Scroller;
 
     move-result-object v0
 
@@ -93,7 +93,7 @@
 
     iget-object v0, p0, Lkankan/wheel/widget/i;->a:Lkankan/wheel/widget/g;
 
-    invoke-static {v0}, Lkankan/wheel/widget/g;->a(Lkankan/wheel/widget/g;)Landroid/widget/Scroller;
+    invoke-static {v0}, Lkankan/wheel/widget/g;->b(Lkankan/wheel/widget/g;)Landroid/widget/Scroller;
 
     move-result-object v0
 
@@ -102,7 +102,7 @@
     :cond_1
     iget-object v0, p0, Lkankan/wheel/widget/i;->a:Lkankan/wheel/widget/g;
 
-    invoke-static {v0}, Lkankan/wheel/widget/g;->a(Lkankan/wheel/widget/g;)Landroid/widget/Scroller;
+    invoke-static {v0}, Lkankan/wheel/widget/g;->b(Lkankan/wheel/widget/g;)Landroid/widget/Scroller;
 
     move-result-object v0
 

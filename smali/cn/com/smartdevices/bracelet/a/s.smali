@@ -210,8 +210,156 @@
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-eqz v0, :cond_3
 
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityDataFragment;
+
+    iget-object v1, v0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityDataFragment;->data:Ljava/util/List;
+
+    iget-object v4, v0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityDataFragment;->timestamp:Ljava/util/Calendar;
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/a/s;->l:Ljava/lang/String;
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "data size:"
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    const-string v6, ",data time:"
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v4}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/util/Date;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v0, v5}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v5
+
+    :goto_2
+    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityData;
+
+    invoke-virtual {v4, v10}, Ljava/util/Calendar;->get(I)I
+
+    move-result v6
+
+    const/4 v1, 0x2
+
+    invoke-virtual {v4, v1}, Ljava/util/Calendar;->get(I)I
+
+    move-result v7
+
+    const/4 v1, 0x5
+
+    invoke-virtual {v4, v1}, Ljava/util/Calendar;->get(I)I
+
+    move-result v8
+
+    const/16 v1, 0xb
+
+    invoke-virtual {v4, v1}, Ljava/util/Calendar;->get(I)I
+
+    move-result v1
+
+    invoke-virtual {v4, v11}, Ljava/util/Calendar;->get(I)I
+
+    move-result v9
+
+    mul-int/lit8 v1, v1, 0x3c
+
+    add-int/2addr v9, v1
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/o;->a()Lcn/com/smartdevices/bracelet/o;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v6, v7, v8}, Lcn/com/smartdevices/bracelet/o;->a(III)Lcn/com/smartdevices/bracelet/model/DaySportData;
+
+    move-result-object v1
+
+    if-nez v1, :cond_1
+
+    new-instance v1, Lcn/com/smartdevices/bracelet/model/DaySportData;
+
+    invoke-direct {v1, v6, v7, v8}, Lcn/com/smartdevices/bracelet/model/DaySportData;-><init>(III)V
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/o;->a()Lcn/com/smartdevices/bracelet/o;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v1}, Lcn/com/smartdevices/bracelet/o;->a(Lcn/com/smartdevices/bracelet/model/DaySportData;)V
+
+    :cond_1
+    invoke-virtual {v1, v10}, Lcn/com/smartdevices/bracelet/model/DaySportData;->setNeedSync(Z)V
+
+    invoke-virtual {v1, v10}, Lcn/com/smartdevices/bracelet/model/DaySportData;->setNeedPostProcess(Z)V
+
+    invoke-virtual {v1, v9, v0}, Lcn/com/smartdevices/bracelet/model/DaySportData;->add(ILcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityData;)V
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/DaySportData;->getSportDay()Lcn/com/smartdevices/bracelet/model/SportDay;
+
+    move-result-object v0
+
+    invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v4, v11, v10}, Ljava/util/Calendar;->add(II)V
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {v4}, Ljava/util/Calendar;->getTimeInMillis()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcn/com/smartdevices/bracelet/a/s;->c:J
+
+    goto/16 :goto_1
+
+    :cond_3
     invoke-static {}, Lcn/com/smartdevices/bracelet/c/a;->a()Lcn/com/smartdevices/bracelet/c/a;
 
     move-result-object v0
@@ -220,19 +368,19 @@
 
     move-result-object v1
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_4
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/c/a;->h()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_4
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_4
 
     invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/c/a/d;->b(Ljava/util/List;)V
 
-    :cond_1
+    :cond_4
     sget-object v0, Lcn/com/smartdevices/bracelet/a/s;->l:Ljava/lang/String;
 
     const-string v1, "analysis...............................before"
@@ -324,150 +472,6 @@
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
-
-    :cond_2
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityDataFragment;
-
-    iget-object v1, v0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityDataFragment;->data:Ljava/util/List;
-
-    iget-object v4, v0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityDataFragment;->timestamp:Ljava/util/Calendar;
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/a/s;->l:Ljava/lang/String;
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    const-string v6, "data size:"
-
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v6
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    const-string v6, ",data time:"
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v4}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/util/Date;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v0, v5}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v5
-
-    :goto_2
-    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    invoke-virtual {v4}, Ljava/util/Calendar;->getTimeInMillis()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lcn/com/smartdevices/bracelet/a/s;->c:J
-
-    goto/16 :goto_1
-
-    :cond_3
-    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityData;
-
-    invoke-virtual {v4, v10}, Ljava/util/Calendar;->get(I)I
-
-    move-result v6
-
-    const/4 v1, 0x2
-
-    invoke-virtual {v4, v1}, Ljava/util/Calendar;->get(I)I
-
-    move-result v7
-
-    const/4 v1, 0x5
-
-    invoke-virtual {v4, v1}, Ljava/util/Calendar;->get(I)I
-
-    move-result v8
-
-    const/16 v1, 0xb
-
-    invoke-virtual {v4, v1}, Ljava/util/Calendar;->get(I)I
-
-    move-result v1
-
-    invoke-virtual {v4, v11}, Ljava/util/Calendar;->get(I)I
-
-    move-result v9
-
-    mul-int/lit8 v1, v1, 0x3c
-
-    add-int/2addr v9, v1
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/o;->a()Lcn/com/smartdevices/bracelet/o;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v6, v7, v8}, Lcn/com/smartdevices/bracelet/o;->a(III)Lcn/com/smartdevices/bracelet/model/DaySportData;
-
-    move-result-object v1
-
-    if-nez v1, :cond_4
-
-    new-instance v1, Lcn/com/smartdevices/bracelet/model/DaySportData;
-
-    invoke-direct {v1, v6, v7, v8}, Lcn/com/smartdevices/bracelet/model/DaySportData;-><init>(III)V
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/o;->a()Lcn/com/smartdevices/bracelet/o;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v1}, Lcn/com/smartdevices/bracelet/o;->a(Lcn/com/smartdevices/bracelet/model/DaySportData;)V
-
-    :cond_4
-    invoke-virtual {v1, v10}, Lcn/com/smartdevices/bracelet/model/DaySportData;->setNeedSync(Z)V
-
-    invoke-virtual {v1, v10}, Lcn/com/smartdevices/bracelet/model/DaySportData;->setNeedPostProcess(Z)V
-
-    invoke-virtual {v1, v9, v0}, Lcn/com/smartdevices/bracelet/model/DaySportData;->add(ILcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityData;)V
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/DaySportData;->getSportDay()Lcn/com/smartdevices/bracelet/model/SportDay;
-
-    move-result-object v0
-
-    invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    invoke-virtual {v4, v11, v10}, Ljava/util/Calendar;->add(II)V
-
-    goto :goto_2
 .end method
 
 .method public onBleNotify(Z)V
@@ -477,9 +481,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "getActivities onBleNotify:"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -526,9 +534,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "getActivities onError:"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -566,9 +578,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "getActivities onProgress:"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

@@ -7,6 +7,12 @@
 
 .field private b:Lkankan/wheel/widget/WheelView;
 
+.field private c:Lkankan/wheel/widget/WheelView;
+
+.field private f:Lcn/com/smartdevices/bracelet/model/Birthday;
+
+.field private g:I
+
 
 # direct methods
 .method public constructor <init>()V
@@ -22,19 +28,21 @@
 .method protected a()I
     .locals 1
 
-    const v0, 0x7f03004c
+    const v0, 0x7f03004a
 
     return v0
 .end method
 
 .method protected d()V
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bR;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-    iget v0, v0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->height:I
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getBirthday()Ljava/lang/String;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bR;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bR;->f:Lcn/com/smartdevices/bracelet/model/Birthday;
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/bR;->b:Lkankan/wheel/widget/WheelView;
 
@@ -42,15 +50,35 @@
 
     move-result v2
 
-    add-int/lit8 v2, v2, 0x5a
+    iget v3, p0, Lcn/com/smartdevices/bracelet/ui/bR;->g:I
 
-    iput v2, v1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->height:I
+    add-int/2addr v2, v3
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bR;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/model/Birthday;->setYear(I)V
 
-    iget v1, v1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->height:I
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bR;->f:Lcn/com/smartdevices/bracelet/model/Birthday;
 
-    if-ne v0, v1, :cond_0
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/bR;->c:Lkankan/wheel/widget/WheelView;
+
+    invoke-virtual {v2}, Lkankan/wheel/widget/WheelView;->f()I
+
+    move-result v2
+
+    add-int/lit8 v2, v2, 0x1
+
+    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/model/Birthday;->setMonth(I)V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bR;->f:Lcn/com/smartdevices/bracelet/model/Birthday;
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/Birthday;->toStringData()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/bR;->dismiss()V
 
@@ -58,6 +86,26 @@
     return-void
 
     :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bR;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bR;->f:Lcn/com/smartdevices/bracelet/model/Birthday;
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/Birthday;->toStringData()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->setBirthday(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bR;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bR;->f:Lcn/com/smartdevices/bracelet/model/Birthday;
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/Birthday;->getAge()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->setAge(I)V
+
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bR;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     const/4 v1, 0x2
@@ -94,6 +142,18 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bR;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bR;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getBirthday()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/model/Birthday;->fromStr(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/model/Birthday;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bR;->f:Lcn/com/smartdevices/bracelet/model/Birthday;
+
     return-void
 .end method
 
@@ -104,7 +164,7 @@
 
     move-result-object v15
 
-    const v1, 0x7f070151
+    const v1, 0x7f07014b
 
     invoke-virtual {v15, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -116,9 +176,45 @@
 
     iput-object v1, v0, Lcn/com/smartdevices/bracelet/ui/bR;->b:Lkankan/wheel/widget/WheelView;
 
+    const v1, 0x7f07014c
+
+    invoke-virtual {v15, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Lkankan/wheel/widget/WheelView;
+
+    move-object/from16 v0, p0
+
+    iput-object v1, v0, Lcn/com/smartdevices/bracelet/ui/bR;->c:Lkankan/wheel/widget/WheelView;
+
+    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
+
+    move-result-object v1
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v2}, Ljava/util/Calendar;->get(I)I
+
+    move-result v1
+
+    add-int/lit8 v2, v1, -0x64
+
+    move-object/from16 v0, p0
+
+    iput v2, v0, Lcn/com/smartdevices/bracelet/ui/bR;->g:I
+
+    add-int/lit8 v4, v1, -0x7
+
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcn/com/smartdevices/bracelet/ui/bR;->b:Lkankan/wheel/widget/WheelView;
+
+    const/4 v2, 0x5
+
+    invoke-virtual {v1, v2}, Lkankan/wheel/widget/WheelView;->a(I)Lkankan/wheel/widget/WheelView;
+
+    move-result-object v1
 
     const v2, 0x7f0200cb
 
@@ -126,7 +222,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0c005b
+    const v2, 0x7f0c01c4
 
     move-object/from16 v0, p0
 
@@ -134,21 +230,21 @@
 
     move-result-object v2
 
-    const/high16 v3, 0x41e00000
+    const/high16 v3, 0x41c00000
 
     invoke-virtual {v1, v2, v3}, Lkankan/wheel/widget/WheelView;->a(Ljava/lang/String;F)Lkankan/wheel/widget/WheelView;
 
     move-result-object v16
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bW;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bY;
 
     invoke-virtual/range {p0 .. p0}, Lcn/com/smartdevices/bracelet/ui/bR;->getActivity()Landroid/app/Activity;
 
     move-result-object v2
 
-    const/16 v3, 0x5a
+    move-object/from16 v0, p0
 
-    const/16 v4, 0xe6
+    iget v3, v0, Lcn/com/smartdevices/bracelet/ui/bR;->g:I
 
     move-object/from16 v0, p0
 
@@ -188,25 +284,167 @@
 
     const/4 v14, 0x1
 
-    invoke-direct/range {v1 .. v14}, Lcn/com/smartdevices/bracelet/ui/bW;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
+    invoke-direct/range {v1 .. v14}, Lcn/com/smartdevices/bracelet/ui/bY;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
 
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/a/f;)Lkankan/wheel/widget/WheelView;
 
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/ui/bR;->c:Lkankan/wheel/widget/WheelView;
+
+    const/4 v2, 0x5
+
+    invoke-virtual {v1, v2}, Lkankan/wheel/widget/WheelView;->a(I)Lkankan/wheel/widget/WheelView;
+
     move-result-object v1
+
+    const v2, 0x7f0200cb
+
+    invoke-virtual {v1, v2}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
+
+    move-result-object v1
+
+    const v2, 0x7f0c01c3
 
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcn/com/smartdevices/bracelet/ui/bR;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/ui/bR;->getString(I)Ljava/lang/String;
 
-    iget v2, v2, Lcn/com/smartdevices/bracelet/model/PersonInfo;->height:I
+    move-result-object v2
 
-    add-int/lit8 v2, v2, -0x5a
+    const/high16 v3, 0x41c00000
+
+    invoke-virtual {v1, v2, v3}, Lkankan/wheel/widget/WheelView;->a(Ljava/lang/String;F)Lkankan/wheel/widget/WheelView;
+
+    move-result-object v16
+
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bY;
+
+    invoke-virtual/range {p0 .. p0}, Lcn/com/smartdevices/bracelet/ui/bR;->getActivity()Landroid/app/Activity;
+
+    move-result-object v2
+
+    const/4 v3, 0x1
+
+    const/16 v4, 0xc
+
+    move-object/from16 v0, p0
+
+    iget-object v5, v0, Lcn/com/smartdevices/bracelet/ui/bR;->c:Lkankan/wheel/widget/WheelView;
+
+    invoke-virtual/range {p0 .. p0}, Lcn/com/smartdevices/bracelet/ui/bR;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v6
+
+    const v7, 0x7f08000c
+
+    invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v6
+
+    invoke-virtual/range {p0 .. p0}, Lcn/com/smartdevices/bracelet/ui/bR;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v7
+
+    const v8, 0x7f080011
+
+    invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v7
+
+    const v8, -0x77666667
+
+    const/4 v9, 0x1
+
+    const/16 v10, 0x2e
+
+    const/16 v11, 0x8
+
+    const/4 v12, 0x7
+
+    const/4 v13, 0x7
+
+    const/4 v14, 0x1
+
+    invoke-direct/range {v1 .. v14}, Lcn/com/smartdevices/bracelet/ui/bY;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
+
+    move-object/from16 v0, v16
+
+    invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/a/f;)Lkankan/wheel/widget/WheelView;
+
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/ui/bR;->f:Lcn/com/smartdevices/bracelet/model/Birthday;
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/Birthday;->isValid()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/ui/bR;->b:Lkankan/wheel/widget/WheelView;
+
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcn/com/smartdevices/bracelet/ui/bR;->f:Lcn/com/smartdevices/bracelet/model/Birthday;
+
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/Birthday;->getYear()I
+
+    move-result v2
+
+    move-object/from16 v0, p0
+
+    iget v3, v0, Lcn/com/smartdevices/bracelet/ui/bR;->g:I
+
+    sub-int/2addr v2, v3
 
     invoke-virtual {v1, v2}, Lkankan/wheel/widget/WheelView;->c(I)Lkankan/wheel/widget/WheelView;
 
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/ui/bR;->c:Lkankan/wheel/widget/WheelView;
+
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcn/com/smartdevices/bracelet/ui/bR;->f:Lcn/com/smartdevices/bracelet/model/Birthday;
+
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/Birthday;->getMonth()I
+
+    move-result v2
+
+    add-int/lit8 v2, v2, -0x1
+
+    invoke-virtual {v1, v2}, Lkankan/wheel/widget/WheelView;->d(I)Lkankan/wheel/widget/WheelView;
+
+    :goto_0
     return-object v15
+
+    :cond_0
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/ui/bR;->b:Lkankan/wheel/widget/WheelView;
+
+    move-object/from16 v0, p0
+
+    iget v2, v0, Lcn/com/smartdevices/bracelet/ui/bR;->g:I
+
+    rsub-int v2, v2, 0x7c6
+
+    invoke-virtual {v1, v2}, Lkankan/wheel/widget/WheelView;->c(I)Lkankan/wheel/widget/WheelView;
+
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/ui/bR;->c:Lkankan/wheel/widget/WheelView;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Lkankan/wheel/widget/WheelView;->d(I)Lkankan/wheel/widget/WheelView;
+
+    goto :goto_0
 .end method
 
 .method public onDestroy()V
@@ -218,11 +456,11 @@
 
     move-result-object v0
 
-    const-string v1, "UserSettingHeight"
+    const-string v1, "UserSettingAge"
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/bR;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-    iget v2, v2, Lcn/com/smartdevices/bracelet/model/PersonInfo;->height:I
+    iget v2, v2, Lcn/com/smartdevices/bracelet/model/PersonInfo;->age:I
 
     invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;I)V
 
@@ -234,7 +472,7 @@
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/J;->onPause()V
 
-    const-string v0, "PagePersonInfoHeight"
+    const-string v0, "PagePersonInfoAge"
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->b(Ljava/lang/String;)V
 
@@ -246,7 +484,7 @@
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/J;->onResume()V
 
-    const-string v0, "PagePersonInfoHeight"
+    const-string v0, "PagePersonInfoAge"
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->a(Ljava/lang/String;)V
 

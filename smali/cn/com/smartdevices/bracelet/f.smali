@@ -1,4 +1,4 @@
-.class Lcn/com/smartdevices/bracelet/F;
+.class final Lcn/com/smartdevices/bracelet/F;
 .super Lcom/c/a/a/h;
 
 
@@ -26,9 +26,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "updateLazyDay2Server onSuccess: "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     new-instance v2, Ljava/lang/String;
 

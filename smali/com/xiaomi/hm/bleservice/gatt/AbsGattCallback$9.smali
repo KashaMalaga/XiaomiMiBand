@@ -8,7 +8,7 @@
 # instance fields
 .field final synthetic this$0:Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;
 
-.field private final synthetic val$characteristic:Landroid/bluetooth/BluetoothGattCharacteristic;
+.field final synthetic val$characteristic:Landroid/bluetooth/BluetoothGattCharacteristic;
 
 
 # direct methods

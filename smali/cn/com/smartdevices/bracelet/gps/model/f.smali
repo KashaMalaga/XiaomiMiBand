@@ -1,4 +1,4 @@
-.class Lcn/com/smartdevices/bracelet/gps/model/f;
+.class final Lcn/com/smartdevices/bracelet/gps/model/f;
 .super Ljava/lang/Object;
 
 # interfaces

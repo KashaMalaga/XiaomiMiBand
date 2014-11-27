@@ -127,48 +127,23 @@
 
     move-result-object v5
 
-    if-nez v5, :cond_0
+    if-eqz v5, :cond_2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/t;->a:Lcn/com/smartdevices/bracelet/gps/services/a/d;
-
-    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/gps/services/a/d;->e()Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    iput-boolean v9, v4, Lcn/com/smartdevices/bracelet/gps/b/t;->d:Z
-
-    invoke-virtual {p0, v0, v4}, Lcn/com/smartdevices/bracelet/gps/services/t;->a(Ljava/util/List;Lcn/com/smartdevices/bracelet/gps/b/t;)V
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/b/t;
-
-    invoke-direct {v0, v1, v9}, Lcn/com/smartdevices/bracelet/gps/b/t;-><init>(ZZ)V
-
-    iput-boolean v9, v0, Lcn/com/smartdevices/bracelet/gps/b/t;->d:Z
-
-    invoke-virtual {p0, v2, v0}, Lcn/com/smartdevices/bracelet/gps/services/t;->a(Ljava/util/List;Lcn/com/smartdevices/bracelet/gps/b/t;)V
-
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    return v0
-
-    :cond_0
-    if-lt v0, p2, :cond_1
+    if-lt v0, p2, :cond_0
 
     const-string v6, ""
 
-    if-eq v5, v6, :cond_1
+    if-eq v5, v6, :cond_0
 
     const-string v6, "\n"
 
-    if-eq v5, v6, :cond_1
+    if-eq v5, v6, :cond_0
 
     invoke-virtual {v5}, Ljava/lang/String;->length()I
 
     move-result v6
 
-    if-lez v6, :cond_1
+    if-lez v6, :cond_0
 
     const-string v6, "GPS"
 
@@ -176,7 +151,7 @@
 
     move-result v6
 
-    if-eqz v6, :cond_2
+    if-eqz v6, :cond_1
 
     invoke-virtual {v3}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -186,13 +161,13 @@
 
     invoke-interface {v5}, Lcn/com/smartdevices/bracelet/gps/services/a/d;->i()V
 
-    :cond_1
+    :cond_0
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    :cond_2
+    :cond_1
     const-string v6, ", "
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -272,6 +247,31 @@
     invoke-virtual {p0, v5, v4}, Lcn/com/smartdevices/bracelet/gps/services/t;->a(Ljava/util/List;Lcn/com/smartdevices/bracelet/gps/b/t;)V
 
     goto :goto_1
+
+    :cond_2
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/t;->a:Lcn/com/smartdevices/bracelet/gps/services/a/d;
+
+    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/gps/services/a/d;->e()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    iput-boolean v9, v4, Lcn/com/smartdevices/bracelet/gps/b/t;->d:Z
+
+    invoke-virtual {p0, v0, v4}, Lcn/com/smartdevices/bracelet/gps/services/t;->a(Ljava/util/List;Lcn/com/smartdevices/bracelet/gps/b/t;)V
+
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/b/t;
+
+    invoke-direct {v0, v1, v9}, Lcn/com/smartdevices/bracelet/gps/b/t;-><init>(ZZ)V
+
+    iput-boolean v9, v0, Lcn/com/smartdevices/bracelet/gps/b/t;->d:Z
+
+    invoke-virtual {p0, v2, v0}, Lcn/com/smartdevices/bracelet/gps/services/t;->a(Ljava/util/List;Lcn/com/smartdevices/bracelet/gps/b/t;)V
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    return v0
 .end method
 
 .method private a(Ljava/io/File;IZ)I
@@ -308,38 +308,23 @@
 
     move-result-object v4
 
-    if-nez v4, :cond_0
+    if-eqz v4, :cond_2
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/b/t;
-
-    invoke-direct {v0, p3, v8}, Lcn/com/smartdevices/bracelet/gps/b/t;-><init>(ZZ)V
-
-    iput-boolean v8, v0, Lcn/com/smartdevices/bracelet/gps/b/t;->d:Z
-
-    invoke-virtual {p0, v2, v0}, Lcn/com/smartdevices/bracelet/gps/services/t;->a(Ljava/util/List;Lcn/com/smartdevices/bracelet/gps/b/t;)V
-
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    return v0
-
-    :cond_0
-    if-lt v0, p2, :cond_1
+    if-lt v0, p2, :cond_0
 
     const-string v5, ""
 
-    if-eq v4, v5, :cond_1
+    if-eq v4, v5, :cond_0
 
     const-string v5, "\n"
 
-    if-eq v4, v5, :cond_1
+    if-eq v4, v5, :cond_0
 
     invoke-virtual {v4}, Ljava/lang/String;->length()I
 
     move-result v5
 
-    if-lez v5, :cond_1
+    if-lez v5, :cond_0
 
     const-string v5, "GPS"
 
@@ -347,19 +332,19 @@
 
     move-result v5
 
-    if-eqz v5, :cond_2
+    if-eqz v5, :cond_1
 
     invoke-virtual {v3}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     invoke-virtual {v3}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
-    :cond_1
+    :cond_0
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    :cond_2
+    :cond_1
     const-string v5, ", "
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -431,6 +416,21 @@
     invoke-virtual {v2, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
+
+    :cond_2
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/b/t;
+
+    invoke-direct {v0, p3, v8}, Lcn/com/smartdevices/bracelet/gps/b/t;-><init>(ZZ)V
+
+    iput-boolean v8, v0, Lcn/com/smartdevices/bracelet/gps/b/t;->d:Z
+
+    invoke-virtual {p0, v2, v0}, Lcn/com/smartdevices/bracelet/gps/services/t;->a(Ljava/util/List;Lcn/com/smartdevices/bracelet/gps/b/t;)V
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    return v0
 .end method
 
 
@@ -563,13 +563,13 @@
 
     const/4 v0, 0x1
 
-    :goto_0
     const-string v1, "gps"
 
     const-string v2, "cleanStorage-out"
 
     invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    :goto_0
     return v0
 
     :catch_0
@@ -584,10 +584,22 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    const-string v1, "gps"
+
+    const-string v2, "cleanStorage-out"
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
     goto :goto_0
 
     :catchall_0
     move-exception v1
+
+    const-string v1, "gps"
+
+    const-string v2, "cleanStorage-out"
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -615,13 +627,13 @@
 
     const/4 v0, 0x1
 
-    :goto_0
     const-string v1, "gps"
 
     const-string v2, "end-out"
 
     invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    :goto_0
     return v0
 
     :catch_0
@@ -636,10 +648,22 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    const-string v1, "gps"
+
+    const-string v2, "end-out"
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
     goto :goto_0
 
     :catchall_0
     move-exception v1
+
+    const-string v1, "gps"
+
+    const-string v2, "end-out"
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -665,13 +689,13 @@
 
     move-result v0
 
-    :goto_0
     const-string v1, "gps"
 
     const-string v2, "getAllFileLength-out"
 
     invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    :goto_0
     return v0
 
     :catch_0
@@ -686,10 +710,22 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    const-string v1, "gps"
+
+    const-string v2, "getAllFileLength-out"
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
     goto :goto_0
 
     :catchall_0
     move-exception v1
+
+    const-string v1, "gps"
+
+    const-string v2, "getAllFileLength-out"
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -739,13 +775,13 @@
 
     move-result v0
 
-    :goto_0
     const-string v1, "gps"
 
     const-string v2, "test-out"
 
     invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    :goto_0
     return v0
 
     :catch_0
@@ -762,10 +798,22 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    const-string v1, "gps"
+
+    const-string v2, "test-out"
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
     goto :goto_0
 
     :catchall_0
     move-exception v1
+
+    const-string v1, "gps"
+
+    const-string v2, "test-out"
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -803,13 +851,13 @@
 
     move-result v0
 
-    :goto_0
     const-string v1, "gps"
 
     const-string v2, "test-out"
 
     invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    :goto_0
     return v0
 
     :catch_0
@@ -826,10 +874,22 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
+    const-string v1, "gps"
+
+    const-string v2, "test-out"
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
     goto :goto_0
 
     :catchall_0
     move-exception v1
+
+    const-string v1, "gps"
+
+    const-string v2, "test-out"
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

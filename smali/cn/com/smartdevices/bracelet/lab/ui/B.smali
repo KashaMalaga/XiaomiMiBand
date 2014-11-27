@@ -53,7 +53,7 @@
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->b(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;Z)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->b(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;Z)Z
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/B;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 

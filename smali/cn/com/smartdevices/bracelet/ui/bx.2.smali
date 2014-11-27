@@ -1,55 +1,145 @@
-.class Lcn/com/smartdevices/bracelet/ui/bx;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.class public Lcn/com/smartdevices/bracelet/ui/bx;
+.super Lcn/com/smartdevices/bracelet/ui/J;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
+.field private a:I
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bx;->a:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/J;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcn/com/smartdevices/bracelet/ui/bx;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+.method protected a()I
     .locals 2
 
-    if-eqz p2, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bx;->a:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->a(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;)Lcn/com/smartdevices/bracelet/model/AlarmClockItem;
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/bx;->getArguments()Landroid/os/Bundle;
 
     move-result-object v0
 
-    const/16 v1, 0x1e
+    const-string v1, "exit_login_type"
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->setDuration(I)V
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    iput v0, p0, Lcn/com/smartdevices/bracelet/ui/bx;->a:I
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/ui/bx;->a:I
+
+    if-nez v0, :cond_0
+
+    const v0, 0x7f030045
 
     :goto_0
-    return-void
+    return v0
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bx;->a:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
+    const v0, 0x7f030046
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->a(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;)Lcn/com/smartdevices/bracelet/model/AlarmClockItem;
+    goto :goto_0
+.end method
+
+.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    .locals 6
+
+    invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/J;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+
+    move-result-object v2
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/ui/bx;->a:I
+
+    if-nez v0, :cond_0
+
+    const v0, 0x7f07013a
+
+    invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    check-cast v0, Landroid/widget/TextView;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->setDuration(I)V
+    const v1, 0x7f0c01ad
+
+    invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/ui/bx;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    const v3, 0x7f0c01ae
+
+    invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/ui/bx;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    const v4, 0x7f0c01af
+
+    invoke-virtual {p0, v4}, Lcn/com/smartdevices/bracelet/ui/bx;->getString(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/bx;->getActivity()Landroid/app/Activity;
+
+    move-result-object v5
+
+    invoke-static {v5}, Lcn/com/smartdevices/bracelet/z;->c(Landroid/content/Context;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_1
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    :cond_0
+    return-object v2
+
+    :cond_1
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
 
     goto :goto_0
 .end method

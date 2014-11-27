@@ -77,9 +77,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "after waiting..."
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     sget-object v3, Lcn/com/smartdevices/bracelet/a/m;->a:Ljava/lang/Object;
 
@@ -119,9 +123,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "waitingNotify:"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -188,9 +196,13 @@
 
     new-instance v5, Ljava/lang/StringBuilder;
 
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v6, "set latency:"
 
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
 
     iget v6, p0, Lcn/com/smartdevices/bracelet/a/m;->b:I
 
@@ -306,9 +318,57 @@
 
     const/4 v2, 0x2
 
-    if-lt v0, v2, :cond_6
+    if-ge v0, v2, :cond_6
+
+    invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/a/m;->a:Ljava/lang/Object;
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/a/m;->b:I
+
+    if-ne v0, v1, :cond_7
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/m;->m:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+
+    const/16 v2, 0x31
+
+    move v5, v3
+
+    invoke-virtual/range {v0 .. v5}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->_setLEParams(IIIII)Z
+
+    move-result v0
+
+    :goto_2
+    if-eqz v0, :cond_5
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/a/m;->a:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    if-ne v0, v13, :cond_5
+
+    const-wide/16 v5, 0x2710
+
+    invoke-direct {p0, v5, v6}, Lcn/com/smartdevices/bracelet/a/m;->a(J)V
 
     :cond_5
+    sget-object v0, Lcn/com/smartdevices/bracelet/a/m;->a:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    if-ne v0, v12, :cond_9
+
+    :cond_6
     sget-object v0, Lcn/com/smartdevices/bracelet/a/m;->l:Ljava/lang/String;
 
     const-string v1, "======================do set latency out======================"
@@ -323,65 +383,12 @@
 
     goto :goto_0
 
-    :cond_6
-    invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    sput-object v0, Lcn/com/smartdevices/bracelet/a/m;->a:Ljava/lang/Object;
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/a/m;->b:I
-
-    if-ne v0, v1, :cond_8
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/m;->m:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
-
-    const/16 v2, 0x31
-
-    move v5, v3
-
-    invoke-virtual/range {v0 .. v5}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->_setLEParams(IIIII)Z
-
-    move-result v0
-
-    :goto_2
-    if-eqz v0, :cond_7
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/a/m;->a:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    if-ne v0, v13, :cond_7
-
-    const-wide/16 v5, 0x2710
-
-    invoke-direct {p0, v5, v6}, Lcn/com/smartdevices/bracelet/a/m;->a(J)V
-
     :cond_7
-    sget-object v0, Lcn/com/smartdevices/bracelet/a/m;->a:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    if-eq v0, v12, :cond_5
-
-    move v0, v11
-
-    goto :goto_1
-
-    :cond_8
     iget v0, p0, Lcn/com/smartdevices/bracelet/a/m;->b:I
 
     const/16 v2, 0x1e0
 
-    if-ne v0, v2, :cond_9
+    if-ne v0, v2, :cond_8
 
     iget-object v5, p0, Lcn/com/smartdevices/bracelet/a/m;->m:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
@@ -401,7 +408,7 @@
 
     goto :goto_2
 
-    :cond_9
+    :cond_8
     iget v0, p0, Lcn/com/smartdevices/bracelet/a/m;->b:I
 
     if-lez v0, :cond_a
@@ -423,6 +430,11 @@
     move-result v0
 
     goto :goto_2
+
+    :cond_9
+    move v0, v11
+
+    goto :goto_1
 
     :cond_a
     move v0, v3

@@ -43,7 +43,7 @@
     throw v0
 
     :cond_0
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/view/N;->a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/view/O;->a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object v1
 

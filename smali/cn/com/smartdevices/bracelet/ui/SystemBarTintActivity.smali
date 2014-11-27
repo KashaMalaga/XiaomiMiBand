@@ -7,7 +7,7 @@
 
 .field private mDisableStatusBarTintAuto:Z
 
-.field private mSystemBarTintManager:Lcn/com/smartdevices/bracelet/ui/dj;
+.field private mSystemBarTintManager:Lcn/com/smartdevices/bracelet/ui/dm;
 
 
 # direct methods
@@ -19,7 +19,7 @@
     return-void
 .end method
 
-.method static synthetic access$0(Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;)Z
+.method static synthetic access$000(Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;)Z
     .locals 1
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mDisableStatusBarTintAuto:Z
@@ -27,7 +27,7 @@
     return v0
 .end method
 
-.method static synthetic access$1(Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;)Landroid/view/View;
+.method static synthetic access$100(Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;)Landroid/view/View;
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mContentView:Landroid/view/View;
@@ -35,10 +35,10 @@
     return-object v0
 .end method
 
-.method static synthetic access$2(Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;)Lcn/com/smartdevices/bracelet/ui/dj;
+.method static synthetic access$200(Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;)Lcn/com/smartdevices/bracelet/ui/dm;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mSystemBarTintManager:Lcn/com/smartdevices/bracelet/ui/dj;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mSystemBarTintManager:Lcn/com/smartdevices/bracelet/ui/dm;
 
     return-object v0
 .end method
@@ -60,15 +60,16 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_1
 
-    const/4 v0, 0x0
+    :cond_0
+    const/4 v0, 0x1
 
     :goto_0
     return v0
 
-    :cond_0
-    const/4 v0, 0x1
+    :cond_1
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method
@@ -88,9 +89,9 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mSystemBarTintManager:Lcn/com/smartdevices/bracelet/ui/dj;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mSystemBarTintManager:Lcn/com/smartdevices/bracelet/ui/dm;
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/ui/dj;->a(I)V
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/ui/dm;->a(I)V
 
     goto :goto_0
 .end method
@@ -115,9 +116,9 @@
     :cond_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mContentView:Landroid/view/View;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/di;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/dl;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/di;-><init>(Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/dl;-><init>(Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
@@ -137,9 +138,9 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mSystemBarTintManager:Lcn/com/smartdevices/bracelet/ui/dj;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mSystemBarTintManager:Lcn/com/smartdevices/bracelet/ui/dm;
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/ui/dj;->b(I)V
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/ui/dm;->b(I)V
 
     goto :goto_0
 .end method
@@ -157,17 +158,17 @@
     return-void
 
     :cond_0
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/dj;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/dm;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/dj;-><init>(Landroid/app/Activity;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/dm;-><init>(Landroid/app/Activity;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mSystemBarTintManager:Lcn/com/smartdevices/bracelet/ui/dj;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mSystemBarTintManager:Lcn/com/smartdevices/bracelet/ui/dm;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mSystemBarTintManager:Lcn/com/smartdevices/bracelet/ui/dj;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mSystemBarTintManager:Lcn/com/smartdevices/bracelet/ui/dm;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/dj;->a(Z)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/dm;->a(Z)V
 
     const v0, 0x1020002
 

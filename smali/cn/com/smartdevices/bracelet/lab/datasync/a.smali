@@ -156,112 +156,102 @@
 
     move-result v3
 
-    if-nez v3, :cond_3
+    if-eqz v3, :cond_a
+
+    invoke-interface/range {v28 .. v28}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/String;
 
     move-object/from16 v0, p3
 
-    move-object/from16 v1, v19
+    invoke-virtual {v0, v3}, Lorg/json/JSONObject;->get(Ljava/lang/String;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
+    move-result-object v4
 
-    move-result v3
+    instance-of v10, v4, Lorg/json/JSONArray;
 
-    if-nez v3, :cond_e
+    if-eqz v10, :cond_9
 
-    move-object/from16 v0, p3
+    check-cast v4, Lorg/json/JSONArray;
 
-    move-object/from16 v1, v19
+    invoke-virtual {v4}, Lorg/json/JSONArray;->length()I
 
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+    move-result v29
 
-    move-result-object v11
+    if-lez v29, :cond_2
 
-    invoke-virtual {v11}, Lorg/json/JSONArray;->length()I
+    new-instance v30, Ljava/util/ArrayList;
+
+    move-object/from16 v0, v30
+
+    move/from16 v1, v29
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
     :try_end_3
     .catch Lorg/json/JSONException; {:try_start_3 .. :try_end_3} :catch_4
 
-    move-result v12
+    const/4 v12, 0x0
 
-    const/4 v3, 0x0
+    const v20, 0x7fffffff
 
-    move v10, v3
+    const/4 v13, 0x0
 
-    move v4, v15
+    const/4 v11, 0x0
 
-    move v3, v14
+    const/4 v10, 0x0
+
+    move/from16 v36, v10
+
+    move v10, v13
+
+    move v13, v9
+
+    move v9, v12
+
+    move v12, v8
+
+    move/from16 v37, v20
+
+    move/from16 v20, v36
+
+    move-wide/from16 v38, v6
+
+    move-wide/from16 v7, v38
+
+    move v6, v11
+
+    move/from16 v11, v37
 
     :goto_5
-    if-lt v10, v12, :cond_b
+    move/from16 v0, v20
 
-    move v10, v8
+    move/from16 v1, v29
 
-    move v11, v9
+    if-ge v0, v1, :cond_4
 
-    move/from16 v8, v16
+    :try_start_4
+    move/from16 v0, v20
 
-    move/from16 v9, v17
+    invoke-virtual {v4, v0}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
+
+    move-result-object v31
+
+    const-string v32, "c"
+
+    invoke-virtual/range {v31 .. v32}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
+    :try_end_4
+    .catch Lorg/json/JSONException; {:try_start_4 .. :try_end_4} :catch_2
+
+    move-result v32
+
+    if-eqz v32, :cond_3
 
     :goto_6
-    move-object/from16 v0, v18
+    add-int/lit8 v20, v20, 0x1
 
-    invoke-virtual {v0, v10}, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportUserOriginInfo;->setGroupPBCountOfDay(I)V
-
-    move-object/from16 v0, v18
-
-    invoke-virtual {v0, v11}, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportUserOriginInfo;->setTotalCountOfDay(I)V
-
-    if-nez v5, :cond_d
-
-    const/4 v5, 0x0
-
-    :goto_7
-    move-object/from16 v0, v18
-
-    invoke-virtual {v0, v5}, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportUserOriginInfo;->setCalOfDay(I)V
-
-    move-object/from16 v0, v18
-
-    invoke-virtual {v0, v9}, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportUserOriginInfo;->setStartTimeOfLatestGroup(I)V
-
-    move-object/from16 v0, v18
-
-    invoke-virtual {v0, v8}, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportUserOriginInfo;->setEndTimeOfLatestGroup(I)V
-
-    move-object/from16 v0, v18
-
-    invoke-virtual {v0, v4}, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportUserOriginInfo;->setCountOfLatestGroup(I)V
-
-    move-object/from16 v0, v18
-
-    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportUserOriginInfo;->setCostTimeOfLatestGroup(I)V
-
-    move-object/from16 v0, v18
-
-    move/from16 v1, v26
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportUserOriginInfo;->setRoundCountOfPB(I)V
-
-    move-object/from16 v0, v18
-
-    move-wide/from16 v1, v24
-
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportUserOriginInfo;->setRoundCostTimeOfPB(J)V
-
-    move-object/from16 v0, v18
-
-    move/from16 v1, v23
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportUserOriginInfo;->setGroupCountOfPB(I)V
-
-    move-object/from16 v0, v18
-
-    move-wide/from16 v1, v21
-
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportUserOriginInfo;->setGroupCostTimeOfPB(J)V
-
-    move-object/from16 v3, v18
-
-    goto/16 :goto_0
+    goto :goto_5
 
     :catch_0
     move-exception v4
@@ -299,132 +289,10 @@
 
     move-wide/from16 v21, v36
 
-    goto/16 :goto_3
+    goto :goto_3
 
     :cond_3
-    :try_start_4
-    invoke-interface/range {v28 .. v28}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/String;
-
-    move-object/from16 v0, p3
-
-    invoke-virtual {v0, v3}, Lorg/json/JSONObject;->get(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    instance-of v10, v4, Lorg/json/JSONArray;
-
-    if-eqz v10, :cond_a
-
-    check-cast v4, Lorg/json/JSONArray;
-
-    invoke-virtual {v4}, Lorg/json/JSONArray;->length()I
-
-    move-result v29
-
-    if-lez v29, :cond_2
-
-    new-instance v30, Ljava/util/ArrayList;
-
-    move-object/from16 v0, v30
-
-    move/from16 v1, v29
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-    :try_end_4
-    .catch Lorg/json/JSONException; {:try_start_4 .. :try_end_4} :catch_4
-
-    const/4 v12, 0x0
-
-    const v20, 0x7fffffff
-
-    const/4 v13, 0x0
-
-    const/4 v11, 0x0
-
-    const/4 v10, 0x0
-
-    move/from16 v36, v10
-
-    move v10, v13
-
-    move v13, v9
-
-    move v9, v12
-
-    move v12, v8
-
-    move/from16 v37, v20
-
-    move/from16 v20, v36
-
-    move-wide/from16 v38, v6
-
-    move-wide/from16 v7, v38
-
-    move v6, v11
-
-    move/from16 v11, v37
-
-    :goto_8
-    move/from16 v0, v20
-
-    move/from16 v1, v29
-
-    if-lt v0, v1, :cond_4
-
-    move/from16 v0, v16
-
-    if-lt v10, v0, :cond_f
-
-    move-object v4, v3
-
-    move/from16 v16, v10
-
-    move/from16 v17, v11
-
-    :goto_9
-    if-eqz v27, :cond_9
-
-    if-gtz v6, :cond_6
-
-    move-object/from16 v19, v4
-
-    move v9, v13
-
-    move-wide/from16 v36, v7
-
-    move-wide/from16 v6, v36
-
-    move v8, v12
-
-    goto/16 :goto_4
-
-    :cond_4
     :try_start_5
-    move/from16 v0, v20
-
-    invoke-virtual {v4, v0}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
-
-    move-result-object v31
-
-    const-string v32, "c"
-
-    invoke-virtual/range {v31 .. v32}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
-
-    move-result v32
-
-    if-eqz v32, :cond_5
-
-    :goto_a
-    add-int/lit8 v20, v20, 0x1
-
-    goto :goto_8
-
-    :cond_5
     const-string v32, "s"
 
     invoke-virtual/range {v31 .. v32}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
@@ -507,7 +375,7 @@
     :try_end_5
     .catch Lorg/json/JSONException; {:try_start_5 .. :try_end_5} :catch_2
 
-    goto :goto_a
+    goto :goto_6
 
     :catch_2
     move-exception v3
@@ -530,7 +398,7 @@
 
     move/from16 v8, v16
 
-    :goto_b
+    :goto_7
     const-string v13, "Lab"
 
     invoke-virtual {v12}, Lorg/json/JSONException;->getMessage()Ljava/lang/String;
@@ -539,15 +407,83 @@
 
     invoke-static {v13, v12}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto/16 :goto_6
+    :goto_8
+    move-object/from16 v0, v18
 
-    :cond_6
-    if-nez v5, :cond_7
+    invoke-virtual {v0, v10}, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportUserOriginInfo;->setGroupPBCountOfDay(I)V
 
-    const/4 v3, 0x0
+    move-object/from16 v0, v18
 
-    :goto_c
-    if-gtz v3, :cond_8
+    invoke-virtual {v0, v11}, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportUserOriginInfo;->setTotalCountOfDay(I)V
+
+    if-nez v5, :cond_e
+
+    const/4 v5, 0x0
+
+    :goto_9
+    move-object/from16 v0, v18
+
+    invoke-virtual {v0, v5}, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportUserOriginInfo;->setCalOfDay(I)V
+
+    move-object/from16 v0, v18
+
+    invoke-virtual {v0, v9}, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportUserOriginInfo;->setStartTimeOfLatestGroup(I)V
+
+    move-object/from16 v0, v18
+
+    invoke-virtual {v0, v8}, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportUserOriginInfo;->setEndTimeOfLatestGroup(I)V
+
+    move-object/from16 v0, v18
+
+    invoke-virtual {v0, v4}, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportUserOriginInfo;->setCountOfLatestGroup(I)V
+
+    move-object/from16 v0, v18
+
+    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportUserOriginInfo;->setCostTimeOfLatestGroup(I)V
+
+    move-object/from16 v0, v18
+
+    move/from16 v1, v26
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportUserOriginInfo;->setRoundCountOfPB(I)V
+
+    move-object/from16 v0, v18
+
+    move-wide/from16 v1, v24
+
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportUserOriginInfo;->setRoundCostTimeOfPB(J)V
+
+    move-object/from16 v0, v18
+
+    move/from16 v1, v23
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportUserOriginInfo;->setGroupCountOfPB(I)V
+
+    move-object/from16 v0, v18
+
+    move-wide/from16 v1, v21
+
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportUserOriginInfo;->setGroupCostTimeOfPB(J)V
+
+    move-object/from16 v3, v18
+
+    goto/16 :goto_0
+
+    :cond_4
+    move/from16 v0, v16
+
+    if-lt v10, v0, :cond_f
+
+    move-object v4, v3
+
+    move/from16 v16, v10
+
+    move/from16 v17, v11
+
+    :goto_a
+    if-eqz v27, :cond_8
+
+    if-gtz v6, :cond_5
 
     move-object/from16 v19, v4
 
@@ -561,7 +497,27 @@
 
     goto/16 :goto_4
 
-    :cond_7
+    :cond_5
+    if-nez v5, :cond_6
+
+    const/4 v3, 0x0
+
+    :goto_b
+    if-gtz v3, :cond_7
+
+    move-object/from16 v19, v4
+
+    move v9, v13
+
+    move-wide/from16 v36, v7
+
+    move-wide/from16 v6, v36
+
+    move v8, v12
+
+    goto/16 :goto_4
+
+    :cond_6
     int-to-long v0, v6
 
     move-wide/from16 v19, v0
@@ -573,9 +529,9 @@
 
     move-result v3
 
-    goto :goto_c
+    goto :goto_b
 
-    :cond_8
+    :cond_7
     new-instance v19, Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;
 
     move-object/from16 v0, v19
@@ -638,7 +594,7 @@
 
     invoke-virtual/range {v18 .. v19}, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportUserOriginInfo;->addActiveItem(Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;)V
 
-    :cond_9
+    :cond_8
     invoke-interface/range {v30 .. v30}, Ljava/util/List;->clear()V
     :try_end_6
     .catch Lorg/json/JSONException; {:try_start_6 .. :try_end_6} :catch_2
@@ -655,15 +611,50 @@
 
     goto/16 :goto_4
 
-    :cond_a
+    :cond_9
     :try_start_7
     instance-of v3, v4, Ljava/lang/Integer;
-    :try_end_7
-    .catch Lorg/json/JSONException; {:try_start_7 .. :try_end_7} :catch_4
+
+    if-eqz v3, :cond_2
 
     goto/16 :goto_4
 
-    :cond_b
+    :cond_a
+    move-object/from16 v0, p3
+
+    move-object/from16 v1, v19
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->isNull(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_c
+
+    move-object/from16 v0, p3
+
+    move-object/from16 v1, v19
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+
+    move-result-object v11
+
+    invoke-virtual {v11}, Lorg/json/JSONArray;->length()I
+    :try_end_7
+    .catch Lorg/json/JSONException; {:try_start_7 .. :try_end_7} :catch_4
+
+    move-result v12
+
+    const/4 v3, 0x0
+
+    move v10, v3
+
+    move v4, v15
+
+    move v3, v14
+
+    :goto_c
+    if-ge v10, v12, :cond_d
+
     :try_start_8
     invoke-virtual {v11, v10}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
@@ -675,14 +666,14 @@
 
     move-result v14
 
-    if-eqz v14, :cond_c
+    if-eqz v14, :cond_b
 
     :goto_d
     add-int/lit8 v10, v10, 0x1
 
-    goto/16 :goto_5
+    goto :goto_c
 
-    :cond_c
+    :cond_b
     const-string v14, "s"
 
     invoke-virtual {v13, v14}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
@@ -719,12 +710,28 @@
 
     goto :goto_d
 
+    :cond_c
+    move v3, v14
+
+    move v4, v15
+
     :cond_d
+    move v10, v8
+
+    move v11, v9
+
+    move/from16 v8, v16
+
+    move/from16 v9, v17
+
+    goto/16 :goto_8
+
+    :cond_e
     invoke-interface {v5, v11, v6, v7}, Lcn/com/smartdevices/bracelet/lab/a/c;->b(IJ)I
 
     move-result v5
 
-    goto/16 :goto_7
+    goto/16 :goto_9
 
     :catch_3
     move-exception v3
@@ -745,7 +752,7 @@
 
     move v3, v14
 
-    goto/16 :goto_b
+    goto/16 :goto_7
 
     :catch_4
     move-exception v3
@@ -764,7 +771,7 @@
 
     move/from16 v8, v16
 
-    goto/16 :goto_b
+    goto/16 :goto_7
 
     :catch_5
     move-exception v10
@@ -779,27 +786,12 @@
 
     move/from16 v8, v16
 
-    goto/16 :goto_b
-
-    :cond_e
-    move v3, v14
-
-    move v4, v15
-
-    move v10, v8
-
-    move v11, v9
-
-    move/from16 v8, v16
-
-    move/from16 v9, v17
-
-    goto/16 :goto_6
+    goto/16 :goto_7
 
     :cond_f
     move-object/from16 v4, v19
 
-    goto/16 :goto_9
+    goto/16 :goto_a
 
     :cond_10
     move-object/from16 v27, v3
@@ -1500,9 +1492,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "No data from server of sportType:"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1656,22 +1652,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_6
 
-    invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :cond_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-nez v0, :cond_7
-
-    return v1
-
-    :cond_1
     invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -1680,15 +1662,16 @@
 
     iget-object v3, v0, Lcn/com/smartdevices/bracelet/model/UploadData;->data:[B
 
-    if-eqz v3, :cond_2
+    if-eqz v3, :cond_0
 
     iget-object v3, v0, Lcn/com/smartdevices/bracelet/model/UploadData;->data:[B
 
     array-length v3, v3
 
-    if-eqz v3, :cond_2
+    if-nez v3, :cond_1
 
-    const/4 v3, 0x0
+    :cond_0
+    move v3, v2
 
     :goto_1
     iget-object v7, v0, Lcn/com/smartdevices/bracelet/model/UploadData;->summary:Ljava/lang/String;
@@ -1697,17 +1680,21 @@
 
     move-result v7
 
-    if-eqz v3, :cond_3
+    if-eqz v3, :cond_2
 
-    if-eqz v7, :cond_3
+    if-eqz v7, :cond_2
 
     const-string v3, "Lab"
 
     new-instance v7, Ljava/lang/StringBuilder;
 
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v8, "Server dayData is null return date = "
 
-    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
 
     iget-object v0, v0, Lcn/com/smartdevices/bracelet/model/UploadData;->date:Ljava/lang/String;
 
@@ -1723,12 +1710,12 @@
 
     goto :goto_0
 
-    :cond_2
-    move v3, v2
+    :cond_1
+    const/4 v3, 0x0
 
     goto :goto_1
 
-    :cond_3
+    :cond_2
     new-instance v8, Lcn/com/smartdevices/bracelet/model/UploadData;
 
     invoke-direct {v8}, Lcn/com/smartdevices/bracelet/model/UploadData;-><init>()V
@@ -1749,9 +1736,9 @@
 
     iput-object v0, v8, Lcn/com/smartdevices/bracelet/model/UploadData;->indexs:Ljava/lang/String;
 
-    if-eqz v3, :cond_4
+    if-eqz v3, :cond_3
 
-    if-nez v7, :cond_4
+    if-nez v7, :cond_3
 
     invoke-static {p0}, Lcn/com/smartdevices/bracelet/db/n;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/n;
 
@@ -1771,7 +1758,7 @@
 
     goto :goto_0
 
-    :cond_4
+    :cond_3
     invoke-static {p0}, Lcn/com/smartdevices/bracelet/db/n;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/n;
 
     move-result-object v0
@@ -1786,7 +1773,7 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_4
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1838,7 +1825,7 @@
 
     iput-object v0, v8, Lcn/com/smartdevices/bracelet/model/UploadData;->data:[B
 
-    :cond_5
+    :cond_4
     iget-object v0, v8, Lcn/com/smartdevices/bracelet/model/UploadData;->data:[B
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/datasync/a;->a([B)Lorg/json/JSONObject;
@@ -1863,15 +1850,19 @@
 
     move-result-object v0
 
-    if-nez v0, :cond_6
+    if-nez v0, :cond_5
 
     const-string v0, "Lab"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v7, "parseOriginUserDBInfo is empty; save server data to db, date = "
 
-    invoke-direct {v3, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     iget-object v7, v8, Lcn/com/smartdevices/bracelet/model/UploadData;->date:Ljava/lang/String;
 
@@ -1903,7 +1894,7 @@
 
     goto/16 :goto_0
 
-    :cond_6
+    :cond_5
     invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportOriginInfo;->getSummeryJson()Lorg/json/JSONObject;
@@ -1934,7 +1925,18 @@
 
     goto/16 :goto_0
 
+    :cond_6
+    invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
     :cond_7
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_8
+
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -1943,7 +1945,7 @@
 
     instance-of v3, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportUserOriginInfo;
 
-    if-eqz v3, :cond_0
+    if-eqz v3, :cond_7
 
     check-cast v0, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportUserOriginInfo;
 
@@ -1960,7 +1962,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_7
 
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -1975,4 +1977,7 @@
     invoke-virtual {v4, p0, v0}, Lcom/xiaomi/hm/bleservice/p;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/lab/sportmode/LabFactoryActiveItem;)V
 
     goto :goto_2
+
+    :cond_8
+    return v1
 .end method

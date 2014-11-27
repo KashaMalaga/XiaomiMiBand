@@ -28,7 +28,7 @@
 
     const v1, 0x1020002
 
-    const-class v2, Lcn/com/smartdevices/bracelet/ui/cs;
+    const-class v2, Lcn/com/smartdevices/bracelet/ui/cv;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

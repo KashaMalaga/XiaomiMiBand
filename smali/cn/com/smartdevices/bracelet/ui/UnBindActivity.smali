@@ -49,9 +49,9 @@
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/dl;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/dp;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/dl;-><init>(Lcn/com/smartdevices/bracelet/ui/UnBindActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/dp;-><init>(Lcn/com/smartdevices/bracelet/ui/UnBindActivity;)V
 
     const-wide/16 v2, 0xbb8
 

@@ -87,31 +87,73 @@
     iget-object v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$4;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     # getter for: Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->mLastSensorDataIndex:I
-    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$3(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)I
+    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$200(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)I
 
     move-result v2
 
     const v3, 0xfffe
 
-    if-ne v2, v3, :cond_1
+    if-ne v2, v3, :cond_2
 
-    if-eqz v1, :cond_3
+    if-nez v1, :cond_2
 
     :cond_1
+    :goto_1
+    iget-object v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$4;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+
+    # setter for: Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->mLastSensorDataIndex:I
+    invoke-static {v2, v1}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$202(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;I)I
+
+    array-length v1, p1
+
+    add-int/lit8 v1, v1, -0x2
+
+    new-array v1, v1, [B
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x0
+
+    array-length v4, p1
+
+    add-int/lit8 v4, v4, -0x2
+
+    invoke-static {p1, v2, v1, v3, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget-object v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$4;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+
+    # getter for: Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->m_SensorSourceOutputStream:Ljava/io/PipedOutputStream;
+    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$300(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)Ljava/io/PipedOutputStream;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Ljava/io/PipedOutputStream;->write([B)V
+
+    const-string v1, "Lab"
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, p1, v0}, Lcn/com/smartdevices/bracelet/lab/b/a;->a(Ljava/lang/String;[BLjava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_2
     iget-object v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$4;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     # getter for: Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->mLastSensorDataIndex:I
-    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$3(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)I
+    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$200(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)I
 
     move-result v2
 
     add-int/lit8 v2, v2, 0x1
 
-    if-ne v2, v1, :cond_2
+    if-ne v2, v1, :cond_3
 
-    if-gt v1, v4, :cond_3
+    if-gt v1, v4, :cond_1
 
-    :cond_2
+    :cond_3
     const-string v2, "xxx"
 
     const-string v3, "sensor data notify packages index is not continuous!!!"
@@ -122,7 +164,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_1
 
     iget-object v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$4;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
@@ -175,46 +217,8 @@
     iget v2, v2, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$LEParams;->connIntMax:I
 
     invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    :cond_3
-    iget-object v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$4;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
-
-    invoke-static {v2, v1}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$4(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;I)V
-
-    array-length v1, p1
-
-    add-int/lit8 v1, v1, -0x2
-
-    new-array v1, v1, [B
-
-    const/4 v2, 0x2
-
-    const/4 v3, 0x0
-
-    array-length v4, p1
-
-    add-int/lit8 v4, v4, -0x2
-
-    invoke-static {p1, v2, v1, v3, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    iget-object v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$4;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
-
-    # getter for: Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->m_SensorSourceOutputStream:Ljava/io/PipedOutputStream;
-    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$5(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)Ljava/io/PipedOutputStream;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Ljava/io/PipedOutputStream;->write([B)V
-
-    const-string v1, "Lab"
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, p1, v0}, Lcn/com/smartdevices/bracelet/lab/b/a;->a(Ljava/lang/String;[BLjava/lang/String;)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
-    goto :goto_0
+    goto :goto_1
 .end method

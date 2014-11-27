@@ -258,7 +258,7 @@
 .end method
 
 .method public static a(Ljava/util/List;II)I
-    .locals 3
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -274,38 +274,42 @@
     :try_start_0
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object v1
+    move-result-object v2
 
-    :cond_0
+    move v1, p2
+
     :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_0
 
-    monitor-exit p0
-
-    return p2
-
-    :cond_1
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcn/com/smartdevices/bracelet/chart/base/c;
 
-    iget v2, v0, Lcn/com/smartdevices/bracelet/chart/base/c;->c:I
+    iget v3, v0, Lcn/com/smartdevices/bracelet/chart/base/c;->c:I
 
-    if-lt v2, p1, :cond_0
+    if-lt v3, p1, :cond_1
 
-    iget v2, v0, Lcn/com/smartdevices/bracelet/chart/base/c;->b:I
+    iget v3, v0, Lcn/com/smartdevices/bracelet/chart/base/c;->b:I
 
-    if-le v2, p2, :cond_0
+    if-le v3, v1, :cond_1
 
-    iget p2, v0, Lcn/com/smartdevices/bracelet/chart/base/c;->b:I
+    iget v0, v0, Lcn/com/smartdevices/bracelet/chart/base/c;->b:I
+
+    :goto_1
+    move v1, v0
 
     goto :goto_0
+
+    :cond_0
+    monitor-exit p0
+
+    return v1
 
     :catchall_0
     move-exception v0
@@ -315,6 +319,11 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
+
+    :cond_1
+    move v0, v1
+
+    goto :goto_1
 .end method
 
 .method public static a(Landroid/graphics/Bitmap;)Landroid/graphics/Canvas;

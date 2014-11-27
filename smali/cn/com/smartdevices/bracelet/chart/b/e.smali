@@ -1,16 +1,16 @@
-.class public interface abstract Lcn/com/smartdevices/bracelet/chart/b/e;
+.class public Lcn/com/smartdevices/bracelet/chart/b/e;
 .super Ljava/lang/Object;
 
 
-# virtual methods
-.method public abstract a(Lcn/com/smartdevices/bracelet/chart/b/d;)V
-.end method
+# instance fields
+.field public e:I
 
-.method public abstract a(I)Z
-.end method
 
-.method public abstract b(I)Lcn/com/smartdevices/bracelet/chart/b/d;
-.end method
+# direct methods
+.method public constructor <init>()V
+    .locals 0
 
-.method public abstract c(I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
 .end method

@@ -172,7 +172,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/S;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;
 
-    invoke-direct {v1, v0, v3}, Lcn/com/smartdevices/bracelet/lab/ui/R;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;Lcn/com/smartdevices/bracelet/lab/ui/R;)V
+    invoke-direct {v1, v0, v3}, Lcn/com/smartdevices/bracelet/lab/ui/R;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;Lcn/com/smartdevices/bracelet/lab/ui/O;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/S;->c:Landroid/view/LayoutInflater;
 

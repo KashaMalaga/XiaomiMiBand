@@ -1,4 +1,4 @@
-.class Lcom/xiaomi/hm/bleservice/q;
+.class final Lcom/xiaomi/hm/bleservice/q;
 .super Ljava/lang/Object;
 
 # interfaces

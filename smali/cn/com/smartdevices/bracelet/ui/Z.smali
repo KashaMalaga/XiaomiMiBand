@@ -85,7 +85,7 @@
 
     iget v1, p1, Landroid/os/Message;->arg1:I
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/W;->c(Lcn/com/smartdevices/bracelet/ui/W;I)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/W;->c(Lcn/com/smartdevices/bracelet/ui/W;I)I
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/u;->h()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 

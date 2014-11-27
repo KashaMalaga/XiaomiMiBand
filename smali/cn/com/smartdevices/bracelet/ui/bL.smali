@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcn/com/smartdevices/bracelet/ui/L;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/bE;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/bG;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/bE;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/bG;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bL;->a:Lcn/com/smartdevices/bracelet/ui/bE;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bL;->a:Lcn/com/smartdevices/bracelet/ui/bG;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,20 +22,28 @@
 
 
 # virtual methods
-.method public run()V
+.method public a(Landroid/app/DialogFragment;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public b(Landroid/app/DialogFragment;)V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bL;->a:Lcn/com/smartdevices/bracelet/ui/bE;
+    invoke-virtual {p1}, Landroid/app/DialogFragment;->dismiss()V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/bE;->getActivity()Landroid/app/Activity;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bL;->a:Lcn/com/smartdevices/bracelet/ui/bG;
 
-    move-result-object v0
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/bG;->d(Lcn/com/smartdevices/bracelet/ui/bG;)V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->b(Landroid/app/Activity;)V
+    return-void
+.end method
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bL;->a:Lcn/com/smartdevices/bracelet/ui/bE;
+.method public c(Landroid/app/DialogFragment;)V
+    .locals 0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/bE;->e(Lcn/com/smartdevices/bracelet/ui/bE;)V
+    invoke-virtual {p1}, Landroid/app/DialogFragment;->dismiss()V
 
     return-void
 .end method

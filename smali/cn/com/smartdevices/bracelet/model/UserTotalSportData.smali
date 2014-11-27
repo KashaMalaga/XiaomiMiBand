@@ -179,6 +179,12 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
     iget v1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->iDistance:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
@@ -194,6 +200,12 @@
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->iAverageSteps:I
 
@@ -211,6 +223,12 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
     iget v1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->iTotalwearingdays:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
@@ -226,6 +244,12 @@
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->iCalories:I
 
@@ -243,6 +267,12 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
     iget v1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->iSteps:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
@@ -258,6 +288,12 @@
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->iPoints:I
 

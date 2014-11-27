@@ -12,7 +12,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcn/com/smartdevices/bracelet/ui/ag;",
+            "Lcn/com/smartdevices/bracelet/ui/ah;",
             ">;"
         }
     .end annotation
@@ -20,7 +20,7 @@
 
 .field private c:Landroid/widget/ListView;
 
-.field private d:Lcn/com/smartdevices/bracelet/ui/ae;
+.field private d:Lcn/com/smartdevices/bracelet/ui/af;
 
 
 # direct methods
@@ -53,17 +53,17 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ad;->b:Ljava/util/ArrayList;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/ag;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/ah;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/ag;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/ah;-><init>()V
 
     const-string v1, "\u6b22\u8fce\u4f7f\u7528\u5c0f\u7c73\u624b\u73af"
 
-    iput-object v1, v0, Lcn/com/smartdevices/bracelet/ui/ag;->a:Ljava/lang/String;
+    iput-object v1, v0, Lcn/com/smartdevices/bracelet/ui/ah;->a:Ljava/lang/String;
 
     const-string v1, "\u70b9\u51fb\u67e5\u770b\u5982\u4f55\u73a9\u8f6c\u5c0f\u7c73\u624b\u73af"
 
-    iput-object v1, v0, Lcn/com/smartdevices/bracelet/ui/ag;->b:Ljava/lang/String;
+    iput-object v1, v0, Lcn/com/smartdevices/bracelet/ui/ah;->b:Ljava/lang/String;
 
     const-string v1, "file:///android_asset/help.html"
 
@@ -71,39 +71,39 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lcn/com/smartdevices/bracelet/ui/ag;->d:Landroid/net/Uri;
+    iput-object v1, v0, Lcn/com/smartdevices/bracelet/ui/ah;->d:Landroid/net/Uri;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/ad;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/ag;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/ah;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/ag;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/ah;-><init>()V
 
     const-string v1, "\u6234\u4e0a\u5c0f\u7c73\u624b\u73af\u51fa\u53bb\u8d70\u4e00\u8d70\u5427\uff01"
 
-    iput-object v1, v0, Lcn/com/smartdevices/bracelet/ui/ag;->a:Ljava/lang/String;
+    iput-object v1, v0, Lcn/com/smartdevices/bracelet/ui/ah;->a:Ljava/lang/String;
 
     const-string v1, "\u8ba9\u5c0f\u7c73\u624b\u73af\u5b9e\u65f6\u8bb0\u5f55\u4f60\u7684\u8fd0\u52a8\u4fe1\u606f\uff0c\u505a\u4f60\u7684\u5065\u5eb7\u52a9\u624b"
 
-    iput-object v1, v0, Lcn/com/smartdevices/bracelet/ui/ag;->b:Ljava/lang/String;
+    iput-object v1, v0, Lcn/com/smartdevices/bracelet/ui/ah;->b:Ljava/lang/String;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/ad;->b:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/ae;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/af;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/ui/ae;-><init>(Lcn/com/smartdevices/bracelet/ui/ad;Lcn/com/smartdevices/bracelet/ui/ae;)V
+    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/ui/af;-><init>(Lcn/com/smartdevices/bracelet/ui/ad;Lcn/com/smartdevices/bracelet/ui/ae;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ad;->d:Lcn/com/smartdevices/bracelet/ui/ae;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ad;->d:Lcn/com/smartdevices/bracelet/ui/af;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ad;->c:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/ad;->d:Lcn/com/smartdevices/bracelet/ui/ae;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/ad;->d:Lcn/com/smartdevices/bracelet/ui/af;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 

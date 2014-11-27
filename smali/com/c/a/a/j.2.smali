@@ -234,21 +234,15 @@
     add-int/2addr v0, v1
 
     :cond_1
-    new-array v1, v0, [B
+    new-array v0, v0, [B
 
-    iput-object v1, v3, Lcom/c/a/a/m;->a:[B
+    iput-object v0, v3, Lcom/c/a/a/m;->a:[B
 
     invoke-virtual {v3, p0, p1, p2, v2}, Lcom/c/a/a/m;->a([BIIZ)Z
 
-    iget v1, v3, Lcom/c/a/a/m;->b:I
+    iget-object v0, v3, Lcom/c/a/a/m;->a:[B
 
-    if-eq v1, v0, :cond_4
-
-    new-instance v0, Ljava/lang/AssertionError;
-
-    invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
-
-    throw v0
+    return-object v0
 
     :cond_2
     rem-int/lit8 v1, p2, 0x3
@@ -271,11 +265,6 @@
     move v1, v2
 
     goto :goto_1
-
-    :cond_4
-    iget-object v0, v3, Lcom/c/a/a/m;->a:[B
-
-    return-object v0
 
     :pswitch_data_0
     .packed-switch 0x0

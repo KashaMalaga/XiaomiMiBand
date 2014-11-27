@@ -7,8 +7,6 @@
 
 .field private static final B:I = 0x12c
 
-.field private static synthetic C:[I = null
-
 .field private static final a:I = 0x190
 
 
@@ -35,7 +33,7 @@
 
 .field private l:Landroid/view/View;
 
-.field private m:Lcn/com/smartdevices/bracelet/gps/ui/v;
+.field private m:Lcn/com/smartdevices/bracelet/gps/ui/w;
 
 .field private n:F
 
@@ -59,7 +57,7 @@
 
 .field private x:Z
 
-.field private final y:Lcn/com/smartdevices/bracelet/gps/ui/w;
+.field private final y:Lcn/com/smartdevices/bracelet/gps/ui/x;
 
 .field private z:F
 
@@ -134,7 +132,7 @@
 
     iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->l:Landroid/view/View;
 
-    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->m:Lcn/com/smartdevices/bracelet/gps/ui/v;
+    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->m:Lcn/com/smartdevices/bracelet/gps/ui/w;
 
     iput v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->q:I
 
@@ -152,9 +150,9 @@
 
     iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->x:Z
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/gps/ui/w;->b:Lcn/com/smartdevices/bracelet/gps/ui/w;
+    sget-object v0, Lcn/com/smartdevices/bracelet/gps/ui/x;->b:Lcn/com/smartdevices/bracelet/gps/ui/x;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->y:Lcn/com/smartdevices/bracelet/gps/ui/w;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->y:Lcn/com/smartdevices/bracelet/gps/ui/x;
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->isInEditMode()Z
 
@@ -193,9 +191,9 @@
 
     const/high16 v0, 0x3f800000
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/gps/ui/u;
+    new-instance v1, Lcn/com/smartdevices/bracelet/gps/ui/v;
 
-    invoke-direct {v1, p0, v3}, Lcn/com/smartdevices/bracelet/gps/ui/u;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;Lcn/com/smartdevices/bracelet/gps/ui/u;)V
+    invoke-direct {v1, p0, v3}, Lcn/com/smartdevices/bracelet/gps/ui/v;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;Lcn/com/smartdevices/bracelet/gps/ui/u;)V
 
     invoke-static {p0, v0, v1}, Landroid/support/v4/widget/ae;->a(Landroid/view/ViewGroup;FLandroid/support/v4/widget/ah;)Landroid/support/v4/widget/ae;
 
@@ -253,6 +251,14 @@
     goto :goto_0
 .end method
 
+.method static synthetic a(Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;F)F
+    .locals 0
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->r:F
+
+    return p1
+.end method
+
 .method static synthetic a(Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;)I
     .locals 1
 
@@ -261,10 +267,18 @@
     return v0
 .end method
 
+.method static synthetic a(Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;I)I
+    .locals 0
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->q:I
+
+    return p1
+.end method
+
 .method private a(Landroid/view/View;FF)V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->m:Lcn/com/smartdevices/bracelet/gps/ui/v;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->m:Lcn/com/smartdevices/bracelet/gps/ui/w;
 
     if-nez v0, :cond_0
 
@@ -272,27 +286,11 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->m:Lcn/com/smartdevices/bracelet/gps/ui/v;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->m:Lcn/com/smartdevices/bracelet/gps/ui/w;
 
-    invoke-interface {v0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/gps/ui/v;->a(Landroid/view/View;FF)V
+    invoke-interface {v0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/gps/ui/w;->a(Landroid/view/View;FF)V
 
     goto :goto_0
-.end method
-
-.method static synthetic a(Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;F)V
-    .locals 0
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->r:F
-
-    return-void
-.end method
-
-.method static synthetic a(Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;I)V
-    .locals 0
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->q:I
-
-    return-void
 .end method
 
 .method private a(Landroid/view/View;II)Z
@@ -381,10 +379,10 @@
     return v0
 .end method
 
-.method static synthetic e(Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;)Lcn/com/smartdevices/bracelet/gps/ui/v;
+.method static synthetic e(Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;)Lcn/com/smartdevices/bracelet/gps/ui/w;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->m:Lcn/com/smartdevices/bracelet/gps/ui/v;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->m:Lcn/com/smartdevices/bracelet/gps/ui/w;
 
     return-object v0
 .end method
@@ -397,96 +395,7 @@
     return v0
 .end method
 
-.method static synthetic f()[I
-    .locals 3
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->C:[I
-
-    if-eqz v0, :cond_0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/gps/ui/w;->values()[Lcn/com/smartdevices/bracelet/gps/ui/w;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    :try_start_0
-    sget-object v1, Lcn/com/smartdevices/bracelet/gps/ui/w;->c:Lcn/com/smartdevices/bracelet/gps/ui/w;
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/ui/w;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_2
-
-    :goto_1
-    :try_start_1
-    sget-object v1, Lcn/com/smartdevices/bracelet/gps/ui/w;->b:Lcn/com/smartdevices/bracelet/gps/ui/w;
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/ui/w;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :goto_2
-    :try_start_2
-    sget-object v1, Lcn/com/smartdevices/bracelet/gps/ui/w;->a:Lcn/com/smartdevices/bracelet/gps/ui/w;
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/ui/w;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_0
-
-    :goto_3
-    sput-object v0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->C:[I
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v1
-
-    goto :goto_3
-
-    :catch_1
-    move-exception v1
-
-    goto :goto_2
-
-    :catch_2
-    move-exception v1
-
-    goto :goto_1
-.end method
-
-.method static synthetic g(Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;)Landroid/support/v4/widget/ae;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->i:Landroid/support/v4/widget/ae;
-
-    return-object v0
-.end method
-
-.method private g()Z
+.method private f()Z
     .locals 5
 
     const-wide/16 v3, 0x0
@@ -531,7 +440,7 @@
     goto :goto_0
 .end method
 
-.method static synthetic h(Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;)I
+.method static synthetic g(Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;)I
     .locals 1
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->q:I
@@ -539,7 +448,7 @@
     return v0
 .end method
 
-.method private h()V
+.method private g()V
     .locals 2
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->u:I
@@ -553,7 +462,15 @@
     return-void
 .end method
 
-.method private i()V
+.method static synthetic h(Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;)Landroid/support/v4/widget/ae;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->i:Landroid/support/v4/widget/ae;
+
+    return-object v0
+.end method
+
+.method private h()V
     .locals 2
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->u:I
@@ -625,13 +542,13 @@
 .method a(Landroid/view/View;)V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->m:Lcn/com/smartdevices/bracelet/gps/ui/v;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->m:Lcn/com/smartdevices/bracelet/gps/ui/w;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->m:Lcn/com/smartdevices/bracelet/gps/ui/v;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->m:Lcn/com/smartdevices/bracelet/gps/ui/w;
 
-    invoke-interface {v0, p1}, Lcn/com/smartdevices/bracelet/gps/ui/v;->onPanelAnchored(Landroid/view/View;)V
+    invoke-interface {v0, p1}, Lcn/com/smartdevices/bracelet/gps/ui/w;->onPanelAnchored(Landroid/view/View;)V
 
     :cond_0
     const/16 v0, 0x20
@@ -641,10 +558,10 @@
     return-void
 .end method
 
-.method public a(Lcn/com/smartdevices/bracelet/gps/ui/v;)V
+.method public a(Lcn/com/smartdevices/bracelet/gps/ui/w;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->m:Lcn/com/smartdevices/bracelet/gps/ui/v;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->m:Lcn/com/smartdevices/bracelet/gps/ui/w;
 
     return-void
 .end method
@@ -705,13 +622,13 @@
 .method b(Landroid/view/View;)V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->m:Lcn/com/smartdevices/bracelet/gps/ui/v;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->m:Lcn/com/smartdevices/bracelet/gps/ui/w;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->m:Lcn/com/smartdevices/bracelet/gps/ui/v;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->m:Lcn/com/smartdevices/bracelet/gps/ui/w;
 
-    invoke-interface {v0, p1}, Lcn/com/smartdevices/bracelet/gps/ui/v;->onPanelCollapsed(Landroid/view/View;)V
+    invoke-interface {v0, p1}, Lcn/com/smartdevices/bracelet/gps/ui/w;->onPanelCollapsed(Landroid/view/View;)V
 
     :cond_0
     const/16 v0, 0x20
@@ -724,9 +641,9 @@
 .method public b()Z
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->y:Lcn/com/smartdevices/bracelet/gps/ui/w;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->y:Lcn/com/smartdevices/bracelet/gps/ui/x;
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/gps/ui/w;->c:Lcn/com/smartdevices/bracelet/gps/ui/w;
+    sget-object v1, Lcn/com/smartdevices/bracelet/gps/ui/x;->c:Lcn/com/smartdevices/bracelet/gps/ui/x;
 
     if-ne v0, v1, :cond_0
 
@@ -744,9 +661,9 @@
 .method public c()Z
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->y:Lcn/com/smartdevices/bracelet/gps/ui/w;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->y:Lcn/com/smartdevices/bracelet/gps/ui/x;
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/gps/ui/w;->b:Lcn/com/smartdevices/bracelet/gps/ui/w;
+    sget-object v1, Lcn/com/smartdevices/bracelet/gps/ui/x;->b:Lcn/com/smartdevices/bracelet/gps/ui/x;
 
     if-ne v0, v1, :cond_0
 
@@ -783,9 +700,9 @@
 .method public d()Z
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->y:Lcn/com/smartdevices/bracelet/gps/ui/w;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->y:Lcn/com/smartdevices/bracelet/gps/ui/x;
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/gps/ui/w;->a:Lcn/com/smartdevices/bracelet/gps/ui/w;
+    sget-object v1, Lcn/com/smartdevices/bracelet/gps/ui/x;->a:Lcn/com/smartdevices/bracelet/gps/ui/x;
 
     if-ne v0, v1, :cond_0
 
@@ -1089,9 +1006,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "onLayout, changed: "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -1200,9 +1121,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "mRunningInfoTop111: "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     iget v3, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->q:I
 
@@ -1246,13 +1171,11 @@
 
     if-eqz v1, :cond_4
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->f()[I
+    sget-object v1, Lcn/com/smartdevices/bracelet/gps/ui/u;->a:[I
 
-    move-result-object v1
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->y:Lcn/com/smartdevices/bracelet/gps/ui/x;
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->y:Lcn/com/smartdevices/bracelet/gps/ui/w;
-
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/gps/ui/w;->ordinal()I
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/gps/ui/x;->ordinal()I
 
     move-result v2
 
@@ -1260,7 +1183,6 @@
 
     packed-switch v1, :pswitch_data_0
 
-    :pswitch_0
     iput v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->z:F
 
     :cond_4
@@ -1293,9 +1215,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "mRunningInfoTop: "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->q:I
 
@@ -1370,9 +1296,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "mRunningInfoTop222: "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     iget v3, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->q:I
 
@@ -1427,9 +1357,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "mRunningInfoTop333: "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     iget v3, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->q:I
 
@@ -1465,7 +1399,7 @@
 
     goto/16 :goto_0
 
-    :pswitch_1
+    :pswitch_0
     iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->c:Z
 
     if-eqz v1, :cond_7
@@ -1477,7 +1411,7 @@
 
     goto/16 :goto_1
 
-    :pswitch_2
+    :pswitch_1
     iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->c:Z
 
     if-eqz v1, :cond_8
@@ -1493,9 +1427,8 @@
 
     :pswitch_data_0
     .packed-switch 0x1
-        :pswitch_1
         :pswitch_0
-        :pswitch_2
+        :pswitch_1
     .end packed-switch
 .end method
 
@@ -1530,9 +1463,13 @@
 
     new-instance v5, Ljava/lang/StringBuilder;
 
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v6, "onMeasure, heightSize: "
 
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
 
     invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1578,9 +1515,13 @@
 
     new-instance v5, Ljava/lang/StringBuilder;
 
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v6, "onMeasure, mLayoutHeight: "
 
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
 
     iget v6, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->u:I
 
@@ -1638,13 +1579,8 @@
     move v2, v0
 
     :goto_0
-    if-lt v2, v5, :cond_3
+    if-ge v2, v5, :cond_7
 
-    invoke-virtual {p0, v3, v4}, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->setMeasuredDimension(II)V
-
-    return-void
-
-    :cond_3
     invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v6
@@ -1655,7 +1591,7 @@
 
     iget v0, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    if-ne v0, v10, :cond_4
+    if-ne v0, v10, :cond_3
 
     invoke-static {v3, v9}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
@@ -1664,7 +1600,7 @@
     :goto_1
     iget v7, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    if-ne v7, v10, :cond_6
+    if-ne v7, v10, :cond_5
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->u:I
 
@@ -1681,10 +1617,10 @@
 
     goto :goto_0
 
-    :cond_4
+    :cond_3
     iget v0, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    if-ne v0, v11, :cond_5
+    if-ne v0, v11, :cond_4
 
     invoke-static {v3, v8}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
@@ -1692,7 +1628,7 @@
 
     goto :goto_1
 
-    :cond_5
+    :cond_4
     iget v0, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
     invoke-static {v0, v8}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
@@ -1701,10 +1637,10 @@
 
     goto :goto_1
 
-    :cond_6
+    :cond_5
     iget v7, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    if-ne v7, v11, :cond_7
+    if-ne v7, v11, :cond_6
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->u:I
 
@@ -1714,7 +1650,7 @@
 
     goto :goto_2
 
-    :cond_7
+    :cond_6
     iget v1, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     invoke-static {v1, v8}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
@@ -1722,6 +1658,11 @@
     move-result v1
 
     goto :goto_2
+
+    :cond_7
+    invoke-virtual {p0, v3, v4}, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->setMeasuredDimension(II)V
+
+    return-void
 .end method
 
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
@@ -1729,9 +1670,9 @@
 
     const-wide/16 v9, 0x0
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    const/4 v2, 0x1
+    const/4 v1, 0x1
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->c:Z
 
@@ -1748,11 +1689,11 @@
     :cond_0
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    move-result v2
+    move-result v1
 
     :cond_1
     :goto_0
-    return v2
+    return v1
 
     :cond_2
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->getParent()Landroid/view/ViewParent;
@@ -1765,7 +1706,7 @@
 
     move-result-object v0
 
-    invoke-interface {v0, v2}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
+    invoke-interface {v0, v1}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
     :cond_3
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->i:Landroid/support/v4/widget/ae;
@@ -1819,19 +1760,19 @@
 
     if-eqz v0, :cond_6
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->i()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->h()V
 
     :goto_2
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->v:Z
 
-    if-eqz v0, :cond_7
+    if-nez v0, :cond_7
 
     move v0, v1
 
     :goto_3
     iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->v:Z
 
-    iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->x:Z
+    iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->x:Z
 
     goto :goto_0
 
@@ -1850,7 +1791,7 @@
 
     if-gtz v0, :cond_5
 
-    iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->x:Z
+    iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->x:Z
 
     :goto_4
     iput-wide v9, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->w:J
@@ -1858,12 +1799,12 @@
     goto :goto_1
 
     :cond_5
-    iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->x:Z
+    iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->x:Z
 
     goto :goto_4
 
     :cond_6
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->h()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->g()V
 
     goto :goto_2
 
@@ -1877,9 +1818,9 @@
 
     sub-float v0, v3, v0
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->o:F
+    iget v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->o:F
 
-    sub-float v1, v4, v1
+    sub-float v2, v4, v2
 
     iget-object v5, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->i:Landroid/support/v4/widget/ae;
 
@@ -1889,27 +1830,27 @@
 
     mul-float/2addr v0, v0
 
-    mul-float/2addr v1, v1
+    mul-float/2addr v2, v2
 
-    add-float/2addr v0, v1
+    add-float/2addr v0, v2
 
-    mul-int v1, v5, v5
+    mul-int v2, v5, v5
 
-    int-to-float v1, v1
+    int-to-float v2, v2
 
-    cmpg-float v0, v0, v1
+    cmpg-float v0, v0, v2
 
     if-gez v0, :cond_1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->i:Landroid/support/v4/widget/ae;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->k:Landroid/view/View;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->k:Landroid/view/View;
 
     float-to-int v3, v3
 
     float-to-int v4, v4
 
-    invoke-virtual {v0, v1, v3, v4}, Landroid/support/v4/widget/ae;->b(Landroid/view/View;II)Z
+    invoke-virtual {v0, v2, v3, v4}, Landroid/support/v4/widget/ae;->b(Landroid/view/View;II)Z
 
     move-result v0
 
@@ -1934,7 +1875,7 @@
     goto/16 :goto_0
 
     :cond_9
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->i()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/SlidableTwoPanelLayout;->h()V
 
     goto/16 :goto_0
 

@@ -104,11 +104,8 @@
     :goto_0
     add-int/lit8 v0, v4, -0x1
 
-    if-lt v2, v0, :cond_0
+    if-ge v2, v0, :cond_0
 
-    return v3
-
-    :cond_0
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -136,6 +133,9 @@
     move v3, v1
 
     goto :goto_0
+
+    :cond_0
+    return v3
 .end method
 
 .method public static a()I
@@ -318,9 +318,13 @@
 
     new-instance v4, Ljava/lang/StringBuilder;
 
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v5, "filterGPSPoint  distanceTo = "
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
 
     invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
@@ -472,7 +476,7 @@
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/services/v;->a(Lcn/com/smartdevices/bracelet/gps/services/v;I)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/services/v;->a(Lcn/com/smartdevices/bracelet/gps/services/v;I)I
 
     return-void
 .end method
@@ -660,7 +664,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/gps/services/w;-><init>(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;Lcn/com/smartdevices/bracelet/gps/services/w;)V
+    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/gps/services/w;-><init>(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;Lcn/com/smartdevices/bracelet/gps/services/u;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->c:Landroid/os/Binder;
 

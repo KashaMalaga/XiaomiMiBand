@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/lab/ui/l;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/l;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/m;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/m;->a:Lcn/com/smartdevices/bracelet/lab/ui/l;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,14 +22,20 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
+.method public run()V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/m;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/m;->a:Lcn/com/smartdevices/bracelet/lab/ui/l;
 
-    const/4 v1, 0x0
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/lab/ui/l;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->b(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;Z)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->g(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/TextView;
+
+    move-result-object v0
+
+    const-string v1, "0"
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     return-void
 .end method

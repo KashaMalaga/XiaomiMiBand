@@ -16,13 +16,13 @@
 .method a(FFFLandroid/graphics/Rect;F)V
     .locals 7
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/edmodo/cropper/cropwindow/b/b;->a(FFF)Lcom/edmodo/cropper/cropwindow/a/b;
+    invoke-virtual {p0, p1, p2, p3}, Lcom/edmodo/cropper/cropwindow/b/b;->a(FFF)Lcom/edmodo/cropper/cropwindow/a/c;
 
     move-result-object v1
 
-    iget-object v0, v1, Lcom/edmodo/cropper/cropwindow/a/b;->a:Lcom/edmodo/cropper/cropwindow/a/a;
+    iget-object v0, v1, Lcom/edmodo/cropper/cropwindow/a/c;->a:Lcom/edmodo/cropper/cropwindow/a/a;
 
-    iget-object v6, v1, Lcom/edmodo/cropper/cropwindow/a/b;->b:Lcom/edmodo/cropper/cropwindow/a/a;
+    iget-object v6, v1, Lcom/edmodo/cropper/cropwindow/a/c;->b:Lcom/edmodo/cropper/cropwindow/a/a;
 
     move v1, p1
 

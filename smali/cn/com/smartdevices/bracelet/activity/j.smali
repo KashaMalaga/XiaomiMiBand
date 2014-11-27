@@ -1,5 +1,8 @@
 .class Lcn/com/smartdevices/bracelet/activity/j;
-.super Landroid/webkit/WebViewClient;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
@@ -12,123 +15,53 @@
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/activity/j;->a:Lcn/com/smartdevices/bracelet/activity/WebActivity;
 
-    invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
-    .locals 2
-
-    const/4 v1, 0x4
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/j;->a:Lcn/com/smartdevices/bracelet/activity/WebActivity;
-
-    # getter for: Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebViewProgress:Landroid/widget/ProgressBar;
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->access$0(Lcn/com/smartdevices/bracelet/activity/WebActivity;)Landroid/widget/ProgressBar;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/j;->a:Lcn/com/smartdevices/bracelet/activity/WebActivity;
-
-    # getter for: Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebViewCenterProgress:Landroid/widget/ProgressBar;
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->access$2(Lcn/com/smartdevices/bracelet/activity/WebActivity;)Landroid/widget/ProgressBar;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
-
-    return-void
-.end method
-
-.method public onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V
-    .locals 2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/j;->a:Lcn/com/smartdevices/bracelet/activity/WebActivity;
-
-    # getter for: Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebViewProgress:Landroid/widget/ProgressBar;
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->access$0(Lcn/com/smartdevices/bracelet/activity/WebActivity;)Landroid/widget/ProgressBar;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/j;->a:Lcn/com/smartdevices/bracelet/activity/WebActivity;
-
-    # getter for: Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebErrorTip:Landroid/widget/TextView;
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->access$1(Lcn/com/smartdevices/bracelet/activity/WebActivity;)Landroid/widget/TextView;
-
-    move-result-object v0
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
-
-    return-void
-.end method
-
-.method public onReceivedError(Landroid/webkit/WebView;ILjava/lang/String;Ljava/lang/String;)V
+.method public onClick(Landroid/view/View;)V
     .locals 3
 
-    const-string v0, "WebActivity"
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/j;->a:Lcn/com/smartdevices/bracelet/activity/WebActivity;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->a(Landroid/content/Context;)Z
 
-    const-string v2, "LoadError : "
+    move-result v0
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ", "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v0, -0x2
-
-    if-ne p2, v0, :cond_0
+    if-eqz v0, :cond_0
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/j;->a:Lcn/com/smartdevices/bracelet/activity/WebActivity;
 
-    # getter for: Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebErrorTip:Landroid/widget/TextView;
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->access$1(Lcn/com/smartdevices/bracelet/activity/WebActivity;)Landroid/widget/TextView;
+    # getter for: Lcn/com/smartdevices/bracelet/activity/WebActivity;->myWebView:Landroid/webkit/WebView;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->access$300(Lcn/com/smartdevices/bracelet/activity/WebActivity;)Landroid/webkit/WebView;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    invoke-virtual {v0}, Landroid/webkit/WebView;->clearHistory()V
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/j;->a:Lcn/com/smartdevices/bracelet/activity/WebActivity;
+
+    # invokes: Lcn/com/smartdevices/bracelet/activity/WebActivity;->loadPages()V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->access$400(Lcn/com/smartdevices/bracelet/activity/WebActivity;)V
+
+    :goto_0
+    return-void
 
     :cond_0
-    return-void
-.end method
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/j;->a:Lcn/com/smartdevices/bracelet/activity/WebActivity;
 
-.method public shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)Z
-    .locals 1
+    const v1, 0x7f0c0025
 
-    invoke-virtual {p1, p2}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
+    const/4 v2, 0x1
 
-    const/4 v0, 0x1
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
-    return v0
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    goto :goto_0
 .end method

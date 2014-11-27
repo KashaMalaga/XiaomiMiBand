@@ -20,7 +20,7 @@
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->a(Lcn/com/smartdevices/bracelet/ui/AlarmActivity;)Landroid/app/Activity;
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->c(Lcn/com/smartdevices/bracelet/ui/AlarmActivity;)Landroid/app/Activity;
 
     move-result-object v0
 
@@ -39,14 +39,6 @@
     return-void
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/e;)Lcn/com/smartdevices/bracelet/ui/AlarmActivity;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/e;->a:Lcn/com/smartdevices/bracelet/ui/AlarmActivity;
-
-    return-object v0
-.end method
-
 
 # virtual methods
 .method public getCount()I
@@ -60,7 +52,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/e;->a:Lcn/com/smartdevices/bracelet/ui/AlarmActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->b(Lcn/com/smartdevices/bracelet/ui/AlarmActivity;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->d(Lcn/com/smartdevices/bracelet/ui/AlarmActivity;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -98,7 +90,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/e;->a:Lcn/com/smartdevices/bracelet/ui/AlarmActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->b(Lcn/com/smartdevices/bracelet/ui/AlarmActivity;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->d(Lcn/com/smartdevices/bracelet/ui/AlarmActivity;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -110,7 +102,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/e;->a:Lcn/com/smartdevices/bracelet/ui/AlarmActivity;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->a(Lcn/com/smartdevices/bracelet/ui/AlarmActivity;)Landroid/app/Activity;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->c(Lcn/com/smartdevices/bracelet/ui/AlarmActivity;)Landroid/app/Activity;
 
     move-result-object v1
 
@@ -160,7 +152,7 @@
 
     iget-object v6, p0, Lcn/com/smartdevices/bracelet/ui/e;->a:Lcn/com/smartdevices/bracelet/ui/AlarmActivity;
 
-    invoke-static {v6}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->c(Lcn/com/smartdevices/bracelet/ui/AlarmActivity;)Z
+    invoke-static {v6}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->e(Lcn/com/smartdevices/bracelet/ui/AlarmActivity;)Z
 
     move-result v6
 
@@ -171,7 +163,7 @@
     :goto_0
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/ui/e;->a:Lcn/com/smartdevices/bracelet/ui/AlarmActivity;
 
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->c(Lcn/com/smartdevices/bracelet/ui/AlarmActivity;)Z
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->e(Lcn/com/smartdevices/bracelet/ui/AlarmActivity;)Z
 
     move-result v3
 
@@ -189,7 +181,7 @@
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/ui/e;->a:Lcn/com/smartdevices/bracelet/ui/AlarmActivity;
 
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->a(Lcn/com/smartdevices/bracelet/ui/AlarmActivity;)Landroid/app/Activity;
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->c(Lcn/com/smartdevices/bracelet/ui/AlarmActivity;)Landroid/app/Activity;
 
     move-result-object v3
 
@@ -213,7 +205,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/e;->a:Lcn/com/smartdevices/bracelet/ui/AlarmActivity;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->a(Lcn/com/smartdevices/bracelet/ui/AlarmActivity;)Landroid/app/Activity;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->c(Lcn/com/smartdevices/bracelet/ui/AlarmActivity;)Landroid/app/Activity;
 
     move-result-object v1
 
@@ -299,7 +291,7 @@
     :cond_2
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/e;->a:Lcn/com/smartdevices/bracelet/ui/AlarmActivity;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->a(Lcn/com/smartdevices/bracelet/ui/AlarmActivity;)Landroid/app/Activity;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->c(Lcn/com/smartdevices/bracelet/ui/AlarmActivity;)Landroid/app/Activity;
 
     move-result-object v1
 
@@ -316,7 +308,7 @@
     :cond_3
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/ui/e;->a:Lcn/com/smartdevices/bracelet/ui/AlarmActivity;
 
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->a(Lcn/com/smartdevices/bracelet/ui/AlarmActivity;)Landroid/app/Activity;
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->c(Lcn/com/smartdevices/bracelet/ui/AlarmActivity;)Landroid/app/Activity;
 
     move-result-object v3
 
@@ -334,7 +326,7 @@
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/ui/e;->a:Lcn/com/smartdevices/bracelet/ui/AlarmActivity;
 
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->c(Lcn/com/smartdevices/bracelet/ui/AlarmActivity;)Z
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->e(Lcn/com/smartdevices/bracelet/ui/AlarmActivity;)Z
 
     move-result v3
 

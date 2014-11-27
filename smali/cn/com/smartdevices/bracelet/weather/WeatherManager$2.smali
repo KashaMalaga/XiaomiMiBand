@@ -5,7 +5,7 @@
 # instance fields
 .field final synthetic this$0:Lcn/com/smartdevices/bracelet/weather/WeatherManager;
 
-.field private final synthetic val$finalLoc:Lcn/com/smartdevices/bracelet/location/Location;
+.field final synthetic val$finalLoc:Lcn/com/smartdevices/bracelet/location/Location;
 
 
 # direct methods
@@ -54,9 +54,13 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "Respone : "
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -85,9 +89,13 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "CityInfos : "
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/weather/OriginalCityInfos;->toString()Ljava/lang/String;
 
@@ -151,7 +159,7 @@
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/weather/WeatherManager$2;->this$0:Lcn/com/smartdevices/bracelet/weather/WeatherManager;
 
     # getter for: Lcn/com/smartdevices/bracelet/weather/WeatherManager;->mContext:Landroid/content/Context;
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/weather/WeatherManager;->access$0(Lcn/com/smartdevices/bracelet/weather/WeatherManager;)Landroid/content/Context;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/weather/WeatherManager;->access$000(Lcn/com/smartdevices/bracelet/weather/WeatherManager;)Landroid/content/Context;
 
     move-result-object v2
 
@@ -159,9 +167,13 @@
 
     new-instance v4, Ljava/lang/StringBuilder;
 
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v5, "City_"
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
 
     iget-object v5, p0, Lcn/com/smartdevices/bracelet/weather/WeatherManager$2;->val$finalLoc:Lcn/com/smartdevices/bracelet/location/Location;
 
@@ -182,7 +194,7 @@
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/weather/WeatherManager$2;->this$0:Lcn/com/smartdevices/bracelet/weather/WeatherManager;
 
     # getter for: Lcn/com/smartdevices/bracelet/weather/WeatherManager;->mContext:Landroid/content/Context;
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/weather/WeatherManager;->access$0(Lcn/com/smartdevices/bracelet/weather/WeatherManager;)Landroid/content/Context;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/weather/WeatherManager;->access$000(Lcn/com/smartdevices/bracelet/weather/WeatherManager;)Landroid/content/Context;
 
     move-result-object v2
 

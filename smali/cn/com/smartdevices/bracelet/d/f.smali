@@ -110,6 +110,12 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
     iget v3, p0, Lcn/com/smartdevices/bracelet/d/d;->b:I
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
@@ -127,6 +133,12 @@
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     iget v3, p0, Lcn/com/smartdevices/bracelet/d/d;->b:I
 
@@ -175,7 +187,7 @@
 
     invoke-virtual {v1, p1, v0, p2}, Lcom/c/a/a/X;->c(Ljava/lang/String;Lcom/c/a/a/O;Lcom/c/a/a/S;)Lcom/c/a/a/N;
 
-    goto :goto_0
+    goto/16 :goto_0
 .end method
 
 .method public static a(Lcn/com/smartdevices/bracelet/d/e;Ljava/lang/String;Ljava/lang/String;Lcom/c/a/a/h;)V
@@ -252,6 +264,12 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/d/e;->d:Lcn/com/smartdevices/bracelet/q;
 
     invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/q;->b()I
@@ -274,6 +292,12 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/d/e;->d:Lcn/com/smartdevices/bracelet/q;
 
     invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/q;->a()I
@@ -295,6 +319,12 @@
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
@@ -322,11 +352,11 @@
 
     invoke-virtual {v1, p1, v0, p3}, Lcom/c/a/a/X;->c(Ljava/lang/String;Lcom/c/a/a/O;Lcom/c/a/a/S;)Lcom/c/a/a/N;
 
-    goto :goto_0
+    goto/16 :goto_0
 .end method
 
 .method public static a(Lcn/com/smartdevices/bracelet/model/LoginData;JLcom/c/a/a/h;)V
-    .locals 3
+    .locals 4
 
     invoke-static {p0}, Lcn/com/smartdevices/bracelet/d/a;->a(Lcn/com/smartdevices/bracelet/model/LoginData;)Lcom/c/a/a/O;
 
@@ -337,6 +367,12 @@
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {v2, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -380,6 +416,12 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
     iget v3, p1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->gender:I
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
@@ -398,6 +440,12 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
     iget v3, p1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->height:I
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
@@ -415,6 +463,12 @@
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     iget v3, p1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->weight:I
 
@@ -456,13 +510,19 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     iget v3, p1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->age:I
 
-    invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -474,15 +534,21 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getVersion()I
 
     move-result v3
 
-    invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -626,7 +692,7 @@
 .end method
 
 .method public static a(Lcn/com/smartdevices/bracelet/model/LoginData;Lcn/com/smartdevices/bracelet/model/SystemInfo;ILcom/c/a/a/h;)V
-    .locals 3
+    .locals 4
 
     invoke-static {p0}, Lcn/com/smartdevices/bracelet/d/a;->a(Lcn/com/smartdevices/bracelet/model/LoginData;)Lcom/c/a/a/O;
 
@@ -653,6 +719,12 @@
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -732,6 +804,12 @@
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/model/UserLocationData;->toString()Ljava/lang/String;
 
@@ -854,6 +932,12 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
     invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/q;->b()I
 
     move-result v3
@@ -874,6 +958,12 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
     invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/q;->a()I
 
     move-result v3
@@ -893,6 +983,12 @@
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {v2, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -938,6 +1034,12 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
     invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/q;->b()I
 
     move-result v3
@@ -958,6 +1060,12 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
     invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/q;->a()I
 
     move-result v3
@@ -977,6 +1085,12 @@
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {p3}, Ljava/lang/String;->length()I
 
@@ -1154,27 +1268,8 @@
 
     move-result v1
 
-    if-nez v1, :cond_1
+    if-eqz v1, :cond_0
 
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    if-ge v1, v2, :cond_2
-
-    :cond_0
-    sget-object v0, Lcn/com/smartdevices/bracelet/d/a;->a:Lcom/c/a/a/a;
-
-    invoke-virtual {v0, v3, v4, p2}, Lcom/c/a/a/a;->c(Ljava/lang/String;Lcom/c/a/a/O;Lcom/c/a/a/S;)Lcom/c/a/a/N;
-
-    :goto_1
-    return-void
-
-    :cond_1
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -1196,6 +1291,25 @@
     invoke-virtual {v4, v2, v1}, Lcom/c/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
+
+    :cond_0
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-ge v1, v2, :cond_2
+
+    :cond_1
+    sget-object v0, Lcn/com/smartdevices/bracelet/d/a;->a:Lcom/c/a/a/a;
+
+    invoke-virtual {v0, v3, v4, p2}, Lcom/c/a/a/a;->c(Ljava/lang/String;Lcom/c/a/a/O;Lcom/c/a/a/S;)Lcom/c/a/a/N;
+
+    :goto_1
+    return-void
 
     :cond_2
     :try_start_0
@@ -1237,6 +1351,12 @@
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/model/LoginInfo;->accessToken:Ljava/lang/String;
 
@@ -1325,9 +1445,13 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "send login url= "
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1376,9 +1500,13 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "game url ="
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1402,9 +1530,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "https://hm.xiaomi.com/huami.health.agreement.do"
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1474,9 +1606,13 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "game register url ="
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1520,9 +1656,13 @@
 
     new-instance v3, Ljava/lang/StringBuilder;
 
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v4, "game url ="
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

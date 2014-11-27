@@ -102,6 +102,14 @@
 
 .method private constructor <init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ")V"
+        }
+    .end annotation
 
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
@@ -127,19 +135,17 @@
 .end method
 
 .method public static values()[Lcn/com/smartdevices/bracelet/chart/typeface/a;
-    .locals 4
-
-    const/4 v3, 0x0
+    .locals 1
 
     sget-object v0, Lcn/com/smartdevices/bracelet/chart/typeface/a;->f:[Lcn/com/smartdevices/bracelet/chart/typeface/a;
 
-    array-length v1, v0
+    invoke-virtual {v0}, [Lcn/com/smartdevices/bracelet/chart/typeface/a;->clone()Ljava/lang/Object;
 
-    new-array v2, v1, [Lcn/com/smartdevices/bracelet/chart/typeface/a;
+    move-result-object v0
 
-    invoke-static {v0, v3, v2, v3, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    check-cast v0, [Lcn/com/smartdevices/bracelet/chart/typeface/a;
 
-    return-object v2
+    return-object v0
 .end method
 
 

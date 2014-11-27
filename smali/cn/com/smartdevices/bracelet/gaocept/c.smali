@@ -48,7 +48,7 @@
 
     sget-boolean v0, Lcn/com/smartdevices/bracelet/gaocept/d;->a:Z
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_2
 
     new-instance v2, Ljava/io/FileOutputStream;
 
@@ -59,19 +59,15 @@
     move v0, v1
 
     :goto_0
-    if-lt v0, p4, :cond_1
+    if-ge v0, p4, :cond_1
 
-    invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
-
-    :cond_0
-    return-void
-
-    :cond_1
     sget-boolean v3, Lcn/com/smartdevices/bracelet/gaocept/d;->b:Z
 
-    if-eqz v3, :cond_2
+    if-eqz v3, :cond_0
 
     new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v4, "%d"
 
@@ -89,11 +85,9 @@
 
     move-result-object v4
 
-    invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v4
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v3
 
     const-string v4, "\t"
 
@@ -172,8 +166,10 @@
 
     goto :goto_0
 
-    :cond_2
+    :cond_0
     new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v4, "%d"
 
@@ -191,11 +187,9 @@
 
     move-result-object v4
 
-    invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v4
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v3
 
     const-string v4, "\t"
 
@@ -266,6 +260,12 @@
     invoke-virtual {v2, v3}, Ljava/io/FileOutputStream;->write([B)V
 
     goto :goto_1
+
+    :cond_1
+    invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
+
+    :cond_2
+    return-void
 .end method
 
 .method public cleanStorage()V
@@ -306,9 +306,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "Correct number: "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 

@@ -22,7 +22,7 @@
 .method public run()V
     .locals 2
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/a/s;->l:Ljava/lang/String;
+    sget-object v0, Lcn/com/smartdevices/bracelet/a/u;->l:Ljava/lang/String;
 
     const-string v1, "run stopGetActivities!!!"
 

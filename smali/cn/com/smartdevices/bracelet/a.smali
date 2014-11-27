@@ -1,11 +1,11 @@
-.class Lcn/com/smartdevices/bracelet/A;
+.class final Lcn/com/smartdevices/bracelet/A;
 .super Lcom/c/a/a/h;
 
 
 # instance fields
-.field private final synthetic a:Lcn/com/smartdevices/bracelet/I;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/I;
 
-.field private final synthetic b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+.field final synthetic b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
 
 # direct methods
@@ -34,9 +34,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "onFailure:"
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -58,7 +62,7 @@
 
     invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/view/N;->a()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/view/O;->a()V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/A;->a:Lcn/com/smartdevices/bracelet/I;
 
@@ -83,9 +87,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "update Profile onSuccess:"
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -111,7 +119,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/view/N;->a()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/view/O;->a()V
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/d/h;->a()Z
 

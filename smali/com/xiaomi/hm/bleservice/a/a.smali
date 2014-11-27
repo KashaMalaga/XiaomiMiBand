@@ -38,13 +38,13 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
-
-    const/4 v4, 0x1
+    .locals 4
 
     const-string v0, "0000%4s-0000-1000-8000-00805f9b34fb"
 
-    new-array v1, v4, [Ljava/lang/Object;
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Ljava/lang/Object;
 
     const/4 v2, 0x0
 
@@ -78,1537 +78,271 @@
 
     new-array v0, v0, [I
 
-    const v1, 0xc0c1
-
-    aput v1, v0, v4
-
-    const/4 v1, 0x2
-
-    const v2, 0xc181
-
-    aput v2, v0, v1
-
-    const/4 v1, 0x3
-
-    const/16 v2, 0x140
-
-    aput v2, v0, v1
-
-    const/4 v1, 0x4
-
-    const v2, 0xc301
-
-    aput v2, v0, v1
-
-    const/4 v1, 0x5
-
-    const/16 v2, 0x3c0
-
-    aput v2, v0, v1
-
-    const/4 v1, 0x6
-
-    const/16 v2, 0x280
-
-    aput v2, v0, v1
-
-    const/4 v1, 0x7
-
-    const v2, 0xc241
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x8
-
-    const v2, 0xc601
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x9
-
-    const/16 v2, 0x6c0
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xa
-
-    const/16 v2, 0x780
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xb
-
-    const v2, 0xc741
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xc
-
-    const/16 v2, 0x500
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xd
-
-    const v2, 0xc5c1
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xe
-
-    const v2, 0xc481
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xf
-
-    const/16 v2, 0x440
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x10
-
-    const v2, 0xcc01
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x11
-
-    const/16 v2, 0xcc0
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x12
-
-    const/16 v2, 0xd80
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x13
-
-    const v2, 0xcd41
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x14
-
-    const/16 v2, 0xf00
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x15
-
-    const v2, 0xcfc1
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x16
-
-    const v2, 0xce81
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x17
-
-    const/16 v2, 0xe40
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x18
-
-    const/16 v2, 0xa00
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x19
-
-    const v2, 0xcac1
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x1a
-
-    const v2, 0xcb81
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x1b
-
-    const/16 v2, 0xb40
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x1c
-
-    const v2, 0xc901
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x1d
-
-    const/16 v2, 0x9c0
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x1e
-
-    const/16 v2, 0x880
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x1f
-
-    const v2, 0xc841
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x20
-
-    const v2, 0xd801
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x21
-
-    const/16 v2, 0x18c0
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x22
-
-    const/16 v2, 0x1980
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x23
-
-    const v2, 0xd941
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x24
-
-    const/16 v2, 0x1b00
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x25
-
-    const v2, 0xdbc1
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x26
-
-    const v2, 0xda81
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x27
-
-    const/16 v2, 0x1a40
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x28
-
-    const/16 v2, 0x1e00
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x29
-
-    const v2, 0xdec1
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x2a
-
-    const v2, 0xdf81
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x2b
-
-    const/16 v2, 0x1f40
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x2c
-
-    const v2, 0xdd01
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x2d
-
-    const/16 v2, 0x1dc0
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x2e
-
-    const/16 v2, 0x1c80
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x2f
-
-    const v2, 0xdc41
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x30
-
-    const/16 v2, 0x1400
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x31
-
-    const v2, 0xd4c1
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x32
-
-    const v2, 0xd581
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x33
-
-    const/16 v2, 0x1540
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x34
-
-    const v2, 0xd701
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x35
-
-    const/16 v2, 0x17c0
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x36
-
-    const/16 v2, 0x1680
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x37
-
-    const v2, 0xd641
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x38
-
-    const v2, 0xd201
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x39
-
-    const/16 v2, 0x12c0
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x3a
-
-    const/16 v2, 0x1380
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x3b
-
-    const v2, 0xd341
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x3c
-
-    const/16 v2, 0x1100
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x3d
-
-    const v2, 0xd1c1
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x3e
-
-    const v2, 0xd081
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x3f
-
-    const/16 v2, 0x1040
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x40
-
-    const v2, 0xf001
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x41
-
-    const/16 v2, 0x30c0
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x42
-
-    const/16 v2, 0x3180
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x43
-
-    const v2, 0xf141
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x44
-
-    const/16 v2, 0x3300
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x45
-
-    const v2, 0xf3c1
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x46
-
-    const v2, 0xf281
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x47
-
-    const/16 v2, 0x3240
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x48
-
-    const/16 v2, 0x3600
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x49
-
-    const v2, 0xf6c1
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x4a
-
-    const v2, 0xf781
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x4b
-
-    const/16 v2, 0x3740
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x4c
-
-    const v2, 0xf501
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x4d
-
-    const/16 v2, 0x35c0
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x4e
-
-    const/16 v2, 0x3480
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x4f
-
-    const v2, 0xf441
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x50
-
-    const/16 v2, 0x3c00
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x51
-
-    const v2, 0xfcc1
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x52
-
-    const v2, 0xfd81
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x53
-
-    const/16 v2, 0x3d40
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x54
-
-    const v2, 0xff01
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x55
-
-    const/16 v2, 0x3fc0
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x56
-
-    const/16 v2, 0x3e80
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x57
-
-    const v2, 0xfe41
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x58
-
-    const v2, 0xfa01
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x59
-
-    const/16 v2, 0x3ac0
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x5a
-
-    const/16 v2, 0x3b80
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x5b
-
-    const v2, 0xfb41
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x5c
-
-    const/16 v2, 0x3900
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x5d
-
-    const v2, 0xf9c1
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x5e
-
-    const v2, 0xf881
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x5f
-
-    const/16 v2, 0x3840
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x60
-
-    const/16 v2, 0x2800
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x61
-
-    const v2, 0xe8c1
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x62
-
-    const v2, 0xe981
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x63
-
-    const/16 v2, 0x2940
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x64
-
-    const v2, 0xeb01
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x65
-
-    const/16 v2, 0x2bc0
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x66
-
-    const/16 v2, 0x2a80
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x67
-
-    const v2, 0xea41
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x68
-
-    const v2, 0xee01
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x69
-
-    const/16 v2, 0x2ec0
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x6a
-
-    const/16 v2, 0x2f80
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x6b
-
-    const v2, 0xef41
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x6c
-
-    const/16 v2, 0x2d00
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x6d
-
-    const v2, 0xedc1
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x6e
-
-    const v2, 0xec81
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x6f
-
-    const/16 v2, 0x2c40
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x70
-
-    const v2, 0xe401
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x71
-
-    const/16 v2, 0x24c0
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x72
-
-    const/16 v2, 0x2580
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x73
-
-    const v2, 0xe541
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x74
-
-    const/16 v2, 0x2700
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x75
-
-    const v2, 0xe7c1
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x76
-
-    const v2, 0xe681
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x77
-
-    const/16 v2, 0x2640
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x78
-
-    const/16 v2, 0x2200
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x79
-
-    const v2, 0xe2c1
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x7a
-
-    const v2, 0xe381
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x7b
-
-    const/16 v2, 0x2340
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x7c
-
-    const v2, 0xe101
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x7d
-
-    const/16 v2, 0x21c0
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x7e
-
-    const/16 v2, 0x2080
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x7f
-
-    const v2, 0xe041
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x80
-
-    const v2, 0xa001
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x81
-
-    const/16 v2, 0x60c0
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x82
-
-    const/16 v2, 0x6180
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x83
-
-    const v2, 0xa141
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x84
-
-    const/16 v2, 0x6300
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x85
-
-    const v2, 0xa3c1
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x86
-
-    const v2, 0xa281
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x87
-
-    const/16 v2, 0x6240
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x88
-
-    const/16 v2, 0x6600
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x89
-
-    const v2, 0xa6c1
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x8a
-
-    const v2, 0xa781
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x8b
-
-    const/16 v2, 0x6740
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x8c
-
-    const v2, 0xa501
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x8d
-
-    const/16 v2, 0x65c0
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x8e
-
-    const/16 v2, 0x6480
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x8f
-
-    const v2, 0xa441
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x90
-
-    const/16 v2, 0x6c00
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x91
-
-    const v2, 0xacc1
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x92
-
-    const v2, 0xad81
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x93
-
-    const/16 v2, 0x6d40
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x94
-
-    const v2, 0xaf01
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x95
-
-    const/16 v2, 0x6fc0
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x96
-
-    const/16 v2, 0x6e80
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x97
-
-    const v2, 0xae41
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x98
-
-    const v2, 0xaa01
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x99
-
-    const/16 v2, 0x6ac0
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x9a
-
-    const/16 v2, 0x6b80
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x9b
-
-    const v2, 0xab41
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x9c
-
-    const/16 v2, 0x6900
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x9d
-
-    const v2, 0xa9c1
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x9e
-
-    const v2, 0xa881
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x9f
-
-    const/16 v2, 0x6840
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xa0
-
-    const/16 v2, 0x7800
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xa1
-
-    const v2, 0xb8c1
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xa2
-
-    const v2, 0xb981
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xa3
-
-    const/16 v2, 0x7940
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xa4
-
-    const v2, 0xbb01
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xa5
-
-    const/16 v2, 0x7bc0
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xa6
-
-    const/16 v2, 0x7a80
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xa7
-
-    const v2, 0xba41
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xa8
-
-    const v2, 0xbe01
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xa9
-
-    const/16 v2, 0x7ec0
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xaa
-
-    const/16 v2, 0x7f80
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xab
-
-    const v2, 0xbf41
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xac
-
-    const/16 v2, 0x7d00
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xad
-
-    const v2, 0xbdc1
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xae
-
-    const v2, 0xbc81
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xaf
-
-    const/16 v2, 0x7c40
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xb0
-
-    const v2, 0xb401
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xb1
-
-    const/16 v2, 0x74c0
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xb2
-
-    const/16 v2, 0x7580
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xb3
-
-    const v2, 0xb541
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xb4
-
-    const/16 v2, 0x7700
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xb5
-
-    const v2, 0xb7c1
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xb6
-
-    const v2, 0xb681
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xb7
-
-    const/16 v2, 0x7640
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xb8
-
-    const/16 v2, 0x7200
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xb9
-
-    const v2, 0xb2c1
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xba
-
-    const v2, 0xb381
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xbb
-
-    const/16 v2, 0x7340
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xbc
-
-    const v2, 0xb101
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xbd
-
-    const/16 v2, 0x71c0
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xbe
-
-    const/16 v2, 0x7080
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xbf
-
-    const v2, 0xb041
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xc0
-
-    const/16 v2, 0x5000
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xc1
-
-    const v2, 0x90c1
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xc2
-
-    const v2, 0x9181
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xc3
-
-    const/16 v2, 0x5140
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xc4
-
-    const v2, 0x9301
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xc5
-
-    const/16 v2, 0x53c0
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xc6
-
-    const/16 v2, 0x5280
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xc7
-
-    const v2, 0x9241
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xc8
-
-    const v2, 0x9601
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xc9
-
-    const/16 v2, 0x56c0
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xca
-
-    const/16 v2, 0x5780
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xcb
-
-    const v2, 0x9741
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xcc
-
-    const/16 v2, 0x5500
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xcd
-
-    const v2, 0x95c1
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xce
-
-    const v2, 0x9481
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xcf
-
-    const/16 v2, 0x5440
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xd0
-
-    const v2, 0x9c01
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xd1
-
-    const/16 v2, 0x5cc0
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xd2
-
-    const/16 v2, 0x5d80
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xd3
-
-    const v2, 0x9d41
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xd4
-
-    const/16 v2, 0x5f00
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xd5
-
-    const v2, 0x9fc1
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xd6
-
-    const v2, 0x9e81
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xd7
-
-    const/16 v2, 0x5e40
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xd8
-
-    const/16 v2, 0x5a00
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xd9
-
-    const v2, 0x9ac1
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xda
-
-    const v2, 0x9b81
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xdb
-
-    const/16 v2, 0x5b40
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xdc
-
-    const v2, 0x9901
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xdd
-
-    const/16 v2, 0x59c0
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xde
-
-    const/16 v2, 0x5880
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xdf
-
-    const v2, 0x9841
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xe0
-
-    const v2, 0x8801
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xe1
-
-    const/16 v2, 0x48c0
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xe2
-
-    const/16 v2, 0x4980
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xe3
-
-    const v2, 0x8941
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xe4
-
-    const/16 v2, 0x4b00
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xe5
-
-    const v2, 0x8bc1
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xe6
-
-    const v2, 0x8a81
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xe7
-
-    const/16 v2, 0x4a40
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xe8
-
-    const/16 v2, 0x4e00
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xe9
-
-    const v2, 0x8ec1
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xea
-
-    const v2, 0x8f81
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xeb
-
-    const/16 v2, 0x4f40
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xec
-
-    const v2, 0x8d01
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xed
-
-    const/16 v2, 0x4dc0
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xee
-
-    const/16 v2, 0x4c80
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xef
-
-    const v2, 0x8c41
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xf0
-
-    const/16 v2, 0x4400
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xf1
-
-    const v2, 0x84c1
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xf2
-
-    const v2, 0x8581
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xf3
-
-    const/16 v2, 0x4540
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xf4
-
-    const v2, 0x8701
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xf5
-
-    const/16 v2, 0x47c0
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xf6
-
-    const/16 v2, 0x4680
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xf7
-
-    const v2, 0x8641
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xf8
-
-    const v2, 0x8201
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xf9
-
-    const/16 v2, 0x42c0
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xfa
-
-    const/16 v2, 0x4380
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xfb
-
-    const v2, 0x8341
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xfc
-
-    const/16 v2, 0x4100
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xfd
-
-    const v2, 0x81c1
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xfe
-
-    const v2, 0x8081
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xff
-
-    const/16 v2, 0x4040
-
-    aput v2, v0, v1
+    fill-array-data v0, :array_0
 
     sput-object v0, Lcom/xiaomi/hm/bleservice/a/a;->e:[I
 
     return-void
+
+    :array_0
+    .array-data 4
+        0x0
+        0xc0c1
+        0xc181
+        0x140
+        0xc301
+        0x3c0
+        0x280
+        0xc241
+        0xc601
+        0x6c0
+        0x780
+        0xc741
+        0x500
+        0xc5c1
+        0xc481
+        0x440
+        0xcc01
+        0xcc0
+        0xd80
+        0xcd41
+        0xf00
+        0xcfc1
+        0xce81
+        0xe40
+        0xa00
+        0xcac1
+        0xcb81
+        0xb40
+        0xc901
+        0x9c0
+        0x880
+        0xc841
+        0xd801
+        0x18c0
+        0x1980
+        0xd941
+        0x1b00
+        0xdbc1
+        0xda81
+        0x1a40
+        0x1e00
+        0xdec1
+        0xdf81
+        0x1f40
+        0xdd01
+        0x1dc0
+        0x1c80
+        0xdc41
+        0x1400
+        0xd4c1
+        0xd581
+        0x1540
+        0xd701
+        0x17c0
+        0x1680
+        0xd641
+        0xd201
+        0x12c0
+        0x1380
+        0xd341
+        0x1100
+        0xd1c1
+        0xd081
+        0x1040
+        0xf001
+        0x30c0
+        0x3180
+        0xf141
+        0x3300
+        0xf3c1
+        0xf281
+        0x3240
+        0x3600
+        0xf6c1
+        0xf781
+        0x3740
+        0xf501
+        0x35c0
+        0x3480
+        0xf441
+        0x3c00
+        0xfcc1
+        0xfd81
+        0x3d40
+        0xff01
+        0x3fc0
+        0x3e80
+        0xfe41
+        0xfa01
+        0x3ac0
+        0x3b80
+        0xfb41
+        0x3900
+        0xf9c1
+        0xf881
+        0x3840
+        0x2800
+        0xe8c1
+        0xe981
+        0x2940
+        0xeb01
+        0x2bc0
+        0x2a80
+        0xea41
+        0xee01
+        0x2ec0
+        0x2f80
+        0xef41
+        0x2d00
+        0xedc1
+        0xec81
+        0x2c40
+        0xe401
+        0x24c0
+        0x2580
+        0xe541
+        0x2700
+        0xe7c1
+        0xe681
+        0x2640
+        0x2200
+        0xe2c1
+        0xe381
+        0x2340
+        0xe101
+        0x21c0
+        0x2080
+        0xe041
+        0xa001
+        0x60c0
+        0x6180
+        0xa141
+        0x6300
+        0xa3c1
+        0xa281
+        0x6240
+        0x6600
+        0xa6c1
+        0xa781
+        0x6740
+        0xa501
+        0x65c0
+        0x6480
+        0xa441
+        0x6c00
+        0xacc1
+        0xad81
+        0x6d40
+        0xaf01
+        0x6fc0
+        0x6e80
+        0xae41
+        0xaa01
+        0x6ac0
+        0x6b80
+        0xab41
+        0x6900
+        0xa9c1
+        0xa881
+        0x6840
+        0x7800
+        0xb8c1
+        0xb981
+        0x7940
+        0xbb01
+        0x7bc0
+        0x7a80
+        0xba41
+        0xbe01
+        0x7ec0
+        0x7f80
+        0xbf41
+        0x7d00
+        0xbdc1
+        0xbc81
+        0x7c40
+        0xb401
+        0x74c0
+        0x7580
+        0xb541
+        0x7700
+        0xb7c1
+        0xb681
+        0x7640
+        0x7200
+        0xb2c1
+        0xb381
+        0x7340
+        0xb101
+        0x71c0
+        0x7080
+        0xb041
+        0x5000
+        0x90c1
+        0x9181
+        0x5140
+        0x9301
+        0x53c0
+        0x5280
+        0x9241
+        0x9601
+        0x56c0
+        0x5780
+        0x9741
+        0x5500
+        0x95c1
+        0x9481
+        0x5440
+        0x9c01
+        0x5cc0
+        0x5d80
+        0x9d41
+        0x5f00
+        0x9fc1
+        0x9e81
+        0x5e40
+        0x5a00
+        0x9ac1
+        0x9b81
+        0x5b40
+        0x9901
+        0x59c0
+        0x5880
+        0x9841
+        0x8801
+        0x48c0
+        0x4980
+        0x8941
+        0x4b00
+        0x8bc1
+        0x8a81
+        0x4a40
+        0x4e00
+        0x8ec1
+        0x8f81
+        0x4f40
+        0x8d01
+        0x4dc0
+        0x4c80
+        0x8c41
+        0x4400
+        0x84c1
+        0x8581
+        0x4540
+        0x8701
+        0x47c0
+        0x4680
+        0x8641
+        0x8201
+        0x42c0
+        0x4380
+        0x8341
+        0x4100
+        0x81c1
+        0x8081
+        0x4040
+    .end array-data
 .end method
 
 .method public constructor <init>()V
@@ -1659,21 +393,8 @@
     move v0, v2
 
     :goto_2
-    if-lt v2, p2, :cond_2
+    if-ge v2, p2, :cond_2
 
-    return v0
-
-    :cond_0
-    move v0, v2
-
-    goto :goto_0
-
-    :cond_1
-    move v1, v2
-
-    goto :goto_1
-
-    :cond_2
     add-int v1, p1, v2
 
     aget-byte v1, p0, v1
@@ -1689,6 +410,19 @@
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
+
+    :cond_0
+    move v0, v2
+
+    goto :goto_0
+
+    :cond_1
+    move v1, v2
+
+    goto :goto_1
+
+    :cond_2
+    return v0
 .end method
 
 .method public static a(I)Ljava/lang/String;
@@ -2199,17 +933,8 @@
     move v0, v2
 
     :goto_3
-    if-lt v0, v7, :cond_5
+    if-ge v0, v7, :cond_5
 
-    add-int/lit8 v0, v3, 0x2
-
-    move v3, v0
-
-    move v0, v4
-
-    goto :goto_2
-
-    :cond_5
     aget-object v8, p1, v0
 
     invoke-static {v8}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/util/UUID;)Ljava/lang/String;
@@ -2225,6 +950,15 @@
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_3
+
+    :cond_5
+    add-int/lit8 v0, v3, 0x2
+
+    move v3, v0
+
+    move v0, v4
+
+    goto :goto_2
 
     :cond_6
     const/4 v4, 0x7
@@ -2252,8 +986,21 @@
     :goto_5
     const/16 v4, 0x10
 
-    if-lt v0, v4, :cond_8
+    if-ge v0, v4, :cond_8
 
+    add-int/lit8 v4, v3, 0x1
+
+    aget-byte v3, p0, v3
+
+    aput-byte v3, v7, v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    move v3, v4
+
+    goto :goto_5
+
+    :cond_8
     const-string v0, "%02x%02x%02x%02x-%02x%02x-%02x%02x-%02x%02x-%02x%02x%02x%02x%02x%02x"
 
     const/16 v4, 0x10
@@ -2441,43 +1188,21 @@
     move v0, v2
 
     :goto_6
-    if-lt v0, v7, :cond_9
+    if-ge v0, v7, :cond_9
 
-    add-int/lit8 v0, v5, 0x10
-
-    move v5, v0
-
-    move v0, v3
-
-    goto/16 :goto_4
-
-    :cond_8
-    add-int/lit8 v4, v3, 0x1
-
-    aget-byte v3, p0, v3
-
-    aput-byte v3, v7, v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    move v3, v4
-
-    goto/16 :goto_5
-
-    :cond_9
     aget-object v8, p1, v0
 
     new-instance v9, Ljava/lang/StringBuilder;
+
+    invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {v8}, Ljava/util/UUID;->toString()Ljava/lang/String;
 
     move-result-object v10
 
-    invoke-static {v10}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v10
-
-    invoke-direct {v9, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v9
 
     const-string v10, "=="
 
@@ -2508,6 +1233,15 @@
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_6
+
+    :cond_9
+    add-int/lit8 v0, v5, 0x10
+
+    move v5, v0
+
+    move v0, v3
+
+    goto/16 :goto_4
 
     :cond_a
     add-int/lit8 v3, v6, -0x1
@@ -2704,21 +1438,8 @@
     move v0, v1
 
     :goto_1
-    if-lt v0, v3, :cond_2
+    if-ge v0, v3, :cond_2
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->length()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, -0x1
-
-    invoke-virtual {v2, v1, v0}, Ljava/lang/StringBuilder;->substring(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_2
     aget-byte v4, p0, v0
 
     const-string v5, "%02x "
@@ -2742,6 +1463,19 @@
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
+
+    :cond_2
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x1
+
+    invoke-virtual {v2, v1, v0}, Ljava/lang/StringBuilder;->substring(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
 .end method
 
 .method public static b(Ljava/lang/String;)Ljava/util/UUID;
@@ -2838,13 +1572,8 @@
     :goto_0
     array-length v3, p0
 
-    if-lt v0, v3, :cond_0
+    if-ge v0, v3, :cond_0
 
-    and-int v0, v1, v2
-
-    return v0
-
-    :cond_0
     ushr-int/lit8 v3, v1, 0x8
 
     shl-int/lit8 v1, v1, 0x8
@@ -2882,6 +1611,11 @@
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    :cond_0
+    and-int v0, v1, v2
+
+    return v0
 .end method
 
 .method public static d([B)I
@@ -2896,11 +1630,8 @@
     :goto_0
     array-length v3, p0
 
-    if-lt v0, v3, :cond_0
+    if-ge v0, v3, :cond_2
 
-    return v2
-
-    :cond_0
     aget-byte v3, p0, v0
 
     and-int/lit16 v3, v3, 0xff
@@ -2912,16 +1643,11 @@
     :goto_1
     const/16 v4, 0x8
 
-    if-lt v3, v4, :cond_1
+    if-ge v3, v4, :cond_1
 
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
     and-int/lit8 v4, v2, 0x1
 
-    if-eqz v4, :cond_2
+    if-eqz v4, :cond_0
 
     shr-int/lit8 v2, v2, 0x1
 
@@ -2934,12 +1660,20 @@
 
     goto :goto_1
 
-    :cond_2
+    :cond_0
     shr-int/lit8 v2, v2, 0x1
 
     and-int/lit16 v2, v2, 0xff
 
     goto :goto_2
+
+    :cond_1
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    return v2
 .end method
 
 .method public static e([B)V
@@ -2999,53 +1733,21 @@
     :goto_2
     add-int/lit8 v4, v6, -0x1
 
-    if-lt v3, v4, :cond_13
+    if-ge v3, v4, :cond_13
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    add-int/lit8 v4, v0, 0x1
 
-    const-string v4, "      "
+    aget-byte v0, p0, v0
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    aput-byte v0, v7, v3
 
-    const-string v4, "[0x%02x]"
+    add-int/lit8 v0, v3, 0x1
 
-    new-array v6, v1, [Ljava/lang/Object;
+    move v3, v0
 
-    invoke-static {v5}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+    move v0, v4
 
-    move-result-object v5
-
-    aput-object v5, v6, v2
-
-    invoke-static {v4, v6}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string v4, ": "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-static {v7}, Lcom/xiaomi/hm/bleservice/a/a;->b([B)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/r;->b(Ljava/lang/String;)V
-
-    goto :goto_1
+    goto :goto_2
 
     :pswitch_1
     if-ne v6, v9, :cond_2
@@ -3061,9 +1763,13 @@
 
     new-instance v4, Ljava/lang/StringBuilder;
 
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v5, "        flag: "
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
 
     const-string v5, "%02x"
 
@@ -3108,31 +1814,8 @@
     :goto_4
     add-int/lit8 v3, v6, -0x1
 
-    if-lt v5, v3, :cond_3
+    if-ge v5, v3, :cond_4
 
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "      serv16: "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/r;->b(Ljava/lang/String;)V
-
-    goto/16 :goto_1
-
-    :cond_3
     new-array v8, v9, [B
 
     move v3, v0
@@ -3140,8 +1823,21 @@
     move v0, v2
 
     :goto_5
-    if-lt v0, v9, :cond_4
+    if-ge v0, v9, :cond_3
 
+    add-int/lit8 v4, v3, 0x1
+
+    aget-byte v3, p0, v3
+
+    aput-byte v3, v8, v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    move v3, v4
+
+    goto :goto_5
+
+    :cond_3
     invoke-static {v8}, Lcom/xiaomi/hm/bleservice/a/a;->b([B)Ljava/lang/String;
 
     move-result-object v0
@@ -3161,37 +1857,15 @@
     goto :goto_4
 
     :cond_4
-    add-int/lit8 v4, v3, 0x1
-
-    aget-byte v3, p0, v3
-
-    aput-byte v3, v8, v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    move v3, v4
-
-    goto :goto_5
-
-    :pswitch_3
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
-
-    move v5, v2
-
-    move v0, v3
-
-    :goto_6
-    add-int/lit8 v3, v6, -0x1
-
-    if-lt v5, v3, :cond_5
-
     new-instance v3, Ljava/lang/StringBuilder;
 
-    const-string v4, "   (*)serv16: "
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v4, "      serv16: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -3209,7 +1883,20 @@
 
     goto/16 :goto_1
 
-    :cond_5
+    :pswitch_3
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    move v5, v2
+
+    move v0, v3
+
+    :goto_6
+    add-int/lit8 v3, v6, -0x1
+
+    if-ge v5, v3, :cond_6
+
     new-array v8, v9, [B
 
     move v3, v0
@@ -3217,8 +1904,21 @@
     move v0, v2
 
     :goto_7
-    if-lt v0, v9, :cond_6
+    if-ge v0, v9, :cond_5
 
+    add-int/lit8 v4, v3, 0x1
+
+    aget-byte v3, p0, v3
+
+    aput-byte v3, v8, v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    move v3, v4
+
+    goto :goto_7
+
+    :cond_5
     invoke-static {v8}, Lcom/xiaomi/hm/bleservice/a/a;->b([B)Ljava/lang/String;
 
     move-result-object v0
@@ -3238,37 +1938,15 @@
     goto :goto_6
 
     :cond_6
-    add-int/lit8 v4, v3, 0x1
-
-    aget-byte v3, p0, v3
-
-    aput-byte v3, v8, v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    move v3, v4
-
-    goto :goto_7
-
-    :pswitch_4
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
-
-    move v5, v2
-
-    move v0, v3
-
-    :goto_8
-    add-int/lit8 v3, v6, -0x1
-
-    if-lt v5, v3, :cond_7
-
     new-instance v3, Ljava/lang/StringBuilder;
 
-    const-string v4, "     serv128: "
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v4, "   (*)serv16: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -3286,7 +1964,20 @@
 
     goto/16 :goto_1
 
-    :cond_7
+    :pswitch_4
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    move v5, v2
+
+    move v0, v3
+
+    :goto_8
+    add-int/lit8 v3, v6, -0x1
+
+    if-ge v5, v3, :cond_8
+
     new-array v8, v10, [B
 
     move v3, v0
@@ -3294,8 +1985,21 @@
     move v0, v2
 
     :goto_9
-    if-lt v0, v10, :cond_8
+    if-ge v0, v10, :cond_7
 
+    add-int/lit8 v4, v3, 0x1
+
+    aget-byte v3, p0, v3
+
+    aput-byte v3, v8, v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    move v3, v4
+
+    goto :goto_9
+
+    :cond_7
     invoke-static {v8}, Lcom/xiaomi/hm/bleservice/a/a;->b([B)Ljava/lang/String;
 
     move-result-object v0
@@ -3315,37 +2019,15 @@
     goto :goto_8
 
     :cond_8
-    add-int/lit8 v4, v3, 0x1
-
-    aget-byte v3, p0, v3
-
-    aput-byte v3, v8, v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    move v3, v4
-
-    goto :goto_9
-
-    :pswitch_5
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
-
-    move v5, v2
-
-    move v0, v3
-
-    :goto_a
-    add-int/lit8 v3, v6, -0x1
-
-    if-lt v5, v3, :cond_9
-
     new-instance v3, Ljava/lang/StringBuilder;
 
-    const-string v4, "  (*)serv128: "
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v4, "     serv128: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -3363,7 +2045,20 @@
 
     goto/16 :goto_1
 
-    :cond_9
+    :pswitch_5
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    move v5, v2
+
+    move v0, v3
+
+    :goto_a
+    add-int/lit8 v3, v6, -0x1
+
+    if-ge v5, v3, :cond_a
+
     new-array v8, v10, [B
 
     move v3, v0
@@ -3371,8 +2066,21 @@
     move v0, v2
 
     :goto_b
-    if-lt v0, v10, :cond_a
+    if-ge v0, v10, :cond_9
 
+    add-int/lit8 v4, v3, 0x1
+
+    aget-byte v3, p0, v3
+
+    aput-byte v3, v8, v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    move v3, v4
+
+    goto :goto_b
+
+    :cond_9
     invoke-static {v8}, Lcom/xiaomi/hm/bleservice/a/a;->b([B)Ljava/lang/String;
 
     move-result-object v0
@@ -3392,37 +2100,15 @@
     goto :goto_a
 
     :cond_a
-    add-int/lit8 v4, v3, 0x1
-
-    aget-byte v3, p0, v3
-
-    aput-byte v3, v8, v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    move v3, v4
-
-    goto :goto_b
-
-    :pswitch_6
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
-
-    move v5, v2
-
-    move v0, v3
-
-    :goto_c
-    add-int/lit8 v3, v6, -0x1
-
-    if-lt v5, v3, :cond_b
-
     new-instance v3, Ljava/lang/StringBuilder;
 
-    const-string v4, "   solicit16: "
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v4, "  (*)serv128: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -3440,7 +2126,20 @@
 
     goto/16 :goto_1
 
-    :cond_b
+    :pswitch_6
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    move v5, v2
+
+    move v0, v3
+
+    :goto_c
+    add-int/lit8 v3, v6, -0x1
+
+    if-ge v5, v3, :cond_c
+
     new-array v8, v9, [B
 
     move v3, v0
@@ -3448,8 +2147,21 @@
     move v0, v2
 
     :goto_d
-    if-lt v0, v9, :cond_c
+    if-ge v0, v9, :cond_b
 
+    add-int/lit8 v4, v3, 0x1
+
+    aget-byte v3, p0, v3
+
+    aput-byte v3, v8, v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    move v3, v4
+
+    goto :goto_d
+
+    :cond_b
     invoke-static {v8}, Lcom/xiaomi/hm/bleservice/a/a;->b([B)Ljava/lang/String;
 
     move-result-object v0
@@ -3469,37 +2181,15 @@
     goto :goto_c
 
     :cond_c
-    add-int/lit8 v4, v3, 0x1
-
-    aget-byte v3, p0, v3
-
-    aput-byte v3, v8, v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    move v3, v4
-
-    goto :goto_d
-
-    :pswitch_7
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
-
-    move v5, v2
-
-    move v0, v3
-
-    :goto_e
-    add-int/lit8 v3, v6, -0x1
-
-    if-lt v5, v3, :cond_d
-
     new-instance v3, Ljava/lang/StringBuilder;
 
-    const-string v4, "  solicit128: "
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v4, "   solicit16: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
 
     invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -3517,7 +2207,20 @@
 
     goto/16 :goto_1
 
-    :cond_d
+    :pswitch_7
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    move v5, v2
+
+    move v0, v3
+
+    :goto_e
+    add-int/lit8 v3, v6, -0x1
+
+    if-ge v5, v3, :cond_e
+
     new-array v8, v10, [B
 
     move v3, v0
@@ -3525,8 +2228,21 @@
     move v0, v2
 
     :goto_f
-    if-lt v0, v10, :cond_e
+    if-ge v0, v10, :cond_d
 
+    add-int/lit8 v4, v3, 0x1
+
+    aget-byte v3, p0, v3
+
+    aput-byte v3, v8, v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    move v3, v4
+
+    goto :goto_f
+
+    :cond_d
     invoke-static {v8}, Lcom/xiaomi/hm/bleservice/a/a;->b([B)Ljava/lang/String;
 
     move-result-object v0
@@ -3546,17 +2262,31 @@
     goto :goto_e
 
     :cond_e
-    add-int/lit8 v4, v3, 0x1
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    aget-byte v3, p0, v3
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    aput-byte v3, v8, v0
+    const-string v4, "  solicit128: "
 
-    add-int/lit8 v0, v0, 0x1
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move v3, v4
+    move-result-object v3
 
-    goto :goto_f
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/r;->b(Ljava/lang/String;)V
+
+    goto/16 :goto_1
 
     :pswitch_8
     add-int/lit8 v0, v6, -0x1
@@ -3570,31 +2300,8 @@
     :goto_10
     add-int/lit8 v4, v6, -0x1
 
-    if-lt v3, v4, :cond_f
+    if-ge v3, v4, :cond_f
 
-    new-instance v3, Ljava/lang/String;
-
-    invoke-direct {v3, v5}, Ljava/lang/String;-><init>([B)V
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "        name: "
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/r;->b(Ljava/lang/String;)V
-
-    goto/16 :goto_1
-
-    :cond_f
     add-int/lit8 v4, v0, 0x1
 
     aget-byte v0, p0, v0
@@ -3609,29 +2316,20 @@
 
     goto :goto_10
 
-    :pswitch_9
-    add-int/lit8 v0, v6, -0x1
-
-    new-array v5, v0, [B
-
-    move v0, v3
-
-    move v3, v2
-
-    :goto_11
-    add-int/lit8 v4, v6, -0x1
-
-    if-lt v3, v4, :cond_10
-
+    :cond_f
     new-instance v3, Ljava/lang/String;
 
     invoke-direct {v3, v5}, Ljava/lang/String;-><init>([B)V
 
     new-instance v4, Ljava/lang/StringBuilder;
 
-    const-string v5, "     (*)name: "
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v5, "        name: "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
 
     invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3645,7 +2343,20 @@
 
     goto/16 :goto_1
 
-    :cond_10
+    :pswitch_9
+    add-int/lit8 v0, v6, -0x1
+
+    new-array v5, v0, [B
+
+    move v0, v3
+
+    move v3, v2
+
+    :goto_11
+    add-int/lit8 v4, v6, -0x1
+
+    if-ge v3, v4, :cond_10
+
     add-int/lit8 v4, v0, 0x1
 
     aget-byte v0, p0, v0
@@ -3660,29 +2371,20 @@
 
     goto :goto_11
 
-    :pswitch_a
-    add-int/lit8 v0, v6, -0x1
+    :cond_10
+    new-instance v3, Ljava/lang/String;
 
-    new-array v5, v0, [B
-
-    move v0, v3
-
-    move v3, v2
-
-    :goto_12
-    add-int/lit8 v4, v6, -0x1
-
-    if-lt v3, v4, :cond_11
-
-    invoke-static {v5}, Lcom/xiaomi/hm/bleservice/a/a;->b([B)Ljava/lang/String;
-
-    move-result-object v3
+    invoke-direct {v3, v5}, Ljava/lang/String;-><init>([B)V
 
     new-instance v4, Ljava/lang/StringBuilder;
 
-    const-string v5, "    tx level: "
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v5, "     (*)name: "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
 
     invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3696,7 +2398,20 @@
 
     goto/16 :goto_1
 
-    :cond_11
+    :pswitch_a
+    add-int/lit8 v0, v6, -0x1
+
+    new-array v5, v0, [B
+
+    move v0, v3
+
+    move v3, v2
+
+    :goto_12
+    add-int/lit8 v4, v6, -0x1
+
+    if-ge v3, v4, :cond_11
+
     add-int/lit8 v4, v0, 0x1
 
     aget-byte v0, p0, v0
@@ -3711,29 +2426,20 @@
 
     goto :goto_12
 
-    :pswitch_b
-    add-int/lit8 v0, v6, -0x1
-
-    new-array v5, v0, [B
-
-    move v0, v3
-
-    move v3, v2
-
-    :goto_13
-    add-int/lit8 v4, v6, -0x1
-
-    if-lt v3, v4, :cond_12
-
+    :cond_11
     invoke-static {v5}, Lcom/xiaomi/hm/bleservice/a/a;->b([B)Ljava/lang/String;
 
     move-result-object v3
 
     new-instance v4, Ljava/lang/StringBuilder;
 
-    const-string v5, "    manufact: "
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v5, "    tx level: "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
 
     invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3747,7 +2453,20 @@
 
     goto/16 :goto_1
 
-    :cond_12
+    :pswitch_b
+    add-int/lit8 v0, v6, -0x1
+
+    new-array v5, v0, [B
+
+    move v0, v3
+
+    move v3, v2
+
+    :goto_13
+    add-int/lit8 v4, v6, -0x1
+
+    if-ge v3, v4, :cond_12
+
     add-int/lit8 v4, v0, 0x1
 
     aget-byte v0, p0, v0
@@ -3762,20 +2481,83 @@
 
     goto :goto_13
 
+    :cond_12
+    invoke-static {v5}, Lcom/xiaomi/hm/bleservice/a/a;->b([B)Ljava/lang/String;
+
+    move-result-object v3
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "    manufact: "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/r;->b(Ljava/lang/String;)V
+
+    goto/16 :goto_1
+
     :cond_13
-    add-int/lit8 v4, v0, 0x1
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    aget-byte v0, p0, v0
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    aput-byte v0, v7, v3
+    const-string v4, "      "
 
-    add-int/lit8 v0, v3, 0x1
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move v3, v0
+    move-result-object v3
 
-    move v0, v4
+    const-string v4, "[0x%02x]"
 
-    goto/16 :goto_2
+    new-array v6, v1, [Ljava/lang/Object;
+
+    invoke-static {v5}, Ljava/lang/Byte;->valueOf(B)Ljava/lang/Byte;
+
+    move-result-object v5
+
+    aput-object v5, v6, v2
+
+    invoke-static {v4, v6}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, ": "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-static {v7}, Lcom/xiaomi/hm/bleservice/a/a;->b([B)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/r;->b(Ljava/lang/String;)V
+
+    goto/16 :goto_1
 
     nop
 
@@ -3817,11 +2599,8 @@
     move v1, v0
 
     :goto_0
-    if-lt v0, v2, :cond_0
+    if-ge v0, v2, :cond_0
 
-    return v1
-
-    :cond_0
     aget-byte v3, p0, v0
 
     ushr-int/lit8 v4, v1, 0x8
@@ -3839,4 +2618,7 @@
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    :cond_0
+    return v1
 .end method

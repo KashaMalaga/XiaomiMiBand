@@ -130,7 +130,7 @@
 .end method
 
 .method public a(IIILjava/lang/String;)V
-    .locals 3
+    .locals 4
 
     iput p1, p0, Lcn/com/smartdevices/bracelet/view/HoriRulerView;->f:I
 
@@ -139,25 +139,8 @@
     iput-object p4, p0, Lcn/com/smartdevices/bracelet/view/HoriRulerView;->e:Ljava/lang/String;
 
     :goto_0
-    if-lt p1, p2, :cond_0
+    if-ge p1, p2, :cond_0
 
-    const-string v0, "HoriRulerView"
-
-    const-string v1, "initRuler"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/HoriRulerView;->b:Lcn/com/smartdevices/bracelet/view/RulerScrollView;
-
-    iget v1, p0, Lcn/com/smartdevices/bracelet/view/HoriRulerView;->f:I
-
-    iget v2, p0, Lcn/com/smartdevices/bracelet/view/HoriRulerView;->g:I
-
-    invoke-virtual {v0, v1, v2, p4}, Lcn/com/smartdevices/bracelet/view/RulerScrollView;->a(IILjava/lang/String;)V
-
-    return-void
-
-    :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/HoriRulerView;->d:Landroid/view/LayoutInflater;
 
     const v1, 0x7f030074
@@ -180,6 +163,12 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v2
@@ -195,6 +184,23 @@
     add-int/2addr p1, p3
 
     goto :goto_0
+
+    :cond_0
+    const-string v0, "HoriRulerView"
+
+    const-string v1, "initRuler"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/HoriRulerView;->b:Lcn/com/smartdevices/bracelet/view/RulerScrollView;
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/view/HoriRulerView;->f:I
+
+    iget v2, p0, Lcn/com/smartdevices/bracelet/view/HoriRulerView;->g:I
+
+    invoke-virtual {v0, v1, v2, p4}, Lcn/com/smartdevices/bracelet/view/RulerScrollView;->a(IILjava/lang/String;)V
+
+    return-void
 .end method
 
 .method public addView(Landroid/view/View;)V

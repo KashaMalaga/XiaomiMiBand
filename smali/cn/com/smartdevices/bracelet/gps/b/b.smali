@@ -33,7 +33,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/b;->a:Lcn/com/smartdevices/bracelet/gps/b/a;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/b/a;->a(Lcn/com/smartdevices/bracelet/gps/b/a;)Lcn/com/smartdevices/bracelet/gps/b/d;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/b/a;->d(Lcn/com/smartdevices/bracelet/gps/b/a;)Lcn/com/smartdevices/bracelet/gps/b/d;
 
     move-result-object v0
 
@@ -41,7 +41,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/b;->a:Lcn/com/smartdevices/bracelet/gps/b/a;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/b/a;->a(Lcn/com/smartdevices/bracelet/gps/b/a;)Lcn/com/smartdevices/bracelet/gps/b/d;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/b/a;->d(Lcn/com/smartdevices/bracelet/gps/b/a;)Lcn/com/smartdevices/bracelet/gps/b/d;
 
     move-result-object v0
 

@@ -1,4 +1,4 @@
-.class Lcn/com/smartdevices/bracelet/model/ShareData$1;
+.class final Lcn/com/smartdevices/bracelet/model/ShareData$1;
 .super Ljava/lang/Object;
 
 # interfaces

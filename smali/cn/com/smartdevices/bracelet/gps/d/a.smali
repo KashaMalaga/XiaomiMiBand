@@ -82,11 +82,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    return-object v2
-
-    :cond_0
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -108,6 +105,9 @@
     move v1, v0
 
     goto :goto_0
+
+    :cond_0
+    return-object v2
 .end method
 
 .method public static b(Lcn/com/smartdevices/bracelet/gps/model/c;)Lcom/amap/api/services/core/LatLonPoint;
@@ -157,11 +157,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    return-object v2
-
-    :cond_0
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -187,6 +184,9 @@
     move v1, v0
 
     goto :goto_0
+
+    :cond_0
+    return-object v2
 .end method
 
 .method public static c(Lcn/com/smartdevices/bracelet/gps/model/c;)Lcom/amap/api/services/core/LatLonPoint;
@@ -236,11 +236,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    return-object v2
-
-    :cond_0
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -258,4 +255,7 @@
     move v1, v0
 
     goto :goto_0
+
+    :cond_0
+    return-object v2
 .end method

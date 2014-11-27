@@ -84,9 +84,9 @@
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->i:I
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/A;
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/B;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/A;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/B;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->j:Ljava/lang/Runnable;
 
@@ -119,6 +119,14 @@
     return v0
 .end method
 
+.method static synthetic a(Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;I)I
+    .locals 0
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->d:I
+
+    return p1
+.end method
+
 .method private a(Landroid/view/MotionEvent;)V
     .locals 4
 
@@ -146,14 +154,6 @@
     return-void
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;I)V
-    .locals 0
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->d:I
-
-    return-void
-.end method
-
 .method static synthetic b()I
     .locals 1
 
@@ -162,10 +162,10 @@
     return v0
 .end method
 
-.method static synthetic b(Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;)Landroid/os/Handler;
+.method static synthetic b(Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;)Ljava/lang/Runnable;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->f:Landroid/os/Handler;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->j:Ljava/lang/Runnable;
 
     return-object v0
 .end method
@@ -200,10 +200,10 @@
     return v0
 .end method
 
-.method static synthetic c(Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;)Ljava/lang/Runnable;
+.method static synthetic c(Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;)Landroid/os/Handler;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->j:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->f:Landroid/os/Handler;
 
     return-object v0
 .end method

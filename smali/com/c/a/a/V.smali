@@ -107,8 +107,27 @@
     :goto_0
     const/16 v3, 0x1e
 
-    if-lt v0, v3, :cond_0
+    if-ge v0, v3, :cond_0
 
+    sget-object v3, Lcom/c/a/a/V;->e:[C
+
+    sget-object v4, Lcom/c/a/a/V;->e:[C
+
+    array-length v4, v4
+
+    invoke-virtual {v2, v4}, Ljava/util/Random;->nextInt(I)I
+
+    move-result v4
+
+    aget-char v3, v3, v4
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -117,9 +136,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "--"
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     iget-object v1, p0, Lcom/c/a/a/V;->f:Ljava/lang/String;
 
@@ -145,9 +168,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "--"
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     iget-object v1, p0, Lcom/c/a/a/V;->f:Ljava/lang/String;
 
@@ -180,25 +207,6 @@
     iput-object p1, p0, Lcom/c/a/a/V;->l:Lcom/c/a/a/S;
 
     return-void
-
-    :cond_0
-    sget-object v3, Lcom/c/a/a/V;->e:[C
-
-    sget-object v4, Lcom/c/a/a/V;->e:[C
-
-    array-length v4, v4
-
-    invoke-virtual {v2, v4}, Ljava/util/Random;->nextInt(I)I
-
-    move-result v4
-
-    aget-char v3, v3, v4
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
 .end method
 
 .method private a(Ljava/lang/String;)Ljava/lang/String;
@@ -289,9 +297,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "Content-Type: "
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     invoke-direct {p0, p1}, Lcom/c/a/a/V;->a(Ljava/lang/String;)Ljava/lang/String;
 
@@ -323,9 +335,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "Content-Disposition: form-data; name=\""
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -369,9 +385,13 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "Content-Disposition: form-data; name=\""
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -488,8 +508,17 @@
 
     const/4 v2, -0x1
 
-    if-ne v1, v2, :cond_0
+    if-eq v1, v2, :cond_0
 
+    iget-object v2, p0, Lcom/c/a/a/V;->k:Ljava/io/ByteArrayOutputStream;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v0, v3, v1}, Ljava/io/ByteArrayOutputStream;->write([BII)V
+
+    goto :goto_0
+
+    :cond_0
     iget-object v0, p0, Lcom/c/a/a/V;->k:Ljava/io/ByteArrayOutputStream;
 
     sget-object v1, Lcom/c/a/a/V;->c:[B
@@ -505,15 +534,6 @@
     invoke-static {v0}, Lcom/c/a/a/a;->a(Ljava/io/OutputStream;)V
 
     return-void
-
-    :cond_0
-    iget-object v2, p0, Lcom/c/a/a/V;->k:Ljava/io/ByteArrayOutputStream;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v2, v0, v3, v1}, Ljava/io/ByteArrayOutputStream;->write([BII)V
-
-    goto :goto_0
 .end method
 
 .method public a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
@@ -652,20 +672,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/c/a/a/V;->h:[B
-
-    array-length v0, v0
-
-    int-to-long v3, v0
-
-    add-long v0, v1, v3
-
-    :goto_1
-    return-wide v0
-
-    :cond_0
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -680,18 +688,30 @@
 
     cmp-long v0, v4, v6
 
-    if-gez v0, :cond_1
+    if-gez v0, :cond_0
 
     const-wide/16 v0, -0x1
 
-    goto :goto_1
+    :goto_1
+    return-wide v0
 
-    :cond_1
+    :cond_0
     add-long v0, v1, v4
 
     move-wide v1, v0
 
     goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Lcom/c/a/a/V;->h:[B
+
+    array-length v0, v0
+
+    int-to-long v3, v0
+
+    add-long v0, v1, v3
+
+    goto :goto_1
 .end method
 
 .method public getContentType()Lorg/apache/http/Header;
@@ -703,9 +723,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "multipart/form-data; boundary="
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     iget-object v3, p0, Lcom/c/a/a/V;->f:Ljava/lang/String;
 
@@ -784,8 +808,19 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/c/a/a/W;
+
+    invoke-virtual {v0, p1}, Lcom/c/a/a/W;->a(Ljava/io/OutputStream;)V
+
+    goto :goto_0
+
+    :cond_0
     iget-object v0, p0, Lcom/c/a/a/V;->h:[B
 
     invoke-virtual {p1, v0}, Ljava/io/OutputStream;->write([B)V
@@ -797,15 +832,4 @@
     invoke-direct {p0, v0}, Lcom/c/a/a/V;->a(I)V
 
     return-void
-
-    :cond_0
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/c/a/a/W;
-
-    invoke-virtual {v0, p1}, Lcom/c/a/a/W;->a(Ljava/io/OutputStream;)V
-
-    goto :goto_0
 .end method

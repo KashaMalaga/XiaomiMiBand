@@ -1,4 +1,4 @@
-.class Lcn/com/smartdevices/bracelet/v;
+.class final Lcn/com/smartdevices/bracelet/v;
 .super Lcom/b/a/c/a;
 
 

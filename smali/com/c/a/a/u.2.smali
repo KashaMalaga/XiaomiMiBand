@@ -6,34 +6,18 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/c/a/a/t;
+.field final synthetic a:Ljava/lang/Object;
 
-.field private final synthetic b:I
-
-.field private final synthetic c:[Lorg/apache/http/Header;
-
-.field private final synthetic d:Ljava/lang/Throwable;
-
-.field private final synthetic e:Ljava/lang/String;
-
-.field private final synthetic f:Ljava/lang/Object;
+.field final synthetic b:Lcom/c/a/a/t;
 
 
 # direct methods
-.method constructor <init>(Lcom/c/a/a/t;I[Lorg/apache/http/Header;Ljava/lang/Throwable;Ljava/lang/String;Ljava/lang/Object;)V
+.method constructor <init>(Lcom/c/a/a/t;Ljava/lang/Object;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/c/a/a/u;->a:Lcom/c/a/a/t;
+    iput-object p1, p0, Lcom/c/a/a/u;->b:Lcom/c/a/a/t;
 
-    iput p2, p0, Lcom/c/a/a/u;->b:I
-
-    iput-object p3, p0, Lcom/c/a/a/u;->c:[Lorg/apache/http/Header;
-
-    iput-object p4, p0, Lcom/c/a/a/u;->d:Ljava/lang/Throwable;
-
-    iput-object p5, p0, Lcom/c/a/a/u;->e:Ljava/lang/String;
-
-    iput-object p6, p0, Lcom/c/a/a/u;->f:Ljava/lang/Object;
+    iput-object p2, p0, Lcom/c/a/a/u;->a:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,21 +29,27 @@
 .method public run()V
     .locals 6
 
-    iget-object v0, p0, Lcom/c/a/a/u;->a:Lcom/c/a/a/t;
+    iget-object v0, p0, Lcom/c/a/a/u;->b:Lcom/c/a/a/t;
 
-    invoke-static {v0}, Lcom/c/a/a/t;->a(Lcom/c/a/a/t;)Lcom/c/a/a/p;
+    iget-object v0, v0, Lcom/c/a/a/t;->e:Lcom/c/a/a/p;
 
-    move-result-object v0
+    iget-object v1, p0, Lcom/c/a/a/u;->b:Lcom/c/a/a/t;
 
-    iget v1, p0, Lcom/c/a/a/u;->b:I
+    iget v1, v1, Lcom/c/a/a/t;->b:I
 
-    iget-object v2, p0, Lcom/c/a/a/u;->c:[Lorg/apache/http/Header;
+    iget-object v2, p0, Lcom/c/a/a/u;->b:Lcom/c/a/a/t;
 
-    iget-object v3, p0, Lcom/c/a/a/u;->d:Ljava/lang/Throwable;
+    iget-object v2, v2, Lcom/c/a/a/t;->c:[Lorg/apache/http/Header;
 
-    iget-object v4, p0, Lcom/c/a/a/u;->e:Ljava/lang/String;
+    iget-object v3, p0, Lcom/c/a/a/u;->b:Lcom/c/a/a/t;
 
-    iget-object v5, p0, Lcom/c/a/a/u;->f:Ljava/lang/Object;
+    iget-object v3, v3, Lcom/c/a/a/t;->d:Ljava/lang/Throwable;
+
+    iget-object v4, p0, Lcom/c/a/a/u;->b:Lcom/c/a/a/t;
+
+    iget-object v4, v4, Lcom/c/a/a/t;->a:Ljava/lang/String;
+
+    iget-object v5, p0, Lcom/c/a/a/u;->a:Ljava/lang/Object;
 
     invoke-virtual/range {v0 .. v5}, Lcom/c/a/a/p;->a(I[Lorg/apache/http/Header;Ljava/lang/Throwable;Ljava/lang/String;Ljava/lang/Object;)V
 

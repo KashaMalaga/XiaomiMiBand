@@ -24,7 +24,7 @@
 
     new-instance v0, Lcn/com/smartdevices/bracelet/gps/services/A;
 
-    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/gps/services/A;-><init>(Lcn/com/smartdevices/bracelet/gps/services/y;Lcn/com/smartdevices/bracelet/gps/services/A;)V
+    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/gps/services/A;-><init>(Lcn/com/smartdevices/bracelet/gps/services/y;Lcn/com/smartdevices/bracelet/gps/services/z;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/y;->c:Lcn/com/smartdevices/bracelet/gps/services/a/c;
 
@@ -87,9 +87,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "mGPSLocationManager.isEnabled = "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -213,7 +217,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/gps/services/A;-><init>(Lcn/com/smartdevices/bracelet/gps/services/y;Lcn/com/smartdevices/bracelet/gps/services/A;)V
+    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/gps/services/A;-><init>(Lcn/com/smartdevices/bracelet/gps/services/y;Lcn/com/smartdevices/bracelet/gps/services/z;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/y;->c:Lcn/com/smartdevices/bracelet/gps/services/a/c;
 

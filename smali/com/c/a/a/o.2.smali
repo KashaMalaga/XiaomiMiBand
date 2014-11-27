@@ -203,10 +203,11 @@
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 
+    :goto_1
     move-object v0, v1
 
     :cond_0
-    :goto_1
+    :goto_2
     if-eqz v0, :cond_2
 
     throw v0
@@ -226,8 +227,6 @@
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
 
-    move-object v0, v1
-
     goto :goto_1
 
     :catch_1
@@ -237,7 +236,7 @@
 
     move-object v0, v1
 
-    goto :goto_1
+    goto :goto_2
 
     :cond_2
     return-void

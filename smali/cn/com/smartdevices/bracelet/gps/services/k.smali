@@ -219,11 +219,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-eqz v0, :cond_2
 
-    return-object v1
-
-    :cond_2
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -245,6 +242,9 @@
     invoke-virtual {v1, v0}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
 
     goto :goto_0
+
+    :cond_2
+    return-object v1
 .end method
 
 .method public a(I)V
@@ -302,7 +302,7 @@
 
     move-result v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/services/n;->a(Lcn/com/smartdevices/bracelet/gps/services/n;I)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/services/n;->a(Lcn/com/smartdevices/bracelet/gps/services/n;I)I
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/k;->d:Lcn/com/smartdevices/bracelet/gps/services/n;
 
@@ -328,7 +328,7 @@
 
     iget v1, p1, Lcn/com/smartdevices/bracelet/gps/algorithm/RunParameter;->mBaseParaPaceSpeed:F
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/services/n;->a(Lcn/com/smartdevices/bracelet/gps/services/n;F)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/services/n;->a(Lcn/com/smartdevices/bracelet/gps/services/n;F)F
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/k;->d:Lcn/com/smartdevices/bracelet/gps/services/n;
 
@@ -340,9 +340,13 @@
 
     new-instance v1, Ljava/lang/StringBuilder;
 
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v2, "updateSummeryInfo totalDis = "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/services/k;->d:Lcn/com/smartdevices/bracelet/gps/services/n;
 
@@ -487,7 +491,7 @@
 
     iget v2, v0, Lcn/com/smartdevices/bracelet/gps/services/l;->h:F
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/gps/services/n;->b(Lcn/com/smartdevices/bracelet/gps/services/n;F)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/gps/services/n;->b(Lcn/com/smartdevices/bracelet/gps/services/n;F)F
 
     :cond_2
     :goto_1
@@ -499,9 +503,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "updateSummeryInfo kiloMeterInfo mIndex = "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     iget v3, v0, Lcn/com/smartdevices/bracelet/gps/services/l;->k:I
 
@@ -565,7 +573,7 @@
 
     invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/gps/services/h;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :cond_3
     iget v1, v0, Lcn/com/smartdevices/bracelet/gps/services/l;->h:F
@@ -584,7 +592,7 @@
 
     iget v2, v0, Lcn/com/smartdevices/bracelet/gps/services/l;->h:F
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/gps/services/n;->c(Lcn/com/smartdevices/bracelet/gps/services/n;F)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/gps/services/n;->c(Lcn/com/smartdevices/bracelet/gps/services/n;F)F
 
     goto :goto_1
 .end method
@@ -656,9 +664,13 @@
 
     new-instance v2, Ljava/lang/StringBuilder;
 
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v3, "updatePointGroupCount totalPointCnt ="
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -762,7 +774,7 @@
 
     iget-wide v1, p1, Lcn/com/smartdevices/bracelet/gps/model/c;->f:D
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/gps/services/n;->a(Lcn/com/smartdevices/bracelet/gps/services/n;D)V
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/gps/services/n;->a(Lcn/com/smartdevices/bracelet/gps/services/n;D)D
 
     goto :goto_0
 
@@ -783,7 +795,7 @@
 
     iget-wide v1, p1, Lcn/com/smartdevices/bracelet/gps/model/c;->f:D
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/gps/services/n;->b(Lcn/com/smartdevices/bracelet/gps/services/n;D)V
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/gps/services/n;->b(Lcn/com/smartdevices/bracelet/gps/services/n;D)D
 
     goto :goto_0
 .end method
@@ -1073,16 +1085,8 @@
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-eqz v0, :cond_1
 
-    :cond_1
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_2
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
@@ -1106,6 +1110,13 @@
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
+
+    :cond_1
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
 .end method
 
 .method public u()F
@@ -1153,7 +1164,7 @@
 
     div-long/2addr v1, v3
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/gps/services/n;->a(Lcn/com/smartdevices/bracelet/gps/services/n;J)V
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/gps/services/n;->a(Lcn/com/smartdevices/bracelet/gps/services/n;J)J
 
     return-void
 .end method
