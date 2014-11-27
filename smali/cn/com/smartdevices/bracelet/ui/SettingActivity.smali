@@ -17,6 +17,23 @@
 
 
 # virtual methods
+.method public extendSetting(Landroid/view/View;)V
+    .locals 2
+    .param p1, "view"    # Landroid/view/View;
+
+    .prologue
+    new-instance v0, Landroid/content/Intent;
+
+    const-class v1, Lcn/com/smartdevices/bracelet/ExtendActivity;
+
+    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .local v0, "intent":Landroid/content/Intent;
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->startActivity(Landroid/content/Intent;)V
+
+    return-void
+.end method
+
 .method protected onActivityResult(IILandroid/content/Intent;)V
     .locals 4
 
