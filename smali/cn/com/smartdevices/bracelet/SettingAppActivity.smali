@@ -881,7 +881,7 @@
     invoke-virtual {v0, v2}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
     .line 116
-    const-string v0, "GMT+00"
+    const-string v0, "GMT+01"
 
     invoke-static {v0}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
 
@@ -1476,7 +1476,7 @@
 
     .prologue
     .line 211
-    const-string v1, "GMT+00"
+    const-string v1, "GMT+01"
 
     invoke-static {v1}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
 
@@ -1539,7 +1539,7 @@
 
     .prologue
     .line 221
-    const-string v1, "GMT+00"
+    const-string v1, "GMT+01"
 
     invoke-static {v1}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
 
