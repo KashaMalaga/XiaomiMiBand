@@ -131,7 +131,7 @@
 
     .line 58
     .local v5, "minutes":I
-    const-string v8, "GMT+00"
+    const-string v8, "GMT+01"
 
     invoke-static {v8}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
 

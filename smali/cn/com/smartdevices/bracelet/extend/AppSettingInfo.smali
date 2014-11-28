@@ -79,12 +79,12 @@
     iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->notifyTime:Z
 
     .line 21
-    const-wide/32 v0, 0x1808580
+    const-wide/32 v0, 0x1B77400
 
     iput-wide v0, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->timeStartWork:J
 
     .line 22
-    const-wide/32 v0, 0x4ef6d80
+    const-wide/32 v0, 0x5265C00
 
     iput-wide v0, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->timeEndWork:J
 
