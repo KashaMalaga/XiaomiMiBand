@@ -24,10 +24,10 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 218
+    .line 221
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider$DBHelper;->this$0:Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider;
 
-    .line 219
+    .line 222
     const-string v0, "appdb"
 
     const/4 v1, 0x0
@@ -36,7 +36,7 @@
 
     invoke-direct {p0, p2, v0, v1, v2}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
 
-    .line 220
+    .line 223
     return-void
 .end method
 
@@ -47,12 +47,12 @@
     .param p1, "db"    # Landroid/database/sqlite/SQLiteDatabase;
 
     .prologue
-    .line 223
-    const-string v0, "create table app_setting(_id integer primary key autoincrement, name text, notify_started integer, vibro_started integer, vibro_count integer, vibro_delay integer, color_started integer, color_value integer, color_count integer, color_delay integer, time_start integer, time_end integer);"
+    .line 226
+    const-string v0, "create table app_setting(_id integer primary key autoincrement, name text, notify_started integer, vibro_started integer, vibro_count integer, vibro_delay integer, color_started integer, color_value integer, color_count integer, color_delay integer, time_started integer, time_start integer, time_end integer);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 224
+    .line 227
     return-void
 .end method
 
@@ -63,6 +63,6 @@
     .param p3, "newVersion"    # I
 
     .prologue
-    .line 227
+    .line 230
     return-void
 .end method

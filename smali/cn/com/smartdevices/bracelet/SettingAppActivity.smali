@@ -22,6 +22,16 @@
 
 .field private needCreate:Z
 
+.field private textClockE:Landroid/widget/TextClock;
+
+.field private textClockS:Landroid/widget/TextClock;
+
+.field private timeCheckedView:Landroid/widget/CheckedTextView;
+
+.field timeSetListener1:Landroid/app/TimePickerDialog$OnTimeSetListener;
+
+.field timeSetListener2:Landroid/app/TimePickerDialog$OnTimeSetListener;
+
 .field private vibroCheckedView:Landroid/widget/CheckedTextView;
 
 .field private vibroCountView:Landroid/widget/EditText;
@@ -34,7 +44,7 @@
     .locals 1
 
     .prologue
-    .line 22
+    .line 32
     const-string v0, "app.key"
 
     sput-object v0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->APP_KEY:Ljava/lang/String;
@@ -46,20 +56,34 @@
     .locals 1
 
     .prologue
-    .line 20
+    .line 30
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    .line 31
+    .line 42
     new-instance v0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
     invoke-direct {v0}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;-><init>()V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
-    .line 32
+    .line 43
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->needCreate:Z
+
+    .line 230
+    new-instance v0, Lcn/com/smartdevices/bracelet/SettingAppActivity$3;
+
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/SettingAppActivity$3;-><init>(Lcn/com/smartdevices/bracelet/SettingAppActivity;)V
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->timeSetListener1:Landroid/app/TimePickerDialog$OnTimeSetListener;
+
+    .line 243
+    new-instance v0, Lcn/com/smartdevices/bracelet/SettingAppActivity$4;
+
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/SettingAppActivity$4;-><init>(Lcn/com/smartdevices/bracelet/SettingAppActivity;)V
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->timeSetListener2:Landroid/app/TimePickerDialog$OnTimeSetListener;
 
     return-void
 .end method
@@ -69,8 +93,41 @@
     .param p0, "x0"    # Lcn/com/smartdevices/bracelet/SettingAppActivity;
 
     .prologue
-    .line 20
+    .line 30
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->colorValueView:Lcn/com/smartdevices/bracelet/extend/colorpickerview/view/ColorPanelView;
+
+    return-object v0
+.end method
+
+.method static synthetic access$100(Lcn/com/smartdevices/bracelet/SettingAppActivity;)Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
+    .locals 1
+    .param p0, "x0"    # Lcn/com/smartdevices/bracelet/SettingAppActivity;
+
+    .prologue
+    .line 30
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
+
+    return-object v0
+.end method
+
+.method static synthetic access$200(Lcn/com/smartdevices/bracelet/SettingAppActivity;)Landroid/widget/TextClock;
+    .locals 1
+    .param p0, "x0"    # Lcn/com/smartdevices/bracelet/SettingAppActivity;
+
+    .prologue
+    .line 30
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->textClockS:Landroid/widget/TextClock;
+
+    return-object v0
+.end method
+
+.method static synthetic access$300(Lcn/com/smartdevices/bracelet/SettingAppActivity;)Landroid/widget/TextClock;
+    .locals 1
+    .param p0, "x0"    # Lcn/com/smartdevices/bracelet/SettingAppActivity;
+
+    .prologue
+    .line 30
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->textClockE:Landroid/widget/TextClock;
 
     return-object v0
 .end method
@@ -82,7 +139,7 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 134
+    .line 165
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
@@ -98,7 +155,7 @@
     :goto_0
     invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setNotifyColor(Z)V
 
-    .line 135
+    .line 166
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->colorCheckedView:Landroid/widget/CheckedTextView;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
@@ -109,10 +166,10 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
-    .line 136
+    .line 167
     return-void
 
-    .line 134
+    .line 165
     :cond_0
     const/4 v0, 0x0
 
@@ -124,7 +181,7 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 104
+    .line 135
     new-instance v0, Lcn/com/smartdevices/bracelet/extend/colorpickerview/dialog/ColorPickerDialog;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->colorValueView:Lcn/com/smartdevices/bracelet/extend/colorpickerview/view/ColorPanelView;
@@ -135,18 +192,18 @@
 
     invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/extend/colorpickerview/dialog/ColorPickerDialog;-><init>(Landroid/content/Context;I)V
 
-    .line 106
+    .line 137
     .local v0, "colorDialog":Lcn/com/smartdevices/bracelet/extend/colorpickerview/dialog/ColorPickerDialog;
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/extend/colorpickerview/dialog/ColorPickerDialog;->setAlphaSliderVisible(Z)V
 
-    .line 107
+    .line 138
     const-string v1, "Pick a Color!"
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/extend/colorpickerview/dialog/ColorPickerDialog;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 109
+    .line 140
     const/4 v1, -0x1
 
     const v2, 0x104000a
@@ -161,7 +218,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/extend/colorpickerview/dialog/ColorPickerDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 122
+    .line 153
     const/4 v1, -0x2
 
     const/high16 v2, 0x1040000
@@ -176,92 +233,93 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/extend/colorpickerview/dialog/ColorPickerDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 130
+    .line 161
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/extend/colorpickerview/dialog/ColorPickerDialog;->show()V
 
-    .line 131
+    .line 162
     return-void
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
-    .locals 10
+    .locals 11
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    const/4 v9, 0x1
-
-    const/4 v2, 0x0
-
-    const/4 v8, 0x0
-
-    .line 36
+    .line 47
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 38
+    .line 49
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/SettingAppActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    sget-object v3, Lcn/com/smartdevices/bracelet/SettingAppActivity;->APP_KEY:Ljava/lang/String;
+    sget-object v2, Lcn/com/smartdevices/bracelet/SettingAppActivity;->APP_KEY:Ljava/lang/String;
 
-    invoke-virtual {v0, v3}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->app:Ljava/lang/String;
 
-    .line 40
+    .line 51
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/SettingAppActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const-string v3, "mks_setting_app"
+    const-string v2, "mks_setting_app"
 
-    const-string v4, "layout"
+    const-string v3, "layout"
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/SettingAppActivity;->getPackageName()Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v4
 
-    invoke-virtual {v0, v3, v4, v5}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+    invoke-virtual {v0, v2, v3, v4}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
-    move-result v7
+    move-result v10
 
-    .line 41
-    .local v7, "resourceId":I
-    invoke-virtual {p0, v7}, Lcn/com/smartdevices/bracelet/SettingAppActivity;->setContentView(I)V
+    .line 52
+    .local v10, "resourceId":I
+    invoke-virtual {p0, v10}, Lcn/com/smartdevices/bracelet/SettingAppActivity;->setContentView(I)V
 
-    .line 44
+    .line 55
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->app:Ljava/lang/String;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->app:Ljava/lang/String;
 
-    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setPackageName(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setPackageName(Ljava/lang/String;)V
 
-    .line 46
+    .line 56
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setNotifyStarted(Z)V
+
+    .line 58
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v3, Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider;->APP_CONTENT_URI:Landroid/net/Uri;
+    sget-object v2, Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider;->APP_CONTENT_URI:Landroid/net/Uri;
 
-    invoke-virtual {v3}, Landroid/net/Uri;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v3, "/"
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->app:Ljava/lang/String;
+    const-string v2, "/"
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->app:Ljava/lang/String;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -273,196 +331,198 @@
 
     move-result-object v1
 
-    .line 47
+    .line 59
     .local v1, "uri":Landroid/net/Uri;
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/SettingAppActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    move-object v3, v2
+    const/4 v2, 0x0
 
-    move-object v4, v2
+    const/4 v3, 0x0
 
-    move-object v5, v2
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
-    move-result-object v6
+    move-result-object v7
 
-    .line 48
-    .local v6, "cursor":Landroid/database/Cursor;
-    if-eqz v6, :cond_1
+    .line 60
+    .local v7, "cursor":Landroid/database/Cursor;
+    if-eqz v7, :cond_1
 
-    .line 50
-    if-eqz v6, :cond_0
+    .line 62
+    if-eqz v7, :cond_0
 
     :try_start_0
-    invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
+    invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 51
+    .line 63
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
     const-string v2, "name"
 
-    invoke-interface {v6, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    invoke-interface {v7, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v2
 
-    invoke-interface {v6, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    invoke-interface {v7, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setPackageName(Ljava/lang/String;)V
 
-    .line 52
+    .line 65
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
-    const-string v0, "notify_started"
+    const-string v0, "vibro_started"
 
-    invoke-interface {v6, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    invoke-interface {v7, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v0
 
-    invoke-interface {v6, v0}, Landroid/database/Cursor;->getInt(I)I
+    invoke-interface {v7, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    move v0, v8
+    const/4 v0, 0x0
 
     :goto_0
-    invoke-virtual {v2, v0}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setNotifyStarted(Z)V
-
-    .line 53
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
-
-    const-string v0, "vibro_started"
-
-    invoke-interface {v6, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result v0
-
-    invoke-interface {v6, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    move v0, v8
-
-    :goto_1
     invoke-virtual {v2, v0}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setNotifyVibro(Z)V
 
-    .line 54
+    .line 66
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
     const-string v2, "vibro_count"
 
-    invoke-interface {v6, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    invoke-interface {v7, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v2
 
-    invoke-interface {v6, v2}, Landroid/database/Cursor;->getInt(I)I
+    invoke-interface {v7, v2}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v2
 
     invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setCountVibro(I)V
 
-    .line 55
+    .line 67
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
     const-string v2, "vibro_delay"
 
-    invoke-interface {v6, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    invoke-interface {v7, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v2
 
-    invoke-interface {v6, v2}, Landroid/database/Cursor;->getInt(I)I
+    invoke-interface {v7, v2}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v2
 
     invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setDelayVibro(I)V
 
-    .line 57
+    .line 69
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
     const-string v0, "color_started"
 
-    invoke-interface {v6, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    invoke-interface {v7, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v0
 
-    invoke-interface {v6, v0}, Landroid/database/Cursor;->getInt(I)I
+    invoke-interface {v7, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v0
 
-    if-nez v0, :cond_4
+    if-nez v0, :cond_3
 
-    move v0, v8
+    const/4 v0, 0x0
 
-    :goto_2
+    :goto_1
     invoke-virtual {v2, v0}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setNotifyColor(Z)V
 
-    .line 58
+    .line 70
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
     const-string v2, "color_value"
 
-    invoke-interface {v6, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    invoke-interface {v7, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v2
 
-    invoke-interface {v6, v2}, Landroid/database/Cursor;->getInt(I)I
+    invoke-interface {v7, v2}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v2
 
     invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setColor(I)V
 
-    .line 59
+    .line 71
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
     const-string v2, "color_count"
 
-    invoke-interface {v6, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    invoke-interface {v7, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v2
 
-    invoke-interface {v6, v2}, Landroid/database/Cursor;->getInt(I)I
+    invoke-interface {v7, v2}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v2
 
     invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setCountColor(I)V
 
-    .line 60
+    .line 72
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
     const-string v2, "color_delay"
 
-    invoke-interface {v6, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    invoke-interface {v7, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v2
 
-    invoke-interface {v6, v2}, Landroid/database/Cursor;->getInt(I)I
+    invoke-interface {v7, v2}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v2
 
     invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setDelayColor(I)V
 
-    .line 62
+    .line 74
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
+
+    const-string v0, "time_started"
+
+    invoke-interface {v7, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v0
+
+    invoke-interface {v7, v0}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    const/4 v0, 0x0
+
+    :goto_2
+    invoke-virtual {v2, v0}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setNotifyTime(Z)V
+
+    .line 75
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
     const-string v2, "time_start"
 
-    invoke-interface {v6, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    invoke-interface {v7, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v2
 
-    invoke-interface {v6, v2}, Landroid/database/Cursor;->getInt(I)I
+    invoke-interface {v7, v2}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v2
 
@@ -470,16 +530,16 @@
 
     invoke-virtual {v0, v2, v3}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setTimeStartWork(J)V
 
-    .line 63
+    .line 76
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
     const-string v2, "time_end"
 
-    invoke-interface {v6, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    invoke-interface {v7, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v2
 
-    invoke-interface {v6, v2}, Landroid/database/Cursor;->getInt(I)I
+    invoke-interface {v7, v2}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v2
 
@@ -487,24 +547,24 @@
 
     invoke-virtual {v0, v2, v3}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setTimeEndWork(J)V
 
-    .line 64
+    .line 77
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->needCreate:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 68
+    .line 81
     :cond_0
-    if-eqz v6, :cond_1
+    if-eqz v7, :cond_1
 
-    .line 69
-    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+    .line 82
+    invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 70
-    const/4 v6, 0x0
+    .line 83
+    const/4 v7, 0x0
 
-    .line 75
+    .line 88
     :cond_1
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/SettingAppActivity;->getWindow()Landroid/view/Window;
 
@@ -526,7 +586,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 77
+    .line 90
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/SettingAppActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -545,7 +605,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->vibroCheckedView:Landroid/widget/CheckedTextView;
 
-    .line 78
+    .line 91
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/SettingAppActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -564,7 +624,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->vibroCountView:Landroid/widget/EditText;
 
-    .line 79
+    .line 92
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/SettingAppActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -583,7 +643,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->vibroDelayView:Landroid/widget/EditText;
 
-    .line 81
+    .line 94
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->vibroCheckedView:Landroid/widget/CheckedTextView;
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
@@ -594,7 +654,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
-    .line 82
+    .line 95
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->vibroCountView:Landroid/widget/EditText;
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
@@ -609,7 +669,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 83
+    .line 96
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->vibroDelayView:Landroid/widget/EditText;
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
@@ -624,7 +684,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 86
+    .line 99
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/SettingAppActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -643,7 +703,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->colorCheckedView:Landroid/widget/CheckedTextView;
 
-    .line 87
+    .line 100
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/SettingAppActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -662,7 +722,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->colorValueView:Lcn/com/smartdevices/bracelet/extend/colorpickerview/view/ColorPanelView;
 
-    .line 88
+    .line 101
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/SettingAppActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -681,7 +741,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->colorCountView:Landroid/widget/EditText;
 
-    .line 89
+    .line 102
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/SettingAppActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
@@ -700,7 +760,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->colorDelayView:Landroid/widget/EditText;
 
-    .line 91
+    .line 104
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->colorCheckedView:Landroid/widget/CheckedTextView;
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
@@ -711,7 +771,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
-    .line 92
+    .line 105
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->colorValueView:Lcn/com/smartdevices/bracelet/extend/colorpickerview/view/ColorPanelView;
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
@@ -722,7 +782,7 @@
 
     invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/extend/colorpickerview/view/ColorPanelView;->setColor(I)V
 
-    .line 93
+    .line 106
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->colorCountView:Landroid/widget/EditText;
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
@@ -737,7 +797,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 94
+    .line 107
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->colorDelayView:Landroid/widget/EditText;
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
@@ -752,38 +812,223 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 96
+    .line 110
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/SettingAppActivity;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v0
+
+    const-string v2, "TIME_STARTED"
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->findViewWithTag(Ljava/lang/Object;)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/CheckedTextView;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->timeCheckedView:Landroid/widget/CheckedTextView;
+
+    .line 111
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/SettingAppActivity;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v0
+
+    const-string v2, "TIME_ONE"
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->findViewWithTag(Ljava/lang/Object;)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextClock;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->textClockS:Landroid/widget/TextClock;
+
+    .line 112
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/SettingAppActivity;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v0
+
+    const-string v2, "TIME_TWO"
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->findViewWithTag(Ljava/lang/Object;)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextClock;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->textClockE:Landroid/widget/TextClock;
+
+    .line 115
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->timeCheckedView:Landroid/widget/CheckedTextView;
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
+
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->isNotifyTime()Z
+
+    move-result v2
+
+    invoke-virtual {v0, v2}, Landroid/widget/CheckedTextView;->setChecked(Z)V
+
+    .line 116
+    const-string v0, "GMT+00"
+
+    invoke-static {v0}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/GregorianCalendar;->getInstance(Ljava/util/TimeZone;)Ljava/util/Calendar;
+
+    move-result-object v6
+
+    .line 117
+    .local v6, "calendar":Ljava/util/Calendar;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->getTimeStartWork()J
+
+    move-result-wide v2
+
+    invoke-virtual {v6, v2, v3}, Ljava/util/Calendar;->setTimeInMillis(J)V
+
+    .line 118
+    const/16 v0, 0xb
+
+    invoke-virtual {v6, v0}, Ljava/util/Calendar;->get(I)I
+
+    move-result v8
+
+    .line 119
+    .local v8, "hours":I
+    const/16 v0, 0xc
+
+    invoke-virtual {v6, v0}, Ljava/util/Calendar;->get(I)I
+
+    move-result v9
+
+    .line 120
+    .local v9, "minutes":I
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->textClockS:Landroid/widget/TextClock;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ":"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Landroid/widget/TextClock;->setFormat24Hour(Ljava/lang/CharSequence;)V
+
+    .line 122
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->getTimeEndWork()J
+
+    move-result-wide v2
+
+    invoke-virtual {v6, v2, v3}, Ljava/util/Calendar;->setTimeInMillis(J)V
+
+    .line 123
+    const/16 v0, 0xb
+
+    invoke-virtual {v6, v0}, Ljava/util/Calendar;->get(I)I
+
+    move-result v8
+
+    .line 124
+    const/16 v0, 0xc
+
+    invoke-virtual {v6, v0}, Ljava/util/Calendar;->get(I)I
+
+    move-result v9
+
+    .line 125
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->textClockE:Landroid/widget/TextClock;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ":"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Landroid/widget/TextClock;->setFormat24Hour(Ljava/lang/CharSequence;)V
+
+    .line 127
     return-void
 
+    .line 65
+    .end local v6    # "calendar":Ljava/util/Calendar;
+    .end local v8    # "hours":I
+    .end local v9    # "minutes":I
     :cond_2
-    move v0, v9
+    const/4 v0, 0x1
 
-    .line 52
     goto/16 :goto_0
 
+    .line 69
     :cond_3
-    move v0, v9
+    const/4 v0, 0x1
 
-    .line 53
     goto/16 :goto_1
 
+    .line 74
     :cond_4
-    move v0, v9
+    const/4 v0, 0x1
 
-    .line 57
     goto/16 :goto_2
 
-    .line 68
+    .line 81
     :catchall_0
     move-exception v0
 
-    if-eqz v6, :cond_5
+    if-eqz v7, :cond_5
 
-    .line 69
-    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+    .line 82
+    invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 70
-    const/4 v6, 0x0
+    .line 83
+    const/4 v7, 0x0
 
     :cond_5
     throw v0
@@ -800,7 +1045,7 @@
 
     const/4 v4, 0x0
 
-    .line 140
+    .line 171
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
     iget-object v5, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->vibroCountView:Landroid/widget/EditText;
@@ -819,7 +1064,7 @@
 
     invoke-virtual {v2, v5}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setCountVibro(I)V
 
-    .line 141
+    .line 172
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
     iget-object v5, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->vibroDelayView:Landroid/widget/EditText;
@@ -838,7 +1083,7 @@
 
     invoke-virtual {v2, v5}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setDelayVibro(I)V
 
-    .line 143
+    .line 174
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
     iget-object v5, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->colorValueView:Lcn/com/smartdevices/bracelet/extend/colorpickerview/view/ColorPanelView;
@@ -849,7 +1094,7 @@
 
     invoke-virtual {v2, v5}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setColor(I)V
 
-    .line 144
+    .line 175
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
     iget-object v5, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->colorCountView:Landroid/widget/EditText;
@@ -868,7 +1113,7 @@
 
     invoke-virtual {v2, v5}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setCountColor(I)V
 
-    .line 145
+    .line 176
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
     iget-object v5, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->colorDelayView:Landroid/widget/EditText;
@@ -887,12 +1132,12 @@
 
     invoke-virtual {v2, v5}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setDelayColor(I)V
 
-    .line 147
+    .line 178
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 148
+    .line 179
     .local v0, "contentValues":Landroid/content/ContentValues;
     const-string v2, "name"
 
@@ -904,7 +1149,7 @@
 
     invoke-virtual {v0, v2, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 149
+    .line 180
     const-string v5, "notify_started"
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
@@ -924,7 +1169,7 @@
 
     invoke-virtual {v0, v5, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 151
+    .line 182
     const-string v5, "vibro_started"
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
@@ -944,7 +1189,7 @@
 
     invoke-virtual {v0, v5, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 152
+    .line 183
     const-string v2, "vibro_count"
 
     iget-object v5, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
@@ -959,7 +1204,7 @@
 
     invoke-virtual {v0, v2, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 153
+    .line 184
     const-string v2, "vibro_delay"
 
     iget-object v5, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
@@ -974,70 +1219,90 @@
 
     invoke-virtual {v0, v2, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 155
-    const-string v2, "color_started"
+    .line 186
+    const-string v5, "color_started"
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
+
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->isNotifyColor()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    move v2, v3
+
+    :goto_2
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v5, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+
+    .line 187
+    const-string v2, "color_value"
 
     iget-object v5, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
-    invoke-virtual {v5}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->isNotifyColor()Z
+    invoke-virtual {v5}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->getColor()I
 
     move-result v5
 
-    if-eqz v5, :cond_2
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    :goto_2
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v5
 
-    move-result-object v3
+    invoke-virtual {v0, v2, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
-
-    .line 156
-    const-string v2, "color_value"
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
-
-    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->getColor()I
-
-    move-result v3
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
-
-    .line 157
+    .line 188
     const-string v2, "color_count"
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
+    iget-object v5, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
-    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->getCountColor()I
+    invoke-virtual {v5}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->getCountColor()I
 
-    move-result v3
+    move-result v5
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v3
+    move-result-object v5
 
-    invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+    invoke-virtual {v0, v2, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 158
+    .line 189
     const-string v2, "color_delay"
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
+    iget-object v5, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
-    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->getDelayColor()I
+    invoke-virtual {v5}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->getDelayColor()I
 
-    move-result v3
+    move-result v5
 
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v2, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+
+    .line 191
+    const-string v2, "time_started"
+
+    iget-object v5, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
+
+    invoke-virtual {v5}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->isNotifyTime()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_3
+
+    :goto_3
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 160
+    .line 192
     const-string v2, "time_start"
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
@@ -1052,7 +1317,7 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 161
+    .line 193
     const-string v2, "time_end"
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
@@ -1067,12 +1332,12 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 163
+    .line 195
     iget-boolean v2, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->needCreate:Z
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_4
 
-    .line 164
+    .line 196
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/SettingAppActivity;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
@@ -1081,33 +1346,39 @@
 
     invoke-virtual {v2, v3, v0}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
-    .line 170
-    :goto_3
+    .line 202
+    :goto_4
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/SettingAppActivity;->finish()V
 
-    .line 171
+    .line 203
     return-void
 
     :cond_0
     move v2, v4
 
-    .line 149
+    .line 180
     goto/16 :goto_0
 
     :cond_1
     move v2, v4
 
-    .line 151
+    .line 182
     goto/16 :goto_1
 
     :cond_2
-    move v3, v4
+    move v2, v4
 
-    .line 155
+    .line 186
     goto :goto_2
 
-    .line 166
     :cond_3
+    move v3, v4
+
+    .line 191
+    goto :goto_3
+
+    .line 198
+    :cond_4
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1146,7 +1417,7 @@
 
     move-result-object v1
 
-    .line 167
+    .line 199
     .local v1, "uri":Landroid/net/Uri;
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/SettingAppActivity;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1154,7 +1425,175 @@
 
     invoke-virtual {v2, v1, v0, v6, v6}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    goto :goto_3
+    goto :goto_4
+.end method
+
+.method public timeChange(Landroid/view/View;)V
+    .locals 2
+    .param p1, "view"    # Landroid/view/View;
+
+    .prologue
+    .line 206
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->isNotifyTime()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setNotifyTime(Z)V
+
+    .line 207
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->timeCheckedView:Landroid/widget/CheckedTextView;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->isNotifyTime()Z
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/CheckedTextView;->setChecked(Z)V
+
+    .line 208
+    return-void
+
+    .line 206
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public timeChangeOne(Landroid/view/View;)V
+    .locals 7
+    .param p1, "view"    # Landroid/view/View;
+
+    .prologue
+    .line 211
+    const-string v1, "GMT+00"
+
+    invoke-static {v1}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/GregorianCalendar;->getInstance(Ljava/util/TimeZone;)Ljava/util/Calendar;
+
+    move-result-object v6
+
+    .line 212
+    .local v6, "calendar":Ljava/util/Calendar;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->getTimeStartWork()J
+
+    move-result-wide v1
+
+    invoke-virtual {v6, v1, v2}, Ljava/util/Calendar;->setTimeInMillis(J)V
+
+    .line 213
+    const/16 v1, 0xb
+
+    invoke-virtual {v6, v1}, Ljava/util/Calendar;->get(I)I
+
+    move-result v3
+
+    .line 214
+    .local v3, "hours":I
+    const/16 v1, 0xc
+
+    invoke-virtual {v6, v1}, Ljava/util/Calendar;->get(I)I
+
+    move-result v4
+
+    .line 216
+    .local v4, "minutes":I
+    new-instance v0, Landroid/app/TimePickerDialog;
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->timeSetListener1:Landroid/app/TimePickerDialog$OnTimeSetListener;
+
+    invoke-static {p0}, Landroid/text/format/DateFormat;->is24HourFormat(Landroid/content/Context;)Z
+
+    move-result v5
+
+    move-object v1, p0
+
+    invoke-direct/range {v0 .. v5}, Landroid/app/TimePickerDialog;-><init>(Landroid/content/Context;Landroid/app/TimePickerDialog$OnTimeSetListener;IIZ)V
+
+    .line 217
+    .local v0, "dialog":Landroid/app/Dialog;
+    invoke-virtual {v0}, Landroid/app/Dialog;->show()V
+
+    .line 218
+    return-void
+.end method
+
+.method public timeChangeTwo(Landroid/view/View;)V
+    .locals 7
+    .param p1, "view"    # Landroid/view/View;
+
+    .prologue
+    .line 221
+    const-string v1, "GMT+00"
+
+    invoke-static {v1}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/GregorianCalendar;->getInstance(Ljava/util/TimeZone;)Ljava/util/Calendar;
+
+    move-result-object v6
+
+    .line 222
+    .local v6, "calendar":Ljava/util/Calendar;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->getTimeEndWork()J
+
+    move-result-wide v1
+
+    invoke-virtual {v6, v1, v2}, Ljava/util/Calendar;->setTimeInMillis(J)V
+
+    .line 223
+    const/16 v1, 0xb
+
+    invoke-virtual {v6, v1}, Ljava/util/Calendar;->get(I)I
+
+    move-result v3
+
+    .line 224
+    .local v3, "hours":I
+    const/16 v1, 0xc
+
+    invoke-virtual {v6, v1}, Ljava/util/Calendar;->get(I)I
+
+    move-result v4
+
+    .line 226
+    .local v4, "minutes":I
+    new-instance v0, Landroid/app/TimePickerDialog;
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->timeSetListener2:Landroid/app/TimePickerDialog$OnTimeSetListener;
+
+    invoke-static {p0}, Landroid/text/format/DateFormat;->is24HourFormat(Landroid/content/Context;)Z
+
+    move-result v5
+
+    move-object v1, p0
+
+    invoke-direct/range {v0 .. v5}, Landroid/app/TimePickerDialog;-><init>(Landroid/content/Context;Landroid/app/TimePickerDialog$OnTimeSetListener;IIZ)V
+
+    .line 227
+    .local v0, "dialog":Landroid/app/Dialog;
+    invoke-virtual {v0}, Landroid/app/Dialog;->show()V
+
+    .line 228
+    return-void
 .end method
 
 .method public vibroChange(Landroid/view/View;)V
@@ -1162,7 +1601,7 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 99
+    .line 130
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
@@ -1178,7 +1617,7 @@
     :goto_0
     invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setNotifyVibro(Z)V
 
-    .line 100
+    .line 131
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->vibroCheckedView:Landroid/widget/CheckedTextView;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
@@ -1189,10 +1628,10 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/CheckedTextView;->setChecked(Z)V
 
-    .line 101
+    .line 132
     return-void
 
-    .line 99
+    .line 130
     :cond_0
     const/4 v0, 0x0
 

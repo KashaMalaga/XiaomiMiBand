@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 122
+    .line 153
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity$2;->this$0:Lcn/com/smartdevices/bracelet/SettingAppActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,6 +42,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 127
+    .line 158
     return-void
 .end method

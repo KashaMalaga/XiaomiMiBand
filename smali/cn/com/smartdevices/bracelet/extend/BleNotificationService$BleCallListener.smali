@@ -15,5 +15,8 @@
 
 
 # virtual methods
-.method public abstract onFinish()V
+.method public abstract isCanceled(Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;)Z
+.end method
+
+.method public abstract onFinish(Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;)V
 .end method

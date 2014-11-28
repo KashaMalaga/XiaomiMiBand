@@ -33,7 +33,7 @@
     .locals 0
 
     .prologue
-    .line 156
+    .line 188
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/extend/AppsAdapter$ViewHolder;->this$0:Lcn/com/smartdevices/bracelet/extend/AppsAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

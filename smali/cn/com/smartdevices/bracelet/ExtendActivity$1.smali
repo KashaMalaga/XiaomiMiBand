@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 25
+    .line 32
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/ExtendActivity$1;->this$0:Lcn/com/smartdevices/bracelet/ExtendActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +52,7 @@
     .end annotation
 
     .prologue
-    .line 29
+    .line 36
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -60,7 +60,7 @@
 
     check-cast v0, Lcn/com/smartdevices/bracelet/extend/AppsAdapter$ViewHolder;
 
-    .line 30
+    .line 37
     .local v0, "holder":Lcn/com/smartdevices/bracelet/extend/AppsAdapter$ViewHolder;
     invoke-virtual {p1, p3}, Landroid/widget/AdapterView;->getItemAtPosition(I)Ljava/lang/Object;
 
@@ -68,7 +68,7 @@
 
     check-cast v2, Landroid/content/pm/ResolveInfo;
 
-    .line 32
+    .line 39
     .local v2, "resolveInfo":Landroid/content/pm/ResolveInfo;
     new-instance v1, Landroid/content/Intent;
 
@@ -82,7 +82,7 @@
 
     invoke-direct {v1, v3, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 33
+    .line 40
     .local v1, "intent":Landroid/content/Intent;
     sget-object v3, Lcn/com/smartdevices/bracelet/SettingAppActivity;->APP_KEY:Ljava/lang/String;
 
@@ -92,11 +92,13 @@
 
     invoke-virtual {v1, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 34
+    .line 41
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/ExtendActivity$1;->this$0:Lcn/com/smartdevices/bracelet/ExtendActivity;
 
-    invoke-virtual {v3, v1}, Lcn/com/smartdevices/bracelet/ExtendActivity;->startActivity(Landroid/content/Intent;)V
+    const/4 v4, 0x1
 
-    .line 82
+    invoke-virtual {v3, v1, v4}, Lcn/com/smartdevices/bracelet/ExtendActivity;->startActivityForResult(Landroid/content/Intent;I)V
+
+    .line 89
     return-void
 .end method

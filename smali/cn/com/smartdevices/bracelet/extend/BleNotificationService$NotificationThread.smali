@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 93
+    .line 137
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/extend/BleNotificationService$NotificationThread;->this$0:Lcn/com/smartdevices/bracelet/extend/BleNotificationService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
     .param p2, "x1"    # Lcn/com/smartdevices/bracelet/extend/BleNotificationService$1;
 
     .prologue
-    .line 93
+    .line 137
     invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/extend/BleNotificationService$NotificationThread;-><init>(Lcn/com/smartdevices/bracelet/extend/BleNotificationService;)V
 
     return-void
@@ -52,7 +52,7 @@
     .locals 4
 
     .prologue
-    .line 96
+    .line 140
     :goto_0
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/extend/BleNotificationService$NotificationThread;->this$0:Lcn/com/smartdevices/bracelet/extend/BleNotificationService;
 
@@ -63,14 +63,14 @@
 
     if-nez v1, :cond_1
 
-    .line 97
+    .line 141
     const-string v1, "BleNotificationService"
 
     const-string v2, "NotificationThread iterator"
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 99
+    .line 143
     :try_start_0
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/extend/BleNotificationService$NotificationThread;->this$0:Lcn/com/smartdevices/bracelet/extend/BleNotificationService;
 
@@ -82,22 +82,22 @@
 
     if-nez v1, :cond_0
 
-    .line 100
+    .line 144
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/extend/BleNotificationService$NotificationThread;->this$0:Lcn/com/smartdevices/bracelet/extend/BleNotificationService;
 
     iget-object v1, v1, Lcn/com/smartdevices/bracelet/extend/BleNotificationService;->queue:Ljava/util/concurrent/BlockingQueue;
 
-    invoke-interface {v1}, Ljava/util/concurrent/BlockingQueue;->take()Ljava/lang/Object;
+    invoke-interface {v1}, Ljava/util/concurrent/BlockingQueue;->peek()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
-    .line 101
+    .line 145
     .local v0, "appSettingInfo":Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
     if-eqz v0, :cond_0
 
-    .line 102
+    .line 146
     const-string v1, "BleNotificationService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -142,7 +142,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 103
+    .line 147
     new-instance v1, Lcn/com/smartdevices/bracelet/a/BleNotificationTask;
 
     const/4 v2, 0x0
@@ -153,9 +153,9 @@
 
     invoke-direct {v1, v2, v0, v3}, Lcn/com/smartdevices/bracelet/a/BleNotificationTask;-><init>(Lcn/com/smartdevices/bracelet/a/b;Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;Lcn/com/smartdevices/bracelet/extend/BleNotificationService$BleCallListener;)V
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/a/BleNotificationTask;->d()V
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/a/BleNotificationTask;->c()V
 
-    .line 106
+    .line 150
     .end local v0    # "appSettingInfo":Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
     :cond_0
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/extend/BleNotificationService$NotificationThread;->this$0:Lcn/com/smartdevices/bracelet/extend/BleNotificationService;
@@ -167,11 +167,11 @@
 
     if-eqz v1, :cond_2
 
-    .line 114
+    .line 158
     :cond_1
     return-void
 
-    .line 109
+    .line 153
     :cond_2
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/extend/BleNotificationService$NotificationThread;->this$0:Lcn/com/smartdevices/bracelet/extend/BleNotificationService;
 
@@ -184,7 +184,7 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 110
+    .line 154
     :try_start_1
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/extend/BleNotificationService$NotificationThread;->this$0:Lcn/com/smartdevices/bracelet/extend/BleNotificationService;
 
@@ -195,7 +195,7 @@
 
     invoke-virtual {v1}, Ljava/lang/Object;->wait()V
 
-    .line 111
+    .line 155
     monitor-exit v2
 
     goto :goto_0
@@ -212,7 +212,7 @@
     :try_end_2
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 112
+    .line 156
     :catch_0
     move-exception v1
 

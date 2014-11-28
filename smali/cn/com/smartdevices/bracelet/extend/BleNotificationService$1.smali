@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 122
+    .line 161
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/extend/BleNotificationService$1;->this$0:Lcn/com/smartdevices/bracelet/extend/BleNotificationService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -36,11 +36,113 @@
 
 
 # virtual methods
-.method public onFinish()V
-    .locals 2
+.method public isCanceled(Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;)Z
+    .locals 4
+    .param p1, "appSettingInfo"    # Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
     .prologue
-    .line 126
+    .line 175
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/extend/BleNotificationService$1;->this$0:Lcn/com/smartdevices/bracelet/extend/BleNotificationService;
+
+    iget-object v1, v1, Lcn/com/smartdevices/bracelet/extend/BleNotificationService;->queue:Ljava/util/concurrent/BlockingQueue;
+
+    invoke-interface {v1, p1}, Ljava/util/concurrent/BlockingQueue;->contains(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    const/4 v0, 0x1
+
+    .line 176
+    .local v0, "flag":Z
+    :goto_0
+    const-string v1, "BleNotificationService"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "BleNotificationService appSettingInfo = "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->getPackageName()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, " is cancel = "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 177
+    return v0
+
+    .line 175
+    .end local v0    # "flag":Z
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public onFinish(Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;)V
+    .locals 3
+    .param p1, "appSettingInfo"    # Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
+
+    .prologue
+    .line 164
+    const-string v0, "BleNotificationService"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "BleNotificationService appSettingInfo  = "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " finish remove"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 165
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/extend/BleNotificationService$1;->this$0:Lcn/com/smartdevices/bracelet/extend/BleNotificationService;
 
     # getter for: Lcn/com/smartdevices/bracelet/extend/BleNotificationService;->queryThread:Ljava/lang/Thread;
@@ -50,7 +152,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 127
+    .line 166
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/extend/BleNotificationService$1;->this$0:Lcn/com/smartdevices/bracelet/extend/BleNotificationService;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/extend/BleNotificationService;->queue:Ljava/util/concurrent/BlockingQueue;
+
+    invoke-interface {v0, p1}, Ljava/util/concurrent/BlockingQueue;->remove(Ljava/lang/Object;)Z
+
+    .line 167
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/extend/BleNotificationService$1;->this$0:Lcn/com/smartdevices/bracelet/extend/BleNotificationService;
 
     # getter for: Lcn/com/smartdevices/bracelet/extend/BleNotificationService;->queryThread:Ljava/lang/Thread;
@@ -60,7 +169,7 @@
 
     monitor-enter v1
 
-    .line 128
+    .line 168
     :try_start_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/extend/BleNotificationService$1;->this$0:Lcn/com/smartdevices/bracelet/extend/BleNotificationService;
 
@@ -71,14 +180,14 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 129
+    .line 169
     monitor-exit v1
 
-    .line 131
+    .line 171
     :cond_0
     return-void
 
-    .line 129
+    .line 169
     :catchall_0
     move-exception v0
 
