@@ -1,66 +1,56 @@
-.class synthetic Lcn/com/smartdevices/bracelet/gps/ui/u;
-.super Ljava/lang/Object;
-
-
-# static fields
-.field static final synthetic a:[I
+.class public Lcn/com/smartdevices/bracelet/gps/ui/u;
+.super Lcn/com/smartdevices/bracelet/ui/J;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/J;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method protected a()I
+    .locals 1
+
+    const v0, 0x7f030057
+
+    return v0
+.end method
+
+.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 3
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/gps/ui/x;->values()[Lcn/com/smartdevices/bracelet/gps/ui/x;
+    invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/J;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object v0
 
-    array-length v0, v0
+    const v1, 0x7f070103
 
-    new-array v0, v0, [I
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    sput-object v0, Lcn/com/smartdevices/bracelet/gps/ui/u;->a:[I
+    move-result-object v1
 
-    :try_start_0
-    sget-object v0, Lcn/com/smartdevices/bracelet/gps/ui/u;->a:[I
+    new-instance v2, Lcn/com/smartdevices/bracelet/gps/ui/v;
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/gps/ui/x;->a:Lcn/com/smartdevices/bracelet/gps/ui/x;
+    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/gps/ui/v;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/u;)V
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/ui/x;->ordinal()I
+    invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    move-result v1
+    const v1, 0x7f070105
 
-    const/4 v2, 0x1
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_1
+    move-result-object v1
 
-    :goto_0
-    :try_start_1
-    sget-object v0, Lcn/com/smartdevices/bracelet/gps/ui/u;->a:[I
+    new-instance v2, Lcn/com/smartdevices/bracelet/gps/ui/w;
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/gps/ui/x;->c:Lcn/com/smartdevices/bracelet/gps/ui/x;
+    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/gps/ui/w;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/u;)V
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/ui/x;->ordinal()I
+    invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_0
-
-    :goto_1
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_1
-
-    :catch_1
-    move-exception v0
-
-    goto :goto_0
+    return-object v0
 .end method

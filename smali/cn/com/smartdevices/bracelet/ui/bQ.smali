@@ -5,23 +5,7 @@
 # instance fields
 .field private a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-.field private b:Ljava/lang/String;
-
-.field private c:Landroid/view/View;
-
-.field private f:Landroid/view/View;
-
-.field private g:Landroid/view/View;
-
-.field private h:Landroid/view/View;
-
-.field private i:Landroid/widget/TextView;
-
-.field private j:Landroid/widget/TextView;
-
-.field private k:Landroid/widget/TextView;
-
-.field private l:Landroid/widget/TextView;
+.field private b:Landroid/widget/EditText;
 
 
 # direct methods
@@ -33,443 +17,110 @@
     return-void
 .end method
 
-.method private a(Landroid/view/View;)V
-    .locals 1
-
-    const v0, 0x7f070140
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->c:Landroid/view/View;
-
-    const v0, 0x7f070143
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->g:Landroid/view/View;
-
-    const v0, 0x7f070146
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->h:Landroid/view/View;
-
-    const v0, 0x7f070149
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->f:Landroid/view/View;
-
-    const v0, 0x7f070141
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->i:Landroid/widget/TextView;
-
-    const v0, 0x7f070144
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->l:Landroid/widget/TextView;
-
-    const v0, 0x7f070147
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->k:Landroid/widget/TextView;
-
-    const v0, 0x7f07014a
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->j:Landroid/widget/TextView;
-
-    const v0, 0x7f07013f
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const v0, 0x7f070142
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const v0, 0x7f070145
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const v0, 0x7f070148
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    return-void
-.end method
-
-.method private e()V
-    .locals 5
-
-    const v4, 0x7f080010
-
-    const v3, 0x7f08000c
-
-    const/4 v1, 0x4
-
-    const/4 v2, 0x0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->c:Landroid/view/View;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->g:Landroid/view/View;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->h:Landroid/view/View;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->f:Landroid/view/View;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->i:Landroid/widget/TextView;
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/bQ;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->l:Landroid/widget/TextView;
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/bQ;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->k:Landroid/widget/TextView;
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/bQ;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->j:Landroid/widget/TextView;
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/bQ;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getMiliColor()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "BLUE"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->i:Landroid/widget/TextView;
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/bQ;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->c:Landroid/view/View;
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_0
-    :goto_0
-    return-void
-
-    :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getMiliColor()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "ORANGE"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->l:Landroid/widget/TextView;
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/bQ;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->g:Landroid/view/View;
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getMiliColor()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "GREEN"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->k:Landroid/widget/TextView;
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/bQ;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->h:Landroid/view/View;
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getMiliColor()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "RED"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->j:Landroid/widget/TextView;
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/bQ;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->f:Landroid/view/View;
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
-
-    goto :goto_0
-.end method
-
 
 # virtual methods
 .method protected a()I
     .locals 1
 
-    const v0, 0x7f030049
+    const v0, 0x7f030050
 
     return v0
 .end method
 
 .method protected d()V
-    .locals 3
+    .locals 5
 
-    const/16 v0, 0x606
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->nickname:Ljava/lang/String;
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getMiliColor()Ljava/lang/String;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->b:Landroid/widget/EditText;
 
-    move-result-object v1
-
-    const-string v2, "BLUE"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    :cond_0
-    :goto_0
-    new-instance v1, Lcn/com/smartdevices/bracelet/a/l;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v2, v0}, Lcn/com/smartdevices/bracelet/a/l;-><init>(Lcn/com/smartdevices/bracelet/a/b;I)V
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/a/l;->c()V
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/bQ;->e()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->b:Ljava/lang/String;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getMiliColor()Ljava/lang/String;
+    invoke-virtual {v1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/bQ;->dismiss()V
-
-    :goto_1
-    return-void
-
-    :cond_1
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getMiliColor()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "ORANGE"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    const v0, 0x60200
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getMiliColor()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "GREEN"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    const v0, 0x40500
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getMiliColor()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "RED"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    const v0, 0x60102
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    const-string v2, ""
+
+    iput-object v2, v1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->nickname:Ljava/lang/String;
+
+    :goto_0
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    iget-object v1, v1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->nickname:Ljava/lang/String;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/z;->c(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/bQ;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    const v1, 0x7f0c00da
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    :goto_1
+    return-void
+
+    :cond_0
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->b:Landroid/widget/EditText;
+
+    invoke-virtual {v2}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "\\s+"
+
+    const-string v4, ""
+
+    invoke-virtual {v2, v3, v4}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    iput-object v2, v1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->nickname:Ljava/lang/String;
 
     goto :goto_0
 
-    :cond_4
+    :cond_1
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    iget-object v1, v1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->nickname:Ljava/lang/String;
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/bQ;->dismiss()V
+
+    goto :goto_1
+
+    :cond_2
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     const/4 v1, 0x2
@@ -484,9 +135,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/eventbus/EventSettingFragmentUpdate;
+    new-instance v1, Lcn/com/smartdevices/bracelet/eventbus/EventPersonInfoUpdate;
 
-    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/eventbus/EventSettingFragmentUpdate;-><init>()V
+    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/eventbus/EventPersonInfoUpdate;-><init>()V
 
     invoke-virtual {v0, v1}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
 
@@ -495,149 +146,54 @@
     goto :goto_1
 .end method
 
-.method public onClick(Landroid/view/View;)V
-    .locals 2
-
-    invoke-virtual {p1}, Landroid/view/View;->getId()I
-
-    move-result v0
-
-    sparse-switch v0, :sswitch_data_0
-
-    :goto_0
-    return-void
-
-    :sswitch_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    const-string v1, "BLUE"
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->setMiliColor(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/bQ;->d()V
-
-    goto :goto_0
-
-    :sswitch_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    const-string v1, "ORANGE"
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->setMiliColor(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/bQ;->d()V
-
-    goto :goto_0
-
-    :sswitch_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    const-string v1, "GREEN"
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->setMiliColor(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/bQ;->d()V
-
-    goto :goto_0
-
-    :sswitch_3
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    const-string v1, "RED"
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->setMiliColor(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/bQ;->d()V
-
-    goto :goto_0
-
-    :sswitch_data_0
-    .sparse-switch
-        0x7f07013f -> :sswitch_0
-        0x7f070142 -> :sswitch_1
-        0x7f070145 -> :sswitch_2
-        0x7f070148 -> :sswitch_3
-    .end sparse-switch
-.end method
-
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 0
+    .locals 1
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/J;->onCreate(Landroid/os/Bundle;)V
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->h()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     return-void
 .end method
 
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 2
+    .locals 3
 
     invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/J;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
-    move-result-object v0
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->h()Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
     move-result-object v1
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    const v0, 0x7f070168
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getMiliColor()Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->b:Ljava/lang/String;
-
-    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/ui/bQ;->a(Landroid/view/View;)V
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/bQ;->e()V
-
-    return-object v0
-.end method
-
-.method public onDestroy()V
-    .locals 3
-
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/J;->onDestroy()V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/bQ;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    const-string v1, "BraceletLight"
+    check-cast v0, Landroid/widget/EditText;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->b:Landroid/widget/EditText;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->b:Landroid/widget/EditText;
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getMiliColor()Ljava/lang/String;
+    iget-object v2, v2, Lcn/com/smartdevices/bracelet/model/PersonInfo;->nickname:Ljava/lang/String;
 
-    move-result-object v2
+    invoke-virtual {v0, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->b:Landroid/widget/EditText;
 
-    return-void
-.end method
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->b:Landroid/widget/EditText;
 
-.method public onPause()V
-    .locals 1
+    invoke-virtual {v2}, Landroid/widget/EditText;->length()I
 
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/J;->onPause()V
+    move-result v2
 
-    const-string v0, "PageBraceletLight"
+    invoke-virtual {v0, v2}, Landroid/widget/EditText;->setSelection(I)V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->b(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public onResume()V
-    .locals 1
-
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/J;->onResume()V
-
-    const-string v0, "PageBraceletLight"
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->a(Ljava/lang/String;)V
-
-    return-void
+    return-object v1
 .end method

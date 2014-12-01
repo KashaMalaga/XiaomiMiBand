@@ -1,5 +1,8 @@
 .class Lcn/com/smartdevices/bracelet/ui/ch;
-.super Lcom/c/a/a/h;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/util/Comparator;
 
 
 # instance fields
@@ -7,43 +10,38 @@
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;)V
+.method private constructor <init>(Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;)V
     .locals 0
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/ch;->a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
 
-    invoke-direct {p0}, Lcom/c/a/a/h;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;Lcn/com/smartdevices/bracelet/ui/bY;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/ui/ch;-><init>(Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
-    .locals 0
+.method public compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 2
 
-    return-void
-.end method
+    check-cast p1, Lcn/com/smartdevices/bracelet/ui/cf;
 
-.method public onSuccess(I[Lorg/apache/http/Header;[B)V
-    .locals 1
+    check-cast p2, Lcn/com/smartdevices/bracelet/ui/cf;
 
-    if-eqz p3, :cond_0
+    iget v0, p2, Lcn/com/smartdevices/bracelet/ui/cf;->b:I
 
-    new-instance v0, Ljava/lang/String;
+    iget v1, p1, Lcn/com/smartdevices/bracelet/ui/cf;->b:I
 
-    invoke-direct {v0, p3}, Ljava/lang/String;-><init>([B)V
+    sub-int/2addr v0, v1
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/d/g;->b(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/d/h;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/d/h;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    :cond_0
-    return-void
+    return v0
 .end method

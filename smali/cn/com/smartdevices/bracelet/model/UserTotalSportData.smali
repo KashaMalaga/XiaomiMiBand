@@ -102,6 +102,12 @@
 
 
 # virtual methods
+.method public clear()V
+    .locals 0
+
+    return-void
+.end method
+
 .method public isValid()Z
     .locals 2
 

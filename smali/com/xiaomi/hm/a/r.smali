@@ -13,7 +13,7 @@
 
 .field public static final AppTheme:I = 0x7f0e0001
 
-.field public static final AppThemeTint:I = 0x7f0e0018
+.field public static final AppThemeTint:I = 0x7f0e0019
 
 .field public static final BackButton:I = 0x7f0e0017
 
@@ -25,7 +25,7 @@
 
 .field public static final DimPanelBase:I = 0x7f0e0004
 
-.field public static final DimPanelTint:I = 0x7f0e0019
+.field public static final DimPanelTint:I = 0x7f0e001a
 
 .field public static final FwUpgrade:I = 0x7f0e0014
 
@@ -49,13 +49,15 @@
 
 .field public static final MenuPanel:I = 0x7f0e000a
 
-.field public static final MenuPanelTint:I = 0x7f0e001a
+.field public static final MenuPanelTint:I = 0x7f0e001b
 
 .field public static final NoneTransition:I = 0x7f0e0008
 
-.field public static final SportVoteItemText:I = 0x7f0e001b
+.field public static final RightButton:I = 0x7f0e0018
 
-.field public static final Switcher:I = 0x7f0e001c
+.field public static final SportVoteItemText:I = 0x7f0e001c
+
+.field public static final Switcher:I = 0x7f0e001d
 
 .field public static final drawerMenuButton:I = 0x7f0e000d
 

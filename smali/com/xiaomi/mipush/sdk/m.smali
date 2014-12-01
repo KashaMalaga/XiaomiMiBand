@@ -186,7 +186,7 @@
 
     iget-object v2, p0, Lcom/xiaomi/mipush/sdk/m;->b:Landroid/content/Context;
 
-    invoke-static {v2}, Lcom/xiaomi/push/service/C;->c(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/xiaomi/push/service/E;->c(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 

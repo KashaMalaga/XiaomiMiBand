@@ -12,13 +12,13 @@
     <string name="connect_bracelet_now">Menghubungkan…</string>
     <string name="firmware_upgrade">Perbarui</string>
     <string name="bracelet_info_fw_version">"Firmware: %1$s
-Syarat Layanan: %2$s"</string>
+Persyaratan Layanan: %2$s"</string>
     <string name="bracelet_info_mac_address">"Nama: %1$s
 Alamat: %2$s"</string>
     <string name="bracelet_info_deviceid">%s</string>
     <string name="bracelet_info_battery">%s%%</string>
     <string name="app_info_version">"Versi: %1$s
-Syarat Layanan: %2$s"</string>
+Persyaratan Layanan: %2$s"</string>
     <string name="date_today">Hari ini</string>
     <string name="date_yesterday">Kemarin</string>
     <string name="date_this_week">Minggu ini</string>
@@ -29,7 +29,7 @@ Syarat Layanan: %2$s"</string>
     <string name="date_from_to_short">%1$s-%2$s</string>
     <string name="date_month_day">d MMM</string>
     <string name="date_year_month_day">d MMM yyyy</string>
-    <string name="date_month_day_short">%1$d/%2$d</string>
+    <string name="date_month_day_short">%2$d/%1$d</string>
     <string name="date_month_day_week">%1$s %2$s</string>
     <string name="date_month_day_week_short">%1$d.%2$d %3$s</string>
     <string name="date_month">MMMM</string>
@@ -46,7 +46,7 @@ Syarat Layanan: %2$s"</string>
     <string name="goals_push_nine">90% tercapai</string>
     <string name="goals_push_ten">100% tercapai</string>
     <string name="statistic_total">Total</string>
-    <string name="statistic_day_average">Rata-rata harian</string>
+    <string name="statistic_day_average">Rata2 harian</string>
     <string name="statistic_detail">Rincian</string>
     <string name="day_active_detail">Rincian</string>
     <string name="alarm">Alarm</string>
@@ -62,28 +62,28 @@ Syarat Layanan: %2$s"</string>
     <string name="upgrade_tip">Pembaruan tersedia</string>
     <string name="hot_des">Energi</string>
     <string name="noti_bracelet_low_battery_title">Baterai lemah</string>
-    <string name="noti_bracelet_low_battery_title_low">Band telah dimatikan</string>
-    <string name="noti_bracelet_low_battery_content_high">Band memiliki kurang dari 10% daya tersisa.</string>
-    <string name="noti_bracelet_low_battery_content_mid">Anda perlu mengisi daya band Anda.</string>
-    <string name="noti_bracelet_low_battery_content_low">Baterai sangat lemah, Anda perlu mengisi daya band Anda.</string>
+    <string name="noti_bracelet_low_battery_title_low">Gelang telah dimatikan</string>
+    <string name="noti_bracelet_low_battery_content_high">Daya gelang kurang dari 10%.</string>
+    <string name="noti_bracelet_low_battery_content_mid">Anda perlu isi daya gelang Anda.</string>
+    <string name="noti_bracelet_low_battery_content_low">Baterai sangat lemah, Anda perlu isi daya gelang Anda.</string>
     <string name="bt_operation_failed_tips">Bluetooth tidak bekerja dengan benar. Tunggu sebentar dan coba lagi.</string>
-    <string name="multi_devices_info">Pastikan jarak antara Anda dan band lainnya setidaknya 10 meter dan coba lagi.</string>
-    <string name="multi_devices_title">Terlalu banyak band di sekitar</string>
+    <string name="multi_devices_info">Pastikan jarak Anda dan gelang lainnya setidaknya 10 meter dan coba lagi.</string>
+    <string name="multi_devices_title">Banyak gelang di sekitar</string>
     <string name="search_bracelet_again">Coba lagi</string>
-    <string name="search_devices_info">Ikat band ke pergelangan tangan dan dekatkan ke perangkat.</string>
-    <string name="search_bracelet_ok">Band terdeteksi</string>
-    <string name="found_bracelet_info">Saat lampu band mulai kedip, ketuk sensor logam utk pasangkan.</string>
-    <string name="bind_bracelet_ok">Band terpasang</string>
+    <string name="search_devices_info">Ikat gelang ke pergelangan tangan dan dekatkan ke perangkat.</string>
+    <string name="search_bracelet_ok">Gelang terdeteksi</string>
+    <string name="found_bracelet_info">Saat lampu gelang mulai kedip, ketuk sensor logam utk pasangkan.</string>
+    <string name="bind_bracelet_ok">Gelang terpasang</string>
     <string name="device_not_response">Lampu tidak berkedip?</string>
     <string name="action_local_ota">Pilih paket pembaruan</string>
-    <string name="bracelet_not_found_title">Pastikan baterai band telah diisi daya.</string>
-    <string name="bracelet_not_found_info">Coba cari lagi saat Anda lihat salah satu lampu band berkedip warna merah.</string>
+    <string name="bracelet_not_found_title">Pastikan baterai gelang telah diisi daya.</string>
+    <string name="bracelet_not_found_info">Coba cari lagi saat salah satu lampu gelang berkedip warna merah.</string>
     <string name="get_help">Butuh bantuan</string>
     <string name="system_not_support_title">Versi Android terlalu tua</string>
-    <string name="system_not_support_info">Anda perlu perbarui perangkat Anda ke Android 4.4 atau lebih tinggi.</string>
+    <string name="system_not_support_info">Anda perlu perbarui perangkat ke Android 4.4 atau lebih tinggi.</string>
     <string name="system_low_title">Versi Android terlalu tua</string>
-    <string name="system_low_info">Anda perlu perbarui perangkat Anda ke Android 4.4 atau lebih tinggi.</string>
-    <string name="bind_bracelet">Band terpasang</string>
+    <string name="system_low_info">Anda perlu perbarui perangkat ke Android 4.4 atau lebih tinggi.</string>
+    <string name="bind_bracelet">Gelang terpasang</string>
     <string name="bracelet_login_title">Ayo mulai!</string>
     <string name="bracelet_login_info">Gunakan Akun Mi untuk mengatur, melacak, dan mengikuti data kesehatan dan kebugaran Anda.</string>
     <string name="male">Pria</string>
@@ -94,7 +94,7 @@ Syarat Layanan: %2$s"</string>
     <string name="kg">kg</string>
     <string name="new_friend_cancel">Tolak</string>
     <string name="new_friend_accept">Setuju</string>
-    <string name="search_devices_title">Tambah band</string>
+    <string name="search_devices_title">Tambah gelang</string>
     <string name="share_blog_cancel">Batal</string>
     <string name="share_blog_title">Berbagi pembaruan</string>
     <string name="share_blog_share">Berbagi</string>
@@ -107,56 +107,56 @@ Syarat Layanan: %2$s"</string>
     <string name="share_blog_weibo">Weibo</string>
     <string name="distance">Jarak</string>
     <string name="odo">Total jarak</string>
-    <string name="daily_sporty">Rata-rata langkah</string>
+    <string name="daily_sporty">Rata2 langkah</string>
     <string name="km">km</string>
     <string name="cal">kal</string>
     <string name="step">langkah</string>
     <string name="s_mili">Mi Band</string>
     <string name="rename_mili">Nama</string>
-    <string name="reset_mili">Atur ulang band</string>
-    <string name="bind_new_mili">Tambah band baru</string>
+    <string name="reset_mili">Atur ulang gelang</string>
+    <string name="bind_new_mili">Tambah gelang baru</string>
     <string name="state_binded">Telah masuk</string>
     <string name="state_unbinded">Telah keluar</string>
     <string name="state_bind_failed">Tidak dapat tambah akun</string>
     <string name="state_unbind_success">Akun QQ dihapus</string>
     <string name="state_binded_nickname">Ditambahkan Akun QQ %s</string>
-    <string name="unbind_mili">Lepas pemasangan band</string>
+    <string name="unbind_mili">Lepas pemasangan gelang</string>
     <string name="smart_alarm_clock">Alarm</string>
     <string name="exit_login">Keluar</string>
     <string name="exit_login_1">Keluar dari Akun Mi Anda?</string>
     <string name="exit_app">Keluar</string>
     <string name="exit_app_continue">Lanjutkan</string>
-    <string name="exit_app_tips">Band Anda akan dilepas pemasangannya.</string>
-    <string name="set_mili_name">Beri nama band Anda</string>
-    <string name="mili_name">Nama band</string>
+    <string name="exit_app_tips">Gelang akan dilepas pemasangannya.</string>
+    <string name="set_mili_name">Beri nama gelang</string>
+    <string name="mili_name">Nama gelang</string>
     <string name="set_mili_name_ok">Nama tersimpan</string>
-    <string name="set_mili_name_fail">Tidak dapat beri nama band.</string>
+    <string name="set_mili_name_fail">Tidak dapat beri nama gelang.</string>
     <string name="mili_name_too_long">Nama yang dimasukkan terlalu panjang.</string>
-    <string name="mili_rename_fail">Tidak dapat ubah nama band.</string>
-    <string name="mili_unbind_question">Setelah lepas pemasangan, band tidak dapat interaksi atau buka kunci perangkat ini.</string>
+    <string name="mili_rename_fail">Tidak dapat ubah nama gelang.</string>
+    <string name="mili_unbind_question">Setelah lepas pemasangan, gelang tidak dapat interaksi atau buka kunci perangkat ini.</string>
     <string name="share_to_title">Mi Band</string>
     <string name="share_to_content">Berbagi perkembangan Anda.</string>
     <string name="share_goal_tips_succ">Saya mencapai target hari ini!</string>
     <string name="share_goal_tips_fail">Hari yang santai bagi saya.</string>
-    <string name="person_info_goal_info">"Para ahli menyarankan 40 menit olahraga
-atau sekitar 8.000 langkah/hari untuk gaya hidup sehat."</string>
-    <string name="person_info_goal_info_young">"Para ahli menyarankan 60 menit olahraga
-atau sekitar 12.000 langkah/hari untuk gaya hidup sehat."</string>
+    <string name="person_info_goal_info">"Para ahli menyarankan 40 menit olahraga atau
+ sekitar 8.000 langkah/hari untuk gaya hidup sehat."</string>
+    <string name="person_info_goal_info_young">"Para ahli menyarankan 60 menit olahraga atau
+ sekitar 12.000 langkah/hari untuk gaya hidup sehat."</string>
     <string name="set_person_goal">Tetapkan target</string>
     <string name="feedback">Masukan</string>
     <string name="smart_wake_up">Early bird alarm</string>
-    <string name="smart_wake_up_info">Bangunkan saya 30 mnt sebelum waktu alarm yang disetel</string>
+    <string name="smart_wake_up_info">Bangunkan saya 30 mnt sebelum waktu alarm</string>
     <string name="alarm_cycle">Ulangi</string>
     <string name="login_failed_check_sys_time">Tidak dapat masuk. Atur waktu sistem perangkat dengan yang diberikan oleh jaringan.</string>
     <string name="everyday">Tiap hari</string>
     <string name="mon_fri">Hari kerja</string>
     <string name="mon_sat">Sen sampai Sab</string>
-    <string name="device_not_found_not_knocked">Tidak dapat menemukan band. Untuk pasangkan, ketuk bagian logam band saat berkedip.</string>
+    <string name="device_not_found_not_knocked">Tdk dpt menemukan gelang. Utk pasang, ketuk bagian logam gelang saat berkedip.</string>
     <string name="statistic">Statistik</string>
     <string name="mili_unbind_question_content">Setelah lepas, Anda dapat pasangkan dengan yang baru.</string>
-    <string name="mili_reset_info">Atur ulang band ke setelan pabrik?</string>
+    <string name="mili_reset_info">Atur ulang gelang ke setelan pabrik?</string>
     <string name="mili_exit_login_info">Keluar dari Akun Mi Anda?</string>
-    <string name="mili_exit_login_info_continue">Data kebugaran terkini Anda belum disinkron dengan Akun Mi Anda. Jika Anda keluar sekarang, data in akan hilang.</string>
+    <string name="mili_exit_login_info_continue">Data kebugaran terkini Anda belum disinkron dengan Akun Mi Anda. Jika Anda keluar sekarang, data ini akan hilang.</string>
     <string name="modify_signiture">Ubah status</string>
     <string name="modify_signiture_hint">Status</string>
     <string name="modify_nickname">Ubah nama</string>
@@ -164,43 +164,43 @@ atau sekitar 12.000 langkah/hari untuk gaya hidup sehat."</string>
     <string name="confirm">Oke</string>
     <string name="stat_step_daily">Langkah Harian</string>
     <string name="stat_step_distance_daily">Jarak Harian</string>
-    <string name="stat_step_calorie_daily">Terbakar Harian</string>
+    <string name="stat_step_calorie_daily">Bakar Harian</string>
     <string name="stat_step_piece">Langkah</string>
     <string name="stat_step_distance_piece">Jarak</string>
     <string name="stat_step_calorie_piece">Kal</string>
     <string name="stat_step_walk_distance">Jarak Jalan</string>
     <string name="stat_step_run_distance">Jarak Lari</string>
-    <string name="stat_step_walk_calorie">Terbakar Jalan</string>
-    <string name="stat_step_run_calorie">Terbakar Lari</string>
+    <string name="stat_step_walk_calorie">Jalan Bakar</string>
+    <string name="stat_step_run_calorie">Lari Bakar</string>
     <string name="stat_step_walk_duration">Waktu Jalan</string>
     <string name="stat_step_run_duration">Waktu Lari</string>
-    <string name="stat_step_average">Rata-rata Langkah</string>
-    <string name="stat_step_distance_average">Rata-rata Jarak</string>
-    <string name="stat_step_calorie_average">Rata-rata Terbakar</string>
-    <string name="stat_step_walk_distance_average">Rata-rata Jarak Jalan</string>
-    <string name="stat_step_run_distance_average">Rata-rata Jarak Lari</string>
-    <string name="stat_step_walk_duration_average">Rata-rata Waktu Jalan</string>
-    <string name="stat_step_run_duration_average">Rata-rata Waktu Lari</string>
-    <string name="stat_step_walk_calories_average">Rata-rata Terbakar Jalan</string>
-    <string name="stat_step_run_calories_average">Rata-rata Terbakar Lari</string>
+    <string name="stat_step_average">Rata2 Langkah</string>
+    <string name="stat_step_distance_average">Rata2 Jarak</string>
+    <string name="stat_step_calorie_average">Rata2 Bakar</string>
+    <string name="stat_step_walk_distance_average">Rata2 Jarak Jalan</string>
+    <string name="stat_step_run_distance_average">Rata2 Jarak Lari</string>
+    <string name="stat_step_walk_duration_average">Rata2 Waktu Jalan</string>
+    <string name="stat_step_run_duration_average">Rata2 Waktu Lari</string>
+    <string name="stat_step_walk_calories_average">Rata2 Jalan Bakar</string>
+    <string name="stat_step_run_calories_average">Rata2 Lari Bakar</string>
     <string name="stat_step_total">Total Langkah</string>
     <string name="stat_step_distance_total">Total Jarak</string>
-    <string name="stat_step_calorie_total">Total Terbakar</string>
-    <string name="stat_sleep">Di tempat tidur</string>
+    <string name="stat_step_calorie_total">Total Bakar</string>
+    <string name="stat_sleep">Tidur</string>
     <string name="stat_sleep_deep">Tidur Lelap</string>
     <string name="stat_sleep_shallow">Tidur Ringan</string>
     <string name="stat_sleep_time">Tertidur pada</string>
     <string name="stat_sleep_rise_time">Bangun pada</string>
     <string name="stat_sleep_wake">Terbangun</string>
-    <string name="stat_sleep_average">Rata-rata Total</string>
-    <string name="stat_sleep_deep_average">Rata-rata Tidur Lelap</string>
-    <string name="stat_sleep_shallow_average">Rata-rata Tidur Ringan</string>
+    <string name="stat_sleep_average">Rata2 Total</string>
+    <string name="stat_sleep_deep_average">Rata2 Tidur Lelap</string>
+    <string name="stat_sleep_shallow_average">Rata2 Tidur Ringan</string>
     <string name="stat_sleep_time_average">Tertidur pada</string>
     <string name="stat_sleep_rise_time_average">Bangun pada</string>
     <string name="stat_sleep_wake_average">Terbangun</string>
     <string name="fw_upgrade_succ">Menunggu…</string>
     <string name="fw_upgrade_failed">Tidak dapat perbarui firmware.</string>
-    <string name="user_agreement">Syarat Layanan dan Kebijakan Privasi</string>
+    <string name="user_agreement">Persyaratan Layanan dan Kebijakan Privasi</string>
     <string name="error_code">Bermasalah</string>
     <string name="alarm_setting">Setelan</string>
     <string name="set_alarm_time">SETEL WAKTU ALARM</string>
@@ -216,28 +216,28 @@ atau sekitar 12.000 langkah/hari untuk gaya hidup sehat."</string>
     <string name="wait">Bekerja…</string>
     <string name="content_too_short">Masukkan isi pesan</string>
     <string name="help">Bantuan</string>
-    <string name="unlock_screen_invalid_helper">Tidak dapat buka kunci perangkat dengan band Anda?</string>
-    <string name="help_title_0">Apakah band Anda terlalu jauh?</string>
-    <string name="help_info_0">Pastikan band dekat dengan perangkat sepanjang proses pemasangan.</string>
-    <string name="help_title_1">Periksa baterai band</string>
-    <string name="help_info_1">Pastikan band terisi daya dan tidak kehabisan daya.</string>
+    <string name="unlock_screen_invalid_helper">Tdk dpt buka kunci perangkat dgn gelang?</string>
+    <string name="help_title_0">Gelang Anda terlalu jauh?</string>
+    <string name="help_info_0">Pastikan gelang dekat dengan perangkat selama proses pemasangan.</string>
+    <string name="help_title_1">Periksa baterai gelang</string>
+    <string name="help_info_1">Pastikan gelang terisi daya dan tidak kehabisan daya.</string>
     <string name="help_title_2">Mulai ulang Bluetooth</string>
     <string name="help_info_2">Mulai ulang Bluetooth dengan mematikannya lalu hidupkan lagi di Setelan.</string>
-    <string name="help_title_3">Band ini telah dipasangkan dengan perangkat lain?</string>
-    <string name="help_info_3">Pastikan band tidak dipasangkan dengan perangkat lain di sekitar.</string>
+    <string name="help_title_3">Gelang ini dipasangkan dgn perangkat lain?</string>
+    <string name="help_info_3">Pastikan gelang tidak dipasangkan dengan perangkat lain di sekitar.</string>
     <string name="get_image_file_fail">Tidak dapat menemukan gambar</string>
     <string name="select_image">Ganti foto profil</string>
     <string name="select_from_camera">Kamera</string>
     <string name="select_from_local">Pilih dari Galeri</string>
-    <string name="fw_upgrade_failed_tips">Tdk dpt perbarui band. Beberapa fitur mungkin tdk dpt bekerja dgn benar.</string>
+    <string name="fw_upgrade_failed_tips">Tdk dpt perbarui gelang. Beberapa fitur mungkin tdk dpt bekerja dgn benar.</string>
     <string name="retry">Coba lagi</string>
     <string name="fw_failed_help_title">Tentang firmware</string>
     <string name="fw_failed_help_title0">Apa itu firmware?</string>
-    <string name="fw_failed_help_tips0">Firmware yaitu perangkat lunak yang diinstal di band untuk memungkinkan band berinteraksi dengan perangkat Anda.</string>
+    <string name="fw_failed_help_tips0">Firmware yaitu perangkat lunak yang diinstal di gelang untuk memungkinkannya berinteraksi dengan perangkat Anda.</string>
     <string name="fw_failed_help_title1">Mengapa saya perlu perbarui firmware?</string>
-    <string name="fw_failed_help_tips1">Pembaruan dapat meningkatkan kinerja band Anda dan bisa memberikan dukungan untuk fitur baru.</string>
+    <string name="fw_failed_help_tips1">Pembaruan dapat meningkatkan kinerja gelang Anda dan bisa memberikan dukungan untuk fitur baru.</string>
     <string name="fw_failed_help_title2">Bermasalah saat memperbarui?</string>
-    <string name="fw_failed_help_tips2">Pastikan baterai band Anda memiliki lebih dari 10% daya tersisa.</string>
+    <string name="fw_failed_help_tips2">Pastikan daya baterai gelang Anda lebih dari 10%.</string>
     <string name="clock_closed">Mati</string>
     <string name="new_version_available">Versi lebih baru tersedia</string>
     <string name="downloading_apk">Mi Band</string>
@@ -254,7 +254,7 @@ atau sekitar 12.000 langkah/hari untuk gaya hidup sehat."</string>
     <string name="apk_uptodate">Anda menggunakan versi terbaru.</string>
     <string name="local_app_failed">Tak dapat peroleh info versi saat ini.</string>
     <string name="checking_new_apk">Memeriksa pembaruan…</string>
-    <string name="please_knock_bracelet">Untuk pasangkan, ketuk band.</string>
+    <string name="please_knock_bracelet">Untuk pasangkan, ketuk gelang.</string>
     <string name="dynamic_title_sleep">Semalam</string>
     <string name="dynamic_title_step">Hari ini</string>
     <string name="dynamic_step_tip">Langkah</string>
@@ -291,10 +291,10 @@ atau sekitar 12.000 langkah/hari untuk gaya hidup sehat."</string>
     <string name="start_weixin">Buka WeChat</string>
     <string name="start_weixin_not_installed">WeChat (tidak terinstal)</string>
     <string name="action_pop_about">Tentang</string>
-    <string name="find_bracelet">Temukan band</string>
-    <string name="light_color">Warna lampu band</string>
+    <string name="find_bracelet">Temukan gelang</string>
+    <string name="light_color">Warna lampu gelang</string>
     <string name="light_color_title">Warna lampu menunjukkan perkembangan olahraga</string>
-    <string name="wear_hand">Posisi band</string>
+    <string name="wear_hand">Posisi gelang</string>
     <string name="left_hand">Tangan kiri</string>
     <string name="right_hand">Tangan kanan</string>
     <string name="unbind">Lepas</string>
@@ -302,41 +302,42 @@ atau sekitar 12.000 langkah/hari untuk gaya hidup sehat."</string>
     <string name="firmware_version">Versi firmware</string>
     <string name="step_per_day"> langkah/hari</string>
     <string name="remain_days_format">Diisi daya %s hari lalu</string>
-    <string name="remain_days_today_format">Diisi daya dalam 24 jam terakhir</string>
+    <string name="remain_days_today_format">Diisi daya 24 jam terakhir</string>
     <string name="blue">Biru</string>
     <string name="red">Merah</string>
     <string name="green">Hijau</string>
     <string name="orange">Jingga</string>
     <string name="fw_upgrade_now">Memperbarui…</string>
+    <string name="please_input_age">Umur</string>
     <string name="your_height">Tinggi</string>
     <string name="your_weight">Berat</string>
     <string name="please_set_sport_goal">Tetapkan target</string>
     <string name="your_gender">Jenis kelamin</string>
     <string name="donot_bind">Pasangkan nanti</string>
     <string name="welcom_back">Selamat datang kembali!</string>
-    <string name="bracelet_not_connected_bat_unknown">Tak ada band terdeteksi</string>
+    <string name="bracelet_not_connected_bat_unknown">Tak ada gelang terdeteksi</string>
     <string name="am">AM</string>
     <string name="pm">PM</string>
     <string name="alarm_ring">ALARM</string>
     <string name="alarm_repeat">Ulangi</string>
     <string name="alarm_repeat_title_format">%s terpilih</string>
-    <string name="alarm_device_not_connect">Anda perlu pasangkan band dengan perangkat ini.</string>
-    <string name="unlock_screen_not_connect">Anda perlu pasangkan band dengan perangkat ini.</string>
+    <string name="alarm_device_not_connect">Anda perlu pasangkan gelang dgn perangkat ini.</string>
+    <string name="unlock_screen_not_connect">Anda perlu pasangkan gelang dgn perangkat ini.</string>
     <string name="unlock_screen_help_tips">Buka kunci perangkat dengan Mi Band Anda.</string>
     <string name="weared_days">Total hari</string>
-    <string name="look_device_list">Temukan band di sekitar</string>
+    <string name="look_device_list">Temukan gelang di sekitar</string>
     <string name="device_list">Perangkat yang tersedia</string>
     <string name="unbinding">Lepas pemasangan…</string>
     <string name="share_sleep_title">Semalam</string>
-    <string name="share_sleep_title_average">Rata-rata tidur</string>
+    <string name="share_sleep_title_average">Rata2 tidur</string>
     <string name="share_sleep_title_daily">Tidur</string>
     <string name="share_step_goal_succ_title_today">Saya mencapai target hari ini!</string>
     <string name="share_step_goal_succ_title">Aku berhasil!</string>
     <string name="share_step_goal_failed_title_today">Hari ini</string>
     <string name="share_step_goal_failed_title">Total</string>
-    <string name="share_step_description">"Berjalan %1$s, membakar %2$skal.
+    <string name="share_step_description">"Jalan %1$s, membakar %2$skal.
 "</string>
-    <string name="share_step_description_run">"Berjalan %1$s, lari %2$s.
+    <string name="share_step_description_run">"Jalan %1$s, lari %2$s.
 Membakar %3$skal.
 "</string>
     <string name="share_step_description_weekly">"%1$s%2$s,
@@ -351,14 +352,14 @@ Membakar %3$s kal. Rekor sebelumnya %5$s langkah, diatur pada %4$s."</string>
     <string name="marathon_format_1">" melampaui %1$s maraton"</string>
     <string name="half_marathon_format_0">" sekitar %1$s setengah maraton"</string>
     <string name="half_marathon_format_1">" melampaui setengah-maraton"</string>
-    <string name="share_continue_goal_format">"Berjalan %1$s, %2$s langkah per hari.
+    <string name="share_continue_goal_format">"Jalan %1$s, %2$s langkah per hari.
 %3$s
 %4$s"</string>
-    <string name="share_continue_goal_format_run">"Berjalan %1$s, lari %2$s, %3$s.
+    <string name="share_continue_goal_format_run">"Jalan %1$s, lari %2$s, %3$s.
 %4$s"</string>
     <string name="share_sleep_description">"Tidur lelap: %1$sj %2$sm | Tidur ringan: %3$sj %4$sm
 Tertidur pada %5$s | Bangun pada %6$s"</string>
-    <string name="share_sleep_description_average">"Rata-rata tidur
+    <string name="share_sleep_description_average">"Rata2 tidur
 Tidur lelap: %1$sj %2$sm | Tidur ringan: %3$sj %4$sm
 Tertidur pada %5$s | Bangun pada %6$s"</string>
     <string name="smart_alarm_notify">Alarm</string>
@@ -370,8 +371,8 @@ Tertidur pada %5$s | Bangun pada %6$s"</string>
     <string name="unlock_screen_set_password_tips_has_set">Pola buka kunci terkonfirmasi.</string>
     <string name="unlock_screen_set_password">Atur pola buka kunci</string>
     <string name="unlock_screen_set_use_bracelet_tips">Konfirmasi pola buka kunci</string>
-    <string name="unlock_screen_set_use_bracelet">Buka kunci perangkat dengan band Anda</string>
-    <string name="unlock_screen_set_success">Anda dapat buka kunci perangkat ini dengan band.</string>
+    <string name="unlock_screen_set_use_bracelet">Buka kunci perangkat dgn gelang</string>
+    <string name="unlock_screen_set_success">Anda dpt buka perangkat ini dgn gelang.</string>
     <string name="unlock_screen_modify_unlock">"Matikan fitur ini kapan saja di
 Setelan > Keamanan."</string>
     <string name="bind_weixin_title">Tambah Akun WeChat</string>
@@ -387,27 +388,27 @@ Setelan > Keamanan."</string>
     <string name="incoming_call_notify">Panggilan masuk</string>
     <string name="incoming_call_notify_tips">Getarkan jika saya belum jawab setelah %s dtk</string>
     <string name="one_week">Minggu ini  </string>
-    <string name="walked">Berjalan </string>
+    <string name="walked">Jalan </string>
     <string name="come_from_xiaomi_bracelet">Mi Band</string>
-    <string name="unlock_screen_invalid">Tidak dapat buka kunci perangkat Anda?</string>
-    <string name="unlock_screen_help_title0">Apakah band Anda terlalu jauh?</string>
+    <string name="unlock_screen_invalid">Tidak dapat buka kunci perangkat?</string>
+    <string name="unlock_screen_help_title0">Gelang Anda terlalu jauh?</string>
     <string name="unlock_screen_help_title1">Mulai ulang Bluetooth</string>
     <string name="unlock_screen_help_title2">Atur ulang Buka kunci Layar</string>
-    <string name="unlock_screen_help_info0">Pastikan band dekat dengan perangkat sepanjang proses pemasangan.</string>
+    <string name="unlock_screen_help_info0">Pastikan gelang dekat dengan perangkat selama proses pemasangan.</string>
     <string name="unlock_screen_help_info1">Mulai ulang Bluetooth dengan mematikannya lalu hidupkan lagi di Setelan.</string>
     <string name="unlock_screen_help_info2">Untuk atur ulang buka kunci layar, pergi ke Setelan > Bluetooth, lalu pilih \"Lupakan\". Kembali ke apl Mi Band dan coba atur Buka kunci Layar lagi.</string>
     <string name="instruction_title">Pelajari lebih lanjut tentang Mi Band</string>
-    <string name="instruction_tip_1">"Lihat perkembangan
-dgn mudah!"</string>
+    <string name="instruction_tip_1">"Lihat kemajuan
+Anda!"</string>
     <string name="instruction_tip_2_1">"Kurang dari 
  1/3 target Anda"</string>
-    <string name="instruction_tip_2_2">"Lebih dr
+    <string name="instruction_tip_2_2">"Lebih dari
 1/3 target Anda"</string>
-    <string name="instruction_tip_2_3">"Lebih dr
+    <string name="instruction_tip_2_3">"Lebih dari
 2/3 target Anda"</string>
     <string name="instruction_tip_2_4">"Target
 tercapai"</string>
-    <string name="instruction_tip_2_5">Melampaui target</string>
+    <string name="instruction_tip_2_5">Target terlampaui</string>
     <string name="instruction_tip_3">Baterai lemah</string>
     <string name="new_record_born">Anda membuat rekor baru!</string>
     <string name="new_record_format_str">"%1$s membakar %2$s kal.
@@ -427,14 +428,14 @@ Bagus sekali!"</string>
     <string name="setting_about_app">Versi apl  </string>
     <string name="stop">Akhiri</string>
     <string name="start">Mulai</string>
-    <string name="no_wear_bracelet">Semalam Anda tidak memakai band Anda.</string>
-    <string name="no_wear_user_modified">Tambah rincian tidur secara manual</string>
-    <string name="dynamic_pull_connect_failed">Tak dapat terhubung</string>
-    <string name="dynamic_pull_connect_failed_hint">Pastikan band memiliki daya yang cukup.</string>
+    <string name="no_wear_bracelet">Semalam Anda tidak memakai gelang.</string>
+    <string name="no_wear_user_modified">Tambah manual rincian tidur</string>
+    <string name="dynamic_pull_connect_failed">Tidak dapat terhubung</string>
+    <string name="dynamic_pull_connect_failed_hint">Pastikan gelang memiliki daya yang cukup.</string>
     <string name="dynamic_pull_not_sync_today">Belum disinkron hari ini</string>
     <string name="dynamic_pull_last_sync_time">Sinkron terakhir %s</string>
     <string name="dynamic_pull_connecting_bracelet">Menghubungkan…</string>
-    <string name="dynamic_pull_sync_after_connected">Memperoleh info dari band Anda</string>
+    <string name="dynamic_pull_sync_after_connected">Memperoleh info dari gelang Anda</string>
     <string name="dynamic_pull_syncing">Menyinkron…</string>
     <string name="dynamic_pull_syncing_progress">Menyinkron (%s%%)</string>
     <string name="dynamic_pull_release_to_sync">Lepas untuk sinkron</string>
@@ -442,15 +443,15 @@ Bagus sekali!"</string>
     <string name="dynamic_pull_update_report">Diperbarui %s item</string>
     <string name="dynamic_pull_sync_error">Tidak dapat sinkron</string>
     <string name="bind_weixin_qrcode_name">Kode QR</string>
-    <string name="mili_exit_login_info_unbind">Jika keluar, akan lepas pemasangan band dengan perangkat ini. </string>
-    <string name="mili_exit_login_info_unlock">Anda tidak dapat buka kunci perangkat ini dengan band karena Anda telah keluar. </string>
+    <string name="mili_exit_login_info_unbind">Jika keluar, akan dilepas pemasangan gelang dengan perangkat ini. </string>
+    <string name="mili_exit_login_info_unlock">Anda tidak dapat buka kunci perangkat ini dengan gelang karena Anda telah keluar. </string>
     <string name="mili_exit_login_info_continue_tip">Keluar dari Akun Mi Anda?</string>
     <string name="mili_exit_login_info_exiting">Keluar…</string>
     <string name="back">Kembali</string>
     <string name="enable_debug_log">Mode debug hidup</string>
     <string name="disable_debug_log">Mode debug mati</string>
-    <string name="fw_upgrade">Memperbarui band Anda</string>
-    <string name="fw_upgrade_tips">Jaga band dekat dengan perangkat saat memperbarui</string>
+    <string name="fw_upgrade">Memperbarui gelang Anda</string>
+    <string name="fw_upgrade_tips">Jaga gelang dekat dengan perangkat saat memperbarui</string>
     <string name="fw_upgrade_progress">Memperbarui %s%%</string>
     <string name="runed">Telah lari</string>
     <string name="share_to_miliao_path">Berbagi dengan</string>
@@ -480,7 +481,7 @@ Anda harus terhubung ke jaringan."</string>
 lalu ketuk \"Ikuti\"."</string>
     <string name="bind_weixin_new_now">Menyinkron…</string>
     <string name="bind_weixin_new_disable_tips">"Untuk berbagi data kebugaran dengan teman Anda,
-tambah Akun WeChat Anda dan ikuti Akun Mi Band Service."</string>
+tambah Akun WeChat Anda dan ikuti Akun Layanan Mi Band."</string>
     <string name="weather_aqi">" | Kualitas udara: %s"</string>
     <string name="weather_description_rain">Hujan</string>
     <string name="weather_description_rain_snow">Hujan es salju</string>
@@ -488,13 +489,13 @@ tambah Akun WeChat Anda dan ikuti Akun Mi Band Service."</string>
     <string name="weather_description_sand">Badai pasir</string>
     <string name="weather_description_fine">Cerah</string>
     <string name="weather_description_cloudy">Berawan</string>
-    <string name="weather_description_overcast">Ramalan</string>
-    <string name="weather_description_fog">Berkabut</string>
-    <string name="weather_description_haze">Berkabut</string>
-    <string name="fw_low_battery_title">Isi daya band sekarang</string>
-    <string name="fw_low_battery_tips">Baterai band harus di atas 10% sebelum diperbarui.</string>
+    <string name="weather_description_overcast">Mendung</string>
+    <string name="weather_description_fog">Kabut</string>
+    <string name="weather_description_haze">Kabut</string>
+    <string name="fw_low_battery_title">Isi daya gelang sekarang</string>
+    <string name="fw_low_battery_tips">Baterai gelang harus di atas 10% sebelum diperbarui.</string>
     <string name="fw_low_battery_view_help">Bantuan</string>
-    <string name="main_ui_share_tips">"Olahraga selama %1$s%2$s hari ini.
+    <string name="main_ui_share_tips">"Hari ini olahraga selama %1$s%2$s.
 %3$s"</string>
     <string name="ran">lari </string>
     <string name="main_ui_sleep_share_tips">"Tidur ringan: %1$s%2$s
@@ -504,18 +505,18 @@ Tertidur pada %3$s | Bangun pada %4$s"</string>
     <string name="discard">Buang</string>
     <string name="discard_alarm_change">Buang perubahan?</string>
     <string name="notify_status_motor">"Bergetar: "</string>
-    <string name="notify_status_motor_notify">Mencari band.</string>
+    <string name="notify_status_motor_notify">Mencari gelang.</string>
     <string name="notify_status_motor_call">Panggilan masuk.</string>
     <string name="notify_status_motor_disconnect">Bluetooth tidak terhubung.</string>
     <string name="notify_status_motor_smart_alarm">Early bird alarm.</string>
     <string name="notify_status_motor_alarm">Alarm.</string>
     <string name="notify_status_motor_goal">Target tercapai!</string>
-    <string name="notify_status_motor_auth">Band terdeteksi.</string>
-    <string name="notify_status_motor_shut_down">Mematikan band.</string>
-    <string name="notify_status_motor_auth_success">Band terpasang.</string>
+    <string name="notify_status_motor_auth">Gelang terdeteksi.</string>
+    <string name="notify_status_motor_shut_down">Mematikan gelang.</string>
+    <string name="notify_status_motor_auth_success">Gelang terpasang.</string>
     <string name="notify_status_motor_test">Pengujian.</string>
     <string name="vibrate_notify">Getar untuk notifikasi</string>
-    <string name="vibrate_notify_tips">Getarkan band saat Anda menerima notifikasi</string>
+    <string name="vibrate_notify_tips">Getarkan gelang saat menerima notifikasi</string>
     <string name="body">Leher</string>
     <string name="wrong_system_time">Waktu sistem perangkat Anda salah.</string>
     <string name="restart_bluetooth_tips">Mulai ulang Bluetooth sekarang.</string>
@@ -532,8 +533,8 @@ Tertidur pada %3$s | Bangun pada %4$s"</string>
     <string name="lab_factory_exercise_state_ready">YA</string>
     <string name="lab_factory_exercise_state_paused">Jeda</string>
     <string name="lab_factory_exercise_state_stopped">Hentikan</string>
-    <string name="lab_factory_sport_monitor_bracelet_offline">Band tidak terhubung</string>
-    <string name="lab_factory_sport_monitor_bracelet_offline_notice">Hubungkan band Anda sebelum mulai %s.</string>
+    <string name="lab_factory_sport_monitor_bracelet_offline">Gelang tidak terhubung</string>
+    <string name="lab_factory_sport_monitor_bracelet_offline_notice">Hubungkan gelang Anda sebelum mulai %s.</string>
     <string name="lab_factory_sport_monitor_cancelled_notice">Sensor akan otomatis lacak %s.</string>
     <string name="lab_factory_sport_monitor_timeout_notice">Tak ada aktivitas terdeteksi.</string>
     <string name="lab_factory_sport_device_preparing">Siap</string>
@@ -578,7 +579,7 @@ Tertidur pada %3$s | Bangun pada %4$s"</string>
     <string name="lab_factory_share_photo_menu_title">Pilih foto dari</string>
     <string name="lab_factory_share_photo_menu_camera">Kamera</string>
     <string name="lab_factory_share_photo_menu_gallery">Galeri</string>
-    <string name="lab_factory_sport_result_cost_cal">Membakar %d Kkal</string>
+    <string name="lab_factory_sport_result_cost_cal">Membakar %d kal</string>
     <string name="lab_factory_sport_pb_desc">Rekor pribadi: %s</string>
     <string name="lab_factory_sport_pb_ropeskipping">Lompat tali</string>
     <string name="lab_factory_sport_pb_situp">Sit up</string>
@@ -591,9 +592,8 @@ Tertidur pada %3$s | Bangun pada %4$s"</string>
     <string name="lab_factory_exit_press_again">Sentuh lagi untuk keluar</string>
     <string name="lab_factory_sport_vote_desc">Pilih olahraga favorit Anda</string>
     <string name="lab_factory_sport_vote_sub_desc">Segera hadir</string>
-    <string name="lab_factory_sport_vote_result_desc">Terima kasih telah beri suara</string>
-    <string name="lab_factory_sport_vote_result_sub_desc">Anda beri suara untuk</string>
-    <string name="lab_factory_sport_without_pb_info">&lt;font color=#f57130>%1$s&lt;/font></string>
+    <string name="lab_factory_sport_vote_result_desc">Terima kasih telah memberi suara</string>
+    <string name="lab_factory_sport_vote_result_sub_desc">Anda memberi suara untuk</string>
     <string name="lab_factory_sport_group_finish_desc">%s berakhir.</string>
     <string name="lab_factory_sport_group_time_cost" formatted="false">%s berakhir, aktivitas berlangsung %s.</string>
     <string name="lab_factory_item_group_sport">AKTIVITAS</string>
@@ -604,19 +604,20 @@ Tertidur pada %3$s | Bangun pada %4$s"</string>
     <string name="lab_factory_sport_continuous_situp">Beruntun</string>
     <string name="lab_factory_sport_accumulate">total %d kali</string>
     <string name="lab_factory_disconnected_reminder">Notifikasi koneksi Bluetooth</string>
-    <string name="lab_factory_disconnected_reminder_tips">Getarkan band jika koneksi Bluetooth hilang</string>
-    <string name="lab_factory_disconnected_reminder_disconnect">Hubungkan band dan coba lagi</string>
+    <string name="lab_factory_disconnected_reminder_tips">Getarkan gelang jika koneksi Bluetooth hilang</string>
+    <string name="lab_factory_disconnected_reminder_disconnect">Hubungkan gelang dan coba lagi</string>
     <string name="sport_running_helper">Bantuan lari</string>
     <string name="sport_share">Berbagi sekarang</string>
     <string name="sport_running_no_gps">Gunakan GPS untuk catat rute Anda.</string>
     <string name="sport_running_set_speed">Atur kecepatan</string>
     <string name="sport_running_speed">Kecepatan</string>
+    <string name="sport_running_real_time_pace">Kecepatan</string>
     <string name="sport_running_pace">Kecepatan</string>
     <string name="sport_running_set_goal">Pengingat target</string>
     <string name="sport_running_set_dist">Pengingat jarak</string>
-    <string name="sport_running_speed_detail">%dkm/j</string>
+    <string name="sport_running_speed_detail">%.0fkm/j</string>
     <string name="sport_running_pace_detail">%s/km</string>
-    <string name="sport_running_distance_detail">%skm</string>
+    <string name="sport_running_distance_detail">%.2fkm</string>
     <string name="sport_running_time_desc">Waktu</string>
     <string name="sport_running_start">Mulai</string>
     <string name="sport_running_gps_turnon">Hidupkan</string>
@@ -628,14 +629,14 @@ Tertidur pada %3$s | Bangun pada %4$s"</string>
     <string name="sport_running_average_speed">Rata-rata</string>
     <string name="sport_running_step">Langkah</string>
     <string name="sport_running_altitude">Ketinggian</string>
-    <string name="sport_running_burn">Terbakar</string>
+    <string name="sport_running_burn">Bakar</string>
     <string name="sport_running_start_time">Mulai</string>
     <string name="sport_running_end_time">Selesai</string>
     <string name="sport_running_history_title">Riwayat</string>
     <string name="sport_running_history_date" formatted="false">%d/%d/%d</string>
     <string name="sport_running_history_no_data">Tak ada data</string>
     <string name="sport_ranking_desc_poor">Anda selesai terakhir (%s).</string>
-    <string name="sport_ranking_desc_normal" formatted="false">Anda mengalahkan <b>%s%</b> dari penguna yang %s.</string>
+    <string name="sport_ranking_desc_normal" formatted="false">Anda mengalahkan <b>%s%</b> penguna yang %s.</string>
     <string name="sport_ranking_desc_great">Bagus sekali!</string>
     <string name="sport_new_record_ropeskipping">Rekor baru</string>
     <string name="percent_mark">%</string>
@@ -644,5 +645,4 @@ Tertidur pada %3$s | Bangun pada %4$s"</string>
     <string name="sport_coming_soon">Segera hadir</string>
     <string name="age">Umur</string>
     <string name="ages">tahun</string>
-    <string name="please_input_age">Umur</string>
 </resources>

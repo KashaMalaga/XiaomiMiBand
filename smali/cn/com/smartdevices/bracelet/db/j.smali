@@ -3,9 +3,9 @@
 
 
 # static fields
-.field public static final a:Ljava/lang/String; = "selfgoal"
+.field public static final a:Ljava/lang/String; = "parterconfig"
 
-.field static final b:Ljava/lang/String; = "CREATE TABLE IF NOT EXISTS selfgoal(_id INTEGER PRIMARY KEY AUTOINCREMENT,value INTEGER,weight INTEGER,reserved1 TEXT,reserved2 TEXT,sync INTEGER DEFAULT 0);"
+.field static final b:Ljava/lang/String; = "CREATE TABLE IF NOT EXISTS parterconfig(_id  INTEGER PRIMARY KEY AUTOINCREMENT,color TEXT,title TEXT,sub_title TEXT,icon ICON,third_app_id TEXT,expire_time INTEGER DEFAULT 0,url TEXT );"
 
 
 # direct methods

@@ -3,5 +3,5 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/xiaomi/push/service/U;Lcom/xiaomi/push/service/U;I)V
+.method public abstract a()V
 .end method

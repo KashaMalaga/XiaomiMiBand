@@ -1,5 +1,5 @@
 .class Lcn/com/smartdevices/bracelet/lab/d;
-.super Lcn/com/smartdevices/bracelet/a/u;
+.super Lcn/com/smartdevices/bracelet/a/v;
 
 
 # instance fields
@@ -16,7 +16,7 @@
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/d;->a:Lcn/com/smartdevices/bracelet/lab/b;
 
-    invoke-direct {p0, p4}, Lcn/com/smartdevices/bracelet/a/u;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
+    invoke-direct {p0, p4}, Lcn/com/smartdevices/bracelet/a/v;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
 
     const/4 v0, 0x0
 

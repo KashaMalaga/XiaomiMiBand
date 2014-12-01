@@ -1,62 +1,83 @@
-.class Lcn/com/smartdevices/bracelet/gps/ui/e;
-.super Landroid/os/Handler;
+.class Lcn/com/smartdevices/bracelet/gps/ui/E;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/widget/SeekBar$OnSeekBarChangeListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/C;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/C;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/e;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/E;->a:Lcn/com/smartdevices/bracelet/gps/ui/C;
 
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public handleMessage(Landroid/os/Message;)V
-    .locals 4
+.method public onProgressChanged(Landroid/widget/SeekBar;IZ)V
+    .locals 6
 
-    iget v0, p1, Landroid/os/Message;->what:I
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/E;->a:Lcn/com/smartdevices/bracelet/gps/ui/C;
 
-    packed-switch v0, :pswitch_data_0
-
-    :goto_0
-    :pswitch_0
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/e;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->a(Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;)Landroid/widget/TextView;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/C;->c(Lcn/com/smartdevices/bracelet/gps/ui/C;)Landroid/widget/TextView;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/e;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/E;->a:Lcn/com/smartdevices/bracelet/gps/ui/C;
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->getApplicationContext()Landroid/content/Context;
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/ui/C;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const-wide/16 v2, 0xed7
+    const v2, 0x7f0c026e
 
-    invoke-static {v1, v2, v3}, Lcn/com/smartdevices/bracelet/lab/c/e;->a(Landroid/content/Context;J)Ljava/lang/String;
+    const/4 v3, 0x1
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    const/4 v4, 0x0
+
+    add-int/lit8 v5, p2, 0x4
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    aput-object v5, v3, v4
+
+    invoke-virtual {v1, v2, v3}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/E;->a:Lcn/com/smartdevices/bracelet/gps/ui/C;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-        :pswitch_0
-    .end packed-switch
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/C;->b(Lcn/com/smartdevices/bracelet/gps/ui/C;)Lcn/com/smartdevices/bracelet/gps/model/RunningReminderInfo;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p2}, Lcn/com/smartdevices/bracelet/gps/model/RunningReminderInfo;->b(I)V
+
+    return-void
+.end method
+
+.method public onStartTrackingTouch(Landroid/widget/SeekBar;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onStopTrackingTouch(Landroid/widget/SeekBar;)V
+    .locals 0
+
+    return-void
 .end method

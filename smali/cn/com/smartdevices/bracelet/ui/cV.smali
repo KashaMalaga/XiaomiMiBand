@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/ShareActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/cS;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/ShareActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/cS;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cV;->a:Lcn/com/smartdevices/bracelet/ui/ShareActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cV;->a:Lcn/com/smartdevices/bracelet/ui/cS;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

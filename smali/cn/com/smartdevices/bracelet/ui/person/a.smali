@@ -72,11 +72,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/d/g;->b(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/d/h;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/f/f;->b(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/f/g;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/d/h;->a()Z
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/f/g;->a()Z
 
     move-result v1
 

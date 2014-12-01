@@ -23,13 +23,13 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->getInstance()Lcn/com/smartdevices/bracelet/lua/LuaManager;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bh;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    move-result-object v0
+    const/4 v1, 0x0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->checkServerLua()V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->a(Z)V
 
     return-void
 .end method

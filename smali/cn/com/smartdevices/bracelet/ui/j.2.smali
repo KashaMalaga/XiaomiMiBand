@@ -32,7 +32,7 @@
 .method protected a()I
     .locals 1
 
-    const v0, 0x7f030028
+    const v0, 0x7f03002c
 
     return v0
 .end method
@@ -60,7 +60,7 @@
 .end method
 
 .method protected d()V
-    .locals 4
+    .locals 5
 
     const/4 v3, 0x1
 
@@ -114,50 +114,60 @@
 
     invoke-virtual {v1, v3}, Landroid/app/DownloadManager$Request;->setVisibleInDownloadsUi(Z)Landroid/app/DownloadManager$Request;
 
-    :try_start_0
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/j;->getActivity()Landroid/app/Activity;
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const v2, 0x7f0c0006
+
+    invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/ui/j;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    sget-object v2, Landroid/os/Environment;->DIRECTORY_DOWNLOADS:Ljava/lang/String;
+    const-string v2, ".apk"
 
-    const-string v3, "apk_upgrade.apk"
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0, v2, v3}, Landroid/app/DownloadManager$Request;->setDestinationInExternalFilesDir(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/app/DownloadManager$Request;
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    :try_start_0
+    sget-object v0, Landroid/os/Environment;->DIRECTORY_DOWNLOADS:Ljava/lang/String;
+
+    invoke-virtual {v1, v0, v2}, Landroid/app/DownloadManager$Request;->setDestinationInExternalPublicDir(Ljava/lang/String;Ljava/lang/String;)Landroid/app/DownloadManager$Request;
     :try_end_0
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
     :goto_0
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/j;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v2, 0x7f0c00f4
-
-    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Landroid/app/DownloadManager$Request;->setTitle(Ljava/lang/CharSequence;)Landroid/app/DownloadManager$Request;
-
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/j;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    const-string v2, "download"
+    const-string v3, "download"
 
-    invoke-virtual {v0, v2}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, v3}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/app/DownloadManager;
 
+    :try_start_1
     invoke-virtual {v0, v1}, Landroid/app/DownloadManager;->enqueue(Landroid/app/DownloadManager$Request;)J
 
-    move-result-wide v0
+    move-result-wide v3
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/u;->d(J)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/u;->e(J)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
+    :goto_1
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/j;->dismiss()V
 
     return-void
@@ -167,13 +177,102 @@
 
     invoke-virtual {v0}, Ljava/lang/IllegalStateException;->printStackTrace()V
 
-    sget-object v0, Landroid/os/Environment;->DIRECTORY_DOWNLOADS:Ljava/lang/String;
-
-    const-string v2, "apk_upgrade"
-
-    invoke-virtual {v1, v0, v2}, Landroid/app/DownloadManager$Request;->setDestinationInExternalPublicDir(Ljava/lang/String;Ljava/lang/String;)Landroid/app/DownloadManager$Request;
-
     goto :goto_0
+
+    :catch_1
+    move-exception v3
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/io/File;->getPath()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, "/"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    :try_start_2
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "file://"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Landroid/app/DownloadManager$Request;->setDestinationUri(Landroid/net/Uri;)Landroid/app/DownloadManager$Request;
+
+    invoke-virtual {v0, v1}, Landroid/app/DownloadManager;->enqueue(Landroid/app/DownloadManager$Request;)J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/u;->e(J)V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
+
+    goto :goto_1
+
+    :catch_2
+    move-exception v0
+
+    const-string v0, "ApkUpgradeFragment"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "upgrade apk failed : "
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_1
 .end method
 
 .method public onCancel(Landroid/content/DialogInterface;)V
@@ -233,7 +332,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/j;->h:Ljava/lang/String;
 
-    const v0, 0x7f0700df
+    const v0, 0x7f0700f7
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

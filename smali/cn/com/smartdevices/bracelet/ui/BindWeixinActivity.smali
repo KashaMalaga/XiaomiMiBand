@@ -468,7 +468,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->o()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->p()Ljava/lang/String;
 
     move-result-object v1
 
@@ -476,7 +476,7 @@
 
     invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/ui/D;-><init>(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;)V
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/d/f;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Lcom/c/a/a/h;)V
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/f/e;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Lcom/c/a/a/h;)V
 
     return-void
 .end method
@@ -561,7 +561,7 @@
 .method private h()V
     .locals 1
 
-    const v0, 0x7f0c0174
+    const v0, 0x7f0c017c
 
     invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/z;->a(Landroid/app/Activity;I)V
 
@@ -649,7 +649,7 @@
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f0c01bc
+    const v0, 0x7f0c01c4
 
     const/4 v1, 0x0
 
@@ -673,7 +673,7 @@
     goto :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x7f07002e
+    .packed-switch 0x7f070031
         :pswitch_1
         :pswitch_0
     .end packed-switch
@@ -684,7 +684,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030001
+    const v0, 0x7f030002
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->setContentView(I)V
 
@@ -755,7 +755,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0c01ac
+    const v1, 0x7f0c01b4
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->getString(I)Ljava/lang/String;
 
@@ -777,7 +777,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->p:Ljava/lang/String;
 
-    const v0, 0x7f07002f
+    const v0, 0x7f070032
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->findViewById(I)Landroid/view/View;
 
@@ -791,7 +791,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f07002e
+    const v0, 0x7f070031
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->findViewById(I)Landroid/view/View;
 
@@ -805,7 +805,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070030
+    const v0, 0x7f070033
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->findViewById(I)Landroid/view/View;
 

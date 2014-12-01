@@ -26,11 +26,11 @@
 
     iget-object v0, p0, Lcom/xiaomi/push/service/f;->a:Lcom/xiaomi/push/service/XMPushService;
 
-    invoke-static {v0}, Lcom/xiaomi/push/service/XMPushService;->e(Lcom/xiaomi/push/service/XMPushService;)Lcom/xiaomi/push/service/z;
+    invoke-static {v0}, Lcom/xiaomi/push/service/XMPushService;->e(Lcom/xiaomi/push/service/XMPushService;)Lcom/xiaomi/push/service/B;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/xiaomi/push/service/z;->quit()Z
+    invoke-virtual {v0}, Lcom/xiaomi/push/service/B;->quit()Z
 
     return-void
 .end method

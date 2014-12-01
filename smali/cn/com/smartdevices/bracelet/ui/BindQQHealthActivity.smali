@@ -5,9 +5,9 @@
 # instance fields
 .field private a:Landroid/os/Handler;
 
-.field private b:Lcn/com/smartdevices/bracelet/c/a;
+.field private b:Lcn/com/smartdevices/bracelet/e/a;
 
-.field private c:Lcn/com/smartdevices/bracelet/c/a/d;
+.field private c:Lcn/com/smartdevices/bracelet/e/a/d;
 
 .field private d:Lcom/tencent/tauth/IUiListener;
 
@@ -39,10 +39,10 @@
     return-void
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/c/a;
+.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/e/a;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->b:Lcn/com/smartdevices/bracelet/c/a;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->b:Lcn/com/smartdevices/bracelet/e/a;
 
     return-object v0
 .end method
@@ -70,9 +70,9 @@
 
     const/4 v3, 0x0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->b:Lcn/com/smartdevices/bracelet/c/a;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->b:Lcn/com/smartdevices/bracelet/e/a;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/c/a;->h()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/a;->h()Z
 
     move-result v0
 
@@ -82,15 +82,15 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/Button;->setText(I)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->b:Lcn/com/smartdevices/bracelet/c/a;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->b:Lcn/com/smartdevices/bracelet/e/a;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/c/a;->g()Lcn/com/smartdevices/bracelet/c/d;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/a;->g()Lcn/com/smartdevices/bracelet/e/d;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/c/d;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/d;->a()Ljava/lang/String;
 
     move-result-object v1
 
@@ -108,7 +108,7 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/c/d;->a()Ljava/lang/String;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/d;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -170,10 +170,10 @@
     return-object v0
 .end method
 
-.method static synthetic d(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/c/a/d;
+.method static synthetic d(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/e/a/d;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->c:Lcn/com/smartdevices/bracelet/c/a/d;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->c:Lcn/com/smartdevices/bracelet/e/a/d;
 
     return-object v0
 .end method
@@ -193,9 +193,9 @@
 
     invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onActivityResult(IILandroid/content/Intent;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->b:Lcn/com/smartdevices/bracelet/c/a;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->b:Lcn/com/smartdevices/bracelet/e/a;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/c/a;->a(IILandroid/content/Intent;)V
+    invoke-virtual {v0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/e/a;->a(IILandroid/content/Intent;)V
 
     return-void
 .end method
@@ -205,7 +205,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const/high16 v0, 0x7f030000
+    const v0, 0x7f030001
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->setContentView(I)V
 
@@ -219,35 +219,35 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/c/a;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/c/a;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/e/a;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/e/a;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->b:Lcn/com/smartdevices/bracelet/c/a;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->b:Lcn/com/smartdevices/bracelet/e/a;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->b:Lcn/com/smartdevices/bracelet/c/a;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->b:Lcn/com/smartdevices/bracelet/e/a;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->d:Lcom/tencent/tauth/IUiListener;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/c/a;->a(Lcom/tencent/tauth/IUiListener;)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/e/a;->a(Lcom/tencent/tauth/IUiListener;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->b:Lcn/com/smartdevices/bracelet/c/a;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->b:Lcn/com/smartdevices/bracelet/e/a;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->e:Lcom/tencent/tauth/IUiListener;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/c/a;->b(Lcom/tencent/tauth/IUiListener;)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/e/a;->b(Lcom/tencent/tauth/IUiListener;)V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/c/a/d;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/c/a/d;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/e/a/d;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/e/a/d;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->c:Lcn/com/smartdevices/bracelet/c/a/d;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->c:Lcn/com/smartdevices/bracelet/e/a/d;
 
-    const v0, 0x7f070029
+    const v0, 0x7f070027
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->findViewById(I)Landroid/view/View;
 
@@ -265,7 +265,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f07002a
+    const v0, 0x7f07002d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->findViewById(I)Landroid/view/View;
 
@@ -289,13 +289,13 @@
 
     const/4 v1, 0x0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->b:Lcn/com/smartdevices/bracelet/c/a;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->b:Lcn/com/smartdevices/bracelet/e/a;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/c/a;->a(Lcom/tencent/tauth/IUiListener;)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/e/a;->a(Lcom/tencent/tauth/IUiListener;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->b:Lcn/com/smartdevices/bracelet/c/a;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->b:Lcn/com/smartdevices/bracelet/e/a;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/c/a;->b(Lcom/tencent/tauth/IUiListener;)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/e/a;->b(Lcom/tencent/tauth/IUiListener;)V
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onDestroy()V
 
@@ -325,9 +325,9 @@
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onResume()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->b:Lcn/com/smartdevices/bracelet/c/a;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->b:Lcn/com/smartdevices/bracelet/e/a;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/c/a;->b()Lcom/tencent/tauth/Tencent;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/a;->b()Lcom/tencent/tauth/Tencent;
 
     move-result-object v0
 
@@ -337,9 +337,9 @@
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->b:Lcn/com/smartdevices/bracelet/c/a;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->b:Lcn/com/smartdevices/bracelet/e/a;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/c/a;->h()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/a;->h()Z
 
     move-result v0
 
@@ -348,9 +348,9 @@
     move v0, v1
 
     :goto_0
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->b:Lcn/com/smartdevices/bracelet/c/a;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->b:Lcn/com/smartdevices/bracelet/e/a;
 
-    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/c/a;->l()Z
+    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/e/a;->l()Z
 
     move-result v3
 
@@ -386,9 +386,9 @@
 
     if-eqz v2, :cond_2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->b:Lcn/com/smartdevices/bracelet/c/a;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->b:Lcn/com/smartdevices/bracelet/e/a;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/c/a;->m()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/a;->m()Z
 
     move-result v0
 
@@ -396,7 +396,7 @@
 
     new-instance v0, Lcn/com/smartdevices/bracelet/ui/m;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/m;-><init>(Lcn/com/smartdevices/bracelet/ui/BaseActivity;)V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/m;-><init>()V
 
     new-instance v1, Lcn/com/smartdevices/bracelet/ui/z;
 
@@ -410,7 +410,7 @@
 
     const-string v2, "Msg"
 
-    const v3, 0x7f0c0202
+    const v3, 0x7f0c0211
 
     invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->getString(I)Ljava/lang/String;
 

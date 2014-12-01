@@ -23,6 +23,8 @@
 
 .field public static final TYPE_ROPESKIPPING_STOP_DATE:Ljava/lang/String; = "syncRopeStopDate"
 
+.field public static final TYPE_RUNNING_STATE:Ljava/lang/String; = "syncRunningState"
+
 .field public static final TYPE_SITUPS_START_DATE:Ljava/lang/String; = "syncSitupsStartDate"
 
 .field public static final TYPE_SITUPS_STATE:Ljava/lang/String; = "syncSitupsState"
@@ -77,9 +79,10 @@
     packed-switch p0, :pswitch_data_0
 
     :goto_0
+    :pswitch_0
     return-object v0
 
-    :pswitch_0
+    :pswitch_1
     invoke-static {}, Lcn/com/smartdevices/bracelet/u;->a()Landroid/content/SharedPreferences;
 
     move-result-object v1
@@ -118,7 +121,7 @@
 
     goto :goto_0
 
-    :pswitch_1
+    :pswitch_2
     invoke-static {}, Lcn/com/smartdevices/bracelet/u;->a()Landroid/content/SharedPreferences;
 
     move-result-object v1
@@ -157,7 +160,7 @@
 
     goto :goto_0
 
-    :pswitch_2
+    :pswitch_3
     invoke-static {}, Lcn/com/smartdevices/bracelet/u;->a()Landroid/content/SharedPreferences;
 
     move-result-object v1
@@ -196,11 +199,30 @@
 
     goto :goto_0
 
+    :pswitch_4
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->a()Landroid/content/SharedPreferences;
+
+    move-result-object v1
+
+    const-string v2, "syncRunningState"
+
+    invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+
+    move-result v1
+
+    iput v1, v0, Lcn/com/smartdevices/bracelet/model/SyncServerDataInfo;->mDataState:I
+
+    goto :goto_0
+
+    nop
+
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_0
         :pswitch_1
         :pswitch_2
+        :pswitch_3
+        :pswitch_0
+        :pswitch_4
     .end packed-switch
 .end method
 
@@ -314,11 +336,12 @@
     packed-switch v1, :pswitch_data_0
 
     :goto_0
+    :pswitch_0
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
 
-    :pswitch_0
+    :pswitch_1
     const-string v1, "net_data_state"
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/model/SyncServerDataInfo;->mDataState:I
@@ -339,7 +362,7 @@
 
     goto :goto_0
 
-    :pswitch_1
+    :pswitch_2
     const-string v1, "syncRopeState"
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/model/SyncServerDataInfo;->mDataState:I
@@ -360,7 +383,7 @@
 
     goto :goto_0
 
-    :pswitch_2
+    :pswitch_3
     const-string v1, "syncSitupsState"
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/model/SyncServerDataInfo;->mDataState:I
@@ -381,13 +404,24 @@
 
     goto :goto_0
 
+    :pswitch_4
+    const-string v1, "syncRunningState"
+
+    iget v2, p0, Lcn/com/smartdevices/bracelet/model/SyncServerDataInfo;->mDataState:I
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    goto :goto_0
+
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_0
         :pswitch_1
         :pswitch_2
+        :pswitch_3
+        :pswitch_0
+        :pswitch_4
     .end packed-switch
 .end method
 

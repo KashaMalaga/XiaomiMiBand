@@ -44,7 +44,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lcom/c/a/a/p;->a(Ljava/lang/String;Z)Ljava/lang/Object;
+    invoke-virtual {v0, v1, v2}, Lcom/c/a/a/p;->b(Ljava/lang/String;Z)Ljava/lang/Object;
 
     move-result-object v0
 

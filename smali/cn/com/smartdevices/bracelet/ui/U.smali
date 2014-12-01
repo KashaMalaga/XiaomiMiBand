@@ -91,7 +91,7 @@
 
     const v1, 0x7f0c010b
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/M;->f(Lcn/com/smartdevices/bracelet/ui/M;I)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/M;->g(Lcn/com/smartdevices/bracelet/ui/M;I)V
 
     :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/U;->b:Lcn/com/smartdevices/bracelet/ui/M;

@@ -2,18 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Thread$UncaughtExceptionHandler;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/xiaomi/hm/bleservice/BLEService;
+.field final synthetic a:Z
+
+.field final synthetic b:Lcom/xiaomi/hm/bleservice/BLEService;
 
 
 # direct methods
-.method constructor <init>(Lcom/xiaomi/hm/bleservice/BLEService;)V
+.method constructor <init>(Lcom/xiaomi/hm/bleservice/BLEService;Z)V
     .locals 0
 
-    iput-object p1, p0, Lcom/xiaomi/hm/bleservice/e;->a:Lcom/xiaomi/hm/bleservice/BLEService;
+    iput-object p1, p0, Lcom/xiaomi/hm/bleservice/e;->b:Lcom/xiaomi/hm/bleservice/BLEService;
+
+    iput-boolean p2, p0, Lcom/xiaomi/hm/bleservice/e;->a:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,12 +26,22 @@
 
 
 # virtual methods
-.method public uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
-    .locals 0
+.method public run()V
+    .locals 3
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/r;->d()V
+    invoke-static {}, Lcom/xiaomi/hm/bleservice/r;->a()Lcom/xiaomi/hm/bleservice/r;
 
-    invoke-virtual {p2}, Ljava/lang/Throwable;->printStackTrace()V
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/xiaomi/hm/bleservice/e;->b:Lcom/xiaomi/hm/bleservice/BLEService;
+
+    iget-boolean v2, p0, Lcom/xiaomi/hm/bleservice/e;->a:Z
+
+    invoke-virtual {v0, v1, v2}, Lcom/xiaomi/hm/bleservice/r;->a(Landroid/content/Context;Z)V
+
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/e;->b:Lcom/xiaomi/hm/bleservice/BLEService;
+
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->notifyDynamicStatusChanged(Landroid/content/Context;)V
 
     return-void
 .end method

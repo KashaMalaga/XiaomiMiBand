@@ -46,7 +46,7 @@
         <item>Dunia tidak terbentuk dalam satu hari, demikian juga kita. Tetapkan target yang kecil dan bangun di atasnya.</item>
         <item>Setiap perjalanan dimulai dengan satu langkah.</item>
         <item>Capai satu target tiap harinya.</item>
-        <item>Tidak peduli seberapa lambat Anda berjalan, Anda masih mengalahkan orang yang duduk di sofa.</item>
+        <item>Tak peduli seberapa lambat Anda berjalan, Anda masih melewati orang yg duduk di sofa.</item>
         <item>Lari saat Anda bisa. Jalan jika diperlukan. Merangkak jika harus. Jangan pernah menyerah.</item>
         <item>Ingat, perasaan yang didapat dari berolahraga jauh lebih baik dibanding hanya duduk saja berharap Anda telah berolahraga.</item>
     </string-array>
@@ -56,6 +56,6 @@
         <item>Sedang</item>
         <item>Hati-hati</item>
         <item>Tidak sehat</item>
-        <item>Sangat tidak sehat</item>
+        <item>Sangat tdk sehat</item>
     </string-array>
 </resources>

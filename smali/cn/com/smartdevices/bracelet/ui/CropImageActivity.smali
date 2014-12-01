@@ -194,7 +194,7 @@
 
     :cond_2
     :try_start_1
-    invoke-static {}, Lcn/com/smartdevices/bracelet/i;->a()Lcn/com/smartdevices/bracelet/i;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/h;->a()Lcn/com/smartdevices/bracelet/h;
 
     move-result-object v2
 
@@ -202,7 +202,7 @@
 
     invoke-direct {v4, v3, v0}, Lcom/e/a/b/a/f;-><init>(II)V
 
-    invoke-virtual {v2, p1, v4}, Lcn/com/smartdevices/bracelet/i;->a(Ljava/lang/String;Lcom/e/a/b/a/f;)Landroid/graphics/Bitmap;
+    invoke-virtual {v2, p1, v4}, Lcn/com/smartdevices/bracelet/h;->a(Ljava/lang/String;Lcom/e/a/b/a/f;)Landroid/graphics/Bitmap;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -352,7 +352,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/z;->l(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/z;->m(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -420,7 +420,7 @@
     goto :goto_1
 
     :pswitch_data_0
-    .packed-switch 0x7f0700ec
+    .packed-switch 0x7f070103
         :pswitch_1
         :pswitch_0
         :pswitch_2
@@ -432,7 +432,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f03002a
+    const v0, 0x7f03002e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/CropImageActivity;->setContentView(I)V
 
@@ -452,7 +452,7 @@
 
     invoke-virtual {p0, v0, v1}, Lcn/com/smartdevices/bracelet/ui/CropImageActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    const v0, 0x7f0700e6
+    const v0, 0x7f0700fe
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/CropImageActivity;->findViewById(I)Landroid/view/View;
 
@@ -462,7 +462,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/CropImageActivity;->d:Lcom/edmodo/cropper/CropImageView;
 
-    const v0, 0x7f0700ee
+    const v0, 0x7f070105
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/CropImageActivity;->findViewById(I)Landroid/view/View;
 
@@ -474,7 +474,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700ec
+    const v0, 0x7f070103
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/CropImageActivity;->findViewById(I)Landroid/view/View;
 

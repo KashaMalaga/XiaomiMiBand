@@ -1,150 +1,130 @@
-.class Lcn/com/smartdevices/bracelet/ui/ax;
-.super Lcom/c/a/a/h;
+.class public Lcn/com/smartdevices/bracelet/ui/ax;
+.super Landroid/app/Fragment;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+.field private a:Ljava/lang/String;
 
-.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;
+.field private b:Landroid/webkit/WebView;
+
+.field private c:Landroid/widget/ProgressBar;
+
+.field private d:Landroid/webkit/WebViewClient;
+
+.field private e:Landroid/webkit/WebChromeClient;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/ax;->b:Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;
+    invoke-direct {p0}, Landroid/app/Fragment;-><init>()V
 
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/ax;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/ay;
 
-    invoke-direct {p0}, Lcom/c/a/a/h;-><init>()V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/ay;-><init>(Lcn/com/smartdevices/bracelet/ui/ax;)V
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ax;->d:Landroid/webkit/WebViewClient;
+
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/az;
+
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/az;-><init>(Lcn/com/smartdevices/bracelet/ui/ax;)V
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ax;->e:Landroid/webkit/WebChromeClient;
 
     return-void
+.end method
+
+.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/ax;)Landroid/widget/ProgressBar;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ax;->c:Landroid/widget/ProgressBar;
+
+    return-object v0
+.end method
+
+.method public static a()Lcn/com/smartdevices/bracelet/ui/ax;
+    .locals 2
+
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/ax;
+
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/ax;-><init>()V
+
+    new-instance v1, Landroid/os/Bundle;
+
+    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/ax;->setArguments(Landroid/os/Bundle;)V
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
-    .locals 4
+.method public onCreateOptionsMenu(Landroid/view/Menu;Landroid/view/MenuInflater;)V
+    .locals 0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ax;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    const/4 v1, 0x2
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->setNeedSyncServer(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ax;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/u;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
-
-    invoke-static {p3}, Lcn/com/smartdevices/bracelet/z;->a([B)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "HealthGoalsActivity"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "fail, statusCode="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, ", content="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {p1}, Landroid/view/Menu;->clear()V
 
     return-void
 .end method
 
-.method public onSuccess(I[Lorg/apache/http/Header;[B)V
-    .locals 5
+.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    .locals 3
 
-    invoke-static {p3}, Lcn/com/smartdevices/bracelet/z;->a([B)Ljava/lang/String;
+    const v0, 0x7f030069
 
-    move-result-object v0
+    const/4 v1, 0x0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/d/g;->b(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/d/h;
+    invoke-virtual {p1, v0, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v1
 
-    const-string v2, "HealthGoalsActivity"
+    const-string v0, "http://ota.app-xae.xiaomi.net/help.html"
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ax;->a:Ljava/lang/String;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    const v0, 0x7f070022
 
-    const-string v4, "statusCode="
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string v4, ", content="
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    check-cast v0, Landroid/webkit/WebView;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ax;->b:Landroid/webkit/WebView;
+
+    const v0, 0x7f0701c6
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    check-cast v0, Landroid/widget/ProgressBar;
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/d/h;->a()Z
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ax;->c:Landroid/widget/ProgressBar;
 
-    move-result v0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ax;->b:Landroid/webkit/WebView;
 
-    if-eqz v0, :cond_0
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/ax;->d:Landroid/webkit/WebViewClient;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ax;->b:Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;
+    invoke-virtual {v0, v2}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->a(Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ax;->b:Landroid/webkit/WebView;
 
-    move-result-object v0
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/ax;->e:Landroid/webkit/WebChromeClient;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->clearNeedSyncServer()V
+    invoke-virtual {v0, v2}, Landroid/webkit/WebView;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V
 
-    :goto_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ax;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ax;->b:Landroid/webkit/WebView;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/u;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/ax;->a:Ljava/lang/String;
 
-    return-void
+    invoke-virtual {v0, v2}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ax;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    const/4 v0, 0x1
 
-    const/4 v1, 0x2
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/ax;->setHasOptionsMenu(Z)V
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->setNeedSyncServer(I)V
-
-    goto :goto_0
+    return-object v1
 .end method

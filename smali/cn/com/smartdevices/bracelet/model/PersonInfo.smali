@@ -368,7 +368,7 @@
 
     if-ge v0, v5, :cond_2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->z()Ljava/util/ArrayList;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->A()Ljava/util/ArrayList;
 
     move-result-object v3
 

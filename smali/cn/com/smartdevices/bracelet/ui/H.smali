@@ -53,7 +53,7 @@
 
     invoke-direct {v0, p3}, Ljava/lang/String;-><init>([B)V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/d/g;->c(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/f/f;->c(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

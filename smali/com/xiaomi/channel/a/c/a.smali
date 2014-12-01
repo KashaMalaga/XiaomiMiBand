@@ -11,7 +11,7 @@
 
 .field public static final d:Z
 
-.field public static final e:Z
+.field public static e:Z
 
 .field public static final f:Z
 

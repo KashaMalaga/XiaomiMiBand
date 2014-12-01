@@ -45,9 +45,9 @@
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebType:I
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/activity/k;
+    new-instance v0, Lcn/com/smartdevices/bracelet/activity/j;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/activity/k;-><init>(Lcn/com/smartdevices/bracelet/activity/WebActivity;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/activity/j;-><init>(Lcn/com/smartdevices/bracelet/activity/WebActivity;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mChromeClient:Landroid/webkit/WebChromeClient;
 
@@ -255,9 +255,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->myWebView:Landroid/webkit/WebView;
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/activity/l;
+    new-instance v2, Lcn/com/smartdevices/bracelet/activity/k;
 
-    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/activity/l;-><init>(Lcn/com/smartdevices/bracelet/activity/WebActivity;)V
+    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/activity/k;-><init>(Lcn/com/smartdevices/bracelet/activity/WebActivity;)V
 
     const-string v3, "login"
 
@@ -327,9 +327,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->myWebView:Landroid/webkit/WebView;
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/activity/l;
+    new-instance v2, Lcn/com/smartdevices/bracelet/activity/k;
 
-    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/activity/l;-><init>(Lcn/com/smartdevices/bracelet/activity/WebActivity;)V
+    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/activity/k;-><init>(Lcn/com/smartdevices/bracelet/activity/WebActivity;)V
 
     const-string v3, "login"
 
@@ -415,7 +415,7 @@
 
     invoke-virtual {v3, v2}, Landroid/view/View;->setBackgroundColor(I)V
 
-    const v3, 0x7f0701ad
+    const v3, 0x7f0701c5
 
     invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -554,7 +554,7 @@
 .method private setupViews()V
     .locals 2
 
-    const v0, 0x7f070072
+    const v0, 0x7f070075
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -562,7 +562,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mShare:Landroid/view/View;
 
-    const v0, 0x7f0700c1
+    const v0, 0x7f0700d6
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -580,7 +580,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->myWebView:Landroid/webkit/WebView;
 
-    const v0, 0x7f0701af
+    const v0, 0x7f0701c7
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -590,7 +590,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebErrorTip:Landroid/widget/TextView;
 
-    const v0, 0x7f0701ac
+    const v0, 0x7f0701c4
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -598,7 +598,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebViewContainer:Landroid/view/View;
 
-    const v0, 0x7f0701b0
+    const v0, 0x7f0701c8
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -622,7 +622,7 @@
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
 
-    const v0, 0x7f0701ae
+    const v0, 0x7f0701c6
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -634,9 +634,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->myWebView:Landroid/webkit/WebView;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/activity/i;
+    new-instance v1, Lcn/com/smartdevices/bracelet/activity/h;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/activity/i;-><init>(Lcn/com/smartdevices/bracelet/activity/WebActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/activity/h;-><init>(Lcn/com/smartdevices/bracelet/activity/WebActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
@@ -648,9 +648,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebErrorTip:Landroid/widget/TextView;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/activity/j;
+    new-instance v1, Lcn/com/smartdevices/bracelet/activity/i;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/activity/j;-><init>(Lcn/com/smartdevices/bracelet/activity/WebActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/activity/i;-><init>(Lcn/com/smartdevices/bracelet/activity/WebActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -830,7 +830,7 @@
     goto :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x7f070072
+    .packed-switch 0x7f070075
         :pswitch_0
     .end packed-switch
 .end method
@@ -840,7 +840,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030066
+    const v0, 0x7f030069
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->setContentView(I)V
 

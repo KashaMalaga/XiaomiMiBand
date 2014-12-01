@@ -34,11 +34,11 @@
 
     invoke-direct {v0, p3}, Ljava/lang/String;-><init>([B)V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/d/g;->b(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/d/h;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/f/f;->b(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/f/g;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/d/h;->a()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/g;->a()Z
 
     move-result v0
 
@@ -48,7 +48,7 @@
 
     move-result-wide v0
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/u;->e(J)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/u;->f(J)V
 
     :cond_0
     return-void

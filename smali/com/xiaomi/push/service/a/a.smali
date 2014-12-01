@@ -255,7 +255,7 @@
     :try_start_0
     new-instance v2, Landroid/content/Intent;
 
-    sget-object v0, Lcom/xiaomi/push/service/W;->k:Ljava/lang/String;
+    sget-object v0, Lcom/xiaomi/push/service/Y;->k:Ljava/lang/String;
 
     invoke-direct {v2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 

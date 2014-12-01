@@ -1,22 +1,41 @@
-.class public Lcn/com/smartdevices/bracelet/ui/cQ;
-.super Lcn/com/smartdevices/bracelet/ui/J;
+.class Lcn/com/smartdevices/bracelet/ui/cQ;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lcom/tencent/tauth/IUiListener;
+
+
+# instance fields
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/ShareActivity;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/ShareActivity;)V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/J;-><init>()V
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cQ;->a:Lcn/com/smartdevices/bracelet/ui/ShareActivity;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected a()I
-    .locals 1
+.method public onCancel()V
+    .locals 0
 
-    const v0, 0x7f030048
+    return-void
+.end method
 
-    return v0
+.method public onComplete(Ljava/lang/Object;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onError(Lcom/tencent/tauth/UiError;)V
+    .locals 0
+
+    return-void
 .end method

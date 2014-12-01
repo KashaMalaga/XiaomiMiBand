@@ -7,24 +7,20 @@
 
 .field b:Landroid/widget/TextView;
 
-.field final synthetic c:Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;
-
 
 # direct methods
-.method private constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;)V
+.method private constructor <init>()V
     .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/N;->c:Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;Lcn/com/smartdevices/bracelet/lab/ui/K;)V
+.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/K;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/lab/ui/N;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;)V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/ui/N;-><init>()V
 
     return-void
 .end method

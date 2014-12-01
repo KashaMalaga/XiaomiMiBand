@@ -27,11 +27,11 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/y;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/c/a;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/e/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/c/a;->h()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/a;->h()Z
 
     move-result v0
 
@@ -39,11 +39,11 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/y;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/c/a;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/e/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/c/a;->c()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/a;->c()V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/y;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
@@ -63,11 +63,11 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/y;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->d(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/c/a/d;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->d(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/e/a/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/c/a/d;->d()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/a/d;->d()V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/y;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
@@ -93,13 +93,13 @@
     :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/y;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/c/a;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/e/a;
 
     move-result-object v0
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/y;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/c/a;->a(Landroid/app/Activity;)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/e/a;->a(Landroid/app/Activity;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/y;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 

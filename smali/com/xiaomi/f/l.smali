@@ -327,7 +327,7 @@
 
     aput-object v2, v1, v4
 
-    invoke-static {p2}, Lcom/xiaomi/push/service/W;->a(I)Ljava/lang/String;
+    invoke-static {p2}, Lcom/xiaomi/push/service/Y;->a(I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -571,7 +571,7 @@
     return-void
 .end method
 
-.method public abstract a(Lcom/xiaomi/push/service/S;)V
+.method public abstract a(Lcom/xiaomi/push/service/U;)V
 .end method
 
 .method public a(Ljava/lang/String;)V

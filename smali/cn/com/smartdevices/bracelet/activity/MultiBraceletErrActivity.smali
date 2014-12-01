@@ -129,10 +129,10 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f0700e3 -> :sswitch_2
-        0x7f070184 -> :sswitch_3
-        0x7f0701ce -> :sswitch_1
-        0x7f0701cf -> :sswitch_0
+        0x7f0700fb -> :sswitch_2
+        0x7f070197 -> :sswitch_3
+        0x7f0701e5 -> :sswitch_1
+        0x7f0701e6 -> :sswitch_0
     .end sparse-switch
 .end method
 
@@ -141,7 +141,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f03006e
+    const v0, 0x7f030071
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/MultiBraceletErrActivity;->setContentView(I)V
 
@@ -181,7 +181,7 @@
 
     if-lez v1, :cond_0
 
-    const v0, 0x7f0701cd
+    const v0, 0x7f0701e4
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/MultiBraceletErrActivity;->findViewById(I)Landroid/view/View;
 
@@ -192,7 +192,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     :cond_0
-    const v0, 0x7f0701cf
+    const v0, 0x7f0701e6
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/MultiBraceletErrActivity;->findViewById(I)Landroid/view/View;
 
@@ -200,7 +200,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0701ce
+    const v0, 0x7f0701e5
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/MultiBraceletErrActivity;->findViewById(I)Landroid/view/View;
 
@@ -208,7 +208,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070184
+    const v0, 0x7f070197
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/MultiBraceletErrActivity;->findViewById(I)Landroid/view/View;
 
@@ -216,7 +216,7 @@
 
     invoke-virtual {v1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700e3
+    const v0, 0x7f0700fb
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/MultiBraceletErrActivity;->findViewById(I)Landroid/view/View;
 
@@ -234,7 +234,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0c013c
+    const v3, 0x7f0c013d
 
     invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/activity/MultiBraceletErrActivity;->getString(I)Ljava/lang/String;
 

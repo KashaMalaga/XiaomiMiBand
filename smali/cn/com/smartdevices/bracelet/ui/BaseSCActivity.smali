@@ -116,7 +116,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->o()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->p()Ljava/lang/String;
 
     move-result-object v1
 
@@ -124,7 +124,7 @@
 
     invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/ui/u;-><init>(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
 
-    invoke-static {v0, v1, p1, p2, v2}, Lcn/com/smartdevices/bracelet/d/f;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/c/a/a/h;)V
+    invoke-static {v0, v1, p1, p2, v2}, Lcn/com/smartdevices/bracelet/f/e;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/c/a/a/h;)V
 
     return-void
 .end method
@@ -132,67 +132,17 @@
 .method static synthetic a(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Z
     .locals 1
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->h()Z
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->i()Z
 
     move-result v0
 
     return v0
 .end method
 
-.method private b()V
-    .locals 2
-
-    const-string v0, "BaseSCActivity"
-
-    const-string v1, "==============================enterInForeground=========================="
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v0, "BaseSCActivity"
-
-    const-string v1, "==============================enterInForeground=========================="
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->d()V
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->j()V
-
-    const/16 v0, 0x27
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/b;->a(I)V
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->k()V
-
-    return-void
-.end method
-
 .method static synthetic b(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->g()V
-
-    return-void
-.end method
-
-.method private c()V
-    .locals 2
-
-    const-string v0, "BaseSCActivity"
-
-    const-string v1, "==============================enterInBackground=========================="
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v0, "BaseSCActivity"
-
-    const-string v1, "==============================enterInBackground=========================="
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v0, 0x1e0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/b;->a(I)V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->h()V
 
     return-void
 .end method
@@ -200,12 +150,93 @@
 .method static synthetic c(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->f()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->g()V
 
     return-void
 .end method
 
 .method private d()V
+    .locals 5
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/b/a;->b()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/z;->j(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    const/4 v0, -0x1
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/o;->a()Lcn/com/smartdevices/bracelet/o;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/o;->k()Lcn/com/smartdevices/bracelet/model/SportDay;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/o;->e(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/DaySportData;
+
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/o;->f(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/DaySportData;
+
+    move-result-object v1
+
+    :cond_0
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/DaySportData;->getStepsInfo()Lcn/com/smartdevices/bracelet/analysis/StepsInfo;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->getStepsCount()I
+
+    move-result v0
+
+    :cond_1
+    new-instance v1, Lcn/com/smartdevices/bracelet/d/h;
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    const/4 v4, 0x1
+
+    invoke-direct {v1, v2, v3, v4, v0}, Lcn/com/smartdevices/bracelet/d/h;-><init>(JII)V
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/b/a;->a(Lcn/com/smartdevices/bracelet/d/h;)V
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/d/a;->a()Lcn/com/smartdevices/bracelet/d/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/d/a;->a(Lcn/com/smartdevices/bracelet/d/h;)V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->c()V
+
+    :cond_2
+    return-void
+.end method
+
+.method static synthetic d(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->m()V
+
+    return-void
+.end method
+
+.method private e()V
     .locals 2
 
     const-string v0, "BaseSCActivity"
@@ -246,15 +277,23 @@
     return-void
 .end method
 
-.method static synthetic d(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
+.method static synthetic e(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->l()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->j()V
 
     return-void
 .end method
 
-.method private e()V
+.method static synthetic f(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Landroid/os/Handler;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->h:Landroid/os/Handler;
+
+    return-object v0
+.end method
+
+.method private f()V
     .locals 2
 
     new-instance v0, Lcn/com/smartdevices/bracelet/ui/p;
@@ -304,23 +343,15 @@
     return-void
 .end method
 
-.method static synthetic e(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->i()V
-
-    return-void
-.end method
-
-.method static synthetic f(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Landroid/os/Handler;
+.method static synthetic g(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Landroid/content/Context;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->h:Landroid/os/Handler;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->k:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method private f()V
+.method private g()V
     .locals 2
 
     new-instance v0, Landroid/content/Intent;
@@ -336,15 +367,7 @@
     return-void
 .end method
 
-.method static synthetic g(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Landroid/content/Context;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->k:Landroid/content/Context;
-
-    return-object v0
-.end method
-
-.method private g()V
+.method private h()V
     .locals 2
 
     new-instance v0, Landroid/content/Intent;
@@ -363,12 +386,12 @@
 .method static synthetic h(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->m()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->n()V
 
     return-void
 .end method
 
-.method private h()Z
+.method private i()Z
     .locals 6
 
     const/4 v0, 0x0
@@ -524,7 +547,7 @@
     goto/16 :goto_0
 .end method
 
-.method private i()V
+.method private j()V
     .locals 7
 
     const/4 v1, 0x0
@@ -575,7 +598,7 @@
 
     if-eqz v2, :cond_0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->j()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->k()V
 
     :cond_0
     return-void
@@ -643,10 +666,10 @@
     goto :goto_1
 .end method
 
-.method private j()V
+.method private k()V
     .locals 2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->l()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->m()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v0
 
@@ -674,7 +697,7 @@
     return-void
 .end method
 
-.method private k()V
+.method private l()V
     .locals 4
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
@@ -689,12 +712,12 @@
 
     invoke-direct {v3, p0, v0, v1}, Lcn/com/smartdevices/bracelet/ui/s;-><init>(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;J)V
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/d/f;->d(Lcn/com/smartdevices/bracelet/model/LoginData;Lcom/c/a/a/h;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/f/e;->d(Lcn/com/smartdevices/bracelet/model/LoginData;Lcom/c/a/a/h;)V
 
     return-void
 .end method
 
-.method private l()V
+.method private m()V
     .locals 4
 
     const-string v0, "BaseSCActivity"
@@ -707,7 +730,7 @@
 
     move-result-wide v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->C()J
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->D()J
 
     move-result-wide v2
 
@@ -754,15 +777,15 @@
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
     :goto_1
-    new-instance v1, Lcn/com/smartdevices/bracelet/a/r;
+    new-instance v1, Lcn/com/smartdevices/bracelet/a/s;
 
     new-instance v2, Lcn/com/smartdevices/bracelet/ui/t;
 
     invoke-direct {v2, p0, v0}, Lcn/com/smartdevices/bracelet/ui/t;-><init>(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;Lorg/json/JSONObject;)V
 
-    invoke-direct {v1, v2}, Lcn/com/smartdevices/bracelet/a/r;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
+    invoke-direct {v1, v2}, Lcn/com/smartdevices/bracelet/a/s;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/a/r;->c()V
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/a/s;->c()V
 
     goto :goto_0
 
@@ -772,7 +795,7 @@
     goto :goto_1
 .end method
 
-.method private m()V
+.method private n()V
     .locals 6
 
     const/4 v5, 0x6
@@ -954,6 +977,12 @@
     goto :goto_0
 .end method
 
+.method protected b()V
+    .locals 0
+
+    return-void
+.end method
+
 .method public b(Z)Z
     .locals 3
 
@@ -1012,6 +1041,12 @@
     goto :goto_0
 .end method
 
+.method protected c()V
+    .locals 0
+
+    return-void
+.end method
+
 .method protected onActivityResult(IILandroid/content/Intent;)V
     .locals 3
 
@@ -1036,7 +1071,7 @@
     return-void
 
     :pswitch_0
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->d()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->e()V
 
     const/4 v0, 0x0
 
@@ -1093,7 +1128,7 @@
 
     iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->m:Z
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->e()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->f()V
 
     invoke-direct {p0, v1, v1}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->a(II)V
 
@@ -1147,37 +1182,73 @@
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onResume()V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->c()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/b/a;->a()Z
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-eqz v0, :cond_2
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->a()V
-
-    :cond_0
-    :goto_0
-    return-void
-
-    :cond_1
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->b(Z)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->l:Z
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_0
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->m:Z
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
+
+    :cond_0
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->e()V
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->j()V
+
+    const/16 v0, 0x27
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/b;->a(I)V
+
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->l()V
+
+    :cond_1
+    :goto_0
+    return-void
 
     :cond_2
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->b()V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/z;->j(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->d()V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->b()V
+
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->l:Z
+
+    if-nez v0, :cond_3
+
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->m:Z
+
+    if-eqz v0, :cond_1
+
+    :cond_3
+    invoke-static {}, Lcn/com/smartdevices/bracelet/d/a;->a()Lcn/com/smartdevices/bracelet/d/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/d/a;->b()V
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->a()V
 
     goto :goto_0
 .end method
@@ -1203,7 +1274,15 @@
 
     iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->n:Z
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->c()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/b/a;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/16 v0, 0x1e0
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/b;->a(I)V
 
     :cond_0
     return-void

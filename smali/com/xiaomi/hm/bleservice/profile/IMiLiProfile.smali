@@ -75,6 +75,8 @@
 
 .field public static final UUID_CHARACTERISTIC_NOTIFICATION:Ljava/util/UUID;
 
+.field public static final UUID_CHARACTERISTIC_PAIR:Ljava/util/UUID;
+
 .field public static final UUID_CHARACTERISTIC_REALTIME_STEPS:Ljava/util/UUID;
 
 .field public static final UUID_CHARACTERISTIC_SENSOR_DATA:Ljava/util/UUID;
@@ -94,7 +96,7 @@
 
     const-string v0, "FEE0"
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/b;->a(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
@@ -102,7 +104,7 @@
 
     const-string v0, "FF01"
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/b;->a(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
@@ -110,7 +112,7 @@
 
     const-string v0, "FF02"
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/b;->a(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
@@ -118,7 +120,7 @@
 
     const-string v0, "FF03"
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/b;->a(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
@@ -126,7 +128,7 @@
 
     const-string v0, "FF04"
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/b;->a(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
@@ -134,7 +136,7 @@
 
     const-string v0, "FF05"
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/b;->a(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
@@ -142,7 +144,7 @@
 
     const-string v0, "FF06"
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/b;->a(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
@@ -150,7 +152,7 @@
 
     const-string v0, "FF07"
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/b;->a(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
@@ -158,7 +160,7 @@
 
     const-string v0, "FF08"
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/b;->a(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
@@ -166,7 +168,7 @@
 
     const-string v0, "FF09"
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/b;->a(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
@@ -174,7 +176,7 @@
 
     const-string v0, "FF0A"
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/b;->a(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
@@ -182,7 +184,7 @@
 
     const-string v0, "FF0B"
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/b;->a(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
@@ -190,7 +192,7 @@
 
     const-string v0, "FF0C"
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/b;->a(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
@@ -198,7 +200,7 @@
 
     const-string v0, "FF0D"
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/b;->a(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
@@ -206,11 +208,19 @@
 
     const-string v0, "FF0E"
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/b;->a(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
     sput-object v0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile;->UUID_CHARACTERISTIC_SENSOR_DATA:Ljava/util/UUID;
+
+    const-string v0, "FF0F"
+
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/a/b;->a(Ljava/lang/String;)Ljava/util/UUID;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile;->UUID_CHARACTERISTIC_PAIR:Ljava/util/UUID;
 
     return-void
 .end method
@@ -220,7 +230,7 @@
 .method public abstract authenticate(Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$UserInfo;)Z
 .end method
 
-.method public abstract enableRealtimeStepNotification(ZLcom/xiaomi/hm/bleservice/profile/IMiLiProfile$IRealtimeStepsChangedCB;)Z
+.method public abstract enableRealtimeStepNotification(ZLcn/com/smartdevices/bracelet/b/b;)Z
 .end method
 
 .method public abstract getDeviceInfo()Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;

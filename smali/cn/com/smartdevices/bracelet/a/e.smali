@@ -1,5 +1,5 @@
 .class public Lcn/com/smartdevices/bracelet/a/e;
-.super Lcn/com/smartdevices/bracelet/a/u;
+.super Lcn/com/smartdevices/bracelet/a/v;
 
 
 # static fields
@@ -56,7 +56,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, p3}, Lcn/com/smartdevices/bracelet/a/u;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
+    invoke-direct {p0, p3}, Lcn/com/smartdevices/bracelet/a/v;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/a/e;->a:Ljava/lang/String;
 
@@ -76,7 +76,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, p3}, Lcn/com/smartdevices/bracelet/a/u;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
+    invoke-direct {p0, p3}, Lcn/com/smartdevices/bracelet/a/v;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/a/e;->a:Ljava/lang/String;
 
@@ -531,7 +531,7 @@
 
     iget-object v4, p0, Lcn/com/smartdevices/bracelet/a/e;->c:[B
 
-    invoke-static {v4}, Lcom/xiaomi/hm/bleservice/a/a;->c([B)I
+    invoke-static {v4}, Lcom/xiaomi/hm/bleservice/a/b;->c([B)I
 
     move-result v4
 
@@ -678,10 +678,6 @@
     move-result v0
 
     if-eqz v0, :cond_8
-
-    const v3, 0x90902
-
-    if-gt v4, v3, :cond_8
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/a/e;->m:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 

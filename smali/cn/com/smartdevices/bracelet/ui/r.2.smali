@@ -160,6 +160,12 @@
 
     if-eqz v1, :cond_6
 
+    invoke-static {}, Lcn/com/smartdevices/bracelet/b/a;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
     const-string v0, "android.bluetooth.adapter.extra.STATE"
 
     const/high16 v1, -0x80000000
@@ -171,7 +177,7 @@
     packed-switch v0, :pswitch_data_0
 
     :pswitch_0
-    goto :goto_0
+    goto/16 :goto_0
 
     :pswitch_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/r;->a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
@@ -244,6 +250,8 @@
     invoke-virtual {v1, v0}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
 
     goto/16 :goto_0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0xa

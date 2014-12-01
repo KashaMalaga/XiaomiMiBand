@@ -27,17 +27,16 @@
                     <ImageView android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_indicator_right_arrow" />
                 </LinearLayout>
                 <include android:id="@id/split_line_1" layout="@layout/split_line_with_margin" />
-                <LinearLayout android:id="@id/setting_about_website" android:background="@drawable/bg_item" android:paddingLeft="@dimen/mili_margin" android:paddingTop="15.0dip" android:paddingRight="@dimen/mili_margin" android:paddingBottom="15.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus">
+                <LinearLayout android:id="@id/setting_about_website" android:background="@drawable/bg_item" android:paddingLeft="@dimen/mili_margin" android:paddingTop="15.0dip" android:paddingRight="@dimen/mili_margin" android:paddingBottom="15.0dip" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus">
                     <TextView android:textSize="15.0sp" android:textColor="#ff4d4d4d" android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/visit_micom" android:layout_weight="1.0" />
                     <ImageView android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_indicator_right_arrow" />
                 </LinearLayout>
-                <include android:id="@id/split_line_0" layout="@layout/split_line_with_margin" />
                 <LinearLayout android:id="@id/setting_check_apk_upgrade" android:background="@drawable/bg_item" android:paddingLeft="@dimen/mili_margin" android:paddingTop="15.0dip" android:paddingRight="@dimen/mili_margin" android:paddingBottom="15.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus">
                     <TextView android:textSize="15.0sp" android:textColor="#ff4d4d4d" android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/check_upgrade" android:layout_weight="1.0" />
                     <ImageView android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_indicator_right_arrow" />
                 </LinearLayout>
                 <include android:id="@id/split_line_about_apk_upgrade" layout="@layout/split_line_with_margin" />
-                <LinearLayout android:id="@id/buy_bracelet_stuff" android:background="@drawable/bg_item" android:paddingLeft="@dimen/mili_margin" android:paddingTop="15.0dip" android:paddingRight="@dimen/mili_margin" android:paddingBottom="15.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus">
+                <LinearLayout android:id="@id/buy_bracelet_stuff" android:background="@drawable/bg_item" android:paddingLeft="@dimen/mili_margin" android:paddingTop="15.0dip" android:paddingRight="@dimen/mili_margin" android:paddingBottom="15.0dip" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus">
                     <TextView android:textSize="15.0sp" android:textColor="#ff4d4d4d" android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/bracelet_store_desc" android:layout_weight="1.0" />
                     <ImageView android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_indicator_right_arrow" />
                 </LinearLayout>
@@ -47,6 +46,12 @@
                     <ImageView android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_indicator_right_arrow" />
                 </LinearLayout>
                 <include android:id="@id/split_line_0" layout="@layout/split_line_with_margin" />
+                <LinearLayout android:id="@id/setting_about_user_agreement_ux" android:background="@drawable/bg_item" android:paddingLeft="@dimen/mili_margin" android:paddingTop="15.0dip" android:paddingRight="0.0dip" android:paddingBottom="15.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus">
+                    <TextView android:textSize="15.0sp" android:textColor="#ff4d4d4d" android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/user_agreement_ux" android:layout_weight="1.0" />
+                    <RelativeLayout android:gravity="center" android:paddingRight="@dimen/mili_margin" android:clickable="true" android:layout_width="63.0dip" android:layout_height="22.0dip">
+                        <Switch android:layout_gravity="center" android:id="@id/setting_about_ux_switch" android:background="@drawable/switch_track_enable" android:focusable="false" android:focusableInTouchMode="false" android:clickable="true" android:layout_width="40.0dip" android:layout_height="21.0dip" android:textOn="" android:textOff="" android:thumb="@drawable/switch_thumb" android:track="@drawable/switch_track_trans" android:switchMinWidth="38.0dip" android:thumbTextPadding="10.0dip" />
+                    </RelativeLayout>
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

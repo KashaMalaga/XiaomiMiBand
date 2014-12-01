@@ -66,11 +66,11 @@
 
     invoke-direct {v2, p3}, Ljava/lang/String;-><init>([B)V
 
-    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/d/g;->b(ILjava/lang/String;Ljava/util/ArrayList;)Lcn/com/smartdevices/bracelet/d/h;
+    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/f/f;->a(ILjava/lang/String;Ljava/util/ArrayList;)Lcn/com/smartdevices/bracelet/f/g;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/d/h;->a()Z
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/f/g;->a()Z
 
     move-result v2
 
@@ -99,7 +99,7 @@
 
     move-result-object v2
 
-    iget v1, v1, Lcn/com/smartdevices/bracelet/d/h;->f:I
+    iget v1, v1, Lcn/com/smartdevices/bracelet/f/g;->f:I
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/item_height" android:layout_column="5"
+<LinearLayout android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/sport_running_history_item_height" android:layout_column="5"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/date" android:layout_width="wrap_content" android:layout_height="@dimen/item_height" style="@style/ListItemTitleText" />
+    <TextView android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/date" android:layout_width="wrap_content" android:layout_height="@dimen/sport_running_history_item_height" style="@style/ListItemTitleText" />
     <LinearLayout android:gravity="center" android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
-        <TextView android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sport_running_distance" style="@style/ListItemTitleText" />
+        <TextView android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sport_running_distance_desc" style="@style/ListItemTitleText" />
         <TextView android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/distance" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" style="@style/ListItemTitleText" />
     </LinearLayout>
     <LinearLayout android:gravity="center" android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">

@@ -41,7 +41,7 @@
 
     const/16 v11, 0xf
 
-    const v0, 0x7f070096
+    const v0, 0x7f0700b1
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->findViewById(I)Landroid/view/View;
 
@@ -59,7 +59,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0200cb
+    const v1, 0x7f0200ce
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
@@ -83,7 +83,7 @@
 
     move-result-object v14
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bY;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bU;
 
     const/4 v2, 0x2
 
@@ -133,11 +133,11 @@
 
     move v12, v11
 
-    invoke-direct/range {v0 .. v13}, Lcn/com/smartdevices/bracelet/ui/bY;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
+    invoke-direct/range {v0 .. v13}, Lcn/com/smartdevices/bracelet/ui/bU;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
 
     invoke-virtual {v14, v0}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/a/f;)Lkankan/wheel/widget/WheelView;
 
-    const v0, 0x7f070095
+    const v0, 0x7f0700b0
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->findViewById(I)Landroid/view/View;
 
@@ -213,7 +213,7 @@
 
     invoke-virtual {v1, v0}, Lkankan/wheel/widget/WheelView;->c(I)Lkankan/wheel/widget/WheelView;
 
-    const v0, 0x7f07007e
+    const v0, 0x7f070094
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->findViewById(I)Landroid/view/View;
 
@@ -221,7 +221,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070076
+    const v0, 0x7f070079
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->findViewById(I)Landroid/view/View;
 
@@ -256,9 +256,9 @@
 .end method
 
 .method private b()V
-    .locals 4
+    .locals 5
 
-    const/4 v3, -0x1
+    const/4 v4, -0x1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->c:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
@@ -278,7 +278,7 @@
 
     if-ne v0, v1, :cond_0
 
-    invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->setResult(I)V
+    invoke-virtual {p0, v4}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->setResult(I)V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->finish()V
 
@@ -292,15 +292,39 @@
 
     const-string v0, "HealthGoalsActivity"
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "goalStep = "
+    const-string v3, "goalStep = "
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    move-result-object v2
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->c:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getDaySportGoalSteps()I
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/b/a;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    new-instance v0, Lcn/com/smartdevices/bracelet/a/p;
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->c:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
@@ -308,32 +332,15 @@
 
     move-result v2
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    new-instance v3, Lcn/com/smartdevices/bracelet/ui/av;
 
-    move-result-object v1
+    invoke-direct {v3, p0}, Lcn/com/smartdevices/bracelet/ui/av;-><init>(Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;)V
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {v0, v2, v3}, Lcn/com/smartdevices/bracelet/a/p;-><init>(ILcn/com/smartdevices/bracelet/a/b;)V
 
-    move-result-object v1
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/a/p;->c()V
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/a/o;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->c:Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getDaySportGoalSteps()I
-
-    move-result v1
-
-    new-instance v2, Lcn/com/smartdevices/bracelet/ui/aw;
-
-    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/ui/aw;-><init>(Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;)V
-
-    invoke-direct {v0, v1, v2}, Lcn/com/smartdevices/bracelet/a/o;-><init>(ILcn/com/smartdevices/bracelet/a/b;)V
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/a/o;->c()V
-
+    :cond_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->c:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/u;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
@@ -344,21 +351,29 @@
 
     const-string v0, "HealthGoalsActivity"
 
-    const-string v1, "sync goal to mili ok."
+    const-string v2, "sync goal to mili ok."
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
 
     move-result-object v0
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/eventbus/EventGoalsUpdated;
+    new-instance v2, Lcn/com/smartdevices/bracelet/eventbus/EventGoalsUpdated;
 
-    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/eventbus/EventGoalsUpdated;-><init>()V
+    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/eventbus/EventGoalsUpdated;-><init>()V
 
-    invoke-virtual {v0, v1}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
+    invoke-virtual {v0, v2}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
 
-    invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->setResult(I)V
+    new-instance v0, Landroid/content/Intent;
+
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+
+    const-string v2, "ref_goal"
+
+    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    invoke-virtual {p0, v4, v0}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->setResult(ILandroid/content/Intent;)V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->finish()V
 
@@ -378,11 +393,11 @@
 
     iput-wide v1, p1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->uid:J
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/ax;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/aw;
 
-    invoke-direct {v1, p0, p1}, Lcn/com/smartdevices/bracelet/ui/ax;-><init>(Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
+    invoke-direct {v1, p0, p1}, Lcn/com/smartdevices/bracelet/ui/aw;-><init>(Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 
-    invoke-static {v0, p1, v1}, Lcn/com/smartdevices/bracelet/d/f;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Lcn/com/smartdevices/bracelet/model/PersonInfo;Lcom/c/a/a/h;)V
+    invoke-static {v0, p1, v1}, Lcn/com/smartdevices/bracelet/f/e;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Lcn/com/smartdevices/bracelet/model/PersonInfo;Lcom/c/a/a/h;)V
 
     return-void
 .end method
@@ -411,8 +426,8 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f070076 -> :sswitch_1
-        0x7f07007e -> :sswitch_0
+        0x7f070079 -> :sswitch_1
+        0x7f070094 -> :sswitch_0
     .end sparse-switch
 .end method
 
@@ -421,7 +436,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030069
+    const v0, 0x7f03006c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->setContentView(I)V
 

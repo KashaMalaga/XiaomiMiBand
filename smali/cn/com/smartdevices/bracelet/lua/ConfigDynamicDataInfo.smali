@@ -42,6 +42,12 @@
 
 .field private isBind:Ljava/lang/Boolean;
 
+.field private isBindSensorHub:Z
+
+.field private isSupportSensorHub:Z
+
+.field private lastBinded:Z
+
 .field private luaAction:Lcn/com/smartdevices/bracelet/lua/LuaAction;
 
 .field private mDataStr:Ljava/lang/String;
@@ -56,7 +62,7 @@
 
 .field private newRecordReport:Lcn/com/smartdevices/bracelet/model/ReportData;
 
-.field private newUser:Ljava/lang/Boolean;
+.field private newUser:Z
 
 .field private noData:Ljava/lang/Boolean;
 
@@ -161,11 +167,7 @@
 
     iput-object v2, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->apkVersion:Ljava/lang/String;
 
-    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->newUser:Ljava/lang/Boolean;
+    iput-boolean v3, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->newUser:Z
 
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -293,96 +295,28 @@
 .end method
 
 .method public static getInstance()Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
-    .locals 4
+    .locals 2
 
     sget-object v0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->__instance:Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
 
-    if-nez v0, :cond_3
-
-    new-instance v1, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
-
-    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;-><init>()V
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->u()Ljava/lang/String;
-
-    move-result-object v0
-
-    :try_start_0
-    new-instance v2, Lcom/b/a/k;
-
-    invoke-direct {v2}, Lcom/b/a/k;-><init>()V
-
-    const-class v3, Lcn/com/smartdevices/bracelet/lua/a;
-
-    invoke-virtual {v2, v0, v3}, Lcom/b/a/k;->a(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/lua/a;
-
-    iget-object v2, v0, Lcn/com/smartdevices/bracelet/lua/a;->a:Ljava/lang/Boolean;
-
-    if-eqz v2, :cond_0
-
-    iget-object v2, v0, Lcn/com/smartdevices/bracelet/lua/a;->a:Ljava/lang/Boolean;
-
-    iput-object v2, v1, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->newUser:Ljava/lang/Boolean;
-
-    :cond_0
-    iget-object v2, v0, Lcn/com/smartdevices/bracelet/lua/a;->b:Ljava/lang/Boolean;
-
-    if-eqz v2, :cond_1
-
-    iget-object v2, v0, Lcn/com/smartdevices/bracelet/lua/a;->b:Ljava/lang/Boolean;
-
-    iput-object v2, v1, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->supportUnlock:Ljava/lang/Boolean;
-
-    :cond_1
-    iget-object v2, v0, Lcn/com/smartdevices/bracelet/lua/a;->c:Ljava/lang/Boolean;
-
-    if-eqz v2, :cond_2
-
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/lua/a;->c:Ljava/lang/Boolean;
-
-    iput-object v0, v1, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->showUnlockInfo:Ljava/lang/Boolean;
-
-    :cond_2
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->w()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, v1, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->apkVersion:Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-object v0, v1
-
-    :goto_0
-    sput-object v0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->__instance:Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
-
-    :cond_3
-    sget-object v0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->__instance:Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
-
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    move-object v1, v0
+    if-nez v0, :cond_0
 
     new-instance v0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
 
     invoke-direct {v0}, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;-><init>()V
 
-    const-string v2, "chenee"
-
-    invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->x()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    iput-object v1, v0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->apkVersion:Ljava/lang/String;
 
-    goto :goto_0
+    sput-object v0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->__instance:Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
+
+    :cond_0
+    sget-object v0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->__instance:Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
+
+    return-object v0
 .end method
 
 
@@ -506,12 +440,16 @@
     return v0
 .end method
 
-.method public getIsBind()Ljava/lang/Boolean;
+.method public getIsBind()Z
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->isBind:Ljava/lang/Boolean;
 
-    return-object v0
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    return v0
 .end method
 
 .method public getLuaAction()Lcn/com/smartdevices/bracelet/lua/LuaAction;
@@ -554,26 +492,12 @@
     return-object v0
 .end method
 
-.method public getNewUser()Ljava/lang/Boolean;
+.method public getNewUser()Z
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->forceRefresh:Ljava/lang/Boolean;
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->newUser:Z
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->forceRefresh:Ljava/lang/Boolean;
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->newUser:Ljava/lang/Boolean;
-
-    goto :goto_0
+    return v0
 .end method
 
 .method public getNoData()Ljava/lang/Boolean;
@@ -832,8 +756,32 @@
     return v0
 .end method
 
+.method public isBindSensorHub()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->isBindSensorHub:Z
+
+    return v0
+.end method
+
+.method public isLastBinded()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->lastBinded:Z
+
+    return v0
+.end method
+
+.method public isSupportSensorHub()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->isSupportSensorHub:Z
+
+    return v0
+.end method
+
 .method public save()V
-    .locals 3
+    .locals 5
 
     new-instance v0, Lcom/b/a/k;
 
@@ -843,9 +791,37 @@
 
     invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/lua/a;-><init>(Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;)V
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->newUser:Ljava/lang/Boolean;
+    iget-boolean v2, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->newUser:Z
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
 
     iput-object v2, v1, Lcn/com/smartdevices/bracelet/lua/a;->a:Ljava/lang/Boolean;
+
+    const-string v2, "ConfigDynamicDataInfo"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "newUser = "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    iget-object v4, v1, Lcn/com/smartdevices/bracelet/lua/a;->a:Ljava/lang/Boolean;
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->showUnlockInfo:Ljava/lang/Boolean;
 
@@ -915,6 +891,14 @@
     return-void
 .end method
 
+.method public setBindSensorHub(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->isBindSensorHub:Z
+
+    return-void
+.end method
+
 .method public setBonus(I)V
     .locals 0
 
@@ -979,10 +963,38 @@
     return-void
 .end method
 
-.method public setIsBind(Ljava/lang/Boolean;)V
+.method public setIsBind(Z)V
+    .locals 1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->isBind:Ljava/lang/Boolean;
+
+    return-void
+.end method
+
+.method public setIsBindSensorHub(Z)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->isBind:Ljava/lang/Boolean;
+    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->isBindSensorHub:Z
+
+    return-void
+.end method
+
+.method public setIsSupportSensorHub(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->isSupportSensorHub:Z
+
+    return-void
+.end method
+
+.method public setLastBinded(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->lastBinded:Z
 
     return-void
 .end method
@@ -1033,10 +1045,32 @@
     return-void
 .end method
 
-.method public setNewUser(Ljava/lang/Boolean;)V
-    .locals 0
+.method public setNewUser(Z)V
+    .locals 3
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->newUser:Ljava/lang/Boolean;
+    const-string v0, "ConfigDynamicDataInfo"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "setNewUser :"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->newUser:Z
 
     return-void
 .end method

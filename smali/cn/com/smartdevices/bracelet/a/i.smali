@@ -1,12 +1,12 @@
 .class public Lcn/com/smartdevices/bracelet/a/i;
-.super Lcn/com/smartdevices/bracelet/a/u;
+.super Lcn/com/smartdevices/bracelet/a/v;
 
 
 # direct methods
 .method public constructor <init>(Lcn/com/smartdevices/bracelet/a/b;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/a/u;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/a/v;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
 
     return-void
 .end method
@@ -23,7 +23,7 @@
     :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/i;->m:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->_factoryReset()Z
+    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->pair()Z
 
     move-result v0
 

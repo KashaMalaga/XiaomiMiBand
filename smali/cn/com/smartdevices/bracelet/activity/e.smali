@@ -127,6 +127,28 @@
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->h(Lcn/com/smartdevices/bracelet/activity/LoginActivity;)V
 
+    const-string v0, "LoginActivity"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "login failed result = "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/e;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
     invoke-static {v0, v3, v4}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
@@ -169,7 +191,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "code ="
+    const-string v3, "login NONCE_ERROR, code ="
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -183,7 +205,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/e;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
@@ -213,7 +235,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/d/g;->a(Lcn/com/smartdevices/bracelet/model/LoginInfo;Ljava/lang/String;)Lcn/com/smartdevices/bracelet/model/LoginInfo;
+    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/f/f;->a(Lcn/com/smartdevices/bracelet/model/LoginInfo;Ljava/lang/String;)Lcn/com/smartdevices/bracelet/model/LoginInfo;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/e;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
@@ -279,7 +301,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->o()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->p()Ljava/lang/String;
 
     move-result-object v1
 
@@ -287,7 +309,7 @@
 
     invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/activity/f;-><init>(Lcn/com/smartdevices/bracelet/activity/e;)V
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/d/f;->a(Lcn/com/smartdevices/bracelet/model/LoginInfo;Ljava/lang/String;Lcom/c/a/a/h;)V
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/f/e;->a(Lcn/com/smartdevices/bracelet/model/LoginInfo;Ljava/lang/String;Lcom/c/a/a/h;)V
 
     goto/16 :goto_0
 .end method

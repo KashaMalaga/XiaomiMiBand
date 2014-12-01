@@ -3,13 +3,13 @@
 
 
 # instance fields
-.field a:Lcom/xiaomi/push/service/S;
+.field a:Lcom/xiaomi/push/service/U;
 
 .field final synthetic b:Lcom/xiaomi/push/service/XMPushService;
 
 
 # direct methods
-.method public constructor <init>(Lcom/xiaomi/push/service/XMPushService;Lcom/xiaomi/push/service/S;)V
+.method public constructor <init>(Lcom/xiaomi/push/service/XMPushService;Lcom/xiaomi/push/service/U;)V
     .locals 1
 
     iput-object p1, p0, Lcom/xiaomi/push/service/a;->b:Lcom/xiaomi/push/service/XMPushService;
@@ -20,9 +20,9 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/xiaomi/push/service/a;->a:Lcom/xiaomi/push/service/S;
+    iput-object v0, p0, Lcom/xiaomi/push/service/a;->a:Lcom/xiaomi/push/service/U;
 
-    iput-object p2, p0, Lcom/xiaomi/push/service/a;->a:Lcom/xiaomi/push/service/S;
+    iput-object p2, p0, Lcom/xiaomi/push/service/a;->a:Lcom/xiaomi/push/service/U;
 
     return-void
 .end method
@@ -49,17 +49,17 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcom/xiaomi/push/service/a;->a:Lcom/xiaomi/push/service/S;
+    iget-object v0, p0, Lcom/xiaomi/push/service/a;->a:Lcom/xiaomi/push/service/U;
 
-    iget-object v0, v0, Lcom/xiaomi/push/service/S;->m:Lcom/xiaomi/push/service/U;
+    iget-object v0, v0, Lcom/xiaomi/push/service/U;->m:Lcom/xiaomi/push/service/W;
 
-    sget-object v1, Lcom/xiaomi/push/service/U;->a:Lcom/xiaomi/push/service/U;
+    sget-object v1, Lcom/xiaomi/push/service/W;->a:Lcom/xiaomi/push/service/W;
 
     if-ne v0, v1, :cond_1
 
-    iget-object v0, p0, Lcom/xiaomi/push/service/a;->a:Lcom/xiaomi/push/service/S;
+    iget-object v0, p0, Lcom/xiaomi/push/service/a;->a:Lcom/xiaomi/push/service/U;
 
-    sget-object v1, Lcom/xiaomi/push/service/U;->b:Lcom/xiaomi/push/service/U;
+    sget-object v1, Lcom/xiaomi/push/service/W;->b:Lcom/xiaomi/push/service/W;
 
     const/4 v2, 0x0
 
@@ -69,7 +69,7 @@
 
     const/4 v5, 0x0
 
-    invoke-virtual/range {v0 .. v5}, Lcom/xiaomi/push/service/S;->a(Lcom/xiaomi/push/service/U;IILjava/lang/String;Ljava/lang/String;)V
+    invoke-virtual/range {v0 .. v5}, Lcom/xiaomi/push/service/U;->a(Lcom/xiaomi/push/service/W;IILjava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/xiaomi/push/service/a;->b:Lcom/xiaomi/push/service/XMPushService;
 
@@ -77,9 +77,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/xiaomi/push/service/a;->a:Lcom/xiaomi/push/service/S;
+    iget-object v1, p0, Lcom/xiaomi/push/service/a;->a:Lcom/xiaomi/push/service/U;
 
-    invoke-virtual {v0, v1}, Lcom/xiaomi/f/l;->a(Lcom/xiaomi/push/service/S;)V
+    invoke-virtual {v0, v1}, Lcom/xiaomi/f/l;->a(Lcom/xiaomi/push/service/U;)V
     :try_end_0
     .catch Lcom/xiaomi/f/C; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -110,9 +110,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/xiaomi/push/service/a;->a:Lcom/xiaomi/push/service/S;
+    iget-object v1, p0, Lcom/xiaomi/push/service/a;->a:Lcom/xiaomi/push/service/U;
 
-    iget-object v1, v1, Lcom/xiaomi/push/service/S;->m:Lcom/xiaomi/push/service/U;
+    iget-object v1, v1, Lcom/xiaomi/push/service/U;->m:Lcom/xiaomi/push/service/W;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -142,9 +142,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/xiaomi/push/service/a;->a:Lcom/xiaomi/push/service/S;
+    iget-object v1, p0, Lcom/xiaomi/push/service/a;->a:Lcom/xiaomi/push/service/U;
 
-    iget-object v1, v1, Lcom/xiaomi/push/service/S;->h:Ljava/lang/String;
+    iget-object v1, v1, Lcom/xiaomi/push/service/U;->h:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -156,9 +156,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/xiaomi/push/service/a;->a:Lcom/xiaomi/push/service/S;
+    iget-object v1, p0, Lcom/xiaomi/push/service/a;->a:Lcom/xiaomi/push/service/U;
 
-    iget-object v1, v1, Lcom/xiaomi/push/service/S;->b:Ljava/lang/String;
+    iget-object v1, v1, Lcom/xiaomi/push/service/U;->b:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

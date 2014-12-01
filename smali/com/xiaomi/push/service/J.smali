@@ -29,55 +29,25 @@
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/push/service/J;->a:Lcom/xiaomi/push/service/XMPushService;
 
-    iget-object v1, p0, Lcom/xiaomi/push/service/J;->b:Lcom/xiaomi/g/a/n;
-
-    invoke-static {v0, v1}, Lcom/xiaomi/push/service/G;->a(Lcom/xiaomi/push/service/XMPushService;Lcom/xiaomi/g/a/n;)Lcom/xiaomi/g/a/n;
-
-    move-result-object v0
-
-    new-instance v1, Lcom/xiaomi/g/a/d;
-
-    invoke-direct {v1}, Lcom/xiaomi/g/a/d;-><init>()V
+    iget-object v1, p0, Lcom/xiaomi/push/service/J;->a:Lcom/xiaomi/push/service/XMPushService;
 
     iget-object v2, p0, Lcom/xiaomi/push/service/J;->b:Lcom/xiaomi/g/a/n;
 
-    invoke-virtual {v2}, Lcom/xiaomi/g/a/n;->m()Lcom/xiaomi/g/a/d;
+    invoke-virtual {v2}, Lcom/xiaomi/g/a/n;->j()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/xiaomi/g/a/d;->a()Ljava/lang/String;
+    iget-object v3, p0, Lcom/xiaomi/push/service/J;->b:Lcom/xiaomi/g/a/n;
 
-    move-result-object v2
+    invoke-virtual {v3}, Lcom/xiaomi/g/a/n;->h()Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lcom/xiaomi/g/a/d;->a(Ljava/lang/String;)Lcom/xiaomi/g/a/d;
+    move-result-object v3
 
-    iget-object v2, p0, Lcom/xiaomi/push/service/J;->b:Lcom/xiaomi/g/a/n;
-
-    invoke-virtual {v2}, Lcom/xiaomi/g/a/n;->m()Lcom/xiaomi/g/a/d;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/xiaomi/g/a/d;->c()J
-
-    move-result-wide v2
-
-    invoke-virtual {v1, v2, v3}, Lcom/xiaomi/g/a/d;->a(J)Lcom/xiaomi/g/a/d;
-
-    invoke-virtual {v0, v1}, Lcom/xiaomi/g/a/n;->a(Lcom/xiaomi/g/a/d;)Lcom/xiaomi/g/a/n;
-
-    invoke-virtual {v0}, Lcom/xiaomi/g/a/n;->m()Lcom/xiaomi/g/a/d;
+    invoke-virtual {v1, v2, v3}, Lcom/xiaomi/push/service/XMPushService;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/xiaomi/g/a/n;
 
     move-result-object v1
 
-    const-string v2, "message_obsleted"
-
-    const-string v3, "1"
-
-    invoke-virtual {v1, v2, v3}, Lcom/xiaomi/g/a/d;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcom/xiaomi/push/service/J;->a:Lcom/xiaomi/push/service/XMPushService;
-
-    invoke-virtual {v1, v0}, Lcom/xiaomi/push/service/XMPushService;->b(Lcom/xiaomi/g/a/n;)V
+    invoke-virtual {v0, v1}, Lcom/xiaomi/push/service/XMPushService;->b(Lcom/xiaomi/g/a/n;)V
     :try_end_0
     .catch Lcom/xiaomi/f/C; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -101,7 +71,7 @@
 .method public b()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "send ack message for obsleted message."
+    const-string v0, "send app absent message."
 
     return-object v0
 .end method

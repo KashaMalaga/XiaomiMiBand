@@ -346,7 +346,7 @@
     sput-object v0, Lcn/com/smartdevices/bracelet/lua/LuaManager;->__instance:Lcn/com/smartdevices/bracelet/lua/LuaManager;
 
     :cond_0
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/z;->l(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/z;->m(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -582,7 +582,7 @@
 
     invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/lua/j;-><init>(Lcn/com/smartdevices/bracelet/lua/LuaManager;)V
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/d/f;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Lcom/c/a/a/h;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/f/e;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Lcom/c/a/a/h;)V
 
     return-void
 .end method
@@ -598,7 +598,7 @@
 
     invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/lua/i;-><init>(Lcn/com/smartdevices/bracelet/lua/LuaManager;)V
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/d/f;->b(Lcn/com/smartdevices/bracelet/model/LoginData;Lcom/c/a/a/h;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/f/e;->b(Lcn/com/smartdevices/bracelet/model/LoginData;Lcom/c/a/a/h;)V
 
     return-void
 .end method
@@ -977,7 +977,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->w()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->x()Ljava/lang/String;
 
     move-result-object v1
 

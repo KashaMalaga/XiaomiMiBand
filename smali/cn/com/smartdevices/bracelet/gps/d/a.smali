@@ -26,9 +26,9 @@
 
     new-instance v0, Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v1, p0, Lcn/com/smartdevices/bracelet/gps/model/c;->g:D
+    iget-wide v1, p0, Lcn/com/smartdevices/bracelet/gps/model/c;->j:D
 
-    iget-wide v3, p0, Lcn/com/smartdevices/bracelet/gps/model/c;->h:D
+    iget-wide v3, p0, Lcn/com/smartdevices/bracelet/gps/model/c;->k:D
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
@@ -90,9 +90,9 @@
 
     check-cast v0, Lcn/com/smartdevices/bracelet/gps/model/c;
 
-    iget-wide v4, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->g:D
+    iget-wide v4, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->j:D
 
-    iget-wide v6, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->h:D
+    iget-wide v6, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->k:D
 
     invoke-static {v4, v5, v6, v7}, Lcn/com/smartdevices/bracelet/gps/d/a;->a(DD)Lcom/amap/api/maps/model/LatLng;
 
@@ -115,9 +115,9 @@
 
     new-instance v0, Lcom/amap/api/services/core/LatLonPoint;
 
-    iget-wide v1, p0, Lcn/com/smartdevices/bracelet/gps/model/c;->g:D
+    iget-wide v1, p0, Lcn/com/smartdevices/bracelet/gps/model/c;->j:D
 
-    iget-wide v3, p0, Lcn/com/smartdevices/bracelet/gps/model/c;->h:D
+    iget-wide v3, p0, Lcn/com/smartdevices/bracelet/gps/model/c;->k:D
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/amap/api/services/core/LatLonPoint;-><init>(DD)V
 
@@ -194,9 +194,9 @@
 
     new-instance v0, Lcom/amap/api/services/core/LatLonPoint;
 
-    iget-wide v1, p0, Lcn/com/smartdevices/bracelet/gps/model/c;->g:D
+    iget-wide v1, p0, Lcn/com/smartdevices/bracelet/gps/model/c;->j:D
 
-    iget-wide v3, p0, Lcn/com/smartdevices/bracelet/gps/model/c;->h:D
+    iget-wide v3, p0, Lcn/com/smartdevices/bracelet/gps/model/c;->k:D
 
     invoke-direct {v0, v1, v2, v3, v4}, Lcom/amap/api/services/core/LatLonPoint;-><init>(DD)V
 

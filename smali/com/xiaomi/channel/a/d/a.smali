@@ -175,9 +175,9 @@
 
     :cond_0
     :try_start_0
-    new-instance v2, Ljava/net/URL;
+    invoke-static {p1}, Lcom/xiaomi/channel/a/d/a;->a(Ljava/lang/String;)Ljava/net/URL;
 
-    invoke-direct {v2, p1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
+    move-result-object v2
 
     invoke-static {p0, v2}, Lcom/xiaomi/channel/a/d/a;->a(Landroid/content/Context;Ljava/net/URL;)Ljava/net/HttpURLConnection;
 
@@ -841,6 +841,16 @@
     invoke-virtual {v0, v2, v1}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
+.end method
+
+.method private static a(Ljava/lang/String;)Ljava/net/URL;
+    .locals 1
+
+    new-instance v0, Ljava/net/URL;
+
+    invoke-direct {v0, p0}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
+
+    return-object v0
 .end method
 
 .method public static b(Landroid/content/Context;)Z

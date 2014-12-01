@@ -49,7 +49,7 @@
 
     const/4 v1, 0x1
 
-    iput v1, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->k:I
+    iput v1, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->n:I
 
     :cond_0
     :goto_0
@@ -78,7 +78,7 @@
 
     const/4 v1, 0x2
 
-    iput v1, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->k:I
+    iput v1, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->n:I
 
     goto :goto_0
 
@@ -97,7 +97,7 @@
 
     const/4 v1, 0x3
 
-    iput v1, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->k:I
+    iput v1, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->n:I
 
     goto :goto_0
 .end method

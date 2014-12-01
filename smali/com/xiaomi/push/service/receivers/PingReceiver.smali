@@ -48,7 +48,7 @@
 
     invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->b(Ljava/lang/String;)V
 
-    sget-object v0, Lcom/xiaomi/push/service/W;->k:Ljava/lang/String;
+    sget-object v0, Lcom/xiaomi/push/service/Y;->k:Ljava/lang/String;
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 

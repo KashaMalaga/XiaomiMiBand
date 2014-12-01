@@ -92,7 +92,7 @@
     nop
 
     :pswitch_data_0
-    .packed-switch 0x7f0700e3
+    .packed-switch 0x7f0700fb
         :pswitch_1
         :pswitch_2
         :pswitch_0
@@ -104,11 +104,11 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030029
+    const v0, 0x7f03002d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/BraceletNotFoundActivity;->setContentView(I)V
 
-    const v0, 0x7f0700e5
+    const v0, 0x7f0700fd
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/BraceletNotFoundActivity;->findViewById(I)Landroid/view/View;
 
@@ -118,7 +118,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700e4
+    const v0, 0x7f0700fc
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/BraceletNotFoundActivity;->findViewById(I)Landroid/view/View;
 
@@ -126,7 +126,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700e3
+    const v0, 0x7f0700fb
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/BraceletNotFoundActivity;->findViewById(I)Landroid/view/View;
 
@@ -144,7 +144,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0c013c
+    const v2, 0x7f0c013d
 
     invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/activity/BraceletNotFoundActivity;->getString(I)Ljava/lang/String;
 

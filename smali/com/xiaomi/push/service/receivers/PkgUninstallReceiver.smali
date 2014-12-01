@@ -42,7 +42,7 @@
 
     invoke-direct {v1, p1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    sget-object v2, Lcom/xiaomi/push/service/X;->a:Ljava/lang/String;
+    sget-object v2, Lcom/xiaomi/push/service/Z;->a:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 

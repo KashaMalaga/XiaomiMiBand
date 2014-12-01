@@ -1,95 +1,32 @@
 .class public Lcn/com/smartdevices/bracelet/gps/b/t;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Ljava/io/Serializable;
-
-
-# static fields
-.field private static final serialVersionUID:J = 0x1L
-
 
 # instance fields
-.field public a:I
-
-.field public b:Z
-
-.field public c:Z
-
-.field public d:Z
-
-.field public e:I
+.field private a:Lcom/amap/api/maps/AMap;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Lcom/amap/api/maps/AMap;)V
     .locals 1
-
-    const/4 v0, 0x0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->a:I
+    const/4 v0, 0x0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->e:I
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->a:Lcom/amap/api/maps/AMap;
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->a:Lcom/amap/api/maps/AMap;
 
     return-void
 .end method
 
-.method public constructor <init>(Z)V
+
+# virtual methods
+.method public a()Lcom/amap/api/maps/AMap;
     .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->a:Lcom/amap/api/maps/AMap;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->a:I
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->e:I
-
-    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->b:Z
-
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->c:Z
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->e:I
-
-    return-void
-.end method
-
-.method public constructor <init>(ZI)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->a:I
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->e:I
-
-    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->b:Z
-
-    iput p2, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->e:I
-
-    return-void
-.end method
-
-.method public constructor <init>(ZZ)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->a:I
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->e:I
-
-    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->b:Z
-
-    iput-boolean p2, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->c:Z
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->e:I
-
-    return-void
+    return-object v0
 .end method

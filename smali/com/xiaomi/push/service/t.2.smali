@@ -1,58 +1,82 @@
 .class Lcom/xiaomi/push/service/t;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lcom/xiaomi/push/service/T;
+.super Lcom/xiaomi/push/service/e;
 
 
 # instance fields
-.field final synthetic a:Lcom/xiaomi/push/service/XMPushService;
+.field final synthetic a:I
+
+.field final synthetic b:[B
+
+.field final synthetic c:Ljava/lang/String;
+
+.field final synthetic e:Lcom/xiaomi/push/service/XMPushService;
 
 
 # direct methods
-.method constructor <init>(Lcom/xiaomi/push/service/XMPushService;)V
+.method constructor <init>(Lcom/xiaomi/push/service/XMPushService;II[BLjava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/xiaomi/push/service/t;->a:Lcom/xiaomi/push/service/XMPushService;
+    iput-object p1, p0, Lcom/xiaomi/push/service/t;->e:Lcom/xiaomi/push/service/XMPushService;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lcom/xiaomi/push/service/t;->a:I
+
+    iput-object p4, p0, Lcom/xiaomi/push/service/t;->b:[B
+
+    iput-object p5, p0, Lcom/xiaomi/push/service/t;->c:Ljava/lang/String;
+
+    invoke-direct {p0, p2}, Lcom/xiaomi/push/service/e;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcom/xiaomi/push/service/U;Lcom/xiaomi/push/service/U;I)V
+.method public a()V
     .locals 3
 
-    sget-object v0, Lcom/xiaomi/push/service/U;->c:Lcom/xiaomi/push/service/U;
+    iget-object v0, p0, Lcom/xiaomi/push/service/t;->e:Lcom/xiaomi/push/service/XMPushService;
 
-    if-ne p2, v0, :cond_1
+    invoke-static {v0}, Lcom/xiaomi/push/service/E;->d(Landroid/content/Context;)V
 
-    iget-object v0, p0, Lcom/xiaomi/push/service/t;->a:Lcom/xiaomi/push/service/XMPushService;
+    invoke-static {}, Lcom/xiaomi/push/service/S;->a()Lcom/xiaomi/push/service/S;
 
-    invoke-static {v0}, Lcom/xiaomi/push/service/F;->a(Lcom/xiaomi/push/service/XMPushService;)V
+    move-result-object v0
 
-    iget-object v0, p0, Lcom/xiaomi/push/service/t;->a:Lcom/xiaomi/push/service/XMPushService;
+    const-string v1, "5"
 
-    invoke-static {v0}, Lcom/xiaomi/push/service/F;->b(Lcom/xiaomi/push/service/XMPushService;)V
+    invoke-virtual {v0, v1}, Lcom/xiaomi/push/service/S;->a(Ljava/lang/String;)V
 
-    :cond_0
-    :goto_0
+    iget v0, p0, Lcom/xiaomi/push/service/t;->a:I
+
+    invoke-static {v0}, Lcom/xiaomi/channel/a/c/a;->a(I)V
+
+    iget-object v0, p0, Lcom/xiaomi/push/service/t;->e:Lcom/xiaomi/push/service/XMPushService;
+
+    invoke-static {v0}, Lcom/xiaomi/push/service/XMPushService;->c(Lcom/xiaomi/push/service/XMPushService;)Lcom/xiaomi/f/n;
+
+    move-result-object v0
+
+    invoke-static {}, Lcom/xiaomi/f/n;->d()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/xiaomi/f/n;->c(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/xiaomi/push/service/t;->e:Lcom/xiaomi/push/service/XMPushService;
+
+    iget-object v1, p0, Lcom/xiaomi/push/service/t;->b:[B
+
+    iget-object v2, p0, Lcom/xiaomi/push/service/t;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Lcom/xiaomi/push/service/XMPushService;->a([BLjava/lang/String;)V
+
     return-void
+.end method
 
-    :cond_1
-    sget-object v0, Lcom/xiaomi/push/service/U;->a:Lcom/xiaomi/push/service/U;
+.method public b()Ljava/lang/String;
+    .locals 1
 
-    if-ne p2, v0, :cond_0
+    const-string v0, "clear account cache."
 
-    iget-object v0, p0, Lcom/xiaomi/push/service/t;->a:Lcom/xiaomi/push/service/XMPushService;
-
-    const v1, 0x42c1d81
-
-    const-string v2, " the push is not connected."
-
-    invoke-static {v0, v1, v2}, Lcom/xiaomi/push/service/F;->a(Landroid/content/Context;ILjava/lang/String;)V
-
-    goto :goto_0
+    return-object v0
 .end method

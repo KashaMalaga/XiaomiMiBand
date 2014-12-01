@@ -100,7 +100,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->d:Landroid/widget/TextView;
 
-    const v3, 0x7f0c0144
+    const v3, 0x7f0c0145
 
     invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->getString(I)Ljava/lang/String;
 
@@ -136,7 +136,7 @@
 .method private b()V
     .locals 4
 
-    const v0, 0x7f07007e
+    const v0, 0x7f070094
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->findViewById(I)Landroid/view/View;
 
@@ -144,7 +144,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070076
+    const v0, 0x7f070079
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->findViewById(I)Landroid/view/View;
 
@@ -152,7 +152,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700dd
+    const v0, 0x7f0700f5
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->findViewById(I)Landroid/view/View;
 
@@ -162,7 +162,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->d:Landroid/widget/TextView;
 
-    const v0, 0x7f0700de
+    const v0, 0x7f0700f6
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->findViewById(I)Landroid/view/View;
 
@@ -275,8 +275,8 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f070076 -> :sswitch_1
-        0x7f07007e -> :sswitch_0
+        0x7f070079 -> :sswitch_1
+        0x7f070094 -> :sswitch_0
     .end sparse-switch
 .end method
 
@@ -287,7 +287,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030027
+    const v0, 0x7f03002b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->setContentView(I)V
 

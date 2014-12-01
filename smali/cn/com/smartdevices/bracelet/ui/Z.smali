@@ -87,6 +87,12 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/W;->c(Lcn/com/smartdevices/bracelet/ui/W;I)I
 
+    invoke-static {}, Lcn/com/smartdevices/bracelet/b/a;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
     invoke-static {}, Lcn/com/smartdevices/bracelet/u;->h()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v0
@@ -107,11 +113,11 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/o;->l()Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/o;->m()Lcn/com/smartdevices/bracelet/model/SportDay;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/o;->f(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/DaySportData;
+    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/o;->e(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/DaySportData;
 
     move-result-object v1
 
@@ -147,7 +153,7 @@
 
     if-nez v0, :cond_1
 
-    const-string v0, "Dynamic.Main"
+    const-string v0, "DynamicFragment"
 
     const-string v1, "sync data for realtime step large than synced steps!!!"
 

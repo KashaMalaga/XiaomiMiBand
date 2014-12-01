@@ -38,9 +38,11 @@
 
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
-    .locals 3
+    .locals 4
 
     const/16 v1, 0x3e9
+
+    const/4 v3, 0x1
 
     iget v0, p1, Landroid/os/Message;->what:I
 
@@ -66,7 +68,7 @@
 
     int-to-long v1, v1
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/lab/c/e;->c(J)Ljava/lang/String;
+    invoke-static {v1, v2, v3}, Lcn/com/smartdevices/bracelet/lab/c/e;->a(JZ)Ljava/lang/String;
 
     move-result-object v1
 
@@ -91,7 +93,7 @@
 
     int-to-long v1, v1
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/lab/c/e;->c(J)Ljava/lang/String;
+    invoke-static {v1, v2, v3}, Lcn/com/smartdevices/bracelet/lab/c/e;->a(JZ)Ljava/lang/String;
 
     move-result-object v1
 
@@ -127,8 +129,6 @@
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
     goto :goto_0
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x3e8

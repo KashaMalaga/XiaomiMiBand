@@ -225,7 +225,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f03002b
+    const v1, 0x7f03002f
 
     const/4 v2, 0x1
 
@@ -233,7 +233,7 @@
 
     move-result-object v1
 
-    const v0, 0x7f0700e7
+    const v0, 0x7f0700ff
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -247,7 +247,7 @@
 
     invoke-virtual {p0, v0}, Lcom/edmodo/cropper/CropImageView;->a(I)V
 
-    const v0, 0x7f0700e8
+    const v0, 0x7f070100
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

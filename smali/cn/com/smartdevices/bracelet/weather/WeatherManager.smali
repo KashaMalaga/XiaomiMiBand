@@ -753,7 +753,7 @@
 
     invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;)V
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/d/a;->a:Lcom/c/a/a/a;
+    sget-object v1, Lcn/com/smartdevices/bracelet/f/a;->a:Lcom/c/a/a/a;
 
     new-instance v2, Lcn/com/smartdevices/bracelet/weather/WeatherManager$2;
 
@@ -1062,7 +1062,7 @@
 
     move-result-object v1
 
-    sget-object v2, Lcn/com/smartdevices/bracelet/d/a;->a:Lcom/c/a/a/a;
+    sget-object v2, Lcn/com/smartdevices/bracelet/f/a;->a:Lcom/c/a/a/a;
 
     new-instance v3, Lcn/com/smartdevices/bracelet/weather/WeatherManager$3;
 
@@ -1096,7 +1096,7 @@
 
     invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;)V
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/d/a;->a:Lcom/c/a/a/a;
+    sget-object v1, Lcn/com/smartdevices/bracelet/f/a;->a:Lcom/c/a/a/a;
 
     new-instance v2, Lcn/com/smartdevices/bracelet/weather/WeatherManager$4;
 

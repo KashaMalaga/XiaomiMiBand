@@ -88,11 +88,11 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    const v0, 0x7f030025
+    const v0, 0x7f030029
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/ShowImageActivity;->setContentView(I)V
 
-    const v0, 0x7f0700da
+    const v0, 0x7f0700f2
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/ShowImageActivity;->findViewById(I)Landroid/view/View;
 
@@ -118,7 +118,7 @@
 
     invoke-direct {v1, v2, v0}, Lcom/e/a/b/a/f;-><init>(II)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/i;->a()Lcn/com/smartdevices/bracelet/i;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/h;->a()Lcn/com/smartdevices/bracelet/h;
 
     move-result-object v0
 
@@ -128,11 +128,11 @@
 
     move-result-object v2
 
-    new-instance v3, Lcn/com/smartdevices/bracelet/ui/da;
+    new-instance v3, Lcn/com/smartdevices/bracelet/ui/cW;
 
-    invoke-direct {v3, p0}, Lcn/com/smartdevices/bracelet/ui/da;-><init>(Lcn/com/smartdevices/bracelet/ui/ShowImageActivity;)V
+    invoke-direct {v3, p0}, Lcn/com/smartdevices/bracelet/ui/cW;-><init>(Lcn/com/smartdevices/bracelet/ui/ShowImageActivity;)V
 
-    invoke-virtual {v0, v2, v1, v3}, Lcn/com/smartdevices/bracelet/i;->a(Ljava/lang/String;Lcom/e/a/b/a/f;Lcom/e/a/b/f/a;)V
+    invoke-virtual {v0, v2, v1, v3}, Lcn/com/smartdevices/bracelet/h;->a(Ljava/lang/String;Lcom/e/a/b/a/f;Lcom/e/a/b/f/a;)V
 
     return-void
 .end method

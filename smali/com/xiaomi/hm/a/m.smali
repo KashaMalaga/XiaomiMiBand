@@ -9,6 +9,8 @@
 
 .field public static final default_title_indicator_line_position:I = 0x7f0a0001
 
+.field public static final partner_title_length:I = 0x7f0a0003
+
 
 # direct methods
 .method public constructor <init>()V

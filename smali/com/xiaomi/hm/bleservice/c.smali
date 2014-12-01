@@ -1,47 +1,50 @@
 .class Lcom/xiaomi/hm/bleservice/c;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.super Lcn/com/smartdevices/bracelet/a/b;
 
 
 # instance fields
-.field final synthetic a:Z
-
 .field final synthetic b:Lcom/xiaomi/hm/bleservice/BLEService;
 
 
 # direct methods
-.method constructor <init>(Lcom/xiaomi/hm/bleservice/BLEService;Z)V
+.method constructor <init>(Lcom/xiaomi/hm/bleservice/BLEService;)V
     .locals 0
 
     iput-object p1, p0, Lcom/xiaomi/hm/bleservice/c;->b:Lcom/xiaomi/hm/bleservice/BLEService;
 
-    iput-boolean p2, p0, Lcom/xiaomi/hm/bleservice/c;->a:Z
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/a/b;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 3
+.method public c(Ljava/lang/Object;)V
+    .locals 1
 
-    invoke-static {}, Lcom/xiaomi/hm/bleservice/p;->a()Lcom/xiaomi/hm/bleservice/p;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/xiaomi/hm/bleservice/c;->b:Lcom/xiaomi/hm/bleservice/BLEService;
-
-    iget-boolean v2, p0, Lcom/xiaomi/hm/bleservice/c;->a:Z
-
-    invoke-virtual {v0, v1, v2}, Lcom/xiaomi/hm/bleservice/p;->a(Landroid/content/Context;Z)V
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->c(Ljava/lang/Object;)V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/c;->b:Lcom/xiaomi/hm/bleservice/BLEService;
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->notifyDynamicStatusChanged(Landroid/content/Context;)V
+    check-cast p1, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;
+
+    # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->onTogglePairResult(Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;)V
+    invoke-static {v0, p1}, Lcom/xiaomi/hm/bleservice/BLEService;->access$1500(Lcom/xiaomi/hm/bleservice/BLEService;Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;)V
+
+    return-void
+.end method
+
+.method public d(Ljava/lang/Object;)V
+    .locals 2
+
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->d(Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/c;->b:Lcom/xiaomi/hm/bleservice/BLEService;
+
+    const/4 v1, 0x0
+
+    # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->onTogglePairResult(Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;)V
+    invoke-static {v0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->access$1500(Lcom/xiaomi/hm/bleservice/BLEService;Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;)V
 
     return-void
 .end method

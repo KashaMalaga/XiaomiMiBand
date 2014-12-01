@@ -30,7 +30,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/o;->l()Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/o;->m()Lcn/com/smartdevices/bracelet/model/SportDay;
 
     move-result-object v1
 
@@ -44,7 +44,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/o;->k()Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/o;->l()Lcn/com/smartdevices/bracelet/model/SportDay;
 
     move-result-object v1
 
@@ -68,7 +68,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/o;->i()Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/o;->j()Lcn/com/smartdevices/bracelet/model/SportDay;
 
     move-result-object v1
 
@@ -82,7 +82,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/o;->j()Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/o;->k()Lcn/com/smartdevices/bracelet/model/SportDay;
 
     move-result-object v1
 

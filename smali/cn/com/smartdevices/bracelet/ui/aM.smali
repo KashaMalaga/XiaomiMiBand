@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/aK;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/aJ;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/aK;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/aJ;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/aM;->a:Lcn/com/smartdevices/bracelet/ui/aK;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/aM;->a:Lcn/com/smartdevices/bracelet/ui/aJ;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -35,9 +35,9 @@
 
     move-result v1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aM;->a:Lcn/com/smartdevices/bracelet/ui/aK;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aM;->a:Lcn/com/smartdevices/bracelet/ui/aJ;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/aK;->b(Lcn/com/smartdevices/bracelet/ui/aK;)Landroid/view/View;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/aJ;->b(Lcn/com/smartdevices/bracelet/ui/aJ;)Landroid/view/View;
 
     move-result-object v0
 

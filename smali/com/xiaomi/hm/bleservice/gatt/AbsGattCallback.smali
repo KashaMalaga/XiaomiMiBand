@@ -530,7 +530,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/util/UUID;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/a/b;->a(Ljava/util/UUID;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -574,7 +574,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/util/UUID;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/a/b;->a(Ljava/util/UUID;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -623,7 +623,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/util/UUID;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/a/b;->a(Ljava/util/UUID;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -778,7 +778,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/util/UUID;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/a/b;->a(Ljava/util/UUID;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -822,7 +822,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/util/UUID;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/a/b;->a(Ljava/util/UUID;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -871,7 +871,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/util/UUID;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/a/b;->a(Ljava/util/UUID;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1038,7 +1038,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/util/UUID;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/a/b;->a(Ljava/util/UUID;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1082,7 +1082,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/util/UUID;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/a/b;->a(Ljava/util/UUID;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1131,7 +1131,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/util/UUID;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/a/b;->a(Ljava/util/UUID;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1298,7 +1298,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/util/UUID;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/a/b;->a(Ljava/util/UUID;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1342,7 +1342,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/util/UUID;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/a/b;->a(Ljava/util/UUID;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1391,7 +1391,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/a/a;->a(Ljava/util/UUID;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/a/b;->a(Ljava/util/UUID;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1961,7 +1961,7 @@
 
     move-result-object v0
 
-    invoke-static {v1}, Lcom/xiaomi/hm/bleservice/a/a;->b([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/xiaomi/hm/bleservice/a/b;->b([B)Ljava/lang/String;
 
     move-result-object v2
 
@@ -2046,7 +2046,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/xiaomi/hm/bleservice/a/a;->b([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/xiaomi/hm/bleservice/a/b;->b([B)Ljava/lang/String;
 
     move-result-object v1
 
@@ -2173,7 +2173,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/xiaomi/hm/bleservice/a/a;->b([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/xiaomi/hm/bleservice/a/b;->b([B)Ljava/lang/String;
 
     move-result-object v1
 
@@ -2737,7 +2737,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/xiaomi/hm/bleservice/a/a;->b([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/xiaomi/hm/bleservice/a/b;->b([B)Ljava/lang/String;
 
     move-result-object v1
 
@@ -2864,7 +2864,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/xiaomi/hm/bleservice/a/a;->b([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/xiaomi/hm/bleservice/a/b;->b([B)Ljava/lang/String;
 
     move-result-object v1
 
@@ -3387,7 +3387,7 @@
     return v1
 
     :cond_2
-    sget-object v2, Lcom/xiaomi/hm/bleservice/a/a;->a:Ljava/util/UUID;
+    sget-object v2, Lcom/xiaomi/hm/bleservice/a/b;->a:Ljava/util/UUID;
 
     invoke-virtual {p1, v2}, Landroid/bluetooth/BluetoothGattCharacteristic;->getDescriptor(Ljava/util/UUID;)Landroid/bluetooth/BluetoothGattDescriptor;
 
@@ -3530,7 +3530,7 @@
 
     if-eqz v2, :cond_0
 
-    sget-object v2, Lcom/xiaomi/hm/bleservice/a/a;->a:Ljava/util/UUID;
+    sget-object v2, Lcom/xiaomi/hm/bleservice/a/b;->a:Ljava/util/UUID;
 
     invoke-virtual {p1, v2}, Landroid/bluetooth/BluetoothGattCharacteristic;->getDescriptor(Ljava/util/UUID;)Landroid/bluetooth/BluetoothGattDescriptor;
 

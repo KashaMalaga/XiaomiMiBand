@@ -37,6 +37,28 @@
     return-void
 .end method
 
+.method public constructor <init>(BIB)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput v0, p0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityData;->intensity:I
+
+    iput v0, p0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityData;->steps:I
+
+    iput v0, p0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityData;->category:I
+
+    iput p1, p0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityData;->intensity:I
+
+    iput p2, p0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityData;->steps:I
+
+    iput p3, p0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityData;->category:I
+
+    return-void
+.end method
+
 
 # virtual methods
 .method public toString()Ljava/lang/String;

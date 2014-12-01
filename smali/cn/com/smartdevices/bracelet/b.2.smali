@@ -5,7 +5,7 @@
 # static fields
 .field private static a:Ljava/lang/String;
 
-.field private static b:Lcom/xiaomi/hm/bleservice/t;
+.field private static b:Lcom/xiaomi/hm/bleservice/v;
 
 .field private static c:Landroid/content/ServiceConnection;
 
@@ -20,7 +20,7 @@
 
     const/4 v0, 0x0
 
-    sput-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sput-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
     new-instance v0, Lcn/com/smartdevices/bracelet/c;
 
@@ -42,13 +42,13 @@
 .method public static a()Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
     .locals 1
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
-    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/t;->e()Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/v;->e()Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     move-result-object v0
 
@@ -61,10 +61,10 @@
     goto :goto_0
 .end method
 
-.method static synthetic a(Lcom/xiaomi/hm/bleservice/t;)Lcom/xiaomi/hm/bleservice/t;
+.method static synthetic a(Lcom/xiaomi/hm/bleservice/v;)Lcom/xiaomi/hm/bleservice/v;
     .locals 0
 
-    sput-object p0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sput-object p0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
     return-object p0
 .end method
@@ -72,13 +72,13 @@
 .method public static a(I)V
     .locals 1
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
-    invoke-interface {v0, p0}, Lcom/xiaomi/hm/bleservice/t;->a(I)V
+    invoke-interface {v0, p0}, Lcom/xiaomi/hm/bleservice/v;->a(I)V
 
     :cond_0
     return-void
@@ -87,13 +87,13 @@
 .method public static a(Landroid/bluetooth/BluetoothDevice;Z)V
     .locals 1
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
-    invoke-interface {v0, p0, p1}, Lcom/xiaomi/hm/bleservice/t;->a(Landroid/bluetooth/BluetoothDevice;Z)V
+    invoke-interface {v0, p0, p1}, Lcom/xiaomi/hm/bleservice/v;->a(Landroid/bluetooth/BluetoothDevice;Z)V
 
     :cond_0
     return-void
@@ -110,13 +110,13 @@
 .method public static b()V
     .locals 2
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
-    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/t;->e()Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/v;->e()Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     move-result-object v0
 
@@ -148,7 +148,7 @@
     invoke-virtual {p0, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
     :cond_0
-    sget-object v1, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sget-object v1, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
     if-nez v1, :cond_1
 
@@ -165,13 +165,13 @@
 .method public static c()Z
     .locals 1
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
-    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/t;->e()Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/v;->e()Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     move-result-object v0
 
@@ -234,13 +234,13 @@
 .method public static d()Landroid/bluetooth/BluetoothDevice;
     .locals 1
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
-    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/t;->e()Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/v;->e()Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     move-result-object v0
 
@@ -365,13 +365,13 @@
 .method public static e()Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$Progress;
     .locals 1
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
-    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/t;->e()Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/v;->e()Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     move-result-object v0
 
@@ -393,13 +393,13 @@
 .method public static f()Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$BatteryInfo;
     .locals 1
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
-    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/t;->e()Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/v;->e()Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     move-result-object v0
 
@@ -421,13 +421,13 @@
 .method public static g()Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;
     .locals 1
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
-    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/t;->e()Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/v;->e()Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     move-result-object v0
 
@@ -449,13 +449,13 @@
 .method public static h()Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;
     .locals 1
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
-    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/t;->e()Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/v;->e()Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     move-result-object v0
 
@@ -477,13 +477,13 @@
 .method public static i()V
     .locals 1
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
-    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/t;->d()V
+    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/v;->d()V
 
     :cond_0
     return-void
@@ -492,13 +492,13 @@
 .method public static j()V
     .locals 1
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
-    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/t;->c()V
+    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/v;->c()V
 
     :cond_0
     return-void
@@ -507,13 +507,13 @@
 .method public static k()Lcom/xiaomi/hm/bleservice/HwConnStatus;
     .locals 1
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
-    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/t;->a()Lcom/xiaomi/hm/bleservice/HwConnStatus;
+    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/v;->a()Lcom/xiaomi/hm/bleservice/HwConnStatus;
 
     move-result-object v0
 
@@ -531,13 +531,13 @@
 .method public static l()Lcom/xiaomi/hm/bleservice/HwConnStatus;
     .locals 1
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
-    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/t;->f()Lcom/xiaomi/hm/bleservice/HwConnStatus;
+    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/v;->f()Lcom/xiaomi/hm/bleservice/HwConnStatus;
 
     move-result-object v0
 
@@ -555,13 +555,13 @@
 .method public static m()Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;
     .locals 1
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
-    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/t;->b()Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;
+    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/v;->b()Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;
 
     move-result-object v0
 
@@ -579,13 +579,13 @@
 .method public static n()Z
     .locals 1
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/t;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b;->b:Lcom/xiaomi/hm/bleservice/v;
 
-    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/t;->g()Z
+    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/v;->g()Z
 
     move-result v0
 

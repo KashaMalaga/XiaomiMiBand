@@ -204,7 +204,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/xiaomi/push/service/C;->c(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/xiaomi/push/service/E;->c(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -332,7 +332,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/xiaomi/push/service/C;->c(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/xiaomi/push/service/E;->c(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v1
 

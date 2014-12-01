@@ -38,16 +38,6 @@
 
 
 # virtual methods
-.method protected abstract a(Ljava/lang/String;Z)Ljava/lang/Object;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "Z)TJSON_TYPE;"
-        }
-    .end annotation
-.end method
-
 .method public final a(I[Lorg/apache/http/Header;Ljava/lang/String;)V
     .locals 2
 
@@ -163,6 +153,16 @@
             "Ljava/lang/Throwable;",
             "Ljava/lang/String;",
             "TJSON_TYPE;)V"
+        }
+    .end annotation
+.end method
+
+.method protected abstract b(Ljava/lang/String;Z)Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Z)TJSON_TYPE;"
         }
     .end annotation
 .end method

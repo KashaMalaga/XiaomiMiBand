@@ -2,15 +2,9 @@
 .super Lcn/com/smartdevices/bracelet/ui/J;
 
 
-# instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/BaseActivity;
-
-
 # direct methods
-.method public constructor <init>(Lcn/com/smartdevices/bracelet/ui/BaseActivity;)V
+.method public constructor <init>()V
     .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/m;->a:Lcn/com/smartdevices/bracelet/ui/BaseActivity;
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/J;-><init>()V
 
@@ -22,7 +16,7 @@
 .method protected a()I
     .locals 1
 
-    const v0, 0x7f03002d
+    const v0, 0x7f030031
 
     return v0
 .end method
@@ -48,7 +42,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0700ea
+    const v0, 0x7f070101
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

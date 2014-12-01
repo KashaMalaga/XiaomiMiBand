@@ -183,235 +183,241 @@
 
 .field public static final ic_about_logo:I = 0x7f020059
 
-.field public static final ic_dynamic_detail_sleep_end:I = 0x7f02005a
+.field public static final ic_devices_bind_band:I = 0x7f02005a
 
-.field public static final ic_dynamic_detail_sleep_start:I = 0x7f02005b
+.field public static final ic_dynamic_detail_sleep_end:I = 0x7f02005b
 
-.field public static final ic_dynamic_sleep:I = 0x7f02005c
+.field public static final ic_dynamic_detail_sleep_start:I = 0x7f02005c
 
-.field public static final ic_dynamic_step:I = 0x7f02005d
+.field public static final ic_dynamic_sleep:I = 0x7f02005d
 
-.field public static final ic_home_back:I = 0x7f02005e
+.field public static final ic_dynamic_step:I = 0x7f02005e
 
-.field public static final ic_home_back_normal:I = 0x7f02005f
+.field public static final ic_home_back:I = 0x7f02005f
 
-.field public static final ic_home_back_pressed:I = 0x7f020060
+.field public static final ic_home_back_normal:I = 0x7f020060
 
-.field public static final ic_indicator_prev:I = 0x7f020061
+.field public static final ic_home_back_pressed:I = 0x7f020061
 
-.field public static final ic_indicator_prev_2:I = 0x7f020062
+.field public static final ic_indicator_prev:I = 0x7f020062
 
-.field public static final ic_indicator_prev_light:I = 0x7f020063
+.field public static final ic_indicator_prev_2:I = 0x7f020063
 
-.field public static final ic_indicator_prev_light_2:I = 0x7f020064
+.field public static final ic_indicator_prev_light:I = 0x7f020064
 
-.field public static final ic_indicator_right_arrow:I = 0x7f020065
+.field public static final ic_indicator_prev_light_2:I = 0x7f020065
 
-.field public static final ic_indicator_right_arrow_normal:I = 0x7f020066
+.field public static final ic_indicator_right_arrow:I = 0x7f020066
 
-.field public static final ic_indicator_right_arrow_pressed:I = 0x7f020067
+.field public static final ic_indicator_right_arrow_normal:I = 0x7f020067
 
-.field public static final ic_menu_dynamic:I = 0x7f020068
+.field public static final ic_indicator_right_arrow_pressed:I = 0x7f020068
 
-.field public static final ic_menu_friends:I = 0x7f020069
+.field public static final ic_menu_dynamic:I = 0x7f020069
 
-.field public static final ic_menu_mili:I = 0x7f02006a
+.field public static final ic_menu_friends:I = 0x7f02006a
 
-.field public static final ic_small_mili:I = 0x7f02006b
+.field public static final ic_menu_mili:I = 0x7f02006b
 
-.field public static final indicator_arrow:I = 0x7f02006c
+.field public static final ic_small_mili:I = 0x7f02006c
 
-.field public static final indicator_bg_bottom:I = 0x7f02006d
+.field public static final indicator_arrow:I = 0x7f02006d
 
-.field public static final indicator_bg_top:I = 0x7f02006e
+.field public static final indicator_bg_bottom:I = 0x7f02006e
 
-.field public static final info:I = 0x7f02006f
+.field public static final indicator_bg_top:I = 0x7f02006f
 
-.field public static final intruction_1:I = 0x7f020070
+.field public static final info:I = 0x7f020070
 
-.field public static final intruction_2_1:I = 0x7f020071
+.field public static final intruction_1:I = 0x7f020071
 
-.field public static final intruction_2_2:I = 0x7f020072
+.field public static final intruction_2_1:I = 0x7f020072
 
-.field public static final intruction_2_3:I = 0x7f020073
+.field public static final intruction_2_2:I = 0x7f020073
 
-.field public static final intruction_2_4:I = 0x7f020074
+.field public static final intruction_2_3:I = 0x7f020074
 
-.field public static final intruction_2_5:I = 0x7f020075
+.field public static final intruction_2_4:I = 0x7f020075
 
-.field public static final intruction_3:I = 0x7f020076
+.field public static final intruction_2_5:I = 0x7f020076
 
-.field public static final intruction_tip_bg:I = 0x7f020077
+.field public static final intruction_3:I = 0x7f020077
 
-.field public static final intruction_tip_bg_vertical:I = 0x7f020078
+.field public static final intruction_tip_bg:I = 0x7f020078
 
-.field public static final item_split:I = 0x7f020079
+.field public static final intruction_tip_bg_vertical:I = 0x7f020079
 
-.field public static final lab_favorite_vote_badminton_normal:I = 0x7f02007a
+.field public static final item_split:I = 0x7f02007a
 
-.field public static final lab_favorite_vote_basketball_normal:I = 0x7f02007b
+.field public static final lab_favorite_vote_badminton_normal:I = 0x7f02007b
 
-.field public static final lab_favorite_vote_bg:I = 0x7f02007c
+.field public static final lab_favorite_vote_basketball_normal:I = 0x7f02007c
 
-.field public static final lab_favorite_vote_climbing_normal:I = 0x7f02007d
+.field public static final lab_favorite_vote_bg:I = 0x7f02007d
 
-.field public static final lab_favorite_vote_football_normal:I = 0x7f02007e
+.field public static final lab_favorite_vote_climbing_normal:I = 0x7f02007e
 
-.field public static final lab_favorite_vote_others_normal:I = 0x7f02007f
+.field public static final lab_favorite_vote_football_normal:I = 0x7f02007f
 
-.field public static final lab_favorite_vote_pingpong_normal:I = 0x7f020080
+.field public static final lab_favorite_vote_others_normal:I = 0x7f020080
 
-.field public static final lab_favorite_vote_riding_normal:I = 0x7f020081
+.field public static final lab_favorite_vote_pingpong_normal:I = 0x7f020081
 
-.field public static final lab_favorite_vote_running_normal:I = 0x7f020082
+.field public static final lab_favorite_vote_riding_normal:I = 0x7f020082
 
-.field public static final lab_favorite_vote_skidding_normal:I = 0x7f020083
+.field public static final lab_favorite_vote_running_normal:I = 0x7f020083
 
-.field public static final lab_favorite_vote_sliding_normal:I = 0x7f020084
+.field public static final lab_favorite_vote_skidding_normal:I = 0x7f020084
 
-.field public static final lab_favorite_vote_tennis_normal:I = 0x7f020085
+.field public static final lab_favorite_vote_sliding_normal:I = 0x7f020085
 
-.field public static final lab_favorite_vote_volleyball_normal:I = 0x7f020086
+.field public static final lab_favorite_vote_tennis_normal:I = 0x7f020086
 
-.field public static final lab_sport_edittext_bg_selector:I = 0x7f020087
+.field public static final lab_favorite_vote_volleyball_normal:I = 0x7f020087
 
-.field public static final lab_sport_vote_item_bg:I = 0x7f020088
+.field public static final lab_sport_edittext_bg_selector:I = 0x7f020088
 
-.field public static final location_icon:I = 0x7f020089
+.field public static final lab_sport_vote_item_bg:I = 0x7f020089
 
-.field public static final male_disable:I = 0x7f02008a
+.field public static final location_icon:I = 0x7f02008a
 
-.field public static final male_enable:I = 0x7f02008b
+.field public static final male_disable:I = 0x7f02008b
 
-.field public static final menu_cancel_normal:I = 0x7f02008c
+.field public static final male_enable:I = 0x7f02008c
 
-.field public static final menu_cancel_press:I = 0x7f02008d
+.field public static final menu_cancel_normal:I = 0x7f02008d
 
-.field public static final menu_cancel_seletor:I = 0x7f02008e
+.field public static final menu_cancel_press:I = 0x7f02008e
 
-.field public static final menu_item_selector:I = 0x7f02008f
+.field public static final menu_cancel_seletor:I = 0x7f02008f
 
-.field public static final mili_light_bg_round_blue:I = 0x7f020090
+.field public static final menu_item_selector:I = 0x7f020090
 
-.field public static final mili_light_bg_round_green:I = 0x7f020091
+.field public static final mili_light_bg_round_blue:I = 0x7f020091
 
-.field public static final mili_light_bg_round_orange:I = 0x7f020092
+.field public static final mili_light_bg_round_green:I = 0x7f020092
 
-.field public static final mili_light_bg_round_red:I = 0x7f020093
+.field public static final mili_light_bg_round_orange:I = 0x7f020093
 
-.field public static final mili_vertical_icon:I = 0x7f020094
+.field public static final mili_light_bg_round_red:I = 0x7f020094
 
-.field public static final new_banner_icon:I = 0x7f020095
+.field public static final mili_vertical_icon:I = 0x7f020095
 
-.field public static final new_dot_icon:I = 0x7f020096
+.field public static final new_banner_icon:I = 0x7f020096
 
-.field public static final not_binded:I = 0x7f020097
+.field public static final new_dot_icon:I = 0x7f020097
 
-.field public static final ok_mark:I = 0x7f020098
+.field public static final not_binded:I = 0x7f020098
 
-.field public static final percent_mark:I = 0x7f020099
+.field public static final ok_mark:I = 0x7f020099
 
-.field public static final person_avatar_default:I = 0x7f02009a
+.field public static final percent_mark:I = 0x7f02009a
 
-.field public static final person_avatar_default_share:I = 0x7f02009b
+.field public static final person_avatar_default:I = 0x7f02009b
 
-.field public static final person_avatar_frame:I = 0x7f02009c
+.field public static final person_avatar_default_share:I = 0x7f02009c
 
-.field public static final person_avatar_frame_pressed:I = 0x7f02009d
+.field public static final person_avatar_frame:I = 0x7f02009d
 
-.field public static final person_avatar_frame_selector:I = 0x7f02009e
+.field public static final person_avatar_frame_pressed:I = 0x7f02009e
 
-.field public static final progress_icon:I = 0x7f02009f
+.field public static final person_avatar_frame_selector:I = 0x7f02009f
 
-.field public static final pulldown:I = 0x7f0200a0
+.field public static final progress_icon:I = 0x7f0200a0
 
-.field public static final pulldown2:I = 0x7f0200a1
+.field public static final pulldown:I = 0x7f0200a1
 
-.field public static final ruler_bg:I = 0x7f0200a2
+.field public static final pulldown2:I = 0x7f0200a2
 
-.field public static final ruler_item_bg:I = 0x7f0200a3
+.field public static final ruler_bg:I = 0x7f0200a3
 
-.field public static final running_detail_end:I = 0x7f0200a4
+.field public static final ruler_item_bg:I = 0x7f0200a4
 
-.field public static final running_detail_star:I = 0x7f0200a5
+.field public static final running_detail_end:I = 0x7f0200a5
 
-.field public static final running_lock_bg:I = 0x7f0200a6
+.field public static final running_detail_star:I = 0x7f0200a6
 
-.field public static final running_screen_lock:I = 0x7f0200a7
+.field public static final running_location:I = 0x7f0200a7
 
-.field public static final running_screen_unlock:I = 0x7f0200a8
+.field public static final running_lock_bg:I = 0x7f0200a8
 
-.field public static final running_screen_unlock_holder:I = 0x7f0200a9
+.field public static final running_screen_lock:I = 0x7f0200a9
 
-.field public static final searching_mili_icon:I = 0x7f0200aa
+.field public static final running_screen_unlock:I = 0x7f0200aa
 
-.field public static final share_facebook:I = 0x7f0200ab
+.field public static final running_screen_unlock_holder:I = 0x7f0200ab
 
-.field public static final share_facebook_uninstall:I = 0x7f0200ac
+.field public static final searching_mili_icon:I = 0x7f0200ac
 
-.field public static final share_line:I = 0x7f0200ad
+.field public static final share_facebook:I = 0x7f0200ad
 
-.field public static final share_line_uninstall:I = 0x7f0200ae
+.field public static final share_facebook_uninstall:I = 0x7f0200ae
 
-.field public static final share_miliao:I = 0x7f0200af
+.field public static final share_line:I = 0x7f0200af
 
-.field public static final share_miliao_uninstall:I = 0x7f0200b0
+.field public static final share_line_uninstall:I = 0x7f0200b0
 
-.field public static final share_pengyouquan_select:I = 0x7f0200b1
+.field public static final share_miliao:I = 0x7f0200b1
 
-.field public static final share_pengyouquan_uninstall:I = 0x7f0200b2
+.field public static final share_miliao_uninstall:I = 0x7f0200b2
 
-.field public static final share_qq_select:I = 0x7f0200b3
+.field public static final share_pengyouquan_select:I = 0x7f0200b3
 
-.field public static final share_qq_uninstall:I = 0x7f0200b4
+.field public static final share_pengyouquan_uninstall:I = 0x7f0200b4
 
-.field public static final share_qq_zone_select:I = 0x7f0200b5
+.field public static final share_qq_select:I = 0x7f0200b5
 
-.field public static final share_qq_zone_uninstall:I = 0x7f0200b6
+.field public static final share_qq_uninstall:I = 0x7f0200b6
 
-.field public static final share_split:I = 0x7f0200b7
+.field public static final share_qq_zone_select:I = 0x7f0200b7
 
-.field public static final share_weibo_select:I = 0x7f0200b8
+.field public static final share_qq_zone_uninstall:I = 0x7f0200b8
 
-.field public static final share_weibo_uninstall:I = 0x7f0200b9
+.field public static final share_split:I = 0x7f0200b9
 
-.field public static final share_weixin_select:I = 0x7f0200ba
+.field public static final share_weibo_select:I = 0x7f0200ba
 
-.field public static final share_weixin_uninstall:I = 0x7f0200bb
+.field public static final share_weibo_uninstall:I = 0x7f0200bb
 
-.field public static final sleep_icon:I = 0x7f0200bc
+.field public static final share_weixin_select:I = 0x7f0200bc
 
-.field public static final switch_off:I = 0x7f0200bd
+.field public static final share_weixin_uninstall:I = 0x7f0200bd
 
-.field public static final switch_on:I = 0x7f0200be
+.field public static final sleep_icon:I = 0x7f0200be
 
-.field public static final switch_selector:I = 0x7f0200bf
+.field public static final switch_off:I = 0x7f0200bf
 
-.field public static final switch_thumb:I = 0x7f0200c0
+.field public static final switch_on:I = 0x7f0200c0
 
-.field public static final switch_thumb_disable:I = 0x7f0200c1
+.field public static final switch_selector:I = 0x7f0200c1
 
-.field public static final switch_thumb_enable:I = 0x7f0200c2
+.field public static final switch_thumb:I = 0x7f0200c2
 
-.field public static final switch_track_enable:I = 0x7f0200c3
+.field public static final switch_thumb_disable:I = 0x7f0200c3
 
-.field public static final switch_track_trans:I = 0x7f0200c4
+.field public static final switch_thumb_enable:I = 0x7f0200c4
 
-.field public static final texture:I = 0x7f0200c5
+.field public static final switch_track_enable:I = 0x7f0200c5
 
-.field public static final tile:I = 0x7f0200c6
+.field public static final switch_track_trans:I = 0x7f0200c6
 
-.field public static final unlock_screen_bg:I = 0x7f0200c7
+.field public static final texture:I = 0x7f0200c7
 
-.field public static final user_id_icon:I = 0x7f0200c8
+.field public static final tile:I = 0x7f0200c8
 
-.field public static final wheel_custom_val_dark_0:I = 0x7f0200c9
+.field public static final unlock_for_smartlock_guide:I = 0x7f0200c9
 
-.field public static final wheel_custom_val_default:I = 0x7f0200ca
+.field public static final unlock_screen_bg:I = 0x7f0200ca
 
-.field public static final wheel_custom_val_white_1:I = 0x7f0200cb
+.field public static final user_id_icon:I = 0x7f0200cb
 
-.field public static final wrong_mark:I = 0x7f0200cc
+.field public static final wheel_custom_val_dark_0:I = 0x7f0200cc
+
+.field public static final wheel_custom_val_default:I = 0x7f0200cd
+
+.field public static final wheel_custom_val_white_1:I = 0x7f0200ce
+
+.field public static final wrong_mark:I = 0x7f0200cf
 
 
 # direct methods

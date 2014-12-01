@@ -411,15 +411,15 @@
 .method public a(I)V
     .locals 2
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/a/m;
+    new-instance v0, Lcn/com/smartdevices/bracelet/a/n;
 
     new-instance v1, Lcn/com/smartdevices/bracelet/lab/c;
 
     invoke-direct {v1, p0, p1}, Lcn/com/smartdevices/bracelet/lab/c;-><init>(Lcn/com/smartdevices/bracelet/lab/b;I)V
 
-    invoke-direct {v0, p1, v1}, Lcn/com/smartdevices/bracelet/a/m;-><init>(ILcn/com/smartdevices/bracelet/a/b;)V
+    invoke-direct {v0, p1, v1}, Lcn/com/smartdevices/bracelet/a/n;-><init>(ILcn/com/smartdevices/bracelet/a/b;)V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/a/m;->e()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/a/n;->e()V
 
     return-void
 .end method

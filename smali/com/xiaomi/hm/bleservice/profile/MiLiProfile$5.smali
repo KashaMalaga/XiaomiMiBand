@@ -427,7 +427,7 @@
 
     move-result-object v1
 
-    invoke-static {p1}, Lcom/xiaomi/hm/bleservice/a/a;->b([B)Ljava/lang/String;
+    invoke-static {p1}, Lcom/xiaomi/hm/bleservice/a/b;->b([B)Ljava/lang/String;
 
     move-result-object v2
 

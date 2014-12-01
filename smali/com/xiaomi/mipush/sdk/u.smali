@@ -26,6 +26,8 @@
 
 .field private f:Landroid/content/Intent;
 
+.field private g:Ljava/lang/Integer;
+
 
 # direct methods
 .method static constructor <clinit>()V
@@ -41,7 +43,9 @@
 .end method
 
 .method private constructor <init>(Landroid/content/Context;)V
-    .locals 1
+    .locals 2
+
+    const/4 v1, 0x0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -49,9 +53,9 @@
 
     iput-boolean v0, p0, Lcom/xiaomi/mipush/sdk/u;->a:Z
 
-    const/4 v0, 0x0
+    iput-object v1, p0, Lcom/xiaomi/mipush/sdk/u;->f:Landroid/content/Intent;
 
-    iput-object v0, p0, Lcom/xiaomi/mipush/sdk/u;->f:Landroid/content/Intent;
+    iput-object v1, p0, Lcom/xiaomi/mipush/sdk/u;->g:Ljava/lang/Integer;
 
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
@@ -67,13 +71,21 @@
 
     iput-object v0, p0, Lcom/xiaomi/mipush/sdk/u;->d:Ljava/lang/String;
 
-    invoke-direct {p0}, Lcom/xiaomi/mipush/sdk/u;->e()Z
+    invoke-direct {p0}, Lcom/xiaomi/mipush/sdk/u;->f()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/xiaomi/mipush/sdk/u;->a:Z
 
     return-void
+.end method
+
+.method static synthetic a(Lcom/xiaomi/mipush/sdk/u;)Landroid/content/Context;
+    .locals 1
+
+    iget-object v0, p0, Lcom/xiaomi/mipush/sdk/u;->c:Landroid/content/Context;
+
+    return-object v0
 .end method
 
 .method public static a(Landroid/content/Context;)Lcom/xiaomi/mipush/sdk/u;
@@ -95,7 +107,15 @@
     return-object v0
 .end method
 
-.method private final a(Lorg/apache/thrift/b;Lcom/xiaomi/g/a/a;ZZ)V
+.method static synthetic a(Lcom/xiaomi/mipush/sdk/u;Ljava/lang/Integer;)Ljava/lang/Integer;
+    .locals 0
+
+    iput-object p1, p0, Lcom/xiaomi/mipush/sdk/u;->g:Ljava/lang/Integer;
+
+    return-object p1
+.end method
+
+.method private final a(Lorg/apache/thrift/b;Lcom/xiaomi/g/a/a;ZZLcom/xiaomi/g/a/d;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -103,7 +123,9 @@
             "Lorg/apache/thrift/b",
             "<TT;*>;>(TT;",
             "Lcom/xiaomi/g/a/a;",
-            "ZZ)V"
+            "ZZ",
+            "Lcom/xiaomi/g/a/d;",
+            ")V"
         }
     .end annotation
 
@@ -121,7 +143,7 @@
 
     if-eqz p4, :cond_0
 
-    invoke-virtual {p0, p1, p2, p3}, Lcom/xiaomi/mipush/sdk/u;->b(Lorg/apache/thrift/b;Lcom/xiaomi/g/a/a;Z)V
+    invoke-virtual {p0, p1, p2, p3}, Lcom/xiaomi/mipush/sdk/u;->a(Lorg/apache/thrift/b;Lcom/xiaomi/g/a/a;Z)V
 
     :goto_0
     return-void
@@ -134,7 +156,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-direct {p0}, Lcom/xiaomi/mipush/sdk/u;->f()Landroid/content/Intent;
+    invoke-direct {p0}, Lcom/xiaomi/mipush/sdk/u;->g()Landroid/content/Intent;
 
     move-result-object v0
 
@@ -144,11 +166,16 @@
 
     move-result-object v1
 
+    if-eqz p5, :cond_2
+
+    invoke-virtual {v1, p5}, Lcom/xiaomi/g/a/n;->a(Lcom/xiaomi/g/a/d;)Lcom/xiaomi/g/a/n;
+
+    :cond_2
     invoke-static {v1}, Lcom/xiaomi/g/a/N;->a(Lorg/apache/thrift/b;)[B
 
     move-result-object v1
 
-    if-nez v1, :cond_2
+    if-nez v1, :cond_3
 
     const-string v0, "send message fail, because msgBytes is null."
 
@@ -156,7 +183,7 @@
 
     goto :goto_0
 
-    :cond_2
+    :cond_3
     const-string v2, "com.xiaomi.mipush.SEND_MESSAGE"
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
@@ -172,7 +199,15 @@
     goto :goto_0
 .end method
 
-.method private e()Z
+.method static synthetic b(Lcom/xiaomi/mipush/sdk/u;)Ljava/lang/Integer;
+    .locals 1
+
+    iget-object v0, p0, Lcom/xiaomi/mipush/sdk/u;->g:Ljava/lang/Integer;
+
+    return-object v0
+.end method
+
+.method private f()Z
     .locals 4
 
     const/4 v0, 0x0
@@ -217,7 +252,7 @@
     goto :goto_0
 .end method
 
-.method private f()Landroid/content/Intent;
+.method private g()Landroid/content/Intent;
     .locals 4
 
     iget-object v0, p0, Lcom/xiaomi/mipush/sdk/u;->c:Landroid/content/Context;
@@ -250,7 +285,7 @@
 
     const-string v2, "com.xiaomi.xmsf"
 
-    invoke-direct {p0}, Lcom/xiaomi/mipush/sdk/u;->g()Ljava/lang/String;
+    invoke-direct {p0}, Lcom/xiaomi/mipush/sdk/u;->h()Ljava/lang/String;
 
     move-result-object v3
 
@@ -260,13 +295,13 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    invoke-direct {p0}, Lcom/xiaomi/mipush/sdk/u;->h()V
+    invoke-direct {p0}, Lcom/xiaomi/mipush/sdk/u;->i()V
 
     :goto_0
     return-object v0
 
     :cond_0
-    invoke-direct {p0}, Lcom/xiaomi/mipush/sdk/u;->i()V
+    invoke-direct {p0}, Lcom/xiaomi/mipush/sdk/u;->j()V
 
     new-instance v0, Landroid/content/Intent;
 
@@ -283,7 +318,7 @@
     goto :goto_0
 .end method
 
-.method private g()Ljava/lang/String;
+.method private h()Ljava/lang/String;
     .locals 3
 
     :try_start_0
@@ -323,7 +358,7 @@
     goto :goto_0
 .end method
 
-.method private h()V
+.method private i()V
     .locals 4
 
     iget-object v0, p0, Lcom/xiaomi/mipush/sdk/u;->c:Landroid/content/Context;
@@ -349,7 +384,7 @@
     return-void
 .end method
 
-.method private i()V
+.method private j()V
     .locals 5
 
     const/4 v4, 0x1
@@ -380,7 +415,7 @@
 
     iget-object v0, p0, Lcom/xiaomi/mipush/sdk/u;->c:Landroid/content/Context;
 
-    invoke-direct {p0}, Lcom/xiaomi/mipush/sdk/u;->f()Landroid/content/Intent;
+    invoke-direct {p0}, Lcom/xiaomi/mipush/sdk/u;->g()Landroid/content/Intent;
 
     move-result-object v1
 
@@ -389,10 +424,42 @@
     return-void
 .end method
 
+.method public a(I)V
+    .locals 3
+
+    invoke-direct {p0}, Lcom/xiaomi/mipush/sdk/u;->g()Landroid/content/Intent;
+
+    move-result-object v0
+
+    const-string v1, "com.xiaomi.mipush.CLEAR_NOTIFICATION"
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+
+    sget-object v1, Lcom/xiaomi/push/service/Y;->u:Ljava/lang/String;
+
+    iget-object v2, p0, Lcom/xiaomi/mipush/sdk/u;->c:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    sget-object v1, Lcom/xiaomi/push/service/Y;->v:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    iget-object v1, p0, Lcom/xiaomi/mipush/sdk/u;->c:Landroid/content/Context;
+
+    invoke-virtual {v1, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+
+    return-void
+.end method
+
 .method public final a(Lcom/xiaomi/g/a/F;)V
     .locals 4
 
-    invoke-direct {p0}, Lcom/xiaomi/mipush/sdk/u;->f()Landroid/content/Intent;
+    invoke-direct {p0}, Lcom/xiaomi/mipush/sdk/u;->g()Landroid/content/Intent;
 
     move-result-object v0
 
@@ -454,7 +521,7 @@
 
     iput-object v0, p0, Lcom/xiaomi/mipush/sdk/u;->f:Landroid/content/Intent;
 
-    invoke-direct {p0}, Lcom/xiaomi/mipush/sdk/u;->f()Landroid/content/Intent;
+    invoke-direct {p0}, Lcom/xiaomi/mipush/sdk/u;->g()Landroid/content/Intent;
 
     move-result-object v0
 
@@ -534,6 +601,12 @@
 
     if-eqz v1, :cond_1
 
+    invoke-virtual {p0}, Lcom/xiaomi/mipush/sdk/u;->e()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
     iget-object v1, p0, Lcom/xiaomi/mipush/sdk/u;->c:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
@@ -546,7 +619,7 @@
     goto :goto_0
 .end method
 
-.method public final a(Lorg/apache/thrift/b;Lcom/xiaomi/g/a/a;)V
+.method public final a(Lorg/apache/thrift/b;Lcom/xiaomi/g/a/a;Lcom/xiaomi/g/a/d;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -554,6 +627,7 @@
             "Lorg/apache/thrift/b",
             "<TT;*>;>(TT;",
             "Lcom/xiaomi/g/a/a;",
+            "Lcom/xiaomi/g/a/d;",
             ")V"
         }
     .end annotation
@@ -569,7 +643,7 @@
     const/4 v0, 0x1
 
     :goto_0
-    invoke-virtual {p0, p1, p2, v0}, Lcom/xiaomi/mipush/sdk/u;->a(Lorg/apache/thrift/b;Lcom/xiaomi/g/a/a;Z)V
+    invoke-virtual {p0, p1, p2, v0, p3}, Lcom/xiaomi/mipush/sdk/u;->a(Lorg/apache/thrift/b;Lcom/xiaomi/g/a/a;ZLcom/xiaomi/g/a/d;)V
 
     return-void
 
@@ -579,26 +653,7 @@
     goto :goto_0
 .end method
 
-.method public final a(Lorg/apache/thrift/b;Lcom/xiaomi/g/a/a;Z)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T::",
-            "Lorg/apache/thrift/b",
-            "<TT;*>;>(TT;",
-            "Lcom/xiaomi/g/a/a;",
-            "Z)V"
-        }
-    .end annotation
-
-    const/4 v0, 0x1
-
-    invoke-direct {p0, p1, p2, p3, v0}, Lcom/xiaomi/mipush/sdk/u;->a(Lorg/apache/thrift/b;Lcom/xiaomi/g/a/a;ZZ)V
-
-    return-void
-.end method
-
-.method public b(Lorg/apache/thrift/b;Lcom/xiaomi/g/a/a;Z)V
+.method public a(Lorg/apache/thrift/b;Lcom/xiaomi/g/a/a;Z)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -660,6 +715,37 @@
     throw v0
 .end method
 
+.method public final a(Lorg/apache/thrift/b;Lcom/xiaomi/g/a/a;ZLcom/xiaomi/g/a/d;)V
+    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T::",
+            "Lorg/apache/thrift/b",
+            "<TT;*>;>(TT;",
+            "Lcom/xiaomi/g/a/a;",
+            "Z",
+            "Lcom/xiaomi/g/a/d;",
+            ")V"
+        }
+    .end annotation
+
+    const/4 v4, 0x1
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move v3, p3
+
+    move-object v5, p4
+
+    invoke-direct/range {v0 .. v5}, Lcom/xiaomi/mipush/sdk/u;->a(Lorg/apache/thrift/b;Lcom/xiaomi/g/a/a;ZZLcom/xiaomi/g/a/d;)V
+
+    return-void
+.end method
+
 .method public b()Z
     .locals 2
 
@@ -712,48 +798,52 @@
 .end method
 
 .method public d()V
-    .locals 6
+    .locals 8
 
-    sget-object v1, Lcom/xiaomi/mipush/sdk/u;->e:Ljava/util/ArrayList;
+    sget-object v6, Lcom/xiaomi/mipush/sdk/u;->e:Ljava/util/ArrayList;
 
-    monitor-enter v1
+    monitor-enter v6
 
     :try_start_0
     sget-object v0, Lcom/xiaomi/mipush/sdk/u;->e:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    move-result-object v2
+    move-result-object v7
 
     :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/xiaomi/mipush/sdk/v;
 
-    iget-object v3, v0, Lcom/xiaomi/mipush/sdk/v;->a:Lorg/apache/thrift/b;
+    iget-object v1, v0, Lcom/xiaomi/mipush/sdk/v;->a:Lorg/apache/thrift/b;
 
-    iget-object v4, v0, Lcom/xiaomi/mipush/sdk/v;->b:Lcom/xiaomi/g/a/a;
+    iget-object v2, v0, Lcom/xiaomi/mipush/sdk/v;->b:Lcom/xiaomi/g/a/a;
 
-    iget-boolean v0, v0, Lcom/xiaomi/mipush/sdk/v;->c:Z
+    iget-boolean v3, v0, Lcom/xiaomi/mipush/sdk/v;->c:Z
+
+    const/4 v4, 0x0
 
     const/4 v5, 0x0
 
-    invoke-direct {p0, v3, v4, v0, v5}, Lcom/xiaomi/mipush/sdk/u;->a(Lorg/apache/thrift/b;Lcom/xiaomi/g/a/a;ZZ)V
+    move-object v0, p0
+
+    invoke-direct/range {v0 .. v5}, Lcom/xiaomi/mipush/sdk/u;->a(Lorg/apache/thrift/b;Lcom/xiaomi/g/a/a;ZZLcom/xiaomi/g/a/d;)V
 
     goto :goto_0
 
     :catchall_0
     move-exception v0
 
-    monitor-exit v1
+    monitor-exit v6
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -765,9 +855,111 @@
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    monitor-exit v1
+    monitor-exit v6
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     return-void
+.end method
+
+.method public e()Z
+    .locals 5
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0}, Lcom/xiaomi/mipush/sdk/u;->b()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    iget-object v2, p0, Lcom/xiaomi/mipush/sdk/u;->c:Landroid/content/Context;
+
+    invoke-static {v2}, Lcom/xiaomi/push/service/o;->a(Landroid/content/Context;)Lcom/xiaomi/push/service/o;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/xiaomi/push/service/o;->a()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    iget-object v2, p0, Lcom/xiaomi/mipush/sdk/u;->g:Ljava/lang/Integer;
+
+    if-nez v2, :cond_0
+
+    iget-object v2, p0, Lcom/xiaomi/mipush/sdk/u;->c:Landroid/content/Context;
+
+    invoke-static {v2}, Lcom/xiaomi/push/service/o;->a(Landroid/content/Context;)Lcom/xiaomi/push/service/o;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/xiaomi/push/service/o;->b()I
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lcom/xiaomi/mipush/sdk/u;->g:Ljava/lang/Integer;
+
+    iget-object v2, p0, Lcom/xiaomi/mipush/sdk/u;->g:Ljava/lang/Integer;
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    new-instance v2, Lcom/xiaomi/mipush/sdk/w;
+
+    new-instance v3, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object v4
+
+    invoke-direct {v3, v4}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    invoke-direct {v2, p0, v3}, Lcom/xiaomi/mipush/sdk/w;-><init>(Lcom/xiaomi/mipush/sdk/u;Landroid/os/Handler;)V
+
+    iget-object v3, p0, Lcom/xiaomi/mipush/sdk/u;->c:Landroid/content/Context;
+
+    invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lcom/xiaomi/mipush/sdk/u;->c:Landroid/content/Context;
+
+    invoke-static {v4}, Lcom/xiaomi/push/service/o;->a(Landroid/content/Context;)Lcom/xiaomi/push/service/o;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Lcom/xiaomi/push/service/o;->c()Landroid/net/Uri;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4, v1, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
+
+    :cond_0
+    iget-object v2, p0, Lcom/xiaomi/mipush/sdk/u;->g:Ljava/lang/Integer;
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    :cond_1
+    :goto_0
+    return v0
+
+    :cond_2
+    move v0, v1
+
+    goto :goto_0
 .end method

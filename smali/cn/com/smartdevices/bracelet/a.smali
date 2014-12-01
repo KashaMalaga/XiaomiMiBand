@@ -115,13 +115,13 @@
 
     invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/d/g;->b(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/d/h;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/f/f;->b(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/f/g;
 
     move-result-object v0
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/view/O;->a()V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/d/h;->a()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/g;->a()Z
 
     move-result v0
 

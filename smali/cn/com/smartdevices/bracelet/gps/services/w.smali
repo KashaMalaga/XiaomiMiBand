@@ -57,7 +57,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/w;->a:Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->e(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;)Lcn/com/smartdevices/bracelet/gps/services/o;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->e(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;)Lcn/com/smartdevices/bracelet/gps/services/n;
 
     move-result-object v0
 
@@ -65,11 +65,11 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/w;->a:Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->e(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;)Lcn/com/smartdevices/bracelet/gps/services/o;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->e(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;)Lcn/com/smartdevices/bracelet/gps/services/n;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/gps/services/o;->a(I)V
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/gps/services/n;->a(I)V
 
     :cond_0
     const/4 v0, -0x1
@@ -155,11 +155,11 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/w;->a:Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->d(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;)Lcn/com/smartdevices/bracelet/gps/services/j;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->d(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;)Lcn/com/smartdevices/bracelet/gps/services/i;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/gps/services/j;->a(Lcn/com/smartdevices/bracelet/gps/services/a/a;)V
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/gps/services/i;->a(Lcn/com/smartdevices/bracelet/gps/services/a/a;)V
 
     return-void
 .end method
@@ -169,11 +169,11 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/w;->a:Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->d(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;)Lcn/com/smartdevices/bracelet/gps/services/j;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->d(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;)Lcn/com/smartdevices/bracelet/gps/services/i;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/gps/services/j;->a(Lcn/com/smartdevices/bracelet/gps/services/a/b;)V
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/gps/services/i;->a(Lcn/com/smartdevices/bracelet/gps/services/a/b;)V
 
     return-void
 .end method
@@ -183,7 +183,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/w;->a:Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->e(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;)Lcn/com/smartdevices/bracelet/gps/services/o;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->e(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;)Lcn/com/smartdevices/bracelet/gps/services/n;
 
     move-result-object v0
 
@@ -191,11 +191,11 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/w;->a:Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->e(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;)Lcn/com/smartdevices/bracelet/gps/services/o;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->e(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;)Lcn/com/smartdevices/bracelet/gps/services/n;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/o;->b()I
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/n;->b()I
 
     move-result v0
 
@@ -213,11 +213,11 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/w;->a:Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->d(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;)Lcn/com/smartdevices/bracelet/gps/services/j;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->d(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;)Lcn/com/smartdevices/bracelet/gps/services/i;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/gps/services/j;->b(Lcn/com/smartdevices/bracelet/gps/services/a/a;)V
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/gps/services/i;->b(Lcn/com/smartdevices/bracelet/gps/services/a/a;)V
 
     return-void
 .end method
@@ -230,6 +230,12 @@
 
 .method public b(Lcn/com/smartdevices/bracelet/gps/services/a/b;I)V
     .locals 2
+
+    const-string v0, "Run"
+
+    const-string v1, "pauseSport"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/w;->a:Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;
 
@@ -248,6 +254,14 @@
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/services/v;->a(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/w;->a:Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->a(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;)Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->pauseRunning()V
 
     :cond_0
     return-void
@@ -292,6 +306,12 @@
 .method public c(Lcn/com/smartdevices/bracelet/gps/services/a/b;I)V
     .locals 2
 
+    const-string v0, "Run"
+
+    const-string v1, "resumeSport"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/w;->a:Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->c(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;)Lcn/com/smartdevices/bracelet/gps/services/v;
@@ -306,9 +326,17 @@
 
     move-result-object v0
 
-    const/4 v1, 0x2
+    const/4 v1, 0x3
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/services/v;->a(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/w;->a:Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->a(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;)Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->resumeRunning()V
 
     :cond_0
     return-void
@@ -333,11 +361,11 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/w;->a:Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->d(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;)Lcn/com/smartdevices/bracelet/gps/services/j;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->d(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;)Lcn/com/smartdevices/bracelet/gps/services/i;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/gps/services/j;->b(Lcn/com/smartdevices/bracelet/gps/services/a/b;)V
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/gps/services/i;->b(Lcn/com/smartdevices/bracelet/gps/services/a/b;)V
 
     return-void
 .end method
@@ -429,7 +457,7 @@
 .end method
 
 .method public e(Lcn/com/smartdevices/bracelet/gps/services/a/b;I)V
-    .locals 4
+    .locals 5
 
     const-string v0, "Run"
 
@@ -493,11 +521,13 @@
 
     move-result-object v1
 
-    const/4 v2, 0x1
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    const/4 v3, 0x1
 
-    invoke-virtual {v1, v0, v2, v3}, Lcn/com/smartdevices/bracelet/gps/services/v;->a(Ljava/util/List;ZZ)Z
+    const/4 v4, 0x0
+
+    invoke-virtual {v1, v0, v2, v3, v4}, Lcn/com/smartdevices/bracelet/gps/services/v;->a(Ljava/util/List;Lcn/com/smartdevices/bracelet/gps/model/c;ZZ)Z
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 

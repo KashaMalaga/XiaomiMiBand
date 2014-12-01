@@ -5,7 +5,7 @@
 # static fields
 .field public static final a:Ljava/lang/String; = "trackinfo"
 
-.field static final b:Ljava/lang/String; = "CREATE TABLE IF NOT EXISTS trackinfo(_id INTEGER PRIMARY KEY AUTOINCREMENT,type INTEGER DEFAULT 0,date TEXT,trackid INTEGER,summary TEXT,data TEXT DEFAULT NULL,groupCnt INTEGER,sync INTEGER DEFAULT 0, UNIQUE (trackid) ON CONFLICT REPLACE);"
+.field static final b:Ljava/lang/String; = "CREATE TABLE IF NOT EXISTS trackinfo(_id INTEGER PRIMARY KEY AUTOINCREMENT,type INTEGER DEFAULT 0,date TEXT,trackid INTEGER,summary TEXT,data TEXT DEFAULT NULL,groupCnt INTEGER DEFAULT 0,sync INTEGER DEFAULT 0, UNIQUE (trackid) ON CONFLICT REPLACE);"
 
 .field static final c:Ljava/lang/String; = "ALTER TABLE trackinfo ADD COLUMN groupCnt INTEGER"
 

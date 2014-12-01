@@ -144,7 +144,7 @@
 
     const/4 v0, 0x0
 
-    const v12, 0x7f0c017a
+    const v12, 0x7f0c0182
 
     const v11, 0x7f0c003a
 
@@ -328,7 +328,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v3, 0x7f0c01de
+    const v3, 0x7f0c01e7
 
     invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->getString(I)Ljava/lang/String;
 
@@ -548,7 +548,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v1, 0x7f0c017b
+    const v1, 0x7f0c0183
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->getString(I)Ljava/lang/String;
 
@@ -659,7 +659,7 @@
 
     invoke-virtual {v10, v0}, Lcn/com/smartdevices/bracelet/model/ShareData;->setType(I)V
 
-    const v0, 0x7f0c018d
+    const v0, 0x7f0c0195
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->getString(I)Ljava/lang/String;
 
@@ -739,7 +739,7 @@
 
     move-result-object v2
 
-    const v4, 0x7f0c018e
+    const v4, 0x7f0c0196
 
     const/4 v5, 0x2
 
@@ -839,7 +839,7 @@
 
     invoke-virtual {v10, v0}, Lcn/com/smartdevices/bracelet/model/ShareData;->setType(I)V
 
-    const v0, 0x7f0c01cc
+    const v0, 0x7f0c01d5
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->getString(I)Ljava/lang/String;
 
@@ -860,7 +860,7 @@
 
     iput-object v1, v10, Lcn/com/smartdevices/bracelet/model/ShareData;->contentUnit:Ljava/lang/String;
 
-    const v1, 0x7f0c01cb
+    const v1, 0x7f0c01d4
 
     new-array v2, v6, [Ljava/lang/Object;
 
@@ -895,7 +895,7 @@
 
     invoke-virtual {v10, v0}, Lcn/com/smartdevices/bracelet/model/ShareData;->setType(I)V
 
-    const v0, 0x7f0c018f
+    const v0, 0x7f0c0197
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->getString(I)Ljava/lang/String;
 
@@ -920,7 +920,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/o;->k()Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/o;->l()Lcn/com/smartdevices/bracelet/model/SportDay;
 
     move-result-object v0
 
@@ -928,7 +928,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/o;->f(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/DaySportData;
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/o;->e(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/DaySportData;
 
     move-result-object v0
 

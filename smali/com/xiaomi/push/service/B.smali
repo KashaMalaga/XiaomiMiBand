@@ -1,158 +1,309 @@
 .class public Lcom/xiaomi/push/service/B;
-.super Ljava/lang/Object;
+.super Landroid/os/HandlerThread;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field private volatile a:J
 
-.field protected final b:Ljava/lang/String;
+.field private volatile b:Z
 
-.field protected final c:Ljava/lang/String;
+.field private volatile c:Landroid/os/Handler;
 
-.field protected final d:Ljava/lang/String;
-
-.field protected final e:Ljava/lang/String;
-
-.field protected final f:Ljava/lang/String;
-
-.field protected final g:I
+.field private d:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Landroid/util/Pair",
+            "<",
+            "Lcom/xiaomi/push/service/e;",
+            "Ljava/lang/Long;",
+            ">;>;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
-    iput-object p1, p0, Lcom/xiaomi/push/service/B;->a:Ljava/lang/String;
+    const-wide/16 v0, 0x0
 
-    iput-object p2, p0, Lcom/xiaomi/push/service/B;->b:Ljava/lang/String;
+    iput-wide v0, p0, Lcom/xiaomi/push/service/B;->a:J
 
-    iput-object p3, p0, Lcom/xiaomi/push/service/B;->c:Ljava/lang/String;
+    const/4 v0, 0x0
 
-    iput-object p4, p0, Lcom/xiaomi/push/service/B;->d:Ljava/lang/String;
+    iput-boolean v0, p0, Lcom/xiaomi/push/service/B;->b:Z
 
-    iput-object p5, p0, Lcom/xiaomi/push/service/B;->e:Ljava/lang/String;
+    new-instance v0, Ljava/util/ArrayList;
 
-    iput-object p6, p0, Lcom/xiaomi/push/service/B;->f:Ljava/lang/String;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput p7, p0, Lcom/xiaomi/push/service/B;->g:I
+    iput-object v0, p0, Lcom/xiaomi/push/service/B;->d:Ljava/util/List;
 
     return-void
 .end method
 
-.method private static a(Landroid/content/Context;)Z
-    .locals 2
+.method static synthetic a(Lcom/xiaomi/push/service/B;J)J
+    .locals 0
 
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    iput-wide p1, p0, Lcom/xiaomi/push/service/B;->a:J
 
-    move-result-object v0
+    return-wide p1
+.end method
 
-    const-string v1, "com.xiaomi.xmsf"
+.method static synthetic a(Lcom/xiaomi/push/service/B;Z)Z
+    .locals 0
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iput-boolean p1, p0, Lcom/xiaomi/push/service/B;->b:Z
 
-    move-result v0
-
-    return v0
+    return p1
 .end method
 
 
 # virtual methods
-.method public a(Lcom/xiaomi/push/service/XMPushService;)Lcom/xiaomi/push/service/S;
-    .locals 6
+.method public a()V
+    .locals 2
 
-    const/4 v5, 0x0
+    const/4 v0, 0x1
 
-    new-instance v1, Lcom/xiaomi/push/service/S;
+    :goto_0
+    const/16 v1, 0xf
 
-    invoke-direct {v1, p1}, Lcom/xiaomi/push/service/S;-><init>(Lcom/xiaomi/push/service/XMPushService;)V
+    if-ge v0, v1, :cond_0
 
-    invoke-virtual {p1}, Lcom/xiaomi/push/service/XMPushService;->getPackageName()Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/xiaomi/push/service/B;->a(I)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public a(I)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/xiaomi/push/service/B;->c:Landroid/os/Handler;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/xiaomi/push/service/B;->c:Landroid/os/Handler;
+
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->removeMessages(I)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public a(ILjava/lang/Object;)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/xiaomi/push/service/B;->c:Landroid/os/Handler;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/xiaomi/push/service/B;->c:Landroid/os/Handler;
+
+    invoke-virtual {v0, p1, p2}, Landroid/os/Handler;->removeMessages(ILjava/lang/Object;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public a(Lcom/xiaomi/push/service/e;J)V
+    .locals 4
+
+    iget-object v1, p0, Lcom/xiaomi/push/service/B;->d:Ljava/util/List;
+
+    monitor-enter v1
+
+    :try_start_0
+    iget-object v0, p0, Lcom/xiaomi/push/service/B;->c:Landroid/os/Handler;
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
-    iput-object v0, v1, Lcom/xiaomi/push/service/S;->a:Ljava/lang/String;
+    iget v2, p1, Lcom/xiaomi/push/service/e;->d:I
 
-    iget-object v0, p0, Lcom/xiaomi/push/service/B;->a:Ljava/lang/String;
+    iput v2, v0, Landroid/os/Message;->what:I
 
-    iput-object v0, v1, Lcom/xiaomi/push/service/S;->b:Ljava/lang/String;
+    iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    iget-object v0, p0, Lcom/xiaomi/push/service/B;->c:Ljava/lang/String;
+    iget-object v2, p0, Lcom/xiaomi/push/service/B;->c:Landroid/os/Handler;
 
-    iput-object v0, v1, Lcom/xiaomi/push/service/S;->i:Ljava/lang/String;
+    invoke-virtual {v2, v0, p2, p3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    iget-object v0, p0, Lcom/xiaomi/push/service/B;->b:Ljava/lang/String;
+    :goto_0
+    monitor-exit v1
 
-    iput-object v0, v1, Lcom/xiaomi/push/service/S;->c:Ljava/lang/String;
+    return-void
 
-    const-string v0, "5"
+    :cond_0
+    const-string v0, "the job is pended, the controller is not ready."
 
-    iput-object v0, v1, Lcom/xiaomi/push/service/S;->h:Ljava/lang/String;
+    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/String;)V
 
-    const-string v0, "XMPUSH-PASS"
+    iget-object v0, p0, Lcom/xiaomi/push/service/B;->d:Ljava/util/List;
 
-    iput-object v0, v1, Lcom/xiaomi/push/service/S;->d:Ljava/lang/String;
+    new-instance v2, Landroid/util/Pair;
 
-    iput-boolean v5, v1, Lcom/xiaomi/push/service/S;->e:Z
+    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    const-string v0, "sdk_ver:2"
+    move-result-object v3
 
-    iput-object v0, v1, Lcom/xiaomi/push/service/S;->f:Ljava/lang/String;
+    invoke-direct {v2, p1, v3}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    invoke-static {p1}, Lcom/xiaomi/push/service/B;->a(Landroid/content/Context;)Z
+    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+.end method
+
+.method public b()Z
+    .locals 4
+
+    iget-boolean v0, p0, Lcom/xiaomi/push/service/B;->b:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iget-wide v2, p0, Lcom/xiaomi/push/service/B;->a:J
+
+    sub-long/2addr v0, v2
+
+    const-wide/32 v2, 0x927c0
+
+    cmp-long v0, v0, v2
+
+    if-lez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public b(I)Z
+    .locals 1
+
+    iget-object v0, p0, Lcom/xiaomi/push/service/B;->c:Landroid/os/Handler;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/xiaomi/push/service/B;->c:Landroid/os/Handler;
+
+    invoke-virtual {v0, p1}, Landroid/os/Handler;->hasMessages(I)Z
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method protected onLooperPrepared()V
+    .locals 6
+
+    new-instance v0, Lcom/xiaomi/push/service/C;
+
+    invoke-virtual {p0}, Lcom/xiaomi/push/service/B;->getLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, p0, v1}, Lcom/xiaomi/push/service/C;-><init>(Lcom/xiaomi/push/service/B;Landroid/os/Looper;)V
+
+    iput-object v0, p0, Lcom/xiaomi/push/service/B;->c:Landroid/os/Handler;
+
+    iget-object v2, p0, Lcom/xiaomi/push/service/B;->d:Ljava/util/List;
+
+    monitor-enter v2
+
+    :try_start_0
+    iget-object v0, p0, Lcom/xiaomi/push/service/B;->d:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :goto_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    const-string v0, "1000271"
-
-    :goto_0
-    const-string v2, "%1$s:%2$s,%3$s:%4$s"
-
-    const/4 v3, 0x4
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    const-string v4, "dev_id"
-
-    aput-object v4, v3, v5
-
-    const/4 v4, 0x1
-
-    invoke-static {p1}, Lcom/xiaomi/push/service/C;->b(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v5
-
-    aput-object v5, v3, v4
-
-    const/4 v4, 0x2
-
-    const-string v5, "appid"
-
-    aput-object v5, v3, v4
-
-    const/4 v4, 0x3
-
-    aput-object v0, v3, v4
-
-    invoke-static {v2, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    iput-object v0, v1, Lcom/xiaomi/push/service/S;->g:Ljava/lang/String;
+    check-cast v0, Landroid/util/Pair;
 
-    invoke-virtual {p1}, Lcom/xiaomi/push/service/XMPushService;->e()Lcom/xiaomi/push/service/x;
+    const-string v1, "executing the pending job."
 
-    move-result-object v0
+    invoke-static {v1}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/String;)V
 
-    iput-object v0, v1, Lcom/xiaomi/push/service/S;->k:Lcom/xiaomi/push/service/x;
+    iget-object v1, v0, Landroid/util/Pair;->first:Ljava/lang/Object;
 
-    return-object v1
+    check-cast v1, Lcom/xiaomi/push/service/e;
 
-    :cond_0
-    iget-object v0, p0, Lcom/xiaomi/push/service/B;->d:Ljava/lang/String;
+    iget-object v0, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Long;
+
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v4
+
+    invoke-virtual {p0, v1, v4, v5}, Lcom/xiaomi/push/service/B;->a(Lcom/xiaomi/push/service/e;J)V
 
     goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+
+    :cond_0
+    :try_start_1
+    iget-object v0, p0, Lcom/xiaomi/push/service/B;->d:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->clear()V
+
+    monitor-exit v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    return-void
 .end method

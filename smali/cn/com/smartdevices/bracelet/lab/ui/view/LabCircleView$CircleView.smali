@@ -1,4 +1,4 @@
-.class Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView$CircleView;
+.class public Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView$CircleView;
 .super Landroid/view/View;
 
 

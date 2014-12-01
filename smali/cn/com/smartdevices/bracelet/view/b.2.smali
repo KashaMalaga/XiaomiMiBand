@@ -28,35 +28,35 @@
 .method public static a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
     .locals 4
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/view/b;
+    new-instance v2, Lcn/com/smartdevices/bracelet/view/b;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/view/b;-><init>(Landroid/content/Context;)V
+    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/view/b;-><init>(Landroid/content/Context;)V
 
     invoke-static {p0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    const v2, 0x7f03002c
+    const v1, 0x7f030030
 
     const/4 v3, 0x0
 
-    invoke-virtual {v0, v2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    move-result-object v2
-
-    const v0, 0x7f0700e9
-
-    invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v1, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/TextView;
+    check-cast v0, Landroid/view/ViewGroup;
 
-    check-cast v0, Landroid/widget/TextView;
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
-    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/view/b;->setView(Landroid/view/View;)V
+    move-result-object v1
 
-    return-object v1
+    check-cast v1, Landroid/widget/TextView;
+
+    invoke-virtual {v1, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {v2, v0}, Lcn/com/smartdevices/bracelet/view/b;->setView(Landroid/view/View;)V
+
+    return-object v2
 .end method

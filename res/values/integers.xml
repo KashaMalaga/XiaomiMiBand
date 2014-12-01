@@ -3,4 +3,5 @@
     <integer name="default_title_indicator_footer_indicator_style">2</integer>
     <integer name="default_title_indicator_line_position">0</integer>
     <integer name="default_circle_indicator_orientation">0</integer>
+    <integer name="partner_title_length">15</integer>
 </resources>

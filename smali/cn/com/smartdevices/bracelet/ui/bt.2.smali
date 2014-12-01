@@ -6,14 +6,18 @@
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+.field final synthetic a:Landroid/os/Handler;
+
+.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;Landroid/os/Handler;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bt;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bt;->b:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/bt;->a:Landroid/os/Handler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -23,29 +27,19 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 1
 
-    invoke-static {}, Lcom/xiaomi/hm/bleservice/p;->a()Lcom/xiaomi/hm/bleservice/p;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bt;->b:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    move-result-object v0
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->p(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bt;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bt;->b:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->d(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Landroid/content/Context;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->f()V
 
-    move-result-object v1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bt;->a:Landroid/os/Handler;
 
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v1, v2}, Lcom/xiaomi/hm/bleservice/p;->a(Landroid/content/Context;Z)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bt;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
-
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bu;
-
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/bu;-><init>(Lcn/com/smartdevices/bracelet/ui/bt;)V
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->runOnUiThread(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
     return-void
 .end method

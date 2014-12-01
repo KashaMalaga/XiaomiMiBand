@@ -118,11 +118,11 @@
     return-void
 
     :cond_1
-    invoke-static {}, Lcom/xiaomi/push/service/Q;->a()Lcom/xiaomi/push/service/Q;
+    invoke-static {}, Lcom/xiaomi/push/service/S;->a()Lcom/xiaomi/push/service/S;
 
     move-result-object v0
 
-    invoke-virtual {v0, v6, v7}, Lcom/xiaomi/push/service/Q;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/xiaomi/push/service/S;
+    invoke-virtual {v0, v6, v7}, Lcom/xiaomi/push/service/S;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/xiaomi/push/service/U;
 
     move-result-object v0
 
@@ -132,11 +132,11 @@
 
     if-ne v1, v5, :cond_2
 
-    sget-object v1, Lcom/xiaomi/push/service/U;->c:Lcom/xiaomi/push/service/U;
+    sget-object v1, Lcom/xiaomi/push/service/W;->c:Lcom/xiaomi/push/service/W;
 
     move-object v5, v4
 
-    invoke-virtual/range {v0 .. v5}, Lcom/xiaomi/push/service/S;->a(Lcom/xiaomi/push/service/U;IILjava/lang/String;Ljava/lang/String;)V
+    invoke-virtual/range {v0 .. v5}, Lcom/xiaomi/push/service/U;->a(Lcom/xiaomi/push/service/W;IILjava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -203,7 +203,7 @@
 
     if-eqz v1, :cond_4
 
-    sget-object v1, Lcom/xiaomi/push/service/U;->a:Lcom/xiaomi/push/service/U;
+    sget-object v1, Lcom/xiaomi/push/service/W;->a:Lcom/xiaomi/push/service/W;
 
     const/4 v3, 0x5
 
@@ -215,13 +215,13 @@
 
     move-result-object v5
 
-    invoke-virtual/range {v0 .. v5}, Lcom/xiaomi/push/service/S;->a(Lcom/xiaomi/push/service/U;IILjava/lang/String;Ljava/lang/String;)V
+    invoke-virtual/range {v0 .. v5}, Lcom/xiaomi/push/service/U;->a(Lcom/xiaomi/push/service/W;IILjava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/xiaomi/push/service/Q;->a()Lcom/xiaomi/push/service/Q;
+    invoke-static {}, Lcom/xiaomi/push/service/S;->a()Lcom/xiaomi/push/service/S;
 
     move-result-object v0
 
-    invoke-virtual {v0, v6, v7}, Lcom/xiaomi/push/service/Q;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v6, v7}, Lcom/xiaomi/push/service/S;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_3
     :goto_1
@@ -274,7 +274,7 @@
 
     if-eqz v1, :cond_5
 
-    sget-object v1, Lcom/xiaomi/push/service/U;->a:Lcom/xiaomi/push/service/U;
+    sget-object v1, Lcom/xiaomi/push/service/W;->a:Lcom/xiaomi/push/service/W;
 
     invoke-virtual {v8}, Lcom/xiaomi/f/c/k;->a()Ljava/lang/String;
 
@@ -286,13 +286,13 @@
 
     move v3, v9
 
-    invoke-virtual/range {v0 .. v5}, Lcom/xiaomi/push/service/S;->a(Lcom/xiaomi/push/service/U;IILjava/lang/String;Ljava/lang/String;)V
+    invoke-virtual/range {v0 .. v5}, Lcom/xiaomi/push/service/U;->a(Lcom/xiaomi/push/service/W;IILjava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/xiaomi/push/service/Q;->a()Lcom/xiaomi/push/service/Q;
+    invoke-static {}, Lcom/xiaomi/push/service/S;->a()Lcom/xiaomi/push/service/S;
 
     move-result-object v0
 
-    invoke-virtual {v0, v6, v7}, Lcom/xiaomi/push/service/Q;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v6, v7}, Lcom/xiaomi/push/service/S;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -311,9 +311,9 @@
 
     iget-object v1, p0, Lcom/xiaomi/push/service/PacketSync;->a:Lcom/xiaomi/push/service/XMPushService;
 
-    invoke-virtual {v1, v0}, Lcom/xiaomi/push/service/XMPushService;->b(Lcom/xiaomi/push/service/S;)V
+    invoke-virtual {v1, v0}, Lcom/xiaomi/push/service/XMPushService;->b(Lcom/xiaomi/push/service/U;)V
 
-    sget-object v1, Lcom/xiaomi/push/service/U;->a:Lcom/xiaomi/push/service/U;
+    sget-object v1, Lcom/xiaomi/push/service/W;->a:Lcom/xiaomi/push/service/W;
 
     invoke-virtual {v8}, Lcom/xiaomi/f/c/k;->a()Ljava/lang/String;
 
@@ -325,7 +325,7 @@
 
     move v3, v9
 
-    invoke-virtual/range {v0 .. v5}, Lcom/xiaomi/push/service/S;->a(Lcom/xiaomi/push/service/U;IILjava/lang/String;Ljava/lang/String;)V
+    invoke-virtual/range {v0 .. v5}, Lcom/xiaomi/push/service/U;->a(Lcom/xiaomi/push/service/W;IILjava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -341,6 +341,8 @@
     if-eqz v0, :cond_7
 
     const-string v1, "1"
+
+    invoke-virtual {p1, v1}, Lcom/xiaomi/f/c/e;->l(Ljava/lang/String;)V
 
     :cond_7
     const-string v0, "0"
@@ -488,11 +490,11 @@
 
     if-eqz v0, :cond_9
 
-    invoke-static {}, Lcom/xiaomi/push/service/Q;->a()Lcom/xiaomi/push/service/Q;
+    invoke-static {}, Lcom/xiaomi/push/service/S;->a()Lcom/xiaomi/push/service/S;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1, v2}, Lcom/xiaomi/push/service/Q;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/xiaomi/push/service/S;
+    invoke-virtual {v0, v1, v2}, Lcom/xiaomi/push/service/S;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/xiaomi/push/service/U;
 
     move-result-object v0
 
@@ -500,13 +502,13 @@
 
     iget-object v1, p0, Lcom/xiaomi/push/service/PacketSync;->a:Lcom/xiaomi/push/service/XMPushService;
 
-    invoke-virtual {v1, v0}, Lcom/xiaomi/push/service/XMPushService;->b(Lcom/xiaomi/push/service/S;)V
+    invoke-virtual {v1, v0}, Lcom/xiaomi/push/service/XMPushService;->b(Lcom/xiaomi/push/service/U;)V
 
-    sget-object v1, Lcom/xiaomi/push/service/U;->a:Lcom/xiaomi/push/service/U;
+    sget-object v1, Lcom/xiaomi/push/service/W;->a:Lcom/xiaomi/push/service/W;
 
     move v2, v7
 
-    invoke-virtual/range {v0 .. v5}, Lcom/xiaomi/push/service/S;->a(Lcom/xiaomi/push/service/U;IILjava/lang/String;Ljava/lang/String;)V
+    invoke-virtual/range {v0 .. v5}, Lcom/xiaomi/push/service/U;->a(Lcom/xiaomi/push/service/W;IILjava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -517,11 +519,11 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/xiaomi/push/service/XMPushService;->a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/xiaomi/push/service/Q;->a()Lcom/xiaomi/push/service/Q;
+    invoke-static {}, Lcom/xiaomi/push/service/S;->a()Lcom/xiaomi/push/service/S;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1, v2}, Lcom/xiaomi/push/service/Q;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/xiaomi/push/service/S;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -561,13 +563,13 @@
     :cond_b
     iget-object v0, p0, Lcom/xiaomi/push/service/PacketSync;->a:Lcom/xiaomi/push/service/XMPushService;
 
-    invoke-virtual {v0}, Lcom/xiaomi/push/service/XMPushService;->e()Lcom/xiaomi/push/service/x;
+    invoke-virtual {v0}, Lcom/xiaomi/push/service/XMPushService;->e()Lcom/xiaomi/push/service/z;
 
     move-result-object v0
 
     iget-object v2, p0, Lcom/xiaomi/push/service/PacketSync;->a:Lcom/xiaomi/push/service/XMPushService;
 
-    invoke-virtual {v0, v2, v1, p1}, Lcom/xiaomi/push/service/x;->a(Lcom/xiaomi/push/service/XMPushService;Ljava/lang/String;Lcom/xiaomi/f/c/e;)V
+    invoke-virtual {v0, v2, v1, p1}, Lcom/xiaomi/push/service/z;->a(Lcom/xiaomi/push/service/XMPushService;Ljava/lang/String;Lcom/xiaomi/f/c/e;)V
 
     goto/16 :goto_0
 .end method

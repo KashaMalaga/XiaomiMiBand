@@ -34,13 +34,13 @@
 
     if-eqz v0, :cond_0
 
-    instance-of v1, v0, Lcom/xiaomi/push/service/y;
+    instance-of v1, v0, Lcom/xiaomi/push/service/A;
 
     if-eqz v1, :cond_0
 
-    check-cast v0, Lcom/xiaomi/push/service/y;
+    check-cast v0, Lcom/xiaomi/push/service/A;
 
-    invoke-virtual {v0, p2}, Lcom/xiaomi/push/service/y;->b(Lorg/xmlpull/v1/XmlPullParser;)Lcom/xiaomi/f/c/a;
+    invoke-virtual {v0, p2}, Lcom/xiaomi/push/service/A;->b(Lorg/xmlpull/v1/XmlPullParser;)Lcom/xiaomi/f/c/a;
 
     move-result-object v0
 
@@ -349,21 +349,21 @@
 
     move-result-object v9
 
-    invoke-static {}, Lcom/xiaomi/push/service/Q;->a()Lcom/xiaomi/push/service/Q;
+    invoke-static {}, Lcom/xiaomi/push/service/S;->a()Lcom/xiaomi/push/service/S;
 
     move-result-object v0
 
-    invoke-virtual {v0, v5, v8}, Lcom/xiaomi/push/service/Q;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/xiaomi/push/service/S;
+    invoke-virtual {v0, v5, v8}, Lcom/xiaomi/push/service/S;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/xiaomi/push/service/U;
 
     move-result-object v0
 
     if-nez v0, :cond_1b
 
-    invoke-static {}, Lcom/xiaomi/push/service/Q;->a()Lcom/xiaomi/push/service/Q;
+    invoke-static {}, Lcom/xiaomi/push/service/S;->a()Lcom/xiaomi/push/service/S;
 
     move-result-object v0
 
-    invoke-virtual {v0, v5, v7}, Lcom/xiaomi/push/service/Q;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/xiaomi/push/service/S;
+    invoke-virtual {v0, v5, v7}, Lcom/xiaomi/push/service/S;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/xiaomi/push/service/U;
 
     move-result-object v0
 
@@ -493,13 +493,13 @@
     return-object v3
 
     :cond_6
-    iget-object v3, v4, Lcom/xiaomi/push/service/S;->i:Ljava/lang/String;
+    iget-object v3, v4, Lcom/xiaomi/push/service/U;->i:Ljava/lang/String;
 
-    invoke-static {v3, v6}, Lcom/xiaomi/push/service/Y;->a(Ljava/lang/String;Ljava/lang/String;)[B
+    invoke-static {v3, v6}, Lcom/xiaomi/push/service/aa;->a(Ljava/lang/String;Ljava/lang/String;)[B
 
     move-result-object v3
 
-    invoke-static {v3, v10}, Lcom/xiaomi/push/service/Y;->b([BLjava/lang/String;)[B
+    invoke-static {v3, v10}, Lcom/xiaomi/push/service/aa;->b([BLjava/lang/String;)[B
 
     move-result-object v3
 

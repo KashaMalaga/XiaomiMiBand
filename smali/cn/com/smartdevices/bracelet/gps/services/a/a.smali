@@ -6,5 +6,5 @@
 .method public abstract a(I)V
 .end method
 
-.method public abstract a(Lcn/com/smartdevices/bracelet/gps/services/n;)V
+.method public abstract a(Lcn/com/smartdevices/bracelet/gps/services/m;)V
 .end method

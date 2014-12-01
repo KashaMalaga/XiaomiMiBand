@@ -121,13 +121,13 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoBaseActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030019
+    const v0, 0x7f03001d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;->setContentView(I)V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;->a()V
 
-    const v0, 0x7f070094
+    const v0, 0x7f0700af
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetHeightActivity;->findViewById(I)Landroid/view/View;
 
@@ -145,7 +145,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0200c9
+    const v1, 0x7f0200cc
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
@@ -167,7 +167,7 @@
 
     move-result-object v13
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bY;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bU;
 
     const/16 v12, 0x5a
 
@@ -215,7 +215,7 @@
 
     move v12, v11
 
-    invoke-direct/range {v0 .. v12}, Lcn/com/smartdevices/bracelet/ui/bY;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIII)V
+    invoke-direct/range {v0 .. v12}, Lcn/com/smartdevices/bracelet/ui/bU;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIII)V
 
     invoke-virtual {v13, v0}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/a/f;)Lkankan/wheel/widget/WheelView;
 

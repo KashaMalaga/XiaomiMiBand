@@ -110,7 +110,7 @@
 
     const-string v0, "http://s1.mi.com/m/product/shouhuan/index.html"
 
-    const v1, 0x7f0c027b
+    const v1, 0x7f0c0291
 
     invoke-static {v0, v1, p0}, Lcn/com/smartdevices/bracelet/z;->a(Ljava/lang/String;ILandroid/app/Activity;)V
 
@@ -119,7 +119,7 @@
     :cond_2
     const-string v0, "http://s1.mi.com/m/product/shouhuan/index.html"
 
-    const v1, 0x7f0c027a
+    const v1, 0x7f0c0290
 
     invoke-static {v0, v1, p0}, Lcn/com/smartdevices/bracelet/z;->a(Ljava/lang/String;ILandroid/app/Activity;)V
 

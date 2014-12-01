@@ -1,10 +1,35 @@
-.class public interface abstract Lcn/com/smartdevices/bracelet/b/c;
+.class public abstract Lcn/com/smartdevices/bracelet/b/c;
 .super Ljava/lang/Object;
 
 
-# virtual methods
-.method public abstract a(I)D
+# instance fields
+.field private a:I
+
+
+# direct methods
+.method public constructor <init>(I)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcn/com/smartdevices/bracelet/b/c;->a:I
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/b/c;->a:I
+
+    return-void
 .end method
 
-.method public abstract a(Landroid/content/Context;I)Ljava/lang/String;
+
+# virtual methods
+.method public a()I
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/b/c;->a:I
+
+    return v0
+.end method
+
+.method public abstract a(ZLcn/com/smartdevices/bracelet/b/b;)Z
 .end method

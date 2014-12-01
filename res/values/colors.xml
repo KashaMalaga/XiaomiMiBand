@@ -30,7 +30,7 @@
     <color name="item_stroke">#ffbbbbbb</color>
     <color name="item_stroke_disable">#ffe2e2e2</color>
     <color name="item_bg_disabled">#ffcccccc</color>
-    <color name="window_bg">#ffffffff</color>
+    <color name="window_bg">#fff7f7f7</color>
     <color name="primary_text">#ff787d80</color>
     <color name="primary_text_inverse">#ffffffff</color>
     <color name="background_color">#fffafafa</color>

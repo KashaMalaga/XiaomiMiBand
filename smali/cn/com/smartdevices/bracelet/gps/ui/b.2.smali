@@ -33,6 +33,12 @@
     :sswitch_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/b;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
 
+    sget-object v1, Lcn/com/smartdevices/bracelet/gps/ui/e;->c:Lcn/com/smartdevices/bracelet/gps/ui/e;
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->a(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;Lcn/com/smartdevices/bracelet/gps/ui/e;)Lcn/com/smartdevices/bracelet/gps/ui/e;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/b;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
+
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->c(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/b;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
@@ -48,9 +54,22 @@
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/gps/services/n;
+    check-cast v0, Lcn/com/smartdevices/bracelet/gps/services/m;
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->a(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;Lcn/com/smartdevices/bracelet/gps/services/n;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->a(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;Lcn/com/smartdevices/bracelet/gps/services/m;)V
+
+    goto :goto_0
+
+    :sswitch_3
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/b;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->d(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)Lcom/amap/api/maps/AMap;
+
+    move-result-object v0
+
+    const/4 v1, 0x2
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/AMap;->setMyLocationType(I)V
 
     goto :goto_0
 
@@ -59,5 +78,6 @@
         0x0 -> :sswitch_0
         0x1 -> :sswitch_2
         0x64 -> :sswitch_1
+        0x7d0 -> :sswitch_3
     .end sparse-switch
 .end method

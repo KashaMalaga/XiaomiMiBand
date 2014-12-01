@@ -14,7 +14,7 @@
 .method public static a(Landroid/content/Context;)V
     .locals 2
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/z;->n(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/z;->o(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -29,7 +29,7 @@
     return-void
 
     :cond_1
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->w()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->x()Ljava/lang/String;
 
     move-result-object v1
 
@@ -39,7 +39,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->Q()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->R()V
 
     goto :goto_0
 .end method
@@ -47,7 +47,7 @@
 .method public static a(Lcn/com/smartdevices/bracelet/lab/k;)V
     .locals 2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->P()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->Q()Ljava/lang/String;
 
     move-result-object v0
 
@@ -75,7 +75,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->P()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->Q()Ljava/lang/String;
 
     move-result-object v2
 

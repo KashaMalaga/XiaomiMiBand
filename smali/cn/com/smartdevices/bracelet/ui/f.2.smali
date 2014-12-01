@@ -77,7 +77,7 @@
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/e;->notifyDataSetChanged()V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/a/k;
+    new-instance v0, Lcn/com/smartdevices/bracelet/a/l;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/f;->b:Lcn/com/smartdevices/bracelet/ui/e;
 
@@ -91,9 +91,9 @@
 
     invoke-direct {v2, p0, p2}, Lcn/com/smartdevices/bracelet/ui/g;-><init>(Lcn/com/smartdevices/bracelet/ui/f;Z)V
 
-    invoke-direct {v0, v1, v2}, Lcn/com/smartdevices/bracelet/a/k;-><init>(Ljava/util/ArrayList;Lcn/com/smartdevices/bracelet/a/b;)V
+    invoke-direct {v0, v1, v2}, Lcn/com/smartdevices/bracelet/a/l;-><init>(Ljava/util/ArrayList;Lcn/com/smartdevices/bracelet/a/b;)V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/a/k;->c()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/a/l;->c()V
 
     return-void
 .end method

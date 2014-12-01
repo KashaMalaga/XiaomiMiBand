@@ -45,10 +45,63 @@
     return-object v0
 .end method
 
+.method public static a(JZ)Ljava/lang/String;
+    .locals 4
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, p0, v0
+
+    if-gtz v0, :cond_0
+
+    const-string v0, "00:00:00"
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/text/SimpleDateFormat;
+
+    const-string v1, "HH:mm:ss"
+
+    invoke-direct {v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
+
+    if-eqz p2, :cond_1
+
+    const-string v1, "GMT"
+
+    invoke-static {v1}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/text/SimpleDateFormat;->setTimeZone(Ljava/util/TimeZone;)V
+
+    :cond_1
+    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
+
+    move-result-object v1
+
+    const-wide/16 v2, 0x3e8
+
+    mul-long/2addr v2, p0
+
+    invoke-virtual {v1, v2, v3}, Ljava/util/Calendar;->setTimeInMillis(J)V
+
+    invoke-virtual {v1}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
 .method public static a(Landroid/content/Context;J)Ljava/lang/String;
     .locals 13
 
-    const v12, 0x7f0c021b
+    const v12, 0x7f0c0229
 
     const/4 v11, 0x2
 
@@ -109,7 +162,7 @@
 
     if-gtz v0, :cond_2
 
-    const v0, 0x7f0c021a
+    const v0, 0x7f0c0228
 
     new-array v1, v10, [Ljava/lang/Object;
 
@@ -145,7 +198,7 @@
     goto :goto_0
 
     :cond_3
-    const v0, 0x7f0c021e
+    const v0, 0x7f0c022c
 
     new-array v1, v11, [Ljava/lang/Object;
 
@@ -176,7 +229,7 @@
 
     if-gtz v6, :cond_5
 
-    const v4, 0x7f0c021c
+    const v4, 0x7f0c022a
 
     new-array v5, v11, [Ljava/lang/Object;
 
@@ -207,7 +260,7 @@
 
     if-gtz v6, :cond_6
 
-    const v2, 0x7f0c0219
+    const v2, 0x7f0c0227
 
     new-array v3, v10, [Ljava/lang/Object;
 
@@ -228,7 +281,7 @@
 
     if-lez v6, :cond_7
 
-    const v2, 0x7f0c021d
+    const v2, 0x7f0c022b
 
     new-array v3, v11, [Ljava/lang/Object;
 
@@ -251,7 +304,7 @@
     goto/16 :goto_0
 
     :cond_7
-    const v6, 0x7f0c021f
+    const v6, 0x7f0c022d
 
     const/4 v7, 0x3
 
@@ -438,6 +491,126 @@
     goto :goto_2
 .end method
 
+.method public static b(JZ)Ljava/lang/String;
+    .locals 10
+
+    const-wide/16 v2, 0x3c
+
+    const-wide/16 v8, 0xa
+
+    const-wide/16 v6, 0x0
+
+    cmp-long v0, p0, v6
+
+    if-gtz v0, :cond_0
+
+    const-string v0, "00\'00\""
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const-wide/16 v0, 0xe10
+
+    rem-long v0, p0, v0
+
+    div-long/2addr v0, v2
+
+    rem-long v2, p0, v2
+
+    new-instance v4, Ljava/lang/StringBuffer;
+
+    invoke-direct {v4}, Ljava/lang/StringBuffer;-><init>()V
+
+    cmp-long v5, v0, v6
+
+    if-gtz v5, :cond_1
+
+    const-string v0, "00\'"
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    :goto_1
+    cmp-long v0, v2, v6
+
+    if-gtz v0, :cond_3
+
+    const-string v0, "00\""
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    :goto_2
+    invoke-virtual {v4}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_1
+    cmp-long v5, v0, v8
+
+    if-gez v5, :cond_2
+
+    const-string v5, "0"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v0, v1}, Ljava/lang/StringBuffer;->append(J)Ljava/lang/StringBuffer;
+
+    move-result-object v0
+
+    const-string v1, "\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {v4, v0, v1}, Ljava/lang/StringBuffer;->append(J)Ljava/lang/StringBuffer;
+
+    move-result-object v0
+
+    const-string v1, "\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    goto :goto_1
+
+    :cond_3
+    cmp-long v0, v2, v8
+
+    if-gez v0, :cond_4
+
+    const-string v0, "0"
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuffer;->append(J)Ljava/lang/StringBuffer;
+
+    move-result-object v0
+
+    const-string v1, "\""
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    goto :goto_2
+
+    :cond_4
+    invoke-virtual {v4, v2, v3}, Ljava/lang/StringBuffer;->append(J)Ljava/lang/StringBuffer;
+
+    move-result-object v0
+
+    const-string v1, "\""
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    goto :goto_2
+.end method
+
 .method public static b(Landroid/content/Context;J)Ljava/lang/String;
     .locals 8
 
@@ -474,7 +647,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0c0270
+    const v2, 0x7f0c0283
 
     const/4 v3, 0x3
 
@@ -517,56 +690,6 @@
     aput-object v0, v3, v7
 
     invoke-virtual {v1, v2, v3}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
-.end method
-
-.method public static c(J)Ljava/lang/String;
-    .locals 4
-
-    const-wide/16 v0, 0x0
-
-    cmp-long v0, p0, v0
-
-    if-gtz v0, :cond_0
-
-    const-string v0, "00:00:00"
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    new-instance v0, Ljava/text/SimpleDateFormat;
-
-    const-string v1, "HH:mm:ss"
-
-    invoke-direct {v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
-
-    const-string v1, "GMT"
-
-    invoke-static {v1}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/text/SimpleDateFormat;->setTimeZone(Ljava/util/TimeZone;)V
-
-    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
-
-    move-result-object v1
-
-    const-wide/16 v2, 0x3e8
-
-    mul-long/2addr v2, p0
-
-    invoke-virtual {v1, v2, v3}, Ljava/util/Calendar;->setTimeInMillis(J)V
-
-    invoke-virtual {v1}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object v0
 

@@ -7,7 +7,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/xiaomi/f/v;Lcom/xiaomi/push/service/S;Ljava/lang/String;Lcom/xiaomi/f/l;)V
+.method public constructor <init>(Lcom/xiaomi/f/v;Lcom/xiaomi/push/service/U;Ljava/lang/String;Lcom/xiaomi/f/l;)V
     .locals 7
 
     const/4 v1, 0x0
@@ -30,19 +30,19 @@
 
     const-string v3, "token"
 
-    iget-object v4, p2, Lcom/xiaomi/push/service/S;->c:Ljava/lang/String;
+    iget-object v4, p2, Lcom/xiaomi/push/service/U;->c:Ljava/lang/String;
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v3, "chid"
 
-    iget-object v4, p2, Lcom/xiaomi/push/service/S;->h:Ljava/lang/String;
+    iget-object v4, p2, Lcom/xiaomi/push/service/U;->h:Ljava/lang/String;
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     const-string v3, "from"
 
-    iget-object v4, p2, Lcom/xiaomi/push/service/S;->b:Ljava/lang/String;
+    iget-object v4, p2, Lcom/xiaomi/push/service/U;->b:Ljava/lang/String;
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -60,7 +60,7 @@
 
     invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-boolean v3, p2, Lcom/xiaomi/push/service/S;->e:Z
+    iget-boolean v3, p2, Lcom/xiaomi/push/service/U;->e:Z
 
     if-eqz v3, :cond_2
 
@@ -122,7 +122,7 @@
     move-object v3, v0
 
     :goto_1
-    iget-object v0, p2, Lcom/xiaomi/push/service/S;->f:Ljava/lang/String;
+    iget-object v0, p2, Lcom/xiaomi/push/service/U;->f:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -132,12 +132,12 @@
 
     const-string v0, "client_attrs"
 
-    iget-object v4, p2, Lcom/xiaomi/push/service/S;->f:Ljava/lang/String;
+    iget-object v4, p2, Lcom/xiaomi/push/service/U;->f:Ljava/lang/String;
 
     invoke-interface {v2, v0, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :goto_2
-    iget-object v0, p2, Lcom/xiaomi/push/service/S;->g:Ljava/lang/String;
+    iget-object v0, p2, Lcom/xiaomi/push/service/U;->g:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -147,12 +147,12 @@
 
     const-string v0, "cloud_attrs"
 
-    iget-object v4, p2, Lcom/xiaomi/push/service/S;->g:Ljava/lang/String;
+    iget-object v4, p2, Lcom/xiaomi/push/service/U;->g:Ljava/lang/String;
 
     invoke-interface {v2, v0, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :goto_3
-    iget-object v0, p2, Lcom/xiaomi/push/service/S;->d:Ljava/lang/String;
+    iget-object v0, p2, Lcom/xiaomi/push/service/U;->d:Ljava/lang/String;
 
     const-string v4, "XIAOMI-PASS"
 
@@ -162,7 +162,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p2, Lcom/xiaomi/push/service/S;->d:Ljava/lang/String;
+    iget-object v0, p2, Lcom/xiaomi/push/service/U;->d:Ljava/lang/String;
 
     const-string v4, "XMPUSH-PASS"
 
@@ -173,9 +173,9 @@
     if-eqz v0, :cond_5
 
     :cond_0
-    iget-object v0, p2, Lcom/xiaomi/push/service/S;->d:Ljava/lang/String;
+    iget-object v0, p2, Lcom/xiaomi/push/service/U;->d:Ljava/lang/String;
 
-    iget-object v4, p2, Lcom/xiaomi/push/service/S;->i:Ljava/lang/String;
+    iget-object v4, p2, Lcom/xiaomi/push/service/U;->i:Ljava/lang/String;
 
     invoke-static {v0, v1, v2, v4}, Lcom/xiaomi/channel/a/e/b;->a(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;)Ljava/lang/String;
 
@@ -184,11 +184,11 @@
     move-object v4, v0
 
     :goto_4
-    iget-object v0, p2, Lcom/xiaomi/push/service/S;->h:Ljava/lang/String;
+    iget-object v0, p2, Lcom/xiaomi/push/service/U;->h:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/xiaomi/f/w;->l(Ljava/lang/String;)V
 
-    iget-object v0, p2, Lcom/xiaomi/push/service/S;->b:Ljava/lang/String;
+    iget-object v0, p2, Lcom/xiaomi/push/service/U;->b:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/xiaomi/f/w;->n(Ljava/lang/String;)V
 
@@ -210,7 +210,7 @@
 
     invoke-direct {v5, v6, v1, v0, v2}, Lcom/xiaomi/f/c/a;-><init>(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)V
 
-    iget-object v0, p2, Lcom/xiaomi/push/service/S;->c:Ljava/lang/String;
+    iget-object v0, p2, Lcom/xiaomi/push/service/U;->c:Ljava/lang/String;
 
     invoke-virtual {v5, v0}, Lcom/xiaomi/f/c/a;->b(Ljava/lang/String;)V
 
@@ -230,7 +230,7 @@
 
     invoke-direct {v5, v6, v1, v0, v2}, Lcom/xiaomi/f/c/a;-><init>(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)V
 
-    iget-boolean v0, p2, Lcom/xiaomi/push/service/S;->e:Z
+    iget-boolean v0, p2, Lcom/xiaomi/push/service/U;->e:Z
 
     if-eqz v0, :cond_7
 
@@ -273,7 +273,7 @@
 
     invoke-direct {v4, v5, v1, v0, v2}, Lcom/xiaomi/f/c/a;-><init>(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)V
 
-    iget-object v0, p2, Lcom/xiaomi/push/service/S;->d:Ljava/lang/String;
+    iget-object v0, p2, Lcom/xiaomi/push/service/U;->d:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -281,7 +281,7 @@
 
     if-nez v0, :cond_8
 
-    iget-object v0, p2, Lcom/xiaomi/push/service/S;->d:Ljava/lang/String;
+    iget-object v0, p2, Lcom/xiaomi/push/service/U;->d:Ljava/lang/String;
 
     invoke-virtual {v4, v0}, Lcom/xiaomi/f/c/a;->b(Ljava/lang/String;)V
 
@@ -302,7 +302,7 @@
 
     invoke-direct {v4, v5, v1, v0, v2}, Lcom/xiaomi/f/c/a;-><init>(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)V
 
-    iget-object v0, p2, Lcom/xiaomi/push/service/S;->f:Ljava/lang/String;
+    iget-object v0, p2, Lcom/xiaomi/push/service/U;->f:Ljava/lang/String;
 
     if-nez v0, :cond_9
 
@@ -327,7 +327,7 @@
 
     invoke-direct {v4, v5, v1, v0, v2}, Lcom/xiaomi/f/c/a;-><init>(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;)V
 
-    iget-object v0, p2, Lcom/xiaomi/push/service/S;->g:Ljava/lang/String;
+    iget-object v0, p2, Lcom/xiaomi/push/service/U;->g:Ljava/lang/String;
 
     if-nez v0, :cond_a
 
@@ -393,7 +393,7 @@
     goto/16 :goto_3
 
     :cond_5
-    iget-object v0, p2, Lcom/xiaomi/push/service/S;->d:Ljava/lang/String;
+    iget-object v0, p2, Lcom/xiaomi/push/service/U;->d:Ljava/lang/String;
 
     const-string v2, "XIAOMI-SASL"
 
@@ -421,7 +421,7 @@
     goto :goto_6
 
     :cond_9
-    iget-object v0, p2, Lcom/xiaomi/push/service/S;->f:Ljava/lang/String;
+    iget-object v0, p2, Lcom/xiaomi/push/service/U;->f:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/xiaomi/f/e/g;->a(Ljava/lang/String;)Ljava/lang/String;
 
@@ -430,7 +430,7 @@
     goto :goto_7
 
     :cond_a
-    iget-object v0, p2, Lcom/xiaomi/push/service/S;->g:Ljava/lang/String;
+    iget-object v0, p2, Lcom/xiaomi/push/service/U;->g:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/xiaomi/f/e/g;->a(Ljava/lang/String;)Ljava/lang/String;
 

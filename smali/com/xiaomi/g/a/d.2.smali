@@ -395,32 +395,164 @@
     return-void
 .end method
 
+.method public constructor <init>(Lcom/xiaomi/g/a/d;)V
+    .locals 4
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/BitSet;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, v1}, Ljava/util/BitSet;-><init>(I)V
+
+    iput-object v0, p0, Lcom/xiaomi/g/a/d;->w:Ljava/util/BitSet;
+
+    iget-object v0, p0, Lcom/xiaomi/g/a/d;->w:Ljava/util/BitSet;
+
+    invoke-virtual {v0}, Ljava/util/BitSet;->clear()V
+
+    iget-object v0, p0, Lcom/xiaomi/g/a/d;->w:Ljava/util/BitSet;
+
+    iget-object v1, p1, Lcom/xiaomi/g/a/d;->w:Ljava/util/BitSet;
+
+    invoke-virtual {v0, v1}, Ljava/util/BitSet;->or(Ljava/util/BitSet;)V
+
+    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->c()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p1, Lcom/xiaomi/g/a/d;->a:Ljava/lang/String;
+
+    iput-object v0, p0, Lcom/xiaomi/g/a/d;->a:Ljava/lang/String;
+
+    :cond_0
+    iget-wide v0, p1, Lcom/xiaomi/g/a/d;->b:J
+
+    iput-wide v0, p0, Lcom/xiaomi/g/a/d;->b:J
+
+    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->g()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p1, Lcom/xiaomi/g/a/d;->c:Ljava/lang/String;
+
+    iput-object v0, p0, Lcom/xiaomi/g/a/d;->c:Ljava/lang/String;
+
+    :cond_1
+    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->i()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p1, Lcom/xiaomi/g/a/d;->d:Ljava/lang/String;
+
+    iput-object v0, p0, Lcom/xiaomi/g/a/d;->d:Ljava/lang/String;
+
+    :cond_2
+    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->k()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p1, Lcom/xiaomi/g/a/d;->e:Ljava/lang/String;
+
+    iput-object v0, p0, Lcom/xiaomi/g/a/d;->e:Ljava/lang/String;
+
+    :cond_3
+    iget v0, p1, Lcom/xiaomi/g/a/d;->f:I
+
+    iput v0, p0, Lcom/xiaomi/g/a/d;->f:I
+
+    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->n()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, p1, Lcom/xiaomi/g/a/d;->g:Ljava/lang/String;
+
+    iput-object v0, p0, Lcom/xiaomi/g/a/d;->g:Ljava/lang/String;
+
+    :cond_4
+    iget v0, p1, Lcom/xiaomi/g/a/d;->h:I
+
+    iput v0, p0, Lcom/xiaomi/g/a/d;->h:I
+
+    iget v0, p1, Lcom/xiaomi/g/a/d;->i:I
+
+    iput v0, p0, Lcom/xiaomi/g/a/d;->i:I
+
+    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->t()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    new-instance v2, Ljava/util/HashMap;
+
+    invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
+
+    iget-object v0, p1, Lcom/xiaomi/g/a/d;->j:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :goto_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Map$Entry;
+
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-interface {v2, v1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    :cond_5
+    iput-object v2, p0, Lcom/xiaomi/g/a/d;->j:Ljava/util/Map;
+
+    :cond_6
+    return-void
+.end method
+
 
 # virtual methods
-.method public a(J)Lcom/xiaomi/g/a/d;
+.method public a()Lcom/xiaomi/g/a/d;
     .locals 1
 
-    iput-wide p1, p0, Lcom/xiaomi/g/a/d;->b:J
+    new-instance v0, Lcom/xiaomi/g/a/d;
 
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Lcom/xiaomi/g/a/d;->a(Z)V
-
-    return-object p0
-.end method
-
-.method public a(Ljava/lang/String;)Lcom/xiaomi/g/a/d;
-    .locals 0
-
-    iput-object p1, p0, Lcom/xiaomi/g/a/d;->a:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public a()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/xiaomi/g/a/d;->a:Ljava/lang/String;
+    invoke-direct {v0, p0}, Lcom/xiaomi/g/a/d;-><init>(Lcom/xiaomi/g/a/d;)V
 
     return-object v0
 .end method
@@ -468,7 +600,7 @@
 
     invoke-virtual {p1}, Lorg/apache/thrift/protocol/f;->h()V
 
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->d()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->e()Z
 
     move-result v0
 
@@ -763,7 +895,7 @@
     goto/16 :goto_1
 
     :cond_c
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->t()V
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->u()V
 
     return-void
 
@@ -806,11 +938,11 @@
     return v0
 
     :cond_1
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->b()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->c()Z
 
     move-result v1
 
-    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->b()Z
+    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->c()Z
 
     move-result v2
 
@@ -842,11 +974,11 @@
 
     if-nez v1, :cond_0
 
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->f()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->g()Z
 
     move-result v1
 
-    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->f()Z
+    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->g()Z
 
     move-result v2
 
@@ -870,11 +1002,11 @@
     if-eqz v1, :cond_0
 
     :cond_5
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->h()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->i()Z
 
     move-result v1
 
-    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->h()Z
+    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->i()Z
 
     move-result v2
 
@@ -898,11 +1030,11 @@
     if-eqz v1, :cond_0
 
     :cond_7
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->j()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->k()Z
 
     move-result v1
 
-    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->j()Z
+    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->k()Z
 
     move-result v2
 
@@ -926,11 +1058,11 @@
     if-eqz v1, :cond_0
 
     :cond_9
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->l()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->m()Z
 
     move-result v1
 
-    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->l()Z
+    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->m()Z
 
     move-result v2
 
@@ -950,11 +1082,11 @@
     if-ne v1, v2, :cond_0
 
     :cond_b
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->m()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->n()Z
 
     move-result v1
 
-    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->m()Z
+    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->n()Z
 
     move-result v2
 
@@ -978,11 +1110,11 @@
     if-eqz v1, :cond_0
 
     :cond_d
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->o()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->p()Z
 
     move-result v1
 
-    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->o()Z
+    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->p()Z
 
     move-result v2
 
@@ -1002,11 +1134,11 @@
     if-ne v1, v2, :cond_0
 
     :cond_f
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->q()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->r()Z
 
     move-result v1
 
-    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->q()Z
+    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->r()Z
 
     move-result v2
 
@@ -1026,11 +1158,11 @@
     if-ne v1, v2, :cond_0
 
     :cond_11
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->s()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->t()Z
 
     move-result v1
 
-    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->s()Z
+    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->t()Z
 
     move-result v2
 
@@ -1101,7 +1233,7 @@
     return v0
 
     :cond_1
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->b()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->c()Z
 
     move-result v0
 
@@ -1109,7 +1241,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->b()Z
+    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->c()Z
 
     move-result v1
 
@@ -1123,7 +1255,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->b()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->c()Z
 
     move-result v0
 
@@ -1140,7 +1272,7 @@
     if-nez v0, :cond_0
 
     :cond_2
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->d()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->e()Z
 
     move-result v0
 
@@ -1148,7 +1280,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->d()Z
+    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->e()Z
 
     move-result v1
 
@@ -1162,7 +1294,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->d()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->e()Z
 
     move-result v0
 
@@ -1179,7 +1311,7 @@
     if-nez v0, :cond_0
 
     :cond_3
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->f()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->g()Z
 
     move-result v0
 
@@ -1187,7 +1319,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->f()Z
+    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->g()Z
 
     move-result v1
 
@@ -1201,7 +1333,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->f()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->g()Z
 
     move-result v0
 
@@ -1218,7 +1350,7 @@
     if-nez v0, :cond_0
 
     :cond_4
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->h()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->i()Z
 
     move-result v0
 
@@ -1226,7 +1358,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->h()Z
+    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->i()Z
 
     move-result v1
 
@@ -1240,7 +1372,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->h()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->i()Z
 
     move-result v0
 
@@ -1257,7 +1389,7 @@
     if-nez v0, :cond_0
 
     :cond_5
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->j()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->k()Z
 
     move-result v0
 
@@ -1265,7 +1397,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->j()Z
+    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->k()Z
 
     move-result v1
 
@@ -1279,7 +1411,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->j()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->k()Z
 
     move-result v0
 
@@ -1296,45 +1428,6 @@
     if-nez v0, :cond_0
 
     :cond_6
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->l()Z
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->l()Z
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/Boolean;->compareTo(Ljava/lang/Boolean;)I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->l()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_7
-
-    iget v0, p0, Lcom/xiaomi/g/a/d;->f:I
-
-    iget v1, p1, Lcom/xiaomi/g/a/d;->f:I
-
-    invoke-static {v0, v1}, Lorg/apache/thrift/c;->a(II)I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    :cond_7
     invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->m()Z
 
     move-result v0
@@ -1361,20 +1454,20 @@
 
     move-result v0
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_7
 
-    iget-object v0, p0, Lcom/xiaomi/g/a/d;->g:Ljava/lang/String;
+    iget v0, p0, Lcom/xiaomi/g/a/d;->f:I
 
-    iget-object v1, p1, Lcom/xiaomi/g/a/d;->g:Ljava/lang/String;
+    iget v1, p1, Lcom/xiaomi/g/a/d;->f:I
 
-    invoke-static {v0, v1}, Lorg/apache/thrift/c;->a(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v0, v1}, Lorg/apache/thrift/c;->a(II)I
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    :cond_8
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->o()Z
+    :cond_7
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->n()Z
 
     move-result v0
 
@@ -1382,7 +1475,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->o()Z
+    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->n()Z
 
     move-result v1
 
@@ -1396,7 +1489,46 @@
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->o()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->n()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_8
+
+    iget-object v0, p0, Lcom/xiaomi/g/a/d;->g:Ljava/lang/String;
+
+    iget-object v1, p1, Lcom/xiaomi/g/a/d;->g:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Lorg/apache/thrift/c;->a(Ljava/lang/String;Ljava/lang/String;)I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    :cond_8
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->p()Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->p()Z
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/Boolean;->compareTo(Ljava/lang/Boolean;)I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->p()Z
 
     move-result v0
 
@@ -1413,7 +1545,7 @@
     if-nez v0, :cond_0
 
     :cond_9
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->q()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->r()Z
 
     move-result v0
 
@@ -1421,7 +1553,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->q()Z
+    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->r()Z
 
     move-result v1
 
@@ -1435,7 +1567,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->q()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->r()Z
 
     move-result v0
 
@@ -1452,7 +1584,7 @@
     if-nez v0, :cond_0
 
     :cond_a
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->s()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->t()Z
 
     move-result v0
 
@@ -1460,7 +1592,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->s()Z
+    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->t()Z
 
     move-result v1
 
@@ -1474,7 +1606,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->s()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->t()Z
 
     move-result v0
 
@@ -1496,12 +1628,20 @@
     goto/16 :goto_0
 .end method
 
+.method public b()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/xiaomi/g/a/d;->a:Ljava/lang/String;
+
+    return-object v0
+.end method
+
 .method public b(Lorg/apache/thrift/protocol/f;)V
     .locals 3
 
     const/16 v2, 0xb
 
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->t()V
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->u()V
 
     sget-object v0, Lcom/xiaomi/g/a/d;->l:Lorg/apache/thrift/protocol/k;
 
@@ -1536,7 +1676,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->f()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->g()Z
 
     move-result v0
 
@@ -1557,7 +1697,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->h()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->i()Z
 
     move-result v0
 
@@ -1578,7 +1718,7 @@
 
     if-eqz v0, :cond_3
 
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->j()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->k()Z
 
     move-result v0
 
@@ -1595,7 +1735,7 @@
     invoke-virtual {p1}, Lorg/apache/thrift/protocol/f;->b()V
 
     :cond_3
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->l()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->m()Z
 
     move-result v0
 
@@ -1616,7 +1756,7 @@
 
     if-eqz v0, :cond_5
 
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->m()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->n()Z
 
     move-result v0
 
@@ -1633,7 +1773,7 @@
     invoke-virtual {p1}, Lorg/apache/thrift/protocol/f;->b()V
 
     :cond_5
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->o()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->p()Z
 
     move-result v0
 
@@ -1650,7 +1790,7 @@
     invoke-virtual {p1}, Lorg/apache/thrift/protocol/f;->b()V
 
     :cond_6
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->q()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->r()Z
 
     move-result v0
 
@@ -1671,7 +1811,7 @@
 
     if-eqz v0, :cond_9
 
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->s()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->t()Z
 
     move-result v0
 
@@ -1759,7 +1899,19 @@
     return-void
 .end method
 
-.method public b()Z
+.method public c(Z)V
+    .locals 2
+
+    iget-object v0, p0, Lcom/xiaomi/g/a/d;->w:Ljava/util/BitSet;
+
+    const/4 v1, 0x2
+
+    invoke-virtual {v0, v1, p1}, Ljava/util/BitSet;->set(IZ)V
+
+    return-void
+.end method
+
+.method public c()Z
     .locals 1
 
     iget-object v0, p0, Lcom/xiaomi/g/a/d;->a:Ljava/lang/String;
@@ -1777,26 +1929,6 @@
     goto :goto_0
 .end method
 
-.method public c()J
-    .locals 2
-
-    iget-wide v0, p0, Lcom/xiaomi/g/a/d;->b:J
-
-    return-wide v0
-.end method
-
-.method public c(Z)V
-    .locals 2
-
-    iget-object v0, p0, Lcom/xiaomi/g/a/d;->w:Ljava/util/BitSet;
-
-    const/4 v1, 0x2
-
-    invoke-virtual {v0, v1, p1}, Ljava/util/BitSet;->set(IZ)V
-
-    return-void
-.end method
-
 .method public synthetic compareTo(Ljava/lang/Object;)I
     .locals 1
 
@@ -1807,6 +1939,14 @@
     move-result v0
 
     return v0
+.end method
+
+.method public d()J
+    .locals 2
+
+    iget-wide v0, p0, Lcom/xiaomi/g/a/d;->b:J
+
+    return-wide v0
 .end method
 
 .method public d(Z)V
@@ -1821,7 +1961,7 @@
     return-void
 .end method
 
-.method public d()Z
+.method public e()Z
     .locals 2
 
     iget-object v0, p0, Lcom/xiaomi/g/a/d;->w:Ljava/util/BitSet;
@@ -1833,14 +1973,6 @@
     move-result v0
 
     return v0
-.end method
-
-.method public e()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/xiaomi/g/a/d;->c:Ljava/lang/String;
-
-    return-object v0
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
@@ -1868,7 +2000,15 @@
     goto :goto_0
 .end method
 
-.method public f()Z
+.method public f()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/xiaomi/g/a/d;->c:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public g()Z
     .locals 1
 
     iget-object v0, p0, Lcom/xiaomi/g/a/d;->c:Ljava/lang/String;
@@ -1886,30 +2026,12 @@
     goto :goto_0
 .end method
 
-.method public g()Ljava/lang/String;
+.method public h()Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcom/xiaomi/g/a/d;->d:Ljava/lang/String;
 
     return-object v0
-.end method
-
-.method public h()Z
-    .locals 1
-
-    iget-object v0, p0, Lcom/xiaomi/g/a/d;->d:Ljava/lang/String;
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method
 
 .method public hashCode()I
@@ -1920,7 +2042,25 @@
     return v0
 .end method
 
-.method public i()Ljava/lang/String;
+.method public i()Z
+    .locals 1
+
+    iget-object v0, p0, Lcom/xiaomi/g/a/d;->d:Ljava/lang/String;
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public j()Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcom/xiaomi/g/a/d;->e:Ljava/lang/String;
@@ -1928,7 +2068,7 @@
     return-object v0
 .end method
 
-.method public j()Z
+.method public k()Z
     .locals 1
 
     iget-object v0, p0, Lcom/xiaomi/g/a/d;->e:Ljava/lang/String;
@@ -1946,7 +2086,7 @@
     goto :goto_0
 .end method
 
-.method public k()I
+.method public l()I
     .locals 1
 
     iget v0, p0, Lcom/xiaomi/g/a/d;->f:I
@@ -1954,7 +2094,7 @@
     return v0
 .end method
 
-.method public l()Z
+.method public m()Z
     .locals 2
 
     iget-object v0, p0, Lcom/xiaomi/g/a/d;->w:Ljava/util/BitSet;
@@ -1968,7 +2108,7 @@
     return v0
 .end method
 
-.method public m()Z
+.method public n()Z
     .locals 1
 
     iget-object v0, p0, Lcom/xiaomi/g/a/d;->g:Ljava/lang/String;
@@ -1986,7 +2126,7 @@
     goto :goto_0
 .end method
 
-.method public n()I
+.method public o()I
     .locals 1
 
     iget v0, p0, Lcom/xiaomi/g/a/d;->h:I
@@ -1994,7 +2134,7 @@
     return v0
 .end method
 
-.method public o()Z
+.method public p()Z
     .locals 2
 
     iget-object v0, p0, Lcom/xiaomi/g/a/d;->w:Ljava/util/BitSet;
@@ -2008,7 +2148,7 @@
     return v0
 .end method
 
-.method public p()I
+.method public q()I
     .locals 1
 
     iget v0, p0, Lcom/xiaomi/g/a/d;->i:I
@@ -2016,7 +2156,7 @@
     return v0
 .end method
 
-.method public q()Z
+.method public r()Z
     .locals 2
 
     iget-object v0, p0, Lcom/xiaomi/g/a/d;->w:Ljava/util/BitSet;
@@ -2030,7 +2170,7 @@
     return v0
 .end method
 
-.method public r()Ljava/util/Map;
+.method public s()Ljava/util/Map;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -2048,7 +2188,7 @@
     return-object v0
 .end method
 
-.method public s()Z
+.method public t()Z
     .locals 1
 
     iget-object v0, p0, Lcom/xiaomi/g/a/d;->j:Ljava/util/Map;
@@ -2064,45 +2204,6 @@
     const/4 v0, 0x0
 
     goto :goto_0
-.end method
-
-.method public t()V
-    .locals 3
-
-    iget-object v0, p0, Lcom/xiaomi/g/a/d;->a:Ljava/lang/String;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Lorg/apache/thrift/protocol/g;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Required field \'id\' was not present! Struct: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lorg/apache/thrift/protocol/g;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_0
-    return-void
 .end method
 
 .method public toString()Ljava/lang/String;
@@ -2139,7 +2240,7 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->f()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->g()Z
 
     move-result v1
 
@@ -2163,7 +2264,7 @@
 
     :cond_0
     :goto_1
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->h()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->i()Z
 
     move-result v1
 
@@ -2187,7 +2288,7 @@
 
     :cond_1
     :goto_2
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->j()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->k()Z
 
     move-result v1
 
@@ -2211,7 +2312,7 @@
 
     :cond_2
     :goto_3
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->l()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->m()Z
 
     move-result v1
 
@@ -2230,7 +2331,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     :cond_3
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->m()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->n()Z
 
     move-result v1
 
@@ -2254,7 +2355,7 @@
 
     :cond_4
     :goto_4
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->o()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->p()Z
 
     move-result v1
 
@@ -2273,7 +2374,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     :cond_5
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->q()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->r()Z
 
     move-result v1
 
@@ -2292,7 +2393,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     :cond_6
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->s()Z
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->t()Z
 
     move-result v1
 
@@ -2367,4 +2468,43 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     goto :goto_5
+.end method
+
+.method public u()V
+    .locals 3
+
+    iget-object v0, p0, Lcom/xiaomi/g/a/d;->a:Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lorg/apache/thrift/protocol/g;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Required field \'id\' was not present! Struct: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcom/xiaomi/g/a/d;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lorg/apache/thrift/protocol/g;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_0
+    return-void
 .end method

@@ -238,7 +238,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v4, v3}, Lcn/com/smartdevices/bracelet/o;->c(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/DaySportData$Summary;
+    invoke-virtual {v4, v3}, Lcn/com/smartdevices/bracelet/o;->b(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/DaySportData$Summary;
 
     move-result-object v4
 
@@ -357,7 +357,7 @@
 
     invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/model/game/GameManager$1;-><init>(Lcn/com/smartdevices/bracelet/model/game/GameManager;)V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/d/f;->a(Lcom/c/a/a/h;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/f/e;->a(Lcom/c/a/a/h;)V
 
     const-string v0, "GameManager"
 
@@ -395,7 +395,7 @@
 
     invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/model/game/GameManager$2;-><init>(Lcn/com/smartdevices/bracelet/model/game/GameManager;)V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/d/f;->b(Lcom/c/a/a/h;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/f/e;->b(Lcom/c/a/a/h;)V
 
     return-void
 .end method
@@ -877,11 +877,7 @@
 
     move-result-object v1
 
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->setIsBind(Ljava/lang/Boolean;)V
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->setIsBind(Z)V
 
     invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;->getConfigInfo()Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
 
@@ -981,7 +977,7 @@
 
     invoke-direct {v1}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/o;->c(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/DaySportData$Summary;
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/o;->b(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/DaySportData$Summary;
 
     move-result-object v0
 
@@ -1128,7 +1124,7 @@
     goto/16 :goto_1
 
     :cond_2
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->L()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->M()Z
 
     move-result v0
 

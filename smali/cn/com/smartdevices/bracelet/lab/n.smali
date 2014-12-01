@@ -182,7 +182,13 @@
 
     move-result-object v1
 
-    const v2, 0x7f0c024c
+    invoke-static {}, Lcn/com/smartdevices/bracelet/b/a;->b()Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    const v2, 0x7f0c0259
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -210,7 +216,7 @@
 
     invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/lab/n;->a(Ljava/util/List;Ljava/lang/String;)V
 
-    const v2, 0x7f0c024d
+    const v2, 0x7f0c025a
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -218,6 +224,7 @@
 
     invoke-static {v0, v4, v1}, Lcn/com/smartdevices/bracelet/lab/n;->a(Ljava/util/List;ILjava/lang/String;)V
 
+    :cond_2
     sget-object v1, Lcn/com/smartdevices/bracelet/lab/n;->k:[Ljava/lang/String;
 
     const/4 v2, 0x4
@@ -273,9 +280,7 @@
 
     new-instance v0, Lcn/com/smartdevices/bracelet/lab/o;
 
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1, p2}, Lcn/com/smartdevices/bracelet/lab/o;-><init>(ILjava/lang/String;)V
+    invoke-direct {v0, p1, p2}, Lcn/com/smartdevices/bracelet/lab/o;-><init>(ILjava/lang/String;)V
 
     invoke-interface {p0, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -410,7 +415,7 @@
 
     if-eqz v1, :cond_6
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/z;->k(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/z;->l(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -500,7 +505,7 @@
     :catch_0
     move-exception v1
 
-    const v1, 0x7f0c0208
+    const v1, 0x7f0c0216
 
     invoke-static {p0, v1, v0}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 

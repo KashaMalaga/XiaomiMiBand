@@ -96,7 +96,7 @@
 .method private a(Landroid/view/View;)V
     .locals 14
 
-    const v0, 0x7f070122
+    const v0, 0x7f070139
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -106,7 +106,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/V;->b:Landroid/widget/TextView;
 
-    const v0, 0x7f070123
+    const v0, 0x7f07013a
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -116,7 +116,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/V;->c:Landroid/widget/TextView;
 
-    const v0, 0x7f070124
+    const v0, 0x7f07013b
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -126,7 +126,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/V;->f:Lkankan/wheel/widget/WheelView;
 
-    const v0, 0x7f070125
+    const v0, 0x7f07013c
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -222,7 +222,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     :goto_1
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bY;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bU;
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/V;->getActivity()Landroid/app/Activity;
 
@@ -268,11 +268,11 @@
 
     const/4 v13, 0x1
 
-    invoke-direct/range {v0 .. v13}, Lcn/com/smartdevices/bracelet/ui/bY;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
+    invoke-direct/range {v0 .. v13}, Lcn/com/smartdevices/bracelet/ui/bU;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
 
     const/16 v1, 0x9
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/bY;->a(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/bU;->a(I)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/V;->f:Lkankan/wheel/widget/WheelView;
 
@@ -282,7 +282,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0200cb
+    const v2, 0x7f0200ce
 
     invoke-virtual {v1, v2}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
@@ -316,7 +316,7 @@
 
     invoke-virtual {v0, p0}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/d;)V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bY;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bU;
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/V;->getActivity()Landroid/app/Activity;
 
@@ -362,7 +362,7 @@
 
     const/4 v13, 0x1
 
-    invoke-direct/range {v0 .. v13}, Lcn/com/smartdevices/bracelet/ui/bY;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
+    invoke-direct/range {v0 .. v13}, Lcn/com/smartdevices/bracelet/ui/bU;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/V;->g:Lkankan/wheel/widget/WheelView;
 
@@ -372,7 +372,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0200cb
+    const v2, 0x7f0200ce
 
     invoke-virtual {v1, v2}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
@@ -564,7 +564,7 @@
     goto :goto_0
 .end method
 
-.method private e()I
+.method private f()I
     .locals 2
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/V;->f:Lkankan/wheel/widget/WheelView;
@@ -580,7 +580,7 @@
     return v0
 .end method
 
-.method private f()I
+.method private g()I
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/V;->g:Lkankan/wheel/widget/WheelView;
@@ -599,7 +599,7 @@
 .method protected a()I
     .locals 1
 
-    const v0, 0x7f03003b
+    const v0, 0x7f03003f
 
     return v0
 .end method
@@ -617,7 +617,7 @@
 
     if-ne p1, v0, :cond_0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/V;->e()I
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/V;->f()I
 
     move-result v0
 
@@ -705,11 +705,11 @@
 
     const/4 v7, 0x1
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/V;->e()I
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/V;->f()I
 
     move-result v0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/V;->f()I
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/V;->g()I
 
     move-result v1
 
@@ -1065,11 +1065,11 @@
 
     const/4 v7, 0x1
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/V;->e()I
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/V;->f()I
 
     move-result v0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/V;->f()I
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/V;->g()I
 
     move-result v1
 
@@ -1197,7 +1197,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/V;->h:Lcn/com/smartdevices/bracelet/model/SportDay;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/o;->f(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/DaySportData;
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/o;->e(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/DaySportData;
 
     move-result-object v1
 
@@ -1208,9 +1208,9 @@
     invoke-virtual {v1, v7}, Lcn/com/smartdevices/bracelet/model/DaySportData;->setNeedPostProcess(Z)V
 
     :cond_1
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/o;->m()V
-
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/o;->n()V
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/o;->o()V
 
     invoke-direct {p0, v1}, Lcn/com/smartdevices/bracelet/ui/V;->a(Lcn/com/smartdevices/bracelet/model/DaySportData;)V
 

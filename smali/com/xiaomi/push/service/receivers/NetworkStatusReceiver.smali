@@ -73,6 +73,16 @@
 
     move-result-object v0
 
+    invoke-virtual {v0}, Lcom/xiaomi/mipush/sdk/u;->e()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-static {p1}, Lcom/xiaomi/mipush/sdk/u;->a(Landroid/content/Context;)Lcom/xiaomi/mipush/sdk/u;
+
+    move-result-object v0
+
     invoke-virtual {v0}, Lcom/xiaomi/mipush/sdk/u;->c()V
 
     :cond_1

@@ -32,11 +32,11 @@
 
     move-result-object v0
 
-    const v1, 0x7f03002f
+    const v1, 0x7f030033
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const v0, 0x7f0700ec
+    const v0, 0x7f070103
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/DimPanelButtonBar;->findViewById(I)Landroid/view/View;
 
@@ -46,7 +46,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/DimPanelButtonBar;->c:Landroid/widget/TextView;
 
-    const v0, 0x7f0700ee
+    const v0, 0x7f070105
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/DimPanelButtonBar;->findViewById(I)Landroid/view/View;
 
@@ -56,13 +56,13 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/DimPanelButtonBar;->b:Landroid/widget/TextView;
 
-    const v0, 0x7f0700eb
+    const v0, 0x7f070102
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/DimPanelButtonBar;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
-    const v0, 0x7f0700ed
+    const v0, 0x7f070104
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/DimPanelButtonBar;->findViewById(I)Landroid/view/View;
 

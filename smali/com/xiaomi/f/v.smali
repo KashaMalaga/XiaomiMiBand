@@ -13,12 +13,12 @@
 
 
 # virtual methods
-.method public a(Lcom/xiaomi/push/service/S;Ljava/lang/String;Lcom/xiaomi/f/l;)V
+.method public a(Lcom/xiaomi/push/service/U;Ljava/lang/String;Lcom/xiaomi/f/l;)V
     .locals 3
 
     new-instance v0, Lcom/xiaomi/f/w;
 
-    invoke-direct {v0, p0, p1, p2, p3}, Lcom/xiaomi/f/w;-><init>(Lcom/xiaomi/f/v;Lcom/xiaomi/push/service/S;Ljava/lang/String;Lcom/xiaomi/f/l;)V
+    invoke-direct {v0, p0, p1, p2, p3}, Lcom/xiaomi/f/w;-><init>(Lcom/xiaomi/f/v;Lcom/xiaomi/push/service/U;Ljava/lang/String;Lcom/xiaomi/f/l;)V
 
     invoke-virtual {p3, v0}, Lcom/xiaomi/f/l;->a(Lcom/xiaomi/f/c/e;)V
 

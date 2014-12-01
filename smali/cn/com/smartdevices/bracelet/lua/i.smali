@@ -96,7 +96,7 @@
 
     iget-object v0, v0, Lcn/com/smartdevices/bracelet/lua/l;->c:Ljava/lang/String;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->v()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->w()Ljava/lang/String;
 
     move-result-object v1
 

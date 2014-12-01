@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.com.smartdevices.bracelet.lua.SlidingUpPanelLayout android:gravity="bottom" android:id="@id/sliding_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" sothree:panelHeight="@dimen/main_ui_panel_height" sothree:shadowHeight="0.0dip" sothree:paralaxOffset="0.0dip" sothree:dragView="@id/dragView"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:sothree="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:orientation="vertical" android:id="@id/backView" android:background="#ff1898c4" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:gravity="center_horizontal" android:id="@id/msgDV" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="45.0dip">
+            <ImageView android:id="@id/rightArrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginTop="6.0dip" android:src="@drawable/pulldown" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <ProgressBar android:id="@id/progressBar1" android:visibility="gone" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="4.0dip" android:indeterminate="true" android:indeterminateDrawable="@drawable/custom_progress_draw" android:indeterminateDuration="700" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="40.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+                <TextView android:textSize="12.0sp" android:textColor="@color/alert_color" android:id="@id/tMsg1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="xxxxxxxxx" />
+                <TextView android:textSize="10.0sp" android:textColor="@color/alert_color" android:id="@id/tMsg2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="xaaaaaaaaaa" android:alpha="0.8" />
+            </LinearLayout>
+        </RelativeLayout>
+        <FrameLayout android:id="@id/container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <include layout="@layout/activity_main_header" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/dragView" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="@dimen/main_ui_dragview_height">
+        <View android:id="@id/divider" android:background="@color/split_color" android:layout_width="wrap_content" android:layout_height="1.0px" android:layout_marginLeft="@dimen/mili_margin" android:layout_marginRight="@dimen/mili_margin" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+        <cn.com.smartdevices.bracelet.lua.MyListView android:id="@id/lv2" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" android:dividerHeight="0.0dip" android:overScrollMode="never" />
+        <TextView android:textColor="#ffffffff" android:gravity="center" android:id="@id/listMsg" android:background="#e059a712" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="36.0dip" />
+        <FrameLayout android:id="@id/blankDV" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ListView android:id="@id/fakelistView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@null" android:dividerHeight="0.0dip" />
+        </FrameLayout>
+    </FrameLayout>
+</cn.com.smartdevices.bracelet.lua.SlidingUpPanelLayout>

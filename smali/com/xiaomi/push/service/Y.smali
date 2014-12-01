@@ -1,703 +1,307 @@
-.class public Lcom/xiaomi/push/service/Y;
+.class public abstract Lcom/xiaomi/push/service/Y;
 .super Ljava/lang/Object;
 
 
 # static fields
-.field private static a:I
+.field public static a:Ljava/lang/String;
 
+.field public static b:Ljava/lang/String;
 
-# instance fields
-.field private b:[B
+.field public static c:Ljava/lang/String;
 
-.field private c:I
+.field public static d:Ljava/lang/String;
 
-.field private d:I
+.field public static e:Ljava/lang/String;
 
-.field private e:I
+.field public static f:Ljava/lang/String;
+
+.field public static g:Ljava/lang/String;
+
+.field public static h:Ljava/lang/String;
+
+.field public static i:Ljava/lang/String;
+
+.field public static j:Ljava/lang/String;
+
+.field public static k:Ljava/lang/String;
+
+.field public static l:Ljava/lang/String;
+
+.field public static m:Ljava/lang/String;
+
+.field public static n:Ljava/lang/String;
+
+.field public static o:Ljava/lang/String;
+
+.field public static p:Ljava/lang/String;
+
+.field public static q:Ljava/lang/String;
+
+.field public static r:Ljava/lang/String;
+
+.field public static s:Ljava/lang/String;
+
+.field public static t:Ljava/lang/String;
+
+.field public static u:Ljava/lang/String;
+
+.field public static v:Ljava/lang/String;
+
+.field public static w:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    const/16 v0, 0x8
+    const-string v0, "com.xiaomi.push.OPEN_CHANNEL"
 
-    sput v0, Lcom/xiaomi/push/service/Y;->a:I
+    sput-object v0, Lcom/xiaomi/push/service/Y;->a:Ljava/lang/String;
+
+    const-string v0, "com.xiaomi.push.SEND_MESSAGE"
+
+    sput-object v0, Lcom/xiaomi/push/service/Y;->b:Ljava/lang/String;
+
+    const-string v0, "com.xiaomi.push.SEND_IQ"
+
+    sput-object v0, Lcom/xiaomi/push/service/Y;->c:Ljava/lang/String;
+
+    const-string v0, "com.xiaomi.push.BATCH_SEND_MESSAGE"
+
+    sput-object v0, Lcom/xiaomi/push/service/Y;->d:Ljava/lang/String;
+
+    const-string v0, "com.xiaomi.push.SEND_PRES"
+
+    sput-object v0, Lcom/xiaomi/push/service/Y;->e:Ljava/lang/String;
+
+    const-string v0, "com.xiaomi.push.CLOSE_CHANNEL"
+
+    sput-object v0, Lcom/xiaomi/push/service/Y;->f:Ljava/lang/String;
+
+    const-string v0, "com.xiaomi.push.FORCE_RECONN"
+
+    sput-object v0, Lcom/xiaomi/push/service/Y;->g:Ljava/lang/String;
+
+    const-string v0, "com.xiaomi.push.RESET_CONN"
+
+    sput-object v0, Lcom/xiaomi/push/service/Y;->h:Ljava/lang/String;
+
+    const-string v0, "com.xiaomi.push.UPDATE_CHANNEL_INFO"
+
+    sput-object v0, Lcom/xiaomi/push/service/Y;->i:Ljava/lang/String;
+
+    const-string v0, "com.xiaomi.push.CHANGE_HOST"
+
+    sput-object v0, Lcom/xiaomi/push/service/Y;->j:Ljava/lang/String;
+
+    const-string v0, "com.xiaomi.push.PING_TIMER"
+
+    sput-object v0, Lcom/xiaomi/push/service/Y;->k:Ljava/lang/String;
+
+    const-string v0, "ext_user_id"
+
+    sput-object v0, Lcom/xiaomi/push/service/Y;->l:Ljava/lang/String;
+
+    const-string v0, "ext_chid"
+
+    sput-object v0, Lcom/xiaomi/push/service/Y;->m:Ljava/lang/String;
+
+    const-string v0, "ext_sid"
+
+    sput-object v0, Lcom/xiaomi/push/service/Y;->n:Ljava/lang/String;
+
+    const-string v0, "ext_token"
+
+    sput-object v0, Lcom/xiaomi/push/service/Y;->o:Ljava/lang/String;
+
+    const-string v0, "ext_auth_method"
+
+    sput-object v0, Lcom/xiaomi/push/service/Y;->p:Ljava/lang/String;
+
+    const-string v0, "ext_security"
+
+    sput-object v0, Lcom/xiaomi/push/service/Y;->q:Ljava/lang/String;
+
+    const-string v0, "ext_kick"
+
+    sput-object v0, Lcom/xiaomi/push/service/Y;->r:Ljava/lang/String;
+
+    const-string v0, "ext_client_attr"
+
+    sput-object v0, Lcom/xiaomi/push/service/Y;->s:Ljava/lang/String;
+
+    const-string v0, "ext_cloud_attr"
+
+    sput-object v0, Lcom/xiaomi/push/service/Y;->t:Ljava/lang/String;
+
+    const-string v0, "ext_pkg_name"
+
+    sput-object v0, Lcom/xiaomi/push/service/Y;->u:Ljava/lang/String;
+
+    const-string v0, "ext_notify_id"
+
+    sput-object v0, Lcom/xiaomi/push/service/Y;->v:Ljava/lang/String;
+
+    const-string v0, "ext_session"
+
+    sput-object v0, Lcom/xiaomi/push/service/Y;->w:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public constructor <init>()V
+.method public static a(I)Ljava/lang/String;
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    packed-switch p0, :pswitch_data_0
 
-    const/16 v0, -0x29a
+    invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-    iput v0, p0, Lcom/xiaomi/push/service/Y;->e:I
-
-    const/16 v0, 0x100
-
-    new-array v0, v0, [B
-
-    iput-object v0, p0, Lcom/xiaomi/push/service/Y;->b:[B
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/xiaomi/push/service/Y;->d:I
-
-    iput v0, p0, Lcom/xiaomi/push/service/Y;->c:I
-
-    return-void
-.end method
-
-.method public static a(B)I
-    .locals 0
-
-    if-ltz p0, :cond_0
+    move-result-object v0
 
     :goto_0
-    return p0
-
-    :cond_0
-    add-int/lit16 p0, p0, 0x100
-
-    goto :goto_0
-.end method
-
-.method public static a([BLjava/lang/String;)Ljava/lang/String;
-    .locals 1
-
-    invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
-
-    move-result-object v0
-
-    invoke-static {p0, v0}, Lcom/xiaomi/push/service/Y;->a([B[B)[B
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/xiaomi/channel/a/e/a;->a([B)[C
-
-    move-result-object v0
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf([C)Ljava/lang/String;
-
-    move-result-object v0
-
     return-object v0
-.end method
 
-.method private a(I[BZ)V
-    .locals 6
-
-    const/16 v5, 0x100
-
-    const/4 v0, 0x0
-
-    array-length v2, p2
-
-    move v1, v0
-
-    :goto_0
-    if-ge v1, v5, :cond_0
-
-    iget-object v3, p0, Lcom/xiaomi/push/service/Y;->b:[B
-
-    int-to-byte v4, v1
-
-    aput-byte v4, v3, v1
-
-    add-int/lit8 v1, v1, 0x1
+    :pswitch_0
+    const-string v0, "ERROR_OK"
 
     goto :goto_0
 
-    :cond_0
-    iput v0, p0, Lcom/xiaomi/push/service/Y;->d:I
-
-    iput v0, p0, Lcom/xiaomi/push/service/Y;->c:I
-
-    :goto_1
-    iget v1, p0, Lcom/xiaomi/push/service/Y;->c:I
-
-    if-ge v1, p1, :cond_1
-
-    iget v1, p0, Lcom/xiaomi/push/service/Y;->d:I
-
-    iget-object v3, p0, Lcom/xiaomi/push/service/Y;->b:[B
-
-    iget v4, p0, Lcom/xiaomi/push/service/Y;->c:I
-
-    aget-byte v3, v3, v4
-
-    invoke-static {v3}, Lcom/xiaomi/push/service/Y;->a(B)I
-
-    move-result v3
-
-    add-int/2addr v1, v3
-
-    iget v3, p0, Lcom/xiaomi/push/service/Y;->c:I
-
-    rem-int/2addr v3, v2
-
-    aget-byte v3, p2, v3
-
-    invoke-static {v3}, Lcom/xiaomi/push/service/Y;->a(B)I
-
-    move-result v3
-
-    add-int/2addr v1, v3
-
-    rem-int/lit16 v1, v1, 0x100
-
-    iput v1, p0, Lcom/xiaomi/push/service/Y;->d:I
-
-    iget-object v1, p0, Lcom/xiaomi/push/service/Y;->b:[B
-
-    iget v3, p0, Lcom/xiaomi/push/service/Y;->c:I
-
-    iget v4, p0, Lcom/xiaomi/push/service/Y;->d:I
-
-    invoke-static {v1, v3, v4}, Lcom/xiaomi/push/service/Y;->a([BII)V
-
-    iget v1, p0, Lcom/xiaomi/push/service/Y;->c:I
-
-    add-int/lit8 v1, v1, 0x1
-
-    iput v1, p0, Lcom/xiaomi/push/service/Y;->c:I
-
-    goto :goto_1
-
-    :cond_1
-    if-eq p1, v5, :cond_2
-
-    iget v1, p0, Lcom/xiaomi/push/service/Y;->d:I
-
-    iget-object v3, p0, Lcom/xiaomi/push/service/Y;->b:[B
-
-    aget-byte v3, v3, p1
-
-    invoke-static {v3}, Lcom/xiaomi/push/service/Y;->a(B)I
-
-    move-result v3
-
-    add-int/2addr v1, v3
-
-    rem-int v2, p1, v2
-
-    aget-byte v2, p2, v2
-
-    invoke-static {v2}, Lcom/xiaomi/push/service/Y;->a(B)I
-
-    move-result v2
-
-    add-int/2addr v1, v2
-
-    rem-int/lit16 v1, v1, 0x100
-
-    iput v1, p0, Lcom/xiaomi/push/service/Y;->e:I
-
-    :cond_2
-    if-eqz p3, :cond_5
-
-    sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "S_"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    add-int/lit8 v3, p1, -0x1
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, ":"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/io/PrintStream;->print(Ljava/lang/String;)V
-
-    :goto_2
-    if-gt v0, p1, :cond_3
-
-    sget-object v1, Ljava/lang/System;->out:Ljava/io/PrintStream;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, " "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/xiaomi/push/service/Y;->b:[B
-
-    aget-byte v3, v3, v0
-
-    invoke-static {v3}, Lcom/xiaomi/push/service/Y;->a(B)I
-
-    move-result v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/io/PrintStream;->print(Ljava/lang/String;)V
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_2
-
-    :cond_3
-    sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "   j_"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    add-int/lit8 v2, p1, -0x1
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget v2, p0, Lcom/xiaomi/push/service/Y;->d:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/io/PrintStream;->print(Ljava/lang/String;)V
-
-    sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "   j_"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget v2, p0, Lcom/xiaomi/push/service/Y;->e:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/io/PrintStream;->print(Ljava/lang/String;)V
-
-    sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "   S_"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    add-int/lit8 v2, p1, -0x1
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "[j_"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    add-int/lit8 v2, p1, -0x1
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "]="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/xiaomi/push/service/Y;->b:[B
-
-    iget v3, p0, Lcom/xiaomi/push/service/Y;->d:I
-
-    aget-byte v2, v2, v3
-
-    invoke-static {v2}, Lcom/xiaomi/push/service/Y;->a(B)I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/io/PrintStream;->print(Ljava/lang/String;)V
-
-    sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "   S_"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    add-int/lit8 v2, p1, -0x1
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "[j_"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "]="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/xiaomi/push/service/Y;->b:[B
-
-    iget v3, p0, Lcom/xiaomi/push/service/Y;->e:I
-
-    aget-byte v2, v2, v3
-
-    invoke-static {v2}, Lcom/xiaomi/push/service/Y;->a(B)I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/io/PrintStream;->print(Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcom/xiaomi/push/service/Y;->b:[B
-
-    const/4 v1, 0x1
-
-    aget-byte v0, v0, v1
-
-    if-eqz v0, :cond_4
-
-    sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
-
-    const-string v1, "   S[1]!=0"
-
-    invoke-virtual {v0, v1}, Ljava/io/PrintStream;->print(Ljava/lang/String;)V
-
-    :cond_4
-    sget-object v0, Ljava/lang/System;->out:Ljava/io/PrintStream;
-
-    invoke-virtual {v0}, Ljava/io/PrintStream;->println()V
-
-    :cond_5
-    return-void
-.end method
-
-.method private a([B)V
-    .locals 2
-
-    const/16 v0, 0x100
-
-    const/4 v1, 0x0
-
-    invoke-direct {p0, v0, p1, v1}, Lcom/xiaomi/push/service/Y;->a(I[BZ)V
-
-    return-void
-.end method
-
-.method private static a([BII)V
-    .locals 2
-
-    aget-byte v0, p0, p1
-
-    aget-byte v1, p0, p2
-
-    aput-byte v1, p0, p1
-
-    aput-byte v0, p0, p2
-
-    return-void
-.end method
-
-.method public static a(Ljava/lang/String;Ljava/lang/String;)[B
-    .locals 6
-
-    const/4 v1, 0x0
-
-    invoke-static {p0}, Lcom/xiaomi/channel/a/e/a;->a(Ljava/lang/String;)[B
-
-    move-result-object v2
-
-    invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
-
-    move-result-object v3
-
-    array-length v0, v2
-
-    add-int/lit8 v0, v0, 0x1
-
-    array-length v4, v3
-
-    add-int/2addr v0, v4
-
-    new-array v4, v0, [B
-
-    move v0, v1
-
-    :goto_0
-    array-length v5, v2
-
-    if-ge v0, v5, :cond_0
-
-    aget-byte v5, v2, v0
-
-    aput-byte v5, v4, v0
-
-    add-int/lit8 v0, v0, 0x1
+    :pswitch_1
+    const-string v0, "ERROR_SERVICE_NOT_INSTALLED"
 
     goto :goto_0
 
-    :cond_0
-    array-length v0, v2
-
-    const/16 v5, 0x5f
-
-    aput-byte v5, v4, v0
-
-    :goto_1
-    array-length v0, v3
-
-    if-ge v1, v0, :cond_1
-
-    array-length v0, v2
-
-    add-int/lit8 v0, v0, 0x1
-
-    add-int/2addr v0, v1
-
-    aget-byte v5, v3, v1
-
-    aput-byte v5, v4, v0
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    return-object v4
-.end method
-
-.method public static a([B[B)[B
-    .locals 5
-
-    array-length v0, p1
-
-    new-array v1, v0, [B
-
-    new-instance v2, Lcom/xiaomi/push/service/Y;
-
-    invoke-direct {v2}, Lcom/xiaomi/push/service/Y;-><init>()V
-
-    invoke-direct {v2, p0}, Lcom/xiaomi/push/service/Y;->a([B)V
-
-    invoke-direct {v2}, Lcom/xiaomi/push/service/Y;->b()V
-
-    const/4 v0, 0x0
-
-    :goto_0
-    array-length v3, p1
-
-    if-ge v0, v3, :cond_0
-
-    aget-byte v3, p1, v0
-
-    invoke-virtual {v2}, Lcom/xiaomi/push/service/Y;->a()B
-
-    move-result v4
-
-    xor-int/2addr v3, v4
-
-    int-to-byte v3, v3
-
-    aput-byte v3, v1, v0
-
-    add-int/lit8 v0, v0, 0x1
+    :pswitch_2
+    const-string v0, "ERROR_NETWORK_NOT_AVAILABLE"
 
     goto :goto_0
 
-    :cond_0
-    return-object v1
-.end method
+    :pswitch_3
+    const-string v0, "ERROR_NETWORK_FAILED"
 
-.method private b()V
-    .locals 1
+    goto :goto_0
 
-    const/4 v0, 0x0
+    :pswitch_4
+    const-string v0, "ERROR_ACCESS_DENIED"
 
-    iput v0, p0, Lcom/xiaomi/push/service/Y;->d:I
+    goto :goto_0
 
-    iput v0, p0, Lcom/xiaomi/push/service/Y;->c:I
+    :pswitch_5
+    const-string v0, "ERROR_AUTH_FAILED"
 
-    return-void
-.end method
+    goto :goto_0
 
-.method public static b([BLjava/lang/String;)[B
-    .locals 1
+    :pswitch_6
+    const-string v0, "ERROR_MULTI_LOGIN"
 
-    invoke-static {p1}, Lcom/xiaomi/channel/a/e/a;->a(Ljava/lang/String;)[B
+    goto :goto_0
 
-    move-result-object v0
+    :pswitch_7
+    const-string v0, "ERROR_SERVER_ERROR"
 
-    invoke-static {p0, v0}, Lcom/xiaomi/push/service/Y;->a([B[B)[B
+    goto :goto_0
 
-    move-result-object v0
+    :pswitch_8
+    const-string v0, "ERROR_RECEIVE_TIMEOUT"
 
-    return-object v0
-.end method
+    goto :goto_0
 
+    :pswitch_9
+    const-string v0, "ERROR_READ_ERROR"
 
-# virtual methods
-.method a()B
-    .locals 4
+    goto :goto_0
 
-    iget v0, p0, Lcom/xiaomi/push/service/Y;->c:I
+    :pswitch_a
+    const-string v0, "ERROR_SEND_ERROR"
 
-    add-int/lit8 v0, v0, 0x1
+    goto :goto_0
 
-    rem-int/lit16 v0, v0, 0x100
+    :pswitch_b
+    const-string v0, "ERROR_RESET"
 
-    iput v0, p0, Lcom/xiaomi/push/service/Y;->c:I
+    goto :goto_0
 
-    iget v0, p0, Lcom/xiaomi/push/service/Y;->d:I
+    :pswitch_c
+    const-string v0, "ERROR_NO_CLIENT"
 
-    iget-object v1, p0, Lcom/xiaomi/push/service/Y;->b:[B
+    goto :goto_0
 
-    iget v2, p0, Lcom/xiaomi/push/service/Y;->c:I
+    :pswitch_d
+    const-string v0, "ERROR_SERVER_STREAM"
 
-    aget-byte v1, v1, v2
+    goto :goto_0
 
-    invoke-static {v1}, Lcom/xiaomi/push/service/Y;->a(B)I
+    :pswitch_e
+    const-string v0, "ERROR_THREAD_BLOCK"
 
-    move-result v1
+    goto :goto_0
 
-    add-int/2addr v0, v1
+    :pswitch_f
+    const-string v0, "ERROR_SERVICE_DESTROY"
 
-    rem-int/lit16 v0, v0, 0x100
+    goto :goto_0
 
-    iput v0, p0, Lcom/xiaomi/push/service/Y;->d:I
+    :pswitch_10
+    const-string v0, "ERROR_SESSION_CHANGED"
 
-    iget-object v0, p0, Lcom/xiaomi/push/service/Y;->b:[B
+    goto :goto_0
 
-    iget v1, p0, Lcom/xiaomi/push/service/Y;->c:I
+    :pswitch_11
+    const-string v0, "ERROR_READ_TIMEOUT"
 
-    iget v2, p0, Lcom/xiaomi/push/service/Y;->d:I
+    goto :goto_0
 
-    invoke-static {v0, v1, v2}, Lcom/xiaomi/push/service/Y;->a([BII)V
+    :pswitch_12
+    const-string v0, "ERROR_CONNECTIING_TIMEOUT"
 
-    iget-object v0, p0, Lcom/xiaomi/push/service/Y;->b:[B
+    goto :goto_0
 
-    iget-object v1, p0, Lcom/xiaomi/push/service/Y;->b:[B
+    :pswitch_13
+    const-string v0, "ERROR_USER_BLOCKED"
 
-    iget v2, p0, Lcom/xiaomi/push/service/Y;->c:I
+    goto :goto_0
 
-    aget-byte v1, v1, v2
+    :pswitch_14
+    const-string v0, "ERROR_REDIRECT"
 
-    invoke-static {v1}, Lcom/xiaomi/push/service/Y;->a(B)I
+    goto :goto_0
 
-    move-result v1
+    :pswitch_15
+    const-string v0, "ERROR_BIND_TIMEOUT"
 
-    iget-object v2, p0, Lcom/xiaomi/push/service/Y;->b:[B
+    goto :goto_0
 
-    iget v3, p0, Lcom/xiaomi/push/service/Y;->d:I
+    :pswitch_16
+    const-string v0, "ERROR_PING_TIMEOUT"
 
-    aget-byte v2, v2, v3
+    goto :goto_0
 
-    invoke-static {v2}, Lcom/xiaomi/push/service/Y;->a(B)I
+    nop
 
-    move-result v2
-
-    add-int/2addr v1, v2
-
-    rem-int/lit16 v1, v1, 0x100
-
-    aget-byte v0, v0, v1
-
-    return v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+        :pswitch_4
+        :pswitch_5
+        :pswitch_6
+        :pswitch_7
+        :pswitch_8
+        :pswitch_9
+        :pswitch_a
+        :pswitch_b
+        :pswitch_c
+        :pswitch_d
+        :pswitch_e
+        :pswitch_f
+        :pswitch_10
+        :pswitch_11
+        :pswitch_12
+        :pswitch_13
+        :pswitch_14
+        :pswitch_15
+        :pswitch_16
+    .end packed-switch
 .end method

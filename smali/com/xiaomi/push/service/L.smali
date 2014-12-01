@@ -7,18 +7,14 @@
 
 .field final synthetic b:Lcom/xiaomi/g/a/n;
 
-.field final synthetic c:Ljava/lang/String;
-
 
 # direct methods
-.method constructor <init>(ILcom/xiaomi/push/service/XMPushService;Lcom/xiaomi/g/a/n;Ljava/lang/String;)V
+.method constructor <init>(ILcom/xiaomi/push/service/XMPushService;Lcom/xiaomi/g/a/n;)V
     .locals 0
 
     iput-object p2, p0, Lcom/xiaomi/push/service/L;->a:Lcom/xiaomi/push/service/XMPushService;
 
     iput-object p3, p0, Lcom/xiaomi/push/service/L;->b:Lcom/xiaomi/g/a/n;
-
-    iput-object p4, p0, Lcom/xiaomi/push/service/L;->c:Ljava/lang/String;
 
     invoke-direct {p0, p1}, Lcom/xiaomi/push/service/e;-><init>(I)V
 
@@ -35,47 +31,17 @@
 
     iget-object v1, p0, Lcom/xiaomi/push/service/L;->b:Lcom/xiaomi/g/a/n;
 
-    invoke-static {v0, v1}, Lcom/xiaomi/push/service/G;->a(Lcom/xiaomi/push/service/XMPushService;Lcom/xiaomi/g/a/n;)Lcom/xiaomi/g/a/n;
+    invoke-static {v0, v1}, Lcom/xiaomi/push/service/I;->a(Lcom/xiaomi/push/service/XMPushService;Lcom/xiaomi/g/a/n;)Lcom/xiaomi/g/a/n;
 
     move-result-object v0
-
-    new-instance v1, Lcom/xiaomi/g/a/d;
-
-    invoke-direct {v1}, Lcom/xiaomi/g/a/d;-><init>()V
-
-    iget-object v2, p0, Lcom/xiaomi/push/service/L;->b:Lcom/xiaomi/g/a/n;
-
-    invoke-virtual {v2}, Lcom/xiaomi/g/a/n;->m()Lcom/xiaomi/g/a/d;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/xiaomi/g/a/d;->a()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lcom/xiaomi/g/a/d;->a(Ljava/lang/String;)Lcom/xiaomi/g/a/d;
-
-    iget-object v2, p0, Lcom/xiaomi/push/service/L;->b:Lcom/xiaomi/g/a/n;
-
-    invoke-virtual {v2}, Lcom/xiaomi/g/a/n;->m()Lcom/xiaomi/g/a/d;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/xiaomi/g/a/d;->c()J
-
-    move-result-wide v2
-
-    invoke-virtual {v1, v2, v3}, Lcom/xiaomi/g/a/d;->a(J)Lcom/xiaomi/g/a/d;
-
-    invoke-virtual {v0, v1}, Lcom/xiaomi/g/a/n;->a(Lcom/xiaomi/g/a/d;)Lcom/xiaomi/g/a/n;
 
     invoke-virtual {v0}, Lcom/xiaomi/g/a/n;->m()Lcom/xiaomi/g/a/d;
 
     move-result-object v1
 
-    const-string v2, "absent_target_package"
+    const-string v2, "message_obsleted"
 
-    iget-object v3, p0, Lcom/xiaomi/push/service/L;->c:Ljava/lang/String;
+    const-string v3, "1"
 
     invoke-virtual {v1, v2, v3}, Lcom/xiaomi/g/a/d;->a(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -105,7 +71,7 @@
 .method public b()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "send app absent ack message for message."
+    const-string v0, "send ack message for obsleted message."
 
     return-object v0
 .end method

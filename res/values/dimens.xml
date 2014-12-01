@@ -26,6 +26,8 @@
     <dimen name="dynamic_info_height">67.0dip</dimen>
     <dimen name="dynamic_info_title">11.0sp</dimen>
     <dimen name="dynamic_info_value">15.0sp</dimen>
+    <dimen name="main_ui_panel_height">248.0dip</dimen>
+    <dimen name="main_ui_dragview_height">470.0dip</dimen>
     <dimen name="round_bg_stroke">0.30000007dip</dimen>
     <dimen name="round_bg_radius">4.0dip</dimen>
     <dimen name="item_height">49.0dip</dimen>
@@ -127,9 +129,13 @@
     <dimen name="select_item_padding_left">11.0dip</dimen>
     <dimen name="select_item_txt_padding_left">5.0dip</dimen>
     <dimen name="single_button_padding">35.0dip</dimen>
+    <dimen name="open_title_left_margin">10.0dip</dimen>
+    <dimen name="open_title_right_margin">10.0dip</dimen>
     <dimen name="lab_factory_sport_progress_state">100.0dip</dimen>
     <dimen name="sport_running_slider_panel_height">120.0dip</dimen>
     <dimen name="sport_running_button_bottom">22.799988dip</dimen>
+    <dimen name="sport_running_info_width">160.0dip</dimen>
+    <dimen name="sport_running_history_item_height">60.0dip</dimen>
     <dimen name="sport_running_time_cost_desc_size">10.0sp</dimen>
     <dimen name="sport_running_time_cost_size">26.699982sp</dimen>
 </resources>

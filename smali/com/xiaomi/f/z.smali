@@ -879,7 +879,7 @@
     return-void
 .end method
 
-.method public declared-synchronized a(Lcom/xiaomi/push/service/S;)V
+.method public declared-synchronized a(Lcom/xiaomi/push/service/U;)V
     .locals 2
 
     monitor-enter p0
@@ -893,7 +893,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, p1, v1, p0}, Lcom/xiaomi/f/v;->a(Lcom/xiaomi/push/service/S;Ljava/lang/String;Lcom/xiaomi/f/l;)V
+    invoke-virtual {v0, p1, v1, p0}, Lcom/xiaomi/f/v;->a(Lcom/xiaomi/push/service/U;Ljava/lang/String;Lcom/xiaomi/f/l;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

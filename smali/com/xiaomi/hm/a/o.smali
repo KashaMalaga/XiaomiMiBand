@@ -7,9 +7,11 @@
 
 .field public static final main_pop:I = 0x7f0f0001
 
-.field public static final ota:I = 0x7f0f0002
+.field public static final menu_open:I = 0x7f0f0002
 
-.field public static final search:I = 0x7f0f0003
+.field public static final ota:I = 0x7f0f0003
+
+.field public static final search:I = 0x7f0f0004
 
 
 # direct methods

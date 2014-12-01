@@ -9,7 +9,9 @@
 
 .field public static final c:I = 0x3
 
-.field public static final d:I = 0x4
+.field public static final d:I = 0x0
+
+.field public static final e:I = 0x4
 
 
 # direct methods

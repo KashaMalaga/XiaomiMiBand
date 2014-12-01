@@ -127,6 +127,34 @@
     throw v0
 .end method
 
+.method public static a(Landroid/content/Context;I)V
+    .locals 1
+
+    invoke-static {p0}, Lcom/xiaomi/mipush/sdk/f;->a(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p0}, Lcom/xiaomi/mipush/sdk/u;->a(Landroid/content/Context;)Lcom/xiaomi/mipush/sdk/u;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lcom/xiaomi/mipush/sdk/u;->a(I)V
+
+    :goto_0
+    return-void
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p0, v0, p1}, Lcom/xiaomi/push/service/O;->a(Landroid/content/Context;Ljava/lang/String;I)V
+
+    goto :goto_0
+.end method
+
 .method public static a(Landroid/content/Context;IIIILjava/lang/String;)V
     .locals 12
 
@@ -578,6 +606,16 @@
 .end method
 
 .method public static a(Landroid/content/Context;Ljava/lang/String;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-static {p0, p1, v0}, Lcom/xiaomi/mipush/sdk/f;->a(Landroid/content/Context;Ljava/lang/String;Lcom/xiaomi/g/a/d;)V
+
+    return-void
+.end method
+
+.method public static a(Landroid/content/Context;Ljava/lang/String;Lcom/xiaomi/g/a/d;)V
     .locals 4
 
     const/4 v3, 0x0
@@ -624,7 +662,7 @@
 
     sget-object v2, Lcom/xiaomi/g/a/a;->i:Lcom/xiaomi/g/a/a;
 
-    invoke-virtual {v1, v0, v2, v3}, Lcom/xiaomi/mipush/sdk/u;->a(Lorg/apache/thrift/b;Lcom/xiaomi/g/a/a;Z)V
+    invoke-virtual {v1, v0, v2, v3, p2}, Lcom/xiaomi/mipush/sdk/u;->a(Lorg/apache/thrift/b;Lcom/xiaomi/g/a/a;ZLcom/xiaomi/g/a/d;)V
 
     goto :goto_0
 .end method
@@ -756,7 +794,7 @@
     :goto_2
     sget-object v0, Lcom/xiaomi/mipush/sdk/f;->h:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/xiaomi/mipush/sdk/f;->h(Landroid/content/Context;)V
+    invoke-static {v0}, Lcom/xiaomi/mipush/sdk/f;->i(Landroid/content/Context;)V
 
     :goto_3
     return-void
@@ -862,6 +900,14 @@
 
     invoke-virtual {v1, v2}, Lcom/xiaomi/g/a/r;->d(Ljava/lang/String;)Lcom/xiaomi/g/a/r;
 
+    const/4 v2, 0x6
+
+    invoke-static {v2}, Lcom/xiaomi/channel/a/e/c;->a(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lcom/xiaomi/g/a/r;->f(Ljava/lang/String;)Lcom/xiaomi/g/a/r;
+
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
@@ -882,7 +928,7 @@
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
 
-    goto :goto_2
+    goto/16 :goto_2
 .end method
 
 .method protected static a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
@@ -1019,7 +1065,7 @@
 .end method
 
 .method protected static a(Landroid/content/Context;Ljava/lang/String;Ljava/util/ArrayList;Ljava/lang/String;)V
-    .locals 3
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1110,7 +1156,9 @@
 
     sget-object v2, Lcom/xiaomi/g/a/a;->j:Lcom/xiaomi/g/a/a;
 
-    invoke-virtual {v0, v1, v2}, Lcom/xiaomi/mipush/sdk/u;->a(Lorg/apache/thrift/b;Lcom/xiaomi/g/a/a;)V
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, v1, v2, v3}, Lcom/xiaomi/mipush/sdk/u;->a(Lorg/apache/thrift/b;Lcom/xiaomi/g/a/a;Lcom/xiaomi/g/a/d;)V
 
     goto :goto_0
 .end method
@@ -1961,7 +2009,7 @@
 
     sget-object v2, Lcom/xiaomi/g/a/a;->c:Lcom/xiaomi/g/a/a;
 
-    invoke-virtual {v1, v0, v2}, Lcom/xiaomi/mipush/sdk/u;->a(Lorg/apache/thrift/b;Lcom/xiaomi/g/a/a;)V
+    invoke-virtual {v1, v0, v2, v4}, Lcom/xiaomi/mipush/sdk/u;->a(Lorg/apache/thrift/b;Lcom/xiaomi/g/a/a;Lcom/xiaomi/g/a/d;)V
 
     goto :goto_0
 
@@ -2240,7 +2288,9 @@
 
     sget-object v2, Lcom/xiaomi/g/a/a;->d:Lcom/xiaomi/g/a/a;
 
-    invoke-virtual {v1, v0, v2}, Lcom/xiaomi/mipush/sdk/u;->a(Lorg/apache/thrift/b;Lcom/xiaomi/g/a/a;)V
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v0, v2, v3}, Lcom/xiaomi/mipush/sdk/u;->a(Lorg/apache/thrift/b;Lcom/xiaomi/g/a/a;Lcom/xiaomi/g/a/d;)V
 
     goto :goto_0
 .end method
@@ -2313,6 +2363,8 @@
     move-result-object v1
 
     invoke-virtual {v1, v0}, Lcom/xiaomi/mipush/sdk/u;->a(Lcom/xiaomi/g/a/F;)V
+
+    invoke-static {}, Lcom/xiaomi/mipush/sdk/PushMessageHandler;->a()V
 
     invoke-static {p0}, Lcom/xiaomi/mipush/sdk/m;->a(Landroid/content/Context;)Lcom/xiaomi/mipush/sdk/m;
 
@@ -2452,38 +2504,31 @@
 .end method
 
 .method public static g(Landroid/content/Context;)V
-    .locals 3
+    .locals 2
 
-    :try_start_0
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+    invoke-static {p0}, Lcom/xiaomi/mipush/sdk/f;->a(Landroid/content/Context;)Z
 
-    move-result-object v0
+    move-result v0
 
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    if-eqz v0, :cond_0
 
-    move-result-object v1
-
-    const/16 v2, 0x1004
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    invoke-static {p0}, Lcom/xiaomi/mipush/sdk/u;->a(Landroid/content/Context;)Lcom/xiaomi/mipush/sdk/u;
 
     move-result-object v0
 
-    invoke-static {p0}, Lcom/xiaomi/mipush/sdk/f;->i(Landroid/content/Context;)V
+    const/4 v1, -0x1
 
-    invoke-static {p0, v0}, Lcom/xiaomi/mipush/sdk/f;->b(Landroid/content/Context;Landroid/content/pm/PackageInfo;)V
-
-    invoke-static {p0, v0}, Lcom/xiaomi/mipush/sdk/f;->a(Landroid/content/Context;Landroid/content/pm/PackageInfo;)V
-    :try_end_0
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v0, v1}, Lcom/xiaomi/mipush/sdk/u;->a(I)V
 
     :goto_0
     return-void
 
-    :catch_0
-    move-exception v0
+    :cond_0
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/Throwable;)V
+    move-result-object v0
+
+    invoke-static {p0, v0}, Lcom/xiaomi/push/service/O;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -2632,7 +2677,82 @@
     return-wide v0
 .end method
 
-.method private static h(Landroid/content/Context;)V
+.method public static h(Landroid/content/Context;)V
+    .locals 3
+
+    :try_start_0
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v2, 0x1004
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+
+    move-result-object v0
+
+    invoke-static {p0}, Lcom/xiaomi/mipush/sdk/f;->j(Landroid/content/Context;)V
+
+    invoke-static {p0, v0}, Lcom/xiaomi/mipush/sdk/f;->b(Landroid/content/Context;Landroid/content/pm/PackageInfo;)V
+
+    invoke-static {p0, v0}, Lcom/xiaomi/mipush/sdk/f;->a(Landroid/content/Context;Landroid/content/pm/PackageInfo;)V
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/Throwable;)V
+
+    goto :goto_0
+.end method
+
+.method public static i(Landroid/content/Context;Ljava/lang/String;)J
+    .locals 4
+
+    const-string v0, "mipush_extra"
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "alias_"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-wide/16 v2, -0x1
+
+    invoke-interface {v0, v1, v2, v3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method private static i(Landroid/content/Context;)V
     .locals 6
 
     const-string v0, "mipush_extra"
@@ -2696,45 +2816,7 @@
     goto :goto_0
 .end method
 
-.method public static i(Landroid/content/Context;Ljava/lang/String;)J
-    .locals 4
-
-    const-string v0, "mipush_extra"
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "alias_"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-wide/16 v2, -0x1
-
-    invoke-interface {v0, v1, v2, v3}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method private static i(Landroid/content/Context;)V
+.method private static j(Landroid/content/Context;)V
     .locals 9
 
     const/4 v8, 0x2
@@ -2779,7 +2861,7 @@
 
     new-instance v4, Landroid/content/Intent;
 
-    sget-object v5, Lcom/xiaomi/push/service/W;->k:Ljava/lang/String;
+    sget-object v5, Lcom/xiaomi/push/service/Y;->k:Ljava/lang/String;
 
     invoke-direct {v4, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 

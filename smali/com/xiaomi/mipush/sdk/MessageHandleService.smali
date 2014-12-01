@@ -58,12 +58,6 @@
 
     if-eqz p1, :cond_0
 
-    const-string v0, "lh"
-
-    const-string v1, "jobIntent is not null"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
     sget-object v0, Lcom/xiaomi/mipush/sdk/MessageHandleService;->a:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->poll()Ljava/lang/Object;
@@ -74,18 +68,13 @@
 
     if-nez v0, :cond_1
 
-    const-string v0, "lh"
-
-    const-string v1, "empty job from jobQueue"
-
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
     :cond_0
     :goto_0
     :pswitch_0
     return-void
 
     :cond_1
+    :try_start_0
     invoke-virtual {v0}, Lcom/xiaomi/mipush/sdk/e;->a()Lcom/xiaomi/mipush/sdk/PushMessageReceiver;
 
     move-result-object v1
@@ -124,10 +113,20 @@
     check-cast v0, Lcom/xiaomi/mipush/sdk/j;
 
     invoke-virtual {v1, p0, v0}, Lcom/xiaomi/mipush/sdk/PushMessageReceiver;->onReceiveMessage(Landroid/content/Context;Lcom/xiaomi/mipush/sdk/j;)V
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
     :pswitch_2
+    :try_start_1
     const-string v2, "key_message"
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->getSerializableExtra(Ljava/lang/String;)Ljava/io/Serializable;
@@ -161,8 +160,12 @@
     check-cast v0, Lcom/xiaomi/mipush/sdk/i;
 
     invoke-virtual {v1, p0, v0}, Lcom/xiaomi/mipush/sdk/PushMessageReceiver;->onCommandResult(Landroid/content/Context;Lcom/xiaomi/mipush/sdk/i;)V
+    :try_end_1
+    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_0
 
     goto :goto_0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x1

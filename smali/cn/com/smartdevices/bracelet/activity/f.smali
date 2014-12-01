@@ -108,11 +108,11 @@
 
     invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/d/g;->b(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/d/h;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/f/f;->b(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/f/g;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/d/h;->a()Z
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/f/g;->a()Z
 
     move-result v3
 
@@ -166,7 +166,7 @@
 
     move-result-object v3
 
-    iget v4, v2, Lcn/com/smartdevices/bracelet/d/h;->f:I
+    iget v4, v2, Lcn/com/smartdevices/bracelet/f/g;->f:I
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -200,7 +200,7 @@
 
     move-result-object v1
 
-    iget v2, v2, Lcn/com/smartdevices/bracelet/d/h;->f:I
+    iget v2, v2, Lcn/com/smartdevices/bracelet/f/g;->f:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -283,7 +283,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/d/g;->c(Ljava/lang/String;Lcn/com/smartdevices/bracelet/model/PersonInfo;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/f/f;->c(Ljava/lang/String;Lcn/com/smartdevices/bracelet/model/PersonInfo;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v0
 

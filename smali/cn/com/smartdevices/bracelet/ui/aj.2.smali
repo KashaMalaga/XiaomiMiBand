@@ -1,124 +1,33 @@
-.class public Lcn/com/smartdevices/bracelet/ui/aj;
-.super Lcn/com/smartdevices/bracelet/ui/J;
+.class Lcn/com/smartdevices/bracelet/ui/aj;
+.super Ljava/lang/Object;
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 
 
+# instance fields
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/FwLowBatteryActivity;
+
+
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/FwLowBatteryActivity;)V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/J;-><init>()V
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/aj;->a:Lcn/com/smartdevices/bracelet/ui/FwLowBatteryActivity;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected a()I
+.method public onClick(Landroid/view/View;)V
     .locals 1
 
-    const v0, 0x7f030061
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aj;->a:Lcn/com/smartdevices/bracelet/ui/FwLowBatteryActivity;
 
-    return v0
-.end method
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/FwLowBatteryActivity;->a(Lcn/com/smartdevices/bracelet/ui/FwLowBatteryActivity;)V
 
-.method public onClick(Landroid/view/View;)V
-    .locals 2
-
-    invoke-virtual {p1}, Landroid/view/View;->getId()I
-
-    move-result v0
-
-    packed-switch v0, :pswitch_data_0
-
-    :goto_0
     return-void
-
-    :pswitch_0
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/aj;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/aB;
-
-    const v1, 0x18769
-
-    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/ui/aB;->a(I)Z
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/aj;->dismiss()V
-
-    goto :goto_0
-
-    :pswitch_1
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/aj;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/aB;
-
-    const v1, 0x18768
-
-    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/ui/aB;->a(I)Z
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/aj;->dismiss()V
-
-    goto :goto_0
-
-    :pswitch_2
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/aj;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/aB;
-
-    const v1, 0x1876a
-
-    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/ui/aB;->a(I)Z
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/aj;->dismiss()V
-
-    goto :goto_0
-
-    :pswitch_data_0
-    .packed-switch 0x7f07018f
-        :pswitch_1
-        :pswitch_2
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 2
-
-    invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/J;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-
-    move-result-object v0
-
-    const v1, 0x7f070191
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const v1, 0x7f07018f
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const v1, 0x7f070190
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    return-object v0
 .end method

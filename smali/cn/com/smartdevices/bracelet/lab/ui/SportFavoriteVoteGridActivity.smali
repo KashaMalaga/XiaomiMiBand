@@ -73,7 +73,7 @@
 
     invoke-direct {v1, p0}, Landroid/app/Dialog;-><init>(Landroid/content/Context;)V
 
-    const v0, 0x7f0c022e
+    const v0, 0x7f0c023c
 
     invoke-virtual {v1, v0}, Landroid/app/Dialog;->setTitle(I)V
 
@@ -81,7 +81,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f030031
+    const v2, 0x7f030035
 
     const/4 v3, 0x0
 
@@ -91,7 +91,7 @@
 
     invoke-virtual {v1, v2}, Landroid/app/Dialog;->setContentView(Landroid/view/View;)V
 
-    const v0, 0x7f070075
+    const v0, 0x7f070078
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -99,7 +99,7 @@
 
     check-cast v0, Landroid/widget/EditText;
 
-    const v3, 0x7f0700ec
+    const v3, 0x7f070103
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -111,7 +111,7 @@
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v3, 0x7f0700ee
+    const v3, 0x7f070105
 
     invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -135,7 +135,7 @@
 
     if-nez v0, :cond_0
 
-    const v0, 0x7f07003e
+    const v0, 0x7f070041
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->findViewById(I)Landroid/view/View;
 
@@ -150,7 +150,7 @@
 
     if-nez v0, :cond_1
 
-    const v0, 0x7f07003f
+    const v0, 0x7f070042
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->findViewById(I)Landroid/view/View;
 
@@ -165,7 +165,7 @@
 
     if-nez v0, :cond_2
 
-    const v0, 0x7f070041
+    const v0, 0x7f070044
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->findViewById(I)Landroid/view/View;
 
@@ -180,7 +180,7 @@
 
     if-nez v0, :cond_3
 
-    const v0, 0x7f070042
+    const v0, 0x7f070045
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->findViewById(I)Landroid/view/View;
 
@@ -195,7 +195,7 @@
 
     if-nez v0, :cond_4
 
-    const v0, 0x7f070043
+    const v0, 0x7f070046
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->findViewById(I)Landroid/view/View;
 
@@ -226,7 +226,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->c:Landroid/widget/TextView;
 
-    const v2, 0x7f0c0247
+    const v2, 0x7f0c0255
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -236,7 +236,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->d:Landroid/widget/TextView;
 
-    const v2, 0x7f0c0248
+    const v2, 0x7f0c0256
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -272,7 +272,7 @@
 .method private b()V
     .locals 1
 
-    const v0, 0x7f07003c
+    const v0, 0x7f07003f
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->findViewById(I)Landroid/view/View;
 
@@ -315,7 +315,7 @@
 
     if-nez v1, :cond_0
 
-    const v1, 0x7f02007f
+    const v1, 0x7f020080
 
     invoke-direct {p0, v1, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->a(ILjava/lang/String;)V
 
@@ -346,7 +346,7 @@
     goto :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x7f07003c
+    .packed-switch 0x7f07003f
         :pswitch_0
     .end packed-switch
 .end method
@@ -356,13 +356,13 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f03000d
+    const v0, 0x7f03000e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->setContentView(I)V
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->b()V
 
-    const v0, 0x7f070040
+    const v0, 0x7f070043
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->findViewById(I)Landroid/view/View;
 

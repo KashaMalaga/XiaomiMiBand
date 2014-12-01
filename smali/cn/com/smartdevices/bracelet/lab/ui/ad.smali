@@ -75,7 +75,7 @@
 .method protected a()I
     .locals 1
 
-    const v0, 0x7f030044
+    const v0, 0x7f030047
 
     return v0
 .end method
@@ -91,11 +91,11 @@
 
     invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/J;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
-    move-result-object v2
+    move-result-object v1
 
-    const v0, 0x7f070138
+    const v0, 0x7f07014e
 
-    invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -103,9 +103,9 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->f:Landroid/widget/TextView;
 
-    const v0, 0x7f070137
+    const v0, 0x7f07014d
 
-    invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -117,99 +117,95 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
-    const-string v1, "extraNotice"
+    const-string v2, "extraNotice"
 
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->g:Landroid/widget/TextView;
-
-    invoke-virtual {v1, v5}, Landroid/widget/TextView;->setVisibility(I)V
-
-    :goto_0
-    const-string v1, "mainNotice"
-
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->f:Landroid/widget/TextView;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->g:Landroid/widget/TextView;
 
-    invoke-virtual {v1, v5}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v2, v5}, Landroid/widget/TextView;->setVisibility(I)V
+
+    :goto_0
+    const-string v2, "mainNotice"
+
+    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->f:Landroid/widget/TextView;
+
+    invoke-virtual {v2, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
     :goto_1
-    const-string v1, "operation"
+    const-string v2, "operation"
 
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_3
+    if-eqz v2, :cond_0
 
     invoke-virtual {p0, v6}, Lcn/com/smartdevices/bracelet/lab/ui/ad;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    move-object v1, v0
+    :cond_0
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->d:Landroid/widget/TextView;
+
+    invoke-virtual {v2, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->d:Landroid/widget/TextView;
+
+    invoke-virtual {v0, v4}, Landroid/widget/TextView;->setVisibility(I)V
 
     :goto_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->d:Landroid/view/View;
-
-    check-cast v0, Landroid/widget/TextView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->d:Landroid/view/View;
-
-    invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
-
-    :goto_3
     invoke-virtual {p0, v4}, Lcn/com/smartdevices/bracelet/lab/ui/ad;->setCancelable(Z)V
 
-    return-object v2
+    return-object v1
 
-    :cond_0
+    :cond_1
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->g:Landroid/widget/TextView;
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setVisibility(I)V
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->g:Landroid/widget/TextView;
 
-    invoke-virtual {v3, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->f:Landroid/widget/TextView;
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setVisibility(I)V
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->f:Landroid/widget/TextView;
 
-    invoke-virtual {v3, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_1
 
-    :cond_2
+    :cond_3
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->f:Landroid/widget/TextView;
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setVisibility(I)V
@@ -218,16 +214,9 @@
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->d:Landroid/view/View;
-
-    check-cast v0, Landroid/widget/TextView;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->d:Landroid/widget/TextView;
 
     invoke-virtual {v0, v6}, Landroid/widget/TextView;->setText(I)V
-
-    goto :goto_3
-
-    :cond_3
-    move-object v1, v0
 
     goto :goto_2
 .end method

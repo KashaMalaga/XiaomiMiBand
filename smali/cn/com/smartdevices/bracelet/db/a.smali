@@ -5,7 +5,7 @@
 # static fields
 .field private static final a:Ljava/lang/String; = "origin_db"
 
-.field private static final b:I = 0x1
+.field private static final b:I = 0x4
 
 
 # direct methods
@@ -16,7 +16,7 @@
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x1
+    const/4 v2, 0x4
 
     invoke-direct {p0, p1, v0, v1, v2}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
 
@@ -46,6 +46,10 @@
     const-string v0, "DELETE FROM cloud_config"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+
+    const-string v0, "DELETE FROM parterconfig"
+
+    invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -73,7 +77,7 @@
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    const-string v0, "CREATE TABLE IF NOT EXISTS trackinfo(_id INTEGER PRIMARY KEY AUTOINCREMENT,type INTEGER DEFAULT 0,date TEXT,trackid INTEGER,summary TEXT,data TEXT DEFAULT NULL,groupCnt INTEGER,sync INTEGER DEFAULT 0, UNIQUE (trackid) ON CONFLICT REPLACE);"
+    const-string v0, "CREATE TABLE IF NOT EXISTS trackinfo(_id INTEGER PRIMARY KEY AUTOINCREMENT,type INTEGER DEFAULT 0,date TEXT,trackid INTEGER,summary TEXT,data TEXT DEFAULT NULL,groupCnt INTEGER DEFAULT 0,sync INTEGER DEFAULT 0, UNIQUE (trackid) ON CONFLICT REPLACE);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
@@ -89,10 +93,24 @@
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
+    const-string v0, "CREATE TABLE IF NOT EXISTS parterconfig(_id  INTEGER PRIMARY KEY AUTOINCREMENT,color TEXT,title TEXT,sub_title TEXT,icon ICON,third_app_id TEXT,expire_time INTEGER DEFAULT 0,url TEXT );"
+
+    invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+
     return-void
 .end method
 
-.method private c()V
+.method private c(Landroid/database/sqlite/SQLiteDatabase;)V
+    .locals 1
+
+    const-string v0, "CREATE TABLE IF NOT EXISTS trackinfo(_id INTEGER PRIMARY KEY AUTOINCREMENT,type INTEGER DEFAULT 0,date TEXT,trackid INTEGER,summary TEXT,data TEXT DEFAULT NULL,groupCnt INTEGER DEFAULT 0,sync INTEGER DEFAULT 0, UNIQUE (trackid) ON CONFLICT REPLACE);"
+
+    invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method private d()V
     .locals 2
 
     :try_start_0
@@ -115,16 +133,6 @@
     invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
-.end method
-
-.method private c(Landroid/database/sqlite/SQLiteDatabase;)V
-    .locals 1
-
-    const-string v0, "CREATE TABLE IF NOT EXISTS trackinfo(_id INTEGER PRIMARY KEY AUTOINCREMENT,type INTEGER DEFAULT 0,date TEXT,trackid INTEGER,summary TEXT,data TEXT DEFAULT NULL,groupCnt INTEGER,sync INTEGER DEFAULT 0, UNIQUE (trackid) ON CONFLICT REPLACE);"
-
-    invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
-
-    return-void
 .end method
 
 
@@ -178,7 +186,27 @@
     goto :goto_0
 .end method
 
-.method protected a()V
+.method public a()V
+    .locals 2
+
+    const-string v0, "DB"
+
+    const-string v1, "clearGPSSportTable"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/db/a;->a(Z)Landroid/database/sqlite/SQLiteDatabase;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/db/a;->a(Landroid/database/sqlite/SQLiteDatabase;)V
+
+    return-void
+.end method
+
+.method protected b()V
     .locals 2
 
     const-string v0, "DB"
@@ -202,10 +230,10 @@
     return-void
 .end method
 
-.method protected b()V
+.method protected c()V
     .locals 2
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/db/a;->c()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/db/a;->d()V
 
     const/4 v0, 0x0
 
@@ -323,6 +351,10 @@
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "CREATE TABLE IF NOT EXISTS date_data(id INTEGER PRIMARY KEY AUTOINCREMENT,type INTEGER,source INTEGER,date TEXT,summary TEXT,indexs TEXT,data BLOB,sync INTEGER);"
+
+    invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+
+    const-string v0, "CREATE TABLE IF NOT EXISTS parterconfig(_id  INTEGER PRIMARY KEY AUTOINCREMENT,color TEXT,title TEXT,sub_title TEXT,icon ICON,third_app_id TEXT,expire_time INTEGER DEFAULT 0,url TEXT );"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 

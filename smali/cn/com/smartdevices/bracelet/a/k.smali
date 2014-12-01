@@ -1,42 +1,30 @@
 .class public Lcn/com/smartdevices/bracelet/a/k;
-.super Lcn/com/smartdevices/bracelet/a/u;
+.super Lcn/com/smartdevices/bracelet/a/v;
 
 
 # instance fields
-.field private a:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcn/com/smartdevices/bracelet/model/AlarmClockItem;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private a:Z
+
+.field private b:Lcn/com/smartdevices/bracelet/b/b;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/ArrayList;Lcn/com/smartdevices/bracelet/a/b;)V
+.method public constructor <init>(Lcn/com/smartdevices/bracelet/a/b;ZLcn/com/smartdevices/bracelet/b/b;)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcn/com/smartdevices/bracelet/model/AlarmClockItem;",
-            ">;",
-            "Lcn/com/smartdevices/bracelet/a/b;",
-            ")V"
-        }
-    .end annotation
 
-    invoke-direct {p0, p2}, Lcn/com/smartdevices/bracelet/a/u;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/a/v;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/a/k;->a:Z
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/a/k;->a:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/a/k;->b:Lcn/com/smartdevices/bracelet/b/b;
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/a/k;->a:Ljava/util/ArrayList;
+    iput-boolean p2, p0, Lcn/com/smartdevices/bracelet/a/k;->a:Z
+
+    iput-object p3, p0, Lcn/com/smartdevices/bracelet/a/k;->b:Lcn/com/smartdevices/bracelet/b/b;
 
     return-void
 .end method
@@ -44,200 +32,107 @@
 
 # virtual methods
 .method public a(Lcn/com/smartdevices/bracelet/a/b;)V
-    .locals 10
-
-    const/4 v9, 0x1
-
-    const/4 v8, 0x0
+    .locals 4
 
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/a/b;->a()V
 
     :cond_0
-    move v7, v8
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/a/k;->a:Z
 
-    :goto_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/k;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    if-ge v7, v0, :cond_3
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/k;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v6, v0
-
-    check-cast v6, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/a/k;->l:Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "BleSetAlarmClockTask:"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v6}, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->toJson()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v6}, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->getCoded()I
-
-    move-result v5
-
-    iget-object v0, v6, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->calendar:Ljava/util/Calendar;
-
-    if-nez v0, :cond_1
-
-    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
-
-    move-result-object v0
-
-    iput-object v0, v6, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->calendar:Ljava/util/Calendar;
-
-    :cond_1
-    sget-object v0, Lcn/com/smartdevices/bracelet/a/k;->l:Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Set alarm at: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ", "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v6}, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->getCalendar()Ljava/util/Calendar;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/a/k;->l:Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Set alarm at: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ", "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v6}, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->toJson()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->e(Ljava/lang/String;Ljava/lang/String;)V
+    if-eqz v0, :cond_2
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/k;->m:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
-    int-to-byte v1, v7
+    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->getRealtimeSteps()I
 
-    invoke-virtual {v6}, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->isEnabled()Z
+    move-result v0
 
-    move-result v2
+    const/4 v1, -0x1
 
-    if-eqz v2, :cond_2
+    if-eq v0, v1, :cond_1
 
-    move v2, v9
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/a/k;->b:Lcn/com/smartdevices/bracelet/b/b;
 
-    :goto_1
-    int-to-byte v2, v2
+    invoke-interface {v1, v0}, Lcn/com/smartdevices/bracelet/b/b;->a(I)V
 
-    iget-object v3, v6, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->calendar:Ljava/util/Calendar;
+    :cond_1
+    sget-object v1, Lcn/com/smartdevices/bracelet/a/k;->l:Ljava/lang/String;
 
-    invoke-virtual {v6}, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->getDuration()I
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    move-result v4
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    int-to-byte v4, v4
+    const-string v3, "getRealtimeSteps return "
 
-    int-to-byte v5, v5
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual/range {v0 .. v5}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->setTimer(BBLjava/util/Calendar;BB)Z
+    move-result-object v2
 
-    invoke-virtual {v6, v8}, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->setUpdate(Z)V
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    add-int/lit8 v0, v7, 0x1
+    move-result-object v0
 
-    move v7, v0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    goto/16 :goto_0
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
-    move v2, v8
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/k;->m:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
-    goto :goto_1
+    iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/a/k;->a:Z
 
-    :cond_3
-    if-eqz p1, :cond_4
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/a/k;->b:Lcn/com/smartdevices/bracelet/b/b;
 
-    invoke-static {v9}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-virtual {v0, v1, v2}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->enableRealtimeStepNotification(ZLcn/com/smartdevices/bracelet/b/b;)Z
+
+    move-result v0
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/a/k;->l:Ljava/lang/String;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "enableRealtimeStepNotification enable="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    iget-boolean v3, p0, Lcn/com/smartdevices/bracelet/a/k;->a:Z
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ",result:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    if-eqz p1, :cond_3
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Lcn/com/smartdevices/bracelet/a/b;->a(Ljava/lang/Object;)V
 
-    :cond_4
+    :cond_3
     return-void
 .end method

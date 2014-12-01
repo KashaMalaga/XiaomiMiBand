@@ -7,6 +7,8 @@
 
 .field private b:Lcn/com/smartdevices/bracelet/lab/ui/M;
 
+.field private c:Lcn/com/smartdevices/bracelet/open/f;
+
 
 # direct methods
 .method public constructor <init>()V
@@ -34,7 +36,7 @@
 .method private a()V
     .locals 2
 
-    const v0, 0x7f07003c
+    const v0, 0x7f07003f
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->findViewById(I)Landroid/view/View;
 
@@ -42,7 +44,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f0c0205
+    const v1, 0x7f0c0213
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->getString(I)Ljava/lang/String;
 
@@ -66,11 +68,17 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f03000c
+    const v0, 0x7f03000d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->setContentView(I)V
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->a()V
+
+    new-instance v0, Lcn/com/smartdevices/bracelet/open/f;
+
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/open/f;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->c:Lcn/com/smartdevices/bracelet/open/f;
 
     new-instance v0, Lcn/com/smartdevices/bracelet/lab/ui/M;
 
@@ -82,7 +90,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->b:Lcn/com/smartdevices/bracelet/lab/ui/M;
 
-    const v0, 0x7f07003d
+    const v0, 0x7f070040
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->findViewById(I)Landroid/view/View;
 
@@ -106,6 +114,16 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
+    invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Lde/greenrobot/event/EventBus;->register(Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->c:Lcn/com/smartdevices/bracelet/open/f;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/open/f;->b()V
+
     return-void
 .end method
 
@@ -123,7 +141,44 @@
     :cond_0
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onDestroy()V
 
+    invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Lde/greenrobot/event/EventBus;->unregister(Ljava/lang/Object;)V
+
     return-void
+.end method
+
+.method public onEvent(Lcn/com/smartdevices/bracelet/eventbus/EventPartnerListLoad;)V
+    .locals 2
+
+    if-eqz p1, :cond_0
+
+    iget-boolean v0, p1, Lcn/com/smartdevices/bracelet/eventbus/EventPartnerListLoad;->success:Z
+
+    if-nez v0, :cond_1
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    iget v0, p1, Lcn/com/smartdevices/bracelet/eventbus/EventPartnerListLoad;->type:I
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->b:Lcn/com/smartdevices/bracelet/lab/ui/M;
+
+    iget-object v1, p1, Lcn/com/smartdevices/bracelet/eventbus/EventPartnerListLoad;->partners:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/M;->a(Ljava/util/List;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->b:Lcn/com/smartdevices/bracelet/lab/ui/M;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/ui/M;->notifyDataSetChanged()V
+
+    goto :goto_0
 .end method
 
 .method public onPause()V

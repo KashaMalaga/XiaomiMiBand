@@ -47,13 +47,13 @@
 .method public native getStepSize()I
 .end method
 
-.method public native getUploadPara(Lcn/com/smartdevices/bracelet/gps/algorithm/RunParameter;)V
+.method public native getUploadPara(Lcn/com/smartdevices/bracelet/gps/algorithm/TrackParameter;)V
 .end method
 
 .method public native pause()V
 .end method
 
-.method public native receiveSample(DDJ)Z
+.method public native receiveSample(DDJI)Z
 .end method
 
 .method public native reset()V

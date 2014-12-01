@@ -68,7 +68,7 @@ localization_Chinese_table = {
     hour_minute_format='%d小时%d分钟',
     hour_format='%d小时',
 
-    welcome_use='欢迎使用小米手环',
+    welcome_use='小米手环绑定成功',
     last_week_walked_format='上周共行走%d步',
     last_week_walked_info_format='共走了%d公里、消耗%d千卡',
     last_month_walked_format='上月共行走%d步',

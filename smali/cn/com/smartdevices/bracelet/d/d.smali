@@ -1,50 +1,79 @@
-.class public Lcn/com/smartdevices/bracelet/d/d;
+.class Lcn/com/smartdevices/bracelet/d/d;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public a:Ljava/lang/String;
-
-.field public b:I
-
-.field public c:Ljava/lang/String;
-
-.field public d:Ljava/lang/String;
-
-.field public e:Lcn/com/smartdevices/bracelet/q;
-
-.field public f:Lcn/com/smartdevices/bracelet/model/LoginData;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/d/a;
 
 
 # direct methods
-.method public constructor <init>(Lcn/com/smartdevices/bracelet/q;)V
-    .locals 2
+.method constructor <init>(Lcn/com/smartdevices/bracelet/d/a;)V
+    .locals 0
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/d/d;->a:Lcn/com/smartdevices/bracelet/d/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    return-void
+.end method
+
+
+# virtual methods
+.method public run()V
+    .locals 6
+
+    const/4 v5, 0x1
+
     const/4 v0, 0x0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/d/d;->b:I
+    :goto_0
+    add-int/lit8 v1, v0, 0x1
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/d/d;->c:Ljava/lang/String;
+    const/16 v2, 0xa
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/d/d;->d:Ljava/lang/String;
+    if-ge v0, v2, :cond_0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->b()Lcn/com/smartdevices/bracelet/model/LoginData;
+    const-wide/16 v2, 0x64
 
-    move-result-object v0
+    :try_start_0
+    invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/d/d;->f:Lcn/com/smartdevices/bracelet/model/LoginData;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/d/d;->a:Lcn/com/smartdevices/bracelet/d/a;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->o()Ljava/lang/String;
+    const/4 v2, 0x3
 
-    move-result-object v0
+    mul-int/lit8 v3, v1, 0xa
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/d/d;->a:Ljava/lang/String;
+    const/4 v4, 0x1
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/d/d;->e:Lcn/com/smartdevices/bracelet/q;
+    invoke-static {v0, v2, v3, v4}, Lcn/com/smartdevices/bracelet/d/a;->a(Lcn/com/smartdevices/bracelet/d/a;IIZ)V
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move v0, v1
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/d/d;->a:Lcn/com/smartdevices/bracelet/d/a;
+
+    const/4 v1, 0x4
+
+    const/16 v2, 0x64
+
+    invoke-static {v0, v1, v2, v5}, Lcn/com/smartdevices/bracelet/d/a;->a(Lcn/com/smartdevices/bracelet/d/a;IIZ)V
 
     return-void
 .end method

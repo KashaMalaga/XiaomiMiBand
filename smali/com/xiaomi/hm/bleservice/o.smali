@@ -1,150 +1,81 @@
-.class public final Lcom/xiaomi/hm/bleservice/o;
-.super Landroid/os/Binder;
+.class Lcom/xiaomi/hm/bleservice/o;
+.super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/xiaomi/hm/bleservice/t;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field private final a:Lcom/xiaomi/hm/bleservice/BLEService;
+.field final synthetic a:Lcom/xiaomi/hm/bleservice/BLEService;
 
 
 # direct methods
 .method constructor <init>(Lcom/xiaomi/hm/bleservice/BLEService;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/os/Binder;-><init>()V
-
     iput-object p1, p0, Lcom/xiaomi/hm/bleservice/o;->a:Lcom/xiaomi/hm/bleservice/BLEService;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Lcom/xiaomi/hm/bleservice/HwConnStatus;
-    .locals 1
+.method public run()V
+    .locals 4
+
+    const-string v0, "weight"
+
+    const-string v1, "stopLeScan"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/o;->a:Lcom/xiaomi/hm/bleservice/BLEService;
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getConnStatus()Lcom/xiaomi/hm/bleservice/HwConnStatus;
+    # getter for: Lcom/xiaomi/hm/bleservice/BLEService;->m_LeScanCallback:Landroid/bluetooth/BluetoothAdapter$LeScanCallback;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->access$1300(Lcom/xiaomi/hm/bleservice/BLEService;)Landroid/bluetooth/BluetoothAdapter$LeScanCallback;
 
     move-result-object v0
 
-    return-object v0
-.end method
-
-.method public a(I)V
-    .locals 1
-
-    const/16 v0, 0x27
-
-    if-ne p1, v0, :cond_1
+    if-eqz v0, :cond_0
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/o;->a:Lcom/xiaomi/hm/bleservice/BLEService;
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->setMinLatency()V
+    # getter for: Lcom/xiaomi/hm/bleservice/BLEService;->m_BluetoothAdapter:Landroid/bluetooth/BluetoothAdapter;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->access$1400(Lcom/xiaomi/hm/bleservice/BLEService;)Landroid/bluetooth/BluetoothAdapter;
 
-    :cond_0
-    :goto_0
-    return-void
+    move-result-object v0
 
-    :cond_1
-    const/16 v0, 0x1e0
+    iget-object v1, p0, Lcom/xiaomi/hm/bleservice/o;->a:Lcom/xiaomi/hm/bleservice/BLEService;
 
-    if-ne p1, v0, :cond_0
+    # getter for: Lcom/xiaomi/hm/bleservice/BLEService;->m_LeScanCallback:Landroid/bluetooth/BluetoothAdapter$LeScanCallback;
+    invoke-static {v1}, Lcom/xiaomi/hm/bleservice/BLEService;->access$1300(Lcom/xiaomi/hm/bleservice/BLEService;)Landroid/bluetooth/BluetoothAdapter$LeScanCallback;
 
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/o;->a:Lcom/xiaomi/hm/bleservice/BLEService;
+    move-result-object v1
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->alarmSetMaxLatency()V
-
-    goto :goto_0
-.end method
-
-.method public a(Landroid/bluetooth/BluetoothDevice;Z)V
-    .locals 1
-
-    if-eqz p1, :cond_0
+    invoke-virtual {v0, v1}, Landroid/bluetooth/BluetoothAdapter;->stopLeScan(Landroid/bluetooth/BluetoothAdapter$LeScanCallback;)V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/o;->a:Lcom/xiaomi/hm/bleservice/BLEService;
 
-    invoke-virtual {v0, p1, p2}, Lcom/xiaomi/hm/bleservice/BLEService;->doConnect(Landroid/bluetooth/BluetoothDevice;Z)V
+    const/4 v1, 0x0
 
-    :goto_0
-    return-void
+    # setter for: Lcom/xiaomi/hm/bleservice/BLEService;->m_LeScanCallback:Landroid/bluetooth/BluetoothAdapter$LeScanCallback;
+    invoke-static {v0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->access$1302(Lcom/xiaomi/hm/bleservice/BLEService;Landroid/bluetooth/BluetoothAdapter$LeScanCallback;)Landroid/bluetooth/BluetoothAdapter$LeScanCallback;
 
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/o;->a:Lcom/xiaomi/hm/bleservice/BLEService;
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->connectDevice()V
-
-    goto :goto_0
-.end method
-
-.method public b()Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;
-    .locals 1
-
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/o;->a:Lcom/xiaomi/hm/bleservice/BLEService;
-
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getSyncDataStatus()Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;
+    # getter for: Lcom/xiaomi/hm/bleservice/BLEService;->m_Handler:Landroid/os/Handler;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->access$600(Lcom/xiaomi/hm/bleservice/BLEService;)Landroid/os/Handler;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    const/16 v1, 0x13
 
-.method public c()V
-    .locals 1
+    const-wide/16 v2, 0x7d0
 
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/o;->a:Lcom/xiaomi/hm/bleservice/BLEService;
-
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->checkSyncData()V
+    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
     return-void
-.end method
-
-.method public d()V
-    .locals 1
-
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/o;->a:Lcom/xiaomi/hm/bleservice/BLEService;
-
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->startSyncData()V
-
-    return-void
-.end method
-
-.method public e()Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
-    .locals 1
-
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/o;->a:Lcom/xiaomi/hm/bleservice/BLEService;
-
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getMiliProfile()Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public f()Lcom/xiaomi/hm/bleservice/HwConnStatus;
-    .locals 1
-
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/o;->a:Lcom/xiaomi/hm/bleservice/BLEService;
-
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getLastConnStatus()Lcom/xiaomi/hm/bleservice/HwConnStatus;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public g()Z
-    .locals 1
-
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/o;->a:Lcom/xiaomi/hm/bleservice/BLEService;
-
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->isBluetoothRestarting()Z
-
-    move-result v0
-
-    return v0
 .end method

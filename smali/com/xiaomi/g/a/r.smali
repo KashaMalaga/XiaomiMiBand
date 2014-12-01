@@ -1727,6 +1727,14 @@
     goto :goto_0
 .end method
 
+.method public f(Ljava/lang/String;)Lcom/xiaomi/g/a/r;
+    .locals 0
+
+    iput-object p1, p0, Lcom/xiaomi/g/a/r;->h:Ljava/lang/String;
+
+    return-object p0
+.end method
+
 .method public f()Z
     .locals 1
 

@@ -1,60 +1,35 @@
 .class Lcn/com/smartdevices/bracelet/ui/cn;
-.super Landroid/content/BroadcastReceiver;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/ck;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/ck;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cn;->a:Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cn;->a:Lcn/com/smartdevices/bracelet/ui/ck;
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 5
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 1
 
-    const-string v0, "intent"
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cn;->a:Lcn/com/smartdevices/bracelet/ui/ck;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ck;->c(Lcn/com/smartdevices/bracelet/ui/ck;)V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, ""
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "extra_download_id"
-
-    const-wide/16 v3, 0x0
-
-    invoke-virtual {p2, v2, v3, v4}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
-
-    move-result-wide v2
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cn;->a:Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->a(Landroid/app/Activity;)V
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
     return-void
 .end method

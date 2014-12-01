@@ -21,7 +21,7 @@
 
 .field private static final STEPLENGTHCOEFF:D = 0.42
 
-.field private static USE_NATIVE:Z
+.field public static USE_NATIVE:Z
 
 .field private static final calList:[[D
 
@@ -36,13 +36,13 @@
 
     const/4 v6, 0x3
 
-    const/4 v5, 0x1
+    const/4 v5, 0x0
 
-    const/4 v4, 0x0
+    const/4 v4, 0x1
 
     const/4 v3, 0x2
 
-    sput-boolean v5, Lcn/com/smartdevices/bracelet/analysis/DataAnalysis;->DEBUG:Z
+    sput-boolean v4, Lcn/com/smartdevices/bracelet/analysis/DataAnalysis;->DEBUG:Z
 
     const/16 v0, 0xb
 
@@ -52,13 +52,13 @@
 
     fill-array-data v1, :array_0
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v5
 
     new-array v1, v3, [D
 
     fill-array-data v1, :array_1
 
-    aput-object v1, v0, v5
+    aput-object v1, v0, v4
 
     new-array v1, v3, [D
 
@@ -136,13 +136,13 @@
 
     fill-array-data v1, :array_b
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v5
 
     new-array v1, v3, [D
 
     fill-array-data v1, :array_c
 
-    aput-object v1, v0, v5
+    aput-object v1, v0, v4
 
     new-array v1, v3, [D
 
@@ -266,10 +266,6 @@
     const-string v0, "dataProcess"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
-
-    const/4 v0, 0x1
-
-    sput-boolean v0, Lcn/com/smartdevices/bracelet/analysis/DataAnalysis;->USE_NATIVE:Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -279,9 +275,11 @@
     :catch_0
     move-exception v0
 
-    sput-boolean v4, Lcn/com/smartdevices/bracelet/analysis/DataAnalysis;->USE_NATIVE:Z
+    sput-boolean v5, Lcn/com/smartdevices/bracelet/analysis/DataAnalysis;->USE_NATIVE:Z
 
     goto :goto_0
+
+    nop
 
     :array_0
     .array-data 8
@@ -893,7 +891,7 @@
     invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_b
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->j()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->k()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v47
 

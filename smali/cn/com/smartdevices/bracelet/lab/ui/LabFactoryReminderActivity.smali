@@ -78,7 +78,7 @@
 
     invoke-direct {v1, p0, p1}, Lcn/com/smartdevices/bracelet/lab/ui/i;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 
-    invoke-static {v0, p1, v1}, Lcn/com/smartdevices/bracelet/d/f;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Lcn/com/smartdevices/bracelet/model/PersonInfo;Lcom/c/a/a/h;)V
+    invoke-static {v0, p1, v1}, Lcn/com/smartdevices/bracelet/f/e;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Lcn/com/smartdevices/bracelet/model/PersonInfo;Lcom/c/a/a/h;)V
 
     return-void
 .end method
@@ -158,11 +158,11 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f03000f
+    const v0, 0x7f030010
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->setContentView(I)V
 
-    const v0, 0x7f070046
+    const v0, 0x7f070049
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->findViewById(I)Landroid/view/View;
 
@@ -180,7 +180,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-    const v0, 0x7f070047
+    const v0, 0x7f07004a
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->findViewById(I)Landroid/view/View;
 
@@ -198,7 +198,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070048
+    const v0, 0x7f07004b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->findViewById(I)Landroid/view/View;
 
@@ -259,7 +259,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    const v0, 0x7f070049
+    const v0, 0x7f07004c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->findViewById(I)Landroid/view/View;
 

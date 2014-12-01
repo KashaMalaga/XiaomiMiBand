@@ -63,13 +63,15 @@ localization_table = {
 	es = localization_Spanish_table,
 	hr = localization_Croatian_table,
 	ru = localization_Russian_table,
-    indo = localization_indonisia_table,
+    indo = localization_indonesia_table,
 }
 
 g_curTable = localization_table[es]
 
 function setCurLocale(locale)
     g_CurLocale = locale;
+
+    log("cur locale = " .. g_CurLocale.. "indo =" .. indo)
 
     if (getCurLocale() == zh_CN) then
         g_curTable = localization_table[zh_CN];
@@ -78,7 +80,7 @@ function setCurLocale(locale)
     elseif (getCurLocale() == zh_TW) then
         g_curTable = localization_table[zh_TW];
     elseif string.find(getCurLocale(), indo) == 1 then
-        g_curTable = localization_indonisia_table;
+        g_curTable = localization_indonesia_table;
 	elseif (getCurLocale() == fr_FR or getCurLocale() == fr_BE or getCurLocale() == fr_CA or getCurLocale() == fr_CH) then
         curTable = localization_table[fr];
 		elseif (getCurLocale() == it_IT) or string.find(getCurLocale(), it) == 1 then

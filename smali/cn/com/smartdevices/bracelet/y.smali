@@ -299,11 +299,17 @@
 
 .field public static final cO:Ljava/lang/String; = "confirm_manual_lazy_day"
 
-.field private static final cP:Ljava/lang/String; = "UmengAnalyticsTracker"
+.field public static final cP:Ljava/lang/String; = "Pair_For_SmartLock_Start"
 
-.field private static cQ:Z = false
+.field public static final cQ:Ljava/lang/String; = "Pair_For_SmartLock_Success"
 
-.field private static cR:Landroid/content/Context; = null
+.field public static final cR:Ljava/lang/String; = "Pair_For_SmartLock_Success_NoSecuritySetting"
+
+.field private static final cS:Ljava/lang/String; = "UmengAnalyticsTracker"
+
+.field private static cT:Z = false
+
+.field private static cU:Landroid/content/Context; = null
 
 .field public static final ca:Ljava/lang/String; = "FirmwareUpgrade"
 
@@ -410,7 +416,7 @@
 
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcn/com/smartdevices/bracelet/y;->cQ:Z
+    sput-boolean v0, Lcn/com/smartdevices/bracelet/y;->cT:Z
 
     return-void
 .end method
@@ -426,7 +432,7 @@
 .method public static a(Landroid/content/Context;)V
     .locals 3
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/y;->cQ:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/y;->cT:Z
 
     if-nez v0, :cond_0
 
@@ -462,17 +468,25 @@
 .end method
 
 .method public static a(Landroid/content/Context;Ljava/lang/Exception;)V
-    .locals 0
+    .locals 1
 
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/y;->cT:Z
+
+    if-nez v0, :cond_0
+
+    :goto_0
+    return-void
+
+    :cond_0
     invoke-static {p0, p1}, Lcom/f/a/f;->a(Landroid/content/Context;Ljava/lang/Throwable;)V
 
-    return-void
+    goto :goto_0
 .end method
 
 .method public static a(Landroid/content/Context;Ljava/lang/String;)V
     .locals 3
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/y;->cQ:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/y;->cT:Z
 
     if-nez v0, :cond_0
 
@@ -520,7 +534,7 @@
 .method public static a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/y;->cQ:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/y;->cT:Z
 
     if-nez v0, :cond_0
 
@@ -568,7 +582,7 @@
 .method public static a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/y;->cQ:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/y;->cT:Z
 
     if-nez v0, :cond_0
 
@@ -658,7 +672,7 @@
         }
     .end annotation
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/y;->cQ:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/y;->cT:Z
 
     if-nez v0, :cond_0
 
@@ -718,7 +732,7 @@
         }
     .end annotation
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/y;->cQ:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/y;->cT:Z
 
     if-nez v0, :cond_0
 
@@ -776,7 +790,7 @@
 .method public static a(Ljava/lang/String;)V
     .locals 3
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/y;->cQ:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/y;->cT:Z
 
     if-nez v0, :cond_0
 
@@ -812,23 +826,63 @@
 .end method
 
 .method public static a(ZZZLandroid/content/Context;)V
-    .locals 0
+    .locals 3
 
-    sput-boolean p0, Lcn/com/smartdevices/bracelet/y;->cQ:Z
+    const-string v0, "UmengAnalyticsTracker"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "config Umeng to "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-boolean p0, Lcn/com/smartdevices/bracelet/y;->cT:Z
 
     invoke-static {p1}, Lcom/f/a/f;->e(Z)V
 
     invoke-static {p2}, Lcom/f/a/f;->d(Z)V
 
-    sput-object p3, Lcn/com/smartdevices/bracelet/y;->cR:Landroid/content/Context;
+    sput-object p3, Lcn/com/smartdevices/bracelet/y;->cU:Landroid/content/Context;
+
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/y;->cT:Z
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/u;->g(Z)V
 
     return-void
+.end method
+
+.method public static a()Z
+    .locals 1
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->Y()Z
+
+    move-result v0
+
+    sput-boolean v0, Lcn/com/smartdevices/bracelet/y;->cT:Z
+
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/y;->cT:Z
+
+    return v0
 .end method
 
 .method public static b(Landroid/content/Context;)V
     .locals 3
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/y;->cQ:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/y;->cT:Z
 
     if-nez v0, :cond_0
 
@@ -876,7 +930,7 @@
 .method public static b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/y;->cQ:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/y;->cT:Z
 
     if-nez v0, :cond_0
 
@@ -931,7 +985,7 @@
 .method public static b(Ljava/lang/String;)V
     .locals 3
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/y;->cQ:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/y;->cT:Z
 
     if-nez v0, :cond_0
 
@@ -979,7 +1033,7 @@
 .method public static c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/y;->cQ:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/y;->cT:Z
 
     if-nez v0, :cond_0
 
@@ -1034,7 +1088,7 @@
 .method public static c(Ljava/lang/String;)V
     .locals 1
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/y;->cR:Landroid/content/Context;
+    sget-object v0, Lcn/com/smartdevices/bracelet/y;->cU:Landroid/content/Context;
 
     invoke-static {v0, p0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;)V
 
@@ -1042,9 +1096,17 @@
 .end method
 
 .method public static d(Landroid/content/Context;Ljava/lang/String;)V
-    .locals 0
+    .locals 1
 
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/y;->cT:Z
+
+    if-nez v0, :cond_0
+
+    :goto_0
+    return-void
+
+    :cond_0
     invoke-static {p0, p1}, Lcom/f/a/f;->a(Landroid/content/Context;Ljava/lang/String;)V
 
-    return-void
+    goto :goto_0
 .end method

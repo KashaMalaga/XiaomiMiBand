@@ -114,7 +114,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, p1}, Lcn/com/smartdevices/bracelet/o;->c(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/DaySportData$Summary;
+    invoke-virtual {v1, p1}, Lcn/com/smartdevices/bracelet/o;->b(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/DaySportData$Summary;
 
     move-result-object v2
 
@@ -138,7 +138,7 @@
 
     invoke-virtual {p0, p1, v0}, Lcn/com/smartdevices/bracelet/chart/c/r;->a(Lcn/com/smartdevices/bracelet/model/SportDay;Lcn/com/smartdevices/bracelet/model/UserSleepModify;)V
 
-    invoke-virtual {v1, p1}, Lcn/com/smartdevices/bracelet/o;->d(Lcn/com/smartdevices/bracelet/model/SportDay;)V
+    invoke-virtual {v1, p1}, Lcn/com/smartdevices/bracelet/o;->c(Lcn/com/smartdevices/bracelet/model/SportDay;)V
 
     goto :goto_0
 .end method

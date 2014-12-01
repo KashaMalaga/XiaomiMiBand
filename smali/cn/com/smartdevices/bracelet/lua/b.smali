@@ -35,23 +35,7 @@
 .end method
 
 .method public a(Ljava/lang/String;Landroid/view/View;Landroid/graphics/Bitmap;)V
-    .locals 3
-
-    new-instance v0, Landroid/view/animation/AlphaAnimation;
-
-    const/high16 v1, 0x3f000000
-
-    const/high16 v2, 0x3f800000
-
-    invoke-direct {v0, v1, v2}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
-
-    const-wide/16 v1, 0x12c
-
-    invoke-virtual {v0, v1, v2}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->setAnimation(Landroid/view/animation/Animation;)V
-
-    invoke-virtual {p2}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+    .locals 0
 
     return-void
 .end method

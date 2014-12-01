@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/j;->a:Lcn/com/smartdevices/bracelet/gps/ui/GaodeTestActivity;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GaodeTestActivity;->c()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GaodeTestActivity;->b()V
 
     return-void
 .end method

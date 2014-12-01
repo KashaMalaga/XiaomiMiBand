@@ -1,91 +1,150 @@
 .class Lcn/com/smartdevices/bracelet/ui/aw;
-.super Lcn/com/smartdevices/bracelet/a/b;
+.super Lcom/c/a/a/h;
 
 
 # instance fields
+.field final synthetic a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
 .field final synthetic b:Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
     .locals 0
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/aw;->b:Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/a/b;-><init>()V
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/aw;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    invoke-direct {p0}, Lcom/c/a/a/h;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b()V
-    .locals 0
+.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
+    .locals 4
 
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/a/b;->b()V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aw;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-    return-void
-.end method
+    const/4 v1, 0x2
 
-.method public c(Ljava/lang/Object;)V
-    .locals 3
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->setNeedSyncServer(I)V
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->c(Ljava/lang/Object;)V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aw;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-    check-cast p1, Ljava/lang/Boolean;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/u;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    if-eqz v0, :cond_1
-
-    const-string v0, "\u8bbe\u5b9a\u76ee\u6807\u6210\u529f!"
-
-    :goto_0
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aw;->b:Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;
-
-    const/4 v2, 0x0
-
-    invoke-static {v1, v0, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
+    invoke-static {p3}, Lcn/com/smartdevices/bracelet/z;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+    const-string v1, "HealthGoalsActivity"
 
-    :cond_0
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "fail, statusCode="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ", content="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
     return-void
-
-    :cond_1
-    const-string v0, "\u8bbe\u5b9a\u76ee\u6807\u5931\u8d25!"
-
-    goto :goto_0
 .end method
 
-.method public d(Ljava/lang/Object;)V
-    .locals 3
+.method public onSuccess(I[Lorg/apache/http/Header;[B)V
+    .locals 5
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->d(Ljava/lang/Object;)V
+    invoke-static {p3}, Lcn/com/smartdevices/bracelet/z;->a([B)Ljava/lang/String;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aw;->b:Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;
+    move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aw;->b:Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;
-
-    const v2, 0x7f0c0045
-
-    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->getString(I)Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/f/f;->b(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/f/g;
 
     move-result-object v1
 
-    const/4 v2, 0x0
+    const-string v2, "HealthGoalsActivity"
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "statusCode="
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, ", content="
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/f/g;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aw;->b:Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->a(Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->clearNeedSyncServer()V
+
+    :goto_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aw;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/u;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 
     return-void
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aw;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    const/4 v1, 0x2
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->setNeedSyncServer(I)V
+
+    goto :goto_0
 .end method

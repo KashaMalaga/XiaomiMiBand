@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private b:Lcn/com/smartdevices/bracelet/ui/co;
+.field private b:Lcn/com/smartdevices/bracelet/ui/ck;
 
 .field private c:Landroid/content/BroadcastReceiver;
 
@@ -20,7 +20,7 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;->b:Lcn/com/smartdevices/bracelet/ui/co;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;->b:Lcn/com/smartdevices/bracelet/ui/ck;
 
     return-void
 .end method
@@ -28,9 +28,9 @@
 .method private a()V
     .locals 3
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cn;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cj;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/cn;-><init>(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/cj;-><init>(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;->c:Landroid/content/BroadcastReceiver;
 
@@ -68,7 +68,7 @@
 
     move-result-object v1
 
-    const-class v0, Lcn/com/smartdevices/bracelet/ui/co;
+    const-class v0, Lcn/com/smartdevices/bracelet/ui/ck;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -78,13 +78,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/co;
+    check-cast v0, Lcn/com/smartdevices/bracelet/ui/ck;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;->b:Lcn/com/smartdevices/bracelet/ui/co;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;->b:Lcn/com/smartdevices/bracelet/ui/ck;
 
     const v0, 0x1020002
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;->b:Lcn/com/smartdevices/bracelet/ui/co;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;->b:Lcn/com/smartdevices/bracelet/ui/ck;
 
     invoke-virtual {v1, v0, v2}, Landroid/app/FragmentTransaction;->add(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
 

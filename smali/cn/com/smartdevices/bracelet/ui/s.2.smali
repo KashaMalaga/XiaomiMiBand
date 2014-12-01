@@ -43,11 +43,11 @@
 
     invoke-direct {v1, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/d/g;->a(Lorg/json/JSONObject;)Lcn/com/smartdevices/bracelet/d/h;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/f/f;->a(Lorg/json/JSONObject;)Lcn/com/smartdevices/bracelet/f/g;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/d/h;->a()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/g;->a()Z
 
     move-result v0
 
@@ -292,7 +292,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0c01f4
+    const v1, 0x7f0c01fd
 
     const/4 v2, 0x1
 

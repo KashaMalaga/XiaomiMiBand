@@ -450,16 +450,38 @@ end
 --
 --
 ------------------------------------------------------------------------------------------------
-
--- 1001
+DISABLE_TAG = "_DISABLE"
+TYPE_WELCOME = "1001"
+TYPE_WELCOME_WITH_SENSORHUB_NOT_BIND = "1000"
+TYPE_WELCOME_WITH_SENSORHUB_NOT_BIND_1 = "1000_1"..DISABLE_TAG
 function welcome(listDao,ConfigInfo)
+    log('----------welcome')
+    if (ConfigInfo:isSupportSensorHub()) then
+        log('is support sensor hub')
+        welcomeWithSensorHub(listDao, ConfigInfo)
+    else
+        welcomeNoSensorHub(listDao, ConfigInfo)
+    end
+
+end
+
+function clearWelcome(listDao,ConfigInfo)
+    log("---------------clearWelcom")
+    clearRecord(listDao, ConfigInfo:getLuaAction(), TYPE_WELCOME)
+    clearRecord(listDao, ConfigInfo:getLuaAction(), TYPE_WELCOME_WITH_SENSORHUB_NOT_BIND)
+    clearRecord(listDao, ConfigInfo:getLuaAction(), TYPE_WELCOME_WITH_SENSORHUB_NOT_BIND_1)
+end
+
+function showBindedWelcome(listDao, ConfigInfo)
+    log("---------------showBindedWelcom")
+    clearWelcome(listDao, ConfigInfo)
+
     t1 = getString('welcome_use');
     t2 = getString('click_to_get_help');
-    stype = "1001"
+    stype = TYPE_WELCOME
 
     strScript = "function doAction(context, luaAction) \
         ConfigInfo = luaAction:getConfigInfo()\
-        ConfigInfo:setNewUser(false)\
         ConfigInfo:save()\
         local intent = luaAction:getIntentFromString('cn.com.smartdevices.bracelet.ui.InstructionActivity');\
         context:startActivity(intent)\
@@ -472,8 +494,111 @@ function welcome(listDao,ConfigInfo)
     t.strScript = strScript
 
     uniqueMsg(listDao,ConfigInfo,t)
-
 end
+
+function showNotBindedWithSensorHub(listDao, ConfigInfo)
+    log("---------------showNotBindedWithSensorHub")
+
+    t1 = "欢迎使用小米健康"
+    t2 = ""
+    stype = TYPE_WELCOME_WITH_SENSORHUB_NOT_BIND_1
+
+    t = {}
+    t.t1 = t1
+    t.t2 = t2
+    t.stype = stype
+
+    uniqueMsg(listDao,ConfigInfo,t)
+
+    t.t1 = "已经拥有小米手环？"
+    t.t2 = "也可以通过右上角菜单点击智能设备绑定"
+    t.stype = TYPE_WELCOME_WITH_SENSORHUB_NOT_BIND
+
+    t.strScript = "function doAction(context, luaAction) \
+        if luaAction:getIsBind() then\
+            return\
+        end\
+        local intent = luaAction:getIntentFromString('cn.com.smartdevices.bracelet.ui.SearchSingleBraceletActivity');\
+        intent:setFlags(0x10008000);\
+        context:startActivity(intent)\
+    end";
+
+    uniqueMsg(listDao,ConfigInfo,t)
+end
+
+function welcomeWithSensorHub(listDao, ConfigInfo)
+    lastBinded = ConfigInfo:isLastBinded()
+    binded = ConfigInfo:getIsBind()
+    isNewUser = ConfigInfo:getNewUser()
+    bindedSensorHub = ConfigInfo:isBindSensorHub()
+
+
+    if (isNewUser) then
+        log("is newuser")
+    else
+        log("is not newuser")
+    end
+
+    if (binded) then
+        if (false == isNewUser) then
+            clearWelcome(listDao, ConfigInfo)
+            log('----------after clear welcome')
+            return
+        end
+
+        log('binded = '..binded..", lastbinde = " .. lastBinded)
+        if (binded ~= lastBinded or
+                (judgeUniqueByDate_Type(listDao,ConfigInfo, TYPE_WELCOME))) then
+            clearWelcome(listDao, ConfigInfo)
+            showBindedWelcome(listDao, ConfigInfo)
+        end
+    else -- binded with sensor hub
+        if (bindedSensorHub) then
+            if (binded ~= lastBinded or
+                    (judgeUniqueByDate_Type(listDao,ConfigInfo, TYPE_WELCOME_WITH_SENSORHUB_NOT_BIND))) then
+                clearWelcome(listDao, ConfigInfo)
+                showNotBindedWithSensorHub(listDao, ConfigInfo)
+            end
+        else
+            log("\n ============ERROR=========== Band not binded and SensorHub not binded!!!")
+        end
+        clearUnlockHint(listDao,ConfigInfo)
+    end
+end
+
+function welcomeNoSensorHub(listDao,ConfigInfo)
+    log("welcomeNoSendorHub")
+    lastBinded = ConfigInfo:isLastBinded()
+    binded = ConfigInfo:getIsBind()
+
+    if (lastBinded == true) then
+        log("last binded true")
+    else
+        log("last binded false")
+    end
+
+    if (binded == true) then
+        log(" binded true")
+    else
+        log(" binded false")
+    end
+
+    if false == ConfigInfo:getIsBind() then
+        unbindHint(listDao,ConfigInfo)
+        clearWelcome(listDao, ConfigInfo)
+    else
+        if (binded ~= lastBinded or
+                (judgeUniqueByDate_Type(listDao,ConfigInfo, TYPE_WELCOME))) then
+            showBindedWelcome(listDao, ConfigInfo)
+        end
+        clearUnbindMsg(listDao,ConfigInfo)
+    end
+
+    if (false == ConfigInfo:getNewUser()) then
+        clearWelcome(listDao, ConfigInfo)
+    end
+end
+
 
 -- 1002
 function newUser(listDao,ConfigInfo)
@@ -1329,30 +1454,13 @@ function getEventMsgs(listDao,ConfigInfo,index)
 end
 
 function getDefaultMsgs(listDao, ConfigInfo)
-
-    if (ConfigInfo:getNewUser())then
-        welcome(listDao,ConfigInfo)
---        newUser(listDao,ConfigInfo)
-    else
-        log("xxxxxxxxxxx not new user")
-    end
-
     if ConfigInfo:getShowUnlockInfo() then
         unlockHint(listDao,ConfigInfo)
     else
         clearUnlockHint(listDao,ConfigInfo)
     end
 
-    if false == ConfigInfo:getIsBind() then
-        log('xxxxx getisbind= false');
-    end
-
-    if false == ConfigInfo:getIsBind() then
-        unbindHint(listDao,ConfigInfo)
-    else
-        clearUnbindMsg(listDao,ConfigInfo)
-    end
-
+    welcome(listDao, ConfigInfo)
 end
 
 
@@ -1749,7 +1857,7 @@ function getLabFactoryActivityMsgs(listDao, activityItem)
 end
 
 ------===============Weather tips ==================
-WEATHER_TIPS = "6001"
+WEATHER_TIPS = "6001_DISABLE"
 DIRTY_AIR_AQI_LEVEL = 5
 VERY_DIRTY_AIR_AQI_LEVEL = 6
 
@@ -1808,16 +1916,4 @@ function showLuaItem(listDao, configInfo, luaItem)
         replaceMsgByType(listDao, configInfo, t)
     end
 
-
-    ------test
-    strScript = "function doAction(context, luaAction) \
-        ConfigInfo = luaAction:getConfigInfo()\
-        ConfigInfo:setShowUnlockInfo(false)\
-        ConfigInfo:save()\
-        local intent = luaAction:getIntentFromString('cn.com.smartdevices.bracelet.ui.UnlockScreenHelperActivity');\
-        context:startActivity(intent)\
-    end"
-    log("good script = " .. strScript)
-
-    log("cur script = " .. t.strScript)
 end

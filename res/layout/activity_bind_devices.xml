@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/bind_band" android:background="#ffff9013" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="150.0dip" android:src="@drawable/ic_devices_bind_band" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="13.0sp" android:textColorLink="#ccffffff" android:id="@id/about_mi_band" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dip" android:layout_below="@id/icon" android:layout_centerHorizontal="true" android:onClick="onLinkClick" />
+        <Button android:textSize="@dimen/click_button_text_size" android:textColor="#fffff5ee" android:id="@id/start_bind" android:background="@drawable/click_btn_bg" android:layout_width="@dimen/click_button_w" android:layout_height="@dimen/click_button_h" android:layout_marginBottom="42.0dip" android:text="@string/bind_mi_band" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:onClick="onStartBindClick" />
+    </RelativeLayout>
+    <TextView android:id="@id/home_back" android:layout_width="wrap_content" android:layout_height="@dimen/action_bar_h" android:text="@string/bind_devices" style="@style/BackButton" />
+</FrameLayout>

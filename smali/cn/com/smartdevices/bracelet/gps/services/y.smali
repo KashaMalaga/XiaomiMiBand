@@ -2,6 +2,10 @@
 .super Ljava/lang/Object;
 
 
+# static fields
+.field private static final d:J = 0x1388L
+
+
 # instance fields
 .field private a:Landroid/location/LocationManager;
 
