@@ -182,8 +182,7 @@
                 <action android:name="com.xiaomi.mipush.ERROR"/>
             </intent-filter>
         </receiver>
-        <activity android:configChanges="keyboardHidden|orientation" android:label="@string/title_activity_open" android:name="cn.com.smartdevices.bracelet.open.OpenActivity" android:screenOrientation="portrait"/>
-		<activity android:label="" android:name="cn.com.smartdevices.bracelet.ExtendActivity"/>
+        <activity android:label="" android:name="cn.com.smartdevices.bracelet.ExtendActivity"/>
         <activity android:label="" android:name="cn.com.smartdevices.bracelet.SettingAppActivity"/>
         <provider android:authorities="cn.com.smartdevices.bracelet.extend.AppsSettingProvider" android:exported="true" android:name="cn.com.smartdevices.bracelet.extend.AppsSettingProvider"/>
         <service android:label="BleNotificationService" android:name="cn.com.smartdevices.bracelet.extend.BleNotificationService" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
@@ -191,5 +190,6 @@
                 <action android:name="android.service.notification.NotificationListenerService"/>
             </intent-filter>
         </service>
-	</application>
+        <activity android:configChanges="keyboardHidden|orientation" android:label="@string/title_activity_open" android:name="cn.com.smartdevices.bracelet.open.OpenActivity" android:screenOrientation="portrait"/>
+    </application>
 </manifest>
