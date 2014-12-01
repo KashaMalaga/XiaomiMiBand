@@ -459,6 +459,9 @@
     <public type="layout" name="wheel_item_miui" id="0x7f030089" />
     <public type="layout" name="wheel_item_normal" id="0x7f03008a" />
     <public type="layout" name="wheel_left_band" id="0x7f03008b" />
+    <public type="layout" name="mks_dialog_color_picker" id="0x7f03008c" />
+    <public type="layout" name="mks_list_app_item" id="0x7f03008d" />
+    <public type="layout" name="mks_setting_app" id="0x7f03008e" />
     <public type="anim" name="cycle_interpolator" id="0x7f040000" />
     <public type="anim" name="edit_shake" id="0x7f040001" />
     <public type="anim" name="fw_in" id="0x7f040002" />

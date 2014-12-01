@@ -36,6 +36,8 @@
 
 .field public static final COLUMN_NOTIFY_STARTED:Ljava/lang/String; = "notify_started"
 
+.field public static final COLUMN_NOW_STARTED:Ljava/lang/String; = "now_started"
+
 .field public static final COLUMN_PACKAGE_NAME:Ljava/lang/String; = "name"
 
 .field public static final COLUMN_TIME_END:Ljava/lang/String; = "time_end"
@@ -50,7 +52,7 @@
 
 .field public static final COLUMN_VIBRO_STARTED:Ljava/lang/String; = "vibro_started"
 
-.field static final DB_CREATE:Ljava/lang/String; = "create table app_setting(_id integer primary key autoincrement, name text, notify_started integer, vibro_started integer, vibro_count integer, vibro_delay integer, color_started integer, color_value integer, color_count integer, color_delay integer, time_started integer, time_start integer, time_end integer);"
+.field static final DB_CREATE:Ljava/lang/String; = "create table app_setting(_id integer primary key autoincrement, name text, notify_started integer, now_started integer, vibro_started integer, vibro_count integer, vibro_delay integer, color_started integer, color_value integer, color_count integer, color_delay integer, time_started integer, time_start integer, time_end integer);"
 
 .field static final DB_NAME:Ljava/lang/String; = "appdb"
 
@@ -76,7 +78,7 @@
     .locals 4
 
     .prologue
-    .line 72
+    .line 74
     const-string v0, "content://cn.com.smartdevices.bracelet.extend.AppsSettingProvider/apps"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -85,7 +87,7 @@
 
     sput-object v0, Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider;->APP_CONTENT_URI:Landroid/net/Uri;
 
-    .line 94
+    .line 96
     new-instance v0, Landroid/content/UriMatcher;
 
     const/4 v1, -0x1
@@ -94,7 +96,7 @@
 
     sput-object v0, Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider;->uriMatcher:Landroid/content/UriMatcher;
 
-    .line 95
+    .line 97
     sget-object v0, Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider;->uriMatcher:Landroid/content/UriMatcher;
 
     const-string v1, "cn.com.smartdevices.bracelet.extend.AppsSettingProvider"
@@ -105,7 +107,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 96
+    .line 98
     sget-object v0, Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider;->uriMatcher:Landroid/content/UriMatcher;
 
     const-string v1, "cn.com.smartdevices.bracelet.extend.AppsSettingProvider"
@@ -116,7 +118,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 97
+    .line 99
     return-void
 .end method
 
@@ -132,7 +134,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider;->LOG_TAG:Ljava/lang/String;
 
-    .line 219
+    .line 221
     return-void
 .end method
 
@@ -145,7 +147,7 @@
     .param p3, "selectionArgs"    # [Ljava/lang/String;
 
     .prologue
-    .line 160
+    .line 162
     sget-object v2, Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider;->uriMatcher:Landroid/content/UriMatcher;
 
     invoke-virtual {v2, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
@@ -154,7 +156,7 @@
 
     packed-switch v2, :pswitch_data_0
 
-    .line 174
+    .line 176
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -179,13 +181,13 @@
 
     throw v2
 
-    .line 165
+    .line 167
     :pswitch_0
     invoke-virtual {p1}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 167
+    .line 169
     .local v1, "id":Ljava/lang/String;
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -193,7 +195,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 168
+    .line 170
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -218,7 +220,7 @@
 
     move-result-object p2
 
-    .line 176
+    .line 178
     .end local v1    # "id":Ljava/lang/String;
     :goto_0
     :pswitch_1
@@ -230,7 +232,7 @@
 
     iput-object v2, p0, Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider;->db:Landroid/database/sqlite/SQLiteDatabase;
 
-    .line 177
+    .line 179
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider;->db:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v3, "app_setting"
@@ -239,7 +241,7 @@
 
     move-result v0
 
-    .line 178
+    .line 180
     .local v0, "cnt":I
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider;->getContext()Landroid/content/Context;
 
@@ -253,10 +255,10 @@
 
     invoke-virtual {v2, p1, v3}, Landroid/content/ContentResolver;->notifyChange(Landroid/net/Uri;Landroid/database/ContentObserver;)V
 
-    .line 179
+    .line 181
     return v0
 
-    .line 170
+    .line 172
     .end local v0    # "cnt":I
     .restart local v1    # "id":Ljava/lang/String;
     :cond_0
@@ -300,10 +302,10 @@
 
     move-result-object p2
 
-    .line 172
+    .line 174
     goto :goto_0
 
-    .line 160
+    .line 162
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1
@@ -316,7 +318,7 @@
     .param p1, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 210
+    .line 212
     sget-object v0, Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider;->uriMatcher:Landroid/content/UriMatcher;
 
     invoke-virtual {v0, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
@@ -325,25 +327,25 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 216
+    .line 218
     const/4 v0, 0x0
 
     :goto_0
     return-object v0
 
-    .line 212
+    .line 214
     :pswitch_0
     const-string v0, "vnd.android.cursor.dir/vnd.cn.com.smartdevices.bracelet.extend.AppsSettingProvider.apps"
 
     goto :goto_0
 
-    .line 214
+    .line 216
     :pswitch_1
     const-string v0, "vnd.android.cursor.item/vnd.cn.com.smartdevices.bracelet.extend.AppsSettingProvider.apps"
 
     goto :goto_0
 
-    .line 210
+    .line 212
     nop
 
     :pswitch_data_0
@@ -361,7 +363,7 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 146
+    .line 148
     sget-object v3, Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider;->uriMatcher:Landroid/content/UriMatcher;
 
     invoke-virtual {v3, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
@@ -372,7 +374,7 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 147
+    .line 149
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -397,7 +399,7 @@
 
     throw v3
 
-    .line 149
+    .line 151
     :cond_0
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider;->dbHelper:Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider$DBHelper;
 
@@ -407,7 +409,7 @@
 
     iput-object v3, p0, Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider;->db:Landroid/database/sqlite/SQLiteDatabase;
 
-    .line 150
+    .line 152
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider;->db:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v4, "app_setting"
@@ -416,7 +418,7 @@
 
     move-result-wide v1
 
-    .line 151
+    .line 153
     .local v1, "rowID":J
     sget-object v3, Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider;->APP_CONTENT_URI:Landroid/net/Uri;
 
@@ -424,7 +426,7 @@
 
     move-result-object v0
 
-    .line 153
+    .line 155
     .local v0, "resultUri":Landroid/net/Uri;
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider;->getContext()Landroid/content/Context;
 
@@ -436,7 +438,7 @@
 
     invoke-virtual {v3, v0, v5}, Landroid/content/ContentResolver;->notifyChange(Landroid/net/Uri;Landroid/database/ContentObserver;)V
 
-    .line 154
+    .line 156
     return-object v0
 .end method
 
@@ -444,7 +446,7 @@
     .locals 2
 
     .prologue
-    .line 104
+    .line 106
     new-instance v0, Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider$DBHelper;
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider;->getContext()Landroid/content/Context;
@@ -455,7 +457,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider;->dbHelper:Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider$DBHelper;
 
-    .line 105
+    .line 107
     const/4 v0, 0x1
 
     return v0
@@ -472,7 +474,7 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 113
+    .line 115
     sget-object v0, Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider;->uriMatcher:Landroid/content/UriMatcher;
 
     invoke-virtual {v0, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
@@ -481,7 +483,7 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 132
+    .line 134
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -506,7 +508,7 @@
 
     throw v0
 
-    .line 117
+    .line 119
     :pswitch_0
     invoke-static {p5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -514,10 +516,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 118
+    .line 120
     const-string p5, "name ASC"
 
-    .line 134
+    .line 136
     :cond_0
     :goto_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider;->dbHelper:Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider$DBHelper;
@@ -528,7 +530,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider;->db:Landroid/database/sqlite/SQLiteDatabase;
 
-    .line 135
+    .line 137
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider;->db:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v1, "app_setting"
@@ -547,7 +549,7 @@
 
     move-result-object v8
 
-    .line 139
+    .line 141
     .local v8, "cursor":Landroid/database/Cursor;
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider;->getContext()Landroid/content/Context;
 
@@ -561,17 +563,17 @@
 
     invoke-interface {v8, v0, v1}, Landroid/database/Cursor;->setNotificationUri(Landroid/content/ContentResolver;Landroid/net/Uri;)V
 
-    .line 141
+    .line 143
     return-object v8
 
-    .line 122
+    .line 124
     .end local v8    # "cursor":Landroid/database/Cursor;
     :pswitch_1
     invoke-virtual {p1}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 125
+    .line 127
     .local v9, "id":Ljava/lang/String;
     invoke-static {p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -579,7 +581,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 126
+    .line 128
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -606,7 +608,7 @@
 
     goto :goto_0
 
-    .line 128
+    .line 130
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -648,10 +650,10 @@
 
     move-result-object p3
 
-    .line 130
+    .line 132
     goto :goto_0
 
-    .line 113
+    .line 115
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -667,7 +669,7 @@
     .param p4, "selectionArgs"    # [Ljava/lang/String;
 
     .prologue
-    .line 185
+    .line 187
     sget-object v2, Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider;->uriMatcher:Landroid/content/UriMatcher;
 
     invoke-virtual {v2, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
@@ -676,7 +678,7 @@
 
     packed-switch v2, :pswitch_data_0
 
-    .line 200
+    .line 202
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -701,13 +703,13 @@
 
     throw v2
 
-    .line 191
+    .line 193
     :pswitch_0
     invoke-virtual {p1}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 193
+    .line 195
     .local v1, "id":Ljava/lang/String;
     invoke-static {p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -715,7 +717,7 @@
 
     if-eqz v2, :cond_0
 
-    .line 194
+    .line 196
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -740,7 +742,7 @@
 
     move-result-object p3
 
-    .line 202
+    .line 204
     .end local v1    # "id":Ljava/lang/String;
     :goto_0
     :pswitch_1
@@ -752,7 +754,7 @@
 
     iput-object v2, p0, Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider;->db:Landroid/database/sqlite/SQLiteDatabase;
 
-    .line 203
+    .line 205
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider;->db:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v3, "app_setting"
@@ -761,7 +763,7 @@
 
     move-result v0
 
-    .line 204
+    .line 206
     .local v0, "cnt":I
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/extend/AppsSettingProvider;->getContext()Landroid/content/Context;
 
@@ -775,10 +777,10 @@
 
     invoke-virtual {v2, p1, v3}, Landroid/content/ContentResolver;->notifyChange(Landroid/net/Uri;Landroid/database/ContentObserver;)V
 
-    .line 205
+    .line 207
     return v0
 
-    .line 196
+    .line 198
     .end local v0    # "cnt":I
     .restart local v1    # "id":Ljava/lang/String;
     :cond_0
@@ -822,10 +824,10 @@
 
     move-result-object p3
 
-    .line 198
+    .line 200
     goto :goto_0
 
-    .line 185
+    .line 187
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1

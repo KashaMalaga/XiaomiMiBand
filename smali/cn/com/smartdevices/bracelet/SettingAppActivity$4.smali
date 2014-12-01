@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 243
+    .line 252
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity$4;->this$0:Lcn/com/smartdevices/bracelet/SettingAppActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,106 +37,76 @@
 
 # virtual methods
 .method public onTimeSet(Landroid/widget/TimePicker;II)V
-    .locals 6
+    .locals 4
     .param p1, "view"    # Landroid/widget/TimePicker;
     .param p2, "hourOfDay"    # I
     .param p3, "minute"    # I
 
     .prologue
-    .line 246
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity$4;->this$0:Lcn/com/smartdevices/bracelet/SettingAppActivity;
+    .line 255
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity$4;->this$0:Lcn/com/smartdevices/bracelet/SettingAppActivity;
 
     # getter for: Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/SettingAppActivity;->access$100(Lcn/com/smartdevices/bracelet/SettingAppActivity;)Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/SettingAppActivity;->access$100(Lcn/com/smartdevices/bracelet/SettingAppActivity;)Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
-    move-result-object v3
+    move-result-object v1
 
-    const v4, 0x36ee80
+    const v2, 0x36ee80
 
-    mul-int/2addr v4, p2
+    mul-int/2addr v2, p2
 
-    mul-int/lit16 v5, p3, 0x1770
+    const v3, 0xea60
 
-    add-int/2addr v4, v5
+    mul-int/2addr v3, p3
 
-    int-to-long v4, v4
+    add-int/2addr v2, v3
 
-    invoke-virtual {v3, v4, v5}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setTimeEndWork(J)V
+    int-to-long v2, v2
 
-    .line 248
-    const-string v3, "GMT+00"
+    invoke-virtual {v1, v2, v3}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setTimeEndWork(J)V
 
-    invoke-static {v3}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
+    .line 256
+    const-string v1, "GMT+00"
 
-    move-result-object v3
+    invoke-static {v1}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
 
-    invoke-static {v3}, Ljava/util/GregorianCalendar;->getInstance(Ljava/util/TimeZone;)Ljava/util/Calendar;
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/util/GregorianCalendar;->getInstance(Ljava/util/TimeZone;)Ljava/util/Calendar;
 
     move-result-object v0
 
-    .line 249
+    .line 257
     .local v0, "calendar":Ljava/util/Calendar;
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity$4;->this$0:Lcn/com/smartdevices/bracelet/SettingAppActivity;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity$4;->this$0:Lcn/com/smartdevices/bracelet/SettingAppActivity;
 
     # getter for: Lcn/com/smartdevices/bracelet/SettingAppActivity;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/SettingAppActivity;->access$100(Lcn/com/smartdevices/bracelet/SettingAppActivity;)Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/SettingAppActivity;->access$100(Lcn/com/smartdevices/bracelet/SettingAppActivity;)Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->getTimeEndWork()J
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->getTimeEndWork()J
 
-    move-result-wide v3
+    move-result-wide v1
 
-    invoke-virtual {v0, v3, v4}, Ljava/util/Calendar;->setTimeInMillis(J)V
+    invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    .line 250
-    const/16 v3, 0xb
-
-    invoke-virtual {v0, v3}, Ljava/util/Calendar;->get(I)I
-
-    move-result v1
-
-    .line 251
-    .local v1, "hours":I
-    const/16 v3, 0xc
-
-    invoke-virtual {v0, v3}, Ljava/util/Calendar;->get(I)I
-
-    move-result v2
-
-    .line 252
-    .local v2, "minutes":I
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity$4;->this$0:Lcn/com/smartdevices/bracelet/SettingAppActivity;
+    .line 258
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/SettingAppActivity$4;->this$0:Lcn/com/smartdevices/bracelet/SettingAppActivity;
 
     # getter for: Lcn/com/smartdevices/bracelet/SettingAppActivity;->textClockE:Landroid/widget/TextClock;
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/SettingAppActivity;->access$300(Lcn/com/smartdevices/bracelet/SettingAppActivity;)Landroid/widget/TextClock;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/SettingAppActivity;->access$300(Lcn/com/smartdevices/bracelet/SettingAppActivity;)Landroid/widget/TextClock;
 
-    move-result-object v3
+    move-result-object v1
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    const-string v2, "H:mm"
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-static {v2, v0}, Landroid/text/format/DateFormat;->format(Ljava/lang/CharSequence;Ljava/util/Calendar;)Ljava/lang/CharSequence;
 
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result-object v2
 
-    move-result-object v4
+    invoke-virtual {v1, v2}, Landroid/widget/TextClock;->setText(Ljava/lang/CharSequence;)V
 
-    const-string v5, ":"
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Landroid/widget/TextClock;->setFormat24Hour(Ljava/lang/CharSequence;)V
-
-    .line 254
+    .line 259
     return-void
 .end method

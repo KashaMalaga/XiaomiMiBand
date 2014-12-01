@@ -18,6 +18,8 @@
 
 .field private notifyColor:Z
 
+.field private notifyNow:Z
+
 .field private notifyStarted:Z
 
 .field private notifyTime:Z
@@ -38,9 +40,9 @@
     .prologue
     const/16 v3, 0xfa
 
-    const/4 v2, 0x0
-
     const/4 v1, 0x1
+
+    const/4 v2, 0x0
 
     .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -49,46 +51,49 @@
     iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->notifyStarted:Z
 
     .line 11
+    iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->notifyNow:Z
+
+    .line 13
     const/4 v0, 0x2
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->countVibro:I
 
-    .line 12
+    .line 14
     iput v3, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->delayVibro:I
 
-    .line 13
+    .line 15
     iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->notifyVibro:Z
 
-    .line 15
+    .line 17
     const v0, -0xffff01
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->color:I
 
-    .line 16
+    .line 18
     const/4 v0, 0x5
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->countColor:I
 
-    .line 17
+    .line 19
     iput v3, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->delayColor:I
 
-    .line 18
+    .line 20
     iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->notifyColor:Z
 
-    .line 20
+    .line 22
     iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->notifyTime:Z
 
-    .line 21
-    const-wide/32 v0, 0x1B77400
+    .line 23
+    const-wide/32 v0, 0x1808580
 
     iput-wide v0, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->timeStartWork:J
 
-    .line 22
-    const-wide/32 v0, 0x5265C00
+    .line 24
+    const-wide/32 v0, 0x4ef6d80
 
     iput-wide v0, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->timeEndWork:J
 
-    .line 24
+    .line 26
     iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->isWorked:Z
 
     return-void
@@ -101,12 +106,12 @@
     .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
-    .line 132
+    .line 142
     instance-of v0, p1, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
     if-eqz v0, :cond_0
 
-    .line 133
+    .line 143
     check-cast p1, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
     .end local p1    # "o":Ljava/lang/Object;
@@ -120,7 +125,7 @@
 
     move-result v0
 
-    .line 135
+    .line 145
     :goto_0
     return v0
 
@@ -135,7 +140,7 @@
     .locals 1
 
     .prologue
-    .line 67
+    .line 77
     iget v0, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->color:I
 
     return v0
@@ -145,7 +150,7 @@
     .locals 1
 
     .prologue
-    .line 75
+    .line 85
     iget v0, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->countColor:I
 
     return v0
@@ -155,7 +160,7 @@
     .locals 1
 
     .prologue
-    .line 43
+    .line 53
     iget v0, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->countVibro:I
 
     return v0
@@ -165,7 +170,7 @@
     .locals 1
 
     .prologue
-    .line 83
+    .line 93
     iget v0, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->delayColor:I
 
     return v0
@@ -175,7 +180,7 @@
     .locals 1
 
     .prologue
-    .line 51
+    .line 61
     iget v0, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->delayVibro:I
 
     return v0
@@ -185,7 +190,7 @@
     .locals 1
 
     .prologue
-    .line 27
+    .line 29
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->packageName:Ljava/lang/String;
 
     return-object v0
@@ -195,7 +200,7 @@
     .locals 2
 
     .prologue
-    .line 115
+    .line 125
     iget-wide v0, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->timeEndWork:J
 
     return-wide v0
@@ -205,7 +210,7 @@
     .locals 2
 
     .prologue
-    .line 107
+    .line 117
     iget-wide v0, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->timeStartWork:J
 
     return-wide v0
@@ -215,7 +220,7 @@
     .locals 1
 
     .prologue
-    .line 140
+    .line 150
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -229,8 +234,18 @@
     .locals 1
 
     .prologue
-    .line 91
+    .line 101
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->notifyColor:Z
+
+    return v0
+.end method
+
+.method public isNotifyNow()Z
+    .locals 1
+
+    .prologue
+    .line 45
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->notifyNow:Z
 
     return v0
 .end method
@@ -239,7 +254,7 @@
     .locals 1
 
     .prologue
-    .line 35
+    .line 37
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->notifyStarted:Z
 
     return v0
@@ -249,7 +264,7 @@
     .locals 1
 
     .prologue
-    .line 99
+    .line 109
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->notifyTime:Z
 
     return v0
@@ -259,7 +274,7 @@
     .locals 1
 
     .prologue
-    .line 59
+    .line 69
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->notifyVibro:Z
 
     return v0
@@ -269,7 +284,7 @@
     .locals 1
 
     .prologue
-    .line 123
+    .line 133
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->isWorked:Z
 
     return v0
@@ -280,10 +295,10 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 71
+    .line 81
     iput p1, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->color:I
 
-    .line 72
+    .line 82
     return-void
 .end method
 
@@ -292,10 +307,10 @@
     .param p1, "countColor"    # I
 
     .prologue
-    .line 79
+    .line 89
     iput p1, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->countColor:I
 
-    .line 80
+    .line 90
     return-void
 .end method
 
@@ -304,10 +319,10 @@
     .param p1, "countVibro"    # I
 
     .prologue
-    .line 47
+    .line 57
     iput p1, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->countVibro:I
 
-    .line 48
+    .line 58
     return-void
 .end method
 
@@ -316,10 +331,10 @@
     .param p1, "delayColor"    # I
 
     .prologue
-    .line 87
+    .line 97
     iput p1, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->delayColor:I
 
-    .line 88
+    .line 98
     return-void
 .end method
 
@@ -328,10 +343,10 @@
     .param p1, "delayVibro"    # I
 
     .prologue
-    .line 55
+    .line 65
     iput p1, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->delayVibro:I
 
-    .line 56
+    .line 66
     return-void
 .end method
 
@@ -340,10 +355,22 @@
     .param p1, "notifyColor"    # Z
 
     .prologue
-    .line 95
+    .line 105
     iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->notifyColor:Z
 
-    .line 96
+    .line 106
+    return-void
+.end method
+
+.method public setNotifyNow(Z)V
+    .locals 0
+    .param p1, "notifyNow"    # Z
+
+    .prologue
+    .line 49
+    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->notifyNow:Z
+
+    .line 50
     return-void
 .end method
 
@@ -352,10 +379,10 @@
     .param p1, "notifyStarted"    # Z
 
     .prologue
-    .line 39
+    .line 41
     iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->notifyStarted:Z
 
-    .line 40
+    .line 42
     return-void
 .end method
 
@@ -364,10 +391,10 @@
     .param p1, "notifyTime"    # Z
 
     .prologue
-    .line 103
+    .line 113
     iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->notifyTime:Z
 
-    .line 104
+    .line 114
     return-void
 .end method
 
@@ -376,10 +403,10 @@
     .param p1, "notifyVibro"    # Z
 
     .prologue
-    .line 63
+    .line 73
     iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->notifyVibro:Z
 
-    .line 64
+    .line 74
     return-void
 .end method
 
@@ -388,10 +415,10 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 31
+    .line 33
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->packageName:Ljava/lang/String;
 
-    .line 32
+    .line 34
     return-void
 .end method
 
@@ -400,10 +427,10 @@
     .param p1, "timeEndWork"    # J
 
     .prologue
-    .line 119
+    .line 129
     iput-wide p1, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->timeEndWork:J
 
-    .line 120
+    .line 130
     return-void
 .end method
 
@@ -412,10 +439,10 @@
     .param p1, "timeStartWork"    # J
 
     .prologue
-    .line 111
+    .line 121
     iput-wide p1, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->timeStartWork:J
 
-    .line 112
+    .line 122
     return-void
 .end method
 
@@ -424,9 +451,9 @@
     .param p1, "isWorked"    # Z
 
     .prologue
-    .line 127
+    .line 137
     iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->isWorked:Z
 
-    .line 128
+    .line 138
     return-void
 .end method

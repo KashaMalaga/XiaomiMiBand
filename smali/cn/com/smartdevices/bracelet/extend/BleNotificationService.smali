@@ -70,14 +70,14 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/extend/BleNotificationService;->queue:Ljava/util/concurrent/BlockingQueue;
 
-    .line 161
+    .line 171
     new-instance v0, Lcn/com/smartdevices/bracelet/extend/BleNotificationService$1;
 
     invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/extend/BleNotificationService$1;-><init>(Lcn/com/smartdevices/bracelet/extend/BleNotificationService;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/extend/BleNotificationService;->bleCallListener:Lcn/com/smartdevices/bracelet/extend/BleNotificationService$BleCallListener;
 
-    .line 182
+    .line 197
     return-void
 .end method
 
@@ -104,13 +104,15 @@
 .end method
 
 .method private isValidateTime(Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;)Z
-    .locals 12
+    .locals 13
     .param p1, "appSettingInfo"    # Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
     .prologue
-    const/16 v11, 0xc
+    const/16 v12, 0xc
 
-    const/16 v10, 0xb
+    const/16 v11, 0xb
+
+    const/4 v8, 0x1
 
     .line 54
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
@@ -119,25 +121,25 @@
 
     .line 55
     .local v0, "calendar":Ljava/util/Calendar;
-    invoke-virtual {v0, v10}, Ljava/util/Calendar;->get(I)I
+    invoke-virtual {v0, v11}, Ljava/util/Calendar;->get(I)I
 
     move-result v2
 
     .line 56
     .local v2, "hours":I
-    invoke-virtual {v0, v11}, Ljava/util/Calendar;->get(I)I
+    invoke-virtual {v0, v12}, Ljava/util/Calendar;->get(I)I
 
     move-result v5
 
     .line 58
     .local v5, "minutes":I
-    const-string v8, "GMT+01"
+    const-string v9, "GMT+00"
 
-    invoke-static {v8}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
+    invoke-static {v9}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
 
-    move-result-object v8
+    move-result-object v9
 
-    invoke-static {v8}, Ljava/util/GregorianCalendar;->getInstance(Ljava/util/TimeZone;)Ljava/util/Calendar;
+    invoke-static {v9}, Ljava/util/GregorianCalendar;->getInstance(Ljava/util/TimeZone;)Ljava/util/Calendar;
 
     move-result-object v1
 
@@ -145,18 +147,18 @@
     .local v1, "calendar1":Ljava/util/Calendar;
     invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->getTimeStartWork()J
 
-    move-result-wide v8
+    move-result-wide v9
 
-    invoke-virtual {v1, v8, v9}, Ljava/util/Calendar;->setTimeInMillis(J)V
+    invoke-virtual {v1, v9, v10}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
     .line 60
-    invoke-virtual {v1, v10}, Ljava/util/Calendar;->get(I)I
+    invoke-virtual {v1, v11}, Ljava/util/Calendar;->get(I)I
 
     move-result v4
 
     .line 61
     .local v4, "hoursS":I
-    invoke-virtual {v1, v11}, Ljava/util/Calendar;->get(I)I
+    invoke-virtual {v1, v12}, Ljava/util/Calendar;->get(I)I
 
     move-result v7
 
@@ -164,37 +166,126 @@
     .local v7, "minutesS":I
     invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->getTimeEndWork()J
 
-    move-result-wide v8
+    move-result-wide v9
 
-    invoke-virtual {v1, v8, v9}, Ljava/util/Calendar;->setTimeInMillis(J)V
+    invoke-virtual {v1, v9, v10}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
     .line 64
-    invoke-virtual {v1, v10}, Ljava/util/Calendar;->get(I)I
+    invoke-virtual {v1, v11}, Ljava/util/Calendar;->get(I)I
 
     move-result v3
 
     .line 65
     .local v3, "hoursE":I
-    invoke-virtual {v1, v11}, Ljava/util/Calendar;->get(I)I
+    invoke-virtual {v1, v12}, Ljava/util/Calendar;->get(I)I
 
     move-result v6
 
-    .line 67
+    .line 66
     .local v6, "minutesE":I
-    if-gt v4, v2, :cond_0
+    const-string v9, "BleNotificationService"
 
-    if-lt v2, v3, :cond_0
+    new-instance v10, Ljava/lang/StringBuilder;
 
-    if-gt v7, v5, :cond_0
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
 
-    if-lt v5, v6, :cond_0
+    const-string v11, "isValidateTime  hours = "
 
-    const/4 v8, 0x1
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    move-result-object v10
+
+    invoke-virtual {v10, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v10
+
+    const-string v11, " minutes = "
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v10
+
+    invoke-virtual {v10, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v10
+
+    const-string v11, " hoursS ="
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v10
+
+    invoke-virtual {v10, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v10
+
+    const-string v11, " hoursE ="
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v10
+
+    invoke-virtual {v10, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v10
+
+    const-string v11, " minutesS= "
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v10
+
+    invoke-virtual {v10, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v10
+
+    const-string v11, " minutesE= "
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v10
+
+    invoke-virtual {v10, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v10
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v10
+
+    invoke-static {v9, v10}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 68
+    if-ge v4, v2, :cond_1
+
+    if-ge v2, v3, :cond_1
+
+    .line 76
+    :cond_0
     :goto_0
     return v8
 
-    :cond_0
+    .line 70
+    :cond_1
+    if-ne v4, v2, :cond_2
+
+    if-le v7, v5, :cond_0
+
+    .line 72
+    :cond_2
+    if-ne v3, v2, :cond_3
+
+    if-le v5, v6, :cond_0
+
+    .line 75
+    :cond_3
+    const-string v8, "BleNotificationService"
+
+    const-string v9, "isValidateTime  false"
+
+    invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 76
     const/4 v8, 0x0
 
     goto :goto_0
@@ -295,7 +386,7 @@
 
     const/4 v8, 0x0
 
-    .line 74
+    .line 83
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -332,7 +423,7 @@
 
     move-result-object v1
 
-    .line 75
+    .line 84
     .local v1, "uri":Landroid/net/Uri;
     const-string v0, "BleNotificationService"
 
@@ -354,13 +445,97 @@
 
     move-result-object v3
 
+    const-string v4, " "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getId()I
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " Key"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getKey()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " PostTime"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getPostTime()J
+
+    move-result-wide v4
+
+    invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " ongoing"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->isOngoing()Z
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " Clearable"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->isClearable()Z
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " getUserId"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getUserId()I
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
     invoke-static {v0, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
+    .line 85
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/extend/BleNotificationService;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -379,7 +554,7 @@
 
     move-result-object v7
 
-    .line 78
+    .line 87
     .local v7, "cursor":Landroid/database/Cursor;
     if-eqz v7, :cond_2
 
@@ -390,12 +565,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 79
+    .line 88
     new-instance v6, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
     invoke-direct {v6}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;-><init>()V
 
-    .line 80
+    .line 89
     .local v6, "appSettingInfo":Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
     const-string v0, "name"
 
@@ -409,7 +584,7 @@
 
     invoke-virtual {v6, v0}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setPackageName(Ljava/lang/String;)V
 
-    .line 81
+    .line 90
     const-string v0, "notify_started"
 
     invoke-interface {v7, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -427,8 +602,8 @@
     :goto_0
     invoke-virtual {v6, v0}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setNotifyStarted(Z)V
 
-    .line 83
-    const-string v0, "vibro_started"
+    .line 92
+    const-string v0, "now_started"
 
     invoke-interface {v7, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -443,36 +618,10 @@
     move v0, v8
 
     :goto_1
-    invoke-virtual {v6, v0}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setNotifyVibro(Z)V
+    invoke-virtual {v6, v0}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setNotifyNow(Z)V
 
-    .line 84
-    const-string v0, "vibro_count"
-
-    invoke-interface {v7, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result v0
-
-    invoke-interface {v7, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    invoke-virtual {v6, v0}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setCountVibro(I)V
-
-    .line 85
-    const-string v0, "vibro_delay"
-
-    invoke-interface {v7, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result v0
-
-    invoke-interface {v7, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    invoke-virtual {v6, v0}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setDelayVibro(I)V
-
-    .line 87
-    const-string v0, "color_started"
+    .line 93
+    const-string v0, "vibro_started"
 
     invoke-interface {v7, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -487,23 +636,10 @@
     move v0, v8
 
     :goto_2
-    invoke-virtual {v6, v0}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setNotifyColor(Z)V
+    invoke-virtual {v6, v0}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setNotifyVibro(Z)V
 
-    .line 88
-    const-string v0, "color_value"
-
-    invoke-interface {v7, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result v0
-
-    invoke-interface {v7, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    invoke-virtual {v6, v0}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setColor(I)V
-
-    .line 89
-    const-string v0, "color_count"
+    .line 94
+    const-string v0, "vibro_count"
 
     invoke-interface {v7, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -513,10 +649,10 @@
 
     move-result v0
 
-    invoke-virtual {v6, v0}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setCountColor(I)V
+    invoke-virtual {v6, v0}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setCountVibro(I)V
 
-    .line 90
-    const-string v0, "color_delay"
+    .line 95
+    const-string v0, "vibro_delay"
 
     invoke-interface {v7, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -526,10 +662,10 @@
 
     move-result v0
 
-    invoke-virtual {v6, v0}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setDelayColor(I)V
+    invoke-virtual {v6, v0}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setDelayVibro(I)V
 
-    .line 92
-    const-string v0, "time_started"
+    .line 97
+    const-string v0, "color_started"
 
     invoke-interface {v7, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
@@ -544,9 +680,66 @@
     move v0, v8
 
     :goto_3
+    invoke-virtual {v6, v0}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setNotifyColor(Z)V
+
+    .line 98
+    const-string v0, "color_value"
+
+    invoke-interface {v7, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v0
+
+    invoke-interface {v7, v0}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setColor(I)V
+
+    .line 99
+    const-string v0, "color_count"
+
+    invoke-interface {v7, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v0
+
+    invoke-interface {v7, v0}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setCountColor(I)V
+
+    .line 100
+    const-string v0, "color_delay"
+
+    invoke-interface {v7, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v0
+
+    invoke-interface {v7, v0}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v0
+
+    invoke-virtual {v6, v0}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setDelayColor(I)V
+
+    .line 102
+    const-string v0, "time_started"
+
+    invoke-interface {v7, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v0
+
+    invoke-interface {v7, v0}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v0
+
+    if-nez v0, :cond_8
+
+    move v0, v8
+
+    :goto_4
     invoke-virtual {v6, v0}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setNotifyTime(Z)V
 
-    .line 93
+    .line 103
     const-string v0, "time_start"
 
     invoke-interface {v7, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -561,7 +754,7 @@
 
     invoke-virtual {v6, v2, v3}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setTimeStartWork(J)V
 
-    .line 94
+    .line 104
     const-string v0, "time_end"
 
     invoke-interface {v7, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -576,7 +769,7 @@
 
     invoke-virtual {v6, v2, v3}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setTimeEndWork(J)V
 
-    .line 96
+    .line 106
     const-string v0, "BleNotificationService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -603,7 +796,7 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 98
+    .line 108
     invoke-virtual {v6}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->isNotifyStarted()Z
 
     move-result v0
@@ -637,35 +830,35 @@
 
     if-nez v0, :cond_2
 
-    .line 102
+    .line 112
     const-string v0, "BleNotificationService"
 
     const-string v2, "BleNotificationService appSettingInfo add"
 
     invoke-static {v0, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 103
+    .line 113
     invoke-virtual {v6}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->isNotifyTime()Z
 
     move-result v0
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_9
 
-    .line 104
+    .line 114
     invoke-direct {p0, v6}, Lcn/com/smartdevices/bracelet/extend/BleNotificationService;->isValidateTime(Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 105
+    .line 115
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/extend/BleNotificationService;->queue:Ljava/util/concurrent/BlockingQueue;
 
     invoke-interface {v0, v6}, Ljava/util/concurrent/BlockingQueue;->add(Ljava/lang/Object;)Z
 
-    .line 111
+    .line 121
     :cond_1
-    :goto_4
+    :goto_5
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/extend/BleNotificationService;->queryThread:Ljava/lang/Thread;
 
     monitor-enter v2
@@ -673,60 +866,66 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 112
+    .line 122
     :try_start_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/extend/BleNotificationService;->queryThread:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 113
+    .line 123
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 118
+    .line 128
     .end local v6    # "appSettingInfo":Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
     :cond_2
     if-eqz v7, :cond_3
 
-    .line 119
+    .line 129
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 120
+    .line 130
     const/4 v7, 0x0
 
-    .line 123
+    .line 133
     :cond_3
-    :goto_5
+    :goto_6
     return-void
 
     .restart local v6    # "appSettingInfo":Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
     :cond_4
     move v0, v9
 
-    .line 81
+    .line 90
     goto/16 :goto_0
 
     :cond_5
     move v0, v9
 
-    .line 83
+    .line 92
     goto/16 :goto_1
 
     :cond_6
     move v0, v9
 
-    .line 87
+    .line 93
     goto/16 :goto_2
 
     :cond_7
     move v0, v9
 
-    .line 92
+    .line 97
     goto/16 :goto_3
 
-    .line 108
     :cond_8
+    move v0, v9
+
+    .line 102
+    goto/16 :goto_4
+
+    .line 118
+    :cond_9
     :try_start_2
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/extend/BleNotificationService;->queue:Ljava/util/concurrent/BlockingQueue;
 
@@ -735,25 +934,25 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    goto :goto_4
+    goto :goto_5
 
-    .line 116
+    .line 126
     .end local v6    # "appSettingInfo":Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
     :catch_0
     move-exception v0
 
-    .line 118
+    .line 128
     if-eqz v7, :cond_3
 
-    .line 119
+    .line 129
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 120
+    .line 130
     const/4 v7, 0x0
 
-    goto :goto_5
+    goto :goto_6
 
-    .line 113
+    .line 123
     .restart local v6    # "appSettingInfo":Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
     :catchall_0
     move-exception v0
@@ -769,20 +968,20 @@
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 118
+    .line 128
     .end local v6    # "appSettingInfo":Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
     :catchall_1
     move-exception v0
 
-    if-eqz v7, :cond_9
+    if-eqz v7, :cond_a
 
-    .line 119
+    .line 129
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 120
+    .line 130
     const/4 v7, 0x0
 
-    :cond_9
+    :cond_a
     throw v0
 .end method
 
@@ -791,7 +990,7 @@
     .param p1, "sbn"    # Landroid/service/notification/StatusBarNotification;
 
     .prologue
-    .line 129
+    .line 139
     :try_start_0
     const-string v1, "BleNotificationService"
 
@@ -799,12 +998,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 130
+    .line 140
     new-instance v0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
     invoke-direct {v0}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;-><init>()V
 
-    .line 131
+    .line 141
     .local v0, "appSettingInfo":Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
     invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getPackageName()Ljava/lang/String;
 
@@ -812,19 +1011,19 @@
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;->setPackageName(Ljava/lang/String;)V
 
-    .line 132
+    .line 142
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/extend/BleNotificationService;->queue:Ljava/util/concurrent/BlockingQueue;
 
     invoke-interface {v1, v0}, Ljava/util/concurrent/BlockingQueue;->remove(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 135
+    .line 145
     .end local v0    # "appSettingInfo":Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
     :goto_0
     return-void
 
-    .line 133
+    .line 143
     :catch_0
     move-exception v1
 

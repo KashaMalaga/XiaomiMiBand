@@ -18,5 +18,8 @@
 .method public abstract isCanceled(Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;)Z
 .end method
 
+.method public abstract onError(Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;)V
+.end method
+
 .method public abstract onFinish(Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;)V
 .end method
