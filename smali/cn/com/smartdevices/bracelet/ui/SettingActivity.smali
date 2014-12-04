@@ -4,7 +4,7 @@
 
 # static fields
 .field private static final a:Ljava/lang/String; = "SettingActivity"
-
+.field private static final b:Ljava/lang/String; = "notification_settings"
 
 # direct methods
 .method public constructor <init>()V

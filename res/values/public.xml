@@ -2031,6 +2031,7 @@
     <public type="string" name="bind_qq_health_tip_init" id="0x7f0c0210" />
     <public type="string" name="bind_qq_health_tip_another_qq" id="0x7f0c0211" />
     <public type="string" name="share_to_content_for_event" id="0x7f0c0212" />
+	<public type="string" name="notification_settings" id="0x7f0c029c" />
     <public type="array" name="weeks" id="0x7f0d0000" />
     <public type="array" name="weeks_short" id="0x7f0d0001" />
     <public type="array" name="months" id="0x7f0d0002" />

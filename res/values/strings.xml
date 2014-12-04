@@ -221,6 +221,7 @@ Address: %2$s"</string>
   <string name="hour_1"></string>
   <string name="in"></string>
   <string name="incoming_call_notify">Incoming call</string>
+  <string name="notification_settings">Notification Settings</string>
   <string name="incoming_call_notify_tips">"Vibrate if I don't answer after %s sec"</string>
   <string name="input_precise_person_info">Create your profile</string>
   <string name="instruction_tip_1">"View your progress

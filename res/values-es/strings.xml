@@ -214,6 +214,7 @@ Necesita una red disponible."</string>
   <string name="in">En</string>
   <string name="incoming_call_notify">Llamada Entrante</string>
   <string name="incoming_call_notify_tips">Avisar si tengo una llamada en %s segundos.</string>
+  <string name="notification_settings">Configurar notificaciones</string>
   <string name="input_precise_person_info">Por favor, introduzca su información personal. Más detalles pueden ayudarnos a obtener resultados más precisos.</string>
   <string name="instruction_tip_1">"Observe 
 \u0009el progreso de su entrenamiento"</string>
