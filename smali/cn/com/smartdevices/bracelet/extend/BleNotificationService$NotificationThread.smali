@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 147
+    .line 149
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/extend/BleNotificationService$NotificationThread;->this$0:Lcn/com/smartdevices/bracelet/extend/BleNotificationService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +40,7 @@
     .param p2, "x1"    # Lcn/com/smartdevices/bracelet/extend/BleNotificationService$1;
 
     .prologue
-    .line 147
+    .line 149
     invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/extend/BleNotificationService$NotificationThread;-><init>(Lcn/com/smartdevices/bracelet/extend/BleNotificationService;)V
 
     return-void
@@ -52,7 +52,7 @@
     .locals 4
 
     .prologue
-    .line 150
+    .line 152
     :goto_0
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/extend/BleNotificationService$NotificationThread;->this$0:Lcn/com/smartdevices/bracelet/extend/BleNotificationService;
 
@@ -63,14 +63,14 @@
 
     if-nez v1, :cond_1
 
-    .line 151
+    .line 153
     const-string v1, "BleNotificationService"
 
     const-string v2, "NotificationThread iterator"
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 153
+    .line 155
     :try_start_0
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/extend/BleNotificationService$NotificationThread;->this$0:Lcn/com/smartdevices/bracelet/extend/BleNotificationService;
 
@@ -82,7 +82,7 @@
 
     if-nez v1, :cond_0
 
-    .line 154
+    .line 156
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/extend/BleNotificationService$NotificationThread;->this$0:Lcn/com/smartdevices/bracelet/extend/BleNotificationService;
 
     iget-object v1, v1, Lcn/com/smartdevices/bracelet/extend/BleNotificationService;->queue:Ljava/util/concurrent/BlockingQueue;
@@ -93,11 +93,11 @@
 
     check-cast v0, Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
 
-    .line 155
+    .line 157
     .local v0, "appSettingInfo":Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
     if-eqz v0, :cond_0
 
-    .line 156
+    .line 158
     const-string v1, "BleNotificationService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -142,7 +142,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 157
+    .line 159
     new-instance v1, Lcn/com/smartdevices/bracelet/a/BleNotificationTask;
 
     const/4 v2, 0x0
@@ -155,7 +155,7 @@
 
     invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/a/BleNotificationTask;->c()V
 
-    .line 160
+    .line 162
     .end local v0    # "appSettingInfo":Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
     :cond_0
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/extend/BleNotificationService$NotificationThread;->this$0:Lcn/com/smartdevices/bracelet/extend/BleNotificationService;
@@ -167,11 +167,11 @@
 
     if-eqz v1, :cond_2
 
-    .line 168
+    .line 170
     :cond_1
     return-void
 
-    .line 163
+    .line 165
     :cond_2
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/extend/BleNotificationService$NotificationThread;->this$0:Lcn/com/smartdevices/bracelet/extend/BleNotificationService;
 
@@ -184,7 +184,7 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 164
+    .line 166
     :try_start_1
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/extend/BleNotificationService$NotificationThread;->this$0:Lcn/com/smartdevices/bracelet/extend/BleNotificationService;
 
@@ -195,7 +195,7 @@
 
     invoke-virtual {v1}, Ljava/lang/Object;->wait()V
 
-    .line 165
+    .line 167
     monitor-exit v2
 
     goto :goto_0
@@ -212,7 +212,7 @@
     :try_end_2
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 166
+    .line 168
     :catch_0
     move-exception v1
 

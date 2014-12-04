@@ -248,7 +248,7 @@ your goal"</string>
   <string name="lab_factory_exercise_state_ready">GO</string>
   <string name="lab_factory_exercise_state_stopped">Stop</string>
   <string name="lab_factory_exit_press_again">Touch again to exit</string>
-  <string name="lab_factory_internal_test">运动模式分析测试</string>
+  <string name="lab_factory_internal_test">Testing and analysis</string>
   <string name="lab_factory_item_group_open">OPEN</string>
   <string name="lab_factory_item_group_others">Other</string>
   <string name="lab_factory_item_group_social">SOCIAL</string>
