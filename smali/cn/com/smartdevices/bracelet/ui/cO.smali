@@ -42,7 +42,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/cO;->b:Lcn/com/smartdevices/bracelet/ui/cN;
 
-    const v3, 0x7f0c0074
+    const v3, 0x7f0c0075
 
     invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/ui/cN;->getString(I)Ljava/lang/String;
 
@@ -50,7 +50,7 @@
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/ui/cO;->b:Lcn/com/smartdevices/bracelet/ui/cN;
 
-    const v4, 0x7f0c00d9
+    const v4, 0x7f0c00da
 
     invoke-virtual {v3, v4}, Lcn/com/smartdevices/bracelet/ui/cN;->getString(I)Ljava/lang/String;
 
@@ -126,7 +126,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0c0045
+    const v2, 0x7f0c0046
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 

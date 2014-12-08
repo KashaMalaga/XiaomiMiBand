@@ -55,17 +55,17 @@
 
 .field public static final counter_text_bg:I = 0x7f080002
 
-.field public static final default_circle_indicator_fill_color:I = 0x7f080061
+.field public static final default_circle_indicator_fill_color:I = 0x7f080067
 
-.field public static final default_circle_indicator_page_color:I = 0x7f080062
+.field public static final default_circle_indicator_page_color:I = 0x7f080068
 
-.field public static final default_circle_indicator_stroke_color:I = 0x7f080063
+.field public static final default_circle_indicator_stroke_color:I = 0x7f080069
 
-.field public static final default_title_indicator_footer_color:I = 0x7f08005e
+.field public static final default_title_indicator_footer_color:I = 0x7f080064
 
-.field public static final default_title_indicator_selected_color:I = 0x7f08005f
+.field public static final default_title_indicator_selected_color:I = 0x7f080065
 
-.field public static final default_title_indicator_text_color:I = 0x7f080060
+.field public static final default_title_indicator_text_color:I = 0x7f080066
 
 .field public static final disable_text_color_dark:I = 0x7f080043
 
@@ -177,6 +177,18 @@
 
 .field public static final red:I = 0x7f08003a
 
+.field public static final running_history_list_category_bg:I = 0x7f080060
+
+.field public static final running_main_text:I = 0x7f080061
+
+.field public static final running_minor_text:I = 0x7f080063
+
+.field public static final running_start_normal:I = 0x7f08005e
+
+.field public static final running_sub_text:I = 0x7f080062
+
+.field public static final separator:I = 0x7f08005f
+
 .field public static final share_divide_failed:I = 0x7f08002e
 
 .field public static final share_divide_succ:I = 0x7f08002f
@@ -195,13 +207,13 @@
 
 .field public static final statistic_data_item_value_step:I = 0x7f080032
 
-.field public static final tab_host_title:I = 0x7f080064
+.field public static final tab_host_title:I = 0x7f08006a
 
 .field public static final title_color:I = 0x7f080004
 
 .field public static final trans:I = 0x7f080023
 
-.field public static final txt_with_drawable:I = 0x7f080065
+.field public static final txt_with_drawable:I = 0x7f08006b
 
 .field public static final wheel_band_bg:I = 0x7f080047
 

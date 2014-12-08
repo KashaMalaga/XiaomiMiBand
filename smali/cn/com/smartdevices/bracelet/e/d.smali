@@ -1,16 +1,19 @@
-.class public Lcn/com/smartdevices/bracelet/e/d;
+.class Lcn/com/smartdevices/bracelet/e/d;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field private a:Ljava/lang/String;
-
-.field private b:Ljava/lang/String;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/e/a;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/e/a;)V
     .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/e/d;->a:Lcn/com/smartdevices/bracelet/e/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -19,34 +22,58 @@
 
 
 # virtual methods
-.method public a()Ljava/lang/String;
-    .locals 1
+.method public run()V
+    .locals 6
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/e/d;->a:Ljava/lang/String;
+    const/4 v5, 0x1
 
-    return-object v0
-.end method
+    const/4 v0, 0x0
 
-.method public a(Ljava/lang/String;)V
-    .locals 0
+    :goto_0
+    add-int/lit8 v1, v0, 0x1
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/e/d;->a:Ljava/lang/String;
+    const/16 v2, 0xa
 
-    return-void
-.end method
+    if-ge v0, v2, :cond_0
 
-.method public b()Ljava/lang/String;
-    .locals 1
+    const-wide/16 v2, 0x64
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/e/d;->b:Ljava/lang/String;
+    :try_start_0
+    invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
 
-    return-object v0
-.end method
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/e/d;->a:Lcn/com/smartdevices/bracelet/e/a;
 
-.method public b(Ljava/lang/String;)V
-    .locals 0
+    const/4 v2, 0x3
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/e/d;->b:Ljava/lang/String;
+    mul-int/lit8 v3, v1, 0xa
+
+    const/4 v4, 0x1
+
+    invoke-static {v0, v2, v3, v4}, Lcn/com/smartdevices/bracelet/e/a;->a(Lcn/com/smartdevices/bracelet/e/a;IIZ)V
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move v0, v1
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/e/d;->a:Lcn/com/smartdevices/bracelet/e/a;
+
+    const/4 v1, 0x4
+
+    const/16 v2, 0x64
+
+    invoke-static {v0, v1, v2, v5}, Lcn/com/smartdevices/bracelet/e/a;->a(Lcn/com/smartdevices/bracelet/e/a;IIZ)V
 
     return-void
 .end method

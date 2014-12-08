@@ -66,7 +66,7 @@
 .method public static fromJsonStr(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/model/MiliConfig;
     .locals 2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->g()Lcom/b/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->g()Lcom/b/a/k;
 
     move-result-object v0
 
@@ -182,7 +182,7 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->g()Lcom/b/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->g()Lcom/b/a/k;
 
     move-result-object v0
 

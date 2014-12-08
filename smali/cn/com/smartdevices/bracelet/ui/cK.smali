@@ -154,7 +154,7 @@
 
     move-result-object v14
 
-    const v0, 0x7f0701a4
+    const v0, 0x7f0701af
 
     invoke-virtual {v14, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -234,7 +234,7 @@
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/bU;->a(I)V
 
-    const v1, 0x7f0c01cf
+    const v1, 0x7f0c01d1
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/bU;->c(I)V
 
@@ -246,7 +246,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0200ce
+    const v2, 0x7f0200d6
 
     invoke-virtual {v1, v2}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 

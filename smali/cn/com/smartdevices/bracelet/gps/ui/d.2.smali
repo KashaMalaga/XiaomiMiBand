@@ -23,17 +23,15 @@
 
 # virtual methods
 .method public onLongClick(Landroid/view/View;)Z
-    .locals 2
+    .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/d;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->e(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)Lcn/com/smartdevices/bracelet/gps/b/a;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/db/r;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/r;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/d;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/b/a;->b(Landroid/content/Context;)V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/db/r;->a()V
 
     const/4 v0, 0x0
 

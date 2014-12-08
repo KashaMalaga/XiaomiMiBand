@@ -119,7 +119,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/z;->a(Ljava/lang/String;Landroid/graphics/Bitmap;)Z
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/y;->a(Ljava/lang/String;Landroid/graphics/Bitmap;)Z
 
     move-result v0
 
@@ -151,7 +151,7 @@
 
     const-string v1, "REF_REPORT_DATA"
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->g()Lcom/b/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->g()Lcom/b/a/k;
 
     move-result-object v3
 

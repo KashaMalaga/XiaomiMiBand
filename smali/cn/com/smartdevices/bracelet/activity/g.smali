@@ -110,7 +110,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/g;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/f/f;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/g/f;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 

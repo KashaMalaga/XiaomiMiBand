@@ -50,8 +50,5 @@
 .method public native reset()V
 .end method
 
-.method public native setForceAvg(Z)V
-.end method
-
 .method public native zeroClear()V
 .end method

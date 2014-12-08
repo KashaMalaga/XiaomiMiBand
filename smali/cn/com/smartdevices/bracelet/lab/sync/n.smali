@@ -43,7 +43,7 @@
     :pswitch_0
     const-string v0, "huami.sport.storeUserSportConfig.json"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/f/a;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/a;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -53,7 +53,7 @@
     :pswitch_1
     const-string v0, "huami.sport.getUserSportConfig.json"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/f/a;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/a;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -62,7 +62,7 @@
     :pswitch_2
     const-string v0, "huami.sport.getSportSummary.json"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/f/a;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/a;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -71,7 +71,7 @@
     :pswitch_3
     const-string v0, "huami.sport.storeSportSummary.json"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/f/a;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/a;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -80,7 +80,7 @@
     :pswitch_4
     const-string v0, "huami.sport.getSportData.json"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/f/a;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/a;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -89,7 +89,7 @@
     :pswitch_5
     const-string v0, "huami.sport.storeSportData.json"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/f/a;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/a;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -98,7 +98,7 @@
     :pswitch_6
     const-string v0, "huami.health.fetchInitSportData.json"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/f/a;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/a;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -107,7 +107,7 @@
     :pswitch_7
     const-string v0, "huami.health.storeSportData.json"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/f/a;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/a;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

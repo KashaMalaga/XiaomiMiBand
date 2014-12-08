@@ -54,7 +54,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cj;->a:Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->a(Landroid/app/Activity;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/app/Activity;)V
 
     return-void
 .end method

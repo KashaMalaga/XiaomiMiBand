@@ -1066,6 +1066,24 @@
     return-void
 .end method
 
+.method public static a(Landroid/animation/ValueAnimator;F)V
+    .locals 2
+
+    invoke-virtual {p0}, Landroid/animation/ValueAnimator;->getDuration()J
+
+    move-result-wide v0
+
+    long-to-float v0, v0
+
+    mul-float/2addr v0, p1
+
+    float-to-long v0, v0
+
+    invoke-virtual {p0, v0, v1}, Landroid/animation/ValueAnimator;->setCurrentPlayTime(J)V
+
+    return-void
+.end method
+
 .method public static a(Landroid/view/View;Landroid/animation/AnimatorSet;J)V
     .locals 0
     .annotation build Landroid/annotation/SuppressLint;

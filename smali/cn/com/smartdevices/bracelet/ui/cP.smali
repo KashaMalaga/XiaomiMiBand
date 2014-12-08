@@ -60,7 +60,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/z;->a(Ljava/lang/Class;Landroid/bluetooth/BluetoothDevice;)Z
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/y;->a(Ljava/lang/Class;Landroid/bluetooth/BluetoothDevice;)Z
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cP;->a:Lcn/com/smartdevices/bracelet/ui/cO;
 

@@ -271,7 +271,7 @@
 
     const-string v3, "Weather_NoAqi"
 
-    invoke-static {v0, v2, v3}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2, v3}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -315,7 +315,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v2, v3}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/weather/WeatherManager$4;->this$0:Lcn/com/smartdevices/bracelet/weather/WeatherManager;
 
@@ -324,7 +324,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/Exception;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/Exception;)V
 
     const/4 v0, 0x0
 

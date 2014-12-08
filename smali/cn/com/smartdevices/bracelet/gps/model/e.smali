@@ -1,23 +1,24 @@
-.class public Lcn/com/smartdevices/bracelet/gps/model/e;
+.class final Lcn/com/smartdevices/bracelet/gps/model/e;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Landroid/os/Parcelable$Creator;
 
-# static fields
-.field public static final a:I = -0x1
 
-.field public static final b:I = 0x0
-
-.field public static final c:I = 0x1
-
-.field public static final d:I = 0x2
-
-.field public static final e:I = 0x3
-
-.field public static final f:I = 0x4
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator",
+        "<",
+        "Lcn/com/smartdevices/bracelet/gps/model/RunningReminderInfo;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method private constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,46 +26,60 @@
     return-void
 .end method
 
-.method public static a(I)Z
+
+# virtual methods
+.method public a(Landroid/os/Parcel;)Lcn/com/smartdevices/bracelet/gps/model/RunningReminderInfo;
     .locals 2
 
-    const/4 v0, 0x1
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/model/RunningReminderInfo;
 
-    if-eq p0, v0, :cond_0
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/gps/model/RunningReminderInfo;-><init>()V
 
-    const/4 v1, 0x3
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    if-ne v1, p0, :cond_1
+    move-result v1
 
-    :cond_0
-    :goto_0
-    return v0
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/model/RunningReminderInfo;->c(I)V
 
-    :cond_1
-    const/4 v0, 0x0
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    goto :goto_0
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/model/RunningReminderInfo;->b(I)V
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/model/RunningReminderInfo;->a(I)V
+
+    return-object v0
 .end method
 
-.method public static b(I)Z
+.method public a(I)[Lcn/com/smartdevices/bracelet/gps/model/RunningReminderInfo;
     .locals 1
 
-    const/4 v0, 0x4
-
-    if-eq p0, v0, :cond_0
-
-    const/4 v0, 0x2
-
-    if-ne v0, p0, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_1
     const/4 v0, 0x0
 
-    goto :goto_0
+    return-object v0
+.end method
+
+.method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/gps/model/e;->a(Landroid/os/Parcel;)Lcn/com/smartdevices/bracelet/gps/model/RunningReminderInfo;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public synthetic newArray(I)[Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/gps/model/e;->a(I)[Lcn/com/smartdevices/bracelet/gps/model/RunningReminderInfo;
+
+    move-result-object v0
+
+    return-object v0
 .end method

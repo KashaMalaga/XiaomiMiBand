@@ -172,4 +172,46 @@
     <style name="Switcher" parent="@android:style/Widget.CompoundButton.CheckBox">
         <item name="android:button">@drawable/switch_selector</item>
     </style>
+    <style name="RunningDetailValue">
+        <item name="android:textSize">20.0sp</item>
+        <item name="android:textColor">@color/running_sub_text</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">--</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:fontFamily">miui-bold</item>
+    </style>
+    <style name="RunningDetailUnit">
+        <item name="android:textSize">10.0sp</item>
+        <item name="android:textColor">@color/running_sub_text</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="RunningDetailDesc">
+        <item name="android:textSize">@dimen/dynamic_info_title</item>
+        <item name="android:textColor">@color/running_minor_text</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+    <style name="RunningTiming">
+        <item name="android:textSize">20.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#a21898c5</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">--</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:fontFamily">miui-bold</item>
+    </style>
+    <style name="RunningTimingUnit">
+        <item name="android:textSize">13.299988sp</item>
+        <item name="android:textColor">#ff5bb5d4</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+    </style>
 </resources>

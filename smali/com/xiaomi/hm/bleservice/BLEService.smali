@@ -933,7 +933,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/z;->b([B)I
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/y;->b([B)I
 
     move-result v1
 
@@ -1704,7 +1704,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0c0208
+    const v4, 0x7f0c020a
 
     new-array v5, v10, [Ljava/lang/Object;
 
@@ -1720,7 +1720,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0c0207
+    const v3, 0x7f0c0209
 
     new-array v4, v11, [Ljava/lang/Object;
 
@@ -1739,26 +1739,6 @@
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/model/LuaItem;->setT2(Ljava/lang/String;)V
-
-    const-string v1, "2014-11-30"
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/model/SportDay;->fromString(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/model/SportDay;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/SportDay;->getCalendar()Ljava/util/Calendar;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/util/Calendar;->getTimeInMillis()J
-
-    move-result-wide v1
-
-    const-wide/16 v3, 0x3e8
-
-    div-long/2addr v1, v3
-
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/model/LuaItem;->setExpire(J)V
 
     invoke-static {p0}, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->getInstance(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/lua/LuaEvent;
 
@@ -1972,7 +1952,7 @@
     return-void
 
     :pswitch_0
-    const v0, 0x7f0c01f0
+    const v0, 0x7f0c01f2
 
     invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
 
@@ -1989,7 +1969,7 @@
 
     check-cast v0, Landroid/app/NotificationManager;
 
-    const v2, 0x7f0c01ef
+    const v2, 0x7f0c01f1
 
     invoke-virtual {p0, v2}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
 
@@ -2042,28 +2022,6 @@
     goto :goto_0
 
     :pswitch_1
-    const v0, 0x7f0c01f1
-
-    invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    move-object v1, v0
-
-    goto :goto_1
-
-    :pswitch_2
-    const v0, 0x7f0c01f2
-
-    invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    move-object v1, v0
-
-    goto :goto_1
-
-    :pswitch_3
     const v0, 0x7f0c01f3
 
     invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
@@ -2074,7 +2032,7 @@
 
     goto :goto_1
 
-    :pswitch_4
+    :pswitch_2
     const v0, 0x7f0c01f4
 
     invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
@@ -2085,7 +2043,7 @@
 
     goto :goto_1
 
-    :pswitch_5
+    :pswitch_3
     const v0, 0x7f0c01f5
 
     invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
@@ -2096,7 +2054,7 @@
 
     goto :goto_1
 
-    :pswitch_6
+    :pswitch_4
     const v0, 0x7f0c01f6
 
     invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
@@ -2107,7 +2065,7 @@
 
     goto :goto_1
 
-    :pswitch_7
+    :pswitch_5
     const v0, 0x7f0c01f7
 
     invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
@@ -2118,8 +2076,30 @@
 
     goto :goto_1
 
-    :pswitch_8
+    :pswitch_6
     const v0, 0x7f0c01f8
+
+    invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    move-object v1, v0
+
+    goto :goto_1
+
+    :pswitch_7
+    const v0, 0x7f0c01f9
+
+    invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    move-object v1, v0
+
+    goto :goto_1
+
+    :pswitch_8
+    const v0, 0x7f0c01fa
 
     invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
 
@@ -2130,7 +2110,7 @@
     goto/16 :goto_1
 
     :pswitch_9
-    const v0, 0x7f0c01f9
+    const v0, 0x7f0c01fb
 
     invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
 
@@ -2347,7 +2327,7 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->P()I
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->Q()I
 
     move-result v0
 
@@ -2371,7 +2351,7 @@
 
     check-cast v0, Landroid/app/NotificationManager;
 
-    const v1, 0x7f0c0040
+    const v1, 0x7f0c0041
 
     invoke-virtual {p0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
 
@@ -2381,7 +2361,7 @@
 
     if-nez v3, :cond_2
 
-    const v1, 0x7f0c0042
+    const v1, 0x7f0c0043
 
     invoke-virtual {p0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
 
@@ -2451,7 +2431,7 @@
     if-ne v3, v4, :cond_4
 
     :cond_3
-    const v1, 0x7f0c0043
+    const v1, 0x7f0c0044
 
     invoke-virtual {p0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
 
@@ -2464,13 +2444,13 @@
 
     if-ne v3, v4, :cond_1
 
-    const v1, 0x7f0c0041
+    const v1, 0x7f0c0042
 
     invoke-virtual {p0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    const v1, 0x7f0c0044
+    const v1, 0x7f0c0045
 
     invoke-virtual {p0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
 
@@ -2643,7 +2623,7 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->U()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->V()Z
 
     move-result v0
 
@@ -3747,7 +3727,7 @@
 .method private syncDataNeededToSyncToSever(Lcn/com/smartdevices/bracelet/q;)V
     .locals 6
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/z;->a(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -3768,7 +3748,7 @@
 
     move-result-wide v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->X()J
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->Y()J
 
     move-result-wide v2
 
@@ -3859,7 +3839,7 @@
 
     invoke-direct {v5, p0, p1, v1, v2}, Lcom/xiaomi/hm/bleservice/f;-><init>(Lcom/xiaomi/hm/bleservice/BLEService;Lcn/com/smartdevices/bracelet/q;Lcn/com/smartdevices/bracelet/o;Ljava/util/ArrayList;)V
 
-    invoke-static {v0, v4, p1, v3, v5}, Lcn/com/smartdevices/bracelet/f/e;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Lcn/com/smartdevices/bracelet/q;Ljava/lang/String;Lcom/c/a/a/h;)V
+    invoke-static {v0, v4, p1, v3, v5}, Lcn/com/smartdevices/bracelet/g/e;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Lcn/com/smartdevices/bracelet/q;Ljava/lang/String;Lcom/c/a/a/h;)V
 
     goto :goto_0
 .end method
@@ -3877,11 +3857,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/e/a/d;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/e/a/d;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/f/a/d;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/f/a/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/a/d;->e()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/a/d;->e()V
 
     return-void
 .end method

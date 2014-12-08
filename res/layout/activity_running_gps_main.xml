@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+<LinearLayout android:orientation="vertical" android:background="@color/main_ui_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <FrameLayout android:id="@id/dynamic_header" android:background="@color/bg_color_blue" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_h">
         <FrameLayout android:id="@id/header_nav_left" android:paddingLeft="13.0dip" android:paddingRight="20.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent">
@@ -11,17 +11,43 @@
             <ImageView android:layout_gravity="right|center" android:id="@id/header_nav_right_new_sign" android:background="@null" android:visibility="gone" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/new_dot_icon" />
         </FrameLayout>
     </FrameLayout>
-    <LinearLayout android:orientation="vertical" android:id="@id/show_hide_detail" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
-        <com.amap.api.maps.MapView android:id="@id/map" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
-        <LinearLayout android:orientation="vertical" android:id="@id/running_info_area" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/sport_running_slider_panel_height">
-            <TextView android:textSize="@dimen/sport_running_time_cost_size" android:textColor="#9926abd8" android:layout_gravity="center_horizontal" android:id="@id/info_distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="13.299988dip" android:layout_marginBottom="10.0dip" android:text="xx公里" />
-            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/running_detail_info" android:layout_width="fill_parent" android:layout_height="wrap_content">
-                <include layout="@layout/split_line_with_margin" />
-                <include layout="@layout/fragment_running_detail_info" />
-            </LinearLayout>
-        </LinearLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.amap.api.maps.MapView android:id="@id/map" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <RelativeLayout android:gravity="center_horizontal" android:layout_gravity="left" android:background="@drawable/gps_signal_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip">
+            <TextView android:textSize="10.0dip" android:textColor="#64000000" android:gravity="center" android:id="@id/gps_signal_key" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:text="GPS" android:layout_centerVertical="true" />
+            <ImageView android:id="@id/gps_signal_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/gps_signal_weak" android:layout_toRightOf="@id/gps_signal_key" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </FrameLayout>
+    <RelativeLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip">
+        <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:textSize="@dimen/sport_running_distance_font_size" android:textColor="@color/running_main_text" android:id="@id/info_distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="xx" android:fontFamily="miui-bold" />
+        <TextView android:textSize="24.0sp" android:textColor="@color/running_main_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="@string/sport_running_kilometers" android:layout_toRightOf="@id/info_distance" android:layout_alignBaseline="@id/info_distance" />
+    </RelativeLayout>
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="6.0dip">
+        <ImageView android:layout_gravity="bottom" android:id="@id/time_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:src="@drawable/running_time_normal" />
+        <TextView android:layout_gravity="bottom" android:id="@id/timing_hour" android:layout_marginLeft="6.0dip" android:layout_toRightOf="@id/time_icon" style="@style/RunningTiming" />
+        <TextView android:layout_gravity="bottom" android:id="@id/hour_unit" android:layout_marginLeft="5.0dip" android:text="@string/unit_hour" android:layout_toRightOf="@id/timing_hour" style="@style/RunningTimingUnit" />
+        <TextView android:layout_gravity="bottom" android:id="@id/timing_minute" android:layout_marginLeft="6.0dip" android:layout_toRightOf="@id/hour_unit" style="@style/RunningTiming" />
+        <TextView android:layout_gravity="bottom" android:id="@id/minute_unit" android:layout_marginLeft="5.0dip" android:text="@string/unit_min_short" android:layout_toRightOf="@id/timing_minute" style="@style/RunningTimingUnit" />
+        <TextView android:layout_gravity="bottom" android:id="@id/timing_second" android:layout_marginLeft="6.0dip" android:layout_toRightOf="@id/minute_unit" style="@style/RunningTiming" />
+        <TextView android:layout_gravity="bottom" android:id="@id/second_unit" android:layout_marginLeft="5.0dip" android:text="@string/unit_sec_short" android:layout_toRightOf="@id/timing_second" style="@style/RunningTimingUnit" />
     </LinearLayout>
-    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="22.699982dip">
+    <include layout="@layout/split_line_with_margin" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/running_detail_info" android:layout_width="fill_parent" android:layout_height="65.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip">
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:id="@id/info_steps" style="@style/RunningDetailValue" />
+            <TextView android:id="@id/info_steps_desc" android:layout_marginTop="3.0dip" android:text="@string/sport_running_step" android:layout_below="@id/info_steps" style="@style/RunningDetailDesc" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:id="@id/info_pace" style="@style/RunningDetailValue" />
+            <TextView android:id="@id/info_pace_desc" android:layout_marginTop="3.0dip" android:text="@string/sport_running_real_time_pace" android:layout_below="@id/info_pace" style="@style/RunningDetailDesc" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:id="@id/info_speed" style="@style/RunningDetailValue" />
+            <TextView android:id="@id/info_speed_desc" android:layout_marginTop="3.0dip" android:text="@string/sport_running_speed_with_unit" android:layout_below="@id/info_speed" style="@style/RunningDetailDesc" />
+        </RelativeLayout>
+    </LinearLayout>
+    <include layout="@layout/split_line_with_margin" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="27.299988dip" android:layout_marginBottom="23.299988dip">
         <RelativeLayout android:id="@id/button_area" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
             <ImageView android:id="@id/running_lock" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dip" android:src="@drawable/running_screen_lock" />
             <cn.com.smartdevices.bracelet.gps.ui.DimPanelButtonBar android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:layout_toRightOf="@id/running_lock" app:left_text="@string/sport_running_resume" app:right_text="@string/lab_factory_exercise_state_stopped" app:left_text_color="@color/button_confirm_color" app:right_text_color="@color/button_cancel_color" xmlns:app="http://schemas.android.com/apk/res-auto" />
@@ -32,6 +58,7 @@
                 <TextView android:id="@id/unlock_slider" android:background="@drawable/running_screen_unlock" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
             </RelativeLayout>
         </cn.com.smartdevices.bracelet.gps.ui.UnlockSliderLayout>
-        <TextView android:textSize="13.299988sp" android:textColor="#ff5b5b5b" android:gravity="center" android:id="@id/start" android:background="@drawable/click_btn_bg_lab_state_operation" android:layout_width="fill_parent" android:layout_height="@dimen/click_button_h" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" android:text="@string/start" android:layout_alignTop="@id/button_area" android:layout_alignBottom="@id/button_area" android:layout_alignParentBottom="true" />
+        <TextView android:textSize="13.299988sp" android:textColor="#d3ffffff" android:gravity="center" android:id="@id/start" android:background="@drawable/btn_running_start" android:layout_width="fill_parent" android:layout_height="@dimen/click_button_h" android:layout_marginLeft="23.299988dip" android:layout_marginRight="23.299988dip" android:text="@string/start" android:layout_alignTop="@id/button_area" android:layout_alignBottom="@id/button_area" android:layout_alignParentBottom="true" />
     </FrameLayout>
+    <TextView android:id="@id/running_info_area" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
 </LinearLayout>

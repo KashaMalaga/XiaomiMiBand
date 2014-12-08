@@ -156,7 +156,7 @@
 
     iput-object v0, p0, Lkankan/wheel/widget/WheelView;->w:Ljava/util/List;
 
-    const v0, 0x7f0200cd
+    const v0, 0x7f0200d5
 
     iput v0, p0, Lkankan/wheel/widget/WheelView;->x:I
 
@@ -230,7 +230,7 @@
 
     iput-object v0, p0, Lkankan/wheel/widget/WheelView;->w:Ljava/util/List;
 
-    const v0, 0x7f0200cd
+    const v0, 0x7f0200d5
 
     iput v0, p0, Lkankan/wheel/widget/WheelView;->x:I
 
@@ -304,7 +304,7 @@
 
     iput-object v0, p0, Lkankan/wheel/widget/WheelView;->w:Ljava/util/List;
 
-    const v0, 0x7f0200cd
+    const v0, 0x7f0200d5
 
     iput v0, p0, Lkankan/wheel/widget/WheelView;->x:I
 

@@ -195,7 +195,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0c01b0
+    const v1, 0x7f0c01b2
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -207,9 +207,9 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bc;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    const v2, 0x7f0c01ab
+    const v2, 0x7f0c01ad
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/z;->b(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/y;->b(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v1
 

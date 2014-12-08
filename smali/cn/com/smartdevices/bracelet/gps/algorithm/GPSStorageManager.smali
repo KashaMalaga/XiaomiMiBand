@@ -13,7 +13,7 @@
 
 
 # virtual methods
-.method public writeSample(Lcn/com/smartdevices/bracelet/gps/model/c;Ljava/io/File;)V
+.method public writeSample(Lcn/com/smartdevices/bracelet/gps/model/b;Ljava/io/File;)V
     .locals 4
 
     new-instance v0, Ljava/io/FileOutputStream;
@@ -26,7 +26,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/model/c;->e()J
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/model/b;->e()J
 
     move-result-wide v2
 
@@ -40,7 +40,7 @@
 
     move-result-object v1
 
-    iget-wide v2, p1, Lcn/com/smartdevices/bracelet/gps/model/c;->k:D
+    iget-wide v2, p1, Lcn/com/smartdevices/bracelet/gps/model/b;->k:D
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
@@ -52,7 +52,7 @@
 
     move-result-object v1
 
-    iget-wide v2, p1, Lcn/com/smartdevices/bracelet/gps/model/c;->j:D
+    iget-wide v2, p1, Lcn/com/smartdevices/bracelet/gps/model/b;->j:D
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
@@ -64,7 +64,7 @@
 
     move-result-object v1
 
-    iget-wide v2, p1, Lcn/com/smartdevices/bracelet/gps/model/c;->i:D
+    iget-wide v2, p1, Lcn/com/smartdevices/bracelet/gps/model/b;->i:D
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
@@ -76,7 +76,7 @@
 
     move-result-object v1
 
-    iget v2, p1, Lcn/com/smartdevices/bracelet/gps/model/c;->m:F
+    iget v2, p1, Lcn/com/smartdevices/bracelet/gps/model/b;->m:F
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
@@ -88,7 +88,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/model/c;->f()F
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/model/b;->f()F
 
     move-result v2
 
@@ -102,7 +102,7 @@
 
     move-result-object v1
 
-    iget v2, p1, Lcn/com/smartdevices/bracelet/gps/model/c;->p:F
+    iget v2, p1, Lcn/com/smartdevices/bracelet/gps/model/b;->p:F
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
@@ -114,7 +114,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/model/c;->d()I
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/model/b;->d()I
 
     move-result v2
 

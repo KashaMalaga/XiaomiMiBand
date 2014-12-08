@@ -44,7 +44,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f0c0213
+    const v1, 0x7f0c0215
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->getString(I)Ljava/lang/String;
 
@@ -181,6 +181,38 @@
     goto :goto_0
 .end method
 
+.method public onEvent(Lcn/com/smartdevices/bracelet/eventbus/EventPartnerStateChanged;)V
+    .locals 4
+
+    iget-boolean v0, p1, Lcn/com/smartdevices/bracelet/eventbus/EventPartnerStateChanged;->success:Z
+
+    if-eqz v0, :cond_1
+
+    const/4 v0, 0x0
+
+    iget v1, p1, Lcn/com/smartdevices/bracelet/eventbus/EventPartnerStateChanged;->action:I
+
+    if-nez v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :cond_0
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->b:Lcn/com/smartdevices/bracelet/lab/ui/M;
+
+    iget-object v2, p1, Lcn/com/smartdevices/bracelet/eventbus/EventPartnerStateChanged;->thirdAppId:Ljava/lang/String;
+
+    iget-object v3, p1, Lcn/com/smartdevices/bracelet/eventbus/EventPartnerStateChanged;->url:Ljava/lang/String;
+
+    invoke-virtual {v1, v2, v0, v3}, Lcn/com/smartdevices/bracelet/lab/ui/M;->a(Ljava/lang/String;ILjava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->b:Lcn/com/smartdevices/bracelet/lab/ui/M;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/ui/M;->notifyDataSetChanged()V
+
+    :cond_1
+    return-void
+.end method
+
 .method public onPause()V
     .locals 1
 
@@ -188,9 +220,9 @@
 
     const-string v0, "PageLabEntrance"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->b(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -202,9 +234,9 @@
 
     const-string v0, "PageLabEntrance"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;)V
 
     return-void
 .end method

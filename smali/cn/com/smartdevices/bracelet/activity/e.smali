@@ -209,7 +209,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/e;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
-    const v1, 0x7f0c0094
+    const v1, 0x7f0c0095
 
     invoke-static {v0, v1, v4}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -235,7 +235,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/f/f;->a(Lcn/com/smartdevices/bracelet/model/LoginInfo;Ljava/lang/String;)Lcn/com/smartdevices/bracelet/model/LoginInfo;
+    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/g/f;->a(Lcn/com/smartdevices/bracelet/model/LoginInfo;Ljava/lang/String;)Lcn/com/smartdevices/bracelet/model/LoginInfo;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/e;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
@@ -309,7 +309,7 @@
 
     invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/activity/f;-><init>(Lcn/com/smartdevices/bracelet/activity/e;)V
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/f/e;->a(Lcn/com/smartdevices/bracelet/model/LoginInfo;Ljava/lang/String;Lcom/c/a/a/h;)V
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/g/e;->a(Lcn/com/smartdevices/bracelet/model/LoginInfo;Ljava/lang/String;Lcom/c/a/a/h;)V
 
     goto/16 :goto_0
 .end method

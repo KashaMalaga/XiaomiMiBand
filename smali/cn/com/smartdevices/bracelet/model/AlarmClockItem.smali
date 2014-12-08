@@ -646,7 +646,7 @@
 
     if-ne v0, v1, :cond_1
 
-    const v0, 0x7f0c0095
+    const v0, 0x7f0c0096
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -661,7 +661,7 @@
 
     if-ne v0, v1, :cond_2
 
-    const v0, 0x7f0c0096
+    const v0, 0x7f0c0097
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -676,7 +676,7 @@
 
     if-ne v0, v1, :cond_3
 
-    const v0, 0x7f0c0097
+    const v0, 0x7f0c0098
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -781,7 +781,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0c0142
+    const v1, 0x7f0c0144
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

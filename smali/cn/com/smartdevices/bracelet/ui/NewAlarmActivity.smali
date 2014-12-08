@@ -176,6 +176,9 @@
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->finish()V
 
+    :goto_0
+    return-void
+
     :cond_0
     const-class v0, Lcn/com/smartdevices/bracelet/ui/ah;
 
@@ -207,7 +210,7 @@
 
     invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/ui/ah;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
-    return-void
+    goto :goto_0
 .end method
 
 .method private a(I)V
@@ -747,7 +750,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0200ce
+    const v2, 0x7f0200d6
 
     invoke-virtual {v1, v2}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
@@ -835,13 +838,13 @@
 
     move-result-object v0
 
-    const v1, 0x7f0200ce
+    const v1, 0x7f0200d6
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
     move-result-object v0
 
-    const v1, 0x7f0c00d8
+    const v1, 0x7f0c00d9
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->getString(I)Ljava/lang/String;
 
@@ -877,13 +880,13 @@
 
     move-result-object v0
 
-    const v1, 0x7f0200ce
+    const v1, 0x7f0200d6
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
     move-result-object v0
 
-    const v1, 0x7f0c00ce
+    const v1, 0x7f0c00cf
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->getString(I)Ljava/lang/String;
 
@@ -1219,9 +1222,9 @@
 
     const-string v0, "PageAlarmNew"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->b(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -1266,9 +1269,9 @@
     :goto_0
     const-string v0, "PageAlarmNew"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;)V
 
     return-void
 

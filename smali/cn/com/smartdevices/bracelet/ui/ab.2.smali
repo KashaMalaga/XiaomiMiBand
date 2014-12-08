@@ -14,15 +14,19 @@
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
 
     invoke-direct {p0}, Landroid/app/Fragment;-><init>()V
 
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ab;->d:Lcn/com/smartdevices/bracelet/ui/widget/c;
-
     return-void
+.end method
+
+.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/ab;)I
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/ui/ab;->c:I
+
+    return v0
 .end method
 
 .method private a(Lcn/com/smartdevices/bracelet/view/DynamicView;Lcn/com/smartdevices/bracelet/chart/c/r;)V
@@ -158,9 +162,7 @@
     goto :goto_0
 .end method
 
-
-# virtual methods
-.method public a()Lcn/com/smartdevices/bracelet/view/DynamicView;
+.method static synthetic b(Lcn/com/smartdevices/bracelet/ui/ab;)Lcn/com/smartdevices/bracelet/view/DynamicView;
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ab;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
@@ -168,6 +170,8 @@
     return-object v0
 .end method
 
+
+# virtual methods
 .method public a(F)V
     .locals 1
 
@@ -184,7 +188,7 @@
 .end method
 
 .method public a(Lcn/com/smartdevices/bracelet/ui/widget/c;)V
-    .locals 1
+    .locals 2
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/ab;->d:Lcn/com/smartdevices/bracelet/ui/widget/c;
 
@@ -194,7 +198,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ab;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/view/DynamicView;->a(Lcn/com/smartdevices/bracelet/ui/widget/c;)V
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/ab;->d:Lcn/com/smartdevices/bracelet/ui/widget/c;
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/view/DynamicView;->a(Lcn/com/smartdevices/bracelet/ui/widget/c;)V
 
     :cond_0
     return-void
@@ -319,25 +325,4 @@
     invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/view/DynamicView;->a(Lcn/com/smartdevices/bracelet/ui/widget/c;)V
 
     return-object v1
-.end method
-
-.method public onResume()V
-    .locals 2
-
-    invoke-super {p0}, Landroid/app/Fragment;->onResume()V
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b/a;->c()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ab;->a:Lcn/com/smartdevices/bracelet/view/DynamicView;
-
-    const v1, -0xc3bbb1
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/view/DynamicView;->setBackgroundColor(I)V
-
-    :cond_0
-    return-void
 .end method

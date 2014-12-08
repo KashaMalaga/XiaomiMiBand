@@ -238,7 +238,7 @@
 
     const-string v1, "LocationStart"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/e;->j:Lcn/com/smartdevices/bracelet/location/i;
 

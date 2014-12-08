@@ -146,16 +146,30 @@
     <item type="id" name="bracelet_title_info">false</item>
     <item type="id" name="person_info_goal_picker">false</item>
     <item type="id" name="person_info_weight_picker">false</item>
-    <item type="id" name="show_hide_detail">false</item>
     <item type="id" name="map">false</item>
-    <item type="id" name="running_info_area">false</item>
+    <item type="id" name="gps_signal_key">false</item>
+    <item type="id" name="gps_signal_value">false</item>
     <item type="id" name="info_distance">false</item>
+    <item type="id" name="time_icon">false</item>
+    <item type="id" name="timing_hour">false</item>
+    <item type="id" name="hour_unit">false</item>
+    <item type="id" name="timing_minute">false</item>
+    <item type="id" name="minute_unit">false</item>
+    <item type="id" name="timing_second">false</item>
+    <item type="id" name="second_unit">false</item>
     <item type="id" name="running_detail_info">false</item>
+    <item type="id" name="info_steps">false</item>
+    <item type="id" name="info_steps_desc">false</item>
+    <item type="id" name="info_pace">false</item>
+    <item type="id" name="info_pace_desc">false</item>
+    <item type="id" name="info_speed">false</item>
+    <item type="id" name="info_speed_desc">false</item>
     <item type="id" name="button_area">false</item>
     <item type="id" name="running_lock">false</item>
     <item type="id" name="slider_container">false</item>
     <item type="id" name="unlock_slider">false</item>
     <item type="id" name="start">false</item>
+    <item type="id" name="running_info_area">false</item>
     <item type="id" name="no_data">false</item>
     <item type="id" name="history_list">false</item>
     <item type="id" name="date">false</item>
@@ -341,9 +355,6 @@
     <item type="id" name="progress_txt">false</item>
     <item type="id" name="ranking_lv">false</item>
     <item type="id" name="timing">false</item>
-    <item type="id" name="info_pace">false</item>
-    <item type="id" name="info_steps">false</item>
-    <item type="id" name="info_speed">false</item>
     <item type="id" name="description">false</item>
     <item type="id" name="switcher">false</item>
     <item type="id" name="speed_desc">false</item>
@@ -357,11 +368,11 @@
     <item type="id" name="info_height">false</item>
     <item type="id" name="speed_summary">false</item>
     <item type="id" name="info_time_cost">false</item>
-    <item type="id" name="info_average_speed">false</item>
     <item type="id" name="info_start_time">false</item>
-    <item type="id" name="info_end_time">false</item>
+    <item type="id" name="info_average_speed">false</item>
     <item type="id" name="select_image_camera_area">false</item>
     <item type="id" name="select_image_local_area">false</item>
+    <item type="id" name="enable_hidden_feature">false</item>
     <item type="id" name="logo">false</item>
     <item type="id" name="setting_about_bracelet_id">false</item>
     <item type="id" name="setting_about_version_value">false</item>
@@ -491,6 +502,19 @@
     <item type="id" name="ruler_picece">false</item>
     <item type="id" name="ruler_txt">false</item>
     <item type="id" name="ruler_content">false</item>
+    <item type="id" name="month">false</item>
+    <item type="id" name="monthly_distance">false</item>
+    <item type="id" name="distance_unit">false</item>
+    <item type="id" name="monthly_time">false</item>
+    <item type="id" name="monthly_pace">false</item>
+    <item type="id" name="time_stamp">false</item>
+    <item type="id" name="time">false</item>
+    <item type="id" name="distance_container">false</item>
+    <item type="id" name="daily_distance">false</item>
+    <item type="id" name="time_cost_container">false</item>
+    <item type="id" name="time_cost_desc">false</item>
+    <item type="id" name="pace_container">false</item>
+    <item type="id" name="average_pace">false</item>
     <item type="id" name="searched_device_item_mac_tv">false</item>
     <item type="id" name="searched_device_item_signal_tv">false</item>
     <item type="id" name="searched_device_item_signal_bar">false</item>
@@ -582,7 +606,6 @@
     <item type="id" name="select_marker">false</item>
     <item type="id" name="week_tv">false</item>
     <item type="id" name="day_repeat_select_mark">false</item>
-    <item type="id" name="time">false</item>
     <item type="id" name="content_txt">false</item>
     <item type="id" name="action_settings">false</item>
     <item type="id" name="action_pop_my_bracelet">false</item>

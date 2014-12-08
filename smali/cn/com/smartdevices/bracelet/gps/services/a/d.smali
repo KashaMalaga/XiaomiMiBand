@@ -12,15 +12,18 @@
 .method public abstract a()Landroid/location/Location;
 .end method
 
-.method public abstract a(Lcn/com/smartdevices/bracelet/gps/model/c;)Ljava/util/ArrayList;
+.method public abstract a(J)Lcn/com/smartdevices/bracelet/gps/services/o;
+.end method
+
+.method public abstract a(Lcn/com/smartdevices/bracelet/gps/model/b;)Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcn/com/smartdevices/bracelet/gps/model/c;",
+            "Lcn/com/smartdevices/bracelet/gps/model/b;",
             ")",
             "Ljava/util/ArrayList",
             "<",
-            "Lcn/com/smartdevices/bracelet/gps/model/c;",
+            "Lcn/com/smartdevices/bracelet/gps/model/b;",
             ">;"
         }
     .end annotation
@@ -68,7 +71,7 @@
             "()",
             "Ljava/util/ArrayList",
             "<",
-            "Lcn/com/smartdevices/bracelet/gps/model/c;",
+            "Lcn/com/smartdevices/bracelet/gps/model/b;",
             ">;"
         }
     .end annotation

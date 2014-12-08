@@ -27,11 +27,11 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/A;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/e/a;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/f/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/a;->c()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/a;->c()V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/A;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
@@ -51,13 +51,13 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/A;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/e/a;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/f/a;
 
     move-result-object v0
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/A;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/e/a;->a(Landroid/app/Activity;)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/f/a;->a(Landroid/app/Activity;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/A;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
@@ -65,7 +65,7 @@
 
     const-string v2, "FromQQ"
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

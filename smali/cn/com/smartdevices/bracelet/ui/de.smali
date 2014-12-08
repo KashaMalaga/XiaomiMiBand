@@ -237,7 +237,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/de;->s:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
-    const v1, 0x7f0c014d
+    const v1, 0x7f0c014f
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->getString(I)Ljava/lang/String;
 
@@ -252,7 +252,7 @@
     :cond_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/de;->s:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
-    const v1, 0x7f0c014f
+    const v1, 0x7f0c0151
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->getString(I)Ljava/lang/String;
 
@@ -281,7 +281,7 @@
 
     iget v3, p0, Lcn/com/smartdevices/bracelet/ui/de;->g:I
 
-    invoke-static/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/z;->a(Landroid/content/Context;IIIILcn/com/smartdevices/bracelet/model/ShareData;)Lcn/com/smartdevices/bracelet/model/ShareData;
+    invoke-static/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;IIIILcn/com/smartdevices/bracelet/model/ShareData;)Lcn/com/smartdevices/bracelet/model/ShareData;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/de;->s:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
@@ -295,9 +295,9 @@
 
     iput-object v0, v5, Lcn/com/smartdevices/bracelet/model/ShareData;->time:Ljava/lang/String;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/c/b;
+    new-instance v0, Lcn/com/smartdevices/bracelet/d/b;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/c/b;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/d/b;-><init>()V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/de;->s:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
@@ -307,7 +307,7 @@
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/ui/de;->a:I
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/c/b;->a(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/d/b;->a(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -622,7 +622,7 @@
 .method protected b(Landroid/view/View;)V
     .locals 14
 
-    const v0, 0x7f07012c
+    const v0, 0x7f07013a
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -630,7 +630,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f07012b
+    const v1, 0x7f070139
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -638,7 +638,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f070120
+    const v2, 0x7f07012e
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -646,7 +646,7 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    const v3, 0x7f07012d
+    const v3, 0x7f07013b
 
     invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -654,7 +654,7 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    const v4, 0x7f07012f
+    const v4, 0x7f07013d
 
     invoke-virtual {p1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -662,7 +662,7 @@
 
     check-cast v4, Landroid/widget/TextView;
 
-    const v5, 0x7f070130
+    const v5, 0x7f07013e
 
     invoke-virtual {p1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -670,7 +670,7 @@
 
     check-cast v5, Landroid/widget/TextView;
 
-    const v6, 0x7f070131
+    const v6, 0x7f07013f
 
     invoke-virtual {p1, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -678,7 +678,7 @@
 
     check-cast v6, Landroid/widget/TextView;
 
-    const v7, 0x7f070132
+    const v7, 0x7f070140
 
     invoke-virtual {p1, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -686,7 +686,7 @@
 
     check-cast v7, Landroid/widget/TextView;
 
-    const v8, 0x7f070134
+    const v8, 0x7f070142
 
     invoke-virtual {p1, v8}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -694,7 +694,7 @@
 
     check-cast v8, Landroid/widget/TextView;
 
-    const v9, 0x7f070135
+    const v9, 0x7f070143
 
     invoke-virtual {p1, v9}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -702,7 +702,7 @@
 
     check-cast v9, Landroid/widget/TextView;
 
-    const v10, 0x7f070136
+    const v10, 0x7f070144
 
     invoke-virtual {p1, v10}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -710,7 +710,7 @@
 
     check-cast v10, Landroid/widget/TextView;
 
-    const v11, 0x7f070137
+    const v11, 0x7f070145
 
     invoke-virtual {p1, v11}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

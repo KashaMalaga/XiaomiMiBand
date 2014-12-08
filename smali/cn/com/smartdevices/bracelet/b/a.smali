@@ -11,10 +11,10 @@
     return-void
 .end method
 
-.method public static a(Lcn/com/smartdevices/bracelet/d/h;)V
+.method public static a(Lcn/com/smartdevices/bracelet/e/h;)V
     .locals 0
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/u;->a(Lcn/com/smartdevices/bracelet/d/h;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/u;->a(Lcn/com/smartdevices/bracelet/e/h;)V
 
     return-void
 .end method
@@ -58,13 +58,13 @@
 .method public static b()Z
     .locals 1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->Z()Lcn/com/smartdevices/bracelet/d/h;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->aa()Lcn/com/smartdevices/bracelet/e/h;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/d/h;->e()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/h;->e()Z
 
     move-result v0
 
@@ -123,11 +123,11 @@
 .method public static e()V
     .locals 1
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/d/h;
+    new-instance v0, Lcn/com/smartdevices/bracelet/e/h;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/d/h;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/e/h;-><init>()V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/u;->a(Lcn/com/smartdevices/bracelet/d/h;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/u;->a(Lcn/com/smartdevices/bracelet/e/h;)V
 
     return-void
 .end method

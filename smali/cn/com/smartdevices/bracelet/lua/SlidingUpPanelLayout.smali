@@ -47,6 +47,8 @@
 
 .field private mInitialMotionY:F
 
+.field private mIsPullDownEnabled:Z
+
 .field private mIsSlidingEnabled:Z
 
 .field private mIsSlidingUp:Z
@@ -169,6 +171,8 @@
     const/4 v0, 0x0
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mAnchorPoint:F
+
+    iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mIsPullDownEnabled:Z
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -481,6 +485,14 @@
     .locals 1
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mPanelHeight:I
+
+    return v0
+.end method
+
+.method static synthetic access$1300(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mIsPullDownEnabled:Z
 
     return v0
 .end method
@@ -811,6 +823,8 @@
 .method private onPanelDragged(I)V
     .locals 3
 
+    const/high16 v2, 0x3f800000
+
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->getSlidingTop()I
 
     move-result v0
@@ -832,29 +846,17 @@
     :goto_0
     iput v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideOffset:F
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideableView:Landroid/view/View;
+    iget v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideOffset:F
 
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->dispatchOnPanelSlide(Landroid/view/View;)V
+    cmpl-float v0, v0, v2
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mParalaxOffset:I
+    if-lez v0, :cond_2
 
-    if-lez v0, :cond_0
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mIsPullDownEnabled:Z
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->getCurrentParalaxOffset()I
+    if-nez v0, :cond_2
 
-    move-result v0
-
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v2, 0xb
-
-    if-lt v1, v2, :cond_2
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mMainView:Landroid/view/View;
-
-    int-to-float v0, v0
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->setTranslationY(F)V
+    iput v2, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideOffset:F
 
     :cond_0
     :goto_1
@@ -874,6 +876,33 @@
     goto :goto_0
 
     :cond_2
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mSlideableView:Landroid/view/View;
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->dispatchOnPanelSlide(Landroid/view/View;)V
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mParalaxOffset:I
+
+    if-lez v0, :cond_0
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->getCurrentParalaxOffset()I
+
+    move-result v0
+
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v2, 0xb
+
+    if-lt v1, v2, :cond_3
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mMainView:Landroid/view/View;
+
+    int-to-float v0, v0
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->setTranslationY(F)V
+
+    goto :goto_1
+
+    :cond_3
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mMainView:Landroid/view/View;
 
     invoke-static {v1}, Lcom/d/c/a/a;->a(Landroid/view/View;)Lcom/d/c/a/a;
@@ -2884,6 +2913,14 @@
     .locals 0
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mPanelSlideListener:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$PanelSlideListener;
+
+    return-void
+.end method
+
+.method public setPullDownEnabled(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mIsPullDownEnabled:Z
 
     return-void
 .end method

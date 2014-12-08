@@ -98,7 +98,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->i()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->i()Ljava/lang/String;
 
     move-result-object v1
 

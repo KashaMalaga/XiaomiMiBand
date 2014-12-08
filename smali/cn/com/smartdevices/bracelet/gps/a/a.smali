@@ -17,7 +17,7 @@
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;J)Lcn/com/smartdevices/bracelet/gps/services/j;
+.method public static a(Landroid/content/Context;J)Lcn/com/smartdevices/bracelet/gps/services/l;
     .locals 11
 
     const/4 v4, 0x1
@@ -42,11 +42,11 @@
     throw v0
 
     :cond_1
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/db/p;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/p;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/db/r;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/r;
 
     move-result-object v0
 
-    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/db/p;->a(Z)Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/db/r;->a(Z)Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -261,17 +261,17 @@
 
     move-result v10
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/services/j;
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/services/l;
 
     const/4 v5, 0x1
 
     move-wide v2, p1
 
-    invoke-direct/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/gps/services/j;-><init>(IJLjava/lang/String;Z)V
+    invoke-direct/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/gps/services/l;-><init>(IJLjava/lang/String;Z)V
 
-    invoke-virtual {v0, v10}, Lcn/com/smartdevices/bracelet/gps/services/j;->d(I)V
+    invoke-virtual {v0, v10}, Lcn/com/smartdevices/bracelet/gps/services/l;->d(I)V
 
-    invoke-virtual {v0, p1, p2, v7}, Lcn/com/smartdevices/bracelet/gps/services/j;->b(JLjava/lang/String;)V
+    invoke-virtual {v0, p1, p2, v7}, Lcn/com/smartdevices/bracelet/gps/services/l;->b(JLjava/lang/String;)V
 
     invoke-static {v9}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -279,7 +279,7 @@
 
     if-nez v1, :cond_7
 
-    invoke-virtual {v0, p1, p2, v9}, Lcn/com/smartdevices/bracelet/gps/services/j;->a(JLjava/lang/String;)V
+    invoke-virtual {v0, p1, p2, v9}, Lcn/com/smartdevices/bracelet/gps/services/l;->a(JLjava/lang/String;)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
@@ -367,7 +367,7 @@
             ")",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/gps/services/l;",
+            "Lcn/com/smartdevices/bracelet/gps/services/n;",
             ">;"
         }
     .end annotation
@@ -390,7 +390,7 @@
             "I)",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/gps/services/k;",
+            "Lcn/com/smartdevices/bracelet/gps/services/m;",
             ">;"
         }
     .end annotation
@@ -413,11 +413,11 @@
     throw v0
 
     :cond_1
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/db/p;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/p;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/db/r;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/r;
 
     move-result-object v0
 
-    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/db/p;->a(Z)Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/db/r;->a(Z)Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -528,7 +528,7 @@
 
     :cond_4
     :try_start_3
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/j;->a(Ljava/lang/String;)Ljava/util/List;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/l;->a(Ljava/lang/String;)Ljava/util/List;
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
@@ -599,6 +599,643 @@
     goto :goto_2
 .end method
 
+.method public static a(Landroid/content/Context;IIJI)Ljava/util/List;
+    .locals 13
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "IIJI)",
+            "Ljava/util/List",
+            "<",
+            "Lcn/com/smartdevices/bracelet/gps/model/f;",
+            ">;"
+        }
+    .end annotation
+
+    if-eqz p0, :cond_0
+
+    if-lez p5, :cond_0
+
+    const/16 v2, 0xc
+
+    move/from16 v0, p5
+
+    if-gt v0, v2, :cond_0
+
+    const/4 v2, 0x1
+
+    if-eq p2, v2, :cond_1
+
+    :cond_0
+    new-instance v2, Ljava/lang/IllegalArgumentException;
+
+    const-string v3, "range[1,12] and groupType is GROUP_TYPE_MONTH"
+
+    invoke-direct {v2, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v2
+
+    :cond_1
+    new-instance v8, Ljava/util/ArrayList;
+
+    invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/db/r;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/r;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/db/r;->a(Z)Landroid/database/sqlite/SQLiteDatabase;
+
+    move-result-object v10
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v2, p3, v2
+
+    if-gtz v2, :cond_2
+
+    const-wide/16 v2, 0x0
+
+    const/4 v4, 0x0
+
+    invoke-static {v2, v3, v4}, Lcn/com/smartdevices/bracelet/gps/d/d;->a(JI)J
+
+    move-result-wide p3
+
+    :cond_2
+    invoke-static/range {p3 .. p5}, Lcn/com/smartdevices/bracelet/gps/d/d;->a(JI)J
+
+    move-result-wide v4
+
+    const-string v2, "GPSDB"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "getSummaryListByGroup startDayTime = "
+
+    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    move-wide/from16 v0, p3
+
+    invoke-virtual {v3, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v6, ",endDayTime = "
+
+    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v3, 0x0
+
+    :try_start_0
+    const-string v2, "CREATE TEMP VIEW trackinfoview AS SELECT *, strftime(\'%Y-%m\',trackinfo.date) AS month FROM trackinfo"
+
+    invoke-virtual {v10, v2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+
+    const-string v2, "SELECT month, SUM(distance) AS sumdistance, SUM(usedtime) AS sumtime FROM trackinfoview WHERE type =? AND trackid >=? AND trackid <?  GROUP BY month ORDER BY month DESC"
+
+    const/4 v6, 0x3
+
+    new-array v6, v6, [Ljava/lang/String;
+
+    const/4 v7, 0x0
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v9
+
+    aput-object v9, v6, v7
+
+    const/4 v7, 0x1
+
+    invoke-static/range {p3 .. p4}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object v9
+
+    aput-object v9, v6, v7
+
+    const/4 v7, 0x2
+
+    invoke-static {v4, v5}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object v4
+
+    aput-object v4, v6, v7
+
+    invoke-virtual {v10, v2, v6}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-result-object v9
+
+    if-nez v9, :cond_4
+
+    const/4 v2, 0x0
+
+    if-eqz v9, :cond_3
+
+    invoke-interface {v9}, Landroid/database/Cursor;->close()V
+
+    :cond_3
+    :goto_0
+    return-object v2
+
+    :cond_4
+    :try_start_1
+    const-string v2, "GPSDB"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "getSummaryListByGroup count = "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-interface {v9}, Landroid/database/Cursor;->getCount()I
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v2, ""
+
+    :goto_1
+    invoke-interface {v9}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_6
+
+    const-string v2, "sumdistance"
+
+    invoke-interface {v9, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v2
+
+    invoke-interface {v9, v2}, Landroid/database/Cursor;->getFloat(I)F
+
+    move-result v5
+
+    const-string v2, "sumtime"
+
+    invoke-interface {v9, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v2
+
+    invoke-interface {v9, v2}, Landroid/database/Cursor;->getLong(I)J
+
+    move-result-wide v6
+
+    const-string v2, "month"
+
+    invoke-interface {v9, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v2
+
+    invoke-interface {v9, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    new-instance v2, Lcn/com/smartdevices/bracelet/gps/model/f;
+
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/gps/d/d;->b(Ljava/lang/String;)J
+
+    move-result-wide v3
+
+    const-wide/16 v11, 0x3e8
+
+    div-long/2addr v3, v11
+
+    invoke-direct/range {v2 .. v7}, Lcn/com/smartdevices/bracelet/gps/model/f;-><init>(JFJ)V
+
+    invoke-interface {v8, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    goto :goto_1
+
+    :catch_0
+    move-exception v2
+
+    move-object v3, v9
+
+    :goto_2
+    :try_start_2
+    const-string v4, "GPSDB"
+
+    invoke-virtual {v2}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v4, v2}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    if-eqz v3, :cond_5
+
+    invoke-interface {v3}, Landroid/database/Cursor;->close()V
+
+    :cond_5
+    :goto_3
+    move-object v2, v8
+
+    goto :goto_0
+
+    :cond_6
+    :try_start_3
+    const-string v2, "DROP VIEW trackinfoview"
+
+    invoke-virtual {v10, v2}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    if-eqz v9, :cond_5
+
+    invoke-interface {v9}, Landroid/database/Cursor;->close()V
+
+    goto :goto_3
+
+    :catchall_0
+    move-exception v2
+
+    move-object v9, v3
+
+    :goto_4
+    if-eqz v9, :cond_7
+
+    invoke-interface {v9}, Landroid/database/Cursor;->close()V
+
+    :cond_7
+    throw v2
+
+    :catchall_1
+    move-exception v2
+
+    goto :goto_4
+
+    :catchall_2
+    move-exception v2
+
+    move-object v9, v3
+
+    goto :goto_4
+
+    :catch_1
+    move-exception v2
+
+    goto :goto_2
+.end method
+
+.method public static a(Landroid/content/Context;IJI)Ljava/util/List;
+    .locals 10
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "IJI)",
+            "Ljava/util/List",
+            "<",
+            "Lcn/com/smartdevices/bracelet/gps/services/n;",
+            ">;"
+        }
+    .end annotation
+
+    const-wide/16 v3, 0x0
+
+    const/4 v8, 0x0
+
+    const/4 v2, 0x1
+
+    const/4 v1, 0x0
+
+    if-eqz p0, :cond_0
+
+    if-eq p4, v2, :cond_1
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw v0
+
+    :cond_1
+    cmp-long v0, p2, v3
+
+    if-gtz v0, :cond_2
+
+    invoke-static {v3, v4, v1}, Lcn/com/smartdevices/bracelet/gps/d/d;->a(JI)J
+
+    move-result-wide p2
+
+    :cond_2
+    invoke-static {p2, p3, v2}, Lcn/com/smartdevices/bracelet/gps/d/d;->a(JI)J
+
+    move-result-wide v5
+
+    const-string v0, "GPSDB"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "getTrackInfoListByGroup startDayTime = "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p2, p3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, ",endDayTime = "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    :try_start_0
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/db/r;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/r;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/db/r;->a(Z)Landroid/database/sqlite/SQLiteDatabase;
+
+    move-result-object v0
+
+    const/4 v1, 0x2
+
+    new-array v2, v1, [Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    const-string v3, "trackid"
+
+    aput-object v3, v2, v1
+
+    const/4 v1, 0x1
+
+    const-string v3, "summary"
+
+    aput-object v3, v2, v1
+
+    const-string v1, "trackinfo"
+
+    const-string v3, "type =? AND trackid >=? AND trackid <? "
+
+    const/4 v4, 0x3
+
+    new-array v4, v4, [Ljava/lang/String;
+
+    const/4 v7, 0x0
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v9
+
+    aput-object v9, v4, v7
+
+    const/4 v7, 0x1
+
+    invoke-static {p2, p3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object v9
+
+    aput-object v9, v4, v7
+
+    const/4 v7, 0x2
+
+    invoke-static {v5, v6}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object v5
+
+    aput-object v5, v4, v7
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const-string v7, "trackid DESC"
+
+    invoke-virtual/range {v0 .. v7}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-result-object v1
+
+    if-nez v1, :cond_4
+
+    :try_start_1
+    new-instance v0, Ljava/util/ArrayList;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(I)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    :cond_3
+    :goto_0
+    return-object v0
+
+    :cond_4
+    :try_start_2
+    const-string v0, "GPSDB"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "getTrackInfoListByGroup getCount = "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-interface {v1}, Landroid/database/Cursor;->getCount()I
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-interface {v1}, Landroid/database/Cursor;->getCount()I
+
+    move-result v2
+
+    invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(I)V
+
+    const-string v2, ""
+
+    :cond_5
+    :goto_1
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_7
+
+    const-string v2, "trackid"
+
+    invoke-interface {v1, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v2
+
+    invoke-interface {v1, v2}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v2
+
+    const-string v3, "summary"
+
+    invoke-interface {v1, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v3
+
+    invoke-interface {v1, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_5
+
+    new-instance v4, Lcn/com/smartdevices/bracelet/gps/services/n;
+
+    new-instance v5, Lorg/json/JSONObject;
+
+    invoke-direct {v5, v3}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+
+    int-to-long v2, v2
+
+    invoke-direct {v4, v5, v2, v3}, Lcn/com/smartdevices/bracelet/gps/services/n;-><init>(Lorg/json/JSONObject;J)V
+
+    invoke-interface {v0, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    goto :goto_1
+
+    :catch_0
+    move-exception v0
+
+    :goto_2
+    :try_start_3
+    const-string v2, "GPSDB"
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    if-eqz v1, :cond_6
+
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    :cond_6
+    move-object v0, v8
+
+    goto :goto_0
+
+    :cond_7
+    if-eqz v1, :cond_3
+
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    move-object v1, v8
+
+    :goto_3
+    if-eqz v1, :cond_8
+
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    :cond_8
+    throw v0
+
+    :catchall_1
+    move-exception v0
+
+    goto :goto_3
+
+    :catch_1
+    move-exception v0
+
+    move-object v1, v8
+
+    goto :goto_2
+.end method
+
 .method private static a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/gps/a/b;)Ljava/util/List;
     .locals 9
     .annotation system Ldalvik/annotation/Signature;
@@ -609,7 +1246,7 @@
             ")",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/gps/services/l;",
+            "Lcn/com/smartdevices/bracelet/gps/services/n;",
             ">;"
         }
     .end annotation
@@ -631,11 +1268,11 @@
     throw v0
 
     :cond_0
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/db/p;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/p;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/db/r;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/r;
 
     move-result-object v0
 
-    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/db/p;->a(Z)Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/db/r;->a(Z)Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -801,7 +1438,7 @@
 
     if-nez v4, :cond_4
 
-    new-instance v4, Lcn/com/smartdevices/bracelet/gps/services/l;
+    new-instance v4, Lcn/com/smartdevices/bracelet/gps/services/n;
 
     new-instance v5, Lorg/json/JSONObject;
 
@@ -809,7 +1446,7 @@
 
     int-to-long v2, v2
 
-    invoke-direct {v4, v5, v2, v3}, Lcn/com/smartdevices/bracelet/gps/services/l;-><init>(Lorg/json/JSONObject;J)V
+    invoke-direct {v4, v5, v2, v3}, Lcn/com/smartdevices/bracelet/gps/services/n;-><init>(Lorg/json/JSONObject;J)V
 
     invoke-interface {v0, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_3
@@ -898,11 +1535,11 @@
     throw v0
 
     :cond_1
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/db/p;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/p;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/db/r;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/r;
 
     move-result-object v2
 
-    invoke-virtual {v2, v0}, Lcn/com/smartdevices/bracelet/db/p;->a(Z)Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v2, v0}, Lcn/com/smartdevices/bracelet/db/r;->a(Z)Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v2
 
@@ -1012,11 +1649,11 @@
     throw v0
 
     :cond_1
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/db/p;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/p;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/db/r;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/r;
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Lcn/com/smartdevices/bracelet/db/p;->a(Z)Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v2, v1}, Lcn/com/smartdevices/bracelet/db/r;->a(Z)Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v2
 
@@ -1118,43 +1755,17 @@
     throw v0
 
     :cond_1
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/db/p;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/p;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/db/r;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/r;
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/db/p;->a(Z)Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/db/r;->a(Z)Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v4
 
     invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/a/d;->c()Lorg/json/JSONObject;
 
     move-result-object v0
-
-    const-string v1, "Sync"
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v8, "updateRunReminderConfig length = "
-
-    invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v0}, Lorg/json/JSONObject;->length()I
-
-    move-result v8
-
-    invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v1, v5}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lorg/json/JSONObject;->length()I
 
@@ -1339,7 +1950,7 @@
     goto :goto_2
 .end method
 
-.method public static a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/gps/services/j;)Z
+.method public static a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/gps/services/l;)Z
     .locals 13
 
     const-wide/16 v6, 0x0
@@ -1360,15 +1971,15 @@
     throw v0
 
     :cond_1
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/db/p;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/p;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/db/r;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/r;
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/db/p;->a(Z)Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/db/r;->a(Z)Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v4
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/services/j;->b()Lorg/json/JSONObject;
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/services/l;->b()Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -1378,7 +1989,7 @@
     return v3
 
     :cond_2
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/services/j;->a()Lorg/json/JSONArray;
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/services/l;->a()Lorg/json/JSONArray;
 
     move-result-object v1
 
@@ -1404,7 +2015,7 @@
 
     const-string v8, "type"
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/services/j;->q()I
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/services/l;->q()I
 
     move-result v9
 
@@ -1416,7 +2027,31 @@
 
     const-string v8, "trackid"
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/services/j;->z()J
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/services/l;->z()J
+
+    move-result-wide v9
+
+    invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v9
+
+    invoke-virtual {v5, v8, v9}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
+
+    const-string v8, "distance"
+
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/services/l;->x()F
+
+    move-result v9
+
+    invoke-static {v9}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v9
+
+    invoke-virtual {v5, v8, v9}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Float;)V
+
+    const-string v8, "usedtime"
+
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/services/l;->y()J
 
     move-result-wide v9
 
@@ -1494,7 +2129,7 @@
 
     const/4 v9, 0x0
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/services/j;->z()J
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/gps/services/l;->z()J
 
     move-result-wide v10
 
@@ -1640,7 +2275,7 @@
             "Landroid/content/Context;",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/gps/model/c;",
+            "Lcn/com/smartdevices/bracelet/gps/model/b;",
             ">;J)Z"
         }
     .end annotation
@@ -1667,11 +2302,11 @@
     throw v0
 
     :cond_1
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/db/p;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/p;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/db/r;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/r;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/db/p;->a(Z)Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/db/r;->a(Z)Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v4
 
@@ -1699,7 +2334,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/gps/model/c;
+    check-cast v0, Lcn/com/smartdevices/bracelet/gps/model/b;
 
     const-string v7, "trackid"
 
@@ -1711,7 +2346,7 @@
 
     const-string v7, "latitude"
 
-    iget-wide v8, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->j:D
+    iget-wide v8, v0, Lcn/com/smartdevices/bracelet/gps/model/b;->j:D
 
     invoke-static {v8, v9}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
@@ -1721,7 +2356,7 @@
 
     const-string v7, "longitude"
 
-    iget-wide v8, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->k:D
+    iget-wide v8, v0, Lcn/com/smartdevices/bracelet/gps/model/b;->k:D
 
     invoke-static {v8, v9}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
@@ -1731,7 +2366,7 @@
 
     const-string v7, "altitude"
 
-    iget-wide v8, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->i:D
+    iget-wide v8, v0, Lcn/com/smartdevices/bracelet/gps/model/b;->i:D
 
     invoke-static {v8, v9}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
@@ -1741,7 +2376,7 @@
 
     const-string v7, "time"
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/model/c;->e()J
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/model/b;->e()J
 
     move-result-wide v8
 
@@ -1753,7 +2388,7 @@
 
     const-string v7, "extra"
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/model/c;->c()Lorg/json/JSONObject;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/model/b;->c()Lorg/json/JSONObject;
 
     move-result-object v0
 
@@ -1826,7 +2461,7 @@
     throw v0
 .end method
 
-.method public static a(Landroid/content/Context;Ljava/util/List;Lcn/com/smartdevices/bracelet/gps/services/j;)Z
+.method public static a(Landroid/content/Context;Ljava/util/List;Lcn/com/smartdevices/bracelet/gps/services/l;)Z
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1834,9 +2469,9 @@
             "Landroid/content/Context;",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/gps/model/c;",
+            "Lcn/com/smartdevices/bracelet/gps/model/b;",
             ">;",
-            "Lcn/com/smartdevices/bracelet/gps/services/j;",
+            "Lcn/com/smartdevices/bracelet/gps/services/l;",
             ")Z"
         }
     .end annotation
@@ -1855,7 +2490,7 @@
     throw v0
 
     :cond_1
-    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/gps/services/j;->z()J
+    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/gps/services/l;->z()J
 
     move-result-wide v0
 
@@ -1887,7 +2522,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-static {p0, p2}, Lcn/com/smartdevices/bracelet/gps/a/a;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/gps/services/j;)Z
+    invoke-static {p0, p2}, Lcn/com/smartdevices/bracelet/gps/a/a;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/gps/services/l;)Z
 
     move-result v1
 
@@ -1953,11 +2588,11 @@
     throw v0
 
     :cond_0
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/db/p;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/p;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/db/r;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/r;
 
     move-result-object v0
 
-    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/db/p;->a(Z)Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/db/r;->a(Z)Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -2214,7 +2849,7 @@
             "I)",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/gps/services/j;",
+            "Lcn/com/smartdevices/bracelet/gps/services/l;",
             ">;"
         }
     .end annotation
@@ -2237,7 +2872,7 @@
             "J)",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/gps/model/c;",
+            "Lcn/com/smartdevices/bracelet/gps/model/b;",
             ">;"
         }
     .end annotation
@@ -2264,11 +2899,11 @@
     throw v0
 
     :cond_1
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/db/p;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/p;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/db/r;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/r;
 
     move-result-object v0
 
-    invoke-virtual {v0, v9}, Lcn/com/smartdevices/bracelet/db/p;->a(Z)Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v0, v9}, Lcn/com/smartdevices/bracelet/db/r;->a(Z)Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -2371,9 +3006,9 @@
 
     if-eqz v3, :cond_4
 
-    new-instance v4, Lcn/com/smartdevices/bracelet/gps/model/c;
+    new-instance v4, Lcn/com/smartdevices/bracelet/gps/model/b;
 
-    invoke-direct {v4}, Lcn/com/smartdevices/bracelet/gps/model/c;-><init>()V
+    invoke-direct {v4}, Lcn/com/smartdevices/bracelet/gps/model/b;-><init>()V
 
     const-string v3, "time"
 
@@ -2385,7 +3020,7 @@
 
     move-result-wide v5
 
-    invoke-virtual {v4, v5, v6}, Lcn/com/smartdevices/bracelet/gps/model/c;->a(J)V
+    invoke-virtual {v4, v5, v6}, Lcn/com/smartdevices/bracelet/gps/model/b;->a(J)V
 
     const-string v3, "latitude"
 
@@ -2397,7 +3032,7 @@
 
     move-result-wide v5
 
-    iput-wide v5, v4, Lcn/com/smartdevices/bracelet/gps/model/c;->j:D
+    iput-wide v5, v4, Lcn/com/smartdevices/bracelet/gps/model/b;->j:D
 
     const-string v3, "longitude"
 
@@ -2409,7 +3044,7 @@
 
     move-result-wide v5
 
-    iput-wide v5, v4, Lcn/com/smartdevices/bracelet/gps/model/c;->k:D
+    iput-wide v5, v4, Lcn/com/smartdevices/bracelet/gps/model/b;->k:D
 
     const-string v3, "altitude"
 
@@ -2421,11 +3056,11 @@
 
     move-result-wide v5
 
-    iput-wide v5, v4, Lcn/com/smartdevices/bracelet/gps/model/c;->i:D
+    iput-wide v5, v4, Lcn/com/smartdevices/bracelet/gps/model/b;->i:D
 
     add-int/lit8 v3, v2, 0x1
 
-    invoke-virtual {v4, v2}, Lcn/com/smartdevices/bracelet/gps/model/c;->b(I)V
+    invoke-virtual {v4, v2}, Lcn/com/smartdevices/bracelet/gps/model/b;->b(I)V
 
     const-string v2, "extra"
 
@@ -2437,7 +3072,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v4, v2}, Lcn/com/smartdevices/bracelet/gps/model/c;->a(Ljava/lang/String;)Z
+    invoke-virtual {v4, v2}, Lcn/com/smartdevices/bracelet/gps/model/b;->a(Ljava/lang/String;)Z
 
     invoke-interface {v0, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_2
@@ -2540,7 +3175,7 @@
             "I)",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/gps/services/j;",
+            "Lcn/com/smartdevices/bracelet/gps/services/l;",
             ">;"
         }
     .end annotation
@@ -2565,7 +3200,7 @@
             ")",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/gps/services/j;",
+            "Lcn/com/smartdevices/bracelet/gps/services/l;",
             ">;"
         }
     .end annotation
@@ -2587,11 +3222,11 @@
     throw v0
 
     :cond_0
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/db/p;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/p;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/db/r;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/r;
 
     move-result-object v0
 
-    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/db/p;->a(Z)Landroid/database/sqlite/SQLiteDatabase;
+    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/db/r;->a(Z)Landroid/database/sqlite/SQLiteDatabase;
 
     move-result-object v0
 
@@ -2797,19 +3432,19 @@
 
     move-result v11
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/services/j;
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/services/l;
 
     const/4 v5, 0x1
 
     move v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/gps/services/j;-><init>(IJLjava/lang/String;Z)V
+    invoke-direct/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/gps/services/l;-><init>(IJLjava/lang/String;Z)V
 
-    invoke-virtual {v0, v11}, Lcn/com/smartdevices/bracelet/gps/services/j;->d(I)V
+    invoke-virtual {v0, v11}, Lcn/com/smartdevices/bracelet/gps/services/l;->d(I)V
 
-    invoke-virtual {v0, v2, v3, v9}, Lcn/com/smartdevices/bracelet/gps/services/j;->b(JLjava/lang/String;)V
+    invoke-virtual {v0, v2, v3, v9}, Lcn/com/smartdevices/bracelet/gps/services/l;->b(JLjava/lang/String;)V
 
-    invoke-virtual {v0, v10}, Lcn/com/smartdevices/bracelet/gps/services/j;->b(I)V
+    invoke-virtual {v0, v10}, Lcn/com/smartdevices/bracelet/gps/services/l;->b(I)V
 
     const-string v1, "data"
 
@@ -2827,7 +3462,7 @@
 
     if-nez v4, :cond_5
 
-    invoke-virtual {v0, v2, v3, v1}, Lcn/com/smartdevices/bracelet/gps/services/j;->a(JLjava/lang/String;)V
+    invoke-virtual {v0, v2, v3, v1}, Lcn/com/smartdevices/bracelet/gps/services/l;->a(JLjava/lang/String;)V
 
     :cond_5
     invoke-interface {v6, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -2915,7 +3550,7 @@
             "I)",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/gps/services/j;",
+            "Lcn/com/smartdevices/bracelet/gps/services/l;",
             ">;"
         }
     .end annotation

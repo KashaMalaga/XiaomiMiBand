@@ -94,6 +94,12 @@
     <color name="lab_group_item_current_round">#ffffd700</color>
     <color name="lab_list_divider">#ffdfdfdf</color>
     <color name="buy_bracelet_stuff">#ff138bf2</color>
+    <color name="running_start_normal">#ff49b3db</color>
+    <color name="separator">#ffd9d9d9</color>
+    <color name="running_history_list_category_bg">#ffd8d8d8</color>
+    <color name="running_main_text">#a426abd8</color>
+    <color name="running_sub_text">#97000000</color>
+    <color name="running_minor_text">#64000000</color>
     <color name="default_title_indicator_footer_color">#ff33b5e5</color>
     <color name="default_title_indicator_selected_color">#ffffffff</color>
     <color name="default_title_indicator_text_color">#bbffffff</color>

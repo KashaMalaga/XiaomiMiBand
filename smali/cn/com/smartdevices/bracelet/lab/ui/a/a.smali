@@ -51,7 +51,7 @@
     goto :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x7f070147
+    .packed-switch 0x7f070155
         :pswitch_1
         :pswitch_0
         :pswitch_0
@@ -82,7 +82,7 @@
 
     const-string v0, "PageBraceletHand"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -94,7 +94,7 @@
 
     const-string v0, "PageBraceletHand"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -104,7 +104,7 @@
 
     invoke-super {p0, p1, p2}, Lcn/com/smartdevices/bracelet/ui/J;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
-    const v0, 0x7f070147
+    const v0, 0x7f070155
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -116,7 +116,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f07014a
+    const v0, 0x7f070158
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

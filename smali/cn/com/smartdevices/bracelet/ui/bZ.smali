@@ -100,7 +100,7 @@
 
     const-string v2, "Failed"
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -225,7 +225,7 @@
 
     const-string v1, "StartUpScanBracelet"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/y;->c(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Landroid/content/Context;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bZ;->a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
 
@@ -235,7 +235,7 @@
 
     const-string v1, "StartUpFoundBracelet"
 
-    invoke-static {v0, v1, v7}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;I)V
+    invoke-static {v0, v1, v7}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;I)V
 
     goto/16 :goto_0
 
@@ -266,7 +266,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0c004a
+    const v1, 0x7f0c004b
 
     invoke-static {v0, v1, v6}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -335,7 +335,7 @@
 
     const-string v1, "StartUpScanBracelet"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/y;->c(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Landroid/content/Context;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bZ;->a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
 
@@ -355,7 +355,7 @@
 
     move-result v2
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;I)V
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bZ;->a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
 

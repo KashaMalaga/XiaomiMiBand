@@ -89,7 +89,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/U;->b:Lcn/com/smartdevices/bracelet/ui/M;
 
-    const v1, 0x7f0c010b
+    const v1, 0x7f0c010d
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/M;->g(Lcn/com/smartdevices/bracelet/ui/M;I)V
 

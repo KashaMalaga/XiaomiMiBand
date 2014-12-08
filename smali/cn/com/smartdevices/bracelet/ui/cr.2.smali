@@ -47,7 +47,7 @@
 
     invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/ct;-><init>(Lcn/com/smartdevices/bracelet/ui/cr;)V
 
-    invoke-static {v0, p1, p2, v1}, Lcn/com/smartdevices/bracelet/f/e;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Ljava/lang/String;Lcom/c/a/a/h;)V
+    invoke-static {v0, p1, p2, v1}, Lcn/com/smartdevices/bracelet/g/e;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Ljava/lang/String;Lcom/c/a/a/h;)V
 
     return-void
 .end method
@@ -173,7 +173,7 @@
 
     const-string v1, "AboutSendFeedback"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -220,7 +220,7 @@
 
     move-result-object v1
 
-    const v0, 0x7f07019e
+    const v0, 0x7f0701a9
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -230,7 +230,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cr;->b:Landroid/widget/EditText;
 
-    const v0, 0x7f07019d
+    const v0, 0x7f0701a8
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -240,7 +240,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cr;->c:Landroid/widget/EditText;
 
-    const v0, 0x7f07019f
+    const v0, 0x7f0701aa
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -270,7 +270,7 @@
 
     const-string v0, "PageFeedback"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -282,7 +282,7 @@
 
     const-string v0, "PageFeedback"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
 
     return-void
 .end method

@@ -615,7 +615,7 @@ Tertidur pada %3$s | Bangun pada %4$s"</string>
     <string name="sport_running_pace">Kecepatan</string>
     <string name="sport_running_set_goal">Pengingat target</string>
     <string name="sport_running_set_dist">Pengingat jarak</string>
-    <string name="sport_running_speed_detail">%.0fkm/j</string>
+    <string name="sport_running_speed_detail">%.2fkm/j</string>
     <string name="sport_running_pace_detail">%s/km</string>
     <string name="sport_running_distance_detail">%.2fkm</string>
     <string name="sport_running_time_desc">Waktu</string>

@@ -28,7 +28,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->k(Landroid/content/Context;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->k(Landroid/content/Context;)V
 
     return-void
 .end method

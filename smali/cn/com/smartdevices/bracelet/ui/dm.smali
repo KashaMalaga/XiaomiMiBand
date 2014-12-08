@@ -36,7 +36,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dm;->b:Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;
 
-    const v1, 0x7f0700ee
+    const v1, 0x7f0700fc
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->findViewById(I)Landroid/view/View;
 
@@ -60,11 +60,11 @@
 
     const-string v1, "Pair_For_SmartLock_Success"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dm;->b:Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;
 
-    const v1, 0x7f0c0174
+    const v1, 0x7f0c0176
 
     invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -97,7 +97,7 @@
 
     const-string v1, "Pair_For_SmartLock_Success_NoSecuritySetting"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     new-instance v0, Landroid/content/Intent;
 
@@ -114,7 +114,7 @@
     :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dm;->b:Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;
 
-    const v1, 0x7f0c0175
+    const v1, 0x7f0c0177
 
     invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 

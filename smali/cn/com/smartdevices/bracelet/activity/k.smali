@@ -169,7 +169,7 @@
 
     move-result-object v1
 
-    invoke-static {p6, v1}, Lcn/com/smartdevices/bracelet/f/f;->c(Ljava/lang/String;Lcn/com/smartdevices/bracelet/model/PersonInfo;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {p6, v1}, Lcn/com/smartdevices/bracelet/g/f;->c(Ljava/lang/String;Lcn/com/smartdevices/bracelet/model/PersonInfo;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     invoke-static {p1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 

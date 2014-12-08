@@ -48,7 +48,7 @@
 
     const/4 v0, 0x1
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/z;->e(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->e(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v1
 

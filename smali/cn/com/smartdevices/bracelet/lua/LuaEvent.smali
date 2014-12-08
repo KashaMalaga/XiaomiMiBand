@@ -621,15 +621,15 @@
 
     const/4 v1, 0x0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->c()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->c()Z
 
     move-result v2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->aa()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->ab()Z
 
     move-result v3
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/u;->h(Z)V
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/u;->i(Z)V
 
     const-string v4, "LuaEvent"
 
@@ -645,7 +645,7 @@
 
     iget-object v6, p0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->context:Landroid/content/Context;
 
-    invoke-static {v6}, Lcn/com/smartdevices/bracelet/z;->j(Landroid/content/Context;)Z
+    invoke-static {v6}, Lcn/com/smartdevices/bracelet/y;->j(Landroid/content/Context;)Z
 
     move-result v6
 
@@ -659,7 +659,7 @@
 
     move-result-object v5
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->c()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->c()Z
 
     move-result v6
 
@@ -677,7 +677,7 @@
 
     iget-object v5, p0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->context:Landroid/content/Context;
 
-    invoke-static {v5}, Lcn/com/smartdevices/bracelet/z;->j(Landroid/content/Context;)Z
+    invoke-static {v5}, Lcn/com/smartdevices/bracelet/y;->j(Landroid/content/Context;)Z
 
     move-result v5
 
@@ -701,7 +701,7 @@
 
     if-ne v2, v3, :cond_0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->ab()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->ac()Ljava/lang/String;
 
     move-result-object v2
 
@@ -723,7 +723,7 @@
     invoke-static {v2}, Lcn/com/smartdevices/bracelet/u;->n(Ljava/lang/String;)V
 
     :cond_1
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->ab()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->ac()Ljava/lang/String;
 
     move-result-object v2
 
@@ -806,7 +806,7 @@
     :goto_0
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->context:Landroid/content/Context;
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/z;->c(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/y;->c(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -814,7 +814,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->context:Landroid/content/Context;
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/z;->d(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/y;->d(Landroid/content/Context;)Z
 
     move-result v2
 

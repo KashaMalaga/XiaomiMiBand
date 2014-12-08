@@ -31,7 +31,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/z;->a(Landroid/app/Activity;Z)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/app/Activity;Z)V
 
     return-void
 .end method

@@ -111,7 +111,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->u:Landroid/widget/Button;
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/f/b;->e:Ljava/lang/Long;
+    sget-object v0, Lcn/com/smartdevices/bracelet/g/b;->e:Ljava/lang/Long;
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->a:Ljava/lang/Long;
 
@@ -165,7 +165,7 @@
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->k()V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->j()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->l()V
 
     new-instance v0, Landroid/content/Intent;
 
@@ -468,7 +468,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->E:Landroid/widget/TextView;
 
-    const v0, 0x7f0c00ca
+    const v0, 0x7f0c00cb
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->getString(I)Ljava/lang/String;
 
@@ -480,7 +480,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0c00f9
+    const v3, 0x7f0c00fa
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -506,7 +506,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->E:Landroid/widget/TextView;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/z;->a(Landroid/widget/TextView;Landroid/text/SpannableString;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/widget/TextView;Landroid/text/SpannableString;)V
 
     sget-boolean v0, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->s:Z
 
@@ -672,7 +672,7 @@
 
     const v0, 0x7f0c000a
 
-    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/z;->a(Landroid/app/Activity;I)V
+    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/app/Activity;I)V
 
     return-void
 .end method
@@ -688,7 +688,7 @@
 .method private k()V
     .locals 0
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/z;->b(Landroid/app/Activity;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->b(Landroid/app/Activity;)V
 
     return-void
 .end method
@@ -820,7 +820,7 @@
 
     const-string v1, "Canceled"
 
-    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     :goto_0
@@ -1028,7 +1028,7 @@
 
     const-string v1, "Successed"
 
-    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -1067,7 +1067,7 @@
 
     const-string v1, "Failed"
 
-    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -1102,7 +1102,7 @@
 
     const-string v1, "Canceled"
 
-    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -1125,7 +1125,7 @@
 
     const-string v1, "Successed"
 
-    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -1144,7 +1144,7 @@
 
     const-string v1, "Failed"
 
-    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 .end method
@@ -1167,7 +1167,7 @@
     return-void
 
     :pswitch_1
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/z;->a(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -1188,12 +1188,12 @@
 
     const-string v1, "StartLogin"
 
-    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     :pswitch_2
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/z;->a(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -1228,7 +1228,7 @@
 
     const-string v1, "StartRegister"
 
-    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -1276,7 +1276,7 @@
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->disableAutoApplyStatusBarTint()V
 
-    const v0, 0x7f02000f
+    const v0, 0x7f020010
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->applyStatusBarTintRes(I)V
 
@@ -1333,9 +1333,9 @@
 
     const-string v0, "PageStartUp"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->b(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -1347,9 +1347,9 @@
 
     const-string v0, "PageStartUp"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;)V
 
     return-void
 .end method

@@ -68,7 +68,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0c00f7
+    const v1, 0x7f0c00f8
 
     invoke-static {v0, v1, v3}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -143,7 +143,7 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/app/DownloadManager$Request;->setDestinationInExternalPublicDir(Ljava/lang/String;Ljava/lang/String;)Landroid/app/DownloadManager$Request;
     :try_end_0
-    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :goto_0
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/j;->getActivity()Landroid/app/Activity;
@@ -175,7 +175,7 @@
     :catch_0
     move-exception v0
 
-    invoke-virtual {v0}, Ljava/lang/IllegalStateException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
@@ -332,7 +332,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/j;->h:Ljava/lang/String;
 
-    const v0, 0x7f0700f7
+    const v0, 0x7f070105
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

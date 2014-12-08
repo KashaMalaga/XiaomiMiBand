@@ -177,11 +177,11 @@
 
     invoke-direct {v1, p3}, Ljava/lang/String;-><init>([B)V
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/f/f;->b(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/f/g;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/g/f;->b(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/g/g;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/f/g;->a()Z
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/g/g;->a()Z
 
     move-result v1
 

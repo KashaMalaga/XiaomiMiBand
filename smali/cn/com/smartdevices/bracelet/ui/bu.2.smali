@@ -62,7 +62,7 @@
 
     if-nez v0, :cond_0
 
-    const v0, 0x7f070150
+    const v0, 0x7f07015e
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -70,19 +70,19 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f0c01b5
+    const v1, 0x7f0c01b7
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/ui/bu;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    const v3, 0x7f0c01b6
+    const v3, 0x7f0c01b8
 
     invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/ui/bu;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    const v4, 0x7f0c01b7
+    const v4, 0x7f0c01b9
 
     invoke-virtual {p0, v4}, Lcn/com/smartdevices/bracelet/ui/bu;->getString(I)Ljava/lang/String;
 
@@ -92,7 +92,7 @@
 
     move-result-object v5
 
-    invoke-static {v5}, Lcn/com/smartdevices/bracelet/z;->c(Landroid/content/Context;)Z
+    invoke-static {v5}, Lcn/com/smartdevices/bracelet/y;->c(Landroid/content/Context;)Z
 
     move-result v5
 

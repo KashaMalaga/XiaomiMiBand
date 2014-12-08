@@ -316,7 +316,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dg;->s:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
-    const v1, 0x7f0c0142
+    const v1, 0x7f0c0144
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->getString(I)Ljava/lang/String;
 
@@ -347,7 +347,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/dg;->s:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
-    const v2, 0x7f0c014e
+    const v2, 0x7f0c0150
 
     invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->getString(I)Ljava/lang/String;
 
@@ -491,7 +491,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dg;->s:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
-    const v1, 0x7f0c0183
+    const v1, 0x7f0c0185
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->getString(I)Ljava/lang/String;
 
@@ -522,7 +522,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/dg;->s:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
-    const v2, 0x7f0c0182
+    const v2, 0x7f0c0184
 
     invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->getString(I)Ljava/lang/String;
 
@@ -602,7 +602,7 @@
 
     iget v5, p0, Lcn/com/smartdevices/bracelet/ui/dg;->g:I
 
-    invoke-static/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/z;->a(Landroid/content/Context;IILjava/lang/String;II)Ljava/lang/String;
+    invoke-static/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;IILjava/lang/String;II)Ljava/lang/String;
 
     move-result-object v0
 
@@ -618,9 +618,9 @@
 
     iput-object v0, v6, Lcn/com/smartdevices/bracelet/model/ShareData;->contentUnit:Ljava/lang/String;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/c/g;
+    new-instance v0, Lcn/com/smartdevices/bracelet/d/g;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/c/g;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/d/g;-><init>()V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/dg;->s:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
@@ -630,7 +630,7 @@
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/ui/dg;->a:I
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/c/g;->a(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/d/g;->a(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v0
 

@@ -1,30 +1,61 @@
-.class public Lcn/com/smartdevices/bracelet/gps/services/s;
+.class final Lcn/com/smartdevices/bracelet/gps/services/s;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Lcn/com/smartdevices/bracelet/gps/services/a/c;
 
 
 # instance fields
-.field public a:F
-
-.field public b:J
-
-.field public c:F
+.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/services/p;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method private constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/p;)V
+    .locals 0
 
-    const/4 v2, 0x0
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/services/s;->a:Lcn/com/smartdevices/bracelet/gps/services/p;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v2, p0, Lcn/com/smartdevices/bracelet/gps/services/s;->a:F
+    return-void
+.end method
 
-    const-wide/16 v0, 0x0
+.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/p;Lcn/com/smartdevices/bracelet/gps/services/q;)V
+    .locals 0
 
-    iput-wide v0, p0, Lcn/com/smartdevices/bracelet/gps/services/s;->b:J
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/gps/services/s;-><init>(Lcn/com/smartdevices/bracelet/gps/services/p;)V
 
-    iput v2, p0, Lcn/com/smartdevices/bracelet/gps/services/s;->c:F
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(I)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public a(Lcn/com/smartdevices/bracelet/gps/model/b;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public a(Ljava/lang/String;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public a(Ljava/lang/String;ILandroid/os/Bundle;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public b(Ljava/lang/String;)V
+    .locals 0
 
     return-void
 .end method

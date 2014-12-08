@@ -55,7 +55,7 @@
 
     move-result-object v4
 
-    invoke-static {v1, v2, v3, v4}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3, v4}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/Q;->b:Landroid/app/Dialog;
 
@@ -63,7 +63,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/Q;->c:Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;
 
-    const v2, 0x7f020080
+    const v2, 0x7f020085
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 

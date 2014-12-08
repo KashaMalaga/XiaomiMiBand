@@ -23,9 +23,9 @@
 .method private a()V
     .locals 5
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/e/a/c;
+    new-instance v0, Lcn/com/smartdevices/bracelet/f/a/c;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/e/a/c;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/f/a/c;-><init>()V
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -37,31 +37,31 @@
 
     long-to-int v1, v1
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/e/a/c;->a(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/f/a/c;->a(I)V
 
     const/16 v1, 0x3e8
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/e/a/c;->c(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/f/a/c;->c(I)V
 
     const/16 v1, 0x64
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/e/a/c;->b(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/f/a/c;->b(I)V
 
     const/16 v1, 0x14
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/e/a/c;->e(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/f/a/c;->e(I)V
 
     const/16 v1, 0x258
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/e/a/c;->d(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/f/a/c;->d(I)V
 
     const/16 v1, 0xa
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/e/a/c;->f(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/f/a/c;->f(I)V
 
     const/16 v1, 0x2710
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/e/a/c;->g(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/f/a/c;->g(I)V
 
     return-void
 .end method
@@ -75,9 +75,9 @@
 
     const/4 v5, 0x2
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/e/a/a;
+    new-instance v0, Lcn/com/smartdevices/bracelet/f/a/a;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/e/a/a;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/f/a/a;-><init>()V
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -87,7 +87,7 @@
 
     long-to-int v1, v1
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/e/a/a;->a(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/f/a/a;->a(I)V
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -103,129 +103,129 @@
 
     double-to-int v1, v1
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/e/a/a;->b(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/f/a/a;->b(I)V
 
     const/16 v1, 0x14a
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/e/a/a;->c(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/f/a/a;->c(I)V
 
     const/16 v1, 0xb4
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/e/a/a;->d(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/f/a/a;->d(I)V
 
     const/16 v1, 0x96
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/e/a/a;->e(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/f/a/a;->e(I)V
 
     const/16 v1, 0x3c
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/e/a/a;->f(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/f/a/a;->f(I)V
 
     const/16 v1, 0x186
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/e/a/a;->g(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/f/a/a;->g(I)V
 
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/e/a/b;
+    new-instance v2, Lcn/com/smartdevices/bracelet/f/a/b;
 
-    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/e/a/b;-><init>()V
+    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/f/a/b;-><init>()V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/a/a;->a()I
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/a/a;->a()I
 
     move-result v3
 
-    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/e/a/b;->a(I)V
+    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/f/a/b;->a(I)V
 
-    invoke-virtual {v2, v6}, Lcn/com/smartdevices/bracelet/e/a/b;->b(I)V
+    invoke-virtual {v2, v6}, Lcn/com/smartdevices/bracelet/f/a/b;->b(I)V
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/e/a/b;
+    new-instance v2, Lcn/com/smartdevices/bracelet/f/a/b;
 
-    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/e/a/b;-><init>()V
+    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/f/a/b;-><init>()V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/a/a;->a()I
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/a/a;->a()I
 
     move-result v3
 
     add-int/lit16 v3, v3, 0xe10
 
-    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/e/a/b;->a(I)V
+    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/f/a/b;->a(I)V
 
-    invoke-virtual {v2, v5}, Lcn/com/smartdevices/bracelet/e/a/b;->b(I)V
+    invoke-virtual {v2, v5}, Lcn/com/smartdevices/bracelet/f/a/b;->b(I)V
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/e/a/b;
+    new-instance v2, Lcn/com/smartdevices/bracelet/f/a/b;
 
-    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/e/a/b;-><init>()V
+    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/f/a/b;-><init>()V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/a/a;->a()I
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/a/a;->a()I
 
     move-result v3
 
     add-int/lit16 v3, v3, 0x1c20
 
-    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/e/a/b;->a(I)V
+    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/f/a/b;->a(I)V
 
-    invoke-virtual {v2, v6}, Lcn/com/smartdevices/bracelet/e/a/b;->b(I)V
+    invoke-virtual {v2, v6}, Lcn/com/smartdevices/bracelet/f/a/b;->b(I)V
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/e/a/b;
+    new-instance v2, Lcn/com/smartdevices/bracelet/f/a/b;
 
-    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/e/a/b;-><init>()V
+    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/f/a/b;-><init>()V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/a/a;->a()I
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/a/a;->a()I
 
     move-result v3
 
     add-int/lit16 v3, v3, 0x3840
 
-    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/e/a/b;->a(I)V
+    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/f/a/b;->a(I)V
 
-    invoke-virtual {v2, v5}, Lcn/com/smartdevices/bracelet/e/a/b;->b(I)V
+    invoke-virtual {v2, v5}, Lcn/com/smartdevices/bracelet/f/a/b;->b(I)V
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/e/a/b;
+    new-instance v2, Lcn/com/smartdevices/bracelet/f/a/b;
 
-    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/e/a/b;-><init>()V
+    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/f/a/b;-><init>()V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/a/a;->a()I
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/a/a;->a()I
 
     move-result v3
 
     add-int/lit16 v3, v3, 0x4650
 
-    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/e/a/b;->a(I)V
+    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/f/a/b;->a(I)V
 
     const/4 v3, 0x1
 
-    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/e/a/b;->b(I)V
+    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/f/a/b;->b(I)V
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/e/a/b;
+    new-instance v2, Lcn/com/smartdevices/bracelet/f/a/b;
 
-    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/e/a/b;-><init>()V
+    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/f/a/b;-><init>()V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/a/a;->a()I
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/a/a;->a()I
 
     move-result v3
 
     add-int/lit16 v3, v3, 0x5460
 
-    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/e/a/b;->a(I)V
+    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/f/a/b;->a(I)V
 
-    invoke-virtual {v2, v5}, Lcn/com/smartdevices/bracelet/e/a/b;->b(I)V
+    invoke-virtual {v2, v5}, Lcn/com/smartdevices/bracelet/f/a/b;->b(I)V
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/e/a/a;->a(Ljava/util/ArrayList;)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/f/a/a;->a(Ljava/util/ArrayList;)V
 
     return-void
 .end method
@@ -239,19 +239,19 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/w;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/e/a;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/f/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/e/a;->a(Z)V
+    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/f/a;->a(Z)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/w;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/e/a;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/f/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/e/a;->b(Z)V
+    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/f/a;->b(Z)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/w;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
@@ -271,7 +271,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/w;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
-    const v1, 0x7f0c0078
+    const v1, 0x7f0c0079
 
     invoke-static {v0, v1, v3}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -289,35 +289,35 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/w;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/e/a;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/f/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/a;->j()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/a;->j()V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/w;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/e/a;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/f/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/e/a;->a(Z)V
+    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/f/a;->a(Z)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/w;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/e/a;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/f/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/e/a;->b(Z)V
+    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/f/a;->b(Z)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/w;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/e/a;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/f/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/a;->d()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/a;->d()V
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/o;->a()Lcn/com/smartdevices/bracelet/o;
 
@@ -329,11 +329,11 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/w;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->d(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/e/a/d;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->d(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/f/a/d;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/e/a/d;->c(Lcn/com/smartdevices/bracelet/model/SportDay;)V
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/f/a/d;->c(Lcn/com/smartdevices/bracelet/model/SportDay;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/w;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
@@ -353,11 +353,11 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/w;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/e/a;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/f/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/a;->h()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/a;->h()Z
 
     move-result v0
 
@@ -365,7 +365,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/w;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
-    const v1, 0x7f0c0076
+    const v1, 0x7f0c0077
 
     invoke-static {v0, v1, v3}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -383,7 +383,7 @@
     :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/w;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
-    const v1, 0x7f0c0078
+    const v1, 0x7f0c0079
 
     invoke-static {v0, v1, v3}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -401,19 +401,19 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/w;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/e/a;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/f/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/e/a;->a(Z)V
+    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/f/a;->a(Z)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/w;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/e/a;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/f/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/e/a;->b(Z)V
+    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/f/a;->b(Z)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/w;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
@@ -433,7 +433,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/w;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
-    const v1, 0x7f0c0078
+    const v1, 0x7f0c0079
 
     invoke-static {v0, v1, v3}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 

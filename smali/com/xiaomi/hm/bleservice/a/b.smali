@@ -848,7 +848,7 @@
 
     const/16 v3, 0x3e
 
-    if-ne v0, v3, :cond_2
+    if-ne v0, v3, :cond_3
 
     move v0, v1
 
@@ -863,28 +863,35 @@
 
     aget-byte v6, p0, v0
 
-    if-nez v6, :cond_3
-
-    move v1, v2
+    if-nez v6, :cond_4
 
     :cond_1
-    return v1
+    move v1, v2
 
     :cond_2
+    return v1
+
+    :cond_3
     move v0, v2
 
     goto :goto_0
 
-    :cond_3
+    :cond_4
+    add-int v0, v6, v3
+
+    const/16 v4, 0x3e
+
+    if-gt v0, v4, :cond_1
+
     add-int/lit8 v0, v3, 0x1
 
     aget-byte v3, p0, v3
 
-    if-eq v3, v12, :cond_4
+    if-eq v3, v12, :cond_5
 
-    if-ne v3, v11, :cond_6
+    if-ne v3, v11, :cond_7
 
-    :cond_4
+    :cond_5
     move v3, v2
 
     :goto_2
@@ -935,7 +942,7 @@
     move v0, v2
 
     :goto_3
-    if-ge v0, v7, :cond_5
+    if-ge v0, v7, :cond_6
 
     aget-object v8, p1, v0
 
@@ -947,13 +954,13 @@
 
     move-result v8
 
-    if-nez v8, :cond_1
+    if-nez v8, :cond_2
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_3
 
-    :cond_5
+    :cond_6
     add-int/lit8 v0, v3, 0x2
 
     move v3, v0
@@ -962,14 +969,14 @@
 
     goto :goto_2
 
-    :cond_6
+    :cond_7
     const/4 v4, 0x7
 
-    if-eq v3, v4, :cond_7
+    if-eq v3, v4, :cond_8
 
-    if-ne v3, v13, :cond_a
+    if-ne v3, v13, :cond_b
 
-    :cond_7
+    :cond_8
     move v5, v2
 
     :goto_4
@@ -988,7 +995,7 @@
     :goto_5
     const/16 v4, 0x10
 
-    if-ge v0, v4, :cond_8
+    if-ge v0, v4, :cond_9
 
     add-int/lit8 v4, v3, 0x1
 
@@ -1002,7 +1009,7 @@
 
     goto :goto_5
 
-    :cond_8
+    :cond_9
     const-string v0, "%02x%02x%02x%02x-%02x%02x-%02x%02x-%02x%02x-%02x%02x%02x%02x%02x%02x"
 
     const/16 v4, 0x10
@@ -1190,7 +1197,7 @@
     move v0, v2
 
     :goto_6
-    if-ge v0, v7, :cond_9
+    if-ge v0, v7, :cond_a
 
     aget-object v8, p1, v0
 
@@ -1230,13 +1237,13 @@
 
     move-result v8
 
-    if-nez v8, :cond_1
+    if-nez v8, :cond_2
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_6
 
-    :cond_9
+    :cond_a
     add-int/lit8 v0, v5, 0x10
 
     move v5, v0
@@ -1245,7 +1252,7 @@
 
     goto/16 :goto_4
 
-    :cond_a
+    :cond_b
     add-int/lit8 v3, v6, -0x1
 
     add-int/2addr v0, v3
@@ -1679,7 +1686,9 @@
 .end method
 
 .method public static e([B)Lcom/xiaomi/hm/bleservice/a/a;
-    .locals 12
+    .locals 13
+
+    const/16 v12, 0x3e
 
     const/4 v1, 0x1
 
@@ -1691,9 +1700,7 @@
 
     array-length v0, p0
 
-    const/16 v3, 0x3e
-
-    if-ne v0, v3, :cond_0
+    if-ne v0, v12, :cond_1
 
     move v0, v1
 
@@ -1711,16 +1718,21 @@
 
     aget-byte v7, p0, v0
 
-    if-nez v7, :cond_1
-
-    return-object v6
+    if-nez v7, :cond_2
 
     :cond_0
+    return-object v6
+
+    :cond_1
     move v0, v2
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
+    add-int v0, v7, v4
+
+    if-gt v0, v12, :cond_0
+
     add-int/lit8 v3, v4, 0x1
 
     aget-byte v5, p0, v4
@@ -1739,7 +1751,7 @@
     :goto_2
     add-int/lit8 v4, v7, -0x1
 
-    if-ge v3, v4, :cond_14
+    if-ge v3, v4, :cond_15
 
     add-int/lit8 v4, v0, 0x1
 
@@ -1756,7 +1768,7 @@
     goto :goto_2
 
     :pswitch_1
-    if-ne v7, v10, :cond_2
+    if-ne v7, v10, :cond_3
 
     move v0, v1
 
@@ -1805,7 +1817,7 @@
 
     goto :goto_1
 
-    :cond_2
+    :cond_3
     move v0, v2
 
     goto :goto_3
@@ -1822,7 +1834,7 @@
     :goto_4
     add-int/lit8 v3, v7, -0x1
 
-    if-ge v5, v3, :cond_4
+    if-ge v5, v3, :cond_5
 
     new-array v9, v10, [B
 
@@ -1831,7 +1843,7 @@
     move v0, v2
 
     :goto_5
-    if-ge v0, v10, :cond_3
+    if-ge v0, v10, :cond_4
 
     add-int/lit8 v4, v3, 0x1
 
@@ -1845,7 +1857,7 @@
 
     goto :goto_5
 
-    :cond_3
+    :cond_4
     invoke-static {v9}, Lcom/xiaomi/hm/bleservice/a/b;->b([B)Ljava/lang/String;
 
     move-result-object v0
@@ -1864,7 +1876,7 @@
 
     goto :goto_4
 
-    :cond_4
+    :cond_5
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -1909,7 +1921,7 @@
     :goto_6
     add-int/lit8 v3, v7, -0x1
 
-    if-ge v5, v3, :cond_6
+    if-ge v5, v3, :cond_7
 
     new-array v9, v10, [B
 
@@ -1918,7 +1930,7 @@
     move v0, v2
 
     :goto_7
-    if-ge v0, v10, :cond_5
+    if-ge v0, v10, :cond_6
 
     add-int/lit8 v4, v3, 0x1
 
@@ -1932,7 +1944,7 @@
 
     goto :goto_7
 
-    :cond_5
+    :cond_6
     invoke-static {v9}, Lcom/xiaomi/hm/bleservice/a/b;->b([B)Ljava/lang/String;
 
     move-result-object v0
@@ -1951,7 +1963,7 @@
 
     goto :goto_6
 
-    :cond_6
+    :cond_7
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -1996,7 +2008,7 @@
     :goto_8
     add-int/lit8 v3, v7, -0x1
 
-    if-ge v5, v3, :cond_8
+    if-ge v5, v3, :cond_9
 
     new-array v9, v11, [B
 
@@ -2005,7 +2017,7 @@
     move v0, v2
 
     :goto_9
-    if-ge v0, v11, :cond_7
+    if-ge v0, v11, :cond_8
 
     add-int/lit8 v4, v3, 0x1
 
@@ -2019,7 +2031,7 @@
 
     goto :goto_9
 
-    :cond_7
+    :cond_8
     invoke-static {v9}, Lcom/xiaomi/hm/bleservice/a/b;->b([B)Ljava/lang/String;
 
     move-result-object v0
@@ -2038,7 +2050,7 @@
 
     goto :goto_8
 
-    :cond_8
+    :cond_9
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -2083,7 +2095,7 @@
     :goto_a
     add-int/lit8 v3, v7, -0x1
 
-    if-ge v5, v3, :cond_a
+    if-ge v5, v3, :cond_b
 
     new-array v9, v11, [B
 
@@ -2092,7 +2104,7 @@
     move v0, v2
 
     :goto_b
-    if-ge v0, v11, :cond_9
+    if-ge v0, v11, :cond_a
 
     add-int/lit8 v4, v3, 0x1
 
@@ -2106,7 +2118,7 @@
 
     goto :goto_b
 
-    :cond_9
+    :cond_a
     invoke-static {v9}, Lcom/xiaomi/hm/bleservice/a/b;->b([B)Ljava/lang/String;
 
     move-result-object v0
@@ -2125,7 +2137,7 @@
 
     goto :goto_a
 
-    :cond_a
+    :cond_b
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -2170,7 +2182,7 @@
     :goto_c
     add-int/lit8 v3, v7, -0x1
 
-    if-ge v5, v3, :cond_c
+    if-ge v5, v3, :cond_d
 
     new-array v9, v10, [B
 
@@ -2179,7 +2191,7 @@
     move v0, v2
 
     :goto_d
-    if-ge v0, v10, :cond_b
+    if-ge v0, v10, :cond_c
 
     add-int/lit8 v4, v3, 0x1
 
@@ -2193,7 +2205,7 @@
 
     goto :goto_d
 
-    :cond_b
+    :cond_c
     invoke-static {v9}, Lcom/xiaomi/hm/bleservice/a/b;->b([B)Ljava/lang/String;
 
     move-result-object v0
@@ -2212,7 +2224,7 @@
 
     goto :goto_c
 
-    :cond_c
+    :cond_d
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -2257,7 +2269,7 @@
     :goto_e
     add-int/lit8 v3, v7, -0x1
 
-    if-ge v5, v3, :cond_e
+    if-ge v5, v3, :cond_f
 
     new-array v9, v11, [B
 
@@ -2266,7 +2278,7 @@
     move v0, v2
 
     :goto_f
-    if-ge v0, v11, :cond_d
+    if-ge v0, v11, :cond_e
 
     add-int/lit8 v4, v3, 0x1
 
@@ -2280,7 +2292,7 @@
 
     goto :goto_f
 
-    :cond_d
+    :cond_e
     invoke-static {v9}, Lcom/xiaomi/hm/bleservice/a/b;->b([B)Ljava/lang/String;
 
     move-result-object v0
@@ -2299,7 +2311,7 @@
 
     goto :goto_e
 
-    :cond_e
+    :cond_f
     invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -2344,7 +2356,7 @@
     :goto_10
     add-int/lit8 v4, v7, -0x1
 
-    if-ge v3, v4, :cond_f
+    if-ge v3, v4, :cond_10
 
     add-int/lit8 v4, v0, 0x1
 
@@ -2360,7 +2372,7 @@
 
     goto :goto_10
 
-    :cond_f
+    :cond_10
     new-instance v3, Ljava/lang/String;
 
     invoke-direct {v3, v5}, Ljava/lang/String;-><init>([B)V
@@ -2401,7 +2413,7 @@
     :goto_11
     add-int/lit8 v4, v7, -0x1
 
-    if-ge v3, v4, :cond_10
+    if-ge v3, v4, :cond_11
 
     add-int/lit8 v4, v0, 0x1
 
@@ -2417,7 +2429,7 @@
 
     goto :goto_11
 
-    :cond_10
+    :cond_11
     new-instance v3, Ljava/lang/String;
 
     invoke-direct {v3, v5}, Ljava/lang/String;-><init>([B)V
@@ -2458,7 +2470,7 @@
     :goto_12
     add-int/lit8 v4, v7, -0x1
 
-    if-ge v3, v4, :cond_11
+    if-ge v3, v4, :cond_12
 
     add-int/lit8 v4, v0, 0x1
 
@@ -2474,7 +2486,7 @@
 
     goto :goto_12
 
-    :cond_11
+    :cond_12
     invoke-static {v5}, Lcom/xiaomi/hm/bleservice/a/b;->b([B)Ljava/lang/String;
 
     move-result-object v3
@@ -2515,7 +2527,7 @@
     :goto_13
     add-int/lit8 v4, v7, -0x1
 
-    if-ge v3, v4, :cond_12
+    if-ge v3, v4, :cond_13
 
     add-int/lit8 v4, v0, 0x1
 
@@ -2531,7 +2543,7 @@
 
     goto :goto_13
 
-    :cond_12
+    :cond_13
     invoke-static {v5}, Lcom/xiaomi/hm/bleservice/a/b;->b([B)Ljava/lang/String;
 
     move-result-object v3
@@ -2605,7 +2617,7 @@
 
     sget v7, Lcom/xiaomi/hm/bleservice/a/c;->a:I
 
-    if-ne v4, v7, :cond_13
+    if-ne v4, v7, :cond_14
 
     const/high16 v7, 0x43480000
 
@@ -2648,14 +2660,14 @@
 
     goto/16 :goto_1
 
-    :cond_13
+    :cond_14
     const/high16 v7, 0x42c80000
 
     div-float/2addr v0, v7
 
     goto :goto_14
 
-    :cond_14
+    :cond_15
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V

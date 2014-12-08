@@ -3,94 +3,50 @@
 
 
 # instance fields
-.field public a:Ljava/lang/String;
+.field private a:Ljava/lang/String;
 
-.field public b:I
-
-.field public c:Ljava/lang/String;
-
-.field public d:Ljava/lang/String;
-
-.field public e:Lcn/com/smartdevices/bracelet/q;
-
-.field public f:Lcn/com/smartdevices/bracelet/model/LoginData;
-
-.field public g:J
-
-.field public h:Ljava/lang/String;
+.field private b:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 3
-
-    const/4 v2, 0x0
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/f/d;->b:I
-
-    iput-object v2, p0, Lcn/com/smartdevices/bracelet/f/d;->c:Ljava/lang/String;
-
-    iput-object v2, p0, Lcn/com/smartdevices/bracelet/f/d;->d:Ljava/lang/String;
-
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lcn/com/smartdevices/bracelet/f/d;->g:J
-
-    iput-object v2, p0, Lcn/com/smartdevices/bracelet/f/d;->h:Ljava/lang/String;
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->b()Lcn/com/smartdevices/bracelet/model/LoginData;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/f/d;->f:Lcn/com/smartdevices/bracelet/model/LoginData;
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->p()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/f/d;->a:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcn/com/smartdevices/bracelet/q;)V
-    .locals 3
 
-    const/4 v2, 0x0
+# virtual methods
+.method public a()Ljava/lang/String;
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/d;->a:Ljava/lang/String;
 
-    const/4 v0, -0x1
+    return-object v0
+.end method
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/f/d;->b:I
+.method public a(Ljava/lang/String;)V
+    .locals 0
 
-    iput-object v2, p0, Lcn/com/smartdevices/bracelet/f/d;->c:Ljava/lang/String;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/f/d;->a:Ljava/lang/String;
 
-    iput-object v2, p0, Lcn/com/smartdevices/bracelet/f/d;->d:Ljava/lang/String;
+    return-void
+.end method
 
-    const-wide/16 v0, 0x0
+.method public b()Ljava/lang/String;
+    .locals 1
 
-    iput-wide v0, p0, Lcn/com/smartdevices/bracelet/f/d;->g:J
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/d;->b:Ljava/lang/String;
 
-    iput-object v2, p0, Lcn/com/smartdevices/bracelet/f/d;->h:Ljava/lang/String;
+    return-object v0
+.end method
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->b()Lcn/com/smartdevices/bracelet/model/LoginData;
+.method public b(Ljava/lang/String;)V
+    .locals 0
 
-    move-result-object v0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/f/d;->f:Lcn/com/smartdevices/bracelet/model/LoginData;
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->p()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/f/d;->a:Ljava/lang/String;
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/f/d;->e:Lcn/com/smartdevices/bracelet/q;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/f/d;->b:Ljava/lang/String;
 
     return-void
 .end method

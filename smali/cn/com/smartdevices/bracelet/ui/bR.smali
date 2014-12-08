@@ -65,7 +65,7 @@
 
     iget-object v1, v1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->personSignature:Ljava/lang/String;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/z;->c(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/y;->c(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -75,7 +75,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0c00da
+    const v1, 0x7f0c00db
 
     const/4 v2, 0x0
 
@@ -175,7 +175,7 @@
 
     move-result-object v1
 
-    const v0, 0x7f070169
+    const v0, 0x7f070177
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

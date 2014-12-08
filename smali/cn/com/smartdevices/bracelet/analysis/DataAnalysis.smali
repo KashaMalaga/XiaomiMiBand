@@ -530,7 +530,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/z;->b(Ljava/util/ArrayList;)Ljava/util/ArrayList;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/y;->b(Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
     move-result-object v2
 
@@ -541,7 +541,7 @@
 
     move-result-object v4
 
-    invoke-static {v4}, Lcn/com/smartdevices/bracelet/z;->b(Ljava/util/ArrayList;)Ljava/util/ArrayList;
+    invoke-static {v4}, Lcn/com/smartdevices/bracelet/y;->b(Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
     move-result-object v4
 
@@ -552,7 +552,7 @@
 
     move-result-object v5
 
-    invoke-static {v5}, Lcn/com/smartdevices/bracelet/z;->b(Ljava/util/ArrayList;)Ljava/util/ArrayList;
+    invoke-static {v5}, Lcn/com/smartdevices/bracelet/y;->b(Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
     move-result-object v5
 

@@ -80,6 +80,7 @@ function setCurLocale(locale)
     elseif (getCurLocale() == zh_TW) then
         g_curTable = localization_table[zh_TW];
     elseif string.find(getCurLocale(), indo) == 1 then
+        log('set indo locale table')
         g_curTable = localization_indonesia_table;
 	elseif (getCurLocale() == fr_FR or getCurLocale() == fr_BE or getCurLocale() == fr_CA or getCurLocale() == fr_CH) then
         curTable = localization_table[fr];

@@ -2,18 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/tencent/tauth/IUiListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/e/a;
+.field final synthetic a:Z
+
+.field final synthetic b:Lcn/com/smartdevices/bracelet/e/a;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/e/a;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/e/a;Z)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/e/b;->a:Lcn/com/smartdevices/bracelet/e/a;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/e/b;->b:Lcn/com/smartdevices/bracelet/e/a;
+
+    iput-boolean p2, p0, Lcn/com/smartdevices/bracelet/e/b;->a:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,83 +26,74 @@
 
 
 # virtual methods
-.method public onCancel()V
-    .locals 1
+.method public run()V
+    .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/e/b;->a:Lcn/com/smartdevices/bracelet/e/a;
+    new-instance v0, Lcn/com/smartdevices/bracelet/model/SportDay;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/a;->e()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/e/b;->a:Lcn/com/smartdevices/bracelet/e/a;
+    iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/e/b;->a:Z
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/e/a;->a(Lcn/com/smartdevices/bracelet/e/a;)Lcom/tencent/tauth/IUiListener;
+    if-nez v1, :cond_0
 
-    move-result-object v0
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/e/b;->b:Lcn/com/smartdevices/bracelet/e/a;
 
-    if-eqz v0, :cond_0
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/e/a;->c(Lcn/com/smartdevices/bracelet/e/a;)Lcn/com/smartdevices/bracelet/model/SportDay;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/e/b;->a:Lcn/com/smartdevices/bracelet/e/a;
+    move-result-object v1
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/e/a;->a(Lcn/com/smartdevices/bracelet/e/a;)Lcom/tencent/tauth/IUiListener;
+    if-eqz v1, :cond_0
 
-    move-result-object v0
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/e/b;->b:Lcn/com/smartdevices/bracelet/e/a;
 
-    invoke-interface {v0}, Lcom/tencent/tauth/IUiListener;->onCancel()V
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/e/a;->c(Lcn/com/smartdevices/bracelet/e/a;)Lcn/com/smartdevices/bracelet/model/SportDay;
 
-    :cond_0
-    return-void
-.end method
+    move-result-object v1
 
-.method public onComplete(Ljava/lang/Object;)V
-    .locals 1
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/model/SportDay;->equals(Lcn/com/smartdevices/bracelet/model/SportDay;)Z
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/e/b;->a:Lcn/com/smartdevices/bracelet/e/a;
+    move-result v1
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/e/a;->a(Ljava/lang/Object;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/e/b;->a:Lcn/com/smartdevices/bracelet/e/a;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/e/a;->a(Lcn/com/smartdevices/bracelet/e/a;)Lcom/tencent/tauth/IUiListener;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/e/b;->a:Lcn/com/smartdevices/bracelet/e/a;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/e/a;->a(Lcn/com/smartdevices/bracelet/e/a;)Lcom/tencent/tauth/IUiListener;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Lcom/tencent/tauth/IUiListener;->onComplete(Ljava/lang/Object;)V
+    if-nez v1, :cond_1
 
     :cond_0
-    return-void
-.end method
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/e/b;->b:Lcn/com/smartdevices/bracelet/e/a;
 
-.method public onError(Lcom/tencent/tauth/UiError;)V
-    .locals 1
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/e/a;->a(Lcn/com/smartdevices/bracelet/e/a;Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/SportDay;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/e/b;->a:Lcn/com/smartdevices/bracelet/e/a;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/e/b;->b:Lcn/com/smartdevices/bracelet/e/a;
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/e/a;->a(Lcom/tencent/tauth/UiError;)V
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/e/b;->b:Lcn/com/smartdevices/bracelet/e/a;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/e/b;->a:Lcn/com/smartdevices/bracelet/e/a;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/e/a;->d(Lcn/com/smartdevices/bracelet/e/a;)I
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/e/a;->a(Lcn/com/smartdevices/bracelet/e/a;)Lcom/tencent/tauth/IUiListener;
+    move-result v1
 
-    move-result-object v0
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/e/a;->a(Lcn/com/smartdevices/bracelet/e/a;I)I
 
-    if-eqz v0, :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/e/b;->b:Lcn/com/smartdevices/bracelet/e/a;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/e/b;->a:Lcn/com/smartdevices/bracelet/e/a;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/e/a;->a(Lcn/com/smartdevices/bracelet/e/a;)Lcom/tencent/tauth/IUiListener;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/e/a;->a(Lcn/com/smartdevices/bracelet/e/a;)Lcn/com/smartdevices/bracelet/b/b;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/tencent/tauth/IUiListener;->onError(Lcom/tencent/tauth/UiError;)V
+    if-eqz v0, :cond_1
 
-    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/e/b;->b:Lcn/com/smartdevices/bracelet/e/a;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/e/a;->a(Lcn/com/smartdevices/bracelet/e/a;)Lcn/com/smartdevices/bracelet/b/b;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/e/b;->b:Lcn/com/smartdevices/bracelet/e/a;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/e/a;->b(Lcn/com/smartdevices/bracelet/e/a;)I
+
+    move-result v1
+
+    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/b/b;->a(I)V
+
+    :cond_1
     return-void
 .end method

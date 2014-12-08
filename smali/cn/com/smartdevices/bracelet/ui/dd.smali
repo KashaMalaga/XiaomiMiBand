@@ -181,7 +181,7 @@
 .method protected a(ILcn/com/smartdevices/bracelet/model/ShareData;Lcn/com/smartdevices/bracelet/model/SportDay;)V
     .locals 12
 
-    const v1, 0x7f0c0162
+    const v1, 0x7f0c0164
 
     const/4 v11, 0x4
 
@@ -191,7 +191,7 @@
 
     invoke-virtual {p2, v9}, Lcn/com/smartdevices/bracelet/model/ShareData;->setType(I)V
 
-    const v0, 0x7f0c0161
+    const v0, 0x7f0c0163
 
     sparse-switch p1, :sswitch_data_0
 
@@ -356,7 +356,7 @@
 
     const/16 v9, 0xe
 
-    const v0, 0x7f070121
+    const v0, 0x7f07012f
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -364,7 +364,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f070122
+    const v1, 0x7f070130
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -372,7 +372,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f070123
+    const v2, 0x7f070131
 
     invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -380,7 +380,7 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    const v3, 0x7f070126
+    const v3, 0x7f070134
 
     invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -388,7 +388,7 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    const v4, 0x7f070129
+    const v4, 0x7f070137
 
     invoke-virtual {p1, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -396,7 +396,7 @@
 
     check-cast v4, Landroid/widget/TextView;
 
-    const v5, 0x7f07012a
+    const v5, 0x7f070138
 
     invoke-virtual {p1, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -624,7 +624,7 @@
 .method protected b(Landroid/view/View;)V
     .locals 20
 
-    const v2, 0x7f07012c
+    const v2, 0x7f07013a
 
     move-object/from16 v0, p1
 
@@ -634,7 +634,7 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    const v3, 0x7f07012b
+    const v3, 0x7f070139
 
     move-object/from16 v0, p1
 
@@ -644,7 +644,7 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    const v4, 0x7f070120
+    const v4, 0x7f07012e
 
     move-object/from16 v0, p1
 
@@ -654,7 +654,7 @@
 
     check-cast v4, Landroid/widget/TextView;
 
-    const v5, 0x7f07012d
+    const v5, 0x7f07013b
 
     move-object/from16 v0, p1
 
@@ -664,7 +664,7 @@
 
     check-cast v5, Landroid/widget/TextView;
 
-    const v6, 0x7f0701b5
+    const v6, 0x7f0701c0
 
     move-object/from16 v0, p1
 
@@ -674,7 +674,7 @@
 
     check-cast v6, Landroid/widget/TextView;
 
-    const v7, 0x7f0701b3
+    const v7, 0x7f0701be
 
     move-object/from16 v0, p1
 
@@ -684,7 +684,7 @@
 
     check-cast v7, Landroid/widget/TextView;
 
-    const v8, 0x7f0701b4
+    const v8, 0x7f0701bf
 
     move-object/from16 v0, p1
 
@@ -694,7 +694,7 @@
 
     check-cast v8, Landroid/widget/TextView;
 
-    const v9, 0x7f0701b6
+    const v9, 0x7f0701c1
 
     move-object/from16 v0, p1
 
@@ -704,7 +704,7 @@
 
     check-cast v9, Landroid/widget/TextView;
 
-    const v10, 0x7f0701b8
+    const v10, 0x7f0701c3
 
     move-object/from16 v0, p1
 
@@ -714,7 +714,7 @@
 
     check-cast v10, Landroid/widget/TextView;
 
-    const v11, 0x7f0701b9
+    const v11, 0x7f0701c4
 
     move-object/from16 v0, p1
 
@@ -724,7 +724,7 @@
 
     check-cast v11, Landroid/widget/TextView;
 
-    const v12, 0x7f0701ba
+    const v12, 0x7f0701c5
 
     move-object/from16 v0, p1
 
@@ -734,7 +734,7 @@
 
     check-cast v12, Landroid/widget/TextView;
 
-    const v13, 0x7f0701bb
+    const v13, 0x7f0701c6
 
     move-object/from16 v0, p1
 
@@ -744,7 +744,7 @@
 
     check-cast v13, Landroid/widget/TextView;
 
-    const v14, 0x7f0701bd
+    const v14, 0x7f0701c8
 
     move-object/from16 v0, p1
 
@@ -754,7 +754,7 @@
 
     check-cast v14, Landroid/widget/TextView;
 
-    const v15, 0x7f0701be
+    const v15, 0x7f0701c9
 
     move-object/from16 v0, p1
 
@@ -764,7 +764,7 @@
 
     check-cast v15, Landroid/widget/TextView;
 
-    const v16, 0x7f0701bf
+    const v16, 0x7f0701ca
 
     move-object/from16 v0, p1
 
@@ -776,7 +776,7 @@
 
     check-cast v16, Landroid/widget/TextView;
 
-    const v17, 0x7f0701c0
+    const v17, 0x7f0701cb
 
     move-object/from16 v0, p1
 

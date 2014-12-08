@@ -36,7 +36,7 @@
 .method private a(Landroid/view/View;)V
     .locals 1
 
-    const v0, 0x7f070156
+    const v0, 0x7f070164
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -44,7 +44,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bM;->c:Landroid/view/View;
 
-    const v0, 0x7f070159
+    const v0, 0x7f070167
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -52,7 +52,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bM;->g:Landroid/view/View;
 
-    const v0, 0x7f07015c
+    const v0, 0x7f07016a
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -60,7 +60,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bM;->h:Landroid/view/View;
 
-    const v0, 0x7f07015f
+    const v0, 0x7f07016d
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -68,7 +68,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bM;->f:Landroid/view/View;
 
-    const v0, 0x7f070157
+    const v0, 0x7f070165
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -78,7 +78,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bM;->i:Landroid/widget/TextView;
 
-    const v0, 0x7f07015a
+    const v0, 0x7f070168
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -88,7 +88,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bM;->l:Landroid/widget/TextView;
 
-    const v0, 0x7f07015d
+    const v0, 0x7f07016b
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -98,7 +98,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bM;->k:Landroid/widget/TextView;
 
-    const v0, 0x7f070160
+    const v0, 0x7f07016e
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -108,7 +108,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bM;->j:Landroid/widget/TextView;
 
-    const v0, 0x7f070155
+    const v0, 0x7f070163
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -116,7 +116,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070158
+    const v0, 0x7f070166
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -124,7 +124,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f07015b
+    const v0, 0x7f070169
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -132,7 +132,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f07015e
+    const v0, 0x7f07016c
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -553,10 +553,10 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f070155 -> :sswitch_0
-        0x7f070158 -> :sswitch_1
-        0x7f07015b -> :sswitch_2
-        0x7f07015e -> :sswitch_3
+        0x7f070163 -> :sswitch_0
+        0x7f070166 -> :sswitch_1
+        0x7f070169 -> :sswitch_2
+        0x7f07016c -> :sswitch_3
     .end sparse-switch
 .end method
 
@@ -613,7 +613,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -625,7 +625,7 @@
 
     const-string v0, "PageBraceletLight"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -637,7 +637,7 @@
 
     const-string v0, "PageBraceletLight"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
 
     return-void
 .end method

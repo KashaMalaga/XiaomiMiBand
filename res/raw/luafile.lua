@@ -546,7 +546,6 @@ function welcomeWithSensorHub(listDao, ConfigInfo)
             return
         end
 
-        log('binded = '..binded..", lastbinde = " .. lastBinded)
         if (binded ~= lastBinded or
                 (judgeUniqueByDate_Type(listDao,ConfigInfo, TYPE_WELCOME))) then
             clearWelcome(listDao, ConfigInfo)
@@ -1627,9 +1626,11 @@ function getDayDif(timeStamp)
     date1 = os.date("*t")
     date2 = os.date("*t", timeStamp)
 
-    log("date2 yday = "..date2.yday.." date1 yday="..date1.yday )
+    day1 = date1.year * 365 + date1.yday;
+    day2 = date2.year * 365 + date2.yday;
+    log("date2 yday = "..day2.." date1 yday="..day1)
 
-    return (date2.yday - date1.yday)
+    return (day2 - day1)
 end
 
 function getDayDifElapsed(timeStamp)
@@ -1903,15 +1904,19 @@ function showLuaItem(listDao, configInfo, luaItem)
     t.right = luaItem:getRight();
     expiredStamp = luaItem:getExpire();
 
-    daydif = 0;
-    if (expiredStamp > 0) then
-        daydif = getDayDif(expiredStamp)
-    end
+    log('expire = '..expiredStamp)
+    if (expiredStamp ~= 0) then
 
-    delMsgByType(listDao, configInfo, t.stype)
+        daydif = 0;
+        if (expiredStamp > 0) then
+            daydif = getDayDif(expiredStamp)
+        end
 
-    if (daydif <= 0) then
-        delMsgByType(listDao, configInfo, t.stype)
+        if (daydif <= 0) then
+            delMsgByType(listDao, configInfo, t.stype)
+        else
+            replaceMsgByType(listDao, configInfo, t)
+        end
     else
         replaceMsgByType(listDao, configInfo, t)
     end

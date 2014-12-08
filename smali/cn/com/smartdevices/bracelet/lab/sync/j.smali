@@ -27,7 +27,7 @@
     throw v0
 
     :cond_0
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/z;->a(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;)Z
 
     move-result v0
 

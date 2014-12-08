@@ -137,34 +137,10 @@
 
 
 # virtual methods
-.method public a()V
-    .locals 3
+.method public a(Lcn/com/smartdevices/bracelet/gps/services/v;)V
+    .locals 8
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/c/a;->f:Landroid/content/Context;
-
-    if-nez v0, :cond_0
-
-    :goto_0
-    return-void
-
-    :cond_0
-    new-instance v0, Landroid/speech/tts/TextToSpeech;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/c/a;->f:Landroid/content/Context;
-
-    const-string v2, "com.iflytek.speechcloud"
-
-    invoke-direct {v0, v1, p0, v2}, Landroid/speech/tts/TextToSpeech;-><init>(Landroid/content/Context;Landroid/speech/tts/TextToSpeech$OnInitListener;Ljava/lang/String;)V
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/c/a;->g:Landroid/speech/tts/TextToSpeech;
-
-    goto :goto_0
-.end method
-
-.method public a(Lcn/com/smartdevices/bracelet/gps/services/s;)V
-    .locals 9
-
-    const/4 v8, 0x1
+    const/4 v7, 0x1
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/c/a;->h:Z
 
@@ -174,13 +150,13 @@
     return-void
 
     :cond_0
-    iget v0, p1, Lcn/com/smartdevices/bracelet/gps/services/s;->c:F
+    iget v0, p1, Lcn/com/smartdevices/bracelet/gps/services/v;->c:F
 
     const/high16 v1, 0x447a0000
 
     div-float/2addr v0, v1
 
-    invoke-static {v0, v8}, Lcn/com/smartdevices/bracelet/gps/d/d;->a(FI)F
+    invoke-static {v0, v7}, Lcn/com/smartdevices/bracelet/gps/d/d;->a(FI)F
 
     move-result v0
 
@@ -188,70 +164,64 @@
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/c/a;->f:Landroid/content/Context;
+
+    iget-wide v2, p1, Lcn/com/smartdevices/bracelet/gps/services/v;->b:J
+
+    invoke-static {v1, v2, v3}, Lcn/com/smartdevices/bracelet/lab/c/e;->a(Landroid/content/Context;J)Ljava/lang/String;
+
     move-result-object v1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/c/a;->f:Landroid/content/Context;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/c/a;->f:Landroid/content/Context;
 
-    iget-wide v2, p1, Lcn/com/smartdevices/bracelet/gps/services/s;->b:J
+    iget v3, p1, Lcn/com/smartdevices/bracelet/gps/services/v;->a:F
 
-    invoke-static {v0, v2, v3}, Lcn/com/smartdevices/bracelet/lab/c/e;->a(Landroid/content/Context;J)Ljava/lang/String;
-
-    move-result-object v2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/c/a;->f:Landroid/content/Context;
-
-    iget v3, p1, Lcn/com/smartdevices/bracelet/gps/services/s;->a:F
-
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/gps/ui/x;->c(F)J
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/gps/ui/C;->c(F)J
 
     move-result-wide v3
 
-    invoke-static {v0, v3, v4}, Lcn/com/smartdevices/bracelet/lab/c/e;->a(Landroid/content/Context;J)Ljava/lang/String;
+    invoke-static {v2, v3, v4}, Lcn/com/smartdevices/bracelet/lab/c/e;->a(Landroid/content/Context;J)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
-    const-string v0, ""
+    const-string v3, ""
 
-    iget v0, p1, Lcn/com/smartdevices/bracelet/gps/services/s;->a:F
+    iget v3, p1, Lcn/com/smartdevices/bracelet/gps/services/v;->a:F
 
     const/high16 v4, 0x43b40000
 
-    cmpl-float v0, v0, v4
+    cmpl-float v3, v3, v4
 
-    if-ltz v0, :cond_1
+    if-ltz v3, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/c/a;->j:Landroid/content/res/Resources;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/c/a;->j:Landroid/content/res/Resources;
 
-    const v4, 0x7f0c0289
+    const v4, 0x7f0c028c
 
-    invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     :goto_1
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/gps/c/a;->j:Landroid/content/res/Resources;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/c/a;->j:Landroid/content/res/Resources;
 
-    const v5, 0x7f0c0287
+    const v4, 0x7f0c028a
 
-    const/4 v6, 0x4
+    const/4 v5, 0x3
 
-    new-array v6, v6, [Ljava/lang/Object;
+    new-array v5, v5, [Ljava/lang/Object;
 
-    const/4 v7, 0x0
+    const/4 v6, 0x0
 
-    aput-object v1, v6, v7
+    aput-object v0, v5, v6
 
-    aput-object v2, v6, v8
+    aput-object v1, v5, v7
 
-    const/4 v1, 0x2
+    const/4 v0, 0x2
 
-    aput-object v3, v6, v1
+    aput-object v2, v5, v0
 
-    const/4 v1, 0x3
-
-    aput-object v0, v6, v1
-
-    invoke-virtual {v4, v5, v6}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v3, v4, v5}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -260,13 +230,11 @@
     goto :goto_0
 
     :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/c/a;->j:Landroid/content/res/Resources;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/c/a;->j:Landroid/content/res/Resources;
 
-    const v4, 0x7f0c0288
+    const v4, 0x7f0c028b
 
-    invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     goto :goto_1
 .end method
@@ -297,10 +265,38 @@
 
     invoke-virtual {v0, p1, v1, v2}, Landroid/speech/tts/TextToSpeech;->speak(Ljava/lang/String;ILjava/util/HashMap;)I
 
+    move-result v0
+
+    const/4 v1, -0x1
+
+    if-ne v1, v0, :cond_0
+
+    const-string v0, "Speak"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "TextToSpeech.ERROR message = "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/services/h;->a(Ljava/lang/String;Ljava/lang/String;)V
+
     goto :goto_0
 .end method
 
-.method public b()Z
+.method public a()Z
     .locals 3
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/c/a;->f:Landroid/content/Context;
@@ -346,6 +342,30 @@
     move-exception v0
 
     const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public b()V
+    .locals 3
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/c/a;->f:Landroid/content/Context;
+
+    if-nez v0, :cond_0
+
+    :goto_0
+    return-void
+
+    :cond_0
+    new-instance v0, Landroid/speech/tts/TextToSpeech;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/c/a;->f:Landroid/content/Context;
+
+    const-string v2, "com.iflytek.speechcloud"
+
+    invoke-direct {v0, v1, p0, v2}, Landroid/speech/tts/TextToSpeech;-><init>(Landroid/content/Context;Landroid/speech/tts/TextToSpeech$OnInitListener;Ljava/lang/String;)V
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/c/a;->g:Landroid/speech/tts/TextToSpeech;
 
     goto :goto_0
 .end method

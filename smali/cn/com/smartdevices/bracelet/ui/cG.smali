@@ -25,7 +25,7 @@
 .method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
     .locals 0
 
-    invoke-static {p2}, Lcn/com/smartdevices/bracelet/u;->f(Z)V
+    invoke-static {p2}, Lcn/com/smartdevices/bracelet/u;->g(Z)V
 
     return-void
 .end method

@@ -1,156 +1,45 @@
 .class final Lcn/com/smartdevices/bracelet/A;
-.super Lcom/c/a/a/h;
-
-
-# instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/I;
-
-.field final synthetic b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+.super Lcn/com/smartdevices/bracelet/a/b;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/I;Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
+.method constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/A;->a:Lcn/com/smartdevices/bracelet/I;
-
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/A;->b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    invoke-direct {p0}, Lcom/c/a/a/h;-><init>()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/a/b;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
-    .locals 4
+.method public c(Ljava/lang/Object;)V
+    .locals 2
 
-    invoke-static {p3}, Lcn/com/smartdevices/bracelet/z;->a([B)Ljava/lang/String;
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->c(Ljava/lang/Object;)V
 
-    move-result-object v0
+    if-eqz p1, :cond_0
 
-    const-string v1, "WPJ"
+    const-string v0, "Utils"
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    const-string v1, "     sendUserInfo2Mili ok!"
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "onFailure:"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, ",content:"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/view/O;->a()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/A;->a:Lcn/com/smartdevices/bracelet/I;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/A;->a:Lcn/com/smartdevices/bracelet/I;
-
-    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/I;->b()V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void
 .end method
 
-.method public onSuccess(I[Lorg/apache/http/Header;[B)V
-    .locals 4
+.method public d(Ljava/lang/Object;)V
+    .locals 2
 
-    invoke-static {p3}, Lcn/com/smartdevices/bracelet/z;->a([B)Ljava/lang/String;
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->d(Ljava/lang/Object;)V
 
-    move-result-object v0
+    const-string v0, "Utils"
 
-    const-string v1, "Utils"
+    const-string v1, "\n                 sendUserInfo2Mili fail"
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "update Profile onSuccess:"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, ",content:"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/f/f;->b(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/f/g;
-
-    move-result-object v0
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/view/O;->a()V
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/g;->a()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/A;->a:Lcn/com/smartdevices/bracelet/I;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/A;->a:Lcn/com/smartdevices/bracelet/I;
-
-    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/I;->b()V
-
-    :cond_0
-    :goto_0
     return-void
-
-    :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/A;->b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/u;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/A;->a:Lcn/com/smartdevices/bracelet/I;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/A;->a:Lcn/com/smartdevices/bracelet/I;
-
-    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/I;->a()V
-
-    goto :goto_0
 .end method

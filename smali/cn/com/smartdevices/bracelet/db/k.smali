@@ -19,6 +19,8 @@
 
 .field public static final h:Ljava/lang/String; = "expire_time"
 
+.field public static final i:Ljava/lang/String; = "status"
+
 
 # direct methods
 .method public constructor <init>()V

@@ -28,7 +28,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aE;->c_:Landroid/widget/TextSwitcher;
 
-    const v2, 0x7f0c018e
+    const v2, 0x7f0c0190
 
     invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/ui/aE;->getString(I)Ljava/lang/String;
 

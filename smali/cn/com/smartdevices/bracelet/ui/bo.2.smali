@@ -84,7 +84,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bo;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    const v2, 0x7f0c01da
+    const v2, 0x7f0c01dc
 
     const/4 v3, 0x1
 
@@ -129,7 +129,7 @@
 
     const-string v2, "WeatherOK"
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     :cond_2
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bo;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;

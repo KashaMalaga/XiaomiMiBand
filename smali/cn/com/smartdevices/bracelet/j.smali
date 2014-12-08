@@ -303,6 +303,8 @@
 
 .field public static final cq:Ljava/lang/String; = "ref_goal"
 
+.field public static final cr:I = 0x5265c00
+
 .field public static final d:Ljava/lang/String; = "web_type"
 
 .field public static final e:Ljava/lang/String; = "web_url"

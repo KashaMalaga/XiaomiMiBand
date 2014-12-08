@@ -94,7 +94,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ax;->b:Landroid/webkit/WebView;
 
-    const v0, 0x7f0701c6
+    const v0, 0x7f0701d1
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

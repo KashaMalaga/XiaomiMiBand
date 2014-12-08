@@ -371,7 +371,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/df;->s:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
-    const v2, 0x7f0c014e
+    const v2, 0x7f0c0150
 
     invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->getString(I)Ljava/lang/String;
 
@@ -537,7 +537,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/df;->s:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
-    const v3, 0x7f0c01e7
+    const v3, 0x7f0c01e9
 
     invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->getString(I)Ljava/lang/String;
 
@@ -596,7 +596,7 @@
 
     iget v6, p0, Lcn/com/smartdevices/bracelet/ui/df;->g:I
 
-    invoke-static/range {v0 .. v6}, Lcn/com/smartdevices/bracelet/z;->a(Landroid/content/Context;IIILjava/lang/String;II)Ljava/lang/String;
+    invoke-static/range {v0 .. v6}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;IIILjava/lang/String;II)Ljava/lang/String;
 
     move-result-object v0
 
@@ -610,7 +610,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/df;->s:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
-    const v3, 0x7f0c0182
+    const v3, 0x7f0c0184
 
     invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->getString(I)Ljava/lang/String;
 
@@ -660,9 +660,9 @@
 
     iput-object v0, v8, Lcn/com/smartdevices/bracelet/model/ShareData;->contentUnit:Ljava/lang/String;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/c/d;
+    new-instance v0, Lcn/com/smartdevices/bracelet/d/d;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/c/d;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/d/d;-><init>()V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/df;->s:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
@@ -672,7 +672,7 @@
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/ui/df;->a:I
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/c/d;->a(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/d/d;->a(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v0
 

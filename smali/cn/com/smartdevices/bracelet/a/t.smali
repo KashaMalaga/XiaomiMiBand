@@ -169,19 +169,36 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
 
+    if-eqz p1, :cond_0
+
     invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/a/b;->a()V
 
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/t;->m:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+
+    if-nez v0, :cond_1
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/a/t;->l:Ljava/lang/String;
+
+    const-string v1, "Can not obtain GattPeripheral. BleSyncDataTask task stopped."
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_0
+    return-void
+
+    :cond_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/t;->m:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     invoke-virtual {v0, p0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->getActivities(Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ISyncActivitiesCB;)Ljava/util/List;
 
     move-result-object v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_2
 
     sget-object v0, Lcn/com/smartdevices/bracelet/a/t;->l:Ljava/lang/String;
 
-    const-string v1, "getActivities return null,now finish!"
+    const-string v1, "getActivities return null, now finish!"
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -193,10 +210,9 @@
 
     invoke-virtual {p1, v0}, Lcn/com/smartdevices/bracelet/a/b;->a(Ljava/lang/Object;)V
 
-    :goto_0
-    return-void
+    goto :goto_0
 
-    :cond_0
+    :cond_2
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
@@ -210,7 +226,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_5
 
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -275,7 +291,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_4
 
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -321,7 +337,7 @@
 
     move-result-object v1
 
-    if-nez v1, :cond_1
+    if-nez v1, :cond_3
 
     new-instance v1, Lcn/com/smartdevices/bracelet/model/DaySportData;
 
@@ -333,7 +349,7 @@
 
     invoke-virtual {v6, v1}, Lcn/com/smartdevices/bracelet/o;->a(Lcn/com/smartdevices/bracelet/model/DaySportData;)V
 
-    :cond_1
+    :cond_3
     invoke-virtual {v1, v10}, Lcn/com/smartdevices/bracelet/model/DaySportData;->setNeedSync(Z)V
 
     invoke-virtual {v1, v10}, Lcn/com/smartdevices/bracelet/model/DaySportData;->setNeedPostProcess(Z)V
@@ -350,7 +366,7 @@
 
     goto :goto_2
 
-    :cond_2
+    :cond_4
     invoke-virtual {v4}, Ljava/util/Calendar;->getTimeInMillis()J
 
     move-result-wide v0
@@ -359,28 +375,28 @@
 
     goto/16 :goto_1
 
-    :cond_3
-    invoke-static {}, Lcn/com/smartdevices/bracelet/e/a;->a()Lcn/com/smartdevices/bracelet/e/a;
+    :cond_5
+    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->a()Lcn/com/smartdevices/bracelet/f/a;
 
     move-result-object v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/e/a/d;->a()Lcn/com/smartdevices/bracelet/e/a/d;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a/d;->a()Lcn/com/smartdevices/bracelet/f/a/d;
 
     move-result-object v1
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_6
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/a;->h()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/a;->h()Z
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_6
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_6
 
-    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/e/a/d;->b(Ljava/util/List;)V
+    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/f/a/d;->b(Ljava/util/List;)V
 
-    :cond_4
+    :cond_6
     sget-object v0, Lcn/com/smartdevices/bracelet/a/t;->l:Ljava/lang/String;
 
     const-string v1, "analysis...............................before"

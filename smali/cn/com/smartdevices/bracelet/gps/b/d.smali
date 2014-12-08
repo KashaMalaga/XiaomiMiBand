@@ -3,5 +3,5 @@
 
 
 # virtual methods
-.method public abstract a(Lcn/com/smartdevices/bracelet/gps/b/e;)V
+.method public abstract a(II)V
 .end method

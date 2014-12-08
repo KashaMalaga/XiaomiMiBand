@@ -113,7 +113,7 @@
 .method private a(Landroid/view/View;)V
     .locals 2
 
-    const v0, 0x7f0701a0
+    const v0, 0x7f0701ab
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -123,7 +123,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cu;->g:Landroid/widget/TextView;
 
-    const v0, 0x7f0701a1
+    const v0, 0x7f0701ac
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -133,7 +133,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cu;->h:Landroid/widget/TextView;
 
-    const v0, 0x7f0701a2
+    const v0, 0x7f0701ad
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -143,7 +143,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cu;->i:Landroid/widget/TextView;
 
-    const v0, 0x7f0701a3
+    const v0, 0x7f0701ae
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -298,7 +298,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/z;->m(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/y;->m(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -363,7 +363,7 @@
 
     :cond_0
     :goto_0
-    sget-object v0, Lcn/com/smartdevices/bracelet/f/a;->a:Lcom/c/a/a/a;
+    sget-object v0, Lcn/com/smartdevices/bracelet/g/a;->a:Lcom/c/a/a/a;
 
     iget-object v2, p1, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;->a:Ljava/lang/String;
 
@@ -481,7 +481,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/z;->m(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/y;->m(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 

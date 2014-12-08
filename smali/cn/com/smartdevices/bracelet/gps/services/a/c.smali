@@ -3,7 +3,10 @@
 
 
 # virtual methods
-.method public abstract a(Lcn/com/smartdevices/bracelet/gps/model/c;)V
+.method public abstract a(I)V
+.end method
+
+.method public abstract a(Lcn/com/smartdevices/bracelet/gps/model/b;)V
 .end method
 
 .method public abstract a(Ljava/lang/String;)V

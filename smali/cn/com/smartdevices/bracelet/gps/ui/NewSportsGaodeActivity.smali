@@ -55,7 +55,7 @@
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/NewSportsGaodeActivity;->setContentView(I)V
 
-    const v0, 0x7f0700b4
+    const v0, 0x7f0700b3
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/NewSportsGaodeActivity;->findViewById(I)Landroid/view/View;
 
@@ -71,7 +71,7 @@
 
     new-instance v0, Lcn/com/smartdevices/bracelet/gps/b/a;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/gps/b/t;
+    new-instance v1, Lcn/com/smartdevices/bracelet/gps/b/u;
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/NewSportsGaodeActivity;->b:Lcom/amap/api/maps/MapView;
 
@@ -79,9 +79,9 @@
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Lcn/com/smartdevices/bracelet/gps/b/t;-><init>(Lcom/amap/api/maps/AMap;)V
+    invoke-direct {v1, v2}, Lcn/com/smartdevices/bracelet/gps/b/u;-><init>(Lcom/amap/api/maps/AMap;)V
 
-    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/gps/b/a;-><init>(Landroid/content/Context;Lcn/com/smartdevices/bracelet/gps/b/t;)V
+    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/gps/b/a;-><init>(Landroid/content/Context;Lcn/com/smartdevices/bracelet/gps/b/u;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/NewSportsGaodeActivity;->a:Lcn/com/smartdevices/bracelet/gps/b/a;
 
@@ -99,7 +99,7 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/b/a;->c(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/b/a;->d(I)V
 
     const-string v0, "Run"
 
@@ -204,7 +204,7 @@
     :try_start_0
     iget-object v7, p0, Lcn/com/smartdevices/bracelet/gps/ui/NewSportsGaodeActivity;->a:Lcn/com/smartdevices/bracelet/gps/b/a;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/model/c;
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/model/b;
 
     const-string v1, ","
 
@@ -236,9 +236,9 @@
 
     const-wide/16 v5, 0x0
 
-    invoke-direct/range {v0 .. v6}, Lcn/com/smartdevices/bracelet/gps/model/c;-><init>(DDD)V
+    invoke-direct/range {v0 .. v6}, Lcn/com/smartdevices/bracelet/gps/model/b;-><init>(DDD)V
 
-    invoke-virtual {v7, v0}, Lcn/com/smartdevices/bracelet/gps/b/a;->c(Lcn/com/smartdevices/bracelet/gps/model/c;)V
+    invoke-virtual {v7, v0}, Lcn/com/smartdevices/bracelet/gps/b/a;->c(Lcn/com/smartdevices/bracelet/gps/model/b;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

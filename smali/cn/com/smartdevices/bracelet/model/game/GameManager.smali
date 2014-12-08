@@ -357,7 +357,7 @@
 
     invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/model/game/GameManager$1;-><init>(Lcn/com/smartdevices/bracelet/model/game/GameManager;)V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/f/e;->a(Lcom/c/a/a/h;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/e;->a(Lcom/c/a/a/h;)V
 
     const-string v0, "GameManager"
 
@@ -395,7 +395,7 @@
 
     invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/model/game/GameManager$2;-><init>(Lcn/com/smartdevices/bracelet/model/game/GameManager;)V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/f/e;->b(Lcom/c/a/a/h;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/e;->b(Lcom/c/a/a/h;)V
 
     return-void
 .end method
@@ -1124,13 +1124,13 @@
     goto/16 :goto_1
 
     :cond_2
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->M()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->N()Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/u;->c(Z)V
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/u;->d(Z)V
 
     invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;->getConfigInfo()Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
 

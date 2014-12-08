@@ -96,7 +96,7 @@
 .method private a(Landroid/view/View;)V
     .locals 14
 
-    const v0, 0x7f070139
+    const v0, 0x7f070147
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -106,7 +106,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/V;->b:Landroid/widget/TextView;
 
-    const v0, 0x7f07013a
+    const v0, 0x7f070148
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -116,7 +116,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/V;->c:Landroid/widget/TextView;
 
-    const v0, 0x7f07013b
+    const v0, 0x7f070149
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -126,7 +126,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/V;->f:Lkankan/wheel/widget/WheelView;
 
-    const v0, 0x7f07013c
+    const v0, 0x7f07014a
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -282,13 +282,13 @@
 
     move-result-object v1
 
-    const v2, 0x7f0200ce
+    const v2, 0x7f0200d6
 
     invoke-virtual {v1, v2}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
     move-result-object v1
 
-    const v2, 0x7f0c00d8
+    const v2, 0x7f0c00d9
 
     invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/ui/V;->getString(I)Ljava/lang/String;
 
@@ -372,13 +372,13 @@
 
     move-result-object v1
 
-    const v2, 0x7f0200ce
+    const v2, 0x7f0200d6
 
     invoke-virtual {v1, v2}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
     move-result-object v1
 
-    const v2, 0x7f0c00ce
+    const v2, 0x7f0c00cf
 
     invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/ui/V;->getString(I)Ljava/lang/String;
 
@@ -411,7 +411,7 @@
     :sswitch_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/V;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f0c0118
+    const v1, 0x7f0c011a
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -420,7 +420,7 @@
     :sswitch_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/V;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f0c0119
+    const v1, 0x7f0c011b
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -680,7 +680,7 @@
 
     const-string v2, "DynamicDetailModifySleepTime"
 
-    invoke-static {v0, v2, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/util/HashMap;)V
+    invoke-static {v0, v2, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/util/HashMap;)V
 
     return-void
 
@@ -1044,7 +1044,7 @@
 
     const-string v2, "DynamicDetailModifySleepTime"
 
-    invoke-static {v0, v2, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/util/HashMap;)V
+    invoke-static {v0, v2, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/util/HashMap;)V
 
     return-void
 
@@ -1254,7 +1254,7 @@
 
     const-string v2, "DynamicDetailModifySleepTime"
 
-    invoke-static {v0, v2, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/util/HashMap;)V
+    invoke-static {v0, v2, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/util/HashMap;)V
 
     :cond_3
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/V;->dismiss()V
@@ -1322,7 +1322,7 @@
 
     :cond_0
     :goto_0
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;)V
 
     return-void
 
@@ -1355,7 +1355,7 @@
 
     :cond_0
     :goto_0
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
 
     return-void
 

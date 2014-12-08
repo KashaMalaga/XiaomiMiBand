@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/widget/ExpandableListView$OnGroupClickListener;
 
 
 # instance fields
@@ -22,12 +22,10 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
+.method public onGroupClick(Landroid/widget/ExpandableListView;Landroid/view/View;IJ)Z
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/p;->a:Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->finish()V
-
-    return-void
+    return v0
 .end method

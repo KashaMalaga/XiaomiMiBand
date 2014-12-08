@@ -5,6 +5,7 @@
         <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
             <RelativeLayout android:background="@color/bg_color_blue" android:layout_width="fill_parent" android:layout_height="350.0dip">
                 <TextView android:id="@id/home_back" android:text="@string/about" style="@style/BackButton" />
+                <TextView android:id="@id/enable_hidden_feature" android:clickable="true" android:layout_width="80.0dip" android:layout_height="@dimen/action_bar_h" android:layout_alignTop="@id/home_back" android:layout_alignBottom="@id/home_back" android:layout_alignParentRight="true" />
                 <ImageView android:id="@id/logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="120.0dip" android:src="@drawable/ic_about_logo" android:layout_centerHorizontal="true" />
                 <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:minWidth="85.0dip" android:layout_below="@id/logo" android:layout_centerHorizontal="true">
                     <LinearLayout android:id="@id/setting_about_bracelet_id" android:layout_width="fill_parent" android:layout_height="wrap_content">

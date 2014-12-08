@@ -65,6 +65,7 @@
     <string name="unit_hour">小时</string>
     <string name="unit_min">分钟</string>
     <string name="unit_min_short">分</string>
+    <string name="unit_sec_short">秒</string>
     <string name="upgrade_tip">更新提示</string>
     <string name="hot_des">热量</string>
     <string name="noti_bracelet_low_battery_title">手环电量低</string>
@@ -269,6 +270,7 @@
     <string name="please_knock_bracelet">请敲击几下手环来绑定</string>
     <string name="dynamic_title_sleep">昨晚睡眠</string>
     <string name="dynamic_title_step">今日活动</string>
+    <string name="dynamic_title_weight">体重</string>
     <string name="dynamic_step_tip">当前总步数</string>
     <string name="dynamic_sleep_tip">昨晚共睡眠</string>
     <string name="dynamic_sleep_deep_title">深度睡眠%s</string>
@@ -650,12 +652,13 @@
     <string name="sport_share">立即分享</string>
     <string name="sport_running_no_gps">打开GPS才能准确记录你的运动轨迹，是否打开？</string>
     <string name="sport_running_set_speed">速度提醒</string>
-    <string name="sport_running_speed">实时速度</string>
-    <string name="sport_running_real_time_pace">实时配速</string>
+    <string name="sport_running_speed">时速</string>
+    <string name="sport_running_speed_with_unit">时速(公里/时)</string>
+    <string name="sport_running_real_time_pace">配速(分/公里)</string>
     <string name="sport_running_pace">平均配速</string>
     <string name="sport_running_set_goal">跑步目标</string>
     <string name="sport_running_set_dist">距离提醒</string>
-    <string name="sport_running_speed_detail">%.0f公里/时</string>
+    <string name="sport_running_speed_detail">%.2f公里/时</string>
     <string name="sport_running_pace_detail">%s/公里</string>
     <string name="sport_running_distance_detail">%.2f公里</string>
     <string name="sport_running_distance_desc">公里</string>
@@ -682,9 +685,12 @@
     <string name="sport_running_history_no_data">暂无数据</string>
     <string name="sport_running_cost_cal">%.1f千卡</string>
     <string name="sport_running_prepare_map">正在准备地图数据，请稍候……</string>
-    <string name="sport_running_prompt_per_kilometer" formatted="false">您已经跑了%s公里，用时%s，最近一公里用时%s。%s</string>
+    <string name="sport_running_prompt_per_kilometer" formatted="false">您已经跑了%s公里，用时%s，最近一公里用时%s</string>
     <string name="sport_running_prompt_great">好棒！！</string>
     <string name="sport_running_prompt_come_on">加油加油！！</string>
+    <string name="sport_running_kilometers">公里</string>
+    <string name="sport_running_per_kilometers">/公里</string>
+    <string name="sport_running_kilometers_per_hour">公里/时</string>
     <string name="sport_ranking_desc_poor">您的成绩在所有%s用户中垫底，加油啊！</string>
     <string name="sport_ranking_desc_normal" formatted="false">您打败了全国 &lt;b>%s&lt;/b> 的%s用户！</string>
     <string name="sport_ranking_desc_great">您已经到了独孤求败的境界！</string>
@@ -699,6 +705,8 @@
     <string name="state_deauthorization_error">取消授权失败</string>
     <string name="state_authorization_error">授权失败</string>
     <string name="state_authorization_success">授权成功</string>
+    <string name="enable_hidden_feature">隱藏功能已开启</string>
+    <string name="disable_hidden_feature">隱藏功能已关闭</string>
     <string name="congrats">恭喜</string>
     <string name="bind_qq_health_tip_init">登录后继续完成绑定QQ健康</string>
     <string name="bind_qq_health_tip_another_qq">需要切换至手机QQ当前登录的账号, 才能在健康看到数据</string>

@@ -57,11 +57,11 @@
 
     if-eqz v1, :cond_0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->Z()Lcn/com/smartdevices/bracelet/d/h;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->aa()Lcn/com/smartdevices/bracelet/e/h;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/d/h;->a()I
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/e/h;->a()I
 
     move-result v2
 
@@ -89,15 +89,15 @@
 
     move-result v0
 
-    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/d/h;->a(I)V
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/e/h;->a(I)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/d/a;->a()Lcn/com/smartdevices/bracelet/d/a;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/e/a;->a()Lcn/com/smartdevices/bracelet/e/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/d/a;->a(Lcn/com/smartdevices/bracelet/d/h;)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/e/a;->a(Lcn/com/smartdevices/bracelet/e/h;)V
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/u;->a(Lcn/com/smartdevices/bracelet/d/h;)V
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/u;->a(Lcn/com/smartdevices/bracelet/e/h;)V
 
     :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/v;->c:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;

@@ -48,7 +48,7 @@
 
     move-result-object v3
 
-    const v0, 0x7f070146
+    const v0, 0x7f070154
 
     invoke-virtual {v3, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -56,7 +56,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v0, 0x7f070144
+    const v0, 0x7f070152
 
     invoke-virtual {v3, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -64,7 +64,7 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    const v1, 0x7f070145
+    const v1, 0x7f070153
 
     invoke-virtual {v3, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

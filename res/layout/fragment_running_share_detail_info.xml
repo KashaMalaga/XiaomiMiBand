@@ -1,28 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:columnCount="3"
+<GridLayout android:background="@color/separator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="32.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="10.0dip" android:columnCount="2"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="@dimen/dynamic_info_width" android:layout_height="@dimen/dynamic_info_height">
-        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#99000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_running_distance" />
-        <TextView android:textSize="@dimen/dynamic_info_value" android:textColor="#cc000000" android:id="@id/info_distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:singleLine="true" android:fontFamily="miui" />
+    <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:background="@color/main_ui_bg" android:layout_width="@dimen/sport_running_detail_wide_width" android:layout_height="@dimen/sport_running_detail_height">
+        <TextView android:textSize="42.0sp" android:textColor="@color/running_main_text" android:ellipsize="end" android:id="@id/info_distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.00" android:singleLine="true" android:fontFamily="miui-bold" />
+        <TextView android:textSize="20.0sp" android:textColor="@color/running_main_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:text="@string/sport_running_kilometers" />
     </LinearLayout>
-    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="@dimen/dynamic_info_width" android:layout_height="@dimen/dynamic_info_height">
-        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#99000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_running_time_desc" />
-        <TextView android:textSize="@dimen/dynamic_info_value" android:textColor="#cc000000" android:id="@id/info_time_cost" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:fontFamily="miui" />
+    <LinearLayout android:gravity="bottom" android:orientation="vertical" android:background="@color/main_ui_bg" android:paddingLeft="30.0dip" android:layout_width="@dimen/dynamic_info_width" android:layout_height="@dimen/sport_running_detail_height" android:layout_marginLeft="1.0px">
+        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="@color/running_minor_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_running_time_desc" />
+        <TextView android:textSize="@dimen/dynamic_info_value" android:textColor="@color/running_sub_text" android:id="@id/info_time_cost" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:fontFamily="miui-bold" />
     </LinearLayout>
-    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="@dimen/dynamic_info_width" android:layout_height="@dimen/dynamic_info_height">
-        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#99000000" android:id="@id/info_sleep_end_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_running_pace" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
-        <TextView android:textSize="@dimen/dynamic_info_value" android:textColor="#cc000000" android:id="@id/info_pace" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:fontFamily="miui" />
+    <TextView android:background="@color/main_ui_bg" android:layout_width="@dimen/sport_running_detail_wide_width" android:layout_height="20.0dip" />
+    <TextView android:background="@color/main_ui_bg" android:layout_width="@dimen/dynamic_info_width" android:layout_height="20.0dip" android:layout_marginLeft="1.0px" />
+    <LinearLayout android:gravity="bottom" android:orientation="vertical" android:background="@color/main_ui_bg" android:layout_width="@dimen/sport_running_detail_wide_width" android:layout_height="@dimen/sport_running_detail_height">
+        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="@color/running_minor_text" android:id="@id/info_sleep_end_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_running_pace" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/dynamic_info_value" android:textColor="@color/running_sub_text" android:id="@id/info_pace" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:fontFamily="miui-bold" />
     </LinearLayout>
-    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="@dimen/dynamic_info_width" android:layout_height="@dimen/dynamic_info_height">
-        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#99000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_running_average_speed" />
-        <TextView android:textSize="@dimen/dynamic_info_value" android:textColor="#cc000000" android:id="@id/info_average_speed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:fontFamily="miui" />
+    <LinearLayout android:gravity="bottom" android:orientation="vertical" android:background="@color/main_ui_bg" android:paddingLeft="30.0dip" android:layout_width="@dimen/dynamic_info_width" android:layout_height="@dimen/sport_running_detail_height" android:layout_marginLeft="1.0px">
+        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="@color/running_minor_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_running_start_time" />
+        <TextView android:textSize="@dimen/dynamic_info_value" android:textColor="@color/running_sub_text" android:id="@id/info_start_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:fontFamily="miui-bold" />
     </LinearLayout>
-    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="@dimen/dynamic_info_width" android:layout_height="@dimen/dynamic_info_height">
-        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#99000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_running_start_time" />
-        <TextView android:textSize="@dimen/dynamic_info_value" android:textColor="#cc000000" android:id="@id/info_start_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:fontFamily="miui" />
+    <TextView android:background="@color/main_ui_bg" android:layout_width="@dimen/sport_running_detail_wide_width" android:layout_height="20.0dip" />
+    <TextView android:background="@color/main_ui_bg" android:layout_width="@dimen/dynamic_info_width" android:layout_height="20.0dip" android:layout_marginLeft="1.0px" />
+    <LinearLayout android:gravity="bottom" android:orientation="vertical" android:background="@color/main_ui_bg" android:layout_width="@dimen/sport_running_detail_wide_width" android:layout_height="@dimen/sport_running_detail_height">
+        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="@color/running_minor_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_running_average_speed" />
+        <TextView android:textSize="@dimen/dynamic_info_value" android:textColor="@color/running_sub_text" android:id="@id/info_average_speed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:fontFamily="miui-bold" />
     </LinearLayout>
-    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="@dimen/dynamic_info_width" android:layout_height="@dimen/dynamic_info_height">
-        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#99000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_running_end_time" />
-        <TextView android:textSize="@dimen/dynamic_info_value" android:textColor="#cc000000" android:id="@id/info_end_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:fontFamily="miui" />
+    <LinearLayout android:gravity="bottom" android:orientation="vertical" android:background="@color/main_ui_bg" android:paddingLeft="30.0dip" android:layout_width="@dimen/dynamic_info_width" android:layout_height="@dimen/sport_running_detail_height" android:layout_marginLeft="1.0px">
+        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="@color/running_minor_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_running_step" />
+        <TextView android:textSize="@dimen/dynamic_info_value" android:textColor="@color/running_sub_text" android:id="@id/info_step" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:fontFamily="miui-bold" />
     </LinearLayout>
 </GridLayout>

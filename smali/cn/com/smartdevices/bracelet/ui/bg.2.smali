@@ -35,7 +35,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bg;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    const v2, 0x7f0c01a8
+    const v2, 0x7f0c01aa
 
     invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->getString(I)Ljava/lang/String;
 
@@ -43,7 +43,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/bg;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    const v3, 0x7f0c01a9
+    const v3, 0x7f0c01ab
 
     invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->getString(I)Ljava/lang/String;
 

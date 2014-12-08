@@ -70,7 +70,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f030086
+    const v1, 0x7f030088
 
     const/4 v2, 0x0
 
@@ -79,7 +79,7 @@
     move-result-object p2
 
     :cond_0
-    const v0, 0x7f070264
+    const v0, 0x7f07027c
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -89,7 +89,7 @@
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    const v0, 0x7f070265
+    const v0, 0x7f07027d
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

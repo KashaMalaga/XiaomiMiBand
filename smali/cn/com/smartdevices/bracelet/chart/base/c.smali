@@ -41,12 +41,17 @@
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/chart/base/c;->e:Z
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/c;->n:Lcn/com/smartdevices/bracelet/chart/base/r;
+
+    if-nez v0, :cond_1
+
+    :cond_0
     :goto_0
     return-void
 
-    :cond_0
+    :cond_1
     iget v0, p2, Landroid/graphics/RectF;->left:F
 
     invoke-virtual {p2}, Landroid/graphics/RectF;->width()F
@@ -107,13 +112,18 @@
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/chart/base/c;->e:Z
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/c;->n:Lcn/com/smartdevices/bracelet/chart/base/r;
+
+    if-nez v0, :cond_1
+
+    :cond_0
     :goto_0
     return-void
 
-    :cond_0
-    if-eqz p4, :cond_1
+    :cond_1
+    if-eqz p4, :cond_2
 
     iget v0, p2, Landroid/graphics/RectF;->left:F
 
@@ -167,7 +177,7 @@
 
     goto :goto_0
 
-    :cond_1
+    :cond_2
     invoke-virtual {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/chart/base/c;->a(Landroid/graphics/Canvas;Landroid/graphics/RectF;F)V
 
     goto :goto_0

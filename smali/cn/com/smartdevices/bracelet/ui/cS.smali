@@ -210,7 +210,7 @@
 .end method
 
 .method private a(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
-    .locals 1
+    .locals 6
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/cS;->U:Z
 
@@ -225,17 +225,25 @@
 
     invoke-static {v0}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
-    move-result-object v0
+    move-result-object v1
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
-    invoke-static {p1, v0, p2, p3}, Lcn/com/smartdevices/bracelet/w;->a(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
+    const/16 v4, 0x2d0
+
+    const/16 v5, 0x500
+
+    move-object v0, p1
+
+    move v2, p2
+
+    move v3, p3
+
+    invoke-static/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/c/b;->a(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;IIII)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/cS;->g()V
+    invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
 
     goto :goto_0
 .end method
@@ -325,7 +333,7 @@
         }
     .end annotation
 
-    const v0, 0x7f0700da
+    const v0, 0x7f0700e8
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -339,7 +347,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700de
+    const v0, 0x7f0700ec
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -353,7 +361,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700dd
+    const v0, 0x7f0700eb
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -367,7 +375,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700dc
+    const v0, 0x7f0700ea
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -381,7 +389,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700d9
+    const v0, 0x7f0700e7
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -395,7 +403,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700db
+    const v0, 0x7f0700e9
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -409,7 +417,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700df
+    const v0, 0x7f0700ed
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -423,7 +431,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700e0
+    const v0, 0x7f0700ee
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -541,7 +549,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0c019d
+    const v1, 0x7f0c019f
 
     const/4 v2, 0x0
 
@@ -565,107 +573,122 @@
 .end method
 
 .method private a(Ljava/lang/String;Z)Z
-    .locals 5
+    .locals 6
 
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cS;->m:Lcom/tencent/mm/sdk/openapi/IWXAPI;
-
-    invoke-interface {v1}, Lcom/tencent/mm/sdk/openapi/IWXAPI;->isWXAppInstalled()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/cS;->getActivity()Landroid/app/Activity;
-
-    move-result-object v1
-
-    const v2, 0x7f0c019d
-
-    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/widget/Toast;->show()V
-
-    :goto_0
-    return v0
-
-    :cond_0
-    new-instance v1, Lcom/tencent/mm/sdk/modelmsg/WXImageObject;
-
-    invoke-direct {v1}, Lcom/tencent/mm/sdk/modelmsg/WXImageObject;-><init>()V
-
-    invoke-virtual {v1, p1}, Lcom/tencent/mm/sdk/modelmsg/WXImageObject;->setImagePath(Ljava/lang/String;)V
-
-    new-instance v2, Landroid/graphics/BitmapFactory$Options;
-
-    invoke-direct {v2}, Landroid/graphics/BitmapFactory$Options;-><init>()V
-
-    const/4 v3, 0x4
-
-    iput v3, v2, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
-
-    invoke-static {p1, v2}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
-
-    move-result-object v2
-
-    iput-object v2, p0, Lcn/com/smartdevices/bracelet/ui/cS;->O:Landroid/graphics/Bitmap;
-
-    new-instance v2, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
-
-    invoke-direct {v2}, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;-><init>()V
-
-    iput-object v1, v2, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->mediaObject:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage$IMediaObject;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cS;->o:Ljava/lang/String;
-
-    iput-object v1, v2, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->title:Ljava/lang/String;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cS;->p:Ljava/lang/String;
-
-    iput-object v1, v2, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->description:Ljava/lang/String;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cS;->O:Landroid/graphics/Bitmap;
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cS;->O:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->setThumbImage(Landroid/graphics/Bitmap;)V
-
-    :cond_1
-    new-instance v1, Lcom/tencent/mm/sdk/modelmsg/SendMessageToWX$Req;
-
-    invoke-direct {v1}, Lcom/tencent/mm/sdk/modelmsg/SendMessageToWX$Req;-><init>()V
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v3
-
-    invoke-static {v3, v4}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
-
-    move-result-object v3
-
-    iput-object v3, v1, Lcom/tencent/mm/sdk/modelmsg/SendMessageToWX$Req;->transaction:Ljava/lang/String;
-
-    iput-object v2, v1, Lcom/tencent/mm/sdk/modelmsg/SendMessageToWX$Req;->message:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
-
-    if-eqz p2, :cond_2
+    const/16 v4, 0x1e0
 
     const/4 v0, 0x1
 
-    :cond_2
-    iput v0, v1, Lcom/tencent/mm/sdk/modelmsg/SendMessageToWX$Req;->scene:I
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/cS;->m:Lcom/tencent/mm/sdk/openapi/IWXAPI;
+
+    invoke-interface {v2}, Lcom/tencent/mm/sdk/openapi/IWXAPI;->isWXAppInstalled()Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/cS;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    const v2, 0x7f0c019f
+
+    invoke-static {v0, v2, v1}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    :goto_0
+    return v1
+
+    :cond_0
+    new-instance v2, Lcom/tencent/mm/sdk/modelmsg/WXImageObject;
+
+    invoke-direct {v2}, Lcom/tencent/mm/sdk/modelmsg/WXImageObject;-><init>()V
+
+    invoke-virtual {v2, p1}, Lcom/tencent/mm/sdk/modelmsg/WXImageObject;->setImagePath(Ljava/lang/String;)V
+
+    new-instance v3, Landroid/graphics/BitmapFactory$Options;
+
+    invoke-direct {v3}, Landroid/graphics/BitmapFactory$Options;-><init>()V
+
+    iput-boolean v0, v3, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
+
+    invoke-static {p1, v3}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+
+    invoke-static {v3, v4, v4}, Lcn/com/smartdevices/bracelet/c/b;->a(Landroid/graphics/BitmapFactory$Options;II)I
+
+    move-result v4
+
+    iput v4, v3, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
+
+    iput-boolean v1, v3, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
+
+    invoke-static {p1, v3}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+
+    move-result-object v3
+
+    iput-object v3, p0, Lcn/com/smartdevices/bracelet/ui/cS;->O:Landroid/graphics/Bitmap;
+
+    new-instance v3, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+
+    invoke-direct {v3}, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;-><init>()V
+
+    iput-object v2, v3, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->mediaObject:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage$IMediaObject;
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/cS;->o:Ljava/lang/String;
+
+    iput-object v2, v3, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->title:Ljava/lang/String;
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/cS;->p:Ljava/lang/String;
+
+    iput-object v2, v3, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->description:Ljava/lang/String;
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/cS;->O:Landroid/graphics/Bitmap;
+
+    if-eqz v2, :cond_1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/cS;->O:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v3, v2}, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->setThumbImage(Landroid/graphics/Bitmap;)V
+
+    :cond_1
+    new-instance v2, Lcom/tencent/mm/sdk/modelmsg/SendMessageToWX$Req;
+
+    invoke-direct {v2}, Lcom/tencent/mm/sdk/modelmsg/SendMessageToWX$Req;-><init>()V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v4
+
+    invoke-static {v4, v5}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object v4
+
+    iput-object v4, v2, Lcom/tencent/mm/sdk/modelmsg/SendMessageToWX$Req;->transaction:Ljava/lang/String;
+
+    iput-object v3, v2, Lcom/tencent/mm/sdk/modelmsg/SendMessageToWX$Req;->message:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+
+    if-eqz p2, :cond_2
+
+    :goto_1
+    iput v0, v2, Lcom/tencent/mm/sdk/modelmsg/SendMessageToWX$Req;->scene:I
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cS;->m:Lcom/tencent/mm/sdk/openapi/IWXAPI;
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/sdk/openapi/IWXAPI;->sendReq(Lcom/tencent/mm/sdk/modelbase/BaseReq;)Z
+    invoke-interface {v0, v2}, Lcom/tencent/mm/sdk/openapi/IWXAPI;->sendReq(Lcom/tencent/mm/sdk/modelbase/BaseReq;)Z
 
-    move-result v0
+    move-result v1
 
     goto :goto_0
+
+    :cond_2
+    move v0, v1
+
+    goto :goto_1
 .end method
 
 .method static synthetic b(Lcn/com/smartdevices/bracelet/ui/cS;)Ljava/lang/String;
@@ -695,7 +718,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/cS;->S:Ljava/lang/String;
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -918,13 +941,13 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cS;->e:Landroid/widget/ImageButton;
 
-    const v1, 0x7f0200b4
+    const v1, 0x7f0200bc
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setImageResource(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cS;->d:Landroid/widget/ImageButton;
 
-    const v1, 0x7f0200bd
+    const v1, 0x7f0200c5
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setImageResource(I)V
 
@@ -941,7 +964,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cS;->g:Landroid/widget/ImageButton;
 
-    const v1, 0x7f0200b6
+    const v1, 0x7f0200be
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setImageResource(I)V
 
@@ -958,7 +981,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cS;->f:Landroid/widget/ImageButton;
 
-    const v1, 0x7f0200b8
+    const v1, 0x7f0200c0
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setImageResource(I)V
 
@@ -975,7 +998,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cS;->h:Landroid/widget/ImageButton;
 
-    const v1, 0x7f0200bb
+    const v1, 0x7f0200c3
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setImageResource(I)V
 
@@ -992,7 +1015,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cS;->i:Landroid/widget/ImageButton;
 
-    const v1, 0x7f0200b2
+    const v1, 0x7f0200ba
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setImageResource(I)V
 
@@ -1013,7 +1036,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cS;->j:Landroid/widget/ImageButton;
 
-    const v1, 0x7f0200b0
+    const v1, 0x7f0200b8
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setImageResource(I)V
 
@@ -1030,7 +1053,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cS;->k:Landroid/widget/ImageButton;
 
-    const v1, 0x7f0200ae
+    const v1, 0x7f0200b6
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setImageResource(I)V
 
@@ -1398,7 +1421,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cS;->P:Ljava/lang/String;
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/z;->a(Ljava/lang/String;Landroid/graphics/Bitmap;)Z
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/y;->a(Ljava/lang/String;Landroid/graphics/Bitmap;)Z
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cS;->T:Landroid/view/View;
 
@@ -1537,7 +1560,7 @@
 
     if-ne v1, v2, :cond_0
 
-    const v1, 0x7f0c019d
+    const v1, 0x7f0c019f
 
     invoke-static {v0, v1, v3}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -1553,7 +1576,7 @@
 
     if-ne v1, v2, :cond_1
 
-    const v1, 0x7f0c01d1
+    const v1, 0x7f0c01d3
 
     invoke-static {v0, v1, v3}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -1891,7 +1914,7 @@
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cS;->p:Ljava/lang/String;
 
     :cond_2
-    const v0, 0x7f0c0089
+    const v0, 0x7f0c008a
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/cS;->getText(I)Ljava/lang/CharSequence;
 
@@ -1928,7 +1951,7 @@
     if-ne v0, v1, :cond_6
 
     :cond_3
-    const v0, 0x7f0c01c8
+    const v0, 0x7f0c01ca
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/cS;->getText(I)Ljava/lang/CharSequence;
 
@@ -1942,7 +1965,7 @@
 
     :cond_4
     :goto_0
-    const v0, 0x7f0c01ca
+    const v0, 0x7f0c01cc
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/cS;->getText(I)Ljava/lang/CharSequence;
 
@@ -1960,7 +1983,7 @@
 
     if-ne v0, v5, :cond_5
 
-    const v0, 0x7f0c01cb
+    const v0, 0x7f0c01cd
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/cS;->getText(I)Ljava/lang/CharSequence;
 
@@ -1984,7 +2007,7 @@
 
     if-eq v0, v5, :cond_4
 
-    const v0, 0x7f0c01c9
+    const v0, 0x7f0c01cb
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/cS;->getText(I)Ljava/lang/CharSequence;
 
@@ -2058,7 +2081,7 @@
 
     const-string v2, "ShareTo"
 
-    invoke-static {v0, v2, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/util/HashMap;)V
+    invoke-static {v0, v2, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/util/HashMap;)V
 
     :cond_0
     return-void
@@ -2143,7 +2166,7 @@
     nop
 
     :pswitch_data_0
-    .packed-switch 0x7f0700d9
+    .packed-switch 0x7f0700e7
         :pswitch_4
         :pswitch_0
         :pswitch_5

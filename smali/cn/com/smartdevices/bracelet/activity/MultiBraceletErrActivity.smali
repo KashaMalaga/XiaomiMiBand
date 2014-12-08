@@ -89,7 +89,7 @@
 
     const-string v0, "StartUpViewBraceletList"
 
-    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -106,12 +106,12 @@
 
     const-string v0, "StartUpNotBindBracelet"
 
-    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_0
 
     :sswitch_3
-    invoke-static {p0, v2}, Lcn/com/smartdevices/bracelet/w;->a(Landroid/app/Activity;Z)V
+    invoke-static {p0, v2}, Lcn/com/smartdevices/bracelet/c/b;->a(Landroid/app/Activity;Z)V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/activity/MultiBraceletErrActivity;->getApplicationContext()Landroid/content/Context;
 
@@ -121,7 +121,7 @@
 
     const-string v2, "fail"
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -129,10 +129,10 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f0700fb -> :sswitch_2
-        0x7f070197 -> :sswitch_3
-        0x7f0701e5 -> :sswitch_1
-        0x7f0701e6 -> :sswitch_0
+        0x7f070109 -> :sswitch_2
+        0x7f0701a2 -> :sswitch_3
+        0x7f0701f0 -> :sswitch_1
+        0x7f0701f1 -> :sswitch_0
     .end sparse-switch
 .end method
 
@@ -181,7 +181,7 @@
 
     if-lez v1, :cond_0
 
-    const v0, 0x7f0701e4
+    const v0, 0x7f0701ef
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/MultiBraceletErrActivity;->findViewById(I)Landroid/view/View;
 
@@ -192,7 +192,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     :cond_0
-    const v0, 0x7f0701e6
+    const v0, 0x7f0701f1
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/MultiBraceletErrActivity;->findViewById(I)Landroid/view/View;
 
@@ -200,7 +200,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0701e5
+    const v0, 0x7f0701f0
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/MultiBraceletErrActivity;->findViewById(I)Landroid/view/View;
 
@@ -208,7 +208,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070197
+    const v0, 0x7f0701a2
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/MultiBraceletErrActivity;->findViewById(I)Landroid/view/View;
 
@@ -216,7 +216,7 @@
 
     invoke-virtual {v1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700fb
+    const v0, 0x7f070109
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/MultiBraceletErrActivity;->findViewById(I)Landroid/view/View;
 
@@ -234,7 +234,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0c013d
+    const v3, 0x7f0c013f
 
     invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/activity/MultiBraceletErrActivity;->getString(I)Ljava/lang/String;
 
@@ -276,9 +276,9 @@
 
     const-string v0, "PageBraceletConnectFailed"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->b(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -290,9 +290,9 @@
 
     const-string v0, "PageBraceletConnectFailed"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;)V
 
     return-void
 .end method

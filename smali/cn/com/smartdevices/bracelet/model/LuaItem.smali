@@ -150,7 +150,7 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->g()Lcom/b/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->g()Lcom/b/a/k;
 
     move-result-object v0
 

@@ -141,27 +141,8 @@
 .end method
 
 .method public onScroll(Landroid/widget/AbsListView;III)V
-    .locals 2
+    .locals 0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/MyListView;->parentPanelLayout:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/MyListView;->parentPanelLayout:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->isCollapsed()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/MyListView;->parentPanelLayout:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->setSlidingEnabled(Z)V
-
-    :cond_0
     return-void
 .end method
 

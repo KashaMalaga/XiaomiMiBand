@@ -211,7 +211,7 @@
     :goto_2
     if-nez v1, :cond_4
 
-    const v0, 0x7f0c00e5
+    const v0, 0x7f0c00e6
 
     invoke-static {p0, v0, v8}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -327,7 +327,7 @@
 
     if-nez v0, :cond_0
 
-    const v0, 0x7f0c00e5
+    const v0, 0x7f0c00e6
 
     const/4 v1, 0x1
 
@@ -352,7 +352,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/z;->m(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/y;->m(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -420,7 +420,7 @@
     goto :goto_1
 
     :pswitch_data_0
-    .packed-switch 0x7f070103
+    .packed-switch 0x7f070111
         :pswitch_1
         :pswitch_0
         :pswitch_2
@@ -452,7 +452,7 @@
 
     invoke-virtual {p0, v0, v1}, Lcn/com/smartdevices/bracelet/ui/CropImageActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    const v0, 0x7f0700fe
+    const v0, 0x7f07010c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/CropImageActivity;->findViewById(I)Landroid/view/View;
 
@@ -462,7 +462,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/CropImageActivity;->d:Lcom/edmodo/cropper/CropImageView;
 
-    const v0, 0x7f070105
+    const v0, 0x7f070113
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/CropImageActivity;->findViewById(I)Landroid/view/View;
 
@@ -474,7 +474,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070103
+    const v0, 0x7f070111
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/CropImageActivity;->findViewById(I)Landroid/view/View;
 
@@ -496,7 +496,7 @@
 
     const-string v0, "PagePersonInfoAvatarCrop"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -508,7 +508,7 @@
 
     const-string v0, "PagePersonInfoAvatarCrop"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
 
     return-void
 .end method

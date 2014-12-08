@@ -122,7 +122,7 @@
 
     move-result-object v1
 
-    invoke-static {p0, v1}, Lcn/com/smartdevices/bracelet/y;->d(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Landroid/content/Context;Ljava/lang/String;)V
 
     :cond_0
     return-object v0
@@ -144,7 +144,7 @@
 
     const/4 v0, 0x0
 
-    const v12, 0x7f0c0182
+    const v12, 0x7f0c0184
 
     const v11, 0x7f0c003a
 
@@ -328,7 +328,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v3, 0x7f0c01e7
+    const v3, 0x7f0c01e9
 
     invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->getString(I)Ljava/lang/String;
 
@@ -386,7 +386,7 @@
 
     move-object v0, p0
 
-    invoke-static/range {v0 .. v6}, Lcn/com/smartdevices/bracelet/z;->a(Landroid/content/Context;IIILjava/lang/String;II)Ljava/lang/String;
+    invoke-static/range {v0 .. v6}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;IIILjava/lang/String;II)Ljava/lang/String;
 
     move-result-object v0
 
@@ -469,7 +469,7 @@
 
     const-string v1, "ShareFromDynamicList"
 
-    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->finish()V
 
@@ -548,7 +548,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v1, 0x7f0c0183
+    const v1, 0x7f0c0185
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->getString(I)Ljava/lang/String;
 
@@ -594,7 +594,7 @@
 
     move-object v1, p0
 
-    invoke-static/range {v1 .. v6}, Lcn/com/smartdevices/bracelet/z;->a(Landroid/content/Context;IILjava/lang/String;II)Ljava/lang/String;
+    invoke-static/range {v1 .. v6}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;IILjava/lang/String;II)Ljava/lang/String;
 
     move-result-object v0
 
@@ -659,7 +659,7 @@
 
     invoke-virtual {v10, v0}, Lcn/com/smartdevices/bracelet/model/ShareData;->setType(I)V
 
-    const v0, 0x7f0c0195
+    const v0, 0x7f0c0197
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->getString(I)Ljava/lang/String;
 
@@ -739,7 +739,7 @@
 
     move-result-object v2
 
-    const v4, 0x7f0c0196
+    const v4, 0x7f0c0198
 
     const/4 v5, 0x2
 
@@ -839,7 +839,7 @@
 
     invoke-virtual {v10, v0}, Lcn/com/smartdevices/bracelet/model/ShareData;->setType(I)V
 
-    const v0, 0x7f0c01d5
+    const v0, 0x7f0c01d7
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->getString(I)Ljava/lang/String;
 
@@ -852,7 +852,7 @@
 
     iget v0, v0, Lcn/com/smartdevices/bracelet/model/ReportData;->continueDays:I
 
-    const v1, 0x7f0c00d2
+    const v1, 0x7f0c00d3
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->getString(I)Ljava/lang/String;
 
@@ -860,7 +860,7 @@
 
     iput-object v1, v10, Lcn/com/smartdevices/bracelet/model/ShareData;->contentUnit:Ljava/lang/String;
 
-    const v1, 0x7f0c01d4
+    const v1, 0x7f0c01d6
 
     new-array v2, v6, [Ljava/lang/Object;
 
@@ -882,7 +882,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->mReportData:Lcn/com/smartdevices/bracelet/model/ReportData;
 
-    invoke-static {p0, v1}, Lcn/com/smartdevices/bracelet/z;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/ReportData;)Ljava/lang/String;
+    invoke-static {p0, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/ReportData;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -895,7 +895,7 @@
 
     invoke-virtual {v10, v0}, Lcn/com/smartdevices/bracelet/model/ShareData;->setType(I)V
 
-    const v0, 0x7f0c0197
+    const v0, 0x7f0c0199
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->getString(I)Ljava/lang/String;
 
@@ -932,7 +932,7 @@
 
     move-result-object v0
 
-    invoke-static {p0, v0, v10}, Lcn/com/smartdevices/bracelet/z;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/DaySportData;Lcn/com/smartdevices/bracelet/model/ShareData;)V
+    invoke-static {p0, v0, v10}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/DaySportData;Lcn/com/smartdevices/bracelet/model/ShareData;)V
 
     const-string v0, "pic_url"
 

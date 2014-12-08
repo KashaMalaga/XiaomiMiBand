@@ -95,7 +95,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f020072
+    const v1, 0x7f020077
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
 
@@ -136,7 +136,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aF;->c_:Landroid/widget/TextSwitcher;
 
-    const v2, 0x7f0c018f
+    const v2, 0x7f0c0191
 
     invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/ui/aF;->getString(I)Ljava/lang/String;
 
@@ -182,7 +182,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aF;->c_:Landroid/widget/TextSwitcher;
 
-    const v1, 0x7f0c018f
+    const v1, 0x7f0c0191
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/ui/aF;->getString(I)Ljava/lang/String;
 

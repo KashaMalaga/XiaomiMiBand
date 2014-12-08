@@ -28,7 +28,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0c00f2
+    const v1, 0x7f0c00f3
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -110,7 +110,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f030081
+    const v2, 0x7f030083
 
     const/4 v3, 0x0
 
@@ -118,7 +118,7 @@
 
     move-result-object v5
 
-    const v1, 0x7f070237
+    const v1, 0x7f07024f
 
     invoke-virtual {v5, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -126,7 +126,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f070239
+    const v2, 0x7f070251
 
     invoke-virtual {v5, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -134,7 +134,7 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    const v3, 0x7f070238
+    const v3, 0x7f070250
 
     invoke-virtual {v5, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -142,7 +142,7 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    const v4, 0x7f07023a
+    const v4, 0x7f070252
 
     invoke-virtual {v5, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -218,7 +218,7 @@
     invoke-virtual {v4, v8}, Landroid/widget/TextView;->setVisibility(I)V
 
     :goto_1
-    const v1, 0x7f07023b
+    const v1, 0x7f070253
 
     invoke-virtual {v5, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -238,7 +238,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    const v0, 0x7f070236
+    const v0, 0x7f07024e
 
     invoke-virtual {v5, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -275,14 +275,14 @@
 
     if-nez v6, :cond_1
 
-    const v6, 0x7f0c0140
+    const v6, 0x7f0c0142
 
     invoke-virtual {v3, v6}, Landroid/widget/TextView;->setText(I)V
 
     goto/16 :goto_0
 
     :cond_1
-    const v6, 0x7f0c0141
+    const v6, 0x7f0c0143
 
     invoke-virtual {v3, v6}, Landroid/widget/TextView;->setText(I)V
 

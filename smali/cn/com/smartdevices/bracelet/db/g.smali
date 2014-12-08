@@ -11,13 +11,17 @@
 
 .field public static final d:Ljava/lang/String; = "trackid"
 
-.field public static final e:Ljava/lang/String; = "summary"
+.field public static final e:Ljava/lang/String; = "distance"
 
-.field public static final f:Ljava/lang/String; = "data"
+.field public static final f:Ljava/lang/String; = "usedtime"
 
-.field public static final g:Ljava/lang/String; = "groupCnt"
+.field public static final g:Ljava/lang/String; = "summary"
 
-.field public static final h:Ljava/lang/String; = "sync"
+.field public static final h:Ljava/lang/String; = "data"
+
+.field public static final i:Ljava/lang/String; = "groupCnt"
+
+.field public static final j:Ljava/lang/String; = "sync"
 
 
 # direct methods

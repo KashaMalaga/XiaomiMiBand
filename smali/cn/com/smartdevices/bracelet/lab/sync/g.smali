@@ -9,11 +9,11 @@
 
 .field final synthetic c:Landroid/content/Context;
 
-.field final synthetic d:Lcn/com/smartdevices/bracelet/gps/services/j;
+.field final synthetic d:Lcn/com/smartdevices/bracelet/gps/services/l;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/lab/sync/i;JLandroid/content/Context;Lcn/com/smartdevices/bracelet/gps/services/j;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/lab/sync/i;JLandroid/content/Context;Lcn/com/smartdevices/bracelet/gps/services/l;)V
     .locals 0
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/sync/g;->a:Lcn/com/smartdevices/bracelet/lab/sync/i;
@@ -22,7 +22,7 @@
 
     iput-object p4, p0, Lcn/com/smartdevices/bracelet/lab/sync/g;->c:Landroid/content/Context;
 
-    iput-object p5, p0, Lcn/com/smartdevices/bracelet/lab/sync/g;->d:Lcn/com/smartdevices/bracelet/gps/services/j;
+    iput-object p5, p0, Lcn/com/smartdevices/bracelet/lab/sync/g;->d:Lcn/com/smartdevices/bracelet/gps/services/l;
 
     invoke-direct {p0}, Lcom/c/a/a/h;-><init>()V
 
@@ -34,7 +34,7 @@
 .method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
     .locals 4
 
-    invoke-static {p3}, Lcn/com/smartdevices/bracelet/z;->a([B)Ljava/lang/String;
+    invoke-static {p3}, Lcn/com/smartdevices/bracelet/y;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
@@ -94,11 +94,11 @@
 .method public onSuccess(I[Lorg/apache/http/Header;[B)V
     .locals 5
 
-    invoke-static {p3}, Lcn/com/smartdevices/bracelet/z;->a([B)Ljava/lang/String;
+    invoke-static {p3}, Lcn/com/smartdevices/bracelet/y;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/f/f;->b(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/f/g;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/f;->b(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/g/g;
 
     move-result-object v1
 
@@ -138,7 +138,7 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/f/g;->a()Z
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/g/g;->a()Z
 
     move-result v1
 
@@ -148,9 +148,9 @@
 
     iget-wide v1, p0, Lcn/com/smartdevices/bracelet/lab/sync/g;->b:J
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/sync/g;->d:Lcn/com/smartdevices/bracelet/gps/services/j;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/sync/g;->d:Lcn/com/smartdevices/bracelet/gps/services/l;
 
-    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/gps/services/j;->q()I
+    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/gps/services/l;->q()I
 
     move-result v3
 

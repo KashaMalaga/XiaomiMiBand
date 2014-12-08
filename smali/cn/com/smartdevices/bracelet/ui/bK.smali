@@ -34,17 +34,17 @@
 .method public onSuccess(I[Lorg/apache/http/Header;[B)V
     .locals 2
 
-    invoke-static {p3}, Lcn/com/smartdevices/bracelet/z;->a([B)Ljava/lang/String;
+    invoke-static {p3}, Lcn/com/smartdevices/bracelet/y;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/f/f;->b(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/f/g;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/f;->b(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/g/g;
 
     move-result-object v0
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bK;->a:Lcn/com/smartdevices/bracelet/ui/bD;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/g;->a()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/g/g;->a()Z
 
     move-result v0
 

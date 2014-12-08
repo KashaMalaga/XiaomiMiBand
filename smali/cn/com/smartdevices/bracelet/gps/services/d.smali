@@ -1,42 +1,104 @@
-.class Lcn/com/smartdevices/bracelet/gps/services/d;
-.super Ljava/util/TimerTask;
+.class Lcn/com/smartdevices/bracelet/gps/services/D;
+.super Landroid/content/BroadcastReceiver;
 
 
 # instance fields
-.field final synthetic a:Landroid/content/Context;
-
-.field final synthetic b:Lcn/com/smartdevices/bracelet/gps/services/a;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/a;Landroid/content/Context;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/services/d;->b:Lcn/com/smartdevices/bracelet/gps/services/a;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/services/D;->a:Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;
 
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/gps/services/d;->a:Landroid/content/Context;
-
-    invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 6
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/d;->b:Lcn/com/smartdevices/bracelet/gps/services/a;
+    const/4 v2, 0x0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/d;->a:Landroid/content/Context;
+    const-string v0, "android.intent.action.USER_PRESENT"
 
-    const-wide/16 v2, 0x0
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    const/4 v4, 0x0
+    move-result-object v1
 
-    const-string v5, "passive"
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-static/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/gps/services/a;->a(Lcn/com/smartdevices/bracelet/gps/services/a;Landroid/content/Context;JFLjava/lang/String;)V
+    move-result v0
 
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/D;->a:Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->c(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;)Lcn/com/smartdevices/bracelet/gps/services/E;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/D;->a:Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->c(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;)Lcn/com/smartdevices/bracelet/gps/services/E;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/services/E;->a(Z)V
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/D;->a:Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->k(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/D;->a:Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;
+
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->a(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;I)V
+
+    :cond_1
+    :goto_0
     return-void
+
+    :cond_2
+    const-string v0, "android.intent.action.SCREEN_OFF"
+
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/D;->a:Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->c(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;)Lcn/com/smartdevices/bracelet/gps/services/E;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/D;->a:Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->c(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;)Lcn/com/smartdevices/bracelet/gps/services/E;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/gps/services/E;->a(Z)V
+
+    goto :goto_0
 .end method

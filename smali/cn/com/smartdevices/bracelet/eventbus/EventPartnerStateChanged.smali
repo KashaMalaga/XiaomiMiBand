@@ -13,6 +13,8 @@
 
 .field public success:Z
 
+.field public thirdAppId:Ljava/lang/String;
+
 .field public url:Ljava/lang/String;
 
 
@@ -32,6 +34,10 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/eventbus/EventPartnerStateChanged;->url:Ljava/lang/String;
 
+    const-string v0, ""
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/eventbus/EventPartnerStateChanged;->thirdAppId:Ljava/lang/String;
+
     return-void
 .end method
 
@@ -49,6 +55,10 @@
     const-string v0, ""
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/eventbus/EventPartnerStateChanged;->url:Ljava/lang/String;
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/eventbus/EventPartnerStateChanged;->thirdAppId:Ljava/lang/String;
 
     iput p1, p0, Lcn/com/smartdevices/bracelet/eventbus/EventPartnerStateChanged;->action:I
 

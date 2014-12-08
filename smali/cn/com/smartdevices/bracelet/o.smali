@@ -63,7 +63,7 @@
 
 .field private h:Z
 
-.field private q:Lcn/com/smartdevices/bracelet/db/p;
+.field private q:Lcn/com/smartdevices/bracelet/db/r;
 
 .field private final r:Ljava/util/concurrent/ConcurrentHashMap;
     .annotation system Ldalvik/annotation/Signature;
@@ -170,7 +170,7 @@
 
     iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/o;->h:Z
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/o;->q:Lcn/com/smartdevices/bracelet/db/p;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/o;->q:Lcn/com/smartdevices/bracelet/db/r;
 
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -220,11 +220,11 @@
 
     sput-object p1, Lcn/com/smartdevices/bracelet/o;->A:Landroid/content/Context;
 
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/db/p;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/p;
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/db/r;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/r;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/o;->q:Lcn/com/smartdevices/bracelet/db/p;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/o;->q:Lcn/com/smartdevices/bracelet/db/r;
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/o;->c()V
 
@@ -1232,7 +1232,7 @@
 
     move-result v1
 
-    invoke-static {p1, v0, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;I)V
+    invoke-static {p1, v0, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;I)V
 
     :cond_0
     :goto_2
@@ -1259,7 +1259,7 @@
 
     move-result v1
 
-    invoke-static {p1, v0, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;I)V
+    invoke-static {p1, v0, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;I)V
 
     goto :goto_2
 .end method
@@ -1697,7 +1697,7 @@
 
     sget-object v2, Lcn/com/smartdevices/bracelet/o;->A:Landroid/content/Context;
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/z;->a(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -1749,7 +1749,7 @@
 
     invoke-direct {v5, p0, p1}, Lcn/com/smartdevices/bracelet/p;-><init>(Lcn/com/smartdevices/bracelet/o;Lcn/com/smartdevices/bracelet/q;)V
 
-    invoke-static {v2, v3, p1, v4, v5}, Lcn/com/smartdevices/bracelet/f/e;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Lcn/com/smartdevices/bracelet/q;ILcom/c/a/a/h;)V
+    invoke-static {v2, v3, p1, v4, v5}, Lcn/com/smartdevices/bracelet/g/e;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Lcn/com/smartdevices/bracelet/q;ILcom/c/a/a/h;)V
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -1793,7 +1793,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->l()Ljava/util/ArrayList;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->n()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -2447,9 +2447,9 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/o;->q:Lcn/com/smartdevices/bracelet/db/p;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/o;->q:Lcn/com/smartdevices/bracelet/db/r;
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/db/p;->a(Lcn/com/smartdevices/bracelet/q;)Ljava/util/ArrayList;
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/db/r;->a(Lcn/com/smartdevices/bracelet/q;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -2708,9 +2708,9 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/o;->q:Lcn/com/smartdevices/bracelet/db/p;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/o;->q:Lcn/com/smartdevices/bracelet/db/r;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/db/p;->a(Ljava/util/ArrayList;ILcn/com/smartdevices/bracelet/q;)Z
+    invoke-virtual {v0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/db/r;->a(Ljava/util/ArrayList;ILcn/com/smartdevices/bracelet/q;)Z
 
     const-string v0, "DataManager"
 
@@ -2738,7 +2738,7 @@
 
     move-result-object v1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->T()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->U()Ljava/lang/String;
 
     move-result-object v2
 
@@ -2844,7 +2844,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/o;->q:Lcn/com/smartdevices/bracelet/db/p;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/o;->q:Lcn/com/smartdevices/bracelet/db/r;
 
     invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/model/SportDay;->getKey()Ljava/lang/String;
 
@@ -2854,7 +2854,7 @@
 
     invoke-direct {v2, v3}, Lcn/com/smartdevices/bracelet/q;-><init>(I)V
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/db/p;->e(Ljava/lang/String;Lcn/com/smartdevices/bracelet/q;)Ljava/lang/String;
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/db/r;->e(Ljava/lang/String;Lcn/com/smartdevices/bracelet/q;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -2967,9 +2967,9 @@
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/o;->q:Lcn/com/smartdevices/bracelet/db/p;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/o;->q:Lcn/com/smartdevices/bracelet/db/r;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/db/p;->e()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/db/r;->e()V
 
     new-instance v0, Lcn/com/smartdevices/bracelet/model/SyncServerDataInfo;
 
@@ -2996,9 +2996,9 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/o;->q:Lcn/com/smartdevices/bracelet/db/p;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/o;->q:Lcn/com/smartdevices/bracelet/db/r;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/db/p;->b(Ljava/util/ArrayList;ILcn/com/smartdevices/bracelet/q;)V
+    invoke-virtual {v0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/db/r;->b(Ljava/util/ArrayList;ILcn/com/smartdevices/bracelet/q;)V
 
     return-void
 .end method
@@ -3024,9 +3024,9 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/o;->B:Lcn/com/smartdevices/bracelet/model/SportDay;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/o;->q:Lcn/com/smartdevices/bracelet/db/p;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/o;->q:Lcn/com/smartdevices/bracelet/db/r;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/db/p;->d()[Ljava/lang/String;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/db/r;->d()[Ljava/lang/String;
 
     move-result-object v0
 
@@ -3761,7 +3761,7 @@
 .method public f(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/DaySportData;
     .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/o;->q:Lcn/com/smartdevices/bracelet/db/p;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/o;->q:Lcn/com/smartdevices/bracelet/db/r;
 
     invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/model/SportDay;->getKey()Ljava/lang/String;
 
@@ -3771,7 +3771,7 @@
 
     invoke-direct {v2}, Lcn/com/smartdevices/bracelet/q;-><init>()V
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/db/p;->c(Ljava/lang/String;Lcn/com/smartdevices/bracelet/q;)[B
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/db/r;->c(Ljava/lang/String;Lcn/com/smartdevices/bracelet/q;)[B
 
     move-result-object v1
 
@@ -4817,7 +4817,7 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/o;->q:Lcn/com/smartdevices/bracelet/db/p;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/o;->q:Lcn/com/smartdevices/bracelet/db/r;
 
     invoke-virtual {v6}, Lcn/com/smartdevices/bracelet/model/DaySportData;->getKey()Ljava/lang/String;
 
@@ -4839,7 +4839,7 @@
 
     invoke-direct {v5}, Lcn/com/smartdevices/bracelet/q;-><init>()V
 
-    invoke-virtual/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/db/p;->a(Ljava/lang/String;[BLjava/lang/String;Ljava/lang/String;Lcn/com/smartdevices/bracelet/q;)Z
+    invoke-virtual/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/db/r;->a(Ljava/lang/String;[BLjava/lang/String;Ljava/lang/String;Lcn/com/smartdevices/bracelet/q;)Z
 
     const/4 v0, 0x0
 

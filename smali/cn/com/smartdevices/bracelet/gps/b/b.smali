@@ -25,15 +25,9 @@
 .method public binderDied()V
     .locals 2
 
-    const-string v0, "Run"
-
-    const-string v1, "DeathRecipient"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
-
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/b;->a:Lcn/com/smartdevices/bracelet/gps/b/a;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/b/a;->d(Lcn/com/smartdevices/bracelet/gps/b/a;)Lcn/com/smartdevices/bracelet/gps/b/d;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/b/a;->d(Lcn/com/smartdevices/bracelet/gps/b/a;)Lcn/com/smartdevices/bracelet/gps/b/e;
 
     move-result-object v0
 
@@ -41,13 +35,13 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/b;->a:Lcn/com/smartdevices/bracelet/gps/b/a;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/b/a;->d(Lcn/com/smartdevices/bracelet/gps/b/a;)Lcn/com/smartdevices/bracelet/gps/b/d;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/b/a;->d(Lcn/com/smartdevices/bracelet/gps/b/a;)Lcn/com/smartdevices/bracelet/gps/b/e;
 
     move-result-object v0
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/gps/b/e;->f:Lcn/com/smartdevices/bracelet/gps/b/e;
+    sget-object v1, Lcn/com/smartdevices/bracelet/gps/b/f;->f:Lcn/com/smartdevices/bracelet/gps/b/f;
 
-    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/gps/b/d;->a(Lcn/com/smartdevices/bracelet/gps/b/e;)V
+    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/gps/b/e;->a(Lcn/com/smartdevices/bracelet/gps/b/f;)V
 
     :cond_0
     return-void

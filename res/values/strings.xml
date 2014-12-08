@@ -119,6 +119,7 @@ Address: %2$s"</string>
   <string name="device_not_found_not_knocked">"Can't find band. To pair, tap the metal part of the band when it flashes."</string>
   <string name="device_not_response">"Lights aren't flashing?"</string>
   <string name="disable_debug_log">Debug mode is off</string>
+  <string name="disable_hidden_feature">Hidden activity disabled</string>
   <string name="discard">Discard</string>
   <string name="discard_alarm_change">Discard changes?</string>
   <string name="distance">Distance</string>
@@ -161,7 +162,9 @@ Address: %2$s"</string>
   <string name="dynamic_tip_unweared">Not activated</string>
   <string name="dynamic_title_sleep">Last night</string>
   <string name="dynamic_title_step">Today</string>
+  <string name="dynamic_title_weight">Weight</string>
   <string name="enable_debug_log">Debug mode is on</string>
+  <string name="enable_hidden_feature">Hidden activity enabled</string>
   <string name="error_code">Error</string>
   <string name="everyday">Everyday</string>
   <string name="exit_app">Exit</string>
@@ -533,15 +536,18 @@ Burned %3$s cal. Previous record was %5$s steps, set on %4$s."</string>
   <string name="sport_running_history_date" formatted="false">%d/%d/%d</string>
   <string name="sport_running_history_no_data">No data</string>
   <string name="sport_running_history_title">History</string>
+  <string name="sport_running_kilometers">km</string>
+  <string name="sport_running_kilometers_per_hour">km/h</string>
   <string name="sport_running_no_gps">Use GPS to keep track of your route.</string>
   <string name="sport_running_pace">Pace</string>
   <string name="sport_running_pace_detail">%s/km</string>
   <string name="sport_running_pause">Pause</string>
+  <string name="sport_running_per_kilometers">/km</string>
   <string name="sport_running_prepare_map">Preparing map for sharing...</string>
   <string name="sport_running_prompt_come_on">Go!!</string>
   <string name="sport_running_prompt_great">Great!!</string>
   <string name="sport_running_prompt_per_kilometer" formatted="false">You have run %s kilometers. It cost %s. The pace is %s.%s</string>
-  <string name="sport_running_real_time_pace">Real-time pace</string>
+  <string name="sport_running_real_time_pace">Pace(m/km)</string>
   <string name="sport_running_resume">Resume</string>
   <string name="sport_running_set_dist">Distance reminder</string>
   <string name="sport_running_set_goal">Goal reminder</string>
@@ -549,7 +555,8 @@ Burned %3$s cal. Previous record was %5$s steps, set on %4$s."</string>
   <string name="sport_running_settings">Settings</string>
   <string name="sport_running_slider_prompt">&gt;&gt;&gt;Slide right to pause</string>
   <string name="sport_running_speed">Speed</string>
-  <string name="sport_running_speed_detail">%.0fkm/h</string>
+  <string name="sport_running_speed_detail">%.2fkm/h</string>
+  <string name="sport_running_speed_with_unit">Speed(km/h)</string>
   <string name="sport_running_start">Start</string>
   <string name="sport_running_start_time">Start</string>
   <string name="sport_running_step">Steps</string>
@@ -633,6 +640,7 @@ Burned %3$s cal. Previous record was %5$s steps, set on %4$s."</string>
   <string name="unit_meter">m</string>
   <string name="unit_min">min</string>
   <string name="unit_min_short">m</string>
+  <string name="unit_sec_short">s</string>
   <string name="unit_step">steps</string>
   <string name="unlock_for_smartlock_pair_fail_tip">Ring with opponents failed, please try again</string>
   <string name="unlock_for_smartlock_pair_start_tip">Being with rival ring Please wait...</string>

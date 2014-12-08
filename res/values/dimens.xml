@@ -134,8 +134,14 @@
     <dimen name="lab_factory_sport_progress_state">100.0dip</dimen>
     <dimen name="sport_running_slider_panel_height">120.0dip</dimen>
     <dimen name="sport_running_button_bottom">22.799988dip</dimen>
-    <dimen name="sport_running_info_width">160.0dip</dimen>
+    <dimen name="sport_running_info_width">120.0dip</dimen>
     <dimen name="sport_running_history_item_height">60.0dip</dimen>
+    <dimen name="sport_running_detail_wide_width">180.0dip</dimen>
+    <dimen name="sport_running_detail_height">48.0dip</dimen>
     <dimen name="sport_running_time_cost_desc_size">10.0sp</dimen>
-    <dimen name="sport_running_time_cost_size">26.699982sp</dimen>
+    <dimen name="sport_running_distance_font_size">50.0sp</dimen>
+    <dimen name="running_history_list_category_height">22.599976dip</dimen>
+    <dimen name="running_history_list_item_height">92.0dip</dimen>
+    <dimen name="running_list_margin_left">25.0dip</dimen>
+    <dimen name="running_list_margin_right">25.0dip</dimen>
 </resources>

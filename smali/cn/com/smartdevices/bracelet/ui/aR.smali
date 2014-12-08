@@ -29,18 +29,7 @@
 
     iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/aO;->a:Lcn/com/smartdevices/bracelet/ui/aJ;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/aJ;->isDetached()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aR;->a:Lcn/com/smartdevices/bracelet/ui/aO;
-
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/aO;->a:Lcn/com/smartdevices/bracelet/ui/aJ;
-
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/aJ;->dismiss()V
 
-    :cond_0
     return-void
 .end method

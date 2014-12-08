@@ -3,100 +3,41 @@
 
 
 # virtual methods
-.method public abstract a(Lcn/com/smartdevices/bracelet/gps/model/c;Lcn/com/smartdevices/bracelet/gps/model/c;Lcn/com/smartdevices/bracelet/gps/b/s;)Lcom/amap/api/maps/model/Polyline;
+.method public abstract b(ILcn/com/smartdevices/bracelet/gps/model/b;)Lcom/amap/api/maps/model/LatLngBounds;
 .end method
 
-.method public abstract a(Ljava/util/List;Lcn/com/smartdevices/bracelet/gps/b/s;)Lcom/amap/api/maps/model/Polyline;
+.method public abstract b(Ljava/util/List;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/gps/model/c;",
-            ">;",
-            "Lcn/com/smartdevices/bracelet/gps/b/s;",
-            ")",
-            "Lcom/amap/api/maps/model/Polyline;"
-        }
-    .end annotation
-.end method
-
-.method public abstract a()V
-.end method
-
-.method public abstract a(F)V
-.end method
-
-.method public abstract a(I)V
-.end method
-
-.method public abstract a(ILcn/com/smartdevices/bracelet/gps/model/c;)V
-.end method
-
-.method public abstract a(Ljava/util/List;)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcn/com/smartdevices/bracelet/gps/model/c;",
+            "Lcom/amap/api/maps/model/Polyline;",
             ">;)V"
         }
     .end annotation
 .end method
 
-.method public abstract a(Z)V
-.end method
-
-.method public abstract b()V
-.end method
-
-.method public abstract b(I)V
-.end method
-
-.method public abstract b(Lcn/com/smartdevices/bracelet/gps/model/c;)V
-.end method
-
-.method public abstract b(Lcn/com/smartdevices/bracelet/gps/model/c;Lcn/com/smartdevices/bracelet/gps/model/c;Lcn/com/smartdevices/bracelet/gps/b/s;)V
-.end method
-
-.method public abstract c()V
-.end method
-
-.method public abstract c(I)V
-.end method
-
-.method public abstract c(Lcn/com/smartdevices/bracelet/gps/model/c;)V
-.end method
-
-.method public abstract c(Ljava/util/List;Lcn/com/smartdevices/bracelet/gps/b/s;)V
+.method public abstract e()Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(",
+            "()",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/gps/model/c;",
-            ">;",
-            "Lcn/com/smartdevices/bracelet/gps/b/s;",
-            ")V"
+            "Lcom/amap/api/maps/model/GroundOverlay;",
+            ">;"
         }
     .end annotation
 .end method
 
-.method public abstract d()V
-.end method
-
-.method public abstract d(I)V
-.end method
-
-.method public abstract d(Lcn/com/smartdevices/bracelet/gps/model/c;)V
-.end method
-
-.method public abstract e(Lcn/com/smartdevices/bracelet/gps/model/c;)V
-.end method
-
-.method public abstract f(Lcn/com/smartdevices/bracelet/gps/model/c;)V
-.end method
-
-.method public abstract g()V
+.method public abstract f()Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcom/amap/api/maps/model/Polyline;",
+            ">;"
+        }
+    .end annotation
 .end method

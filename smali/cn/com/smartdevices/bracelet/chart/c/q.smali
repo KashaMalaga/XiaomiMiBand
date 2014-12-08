@@ -9,29 +9,31 @@
 
 .field public static final c:I = 0x10
 
-.field public static final d:Ljava/lang/String; = "Mode"
+.field public static final d:I = 0x100
 
-.field public static final e:Ljava/lang/String; = "DynamicActivityMode"
+.field public static final e:Ljava/lang/String; = "Mode"
 
-.field public static final f:Ljava/lang/String; = "From"
+.field public static final f:Ljava/lang/String; = "DynamicActivityMode"
 
-.field public static final g:Ljava/lang/String; = "Action"
+.field public static final g:Ljava/lang/String; = "From"
 
-.field public static final h:Ljava/lang/String; = "DynamicActivitySubTitle"
+.field public static final h:Ljava/lang/String; = "Action"
 
-.field public static final i:Ljava/lang/String; = "Key"
+.field public static final i:Ljava/lang/String; = "DynamicActivitySubTitle"
 
-.field public static final j:Ljava/lang/String; = "DynamicView"
+.field public static final j:Ljava/lang/String; = "Key"
 
-.field public static final k:Ljava/lang/String; = "RefCompleteGoal"
+.field public static final k:Ljava/lang/String; = "DynamicView"
 
-.field public static final l:I = 0x18
+.field public static final l:Ljava/lang/String; = "RefCompleteGoal"
 
-.field public static final m:I = 0x3c
+.field public static final m:I = 0x18
 
-.field public static final n:I = 0x5a0
+.field public static final n:I = 0x3c
 
-.field private static final o:Z
+.field public static final o:I = 0x5a0
+
+.field private static final p:Z
 
 
 # direct methods
@@ -82,7 +84,7 @@
 
     if-nez v1, :cond_0
 
-    const v1, 0x7f0c011a
+    const v1, 0x7f0c011c
 
     const/4 v2, 0x2
 
@@ -104,7 +106,7 @@
     return-object v0
 
     :cond_0
-    const v1, 0x7f0c011b
+    const v1, 0x7f0c011d
 
     new-array v2, v5, [Ljava/lang/Object;
 
@@ -281,7 +283,7 @@
 
     if-nez v1, :cond_0
 
-    const v1, 0x7f0c011a
+    const v1, 0x7f0c011c
 
     const/4 v2, 0x2
 
@@ -303,7 +305,7 @@
     return-object v0
 
     :cond_0
-    const v1, 0x7f0c011b
+    const v1, 0x7f0c011d
 
     new-array v2, v5, [Ljava/lang/Object;
 
@@ -329,7 +331,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0c011a
+    const v1, 0x7f0c011c
 
     const/4 v2, 0x2
 

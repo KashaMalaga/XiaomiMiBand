@@ -73,7 +73,7 @@
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/dp;->dismiss()V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/u;->e(Z)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/u;->f(Z)V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/dp;->getActivity()Landroid/app/Activity;
 
@@ -83,7 +83,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v1, v1, v0}, Lcn/com/smartdevices/bracelet/y;->a(ZZZLandroid/content/Context;)V
+    invoke-static {v1, v1, v1, v0}, Lcn/com/smartdevices/bracelet/x;->a(ZZZLandroid/content/Context;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dp;->f:Landroid/widget/CheckBox;
 
@@ -116,7 +116,7 @@
 
     move-result-object v1
 
-    const v0, 0x7f07010a
+    const v0, 0x7f070118
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -126,7 +126,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dp;->b:Landroid/widget/TextView;
 
-    const v0, 0x7f0c00ca
+    const v0, 0x7f0c00cb
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/dp;->getString(I)Ljava/lang/String;
 
@@ -134,7 +134,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/dp;->b:Landroid/widget/TextView;
 
-    const v3, 0x7f0c0200
+    const v3, 0x7f0c0202
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
 
@@ -156,7 +156,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dp;->b:Landroid/widget/TextView;
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/z;->a(Landroid/widget/TextView;Landroid/text/SpannableString;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/widget/TextView;Landroid/text/SpannableString;)V
 
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
@@ -185,7 +185,7 @@
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->append(Ljava/lang/CharSequence;)V
 
     :cond_0
-    const v0, 0x7f0701c2
+    const v0, 0x7f0701cd
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -195,7 +195,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dp;->f:Landroid/widget/CheckBox;
 
-    const v0, 0x7f0701c3
+    const v0, 0x7f0701ce
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -235,7 +235,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dp;->g:Landroid/widget/TextView;
 
-    const v2, 0x7f0c020c
+    const v2, 0x7f0c020e
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
 

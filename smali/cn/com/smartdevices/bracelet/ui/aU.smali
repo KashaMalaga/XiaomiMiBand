@@ -90,7 +90,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aU;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->a(Landroid/app/Activity;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/app/Activity;)V
 
     :cond_0
     :goto_0

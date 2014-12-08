@@ -245,43 +245,47 @@
 
 .field public static final ruler_scroller:I = 0x7f030078
 
-.field public static final search_device_item:I = 0x7f030079
+.field public static final running_history_list_category:I = 0x7f030079
 
-.field public static final setting_fragment:I = 0x7f03007a
+.field public static final running_history_list_item:I = 0x7f03007a
 
-.field public static final split_line:I = 0x7f03007b
+.field public static final search_device_item:I = 0x7f03007b
 
-.field public static final split_line_with_margin:I = 0x7f03007c
+.field public static final setting_fragment:I = 0x7f03007c
 
-.field public static final system_low_activity:I = 0x7f03007d
+.field public static final split_line:I = 0x7f03007d
 
-.field public static final system_not_support:I = 0x7f03007e
+.field public static final split_line_with_margin:I = 0x7f03007e
 
-.field public static final title_back:I = 0x7f03007f
+.field public static final system_low_activity:I = 0x7f03007f
 
-.field public static final view_active_share_data:I = 0x7f030080
+.field public static final system_not_support:I = 0x7f030080
 
-.field public static final view_alarm_clock_item:I = 0x7f030081
+.field public static final title_back:I = 0x7f030081
 
-.field public static final view_alarm_select_days:I = 0x7f030082
+.field public static final view_active_share_data:I = 0x7f030082
 
-.field public static final view_dynamic:I = 0x7f030083
+.field public static final view_alarm_clock_item:I = 0x7f030083
 
-.field public static final view_dynamic_textswitcher:I = 0x7f030084
+.field public static final view_alarm_select_days:I = 0x7f030084
 
-.field public static final view_main_menu:I = 0x7f030085
+.field public static final view_dynamic:I = 0x7f030085
 
-.field public static final view_select_days_item:I = 0x7f030086
+.field public static final view_dynamic_textswitcher:I = 0x7f030086
 
-.field public static final view_select_days_repeat_item:I = 0x7f030087
+.field public static final view_main_menu:I = 0x7f030087
 
-.field public static final view_sensorhub_item:I = 0x7f030088
+.field public static final view_select_days_item:I = 0x7f030088
 
-.field public static final wheel_item_miui:I = 0x7f030089
+.field public static final view_select_days_repeat_item:I = 0x7f030089
 
-.field public static final wheel_item_normal:I = 0x7f03008a
+.field public static final view_sensorhub_item:I = 0x7f03008a
 
-.field public static final wheel_left_band:I = 0x7f03008b
+.field public static final wheel_item_miui:I = 0x7f03008b
+
+.field public static final wheel_item_normal:I = 0x7f03008c
+
+.field public static final wheel_left_band:I = 0x7f03008d
 
 
 # direct methods

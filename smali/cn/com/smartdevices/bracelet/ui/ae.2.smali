@@ -209,7 +209,7 @@
 
     check-cast v0, Lcn/com/smartdevices/bracelet/ui/ag;
 
-    const v1, 0x7f07013e
+    const v1, 0x7f07014c
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -217,7 +217,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f07013f
+    const v2, 0x7f07014d
 
     invoke-virtual {p2, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

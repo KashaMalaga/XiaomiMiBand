@@ -86,9 +86,9 @@
 
     iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->j:Z
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/F;
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/K;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/F;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/K;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->k:Ljava/lang/Runnable;
 
@@ -227,7 +227,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0200ab
+    const v2, 0x7f0200b2
 
     invoke-static {v1, v2, v0}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
@@ -393,7 +393,7 @@
 
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onFinishInflate()V
 
-    const v0, 0x7f0700bb
+    const v0, 0x7f0700c8
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->findViewById(I)Landroid/view/View;
 
@@ -409,9 +409,9 @@
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 4
 
-    const/4 v0, 0x1
-
     const/4 v3, 0x0
+
+    const/4 v0, 0x1
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -463,6 +463,8 @@
 
     invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->a(Landroid/view/MotionEvent;)V
 
+    goto :goto_0
+
     :cond_0
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->g:Landroid/os/Handler;
 
@@ -489,6 +491,8 @@
     iput-boolean v3, p0, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->j:Z
 
     goto :goto_0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

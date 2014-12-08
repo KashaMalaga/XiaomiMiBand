@@ -32,7 +32,7 @@
 .method public onSuccess(I[Lorg/apache/http/Header;[B)V
     .locals 9
 
-    invoke-static {p3}, Lcn/com/smartdevices/bracelet/z;->a([B)Ljava/lang/String;
+    invoke-static {p3}, Lcn/com/smartdevices/bracelet/y;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
@@ -43,11 +43,11 @@
 
     invoke-direct {v1, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/f/f;->a(Lorg/json/JSONObject;)Lcn/com/smartdevices/bracelet/f/g;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/g/f;->a(Lorg/json/JSONObject;)Lcn/com/smartdevices/bracelet/g/g;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/g;->a()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/g/g;->a()Z
 
     move-result v0
 
@@ -93,7 +93,7 @@
 
     const-string v4, "yyyy-MM-dd HH:mm:ss"
 
-    invoke-static {v0, v3, v4}, Lcn/com/smartdevices/bracelet/z;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v3, v4}, Lcn/com/smartdevices/bracelet/y;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -292,7 +292,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0c01fd
+    const v1, 0x7f0c01ff
 
     const/4 v2, 0x1
 

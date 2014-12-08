@@ -26,17 +26,15 @@
 
 # virtual methods
 .method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
-    .locals 4
+    .locals 3
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    const/16 v2, 0x8
+    const/16 v1, 0x8
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/open/d;->b:I
 
-    const/4 v1, -0x2
-
-    if-ne v0, v1, :cond_0
+    if-gez v0, :cond_0
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/open/d;->a:Lcn/com/smartdevices/bracelet/open/OpenActivity;
 
@@ -44,7 +42,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Landroid/webkit/WebView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/open/d;->a:Lcn/com/smartdevices/bracelet/open/OpenActivity;
 
@@ -52,7 +50,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/open/d;->a:Lcn/com/smartdevices/bracelet/open/OpenActivity;
 
@@ -60,7 +58,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/open/d;->a:Lcn/com/smartdevices/bracelet/open/OpenActivity;
 
@@ -82,7 +80,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v3}, Landroid/webkit/WebView;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/webkit/WebView;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/open/d;->a:Lcn/com/smartdevices/bracelet/open/OpenActivity;
 
@@ -90,7 +88,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_0
 .end method
@@ -190,10 +188,6 @@
     :goto_1
     invoke-virtual {v3, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/open/d;->a:Lcn/com/smartdevices/bracelet/open/OpenActivity;
-
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/open/OpenActivity;->a(Lcn/com/smartdevices/bracelet/open/OpenActivity;Z)V
-
     :cond_2
     :goto_2
     move v0, v1
@@ -216,19 +210,31 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/open/d;->a:Lcn/com/smartdevices/bracelet/open/OpenActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/open/OpenActivity;->g(Lcn/com/smartdevices/bracelet/open/OpenActivity;)Lcn/com/smartdevices/bracelet/open/f;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/open/OpenActivity;->f(Lcn/com/smartdevices/bracelet/open/OpenActivity;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/open/d;->a:Lcn/com/smartdevices/bracelet/open/OpenActivity;
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/open/OpenActivity;->a(Lcn/com/smartdevices/bracelet/open/OpenActivity;Z)Z
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/open/d;->a:Lcn/com/smartdevices/bracelet/open/OpenActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/open/OpenActivity;->h(Lcn/com/smartdevices/bracelet/open/OpenActivity;)Lcn/com/smartdevices/bracelet/open/f;
 
     move-result-object v0
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/open/d;->a:Lcn/com/smartdevices/bracelet/open/OpenActivity;
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/open/OpenActivity;->f(Lcn/com/smartdevices/bracelet/open/OpenActivity;)Lcn/com/smartdevices/bracelet/open/e;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/open/OpenActivity;->g(Lcn/com/smartdevices/bracelet/open/OpenActivity;)Lcn/com/smartdevices/bracelet/open/e;
 
     move-result-object v2
 
-    iget-object v2, v2, Lcn/com/smartdevices/bracelet/open/e;->d:Ljava/lang/String;
+    iget-object v2, v2, Lcn/com/smartdevices/bracelet/open/e;->f:Ljava/lang/String;
 
-    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/open/f;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/open/f;->b(Ljava/lang/String;)V
 
     goto :goto_2
 

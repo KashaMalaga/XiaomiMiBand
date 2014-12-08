@@ -81,7 +81,7 @@
 
     move-result-object v1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->c()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->c()Z
 
     move-result v2
 
@@ -214,7 +214,7 @@
 
     move-result-object v1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->c()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->c()Z
 
     move-result v2
 
@@ -290,7 +290,7 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->c()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->c()Z
 
     move-result v0
 
@@ -366,7 +366,7 @@
 
     const-string v2, "SlideDownSync"
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -387,7 +387,7 @@
 
     const-string v2, "SlideDownConnect"
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -398,11 +398,11 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/d/a;->a()Lcn/com/smartdevices/bracelet/d/a;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/e/a;->a()Lcn/com/smartdevices/bracelet/e/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/d/a;->b()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/a;->b()V
 
     goto :goto_0
 .end method
@@ -474,7 +474,7 @@
 .method public onPanelSlide(Landroid/view/View;Ljava/lang/Boolean;F)V
     .locals 8
 
-    const v7, 0x7f0c01ab
+    const v7, 0x7f0c01ad
 
     const/4 v6, 0x1
 
@@ -547,7 +547,7 @@
 
     const-string v2, "SlideUp"
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     :goto_0
@@ -613,7 +613,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aV;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    const v2, 0x7f0c01b1
+    const v2, 0x7f0c01b3
 
     invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->getString(I)Ljava/lang/String;
 
@@ -621,7 +621,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/aV;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    invoke-static {v2, v7}, Lcn/com/smartdevices/bracelet/z;->b(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {v2, v7}, Lcn/com/smartdevices/bracelet/y;->b(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v2
 
@@ -700,7 +700,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aV;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    const v2, 0x7f0c01b0
+    const v2, 0x7f0c01b2
 
     invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->getString(I)Ljava/lang/String;
 
@@ -708,7 +708,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/aV;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    invoke-static {v2, v7}, Lcn/com/smartdevices/bracelet/z;->b(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {v2, v7}, Lcn/com/smartdevices/bracelet/y;->b(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v2
 

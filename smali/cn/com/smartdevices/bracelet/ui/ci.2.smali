@@ -76,7 +76,7 @@
     nop
 
     :pswitch_data_0
-    .packed-switch 0x7f070189
+    .packed-switch 0x7f070193
         :pswitch_0
         :pswitch_1
     .end packed-switch
@@ -97,7 +97,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070189
+    const v1, 0x7f070193
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -105,7 +105,7 @@
 
     invoke-virtual {v1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v1, 0x7f07018a
+    const v1, 0x7f070194
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -123,7 +123,7 @@
 
     const-string v0, "PagePersonInfoAvatarSelection"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -135,7 +135,7 @@
 
     const-string v0, "PagePersonInfoAvatarSelection"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
 
     return-void
 .end method

@@ -34,7 +34,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f0c020b
+    const v1, 0x7f0c020d
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/ui/BindDevicesActivity;->getString(I)Ljava/lang/String;
 

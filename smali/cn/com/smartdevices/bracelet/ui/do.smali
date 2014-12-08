@@ -51,15 +51,15 @@
 
     const-string v1, "confirm_manual_lazy_day"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     new-instance v0, Lcn/com/smartdevices/bracelet/model/SportDay;
 
     invoke-direct {v0}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>()V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->a(Lcn/com/smartdevices/bracelet/model/SportDay;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->a(Lcn/com/smartdevices/bracelet/model/SportDay;)Ljava/util/ArrayList;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->k()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->m()V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/do;->getActivity()Landroid/app/Activity;
 

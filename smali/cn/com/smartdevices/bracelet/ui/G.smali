@@ -40,7 +40,7 @@
     :pswitch_2
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/G;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;
 
-    const v1, 0x7f0c017d
+    const v1, 0x7f0c017f
 
     const/4 v2, 0x0
 

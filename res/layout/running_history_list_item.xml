@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="bottom" android:background="@drawable/bg_item_running" android:paddingLeft="@dimen/running_list_margin_left" android:paddingRight="@dimen/running_list_margin_right" android:layout_width="fill_parent" android:layout_height="@dimen/running_history_list_item_height" android:layout_marginBottom="13.299988dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/time_stamp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="23.0dip">
+        <TextView android:textSize="12.0sp" android:textColor="@color/running_minor_text" android:id="@id/date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="十一月" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/running_minor_text" android:id="@id/time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:text="15:30" android:layout_toRightOf="@id/date" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="13.0dip" android:layout_below="@id/time_stamp">
+        <RelativeLayout android:id="@id/distance_container" android:layout_width="130.0dip" android:layout_height="wrap_content">
+            <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:textSize="40.0sp" android:textColor="@color/running_main_text" android:ellipsize="end" android:id="@id/daily_distance" android:paddingTop="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="55.92" android:singleLine="true" android:layout_alignParentBottom="true" android:fontFamily="miui-bold" />
+            <TextView android:textSize="18.0sp" android:textColor="@color/running_main_text" android:id="@id/distance_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:text="@string/unit_kilometer" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center_horizontal" android:id="@id/time_cost_container" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="3.0" android:layout_toRightOf="@id/distance_container" android:layout_alignParentBottom="true">
+            <TextView android:textSize="9.0sp" android:textColor="@color/running_minor_text" android:id="@id/time_cost_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_running_time_desc" android:layout_centerHorizontal="true" />
+            <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:textSize="15.0sp" android:textColor="@color/running_sub_text" android:id="@id/time_cost" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="01:06:21" android:layout_below="@id/time_cost_desc" android:layout_centerHorizontal="true" android:fontFamily="miui-bold" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/pace_container" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_toRightOf="@id/time_cost_container" android:layout_alignParentBottom="true">
+            <TextView android:textSize="9.0sp" android:textColor="@color/running_minor_text" android:id="@id/pace_desc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_running_pace" android:layout_centerHorizontal="true" />
+            <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:textSize="15.0sp" android:textColor="@color/running_sub_text" android:id="@id/average_pace" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="00'00''" android:layout_below="@id/pace_desc" android:layout_centerHorizontal="true" android:fontFamily="miui-bold" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

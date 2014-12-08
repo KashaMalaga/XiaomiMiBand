@@ -3,5 +3,5 @@
   xmlns:android="http://schemas.android.com/apk/res/android">
     <include layout="@layout/title_back" />
     <TextView android:textSize="20.0sp" android:textColor="#ff2f2f2f" android:id="@id/no_data" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_running_history_no_data" android:layout_centerInParent="true" />
-    <ListView android:id="@id/history_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:cacheColorHint="#ff2f2f2f" android:divider="@null" android:dividerHeight="0.0dip" android:layout_below="@id/title_back" />
+    <ExpandableListView android:id="@id/history_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:cacheColorHint="#ff2f2f2f" android:groupIndicator="@null" android:divider="@null" android:layout_below="@id/title_back" />
 </RelativeLayout>

@@ -36,7 +36,7 @@
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const v0, 0x7f070103
+    const v0, 0x7f070111
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->findViewById(I)Landroid/view/View;
 
@@ -46,7 +46,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->c:Landroid/widget/TextView;
 
-    const v0, 0x7f070105
+    const v0, 0x7f070113
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->findViewById(I)Landroid/view/View;
 
@@ -56,13 +56,13 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->b:Landroid/widget/TextView;
 
-    const v0, 0x7f070102
+    const v0, 0x7f070110
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
-    const v0, 0x7f070104
+    const v0, 0x7f070112
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->findViewById(I)Landroid/view/View;
 
@@ -166,11 +166,11 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    const v2, 0x7f02003d
+    const v2, 0x7f02003f
 
-    const v1, 0x7f02003e
+    const v1, 0x7f020040
 
-    const v0, 0x7f02003f
+    const v0, 0x7f020041
 
     const-string v11, "dark"
 
@@ -180,11 +180,11 @@
 
     if-eqz v10, :cond_0
 
-    const v2, 0x7f02003c
+    const v2, 0x7f02003e
 
-    const v1, 0x7f020041
+    const v1, 0x7f020043
 
-    const v0, 0x7f020042
+    const v0, 0x7f020044
 
     const v10, 0x7f080005
 

@@ -401,7 +401,7 @@
     nop
 
     :pswitch_data_0
-    .packed-switch 0x7f07016b
+    .packed-switch 0x7f070179
         :pswitch_1
         :pswitch_0
         :pswitch_2
@@ -432,7 +432,7 @@
 
     move-result-object v1
 
-    const v0, 0x7f070148
+    const v0, 0x7f070156
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -440,7 +440,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bT;->b:Landroid/view/View;
 
-    const v0, 0x7f07016e
+    const v0, 0x7f07017c
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -448,7 +448,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bT;->c:Landroid/view/View;
 
-    const v0, 0x7f070171
+    const v0, 0x7f07017f
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -456,7 +456,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bT;->f:Landroid/view/View;
 
-    const v0, 0x7f07016d
+    const v0, 0x7f07017b
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -468,7 +468,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f07016b
+    const v0, 0x7f070179
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -480,7 +480,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070170
+    const v0, 0x7f07017e
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -492,7 +492,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f07016f
+    const v0, 0x7f07017d
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -502,7 +502,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bT;->j:Landroid/widget/TextView;
 
-    const v0, 0x7f07016c
+    const v0, 0x7f07017a
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -512,7 +512,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bT;->k:Landroid/widget/TextView;
 
-    const v0, 0x7f070172
+    const v0, 0x7f070180
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -552,7 +552,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -564,7 +564,7 @@
 
     const-string v0, "PageBraceletHand"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -576,7 +576,7 @@
 
     const-string v0, "PageBraceletHand"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
 
     return-void
 .end method

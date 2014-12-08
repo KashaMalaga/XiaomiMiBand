@@ -164,7 +164,7 @@
 
     move-result-object v15
 
-    const v1, 0x7f070161
+    const v1, 0x7f07016f
 
     invoke-virtual {v15, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -176,7 +176,7 @@
 
     iput-object v1, v0, Lcn/com/smartdevices/bracelet/ui/bN;->b:Lkankan/wheel/widget/WheelView;
 
-    const v1, 0x7f070162
+    const v1, 0x7f070170
 
     invoke-virtual {v15, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -216,13 +216,13 @@
 
     move-result-object v1
 
-    const v2, 0x7f0200ce
+    const v2, 0x7f0200d6
 
     invoke-virtual {v1, v2}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
     move-result-object v1
 
-    const v2, 0x7f0c01cd
+    const v2, 0x7f0c01cf
 
     move-object/from16 v0, p0
 
@@ -300,13 +300,13 @@
 
     move-result-object v1
 
-    const v2, 0x7f0200ce
+    const v2, 0x7f0200d6
 
     invoke-virtual {v1, v2}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
     move-result-object v1
 
-    const v2, 0x7f0c01cc
+    const v2, 0x7f0c01ce
 
     move-object/from16 v0, p0
 
@@ -462,7 +462,7 @@
 
     iget v2, v2, Lcn/com/smartdevices/bracelet/model/PersonInfo;->age:I
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;I)V
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;I)V
 
     return-void
 .end method
@@ -474,7 +474,7 @@
 
     const-string v0, "PagePersonInfoAge"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -486,7 +486,7 @@
 
     const-string v0, "PagePersonInfoAge"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
 
     return-void
 .end method

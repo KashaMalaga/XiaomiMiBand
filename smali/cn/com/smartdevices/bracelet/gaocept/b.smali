@@ -124,10 +124,6 @@
 
     invoke-direct {v9, v8}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gaocept/b;->a:Lcn/com/smartdevices/bracelet/gaocept/GaoceptAlgorithm;
-
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/gaocept/GaoceptAlgorithm;->setForceAvg(Z)V
-
     const-string v0, ""
 
     move v0, v1
@@ -1425,7 +1421,7 @@
     goto/16 :goto_1
 
     :cond_3
-    const-string v0, "Situps"
+    const-string v0, "Situp"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 

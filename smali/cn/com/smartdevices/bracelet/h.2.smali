@@ -52,7 +52,7 @@
 
     new-instance v0, Ljava/io/File;
 
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/z;->m(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/y;->m(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v1
 

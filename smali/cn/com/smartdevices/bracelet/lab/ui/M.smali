@@ -114,6 +114,59 @@
     return-void
 .end method
 
+.method public a(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 3
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/M;->b:Ljava/util/List;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/M;->b:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :cond_0
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/lab/o;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/o;->d()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/open/e;
+
+    iget-object v2, v0, Lcn/com/smartdevices/bracelet/open/e;->f:Ljava/lang/String;
+
+    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    iput p2, v0, Lcn/com/smartdevices/bracelet/open/e;->j:I
+
+    iput-object p3, v0, Lcn/com/smartdevices/bracelet/open/e;->e:Ljava/lang/String;
+
+    goto :goto_0
+
+    :cond_1
+    return-void
+.end method
+
 .method public a(Ljava/util/List;)V
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
@@ -126,18 +179,24 @@
         }
     .end annotation
 
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->K()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    :cond_0
+    return-void
+
+    :cond_1
     if-eqz p1, :cond_0
 
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
 
-    if-gtz v0, :cond_1
+    if-lez v0, :cond_0
 
-    :cond_0
-    return-void
-
-    :cond_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/M;->b:Ljava/util/List;
 
     if-nez v0, :cond_2
@@ -163,7 +222,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0c025b
+    const v3, 0x7f0c025d
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -204,7 +263,7 @@
 
     new-instance v2, Lcn/com/smartdevices/bracelet/lab/o;
 
-    iget-object v3, v0, Lcn/com/smartdevices/bracelet/open/e;->a:Ljava/lang/String;
+    iget-object v3, v0, Lcn/com/smartdevices/bracelet/open/e;->c:Ljava/lang/String;
 
     invoke-direct {v2, v3}, Lcn/com/smartdevices/bracelet/lab/o;-><init>(Ljava/lang/String;)V
 
@@ -450,7 +509,7 @@
 
     iget-object v0, v1, Lcn/com/smartdevices/bracelet/lab/ui/N;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f0c0214
+    const v1, 0x7f0c0216
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -467,7 +526,7 @@
 
     iget-object v0, v1, Lcn/com/smartdevices/bracelet/lab/ui/N;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f0c0215
+    const v1, 0x7f0c0217
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -484,7 +543,7 @@
 
     iget-object v0, v1, Lcn/com/smartdevices/bracelet/lab/ui/N;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f0c0292
+    const v1, 0x7f0c02a0
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -501,7 +560,7 @@
 
     iget-object v0, v1, Lcn/com/smartdevices/bracelet/lab/ui/N;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f0c022e
+    const v1, 0x7f0c0230
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -518,7 +577,7 @@
 
     iget-object v0, v1, Lcn/com/smartdevices/bracelet/lab/ui/N;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f0c0261
+    const v1, 0x7f0c0263
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -535,7 +594,7 @@
 
     iget-object v0, v1, Lcn/com/smartdevices/bracelet/lab/ui/N;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f0c0120
+    const v1, 0x7f0c0122
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -552,7 +611,7 @@
 
     iget-object v0, v1, Lcn/com/smartdevices/bracelet/lab/ui/N;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f0c0121
+    const v1, 0x7f0c0123
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -569,7 +628,7 @@
 
     iget-object v0, v1, Lcn/com/smartdevices/bracelet/lab/ui/N;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f0c0264
+    const v1, 0x7f0c0266
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -586,7 +645,7 @@
 
     iget-object v0, v1, Lcn/com/smartdevices/bracelet/lab/ui/N;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f0c0293
+    const v1, 0x7f0c02a1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -603,7 +662,7 @@
 
     iget-object v1, v1, Lcn/com/smartdevices/bracelet/lab/ui/N;->b:Landroid/widget/TextView;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/open/e;->a:Ljava/lang/String;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/open/e;->c:Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 

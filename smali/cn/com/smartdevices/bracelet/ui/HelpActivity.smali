@@ -34,7 +34,7 @@
     goto :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x7f0701d4
+    .packed-switch 0x7f0701df
         :pswitch_0
     .end packed-switch
 .end method
@@ -48,7 +48,7 @@
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/HelpActivity;->setContentView(I)V
 
-    const v0, 0x7f0701d4
+    const v0, 0x7f0701df
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/HelpActivity;->findViewById(I)Landroid/view/View;
 
@@ -66,9 +66,9 @@
 
     const-string v0, "PageBraceletNotFoundHelp"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->b(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -80,9 +80,9 @@
 
     const-string v0, "PageBraceletNotFoundHelp"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;)V
 
     return-void
 .end method

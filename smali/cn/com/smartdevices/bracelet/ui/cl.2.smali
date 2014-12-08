@@ -198,11 +198,21 @@
 
     goto/16 :goto_0
 
+    :pswitch_4
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cl;->a:Lcn/com/smartdevices/bracelet/ui/ck;
+
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/ui/ck;->b(Lcn/com/smartdevices/bracelet/ui/ck;I)I
+
+    goto/16 :goto_0
+
+    nop
+
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
         :pswitch_1
         :pswitch_2
         :pswitch_3
+        :pswitch_4
     .end packed-switch
 .end method

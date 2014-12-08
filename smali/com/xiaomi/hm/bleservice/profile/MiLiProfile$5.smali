@@ -63,94 +63,82 @@
 .end method
 
 .method private handleData(I)Z
-    .locals 4
+    .locals 3
 
-    const/4 v0, 0x0
+    iget-boolean v0, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->isGetHead:Z
 
-    iget-boolean v1, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->isGetHead:Z
+    if-nez v0, :cond_1
 
-    if-nez v1, :cond_0
+    const-string v0, "xxx"
 
-    const-string v1, "xxx"
+    const-string v1, "get data before get head!!!"
 
-    const-string v2, "get data before get head!!!"
-
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->val$cb:Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ISyncActivitiesCB;
-
-    invoke-interface {v1}, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ISyncActivitiesCB;->onMissData()V
-
-    :goto_0
-    return v0
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
-    iget v1, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->currentDataLen:I
+    :goto_0
+    const/4 v0, 0x1
 
-    add-int/2addr v1, p1
+    return v0
 
-    iput v1, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->currentDataLen:I
+    :cond_1
+    iget v0, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->currentDataLen:I
 
-    const-string v1, "xxx"
+    add-int/2addr v0, p1
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    iput v0, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->currentDataLen:I
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v0, "xxx"
 
-    const-string v3, "currentDataLen: "
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v2
+    const-string v2, "currentDataLen: "
 
-    iget v3, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->currentDataLen:I
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    move-result-object v2
+    iget v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->currentDataLen:I
 
-    const-string v3, ",currentDataTotalLen:"
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    move-result-object v2
+    const-string v2, ",currentDataTotalLen:"
 
-    iget v3, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->currentDataTotalLen:I
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v1, 0x14
-
-    if-eq p1, v1, :cond_1
-
-    iget v1, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->currentDataLen:I
+    move-result-object v1
 
     iget v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->currentDataTotalLen:I
 
-    if-eq v1, v2, :cond_1
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    const-string v1, "xxx"
+    move-result-object v1
 
-    const-string v2, "package lenght != 20 and current currentDataLen != currentDataTotalLen!!!"
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v1
 
-    iget-object v1, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->val$cb:Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ISyncActivitiesCB;
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-interface {v1}, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ISyncActivitiesCB;->onMissData()V
+    const/16 v0, 0x14
 
-    goto :goto_0
+    if-eq p1, v0, :cond_0
 
-    :cond_1
-    const/4 v0, 0x1
+    iget v0, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->currentDataLen:I
+
+    iget v1, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->currentDataTotalLen:I
+
+    if-eq v0, v1, :cond_0
+
+    const-string v0, "xxx"
+
+    const-string v1, "package lenght != 20 and current currentDataLen != currentDataTotalLen!!!"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -319,7 +307,7 @@
 
     const/16 v1, 0xb
 
-    if-ne v0, v1, :cond_5
+    if-ne v0, v1, :cond_3
 
     const/4 v0, 0x0
 
@@ -400,7 +388,7 @@
 
     iget-boolean v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->isGetFirstHead:Z
 
-    if-nez v2, :cond_1
+    if-nez v2, :cond_0
 
     const/4 v2, 0x1
 
@@ -412,28 +400,28 @@
 
     iput v1, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->firstHeadYear:I
 
-    if-nez v9, :cond_0
+    if-nez v9, :cond_6
 
-    move v8, v7
+    move v1, v7
 
-    :cond_0
+    :goto_1
     invoke-direct {p0, v9, v10, v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->handleHead(IILjava/util/Calendar;)V
 
     move v0, v7
 
-    :goto_1
+    :goto_2
     # getter for: Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$400()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
     invoke-static {p1}, Lcom/xiaomi/hm/bleservice/a/b;->b([B)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_4
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
@@ -446,77 +434,79 @@
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->val$cb:Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ISyncActivitiesCB;
 
-    invoke-interface {v0, v8}, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ISyncActivitiesCB;->onBleNotify(Z)V
+    invoke-interface {v0, v1}, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ISyncActivitiesCB;->onBleNotify(Z)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :goto_2
+    :goto_3
     monitor-exit p0
 
     return-void
 
-    :cond_1
+    :cond_0
     :try_start_1
     iget v1, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->firstHeadDataType:I
 
-    if-ne v11, v1, :cond_4
+    if-ne v11, v1, :cond_2
 
     iget v1, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->firstHeadTotalLen:I
 
-    if-ne v10, v1, :cond_4
+    if-ne v10, v1, :cond_2
 
     iget v1, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->currentDataLen:I
 
     iget v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->currentDataTotalLen:I
 
-    if-ne v1, v2, :cond_3
+    if-ne v1, v2, :cond_1
 
-    if-nez v9, :cond_2
+    if-nez v9, :cond_5
 
-    move v8, v7
+    move v1, v7
 
-    :cond_2
+    :goto_4
     invoke-direct {p0, v9, v10, v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->handleHead(IILjava/util/Calendar;)V
 
     move v0, v7
 
-    goto :goto_1
+    goto :goto_2
 
-    :cond_3
+    :cond_1
     const-string v0, "xxx"
 
     const-string v1, "get data not complete but head coming!!!"
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->val$cb:Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ISyncActivitiesCB;
+    move v0, v7
 
-    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ISyncActivitiesCB;->onMissData()V
+    move v1, v8
 
-    move v0, v8
+    goto :goto_2
 
-    goto :goto_1
+    :cond_2
+    array-length v0, p1
+
+    invoke-direct {p0, v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->handleData(I)Z
+
+    move-result v0
+
+    move v1, v8
+
+    goto :goto_2
+
+    :cond_3
+    array-length v0, p1
+
+    invoke-direct {p0, v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->handleData(I)Z
+
+    move-result v0
+
+    move v1, v8
+
+    goto :goto_2
 
     :cond_4
-    array-length v0, p1
-
-    invoke-direct {p0, v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->handleData(I)Z
-
-    move-result v0
-
-    goto :goto_1
-
-    :cond_5
-    array-length v0, p1
-
-    invoke-direct {p0, v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->handleData(I)Z
-
-    move-result v0
-
-    goto :goto_1
-
-    :cond_6
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$5;->val$cb:Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ISyncActivitiesCB;
 
     const/4 v1, 0x1
@@ -526,7 +516,7 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    goto :goto_2
+    goto :goto_3
 
     :catch_0
     move-exception v0
@@ -536,7 +526,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    goto :goto_2
+    goto :goto_3
 
     :catchall_0
     move-exception v0
@@ -544,6 +534,16 @@
     monitor-exit p0
 
     throw v0
+
+    :cond_5
+    move v1, v8
+
+    goto :goto_4
+
+    :cond_6
+    move v1, v8
+
+    goto :goto_1
 
     :cond_7
     move v10, v9

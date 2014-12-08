@@ -124,7 +124,7 @@
 
     invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/ui/u;-><init>(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
 
-    invoke-static {v0, v1, p1, p2, v2}, Lcn/com/smartdevices/bracelet/f/e;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/c/a/a/h;)V
+    invoke-static {v0, v1, p1, p2, v2}, Lcn/com/smartdevices/bracelet/g/e;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/c/a/a/h;)V
 
     return-void
 .end method
@@ -164,7 +164,7 @@
 
     if-nez v0, :cond_2
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/z;->j(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->j(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -204,7 +204,7 @@
     move-result v0
 
     :cond_1
-    new-instance v1, Lcn/com/smartdevices/bracelet/d/h;
+    new-instance v1, Lcn/com/smartdevices/bracelet/e/h;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -212,15 +212,15 @@
 
     const/4 v4, 0x1
 
-    invoke-direct {v1, v2, v3, v4, v0}, Lcn/com/smartdevices/bracelet/d/h;-><init>(JII)V
+    invoke-direct {v1, v2, v3, v4, v0}, Lcn/com/smartdevices/bracelet/e/h;-><init>(JII)V
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/b/a;->a(Lcn/com/smartdevices/bracelet/d/h;)V
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/b/a;->a(Lcn/com/smartdevices/bracelet/e/h;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/d/a;->a()Lcn/com/smartdevices/bracelet/d/a;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/e/a;->a()Lcn/com/smartdevices/bracelet/e/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/d/a;->a(Lcn/com/smartdevices/bracelet/d/h;)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/e/a;->a(Lcn/com/smartdevices/bracelet/e/h;)V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->c()V
 
@@ -460,7 +460,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/z;->b([B)I
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/y;->b([B)I
 
     move-result v1
 
@@ -689,10 +689,10 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 
     :cond_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->m()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->o()V
 
     return-void
 .end method
@@ -712,7 +712,7 @@
 
     invoke-direct {v3, p0, v0, v1}, Lcn/com/smartdevices/bracelet/ui/s;-><init>(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;J)V
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/f/e;->d(Lcn/com/smartdevices/bracelet/model/LoginData;Lcom/c/a/a/h;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/g/e;->d(Lcn/com/smartdevices/bracelet/model/LoginData;Lcom/c/a/a/h;)V
 
     return-void
 .end method
@@ -753,7 +753,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/z;->a(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -768,7 +768,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->k:Landroid/content/Context;
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/z;->d(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/y;->d(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -845,7 +845,7 @@
 
     const-string v2, "BleSyncDataFirst"
 
-    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;Ljava/lang/String;I)V
+    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;I)V
 
     :cond_1
     return-void
@@ -1220,7 +1220,7 @@
     return-void
 
     :cond_2
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/z;->j(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->j(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -1239,11 +1239,11 @@
     if-eqz v0, :cond_1
 
     :cond_3
-    invoke-static {}, Lcn/com/smartdevices/bracelet/d/a;->a()Lcn/com/smartdevices/bracelet/d/a;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/e/a;->a()Lcn/com/smartdevices/bracelet/e/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/d/a;->b()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/a;->b()V
 
     goto :goto_0
 

@@ -73,7 +73,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/av;->b:Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;
 
-    const v2, 0x7f0c0045
+    const v2, 0x7f0c0046
 
     invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->getString(I)Ljava/lang/String;
 

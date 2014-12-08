@@ -55,6 +55,16 @@
 
 .field public static final RightButton:I = 0x7f0e0018
 
+.field public static final RunningDetailDesc:I = 0x7f0e0020
+
+.field public static final RunningDetailUnit:I = 0x7f0e001f
+
+.field public static final RunningDetailValue:I = 0x7f0e001e
+
+.field public static final RunningTiming:I = 0x7f0e0021
+
+.field public static final RunningTimingUnit:I = 0x7f0e0022
+
 .field public static final SportVoteItemText:I = 0x7f0e001c
 
 .field public static final Switcher:I = 0x7f0e001d

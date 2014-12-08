@@ -88,7 +88,7 @@
 
     const/4 v4, 0x0
 
-    const v0, 0x7f070253
+    const v0, 0x7f07026b
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -96,7 +96,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aJ;->d:Landroid/view/View;
 
-    const v0, 0x7f070254
+    const v0, 0x7f07026c
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -153,7 +153,7 @@
     invoke-virtual {v2, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     :cond_0
-    const v0, 0x7f07025d
+    const v0, 0x7f070275
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -161,7 +161,7 @@
 
     invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/ui/aJ;->b(Landroid/view/View;)V
 
-    const v0, 0x7f070259
+    const v0, 0x7f070271
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -171,7 +171,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/z;->j(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/y;->j(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -185,7 +185,7 @@
 
     invoke-virtual {v0, v5}, Landroid/view/View;->setVisibility(I)V
 
-    const v0, 0x7f070258
+    const v0, 0x7f070270
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -208,7 +208,7 @@
 .method private b(Landroid/view/View;)V
     .locals 2
 
-    const v1, 0x7f07025e
+    const v1, 0x7f070276
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/lab/j;->a()Z
 
@@ -843,19 +843,39 @@
 .end method
 
 .method public dismiss()V
-    .locals 0
+    .locals 1
 
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/aJ;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    :goto_0
+    return-void
+
+    :cond_0
     invoke-super {p0}, Landroid/app/DialogFragment;->dismiss()V
 
-    return-void
+    goto :goto_0
 .end method
 
 .method public dismissAllowingStateLoss()V
-    .locals 0
+    .locals 1
 
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/aJ;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    :goto_0
+    return-void
+
+    :cond_0
     invoke-super {p0}, Landroid/app/DialogFragment;->dismissAllowingStateLoss()V
 
-    return-void
+    goto :goto_0
 .end method
 
 .method public onActivityCreated(Landroid/os/Bundle;)V
@@ -948,7 +968,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f030085
+    const v1, 0x7f030087
 
     const/4 v2, 0x0
 

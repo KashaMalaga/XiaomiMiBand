@@ -18,11 +18,11 @@
 .method public a(ZLcn/com/smartdevices/bracelet/b/b;)Z
     .locals 1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/d/a;->a()Lcn/com/smartdevices/bracelet/d/a;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/e/a;->a()Lcn/com/smartdevices/bracelet/e/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1, p2}, Lcn/com/smartdevices/bracelet/d/a;->a(ZLcn/com/smartdevices/bracelet/b/b;)Z
+    invoke-virtual {v0, p1, p2}, Lcn/com/smartdevices/bracelet/e/a;->a(ZLcn/com/smartdevices/bracelet/b/b;)Z
 
     move-result v0
 

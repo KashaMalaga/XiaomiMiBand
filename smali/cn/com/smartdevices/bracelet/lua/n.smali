@@ -707,22 +707,18 @@
     add-int/2addr v0, v1
 
     :goto_0
-    invoke-static {p2, v1}, Ljava/lang/Math;->max(II)I
-
-    move-result v1
+    if-le p2, v0, :cond_1
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/n;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->getPullDownDistance()I
+    # getter for: Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mIsPullDownEnabled:Z
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->access$1300(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;)Z
 
     move-result v2
 
-    add-int/2addr v0, v2
+    if-nez v2, :cond_1
 
-    invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
-
-    move-result v0
-
+    :goto_1
     return v0
 
     :cond_0
@@ -742,6 +738,25 @@
     sub-int v1, v0, v1
 
     goto :goto_0
+
+    :cond_1
+    invoke-static {p2, v1}, Ljava/lang/Math;->max(II)I
+
+    move-result v1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/n;->a:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->getPullDownDistance()I
+
+    move-result v2
+
+    add-int/2addr v0, v2
+
+    invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
+
+    goto :goto_1
 .end method
 
 .method public b(Landroid/view/View;I)V
