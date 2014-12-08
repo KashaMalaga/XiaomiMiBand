@@ -594,6 +594,20 @@ Me gustaría levantarme cuando mi cuerpo ya está despierto.</string>
   <string name="unit_min">min</string>
   <string name="unit_min_short">min</string>
   <string name="unit_step">pasos</string>
+   <string name="unlock_for_smartlock_pair_fail_tip">Sicronizacion fallida, por favor intentelo de nuevo</string>
+  <string name="unlock_for_smartlock_pair_start_tip">Comenzando la sincronización, espere, por favor...</string>
+  <string name="unlock_for_smartlock_pair_success_tip">Sincronizado!, Seleccione la opcion Smart Lock</string>
+  <string name="unlock_for_smartlock_tip">El uso del desbloqueo para desbloquear la pantalla necesita que la aplicación funcione en segundo plano</string>
+  <string name="unlock_for_smartlock_tip_step1">
+    <b> Ajustes </b>
+    <b> Seguridad </b>
+  </string>
+  <string name="unlock_for_smartlock_tip_step2">
+    <b> Tipo de bloqueo de pantalla </b>
+  </string>
+  <string name="unlock_for_smartlock_tip_step3">
+    <b>Smart Lock</b>
+  </string>
   <string name="unlock_screen">Desbloqueo de pantalla</string>
   <string name="unlock_screen_help_info0">Por favor, coloque su Mi Band muy cerca de su teléfono.</string>
   <string name="unlock_screen_help_info1">Si su teléfono sigue bloqueado, intente reiniciar el Bluetooth para intentar solucionar su problema.</string>
