@@ -328,8 +328,8 @@ Necesita una red disponible."</string>
   <string name="main_ui_sleep_share_tips">"Sueño ligero %1$s%2$s
 \u0009Dormido %3$s, despierto %4$s."</string>
   <string name="male">Masculino</string>
-  <string name="marathon_format_0">Son unas %1$s maratones.</string>
-  <string name="marathon_format_1">Más de %1$s maratones.</string>
+  <string name="marathon_format_0">Son unas %1$s maratones</string>
+  <string name="marathon_format_1">Más de %1$s maratones</string>
   <string name="mili_exit_login_info">"Va a salir de su cuenta Mi actual. ¿Desea continuar?"</string>
   <string name="mili_exit_login_info_continue">"Error de sincronización, compruebe la conexión de red. Si decide salir, perderá los datos que no se hayan sincronizado. ¿Quiere salir?"</string>
   <string name="mili_exit_login_info_continue_tip">¿Estás seguro de continuar?</string>
