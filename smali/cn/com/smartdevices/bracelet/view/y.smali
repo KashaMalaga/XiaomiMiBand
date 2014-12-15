@@ -122,7 +122,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f030088
+    const v1, 0x7f03008f
 
     const/4 v2, 0x0
 
@@ -131,7 +131,7 @@
     move-result-object p2
 
     :cond_0
-    const v0, 0x7f07027d
+    const v0, 0x7f0b02a2
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -145,7 +145,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v1, 0x7f07027c
+    const v1, 0x7f0b02a1
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -180,7 +180,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f08000c
+    const v2, 0x7f07000c
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -207,7 +207,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f080010
+    const v2, 0x7f070010
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 

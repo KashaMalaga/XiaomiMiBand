@@ -420,6 +420,7 @@
 .method protected c()V
     .locals 5
 
+    :try_start_0
     iget-object v0, p0, Lcom/amap/api/mapcore/t;->c:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->toArray()[Ljava/lang/Object;
@@ -450,12 +451,19 @@
     check-cast v0, Lcom/amap/api/mapcore/ac;
 
     invoke-virtual {v4, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     :cond_0
     return-void

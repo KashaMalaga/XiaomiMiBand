@@ -16,7 +16,7 @@
 .method protected a()I
     .locals 1
 
-    const v0, 0x7f03005b
+    const v0, 0x7f030062
 
     return v0
 .end method
@@ -76,7 +76,7 @@
     nop
 
     :pswitch_data_0
-    .packed-switch 0x7f070193
+    .packed-switch 0x7f0b01b3
         :pswitch_0
         :pswitch_1
     .end packed-switch
@@ -97,7 +97,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070193
+    const v1, 0x7f0b01b3
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -105,7 +105,7 @@
 
     invoke-virtual {v1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v1, 0x7f070194
+    const v1, 0x7f0b01b4
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

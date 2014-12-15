@@ -1068,7 +1068,7 @@
 .end method
 
 .method private static a([BIIILjava/lang/StringBuilder;)V
-    .locals 7
+    .locals 8
 
     const/4 v0, 0x1
 
@@ -1123,9 +1123,9 @@
 
     and-int/lit16 v5, v5, 0xff
 
-    int-to-long v5, v5
+    int-to-long v6, v5
 
-    add-long/2addr v2, v5
+    add-long/2addr v2, v6
 
     add-int/lit8 v1, v1, 0x1
 
@@ -1139,19 +1139,19 @@
 
     if-ge v1, v5, :cond_2
 
-    const-wide/16 v5, 0x384
+    const-wide/16 v6, 0x384
 
-    rem-long v5, v2, v5
+    rem-long v6, v2, v6
 
-    long-to-int v5, v5
+    long-to-int v5, v6
 
     int-to-char v5, v5
 
     aput-char v5, v4, v1
 
-    const-wide/16 v5, 0x384
+    const-wide/16 v6, 0x384
 
-    div-long/2addr v2, v5
+    div-long/2addr v2, v6
 
     add-int/lit8 v1, v1, 0x1
 

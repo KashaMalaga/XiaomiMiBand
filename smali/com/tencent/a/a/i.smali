@@ -17,7 +17,7 @@
 
 # virtual methods
 .method public accept(Ljava/io/File;)Z
-    .locals 5
+    .locals 6
 
     const/4 v0, 0x0
 
@@ -34,11 +34,11 @@
     :cond_1
     invoke-static {p1}, Lcom/tencent/a/a/h;->a(Ljava/io/File;)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-lez v1, :cond_0
 

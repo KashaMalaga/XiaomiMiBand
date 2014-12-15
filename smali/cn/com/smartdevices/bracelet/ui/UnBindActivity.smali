@@ -15,9 +15,9 @@
 .end method
 
 .method private a()V
-    .locals 5
+    .locals 6
 
-    const-wide/16 v3, -0x1
+    const-wide/16 v4, -0x1
 
     const/4 v2, 0x0
 
@@ -33,9 +33,9 @@
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/b/a;->d()V
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/u;->a(J)V
+    invoke-static {v4, v5}, Lcn/com/smartdevices/bracelet/u;->a(J)V
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/u;->b(J)V
+    invoke-static {v4, v5}, Lcn/com/smartdevices/bracelet/u;->b(J)V
 
     invoke-static {v2}, Lcn/com/smartdevices/bracelet/u;->c(I)V
 
@@ -45,9 +45,9 @@
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/dl;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/dq;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/dl;-><init>(Lcn/com/smartdevices/bracelet/ui/UnBindActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/dq;-><init>(Lcn/com/smartdevices/bracelet/ui/UnBindActivity;)V
 
     const-wide/16 v2, 0xbb8
 
@@ -90,7 +90,7 @@
     nop
 
     :pswitch_data_0
-    .packed-switch 0x7f070111
+    .packed-switch 0x7f0b011f
         :pswitch_1
         :pswitch_0
         :pswitch_2
@@ -102,11 +102,11 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f03004b
+    const v0, 0x7f03004d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnBindActivity;->setContentView(I)V
 
-    const v0, 0x7f070111
+    const v0, 0x7f0b011f
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnBindActivity;->findViewById(I)Landroid/view/View;
 
@@ -114,7 +114,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070113
+    const v0, 0x7f0b0121
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnBindActivity;->findViewById(I)Landroid/view/View;
 
@@ -128,7 +128,7 @@
 
     if-nez v0, :cond_0
 
-    const v0, 0x7f070162
+    const v0, 0x7f0b0170
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnBindActivity;->findViewById(I)Landroid/view/View;
 

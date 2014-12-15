@@ -38,7 +38,7 @@
 .end method
 
 .method public constructor <init>(DD)V
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -80,15 +80,15 @@
 
 # virtual methods
 .method public copy()Lcom/amap/api/services/core/LatLonPoint;
-    .locals 5
+    .locals 6
 
     new-instance v0, Lcom/amap/api/services/core/LatLonPoint;
 
-    iget-wide v1, p0, Lcom/amap/api/services/core/LatLonPoint;->a:D
+    iget-wide v2, p0, Lcom/amap/api/services/core/LatLonPoint;->a:D
 
-    iget-wide v3, p0, Lcom/amap/api/services/core/LatLonPoint;->b:D
+    iget-wide v4, p0, Lcom/amap/api/services/core/LatLonPoint;->b:D
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/amap/api/services/core/LatLonPoint;-><init>(DD)V
+    invoke-direct {v0, v2, v3, v4, v5}, Lcom/amap/api/services/core/LatLonPoint;-><init>(DD)V
 
     return-object v0
 .end method
@@ -198,7 +198,7 @@
 .end method
 
 .method public hashCode()I
-    .locals 5
+    .locals 6
 
     const/16 v4, 0x20
 
@@ -216,19 +216,19 @@
 
     add-int/lit8 v0, v0, 0x1f
 
-    iget-wide v1, p0, Lcom/amap/api/services/core/LatLonPoint;->b:D
+    iget-wide v2, p0, Lcom/amap/api/services/core/LatLonPoint;->b:D
 
-    invoke-static {v1, v2}, Ljava/lang/Double;->doubleToLongBits(D)J
+    invoke-static {v2, v3}, Ljava/lang/Double;->doubleToLongBits(D)J
 
-    move-result-wide v1
+    move-result-wide v2
 
     mul-int/lit8 v0, v0, 0x1f
 
-    ushr-long v3, v1, v4
+    ushr-long v4, v2, v4
 
-    xor-long/2addr v1, v3
+    xor-long/2addr v2, v4
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     add-int/2addr v0, v1
 
@@ -236,7 +236,7 @@
 .end method
 
 .method public setLatitude(D)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcom/amap/api/services/core/LatLonPoint;->a:D
 
@@ -244,7 +244,7 @@
 .end method
 
 .method public setLongitude(D)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcom/amap/api/services/core/LatLonPoint;->b:D
 
@@ -252,7 +252,7 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 3
+    .locals 4
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -264,9 +264,9 @@
 
     move-result-object v0
 
-    iget-wide v1, p0, Lcom/amap/api/services/core/LatLonPoint;->a:D
+    iget-wide v2, p0, Lcom/amap/api/services/core/LatLonPoint;->a:D
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -276,9 +276,9 @@
 
     move-result-object v0
 
-    iget-wide v1, p0, Lcom/amap/api/services/core/LatLonPoint;->b:D
+    iget-wide v2, p0, Lcom/amap/api/services/core/LatLonPoint;->b:D
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

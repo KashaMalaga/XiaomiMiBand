@@ -8,7 +8,7 @@
 
 # virtual methods
 .method public final run()V
-    .locals 5
+    .locals 6
 
     :goto_0
     :try_start_0
@@ -32,9 +32,9 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-static {v0, v1, v2, v3, v4}, Lcom/a/ar;->a(Lcom/a/ar;Landroid/location/Location;IJ)V
+    invoke-static {v0, v1, v2, v4, v5}, Lcom/a/ar;->a(Lcom/a/ar;Landroid/location/Location;IJ)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 

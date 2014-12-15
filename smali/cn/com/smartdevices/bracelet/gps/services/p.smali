@@ -5,7 +5,7 @@
 # static fields
 .field private static final d:F = 5.0f
 
-.field private static final e:J = 0xbb8L
+.field private static final e:J
 
 
 # instance fields
@@ -68,7 +68,7 @@
 
     new-instance v0, Lcn/com/smartdevices/bracelet/gps/services/r;
 
-    invoke-direct {v0, p0, p1}, Lcn/com/smartdevices/bracelet/gps/services/r;-><init>(Lcn/com/smartdevices/bracelet/gps/services/p;Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/services/r;-><init>(Lcn/com/smartdevices/bracelet/gps/services/p;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/p;->b:Lcom/amap/api/location/AMapLocationListener;
 
@@ -277,7 +277,7 @@
 .method public a(I)V
     .locals 6
 
-    const-wide/16 v2, 0xbb8
+    const-wide/16 v2, 0x0
 
     const/high16 v4, 0x40a00000
 

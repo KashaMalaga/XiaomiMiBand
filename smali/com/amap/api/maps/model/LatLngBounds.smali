@@ -31,7 +31,7 @@
 .end method
 
 .method constructor <init>(ILcom/amap/api/maps/model/LatLng;Lcom/amap/api/maps/model/LatLng;)V
-    .locals 7
+    .locals 8
 
     const/4 v1, 0x1
 
@@ -47,11 +47,11 @@
 
     invoke-static {p3, v0}, Lcom/amap/api/mapcore/util/e;->a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-wide v3, p3, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v4, p3, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
-    iget-wide v5, p2, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v6, p2, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
-    cmpl-double v0, v3, v5
+    cmpl-double v0, v4, v6
 
     if-ltz v0, :cond_0
 
@@ -64,17 +64,17 @@
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    iget-wide v5, p2, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v6, p2, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
-    invoke-static {v5, v6}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    invoke-static {v6, v7}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v5
 
     aput-object v5, v4, v2
 
-    iget-wide v5, p3, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v6, p3, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
-    invoke-static {v5, v6}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    invoke-static {v6, v7}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v2
 
@@ -117,7 +117,7 @@
 .end method
 
 .method private a(D)Z
-    .locals 2
+    .locals 3
 
     iget-object v0, p0, Lcom/amap/api/maps/model/LatLngBounds;->southwest:Lcom/amap/api/maps/model/LatLng;
 
@@ -147,7 +147,7 @@
 .end method
 
 .method private a(Lcom/amap/api/maps/model/LatLngBounds;)Z
-    .locals 11
+    .locals 12
 
     const/4 v0, 0x0
 
@@ -176,105 +176,105 @@
     :cond_1
     iget-object v1, p1, Lcom/amap/api/maps/model/LatLngBounds;->northeast:Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v1, v1, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iget-wide v2, v1, Lcom/amap/api/maps/model/LatLng;->longitude:D
 
-    iget-object v3, p1, Lcom/amap/api/maps/model/LatLngBounds;->southwest:Lcom/amap/api/maps/model/LatLng;
+    iget-object v1, p1, Lcom/amap/api/maps/model/LatLngBounds;->southwest:Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v3, v3, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iget-wide v4, v1, Lcom/amap/api/maps/model/LatLng;->longitude:D
 
-    add-double/2addr v1, v3
+    add-double/2addr v2, v4
 
-    iget-object v3, p0, Lcom/amap/api/maps/model/LatLngBounds;->northeast:Lcom/amap/api/maps/model/LatLng;
+    iget-object v1, p0, Lcom/amap/api/maps/model/LatLngBounds;->northeast:Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v3, v3, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iget-wide v4, v1, Lcom/amap/api/maps/model/LatLng;->longitude:D
 
-    sub-double/2addr v1, v3
+    sub-double/2addr v2, v4
 
-    iget-object v3, p0, Lcom/amap/api/maps/model/LatLngBounds;->southwest:Lcom/amap/api/maps/model/LatLng;
+    iget-object v1, p0, Lcom/amap/api/maps/model/LatLngBounds;->southwest:Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v3, v3, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iget-wide v4, v1, Lcom/amap/api/maps/model/LatLng;->longitude:D
 
-    sub-double/2addr v1, v3
+    sub-double/2addr v2, v4
 
-    iget-object v3, p0, Lcom/amap/api/maps/model/LatLngBounds;->northeast:Lcom/amap/api/maps/model/LatLng;
+    iget-object v1, p0, Lcom/amap/api/maps/model/LatLngBounds;->northeast:Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v3, v3, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iget-wide v4, v1, Lcom/amap/api/maps/model/LatLng;->longitude:D
 
-    iget-object v5, p0, Lcom/amap/api/maps/model/LatLngBounds;->southwest:Lcom/amap/api/maps/model/LatLng;
+    iget-object v1, p0, Lcom/amap/api/maps/model/LatLngBounds;->southwest:Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v5, v5, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iget-wide v6, v1, Lcom/amap/api/maps/model/LatLng;->longitude:D
 
-    sub-double/2addr v3, v5
+    sub-double/2addr v4, v6
 
-    iget-object v5, p1, Lcom/amap/api/maps/model/LatLngBounds;->northeast:Lcom/amap/api/maps/model/LatLng;
+    iget-object v1, p1, Lcom/amap/api/maps/model/LatLngBounds;->northeast:Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v5, v5, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iget-wide v6, v1, Lcom/amap/api/maps/model/LatLng;->longitude:D
 
-    add-double/2addr v3, v5
+    add-double/2addr v4, v6
 
-    iget-object v5, p0, Lcom/amap/api/maps/model/LatLngBounds;->southwest:Lcom/amap/api/maps/model/LatLng;
+    iget-object v1, p0, Lcom/amap/api/maps/model/LatLngBounds;->southwest:Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v5, v5, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iget-wide v6, v1, Lcom/amap/api/maps/model/LatLng;->longitude:D
 
-    sub-double/2addr v3, v5
+    sub-double/2addr v4, v6
 
-    iget-object v5, p1, Lcom/amap/api/maps/model/LatLngBounds;->northeast:Lcom/amap/api/maps/model/LatLng;
+    iget-object v1, p1, Lcom/amap/api/maps/model/LatLngBounds;->northeast:Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v5, v5, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v6, v1, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
-    iget-object v7, p1, Lcom/amap/api/maps/model/LatLngBounds;->southwest:Lcom/amap/api/maps/model/LatLng;
+    iget-object v1, p1, Lcom/amap/api/maps/model/LatLngBounds;->southwest:Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v7, v7, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v8, v1, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
-    add-double/2addr v5, v7
+    add-double/2addr v6, v8
 
-    iget-object v7, p0, Lcom/amap/api/maps/model/LatLngBounds;->northeast:Lcom/amap/api/maps/model/LatLng;
+    iget-object v1, p0, Lcom/amap/api/maps/model/LatLngBounds;->northeast:Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v7, v7, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v8, v1, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
-    sub-double/2addr v5, v7
+    sub-double/2addr v6, v8
 
-    iget-object v7, p0, Lcom/amap/api/maps/model/LatLngBounds;->southwest:Lcom/amap/api/maps/model/LatLng;
+    iget-object v1, p0, Lcom/amap/api/maps/model/LatLngBounds;->southwest:Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v7, v7, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v8, v1, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
-    sub-double/2addr v5, v7
+    sub-double/2addr v6, v8
 
-    iget-object v7, p0, Lcom/amap/api/maps/model/LatLngBounds;->northeast:Lcom/amap/api/maps/model/LatLng;
+    iget-object v1, p0, Lcom/amap/api/maps/model/LatLngBounds;->northeast:Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v7, v7, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v8, v1, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
-    iget-object v9, p0, Lcom/amap/api/maps/model/LatLngBounds;->southwest:Lcom/amap/api/maps/model/LatLng;
+    iget-object v1, p0, Lcom/amap/api/maps/model/LatLngBounds;->southwest:Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v9, v9, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v10, v1, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
-    sub-double/2addr v7, v9
+    sub-double/2addr v8, v10
 
-    iget-object v9, p1, Lcom/amap/api/maps/model/LatLngBounds;->northeast:Lcom/amap/api/maps/model/LatLng;
+    iget-object v1, p1, Lcom/amap/api/maps/model/LatLngBounds;->northeast:Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v9, v9, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v10, v1, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
-    add-double/2addr v7, v9
+    add-double/2addr v8, v10
 
-    iget-object v9, p1, Lcom/amap/api/maps/model/LatLngBounds;->southwest:Lcom/amap/api/maps/model/LatLng;
+    iget-object v1, p1, Lcom/amap/api/maps/model/LatLngBounds;->southwest:Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v9, v9, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v10, v1, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
-    sub-double/2addr v7, v9
+    sub-double/2addr v8, v10
 
-    invoke-static {v1, v2}, Ljava/lang/Math;->abs(D)D
+    invoke-static {v2, v3}, Ljava/lang/Math;->abs(D)D
 
-    move-result-wide v1
+    move-result-wide v2
 
-    cmpg-double v1, v1, v3
+    cmpg-double v1, v2, v4
 
     if-gez v1, :cond_0
 
-    invoke-static {v5, v6}, Ljava/lang/Math;->abs(D)D
+    invoke-static {v6, v7}, Ljava/lang/Math;->abs(D)D
 
-    move-result-wide v1
+    move-result-wide v2
 
-    cmpg-double v1, v1, v7
+    cmpg-double v1, v2, v8
 
     if-gez v1, :cond_0
 
@@ -294,7 +294,7 @@
 .end method
 
 .method private b(D)Z
-    .locals 6
+    .locals 7
 
     const/4 v0, 0x1
 
@@ -559,102 +559,102 @@
 .end method
 
 .method public including(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/LatLngBounds;
-    .locals 17
+    .locals 18
 
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/amap/api/maps/model/LatLngBounds;->southwest:Lcom/amap/api/maps/model/LatLng;
+    iget-object v2, v0, Lcom/amap/api/maps/model/LatLngBounds;->southwest:Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v1, v1, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v2, v2, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
     move-object/from16 v0, p1
 
-    iget-wide v3, v0, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v4, v0, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
-    invoke-static {v1, v2, v3, v4}, Ljava/lang/Math;->min(DD)D
+    invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->min(DD)D
 
-    move-result-wide v7
+    move-result-wide v8
 
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/amap/api/maps/model/LatLngBounds;->northeast:Lcom/amap/api/maps/model/LatLng;
+    iget-object v2, v0, Lcom/amap/api/maps/model/LatLngBounds;->northeast:Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v1, v1, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v2, v2, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
     move-object/from16 v0, p1
 
-    iget-wide v3, v0, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v4, v0, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
-    invoke-static {v1, v2, v3, v4}, Ljava/lang/Math;->max(DD)D
+    invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->max(DD)D
 
-    move-result-wide v9
-
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/amap/api/maps/model/LatLngBounds;->northeast:Lcom/amap/api/maps/model/LatLng;
-
-    iget-wide v5, v1, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    move-result-wide v10
 
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/amap/api/maps/model/LatLngBounds;->southwest:Lcom/amap/api/maps/model/LatLng;
+    iget-object v2, v0, Lcom/amap/api/maps/model/LatLngBounds;->northeast:Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v3, v1, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iget-wide v6, v2, Lcom/amap/api/maps/model/LatLng;->longitude:D
+
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/amap/api/maps/model/LatLngBounds;->southwest:Lcom/amap/api/maps/model/LatLng;
+
+    iget-wide v4, v2, Lcom/amap/api/maps/model/LatLng;->longitude:D
 
     move-object/from16 v0, p1
 
-    iget-wide v1, v0, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iget-wide v2, v0, Lcom/amap/api/maps/model/LatLng;->longitude:D
 
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v1, v2}, Lcom/amap/api/maps/model/LatLngBounds;->b(D)Z
+    invoke-direct {v0, v2, v3}, Lcom/amap/api/maps/model/LatLngBounds;->b(D)Z
 
-    move-result v11
+    move-result v12
 
-    if-nez v11, :cond_1
+    if-nez v12, :cond_1
 
-    invoke-static {v3, v4, v1, v2}, Lcom/amap/api/maps/model/LatLngBounds;->c(DD)D
+    invoke-static {v4, v5, v2, v3}, Lcom/amap/api/maps/model/LatLngBounds;->c(DD)D
 
-    move-result-wide v11
+    move-result-wide v12
 
-    invoke-static {v5, v6, v1, v2}, Lcom/amap/api/maps/model/LatLngBounds;->d(DD)D
+    invoke-static {v6, v7, v2, v3}, Lcom/amap/api/maps/model/LatLngBounds;->d(DD)D
 
-    move-result-wide v13
+    move-result-wide v14
 
-    cmpg-double v11, v11, v13
+    cmpg-double v12, v12, v14
 
-    if-gez v11, :cond_0
+    if-gez v12, :cond_0
 
-    move-wide v3, v5
+    move-wide v4, v6
 
     :goto_0
-    new-instance v5, Lcom/amap/api/maps/model/LatLngBounds;
+    new-instance v6, Lcom/amap/api/maps/model/LatLngBounds;
 
-    new-instance v6, Lcom/amap/api/maps/model/LatLng;
+    new-instance v7, Lcom/amap/api/maps/model/LatLng;
 
-    invoke-direct {v6, v7, v8, v1, v2}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v7, v8, v9, v2, v3}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
-    new-instance v1, Lcom/amap/api/maps/model/LatLng;
+    new-instance v2, Lcom/amap/api/maps/model/LatLng;
 
-    invoke-direct {v1, v9, v10, v3, v4}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v2, v10, v11, v4, v5}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
-    invoke-direct {v5, v6, v1}, Lcom/amap/api/maps/model/LatLngBounds;-><init>(Lcom/amap/api/maps/model/LatLng;Lcom/amap/api/maps/model/LatLng;)V
+    invoke-direct {v6, v7, v2}, Lcom/amap/api/maps/model/LatLngBounds;-><init>(Lcom/amap/api/maps/model/LatLng;Lcom/amap/api/maps/model/LatLng;)V
 
-    return-object v5
+    return-object v6
 
     :cond_0
-    move-wide v15, v3
+    move-wide/from16 v16, v4
 
-    move-wide v3, v1
+    move-wide v4, v2
 
-    move-wide v1, v15
+    move-wide/from16 v2, v16
 
     goto :goto_0
 
     :cond_1
-    move-wide v1, v3
+    move-wide v2, v4
 
-    move-wide v3, v5
+    move-wide v4, v6
 
     goto :goto_0
 .end method

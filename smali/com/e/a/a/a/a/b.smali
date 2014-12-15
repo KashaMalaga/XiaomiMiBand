@@ -40,7 +40,7 @@
 .end method
 
 .method public constructor <init>(Ljava/io/File;Ljava/io/File;J)V
-    .locals 6
+    .locals 7
 
     invoke-static {}, Lcom/e/a/b/a;->b()Lcom/e/a/a/a/b/a;
 
@@ -92,17 +92,17 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {v0, v1, v2}, Ljava/io/File;->setLastModified(J)Z
+    invoke-virtual {v0, v2, v3}, Ljava/io/File;->setLastModified(J)Z
 
-    iget-object v3, p0, Lcom/e/a/a/a/a/b;->k:Ljava/util/Map;
+    iget-object v1, p0, Lcom/e/a/a/a/a/b;->k:Ljava/util/Map;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-interface {v3, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v0, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
@@ -110,7 +110,7 @@
 
 # virtual methods
 .method public a(Ljava/lang/String;)Ljava/io/File;
-    .locals 7
+    .locals 8
 
     invoke-super {p0, p1}, Lcom/e/a/a/a/a/a;->a(Ljava/lang/String;)Ljava/io/File;
 
@@ -138,26 +138,26 @@
 
     invoke-virtual {v2}, Ljava/io/File;->lastModified()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
     :goto_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v5
+    move-result-wide v6
 
-    sub-long/2addr v3, v5
+    sub-long/2addr v4, v6
 
-    iget-wide v5, p0, Lcom/e/a/a/a/a/b;->j:J
+    iget-wide v6, p0, Lcom/e/a/a/a/a/b;->j:J
 
-    cmp-long v3, v3, v5
+    cmp-long v3, v4, v6
 
     if-lez v3, :cond_2
 

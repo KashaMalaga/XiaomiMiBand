@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/cC;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/cD;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/cC;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/cD;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cI;->a:Lcn/com/smartdevices/bracelet/ui/cC;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cI;->a:Lcn/com/smartdevices/bracelet/ui/cD;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,48 +22,18 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 3
+.method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cI;->a:Lcn/com/smartdevices/bracelet/ui/cC;
+    invoke-static {p2}, Lcn/com/smartdevices/bracelet/u;->f(Z)V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/cC;->g(Lcn/com/smartdevices/bracelet/ui/cC;)Lcn/com/smartdevices/bracelet/chart/LinePieChartView;
+    new-instance v0, Lcn/com/smartdevices/bracelet/a/m;
 
-    move-result-object v0
+    const/4 v1, 0x0
 
-    const-wide/16 v1, 0x64
+    invoke-direct {v0, v1, p2}, Lcn/com/smartdevices/bracelet/a/m;-><init>(Lcn/com/smartdevices/bracelet/a/b;Z)V
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/chart/LinePieChartView;->a(J)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cI;->a:Lcn/com/smartdevices/bracelet/ui/cC;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/cC;->g(Lcn/com/smartdevices/bracelet/ui/cC;)Lcn/com/smartdevices/bracelet/chart/LinePieChartView;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cI;->a:Lcn/com/smartdevices/bracelet/ui/cC;
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/cI;->a:Lcn/com/smartdevices/bracelet/ui/cC;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/cC;->c(Lcn/com/smartdevices/bracelet/ui/cC;)Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$BatteryInfo;
-
-    move-result-object v2
-
-    iget v2, v2, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$BatteryInfo;->level:I
-
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/ui/cC;->a(Lcn/com/smartdevices/bracelet/ui/cC;I)J
-
-    move-result-wide v1
-
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/chart/LinePieChartView;->b(J)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cI;->a:Lcn/com/smartdevices/bracelet/ui/cC;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/cC;->i(Lcn/com/smartdevices/bracelet/ui/cC;)Landroid/animation/Animator;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/animation/Animator;->start()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/a/m;->d()V
 
     return-void
 .end method

@@ -56,7 +56,7 @@
 .end method
 
 .method public onLocationUpdate(Lcom/tencent/b/a/a/d;)V
-    .locals 3
+    .locals 4
 
     const-string v0, "openSDK_LOG"
 
@@ -95,13 +95,13 @@
 
     invoke-direct {v0, v1}, Landroid/location/Location;-><init>(Ljava/lang/String;)V
 
-    iget-wide v1, p1, Lcom/tencent/b/a/a/d;->b:D
+    iget-wide v2, p1, Lcom/tencent/b/a/a/d;->b:D
 
-    invoke-virtual {v0, v1, v2}, Landroid/location/Location;->setLatitude(D)V
+    invoke-virtual {v0, v2, v3}, Landroid/location/Location;->setLatitude(D)V
 
-    iget-wide v1, p1, Lcom/tencent/b/a/a/d;->c:D
+    iget-wide v2, p1, Lcom/tencent/b/a/a/d;->c:D
 
-    invoke-virtual {v0, v1, v2}, Landroid/location/Location;->setLongitude(D)V
+    invoke-virtual {v0, v2, v3}, Landroid/location/Location;->setLongitude(D)V
 
     iget-object v1, p0, Lcom/tencent/tauth/SosoLocationListener;->listener:Lcom/tencent/tauth/LbsAgent$OnGetLocationListener;
 

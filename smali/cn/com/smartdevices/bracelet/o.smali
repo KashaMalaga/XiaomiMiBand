@@ -232,7 +232,7 @@
 .end method
 
 .method private a(Ljava/lang/String;Ljava/lang/String;)I
-    .locals 5
+    .locals 4
 
     invoke-static {p1}, Lcn/com/smartdevices/bracelet/model/SportDay;->toCalenday(Ljava/lang/String;)Ljava/util/Calendar;
 
@@ -248,7 +248,7 @@
 
     invoke-virtual {v1}, Ljava/util/Date;->getTime()J
 
-    move-result-wide v1
+    move-result-wide v2
 
     invoke-virtual {v0}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
 
@@ -256,9 +256,9 @@
 
     invoke-virtual {v0}, Ljava/util/Date;->getTime()J
 
-    move-result-wide v3
+    move-result-wide v0
 
-    sub-long v0, v1, v3
+    sub-long v0, v2, v0
 
     const-wide/32 v2, 0x5265c00
 
@@ -1454,9 +1454,9 @@
 .end method
 
 .method private a(Lcn/com/smartdevices/bracelet/model/DaySportData$SummaryEntity;Lorg/json/JSONObject;I)V
-    .locals 7
+    .locals 8
 
-    const-wide/16 v5, 0x3e8
+    const-wide/16 v6, 0x3e8
 
     const/high16 v4, -0x80000000
 
@@ -1642,7 +1642,7 @@
 
     move-result-wide v2
 
-    mul-long/2addr v2, v5
+    mul-long/2addr v2, v6
 
     invoke-virtual {p1, v2, v3}, Lcn/com/smartdevices/bracelet/model/DaySportData$SummaryEntity;->setSleepStartTime(J)V
 
@@ -1652,7 +1652,7 @@
 
     move-result-wide v2
 
-    mul-long/2addr v2, v5
+    mul-long/2addr v2, v6
 
     invoke-virtual {p1, v2, v3}, Lcn/com/smartdevices/bracelet/model/DaySportData$SummaryEntity;->setSleepRiseTime(J)V
 
@@ -1793,7 +1793,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->n()Ljava/util/ArrayList;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->l()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -4900,9 +4900,9 @@
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/u;->d()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-virtual {v0, v3, v4}, Ljava/util/Calendar;->setTimeInMillis(J)V
+    invoke-virtual {v0, v4, v5}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
     new-instance v3, Lcn/com/smartdevices/bracelet/model/SportDay;
 

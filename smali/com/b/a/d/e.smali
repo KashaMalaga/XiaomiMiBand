@@ -760,7 +760,7 @@
 .end method
 
 .method public a(J)Lcom/b/a/d/e;
-    .locals 2
+    .locals 3
 
     invoke-direct {p0}, Lcom/b/a/d/e;->j()V
 

@@ -46,7 +46,7 @@
 .end method
 
 .method static synthetic a(Lcom/a/S;J)J
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcom/a/S;->f:J
 

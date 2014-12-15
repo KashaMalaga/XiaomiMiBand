@@ -91,7 +91,7 @@
 .end method
 
 .method getResponseData(Lorg/apache/http/HttpEntity;)[B
-    .locals 5
+    .locals 6
 
     const/4 v0, 0x0
 
@@ -107,9 +107,9 @@
 
     move-result-wide v0
 
-    const-wide/32 v3, 0x7fffffff
+    const-wide/32 v4, 0x7fffffff
 
-    cmp-long v3, v0, v3
+    cmp-long v3, v0, v4
 
     if-lez v3, :cond_0
 
@@ -122,9 +122,9 @@
     throw v0
 
     :cond_0
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    cmp-long v3, v0, v3
+    cmp-long v3, v0, v4
 
     if-gez v3, :cond_1
 

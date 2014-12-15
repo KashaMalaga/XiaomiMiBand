@@ -3,11 +3,15 @@
 
 
 # static fields
-.field static a:Ljava/lang/String;
+.field protected static final UPDATE_OFFLINE_FILE:Ljava/lang/String; = "update_file"
 
-.field private static c:Ljava/lang/String;
+.field static a:Ljava/lang/String; = null
 
-.field private static d:Ljava/lang/String;
+.field private static c:Ljava/lang/String; = null
+
+.field private static d:Ljava/lang/String; = null
+
+.field protected static final mMessageUpdateFile:I = 0x1
 
 
 # instance fields
@@ -143,6 +147,60 @@
     return-void
 .end method
 
+.method public constructor <init>(Landroid/content/Context;Lcom/amap/api/maps/offlinemap/OfflineMapManager$OfflineMapDownloadListener;Lcom/amap/api/maps/AMap;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->g:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->h:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->i:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->j:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->mIsStart:Z
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->l:Ljava/lang/String;
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->m:Ljava/lang/String;
+
+    new-instance v0, Lcom/amap/api/maps/offlinemap/g;
+
+    invoke-direct {v0, p0}, Lcom/amap/api/maps/offlinemap/g;-><init>(Lcom/amap/api/maps/offlinemap/OfflineMapManager;)V
+
+    iput-object v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->b:Landroid/os/Handler;
+
+    iput-object p3, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->n:Lcom/amap/api/maps/AMap;
+
+    invoke-direct {p0, p1, p2}, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->a(Landroid/content/Context;Lcom/amap/api/maps/offlinemap/OfflineMapManager$OfflineMapDownloadListener;)V
+
+    return-void
+.end method
+
 .method private a(Lcom/amap/api/maps/offlinemap/OfflineMapProvince;)Lcom/amap/api/maps/offlinemap/OfflineMapCity;
     .locals 3
 
@@ -177,66 +235,16 @@
     goto :goto_0
 .end method
 
-.method private a(Lcom/amap/api/maps/offlinemap/m;)Lcom/amap/api/maps/offlinemap/OfflineMapCity;
-    .locals 3
-
-    new-instance v0, Lcom/amap/api/maps/offlinemap/OfflineMapCity;
-
-    invoke-direct {v0}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;-><init>()V
-
-    invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/m;->b()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->setCity(Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/m;->e()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->setAdcode(Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/m;->g()J
-
-    move-result-wide v1
-
-    invoke-virtual {v0, v1, v2}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->setSize(J)V
-
-    iget v1, p1, Lcom/amap/api/maps/offlinemap/m;->a:I
-
-    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->setState(I)V
-
-    invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/m;->f()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->setUrl(Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/m;->c()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->setVersion(Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/m;->j()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->setCompleteCode(I)V
-
-    return-object v0
-.end method
-
-.method static synthetic a(Lcom/amap/api/maps/offlinemap/OfflineMapManager;)Lcom/amap/api/maps/offlinemap/OfflineMapManager$OfflineMapDownloadListener;
+.method static synthetic a(Lcom/amap/api/maps/offlinemap/OfflineMapManager;)Lcom/amap/api/maps/offlinemap/d;
     .locals 1
 
-    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->f:Lcom/amap/api/maps/offlinemap/OfflineMapManager$OfflineMapDownloadListener;
+    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->e:Lcom/amap/api/maps/offlinemap/d;
 
     return-object v0
 .end method
 
 .method private a()V
-    .locals 7
+    .locals 6
 
     invoke-static {}, Lcom/amap/api/maps/offlinemap/d;->a()Ljava/lang/String;
 
@@ -273,7 +281,7 @@
 
     move-result-object v4
 
-    const-string v5, "zip.tmp.dt"
+    const-string v5, ".zip.tmp.dt"
 
     invoke-virtual {v4, v5}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
@@ -306,63 +314,16 @@
 
     if-nez v5, :cond_4
 
-    invoke-virtual {v4}, Lcom/amap/api/maps/offlinemap/m;->i()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_5
-
-    invoke-direct {p0, v4}, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->b(Lcom/amap/api/maps/offlinemap/m;)Lcom/amap/api/maps/offlinemap/OfflineMapProvince;
-
-    move-result-object v5
-
-    iget-object v6, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->h:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v6, v5}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
+    invoke-direct {p0, v4}, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->a(Lcom/amap/api/maps/offlinemap/m;)V
 
     :cond_4
-    :goto_2
     invoke-direct {p0, v3}, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->a(Ljava/io/File;)Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    invoke-virtual {v4}, Lcom/amap/api/maps/offlinemap/m;->i()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_6
-
-    invoke-direct {p0, v4}, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->b(Lcom/amap/api/maps/offlinemap/m;)Lcom/amap/api/maps/offlinemap/OfflineMapProvince;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->j:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v4, v3}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    :cond_5
-    invoke-direct {p0, v4}, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->a(Lcom/amap/api/maps/offlinemap/m;)Lcom/amap/api/maps/offlinemap/OfflineMapCity;
-
-    move-result-object v5
-
-    iget-object v6, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->g:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v6, v5}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_2
-
-    :cond_6
-    invoke-direct {p0, v4}, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->a(Lcom/amap/api/maps/offlinemap/m;)Lcom/amap/api/maps/offlinemap/OfflineMapCity;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->i:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v4, v3}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
+    invoke-direct {p0, v4}, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->b(Lcom/amap/api/maps/offlinemap/m;)V
 
     goto :goto_1
 .end method
@@ -506,7 +467,7 @@
 
     move-result-object v0
 
-    const-string v1, "code"
+    const-string v1, "adcode"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -536,7 +497,7 @@
 
     move-result-object v3
 
-    const-string v4, "completepercent"
+    const-string v4, "complete"
 
     invoke-virtual {v3, v4}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
@@ -675,6 +636,67 @@
     return-void
 .end method
 
+.method private a(Lcom/amap/api/maps/offlinemap/m;)V
+    .locals 2
+
+    invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/m;->b()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->d(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-direct {p0, p1}, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->d(Lcom/amap/api/maps/offlinemap/m;)Lcom/amap/api/maps/offlinemap/OfflineMapProvince;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->h:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-direct {p0, p1}, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->c(Lcom/amap/api/maps/offlinemap/m;)Lcom/amap/api/maps/offlinemap/OfflineMapCity;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->g:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
+
+    :goto_0
+    return-void
+
+    :cond_0
+    invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/m;->i()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-direct {p0, p1}, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->d(Lcom/amap/api/maps/offlinemap/m;)Lcom/amap/api/maps/offlinemap/OfflineMapProvince;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->h:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_1
+    invoke-direct {p0, p1}, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->c(Lcom/amap/api/maps/offlinemap/m;)Lcom/amap/api/maps/offlinemap/OfflineMapCity;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->g:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+.end method
+
 .method private a(Ljava/lang/Object;JJ)V
     .locals 6
 
@@ -770,7 +792,7 @@
 
     move-result-object v1
 
-    const-string v2, "zip.tmp.dt"
+    const-string v2, ".zip.tmp.dt"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
@@ -994,11 +1016,11 @@
 .end method
 
 .method private a(Ljava/lang/String;Ljava/lang/String;)Z
-    .locals 5
+    .locals 8
 
     const/4 v2, 0x0
 
-    const/4 v3, 0x1
+    const/4 v4, 0x1
 
     iget-object v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->e:Lcom/amap/api/maps/offlinemap/d;
 
@@ -1015,95 +1037,50 @@
     return v2
 
     :cond_1
-    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->g:Ljava/util/concurrent/CopyOnWriteArrayList;
+    if-eqz p1, :cond_2
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    const-string v0, ""
 
-    move-result-object v4
-
-    move v1, v2
-
-    :goto_1
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/amap/api/maps/offlinemap/OfflineMapCity;
-
-    invoke-virtual {v0}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->getCity()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_a
-
-    move v0, v3
-
-    :goto_2
-    move v1, v0
-
-    goto :goto_1
-
-    :cond_2
-    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->i:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v4
-
-    :cond_3
-    :goto_3
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/amap/api/maps/offlinemap/OfflineMapCity;
-
-    invoke-virtual {v0}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->getCity()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    move v1, v3
+    :cond_2
+    new-instance v0, Lcom/amap/api/maps/AMapException;
 
-    goto :goto_3
+    const-string v1, "\u65e0\u6548\u7684\u53c2\u6570 - IllegalArgumentException"
 
-    :cond_4
-    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->h:Ljava/util/concurrent/CopyOnWriteArrayList;
+    invoke-direct {v0, v1}, Lcom/amap/api/maps/AMapException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    throw v0
 
-    move-result-object v4
+    :cond_3
+    move v1, v2
 
-    :cond_5
-    :goto_4
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+    move v3, v2
+
+    :goto_1
+    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->e:Lcom/amap/api/maps/offlinemap/d;
+
+    iget-object v0, v0, Lcom/amap/api/maps/offlinemap/d;->d:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->size()I
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-ge v1, v0, :cond_4
 
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v5
+
+    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->e:Lcom/amap/api/maps/offlinemap/d;
+
+    iget-object v0, v0, Lcom/amap/api/maps/offlinemap/d;->d:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1113,32 +1090,207 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
-    move v1, v3
-
-    goto :goto_4
-
-    :cond_6
-    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->j:Ljava/util/concurrent/CopyOnWriteArrayList;
+    :cond_4
+    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->g:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
-    move-result-object v4
+    move-result-object v3
 
-    :cond_7
-    :goto_5
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+    move v1, v2
+
+    :goto_2
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_a
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/amap/api/maps/offlinemap/OfflineMapCity;
+
+    invoke-virtual {v0}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->getCity()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_12
+
+    move v0, v4
+
+    :goto_3
+    move v1, v0
+
+    goto :goto_2
+
+    :cond_5
+    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->e:Lcom/amap/api/maps/offlinemap/d;
+
+    iget-object v0, v0, Lcom/amap/api/maps/offlinemap/d;->d:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;
+
+    invoke-virtual {v0}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->getCityList()Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v5
+
+    :cond_6
+    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_8
 
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/amap/api/maps/offlinemap/OfflineMapCity;
+
+    invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v0}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->getCode()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v6
+
+    if-nez v6, :cond_7
+
+    invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v0}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->getCity()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    :cond_7
+    move v3, v4
+
+    :cond_8
+    if-nez v3, :cond_4
+
+    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->e:Lcom/amap/api/maps/offlinemap/d;
+
+    iget-object v0, v0, Lcom/amap/api/maps/offlinemap/d;->d:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->size()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x1
+
+    if-ne v1, v0, :cond_9
+
+    new-instance v0, Lcom/amap/api/maps/AMapException;
+
+    const-string v1, "\u65e0\u6548\u7684\u53c2\u6570 - IllegalArgumentException"
+
+    invoke-direct {v0, v1}, Lcom/amap/api/maps/AMapException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_9
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto/16 :goto_1
+
+    :cond_a
+    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->i:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :cond_b
+    :goto_4
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_c
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/amap/api/maps/offlinemap/OfflineMapCity;
+
+    invoke-virtual {v0}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->getCity()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_b
+
+    move v1, v4
+
+    goto :goto_4
+
+    :cond_c
+    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->h:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :cond_d
+    :goto_5
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_e
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1152,31 +1304,66 @@
 
     move-result v0
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_d
 
-    move v1, v3
+    move v1, v4
 
     goto :goto_5
 
-    :cond_8
-    if-nez v1, :cond_9
+    :cond_e
+    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->j:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    move v2, v3
+    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
 
-    goto :goto_0
+    move-result-object v3
 
-    :cond_9
+    :cond_f
+    :goto_6
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_10
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;
+
+    invoke-virtual {v0}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->getProvinceName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_f
+
+    move v1, v4
+
+    goto :goto_6
+
+    :cond_10
+    if-nez v1, :cond_11
+
+    move v2, v4
+
+    goto/16 :goto_0
+
+    :cond_11
     new-instance v0, Lcom/amap/api/maps/offlinemap/e;
 
     sget-object v1, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->a:Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->k:Landroid/content/Context;
+    iget-object v3, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->k:Landroid/content/Context;
 
-    invoke-static {v4}, Lcom/amap/api/mapcore/util/i;->c(Landroid/content/Context;)Ljava/net/Proxy;
+    invoke-static {v3}, Lcom/amap/api/mapcore/util/i;->c(Landroid/content/Context;)Ljava/net/Proxy;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-direct {v0, v1, v4}, Lcom/amap/api/maps/offlinemap/e;-><init>(Ljava/lang/String;Ljava/net/Proxy;)V
+    invoke-direct {v0, v1, v3}, Lcom/amap/api/maps/offlinemap/e;-><init>(Ljava/lang/String;Ljava/net/Proxy;)V
 
     invoke-virtual {v0}, Lcom/amap/api/maps/offlinemap/e;->GetData()Ljava/lang/Object;
 
@@ -1188,20 +1375,28 @@
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0}, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->b()V
+    invoke-virtual {p0}, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->updateAllCity()V
 
-    move v2, v3
+    move v2, v4
 
     goto/16 :goto_0
 
-    :cond_a
+    :cond_12
     move v0, v1
 
-    goto :goto_2
+    goto/16 :goto_3
+.end method
+
+.method static synthetic b(Lcom/amap/api/maps/offlinemap/OfflineMapManager;)Lcom/amap/api/maps/offlinemap/OfflineMapManager$OfflineMapDownloadListener;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->f:Lcom/amap/api/maps/offlinemap/OfflineMapManager$OfflineMapDownloadListener;
+
+    return-object v0
 .end method
 
 .method private b(Lcom/amap/api/maps/offlinemap/OfflineMapCity;)Lcom/amap/api/maps/offlinemap/OfflineMapProvince;
-    .locals 3
+    .locals 4
 
     if-nez p1, :cond_0
 
@@ -1255,9 +1450,9 @@
 
     invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->getSize()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->setSize(J)V
+    invoke-virtual {v0, v2, v3}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->setSize(J)V
 
     invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->getState()I
 
@@ -1280,56 +1475,6 @@
     goto :goto_0
 .end method
 
-.method private b(Lcom/amap/api/maps/offlinemap/m;)Lcom/amap/api/maps/offlinemap/OfflineMapProvince;
-    .locals 3
-
-    new-instance v0, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;
-
-    invoke-direct {v0}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;-><init>()V
-
-    invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/m;->b()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->setProvinceName(Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/m;->e()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->setProvinceCode(Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/m;->g()J
-
-    move-result-wide v1
-
-    invoke-virtual {v0, v1, v2}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->setSize(J)V
-
-    iget v1, p1, Lcom/amap/api/maps/offlinemap/m;->a:I
-
-    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->setState(I)V
-
-    invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/m;->f()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->setUrl(Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/m;->c()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->setVersion(Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/m;->j()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->setCompleteCode(I)V
-
-    return-object v0
-.end method
-
 .method private b(Ljava/io/File;)Ljava/lang/String;
     .locals 1
 
@@ -1345,38 +1490,25 @@
 .end method
 
 .method private b()V
-    .locals 3
+    .locals 2
 
-    new-instance v0, Lcom/amap/api/maps/offlinemap/i;
+    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->k:Landroid/content/Context;
 
-    const-string v1, ""
+    invoke-static {v0}, Lcom/amap/api/mapcore/util/w;->c(Landroid/content/Context;)Z
 
-    iget-object v2, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->k:Landroid/content/Context;
+    move-result v0
 
-    invoke-static {v2}, Lcom/amap/api/mapcore/util/i;->c(Landroid/content/Context;)Ljava/net/Proxy;
+    if-nez v0, :cond_0
 
-    move-result-object v2
+    new-instance v0, Lcom/amap/api/maps/AMapException;
 
-    invoke-direct {v0, v1, v2}, Lcom/amap/api/maps/offlinemap/i;-><init>(Ljava/lang/String;Ljava/net/Proxy;)V
+    const-string v1, "http\u8fde\u63a5\u5931\u8d25 - ConnectionException"
 
-    iget-object v1, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->k:Landroid/content/Context;
+    invoke-direct {v0, v1}, Lcom/amap/api/maps/AMapException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/i;->a(Landroid/content/Context;)V
+    throw v0
 
-    invoke-virtual {v0}, Lcom/amap/api/maps/offlinemap/i;->GetData()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/List;
-
-    iget-object v1, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->e:Lcom/amap/api/maps/offlinemap/d;
-
-    invoke-virtual {v1}, Lcom/amap/api/maps/offlinemap/d;->d()V
-
-    iget-object v1, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->e:Lcom/amap/api/maps/offlinemap/d;
-
-    invoke-virtual {v1, v0}, Lcom/amap/api/maps/offlinemap/d;->a(Ljava/util/List;)V
-
+    :cond_0
     return-void
 .end method
 
@@ -1503,7 +1635,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->i:Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-object v1, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->g:Ljava/util/concurrent/CopyOnWriteArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
@@ -1558,6 +1690,67 @@
     iput-object v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->m:Ljava/lang/String;
 
     return-void
+.end method
+
+.method private b(Lcom/amap/api/maps/offlinemap/m;)V
+    .locals 2
+
+    invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/m;->b()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->d(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-direct {p0, p1}, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->d(Lcom/amap/api/maps/offlinemap/m;)Lcom/amap/api/maps/offlinemap/OfflineMapProvince;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->j:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-direct {p0, p1}, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->c(Lcom/amap/api/maps/offlinemap/m;)Lcom/amap/api/maps/offlinemap/OfflineMapCity;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->i:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
+
+    :goto_0
+    return-void
+
+    :cond_0
+    invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/m;->i()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-direct {p0, p1}, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->d(Lcom/amap/api/maps/offlinemap/m;)Lcom/amap/api/maps/offlinemap/OfflineMapProvince;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->j:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_1
+    invoke-direct {p0, p1}, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->c(Lcom/amap/api/maps/offlinemap/m;)Lcom/amap/api/maps/offlinemap/OfflineMapCity;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->i:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
 .end method
 
 .method private b(Ljava/lang/String;)Z
@@ -1773,27 +1966,60 @@
     return v0
 .end method
 
-.method private c()V
-    .locals 2
+.method private c(Lcom/amap/api/maps/offlinemap/m;)Lcom/amap/api/maps/offlinemap/OfflineMapCity;
+    .locals 4
 
-    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->k:Landroid/content/Context;
+    new-instance v0, Lcom/amap/api/maps/offlinemap/OfflineMapCity;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/util/w;->d(Landroid/content/Context;)Z
+    invoke-direct {v0}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;-><init>()V
 
-    move-result v0
+    invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/m;->b()Ljava/lang/String;
 
-    if-nez v0, :cond_0
+    move-result-object v1
 
-    new-instance v0, Lcom/amap/api/maps/AMapException;
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->setCity(Ljava/lang/String;)V
 
-    const-string v1, "http\u8fde\u63a5\u5931\u8d25 - ConnectionException"
+    invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/m;->e()Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Lcom/amap/api/maps/AMapException;-><init>(Ljava/lang/String;)V
+    move-result-object v1
 
-    throw v0
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->setAdcode(Ljava/lang/String;)V
 
-    :cond_0
-    return-void
+    invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/m;->g()J
+
+    move-result-wide v2
+
+    invoke-virtual {v0, v2, v3}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->setSize(J)V
+
+    iget v1, p1, Lcom/amap/api/maps/offlinemap/m;->a:I
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->setState(I)V
+
+    invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/m;->f()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->setUrl(Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/m;->c()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->setVersion(Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/m;->j()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->setCompleteCode(I)V
+
+    invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/m;->k()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->setCode(Ljava/lang/String;)V
+
+    return-object v0
 .end method
 
 .method private c(Ljava/lang/String;)V
@@ -2085,6 +2311,56 @@
     goto :goto_0
 .end method
 
+.method private d(Lcom/amap/api/maps/offlinemap/m;)Lcom/amap/api/maps/offlinemap/OfflineMapProvince;
+    .locals 4
+
+    new-instance v0, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;
+
+    invoke-direct {v0}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;-><init>()V
+
+    invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/m;->b()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->setProvinceName(Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/m;->e()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->setProvinceCode(Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/m;->g()J
+
+    move-result-wide v2
+
+    invoke-virtual {v0, v2, v3}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->setSize(J)V
+
+    iget v1, p1, Lcom/amap/api/maps/offlinemap/m;->a:I
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->setState(I)V
+
+    invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/m;->f()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->setUrl(Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/m;->c()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->setVersion(Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/m;->j()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->setCompleteCode(I)V
+
+    return-object v0
+.end method
+
 .method private d(Ljava/io/File;)Lcom/amap/api/maps/offlinemap/m;
     .locals 2
 
@@ -2096,17 +2372,17 @@
 
     invoke-direct {v1}, Lcom/amap/api/maps/offlinemap/m;-><init>()V
 
-    invoke-virtual {v1, v0}, Lcom/amap/api/maps/offlinemap/m;->c(Ljava/lang/String;)V
+    invoke-virtual {v1, v0}, Lcom/amap/api/maps/offlinemap/m;->g(Ljava/lang/String;)V
 
     return-object v1
 .end method
 
 .method private d(Lcom/amap/api/maps/offlinemap/OfflineMapCity;)Z
-    .locals 9
+    .locals 10
 
     const/4 v6, 0x0
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
     :try_start_0
     invoke-virtual {p0}, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->getDownloadingCityList()Ljava/util/ArrayList;
@@ -2115,16 +2391,16 @@
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    move-result-object v3
+    move-result-object v4
 
     :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2132,43 +2408,43 @@
 
     invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->getCity()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v1
 
     invoke-virtual {v0}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->getCity()Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v4
+    move-result v1
 
-    if-eqz v4, :cond_3
+    if-eqz v1, :cond_3
 
     invoke-virtual {v0}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->getSize()J
 
-    move-result-wide v4
+    move-result-wide v8
 
     invoke-virtual {v0}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->getcompleteCode()I
 
     move-result v0
 
-    int-to-long v7, v0
+    int-to-long v0, v0
 
-    mul-long/2addr v4, v7
+    mul-long/2addr v0, v8
 
-    const-wide/16 v7, 0x64
+    const-wide/16 v8, 0x64
 
-    div-long v0, v4, v7
+    div-long/2addr v0, v8
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
     :goto_1
-    move-wide v1, v0
+    move-wide v2, v0
 
     goto :goto_0
 
     :cond_0
-    move-wide v4, v1
+    move-wide v4, v2
 
     :goto_2
     invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->getSize()J
@@ -2193,7 +2469,7 @@
     :catch_0
     move-exception v0
 
-    move-wide v4, v1
+    move-wide v4, v2
 
     invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
@@ -2236,17 +2512,17 @@
     goto :goto_3
 
     :cond_3
-    move-wide v0, v1
+    move-wide v0, v2
 
     goto :goto_1
 .end method
 
 .method private d(Lcom/amap/api/maps/offlinemap/OfflineMapProvince;)Z
-    .locals 9
+    .locals 10
 
     const/4 v6, 0x0
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
     :try_start_0
     invoke-virtual {p0}, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->getDownloadingProvinceList()Ljava/util/ArrayList;
@@ -2255,16 +2531,16 @@
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    move-result-object v3
+    move-result-object v4
 
     :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2272,43 +2548,43 @@
 
     invoke-virtual {v0}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->getProvinceName()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v1
 
     invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->getProvinceName()Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v4
+    move-result v1
 
-    if-eqz v4, :cond_3
+    if-eqz v1, :cond_3
 
     invoke-virtual {v0}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->getSize()J
 
-    move-result-wide v4
+    move-result-wide v8
 
     invoke-virtual {v0}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->getcompleteCode()I
 
     move-result v0
 
-    int-to-long v7, v0
+    int-to-long v0, v0
 
-    mul-long/2addr v4, v7
+    mul-long/2addr v0, v8
 
-    const-wide/16 v7, 0x64
+    const-wide/16 v8, 0x64
 
-    div-long v0, v4, v7
+    div-long/2addr v0, v8
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
     :goto_1
-    move-wide v1, v0
+    move-wide v2, v0
 
     goto :goto_0
 
     :cond_0
-    move-wide v4, v1
+    move-wide v4, v2
 
     :goto_2
     invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->getSize()J
@@ -2333,7 +2609,7 @@
     :catch_0
     move-exception v0
 
-    move-wide v4, v1
+    move-wide v4, v2
 
     invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
@@ -2376,7 +2652,7 @@
     goto :goto_3
 
     :cond_3
-    move-wide v0, v1
+    move-wide v0, v2
 
     goto :goto_1
 .end method
@@ -2567,7 +2843,7 @@
     const/4 v1, 0x0
 
     :try_start_0
-    invoke-direct {p0}, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->c()V
+    invoke-direct {p0}, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->b()V
 
     const/4 v0, 0x0
 
@@ -2671,7 +2947,7 @@
     const/4 v1, 0x0
 
     :try_start_0
-    invoke-direct {p0}, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->c()V
+    invoke-direct {p0}, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->b()V
 
     invoke-virtual {p0, p1}, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->getItemByProvinceName(Ljava/lang/String;)Lcom/amap/api/maps/offlinemap/OfflineMapProvince;
 
@@ -3927,6 +4203,42 @@
     iget-object v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->e:Lcom/amap/api/maps/offlinemap/d;
 
     invoke-virtual {v0}, Lcom/amap/api/maps/offlinemap/d;->b()V
+
+    return-void
+.end method
+
+.method protected updateAllCity()V
+    .locals 3
+
+    new-instance v0, Lcom/amap/api/maps/offlinemap/i;
+
+    const-string v1, ""
+
+    iget-object v2, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->k:Landroid/content/Context;
+
+    invoke-static {v2}, Lcom/amap/api/mapcore/util/i;->c(Landroid/content/Context;)Ljava/net/Proxy;
+
+    move-result-object v2
+
+    invoke-direct {v0, v1, v2}, Lcom/amap/api/maps/offlinemap/i;-><init>(Ljava/lang/String;Ljava/net/Proxy;)V
+
+    iget-object v1, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->k:Landroid/content/Context;
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/offlinemap/i;->a(Landroid/content/Context;)V
+
+    invoke-virtual {v0}, Lcom/amap/api/maps/offlinemap/i;->GetData()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/List;
+
+    iget-object v1, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->e:Lcom/amap/api/maps/offlinemap/d;
+
+    invoke-virtual {v1}, Lcom/amap/api/maps/offlinemap/d;->d()V
+
+    iget-object v1, p0, Lcom/amap/api/maps/offlinemap/OfflineMapManager;->e:Lcom/amap/api/maps/offlinemap/d;
+
+    invoke-virtual {v1, v0}, Lcom/amap/api/maps/offlinemap/d;->a(Ljava/util/List;)V
 
     return-void
 .end method

@@ -14,24 +14,15 @@
 
 
 # static fields
-.field private static final l:Ljava/lang/String; = "Chart.StatisticChartView"
+.field private static final m:Ljava/lang/String; = "Chart.StatisticChartView"
 
 
 # instance fields
-.field private m:Lcn/com/smartdevices/bracelet/chart/base/r;
+.field private A:Lcn/com/smartdevices/bracelet/chart/base/o;
 
 .field private n:Lcn/com/smartdevices/bracelet/chart/base/r;
 
-.field private o:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List",
-            "<",
-            "Lcn/com/smartdevices/bracelet/chart/D;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private o:Lcn/com/smartdevices/bracelet/chart/base/r;
 
 .field private p:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -49,15 +40,26 @@
         value = {
             "Ljava/util/List",
             "<",
+            "Lcn/com/smartdevices/bracelet/chart/D;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private r:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
             "Lcn/com/smartdevices/bracelet/chart/A;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private r:I
+.field private s:I
 
-.field private s:Ljava/util/ArrayList;
+.field private t:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList",
@@ -68,11 +70,9 @@
     .end annotation
 .end field
 
-.field private t:Lcn/com/smartdevices/bracelet/chart/b/f;
+.field private u:Lcn/com/smartdevices/bracelet/chart/b/f;
 
-.field private u:Z
-
-.field private v:F
+.field private v:Z
 
 .field private w:F
 
@@ -80,7 +80,7 @@
 
 .field private y:F
 
-.field private z:Lcn/com/smartdevices/bracelet/chart/base/o;
+.field private z:F
 
 
 # direct methods
@@ -115,19 +115,19 @@
 
     invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/chart/H;-><init>(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->z:Lcn/com/smartdevices/bracelet/chart/base/o;
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/chart/base/p;
-
-    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/chart/base/p;-><init>(I)V
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->m:Lcn/com/smartdevices/bracelet/chart/base/r;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->A:Lcn/com/smartdevices/bracelet/chart/base/o;
 
     new-instance v0, Lcn/com/smartdevices/bracelet/chart/base/p;
 
     invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/chart/base/p;-><init>(I)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->n:Lcn/com/smartdevices/bracelet/chart/base/r;
+
+    new-instance v0, Lcn/com/smartdevices/bracelet/chart/base/p;
+
+    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/chart/base/p;-><init>(I)V
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->o:Lcn/com/smartdevices/bracelet/chart/base/r;
 
     new-instance v0, Lcn/com/smartdevices/bracelet/chart/y;
 
@@ -139,13 +139,7 @@
 
     invoke-direct {v0}, Landroid/view/animation/AccelerateDecelerateInterpolator;-><init>()V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->h:Landroid/view/animation/Interpolator;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->o:Ljava/util/List;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->i:Landroid/view/animation/Interpolator;
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -159,13 +153,19 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->q:Ljava/util/List;
 
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->r:Ljava/util/List;
+
     new-instance v0, Lcn/com/smartdevices/bracelet/chart/base/l;
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->z:Lcn/com/smartdevices/bracelet/chart/base/o;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->A:Lcn/com/smartdevices/bracelet/chart/base/o;
 
     invoke-direct {v0, v1, v2}, Lcn/com/smartdevices/bracelet/chart/base/l;-><init>(Landroid/content/Context;Lcn/com/smartdevices/bracelet/chart/base/o;)V
 
@@ -175,7 +175,7 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->s:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->t:Ljava/util/ArrayList;
 
     return-void
 .end method
@@ -183,7 +183,7 @@
 .method static synthetic a(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Lcn/com/smartdevices/bracelet/chart/b/f;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->t:Lcn/com/smartdevices/bracelet/chart/b/f;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->u:Lcn/com/smartdevices/bracelet/chart/b/f;
 
     return-object v0
 .end method
@@ -203,7 +203,7 @@
 
     iput v1, v0, Lcn/com/smartdevices/bracelet/chart/D;->c:I
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->m:Lcn/com/smartdevices/bracelet/chart/base/r;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->n:Lcn/com/smartdevices/bracelet/chart/base/r;
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/D;->a(Lcn/com/smartdevices/bracelet/chart/base/r;)V
 
@@ -211,7 +211,7 @@
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/D;->a(Lcn/com/smartdevices/bracelet/chart/base/g;)V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->o:Ljava/util/List;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->p:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -231,7 +231,7 @@
 
     iput v1, v0, Lcn/com/smartdevices/bracelet/chart/D;->c:I
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->n:Lcn/com/smartdevices/bracelet/chart/base/r;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->o:Lcn/com/smartdevices/bracelet/chart/base/r;
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/D;->a(Lcn/com/smartdevices/bracelet/chart/base/r;)V
 
@@ -239,7 +239,7 @@
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/D;->a(Lcn/com/smartdevices/bracelet/chart/base/g;)V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->p:Ljava/util/List;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->q:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -255,9 +255,11 @@
 
     iput-object v1, v0, Lcn/com/smartdevices/bracelet/chart/A;->b:Ljava/lang/String;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->q:Ljava/util/List;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->r:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->k()V
 
     return-void
 .end method
@@ -283,7 +285,7 @@
 .method static synthetic a(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;Z)Z
     .locals 0
 
-    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->u:Z
+    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->v:Z
 
     return p1
 .end method
@@ -324,12 +326,12 @@
     return p1
 .end method
 
-.method static synthetic c(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)V
-    .locals 0
+.method static synthetic c(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Ljava/util/ArrayList;
+    .locals 1
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->i()V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->t:Ljava/util/ArrayList;
 
-    return-void
+    return-object v0
 .end method
 
 .method static synthetic c(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;Z)Z
@@ -340,28 +342,28 @@
     return p1
 .end method
 
-.method static synthetic d(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Ljava/util/ArrayList;
+.method static synthetic d(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Z
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->s:Ljava/util/ArrayList;
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->v:Z
+
+    return v0
+.end method
+
+.method static synthetic e(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)I
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->s:I
+
+    return v0
+.end method
+
+.method static synthetic f(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Lcn/com/smartdevices/bracelet/chart/base/l;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->d:Lcn/com/smartdevices/bracelet/chart/base/l;
 
     return-object v0
-.end method
-
-.method static synthetic e(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Z
-    .locals 1
-
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->u:Z
-
-    return v0
-.end method
-
-.method static synthetic f(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)I
-    .locals 1
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->r:I
-
-    return v0
 .end method
 
 .method private f(I)Z
@@ -369,7 +371,7 @@
 
     const/4 v1, 0x0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->o:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->p:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -386,7 +388,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/D;
+    check-cast v0, Lcn/com/smartdevices/bracelet/chart/base/c;
 
     iget v0, v0, Lcn/com/smartdevices/bracelet/chart/base/c;->c:I
 
@@ -403,15 +405,7 @@
     goto :goto_0
 .end method
 
-.method static synthetic g(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Lcn/com/smartdevices/bracelet/chart/base/l;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->d:Lcn/com/smartdevices/bracelet/chart/base/l;
-
-    return-object v0
-.end method
-
-.method static synthetic h(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Lcn/com/smartdevices/bracelet/chart/base/g;
+.method static synthetic g(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Lcn/com/smartdevices/bracelet/chart/base/g;
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
@@ -419,7 +413,7 @@
     return-object v0
 .end method
 
-.method static synthetic i(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)I
+.method static synthetic h(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)I
     .locals 1
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->f:I
@@ -427,43 +421,7 @@
     return v0
 .end method
 
-.method private i()V
-    .locals 2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/y;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->o:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/y;->b(Ljava/util/List;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/y;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->p:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/y;->c(Ljava/util/List;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/y;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->q:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/y;->d(Ljava/util/List;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/y;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/y;->e()V
-
-    return-void
-.end method
-
-.method static synthetic j(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Lcn/com/smartdevices/bracelet/chart/base/g;
+.method static synthetic i(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Lcn/com/smartdevices/bracelet/chart/base/g;
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
@@ -471,7 +429,7 @@
     return-object v0
 .end method
 
-.method static synthetic k(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Lcn/com/smartdevices/bracelet/chart/base/l;
+.method static synthetic j(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Lcn/com/smartdevices/bracelet/chart/base/l;
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->d:Lcn/com/smartdevices/bracelet/chart/base/l;
@@ -479,7 +437,7 @@
     return-object v0
 .end method
 
-.method static synthetic l(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Lcn/com/smartdevices/bracelet/chart/base/g;
+.method static synthetic k(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Lcn/com/smartdevices/bracelet/chart/base/g;
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
@@ -487,7 +445,37 @@
     return-object v0
 .end method
 
-.method static synthetic m(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Lcn/com/smartdevices/bracelet/chart/b/d;
+.method private k()V
+    .locals 2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/chart/y;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->p:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/y;->b(Ljava/util/List;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/chart/y;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->q:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/y;->c(Ljava/util/List;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/chart/y;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->r:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/y;->d(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method static synthetic l(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Lcn/com/smartdevices/bracelet/chart/b/d;
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->b:Lcn/com/smartdevices/bracelet/chart/b/d;
@@ -495,7 +483,7 @@
     return-object v0
 .end method
 
-.method static synthetic n(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Z
+.method static synthetic m(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Z
     .locals 1
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->e:Z
@@ -510,13 +498,13 @@
 
     const/high16 v0, -0x40800000
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->v:F
-
     iput v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->w:F
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->x:F
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->y:F
+
+    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->z:F
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->a()Landroid/animation/Animator;
 
@@ -530,13 +518,13 @@
 
     const/high16 v0, -0x40800000
 
-    iput p3, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->v:F
+    iput p3, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->w:F
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->w:F
+    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->x:F
 
-    iput p4, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->x:F
+    iput p4, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->y:F
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->y:F
+    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->z:F
 
     invoke-virtual {p0, p1, p2}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->d(J)Landroid/animation/Animator;
 
@@ -554,7 +542,7 @@
 
     if-ne p1, v0, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->p:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->q:Ljava/util/List;
 
     :goto_0
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -572,7 +560,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/D;
+    check-cast v0, Lcn/com/smartdevices/bracelet/chart/base/c;
 
     iget v3, v0, Lcn/com/smartdevices/bracelet/chart/base/c;->c:I
 
@@ -586,7 +574,7 @@
 
     if-ne p1, v0, :cond_3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->o:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->p:Ljava/util/List;
 
     goto :goto_0
 
@@ -620,7 +608,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->t:Lcn/com/smartdevices/bracelet/chart/b/f;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->u:Lcn/com/smartdevices/bracelet/chart/b/f;
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->b:Lcn/com/smartdevices/bracelet/chart/b/d;
 
@@ -664,13 +652,13 @@
 
     const/high16 v0, -0x40800000
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->v:F
+    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->w:F
 
-    iput p3, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->w:F
+    iput p3, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->x:F
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->x:F
+    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->y:F
 
-    iput p4, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->y:F
+    iput p4, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->z:F
 
     invoke-virtual {p0, p1, p2}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->d(J)Landroid/animation/Animator;
 
@@ -696,13 +684,13 @@
 
     const/high16 v0, -0x40800000
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->v:F
-
     iput v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->w:F
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->x:F
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->y:F
+
+    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->z:F
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->c()V
 
@@ -712,11 +700,11 @@
 .method public c(I)V
     .locals 6
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->r:I
+    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->s:I
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->u:Z
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->v:Z
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
 
@@ -773,7 +761,7 @@
 
     invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->s:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->t:Ljava/util/ArrayList;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -785,7 +773,7 @@
 
     if-nez v3, :cond_0
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->t:Lcn/com/smartdevices/bracelet/chart/b/f;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->u:Lcn/com/smartdevices/bracelet/chart/b/f;
 
     invoke-interface {v3, v0}, Lcn/com/smartdevices/bracelet/chart/b/f;->a(I)Z
 
@@ -793,7 +781,7 @@
 
     if-eqz v3, :cond_0
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->s:Ljava/util/ArrayList;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->t:Ljava/util/ArrayList;
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -809,7 +797,7 @@
     goto :goto_0
 
     :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->s:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->t:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -817,7 +805,7 @@
 
     if-lez v0, :cond_2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->s:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->t:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -851,53 +839,7 @@
 .end method
 
 .method public d()V
-    .locals 2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->p:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->clear()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->o:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->clear()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->q:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->clear()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/y;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->o:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/y;->b(Ljava/util/List;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/y;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->p:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/y;->c(Ljava/util/List;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/y;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->q:Ljava/util/List;
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/y;->d(Ljava/util/List;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->s:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/y;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/y;->f()V
+    .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
 
@@ -920,6 +862,42 @@
     return-void
 .end method
 
+.method public e()V
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->q:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->clear()V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->p:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->clear()V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->r:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->clear()V
+
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->k()V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->t:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/chart/y;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/y;->f()V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/chart/y;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/y;->e()V
+
+    return-void
+.end method
+
 .method public e(I)V
     .locals 2
 
@@ -935,25 +913,27 @@
 .end method
 
 .method protected onDraw(Landroid/graphics/Canvas;)V
-    .locals 7
+    .locals 8
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
 
     check-cast v0, Lcn/com/smartdevices/bracelet/chart/y;
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->j:F
+    iget v2, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->k:F
 
-    iget v3, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->v:F
+    iget v3, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->w:F
 
-    iget v4, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->w:F
+    iget v4, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->x:F
 
-    iget v5, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->x:F
+    iget v5, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->y:F
 
-    iget v6, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->y:F
+    iget v6, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->z:F
+
+    iget-boolean v7, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->h:Z
 
     move-object v1, p1
 
-    invoke-virtual/range {v0 .. v6}, Lcn/com/smartdevices/bracelet/chart/y;->a(Landroid/graphics/Canvas;FFFFF)V
+    invoke-virtual/range {v0 .. v7}, Lcn/com/smartdevices/bracelet/chart/y;->a(Landroid/graphics/Canvas;FFFFFZ)V
 
     return-void
 .end method

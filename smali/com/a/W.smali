@@ -52,7 +52,7 @@
 .end method
 
 .method public a(J)V
-    .locals 2
+    .locals 3
 
     const-wide/16 v0, 0x0
 
@@ -84,9 +84,9 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-wide v1, p0, Lcom/a/W;->a:D
+    iget-wide v2, p0, Lcom/a/W;->a:D
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     move-result-object v1
 

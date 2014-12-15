@@ -34,9 +34,9 @@
 
 # virtual methods
 .method public a()Ljava/lang/String;
-    .locals 6
+    .locals 7
 
-    const/16 v5, 0x2c
+    const/16 v6, 0x2c
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -46,29 +46,29 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lcom/b/b/b/a/m;->a:D
+    iget-wide v2, p0, Lcom/b/b/b/a/m;->a:D
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lcom/b/b/b/a/m;->b:D
+    iget-wide v2, p0, Lcom/b/b/b/a/m;->b:D
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lcom/b/b/b/a/m;->c:D
+    iget-wide v2, p0, Lcom/b/b/b/a/m;->c:D
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    cmpl-double v1, v1, v3
+    cmpl-double v1, v2, v4
 
     if-lez v1, :cond_0
 
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lcom/b/b/b/a/m;->c:D
+    iget-wide v2, p0, Lcom/b/b/b/a/m;->c:D
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     :cond_0
     iget-object v1, p0, Lcom/b/b/b/a/m;->d:Ljava/lang/String;
@@ -124,7 +124,7 @@
 .end method
 
 .method public o()Ljava/lang/String;
-    .locals 5
+    .locals 6
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -132,23 +132,23 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    iget-wide v1, p0, Lcom/b/b/b/a/m;->a:D
+    iget-wide v2, p0, Lcom/b/b/b/a/m;->a:D
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     const-string v1, ", "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lcom/b/b/b/a/m;->b:D
+    iget-wide v2, p0, Lcom/b/b/b/a/m;->b:D
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lcom/b/b/b/a/m;->c:D
+    iget-wide v2, p0, Lcom/b/b/b/a/m;->c:D
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    cmpl-double v1, v1, v3
+    cmpl-double v1, v2, v4
 
     if-lez v1, :cond_0
 
@@ -156,9 +156,9 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lcom/b/b/b/a/m;->c:D
+    iget-wide v2, p0, Lcom/b/b/b/a/m;->c:D
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     const/16 v1, 0x6d
 

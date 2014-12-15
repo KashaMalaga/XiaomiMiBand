@@ -81,7 +81,7 @@
 .end method
 
 .method private a()Ljava/util/ArrayList;
-    .locals 17
+    .locals 18
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -92,109 +92,49 @@
         }
     .end annotation
 
-    new-instance v3, Ljava/util/ArrayList;
+    new-instance v4, Ljava/util/ArrayList;
 
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    if-nez v1, :cond_2
+    if-nez v2, :cond_2
 
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcn/com/smartdevices/bracelet/upgrade/d;->k:Landroid/content/Context;
+    iget-object v2, v0, Lcn/com/smartdevices/bracelet/upgrade/d;->k:Landroid/content/Context;
 
-    const-string v2, "phone"
+    const-string v3, "phone"
 
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/telephony/TelephonyManager;
-
-    if-eqz v1, :cond_0
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, ""
-
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
 
-    invoke-virtual {v1}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
+    check-cast v2, Landroid/telephony/TelephonyManager;
 
-    move-result-object v4
+    if-eqz v2, :cond_0
 
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
     const-string v5, ""
 
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v4
+    move-result-object v3
 
-    invoke-virtual {v1}, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, ""
-
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
 
     move-result-object v5
 
-    move-object/from16 v0, p0
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, v0, Lcn/com/smartdevices/bracelet/upgrade/d;->k:Landroid/content/Context;
+    move-result-object v3
 
-    const-string v6, "wifi"
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v1, v6}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/net/wifi/WifiManager;
-
-    invoke-virtual {v1}, Landroid/net/wifi/WifiManager;->getConnectionInfo()Landroid/net/wifi/WifiInfo;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/net/wifi/WifiInfo;->getMacAddress()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
+    move-result-object v3
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -206,196 +146,234 @@
 
     move-result-object v5
 
-    move-object/from16 v0, p0
+    invoke-virtual {v2}, Landroid/telephony/TelephonyManager;->getSimSerialNumber()Ljava/lang/String;
 
-    iget-object v6, v0, Lcn/com/smartdevices/bracelet/upgrade/d;->k:Landroid/content/Context;
+    move-result-object v2
 
-    invoke-virtual {v6}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, ""
+
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v6
 
-    const-string v7, "android_id"
+    move-object/from16 v0, p0
 
-    invoke-static {v6, v7}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+    iget-object v2, v0, Lcn/com/smartdevices/bracelet/upgrade/d;->k:Landroid/content/Context;
+
+    const-string v7, "wifi"
+
+    invoke-virtual {v2, v7}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/net/wifi/WifiManager;
+
+    invoke-virtual {v2}, Landroid/net/wifi/WifiManager;->getConnectionInfo()Landroid/net/wifi/WifiInfo;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/net/wifi/WifiInfo;->getMacAddress()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v6, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, ""
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v6
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    new-instance v6, Ljava/util/UUID;
-
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    int-to-long v7, v1
-
-    const/16 v1, 0x20
-
-    shl-long/2addr v7, v1
-
-    invoke-virtual {v5}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    int-to-long v9, v1
-
-    or-long/2addr v7, v9
-
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    int-to-long v1, v1
-
-    const/16 v5, 0x20
-
-    shl-long/2addr v1, v5
-
-    invoke-virtual {v4}, Ljava/lang/String;->hashCode()I
-
-    move-result v4
-
-    int-to-long v4, v4
-
-    or-long/2addr v1, v4
-
-    invoke-direct {v6, v7, v8, v1, v2}, Ljava/util/UUID;-><init>(JJ)V
-
-    invoke-virtual {v6}, Ljava/util/UUID;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    move-object v2, v1
-
-    :goto_0
-    sget-object v4, Landroid/os/Build$VERSION;->RELEASE:Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, ""
-
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    sget v5, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    sget-object v6, Landroid/os/Build;->MODEL:Ljava/lang/String;
-
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcn/com/smartdevices/bracelet/upgrade/d;->k:Landroid/content/Context;
+    iget-object v7, v0, Lcn/com/smartdevices/bracelet/upgrade/d;->k:Landroid/content/Context;
 
-    invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v7
 
+    const-string v8, "android_id"
+
+    invoke-static {v7, v8}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    new-instance v7, Ljava/util/UUID;
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    int-to-long v8, v2
+
+    const/16 v2, 0x20
+
+    shl-long/2addr v8, v2
+
+    invoke-virtual {v6}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    int-to-long v10, v2
+
+    or-long/2addr v8, v10
+
+    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    int-to-long v2, v2
+
+    const/16 v6, 0x20
+
+    shl-long/2addr v2, v6
+
+    invoke-virtual {v5}, Ljava/lang/String;->hashCode()I
+
+    move-result v5
+
+    int-to-long v10, v5
+
+    or-long/2addr v2, v10
+
+    invoke-direct {v7, v8, v9, v2, v3}, Ljava/util/UUID;-><init>(JJ)V
+
+    invoke-virtual {v7}, Ljava/util/UUID;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    move-object v3, v2
+
+    :goto_0
+    sget-object v5, Landroid/os/Build$VERSION;->RELEASE:Ljava/lang/String;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, ""
+
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    sget v6, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    sget-object v7, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcn/com/smartdevices/bracelet/upgrade/d;->k:Landroid/content/Context;
+    iget-object v2, v0, Lcn/com/smartdevices/bracelet/upgrade/d;->k:Landroid/content/Context;
 
-    const v8, 0x7f0c0006
-
-    invoke-virtual {v1, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v8
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v9, ""
-
-    invoke-virtual {v1, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
     move-object/from16 v0, p0
 
-    iget-object v9, v0, Lcn/com/smartdevices/bracelet/upgrade/d;->k:Landroid/content/Context;
+    iget-object v2, v0, Lcn/com/smartdevices/bracelet/upgrade/d;->k:Landroid/content/Context;
+
+    const v9, 0x7f0c0006
+
+    invoke-virtual {v2, v9}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v9
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v10, ""
+
+    invoke-virtual {v2, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
 
     move-object/from16 v0, p0
 
     iget-object v10, v0, Lcn/com/smartdevices/bracelet/upgrade/d;->k:Landroid/content/Context;
 
-    invoke-virtual {v10}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    move-object/from16 v0, p0
+
+    iget-object v11, v0, Lcn/com/smartdevices/bracelet/upgrade/d;->k:Landroid/content/Context;
+
+    invoke-virtual {v11}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v11
+
+    invoke-static {v10, v11}, Lcn/com/smartdevices/bracelet/upgrade/c;->c(Landroid/content/Context;Ljava/lang/String;)I
+
+    move-result v10
+
+    invoke-virtual {v2, v10}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v10
 
-    invoke-static {v9, v10}, Lcn/com/smartdevices/bracelet/upgrade/c;->c(Landroid/content/Context;Ljava/lang/String;)I
+    const-string v11, "HHCN"
 
-    move-result v9
+    const-string v12, "UTF-8"
 
-    invoke-virtual {v1, v9}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    new-instance v13, Landroid/util/DisplayMetrics;
 
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v9
-
-    const-string v10, "HHCN"
-
-    const-string v11, "UTF-8"
-
-    new-instance v12, Landroid/util/DisplayMetrics;
-
-    invoke-direct {v12}, Landroid/util/DisplayMetrics;-><init>()V
+    invoke-direct {v13}, Landroid/util/DisplayMetrics;-><init>()V
 
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcn/com/smartdevices/bracelet/upgrade/d;->k:Landroid/content/Context;
+    iget-object v2, v0, Lcn/com/smartdevices/bracelet/upgrade/d;->k:Landroid/content/Context;
 
-    check-cast v1, Landroid/app/Activity;
+    check-cast v2, Landroid/app/Activity;
 
-    invoke-virtual {v1}, Landroid/app/Activity;->getWindowManager()Landroid/view/WindowManager;
+    invoke-virtual {v2}, Landroid/app/Activity;->getWindowManager()Landroid/view/WindowManager;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-interface {v1}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+    invoke-interface {v2}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1, v12}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
-
-    new-instance v12, Ljava/lang/StringBuilder;
-
-    invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v13, ""
-
-    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v12
-
-    invoke-virtual {v1}, Landroid/view/Display;->getWidth()I
-
-    move-result v13
-
-    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v12
-
-    invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v12
+    invoke-virtual {v2, v13}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
     new-instance v13, Ljava/lang/StringBuilder;
 
@@ -407,177 +385,207 @@
 
     move-result-object v13
 
-    invoke-virtual {v1}, Landroid/view/Display;->getHeight()I
+    invoke-virtual {v2}, Landroid/view/Display;->getWidth()I
 
-    move-result v1
+    move-result v14
 
-    invoke-virtual {v13, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v13, v14}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v13
 
-    const-string v14, "1.0"
+    invoke-virtual {v13}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v13
+
+    new-instance v14, Ljava/lang/StringBuilder;
+
+    invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v15, ""
+
+    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v14
+
+    invoke-virtual {v2}, Landroid/view/Display;->getHeight()I
+
+    move-result v2
+
+    invoke-virtual {v14, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v14
+
+    const-string v15, "1.0"
 
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcn/com/smartdevices/bracelet/upgrade/d;->k:Landroid/content/Context;
+    iget-object v2, v0, Lcn/com/smartdevices/bracelet/upgrade/d;->k:Landroid/content/Context;
 
-    check-cast v1, Landroid/app/Activity;
+    check-cast v2, Landroid/app/Activity;
 
-    invoke-virtual {v1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v2}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
 
-    move-result-object v1
+    move-result-object v2
 
-    iget-object v1, v1, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+    iget-object v2, v2, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
-    invoke-virtual {v1}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    sget-object v15, Ljava/util/Locale;->CHINESE:Ljava/util/Locale;
+    sget-object v16, Ljava/util/Locale;->CHINESE:Ljava/util/Locale;
 
-    invoke-virtual {v15}, Ljava/util/Locale;->toString()Ljava/lang/String;
+    invoke-virtual/range {v16 .. v16}, Ljava/util/Locale;->toString()Ljava/lang/String;
 
-    move-result-object v15
-
-    invoke-virtual {v1, v15}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    const-string v1, "ch"
-
-    :goto_1
-    new-instance v15, Lorg/apache/http/message/BasicNameValuePair;
-
-    const-string v16, "devicecode"
+    move-result-object v16
 
     move-object/from16 v0, v16
 
-    invoke-direct {v15, v0, v2}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v3, v15}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move-result v2
 
-    new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
+    if-eqz v2, :cond_1
 
-    const-string v15, "os"
+    const-string v2, "ch"
 
-    invoke-direct {v2, v15, v4}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    :goto_1
+    new-instance v16, Lorg/apache/http/message/BasicNameValuePair;
 
-    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    const-string v17, "devicecode"
 
-    new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
+    move-object/from16 v0, v16
 
-    const-string v4, "osversion"
+    move-object/from16 v1, v17
 
-    invoke-direct {v2, v4, v5}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v3}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move-object/from16 v0, v16
 
-    new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
+    invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const-string v4, "devicetype"
+    new-instance v3, Lorg/apache/http/message/BasicNameValuePair;
 
-    invoke-direct {v2, v4, v6}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    const-string v16, "os"
 
-    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move-object/from16 v0, v16
 
-    new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
+    invoke-direct {v3, v0, v5}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v4, "package"
+    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-direct {v2, v4, v7}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    new-instance v3, Lorg/apache/http/message/BasicNameValuePair;
 
-    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    const-string v5, "osversion"
 
-    new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
+    invoke-direct {v3, v5, v6}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v4, "software"
+    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-direct {v2, v4, v8}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    new-instance v3, Lorg/apache/http/message/BasicNameValuePair;
 
-    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    const-string v5, "devicetype"
 
-    new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
+    invoke-direct {v3, v5, v7}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v4, "softv"
+    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-direct {v2, v4, v9}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    new-instance v3, Lorg/apache/http/message/BasicNameValuePair;
 
-    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    const-string v5, "package"
 
-    new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
+    invoke-direct {v3, v5, v8}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v4, "channel"
+    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-direct {v2, v4, v10}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    new-instance v3, Lorg/apache/http/message/BasicNameValuePair;
 
-    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    const-string v5, "software"
 
-    new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
+    invoke-direct {v3, v5, v9}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v4, "ie"
+    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-direct {v2, v4, v11}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    new-instance v3, Lorg/apache/http/message/BasicNameValuePair;
 
-    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    const-string v5, "softv"
 
-    new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
+    invoke-direct {v3, v5, v10}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v4, "w"
+    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-direct {v2, v4, v12}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    new-instance v3, Lorg/apache/http/message/BasicNameValuePair;
 
-    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    const-string v5, "channel"
 
-    new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
+    invoke-direct {v3, v5, v11}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v4, "h"
+    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-direct {v2, v4, v13}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    new-instance v3, Lorg/apache/http/message/BasicNameValuePair;
 
-    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    const-string v5, "ie"
 
-    new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
+    invoke-direct {v3, v5, v12}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v4, "v"
+    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-direct {v2, v4, v14}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    new-instance v3, Lorg/apache/http/message/BasicNameValuePair;
 
-    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    const-string v5, "w"
 
-    new-instance v2, Lorg/apache/http/message/BasicNameValuePair;
+    invoke-direct {v3, v5, v13}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v4, "l"
+    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-direct {v2, v4, v1}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    new-instance v3, Lorg/apache/http/message/BasicNameValuePair;
 
-    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    const-string v5, "h"
 
-    return-object v3
+    invoke-direct {v3, v5, v14}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    new-instance v3, Lorg/apache/http/message/BasicNameValuePair;
+
+    const-string v5, "v"
+
+    invoke-direct {v3, v5, v15}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    new-instance v3, Lorg/apache/http/message/BasicNameValuePair;
+
+    const-string v5, "l"
+
+    invoke-direct {v3, v5, v2}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    return-object v4
 
     :cond_0
-    const-string v1, "null"
+    const-string v2, "null"
 
-    move-object v2, v1
+    move-object v3, v2
 
     goto/16 :goto_0
 
     :cond_1
-    const-string v1, "en"
+    const-string v2, "en"
 
     goto/16 :goto_1
 
     :cond_2
-    move-object v2, v1
+    move-object v3, v2
 
     goto/16 :goto_0
 .end method

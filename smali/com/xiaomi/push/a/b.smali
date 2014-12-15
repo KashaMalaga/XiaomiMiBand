@@ -118,7 +118,7 @@
 .end method
 
 .method private b()V
-    .locals 9
+    .locals 10
 
     const/4 v2, 0x0
 
@@ -476,9 +476,9 @@
 
     move-result-wide v2
 
-    const-wide/32 v7, 0x100000
+    const-wide/32 v8, 0x100000
 
-    cmp-long v2, v2, v7
+    cmp-long v2, v2, v8
 
     if-ltz v2, :cond_c
 

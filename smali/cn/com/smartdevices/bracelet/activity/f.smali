@@ -78,7 +78,7 @@
 .end method
 
 .method public onSuccess(I[Lorg/apache/http/Header;[B)V
-    .locals 5
+    .locals 6
 
     invoke-static {p3}, Lcn/com/smartdevices/bracelet/y;->a([B)Ljava/lang/String;
 
@@ -252,9 +252,9 @@
 
     invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-static {v3, v4, v0}, Lcn/com/smartdevices/bracelet/u;->a(JLjava/lang/String;)V
+    invoke-static {v4, v5, v0}, Lcn/com/smartdevices/bracelet/u;->a(JLjava/lang/String;)V
 
     const-string v0, "1"
 
@@ -285,9 +285,9 @@
     :cond_2
     invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v1
+    move-result-wide v4
 
-    iput-wide v1, v0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->uid:J
+    iput-wide v4, v0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->uid:J
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/u;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 

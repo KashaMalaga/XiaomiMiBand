@@ -859,11 +859,9 @@
 
     :cond_0
     :goto_1
-    add-int/lit8 v3, v0, 0x1
+    const/16 v3, 0x3e
 
-    aget-byte v6, p0, v0
-
-    if-nez v6, :cond_4
+    if-lt v0, v3, :cond_4
 
     :cond_1
     move v1, v2
@@ -877,6 +875,12 @@
     goto :goto_0
 
     :cond_4
+    add-int/lit8 v3, v0, 0x1
+
+    aget-byte v6, p0, v0
+
+    if-eqz v6, :cond_1
+
     add-int v0, v6, v3
 
     const/16 v4, 0x3e
@@ -1714,11 +1718,7 @@
     move v0, v2
 
     :goto_1
-    add-int/lit8 v4, v0, 0x1
-
-    aget-byte v7, p0, v0
-
-    if-nez v7, :cond_2
+    if-lt v0, v12, :cond_2
 
     :cond_0
     return-object v6
@@ -1729,6 +1729,12 @@
     goto :goto_0
 
     :cond_2
+    add-int/lit8 v4, v0, 0x1
+
+    aget-byte v7, p0, v0
+
+    if-eqz v7, :cond_0
+
     add-int v0, v7, v4
 
     if-gt v0, v12, :cond_0

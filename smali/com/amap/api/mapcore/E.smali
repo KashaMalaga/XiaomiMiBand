@@ -20,7 +20,7 @@
 
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
-    .locals 11
+    .locals 12
 
     const/4 v7, 0x0
 
@@ -32,7 +32,7 @@
 
     iget-object v0, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->H(Lcom/amap/api/mapcore/b;)Ljava/lang/Boolean;
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->G(Lcom/amap/api/mapcore/b;)Ljava/lang/Boolean;
 
     move-result-object v0
 
@@ -67,7 +67,7 @@
     :pswitch_1
     iget-object v0, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->G(Lcom/amap/api/mapcore/b;)Landroid/content/Context;
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->F(Lcom/amap/api/mapcore/b;)Landroid/content/Context;
 
     move-result-object v0
 
@@ -90,7 +90,7 @@
 
     iget-object v1, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v1}, Lcom/amap/api/mapcore/b;->I(Lcom/amap/api/mapcore/b;)Lcom/amap/api/maps/AMap$OnCameraChangeListener;
+    invoke-static {v1}, Lcom/amap/api/mapcore/b;->H(Lcom/amap/api/mapcore/b;)Lcom/amap/api/maps/AMap$OnCameraChangeListener;
 
     move-result-object v1
 
@@ -98,7 +98,7 @@
 
     iget-object v1, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v1}, Lcom/amap/api/mapcore/b;->I(Lcom/amap/api/mapcore/b;)Lcom/amap/api/maps/AMap$OnCameraChangeListener;
+    invoke-static {v1}, Lcom/amap/api/mapcore/b;->H(Lcom/amap/api/mapcore/b;)Lcom/amap/api/maps/AMap$OnCameraChangeListener;
 
     move-result-object v1
 
@@ -109,7 +109,7 @@
     :pswitch_3
     iget-object v0, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->J(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/m;
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->I(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/m;
 
     move-result-object v0
 
@@ -120,7 +120,7 @@
 
     iget-object v1, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v1}, Lcom/amap/api/mapcore/b;->J(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/m;
+    invoke-static {v1}, Lcom/amap/api/mapcore/b;->I(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/m;
 
     move-result-object v1
 
@@ -132,7 +132,7 @@
     :goto_2
     iget-object v0, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->K(Lcom/amap/api/mapcore/b;)Lcom/amap/api/maps/AMap$OnMapLoadedListener;
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->J(Lcom/amap/api/mapcore/b;)Lcom/amap/api/maps/AMap$OnMapLoadedListener;
 
     move-result-object v0
 
@@ -140,7 +140,7 @@
 
     iget-object v0, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->K(Lcom/amap/api/mapcore/b;)Lcom/amap/api/maps/AMap$OnMapLoadedListener;
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->J(Lcom/amap/api/mapcore/b;)Lcom/amap/api/maps/AMap$OnMapLoadedListener;
 
     move-result-object v0
 
@@ -194,7 +194,7 @@
     :pswitch_6
     iget-object v0, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->v(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->u(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
 
     move-result-object v0
 
@@ -202,7 +202,7 @@
 
     iget-object v0, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->v(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->u(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
 
     move-result-object v0
 
@@ -214,7 +214,7 @@
 
     iget-object v0, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->v(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->u(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
 
     move-result-object v0
 
@@ -226,7 +226,7 @@
 
     iget-object v0, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->v(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->u(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
 
     move-result-object v0
 
@@ -236,7 +236,7 @@
 
     iget-object v3, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v3}, Lcom/amap/api/mapcore/b;->t(Lcom/amap/api/mapcore/b;)I
+    invoke-static {v3}, Lcom/amap/api/mapcore/b;->s(Lcom/amap/api/mapcore/b;)I
 
     move-result v3
 
@@ -244,7 +244,7 @@
 
     iget-object v3, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v3}, Lcom/amap/api/mapcore/b;->v(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
+    invoke-static {v3}, Lcom/amap/api/mapcore/b;->u(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
 
     move-result-object v3
 
@@ -254,7 +254,7 @@
 
     iget-object v4, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v4}, Lcom/amap/api/mapcore/b;->u(Lcom/amap/api/mapcore/b;)I
+    invoke-static {v4}, Lcom/amap/api/mapcore/b;->t(Lcom/amap/api/mapcore/b;)I
 
     move-result v4
 
@@ -264,7 +264,7 @@
 
     iget-object v5, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v5}, Lcom/amap/api/mapcore/b;->v(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
+    invoke-static {v5}, Lcom/amap/api/mapcore/b;->u(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
 
     move-result-object v5
 
@@ -278,7 +278,7 @@
 
     iget-object v5, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v5}, Lcom/amap/api/mapcore/b;->v(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
+    invoke-static {v5}, Lcom/amap/api/mapcore/b;->u(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
 
     move-result-object v5
 
@@ -322,7 +322,7 @@
 
     iget-object v3, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v3}, Lcom/amap/api/mapcore/b;->o(Lcom/amap/api/mapcore/b;)Lcom/autonavi/amap/mapcore/MapProjection;
+    invoke-static {v3}, Lcom/amap/api/mapcore/b;->n(Lcom/amap/api/mapcore/b;)Lcom/autonavi/amap/mapcore/MapProjection;
 
     move-result-object v3
 
@@ -342,7 +342,7 @@
 
     iget-object v4, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v4}, Lcom/amap/api/mapcore/b;->o(Lcom/amap/api/mapcore/b;)Lcom/autonavi/amap/mapcore/MapProjection;
+    invoke-static {v4}, Lcom/amap/api/mapcore/b;->n(Lcom/amap/api/mapcore/b;)Lcom/autonavi/amap/mapcore/MapProjection;
 
     move-result-object v4
 
@@ -358,7 +358,7 @@
 
     iget-object v3, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v3}, Lcom/amap/api/mapcore/b;->v(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
+    invoke-static {v3}, Lcom/amap/api/mapcore/b;->u(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
 
     move-result-object v3
 
@@ -384,7 +384,7 @@
 
     iget-object v3, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v3}, Lcom/amap/api/mapcore/b;->v(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
+    invoke-static {v3}, Lcom/amap/api/mapcore/b;->u(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
 
     move-result-object v3
 
@@ -394,7 +394,7 @@
 
     iget-object v4, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v4}, Lcom/amap/api/mapcore/b;->v(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
+    invoke-static {v4}, Lcom/amap/api/mapcore/b;->u(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
 
     move-result-object v4
 
@@ -406,7 +406,7 @@
 
     iget-object v3, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v3}, Lcom/amap/api/mapcore/b;->v(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
+    invoke-static {v3}, Lcom/amap/api/mapcore/b;->u(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
 
     move-result-object v3
 
@@ -416,7 +416,7 @@
 
     iget-object v4, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v4}, Lcom/amap/api/mapcore/b;->v(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
+    invoke-static {v4}, Lcom/amap/api/mapcore/b;->u(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
 
     move-result-object v4
 
@@ -426,7 +426,7 @@
 
     iget-object v5, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v5}, Lcom/amap/api/mapcore/b;->v(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
+    invoke-static {v5}, Lcom/amap/api/mapcore/b;->u(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
 
     move-result-object v5
 
@@ -440,7 +440,7 @@
 
     iget-object v3, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v3}, Lcom/amap/api/mapcore/b;->v(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
+    invoke-static {v3}, Lcom/amap/api/mapcore/b;->u(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
 
     move-result-object v3
 
@@ -455,7 +455,7 @@
     :cond_5
     iget-object v1, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v1}, Lcom/amap/api/mapcore/b;->v(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
+    invoke-static {v1}, Lcom/amap/api/mapcore/b;->u(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
 
     move-result-object v1
 
@@ -476,7 +476,7 @@
     :pswitch_8
     iget-object v0, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->L(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/o;
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->K(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/o;
 
     move-result-object v0
 
@@ -484,7 +484,7 @@
 
     iget-object v0, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->L(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/o;
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->K(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/o;
 
     move-result-object v0
 
@@ -512,7 +512,7 @@
 
     iget-object v4, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v4}, Lcom/amap/api/mapcore/b;->M(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/bd;
+    invoke-static {v4}, Lcom/amap/api/mapcore/b;->L(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/bd;
 
     move-result-object v4
 
@@ -520,7 +520,7 @@
 
     iget-object v4, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v4}, Lcom/amap/api/mapcore/b;->M(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/bd;
+    invoke-static {v4}, Lcom/amap/api/mapcore/b;->L(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/bd;
 
     move-result-object v4
 
@@ -537,7 +537,7 @@
 
     iget-object v4, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v4}, Lcom/amap/api/mapcore/b;->s(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/aa;
+    invoke-static {v4}, Lcom/amap/api/mapcore/b;->r(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/aa;
 
     move-result-object v4
 
@@ -588,7 +588,7 @@
     :cond_7
     iget-object v1, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v1}, Lcom/amap/api/mapcore/b;->N(Lcom/amap/api/mapcore/b;)Lcom/amap/api/maps/AMap$onMapPrintScreenListener;
+    invoke-static {v1}, Lcom/amap/api/mapcore/b;->M(Lcom/amap/api/mapcore/b;)Lcom/amap/api/maps/AMap$onMapPrintScreenListener;
 
     move-result-object v1
 
@@ -596,7 +596,7 @@
 
     iget-object v1, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v1}, Lcom/amap/api/mapcore/b;->N(Lcom/amap/api/mapcore/b;)Lcom/amap/api/maps/AMap$onMapPrintScreenListener;
+    invoke-static {v1}, Lcom/amap/api/mapcore/b;->M(Lcom/amap/api/mapcore/b;)Lcom/amap/api/maps/AMap$onMapPrintScreenListener;
 
     move-result-object v1
 
@@ -615,7 +615,7 @@
     :cond_8
     iget-object v1, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v1}, Lcom/amap/api/mapcore/b;->O(Lcom/amap/api/mapcore/b;)Lcom/amap/api/maps/AMap$OnMapScreenShotListener;
+    invoke-static {v1}, Lcom/amap/api/mapcore/b;->N(Lcom/amap/api/mapcore/b;)Lcom/amap/api/maps/AMap$OnMapScreenShotListener;
 
     move-result-object v1
 
@@ -623,7 +623,7 @@
 
     iget-object v1, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v1}, Lcom/amap/api/mapcore/b;->O(Lcom/amap/api/mapcore/b;)Lcom/amap/api/maps/AMap$OnMapScreenShotListener;
+    invoke-static {v1}, Lcom/amap/api/mapcore/b;->N(Lcom/amap/api/mapcore/b;)Lcom/amap/api/maps/AMap$OnMapScreenShotListener;
 
     move-result-object v1
 
@@ -644,7 +644,7 @@
     :cond_a
     iget-object v0, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->N(Lcom/amap/api/mapcore/b;)Lcom/amap/api/maps/AMap$onMapPrintScreenListener;
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->M(Lcom/amap/api/mapcore/b;)Lcom/amap/api/maps/AMap$onMapPrintScreenListener;
 
     move-result-object v0
 
@@ -652,7 +652,7 @@
 
     iget-object v0, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->N(Lcom/amap/api/mapcore/b;)Lcom/amap/api/maps/AMap$onMapPrintScreenListener;
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->M(Lcom/amap/api/mapcore/b;)Lcom/amap/api/maps/AMap$onMapPrintScreenListener;
 
     move-result-object v0
 
@@ -661,7 +661,7 @@
     :cond_b
     iget-object v0, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->O(Lcom/amap/api/mapcore/b;)Lcom/amap/api/maps/AMap$OnMapScreenShotListener;
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->N(Lcom/amap/api/mapcore/b;)Lcom/amap/api/maps/AMap$OnMapScreenShotListener;
 
     move-result-object v0
 
@@ -669,7 +669,7 @@
 
     iget-object v0, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->O(Lcom/amap/api/mapcore/b;)Lcom/amap/api/maps/AMap$OnMapScreenShotListener;
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->N(Lcom/amap/api/mapcore/b;)Lcom/amap/api/maps/AMap$OnMapScreenShotListener;
 
     move-result-object v0
 
@@ -705,7 +705,7 @@
     :cond_c
     iget-object v0, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->P(Lcom/amap/api/mapcore/b;)Lcom/amap/api/maps/AMap$CancelableCallback;
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->O(Lcom/amap/api/mapcore/b;)Lcom/amap/api/maps/AMap$CancelableCallback;
 
     move-result-object v0
 
@@ -713,7 +713,7 @@
 
     iget-object v0, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->Q(Lcom/amap/api/mapcore/b;)Z
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->P(Lcom/amap/api/mapcore/b;)Z
 
     move-result v0
 
@@ -727,7 +727,7 @@
     :cond_e
     iget-object v0, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->P(Lcom/amap/api/mapcore/b;)Lcom/amap/api/maps/AMap$CancelableCallback;
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->O(Lcom/amap/api/mapcore/b;)Lcom/amap/api/maps/AMap$CancelableCallback;
 
     move-result-object v0
 
@@ -739,7 +739,7 @@
 
     iget-object v0, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->P(Lcom/amap/api/mapcore/b;)Lcom/amap/api/maps/AMap$CancelableCallback;
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->O(Lcom/amap/api/mapcore/b;)Lcom/amap/api/maps/AMap$CancelableCallback;
 
     move-result-object v0
 
@@ -752,7 +752,7 @@
     :cond_f
     iget-object v0, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->R(Lcom/amap/api/mapcore/b;)Z
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->Q(Lcom/amap/api/mapcore/b;)Z
 
     move-result v0
 
@@ -806,11 +806,11 @@
 
     new-instance v4, Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v5, v3, Lcom/autonavi/amap/mapcore/DPoint;->y:D
+    iget-wide v6, v3, Lcom/autonavi/amap/mapcore/DPoint;->y:D
 
-    iget-wide v7, v3, Lcom/autonavi/amap/mapcore/DPoint;->x:D
+    iget-wide v8, v3, Lcom/autonavi/amap/mapcore/DPoint;->x:D
 
-    invoke-direct {v4, v5, v6, v7, v8}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v4, v6, v7, v8, v9}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     iget-object v5, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
@@ -830,11 +830,11 @@
 
     new-instance v6, Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v7, v3, Lcom/autonavi/amap/mapcore/DPoint;->y:D
+    iget-wide v8, v3, Lcom/autonavi/amap/mapcore/DPoint;->y:D
 
-    iget-wide v9, v3, Lcom/autonavi/amap/mapcore/DPoint;->x:D
+    iget-wide v10, v3, Lcom/autonavi/amap/mapcore/DPoint;->x:D
 
-    invoke-direct {v6, v7, v8, v9, v10}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v6, v8, v9, v10, v11}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     iget-object v7, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
@@ -842,11 +842,11 @@
 
     new-instance v0, Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v7, v3, Lcom/autonavi/amap/mapcore/DPoint;->y:D
+    iget-wide v8, v3, Lcom/autonavi/amap/mapcore/DPoint;->y:D
 
-    iget-wide v9, v3, Lcom/autonavi/amap/mapcore/DPoint;->x:D
+    iget-wide v10, v3, Lcom/autonavi/amap/mapcore/DPoint;->x:D
 
-    invoke-direct {v0, v7, v8, v9, v10}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v0, v8, v9, v10, v11}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     iget-object v1, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
@@ -879,20 +879,32 @@
     goto/16 :goto_1
 
     :pswitch_d
+    :try_start_1
     iget-object v0, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
     invoke-virtual {v0}, Lcom/amap/api/mapcore/b;->C()V
 
     iget-object v0, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
+    const/4 v1, 0x1
+
     invoke-virtual {v0, v1}, Lcom/amap/api/mapcore/b;->i(Z)V
+    :try_end_1
+    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
+
+    goto/16 :goto_1
+
+    :catch_1
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto/16 :goto_1
 
     :pswitch_e
     iget-object v0, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->v(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->u(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
 
     move-result-object v0
 
@@ -904,7 +916,7 @@
 
     iget-object v0, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->v(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->u(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/l;
 
     move-result-object v0
 
@@ -953,6 +965,8 @@
     move v0, v2
 
     goto :goto_4
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x2

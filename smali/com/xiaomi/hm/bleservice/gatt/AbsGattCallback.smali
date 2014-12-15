@@ -3179,7 +3179,7 @@
 .end method
 
 .method public final readRemoteRSSI()I
-    .locals 5
+    .locals 6
 
     const/4 v0, 0x0
 
@@ -3232,9 +3232,9 @@
 
     sget-object v1, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_RSSILock:Ljava/lang/Object;
 
-    const-wide/16 v3, 0x1e
+    const-wide/16 v4, 0x1e
 
-    invoke-virtual {v1, v3, v4}, Ljava/lang/Object;->wait(J)V
+    invoke-virtual {v1, v4, v5}, Ljava/lang/Object;->wait(J)V
 
     sget-boolean v1, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_isRSSILocking:Z
 

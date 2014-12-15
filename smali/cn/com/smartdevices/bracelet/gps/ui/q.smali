@@ -1,19 +1,19 @@
-.class Lcn/com/smartdevices/bracelet/gps/ui/q;
+.class Lcn/com/smartdevices/bracelet/gps/ui/Q;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/widget/ExpandableListView$OnChildClickListener;
+.implements Landroid/widget/SeekBar$OnSeekBarChangeListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/N;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/N;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/q;->a:Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/Q;->a:Lcn/com/smartdevices/bracelet/gps/ui/N;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,99 +22,66 @@
 
 
 # virtual methods
-.method public onChildClick(Landroid/widget/ExpandableListView;Landroid/view/View;IIJ)Z
-    .locals 6
+.method public onProgressChanged(Landroid/widget/SeekBar;IZ)V
+    .locals 8
 
-    const/4 v0, 0x0
+    mul-int/lit8 v0, p2, 0xf
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/q;->a:Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;
+    add-int/lit16 v0, v0, 0xf0
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->c(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;)Lcn/com/smartdevices/bracelet/gps/ui/s;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/Q;->a:Lcn/com/smartdevices/bracelet/gps/ui/N;
 
-    move-result-object v1
-
-    invoke-virtual {v1, p3, p4}, Lcn/com/smartdevices/bracelet/gps/ui/s;->a(II)Lcn/com/smartdevices/bracelet/gps/services/n;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/gps/ui/N;->a(Lcn/com/smartdevices/bracelet/gps/ui/N;)Lcn/com/smartdevices/bracelet/gps/a/d;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/services/n;->j()J
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/gps/a/d;->e(I)V
 
-    move-result-wide v1
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/Q;->a:Lcn/com/smartdevices/bracelet/gps/ui/N;
 
-    invoke-static {v1, v2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    :try_start_0
-    invoke-static {v1}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/gps/ui/N;->c(Lcn/com/smartdevices/bracelet/gps/ui/N;)Landroid/widget/TextView;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/Q;->a:Lcn/com/smartdevices/bracelet/gps/ui/N;
 
-    move-result-wide v1
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/gps/ui/N;->getResources()Landroid/content/res/Resources;
 
-    new-instance v3, Landroid/content/Intent;
+    move-result-object v2
 
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/gps/ui/q;->a:Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;
+    const v3, 0x7f0c027f
 
-    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->getApplicationContext()Landroid/content/Context;
+    const/4 v4, 0x1
 
-    move-result-object v4
+    new-array v4, v4, [Ljava/lang/Object;
 
-    const-class v5, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;
+    const/4 v5, 0x0
 
-    invoke-direct {v3, v4, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    int-to-long v6, v0
 
-    const-string v4, "trackId"
-
-    invoke-virtual {v3, v4, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
-
-    :try_start_1
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/q;->a:Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;
-
-    invoke-virtual {v1, v3}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->startActivity(Landroid/content/Intent;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-
-    :goto_1
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v1
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/q;->a:Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    const-string v2, "Error activity"
-
-    invoke-static {v1, v2, v0}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+    invoke-static {v6, v7}, Lcn/com/smartdevices/bracelet/lab/c/e;->a(J)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+    aput-object v0, v4, v5
 
-    goto :goto_1
+    invoke-virtual {v2, v3, v4}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
-    :catch_1
-    move-exception v1
+    move-result-object v0
 
-    goto :goto_0
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public onStartTrackingTouch(Landroid/widget/SeekBar;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onStopTrackingTouch(Landroid/widget/SeekBar;)V
+    .locals 0
+
+    return-void
 .end method

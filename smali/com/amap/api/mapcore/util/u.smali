@@ -213,12 +213,19 @@
     return-void
 .end method
 
-.method public static a()Landroid/content/res/AssetManager;
+.method public static a(Landroid/content/Context;)Landroid/content/res/AssetManager;
     .locals 6
 
-    sget-object v0, Lcom/amap/api/mapcore/ak;->a:Landroid/content/Context;
+    if-nez p0, :cond_1
 
-    invoke-virtual {v0}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
+    const/4 v0, 0x0
+
+    :cond_0
+    :goto_0
+    return-object v0
+
+    :cond_1
+    invoke-virtual {p0}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
     move-result-object v0
 
@@ -261,9 +268,7 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    :cond_0
-    :goto_0
-    return-object v0
+    goto :goto_0
 
     :catch_0
     move-exception v1

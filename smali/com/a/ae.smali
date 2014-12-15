@@ -1544,9 +1544,9 @@
 
     invoke-virtual {v3}, Ljava/util/zip/CRC32;->getValue()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-static {v3, v4}, Lcom/a/ai;->a(J)[B
+    invoke-static {v4, v5}, Lcom/a/ai;->a(J)[B
 
     move-result-object v3
 

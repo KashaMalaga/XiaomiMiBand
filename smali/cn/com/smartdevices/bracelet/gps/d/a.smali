@@ -12,7 +12,7 @@
 .end method
 
 .method public static a(DD)Lcom/amap/api/maps/model/LatLng;
-    .locals 1
+    .locals 2
 
     new-instance v0, Lcom/amap/api/maps/model/LatLng;
 
@@ -22,29 +22,29 @@
 .end method
 
 .method public static a(Lcn/com/smartdevices/bracelet/gps/model/b;)Lcom/amap/api/maps/model/LatLng;
-    .locals 5
+    .locals 6
 
     new-instance v0, Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v1, p0, Lcn/com/smartdevices/bracelet/gps/model/b;->j:D
+    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/gps/model/b;->j:D
 
-    iget-wide v3, p0, Lcn/com/smartdevices/bracelet/gps/model/b;->k:D
+    iget-wide v4, p0, Lcn/com/smartdevices/bracelet/gps/model/b;->k:D
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v0, v2, v3, v4, v5}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     return-object v0
 .end method
 
 .method public static a(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/services/core/LatLonPoint;
-    .locals 5
+    .locals 6
 
     new-instance v0, Lcom/amap/api/services/core/LatLonPoint;
 
-    iget-wide v1, p0, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v2, p0, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
-    iget-wide v3, p0, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iget-wide v4, p0, Lcom/amap/api/maps/model/LatLng;->longitude:D
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/amap/api/services/core/LatLonPoint;-><init>(DD)V
+    invoke-direct {v0, v2, v3, v4, v5}, Lcom/amap/api/services/core/LatLonPoint;-><init>(DD)V
 
     return-object v0
 .end method
@@ -111,15 +111,15 @@
 .end method
 
 .method public static b(Lcn/com/smartdevices/bracelet/gps/model/b;)Lcom/amap/api/services/core/LatLonPoint;
-    .locals 5
+    .locals 6
 
     new-instance v0, Lcom/amap/api/services/core/LatLonPoint;
 
-    iget-wide v1, p0, Lcn/com/smartdevices/bracelet/gps/model/b;->j:D
+    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/gps/model/b;->j:D
 
-    iget-wide v3, p0, Lcn/com/smartdevices/bracelet/gps/model/b;->k:D
+    iget-wide v4, p0, Lcn/com/smartdevices/bracelet/gps/model/b;->k:D
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/amap/api/services/core/LatLonPoint;-><init>(DD)V
+    invoke-direct {v0, v2, v3, v4, v5}, Lcom/amap/api/services/core/LatLonPoint;-><init>(DD)V
 
     return-object v0
 .end method
@@ -190,15 +190,15 @@
 .end method
 
 .method public static c(Lcn/com/smartdevices/bracelet/gps/model/b;)Lcom/amap/api/services/core/LatLonPoint;
-    .locals 5
+    .locals 6
 
     new-instance v0, Lcom/amap/api/services/core/LatLonPoint;
 
-    iget-wide v1, p0, Lcn/com/smartdevices/bracelet/gps/model/b;->j:D
+    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/gps/model/b;->j:D
 
-    iget-wide v3, p0, Lcn/com/smartdevices/bracelet/gps/model/b;->k:D
+    iget-wide v4, p0, Lcn/com/smartdevices/bracelet/gps/model/b;->k:D
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/amap/api/services/core/LatLonPoint;-><init>(DD)V
+    invoke-direct {v0, v2, v3, v4, v5}, Lcom/amap/api/services/core/LatLonPoint;-><init>(DD)V
 
     return-object v0
 .end method

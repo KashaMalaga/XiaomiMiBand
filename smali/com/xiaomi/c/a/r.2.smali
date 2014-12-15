@@ -32,7 +32,7 @@
 .end method
 
 .method constructor <init>()V
-    .locals 3
+    .locals 4
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,9 +46,9 @@
 
     invoke-direct {p0}, Lcom/xiaomi/c/a/r;->b()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-direct {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicLong;-><init>(J)V
+    invoke-direct {v0, v2, v3}, Ljava/util/concurrent/atomic/AtomicLong;-><init>(J)V
 
     iput-object v0, p0, Lcom/xiaomi/c/a/r;->c:Ljava/util/concurrent/atomic/AtomicLong;
 

@@ -70,7 +70,7 @@
 
     move-result-object v0
 
-    const-string v2, ", type = "
+    const-string v2, ", trackId = "
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -92,7 +92,7 @@
 .end method
 
 .method public onSuccess(I[Lorg/apache/http/Header;[B)V
-    .locals 5
+    .locals 6
 
     invoke-static {p3}, Lcn/com/smartdevices/bracelet/y;->a([B)Ljava/lang/String;
 
@@ -118,15 +118,15 @@
 
     move-result-object v2
 
-    const-string v3, ", type = "
+    const-string v3, ", trackId = "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    iget-wide v3, p0, Lcn/com/smartdevices/bracelet/lab/sync/g;->b:J
+    iget-wide v4, p0, Lcn/com/smartdevices/bracelet/lab/sync/g;->b:J
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -146,15 +146,15 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sync/g;->c:Landroid/content/Context;
 
-    iget-wide v1, p0, Lcn/com/smartdevices/bracelet/lab/sync/g;->b:J
+    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/lab/sync/g;->b:J
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/sync/g;->d:Lcn/com/smartdevices/bracelet/gps/services/l;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/sync/g;->d:Lcn/com/smartdevices/bracelet/gps/services/l;
 
-    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/gps/services/l;->q()I
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/services/l;->r()I
 
-    move-result v3
+    move-result v1
 
-    invoke-static {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/gps/a/a;->b(Landroid/content/Context;JI)Z
+    invoke-static {v0, v2, v3, v1}, Lcn/com/smartdevices/bracelet/gps/a/a;->b(Landroid/content/Context;JI)Z
 
     move-result v0
 
@@ -179,7 +179,7 @@
 
     move-result-object v0
 
-    const-string v2, ", type = "
+    const-string v2, ", trackId = "
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout android:background="@color/separator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="32.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="10.0dip" android:columnCount="2"
+<GridLayout android:background="@color/separator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="10.0dip" android:columnCount="2"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout android:gravity="bottom" android:orientation="horizontal" android:background="@color/main_ui_bg" android:layout_width="@dimen/sport_running_detail_wide_width" android:layout_height="@dimen/sport_running_detail_height">
         <TextView android:textSize="42.0sp" android:textColor="@color/running_main_text" android:ellipsize="end" android:id="@id/info_distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.00" android:singleLine="true" android:fontFamily="miui-bold" />

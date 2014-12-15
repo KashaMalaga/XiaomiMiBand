@@ -82,11 +82,11 @@
 .method private a(Lcom/xiaomi/g/a/n;Z[B)Lcom/xiaomi/mipush/sdk/k;
     .locals 11
 
-    const/4 v9, 0x1
+    const/4 v7, 0x1
 
     const/4 v6, 0x0
 
-    const-wide/16 v7, 0x0
+    const-wide/16 v8, 0x0
 
     const/4 v5, 0x0
 
@@ -191,7 +191,7 @@
 
     iget-wide v0, v4, Lcom/xiaomi/g/a/t;->f:J
 
-    cmp-long v0, v0, v7
+    cmp-long v0, v0, v8
 
     if-nez v0, :cond_2
 
@@ -261,7 +261,7 @@
 
     iget-wide v0, v0, Lcom/xiaomi/g/a/H;->f:J
 
-    cmp-long v0, v0, v7
+    cmp-long v0, v0, v8
 
     if-nez v0, :cond_3
 
@@ -350,9 +350,9 @@
 
     invoke-static {v1, v3}, Lcom/xiaomi/mipush/sdk/f;->i(Landroid/content/Context;Ljava/lang/String;)J
 
-    move-result-wide v3
+    move-result-wide v6
 
-    cmp-long v1, v3, v7
+    cmp-long v1, v6, v8
 
     if-gez v1, :cond_9
 
@@ -468,9 +468,9 @@
 
     invoke-static {v1, v3}, Lcom/xiaomi/mipush/sdk/f;->h(Landroid/content/Context;Ljava/lang/String;)J
 
-    move-result-wide v3
+    move-result-wide v6
 
-    cmp-long v1, v3, v7
+    cmp-long v1, v6, v8
 
     if-gez v1, :cond_7
 
@@ -968,7 +968,7 @@
 
     iget-wide v0, v6, Lcom/xiaomi/g/a/D;->f:J
 
-    cmp-long v0, v0, v7
+    cmp-long v0, v0, v8
 
     if-nez v0, :cond_12
 
@@ -1025,7 +1025,7 @@
 
     iget-wide v0, v6, Lcom/xiaomi/g/a/L;->f:J
 
-    cmp-long v0, v0, v7
+    cmp-long v0, v0, v8
 
     if-nez v0, :cond_13
 
@@ -1090,7 +1090,7 @@
 
     iget-wide v2, v5, Lcom/xiaomi/g/a/l;->g:J
 
-    cmp-long v2, v2, v7
+    cmp-long v2, v2, v8
 
     if-nez v2, :cond_14
 
@@ -1108,7 +1108,7 @@
 
     move-result v2
 
-    if-le v2, v9, :cond_16
+    if-le v2, v7, :cond_16
 
     iget-object v4, p0, Lcom/xiaomi/mipush/sdk/s;->b:Landroid/content/Context;
 
@@ -1118,7 +1118,7 @@
 
     check-cast v2, Ljava/lang/String;
 
-    invoke-interface {v1, v9}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v1, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -1140,7 +1140,7 @@
 
     const-string v2, "00:00"
 
-    invoke-interface {v1, v9}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v1, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -1156,7 +1156,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2, v9}, Lcom/xiaomi/mipush/sdk/m;->a(Z)V
+    invoke-virtual {v2, v7}, Lcom/xiaomi/mipush/sdk/m;->a(Z)V
 
     :cond_14
     :goto_c
@@ -1425,7 +1425,7 @@
 .end method
 
 .method private a(Lcom/xiaomi/g/a/z;Lcom/xiaomi/g/a/d;)V
-    .locals 3
+    .locals 4
 
     new-instance v0, Lcom/xiaomi/g/a/h;
 
@@ -1449,9 +1449,9 @@
 
     invoke-virtual {v1}, Lcom/xiaomi/g/a/b;->g()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/xiaomi/g/a/h;->a(J)Lcom/xiaomi/g/a/h;
+    invoke-virtual {v0, v2, v3}, Lcom/xiaomi/g/a/h;->a(J)Lcom/xiaomi/g/a/h;
 
     invoke-virtual {p1}, Lcom/xiaomi/g/a/z;->h()Ljava/lang/String;
 
@@ -1863,9 +1863,9 @@
 
     move-result v1
 
-    int-to-long v1, v1
+    int-to-long v2, v1
 
-    invoke-virtual {v0, v1, v2}, Lcom/xiaomi/mipush/sdk/i;->a(J)V
+    invoke-virtual {v0, v2, v3}, Lcom/xiaomi/mipush/sdk/i;->a(J)V
 
     const-string v1, "mipush_error_msg"
 

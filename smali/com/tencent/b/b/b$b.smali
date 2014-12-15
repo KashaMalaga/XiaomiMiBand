@@ -20,9 +20,9 @@
 
 # virtual methods
 .method public final run()V
-    .locals 7
+    .locals 8
 
-    const-wide v5, 0x4076800000000000L
+    const-wide v6, 0x4076800000000000L
 
     const/4 v1, 0x0
 
@@ -160,7 +160,7 @@
 
     move-result-object v0
 
-    invoke-interface {v0, v5, v6, v5, v6}, Lcom/tencent/b/b/b$a;->a(DD)V
+    invoke-interface {v0, v6, v7, v6, v7}, Lcom/tencent/b/b/b$a;->a(DD)V
 
     goto :goto_0
 .end method

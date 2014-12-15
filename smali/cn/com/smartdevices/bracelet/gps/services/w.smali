@@ -90,9 +90,9 @@
 .end method
 
 .method private a(Ljava/io/File;I)I
-    .locals 10
+    .locals 11
 
-    const/4 v9, 0x1
+    const/4 v10, 0x1
 
     const/4 v1, 0x0
 
@@ -118,7 +118,7 @@
 
     new-instance v4, Lcn/com/smartdevices/bracelet/gps/b/t;
 
-    invoke-direct {v4, v9}, Lcn/com/smartdevices/bracelet/gps/b/t;-><init>(Z)V
+    invoke-direct {v4, v10}, Lcn/com/smartdevices/bracelet/gps/b/t;-><init>(Z)V
 
     move v0, v1
 
@@ -184,17 +184,17 @@
 
     invoke-static {v7}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
-    move-result-wide v7
+    move-result-wide v8
 
-    invoke-virtual {v6, v7, v8}, Lcn/com/smartdevices/bracelet/gps/model/b;->a(J)V
+    invoke-virtual {v6, v8, v9}, Lcn/com/smartdevices/bracelet/gps/model/b;->a(J)V
 
-    aget-object v7, v5, v9
+    aget-object v7, v5, v10
 
     invoke-static {v7}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
-    move-result-wide v7
+    move-result-wide v8
 
-    iput-wide v7, v6, Lcn/com/smartdevices/bracelet/gps/model/b;->k:D
+    iput-wide v8, v6, Lcn/com/smartdevices/bracelet/gps/model/b;->k:D
 
     const/4 v7, 0x2
 
@@ -202,9 +202,9 @@
 
     invoke-static {v7}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
-    move-result-wide v7
+    move-result-wide v8
 
-    iput-wide v7, v6, Lcn/com/smartdevices/bracelet/gps/model/b;->j:D
+    iput-wide v8, v6, Lcn/com/smartdevices/bracelet/gps/model/b;->j:D
 
     const/4 v7, 0x3
 
@@ -212,9 +212,9 @@
 
     invoke-static {v7}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
-    move-result-wide v7
+    move-result-wide v8
 
-    iput-wide v7, v6, Lcn/com/smartdevices/bracelet/gps/model/b;->i:D
+    iput-wide v8, v6, Lcn/com/smartdevices/bracelet/gps/model/b;->i:D
 
     const/4 v7, 0x4
 
@@ -238,13 +238,17 @@
 
     invoke-virtual {v2, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    iget-object v5, p0, Lcn/com/smartdevices/bracelet/gps/services/w;->a:Lcn/com/smartdevices/bracelet/gps/services/a/d;
+    new-instance v5, Ljava/util/ArrayList;
 
-    invoke-interface {v5, v6}, Lcn/com/smartdevices/bracelet/gps/services/a/d;->a(Lcn/com/smartdevices/bracelet/gps/model/b;)Ljava/util/ArrayList;
+    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    move-result-object v5
+    iget-object v7, p0, Lcn/com/smartdevices/bracelet/gps/services/w;->a:Lcn/com/smartdevices/bracelet/gps/services/a/d;
+
+    invoke-interface {v7, v6, v5}, Lcn/com/smartdevices/bracelet/gps/services/a/d;->a(Lcn/com/smartdevices/bracelet/gps/model/b;Ljava/util/ArrayList;)I
 
     invoke-virtual {p0, v5, v4}, Lcn/com/smartdevices/bracelet/gps/services/w;->a(Ljava/util/List;Lcn/com/smartdevices/bracelet/gps/b/t;)V
+
+    invoke-virtual {v5}, Ljava/util/ArrayList;->clear()V
 
     goto :goto_1
 
@@ -255,7 +259,7 @@
 
     move-result-object v0
 
-    iput-boolean v9, v4, Lcn/com/smartdevices/bracelet/gps/b/t;->d:Z
+    iput-boolean v10, v4, Lcn/com/smartdevices/bracelet/gps/b/t;->d:Z
 
     invoke-virtual {p0, v0, v4}, Lcn/com/smartdevices/bracelet/gps/services/w;->a(Ljava/util/List;Lcn/com/smartdevices/bracelet/gps/b/t;)V
 

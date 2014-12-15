@@ -8,7 +8,7 @@
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/f/v;Lcom/xiaomi/push/service/U;Ljava/lang/String;Lcom/xiaomi/f/l;)V
-    .locals 7
+    .locals 8
 
     const/4 v1, 0x0
 
@@ -73,11 +73,11 @@
     :goto_0
     invoke-virtual {p4}, Lcom/xiaomi/f/l;->m()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    const-wide/16 v5, 0x0
+    const-wide/16 v6, 0x0
 
-    cmp-long v3, v3, v5
+    cmp-long v3, v4, v6
 
     if-lez v3, :cond_b
 
@@ -99,9 +99,9 @@
 
     invoke-virtual {p4}, Lcom/xiaomi/f/l;->m()J
 
-    move-result-wide v5
+    move-result-wide v6
 
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v5
 

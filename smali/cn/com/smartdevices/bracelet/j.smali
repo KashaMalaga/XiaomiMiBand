@@ -177,43 +177,43 @@
 
 .field public static final bG:I = 0xa
 
-.field public static final bH:Ljava/lang/String; = "ACTION_BATTERY_LOW"
+.field public static final bH:Ljava/lang/String; = "ACTION_OPEN_SETTINGS_PAGE"
 
-.field public static final bI:Ljava/lang/String; = "utf-8"
+.field public static final bI:Ljava/lang/String; = "ACTION_OPEN_ALARM_PAGE"
 
-.field public static final bJ:F = 400.0f
+.field public static final bJ:Ljava/lang/String; = "utf-8"
 
-.field public static final bK:F = 42000.0f
+.field public static final bK:F = 400.0f
 
-.field public static final bL:I = 0x1e
+.field public static final bL:F = 42000.0f
 
-.field public static final bM:I = 0x1f40
+.field public static final bM:I = 0x1e
 
-.field public static final bN:I = 0x2ee0
+.field public static final bN:I = 0x1f40
 
-.field public static final bO:Ljava/lang/String; = "https://account.xiaomi.com/pass/wap/register?qs=callback%3Dhttps%253A%252F%252Faccount.xiaomi.com%252Fsts%253Fsign%253D8VUxGitrfXxS7XlgXfr7V0uceQc%25253D%2526followup%253Dhttps%25253A%25252F%25252Faccount.xiaomi.com%25252Foauth2%25252Fauthorize%25253Fskip_confirm%25253Dfalse%252526client_id%25253D2882303761517154077%252526redirect_uri%25253Dhttps%2525253A%2525252F%2525252Fhm.xiaomi.com%2525252Fhuami.health.loginview.do%252526response_type%25253Dcode%2526sid%253Doauth2.0%26sid%3Doauth2.0%26_customDisplay%3D0%26mini%3Dtrue%26lsrp_appName%3D%25E4%25BD%25BF%25E7%2594%25A8%25E4%25BD%25A0%25E7%259A%2584%25E5%25B0%258F%25E7%25B1%25B3%25E5%25B8%2590%25E5%258F%25B7%25E8%25AE%25BF%25E9%2597%25AE%2524%257B%25E5%25B0%258F%25E7%25B1%25B3%25E6%2589%258B%25E7%258E%25AF%257D%2524%26_ssign%3DrBm1F4Qu%252F%252FE074tgruygkG18tX0%253D"
+.field public static final bO:I = 0x2ee0
 
-.field public static final bP:Ljava/lang/String; = "_locale=en"
+.field public static final bP:Ljava/lang/String; = "https://account.xiaomi.com/pass/wap/register?qs=callback%3Dhttps%253A%252F%252Faccount.xiaomi.com%252Fsts%253Fsign%253D8VUxGitrfXxS7XlgXfr7V0uceQc%25253D%2526followup%253Dhttps%25253A%25252F%25252Faccount.xiaomi.com%25252Foauth2%25252Fauthorize%25253Fskip_confirm%25253Dfalse%252526client_id%25253D2882303761517154077%252526redirect_uri%25253Dhttps%2525253A%2525252F%2525252Fhm.xiaomi.com%2525252Fhuami.health.loginview.do%252526response_type%25253Dcode%2526sid%253Doauth2.0%26sid%3Doauth2.0%26_customDisplay%3D0%26mini%3Dtrue%26lsrp_appName%3D%25E4%25BD%25BF%25E7%2594%25A8%25E4%25BD%25A0%25E7%259A%2584%25E5%25B0%258F%25E7%25B1%25B3%25E5%25B8%2590%25E5%258F%25B7%25E8%25AE%25BF%25E9%2597%25AE%2524%257B%25E5%25B0%258F%25E7%25B1%25B3%25E6%2589%258B%25E7%258E%25AF%257D%2524%26_ssign%3DrBm1F4Qu%252F%252FE074tgruygkG18tX0%253D"
 
-.field public static final bQ:Ljava/lang/String; = "_locale=zh_CN"
+.field public static final bQ:Ljava/lang/String; = "_locale=en"
 
-.field public static final bR:Ljava/lang/String; = "_locale=zh_TW"
+.field public static final bR:Ljava/lang/String; = "_locale=zh_CN"
 
-.field public static final bS:J = 0xbb8L
+.field public static final bS:Ljava/lang/String; = "_locale=zh_TW"
 
-.field public static final bT:Ljava/lang/String; = "Lua_version"
+.field public static final bT:J = 0xbb8L
 
-.field public static final bU:I = 0x7d0
+.field public static final bU:Ljava/lang/String; = "Lua_version"
 
-.field public static final bV:Ljava/lang/String; = "pic_url"
+.field public static final bV:I = 0x7d0
 
-.field public static final bW:Ljava/lang/String; = "share.jpg"
+.field public static final bW:Ljava/lang/String; = "pic_url"
 
-.field public static final bX:Ljava/lang/String; = "dislike"
+.field public static final bX:Ljava/lang/String; = "share.jpg"
 
-.field public static final bY:Ljava/lang/String; = "REF_GAME_FAILED"
+.field public static final bY:Ljava/lang/String; = "dislike"
 
-.field public static final bZ:Ljava/lang/String; = "20990101001"
+.field public static final bZ:Ljava/lang/String; = "REF_GAME_FAILED"
 
 .field public static final ba:I = 0xa
 
@@ -229,7 +229,7 @@
 
 .field public static final bg:F = 5.5f
 
-.field public static final bh:I = 0x7f08003c
+.field public static final bh:I = 0x7f07003c
 
 .field public static final bi:I = 0x20
 
@@ -269,41 +269,47 @@
 
 .field public static final c:I = 0x3
 
-.field public static final ca:Ljava/lang/String; = "agree_user_agreement"
+.field public static final ca:Ljava/lang/String; = "20990101001"
 
-.field public static final cb:Ljava/lang/String; = "ref_lazy_days"
+.field public static final cb:Ljava/lang/String; = "agree_user_agreement"
 
-.field public static final cc:Ljava/lang/String; = ":"
+.field public static final cc:Ljava/lang/String; = "ref_lazy_days"
 
-.field public static final cd:Ljava/lang/String; = "ref_manual_algo_start_date"
+.field public static final cd:Ljava/lang/String; = ":"
 
-.field public static final ce:Ljava/lang/String; = "algo_start_date"
+.field public static final ce:Ljava/lang/String; = "ref_manual_algo_start_date"
 
-.field public static final cf:Ljava/lang/String; = "lazydays"
+.field public static final cf:Ljava/lang/String; = "algo_start_date"
 
-.field public static final cg:Ljava/lang/String; = "push_lua_item"
+.field public static final cg:Ljava/lang/String; = "lazydays"
 
-.field public static final ch:Ljava/lang/String; = "push_intent"
+.field public static final ch:Ljava/lang/String; = "push_lua_item"
 
-.field public static final ci:Ljava/lang/String; = "http://s1.mi.com/m/product/shouhuan/index.html"
+.field public static final ci:Ljava/lang/String; = "push_intent"
 
-.field public static final cj:Ljava/lang/String; = "com.xiaomi.shop.action_show_m_site"
+.field public static final cj:Ljava/lang/String; = "http://s1.mi.com/m/product/shouhuan/index.html"
 
-.field public static final ck:I = 0x7c6
+.field public static final ck:Ljava/lang/String; = "com.xiaomi.shop.action_show_m_site"
 
-.field public static final cl:I = 0x1
+.field public static final cl:I = 0x7c6
 
-.field public static final cm:Ljava/lang/String;
+.field public static final cm:I = 0x1
 
-.field public static final cn:Ljava/lang/String; = "ref_UX_config"
+.field public static final cn:Ljava/lang/String; = ".miband"
 
-.field public static final co:Ljava/lang/String; = "ref_last_binded"
+.field public static final co:Ljava/io/File;
 
-.field public static final cp:Ljava/lang/String; = "ref_last_welcome_date"
+.field public static final cp:Ljava/lang/String;
 
-.field public static final cq:Ljava/lang/String; = "ref_goal"
+.field public static final cq:Ljava/lang/String; = "ref_UX_config"
 
-.field public static final cr:I = 0x5265c00
+.field public static final cr:Ljava/lang/String; = "ref_last_binded"
+
+.field public static final cs:Ljava/lang/String; = "ref_last_welcome_date"
+
+.field public static final ct:Ljava/lang/String; = "ref_goal"
+
+.field public static final cu:I = 0x5265c00
 
 .field public static final d:Ljava/lang/String; = "web_type"
 
@@ -354,15 +360,25 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 3
+
+    new-instance v0, Ljava/io/File;
+
+    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+
+    move-result-object v1
+
+    const-string v2, ".miband"
+
+    invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/j;->co:Ljava/io/File;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
-
-    move-result-object v1
+    sget-object v1, Lcn/com/smartdevices/bracelet/j;->co:Ljava/io/File;
 
     invoke-virtual {v1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -382,7 +398,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcn/com/smartdevices/bracelet/j;->cm:Ljava/lang/String;
+    sput-object v0, Lcn/com/smartdevices/bracelet/j;->cp:Ljava/lang/String;
 
     return-void
 .end method

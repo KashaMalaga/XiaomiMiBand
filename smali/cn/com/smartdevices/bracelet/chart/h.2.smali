@@ -25,8 +25,13 @@
 .method public a(Lcn/com/smartdevices/bracelet/chart/b/e;)V
     .locals 3
 
-    if-eqz p1, :cond_0
+    if-nez p1, :cond_1
 
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
     move-object v0, p1
 
     check-cast v0, Lcn/com/smartdevices/bracelet/chart/k;
@@ -71,14 +76,17 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/h;->a:Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;
 
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->a_()V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/h;->a:Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;
+
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->a(Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;)Lcn/com/smartdevices/bracelet/chart/l;
 
     move-result-object v0
 
     invoke-interface {v0, p1}, Lcn/com/smartdevices/bracelet/chart/l;->a(Lcn/com/smartdevices/bracelet/chart/b/e;)V
 
-    :cond_0
-    return-void
+    goto :goto_0
 .end method
 
 .method public a(I)Z

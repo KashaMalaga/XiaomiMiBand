@@ -90,7 +90,7 @@
 .end method
 
 .method public a(J)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcn/com/smartdevices/bracelet/e/j;->b:J
 
@@ -114,7 +114,7 @@
 .end method
 
 .method public b(J)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcn/com/smartdevices/bracelet/e/j;->c:J
 

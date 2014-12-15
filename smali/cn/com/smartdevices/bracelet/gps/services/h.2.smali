@@ -12,7 +12,7 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     sput-boolean v0, Lcn/com/smartdevices/bracelet/gps/services/h;->a:Z
 
@@ -48,9 +48,7 @@
 .end method
 
 .method public static a(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 5
-
-    invoke-static {p0, p1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 6
 
     sget-boolean v0, Lcn/com/smartdevices/bracelet/gps/services/h;->a:Z
 
@@ -61,31 +59,15 @@
     return-void
 
     :cond_1
+    invoke-static {p0, p1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
     new-instance v0, Ljava/io/File;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    sget-object v1, Lcn/com/smartdevices/bracelet/j;->co:Ljava/io/File;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    const-string v2, ".gpsLog.txt"
 
-    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "/.gpsLog.txt"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -95,11 +77,11 @@
 
     invoke-virtual {v0}, Ljava/io/File;->length()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    const-wide/32 v3, 0x1400000
+    const-wide/32 v4, 0x1400000
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-lez v1, :cond_2
 
@@ -209,7 +191,7 @@
     :catch_2
     move-exception v0
 
-    goto/16 :goto_0
+    goto :goto_0
 
     :catchall_0
     move-exception v0

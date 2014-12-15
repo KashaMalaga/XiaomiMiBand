@@ -495,19 +495,19 @@
 .end method
 
 .method private d()[B
-    .locals 5
+    .locals 6
 
     iget-object v0, p0, Lb/a/cr;->a:[B
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    const-wide/16 v3, 0x3e8
+    const-wide/16 v4, 0x3e8
 
-    div-long/2addr v1, v3
+    div-long/2addr v2, v4
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     invoke-direct {p0, v0, v1}, Lb/a/cr;->a([BI)[B
 

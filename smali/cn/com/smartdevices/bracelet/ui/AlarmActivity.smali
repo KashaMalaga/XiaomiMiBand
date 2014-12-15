@@ -541,13 +541,13 @@
 
     invoke-virtual {v0}, Ljava/util/Calendar;->getTimeInMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    new-instance v3, Landroid/content/Intent;
+    new-instance v1, Landroid/content/Intent;
 
     const-string v4, "ALARM_ONCE_TRIGGLED"
 
-    invoke-direct {v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v0}, Ljava/util/Calendar;->hashCode()I
 
@@ -555,9 +555,9 @@
 
     const/high16 v4, 0x8000000
 
-    invoke-static {p1, v0, v3, v4}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+    invoke-static {p1, v0, v1, v4}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
-    move-result-object v3
+    move-result-object v1
 
     const-string v0, "alarm"
 
@@ -567,7 +567,7 @@
 
     check-cast v0, Landroid/app/AlarmManager;
 
-    invoke-virtual {v0, v6, v1, v2, v3}, Landroid/app/AlarmManager;->set(IJLandroid/app/PendingIntent;)V
+    invoke-virtual {v0, v6, v2, v3, v1}, Landroid/app/AlarmManager;->set(IJLandroid/app/PendingIntent;)V
 
     :cond_1
     return-void
@@ -608,7 +608,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->z:Landroid/view/View;
 
-    const v1, 0x7f08003c
+    const v1, 0x7f07003c
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
@@ -634,7 +634,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->z:Landroid/view/View;
 
-    const v1, 0x7f08003d
+    const v1, 0x7f07003d
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
@@ -676,7 +676,7 @@
 .method private e()V
     .locals 2
 
-    const v0, 0x7f070102
+    const v0, 0x7f0b010d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->findViewById(I)Landroid/view/View;
 
@@ -698,7 +698,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    const v0, 0x7f070033
+    const v0, 0x7f0b0033
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->findViewById(I)Landroid/view/View;
 
@@ -706,7 +706,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->y:Landroid/view/View;
 
-    const v0, 0x7f070101
+    const v0, 0x7f0b010c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->findViewById(I)Landroid/view/View;
 
@@ -1034,7 +1034,7 @@
 
     invoke-virtual {v0, p0}, Lde/greenrobot/event/EventBus;->register(Ljava/lang/Object;)V
 
-    const v0, 0x7f03002a
+    const v0, 0x7f03002b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->setContentView(I)V
 

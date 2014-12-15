@@ -130,7 +130,7 @@
 .end method
 
 .method private a(I)Lcom/amap/api/maps/model/MarkerOptions;
-    .locals 7
+    .locals 8
 
     new-instance v1, Lcom/amap/api/maps/model/MarkerOptions;
 
@@ -152,7 +152,7 @@
 
     invoke-virtual {v0}, Lcom/amap/api/services/core/LatLonPoint;->getLatitude()D
 
-    move-result-wide v3
+    move-result-wide v4
 
     iget-object v0, p0, Lcom/amap/api/maps/overlay/PoiOverlay;->a:Ljava/util/List;
 
@@ -168,9 +168,9 @@
 
     invoke-virtual {v0}, Lcom/amap/api/services/core/LatLonPoint;->getLongitude()D
 
-    move-result-wide v5
+    move-result-wide v6
 
-    invoke-direct {v2, v3, v4, v5, v6}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v2, v4, v5, v6, v7}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     invoke-virtual {v1, v2}, Lcom/amap/api/maps/model/MarkerOptions;->position(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/MarkerOptions;
 
@@ -211,6 +211,7 @@
     const/4 v0, 0x0
 
     :goto_0
+    :try_start_0
     iget-object v1, p0, Lcom/amap/api/maps/overlay/PoiOverlay;->a:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -238,10 +239,17 @@
     iget-object v2, p0, Lcom/amap/api/maps/overlay/PoiOverlay;->c:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     :cond_0
     return-void
@@ -399,10 +407,9 @@
 .end method
 
 .method public zoomToSpan()V
-    .locals 7
+    .locals 8
 
-    const/4 v5, 0x0
-
+    :try_start_0
     iget-object v0, p0, Lcom/amap/api/maps/overlay/PoiOverlay;->a:Ljava/util/List;
 
     if-eqz v0, :cond_0
@@ -440,7 +447,9 @@
 
     iget-object v0, p0, Lcom/amap/api/maps/overlay/PoiOverlay;->a:Ljava/util/List;
 
-    invoke-interface {v0, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    const/4 v3, 0x0
+
+    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -452,11 +461,13 @@
 
     invoke-virtual {v0}, Lcom/amap/api/services/core/LatLonPoint;->getLatitude()D
 
-    move-result-wide v3
+    move-result-wide v4
 
     iget-object v0, p0, Lcom/amap/api/maps/overlay/PoiOverlay;->a:Ljava/util/List;
 
-    invoke-interface {v0, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    const/4 v3, 0x0
+
+    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -468,9 +479,9 @@
 
     invoke-virtual {v0}, Lcom/amap/api/services/core/LatLonPoint;->getLongitude()D
 
-    move-result-wide v5
+    move-result-wide v6
 
-    invoke-direct {v2, v3, v4, v5, v6}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v2, v4, v5, v6, v7}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     const/high16 v0, 0x41900000
 
@@ -479,10 +490,20 @@
     move-result-object v0
 
     invoke-virtual {v1, v0}, Lcom/amap/api/maps/AMap;->moveCamera(Lcom/amap/api/maps/CameraUpdate;)V
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 
     :cond_2
+    :try_start_1
     invoke-direct {p0}, Lcom/amap/api/maps/overlay/PoiOverlay;->a()Lcom/amap/api/maps/model/LatLngBounds;
 
     move-result-object v0
@@ -496,6 +517,8 @@
     move-result-object v0
 
     invoke-virtual {v1, v0}, Lcom/amap/api/maps/AMap;->moveCamera(Lcom/amap/api/maps/CameraUpdate;)V
+    :try_end_1
+    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
 
     goto :goto_0
 .end method

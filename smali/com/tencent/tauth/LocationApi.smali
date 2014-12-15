@@ -210,9 +210,9 @@
 
     invoke-virtual {p1}, Landroid/location/Location;->getLongitude()D
 
-    move-result-wide v1
+    move-result-wide v4
 
-    invoke-static {v1, v2}, Ljava/lang/String;->valueOf(D)Ljava/lang/String;
+    invoke-static {v4, v5}, Ljava/lang/String;->valueOf(D)Ljava/lang/String;
 
     move-result-object v1
 
@@ -578,9 +578,9 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v4
 
-    invoke-static {v1, v2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    invoke-static {v4, v5}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v1
 

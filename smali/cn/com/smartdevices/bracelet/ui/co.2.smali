@@ -23,7 +23,11 @@
 
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 0
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/co;->a:Lcn/com/smartdevices/bracelet/ui/ck;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ck;->c(Lcn/com/smartdevices/bracelet/ui/ck;)V
 
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 

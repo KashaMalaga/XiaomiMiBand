@@ -190,9 +190,9 @@
 
     invoke-static {}, Lcom/a/am;->a()J
 
-    move-result-wide v1
+    move-result-wide v4
 
-    invoke-virtual {v0, v1, v2}, Lcom/a/K;->a(J)V
+    invoke-virtual {v0, v4, v5}, Lcom/a/K;->a(J)V
 
     :cond_3
     iget-object v1, v3, Lcom/a/ab;->a:Lcom/a/K;

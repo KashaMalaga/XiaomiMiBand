@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.xiaomi.hm.health">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.xiaomi.hm.health" platformBuildVersionCode="19" platformBuildVersionName="4.4.2-1456859">
     <original-package android:name="cn.com.smartdevices.bracelet"/>
     <uses-permission android:name="android.permission.REORDER_TASKS"/>
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
@@ -154,6 +154,8 @@
         <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:launchMode="singleTop" android:name="cn.com.smartdevices.bracelet.gps.ui.HistoryActivity" android:screenOrientation="portrait"/>
         <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:launchMode="singleTop" android:name="cn.com.smartdevices.bracelet.gps.ui.GPSResultActivity" android:screenOrientation="portrait"/>
         <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:name="cn.com.smartdevices.bracelet.gps.ui.GaodeTestActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:label="@string/title_activity_open" android:name="cn.com.smartdevices.bracelet.open.OpenActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:label="@string/title_activity_open" android:name="cn.com.smartdevices.bracelet.config.DebugActivity" android:screenOrientation="portrait"/>
         <service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote"/>
         <meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="dMGlsmpHOollXfGZ8jKfMpjQ"/>
         <meta-data android:name="com.amap.api.v2.apikey" android:value="c0795b73d5df927742aac5b9a41ec327"/>
@@ -190,6 +192,5 @@
                 <action android:name="android.service.notification.NotificationListenerService"/>
             </intent-filter>
         </service>
-        <activity android:configChanges="keyboardHidden|orientation" android:label="@string/title_activity_open" android:name="cn.com.smartdevices.bracelet.open.OpenActivity" android:screenOrientation="portrait"/>
-    </application>
+        </application>
 </manifest>

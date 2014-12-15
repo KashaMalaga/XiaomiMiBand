@@ -1531,9 +1531,9 @@
 
     invoke-virtual {p1}, Ljava/io/File;->length()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    long-to-int v3, v3
+    long-to-int v3, v4
 
     add-int/2addr v2, v3
 

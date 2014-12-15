@@ -5,9 +5,9 @@
 # instance fields
 .field final synthetic b:Lcn/com/smartdevices/bracelet/chart/y;
 
-.field private v:F
+.field private w:F
 
-.field private w:I
+.field private x:I
 
 
 # direct methods
@@ -22,7 +22,7 @@
 
     const/16 v0, 0xa
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/E;->w:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/E;->x:I
 
     return-void
 .end method
@@ -38,7 +38,7 @@
 .method static synthetic a(Lcn/com/smartdevices/bracelet/chart/E;)F
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/E;->v:F
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/E;->w:F
 
     return v0
 .end method
@@ -46,7 +46,7 @@
 .method static synthetic b(Lcn/com/smartdevices/bracelet/chart/E;)I
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/E;->w:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/E;->x:I
 
     return v0
 .end method
@@ -74,13 +74,13 @@
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/chart/E;->d:I
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/chart/E;->w:I
+    iget v2, p0, Lcn/com/smartdevices/bracelet/chart/E;->x:I
 
     invoke-static {v1, v0, v2}, Lcn/com/smartdevices/bracelet/chart/c/t;->a(IFI)F
 
     move-result v0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/E;->v:F
+    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/E;->w:F
 
     :cond_0
     return-void
@@ -115,9 +115,9 @@
 
     iget v1, p2, Lcn/com/smartdevices/bracelet/chart/base/c;->b:I
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/chart/E;->v:F
+    iget v2, p0, Lcn/com/smartdevices/bracelet/chart/E;->w:F
 
-    iget v3, p0, Lcn/com/smartdevices/bracelet/chart/E;->w:I
+    iget v3, p0, Lcn/com/smartdevices/bracelet/chart/E;->x:I
 
     invoke-static {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/chart/c/t;->a(IIFI)F
 

@@ -1226,7 +1226,7 @@
 .end method
 
 .method public a(Ljava/lang/String;Ljava/lang/String;Lorg/apache/thrift/b;Lcom/xiaomi/g/a/a;)Lcom/xiaomi/g/a/n;
-    .locals 5
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T::",
@@ -1253,9 +1253,9 @@
 
     invoke-direct {v2}, Lcom/xiaomi/g/a/f;-><init>()V
 
-    const-wide/16 v3, 0x5
+    const-wide/16 v4, 0x5
 
-    iput-wide v3, v2, Lcom/xiaomi/g/a/f;->a:J
+    iput-wide v4, v2, Lcom/xiaomi/g/a/f;->a:J
 
     const-string v3, "fakeid"
 
@@ -1396,7 +1396,7 @@
 .end method
 
 .method public a(Lcom/xiaomi/push/service/e;J)V
-    .locals 1
+    .locals 2
 
     iget-object v0, p0, Lcom/xiaomi/push/service/XMPushService;->l:Lcom/xiaomi/push/service/B;
 
@@ -1779,7 +1779,7 @@
 .end method
 
 .method public b(Lcom/xiaomi/push/service/U;)V
-    .locals 5
+    .locals 6
 
     if-eqz p1, :cond_0
 
@@ -1797,11 +1797,11 @@
 
     move-result-object v2
 
-    const-wide/16 v3, 0x3e8
+    const-wide/16 v4, 0x3e8
 
-    div-long v3, v0, v3
+    div-long v4, v0, v4
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -1954,7 +1954,7 @@
 .end method
 
 .method public i()V
-    .locals 3
+    .locals 4
 
     new-instance v0, Lcom/xiaomi/push/service/q;
 
@@ -1962,9 +1962,9 @@
 
     invoke-direct {v0, p0, v1}, Lcom/xiaomi/push/service/q;-><init>(Lcom/xiaomi/push/service/XMPushService;I)V
 
-    const-wide/32 v1, 0x1d4c0
+    const-wide/32 v2, 0x1d4c0
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/xiaomi/push/service/XMPushService;->a(Lcom/xiaomi/push/service/e;J)V
+    invoke-virtual {p0, v0, v2, v3}, Lcom/xiaomi/push/service/XMPushService;->a(Lcom/xiaomi/push/service/e;J)V
 
     return-void
 .end method

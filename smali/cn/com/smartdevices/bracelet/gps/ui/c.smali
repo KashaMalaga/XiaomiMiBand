@@ -1,58 +1,47 @@
-.class public Lcn/com/smartdevices/bracelet/gps/ui/C;
+.class Lcn/com/smartdevices/bracelet/gps/ui/C;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
-# static fields
-.field private static final a:I = 0x3e8
 
-.field private static final b:I = 0xe10
+# instance fields
+.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/A;
 
 
 # direct methods
-.method private constructor <init>()V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/A;)V
     .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/C;->a:Lcn/com/smartdevices/bracelet/gps/ui/A;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static a(F)F
-    .locals 2
 
-    const/high16 v0, 0x447a0000
+# virtual methods
+.method public onClick(Landroid/view/View;)V
+    .locals 3
 
-    mul-float/2addr v0, p0
+    invoke-static {}, Lcn/com/smartdevices/bracelet/gps/d/c;->a()Landroid/content/Intent;
 
-    const/high16 v1, 0x45610000
+    move-result-object v0
 
-    div-float/2addr v0, v1
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/C;->a:Lcn/com/smartdevices/bracelet/gps/ui/A;
 
-    return v0
-.end method
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/ui/A;->getActivity()Landroid/app/Activity;
 
-.method public static b(F)F
-    .locals 2
+    move-result-object v1
 
-    const/high16 v0, 0x45610000
+    const/4 v2, 0x0
 
-    mul-float/2addr v0, p0
+    invoke-virtual {v1, v0, v2}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    const/high16 v1, 0x447a0000
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/C;->a:Lcn/com/smartdevices/bracelet/gps/ui/A;
 
-    div-float/2addr v0, v1
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/ui/A;->dismiss()V
 
-    return v0
-.end method
-
-.method public static c(F)J
-    .locals 2
-
-    const/high16 v0, 0x447a0000
-
-    mul-float/2addr v0, p0
-
-    float-to-long v0, v0
-
-    return-wide v0
+    return-void
 .end method

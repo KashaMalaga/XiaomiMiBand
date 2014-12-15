@@ -30,9 +30,9 @@
 .method public constructor <init>(Ljava/lang/String;)V
     .locals 4
 
-    const/4 v3, 0x0
+    const/4 v1, 0x0
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,15 +40,15 @@
 
     iput-object v0, p0, Lcom/tencent/stat/StatAppMonitor;->interfaceName:Ljava/lang/String;
 
-    iput-wide v1, p0, Lcom/tencent/stat/StatAppMonitor;->reqSize:J
+    iput-wide v2, p0, Lcom/tencent/stat/StatAppMonitor;->reqSize:J
 
-    iput-wide v1, p0, Lcom/tencent/stat/StatAppMonitor;->respSize:J
+    iput-wide v2, p0, Lcom/tencent/stat/StatAppMonitor;->respSize:J
 
-    iput v3, p0, Lcom/tencent/stat/StatAppMonitor;->resultType:I
+    iput v1, p0, Lcom/tencent/stat/StatAppMonitor;->resultType:I
 
-    iput-wide v1, p0, Lcom/tencent/stat/StatAppMonitor;->millisecondsConsume:J
+    iput-wide v2, p0, Lcom/tencent/stat/StatAppMonitor;->millisecondsConsume:J
 
-    iput v3, p0, Lcom/tencent/stat/StatAppMonitor;->returnCode:I
+    iput v1, p0, Lcom/tencent/stat/StatAppMonitor;->returnCode:I
 
     const/4 v0, 0x1
 
@@ -62,9 +62,9 @@
 .method public constructor <init>(Ljava/lang/String;IIJJJI)V
     .locals 4
 
-    const/4 v3, 0x0
+    const/4 v1, 0x0
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -72,15 +72,15 @@
 
     iput-object v0, p0, Lcom/tencent/stat/StatAppMonitor;->interfaceName:Ljava/lang/String;
 
-    iput-wide v1, p0, Lcom/tencent/stat/StatAppMonitor;->reqSize:J
+    iput-wide v2, p0, Lcom/tencent/stat/StatAppMonitor;->reqSize:J
 
-    iput-wide v1, p0, Lcom/tencent/stat/StatAppMonitor;->respSize:J
+    iput-wide v2, p0, Lcom/tencent/stat/StatAppMonitor;->respSize:J
 
-    iput v3, p0, Lcom/tencent/stat/StatAppMonitor;->resultType:I
+    iput v1, p0, Lcom/tencent/stat/StatAppMonitor;->resultType:I
 
-    iput-wide v1, p0, Lcom/tencent/stat/StatAppMonitor;->millisecondsConsume:J
+    iput-wide v2, p0, Lcom/tencent/stat/StatAppMonitor;->millisecondsConsume:J
 
-    iput v3, p0, Lcom/tencent/stat/StatAppMonitor;->returnCode:I
+    iput v1, p0, Lcom/tencent/stat/StatAppMonitor;->returnCode:I
 
     const/4 v0, 0x1
 
@@ -170,7 +170,7 @@
 .end method
 
 .method public setMillisecondsConsume(J)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcom/tencent/stat/StatAppMonitor;->millisecondsConsume:J
 
@@ -178,7 +178,7 @@
 .end method
 
 .method public setReqSize(J)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcom/tencent/stat/StatAppMonitor;->reqSize:J
 
@@ -186,7 +186,7 @@
 .end method
 
 .method public setRespSize(J)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcom/tencent/stat/StatAppMonitor;->respSize:J
 

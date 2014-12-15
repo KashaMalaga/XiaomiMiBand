@@ -208,6 +208,28 @@
     goto :goto_0
 .end method
 
+.method public static a()V
+    .locals 1
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/j;->co:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    :goto_0
+    return-void
+
+    :cond_0
+    sget-object v0, Lcn/com/smartdevices/bracelet/j;->co:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->mkdir()Z
+
+    goto :goto_0
+.end method
+
 .method public static a(Landroid/app/Activity;Z)V
     .locals 3
 
@@ -246,7 +268,7 @@
 
     const-string v0, "http://s1.mi.com/m/product/shouhuan/index.html"
 
-    const v1, 0x7f0c0297
+    const v1, 0x7f0c02aa
 
     invoke-static {v0, v1, p0}, Lcn/com/smartdevices/bracelet/y;->a(Ljava/lang/String;ILandroid/app/Activity;)V
 
@@ -255,7 +277,7 @@
     :cond_2
     const-string v0, "http://s1.mi.com/m/product/shouhuan/index.html"
 
-    const v1, 0x7f0c0296
+    const v1, 0x7f0c02a9
 
     invoke-static {v0, v1, p0}, Lcn/com/smartdevices/bracelet/y;->a(Ljava/lang/String;ILandroid/app/Activity;)V
 

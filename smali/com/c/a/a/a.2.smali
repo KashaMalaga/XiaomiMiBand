@@ -98,21 +98,21 @@
 .end method
 
 .method public constructor <init>(Lorg/apache/http/conn/scheme/SchemeRegistry;)V
-    .locals 5
+    .locals 6
 
-    const/16 v4, 0xa
+    const/16 v5, 0xa
 
-    const/4 v3, 0x1
+    const/4 v4, 0x1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v4, p0, Lcom/c/a/a/a;->i:I
+    iput v5, p0, Lcom/c/a/a/a;->i:I
 
     const/16 v0, 0x2710
 
     iput v0, p0, Lcom/c/a/a/a;->j:I
 
-    iput-boolean v3, p0, Lcom/c/a/a/a;->p:Z
+    iput-boolean v4, p0, Lcom/c/a/a/a;->p:Z
 
     new-instance v0, Lorg/apache/http/params/BasicHttpParams;
 
@@ -120,9 +120,9 @@
 
     iget v1, p0, Lcom/c/a/a/a;->j:I
 
-    int-to-long v1, v1
+    int-to-long v2, v1
 
-    invoke-static {v0, v1, v2}, Lorg/apache/http/conn/params/ConnManagerParams;->setTimeout(Lorg/apache/http/params/HttpParams;J)V
+    invoke-static {v0, v2, v3}, Lorg/apache/http/conn/params/ConnManagerParams;->setTimeout(Lorg/apache/http/params/HttpParams;J)V
 
     new-instance v1, Lorg/apache/http/conn/params/ConnPerRouteBean;
 
@@ -132,7 +132,7 @@
 
     invoke-static {v0, v1}, Lorg/apache/http/conn/params/ConnManagerParams;->setMaxConnectionsPerRoute(Lorg/apache/http/params/HttpParams;Lorg/apache/http/conn/params/ConnPerRoute;)V
 
-    invoke-static {v0, v4}, Lorg/apache/http/conn/params/ConnManagerParams;->setMaxTotalConnections(Lorg/apache/http/params/HttpParams;I)V
+    invoke-static {v0, v5}, Lorg/apache/http/conn/params/ConnManagerParams;->setMaxTotalConnections(Lorg/apache/http/params/HttpParams;I)V
 
     iget v1, p0, Lcom/c/a/a/a;->j:I
 
@@ -142,7 +142,7 @@
 
     invoke-static {v0, v1}, Lorg/apache/http/params/HttpConnectionParams;->setConnectionTimeout(Lorg/apache/http/params/HttpParams;I)V
 
-    invoke-static {v0, v3}, Lorg/apache/http/params/HttpConnectionParams;->setTcpNoDelay(Lorg/apache/http/params/HttpParams;Z)V
+    invoke-static {v0, v4}, Lorg/apache/http/params/HttpConnectionParams;->setTcpNoDelay(Lorg/apache/http/params/HttpParams;Z)V
 
     const/16 v1, 0x2000
 
@@ -1509,7 +1509,7 @@
 .end method
 
 .method public b(I)V
-    .locals 3
+    .locals 4
 
     const/16 v0, 0x3e8
 
@@ -1528,9 +1528,9 @@
 
     iget v1, p0, Lcom/c/a/a/a;->j:I
 
-    int-to-long v1, v1
+    int-to-long v2, v1
 
-    invoke-static {v0, v1, v2}, Lorg/apache/http/conn/params/ConnManagerParams;->setTimeout(Lorg/apache/http/params/HttpParams;J)V
+    invoke-static {v0, v2, v3}, Lorg/apache/http/conn/params/ConnManagerParams;->setTimeout(Lorg/apache/http/params/HttpParams;J)V
 
     iget v1, p0, Lcom/c/a/a/a;->j:I
 

@@ -12,7 +12,7 @@
 .end method
 
 .method protected static a(Landroid/location/Location;Lcom/a/m;IBJ)Lcom/a/e;
-    .locals 1
+    .locals 2
 
     invoke-static/range {p0 .. p5}, Lcom/a/j;->a(Landroid/location/Location;Lcom/a/m;IBJ)Lcom/a/e;
 

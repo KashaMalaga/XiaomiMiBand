@@ -90,13 +90,13 @@
 
     div-float/2addr v1, v2
 
-    float-to-double v1, v1
+    float-to-double v2, v1
 
-    invoke-static {v1, v2}, Ljava/lang/Math;->ceil(D)D
+    invoke-static {v2, v3}, Ljava/lang/Math;->ceil(D)D
 
-    move-result-wide v1
+    move-result-wide v2
 
-    double-to-int v1, v1
+    double-to-int v1, v2
 
     invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
 

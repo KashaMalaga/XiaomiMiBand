@@ -396,7 +396,7 @@
 .end method
 
 .method static synthetic a(Lcom/xiaomi/c/a/L;J)J
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcom/xiaomi/c/a/L;->z:J
 
@@ -773,7 +773,7 @@
 .end method
 
 .method private a(Lcom/xiaomi/c/a/u;Lcom/xiaomi/c/a/u;)V
-    .locals 5
+    .locals 6
 
     invoke-direct {p0}, Lcom/xiaomi/c/a/L;->k()V
 
@@ -850,9 +850,9 @@
 
     invoke-static {v0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
@@ -1312,9 +1312,9 @@
 
     move-result-object v0
 
-    iget-wide v1, p0, Lcom/xiaomi/c/a/L;->l:J
+    iget-wide v2, p0, Lcom/xiaomi/c/a/L;->l:J
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -1756,13 +1756,13 @@
 
     invoke-direct {p0, v4}, Lcom/xiaomi/c/a/L;->c(Lcom/xiaomi/c/a/u;)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    cmp-long v3, v1, v8
+    cmp-long v1, v2, v8
 
-    if-lez v3, :cond_10
+    if-lez v1, :cond_10
 
-    invoke-direct {p0, v1, v2}, Lcom/xiaomi/c/a/L;->a(J)V
+    invoke-direct {p0, v2, v3}, Lcom/xiaomi/c/a/L;->a(J)V
 
     :cond_10
     iget-object v1, p0, Lcom/xiaomi/c/a/L;->j:Ljava/util/concurrent/locks/Condition;
@@ -1879,13 +1879,13 @@
 
     invoke-direct {p0, v4}, Lcom/xiaomi/c/a/L;->c(Lcom/xiaomi/c/a/u;)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    cmp-long v3, v1, v8
+    cmp-long v1, v2, v8
 
-    if-lez v3, :cond_12
+    if-lez v1, :cond_12
 
-    invoke-direct {p0, v1, v2}, Lcom/xiaomi/c/a/L;->a(J)V
+    invoke-direct {p0, v2, v3}, Lcom/xiaomi/c/a/L;->a(J)V
 
     :cond_12
     iget-object v1, p0, Lcom/xiaomi/c/a/L;->j:Ljava/util/concurrent/locks/Condition;
@@ -2126,7 +2126,7 @@
 .end method
 
 .method private c()V
-    .locals 7
+    .locals 8
 
     invoke-direct {p0}, Lcom/xiaomi/c/a/L;->l()V
 
@@ -2141,23 +2141,23 @@
 
     invoke-interface {v0, v1}, Lcom/xiaomi/c/a/p;->a(Lcom/xiaomi/c/a/O;)V
 
-    new-instance v0, Ljava/util/concurrent/ThreadPoolExecutor;
-
-    const/4 v1, 0x2
+    new-instance v1, Ljava/util/concurrent/ThreadPoolExecutor;
 
     const/4 v2, 0x2
 
-    const-wide/16 v3, 0x3c
+    const/4 v3, 0x2
 
-    sget-object v5, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    const-wide/16 v4, 0x3c
 
-    new-instance v6, Ljava/util/concurrent/LinkedBlockingQueue;
+    sget-object v6, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-direct {v6}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
+    new-instance v7, Ljava/util/concurrent/LinkedBlockingQueue;
 
-    invoke-direct/range {v0 .. v6}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;)V
+    invoke-direct {v7}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
 
-    iput-object v0, p0, Lcom/xiaomi/c/a/L;->r:Ljava/util/concurrent/ThreadPoolExecutor;
+    invoke-direct/range {v1 .. v7}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;)V
+
+    iput-object v1, p0, Lcom/xiaomi/c/a/L;->r:Ljava/util/concurrent/ThreadPoolExecutor;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -2303,7 +2303,7 @@
 .end method
 
 .method private e(Lcom/xiaomi/c/a/u;)Lcom/xiaomi/c/a/n;
-    .locals 7
+    .locals 8
 
     const/4 v1, 0x0
 
@@ -2323,9 +2323,9 @@
     :cond_0
     invoke-static {v2}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 
@@ -2370,9 +2370,9 @@
 
     invoke-static {v5}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
-    move-result-wide v5
+    move-result-wide v6
 
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v5
 
@@ -2442,7 +2442,7 @@
 .end method
 
 .method private e()V
-    .locals 7
+    .locals 8
 
     invoke-direct {p0}, Lcom/xiaomi/c/a/L;->f()Lcom/xiaomi/c/a/n;
 
@@ -2475,17 +2475,17 @@
 
     invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iget-wide v3, p0, Lcom/xiaomi/c/a/L;->l:J
+    iget-wide v4, p0, Lcom/xiaomi/c/a/L;->l:J
 
-    const-wide/16 v5, 0x0
+    const-wide/16 v6, 0x0
 
-    cmp-long v3, v3, v5
+    cmp-long v1, v4, v6
 
-    if-nez v3, :cond_1
+    if-nez v1, :cond_1
 
-    iput-wide v1, p0, Lcom/xiaomi/c/a/L;->l:J
+    iput-wide v2, p0, Lcom/xiaomi/c/a/L;->l:J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

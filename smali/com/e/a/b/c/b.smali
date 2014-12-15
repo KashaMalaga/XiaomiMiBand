@@ -43,7 +43,7 @@
 .end method
 
 .method public static a(Landroid/view/View;I)V
-    .locals 3
+    .locals 4
 
     if-eqz p0, :cond_0
 
@@ -55,9 +55,9 @@
 
     invoke-direct {v0, v1, v2}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    int-to-long v1, p1
+    int-to-long v2, p1
 
-    invoke-virtual {v0, v1, v2}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
+    invoke-virtual {v0, v2, v3}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
 
     new-instance v1, Landroid/view/animation/DecelerateInterpolator;
 

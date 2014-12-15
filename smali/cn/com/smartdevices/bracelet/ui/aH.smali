@@ -28,7 +28,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f02007c
+    const v1, 0x7f02007d
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
 
@@ -57,7 +57,7 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 3
 
-    const v0, 0x7f030008
+    const v0, 0x7f030009
 
     const/4 v1, 0x0
 

@@ -147,9 +147,9 @@
 
     if-eqz v0, :cond_0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/open/e;
+    check-cast v0, Lcn/com/smartdevices/bracelet/open/f;
 
-    iget-object v2, v0, Lcn/com/smartdevices/bracelet/open/e;->f:Ljava/lang/String;
+    iget-object v2, v0, Lcn/com/smartdevices/bracelet/open/f;->f:Ljava/lang/String;
 
     invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -157,9 +157,9 @@
 
     if-eqz v2, :cond_0
 
-    iput p2, v0, Lcn/com/smartdevices/bracelet/open/e;->j:I
+    iput p2, v0, Lcn/com/smartdevices/bracelet/open/f;->j:I
 
-    iput-object p3, v0, Lcn/com/smartdevices/bracelet/open/e;->e:Ljava/lang/String;
+    iput-object p3, v0, Lcn/com/smartdevices/bracelet/open/f;->e:Ljava/lang/String;
 
     goto :goto_0
 
@@ -168,35 +168,31 @@
 .end method
 
 .method public a(Ljava/util/List;)V
-    .locals 4
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/open/e;",
+            "Lcn/com/smartdevices/bracelet/open/f;",
             ">;)V"
         }
     .end annotation
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->K()Z
+    const/4 v5, 0x1
 
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    :cond_0
-    return-void
-
-    :cond_1
     if-eqz p1, :cond_0
 
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
 
-    if-lez v0, :cond_0
+    if-gtz v0, :cond_1
 
+    :cond_0
+    return-void
+
+    :cond_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/M;->b:Ljava/util/List;
 
     if-nez v0, :cond_2
@@ -222,7 +218,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0c025d
+    const v3, 0x7f0c026a
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -236,42 +232,57 @@
 
     new-instance v0, Lcn/com/smartdevices/bracelet/lab/o;
 
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/lab/o;-><init>(Z)V
+    invoke-direct {v0, v5}, Lcn/com/smartdevices/bracelet/lab/o;-><init>(Z)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/M;->b:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-interface {p1}, Ljava/util/List;->size()I
 
-    move-result-object v1
+    move-result v2
+
+    const/4 v0, 0x0
+
+    move v1, v0
 
     :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    if-ge v1, v2, :cond_0
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/open/e;
+    check-cast v0, Lcn/com/smartdevices/bracelet/open/f;
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/lab/o;
+    new-instance v3, Lcn/com/smartdevices/bracelet/lab/o;
 
-    iget-object v3, v0, Lcn/com/smartdevices/bracelet/open/e;->c:Ljava/lang/String;
+    iget-object v4, v0, Lcn/com/smartdevices/bracelet/open/f;->c:Ljava/lang/String;
 
-    invoke-direct {v2, v3}, Lcn/com/smartdevices/bracelet/lab/o;-><init>(Ljava/lang/String;)V
+    invoke-direct {v3, v4}, Lcn/com/smartdevices/bracelet/lab/o;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v2, v0}, Lcn/com/smartdevices/bracelet/lab/o;->a(Ljava/lang/Object;)V
+    invoke-virtual {v3, v0}, Lcn/com/smartdevices/bracelet/lab/o;->a(Ljava/lang/Object;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/M;->b:Ljava/util/List;
 
-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v0, v2, -0x1
+
+    if-ge v1, v0, :cond_3
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/M;->b:Ljava/util/List;
+
+    new-instance v3, Lcn/com/smartdevices/bracelet/lab/o;
+
+    invoke-direct {v3, v5}, Lcn/com/smartdevices/bracelet/lab/o;-><init>(Z)V
+
+    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_3
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
 
     goto :goto_0
 .end method
@@ -386,7 +397,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/M;->c:Landroid/view/LayoutInflater;
 
-    const v2, 0x7f03000a
+    const v2, 0x7f03000b
 
     invoke-virtual {v1, v2, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -419,13 +430,13 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/M;->c:Landroid/view/LayoutInflater;
 
-    const v2, 0x7f03000c
+    const v2, 0x7f03000d
 
     invoke-virtual {v1, v2, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v2
 
-    const v1, 0x7f07003e
+    const v1, 0x7f0b0042
 
     invoke-virtual {v2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -442,13 +453,13 @@
     :cond_2
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/M;->c:Landroid/view/LayoutInflater;
 
-    const v2, 0x7f03000b
+    const v2, 0x7f03000c
 
     invoke-virtual {v1, v2, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v2
 
-    const v1, 0x7f07003d
+    const v1, 0x7f0b0041
 
     invoke-virtual {v2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -509,7 +520,7 @@
 
     iget-object v0, v1, Lcn/com/smartdevices/bracelet/lab/ui/N;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f0c0216
+    const v1, 0x7f0c0223
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -526,7 +537,7 @@
 
     iget-object v0, v1, Lcn/com/smartdevices/bracelet/lab/ui/N;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f0c0217
+    const v1, 0x7f0c0224
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -543,7 +554,7 @@
 
     iget-object v0, v1, Lcn/com/smartdevices/bracelet/lab/ui/N;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f0c02a0
+    const v1, 0x7f0c02be
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -560,7 +571,7 @@
 
     iget-object v0, v1, Lcn/com/smartdevices/bracelet/lab/ui/N;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f0c0230
+    const v1, 0x7f0c023d
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -577,7 +588,7 @@
 
     iget-object v0, v1, Lcn/com/smartdevices/bracelet/lab/ui/N;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f0c0263
+    const v1, 0x7f0c0270
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -628,7 +639,7 @@
 
     iget-object v0, v1, Lcn/com/smartdevices/bracelet/lab/ui/N;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f0c0266
+    const v1, 0x7f0c0273
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -645,7 +656,7 @@
 
     iget-object v0, v1, Lcn/com/smartdevices/bracelet/lab/ui/N;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f0c02a1
+    const v1, 0x7f0c02bc
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -656,13 +667,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/open/e;
+    check-cast v0, Lcn/com/smartdevices/bracelet/open/f;
 
     if-eqz v0, :cond_0
 
     iget-object v1, v1, Lcn/com/smartdevices/bracelet/lab/ui/N;->b:Landroid/widget/TextView;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/open/e;->c:Ljava/lang/String;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/open/f;->c:Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 

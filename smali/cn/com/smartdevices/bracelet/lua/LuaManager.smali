@@ -94,9 +94,9 @@
 
     invoke-virtual {v0}, Lde/greenrobot/daobracelet/LuaZipFileDao;->count()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     const-string v2, "LuaManager"
 
@@ -396,9 +396,9 @@
 
     invoke-virtual {v0}, Lde/greenrobot/daobracelet/LuaZipFileDao;->count()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     const-string v2, "LuaManager"
 

@@ -391,25 +391,25 @@
 .end method
 
 .method protected a(ILjava/lang/Thread;JLjava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 8
+    .locals 9
 
     invoke-virtual {p0}, Lcom/tencent/a/a/a;->e()Lcom/tencent/a/a/b;
 
-    move-result-object v0
+    move-result-object v1
 
-    move v1, p1
+    move v2, p1
 
-    move-object v2, p2
+    move-object v3, p2
 
-    move-wide v3, p3
+    move-wide v4, p3
 
-    move-object v5, p5
+    move-object v6, p5
 
-    move-object v6, p6
+    move-object v7, p6
 
-    move-object v7, p7
+    move-object/from16 v8, p7
 
-    invoke-virtual/range {v0 .. v7}, Lcom/tencent/a/a/b;->a(ILjava/lang/Thread;JLjava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-virtual/range {v1 .. v8}, Lcom/tencent/a/a/b;->a(ILjava/lang/Thread;JLjava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 

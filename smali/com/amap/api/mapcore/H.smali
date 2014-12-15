@@ -30,7 +30,7 @@
     :try_start_0
     iget-object v0, p0, Lcom/amap/api/mapcore/h;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->h(Lcom/amap/api/mapcore/b;)Z
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->g(Lcom/amap/api/mapcore/b;)Z
 
     move-result v0
 

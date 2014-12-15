@@ -18,23 +18,23 @@
 .method protected constructor <init>(Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
 
-    const/4 v3, 0x0
+    const/4 v1, 0x0
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean v3, p0, Lcom/a/ap;->a:Z
+    iput-boolean v1, p0, Lcom/a/ap;->a:Z
 
     const-string v0, ""
 
     iput-object v0, p0, Lcom/a/ap;->b:Ljava/lang/String;
 
-    iput-boolean v3, p0, Lcom/a/ap;->c:Z
+    iput-boolean v1, p0, Lcom/a/ap;->c:Z
 
-    iput-wide v1, p0, Lcom/a/ap;->d:D
+    iput-wide v2, p0, Lcom/a/ap;->d:D
 
-    iput-wide v1, p0, Lcom/a/ap;->e:D
+    iput-wide v2, p0, Lcom/a/ap;->e:D
 
     iput-object p4, p0, Lcom/a/ap;->b:Ljava/lang/String;
 

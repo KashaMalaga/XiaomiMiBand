@@ -28,11 +28,11 @@
 
     move-result-object v0
 
-    const-string v1, "V2.3.0"
+    const-string v1, "V2.3.1"
 
     const/4 v2, 0x1
 
-    const-string v3, "V2.3.0"
+    const-string v3, "V2.3.1"
 
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 

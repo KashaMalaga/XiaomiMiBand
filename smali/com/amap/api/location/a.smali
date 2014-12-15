@@ -264,7 +264,7 @@
 .end method
 
 .method a(DDFJLandroid/app/PendingIntent;)V
-    .locals 2
+    .locals 3
 
     new-instance v0, Lcom/a/W;
 
@@ -309,7 +309,7 @@
 .end method
 
 .method a(JFLcom/amap/api/location/AMapLocationListener;Ljava/lang/String;Z)V
-    .locals 7
+    .locals 9
 
     iput-wide p1, p0, Lcom/amap/api/location/a;->o:J
 
@@ -317,23 +317,23 @@
 
     if-eqz p4, :cond_0
 
-    new-instance v0, Lcom/amap/api/location/g;
+    new-instance v1, Lcom/amap/api/location/g;
 
-    move-wide v1, p1
+    move-wide v2, p1
 
-    move v3, p3
+    move v4, p3
 
-    move-object v4, p4
+    move-object v5, p4
 
-    move-object v5, p5
+    move-object v6, p5
 
-    move v6, p6
+    move v7, p6
 
-    invoke-direct/range {v0 .. v6}, Lcom/amap/api/location/g;-><init>(JFLcom/amap/api/location/AMapLocationListener;Ljava/lang/String;Z)V
+    invoke-direct/range {v1 .. v7}, Lcom/amap/api/location/g;-><init>(JFLcom/amap/api/location/AMapLocationListener;Ljava/lang/String;Z)V
 
-    iget-object v1, p0, Lcom/amap/api/location/a;->i:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/amap/api/location/a;->i:Ljava/util/Vector;
 
-    invoke-virtual {v1, v0}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
     :cond_0
     const-string v0, "gps"
@@ -527,11 +527,11 @@
 
     iget-object v0, p0, Lcom/amap/api/location/a;->a:Lcom/amap/api/location/d;
 
-    iget-wide v1, p0, Lcom/amap/api/location/a;->o:J
+    iget-wide v2, p0, Lcom/amap/api/location/a;->o:J
 
-    iget v3, p0, Lcom/amap/api/location/a;->p:F
+    iget v1, p0, Lcom/amap/api/location/a;->p:F
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/amap/api/location/d;->a(JF)V
+    invoke-virtual {v0, v2, v3, v1}, Lcom/amap/api/location/d;->a(JF)V
 
     :cond_0
     :goto_0
@@ -613,7 +613,7 @@
 .end method
 
 .method b(DDFJLandroid/app/PendingIntent;)V
-    .locals 2
+    .locals 3
 
     new-instance v0, Lcom/a/W;
 

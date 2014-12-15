@@ -50,9 +50,9 @@
 .end method
 
 .method public endElement(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 5
+    .locals 6
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
     const-string v0, "retype"
 
@@ -223,9 +223,9 @@
 
     invoke-virtual {v1}, Ljava/lang/Double;->doubleValue()D
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/a/K;->a(D)V
+    invoke-virtual {v0, v2, v3}, Lcom/a/K;->a(D)V
     :try_end_2
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_1
 
@@ -240,7 +240,7 @@
 
     iget-object v0, p0, Lcom/a/ab;->a:Lcom/a/K;
 
-    invoke-virtual {v0, v3, v4}, Lcom/a/K;->a(D)V
+    invoke-virtual {v0, v4, v5}, Lcom/a/K;->a(D)V
 
     goto/16 :goto_0
 
@@ -278,9 +278,9 @@
 
     invoke-virtual {v1}, Ljava/lang/Double;->doubleValue()D
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/a/K;->b(D)V
+    invoke-virtual {v0, v2, v3}, Lcom/a/K;->b(D)V
     :try_end_3
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_2
 
@@ -295,7 +295,7 @@
 
     iget-object v0, p0, Lcom/a/ab;->a:Lcom/a/K;
 
-    invoke-virtual {v0, v3, v4}, Lcom/a/K;->b(D)V
+    invoke-virtual {v0, v4, v5}, Lcom/a/K;->b(D)V
 
     goto/16 :goto_0
 
@@ -547,9 +547,9 @@
 
     invoke-static {}, Lcom/a/am;->a()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/a/K;->a(J)V
+    invoke-virtual {v0, v2, v3}, Lcom/a/K;->a(J)V
 
     goto/16 :goto_0
 

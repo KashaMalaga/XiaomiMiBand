@@ -97,7 +97,7 @@
 
     if-ne v0, v1, :cond_0
 
-    invoke-static {}, Lcom/amap/api/mapcore/util/u;->a()Landroid/content/res/AssetManager;
+    invoke-static {p1}, Lcom/amap/api/mapcore/util/u;->a(Landroid/content/Context;)Landroid/content/res/AssetManager;
 
     move-result-object v0
 
@@ -132,7 +132,7 @@
 
     if-ne v0, v1, :cond_1
 
-    invoke-static {}, Lcom/amap/api/mapcore/util/u;->a()Landroid/content/res/AssetManager;
+    invoke-static {p1}, Lcom/amap/api/mapcore/util/u;->a(Landroid/content/Context;)Landroid/content/res/AssetManager;
 
     move-result-object v0
 
@@ -169,7 +169,7 @@
 
     iput v0, p0, Lcom/amap/api/mapcore/bd;->i:I
     :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
     :goto_2
     iget-object v0, p0, Lcom/amap/api/mapcore/bd;->g:Landroid/graphics/Paint;
@@ -194,7 +194,7 @@
 
     :cond_0
     :try_start_1
-    invoke-static {}, Lcom/amap/api/mapcore/util/u;->a()Landroid/content/res/AssetManager;
+    invoke-static {p1}, Lcom/amap/api/mapcore/util/u;->a(Landroid/content/Context;)Landroid/content/res/AssetManager;
 
     move-result-object v0
 
@@ -207,7 +207,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {}, Lcom/amap/api/mapcore/util/u;->a()Landroid/content/res/AssetManager;
+    invoke-static {p1}, Lcom/amap/api/mapcore/util/u;->a(Landroid/content/Context;)Landroid/content/res/AssetManager;
 
     move-result-object v0
 
@@ -215,7 +215,7 @@
 
     invoke-virtual {v0, v1}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
     :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
 
     move-result-object v0
 
@@ -224,7 +224,7 @@
     :catch_0
     move-exception v0
 
-    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_2
 .end method
@@ -383,13 +383,22 @@
 .method public onDraw(Landroid/graphics/Canvas;)V
     .locals 5
 
+    :try_start_0
+    iget-object v0, p0, Lcom/amap/api/mapcore/bd;->d:Landroid/graphics/Bitmap;
+
+    if-nez v0, :cond_0
+
+    :goto_0
+    return-void
+
+    :cond_0
     iget-object v0, p0, Lcom/amap/api/mapcore/bd;->g:Landroid/graphics/Paint;
 
-    const-string v1, "V2.3.0"
+    const-string v1, "V2.3.1"
 
     const/4 v2, 0x0
 
-    const-string v3, "V2.3.0"
+    const-string v3, "V2.3.1"
 
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
@@ -419,7 +428,7 @@
 
     const/4 v2, 0x1
 
-    if-ne v1, v2, :cond_0
+    if-ne v1, v2, :cond_1
 
     iget-object v1, p0, Lcom/amap/api/mapcore/bd;->j:Lcom/amap/api/mapcore/b;
 
@@ -433,12 +442,12 @@
 
     iput v0, p0, Lcom/amap/api/mapcore/bd;->b:I
 
-    :goto_0
+    :goto_1
     sget-object v0, Lcom/amap/api/mapcore/p;->c:Lcom/amap/api/mapcore/p$a;
 
     sget-object v1, Lcom/amap/api/mapcore/p$a;->b:Lcom/amap/api/mapcore/p$a;
 
-    if-ne v0, v1, :cond_2
+    if-ne v0, v1, :cond_3
 
     invoke-virtual {p0}, Lcom/amap/api/mapcore/bd;->b()Landroid/graphics/Bitmap;
 
@@ -466,7 +475,7 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    const-string v0, "V2.3.0"
+    const-string v0, "V2.3.1"
 
     iget-object v1, p0, Lcom/amap/api/mapcore/bd;->d:Landroid/graphics/Bitmap;
 
@@ -493,16 +502,25 @@
     iget-object v3, p0, Lcom/amap/api/mapcore/bd;->g:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    :goto_1
-    return-void
+    goto :goto_0
 
-    :cond_0
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
+
+    goto :goto_0
+
+    :cond_1
+    :try_start_1
     iget v1, p0, Lcom/amap/api/mapcore/bd;->k:I
 
     const/4 v2, 0x2
 
-    if-ne v1, v2, :cond_1
+    if-ne v1, v2, :cond_2
 
     iget-object v1, p0, Lcom/amap/api/mapcore/bd;->j:Lcom/amap/api/mapcore/b;
 
@@ -516,16 +534,16 @@
 
     iput v0, p0, Lcom/amap/api/mapcore/bd;->b:I
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_1
+    :cond_2
     const/16 v0, 0xa
 
     iput v0, p0, Lcom/amap/api/mapcore/bd;->b:I
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_2
+    :cond_3
     invoke-virtual {p0}, Lcom/amap/api/mapcore/bd;->b()Landroid/graphics/Bitmap;
 
     move-result-object v0
@@ -550,7 +568,7 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    const-string v0, "V2.3.0"
+    const-string v0, "V2.3.1"
 
     iget-object v1, p0, Lcom/amap/api/mapcore/bd;->d:Landroid/graphics/Bitmap;
 
@@ -577,6 +595,8 @@
     iget-object v3, p0, Lcom/amap/api/mapcore/bd;->g:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
+    :try_end_1
+    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
 
-    goto :goto_1
+    goto/16 :goto_0
 .end method

@@ -48,9 +48,9 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 4
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
     new-instance v0, Ljava/util/WeakHashMap;
 
@@ -58,9 +58,9 @@
 
     sput-object v0, Lcom/tencent/stat/StatService;->timedEventMap:Ljava/util/Map;
 
-    sput-wide v1, Lcom/tencent/stat/StatService;->lastActivityTimestamp:J
+    sput-wide v2, Lcom/tencent/stat/StatService;->lastActivityTimestamp:J
 
-    sput-wide v1, Lcom/tencent/stat/StatService;->nextDayStartTimestamp:J
+    sput-wide v2, Lcom/tencent/stat/StatService;->nextDayStartTimestamp:J
 
     const/4 v0, 0x0
 
@@ -272,7 +272,7 @@
 .end method
 
 .method static getSessionID(Landroid/content/Context;Z)I
-    .locals 9
+    .locals 10
 
     const/4 v2, 0x0
 
@@ -280,55 +280,55 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
     if-eqz p1, :cond_7
 
-    sget-wide v5, Lcom/tencent/stat/StatService;->lastActivityTimestamp:J
+    sget-wide v6, Lcom/tencent/stat/StatService;->lastActivityTimestamp:J
 
-    sub-long v5, v3, v5
+    sub-long v6, v4, v6
 
     invoke-static {}, Lcom/tencent/stat/StatConfig;->getSessionTimoutMillis()I
 
     move-result v0
 
-    int-to-long v7, v0
+    int-to-long v8, v0
 
-    cmp-long v0, v5, v7
+    cmp-long v0, v6, v8
 
     if-ltz v0, :cond_7
 
     move v0, v1
 
     :goto_0
-    sput-wide v3, Lcom/tencent/stat/StatService;->lastActivityTimestamp:J
+    sput-wide v4, Lcom/tencent/stat/StatService;->lastActivityTimestamp:J
 
-    sget-wide v5, Lcom/tencent/stat/StatService;->nextDayStartTimestamp:J
+    sget-wide v6, Lcom/tencent/stat/StatService;->nextDayStartTimestamp:J
 
-    const-wide/16 v7, 0x0
+    const-wide/16 v8, 0x0
 
-    cmp-long v5, v5, v7
+    cmp-long v3, v6, v8
 
-    if-nez v5, :cond_0
+    if-nez v3, :cond_0
 
     invoke-static {}, Lcom/tencent/stat/common/StatCommonHelper;->getTomorrowStartMilliseconds()J
 
-    move-result-wide v5
+    move-result-wide v6
 
-    sput-wide v5, Lcom/tencent/stat/StatService;->nextDayStartTimestamp:J
+    sput-wide v6, Lcom/tencent/stat/StatService;->nextDayStartTimestamp:J
 
     :cond_0
-    sget-wide v5, Lcom/tencent/stat/StatService;->nextDayStartTimestamp:J
+    sget-wide v6, Lcom/tencent/stat/StatService;->nextDayStartTimestamp:J
 
-    cmp-long v3, v3, v5
+    cmp-long v3, v4, v6
 
     if-ltz v3, :cond_2
 
     invoke-static {}, Lcom/tencent/stat/common/StatCommonHelper;->getTomorrowStartMilliseconds()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    sput-wide v3, Lcom/tencent/stat/StatService;->nextDayStartTimestamp:J
+    sput-wide v4, Lcom/tencent/stat/StatService;->nextDayStartTimestamp:J
 
     invoke-static {p0}, Lcom/tencent/stat/StatStore;->getInstance(Landroid/content/Context;)Lcom/tencent/stat/StatStore;
 
@@ -569,7 +569,7 @@
 .end method
 
 .method static isServiceStatActive(Landroid/content/Context;)Z
-    .locals 5
+    .locals 6
 
     const/4 v0, 0x0
 
@@ -579,15 +579,15 @@
 
     invoke-static {p0, v1, v2, v3}, Lcom/tencent/stat/common/StatPreferences;->getLong(Landroid/content/Context;Ljava/lang/String;J)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    const-string v3, "1.0.0"
+    const-string v1, "1.0.0"
 
-    invoke-static {v3}, Lcom/tencent/stat/common/StatCommonHelper;->getSDKLongVersion(Ljava/lang/String;)J
+    invoke-static {v1}, Lcom/tencent/stat/common/StatCommonHelper;->getSDKLongVersion(Ljava/lang/String;)J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    cmp-long v1, v3, v1
+    cmp-long v1, v4, v2
 
     if-gtz v1, :cond_0
 
@@ -2055,7 +2055,7 @@
 .end method
 
 .method public static varargs trackCustomEndEvent(Landroid/content/Context;Ljava/lang/String;[Ljava/lang/String;)V
-    .locals 7
+    .locals 8
 
     invoke-static {}, Lcom/tencent/stat/StatConfig;->isEnableStatService()Z
 
@@ -2123,17 +2123,17 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v0
 
-    sub-long v0, v3, v0
+    sub-long v0, v4, v0
 
-    const-wide/16 v3, 0x3e8
+    const-wide/16 v4, 0x3e8
 
-    div-long/2addr v0, v3
+    div-long/2addr v0, v4
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -2141,11 +2141,11 @@
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    const-wide/16 v5, 0x0
+    const-wide/16 v6, 0x0
 
-    cmp-long v1, v3, v5
+    cmp-long v1, v4, v6
 
     if-nez v1, :cond_4
 
@@ -2240,7 +2240,7 @@
 .end method
 
 .method public static trackCustomEndKVEvent(Landroid/content/Context;Ljava/lang/String;Ljava/util/Properties;)V
-    .locals 7
+    .locals 8
 
     invoke-static {}, Lcom/tencent/stat/StatConfig;->isEnableStatService()Z
 
@@ -2308,17 +2308,17 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v0
 
-    sub-long v0, v3, v0
+    sub-long v0, v4, v0
 
-    const-wide/16 v3, 0x3e8
+    const-wide/16 v4, 0x3e8
 
-    div-long/2addr v0, v3
+    div-long/2addr v0, v4
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -2326,11 +2326,11 @@
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    const-wide/16 v5, 0x0
+    const-wide/16 v6, 0x0
 
-    cmp-long v1, v3, v5
+    cmp-long v1, v4, v6
 
     if-nez v1, :cond_4
 

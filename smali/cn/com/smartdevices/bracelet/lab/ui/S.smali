@@ -176,13 +176,13 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/S;->c:Landroid/view/LayoutInflater;
 
-    const v2, 0x7f03000f
+    const v2, 0x7f030010
 
     invoke-virtual {v0, v2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p2
 
-    const v0, 0x7f070047
+    const v0, 0x7f0b004b
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -192,7 +192,7 @@
 
     iput-object v0, v1, Lcn/com/smartdevices/bracelet/lab/ui/R;->b:Landroid/widget/ImageView;
 
-    const v0, 0x7f070048
+    const v0, 0x7f0b004c
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

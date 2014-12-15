@@ -27,9 +27,13 @@
 
 .field public static final l:Z = false
 
-.field public static final m:Z = false
+.field public static final m:Z = true
 
-.field public static final n:Z = true
+.field public static final n:Z = false
+
+.field public static final o:Z = true
+
+.field public static final p:Z
 
 
 # direct methods

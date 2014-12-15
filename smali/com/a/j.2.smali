@@ -50,793 +50,839 @@
 .end method
 
 .method protected static a(Landroid/location/Location;Lcom/a/m;IBJ)Lcom/a/e;
-    .locals 15
+    .locals 16
 
-    new-instance v5, Lcom/a/e;
+    new-instance v6, Lcom/a/e;
 
-    invoke-direct {v5}, Lcom/a/e;-><init>()V
+    invoke-direct {v6}, Lcom/a/e;-><init>()V
 
     if-lez p2, :cond_0
 
-    const/4 v1, 0x3
+    const/4 v2, 0x3
 
     move/from16 v0, p2
 
-    if-gt v0, v1, :cond_0
+    if-gt v0, v2, :cond_0
 
     if-nez p1, :cond_1
 
     :cond_0
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
     :goto_0
-    return-object v1
+    return-object v2
 
     :cond_1
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
     move/from16 v0, p2
 
-    if-eq v0, v1, :cond_2
+    if-eq v0, v2, :cond_2
 
-    const/4 v1, 0x3
+    const/4 v2, 0x3
 
     move/from16 v0, p2
 
-    if-ne v0, v1, :cond_6
+    if-ne v0, v2, :cond_6
 
     :cond_2
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    move v4, v1
+    move v5, v2
 
     :goto_1
-    const/4 v1, 0x2
+    const/4 v2, 0x2
 
     move/from16 v0, p2
 
-    if-eq v0, v1, :cond_3
+    if-eq v0, v2, :cond_3
 
-    const/4 v1, 0x3
+    const/4 v2, 0x3
 
     move/from16 v0, p2
 
-    if-ne v0, v1, :cond_7
+    if-ne v0, v2, :cond_7
 
     :cond_3
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    move v2, v1
+    move v3, v2
 
     :goto_2
     invoke-virtual/range {p1 .. p1}, Lcom/a/m;->p()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1}, Ljava/lang/String;->getBytes()[B
+    invoke-virtual {v2}, Ljava/lang/String;->getBytes()[B
 
-    move-result-object v1
+    move-result-object v2
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
-    iget-object v6, v5, Lcom/a/e;->c:[B
+    iget-object v7, v6, Lcom/a/e;->c:[B
 
-    const/4 v7, 0x0
+    const/4 v8, 0x0
 
-    array-length v8, v1
+    array-length v9, v2
 
-    iget-object v9, v5, Lcom/a/e;->c:[B
+    iget-object v10, v6, Lcom/a/e;->c:[B
 
-    array-length v9, v9
+    array-length v10, v10
 
-    invoke-static {v8, v9}, Lcom/a/j;->a(II)I
+    invoke-static {v9, v10}, Lcom/a/j;->a(II)I
 
-    move-result v8
+    move-result v9
 
-    invoke-static {v1, v3, v6, v7, v8}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-static {v2, v4, v7, v8, v9}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     invoke-virtual/range {p1 .. p1}, Lcom/a/m;->f()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1}, Ljava/lang/String;->getBytes()[B
+    invoke-virtual {v2}, Ljava/lang/String;->getBytes()[B
 
-    move-result-object v1
+    move-result-object v2
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
-    iget-object v6, v5, Lcom/a/e;->g:[B
+    iget-object v7, v6, Lcom/a/e;->g:[B
 
-    const/4 v7, 0x0
+    const/4 v8, 0x0
 
-    array-length v8, v1
+    array-length v9, v2
 
-    iget-object v9, v5, Lcom/a/e;->g:[B
+    iget-object v10, v6, Lcom/a/e;->g:[B
 
-    array-length v9, v9
+    array-length v10, v10
 
-    invoke-static {v8, v9}, Lcom/a/j;->a(II)I
+    invoke-static {v9, v10}, Lcom/a/j;->a(II)I
 
-    move-result v8
+    move-result v9
 
-    invoke-static {v1, v3, v6, v7, v8}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-static {v2, v4, v7, v8, v9}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     invoke-virtual/range {p1 .. p1}, Lcom/a/m;->g()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1}, Ljava/lang/String;->getBytes()[B
+    invoke-virtual {v2}, Ljava/lang/String;->getBytes()[B
 
-    move-result-object v1
+    move-result-object v2
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
-    iget-object v6, v5, Lcom/a/e;->a:[B
+    iget-object v7, v6, Lcom/a/e;->a:[B
 
-    const/4 v7, 0x0
+    const/4 v8, 0x0
 
-    array-length v8, v1
+    array-length v9, v2
 
-    iget-object v9, v5, Lcom/a/e;->a:[B
+    iget-object v10, v6, Lcom/a/e;->a:[B
 
-    array-length v9, v9
+    array-length v10, v10
 
-    invoke-static {v8, v9}, Lcom/a/j;->a(II)I
+    invoke-static {v9, v10}, Lcom/a/j;->a(II)I
 
-    move-result v8
+    move-result v9
 
-    invoke-static {v1, v3, v6, v7, v8}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-static {v2, v4, v7, v8, v9}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     invoke-virtual/range {p1 .. p1}, Lcom/a/m;->h()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1}, Ljava/lang/String;->getBytes()[B
+    invoke-virtual {v2}, Ljava/lang/String;->getBytes()[B
 
-    move-result-object v1
+    move-result-object v2
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
-    iget-object v6, v5, Lcom/a/e;->b:[B
+    iget-object v7, v6, Lcom/a/e;->b:[B
 
-    const/4 v7, 0x0
+    const/4 v8, 0x0
 
-    array-length v8, v1
+    array-length v9, v2
 
-    iget-object v9, v5, Lcom/a/e;->b:[B
+    iget-object v10, v6, Lcom/a/e;->b:[B
 
-    array-length v9, v9
+    array-length v10, v10
 
-    invoke-static {v8, v9}, Lcom/a/j;->a(II)I
+    invoke-static {v9, v10}, Lcom/a/j;->a(II)I
 
-    move-result v8
+    move-result v9
 
-    invoke-static {v1, v3, v6, v7, v8}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-static {v2, v4, v7, v8, v9}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     invoke-virtual/range {p1 .. p1}, Lcom/a/m;->q()I
 
-    move-result v1
+    move-result v2
 
-    int-to-short v1, v1
+    int-to-short v2, v2
 
-    iput-short v1, v5, Lcom/a/e;->d:S
+    iput-short v2, v6, Lcom/a/e;->d:S
 
     invoke-virtual/range {p1 .. p1}, Lcom/a/m;->r()I
 
-    move-result v1
+    move-result v2
 
-    int-to-short v1, v1
+    int-to-short v2, v2
 
-    iput-short v1, v5, Lcom/a/e;->e:S
+    iput-short v2, v6, Lcom/a/e;->e:S
 
     invoke-virtual/range {p1 .. p1}, Lcom/a/m;->s()I
 
-    move-result v1
+    move-result v2
 
-    int-to-byte v1, v1
+    int-to-byte v2, v2
 
-    iput-byte v1, v5, Lcom/a/e;->f:B
+    iput-byte v2, v6, Lcom/a/e;->f:B
 
     invoke-virtual/range {p1 .. p1}, Lcom/a/m;->t()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1}, Ljava/lang/String;->getBytes()[B
+    invoke-virtual {v2}, Ljava/lang/String;->getBytes()[B
 
-    move-result-object v1
+    move-result-object v2
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
-    iget-object v6, v5, Lcom/a/e;->h:[B
+    iget-object v7, v6, Lcom/a/e;->h:[B
 
-    const/4 v7, 0x0
+    const/4 v8, 0x0
 
-    array-length v8, v1
+    array-length v9, v2
 
-    iget-object v9, v5, Lcom/a/e;->h:[B
+    iget-object v10, v6, Lcom/a/e;->h:[B
 
-    array-length v9, v9
+    array-length v10, v10
 
-    invoke-static {v8, v9}, Lcom/a/j;->a(II)I
+    invoke-static {v9, v10}, Lcom/a/j;->a(II)I
 
-    move-result v8
+    move-result v9
 
-    invoke-static {v1, v3, v6, v7, v8}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-static {v2, v4, v7, v8, v9}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    const-wide/16 v6, 0x3e8
+    const-wide/16 v8, 0x3e8
 
-    div-long v6, p4, v6
+    div-long v8, p4, v8
 
     if-eqz p0, :cond_8
 
     invoke-virtual/range {p1 .. p1}, Lcom/a/m;->e()Z
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_8
+    if-eqz v2, :cond_8
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
     :goto_3
-    if-eqz v1, :cond_a
-
-    new-instance v3, Lcom/a/aq;
-
-    invoke-direct {v3}, Lcom/a/aq;-><init>()V
-
-    long-to-int v1, v6
-
-    iput v1, v3, Lcom/a/aq;->b:I
-
-    new-instance v1, Lcom/a/as;
-
-    invoke-direct {v1}, Lcom/a/as;-><init>()V
-
-    invoke-virtual {p0}, Landroid/location/Location;->getLongitude()D
-
-    move-result-wide v8
-
-    const-wide v10, 0x412e848000000000L
-
-    mul-double/2addr v8, v10
-
-    double-to-int v8, v8
-
-    iput v8, v1, Lcom/a/as;->a:I
-
-    invoke-virtual {p0}, Landroid/location/Location;->getLatitude()D
-
-    move-result-wide v8
-
-    const-wide v10, 0x412e848000000000L
-
-    mul-double/2addr v8, v10
-
-    double-to-int v8, v8
-
-    iput v8, v1, Lcom/a/as;->b:I
-
-    invoke-virtual {p0}, Landroid/location/Location;->getAltitude()D
-
-    move-result-wide v8
-
-    double-to-int v8, v8
-
-    iput v8, v1, Lcom/a/as;->c:I
-
-    invoke-virtual {p0}, Landroid/location/Location;->getAccuracy()F
-
-    move-result v8
-
-    float-to-int v8, v8
-
-    iput v8, v1, Lcom/a/as;->d:I
-
-    invoke-virtual {p0}, Landroid/location/Location;->getSpeed()F
-
-    move-result v8
-
-    float-to-int v8, v8
-
-    iput v8, v1, Lcom/a/as;->e:I
-
-    invoke-virtual {p0}, Landroid/location/Location;->getBearing()F
-
-    move-result v8
-
-    float-to-int v8, v8
-
-    int-to-short v8, v8
-
-    iput-short v8, v1, Lcom/a/as;->f:S
-
-    invoke-virtual/range {p1 .. p1}, Lcom/a/m;->x()Landroid/content/Context;
-
-    move-result-object v8
-
-    invoke-static {v8}, Lcom/a/m;->b(Landroid/content/Context;)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_4
-
-    sget-boolean v8, Lcom/a/ar;->b:Z
-
-    if-nez v8, :cond_9
-
-    :cond_4
-    const/4 v8, 0x0
-
-    iput-byte v8, v1, Lcom/a/as;->g:B
-
-    :goto_4
-    move/from16 v0, p3
-
-    iput-byte v0, v1, Lcom/a/as;->h:B
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v8
-
-    iput-wide v8, v1, Lcom/a/as;->i:J
-
-    invoke-virtual/range {p1 .. p1}, Lcom/a/m;->o()J
-
-    move-result-wide v8
-
-    iput-wide v8, v1, Lcom/a/as;->j:J
-
-    iput-object v1, v3, Lcom/a/aq;->c:Lcom/a/as;
-
-    const/4 v1, 0x1
-
-    iget-object v8, v5, Lcom/a/e;->j:Ljava/util/ArrayList;
-
-    invoke-virtual {v8, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    invoke-virtual/range {p1 .. p1}, Lcom/a/m;->c()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_c
-
-    invoke-virtual/range {p1 .. p1}, Lcom/a/m;->i()Z
-
-    move-result v3
-
-    if-nez v3, :cond_c
-
-    if-eqz v4, :cond_c
-
-    new-instance v8, Lcom/a/aq;
-
-    invoke-direct {v8}, Lcom/a/aq;-><init>()V
-
-    long-to-int v1, v6
-
-    iput v1, v8, Lcom/a/aq;->b:I
-
-    new-instance v9, Lcom/a/ao;
-
-    invoke-direct {v9}, Lcom/a/ao;-><init>()V
-
-    invoke-virtual {p0}, Landroid/location/Location;->getSpeed()F
-
-    move-result v1
-
-    move-object/from16 v0, p1
-
-    invoke-virtual {v0, v1}, Lcom/a/m;->a(F)Ljava/util/List;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_5
-
-    invoke-interface {v3}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    const/4 v10, 0x3
-
-    if-lt v1, v10, :cond_5
-
-    const/4 v1, 0x0
-
-    invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Integer;
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    int-to-short v1, v1
-
-    iput-short v1, v9, Lcom/a/ao;->a:S
-
-    const/4 v1, 0x1
-
-    invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Integer;
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    iput v1, v9, Lcom/a/ao;->b:I
-
-    :cond_5
-    invoke-virtual/range {p1 .. p1}, Lcom/a/m;->l()B
-
-    move-result v1
-
-    iput-byte v1, v9, Lcom/a/ao;->c:B
-
-    invoke-virtual/range {p1 .. p1}, Lcom/a/m;->m()Ljava/util/List;
-
-    move-result-object v10
-
-    invoke-interface {v10}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    int-to-byte v1, v1
-
-    iput-byte v1, v9, Lcom/a/ao;->d:B
-
-    const/4 v1, 0x0
-
-    move v3, v1
-
-    :goto_5
-    invoke-interface {v10}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    if-ge v3, v1, :cond_b
-
-    new-instance v11, Lcom/a/l;
-
-    invoke-direct {v11}, Lcom/a/l;-><init>()V
-
-    invoke-interface {v10, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/telephony/NeighboringCellInfo;
-
-    invoke-virtual {v1}, Landroid/telephony/NeighboringCellInfo;->getLac()I
-
-    move-result v1
-
-    int-to-short v1, v1
-
-    iput-short v1, v11, Lcom/a/l;->a:S
-
-    invoke-interface {v10, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/telephony/NeighboringCellInfo;
-
-    invoke-virtual {v1}, Landroid/telephony/NeighboringCellInfo;->getCid()I
-
-    move-result v1
-
-    iput v1, v11, Lcom/a/l;->b:I
-
-    invoke-interface {v10, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/telephony/NeighboringCellInfo;
-
-    invoke-virtual {v1}, Landroid/telephony/NeighboringCellInfo;->getRssi()I
-
-    move-result v1
-
-    int-to-byte v1, v1
-
-    iput-byte v1, v11, Lcom/a/l;->c:B
-
-    iget-object v1, v9, Lcom/a/ao;->e:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v1, v3, 0x1
-
-    move v3, v1
-
-    goto :goto_5
-
-    :cond_6
-    const/4 v1, 0x0
-
-    move v4, v1
-
-    goto/16 :goto_1
-
-    :cond_7
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    goto/16 :goto_2
-
-    :cond_8
-    const/4 v1, 0x0
-
-    goto/16 :goto_3
-
-    :cond_9
-    const/4 v8, 0x1
-
-    iput-byte v8, v1, Lcom/a/as;->g:B
-
-    goto/16 :goto_4
-
-    :cond_a
-    const/4 v1, 0x0
-
-    goto/16 :goto_0
-
-    :cond_b
-    iput-object v9, v8, Lcom/a/aq;->d:Lcom/a/ao;
-
-    const/4 v1, 0x2
-
-    iget-object v3, v5, Lcom/a/e;->j:Ljava/util/ArrayList;
-
-    invoke-virtual {v3, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_c
-    move v3, v1
-
-    invoke-virtual/range {p1 .. p1}, Lcom/a/m;->c()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_e
-
-    invoke-virtual/range {p1 .. p1}, Lcom/a/m;->i()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_e
-
-    if-eqz v4, :cond_e
+    if-eqz v2, :cond_a
 
     new-instance v4, Lcom/a/aq;
 
     invoke-direct {v4}, Lcom/a/aq;-><init>()V
 
-    long-to-int v1, v6
+    long-to-int v2, v8
 
-    iput v1, v4, Lcom/a/aq;->b:I
+    iput v2, v4, Lcom/a/aq;->b:I
 
-    new-instance v6, Lcom/a/k;
+    new-instance v2, Lcom/a/as;
 
-    invoke-direct {v6}, Lcom/a/k;-><init>()V
+    invoke-direct {v2}, Lcom/a/as;-><init>()V
 
-    invoke-virtual {p0}, Landroid/location/Location;->getSpeed()F
+    invoke-virtual/range {p0 .. p0}, Landroid/location/Location;->getLongitude()D
 
-    move-result v1
+    move-result-wide v10
 
-    move-object/from16 v0, p1
+    const-wide v12, 0x412e848000000000L
 
-    invoke-virtual {v0, v1}, Lcom/a/m;->b(F)Ljava/util/List;
+    mul-double/2addr v10, v12
+
+    double-to-int v7, v10
+
+    iput v7, v2, Lcom/a/as;->a:I
+
+    invoke-virtual/range {p0 .. p0}, Landroid/location/Location;->getLatitude()D
+
+    move-result-wide v10
+
+    const-wide v12, 0x412e848000000000L
+
+    mul-double/2addr v10, v12
+
+    double-to-int v7, v10
+
+    iput v7, v2, Lcom/a/as;->b:I
+
+    invoke-virtual/range {p0 .. p0}, Landroid/location/Location;->getAltitude()D
+
+    move-result-wide v10
+
+    double-to-int v7, v10
+
+    iput v7, v2, Lcom/a/as;->c:I
+
+    invoke-virtual/range {p0 .. p0}, Landroid/location/Location;->getAccuracy()F
+
+    move-result v7
+
+    float-to-int v7, v7
+
+    iput v7, v2, Lcom/a/as;->d:I
+
+    invoke-virtual/range {p0 .. p0}, Landroid/location/Location;->getSpeed()F
+
+    move-result v7
+
+    float-to-int v7, v7
+
+    iput v7, v2, Lcom/a/as;->e:I
+
+    invoke-virtual/range {p0 .. p0}, Landroid/location/Location;->getBearing()F
+
+    move-result v7
+
+    float-to-int v7, v7
+
+    int-to-short v7, v7
+
+    iput-short v7, v2, Lcom/a/as;->f:S
+
+    invoke-virtual/range {p1 .. p1}, Lcom/a/m;->x()Landroid/content/Context;
 
     move-result-object v7
 
-    if-eqz v7, :cond_d
+    invoke-static {v7}, Lcom/a/m;->b(Landroid/content/Context;)Z
 
-    invoke-interface {v7}, Ljava/util/List;->size()I
+    move-result v7
 
-    move-result v1
+    if-eqz v7, :cond_4
 
-    const/4 v8, 0x6
+    sget-boolean v7, Lcom/a/ar;->b:Z
 
-    if-lt v1, v8, :cond_d
+    if-nez v7, :cond_9
 
-    const/4 v1, 0x3
+    :cond_4
+    const/4 v7, 0x0
 
-    invoke-interface {v7, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    iput-byte v7, v2, Lcom/a/as;->g:B
 
-    move-result-object v1
+    :goto_4
+    move/from16 v0, p3
 
-    check-cast v1, Ljava/lang/Integer;
+    iput-byte v0, v2, Lcom/a/as;->h:B
 
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result v1
+    move-result-wide v10
 
-    iput v1, v6, Lcom/a/k;->a:I
+    iput-wide v10, v2, Lcom/a/as;->i:J
 
-    const/4 v1, 0x4
+    invoke-virtual/range {p1 .. p1}, Lcom/a/m;->o()J
 
-    invoke-interface {v7, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    move-result-wide v10
 
-    move-result-object v1
+    iput-wide v10, v2, Lcom/a/as;->j:J
 
-    check-cast v1, Ljava/lang/Integer;
+    iput-object v2, v4, Lcom/a/aq;->c:Lcom/a/as;
 
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+    const/4 v2, 0x1
 
-    move-result v1
+    iget-object v7, v6, Lcom/a/e;->j:Ljava/util/ArrayList;
 
-    iput v1, v6, Lcom/a/k;->b:I
+    invoke-virtual {v7, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const/4 v1, 0x0
+    invoke-virtual/range {p1 .. p1}, Lcom/a/m;->c()Z
 
-    invoke-interface {v7, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    move-result v4
 
-    move-result-object v1
+    if-eqz v4, :cond_c
 
-    check-cast v1, Ljava/lang/Integer;
+    invoke-virtual/range {p1 .. p1}, Lcom/a/m;->i()Z
 
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+    move-result v4
 
-    move-result v1
+    if-nez v4, :cond_c
 
-    int-to-short v1, v1
+    if-eqz v5, :cond_c
 
-    iput-short v1, v6, Lcom/a/k;->c:S
+    new-instance v7, Lcom/a/aq;
 
-    const/4 v1, 0x1
+    invoke-direct {v7}, Lcom/a/aq;-><init>()V
 
-    invoke-interface {v7, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    long-to-int v2, v8
 
-    move-result-object v1
+    iput v2, v7, Lcom/a/aq;->b:I
 
-    check-cast v1, Ljava/lang/Integer;
+    new-instance v10, Lcom/a/ao;
 
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+    invoke-direct {v10}, Lcom/a/ao;-><init>()V
 
-    move-result v1
+    invoke-virtual/range {p0 .. p0}, Landroid/location/Location;->getSpeed()F
 
-    int-to-short v1, v1
+    move-result v2
 
-    iput-short v1, v6, Lcom/a/k;->d:S
+    move-object/from16 v0, p1
 
-    const/4 v1, 0x2
+    invoke-virtual {v0, v2}, Lcom/a/m;->a(F)Ljava/util/List;
 
-    invoke-interface {v7, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    move-result-object v4
 
-    move-result-object v1
+    if-eqz v4, :cond_5
 
-    check-cast v1, Ljava/lang/Integer;
+    invoke-interface {v4}, Ljava/util/List;->size()I
 
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
+    move-result v2
 
-    move-result v1
+    const/4 v11, 0x3
 
-    iput v1, v6, Lcom/a/k;->e:I
+    if-lt v2, v11, :cond_5
+
+    const/4 v2, 0x0
+
+    invoke-interface {v4, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Integer;
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    int-to-short v2, v2
+
+    iput-short v2, v10, Lcom/a/ao;->a:S
+
+    const/4 v2, 0x1
+
+    invoke-interface {v4, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Integer;
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    iput v2, v10, Lcom/a/ao;->b:I
+
+    :cond_5
+    invoke-virtual/range {p1 .. p1}, Lcom/a/m;->l()B
+
+    move-result v2
+
+    iput-byte v2, v10, Lcom/a/ao;->c:B
+
+    invoke-virtual/range {p1 .. p1}, Lcom/a/m;->m()Ljava/util/List;
+
+    move-result-object v11
+
+    invoke-interface {v11}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    int-to-byte v2, v2
+
+    iput-byte v2, v10, Lcom/a/ao;->d:B
+
+    const/4 v2, 0x0
+
+    move v4, v2
+
+    :goto_5
+    invoke-interface {v11}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    if-ge v4, v2, :cond_b
+
+    new-instance v12, Lcom/a/l;
+
+    invoke-direct {v12}, Lcom/a/l;-><init>()V
+
+    invoke-interface {v11, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/telephony/NeighboringCellInfo;
+
+    invoke-virtual {v2}, Landroid/telephony/NeighboringCellInfo;->getLac()I
+
+    move-result v2
+
+    int-to-short v2, v2
+
+    iput-short v2, v12, Lcom/a/l;->a:S
+
+    invoke-interface {v11, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/telephony/NeighboringCellInfo;
+
+    invoke-virtual {v2}, Landroid/telephony/NeighboringCellInfo;->getCid()I
+
+    move-result v2
+
+    iput v2, v12, Lcom/a/l;->b:I
+
+    invoke-interface {v11, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/telephony/NeighboringCellInfo;
+
+    invoke-virtual {v2}, Landroid/telephony/NeighboringCellInfo;->getRssi()I
+
+    move-result v2
+
+    int-to-byte v2, v2
+
+    iput-byte v2, v12, Lcom/a/l;->c:B
+
+    iget-object v2, v10, Lcom/a/ao;->e:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v2, v4, 0x1
+
+    move v4, v2
+
+    goto :goto_5
+
+    :cond_6
+    const/4 v2, 0x0
+
+    move v5, v2
+
+    goto/16 :goto_1
+
+    :cond_7
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    goto/16 :goto_2
+
+    :cond_8
+    const/4 v2, 0x0
+
+    goto/16 :goto_3
+
+    :cond_9
+    const/4 v7, 0x1
+
+    iput-byte v7, v2, Lcom/a/as;->g:B
+
+    goto/16 :goto_4
+
+    :cond_a
+    const/4 v2, 0x0
+
+    goto/16 :goto_0
+
+    :cond_b
+    iput-object v10, v7, Lcom/a/aq;->d:Lcom/a/ao;
+
+    const/4 v2, 0x2
+
+    iget-object v4, v6, Lcom/a/e;->j:Ljava/util/ArrayList;
+
+    invoke-virtual {v4, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_c
+    move v4, v2
+
+    invoke-virtual/range {p1 .. p1}, Lcom/a/m;->c()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_e
+
+    invoke-virtual/range {p1 .. p1}, Lcom/a/m;->i()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_e
+
+    if-eqz v5, :cond_e
+
+    new-instance v5, Lcom/a/aq;
+
+    invoke-direct {v5}, Lcom/a/aq;-><init>()V
+
+    long-to-int v2, v8
+
+    iput v2, v5, Lcom/a/aq;->b:I
+
+    new-instance v7, Lcom/a/k;
+
+    invoke-direct {v7}, Lcom/a/k;-><init>()V
+
+    invoke-virtual/range {p0 .. p0}, Landroid/location/Location;->getSpeed()F
+
+    move-result v2
+
+    move-object/from16 v0, p1
+
+    invoke-virtual {v0, v2}, Lcom/a/m;->b(F)Ljava/util/List;
+
+    move-result-object v8
+
+    if-eqz v8, :cond_d
+
+    invoke-interface {v8}, Ljava/util/List;->size()I
+
+    move-result v2
+
+    const/4 v9, 0x6
+
+    if-lt v2, v9, :cond_d
+
+    const/4 v2, 0x3
+
+    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Integer;
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    iput v2, v7, Lcom/a/k;->a:I
+
+    const/4 v2, 0x4
+
+    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Integer;
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    iput v2, v7, Lcom/a/k;->b:I
+
+    const/4 v2, 0x0
+
+    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Integer;
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    int-to-short v2, v2
+
+    iput-short v2, v7, Lcom/a/k;->c:S
+
+    const/4 v2, 0x1
+
+    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Integer;
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    int-to-short v2, v2
+
+    iput-short v2, v7, Lcom/a/k;->d:S
+
+    const/4 v2, 0x2
+
+    invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Integer;
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    iput v2, v7, Lcom/a/k;->e:I
 
     invoke-virtual/range {p1 .. p1}, Lcom/a/m;->l()B
 
-    move-result v1
+    move-result v2
 
-    iput-byte v1, v6, Lcom/a/k;->f:B
+    iput-byte v2, v7, Lcom/a/k;->f:B
 
     :cond_d
-    iput-object v6, v4, Lcom/a/aq;->e:Lcom/a/k;
+    iput-object v7, v5, Lcom/a/aq;->e:Lcom/a/k;
 
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v4, v4, 0x1
 
-    iget-object v1, v5, Lcom/a/e;->j:Ljava/util/ArrayList;
+    iget-object v2, v6, Lcom/a/e;->j:Ljava/util/ArrayList;
 
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_e
     invoke-virtual/range {p1 .. p1}, Lcom/a/m;->d()Z
 
-    move-result v1
-
-    if-eqz v1, :cond_11
+    move-result v2
 
     if-eqz v2, :cond_11
 
-    new-instance v6, Lcom/a/aq;
+    if-eqz v3, :cond_11
 
-    invoke-direct {v6}, Lcom/a/aq;-><init>()V
+    new-instance v7, Lcom/a/aq;
 
-    new-instance v7, Lcom/a/g;
+    invoke-direct {v7}, Lcom/a/aq;-><init>()V
 
-    invoke-direct {v7}, Lcom/a/g;-><init>()V
+    new-instance v8, Lcom/a/g;
+
+    invoke-direct {v8}, Lcom/a/g;-><init>()V
 
     invoke-virtual/range {p1 .. p1}, Lcom/a/m;->u()Ljava/util/List;
 
-    move-result-object v8
+    move-result-object v9
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    invoke-interface {v8, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v9, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Ljava/lang/Long;
+    check-cast v2, Ljava/lang/Long;
 
-    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
+    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    const-wide/16 v9, 0x3e8
+    const-wide/16 v10, 0x3e8
 
-    div-long/2addr v1, v9
+    div-long/2addr v2, v10
 
-    long-to-int v1, v1
+    long-to-int v2, v2
 
-    iput v1, v6, Lcom/a/aq;->b:I
+    iput v2, v7, Lcom/a/aq;->b:I
 
-    invoke-interface {v8}, Ljava/util/List;->size()I
+    invoke-interface {v9}, Ljava/util/List;->size()I
 
-    move-result v1
+    move-result v2
 
-    add-int/lit8 v1, v1, -0x1
+    add-int/lit8 v2, v2, -0x1
 
-    int-to-byte v1, v1
+    int-to-byte v2, v2
 
-    iput-byte v1, v7, Lcom/a/g;->a:B
+    iput-byte v2, v8, Lcom/a/g;->a:B
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    move v4, v1
+    move v5, v2
 
     :goto_6
-    invoke-interface {v8}, Ljava/util/List;->size()I
+    invoke-interface {v9}, Ljava/util/List;->size()I
 
-    move-result v1
+    move-result v2
 
-    if-ge v4, v1, :cond_10
+    if-ge v5, v2, :cond_10
 
-    invoke-interface {v8, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v9, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    move-object v2, v1
+    move-object v3, v2
 
-    check-cast v2, Ljava/util/List;
+    check-cast v3, Ljava/util/List;
 
-    if-eqz v2, :cond_f
+    if-eqz v3, :cond_f
 
-    invoke-interface {v2}, Ljava/util/List;->size()I
+    invoke-interface {v3}, Ljava/util/List;->size()I
 
-    move-result v1
+    move-result v2
 
-    const/4 v9, 0x3
+    const/4 v10, 0x3
 
-    if-lt v1, v9, :cond_f
+    if-lt v2, v10, :cond_f
 
-    new-instance v9, Lcom/a/h;
+    new-instance v10, Lcom/a/h;
 
-    invoke-direct {v9}, Lcom/a/h;-><init>()V
+    invoke-direct {v10}, Lcom/a/h;-><init>()V
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Ljava/lang/String;
+    check-cast v2, Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/String;->getBytes()[B
+    invoke-virtual {v2}, Ljava/lang/String;->getBytes()[B
 
-    move-result-object v1
+    move-result-object v2
 
-    const/4 v10, 0x0
+    const/4 v11, 0x0
 
-    iget-object v11, v9, Lcom/a/h;->a:[B
+    iget-object v12, v10, Lcom/a/h;->a:[B
+
+    const/4 v13, 0x0
+
+    array-length v14, v2
+
+    iget-object v15, v10, Lcom/a/h;->a:[B
+
+    array-length v15, v15
+
+    invoke-static {v14, v15}, Lcom/a/j;->a(II)I
+
+    move-result v14
+
+    invoke-static {v2, v11, v12, v13, v14}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    const/4 v2, 0x1
+
+    invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Integer;
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    int-to-short v2, v2
+
+    iput-short v2, v10, Lcom/a/h;->b:S
+
+    const/4 v2, 0x2
+
+    invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/String;
+
+    invoke-virtual {v2}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    iget-object v11, v10, Lcom/a/h;->c:[B
 
     const/4 v12, 0x0
 
-    array-length v13, v1
+    array-length v13, v2
 
-    iget-object v14, v9, Lcom/a/h;->a:[B
+    iget-object v14, v10, Lcom/a/h;->c:[B
 
     array-length v14, v14
 
@@ -844,89 +890,43 @@
 
     move-result v13
 
-    invoke-static {v1, v10, v11, v12, v13}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-static {v2, v3, v11, v12, v13}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    const/4 v1, 0x1
+    iget-object v2, v8, Lcom/a/g;->b:Ljava/util/ArrayList;
 
-    invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Integer;
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    int-to-short v1, v1
-
-    iput-short v1, v9, Lcom/a/h;->b:S
-
-    const/4 v1, 0x2
-
-    invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->getBytes()[B
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    iget-object v10, v9, Lcom/a/h;->c:[B
-
-    const/4 v11, 0x0
-
-    array-length v12, v1
-
-    iget-object v13, v9, Lcom/a/h;->c:[B
-
-    array-length v13, v13
-
-    invoke-static {v12, v13}, Lcom/a/j;->a(II)I
-
-    move-result v12
-
-    invoke-static {v1, v2, v10, v11, v12}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    iget-object v1, v7, Lcom/a/g;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_f
-    add-int/lit8 v1, v4, 0x1
+    add-int/lit8 v2, v5, 0x1
 
-    move v4, v1
+    move v5, v2
 
     goto :goto_6
 
     :cond_10
-    iput-object v7, v6, Lcom/a/aq;->f:Lcom/a/g;
+    iput-object v8, v7, Lcom/a/aq;->f:Lcom/a/g;
 
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v4, v4, 0x1
 
-    iget-object v1, v5, Lcom/a/e;->j:Ljava/util/ArrayList;
+    iget-object v2, v6, Lcom/a/e;->j:Ljava/util/ArrayList;
 
-    invoke-virtual {v1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_11
-    int-to-short v1, v3
+    int-to-short v2, v4
 
-    iput-short v1, v5, Lcom/a/e;->i:S
+    iput-short v2, v6, Lcom/a/e;->i:S
 
-    const/4 v1, 0x2
+    const/4 v2, 0x2
 
-    if-ge v3, v1, :cond_12
+    if-ge v4, v2, :cond_12
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
     goto/16 :goto_0
 
     :cond_12
-    move-object v1, v5
+    move-object v2, v6
 
     goto/16 :goto_0
 .end method
@@ -1274,7 +1274,7 @@
 .end method
 
 .method private c(J)Ljava/io/File;
-    .locals 8
+    .locals 9
 
     const/4 v1, 0x0
 
@@ -1342,15 +1342,15 @@
 
     int-to-long v6, v0
 
-    mul-long v3, v4, v6
+    mul-long/2addr v4, v6
 
     iget v0, p0, Lcom/a/j;->c:I
 
     div-int/lit8 v0, v0, 0x2
 
-    int-to-long v5, v0
+    int-to-long v6, v0
 
-    cmp-long v0, v3, v5
+    cmp-long v0, v4, v6
 
     if-gtz v0, :cond_3
 
@@ -1720,7 +1720,7 @@
 .end method
 
 .method private d(J)Ljava/io/File;
-    .locals 4
+    .locals 5
 
     const/4 v1, 0x0
 
@@ -1957,9 +1957,9 @@
 
     move-result-wide v0
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    cmp-long v0, v0, v3
+    cmp-long v0, v0, v4
 
     if-gtz v0, :cond_3
 
@@ -2169,11 +2169,11 @@
 .end method
 
 .method protected a(J)Ljava/io/File;
-    .locals 8
+    .locals 9
 
     const/4 v4, 0x1
 
-    const/4 v7, 0x0
+    const/4 v8, 0x0
 
     invoke-direct {p0}, Lcom/a/j;->d()Ljava/io/File;
 
@@ -2260,7 +2260,7 @@
 
     if-ne v0, v4, :cond_3
 
-    invoke-virtual {v2, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v2, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2268,17 +2268,17 @@
 
     invoke-virtual {v0}, Ljava/io/File;->length()J
 
-    move-result-wide v3
+    move-result-wide v4
 
     iget v0, p0, Lcom/a/j;->d:I
 
-    int-to-long v5, v0
+    int-to-long v6, v0
 
-    cmp-long v0, v3, v5
+    cmp-long v0, v4, v6
 
     if-gez v0, :cond_4
 
-    invoke-virtual {v2, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v2, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2304,7 +2304,7 @@
 
     if-lt v0, v3, :cond_4
 
-    invoke-virtual {v2, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v2, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2522,7 +2522,7 @@
 .end method
 
 .method protected b(J)Z
-    .locals 8
+    .locals 9
 
     const/4 v3, 0x2
 

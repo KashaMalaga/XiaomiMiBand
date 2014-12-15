@@ -9223,7 +9223,7 @@
 .end method
 
 .method public static a(DD)[D
-    .locals 21
+    .locals 20
 
     const-wide v0, 0x4051c00000000000L
 
@@ -9235,11 +9235,11 @@
 
     double-to-int v0, v0
 
-    const-wide/high16 v1, 0x4008000000000000L
+    const-wide/high16 v2, 0x4008000000000000L
 
-    div-double v1, p2, v1
+    div-double v2, p2, v2
 
-    double-to-int v1, v1
+    double-to-int v1, v2
 
     mul-int/lit8 v0, v0, 0x13
 
@@ -9251,81 +9251,81 @@
 
     const/4 v2, 0x0
 
-    aget-wide v1, v1, v2
+    aget-wide v2, v1, v2
 
-    sget-object v3, Lcom/a/an;->a:[[D
+    sget-object v1, Lcom/a/an;->a:[[D
 
-    aget-object v3, v3, v0
+    aget-object v1, v1, v0
 
     const/4 v4, 0x1
 
-    aget-wide v3, v3, v4
+    aget-wide v4, v1, v4
 
-    sget-object v5, Lcom/a/an;->a:[[D
+    sget-object v1, Lcom/a/an;->a:[[D
 
-    aget-object v5, v5, v0
+    aget-object v1, v1, v0
 
     const/4 v6, 0x2
 
-    aget-wide v5, v5, v6
+    aget-wide v6, v1, v6
 
-    sget-object v7, Lcom/a/an;->a:[[D
+    sget-object v1, Lcom/a/an;->a:[[D
 
-    aget-object v7, v7, v0
+    aget-object v1, v1, v0
 
     const/4 v8, 0x3
 
-    aget-wide v7, v7, v8
+    aget-wide v8, v1, v8
 
-    sget-object v9, Lcom/a/an;->a:[[D
+    sget-object v1, Lcom/a/an;->a:[[D
 
-    aget-object v9, v9, v0
+    aget-object v1, v1, v0
 
     const/4 v10, 0x4
 
-    aget-wide v9, v9, v10
+    aget-wide v10, v1, v10
 
-    sget-object v11, Lcom/a/an;->a:[[D
+    sget-object v1, Lcom/a/an;->a:[[D
 
-    aget-object v11, v11, v0
+    aget-object v1, v1, v0
 
     const/4 v12, 0x5
 
-    aget-wide v11, v11, v12
+    aget-wide v12, v1, v12
 
-    sget-object v13, Lcom/a/an;->a:[[D
+    sget-object v1, Lcom/a/an;->a:[[D
 
-    aget-object v13, v13, v0
+    aget-object v1, v1, v0
 
     const/4 v14, 0x6
 
-    aget-wide v13, v13, v14
+    aget-wide v14, v1, v14
 
-    sget-object v15, Lcom/a/an;->a:[[D
+    sget-object v1, Lcom/a/an;->a:[[D
 
-    aget-object v15, v15, v0
+    aget-object v1, v1, v0
 
     const/16 v16, 0x7
 
-    aget-wide v15, v15, v16
+    aget-wide v16, v1, v16
 
-    sget-object v17, Lcom/a/an;->a:[[D
+    sget-object v1, Lcom/a/an;->a:[[D
 
-    aget-object v0, v17, v0
+    aget-object v0, v1, v0
 
-    const/16 v17, 0x8
+    const/16 v1, 0x8
 
-    aget-wide v17, v0, v17
+    aget-wide v18, v0, v1
 
-    mul-double v0, v1, p0
+    mul-double v0, v2, p0
 
-    mul-double v2, v3, p2
+    mul-double v2, v4, p2
 
     add-double/2addr v0, v2
 
-    add-double v19, v0, v5
+    add-double/2addr v6, v0
 
-    mul-double v0, v7, p2
+    mul-double v0, v8, p2
 
     const-wide v2, 0x41cdcd6500000000L
 
@@ -9333,9 +9333,9 @@
 
     const-wide v2, 0x412e848000000000L
 
-    div-double v2, v9, v2
+    div-double v2, v10, v2
 
-    add-double v6, v0, v2
+    add-double v8, v0, v2
 
     const-wide v0, 0x405a400000000000L
 
@@ -9347,7 +9347,7 @@
 
     invoke-static/range {v0 .. v5}, Lcom/a/an;->a(DDD)D
 
-    move-result-wide v8
+    move-result-wide v10
 
     const-wide/high16 v0, 0x4044000000000000L
 
@@ -9357,7 +9357,7 @@
 
     move-result-wide v0
 
-    add-double/2addr v8, v0
+    add-double/2addr v10, v0
 
     const-wide/high16 v0, 0x4034000000000000L
 
@@ -9367,7 +9367,7 @@
 
     move-result-wide v0
 
-    add-double/2addr v8, v0
+    add-double/2addr v10, v0
 
     const-wide/high16 v0, 0x4034000000000000L
 
@@ -9377,7 +9377,7 @@
 
     move-result-wide v0
 
-    add-double/2addr v8, v0
+    add-double/2addr v10, v0
 
     const-wide/high16 v0, 0x4034000000000000L
 
@@ -9387,27 +9387,27 @@
 
     move-result-wide v0
 
-    add-double/2addr v0, v8
+    add-double/2addr v0, v10
 
     const-wide v2, 0x3fe5555555555555L
 
     mul-double/2addr v0, v2
 
-    add-double v0, v0, v19
+    add-double/2addr v0, v6
 
-    mul-double/2addr v0, v6
+    mul-double/2addr v0, v8
 
     add-double v6, p0, v0
 
-    mul-double v0, v11, p0
+    mul-double v0, v12, p0
 
-    mul-double v2, v13, p2
+    mul-double v2, v14, p2
 
     add-double/2addr v0, v2
 
-    add-double v8, v0, v15
+    add-double v8, v0, v16
 
-    mul-double v0, v17, p2
+    mul-double v0, v18, p2
 
     const-wide v2, 0x41cdcd6500000000L
 

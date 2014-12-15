@@ -737,7 +737,7 @@
 .method private static b(Landroid/content/Context;Ljava/lang/String;)Landroid/graphics/Bitmap;
     .locals 2
 
-    invoke-static {}, Lcom/amap/api/mapcore/util/u;->a()Landroid/content/res/AssetManager;
+    invoke-static {p0}, Lcom/amap/api/mapcore/util/u;->a(Landroid/content/Context;)Landroid/content/res/AssetManager;
 
     move-result-object v0
 

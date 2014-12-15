@@ -364,7 +364,7 @@
 .end method
 
 .method public setRadius(D)V
-    .locals 2
+    .locals 3
 
     :try_start_0
     iget-object v0, p0, Lcom/amap/api/maps/model/Circle;->a:Lcom/amap/api/mapcore/x;

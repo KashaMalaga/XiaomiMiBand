@@ -20,7 +20,7 @@
 
     if-gtz v0, :cond_0
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/gps/services/j;->d:Lcn/com/smartdevices/bracelet/gps/services/j;
+    sget-object v0, Lcn/com/smartdevices/bracelet/gps/services/j;->e:Lcn/com/smartdevices/bracelet/gps/services/j;
 
     :goto_0
     return-object v0
@@ -32,7 +32,7 @@
 
     if-gtz v0, :cond_1
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/gps/services/j;->c:Lcn/com/smartdevices/bracelet/gps/services/j;
+    sget-object v0, Lcn/com/smartdevices/bracelet/gps/services/j;->d:Lcn/com/smartdevices/bracelet/gps/services/j;
 
     goto :goto_0
 
@@ -43,12 +43,12 @@
 
     if-gez v0, :cond_2
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/gps/services/j;->b:Lcn/com/smartdevices/bracelet/gps/services/j;
+    sget-object v0, Lcn/com/smartdevices/bracelet/gps/services/j;->c:Lcn/com/smartdevices/bracelet/gps/services/j;
 
     goto :goto_0
 
     :cond_2
-    sget-object v0, Lcn/com/smartdevices/bracelet/gps/services/j;->a:Lcn/com/smartdevices/bracelet/gps/services/j;
+    sget-object v0, Lcn/com/smartdevices/bracelet/gps/services/j;->b:Lcn/com/smartdevices/bracelet/gps/services/j;
 
     goto :goto_0
 .end method

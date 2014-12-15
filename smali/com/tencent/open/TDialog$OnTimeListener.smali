@@ -112,65 +112,65 @@
 .end method
 
 .method public onComplete(Ljava/lang/Object;)V
-    .locals 13
+    .locals 14
 
-    const-wide/16 v5, 0x0
+    const-wide/16 v6, 0x0
 
     check-cast p1, Lorg/json/JSONObject;
 
     invoke-static {}, Lcom/tencent/open/a/b;->a()Lcom/tencent/open/a/b;
 
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/tencent/open/TDialog$OnTimeListener;->mWeakCtx:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
     move-result-object v1
 
-    check-cast v1, Landroid/content/Context;
+    iget-object v0, p0, Lcom/tencent/open/TDialog$OnTimeListener;->mWeakCtx:Ljava/lang/ref/WeakReference;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    move-result-object v2
+
+    check-cast v2, Landroid/content/Context;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     iget-object v3, p0, Lcom/tencent/open/TDialog$OnTimeListener;->mAction:Ljava/lang/String;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v0
 
     const-string v3, "_H5"
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    const-string v7, "ret"
+    const-string v0, "ret"
 
     const/4 v8, -0x6
 
-    invoke-virtual {p1, v7, v8}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
+    invoke-virtual {p1, v0, v8}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
 
-    move-result v9
+    move-result v10
 
-    iget-object v10, p0, Lcom/tencent/open/TDialog$OnTimeListener;->mAppid:Ljava/lang/String;
+    iget-object v11, p0, Lcom/tencent/open/TDialog$OnTimeListener;->mAppid:Ljava/lang/String;
 
-    iget-object v11, p0, Lcom/tencent/open/TDialog$OnTimeListener;->mUrl:Ljava/lang/String;
+    iget-object v12, p0, Lcom/tencent/open/TDialog$OnTimeListener;->mUrl:Ljava/lang/String;
 
-    const-string v12, "1000067"
+    const-string v13, "1000067"
 
-    move-wide v7, v5
+    move-wide v8, v6
 
-    invoke-virtual/range {v0 .. v12}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual/range {v1 .. v13}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/tencent/open/TDialog$OnTimeListener;->mWeakL:Lcom/tencent/tauth/IUiListener;
 
@@ -189,9 +189,9 @@
 .end method
 
 .method public onError(Lcom/tencent/tauth/UiError;)V
-    .locals 13
+    .locals 14
 
-    const-wide/16 v5, 0x0
+    const-wide/16 v6, 0x0
 
     iget-object v0, p1, Lcom/tencent/tauth/UiError;->errorMessage:Ljava/lang/String;
 
@@ -215,54 +215,54 @@
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v11
+    move-result-object v12
 
     :goto_0
     invoke-static {}, Lcom/tencent/open/a/b;->a()Lcom/tencent/open/a/b;
 
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/tencent/open/TDialog$OnTimeListener;->mWeakCtx:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
     move-result-object v1
 
-    check-cast v1, Landroid/content/Context;
+    iget-object v0, p0, Lcom/tencent/open/TDialog$OnTimeListener;->mWeakCtx:Ljava/lang/ref/WeakReference;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    move-result-object v2
+
+    check-cast v2, Landroid/content/Context;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     iget-object v3, p0, Lcom/tencent/open/TDialog$OnTimeListener;->mAction:Ljava/lang/String;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v0
 
     const-string v3, "_H5"
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    iget v9, p1, Lcom/tencent/tauth/UiError;->errorCode:I
+    iget v10, p1, Lcom/tencent/tauth/UiError;->errorCode:I
 
-    iget-object v10, p0, Lcom/tencent/open/TDialog$OnTimeListener;->mAppid:Ljava/lang/String;
+    iget-object v11, p0, Lcom/tencent/open/TDialog$OnTimeListener;->mAppid:Ljava/lang/String;
 
-    const-string v12, "1000067"
+    const-string v13, "1000067"
 
-    move-wide v7, v5
+    move-wide v8, v6
 
-    invoke-virtual/range {v0 .. v12}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual/range {v1 .. v13}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/tencent/open/TDialog$OnTimeListener;->mWeakL:Lcom/tencent/tauth/IUiListener;
 
@@ -280,7 +280,7 @@
     return-void
 
     :cond_1
-    iget-object v11, p0, Lcom/tencent/open/TDialog$OnTimeListener;->mUrl:Ljava/lang/String;
+    iget-object v12, p0, Lcom/tencent/open/TDialog$OnTimeListener;->mUrl:Ljava/lang/String;
 
     goto :goto_0
 .end method

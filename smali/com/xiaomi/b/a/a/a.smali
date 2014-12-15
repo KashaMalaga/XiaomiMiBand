@@ -438,7 +438,7 @@
 .end method
 
 .method public a(Lcom/xiaomi/b/a/a/a;)Z
-    .locals 5
+    .locals 6
 
     const/4 v0, 0x0
 
@@ -466,11 +466,11 @@
 
     if-eqz v2, :cond_0
 
-    iget-wide v1, p0, Lcom/xiaomi/b/a/a/a;->a:J
+    iget-wide v2, p0, Lcom/xiaomi/b/a/a/a;->a:J
 
-    iget-wide v3, p1, Lcom/xiaomi/b/a/a/a;->a:J
+    iget-wide v4, p1, Lcom/xiaomi/b/a/a/a;->a:J
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-nez v1, :cond_0
 
@@ -1075,7 +1075,7 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 5
+    .locals 6
 
     const/4 v1, 0x0
 
@@ -1097,9 +1097,9 @@
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v3, p0, Lcom/xiaomi/b/a/a/a;->a:J
+    iget-wide v4, p0, Lcom/xiaomi/b/a/a/a;->a:J
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move v0, v1
 

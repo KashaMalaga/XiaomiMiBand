@@ -1,222 +1,220 @@
-.class public Lcn/com/smartdevices/bracelet/lab/ui/ad;
-.super Lcn/com/smartdevices/bracelet/ui/J;
+.class public final Lcn/com/smartdevices/bracelet/lab/ui/ad;
+.super Ljava/lang/Object;
 
 
 # static fields
-.field public static final a:Ljava/lang/String; = "operation"
+.field public static final a:Ljava/lang/String;
 
-.field public static final b:Ljava/lang/String; = "mainNotice"
+.field public static final b:Ljava/lang/String;
 
-.field public static final c:Ljava/lang/String; = "extraNotice"
+.field public static final c:Ljava/lang/String;
 
+.field public static final d:Ljava/lang/String;
 
-# instance fields
-.field private f:Landroid/widget/TextView;
+.field public static final e:Ljava/lang/String;
 
-.field private g:Landroid/widget/TextView;
+.field public static final f:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-class v1, Lcn/com/smartdevices/bracelet/lab/ui/ad;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getPackage()Ljava/lang/Package;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Package;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ".extra.SHARED_SUB_TITLE"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->a:Ljava/lang/String;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-class v1, Lcn/com/smartdevices/bracelet/lab/ui/ad;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getPackage()Ljava/lang/Package;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Package;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ".extra.SHARED_SPORT_COUNT"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->b:Ljava/lang/String;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-class v1, Lcn/com/smartdevices/bracelet/lab/ui/ad;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getPackage()Ljava/lang/Package;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Package;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ".extra.SHARED_GROUP_DES"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->c:Ljava/lang/String;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-class v1, Lcn/com/smartdevices/bracelet/lab/ui/ad;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getPackage()Ljava/lang/Package;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Package;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ".extra.SHARED_HISTORY_BEST_RECORD"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->d:Ljava/lang/String;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-class v1, Lcn/com/smartdevices/bracelet/lab/ui/ad;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getPackage()Ljava/lang/Package;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Package;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ".extra.SHARED_ACCUMULATED_TIME"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->e:Ljava/lang/String;
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/lab/n;->g:Ljava/lang/String;
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->f:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method private constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/J;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static a(Landroid/app/Activity;Ljava/lang/Class;Landroid/os/Bundle;Lcn/com/smartdevices/bracelet/ui/L;)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/app/Activity;",
-            "Ljava/lang/Class",
-            "<+",
-            "Landroid/app/DialogFragment;",
-            ">;",
-            "Landroid/os/Bundle;",
-            "Lcn/com/smartdevices/bracelet/ui/L;",
-            ")V"
-        }
-    .end annotation
+.method public static a(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;JI)Landroid/os/Bundle;
+    .locals 2
 
-    invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
+    new-instance v0, Landroid/os/Bundle;
 
-    move-result-object v0
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    invoke-virtual {v0}, Landroid/app/FragmentManager;->beginTransaction()Landroid/app/FragmentTransaction;
+    sget-object v1, Lcn/com/smartdevices/bracelet/lab/ui/ad;->a:Ljava/lang/String;
 
-    move-result-object v1
+    invoke-virtual {v0, v1, p0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    sget-object v1, Lcn/com/smartdevices/bracelet/lab/ui/ad;->b:Ljava/lang/String;
 
-    move-result-object v0
+    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    invoke-static {p0, v0, p2}, Landroid/app/Fragment;->instantiate(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/app/Fragment;
+    sget-object v1, Lcn/com/smartdevices/bracelet/lab/ui/ad;->f:Ljava/lang/String;
 
-    move-result-object v0
+    invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/lab/ui/ad;
+    sget-object v1, Lcn/com/smartdevices/bracelet/lab/ui/ad;->c:Ljava/lang/String;
 
-    invoke-virtual {v0, p3}, Lcn/com/smartdevices/bracelet/lab/ui/ad;->a(Lcn/com/smartdevices/bracelet/ui/L;)V
+    invoke-virtual {v0, v1, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    sget-object v1, Lcn/com/smartdevices/bracelet/lab/ui/ad;->d:Ljava/lang/String;
 
-    move-result-object v2
+    invoke-virtual {v0, v1, p6}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/lab/ui/ad;->show(Landroid/app/FragmentTransaction;Ljava/lang/String;)I
+    sget-object v1, Lcn/com/smartdevices/bracelet/lab/ui/ad;->e:Ljava/lang/String;
 
-    return-void
-.end method
+    invoke-virtual {v0, v1, p4, p5}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-
-# virtual methods
-.method protected a()I
-    .locals 1
-
-    const v0, 0x7f030047
-
-    return v0
-.end method
-
-.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 7
-
-    const v6, 0x104000a
-
-    const/16 v5, 0x8
-
-    const/4 v4, 0x0
-
-    invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/J;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-
-    move-result-object v1
-
-    const v0, 0x7f07015c
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->f:Landroid/widget/TextView;
-
-    const v0, 0x7f07015b
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->g:Landroid/widget/TextView;
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/lab/ui/ad;->getArguments()Landroid/os/Bundle;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_3
-
-    const-string v2, "extraNotice"
-
-    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->g:Landroid/widget/TextView;
-
-    invoke-virtual {v2, v5}, Landroid/widget/TextView;->setVisibility(I)V
-
-    :goto_0
-    const-string v2, "mainNotice"
-
-    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->f:Landroid/widget/TextView;
-
-    invoke-virtual {v2, v5}, Landroid/widget/TextView;->setVisibility(I)V
-
-    :goto_1
-    const-string v2, "operation"
-
-    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {p0, v6}, Lcn/com/smartdevices/bracelet/lab/ui/ad;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    :cond_0
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->d:Landroid/widget/TextView;
-
-    invoke-virtual {v2, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->d:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v4}, Landroid/widget/TextView;->setVisibility(I)V
-
-    :goto_2
-    invoke-virtual {p0, v4}, Lcn/com/smartdevices/bracelet/lab/ui/ad;->setCancelable(Z)V
-
-    return-object v1
-
-    :cond_1
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->g:Landroid/widget/TextView;
-
-    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setVisibility(I)V
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->g:Landroid/widget/TextView;
-
-    invoke-virtual {v3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->f:Landroid/widget/TextView;
-
-    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setVisibility(I)V
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->f:Landroid/widget/TextView;
-
-    invoke-virtual {v3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    goto :goto_1
-
-    :cond_3
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->f:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v5}, Landroid/widget/TextView;->setVisibility(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->g:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v5}, Landroid/widget/TextView;->setVisibility(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->d:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v6}, Landroid/widget/TextView;->setText(I)V
-
-    goto :goto_2
+    return-object v0
 .end method

@@ -86,12 +86,12 @@
     throw v0
 .end method
 
-.method private a(Landroid/database/Cursor;)Lcn/com/smartdevices/bracelet/open/e;
-    .locals 3
+.method private a(Landroid/database/Cursor;)Lcn/com/smartdevices/bracelet/open/f;
+    .locals 4
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/open/e;
+    new-instance v0, Lcn/com/smartdevices/bracelet/open/f;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/open/e;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/open/f;-><init>()V
 
     const-string v1, "color"
 
@@ -103,7 +103,7 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lcn/com/smartdevices/bracelet/open/e;->h:Ljava/lang/String;
+    iput-object v1, v0, Lcn/com/smartdevices/bracelet/open/f;->h:Ljava/lang/String;
 
     const-string v1, "expire_time"
 
@@ -113,9 +113,9 @@
 
     invoke-interface {p1, v1}, Landroid/database/Cursor;->getLong(I)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, v0, Lcn/com/smartdevices/bracelet/open/e;->i:J
+    iput-wide v2, v0, Lcn/com/smartdevices/bracelet/open/f;->i:J
 
     const-string v1, "url"
 
@@ -127,7 +127,7 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lcn/com/smartdevices/bracelet/open/e;->e:Ljava/lang/String;
+    iput-object v1, v0, Lcn/com/smartdevices/bracelet/open/f;->e:Ljava/lang/String;
 
     const-string v1, "sub_title"
 
@@ -139,7 +139,7 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lcn/com/smartdevices/bracelet/open/e;->d:Ljava/lang/String;
+    iput-object v1, v0, Lcn/com/smartdevices/bracelet/open/f;->d:Ljava/lang/String;
 
     const-string v1, "title"
 
@@ -151,7 +151,7 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lcn/com/smartdevices/bracelet/open/e;->c:Ljava/lang/String;
+    iput-object v1, v0, Lcn/com/smartdevices/bracelet/open/f;->c:Ljava/lang/String;
 
     const-string v1, "third_app_id"
 
@@ -163,7 +163,7 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lcn/com/smartdevices/bracelet/open/e;->f:Ljava/lang/String;
+    iput-object v1, v0, Lcn/com/smartdevices/bracelet/open/f;->f:Ljava/lang/String;
 
     const-string v1, "icon"
 
@@ -175,7 +175,7 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lcn/com/smartdevices/bracelet/open/e;->g:Ljava/lang/String;
+    iput-object v1, v0, Lcn/com/smartdevices/bracelet/open/f;->g:Ljava/lang/String;
 
     const-string v1, "status"
 
@@ -187,7 +187,7 @@
 
     move-result v1
 
-    iput v1, v0, Lcn/com/smartdevices/bracelet/open/e;->j:I
+    iput v1, v0, Lcn/com/smartdevices/bracelet/open/f;->j:I
 
     return-object v0
 .end method
@@ -359,7 +359,7 @@
 
 
 # virtual methods
-.method public a(Lcn/com/smartdevices/bracelet/open/e;)Landroid/content/ContentValues;
+.method public a(Lcn/com/smartdevices/bracelet/open/f;)Landroid/content/ContentValues;
     .locals 4
 
     new-instance v0, Landroid/content/ContentValues;
@@ -368,19 +368,19 @@
 
     const-string v1, "url"
 
-    iget-object v2, p1, Lcn/com/smartdevices/bracelet/open/e;->e:Ljava/lang/String;
+    iget-object v2, p1, Lcn/com/smartdevices/bracelet/open/f;->e:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "color"
 
-    iget-object v2, p1, Lcn/com/smartdevices/bracelet/open/e;->h:Ljava/lang/String;
+    iget-object v2, p1, Lcn/com/smartdevices/bracelet/open/f;->h:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "expire_time"
 
-    iget-wide v2, p1, Lcn/com/smartdevices/bracelet/open/e;->i:J
+    iget-wide v2, p1, Lcn/com/smartdevices/bracelet/open/f;->i:J
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -390,31 +390,31 @@
 
     const-string v1, "third_app_id"
 
-    iget-object v2, p1, Lcn/com/smartdevices/bracelet/open/e;->f:Ljava/lang/String;
+    iget-object v2, p1, Lcn/com/smartdevices/bracelet/open/f;->f:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "title"
 
-    iget-object v2, p1, Lcn/com/smartdevices/bracelet/open/e;->c:Ljava/lang/String;
+    iget-object v2, p1, Lcn/com/smartdevices/bracelet/open/f;->c:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "sub_title"
 
-    iget-object v2, p1, Lcn/com/smartdevices/bracelet/open/e;->d:Ljava/lang/String;
+    iget-object v2, p1, Lcn/com/smartdevices/bracelet/open/f;->d:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "icon"
 
-    iget-object v2, p1, Lcn/com/smartdevices/bracelet/open/e;->g:Ljava/lang/String;
+    iget-object v2, p1, Lcn/com/smartdevices/bracelet/open/f;->g:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "status"
 
-    iget v2, p1, Lcn/com/smartdevices/bracelet/open/e;->j:I
+    iget v2, p1, Lcn/com/smartdevices/bracelet/open/f;->j:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -435,7 +435,7 @@
     return-object v0
 .end method
 
-.method public a(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/open/e;
+.method public a(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/open/f;
     .locals 8
 
     const/4 v4, 0x1
@@ -522,7 +522,7 @@
 
     invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
 
-    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/db/r;->a(Landroid/database/Cursor;)Lcn/com/smartdevices/bracelet/open/e;
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/db/r;->a(Landroid/database/Cursor;)Lcn/com/smartdevices/bracelet/open/f;
 
     move-result-object v5
 
@@ -933,229 +933,229 @@
 .end method
 
 .method public a(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;[BLcn/com/smartdevices/bracelet/q;ILjava/lang/String;Ljava/lang/String;)Z
-    .locals 11
+    .locals 12
 
-    new-instance v10, Landroid/content/ContentValues;
+    new-instance v11, Landroid/content/ContentValues;
 
-    invoke-direct {v10}, Landroid/content/ContentValues;-><init>()V
+    invoke-direct {v11}, Landroid/content/ContentValues;-><init>()V
 
-    const-string v1, "type"
+    const-string v2, "type"
 
-    invoke-virtual {p4}, Lcn/com/smartdevices/bracelet/q;->b()I
+    invoke-virtual/range {p4 .. p4}, Lcn/com/smartdevices/bracelet/q;->b()I
 
-    move-result v2
+    move-result v3
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v10, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+    invoke-virtual {v11, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    const-string v1, "source"
+    const-string v2, "source"
 
-    invoke-virtual {p4}, Lcn/com/smartdevices/bracelet/q;->a()I
+    invoke-virtual/range {p4 .. p4}, Lcn/com/smartdevices/bracelet/q;->a()I
 
-    move-result v2
+    move-result v3
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v10, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+    invoke-virtual {v11, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    const-string v1, "date"
+    const-string v2, "date"
 
-    invoke-virtual {v10, v1, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v11, v2, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v1, "summary"
+    const-string v2, "summary"
 
     move-object/from16 v0, p6
 
-    invoke-virtual {v10, v1, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v11, v2, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v1, "indexs"
+    const-string v2, "indexs"
 
     move-object/from16 v0, p7
 
-    invoke-virtual {v10, v1, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v11, v2, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v1, "data"
+    const-string v2, "data"
 
-    invoke-virtual {v10, v1, p3}, Landroid/content/ContentValues;->put(Ljava/lang/String;[B)V
+    invoke-virtual {v11, v2, p3}, Landroid/content/ContentValues;->put(Ljava/lang/String;[B)V
 
-    const-string v1, "sync"
+    const-string v2, "sync"
 
     invoke-static/range {p5 .. p5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v10, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+    invoke-virtual {v11, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    const-string v4, "date=? AND type=? AND source=?"
+    const-string v5, "date=? AND type=? AND source=?"
 
-    const/4 v1, 0x3
+    const/4 v2, 0x3
 
-    new-array v5, v1, [Ljava/lang/String;
+    new-array v6, v2, [Ljava/lang/String;
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    aput-object p2, v5, v1
+    aput-object p2, v6, v2
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, ""
+    const-string v4, ""
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {p4}, Lcn/com/smartdevices/bracelet/q;->b()I
+    invoke-virtual/range {p4 .. p4}, Lcn/com/smartdevices/bracelet/q;->b()I
 
-    move-result v3
+    move-result v4
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    aput-object v2, v5, v1
+    aput-object v3, v6, v2
 
-    const/4 v1, 0x2
+    const/4 v2, 0x2
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, ""
+    const-string v4, ""
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {p4}, Lcn/com/smartdevices/bracelet/q;->a()I
+    invoke-virtual/range {p4 .. p4}, Lcn/com/smartdevices/bracelet/q;->a()I
 
-    move-result v3
+    move-result v4
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v3
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
-    aput-object v2, v5, v1
+    aput-object v3, v6, v2
 
-    const/4 v9, 0x0
+    const/4 v10, 0x0
 
     :try_start_0
-    const-string v2, "date_data"
+    const-string v3, "date_data"
 
-    const/4 v3, 0x0
-
-    const/4 v6, 0x0
+    const/4 v4, 0x0
 
     const/4 v7, 0x0
 
     const/4 v8, 0x0
 
-    move-object v1, p1
+    const/4 v9, 0x0
 
-    invoke-virtual/range {v1 .. v8}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    move-object v2, p1
+
+    invoke-virtual/range {v2 .. v9}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-object v2
+    move-result-object v3
 
-    if-eqz v2, :cond_2
+    if-eqz v3, :cond_2
 
     :try_start_1
-    invoke-interface {v2}, Landroid/database/Cursor;->getCount()I
+    invoke-interface {v3}, Landroid/database/Cursor;->getCount()I
 
-    move-result v1
+    move-result v2
 
-    if-lez v1, :cond_2
+    if-lez v2, :cond_2
 
-    const-string v1, "date_data"
+    const-string v2, "date_data"
 
-    invoke-virtual {p1, v1, v10, v4, v5}, Landroid/database/sqlite/SQLiteDatabase;->update(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-virtual {p1, v2, v11, v5, v6}, Landroid/database/sqlite/SQLiteDatabase;->update(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    move-result v1
+    move-result v2
 
-    if-lez v1, :cond_1
+    if-lez v2, :cond_1
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
     :goto_0
-    if-eqz v2, :cond_0
+    if-eqz v3, :cond_0
 
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
+    invoke-interface {v3}, Landroid/database/Cursor;->close()V
 
     :cond_0
     :goto_1
-    return v1
+    return v2
 
     :cond_1
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
     goto :goto_0
 
     :cond_2
     :try_start_2
-    const-string v1, "date_data"
+    const-string v2, "date_data"
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
-    invoke-virtual {p1, v1, v3, v10}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
+    invoke-virtual {p1, v2, v4, v11}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    move-result-wide v3
+    move-result-wide v4
 
-    const-wide/16 v5, 0x0
+    const-wide/16 v6, 0x0
 
-    cmp-long v1, v3, v5
+    cmp-long v2, v4, v6
 
-    if-lez v1, :cond_3
+    if-lez v2, :cond_3
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
     :goto_2
-    if-eqz v2, :cond_0
+    if-eqz v3, :cond_0
 
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
+    invoke-interface {v3}, Landroid/database/Cursor;->close()V
 
     goto :goto_1
 
     :cond_3
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
     goto :goto_2
 
     :catchall_0
-    move-exception v1
+    move-exception v2
 
-    move-object v2, v9
+    move-object v3, v10
 
     :goto_3
-    if-eqz v2, :cond_4
+    if-eqz v3, :cond_4
 
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
+    invoke-interface {v3}, Landroid/database/Cursor;->close()V
 
     :cond_4
-    throw v1
+    throw v2
 
     :catchall_1
-    move-exception v1
+    move-exception v2
 
     goto :goto_3
 .end method
@@ -1593,7 +1593,7 @@
             "(",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/open/e;",
+            "Lcn/com/smartdevices/bracelet/open/f;",
             ">;)Z"
         }
     .end annotation
@@ -1639,9 +1639,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/open/e;
+    check-cast v0, Lcn/com/smartdevices/bracelet/open/f;
 
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/db/r;->a(Lcn/com/smartdevices/bracelet/open/e;)Landroid/content/ContentValues;
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/db/r;->a(Lcn/com/smartdevices/bracelet/open/f;)Landroid/content/ContentValues;
 
     move-result-object v0
 
@@ -2467,7 +2467,7 @@
             "()",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/open/e;",
+            "Lcn/com/smartdevices/bracelet/open/f;",
             ">;"
         }
     .end annotation
@@ -2559,7 +2559,7 @@
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
     :cond_0
-    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/db/r;->a(Landroid/database/Cursor;)Lcn/com/smartdevices/bracelet/open/e;
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/db/r;->a(Landroid/database/Cursor;)Lcn/com/smartdevices/bracelet/open/f;
 
     move-result-object v1
 

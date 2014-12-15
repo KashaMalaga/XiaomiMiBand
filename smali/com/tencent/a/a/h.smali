@@ -358,7 +358,7 @@
 .end method
 
 .method public a(J)Ljava/io/File;
-    .locals 4
+    .locals 5
 
     new-instance v0, Ljava/io/File;
 
@@ -478,7 +478,7 @@
 .end method
 
 .method public b(J)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcom/tencent/a/a/h;->g:J
 
@@ -522,7 +522,7 @@
 .end method
 
 .method public c(J)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcom/tencent/a/a/h;->k:J
 

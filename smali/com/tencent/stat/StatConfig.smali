@@ -174,7 +174,7 @@
 .end method
 
 .method static checkHibernate(Lorg/json/JSONObject;)V
-    .locals 5
+    .locals 6
 
     :try_start_0
     sget-object v0, Lcom/tencent/stat/StatConfig;->HIBERNATE:Ljava/lang/String;
@@ -219,25 +219,25 @@
 
     invoke-static {v0}, Lcom/tencent/stat/common/StatCommonHelper;->getSDKLongVersion(Ljava/lang/String;)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    const-string v3, "1.0.0"
+    const-string v1, "1.0.0"
 
-    invoke-static {v3}, Lcom/tencent/stat/common/StatCommonHelper;->getSDKLongVersion(Ljava/lang/String;)J
+    invoke-static {v1}, Lcom/tencent/stat/common/StatCommonHelper;->getSDKLongVersion(Ljava/lang/String;)J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    cmp-long v3, v3, v1
+    cmp-long v1, v4, v2
 
-    if-gtz v3, :cond_0
+    if-gtz v1, :cond_0
 
     invoke-static {}, Lcom/tencent/stat/StatDispatcher;->getApplicationContext()Landroid/content/Context;
 
-    move-result-object v3
+    move-result-object v1
 
     sget-object v4, Lcom/tencent/stat/StatConfig;->HIBERNATE:Ljava/lang/String;
 
-    invoke-static {v3, v4, v1, v2}, Lcom/tencent/stat/common/StatPreferences;->putLong(Landroid/content/Context;Ljava/lang/String;J)V
+    invoke-static {v1, v4, v2, v3}, Lcom/tencent/stat/common/StatPreferences;->putLong(Landroid/content/Context;Ljava/lang/String;J)V
 
     const/4 v1, 0x0
 

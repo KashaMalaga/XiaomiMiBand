@@ -39,9 +39,9 @@
 
     new-instance v0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$UserInfo;
 
-    iget-wide v1, p1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->uid:J
+    iget-wide v2, p1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->uid:J
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     iget v2, p1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->gender:I
 

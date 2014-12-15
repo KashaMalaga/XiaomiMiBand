@@ -1,24 +1,19 @@
-.class final Lcn/com/smartdevices/bracelet/gps/model/e;
+.class public Lcn/com/smartdevices/bracelet/gps/model/e;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Landroid/os/Parcelable$Creator;
 
+# instance fields
+.field public a:Ljava/lang/String;
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Landroid/os/Parcelable$Creator",
-        "<",
-        "Lcn/com/smartdevices/bracelet/gps/model/RunningReminderInfo;",
-        ">;"
-    }
-.end annotation
+.field public b:Ljava/lang/String;
+
+.field public c:Ljava/lang/String;
+
+.field public d:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -28,56 +23,68 @@
 
 
 # virtual methods
-.method public a(Landroid/os/Parcel;)Lcn/com/smartdevices/bracelet/gps/model/RunningReminderInfo;
+.method public toString()Ljava/lang/String;
     .locals 2
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/model/RunningReminderInfo;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/gps/model/RunningReminderInfo;-><init>()V
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    const-string v1, "RunningPace [kilometer="
 
-    move-result v1
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/model/RunningReminderInfo;->c(I)V
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/model/RunningReminderInfo;->b(I)V
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/model/RunningReminderInfo;->a(I)V
-
-    return-object v0
-.end method
-
-.method public a(I)[Lcn/com/smartdevices/bracelet/gps/model/RunningReminderInfo;
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/gps/model/e;->a(Landroid/os/Parcel;)Lcn/com/smartdevices/bracelet/gps/model/RunningReminderInfo;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/model/e;->a:Ljava/lang/String;
 
-.method public synthetic newArray(I)[Ljava/lang/Object;
-    .locals 1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/gps/model/e;->a(I)[Lcn/com/smartdevices/bracelet/gps/model/RunningReminderInfo;
+    move-result-object v0
+
+    const-string v1, ", costTime="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/model/e;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", pace="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/model/e;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", speed="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/model/e;->d:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "]"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

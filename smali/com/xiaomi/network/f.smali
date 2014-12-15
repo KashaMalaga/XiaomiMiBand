@@ -1482,9 +1482,9 @@
 
     if-eqz v0, :cond_3
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    iput-wide v1, p0, Lcom/xiaomi/network/f;->g:J
+    iput-wide v2, p0, Lcom/xiaomi/network/f;->g:J
 
     goto :goto_0
 
@@ -2691,38 +2691,30 @@
 
     invoke-virtual {v2}, Lcom/xiaomi/network/a;->b()J
 
-    move-result-wide v19
+    move-result-wide v20
 
-    add-long v4, v4, v19
+    add-long v4, v4, v20
 
     int-to-long v0, v3
 
-    move-wide/from16 v19, v0
+    move-wide/from16 v20, v0
 
     invoke-virtual {v2}, Lcom/xiaomi/network/a;->d()J
 
     move-result-wide v2
 
-    add-long v2, v2, v19
+    add-long v2, v2, v20
 
     long-to-int v2, v2
 
-    move-wide/from16 v21, v4
-
-    move-wide/from16 v3, v21
-
-    move v5, v6
+    move v3, v6
 
     move v6, v7
 
     :goto_4
     move v7, v6
 
-    move v6, v5
-
-    move-wide/from16 v21, v3
-
-    move-wide/from16 v4, v21
+    move v6, v3
 
     move v3, v2
 
@@ -2773,13 +2765,11 @@
 
     move v6, v7
 
-    move-wide/from16 v21, v4
-
-    move v5, v2
+    move/from16 v22, v2
 
     move v2, v3
 
-    move-wide/from16 v3, v21
+    move/from16 v3, v22
 
     goto :goto_4
 

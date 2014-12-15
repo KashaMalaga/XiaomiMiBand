@@ -499,7 +499,7 @@ end
 function showNotBindedWithSensorHub(listDao, ConfigInfo)
     log("---------------showNotBindedWithSensorHub")
 
-    t1 = "欢迎使用小米健康"
+    t1 = getString('welcome_use_mi_health')
     t2 = ""
     stype = TYPE_WELCOME_WITH_SENSORHUB_NOT_BIND_1
 
@@ -510,8 +510,8 @@ function showNotBindedWithSensorHub(listDao, ConfigInfo)
 
     uniqueMsg(listDao,ConfigInfo,t)
 
-    t.t1 = "已经拥有小米手环？"
-    t.t2 = "也可以通过右上角菜单点击智能设备绑定"
+    t.t1 = getString('not_binded_hint')
+    t.t2 = getString('not_binded_hint_info')
     t.stype = TYPE_WELCOME_WITH_SENSORHUB_NOT_BIND
 
     t.strScript = "function doAction(context, luaAction) \
@@ -1371,6 +1371,25 @@ function notFoud(listDao,ConfigInfo)
     t.stype = "5003"
     replaceMsgByType(listDao,ConfigInfo,t)
 end
+
+
+
+--5004
+function braceletdisconnect(listDao,ConfigInfo)
+
+    strScript = "function doAction(context, luaAction) \
+        local intent = luaAction:getIntentFromString('cn.com.smartdevices.bracelet.ui.HelpActivity');\
+        context:startActivity(intent)\
+    end"
+
+    t = {}
+    t.t1 = getString('bracelet_disconnect')
+    t.t2 = ""
+    t.index = "5004"
+    t.strScript = strScript
+    t.stype = "5004"
+    uniqueMsg(listDao,ConfigInfo,t)
+end
 ---------------------------------------------------
 --
 -- Function Tables (should below Function definitions
@@ -1410,6 +1429,7 @@ callbacks = {
     {index = 5001,func = batteryLow},
     {index = 5002,func = batteryVeryLow},
     {index = 5003,func = notFoud},
+    {index = 5004,func = braceletdisconnect},
 
     -- Weather
     -- 6001
@@ -1533,6 +1553,10 @@ function getSysInfoMsgs(listDao,ConfigInfo)
     if true == ConfigInfo:getShowNoFound() then
         notFoud(listDao,ConfigInfo)
     end
+
+    if false == ConfigInfo:getConnecteStatus() then
+        braceletdisconnect(listDao, ConfigInfo)
+    end
 end
 
 
@@ -1554,9 +1578,9 @@ function testAddItem(listDao)
     t.stype = "0001"
     t.index = "0001"
     t.right = ""..r
-
     setMessage(listDao,t)
 end
+
 function doAction2(context,luaAction,listDao)
 	log('xxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
     testAddItem(listDao)

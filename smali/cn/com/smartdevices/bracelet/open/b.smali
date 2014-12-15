@@ -12,3 +12,7 @@
 .field public static final d:Ljava/lang/String; = "bind"
 
 .field public static final e:Ljava/lang/String; = "appid"
+
+.field public static final f:Ljava/lang/String; = "check_app_installed"
+
+.field public static final g:Ljava/lang/String; = "package"

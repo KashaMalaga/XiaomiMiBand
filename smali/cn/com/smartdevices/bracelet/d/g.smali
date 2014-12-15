@@ -26,7 +26,7 @@
 
     invoke-static {p1, v0}, Lcn/com/smartdevices/bracelet/d/g;->b(Landroid/content/Context;Ljava/lang/String;)V
 
-    const v0, 0x7f0c0295
+    const v0, 0x7f0c02a8
 
     const/4 v1, 0x1
 

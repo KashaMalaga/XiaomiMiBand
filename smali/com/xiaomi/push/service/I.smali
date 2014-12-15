@@ -36,7 +36,7 @@
 .end method
 
 .method private static a(Lcom/xiaomi/push/service/XMPushService;[BJ)V
-    .locals 11
+    .locals 12
 
     const/4 v10, 0x1
 
@@ -859,7 +859,7 @@
 .end method
 
 .method public a(Lcom/xiaomi/push/service/XMPushService;Lcom/xiaomi/f/c/e;Lcom/xiaomi/push/service/U;)V
-    .locals 3
+    .locals 4
 
     instance-of v0, p2, Lcom/xiaomi/f/c/d;
 
@@ -904,9 +904,9 @@
 
     move-result v1
 
-    int-to-long v1, v1
+    int-to-long v2, v1
 
-    invoke-static {p1, v0, v1, v2}, Lcom/xiaomi/push/service/I;->a(Lcom/xiaomi/push/service/XMPushService;[BJ)V
+    invoke-static {p1, v0, v2, v3}, Lcom/xiaomi/push/service/I;->a(Lcom/xiaomi/push/service/XMPushService;[BJ)V
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 

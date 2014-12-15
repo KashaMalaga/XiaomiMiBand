@@ -24,7 +24,7 @@
 
     instance-of v0, p1, Ljava/lang/Integer;
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_1
 
     check-cast p1, Ljava/lang/Integer;
 
@@ -73,48 +73,16 @@
 
     :cond_0
     monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     :cond_1
-    const-string v0, "Run"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "load from mili mStepOfCurSection = "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/services/z;->b:Lcn/com/smartdevices/bracelet/gps/services/x;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/gps/services/x;->d(Lcn/com/smartdevices/bracelet/gps/services/x;)I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/services/h;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_2
     return-void
 
     :catchall_0
     move-exception v0
 
-    :try_start_1
     monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw v0
 .end method

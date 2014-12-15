@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/b;->a:Lcn/com/smartdevices/bracelet/f/a;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/a;->e()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/a;->f()V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/b;->a:Lcn/com/smartdevices/bracelet/f/a;
 

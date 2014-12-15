@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/amap/api/maps/AMap$InfoWindowAdapter;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
@@ -22,18 +22,20 @@
 
 
 # virtual methods
-.method public getInfoContents(Lcom/amap/api/maps/model/Marker;)Landroid/view/View;
-    .locals 1
+.method public run()V
+    .locals 2
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcom/amap/api/mapcore/b$6;->a:Lcom/amap/api/mapcore/b;
 
-    return-object v0
-.end method
+    iget-object v0, v0, Lcom/amap/api/mapcore/b;->i:Landroid/os/Handler;
 
-.method public getInfoWindow(Lcom/amap/api/maps/model/Marker;)Landroid/view/View;
-    .locals 1
+    const/16 v1, 0x13
 
-    const/4 v0, 0x0
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
 
-    return-object v0
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
+
+    return-void
 .end method

@@ -70,11 +70,11 @@
 .end method
 
 .method public constructor <init>(Ljava/lang/String;I)V
-    .locals 5
+    .locals 6
 
-    const-wide v3, 0x7fefffffffffffffL
+    const-wide v4, 0x7fefffffffffffffL
 
-    const-wide v1, -0x10000000000001L
+    const-wide v2, -0x10000000000001L
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -84,13 +84,13 @@
 
     iput-object v0, p0, Lorg/achartengine/b/h;->b:Lorg/achartengine/e/a;
 
-    iput-wide v3, p0, Lorg/achartengine/b/h;->c:D
+    iput-wide v4, p0, Lorg/achartengine/b/h;->c:D
 
-    iput-wide v1, p0, Lorg/achartengine/b/h;->d:D
+    iput-wide v2, p0, Lorg/achartengine/b/h;->d:D
 
-    iput-wide v3, p0, Lorg/achartengine/b/h;->e:D
+    iput-wide v4, p0, Lorg/achartengine/b/h;->e:D
 
-    iput-wide v1, p0, Lorg/achartengine/b/h;->f:D
+    iput-wide v2, p0, Lorg/achartengine/b/h;->f:D
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -114,7 +114,7 @@
 .end method
 
 .method private b(DD)V
-    .locals 2
+    .locals 3
 
     iget-wide v0, p0, Lorg/achartengine/b/h;->c:D
 
@@ -204,7 +204,7 @@
 .end method
 
 .method public a(D)I
-    .locals 2
+    .locals 3
 
     iget-object v0, p0, Lorg/achartengine/b/h;->b:Lorg/achartengine/e/a;
 
@@ -483,7 +483,7 @@
 .end method
 
 .method public declared-synchronized a(IDD)V
-    .locals 3
+    .locals 4
 
     monitor-enter p0
 
@@ -547,7 +547,7 @@
 .end method
 
 .method public a(Ljava/lang/String;DD)V
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lorg/achartengine/b/h;->i:Ljava/util/List;
 

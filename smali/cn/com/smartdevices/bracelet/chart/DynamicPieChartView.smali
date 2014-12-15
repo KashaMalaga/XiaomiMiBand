@@ -14,15 +14,15 @@
 
 
 # static fields
-.field private static final l:Ljava/lang/String; = "Chart.DynamicPieChartView"
+.field private static final m:Ljava/lang/String; = "Chart.DynamicPieChartView"
 
 
 # instance fields
-.field private m:J
-
 .field private n:J
 
-.field private o:Landroid/animation/Animator;
+.field private o:J
+
+.field private p:Landroid/animation/Animator;
 
 
 # direct methods
@@ -61,11 +61,11 @@
 
     invoke-direct {v0}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->h:Landroid/view/animation/Interpolator;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->i:Landroid/view/animation/Interpolator;
 
     const-wide/16 v0, 0x1
 
-    iput-wide v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->i:J
+    iput-wide v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->j:J
 
     return-void
 .end method
@@ -107,9 +107,9 @@
 
     const/high16 v1, 0x3f800000
 
-    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->n:J
+    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->o:J
 
-    iget-wide v4, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->m:J
+    iget-wide v4, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->n:J
 
     sub-long/2addr v2, v4
 
@@ -136,21 +136,21 @@
     move v0, v1
 
     :cond_0
-    const-wide/high16 v1, 0x4089000000000000L
+    const-wide/high16 v2, 0x4089000000000000L
 
-    float-to-double v3, v0
+    float-to-double v0, v0
 
-    invoke-static {v3, v4}, Ljava/lang/Math;->sqrt(D)D
+    invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
 
-    move-result-wide v3
+    move-result-wide v0
 
-    mul-double v0, v1, v3
+    mul-double/2addr v0, v2
 
     double-to-long v0, v0
 
-    iput-wide v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->i:J
+    iput-wide v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->j:J
 
-    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->i:J
+    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->j:J
 
     const-wide/16 v2, 0x0
 
@@ -160,30 +160,22 @@
 
     const-wide/16 v0, 0x1
 
-    iput-wide v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->i:J
+    iput-wide v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->j:J
 
     :cond_1
-    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->i:J
+    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->j:J
 
     invoke-virtual {p0, v0, v1}, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->d(J)Landroid/animation/Animator;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->k:Landroid/animation/Animator;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->l:Landroid/animation/Animator;
 
     return-void
 .end method
 
-.method static synthetic e(Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;)Lcn/com/smartdevices/bracelet/chart/base/g;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
-
-    return-object v0
-.end method
-
-.method private i()Landroid/animation/Animator;
-    .locals 3
+.method private e()Landroid/animation/Animator;
+    .locals 4
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "NewApi"
@@ -212,9 +204,9 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    const-wide/16 v1, 0xdac
+    const-wide/16 v2, 0xdac
 
-    invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+    invoke-virtual {v0, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     new-instance v1, Landroid/view/animation/LinearInterpolator;
 
@@ -237,6 +229,14 @@
         0x0
         0x3f800000
     .end array-data
+.end method
+
+.method static synthetic e(Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;)Lcn/com/smartdevices/bracelet/chart/base/g;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
+
+    return-object v0
 .end method
 
 
@@ -270,11 +270,11 @@
 .method public b()V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->o:Landroid/animation/Animator;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->p:Landroid/animation/Animator;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->o:Landroid/animation/Animator;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->p:Landroid/animation/Animator;
 
     invoke-virtual {v0}, Landroid/animation/Animator;->end()V
 
@@ -283,9 +283,9 @@
 .end method
 
 .method public b(J)V
-    .locals 0
+    .locals 1
 
-    iput-wide p1, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->n:J
+    iput-wide p1, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->o:J
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->d()V
 
@@ -303,20 +303,20 @@
 .end method
 
 .method public c(J)V
-    .locals 2
+    .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->o:Landroid/animation/Animator;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->p:Landroid/animation/Animator;
 
     if-nez v0, :cond_0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->i()Landroid/animation/Animator;
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->e()Landroid/animation/Animator;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->o:Landroid/animation/Animator;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->p:Landroid/animation/Animator;
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->o:Landroid/animation/Animator;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->p:Landroid/animation/Animator;
 
     invoke-virtual {v0}, Landroid/animation/Animator;->isStarted()Z
 
@@ -330,12 +330,12 @@
 
     if-lez v0, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->o:Landroid/animation/Animator;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->p:Landroid/animation/Animator;
 
     invoke-virtual {v0, p1, p2}, Landroid/animation/Animator;->setStartDelay(J)V
 
     :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->o:Landroid/animation/Animator;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->p:Landroid/animation/Animator;
 
     invoke-virtual {v0}, Landroid/animation/Animator;->start()V
 
@@ -348,35 +348,35 @@
 
     const/high16 v6, 0x3f800000
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->j:F
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->k:F
 
     cmpg-float v0, v0, v6
 
     if-gez v0, :cond_0
 
-    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->m:J
+    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->n:J
 
-    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->n:J
+    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->o:J
 
-    iget-wide v4, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->m:J
+    iget-wide v4, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->n:J
 
     sub-long/2addr v2, v4
 
     long-to-float v2, v2
 
-    iget v3, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->j:F
+    iget v3, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->k:F
 
     mul-float/2addr v2, v3
 
     float-to-long v2, v2
 
-    add-long v1, v0, v2
+    add-long/2addr v2, v0
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
 
     check-cast v0, Lcn/com/smartdevices/bracelet/chart/p;
 
-    long-to-float v1, v1
+    long-to-float v1, v2
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/p;->b(F)V
 
@@ -390,13 +390,13 @@
     return-void
 
     :cond_0
-    iget-wide v1, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->n:J
+    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->o:J
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
 
     check-cast v0, Lcn/com/smartdevices/bracelet/chart/p;
 
-    long-to-float v1, v1
+    long-to-float v1, v2
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/p;->b(F)V
 
@@ -404,7 +404,7 @@
 
     check-cast v0, Lcn/com/smartdevices/bracelet/chart/p;
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->j:F
+    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->k:F
 
     invoke-virtual {v0, p1, v1}, Lcn/com/smartdevices/bracelet/chart/p;->a(Landroid/graphics/Canvas;F)V
 

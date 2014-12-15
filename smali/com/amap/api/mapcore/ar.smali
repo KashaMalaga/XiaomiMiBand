@@ -602,13 +602,13 @@
 
     if-eqz p1, :cond_1
 
-    const/4 v6, 0x0
+    const/4 v0, 0x0
 
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v8
 
-    move-object v1, v6
+    move-object v1, v0
 
     :cond_0
     :goto_0
@@ -622,37 +622,35 @@
 
     move-result-object v0
 
-    move-object v6, v0
+    check-cast v0, Lcom/amap/api/maps/model/LatLng;
 
-    check-cast v6, Lcom/amap/api/maps/model/LatLng;
+    if-eqz v0, :cond_0
 
-    if-eqz v6, :cond_0
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/model/LatLng;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v6, v1}, Lcom/amap/api/maps/model/LatLng;->equals(Ljava/lang/Object;)Z
+    move-result v2
 
-    move-result v0
+    if-nez v2, :cond_0
 
-    if-nez v0, :cond_0
+    new-instance v6, Lcom/autonavi/amap/mapcore/IPoint;
 
-    new-instance v5, Lcom/autonavi/amap/mapcore/IPoint;
+    invoke-direct {v6}, Lcom/autonavi/amap/mapcore/IPoint;-><init>()V
 
-    invoke-direct {v5}, Lcom/autonavi/amap/mapcore/IPoint;-><init>()V
+    iget-object v1, p0, Lcom/amap/api/mapcore/ar;->j:Lcom/amap/api/mapcore/v;
 
-    iget-object v0, p0, Lcom/amap/api/mapcore/ar;->j:Lcom/amap/api/mapcore/v;
+    iget-wide v2, v0, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
-    iget-wide v1, v6, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v4, v0, Lcom/amap/api/maps/model/LatLng;->longitude:D
 
-    iget-wide v3, v6, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    invoke-interface/range {v1 .. v6}, Lcom/amap/api/mapcore/v;->a(DDLcom/autonavi/amap/mapcore/IPoint;)V
 
-    invoke-interface/range {v0 .. v5}, Lcom/amap/api/mapcore/v;->a(DDLcom/autonavi/amap/mapcore/IPoint;)V
+    iget-object v1, p0, Lcom/amap/api/mapcore/ar;->q:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    iget-object v0, p0, Lcom/amap/api/mapcore/ar;->q:Ljava/util/concurrent/CopyOnWriteArrayList;
+    invoke-virtual {v1, v6}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v5}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v7, v0}, Lcom/amap/api/maps/model/LatLngBounds$Builder;->include(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/LatLngBounds$Builder;
 
-    invoke-virtual {v7, v6}, Lcom/amap/api/maps/model/LatLngBounds$Builder;->include(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/LatLngBounds$Builder;
-
-    move-object v1, v6
+    move-object v1, v0
 
     goto :goto_0
 

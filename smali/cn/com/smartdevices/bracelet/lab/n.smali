@@ -142,7 +142,7 @@
 .end method
 
 .method public static a(Landroid/content/Context;)Ljava/util/List;
-    .locals 7
+    .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -155,15 +155,15 @@
         }
     .end annotation
 
-    const/4 v6, 0x1
+    const/4 v7, 0x1
 
-    const/4 v3, 0x0
+    const/4 v6, 0x0
 
     if-nez p0, :cond_1
 
     new-instance v0, Ljava/util/ArrayList;
 
-    invoke-direct {v0, v3}, Ljava/util/ArrayList;-><init>(I)V
+    invoke-direct {v0, v6}, Ljava/util/ArrayList;-><init>(I)V
 
     :cond_0
     :goto_0
@@ -188,25 +188,13 @@
 
     if-nez v2, :cond_3
 
-    const v2, 0x7f0c025b
+    const v2, 0x7f0c0268
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v0, v3, v2}, Lcn/com/smartdevices/bracelet/lab/n;->a(Ljava/util/List;ILjava/lang/String;)V
-
-    sget-object v2, Lcn/com/smartdevices/bracelet/lab/n;->k:[Ljava/lang/String;
-
-    aget-object v2, v2, v3
-
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/lab/n;->a(Ljava/util/List;Ljava/lang/String;)V
-
-    sget-object v2, Lcn/com/smartdevices/bracelet/lab/n;->k:[Ljava/lang/String;
-
-    aget-object v2, v2, v6
-
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/lab/n;->a(Ljava/util/List;Ljava/lang/String;)V
+    invoke-static {v0, v6, v2}, Lcn/com/smartdevices/bracelet/lab/n;->a(Ljava/util/List;ILjava/lang/String;)V
 
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -229,19 +217,31 @@
     :cond_2
     sget-object v2, Lcn/com/smartdevices/bracelet/lab/n;->k:[Ljava/lang/String;
 
+    aget-object v2, v2, v6
+
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/lab/n;->a(Ljava/util/List;Ljava/lang/String;)V
+
+    sget-object v2, Lcn/com/smartdevices/bracelet/lab/n;->k:[Ljava/lang/String;
+
+    aget-object v2, v2, v7
+
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/lab/n;->a(Ljava/util/List;Ljava/lang/String;)V
+
+    sget-object v2, Lcn/com/smartdevices/bracelet/lab/n;->k:[Ljava/lang/String;
+
     const/4 v3, 0x3
 
     aget-object v2, v2, v3
 
     invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/lab/n;->a(Ljava/util/List;Ljava/lang/String;)V
 
-    const v2, 0x7f0c025c
+    const v2, 0x7f0c0269
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v6, v1}, Lcn/com/smartdevices/bracelet/lab/n;->a(Ljava/util/List;ILjava/lang/String;)V
+    invoke-static {v0, v7, v1}, Lcn/com/smartdevices/bracelet/lab/n;->a(Ljava/util/List;ILjava/lang/String;)V
 
     :cond_3
     sget-object v1, Lcn/com/smartdevices/bracelet/lab/n;->k:[Ljava/lang/String;
@@ -524,7 +524,7 @@
     :catch_0
     move-exception v1
 
-    const v1, 0x7f0c0218
+    const v1, 0x7f0c0225
 
     invoke-static {p0, v1, v0}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 

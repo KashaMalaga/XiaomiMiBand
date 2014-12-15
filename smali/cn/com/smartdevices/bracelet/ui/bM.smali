@@ -36,7 +36,7 @@
 .method private a(Landroid/view/View;)V
     .locals 1
 
-    const v0, 0x7f070164
+    const v0, 0x7f0b0172
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -44,7 +44,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bM;->c:Landroid/view/View;
 
-    const v0, 0x7f070167
+    const v0, 0x7f0b0175
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -52,7 +52,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bM;->g:Landroid/view/View;
 
-    const v0, 0x7f07016a
+    const v0, 0x7f0b0178
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -60,7 +60,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bM;->h:Landroid/view/View;
 
-    const v0, 0x7f07016d
+    const v0, 0x7f0b017b
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -68,7 +68,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bM;->f:Landroid/view/View;
 
-    const v0, 0x7f070165
+    const v0, 0x7f0b0173
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -78,7 +78,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bM;->i:Landroid/widget/TextView;
 
-    const v0, 0x7f070168
+    const v0, 0x7f0b0176
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -88,7 +88,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bM;->l:Landroid/widget/TextView;
 
-    const v0, 0x7f07016b
+    const v0, 0x7f0b0179
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -98,7 +98,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bM;->k:Landroid/widget/TextView;
 
-    const v0, 0x7f07016e
+    const v0, 0x7f0b017c
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -108,7 +108,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bM;->j:Landroid/widget/TextView;
 
-    const v0, 0x7f070163
+    const v0, 0x7f0b0171
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -116,7 +116,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070166
+    const v0, 0x7f0b0174
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -124,7 +124,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070169
+    const v0, 0x7f0b0177
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -132,7 +132,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f07016c
+    const v0, 0x7f0b017a
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -146,9 +146,9 @@
 .method private f()V
     .locals 5
 
-    const v4, 0x7f080010
+    const v4, 0x7f070010
 
-    const v3, 0x7f08000c
+    const v3, 0x7f07000c
 
     const/4 v1, 0x4
 
@@ -357,7 +357,7 @@
 .method protected a()I
     .locals 1
 
-    const v0, 0x7f03004c
+    const v0, 0x7f03004e
 
     return v0
 .end method
@@ -383,13 +383,13 @@
 
     :cond_0
     :goto_0
-    new-instance v1, Lcn/com/smartdevices/bracelet/a/m;
+    new-instance v1, Lcn/com/smartdevices/bracelet/a/n;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, v2, v0}, Lcn/com/smartdevices/bracelet/a/m;-><init>(Lcn/com/smartdevices/bracelet/a/b;I)V
+    invoke-direct {v1, v2, v0}, Lcn/com/smartdevices/bracelet/a/n;-><init>(Lcn/com/smartdevices/bracelet/a/b;I)V
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/a/m;->c()V
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/a/n;->c()V
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/bM;->f()V
 
@@ -553,10 +553,10 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f070163 -> :sswitch_0
-        0x7f070166 -> :sswitch_1
-        0x7f070169 -> :sswitch_2
-        0x7f07016c -> :sswitch_3
+        0x7f0b0171 -> :sswitch_0
+        0x7f0b0174 -> :sswitch_1
+        0x7f0b0177 -> :sswitch_2
+        0x7f0b017a -> :sswitch_3
     .end sparse-switch
 .end method
 

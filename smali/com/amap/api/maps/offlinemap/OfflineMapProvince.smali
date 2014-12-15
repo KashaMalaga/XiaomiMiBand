@@ -55,7 +55,7 @@
 .method public constructor <init>(Landroid/os/Parcel;)V
     .locals 2
 
-    invoke-direct {p0}, Lcom/amap/api/maps/offlinemap/Province;-><init>()V
+    invoke-direct {p0, p1}, Lcom/amap/api/maps/offlinemap/Province;-><init>(Landroid/os/Parcel;)V
 
     const/4 v0, 0x0
 
@@ -153,7 +153,7 @@
 .end method
 
 .method public setSize(J)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->c:J
 
@@ -186,6 +186,8 @@
 
 .method public writeToParcel(Landroid/os/Parcel;I)V
     .locals 2
+
+    invoke-super {p0, p1, p2}, Lcom/amap/api/maps/offlinemap/Province;->writeToParcel(Landroid/os/Parcel;I)V
 
     iget-object v0, p0, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->a:Ljava/lang/String;
 

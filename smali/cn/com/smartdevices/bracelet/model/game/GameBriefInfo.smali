@@ -491,7 +491,7 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 3
+    .locals 4
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -529,9 +529,9 @@
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;->startTime:I
 
-    int-to-long v1, v1
+    int-to-long v2, v1
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->toDate(J)Ljava/util/Date;
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->toDate(J)Ljava/util/Date;
 
     move-result-object v1
 
@@ -607,9 +607,9 @@
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;->bonusOpenTime:I
 
-    int-to-long v1, v1
+    int-to-long v2, v1
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->toDate(J)Ljava/util/Date;
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->toDate(J)Ljava/util/Date;
 
     move-result-object v1
 
@@ -625,9 +625,9 @@
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;->serverTime:I
 
-    int-to-long v1, v1
+    int-to-long v2, v1
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->toDate(J)Ljava/util/Date;
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->toDate(J)Ljava/util/Date;
 
     move-result-object v1
 

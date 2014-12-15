@@ -92,14 +92,14 @@
 .end method
 
 .method public handleMessage(Landroid/os/Message;)V
-    .locals 8
+    .locals 7
 
-    const/4 v7, 0x0
+    const/4 v6, 0x0
 
     :try_start_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
     :cond_0
     iget-object v0, p0, Lde/greenrobot/event/HandlerPoster;->queue:Lde/greenrobot/event/PendingPostQueue;
@@ -131,7 +131,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    iput-boolean v7, p0, Lde/greenrobot/event/HandlerPoster;->handlerActive:Z
+    iput-boolean v6, p0, Lde/greenrobot/event/HandlerPoster;->handlerActive:Z
 
     :goto_0
     return-void
@@ -144,21 +144,21 @@
 
     :cond_2
     :try_start_3
-    iget-object v3, p0, Lde/greenrobot/event/HandlerPoster;->eventBus:Lde/greenrobot/event/EventBus;
+    iget-object v1, p0, Lde/greenrobot/event/HandlerPoster;->eventBus:Lde/greenrobot/event/EventBus;
 
-    invoke-virtual {v3, v0}, Lde/greenrobot/event/EventBus;->invokeSubscriber(Lde/greenrobot/event/PendingPost;)V
+    invoke-virtual {v1, v0}, Lde/greenrobot/event/EventBus;->invokeSubscriber(Lde/greenrobot/event/PendingPost;)V
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v0
 
-    sub-long/2addr v3, v1
+    sub-long/2addr v0, v2
 
-    iget v0, p0, Lde/greenrobot/event/HandlerPoster;->maxMillisInsideHandleMessage:I
+    iget v4, p0, Lde/greenrobot/event/HandlerPoster;->maxMillisInsideHandleMessage:I
 
-    int-to-long v5, v0
+    int-to-long v4, v4
 
-    cmp-long v0, v3, v5
+    cmp-long v0, v0, v4
 
     if-ltz v0, :cond_0
 
@@ -185,7 +185,7 @@
     :catchall_0
     move-exception v0
 
-    iput-boolean v7, p0, Lde/greenrobot/event/HandlerPoster;->handlerActive:Z
+    iput-boolean v6, p0, Lde/greenrobot/event/HandlerPoster;->handlerActive:Z
 
     throw v0
 

@@ -88,17 +88,17 @@
 
     const/4 v2, 0x0
 
-    const/4 v5, 0x0
+    const/4 v3, 0x0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v5, p0, Lcom/a/m;->a:Landroid/content/Context;
+    iput-object v3, p0, Lcom/a/m;->a:Landroid/content/Context;
 
-    iput-object v5, p0, Lcom/a/m;->b:Landroid/telephony/TelephonyManager;
+    iput-object v3, p0, Lcom/a/m;->b:Landroid/telephony/TelephonyManager;
 
-    iput-object v5, p0, Lcom/a/m;->c:Landroid/location/LocationManager;
+    iput-object v3, p0, Lcom/a/m;->c:Landroid/location/LocationManager;
 
-    iput-object v5, p0, Lcom/a/m;->d:Landroid/net/wifi/WifiManager;
+    iput-object v3, p0, Lcom/a/m;->d:Landroid/net/wifi/WifiManager;
 
     const-string v0, ""
 
@@ -118,9 +118,9 @@
 
     iput-boolean v2, p0, Lcom/a/m;->j:Z
 
-    const-wide/16 v3, -0x1
+    const-wide/16 v4, -0x1
 
-    iput-wide v3, p0, Lcom/a/m;->k:J
+    iput-wide v4, p0, Lcom/a/m;->k:J
 
     const-string v0, ""
 
@@ -144,13 +144,13 @@
 
     iput-wide v6, p0, Lcom/a/m;->s:J
 
-    iput-object v5, p0, Lcom/a/m;->u:Lcom/a/o;
+    iput-object v3, p0, Lcom/a/m;->u:Lcom/a/o;
 
-    iput-object v5, p0, Lcom/a/m;->v:Lcom/a/p;
+    iput-object v3, p0, Lcom/a/m;->v:Lcom/a/p;
 
-    iput-object v5, p0, Lcom/a/m;->w:Landroid/telephony/CellLocation;
+    iput-object v3, p0, Lcom/a/m;->w:Landroid/telephony/CellLocation;
 
-    iput-object v5, p0, Lcom/a/m;->x:Lcom/a/q;
+    iput-object v3, p0, Lcom/a/m;->x:Lcom/a/q;
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -158,11 +158,11 @@
 
     iput-object v0, p0, Lcom/a/m;->y:Ljava/util/List;
 
-    iput-object v5, p0, Lcom/a/m;->z:Ljava/util/Timer;
+    iput-object v3, p0, Lcom/a/m;->z:Ljava/util/Timer;
 
-    iput-object v5, p0, Lcom/a/m;->A:Ljava/lang/Thread;
+    iput-object v3, p0, Lcom/a/m;->A:Ljava/lang/Thread;
 
-    iput-object v5, p0, Lcom/a/m;->B:Landroid/os/Looper;
+    iput-object v3, p0, Lcom/a/m;->B:Landroid/os/Looper;
 
     if-nez p1, :cond_1
 
@@ -357,7 +357,7 @@
 .end method
 
 .method static synthetic a(Lcom/a/m;J)J
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcom/a/m;->r:J
 
@@ -707,7 +707,7 @@
 .end method
 
 .method static synthetic b(Lcom/a/m;J)J
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcom/a/m;->s:J
 
@@ -981,7 +981,7 @@
 .end method
 
 .method static synthetic c(Lcom/a/m;J)J
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcom/a/m;->k:J
 
@@ -1131,7 +1131,7 @@
 
     const/4 v8, 0x1
 
-    const/4 v7, 0x0
+    const/4 v3, 0x0
 
     const/high16 v0, 0x3f800000
 
@@ -1141,7 +1141,7 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
     invoke-static {p1}, Ljava/lang/Math;->abs(F)F
 
@@ -1206,7 +1206,7 @@
 
     move-result-object v0
 
-    invoke-interface {v0, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1216,17 +1216,17 @@
 
     move-result-wide v0
 
-    sub-long v0, v3, v0
+    sub-long v0, v4, v0
 
     long-to-double v0, v0
 
-    const-wide v3, 0x40e86a0000000000L
+    const-wide v4, 0x40e86a0000000000L
 
-    float-to-double v5, p1
+    float-to-double v6, p1
 
-    div-double/2addr v3, v5
+    div-double/2addr v4, v6
 
-    cmpg-double v0, v0, v3
+    cmpg-double v0, v0, v4
 
     if-gtz v0, :cond_2
 
@@ -1241,7 +1241,7 @@
     return-object v2
 
     :cond_2
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
@@ -1793,7 +1793,7 @@
 .end method
 
 .method protected final j()Ljava/util/List;
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lcom/a/m;->a:Landroid/content/Context;
 
@@ -1831,9 +1831,9 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iget-wide v1, p0, Lcom/a/m;->s:J
+    iget-wide v2, p0, Lcom/a/m;->s:J
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
 
@@ -2081,75 +2081,71 @@
 .method protected final n()Ljava/util/List;
     .locals 11
 
-    const-wide/16 v6, 0x3e8
+    const-wide/16 v8, 0x3e8
 
-    new-instance v3, Ljava/util/ArrayList;
+    new-instance v4, Ljava/util/ArrayList;
 
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    const-wide/16 v1, -0x1
+    const-wide/16 v2, -0x1
 
     const-string v0, ""
 
     invoke-virtual {p0}, Lcom/a/m;->e()Z
 
-    move-result v4
+    move-result v1
 
-    if-eqz v4, :cond_2
+    if-eqz v1, :cond_2
 
-    iget-wide v1, p0, Lcom/a/m;->k:J
+    iget-wide v2, p0, Lcom/a/m;->k:J
 
     iget-object v0, p0, Lcom/a/m;->l:Ljava/lang/String;
 
-    move-object v8, v0
+    move-object v10, v0
 
-    move-wide v9, v1
+    move-wide v0, v2
 
-    move-wide v0, v9
-
-    move-object v2, v8
+    move-object v2, v10
 
     :goto_0
-    const-wide/16 v4, 0x0
+    const-wide/16 v6, 0x0
 
-    cmp-long v4, v0, v4
+    cmp-long v3, v0, v6
 
-    if-gtz v4, :cond_0
+    if-gtz v3, :cond_0
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    div-long/2addr v0, v6
+    div-long/2addr v0, v8
 
     :cond_0
-    const-wide/32 v4, 0x7fffffff
+    const-wide/32 v6, 0x7fffffff
 
-    cmp-long v4, v0, v4
+    cmp-long v3, v0, v6
 
-    if-lez v4, :cond_1
+    if-lez v3, :cond_1
 
-    div-long/2addr v0, v6
+    div-long/2addr v0, v8
 
     :cond_1
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v4, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v4, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    return-object v3
+    return-object v4
 
     :cond_2
-    move-object v8, v0
+    move-object v10, v0
 
-    move-wide v9, v1
+    move-wide v0, v2
 
-    move-wide v0, v9
-
-    move-object v2, v8
+    move-object v2, v10
 
     goto :goto_0
 .end method

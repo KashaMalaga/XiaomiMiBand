@@ -16,7 +16,7 @@
 .method protected a()I
     .locals 1
 
-    const v0, 0x7f030044
+    const v0, 0x7f030046
 
     return v0
 .end method

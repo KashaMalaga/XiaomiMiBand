@@ -249,7 +249,7 @@
 .end method
 
 .method static synthetic a(Lcom/a/a;J)J
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcom/a/a;->y:J
 
@@ -1040,40 +1040,40 @@
 .end method
 
 .method private a(J)Z
-    .locals 7
+    .locals 9
 
     const/4 v0, 0x0
 
     invoke-static {}, Lcom/a/am;->a()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    sub-long v1, v3, p1
+    sub-long v2, v4, p1
 
-    const-wide/16 v5, 0x12c
+    const-wide/16 v6, 0x12c
 
-    cmp-long v1, v1, v5
+    cmp-long v1, v2, v6
 
     if-gez v1, :cond_1
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    iget-object v5, p0, Lcom/a/a;->v:Lcom/a/K;
+    iget-object v1, p0, Lcom/a/a;->v:Lcom/a/K;
 
-    if-eqz v5, :cond_0
+    if-eqz v1, :cond_0
 
     iget-object v1, p0, Lcom/a/a;->v:Lcom/a/K;
 
     invoke-virtual {v1}, Lcom/a/K;->g()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    sub-long v1, v3, v1
+    sub-long v2, v4, v2
 
     :cond_0
-    const-wide/16 v3, 0x2710
+    const-wide/16 v4, 0x2710
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-lez v1, :cond_2
 
@@ -4573,15 +4573,15 @@
 .end method
 
 .method private p()Z
-    .locals 5
+    .locals 6
 
     const/4 v0, 0x0
 
-    iget-wide v1, p0, Lcom/a/a;->y:J
+    iget-wide v2, p0, Lcom/a/a;->y:J
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-nez v1, :cond_1
 
@@ -4592,15 +4592,15 @@
     :cond_1
     invoke-static {}, Lcom/a/am;->a()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iget-wide v3, p0, Lcom/a/a;->y:J
+    iget-wide v4, p0, Lcom/a/a;->y:J
 
-    sub-long/2addr v1, v3
+    sub-long/2addr v2, v4
 
-    const-wide/16 v3, 0x7d0
+    const-wide/16 v4, 0x7d0
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-gez v1, :cond_0
 
@@ -4718,13 +4718,13 @@
 
     new-array v6, v6, [D
 
-    iget-wide v7, v0, Lcom/a/W;->b:D
+    iget-wide v8, v0, Lcom/a/W;->b:D
 
-    aput-wide v7, v6, v10
+    aput-wide v8, v6, v10
 
-    iget-wide v7, v0, Lcom/a/W;->a:D
+    iget-wide v8, v0, Lcom/a/W;->a:D
 
-    aput-wide v7, v6, v11
+    aput-wide v8, v6, v11
 
     const/4 v7, 0x2
 
@@ -5125,7 +5125,7 @@
 .end method
 
 .method public declared-synchronized a()Lcom/a/K;
-    .locals 9
+    .locals 10
 
     const/4 v2, 0x0
 
@@ -5234,9 +5234,9 @@
 
     invoke-static {}, Lcom/a/am;->a()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    iput-wide v3, p0, Lcom/a/a;->z:J
+    iput-wide v4, p0, Lcom/a/a;->z:J
 
     :cond_4
     invoke-direct {p0}, Lcom/a/a;->l()Z
@@ -5267,9 +5267,9 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    iput-wide v3, p0, Lcom/a/a;->H:J
+    iput-wide v4, p0, Lcom/a/a;->H:J
 
     iget-object v0, p0, Lcom/a/a;->f:Landroid/content/Context;
 
@@ -5313,15 +5313,15 @@
 
     if-eqz v0, :cond_9
 
-    iget-wide v3, p0, Lcom/a/a;->H:J
+    iget-wide v4, p0, Lcom/a/a;->H:J
 
-    iget-wide v5, p0, Lcom/a/a;->G:J
+    iget-wide v6, p0, Lcom/a/a;->G:J
 
-    sub-long/2addr v3, v5
+    sub-long/2addr v4, v6
 
-    const-wide/16 v5, 0x7d0
+    const-wide/16 v6, 0x7d0
 
-    cmp-long v0, v3, v5
+    cmp-long v0, v4, v6
 
     if-gez v0, :cond_9
 
@@ -5338,18 +5338,18 @@
 
     if-nez v3, :cond_9
 
-    const-wide/16 v3, 0x1f4
+    const-wide/16 v4, 0x1f4
 
-    invoke-static {v3, v4}, Landroid/os/SystemClock;->sleep(J)V
+    invoke-static {v4, v5}, Landroid/os/SystemClock;->sleep(J)V
 
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
     :cond_9
-    iget-wide v3, p0, Lcom/a/a;->w:J
+    iget-wide v4, p0, Lcom/a/a;->w:J
 
-    invoke-direct {p0, v3, v4}, Lcom/a/a;->a(J)Z
+    invoke-direct {p0, v4, v5}, Lcom/a/a;->a(J)Z
 
     move-result v0
 
@@ -5419,19 +5419,19 @@
 
     invoke-virtual {v0}, Lcom/a/K;->g()J
 
-    move-result-wide v5
+    move-result-wide v6
 
     invoke-static {}, Lcom/a/am;->a()J
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    move-result-wide v7
+    move-result-wide v8
 
-    sub-long v5, v7, v5
+    sub-long v6, v8, v6
 
-    const-wide/32 v7, 0x36ee80
+    const-wide/32 v8, 0x36ee80
 
-    cmp-long v5, v5, v7
+    cmp-long v5, v6, v8
 
     if-lez v5, :cond_f
 
@@ -5743,13 +5743,13 @@
 
     new-array v6, v6, [D
 
-    iget-wide v7, v0, Lcom/a/W;->b:D
+    iget-wide v8, v0, Lcom/a/W;->b:D
 
-    aput-wide v7, v6, v11
+    aput-wide v8, v6, v11
 
-    iget-wide v7, v0, Lcom/a/W;->a:D
+    iget-wide v8, v0, Lcom/a/W;->a:D
 
-    aput-wide v7, v6, v10
+    aput-wide v8, v6, v10
 
     const/4 v7, 0x2
 
@@ -6295,13 +6295,13 @@
 
     new-array v6, v6, [D
 
-    iget-wide v7, v0, Lcom/a/W;->b:D
+    iget-wide v8, v0, Lcom/a/W;->b:D
 
-    aput-wide v7, v6, v11
+    aput-wide v8, v6, v11
 
-    iget-wide v7, v0, Lcom/a/W;->a:D
+    iget-wide v8, v0, Lcom/a/W;->a:D
 
-    aput-wide v7, v6, v10
+    aput-wide v8, v6, v10
 
     const/4 v7, 0x2
 

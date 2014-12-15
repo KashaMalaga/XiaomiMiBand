@@ -126,11 +126,11 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sync/e;->c:Landroid/content/Context;
 
-    iget-wide v1, p0, Lcn/com/smartdevices/bracelet/lab/sync/e;->d:J
+    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/lab/sync/e;->d:J
 
-    iget v3, p0, Lcn/com/smartdevices/bracelet/lab/sync/e;->a:I
+    iget v1, p0, Lcn/com/smartdevices/bracelet/lab/sync/e;->a:I
 
-    invoke-static {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/gps/a/a;->b(Landroid/content/Context;JI)Z
+    invoke-static {v0, v2, v3, v1}, Lcn/com/smartdevices/bracelet/gps/a/a;->b(Landroid/content/Context;JI)Z
 
     move-result v0
 

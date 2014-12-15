@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+<FrameLayout android:orientation="vertical" android:background="@color/main_ui_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/share_content" android:background="@color/main_ui_bg" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <TextView android:textSize="15.0sp" android:textColor="#e6ffffff" android:gravity="center" android:background="@color/bg_color_blue" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_h" android:text="@string/sport_running_helper" />
-        <com.amap.api.maps.MapView android:id="@id/map" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
-        <include layout="@layout/fragment_running_share_detail_info" />
-        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="55.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
-            <ImageView android:layout_width="22.0dip" android:layout_height="22.0dip" android:src="@drawable/app_icon_small" />
-            <TextView android:textSize="13.0sp" android:textColor="@color/main_ui_content_color" android:id="@id/share_from_mi_band_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="9.0dip" android:text="@string/come_from_xiaomi_bracelet" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v4.view.ViewPager android:id="@id/vp_result" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:gravity="center" android:layout_gravity="bottom|center" android:orientation="horizontal" android:id="@id/dot_ll" android:paddingBottom="@dimen/running_pace_dot_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <View android:id="@id/dot1" android:background="@drawable/slidable_dot_focused" android:visibility="invisible" android:layout_width="8.5dip" android:layout_height="8.5dip" android:layout_marginRight="8.5dip" />
+            <View android:id="@id/dot2" android:background="@drawable/slidable_dot_normal" android:visibility="invisible" android:layout_width="8.5dip" android:layout_height="8.5dip" android:layout_marginLeft="8.5dip" />
         </LinearLayout>
-    </LinearLayout>
-    <include layout="@layout/title_back" />
-    <FrameLayout android:layout_gravity="bottom" android:id="@id/share_pane_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <include android:id="@id/head_back" layout="@layout/title_back" />
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/share_pane_container" android:layout_width="fill_parent" android:layout_height="@dimen/running_share_pane_margin" />
 </FrameLayout>

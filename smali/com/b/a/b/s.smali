@@ -436,7 +436,7 @@
 .end method
 
 .method public a(Ljava/lang/Class;Z)Z
-    .locals 5
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -449,9 +449,9 @@
 
     iget-wide v0, p0, Lcom/b/a/b/s;->c:D
 
-    const-wide/high16 v3, -0x4010000000000000L
+    const-wide/high16 v4, -0x4010000000000000L
 
-    cmpl-double v0, v0, v3
+    cmpl-double v0, v0, v4
 
     if-eqz v0, :cond_0
 
@@ -553,7 +553,7 @@
 .end method
 
 .method public a(Ljava/lang/reflect/Field;Z)Z
-    .locals 5
+    .locals 6
 
     const/4 v2, 0x1
 
@@ -575,9 +575,9 @@
     :cond_0
     iget-wide v0, p0, Lcom/b/a/b/s;->c:D
 
-    const-wide/high16 v3, -0x4010000000000000L
+    const-wide/high16 v4, -0x4010000000000000L
 
-    cmpl-double v0, v0, v3
+    cmpl-double v0, v0, v4
 
     if-eqz v0, :cond_1
 

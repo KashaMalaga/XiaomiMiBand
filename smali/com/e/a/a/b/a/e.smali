@@ -53,7 +53,7 @@
 
 # virtual methods
 .method public a(Ljava/lang/String;)Landroid/graphics/Bitmap;
-    .locals 5
+    .locals 4
 
     iget-object v0, p0, Lcom/e/a/a/b/a/e;->c:Ljava/util/Map;
 
@@ -67,13 +67,13 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v3
+    move-result-wide v0
 
-    sub-long v0, v1, v3
+    sub-long v0, v2, v0
 
     iget-wide v2, p0, Lcom/e/a/a/b/a/e;->b:J
 

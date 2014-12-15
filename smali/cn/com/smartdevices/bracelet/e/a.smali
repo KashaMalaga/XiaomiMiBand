@@ -264,7 +264,7 @@
 .end method
 
 .method private a(Ljava/util/LinkedList;)Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityDataFragment;
-    .locals 5
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -305,13 +305,13 @@
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/j;->b()J
 
-    move-result-wide v1
+    move-result-wide v2
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/j;->c()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-direct {p0, v1, v2, v3, v4}, Lcn/com/smartdevices/bracelet/e/a;->a(JJ)I
+    invoke-direct {p0, v2, v3, v4, v5}, Lcn/com/smartdevices/bracelet/e/a;->a(JJ)I
 
     move-result v2
 
@@ -992,7 +992,7 @@
     goto :goto_1
 
     :cond_2
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->a()Lcn/com/smartdevices/bracelet/f/a;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->b()Lcn/com/smartdevices/bracelet/f/a;
 
     move-result-object v0
 
@@ -1010,7 +1010,7 @@
 
     if-eqz v1, :cond_3
 
-    invoke-virtual {v1, v4}, Lcn/com/smartdevices/bracelet/f/a/d;->b(Ljava/util/List;)V
+    invoke-virtual {v1, v4}, Lcn/com/smartdevices/bracelet/f/a/d;->a(Ljava/util/List;)V
 
     :cond_3
     const-string v0, "SensorHubController"
@@ -1101,22 +1101,22 @@
 
     invoke-virtual {v1}, Ljava/util/Calendar;->getTimeInMillis()J
 
-    move-result-wide v5
+    move-result-wide v6
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/e/a;->l:Lcn/com/smartdevices/bracelet/e/h;
 
     invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/e/h;->b()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    cmp-long v3, v1, v5
+    cmp-long v1, v2, v6
 
-    if-ltz v3, :cond_1
+    if-ltz v1, :cond_1
 
-    move-wide v3, v1
+    move-wide v4, v2
 
     :goto_0
-    cmp-long v1, v1, v5
+    cmp-long v1, v2, v6
 
     if-ltz v1, :cond_2
 
@@ -1136,7 +1136,7 @@
     :cond_0
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/e/a;->c:Lcn/com/smartdevices/bracelet/e/i;
 
-    invoke-virtual {v2, v3, v4}, Lcn/com/smartdevices/bracelet/e/i;->b(J)Ljava/util/LinkedList;
+    invoke-virtual {v2, v4, v5}, Lcn/com/smartdevices/bracelet/e/i;->b(J)Ljava/util/LinkedList;
 
     move-result-object v2
 
@@ -1180,7 +1180,7 @@
     return v0
 
     :cond_1
-    move-wide v3, v5
+    move-wide v4, v6
 
     goto :goto_0
 
@@ -1192,18 +1192,18 @@
     :cond_3
     invoke-virtual {v2}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
-    move-result-object v5
+    move-result-object v3
 
     move v2, v0
 
     :goto_3
-    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_7
 
-    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1239,7 +1239,7 @@
 
     move-result-wide v6
 
-    cmp-long v6, v6, v3
+    cmp-long v6, v6, v4
 
     if-ltz v6, :cond_6
 
@@ -1247,7 +1247,7 @@
 
     move-result-wide v6
 
-    cmp-long v6, v6, v3
+    cmp-long v6, v6, v4
 
     if-gtz v6, :cond_6
 
@@ -1269,9 +1269,9 @@
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/j;->b()J
 
-    move-result-wide v7
+    move-result-wide v8
 
-    invoke-direct {p0, v7, v8, v3, v4}, Lcn/com/smartdevices/bracelet/e/a;->a(JJ)I
+    invoke-direct {p0, v8, v9, v4, v5}, Lcn/com/smartdevices/bracelet/e/a;->a(JJ)I
 
     move-result v2
 
@@ -1507,13 +1507,13 @@
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/j;->b()J
 
-    move-result-wide v5
+    move-result-wide v6
 
     invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/e/j;->c()J
 
     move-result-wide v0
 
-    invoke-direct {p0, v5, v6, v0, v1}, Lcn/com/smartdevices/bracelet/e/a;->a(JJ)I
+    invoke-direct {p0, v6, v7, v0, v1}, Lcn/com/smartdevices/bracelet/e/a;->a(JJ)I
 
     move-result v0
 
@@ -1634,13 +1634,13 @@
 
     invoke-virtual {v7}, Lcn/com/smartdevices/bracelet/e/j;->c()J
 
-    move-result-wide v1
+    move-result-wide v2
 
     invoke-virtual {v8}, Lcn/com/smartdevices/bracelet/e/j;->b()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-direct {p0, v1, v2, v3, v4}, Lcn/com/smartdevices/bracelet/e/a;->a(JJ)I
+    invoke-direct {p0, v2, v3, v4, v5}, Lcn/com/smartdevices/bracelet/e/a;->a(JJ)I
 
     move-result v1
 
@@ -1951,11 +1951,15 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/e/a;->b:Landroid/content/Context;
 
+    invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/f/a/d;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/f/a/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/a/d;->e()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/a/d;->b()V
 
     return-void
 .end method

@@ -38,6 +38,10 @@
 
     invoke-static {p0}, Lcn/com/smartdevices/bracelet/u;->a(Landroid/content/Context;)V
 
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/config/a;->a(Landroid/content/Context;)V
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/c/b;->a()V
+
     invoke-static {}, Lcn/com/smartdevices/bracelet/u;->I()Z
 
     move-result v0
@@ -86,5 +90,20 @@
 
     invoke-static {p0}, Lcn/com/smartdevices/bracelet/e/a;->a(Landroid/content/Context;)V
 
+    sget-object v0, Landroid/os/Build;->MODEL:Ljava/lang/String;
+
+    const-string v1, "VIRGO LTE"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/16 v0, 0x1e0
+
+    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/chart/c/t;->a(Landroid/content/Context;I)V
+
+    :cond_0
     return-void
 .end method

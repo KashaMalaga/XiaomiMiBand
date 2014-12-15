@@ -92,7 +92,7 @@
 .end method
 
 .method public setExpire(J)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcn/com/smartdevices/bracelet/model/LuaItem;->expire:J
 

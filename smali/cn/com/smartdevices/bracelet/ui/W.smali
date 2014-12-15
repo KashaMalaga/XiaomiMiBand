@@ -403,13 +403,13 @@
     :cond_5
     invoke-virtual {v1}, Ljava/util/Calendar;->getTimeInMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
     invoke-virtual {v0}, Ljava/util/Calendar;->getTimeInMillis()J
 
-    move-result-wide v3
+    move-result-wide v0
 
-    sub-long v0, v1, v3
+    sub-long v0, v2, v0
 
     const-wide/32 v2, 0xea60
 
@@ -930,9 +930,9 @@
     :goto_8
     iget v4, p0, Lcn/com/smartdevices/bracelet/ui/W;->i:I
 
-    int-to-double v7, v4
+    int-to-double v8, v4
 
-    mul-double/2addr v2, v7
+    mul-double/2addr v2, v8
 
     double-to-int v3, v2
 
@@ -967,13 +967,13 @@
 
     int-to-double v2, v2
 
-    const-wide v7, 0x3fdae147ae147ae1L
+    const-wide v8, 0x3fdae147ae147ae1L
 
-    mul-double/2addr v2, v7
+    mul-double/2addr v2, v8
 
-    const-wide/high16 v7, 0x4059000000000000L
+    const-wide/high16 v8, 0x4059000000000000L
 
-    div-double/2addr v2, v7
+    div-double/2addr v2, v8
 
     goto :goto_8
 
@@ -1311,15 +1311,9 @@
 
     move-result v1
 
-    if-nez v1, :cond_1
+    if-nez v1, :cond_0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b/a;->b()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/ui/W;->o:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/ui/W;->q:I
 
     move v1, v0
 
@@ -1339,13 +1333,6 @@
     return-void
 
     :cond_0
-    iget v0, p0, Lcn/com/smartdevices/bracelet/ui/W;->q:I
-
-    move v1, v0
-
-    goto :goto_0
-
-    :cond_1
     sparse-switch p1, :sswitch_data_0
 
     move v1, v0
@@ -1936,6 +1923,12 @@
 
     invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/ui/W;->b(I)V
 
+    iget v0, p0, Lcn/com/smartdevices/bracelet/ui/W;->t:I
+
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/ui/W;->c(I)V
+
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/W;->f()V
+
     return-void
 .end method
 
@@ -1966,7 +1959,7 @@
 
     move-result-object v0
 
-    const v3, 0x7f080034
+    const v3, 0x7f070034
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -1974,7 +1967,7 @@
 
     iput v3, p0, Lcn/com/smartdevices/bracelet/ui/W;->n:I
 
-    const v3, 0x7f080035
+    const v3, 0x7f070035
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -1986,7 +1979,7 @@
 
     iput v3, p0, Lcn/com/smartdevices/bracelet/ui/W;->p:I
 
-    const v3, 0x7f080036
+    const v3, 0x7f070036
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -2051,7 +2044,7 @@
         }
     .end annotation
 
-    const v0, 0x7f030038
+    const v0, 0x7f03003a
 
     const/4 v1, 0x0
 
@@ -2059,7 +2052,7 @@
 
     move-result-object v1
 
-    const v0, 0x7f070038
+    const v0, 0x7f0b003c
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2069,7 +2062,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/W;->k:Landroid/support/v4/view/ViewPager;
 
-    const v0, 0x7f070039
+    const v0, 0x7f0b003d
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

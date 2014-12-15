@@ -170,7 +170,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->h()Lcn/com/smartdevices/bracelet/chart/b/d;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->j()Lcn/com/smartdevices/bracelet/chart/b/d;
 
     move-result-object v0
 

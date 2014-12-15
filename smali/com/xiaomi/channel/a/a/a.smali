@@ -102,7 +102,7 @@
 .end method
 
 .method public static e()J
-    .locals 7
+    .locals 6
 
     const-wide/16 v0, 0x0
 
@@ -145,19 +145,19 @@
 
     move-result v1
 
-    int-to-long v1, v1
+    int-to-long v2, v1
 
     invoke-virtual {v0}, Landroid/os/StatFs;->getAvailableBlocks()I
 
     move-result v0
 
-    int-to-long v3, v0
+    int-to-long v0, v0
 
-    const-wide/16 v5, 0x4
+    const-wide/16 v4, 0x4
 
-    sub-long/2addr v3, v5
+    sub-long/2addr v0, v4
 
-    mul-long v0, v1, v3
+    mul-long/2addr v0, v2
 
     goto :goto_0
 .end method

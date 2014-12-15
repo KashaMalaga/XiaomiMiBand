@@ -86,7 +86,7 @@
 .end method
 
 .method public static a(Landroid/content/Context;Ljava/lang/String;J)V
-    .locals 7
+    .locals 8
 
     const-wide/16 v0, 0x0
 
@@ -419,7 +419,7 @@
 .end method
 
 .method public static a(Landroid/content/Context;Ljava/lang/String;Ljava/util/Map;J)V
-    .locals 6
+    .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

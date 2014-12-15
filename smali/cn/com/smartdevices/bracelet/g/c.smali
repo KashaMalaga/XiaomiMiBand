@@ -40,15 +40,15 @@
 .end method
 
 .method public static a(Ljava/lang/String;)Ljava/lang/String;
-    .locals 3
+    .locals 4
 
     new-instance v0, Ljava/util/Random;
 
     invoke-static {}, Landroid/os/SystemClock;->currentThreadTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-direct {v0, v1, v2}, Ljava/util/Random;-><init>(J)V
+    invoke-direct {v0, v2, v3}, Ljava/util/Random;-><init>(J)V
 
     const/16 v1, 0x5a
 
@@ -203,7 +203,7 @@
 .end method
 
 .method public static a(Ljava/util/Map;)Ljava/util/HashMap;
-    .locals 5
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -256,9 +256,9 @@
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/g/c;->a()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v2
 

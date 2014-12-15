@@ -140,7 +140,7 @@
 .method private static a()Ljava/lang/String;
     .locals 1
 
-    const-string v0, "http://restapi.amap.com/v3/log/init"
+    const-string v0, "http://apiinit.amap.com/v3/log/init"
 
     return-object v0
 .end method
@@ -210,7 +210,7 @@
 .end method
 
 .method public static declared-synchronized a(Landroid/content/Context;)Z
-    .locals 5
+    .locals 7
 
     const/4 v1, 0x0
 
@@ -229,6 +229,30 @@
     invoke-static {}, Lcom/amap/api/mapcore/k;->a()Ljava/lang/String;
 
     move-result-object v3
+
+    const-string v4, "amapv2"
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "keyInit-->"
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    const/16 v6, 0x6f
+
+    invoke-static {v4, v5, v6}, Lcom/amap/api/mapcore/util/r;->a(Ljava/lang/String;Ljava/lang/String;I)V
 
     invoke-static {p0}, Lcom/amap/api/mapcore/util/i;->c(Landroid/content/Context;)Ljava/net/Proxy;
 

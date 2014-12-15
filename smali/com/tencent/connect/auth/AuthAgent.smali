@@ -379,7 +379,7 @@
 .end method
 
 .method private a(Landroid/app/Activity;Z)Z
-    .locals 7
+    .locals 8
 
     const-string v0, "com.tencent.open.agent.AgentActivity"
 
@@ -505,13 +505,13 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    const-wide/16 v5, 0x3e8
+    const-wide/16 v6, 0x3e8
 
-    div-long/2addr v3, v5
+    div-long/2addr v4, v6
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -924,15 +924,15 @@
 
     const-string v0, "10785"
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    iget-object v3, p0, Lcom/tencent/connect/auth/AuthAgent;->mToken:Lcom/tencent/connect/auth/QQToken;
+    iget-object v1, p0, Lcom/tencent/connect/auth/AuthAgent;->mToken:Lcom/tencent/connect/auth/QQToken;
 
-    invoke-virtual {v3}, Lcom/tencent/connect/auth/QQToken;->getAppId()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/tencent/connect/auth/QQToken;->getAppId()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-static {p1, v0, v1, v2, v3}, Lcom/tencent/utils/Util;->reportBernoulli(Landroid/content/Context;Ljava/lang/String;JLjava/lang/String;)V
+    invoke-static {p1, v0, v2, v3, v1}, Lcom/tencent/utils/Util;->reportBernoulli(Landroid/content/Context;Ljava/lang/String;JLjava/lang/String;)V
 
     :cond_3
     const-string v0, "openSDK_LOG"

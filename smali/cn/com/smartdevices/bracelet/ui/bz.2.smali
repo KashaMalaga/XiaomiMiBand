@@ -46,7 +46,7 @@
 .method protected a()I
     .locals 1
 
-    const v0, 0x7f03005d
+    const v0, 0x7f030064
 
     return v0
 .end method
@@ -76,7 +76,7 @@
 
     move-result-object v1
 
-    const v0, 0x7f070104
+    const v0, 0x7f0b010f
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

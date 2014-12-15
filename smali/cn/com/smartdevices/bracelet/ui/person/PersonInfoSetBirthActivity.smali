@@ -147,7 +147,7 @@
 
     invoke-super/range {p0 .. p1}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoBaseActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f03001b
+    const v0, 0x7f03001c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetBirthActivity;->setContentView(I)V
 
@@ -205,7 +205,7 @@
 
     add-int/lit8 v13, v0, -0x7
 
-    const v0, 0x7f0700a8
+    const v0, 0x7f0b00ac
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetBirthActivity;->findViewById(I)Landroid/view/View;
 
@@ -223,7 +223,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0200d4
+    const v1, 0x7f0200d8
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
@@ -235,7 +235,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f080005
+    const v2, 0x7f070005
 
     const/16 v3, 0xc
 
@@ -257,7 +257,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f080004
+    const v3, 0x7f070004
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -267,7 +267,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f080005
+    const v3, 0x7f070005
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -277,7 +277,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f08002d
+    const v3, 0x7f07002d
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -301,7 +301,7 @@
 
     invoke-virtual {v14, v0}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/a/f;)Lkankan/wheel/widget/WheelView;
 
-    const v0, 0x7f0700a9
+    const v0, 0x7f0b00ad
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetBirthActivity;->findViewById(I)Landroid/view/View;
 
@@ -319,7 +319,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0200d4
+    const v1, 0x7f0200d8
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
@@ -331,7 +331,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f080005
+    const v2, 0x7f070005
 
     const/16 v3, 0xc
 
@@ -355,7 +355,7 @@
 
     move-result-object v1
 
-    const v5, 0x7f080004
+    const v5, 0x7f070004
 
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -365,7 +365,7 @@
 
     move-result-object v1
 
-    const v6, 0x7f080005
+    const v6, 0x7f070005
 
     invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -375,7 +375,7 @@
 
     move-result-object v1
 
-    const v7, 0x7f08002d
+    const v7, 0x7f07002d
 
     invoke-virtual {v1, v7}, Landroid/content/res/Resources;->getColor(I)I
 

@@ -52,11 +52,11 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030005
+    const v0, 0x7f030006
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/FwLowBatteryActivity;->setContentView(I)V
 
-    const v0, 0x7f070035
+    const v0, 0x7f0b0039
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/FwLowBatteryActivity;->findViewById(I)Landroid/view/View;
 
@@ -84,7 +84,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070036
+    const v0, 0x7f0b003a
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/FwLowBatteryActivity;->findViewById(I)Landroid/view/View;
 

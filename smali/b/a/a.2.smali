@@ -43,7 +43,7 @@
 .end method
 
 .method private g()Z
-    .locals 7
+    .locals 8
 
     const/4 v1, 0x0
 
@@ -88,9 +88,9 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v5
+    move-result-wide v6
 
-    invoke-virtual {v2, v5, v6}, Lb/a/ag;->a(J)Lb/a/ag;
+    invoke-virtual {v2, v6, v7}, Lb/a/ag;->a(J)Lb/a/ag;
 
     add-int/lit8 v0, v0, 0x1
 
@@ -110,9 +110,9 @@
 
     invoke-virtual {v2}, Lb/a/ag;->f()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-virtual {v0, v3, v4}, Lb/a/aa;->a(J)Lb/a/aa;
+    invoke-virtual {v0, v4, v5}, Lb/a/aa;->a(J)Lb/a/aa;
 
     iget-object v3, p0, Lb/a/a;->d:Ljava/util/List;
 

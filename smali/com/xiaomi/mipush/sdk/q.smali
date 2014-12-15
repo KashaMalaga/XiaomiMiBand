@@ -80,7 +80,7 @@
 .end method
 
 .method protected static a(Landroid/content/Context;Lorg/apache/thrift/b;Lcom/xiaomi/g/a/a;Z)Lcom/xiaomi/g/a/n;
-    .locals 5
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T::",
@@ -147,9 +147,9 @@
 
     invoke-direct {v2}, Lcom/xiaomi/g/a/f;-><init>()V
 
-    const-wide/16 v3, 0x5
+    const-wide/16 v4, 0x5
 
-    iput-wide v3, v2, Lcom/xiaomi/g/a/f;->a:J
+    iput-wide v4, v2, Lcom/xiaomi/g/a/f;->a:J
 
     const-string v3, "fakeid"
 

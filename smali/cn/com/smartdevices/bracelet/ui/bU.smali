@@ -317,7 +317,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bU;->s:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f03008c
+    const v1, 0x7f030093
 
     invoke-virtual {v0, v1, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -332,7 +332,7 @@
 
     invoke-direct {v3, p0, v4}, Lcn/com/smartdevices/bracelet/ui/bW;-><init>(Lcn/com/smartdevices/bracelet/ui/bU;Lcn/com/smartdevices/bracelet/ui/bV;)V
 
-    const v0, 0x7f07027f
+    const v0, 0x7f0b02a4
 
     invoke-virtual {v1, v0}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -463,7 +463,7 @@
     :cond_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bU;->s:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f03008b
+    const v1, 0x7f030092
 
     invoke-virtual {v0, v1, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 

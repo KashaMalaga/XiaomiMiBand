@@ -409,7 +409,7 @@
             "Ljava/lang/String;",
             "Ljava/util/ArrayList",
             "<",
-            "Lcn/com/smartdevices/bracelet/gps/model/g;",
+            "Lcn/com/smartdevices/bracelet/gps/model/h;",
             ">;)",
             "Lcn/com/smartdevices/bracelet/g/g;"
         }
@@ -485,7 +485,7 @@
 
     move-result-object v4
 
-    invoke-static {v4}, Lcn/com/smartdevices/bracelet/gps/model/g;->a(Lorg/json/JSONObject;)Lcn/com/smartdevices/bracelet/gps/model/g;
+    invoke-static {v4}, Lcn/com/smartdevices/bracelet/gps/model/h;->a(Lorg/json/JSONObject;)Lcn/com/smartdevices/bracelet/gps/model/h;
 
     move-result-object v4
 
@@ -1047,7 +1047,7 @@
             "Ljava/lang/String;",
             "Ljava/util/ArrayList",
             "<",
-            "Lcn/com/smartdevices/bracelet/gps/model/g;",
+            "Lcn/com/smartdevices/bracelet/gps/model/h;",
             ">;)",
             "Lcn/com/smartdevices/bracelet/g/g;"
         }
@@ -1118,13 +1118,13 @@
 
     invoke-virtual {v1, v3}, Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    const-string v5, "data_type"
+    const-string v3, "data_type"
 
-    invoke-virtual {v1, v5}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+    invoke-virtual {v1, v3}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
-    move-result v5
+    move-result v3
 
     invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
 
@@ -1141,7 +1141,7 @@
 
     move-result-object v7
 
-    invoke-static {v7, v5, v3, v4}, Lcn/com/smartdevices/bracelet/gps/model/g;->a(Ljava/lang/String;IJ)Lcn/com/smartdevices/bracelet/gps/model/g;
+    invoke-static {v7, v3, v4, v5}, Lcn/com/smartdevices/bracelet/gps/model/h;->a(Ljava/lang/String;IJ)Lcn/com/smartdevices/bracelet/gps/model/h;
 
     move-result-object v7
 
@@ -1809,9 +1809,9 @@
 
     invoke-virtual {p0, v1}, Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, v0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->uid:J
+    iput-wide v2, v0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->uid:J
 
     :cond_0
     const-string v1, "username"

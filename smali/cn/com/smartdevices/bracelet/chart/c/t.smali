@@ -346,6 +346,55 @@
     return-object v0
 .end method
 
+.method public static a(Landroid/content/Context;I)V
+    .locals 4
+    .annotation build Landroid/annotation/SuppressLint;
+        value = {
+            "NewApi"
+        }
+    .end annotation
+
+    const/high16 v3, -0x40800000
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v1
+
+    iput p1, v1, Landroid/content/res/Configuration;->densityDpi:I
+
+    iput p1, v0, Landroid/util/DisplayMetrics;->densityDpi:I
+
+    div-int/lit16 v2, p1, 0xa0
+
+    int-to-float v2, v2
+
+    iput v2, v0, Landroid/util/DisplayMetrics;->density:F
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1, v0}, Landroid/content/res/Resources;->updateConfiguration(Landroid/content/res/Configuration;Landroid/util/DisplayMetrics;)V
+
+    sput v3, Lcn/com/smartdevices/bracelet/chart/c/t;->a:F
+
+    sput v3, Lcn/com/smartdevices/bracelet/chart/c/t;->b:F
+
+    return-void
+.end method
+
 .method public static a(Landroid/graphics/Canvas;FFFLandroid/graphics/Bitmap;Landroid/graphics/Paint;)V
     .locals 8
 

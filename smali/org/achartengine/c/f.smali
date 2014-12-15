@@ -130,11 +130,11 @@
 
     const v6, -0x333334
 
-    const/4 v5, 0x0
+    const/4 v3, 0x0
 
     const/16 v1, 0xc8
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
     const/4 v2, 0x1
 
@@ -180,7 +180,7 @@
 
     iput-boolean v2, p0, Lorg/achartengine/c/f;->s:Z
 
-    iput-wide v3, p0, Lorg/achartengine/c/f;->t:D
+    iput-wide v4, p0, Lorg/achartengine/c/f;->t:D
 
     const/4 v0, 0x0
 
@@ -208,9 +208,9 @@
 
     iput-object v0, p0, Lorg/achartengine/c/f;->D:Landroid/graphics/Paint$Align;
 
-    iput v5, p0, Lorg/achartengine/c/f;->F:F
+    iput v3, p0, Lorg/achartengine/c/f;->F:F
 
-    iput v5, p0, Lorg/achartengine/c/f;->G:F
+    iput v3, p0, Lorg/achartengine/c/f;->G:F
 
     const/high16 v0, 0x40000000
 
@@ -232,9 +232,9 @@
 
     iput v0, p0, Lorg/achartengine/c/f;->N:F
 
-    iput-wide v3, p0, Lorg/achartengine/c/f;->O:D
+    iput-wide v4, p0, Lorg/achartengine/c/f;->O:D
 
-    iput-wide v3, p0, Lorg/achartengine/c/f;->P:D
+    iput-wide v4, p0, Lorg/achartengine/c/f;->P:D
 
     iput p1, p0, Lorg/achartengine/c/f;->C:I
 
@@ -585,7 +585,7 @@
 .end method
 
 .method public a(DI)V
-    .locals 2
+    .locals 3
 
     invoke-virtual {p0, p3}, Lorg/achartengine/c/f;->k(I)Z
 
@@ -618,7 +618,7 @@
 .end method
 
 .method public a(DLjava/lang/String;)V
-    .locals 0
+    .locals 1
 
     invoke-virtual {p0, p1, p2, p3}, Lorg/achartengine/c/f;->b(DLjava/lang/String;)V
 
@@ -626,7 +626,7 @@
 .end method
 
 .method public declared-synchronized a(DLjava/lang/String;I)V
-    .locals 2
+    .locals 3
 
     monitor-enter p0
 
@@ -1026,7 +1026,7 @@
 .end method
 
 .method public b(DI)V
-    .locals 2
+    .locals 3
 
     invoke-virtual {p0, p3}, Lorg/achartengine/c/f;->m(I)Z
 
@@ -1059,7 +1059,7 @@
 .end method
 
 .method public declared-synchronized b(DLjava/lang/String;)V
-    .locals 2
+    .locals 3
 
     monitor-enter p0
 
@@ -1167,7 +1167,7 @@
 .end method
 
 .method public c(DI)V
-    .locals 2
+    .locals 3
 
     invoke-virtual {p0, p3}, Lorg/achartengine/c/f;->o(I)Z
 
@@ -1240,7 +1240,7 @@
 .end method
 
 .method public d(DI)V
-    .locals 2
+    .locals 3
 
     invoke-virtual {p0, p3}, Lorg/achartengine/c/f;->q(I)Z
 
@@ -1283,7 +1283,7 @@
 .end method
 
 .method public declared-synchronized e(D)V
-    .locals 2
+    .locals 3
 
     monitor-enter p0
 
@@ -1311,7 +1311,7 @@
 .end method
 
 .method public declared-synchronized e(DI)V
-    .locals 2
+    .locals 3
 
     monitor-enter p0
 
@@ -1359,7 +1359,7 @@
 .end method
 
 .method public g(D)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lorg/achartengine/c/f;->t:D
 
@@ -1431,7 +1431,7 @@
 .end method
 
 .method public h(D)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lorg/achartengine/c/f;->O:D
 
@@ -1465,27 +1465,27 @@
 .end method
 
 .method public h(I)V
-    .locals 5
+    .locals 6
 
-    const-wide v3, 0x7fefffffffffffffL
+    const-wide v4, 0x7fefffffffffffffL
 
-    const-wide v1, -0x10000000000001L
+    const-wide v2, -0x10000000000001L
 
     iget-object v0, p0, Lorg/achartengine/c/f;->g:[D
 
-    aput-wide v3, v0, p1
+    aput-wide v4, v0, p1
 
     iget-object v0, p0, Lorg/achartengine/c/f;->h:[D
 
-    aput-wide v1, v0, p1
+    aput-wide v2, v0, p1
 
     iget-object v0, p0, Lorg/achartengine/c/f;->i:[D
 
-    aput-wide v3, v0, p1
+    aput-wide v4, v0, p1
 
     iget-object v0, p0, Lorg/achartengine/c/f;->j:[D
 
-    aput-wide v1, v0, p1
+    aput-wide v2, v0, p1
 
     const/4 v0, 0x4
 
@@ -1575,7 +1575,7 @@
 .end method
 
 .method public i(D)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lorg/achartengine/c/f;->P:D
 

@@ -40,7 +40,7 @@
 .end method
 
 .method private a(J)V
-    .locals 3
+    .locals 5
 
     const/4 v2, 0x1
 
@@ -58,9 +58,9 @@
 
     iput v2, v0, Landroid/os/Message;->arg1:I
 
-    const-wide/16 v1, 0x3e8
+    const-wide/16 v2, 0x3e8
 
-    invoke-virtual {p0, v0, v1, v2}, Lcn/com/smartdevices/bracelet/lab/ui/J;->sendMessageDelayed(Landroid/os/Message;J)Z
+    invoke-virtual {p0, v0, v2, v3}, Lcn/com/smartdevices/bracelet/lab/ui/J;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     return-void
 .end method
@@ -197,9 +197,9 @@
     :sswitch_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/J;->b:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
-    const-wide/16 v1, -0x1
+    const-wide/16 v2, -0x1
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->a(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;J)J
+    invoke-static {v0, v2, v3}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->a(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;J)J
 
     goto :goto_0
 

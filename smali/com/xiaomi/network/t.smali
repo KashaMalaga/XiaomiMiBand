@@ -20,7 +20,7 @@
 
 # virtual methods
 .method public run()V
-    .locals 5
+    .locals 6
 
     iget-object v0, p0, Lcom/xiaomi/network/t;->a:Lcom/xiaomi/network/o;
 
@@ -52,7 +52,7 @@
 
     invoke-interface {v0}, Lcom/xiaomi/network/p;->b()D
 
-    move-result-wide v3
+    move-result-wide v4
 
     if-eqz v2, :cond_0
 
@@ -65,7 +65,7 @@
 
     iget-object v0, p0, Lcom/xiaomi/network/t;->a:Lcom/xiaomi/network/o;
 
-    invoke-static {v0, v2, v3, v4}, Lcom/xiaomi/network/o;->a(Lcom/xiaomi/network/o;Ljava/util/List;D)V
+    invoke-static {v0, v2, v4, v5}, Lcom/xiaomi/network/o;->a(Lcom/xiaomi/network/o;Ljava/util/List;D)V
     :try_end_0
     .catch Lorg/apache/thrift/e; {:try_start_0 .. :try_end_0} :catch_0
 

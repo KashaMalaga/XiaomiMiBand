@@ -32,6 +32,8 @@
 
 .field protected mAMap:Lcom/amap/api/maps/AMap;
 
+.field protected nodeIconVisible:Z
+
 .field protected startMarker:Lcom/amap/api/maps/model/Marker;
 
 .field protected startPoint:Lcom/amap/api/maps/model/LatLng;
@@ -66,6 +68,10 @@
 
     iput-object v0, p0, Lcom/amap/api/maps/overlay/RouteOverlay;->allPolyLines:Ljava/util/List;
 
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/amap/api/maps/overlay/RouteOverlay;->nodeIconVisible:Z
+
     iput-object p1, p0, Lcom/amap/api/maps/overlay/RouteOverlay;->a:Landroid/content/Context;
 
     return-void
@@ -77,7 +83,9 @@
     const/4 v1, 0x0
 
     :try_start_0
-    invoke-static {}, Lcom/amap/api/mapcore/util/u;->a()Landroid/content/res/AssetManager;
+    iget-object v0, p0, Lcom/amap/api/maps/overlay/RouteOverlay;->a:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/amap/api/mapcore/util/u;->a(Landroid/content/Context;)Landroid/content/res/AssetManager;
 
     move-result-object v0
 
@@ -553,6 +561,64 @@
     return-void
 .end method
 
+.method public setNodeIconVisibility(Z)V
+    .locals 2
+
+    :try_start_0
+    iput-boolean p1, p0, Lcom/amap/api/maps/overlay/RouteOverlay;->nodeIconVisible:Z
+
+    iget-object v0, p0, Lcom/amap/api/maps/overlay/RouteOverlay;->stationMarkers:Ljava/util/List;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/amap/api/maps/overlay/RouteOverlay;->stationMarkers:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    :goto_0
+    iget-object v0, p0, Lcom/amap/api/maps/overlay/RouteOverlay;->stationMarkers:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-ge v1, v0, :cond_0
+
+    iget-object v0, p0, Lcom/amap/api/maps/overlay/RouteOverlay;->stationMarkers:Ljava/util/List;
+
+    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/amap/api/maps/model/Marker;
+
+    invoke-virtual {v0, p1}, Lcom/amap/api/maps/model/Marker;->setVisible(Z)V
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
+
+    :cond_0
+    return-void
+.end method
+
 .method public zoomToSpan()V
     .locals 3
 
@@ -569,6 +635,7 @@
     return-void
 
     :cond_1
+    :try_start_0
     invoke-virtual {p0}, Lcom/amap/api/maps/overlay/RouteOverlay;->getLatLngBounds()Lcom/amap/api/maps/model/LatLngBounds;
 
     move-result-object v0
@@ -582,6 +649,15 @@
     move-result-object v0
 
     invoke-virtual {v1, v0}, Lcom/amap/api/maps/AMap;->moveCamera(Lcom/amap/api/maps/CameraUpdate;)V
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 .end method

@@ -52,9 +52,9 @@
 .end method
 
 .method public c(Ljava/lang/Object;)V
-    .locals 4
+    .locals 5
 
-    const/4 v3, 0x2
+    const/4 v4, 0x2
 
     const/4 v1, 0x1
 
@@ -78,7 +78,7 @@
 
     move-result v0
 
-    if-ne v0, v3, :cond_0
+    if-ne v0, v4, :cond_0
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/am;->b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
 
@@ -86,9 +86,9 @@
 
     move-result-object v0
 
-    const-wide/16 v1, 0x3e8
+    const-wide/16 v2, 0x3e8
 
-    invoke-virtual {v0, v3, v1, v2}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
+    invoke-virtual {v0, v4, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/am;->b:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
 

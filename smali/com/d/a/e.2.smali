@@ -601,7 +601,7 @@
 .end method
 
 .method public a(J)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcom/d/a/e;->j:J
 
@@ -1095,7 +1095,7 @@
 .end method
 
 .method public c(J)Lcom/d/a/e;
-    .locals 2
+    .locals 3
 
     const-wide/16 v0, 0x0
 
@@ -1863,9 +1863,9 @@
 
     iget-object v0, p0, Lcom/d/a/e;->k:Lcom/d/a/R;
 
-    iget-wide v3, p0, Lcom/d/a/e;->j:J
+    iget-wide v4, p0, Lcom/d/a/e;->j:J
 
-    invoke-virtual {v0, v3, v4}, Lcom/d/a/R;->d(J)Lcom/d/a/R;
+    invoke-virtual {v0, v4, v5}, Lcom/d/a/R;->d(J)Lcom/d/a/R;
 
     iget-object v0, p0, Lcom/d/a/e;->k:Lcom/d/a/R;
 

@@ -63,7 +63,7 @@
     :try_start_1
     iget-object v0, p0, Lcom/amap/api/mapcore/d;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->G(Lcom/amap/api/mapcore/b;)Landroid/content/Context;
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->F(Lcom/amap/api/mapcore/b;)Landroid/content/Context;
 
     move-result-object v0
 
@@ -71,7 +71,7 @@
 
     iget-object v0, p0, Lcom/amap/api/mapcore/d;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->G(Lcom/amap/api/mapcore/b;)Landroid/content/Context;
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->F(Lcom/amap/api/mapcore/b;)Landroid/content/Context;
 
     move-result-object v0
 

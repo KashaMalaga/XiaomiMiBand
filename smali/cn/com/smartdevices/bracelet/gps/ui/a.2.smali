@@ -20,59 +20,60 @@
 
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
-    .locals 3
+    .locals 2
 
     iget v0, p1, Landroid/os/Message;->what:I
 
-    packed-switch v0, :pswitch_data_0
+    sparse-switch v0, :sswitch_data_0
 
     :goto_0
+    :sswitch_0
     return-void
 
-    :pswitch_0
+    :sswitch_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/d/c;->c(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->a(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)Landroid/app/DialogFragment;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->a(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)Landroid/app/DialogFragment;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/app/DialogFragment;->dismiss()V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->a(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->a(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;Landroid/app/DialogFragment;)Landroid/app/DialogFragment;
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->a(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;Z)V
 
     goto :goto_0
 
-    :cond_0
-    const/16 v0, 0xbb8
+    :sswitch_2
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
 
-    const-wide/16 v1, 0x3e8
+    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    invoke-virtual {p0, v0, v1, v2}, Lcn/com/smartdevices/bracelet/gps/ui/a;->sendEmptyMessageDelayed(IJ)Z
+    check-cast v0, Lcn/com/smartdevices/bracelet/gps/services/o;
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->a(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;Lcn/com/smartdevices/bracelet/gps/services/o;)V
 
     goto :goto_0
 
-    :pswitch_data_0
-    .packed-switch 0xbb8
-        :pswitch_0
-    .end packed-switch
+    :sswitch_3
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->b(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)Lcom/amap/api/maps/AMap;
+
+    move-result-object v0
+
+    const/4 v1, 0x2
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/AMap;->setMyLocationType(I)V
+
+    goto :goto_0
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        0x0 -> :sswitch_0
+        0x1 -> :sswitch_2
+        0x64 -> :sswitch_1
+        0x7d0 -> :sswitch_3
+    .end sparse-switch
 .end method

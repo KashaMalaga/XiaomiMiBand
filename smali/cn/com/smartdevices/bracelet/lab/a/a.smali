@@ -20,9 +20,9 @@
 .end method
 
 .method public a(IJI)I
-    .locals 4
+    .locals 6
 
-    const/high16 v3, 0x42700000
+    const/high16 v4, 0x42700000
 
     invoke-virtual {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/lab/a/a;->a(IJ)F
 
@@ -34,9 +34,9 @@
 
     if-lez v1, :cond_0
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    cmp-long v1, p2, v1
+    cmp-long v1, p2, v2
 
     if-lez v1, :cond_0
 
@@ -65,9 +65,9 @@
 
     mul-float/2addr v0, v1
 
-    div-float/2addr v0, v3
+    div-float/2addr v0, v4
 
-    div-float/2addr v0, v3
+    div-float/2addr v0, v4
 
     invoke-static {v0}, Ljava/lang/Math;->round(F)I
 
@@ -77,7 +77,7 @@
 .end method
 
 .method public b(IJ)I
-    .locals 1
+    .locals 2
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/u;->k()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 

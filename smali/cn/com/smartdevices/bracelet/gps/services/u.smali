@@ -120,9 +120,9 @@
 
     const/4 v0, 0x1
 
-    add-double v1, p2, v2
+    add-double v2, v2, p2
 
-    aput-wide v1, p4, v0
+    aput-wide v2, p4, v0
 
     :goto_0
     return-void

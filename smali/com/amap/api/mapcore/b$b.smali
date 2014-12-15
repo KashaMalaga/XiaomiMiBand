@@ -38,7 +38,7 @@
     :try_start_0
     iget-object v0, p0, Lcom/amap/api/mapcore/b$b;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->k(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/ai;
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->j(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/ai;
 
     move-result-object v0
 
@@ -62,7 +62,7 @@
     :cond_1
     iget-object v0, p0, Lcom/amap/api/mapcore/b$b;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->A(Lcom/amap/api/mapcore/b;)I
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->z(Lcom/amap/api/mapcore/b;)I
 
     move-result v0
 
@@ -74,7 +74,7 @@
 
     iget-object v0, p0, Lcom/amap/api/mapcore/b$b;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->o(Lcom/amap/api/mapcore/b;)Lcom/autonavi/amap/mapcore/MapProjection;
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->n(Lcom/amap/api/mapcore/b;)Lcom/autonavi/amap/mapcore/MapProjection;
 
     move-result-object v0
 

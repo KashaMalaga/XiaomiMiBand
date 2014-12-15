@@ -251,7 +251,7 @@
 .end method
 
 .method private static compareTypes(Lorg/keplerproject/luajava/LuaState;Ljava/lang/Class;I)Ljava/lang/Object;
-    .locals 5
+    .locals 6
 
     const/4 v2, 0x0
 
@@ -403,9 +403,9 @@
 
     invoke-virtual {p0, p2}, Lorg/keplerproject/luajava/LuaState;->toNumber(I)D
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Double;-><init>(D)V
+    invoke-direct {v2, v4, v5}, Ljava/lang/Double;-><init>(D)V
 
     invoke-static {v2, p1}, Lorg/keplerproject/luajava/LuaState;->convertLuaNumber(Ljava/lang/Double;Ljava/lang/Class;)Ljava/lang/Number;
 

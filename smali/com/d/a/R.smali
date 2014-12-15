@@ -487,7 +487,7 @@
 .end method
 
 .method private g(J)Z
-    .locals 5
+    .locals 7
 
     const/4 v0, 0x1
 
@@ -506,23 +506,23 @@
     return v0
 
     :cond_1
-    iget-wide v1, p0, Lcom/d/a/R;->D:J
+    iget-wide v2, p0, Lcom/d/a/R;->D:J
 
-    sub-long v1, p1, v1
+    sub-long v2, p1, v2
 
-    iget-wide v3, p0, Lcom/d/a/R;->H:J
+    iget-wide v4, p0, Lcom/d/a/R;->H:J
 
-    cmp-long v3, v1, v3
+    cmp-long v1, v2, v4
 
-    if-lez v3, :cond_0
+    if-lez v1, :cond_0
 
-    iget-wide v3, p0, Lcom/d/a/R;->H:J
+    iget-wide v4, p0, Lcom/d/a/R;->H:J
 
-    sub-long/2addr v1, v3
+    sub-long/2addr v2, v4
 
-    sub-long v1, p1, v1
+    sub-long v2, p1, v2
 
-    iput-wide v1, p0, Lcom/d/a/R;->g:J
+    iput-wide v2, p0, Lcom/d/a/R;->g:J
 
     iput v0, p0, Lcom/d/a/R;->i:I
 
@@ -971,7 +971,7 @@
 .end method
 
 .method public a(J)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcom/d/a/R;->H:J
 
@@ -1417,9 +1417,9 @@
 .end method
 
 .method c(J)Z
-    .locals 8
+    .locals 11
 
-    const-wide/16 v6, 0x0
+    const-wide/16 v8, 0x0
 
     const/4 v2, 0x1
 
@@ -1433,9 +1433,9 @@
 
     iput v2, p0, Lcom/d/a/R;->i:I
 
-    iget-wide v3, p0, Lcom/d/a/R;->h:J
+    iget-wide v6, p0, Lcom/d/a/R;->h:J
 
-    cmp-long v0, v3, v6
+    cmp-long v0, v6, v8
 
     if-gez v0, :cond_1
 
@@ -1451,34 +1451,34 @@
     return v1
 
     :cond_1
-    iget-wide v3, p0, Lcom/d/a/R;->h:J
+    iget-wide v6, p0, Lcom/d/a/R;->h:J
 
-    sub-long v3, p1, v3
+    sub-long v6, p1, v6
 
-    iput-wide v3, p0, Lcom/d/a/R;->g:J
+    iput-wide v6, p0, Lcom/d/a/R;->g:J
 
-    const-wide/16 v3, -0x1
+    const-wide/16 v6, -0x1
 
-    iput-wide v3, p0, Lcom/d/a/R;->h:J
+    iput-wide v6, p0, Lcom/d/a/R;->h:J
 
     goto :goto_0
 
     :pswitch_0
-    iget-wide v3, p0, Lcom/d/a/R;->G:J
+    iget-wide v6, p0, Lcom/d/a/R;->G:J
 
-    cmp-long v0, v3, v6
+    cmp-long v0, v6, v8
 
     if-lez v0, :cond_6
 
-    iget-wide v3, p0, Lcom/d/a/R;->g:J
+    iget-wide v6, p0, Lcom/d/a/R;->g:J
 
-    sub-long v3, p1, v3
+    sub-long v6, p1, v6
 
-    long-to-float v0, v3
+    long-to-float v0, v6
 
-    iget-wide v3, p0, Lcom/d/a/R;->G:J
+    iget-wide v6, p0, Lcom/d/a/R;->G:J
 
-    long-to-float v3, v3
+    long-to-float v3, v6
 
     div-float v3, v0, v3
 
@@ -1656,7 +1656,7 @@
 .end method
 
 .method public e(J)V
-    .locals 4
+    .locals 5
 
     invoke-virtual {p0}, Lcom/d/a/R;->m()V
 
@@ -1791,9 +1791,9 @@
     if-lt v3, v5, :cond_2
 
     :cond_0
-    const-wide/16 v3, -0x1
+    const-wide/16 v4, -0x1
 
-    iput-wide v3, v0, Lcom/d/a/R;->h:J
+    iput-wide v4, v0, Lcom/d/a/R;->h:J
 
     iput-boolean v2, v0, Lcom/d/a/R;->z:Z
 

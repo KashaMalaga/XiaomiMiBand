@@ -49,15 +49,15 @@
 .end method
 
 .method public a([DI)V
-    .locals 7
+    .locals 8
 
-    const/4 v6, 0x3
+    const/4 v7, 0x3
 
-    const/4 v5, 0x2
+    const/4 v6, 0x2
 
-    const/4 v4, 0x1
+    const/4 v5, 0x1
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
     iget-object v0, p0, Lorg/achartengine/d/a;->a:Lorg/achartengine/a/a;
 
@@ -83,13 +83,13 @@
 
     if-nez v1, :cond_0
 
-    aget-wide v1, v0, v3
+    aget-wide v2, v0, v4
 
-    aput-wide v1, p1, v3
+    aput-wide v2, p1, v4
 
     iget-object v1, p0, Lorg/achartengine/d/a;->b:Lorg/achartengine/c/f;
 
-    aget-wide v2, p1, v3
+    aget-wide v2, p1, v4
 
     invoke-virtual {v1, v2, v3, p2}, Lorg/achartengine/c/f;->a(DI)V
 
@@ -102,13 +102,13 @@
 
     if-nez v1, :cond_1
 
-    aget-wide v1, v0, v4
+    aget-wide v2, v0, v5
 
-    aput-wide v1, p1, v4
+    aput-wide v2, p1, v5
 
     iget-object v1, p0, Lorg/achartengine/d/a;->b:Lorg/achartengine/c/f;
 
-    aget-wide v2, p1, v4
+    aget-wide v2, p1, v5
 
     invoke-virtual {v1, v2, v3, p2}, Lorg/achartengine/c/f;->b(DI)V
 
@@ -121,13 +121,13 @@
 
     if-nez v1, :cond_2
 
-    aget-wide v1, v0, v5
+    aget-wide v2, v0, v6
 
-    aput-wide v1, p1, v5
+    aput-wide v2, p1, v6
 
     iget-object v1, p0, Lorg/achartengine/d/a;->b:Lorg/achartengine/c/f;
 
-    aget-wide v2, p1, v5
+    aget-wide v2, p1, v6
 
     invoke-virtual {v1, v2, v3, p2}, Lorg/achartengine/c/f;->c(DI)V
 
@@ -140,15 +140,15 @@
 
     if-nez v1, :cond_3
 
-    aget-wide v0, v0, v6
+    aget-wide v0, v0, v7
 
-    aput-wide v0, p1, v6
+    aput-wide v0, p1, v7
 
     iget-object v0, p0, Lorg/achartengine/d/a;->b:Lorg/achartengine/c/f;
 
-    aget-wide v1, p1, v6
+    aget-wide v2, p1, v7
 
-    invoke-virtual {v0, v1, v2, p2}, Lorg/achartengine/c/f;->d(DI)V
+    invoke-virtual {v0, v2, v3, p2}, Lorg/achartengine/c/f;->d(DI)V
 
     :cond_3
     return-void

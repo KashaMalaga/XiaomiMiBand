@@ -649,7 +649,7 @@
 .end method
 
 .method public a_(J)Lcom/d/a/v;
-    .locals 0
+    .locals 1
 
     invoke-super {p0, p1, p2}, Lcom/d/a/R;->d(J)Lcom/d/a/R;
 

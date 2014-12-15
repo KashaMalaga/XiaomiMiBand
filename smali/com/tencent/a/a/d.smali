@@ -162,7 +162,7 @@
 
 # virtual methods
 .method public a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 8
+    .locals 9
 
     invoke-virtual {p0}, Lcom/tencent/a/a/d;->d()Z
 
@@ -185,25 +185,25 @@
     return-void
 
     :cond_1
-    iget-object v0, p0, Lcom/tencent/a/a/d;->d:Lcom/tencent/a/a/a;
+    iget-object v1, p0, Lcom/tencent/a/a/d;->d:Lcom/tencent/a/a/a;
 
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    move-result-object v2
+    move-result-object v3
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    move v1, p1
+    move v2, p1
 
-    move-object v5, p2
+    move-object v6, p2
 
-    move-object v6, p3
+    move-object v7, p3
 
-    move-object v7, p4
+    move-object v8, p4
 
-    invoke-virtual/range {v0 .. v7}, Lcom/tencent/a/a/a;->b(ILjava/lang/Thread;JLjava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual/range {v1 .. v8}, Lcom/tencent/a/a/a;->b(ILjava/lang/Thread;JLjava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_2
     invoke-virtual {p0}, Lcom/tencent/a/a/d;->f()Z
@@ -212,25 +212,25 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/tencent/a/a/f;->a:Lcom/tencent/a/a/f;
+    sget-object v1, Lcom/tencent/a/a/f;->a:Lcom/tencent/a/a/f;
 
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    move-result-object v2
+    move-result-object v3
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    move v1, p1
+    move v2, p1
 
-    move-object v5, p2
+    move-object v6, p2
 
-    move-object v6, p3
+    move-object v7, p3
 
-    move-object v7, p4
+    move-object v8, p4
 
-    invoke-virtual/range {v0 .. v7}, Lcom/tencent/a/a/f;->b(ILjava/lang/Thread;JLjava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual/range {v1 .. v8}, Lcom/tencent/a/a/f;->b(ILjava/lang/Thread;JLjava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_0
 .end method

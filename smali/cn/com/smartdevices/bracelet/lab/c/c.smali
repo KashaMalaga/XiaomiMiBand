@@ -12,7 +12,7 @@
 .end method
 
 .method public static a(IJ)I
-    .locals 4
+    .locals 5
 
     int-to-double v0, p0
 

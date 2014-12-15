@@ -538,7 +538,7 @@
 .end method
 
 .method public static a(Lcom/tencent/b/b/e$a;)Ljava/lang/String;
-    .locals 5
+    .locals 6
 
     invoke-virtual {p0}, Lcom/tencent/b/b/e$a;->b()Landroid/location/Location;
 
@@ -596,9 +596,9 @@
 
     invoke-virtual {v0}, Landroid/location/Location;->getAltitude()D
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -652,9 +652,9 @@
 
     invoke-virtual {v0}, Landroid/location/Location;->getTime()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

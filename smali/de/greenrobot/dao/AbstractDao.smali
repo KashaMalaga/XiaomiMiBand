@@ -1766,13 +1766,13 @@
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getLong(I)J
 
-    move-result-wide v1
+    move-result-wide v2
 
     if-eqz p3, :cond_2
 
     iget-object v0, p0, Lde/greenrobot/dao/AbstractDao;->identityScopeLong:Lde/greenrobot/dao/identityscope/IdentityScopeLong;
 
-    invoke-virtual {v0, v1, v2}, Lde/greenrobot/dao/identityscope/IdentityScopeLong;->get2(J)Ljava/lang/Object;
+    invoke-virtual {v0, v2, v3}, Lde/greenrobot/dao/identityscope/IdentityScopeLong;->get2(J)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1787,25 +1787,25 @@
 
     if-eqz p3, :cond_3
 
-    iget-object v3, p0, Lde/greenrobot/dao/AbstractDao;->identityScopeLong:Lde/greenrobot/dao/identityscope/IdentityScopeLong;
+    iget-object v1, p0, Lde/greenrobot/dao/AbstractDao;->identityScopeLong:Lde/greenrobot/dao/identityscope/IdentityScopeLong;
 
-    invoke-virtual {v3, v1, v2, v0}, Lde/greenrobot/dao/identityscope/IdentityScopeLong;->put2(JLjava/lang/Object;)V
+    invoke-virtual {v1, v2, v3, v0}, Lde/greenrobot/dao/identityscope/IdentityScopeLong;->put2(JLjava/lang/Object;)V
 
     goto :goto_0
 
     :cond_2
     iget-object v0, p0, Lde/greenrobot/dao/AbstractDao;->identityScopeLong:Lde/greenrobot/dao/identityscope/IdentityScopeLong;
 
-    invoke-virtual {v0, v1, v2}, Lde/greenrobot/dao/identityscope/IdentityScopeLong;->get2NoLock(J)Ljava/lang/Object;
+    invoke-virtual {v0, v2, v3}, Lde/greenrobot/dao/identityscope/IdentityScopeLong;->get2NoLock(J)Ljava/lang/Object;
 
     move-result-object v0
 
     goto :goto_1
 
     :cond_3
-    iget-object v3, p0, Lde/greenrobot/dao/AbstractDao;->identityScopeLong:Lde/greenrobot/dao/identityscope/IdentityScopeLong;
+    iget-object v1, p0, Lde/greenrobot/dao/AbstractDao;->identityScopeLong:Lde/greenrobot/dao/identityscope/IdentityScopeLong;
 
-    invoke-virtual {v3, v1, v2, v0}, Lde/greenrobot/dao/identityscope/IdentityScopeLong;->put2NoLock(JLjava/lang/Object;)V
+    invoke-virtual {v1, v2, v3, v0}, Lde/greenrobot/dao/identityscope/IdentityScopeLong;->put2NoLock(JLjava/lang/Object;)V
 
     goto :goto_0
 
@@ -2547,7 +2547,7 @@
 .end method
 
 .method protected updateInsideSynchronized(Ljava/lang/Object;Landroid/database/sqlite/SQLiteStatement;Z)V
-    .locals 5
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;",
@@ -2580,9 +2580,9 @@
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-virtual {p2, v2, v3, v4}, Landroid/database/sqlite/SQLiteStatement;->bindLong(IJ)V
+    invoke-virtual {p2, v2, v4, v5}, Landroid/database/sqlite/SQLiteStatement;->bindLong(IJ)V
 
     :goto_0
     invoke-virtual {p2}, Landroid/database/sqlite/SQLiteStatement;->execute()V

@@ -12,7 +12,7 @@
 .end method
 
 .method private static revitionImageSize(Ljava/lang/String;II)V
-    .locals 7
+    .locals 8
 
     const/4 v1, 0x0
 
@@ -98,15 +98,15 @@
 
     if-gt v3, p1, :cond_4
 
-    const-wide/high16 v3, 0x4000000000000000L
+    const-wide/high16 v4, 0x4000000000000000L
 
-    int-to-double v5, v0
+    int-to-double v6, v0
 
-    invoke-static {v3, v4, v5, v6}, Ljava/lang/Math;->pow(DD)D
+    invoke-static {v4, v5, v6, v7}, Ljava/lang/Math;->pow(DD)D
 
-    move-result-wide v3
+    move-result-wide v4
 
-    double-to-int v0, v3
+    double-to-int v0, v4
 
     iput v0, v2, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
@@ -463,13 +463,13 @@
 
     invoke-static {}, Ljava/lang/System;->gc()V
 
-    float-to-double v1, v2
+    float-to-double v4, v2
 
-    const-wide v4, 0x3fe999999999999aL
+    const-wide v6, 0x3fe999999999999aL
 
-    mul-double/2addr v1, v4
+    mul-double/2addr v4, v6
 
-    double-to-float v1, v1
+    double-to-float v1, v4
 
     move v2, v1
 

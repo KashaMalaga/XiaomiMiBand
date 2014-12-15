@@ -66,9 +66,9 @@
 
     const/4 v1, 0x0
 
-    const/4 v7, 0x1
+    const/4 v5, 0x1
 
-    const-wide/16 v5, 0x0
+    const-wide/16 v6, 0x0
 
     invoke-virtual {p2}, Lcom/xiaomi/mipush/sdk/i;->a()Ljava/lang/String;
 
@@ -103,9 +103,9 @@
 
     move-result v0
 
-    if-le v0, v7, :cond_2
+    if-le v0, v5, :cond_2
 
-    invoke-interface {v4, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v4, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -124,7 +124,7 @@
 
     move-result-wide v0
 
-    cmp-long v0, v0, v5
+    cmp-long v0, v0, v6
 
     if-nez v0, :cond_0
 
@@ -157,7 +157,7 @@
 
     move-result-wide v0
 
-    cmp-long v0, v0, v5
+    cmp-long v0, v0, v6
 
     if-nez v0, :cond_0
 
@@ -178,7 +178,7 @@
 
     move-result-wide v0
 
-    cmp-long v0, v0, v5
+    cmp-long v0, v0, v6
 
     if-nez v0, :cond_0
 
@@ -199,7 +199,7 @@
 
     move-result-wide v0
 
-    cmp-long v0, v0, v5
+    cmp-long v0, v0, v6
 
     if-nez v0, :cond_0
 
@@ -220,7 +220,7 @@
 
     move-result-wide v0
 
-    cmp-long v0, v0, v5
+    cmp-long v0, v0, v6
 
     if-nez v0, :cond_0
 
@@ -239,9 +239,9 @@
 
     invoke-virtual {p2}, Lcom/xiaomi/mipush/sdk/i;->c()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    cmp-long v1, v3, v5
+    cmp-long v1, v4, v6
 
     if-nez v1, :cond_0
 
@@ -524,7 +524,7 @@
 
     if-eqz v0, :cond_3
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/u;->l(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/u;->m(Ljava/lang/String;)V
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -566,7 +566,7 @@
 
     if-nez v1, :cond_3
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/u;->m(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/u;->n(Ljava/lang/String;)V
     :try_end_2
     .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_0
 

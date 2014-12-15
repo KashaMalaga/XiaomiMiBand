@@ -15,7 +15,7 @@
 
 .field public static final weeks_short:I = 0x7f0d0001
 
-.field public static final weight_test_class:I = 0x7f0d0007
+.field public static final weight_body_figures:I = 0x7f0d0007
 
 .field public static final weight_test_unit:I = 0x7f0d0006
 

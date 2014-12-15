@@ -176,7 +176,7 @@
 .end method
 
 .method public a(ZJI)V
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Landroid/support/v4/f/f;->m:Landroid/media/RemoteControlClient;
 

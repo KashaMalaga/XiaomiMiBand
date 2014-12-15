@@ -694,9 +694,9 @@
 .end method
 
 .method private showBonusBanner(Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
-    .locals 7
+    .locals 8
 
-    const-wide/16 v5, 0x3e8
+    const-wide/16 v6, 0x3e8
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager;->mGameBriefInfo:Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
 
@@ -712,7 +712,7 @@
 
     move-result-wide v2
 
-    mul-long/2addr v2, v5
+    mul-long/2addr v2, v6
 
     invoke-virtual {v1, v2, v3}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
@@ -722,11 +722,11 @@
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->getStopTime()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    mul-long/2addr v3, v5
+    mul-long/2addr v4, v6
 
-    invoke-virtual {v2, v3, v4}, Ljava/util/Calendar;->setTimeInMillis(J)V
+    invoke-virtual {v2, v4, v5}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
     new-instance v3, Lcn/com/smartdevices/bracelet/model/SportDay;
 
@@ -758,9 +758,9 @@
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->getStartTime()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -772,9 +772,9 @@
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->getStopTime()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -902,9 +902,9 @@
 .end method
 
 .method private showGameRecord(Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
-    .locals 9
+    .locals 10
 
-    const-wide/16 v7, 0x3e8
+    const-wide/16 v8, 0x3e8
 
     const/4 v1, 0x1
 
@@ -922,11 +922,11 @@
 
     invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->getStartTime()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    mul-long/2addr v3, v7
+    mul-long/2addr v4, v8
 
-    invoke-virtual {v0, v3, v4}, Ljava/util/Calendar;->setTimeInMillis(J)V
+    invoke-virtual {v0, v4, v5}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
@@ -936,7 +936,7 @@
 
     move-result-wide v4
 
-    mul-long/2addr v4, v7
+    mul-long/2addr v4, v8
 
     invoke-virtual {v3, v4, v5}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
@@ -1025,9 +1025,9 @@
 
     invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->getStartTime()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-virtual {v1, v3, v4}, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->setTimeStamp(J)V
+    invoke-virtual {v1, v4, v5}, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->setTimeStamp(J)V
 
     invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;->getConfigInfo()Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
 
@@ -1130,7 +1130,7 @@
 
     if-nez v0, :cond_3
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/u;->d(Z)V
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/u;->c(Z)V
 
     invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;->getConfigInfo()Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
 
@@ -1157,9 +1157,9 @@
 
     move-result-object v0
 
-    int-to-long v1, v3
+    int-to-long v2, v3
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->setTimeStamp(J)V
+    invoke-virtual {v0, v2, v3}, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->setTimeStamp(J)V
 
     goto :goto_2
 

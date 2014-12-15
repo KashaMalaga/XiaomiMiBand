@@ -53,13 +53,13 @@
 
 # virtual methods
 .method public onScale(Landroid/view/ScaleGestureDetector;)Z
-    .locals 6
+    .locals 7
 
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
     iget-object v0, p0, Lcom/amap/api/mapcore/b$e;->b:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->i(Lcom/amap/api/mapcore/b;)Z
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->h(Lcom/amap/api/mapcore/b;)Z
 
     move-result v0
 
@@ -67,7 +67,7 @@
 
     :cond_0
     :goto_0
-    return v5
+    return v6
 
     :cond_1
     invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getScaleFactor()F
@@ -76,25 +76,25 @@
 
     iget-object v1, p0, Lcom/amap/api/mapcore/b$e;->b:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v1}, Lcom/amap/api/mapcore/b;->j(Lcom/amap/api/mapcore/b;)Z
+    invoke-static {v1}, Lcom/amap/api/mapcore/b;->i(Lcom/amap/api/mapcore/b;)Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    float-to-double v1, v0
+    float-to-double v2, v0
 
-    const-wide v3, 0x3ff147ae147ae148L
+    const-wide v4, 0x3ff147ae147ae148L
 
-    cmpl-double v1, v1, v3
+    cmpl-double v1, v2, v4
 
     if-gtz v1, :cond_2
 
-    float-to-double v1, v0
+    float-to-double v2, v0
 
-    const-wide v3, 0x3fed70a3d70a3d71L
+    const-wide v4, 0x3fed70a3d70a3d71L
 
-    cmpg-double v1, v1, v3
+    cmpg-double v1, v2, v4
 
     if-gez v1, :cond_0
 
@@ -111,7 +111,7 @@
 
     move-result-wide v0
 
-    invoke-static {}, Lcom/amap/api/mapcore/b;->P()D
+    invoke-static {}, Lcom/amap/api/mapcore/b;->Q()D
 
     move-result-wide v2
 
@@ -150,7 +150,7 @@
     :try_start_0
     iget-object v1, p0, Lcom/amap/api/mapcore/b$e;->b:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v1}, Lcom/amap/api/mapcore/b;->k(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/ai;
+    invoke-static {v1}, Lcom/amap/api/mapcore/b;->j(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/ai;
 
     move-result-object v1
 
@@ -180,7 +180,7 @@
 
     iget-object v1, p0, Lcom/amap/api/mapcore/b$e;->b:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v1}, Lcom/amap/api/mapcore/b;->i(Lcom/amap/api/mapcore/b;)Z
+    invoke-static {v1}, Lcom/amap/api/mapcore/b;->h(Lcom/amap/api/mapcore/b;)Z
 
     move-result v1
 
@@ -188,7 +188,7 @@
 
     iget-object v1, p0, Lcom/amap/api/mapcore/b$e;->b:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v1}, Lcom/amap/api/mapcore/b;->l(Lcom/amap/api/mapcore/b;)Z
+    invoke-static {v1}, Lcom/amap/api/mapcore/b;->k(Lcom/amap/api/mapcore/b;)Z
 
     move-result v1
 
@@ -198,7 +198,7 @@
 
     iget-object v2, p0, Lcom/amap/api/mapcore/b$e;->b:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v2}, Lcom/amap/api/mapcore/b;->l(Lcom/amap/api/mapcore/b;)Z
+    invoke-static {v2}, Lcom/amap/api/mapcore/b;->k(Lcom/amap/api/mapcore/b;)Z
 
     move-result v2
 
@@ -214,13 +214,13 @@
 
     iget-object v2, p0, Lcom/amap/api/mapcore/b$e;->b:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v2}, Lcom/amap/api/mapcore/b;->m(Lcom/amap/api/mapcore/b;)I
+    invoke-static {v2}, Lcom/amap/api/mapcore/b;->l(Lcom/amap/api/mapcore/b;)I
 
     move-result v2
 
     iget-object v3, p0, Lcom/amap/api/mapcore/b$e;->b:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v3}, Lcom/amap/api/mapcore/b;->n(Lcom/amap/api/mapcore/b;)I
+    invoke-static {v3}, Lcom/amap/api/mapcore/b;->m(Lcom/amap/api/mapcore/b;)I
 
     move-result v3
 
@@ -241,7 +241,7 @@
 
     iget-object v0, p0, Lcom/amap/api/mapcore/b$e;->b:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->o(Lcom/amap/api/mapcore/b;)Lcom/autonavi/amap/mapcore/MapProjection;
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->n(Lcom/amap/api/mapcore/b;)Lcom/autonavi/amap/mapcore/MapProjection;
 
     move-result-object v0
 
@@ -274,7 +274,7 @@
 
     iget-object v0, p0, Lcom/amap/api/mapcore/b$e;->b:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->j(Lcom/amap/api/mapcore/b;)Z
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->i(Lcom/amap/api/mapcore/b;)Z
 
     move-result v0
 
@@ -303,7 +303,7 @@
     :cond_0
     iget-object v0, p0, Lcom/amap/api/mapcore/b$e;->b:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->p(Lcom/amap/api/mapcore/b;)V
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->o(Lcom/amap/api/mapcore/b;)V
 
     return-void
 .end method

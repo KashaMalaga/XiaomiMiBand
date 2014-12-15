@@ -108,11 +108,11 @@
 .end method
 
 .method protected static a(Landroid/content/Context;)Lcom/a/z;
-    .locals 12
+    .locals 13
 
     const/4 v2, 0x1
 
-    const-wide/32 v9, 0x5265c00
+    const-wide/32 v10, 0x5265c00
 
     const/4 v3, 0x0
 
@@ -128,13 +128,13 @@
 
     move-result-wide v0
 
-    const-wide/32 v5, 0x1b77400
+    const-wide/32 v6, 0x1b77400
 
-    add-long/2addr v0, v5
+    add-long/2addr v0, v6
 
-    div-long/2addr v0, v9
+    div-long/2addr v0, v10
 
-    mul-long/2addr v0, v9
+    mul-long/2addr v0, v10
 
     iput-wide v0, v4, Lcom/a/z;->j:J
 
@@ -293,17 +293,17 @@
 
     invoke-static {v6, v1}, Lcom/a/z;->b([BI)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iget-wide v7, v4, Lcom/a/z;->j:J
+    iget-wide v8, v4, Lcom/a/z;->j:J
 
-    sub-long/2addr v7, v1
+    sub-long/2addr v8, v2
 
-    cmp-long v3, v7, v9
+    cmp-long v1, v8, v10
 
-    if-gez v3, :cond_2
+    if-gez v1, :cond_2
 
-    iput-wide v1, v4, Lcom/a/z;->j:J
+    iput-wide v2, v4, Lcom/a/z;->j:J
 
     const/4 v1, 0x6
 
@@ -372,11 +372,11 @@
     :catchall_1
     move-exception v1
 
-    move-object v11, v1
+    move-object v12, v1
 
     move-object v1, v0
 
-    move-object v0, v11
+    move-object v0, v12
 
     goto :goto_4
 
@@ -389,7 +389,7 @@
 .end method
 
 .method private static a(J)[B
-    .locals 7
+    .locals 8
 
     const/16 v6, 0x8
 

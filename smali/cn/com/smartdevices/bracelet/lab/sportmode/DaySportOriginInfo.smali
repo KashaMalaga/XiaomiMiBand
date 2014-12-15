@@ -178,7 +178,7 @@
 .end method
 
 .method public getSummeryJson()Lorg/json/JSONObject;
-    .locals 5
+    .locals 6
 
     new-instance v1, Lorg/json/JSONObject;
 
@@ -209,9 +209,9 @@
 
     const-string v2, "tc"
 
-    iget-wide v3, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportOriginInfo;->mRoundCostTimeOfPB:J
+    iget-wide v4, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportOriginInfo;->mRoundCostTimeOfPB:J
 
-    invoke-virtual {v0, v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-virtual {v0, v2, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
     const-string v2, "glbr"
 
@@ -221,9 +221,9 @@
 
     const-string v2, "gltc"
 
-    iget-wide v3, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportOriginInfo;->mGroupCostTimeOfPB:J
+    iget-wide v4, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportOriginInfo;->mGroupCostTimeOfPB:J
 
-    invoke-virtual {v0, v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-virtual {v0, v2, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
     const-string v2, "pb"
 
@@ -303,7 +303,7 @@
 .end method
 
 .method public setGroupCostTimeOfPB(J)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportOriginInfo;->mGroupCostTimeOfPB:J
 
@@ -327,7 +327,7 @@
 .end method
 
 .method public setRoundCostTimeOfPB(J)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/DaySportOriginInfo;->mRoundCostTimeOfPB:J
 

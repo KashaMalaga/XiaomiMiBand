@@ -1,33 +1,36 @@
-.class public Lcn/com/smartdevices/bracelet/gps/ui/w;
+.class final Lcn/com/smartdevices/bracelet/gps/ui/w;
 .super Ljava/lang/Object;
 
 
 # instance fields
-.field a:Lcn/com/smartdevices/bracelet/gps/model/f;
+.field a:Landroid/widget/TextView;
 
-.field b:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List",
-            "<",
-            "Lcn/com/smartdevices/bracelet/gps/services/n;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field b:Landroid/widget/TextView;
+
+.field c:Landroid/widget/TextView;
+
+.field d:Landroid/widget/TextView;
+
+.field e:Landroid/widget/TextView;
+
+.field final synthetic f:Lcn/com/smartdevices/bracelet/gps/ui/t;
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 1
+.method private constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/t;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/w;->f:Lcn/com/smartdevices/bracelet/gps/ui/t;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/w;->a:Lcn/com/smartdevices/bracelet/gps/model/f;
+    return-void
+.end method
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/w;->b:Ljava/util/List;
+.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/t;Lcn/com/smartdevices/bracelet/gps/ui/u;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/gps/ui/w;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/t;)V
 
     return-void
 .end method

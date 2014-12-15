@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/pace_head_layout" android:background="@color/main_ui_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="15.0sp" android:textColor="#e6ffffff" android:gravity="center" android:id="@id/title_head" android:background="@color/bg_color_blue" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_h" android:text="@string/sport_running_helper" />
+    <RelativeLayout android:id="@id/rl_head" android:background="#ff1898c5" android:layout_width="fill_parent" android:layout_height="143.5dip" android:layout_below="@id/title_head">
+        <View android:id="@id/strut" android:background="@color/split_color" android:layout_width="@dimen/round_bg_stroke" android:layout_height="65.5dip" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        <RelativeLayout android:gravity="center" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="Left" android:layout_alignRight="@id/strut" android:layout_alignParentLeft="true">
+            <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:id="@id/tvv_miles_fastest" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00'00&quot;" android:layout_centerHorizontal="true" android:fontFamily="miui-bold" style="@style/font_white_s40_5" />
+            <TextView android:gravity="center" android:id="@id/tvl_miles_fastest" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.5dip" android:text="@string/sport_running_lable_miles_fastest" android:layout_below="@id/tvv_miles_fastest" android:layout_centerHorizontal="true" style="@style/font_white_s16_5" />
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="Right" android:layout_alignLeft="@id/strut" android:layout_alignParentRight="true">
+            <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:id="@id/tvv_km_slowest" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00'00&quot;" android:layout_centerHorizontal="true" android:fontFamily="miui-bold" style="@style/font_white_s40_5" />
+            <TextView android:id="@id/tvl_km_slowest" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.5dip" android:text="@string/sport_running_lable_km_slowest" android:layout_below="@id/tvv_km_slowest" android:layout_centerHorizontal="true" style="@style/font_white_s16_5" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center" android:id="@id/rl_head_1" android:paddingLeft="@dimen/mili_margin" android:paddingTop="8.0dip" android:paddingRight="@dimen/mili_margin" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/rl_head">
+        <TableRow android:gravity="center" android:layout_width="fill_parent" android:layout_height="30.5dip">
+            <TextView android:gravity="center" android:id="@id/tv_kilometer" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/sport_running_distance_unit" android:layout_weight="1.0" style="@style/font_c50000000_s10_5" />
+            <TextView android:gravity="center" android:id="@id/tv_costtime" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/sport_running_time_desc" android:layout_weight="1.0" style="@style/font_c50000000_s10_5" />
+            <TextView android:gravity="center" android:id="@id/tv_pace" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/sport_running_real_time_pace" android:layout_weight="1.0" style="@style/font_c50000000_s10_5" />
+            <TextView android:gravity="center" android:id="@id/tv_speed" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/sport_running_speed_with_unit" android:layout_weight="1.0" style="@style/font_c50000000_s10_5" />
+        </TableRow>
+    </RelativeLayout>
+    <View android:id="@id/line" android:background="@color/split_color" android:layout_width="fill_parent" android:layout_height="@dimen/round_bg_stroke" android:layout_marginLeft="@dimen/mili_margin" android:layout_marginRight="@dimen/mili_margin" android:layout_below="@id/rl_head_1" />
+</RelativeLayout>

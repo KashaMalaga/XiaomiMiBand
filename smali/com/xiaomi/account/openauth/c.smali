@@ -736,7 +736,7 @@
 .end method
 
 .method protected static a(Landroid/app/Activity;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
-    .locals 4
+    .locals 5
 
     const-wide/16 v0, 0x0
 

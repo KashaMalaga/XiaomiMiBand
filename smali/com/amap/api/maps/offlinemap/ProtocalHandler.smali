@@ -44,7 +44,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x1
+    const/4 v0, 0x3
 
     iput v0, p0, Lcom/amap/api/maps/offlinemap/ProtocalHandler;->maxTry:I
 
@@ -62,7 +62,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x1
+    const/4 v0, 0x3
 
     iput v0, p0, Lcom/amap/api/maps/offlinemap/ProtocalHandler;->maxTry:I
 
@@ -78,7 +78,7 @@
 .end method
 
 .method private a()Ljava/lang/Object;
-    .locals 10
+    .locals 11
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TV;"
@@ -132,6 +132,32 @@
     move-result-object v6
 
     iput-object v6, p0, Lcom/amap/api/maps/offlinemap/ProtocalHandler;->recommandURL:Ljava/lang/String;
+
+    const-string v6, "amapv2"
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "offlineMapDownload-->"
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    iget-object v8, p0, Lcom/amap/api/maps/offlinemap/ProtocalHandler;->recommandURL:Ljava/lang/String;
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    const/16 v8, 0x6f
+
+    invoke-static {v6, v7, v8}, Lcom/amap/api/mapcore/util/r;->a(Ljava/lang/String;Ljava/lang/String;I)V
 
     iget-object v6, p0, Lcom/amap/api/maps/offlinemap/ProtocalHandler;->recommandURL:Ljava/lang/String;
 
@@ -213,26 +239,114 @@
     :catch_2
     move-exception v6
 
-    move-object v9, v6
+    move-object v10, v6
 
     move-object v6, v2
 
-    move-object v2, v9
+    move-object v2, v10
 
     :goto_3
+    :try_start_4
+    invoke-virtual {v2}, Lcom/amap/api/maps/AMapException;->printStackTrace()V
+
+    const-string v7, "MapApi"
+
+    invoke-virtual {v2}, Lcom/amap/api/maps/AMapException;->getErrorMessage()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v8, "failuetimes:"
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v8
+
+    invoke-virtual {v7, v8, v9}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    const-string v8, "\n"
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v7}, Lcom/amap/api/maps/offlinemap/n;->b(Ljava/lang/String;)V
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2}, Lcom/amap/api/maps/AMapException;->getMessage()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    const-string v8, "\n"
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v7}, Lcom/amap/api/maps/offlinemap/n;->b(Ljava/lang/String;)V
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-static {v2}, Lcom/amap/api/maps/offlinemap/n;->a(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    const-string v8, "\n"
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v7}, Lcom/amap/api/maps/offlinemap/n;->b(Ljava/lang/String;)V
+
     add-int/lit8 v0, v0, 0x1
 
-    :try_start_4
     iget v7, p0, Lcom/amap/api/maps/offlinemap/ProtocalHandler;->maxTry:I
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
     if-ge v0, v7, :cond_6
 
-    const-wide/16 v7, 0x3e8
+    const-wide/16 v8, 0x3e8
 
     :try_start_5
-    invoke-static {v7, v8}, Ljava/lang/Thread;->sleep(J)V
+    invoke-static {v8, v9}, Ljava/lang/Thread;->sleep(J)V
     :try_end_5
     .catch Ljava/lang/InterruptedException; {:try_start_5 .. :try_end_5} :catch_3
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
@@ -261,7 +375,7 @@
 
     move-object v3, v4
 
-    goto :goto_2
+    goto/16 :goto_2
 
     :catch_3
     move-exception v0
@@ -282,13 +396,11 @@
     :catchall_0
     move-exception v0
 
-    move-object v2, v6
-
     :goto_5
-    if-eqz v2, :cond_3
+    if-eqz v6, :cond_3
 
     :try_start_9
-    invoke-virtual {v2}, Ljava/io/InputStream;->close()V
+    invoke-virtual {v6}, Ljava/io/InputStream;->close()V
     :try_end_9
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_6
 
@@ -372,12 +484,14 @@
     :catchall_1
     move-exception v0
 
+    move-object v6, v2
+
     goto :goto_5
 
     :catch_8
     move-exception v2
 
-    goto :goto_3
+    goto/16 :goto_3
 
     :cond_8
     move-object v2, v6
@@ -685,6 +799,8 @@
     :catch_0
     move-exception v0
 
+    invoke-virtual {v0}, Ljava/net/ProtocolException;->printStackTrace()V
+
     new-instance v0, Lcom/amap/api/maps/AMapException;
 
     const-string v1, "\u534f\u8bae\u89e3\u6790\u9519\u8bef - ProtocolException"
@@ -695,6 +811,8 @@
 
     :catch_1
     move-exception v0
+
+    invoke-virtual {v0}, Ljava/net/UnknownHostException;->printStackTrace()V
 
     new-instance v0, Lcom/amap/api/maps/AMapException;
 
@@ -707,6 +825,8 @@
     :catch_2
     move-exception v0
 
+    invoke-virtual {v0}, Ljava/net/UnknownServiceException;->printStackTrace()V
+
     new-instance v0, Lcom/amap/api/maps/AMapException;
 
     const-string v1, "\u670d\u52a1\u5668\u8fde\u63a5\u5931\u8d25 - UnknownServiceException"
@@ -717,6 +837,8 @@
 
     :catch_3
     move-exception v0
+
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
     new-instance v0, Lcom/amap/api/maps/AMapException;
 

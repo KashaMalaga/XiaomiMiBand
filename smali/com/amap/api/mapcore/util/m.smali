@@ -12,7 +12,7 @@
 .end method
 
 .method public static a(Ljava/lang/String;Ljava/net/Proxy;)Ljava/net/HttpURLConnection;
-    .locals 3
+    .locals 4
 
     if-nez p0, :cond_0
 
@@ -105,6 +105,32 @@
 
     if-eq v1, v2, :cond_2
 
+    const-string v1, "MapApi"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "responseCode ="
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getResponseCode()I
+
+    move-result v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
     new-instance v0, Lcom/amap/api/maps/AMapException;
 
     const-string v1, "http\u8fde\u63a5\u5931\u8d25 - ConnectionException"
@@ -121,6 +147,8 @@
 
     :catch_0
     move-exception v0
+
+    invoke-virtual {v0}, Ljava/net/UnknownHostException;->printStackTrace()V
 
     new-instance v0, Lcom/amap/api/maps/AMapException;
 
@@ -144,10 +172,12 @@
     .catch Ljava/net/SocketTimeoutException; {:try_start_1 .. :try_end_1} :catch_3
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :catch_1
     move-exception v0
+
+    invoke-virtual {v0}, Ljava/net/MalformedURLException;->printStackTrace()V
 
     new-instance v0, Lcom/amap/api/maps/AMapException;
 
@@ -160,6 +190,8 @@
     :catch_2
     move-exception v0
 
+    invoke-virtual {v0}, Ljava/net/ProtocolException;->printStackTrace()V
+
     new-instance v0, Lcom/amap/api/maps/AMapException;
 
     const-string v1, "\u534f\u8bae\u89e3\u6790\u9519\u8bef - ProtocolException"
@@ -171,6 +203,8 @@
     :catch_3
     move-exception v0
 
+    invoke-virtual {v0}, Ljava/net/SocketTimeoutException;->printStackTrace()V
+
     new-instance v0, Lcom/amap/api/maps/AMapException;
 
     const-string v1, "socket \u8fde\u63a5\u8d85\u65f6 - SocketTimeoutException"
@@ -181,6 +215,8 @@
 
     :catch_4
     move-exception v0
+
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
     new-instance v0, Lcom/amap/api/maps/AMapException;
 

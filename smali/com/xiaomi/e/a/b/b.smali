@@ -72,7 +72,7 @@
 .end method
 
 .method public static a(Ljava/io/File;)Z
-    .locals 5
+    .locals 6
 
     const/4 v0, 0x1
 
@@ -80,17 +80,17 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
     invoke-virtual {p0}, Ljava/io/File;->lastModified()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    sub-long/2addr v1, v3
+    sub-long/2addr v2, v4
 
-    const-wide/32 v3, 0x5265c00
+    const-wide/32 v4, 0x5265c00
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-ltz v1, :cond_1
 

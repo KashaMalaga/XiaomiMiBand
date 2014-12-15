@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="pull_to_refresh_pull_label">下拉刷新</string>
-    <string name="pull_to_refresh_release_label">松开加载</string>
-    <string name="pull_to_refresh_refreshing_label">正在加载…</string>
-    <string name="pull_to_refresh_from_bottom_pull_label">加载更多</string>
-    <string name="pull_to_refresh_from_bottom_release_label">@string/pull_to_refresh_release_label</string>
-    <string name="pull_to_refresh_from_bottom_refreshing_label">@string/pull_to_refresh_refreshing_label</string>
     <string name="app_name">小米手環</string>
     <string name="action_exit">退出</string>
     <string name="register">註冊</string>
@@ -640,14 +634,14 @@
     <string name="lab_factory_disconnected_reminder">藍牙斷開連接提醒</string>
     <string name="lab_factory_disconnected_reminder_tips">當手環與手機藍牙連接斷開時，手環會振動1次並且點亮白色指示燈進行提醒</string>
     <string name="lab_factory_disconnected_reminder_disconnect">請先連接手環,再進行提醒設置</string>
-    <string name="sport_running_helper">跑步伴侣</string>
+    <string name="sport_running_helper">跑步</string>
     <string name="sport_share">立即分享</string>
     <string name="sport_running_no_gps">打開GPS才能準確記錄你的運動軌跡，是否打開？</string>
     <string name="sport_running_set_speed">速度提醒</string>
     <string name="sport_running_speed">時速</string>
     <string name="sport_running_speed_with_unit">時速(公里/時)</string>
     <string name="sport_running_real_time_pace">配速(分/公里)</string>
-    <string name="sport_running_pace">平均配速</string>
+    <string name="sport_running_pace">配速</string>
     <string name="sport_running_set_goal">跑步目標</string>
     <string name="sport_running_set_dist">距離提醒</string>
     <string name="sport_running_speed_detail">%.2f公里/時</string>
@@ -665,6 +659,7 @@
     <string name="sport_running_history">歷史</string>
     <string name="sport_running_slider_prompt">>>>向右滑動暫停</string>
     <string name="sport_running_distance">距離</string>
+    <string name="sport_running_distance_unit">距離(公里)</string>
     <string name="sport_running_average_speed">平均速度</string>
     <string name="sport_running_step">步數</string>
     <string name="sport_running_altitude">海拔</string>
@@ -676,29 +671,42 @@
 %d年"</string>
     <string name="sport_running_history_no_data">暫無數據</string>
     <string name="sport_running_cost_cal">%.1f千卡</string>
-    <string name="sport_running_prepare_map">正在準備地圖數據，請稍候……</string>
+    <string name="sport_running_prepare_map">正在準備數據，請稍候……</string>
     <string name="sport_running_prompt_per_kilometer" formatted="false">您已經跑了%s公里，用時%s，最近1公里的配速爲%s。%s</string>
     <string name="sport_running_prompt_great">好棒！！</string>
     <string name="sport_running_prompt_come_on">加油加油！！</string>
     <string name="sport_running_kilometers">公里</string>
     <string name="sport_running_per_kilometers">/公里</string>
     <string name="sport_running_kilometers_per_hour">公里/時</string>
+    <string name="sport_running_gps_locating">GPS定位中……</string>
+    <string name="sport_running_set_pace">配速提醒</string>
+    <string name="sport_running_lable_miles_fastest">公里最快</string>
+    <string name="sport_running_lable_km_slowest">公里最慢</string>
     <string name="sport_ranking_desc_poor">您的成绩在所有%s用户中垫底，加油啊！</string>
-    <string name="sport_ranking_desc_normal" formatted="false">您打敗了全國 &lt;b>%s&lt;/b> 的%s用户！</string>
+    <string name="sport_ranking_desc_normal" formatted="false">您打敗了 &lt;b>%s&lt;/b> 的小米手環%s用户！</string>
     <string name="sport_ranking_desc_great">您已经到了独孤求败的境界！</string>
     <string name="sport_new_record_ropeskipping">連跳新紀錄</string>
     <string name="percent_mark">%</string>
-    <string name="share_step_ranking">超過全國 &lt;b>%s&lt;/b> 的用戶！</string>
+    <string name="share_step_ranking">超過 &lt;b>%s&lt;/b> 的小米手環用戶！</string>
     <string name="buy_bracelet_desc">先買個手環吧</string>
     <string name="bracelet_store_desc">手環商城</string>
     <string name="title_activity_open">合作夥伴授權頁面</string>
     <string name="lab_factory_cancel_deauthorize">取消授權</string>
     <string name="state_deauthorization_success">取消授權成功</string>
+    <string name="state_deauthorization_doing">取消授權中...</string>
     <string name="state_deauthorization_error">取消授權失敗</string>
     <string name="state_authorization_error">授權失敗</string>
+    <string name="state_authorization_doing">授權中...</string>
     <string name="state_authorization_success">授權成功</string>
     <string name="enable_hidden_feature">隐藏功能已開啓</string>
     <string name="disable_hidden_feature">隐藏功能已關閉</string>
+    <string name="btn_save">保存</string>
+    <string name="btn_delete">刪除</string>
+    <string name="btn_confirm">確定</string>
+    <string name="btn_continue">返回</string>
+    <string name="running_short_track_desc">您才活動了%d米，確定要取消這次跑步嗎？</string>
+    <string name="running_no_track_desc">您還沒動吧，確定要取消這次跑步嗎？</string>
+    <string name="running_set_pace_desc">慢於該配速手環將震動提醒</string>
     <string name="congrats">恭喜</string>
     <string name="bind_qq_health_tip_init">登錄後繼續完成綁定QQ健康</string>
     <string name="bind_qq_health_tip_another_qq">需要切換至手機QQ當前登錄的賬號，才能在健康中看到數據</string>

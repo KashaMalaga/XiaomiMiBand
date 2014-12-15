@@ -20,36 +20,11 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/A;->a:Lcn/com/smartdevices/bracelet/gps/services/x;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/x;->e(Lcn/com/smartdevices/bracelet/gps/services/x;)I
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/x;->d(Lcn/com/smartdevices/bracelet/gps/services/x;)V
 
-    move-result v0
-
-    if-lez v0, :cond_0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/A;->a:Lcn/com/smartdevices/bracelet/gps/services/x;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/gps/services/x;->f(Lcn/com/smartdevices/bracelet/gps/services/x;)I
-
-    move-result v1
-
-    if-eq v1, v0, :cond_0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/A;->a:Lcn/com/smartdevices/bracelet/gps/services/x;
-
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/gps/services/x;->c(Lcn/com/smartdevices/bracelet/gps/services/x;I)I
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/A;->a:Lcn/com/smartdevices/bracelet/gps/services/x;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/gps/services/x;->g(Lcn/com/smartdevices/bracelet/gps/services/x;)Lcn/com/smartdevices/bracelet/gps/services/C;
-
-    move-result-object v1
-
-    invoke-interface {v1, v0}, Lcn/com/smartdevices/bracelet/gps/services/C;->a(I)V
-
-    :cond_0
     return-void
 .end method

@@ -483,19 +483,19 @@
 .end method
 
 .method public b()V
-    .locals 3
+    .locals 4
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lb/a/aK;->a(Z)V
 
-    iput-wide v1, p0, Lb/a/aK;->a:D
+    iput-wide v2, p0, Lb/a/aK;->a:D
 
     invoke-virtual {p0, v0}, Lb/a/aK;->b(Z)V
 
-    iput-wide v1, p0, Lb/a/aK;->b:D
+    iput-wide v2, p0, Lb/a/aK;->b:D
 
     invoke-virtual {p0, v0}, Lb/a/aK;->c(Z)V
 
@@ -693,7 +693,7 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 3
+    .locals 4
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -705,9 +705,9 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lb/a/aK;->a:D
+    iget-wide v2, p0, Lb/a/aK;->a:D
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     const-string v1, ", "
 
@@ -717,9 +717,9 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lb/a/aK;->b:D
+    iget-wide v2, p0, Lb/a/aK;->b:D
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     const-string v1, ", "
 
@@ -729,9 +729,9 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lb/a/aK;->c:J
+    iget-wide v2, p0, Lb/a/aK;->c:J
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     const-string v1, ")"
 

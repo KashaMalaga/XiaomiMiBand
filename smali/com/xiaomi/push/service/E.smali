@@ -938,7 +938,7 @@
 .end method
 
 .method private static f(Landroid/content/Context;)Ljava/lang/String;
-    .locals 5
+    .locals 7
 
     :try_start_0
     const-string v0, "phone"
@@ -957,11 +957,11 @@
 
     const/16 v1, 0xa
 
-    move v4, v1
+    move v6, v1
 
     move-object v1, v2
 
-    move v2, v4
+    move v2, v6
 
     :goto_0
     if-nez v1, :cond_0
@@ -970,10 +970,10 @@
 
     if-lez v2, :cond_0
 
-    const-wide/16 v1, 0x1f4
+    const-wide/16 v4, 0x1f4
 
     :try_start_1
-    invoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V
+    invoke-static {v4, v5}, Ljava/lang/Thread;->sleep(J)V
     :try_end_1
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0

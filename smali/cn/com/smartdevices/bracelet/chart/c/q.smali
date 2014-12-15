@@ -440,11 +440,11 @@
 .end method
 
 .method public static b(Landroid/content/Context;II)[Ljava/lang/String;
-    .locals 5
+    .locals 6
 
-    const/4 v4, 0x1
+    const/4 v5, 0x1
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
     const/4 v0, 0x2
 
@@ -460,13 +460,13 @@
 
     div-float/2addr v1, v2
 
-    float-to-double v1, v1
+    float-to-double v2, v1
 
-    invoke-static {v1, v2, p2}, Lcn/com/smartdevices/bracelet/chart/c/q;->a(DI)Ljava/lang/String;
+    invoke-static {v2, v3, p2}, Lcn/com/smartdevices/bracelet/chart/c/q;->a(DI)Ljava/lang/String;
 
     move-result-object v1
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v4
 
     const v1, 0x7f0c0037
 
@@ -474,7 +474,7 @@
 
     move-result-object v1
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v5
 
     :goto_0
     return-object v0
@@ -484,7 +484,7 @@
 
     move-result-object v1
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v4
 
     const v1, 0x7f0c0038
 
@@ -492,7 +492,7 @@
 
     move-result-object v1
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v5
 
     goto :goto_0
 .end method

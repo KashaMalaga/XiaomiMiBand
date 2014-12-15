@@ -50,7 +50,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/H;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->h(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Lcn/com/smartdevices/bracelet/chart/base/g;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->g(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Lcn/com/smartdevices/bracelet/chart/base/g;
 
     move-result-object v0
 
@@ -84,7 +84,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/H;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->i(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)I
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->h(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)I
 
     move-result v0
 
@@ -98,13 +98,13 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/H;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->k(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Lcn/com/smartdevices/bracelet/chart/base/l;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->j(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Lcn/com/smartdevices/bracelet/chart/base/l;
 
     move-result-object v1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/H;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->j(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Lcn/com/smartdevices/bracelet/chart/base/g;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->i(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Lcn/com/smartdevices/bracelet/chart/base/g;
 
     move-result-object v0
 
@@ -141,13 +141,13 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/H;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->m(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Lcn/com/smartdevices/bracelet/chart/b/d;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->l(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Lcn/com/smartdevices/bracelet/chart/b/d;
 
     move-result-object v1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/H;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->l(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Lcn/com/smartdevices/bracelet/chart/base/g;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->k(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Lcn/com/smartdevices/bracelet/chart/base/g;
 
     move-result-object v0
 
@@ -161,7 +161,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/H;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->n(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Z
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->m(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Z
 
     move-result v0
 

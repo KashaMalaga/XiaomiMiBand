@@ -30,6 +30,8 @@
 
 .field private bonus:I
 
+.field private connectStatus:Ljava/lang/Boolean;
+
 .field private continueDay:I
 
 .field private continueReport:Lcn/com/smartdevices/bracelet/model/ReportData;
@@ -289,6 +291,12 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->showNoFound:Ljava/lang/Boolean;
 
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->connectStatus:Ljava/lang/Boolean;
+
     iput-object v2, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->luaAction:Lcn/com/smartdevices/bracelet/lua/LuaAction;
 
     return-void
@@ -382,6 +390,14 @@
     iget v0, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->bonus:I
 
     return v0
+.end method
+
+.method public getConnecteStatus()Ljava/lang/Boolean;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->connectStatus:Ljava/lang/Boolean;
+
+    return-object v0
 .end method
 
 .method public getContinueDay()I
@@ -907,6 +923,14 @@
     return-void
 .end method
 
+.method public setConnectStatus(Ljava/lang/Boolean;)V
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->connectStatus:Ljava/lang/Boolean;
+
+    return-void
+.end method
+
 .method public setContinueDay(I)V
     .locals 0
 
@@ -1132,7 +1156,7 @@
 .end method
 
 .method public setServerTimeStamp(J)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->serverTimeStamp:J
 
@@ -1260,7 +1284,7 @@
 .end method
 
 .method public setTimeStamp(J)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->timeStamp:J
 
@@ -1268,7 +1292,7 @@
 .end method
 
 .method public setTimeStamp1(J)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->timeStamp1:J
 
@@ -1276,7 +1300,7 @@
 .end method
 
 .method public setTimeStamp2(J)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->timeStamp2:J
 

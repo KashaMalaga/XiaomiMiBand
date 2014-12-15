@@ -416,7 +416,7 @@
 .end method
 
 .method public a(D)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcom/xiaomi/network/c;->l:D
 
@@ -511,41 +511,41 @@
 .end method
 
 .method public a(Ljava/lang/String;JJ)V
-    .locals 8
+    .locals 10
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    const/4 v7, 0x0
+    const/4 v8, 0x0
 
-    move-object v0, p0
+    move-object v1, p0
 
-    move-object v1, p1
+    move-object v2, p1
 
-    move-wide v3, p2
+    move-wide v4, p2
 
-    move-wide v5, p4
+    move-wide v6, p4
 
-    invoke-virtual/range {v0 .. v7}, Lcom/xiaomi/network/c;->a(Ljava/lang/String;IJJLjava/lang/Exception;)V
+    invoke-virtual/range {v1 .. v8}, Lcom/xiaomi/network/c;->a(Ljava/lang/String;IJJLjava/lang/Exception;)V
 
     return-void
 .end method
 
 .method public a(Ljava/lang/String;JJLjava/lang/Exception;)V
-    .locals 8
+    .locals 10
 
-    const/4 v2, -0x1
+    const/4 v3, -0x1
 
-    move-object v0, p0
+    move-object v1, p0
 
-    move-object v1, p1
+    move-object v2, p1
 
-    move-wide v3, p2
+    move-wide v4, p2
 
-    move-wide v5, p4
+    move-wide v6, p4
 
-    move-object v7, p6
+    move-object/from16 v8, p6
 
-    invoke-virtual/range {v0 .. v7}, Lcom/xiaomi/network/c;->a(Ljava/lang/String;IJJLjava/lang/Exception;)V
+    invoke-virtual/range {v1 .. v8}, Lcom/xiaomi/network/c;->a(Ljava/lang/String;IJJLjava/lang/Exception;)V
 
     return-void
 .end method

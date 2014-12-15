@@ -1,40 +1,85 @@
-.class public Lcn/com/smartdevices/bracelet/gps/model/f;
+.class final Lcn/com/smartdevices/bracelet/gps/model/f;
 .super Ljava/lang/Object;
 
-
-# static fields
-.field public static final a:I = 0x0
-
-.field public static final b:I = 0x1
-
-.field public static final c:I = 0x2
+# interfaces
+.implements Landroid/os/Parcelable$Creator;
 
 
-# instance fields
-.field public d:F
-
-.field public e:J
-
-.field public f:J
-
-.field public g:I
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator",
+        "<",
+        "Lcn/com/smartdevices/bracelet/gps/model/RunningReminderInfo;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method public constructor <init>(JFJ)V
-    .locals 1
+.method constructor <init>()V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Landroid/os/Parcel;)Lcn/com/smartdevices/bracelet/gps/model/RunningReminderInfo;
+    .locals 2
+
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/model/RunningReminderInfo;
+
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/gps/model/RunningReminderInfo;-><init>()V
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/model/RunningReminderInfo;->c(I)V
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/model/RunningReminderInfo;->b(I)V
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/model/RunningReminderInfo;->a(I)V
+
+    return-object v0
+.end method
+
+.method public a(I)[Lcn/com/smartdevices/bracelet/gps/model/RunningReminderInfo;
+    .locals 1
+
     const/4 v0, 0x0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/model/f;->g:I
+    return-object v0
+.end method
 
-    iput p3, p0, Lcn/com/smartdevices/bracelet/gps/model/f;->d:F
+.method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .locals 1
 
-    iput-wide p4, p0, Lcn/com/smartdevices/bracelet/gps/model/f;->e:J
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/gps/model/f;->a(Landroid/os/Parcel;)Lcn/com/smartdevices/bracelet/gps/model/RunningReminderInfo;
 
-    iput-wide p1, p0, Lcn/com/smartdevices/bracelet/gps/model/f;->f:J
+    move-result-object v0
 
-    return-void
+    return-object v0
+.end method
+
+.method public synthetic newArray(I)[Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/gps/model/f;->a(I)[Lcn/com/smartdevices/bracelet/gps/model/RunningReminderInfo;
+
+    move-result-object v0
+
+    return-object v0
 .end method

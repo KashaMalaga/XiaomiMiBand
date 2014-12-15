@@ -716,7 +716,7 @@
 .end method
 
 .method public a(Lcom/xiaomi/g/a/t;)Z
-    .locals 5
+    .locals 6
 
     const/4 v0, 0x0
 
@@ -867,11 +867,11 @@
     if-eqz v1, :cond_0
 
     :cond_b
-    iget-wide v1, p0, Lcom/xiaomi/g/a/t;->f:J
+    iget-wide v2, p0, Lcom/xiaomi/g/a/t;->f:J
 
-    iget-wide v3, p1, Lcom/xiaomi/g/a/t;->f:J
+    iget-wide v4, p1, Lcom/xiaomi/g/a/t;->f:J
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-nez v1, :cond_0
 

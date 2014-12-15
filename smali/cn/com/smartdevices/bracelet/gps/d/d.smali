@@ -32,13 +32,13 @@
 .end method
 
 .method public static a(FI)F
-    .locals 3
+    .locals 4
 
     new-instance v0, Ljava/math/BigDecimal;
 
-    float-to-double v1, p0
+    float-to-double v2, p0
 
-    invoke-direct {v0, v1, v2}, Ljava/math/BigDecimal;-><init>(D)V
+    invoke-direct {v0, v2, v3}, Ljava/math/BigDecimal;-><init>(D)V
 
     const/4 v1, 0x4
 
@@ -165,7 +165,7 @@
 .end method
 
 .method public static b(DI)Ljava/lang/String;
-    .locals 5
+    .locals 6
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -199,9 +199,9 @@
 
     invoke-static {p0, p1, p2}, Lcn/com/smartdevices/bracelet/gps/d/d;->a(DI)D
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-static {v3, v4}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    invoke-static {v4, v5}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v3
 

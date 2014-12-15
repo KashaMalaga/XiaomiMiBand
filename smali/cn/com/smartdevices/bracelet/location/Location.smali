@@ -108,7 +108,7 @@
 .end method
 
 .method public a(D)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcn/com/smartdevices/bracelet/location/Location;->a:D
 
@@ -132,7 +132,7 @@
 .end method
 
 .method public b(D)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcn/com/smartdevices/bracelet/location/Location;->b:D
 
@@ -211,7 +211,7 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 5
+    .locals 6
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -233,9 +233,9 @@
 
     move-result-object v2
 
-    iget-wide v3, p0, Lcn/com/smartdevices/bracelet/location/Location;->a:D
+    iget-wide v4, p0, Lcn/com/smartdevices/bracelet/location/Location;->a:D
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -257,9 +257,9 @@
 
     move-result-object v2
 
-    iget-wide v3, p0, Lcn/com/smartdevices/bracelet/location/Location;->b:D
+    iget-wide v4, p0, Lcn/com/smartdevices/bracelet/location/Location;->b:D
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     move-result-object v2
 

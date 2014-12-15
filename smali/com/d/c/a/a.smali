@@ -426,7 +426,7 @@
 .end method
 
 .method private p()V
-    .locals 7
+    .locals 8
 
     iget-object v0, p0, Lcom/d/c/a/a;->c:Ljava/lang/ref/WeakReference;
 
@@ -475,13 +475,13 @@
 
     iget v3, v1, Landroid/graphics/RectF;->top:F
 
-    float-to-double v3, v3
+    float-to-double v4, v3
 
-    invoke-static {v3, v4}, Ljava/lang/Math;->floor(D)D
+    invoke-static {v4, v5}, Ljava/lang/Math;->floor(D)D
 
-    move-result-wide v3
+    move-result-wide v4
 
-    double-to-int v3, v3
+    double-to-int v3, v4
 
     iget v4, v1, Landroid/graphics/RectF;->right:F
 
@@ -495,13 +495,13 @@
 
     iget v1, v1, Landroid/graphics/RectF;->bottom:F
 
-    float-to-double v5, v1
+    float-to-double v6, v1
 
-    invoke-static {v5, v6}, Ljava/lang/Math;->ceil(D)D
+    invoke-static {v6, v7}, Ljava/lang/Math;->ceil(D)D
 
-    move-result-wide v5
+    move-result-wide v6
 
-    double-to-int v1, v5
+    double-to-int v1, v6
 
     invoke-virtual {v0, v2, v3, v4, v1}, Landroid/view/View;->invalidate(IIII)V
 

@@ -76,7 +76,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 8
+    .locals 9
 
     new-instance v0, Landroid/support/v4/content/x;
 
@@ -92,23 +92,23 @@
 
     sput-object v0, Landroid/support/v4/content/w;->g:Ljava/util/concurrent/BlockingQueue;
 
-    new-instance v0, Ljava/util/concurrent/ThreadPoolExecutor;
+    new-instance v1, Ljava/util/concurrent/ThreadPoolExecutor;
 
-    const/4 v1, 0x5
+    const/4 v2, 0x5
 
-    const/16 v2, 0x80
+    const/16 v3, 0x80
 
-    const-wide/16 v3, 0x1
+    const-wide/16 v4, 0x1
 
-    sget-object v5, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    sget-object v6, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    sget-object v6, Landroid/support/v4/content/w;->g:Ljava/util/concurrent/BlockingQueue;
+    sget-object v7, Landroid/support/v4/content/w;->g:Ljava/util/concurrent/BlockingQueue;
 
-    sget-object v7, Landroid/support/v4/content/w;->f:Ljava/util/concurrent/ThreadFactory;
+    sget-object v8, Landroid/support/v4/content/w;->f:Ljava/util/concurrent/ThreadFactory;
 
-    invoke-direct/range {v0 .. v7}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
+    invoke-direct/range {v1 .. v8}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
 
-    sput-object v0, Landroid/support/v4/content/w;->d:Ljava/util/concurrent/Executor;
+    sput-object v1, Landroid/support/v4/content/w;->d:Ljava/util/concurrent/Executor;
 
     new-instance v0, Landroid/support/v4/content/C;
 

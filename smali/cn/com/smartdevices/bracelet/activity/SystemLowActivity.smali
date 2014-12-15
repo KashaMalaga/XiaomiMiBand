@@ -38,7 +38,7 @@
     goto :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x7f070079
+    .packed-switch 0x7f0b007d
         :pswitch_0
     .end packed-switch
 .end method
@@ -48,11 +48,11 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f03007f
+    const v0, 0x7f030086
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/SystemLowActivity;->setContentView(I)V
 
-    const v0, 0x7f070079
+    const v0, 0x7f0b007d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/SystemLowActivity;->findViewById(I)Landroid/view/View;
 

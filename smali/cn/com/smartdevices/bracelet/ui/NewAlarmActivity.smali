@@ -629,9 +629,9 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f070079 -> :sswitch_0
-        0x7f070094 -> :sswitch_1
-        0x7f070097 -> :sswitch_2
+        0x7f0b007d -> :sswitch_0
+        0x7f0b0098 -> :sswitch_1
+        0x7f0b009b -> :sswitch_2
     .end sparse-switch
 .end method
 
@@ -640,7 +640,7 @@
 
     invoke-super/range {p0 .. p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030019
+    const v0, 0x7f03001a
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->setContentView(I)V
 
@@ -652,7 +652,7 @@
 
     invoke-virtual {v0, p0}, Lde/greenrobot/event/EventBus;->register(Ljava/lang/Object;)V
 
-    const v0, 0x7f07009b
+    const v0, 0x7f0b009f
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->findViewById(I)Landroid/view/View;
 
@@ -668,7 +668,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f07009d
+    const v0, 0x7f0b00a1
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->findViewById(I)Landroid/view/View;
 
@@ -678,7 +678,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->p:Landroid/widget/TextView;
 
-    const v0, 0x7f07009e
+    const v0, 0x7f0b00a2
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->findViewById(I)Landroid/view/View;
 
@@ -700,7 +700,7 @@
 
     move-result-object v1
 
-    const v5, 0x7f08003c
+    const v5, 0x7f07003c
 
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -710,7 +710,7 @@
 
     move-result-object v1
 
-    const v6, 0x7f080011
+    const v6, 0x7f070011
 
     invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -750,7 +750,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0200d6
+    const v2, 0x7f0200da
 
     invoke-virtual {v1, v2}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
@@ -766,7 +766,7 @@
 
     invoke-virtual {v1, v0}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/a/f;)Lkankan/wheel/widget/WheelView;
 
-    const v0, 0x7f07009f
+    const v0, 0x7f0b00a3
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->findViewById(I)Landroid/view/View;
 
@@ -788,7 +788,7 @@
 
     move-result-object v1
 
-    const v5, 0x7f08003c
+    const v5, 0x7f07003c
 
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -798,7 +798,7 @@
 
     move-result-object v1
 
-    const v6, 0x7f080011
+    const v6, 0x7f070011
 
     invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -838,7 +838,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0200d6
+    const v1, 0x7f0200da
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
@@ -850,7 +850,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f08003c
+    const v2, 0x7f07003c
 
     const/high16 v3, 0x41900000
 
@@ -862,7 +862,7 @@
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/a/f;)Lkankan/wheel/widget/WheelView;
 
-    const v0, 0x7f0700a0
+    const v0, 0x7f0b00a4
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->findViewById(I)Landroid/view/View;
 
@@ -880,7 +880,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0200d6
+    const v1, 0x7f0200da
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
@@ -892,7 +892,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f08003c
+    const v2, 0x7f07003c
 
     const/high16 v3, 0x41900000
 
@@ -912,7 +912,7 @@
 
     move-result-object v1
 
-    const v5, 0x7f08003c
+    const v5, 0x7f07003c
 
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -922,7 +922,7 @@
 
     move-result-object v1
 
-    const v6, 0x7f080011
+    const v6, 0x7f070011
 
     invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -1016,7 +1016,7 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    const v0, 0x7f070099
+    const v0, 0x7f0b009d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->findViewById(I)Landroid/view/View;
 
@@ -1087,7 +1087,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    const v0, 0x7f070097
+    const v0, 0x7f0b009b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->findViewById(I)Landroid/view/View;
 
@@ -1127,7 +1127,7 @@
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->d(I)Lkankan/wheel/widget/WheelView;
 
-    const v0, 0x7f070079
+    const v0, 0x7f0b007d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->findViewById(I)Landroid/view/View;
 
@@ -1135,7 +1135,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070094
+    const v0, 0x7f0b0098
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->findViewById(I)Landroid/view/View;
 

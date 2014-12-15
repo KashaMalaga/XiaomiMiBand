@@ -439,7 +439,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f02000a
+    const v4, 0x7f02000b
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -1291,7 +1291,7 @@
 .end method
 
 .method protected drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
-    .locals 6
+    .locals 7
 
     const/high16 v5, 0x3f800000
 

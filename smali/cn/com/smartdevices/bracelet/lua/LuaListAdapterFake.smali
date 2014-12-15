@@ -151,27 +151,27 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/LuaListAdapterFake;->taLeft:Landroid/view/animation/TranslateAnimation;
 
-    const-wide/16 v1, 0x3e8
+    const-wide/16 v2, 0x3e8
 
-    invoke-virtual {v0, v1, v2}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
+    invoke-virtual {v0, v2, v3}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/LuaListAdapterFake;->taRight:Landroid/view/animation/TranslateAnimation;
 
-    const-wide/16 v1, 0x3e8
+    const-wide/16 v2, 0x3e8
 
-    invoke-virtual {v0, v1, v2}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
+    invoke-virtual {v0, v2, v3}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/LuaListAdapterFake;->taTop:Landroid/view/animation/TranslateAnimation;
 
-    const-wide/16 v1, 0x3e8
+    const-wide/16 v2, 0x3e8
 
-    invoke-virtual {v0, v1, v2}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
+    invoke-virtual {v0, v2, v3}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/LuaListAdapterFake;->taBlow:Landroid/view/animation/TranslateAnimation;
 
-    const-wide/16 v1, 0x3e8
+    const-wide/16 v2, 0x3e8
 
-    invoke-virtual {v0, v1, v2}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
+    invoke-virtual {v0, v2, v3}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
 
     return-void
 .end method
@@ -301,7 +301,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f03006f
+    const v3, 0x7f030076
 
     const/4 v4, 0x0
 
@@ -309,7 +309,7 @@
 
     move-result-object v3
 
-    const v1, 0x7f0701e5
+    const v1, 0x7f0b0206
 
     invoke-virtual {v3, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -325,7 +325,7 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;I)V
 
-    const v1, 0x7f0701e6
+    const v1, 0x7f0b0207
 
     invoke-virtual {v3, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -341,7 +341,7 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;I)V
 
-    const v1, 0x7f070085
+    const v1, 0x7f0b0089
 
     invoke-virtual {v3, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

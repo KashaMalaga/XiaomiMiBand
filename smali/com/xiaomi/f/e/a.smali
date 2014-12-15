@@ -242,7 +242,7 @@
 .end method
 
 .method public skip(J)J
-    .locals 2
+    .locals 3
 
     iget-object v0, p0, Lcom/xiaomi/f/e/a;->a:Ljava/io/Reader;
 

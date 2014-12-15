@@ -23,7 +23,9 @@
 
 # virtual methods
 .method public onClick(Landroid/view/View;)V
-    .locals 3
+    .locals 4
+
+    const/4 v3, 0x1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/y;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
@@ -43,7 +45,15 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/a;->c()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/a;->d()V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/y;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Lcn/com/smartdevices/bracelet/f/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/f/a;->a(Z)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/y;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
@@ -67,7 +77,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/a/d;->d()V
+    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/f/a/d;->a(Z)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/y;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 

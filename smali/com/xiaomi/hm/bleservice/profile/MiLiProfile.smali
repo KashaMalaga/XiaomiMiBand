@@ -1719,6 +1719,38 @@
 
 
 # virtual methods
+.method public _enableConnectedBroadcast(Z)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/r;->d()V
+
+    iget-object v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->m_CharDeviceName:Landroid/bluetooth/BluetoothGattCharacteristic;
+
+    new-array v3, v0, [B
+
+    if-eqz p1, :cond_0
+
+    :goto_0
+    int-to-byte v0, v0
+
+    aput-byte v0, v3, v1
+
+    invoke-virtual {p0, v2, v3}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->write(Landroid/bluetooth/BluetoothGattCharacteristic;[B)Z
+
+    move-result v0
+
+    return v0
+
+    :cond_0
+    move v0, v1
+
+    goto :goto_0
+.end method
+
 .method public _factoryReset()Z
     .locals 4
 

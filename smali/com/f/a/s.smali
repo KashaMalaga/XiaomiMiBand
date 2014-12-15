@@ -322,7 +322,7 @@
 .end method
 
 .method public a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;JI)V
-    .locals 6
+    .locals 8
 
     :try_start_0
     iget-boolean v0, p0, Lcom/f/a/s;->i:Z
@@ -332,17 +332,17 @@
     invoke-direct {p0, p1}, Lcom/f/a/s;->f(Landroid/content/Context;)V
 
     :cond_0
-    iget-object v0, p0, Lcom/f/a/s;->g:Lb/a/dD;
+    iget-object v1, p0, Lcom/f/a/s;->g:Lb/a/dD;
 
-    move-object v1, p2
+    move-object v2, p2
 
-    move-object v2, p3
+    move-object v3, p3
 
-    move-wide v3, p4
+    move-wide v4, p4
 
-    move v5, p6
+    move v6, p6
 
-    invoke-virtual/range {v0 .. v5}, Lb/a/dD;->a(Ljava/lang/String;Ljava/lang/String;JI)V
+    invoke-virtual/range {v1 .. v6}, Lb/a/dD;->a(Ljava/lang/String;Ljava/lang/String;JI)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -454,7 +454,7 @@
 .end method
 
 .method a(Landroid/content/Context;Ljava/lang/String;Ljava/util/Map;J)V
-    .locals 3
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

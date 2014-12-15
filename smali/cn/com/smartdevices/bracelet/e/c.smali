@@ -23,7 +23,7 @@
 
 # virtual methods
 .method public run()V
-    .locals 5
+    .locals 6
 
     const-string v0, "xxx"
 
@@ -47,9 +47,9 @@
 
     invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/e/h;->c()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-direct {v2, v3, v4}, Ljava/util/Date;-><init>(J)V
+    invoke-direct {v2, v4, v5}, Ljava/util/Date;-><init>(J)V
 
     invoke-virtual {v2}, Ljava/util/Date;->toString()Ljava/lang/String;
 
@@ -79,9 +79,9 @@
 
     invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/e/h;->c()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/e/i;->a(J)Ljava/util/LinkedList;
+    invoke-virtual {v0, v2, v3}, Lcn/com/smartdevices/bracelet/e/i;->a(J)Ljava/util/LinkedList;
 
     move-result-object v0
 
@@ -148,9 +148,9 @@
 
     invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/e/h;->c()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-direct {v2, v3, v4}, Ljava/util/Date;-><init>(J)V
+    invoke-direct {v2, v4, v5}, Ljava/util/Date;-><init>(J)V
 
     invoke-virtual {v2}, Ljava/util/Date;->toString()Ljava/lang/String;
 

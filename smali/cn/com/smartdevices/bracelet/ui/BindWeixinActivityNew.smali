@@ -85,7 +85,7 @@
 .method private b()V
     .locals 3
 
-    const v2, 0x7f08003c
+    const v2, 0x7f07003c
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->g:Landroid/view/View;
 
@@ -103,7 +103,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->i:Landroid/widget/ImageView;
 
-    const v1, 0x7f020016
+    const v1, 0x7f020017
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
@@ -133,7 +133,7 @@
 .method private c()V
     .locals 3
 
-    const v2, 0x7f08003d
+    const v2, 0x7f07003d
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->g:Landroid/view/View;
 
@@ -151,7 +151,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->i:Landroid/widget/ImageView;
 
-    const v1, 0x7f020017
+    const v1, 0x7f020018
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
@@ -316,7 +316,7 @@
     nop
 
     :pswitch_data_0
-    .packed-switch 0x7f070031
+    .packed-switch 0x7f0b0031
         :pswitch_0
     .end packed-switch
 .end method
@@ -330,7 +330,7 @@
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->setContentView(I)V
 
-    const v0, 0x7f070031
+    const v0, 0x7f0b0031
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->findViewById(I)Landroid/view/View;
 
@@ -344,7 +344,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070033
+    const v0, 0x7f0b0033
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->findViewById(I)Landroid/view/View;
 
@@ -352,7 +352,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->g:Landroid/view/View;
 
-    const v0, 0x7f070029
+    const v0, 0x7f0b0029
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->findViewById(I)Landroid/view/View;
 
@@ -360,7 +360,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->h:Landroid/view/View;
 
-    const v0, 0x7f07002a
+    const v0, 0x7f0b002a
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->findViewById(I)Landroid/view/View;
 
@@ -370,7 +370,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->i:Landroid/widget/ImageView;
 
-    const v0, 0x7f07002c
+    const v0, 0x7f0b002c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->findViewById(I)Landroid/view/View;
 

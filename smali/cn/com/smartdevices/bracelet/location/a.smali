@@ -531,15 +531,15 @@
 
     invoke-virtual {p1}, Lcom/amap/api/location/AMapLocation;->getLatitude()D
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/location/Location;->b(D)V
+    invoke-virtual {v0, v2, v3}, Lcn/com/smartdevices/bracelet/location/Location;->b(D)V
 
     invoke-virtual {p1}, Lcom/amap/api/location/AMapLocation;->getLongitude()D
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/location/Location;->a(D)V
+    invoke-virtual {v0, v2, v3}, Lcn/com/smartdevices/bracelet/location/Location;->a(D)V
 
     new-instance v1, Lcn/com/smartdevices/bracelet/location/Location$Address;
 

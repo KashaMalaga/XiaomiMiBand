@@ -57,4 +57,16 @@
         <item>重度污染</item>
         <item>严重污染</item>
     </string-array>
+    <string-array name="weight_test_unit">
+        <item>公斤</item>
+        <item>斤</item>
+        <item>磅</item>
+    </string-array>
+    <string-array name="weight_body_figures">
+        <item>过轻</item>
+        <item>正常</item>
+        <item>过重</item>
+        <item>肥胖</item>
+        <item>非常肥胖</item>
+    </string-array>
 </resources>

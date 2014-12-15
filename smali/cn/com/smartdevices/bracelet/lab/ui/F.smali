@@ -182,7 +182,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/F;->f:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->e(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;)Lcn/com/smartdevices/bracelet/lab/ui/ae;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->e(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;)Lcn/com/smartdevices/bracelet/lab/ui/af;
 
     move-result-object v1
 
@@ -196,7 +196,7 @@
 
     move-result v2
 
-    invoke-virtual {v1, v0, v2}, Lcn/com/smartdevices/bracelet/lab/ui/ae;->a(IZ)V
+    invoke-virtual {v1, v0, v2}, Lcn/com/smartdevices/bracelet/lab/ui/af;->a(IZ)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/F;->f:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
@@ -426,7 +426,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/F;->f:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
-    const v2, 0x7f0c0250
+    const v2, 0x7f0c025d
 
     new-array v3, v3, [Ljava/lang/Object;
 

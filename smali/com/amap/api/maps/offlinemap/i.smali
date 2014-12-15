@@ -30,7 +30,7 @@
 .end method
 
 .method private a(Ljava/lang/String;)V
-    .locals 5
+    .locals 6
 
     iget-object v0, p0, Lcom/amap/api/maps/offlinemap/i;->a:Landroid/content/Context;
 
@@ -67,13 +67,7 @@
 
     move-result-object v1
 
-    const-string v2, "offlinemap2"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, ".png"
+    const-string v2, "offlinemap2.png"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -100,11 +94,11 @@
     :goto_1
     invoke-virtual {p0}, Lcom/amap/api/maps/offlinemap/i;->a()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    const-wide/32 v3, 0x100000
+    const-wide/32 v4, 0x100000
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-lez v1, :cond_0
 

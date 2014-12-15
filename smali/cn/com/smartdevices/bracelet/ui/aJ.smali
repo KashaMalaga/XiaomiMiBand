@@ -88,7 +88,7 @@
 
     const/4 v4, 0x0
 
-    const v0, 0x7f07026b
+    const v0, 0x7f0b0290
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -96,7 +96,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aJ;->d:Landroid/view/View;
 
-    const v0, 0x7f07026c
+    const v0, 0x7f0b0291
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -114,13 +114,13 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/di;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/dn;
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/aJ;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-direct {v1, v0}, Lcn/com/smartdevices/bracelet/ui/di;-><init>(Landroid/app/Activity;)V
+    invoke-direct {v1, v0}, Lcn/com/smartdevices/bracelet/ui/dn;-><init>(Landroid/app/Activity;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aJ;->e:Landroid/view/View;
 
@@ -138,11 +138,11 @@
 
     iget v3, v0, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/ui/di;->a()Lcn/com/smartdevices/bracelet/ui/dk;
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/ui/dn;->a()Lcn/com/smartdevices/bracelet/ui/dp;
 
     move-result-object v1
 
-    invoke-virtual {v1, v4}, Lcn/com/smartdevices/bracelet/ui/dk;->a(Z)I
+    invoke-virtual {v1, v4}, Lcn/com/smartdevices/bracelet/ui/dp;->a(Z)I
 
     move-result v1
 
@@ -153,7 +153,7 @@
     invoke-virtual {v2, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     :cond_0
-    const v0, 0x7f070275
+    const v0, 0x7f0b029a
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -161,7 +161,7 @@
 
     invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/ui/aJ;->b(Landroid/view/View;)V
 
-    const v0, 0x7f070271
+    const v0, 0x7f0b0296
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -185,7 +185,7 @@
 
     invoke-virtual {v0, v5}, Landroid/view/View;->setVisibility(I)V
 
-    const v0, 0x7f070270
+    const v0, 0x7f0b0295
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -208,7 +208,7 @@
 .method private b(Landroid/view/View;)V
     .locals 2
 
-    const v1, 0x7f070276
+    const v1, 0x7f0b029b
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/lab/j;->a()Z
 
@@ -537,7 +537,7 @@
 .end method
 
 .method public a(J)V
-    .locals 12
+    .locals 13
 
     const/4 v11, 0x2
 
@@ -762,9 +762,9 @@
 
     mul-int v7, v5, v1
 
-    int-to-long v7, v7
+    int-to-long v8, v7
 
-    invoke-virtual {v6, v7, v8}, Landroid/animation/Animator;->setStartDelay(J)V
+    invoke-virtual {v6, v8, v9}, Landroid/animation/Animator;->setStartDelay(J)V
 
     if-nez v1, :cond_1
 
@@ -968,7 +968,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f030087
+    const v1, 0x7f03008e
 
     const/4 v2, 0x0
 

@@ -244,7 +244,7 @@
 .end method
 
 .method public static a(Ljava/util/List;)Ljava/lang/String;
-    .locals 7
+    .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -287,21 +287,21 @@
 
     invoke-virtual {v0}, Lcom/amap/api/services/core/LatLonPoint;->getLongitude()D
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-static {v3, v4}, Lcom/amap/api/services/core/e;->a(D)D
+    invoke-static {v4, v5}, Lcom/amap/api/services/core/e;->a(D)D
 
-    move-result-wide v3
+    move-result-wide v4
 
     invoke-virtual {v0}, Lcom/amap/api/services/core/LatLonPoint;->getLatitude()D
 
-    move-result-wide v5
+    move-result-wide v6
 
-    invoke-static {v5, v6}, Lcom/amap/api/services/core/e;->a(D)D
+    invoke-static {v6, v7}, Lcom/amap/api/services/core/e;->a(D)D
 
-    move-result-wide v5
+    move-result-wide v6
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuffer;->append(D)Ljava/lang/StringBuffer;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuffer;->append(D)Ljava/lang/StringBuffer;
 
     move-result-object v0
 
@@ -311,7 +311,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v5, v6}, Ljava/lang/StringBuffer;->append(D)Ljava/lang/StringBuffer;
+    invoke-virtual {v0, v6, v7}, Ljava/lang/StringBuffer;->append(D)Ljava/lang/StringBuffer;
 
     const-string v0, ";"
 

@@ -21,7 +21,7 @@
 
 # direct methods
 .method private constructor <init>(Lcom/e/a/a/a/a/a/a;Ljava/lang/String;J[Ljava/io/File;[Ljava/io/InputStream;[J)V
-    .locals 0
+    .locals 1
 
     iput-object p1, p0, Lcom/e/a/a/a/a/a/g;->a:Lcom/e/a/a/a/a/a/a;
 
@@ -41,7 +41,7 @@
 .end method
 
 .method synthetic constructor <init>(Lcom/e/a/a/a/a/a/a;Ljava/lang/String;J[Ljava/io/File;[Ljava/io/InputStream;[JLcom/e/a/a/a/a/a/b;)V
-    .locals 0
+    .locals 1
 
     invoke-direct/range {p0 .. p7}, Lcom/e/a/a/a/a/a/g;-><init>(Lcom/e/a/a/a/a/a/a;Ljava/lang/String;J[Ljava/io/File;[Ljava/io/InputStream;[J)V
 

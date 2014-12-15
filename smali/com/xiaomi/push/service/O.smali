@@ -117,14 +117,14 @@
 .end method
 
 .method private static a(Landroid/content/Context;Lcom/xiaomi/g/a/n;[BLandroid/widget/RemoteViews;)Landroid/app/Notification;
-    .locals 9
+    .locals 10
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "NewApi"
         }
     .end annotation
 
-    const/4 v5, 0x1
+    const/4 v6, 0x1
 
     invoke-virtual {p1}, Lcom/xiaomi/g/a/n;->m()Lcom/xiaomi/g/a/d;
 
@@ -144,7 +144,7 @@
 
     invoke-virtual {v2, v3}, Landroid/app/Notification$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
-    aget-object v3, v0, v5
+    aget-object v3, v0, v6
 
     invoke-virtual {v2, v3}, Landroid/app/Notification$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
 
@@ -156,9 +156,9 @@
     :goto_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-virtual {v2, v3, v4}, Landroid/app/Notification$Builder;->setWhen(J)Landroid/app/Notification$Builder;
+    invoke-virtual {v2, v4, v5}, Landroid/app/Notification$Builder;->setWhen(J)Landroid/app/Notification$Builder;
 
     invoke-static {p0, p1, v1, p2}, Lcom/xiaomi/push/service/O;->a(Landroid/content/Context;Lcom/xiaomi/g/a/n;Lcom/xiaomi/g/a/d;[B)Landroid/app/PendingIntent;
 
@@ -199,23 +199,23 @@
     invoke-virtual {v2, v3}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;
 
     :goto_1
-    invoke-virtual {v2, v5}, Landroid/app/Notification$Builder;->setAutoCancel(Z)Landroid/app/Notification$Builder;
+    invoke-virtual {v2, v6}, Landroid/app/Notification$Builder;->setAutoCancel(Z)Landroid/app/Notification$Builder;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    sget-wide v5, Lcom/xiaomi/push/service/O;->a:J
+    sget-wide v6, Lcom/xiaomi/push/service/O;->a:J
 
-    sub-long v5, v3, v5
+    sub-long v6, v4, v6
 
-    const-wide/16 v7, 0x2710
+    const-wide/16 v8, 0x2710
 
-    cmp-long v0, v5, v7
+    cmp-long v0, v6, v8
 
     if-lez v0, :cond_1
 
-    sput-wide v3, Lcom/xiaomi/push/service/O;->a:J
+    sput-wide v4, Lcom/xiaomi/push/service/O;->a:J
 
     iget v0, v1, Lcom/xiaomi/g/a/d;->f:I
 
@@ -305,7 +305,7 @@
 
     invoke-direct {v3}, Landroid/app/Notification$BigTextStyle;-><init>()V
 
-    aget-object v0, v0, v5
+    aget-object v0, v0, v6
 
     invoke-virtual {v3, v0}, Landroid/app/Notification$BigTextStyle;->bigText(Ljava/lang/CharSequence;)Landroid/app/Notification$BigTextStyle;
 
@@ -553,7 +553,7 @@
 .end method
 
 .method public static a(Landroid/content/Context;Lcom/xiaomi/g/a/n;[B)V
-    .locals 11
+    .locals 12
 
     const-string v0, "notification"
 
@@ -662,19 +662,19 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v5
+    move-result-wide v6
 
-    sget-wide v7, Lcom/xiaomi/push/service/O;->a:J
+    sget-wide v8, Lcom/xiaomi/push/service/O;->a:J
 
-    sub-long v7, v5, v7
+    sub-long v8, v6, v8
 
-    const-wide/16 v9, 0x2710
+    const-wide/16 v10, 0x2710
 
-    cmp-long v1, v7, v9
+    cmp-long v1, v8, v10
 
     if-lez v1, :cond_2
 
-    sput-wide v5, Lcom/xiaomi/push/service/O;->a:J
+    sput-wide v6, Lcom/xiaomi/push/service/O;->a:J
 
     iget v1, v3, Lcom/xiaomi/g/a/d;->f:I
 

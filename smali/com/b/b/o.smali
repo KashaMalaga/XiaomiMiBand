@@ -28,23 +28,23 @@
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;[B[Lcom/b/b/q;Lcom/b/b/a;)V
-    .locals 7
+    .locals 8
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v5
+    move-result-wide v6
 
-    move-object v0, p0
+    move-object v1, p0
 
-    move-object v1, p1
+    move-object v2, p1
 
-    move-object v2, p2
+    move-object v3, p2
 
-    move-object v3, p3
+    move-object v4, p3
 
-    move-object v4, p4
+    move-object v5, p4
 
-    invoke-direct/range {v0 .. v6}, Lcom/b/b/o;-><init>(Ljava/lang/String;[B[Lcom/b/b/q;Lcom/b/b/a;J)V
+    invoke-direct/range {v1 .. v7}, Lcom/b/b/o;-><init>(Ljava/lang/String;[B[Lcom/b/b/q;Lcom/b/b/a;J)V
 
     return-void
 .end method

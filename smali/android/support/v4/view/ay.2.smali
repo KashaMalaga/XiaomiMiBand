@@ -30,7 +30,7 @@
 .end method
 
 .method public a(Landroid/view/View;Ljava/lang/Runnable;J)V
-    .locals 0
+    .locals 1
 
     invoke-static {p1, p2, p3, p4}, Landroid/support/v4/view/aF;->a(Landroid/view/View;Ljava/lang/Runnable;J)V
 

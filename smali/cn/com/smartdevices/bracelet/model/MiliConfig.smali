@@ -31,12 +31,16 @@
 
 .field public lightColor:Ljava/lang/String;
 
+.field public vibrate:Z
+
 .field public wearHand:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 2
+
+    const/4 v1, 0x0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -56,15 +60,37 @@
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->inComingCallNotifyTime:I
 
-    const/4 v0, 0x0
+    iput v1, p0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->disconnectedReminder:I
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->disconnectedReminder:I
+    iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->vibrate:Z
 
     return-void
 .end method
 
 .method public static fromJsonStr(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/model/MiliConfig;
-    .locals 2
+    .locals 3
+
+    const-string v0, "SCORPIONEAL"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "the MiliConfig fromString is "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/y;->g()Lcom/b/a/k;
 
@@ -180,7 +206,7 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 1
+    .locals 4
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/y;->g()Lcom/b/a/k;
 
@@ -198,6 +224,32 @@
     return-object v0
 
     :cond_0
+    const-string v1, "SCORPIONEAL"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "the MiliConfig toString is "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Ljava/lang/String;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
     invoke-virtual {v0}, Ljava/lang/String;->toString()Ljava/lang/String;
 
     move-result-object v0

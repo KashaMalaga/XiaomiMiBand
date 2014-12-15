@@ -46,7 +46,7 @@
 .end method
 
 .method public constructor <init>(DD)V
-    .locals 6
+    .locals 7
 
     const-wide v4, 0x4076800000000000L
 
@@ -112,7 +112,7 @@
 .end method
 
 .method public constructor <init>(DDZ)V
-    .locals 6
+    .locals 7
 
     const-wide v4, 0x4076800000000000L
 
@@ -206,15 +206,15 @@
 
 # virtual methods
 .method public clone()Lcom/amap/api/maps/model/LatLng;
-    .locals 5
+    .locals 6
 
     new-instance v0, Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v1, p0, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v2, p0, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
-    iget-wide v3, p0, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iget-wide v4, p0, Lcom/amap/api/maps/model/LatLng;->longitude:D
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v0, v2, v3, v4, v5}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     return-object v0
 .end method
@@ -301,23 +301,23 @@
 .end method
 
 .method public hashCode()I
-    .locals 6
+    .locals 7
 
-    const/16 v5, 0x20
+    const/16 v6, 0x20
 
     const/16 v0, 0x1f
 
-    iget-wide v1, p0, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v2, p0, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
-    invoke-static {v1, v2}, Ljava/lang/Double;->doubleToLongBits(D)J
+    invoke-static {v2, v3}, Ljava/lang/Double;->doubleToLongBits(D)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    ushr-long v3, v1, v5
+    ushr-long v4, v2, v6
 
-    xor-long/2addr v1, v3
+    xor-long/2addr v2, v4
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     add-int/lit8 v1, v1, 0x1f
 
@@ -329,11 +329,11 @@
 
     mul-int/2addr v0, v1
 
-    ushr-long v4, v2, v5
+    ushr-long v4, v2, v6
 
-    xor-long v1, v2, v4
+    xor-long/2addr v2, v4
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     add-int/2addr v0, v1
 
@@ -341,7 +341,7 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 3
+    .locals 4
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -353,9 +353,9 @@
 
     move-result-object v0
 
-    iget-wide v1, p0, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v2, p0, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -365,9 +365,9 @@
 
     move-result-object v0
 
-    iget-wide v1, p0, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iget-wide v2, p0, Lcom/amap/api/maps/model/LatLng;->longitude:D
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

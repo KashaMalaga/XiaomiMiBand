@@ -128,9 +128,9 @@
 .end method
 
 .method public static a(Ljava/lang/String;)Ljava/lang/String;
-    .locals 10
+    .locals 11
 
-    const/16 v9, 0x3e
+    const/16 v10, 0x3e
 
     const/4 v0, 0x0
 
@@ -151,13 +151,13 @@
 
     new-instance v4, Ljava/lang/StringBuilder;
 
-    int-to-double v5, v3
+    int-to-double v6, v3
 
-    const-wide v7, 0x3ff4cccccccccccdL
+    const-wide v8, 0x3ff4cccccccccccdL
 
-    mul-double/2addr v5, v7
+    mul-double/2addr v6, v8
 
-    double-to-int v1, v5
+    double-to-int v1, v6
 
     invoke-direct {v4, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
@@ -168,7 +168,7 @@
 
     aget-char v5, v2, v1
 
-    if-le v5, v9, :cond_3
+    if-le v5, v10, :cond_3
 
     :cond_2
     :goto_2
@@ -197,7 +197,7 @@
     goto :goto_2
 
     :cond_5
-    if-ne v5, v9, :cond_7
+    if-ne v5, v10, :cond_7
 
     if-le v1, v0, :cond_6
 

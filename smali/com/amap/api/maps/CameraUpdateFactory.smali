@@ -30,17 +30,17 @@
 .end method
 
 .method public static changeLatLng(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/CameraUpdate;
-    .locals 5
+    .locals 6
 
     new-instance v0, Lcom/autonavi/amap/mapcore/IPoint;
 
     invoke-direct {v0}, Lcom/autonavi/amap/mapcore/IPoint;-><init>()V
 
-    iget-wide v1, p0, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iget-wide v2, p0, Lcom/amap/api/maps/model/LatLng;->longitude:D
 
-    iget-wide v3, p0, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v4, p0, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
-    invoke-static {v1, v2, v3, v4, v0}, Lcom/autonavi/amap/mapcore/MapProjection;->lonlat2Geo(DDLcom/autonavi/amap/mapcore/IPoint;)V
+    invoke-static {v2, v3, v4, v5, v0}, Lcom/autonavi/amap/mapcore/MapProjection;->lonlat2Geo(DDLcom/autonavi/amap/mapcore/IPoint;)V
 
     new-instance v1, Lcom/amap/api/maps/CameraUpdate;
 

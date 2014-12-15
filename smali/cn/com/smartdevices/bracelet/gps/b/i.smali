@@ -78,9 +78,9 @@
 
     invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/gps/a/a;->b(Landroid/content/Context;J)Ljava/util/List;
+    invoke-static {v0, v2, v3}, Lcn/com/smartdevices/bracelet/gps/a/a;->b(Landroid/content/Context;J)Ljava/util/List;
 
     move-result-object v0
 
@@ -102,9 +102,9 @@
 
     invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/lab/sync/b;->a(Landroid/content/Context;J)Z
+    invoke-static {v0, v2, v3}, Lcn/com/smartdevices/bracelet/lab/sync/b;->a(Landroid/content/Context;J)Z
 
     move-result v0
 
@@ -145,11 +145,11 @@
 
     invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iget v3, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->d:I
+    iget v1, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->d:I
 
-    invoke-static {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/gps/a/a;->b(Landroid/content/Context;JI)Z
+    invoke-static {v0, v2, v3, v1}, Lcn/com/smartdevices/bracelet/gps/a/a;->b(Landroid/content/Context;JI)Z
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->b:Landroid/content/Context;
 
@@ -157,9 +157,9 @@
 
     invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/gps/a/a;->b(Landroid/content/Context;J)Ljava/util/List;
+    invoke-static {v0, v2, v3}, Lcn/com/smartdevices/bracelet/gps/a/a;->b(Landroid/content/Context;J)Ljava/util/List;
 
     move-result-object v0
 

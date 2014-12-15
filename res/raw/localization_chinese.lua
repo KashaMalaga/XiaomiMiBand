@@ -85,6 +85,7 @@ localization_Chinese_table = {
     no_data_hint_2="有氧训练是减肥、强身的一个重要手段, 它包括健身操、跑步、蹬自行车等",
     no_data_hint_3="一个成年人的深度睡眠只占其整个睡眠时间的15%~20%, 也就平均90分钟",
     not_binded_hint="你还没有绑定手环, 点击绑定",
+    not_binded_hint_info="也可以通过右上角菜单，点击智能设备绑定",
     new_record_info="恭喜, 你创造自己的最高行走纪录",
     new_record_format="新纪录, %d步, %d月%d日",
     today_goal_reached="恭喜, 今天已达成目标",
@@ -101,9 +102,9 @@ localization_Chinese_table = {
     personal_best_on_skip_day_title="恭喜获得假条一张, 你已连续%d天达标",
     personal_best_on_skip_day_info="连续达标每满7天即可获得假条, 未达标时会自动使用",
     manual_lazy_title="今天还未达标哦, 是否要使用假条？",
-    manual_lazy_subtitle="使用假条即使今天没有达标也不会中断连续达标",
+    manual_lazy_subtitle="不想今天中断连续达标, 就用假条吧",
     manual_lazy_title_used="今天已经使用假条, 好好放松一下吧",
-    manual_lazy_subtitle_used="要是一不小心今天达标了, 还是会计入连续达标的哦",
+    manual_lazy_subtitle_used="明天将会继续累计连续达标",
     manual_fail_ytd_title = "很遗憾昨天未达标, 连续达标中断",
     manual_fail_ytd_subtitle = "截至前天已连续%d天达标",
 
@@ -134,6 +135,8 @@ localization_Chinese_table = {
 
     cannot_find_bracelet="无法查找到手环？",
     cannot_find_bracelet_info="请确保手环有电且在手机旁边",
+
+    bracelet_disconnect = "无法连接手环？点击查看详细帮助",
 
     challenge_to_get="还有%s天即将创造新的纪录",
     record_reach_max="恭喜你已经追平了自己的最高纪录",
@@ -177,4 +180,10 @@ localization_Chinese_table = {
     weather_tips_title_0 = "空气重度污染, 请尽量减少室外活动",
     weather_tips_title_1 = "空气严重污染, 请尽量减少室外活动",
     weather_tips_info = "仰卧起坐、跳绳、平板支撑都是很棒的室内活动哦",
+
+    ---------------Weight scale -------------------
+    welcome_use_weight_scale = "小米智能秤绑定成功",
+    welcome_use_weight_scale_not_bind = "点击绑定小米智能秤",
+
+    welcome_use_mi_health="欢迎使用小米健康",
 }

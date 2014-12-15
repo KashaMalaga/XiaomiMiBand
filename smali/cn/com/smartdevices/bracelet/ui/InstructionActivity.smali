@@ -111,11 +111,11 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030006
+    const v0, 0x7f030007
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/InstructionActivity;->setContentView(I)V
 
-    const v0, 0x7f070038
+    const v0, 0x7f0b003c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/InstructionActivity;->findViewById(I)Landroid/view/View;
 
@@ -125,7 +125,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/InstructionActivity;->a:Landroid/support/v4/view/ViewPager;
 
-    const v0, 0x7f070039
+    const v0, 0x7f0b003d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/InstructionActivity;->findViewById(I)Landroid/view/View;
 

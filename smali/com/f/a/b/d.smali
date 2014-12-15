@@ -112,9 +112,9 @@
 
     iget v3, v0, Lcom/f/a/b/e;->d:I
 
-    int-to-long v3, v3
+    int-to-long v4, v3
 
-    invoke-interface {v1, v2, v3, v4}, Lcom/f/a/b/f;->a(IJ)V
+    invoke-interface {v1, v2, v4, v5}, Lcom/f/a/b/f;->a(IJ)V
 
     :cond_3
     iget-object v1, p0, Lcom/f/a/b/d;->b:Lcom/f/a/b/b;

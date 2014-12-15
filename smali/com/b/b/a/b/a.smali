@@ -137,19 +137,19 @@
 
     div-float/2addr v0, v4
 
-    float-to-double v1, v0
+    float-to-double v2, v0
 
-    const-wide v3, 0x3fb999999999999aL
+    const-wide v4, 0x3fb999999999999aL
 
-    cmpl-double v1, v1, v3
+    cmpl-double v1, v2, v4
 
     if-lez v1, :cond_2
 
-    float-to-double v1, v0
+    float-to-double v2, v0
 
-    const-wide v3, 0x3feccccccccccccdL
+    const-wide v4, 0x3feccccccccccccdL
 
-    cmpg-double v1, v1, v3
+    cmpg-double v1, v2, v4
 
     if-gez v1, :cond_2
 
@@ -1128,7 +1128,7 @@
 .end method
 
 .method private a(Lcom/b/b/a/b/c;)[Lcom/b/b/a/b/c;
-    .locals 13
+    .locals 14
 
     const/4 v0, 0x1
 
@@ -1211,11 +1211,11 @@
 
     div-float/2addr v8, v9
 
-    float-to-double v9, v8
+    float-to-double v10, v8
 
-    const-wide/high16 v11, 0x3fe8000000000000L
+    const-wide/high16 v12, 0x3fe8000000000000L
 
-    cmpg-double v9, v9, v11
+    cmpg-double v9, v10, v12
 
     if-ltz v9, :cond_0
 

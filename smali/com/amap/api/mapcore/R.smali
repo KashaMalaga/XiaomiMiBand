@@ -130,6 +130,10 @@
 
     invoke-interface {p0, v0}, Ljavax/microedition/khronos/opengles/GL10;->glEnable(I)V
 
+    const/16 v0, 0xb71
+
+    invoke-interface {p0, v0}, Ljavax/microedition/khronos/opengles/GL10;->glDisable(I)V
+
     const/16 v0, 0x302
 
     const/16 v1, 0x303

@@ -78,6 +78,7 @@ localization_indonesia_table = {
 
     cannot_find_bracelet="Tidak dapat menemukan gelang Anda.",
     cannot_find_bracelet_info="Pastikan baterai gelang telah diisi daya.",
+
     challenge_to_get="%s hari lagi dari membuat rekor baru!",
     record_reach_max="Anda menyamakan rekor Anda sebelumnya!",
     new_record_born="Anda membuat rekor baru.",

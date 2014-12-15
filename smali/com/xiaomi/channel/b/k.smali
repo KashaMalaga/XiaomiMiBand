@@ -42,7 +42,7 @@
 
 # virtual methods
 .method public a()Landroid/graphics/Bitmap;
-    .locals 7
+    .locals 8
 
     iget-object v0, p0, Lcom/xiaomi/channel/b/k;->f:Landroid/graphics/Bitmap;
 
@@ -93,17 +93,17 @@
 
     iget-object v4, p0, Lcom/xiaomi/channel/b/k;->f:Landroid/graphics/Bitmap;
 
-    int-to-double v5, v0
+    int-to-double v6, v0
 
-    div-double/2addr v5, v2
+    div-double/2addr v6, v2
 
-    double-to-int v0, v5
+    double-to-int v0, v6
 
-    int-to-double v5, v1
+    int-to-double v6, v1
 
-    div-double v1, v5, v2
+    div-double v2, v6, v2
 
-    double-to-int v1, v1
+    double-to-int v1, v2
 
     sget-object v2, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 

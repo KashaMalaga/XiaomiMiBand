@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="@string/debug_host_label" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="48.0dip">
+        <EditText android:id="@id/host_input_box" android:layout_width="wrap_content" android:layout_height="48.0dip" android:layout_toLeftOf="@id/add_button" android:layout_alignParentLeft="true" />
+        <Button android:id="@id/add_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="添加" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="开启隐藏功能" />
+        <CheckBox android:id="@id/security_switch" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" />
+    </LinearLayout>
+    <TextView android:textSize="16.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="选择主机地址" />
+    <ListView android:id="@id/host_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" />
+</LinearLayout>

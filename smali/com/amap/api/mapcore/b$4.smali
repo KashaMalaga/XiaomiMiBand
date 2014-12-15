@@ -1,61 +1,56 @@
 .class Lcom/amap/api/mapcore/b$4;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.super Lcom/amap/api/mapcore/ao;
 
 
 # instance fields
-.field final synthetic a:Z
-
-.field final synthetic b:Lcom/amap/api/mapcore/b;
+.field final synthetic a:Lcom/amap/api/mapcore/b;
 
 
 # direct methods
-.method constructor <init>(Lcom/amap/api/mapcore/b;Z)V
+.method constructor <init>(Lcom/amap/api/mapcore/b;Landroid/content/Context;Lcom/amap/api/mapcore/v;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/amap/api/mapcore/b$4;->b:Lcom/amap/api/mapcore/b;
+    iput-object p1, p0, Lcom/amap/api/mapcore/b$4;->a:Lcom/amap/api/mapcore/b;
 
-    iput-boolean p2, p0, Lcom/amap/api/mapcore/b$4;->a:Z
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p3}, Lcom/amap/api/mapcore/ao;-><init>(Landroid/content/Context;Lcom/amap/api/mapcore/v;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 6
+.method protected a()V
+    .locals 2
 
-    const/4 v3, 0x0
+    invoke-super {p0}, Lcom/amap/api/mapcore/ao;->a()V
 
-    iget-object v0, p0, Lcom/amap/api/mapcore/b$4;->b:Lcom/amap/api/mapcore/b;
+    iget-object v0, p0, Lcom/amap/api/mapcore/b$4;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v0}, Lcom/amap/api/mapcore/b;->S(Lcom/amap/api/mapcore/b;)Lcom/autonavi/amap/mapcore/MapCore;
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->e(Lcom/amap/api/mapcore/b;)Landroid/os/Handler;
 
     move-result-object v0
 
-    const/16 v1, 0xa29
+    iget-object v1, p0, Lcom/amap/api/mapcore/b$4;->a:Lcom/amap/api/mapcore/b;
 
-    iget-boolean v2, p0, Lcom/amap/api/mapcore/b$4;->a:Z
+    invoke-static {v1}, Lcom/amap/api/mapcore/b;->d(Lcom/amap/api/mapcore/b;)Ljava/lang/Runnable;
 
-    if-eqz v2, :cond_0
+    move-result-object v1
 
-    move v2, v3
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    :goto_0
-    move v4, v3
+    iget-object v0, p0, Lcom/amap/api/mapcore/b$4;->a:Lcom/amap/api/mapcore/b;
 
-    move v5, v3
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->e(Lcom/amap/api/mapcore/b;)Landroid/os/Handler;
 
-    invoke-virtual/range {v0 .. v5}, Lcom/autonavi/amap/mapcore/MapCore;->setParameter(IIIII)V
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/amap/api/mapcore/b$4;->a:Lcom/amap/api/mapcore/b;
+
+    invoke-static {v1}, Lcom/amap/api/mapcore/b;->f(Lcom/amap/api/mapcore/b;)Ljava/lang/Runnable;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     return-void
-
-    :cond_0
-    const/4 v2, 0x1
-
-    goto :goto_0
 .end method

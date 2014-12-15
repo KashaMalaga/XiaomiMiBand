@@ -75,13 +75,16 @@
     const/4 v1, 0x0
 
     :try_start_0
-    invoke-static {}, Lcom/amap/api/mapcore/util/u;->a()Landroid/content/res/AssetManager;
+    iget-object v0, p0, Lcom/amap/api/maps/overlay/BusLineOverlay;->i:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/amap/api/mapcore/util/u;->a(Landroid/content/Context;)Landroid/content/res/AssetManager;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_3
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v2
@@ -89,7 +92,8 @@
     :try_start_1
     invoke-static {v2}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
     :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_8
+    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_6
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     move-result-object v1
@@ -99,7 +103,8 @@
 
     invoke-static {v1, v0}, Lcom/amap/api/mapcore/util/w;->a(Landroid/graphics/Bitmap;F)Landroid/graphics/Bitmap;
     :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_5
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_9
+    .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_7
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     move-result-object v0
@@ -159,36 +164,91 @@
 
     goto :goto_0
 
+    :catch_3
+    move-exception v0
+
+    move-object v2, v1
+
+    move-object v3, v1
+
+    move-object v1, v0
+
+    move-object v0, v3
+
+    :goto_2
+    :try_start_6
+    invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_1
+
+    if-eqz v2, :cond_0
+
+    :try_start_7
+    invoke-virtual {v2}, Ljava/io/InputStream;->close()V
+    :try_end_7
+    .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_4
+
+    goto :goto_0
+
+    :catch_4
+    move-exception v1
+
+    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_0
+
     :catchall_0
     move-exception v0
 
     move-object v2, v1
 
-    :goto_2
+    :goto_3
     if-eqz v2, :cond_1
 
-    :try_start_6
+    :try_start_8
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
-    :try_end_6
-    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_3
+    :try_end_8
+    .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_5
 
     :cond_1
-    :goto_3
+    :goto_4
     throw v0
 
-    :catch_3
+    :catch_5
     move-exception v1
 
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
-    goto :goto_3
+    goto :goto_4
 
     :catchall_1
     move-exception v0
 
+    goto :goto_3
+
+    :catch_6
+    move-exception v0
+
+    move-object v3, v0
+
+    move-object v0, v1
+
+    move-object v1, v3
+
     goto :goto_2
 
-    :catch_4
+    :catch_7
+    move-exception v0
+
+    move-object v3, v0
+
+    move-object v0, v1
+
+    move-object v1, v3
+
+    goto :goto_2
+
+    :catch_8
     move-exception v0
 
     move-object v3, v0
@@ -199,7 +259,7 @@
 
     goto :goto_1
 
-    :catch_5
+    :catch_9
     move-exception v0
 
     move-object v3, v0
@@ -282,7 +342,7 @@
 .method private a(I)Lcom/amap/api/maps/model/MarkerOptions;
     .locals 8
 
-    const/high16 v7, 0x3f000000
+    const/high16 v3, 0x3f000000
 
     new-instance v1, Lcom/amap/api/maps/model/MarkerOptions;
 
@@ -304,7 +364,7 @@
 
     invoke-virtual {v0}, Lcom/amap/api/services/core/LatLonPoint;->getLatitude()D
 
-    move-result-wide v3
+    move-result-wide v4
 
     iget-object v0, p0, Lcom/amap/api/maps/overlay/BusLineOverlay;->e:Ljava/util/List;
 
@@ -320,9 +380,9 @@
 
     invoke-virtual {v0}, Lcom/amap/api/services/core/LatLonPoint;->getLongitude()D
 
-    move-result-wide v5
+    move-result-wide v6
 
-    invoke-direct {v2, v3, v4, v5, v6}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v2, v4, v5, v6, v7}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     invoke-virtual {v1, v2}, Lcom/amap/api/maps/model/MarkerOptions;->position(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/MarkerOptions;
 
@@ -375,7 +435,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-virtual {v0, v7, v7}, Lcom/amap/api/maps/model/MarkerOptions;->anchor(FF)Lcom/amap/api/maps/model/MarkerOptions;
+    invoke-virtual {v0, v3, v3}, Lcom/amap/api/maps/model/MarkerOptions;->anchor(FF)Lcom/amap/api/maps/model/MarkerOptions;
 
     invoke-virtual {p0}, Lcom/amap/api/maps/overlay/BusLineOverlay;->getBusBitmapDescriptor()Lcom/amap/api/maps/model/BitmapDescriptor;
 
@@ -434,6 +494,7 @@
 
     const/4 v0, 0x1
 
+    :try_start_0
     iget-object v1, p0, Lcom/amap/api/maps/overlay/BusLineOverlay;->a:Lcom/amap/api/services/busline/BusLineItem;
 
     invoke-virtual {v1}, Lcom/amap/api/services/busline/BusLineItem;->getDirectionsCoordinates()Ljava/util/List;
@@ -555,6 +616,15 @@
     iget-object v1, p0, Lcom/amap/api/maps/overlay/BusLineOverlay;->c:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 .end method
@@ -742,6 +812,7 @@
     invoke-virtual {v0}, Lcom/amap/api/maps/model/Polyline;->remove()V
 
     :cond_0
+    :try_start_0
     iget-object v0, p0, Lcom/amap/api/maps/overlay/BusLineOverlay;->c:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -762,13 +833,26 @@
     check-cast v0, Lcom/amap/api/maps/model/Marker;
 
     invoke-virtual {v0}, Lcom/amap/api/maps/model/Marker;->remove()V
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :cond_1
-    invoke-direct {p0}, Lcom/amap/api/maps/overlay/BusLineOverlay;->a()V
+    :catch_0
+    move-exception v0
 
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
+
+    :goto_1
     return-void
+
+    :cond_1
+    :try_start_1
+    invoke-direct {p0}, Lcom/amap/api/maps/overlay/BusLineOverlay;->a()V
+    :try_end_1
+    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
+
+    goto :goto_1
 .end method
 
 .method public zoomToSpan()V
@@ -783,6 +867,7 @@
     return-void
 
     :cond_1
+    :try_start_0
     iget-object v0, p0, Lcom/amap/api/maps/overlay/BusLineOverlay;->a:Lcom/amap/api/services/busline/BusLineItem;
 
     invoke-virtual {v0}, Lcom/amap/api/services/busline/BusLineItem;->getDirectionsCoordinates()Ljava/util/List;
@@ -810,6 +895,15 @@
     move-result-object v0
 
     invoke-virtual {v1, v0}, Lcom/amap/api/maps/AMap;->moveCamera(Lcom/amap/api/maps/CameraUpdate;)V
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 .end method

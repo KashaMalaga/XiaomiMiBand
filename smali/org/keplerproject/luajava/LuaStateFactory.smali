@@ -104,7 +104,7 @@
 .end method
 
 .method public static declared-synchronized insertLuaState(Lorg/keplerproject/luajava/LuaState;)I
-    .locals 7
+    .locals 8
 
     const-class v2, Lorg/keplerproject/luajava/LuaStateFactory;
 
@@ -134,15 +134,15 @@
 
     invoke-virtual {v0}, Lorg/keplerproject/luajava/LuaState;->getCPtrPeer()J
 
-    move-result-wide v3
+    move-result-wide v4
 
     invoke-virtual {p0}, Lorg/keplerproject/luajava/LuaState;->getCPtrPeer()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-wide v5
+    move-result-wide v6
 
-    cmp-long v0, v3, v5
+    cmp-long v0, v4, v6
 
     if-nez v0, :cond_0
 

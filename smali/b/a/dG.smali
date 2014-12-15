@@ -265,9 +265,9 @@
 
     iget-object v0, p0, Lb/a/dG;->d:Lb/a/A;
 
-    sget-wide v1, Landroid/os/Build;->TIME:J
+    sget-wide v2, Landroid/os/Build;->TIME:J
 
-    invoke-virtual {v0, v1, v2}, Lb/a/A;->a(J)Lb/a/A;
+    invoke-virtual {v0, v2, v3}, Lb/a/A;->a(J)Lb/a/A;
 
     iget-object v0, p0, Lb/a/dG;->d:Lb/a/A;
 

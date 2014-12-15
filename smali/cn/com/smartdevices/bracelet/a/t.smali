@@ -376,7 +376,7 @@
     goto/16 :goto_1
 
     :cond_5
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->a()Lcn/com/smartdevices/bracelet/f/a;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->b()Lcn/com/smartdevices/bracelet/f/a;
 
     move-result-object v0
 
@@ -394,7 +394,7 @@
 
     if-eqz v1, :cond_6
 
-    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/f/a/d;->b(Ljava/util/List;)V
+    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/f/a/d;->a(Ljava/util/List;)V
 
     :cond_6
     sget-object v0, Lcn/com/smartdevices/bracelet/a/t;->l:Ljava/lang/String;

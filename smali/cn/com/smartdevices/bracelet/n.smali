@@ -202,9 +202,9 @@
 .method public static a(J)[B
     .locals 6
 
-    const/16 v5, 0x8
+    const/16 v3, 0x8
 
-    new-array v1, v5, [B
+    new-array v1, v3, [B
 
     const/4 v0, 0x0
 
@@ -215,11 +215,11 @@
 
     new-instance v2, Ljava/lang/Long;
 
-    const-wide/16 v3, 0xff
+    const-wide/16 v4, 0xff
 
-    and-long/2addr v3, p0
+    and-long/2addr v4, p0
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Long;-><init>(J)V
+    invoke-direct {v2, v4, v5}, Ljava/lang/Long;-><init>(J)V
 
     invoke-virtual {v2}, Ljava/lang/Long;->byteValue()B
 
@@ -227,7 +227,7 @@
 
     aput-byte v2, v1, v0
 
-    shr-long/2addr p0, v5
+    shr-long/2addr p0, v3
 
     add-int/lit8 v0, v0, 0x1
 

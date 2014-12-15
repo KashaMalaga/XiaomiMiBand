@@ -22,9 +22,9 @@
 
 # direct methods
 .method public constructor <init>()V
-    .locals 3
+    .locals 4
 
-    const-wide/16 v1, -0x1
+    const-wide/16 v2, -0x1
 
     const/4 v0, -0x1
 
@@ -32,9 +32,9 @@
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/e/h;->d:I
 
-    iput-wide v1, p0, Lcn/com/smartdevices/bracelet/e/h;->e:J
+    iput-wide v2, p0, Lcn/com/smartdevices/bracelet/e/h;->e:J
 
-    iput-wide v1, p0, Lcn/com/smartdevices/bracelet/e/h;->f:J
+    iput-wide v2, p0, Lcn/com/smartdevices/bracelet/e/h;->f:J
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/e/h;->g:I
 
@@ -42,9 +42,9 @@
 .end method
 
 .method public constructor <init>(JI)V
-    .locals 3
+    .locals 5
 
-    const-wide/16 v1, -0x1
+    const-wide/16 v2, -0x1
 
     const/4 v0, -0x1
 
@@ -52,9 +52,9 @@
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/e/h;->d:I
 
-    iput-wide v1, p0, Lcn/com/smartdevices/bracelet/e/h;->e:J
+    iput-wide v2, p0, Lcn/com/smartdevices/bracelet/e/h;->e:J
 
-    iput-wide v1, p0, Lcn/com/smartdevices/bracelet/e/h;->f:J
+    iput-wide v2, p0, Lcn/com/smartdevices/bracelet/e/h;->f:J
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/e/h;->g:I
 
@@ -68,9 +68,9 @@
 .end method
 
 .method public constructor <init>(JII)V
-    .locals 3
+    .locals 5
 
-    const-wide/16 v1, -0x1
+    const-wide/16 v2, -0x1
 
     const/4 v0, -0x1
 
@@ -78,9 +78,9 @@
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/e/h;->d:I
 
-    iput-wide v1, p0, Lcn/com/smartdevices/bracelet/e/h;->e:J
+    iput-wide v2, p0, Lcn/com/smartdevices/bracelet/e/h;->e:J
 
-    iput-wide v1, p0, Lcn/com/smartdevices/bracelet/e/h;->f:J
+    iput-wide v2, p0, Lcn/com/smartdevices/bracelet/e/h;->f:J
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/e/h;->g:I
 
@@ -96,9 +96,9 @@
 .end method
 
 .method public constructor <init>(JJII)V
-    .locals 3
+    .locals 5
 
-    const-wide/16 v1, -0x1
+    const-wide/16 v2, -0x1
 
     const/4 v0, -0x1
 
@@ -106,9 +106,9 @@
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/e/h;->d:I
 
-    iput-wide v1, p0, Lcn/com/smartdevices/bracelet/e/h;->e:J
+    iput-wide v2, p0, Lcn/com/smartdevices/bracelet/e/h;->e:J
 
-    iput-wide v1, p0, Lcn/com/smartdevices/bracelet/e/h;->f:J
+    iput-wide v2, p0, Lcn/com/smartdevices/bracelet/e/h;->f:J
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/e/h;->g:I
 
@@ -142,7 +142,7 @@
 .end method
 
 .method public a(J)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcn/com/smartdevices/bracelet/e/h;->e:J
 
@@ -166,7 +166,7 @@
 .end method
 
 .method public b(J)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcn/com/smartdevices/bracelet/e/h;->f:J
 
@@ -190,7 +190,7 @@
 .end method
 
 .method public e()Z
-    .locals 5
+    .locals 6
 
     const/4 v0, 0x1
 
@@ -198,11 +198,11 @@
 
     if-ne v1, v0, :cond_0
 
-    iget-wide v1, p0, Lcn/com/smartdevices/bracelet/e/h;->e:J
+    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/e/h;->e:J
 
-    const-wide/16 v3, -0x1
+    const-wide/16 v4, -0x1
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-eqz v1, :cond_0
 
@@ -246,9 +246,9 @@
 
     move-result-object v0
 
-    iget-wide v1, p0, Lcn/com/smartdevices/bracelet/e/h;->e:J
+    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/e/h;->e:J
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -290,9 +290,9 @@
 
     move-result-object v0
 
-    iget-wide v1, p0, Lcn/com/smartdevices/bracelet/e/h;->f:J
+    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/e/h;->f:J
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

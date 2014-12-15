@@ -34,7 +34,7 @@
 
     const/4 v1, 0x3
 
-    if-ne v1, p0, :cond_1
+    if-ne p0, v1, :cond_1
 
     :cond_0
     :goto_0
@@ -55,7 +55,7 @@
 
     const/4 v0, 0x2
 
-    if-ne v0, p0, :cond_1
+    if-ne p0, v0, :cond_1
 
     :cond_0
     const/4 v0, 0x1

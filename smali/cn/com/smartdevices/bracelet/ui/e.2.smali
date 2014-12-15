@@ -110,7 +110,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f030083
+    const v2, 0x7f03008a
 
     const/4 v3, 0x0
 
@@ -118,7 +118,7 @@
 
     move-result-object v5
 
-    const v1, 0x7f07024f
+    const v1, 0x7f0b0274
 
     invoke-virtual {v5, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -126,7 +126,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f070251
+    const v2, 0x7f0b0276
 
     invoke-virtual {v5, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -134,7 +134,7 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    const v3, 0x7f070250
+    const v3, 0x7f0b0275
 
     invoke-virtual {v5, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -142,7 +142,7 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    const v4, 0x7f070252
+    const v4, 0x7f0b0277
 
     invoke-virtual {v5, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -189,7 +189,7 @@
 
     move-result-object v3
 
-    const v6, 0x7f080010
+    const v6, 0x7f070010
 
     invoke-virtual {v3, v6}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -218,7 +218,7 @@
     invoke-virtual {v4, v8}, Landroid/widget/TextView;->setVisibility(I)V
 
     :goto_1
-    const v1, 0x7f070253
+    const v1, 0x7f0b0278
 
     invoke-virtual {v5, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -238,7 +238,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    const v0, 0x7f07024e
+    const v0, 0x7f0b0273
 
     invoke-virtual {v5, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -316,7 +316,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f080011
+    const v4, 0x7f070011
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getColor(I)I
 

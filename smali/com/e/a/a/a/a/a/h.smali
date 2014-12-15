@@ -43,27 +43,27 @@
 .end method
 
 .method public constructor <init>(Ljava/io/File;Lcom/e/a/a/a/b/a;J)V
-    .locals 6
+    .locals 7
 
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
-    move-object v0, p0
+    move-object v1, p0
 
-    move-object v1, p1
+    move-object v2, p1
 
-    move-object v2, p2
+    move-object v3, p2
 
-    move-wide v3, p3
+    move-wide v4, p3
 
-    invoke-direct/range {v0 .. v5}, Lcom/e/a/a/a/a/a/h;-><init>(Ljava/io/File;Lcom/e/a/a/a/b/a;JI)V
+    invoke-direct/range {v1 .. v6}, Lcom/e/a/a/a/a/a/h;-><init>(Ljava/io/File;Lcom/e/a/a/a/b/a;JI)V
 
     return-void
 .end method
 
 .method public constructor <init>(Ljava/io/File;Lcom/e/a/a/a/b/a;JI)V
-    .locals 6
+    .locals 7
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -90,7 +90,7 @@
     throw v0
 
     :cond_0
-    cmp-long v0, p3, v1
+    cmp-long v0, p3, v2
 
     if-gez v0, :cond_1
 
@@ -125,56 +125,56 @@
     throw v0
 
     :cond_3
-    cmp-long v0, p3, v1
+    cmp-long v0, p3, v2
 
     if-nez v0, :cond_5
 
-    const-wide v3, 0x7fffffffffffffffL
+    const-wide v4, 0x7fffffffffffffffL
 
     :goto_0
     if-nez p5, :cond_4
 
-    const v5, 0x7fffffff
+    const v6, 0x7fffffff
 
     :goto_1
     iput-object p2, p0, Lcom/e/a/a/a/a/a/h;->e:Lcom/e/a/a/a/b/a;
 
-    iget-object v2, p0, Lcom/e/a/a/a/a/a/h;->k:Ljava/io/File;
+    iget-object v3, p0, Lcom/e/a/a/a/a/a/h;->k:Ljava/io/File;
 
-    move-object v0, p0
+    move-object v1, p0
 
-    move-object v1, p1
+    move-object v2, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/e/a/a/a/a/a/h;->a(Ljava/io/File;Ljava/io/File;JI)V
+    invoke-direct/range {v1 .. v6}, Lcom/e/a/a/a/a/a/h;->a(Ljava/io/File;Ljava/io/File;JI)V
 
     return-void
 
     :cond_4
-    move v5, p5
+    move v6, p5
 
     goto :goto_1
 
     :cond_5
-    move-wide v3, p3
+    move-wide v4, p3
 
     goto :goto_0
 .end method
 
 .method private a(Ljava/io/File;Ljava/io/File;JI)V
-    .locals 6
-
-    const/4 v1, 0x1
+    .locals 7
 
     const/4 v2, 0x1
 
-    move-object v0, p1
+    const/4 v3, 0x1
 
-    move-wide v3, p3
+    move-object v1, p1
 
-    move v5, p5
+    move-wide v4, p3
+
+    move v6, p5
 
     :try_start_0
-    invoke-static/range {v0 .. v5}, Lcom/e/a/a/a/a/a/a;->a(Ljava/io/File;IIJI)Lcom/e/a/a/a/a/a/a;
+    invoke-static/range {v1 .. v6}, Lcom/e/a/a/a/a/a/a;->a(Ljava/io/File;IIJI)Lcom/e/a/a/a/a/a/a;
 
     move-result-object v0
 
@@ -193,17 +193,17 @@
 
     if-eqz p2, :cond_0
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    move-object v0, p0
+    move-object v1, p0
 
-    move-object v1, p2
+    move-object v2, p2
 
-    move-wide v3, p3
+    move-wide v4, p3
 
-    move v5, p5
+    move v6, p5
 
-    invoke-direct/range {v0 .. v5}, Lcom/e/a/a/a/a/a/h;->a(Ljava/io/File;Ljava/io/File;JI)V
+    invoke-direct/range {v1 .. v6}, Lcom/e/a/a/a/a/a/h;->a(Ljava/io/File;Ljava/io/File;JI)V
 
     goto :goto_0
 .end method
@@ -547,25 +547,25 @@
 
     invoke-virtual {v0}, Lcom/e/a/a/a/a/a/a;->a()Ljava/io/File;
 
-    move-result-object v1
+    move-result-object v2
 
-    iget-object v2, p0, Lcom/e/a/a/a/a/a/h;->k:Ljava/io/File;
+    iget-object v3, p0, Lcom/e/a/a/a/a/a/h;->k:Ljava/io/File;
 
     iget-object v0, p0, Lcom/e/a/a/a/a/a/h;->d:Lcom/e/a/a/a/a/a/a;
 
     invoke-virtual {v0}, Lcom/e/a/a/a/a/a/a;->b()J
 
-    move-result-wide v3
+    move-result-wide v4
 
     iget-object v0, p0, Lcom/e/a/a/a/a/a/h;->d:Lcom/e/a/a/a/a/a/a;
 
     invoke-virtual {v0}, Lcom/e/a/a/a/a/a/a;->c()I
 
-    move-result v5
+    move-result v6
 
-    move-object v0, p0
+    move-object v1, p0
 
-    invoke-direct/range {v0 .. v5}, Lcom/e/a/a/a/a/a/h;->a(Ljava/io/File;Ljava/io/File;JI)V
+    invoke-direct/range {v1 .. v6}, Lcom/e/a/a/a/a/a/h;->a(Ljava/io/File;Ljava/io/File;JI)V
 
     :goto_0
     return-void
@@ -582,56 +582,54 @@
 
     invoke-virtual {v0}, Lcom/e/a/a/a/a/a/a;->a()Ljava/io/File;
 
-    move-result-object v1
+    move-result-object v2
 
-    iget-object v2, p0, Lcom/e/a/a/a/a/a/h;->k:Ljava/io/File;
+    iget-object v3, p0, Lcom/e/a/a/a/a/a/h;->k:Ljava/io/File;
 
     iget-object v0, p0, Lcom/e/a/a/a/a/a/h;->d:Lcom/e/a/a/a/a/a/a;
 
     invoke-virtual {v0}, Lcom/e/a/a/a/a/a/a;->b()J
 
-    move-result-wide v3
+    move-result-wide v4
 
     iget-object v0, p0, Lcom/e/a/a/a/a/a/h;->d:Lcom/e/a/a/a/a/a/a;
 
     invoke-virtual {v0}, Lcom/e/a/a/a/a/a/a;->c()I
 
-    move-result v5
+    move-result v6
 
-    move-object v0, p0
+    move-object v1, p0
 
-    invoke-direct/range {v0 .. v5}, Lcom/e/a/a/a/a/a/h;->a(Ljava/io/File;Ljava/io/File;JI)V
+    invoke-direct/range {v1 .. v6}, Lcom/e/a/a/a/a/a/h;->a(Ljava/io/File;Ljava/io/File;JI)V
 
     goto :goto_0
 
     :catchall_0
     move-exception v0
 
-    move-object v6, v0
+    iget-object v1, p0, Lcom/e/a/a/a/a/a/h;->d:Lcom/e/a/a/a/a/a/a;
 
-    iget-object v0, p0, Lcom/e/a/a/a/a/a/h;->d:Lcom/e/a/a/a/a/a/a;
+    invoke-virtual {v1}, Lcom/e/a/a/a/a/a/a;->a()Ljava/io/File;
 
-    invoke-virtual {v0}, Lcom/e/a/a/a/a/a/a;->a()Ljava/io/File;
+    move-result-object v2
 
-    move-result-object v1
+    iget-object v3, p0, Lcom/e/a/a/a/a/a/h;->k:Ljava/io/File;
 
-    iget-object v2, p0, Lcom/e/a/a/a/a/a/h;->k:Ljava/io/File;
+    iget-object v1, p0, Lcom/e/a/a/a/a/a/h;->d:Lcom/e/a/a/a/a/a/a;
 
-    iget-object v0, p0, Lcom/e/a/a/a/a/a/h;->d:Lcom/e/a/a/a/a/a/a;
+    invoke-virtual {v1}, Lcom/e/a/a/a/a/a/a;->b()J
 
-    invoke-virtual {v0}, Lcom/e/a/a/a/a/a/a;->b()J
+    move-result-wide v4
 
-    move-result-wide v3
+    iget-object v1, p0, Lcom/e/a/a/a/a/a/h;->d:Lcom/e/a/a/a/a/a/a;
 
-    iget-object v0, p0, Lcom/e/a/a/a/a/a/h;->d:Lcom/e/a/a/a/a/a/a;
+    invoke-virtual {v1}, Lcom/e/a/a/a/a/a/a;->c()I
 
-    invoke-virtual {v0}, Lcom/e/a/a/a/a/a/a;->c()I
+    move-result v6
 
-    move-result v5
+    move-object v1, p0
 
-    move-object v0, p0
+    invoke-direct/range {v1 .. v6}, Lcom/e/a/a/a/a/a/h;->a(Ljava/io/File;Ljava/io/File;JI)V
 
-    invoke-direct/range {v0 .. v5}, Lcom/e/a/a/a/a/a/h;->a(Ljava/io/File;Ljava/io/File;JI)V
-
-    throw v6
+    throw v0
 .end method

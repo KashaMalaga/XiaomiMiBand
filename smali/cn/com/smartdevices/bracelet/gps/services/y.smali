@@ -72,37 +72,15 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/y;->b:Lcn/com/smartdevices/bracelet/gps/services/x;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/x;->c(Lcn/com/smartdevices/bracelet/gps/services/x;)V
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/services/y;->b:Lcn/com/smartdevices/bracelet/gps/services/x;
+
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/gps/services/x;->c(Lcn/com/smartdevices/bracelet/gps/services/x;)J
+
+    move-result-wide v2
+
+    invoke-static {v0, v2, v3}, Lcn/com/smartdevices/bracelet/gps/services/x;->a(Lcn/com/smartdevices/bracelet/gps/services/x;J)V
 
     :cond_2
-    const-string v0, "Run"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "load from mili mStartStep = "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/services/y;->b:Lcn/com/smartdevices/bracelet/gps/services/x;
-
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/gps/services/x;->b(Lcn/com/smartdevices/bracelet/gps/services/x;)I
-
-    move-result v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/gps/services/h;->a(Ljava/lang/String;Ljava/lang/String;)V
-
     monitor-exit v1
 
     goto :goto_0

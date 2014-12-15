@@ -48,7 +48,7 @@
 .end method
 
 .method static synthetic a(Lcom/xiaomi/push/service/B;J)J
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcom/xiaomi/push/service/B;->a:J
 

@@ -23,7 +23,7 @@
 
 # virtual methods
 .method public onLocationChanged(Landroid/location/Location;)V
-    .locals 5
+    .locals 6
 
     :try_start_0
     iget-object v0, p0, Lcom/amap/api/location/e;->a:Lcom/amap/api/location/d;
@@ -44,9 +44,9 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, v0, Lcom/amap/api/location/a;->d:J
+    iput-wide v2, v0, Lcom/amap/api/location/a;->d:J
 
     const/4 v2, 0x0
 
@@ -97,9 +97,9 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    iput-wide v3, v0, Lcom/amap/api/location/a;->d:J
+    iput-wide v4, v0, Lcom/amap/api/location/a;->d:J
 
     iget-object v0, p0, Lcom/amap/api/location/e;->a:Lcom/amap/api/location/d;
 
@@ -149,9 +149,9 @@
 
     invoke-virtual {p1}, Landroid/location/Location;->getLongitude()D
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-static {v0, v1, v3, v4}, Lcom/amap/api/location/core/c;->a(DD)Z
+    invoke-static {v0, v1, v4, v5}, Lcom/amap/api/location/core/c;->a(DD)Z
 
     move-result v0
 
@@ -163,9 +163,9 @@
 
     invoke-virtual {p1}, Landroid/location/Location;->getLatitude()D
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-static {v0, v1, v3, v4}, Lcom/a/an;->a(DD)[D
+    invoke-static {v0, v1, v4, v5}, Lcom/a/an;->a(DD)[D
 
     move-result-object v0
 
@@ -445,9 +445,9 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    iput-wide v3, v1, Lcom/amap/api/location/a;->d:J
+    iput-wide v4, v1, Lcom/amap/api/location/a;->d:J
 
     iget-object v1, p0, Lcom/amap/api/location/e;->a:Lcom/amap/api/location/d;
 

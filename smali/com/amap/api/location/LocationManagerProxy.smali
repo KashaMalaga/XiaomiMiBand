@@ -250,7 +250,7 @@
 .end method
 
 .method private a(Ljava/lang/String;JFLcom/amap/api/location/AMapLocationListener;Z)V
-    .locals 11
+    .locals 12
 
     :try_start_0
     iget-object v0, p0, Lcom/amap/api/location/LocationManagerProxy;->c:Lcom/amap/api/location/a;
@@ -274,30 +274,30 @@
     :cond_0
     if-nez p1, :cond_4
 
-    const-string v5, "lbs"
+    const-string v6, "lbs"
 
     :goto_0
     const-string v0, "lbs"
 
-    invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/amap/api/location/LocationManagerProxy;->c:Lcom/amap/api/location/a;
+    iget-object v1, p0, Lcom/amap/api/location/LocationManagerProxy;->c:Lcom/amap/api/location/a;
 
-    const-string v5, "lbs"
+    const-string v6, "lbs"
 
-    move-wide v1, p2
+    move-wide v2, p2
 
-    move v3, p4
+    move/from16 v4, p4
 
-    move-object/from16 v4, p5
+    move-object/from16 v5, p5
 
-    move/from16 v6, p6
+    move/from16 v7, p6
 
-    invoke-virtual/range {v0 .. v6}, Lcom/amap/api/location/a;->a(JFLcom/amap/api/location/AMapLocationListener;Ljava/lang/String;Z)V
+    invoke-virtual/range {v1 .. v7}, Lcom/amap/api/location/a;->a(JFLcom/amap/api/location/AMapLocationListener;Ljava/lang/String;Z)V
 
     :goto_1
     return-void
@@ -305,25 +305,25 @@
     :cond_1
     const-string v0, "gps"
 
-    invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/amap/api/location/LocationManagerProxy;->c:Lcom/amap/api/location/a;
+    iget-object v1, p0, Lcom/amap/api/location/LocationManagerProxy;->c:Lcom/amap/api/location/a;
 
-    const-string v5, "gps"
+    const-string v6, "gps"
 
-    move-wide v1, p2
+    move-wide v2, p2
 
-    move v3, p4
+    move/from16 v4, p4
 
-    move-object/from16 v4, p5
+    move-object/from16 v5, p5
 
-    move/from16 v6, p6
+    move/from16 v7, p6
 
-    invoke-virtual/range {v0 .. v6}, Lcom/amap/api/location/a;->a(JFLcom/amap/api/location/AMapLocationListener;Ljava/lang/String;Z)V
+    invoke-virtual/range {v1 .. v7}, Lcom/amap/api/location/a;->a(JFLcom/amap/api/location/AMapLocationListener;Ljava/lang/String;Z)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -342,7 +342,7 @@
 
     invoke-virtual {v0}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
 
-    move-result-object v10
+    move-result-object v11
 
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
@@ -353,38 +353,38 @@
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
     :cond_3
-    new-instance v0, Lcom/amap/api/location/g;
+    new-instance v1, Lcom/amap/api/location/g;
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    move-wide v1, p2
+    move-wide v2, p2
 
-    move v3, p4
+    move/from16 v4, p4
 
-    move-object/from16 v4, p5
+    move-object/from16 v5, p5
 
-    invoke-direct/range {v0 .. v6}, Lcom/amap/api/location/g;-><init>(JFLcom/amap/api/location/AMapLocationListener;Ljava/lang/String;Z)V
+    invoke-direct/range {v1 .. v7}, Lcom/amap/api/location/g;-><init>(JFLcom/amap/api/location/AMapLocationListener;Ljava/lang/String;Z)V
 
-    iget-object v1, p0, Lcom/amap/api/location/LocationManagerProxy;->i:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/amap/api/location/LocationManagerProxy;->i:Ljava/util/Vector;
 
-    invoke-virtual {v1, v0}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
-    iget-object v4, p0, Lcom/amap/api/location/LocationManagerProxy;->a:Landroid/location/LocationManager;
+    iget-object v5, p0, Lcom/amap/api/location/LocationManagerProxy;->a:Landroid/location/LocationManager;
 
-    iget-object v9, p0, Lcom/amap/api/location/LocationManagerProxy;->k:Lcom/amap/api/location/LocationManagerProxy$a;
+    iget-object v10, p0, Lcom/amap/api/location/LocationManagerProxy;->k:Lcom/amap/api/location/LocationManagerProxy$a;
 
-    move-wide v6, p2
+    move-wide v7, p2
 
-    move v8, p4
+    move/from16 v9, p4
 
-    invoke-virtual/range {v4 .. v10}, Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String;JFLandroid/location/LocationListener;Landroid/os/Looper;)V
+    invoke-virtual/range {v5 .. v11}, Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String;JFLandroid/location/LocationListener;Landroid/os/Looper;)V
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
 
     goto :goto_1
 
     :cond_4
-    move-object v5, p1
+    move-object v6, p1
 
     goto :goto_0
 .end method
@@ -530,26 +530,26 @@
 
 # virtual methods
 .method public addGeoFenceAlert(DDFJLandroid/app/PendingIntent;)V
-    .locals 9
+    .locals 11
 
     :try_start_0
     iget-object v0, p0, Lcom/amap/api/location/LocationManagerProxy;->c:Lcom/amap/api/location/a;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/amap/api/location/LocationManagerProxy;->c:Lcom/amap/api/location/a;
+    iget-object v1, p0, Lcom/amap/api/location/LocationManagerProxy;->c:Lcom/amap/api/location/a;
 
-    move-wide v1, p1
+    move-wide v2, p1
 
-    move-wide v3, p3
+    move-wide v4, p3
 
-    move v5, p5
+    move/from16 v6, p5
 
-    move-wide v6, p6
+    move-wide/from16 v7, p6
 
-    move-object/from16 v8, p8
+    move-object/from16 v9, p8
 
-    invoke-virtual/range {v0 .. v8}, Lcom/amap/api/location/a;->b(DDFJLandroid/app/PendingIntent;)V
+    invoke-virtual/range {v1 .. v9}, Lcom/amap/api/location/a;->b(DDFJLandroid/app/PendingIntent;)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -596,7 +596,7 @@
 .end method
 
 .method public addProximityAlert(DDFJLandroid/app/PendingIntent;)V
-    .locals 9
+    .locals 11
 
     :try_start_0
     iget-object v0, p0, Lcom/amap/api/location/LocationManagerProxy;->c:Lcom/amap/api/location/a;
@@ -605,34 +605,34 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/amap/api/location/LocationManagerProxy;->a:Landroid/location/LocationManager;
+    iget-object v1, p0, Lcom/amap/api/location/LocationManagerProxy;->a:Landroid/location/LocationManager;
 
-    move-wide v1, p1
+    move-wide v2, p1
 
-    move-wide v3, p3
+    move-wide v4, p3
 
-    move v5, p5
+    move/from16 v6, p5
 
-    move-wide v6, p6
+    move-wide/from16 v7, p6
 
-    move-object/from16 v8, p8
+    move-object/from16 v9, p8
 
-    invoke-virtual/range {v0 .. v8}, Landroid/location/LocationManager;->addProximityAlert(DDFJLandroid/app/PendingIntent;)V
+    invoke-virtual/range {v1 .. v9}, Landroid/location/LocationManager;->addProximityAlert(DDFJLandroid/app/PendingIntent;)V
 
     :cond_0
-    iget-object v0, p0, Lcom/amap/api/location/LocationManagerProxy;->c:Lcom/amap/api/location/a;
+    iget-object v1, p0, Lcom/amap/api/location/LocationManagerProxy;->c:Lcom/amap/api/location/a;
 
-    move-wide v1, p1
+    move-wide v2, p1
 
-    move-wide v3, p3
+    move-wide v4, p3
 
-    move v5, p5
+    move/from16 v6, p5
 
-    move-wide v6, p6
+    move-wide/from16 v7, p6
 
-    move-object/from16 v8, p8
+    move-object/from16 v9, p8
 
-    invoke-virtual/range {v0 .. v8}, Lcom/amap/api/location/a;->a(DDFJLandroid/app/PendingIntent;)V
+    invoke-virtual/range {v1 .. v9}, Lcom/amap/api/location/a;->a(DDFJLandroid/app/PendingIntent;)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1646,7 +1646,7 @@
 .end method
 
 .method public requestLocationData(Ljava/lang/String;JFLcom/amap/api/location/AMapLocationListener;)V
-    .locals 7
+    .locals 8
 
     const/4 v6, 0x1
 
@@ -1748,7 +1748,7 @@
 .end method
 
 .method public requestLocationUpdates(Ljava/lang/String;JFLcom/amap/api/location/AMapLocationListener;)V
-    .locals 7
+    .locals 8
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
 

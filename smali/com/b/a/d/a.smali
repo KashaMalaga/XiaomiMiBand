@@ -1648,446 +1648,376 @@
 .end method
 
 .method private r()I
-    .locals 19
+    .locals 15
 
-    move-object/from16 v0, p0
+    iget-object v11, p0, Lcom/b/a/d/a;->E:[C
 
-    iget-object v12, v0, Lcom/b/a/d/a;->E:[C
+    iget v2, p0, Lcom/b/a/d/a;->F:I
 
-    move-object/from16 v0, p0
+    iget v1, p0, Lcom/b/a/d/a;->G:I
 
-    iget v3, v0, Lcom/b/a/d/a;->F:I
+    const-wide/16 v6, 0x0
 
-    move-object/from16 v0, p0
+    const/4 v5, 0x0
 
-    iget v2, v0, Lcom/b/a/d/a;->G:I
+    const/4 v4, 0x1
 
-    const-wide/16 v7, 0x0
+    const/4 v3, 0x0
 
-    const/4 v6, 0x0
+    const/4 v0, 0x0
 
-    const/4 v5, 0x1
+    move v10, v0
 
-    const/4 v4, 0x0
-
-    const/4 v1, 0x0
-
-    move v11, v1
+    move v0, v1
 
     move v1, v2
 
-    move v2, v3
-
     :goto_0
-    add-int v3, v2, v11
+    add-int v2, v1, v10
 
-    if-ne v3, v1, :cond_4
+    if-ne v2, v0, :cond_4
 
-    array-length v1, v12
+    array-length v0, v11
 
-    if-ne v11, v1, :cond_0
+    if-ne v10, v0, :cond_0
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
     :goto_1
-    return v1
+    return v0
 
     :cond_0
-    add-int/lit8 v1, v11, 0x1
+    add-int/lit8 v0, v10, 0x1
 
-    move-object/from16 v0, p0
+    invoke-direct {p0, v0}, Lcom/b/a/d/a;->b(I)Z
 
-    invoke-direct {v0, v1}, Lcom/b/a/d/a;->b(I)Z
+    move-result v0
 
-    move-result v1
-
-    if-nez v1, :cond_3
+    if-nez v0, :cond_3
 
     :cond_1
-    const/4 v1, 0x2
+    const/4 v0, 0x2
 
-    if-ne v4, v1, :cond_16
+    if-ne v3, v0, :cond_16
+
+    if-eqz v4, :cond_16
+
+    const-wide/high16 v0, -0x8000000000000000L
+
+    cmp-long v0, v6, v0
+
+    if-nez v0, :cond_2
 
     if-eqz v5, :cond_16
 
-    const-wide/high16 v1, -0x8000000000000000L
-
-    cmp-long v1, v7, v1
-
-    if-nez v1, :cond_2
-
-    if-eqz v6, :cond_16
-
     :cond_2
-    if-eqz v6, :cond_15
+    if-eqz v5, :cond_15
 
     :goto_2
-    move-object/from16 v0, p0
+    iput-wide v6, p0, Lcom/b/a/d/a;->K:J
 
-    iput-wide v7, v0, Lcom/b/a/d/a;->K:J
+    iget v0, p0, Lcom/b/a/d/a;->F:I
 
-    move-object/from16 v0, p0
+    add-int/2addr v0, v10
 
-    iget v1, v0, Lcom/b/a/d/a;->F:I
+    iput v0, p0, Lcom/b/a/d/a;->F:I
 
-    add-int/2addr v1, v11
+    const/16 v0, 0xf
 
-    move-object/from16 v0, p0
-
-    iput v1, v0, Lcom/b/a/d/a;->F:I
-
-    const/16 v1, 0xf
-
-    move-object/from16 v0, p0
-
-    iput v1, v0, Lcom/b/a/d/a;->J:I
+    iput v0, p0, Lcom/b/a/d/a;->J:I
 
     goto :goto_1
 
     :cond_3
-    move-object/from16 v0, p0
+    iget v1, p0, Lcom/b/a/d/a;->F:I
 
-    iget v2, v0, Lcom/b/a/d/a;->F:I
-
-    move-object/from16 v0, p0
-
-    iget v1, v0, Lcom/b/a/d/a;->G:I
+    iget v0, p0, Lcom/b/a/d/a;->G:I
 
     :cond_4
-    add-int v3, v2, v11
+    add-int v2, v1, v10
 
-    aget-char v3, v12, v3
+    aget-char v2, v11, v2
 
-    sparse-switch v3, :sswitch_data_0
+    sparse-switch v2, :sswitch_data_0
 
-    const/16 v9, 0x30
+    const/16 v8, 0x30
 
-    if-lt v3, v9, :cond_5
+    if-lt v2, v8, :cond_5
 
-    const/16 v9, 0x39
+    const/16 v8, 0x39
 
-    if-le v3, v9, :cond_c
+    if-le v2, v8, :cond_c
 
     :cond_5
-    move-object/from16 v0, p0
+    invoke-direct {p0, v2}, Lcom/b/a/d/a;->a(C)Z
 
-    invoke-direct {v0, v3}, Lcom/b/a/d/a;->a(C)Z
+    move-result v0
 
-    move-result v1
+    if-eqz v0, :cond_1
 
-    if-eqz v1, :cond_1
-
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
     goto :goto_1
 
     :sswitch_0
-    if-nez v4, :cond_6
-
-    const/4 v4, 0x1
+    if-nez v3, :cond_6
 
     const/4 v3, 0x1
 
-    move v15, v5
+    const/4 v2, 0x1
 
-    move v5, v4
-
-    move v4, v15
-
-    move-wide/from16 v16, v7
-
-    move-wide/from16 v6, v16
-
-    :goto_3
-    add-int/lit8 v8, v11, 0x1
-
-    move v11, v8
-
-    move v15, v4
+    move v14, v4
 
     move v4, v3
 
-    move/from16 v16, v5
+    move v3, v14
 
-    move v5, v15
+    :goto_3
+    add-int/lit8 v5, v10, 0x1
 
-    move-wide/from16 v17, v6
+    move v10, v5
 
-    move-wide/from16 v7, v17
+    move v5, v4
 
-    move/from16 v6, v16
+    move v4, v3
+
+    move v3, v2
 
     goto :goto_0
 
     :cond_6
-    const/4 v3, 0x5
+    const/4 v2, 0x5
 
-    if-ne v4, v3, :cond_7
+    if-ne v3, v2, :cond_7
 
-    const/4 v3, 0x6
+    const/4 v2, 0x6
 
-    move v4, v5
-
-    move v5, v6
-
-    move-wide v15, v7
-
-    move-wide v6, v15
-
-    goto :goto_3
-
-    :cond_7
-    const/4 v1, 0x0
-
-    goto :goto_1
-
-    :sswitch_1
-    const/4 v3, 0x5
-
-    if-ne v4, v3, :cond_8
-
-    const/4 v3, 0x6
-
-    move v4, v5
-
-    move v5, v6
-
-    move-wide v15, v7
-
-    move-wide v6, v15
-
-    goto :goto_3
-
-    :cond_8
-    const/4 v1, 0x0
-
-    goto :goto_1
-
-    :sswitch_2
-    const/4 v3, 0x2
-
-    if-eq v4, v3, :cond_9
-
-    const/4 v3, 0x4
-
-    if-ne v4, v3, :cond_a
-
-    :cond_9
-    const/4 v3, 0x5
-
-    move v4, v5
-
-    move v5, v6
-
-    move-wide v15, v7
-
-    move-wide v6, v15
-
-    goto :goto_3
-
-    :cond_a
-    const/4 v1, 0x0
-
-    goto/16 :goto_1
-
-    :sswitch_3
-    const/4 v3, 0x2
-
-    if-ne v4, v3, :cond_b
-
-    const/4 v3, 0x3
-
-    move v4, v5
-
-    move v5, v6
-
-    move-wide v15, v7
-
-    move-wide v6, v15
-
-    goto :goto_3
-
-    :cond_b
-    const/4 v1, 0x0
-
-    goto/16 :goto_1
-
-    :cond_c
-    const/4 v9, 0x1
-
-    if-eq v4, v9, :cond_d
-
-    if-nez v4, :cond_e
-
-    :cond_d
-    add-int/lit8 v3, v3, -0x30
-
-    neg-int v3, v3
-
-    int-to-long v7, v3
-
-    const/4 v3, 0x2
-
-    move v4, v5
-
-    move v5, v6
-
-    move-wide v15, v7
-
-    move-wide v6, v15
-
-    goto :goto_3
-
-    :cond_e
-    const/4 v9, 0x2
-
-    if-ne v4, v9, :cond_12
-
-    const-wide/16 v9, 0x0
-
-    cmp-long v9, v7, v9
-
-    if-nez v9, :cond_f
-
-    const/4 v1, 0x0
-
-    goto/16 :goto_1
-
-    :cond_f
-    const-wide/16 v9, 0xa
-
-    mul-long/2addr v9, v7
-
-    add-int/lit8 v3, v3, -0x30
-
-    int-to-long v13, v3
-
-    sub-long/2addr v9, v13
-
-    const-wide v13, -0xcccccccccccccccL
-
-    cmp-long v3, v7, v13
-
-    if-gtz v3, :cond_10
-
-    const-wide v13, -0xcccccccccccccccL
-
-    cmp-long v3, v7, v13
-
-    if-nez v3, :cond_11
-
-    cmp-long v3, v9, v7
-
-    if-gez v3, :cond_11
-
-    :cond_10
-    const/4 v3, 0x1
-
-    :goto_4
-    and-int/2addr v3, v5
-
-    move v5, v6
-
-    move-wide v6, v9
-
-    move v15, v4
-
-    move v4, v3
-
-    move v3, v15
-
-    goto :goto_3
-
-    :cond_11
-    const/4 v3, 0x0
-
-    goto :goto_4
-
-    :cond_12
-    const/4 v3, 0x3
-
-    if-ne v4, v3, :cond_13
-
-    const/4 v3, 0x4
-
-    move v4, v5
-
-    move v5, v6
-
-    move-wide v15, v7
-
-    move-wide v6, v15
-
-    goto/16 :goto_3
-
-    :cond_13
-    const/4 v3, 0x5
-
-    if-eq v4, v3, :cond_14
-
-    const/4 v3, 0x6
-
-    if-ne v4, v3, :cond_19
-
-    :cond_14
-    const/4 v3, 0x7
-
-    move v4, v5
-
-    move v5, v6
-
-    move-wide v15, v7
-
-    move-wide v6, v15
-
-    goto/16 :goto_3
-
-    :cond_15
-    neg-long v7, v7
-
-    goto/16 :goto_2
-
-    :cond_16
-    const/4 v1, 0x2
-
-    if-eq v4, v1, :cond_17
-
-    const/4 v1, 0x4
-
-    if-eq v4, v1, :cond_17
-
-    const/4 v1, 0x7
-
-    if-ne v4, v1, :cond_18
-
-    :cond_17
-    move-object/from16 v0, p0
-
-    iput v11, v0, Lcom/b/a/d/a;->L:I
-
-    const/16 v1, 0x10
-
-    move-object/from16 v0, p0
-
-    iput v1, v0, Lcom/b/a/d/a;->J:I
-
-    goto/16 :goto_1
-
-    :cond_18
-    const/4 v1, 0x0
-
-    goto/16 :goto_1
-
-    :cond_19
     move v3, v4
 
     move v4, v5
 
-    move v5, v6
+    goto :goto_3
 
-    move-wide v15, v7
+    :cond_7
+    const/4 v0, 0x0
 
-    move-wide v6, v15
+    goto :goto_1
+
+    :sswitch_1
+    const/4 v2, 0x5
+
+    if-ne v3, v2, :cond_8
+
+    const/4 v2, 0x6
+
+    move v3, v4
+
+    move v4, v5
+
+    goto :goto_3
+
+    :cond_8
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :sswitch_2
+    const/4 v2, 0x2
+
+    if-eq v3, v2, :cond_9
+
+    const/4 v2, 0x4
+
+    if-ne v3, v2, :cond_a
+
+    :cond_9
+    const/4 v2, 0x5
+
+    move v3, v4
+
+    move v4, v5
+
+    goto :goto_3
+
+    :cond_a
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :sswitch_3
+    const/4 v2, 0x2
+
+    if-ne v3, v2, :cond_b
+
+    const/4 v2, 0x3
+
+    move v3, v4
+
+    move v4, v5
+
+    goto :goto_3
+
+    :cond_b
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_c
+    const/4 v8, 0x1
+
+    if-eq v3, v8, :cond_d
+
+    if-nez v3, :cond_e
+
+    :cond_d
+    add-int/lit8 v2, v2, -0x30
+
+    neg-int v2, v2
+
+    int-to-long v6, v2
+
+    const/4 v2, 0x2
+
+    move v3, v4
+
+    move v4, v5
+
+    goto :goto_3
+
+    :cond_e
+    const/4 v8, 0x2
+
+    if-ne v3, v8, :cond_12
+
+    const-wide/16 v8, 0x0
+
+    cmp-long v8, v6, v8
+
+    if-nez v8, :cond_f
+
+    const/4 v0, 0x0
+
+    goto/16 :goto_1
+
+    :cond_f
+    const-wide/16 v8, 0xa
+
+    mul-long/2addr v8, v6
+
+    add-int/lit8 v2, v2, -0x30
+
+    int-to-long v12, v2
+
+    sub-long/2addr v8, v12
+
+    const-wide v12, -0xcccccccccccccccL
+
+    cmp-long v2, v6, v12
+
+    if-gtz v2, :cond_10
+
+    const-wide v12, -0xcccccccccccccccL
+
+    cmp-long v2, v6, v12
+
+    if-nez v2, :cond_11
+
+    cmp-long v2, v8, v6
+
+    if-gez v2, :cond_11
+
+    :cond_10
+    const/4 v2, 0x1
+
+    :goto_4
+    and-int/2addr v2, v4
+
+    move v4, v5
+
+    move-wide v6, v8
+
+    move v14, v3
+
+    move v3, v2
+
+    move v2, v14
+
+    goto :goto_3
+
+    :cond_11
+    const/4 v2, 0x0
+
+    goto :goto_4
+
+    :cond_12
+    const/4 v2, 0x3
+
+    if-ne v3, v2, :cond_13
+
+    const/4 v2, 0x4
+
+    move v3, v4
+
+    move v4, v5
+
+    goto :goto_3
+
+    :cond_13
+    const/4 v2, 0x5
+
+    if-eq v3, v2, :cond_14
+
+    const/4 v2, 0x6
+
+    if-ne v3, v2, :cond_19
+
+    :cond_14
+    const/4 v2, 0x7
+
+    move v3, v4
+
+    move v4, v5
+
+    goto :goto_3
+
+    :cond_15
+    neg-long v6, v6
+
+    goto/16 :goto_2
+
+    :cond_16
+    const/4 v0, 0x2
+
+    if-eq v3, v0, :cond_17
+
+    const/4 v0, 0x4
+
+    if-eq v3, v0, :cond_17
+
+    const/4 v0, 0x7
+
+    if-ne v3, v0, :cond_18
+
+    :cond_17
+    iput v10, p0, Lcom/b/a/d/a;->L:I
+
+    const/16 v0, 0x10
+
+    iput v0, p0, Lcom/b/a/d/a;->J:I
+
+    goto/16 :goto_1
+
+    :cond_18
+    const/4 v0, 0x0
+
+    goto/16 :goto_1
+
+    :cond_19
+    move v2, v3
+
+    move v3, v4
+
+    move v4, v5
 
     goto/16 :goto_3
 
@@ -4173,11 +4103,11 @@
 .end method
 
 .method public m()I
-    .locals 6
+    .locals 7
 
     const/16 v2, 0x8
 
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
     iget v0, p0, Lcom/b/a/d/a;->J:I
 
@@ -4196,11 +4126,11 @@
 
     long-to-int v0, v0
 
-    iget-wide v1, p0, Lcom/b/a/d/a;->K:J
+    iget-wide v2, p0, Lcom/b/a/d/a;->K:J
 
-    int-to-long v3, v0
+    int-to-long v4, v0
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-eqz v1, :cond_1
 
@@ -4259,7 +4189,7 @@
     throw v0
 
     :cond_1
-    iput v5, p0, Lcom/b/a/d/a;->J:I
+    iput v6, p0, Lcom/b/a/d/a;->J:I
 
     :goto_0
     return v0
@@ -4298,13 +4228,13 @@
 
     invoke-static {v0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
-    move-result-wide v1
+    move-result-wide v2
 
-    double-to-int v0, v1
+    double-to-int v0, v2
 
-    int-to-double v3, v0
+    int-to-double v4, v0
 
-    cmpl-double v1, v3, v1
+    cmpl-double v1, v4, v2
 
     if-eqz v1, :cond_7
 
@@ -4468,7 +4398,7 @@
 
     iput-object v1, p0, Lcom/b/a/d/a;->M:Ljava/lang/String;
 
-    iput v5, p0, Lcom/b/a/d/a;->J:I
+    iput v6, p0, Lcom/b/a/d/a;->J:I
 
     goto/16 :goto_0
 .end method

@@ -53,7 +53,7 @@
 
 # virtual methods
 .method public declared-synchronized a(Lcom/b/a/d/a;)Ljava/sql/Time;
-    .locals 3
+    .locals 4
 
     monitor-enter p0
 
@@ -93,9 +93,9 @@
 
     invoke-virtual {v1}, Ljava/util/Date;->getTime()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-direct {v0, v1, v2}, Ljava/sql/Time;-><init>(J)V
+    invoke-direct {v0, v2, v3}, Ljava/sql/Time;-><init>(J)V
     :try_end_1
     .catch Ljava/text/ParseException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0

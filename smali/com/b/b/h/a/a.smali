@@ -5672,11 +5672,11 @@
 
     const/4 v0, -0x1
 
-    const-wide/32 v1, 0x3ffff
+    const-wide/32 v2, 0x3ffff
 
-    and-long/2addr v1, p0
+    and-long/2addr v2, p0
 
-    invoke-static {v1, v2}, Lcom/b/b/h/a/a;->b(J)I
+    invoke-static {v2, v3}, Lcom/b/b/h/a/a;->b(J)I
 
     move-result v1
 
@@ -5733,7 +5733,7 @@
 .end method
 
 .method private static b(J)I
-    .locals 6
+    .locals 8
 
     const/4 v2, 0x0
 
@@ -5752,9 +5752,9 @@
 
     aget v3, v3, v0
 
-    int-to-long v3, v3
+    int-to-long v4, v3
 
-    cmp-long v3, p0, v3
+    cmp-long v3, p0, v4
 
     if-gez v3, :cond_0
 
@@ -5780,11 +5780,11 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    move v5, v1
+    move v6, v1
 
     move v1, v0
 
-    move v0, v5
+    move v0, v6
 
     goto :goto_1
 
@@ -5798,30 +5798,30 @@
 
 # virtual methods
 .method a([III[II)I
-    .locals 11
+    .locals 9
 
     iget-object v0, p0, Lcom/b/b/h/a/a;->f:Lcom/b/b/c/b;
 
     invoke-virtual {v0}, Lcom/b/b/c/b;->e()I
 
-    move-result v7
+    move-result v8
 
     const/4 v1, 0x0
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
     const/4 v0, 0x0
 
-    move v5, v0
+    move v6, v0
 
-    move v6, v1
+    move v7, v1
 
-    move/from16 v2, p5
+    move v2, p5
 
     :goto_0
-    if-ge v5, v7, :cond_7
+    if-ge v6, v8, :cond_7
 
-    add-int/lit8 v0, v5, 0x11
+    add-int/lit8 v0, v6, 0x11
 
     array-length v1, p1
 
@@ -5836,30 +5836,28 @@
     :cond_0
     const/16 v0, 0x10
 
-    move v10, v0
+    move v3, v0
 
-    move-wide v0, v3
-
-    move v3, v10
+    move-wide v0, v4
 
     :goto_1
     if-ltz v3, :cond_2
 
     rsub-int/lit8 v4, v3, 0x10
 
-    add-int/2addr v4, v5
+    add-int/2addr v4, v6
 
     aget v4, p1, v4
 
-    ushr-int/lit8 v8, p3, 0x1
+    ushr-int/lit8 v5, p3, 0x1
 
-    if-lt v4, v8, :cond_1
+    if-lt v4, v5, :cond_1
 
-    const-wide/16 v8, 0x1
+    const-wide/16 v4, 0x1
 
-    shl-long/2addr v8, v3
+    shl-long/2addr v4, v3
 
-    or-long/2addr v0, v8
+    or-long/2addr v0, v4
 
     :cond_1
     add-int/lit8 v3, v3, -0x1
@@ -5867,7 +5865,7 @@
     goto :goto_1
 
     :cond_2
-    if-lez v6, :cond_5
+    if-lez v7, :cond_5
 
     invoke-static {v0, v1}, Lcom/b/b/h/a/a;->a(J)I
 
@@ -5875,9 +5873,9 @@
 
     if-gez v1, :cond_4
 
-    add-int/lit8 v0, v7, -0x11
+    add-int/lit8 v0, v8, -0x11
 
-    if-ge v5, v0, :cond_4
+    if-ge v6, v0, :cond_4
 
     iget v0, p0, Lcom/b/b/h/a/a;->j:I
 
@@ -5909,15 +5907,15 @@
     iput v1, p0, Lcom/b/b/h/a/a;->j:I
 
     :goto_2
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    add-int/lit8 v2, v6, 0x1
+    add-int/lit8 v2, v7, 0x1
 
-    add-int/lit8 v1, v5, 0x11
+    add-int/lit8 v1, v6, 0x11
 
-    move v5, v1
+    move v6, v1
 
-    move v6, v2
+    move v7, v2
 
     move v2, v0
 
@@ -5963,7 +5961,7 @@
     :cond_7
     const/4 v0, 0x1
 
-    if-le v6, v0, :cond_9
+    if-le v7, v0, :cond_9
 
     add-int/lit8 v2, v2, -0x1
 

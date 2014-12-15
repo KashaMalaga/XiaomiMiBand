@@ -39,6 +39,9 @@
 .method public abstract N()Lcom/amap/api/mapcore/l;
 .end method
 
+.method public abstract O()V
+.end method
+
 .method public abstract a(Lcom/amap/api/maps/model/NavigateArrowOptions;)Lcom/amap/api/mapcore/ab;
 .end method
 
@@ -122,6 +125,9 @@
 .end method
 
 .method public abstract a(Lcom/amap/api/maps/AMap$InfoWindowAdapter;)V
+.end method
+
+.method public abstract a(Lcom/amap/api/maps/AMap$OnCacheRemoveListener;)V
 .end method
 
 .method public abstract a(Lcom/amap/api/maps/AMap$OnCameraChangeListener;)V

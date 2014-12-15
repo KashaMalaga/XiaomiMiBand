@@ -60,9 +60,9 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-static {p0, v0, v1, v2}, Lcom/tencent/stat/common/SdkProtection;->setPreferencesValue(Landroid/content/Context;Ljava/lang/String;J)V
+    invoke-static {p0, v0, v2, v3}, Lcom/tencent/stat/common/SdkProtection;->setPreferencesValue(Landroid/content/Context;Ljava/lang/String;J)V
 
     :cond_1
     const/4 v0, 0x1
@@ -89,9 +89,9 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-static {p0, v0, v1, v2}, Lcom/tencent/stat/common/SdkProtection;->setPreferencesValue(Landroid/content/Context;Ljava/lang/String;J)V
+    invoke-static {p0, v0, v2, v3}, Lcom/tencent/stat/common/SdkProtection;->setPreferencesValue(Landroid/content/Context;Ljava/lang/String;J)V
 
     :cond_0
     return-void

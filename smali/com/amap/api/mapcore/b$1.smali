@@ -1,8 +1,5 @@
 .class Lcom/amap/api/mapcore/b$1;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.super Lcom/amap/api/mapcore/av;
 
 
 # instance fields
@@ -10,41 +7,48 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/amap/api/mapcore/b;)V
+.method constructor <init>(Lcom/amap/api/mapcore/b;Lcom/amap/api/maps/model/MarkerOptions;Lcom/amap/api/mapcore/v;)V
     .locals 0
 
     iput-object p1, p0, Lcom/amap/api/mapcore/b$1;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p3}, Lcom/amap/api/mapcore/av;-><init>(Lcom/amap/api/maps/model/MarkerOptions;Lcom/amap/api/mapcore/v;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
+.method public a()V
     .locals 2
 
-    :try_start_0
     iget-object v0, p0, Lcom/amap/api/mapcore/b$1;->a:Lcom/amap/api/mapcore/b;
+
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->e(Lcom/amap/api/mapcore/b;)Landroid/os/Handler;
+
+    move-result-object v0
 
     iget-object v1, p0, Lcom/amap/api/mapcore/b$1;->a:Lcom/amap/api/mapcore/b;
 
-    invoke-static {v1}, Lcom/amap/api/mapcore/b;->s(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/aa;
+    invoke-static {v1}, Lcom/amap/api/mapcore/b;->f(Lcom/amap/api/mapcore/b;)Ljava/lang/Runnable;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/amap/api/mapcore/b;->a(Lcom/amap/api/mapcore/aa;)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    :goto_0
+    iget-object v0, p0, Lcom/amap/api/mapcore/b$1;->a:Lcom/amap/api/mapcore/b;
+
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->e(Lcom/amap/api/mapcore/b;)Landroid/os/Handler;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/amap/api/mapcore/b$1;->a:Lcom/amap/api/mapcore/b;
+
+    invoke-static {v1}, Lcom/amap/api/mapcore/b;->d(Lcom/amap/api/mapcore/b;)Ljava/lang/Runnable;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
     return-void
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
-
-    goto :goto_0
 .end method

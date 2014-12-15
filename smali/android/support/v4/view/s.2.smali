@@ -210,7 +210,7 @@
 .end method
 
 .method private a(Landroid/view/MotionEvent;Landroid/view/MotionEvent;Landroid/view/MotionEvent;)Z
-    .locals 5
+    .locals 6
 
     const/4 v0, 0x0
 
@@ -225,19 +225,19 @@
     :cond_1
     invoke-virtual {p3}, Landroid/view/MotionEvent;->getEventTime()J
 
-    move-result-wide v1
+    move-result-wide v2
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getEventTime()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    sub-long/2addr v1, v3
+    sub-long/2addr v2, v4
 
-    sget v3, Landroid/support/v4/view/s;->g:I
+    sget v1, Landroid/support/v4/view/s;->g:I
 
-    int-to-long v3, v3
+    int-to-long v4, v1
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-gtz v1, :cond_0
 

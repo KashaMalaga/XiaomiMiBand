@@ -58,7 +58,7 @@
 .method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
     .locals 7
 
-    const v6, 0x7f08003c
+    const v6, 0x7f07003c
 
     const/4 v5, 0x0
 
@@ -70,7 +70,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f030088
+    const v1, 0x7f03008f
 
     const/4 v2, 0x0
 
@@ -79,7 +79,7 @@
     move-result-object p2
 
     :cond_0
-    const v0, 0x7f07027c
+    const v0, 0x7f0b02a1
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -89,7 +89,7 @@
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    const v0, 0x7f07027d
+    const v0, 0x7f0b02a2
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -109,7 +109,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f080010
+    const v3, 0x7f070010
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
 

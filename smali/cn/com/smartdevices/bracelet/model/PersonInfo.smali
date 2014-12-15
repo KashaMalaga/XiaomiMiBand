@@ -522,6 +522,16 @@
     return v0
 .end method
 
+.method public getMiliVibrate()Z
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
+
+    iget-boolean v0, v0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->vibrate:Z
+
+    return v0
+.end method
+
 .method public getMiliWearHand()Ljava/lang/String;
     .locals 1
 
@@ -764,6 +774,16 @@
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
 
     iput p1, v0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->disconnectedReminder:I
+
+    return-void
+.end method
+
+.method public setMiliVibrate(Z)V
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
+
+    iput-boolean p1, v0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->vibrate:Z
 
     return-void
 .end method

@@ -177,6 +177,8 @@
 
     move-result-object v1
 
+    if-eqz v1, :cond_0
+
     iget-object v0, p0, Lcom/amap/api/mapcore/ax;->e:Landroid/graphics/Paint;
 
     iget-object v2, p0, Lcom/amap/api/mapcore/ax;->a:Ljava/lang/String;

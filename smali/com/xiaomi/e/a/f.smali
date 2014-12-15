@@ -73,7 +73,7 @@
 .end method
 
 .method public a(J)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcom/xiaomi/e/a/f;->f:J
 

@@ -23,7 +23,7 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 4
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "NewApi"
@@ -76,9 +76,9 @@
 
     move-result-object v0
 
-    const-wide/16 v1, 0x1c2
+    const-wide/16 v2, 0x1c2
 
-    invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+    invoke-virtual {v0, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/b;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
@@ -122,7 +122,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/b;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
-    const-class v1, Lcn/com/smartdevices/bracelet/ui/dp;
+    const-class v1, Lcn/com/smartdevices/bracelet/ui/du;
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/J;->b(Landroid/app/Activity;Ljava/lang/Class;)V
 

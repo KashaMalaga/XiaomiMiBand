@@ -138,7 +138,7 @@
 
 # virtual methods
 .method public a(Lcom/xiaomi/c/a/i;Lcom/xiaomi/c/a/u;Landroid/content/Context;)Lcom/xiaomi/c/a/o;
-    .locals 7
+    .locals 8
 
     iget-object v0, p0, Lcom/xiaomi/c/a/x;->a:Ljava/util/concurrent/locks/Lock;
 
@@ -186,13 +186,13 @@
 
     add-int/lit8 v0, v0, 0x1e
 
-    int-to-long v3, v0
+    int-to-long v4, v0
 
-    const-wide/16 v5, 0x3e8
+    const-wide/16 v6, 0x3e8
 
-    mul-long/2addr v3, v5
+    mul-long/2addr v4, v6
 
-    long-to-int v0, v3
+    long-to-int v0, v4
 
     invoke-static {v2, v0}, Lorg/apache/http/params/HttpConnectionParams;->setSoTimeout(Lorg/apache/http/params/HttpParams;I)V
 

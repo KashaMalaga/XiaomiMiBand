@@ -220,15 +220,15 @@
 
     invoke-virtual {p1}, Lcom/a/K;->e()D
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/amap/api/location/AMapLocation;->setLatitude(D)V
+    invoke-virtual {v0, v2, v3}, Lcom/amap/api/location/AMapLocation;->setLatitude(D)V
 
     invoke-virtual {p1}, Lcom/a/K;->d()D
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/amap/api/location/AMapLocation;->setLongitude(D)V
+    invoke-virtual {v0, v2, v3}, Lcom/amap/api/location/AMapLocation;->setLongitude(D)V
 
     invoke-virtual {p1}, Lcom/a/K;->f()F
 
@@ -238,9 +238,9 @@
 
     invoke-virtual {p1}, Lcom/a/K;->g()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/amap/api/location/AMapLocation;->setTime(J)V
+    invoke-virtual {v0, v2, v3}, Lcom/amap/api/location/AMapLocation;->setTime(J)V
 
     invoke-virtual {p1}, Lcom/a/K;->b()Ljava/lang/String;
 
@@ -624,27 +624,27 @@
 .end method
 
 .method private d()Z
-    .locals 7
+    .locals 8
 
     const/4 v0, 0x0
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iget-object v3, p0, Lcom/amap/api/location/c;->h:Lcom/amap/api/location/a;
+    iget-object v1, p0, Lcom/amap/api/location/c;->h:Lcom/amap/api/location/a;
 
-    iget-wide v3, v3, Lcom/amap/api/location/a;->d:J
+    iget-wide v4, v1, Lcom/amap/api/location/a;->d:J
 
-    sub-long/2addr v1, v3
+    sub-long/2addr v2, v4
 
-    const-wide/16 v3, 0x5
+    const-wide/16 v4, 0x5
 
-    iget-wide v5, p0, Lcom/amap/api/location/c;->f:J
+    iget-wide v6, p0, Lcom/amap/api/location/c;->f:J
 
-    mul-long/2addr v3, v5
+    mul-long/2addr v4, v6
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-lez v1, :cond_0
 
@@ -688,7 +688,7 @@
 .end method
 
 .method a(J)V
-    .locals 2
+    .locals 3
 
     iget-wide v0, p0, Lcom/amap/api/location/c;->f:J
 
@@ -1036,9 +1036,9 @@
     goto/16 :goto_0
 
     :cond_d
-    const-wide/16 v1, 0x7530
+    const-wide/16 v2, 0x7530
 
-    invoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V
+    invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
     :try_end_a
     .catch Ljava/lang/Throwable; {:try_start_a .. :try_end_a} :catch_0
 
@@ -1113,9 +1113,9 @@
 
     if-eqz v1, :cond_d
 
-    iget-wide v1, p0, Lcom/amap/api/location/c;->f:J
+    iget-wide v2, p0, Lcom/amap/api/location/c;->f:J
 
-    invoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V
+    invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
 
     goto :goto_3
 

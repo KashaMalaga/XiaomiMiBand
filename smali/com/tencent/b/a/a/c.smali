@@ -66,7 +66,7 @@
 .end method
 
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;DDD)V
-    .locals 3
+    .locals 4
 
     const/4 v2, 0x0
 

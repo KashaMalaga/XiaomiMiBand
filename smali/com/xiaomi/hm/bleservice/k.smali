@@ -23,7 +23,7 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/k;->a:Lcom/xiaomi/hm/bleservice/BLEService;
 
@@ -109,9 +109,9 @@
 
     move-result-object v0
 
-    const-wide/16 v1, 0x1f4
+    const-wide/16 v2, 0x1f4
 
-    invoke-virtual {v0, p0, v1, v2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v0, p0, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     :goto_0
     return-void

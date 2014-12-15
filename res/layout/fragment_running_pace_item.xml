@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/running_list_item_bg_normal" android:paddingLeft="@dimen/mili_margin" android:paddingRight="@dimen/mili_margin" android:clickable="false" android:layout_width="fill_parent" android:layout_height="47.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableRow android:gravity="center" android:id="@id/tr_item" android:layout_width="fill_parent" android:layout_height="47.0dip">
+        <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:gravity="center" android:id="@id/tv_kilometer" android:layout_height="wrap_content" android:layout_weight="1.0" android:fontFamily="miui-bold" style="@style/font_c70000000_s15_5" />
+        <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:gravity="center" android:id="@id/tv_costtime" android:layout_height="wrap_content" android:layout_weight="1.0" android:fontFamily="miui-bold" style="@style/font_c70000000_s15_5" />
+        <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:gravity="center" android:id="@id/tv_pace" android:layout_height="wrap_content" android:layout_weight="1.0" android:fontFamily="miui-bold" style="@style/font_c70000000_s15_5" />
+        <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:gravity="center" android:id="@id/tv_speed" android:layout_height="wrap_content" android:layout_weight="1.0" android:fontFamily="miui-bold" style="@style/font_c70000000_s15_5" />
+    </TableRow>
+    <View android:background="@color/split_color" android:layout_width="fill_parent" android:layout_height="@dimen/round_bg_stroke" android:layout_below="@id/tr_item" />
+</RelativeLayout>

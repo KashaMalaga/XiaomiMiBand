@@ -2,18 +2,26 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
+
+.field final synthetic b:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
+
+.field final synthetic c:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;Lcn/com/smartdevices/bracelet/chart/StatisticChartView;Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dh;->a:Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dh;->c:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/dh;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
+
+    iput-object p3, p0, Lcn/com/smartdevices/bracelet/ui/dh;->b:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,117 +30,160 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 4
+.method public onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dh;->a:Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;
+    return-void
+.end method
 
-    # getter for: Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mDisableStatusBarTintAuto:Z
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->access$000(Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;)Z
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 5
+
+    const/high16 v4, 0x3f800000
+
+    const/4 v3, 0x1
+
+    const-string v0, "Statistic.Main"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "OUT VIEW : "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/dh;->b:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dh;->b:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->setVisibility(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dh;->b:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
+
+    invoke-virtual {v0, v4}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->setAlpha(F)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dh;->b:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
+
+    invoke-virtual {v0, v4}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->setScaleX(F)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dh;->c:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->s(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eq v0, v3, :cond_0
 
-    :goto_0
-    return-void
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dh;->c:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->t(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Landroid/view/View;->setEnabled(Z)V
 
     :cond_0
-    :try_start_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dh;->a:Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dh;->c:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
-    # getter for: Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mContentView:Landroid/view/View;
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->access$100(Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->buildDrawingCache()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dh;->a:Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;
-
-    # getter for: Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mContentView:Landroid/view/View;
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->access$100(Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->getDrawingCache()Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/dh;->a:Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;
-
-    # getter for: Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mSystemBarTintManager:Lcn/com/smartdevices/bracelet/ui/di;
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->access$200(Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;)Lcn/com/smartdevices/bracelet/ui/di;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/ui/di;->a()Lcn/com/smartdevices/bracelet/ui/dk;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/ui/dk;->b()I
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v2, v1}, Landroid/graphics/Bitmap;->getPixel(II)I
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->s(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)I
 
     move-result v0
 
-    const-string v1, "DDDD"
+    const/16 v1, 0x100
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    if-eq v0, v1, :cond_1
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dh;->c:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
-    const-string v3, "SystemStatusBar Tint Color : "
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->u(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)Landroid/view/View;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    move-result-object v2
+    invoke-virtual {v0, v3}, Landroid/view/View;->setEnabled(Z)V
 
-    invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+    :cond_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dh;->c:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
-    move-result-object v3
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->q(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    move-result-object v2
+    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->c(Z)V
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dh;->c:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
-    move-result-object v2
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->r(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
-    invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/dh;->a:Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;
+    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->c(Z)V
 
-    # getter for: Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mContentView:Landroid/view/View;
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->access$100(Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;)Landroid/view/View;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dh;->c:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->b(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;Z)Z
+
+    return-void
+.end method
+
+.method public onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .locals 3
+
+    const-string v0, "Statistic.Main"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "IN VIEW : "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/view/View;->destroyDrawingCache()V
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/dh;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/dh;->a:Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->applyStatusBarTint(I)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object v1
 
-    goto :goto_0
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :catch_0
-    move-exception v0
+    move-result-object v1
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/dh;->a:Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    const/high16 v2, -0x1000000
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dh;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
-    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->applyStatusBarTint(I)V
+    const/4 v1, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->setVisibility(I)V
 
-    goto :goto_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dh;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->c()V
+
+    return-void
 .end method

@@ -3,14 +3,14 @@
   xmlns:android="http://schemas.android.com/apk/res/android">
     <RelativeLayout android:background="@color/bg_color_blue" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_h">
         <TextView android:id="@id/back_btn" android:text="@string/back" style="@style/BackButton" />
-        <TextView android:textSize="@dimen/main_ui_title_size" android:textColor="@color/title_color" android:ellipsize="middle" android:gravity="center_horizontal" android:id="@id/content_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/open_title_left_margin" android:layout_marginRight="@dimen/open_title_right_margin" android:text="@string/title_activity_open" android:singleLine="true" android:maxLength="@integer/partner_title_length" android:layout_toLeftOf="@id/unbind_partner" android:layout_toRightOf="@id/back_btn" android:layout_centerInParent="true" />
-        <TextView android:id="@id/unbind_partner" android:visibility="invisible" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/lab_factory_cancel_deauthorize" android:layout_alignParentRight="true" style="@style/RightButton" />
+        <TextView android:enabled="false" android:id="@id/unbind_partner" android:visibility="invisible" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/lab_factory_cancel_deauthorize" android:layout_alignParentRight="true" style="@style/RightButton" />
     </RelativeLayout>
     <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
         <WebView android:id="@id/open_web_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
         <RelativeLayout android:id="@id/error_page" android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="fill_parent">
             <ProgressBar android:id="@id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@id/label" android:layout_centerHorizontal="true" />
-            <TextView android:id="@id/label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_network_connection_retry" android:layout_centerInParent="true" />
+            <TextView android:id="@id/label" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/no_network_connection_retry" android:layout_centerInParent="true" />
         </RelativeLayout>
+        <ProgressBar android:id="@id/load_progress" android:padding="0.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_margin="0.0dip" android:progress="1" android:progressDrawable="@drawable/bar_progress" style="?android:attr/progressBarStyleHorizontal" />
     </FrameLayout>
 </LinearLayout>

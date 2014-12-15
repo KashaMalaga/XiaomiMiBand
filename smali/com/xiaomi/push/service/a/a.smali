@@ -26,7 +26,7 @@
 .end method
 
 .method private a(J)J
-    .locals 4
+    .locals 5
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -44,7 +44,7 @@
 .end method
 
 .method private a(Landroid/app/AlarmManager;JLandroid/app/PendingIntent;)V
-    .locals 5
+    .locals 6
 
     const-class v0, Landroid/app/AlarmManager;
 

@@ -47,7 +47,7 @@
 
     const-class v2, Lcn/com/smartdevices/bracelet/ui/bB;
 
-    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/ui/J;->a(Landroid/app/Activity;Ljava/lang/Class;Landroid/os/Bundle;)V
+    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/ui/J;->b(Landroid/app/Activity;Ljava/lang/Class;Landroid/os/Bundle;)V
 
     return-void
 .end method

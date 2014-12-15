@@ -195,29 +195,29 @@
 .end method
 
 .method public static a(DD)Z
-    .locals 7
+    .locals 8
 
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    const-wide/high16 v5, 0x3fe0000000000000L
+    const-wide/high16 v6, 0x3fe0000000000000L
 
     const-wide v2, 0x4052400000000000L
 
     sub-double v2, p2, v2
 
-    div-double/2addr v2, v5
+    div-double/2addr v2, v6
 
     double-to-int v2, v2
 
-    const-wide/high16 v3, 0x400c000000000000L
+    const-wide/high16 v4, 0x400c000000000000L
 
-    sub-double v3, p0, v3
+    sub-double v4, p0, v4
 
-    div-double/2addr v3, v5
+    div-double/2addr v4, v6
 
-    double-to-int v3, v3
+    double-to-int v3, v4
 
     if-ltz v3, :cond_0
 
@@ -1057,9 +1057,9 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     const-string v1, "&re="
 

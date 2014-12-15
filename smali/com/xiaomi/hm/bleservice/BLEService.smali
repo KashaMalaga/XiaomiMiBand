@@ -1561,13 +1561,13 @@
 .end method
 
 .method private handleWeightData(Lcom/xiaomi/hm/bleservice/a/c;)V
-    .locals 12
+    .locals 13
 
-    const/4 v11, 0x2
+    const/4 v12, 0x2
 
-    const/4 v10, 0x1
+    const/4 v11, 0x1
 
-    const/4 v9, 0x0
+    const/4 v10, 0x0
 
     new-instance v0, Ljava/text/SimpleDateFormat;
 
@@ -1599,7 +1599,7 @@
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/BLEService;->mWeightUnits:[Ljava/lang/String;
 
-    aget-object v1, v0, v9
+    aget-object v1, v0, v10
 
     iget v0, p1, Lcom/xiaomi/hm/bleservice/a/c;->g:F
 
@@ -1629,17 +1629,17 @@
 
     const-string v5, ""
 
-    float-to-double v5, v4
+    float-to-double v6, v4
 
-    const-wide v7, 0x4032800000000000L
+    const-wide v8, 0x4032800000000000L
 
-    cmpg-double v5, v5, v7
+    cmpg-double v5, v6, v8
 
     if-gez v5, :cond_3
 
     iget-object v4, p0, Lcom/xiaomi/hm/bleservice/BLEService;->mWeightDescriptions:[Ljava/lang/String;
 
-    aget-object v4, v4, v9
+    aget-object v4, v4, v10
 
     :goto_1
     const-string v4, "weight"
@@ -1706,9 +1706,9 @@
 
     const v4, 0x7f0c020a
 
-    new-array v5, v10, [Ljava/lang/Object;
+    new-array v5, v11, [Ljava/lang/Object;
 
-    aput-object v2, v5, v9
+    aput-object v2, v5, v10
 
     invoke-virtual {v3, v4, v5}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -1722,7 +1722,7 @@
 
     const v3, 0x7f0c0209
 
-    new-array v4, v11, [Ljava/lang/Object;
+    new-array v4, v12, [Ljava/lang/Object;
 
     iget v5, p1, Lcom/xiaomi/hm/bleservice/a/c;->g:F
 
@@ -1730,9 +1730,9 @@
 
     move-result-object v5
 
-    aput-object v5, v4, v9
+    aput-object v5, v4, v10
 
-    aput-object v1, v4, v10
+    aput-object v1, v4, v11
 
     invoke-virtual {v2, v3, v4}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -1759,7 +1759,7 @@
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/BLEService;->mWeightUnits:[Ljava/lang/String;
 
-    aget-object v1, v0, v10
+    aget-object v1, v0, v11
 
     iget v0, p1, Lcom/xiaomi/hm/bleservice/a/c;->g:F
 
@@ -1778,7 +1778,7 @@
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/BLEService;->mWeightUnits:[Ljava/lang/String;
 
-    aget-object v1, v0, v11
+    aget-object v1, v0, v12
 
     iget v0, p1, Lcom/xiaomi/hm/bleservice/a/c;->g:F
 
@@ -1797,7 +1797,7 @@
 
     iget-object v4, p0, Lcom/xiaomi/hm/bleservice/BLEService;->mWeightDescriptions:[Ljava/lang/String;
 
-    aget-object v4, v4, v10
+    aget-object v4, v4, v11
 
     goto/16 :goto_1
 
@@ -1810,7 +1810,7 @@
 
     iget-object v4, p0, Lcom/xiaomi/hm/bleservice/BLEService;->mWeightDescriptions:[Ljava/lang/String;
 
-    aget-object v4, v4, v11
+    aget-object v4, v4, v12
 
     goto/16 :goto_1
 
@@ -1920,7 +1920,11 @@
 .end method
 
 .method private notifyBraceletVibrated(I)V
-    .locals 5
+    .locals 6
+
+    const/high16 v4, 0x10000000
+
+    const/4 v3, 0x0
 
     sget-object v0, Lcom/xiaomi/hm/bleservice/BLEService;->TAG:Ljava/lang/String;
 
@@ -1946,6 +1950,16 @@
 
     const-string v0, ""
 
+    new-instance v0, Landroid/content/Intent;
+
+    const-class v1, Lcn/com/smartdevices/bracelet/activity/MainActivity;
+
+    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-static {p0, v3, v0, v4}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+
+    move-result-object v0
+
     packed-switch p1, :pswitch_data_0
 
     :goto_0
@@ -1956,7 +1970,19 @@
 
     invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
 
+    move-result-object v1
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v2, "ACTION_OPEN_SETTINGS_PAGE"
+
+    invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p0, v3, v0, v4}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+
     move-result-object v0
+
+    move-object v2, v1
 
     move-object v1, v0
 
@@ -1969,75 +1995,81 @@
 
     check-cast v0, Landroid/app/NotificationManager;
 
-    const v2, 0x7f0c01f1
+    const v3, 0x7f0c01f1
 
-    invoke-virtual {p0, v2}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    new-instance v3, Landroid/support/v4/app/al;
-
-    invoke-direct {v3, p0}, Landroid/support/v4/app/al;-><init>(Landroid/content/Context;)V
-
-    const v4, 0x7f020004
-
-    invoke-virtual {v3, v4}, Landroid/support/v4/app/al;->a(I)Landroid/support/v4/app/al;
+    invoke-virtual {p0, v3}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    new-instance v4, Landroid/support/v4/app/al;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v4, p0}, Landroid/support/v4/app/al;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const v5, 0x7f020004
+
+    invoke-virtual {v4, v5}, Landroid/support/v4/app/al;->a(I)Landroid/support/v4/app/al;
+
+    move-result-object v4
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4, v2}, Landroid/support/v4/app/al;->a(Ljava/lang/CharSequence;)Landroid/support/v4/app/al;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v3, v1}, Landroid/support/v4/app/al;->a(Ljava/lang/CharSequence;)Landroid/support/v4/app/al;
+    const/4 v3, 0x1
 
-    move-result-object v1
+    invoke-virtual {v2, v3}, Landroid/support/v4/app/al;->d(Z)Landroid/support/v4/app/al;
 
-    const/4 v2, 0x1
+    move-result-object v2
 
-    invoke-virtual {v1, v2}, Landroid/support/v4/app/al;->d(Z)Landroid/support/v4/app/al;
+    invoke-virtual {v2, v1}, Landroid/support/v4/app/al;->a(Landroid/app/PendingIntent;)Landroid/support/v4/app/al;
 
-    move-result-object v1
+    const/16 v1, 0x27
 
-    const/16 v2, 0x27
+    invoke-virtual {v2}, Landroid/support/v4/app/al;->b()Landroid/app/Notification;
 
-    invoke-virtual {v1}, Landroid/support/v4/app/al;->b()Landroid/app/Notification;
+    move-result-object v2
 
-    move-result-object v1
-
-    invoke-virtual {v0, v2, v1}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
+    invoke-virtual {v0, v1, v2}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
 
     goto :goto_0
 
     :pswitch_1
-    const v0, 0x7f0c01f3
+    const v1, 0x7f0c01f3
 
-    invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
+
+    move-object v2, v1
 
     move-object v1, v0
 
     goto :goto_1
 
     :pswitch_2
-    const v0, 0x7f0c01f4
+    const v1, 0x7f0c01f4
 
-    invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
+
+    move-object v2, v1
 
     move-object v1, v0
 
@@ -2048,7 +2080,19 @@
 
     invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
 
+    move-result-object v1
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v2, "ACTION_OPEN_ALARM_PAGE"
+
+    invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p0, v3, v0, v4}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+
     move-result-object v0
+
+    move-object v2, v1
 
     move-object v1, v0
 
@@ -2059,66 +2103,90 @@
 
     invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
 
+    move-result-object v1
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v2, "ACTION_OPEN_ALARM_PAGE"
+
+    invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p0, v3, v0, v4}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+
     move-result-object v0
+
+    move-object v2, v1
 
     move-object v1, v0
 
     goto :goto_1
 
     :pswitch_5
-    const v0, 0x7f0c01f7
+    const v1, 0x7f0c01f7
 
-    invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
+
+    move-object v2, v1
 
     move-object v1, v0
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :pswitch_6
-    const v0, 0x7f0c01f8
+    const v1, 0x7f0c01f8
 
-    invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
+
+    move-object v2, v1
 
     move-object v1, v0
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :pswitch_7
-    const v0, 0x7f0c01f9
+    const v1, 0x7f0c01f9
 
-    invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
+
+    move-object v2, v1
 
     move-object v1, v0
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :pswitch_8
-    const v0, 0x7f0c01fa
+    const v1, 0x7f0c01fa
 
-    invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
+
+    move-object v2, v1
 
     move-object v1, v0
 
     goto/16 :goto_1
 
     :pswitch_9
-    const v0, 0x7f0c01fb
+    const v1, 0x7f0c01fb
 
-    invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
+
+    move-object v2, v1
 
     move-object v1, v0
 
     goto/16 :goto_1
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0xd
@@ -2401,7 +2469,7 @@
 
     new-instance v2, Landroid/content/Intent;
 
-    const-string v3, "ACTION_BATTERY_LOW"
+    const-string v3, "ACTION_OPEN_SETTINGS_PAGE"
 
     invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
@@ -2623,9 +2691,13 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->V()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->h()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-    move-result v0
+    move-result-object v0
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
+
+    iget-boolean v0, v0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->vibrate:Z
 
     if-eqz v0, :cond_0
 
@@ -2668,7 +2740,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/a/n;->a(Ljava/lang/Object;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/a/o;->a(Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -3589,15 +3661,15 @@
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/a/n;
+    new-instance v1, Lcn/com/smartdevices/bracelet/a/o;
 
     new-instance v2, Lcom/xiaomi/hm/bleservice/b;
 
     invoke-direct {v2, p0, p1, v0}, Lcom/xiaomi/hm/bleservice/b;-><init>(Lcom/xiaomi/hm/bleservice/BLEService;ILandroid/os/PowerManager$WakeLock;)V
 
-    invoke-direct {v1, p1, v2}, Lcn/com/smartdevices/bracelet/a/n;-><init>(ILcn/com/smartdevices/bracelet/a/b;)V
+    invoke-direct {v1, p1, v2}, Lcn/com/smartdevices/bracelet/a/o;-><init>(ILcn/com/smartdevices/bracelet/a/b;)V
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/a/n;->e()V
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/a/o;->e()V
 
     return-void
 .end method
@@ -3861,7 +3933,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/a/d;->e()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/a/d;->b()V
 
     return-void
 .end method
@@ -3881,9 +3953,9 @@
 
 # virtual methods
 .method public alarmSetMaxLatency()V
-    .locals 7
+    .locals 8
 
-    const-wide/32 v5, 0x1d4c0
+    const-wide/32 v6, 0x1d4c0
 
     const/4 v4, 0x2
 
@@ -3921,7 +3993,7 @@
 
     move-result-wide v2
 
-    add-long/2addr v2, v5
+    add-long/2addr v2, v6
 
     invoke-virtual {v0, v4, v2, v3, v1}, Landroid/app/AlarmManager;->setExact(IJLandroid/app/PendingIntent;)V
 
@@ -3933,7 +4005,7 @@
 
     move-result-wide v2
 
-    add-long/2addr v2, v5
+    add-long/2addr v2, v6
 
     invoke-virtual {v0, v4, v2, v3, v1}, Landroid/app/AlarmManager;->set(IJLandroid/app/PendingIntent;)V
 
@@ -3941,9 +4013,9 @@
 .end method
 
 .method public checkSyncData()V
-    .locals 6
+    .locals 7
 
-    const/16 v5, 0xc
+    const/16 v6, 0xc
 
     sget-object v0, Lcom/xiaomi/hm/bleservice/BLEService;->TAG:Ljava/lang/String;
 
@@ -3961,9 +4033,9 @@
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/u;->c()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-direct {v2, v3, v4}, Ljava/util/Date;-><init>(J)V
+    invoke-direct {v2, v4, v5}, Ljava/util/Date;-><init>(J)V
 
     invoke-virtual {v2}, Ljava/util/Date;->toLocaleString()Ljava/lang/String;
 
@@ -4013,9 +4085,9 @@
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/u;->c()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-direct {v2, v3, v4}, Ljava/util/Date;-><init>(J)V
+    invoke-direct {v2, v4, v5}, Ljava/util/Date;-><init>(J)V
 
     invoke-virtual {v2}, Ljava/util/Date;->toLocaleString()Ljava/lang/String;
 
@@ -4095,11 +4167,11 @@
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/BLEService;->m_Handler:Landroid/os/Handler;
 
-    invoke-virtual {v0, v5}, Landroid/os/Handler;->removeMessages(I)V
+    invoke-virtual {v0, v6}, Landroid/os/Handler;->removeMessages(I)V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/BLEService;->m_Handler:Landroid/os/Handler;
 
-    invoke-virtual {v0, v5}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+    invoke-virtual {v0, v6}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     goto :goto_0
 .end method
@@ -5040,13 +5112,13 @@
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/u;->f()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    new-instance v3, Lcom/xiaomi/hm/bleservice/d;
+    new-instance v1, Lcom/xiaomi/hm/bleservice/d;
 
-    invoke-direct {v3, p0}, Lcom/xiaomi/hm/bleservice/d;-><init>(Lcom/xiaomi/hm/bleservice/BLEService;)V
+    invoke-direct {v1, p0}, Lcom/xiaomi/hm/bleservice/d;-><init>(Lcom/xiaomi/hm/bleservice/BLEService;)V
 
-    invoke-direct {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/a/t;-><init>(JLcn/com/smartdevices/bracelet/a/b;)V
+    invoke-direct {v0, v2, v3, v1}, Lcn/com/smartdevices/bracelet/a/t;-><init>(JLcn/com/smartdevices/bracelet/a/b;)V
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/a/t;->c()V
 

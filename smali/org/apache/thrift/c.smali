@@ -68,7 +68,7 @@
 .end method
 
 .method public static a(JJ)I
-    .locals 1
+    .locals 2
 
     cmp-long v0, p0, p2
 

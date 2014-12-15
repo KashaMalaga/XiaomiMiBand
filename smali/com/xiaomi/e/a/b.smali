@@ -343,7 +343,7 @@
 .end method
 
 .method public a(Ljava/lang/String;Ljava/util/Map;J)V
-    .locals 6
+    .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

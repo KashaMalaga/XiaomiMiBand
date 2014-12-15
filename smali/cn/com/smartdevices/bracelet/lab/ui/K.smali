@@ -82,11 +82,11 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/open/e;
+    check-cast v0, Lcn/com/smartdevices/bracelet/open/f;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/K;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/open/OpenActivity;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/open/e;)Landroid/content/Intent;
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/open/OpenActivity;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/open/f;)Landroid/content/Intent;
 
     move-result-object v0
 

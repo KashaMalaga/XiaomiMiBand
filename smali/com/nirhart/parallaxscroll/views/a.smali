@@ -20,7 +20,7 @@
 
 # virtual methods
 .method protected a(Landroid/view/View;F)V
-    .locals 3
+    .locals 4
 
     const/4 v1, 0x0
 
@@ -28,9 +28,9 @@
 
     invoke-direct {v0, v1, v1, p2, p2}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
+    invoke-virtual {v0, v2, v3}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
 
     const/4 v1, 0x1
 

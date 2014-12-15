@@ -13,7 +13,7 @@
 
 .field public static final action_pop_about:I = 0x7f0c0127
 
-.field public static final action_pop_lab:I = 0x7f0c0242
+.field public static final action_pop_lab:I = 0x7f0c024f
 
 .field public static final action_pop_my_bracelet:I = 0x7f0c011e
 
@@ -25,9 +25,9 @@
 
 .field public static final action_pop_weixin_enter:I = 0x7f0c0122
 
-.field public static final age:I = 0x7f0c020f
+.field public static final age:I = 0x7f0c0219
 
-.field public static final ages:I = 0x7f0c0210
+.field public static final ages:I = 0x7f0c021a
 
 .field public static final agree:I = 0x7f0c0201
 
@@ -65,6 +65,8 @@
 
 .field public static final back:I = 0x7f0c01bb
 
+.field public static final band:I = 0x7f0c0215
+
 .field public static final battery:I = 0x7f0c0203
 
 .field public static final battery_charge_full:I = 0x7f0c0166
@@ -95,11 +97,13 @@
 
 .field public static final bind_qq_health_tip:I = 0x7f0c01d8
 
-.field public static final bind_qq_health_tip_another_qq:I = 0x7f0c0213
+.field public static final bind_qq_health_tip_another_qq:I = 0x7f0c021d
 
-.field public static final bind_qq_health_tip_init:I = 0x7f0c0212
+.field public static final bind_qq_health_tip_init:I = 0x7f0c021c
 
 .field public static final bind_qq_health_title:I = 0x7f0c0179
+
+.field public static final bind_weight_scale:I = 0x7f0c0216
 
 .field public static final bind_weixin_failed:I = 0x7f0c017f
 
@@ -151,11 +155,19 @@
 
 .field public static final bracelet_not_found_title:I = 0x7f0c0050
 
-.field public static final bracelet_store_desc:I = 0x7f0c0297
+.field public static final bracelet_store_desc:I = 0x7f0c02aa
 
 .field public static final bt_operation_failed_tips:I = 0x7f0c0046
 
-.field public static final buy_bracelet_desc:I = 0x7f0c0296
+.field public static final btn_confirm:I = 0x7f0c02b7
+
+.field public static final btn_continue:I = 0x7f0c02b8
+
+.field public static final btn_delete:I = 0x7f0c02b6
+
+.field public static final btn_save:I = 0x7f0c02b5
+
+.field public static final buy_bracelet_desc:I = 0x7f0c02a9
 
 .field public static final cal:I = 0x7f0c0071
 
@@ -177,9 +189,13 @@
 
 .field public static final confirm_lazy_day:I = 0x7f0c0205
 
-.field public static final congrats:I = 0x7f0c0211
+.field public static final congrats:I = 0x7f0c021b
 
 .field public static final connect_bracelet_now:I = 0x7f0c000f
+
+.field public static final connected_broadcast:I = 0x7f0c0217
+
+.field public static final connected_broadcast_tips:I = 0x7f0c0218
 
 .field public static final content_too_short:I = 0x7f0c00db
 
@@ -225,6 +241,8 @@
 
 .field public static final day_active_detail:I = 0x7f0c0033
 
+.field public static final debug_host_label:I = 0x7f0c02bf
+
 .field public static final device_list:I = 0x7f0c014d
 
 .field public static final device_not_found_not_knocked:I = 0x7f0c0099
@@ -233,7 +251,7 @@
 
 .field public static final disable_debug_log:I = 0x7f0c01bd
 
-.field public static final disable_hidden_feature:I = 0x7f0c029f
+.field public static final disable_hidden_feature:I = 0x7f0c02b4
 
 .field public static final discard:I = 0x7f0c01ef
 
@@ -323,7 +341,7 @@
 
 .field public static final enable_debug_log:I = 0x7f0c01bc
 
-.field public static final enable_hidden_feature:I = 0x7f0c029e
+.field public static final enable_hidden_feature:I = 0x7f0c02b3
 
 .field public static final error_code:I = 0x7f0c00cc
 
@@ -435,6 +453,12 @@
 
 .field public static final help_title_3:I = 0x7f0c00e4
 
+.field public static final host_can_not_be_empty:I = 0x7f0c02c0
+
+.field public static final host_change_error:I = 0x7f0c02c1
+
+.field public static final host_change_success:I = 0x7f0c02c2
+
 .field public static final hot_des:I = 0x7f0c0040
 
 .field public static final hour_1:I = 0x7f0c00d9
@@ -469,169 +493,169 @@
 
 .field public static final km:I = 0x7f0c0070
 
-.field public static final lab_factory_cancel_deauthorize:I = 0x7f0c0299
+.field public static final lab_factory_cancel_deauthorize:I = 0x7f0c02ac
 
-.field public static final lab_factory_cheat_toast:I = 0x7f0c025f
+.field public static final lab_factory_cheat_toast:I = 0x7f0c026c
 
-.field public static final lab_factory_disconnected_reminder:I = 0x7f0c0263
+.field public static final lab_factory_disconnected_reminder:I = 0x7f0c0270
 
-.field public static final lab_factory_disconnected_reminder_disconnect:I = 0x7f0c0265
+.field public static final lab_factory_disconnected_reminder_disconnect:I = 0x7f0c0272
 
-.field public static final lab_factory_disconnected_reminder_tips:I = 0x7f0c0264
+.field public static final lab_factory_disconnected_reminder_tips:I = 0x7f0c0271
 
-.field public static final lab_factory_exercise_state_paused:I = 0x7f0c021a
+.field public static final lab_factory_exercise_state_paused:I = 0x7f0c0227
 
-.field public static final lab_factory_exercise_state_ready:I = 0x7f0c0219
+.field public static final lab_factory_exercise_state_ready:I = 0x7f0c0226
 
-.field public static final lab_factory_exercise_state_stopped:I = 0x7f0c021b
+.field public static final lab_factory_exercise_state_stopped:I = 0x7f0c0228
 
-.field public static final lab_factory_exit_press_again:I = 0x7f0c0254
+.field public static final lab_factory_exit_press_again:I = 0x7f0c0261
 
-.field public static final lab_factory_internal_test:I = 0x7f0c02a0
+.field public static final lab_factory_internal_test:I = 0x7f0c02be
 
-.field public static final lab_factory_item_group_open:I = 0x7f0c025d
+.field public static final lab_factory_item_group_open:I = 0x7f0c026a
 
-.field public static final lab_factory_item_group_others:I = 0x7f0c025e
+.field public static final lab_factory_item_group_others:I = 0x7f0c026b
 
-.field public static final lab_factory_item_group_social:I = 0x7f0c025c
+.field public static final lab_factory_item_group_social:I = 0x7f0c0269
 
-.field public static final lab_factory_item_group_sport:I = 0x7f0c025b
+.field public static final lab_factory_item_group_sport:I = 0x7f0c0268
 
-.field public static final lab_factory_share_photo:I = 0x7f0c0246
+.field public static final lab_factory_share_photo:I = 0x7f0c0253
 
-.field public static final lab_factory_share_photo_menu_camera:I = 0x7f0c0248
+.field public static final lab_factory_share_photo_menu_camera:I = 0x7f0c0255
 
-.field public static final lab_factory_share_photo_menu_gallery:I = 0x7f0c0249
+.field public static final lab_factory_share_photo_menu_gallery:I = 0x7f0c0256
 
-.field public static final lab_factory_share_photo_menu_title:I = 0x7f0c0247
+.field public static final lab_factory_share_photo_menu_title:I = 0x7f0c0254
 
-.field public static final lab_factory_sport_accumulate:I = 0x7f0c0262
+.field public static final lab_factory_sport_accumulate:I = 0x7f0c026f
 
-.field public static final lab_factory_sport_analyser_activity_not_found:I = 0x7f0c0218
+.field public static final lab_factory_sport_analyser_activity_not_found:I = 0x7f0c0225
 
-.field public static final lab_factory_sport_average_rate_per_minute:I = 0x7f0c0250
+.field public static final lab_factory_sport_average_rate_per_minute:I = 0x7f0c025d
 
-.field public static final lab_factory_sport_best_record:I = 0x7f0c0221
+.field public static final lab_factory_sport_best_record:I = 0x7f0c022e
 
-.field public static final lab_factory_sport_button_restart:I = 0x7f0c0240
+.field public static final lab_factory_sport_button_restart:I = 0x7f0c024d
 
-.field public static final lab_factory_sport_button_stop:I = 0x7f0c0241
+.field public static final lab_factory_sport_button_stop:I = 0x7f0c024e
 
-.field public static final lab_factory_sport_come_on:I = 0x7f0c0253
+.field public static final lab_factory_sport_come_on:I = 0x7f0c0260
 
-.field public static final lab_factory_sport_continuous_ropeskipping:I = 0x7f0c0260
+.field public static final lab_factory_sport_continuous_ropeskipping:I = 0x7f0c026d
 
-.field public static final lab_factory_sport_continuous_situp:I = 0x7f0c0261
+.field public static final lab_factory_sport_continuous_situp:I = 0x7f0c026e
 
-.field public static final lab_factory_sport_device_preparing:I = 0x7f0c0220
+.field public static final lab_factory_sport_device_preparing:I = 0x7f0c022d
 
-.field public static final lab_factory_sport_finish_desc:I = 0x7f0c0244
+.field public static final lab_factory_sport_finish_desc:I = 0x7f0c0251
 
-.field public static final lab_factory_sport_gb_count:I = 0x7f0c024f
+.field public static final lab_factory_sport_gb_count:I = 0x7f0c025c
 
-.field public static final lab_factory_sport_group_finish_desc:I = 0x7f0c0259
+.field public static final lab_factory_sport_group_finish_desc:I = 0x7f0c0266
 
-.field public static final lab_factory_sport_group_record:I = 0x7f0c0222
+.field public static final lab_factory_sport_group_record:I = 0x7f0c022f
 
-.field public static final lab_factory_sport_group_time_cost:I = 0x7f0c025a
+.field public static final lab_factory_sport_group_time_cost:I = 0x7f0c0267
 
-.field public static final lab_factory_sport_hour:I = 0x7f0c0229
+.field public static final lab_factory_sport_hour:I = 0x7f0c0236
 
-.field public static final lab_factory_sport_hour_min:I = 0x7f0c022c
+.field public static final lab_factory_sport_hour_min:I = 0x7f0c0239
 
-.field public static final lab_factory_sport_hour_min_sec:I = 0x7f0c022f
+.field public static final lab_factory_sport_hour_min_sec:I = 0x7f0c023c
 
-.field public static final lab_factory_sport_hour_sec:I = 0x7f0c022d
+.field public static final lab_factory_sport_hour_sec:I = 0x7f0c023a
 
-.field public static final lab_factory_sport_min:I = 0x7f0c022a
+.field public static final lab_factory_sport_min:I = 0x7f0c0237
 
-.field public static final lab_factory_sport_min_sec:I = 0x7f0c022e
+.field public static final lab_factory_sport_min_sec:I = 0x7f0c023b
 
-.field public static final lab_factory_sport_monitor_bracelet_offline:I = 0x7f0c021c
+.field public static final lab_factory_sport_monitor_bracelet_offline:I = 0x7f0c0229
 
-.field public static final lab_factory_sport_monitor_bracelet_offline_notice:I = 0x7f0c021d
+.field public static final lab_factory_sport_monitor_bracelet_offline_notice:I = 0x7f0c022a
 
-.field public static final lab_factory_sport_monitor_cancelled_notice:I = 0x7f0c021e
+.field public static final lab_factory_sport_monitor_cancelled_notice:I = 0x7f0c022b
 
-.field public static final lab_factory_sport_monitor_timeout_notice:I = 0x7f0c021f
+.field public static final lab_factory_sport_monitor_timeout_notice:I = 0x7f0c022c
 
-.field public static final lab_factory_sport_more_sport_favorite_notice:I = 0x7f0c0231
+.field public static final lab_factory_sport_more_sport_favorite_notice:I = 0x7f0c023e
 
-.field public static final lab_factory_sport_more_sport_favorite_vote:I = 0x7f0c0230
+.field public static final lab_factory_sport_more_sport_favorite_vote:I = 0x7f0c023d
 
-.field public static final lab_factory_sport_pb_count:I = 0x7f0c024e
+.field public static final lab_factory_sport_pb_count:I = 0x7f0c025b
 
-.field public static final lab_factory_sport_pb_desc:I = 0x7f0c024b
+.field public static final lab_factory_sport_pb_desc:I = 0x7f0c0258
 
-.field public static final lab_factory_sport_pb_ropeskipping:I = 0x7f0c024c
+.field public static final lab_factory_sport_pb_ropeskipping:I = 0x7f0c0259
 
-.field public static final lab_factory_sport_pb_situp:I = 0x7f0c024d
+.field public static final lab_factory_sport_pb_situp:I = 0x7f0c025a
 
-.field public static final lab_factory_sport_result_cost_cal:I = 0x7f0c024a
+.field public static final lab_factory_sport_result_cost_cal:I = 0x7f0c0257
 
-.field public static final lab_factory_sport_result_dot:I = 0x7f0c0251
+.field public static final lab_factory_sport_result_dot:I = 0x7f0c025e
 
-.field public static final lab_factory_sport_sec:I = 0x7f0c022b
+.field public static final lab_factory_sport_sec:I = 0x7f0c0238
 
-.field public static final lab_factory_sport_share_info_accumulated_time:I = 0x7f0c0225
+.field public static final lab_factory_sport_share_info_accumulated_time:I = 0x7f0c0232
 
-.field public static final lab_factory_sport_share_info_accumulated_time_once:I = 0x7f0c0226
+.field public static final lab_factory_sport_share_info_accumulated_time_once:I = 0x7f0c0233
 
-.field public static final lab_factory_sport_share_info_current_accumulation:I = 0x7f0c0228
+.field public static final lab_factory_sport_share_info_current_accumulation:I = 0x7f0c0235
 
-.field public static final lab_factory_sport_share_info_group_record:I = 0x7f0c0224
+.field public static final lab_factory_sport_share_info_group_record:I = 0x7f0c0231
 
-.field public static final lab_factory_sport_share_info_history_best_record:I = 0x7f0c0223
+.field public static final lab_factory_sport_share_info_history_best_record:I = 0x7f0c0230
 
-.field public static final lab_factory_sport_share_info_new_record:I = 0x7f0c0227
+.field public static final lab_factory_sport_share_info_new_record:I = 0x7f0c0234
 
-.field public static final lab_factory_sport_steps_converted:I = 0x7f0c0252
+.field public static final lab_factory_sport_steps_converted:I = 0x7f0c025f
 
-.field public static final lab_factory_sport_timeout:I = 0x7f0c0245
+.field public static final lab_factory_sport_timeout:I = 0x7f0c0252
 
-.field public static final lab_factory_sport_type_badminton:I = 0x7f0c0235
+.field public static final lab_factory_sport_type_badminton:I = 0x7f0c0242
 
-.field public static final lab_factory_sport_type_basketball:I = 0x7f0c0233
+.field public static final lab_factory_sport_type_basketball:I = 0x7f0c0240
 
-.field public static final lab_factory_sport_type_climbing:I = 0x7f0c023b
+.field public static final lab_factory_sport_type_climbing:I = 0x7f0c0248
 
-.field public static final lab_factory_sport_type_football:I = 0x7f0c0232
+.field public static final lab_factory_sport_type_football:I = 0x7f0c023f
 
-.field public static final lab_factory_sport_type_others:I = 0x7f0c023e
+.field public static final lab_factory_sport_type_others:I = 0x7f0c024b
 
-.field public static final lab_factory_sport_type_pingpong:I = 0x7f0c0237
+.field public static final lab_factory_sport_type_pingpong:I = 0x7f0c0244
 
-.field public static final lab_factory_sport_type_riding:I = 0x7f0c0238
+.field public static final lab_factory_sport_type_riding:I = 0x7f0c0245
 
-.field public static final lab_factory_sport_type_ropeskipping:I = 0x7f0c0217
+.field public static final lab_factory_sport_type_ropeskipping:I = 0x7f0c0224
 
-.field public static final lab_factory_sport_type_running:I = 0x7f0c0239
+.field public static final lab_factory_sport_type_running:I = 0x7f0c0246
 
-.field public static final lab_factory_sport_type_situp:I = 0x7f0c0216
+.field public static final lab_factory_sport_type_situp:I = 0x7f0c0223
 
-.field public static final lab_factory_sport_type_skidding:I = 0x7f0c023c
+.field public static final lab_factory_sport_type_skidding:I = 0x7f0c0249
 
-.field public static final lab_factory_sport_type_sliding:I = 0x7f0c023d
+.field public static final lab_factory_sport_type_sliding:I = 0x7f0c024a
 
-.field public static final lab_factory_sport_type_swimming:I = 0x7f0c023a
+.field public static final lab_factory_sport_type_swimming:I = 0x7f0c0247
 
-.field public static final lab_factory_sport_type_tennis:I = 0x7f0c0236
+.field public static final lab_factory_sport_type_tennis:I = 0x7f0c0243
 
-.field public static final lab_factory_sport_type_volleyball:I = 0x7f0c0234
+.field public static final lab_factory_sport_type_volleyball:I = 0x7f0c0241
 
-.field public static final lab_factory_sport_unit:I = 0x7f0c0243
+.field public static final lab_factory_sport_unit:I = 0x7f0c0250
 
-.field public static final lab_factory_sport_vote_desc:I = 0x7f0c0255
+.field public static final lab_factory_sport_vote_desc:I = 0x7f0c0262
 
-.field public static final lab_factory_sport_vote_others_hint:I = 0x7f0c023f
+.field public static final lab_factory_sport_vote_others_hint:I = 0x7f0c024c
 
-.field public static final lab_factory_sport_vote_result_desc:I = 0x7f0c0257
+.field public static final lab_factory_sport_vote_result_desc:I = 0x7f0c0264
 
-.field public static final lab_factory_sport_vote_result_sub_desc:I = 0x7f0c0258
+.field public static final lab_factory_sport_vote_result_sub_desc:I = 0x7f0c0265
 
-.field public static final lab_factory_sport_vote_sub_desc:I = 0x7f0c0256
+.field public static final lab_factory_sport_vote_sub_desc:I = 0x7f0c0263
 
-.field public static final lab_factory_title:I = 0x7f0c0215
+.field public static final lab_factory_title:I = 0x7f0c0222
 
 .field public static final left_hand:I = 0x7f0c012c
 
@@ -775,7 +799,7 @@
 
 .field public static final orange:I = 0x7f0c0137
 
-.field public static final percent_mark:I = 0x7f0c0294
+.field public static final percent_mark:I = 0x7f0c02a7
 
 .field public static final person_info_finished_info:I = 0x7f0c005e
 
@@ -835,6 +859,12 @@
 
 .field public static final runed:I = 0x7f0c01c1
 
+.field public static final running_no_track_desc:I = 0x7f0c02ba
+
+.field public static final running_set_pace_desc:I = 0x7f0c02bb
+
+.field public static final running_short_track_desc:I = 0x7f0c02b9
+
 .field public static final s_mili:I = 0x7f0c0073
 
 .field public static final search_bracelet:I = 0x7f0c000e
@@ -846,6 +876,10 @@
 .field public static final search_devices_info:I = 0x7f0c004a
 
 .field public static final search_devices_title:I = 0x7f0c0062
+
+.field public static final search_weight_scale:I = 0x7f0c020f
+
+.field public static final search_weight_scale_info:I = 0x7f0c0210
 
 .field public static final second:I = 0x7f0c01d1
 
@@ -868,6 +902,8 @@
 .field public static final set_person_goal:I = 0x7f0c0090
 
 .field public static final set_sport_goal:I = 0x7f0c002a
+
+.field public static final set_unit:I = 0x7f0c0212
 
 .field public static final setting_about_app:I = 0x7f0c01a5
 
@@ -943,13 +979,13 @@
 
 .field public static final share_step_goal_succ_title_today:I = 0x7f0c0152
 
-.field public static final share_step_ranking:I = 0x7f0c0295
+.field public static final share_step_ranking:I = 0x7f0c02a8
 
 .field public static final share_step_walk:I = 0x7f0c0184
 
 .field public static final share_to_content:I = 0x7f0c008b
 
-.field public static final share_to_content_for_event:I = 0x7f0c0214
+.field public static final share_to_content_for_event:I = 0x7f0c021e
 
 .field public static final share_to_content_sleep:I = 0x7f0c01ca
 
@@ -981,101 +1017,113 @@
 
 .field public static final smart_wake_up_info:I = 0x7f0c0093
 
-.field public static final sport_coming_soon:I = 0x7f0c02a2
+.field public static final sport_coming_soon:I = 0x7f0c02bd
 
-.field public static final sport_new_record_ropeskipping:I = 0x7f0c0293
+.field public static final sport_new_record_ropeskipping:I = 0x7f0c02a6
 
-.field public static final sport_ranking_desc_great:I = 0x7f0c0292
+.field public static final sport_ranking_desc_great:I = 0x7f0c02a5
 
-.field public static final sport_ranking_desc_normal:I = 0x7f0c0291
+.field public static final sport_ranking_desc_normal:I = 0x7f0c02a4
 
-.field public static final sport_ranking_desc_poor:I = 0x7f0c0290
+.field public static final sport_ranking_desc_poor:I = 0x7f0c02a3
 
-.field public static final sport_running_altitude:I = 0x7f0c0281
+.field public static final sport_running_altitude:I = 0x7f0c0290
 
-.field public static final sport_running_average_speed:I = 0x7f0c027f
+.field public static final sport_running_average_speed:I = 0x7f0c028e
 
-.field public static final sport_running_burn:I = 0x7f0c0282
+.field public static final sport_running_burn:I = 0x7f0c0291
 
-.field public static final sport_running_cost_cal:I = 0x7f0c0288
+.field public static final sport_running_cost_cal:I = 0x7f0c0297
 
-.field public static final sport_running_distance:I = 0x7f0c027e
+.field public static final sport_running_distance:I = 0x7f0c028c
 
-.field public static final sport_running_distance_desc:I = 0x7f0c0273
+.field public static final sport_running_distance_desc:I = 0x7f0c0281
 
-.field public static final sport_running_distance_detail:I = 0x7f0c0272
+.field public static final sport_running_distance_detail:I = 0x7f0c0280
 
-.field public static final sport_running_end_time:I = 0x7f0c0284
+.field public static final sport_running_distance_unit:I = 0x7f0c028d
 
-.field public static final sport_running_gps_cancel:I = 0x7f0c027a
+.field public static final sport_running_end_time:I = 0x7f0c0293
 
-.field public static final sport_running_gps_turnon:I = 0x7f0c0279
+.field public static final sport_running_gps_cancel:I = 0x7f0c0288
 
-.field public static final sport_running_helper:I = 0x7f0c0266
+.field public static final sport_running_gps_locating:I = 0x7f0c029f
 
-.field public static final sport_running_helper_test:I = 0x7f0c02a1
+.field public static final sport_running_gps_turnon:I = 0x7f0c0287
 
-.field public static final sport_running_history:I = 0x7f0c027c
+.field public static final sport_running_helper:I = 0x7f0c0273
 
-.field public static final sport_running_history_date:I = 0x7f0c0286
+.field public static final sport_running_helper_test:I = 0x7f0c02bc
 
-.field public static final sport_running_history_no_data:I = 0x7f0c0287
+.field public static final sport_running_history:I = 0x7f0c028a
 
-.field public static final sport_running_history_title:I = 0x7f0c0285
+.field public static final sport_running_history_date:I = 0x7f0c0295
 
-.field public static final sport_running_kilometers:I = 0x7f0c028d
+.field public static final sport_running_history_no_data:I = 0x7f0c0296
 
-.field public static final sport_running_kilometers_per_hour:I = 0x7f0c028f
+.field public static final sport_running_history_title:I = 0x7f0c0294
 
-.field public static final sport_running_no_gps:I = 0x7f0c0268
+.field public static final sport_running_kilometers:I = 0x7f0c029c
 
-.field public static final sport_running_pace:I = 0x7f0c026d
+.field public static final sport_running_kilometers_per_hour:I = 0x7f0c029e
 
-.field public static final sport_running_pace_detail:I = 0x7f0c0271
+.field public static final sport_running_lable_km_slowest:I = 0x7f0c02a2
 
-.field public static final sport_running_pause:I = 0x7f0c0276
+.field public static final sport_running_lable_miles_fastest:I = 0x7f0c02a1
 
-.field public static final sport_running_per_kilometers:I = 0x7f0c028e
+.field public static final sport_running_no_gps:I = 0x7f0c0275
 
-.field public static final sport_running_prepare_map:I = 0x7f0c0289
+.field public static final sport_running_pace:I = 0x7f0c027a
 
-.field public static final sport_running_prompt_come_on:I = 0x7f0c028c
+.field public static final sport_running_pace_detail:I = 0x7f0c027f
 
-.field public static final sport_running_prompt_great:I = 0x7f0c028b
+.field public static final sport_running_pace_lable:I = 0x7f0c027b
 
-.field public static final sport_running_prompt_per_kilometer:I = 0x7f0c028a
+.field public static final sport_running_pause:I = 0x7f0c0284
 
-.field public static final sport_running_real_time_pace:I = 0x7f0c026c
+.field public static final sport_running_per_kilometers:I = 0x7f0c029d
 
-.field public static final sport_running_resume:I = 0x7f0c0277
+.field public static final sport_running_prepare_map:I = 0x7f0c0298
 
-.field public static final sport_running_set_dist:I = 0x7f0c026f
+.field public static final sport_running_prompt_come_on:I = 0x7f0c029b
 
-.field public static final sport_running_set_goal:I = 0x7f0c026e
+.field public static final sport_running_prompt_great:I = 0x7f0c029a
 
-.field public static final sport_running_set_speed:I = 0x7f0c0269
+.field public static final sport_running_prompt_per_kilometer:I = 0x7f0c0299
 
-.field public static final sport_running_settings:I = 0x7f0c027b
+.field public static final sport_running_real_time_pace:I = 0x7f0c0279
 
-.field public static final sport_running_slider_prompt:I = 0x7f0c027d
+.field public static final sport_running_resume:I = 0x7f0c0285
 
-.field public static final sport_running_speed:I = 0x7f0c026a
+.field public static final sport_running_set_dist:I = 0x7f0c027d
 
-.field public static final sport_running_speed_detail:I = 0x7f0c0270
+.field public static final sport_running_set_goal:I = 0x7f0c027c
 
-.field public static final sport_running_speed_with_unit:I = 0x7f0c026b
+.field public static final sport_running_set_pace:I = 0x7f0c02a0
 
-.field public static final sport_running_start:I = 0x7f0c0275
+.field public static final sport_running_set_speed:I = 0x7f0c0276
 
-.field public static final sport_running_start_time:I = 0x7f0c0283
+.field public static final sport_running_settings:I = 0x7f0c0289
 
-.field public static final sport_running_step:I = 0x7f0c0280
+.field public static final sport_running_slider_prompt:I = 0x7f0c028b
 
-.field public static final sport_running_stop:I = 0x7f0c0278
+.field public static final sport_running_speed:I = 0x7f0c0277
 
-.field public static final sport_running_time_desc:I = 0x7f0c0274
+.field public static final sport_running_speed_detail:I = 0x7f0c027e
 
-.field public static final sport_share:I = 0x7f0c0267
+.field public static final sport_running_speed_with_unit:I = 0x7f0c0278
+
+.field public static final sport_running_start:I = 0x7f0c0283
+
+.field public static final sport_running_start_time:I = 0x7f0c0292
+
+.field public static final sport_running_step:I = 0x7f0c028f
+
+.field public static final sport_running_stop:I = 0x7f0c0286
+
+.field public static final sport_running_time_desc:I = 0x7f0c0282
+
+.field public static final sport_share:I = 0x7f0c0274
 
 .field public static final start:I = 0x7f0c01a7
 
@@ -1157,9 +1205,11 @@
 
 .field public static final stat_step_walk_duration_average:I = 0x7f0c00b6
 
-.field public static final state_authorization_error:I = 0x7f0c029c
+.field public static final state_authorization_doing:I = 0x7f0c02b1
 
-.field public static final state_authorization_success:I = 0x7f0c029d
+.field public static final state_authorization_error:I = 0x7f0c02b0
+
+.field public static final state_authorization_success:I = 0x7f0c02b2
 
 .field public static final state_bind_failed:I = 0x7f0c0079
 
@@ -1167,9 +1217,11 @@
 
 .field public static final state_binded_nickname:I = 0x7f0c007b
 
-.field public static final state_deauthorization_error:I = 0x7f0c029b
+.field public static final state_deauthorization_doing:I = 0x7f0c02ae
 
-.field public static final state_deauthorization_success:I = 0x7f0c029a
+.field public static final state_deauthorization_error:I = 0x7f0c02af
+
+.field public static final state_deauthorization_success:I = 0x7f0c02ad
 
 .field public static final state_unbind_success:I = 0x7f0c007a
 
@@ -1207,7 +1259,7 @@
 
 .field public static final time_format_min:I = 0x7f0c011d
 
-.field public static final title_activity_open:I = 0x7f0c0298
+.field public static final title_activity_open:I = 0x7f0c02ab
 
 .field public static final today:I = 0x7f0c00d6
 
@@ -1216,6 +1268,8 @@
 .field public static final unbind_mili:I = 0x7f0c007c
 
 .field public static final unbind_short:I = 0x7f0c012f
+
+.field public static final unbind_weight_scale:I = 0x7f0c021f
 
 .field public static final unbinding:I = 0x7f0c014e
 
@@ -1335,9 +1389,19 @@
 
 .field public static final week:I = 0x7f0c0144
 
+.field public static final weight_device_list:I = 0x7f0c0211
+
+.field public static final weight_not_found_info:I = 0x7f0c0221
+
+.field public static final weight_not_found_title:I = 0x7f0c0220
+
+.field public static final weight_scale:I = 0x7f0c0214
+
 .field public static final weight_test_dynamic_detail:I = 0x7f0c0209
 
 .field public static final weight_test_dynamic_title:I = 0x7f0c020a
+
+.field public static final weight_unbinded:I = 0x7f0c0213
 
 .field public static final welcom_back:I = 0x7f0c0140
 

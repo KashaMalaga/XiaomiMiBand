@@ -55,6 +55,14 @@
     return-object v0
 .end method
 
+.method public a(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/maps/offlinemap/l;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
 .method public b()Ljava/lang/String;
     .locals 1
 

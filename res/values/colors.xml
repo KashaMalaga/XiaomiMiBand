@@ -100,6 +100,7 @@
     <color name="running_main_text">#a426abd8</color>
     <color name="running_sub_text">#97000000</color>
     <color name="running_minor_text">#64000000</color>
+    <color name="running_progress_bg">#8abfbfbf</color>
     <color name="default_title_indicator_footer_color">#ff33b5e5</color>
     <color name="default_title_indicator_selected_color">#ffffffff</color>
     <color name="default_title_indicator_text_color">#bbffffff</color>

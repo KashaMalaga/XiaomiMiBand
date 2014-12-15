@@ -123,13 +123,13 @@
 
 # virtual methods
 .method public a(FFFF)V
-    .locals 23
+    .locals 22
 
     const/4 v15, 0x1
 
     const/4 v14, 0x1
 
-    const/4 v13, 0x1
+    const/4 v3, 0x1
 
     const/4 v12, 0x1
 
@@ -139,7 +139,7 @@
 
     instance-of v2, v2, Lorg/achartengine/a/v;
 
-    if-eqz v2, :cond_12
+    if-eqz v2, :cond_10
 
     move-object/from16 v0, p0
 
@@ -163,9 +163,9 @@
 
     array-length v2, v0
 
-    const/4 v3, 0x4
+    const/4 v4, 0x4
 
-    if-ne v2, v3, :cond_2
+    if-ne v2, v4, :cond_2
 
     const/4 v2, 0x1
 
@@ -176,87 +176,85 @@
 
     iget-object v2, v0, Lorg/achartengine/d/c;->a:Lorg/achartengine/a/a;
 
-    move-object v8, v2
+    check-cast v2, Lorg/achartengine/a/v;
 
-    check-cast v8, Lorg/achartengine/a/v;
-
-    const/4 v7, 0x0
+    const/4 v8, 0x0
 
     :goto_1
     move/from16 v0, v16
 
-    if-ge v7, v0, :cond_13
+    if-ge v8, v0, :cond_11
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v7}, Lorg/achartengine/d/c;->a(I)[D
+    invoke-virtual {v0, v8}, Lorg/achartengine/d/c;->a(I)[D
 
     move-result-object v18
 
-    invoke-virtual {v8, v7}, Lorg/achartengine/a/v;->b(I)[D
+    invoke-virtual {v2, v8}, Lorg/achartengine/a/v;->b(I)[D
 
-    move-result-object v2
-
-    move-object/from16 v0, p0
-
-    iget-boolean v3, v0, Lorg/achartengine/d/c;->d:Z
-
-    if-eqz v3, :cond_3
+    move-result-object v4
 
     move-object/from16 v0, p0
 
-    iget-boolean v3, v0, Lorg/achartengine/d/c;->e:Z
+    iget-boolean v5, v0, Lorg/achartengine/d/c;->d:Z
 
-    if-eqz v3, :cond_3
+    if-eqz v5, :cond_3
 
-    const/4 v3, 0x0
+    move-object/from16 v0, p0
 
-    aget-wide v3, v18, v3
+    iget-boolean v5, v0, Lorg/achartengine/d/c;->e:Z
 
-    const/4 v5, 0x1
+    if-eqz v5, :cond_3
 
-    aget-wide v5, v18, v5
+    const/4 v5, 0x0
 
-    cmpl-double v3, v3, v5
-
-    if-nez v3, :cond_0
-
-    const/4 v3, 0x0
-
-    aget-wide v3, v2, v3
+    aget-wide v6, v18, v5
 
     const/4 v5, 0x1
 
-    aget-wide v5, v2, v5
+    aget-wide v10, v18, v5
 
-    cmpl-double v3, v3, v5
+    cmpl-double v5, v6, v10
 
-    if-eqz v3, :cond_1
+    if-nez v5, :cond_0
+
+    const/4 v5, 0x0
+
+    aget-wide v6, v4, v5
+
+    const/4 v5, 0x1
+
+    aget-wide v10, v4, v5
+
+    cmpl-double v5, v6, v10
+
+    if-eqz v5, :cond_1
 
     :cond_0
-    const/4 v3, 0x2
+    const/4 v5, 0x2
 
-    aget-wide v3, v18, v3
-
-    const/4 v5, 0x3
-
-    aget-wide v5, v18, v5
-
-    cmpl-double v3, v3, v5
-
-    if-nez v3, :cond_3
-
-    const/4 v3, 0x2
-
-    aget-wide v3, v2, v3
+    aget-wide v6, v18, v5
 
     const/4 v5, 0x3
 
-    aget-wide v5, v2, v5
+    aget-wide v10, v18, v5
 
-    cmpl-double v2, v3, v5
+    cmpl-double v5, v6, v10
 
-    if-nez v2, :cond_3
+    if-nez v5, :cond_3
+
+    const/4 v5, 0x2
+
+    aget-wide v6, v4, v5
+
+    const/4 v5, 0x3
+
+    aget-wide v4, v4, v5
+
+    cmpl-double v4, v6, v4
+
+    if-nez v4, :cond_3
 
     :cond_1
     :goto_2
@@ -274,43 +272,43 @@
 
     move-object/from16 v1, v18
 
-    invoke-virtual {v0, v1, v7}, Lorg/achartengine/d/c;->a([DI)V
+    invoke-virtual {v0, v1, v8}, Lorg/achartengine/d/c;->a([DI)V
 
     move/from16 v0, p1
 
     move/from16 v1, p2
 
-    invoke-virtual {v8, v0, v1, v7}, Lorg/achartengine/a/v;->a(FFI)[D
+    invoke-virtual {v2, v0, v1, v8}, Lorg/achartengine/a/v;->a(FFI)[D
 
-    move-result-object v2
+    move-result-object v4
 
     move/from16 v0, p3
 
     move/from16 v1, p4
 
-    invoke-virtual {v8, v0, v1, v7}, Lorg/achartengine/a/v;->a(FFI)[D
+    invoke-virtual {v2, v0, v1, v8}, Lorg/achartengine/a/v;->a(FFI)[D
 
-    move-result-object v3
-
-    const/4 v4, 0x0
-
-    aget-wide v4, v2, v4
+    move-result-object v5
 
     const/4 v6, 0x0
 
-    aget-wide v10, v3, v6
+    aget-wide v6, v4, v6
 
-    sub-double v10, v4, v10
+    const/4 v10, 0x0
+
+    aget-wide v10, v5, v10
+
+    sub-double v10, v6, v10
+
+    const/4 v6, 0x1
+
+    aget-wide v6, v4, v6
 
     const/4 v4, 0x1
 
-    aget-wide v4, v2, v4
+    aget-wide v4, v5, v4
 
-    const/4 v2, 0x1
-
-    aget-wide v2, v3, v2
-
-    sub-double v2, v4, v2
+    sub-double v4, v6, v4
 
     move-object/from16 v0, p0
 
@@ -318,260 +316,258 @@
 
     invoke-direct {v0, v1}, Lorg/achartengine/d/c;->a([D)D
 
-    move-result-wide v19
+    move-result-wide v20
 
+    move-object/from16 v0, p0
+
+    iget-object v6, v0, Lorg/achartengine/d/c;->b:Lorg/achartengine/c/f;
+
+    invoke-virtual {v2, v6}, Lorg/achartengine/a/v;->a(Lorg/achartengine/c/b;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_15
+
+    neg-double v4, v4
+
+    mul-double v6, v4, v20
+
+    div-double v4, v10, v20
+
+    move-wide v10, v4
+
+    :goto_3
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/achartengine/d/c;->b:Lorg/achartengine/c/f;
 
-    invoke-virtual {v8, v4}, Lorg/achartengine/a/v;->a(Lorg/achartengine/c/b;)Z
+    invoke-virtual {v4}, Lorg/achartengine/c/f;->af()Z
 
     move-result v4
 
     if-eqz v4, :cond_14
 
-    neg-double v2, v2
+    if-eqz v17, :cond_13
 
-    mul-double v4, v2, v19
+    if-eqz v3, :cond_12
 
-    div-double v2, v10, v19
+    const/4 v3, 0x0
 
-    move-wide v10, v2
+    aget-wide v4, v17, v3
 
-    move-wide/from16 v21, v4
+    const/4 v3, 0x0
 
-    move-wide/from16 v5, v21
+    aget-wide v20, v18, v3
 
-    :goto_3
-    move-object/from16 v0, p0
+    add-double v20, v20, v6
 
-    iget-object v2, v0, Lorg/achartengine/d/c;->b:Lorg/achartengine/c/f;
+    cmpg-double v3, v4, v20
 
-    invoke-virtual {v2}, Lorg/achartengine/c/f;->af()Z
+    if-gtz v3, :cond_9
 
-    move-result v2
-
-    if-eqz v2, :cond_7
-
-    if-eqz v17, :cond_5
-
-    if-eqz v13, :cond_4
-
-    const/4 v2, 0x0
-
-    aget-wide v2, v17, v2
-
-    const/4 v4, 0x0
-
-    aget-wide v19, v18, v4
-
-    add-double v19, v19, v5
-
-    cmpg-double v2, v2, v19
-
-    if-gtz v2, :cond_b
-
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
     :goto_4
-    move v13, v2
-
-    :cond_4
-    if-eqz v12, :cond_5
-
-    const/4 v2, 0x1
-
-    aget-wide v2, v17, v2
-
-    const/4 v4, 0x1
-
-    aget-wide v19, v18, v4
-
-    add-double v19, v19, v5
-
-    cmpl-double v2, v2, v19
-
-    if-ltz v2, :cond_c
-
-    const/4 v2, 0x1
+    move v13, v3
 
     :goto_5
-    move v12, v2
+    if-eqz v12, :cond_4
+
+    const/4 v3, 0x1
+
+    aget-wide v4, v17, v3
+
+    const/4 v3, 0x1
+
+    aget-wide v20, v18, v3
+
+    add-double v20, v20, v6
+
+    cmpl-double v3, v4, v20
+
+    if-ltz v3, :cond_a
+
+    const/4 v3, 0x1
+
+    :goto_6
+    move v12, v3
+
+    :cond_4
+    :goto_7
+    if-eqz v9, :cond_5
+
+    if-eqz v13, :cond_b
+
+    if-eqz v12, :cond_b
 
     :cond_5
-    if-eqz v9, :cond_6
+    const/4 v3, 0x0
 
-    if-eqz v13, :cond_d
+    aget-wide v4, v18, v3
 
-    if-eqz v12, :cond_d
+    add-double/2addr v4, v6
 
-    :cond_6
-    const/4 v2, 0x0
+    const/4 v3, 0x1
 
-    aget-wide v2, v18, v2
+    aget-wide v20, v18, v3
 
-    add-double v3, v2, v5
+    add-double v6, v6, v20
 
-    const/4 v2, 0x1
+    move-object/from16 v3, p0
 
-    aget-wide v19, v18, v2
+    invoke-virtual/range {v3 .. v8}, Lorg/achartengine/d/c;->a(DDI)V
 
-    add-double v5, v5, v19
-
-    move-object/from16 v2, p0
-
-    invoke-virtual/range {v2 .. v7}, Lorg/achartengine/d/c;->a(DDI)V
-
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
     move-object/from16 v0, p0
 
-    iput-boolean v2, v0, Lorg/achartengine/d/c;->d:Z
-
-    :cond_7
-    :goto_6
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lorg/achartengine/d/c;->b:Lorg/achartengine/c/f;
-
-    invoke-virtual {v2}, Lorg/achartengine/c/f;->ag()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_11
-
-    if-eqz v17, :cond_9
-
-    if-eqz v14, :cond_8
-
-    const/4 v2, 0x2
-
-    aget-wide v2, v17, v2
-
-    const/4 v4, 0x2
-
-    aget-wide v4, v18, v4
-
-    add-double/2addr v4, v10
-
-    cmpg-double v2, v2, v4
-
-    if-gtz v2, :cond_e
-
-    const/4 v2, 0x1
-
-    :goto_7
-    move v14, v2
-
-    :cond_8
-    if-eqz v15, :cond_9
-
-    const/4 v2, 0x3
-
-    aget-wide v2, v17, v2
-
-    const/4 v4, 0x3
-
-    aget-wide v4, v18, v4
-
-    add-double/2addr v4, v10
-
-    cmpl-double v2, v2, v4
-
-    if-ltz v2, :cond_f
-
-    const/4 v2, 0x1
+    iput-boolean v3, v0, Lorg/achartengine/d/c;->d:Z
 
     :goto_8
-    move v15, v2
+    move-object/from16 v0, p0
 
-    :cond_9
-    if-eqz v9, :cond_a
+    iget-object v3, v0, Lorg/achartengine/d/c;->b:Lorg/achartengine/c/f;
 
-    if-eqz v14, :cond_10
+    invoke-virtual {v3}, Lorg/achartengine/c/f;->ag()Z
 
-    if-eqz v15, :cond_10
+    move-result v3
 
-    :cond_a
-    const/4 v2, 0x2
+    if-eqz v3, :cond_f
 
-    aget-wide v2, v18, v2
+    if-eqz v17, :cond_7
 
-    add-double v3, v2, v10
+    if-eqz v14, :cond_6
 
-    const/4 v2, 0x3
+    const/4 v3, 0x2
 
-    aget-wide v5, v18, v2
+    aget-wide v4, v17, v3
 
-    add-double/2addr v5, v10
+    const/4 v3, 0x2
 
-    move-object/from16 v2, p0
+    aget-wide v6, v18, v3
 
-    invoke-virtual/range {v2 .. v7}, Lorg/achartengine/d/c;->b(DDI)V
+    add-double/2addr v6, v10
 
-    const/4 v2, 0x0
+    cmpg-double v3, v4, v6
+
+    if-gtz v3, :cond_c
+
+    const/4 v3, 0x1
+
+    :goto_9
+    move v14, v3
+
+    :cond_6
+    if-eqz v15, :cond_7
+
+    const/4 v3, 0x3
+
+    aget-wide v4, v17, v3
+
+    const/4 v3, 0x3
+
+    aget-wide v6, v18, v3
+
+    add-double/2addr v6, v10
+
+    cmpl-double v3, v4, v6
+
+    if-ltz v3, :cond_d
+
+    const/4 v3, 0x1
+
+    :goto_a
+    move v15, v3
+
+    :cond_7
+    if-eqz v9, :cond_8
+
+    if-eqz v14, :cond_e
+
+    if-eqz v15, :cond_e
+
+    :cond_8
+    const/4 v3, 0x2
+
+    aget-wide v4, v18, v3
+
+    add-double/2addr v4, v10
+
+    const/4 v3, 0x3
+
+    aget-wide v6, v18, v3
+
+    add-double/2addr v6, v10
+
+    move-object/from16 v3, p0
+
+    invoke-virtual/range {v3 .. v8}, Lorg/achartengine/d/c;->b(DDI)V
+
+    const/4 v3, 0x0
 
     move-object/from16 v0, p0
 
-    iput-boolean v2, v0, Lorg/achartengine/d/c;->e:Z
+    iput-boolean v3, v0, Lorg/achartengine/d/c;->e:Z
 
-    move v2, v14
+    move v3, v14
 
-    move v3, v15
+    move v4, v15
 
-    :goto_9
-    add-int/lit8 v7, v7, 0x1
+    :goto_b
+    add-int/lit8 v8, v8, 0x1
 
-    move v14, v2
+    move v14, v3
 
-    move v15, v3
+    move v15, v4
+
+    move v3, v13
 
     goto/16 :goto_1
 
-    :cond_b
-    const/4 v2, 0x0
+    :cond_9
+    const/4 v3, 0x0
 
     goto :goto_4
 
-    :cond_c
-    const/4 v2, 0x0
-
-    goto :goto_5
-
-    :cond_d
-    const/4 v2, 0x1
-
-    move-object/from16 v0, p0
-
-    iput-boolean v2, v0, Lorg/achartengine/d/c;->d:Z
+    :cond_a
+    const/4 v3, 0x0
 
     goto :goto_6
 
-    :cond_e
-    const/4 v2, 0x0
-
-    goto :goto_7
-
-    :cond_f
-    const/4 v2, 0x0
-
-    goto :goto_8
-
-    :cond_10
-    const/4 v2, 0x1
+    :cond_b
+    const/4 v3, 0x1
 
     move-object/from16 v0, p0
 
-    iput-boolean v2, v0, Lorg/achartengine/d/c;->e:Z
+    iput-boolean v3, v0, Lorg/achartengine/d/c;->d:Z
 
-    :cond_11
-    move v2, v14
+    goto :goto_8
 
-    move v3, v15
+    :cond_c
+    const/4 v3, 0x0
 
     goto :goto_9
 
-    :cond_12
+    :cond_d
+    const/4 v3, 0x0
+
+    goto :goto_a
+
+    :cond_e
+    const/4 v3, 0x1
+
+    move-object/from16 v0, p0
+
+    iput-boolean v3, v0, Lorg/achartengine/d/c;->e:Z
+
+    :cond_f
+    move v3, v14
+
+    move v4, v15
+
+    goto :goto_b
+
+    :cond_10
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/achartengine/d/c;->a:Lorg/achartengine/a/a;
@@ -602,15 +598,30 @@
 
     invoke-virtual {v2, v3}, Lorg/achartengine/a/r;->c(I)V
 
-    :cond_13
+    :cond_11
     invoke-direct/range {p0 .. p0}, Lorg/achartengine/d/c;->a()V
 
     goto/16 :goto_2
 
-    :cond_14
-    move-wide v5, v10
+    :cond_12
+    move v13, v3
 
-    move-wide v10, v2
+    goto/16 :goto_5
+
+    :cond_13
+    move v13, v3
+
+    goto/16 :goto_7
+
+    :cond_14
+    move v13, v3
+
+    goto/16 :goto_8
+
+    :cond_15
+    move-wide v6, v10
+
+    move-wide v10, v4
 
     goto/16 :goto_3
 .end method

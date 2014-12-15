@@ -59,9 +59,9 @@
 
     double-to-int v2, v4
 
-    int-to-double v3, v3
+    int-to-double v4, v3
 
-    div-double v0, v3, v0
+    div-double v0, v4, v0
 
     double-to-int v0, v0
 

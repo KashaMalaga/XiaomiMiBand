@@ -351,21 +351,21 @@
 
     if-ne v1, v9, :cond_1
 
-    iget-wide v1, v11, Lcn/com/smartdevices/bracelet/model/SwitchOperator;->lastUid:J
+    iget-wide v2, v11, Lcn/com/smartdevices/bracelet/model/SwitchOperator;->lastUid:J
 
-    const-wide/16 v3, -0x1
+    const-wide/16 v4, -0x1
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-eqz v1, :cond_1
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/a/w;->b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-    iget-wide v1, v1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->uid:J
+    iget-wide v2, v1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->uid:J
 
-    iget-wide v3, v11, Lcn/com/smartdevices/bracelet/model/SwitchOperator;->lastUid:J
+    iget-wide v4, v11, Lcn/com/smartdevices/bracelet/model/SwitchOperator;->lastUid:J
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-nez v1, :cond_1
 
@@ -426,9 +426,9 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/a/w;->b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-    iget-wide v1, v1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->uid:J
+    iget-wide v2, v1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->uid:J
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/a/w;->b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 

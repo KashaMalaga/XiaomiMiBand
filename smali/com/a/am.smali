@@ -249,7 +249,7 @@
 .end method
 
 .method static a(Lorg/apache/http/params/HttpParams;I)V
-    .locals 3
+    .locals 4
 
     const-string v0, "http.connection.timeout"
 
@@ -261,9 +261,9 @@
 
     const-string v0, "http.conn-manager.timeout"
 
-    int-to-long v1, p1
+    int-to-long v2, p1
 
-    invoke-interface {p0, v0, v1, v2}, Lorg/apache/http/params/HttpParams;->setLongParameter(Ljava/lang/String;J)Lorg/apache/http/params/HttpParams;
+    invoke-interface {p0, v0, v2, v3}, Lorg/apache/http/params/HttpParams;->setLongParameter(Ljava/lang/String;J)Lorg/apache/http/params/HttpParams;
 
     return-void
 .end method
@@ -366,9 +366,9 @@
 .end method
 
 .method static a(Lcom/a/K;)Z
-    .locals 9
+    .locals 10
 
-    const-wide/16 v7, 0x0
+    const-wide/16 v8, 0x0
 
     const/4 v0, 0x0
 
@@ -417,17 +417,17 @@
 
     move-result v6
 
-    cmpl-double v2, v2, v7
+    cmpl-double v2, v2, v8
 
     if-nez v2, :cond_2
 
-    cmpl-double v2, v4, v7
+    cmpl-double v2, v4, v8
 
     if-nez v2, :cond_2
 
     float-to-double v2, v6
 
-    cmpl-double v2, v2, v7
+    cmpl-double v2, v2, v8
 
     if-eqz v2, :cond_0
 

@@ -135,7 +135,7 @@
 .end method
 
 .method private static a(Lcom/xiaomi/f/e/i;)V
-    .locals 5
+    .locals 6
 
     sget-object v0, Lcom/xiaomi/f/e/h;->d:Ljava/util/List;
 
@@ -162,13 +162,13 @@
 
     if-eqz v2, :cond_0
 
-    iget-wide v1, v0, Lcom/xiaomi/f/e/i;->f:J
+    iget-wide v2, v0, Lcom/xiaomi/f/e/i;->f:J
 
-    iget-wide v3, p0, Lcom/xiaomi/f/e/i;->f:J
+    iget-wide v4, p0, Lcom/xiaomi/f/e/i;->f:J
 
-    add-long/2addr v1, v3
+    add-long/2addr v2, v4
 
-    iput-wide v1, v0, Lcom/xiaomi/f/e/i;->f:J
+    iput-wide v2, v0, Lcom/xiaomi/f/e/i;->f:J
 
     :goto_0
     return-void

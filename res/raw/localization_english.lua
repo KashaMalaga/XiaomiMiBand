@@ -92,6 +92,11 @@ localization_English_table = {
     weather_tips_title_0 = "Heavy pollution, try to stay indoors",
     weather_tips_title_1 = "Heavy pollution, try to stay indoors",
     weather_tips_info = "Sit-ups or jumping rope are great indoor exercises!",
+	
+	---------------Weight scale -------------------
+    welcome_use_weight_scale = "Welcome use weight scale",
+    welcome_use_weight_scale_not_bind = "Click to bind weight scale",
+    welcome_use_mi_health="Welcome use MI health",
 }
 
 

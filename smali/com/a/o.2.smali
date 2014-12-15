@@ -28,16 +28,16 @@
 
 # virtual methods
 .method public final onCellLocationChanged(Landroid/telephony/CellLocation;)V
-    .locals 3
+    .locals 4
 
     :try_start_0
     iget-object v0, p0, Lcom/a/o;->a:Lcom/a/m;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-static {v0, v1, v2}, Lcom/a/m;->b(Lcom/a/m;J)J
+    invoke-static {v0, v2, v3}, Lcom/a/m;->b(Lcom/a/m;J)J
 
     iget-object v0, p0, Lcom/a/o;->a:Lcom/a/m;
 

@@ -1330,11 +1330,11 @@
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030012
+    const v0, 0x7f030013
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->setContentView(I)V
 
-    const v0, 0x7f07005a
+    const v0, 0x7f0b005e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->findViewById(I)Landroid/view/View;
 
@@ -1348,7 +1348,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/Button;->setEnabled(Z)V
 
-    const v0, 0x7f070060
+    const v0, 0x7f0b0064
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->findViewById(I)Landroid/view/View;
 
@@ -1366,7 +1366,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070061
+    const v0, 0x7f0b0065
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->findViewById(I)Landroid/view/View;
 
@@ -1384,7 +1384,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070062
+    const v0, 0x7f0b0066
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->findViewById(I)Landroid/view/View;
 
@@ -1402,7 +1402,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070063
+    const v0, 0x7f0b0067
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->findViewById(I)Landroid/view/View;
 
@@ -1420,7 +1420,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070059
+    const v0, 0x7f0b005d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->findViewById(I)Landroid/view/View;
 
@@ -1430,7 +1430,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->h:Landroid/widget/EditText;
 
-    const v0, 0x7f07005c
+    const v0, 0x7f0b0060
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->findViewById(I)Landroid/view/View;
 
@@ -1440,7 +1440,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->i:Landroid/widget/TextView;
 
-    const v0, 0x7f07005d
+    const v0, 0x7f0b0061
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->findViewById(I)Landroid/view/View;
 
@@ -1450,7 +1450,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->j:Landroid/widget/TextView;
 
-    const v0, 0x7f07005f
+    const v0, 0x7f0b0063
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->findViewById(I)Landroid/view/View;
 
@@ -1460,7 +1460,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->k:Landroid/widget/TextView;
 
-    const v0, 0x7f07005e
+    const v0, 0x7f0b0062
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->findViewById(I)Landroid/view/View;
 
@@ -1470,7 +1470,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->l:Landroid/widget/Button;
 
-    const v0, 0x7f070057
+    const v0, 0x7f0b005b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->findViewById(I)Landroid/view/View;
 
@@ -1480,7 +1480,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->m:Landroid/widget/Spinner;
 
-    const v0, 0x7f070058
+    const v0, 0x7f0b005c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->findViewById(I)Landroid/view/View;
 
@@ -1546,17 +1546,11 @@
 
     new-instance v0, Ljava/io/File;
 
-    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v1
+    sget-object v1, Lcn/com/smartdevices/bracelet/j;->co:Ljava/io/File;
 
     const-string v2, ".MISportLab"
 
-    invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->r:Ljava/io/File;
 
@@ -1627,7 +1621,7 @@
 
     move-result v0
 
-    const v1, 0x7f070280
+    const v1, 0x7f0b02a5
 
     if-ne v0, v1, :cond_0
 

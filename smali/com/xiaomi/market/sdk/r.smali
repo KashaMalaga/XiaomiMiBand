@@ -103,7 +103,7 @@
 .end method
 
 .method static synthetic a(Lcom/xiaomi/market/sdk/r;J)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcom/xiaomi/market/sdk/r;->e:J
 
@@ -177,7 +177,7 @@
 
 # virtual methods
 .method public a(J)V
-    .locals 4
+    .locals 5
 
     iget-wide v0, p0, Lcom/xiaomi/market/sdk/r;->e:J
 

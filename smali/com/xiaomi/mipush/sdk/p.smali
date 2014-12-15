@@ -23,7 +23,7 @@
 
 # virtual methods
 .method public run()V
-    .locals 9
+    .locals 10
 
     iget-object v0, p0, Lcom/xiaomi/mipush/sdk/p;->a:Landroid/content/Context;
 
@@ -129,23 +129,23 @@
     :try_start_1
     invoke-static {}, Ljava/lang/Math;->random()D
 
-    move-result-wide v5
+    move-result-wide v6
 
-    const-wide v7, 0x4072c00000000000L
+    const-wide v8, 0x4072c00000000000L
 
-    mul-double/2addr v5, v7
+    mul-double/2addr v6, v8
 
-    const-wide/high16 v7, 0x404e000000000000L
+    const-wide/high16 v8, 0x404e000000000000L
 
-    add-double/2addr v5, v7
+    add-double/2addr v6, v8
 
-    double-to-long v5, v5
+    double-to-long v6, v6
 
-    const-wide/16 v7, 0x3e8
+    const-wide/16 v8, 0x3e8
 
-    mul-long/2addr v5, v7
+    mul-long/2addr v6, v8
 
-    invoke-static {v5, v6}, Ljava/lang/Thread;->sleep(J)V
+    invoke-static {v6, v7}, Ljava/lang/Thread;->sleep(J)V
     :try_end_1
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0

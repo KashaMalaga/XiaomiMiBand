@@ -12,7 +12,7 @@
 .end method
 
 .method static a(Landroid/view/View;)V
-    .locals 3
+    .locals 4
 
     new-instance v0, Lcn/com/smartdevices/bracelet/chart/a/e;
 
@@ -20,9 +20,9 @@
 
     invoke-static {}, Landroid/animation/ValueAnimator;->getFrameDelay()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {p0, v0, v1, v2}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {p0, v0, v2, v3}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
 
     return-void
 .end method

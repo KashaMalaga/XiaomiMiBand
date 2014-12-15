@@ -93,7 +93,7 @@
 .end method
 
 .method public a(Landroid/content/Context;JI)V
-    .locals 5
+    .locals 6
 
     if-eqz p1, :cond_0
 

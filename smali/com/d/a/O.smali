@@ -38,7 +38,7 @@
 .end method
 
 .method c(J)Z
-    .locals 6
+    .locals 7
 
     const-wide/16 v4, 0x0
 

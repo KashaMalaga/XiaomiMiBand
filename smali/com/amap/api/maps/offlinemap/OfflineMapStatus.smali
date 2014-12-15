@@ -3,6 +3,8 @@
 
 
 # static fields
+.field public static final CHECKUPDATES:I = 0x6
+
 .field public static final ERROR:I = -0x1
 
 .field public static final LOADING:I = 0x0

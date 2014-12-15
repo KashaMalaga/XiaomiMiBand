@@ -587,7 +587,7 @@
 .end method
 
 .method public a(IJ)V
-    .locals 1
+    .locals 2
 
     long-to-int v0, p2
 

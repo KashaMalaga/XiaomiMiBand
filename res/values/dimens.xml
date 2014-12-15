@@ -129,8 +129,6 @@
     <dimen name="select_item_padding_left">11.0dip</dimen>
     <dimen name="select_item_txt_padding_left">5.0dip</dimen>
     <dimen name="single_button_padding">35.0dip</dimen>
-    <dimen name="open_title_left_margin">10.0dip</dimen>
-    <dimen name="open_title_right_margin">10.0dip</dimen>
     <dimen name="lab_factory_sport_progress_state">100.0dip</dimen>
     <dimen name="sport_running_slider_panel_height">120.0dip</dimen>
     <dimen name="sport_running_button_bottom">22.799988dip</dimen>
@@ -144,4 +142,8 @@
     <dimen name="running_history_list_item_height">92.0dip</dimen>
     <dimen name="running_list_margin_left">25.0dip</dimen>
     <dimen name="running_list_margin_right">25.0dip</dimen>
+    <dimen name="open_title_left_margin">10.0dip</dimen>
+    <dimen name="open_title_right_margin">10.0dip</dimen>
+    <dimen name="running_pace_dot_padding">60.0dip</dimen>
+    <dimen name="running_share_pane_margin">55.0dip</dimen>
 </resources>

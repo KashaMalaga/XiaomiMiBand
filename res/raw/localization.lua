@@ -9,6 +9,7 @@
 TAG = "chenee"
 zh_CN = 'zh_CN'
 zh_TW = 'zh_TW'
+zh_HK = 'zh_HK'
 en_US = 'en_US'
 en_GB = 'en_GB'
 en = 'en'
@@ -71,13 +72,13 @@ g_curTable = localization_table[es]
 function setCurLocale(locale)
     g_CurLocale = locale;
 
-    log("cur locale = " .. g_CurLocale.. "indo =" .. indo)
+    log("cur locale = " .. g_CurLocale)
 
     if (getCurLocale() == zh_CN) then
         g_curTable = localization_table[zh_CN];
     elseif (getCurLocale() == en_US or getCurLocale() == en_GB) then
         g_curTable = localization_table[en];
-    elseif (getCurLocale() == zh_TW) then
+    elseif (getCurLocale() == zh_TW or getCurLocale() == zh_HK) then
         g_curTable = localization_table[zh_TW];
     elseif string.find(getCurLocale(), indo) == 1 then
         log('set indo locale table')
@@ -99,7 +100,11 @@ function setCurLocale(locale)
 end
 
 function getString(string_locale)
-    return g_curTable[string_locale];
+    str = g_curTable[string_locale];
+    if (str == nil) then
+        str = localization_English_table[string_locale]
+    end
+    return str
 end
 
 function getEnglishMonthStr(month)

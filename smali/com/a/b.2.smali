@@ -20,7 +20,7 @@
 
 # virtual methods
 .method public onCellLocationChanged(Landroid/telephony/CellLocation;)V
-    .locals 3
+    .locals 4
 
     if-nez p1, :cond_1
 
@@ -46,9 +46,9 @@
 
     invoke-static {}, Lcom/a/am;->a()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-static {v0, v1, v2}, Lcom/a/a;->a(Lcom/a/a;J)J
+    invoke-static {v0, v2, v3}, Lcom/a/a;->a(Lcom/a/a;J)J
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 

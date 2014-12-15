@@ -38,7 +38,7 @@
 .end method
 
 .method public static fromJson(Lorg/json/JSONObject;)Lcn/com/smartdevices/bracelet/model/game/GameStage;
-    .locals 3
+    .locals 4
 
     if-nez p0, :cond_0
 
@@ -57,17 +57,17 @@
 
     invoke-virtual {p0, v1}, Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, v0, Lcn/com/smartdevices/bracelet/model/game/GameStage;->startTime:J
+    iput-wide v2, v0, Lcn/com/smartdevices/bracelet/model/game/GameStage;->startTime:J
 
     const-string v1, "etime"
 
     invoke-virtual {p0, v1}, Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, v0, Lcn/com/smartdevices/bracelet/model/game/GameStage;->stopTime:J
+    iput-wide v2, v0, Lcn/com/smartdevices/bracelet/model/game/GameStage;->stopTime:J
 
     const-string v1, "url"
 
@@ -90,15 +90,15 @@
 .end method
 
 .method public static toDate(J)Ljava/util/Date;
-    .locals 3
+    .locals 4
 
     new-instance v0, Ljava/util/Date;
 
-    const-wide/16 v1, 0x3e8
+    const-wide/16 v2, 0x3e8
 
-    mul-long/2addr v1, p0
+    mul-long/2addr v2, p0
 
-    invoke-direct {v0, v1, v2}, Ljava/util/Date;-><init>(J)V
+    invoke-direct {v0, v2, v3}, Ljava/util/Date;-><init>(J)V
 
     return-object v0
 .end method
@@ -180,7 +180,7 @@
 .end method
 
 .method public setStartTime(J)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcn/com/smartdevices/bracelet/model/game/GameStage;->startTime:J
 
@@ -188,7 +188,7 @@
 .end method
 
 .method public setStopTime(J)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcn/com/smartdevices/bracelet/model/game/GameStage;->stopTime:J
 
@@ -204,7 +204,7 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 3
+    .locals 4
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -216,9 +216,9 @@
 
     move-result-object v0
 
-    iget-wide v1, p0, Lcn/com/smartdevices/bracelet/model/game/GameStage;->startTime:J
+    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/model/game/GameStage;->startTime:J
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->toDate(J)Ljava/util/Date;
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->toDate(J)Ljava/util/Date;
 
     move-result-object v1
 
@@ -232,9 +232,9 @@
 
     move-result-object v0
 
-    iget-wide v1, p0, Lcn/com/smartdevices/bracelet/model/game/GameStage;->stopTime:J
+    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/model/game/GameStage;->stopTime:J
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->toDate(J)Ljava/util/Date;
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->toDate(J)Ljava/util/Date;
 
     move-result-object v1
 

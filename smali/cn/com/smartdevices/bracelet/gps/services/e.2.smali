@@ -24,7 +24,7 @@
 
 # virtual methods
 .method public run()V
-    .locals 7
+    .locals 8
 
     const-wide/16 v2, 0x0
 
@@ -66,9 +66,9 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v5
+    move-result-wide v6
 
-    invoke-virtual {v0, v5, v6}, Landroid/location/Location;->setTime(J)V
+    invoke-virtual {v0, v6, v7}, Landroid/location/Location;->setTime(J)V
 
     new-instance v0, Lcom/amap/api/location/AMapLocation;
 

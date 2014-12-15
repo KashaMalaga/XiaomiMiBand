@@ -548,6 +548,36 @@
     return-void
 .end method
 
+.method public setConnectStatus(Z)V
+    .locals 2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->cInfo:Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->setConnectStatus(Ljava/lang/Boolean;)V
+
+    if-nez p1, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->lEventMsgs:Lcn/com/smartdevices/bracelet/lua/LuaEventMsgs;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->cInfo:Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lua/LuaEventMsgs;->luaEventSysInfoMsg(Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;)V
+
+    :goto_0
+    return-void
+
+    :cond_0
+    const-string v0, "5004"
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->deleteLuaItem(Ljava/lang/String;)V
+
+    goto :goto_0
+.end method
+
 .method public setContinueReport(Lcn/com/smartdevices/bracelet/model/ReportData;)V
     .locals 2
 
@@ -629,7 +659,7 @@
 
     move-result v3
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/u;->i(Z)V
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/u;->h(Z)V
 
     const-string v4, "LuaEvent"
 
@@ -720,7 +750,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/u;->n(Ljava/lang/String;)V
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/u;->o(Ljava/lang/String;)V
 
     :cond_1
     invoke-static {}, Lcn/com/smartdevices/bracelet/u;->ac()Ljava/lang/String;

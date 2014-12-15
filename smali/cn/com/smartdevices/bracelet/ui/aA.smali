@@ -6,5 +6,8 @@
 .method public abstract a()V
 .end method
 
-.method public abstract a(I)Z
+.method public abstract a(Lcn/com/smartdevices/bracelet/ui/cU;)V
+.end method
+
+.method public abstract a(ILcn/com/smartdevices/bracelet/ui/cU;)Z
 .end method

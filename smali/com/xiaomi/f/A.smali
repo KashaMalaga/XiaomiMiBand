@@ -10,7 +10,7 @@
 
 # direct methods
 .method constructor <init>(Lcom/xiaomi/f/z;IJ)V
-    .locals 0
+    .locals 1
 
     iput-object p1, p0, Lcom/xiaomi/f/A;->b:Lcom/xiaomi/f/z;
 
@@ -24,7 +24,7 @@
 
 # virtual methods
 .method public a()V
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lcom/xiaomi/f/A;->b:Lcom/xiaomi/f/z;
 
@@ -36,9 +36,9 @@
 
     iget-object v0, p0, Lcom/xiaomi/f/A;->b:Lcom/xiaomi/f/z;
 
-    iget-wide v1, p0, Lcom/xiaomi/f/A;->a:J
+    iget-wide v2, p0, Lcom/xiaomi/f/A;->a:J
 
-    invoke-virtual {v0, v1, v2}, Lcom/xiaomi/f/z;->a(J)Z
+    invoke-virtual {v0, v2, v3}, Lcom/xiaomi/f/z;->a(J)Z
 
     move-result v0
 

@@ -26,7 +26,7 @@
 .end method
 
 .method public static a(Lcn/com/smartdevices/bracelet/g/d;Ljava/lang/String;Lcom/c/a/a/h;)V
-    .locals 5
+    .locals 6
 
     if-eqz p0, :cond_0
 
@@ -182,11 +182,11 @@
     invoke-virtual {v0, v1, v2}, Lcom/c/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_5
-    iget-wide v1, p0, Lcn/com/smartdevices/bracelet/g/d;->g:J
+    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/g/d;->g:J
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-lez v1, :cond_6
 
@@ -205,7 +205,7 @@
 .end method
 
 .method public static a(Lcn/com/smartdevices/bracelet/g/d;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/c/a/a/h;)V
-    .locals 5
+    .locals 6
 
     if-eqz p0, :cond_0
 
@@ -264,11 +264,11 @@
 
     :cond_3
     :goto_0
-    iget-wide v1, p0, Lcn/com/smartdevices/bracelet/g/d;->g:J
+    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/g/d;->g:J
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-lez v1, :cond_4
 
@@ -434,7 +434,7 @@
 .end method
 
 .method public static a(Lcn/com/smartdevices/bracelet/model/LoginData;JLcom/c/a/a/h;)V
-    .locals 4
+    .locals 5
 
     invoke-static {p0}, Lcn/com/smartdevices/bracelet/g/a;->a(Lcn/com/smartdevices/bracelet/model/LoginData;)Lcom/c/a/a/O;
 
@@ -689,19 +689,47 @@
 
     invoke-virtual {v0, v3}, Lcom/b/a/k;->b(Ljava/lang/Object;)Ljava/lang/String;
 
+    move-result-object v3
+
+    const-string v4, "utf-8"
+
+    invoke-static {v3, v4}, Ljava/net/URLEncoder;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/y;->b(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v2, v3}, Lcom/c/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v2, "SCORPIONEAL"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "WebAPI updateProfile  gson.toJson(pInfo.miliConfig) "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    iget-object v4, p1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
+
+    invoke-virtual {v0, v4}, Lcom/b/a/k;->b(Ljava/lang/Object;)Ljava/lang/String;
+
     move-result-object v0
 
-    const-string v3, "utf-8"
-
-    invoke-static {v0, v3}, Ljava/net/URLEncoder;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v1, v2, v0}, Lcom/c/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 

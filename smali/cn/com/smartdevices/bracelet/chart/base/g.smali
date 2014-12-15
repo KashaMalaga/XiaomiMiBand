@@ -55,9 +55,18 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcn/com/smartdevices/bracelet/chart/base/g",
+            "<+TT;>;"
+        }
+    .end annotation
+.end field
+
+.field protected v:Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcn/com/smartdevices/bracelet/chart/base/BaseChartView",
             "<+",
-            "Lcn/com/smartdevices/bracelet/chart/base/k;",
-            ">;"
+            "Lcn/com/smartdevices/bracelet/chart/base/g",
+            "<TT;>;>;"
         }
     .end annotation
 .end field
@@ -215,15 +224,30 @@
     return-void
 .end method
 
+.method public a(Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcn/com/smartdevices/bracelet/chart/base/BaseChartView",
+            "<+",
+            "Lcn/com/smartdevices/bracelet/chart/base/g",
+            "<TT;>;>;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->v:Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;
+
+    return-void
+.end method
+
 .method public a(Lcn/com/smartdevices/bracelet/chart/base/g;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcn/com/smartdevices/bracelet/chart/base/g",
-            "<+",
-            "Lcn/com/smartdevices/bracelet/chart/base/k;",
-            ">;)V"
+            "<+TT;>;)V"
         }
     .end annotation
 
@@ -539,13 +563,28 @@
         value = {
             "()",
             "Lcn/com/smartdevices/bracelet/chart/base/g",
-            "<+",
-            "Lcn/com/smartdevices/bracelet/chart/base/k;",
-            ">;"
+            "<+TT;>;"
         }
     .end annotation
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->u:Lcn/com/smartdevices/bracelet/chart/base/g;
+
+    return-object v0
+.end method
+
+.method public v()Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcn/com/smartdevices/bracelet/chart/base/BaseChartView",
+            "<+",
+            "Lcn/com/smartdevices/bracelet/chart/base/g",
+            "<TT;>;>;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->v:Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;
 
     return-object v0
 .end method

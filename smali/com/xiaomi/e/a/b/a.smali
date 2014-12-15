@@ -141,7 +141,7 @@
 .end method
 
 .method public static b(J)I
-    .locals 1
+    .locals 2
 
     invoke-static {p0, p1}, Lcom/xiaomi/e/a/b/a;->a(J)I
 

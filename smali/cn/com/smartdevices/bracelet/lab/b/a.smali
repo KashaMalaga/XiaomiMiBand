@@ -45,9 +45,7 @@
 
     new-instance v0, Ljava/io/File;
 
-    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
-
-    move-result-object v1
+    sget-object v1, Lcn/com/smartdevices/bracelet/j;->co:Ljava/io/File;
 
     const-string v2, ".MISportLab"
 
@@ -654,7 +652,7 @@
 .end method
 
 .method private static d()V
-    .locals 5
+    .locals 6
 
     const/4 v2, 0x0
 
@@ -685,9 +683,9 @@
 
     move-result-wide v0
 
-    const-wide/32 v3, 0x1400000
+    const-wide/32 v4, 0x1400000
 
-    cmp-long v0, v0, v3
+    cmp-long v0, v0, v4
 
     if-lez v0, :cond_1
 

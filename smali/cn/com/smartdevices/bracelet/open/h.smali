@@ -9,21 +9,21 @@
         "<",
         "Ljava/util/List",
         "<",
-        "Lcn/com/smartdevices/bracelet/open/e;",
+        "Lcn/com/smartdevices/bracelet/open/f;",
         ">;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/open/f;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/open/g;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/open/f;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/open/g;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/open/h;->a:Lcn/com/smartdevices/bracelet/open/f;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/open/h;->a:Lcn/com/smartdevices/bracelet/open/g;
 
     invoke-direct {p0}, Lcom/c/a/a/p;-><init>()V
 
@@ -41,7 +41,7 @@
             "Z)",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/open/e;",
+            "Lcn/com/smartdevices/bracelet/open/f;",
             ">;"
         }
     .end annotation
@@ -93,57 +93,57 @@
 
     move-result-object v5
 
-    new-instance v6, Lcn/com/smartdevices/bracelet/open/e;
+    new-instance v6, Lcn/com/smartdevices/bracelet/open/f;
 
-    invoke-direct {v6}, Lcn/com/smartdevices/bracelet/open/e;-><init>()V
+    invoke-direct {v6}, Lcn/com/smartdevices/bracelet/open/f;-><init>()V
 
     const-string v7, "third_appid"
 
-    invoke-virtual {v5, v7}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v5, v7}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    iput-object v7, v6, Lcn/com/smartdevices/bracelet/open/e;->f:Ljava/lang/String;
+    iput-object v7, v6, Lcn/com/smartdevices/bracelet/open/f;->f:Ljava/lang/String;
 
     const-string v7, "page_url"
 
-    invoke-virtual {v5, v7}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v5, v7}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    iput-object v7, v6, Lcn/com/smartdevices/bracelet/open/e;->e:Ljava/lang/String;
+    iput-object v7, v6, Lcn/com/smartdevices/bracelet/open/f;->e:Ljava/lang/String;
 
     const-string v7, "description"
 
-    invoke-virtual {v5, v7}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v5, v7}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    iput-object v7, v6, Lcn/com/smartdevices/bracelet/open/e;->c:Ljava/lang/String;
+    iput-object v7, v6, Lcn/com/smartdevices/bracelet/open/f;->c:Ljava/lang/String;
 
     const-string v7, "subtitle"
 
-    invoke-virtual {v5, v7}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v5, v7}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    iput-object v7, v6, Lcn/com/smartdevices/bracelet/open/e;->d:Ljava/lang/String;
+    iput-object v7, v6, Lcn/com/smartdevices/bracelet/open/f;->d:Ljava/lang/String;
 
     const-string v7, "icon"
 
-    invoke-virtual {v5, v7}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v5, v7}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    iput-object v7, v6, Lcn/com/smartdevices/bracelet/open/e;->g:Ljava/lang/String;
+    iput-object v7, v6, Lcn/com/smartdevices/bracelet/open/f;->g:Ljava/lang/String;
 
     const-string v7, "color"
 
-    invoke-virtual {v5, v7}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v5, v7}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    iput-object v7, v6, Lcn/com/smartdevices/bracelet/open/e;->h:Ljava/lang/String;
+    iput-object v7, v6, Lcn/com/smartdevices/bracelet/open/f;->h:Ljava/lang/String;
 
     const-string v7, "expired_timestamp"
 
@@ -151,9 +151,9 @@
 
     invoke-virtual {v5, v7, v8, v9}, Lorg/json/JSONObject;->optLong(Ljava/lang/String;J)J
 
-    move-result-wide v7
+    move-result-wide v8
 
-    iput-wide v7, v6, Lcn/com/smartdevices/bracelet/open/e;->i:J
+    iput-wide v8, v6, Lcn/com/smartdevices/bracelet/open/f;->i:J
 
     const-string v7, "authorization_status"
 
@@ -161,37 +161,10 @@
 
     move-result v5
 
-    iput v5, v6, Lcn/com/smartdevices/bracelet/open/e;->j:I
+    iput v5, v6, Lcn/com/smartdevices/bracelet/open/f;->j:I
 
     invoke-interface {v0, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    iget-object v5, p0, Lcn/com/smartdevices/bracelet/open/h;->a:Lcn/com/smartdevices/bracelet/open/f;
-
-    invoke-static {v5}, Lcn/com/smartdevices/bracelet/open/f;->b(Lcn/com/smartdevices/bracelet/open/f;)Lcn/com/smartdevices/bracelet/db/r;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Lcn/com/smartdevices/bracelet/db/r;->f()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_2
-
-    iget-object v5, p0, Lcn/com/smartdevices/bracelet/open/h;->a:Lcn/com/smartdevices/bracelet/open/f;
-
-    invoke-static {v5}, Lcn/com/smartdevices/bracelet/open/f;->b(Lcn/com/smartdevices/bracelet/open/f;)Lcn/com/smartdevices/bracelet/db/r;
-
-    move-result-object v5
-
-    invoke-virtual {v5, v0}, Lcn/com/smartdevices/bracelet/db/r;->a(Ljava/util/List;)Z
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v5
-
-    invoke-static {v5, v6}, Lcn/com/smartdevices/bracelet/u;->d(J)V
-
-    :cond_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
@@ -208,7 +181,7 @@
 .end method
 
 .method public a(I[Lorg/apache/http/Header;Ljava/lang/String;Ljava/util/List;)V
-    .locals 3
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I[",
@@ -216,32 +189,70 @@
             "Ljava/lang/String;",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/open/e;",
+            "Lcn/com/smartdevices/bracelet/open/f;",
             ">;)V"
         }
     .end annotation
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/eventbus/EventPartnerListLoad;
+    new-instance v1, Lcn/com/smartdevices/bracelet/eventbus/EventPartnerListLoad;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/eventbus/EventPartnerListLoad;-><init>()V
+    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/eventbus/EventPartnerListLoad;-><init>()V
 
-    const/4 v1, 0x1
+    const/4 v0, 0x1
 
-    iput-boolean v1, v0, Lcn/com/smartdevices/bracelet/eventbus/EventPartnerListLoad;->success:Z
+    iput-boolean v0, v1, Lcn/com/smartdevices/bracelet/eventbus/EventPartnerListLoad;->success:Z
 
-    iput-object p4, v0, Lcn/com/smartdevices/bracelet/eventbus/EventPartnerListLoad;->partners:Ljava/util/List;
+    const/4 v0, 0x0
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    iput v0, v1, Lcn/com/smartdevices/bracelet/eventbus/EventPartnerListLoad;->type:I
 
-    move-result-wide v1
+    iput-object p4, v1, Lcn/com/smartdevices/bracelet/eventbus/EventPartnerListLoad;->partners:Ljava/util/List;
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/u;->d(J)V
+    if-eqz p4, :cond_0
 
+    invoke-interface {p4}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-interface {p4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/open/f;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/open/g;->a(Lcn/com/smartdevices/bracelet/open/f;)Lcn/com/smartdevices/bracelet/model/LuaItem;
+
+    move-result-object v0
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/open/h;->a:Lcn/com/smartdevices/bracelet/open/g;
+
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/open/g;->a(Lcn/com/smartdevices/bracelet/open/g;)Lcn/com/smartdevices/bracelet/lua/LuaEvent;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v0}, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->showLuaItem(Lcn/com/smartdevices/bracelet/model/LuaItem;)V
+
+    goto :goto_0
+
+    :cond_0
     invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v1, v0}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -278,18 +289,20 @@
             "Ljava/lang/String;",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/open/e;",
+            "Lcn/com/smartdevices/bracelet/open/f;",
             ">;)V"
         }
     .end annotation
+
+    const/4 v1, 0x0
 
     new-instance v0, Lcn/com/smartdevices/bracelet/eventbus/EventPartnerListLoad;
 
     invoke-direct {v0}, Lcn/com/smartdevices/bracelet/eventbus/EventPartnerListLoad;-><init>()V
 
-    const/4 v1, 0x0
-
     iput-boolean v1, v0, Lcn/com/smartdevices/bracelet/eventbus/EventPartnerListLoad;->success:Z
+
+    iput v1, v0, Lcn/com/smartdevices/bracelet/eventbus/EventPartnerListLoad;->type:I
 
     invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
 

@@ -308,37 +308,37 @@
 .end method
 
 .method private F()J
-    .locals 10
+    .locals 11
 
-    const/16 v9, 0x80
+    const/16 v10, 0x80
 
     const/4 v0, 0x0
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    iget-object v3, p0, Lb/a/cQ;->g:Lb/a/do;
+    iget-object v1, p0, Lb/a/cQ;->g:Lb/a/do;
 
-    invoke-virtual {v3}, Lb/a/do;->h()I
+    invoke-virtual {v1}, Lb/a/do;->h()I
 
-    move-result v3
+    move-result v1
 
     const/16 v4, 0xa
 
-    if-lt v3, v4, :cond_2
+    if-lt v1, v4, :cond_2
 
-    iget-object v3, p0, Lb/a/cQ;->g:Lb/a/do;
+    iget-object v1, p0, Lb/a/cQ;->g:Lb/a/do;
 
-    invoke-virtual {v3}, Lb/a/do;->f()[B
+    invoke-virtual {v1}, Lb/a/do;->f()[B
 
     move-result-object v4
 
-    iget-object v3, p0, Lb/a/cQ;->g:Lb/a/do;
+    iget-object v1, p0, Lb/a/cQ;->g:Lb/a/do;
 
-    invoke-virtual {v3}, Lb/a/do;->g()I
+    invoke-virtual {v1}, Lb/a/do;->g()I
 
     move-result v5
 
-    move v3, v0
+    move v1, v0
 
     :goto_0
     add-int v6, v5, v0
@@ -347,27 +347,27 @@
 
     and-int/lit8 v7, v6, 0x7f
 
-    int-to-long v7, v7
+    int-to-long v8, v7
 
-    shl-long/2addr v7, v3
+    shl-long/2addr v8, v1
 
-    or-long/2addr v1, v7
+    or-long/2addr v2, v8
 
     and-int/lit16 v6, v6, 0x80
 
-    if-eq v6, v9, :cond_0
+    if-eq v6, v10, :cond_0
 
-    iget-object v3, p0, Lb/a/cQ;->g:Lb/a/do;
+    iget-object v1, p0, Lb/a/cQ;->g:Lb/a/do;
 
     add-int/lit8 v0, v0, 0x1
 
-    invoke-virtual {v3, v0}, Lb/a/do;->a(I)V
+    invoke-virtual {v1, v0}, Lb/a/do;->a(I)V
 
     :goto_1
-    return-wide v1
+    return-wide v2
 
     :cond_0
-    add-int/lit8 v3, v3, 0x7
+    add-int/lit8 v1, v1, 0x7
 
     add-int/lit8 v0, v0, 0x1
 
@@ -379,27 +379,27 @@
     :cond_2
     invoke-virtual {p0}, Lb/a/cQ;->u()B
 
-    move-result v3
+    move-result v1
 
-    and-int/lit8 v4, v3, 0x7f
+    and-int/lit8 v4, v1, 0x7f
 
     int-to-long v4, v4
 
     shl-long/2addr v4, v0
 
-    or-long/2addr v1, v4
+    or-long/2addr v2, v4
 
-    and-int/lit16 v3, v3, 0x80
+    and-int/lit16 v1, v1, 0x80
 
-    if-eq v3, v9, :cond_1
+    if-eq v1, v10, :cond_1
 
     goto :goto_1
 .end method
 
 .method private a([B)J
-    .locals 7
+    .locals 8
 
-    const-wide/16 v5, 0xff
+    const-wide/16 v6, 0xff
 
     const/4 v0, 0x7
 
@@ -407,7 +407,7 @@
 
     int-to-long v0, v0
 
-    and-long/2addr v0, v5
+    and-long/2addr v0, v6
 
     const/16 v2, 0x38
 
@@ -419,7 +419,7 @@
 
     int-to-long v2, v2
 
-    and-long/2addr v2, v5
+    and-long/2addr v2, v6
 
     const/16 v4, 0x30
 
@@ -433,7 +433,7 @@
 
     int-to-long v2, v2
 
-    and-long/2addr v2, v5
+    and-long/2addr v2, v6
 
     const/16 v4, 0x28
 
@@ -447,7 +447,7 @@
 
     int-to-long v2, v2
 
-    and-long/2addr v2, v5
+    and-long/2addr v2, v6
 
     const/16 v4, 0x20
 
@@ -461,7 +461,7 @@
 
     int-to-long v2, v2
 
-    and-long/2addr v2, v5
+    and-long/2addr v2, v6
 
     const/16 v4, 0x18
 
@@ -475,7 +475,7 @@
 
     int-to-long v2, v2
 
-    and-long/2addr v2, v5
+    and-long/2addr v2, v6
 
     const/16 v4, 0x10
 
@@ -489,7 +489,7 @@
 
     int-to-long v2, v2
 
-    and-long/2addr v2, v5
+    and-long/2addr v2, v6
 
     const/16 v4, 0x8
 
@@ -503,7 +503,7 @@
 
     int-to-long v2, v2
 
-    and-long/2addr v2, v5
+    and-long/2addr v2, v6
 
     or-long/2addr v0, v2
 
@@ -511,15 +511,15 @@
 .end method
 
 .method private a(J[BI)V
-    .locals 5
+    .locals 7
 
-    const-wide/16 v3, 0xff
+    const-wide/16 v4, 0xff
 
     add-int/lit8 v0, p4, 0x0
 
-    and-long v1, p1, v3
+    and-long v2, p1, v4
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     int-to-byte v1, v1
 
@@ -529,11 +529,11 @@
 
     const/16 v1, 0x8
 
-    shr-long v1, p1, v1
+    shr-long v2, p1, v1
 
-    and-long/2addr v1, v3
+    and-long/2addr v2, v4
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     int-to-byte v1, v1
 
@@ -543,11 +543,11 @@
 
     const/16 v1, 0x10
 
-    shr-long v1, p1, v1
+    shr-long v2, p1, v1
 
-    and-long/2addr v1, v3
+    and-long/2addr v2, v4
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     int-to-byte v1, v1
 
@@ -557,11 +557,11 @@
 
     const/16 v1, 0x18
 
-    shr-long v1, p1, v1
+    shr-long v2, p1, v1
 
-    and-long/2addr v1, v3
+    and-long/2addr v2, v4
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     int-to-byte v1, v1
 
@@ -571,11 +571,11 @@
 
     const/16 v1, 0x20
 
-    shr-long v1, p1, v1
+    shr-long v2, p1, v1
 
-    and-long/2addr v1, v3
+    and-long/2addr v2, v4
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     int-to-byte v1, v1
 
@@ -585,11 +585,11 @@
 
     const/16 v1, 0x28
 
-    shr-long v1, p1, v1
+    shr-long v2, p1, v1
 
-    and-long/2addr v1, v3
+    and-long/2addr v2, v4
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     int-to-byte v1, v1
 
@@ -599,11 +599,11 @@
 
     const/16 v1, 0x30
 
-    shr-long v1, p1, v1
+    shr-long v2, p1, v1
 
-    and-long/2addr v1, v3
+    and-long/2addr v2, v4
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     int-to-byte v1, v1
 
@@ -613,11 +613,11 @@
 
     const/16 v1, 0x38
 
-    shr-long v1, p1, v1
+    shr-long v2, p1, v1
 
-    and-long/2addr v1, v3
+    and-long/2addr v2, v4
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     int-to-byte v1, v1
 
@@ -764,7 +764,7 @@
 .end method
 
 .method private b(J)V
-    .locals 8
+    .locals 9
 
     const/4 v1, 0x0
 
@@ -840,7 +840,7 @@
 .end method
 
 .method private c(J)J
-    .locals 4
+    .locals 5
 
     const/4 v0, 0x1
 
@@ -989,7 +989,7 @@
 .end method
 
 .method private d(J)J
-    .locals 4
+    .locals 5
 
     const/4 v0, 0x1
 
@@ -1229,7 +1229,7 @@
 .end method
 
 .method public a(D)V
-    .locals 4
+    .locals 5
 
     const/16 v0, 0x8
 
@@ -1237,11 +1237,11 @@
 
     invoke-static {p1, p2}, Ljava/lang/Double;->doubleToLongBits(D)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    const/4 v3, 0x0
+    const/4 v1, 0x0
 
-    invoke-direct {p0, v1, v2, v0, v3}, Lb/a/cQ;->a(J[BI)V
+    invoke-direct {p0, v2, v3, v0, v1}, Lb/a/cQ;->a(J[BI)V
 
     iget-object v1, p0, Lb/a/cQ;->g:Lb/a/do;
 
@@ -1263,7 +1263,7 @@
 .end method
 
 .method public a(J)V
-    .locals 2
+    .locals 3
 
     invoke-direct {p0, p1, p2}, Lb/a/cQ;->c(J)J
 

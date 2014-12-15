@@ -94,7 +94,7 @@
 .end method
 
 .method public b()V
-    .locals 7
+    .locals 8
 
     iget-object v0, p0, Lcom/xiaomi/e/a/a/a;->d:Ljava/util/Map;
 
@@ -143,9 +143,9 @@
 
     move-result v1
 
-    int-to-long v5, v1
+    int-to-long v6, v1
 
-    invoke-direct {v4, v0, v3, v5, v6}, Lcom/xiaomi/e/a/x;-><init>(Ljava/lang/String;Ljava/util/Map;J)V
+    invoke-direct {v4, v0, v3, v6, v7}, Lcom/xiaomi/e/a/x;-><init>(Ljava/lang/String;Ljava/util/Map;J)V
 
     invoke-virtual {v4}, Lcom/xiaomi/e/a/f;->e()V
 

@@ -137,15 +137,15 @@
 
     const/4 v3, 0x0
 
-    aget-wide v5, v4, v3
+    aget-wide v6, v4, v3
 
-    sub-double/2addr v0, v5
+    sub-double/2addr v0, v6
 
     const/4 v3, 0x2
 
-    aget-wide v5, v4, v3
+    aget-wide v6, v4, v3
 
-    div-double/2addr v0, v5
+    div-double/2addr v0, v6
 
     double-to-int v0, v0
 
@@ -257,16 +257,16 @@
 
     invoke-interface {p0}, Ljava/util/List;->size()I
 
-    move-result v7
+    move-result v3
 
-    move-wide v3, v0
+    move-wide v4, v0
 
-    move-wide v5, v0
+    move-wide v6, v0
 
     move v1, v2
 
     :goto_1
-    if-ge v1, v7, :cond_1
+    if-ge v1, v3, :cond_1
 
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -278,13 +278,13 @@
 
     move-result-wide v8
 
-    invoke-static {v5, v6, v8, v9}, Ljava/lang/Math;->min(DD)D
+    invoke-static {v6, v7, v8, v9}, Ljava/lang/Math;->min(DD)D
 
-    move-result-wide v5
+    move-result-wide v6
 
-    invoke-static {v3, v4, v8, v9}, Ljava/lang/Math;->max(DD)D
+    invoke-static {v4, v5, v8, v9}, Ljava/lang/Math;->max(DD)D
 
-    move-result-wide v3
+    move-result-wide v4
 
     add-int/lit8 v0, v1, 0x1
 
@@ -295,9 +295,9 @@
     :cond_1
     new-array v0, v11, [D
 
-    aput-wide v5, v0, v10
+    aput-wide v6, v0, v10
 
-    aput-wide v3, v0, v2
+    aput-wide v4, v0, v2
 
     goto :goto_0
 .end method
@@ -348,35 +348,35 @@
     const/4 v0, 0x1
 
     :goto_1
-    sub-double v1, p2, p0
+    sub-double v2, p2, p0
 
-    invoke-static {v1, v2}, Ljava/lang/Math;->abs(D)D
+    invoke-static {v2, v3}, Ljava/lang/Math;->abs(D)D
 
-    move-result-wide v1
+    move-result-wide v2
 
-    int-to-double v3, p4
+    int-to-double v4, p4
 
-    div-double/2addr v1, v3
+    div-double/2addr v2, v4
 
-    invoke-static {v1, v2}, Lorg/achartengine/e/b;->a(D)D
+    invoke-static {v2, v3}, Lorg/achartengine/e/b;->a(D)D
 
-    move-result-wide v1
+    move-result-wide v2
 
-    div-double v3, p2, v1
+    div-double v4, p2, v2
 
-    invoke-static {v3, v4}, Ljava/lang/Math;->ceil(D)D
+    invoke-static {v4, v5}, Ljava/lang/Math;->ceil(D)D
 
-    move-result-wide v3
+    move-result-wide v4
 
-    mul-double/2addr v3, v1
+    mul-double/2addr v4, v2
 
-    div-double v5, p0, v1
+    div-double v6, p0, v2
 
-    invoke-static {v5, v6}, Ljava/lang/Math;->floor(D)D
+    invoke-static {v6, v7}, Ljava/lang/Math;->floor(D)D
 
-    move-result-wide v5
+    move-result-wide v6
 
-    mul-double/2addr v5, v1
+    mul-double/2addr v6, v2
 
     if-eqz v0, :cond_1
 
@@ -384,21 +384,21 @@
 
     new-array v0, v0, [D
 
-    const/4 v7, 0x0
+    const/4 v1, 0x0
 
-    aput-wide v5, v0, v7
+    aput-wide v6, v0, v1
 
-    const/4 v5, 0x1
+    const/4 v1, 0x1
 
-    aput-wide v3, v0, v5
+    aput-wide v4, v0, v1
 
-    const/4 v3, 0x2
+    const/4 v1, 0x2
 
     const-wide/high16 v4, -0x4010000000000000L
 
-    mul-double/2addr v1, v4
+    mul-double/2addr v2, v4
 
-    aput-wide v1, v0, v3
+    aput-wide v2, v0, v1
 
     goto :goto_0
 
@@ -407,17 +407,17 @@
 
     new-array v0, v0, [D
 
-    const/4 v7, 0x0
+    const/4 v1, 0x0
 
-    aput-wide v3, v0, v7
+    aput-wide v4, v0, v1
 
-    const/4 v3, 0x1
+    const/4 v1, 0x1
 
-    aput-wide v5, v0, v3
+    aput-wide v6, v0, v1
 
-    const/4 v3, 0x2
+    const/4 v1, 0x2
 
-    aput-wide v1, v0, v3
+    aput-wide v2, v0, v1
 
     goto :goto_0
 

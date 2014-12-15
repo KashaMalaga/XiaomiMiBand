@@ -269,7 +269,7 @@
 .end method
 
 .method private a([BLjava/lang/String;)[B
-    .locals 7
+    .locals 8
 
     const/4 v1, 0x0
 
@@ -337,9 +337,9 @@
 
     array-length v5, p1
 
-    int-to-long v5, v5
+    int-to-long v6, v5
 
-    invoke-direct {v2, v4, v5, v6}, Lorg/apache/http/entity/InputStreamEntity;-><init>(Ljava/io/InputStream;J)V
+    invoke-direct {v2, v4, v6, v7}, Lorg/apache/http/entity/InputStreamEntity;-><init>(Ljava/io/InputStream;J)V
 
     invoke-virtual {v0, v2}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
 

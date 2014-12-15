@@ -19,6 +19,10 @@
     <item type="id" name="start_weixin_btn">false</item>
     <item type="id" name="gen_qr_code_btn">false</item>
     <item type="id" name="mask_view">false</item>
+    <item type="id" name="add_button">false</item>
+    <item type="id" name="host_input_box">false</item>
+    <item type="id" name="security_switch">false</item>
+    <item type="id" name="host_list">false</item>
     <item type="id" name="fw_help_screen_home_back">false</item>
     <item type="id" name="fw_low_battery_help_tv">false</item>
     <item type="id" name="fw_low_battery_confirm_btn">false</item>
@@ -128,12 +132,12 @@
     <item type="id" name="setting_alarm_wheel_ampm">false</item>
     <item type="id" name="setting_alarm_wheel_hour">false</item>
     <item type="id" name="setting_alarm_wheel_minute">false</item>
-    <item type="id" name="content_title">false</item>
     <item type="id" name="unbind_partner">false</item>
     <item type="id" name="open_web_container">false</item>
     <item type="id" name="error_page">false</item>
     <item type="id" name="progress">false</item>
     <item type="id" name="label">false</item>
+    <item type="id" name="load_progress">false</item>
     <item type="id" name="person_info_part_1">false</item>
     <item type="id" name="person_info_year_picker">false</item>
     <item type="id" name="person_info_month_picker">false</item>
@@ -146,9 +150,13 @@
     <item type="id" name="bracelet_title_info">false</item>
     <item type="id" name="person_info_goal_picker">false</item>
     <item type="id" name="person_info_weight_picker">false</item>
+    <item type="id" name="header_history">false</item>
+    <item type="id" name="header_more">false</item>
     <item type="id" name="map">false</item>
     <item type="id" name="gps_signal_key">false</item>
     <item type="id" name="gps_signal_value">false</item>
+    <item type="id" name="gps_locating">false</item>
+    <item type="id" name="progressbar">false</item>
     <item type="id" name="info_distance">false</item>
     <item type="id" name="time_icon">false</item>
     <item type="id" name="timing_hour">false</item>
@@ -176,8 +184,11 @@
     <item type="id" name="distance">false</item>
     <item type="id" name="time_cost">false</item>
     <item type="id" name="average_speed">false</item>
-    <item type="id" name="share_content">false</item>
-    <item type="id" name="share_from_mi_band_txt">false</item>
+    <item type="id" name="vp_result">false</item>
+    <item type="id" name="dot_ll">false</item>
+    <item type="id" name="dot1">false</item>
+    <item type="id" name="dot2">false</item>
+    <item type="id" name="head_back">false</item>
     <item type="id" name="share_pane_container">false</item>
     <item type="id" name="search_single_frame">false</item>
     <item type="id" name="toggle_display_mode_btn">false</item>
@@ -235,6 +246,9 @@
     <item type="id" name="donot_bind_txt">false</item>
     <item type="id" name="bracelet_not_found_get_help">false</item>
     <item type="id" name="bracelet_not_found_search_again">false</item>
+    <item type="id" name="share_logo">false</item>
+    <item type="id" name="tv_logo">false</item>
+    <item type="id" name="share_from_mi_band_txt">false</item>
     <item type="id" name="CropImageView">false</item>
     <item type="id" name="ImageView_image">false</item>
     <item type="id" name="CropOverlayView">false</item>
@@ -356,11 +370,28 @@
     <item type="id" name="ranking_lv">false</item>
     <item type="id" name="timing">false</item>
     <item type="id" name="description">false</item>
+    <item type="id" name="pace_head_layout">false</item>
+    <item type="id" name="listView">false</item>
+    <item type="id" name="title_head">false</item>
+    <item type="id" name="rl_head">false</item>
+    <item type="id" name="strut">false</item>
+    <item type="id" name="tvv_miles_fastest">false</item>
+    <item type="id" name="tvl_miles_fastest">false</item>
+    <item type="id" name="tvv_km_slowest">false</item>
+    <item type="id" name="tvl_km_slowest">false</item>
+    <item type="id" name="rl_head_1">false</item>
+    <item type="id" name="tv_kilometer">false</item>
+    <item type="id" name="tv_costtime">false</item>
+    <item type="id" name="tv_pace">false</item>
+    <item type="id" name="tv_speed">false</item>
+    <item type="id" name="line">false</item>
+    <item type="id" name="tr_item">false</item>
     <item type="id" name="switcher">false</item>
     <item type="id" name="speed_desc">false</item>
     <item type="id" name="set_speed">false</item>
+    <item type="id" name="pace_containter">false</item>
     <item type="id" name="pace_desc">false</item>
-    <item type="id" name="set_pace">false</item>
+    <item type="id" name="set_low_pace">false</item>
     <item type="id" name="info_gender">false</item>
     <item type="id" name="goal_summary">false</item>
     <item type="id" name="info_age_area">false</item>
@@ -370,6 +401,7 @@
     <item type="id" name="info_time_cost">false</item>
     <item type="id" name="info_start_time">false</item>
     <item type="id" name="info_average_speed">false</item>
+    <item type="id" name="share_content">false</item>
     <item type="id" name="select_image_camera_area">false</item>
     <item type="id" name="select_image_local_area">false</item>
     <item type="id" name="enable_hidden_feature">false</item>
@@ -383,6 +415,7 @@
     <item type="id" name="setting_feedback">false</item>
     <item type="id" name="split_line_1">false</item>
     <item type="id" name="setting_about_website">false</item>
+    <item type="id" name="split_line_visit_website">false</item>
     <item type="id" name="setting_check_apk_upgrade">false</item>
     <item type="id" name="split_line_about_apk_upgrade">false</item>
     <item type="id" name="buy_bracelet_stuff">false</item>
@@ -538,6 +571,10 @@
     <item type="id" name="bind_qq_heath_state">false</item>
     <item type="id" name="device_weixin_enter_ll">false</item>
     <item type="id" name="device_weixin_enter_text">false</item>
+    <item type="id" name="device_connected_broadcast">false</item>
+    <item type="id" name="connected_broadcast_text">false</item>
+    <item type="id" name="connected_broadcast_switch">false</item>
+    <item type="id" name="device_connected_broadcast_split">false</item>
     <item type="id" name="device_unbind">false</item>
     <item type="id" name="mili_rebind_tips">false</item>
     <item type="id" name="device_firmware_version">false</item>

@@ -26,7 +26,7 @@
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BindDevicesActivity;->setContentView(I)V
 
-    const v0, 0x7f070026
+    const v0, 0x7f0b0026
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BindDevicesActivity;->findViewById(I)Landroid/view/View;
 

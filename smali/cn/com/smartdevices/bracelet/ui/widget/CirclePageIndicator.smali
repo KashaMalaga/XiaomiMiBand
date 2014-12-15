@@ -117,49 +117,49 @@
 
     move-result-object v0
 
-    const v1, 0x7f080068
+    const v1, 0x7f070069
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v1
 
-    const v2, 0x7f080067
+    const v2, 0x7f070068
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v2
 
-    const v3, 0x7f0a0002
+    const v3, 0x7f090002
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v3
 
-    const v4, 0x7f080069
+    const v4, 0x7f07006a
 
     invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v4
 
-    const v5, 0x7f090009
+    const v5, 0x7f080009
 
     invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v5
 
-    const v6, 0x7f090008
+    const v6, 0x7f080008
 
     invoke-virtual {v0, v6}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v6
 
-    const v7, 0x7f0b0001
+    const v7, 0x7f0a0001
 
     invoke-virtual {v0, v7}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v7
 
-    const v8, 0x7f0b0002
+    const v8, 0x7f0a0002
 
     invoke-virtual {v0, v8}, Landroid/content/res/Resources;->getBoolean(I)Z
 

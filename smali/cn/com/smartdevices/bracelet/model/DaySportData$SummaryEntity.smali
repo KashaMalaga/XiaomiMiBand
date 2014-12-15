@@ -251,7 +251,7 @@
 .end method
 
 .method public setSleepRiseTime(J)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcn/com/smartdevices/bracelet/model/DaySportData$SummaryEntity;->sleepRiseTime:J
 
@@ -267,7 +267,7 @@
 .end method
 
 .method public setSleepStartTime(J)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcn/com/smartdevices/bracelet/model/DaySportData$SummaryEntity;->sleepStartTime:J
 

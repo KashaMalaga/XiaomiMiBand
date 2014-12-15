@@ -22,16 +22,20 @@
 
 .field public static final enum d:Lcn/com/smartdevices/bracelet/gps/services/j;
 
-.field private static final synthetic f:[Lcn/com/smartdevices/bracelet/gps/services/j;
+.field public static final enum e:Lcn/com/smartdevices/bracelet/gps/services/j;
+
+.field private static final synthetic g:[Lcn/com/smartdevices/bracelet/gps/services/j;
 
 
 # instance fields
-.field private e:I
+.field private f:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 7
+    .locals 8
+
+    const/4 v7, 0x4
 
     const/4 v6, 0x3
 
@@ -43,7 +47,7 @@
 
     new-instance v0, Lcn/com/smartdevices/bracelet/gps/services/j;
 
-    const-string v1, "SIGNAL_LOST"
+    const-string v1, "SIGNAL_DEFAULT"
 
     const/4 v2, -0x1
 
@@ -53,7 +57,7 @@
 
     new-instance v0, Lcn/com/smartdevices/bracelet/gps/services/j;
 
-    const-string v1, "SIGNAL_WEAK"
+    const-string v1, "SIGNAL_LOST"
 
     invoke-direct {v0, v1, v4, v3}, Lcn/com/smartdevices/bracelet/gps/services/j;-><init>(Ljava/lang/String;II)V
 
@@ -61,7 +65,7 @@
 
     new-instance v0, Lcn/com/smartdevices/bracelet/gps/services/j;
 
-    const-string v1, "SIGNAL_MEDIUM"
+    const-string v1, "SIGNAL_WEAK"
 
     invoke-direct {v0, v1, v5, v4}, Lcn/com/smartdevices/bracelet/gps/services/j;-><init>(Ljava/lang/String;II)V
 
@@ -69,13 +73,21 @@
 
     new-instance v0, Lcn/com/smartdevices/bracelet/gps/services/j;
 
-    const-string v1, "SIGNAL_STRONG"
+    const-string v1, "SIGNAL_MEDIUM"
 
     invoke-direct {v0, v1, v6, v5}, Lcn/com/smartdevices/bracelet/gps/services/j;-><init>(Ljava/lang/String;II)V
 
     sput-object v0, Lcn/com/smartdevices/bracelet/gps/services/j;->d:Lcn/com/smartdevices/bracelet/gps/services/j;
 
-    const/4 v0, 0x4
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/services/j;
+
+    const-string v1, "SIGNAL_STRONG"
+
+    invoke-direct {v0, v1, v7, v6}, Lcn/com/smartdevices/bracelet/gps/services/j;-><init>(Ljava/lang/String;II)V
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/gps/services/j;->e:Lcn/com/smartdevices/bracelet/gps/services/j;
+
+    const/4 v0, 0x5
 
     new-array v0, v0, [Lcn/com/smartdevices/bracelet/gps/services/j;
 
@@ -95,7 +107,11 @@
 
     aput-object v1, v0, v6
 
-    sput-object v0, Lcn/com/smartdevices/bracelet/gps/services/j;->f:[Lcn/com/smartdevices/bracelet/gps/services/j;
+    sget-object v1, Lcn/com/smartdevices/bracelet/gps/services/j;->e:Lcn/com/smartdevices/bracelet/gps/services/j;
+
+    aput-object v1, v0, v7
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/gps/services/j;->g:[Lcn/com/smartdevices/bracelet/gps/services/j;
 
     return-void
 .end method
@@ -112,9 +128,9 @@
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/services/j;->e:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/services/j;->f:I
 
-    iput p3, p0, Lcn/com/smartdevices/bracelet/gps/services/j;->e:I
+    iput p3, p0, Lcn/com/smartdevices/bracelet/gps/services/j;->f:I
 
     return-void
 .end method
@@ -136,7 +152,7 @@
 .method public static values()[Lcn/com/smartdevices/bracelet/gps/services/j;
     .locals 1
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/gps/services/j;->f:[Lcn/com/smartdevices/bracelet/gps/services/j;
+    sget-object v0, Lcn/com/smartdevices/bracelet/gps/services/j;->g:[Lcn/com/smartdevices/bracelet/gps/services/j;
 
     invoke-virtual {v0}, [Lcn/com/smartdevices/bracelet/gps/services/j;->clone()Ljava/lang/Object;
 
@@ -152,7 +168,7 @@
 .method public a()I
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/j;->e:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/j;->f:I
 
     return v0
 .end method

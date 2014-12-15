@@ -214,4 +214,33 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:singleLine">true</item>
     </style>
+    <style name="LeftButton">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textColor">#e6ffffff</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingRight">10.0dip</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/action_bar_h</item>
+    </style>
+    <style name="font_white_s18" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">22.0sp</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="font_white_s40_5" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">40.5sp</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="font_white_s16_5" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">16.5sp</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="font_c50000000_s10_5" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">10.5sp</item>
+        <item name="android:textColor">#50000000</item>
+    </style>
+    <style name="font_c70000000_s15_5" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">15.5sp</item>
+        <item name="android:textColor">#70000000</item>
+    </style>
 </resources>

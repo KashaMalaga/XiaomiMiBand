@@ -96,7 +96,7 @@
 .method private a(Landroid/view/View;)V
     .locals 14
 
-    const v0, 0x7f070147
+    const v0, 0x7f0b0155
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -106,7 +106,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/V;->b:Landroid/widget/TextView;
 
-    const v0, 0x7f070148
+    const v0, 0x7f0b0156
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -116,7 +116,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/V;->c:Landroid/widget/TextView;
 
-    const v0, 0x7f070149
+    const v0, 0x7f0b0157
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -126,7 +126,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/V;->f:Lkankan/wheel/widget/WheelView;
 
-    const v0, 0x7f07014a
+    const v0, 0x7f0b0158
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -238,7 +238,7 @@
 
     move-result-object v5
 
-    const v6, 0x7f08003c
+    const v6, 0x7f07003c
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -248,7 +248,7 @@
 
     move-result-object v6
 
-    const v7, 0x7f080011
+    const v7, 0x7f070011
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -282,7 +282,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0200d6
+    const v2, 0x7f0200da
 
     invoke-virtual {v1, v2}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
@@ -294,7 +294,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f08003c
+    const v3, 0x7f07003c
 
     const/high16 v4, 0x41900000
 
@@ -332,7 +332,7 @@
 
     move-result-object v5
 
-    const v6, 0x7f08003c
+    const v6, 0x7f07003c
 
     invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -342,7 +342,7 @@
 
     move-result-object v6
 
-    const v7, 0x7f080011
+    const v7, 0x7f070011
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -372,7 +372,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0200d6
+    const v2, 0x7f0200da
 
     invoke-virtual {v1, v2}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
@@ -384,7 +384,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f08003c
+    const v3, 0x7f07003c
 
     const/high16 v4, 0x41900000
 
@@ -599,7 +599,7 @@
 .method protected a()I
     .locals 1
 
-    const v0, 0x7f03003f
+    const v0, 0x7f030041
 
     return v0
 .end method

@@ -69,7 +69,7 @@
 
 # virtual methods
 .method protected final a(Ljava/io/DataOutputStream;)Ljava/lang/Boolean;
-    .locals 3
+    .locals 4
 
     const/4 v0, 0x0
 
@@ -120,13 +120,13 @@
 
     invoke-virtual {p1, v1}, Ljava/io/DataOutputStream;->writeByte(I)V
 
-    iget-wide v1, p0, Lcom/a/as;->i:J
+    iget-wide v2, p0, Lcom/a/as;->i:J
 
-    invoke-virtual {p1, v1, v2}, Ljava/io/DataOutputStream;->writeLong(J)V
+    invoke-virtual {p1, v2, v3}, Ljava/io/DataOutputStream;->writeLong(J)V
 
-    iget-wide v1, p0, Lcom/a/as;->j:J
+    iget-wide v2, p0, Lcom/a/as;->j:J
 
-    invoke-virtual {p1, v1, v2}, Ljava/io/DataOutputStream;->writeLong(J)V
+    invoke-virtual {p1, v2, v3}, Ljava/io/DataOutputStream;->writeLong(J)V
 
     const/4 v1, 0x1
 

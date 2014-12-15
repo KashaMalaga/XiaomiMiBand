@@ -140,9 +140,9 @@
     new-array v0, v0, [B
 
     :goto_0
-    iget-wide v5, p0, Lcom/c/a/a/M;->d:J
+    iget-wide v6, p0, Lcom/c/a/a/M;->d:J
 
-    cmp-long v5, v5, v2
+    cmp-long v5, v6, v2
 
     if-gez v5, :cond_0
 
@@ -176,9 +176,9 @@
 
     invoke-virtual {v4, v0, v6, v5}, Ljava/io/FileOutputStream;->write([BII)V
 
-    iget-wide v5, p0, Lcom/c/a/a/M;->d:J
+    iget-wide v6, p0, Lcom/c/a/a/M;->d:J
 
-    long-to-int v5, v5
+    long-to-int v5, v6
 
     long-to-int v6, v2
 
@@ -329,9 +329,9 @@
 
     iput-boolean v1, p0, Lcom/c/a/a/M;->e:Z
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    iput-wide v1, p0, Lcom/c/a/a/M;->d:J
+    iput-wide v2, p0, Lcom/c/a/a/M;->d:J
 
     :goto_1
     invoke-interface {v0}, Lorg/apache/http/StatusLine;->getStatusCode()I

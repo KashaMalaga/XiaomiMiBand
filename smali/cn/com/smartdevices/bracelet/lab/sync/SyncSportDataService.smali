@@ -464,13 +464,13 @@
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/a/d;->i()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/a/d;->o()Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_1
+    if-nez v1, :cond_2
 
     invoke-static {p1, v4}, Lcn/com/smartdevices/bracelet/lab/sync/b;->a(Landroid/content/Context;I)Z
 
@@ -498,6 +498,7 @@
 
     invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
+    :cond_0
     :goto_0
     invoke-static {p1, v4}, Lcn/com/smartdevices/bracelet/lab/sync/b;->e(Landroid/content/Context;I)Z
 
@@ -525,7 +526,7 @@
 
     invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     invoke-static {p1, v4}, Lcn/com/smartdevices/bracelet/lab/sync/b;->d(Landroid/content/Context;I)Z
 
@@ -553,7 +554,7 @@
 
     invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_0
+    :cond_1
     invoke-static {p0, v4}, Lcn/com/smartdevices/bracelet/lab/sync/b;->f(Landroid/content/Context;I)Z
 
     move-result v0
@@ -582,7 +583,9 @@
 
     return-void
 
-    :cond_1
+    :cond_2
+    if-nez v0, :cond_0
+
     const/4 v0, -0x1
 
     invoke-static {p1, v0}, Lcn/com/smartdevices/bracelet/lab/sync/b;->c(Landroid/content/Context;I)Z
@@ -709,6 +712,45 @@
 
     invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;->a(Lcn/com/smartdevices/bracelet/q;)Z
 
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/gps/a/a;->b(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/gps/a/d;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/a/d;->o()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    invoke-static {p0, v4}, Lcn/com/smartdevices/bracelet/lab/sync/b;->a(Landroid/content/Context;I)Z
+
+    move-result v0
+
+    const-string v1, "Sync"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Two-way sync syncSportConfigToSever isSucceeded = "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_2
     invoke-static {p0, v4}, Lcn/com/smartdevices/bracelet/lab/sync/b;->f(Landroid/content/Context;I)Z
 
     move-result v0
@@ -735,12 +777,12 @@
 
     invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :pswitch_3
     invoke-static {p0, v4}, Lcn/com/smartdevices/bracelet/lab/sync/b;->f(Landroid/content/Context;I)Z
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :pswitch_4
     invoke-static {p0, v4}, Lcn/com/smartdevices/bracelet/lab/sync/b;->e(Landroid/content/Context;I)Z
@@ -769,14 +811,14 @@
 
     invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_0
+    goto/16 :goto_0
 
     :pswitch_5
     const-string v0, "trackId"
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    invoke-virtual {p1, v0, v1, v2}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
+    invoke-virtual {p1, v0, v2, v3}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
 
     move-result-wide v0
 
@@ -791,7 +833,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/a/d;->i()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/a/d;->o()Z
 
     move-result v0
 
@@ -824,8 +866,6 @@
     invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0x0

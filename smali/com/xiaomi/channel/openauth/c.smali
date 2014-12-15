@@ -698,94 +698,94 @@
 .end method
 
 .method private static a(Landroid/app/Activity;IJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 12
+    .locals 14
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    cmp-long v1, p2, v1
+    cmp-long v2, p2, v2
 
-    if-gez v1, :cond_0
+    if-gez v2, :cond_0
 
-    new-instance v1, Ljava/lang/IllegalArgumentException;
+    new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    const-string v2, "client id is error!!!"
+    const-string v3, "client id is error!!!"
 
-    invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw v1
+    throw v2
 
     :cond_0
     invoke-static/range {p4 .. p4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_1
+    if-eqz v2, :cond_1
 
-    new-instance v1, Ljava/lang/IllegalArgumentException;
+    new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    const-string v2, "redirect url is empty!!!"
+    const-string v3, "redirect url is empty!!!"
 
-    invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw v1
+    throw v2
 
     :cond_1
     invoke-static/range {p5 .. p5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_2
+    if-eqz v2, :cond_2
 
-    new-instance v1, Ljava/lang/IllegalArgumentException;
+    new-instance v2, Ljava/lang/IllegalArgumentException;
 
-    const-string v2, "responseType is empty!!!"
+    const-string v3, "responseType is empty!!!"
 
-    invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v3}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    throw v1
+    throw v2
 
     :cond_2
-    new-instance v1, Landroid/content/IntentFilter;
+    new-instance v2, Landroid/content/IntentFilter;
 
-    sget-object v2, Lcom/xiaomi/channel/openauth/APP2SDKReceiver;->a:Ljava/lang/String;
+    sget-object v3, Lcom/xiaomi/channel/openauth/APP2SDKReceiver;->a:Ljava/lang/String;
 
-    invoke-direct {v1, v2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v3}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    new-instance v3, Lcom/xiaomi/channel/openauth/APP2SDKReceiver;
+    new-instance v5, Lcom/xiaomi/channel/openauth/APP2SDKReceiver;
 
-    invoke-direct {v3}, Lcom/xiaomi/channel/openauth/APP2SDKReceiver;-><init>()V
+    invoke-direct {v5}, Lcom/xiaomi/channel/openauth/APP2SDKReceiver;-><init>()V
 
-    invoke-virtual {p0, v3, v1}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+    invoke-virtual {p0, v5, v2}, Landroid/app/Activity;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     move-object/from16 v0, p8
 
     invoke-static {p0, v0}, Lcom/xiaomi/channel/openauth/c;->a(Landroid/app/Activity;Ljava/lang/String;)V
 
-    new-instance v11, Landroid/os/Handler;
+    new-instance v2, Landroid/os/Handler;
 
-    invoke-direct {v11}, Landroid/os/Handler;-><init>()V
+    invoke-direct {v2}, Landroid/os/Handler;-><init>()V
 
-    new-instance v1, Lcom/xiaomi/channel/openauth/d;
+    new-instance v3, Lcom/xiaomi/channel/openauth/d;
 
-    move-object v2, p0
+    move-object v4, p0
 
-    move-wide v4, p2
+    move-wide/from16 v6, p2
 
-    move-object/from16 v6, p4
+    move-object/from16 v8, p4
 
-    move-object/from16 v7, p5
+    move-object/from16 v9, p5
 
-    move-object/from16 v8, p6
+    move-object/from16 v10, p6
 
-    move-object/from16 v9, p7
+    move-object/from16 v11, p7
 
-    move v10, p1
+    move v12, p1
 
-    invoke-direct/range {v1 .. v10}, Lcom/xiaomi/channel/openauth/d;-><init>(Landroid/app/Activity;Lcom/xiaomi/channel/openauth/APP2SDKReceiver;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct/range {v3 .. v12}, Lcom/xiaomi/channel/openauth/d;-><init>(Landroid/app/Activity;Lcom/xiaomi/channel/openauth/APP2SDKReceiver;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
 
-    const-wide/16 v2, 0x64
+    const-wide/16 v4, 0x64
 
-    invoke-virtual {v11, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v2, v3, v4, v5}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     return-void
 .end method

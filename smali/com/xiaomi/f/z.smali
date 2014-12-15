@@ -34,9 +34,9 @@
 
 # direct methods
 .method public constructor <init>(Lcom/xiaomi/push/service/XMPushService;Lcom/xiaomi/f/n;)V
-    .locals 3
+    .locals 4
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
     const/4 v0, 0x0
 
@@ -52,15 +52,15 @@
 
     iput-object v0, p0, Lcom/xiaomi/f/z;->s:Ljava/lang/String;
 
-    iput-wide v1, p0, Lcom/xiaomi/f/z;->v:J
+    iput-wide v2, p0, Lcom/xiaomi/f/z;->v:J
 
-    iput-wide v1, p0, Lcom/xiaomi/f/z;->w:J
+    iput-wide v2, p0, Lcom/xiaomi/f/z;->w:J
 
     const-string v0, "<pf><p>t:%1$d</p></pf>"
 
     iput-object v0, p0, Lcom/xiaomi/f/z;->x:Ljava/lang/String;
 
-    iput-wide v1, p0, Lcom/xiaomi/f/z;->y:J
+    iput-wide v2, p0, Lcom/xiaomi/f/z;->y:J
 
     iput-object p1, p0, Lcom/xiaomi/f/z;->u:Lcom/xiaomi/push/service/XMPushService;
 
@@ -154,9 +154,9 @@
 
     invoke-static {v1}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/String;)V
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    invoke-direct {p0, v0, v1, v2, p1}, Lcom/xiaomi/f/z;->a(Ljava/lang/String;JLjava/lang/Exception;)V
+    invoke-direct {p0, v0, v2, v3, p1}, Lcom/xiaomi/f/z;->a(Ljava/lang/String;JLjava/lang/Exception;)V
 
     iput v4, p0, Lcom/xiaomi/f/z;->z:I
 
@@ -235,9 +235,9 @@
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_1
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    iput-wide v3, p0, Lcom/xiaomi/f/z;->y:J
+    iput-wide v4, p0, Lcom/xiaomi/f/z;->y:J
 
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -373,9 +373,9 @@
 
     move-result-object v2
 
-    iget-wide v3, p0, Lcom/xiaomi/f/z;->e:J
+    iget-wide v4, p0, Lcom/xiaomi/f/z;->e:J
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -625,7 +625,7 @@
 .end method
 
 .method private a(Ljava/lang/String;JLjava/lang/Exception;)V
-    .locals 7
+    .locals 8
 
     invoke-static {}, Lcom/xiaomi/f/n;->d()Ljava/lang/String;
 

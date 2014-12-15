@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/share_content" android:background="@color/main_ui_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="15.0sp" android:textColor="#e6ffffff" android:gravity="center" android:background="@color/bg_color_blue" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_h" android:text="@string/sport_running_helper" />
+    <com.amap.api.maps.MapView android:id="@id/map" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <include layout="@layout/fragment_running_share_detail_info" />
+    <TextView android:layout_width="fill_parent" android:layout_height="10.0dip" />
+    <include layout="@layout/brand_pane" />
+</LinearLayout>

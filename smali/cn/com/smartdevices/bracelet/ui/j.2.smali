@@ -32,7 +32,7 @@
 .method protected a()I
     .locals 1
 
-    const v0, 0x7f03002c
+    const v0, 0x7f03002d
 
     return v0
 .end method
@@ -60,7 +60,7 @@
 .end method
 
 .method protected d()V
-    .locals 5
+    .locals 6
 
     const/4 v3, 0x1
 
@@ -161,9 +161,9 @@
     :try_start_1
     invoke-virtual {v0, v1}, Landroid/app/DownloadManager;->enqueue(Landroid/app/DownloadManager$Request;)J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/u;->e(J)V
+    invoke-static {v4, v5}, Lcn/com/smartdevices/bracelet/u;->e(J)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -332,7 +332,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/j;->h:Ljava/lang/String;
 
-    const v0, 0x7f070105
+    const v0, 0x7f0b0110
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

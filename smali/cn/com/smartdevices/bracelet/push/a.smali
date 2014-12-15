@@ -48,9 +48,9 @@
 .end method
 
 .method public static b(Landroid/content/Context;)V
-    .locals 4
+    .locals 5
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -66,9 +66,9 @@
 
     move-result-object v1
 
-    iget-wide v1, v1, Lcn/com/smartdevices/bracelet/model/LoginData;->uid:J
+    iget-wide v2, v1, Lcn/com/smartdevices/bracelet/model/LoginData;->uid:J
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -76,7 +76,7 @@
 
     move-result-object v0
 
-    invoke-static {p0, v0, v3}, Lcom/xiaomi/mipush/sdk/f;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v0, v4}, Lcom/xiaomi/mipush/sdk/f;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;

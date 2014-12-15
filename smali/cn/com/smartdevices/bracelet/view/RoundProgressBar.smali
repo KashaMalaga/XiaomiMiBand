@@ -213,7 +213,7 @@
 .end method
 
 .method private a(IFF)V
-    .locals 3
+    .locals 4
 
     if-gtz p1, :cond_1
 
@@ -248,9 +248,9 @@
 
     mul-int/lit8 v1, p1, 0x14
 
-    int-to-long v1, v1
+    int-to-long v2, v1
 
-    invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+    invoke-virtual {v0, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     new-instance v0, Landroid/view/animation/LinearInterpolator;
 

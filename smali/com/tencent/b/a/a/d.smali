@@ -73,9 +73,9 @@
 
     const/4 v6, -0x1
 
-    const/4 v5, 0x0
+    const/4 v3, 0x0
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
     const/4 v2, 0x0
 
@@ -85,21 +85,21 @@
 
     iput v0, p0, Lcom/tencent/b/a/a/d;->a:I
 
-    iput-wide v3, p0, Lcom/tencent/b/a/a/d;->b:D
+    iput-wide v4, p0, Lcom/tencent/b/a/a/d;->b:D
 
-    iput-wide v3, p0, Lcom/tencent/b/a/a/d;->c:D
+    iput-wide v4, p0, Lcom/tencent/b/a/a/d;->c:D
 
     const-wide/high16 v0, -0x4010000000000000L
 
     iput-wide v0, p0, Lcom/tencent/b/a/a/d;->d:D
 
-    iput-wide v3, p0, Lcom/tencent/b/a/a/d;->e:D
+    iput-wide v4, p0, Lcom/tencent/b/a/a/d;->e:D
 
-    iput-wide v3, p0, Lcom/tencent/b/a/a/d;->f:D
+    iput-wide v4, p0, Lcom/tencent/b/a/a/d;->f:D
 
-    iput-wide v3, p0, Lcom/tencent/b/a/a/d;->g:D
+    iput-wide v4, p0, Lcom/tencent/b/a/a/d;->g:D
 
-    iput v5, p0, Lcom/tencent/b/a/a/d;->h:I
+    iput v3, p0, Lcom/tencent/b/a/a/d;->h:I
 
     iput-object v2, p0, Lcom/tencent/b/a/a/d;->i:Ljava/lang/String;
 
@@ -131,9 +131,9 @@
 
     iput-object v2, p0, Lcom/tencent/b/a/a/d;->w:Ljava/util/ArrayList;
 
-    iput-boolean v5, p0, Lcom/tencent/b/a/a/d;->x:Z
+    iput-boolean v3, p0, Lcom/tencent/b/a/a/d;->x:Z
 
-    iput v5, p0, Lcom/tencent/b/a/a/d;->y:I
+    iput v3, p0, Lcom/tencent/b/a/a/d;->y:I
 
     iput v6, p0, Lcom/tencent/b/a/a/d;->z:I
 
@@ -141,13 +141,13 @@
 
     iput-wide v0, p0, Lcom/tencent/b/a/a/d;->A:J
 
-    iput-wide v3, p0, Lcom/tencent/b/a/a/d;->e:D
+    iput-wide v4, p0, Lcom/tencent/b/a/a/d;->e:D
 
-    iput-wide v3, p0, Lcom/tencent/b/a/a/d;->d:D
+    iput-wide v4, p0, Lcom/tencent/b/a/a/d;->d:D
 
-    iput-wide v3, p0, Lcom/tencent/b/a/a/d;->c:D
+    iput-wide v4, p0, Lcom/tencent/b/a/a/d;->c:D
 
-    iput-wide v3, p0, Lcom/tencent/b/a/a/d;->b:D
+    iput-wide v4, p0, Lcom/tencent/b/a/a/d;->b:D
 
     iput-object v2, p0, Lcom/tencent/b/a/a/d;->p:Ljava/lang/String;
 
@@ -157,7 +157,7 @@
 
     iput-object v2, p0, Lcom/tencent/b/a/a/d;->m:Ljava/lang/String;
 
-    iput-boolean v5, p0, Lcom/tencent/b/a/a/d;->x:Z
+    iput-boolean v3, p0, Lcom/tencent/b/a/a/d;->x:Z
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -165,7 +165,7 @@
 
     iput-wide v0, p0, Lcom/tencent/b/a/a/d;->A:J
 
-    iput v5, p0, Lcom/tencent/b/a/a/d;->y:I
+    iput v3, p0, Lcom/tencent/b/a/a/d;->y:I
 
     iput v6, p0, Lcom/tencent/b/a/a/d;->z:I
 
@@ -177,9 +177,9 @@
 .method public constructor <init>(Lcom/tencent/b/a/a/d;)V
     .locals 6
 
-    const/4 v5, 0x0
+    const/4 v3, 0x0
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
     const/4 v2, 0x0
 
@@ -189,21 +189,21 @@
 
     iput v0, p0, Lcom/tencent/b/a/a/d;->a:I
 
-    iput-wide v3, p0, Lcom/tencent/b/a/a/d;->b:D
+    iput-wide v4, p0, Lcom/tencent/b/a/a/d;->b:D
 
-    iput-wide v3, p0, Lcom/tencent/b/a/a/d;->c:D
+    iput-wide v4, p0, Lcom/tencent/b/a/a/d;->c:D
 
     const-wide/high16 v0, -0x4010000000000000L
 
     iput-wide v0, p0, Lcom/tencent/b/a/a/d;->d:D
 
-    iput-wide v3, p0, Lcom/tencent/b/a/a/d;->e:D
+    iput-wide v4, p0, Lcom/tencent/b/a/a/d;->e:D
 
-    iput-wide v3, p0, Lcom/tencent/b/a/a/d;->f:D
+    iput-wide v4, p0, Lcom/tencent/b/a/a/d;->f:D
 
-    iput-wide v3, p0, Lcom/tencent/b/a/a/d;->g:D
+    iput-wide v4, p0, Lcom/tencent/b/a/a/d;->g:D
 
-    iput v5, p0, Lcom/tencent/b/a/a/d;->h:I
+    iput v3, p0, Lcom/tencent/b/a/a/d;->h:I
 
     iput-object v2, p0, Lcom/tencent/b/a/a/d;->i:Ljava/lang/String;
 
@@ -235,9 +235,9 @@
 
     iput-object v2, p0, Lcom/tencent/b/a/a/d;->w:Ljava/util/ArrayList;
 
-    iput-boolean v5, p0, Lcom/tencent/b/a/a/d;->x:Z
+    iput-boolean v3, p0, Lcom/tencent/b/a/a/d;->x:Z
 
-    iput v5, p0, Lcom/tencent/b/a/a/d;->y:I
+    iput v3, p0, Lcom/tencent/b/a/a/d;->y:I
 
     const/4 v0, -0x1
 
@@ -275,7 +275,7 @@
 
     iput-object v0, p0, Lcom/tencent/b/a/a/d;->i:Ljava/lang/String;
 
-    iput v5, p0, Lcom/tencent/b/a/a/d;->h:I
+    iput v3, p0, Lcom/tencent/b/a/a/d;->h:I
 
     iget-object v0, p1, Lcom/tencent/b/a/a/d;->j:Ljava/lang/String;
 

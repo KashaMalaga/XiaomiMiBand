@@ -77,9 +77,9 @@
 .end method
 
 .method public c(Ljava/lang/Object;)V
-    .locals 8
+    .locals 9
 
-    const/16 v7, 0xc
+    const/16 v8, 0xc
 
     const/4 v1, 0x1
 
@@ -117,11 +117,11 @@
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    const-wide/16 v5, -0x1
+    const-wide/16 v6, -0x1
 
-    cmp-long v0, v3, v5
+    cmp-long v0, v4, v6
 
     if-nez v0, :cond_1
 
@@ -150,7 +150,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v7}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+    invoke-virtual {v0, v8}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     move v0, v1
 
@@ -158,7 +158,7 @@
     iget-object v1, p0, Lcom/xiaomi/hm/bleservice/d;->b:Lcom/xiaomi/hm/bleservice/BLEService;
 
     # setter for: Lcom/xiaomi/hm/bleservice/BLEService;->mSyncBlockCount:I
-    invoke-static {v1, v7}, Lcom/xiaomi/hm/bleservice/BLEService;->access$1702(Lcom/xiaomi/hm/bleservice/BLEService;I)I
+    invoke-static {v1, v8}, Lcom/xiaomi/hm/bleservice/BLEService;->access$1702(Lcom/xiaomi/hm/bleservice/BLEService;I)I
 
     iget-object v1, p0, Lcom/xiaomi/hm/bleservice/d;->b:Lcom/xiaomi/hm/bleservice/BLEService;
 
@@ -179,17 +179,17 @@
     :cond_1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/u;->a(J)V
+    invoke-static {v4, v5}, Lcn/com/smartdevices/bracelet/u;->a(J)V
 
     check-cast p1, Ljava/lang/Long;
 
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/u;->c(J)V
+    invoke-static {v4, v5}, Lcn/com/smartdevices/bracelet/u;->c(J)V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/d;->b:Lcom/xiaomi/hm/bleservice/BLEService;
 

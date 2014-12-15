@@ -156,7 +156,7 @@
 
     iput-object v0, p0, Lkankan/wheel/widget/WheelView;->w:Ljava/util/List;
 
-    const v0, 0x7f0200d5
+    const v0, 0x7f0200d9
 
     iput v0, p0, Lkankan/wheel/widget/WheelView;->x:I
 
@@ -230,7 +230,7 @@
 
     iput-object v0, p0, Lkankan/wheel/widget/WheelView;->w:Ljava/util/List;
 
-    const v0, 0x7f0200d5
+    const v0, 0x7f0200d9
 
     iput v0, p0, Lkankan/wheel/widget/WheelView;->x:I
 
@@ -304,7 +304,7 @@
 
     iput-object v0, p0, Lkankan/wheel/widget/WheelView;->w:Ljava/util/List;
 
-    const v0, 0x7f0200d5
+    const v0, 0x7f0200d9
 
     iput v0, p0, Lkankan/wheel/widget/WheelView;->x:I
 
@@ -657,13 +657,13 @@
 
     div-int/lit8 v1, v1, 0x2
 
-    int-to-double v1, v1
+    int-to-double v2, v1
 
-    const-wide v3, 0x3ff3333333333333L
+    const-wide v4, 0x3ff3333333333333L
 
-    mul-double/2addr v1, v3
+    mul-double/2addr v2, v4
 
-    double-to-int v1, v1
+    double-to-int v1, v2
 
     iget-object v2, p0, Lkankan/wheel/widget/WheelView;->k:Landroid/graphics/drawable/Drawable;
 
@@ -1181,7 +1181,7 @@
 .end method
 
 .method private k()Lkankan/wheel/widget/a;
-    .locals 7
+    .locals 6
 
     invoke-direct {p0}, Lkankan/wheel/widget/WheelView;->j()I
 
@@ -1242,15 +1242,15 @@
 
     sub-int/2addr v1, v2
 
-    int-to-double v3, v0
+    int-to-double v4, v0
 
-    int-to-double v5, v2
+    int-to-double v2, v2
 
-    invoke-static {v5, v6}, Ljava/lang/Math;->asin(D)D
+    invoke-static {v2, v3}, Ljava/lang/Math;->asin(D)D
 
-    move-result-wide v5
+    move-result-wide v2
 
-    add-double v2, v3, v5
+    add-double/2addr v2, v4
 
     double-to-int v0, v2
 
@@ -1578,7 +1578,7 @@
 .method public a(Ljava/lang/String;F)Lkankan/wheel/widget/WheelView;
     .locals 6
 
-    const v2, 0x7f08003c
+    const v2, 0x7f07003c
 
     const/16 v3, 0xa
 

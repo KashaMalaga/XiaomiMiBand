@@ -3,39 +3,39 @@
 
 
 # static fields
-.field public static final A:Ljava/lang/String; = "section"
+.field public static final A:Ljava/lang/String; = "dgc"
 
-.field public static final B:Ljava/lang/String; = "s"
+.field public static final B:Ljava/lang/String; = "section"
 
-.field public static final C:Ljava/lang/String; = "e"
+.field public static final C:Ljava/lang/String; = "s"
 
-.field public static final D:Ljava/lang/String; = "mins"
+.field public static final D:Ljava/lang/String; = "e"
 
-.field public static final E:Ljava/lang/String; = "maxs"
+.field public static final E:Ljava/lang/String; = "mins"
 
-.field public static final F:Ljava/lang/String; = "minp"
+.field public static final F:Ljava/lang/String; = "maxs"
 
-.field public static final G:Ljava/lang/String; = "maxp"
+.field public static final G:Ljava/lang/String; = "minp"
+
+.field public static final H:Ljava/lang/String; = "maxp"
 
 .field private static final serialVersionUID:J = 0x1L
 
-.field public static final t:Ljava/lang/String; = "al"
+.field public static final u:Ljava/lang/String; = "al"
 
-.field public static final u:Ljava/lang/String; = "st"
+.field public static final v:Ljava/lang/String; = "st"
 
-.field public static final v:Ljava/lang/String; = "ed"
+.field public static final w:Ljava/lang/String; = "ed"
 
-.field public static final w:Ljava/lang/String; = "ctoffstpm"
+.field public static final x:Ljava/lang/String; = "ctoffstpm"
 
-.field public static final x:Ljava/lang/String; = "ctoflstpm"
+.field public static final y:Ljava/lang/String; = "ctoflstpm"
 
-.field public static final y:Ljava/lang/String; = "step"
-
-.field public static final z:Ljava/lang/String; = "dgc"
+.field public static final z:Ljava/lang/String; = "step"
 
 
 # instance fields
-.field private H:Landroid/util/SparseArray;
+.field private I:Landroid/util/SparseArray;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Landroid/util/SparseArray",
@@ -46,27 +46,25 @@
     .end annotation
 .end field
 
-.field private I:D
-
 .field private J:D
 
-.field private K:F
+.field private K:D
 
 .field private L:F
 
-.field private M:J
+.field private M:F
 
 .field private N:J
 
-.field private O:I
+.field private O:J
 
-.field private P:F
+.field private P:I
 
 .field private Q:F
 
-.field private R:I
+.field private R:F
 
-.field private S:F
+.field private S:I
 
 .field private T:F
 
@@ -74,12 +72,14 @@
 
 .field private V:F
 
+.field private W:F
+
 
 # direct methods
 .method public constructor <init>(JLjava/lang/String;)V
-    .locals 7
+    .locals 9
 
-    const-wide/16 v5, 0x0
+    const-wide/16 v6, 0x0
 
     const/4 v4, 0x0
 
@@ -91,35 +91,35 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->H:Landroid/util/SparseArray;
-
-    iput-wide v2, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->I:D
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->I:Landroid/util/SparseArray;
 
     iput-wide v2, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->J:D
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->K:F
+    iput-wide v2, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->K:D
 
     iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->L:F
 
-    iput-wide v5, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->M:J
+    iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->M:F
 
-    iput-wide v5, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->N:J
+    iput-wide v6, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->N:J
 
-    iput v4, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->O:I
+    iput-wide v6, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->O:J
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->P:F
+    iput v4, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->P:I
 
     iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->Q:F
 
-    iput v4, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->R:I
+    iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->R:F
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->S:F
+    iput v4, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->S:I
 
     iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->T:F
 
     iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->U:F
 
     iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->V:F
+
+    iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->W:F
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -129,65 +129,65 @@
 
     div-long/2addr v0, v2
 
-    iput-wide v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->M:J
+    iput-wide v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->N:J
 
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->H:Landroid/util/SparseArray;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->I:Landroid/util/SparseArray;
 
     return-void
 .end method
 
 .method public constructor <init>(Lorg/json/JSONObject;J)V
-    .locals 7
+    .locals 8
 
-    const/4 v6, 0x2
+    const/4 v5, 0x2
 
-    const-wide/16 v4, 0x0
+    const-wide/16 v2, 0x0
 
     const/4 v0, 0x0
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
     invoke-direct {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/gps/services/n;-><init>(Lorg/json/JSONObject;J)V
 
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->H:Landroid/util/SparseArray;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->I:Landroid/util/SparseArray;
 
-    iput-wide v4, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->I:D
+    iput-wide v2, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->J:D
 
-    iput-wide v4, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->J:D
+    iput-wide v2, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->K:D
 
-    iput v3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->K:F
+    iput v4, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->L:F
 
-    iput v3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->L:F
+    iput v4, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->M:F
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    iput-wide v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->M:J
+    iput-wide v2, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->N:J
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    iput-wide v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->N:J
+    iput-wide v2, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->O:J
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->O:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->P:I
 
-    iput v3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->P:F
+    iput v4, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->Q:F
 
-    iput v3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->Q:F
+    iput v4, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->R:F
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->R:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->S:I
 
-    iput v3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->S:F
+    iput v4, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->T:F
 
-    iput v3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->T:F
+    iput v4, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->U:F
 
-    iput v3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->U:F
+    iput v4, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->V:F
 
-    iput v3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->V:F
+    iput v4, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->W:F
 
     :try_start_0
     const-string v1, "al"
@@ -220,7 +220,7 @@
 
     array-length v2, v1
 
-    if-lt v2, v6, :cond_0
+    if-lt v2, v5, :cond_0
 
     const/4 v2, 0x0
 
@@ -234,7 +234,7 @@
 
     move-result-wide v2
 
-    iput-wide v2, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->I:D
+    iput-wide v2, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->J:D
 
     const/4 v2, 0x1
 
@@ -246,9 +246,9 @@
 
     invoke-virtual {v1}, Ljava/lang/Double;->doubleValue()D
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->J:D
+    iput-wide v2, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->K:D
 
     :cond_0
     const-string v1, "st"
@@ -263,9 +263,9 @@
 
     invoke-virtual {p1, v1}, Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->M:J
+    iput-wide v2, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->N:J
 
     :cond_1
     const-string v1, "ed"
@@ -280,9 +280,9 @@
 
     invoke-virtual {p1, v1}, Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->N:J
+    iput-wide v2, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->O:J
 
     :cond_2
     const-string v1, "step"
@@ -299,7 +299,7 @@
 
     move-result v1
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->O:I
+    iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->P:I
 
     :cond_3
     const-string v1, "ctoffstpm"
@@ -324,7 +324,7 @@
 
     move-result v1
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->P:F
+    iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->Q:F
 
     :cond_4
     const-string v1, "ctoflstpm"
@@ -349,7 +349,7 @@
 
     move-result v1
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->Q:F
+    iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->R:F
 
     :cond_5
     const-string v1, "dgc"
@@ -366,7 +366,7 @@
 
     move-result v1
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->R:I
+    iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->S:I
 
     :cond_6
     const-string v1, "mins"
@@ -391,7 +391,7 @@
 
     move-result v1
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->T:F
+    iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->U:F
 
     :cond_7
     const-string v1, "maxs"
@@ -416,7 +416,7 @@
 
     move-result v1
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->S:F
+    iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->T:F
 
     :cond_8
     const-string v1, "minp"
@@ -441,7 +441,7 @@
 
     move-result v1
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->V:F
+    iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->W:F
 
     :cond_9
     const-string v1, "maxp"
@@ -466,7 +466,7 @@
 
     move-result v1
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->U:F
+    iput v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->V:F
 
     :cond_a
     const-string v1, "section"
@@ -493,7 +493,7 @@
 
     invoke-direct {v3, v2}, Landroid/util/SparseArray;-><init>(I)V
 
-    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->H:Landroid/util/SparseArray;
+    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->I:Landroid/util/SparseArray;
 
     :goto_0
     if-ge v0, v2, :cond_b
@@ -534,7 +534,7 @@
 
     aput-object v3, v4, v5
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->H:Landroid/util/SparseArray;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->I:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v0, v4}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
     :try_end_0
@@ -562,15 +562,15 @@
 .method static synthetic a(Lcn/com/smartdevices/bracelet/gps/services/o;)D
     .locals 2
 
-    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->I:D
+    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->J:D
 
     return-wide v0
 .end method
 
 .method static synthetic a(Lcn/com/smartdevices/bracelet/gps/services/o;D)D
-    .locals 0
+    .locals 1
 
-    iput-wide p1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->I:D
+    iput-wide p1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->J:D
 
     return-wide p1
 .end method
@@ -578,7 +578,7 @@
 .method static synthetic a(Lcn/com/smartdevices/bracelet/gps/services/o;F)F
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->L:F
+    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->M:F
 
     return p1
 .end method
@@ -586,15 +586,15 @@
 .method static synthetic a(Lcn/com/smartdevices/bracelet/gps/services/o;I)I
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->O:I
+    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->P:I
 
     return p1
 .end method
 
 .method static synthetic a(Lcn/com/smartdevices/bracelet/gps/services/o;J)J
-    .locals 0
+    .locals 1
 
-    iput-wide p1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->N:J
+    iput-wide p1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->O:J
 
     return-wide p1
 .end method
@@ -602,15 +602,15 @@
 .method static synthetic b(Lcn/com/smartdevices/bracelet/gps/services/o;)D
     .locals 2
 
-    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->J:D
+    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->K:D
 
     return-wide v0
 .end method
 
 .method static synthetic b(Lcn/com/smartdevices/bracelet/gps/services/o;D)D
-    .locals 0
+    .locals 1
 
-    iput-wide p1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->J:D
+    iput-wide p1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->K:D
 
     return-wide p1
 .end method
@@ -618,7 +618,7 @@
 .method static synthetic b(Lcn/com/smartdevices/bracelet/gps/services/o;F)F
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->K:F
+    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->L:F
 
     return p1
 .end method
@@ -626,7 +626,7 @@
 .method static synthetic c(Lcn/com/smartdevices/bracelet/gps/services/o;)F
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->U:F
+    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->V:F
 
     return v0
 .end method
@@ -634,7 +634,7 @@
 .method static synthetic c(Lcn/com/smartdevices/bracelet/gps/services/o;F)F
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->U:F
+    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->V:F
 
     return p1
 .end method
@@ -642,7 +642,7 @@
 .method static synthetic d(Lcn/com/smartdevices/bracelet/gps/services/o;)F
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->V:F
+    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->W:F
 
     return v0
 .end method
@@ -650,7 +650,7 @@
 .method static synthetic d(Lcn/com/smartdevices/bracelet/gps/services/o;F)F
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->V:F
+    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->W:F
 
     return p1
 .end method
@@ -658,7 +658,7 @@
 .method static synthetic e(Lcn/com/smartdevices/bracelet/gps/services/o;)F
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->S:F
+    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->T:F
 
     return v0
 .end method
@@ -666,7 +666,7 @@
 .method static synthetic e(Lcn/com/smartdevices/bracelet/gps/services/o;F)F
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->S:F
+    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->T:F
 
     return p1
 .end method
@@ -674,7 +674,7 @@
 .method static synthetic f(Lcn/com/smartdevices/bracelet/gps/services/o;)F
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->T:F
+    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->U:F
 
     return v0
 .end method
@@ -682,7 +682,7 @@
 .method static synthetic f(Lcn/com/smartdevices/bracelet/gps/services/o;F)F
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->T:F
+    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->U:F
 
     return p1
 .end method
@@ -690,7 +690,7 @@
 .method static synthetic g(Lcn/com/smartdevices/bracelet/gps/services/o;)F
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->L:F
+    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->M:F
 
     return v0
 .end method
@@ -698,7 +698,7 @@
 .method static synthetic g(Lcn/com/smartdevices/bracelet/gps/services/o;F)F
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->P:F
+    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->Q:F
 
     return p1
 .end method
@@ -706,7 +706,7 @@
 .method static synthetic h(Lcn/com/smartdevices/bracelet/gps/services/o;)F
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->K:F
+    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->L:F
 
     return v0
 .end method
@@ -714,7 +714,7 @@
 .method static synthetic h(Lcn/com/smartdevices/bracelet/gps/services/o;F)F
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->Q:F
+    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->R:F
 
     return p1
 .end method
@@ -722,7 +722,7 @@
 .method static synthetic i(Lcn/com/smartdevices/bracelet/gps/services/o;)F
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->P:F
+    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->Q:F
 
     return v0
 .end method
@@ -730,7 +730,7 @@
 .method static synthetic j(Lcn/com/smartdevices/bracelet/gps/services/o;)F
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->Q:F
+    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->R:F
 
     return v0
 .end method
@@ -749,43 +749,55 @@
     :try_start_0
     const-string v1, "dgc"
 
-    iget v3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->R:I
+    iget v3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->S:I
 
     invoke-virtual {v2, v1, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
     const-string v1, "st"
 
-    iget-wide v3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->M:J
+    iget-wide v4, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->N:J
 
-    invoke-virtual {v2, v1, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-virtual {v2, v1, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
     const-string v1, "ed"
 
-    iget-wide v3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->N:J
+    iget-wide v4, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->O:J
 
-    invoke-virtual {v2, v1, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-virtual {v2, v1, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
     const-string v1, "step"
 
-    iget v3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->O:I
+    iget v3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->P:I
 
     invoke-virtual {v2, v1, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
     const-string v1, "ctoffstpm"
 
-    iget v3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->P:F
+    iget v3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->Q:F
 
-    float-to-double v3, v3
+    const/4 v4, 0x6
 
-    invoke-virtual {v2, v1, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/gps/d/d;->a(FI)F
+
+    move-result v3
+
+    float-to-double v4, v3
+
+    invoke-virtual {v2, v1, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
 
     const-string v1, "ctoflstpm"
 
-    iget v3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->Q:F
+    iget v3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->R:F
 
-    float-to-double v3, v3
+    const/4 v4, 0x6
 
-    invoke-virtual {v2, v1, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/gps/d/d;->a(FI)F
+
+    move-result v3
+
+    float-to-double v4, v3
+
+    invoke-virtual {v2, v1, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
 
     const-string v1, "al"
 
@@ -793,7 +805,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-wide v4, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->I:D
+    iget-wide v4, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->J:D
 
     invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
@@ -805,7 +817,7 @@
 
     move-result-object v3
 
-    iget-wide v4, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->J:D
+    iget-wide v4, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->K:D
 
     invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
@@ -819,41 +831,65 @@
 
     const-string v1, "mins"
 
-    iget v3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->T:F
+    iget v3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->U:F
 
-    float-to-double v3, v3
+    const/4 v4, 0x6
 
-    invoke-virtual {v2, v1, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/gps/d/d;->a(FI)F
+
+    move-result v3
+
+    float-to-double v4, v3
+
+    invoke-virtual {v2, v1, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
 
     const-string v1, "maxs"
 
-    iget v3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->S:F
+    iget v3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->T:F
 
-    float-to-double v3, v3
+    const/4 v4, 0x6
 
-    invoke-virtual {v2, v1, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/gps/d/d;->a(FI)F
+
+    move-result v3
+
+    float-to-double v4, v3
+
+    invoke-virtual {v2, v1, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
 
     const-string v1, "minp"
 
-    iget v3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->V:F
+    iget v3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->W:F
 
-    float-to-double v3, v3
+    const/4 v4, 0x6
 
-    invoke-virtual {v2, v1, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/gps/d/d;->a(FI)F
+
+    move-result v3
+
+    float-to-double v4, v3
+
+    invoke-virtual {v2, v1, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
 
     const-string v1, "maxp"
 
-    iget v3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->U:F
+    iget v3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->V:F
 
-    float-to-double v3, v3
+    const/4 v4, 0x6
 
-    invoke-virtual {v2, v1, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/gps/d/d;->a(FI)F
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->H:Landroid/util/SparseArray;
+    move-result v3
+
+    float-to-double v4, v3
+
+    invoke-virtual {v2, v1, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->I:Landroid/util/SparseArray;
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->H:Landroid/util/SparseArray;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->I:Landroid/util/SparseArray;
 
     invoke-virtual {v1}, Landroid/util/SparseArray;->size()I
 
@@ -865,7 +901,7 @@
 
     invoke-direct {v3}, Lorg/json/JSONArray;-><init>()V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->H:Landroid/util/SparseArray;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->I:Landroid/util/SparseArray;
 
     invoke-virtual {v1}, Landroid/util/SparseArray;->size()I
 
@@ -876,7 +912,7 @@
     :goto_0
     if-ge v1, v4, :cond_2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->H:Landroid/util/SparseArray;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->I:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -953,7 +989,7 @@
 .method public a(I)V
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->R:I
+    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->S:I
 
     return-void
 .end method
@@ -961,7 +997,7 @@
 .method public a(II)V
     .locals 5
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->H:Landroid/util/SparseArray;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->I:Landroid/util/SparseArray;
 
     if-nez v0, :cond_0
 
@@ -972,9 +1008,9 @@
     throw v0
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->H:Landroid/util/SparseArray;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->I:Landroid/util/SparseArray;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->H:Landroid/util/SparseArray;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->I:Landroid/util/SparseArray;
 
     invoke-virtual {v1}, Landroid/util/SparseArray;->size()I
 
@@ -1010,11 +1046,11 @@
 
     const/4 v5, 0x1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->H:Landroid/util/SparseArray;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->I:Landroid/util/SparseArray;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->H:Landroid/util/SparseArray;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->I:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
 
@@ -1030,9 +1066,9 @@
     throw v0
 
     :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->H:Landroid/util/SparseArray;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->I:Landroid/util/SparseArray;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->H:Landroid/util/SparseArray;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->I:Landroid/util/SparseArray;
 
     invoke-virtual {v1}, Landroid/util/SparseArray;->size()I
 
@@ -1063,7 +1099,7 @@
     return-void
 .end method
 
-.method public k()[D
+.method public l()[D
     .locals 4
 
     const/4 v0, 0x2
@@ -1072,25 +1108,17 @@
 
     const/4 v1, 0x0
 
-    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->J:D
+    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->K:D
 
     aput-wide v2, v0, v1
 
     const/4 v1, 0x1
 
-    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->I:D
+    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->J:D
 
     aput-wide v2, v0, v1
 
     return-object v0
-.end method
-
-.method public l()F
-    .locals 1
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->K:F
-
-    return v0
 .end method
 
 .method public m()F
@@ -1104,20 +1132,28 @@
 .method public n()F
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->Q:F
+    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->M:F
 
     return v0
 .end method
 
-.method public o()I
+.method public o()F
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->R:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->R:F
 
     return v0
 .end method
 
-.method public p()Ljava/util/List;
+.method public p()I
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->S:I
+
+    return v0
+.end method
+
+.method public q()Ljava/util/List;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1129,7 +1165,7 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->H:Landroid/util/SparseArray;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->I:Landroid/util/SparseArray;
 
     if-nez v0, :cond_1
 
@@ -1139,7 +1175,7 @@
     return-object v0
 
     :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->H:Landroid/util/SparseArray;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->I:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
 
@@ -1154,7 +1190,7 @@
     :goto_0
     if-ge v1, v2, :cond_0
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->H:Landroid/util/SparseArray;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->I:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -1167,34 +1203,34 @@
     goto :goto_0
 .end method
 
-.method public q()F
+.method public r()F
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->P:F
+    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->Q:F
 
     return v0
 .end method
 
-.method public r()J
+.method public s()J
     .locals 2
 
-    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->M:J
+    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->N:J
 
     return-wide v0
 .end method
 
-.method public s()I
+.method public t()I
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->O:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->P:I
 
     return v0
 .end method
 
-.method public t()J
+.method public u()J
     .locals 2
 
-    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->N:J
+    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/gps/services/o;->O:J
 
     return-wide v0
 .end method

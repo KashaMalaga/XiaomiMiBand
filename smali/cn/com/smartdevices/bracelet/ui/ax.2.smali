@@ -72,7 +72,7 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 3
 
-    const v0, 0x7f030069
+    const v0, 0x7f030070
 
     const/4 v1, 0x0
 
@@ -84,7 +84,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ax;->a:Ljava/lang/String;
 
-    const v0, 0x7f070022
+    const v0, 0x7f0b0001
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -94,7 +94,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ax;->b:Landroid/webkit/WebView;
 
-    const v0, 0x7f0701d1
+    const v0, 0x7f0b01f2
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

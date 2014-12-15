@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/view/View$OnLongClickListener;
 
 
 # instance fields
@@ -22,14 +22,31 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 1
+.method public onLongClick(Landroid/view/View;)Z
+    .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cn;->a:Lcn/com/smartdevices/bracelet/ui/ck;
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/config/a;->c:Z
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ck;->c(Lcn/com/smartdevices/bracelet/ui/ck;)V
+    if-eqz v0, :cond_0
 
-    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+    new-instance v0, Landroid/content/Intent;
 
-    return-void
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cn;->a:Lcn/com/smartdevices/bracelet/ui/ck;
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/ui/ck;->getActivity()Landroid/app/Activity;
+
+    move-result-object v1
+
+    const-class v2, Lcn/com/smartdevices/bracelet/config/DebugActivity;
+
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cn;->a:Lcn/com/smartdevices/bracelet/ui/ck;
+
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/ui/ck;->startActivity(Landroid/content/Intent;)V
+
+    :cond_0
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/config/a;->c:Z
+
+    return v0
 .end method

@@ -33,12 +33,12 @@
     <attr name="ptrHeaderTextColor" format="reference|color" />
     <attr name="ptrHeaderSubTextColor" format="reference|color" />
     <attr name="ptrMode">
-        <flag name="disabled" value="0x00000000" />
-        <flag name="pullFromStart" value="0x00000001" />
-        <flag name="pullFromEnd" value="0x00000002" />
         <flag name="both" value="0x00000003" />
+        <flag name="disabled" value="0x00000000" />
         <flag name="manualOnly" value="0x00000004" />
         <flag name="pullDownFromTop" value="0x00000001" />
+        <flag name="pullFromEnd" value="0x00000002" />
+        <flag name="pullFromStart" value="0x00000001" />
         <flag name="pullUpFromBottom" value="0x00000002" />
     </attr>
     <attr name="ptrShowIndicator" format="reference|boolean" />
@@ -49,8 +49,8 @@
     <attr name="ptrHeaderTextAppearance" format="reference" />
     <attr name="ptrSubHeaderTextAppearance" format="reference" />
     <attr name="ptrAnimationStyle">
-        <flag name="rotate" value="0x00000000" />
         <flag name="flip" value="0x00000001" />
+        <flag name="rotate" value="0x00000000" />
     </attr>
     <attr name="ptrScrollingWhileRefreshingEnabled" format="reference|boolean" />
     <attr name="ptrListViewExtrasEnabled" format="reference|boolean" />
@@ -87,20 +87,20 @@
     <attr name="gap" format="dimension" />
     <attr name="effect">
         <enum name="flip" value="5" />
-        <enum name="standard" value="0" />
-        <enum name="grow" value="1" />
         <enum name="cards" value="2" />
         <enum name="curl" value="3" />
-        <enum name="wave" value="4" />
-        <enum name="fly" value="6" />
-        <enum name="reverse_fly" value="7" />
-        <enum name="helix" value="8" />
-        <enum name="fan" value="9" />
-        <enum name="tilt" value="10" />
-        <enum name="zipper" value="11" />
         <enum name="fade" value="12" />
-        <enum name="twirl" value="13" />
+        <enum name="fan" value="9" />
+        <enum name="fly" value="6" />
+        <enum name="grow" value="1" />
+        <enum name="helix" value="8" />
+        <enum name="reverse_fly" value="7" />
         <enum name="slide_in" value="14" />
+        <enum name="standard" value="0" />
+        <enum name="tilt" value="10" />
+        <enum name="twirl" value="13" />
+        <enum name="wave" value="4" />
+        <enum name="zipper" value="11" />
     </attr>
     <attr name="only_animate_new_items" format="boolean" />
     <attr name="only_animate_fling" format="boolean" />
@@ -117,9 +117,9 @@
     <attr name="show_style" format="string" />
     <attr name="swipeable" format="boolean" />
     <attr name="guidelines">
+        <enum name="off" value="0" />
         <enum name="on" value="2" />
         <enum name="onTouch" value="1" />
-        <enum name="off" value="0" />
     </attr>
     <attr name="fixAspectRatio" format="boolean" />
     <attr name="aspectRatioX" format="integer" />
@@ -140,8 +140,8 @@
     <attr name="max" format="integer" />
     <attr name="textIsDisplayable" format="boolean" />
     <attr name="style">
-        <enum name="STROKE" value="0" />
         <enum name="FILL" value="1" />
+        <enum name="STROKE" value="0" />
     </attr>
     <attr name="centerImg" format="reference" />
     <attr name="labCircleSrc" format="reference" />

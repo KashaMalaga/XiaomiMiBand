@@ -7,7 +7,7 @@
 
 .field private b:Lcn/com/smartdevices/bracelet/lab/ui/M;
 
-.field private c:Lcn/com/smartdevices/bracelet/open/f;
+.field private c:Lcn/com/smartdevices/bracelet/open/g;
 
 
 # direct methods
@@ -36,7 +36,7 @@
 .method private a()V
     .locals 2
 
-    const v0, 0x7f07003f
+    const v0, 0x7f0b0043
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->findViewById(I)Landroid/view/View;
 
@@ -44,7 +44,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f0c0215
+    const v1, 0x7f0c0222
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->getString(I)Ljava/lang/String;
 
@@ -68,17 +68,17 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f03000d
+    const v0, 0x7f03000e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->setContentView(I)V
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->a()V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/open/f;
+    new-instance v0, Lcn/com/smartdevices/bracelet/open/g;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/open/f;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/open/g;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->c:Lcn/com/smartdevices/bracelet/open/f;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->c:Lcn/com/smartdevices/bracelet/open/g;
 
     new-instance v0, Lcn/com/smartdevices/bracelet/lab/ui/M;
 
@@ -90,7 +90,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->b:Lcn/com/smartdevices/bracelet/lab/ui/M;
 
-    const v0, 0x7f070040
+    const v0, 0x7f0b0044
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->findViewById(I)Landroid/view/View;
 
@@ -120,9 +120,9 @@
 
     invoke-virtual {v0, p0}, Lde/greenrobot/event/EventBus;->register(Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->c:Lcn/com/smartdevices/bracelet/open/f;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->c:Lcn/com/smartdevices/bracelet/open/g;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/open/f;->b()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/open/g;->b()V
 
     return-void
 .end method

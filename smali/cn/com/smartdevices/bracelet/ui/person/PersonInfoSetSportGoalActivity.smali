@@ -115,15 +115,15 @@
 
 # virtual methods
 .method public a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
-    .locals 3
+    .locals 4
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/u;->b()Lcn/com/smartdevices/bracelet/model/LoginData;
 
     move-result-object v0
 
-    iget-wide v1, v0, Lcn/com/smartdevices/bracelet/model/LoginData;->uid:J
+    iget-wide v2, v0, Lcn/com/smartdevices/bracelet/model/LoginData;->uid:J
 
-    iput-wide v1, p1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->uid:J
+    iput-wide v2, p1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->uid:J
 
     new-instance v1, Lcn/com/smartdevices/bracelet/ui/person/a;
 
@@ -189,13 +189,13 @@
 
     invoke-super/range {p0 .. p1}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoBaseActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f03001e
+    const v0, 0x7f03001f
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetSportGoalActivity;->setContentView(I)V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetSportGoalActivity;->a()V
 
-    const v0, 0x7f0700b1
+    const v0, 0x7f0b00b5
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetSportGoalActivity;->findViewById(I)Landroid/view/View;
 
@@ -213,7 +213,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0200d4
+    const v1, 0x7f0200d8
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
@@ -225,7 +225,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f080005
+    const v2, 0x7f070005
 
     const/16 v3, 0xc
 
@@ -249,7 +249,7 @@
 
     move-result-object v1
 
-    const v5, 0x7f080004
+    const v5, 0x7f070004
 
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -259,7 +259,7 @@
 
     move-result-object v1
 
-    const v6, 0x7f080005
+    const v6, 0x7f070005
 
     invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -269,7 +269,7 @@
 
     move-result-object v1
 
-    const v7, 0x7f08002d
+    const v7, 0x7f07002d
 
     invoke-virtual {v1, v7}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -293,7 +293,7 @@
 
     invoke-virtual {v14, v0}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/a/f;)Lkankan/wheel/widget/WheelView;
 
-    const v0, 0x7f0700b0
+    const v0, 0x7f0b00b4
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetSportGoalActivity;->findViewById(I)Landroid/view/View;
 

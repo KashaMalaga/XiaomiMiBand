@@ -54,7 +54,7 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 3
+    .locals 4
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -66,9 +66,9 @@
 
     move-result-object v0
 
-    iget-wide v1, p0, Lcn/com/smartdevices/bracelet/model/LoginData;->uid:J
+    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/model/LoginData;->uid:J
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

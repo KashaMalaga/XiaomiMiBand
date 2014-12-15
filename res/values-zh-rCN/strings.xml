@@ -563,10 +563,18 @@
     <string name="closed">关闭</string>
     <string name="birthday">出生年月</string>
     <string name="user_agreement_ux">参加用户体验改善计划</string>
+    <string name="weight_test_dynamic_detail">体重：%1$s%2$s</string>
     <string name="bind_devices">绑定设备</string>
     <string name="bind_mi_band">绑定小米手环</string>
     <string name="bind_mi_band_about"><Data>&lt;a href=http://www.mi.com>了解小米手环&lt;/a></Data></string>
     <string name="read_useragreement">我已阅读并同意用户协议与隐私条款</string>
+    <string name="search_weight_scale">搜索智能秤</string>
+    <string name="search_weight_scale_info">正在搜索，请靠近智能秤</string>
+    <string name="set_unit">单位设定</string>
+    <string name="weight_unbinded">正在解除智能秤绑定</string>
+    <string name="weight_scale">智能秤</string>
+    <string name="band">手环</string>
+    <string name="bind_weight_scale">绑定新智能秤</string>
     <string name="lab_factory_title">实验室</string>
     <string name="lab_factory_sport_type_situp">仰卧起坐</string>
     <string name="lab_factory_sport_type_ropeskipping">跳绳</string>
@@ -648,14 +656,14 @@
     <string name="lab_factory_disconnected_reminder">蓝牙断开连接提醒</string>
     <string name="lab_factory_disconnected_reminder_tips">当手环与手机蓝牙连接断开时，手环会振动1次并且点亮白色指示灯进行提醒</string>
     <string name="lab_factory_disconnected_reminder_disconnect">请先连接手环,再进行提醒设置</string>
-    <string name="sport_running_helper">跑步伴侣</string>
+    <string name="sport_running_helper">跑步</string>
     <string name="sport_share">立即分享</string>
     <string name="sport_running_no_gps">打开GPS才能准确记录你的运动轨迹，是否打开？</string>
     <string name="sport_running_set_speed">速度提醒</string>
     <string name="sport_running_speed">时速</string>
     <string name="sport_running_speed_with_unit">时速(公里/时)</string>
     <string name="sport_running_real_time_pace">配速(分/公里)</string>
-    <string name="sport_running_pace">平均配速</string>
+    <string name="sport_running_pace">配速</string>
     <string name="sport_running_set_goal">跑步目标</string>
     <string name="sport_running_set_dist">距离提醒</string>
     <string name="sport_running_speed_detail">%.2f公里/时</string>
@@ -673,6 +681,7 @@
     <string name="sport_running_history">历史</string>
     <string name="sport_running_slider_prompt">>>>向右滑动暂停</string>
     <string name="sport_running_distance">距离</string>
+    <string name="sport_running_distance_unit">距离(公里)</string>
     <string name="sport_running_average_speed">平均速度</string>
     <string name="sport_running_step">步数</string>
     <string name="sport_running_altitude">海拔</string>
@@ -684,31 +693,47 @@
 %d年"</string>
     <string name="sport_running_history_no_data">暂无数据</string>
     <string name="sport_running_cost_cal">%.1f千卡</string>
-    <string name="sport_running_prepare_map">正在准备地图数据，请稍候……</string>
+    <string name="sport_running_prepare_map">正在准备数据，请稍候……</string>
     <string name="sport_running_prompt_per_kilometer" formatted="false">您已经跑了%s公里，用时%s，最近一公里用时%s</string>
     <string name="sport_running_prompt_great">好棒！！</string>
     <string name="sport_running_prompt_come_on">加油加油！！</string>
     <string name="sport_running_kilometers">公里</string>
     <string name="sport_running_per_kilometers">/公里</string>
     <string name="sport_running_kilometers_per_hour">公里/时</string>
+    <string name="sport_running_gps_locating">GPS定位中……</string>
+    <string name="sport_running_set_pace">配速提醒</string>
+    <string name="sport_running_lable_miles_fastest">公里最快</string>
+    <string name="sport_running_lable_km_slowest">公里最慢</string>
     <string name="sport_ranking_desc_poor">您的成绩在所有%s用户中垫底，加油啊！</string>
-    <string name="sport_ranking_desc_normal" formatted="false">您打败了全国 &lt;b>%s&lt;/b> 的%s用户！</string>
+    <string name="sport_ranking_desc_normal" formatted="false">您打败了 &lt;b>%s&lt;/b> 的小米手环%s用户！</string>
     <string name="sport_ranking_desc_great">您已经到了独孤求败的境界！</string>
     <string name="sport_new_record_ropeskipping">连跳新纪录</string>
     <string name="percent_mark">%</string>
-    <string name="share_step_ranking">超过全国 &lt;b>%s&lt;/b> 的用户！</string>
+    <string name="share_step_ranking">超过 &lt;b>%s&lt;/b> 的小米手环用户！</string>
     <string name="buy_bracelet_desc">先买个手环吧</string>
     <string name="bracelet_store_desc">手环商城</string>
     <string name="title_activity_open">合作伙伴授权页面</string>
     <string name="lab_factory_cancel_deauthorize">取消授权</string>
     <string name="state_deauthorization_success">取消授权成功</string>
+    <string name="state_deauthorization_doing">取消授权中</string>
     <string name="state_deauthorization_error">取消授权失败</string>
     <string name="state_authorization_error">授权失败</string>
+    <string name="state_authorization_doing">授权中</string>
     <string name="state_authorization_success">授权成功</string>
     <string name="enable_hidden_feature">隱藏功能已开启</string>
     <string name="disable_hidden_feature">隱藏功能已关闭</string>
+    <string name="btn_save">保存</string>
+    <string name="btn_delete">删除</string>
+    <string name="btn_confirm">确定</string>
+    <string name="btn_continue">返回</string>
+    <string name="running_short_track_desc">您才活动了%d米，确定要取消这次跑步吗？</string>
+    <string name="running_no_track_desc">您还没动吧，确定要取消这次跑步吗？</string>
+    <string name="running_set_pace_desc">慢于该配速手环将震动提醒</string>
     <string name="congrats">恭喜</string>
     <string name="bind_qq_health_tip_init">登录后继续完成绑定QQ健康</string>
     <string name="bind_qq_health_tip_another_qq">需要切换至手机QQ当前登录的账号, 才能在健康看到数据</string>
     <string name="share_to_content_for_event">我报名参加了“国庆七天,日行万步得小米手机4”的活动, 你愿意站在一旁默默祝福还是一起来参加呢？快来报名吧！</string>
+    <string name="unbind_weight_scale">解除智能秤绑定？</string>
+    <string name="weight_not_found_title">未找到智能秤</string>
+    <string name="weight_not_found_info">请靠近并重新搜索</string>
 </resources>

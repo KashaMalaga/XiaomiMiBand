@@ -1145,7 +1145,7 @@
 .end method
 
 .method public static e(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 5
+    .locals 6
 
     sget-boolean v0, Lcn/com/smartdevices/bracelet/r;->f:Z
 
@@ -1189,11 +1189,11 @@
 
     invoke-virtual {v0}, Ljava/io/File;->length()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    const-wide/32 v3, 0x1400000
+    const-wide/32 v4, 0x1400000
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-lez v1, :cond_1
 

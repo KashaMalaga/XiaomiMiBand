@@ -1,41 +1,46 @@
-.class Lcn/com/smartdevices/bracelet/ui/cU;
+.class public Lcn/com/smartdevices/bracelet/ui/cU;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Lcom/tencent/tauth/IUiListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/cS;
+.field private a:Landroid/graphics/Bitmap;
+
+.field private b:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/cS;)V
-    .locals 0
+.method public constructor <init>(Landroid/graphics/Bitmap;Ljava/lang/String;)V
+    .locals 1
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cU;->a:Lcn/com/smartdevices/bracelet/ui/cS;
+    const/4 v0, 0x0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cU;->a:Landroid/graphics/Bitmap;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cU;->b:Ljava/lang/String;
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cU;->a:Landroid/graphics/Bitmap;
+
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/cU;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onCancel()V
-    .locals 0
+.method public a()Landroid/graphics/Bitmap;
+    .locals 1
 
-    return-void
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cU;->a:Landroid/graphics/Bitmap;
+
+    return-object v0
 .end method
 
-.method public onComplete(Ljava/lang/Object;)V
-    .locals 0
+.method public b()Ljava/lang/String;
+    .locals 1
 
-    return-void
-.end method
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cU;->b:Ljava/lang/String;
 
-.method public onError(Lcom/tencent/tauth/UiError;)V
-    .locals 0
-
-    return-void
+    return-object v0
 .end method

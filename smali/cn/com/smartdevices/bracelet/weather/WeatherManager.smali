@@ -144,7 +144,7 @@
 .end method
 
 .method private readOrRequestWeather(Ljava/lang/String;)V
-    .locals 5
+    .locals 6
 
     invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/weather/WeatherManager;->readLastWeatherInfo(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/weather/WeatherInfo;
 
@@ -154,13 +154,13 @@
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/weather/WeatherInfo;->getTime()J
 
-    move-result-wide v1
+    move-result-wide v2
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-static {v1, v2, v3, v4}, Lcn/com/smartdevices/bracelet/weather/WeatherManager;->timeOffsetHours(JJ)I
+    invoke-static {v2, v3, v4, v5}, Lcn/com/smartdevices/bracelet/weather/WeatherManager;->timeOffsetHours(JJ)I
 
     move-result v1
 
@@ -211,7 +211,7 @@
 .end method
 
 .method public static timeOffsetHours(JJ)I
-    .locals 7
+    .locals 8
 
     const/16 v6, 0xb
 

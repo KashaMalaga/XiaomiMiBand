@@ -1,4 +1,4 @@
-.class abstract Lcn/com/smartdevices/bracelet/lab/ui/b;
+.class public abstract Lcn/com/smartdevices/bracelet/lab/ui/b;
 .super Ljava/lang/Object;
 
 
@@ -41,7 +41,10 @@
 
 
 # virtual methods
-.method public final a()V
+.method public abstract a()V
+.end method
+
+.method public final b()V
     .locals 2
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/b;->d:Landroid/os/Handler;
@@ -51,9 +54,6 @@
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
     return-void
-.end method
-
-.method public abstract b()V
 .end method
 
 .method public final declared-synchronized start()Lcn/com/smartdevices/bracelet/lab/ui/b;
@@ -70,7 +70,7 @@
 
     if-gtz v0, :cond_0
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/lab/ui/b;->b()V
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/lab/ui/b;->a()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

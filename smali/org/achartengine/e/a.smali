@@ -49,7 +49,7 @@
 .end method
 
 .method private b()V
-    .locals 5
+    .locals 4
 
     iget-object v0, p0, Lorg/achartengine/e/a;->a:Ljava/util/List;
 
@@ -88,19 +88,19 @@
 
     invoke-virtual {v0}, Ljava/lang/Double;->doubleValue()D
 
-    move-result-wide v1
+    move-result-wide v2
 
     iget-object v0, p0, Lorg/achartengine/e/a;->a:Ljava/util/List;
 
-    iget-object v3, p0, Lorg/achartengine/e/a;->a:Ljava/util/List;
+    iget-object v1, p0, Lorg/achartengine/e/a;->a:Ljava/util/List;
 
-    invoke-interface {v3}, Ljava/util/List;->size()I
+    invoke-interface {v1}, Ljava/util/List;->size()I
 
-    move-result v3
+    move-result v1
 
-    add-int/lit8 v3, v3, -0x2
+    add-int/lit8 v1, v1, -0x2
 
-    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -108,9 +108,9 @@
 
     invoke-virtual {v0}, Ljava/lang/Double;->doubleValue()D
 
-    move-result-wide v3
+    move-result-wide v0
 
-    sub-double v0, v1, v3
+    sub-double v0, v2, v0
 
     invoke-static {v0, v1}, Ljava/lang/Math;->abs(D)D
 
@@ -140,19 +140,19 @@
 
     invoke-virtual {v0}, Ljava/lang/Double;->doubleValue()D
 
-    move-result-wide v1
+    move-result-wide v2
 
     iget-object v0, p0, Lorg/achartengine/e/a;->a:Ljava/util/List;
 
-    iget-object v3, p0, Lorg/achartengine/e/a;->a:Ljava/util/List;
+    iget-object v1, p0, Lorg/achartengine/e/a;->a:Ljava/util/List;
 
-    invoke-interface {v3}, Ljava/util/List;->size()I
+    invoke-interface {v1}, Ljava/util/List;->size()I
 
-    move-result v3
+    move-result v1
 
-    add-int/lit8 v3, v3, -0x2
+    add-int/lit8 v1, v1, -0x2
 
-    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -160,9 +160,9 @@
 
     invoke-virtual {v0}, Ljava/lang/Double;->doubleValue()D
 
-    move-result-wide v3
+    move-result-wide v0
 
-    sub-double v0, v1, v3
+    sub-double v0, v2, v0
 
     invoke-static {v0, v1}, Ljava/lang/Math;->abs(D)D
 

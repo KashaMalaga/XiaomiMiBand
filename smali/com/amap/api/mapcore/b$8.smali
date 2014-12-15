@@ -25,17 +25,26 @@
 .method public run()V
     .locals 2
 
+    :try_start_0
     iget-object v0, p0, Lcom/amap/api/mapcore/b$8;->a:Lcom/amap/api/mapcore/b;
 
-    iget-object v0, v0, Lcom/amap/api/mapcore/b;->i:Landroid/os/Handler;
+    iget-object v1, p0, Lcom/amap/api/mapcore/b$8;->a:Lcom/amap/api/mapcore/b;
 
-    const/16 v1, 0x13
+    invoke-static {v1}, Lcom/amap/api/mapcore/b;->r(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/aa;
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->obtainMessage(I)Landroid/os/Message;
+    move-result-object v1
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Lcom/amap/api/mapcore/b;->a(Lcom/amap/api/mapcore/aa;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
-
+    :goto_0
     return-void
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
+
+    goto :goto_0
 .end method

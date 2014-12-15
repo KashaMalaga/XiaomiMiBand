@@ -363,9 +363,9 @@
 
     invoke-virtual {v1, v2}, Landroid/app/DownloadManager;->enqueue(Landroid/app/DownloadManager$Request;)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-static {v0, v1, v2}, Lcom/xiaomi/market/sdk/r;->a(Lcom/xiaomi/market/sdk/r;J)V
+    invoke-static {v0, v2, v3}, Lcom/xiaomi/market/sdk/r;->a(Lcom/xiaomi/market/sdk/r;J)V
 
     new-instance v0, Landroid/content/ContentValues;
 

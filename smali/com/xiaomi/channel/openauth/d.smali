@@ -25,7 +25,7 @@
 
 # direct methods
 .method constructor <init>(Landroid/app/Activity;Lcom/xiaomi/channel/openauth/APP2SDKReceiver;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
-    .locals 0
+    .locals 1
 
     iput-object p1, p0, Lcom/xiaomi/channel/openauth/d;->a:Landroid/app/Activity;
 
@@ -51,7 +51,7 @@
 
 # virtual methods
 .method public run()V
-    .locals 5
+    .locals 6
 
     iget-object v0, p0, Lcom/xiaomi/channel/openauth/d;->a:Landroid/app/Activity;
 
@@ -73,9 +73,9 @@
 
     const-string v2, "client_id"
 
-    iget-wide v3, p0, Lcom/xiaomi/channel/openauth/d;->c:J
+    iget-wide v4, p0, Lcom/xiaomi/channel/openauth/d;->c:J
 
-    invoke-static {v3, v4}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    invoke-static {v4, v5}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v3
 

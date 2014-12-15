@@ -342,7 +342,9 @@
 .end method
 
 .method public a(Lcn/com/smartdevices/bracelet/chart/b/e;)V
-    .locals 5
+    .locals 6
+
+    const/4 v1, 0x0
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/R;->a:Lcn/com/smartdevices/bracelet/ui/M;
 
@@ -358,7 +360,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->g()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->h()Z
 
     move-result v0
 
@@ -414,7 +416,7 @@
 
     move-result v0
 
-    div-int/lit8 v1, v0, 0x3c
+    div-int/lit8 v2, v0, 0x3c
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/R;->a:Lcn/com/smartdevices/bracelet/ui/M;
 
@@ -424,24 +426,24 @@
 
     div-int/lit8 v0, v0, 0x3c
 
-    sub-int/2addr v0, v1
+    sub-int/2addr v0, v2
 
-    add-int/lit8 v2, v0, 0x1
+    add-int/lit8 v3, v0, 0x1
 
-    const/4 v0, 0x0
+    move v0, v1
 
     :goto_1
-    if-ge v0, v2, :cond_3
+    if-ge v0, v3, :cond_3
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/ui/R;->a:Lcn/com/smartdevices/bracelet/ui/M;
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/ui/R;->a:Lcn/com/smartdevices/bracelet/ui/M;
 
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/ui/M;->g(Lcn/com/smartdevices/bracelet/ui/M;)Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;
+    invoke-static {v4}, Lcn/com/smartdevices/bracelet/ui/M;->g(Lcn/com/smartdevices/bracelet/ui/M;)Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;
 
-    move-result-object v3
+    move-result-object v4
 
-    add-int v4, v1, v0
+    add-int v5, v2, v0
 
-    invoke-virtual {v3, v4}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->d(I)V
+    invoke-virtual {v4, v5}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->d(I)V
 
     add-int/lit8 v0, v0, 0x1
 
@@ -455,6 +457,14 @@
     move-result-object v0
 
     if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/R;->a:Lcn/com/smartdevices/bracelet/ui/M;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/M;->g(Lcn/com/smartdevices/bracelet/ui/M;)Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->b(Z)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/R;->a:Lcn/com/smartdevices/bracelet/ui/M;
 
@@ -704,7 +714,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->g()Z
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->h()Z
 
     move-result v1
 

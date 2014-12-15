@@ -15,7 +15,7 @@
     .locals 3
 
     :try_start_0
-    invoke-static {}, Lcom/amap/api/mapcore/util/u;->a()Landroid/content/res/AssetManager;
+    invoke-static {p0}, Lcom/amap/api/mapcore/util/u;->a(Landroid/content/Context;)Landroid/content/res/AssetManager;
 
     move-result-object v0
 

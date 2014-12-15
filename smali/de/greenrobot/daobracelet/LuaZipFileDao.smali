@@ -502,7 +502,7 @@
 .end method
 
 .method protected updateKeyAfterInsert(Lde/greenrobot/daobracelet/LuaZipFile;J)Ljava/lang/Long;
-    .locals 1
+    .locals 2
 
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -518,7 +518,7 @@
 .end method
 
 .method protected bridge synthetic updateKeyAfterInsert(Ljava/lang/Object;J)Ljava/lang/Object;
-    .locals 1
+    .locals 2
 
     check-cast p1, Lde/greenrobot/daobracelet/LuaZipFile;
 

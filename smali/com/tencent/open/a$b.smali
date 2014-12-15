@@ -21,7 +21,7 @@
 
 # direct methods
 .method public constructor <init>(Landroid/webkit/WebView;JLjava/lang/String;)V
-    .locals 1
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -89,7 +89,7 @@
 .end method
 
 .method public a(Ljava/lang/Object;)V
-    .locals 5
+    .locals 6
 
     iget-object v0, p0, Lcom/tencent/open/a$b;->a:Ljava/lang/ref/WeakReference;
 
@@ -165,9 +165,9 @@
 
     move-result-object v2
 
-    iget-wide v3, p0, Lcom/tencent/open/a$b;->b:J
+    iget-wide v4, p0, Lcom/tencent/open/a$b;->b:J
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v2
 

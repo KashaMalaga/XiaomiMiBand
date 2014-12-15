@@ -85,6 +85,7 @@ localization_zh_rTW_table = {
     no_data_hint_2="有氧訓練是減肥、強身的一個重要手段, 它包括健身操、跑步、踩自行車等。",
     no_data_hint_3="一個成年人的深度睡眠只占其整個睡眠時間的15%~20%, 也就平均90分鐘。",
     not_binded_hint="你還沒有綁定手環, 點擊綁定",
+    not_binded_hint_info="也可以透過右上角菜單，點擊智能設備綁定",
     new_record_info="恭喜, 你創造自己的最高行走紀錄",
     new_record_format="新紀錄, %d步, %d月%d日",
     today_goal_reached="恭喜, 今天已達成目標",
@@ -101,9 +102,9 @@ localization_zh_rTW_table = {
     personal_best_on_skip_day_title="恭喜獲得假單一張, 你已連續%d天達標",
     personal_best_on_skip_day_info="連續達標每滿7天即可獲得假單, 未達標時會自動使用",
     manual_lazy_title="今天還未達標哦, 是否要使用假單？",
-    manual_lazy_subtitle="使用假單即使今天沒有達標也不會中斷連續達標",
-    manual_lazy_title_used="今天已經使用假條, 好好放松一下吧",
-    manual_lazy_subtitle_used="要是一不小心今天達標了, 還是會計入連續達標的哦",
+    manual_lazy_subtitle="不想今天中斷連續達標, 就用假單吧",
+    manual_lazy_title_used="今天已經使用假單, 好好放松一下吧",
+    manual_lazy_subtitle_used="明天將會繼續累計連續達標",
     manual_fail_ytd_title = "很遺憾昨天未達標, 連續達標中斷",
     manual_fail_ytd_subtitle = "截至前天已連續%d天達標",
 
@@ -134,6 +135,8 @@ localization_zh_rTW_table = {
 
     cannot_find_bracelet="無法尋找到手環？",
     cannot_find_bracelet_info="請確保手環有電且在手機旁邊",
+
+    bracelet_disconnect = "無法連接手環？點擊查看詳細幫助",
 
     challenge_to_get="還有%s天即將創造新的紀錄 ",
     record_reach_max="恭喜你已經追平了自己的最高紀錄",
@@ -176,4 +179,10 @@ localization_zh_rTW_table = {
     weather_tips_title_0 = "空氣重度污染, 請儘量減少室外活動",
     weather_tips_title_1 = "空氣嚴重污染, 請儘量減少室外活動",
     weather_tips_info = "仰臥起坐、跳繩、平板支撐都是很棒的室內活動哦",
+
+    ---------------Weight scale -------------------
+    welcome_use_weight_scale = "小米智能秤綁定成功",
+    welcome_use_weight_scale_not_bind = "点击綁定小米智能秤",
+
+    welcome_use_mi_health="歡迎使用小米健康",
 }

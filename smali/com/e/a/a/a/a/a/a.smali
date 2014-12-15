@@ -106,43 +106,43 @@
 .end method
 
 .method private constructor <init>(Ljava/io/File;IIJI)V
-    .locals 7
+    .locals 8
 
     const-wide/16 v4, 0x0
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-wide v4, p0, Lcom/e/a/a/a/a/a/a;->u:J
 
-    iput v1, p0, Lcom/e/a/a/a/a/a/a;->v:I
+    iput v2, p0, Lcom/e/a/a/a/a/a/a;->v:I
 
     new-instance v0, Ljava/util/LinkedHashMap;
 
-    const/high16 v3, 0x3f400000
+    const/high16 v1, 0x3f400000
 
-    invoke-direct {v0, v1, v3, v2}, Ljava/util/LinkedHashMap;-><init>(IFZ)V
+    invoke-direct {v0, v2, v1, v3}, Ljava/util/LinkedHashMap;-><init>(IFZ)V
 
     iput-object v0, p0, Lcom/e/a/a/a/a/a/a;->x:Ljava/util/LinkedHashMap;
 
     iput-wide v4, p0, Lcom/e/a/a/a/a/a/a;->z:J
 
-    new-instance v0, Ljava/util/concurrent/ThreadPoolExecutor;
+    new-instance v1, Ljava/util/concurrent/ThreadPoolExecutor;
 
-    const-wide/16 v3, 0x3c
+    const-wide/16 v4, 0x3c
 
-    sget-object v5, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    sget-object v6, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    new-instance v6, Ljava/util/concurrent/LinkedBlockingQueue;
+    new-instance v7, Ljava/util/concurrent/LinkedBlockingQueue;
 
-    invoke-direct {v6}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
+    invoke-direct {v7}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
 
-    invoke-direct/range {v0 .. v6}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;)V
+    invoke-direct/range {v1 .. v7}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;)V
 
-    iput-object v0, p0, Lcom/e/a/a/a/a/a/a;->h:Ljava/util/concurrent/ThreadPoolExecutor;
+    iput-object v1, p0, Lcom/e/a/a/a/a/a/a;->h:Ljava/util/concurrent/ThreadPoolExecutor;
 
     new-instance v0, Lcom/e/a/a/a/a/a/b;
 
@@ -392,7 +392,7 @@
 .end method
 
 .method static synthetic a(Lcom/e/a/a/a/a/a/a;Ljava/lang/String;J)Lcom/e/a/a/a/a/a/d;
-    .locals 1
+    .locals 2
 
     invoke-direct {p0, p1, p2, p3}, Lcom/e/a/a/a/a/a/a;->a(Ljava/lang/String;J)Lcom/e/a/a/a/a/a/d;
 
@@ -714,11 +714,11 @@
 
     iget-wide v8, p0, Lcom/e/a/a/a/a/a/a;->u:J
 
-    sub-long v3, v8, v4
+    sub-long v4, v8, v4
 
-    add-long/2addr v3, v6
+    add-long/2addr v4, v6
 
-    iput-wide v3, p0, Lcom/e/a/a/a/a/a/a;->u:J
+    iput-wide v4, p0, Lcom/e/a/a/a/a/a/a;->u:J
 
     iget v1, p0, Lcom/e/a/a/a/a/a/a;->v:I
 
@@ -804,11 +804,11 @@
 
     iget-wide v0, p0, Lcom/e/a/a/a/a/a/a;->z:J
 
-    const-wide/16 v3, 0x1
+    const-wide/16 v4, 0x1
 
-    add-long/2addr v3, v0
+    add-long/2addr v4, v0
 
-    iput-wide v3, p0, Lcom/e/a/a/a/a/a/a;->z:J
+    iput-wide v4, p0, Lcom/e/a/a/a/a/a/a;->z:J
 
     invoke-static {v2, v0, v1}, Lcom/e/a/a/a/a/a/f;->a(Lcom/e/a/a/a/a/a/f;J)J
 
@@ -1981,9 +1981,9 @@
 .method public declared-synchronized a(Ljava/lang/String;)Lcom/e/a/a/a/a/a/g;
     .locals 10
 
-    const/4 v4, 0x0
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    const/4 v1, 0x0
 
     monitor-enter p0
 
@@ -1992,108 +1992,93 @@
 
     invoke-direct {p0, p1}, Lcom/e/a/a/a/a/a/a;->e(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/e/a/a/a/a/a/a;->x:Ljava/util/LinkedHashMap;
+    iget-object v0, p0, Lcom/e/a/a/a/a/a/a;->x:Ljava/util/LinkedHashMap;
 
-    invoke-virtual {v1, p1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v1
-
-    move-object v0, v1
+    move-result-object v0
 
     check-cast v0, Lcom/e/a/a/a/a/a/f;
-
-    move-object v2, v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-nez v2, :cond_0
+    if-nez v0, :cond_1
 
-    move-object v1, v3
-
+    :cond_0
     :goto_0
     monitor-exit p0
 
     return-object v1
 
-    :cond_0
-    :try_start_1
-    invoke-static {v2}, Lcom/e/a/a/a/a/a/f;->d(Lcom/e/a/a/a/a/a/f;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    move-object v1, v3
-
-    goto :goto_0
-
     :cond_1
-    iget v1, p0, Lcom/e/a/a/a/a/a/a;->t:I
+    :try_start_1
+    invoke-static {v0}, Lcom/e/a/a/a/a/a/f;->d(Lcom/e/a/a/a/a/a/f;)Z
 
-    new-array v6, v1, [Ljava/io/File;
+    move-result v3
 
-    iget v1, p0, Lcom/e/a/a/a/a/a/a;->t:I
+    if-eqz v3, :cond_0
 
-    new-array v7, v1, [Ljava/io/InputStream;
+    iget v3, p0, Lcom/e/a/a/a/a/a/a;->t:I
+
+    new-array v6, v3, [Ljava/io/File;
+
+    iget v3, p0, Lcom/e/a/a/a/a/a/a;->t:I
+
+    new-array v7, v3, [Ljava/io/InputStream;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    move v1, v4
+    move v3, v2
 
     :goto_1
     :try_start_2
-    iget v5, p0, Lcom/e/a/a/a/a/a/a;->t:I
+    iget v4, p0, Lcom/e/a/a/a/a/a/a;->t:I
 
-    if-ge v1, v5, :cond_3
+    if-ge v3, v4, :cond_2
 
-    invoke-virtual {v2, v1}, Lcom/e/a/a/a/a/a/f;->a(I)Ljava/io/File;
+    invoke-virtual {v0, v3}, Lcom/e/a/a/a/a/a/f;->a(I)Ljava/io/File;
 
-    move-result-object v5
+    move-result-object v4
 
-    aput-object v5, v6, v1
+    aput-object v4, v6, v3
 
-    new-instance v8, Ljava/io/FileInputStream;
+    new-instance v5, Ljava/io/FileInputStream;
 
-    invoke-direct {v8, v5}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+    invoke-direct {v5, v4}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    aput-object v8, v7, v1
+    aput-object v5, v7, v3
     :try_end_2
     .catch Ljava/io/FileNotFoundException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
     :catch_0
-    move-exception v1
+    move-exception v0
 
-    move v1, v4
+    move v0, v2
 
     :goto_2
     :try_start_3
     iget v2, p0, Lcom/e/a/a/a/a/a/a;->t:I
 
-    if-ge v1, v2, :cond_2
+    if-ge v0, v2, :cond_0
 
-    aget-object v2, v7, v1
+    aget-object v2, v7, v0
 
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_0
 
-    aget-object v2, v7, v1
+    aget-object v2, v7, v0
 
     invoke-static {v2}, Lcom/e/a/a/a/a/a/k;->a(Ljava/io/Closeable;)V
 
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
     :cond_2
-    move-object v1, v3
-
-    goto :goto_0
-
-    :cond_3
     iget v1, p0, Lcom/e/a/a/a/a/a/a;->y:I
 
     add-int/lit8 v1, v1, 0x1
@@ -2102,52 +2087,52 @@
 
     iget-object v1, p0, Lcom/e/a/a/a/a/a/a;->w:Ljava/io/Writer;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "READ "
+    const-string v3, "READ "
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v2
 
-    const/16 v4, 0xa
+    const/16 v3, 0xa
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v1, v3}, Ljava/io/Writer;->append(Ljava/lang/CharSequence;)Ljava/io/Writer;
+    invoke-virtual {v1, v2}, Ljava/io/Writer;->append(Ljava/lang/CharSequence;)Ljava/io/Writer;
 
     invoke-direct {p0}, Lcom/e/a/a/a/a/a/a;->m()Z
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_3
 
     iget-object v1, p0, Lcom/e/a/a/a/a/a/a;->h:Ljava/util/concurrent/ThreadPoolExecutor;
 
-    iget-object v3, p0, Lcom/e/a/a/a/a/a/a;->A:Ljava/util/concurrent/Callable;
+    iget-object v2, p0, Lcom/e/a/a/a/a/a/a;->A:Ljava/util/concurrent/Callable;
 
-    invoke-virtual {v1, v3}, Ljava/util/concurrent/ThreadPoolExecutor;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
+    invoke-virtual {v1, v2}, Ljava/util/concurrent/ThreadPoolExecutor;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
 
-    :cond_4
+    :cond_3
     new-instance v1, Lcom/e/a/a/a/a/a/g;
 
-    invoke-static {v2}, Lcom/e/a/a/a/a/a/f;->e(Lcom/e/a/a/a/a/a/f;)J
+    invoke-static {v0}, Lcom/e/a/a/a/a/a/f;->e(Lcom/e/a/a/a/a/a/f;)J
 
     move-result-wide v4
 
-    invoke-static {v2}, Lcom/e/a/a/a/a/a/f;->b(Lcom/e/a/a/a/a/a/f;)[J
+    invoke-static {v0}, Lcom/e/a/a/a/a/a/f;->b(Lcom/e/a/a/a/a/a/f;)[J
 
     move-result-object v8
 
@@ -2164,11 +2149,11 @@
     goto :goto_0
 
     :catchall_0
-    move-exception v1
+    move-exception v0
 
     monitor-exit p0
 
-    throw v1
+    throw v0
 .end method
 
 .method public a()Ljava/io/File;
@@ -2180,7 +2165,7 @@
 .end method
 
 .method public declared-synchronized a(J)V
-    .locals 2
+    .locals 3
 
     monitor-enter p0
 
@@ -2325,9 +2310,9 @@
 
     move-result-object v2
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    aput-wide v3, v2, v1
+    aput-wide v4, v2, v1
 
     add-int/lit8 v1, v1, 0x1
 

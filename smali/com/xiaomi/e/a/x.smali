@@ -236,7 +236,7 @@
 .end method
 
 .method public a(Lcom/xiaomi/e/a/w;)V
-    .locals 7
+    .locals 8
 
     if-eqz p1, :cond_0
 
@@ -274,9 +274,9 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-wide v5, p0, Lcom/xiaomi/e/a/x;->h:J
+    iget-wide v6, p0, Lcom/xiaomi/e/a/x;->h:J
 
-    invoke-virtual {v0, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

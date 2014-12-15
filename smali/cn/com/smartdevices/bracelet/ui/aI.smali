@@ -38,17 +38,17 @@
 .end method
 
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 9
+    .locals 10
 
     const/4 v2, 0x0
 
-    const v0, 0x7f030045
+    const v0, 0x7f030047
 
     invoke-virtual {p1, v0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v3
 
-    const v0, 0x7f070154
+    const v0, 0x7f0b0162
 
     invoke-virtual {v3, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -56,7 +56,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v0, 0x7f070152
+    const v0, 0x7f0b0160
 
     invoke-virtual {v3, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -64,7 +64,7 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    const v1, 0x7f070153
+    const v1, 0x7f0b0161
 
     invoke-virtual {v3, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -116,9 +116,9 @@
 
     invoke-virtual {v2}, Ljava/util/Date;->getTime()J
 
-    move-result-wide v7
+    move-result-wide v8
 
-    invoke-virtual {v4, v6, v5, v7, v8}, Lcn/com/smartdevices/bracelet/m;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/DaySportData;J)Landroid/view/View;
+    invoke-virtual {v4, v6, v5, v8, v9}, Lcn/com/smartdevices/bracelet/m;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/DaySportData;J)Landroid/view/View;
 
     move-result-object v4
 

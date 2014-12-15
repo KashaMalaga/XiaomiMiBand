@@ -10,9 +10,9 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 7
+    .locals 8
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
     const-string v0, "([0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3})"
 
@@ -22,21 +22,21 @@
 
     sput-object v0, Lcom/xiaomi/push/service/Q;->a:Ljava/util/regex/Pattern;
 
-    new-instance v0, Ljava/util/concurrent/ThreadPoolExecutor;
+    new-instance v1, Ljava/util/concurrent/ThreadPoolExecutor;
 
-    const-wide/16 v3, 0x14
+    const-wide/16 v4, 0x14
 
-    sget-object v5, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    sget-object v6, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    new-instance v6, Ljava/util/concurrent/LinkedBlockingQueue;
+    new-instance v7, Ljava/util/concurrent/LinkedBlockingQueue;
 
-    invoke-direct {v6}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
+    invoke-direct {v7}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
 
-    move v2, v1
+    move v3, v2
 
-    invoke-direct/range {v0 .. v6}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;)V
+    invoke-direct/range {v1 .. v7}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;)V
 
-    sput-object v0, Lcom/xiaomi/push/service/Q;->b:Ljava/util/concurrent/ThreadPoolExecutor;
+    sput-object v1, Lcom/xiaomi/push/service/Q;->b:Ljava/util/concurrent/ThreadPoolExecutor;
 
     return-void
 .end method

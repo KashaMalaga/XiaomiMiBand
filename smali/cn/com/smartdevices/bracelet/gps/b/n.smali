@@ -139,7 +139,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/n;->b:Lcn/com/smartdevices/bracelet/gps/b/o;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/b/o;->b()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/b/o;->a()V
 
     return-void
 .end method

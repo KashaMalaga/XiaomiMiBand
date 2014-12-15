@@ -225,7 +225,7 @@
 .end method
 
 .method public a(J)Lcom/b/a/d/e;
-    .locals 2
+    .locals 3
 
     new-instance v0, Lcom/b/a/C;
 

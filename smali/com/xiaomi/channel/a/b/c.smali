@@ -175,7 +175,7 @@
 .end method
 
 .method public static a(Ljava/lang/Integer;)V
-    .locals 5
+    .locals 6
 
     sget v0, Lcom/xiaomi/channel/a/b/c;->a:I
 
@@ -206,7 +206,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v1
+    move-result-wide v2
 
     sget-object v0, Lcom/xiaomi/channel/a/b/c;->d:Ljava/util/HashMap;
 
@@ -218,11 +218,11 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    sub-long v1, v3, v1
+    sub-long v2, v4, v2
 
-    sget-object v3, Lcom/xiaomi/channel/a/b/c;->b:Lcom/xiaomi/channel/a/b/a;
+    sget-object v1, Lcom/xiaomi/channel/a/b/c;->b:Lcom/xiaomi/channel/a/b/a;
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -238,13 +238,13 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const-string v1, " ms"
+    const-string v2, " ms"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -252,7 +252,7 @@
 
     move-result-object v0
 
-    invoke-interface {v3, v0}, Lcom/xiaomi/channel/a/b/a;->b(Ljava/lang/String;)V
+    invoke-interface {v1, v0}, Lcom/xiaomi/channel/a/b/a;->b(Ljava/lang/String;)V
 
     goto :goto_0
 .end method

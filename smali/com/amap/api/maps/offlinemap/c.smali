@@ -26,7 +26,7 @@
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;JJI)V
-    .locals 3
+    .locals 5
 
     const/4 v1, 0x0
 
@@ -52,9 +52,9 @@
 
     new-instance v0, Lcom/amap/api/maps/offlinemap/b;
 
-    iget-wide v1, p0, Lcom/amap/api/maps/offlinemap/c;->b:J
+    iget-wide v2, p0, Lcom/amap/api/maps/offlinemap/c;->b:J
 
-    invoke-direct {v0, p2, v1, v2}, Lcom/amap/api/maps/offlinemap/b;-><init>(Ljava/lang/String;J)V
+    invoke-direct {v0, p2, v2, v3}, Lcom/amap/api/maps/offlinemap/b;-><init>(Ljava/lang/String;J)V
 
     iput-object v0, p0, Lcom/amap/api/maps/offlinemap/c;->g:Lcom/amap/api/maps/offlinemap/b;
 
@@ -94,48 +94,16 @@
     iput-boolean v0, p0, Lcom/amap/api/maps/offlinemap/c;->f:Z
 
     invoke-virtual {p0}, Lcom/amap/api/maps/offlinemap/c;->interrupt()V
-
-    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/c;->i:Ljava/io/InputStream;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/c;->i:Ljava/io/InputStream;
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/amap/api/maps/offlinemap/c;->i:Ljava/io/InputStream;
-
-    :cond_0
-    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/c;->h:Ljava/net/HttpURLConnection;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/c;->h:Ljava/net/HttpURLConnection;
-
-    invoke-virtual {v0}, Ljava/net/HttpURLConnection;->disconnect()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/amap/api/maps/offlinemap/c;->h:Ljava/net/HttpURLConnection;
     :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    :cond_1
     :goto_0
     return-void
 
     :catch_0
     move-exception v0
 
-    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
-
-    goto :goto_0
-
-    :catch_1
-    move-exception v0
+    invoke-static {}, Ljava/lang/Thread;->interrupted()Z
 
     invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
@@ -309,9 +277,9 @@
 
     move-result-object v0
 
-    iget-wide v1, p0, Lcom/amap/api/maps/offlinemap/c;->b:J
+    iget-wide v2, p0, Lcom/amap/api/maps/offlinemap/c;->b:J
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -382,9 +350,9 @@
 
     int-to-long v4, v1
 
-    add-long v1, v2, v4
+    add-long/2addr v2, v4
 
-    iput-wide v1, p0, Lcom/amap/api/maps/offlinemap/c;->b:J
+    iput-wide v2, p0, Lcom/amap/api/maps/offlinemap/c;->b:J
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
@@ -413,9 +381,11 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/amap/api/maps/offlinemap/c;->j:I
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result-wide v2
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -436,6 +406,30 @@
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "\n"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/amap/api/maps/offlinemap/n;->b(Ljava/lang/String;)V
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-static {v0}, Lcom/amap/api/maps/offlinemap/n;->a(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 

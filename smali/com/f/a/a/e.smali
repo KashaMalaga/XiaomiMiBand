@@ -250,7 +250,7 @@
 .end method
 
 .method a(DDI)V
-    .locals 6
+    .locals 7
 
     const-wide/high16 v4, 0x4059000000000000L
 
@@ -346,7 +346,7 @@
 .end method
 
 .method a(DI)V
-    .locals 4
+    .locals 5
 
     iget-object v0, p0, Lcom/f/a/a/e;->x:Landroid/content/Context;
 
@@ -430,19 +430,19 @@
 .end method
 
 .method a(DLjava/lang/String;IDI)V
-    .locals 6
+    .locals 7
 
     int-to-double v0, p4
 
-    mul-double v3, p5, v0
+    mul-double v4, p5, v0
 
-    move-object v0, p0
+    move-object v1, p0
 
-    move-wide v1, p1
+    move-wide v2, p1
 
-    move v5, p7
+    move v6, p7
 
-    invoke-virtual/range {v0 .. v5}, Lcom/f/a/a/e;->a(DDI)V
+    invoke-virtual/range {v1 .. v6}, Lcom/f/a/a/e;->a(DDI)V
 
     invoke-virtual {p0, p3, p4, p5, p6}, Lcom/f/a/a/e;->a(Ljava/lang/String;ID)V
 
@@ -496,7 +496,7 @@
 .end method
 
 .method a(Ljava/lang/String;ID)V
-    .locals 6
+    .locals 7
 
     iget-object v0, p0, Lcom/f/a/a/e;->x:Landroid/content/Context;
 
@@ -588,7 +588,7 @@
 .end method
 
 .method a(Ljava/lang/String;IDI)V
-    .locals 2
+    .locals 3
 
     int-to-double v0, p2
 
@@ -705,7 +705,7 @@
 .end method
 
 .method b(Ljava/lang/String;ID)V
-    .locals 6
+    .locals 7
 
     iget-object v0, p0, Lcom/f/a/a/e;->x:Landroid/content/Context;
 

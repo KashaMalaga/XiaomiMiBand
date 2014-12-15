@@ -177,7 +177,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f080011
+    const v1, 0x7f070011
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -193,7 +193,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f080003
+    const v1, 0x7f070003
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -673,7 +673,7 @@
     goto :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x7f070031
+    .packed-switch 0x7f0b0031
         :pswitch_1
         :pswitch_0
     .end packed-switch
@@ -777,7 +777,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->p:Ljava/lang/String;
 
-    const v0, 0x7f070032
+    const v0, 0x7f0b0032
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->findViewById(I)Landroid/view/View;
 
@@ -791,7 +791,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070031
+    const v0, 0x7f0b0031
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->findViewById(I)Landroid/view/View;
 
@@ -805,7 +805,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070033
+    const v0, 0x7f0b0033
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->findViewById(I)Landroid/view/View;
 

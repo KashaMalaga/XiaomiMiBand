@@ -50,7 +50,7 @@
 .end method
 
 .method public onEncode(Lorg/json/JSONObject;)Z
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lcom/tencent/stat/event/MonitorStatEvent;->monitor:Lcom/tencent/stat/StatAppMonitor;
 
@@ -78,9 +78,9 @@
 
     invoke-virtual {v1}, Lcom/tencent/stat/StatAppMonitor;->getReqSize()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {p1, v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-virtual {p1, v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
     const-string v0, "rp"
 
@@ -88,9 +88,9 @@
 
     invoke-virtual {v1}, Lcom/tencent/stat/StatAppMonitor;->getRespSize()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {p1, v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-virtual {p1, v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
     const-string v0, "rt"
 
@@ -108,9 +108,9 @@
 
     invoke-virtual {v1}, Lcom/tencent/stat/StatAppMonitor;->getMillisecondsConsume()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {p1, v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-virtual {p1, v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
     const-string v0, "rc"
 

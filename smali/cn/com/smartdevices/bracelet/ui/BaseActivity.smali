@@ -18,7 +18,7 @@
 .method private initHomeBack()V
     .locals 2
 
-    const v0, 0x7f070028
+    const v0, 0x7f0b0028
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BaseActivity;->findViewById(I)Landroid/view/View;
 
@@ -161,7 +161,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/f/a;->b()Lcom/tencent/tauth/Tencent;
+    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/f/a;->c()Lcom/tencent/tauth/Tencent;
 
     move-result-object v5
 
@@ -210,11 +210,11 @@
     if-nez v2, :cond_2
 
     :cond_1
-    invoke-virtual {v4, v3}, Lcn/com/smartdevices/bracelet/f/a;->a(Z)V
+    invoke-virtual {v4, v3}, Lcn/com/smartdevices/bracelet/f/a;->b(Z)V
 
     if-eqz v5, :cond_2
 
-    invoke-virtual {v4, v3}, Lcn/com/smartdevices/bracelet/f/a;->b(Z)V
+    invoke-virtual {v4, v3}, Lcn/com/smartdevices/bracelet/f/a;->c(Z)V
 
     :cond_2
     new-instance v2, Landroid/content/Intent;
@@ -225,7 +225,7 @@
 
     :cond_3
     :goto_1
-    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/f/a;->b()Lcom/tencent/tauth/Tencent;
+    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/f/a;->c()Lcom/tencent/tauth/Tencent;
 
     move-result-object v2
 
@@ -244,7 +244,7 @@
     move v2, v3
 
     :goto_2
-    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/f/a;->l()Z
+    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/f/a;->k()Z
 
     move-result v5
 
@@ -312,13 +312,13 @@
     goto :goto_2
 
     :cond_8
-    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/f/a;->n()Ljava/lang/Class;
+    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/f/a;->m()Ljava/lang/Class;
 
     move-result-object v0
 
     if-eqz v0, :cond_9
 
-    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/f/a;->n()Ljava/lang/Class;
+    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/f/a;->m()Ljava/lang/Class;
 
     move-result-object v0
 

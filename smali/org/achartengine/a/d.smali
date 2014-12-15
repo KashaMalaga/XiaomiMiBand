@@ -48,7 +48,7 @@
 .end method
 
 .method public a(Landroid/graphics/Canvas;Landroid/graphics/Paint;Ljava/util/List;Lorg/achartengine/c/e;FII)V
-    .locals 12
+    .locals 16
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -67,94 +67,104 @@
 
     invoke-virtual/range {p4 .. p4}, Lorg/achartengine/c/h;->a()I
 
-    move-result v1
+    move-result v2
 
-    invoke-virtual {p2, v1}, Landroid/graphics/Paint;->setColor(I)V
+    move-object/from16 v0, p2
 
-    sget-object v1, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
+    invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setColor(I)V
 
-    invoke-virtual {p2, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+    sget-object v2, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
-    invoke-interface {p3}, Ljava/util/List;->size()I
+    move-object/from16 v0, p2
 
-    move-result v9
+    invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    iget-object v1, p0, Lorg/achartengine/a/d;->e:Lorg/achartengine/b/g;
+    invoke-interface/range {p3 .. p3}, Ljava/util/List;->size()I
+
+    move-result v10
+
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lorg/achartengine/a/d;->e:Lorg/achartengine/b/g;
 
     move/from16 v0, p6
 
-    invoke-virtual {v1, v0}, Lorg/achartengine/b/g;->b(I)Lorg/achartengine/b/h;
+    invoke-virtual {v2, v0}, Lorg/achartengine/b/g;->b(I)Lorg/achartengine/b/h;
 
-    move-result-object v1
+    move-result-object v2
 
-    move-object v7, v1
+    move-object v8, v2
 
-    check-cast v7, Lorg/achartengine/b/i;
+    check-cast v8, Lorg/achartengine/b/i;
 
-    invoke-virtual {v7}, Lorg/achartengine/b/i;->l()D
+    invoke-virtual {v8}, Lorg/achartengine/b/i;->l()D
 
-    move-result-wide v1
+    move-result-wide v2
 
-    const-wide/high16 v3, 0x4034000000000000L
+    const-wide/high16 v4, 0x4034000000000000L
 
-    div-double v10, v3, v1
+    div-double v12, v4, v2
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    move v8, v1
+    move v9, v2
 
     :goto_0
-    if-ge v8, v9, :cond_0
+    if-ge v9, v10, :cond_0
 
-    div-int/lit8 v1, v8, 0x2
+    div-int/lit8 v2, v9, 0x2
 
-    add-int v1, v1, p7
+    add-int v2, v2, p7
 
-    invoke-virtual {v7, v1}, Lorg/achartengine/b/i;->h(I)D
+    invoke-virtual {v8, v2}, Lorg/achartengine/b/i;->h(I)D
 
-    move-result-wide v1
+    move-result-wide v2
 
-    mul-double/2addr v1, v10
+    mul-double/2addr v2, v12
 
-    const-wide/high16 v3, 0x4000000000000000L
+    const-wide/high16 v4, 0x4000000000000000L
 
-    add-double v2, v1, v3
+    add-double v14, v2, v4
 
-    invoke-interface {p3, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    move-object/from16 v0, p3
 
-    move-result-object v1
+    invoke-interface {v0, v9}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    check-cast v1, Ljava/lang/Float;
+    move-result-object v2
 
-    invoke-virtual {v1}, Ljava/lang/Float;->floatValue()F
+    check-cast v2, Ljava/lang/Float;
 
-    move-result v4
-
-    add-int/lit8 v1, v8, 0x1
-
-    invoke-interface {p3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Float;
-
-    invoke-virtual {v1}, Ljava/lang/Float;->floatValue()F
+    invoke-virtual {v2}, Ljava/lang/Float;->floatValue()F
 
     move-result v5
 
-    double-to-float v6, v2
+    add-int/lit8 v2, v9, 0x1
 
-    move-object v1, p0
+    move-object/from16 v0, p3
 
-    move-object v2, p1
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-object v3, p2
+    move-result-object v2
 
-    invoke-direct/range {v1 .. v6}, Lorg/achartengine/a/d;->a(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFF)V
+    check-cast v2, Ljava/lang/Float;
 
-    add-int/lit8 v1, v8, 0x2
+    invoke-virtual {v2}, Ljava/lang/Float;->floatValue()F
 
-    move v8, v1
+    move-result v6
+
+    double-to-float v7, v14
+
+    move-object/from16 v2, p0
+
+    move-object/from16 v3, p1
+
+    move-object/from16 v4, p2
+
+    invoke-direct/range {v2 .. v7}, Lorg/achartengine/a/d;->a(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFF)V
+
+    add-int/lit8 v2, v9, 0x2
+
+    move v9, v2
 
     goto :goto_0
 
@@ -189,7 +199,7 @@
 .end method
 
 .method protected a(Ljava/util/List;Ljava/util/List;FII)[Lorg/achartengine/a/e;
-    .locals 16
+    .locals 17
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -207,169 +217,173 @@
 
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->size()I
 
-    move-result v9
+    move-result v10
 
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lorg/achartengine/a/d;->e:Lorg/achartengine/b/g;
+    iget-object v2, v0, Lorg/achartengine/a/d;->e:Lorg/achartengine/b/g;
 
     move/from16 v0, p4
 
-    invoke-virtual {v1, v0}, Lorg/achartengine/b/g;->b(I)Lorg/achartengine/b/h;
+    invoke-virtual {v2, v0}, Lorg/achartengine/b/g;->b(I)Lorg/achartengine/b/h;
 
-    move-result-object v1
+    move-result-object v2
 
-    move-object v7, v1
+    move-object v8, v2
 
-    check-cast v7, Lorg/achartengine/b/i;
+    check-cast v8, Lorg/achartengine/b/i;
 
-    invoke-virtual {v7}, Lorg/achartengine/b/i;->l()D
+    invoke-virtual {v8}, Lorg/achartengine/b/i;->l()D
 
-    move-result-wide v1
+    move-result-wide v2
 
-    const-wide/high16 v3, 0x4034000000000000L
+    const-wide/high16 v4, 0x4034000000000000L
 
-    div-double v10, v3, v1
+    div-double v12, v4, v2
 
-    div-int/lit8 v1, v9, 0x2
+    div-int/lit8 v2, v10, 0x2
 
-    new-array v12, v1, [Lorg/achartengine/a/e;
+    new-array v11, v2, [Lorg/achartengine/a/e;
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    move v8, v1
+    move v9, v2
 
     :goto_0
-    if-ge v8, v9, :cond_0
+    if-ge v9, v10, :cond_0
 
-    div-int/lit8 v1, v8, 0x2
+    div-int/lit8 v2, v9, 0x2
 
-    add-int v1, v1, p5
+    add-int v2, v2, p5
 
-    invoke-virtual {v7, v1}, Lorg/achartengine/b/i;->h(I)D
+    invoke-virtual {v8, v2}, Lorg/achartengine/b/i;->h(I)D
 
-    move-result-wide v1
+    move-result-wide v2
 
-    mul-double/2addr v1, v10
+    mul-double/2addr v2, v12
 
-    const-wide/high16 v3, 0x4000000000000000L
+    const-wide/high16 v4, 0x4000000000000000L
 
-    add-double v4, v1, v3
+    add-double v6, v2, v4
 
-    div-int/lit8 v13, v8, 0x2
+    div-int/lit8 v14, v9, 0x2
 
-    new-instance v1, Lorg/achartengine/a/e;
+    new-instance v2, Lorg/achartengine/a/e;
 
-    new-instance v2, Landroid/graphics/RectF;
-
-    move-object/from16 v0, p1
-
-    invoke-interface {v0, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/Float;
-
-    invoke-virtual {v3}, Ljava/lang/Float;->floatValue()F
-
-    move-result v3
-
-    double-to-float v6, v4
-
-    sub-float v6, v3, v6
-
-    add-int/lit8 v3, v8, 0x1
+    new-instance v3, Landroid/graphics/RectF;
 
     move-object/from16 v0, p1
 
-    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v0, v9}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object v4
 
-    check-cast v3, Ljava/lang/Float;
+    check-cast v4, Ljava/lang/Float;
 
-    invoke-virtual {v3}, Ljava/lang/Float;->floatValue()F
+    invoke-virtual {v4}, Ljava/lang/Float;->floatValue()F
 
-    move-result v3
+    move-result v4
 
-    double-to-float v14, v4
+    double-to-float v5, v6
 
-    sub-float v14, v3, v14
+    sub-float v5, v4, v5
 
-    move-object/from16 v0, p1
-
-    invoke-interface {v0, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/Float;
-
-    invoke-virtual {v3}, Ljava/lang/Float;->floatValue()F
-
-    move-result v3
-
-    double-to-float v15, v4
-
-    add-float/2addr v15, v3
-
-    add-int/lit8 v3, v8, 0x1
+    add-int/lit8 v4, v9, 0x1
 
     move-object/from16 v0, p1
 
-    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object v4
 
-    check-cast v3, Ljava/lang/Float;
+    check-cast v4, Ljava/lang/Float;
 
-    invoke-virtual {v3}, Ljava/lang/Float;->floatValue()F
+    invoke-virtual {v4}, Ljava/lang/Float;->floatValue()F
 
-    move-result v3
+    move-result v4
 
-    double-to-float v4, v4
+    double-to-float v15, v6
 
-    add-float/2addr v3, v4
+    sub-float v15, v4, v15
 
-    invoke-direct {v2, v6, v14, v15, v3}, Landroid/graphics/RectF;-><init>(FFFF)V
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v9}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/Float;
+
+    invoke-virtual {v4}, Ljava/lang/Float;->floatValue()F
+
+    move-result v4
+
+    double-to-float v0, v6
+
+    move/from16 v16, v0
+
+    add-float v16, v16, v4
+
+    add-int/lit8 v4, v9, 0x1
+
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/Float;
+
+    invoke-virtual {v4}, Ljava/lang/Float;->floatValue()F
+
+    move-result v4
+
+    double-to-float v6, v6
+
+    add-float/2addr v4, v6
+
+    move/from16 v0, v16
+
+    invoke-direct {v3, v5, v15, v0, v4}, Landroid/graphics/RectF;-><init>(FFFF)V
 
     move-object/from16 v0, p2
 
-    invoke-interface {v0, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v0, v9}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object v4
 
-    check-cast v3, Ljava/lang/Double;
+    check-cast v4, Ljava/lang/Double;
 
-    invoke-virtual {v3}, Ljava/lang/Double;->doubleValue()D
+    invoke-virtual {v4}, Ljava/lang/Double;->doubleValue()D
 
-    move-result-wide v3
+    move-result-wide v4
 
-    add-int/lit8 v5, v8, 0x1
+    add-int/lit8 v6, v9, 0x1
 
     move-object/from16 v0, p2
 
-    invoke-interface {v0, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v0, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v5
+    move-result-object v6
 
-    check-cast v5, Ljava/lang/Double;
+    check-cast v6, Ljava/lang/Double;
 
-    invoke-virtual {v5}, Ljava/lang/Double;->doubleValue()D
+    invoke-virtual {v6}, Ljava/lang/Double;->doubleValue()D
 
-    move-result-wide v5
+    move-result-wide v6
 
-    invoke-direct/range {v1 .. v6}, Lorg/achartengine/a/e;-><init>(Landroid/graphics/RectF;DD)V
+    invoke-direct/range {v2 .. v7}, Lorg/achartengine/a/e;-><init>(Landroid/graphics/RectF;DD)V
 
-    aput-object v1, v12, v13
+    aput-object v2, v11, v14
 
-    add-int/lit8 v1, v8, 0x2
+    add-int/lit8 v2, v9, 0x2
 
-    move v8, v1
+    move v9, v2
 
     goto :goto_0
 
     :cond_0
-    return-object v12
+    return-object v11
 .end method
 
 .method public d()Ljava/lang/String;

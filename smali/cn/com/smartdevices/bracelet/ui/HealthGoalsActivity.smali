@@ -41,7 +41,7 @@
 
     const/16 v11, 0xf
 
-    const v0, 0x7f0700b1
+    const v0, 0x7f0b00b5
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->findViewById(I)Landroid/view/View;
 
@@ -59,7 +59,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0200d6
+    const v1, 0x7f0200da
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
@@ -71,7 +71,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f080011
+    const v2, 0x7f070011
 
     const/16 v3, 0xc
 
@@ -95,7 +95,7 @@
 
     move-result-object v1
 
-    const v5, 0x7f080010
+    const v5, 0x7f070010
 
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -105,7 +105,7 @@
 
     move-result-object v1
 
-    const v6, 0x7f080012
+    const v6, 0x7f070012
 
     invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -115,7 +115,7 @@
 
     move-result-object v1
 
-    const v7, 0x7f080013
+    const v7, 0x7f070013
 
     invoke-virtual {v1, v7}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -137,7 +137,7 @@
 
     invoke-virtual {v14, v0}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/a/f;)Lkankan/wheel/widget/WheelView;
 
-    const v0, 0x7f0700b0
+    const v0, 0x7f0b00b4
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->findViewById(I)Landroid/view/View;
 
@@ -213,7 +213,7 @@
 
     invoke-virtual {v1, v0}, Lkankan/wheel/widget/WheelView;->c(I)Lkankan/wheel/widget/WheelView;
 
-    const v0, 0x7f070094
+    const v0, 0x7f0b0098
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->findViewById(I)Landroid/view/View;
 
@@ -221,7 +221,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070079
+    const v0, 0x7f0b007d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->findViewById(I)Landroid/view/View;
 
@@ -383,15 +383,15 @@
 
 # virtual methods
 .method public a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
-    .locals 3
+    .locals 4
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/u;->b()Lcn/com/smartdevices/bracelet/model/LoginData;
 
     move-result-object v0
 
-    iget-wide v1, v0, Lcn/com/smartdevices/bracelet/model/LoginData;->uid:J
+    iget-wide v2, v0, Lcn/com/smartdevices/bracelet/model/LoginData;->uid:J
 
-    iput-wide v1, p1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->uid:J
+    iput-wide v2, p1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->uid:J
 
     new-instance v1, Lcn/com/smartdevices/bracelet/ui/aw;
 
@@ -426,8 +426,8 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f070079 -> :sswitch_1
-        0x7f070094 -> :sswitch_0
+        0x7f0b007d -> :sswitch_1
+        0x7f0b0098 -> :sswitch_0
     .end sparse-switch
 .end method
 
@@ -436,7 +436,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f03006c
+    const v0, 0x7f030073
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->setContentView(I)V
 

@@ -196,15 +196,15 @@
 
     sget v0, Lcom/tencent/b/b/d;->a:I
 
-    sget-wide v1, Lcom/tencent/b/b/d;->j:J
+    sget-wide v2, Lcom/tencent/b/b/d;->j:J
 
-    cmp-long v1, v1, v4
+    cmp-long v1, v2, v4
 
     if-lez v1, :cond_7
 
-    sget-wide v1, Lcom/tencent/b/b/d;->k:J
+    sget-wide v2, Lcom/tencent/b/b/d;->k:J
 
-    cmp-long v1, v1, v4
+    cmp-long v1, v2, v4
 
     if-lez v1, :cond_7
 
@@ -280,11 +280,11 @@
     sget v0, Lcom/tencent/b/b/d;->c:I
 
     :cond_1
-    int-to-long v1, v0
+    int-to-long v2, v0
 
-    sget-wide v3, Lcom/tencent/b/b/d;->k:J
+    sget-wide v4, Lcom/tencent/b/b/d;->k:J
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-gtz v1, :cond_2
 
@@ -312,9 +312,9 @@
 
     invoke-virtual {v1}, Ljava/lang/Thread;->getId()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-static {v1, v2}, Lcom/tencent/b/b/d;->b(J)Lcom/tencent/b/b/d$a;
+    invoke-static {v2, v3}, Lcom/tencent/b/b/d;->b(J)Lcom/tencent/b/b/d$a;
 
     move-result-object v1
 
@@ -326,9 +326,9 @@
 
     invoke-virtual {v1}, Ljava/lang/Thread;->getId()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-static {v1, v2}, Lcom/tencent/b/b/d;->a(J)Lcom/tencent/b/b/d$a;
+    invoke-static {v2, v3}, Lcom/tencent/b/b/d;->a(J)Lcom/tencent/b/b/d$a;
 
     move-result-object v1
 
@@ -380,7 +380,7 @@
 .end method
 
 .method private static a(J)Lcom/tencent/b/b/d$a;
-    .locals 13
+    .locals 14
 
     const-wide/16 v10, 0x0
 
@@ -537,21 +537,21 @@
 
     mul-int/lit16 v0, v0, 0x3e8
 
-    int-to-long v1, v0
+    int-to-long v2, v0
 
     sget-object v0, Lcom/tencent/b/b/d;->g:Ljava/util/ArrayList;
 
-    const/4 v3, 0x0
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/tencent/b/b/d$a;
 
-    iget-wide v5, v0, Lcom/tencent/b/b/d$a;->f:J
+    iget-wide v0, v0, Lcom/tencent/b/b/d$a;->f:J
 
-    div-long v0, v1, v5
+    div-long v0, v2, v0
 
     long-to-int v0, v0
 
@@ -690,9 +690,9 @@
     :cond_9
     iget-wide v2, v0, Lcom/tencent/b/b/d$a;->c:J
 
-    sget-wide v5, Lcom/tencent/b/b/d;->k:J
+    sget-wide v6, Lcom/tencent/b/b/d;->k:J
 
-    cmp-long v2, v2, v5
+    cmp-long v2, v2, v6
 
     if-lez v2, :cond_a
 
@@ -703,9 +703,9 @@
     :cond_a
     iget-wide v2, v0, Lcom/tencent/b/b/d$a;->c:J
 
-    sget-wide v5, Lcom/tencent/b/b/d;->l:J
+    sget-wide v6, Lcom/tencent/b/b/d;->l:J
 
-    cmp-long v2, v2, v5
+    cmp-long v2, v2, v6
 
     if-gez v2, :cond_b
 
@@ -716,9 +716,9 @@
     :cond_b
     iget-wide v2, v0, Lcom/tencent/b/b/d$a;->d:J
 
-    sget-wide v5, Lcom/tencent/b/b/d;->o:J
+    sget-wide v6, Lcom/tencent/b/b/d;->o:J
 
-    cmp-long v2, v2, v5
+    cmp-long v2, v2, v6
 
     if-lez v2, :cond_c
 
@@ -729,9 +729,9 @@
     :cond_c
     iget-wide v2, v0, Lcom/tencent/b/b/d$a;->d:J
 
-    sget-wide v5, Lcom/tencent/b/b/d;->p:J
+    sget-wide v6, Lcom/tencent/b/b/d;->p:J
 
-    cmp-long v2, v2, v5
+    cmp-long v2, v2, v6
 
     if-gez v2, :cond_d
 
@@ -752,9 +752,9 @@
 
     int-to-long v2, v2
 
-    iget-wide v5, v0, Lcom/tencent/b/b/d$a;->f:J
+    iget-wide v6, v0, Lcom/tencent/b/b/d$a;->f:J
 
-    div-long/2addr v2, v5
+    div-long/2addr v2, v6
 
     long-to-int v0, v2
 
@@ -808,9 +808,9 @@
 
     move-result-wide v0
 
-    iget-wide v3, v2, Lcom/tencent/b/b/d$a;->b:J
+    iget-wide v4, v2, Lcom/tencent/b/b/d$a;->b:J
 
-    sub-long/2addr v0, v3
+    sub-long/2addr v0, v4
 
     iput-wide v0, v2, Lcom/tencent/b/b/d$a;->f:J
 
@@ -824,9 +824,9 @@
 
     iget-wide v0, v2, Lcom/tencent/b/b/d$a;->f:J
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    cmp-long v0, v0, v3
+    cmp-long v0, v0, v4
 
     if-nez v0, :cond_3
 
@@ -835,9 +835,9 @@
     :goto_1
     mul-int/lit16 v3, p0, 0x3e8
 
-    int-to-long v3, v3
+    int-to-long v4, v3
 
-    div-long v0, v3, v0
+    div-long v0, v4, v0
 
     long-to-int v0, v0
 
@@ -898,9 +898,9 @@
 
     sget v3, Lcom/tencent/b/b/d;->c:I
 
-    int-to-long v3, v3
+    int-to-long v4, v3
 
-    cmp-long v0, v0, v3
+    cmp-long v0, v0, v4
 
     if-gez v0, :cond_2
 
@@ -908,9 +908,9 @@
 
     sget v3, Lcom/tencent/b/b/d;->f:I
 
-    int-to-long v3, v3
+    int-to-long v4, v3
 
-    cmp-long v0, v0, v3
+    cmp-long v0, v0, v4
 
     if-gez v0, :cond_2
 
@@ -978,7 +978,7 @@
 .end method
 
 .method public static a(Ljava/net/HttpURLConnection;)V
-    .locals 3
+    .locals 4
 
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
@@ -1015,9 +1015,9 @@
     :cond_1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, v0, Lcom/tencent/b/b/d$a;->b:J
+    iput-wide v2, v0, Lcom/tencent/b/b/d$a;->b:J
 
     goto :goto_0
 .end method
@@ -1061,15 +1061,15 @@
 
     sget v0, Lcom/tencent/b/b/d;->d:I
 
-    sget-wide v1, Lcom/tencent/b/b/d;->n:J
+    sget-wide v2, Lcom/tencent/b/b/d;->n:J
 
-    cmp-long v1, v1, v4
+    cmp-long v1, v2, v4
 
     if-lez v1, :cond_8
 
-    sget-wide v1, Lcom/tencent/b/b/d;->o:J
+    sget-wide v2, Lcom/tencent/b/b/d;->o:J
 
-    cmp-long v1, v1, v4
+    cmp-long v1, v2, v4
 
     if-lez v1, :cond_8
 
@@ -1145,11 +1145,11 @@
     sget v0, Lcom/tencent/b/b/d;->f:I
 
     :cond_1
-    int-to-long v1, v0
+    int-to-long v2, v0
 
-    sget-wide v3, Lcom/tencent/b/b/d;->o:J
+    sget-wide v4, Lcom/tencent/b/b/d;->o:J
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-gtz v1, :cond_2
 
@@ -1177,9 +1177,9 @@
 
     invoke-virtual {v1}, Ljava/lang/Thread;->getId()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-static {v1, v2}, Lcom/tencent/b/b/d;->b(J)Lcom/tencent/b/b/d$a;
+    invoke-static {v2, v3}, Lcom/tencent/b/b/d;->b(J)Lcom/tencent/b/b/d$a;
 
     move-result-object v1
 
@@ -1314,7 +1314,7 @@
 .end method
 
 .method private static c(J)Lcom/tencent/b/b/d$a;
-    .locals 5
+    .locals 6
 
     sget-object v0, Lcom/tencent/b/b/d;->g:Ljava/util/ArrayList;
 
@@ -1358,9 +1358,9 @@
 
     check-cast v0, Lcom/tencent/b/b/d$a;
 
-    iget-wide v3, v0, Lcom/tencent/b/b/d$a;->a:J
+    iget-wide v4, v0, Lcom/tencent/b/b/d$a;->a:J
 
-    cmp-long v0, v3, p0
+    cmp-long v0, v4, p0
 
     if-nez v0, :cond_2
 
@@ -1421,9 +1421,9 @@
 
     move-result-wide v0
 
-    iget-wide v3, v2, Lcom/tencent/b/b/d$a;->b:J
+    iget-wide v4, v2, Lcom/tencent/b/b/d$a;->b:J
 
-    sub-long/2addr v0, v3
+    sub-long/2addr v0, v4
 
     iput-wide v0, v2, Lcom/tencent/b/b/d$a;->c:J
 
@@ -1439,9 +1439,9 @@
 
     iget-wide v0, v2, Lcom/tencent/b/b/d$a;->c:J
 
-    sget-wide v3, Lcom/tencent/b/b/d;->k:J
+    sget-wide v4, Lcom/tencent/b/b/d;->k:J
 
-    cmp-long v0, v0, v3
+    cmp-long v0, v0, v4
 
     if-lez v0, :cond_4
 
@@ -1452,9 +1452,9 @@
 
     iget-wide v0, v2, Lcom/tencent/b/b/d$a;->c:J
 
-    sget-wide v3, Lcom/tencent/b/b/d;->l:J
+    sget-wide v4, Lcom/tencent/b/b/d;->l:J
 
-    cmp-long v0, v0, v3
+    cmp-long v0, v0, v4
 
     if-gez v0, :cond_5
 
@@ -1492,11 +1492,11 @@
 
     if-lez v1, :cond_3
 
-    sget-wide v3, Lcom/tencent/b/b/d;->j:J
+    sget-wide v4, Lcom/tencent/b/b/d;->j:J
 
     int-to-long v0, v1
 
-    div-long v0, v3, v0
+    div-long v0, v4, v0
 
     sput-wide v0, Lcom/tencent/b/b/d;->j:J
 
@@ -1594,9 +1594,9 @@
 
     move-result-wide v0
 
-    iget-wide v3, v2, Lcom/tencent/b/b/d$a;->b:J
+    iget-wide v4, v2, Lcom/tencent/b/b/d$a;->b:J
 
-    sub-long/2addr v0, v3
+    sub-long/2addr v0, v4
 
     iput-wide v0, v2, Lcom/tencent/b/b/d$a;->d:J
 
@@ -1612,9 +1612,9 @@
 
     iget-wide v0, v2, Lcom/tencent/b/b/d$a;->d:J
 
-    sget-wide v3, Lcom/tencent/b/b/d;->o:J
+    sget-wide v4, Lcom/tencent/b/b/d;->o:J
 
-    cmp-long v0, v0, v3
+    cmp-long v0, v0, v4
 
     if-lez v0, :cond_4
 
@@ -1625,9 +1625,9 @@
 
     iget-wide v0, v2, Lcom/tencent/b/b/d$a;->d:J
 
-    sget-wide v3, Lcom/tencent/b/b/d;->p:J
+    sget-wide v4, Lcom/tencent/b/b/d;->p:J
 
-    cmp-long v0, v0, v3
+    cmp-long v0, v0, v4
 
     if-gez v0, :cond_5
 
@@ -1665,11 +1665,11 @@
 
     if-lez v1, :cond_3
 
-    sget-wide v3, Lcom/tencent/b/b/d;->n:J
+    sget-wide v4, Lcom/tencent/b/b/d;->n:J
 
     int-to-long v0, v1
 
-    div-long v0, v3, v0
+    div-long v0, v4, v0
 
     sput-wide v0, Lcom/tencent/b/b/d;->n:J
 

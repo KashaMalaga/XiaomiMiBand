@@ -34,7 +34,7 @@
 .end method
 
 .method private static a(IJ)Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -100,19 +100,19 @@
     :cond_0
     invoke-virtual {p0, p2}, Landroid/support/v13/app/h;->b(I)J
 
-    move-result-wide v1
+    move-result-wide v2
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getId()I
 
     move-result v0
 
-    invoke-static {v0, v1, v2}, Landroid/support/v13/app/h;->a(IJ)Ljava/lang/String;
+    invoke-static {v0, v2, v3}, Landroid/support/v13/app/h;->a(IJ)Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v3, p0, Landroid/support/v13/app/h;->e:Landroid/app/FragmentManager;
+    iget-object v1, p0, Landroid/support/v13/app/h;->e:Landroid/app/FragmentManager;
 
-    invoke-virtual {v3, v0}, Landroid/app/FragmentManager;->findFragmentByTag(Ljava/lang/String;)Landroid/app/Fragment;
+    invoke-virtual {v1, v0}, Landroid/app/FragmentManager;->findFragmentByTag(Ljava/lang/String;)Landroid/app/Fragment;
 
     move-result-object v0
 
@@ -139,7 +139,7 @@
 
     move-result-object v0
 
-    iget-object v3, p0, Landroid/support/v13/app/h;->f:Landroid/app/FragmentTransaction;
+    iget-object v1, p0, Landroid/support/v13/app/h;->f:Landroid/app/FragmentTransaction;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getId()I
 
@@ -149,11 +149,11 @@
 
     move-result v5
 
-    invoke-static {v5, v1, v2}, Landroid/support/v13/app/h;->a(IJ)Ljava/lang/String;
+    invoke-static {v5, v2, v3}, Landroid/support/v13/app/h;->a(IJ)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v3, v4, v0, v1}, Landroid/app/FragmentTransaction;->add(ILandroid/app/Fragment;Ljava/lang/String;)Landroid/app/FragmentTransaction;
+    invoke-virtual {v1, v4, v0, v2}, Landroid/app/FragmentTransaction;->add(ILandroid/app/Fragment;Ljava/lang/String;)Landroid/app/FragmentTransaction;
 
     goto :goto_0
 .end method

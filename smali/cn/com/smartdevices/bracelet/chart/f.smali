@@ -25,6 +25,13 @@
 .method public a(Lcn/com/smartdevices/bracelet/chart/b/e;)V
     .locals 2
 
+    if-nez p1, :cond_1
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/F;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
     iget v1, p1, Lcn/com/smartdevices/bracelet/chart/b/e;->e:I
@@ -33,7 +40,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_2
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/F;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
@@ -43,14 +50,10 @@
 
     invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->a(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;Lcn/com/smartdevices/bracelet/chart/I;)V
 
+    :cond_2
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/F;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->c(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)V
-
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/F;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->d(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->c(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -64,33 +67,37 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/F;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->d(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->c(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Ljava/util/ArrayList;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-eqz v0, :cond_0
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/F;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->e(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Z
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->d(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_3
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/F;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->f(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)I
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->e(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/chart/F;->c(I)V
 
-    :cond_1
+    :cond_3
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/F;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->d()V
+
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/F;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->a(Lcn/com/smartdevices/bracelet/chart/StatisticChartView;)Lcn/com/smartdevices/bracelet/chart/b/f;
@@ -99,8 +106,7 @@
 
     invoke-interface {v0, p1}, Lcn/com/smartdevices/bracelet/chart/b/f;->a(Lcn/com/smartdevices/bracelet/chart/b/e;)V
 
-    :cond_2
-    return-void
+    goto :goto_0
 .end method
 
 .method public a(I)Z

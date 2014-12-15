@@ -15,60 +15,43 @@
 
 
 # static fields
-.field static final synthetic a:Z
+.field private static final p:F = 16.0f
 
-.field private static final q:F = 16.0f
+.field private static final q:F = 1.0f
 
-.field private static final r:F = 1.0f
+.field private static final t:I
 
-.field private static final w:I
+.field private static final u:I
 
-.field private static final x:I
-
-.field private static final y:I
+.field private static final v:I
 
 
 # instance fields
-.field private A:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List",
-            "<",
-            "Lcn/com/smartdevices/bracelet/gps/model/b;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private A:Lcom/amap/api/maps/model/CameraPosition$Builder;
 
-.field private B:I
+.field private B:F
 
-.field private C:Lcom/amap/api/maps/model/MarkerOptions;
+.field private final a:F
 
-.field private D:Lcom/amap/api/maps/model/CameraPosition$Builder;
+.field private b:F
 
-.field private E:F
+.field private c:Lcom/amap/api/maps/model/LatLngBounds$Builder;
 
-.field private final b:F
+.field private d:Lcom/amap/api/maps/model/LatLng;
 
-.field private c:F
+.field private e:Lcom/amap/api/maps/model/GroundOverlay;
 
-.field private d:Lcom/amap/api/maps/model/LatLngBounds$Builder;
-
-.field private e:Lcom/amap/api/maps/model/LatLng;
-
-.field private f:Lcom/amap/api/maps/model/GroundOverlay;
+.field private f:Lcom/amap/api/maps/model/Marker;
 
 .field private g:Lcom/amap/api/maps/model/Marker;
 
 .field private h:Lcom/amap/api/maps/model/Marker;
 
-.field private i:Lcom/amap/api/maps/model/Marker;
+.field private i:Lcom/amap/api/maps/AMap;
 
-.field private j:Lcom/amap/api/maps/AMap;
+.field private j:Landroid/content/Context;
 
-.field private k:Landroid/content/Context;
-
-.field private l:Ljava/util/List;
+.field private k:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List",
@@ -79,7 +62,7 @@
     .end annotation
 .end field
 
-.field private m:Ljava/util/List;
+.field private l:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List",
@@ -90,24 +73,13 @@
     .end annotation
 .end field
 
-.field private n:Lcom/amap/api/maps/overlay/WalkRouteOverlay;
+.field private m:Lcom/amap/api/maps/overlay/WalkRouteOverlay;
 
-.field private o:Lcom/amap/api/maps/model/Marker;
+.field private n:Lcom/amap/api/maps/model/Marker;
 
-.field private p:Lcom/amap/api/maps/model/GroundOverlay;
+.field private o:Lcom/amap/api/maps/model/GroundOverlay;
 
-.field private s:Landroid/util/SparseArray;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/util/SparseArray",
-            "<[",
-            "Lcom/amap/api/maps/model/Polyline;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final t:Ljava/util/List;
+.field private final r:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List",
@@ -118,11 +90,9 @@
     .end annotation
 .end field
 
-.field private u:Lcom/amap/api/maps/model/Polyline;
+.field private s:Lcom/amap/api/maps/model/Polyline;
 
-.field private v:I
-
-.field private z:Ljava/util/List;
+.field private final w:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List",
@@ -132,45 +102,42 @@
         }
     .end annotation
 .end field
+
+.field private final x:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Lcn/com/smartdevices/bracelet/gps/model/b;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private y:I
+
+.field private z:Lcom/amap/api/maps/model/MarkerOptions;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    const-class v0, Lcn/com/smartdevices/bracelet/gps/b/o;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->desiredAssertionStatus()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    sput-boolean v0, Lcn/com/smartdevices/bracelet/gps/b/o;->a:Z
-
     sget v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->STEP_SIZE:I
 
-    sput v0, Lcn/com/smartdevices/bracelet/gps/b/o;->w:I
+    sput v0, Lcn/com/smartdevices/bracelet/gps/b/o;->t:I
 
     sget v0, Lcn/com/smartdevices/bracelet/gps/algorithm/GPSManager;->RING_SIZE:I
 
-    sput v0, Lcn/com/smartdevices/bracelet/gps/b/o;->x:I
+    sput v0, Lcn/com/smartdevices/bracelet/gps/b/o;->u:I
 
-    sget v0, Lcn/com/smartdevices/bracelet/gps/b/o;->w:I
+    sget v0, Lcn/com/smartdevices/bracelet/gps/b/o;->t:I
 
     add-int/lit8 v0, v0, 0x2
 
-    sput v0, Lcn/com/smartdevices/bracelet/gps/b/o;->y:I
+    sput v0, Lcn/com/smartdevices/bracelet/gps/b/o;->v:I
 
     return-void
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Lcom/amap/api/maps/AMap;)V
@@ -186,79 +153,69 @@
 
     const/high16 v0, 0x42b40000
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->b:F
+    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->a:F
 
     const/high16 v0, 0x41c80000
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->c:F
+    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->b:F
 
-    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->d:Lcom/amap/api/maps/model/LatLngBounds$Builder;
+    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->c:Lcom/amap/api/maps/model/LatLngBounds$Builder;
 
-    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->e:Lcom/amap/api/maps/model/LatLng;
+    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->d:Lcom/amap/api/maps/model/LatLng;
 
-    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->f:Lcom/amap/api/maps/model/GroundOverlay;
+    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->e:Lcom/amap/api/maps/model/GroundOverlay;
+
+    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->f:Lcom/amap/api/maps/model/Marker;
 
     iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->g:Lcom/amap/api/maps/model/Marker;
 
     iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->h:Lcom/amap/api/maps/model/Marker;
 
-    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/model/Marker;
+    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
-    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Landroid/content/Context;
 
-    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->k:Landroid/content/Context;
+    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->k:Ljava/util/List;
 
     iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->l:Ljava/util/List;
 
-    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->m:Ljava/util/List;
+    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->m:Lcom/amap/api/maps/overlay/WalkRouteOverlay;
 
-    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->n:Lcom/amap/api/maps/overlay/WalkRouteOverlay;
+    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->n:Lcom/amap/api/maps/model/Marker;
 
-    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->o:Lcom/amap/api/maps/model/Marker;
+    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->o:Lcom/amap/api/maps/model/GroundOverlay;
 
-    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->p:Lcom/amap/api/maps/model/GroundOverlay;
-
-    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->s:Landroid/util/SparseArray;
-
-    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->u:Lcom/amap/api/maps/model/Polyline;
-
-    iput v5, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->v:I
+    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->s:Lcom/amap/api/maps/model/Polyline;
 
     new-instance v0, Ljava/util/ArrayList;
 
-    sget v1, Lcn/com/smartdevices/bracelet/gps/b/o;->y:I
+    sget v1, Lcn/com/smartdevices/bracelet/gps/b/o;->v:I
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->z:Ljava/util/List;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->w:Ljava/util/List;
 
     new-instance v0, Ljava/util/ArrayList;
 
-    sget v1, Lcn/com/smartdevices/bracelet/gps/b/o;->x:I
+    sget v1, Lcn/com/smartdevices/bracelet/gps/b/o;->u:I
 
-    sget v2, Lcn/com/smartdevices/bracelet/gps/b/o;->w:I
+    sget v2, Lcn/com/smartdevices/bracelet/gps/b/o;->t:I
 
     sub-int/2addr v1, v2
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->A:Ljava/util/List;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->x:Ljava/util/List;
 
-    iput v5, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->B:I
+    iput v5, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->y:I
 
-    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->C:Lcom/amap/api/maps/model/MarkerOptions;
+    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->z:Lcom/amap/api/maps/model/MarkerOptions;
 
-    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->D:Lcom/amap/api/maps/model/CameraPosition$Builder;
+    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->A:Lcom/amap/api/maps/model/CameraPosition$Builder;
 
-    iput v4, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->E:F
+    iput v4, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->B:F
 
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->m:Ljava/util/List;
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -266,53 +223,51 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->l:Ljava/util/List;
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->k:Landroid/content/Context;
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->k:Ljava/util/List;
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Landroid/content/Context;
 
     new-instance v0, Lcom/amap/api/maps/model/LatLngBounds$Builder;
 
     invoke-direct {v0}, Lcom/amap/api/maps/model/LatLngBounds$Builder;-><init>()V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->d:Lcom/amap/api/maps/model/LatLngBounds$Builder;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->c:Lcom/amap/api/maps/model/LatLngBounds$Builder;
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->c:F
+    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->b:F
 
     const/high16 v1, 0x3f800000
 
     mul-float/2addr v0, v1
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->c:F
-
-    new-instance v0, Landroid/util/SparseArray;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1}, Landroid/util/SparseArray;-><init>(I)V
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->s:Landroid/util/SparseArray;
+    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->b:F
 
     new-instance v0, Ljava/util/ArrayList;
 
-    sget v1, Lcn/com/smartdevices/bracelet/gps/b/o;->x:I
+    sget v1, Lcn/com/smartdevices/bracelet/gps/b/o;->u:I
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->t:Ljava/util/List;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->r:Ljava/util/List;
 
-    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->u:Lcom/amap/api/maps/model/Polyline;
+    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->s:Lcom/amap/api/maps/model/Polyline;
 
     new-instance v0, Lcom/amap/api/maps/model/MarkerOptions;
 
     invoke-direct {v0}, Lcom/amap/api/maps/model/MarkerOptions;-><init>()V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->C:Lcom/amap/api/maps/model/MarkerOptions;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->z:Lcom/amap/api/maps/model/MarkerOptions;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->C:Lcom/amap/api/maps/model/MarkerOptions;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->z:Lcom/amap/api/maps/model/MarkerOptions;
 
     invoke-virtual {v0, v5}, Lcom/amap/api/maps/model/MarkerOptions;->draggable(Z)Lcom/amap/api/maps/model/MarkerOptions;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->C:Lcom/amap/api/maps/model/MarkerOptions;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->z:Lcom/amap/api/maps/model/MarkerOptions;
 
-    const v1, 0x7f0200ae
+    const v1, 0x7f0200b0
 
     invoke-static {v1}, Lcom/amap/api/maps/model/BitmapDescriptorFactory;->fromResource(I)Lcom/amap/api/maps/model/BitmapDescriptor;
 
@@ -320,25 +275,25 @@
 
     invoke-virtual {v0, v1}, Lcom/amap/api/maps/model/MarkerOptions;->icon(Lcom/amap/api/maps/model/BitmapDescriptor;)Lcom/amap/api/maps/model/MarkerOptions;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->C:Lcom/amap/api/maps/model/MarkerOptions;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->z:Lcom/amap/api/maps/model/MarkerOptions;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/amap/api/maps/model/MarkerOptions;->setFlat(Z)Lcom/amap/api/maps/model/MarkerOptions;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
     invoke-virtual {v0}, Lcom/amap/api/maps/AMap;->getMaxZoomLevel()F
 
     move-result v0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->E:F
+    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->B:F
 
     new-instance v0, Lcom/amap/api/maps/model/CameraPosition$Builder;
 
     invoke-direct {v0}, Lcom/amap/api/maps/model/CameraPosition$Builder;-><init>()V
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->E:F
+    iget v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->B:F
 
     const/high16 v2, 0x40a00000
 
@@ -356,7 +311,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->D:Lcom/amap/api/maps/model/CameraPosition$Builder;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->A:Lcom/amap/api/maps/model/CameraPosition$Builder;
 
     return-void
 .end method
@@ -516,168 +471,6 @@
     return-object v0
 .end method
 
-.method private a(II)Lcom/amap/api/maps/model/Polyline;
-    .locals 5
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->s:Landroid/util/SparseArray;
-
-    invoke-virtual {v0, p2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lcom/amap/api/maps/model/Polyline;
-
-    if-nez v0, :cond_0
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->a()I
-
-    move-result v0
-
-    new-array v0, v0, [Lcom/amap/api/maps/model/Polyline;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->s:Landroid/util/SparseArray;
-
-    invoke-virtual {v1, p2, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    const/4 v0, 0x0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->a()I
-
-    move-result v1
-
-    rem-int v1, p1, v1
-
-    const-string v2, "Run"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "getCachedLineWindow absoluteLineIndex = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string v4, " , index = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string v4, "  ,lineGroupIndex = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    aget-object v0, v0, v1
-
-    goto :goto_0
-.end method
-
-.method private a(Lcom/amap/api/maps/model/Polyline;II)V
-    .locals 5
-
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/gps/b/o;->a:Z
-
-    if-nez v0, :cond_0
-
-    if-nez p1, :cond_0
-
-    new-instance v0, Ljava/lang/AssertionError;
-
-    invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
-
-    throw v0
-
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->s:Landroid/util/SparseArray;
-
-    invoke-virtual {v0, p3}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lcom/amap/api/maps/model/Polyline;
-
-    if-nez v0, :cond_1
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->a()I
-
-    move-result v0
-
-    new-array v0, v0, [Lcom/amap/api/maps/model/Polyline;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->s:Landroid/util/SparseArray;
-
-    invoke-virtual {v1, p3, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    :cond_1
-    invoke-static {}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->a()I
-
-    move-result v1
-
-    rem-int v1, p2, v1
-
-    const-string v2, "Run"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "updateCachedLineWindow absoluteLineIndex = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string v4, " , index = "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    aput-object p1, v0, v1
-
-    return-void
-.end method
-
 .method private a(Ljava/util/List;Ljava/lang/String;)V
     .locals 6
     .annotation system Ldalvik/annotation/Signature;
@@ -772,7 +565,7 @@
 .method private b(Z)V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
     invoke-virtual {v0}, Lcom/amap/api/maps/AMap;->getUiSettings()Lcom/amap/api/maps/UiSettings;
 
@@ -780,7 +573,7 @@
 
     invoke-virtual {v0, p1}, Lcom/amap/api/maps/UiSettings;->setMyLocationButtonEnabled(Z)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
     invoke-virtual {v0, p1}, Lcom/amap/api/maps/AMap;->setMyLocationEnabled(Z)V
 
@@ -798,20 +591,20 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/model/Marker;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->h:Lcom/amap/api/maps/model/Marker;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/model/Marker;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->h:Lcom/amap/api/maps/model/Marker;
 
     invoke-virtual {v0}, Lcom/amap/api/maps/model/Marker;->remove()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/model/Marker;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->h:Lcom/amap/api/maps/model/Marker;
 
     invoke-virtual {v0}, Lcom/amap/api/maps/model/Marker;->destroy()V
 
     :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->C:Lcom/amap/api/maps/model/MarkerOptions;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->z:Lcom/amap/api/maps/model/MarkerOptions;
 
     invoke-static {p1}, Lcn/com/smartdevices/bracelet/gps/d/a;->a(Lcn/com/smartdevices/bracelet/gps/model/b;)Lcom/amap/api/maps/model/LatLng;
 
@@ -819,17 +612,17 @@
 
     invoke-virtual {v0, v1}, Lcom/amap/api/maps/model/MarkerOptions;->position(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/MarkerOptions;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->C:Lcom/amap/api/maps/model/MarkerOptions;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->z:Lcom/amap/api/maps/model/MarkerOptions;
 
     invoke-virtual {v0, v1}, Lcom/amap/api/maps/AMap;->addMarker(Lcom/amap/api/maps/model/MarkerOptions;)Lcom/amap/api/maps/model/Marker;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/model/Marker;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->h:Lcom/amap/api/maps/model/Marker;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/model/Marker;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->h:Lcom/amap/api/maps/model/Marker;
 
     invoke-virtual {v0, v2, v2}, Lcom/amap/api/maps/model/Marker;->setAnchor(FF)V
 
@@ -933,7 +726,7 @@
 
     invoke-virtual {v0, v1}, Lcom/amap/api/maps/model/PolylineOptions;->zIndex(F)Lcom/amap/api/maps/model/PolylineOptions;
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->c:F
+    iget v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->b:F
 
     invoke-virtual {v0, v1}, Lcom/amap/api/maps/model/PolylineOptions;->width(F)Lcom/amap/api/maps/model/PolylineOptions;
 
@@ -943,7 +736,7 @@
 
     invoke-virtual {v0, v1}, Lcom/amap/api/maps/model/PolylineOptions;->color(I)Lcom/amap/api/maps/model/PolylineOptions;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
     invoke-virtual {v1, v0}, Lcom/amap/api/maps/AMap;->addPolyline(Lcom/amap/api/maps/model/PolylineOptions;)Lcom/amap/api/maps/model/Polyline;
 
@@ -974,7 +767,7 @@
 
     check-cast v0, Lcn/com/smartdevices/bracelet/gps/model/b;
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->d:Lcom/amap/api/maps/model/LatLngBounds$Builder;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->c:Lcom/amap/api/maps/model/LatLngBounds$Builder;
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/d/a;->a(Lcn/com/smartdevices/bracelet/gps/model/b;)Lcom/amap/api/maps/model/LatLng;
 
@@ -991,7 +784,11 @@
 .end method
 
 .method public a()V
-    .locals 0
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
+
+    invoke-virtual {v0}, Lcom/amap/api/maps/AMap;->clear()V
 
     return-void
 .end method
@@ -999,7 +796,7 @@
 .method public a(F)V
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->c:F
+    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->b:F
 
     return-void
 .end method
@@ -1007,11 +804,11 @@
 .method public a(I)V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->p:Lcom/amap/api/maps/model/GroundOverlay;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->o:Lcom/amap/api/maps/model/GroundOverlay;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->p:Lcom/amap/api/maps/model/GroundOverlay;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->o:Lcom/amap/api/maps/model/GroundOverlay;
 
     const/4 v1, 0x0
 
@@ -1035,7 +832,7 @@
     throw v0
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
     invoke-virtual {v0}, Lcom/amap/api/maps/AMap;->getCameraPosition()Lcom/amap/api/maps/model/CameraPosition;
 
@@ -1045,29 +842,29 @@
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->e:Lcom/amap/api/maps/model/LatLng;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->d:Lcom/amap/api/maps/model/LatLng;
 
     :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->p:Lcom/amap/api/maps/model/GroundOverlay;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->o:Lcom/amap/api/maps/model/GroundOverlay;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->p:Lcom/amap/api/maps/model/GroundOverlay;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->o:Lcom/amap/api/maps/model/GroundOverlay;
 
     invoke-virtual {v0}, Lcom/amap/api/maps/model/GroundOverlay;->remove()V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->p:Lcom/amap/api/maps/model/GroundOverlay;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->o:Lcom/amap/api/maps/model/GroundOverlay;
 
     :cond_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->k:Landroid/content/Context;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f020059
+    const v1, 0x7f02005a
 
     invoke-static {v0, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
@@ -1097,13 +894,13 @@
 
     invoke-virtual {v1, v2}, Lcom/amap/api/maps/model/GroundOverlayOptions;->image(Lcom/amap/api/maps/model/BitmapDescriptor;)Lcom/amap/api/maps/model/GroundOverlayOptions;
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
     invoke-virtual {v2, v1}, Lcom/amap/api/maps/AMap;->addGroundOverlay(Lcom/amap/api/maps/model/GroundOverlayOptions;)Lcom/amap/api/maps/model/GroundOverlay;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->p:Lcom/amap/api/maps/model/GroundOverlay;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->o:Lcom/amap/api/maps/model/GroundOverlay;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
@@ -1129,7 +926,7 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
     invoke-virtual {v0}, Lcom/amap/api/maps/AMap;->getCameraPosition()Lcom/amap/api/maps/model/CameraPosition;
 
@@ -1139,29 +936,29 @@
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->e:Lcom/amap/api/maps/model/LatLng;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->d:Lcom/amap/api/maps/model/LatLng;
 
     :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->f:Lcom/amap/api/maps/model/GroundOverlay;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->e:Lcom/amap/api/maps/model/GroundOverlay;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->f:Lcom/amap/api/maps/model/GroundOverlay;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->e:Lcom/amap/api/maps/model/GroundOverlay;
 
     invoke-virtual {v0}, Lcom/amap/api/maps/model/GroundOverlay;->remove()V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->f:Lcom/amap/api/maps/model/GroundOverlay;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->e:Lcom/amap/api/maps/model/GroundOverlay;
 
     :cond_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->k:Landroid/content/Context;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f020058
+    const v1, 0x7f020059
 
     invoke-static {v0, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
@@ -1229,15 +1026,15 @@
 
     invoke-virtual {v2, v3}, Lcom/amap/api/maps/model/GroundOverlayOptions;->image(Lcom/amap/api/maps/model/BitmapDescriptor;)Lcom/amap/api/maps/model/GroundOverlayOptions;
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
     invoke-virtual {v3, v2}, Lcom/amap/api/maps/AMap;->addGroundOverlay(Lcom/amap/api/maps/model/GroundOverlayOptions;)Lcom/amap/api/maps/model/GroundOverlay;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->f:Lcom/amap/api/maps/model/GroundOverlay;
+    iput-object v2, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->e:Lcom/amap/api/maps/model/GroundOverlay;
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->f:Lcom/amap/api/maps/model/GroundOverlay;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->e:Lcom/amap/api/maps/model/GroundOverlay;
 
     invoke-virtual {v2, v1}, Lcom/amap/api/maps/model/GroundOverlay;->setPositionFromBounds(Lcom/amap/api/maps/model/LatLngBounds;)V
 
@@ -1297,20 +1094,20 @@
 
     move-result v6
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->n:Lcom/amap/api/maps/overlay/WalkRouteOverlay;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->m:Lcom/amap/api/maps/overlay/WalkRouteOverlay;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->n:Lcom/amap/api/maps/overlay/WalkRouteOverlay;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->m:Lcom/amap/api/maps/overlay/WalkRouteOverlay;
 
     invoke-virtual {v0}, Lcom/amap/api/maps/overlay/WalkRouteOverlay;->removeFromMap()V
 
     :cond_2
     new-instance v0, Lcom/amap/api/maps/overlay/WalkRouteOverlay;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->k:Landroid/content/Context;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Landroid/content/Context;
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
     const/4 v4, 0x0
 
@@ -1330,9 +1127,9 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/amap/api/maps/overlay/WalkRouteOverlay;-><init>(Landroid/content/Context;Lcom/amap/api/maps/AMap;Lcom/amap/api/services/route/WalkPath;Lcom/amap/api/services/core/LatLonPoint;Lcom/amap/api/services/core/LatLonPoint;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->n:Lcom/amap/api/maps/overlay/WalkRouteOverlay;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->m:Lcom/amap/api/maps/overlay/WalkRouteOverlay;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->n:Lcom/amap/api/maps/overlay/WalkRouteOverlay;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->m:Lcom/amap/api/maps/overlay/WalkRouteOverlay;
 
     invoke-virtual {v0}, Lcom/amap/api/maps/overlay/WalkRouteOverlay;->addToMap()V
 
@@ -1342,7 +1139,7 @@
 .method public a(Z)V
     .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->m:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->l:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1354,7 +1151,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->l:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->k:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1432,9 +1229,9 @@
 .end method
 
 .method public b(ILcn/com/smartdevices/bracelet/gps/model/b;)Lcom/amap/api/maps/model/LatLngBounds;
-    .locals 9
+    .locals 10
 
-    const-wide/high16 v7, 0x3ff0000000000000L
+    const-wide/high16 v8, 0x3ff0000000000000L
 
     if-nez p2, :cond_0
 
@@ -1457,17 +1254,17 @@
 
     invoke-virtual {v0}, Lcom/amap/api/services/core/LatLonPoint;->getLatitude()D
 
-    move-result-wide v3
+    move-result-wide v4
 
-    sub-double/2addr v3, v7
+    sub-double/2addr v4, v8
 
     invoke-virtual {v0}, Lcom/amap/api/services/core/LatLonPoint;->getLongitude()D
 
-    move-result-wide v5
+    move-result-wide v6
 
-    sub-double/2addr v5, v7
+    sub-double/2addr v6, v8
 
-    invoke-direct {v2, v3, v4, v5, v6}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v2, v4, v5, v6, v7}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     invoke-virtual {v1, v2}, Lcom/amap/api/maps/model/LatLngBounds$Builder;->include(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/LatLngBounds$Builder;
 
@@ -1475,17 +1272,17 @@
 
     invoke-virtual {v0}, Lcom/amap/api/services/core/LatLonPoint;->getLatitude()D
 
-    move-result-wide v3
+    move-result-wide v4
 
-    sub-double/2addr v3, v7
+    sub-double/2addr v4, v8
 
     invoke-virtual {v0}, Lcom/amap/api/services/core/LatLonPoint;->getLongitude()D
 
-    move-result-wide v5
+    move-result-wide v6
 
-    add-double/2addr v5, v7
+    add-double/2addr v6, v8
 
-    invoke-direct {v2, v3, v4, v5, v6}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v2, v4, v5, v6, v7}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     invoke-virtual {v1, v2}, Lcom/amap/api/maps/model/LatLngBounds$Builder;->include(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/LatLngBounds$Builder;
 
@@ -1493,17 +1290,17 @@
 
     invoke-virtual {v0}, Lcom/amap/api/services/core/LatLonPoint;->getLatitude()D
 
-    move-result-wide v3
+    move-result-wide v4
 
-    add-double/2addr v3, v7
+    add-double/2addr v4, v8
 
     invoke-virtual {v0}, Lcom/amap/api/services/core/LatLonPoint;->getLongitude()D
 
-    move-result-wide v5
+    move-result-wide v6
 
-    sub-double/2addr v5, v7
+    sub-double/2addr v6, v8
 
-    invoke-direct {v2, v3, v4, v5, v6}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v2, v4, v5, v6, v7}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     invoke-virtual {v1, v2}, Lcom/amap/api/maps/model/LatLngBounds$Builder;->include(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/LatLngBounds$Builder;
 
@@ -1511,17 +1308,17 @@
 
     invoke-virtual {v0}, Lcom/amap/api/services/core/LatLonPoint;->getLatitude()D
 
-    move-result-wide v3
+    move-result-wide v4
 
-    add-double/2addr v3, v7
+    add-double/2addr v4, v8
 
     invoke-virtual {v0}, Lcom/amap/api/services/core/LatLonPoint;->getLongitude()D
 
-    move-result-wide v5
+    move-result-wide v6
 
-    add-double/2addr v5, v7
+    add-double/2addr v6, v8
 
-    invoke-direct {v2, v3, v4, v5, v6}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v2, v4, v5, v6, v7}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     invoke-virtual {v1, v2}, Lcom/amap/api/maps/model/LatLngBounds$Builder;->include(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/LatLngBounds$Builder;
 
@@ -1570,11 +1367,11 @@
     :goto_0
     invoke-virtual {v1, v0}, Lcom/amap/api/maps/model/PolylineOptions;->color(I)Lcom/amap/api/maps/model/PolylineOptions;
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->c:F
+    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->b:F
 
     invoke-virtual {v1, v0}, Lcom/amap/api/maps/model/PolylineOptions;->width(F)Lcom/amap/api/maps/model/PolylineOptions;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
     invoke-virtual {v0, v1}, Lcom/amap/api/maps/AMap;->addPolyline(Lcom/amap/api/maps/model/PolylineOptions;)Lcom/amap/api/maps/model/Polyline;
 
@@ -1589,19 +1386,13 @@
 .end method
 
 .method public b()V
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
-
-    invoke-virtual {v0}, Lcom/amap/api/maps/AMap;->clear()V
+    .locals 0
 
     return-void
 .end method
 
 .method public b(I)V
     .locals 0
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->v:I
 
     return-void
 .end method
@@ -1650,9 +1441,9 @@
 
     invoke-virtual {v2, v0, v1}, Lcom/amap/api/maps/model/MarkerOptions;->anchor(FF)Lcom/amap/api/maps/model/MarkerOptions;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->l:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->k:Ljava/util/List;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
     invoke-virtual {v1, v2}, Lcom/amap/api/maps/AMap;->addMarker(Lcom/amap/api/maps/model/MarkerOptions;)Lcom/amap/api/maps/model/Marker;
 
@@ -1719,7 +1510,7 @@
 .method public c()V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->m:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->l:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1731,11 +1522,11 @@
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->m:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->l:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->l:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->k:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1759,7 +1550,7 @@
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->l:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->k:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
@@ -1767,7 +1558,7 @@
     return-void
 
     :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->l:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->k:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
@@ -1789,7 +1580,7 @@
     goto :goto_2
 
     :cond_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->m:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->l:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
@@ -1799,7 +1590,7 @@
 .method public c(I)V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
     const/4 v1, 0x1
 
@@ -1828,9 +1619,9 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->e:Lcom/amap/api/maps/model/LatLng;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->d:Lcom/amap/api/maps/model/LatLng;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
     const/high16 v2, 0x41800000
 
@@ -1896,15 +1687,15 @@
 
     move-result v3
 
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->o:Lcom/amap/api/maps/model/Marker;
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->n:Lcom/amap/api/maps/model/Marker;
 
     if-nez v4, :cond_3
 
     if-nez v3, :cond_3
 
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
-    iget-object v5, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->D:Lcom/amap/api/maps/model/CameraPosition$Builder;
+    iget-object v5, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->A:Lcom/amap/api/maps/model/CameraPosition$Builder;
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/d/a;->a(Lcn/com/smartdevices/bracelet/gps/model/b;)Lcom/amap/api/maps/model/LatLng;
 
@@ -1924,7 +1715,7 @@
 
     invoke-virtual {v4, v5}, Lcom/amap/api/maps/AMap;->moveCamera(Lcom/amap/api/maps/CameraUpdate;)V
 
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
     invoke-virtual {v4}, Lcom/amap/api/maps/AMap;->clear()V
 
@@ -1933,15 +1724,15 @@
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/b/o;->f(Lcn/com/smartdevices/bracelet/gps/model/b;)V
 
     :cond_3
-    iget v4, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->B:I
+    iget v4, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->y:I
 
-    sget v5, Lcn/com/smartdevices/bracelet/gps/b/o;->w:I
+    sget v5, Lcn/com/smartdevices/bracelet/gps/b/o;->t:I
 
     mul-int/2addr v4, v5
 
     sub-int/2addr v3, v4
 
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->t:Ljava/util/List;
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->r:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->size()I
 
@@ -1949,14 +1740,14 @@
 
     if-ne v3, v4, :cond_4
 
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->t:Ljava/util/List;
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->r:Ljava/util/List;
 
     invoke-interface {v4, v3, v0}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
     goto :goto_1
 
     :cond_4
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->t:Ljava/util/List;
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->r:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->size()I
 
@@ -1964,7 +1755,7 @@
 
     if-le v3, v4, :cond_5
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->t:Ljava/util/List;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->r:Ljava/util/List;
 
     invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -1973,14 +1764,14 @@
     :cond_5
     if-ltz v3, :cond_2
 
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->t:Ljava/util/List;
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->r:Ljava/util/List;
 
     invoke-interface {v4, v3, v0}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_1
 
     :cond_6
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->t:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->r:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -1988,47 +1779,47 @@
 
     if-lez v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->u:Lcom/amap/api/maps/model/Polyline;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->s:Lcom/amap/api/maps/model/Polyline;
 
     if-nez v0, :cond_7
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->t:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->r:Ljava/util/List;
 
     invoke-virtual {p0, v0, p2}, Lcn/com/smartdevices/bracelet/gps/b/o;->a(Ljava/util/List;Lcn/com/smartdevices/bracelet/gps/b/t;)Lcom/amap/api/maps/model/Polyline;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->u:Lcom/amap/api/maps/model/Polyline;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->s:Lcom/amap/api/maps/model/Polyline;
 
     :goto_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->t:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->r:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    sget v2, Lcn/com/smartdevices/bracelet/gps/b/o;->x:I
+    sget v2, Lcn/com/smartdevices/bracelet/gps/b/o;->u:I
 
     if-ne v0, v2, :cond_c
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->u:Lcom/amap/api/maps/model/Polyline;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->s:Lcom/amap/api/maps/model/Polyline;
 
     invoke-virtual {v0, v1}, Lcom/amap/api/maps/model/Polyline;->setVisible(Z)V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->u:Lcom/amap/api/maps/model/Polyline;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->s:Lcom/amap/api/maps/model/Polyline;
 
     move v0, v1
 
     :goto_3
-    sget v1, Lcn/com/smartdevices/bracelet/gps/b/o;->y:I
+    sget v1, Lcn/com/smartdevices/bracelet/gps/b/o;->v:I
 
     if-ge v0, v1, :cond_8
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->z:Ljava/util/List;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->w:Ljava/util/List;
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->t:Ljava/util/List;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->r:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -2041,9 +1832,9 @@
     goto :goto_3
 
     :cond_7
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->u:Lcom/amap/api/maps/model/Polyline;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->s:Lcom/amap/api/maps/model/Polyline;
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->t:Ljava/util/List;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->r:Ljava/util/List;
 
     invoke-static {v2}, Lcn/com/smartdevices/bracelet/gps/d/a;->a(Ljava/util/List;)Ljava/util/List;
 
@@ -2054,7 +1845,7 @@
     goto :goto_2
 
     :cond_8
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->z:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->w:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -2064,31 +1855,31 @@
 
     if-lt v0, v1, :cond_9
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->z:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->w:Ljava/util/List;
 
     invoke-virtual {p0, v0, p2}, Lcn/com/smartdevices/bracelet/gps/b/o;->a(Ljava/util/List;Lcn/com/smartdevices/bracelet/gps/b/t;)Lcom/amap/api/maps/model/Polyline;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->z:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->w:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
     :cond_9
-    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->B:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->y:I
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->B:I
+    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->y:I
 
-    sget v0, Lcn/com/smartdevices/bracelet/gps/b/o;->w:I
+    sget v0, Lcn/com/smartdevices/bracelet/gps/b/o;->t:I
 
     :goto_4
-    sget v1, Lcn/com/smartdevices/bracelet/gps/b/o;->x:I
+    sget v1, Lcn/com/smartdevices/bracelet/gps/b/o;->u:I
 
     if-ge v0, v1, :cond_a
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->A:Ljava/util/List;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->x:Ljava/util/List;
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->t:Ljava/util/List;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->r:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -2101,11 +1892,11 @@
     goto :goto_4
 
     :cond_a
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->t:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->r:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->A:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->x:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2124,29 +1915,29 @@
 
     check-cast v0, Lcn/com/smartdevices/bracelet/gps/model/b;
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->t:Ljava/util/List;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->r:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_5
 
     :cond_b
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->A:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->x:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->t:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->r:Ljava/util/List;
 
     invoke-virtual {p0, v0, p2}, Lcn/com/smartdevices/bracelet/gps/b/o;->a(Ljava/util/List;Lcn/com/smartdevices/bracelet/gps/b/t;)Lcom/amap/api/maps/model/Polyline;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->u:Lcom/amap/api/maps/model/Polyline;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->s:Lcom/amap/api/maps/model/Polyline;
 
     :cond_c
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->t:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->r:Ljava/util/List;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->t:Ljava/util/List;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->r:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -2168,51 +1959,51 @@
 .method public d()V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->m:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->l:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->m:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->l:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->u:Lcom/amap/api/maps/model/Polyline;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->s:Lcom/amap/api/maps/model/Polyline;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->u:Lcom/amap/api/maps/model/Polyline;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->s:Lcom/amap/api/maps/model/Polyline;
 
     invoke-virtual {v0}, Lcom/amap/api/maps/model/Polyline;->remove()V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->u:Lcom/amap/api/maps/model/Polyline;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->s:Lcom/amap/api/maps/model/Polyline;
 
     :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->t:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->r:Ljava/util/List;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->t:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->r:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
     :cond_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->l:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->k:Ljava/util/List;
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->l:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->k:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
     :cond_3
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
     if-eqz v0, :cond_4
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
     invoke-virtual {v0}, Lcom/amap/api/maps/AMap;->clear()V
 
@@ -2223,7 +2014,7 @@
 .method public d(I)V
     .locals 4
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
     invoke-virtual {v0}, Lcom/amap/api/maps/AMap;->getCameraPosition()Lcom/amap/api/maps/model/CameraPosition;
 
@@ -2231,7 +2022,7 @@
 
     iget-object v0, v0, Lcom/amap/api/maps/model/CameraPosition;->target:Lcom/amap/api/maps/model/LatLng;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
     invoke-virtual {v1}, Lcom/amap/api/maps/AMap;->getCameraPosition()Lcom/amap/api/maps/model/CameraPosition;
 
@@ -2239,7 +2030,7 @@
 
     iget v1, v1, Lcom/amap/api/maps/model/CameraPosition;->zoom:F
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
     int-to-float v3, p1
 
@@ -2267,21 +2058,21 @@
 
     :cond_0
     :try_start_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->g:Lcom/amap/api/maps/model/Marker;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->f:Lcom/amap/api/maps/model/Marker;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->g:Lcom/amap/api/maps/model/Marker;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->f:Lcom/amap/api/maps/model/Marker;
 
     invoke-virtual {v0}, Lcom/amap/api/maps/model/Marker;->remove()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->g:Lcom/amap/api/maps/model/Marker;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->f:Lcom/amap/api/maps/model/Marker;
 
     invoke-virtual {v0}, Lcom/amap/api/maps/model/Marker;->destroy()V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->g:Lcom/amap/api/maps/model/Marker;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->f:Lcom/amap/api/maps/model/Marker;
 
     :cond_1
     new-instance v0, Lcom/amap/api/maps/model/MarkerOptions;
@@ -2298,7 +2089,7 @@
 
     invoke-virtual {v0, v1}, Lcom/amap/api/maps/model/MarkerOptions;->draggable(Z)Lcom/amap/api/maps/model/MarkerOptions;
 
-    const v1, 0x7f0200aa
+    const v1, 0x7f0200ac
 
     invoke-static {v1}, Lcom/amap/api/maps/model/BitmapDescriptorFactory;->fromResource(I)Lcom/amap/api/maps/model/BitmapDescriptor;
 
@@ -2310,15 +2101,15 @@
 
     invoke-virtual {v0, v1}, Lcom/amap/api/maps/model/MarkerOptions;->setFlat(Z)Lcom/amap/api/maps/model/MarkerOptions;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
     invoke-virtual {v1, v0}, Lcom/amap/api/maps/AMap;->addMarker(Lcom/amap/api/maps/model/MarkerOptions;)Lcom/amap/api/maps/model/Marker;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->g:Lcom/amap/api/maps/model/Marker;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->f:Lcom/amap/api/maps/model/Marker;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->g:Lcom/amap/api/maps/model/Marker;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->f:Lcom/amap/api/maps/model/Marker;
 
     const/high16 v1, 0x3f000000
 
@@ -2357,7 +2148,7 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->m:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->l:Ljava/util/List;
 
     return-object v0
 .end method
@@ -2380,7 +2171,7 @@
     throw v0
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->h:Lcom/amap/api/maps/model/Marker;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->g:Lcom/amap/api/maps/model/Marker;
 
     if-nez v0, :cond_1
 
@@ -2388,7 +2179,7 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    const v1, 0x7f020056
+    const v1, 0x7f020057
 
     invoke-static {v1}, Lcom/amap/api/maps/model/BitmapDescriptorFactory;->fromResource(I)Lcom/amap/api/maps/model/BitmapDescriptor;
 
@@ -2396,7 +2187,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const v1, 0x7f020057
+    const v1, 0x7f020058
 
     invoke-static {v1}, Lcom/amap/api/maps/model/BitmapDescriptorFactory;->fromResource(I)Lcom/amap/api/maps/model/BitmapDescriptor;
 
@@ -2422,7 +2213,7 @@
 
     invoke-virtual {v1, v2}, Lcom/amap/api/maps/model/MyLocationStyle;->radiusFillColor(I)Lcom/amap/api/maps/model/MyLocationStyle;
 
-    const v2, 0x7f02005a
+    const v2, 0x7f02005b
 
     invoke-static {v2}, Lcom/amap/api/maps/model/BitmapDescriptorFactory;->fromResource(I)Lcom/amap/api/maps/model/BitmapDescriptor;
 
@@ -2434,17 +2225,17 @@
 
     invoke-virtual {v1, v2}, Lcom/amap/api/maps/model/MyLocationStyle;->strokeWidth(F)Lcom/amap/api/maps/model/MyLocationStyle;
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
     invoke-virtual {v2, v1}, Lcom/amap/api/maps/AMap;->setMyLocationStyle(Lcom/amap/api/maps/model/MyLocationStyle;)V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
     const/high16 v2, 0x43340000
 
     invoke-virtual {v1, v2}, Lcom/amap/api/maps/AMap;->setMyLocationRotateAngle(F)V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
     invoke-virtual {v1}, Lcom/amap/api/maps/AMap;->getUiSettings()Lcom/amap/api/maps/UiSettings;
 
@@ -2452,15 +2243,15 @@
 
     invoke-virtual {v1, v4}, Lcom/amap/api/maps/UiSettings;->setMyLocationButtonEnabled(Z)V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
     invoke-virtual {v1, v4}, Lcom/amap/api/maps/AMap;->setMyLocationEnabled(Z)V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
     invoke-virtual {v1, v4}, Lcom/amap/api/maps/AMap;->setMyLocationType(I)V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
     new-instance v2, Lcom/amap/api/maps/model/MarkerOptions;
 
@@ -2484,10 +2275,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->h:Lcom/amap/api/maps/model/Marker;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->g:Lcom/amap/api/maps/model/Marker;
 
     :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->h:Lcom/amap/api/maps/model/Marker;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->g:Lcom/amap/api/maps/model/Marker;
 
     invoke-static {p1}, Lcn/com/smartdevices/bracelet/gps/d/a;->a(Lcn/com/smartdevices/bracelet/gps/model/b;)Lcom/amap/api/maps/model/LatLng;
 
@@ -2495,7 +2286,7 @@
 
     invoke-virtual {v0, v1}, Lcom/amap/api/maps/model/Marker;->setPosition(Lcom/amap/api/maps/model/LatLng;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
     invoke-virtual {v0}, Lcom/amap/api/maps/AMap;->getCameraPosition()Lcom/amap/api/maps/model/CameraPosition;
 
@@ -2503,7 +2294,7 @@
 
     iget v0, v0, Lcom/amap/api/maps/model/CameraPosition;->bearing:F
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
     invoke-virtual {v1, v0}, Lcom/amap/api/maps/AMap;->setMyLocationRotateAngle(F)V
 
@@ -2540,21 +2331,21 @@
 
     :cond_0
     :try_start_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->o:Lcom/amap/api/maps/model/Marker;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->n:Lcom/amap/api/maps/model/Marker;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->o:Lcom/amap/api/maps/model/Marker;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->n:Lcom/amap/api/maps/model/Marker;
 
     invoke-virtual {v0}, Lcom/amap/api/maps/model/Marker;->remove()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->o:Lcom/amap/api/maps/model/Marker;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->n:Lcom/amap/api/maps/model/Marker;
 
     invoke-virtual {v0}, Lcom/amap/api/maps/model/Marker;->destroy()V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->o:Lcom/amap/api/maps/model/Marker;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->n:Lcom/amap/api/maps/model/Marker;
 
     :cond_1
     new-instance v0, Lcom/amap/api/maps/model/MarkerOptions;
@@ -2571,7 +2362,7 @@
 
     invoke-virtual {v0, v1}, Lcom/amap/api/maps/model/MarkerOptions;->draggable(Z)Lcom/amap/api/maps/model/MarkerOptions;
 
-    const v1, 0x7f0200ab
+    const v1, 0x7f0200ad
 
     invoke-static {v1}, Lcom/amap/api/maps/model/BitmapDescriptorFactory;->fromResource(I)Lcom/amap/api/maps/model/BitmapDescriptor;
 
@@ -2583,15 +2374,15 @@
 
     invoke-virtual {v0, v1}, Lcom/amap/api/maps/model/MarkerOptions;->setFlat(Z)Lcom/amap/api/maps/model/MarkerOptions;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
     invoke-virtual {v1, v0}, Lcom/amap/api/maps/AMap;->addMarker(Lcom/amap/api/maps/model/MarkerOptions;)Lcom/amap/api/maps/model/Marker;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->o:Lcom/amap/api/maps/model/Marker;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->n:Lcom/amap/api/maps/model/Marker;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->o:Lcom/amap/api/maps/model/Marker;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->n:Lcom/amap/api/maps/model/Marker;
 
     const/high16 v1, 0x3f000000
 
@@ -2621,13 +2412,13 @@
 .method public g()V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
     invoke-virtual {v0}, Lcom/amap/api/maps/AMap;->clear()V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->g:Lcom/amap/api/maps/model/Marker;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->f:Lcom/amap/api/maps/model/Marker;
 
     return-void
 .end method
@@ -2635,7 +2426,7 @@
 .method public h()V
     .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->d:Lcom/amap/api/maps/model/LatLngBounds$Builder;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->c:Lcom/amap/api/maps/model/LatLngBounds$Builder;
 
     if-nez v0, :cond_0
 
@@ -2644,13 +2435,13 @@
 
     :cond_0
     :try_start_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->d:Lcom/amap/api/maps/model/LatLngBounds$Builder;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->c:Lcom/amap/api/maps/model/LatLngBounds$Builder;
 
     invoke-virtual {v0}, Lcom/amap/api/maps/model/LatLngBounds$Builder;->build()Lcom/amap/api/maps/model/LatLngBounds;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->j:Lcom/amap/api/maps/AMap;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->i:Lcom/amap/api/maps/AMap;
 
     const/16 v2, 0xa
 

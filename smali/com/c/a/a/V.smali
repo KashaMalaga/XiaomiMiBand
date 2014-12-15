@@ -663,18 +663,18 @@
 
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object v3
+    move-result-object v4
 
-    move-wide v1, v0
+    move-wide v2, v0
 
     :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -682,13 +682,13 @@
 
     invoke-virtual {v0}, Lcom/c/a/a/W;->a()J
 
-    move-result-wide v4
+    move-result-wide v0
 
     const-wide/16 v6, 0x0
 
-    cmp-long v0, v4, v6
+    cmp-long v5, v0, v6
 
-    if-gez v0, :cond_0
+    if-gez v5, :cond_0
 
     const-wide/16 v0, -0x1
 
@@ -696,9 +696,9 @@
     return-wide v0
 
     :cond_0
-    add-long v0, v1, v4
+    add-long/2addr v0, v2
 
-    move-wide v1, v0
+    move-wide v2, v0
 
     goto :goto_0
 
@@ -707,9 +707,9 @@
 
     array-length v0, v0
 
-    int-to-long v3, v0
+    int-to-long v0, v0
 
-    add-long v0, v1, v3
+    add-long/2addr v0, v2
 
     goto :goto_1
 .end method

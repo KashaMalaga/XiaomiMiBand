@@ -80,7 +80,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f03007b
+    const v1, 0x7f030082
 
     const/4 v2, 0x0
 
@@ -100,7 +100,7 @@
 
     check-cast v0, Lcn/com/smartdevices/bracelet/ui/cf;
 
-    const v1, 0x7f070224
+    const v1, 0x7f0b0245
 
     invoke-virtual {v4, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -108,7 +108,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f070225
+    const v2, 0x7f0b0246
 
     invoke-virtual {v4, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -116,7 +116,7 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    const v3, 0x7f070226
+    const v3, 0x7f0b0247
 
     invoke-virtual {v4, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

@@ -86,61 +86,61 @@
 .end method
 
 .method private a([D[D)D
-    .locals 11
+    .locals 12
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
     const/4 v0, 0x0
 
-    move-wide v3, v1
+    move-wide v4, v2
 
-    move-wide v5, v1
+    move-wide v6, v2
 
     :goto_0
-    array-length v7, p1
+    array-length v1, p1
 
-    if-ge v0, v7, :cond_0
+    if-ge v0, v1, :cond_0
 
-    aget-wide v7, p1, v0
+    aget-wide v8, p1, v0
 
-    aget-wide v9, p1, v0
+    aget-wide v10, p1, v0
 
-    mul-double/2addr v7, v9
+    mul-double/2addr v8, v10
 
-    add-double/2addr v3, v7
+    add-double/2addr v4, v8
 
-    aget-wide v7, p2, v0
+    aget-wide v8, p2, v0
 
-    aget-wide v9, p2, v0
+    aget-wide v10, p2, v0
 
-    mul-double/2addr v7, v9
+    mul-double/2addr v8, v10
 
-    add-double/2addr v1, v7
+    add-double/2addr v2, v8
 
-    aget-wide v7, p1, v0
+    aget-wide v8, p1, v0
 
-    aget-wide v9, p2, v0
+    aget-wide v10, p2, v0
 
-    mul-double/2addr v7, v9
+    mul-double/2addr v8, v10
 
-    add-double/2addr v5, v7
+    add-double/2addr v6, v8
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
     :cond_0
-    invoke-static {v3, v4}, Ljava/lang/Math;->sqrt(D)D
-
-    move-result-wide v3
-
-    invoke-static {v1, v2}, Ljava/lang/Math;->sqrt(D)D
+    invoke-static {v4, v5}, Ljava/lang/Math;->sqrt(D)D
 
     move-result-wide v0
 
-    mul-double/2addr v0, v3
+    invoke-static {v2, v3}, Ljava/lang/Math;->sqrt(D)D
 
-    div-double v0, v5, v0
+    move-result-wide v2
+
+    mul-double/2addr v0, v2
+
+    div-double v0, v6, v0
 
     return-wide v0
 .end method
@@ -181,13 +181,9 @@
 .end method
 
 .method private a(Ljava/lang/String;Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Lcom/a/M;
-    .locals 22
+    .locals 23
 
-    const/4 v6, 0x0
-
-    new-instance v15, Ljava/util/Hashtable;
-
-    invoke-direct {v15}, Ljava/util/Hashtable;-><init>()V
+    const/4 v7, 0x0
 
     new-instance v16, Ljava/util/Hashtable;
 
@@ -197,445 +193,453 @@
 
     invoke-direct/range {v17 .. v17}, Ljava/util/Hashtable;-><init>()V
 
-    const/4 v3, 0x0
+    new-instance v18, Ljava/util/Hashtable;
 
-    const-string v4, "mem"
-
-    move-object/from16 v0, p4
-
-    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_10
-
-    move-object/from16 v0, p0
-
-    iget-object v3, v0, Lcom/a/L;->b:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v3}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v3
-
-    move-object v5, v3
-
-    :goto_0
-    const/4 v14, 0x1
-
-    move v7, v14
-
-    :goto_1
-    if-eqz v5, :cond_0
-
-    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    if-eqz v7, :cond_1
-
-    move-object/from16 v0, p0
-
-    iget-object v3, v0, Lcom/a/L;->b:Ljava/util/LinkedHashMap;
-
-    move-object/from16 v0, p1
-
-    invoke-virtual {v3, v0}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/util/List;
+    invoke-direct/range {v18 .. v18}, Ljava/util/Hashtable;-><init>()V
 
     const/4 v4, 0x0
 
-    move-object/from16 v12, p1
+    const-string v5, "mem"
 
-    move-object v13, v3
+    move-object/from16 v0, p4
 
-    move v14, v4
+    invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_10
+
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Lcom/a/L;->b:Ljava/util/LinkedHashMap;
+
+    invoke-virtual {v4}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
+
+    move-result-object v4
+
+    invoke-interface {v4}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v4
+
+    move-object v6, v4
+
+    :goto_0
+    const/4 v15, 0x1
+
+    move v8, v15
+
+    :goto_1
+    if-eqz v6, :cond_0
+
+    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    if-eqz v8, :cond_1
+
+    move-object/from16 v0, p0
+
+    iget-object v4, v0, Lcom/a/L;->b:Ljava/util/LinkedHashMap;
+
+    move-object/from16 v0, p1
+
+    invoke-virtual {v4, v0}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/util/List;
+
+    const/4 v5, 0x0
+
+    move-object/from16 v11, p1
+
+    move-object v14, v4
+
+    move v15, v5
 
     :goto_2
-    if-eqz v6, :cond_2
+    if-eqz v7, :cond_2
 
     :cond_0
-    invoke-virtual {v15}, Ljava/util/Hashtable;->clear()V
-
     invoke-virtual/range {v16 .. v16}, Ljava/util/Hashtable;->clear()V
 
     invoke-virtual/range {v17 .. v17}, Ljava/util/Hashtable;->clear()V
 
-    return-object v6
+    invoke-virtual/range {v18 .. v18}, Ljava/util/Hashtable;->clear()V
+
+    return-object v7
 
     :cond_1
-    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/util/Map$Entry;
-
-    invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Ljava/lang/String;
+    check-cast v4, Ljava/util/Map$Entry;
 
-    invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    invoke-interface {v4}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object v5
 
-    check-cast v3, Ljava/util/List;
+    check-cast v5, Ljava/lang/String;
 
-    move-object v12, v4
+    invoke-interface {v4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
-    move-object v13, v3
+    move-result-object v4
 
-    move v14, v7
+    check-cast v4, Ljava/util/List;
+
+    move-object v11, v5
+
+    move-object v14, v4
+
+    move v15, v8
 
     goto :goto_2
 
     :cond_2
-    if-nez v13, :cond_3
+    if-nez v14, :cond_3
 
-    move v7, v14
+    move v8, v15
 
     goto :goto_1
 
     :cond_3
-    const/4 v3, 0x0
-
-    move v7, v3
-
-    :goto_3
-    invoke-interface {v13}, Ljava/util/List;->size()I
-
-    move-result v3
-
-    if-ge v7, v3, :cond_f
-
-    invoke-interface {v13, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lcom/a/M;
-
     const/4 v4, 0x0
 
-    invoke-virtual {v3}, Lcom/a/M;->b()Ljava/lang/String;
+    move v8, v4
 
-    move-result-object v8
+    :goto_3
+    invoke-interface {v14}, Ljava/util/List;->size()I
 
-    invoke-static {v8}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    move-result v4
 
-    move-result v8
+    if-ge v8, v4, :cond_f
 
-    if-nez v8, :cond_4
+    invoke-interface {v14, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Lcom/a/M;
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v4}, Lcom/a/M;->b()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-static {v9}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v9
+
+    if-nez v9, :cond_4
 
     invoke-static/range {p2 .. p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v8
+    move-result v9
 
-    if-eqz v8, :cond_5
+    if-eqz v9, :cond_5
 
     :cond_4
-    add-int/lit8 v3, v7, 0x1
+    add-int/lit8 v4, v8, 0x1
 
-    move v7, v3
+    move v8, v4
 
     goto :goto_3
 
     :cond_5
     move-object/from16 v0, p3
 
-    invoke-virtual {v12, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+    invoke-virtual {v11, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
-    move-result v8
+    move-result v9
 
-    const/4 v9, -0x1
+    const/4 v10, -0x1
 
-    if-eq v8, v9, :cond_4
+    if-eq v9, v10, :cond_4
 
-    invoke-virtual {v3}, Lcom/a/M;->b()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/a/M;->b()Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v9
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, p2
 
-    invoke-direct {v0, v8, v1}, Lcom/a/L;->a(Ljava/lang/String;Ljava/lang/StringBuilder;)Z
+    invoke-direct {v0, v9, v1}, Lcom/a/L;->a(Ljava/lang/String;Ljava/lang/StringBuilder;)Z
 
-    move-result v8
+    move-result v9
 
-    if-eqz v8, :cond_e
+    if-eqz v9, :cond_e
 
-    invoke-virtual {v3}, Lcom/a/M;->a()Lcom/a/K;
+    invoke-virtual {v4}, Lcom/a/M;->a()Lcom/a/K;
 
-    move-result-object v8
+    move-result-object v9
 
-    invoke-virtual {v8}, Lcom/a/K;->f()F
+    invoke-virtual {v9}, Lcom/a/K;->f()F
 
-    move-result v8
+    move-result v9
 
-    const/high16 v9, 0x43960000
+    const/high16 v10, 0x43960000
 
-    cmpl-float v8, v8, v9
+    cmpl-float v9, v9, v10
 
-    if-lez v8, :cond_6
+    if-lez v9, :cond_6
 
-    move v8, v4
+    move v9, v5
 
     :goto_4
-    invoke-virtual {v3}, Lcom/a/M;->b()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/a/M;->b()Ljava/lang/String;
 
-    move-result-object v4
-
-    move-object/from16 v0, p0
-
-    invoke-direct {v0, v4, v15}, Lcom/a/L;->a(Ljava/lang/String;Ljava/util/Hashtable;)V
-
-    invoke-virtual/range {p2 .. p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
+    move-result-object v5
 
     move-object/from16 v0, p0
 
     move-object/from16 v1, v16
 
-    invoke-direct {v0, v4, v1}, Lcom/a/L;->a(Ljava/lang/String;Ljava/util/Hashtable;)V
+    invoke-direct {v0, v5, v1}, Lcom/a/L;->a(Ljava/lang/String;Ljava/util/Hashtable;)V
 
-    invoke-virtual/range {v17 .. v17}, Ljava/util/Hashtable;->clear()V
+    invoke-virtual/range {p2 .. p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v15}, Ljava/util/Hashtable;->keySet()Ljava/util/Set;
+    move-result-object v5
 
-    move-result-object v4
+    move-object/from16 v0, p0
 
-    invoke-interface {v4}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    move-object/from16 v1, v17
 
-    move-result-object v9
+    invoke-direct {v0, v5, v1}, Lcom/a/L;->a(Ljava/lang/String;Ljava/util/Hashtable;)V
+
+    invoke-virtual/range {v18 .. v18}, Ljava/util/Hashtable;->clear()V
+
+    invoke-virtual/range {v16 .. v16}, Ljava/util/Hashtable;->keySet()Ljava/util/Set;
+
+    move-result-object v5
+
+    invoke-interface {v5}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v10
 
     :goto_5
-    invoke-interface {v9}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v10}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v4
+    move-result v5
 
-    if-eqz v4, :cond_7
+    if-eqz v5, :cond_7
 
-    invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v10}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object v5
 
-    check-cast v4, Ljava/lang/String;
+    check-cast v5, Ljava/lang/String;
 
-    const-string v10, ""
+    const-string v12, ""
 
-    move-object/from16 v0, v17
+    move-object/from16 v0, v18
 
-    invoke-virtual {v0, v4, v10}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v5, v12}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_5
 
     :cond_6
-    const/4 v4, 0x1
+    const/4 v5, 0x1
 
-    move v8, v4
+    move v9, v5
 
     goto :goto_4
 
     :cond_7
-    invoke-virtual/range {v16 .. v16}, Ljava/util/Hashtable;->keySet()Ljava/util/Set;
+    invoke-virtual/range {v17 .. v17}, Ljava/util/Hashtable;->keySet()Ljava/util/Set;
 
-    move-result-object v4
+    move-result-object v5
 
-    invoke-interface {v4}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    invoke-interface {v5}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    move-result-object v9
+    move-result-object v10
 
     :goto_6
-    invoke-interface {v9}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v10}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v4
+    move-result v5
 
-    if-eqz v4, :cond_8
+    if-eqz v5, :cond_8
 
-    invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v10}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object v5
 
-    check-cast v4, Ljava/lang/String;
+    check-cast v5, Ljava/lang/String;
 
-    const-string v10, ""
+    const-string v12, ""
 
-    move-object/from16 v0, v17
+    move-object/from16 v0, v18
 
-    invoke-virtual {v0, v4, v10}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v5, v12}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_6
 
     :cond_8
-    invoke-virtual/range {v17 .. v17}, Ljava/util/Hashtable;->keySet()Ljava/util/Set;
+    invoke-virtual/range {v18 .. v18}, Ljava/util/Hashtable;->keySet()Ljava/util/Set;
 
-    move-result-object v18
+    move-result-object v19
 
-    invoke-interface/range {v18 .. v18}, Ljava/util/Set;->size()I
+    invoke-interface/range {v19 .. v19}, Ljava/util/Set;->size()I
 
-    move-result v4
+    move-result v5
 
-    new-array v0, v4, [D
-
-    move-object/from16 v19, v0
-
-    invoke-interface/range {v18 .. v18}, Ljava/util/Set;->size()I
-
-    move-result v4
-
-    new-array v0, v4, [D
+    new-array v0, v5, [D
 
     move-object/from16 v20, v0
 
-    const/4 v4, 0x0
+    invoke-interface/range {v19 .. v19}, Ljava/util/Set;->size()I
 
-    invoke-interface/range {v18 .. v18}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    move-result v5
 
-    move-result-object v21
+    new-array v0, v5, [D
 
-    move v9, v4
+    move-object/from16 v21, v0
+
+    const/4 v5, 0x0
+
+    invoke-interface/range {v19 .. v19}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v22
+
+    move v10, v5
 
     :goto_7
-    invoke-interface/range {v21 .. v21}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface/range {v22 .. v22}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v4
+    move-result v5
 
-    if-eqz v4, :cond_b
+    if-eqz v5, :cond_b
 
-    invoke-interface/range {v21 .. v21}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface/range {v22 .. v22}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v4
+    move-result-object v5
 
-    check-cast v4, Ljava/lang/String;
-
-    invoke-virtual {v15, v4}, Ljava/util/Hashtable;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v10
-
-    if-eqz v10, :cond_9
-
-    const-wide/high16 v10, 0x3ff0000000000000L
-
-    :goto_8
-    aput-wide v10, v19, v9
+    check-cast v5, Ljava/lang/String;
 
     move-object/from16 v0, v16
 
-    invoke-virtual {v0, v4}, Ljava/util/Hashtable;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v5}, Ljava/util/Hashtable;->containsKey(Ljava/lang/Object;)Z
 
-    move-result v4
+    move-result v12
 
-    if-eqz v4, :cond_a
+    if-eqz v12, :cond_9
 
-    const-wide/high16 v10, 0x3ff0000000000000L
+    const-wide/high16 v12, 0x3ff0000000000000L
+
+    :goto_8
+    aput-wide v12, v20, v10
+
+    move-object/from16 v0, v17
+
+    invoke-virtual {v0, v5}, Ljava/util/Hashtable;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_a
+
+    const-wide/high16 v12, 0x3ff0000000000000L
 
     :goto_9
-    aput-wide v10, v20, v9
+    aput-wide v12, v21, v10
 
-    add-int/lit8 v4, v9, 0x1
+    add-int/lit8 v5, v10, 0x1
 
-    move v9, v4
+    move v10, v5
 
     goto :goto_7
 
     :cond_9
-    const-wide/16 v10, 0x0
+    const-wide/16 v12, 0x0
 
     goto :goto_8
 
     :cond_a
-    const-wide/16 v10, 0x0
+    const-wide/16 v12, 0x0
 
     goto :goto_9
 
     :cond_b
-    invoke-interface/range {v18 .. v18}, Ljava/util/Set;->clear()V
+    invoke-interface/range {v19 .. v19}, Ljava/util/Set;->clear()V
 
     move-object/from16 v0, p0
 
-    move-object/from16 v1, v19
+    move-object/from16 v1, v20
 
-    move-object/from16 v2, v20
+    move-object/from16 v2, v21
 
     invoke-direct {v0, v1, v2}, Lcom/a/L;->a([D[D)D
 
-    move-result-wide v9
+    move-result-wide v12
 
-    const-string v4, "mem"
+    const-string v5, "mem"
 
     move-object/from16 v0, p4
 
-    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v4
+    move-result v5
 
-    if-eqz v4, :cond_d
+    if-eqz v5, :cond_d
 
-    if-eqz v8, :cond_c
+    if-eqz v9, :cond_c
 
-    const-wide v18, 0x3feb333340000000L
+    const-wide v20, 0x3feb333340000000L
 
-    cmpl-double v4, v9, v18
+    cmpl-double v5, v12, v20
 
-    if-lez v4, :cond_c
+    if-lez v5, :cond_c
 
     :goto_a
-    move v7, v14
+    move v8, v15
 
-    move-object v6, v3
+    move-object v7, v4
 
     goto/16 :goto_1
 
     :cond_c
-    const-wide v18, 0x3feb333340000000L
+    const-wide v20, 0x3feb333340000000L
 
-    cmpl-double v4, v9, v18
+    cmpl-double v5, v12, v20
 
-    if-lez v4, :cond_4
+    if-lez v5, :cond_4
 
     goto :goto_a
 
     :cond_d
-    const-string v4, "db"
+    const-string v5, "db"
 
     move-object/from16 v0, p4
 
-    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v4
+    move-result v5
 
-    if-eqz v4, :cond_4
+    if-eqz v5, :cond_4
 
-    const-wide v18, 0x3feb333340000000L
+    const-wide v20, 0x3feb333340000000L
 
-    cmpl-double v4, v9, v18
+    cmpl-double v5, v12, v20
 
-    if-lez v4, :cond_4
+    if-lez v5, :cond_4
 
     goto :goto_a
 
     :cond_e
-    move v8, v4
+    move v9, v5
 
     goto/16 :goto_4
 
     :cond_f
-    move-object v3, v6
+    move-object v4, v7
 
     goto :goto_a
 
     :cond_10
-    move-object v5, v3
+    move-object v6, v4
 
     goto/16 :goto_0
 .end method

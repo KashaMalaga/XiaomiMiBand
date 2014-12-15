@@ -36,7 +36,7 @@
 .end method
 
 .method private a(D)Z
-    .locals 6
+    .locals 7
 
     const/4 v0, 0x1
 
@@ -95,7 +95,7 @@
 
 # virtual methods
 .method public build()Lcom/amap/api/maps/model/LatLngBounds;
-    .locals 7
+    .locals 8
 
     iget-wide v0, p0, Lcom/amap/api/maps/model/LatLngBounds$Builder;->c:D
 
@@ -124,11 +124,11 @@
 
     new-instance v2, Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v3, p0, Lcom/amap/api/maps/model/LatLngBounds$Builder;->b:D
+    iget-wide v4, p0, Lcom/amap/api/maps/model/LatLngBounds$Builder;->b:D
 
-    iget-wide v5, p0, Lcom/amap/api/maps/model/LatLngBounds$Builder;->d:D
+    iget-wide v6, p0, Lcom/amap/api/maps/model/LatLngBounds$Builder;->d:D
 
-    invoke-direct {v2, v3, v4, v5, v6}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v2, v4, v5, v6, v7}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     invoke-direct {v0, v1, v2}, Lcom/amap/api/maps/model/LatLngBounds;-><init>(Lcom/amap/api/maps/model/LatLng;Lcom/amap/api/maps/model/LatLng;)V
 

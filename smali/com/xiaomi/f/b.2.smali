@@ -106,7 +106,7 @@
 
 # virtual methods
 .method public a()V
-    .locals 9
+    .locals 10
 
     const-wide/16 v4, 0x0
 
@@ -333,9 +333,9 @@
 
     mul-int/lit8 v7, v7, 0x6
 
-    int-to-long v7, v7
+    int-to-long v8, v7
 
-    invoke-virtual {v3, v7, v8}, Ljava/lang/Object;->wait(J)V
+    invoke-virtual {v3, v8, v9}, Ljava/lang/Object;->wait(J)V
     :try_end_2
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_0

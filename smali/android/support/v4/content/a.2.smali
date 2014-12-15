@@ -80,7 +80,7 @@
 .end method
 
 .method public a(J)V
-    .locals 2
+    .locals 3
 
     iput-wide p1, p0, Landroid/support/v4/content/a;->e:J
 

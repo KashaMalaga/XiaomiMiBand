@@ -597,7 +597,7 @@
 .end method
 
 .method public a(J)Z
-    .locals 2
+    .locals 3
 
     iget-wide v0, p0, Lcom/xiaomi/f/l;->q:J
 
@@ -1084,7 +1084,7 @@
 .end method
 
 .method public r()Z
-    .locals 9
+    .locals 10
 
     iget-object v2, p0, Lcom/xiaomi/f/l;->b:Ljava/util/LinkedList;
 
@@ -1117,7 +1117,7 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v5
+    move-result-wide v6
 
     iget-object v1, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
 
@@ -1125,13 +1125,13 @@
 
     invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v7
+    move-result-wide v8
 
-    sub-long/2addr v5, v7
+    sub-long/2addr v6, v8
 
-    const-wide/32 v7, 0x1b7740
+    const-wide/32 v8, 0x1b7740
 
-    cmp-long v1, v5, v7
+    cmp-long v1, v6, v8
 
     if-gez v1, :cond_0
 

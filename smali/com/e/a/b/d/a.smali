@@ -249,7 +249,7 @@
 .end method
 
 .method protected d(Ljava/lang/String;Ljava/lang/Object;)Ljava/io/InputStream;
-    .locals 5
+    .locals 6
 
     sget-object v0, Lcom/e/a/b/d/d;->c:Lcom/e/a/b/d/d;
 
@@ -275,9 +275,9 @@
 
     invoke-virtual {v3}, Ljava/io/File;->length()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    long-to-int v0, v3
+    long-to-int v0, v4
 
     invoke-direct {v1, v2, v0}, Lcom/e/a/b/a/a;-><init>(Ljava/io/InputStream;I)V
 

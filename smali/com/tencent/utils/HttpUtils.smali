@@ -1803,53 +1803,23 @@
 .method public static request(Lcom/tencent/connect/auth/QQToken;Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/String;)Lorg/json/JSONObject;
     .locals 19
 
-    const-string v3, "openSDK_LOG"
+    const-string v4, "openSDK_LOG"
 
-    const-string v4, "OpenApi request"
+    const-string v5, "OpenApi request"
 
-    invoke-static {v3, v4}, Lcom/tencent/a/a/c;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lcom/tencent/a/a/c;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual/range {p2 .. p2}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
-    move-result-object v3
-
-    const-string v4, "http"
-
-    invoke-virtual {v3, v4}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_4
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-static {}, Lcom/tencent/utils/ServerSetting;->getInstance()Lcom/tencent/utils/ServerSetting;
-
     move-result-object v4
 
-    const-string v5, "https://openmobile.qq.com/"
+    const-string v5, "http"
 
-    move-object/from16 v0, p1
+    invoke-virtual {v4, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    invoke-virtual {v4, v0, v5}, Lcom/tencent/utils/ServerSetting;->getEnvUrl(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    move-result v4
 
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    move-object/from16 v0, p2
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
+    if-nez v4, :cond_4
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1879,7 +1849,37 @@
 
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
+    move-result-object v4
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-static {}, Lcom/tencent/utils/ServerSetting;->getInstance()Lcom/tencent/utils/ServerSetting;
+
+    move-result-object v6
+
+    const-string v7, "https://openmobile.qq.com/"
+
+    move-object/from16 v0, p1
+
+    invoke-virtual {v6, v0, v7}, Lcom/tencent/utils/ServerSetting;->getEnvUrl(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     move-result-object v5
+
+    move-object/from16 v0, p2
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
 
     :goto_0
     move-object/from16 v0, p1
@@ -1890,137 +1890,129 @@
 
     invoke-static {v0, v1, v2}, Lcom/tencent/utils/HttpUtils;->a(Landroid/content/Context;Lcom/tencent/connect/auth/QQToken;Ljava/lang/String;)V
 
-    const/4 v9, 0x0
+    const/4 v10, 0x0
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    move-result-wide v7
+    move-result-wide v8
 
     const/4 v6, 0x0
 
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/connect/auth/QQToken;->getAppId()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
     move-object/from16 v0, p1
 
-    invoke-static {v0, v4}, Lcom/tencent/utils/OpenConfig;->getInstance(Landroid/content/Context;Ljava/lang/String;)Lcom/tencent/utils/OpenConfig;
+    invoke-static {v0, v5}, Lcom/tencent/utils/OpenConfig;->getInstance(Landroid/content/Context;Ljava/lang/String;)Lcom/tencent/utils/OpenConfig;
 
-    move-result-object v4
+    move-result-object v5
 
-    const-string v10, "Common_HttpRetryCount"
+    const-string v11, "Common_HttpRetryCount"
 
-    invoke-virtual {v4, v10}, Lcom/tencent/utils/OpenConfig;->getInt(Ljava/lang/String;)I
+    invoke-virtual {v5, v11}, Lcom/tencent/utils/OpenConfig;->getInt(Ljava/lang/String;)I
 
-    move-result v4
+    move-result v5
 
-    const-string v10, "OpenConfig_test"
+    const-string v11, "OpenConfig_test"
 
-    new-instance v11, Ljava/lang/StringBuilder;
+    new-instance v12, Ljava/lang/StringBuilder;
 
-    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v12, "config 1:Common_HttpRetryCount            config_value:"
+    const-string v13, "config 1:Common_HttpRetryCount            config_value:"
 
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v11
-
-    invoke-virtual {v11, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v11
-
-    const-string v12, "   appid:"
-
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v11
-
-    invoke-virtual/range {p0 .. p0}, Lcom/tencent/connect/auth/QQToken;->getAppId()Ljava/lang/String;
+    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v12
 
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v12, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v11
+    move-result-object v12
 
-    const-string v12, "     url:"
+    const-string v13, "   appid:"
 
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v11
+    move-result-object v12
 
-    invoke-virtual {v11, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual/range {p0 .. p0}, Lcom/tencent/connect/auth/QQToken;->getAppId()Ljava/lang/String;
 
-    move-result-object v11
+    move-result-object v13
 
-    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v11
+    move-result-object v12
 
-    invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    const-string v13, "     url:"
 
-    if-nez v4, :cond_0
+    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v4, 0x3
+    move-result-object v12
+
+    invoke-virtual {v12, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v12
+
+    invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v12
+
+    invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    if-nez v5, :cond_0
+
+    const/4 v5, 0x3
 
     :cond_0
-    const-string v10, "OpenConfig_test"
+    const-string v11, "OpenConfig_test"
 
-    new-instance v11, Ljava/lang/StringBuilder;
+    new-instance v12, Ljava/lang/StringBuilder;
 
-    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v12, "config 1:Common_HttpRetryCount            result_value:"
+    const-string v13, "config 1:Common_HttpRetryCount            result_value:"
 
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v11
-
-    invoke-virtual {v11, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v11
-
-    const-string v12, "   appid:"
-
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v11
-
-    invoke-virtual/range {p0 .. p0}, Lcom/tencent/connect/auth/QQToken;->getAppId()Ljava/lang/String;
+    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v12
 
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v12, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v11
+    move-result-object v12
 
-    const-string v12, "     url:"
+    const-string v13, "   appid:"
 
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v11
+    move-result-object v12
 
-    invoke-virtual {v11, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual/range {p0 .. p0}, Lcom/tencent/connect/auth/QQToken;->getAppId()Ljava/lang/String;
 
-    move-result-object v11
+    move-result-object v13
 
-    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v11
+    move-result-object v12
 
-    invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    const-string v13, "     url:"
 
-    move/from16 v16, v6
+    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-wide/from16 v17, v7
+    move-result-object v12
 
-    move-wide/from16 v6, v17
+    invoke-virtual {v12, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move/from16 v8, v16
+    move-result-object v12
 
-    :goto_1
-    add-int/lit8 v13, v8, 0x1
+    invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v12
+
+    invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    add-int/lit8 v6, v6, 0x1
 
     :try_start_0
     move-object/from16 v0, p1
@@ -2029,13 +2021,13 @@
 
     move-object/from16 v2, p3
 
-    invoke-static {v0, v3, v1, v2}, Lcom/tencent/utils/HttpUtils;->openUrl2(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Lcom/tencent/utils/Util$Statistic;
+    invoke-static {v0, v4, v1, v2}, Lcom/tencent/utils/HttpUtils;->openUrl2(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Lcom/tencent/utils/Util$Statistic;
 
-    move-result-object v10
+    move-result-object v12
 
-    iget-object v8, v10, Lcom/tencent/utils/Util$Statistic;->response:Ljava/lang/String;
+    iget-object v11, v12, Lcom/tencent/utils/Util$Statistic;->response:Ljava/lang/String;
 
-    invoke-static {v8}, Lcom/tencent/utils/Util;->parseJson(Ljava/lang/String;)Lorg/json/JSONObject;
+    invoke-static {v11}, Lcom/tencent/utils/Util;->parseJson(Ljava/lang/String;)Lorg/json/JSONObject;
     :try_end_0
     .catch Lorg/apache/http/conn/ConnectTimeoutException; {:try_start_0 .. :try_end_0} :catch_a
     .catch Ljava/net/SocketTimeoutException; {:try_start_0 .. :try_end_0} :catch_9
@@ -2045,12 +2037,12 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_7
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_8
 
-    move-result-object v14
+    move-result-object v15
 
     :try_start_1
-    const-string v8, "ret"
+    const-string v10, "ret"
 
-    invoke-virtual {v14, v8}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+    invoke-virtual {v15, v10}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Lorg/apache/http/conn/ConnectTimeoutException; {:try_start_1 .. :try_end_1} :catch_1
@@ -2060,13 +2052,13 @@
     .catch Ljava/net/MalformedURLException; {:try_start_1 .. :try_end_1} :catch_6
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_7
 
-    move-result v12
+    move-result v14
 
-    :goto_2
+    :goto_1
     :try_start_2
-    iget-wide v8, v10, Lcom/tencent/utils/Util$Statistic;->reqSize:J
+    iget-wide v10, v12, Lcom/tencent/utils/Util$Statistic;->reqSize:J
 
-    iget-wide v10, v10, Lcom/tencent/utils/Util$Statistic;->rspSize:J
+    iget-wide v12, v12, Lcom/tencent/utils/Util$Statistic;->rspSize:J
     :try_end_2
     .catch Lorg/apache/http/conn/ConnectTimeoutException; {:try_start_2 .. :try_end_2} :catch_1
     .catch Ljava/net/SocketTimeoutException; {:try_start_2 .. :try_end_2} :catch_2
@@ -2076,300 +2068,289 @@
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_7
     .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_8
 
-    :goto_3
+    move-object v4, v15
+
+    :goto_2
     invoke-static {}, Lcom/tencent/open/a/b;->a()Lcom/tencent/open/a/b;
 
-    move-result-object v3
+    move-result-object v5
 
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/connect/auth/QQToken;->getAppId()Ljava/lang/String;
 
-    move-result-object v13
+    move-result-object v15
 
-    move-object/from16 v4, p1
+    move-object/from16 v6, p1
 
-    invoke-virtual/range {v3 .. v13}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;)V
+    invoke-virtual/range {v5 .. v15}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;)V
 
-    return-object v14
+    return-object v4
 
     :catch_0
-    move-exception v8
+    move-exception v10
 
-    const/4 v12, -0x4
+    const/4 v14, -0x4
 
-    goto :goto_2
+    goto :goto_1
 
     :catch_1
-    move-exception v8
+    move-exception v10
 
-    move-object v15, v14
+    move-object/from16 v16, v10
 
-    move-object v14, v8
+    :goto_3
+    invoke-virtual/range {v16 .. v16}, Lorg/apache/http/conn/ConnectTimeoutException;->printStackTrace()V
+
+    const/4 v14, -0x7
+
+    const-wide/16 v10, 0x0
+
+    const-wide/16 v12, 0x0
+
+    if-ge v6, v5, :cond_2
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v8
+
+    move-wide/from16 v17, v10
+
+    move v11, v14
+
+    move-object v10, v15
+
+    move-wide/from16 v14, v17
 
     :goto_4
-    invoke-virtual {v14}, Lorg/apache/http/conn/ConnectTimeoutException;->printStackTrace()V
+    if-lt v6, v5, :cond_1
 
-    const/4 v12, -0x7
+    move-object v4, v10
 
-    const-wide/16 v8, 0x0
+    move/from16 v17, v11
 
-    const-wide/16 v10, 0x0
+    move-wide v10, v14
 
-    if-ge v13, v4, :cond_1
+    move/from16 v14, v17
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v6
-
-    move-wide/from16 v16, v8
-
-    move-object v8, v15
-
-    move-wide/from16 v14, v16
-
-    :goto_5
-    if-lt v13, v4, :cond_3
-
-    move-wide/from16 v16, v14
-
-    move-object v14, v8
-
-    move-wide/from16 v8, v16
-
-    goto :goto_3
-
-    :cond_1
-    invoke-static {}, Lcom/tencent/open/a/b;->a()Lcom/tencent/open/a/b;
-
-    move-result-object v3
-
-    invoke-virtual/range {p0 .. p0}, Lcom/tencent/connect/auth/QQToken;->getAppId()Ljava/lang/String;
-
-    move-result-object v13
-
-    move-object/from16 v4, p1
-
-    invoke-virtual/range {v3 .. v13}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;)V
-
-    throw v14
-
-    :catch_2
-    move-exception v8
-
-    move-object v15, v14
-
-    move-object v14, v8
-
-    :goto_6
-    invoke-virtual {v14}, Ljava/net/SocketTimeoutException;->printStackTrace()V
-
-    const/4 v12, -0x8
-
-    const-wide/16 v8, 0x0
-
-    const-wide/16 v10, 0x0
-
-    if-ge v13, v4, :cond_2
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v6
-
-    move-wide/from16 v16, v8
-
-    move-object v8, v15
-
-    move-wide/from16 v14, v16
-
-    goto :goto_5
+    goto :goto_2
 
     :cond_2
     invoke-static {}, Lcom/tencent/open/a/b;->a()Lcom/tencent/open/a/b;
 
-    move-result-object v3
+    move-result-object v5
 
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/connect/auth/QQToken;->getAppId()Ljava/lang/String;
 
-    move-result-object v13
+    move-result-object v15
 
-    move-object/from16 v4, p1
+    move-object/from16 v6, p1
 
-    invoke-virtual/range {v3 .. v13}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;)V
+    invoke-virtual/range {v5 .. v15}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;)V
 
-    throw v14
+    throw v16
+
+    :catch_2
+    move-exception v10
+
+    move-object/from16 v16, v10
+
+    :goto_5
+    invoke-virtual/range {v16 .. v16}, Ljava/net/SocketTimeoutException;->printStackTrace()V
+
+    const/4 v14, -0x8
+
+    const-wide/16 v10, 0x0
+
+    const-wide/16 v12, 0x0
+
+    if-ge v6, v5, :cond_3
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v8
+
+    move-wide/from16 v17, v10
+
+    move v11, v14
+
+    move-object v10, v15
+
+    move-wide/from16 v14, v17
+
+    goto :goto_4
+
+    :cond_3
+    invoke-static {}, Lcom/tencent/open/a/b;->a()Lcom/tencent/open/a/b;
+
+    move-result-object v5
+
+    invoke-virtual/range {p0 .. p0}, Lcom/tencent/connect/auth/QQToken;->getAppId()Ljava/lang/String;
+
+    move-result-object v15
+
+    move-object/from16 v6, p1
+
+    invoke-virtual/range {v5 .. v15}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;)V
+
+    throw v16
 
     :catch_3
-    move-exception v3
+    move-exception v4
 
-    move-object v14, v3
+    invoke-virtual {v4}, Lcom/tencent/utils/HttpUtils$HttpStatusException;->printStackTrace()V
 
-    invoke-virtual {v14}, Lcom/tencent/utils/HttpUtils$HttpStatusException;->printStackTrace()V
+    invoke-virtual {v4}, Lcom/tencent/utils/HttpUtils$HttpStatusException;->getMessage()Ljava/lang/String;
 
-    invoke-virtual {v14}, Lcom/tencent/utils/HttpUtils$HttpStatusException;->getMessage()Ljava/lang/String;
-
-    move-result-object v3
+    move-result-object v5
 
     :try_start_3
-    const-string v4, "http status code error:"
+    const-string v6, "http status code error:"
 
-    const-string v8, ""
+    const-string v10, ""
 
-    invoke-virtual {v3, v4, v8}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v5, v6, v10}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v5
 
-    invoke-static {v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+    invoke-static {v5}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_4
 
-    move-result v12
+    move-result v14
 
-    :goto_7
-    const-wide/16 v8, 0x0
-
+    :goto_6
     const-wide/16 v10, 0x0
+
+    const-wide/16 v12, 0x0
 
     invoke-static {}, Lcom/tencent/open/a/b;->a()Lcom/tencent/open/a/b;
 
-    move-result-object v3
+    move-result-object v5
 
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/connect/auth/QQToken;->getAppId()Ljava/lang/String;
 
-    move-result-object v13
+    move-result-object v15
 
-    move-object/from16 v4, p1
+    move-object/from16 v6, p1
 
-    invoke-virtual/range {v3 .. v13}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;)V
+    invoke-virtual/range {v5 .. v15}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;)V
 
-    throw v14
+    throw v4
 
     :catch_4
-    move-exception v3
+    move-exception v5
 
-    invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
+    invoke-virtual {v5}, Ljava/lang/Exception;->printStackTrace()V
 
-    const/16 v12, -0x9
+    const/16 v14, -0x9
 
-    goto :goto_7
+    goto :goto_6
 
     :catch_5
-    move-exception v3
+    move-exception v4
 
-    invoke-virtual {v3}, Lcom/tencent/utils/HttpUtils$NetworkUnavailableException;->printStackTrace()V
+    invoke-virtual {v4}, Lcom/tencent/utils/HttpUtils$NetworkUnavailableException;->printStackTrace()V
 
-    throw v3
+    throw v4
 
     :catch_6
-    move-exception v3
+    move-exception v4
 
-    move-object v14, v3
+    invoke-virtual {v4}, Ljava/net/MalformedURLException;->printStackTrace()V
 
-    invoke-virtual {v14}, Ljava/net/MalformedURLException;->printStackTrace()V
-
-    const/4 v12, -0x3
-
-    const-wide/16 v8, 0x0
+    const/4 v14, -0x3
 
     const-wide/16 v10, 0x0
 
+    const-wide/16 v12, 0x0
+
     invoke-static {}, Lcom/tencent/open/a/b;->a()Lcom/tencent/open/a/b;
 
-    move-result-object v3
+    move-result-object v5
 
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/connect/auth/QQToken;->getAppId()Ljava/lang/String;
 
-    move-result-object v13
+    move-result-object v15
 
-    move-object/from16 v4, p1
+    move-object/from16 v6, p1
 
-    invoke-virtual/range {v3 .. v13}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;)V
+    invoke-virtual/range {v5 .. v15}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;)V
 
-    throw v14
+    throw v4
 
     :catch_7
-    move-exception v3
+    move-exception v4
 
-    move-object v14, v3
+    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
 
-    invoke-virtual {v14}, Ljava/io/IOException;->printStackTrace()V
+    invoke-static {v4}, Lcom/tencent/utils/HttpUtils;->a(Ljava/io/IOException;)I
 
-    invoke-static {v14}, Lcom/tencent/utils/HttpUtils;->a(Ljava/io/IOException;)I
-
-    move-result v12
-
-    const-wide/16 v8, 0x0
+    move-result v14
 
     const-wide/16 v10, 0x0
 
+    const-wide/16 v12, 0x0
+
     invoke-static {}, Lcom/tencent/open/a/b;->a()Lcom/tencent/open/a/b;
 
-    move-result-object v3
+    move-result-object v5
 
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/connect/auth/QQToken;->getAppId()Ljava/lang/String;
 
-    move-result-object v13
+    move-result-object v15
 
-    move-object/from16 v4, p1
+    move-object/from16 v6, p1
 
-    invoke-virtual/range {v3 .. v13}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;)V
+    invoke-virtual/range {v5 .. v15}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;)V
 
-    throw v14
+    throw v4
 
     :catch_8
-    move-exception v3
+    move-exception v4
 
-    move-object v14, v3
+    invoke-virtual {v4}, Lorg/json/JSONException;->printStackTrace()V
 
-    invoke-virtual {v14}, Lorg/json/JSONException;->printStackTrace()V
-
-    const/4 v12, -0x4
-
-    const-wide/16 v8, 0x0
+    const/4 v14, -0x4
 
     const-wide/16 v10, 0x0
 
+    const-wide/16 v12, 0x0
+
     invoke-static {}, Lcom/tencent/open/a/b;->a()Lcom/tencent/open/a/b;
 
-    move-result-object v3
+    move-result-object v5
 
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/connect/auth/QQToken;->getAppId()Ljava/lang/String;
 
-    move-result-object v13
+    move-result-object v15
 
-    move-object/from16 v4, p1
+    move-object/from16 v6, p1
 
-    invoke-virtual/range {v3 .. v13}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;)V
+    invoke-virtual/range {v5 .. v15}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;)V
 
-    throw v14
+    throw v4
 
     :catch_9
-    move-exception v8
+    move-exception v11
 
-    move-object v14, v8
+    move-object/from16 v16, v11
 
-    move-object v15, v9
+    move-object v15, v10
 
-    goto/16 :goto_6
+    goto/16 :goto_5
 
     :catch_a
-    move-exception v8
+    move-exception v11
 
-    move-object v14, v8
+    move-object/from16 v16, v11
 
-    move-object v15, v9
+    move-object v15, v10
 
-    goto/16 :goto_4
-
-    :cond_3
-    move-object v9, v8
-
-    move v8, v13
-
-    goto/16 :goto_1
+    goto/16 :goto_3
 
     :cond_4
-    move-object/from16 v5, p2
+    move-object/from16 v7, p2
 
-    move-object/from16 v3, p2
+    move-object/from16 v4, p2
 
     goto/16 :goto_0
 .end method
@@ -2409,45 +2390,15 @@
 
     invoke-virtual/range {p2 .. p2}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
-    move-result-object v3
-
-    const-string v4, "http"
-
-    invoke-virtual {v3, v4}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_4
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-static {}, Lcom/tencent/utils/ServerSetting;->getInstance()Lcom/tencent/utils/ServerSetting;
-
     move-result-object v4
 
-    const-string v5, "https://openmobile.qq.com/"
+    const-string v5, "http"
 
-    move-object/from16 v0, p1
+    invoke-virtual {v4, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    invoke-virtual {v4, v0, v5}, Lcom/tencent/utils/ServerSetting;->getEnvUrl(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    move-result v4
 
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    move-object/from16 v0, p2
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
+    if-nez v4, :cond_4
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -2477,7 +2428,37 @@
 
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
+    move-result-object v4
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-static {}, Lcom/tencent/utils/ServerSetting;->getInstance()Lcom/tencent/utils/ServerSetting;
+
+    move-result-object v6
+
+    const-string v7, "https://openmobile.qq.com/"
+
+    move-object/from16 v0, p1
+
+    invoke-virtual {v6, v0, v7}, Lcom/tencent/utils/ServerSetting;->getEnvUrl(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     move-result-object v5
+
+    move-object/from16 v0, p2
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
 
     :goto_0
     move-object/from16 v0, p1
@@ -2488,150 +2469,142 @@
 
     invoke-static {v0, v1, v2}, Lcom/tencent/utils/HttpUtils;->a(Landroid/content/Context;Lcom/tencent/connect/auth/QQToken;Ljava/lang/String;)V
 
-    const/4 v9, 0x0
+    const/4 v10, 0x0
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    move-result-wide v7
+    move-result-wide v8
 
     const/4 v6, 0x0
 
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/connect/auth/QQToken;->getAppId()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
     move-object/from16 v0, p1
 
-    invoke-static {v0, v4}, Lcom/tencent/utils/OpenConfig;->getInstance(Landroid/content/Context;Ljava/lang/String;)Lcom/tencent/utils/OpenConfig;
+    invoke-static {v0, v5}, Lcom/tencent/utils/OpenConfig;->getInstance(Landroid/content/Context;Ljava/lang/String;)Lcom/tencent/utils/OpenConfig;
 
-    move-result-object v4
+    move-result-object v5
 
-    const-string v10, "Common_HttpRetryCount"
+    const-string v11, "Common_HttpRetryCount"
 
-    invoke-virtual {v4, v10}, Lcom/tencent/utils/OpenConfig;->getInt(Ljava/lang/String;)I
+    invoke-virtual {v5, v11}, Lcom/tencent/utils/OpenConfig;->getInt(Ljava/lang/String;)I
 
-    move-result v4
+    move-result v5
 
-    const-string v10, "OpenConfig_test"
+    const-string v11, "OpenConfig_test"
 
-    new-instance v11, Ljava/lang/StringBuilder;
+    new-instance v12, Ljava/lang/StringBuilder;
 
-    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v12, "config 1:Common_HttpRetryCount            config_value:"
+    const-string v13, "config 1:Common_HttpRetryCount            config_value:"
 
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v11
-
-    invoke-virtual {v11, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v11
-
-    const-string v12, "   appid:"
-
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v11
-
-    invoke-virtual/range {p0 .. p0}, Lcom/tencent/connect/auth/QQToken;->getAppId()Ljava/lang/String;
+    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v12
 
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v12, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v11
+    move-result-object v12
 
-    const-string v12, "     url:"
+    const-string v13, "   appid:"
 
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v11
+    move-result-object v12
 
-    invoke-virtual {v11, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual/range {p0 .. p0}, Lcom/tencent/connect/auth/QQToken;->getAppId()Ljava/lang/String;
 
-    move-result-object v11
+    move-result-object v13
 
-    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v11
+    move-result-object v12
 
-    invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    const-string v13, "     url:"
 
-    if-nez v4, :cond_0
+    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v4, 0x3
+    move-result-object v12
+
+    invoke-virtual {v12, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v12
+
+    invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v12
+
+    invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    if-nez v5, :cond_0
+
+    const/4 v5, 0x3
 
     :cond_0
-    const-string v10, "OpenConfig_test"
+    const-string v11, "OpenConfig_test"
 
-    new-instance v11, Ljava/lang/StringBuilder;
+    new-instance v12, Ljava/lang/StringBuilder;
 
-    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v12, "config 1:Common_HttpRetryCount            result_value:"
+    const-string v13, "config 1:Common_HttpRetryCount            result_value:"
 
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v11
-
-    invoke-virtual {v11, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v11
-
-    const-string v12, "   appid:"
-
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v11
-
-    invoke-virtual/range {p0 .. p0}, Lcom/tencent/connect/auth/QQToken;->getAppId()Ljava/lang/String;
+    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v12
 
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v12, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v11
+    move-result-object v12
 
-    const-string v12, "     url:"
+    const-string v13, "   appid:"
 
-    invoke-virtual {v11, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v11
+    move-result-object v12
 
-    invoke-virtual {v11, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual/range {p0 .. p0}, Lcom/tencent/connect/auth/QQToken;->getAppId()Ljava/lang/String;
 
-    move-result-object v11
+    move-result-object v13
 
-    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v11
+    move-result-object v12
 
-    invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    const-string v13, "     url:"
 
-    move/from16 v16, v6
+    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-wide/from16 v17, v7
+    move-result-object v12
 
-    move-wide/from16 v6, v17
+    invoke-virtual {v12, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move/from16 v8, v16
+    move-result-object v12
 
-    :goto_1
-    add-int/lit8 v13, v8, 0x1
+    invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v12
+
+    invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_1
+    add-int/lit8 v6, v6, 0x1
 
     :try_start_0
     move-object/from16 v0, p1
 
     move-object/from16 v1, p3
 
-    invoke-static {v0, v3, v1}, Lcom/tencent/utils/Util;->upload(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Lcom/tencent/utils/Util$Statistic;
+    invoke-static {v0, v4, v1}, Lcom/tencent/utils/Util;->upload(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Lcom/tencent/utils/Util$Statistic;
 
-    move-result-object v10
+    move-result-object v12
 
-    iget-object v8, v10, Lcom/tencent/utils/Util$Statistic;->response:Ljava/lang/String;
+    iget-object v11, v12, Lcom/tencent/utils/Util$Statistic;->response:Ljava/lang/String;
 
-    invoke-static {v8}, Lcom/tencent/utils/Util;->parseJson(Ljava/lang/String;)Lorg/json/JSONObject;
+    invoke-static {v11}, Lcom/tencent/utils/Util;->parseJson(Ljava/lang/String;)Lorg/json/JSONObject;
     :try_end_0
     .catch Lorg/apache/http/conn/ConnectTimeoutException; {:try_start_0 .. :try_end_0} :catch_a
     .catch Ljava/net/SocketTimeoutException; {:try_start_0 .. :try_end_0} :catch_9
@@ -2641,12 +2614,12 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_7
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_8
 
-    move-result-object v14
+    move-result-object v15
 
     :try_start_1
-    const-string v8, "ret"
+    const-string v10, "ret"
 
-    invoke-virtual {v14, v8}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+    invoke-virtual {v15, v10}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Lorg/apache/http/conn/ConnectTimeoutException; {:try_start_1 .. :try_end_1} :catch_1
@@ -2656,13 +2629,13 @@
     .catch Ljava/net/MalformedURLException; {:try_start_1 .. :try_end_1} :catch_6
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_7
 
-    move-result v12
+    move-result v14
 
-    :goto_2
+    :goto_1
     :try_start_2
-    iget-wide v8, v10, Lcom/tencent/utils/Util$Statistic;->reqSize:J
+    iget-wide v10, v12, Lcom/tencent/utils/Util$Statistic;->reqSize:J
 
-    iget-wide v10, v10, Lcom/tencent/utils/Util$Statistic;->rspSize:J
+    iget-wide v12, v12, Lcom/tencent/utils/Util$Statistic;->rspSize:J
     :try_end_2
     .catch Lorg/apache/http/conn/ConnectTimeoutException; {:try_start_2 .. :try_end_2} :catch_1
     .catch Ljava/net/SocketTimeoutException; {:try_start_2 .. :try_end_2} :catch_2
@@ -2672,300 +2645,289 @@
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_7
     .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_8
 
-    :goto_3
+    move-object v4, v15
+
+    :goto_2
     invoke-static {}, Lcom/tencent/open/a/b;->a()Lcom/tencent/open/a/b;
 
-    move-result-object v3
+    move-result-object v5
 
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/connect/auth/QQToken;->getAppId()Ljava/lang/String;
 
-    move-result-object v13
+    move-result-object v15
 
-    move-object/from16 v4, p1
+    move-object/from16 v6, p1
 
-    invoke-virtual/range {v3 .. v13}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;)V
+    invoke-virtual/range {v5 .. v15}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;)V
 
-    return-object v14
+    return-object v4
 
     :catch_0
-    move-exception v8
+    move-exception v10
 
-    const/4 v12, -0x4
+    const/4 v14, -0x4
 
-    goto :goto_2
+    goto :goto_1
 
     :catch_1
-    move-exception v8
+    move-exception v10
 
-    move-object v15, v14
+    move-object/from16 v16, v10
 
-    move-object v14, v8
+    :goto_3
+    invoke-virtual/range {v16 .. v16}, Lorg/apache/http/conn/ConnectTimeoutException;->printStackTrace()V
+
+    const/4 v14, -0x7
+
+    const-wide/16 v10, 0x0
+
+    const-wide/16 v12, 0x0
+
+    if-ge v6, v5, :cond_2
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v8
+
+    move-wide/from16 v17, v10
+
+    move v11, v14
+
+    move-object v10, v15
+
+    move-wide/from16 v14, v17
 
     :goto_4
-    invoke-virtual {v14}, Lorg/apache/http/conn/ConnectTimeoutException;->printStackTrace()V
+    if-lt v6, v5, :cond_1
 
-    const/4 v12, -0x7
+    move-object v4, v10
 
-    const-wide/16 v8, 0x0
+    move/from16 v17, v11
 
-    const-wide/16 v10, 0x0
+    move-wide v10, v14
 
-    if-ge v13, v4, :cond_1
+    move/from16 v14, v17
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v6
-
-    move-wide/from16 v16, v8
-
-    move-object v8, v15
-
-    move-wide/from16 v14, v16
-
-    :goto_5
-    if-lt v13, v4, :cond_3
-
-    move-wide/from16 v16, v14
-
-    move-object v14, v8
-
-    move-wide/from16 v8, v16
-
-    goto :goto_3
-
-    :cond_1
-    invoke-static {}, Lcom/tencent/open/a/b;->a()Lcom/tencent/open/a/b;
-
-    move-result-object v3
-
-    invoke-virtual/range {p0 .. p0}, Lcom/tencent/connect/auth/QQToken;->getAppId()Ljava/lang/String;
-
-    move-result-object v13
-
-    move-object/from16 v4, p1
-
-    invoke-virtual/range {v3 .. v13}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;)V
-
-    throw v14
-
-    :catch_2
-    move-exception v8
-
-    move-object v15, v14
-
-    move-object v14, v8
-
-    :goto_6
-    invoke-virtual {v14}, Ljava/net/SocketTimeoutException;->printStackTrace()V
-
-    const/4 v12, -0x8
-
-    const-wide/16 v8, 0x0
-
-    const-wide/16 v10, 0x0
-
-    if-ge v13, v4, :cond_2
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v6
-
-    move-wide/from16 v16, v8
-
-    move-object v8, v15
-
-    move-wide/from16 v14, v16
-
-    goto :goto_5
+    goto :goto_2
 
     :cond_2
     invoke-static {}, Lcom/tencent/open/a/b;->a()Lcom/tencent/open/a/b;
 
-    move-result-object v3
+    move-result-object v5
 
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/connect/auth/QQToken;->getAppId()Ljava/lang/String;
 
-    move-result-object v13
+    move-result-object v15
 
-    move-object/from16 v4, p1
+    move-object/from16 v6, p1
 
-    invoke-virtual/range {v3 .. v13}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;)V
+    invoke-virtual/range {v5 .. v15}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;)V
 
-    throw v14
+    throw v16
+
+    :catch_2
+    move-exception v10
+
+    move-object/from16 v16, v10
+
+    :goto_5
+    invoke-virtual/range {v16 .. v16}, Ljava/net/SocketTimeoutException;->printStackTrace()V
+
+    const/4 v14, -0x8
+
+    const-wide/16 v10, 0x0
+
+    const-wide/16 v12, 0x0
+
+    if-ge v6, v5, :cond_3
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v8
+
+    move-wide/from16 v17, v10
+
+    move v11, v14
+
+    move-object v10, v15
+
+    move-wide/from16 v14, v17
+
+    goto :goto_4
+
+    :cond_3
+    invoke-static {}, Lcom/tencent/open/a/b;->a()Lcom/tencent/open/a/b;
+
+    move-result-object v5
+
+    invoke-virtual/range {p0 .. p0}, Lcom/tencent/connect/auth/QQToken;->getAppId()Ljava/lang/String;
+
+    move-result-object v15
+
+    move-object/from16 v6, p1
+
+    invoke-virtual/range {v5 .. v15}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;)V
+
+    throw v16
 
     :catch_3
-    move-exception v3
+    move-exception v4
 
-    move-object v14, v3
+    invoke-virtual {v4}, Lcom/tencent/utils/HttpUtils$HttpStatusException;->printStackTrace()V
 
-    invoke-virtual {v14}, Lcom/tencent/utils/HttpUtils$HttpStatusException;->printStackTrace()V
+    invoke-virtual {v4}, Lcom/tencent/utils/HttpUtils$HttpStatusException;->getMessage()Ljava/lang/String;
 
-    invoke-virtual {v14}, Lcom/tencent/utils/HttpUtils$HttpStatusException;->getMessage()Ljava/lang/String;
-
-    move-result-object v3
+    move-result-object v5
 
     :try_start_3
-    const-string v4, "http status code error:"
+    const-string v6, "http status code error:"
 
-    const-string v8, ""
+    const-string v10, ""
 
-    invoke-virtual {v3, v4, v8}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v5, v6, v10}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v5
 
-    invoke-static {v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+    invoke-static {v5}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_4
 
-    move-result v12
+    move-result v14
 
-    :goto_7
-    const-wide/16 v8, 0x0
-
+    :goto_6
     const-wide/16 v10, 0x0
+
+    const-wide/16 v12, 0x0
 
     invoke-static {}, Lcom/tencent/open/a/b;->a()Lcom/tencent/open/a/b;
 
-    move-result-object v3
+    move-result-object v5
 
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/connect/auth/QQToken;->getAppId()Ljava/lang/String;
 
-    move-result-object v13
+    move-result-object v15
 
-    move-object/from16 v4, p1
+    move-object/from16 v6, p1
 
-    invoke-virtual/range {v3 .. v13}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;)V
+    invoke-virtual/range {v5 .. v15}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;)V
 
-    throw v14
+    throw v4
 
     :catch_4
-    move-exception v3
+    move-exception v5
 
-    invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
+    invoke-virtual {v5}, Ljava/lang/Exception;->printStackTrace()V
 
-    const/16 v12, -0x9
+    const/16 v14, -0x9
 
-    goto :goto_7
+    goto :goto_6
 
     :catch_5
-    move-exception v3
+    move-exception v4
 
-    invoke-virtual {v3}, Lcom/tencent/utils/HttpUtils$NetworkUnavailableException;->printStackTrace()V
+    invoke-virtual {v4}, Lcom/tencent/utils/HttpUtils$NetworkUnavailableException;->printStackTrace()V
 
-    throw v3
+    throw v4
 
     :catch_6
-    move-exception v3
+    move-exception v4
 
-    move-object v14, v3
+    invoke-virtual {v4}, Ljava/net/MalformedURLException;->printStackTrace()V
 
-    invoke-virtual {v14}, Ljava/net/MalformedURLException;->printStackTrace()V
-
-    const/4 v12, -0x3
-
-    const-wide/16 v8, 0x0
+    const/4 v14, -0x3
 
     const-wide/16 v10, 0x0
 
+    const-wide/16 v12, 0x0
+
     invoke-static {}, Lcom/tencent/open/a/b;->a()Lcom/tencent/open/a/b;
 
-    move-result-object v3
+    move-result-object v5
 
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/connect/auth/QQToken;->getAppId()Ljava/lang/String;
 
-    move-result-object v13
+    move-result-object v15
 
-    move-object/from16 v4, p1
+    move-object/from16 v6, p1
 
-    invoke-virtual/range {v3 .. v13}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;)V
+    invoke-virtual/range {v5 .. v15}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;)V
 
-    throw v14
+    throw v4
 
     :catch_7
-    move-exception v3
+    move-exception v4
 
-    move-object v14, v3
+    invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
 
-    invoke-virtual {v14}, Ljava/io/IOException;->printStackTrace()V
+    invoke-static {v4}, Lcom/tencent/utils/HttpUtils;->a(Ljava/io/IOException;)I
 
-    invoke-static {v14}, Lcom/tencent/utils/HttpUtils;->a(Ljava/io/IOException;)I
-
-    move-result v12
-
-    const-wide/16 v8, 0x0
+    move-result v14
 
     const-wide/16 v10, 0x0
 
+    const-wide/16 v12, 0x0
+
     invoke-static {}, Lcom/tencent/open/a/b;->a()Lcom/tencent/open/a/b;
 
-    move-result-object v3
+    move-result-object v5
 
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/connect/auth/QQToken;->getAppId()Ljava/lang/String;
 
-    move-result-object v13
+    move-result-object v15
 
-    move-object/from16 v4, p1
+    move-object/from16 v6, p1
 
-    invoke-virtual/range {v3 .. v13}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;)V
+    invoke-virtual/range {v5 .. v15}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;)V
 
-    throw v14
+    throw v4
 
     :catch_8
-    move-exception v3
+    move-exception v4
 
-    move-object v14, v3
+    invoke-virtual {v4}, Lorg/json/JSONException;->printStackTrace()V
 
-    invoke-virtual {v14}, Lorg/json/JSONException;->printStackTrace()V
-
-    const/4 v12, -0x4
-
-    const-wide/16 v8, 0x0
+    const/4 v14, -0x4
 
     const-wide/16 v10, 0x0
 
+    const-wide/16 v12, 0x0
+
     invoke-static {}, Lcom/tencent/open/a/b;->a()Lcom/tencent/open/a/b;
 
-    move-result-object v3
+    move-result-object v5
 
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/connect/auth/QQToken;->getAppId()Ljava/lang/String;
 
-    move-result-object v13
+    move-result-object v15
 
-    move-object/from16 v4, p1
+    move-object/from16 v6, p1
 
-    invoke-virtual/range {v3 .. v13}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;)V
+    invoke-virtual/range {v5 .. v15}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;)V
 
-    throw v14
+    throw v4
 
     :catch_9
-    move-exception v8
+    move-exception v11
 
-    move-object v14, v8
+    move-object/from16 v16, v11
 
-    move-object v15, v9
+    move-object v15, v10
 
-    goto/16 :goto_6
+    goto/16 :goto_5
 
     :catch_a
-    move-exception v8
+    move-exception v11
 
-    move-object v14, v8
+    move-object/from16 v16, v11
 
-    move-object v15, v9
+    move-object v15, v10
 
-    goto/16 :goto_4
-
-    :cond_3
-    move-object v9, v8
-
-    move v8, v13
-
-    goto/16 :goto_1
+    goto/16 :goto_3
 
     :cond_4
-    move-object/from16 v5, p2
+    move-object/from16 v7, p2
 
-    move-object/from16 v3, p2
+    move-object/from16 v4, p2
 
     goto/16 :goto_0
 .end method

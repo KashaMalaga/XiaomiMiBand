@@ -33,6 +33,8 @@
 
 .field private n:Z
 
+.field private o:[Ljava/lang/String;
+
 
 # direct methods
 .method public constructor <init>()V
@@ -692,7 +694,7 @@
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 
     :cond_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->o()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->m()V
 
     return-void
 .end method
@@ -796,9 +798,9 @@
 .end method
 
 .method private n()V
-    .locals 6
+    .locals 7
 
-    const/4 v5, 0x6
+    const/4 v6, 0x6
 
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
@@ -806,30 +808,30 @@
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/u;->c()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    const-wide/16 v3, -0x1
+    const-wide/16 v4, -0x1
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-lez v1, :cond_0
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/u;->c()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->setTimeInMillis(J)V
+    invoke-virtual {v0, v2, v3}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
     :cond_0
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v1
 
-    invoke-virtual {v0, v5}, Ljava/util/Calendar;->get(I)I
+    invoke-virtual {v0, v6}, Ljava/util/Calendar;->get(I)I
 
     move-result v0
 
-    invoke-virtual {v1, v5}, Ljava/util/Calendar;->get(I)I
+    invoke-virtual {v1, v6}, Ljava/util/Calendar;->get(I)I
 
     move-result v2
 
@@ -1094,16 +1096,6 @@
 
     iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->n:Z
 
-    invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
-
-    move-result-object v0
-
-    new-instance v1, Lcn/com/smartdevices/bracelet/eventbus/EventBtOnOff;
-
-    invoke-direct {v1, v2}, Lcn/com/smartdevices/bracelet/eventbus/EventBtOnOff;-><init>(I)V
-
-    invoke-virtual {v0, v1}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
-
     goto :goto_0
 
     nop
@@ -1178,23 +1170,21 @@
 .end method
 
 .method protected onResume()V
-    .locals 1
+    .locals 2
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onResume()V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b/a;->a()Z
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->getResources()Landroid/content/res/Resources;
 
-    move-result v0
+    move-result-object v0
 
-    if-eqz v0, :cond_2
+    const v1, 0x7f0d0006
 
-    const/4 v0, 0x0
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->b(Z)Z
+    move-result-object v0
 
-    move-result v0
-
-    if-eqz v0, :cond_1
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->o:[Ljava/lang/String;
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->l:Z
 
@@ -1202,9 +1192,32 @@
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->m:Z
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     :cond_0
+    invoke-static {}, Lcn/com/smartdevices/bracelet/b/a;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->b(Z)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->l:Z
+
+    if-nez v0, :cond_1
+
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->m:Z
+
+    if-eqz v0, :cond_2
+
+    :cond_1
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->e()V
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/b;->j()V
@@ -1215,16 +1228,16 @@
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->l()V
 
-    :cond_1
+    :cond_2
     :goto_0
     return-void
 
-    :cond_2
+    :cond_3
     invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->j(Landroid/content/Context;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->d()V
 
@@ -1232,13 +1245,13 @@
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->l:Z
 
-    if-nez v0, :cond_3
+    if-nez v0, :cond_4
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->m:Z
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
-    :cond_3
+    :cond_4
     invoke-static {}, Lcn/com/smartdevices/bracelet/e/a;->a()Lcn/com/smartdevices/bracelet/e/a;
 
     move-result-object v0
@@ -1247,7 +1260,7 @@
 
     goto :goto_0
 
-    :cond_4
+    :cond_5
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->a()V
 
     goto :goto_0

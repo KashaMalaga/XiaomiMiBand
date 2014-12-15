@@ -748,7 +748,7 @@
 .end method
 
 .method protected a(Ljava/text/NumberFormat;D)Ljava/lang/String;
-    .locals 3
+    .locals 4
 
     const-string v0, ""
 
@@ -778,9 +778,9 @@
 
     invoke-static {p2, p3}, Ljava/lang/Math;->round(D)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -890,7 +890,7 @@
 .end method
 
 .method protected a(Landroid/graphics/Canvas;Ljava/lang/String;Lorg/achartengine/c/b;Ljava/util/List;IIFFFFIIILandroid/graphics/Paint;ZZ)V
-    .locals 19
+    .locals 20
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -908,9 +908,9 @@
 
     invoke-virtual/range {p3 .. p3}, Lorg/achartengine/c/b;->l()Z
 
-    move-result v3
+    move-result v4
 
-    if-nez v3, :cond_0
+    if-nez v4, :cond_0
 
     if-eqz p16, :cond_6
 
@@ -921,59 +921,41 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    const/high16 v3, 0x42b40000
+    const/high16 v4, 0x42b40000
 
-    const/high16 v4, 0x40000000
+    const/high16 v5, 0x40000000
 
-    div-float v4, p10, v4
+    div-float v5, p10, v5
 
-    add-float v4, v4, p9
+    add-float v5, v5, p9
 
-    sub-float/2addr v3, v4
+    sub-float/2addr v4, v5
 
-    float-to-double v3, v3
+    float-to-double v4, v4
 
-    invoke-static {v3, v4}, Ljava/lang/Math;->toRadians(D)D
+    invoke-static {v4, v5}, Ljava/lang/Math;->toRadians(D)D
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-static {v3, v4}, Ljava/lang/Math;->sin(D)D
+    invoke-static {v4, v5}, Ljava/lang/Math;->sin(D)D
 
-    move-result-wide v5
+    move-result-wide v6
 
-    invoke-static {v3, v4}, Ljava/lang/Math;->cos(D)D
+    invoke-static {v4, v5}, Ljava/lang/Math;->cos(D)D
 
-    move-result-wide v3
+    move-result-wide v4
 
     move/from16 v0, p5
-
-    int-to-float v7, v0
-
-    move/from16 v0, p7
-
-    float-to-double v8, v0
-
-    mul-double/2addr v8, v5
-
-    double-to-float v8, v8
-
-    add-float/2addr v7, v8
-
-    invoke-static {v7}, Ljava/lang/Math;->round(F)I
-
-    move-result v7
-
-    move/from16 v0, p6
 
     int-to-float v8, v0
 
     move/from16 v0, p7
 
-    float-to-double v9, v0
+    float-to-double v10, v0
 
-    mul-double/2addr v9, v3
+    mul-double/2addr v10, v6
 
-    double-to-float v9, v9
+    double-to-float v9, v10
 
     add-float/2addr v8, v9
 
@@ -981,94 +963,112 @@
 
     move-result v8
 
-    move/from16 v0, p5
+    move/from16 v0, p6
 
     int-to-float v9, v0
+
+    move/from16 v0, p7
+
+    float-to-double v10, v0
+
+    mul-double/2addr v10, v4
+
+    double-to-float v10, v10
+
+    add-float/2addr v9, v10
+
+    invoke-static {v9}, Ljava/lang/Math;->round(F)I
+
+    move-result v9
+
+    move/from16 v0, p5
+
+    int-to-float v10, v0
+
+    move/from16 v0, p8
+
+    float-to-double v12, v0
+
+    mul-double/2addr v6, v12
+
+    double-to-float v6, v6
+
+    add-float/2addr v6, v10
+
+    invoke-static {v6}, Ljava/lang/Math;->round(F)I
+
+    move-result v12
+
+    move/from16 v0, p6
+
+    int-to-float v6, v0
 
     move/from16 v0, p8
 
     float-to-double v10, v0
 
-    mul-double/2addr v5, v10
+    mul-double/2addr v4, v10
 
-    double-to-float v5, v5
+    double-to-float v4, v4
 
-    add-float/2addr v5, v9
+    add-float/2addr v4, v6
 
-    invoke-static {v5}, Ljava/lang/Math;->round(F)I
+    invoke-static {v4}, Ljava/lang/Math;->round(F)I
 
-    move-result v11
-
-    move/from16 v0, p6
-
-    int-to-float v5, v0
-
-    move/from16 v0, p8
-
-    float-to-double v9, v0
-
-    mul-double/2addr v3, v9
-
-    double-to-float v3, v3
-
-    add-float/2addr v3, v5
-
-    invoke-static {v3}, Ljava/lang/Math;->round(F)I
-
-    move-result v4
+    move-result v5
 
     invoke-virtual/range {p3 .. p3}, Lorg/achartengine/c/b;->j()F
 
-    move-result v12
+    move-result v13
 
-    const/high16 v3, 0x40000000
+    const/high16 v4, 0x40000000
 
-    div-float v3, v12, v3
+    div-float v4, v13, v4
 
-    const/high16 v5, 0x41200000
+    const/high16 v6, 0x41200000
 
-    invoke-static {v3, v5}, Ljava/lang/Math;->max(FF)F
+    invoke-static {v4, v6}, Ljava/lang/Math;->max(FF)F
 
-    move-result v3
+    move-result v4
 
-    sget-object v5, Landroid/graphics/Paint$Align;->LEFT:Landroid/graphics/Paint$Align;
-
-    move-object/from16 v0, p14
-
-    invoke-virtual {v0, v5}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
-
-    if-le v7, v11, :cond_1
-
-    neg-float v3, v3
-
-    sget-object v5, Landroid/graphics/Paint$Align;->RIGHT:Landroid/graphics/Paint$Align;
+    sget-object v6, Landroid/graphics/Paint$Align;->LEFT:Landroid/graphics/Paint$Align;
 
     move-object/from16 v0, p14
 
-    invoke-virtual {v0, v5}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
+    invoke-virtual {v0, v6}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
+
+    if-le v8, v12, :cond_1
+
+    neg-float v4, v4
+
+    sget-object v6, Landroid/graphics/Paint$Align;->RIGHT:Landroid/graphics/Paint$Align;
+
+    move-object/from16 v0, p14
+
+    invoke-virtual {v0, v6}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
 
     :cond_1
-    move v10, v3
+    move v11, v4
 
-    int-to-float v3, v11
+    int-to-float v4, v12
 
-    add-float v13, v3, v10
+    add-float v14, v4, v11
 
-    int-to-float v9, v4
+    int-to-float v10, v5
 
     move/from16 v0, p12
 
-    int-to-float v3, v0
+    int-to-float v4, v0
 
-    sub-float/2addr v3, v13
+    sub-float/2addr v4, v14
 
-    if-le v7, v11, :cond_2
+    if-le v8, v12, :cond_2
 
     move/from16 v0, p11
 
-    int-to-float v3, v0
+    int-to-float v4, v0
 
-    sub-float v3, v13, v3
+    sub-float v4, v14, v4
 
     :cond_2
     move-object/from16 v0, p0
@@ -1077,188 +1077,188 @@
 
     move-object/from16 v2, p14
 
-    invoke-direct {v0, v1, v3, v2}, Lorg/achartengine/a/a;->a(Ljava/lang/String;FLandroid/graphics/Paint;)Ljava/lang/String;
+    invoke-direct {v0, v1, v4, v2}, Lorg/achartengine/a/a;->a(Ljava/lang/String;FLandroid/graphics/Paint;)Ljava/lang/String;
 
-    move-result-object v14
+    move-result-object v15
 
     move-object/from16 v0, p14
 
-    invoke-virtual {v0, v14}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
-
-    move-result v15
-
-    const/4 v3, 0x0
-
-    :goto_0
-    if-nez v3, :cond_5
-
-    if-eqz p15, :cond_5
-
-    const/4 v4, 0x0
-
-    invoke-interface/range {p4 .. p4}, Ljava/util/List;->size()I
+    invoke-virtual {v0, v15}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
 
     move-result v16
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
-    move v6, v3
+    :goto_0
+    if-nez v4, :cond_5
 
-    move v5, v9
+    if-eqz p15, :cond_5
+
+    const/4 v5, 0x0
+
+    invoke-interface/range {p4 .. p4}, Ljava/util/List;->size()I
+
+    move-result v17
+
+    const/4 v4, 0x0
+
+    move v7, v4
+
+    move v6, v10
 
     :goto_1
-    move/from16 v0, v16
+    move/from16 v0, v17
 
-    if-ge v6, v0, :cond_3
+    if-ge v7, v0, :cond_3
 
-    if-nez v4, :cond_3
+    if-nez v5, :cond_3
 
     move-object/from16 v0, p4
 
-    invoke-interface {v0, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v0, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object v4
 
-    check-cast v3, Landroid/graphics/RectF;
+    check-cast v4, Landroid/graphics/RectF;
 
-    add-float v9, v13, v15
+    add-float v10, v14, v16
 
-    add-float v17, v5, v12
+    add-float v18, v6, v13
 
-    move/from16 v0, v17
+    move/from16 v0, v18
 
-    invoke-virtual {v3, v13, v5, v9, v0}, Landroid/graphics/RectF;->intersects(FFFF)Z
+    invoke-virtual {v4, v14, v6, v10, v0}, Landroid/graphics/RectF;->intersects(FFFF)Z
 
-    move-result v9
+    move-result v10
 
-    if-eqz v9, :cond_8
+    if-eqz v10, :cond_8
 
-    const/4 v4, 0x1
+    const/4 v5, 0x1
 
-    iget v3, v3, Landroid/graphics/RectF;->bottom:F
+    iget v4, v4, Landroid/graphics/RectF;->bottom:F
 
-    invoke-static {v5, v3}, Ljava/lang/Math;->max(FF)F
+    invoke-static {v6, v4}, Ljava/lang/Math;->max(FF)F
 
-    move-result v3
+    move-result v4
 
-    move/from16 v18, v4
+    move/from16 v19, v5
 
-    move v4, v3
+    move v5, v4
 
-    move/from16 v3, v18
+    move/from16 v4, v19
 
     :goto_2
-    add-int/lit8 v5, v6, 0x1
+    add-int/lit8 v6, v7, 0x1
+
+    move v7, v6
 
     move v6, v5
 
     move v5, v4
 
-    move v4, v3
-
     goto :goto_1
 
     :cond_3
-    if-nez v4, :cond_4
+    if-nez v5, :cond_4
 
-    const/4 v3, 0x1
+    const/4 v4, 0x1
 
     :goto_3
-    move v9, v5
+    move v10, v6
 
     goto :goto_0
 
     :cond_4
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
     goto :goto_3
 
     :cond_5
     if-eqz p15, :cond_7
 
-    const/high16 v3, 0x40000000
+    const/high16 v4, 0x40000000
 
-    div-float v3, v12, v3
+    div-float v4, v13, v4
 
-    sub-float v3, v9, v3
+    sub-float v4, v10, v4
 
-    float-to-int v0, v3
+    float-to-int v0, v4
 
-    move/from16 v16, v0
-
-    int-to-float v4, v7
+    move/from16 v17, v0
 
     int-to-float v5, v8
 
-    int-to-float v6, v11
+    int-to-float v6, v9
 
-    move/from16 v0, v16
+    int-to-float v7, v12
 
-    int-to-float v7, v0
+    move/from16 v0, v17
 
-    move-object/from16 v3, p1
+    int-to-float v8, v0
 
-    move-object/from16 v8, p14
+    move-object/from16 v4, p1
 
-    invoke-virtual/range {v3 .. v8}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
+    move-object/from16 v9, p14
 
-    int-to-float v4, v11
+    invoke-virtual/range {v4 .. v9}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    move/from16 v0, v16
+    int-to-float v5, v12
 
-    int-to-float v5, v0
+    move/from16 v0, v17
 
-    int-to-float v3, v11
+    int-to-float v6, v0
 
-    add-float v6, v3, v10
+    int-to-float v4, v12
 
-    move/from16 v0, v16
+    add-float v7, v4, v11
 
-    int-to-float v7, v0
+    move/from16 v0, v17
 
-    move-object/from16 v3, p1
+    int-to-float v8, v0
 
-    move-object/from16 v8, p14
+    move-object/from16 v4, p1
 
-    invoke-virtual/range {v3 .. v8}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
+    move-object/from16 v9, p14
+
+    invoke-virtual/range {v4 .. v9}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
     :goto_4
     move-object/from16 v0, p1
 
     move-object/from16 v1, p14
 
-    invoke-virtual {v0, v14, v13, v9, v1}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
+    invoke-virtual {v0, v15, v14, v10, v1}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
     if-eqz p15, :cond_6
 
-    new-instance v3, Landroid/graphics/RectF;
+    new-instance v4, Landroid/graphics/RectF;
 
-    add-float v4, v13, v15
+    add-float v5, v14, v16
 
-    add-float v5, v9, v12
+    add-float v6, v10, v13
 
-    invoke-direct {v3, v13, v9, v4, v5}, Landroid/graphics/RectF;-><init>(FFFF)V
+    invoke-direct {v4, v14, v10, v5, v6}, Landroid/graphics/RectF;-><init>(FFFF)V
 
     move-object/from16 v0, p4
 
-    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v0, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_6
     return-void
 
     :cond_7
-    sget-object v3, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
+    sget-object v4, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
 
     move-object/from16 v0, p14
 
-    invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
+    invoke-virtual {v0, v4}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
 
     goto :goto_4
 
     :cond_8
-    move v3, v4
-
     move v4, v5
+
+    move v5, v6
 
     goto :goto_2
 .end method
@@ -1819,7 +1819,7 @@
 .end method
 
 .method public a(D)Z
-    .locals 2
+    .locals 3
 
     invoke-static {p1, p2}, Ljava/lang/Double;->isNaN(D)Z
 

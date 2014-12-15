@@ -25,7 +25,9 @@
 
 .field private j:Landroid/content/SharedPreferences;
 
-.field private k:Ljava/util/List;
+.field private k:Ljava/lang/String;
+
+.field private l:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List",
@@ -67,11 +69,11 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->k:Ljava/util/List;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->l:Ljava/util/List;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->k:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->l:Ljava/util/List;
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/f/a/d;->b()Ljava/util/List;
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/f/a/d;->c()Ljava/util/List;
 
     move-result-object v1
 
@@ -81,7 +83,7 @@
 .end method
 
 .method private a(Lcn/com/smartdevices/bracelet/analysis/SleepInfo;)Lcn/com/smartdevices/bracelet/f/a/a;
-    .locals 7
+    .locals 8
 
     new-instance v0, Lcn/com/smartdevices/bracelet/f/a/a;
 
@@ -98,13 +100,13 @@
 
     invoke-virtual {v1}, Ljava/util/Date;->getTime()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    const-wide/16 v5, 0x3e8
+    const-wide/16 v6, 0x3e8
 
-    div-long/2addr v3, v5
+    div-long/2addr v4, v6
 
-    long-to-int v1, v3
+    long-to-int v1, v4
 
     invoke-virtual {v2}, Ljava/util/Date;->getTime()J
 
@@ -170,7 +172,7 @@
 .end method
 
 .method private a(Lcn/com/smartdevices/bracelet/model/SportDay;Lcn/com/smartdevices/bracelet/analysis/StepsInfo;)Lcn/com/smartdevices/bracelet/f/a/c;
-    .locals 5
+    .locals 6
 
     new-instance v0, Lcn/com/smartdevices/bracelet/f/a/c;
 
@@ -189,14 +191,14 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
     :goto_0
-    const-wide/16 v3, 0x3e8
+    const-wide/16 v4, 0x3e8
 
-    div-long/2addr v1, v3
+    div-long/2addr v2, v4
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/f/a/c;->a(I)V
 
@@ -276,7 +278,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-wide v1
+    move-result-wide v2
 
     goto :goto_0
 
@@ -305,7 +307,7 @@
 .end method
 
 .method public static a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/f/a/d;
-    .locals 1
+    .locals 2
 
     sget-object v0, Lcn/com/smartdevices/bracelet/f/a/d;->g:Lcn/com/smartdevices/bracelet/f/a/d;
 
@@ -318,6 +320,25 @@
     sput-object v0, Lcn/com/smartdevices/bracelet/f/a/d;->g:Lcn/com/smartdevices/bracelet/f/a/d;
 
     :cond_0
+    sget-object v0, Lcn/com/smartdevices/bracelet/f/a/d;->g:Lcn/com/smartdevices/bracelet/f/a/d;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/f/a/d;->k:Ljava/lang/String;
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/f/a/d;->g:Lcn/com/smartdevices/bracelet/f/a/d;
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->a()Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcn/com/smartdevices/bracelet/f/a/d;->k:Ljava/lang/String;
+
+    :cond_1
     sget-object v0, Lcn/com/smartdevices/bracelet/f/a/d;->g:Lcn/com/smartdevices/bracelet/f/a/d;
 
     return-object v0
@@ -533,7 +554,7 @@
 .end method
 
 .method private b(Lcn/com/smartdevices/bracelet/model/SportDay;Ljava/lang/String;)V
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->j:Landroid/content/SharedPreferences;
 
@@ -567,11 +588,338 @@
 
     move-result-object v1
 
-    const-string v2, "HaveSyncedSleepData"
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "HaveSyncedSleepData"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/f/a/d;->k:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
 
     invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    return-void
+.end method
+
+.method private c()Ljava/util/List;
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcn/com/smartdevices/bracelet/model/SportDay;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->j:Landroid/content/SharedPreferences;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "NeedSyncDays"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/f/a/d;->k:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "QQ.Health"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Days Json : "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    if-eqz v0, :cond_0
+
+    :try_start_0
+    new-instance v2, Lorg/json/JSONArray;
+
+    invoke-direct {v2, v0}, Lorg/json/JSONArray;-><init>(Ljava/lang/String;)V
+
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
+
+    move-result v3
+
+    if-ge v0, v3, :cond_0
+
+    invoke-virtual {v2, v0}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/model/SportDay;->fromString(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/model/SportDay;
+
+    move-result-object v3
+
+    invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/f/a/d;->h:Landroid/content/Context;
+
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/Exception;)V
+
+    :cond_0
+    const-string v0, "QQ.Health"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Read Need Sync Days : "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v1
+.end method
+
+.method private c(Ljava/util/List;)V
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcn/com/smartdevices/bracelet/model/SportDay;",
+            ">;)V"
+        }
+    .end annotation
+
+    if-eqz p1, :cond_1
+
+    const-string v0, "QQ.Health"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Save Need Sync Days : "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->j:Landroid/content/SharedPreferences;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-lez v0, :cond_2
+
+    new-instance v2, Lorg/json/JSONArray;
+
+    invoke-direct {v2}, Lorg/json/JSONArray;-><init>()V
+
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :goto_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/model/SportDay;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/SportDay;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+
+    goto :goto_0
+
+    :cond_0
+    const-string v0, "QQ.Health"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Days Json : "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v2}, Lorg/json/JSONArray;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v0, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "NeedSyncDays"
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/f/a/d;->k:Ljava/lang/String;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2}, Lorg/json/JSONArray;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v1, v0, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    :goto_1
+    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    :cond_1
+    return-void
+
+    :cond_2
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "NeedSyncDays"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/f/a/d;->k:Ljava/lang/String;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {v1, v0}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    goto :goto_1
+.end method
+
+.method private d()V
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->l:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->clear()V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->l:Ljava/util/List;
+
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/f/a/d;->c(Ljava/util/List;)V
 
     return-void
 .end method
@@ -674,18 +1022,38 @@
     goto :goto_0
 .end method
 
-.method private f()V
-    .locals 1
+.method private e()Ljava/lang/String;
+    .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->k:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->j:Landroid/content/SharedPreferences;
 
-    invoke-interface {v0}, Ljava/util/List;->clear()V
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->k:Ljava/util/List;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/f/a/d;->a(Ljava/util/List;)V
+    const-string v2, "HaveSyncedSleepData"
 
-    return-void
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/f/a/d;->k:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 
@@ -693,7 +1061,7 @@
 .method public a(Lcn/com/smartdevices/bracelet/model/SportDay;)V
     .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->k:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->l:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -745,13 +1113,13 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->k:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->l:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->k:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->l:Ljava/util/List;
 
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/f/a/d;->a(Ljava/util/List;)V
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/f/a/d;->c(Ljava/util/List;)V
 
     :cond_2
     return-void
@@ -831,7 +1199,7 @@
 
     move-result-object v3
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/f/a/d;->c()Ljava/lang/String;
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/f/a/d;->e()Ljava/lang/String;
 
     move-result-object v4
 
@@ -1030,319 +1398,6 @@
         }
     .end annotation
 
-    if-eqz p1, :cond_1
-
-    const-string v0, "QQ.Health"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Save Need Sync Days : "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->j:Landroid/content/SharedPreferences;
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v1
-
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-lez v0, :cond_2
-
-    new-instance v2, Lorg/json/JSONArray;
-
-    invoke-direct {v2}, Lorg/json/JSONArray;-><init>()V
-
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v3
-
-    :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/model/SportDay;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/SportDay;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
-
-    goto :goto_0
-
-    :cond_0
-    const-string v0, "QQ.Health"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "Days Json : "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v2}, Lorg/json/JSONArray;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v0, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v0, "NeedSyncDays"
-
-    invoke-virtual {v2}, Lorg/json/JSONArray;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-interface {v1, v0, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    :goto_1
-    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    :cond_1
-    return-void
-
-    :cond_2
-    const-string v0, "NeedSyncDays"
-
-    invoke-interface {v1, v0}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    goto :goto_1
-.end method
-
-.method public b()Ljava/util/List;
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Lcn/com/smartdevices/bracelet/model/SportDay;",
-            ">;"
-        }
-    .end annotation
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->j:Landroid/content/SharedPreferences;
-
-    const-string v1, "NeedSyncDays"
-
-    const/4 v2, 0x0
-
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "QQ.Health"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "Days Json : "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    if-eqz v0, :cond_0
-
-    :try_start_0
-    new-instance v2, Lorg/json/JSONArray;
-
-    invoke-direct {v2, v0}, Lorg/json/JSONArray;-><init>(Ljava/lang/String;)V
-
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-virtual {v2}, Lorg/json/JSONArray;->length()I
-
-    move-result v3
-
-    if-ge v0, v3, :cond_0
-
-    invoke-virtual {v2, v0}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/model/SportDay;->fromString(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/model/SportDay;
-
-    move-result-object v3
-
-    invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/f/a/d;->h:Landroid/content/Context;
-
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/Exception;)V
-
-    :cond_0
-    const-string v0, "QQ.Health"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "Read Need Sync Days : "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v1
-.end method
-
-.method public b(Lcn/com/smartdevices/bracelet/model/SportDay;)V
-    .locals 3
-
-    const/4 v1, 0x0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->k:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :cond_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/model/SportDay;
-
-    invoke-virtual {p1, v0}, Lcn/com/smartdevices/bracelet/model/SportDay;->equals(Lcn/com/smartdevices/bracelet/model/SportDay;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    :goto_0
-    if-eqz p1, :cond_1
-
-    const-string v0, "QQ.Health"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Remove Need Sync Day : "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->k:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->k:Ljava/util/List;
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/f/a/d;->a(Ljava/util/List;)V
-
-    :cond_1
-    return-void
-
-    :cond_2
-    move-object p1, v1
-
-    goto :goto_0
-.end method
-
-.method public b(Ljava/util/List;)V
-    .locals 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcn/com/smartdevices/bracelet/model/SportDay;",
-            ">;)V"
-        }
-    .end annotation
-
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -1360,7 +1415,7 @@
 
     check-cast v0, Lcn/com/smartdevices/bracelet/model/SportDay;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/f/a/d;->k:Ljava/util/List;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/f/a/d;->l:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1410,82 +1465,173 @@
 
     invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/f/a/d;->k:Ljava/util/List;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/f/a/d;->l:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
     :cond_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->k:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->l:Ljava/util/List;
 
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/f/a/d;->a(Ljava/util/List;)V
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/f/a/d;->c(Ljava/util/List;)V
 
     return-void
 .end method
 
-.method public c()Ljava/lang/String;
+.method public a(Z)V
     .locals 3
+
+    if-eqz p1, :cond_0
+
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/f/a/d;->d()V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->j:Landroid/content/SharedPreferences;
 
-    const-string v1, "HaveSyncedSleepData"
-
-    const/4 v2, 0x0
-
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    new-instance v1, Ljava/lang/StringBuilder;
 
-.method public c(Lcn/com/smartdevices/bracelet/model/SportDay;)V
-    .locals 3
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->i:Lcn/com/smartdevices/bracelet/f/a;
+    const-string v2, "NeedSyncDays"
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->i:Lcn/com/smartdevices/bracelet/f/a;
+    move-result-object v1
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/a;->h()Z
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/f/a/d;->k:Ljava/lang/String;
 
-    move-result v0
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-nez v0, :cond_1
+    move-result-object v1
 
-    :cond_0
-    const-string v0, "QQ.Health"
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const-string v1, "Login is invalid!!"
+    move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "HaveSyncedSleepData"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/f/a/d;->k:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     :goto_0
     return-void
 
-    :cond_1
-    new-instance v0, Lcn/com/smartdevices/bracelet/f/a/g;
+    :cond_0
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/f/a/g;-><init>(Lcn/com/smartdevices/bracelet/f/a/d;Lcn/com/smartdevices/bracelet/f/a/e;)V
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Lcn/com/smartdevices/bracelet/model/SportDay;
-
-    const/4 v2, 0x0
-
-    aput-object p1, v1, v2
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/f/a/g;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    sput-object v0, Lcn/com/smartdevices/bracelet/f/a/d;->g:Lcn/com/smartdevices/bracelet/f/a/d;
 
     goto :goto_0
 .end method
 
-.method public c(Ljava/util/List;)V
+.method public b()V
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->l:Ljava/util/List;
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/f/a/d;->b(Ljava/util/List;)V
+
+    return-void
+.end method
+
+.method public b(Lcn/com/smartdevices/bracelet/model/SportDay;)V
+    .locals 3
+
+    const/4 v1, 0x0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->l:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :cond_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/model/SportDay;
+
+    invoke-virtual {p1, v0}, Lcn/com/smartdevices/bracelet/model/SportDay;->equals(Lcn/com/smartdevices/bracelet/model/SportDay;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    :goto_0
+    if-eqz p1, :cond_1
+
+    const-string v0, "QQ.Health"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Remove Need Sync Day : "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->l:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->l:Ljava/util/List;
+
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/f/a/d;->c(Ljava/util/List;)V
+
+    :cond_1
+    return-void
+
+    :cond_2
+    move-object p1, v1
+
+    goto :goto_0
+.end method
+
+.method public b(Ljava/util/List;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -1572,30 +1718,47 @@
     goto :goto_0
 .end method
 
-.method public d()V
-    .locals 1
+.method public c(Lcn/com/smartdevices/bracelet/model/SportDay;)V
+    .locals 3
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/f/a/d;->f()V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->i:Lcn/com/smartdevices/bracelet/f/a;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->j:Landroid/content/SharedPreferences;
+    if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->i:Lcn/com/smartdevices/bracelet/f/a;
 
-    move-result-object v0
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/a;->h()Z
 
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->clear()Landroid/content/SharedPreferences$Editor;
+    move-result v0
 
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    if-nez v0, :cond_1
 
+    :cond_0
+    const-string v0, "QQ.Health"
+
+    const-string v1, "Login is invalid!!"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_0
     return-void
-.end method
 
-.method public e()V
-    .locals 1
+    :cond_1
+    new-instance v0, Lcn/com/smartdevices/bracelet/f/a/g;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/f/a/d;->k:Ljava/util/List;
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/f/a/d;->c(Ljava/util/List;)V
+    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/f/a/g;-><init>(Lcn/com/smartdevices/bracelet/f/a/d;Lcn/com/smartdevices/bracelet/f/a/e;)V
 
-    return-void
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Lcn/com/smartdevices/bracelet/model/SportDay;
+
+    const/4 v2, 0x0
+
+    aput-object p1, v1, v2
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/f/a/g;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+
+    goto :goto_0
 .end method

@@ -31,7 +31,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/a;->c()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/a;->d()V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/A;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 

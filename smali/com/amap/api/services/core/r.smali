@@ -800,47 +800,47 @@
 
     invoke-virtual {v2}, Lcom/amap/api/services/core/LatLonPoint;->getLatitude()D
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-static {v3, v4}, Lcom/amap/api/services/core/e;->a(D)D
+    invoke-static {v4, v5}, Lcom/amap/api/services/core/e;->a(D)D
 
-    move-result-wide v3
+    move-result-wide v4
 
     invoke-virtual {v2}, Lcom/amap/api/services/core/LatLonPoint;->getLongitude()D
 
-    move-result-wide v5
+    move-result-wide v2
 
-    invoke-static {v5, v6}, Lcom/amap/api/services/core/e;->a(D)D
+    invoke-static {v2, v3}, Lcom/amap/api/services/core/e;->a(D)D
 
-    move-result-wide v5
+    move-result-wide v2
 
     invoke-virtual {v0}, Lcom/amap/api/services/core/LatLonPoint;->getLatitude()D
 
-    move-result-wide v7
+    move-result-wide v6
 
-    invoke-static {v7, v8}, Lcom/amap/api/services/core/e;->a(D)D
+    invoke-static {v6, v7}, Lcom/amap/api/services/core/e;->a(D)D
 
-    move-result-wide v7
+    move-result-wide v6
 
     invoke-virtual {v0}, Lcom/amap/api/services/core/LatLonPoint;->getLongitude()D
 
-    move-result-wide v9
+    move-result-wide v8
 
-    invoke-static {v9, v10}, Lcom/amap/api/services/core/e;->a(D)D
+    invoke-static {v8, v9}, Lcom/amap/api/services/core/e;->a(D)D
 
-    move-result-wide v9
+    move-result-wide v8
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "&polygon="
+    const-string v10, "&polygon="
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-virtual {v0, v5, v6}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -850,7 +850,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -860,7 +860,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v9, v10}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v8, v9}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -870,7 +870,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v7, v8}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v6, v7}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

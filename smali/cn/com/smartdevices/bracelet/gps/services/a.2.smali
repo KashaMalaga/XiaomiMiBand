@@ -124,11 +124,11 @@
 .end method
 
 .method private a(Landroid/content/Context;J)V
-    .locals 9
+    .locals 10
 
-    const-wide/32 v7, 0x33450
+    const-wide/32 v8, 0x33450
 
-    const-wide/16 v5, 0x7530
+    const-wide/16 v6, 0x7530
 
     const/4 v4, 0x0
 
@@ -180,7 +180,7 @@
 
     invoke-direct {v1, p0, p1}, Lcn/com/smartdevices/bracelet/gps/services/e;-><init>(Lcn/com/smartdevices/bracelet/gps/services/a;Landroid/content/Context;)V
 
-    add-long v2, p2, v7
+    add-long v2, p2, v8
 
     invoke-virtual {v0, v1, v2, v3}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;J)V
 
@@ -207,9 +207,9 @@
 
     invoke-direct {v1, p0, p1}, Lcn/com/smartdevices/bracelet/gps/services/f;-><init>(Lcn/com/smartdevices/bracelet/gps/services/a;Landroid/content/Context;)V
 
-    add-long v2, p2, v7
+    add-long v2, p2, v8
 
-    add-long/2addr v2, v5
+    add-long/2addr v2, v6
 
     invoke-virtual {v0, v1, v2, v3}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;J)V
 
@@ -236,11 +236,11 @@
 
     invoke-direct {v1, p0, p1}, Lcn/com/smartdevices/bracelet/gps/services/g;-><init>(Lcn/com/smartdevices/bracelet/gps/services/a;Landroid/content/Context;)V
 
-    add-long v2, p2, v7
+    add-long v2, p2, v8
 
-    add-long/2addr v2, v5
+    add-long/2addr v2, v6
 
-    add-long/2addr v2, v5
+    add-long/2addr v2, v6
 
     invoke-virtual {v0, v1, v2, v3}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;J)V
 
@@ -248,7 +248,7 @@
 .end method
 
 .method private a(Landroid/content/Context;JFLjava/lang/String;)V
-    .locals 7
+    .locals 8
 
     :try_start_0
     const-string v0, "location"
@@ -464,7 +464,7 @@
 .end method
 
 .method private a(Landroid/location/Location;)Z
-    .locals 5
+    .locals 6
 
     const/4 v0, 0x0
 
@@ -479,15 +479,15 @@
     :cond_1
     invoke-virtual {p1}, Landroid/location/Location;->getTime()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/services/a;->t:Landroid/location/Location;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/a;->t:Landroid/location/Location;
 
-    invoke-virtual {v3}, Landroid/location/Location;->getTime()J
+    invoke-virtual {v1}, Landroid/location/Location;->getTime()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-lez v1, :cond_0
 
@@ -513,7 +513,7 @@
 .end method
 
 .method private b(Landroid/location/Location;)Z
-    .locals 3
+    .locals 4
 
     const/4 v0, 0x0
 
@@ -563,9 +563,9 @@
 
     const/4 v0, 0x0
 
-    const-wide/16 v1, 0x7530
+    const-wide/16 v2, 0x7530
 
-    invoke-direct {p0, v0, v1, v2}, Lcn/com/smartdevices/bracelet/gps/services/a;->a(Landroid/content/Context;J)V
+    invoke-direct {p0, v0, v2, v3}, Lcn/com/smartdevices/bracelet/gps/services/a;->a(Landroid/content/Context;J)V
 
     :cond_3
     const/4 v0, 0x1

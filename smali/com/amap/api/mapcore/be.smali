@@ -164,10 +164,7 @@
     move-result-object v0
 
     iput-object v0, p0, Lcom/amap/api/mapcore/be;->f:Landroid/graphics/Bitmap;
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    :goto_0
     new-instance v0, Landroid/widget/ImageView;
 
     invoke-direct {v0, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
@@ -182,7 +179,9 @@
 
     iget-object v0, p0, Lcom/amap/api/mapcore/be;->m:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setClickable(Z)V
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setClickable(Z)V
 
     new-instance v0, Landroid/widget/ImageView;
 
@@ -198,8 +197,13 @@
 
     iget-object v0, p0, Lcom/amap/api/mapcore/be;->n:Landroid/widget/ImageView;
 
-    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setClickable(Z)V
+    const/4 v1, 0x1
 
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setClickable(Z)V
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
     iget-object v0, p0, Lcom/amap/api/mapcore/be;->m:Landroid/widget/ImageView;
 
     new-instance v1, Lcom/amap/api/mapcore/be$1;

@@ -77,7 +77,7 @@
 .end method
 
 .method constructor <init>(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)V
-    .locals 3
+    .locals 4
 
     const/4 v2, 0x0
 
@@ -207,9 +207,9 @@
 
     invoke-static {p1}, Landroid/content/ContentUris;->parseId(Landroid/net/Uri;)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

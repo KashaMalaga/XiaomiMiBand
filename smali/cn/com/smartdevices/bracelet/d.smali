@@ -221,11 +221,11 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/u;->j(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/u;->k(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/u;->k(Ljava/lang/String;)V
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/u;->l(Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->m()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->k()V
 
     :cond_2
     const-string v1, "algo_start_date"
@@ -234,7 +234,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/u;->k(Ljava/lang/String;)V
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/u;->l(Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
@@ -244,7 +244,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/u;->j(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/u;->k(Ljava/lang/String;)Ljava/lang/String;
 
     return-void
 

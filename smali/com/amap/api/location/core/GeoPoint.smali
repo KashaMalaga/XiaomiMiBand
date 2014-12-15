@@ -96,7 +96,7 @@
 .end method
 
 .method public constructor <init>(JJ)V
-    .locals 4
+    .locals 5
 
     const-wide/high16 v2, -0x8000000000000000L
 
@@ -170,7 +170,7 @@
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
-    .locals 5
+    .locals 6
 
     const/4 v0, 0x0
 
@@ -193,35 +193,35 @@
 
     check-cast p1, Lcom/amap/api/location/core/GeoPoint;
 
-    iget-wide v1, p0, Lcom/amap/api/location/core/GeoPoint;->c:D
+    iget-wide v2, p0, Lcom/amap/api/location/core/GeoPoint;->c:D
 
-    iget-wide v3, p1, Lcom/amap/api/location/core/GeoPoint;->c:D
+    iget-wide v4, p1, Lcom/amap/api/location/core/GeoPoint;->c:D
 
-    cmpl-double v1, v1, v3
-
-    if-nez v1, :cond_0
-
-    iget-wide v1, p0, Lcom/amap/api/location/core/GeoPoint;->d:D
-
-    iget-wide v3, p1, Lcom/amap/api/location/core/GeoPoint;->d:D
-
-    cmpl-double v1, v1, v3
+    cmpl-double v1, v2, v4
 
     if-nez v1, :cond_0
 
-    iget-wide v1, p0, Lcom/amap/api/location/core/GeoPoint;->a:J
+    iget-wide v2, p0, Lcom/amap/api/location/core/GeoPoint;->d:D
 
-    iget-wide v3, p1, Lcom/amap/api/location/core/GeoPoint;->a:J
+    iget-wide v4, p1, Lcom/amap/api/location/core/GeoPoint;->d:D
 
-    cmp-long v1, v1, v3
+    cmpl-double v1, v2, v4
 
     if-nez v1, :cond_0
 
-    iget-wide v1, p0, Lcom/amap/api/location/core/GeoPoint;->b:J
+    iget-wide v2, p0, Lcom/amap/api/location/core/GeoPoint;->a:J
 
-    iget-wide v3, p1, Lcom/amap/api/location/core/GeoPoint;->b:J
+    iget-wide v4, p1, Lcom/amap/api/location/core/GeoPoint;->a:J
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
+
+    if-nez v1, :cond_0
+
+    iget-wide v2, p0, Lcom/amap/api/location/core/GeoPoint;->b:J
+
+    iget-wide v4, p1, Lcom/amap/api/location/core/GeoPoint;->b:J
+
+    cmp-long v1, v2, v4
 
     if-nez v1, :cond_0
 
@@ -273,7 +273,7 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 3
+    .locals 4
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -285,9 +285,9 @@
 
     move-result-object v0
 
-    iget-wide v1, p0, Lcom/amap/api/location/core/GeoPoint;->a:J
+    iget-wide v2, p0, Lcom/amap/api/location/core/GeoPoint;->a:J
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -297,9 +297,9 @@
 
     move-result-object v0
 
-    iget-wide v1, p0, Lcom/amap/api/location/core/GeoPoint;->b:J
+    iget-wide v2, p0, Lcom/amap/api/location/core/GeoPoint;->b:J
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

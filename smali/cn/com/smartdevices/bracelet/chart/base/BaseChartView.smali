@@ -16,7 +16,7 @@
 
 
 # static fields
-.field private static final l:Ljava/lang/String; = "Chart.BaseView"
+.field private static final m:Ljava/lang/String; = "Chart.BaseView"
 
 
 # instance fields
@@ -40,13 +40,15 @@
 
 .field protected g:Z
 
-.field protected h:Landroid/view/animation/Interpolator;
+.field protected h:Z
 
-.field protected i:J
+.field protected i:Landroid/view/animation/Interpolator;
 
-.field protected j:F
+.field protected j:J
 
-.field protected k:Landroid/animation/Animator;
+.field protected k:F
+
+.field protected l:Landroid/animation/Animator;
 
 
 # direct methods
@@ -81,17 +83,17 @@
 
     const/high16 v0, 0x3f800000
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->j:F
+    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->k:F
 
     new-instance v0, Landroid/view/animation/LinearInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/LinearInterpolator;-><init>()V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->h:Landroid/view/animation/Interpolator;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->i:Landroid/view/animation/Interpolator;
 
     const-wide/16 v0, 0x1f4
 
-    iput-wide v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->i:J
+    iput-wide v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->j:J
 
     return-void
 .end method
@@ -108,7 +110,7 @@
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->a()Landroid/animation/Animator;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->k:Landroid/animation/Animator;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->l:Landroid/animation/Animator;
 
     invoke-virtual {v0}, Landroid/animation/Animator;->isStarted()Z
 
@@ -116,7 +118,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->k:Landroid/animation/Animator;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->l:Landroid/animation/Animator;
 
     invoke-virtual {v0}, Landroid/animation/Animator;->start()V
 
@@ -125,7 +127,7 @@
     return-void
 
     :cond_1
-    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->j:F
+    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->k:F
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->postInvalidateOnAnimation()V
 
@@ -137,20 +139,20 @@
 .method public a()Landroid/animation/Animator;
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->k:Landroid/animation/Animator;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->l:Landroid/animation/Animator;
 
     if-nez v0, :cond_0
 
-    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->i:J
+    iget-wide v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->j:J
 
     invoke-virtual {p0, v0, v1}, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->d(J)Landroid/animation/Animator;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->k:Landroid/animation/Animator;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->l:Landroid/animation/Animator;
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->k:Landroid/animation/Animator;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->l:Landroid/animation/Animator;
 
     return-object v0
 .end method
@@ -194,7 +196,7 @@
 .method public b(Z)V
     .locals 0
 
-    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->c:Z
+    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->h:Z
 
     return-void
 .end method
@@ -207,6 +209,14 @@
     const/4 v1, 0x0
 
     invoke-direct {p0, v0, v1}, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->a(FZ)V
+
+    return-void
+.end method
+
+.method public c(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->c:Z
 
     return-void
 .end method
@@ -230,7 +240,7 @@
 
     invoke-virtual {v0, p1, p2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->h:Landroid/view/animation/Interpolator;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->i:Landroid/view/animation/Interpolator;
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
@@ -243,7 +253,7 @@
     return-object v0
 .end method
 
-.method public e()V
+.method public f()V
     .locals 1
 
     const/4 v0, 0x1
@@ -253,7 +263,7 @@
     return-void
 .end method
 
-.method public f()V
+.method public g()V
     .locals 1
 
     const/4 v0, 0x0
@@ -263,7 +273,7 @@
     return-void
 .end method
 
-.method public g()Z
+.method public h()Z
     .locals 1
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->g:Z
@@ -271,7 +281,15 @@
     return v0
 .end method
 
-.method public h()Lcn/com/smartdevices/bracelet/chart/b/d;
+.method public i()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->h:Z
+
+    return v0
+.end method
+
+.method public j()Lcn/com/smartdevices/bracelet/chart/b/d;
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->b:Lcn/com/smartdevices/bracelet/chart/b/d;
@@ -284,7 +302,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->j:F
+    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->k:F
 
     invoke-virtual {v0, p1, v1}, Lcn/com/smartdevices/bracelet/chart/base/g;->a(Landroid/graphics/Canvas;F)V
 

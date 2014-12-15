@@ -38,9 +38,9 @@
 .end method
 
 .method public static a(DDI)V
-    .locals 6
+    .locals 8
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
     if-lez p4, :cond_0
 
@@ -59,11 +59,11 @@
     return-void
 
     :cond_1
-    cmpg-double v0, p0, v1
+    cmpg-double v0, p0, v2
 
     if-ltz v0, :cond_2
 
-    cmpg-double v0, p2, v1
+    cmpg-double v0, p2, v2
 
     if-gez v0, :cond_3
 
@@ -77,15 +77,15 @@
     goto :goto_0
 
     :cond_3
-    sget-object v0, Lcom/f/a/a/a;->e:Lcom/f/a/a/e;
+    sget-object v1, Lcom/f/a/a/a;->e:Lcom/f/a/a/e;
 
-    move-wide v1, p0
+    move-wide v2, p0
 
-    move-wide v3, p2
+    move-wide v4, p2
 
-    move v5, p4
+    move v6, p4
 
-    invoke-virtual/range {v0 .. v5}, Lcom/f/a/a/e;->a(DDI)V
+    invoke-virtual/range {v1 .. v6}, Lcom/f/a/a/e;->a(DDI)V
 
     goto :goto_0
 .end method
@@ -133,75 +133,77 @@
 .end method
 
 .method public static a(DLjava/lang/String;IDI)V
-    .locals 8
+    .locals 12
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v4, 0x0
 
     if-lez p6, :cond_0
 
-    const/16 v0, 0x64
+    const/16 v2, 0x64
 
-    if-lt p6, v0, :cond_1
+    move/from16 v0, p6
+
+    if-lt v0, v2, :cond_1
 
     :cond_0
-    const-string v0, "MobclickAgent"
+    const-string v2, "MobclickAgent"
 
-    const-string v1, "The int value for \'Pay Channels\' ranges between 1 ~ 99 "
+    const-string v3, "The int value for \'Pay Channels\' ranges between 1 ~ 99 "
 
-    invoke-static {v0, v1}, Lb/a/bX;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lb/a/bX;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
 
     :cond_1
-    cmpg-double v0, p0, v1
+    cmpg-double v2, p0, v4
 
-    if-ltz v0, :cond_2
+    if-ltz v2, :cond_2
 
     if-ltz p3, :cond_2
 
-    cmpg-double v0, p4, v1
+    cmpg-double v2, p4, v4
 
-    if-gez v0, :cond_3
+    if-gez v2, :cond_3
 
     :cond_2
-    const-string v0, "MobclickAgent"
+    const-string v2, "MobclickAgent"
 
-    const-string v1, "Input value type is negative"
+    const-string v3, "Input value type is negative"
 
-    invoke-static {v0, v1}, Lb/a/bX;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lb/a/bX;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_3
     invoke-static {p2}, Lcom/f/a/a/a;->g(Ljava/lang/String;)Z
 
-    move-result v0
+    move-result v2
 
-    if-eqz v0, :cond_4
+    if-eqz v2, :cond_4
 
-    const-string v0, "MobclickAgent"
+    const-string v2, "MobclickAgent"
 
-    const-string v1, "Input string is null or empty"
+    const-string v3, "Input string is null or empty"
 
-    invoke-static {v0, v1}, Lb/a/bX;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lb/a/bX;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_4
-    sget-object v0, Lcom/f/a/a/a;->e:Lcom/f/a/a/e;
+    sget-object v3, Lcom/f/a/a/a;->e:Lcom/f/a/a/e;
 
-    move-wide v1, p0
+    move-wide v4, p0
 
-    move-object v3, p2
+    move-object v6, p2
 
-    move v4, p3
+    move v7, p3
 
-    move-wide v5, p4
+    move-wide/from16 v8, p4
 
-    move v7, p6
+    move/from16 v10, p6
 
-    invoke-virtual/range {v0 .. v7}, Lcom/f/a/a/e;->a(DLjava/lang/String;IDI)V
+    invoke-virtual/range {v3 .. v10}, Lcom/f/a/a/e;->a(DLjava/lang/String;IDI)V
 
     goto :goto_0
 .end method
@@ -251,7 +253,7 @@
 .end method
 
 .method public static a(Ljava/lang/String;IDI)V
-    .locals 6
+    .locals 8
 
     invoke-static {p0}, Lcom/f/a/a/a;->g(Ljava/lang/String;)Z
 
@@ -303,17 +305,17 @@
     goto :goto_0
 
     :cond_4
-    sget-object v0, Lcom/f/a/a/a;->e:Lcom/f/a/a/e;
+    sget-object v1, Lcom/f/a/a/a;->e:Lcom/f/a/a/e;
 
-    move-object v1, p0
+    move-object v2, p0
 
-    move v2, p1
+    move v3, p1
 
-    move-wide v3, p2
+    move-wide v4, p2
 
-    move v5, p4
+    move v6, p4
 
-    invoke-virtual/range {v0 .. v5}, Lcom/f/a/a/e;->a(Ljava/lang/String;IDI)V
+    invoke-virtual/range {v1 .. v6}, Lcom/f/a/a/e;->a(Ljava/lang/String;IDI)V
 
     goto :goto_0
 .end method

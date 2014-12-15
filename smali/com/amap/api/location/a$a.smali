@@ -32,7 +32,7 @@
 
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
-    .locals 7
+    .locals 8
 
     if-nez p1, :cond_1
 
@@ -182,11 +182,11 @@
 
     if-eqz v1, :cond_3
 
-    iget-wide v3, v0, Lcom/amap/api/location/g;->a:J
+    iget-wide v4, v0, Lcom/amap/api/location/g;->a:J
 
-    const-wide/16 v5, -0x1
+    const-wide/16 v6, -0x1
 
-    cmp-long v1, v3, v5
+    cmp-long v1, v4, v6
 
     if-nez v1, :cond_3
 

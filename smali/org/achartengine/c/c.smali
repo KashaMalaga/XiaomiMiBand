@@ -157,7 +157,7 @@
 .end method
 
 .method public a(D)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lorg/achartengine/c/c;->d:D
 
@@ -183,7 +183,7 @@
 .end method
 
 .method public b(D)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lorg/achartengine/c/c;->e:D
 
@@ -191,7 +191,7 @@
 .end method
 
 .method public c(D)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lorg/achartengine/c/c;->f:D
 
@@ -199,7 +199,7 @@
 .end method
 
 .method public d(D)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lorg/achartengine/c/c;->g:D
 
@@ -207,7 +207,7 @@
 .end method
 
 .method public e(D)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lorg/achartengine/c/c;->h:D
 
@@ -215,7 +215,7 @@
 .end method
 
 .method public f(D)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lorg/achartengine/c/c;->i:D
 

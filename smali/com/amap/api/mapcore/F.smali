@@ -45,6 +45,14 @@
 
     move-result-object v0
 
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/f;->a:Lcom/amap/api/mapcore/b;
+
+    invoke-static {v0}, Lcom/amap/api/mapcore/b;->c(Lcom/amap/api/mapcore/b;)Lcom/amap/api/mapcore/av;
+
+    move-result-object v0
+
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/amap/api/mapcore/av;->b(Z)V

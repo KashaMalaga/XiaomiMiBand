@@ -23,9 +23,9 @@
 
 .field private j:Z
 
-.field private k:Landroid/graphics/Bitmap;
+.field private final k:Ljava/lang/String;
 
-.field private l:Landroid/graphics/Bitmap;
+.field private final l:Ljava/lang/String;
 
 .field private m:Z
 
@@ -44,25 +44,17 @@
 
     iput-boolean v1, p0, Lcom/amap/api/mapcore/aq;->j:Z
 
-    iput-boolean v1, p0, Lcom/amap/api/mapcore/aq;->m:Z
-
-    iput-object p2, p0, Lcom/amap/api/mapcore/aq;->g:Landroid/content/Context;
-
     const-string v0, "location_map_gps_locked.png"
 
-    invoke-direct {p0, v0}, Lcom/amap/api/mapcore/aq;->a(Ljava/lang/String;)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/amap/api/mapcore/aq;->k:Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lcom/amap/api/mapcore/aq;->k:Ljava/lang/String;
 
     const-string v0, "location_map_gps_3d.png"
 
-    invoke-direct {p0, v0}, Lcom/amap/api/mapcore/aq;->a(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lcom/amap/api/mapcore/aq;->l:Ljava/lang/String;
 
-    move-result-object v0
+    iput-boolean v1, p0, Lcom/amap/api/mapcore/aq;->m:Z
 
-    iput-object v0, p0, Lcom/amap/api/mapcore/aq;->l:Landroid/graphics/Bitmap;
+    iput-object p2, p0, Lcom/amap/api/mapcore/aq;->g:Landroid/content/Context;
 
     iput-object p1, p0, Lcom/amap/api/mapcore/aq;->a:Lcom/amap/api/mapcore/v;
 
@@ -75,144 +67,6 @@
     iput-object v0, p0, Lcom/amap/api/mapcore/aq;->h:Lcom/amap/api/mapcore/ay;
 
     return-void
-.end method
-
-.method private a(Ljava/lang/String;)Landroid/graphics/Bitmap;
-    .locals 4
-
-    const/4 v1, 0x0
-
-    :try_start_0
-    invoke-static {}, Lcom/amap/api/mapcore/util/u;->a()Landroid/content/res/AssetManager;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    move-result-object v2
-
-    :try_start_1
-    invoke-static {v2}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    move-result-object v1
-
-    :try_start_2
-    sget v0, Lcom/amap/api/mapcore/p;->a:F
-
-    invoke-static {v1, v0}, Lcom/amap/api/mapcore/util/w;->a(Landroid/graphics/Bitmap;F)Landroid/graphics/Bitmap;
-    :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_5
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    move-result-object v0
-
-    if-eqz v2, :cond_0
-
-    :try_start_3
-    invoke-virtual {v2}, Ljava/io/InputStream;->close()V
-    :try_end_3
-    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
-
-    :cond_0
-    :goto_0
-    return-object v0
-
-    :catch_0
-    move-exception v1
-
-    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
-
-    goto :goto_0
-
-    :catch_1
-    move-exception v0
-
-    move-object v2, v1
-
-    move-object v3, v1
-
-    move-object v1, v0
-
-    move-object v0, v3
-
-    :goto_1
-    :try_start_4
-    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
-
-    if-eqz v2, :cond_0
-
-    :try_start_5
-    invoke-virtual {v2}, Ljava/io/InputStream;->close()V
-    :try_end_5
-    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_2
-
-    goto :goto_0
-
-    :catch_2
-    move-exception v1
-
-    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    move-object v2, v1
-
-    :goto_2
-    if-eqz v2, :cond_1
-
-    :try_start_6
-    invoke-virtual {v2}, Ljava/io/InputStream;->close()V
-    :try_end_6
-    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_3
-
-    :cond_1
-    :goto_3
-    throw v0
-
-    :catch_3
-    move-exception v1
-
-    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
-
-    goto :goto_3
-
-    :catchall_1
-    move-exception v0
-
-    goto :goto_2
-
-    :catch_4
-    move-exception v0
-
-    move-object v3, v0
-
-    move-object v0, v1
-
-    move-object v1, v3
-
-    goto :goto_1
-
-    :catch_5
-    move-exception v0
-
-    move-object v3, v0
-
-    move-object v0, v1
-
-    move-object v1, v3
-
-    goto :goto_1
 .end method
 
 .method private b(F)V
@@ -346,9 +200,9 @@
 
     iget-object v0, p0, Lcom/amap/api/mapcore/aq;->b:Lcom/amap/api/maps/model/Marker;
 
-    iget-object v1, p0, Lcom/amap/api/mapcore/aq;->k:Landroid/graphics/Bitmap;
+    const-string v1, "location_map_gps_locked.png"
 
-    invoke-static {v1}, Lcom/amap/api/maps/model/BitmapDescriptorFactory;->fromBitmap(Landroid/graphics/Bitmap;)Lcom/amap/api/maps/model/BitmapDescriptor;
+    invoke-static {v1}, Lcom/amap/api/maps/model/BitmapDescriptorFactory;->fromAsset(Ljava/lang/String;)Lcom/amap/api/maps/model/BitmapDescriptor;
 
     move-result-object v1
 
@@ -388,9 +242,9 @@
 
     iget-object v0, p0, Lcom/amap/api/mapcore/aq;->b:Lcom/amap/api/maps/model/Marker;
 
-    iget-object v1, p0, Lcom/amap/api/mapcore/aq;->k:Landroid/graphics/Bitmap;
+    const-string v1, "location_map_gps_locked.png"
 
-    invoke-static {v1}, Lcom/amap/api/maps/model/BitmapDescriptorFactory;->fromBitmap(Landroid/graphics/Bitmap;)Lcom/amap/api/maps/model/BitmapDescriptor;
+    invoke-static {v1}, Lcom/amap/api/maps/model/BitmapDescriptorFactory;->fromAsset(Ljava/lang/String;)Lcom/amap/api/maps/model/BitmapDescriptor;
 
     move-result-object v1
 
@@ -432,9 +286,9 @@
 
     iget-object v0, p0, Lcom/amap/api/mapcore/aq;->b:Lcom/amap/api/maps/model/Marker;
 
-    iget-object v1, p0, Lcom/amap/api/mapcore/aq;->l:Landroid/graphics/Bitmap;
+    const-string v1, "location_map_gps_3d.png"
 
-    invoke-static {v1}, Lcom/amap/api/maps/model/BitmapDescriptorFactory;->fromBitmap(Landroid/graphics/Bitmap;)Lcom/amap/api/maps/model/BitmapDescriptor;
+    invoke-static {v1}, Lcom/amap/api/maps/model/BitmapDescriptorFactory;->fromAsset(Ljava/lang/String;)Lcom/amap/api/maps/model/BitmapDescriptor;
 
     move-result-object v1
 
@@ -477,7 +331,7 @@
 .end method
 
 .method private g()V
-    .locals 5
+    .locals 6
 
     iget v0, p0, Lcom/amap/api/mapcore/aq;->i:I
 
@@ -500,13 +354,13 @@
 
     iget-object v1, p0, Lcom/amap/api/mapcore/aq;->e:Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v1, v1, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iget-wide v2, v1, Lcom/amap/api/maps/model/LatLng;->longitude:D
 
-    iget-object v3, p0, Lcom/amap/api/mapcore/aq;->e:Lcom/amap/api/maps/model/LatLng;
+    iget-object v1, p0, Lcom/amap/api/mapcore/aq;->e:Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v3, v3, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v4, v1, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
-    invoke-static {v1, v2, v3, v4, v0}, Lcom/autonavi/amap/mapcore/MapProjection;->lonlat2Geo(DDLcom/autonavi/amap/mapcore/IPoint;)V
+    invoke-static {v2, v3, v4, v5, v0}, Lcom/autonavi/amap/mapcore/MapProjection;->lonlat2Geo(DDLcom/autonavi/amap/mapcore/IPoint;)V
 
     iget-object v1, p0, Lcom/amap/api/mapcore/aq;->a:Lcom/amap/api/mapcore/v;
 
@@ -572,31 +426,9 @@
     iput-object v2, p0, Lcom/amap/api/mapcore/aq;->c:Lcom/amap/api/mapcore/x;
 
     :cond_0
-    iget-object v0, p0, Lcom/amap/api/mapcore/aq;->k:Landroid/graphics/Bitmap;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/aq;->k:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
-
-    iput-object v2, p0, Lcom/amap/api/mapcore/aq;->k:Landroid/graphics/Bitmap;
-
-    :cond_1
-    iget-object v0, p0, Lcom/amap/api/mapcore/aq;->l:Landroid/graphics/Bitmap;
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcom/amap/api/mapcore/aq;->l:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
-
-    iput-object v2, p0, Lcom/amap/api/mapcore/aq;->l:Landroid/graphics/Bitmap;
-
-    :cond_2
     iget-object v0, p0, Lcom/amap/api/mapcore/aq;->b:Lcom/amap/api/maps/model/Marker;
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_1
 
     iget-object v0, p0, Lcom/amap/api/mapcore/aq;->b:Lcom/amap/api/maps/model/Marker;
 
@@ -612,7 +444,7 @@
 
     invoke-virtual {v0, v2}, Lcom/amap/api/mapcore/ay;->a(Lcom/amap/api/maps/model/Marker;)V
 
-    :cond_3
+    :cond_1
     return-void
 
     :catch_0
@@ -624,7 +456,7 @@
 .end method
 
 .method private j()V
-    .locals 7
+    .locals 8
 
     :try_start_0
     iget-object v0, p0, Lcom/amap/api/mapcore/aq;->a:Lcom/amap/api/mapcore/v;
@@ -673,11 +505,11 @@
 
     new-instance v2, Lcom/amap/api/maps/model/LatLng;
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    const-wide/16 v5, 0x0
+    const-wide/16 v6, 0x0
 
-    invoke-direct {v2, v3, v4, v5, v6}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v2, v4, v5, v6, v7}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     invoke-virtual {v1, v2}, Lcom/amap/api/maps/model/CircleOptions;->center(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/CircleOptions;
 
@@ -691,15 +523,21 @@
 
     iget-object v0, p0, Lcom/amap/api/mapcore/aq;->c:Lcom/amap/api/mapcore/x;
 
-    const-wide/high16 v1, 0x4069000000000000L
+    const-wide/high16 v2, 0x4069000000000000L
 
-    invoke-interface {v0, v1, v2}, Lcom/amap/api/mapcore/x;->a(D)V
+    invoke-interface {v0, v2, v3}, Lcom/amap/api/mapcore/x;->a(D)V
 
     iget-object v0, p0, Lcom/amap/api/mapcore/aq;->a:Lcom/amap/api/mapcore/v;
 
     new-instance v1, Lcom/amap/api/maps/model/MarkerOptions;
 
     invoke-direct {v1}, Lcom/amap/api/maps/model/MarkerOptions;-><init>()V
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Lcom/amap/api/maps/model/MarkerOptions;->visible(Z)Lcom/amap/api/maps/model/MarkerOptions;
+
+    move-result-object v1
 
     const/high16 v2, 0x3f000000
 
@@ -711,11 +549,11 @@
 
     new-instance v2, Lcom/amap/api/maps/model/LatLng;
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    const-wide/16 v5, 0x0
+    const-wide/16 v6, 0x0
 
-    invoke-direct {v2, v3, v4, v5, v6}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v2, v4, v5, v6, v7}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     invoke-virtual {v1, v2}, Lcom/amap/api/maps/model/MarkerOptions;->position(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/MarkerOptions;
 
@@ -730,6 +568,12 @@
     iget v0, p0, Lcom/amap/api/mapcore/aq;->i:I
 
     invoke-virtual {p0, v0}, Lcom/amap/api/mapcore/aq;->a(I)V
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/aq;->b:Lcom/amap/api/maps/model/Marker;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/model/Marker;->setVisible(Z)V
 
     iget-object v0, p0, Lcom/amap/api/mapcore/aq;->h:Lcom/amap/api/mapcore/ay;
 
@@ -751,7 +595,7 @@
 .end method
 
 .method private k()V
-    .locals 7
+    .locals 8
 
     iget-object v0, p0, Lcom/amap/api/mapcore/aq;->d:Lcom/amap/api/maps/model/MyLocationStyle;
 
@@ -804,11 +648,11 @@
 
     new-instance v2, Lcom/amap/api/maps/model/LatLng;
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    const-wide/16 v5, 0x0
+    const-wide/16 v6, 0x0
 
-    invoke-direct {v2, v3, v4, v5, v6}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v2, v4, v5, v6, v7}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     invoke-virtual {v1, v2}, Lcom/amap/api/maps/model/CircleOptions;->center(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/CircleOptions;
 
@@ -833,15 +677,21 @@
     :cond_1
     iget-object v0, p0, Lcom/amap/api/mapcore/aq;->c:Lcom/amap/api/mapcore/x;
 
-    iget-wide v1, p0, Lcom/amap/api/mapcore/aq;->f:D
+    iget-wide v2, p0, Lcom/amap/api/mapcore/aq;->f:D
 
-    invoke-interface {v0, v1, v2}, Lcom/amap/api/mapcore/x;->a(D)V
+    invoke-interface {v0, v2, v3}, Lcom/amap/api/mapcore/x;->a(D)V
 
     iget-object v0, p0, Lcom/amap/api/mapcore/aq;->a:Lcom/amap/api/mapcore/v;
 
     new-instance v1, Lcom/amap/api/maps/model/MarkerOptions;
 
     invoke-direct {v1}, Lcom/amap/api/maps/model/MarkerOptions;-><init>()V
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Lcom/amap/api/maps/model/MarkerOptions;->visible(Z)Lcom/amap/api/maps/model/MarkerOptions;
+
+    move-result-object v1
 
     iget-object v2, p0, Lcom/amap/api/mapcore/aq;->d:Lcom/amap/api/maps/model/MyLocationStyle;
 
@@ -871,11 +721,11 @@
 
     new-instance v2, Lcom/amap/api/maps/model/LatLng;
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    const-wide/16 v5, 0x0
+    const-wide/16 v6, 0x0
 
-    invoke-direct {v2, v3, v4, v5, v6}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v2, v4, v5, v6, v7}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     invoke-virtual {v1, v2}, Lcom/amap/api/maps/model/MarkerOptions;->position(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/MarkerOptions;
 
@@ -900,6 +750,12 @@
     iget-object v1, p0, Lcom/amap/api/mapcore/aq;->e:Lcom/amap/api/maps/model/LatLng;
 
     invoke-virtual {v0, v1}, Lcom/amap/api/maps/model/Marker;->setPosition(Lcom/amap/api/maps/model/LatLng;)V
+
+    iget-object v0, p0, Lcom/amap/api/mapcore/aq;->b:Lcom/amap/api/maps/model/Marker;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/model/Marker;->setVisible(Z)V
 
     :cond_2
     iget-object v0, p0, Lcom/amap/api/mapcore/aq;->h:Lcom/amap/api/mapcore/ay;
@@ -955,22 +811,6 @@
 .method public a(I)V
     .locals 1
 
-    const-string v0, "location_map_gps_locked.png"
-
-    invoke-direct {p0, v0}, Lcom/amap/api/mapcore/aq;->a(Ljava/lang/String;)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/amap/api/mapcore/aq;->k:Landroid/graphics/Bitmap;
-
-    const-string v0, "location_map_gps_3d.png"
-
-    invoke-direct {p0, v0}, Lcom/amap/api/mapcore/aq;->a(Ljava/lang/String;)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/amap/api/mapcore/aq;->l:Landroid/graphics/Bitmap;
-
     iput p1, p0, Lcom/amap/api/mapcore/aq;->i:I
 
     const/4 v0, 0x0
@@ -1010,7 +850,7 @@
 .end method
 
 .method public a(Landroid/location/Location;)V
-    .locals 5
+    .locals 6
 
     if-nez p1, :cond_1
 
@@ -1023,13 +863,13 @@
 
     invoke-virtual {p1}, Landroid/location/Location;->getLatitude()D
 
-    move-result-wide v1
+    move-result-wide v2
 
     invoke-virtual {p1}, Landroid/location/Location;->getLongitude()D
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v0, v2, v3, v4, v5}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     iput-object v0, p0, Lcom/amap/api/mapcore/aq;->e:Lcom/amap/api/maps/model/LatLng;
 
@@ -1084,9 +924,9 @@
 
     iget-object v0, p0, Lcom/amap/api/mapcore/aq;->c:Lcom/amap/api/mapcore/x;
 
-    iget-wide v1, p0, Lcom/amap/api/mapcore/aq;->f:D
+    iget-wide v2, p0, Lcom/amap/api/mapcore/aq;->f:D
 
-    invoke-interface {v0, v1, v2}, Lcom/amap/api/mapcore/x;->a(D)V
+    invoke-interface {v0, v2, v3}, Lcom/amap/api/mapcore/x;->a(D)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1120,6 +960,7 @@
 .method public a(Lcom/amap/api/maps/model/MyLocationStyle;)V
     .locals 2
 
+    :try_start_0
     iput-object p1, p0, Lcom/amap/api/mapcore/aq;->d:Lcom/amap/api/maps/model/MyLocationStyle;
 
     iget-object v0, p0, Lcom/amap/api/mapcore/aq;->b:Lcom/amap/api/maps/model/Marker;
@@ -1143,6 +984,15 @@
     invoke-virtual {v0, v1}, Lcom/amap/api/mapcore/ay;->a(Lcom/amap/api/maps/model/Marker;)V
 
     invoke-direct {p0}, Lcom/amap/api/mapcore/aq;->k()V
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_0
 .end method

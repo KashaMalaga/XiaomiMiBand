@@ -53,7 +53,7 @@
 .end method
 
 .method public static a(DD)I
-    .locals 1
+    .locals 2
 
     cmpg-double v0, p0, p2
 
@@ -103,7 +103,7 @@
 .end method
 
 .method public static a(JJ)I
-    .locals 1
+    .locals 2
 
     cmp-long v0, p0, p2
 

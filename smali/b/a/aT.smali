@@ -305,9 +305,9 @@
 .end method
 
 .method public b(Lb/a/cY;Lb/a/aQ;)V
-    .locals 4
+    .locals 5
 
-    const/4 v3, 0x1
+    const/4 v4, 0x1
 
     check-cast p1, Lb/a/df;
 
@@ -331,10 +331,10 @@
 
     iput v1, p2, Lb/a/aQ;->a:I
 
-    invoke-virtual {p2, v3}, Lb/a/aQ;->a(Z)V
+    invoke-virtual {p2, v4}, Lb/a/aQ;->a(Z)V
 
     :cond_0
-    invoke-virtual {v0, v3}, Ljava/util/BitSet;->get(I)Z
+    invoke-virtual {v0, v4}, Ljava/util/BitSet;->get(I)Z
 
     move-result v1
 
@@ -346,7 +346,7 @@
 
     iput-object v1, p2, Lb/a/aQ;->b:Ljava/lang/String;
 
-    invoke-virtual {p2, v3}, Lb/a/aQ;->b(Z)V
+    invoke-virtual {p2, v4}, Lb/a/aQ;->b(Z)V
 
     :cond_1
     const/4 v1, 0x2
@@ -363,7 +363,7 @@
 
     iput-object v1, p2, Lb/a/aQ;->c:Ljava/lang/String;
 
-    invoke-virtual {p2, v3}, Lb/a/aQ;->c(Z)V
+    invoke-virtual {p2, v4}, Lb/a/aQ;->c(Z)V
 
     :cond_2
     const/4 v1, 0x3
@@ -376,11 +376,11 @@
 
     invoke-virtual {p1}, Lb/a/df;->y()D
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, p2, Lb/a/aQ;->d:D
+    iput-wide v2, p2, Lb/a/aQ;->d:D
 
-    invoke-virtual {p2, v3}, Lb/a/aQ;->d(Z)V
+    invoke-virtual {p2, v4}, Lb/a/aQ;->d(Z)V
 
     :cond_3
     const/4 v1, 0x4
@@ -393,11 +393,11 @@
 
     invoke-virtual {p1}, Lb/a/df;->y()D
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, p2, Lb/a/aQ;->e:D
+    iput-wide v2, p2, Lb/a/aQ;->e:D
 
-    invoke-virtual {p2, v3}, Lb/a/aQ;->e(Z)V
+    invoke-virtual {p2, v4}, Lb/a/aQ;->e(Z)V
 
     :cond_4
     const/4 v1, 0x5
@@ -414,7 +414,7 @@
 
     iput-object v1, p2, Lb/a/aQ;->f:Ljava/lang/String;
 
-    invoke-virtual {p2, v3}, Lb/a/aQ;->f(Z)V
+    invoke-virtual {p2, v4}, Lb/a/aQ;->f(Z)V
 
     :cond_5
     const/4 v1, 0x6
@@ -431,7 +431,7 @@
 
     iput v1, p2, Lb/a/aQ;->g:I
 
-    invoke-virtual {p2, v3}, Lb/a/aQ;->g(Z)V
+    invoke-virtual {p2, v4}, Lb/a/aQ;->g(Z)V
 
     :cond_6
     const/4 v1, 0x7
@@ -448,7 +448,7 @@
 
     iput-object v1, p2, Lb/a/aQ;->h:Ljava/lang/String;
 
-    invoke-virtual {p2, v3}, Lb/a/aQ;->h(Z)V
+    invoke-virtual {p2, v4}, Lb/a/aQ;->h(Z)V
 
     :cond_7
     const/16 v1, 0x8
@@ -469,7 +469,7 @@
 
     iput-object v1, p2, Lb/a/aQ;->i:Lb/a/h;
 
-    invoke-virtual {p2, v3}, Lb/a/aQ;->i(Z)V
+    invoke-virtual {p2, v4}, Lb/a/aQ;->i(Z)V
 
     :cond_8
     const/16 v1, 0x9
@@ -486,7 +486,7 @@
 
     iput-object v1, p2, Lb/a/aQ;->j:Ljava/lang/String;
 
-    invoke-virtual {p2, v3}, Lb/a/aQ;->j(Z)V
+    invoke-virtual {p2, v4}, Lb/a/aQ;->j(Z)V
 
     :cond_9
     const/16 v1, 0xa
@@ -507,7 +507,7 @@
 
     invoke-virtual {v0, p1}, Lb/a/bK;->a(Lb/a/cY;)V
 
-    invoke-virtual {p2, v3}, Lb/a/aQ;->k(Z)V
+    invoke-virtual {p2, v4}, Lb/a/aQ;->k(Z)V
 
     :cond_a
     return-void

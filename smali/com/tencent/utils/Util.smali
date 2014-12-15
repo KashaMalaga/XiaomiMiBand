@@ -1674,7 +1674,7 @@
 .end method
 
 .method public static reportBernoulli(Landroid/content/Context;Ljava/lang/String;JLjava/lang/String;)V
-    .locals 3
+    .locals 4
 
     new-instance v0, Landroid/os/Bundle;
 
@@ -1698,9 +1698,9 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    cmp-long v1, p2, v1
+    cmp-long v1, p2, v2
 
     if-eqz v1, :cond_0
 

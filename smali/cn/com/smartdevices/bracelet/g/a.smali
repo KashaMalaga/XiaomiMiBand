@@ -46,7 +46,7 @@
 .end method
 
 .method public static a(Lcn/com/smartdevices/bracelet/model/LoginData;)Lcom/c/a/a/O;
-    .locals 5
+    .locals 6
 
     new-instance v0, Lcom/c/a/a/O;
 
@@ -64,9 +64,9 @@
 
     move-result-object v2
 
-    iget-wide v3, p0, Lcn/com/smartdevices/bracelet/model/LoginData;->uid:J
+    iget-wide v4, p0, Lcn/com/smartdevices/bracelet/model/LoginData;->uid:J
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -126,9 +126,9 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -174,7 +174,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->j()I
+    invoke-static {}, Lcn/com/smartdevices/bracelet/config/a;->b()I
 
     move-result v3
 
@@ -188,7 +188,7 @@
 
     move-result-object v2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->k()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/config/a;->a()Ljava/lang/String;
 
     move-result-object v3
 
@@ -484,7 +484,7 @@
 .end method
 
 .method public static b(Lcn/com/smartdevices/bracelet/model/LoginData;)Ljava/util/HashMap;
-    .locals 5
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -514,9 +514,9 @@
 
     move-result-object v2
 
-    iget-wide v3, p0, Lcn/com/smartdevices/bracelet/model/LoginData;->uid:J
+    iget-wide v4, p0, Lcn/com/smartdevices/bracelet/model/LoginData;->uid:J
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -576,9 +576,9 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -624,7 +624,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->j()I
+    invoke-static {}, Lcn/com/smartdevices/bracelet/config/a;->b()I
 
     move-result v3
 
@@ -638,7 +638,7 @@
 
     move-result-object v2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->k()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/config/a;->a()Ljava/lang/String;
 
     move-result-object v3
 

@@ -667,11 +667,11 @@
 .end method
 
 .method public writeTo(Ljava/io/OutputStream;)V
-    .locals 9
+    .locals 10
 
-    const/16 v8, 0x7b
+    const/16 v9, 0x7b
 
-    const/16 v7, 0x3a
+    const/16 v8, 0x3a
 
     if-nez p1, :cond_0
 
@@ -701,7 +701,7 @@
     move-object p1, v0
 
     :cond_1
-    invoke-virtual {p1, v8}, Ljava/io/OutputStream;->write(I)V
+    invoke-virtual {p1, v9}, Ljava/io/OutputStream;->write(I)V
 
     iget-object v0, p0, Lcom/c/a/a/G;->o:Ljava/util/Map;
 
@@ -741,7 +741,7 @@
 
     invoke-virtual {p1, v0}, Ljava/io/OutputStream;->write([B)V
 
-    invoke-virtual {p1, v7}, Ljava/io/OutputStream;->write(I)V
+    invoke-virtual {p1, v8}, Ljava/io/OutputStream;->write(I)V
 
     instance-of v0, v1, Lcom/c/a/a/Q;
 
@@ -752,7 +752,7 @@
     if-eqz v5, :cond_5
 
     :cond_3
-    invoke-virtual {p1, v8}, Ljava/io/OutputStream;->write(I)V
+    invoke-virtual {p1, v9}, Ljava/io/OutputStream;->write(I)V
 
     if-eqz v0, :cond_4
 
@@ -819,9 +819,9 @@
 
     invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
 
-    move-result-wide v5
+    move-result-wide v6
 
-    invoke-virtual {v0, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -856,9 +856,9 @@
 
     invoke-virtual {v1}, Ljava/lang/Number;->doubleValue()D
 
-    move-result-wide v5
+    move-result-wide v6
 
-    invoke-virtual {v0, v5, v6}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v6, v7}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -972,7 +972,7 @@
 
     invoke-virtual {p1, v0}, Ljava/io/OutputStream;->write([B)V
 
-    invoke-virtual {p1, v7}, Ljava/io/OutputStream;->write(I)V
+    invoke-virtual {p1, v8}, Ljava/io/OutputStream;->write(I)V
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 

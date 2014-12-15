@@ -62,19 +62,19 @@
 
     invoke-static {v1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, p0, Lcom/xiaomi/c/a/w;->e:J
+    iput-wide v2, p0, Lcom/xiaomi/c/a/w;->e:J
 
     invoke-static {}, Ljava/lang/Math;->random()D
 
-    move-result-wide v1
+    move-result-wide v2
 
-    const-wide v3, 0x408f400000000000L
+    const-wide v4, 0x408f400000000000L
 
-    mul-double/2addr v1, v3
+    mul-double/2addr v2, v4
 
-    double-to-int v1, v1
+    double-to-int v1, v2
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -279,9 +279,9 @@
 
     move-result-object v2
 
-    iget-wide v3, p0, Lcom/xiaomi/c/a/w;->e:J
+    iget-wide v4, p0, Lcom/xiaomi/c/a/w;->e:J
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v2
 

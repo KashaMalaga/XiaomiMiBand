@@ -1,50 +1,43 @@
 .class Lcn/com/smartdevices/bracelet/ui/dq;
-.super Landroid/text/style/ClickableSpan;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/dp;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/UnBindActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/dp;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/UnBindActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dq;->a:Lcn/com/smartdevices/bracelet/ui/dp;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dq;->a:Lcn/com/smartdevices/bracelet/ui/UnBindActivity;
 
-    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 1
+.method public run()V
+    .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dq;->a:Lcn/com/smartdevices/bracelet/ui/dp;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dq;->a:Lcn/com/smartdevices/bracelet/ui/UnBindActivity;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/dp;->getActivity()Landroid/app/Activity;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->b(Landroid/app/Activity;)V
 
-    move-result-object v0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dq;->a:Lcn/com/smartdevices/bracelet/ui/UnBindActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->k(Landroid/content/Context;)V
+    const/4 v1, -0x1
 
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/UnBindActivity;->setResult(I)V
 
-.method public updateDrawState(Landroid/text/TextPaint;)V
-    .locals 1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dq;->a:Lcn/com/smartdevices/bracelet/ui/UnBindActivity;
 
-    invoke-super {p0, p1}, Landroid/text/style/ClickableSpan;->updateDrawState(Landroid/text/TextPaint;)V
-
-    const/high16 v0, -0x1000000
-
-    invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setColor(I)V
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setUnderlineText(Z)V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/UnBindActivity;->finish()V
 
     return-void
 .end method

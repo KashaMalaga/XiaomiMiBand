@@ -626,27 +626,27 @@
 
     const/4 v0, 0x0
 
-    aget-wide v7, v5, v0
+    aget-wide v8, v5, v0
 
-    const/4 v9, 0x0
+    const/4 v7, 0x0
 
-    aget-wide v9, v1, v9
+    aget-wide v10, v1, v7
 
-    add-double/2addr v7, v9
+    add-double/2addr v8, v10
 
-    aput-wide v7, v5, v0
+    aput-wide v8, v5, v0
 
     const/4 v0, 0x1
 
-    aget-wide v7, v5, v0
+    aget-wide v8, v5, v0
 
-    const/4 v9, 0x1
+    const/4 v7, 0x1
 
-    aget-wide v9, v1, v9
+    aget-wide v10, v1, v7
 
-    add-double/2addr v7, v9
+    add-double/2addr v8, v10
 
-    aput-wide v7, v5, v0
+    aput-wide v8, v5, v0
 
     add-int/lit8 v0, v2, 0x1
 
@@ -657,23 +657,23 @@
     :cond_1
     const/4 v0, 0x0
 
-    aget-wide v1, v5, v0
+    aget-wide v2, v5, v0
 
-    int-to-double v3, v6
+    int-to-double v8, v6
 
-    div-double/2addr v1, v3
+    div-double/2addr v2, v8
 
-    aput-wide v1, v5, v0
+    aput-wide v2, v5, v0
 
     const/4 v0, 0x1
 
-    aget-wide v1, v5, v0
+    aget-wide v2, v5, v0
 
-    int-to-double v3, v6
+    int-to-double v6, v6
 
-    div-double/2addr v1, v3
+    div-double/2addr v2, v6
 
-    aput-wide v1, v5, v0
+    aput-wide v2, v5, v0
 
     const/4 v0, 0x0
 
@@ -752,17 +752,17 @@
 
     const/4 v6, 0x1
 
-    aget-wide v5, v5, v6
+    aget-wide v6, v5, v6
 
-    const-wide/high16 v7, 0x4059000000000000L
+    const-wide/high16 v8, 0x4059000000000000L
 
-    mul-double/2addr v5, v7
+    mul-double/2addr v6, v8
 
-    invoke-static {v5, v6}, Ljava/lang/Math;->round(D)J
+    invoke-static {v6, v7}, Ljava/lang/Math;->round(D)J
 
-    move-result-wide v5
+    move-result-wide v6
 
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v5
 
@@ -772,17 +772,17 @@
 
     const/4 v5, 0x0
 
-    aget-wide v5, v4, v5
+    aget-wide v6, v4, v5
 
-    const-wide/high16 v7, 0x4059000000000000L
+    const-wide/high16 v8, 0x4059000000000000L
 
-    mul-double/2addr v5, v7
+    mul-double/2addr v6, v8
 
-    invoke-static {v5, v6}, Ljava/lang/Math;->round(D)J
+    invoke-static {v6, v7}, Ljava/lang/Math;->round(D)J
 
-    move-result-wide v5
+    move-result-wide v6
 
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v5
 
@@ -792,17 +792,17 @@
 
     const/4 v5, 0x1
 
-    aget-wide v5, v4, v5
+    aget-wide v6, v4, v5
 
-    const-wide/high16 v7, 0x4059000000000000L
+    const-wide/high16 v8, 0x4059000000000000L
 
-    mul-double/2addr v5, v7
+    mul-double/2addr v6, v8
 
-    invoke-static {v5, v6}, Ljava/lang/Math;->round(D)J
+    invoke-static {v6, v7}, Ljava/lang/Math;->round(D)J
 
-    move-result-wide v5
+    move-result-wide v6
 
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v5
 
@@ -885,7 +885,7 @@
 .end method
 
 .method static synthetic a(Lcom/a/ar;J)J
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcom/a/ar;->q:J
 
@@ -1086,9 +1086,9 @@
 
     move-result-object v2
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
@@ -1115,9 +1115,9 @@
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-virtual {v2, v3, v4, v1}, Lcom/a/I;->a(J[B)V
+    invoke-virtual {v2, v4, v5, v1}, Lcom/a/I;->a(J[B)V
 
     :cond_4
     return-void
@@ -1175,13 +1175,13 @@
 .end method
 
 .method private a(Ljava/util/List;)[D
-    .locals 12
+    .locals 13
 
-    const/4 v11, 0x2
+    const/4 v12, 0x2
 
-    const/4 v10, 0x1
+    const/4 v11, 0x1
 
-    const/4 v9, 0x0
+    const/4 v10, 0x0
 
     if-eqz p1, :cond_0
 
@@ -1198,7 +1198,7 @@
     return-object v0
 
     :cond_1
-    new-array v1, v11, [D
+    new-array v1, v12, [D
 
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1228,55 +1228,55 @@
 
     sub-float/2addr v3, v4
 
-    float-to-double v3, v3
+    float-to-double v4, v3
 
     invoke-virtual {v0}, Landroid/location/GpsSatellite;->getAzimuth()F
 
     move-result v0
 
-    float-to-double v5, v0
+    float-to-double v6, v0
 
-    new-array v0, v11, [D
+    new-array v0, v12, [D
 
-    invoke-static {v5, v6}, Ljava/lang/Math;->toRadians(D)D
+    invoke-static {v6, v7}, Ljava/lang/Math;->toRadians(D)D
 
-    move-result-wide v7
+    move-result-wide v8
 
-    invoke-static {v7, v8}, Ljava/lang/Math;->sin(D)D
+    invoke-static {v8, v9}, Ljava/lang/Math;->sin(D)D
 
-    move-result-wide v7
+    move-result-wide v8
 
-    mul-double/2addr v7, v3
+    mul-double/2addr v8, v4
 
-    aput-wide v7, v0, v9
+    aput-wide v8, v0, v10
 
-    invoke-static {v5, v6}, Ljava/lang/Math;->toRadians(D)D
+    invoke-static {v6, v7}, Ljava/lang/Math;->toRadians(D)D
 
-    move-result-wide v5
+    move-result-wide v6
 
-    invoke-static {v5, v6}, Ljava/lang/Math;->cos(D)D
+    invoke-static {v6, v7}, Ljava/lang/Math;->cos(D)D
 
-    move-result-wide v5
+    move-result-wide v6
 
-    mul-double/2addr v3, v5
+    mul-double/2addr v4, v6
 
-    aput-wide v3, v0, v10
+    aput-wide v4, v0, v11
 
-    aget-wide v3, v1, v9
+    aget-wide v4, v1, v10
 
-    aget-wide v5, v0, v9
+    aget-wide v6, v0, v10
 
-    add-double/2addr v3, v5
+    add-double/2addr v4, v6
 
-    aput-wide v3, v1, v9
+    aput-wide v4, v1, v10
 
-    aget-wide v3, v1, v10
+    aget-wide v4, v1, v11
 
-    aget-wide v5, v0, v10
+    aget-wide v6, v0, v11
 
-    add-double/2addr v3, v5
+    add-double/2addr v4, v6
 
-    aput-wide v3, v1, v10
+    aput-wide v4, v1, v11
 
     goto :goto_1
 
@@ -1285,14 +1285,6 @@
 
     move-result v0
 
-    aget-wide v2, v1, v9
-
-    int-to-double v4, v0
-
-    div-double/2addr v2, v4
-
-    aput-wide v2, v1, v9
-
     aget-wide v2, v1, v10
 
     int-to-double v4, v0
@@ -1300,6 +1292,14 @@
     div-double/2addr v2, v4
 
     aput-wide v2, v1, v10
+
+    aget-wide v2, v1, v11
+
+    int-to-double v4, v0
+
+    div-double/2addr v2, v4
+
+    aput-wide v2, v1, v11
 
     move-object v0, v1
 

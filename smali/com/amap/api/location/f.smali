@@ -48,7 +48,7 @@
 .end method
 
 .method public a(Lcom/amap/api/location/AMapLocationListener;JFLjava/lang/String;)Z
-    .locals 7
+    .locals 8
 
     const/4 v0, 0x0
 

@@ -86,9 +86,9 @@
 
     iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->j:Z
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/K;
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/R;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/K;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/R;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->k:Ljava/lang/Runnable;
 
@@ -227,7 +227,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0200b2
+    const v2, 0x7f0200b4
 
     invoke-static {v1, v2, v0}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
@@ -334,7 +334,7 @@
 .end method
 
 .method private g()V
-    .locals 3
+    .locals 4
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->j:Z
 
@@ -357,9 +357,9 @@
 
     if-eqz v0, :cond_0
 
-    const-wide/16 v1, 0xfa
+    const-wide/16 v2, 0xfa
 
-    invoke-virtual {v0, v1, v2}, Landroid/os/Vibrator;->vibrate(J)V
+    invoke-virtual {v0, v2, v3}, Landroid/os/Vibrator;->vibrate(J)V
 
     const/4 v0, 0x1
 
@@ -393,7 +393,7 @@
 
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onFinishInflate()V
 
-    const v0, 0x7f0700c8
+    const v0, 0x7f0b00d0
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->findViewById(I)Landroid/view/View;
 

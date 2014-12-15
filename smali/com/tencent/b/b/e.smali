@@ -100,7 +100,7 @@
 .end method
 
 .method static synthetic a(Lcom/tencent/b/b/e;J)J
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcom/tencent/b/b/e;->j:J
 

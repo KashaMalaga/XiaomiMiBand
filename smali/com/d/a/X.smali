@@ -93,7 +93,7 @@
     :goto_2
     invoke-static {}, Landroid/view/animation/AnimationUtils;->currentAnimationTimeMillis()J
 
-    move-result-wide v7
+    move-result-wide v8
 
     invoke-static {}, Lcom/d/a/R;->F()Ljava/lang/ThreadLocal;
 
@@ -117,27 +117,27 @@
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
-    move-result v9
+    move-result v7
 
     const/4 v4, 0x0
 
     move v6, v4
 
     :goto_3
-    if-lt v6, v9, :cond_8
+    if-lt v6, v7, :cond_8
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
-    move-result v9
+    move-result v7
 
-    if-lez v9, :cond_3
+    if-lez v7, :cond_3
 
     const/4 v4, 0x0
 
     move v6, v4
 
     :goto_4
-    if-lt v6, v9, :cond_a
+    if-lt v6, v7, :cond_a
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
@@ -192,25 +192,25 @@
     :cond_5
     const/4 v0, 0x1
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
     invoke-static {}, Lcom/d/a/R;->H()J
 
-    move-result-wide v3
+    move-result-wide v4
 
     invoke-static {}, Landroid/view/animation/AnimationUtils;->currentAnimationTimeMillis()J
 
-    move-result-wide v5
+    move-result-wide v6
 
-    sub-long/2addr v5, v7
+    sub-long/2addr v6, v8
 
-    sub-long/2addr v3, v5
+    sub-long/2addr v4, v6
 
-    invoke-static {v1, v2, v3, v4}, Ljava/lang/Math;->max(JJ)J
+    invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->max(JJ)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/d/a/X;->sendEmptyMessageDelayed(IJ)Z
+    invoke-virtual {p0, v0, v2, v3}, Lcom/d/a/X;->sendEmptyMessageDelayed(IJ)Z
 
     goto/16 :goto_0
 
@@ -271,7 +271,7 @@
 
     check-cast v4, Lcom/d/a/R;
 
-    invoke-static {v4, v7, v8}, Lcom/d/a/R;->a(Lcom/d/a/R;J)Z
+    invoke-static {v4, v8, v9}, Lcom/d/a/R;->a(Lcom/d/a/R;J)Z
 
     move-result v10
 
@@ -314,20 +314,20 @@
 
     check-cast v2, Lcom/d/a/R;
 
-    invoke-virtual {v2, v7, v8}, Lcom/d/a/R;->c(J)Z
+    invoke-virtual {v2, v8, v9}, Lcom/d/a/R;->c(J)Z
 
-    move-result v9
+    move-result v7
 
-    if-eqz v9, :cond_c
+    if-eqz v7, :cond_c
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_c
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
-    move-result v9
+    move-result v7
 
-    if-ne v9, v6, :cond_d
+    if-ne v7, v6, :cond_d
 
     add-int/lit8 v2, v4, 0x1
 

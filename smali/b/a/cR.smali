@@ -37,13 +37,13 @@
 
 # virtual methods
 .method public a(Lb/a/do;)Lb/a/cY;
-    .locals 3
+    .locals 4
 
     new-instance v0, Lb/a/cQ;
 
-    iget-wide v1, p0, Lb/a/cR;->a:J
+    iget-wide v2, p0, Lb/a/cR;->a:J
 
-    invoke-direct {v0, p1, v1, v2}, Lb/a/cQ;-><init>(Lb/a/do;J)V
+    invoke-direct {v0, p1, v2, v3}, Lb/a/cQ;-><init>(Lb/a/do;J)V
 
     return-object v0
 .end method

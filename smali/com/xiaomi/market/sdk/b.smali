@@ -48,7 +48,7 @@
 
 # virtual methods
 .method public toString()Ljava/lang/String;
-    .locals 3
+    .locals 4
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -140,9 +140,9 @@
 
     move-result-object v0
 
-    iget-wide v1, p0, Lcom/xiaomi/market/sdk/B;->h:J
+    iget-wide v2, p0, Lcom/xiaomi/market/sdk/B;->h:J
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -176,9 +176,9 @@
 
     move-result-object v0
 
-    iget-wide v1, p0, Lcom/xiaomi/market/sdk/B;->k:J
+    iget-wide v2, p0, Lcom/xiaomi/market/sdk/B;->k:J
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

@@ -418,7 +418,7 @@
 .end method
 
 .method public a(D)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcom/a/K;->b:D
 
@@ -434,7 +434,7 @@
 .end method
 
 .method public a(J)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcom/a/K;->g:J
 
@@ -474,7 +474,7 @@
 .end method
 
 .method public b(D)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcom/a/K;->c:D
 
@@ -666,7 +666,7 @@
 .end method
 
 .method public n()Ljava/lang/String;
-    .locals 5
+    .locals 6
 
     const/4 v0, 0x0
 
@@ -683,45 +683,45 @@
 
     const-string v2, "lon"
 
-    iget-wide v3, p0, Lcom/a/K;->b:D
+    iget-wide v4, p0, Lcom/a/K;->b:D
 
-    invoke-virtual {v1, v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
+    invoke-virtual {v1, v2, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
 
     const-string v2, "lat"
 
-    iget-wide v3, p0, Lcom/a/K;->c:D
+    iget-wide v4, p0, Lcom/a/K;->c:D
 
-    invoke-virtual {v1, v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
+    invoke-virtual {v1, v2, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
 
     const-string v2, "accuracy"
 
     iget v3, p0, Lcom/a/K;->d:F
 
-    float-to-double v3, v3
+    float-to-double v4, v3
 
-    invoke-virtual {v1, v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
+    invoke-virtual {v1, v2, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
 
     const-string v2, "speed"
 
     iget v3, p0, Lcom/a/K;->e:F
 
-    float-to-double v3, v3
+    float-to-double v4, v3
 
-    invoke-virtual {v1, v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
+    invoke-virtual {v1, v2, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
 
     const-string v2, "bearing"
 
     iget v3, p0, Lcom/a/K;->f:F
 
-    float-to-double v3, v3
+    float-to-double v4, v3
 
-    invoke-virtual {v1, v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
+    invoke-virtual {v1, v2, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
 
     const-string v2, "time"
 
-    iget-wide v3, p0, Lcom/a/K;->g:J
+    iget-wide v4, p0, Lcom/a/K;->g:J
 
-    invoke-virtual {v1, v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-virtual {v1, v2, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
     const-string v2, "type"
 

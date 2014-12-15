@@ -30,6 +30,7 @@ Terms of Service: %2$s"</string>
   <string name="awake_format">, woke up %1$s times.</string>
   <string name="awake_format_1">, woke up once.</string>
   <string name="back">Back</string>
+  <string name="band">MiBand</string>
   <string name="battery">battery</string>
   <string name="battery_charge_full">Battery charged</string>
   <string name="battery_charging">Charging…</string>
@@ -49,6 +50,7 @@ Terms of Service: %2$s"</string>
   <string name="bind_qq_health_tip">"Sync steps and sleep info to qq health platform,
 you need available network."</string>
   <string name="bind_qq_health_title">Add QQ Account</string>
+  <string name="bind_weight_scale">Bind Weight Scale</string>
   <string name="bind_weixin_failed">"Can't generate QR code"</string>
   <string name="bind_weixin_new_disable_tips">"To share your fitness data with your friends,
 add your WeChat Account and then follow the Mi Band Service Account."</string>
@@ -81,6 +83,10 @@ Address: %2$s"</string>
   <string name="bracelet_not_found_title">"Make sure your band's battery is charged."</string>
   <string name="bracelet_store_desc">Band store</string>
   <string name="bt_operation_failed_tips">Bluetooth is not working properly. Wait a minute or two and try again.</string>
+  <string name="btn_confirm">Yes</string>
+  <string name="btn_continue">No</string>
+  <string name="btn_delete">Delete</string>
+  <string name="btn_save">Save</string>
   <string name="buy_bracelet_desc">Buy a band.</string>
   <string name="cal">cal</string>
   <string name="cancel">Cancel</string>
@@ -93,6 +99,8 @@ Address: %2$s"</string>
   <string name="confirm">OK</string>
   <string name="confirm_lazy_day">Mark today as a lazy day?</string>
   <string name="connect_bracelet_now">Connecting…</string>
+  <string name="connected_broadcast">连接中广播</string>
+  <string name="connected_broadcast_tips">用于测试门禁的使用</string>
   <string name="content_too_short">Enter message content</string>
   <string name="continue_reach_goal"> goals</string>
   <string name="continue_reach_goal_new_record">Set a new record</string>
@@ -115,6 +123,7 @@ Address: %2$s"</string>
   <string name="date_yesterday">Yesterday</string>
   <string name="day">days</string>
   <string name="day_active_detail">Details</string>
+  <string name="debug_host_label">添加测试主机地址：</string>
   <string name="device_list">Available devices</string>
   <string name="device_not_found_not_knocked">"Can't find band. To pair, tap the metal part of the band when it flashes."</string>
   <string name="device_not_response">"Lights aren't flashing?"</string>
@@ -220,11 +229,13 @@ Address: %2$s"</string>
   <string name="help_title_1">"Check the band's battery"</string>
   <string name="help_title_2">Restart Bluetooth</string>
   <string name="help_title_3">Is this band paired with another device?</string>
+  <string name="host_can_not_be_empty">主机地址不能为空</string>
+  <string name="host_change_error">切换主机地址错误</string>
+  <string name="host_change_success">切换主机地址成功</string>
   <string name="hot_des">Energy</string>
   <string name="hour_1"></string>
   <string name="in"></string>
   <string name="incoming_call_notify">Incoming call</string>
-  <string name="notification_settings">Notification Settings</string>
   <string name="incoming_call_notify_tips">"Vibrate if I don't answer after %s sec"</string>
   <string name="input_precise_person_info">Create your profile</string>
   <string name="instruction_tip_1">"View your progress
@@ -252,7 +263,7 @@ your goal"</string>
   <string name="lab_factory_exercise_state_ready">GO</string>
   <string name="lab_factory_exercise_state_stopped">Stop</string>
   <string name="lab_factory_exit_press_again">Touch again to exit</string>
-  <string name="lab_factory_internal_test">Testing and analysis</string>
+  <string name="lab_factory_internal_test">运动模式分析测试</string>
   <string name="lab_factory_item_group_open">OPEN</string>
   <string name="lab_factory_item_group_others">Other</string>
   <string name="lab_factory_item_group_social">SOCIAL</string>
@@ -305,15 +316,15 @@ your goal"</string>
   <string name="lab_factory_sport_timeout">No activity detected.</string>
   <string name="lab_factory_sport_type_badminton">Badminton</string>
   <string name="lab_factory_sport_type_basketball">Basketball</string>
-  <string name="lab_factory_sport_type_climbing">Climbing</string>
-  <string name="lab_factory_sport_type_football">Football</string>
+  <string name="lab_factory_sport_type_climbing">Hiking</string>
+  <string name="lab_factory_sport_type_football">Soccer</string>
   <string name="lab_factory_sport_type_others">Other</string>
   <string name="lab_factory_sport_type_pingpong">Ping Pong</string>
-  <string name="lab_factory_sport_type_riding">Riding</string>
+  <string name="lab_factory_sport_type_riding">Cycling</string>
   <string name="lab_factory_sport_type_ropeskipping">Jumping rope</string>
   <string name="lab_factory_sport_type_running">Running</string>
   <string name="lab_factory_sport_type_situp">Sit-up</string>
-  <string name="lab_factory_sport_type_skidding">Rollerblading</string>
+  <string name="lab_factory_sport_type_skidding">Skating</string>
   <string name="lab_factory_sport_type_sliding">Skateboarding</string>
   <string name="lab_factory_sport_type_swimming">Swimming</string>
   <string name="lab_factory_sport_type_tennis">Tennis</string>
@@ -431,12 +442,17 @@ or about 12,000 steps a day for a healthy lifestyle."</string>
   <string name="retry">Retry</string>
   <string name="right_hand">Right hand</string>
   <string name="runed">Ran</string>
+  <string name="running_no_track_desc">"You haven't moved a bit. Are you sure to cancel it?"</string>
+  <string name="running_set_pace_desc">Mi band will vibrate if your pace is slower than setting</string>
+  <string name="running_short_track_desc">You have just moved %d meters. Are you sure to cancel it?</string>
   <string name="s_mili">Mi Band</string>
   <string name="search_bracelet">Searching…</string>
   <string name="search_bracelet_again">Try again</string>
   <string name="search_bracelet_ok">Band detected</string>
   <string name="search_devices_info">Strap the band around your wrist and keep your device close by.</string>
   <string name="search_devices_title">Add band</string>
+  <string name="search_weight_scale">Search Weight Scale</string>
+  <string name="search_weight_scale_info">Please stay close to Weight Scale</string>
   <string name="second">sec</string>
   <string name="select_from_camera">Camera</string>
   <string name="select_from_local">Choose from Gallery</string>
@@ -448,6 +464,7 @@ or about 12,000 steps a day for a healthy lifestyle."</string>
   <string name="set_mili_name_ok">Name saved</string>
   <string name="set_person_goal">Set goal</string>
   <string name="set_sport_goal">Set goal</string>
+  <string name="set_unit">Set Unit</string>
   <string name="setting_about_app">App version </string>
   <string name="setting_about_fw">Version </string>
   <string name="setting_feedback_address">Contact info</string>
@@ -497,7 +514,7 @@ Burned %3$s cal. Previous record was %5$s steps, set on %4$s."</string>
   <string name="share_step_goal_failed_title_today">Today</string>
   <string name="share_step_goal_succ_title">Way to go!</string>
   <string name="share_step_goal_succ_title_today">I reached my goal today!</string>
-  <string name="share_step_ranking">You beat &lt;b&gt;%s&lt;/b&gt; users.</string>
+  <string name="share_step_ranking">You beat &lt;b&gt;%s&lt;/b&gt; of Mi band users.</string>
   <string name="share_step_walk"></string>
   <string name="share_to_content">Share your progress.</string>
   <string name="share_to_content_sleep">My sleep data</string>
@@ -515,10 +532,10 @@ Burned %3$s cal. Previous record was %5$s steps, set on %4$s."</string>
   <string name="smart_alarm_notify">Alarm</string>
   <string name="smart_wake_up">Early bird alarm</string>
   <string name="smart_wake_up_info">Wake me up 30 minutes before set alarm time</string>
-  <string name="sport_coming_soon">So stay tuned!</string>
+  <string name="sport_coming_soon">正加急赶工中，敬请期待！</string>
   <string name="sport_new_record_ropeskipping">New record</string>
   <string name="sport_ranking_desc_great">WOW, you are unbeatable now!</string>
-  <string name="sport_ranking_desc_normal" formatted="false">You beat &lt;b&gt;%s%&lt;/b&gt; of %s users.</string>
+  <string name="sport_ranking_desc_normal" formatted="false">You beat &lt;b&gt;%s%&lt;/b&gt; of Mi band %s users.</string>
   <string name="sport_ranking_desc_poor">Every %s user can beat you, come on!</string>
   <string name="sport_running_altitude">Altitude</string>
   <string name="sport_running_average_speed">Average</string>
@@ -527,23 +544,28 @@ Burned %3$s cal. Previous record was %5$s steps, set on %4$s."</string>
   <string name="sport_running_distance">Distance</string>
   <string name="sport_running_distance_desc">Kilometers</string>
   <string name="sport_running_distance_detail">%.2fkm</string>
+  <string name="sport_running_distance_unit">Distance(km)</string>
   <string name="sport_running_end_time">End</string>
   <string name="sport_running_gps_cancel">Cancel</string>
+  <string name="sport_running_gps_locating">GPS locating...</string>
   <string name="sport_running_gps_turnon">Turn on</string>
   <string name="sport_running_helper">Running help</string>
-  <string name="sport_running_helper_test">Running assistant test</string>
+  <string name="sport_running_helper_test">跑步助手测试</string>
   <string name="sport_running_history">History</string>
   <string name="sport_running_history_date" formatted="false">%d/%d/%d</string>
   <string name="sport_running_history_no_data">No data</string>
   <string name="sport_running_history_title">History</string>
   <string name="sport_running_kilometers">km</string>
   <string name="sport_running_kilometers_per_hour">km/h</string>
+  <string name="sport_running_lable_km_slowest">Km slowest</string>
+  <string name="sport_running_lable_miles_fastest">Km fastest</string>
   <string name="sport_running_no_gps">Use GPS to keep track of your route.</string>
   <string name="sport_running_pace">Pace</string>
   <string name="sport_running_pace_detail">%s/km</string>
+  <string name="sport_running_pace_lable">Pace</string>
   <string name="sport_running_pause">Pause</string>
   <string name="sport_running_per_kilometers">/km</string>
-  <string name="sport_running_prepare_map">Preparing map for sharing...</string>
+  <string name="sport_running_prepare_map">Preparing data for sharing...</string>
   <string name="sport_running_prompt_come_on">Go!!</string>
   <string name="sport_running_prompt_great">Great!!</string>
   <string name="sport_running_prompt_per_kilometer" formatted="false">You have run %s kilometers. It cost %s. The pace is %s.%s</string>
@@ -551,6 +573,7 @@ Burned %3$s cal. Previous record was %5$s steps, set on %4$s."</string>
   <string name="sport_running_resume">Resume</string>
   <string name="sport_running_set_dist">Distance reminder</string>
   <string name="sport_running_set_goal">Goal reminder</string>
+  <string name="sport_running_set_pace">Set pace</string>
   <string name="sport_running_set_speed">Set speed</string>
   <string name="sport_running_settings">Settings</string>
   <string name="sport_running_slider_prompt">&gt;&gt;&gt;Slide right to pause</string>
@@ -603,11 +626,13 @@ Burned %3$s cal. Previous record was %5$s steps, set on %4$s."</string>
   <string name="stat_step_walk_distance_average">Avg. Walk Distance</string>
   <string name="stat_step_walk_duration">Walk Time</string>
   <string name="stat_step_walk_duration_average">Avg. Walk Time</string>
+  <string name="state_authorization_doing">Authorizing ...</string>
   <string name="state_authorization_error">Authorize failed!</string>
   <string name="state_authorization_success">Authorize success!</string>
   <string name="state_bind_failed">"Can't add account"</string>
   <string name="state_binded">Signed in</string>
   <string name="state_binded_nickname">Added QQ Account %s</string>
+  <string name="state_deauthorization_doing">Deauthorizing ...</string>
   <string name="state_deauthorization_error">Deauthorize failed!</string>
   <string name="state_deauthorization_success">Deauthorize success!</string>
   <string name="state_unbind_success">Removed QQ Account</string>
@@ -642,16 +667,16 @@ Burned %3$s cal. Previous record was %5$s steps, set on %4$s."</string>
   <string name="unit_min_short">m</string>
   <string name="unit_sec_short">s</string>
   <string name="unit_step">steps</string>
-  <string name="unlock_for_smartlock_pair_fail_tip">Ring with opponents failed, please try again</string>
-  <string name="unlock_for_smartlock_pair_start_tip">Being with rival ring Please wait...</string>
-  <string name="unlock_for_smartlock_pair_success_tip">With rival ring success, set Smart Lock</string>
-  <string name="unlock_for_smartlock_tip">Use bracelet bracelet millet need to unlock APP has been running in the background</string>
+  <string name="unlock_for_smartlock_pair_fail_tip">配对手环失败，请重试</string>
+  <string name="unlock_for_smartlock_pair_start_tip">正在配对手环，请稍后...</string>
+  <string name="unlock_for_smartlock_pair_success_tip">配对手环成功，请设置Smart Lock</string>
+  <string name="unlock_for_smartlock_tip">使用手环解锁需要小米手环APP一直在后台运行</string>
   <string name="unlock_for_smartlock_tip_step1">
-    <b> System Settings </b>
-     <b> Security </b>
+    <b>系统设置</b>
+    <b>安全</b>
   </string>
   <string name="unlock_for_smartlock_tip_step2">
-    <b> Screen lock mode </b>
+    <b>屏幕锁定方式</b>
   </string>
   <string name="unlock_for_smartlock_tip_step3">
     <b>Smart Lock</b>
@@ -684,6 +709,7 @@ Settings &gt; Security."</string>
 "</string>
   <string name="user_agreement_ux">Join UX Improvement Program</string>
   <string name="vibrate_notify">Vibrate for notifications</string>
+  <string name="notification_settings">Notification Settings</string>
   <string name="vibrate_notify_tips">Vibrate band when a you receive a notification</string>
   <string name="visit_micom">Visit website</string>
   <string name="wait">Working…</string>
@@ -701,8 +727,11 @@ Settings &gt; Security."</string>
   <string name="weather_description_sand">Sandstorm</string>
   <string name="weather_description_snow">Snow</string>
   <string name="week"></string>
-  <string name="weight_test_dynamic_detail">体重：%1$s%2$s</string>
+  <string name="weight_device_list">Weight Scales nearby</string>
+  <string name="weight_scale">Weight Scale</string>
+  <string name="weight_test_dynamic_detail">Weight：%1$s%2$s</string>
   <string name="weight_test_dynamic_title">%1$s</string>
+  <string name="weight_unbinded">Unbinding Weight Scale</string>
   <string name="welcom_back">Welcome back!</string>
   <string name="welcome">Hello</string>
   <string name="wrong_system_time">"Your device's system time is incorrect."</string>

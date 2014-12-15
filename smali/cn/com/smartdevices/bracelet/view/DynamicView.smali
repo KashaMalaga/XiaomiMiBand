@@ -155,11 +155,11 @@
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->D:I
 
-    const v0, 0x7f030085
+    const v0, 0x7f03008c
 
     invoke-static {p1, v0, p0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const v0, 0x7f07025d
+    const v0, 0x7f0b0282
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->findViewById(I)Landroid/view/View;
 
@@ -167,7 +167,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->d:Landroid/view/View;
 
-    const v0, 0x7f070255
+    const v0, 0x7f0b027a
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->findViewById(I)Landroid/view/View;
 
@@ -177,7 +177,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->c:Lcn/com/smartdevices/bracelet/view/DynamicView$FlowBgView;
 
-    const v0, 0x7f070258
+    const v0, 0x7f0b027d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->findViewById(I)Landroid/view/View;
 
@@ -187,7 +187,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->e:Landroid/view/ViewGroup;
 
-    const v0, 0x7f070256
+    const v0, 0x7f0b027b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->findViewById(I)Landroid/view/View;
 
@@ -195,7 +195,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->f:Landroid/view/View;
 
-    const v0, 0x7f070259
+    const v0, 0x7f0b027e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->findViewById(I)Landroid/view/View;
 
@@ -203,7 +203,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->g:Landroid/view/View;
 
-    const v0, 0x7f070260
+    const v0, 0x7f0b0285
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->findViewById(I)Landroid/view/View;
 
@@ -211,7 +211,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->h:Landroid/view/View;
 
-    const v0, 0x7f070257
+    const v0, 0x7f0b027c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->findViewById(I)Landroid/view/View;
 
@@ -221,7 +221,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->i:Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;
 
-    const v0, 0x7f07025a
+    const v0, 0x7f0b027f
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->findViewById(I)Landroid/view/View;
 
@@ -231,7 +231,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->j:Landroid/widget/TextView;
 
-    const v0, 0x7f07025e
+    const v0, 0x7f0b0283
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->findViewById(I)Landroid/view/View;
 
@@ -241,7 +241,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->k:Landroid/widget/TextView;
 
-    const v0, 0x7f07025f
+    const v0, 0x7f0b0284
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->findViewById(I)Landroid/view/View;
 
@@ -251,7 +251,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->l:Landroid/widget/TextView;
 
-    const v0, 0x7f07025c
+    const v0, 0x7f0b0281
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->findViewById(I)Landroid/view/View;
 
@@ -261,7 +261,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->m:Landroid/widget/TextView;
 
-    const v0, 0x7f07025b
+    const v0, 0x7f0b0280
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->findViewById(I)Landroid/view/View;
 
@@ -271,7 +271,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->n:Landroid/widget/TextView;
 
-    const v0, 0x7f070261
+    const v0, 0x7f0b0286
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->findViewById(I)Landroid/view/View;
 
@@ -281,7 +281,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->o:Landroid/widget/TextView;
 
-    const v0, 0x7f070262
+    const v0, 0x7f0b0287
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->findViewById(I)Landroid/view/View;
 
@@ -291,7 +291,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->p:Landroid/widget/TextView;
 
-    const v0, 0x7f070263
+    const v0, 0x7f0b0288
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->findViewById(I)Landroid/view/View;
 
@@ -301,7 +301,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->q:Landroid/widget/TextView;
 
-    const v0, 0x7f070264
+    const v0, 0x7f0b0289
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->findViewById(I)Landroid/view/View;
 
@@ -311,7 +311,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->r:Landroid/widget/TextView;
 
-    const v0, 0x7f070266
+    const v0, 0x7f0b028b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->findViewById(I)Landroid/view/View;
 
@@ -321,7 +321,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->s:Landroid/widget/TextView;
 
-    const v0, 0x7f070265
+    const v0, 0x7f0b028a
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->findViewById(I)Landroid/view/View;
 
@@ -367,7 +367,7 @@
 
     if-ne v0, v3, :cond_1
 
-    const v0, 0x7f070268
+    const v0, 0x7f0b028d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->findViewById(I)Landroid/view/View;
 
@@ -381,7 +381,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    const v0, 0x7f070269
+    const v0, 0x7f0b028e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->findViewById(I)Landroid/view/View;
 
@@ -408,7 +408,7 @@
 
     if-ne v0, v1, :cond_0
 
-    const v0, 0x7f07026a
+    const v0, 0x7f0b028f
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->findViewById(I)Landroid/view/View;
 
@@ -490,11 +490,11 @@
 .end method
 
 .method private f()Landroid/animation/Animator;
-    .locals 7
+    .locals 8
 
-    const-wide/16 v5, 0x0
+    const-wide/16 v6, 0x0
 
-    const-wide/16 v3, 0x258
+    const-wide/16 v4, 0x258
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->c:Lcn/com/smartdevices/bracelet/view/DynamicView$FlowBgView;
 
@@ -502,13 +502,13 @@
 
     move-result-object v0
 
-    invoke-static {v0, v3, v4}, Lcn/com/smartdevices/bracelet/chart/c/p;->a(Landroid/animation/Animator;J)V
+    invoke-static {v0, v4, v5}, Lcn/com/smartdevices/bracelet/chart/c/p;->a(Landroid/animation/Animator;J)V
 
     invoke-static {p0}, Lcn/com/smartdevices/bracelet/chart/c/a;->a(Landroid/view/View;)Landroid/animation/Animator;
 
     move-result-object v0
 
-    invoke-static {v0, v3, v4}, Lcn/com/smartdevices/bracelet/chart/c/p;->b(Landroid/animation/Animator;J)V
+    invoke-static {v0, v4, v5}, Lcn/com/smartdevices/bracelet/chart/c/p;->b(Landroid/animation/Animator;J)V
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->u:I
 
@@ -520,7 +520,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v5, v6, v3, v4}, Lcn/com/smartdevices/bracelet/chart/c/p;->a(Landroid/animation/Animator;JJ)V
+    invoke-static {v0, v6, v7, v4, v5}, Lcn/com/smartdevices/bracelet/chart/c/p;->a(Landroid/animation/Animator;JJ)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->i:Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;
 
@@ -528,7 +528,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v5, v6, v3, v4}, Lcn/com/smartdevices/bracelet/chart/c/p;->a(Landroid/animation/Animator;JJ)V
+    invoke-static {v0, v6, v7, v4, v5}, Lcn/com/smartdevices/bracelet/chart/c/p;->a(Landroid/animation/Animator;JJ)V
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/chart/c/p;->a()Landroid/animation/AnimatorSet;
 
@@ -592,7 +592,7 @@
 .end method
 
 .method private h()V
-    .locals 3
+    .locals 4
 
     const/4 v0, 0x2
 
@@ -608,9 +608,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->F:Landroid/animation/ValueAnimator;
 
-    const-wide/16 v1, 0x320
+    const-wide/16 v2, 0x320
 
-    invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+    invoke-virtual {v0, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     new-instance v0, Landroid/view/animation/DecelerateInterpolator;
 
@@ -654,7 +654,7 @@
 .end method
 
 .method private i()V
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->G:Landroid/animation/ValueAnimator;
 
@@ -686,9 +686,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->G:Landroid/animation/ValueAnimator;
 
-    const-wide/16 v1, 0x3e8
+    const-wide/16 v2, 0x3e8
 
-    invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+    invoke-virtual {v0, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     new-instance v0, Landroid/view/animation/DecelerateInterpolator;
 
@@ -742,7 +742,7 @@
 .end method
 
 .method private j()V
-    .locals 3
+    .locals 4
 
     const/4 v0, 0x3
 
@@ -758,9 +758,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->H:Landroid/animation/ValueAnimator;
 
-    const-wide/16 v1, 0x1f4
+    const-wide/16 v2, 0x1f4
 
-    invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+    invoke-virtual {v0, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     new-instance v0, Landroid/view/animation/DecelerateInterpolator;
 
@@ -819,7 +819,7 @@
 .end method
 
 .method private k()V
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->H:Landroid/animation/ValueAnimator;
 
@@ -853,9 +853,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->I:Landroid/animation/ValueAnimator;
 
-    const-wide/16 v1, 0x320
+    const-wide/16 v2, 0x320
 
-    invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+    invoke-virtual {v0, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     new-instance v0, Landroid/view/animation/LinearInterpolator;
 
@@ -897,7 +897,7 @@
 .end method
 
 .method private l()V
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->I:Landroid/animation/ValueAnimator;
 
@@ -940,9 +940,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->J:Landroid/animation/ValueAnimator;
 
-    const-wide/16 v1, 0x258
+    const-wide/16 v2, 0x258
 
-    invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+    invoke-virtual {v0, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     new-instance v0, Landroid/view/animation/LinearInterpolator;
 
@@ -982,7 +982,7 @@
 .end method
 
 .method private m()V
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->H:Landroid/animation/ValueAnimator;
 
@@ -1016,9 +1016,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->K:Landroid/animation/ValueAnimator;
 
-    const-wide/16 v1, 0x320
+    const-wide/16 v2, 0x320
 
-    invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+    invoke-virtual {v0, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     new-instance v0, Landroid/view/animation/LinearInterpolator;
 
@@ -1143,13 +1143,13 @@
 .end method
 
 .method public a(I)V
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->i:Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;
 
-    int-to-long v1, p1
+    int-to-long v2, p1
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->a(J)V
+    invoke-virtual {v0, v2, v3}, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->a(J)V
 
     return-void
 .end method
@@ -1314,15 +1314,15 @@
 .end method
 
 .method public b(I)V
-    .locals 3
+    .locals 4
 
     iput p1, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->v:I
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/DynamicView;->i:Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;
 
-    int-to-long v1, p1
+    int-to-long v2, p1
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->b(J)V
+    invoke-virtual {v0, v2, v3}, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->b(J)V
 
     return-void
 .end method
@@ -1632,7 +1632,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f030086
+    const v1, 0x7f03008d
 
     const/4 v2, 0x0
 

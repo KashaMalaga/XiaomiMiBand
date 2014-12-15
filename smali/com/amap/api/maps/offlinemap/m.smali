@@ -31,6 +31,8 @@
 
 .field private n:I
 
+.field private o:Ljava/lang/String;
+
 
 # direct methods
 .method public constructor <init>()V
@@ -67,6 +69,10 @@
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/amap/api/maps/offlinemap/m;->m:Z
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lcom/amap/api/maps/offlinemap/m;->o:Ljava/lang/String;
 
     return-void
 .end method
@@ -106,6 +112,10 @@
 
     iput-boolean v4, p0, Lcom/amap/api/maps/offlinemap/m;->m:Z
 
+    const-string v0, ""
+
+    iput-object v0, p0, Lcom/amap/api/maps/offlinemap/m;->o:Ljava/lang/String;
+
     invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->getCity()Ljava/lang/String;
 
     move-result-object v0
@@ -137,6 +147,12 @@
     move-result-object v0
 
     iput-object v0, p0, Lcom/amap/api/maps/offlinemap/m;->g:Ljava/lang/String;
+
+    invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->getCode()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/amap/api/maps/offlinemap/m;->o:Ljava/lang/String;
 
     iput-boolean v4, p0, Lcom/amap/api/maps/offlinemap/m;->m:Z
 
@@ -177,6 +193,10 @@
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/amap/api/maps/offlinemap/m;->m:Z
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lcom/amap/api/maps/offlinemap/m;->o:Ljava/lang/String;
 
     invoke-virtual {p1}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->getProvinceName()Ljava/lang/String;
 
@@ -358,9 +378,9 @@
 .end method
 
 .method public a(J)V
-    .locals 0
+    .locals 1
 
-    iput-wide p1, p0, Lcom/amap/api/maps/offlinemap/m;->h:J
+    iput-wide p1, p0, Lcom/amap/api/maps/offlinemap/m;->i:J
 
     return-void
 .end method
@@ -368,7 +388,7 @@
 .method public a(Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/amap/api/maps/offlinemap/m;->j:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amap/api/maps/offlinemap/m;->c:Ljava/lang/String;
 
     return-void
 .end method
@@ -389,10 +409,18 @@
     return-void
 .end method
 
+.method public b(J)V
+    .locals 1
+
+    iput-wide p1, p0, Lcom/amap/api/maps/offlinemap/m;->h:J
+
+    return-void
+.end method
+
 .method public b(Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/amap/api/maps/offlinemap/m;->k:Ljava/lang/String;
+    iput-object p1, p0, Lcom/amap/api/maps/offlinemap/m;->g:Ljava/lang/String;
 
     return-void
 .end method
@@ -405,8 +433,80 @@
     return-object v0
 .end method
 
+.method public c(J)V
+    .locals 1
+
+    iput-wide p1, p0, Lcom/amap/api/maps/offlinemap/m;->h:J
+
+    return-void
+.end method
+
 .method public c(Ljava/lang/String;)V
-    .locals 3
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/maps/offlinemap/m;->e:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public d()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/m;->f:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public d(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/maps/offlinemap/m;->d:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public e()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/m;->e:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public e(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/maps/offlinemap/m;->j:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public f()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/m;->d:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public f(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/amap/api/maps/offlinemap/m;->k:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public g()J
+    .locals 2
+
+    iget-wide v0, p0, Lcom/amap/api/maps/offlinemap/m;->i:J
+
+    return-wide v0
+.end method
+
+.method public g(Ljava/lang/String;)V
+    .locals 4
 
     :try_start_0
     new-instance v0, Lorg/json/JSONObject;
@@ -461,17 +561,17 @@
 
     invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optLong(Ljava/lang/String;)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, p0, Lcom/amap/api/maps/offlinemap/m;->h:J
+    iput-wide v2, p0, Lcom/amap/api/maps/offlinemap/m;->h:J
 
     const-string v1, "lRemoteLength"
 
     invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optLong(Ljava/lang/String;)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, p0, Lcom/amap/api/maps/offlinemap/m;->i:J
+    iput-wide v2, p0, Lcom/amap/api/maps/offlinemap/m;->i:J
 
     const-string v1, "mState"
 
@@ -485,9 +585,9 @@
 
     invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optLong(Ljava/lang/String;)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, p0, Lcom/amap/api/maps/offlinemap/m;->b:J
+    iput-wide v2, p0, Lcom/amap/api/maps/offlinemap/m;->b:J
 
     const-string v1, "version"
 
@@ -525,9 +625,17 @@
 
     invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
 
-    move-result v0
+    move-result v1
 
-    iput v0, p0, Lcom/amap/api/maps/offlinemap/m;->n:I
+    iput v1, p0, Lcom/amap/api/maps/offlinemap/m;->n:I
+
+    const-string v1, "mCityCode"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/amap/api/maps/offlinemap/m;->o:Ljava/lang/String;
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -539,38 +647,6 @@
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
     goto :goto_0
-.end method
-
-.method public d()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/m;->f:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public e()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/m;->e:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public f()Ljava/lang/String;
-    .locals 1
-
-    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/m;->d:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public g()J
-    .locals 2
-
-    iget-wide v0, p0, Lcom/amap/api/maps/offlinemap/m;->i:J
-
-    return-wide v0
 .end method
 
 .method public h()J
@@ -597,7 +673,15 @@
     return v0
 .end method
 
-.method public k()V
+.method public k()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/m;->o:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public l()V
     .locals 6
 
     new-instance v0, Lorg/json/JSONObject;
@@ -635,15 +719,15 @@
 
     const-string v2, "lLocalLength"
 
-    iget-wide v3, p0, Lcom/amap/api/maps/offlinemap/m;->h:J
+    iget-wide v4, p0, Lcom/amap/api/maps/offlinemap/m;->h:J
 
-    invoke-virtual {v1, v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-virtual {v1, v2, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
     const-string v2, "lRemoteLength"
 
-    iget-wide v3, p0, Lcom/amap/api/maps/offlinemap/m;->i:J
+    iget-wide v4, p0, Lcom/amap/api/maps/offlinemap/m;->i:J
 
-    invoke-virtual {v1, v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-virtual {v1, v2, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
     const-string v2, "mState"
 
@@ -653,9 +737,9 @@
 
     const-string v2, "Schedule"
 
-    iget-wide v3, p0, Lcom/amap/api/maps/offlinemap/m;->b:J
+    iget-wide v4, p0, Lcom/amap/api/maps/offlinemap/m;->b:J
 
-    invoke-virtual {v1, v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-virtual {v1, v2, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
     const-string v2, "version"
 
@@ -691,6 +775,12 @@
     iget v3, p0, Lcom/amap/api/maps/offlinemap/m;->n:I
 
     invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
+
+    const-string v2, "mCityCode"
+
+    iget-object v3, p0, Lcom/amap/api/maps/offlinemap/m;->o:Ljava/lang/String;
+
+    invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     const-string v2, "file"
 

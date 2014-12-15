@@ -22,7 +22,7 @@
 .method protected a()I
     .locals 1
 
-    const v0, 0x7f03004f
+    const v0, 0x7f030051
 
     return v0
 .end method
@@ -104,7 +104,7 @@
 
     move-result-object v15
 
-    const v1, 0x7f070175
+    const v1, 0x7f0b0183
 
     invoke-virtual {v15, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -120,7 +120,7 @@
 
     iget-object v1, v0, Lcn/com/smartdevices/bracelet/ui/bP;->b:Lkankan/wheel/widget/WheelView;
 
-    const v2, 0x7f0200d6
+    const v2, 0x7f0200da
 
     invoke-virtual {v1, v2}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
@@ -158,7 +158,7 @@
 
     move-result-object v6
 
-    const v7, 0x7f08000c
+    const v7, 0x7f07000c
 
     invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -168,7 +168,7 @@
 
     move-result-object v7
 
-    const v8, 0x7f080011
+    const v8, 0x7f070011
 
     invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getColor(I)I
 

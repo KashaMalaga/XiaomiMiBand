@@ -163,7 +163,7 @@
 
     const/16 v9, 0x10
 
-    if-ne v8, v9, :cond_7
+    if-ne v8, v9, :cond_8
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/y;->g(Lcn/com/smartdevices/bracelet/chart/y;)I
 
@@ -207,7 +207,7 @@
 
     cmpl-float v7, v7, v9
 
-    if-lez v7, :cond_8
+    if-lez v7, :cond_b
 
     :cond_3
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/y;->m(Lcn/com/smartdevices/bracelet/chart/y;)I
@@ -222,7 +222,7 @@
 
     cmpl-float v9, p4, v9
 
-    if-lez v9, :cond_e
+    if-lez v9, :cond_11
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/y;->n(Lcn/com/smartdevices/bracelet/chart/y;)I
 
@@ -235,33 +235,35 @@
 
     cmpl-float v11, p5, v11
 
-    if-lez v11, :cond_d
+    if-lez v11, :cond_10
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/y;->n(Lcn/com/smartdevices/bracelet/chart/y;)I
 
-    move-result v0
-
-    :goto_5
-    invoke-static {v9, v5, p3}, Lcn/com/smartdevices/bracelet/chart/c/t;->a(IIF)I
-
     move-result v3
 
+    move v0, v5
+
+    :goto_5
+    if-ne v9, v0, :cond_9
+
+    :goto_6
     iget-object v5, p0, Lcn/com/smartdevices/bracelet/chart/D;->n:Lcn/com/smartdevices/bracelet/chart/base/r;
 
     iget-object v5, v5, Lcn/com/smartdevices/bracelet/chart/base/r;->c:Landroid/graphics/Paint;
 
-    invoke-virtual {v5, v3}, Landroid/graphics/Paint;->setColor(I)V
+    invoke-virtual {v5, v0}, Landroid/graphics/Paint;->setColor(I)V
 
     if-eqz v6, :cond_4
 
-    invoke-static {v8, v0, p3}, Lcn/com/smartdevices/bracelet/chart/c/t;->a(IIF)I
+    if-ne v8, v3, :cond_a
 
-    move-result v0
+    move v0, v3
 
+    :goto_7
     invoke-virtual {v6, v0}, Landroid/graphics/Paint;->setColor(I)V
 
     :cond_4
-    :goto_6
+    :goto_8
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/D;->n:Lcn/com/smartdevices/bracelet/chart/base/r;
 
     iget-object v5, v0, Lcn/com/smartdevices/bracelet/chart/base/r;->c:Landroid/graphics/Paint;
@@ -316,6 +318,39 @@
     goto/16 :goto_1
 
     :cond_6
+    const/high16 v1, -0x40000000
+
+    cmpl-float v1, p5, v1
+
+    if-nez v1, :cond_7
+
+    invoke-virtual {p2}, Landroid/graphics/RectF;->height()F
+
+    move-result v3
+
+    invoke-virtual {p2}, Landroid/graphics/RectF;->height()F
+
+    move-result v0
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/D;->a:I
+
+    int-to-float v1, v1
+
+    iget v2, p0, Lcn/com/smartdevices/bracelet/chart/D;->b:I
+
+    int-to-float v2, v2
+
+    div-float/2addr v1, v2
+
+    mul-float/2addr v1, v0
+
+    const/4 v2, 0x0
+
+    const/4 v0, 0x0
+
+    goto/16 :goto_2
+
+    :cond_7
     invoke-virtual {p2}, Landroid/graphics/RectF;->height()F
 
     move-result v3
@@ -338,7 +373,7 @@
 
     goto/16 :goto_2
 
-    :cond_7
+    :cond_8
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/y;->f(Lcn/com/smartdevices/bracelet/chart/y;)I
 
     move-result v7
@@ -357,21 +392,35 @@
 
     goto/16 :goto_3
 
-    :cond_8
+    :cond_9
+    invoke-static {v9, v0, p3}, Lcn/com/smartdevices/bracelet/chart/c/t;->a(IIF)I
+
+    move-result v0
+
+    goto :goto_6
+
+    :cond_a
+    invoke-static {v8, v3, p3}, Lcn/com/smartdevices/bracelet/chart/c/t;->a(IIF)I
+
+    move-result v0
+
+    goto :goto_7
+
+    :cond_b
     const/4 v7, 0x0
 
     iget v11, p2, Landroid/graphics/RectF;->left:F
 
     cmpg-float v11, v11, v8
 
-    if-gez v11, :cond_a
+    if-gez v11, :cond_d
 
     iget v7, p2, Landroid/graphics/RectF;->left:F
 
     sub-float v7, v8, v7
 
-    :cond_9
-    :goto_7
+    :cond_c
+    :goto_9
     invoke-virtual {p2}, Landroid/graphics/RectF;->width()F
 
     move-result v8
@@ -382,13 +431,13 @@
 
     cmpl-float v9, v7, v8
 
-    if-ltz v9, :cond_b
+    if-ltz v9, :cond_e
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/y;->m(Lcn/com/smartdevices/bracelet/chart/y;)I
 
     move-result v0
 
-    :goto_8
+    :goto_a
     iget-object v5, p0, Lcn/com/smartdevices/bracelet/chart/D;->n:Lcn/com/smartdevices/bracelet/chart/base/r;
 
     iget-object v5, v5, Lcn/com/smartdevices/bracelet/chart/base/r;->c:Landroid/graphics/Paint;
@@ -399,27 +448,27 @@
 
     invoke-virtual {v6, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    goto :goto_6
+    goto/16 :goto_8
 
-    :cond_a
+    :cond_d
     iget v8, p2, Landroid/graphics/RectF;->right:F
 
     cmpl-float v8, v8, v9
 
-    if-lez v8, :cond_9
+    if-lez v8, :cond_c
 
     iget v7, p2, Landroid/graphics/RectF;->right:F
 
     sub-float/2addr v7, v9
 
-    goto :goto_7
+    goto :goto_9
 
-    :cond_b
+    :cond_e
     const/4 v9, 0x0
 
     cmpl-float v9, v7, v9
 
-    if-nez v9, :cond_c
+    if-nez v9, :cond_f
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/y;->n(Lcn/com/smartdevices/bracelet/chart/y;)I
 
@@ -427,9 +476,9 @@
 
     move v3, v5
 
-    goto :goto_8
+    goto :goto_a
 
-    :cond_c
+    :cond_f
     div-float/2addr v7, v8
 
     invoke-static {v5, v3, v7}, Lcn/com/smartdevices/bracelet/chart/c/t;->a(IIF)I
@@ -448,16 +497,16 @@
 
     move-result v0
 
-    goto :goto_8
+    goto :goto_a
 
-    :cond_d
-    move v0, v7
+    :cond_10
+    move v0, v3
 
-    move v5, v3
+    move v3, v7
 
     goto/16 :goto_5
 
-    :cond_e
+    :cond_11
     move v9, v3
 
     goto/16 :goto_4

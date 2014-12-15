@@ -124,21 +124,24 @@
 .end method
 
 .method public static a(Landroid/content/ContentResolver;)Z
-    .locals 7
+    .locals 8
+
+    const/4 v6, 0x0
+
+    const/4 v7, -0x1
+
+    :try_start_0
+    sget-object v1, Lcn/com/smartdevices/bracelet/e/k;->i:Landroid/net/Uri;
 
     const/4 v2, 0x0
 
-    const/4 v6, -0x1
+    const/4 v3, 0x0
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/e/k;->i:Landroid/net/Uri;
+    const/4 v4, 0x0
 
     const-string v5, "_id asc"
 
     move-object v0, p0
-
-    move-object v3, v2
-
-    move-object v4, v2
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
@@ -160,7 +163,7 @@
 
     move-result v1
 
-    if-eq v1, v6, :cond_0
+    if-eq v1, v7, :cond_0
 
     const-string v1, "_begin_time"
 
@@ -168,7 +171,7 @@
 
     move-result v1
 
-    if-eq v1, v6, :cond_0
+    if-eq v1, v7, :cond_0
 
     const-string v1, "_end_time"
 
@@ -176,7 +179,7 @@
 
     move-result v1
 
-    if-eq v1, v6, :cond_0
+    if-eq v1, v7, :cond_0
 
     const-string v1, "_mode"
 
@@ -184,29 +187,124 @@
 
     move-result v1
 
-    if-eq v1, v6, :cond_0
+    if-eq v1, v7, :cond_0
 
     const-string v1, "_steps"
 
     invoke-interface {v0, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v0
 
-    if-eq v0, v6, :cond_0
+    if-eq v0, v7, :cond_0
 
     const/4 v0, 0x1
 
     :goto_0
     return v0
 
+    :catch_0
+    move-exception v0
+
+    const-string v1, "SensorHubReader"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "checkValid has Exception:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    move v0, v6
+
+    goto :goto_0
+
     :cond_0
-    const/4 v0, 0x0
+    move v0, v6
 
     goto :goto_0
 .end method
 
 
 # virtual methods
+.method public a()Ljava/util/LinkedList;
+    .locals 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/LinkedList",
+            "<",
+            "Lcn/com/smartdevices/bracelet/e/j;",
+            ">;"
+        }
+    .end annotation
+
+    const/4 v3, 0x0
+
+    new-instance v6, Ljava/util/LinkedList;
+
+    invoke-direct {v6}, Ljava/util/LinkedList;-><init>()V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/e/i;->c:Landroid/content/ContentResolver;
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/e/k;->i:Landroid/net/Uri;
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/e/i;->a:[Ljava/lang/String;
+
+    const-string v5, "_id asc"
+
+    move-object v4, v3
+
+    invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    :cond_0
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/e/i;->a(Landroid/database/Cursor;)Lcn/com/smartdevices/bracelet/e/j;
+
+    move-result-object v1
+
+    invoke-virtual {v6, v1}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
+
+    invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    :cond_1
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+
+    :cond_2
+    return-object v6
+.end method
+
 .method public a(J)Ljava/util/LinkedList;
     .locals 7
     .annotation system Ldalvik/annotation/Signature;
@@ -489,186 +587,31 @@
 
     invoke-virtual {v0}, Ljava/util/Calendar;->getTimeInMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    const/16 v3, 0xb
+    const/16 v1, 0xb
 
     const/16 v4, 0x17
 
-    invoke-virtual {v0, v3, v4}, Ljava/util/Calendar;->set(II)V
+    invoke-virtual {v0, v1, v4}, Ljava/util/Calendar;->set(II)V
 
-    const/16 v3, 0xc
+    const/16 v1, 0xc
 
-    invoke-virtual {v0, v3, v5}, Ljava/util/Calendar;->set(II)V
+    invoke-virtual {v0, v1, v5}, Ljava/util/Calendar;->set(II)V
 
-    const/16 v3, 0xd
+    const/16 v1, 0xd
 
-    invoke-virtual {v0, v3, v5}, Ljava/util/Calendar;->set(II)V
+    invoke-virtual {v0, v1, v5}, Ljava/util/Calendar;->set(II)V
 
     invoke-virtual {v0}, Ljava/util/Calendar;->getTimeInMillis()J
 
-    move-result-wide v3
+    move-result-wide v0
 
-    invoke-virtual {p0, v1, v2, v3, v4}, Lcn/com/smartdevices/bracelet/e/i;->a(JJ)Ljava/util/LinkedList;
+    invoke-virtual {p0, v2, v3, v0, v1}, Lcn/com/smartdevices/bracelet/e/i;->a(JJ)Ljava/util/LinkedList;
 
     move-result-object v0
 
     return-object v0
-.end method
-
-.method public a()V
-    .locals 6
-
-    const/4 v2, 0x0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/e/i;->c:Landroid/content/ContentResolver;
-
-    sget-object v1, Lcn/com/smartdevices/bracelet/e/k;->i:Landroid/net/Uri;
-
-    const-string v5, "_id asc"
-
-    move-object v3, v2
-
-    move-object v4, v2
-
-    invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-interface {v1}, Landroid/database/Cursor;->getColumnCount()I
-
-    move-result v2
-
-    if-ge v0, v2, :cond_0
-
-    const-string v2, "SensorHubReader"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "Column "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string v4, ":"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-interface {v1, v0}, Landroid/database/Cursor;->getColumnName(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    :cond_1
-    :goto_1
-    return-void
-
-    :cond_2
-    invoke-direct {p0, v1}, Lcn/com/smartdevices/bracelet/e/i;->a(Landroid/database/Cursor;)Lcn/com/smartdevices/bracelet/e/j;
-
-    invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    goto :goto_1
-.end method
-
-.method public b()Ljava/util/LinkedList;
-    .locals 7
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/LinkedList",
-            "<",
-            "Lcn/com/smartdevices/bracelet/e/j;",
-            ">;"
-        }
-    .end annotation
-
-    const/4 v3, 0x0
-
-    new-instance v6, Ljava/util/LinkedList;
-
-    invoke-direct {v6}, Ljava/util/LinkedList;-><init>()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/e/i;->c:Landroid/content/ContentResolver;
-
-    sget-object v1, Lcn/com/smartdevices/bracelet/e/k;->i:Landroid/net/Uri;
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/e/i;->a:[Ljava/lang/String;
-
-    const-string v5, "_id asc"
-
-    move-object v4, v3
-
-    invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    :cond_0
-    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/e/i;->a(Landroid/database/Cursor;)Lcn/com/smartdevices/bracelet/e/j;
-
-    move-result-object v1
-
-    invoke-virtual {v6, v1}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
-
-    invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    :cond_1
-    if-eqz v0, :cond_2
-
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
-
-    :cond_2
-    return-object v6
 .end method
 
 .method public b(J)Ljava/util/LinkedList;

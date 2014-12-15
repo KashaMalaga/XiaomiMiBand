@@ -559,9 +559,9 @@
 
     invoke-interface {p1, v1}, Landroid/database/Cursor;->getLong(I)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
 
@@ -1033,7 +1033,7 @@
 .end method
 
 .method protected updateKeyAfterInsert(Lde/greenrobot/daobracelet/LuaList;J)Ljava/lang/Long;
-    .locals 1
+    .locals 2
 
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -1049,7 +1049,7 @@
 .end method
 
 .method protected bridge synthetic updateKeyAfterInsert(Ljava/lang/Object;J)Ljava/lang/Object;
-    .locals 1
+    .locals 2
 
     check-cast p1, Lde/greenrobot/daobracelet/LuaList;
 

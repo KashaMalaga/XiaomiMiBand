@@ -37,6 +37,8 @@
 
 .field public static final InfoTitle:I = 0x7f0e0002
 
+.field public static final LeftButton:I = 0x7f0e0023
+
 .field public static final LikeAvatar:I = 0x7f0e0010
 
 .field public static final ListItemTitleText:I = 0x7f0e0015
@@ -72,6 +74,16 @@
 .field public static final drawerMenuButton:I = 0x7f0e000d
 
 .field public static final drawerMenuButton2:I = 0x7f0e000e
+
+.field public static final font_c50000000_s10_5:I = 0x7f0e0027
+
+.field public static final font_c70000000_s15_5:I = 0x7f0e0028
+
+.field public static final font_white_s16_5:I = 0x7f0e0026
+
+.field public static final font_white_s18:I = 0x7f0e0024
+
+.field public static final font_white_s40_5:I = 0x7f0e0025
 
 
 # direct methods

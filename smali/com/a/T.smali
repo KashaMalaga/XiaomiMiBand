@@ -19,7 +19,7 @@
 
 # direct methods
 .method private constructor <init>(Lcom/a/P;Ljava/lang/String;J[Ljava/io/InputStream;[J)V
-    .locals 0
+    .locals 1
 
     iput-object p1, p0, Lcom/a/T;->a:Lcom/a/P;
 
@@ -37,7 +37,7 @@
 .end method
 
 .method synthetic constructor <init>(Lcom/a/P;Ljava/lang/String;J[Ljava/io/InputStream;[JLcom/a/U;)V
-    .locals 0
+    .locals 1
 
     invoke-direct/range {p0 .. p6}, Lcom/a/T;-><init>(Lcom/a/P;Ljava/lang/String;J[Ljava/io/InputStream;[J)V
 

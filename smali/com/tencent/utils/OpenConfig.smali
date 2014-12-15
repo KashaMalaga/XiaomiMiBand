@@ -736,7 +736,7 @@
 .end method
 
 .method public getDouble(Ljava/lang/String;)D
-    .locals 3
+    .locals 4
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -762,9 +762,9 @@
 
     iget-object v0, p0, Lcom/tencent/utils/OpenConfig;->e:Lorg/json/JSONObject;
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    invoke-virtual {v0, p1, v1, v2}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+    invoke-virtual {v0, p1, v2, v3}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
 
     move-result-wide v0
 

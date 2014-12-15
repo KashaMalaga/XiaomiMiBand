@@ -34,7 +34,7 @@
 
 # virtual methods
 .method protected final declared-synchronized a(J[B)V
-    .locals 7
+    .locals 9
 
     const/4 v0, 0x0
 
@@ -170,9 +170,9 @@
     :cond_4
     iget-object v4, p0, Lcom/a/I;->a:Ljava/io/RandomAccessFile;
 
-    int-to-long v5, v3
+    int-to-long v6, v3
 
-    invoke-virtual {v4, v5, v6}, Ljava/io/RandomAccessFile;->seek(J)V
+    invoke-virtual {v4, v6, v7}, Ljava/io/RandomAccessFile;->seek(J)V
 
     invoke-static {p3}, Lcom/a/j;->a([B)[B
 

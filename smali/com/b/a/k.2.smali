@@ -508,7 +508,7 @@
 .end method
 
 .method static synthetic a(Lcom/b/a/k;D)V
-    .locals 0
+    .locals 1
 
     invoke-direct {p0, p1, p2}, Lcom/b/a/k;->a(D)V
 

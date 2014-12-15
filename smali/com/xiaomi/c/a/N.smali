@@ -23,7 +23,7 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 4
 
     :goto_0
     :try_start_0
@@ -81,9 +81,9 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-static {v0, v1, v2}, Lcom/xiaomi/c/a/L;->a(Lcom/xiaomi/c/a/L;J)J
+    invoke-static {v0, v2, v3}, Lcom/xiaomi/c/a/L;->a(Lcom/xiaomi/c/a/L;J)J
 
     iget-object v0, p0, Lcom/xiaomi/c/a/N;->a:Lcom/xiaomi/c/a/L;
 
