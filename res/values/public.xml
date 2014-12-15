@@ -2164,7 +2164,7 @@
     <public type="string" name="unbind_weight_scale" id="0x7f0c021f" />
     <public type="string" name="weight_not_found_title" id="0x7f0c0220" />
     <public type="string" name="weight_not_found_info" id="0x7f0c0221" />
-	<public type="string" name="notification_settings" id="0x7f0c02ef" />
+	<public type="string" name="notification_settings" id="0x7f0c02ec" />
     <public type="array" name="weeks" id="0x7f0d0000" />
     <public type="array" name="weeks_short" id="0x7f0d0001" />
     <public type="array" name="months" id="0x7f0d0002" />
