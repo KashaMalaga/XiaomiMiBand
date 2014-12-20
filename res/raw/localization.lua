@@ -29,7 +29,7 @@ es = 'es'
 hr = 'hr'
 ru = 'ru'
 g_CurLocale = ""
-DEBUG = true
+DEBUG = false
 -------------Globals----------------
 
 __log = nil
