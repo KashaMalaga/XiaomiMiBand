@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="weeks">
+        <item>Mon.</item>
+        <item>Die.</item>
+        <item>Mit.</item>
+        <item>Don.</item>
+        <item>Fre.</item>
+        <item>Sam.</item>
+        <item>Son.</item>
+    </string-array>
+    <string-array name="weeks_short">
+        <item>Mon.</item>
+        <item>Tues.</item>
+        <item>Wed.</item>
+        <item>Thurs.</item>
+        <item>Fri.</item>
+        <item>Sat.</item>
+        <item>Sun.</item>
+    </string-array>
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+    <string-array name="select_days_simple">
+        <item>Once</item>
+        <item>Everyday</item>
+        <item>Weekdays</item>
+        <item>Customize</item>
+    </string-array>
+    <string-array name="fortune">
+        <item>There is no substitute for consistency.</item>
+        <item>Strive for progress, not perfection.</item>
+        <item>Wiederholung ist die Mutter des Erfolgs.</item>
+        <item>Energy and persistence conquer all things.</item>
+        <item>"The world wasn't formed in a day, and neither were we. Set small goals and build upon them."</item>
+        <item>Every journey begins with a single step.</item>
+        <item>Achieve one goal a day.</item>
+        <item>"No matter how slow you go, you're still lapping everybody on the couch."</item>
+        <item>Run when you can. Walk if you have to. Crawl if you must. Just never give up.</item>
+        <item>Remember, the feeling you get from a good workout is far better than the feeling you get from sitting around wishing you had worked out.</item>
+    </string-array>
+    <string-array name="weather_aqi_descriptions">
+        <item>Großartig</item>
+        <item>Gut</item>
+        <item>Moderat</item>
+        <item>Vorsicht</item>
+        <item>Ungesund</item>
+        <item>Sehr ungesund</item>
+    </string-array>
+    <string-array name="weight_test_unit">
+        <item>kg</item>
+        <item>jin</item>
+        <item>Pfund</item>
+    </string-array>
+    <string-array name="weight_body_figures">
+        <item>Dünn</item>
+        <item>Normal</item>
+        <item>Übergewichtig</item>
+        <item>Dick</item>
+        <item>Sehr dick</item>
+    </string-array>
+</resources>

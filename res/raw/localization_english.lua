@@ -214,6 +214,103 @@ localization_French_table = {
     record_reach_max="Tu as atteint ton meilleur record!",
     new_record_born="Nouveau record!",
  }
+
+localization_German_table = {
+    calories_table={
+
+    },
+
+    ok='OK',
+
+    hour='Std.',
+    minute='Min.',
+    month='Monat',
+    day='Tag',
+    step="Schritte",
+    km='km',
+    minute_format='%dmin',
+    hour_minute_format='%dh %dm',
+    hour_format='%dStd.',
+
+    welcome_use="Willkommen",
+    last_week_walked_format='Du bist letzte Woche %d Schritte gelaufen.',
+    last_week_walked_info_format='%dkm gelaufen, %dkcal verbrannt.',
+    last_month_walked_format='Du bist letzte Woche %d Schritte gelaufen.',
+    last_month_walked_info_format='%dkm gelaufen, %dkcal verbrannt.',
+
+    get_over_format=", ungefähr %d Gramm Fett.",
+    click_to_get_help="Mehr über das Band lernen",
+    take_a_walk="Gehe mit deinem Band spazieren",
+    take_a_walk_info="Dein Band behält den Überblick über jeden Deiner Schritte.",
+    unlock_hint="Sesam öffne Dich!",
+    unlock_hint_info="Nutze Dein Band, um dein Smartphone zu entsperren.",
+    no_data_hint_0="Wissenschaftler empfehlen zwischen 7,5 und 9 Stunden Schlaf jede Nacht.",
+    no_data_hint_1="Wiederholung ist die Mutter des Erfolgs.",
+    no_data_hint_2="Strebe nach Fortschritt, nicht nach Perfektion.",
+    no_data_hint_3="Egal wie langsam du läufst, du überrundest trotzdem jeden auf dem Sofa.",
+    not_binded_hint="Kein Band wurde diesem Konto hinzugefügt.",
+    new_record_info="Neuen Rekord aufgestellt!",
+    new_record_format="%d Schritte, %s %d",
+    today_goal_reached="Du hast Dein Ziel heute erreicht!",
+    week_continue_reach_goal="Du",
+
+    challenge_format="Du hast Dein Ziel für %d Tage hintereinander erreicht!",
+    personal_best_format="Deine längste Serie dauerte %d Tage!",
+    continue_with_skips_title="Du hast Dein Ziel gestern nicht erreicht. Nennen wir es einen Ruhetag ;)",
+    continue_with_skips_title_today="Du hast Dein Ziel heute nicht erreicht. Nennen wir es einen Ruhetag ;)",
+    personal_best_with_skips_format="Du hast %d Ruhetage übrig ;)",
+    continue_used_n_skips_format="Du hast Dein Ziel %d Tage hintereinander erreicht und hast noch %d Ruhetage.",
+    continue_used_0_skips_format="Du hast Dein Ziel %d Tage hintereinander erreicht und hast keinen Ruhetag übrig.",
+    personal_best_on_skip_day_title="%d-Tage-Serie! Du hast einen Ruhetag verdient!",
+    personal_best_on_skip_day_info="Nach jeder 7-Tage-Serie verdienst Du einen Ruhetag, den du nutzen kannst, falls Du Dein Ziel nicht erreicht hast.",
+    manual_lazy_title="Du hast Dein Ziel heute nicht erreicht.",
+    manual_lazy_subtitle="Deine Serie wird nicht unterbrochen, wenn heute ein Ruhetag für Dich ist.",
+    manual_lazy_title_used="Heute ist ein Ruhetag.",
+    manual_lazy_subtitle_used="You can earn more Lazy Days by breaking personal records.",
+    manual_fail_ytd_title = "Du hast Deine Serie gestern beendet.",
+    manual_fail_ytd_subtitle = "Serie war %d lang.",
+
+    active_time_format_0="%dm",
+    active_time_format_1="%dh",
+    active_time_format_2="%dh %dm",
+    activie_run_format_0="Ran %s. Sehr gut!",
+    activie_run_format_1="Ran %s. Das machst Du gut!",
+    activie_run_format_2="Ran %s.",
+    activie_run_consumed="%dkcal verbrannt. %s",
+
+    get_distance_format="ungefähr %dm.",
+    activity_walk_format="%s %d Schritte gelaufen, %s",
+    activity_walk_consumed_format="Burned %dcal%s.",
+    activity_rope_skipping_format="%s jumped rope %d times",
+    activity_situp_format="%s %d Sit-Ups",
+    activity_consumed_format="%dkcal verbrannt %s",
+    activity_activity_format="%s Worked out for %s, %s",
+    activity_activity_format_run="%s Worked out for %s, ran %s",
+    last_night_sleeped_good_format="Du hast Dich letzte Nacht für %s ausgeruht.",
+    last_night_sleeped_normal_format="Du hast letzte Nacht %s geschlafen.",
+    deep_sleep_format="Tieflschlaf (REM) dauerte %s.",
+
+    battery_low_info="Lade Dein Band",
+    battery_very_low_info="Der Akku deines Bands geht zur Neige.",
+
+    cannot_find_bracelet="Kann das Band nicht finden.",
+    cannot_find_bracelet_info="Stelle sicher, dass Dein Band aufgeladen ist.",
+    challenge_to_get="%s days from setting a new record!",
+    record_reach_max="You've tied your existing record!",
+    new_record_born="Du hast einen neuen Rekord aufgestellt.",
+
+    ---====== Weather tips ===============
+    weather_tips_title_0 = "Starke Luftverschmutzung, bleib drinnen",
+    weather_tips_title_1 = "Starke Luftverschmutzung, bleib drinnen",
+    weather_tips_info = "Sit-ups oder Seilsprung sind tolle Übungen für drinnen!",
+	
+	---------------Weight scale -------------------
+    welcome_use_weight_scale = "Welcome use weight scale",
+    welcome_use_weight_scale_not_bind = "Click to bind weight scale",
+    welcome_use_mi_health="Welcome use MI health",
+}
+
+
 localization_Portuguese_table = {
     calories_table={
 
