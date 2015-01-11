@@ -22,7 +22,7 @@ es_ES = 'es_ES'
 hr_HR = 'hr_HR'
 ru_RU = 'ru_RU'
 it_IT = 'it_IT'
-en = 'en'
+de = 'de'
 fr = 'fr'
 it = 'it'
 es = 'es'
@@ -61,6 +61,7 @@ localization_table = {
     zh_CN = localization_Chinese_table,
     zh_TW = localization_zh_rTW_table,
 	fr = localization_French_table,
+	de = localization_German_table,
 	es = localization_Spanish_table,
 	hr = localization_Croatian_table,
 	ru = localization_Russian_table,
@@ -89,6 +90,8 @@ function setCurLocale(locale)
         curTable = localization_table[it];
 	elseif (getCurLocale() == es_ES) or string.find(getCurLocale(), es) == 1 then
         curTable = localization_table[es];
+    elseif (getCurLocale() == de_DE) or string.find(getCurLocale(), de) == 1 then
+        curTable = localization_table[de];
     elseif (getCurLocale() == hr_HR) then
         curTable = localization_table[hr];
 	elseif (getCurLocale() == ru_RU) then
