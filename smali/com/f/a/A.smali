@@ -1,42 +1,77 @@
-.class public abstract Lcom/f/a/A;
-.super Ljava/lang/Object;
+.class Lcom/f/a/A;
+.super Lcom/f/b/b;
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/f/b/b",
+        "<",
+        "Landroid/view/View;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lcom/f/b/b;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a()V
-.end method
-
-.method public run()V
+.method public a(Landroid/view/View;)Ljava/lang/Integer;
     .locals 1
 
-    :try_start_0
-    invoke-virtual {p0}, Lcom/f/a/A;->a()V
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {p1}, Lcom/f/c/a/a;->a(Landroid/view/View;)Lcom/f/c/a/a;
 
-    :cond_0
-    :goto_0
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/f/c/a/a;->j()I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public bridge synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p0, p1}, Lcom/f/a/A;->a(Landroid/view/View;)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public a(Landroid/view/View;I)V
+    .locals 1
+
+    invoke-static {p1}, Lcom/f/c/a/a;->a(Landroid/view/View;)Lcom/f/c/a/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p2}, Lcom/f/c/a/a;->b(I)V
+
     return-void
+.end method
 
-    :catch_0
-    move-exception v0
+.method public bridge synthetic a(Ljava/lang/Object;I)V
+    .locals 0
 
-    if-eqz v0, :cond_0
+    check-cast p1, Landroid/view/View;
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
+    invoke-virtual {p0, p1, p2}, Lcom/f/a/A;->a(Landroid/view/View;I)V
 
-    goto :goto_0
+    return-void
 .end method

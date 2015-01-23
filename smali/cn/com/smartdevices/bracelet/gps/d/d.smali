@@ -11,255 +11,81 @@
     return-void
 .end method
 
-.method public static a(DI)D
+.method public static a()Landroid/content/Intent;
     .locals 2
 
-    new-instance v0, Ljava/math/BigDecimal;
+    new-instance v0, Landroid/content/Intent;
 
-    invoke-direct {v0, p0, p1}, Ljava/math/BigDecimal;-><init>(D)V
+    const-string v1, "android.settings.LOCATION_SOURCE_SETTINGS"
 
-    const/4 v1, 0x4
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p2, v1}, Ljava/math/BigDecimal;->setScale(II)Ljava/math/BigDecimal;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/math/BigDecimal;->doubleValue()D
-
-    move-result-wide v0
-
-    return-wide v0
+    return-object v0
 .end method
 
-.method public static a(FI)F
-    .locals 4
+.method public static a(Landroid/content/Context;)Z
+    .locals 2
 
-    new-instance v0, Ljava/math/BigDecimal;
+    const-string v0, "location"
 
-    float-to-double v2, p0
-
-    invoke-direct {v0, v2, v3}, Ljava/math/BigDecimal;-><init>(D)V
-
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, p1, v1}, Ljava/math/BigDecimal;->setScale(II)Ljava/math/BigDecimal;
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/math/BigDecimal;->floatValue()F
+    check-cast v0, Landroid/location/LocationManager;
+
+    const-string v1, "gps"
+
+    invoke-virtual {v0, v1}, Landroid/location/LocationManager;->isProviderEnabled(Ljava/lang/String;)Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public static a(JI)J
-    .locals 6
+.method public static b(Landroid/content/Context;)Z
+    .locals 2
 
-    const-wide/16 v4, 0x3e8
+    const-string v0, "location"
 
-    const/4 v3, 0x0
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
+    move-result-object v0
 
-    move-result-object v2
+    check-cast v0, Landroid/location/LocationManager;
 
-    const-wide/16 v0, 0x0
+    const-string v1, "network"
 
-    cmp-long v0, p0, v0
+    invoke-virtual {v0, v1}, Landroid/location/LocationManager;->isProviderEnabled(Ljava/lang/String;)Z
 
-    if-gtz v0, :cond_1
+    move-result v0
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    return v0
+.end method
 
-    move-result-wide v0
+.method public static c(Landroid/content/Context;)Z
+    .locals 1
 
-    :goto_0
-    invoke-virtual {v2, v0, v1}, Ljava/util/Calendar;->setTimeInMillis(J)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/gps/d/d;->a(Landroid/content/Context;)Z
 
-    if-lez p2, :cond_0
+    move-result v0
 
-    const/4 v0, 0x2
+    if-nez v0, :cond_0
 
-    invoke-virtual {v2, v0, p2}, Ljava/util/Calendar;->add(II)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/gps/d/d;->b(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
 
     :cond_0
-    const/4 v0, 0x5
+    const/4 v0, 0x1
 
-    const/4 v1, 0x1
-
-    invoke-virtual {v2, v0, v1}, Ljava/util/Calendar;->set(II)V
-
-    const/16 v0, 0xb
-
-    invoke-virtual {v2, v0, v3}, Ljava/util/Calendar;->set(II)V
-
-    const/16 v0, 0xc
-
-    invoke-virtual {v2, v0, v3}, Ljava/util/Calendar;->set(II)V
-
-    const/16 v0, 0xd
-
-    invoke-virtual {v2, v0, v3}, Ljava/util/Calendar;->set(II)V
-
-    invoke-virtual {v2}, Ljava/util/Calendar;->getTimeInMillis()J
-
-    move-result-wide v0
-
-    div-long/2addr v0, v4
-
-    return-wide v0
+    :goto_0
+    return v0
 
     :cond_1
-    mul-long v0, p0, v4
+    const/4 v0, 0x0
 
     goto :goto_0
-.end method
-
-.method public static a(Ljava/lang/String;)Ljava/util/Date;
-    .locals 3
-
-    new-instance v0, Ljava/text/SimpleDateFormat;
-
-    const-string v1, "yyyy-MM"
-
-    invoke-direct {v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
-
-    new-instance v1, Ljava/text/ParsePosition;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v2}, Ljava/text/ParsePosition;-><init>(I)V
-
-    invoke-virtual {v0, p0, v1}, Ljava/text/SimpleDateFormat;->parse(Ljava/lang/String;Ljava/text/ParsePosition;)Ljava/util/Date;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static b(Ljava/lang/String;)J
-    .locals 3
-
-    new-instance v0, Ljava/text/SimpleDateFormat;
-
-    const-string v1, "yyyy-MM"
-
-    invoke-direct {v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
-
-    new-instance v1, Ljava/text/ParsePosition;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v2}, Ljava/text/ParsePosition;-><init>(I)V
-
-    invoke-virtual {v0, p0, v1}, Ljava/text/SimpleDateFormat;->parse(Ljava/lang/String;Ljava/text/ParsePosition;)Ljava/util/Date;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/Date;->getTime()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public static b(DI)Ljava/lang/String;
-    .locals 6
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "%."
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "f"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    const/4 v2, 0x0
-
-    invoke-static {p0, p1, p2}, Lcn/com/smartdevices/bracelet/gps/d/d;->a(DI)D
-
-    move-result-wide v4
-
-    invoke-static {v4, v5}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static b(FI)Ljava/lang/String;
-    .locals 4
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "%."
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "f"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    const/4 v2, 0x0
-
-    invoke-static {p0, p1}, Lcn/com/smartdevices/bracelet/gps/d/d;->a(FI)F
-
-    move-result v3
-
-    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method

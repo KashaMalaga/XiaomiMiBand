@@ -53,9 +53,9 @@
 
 # virtual methods
 .method public onScale(Landroid/view/ScaleGestureDetector;)Z
-    .locals 7
+    .locals 6
 
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
     iget-object v0, p0, Lcom/amap/api/mapcore/b$e;->b:Lcom/amap/api/mapcore/b;
 
@@ -67,7 +67,7 @@
 
     :cond_0
     :goto_0
-    return v6
+    return v5
 
     :cond_1
     invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getScaleFactor()F
@@ -82,19 +82,19 @@
 
     if-nez v1, :cond_2
 
-    float-to-double v2, v0
+    float-to-double v1, v0
 
-    const-wide v4, 0x3ff147ae147ae148L
+    const-wide v3, 0x3ff147ae147ae148L
 
-    cmpl-double v1, v2, v4
+    cmpl-double v1, v1, v3
 
     if-gtz v1, :cond_2
 
-    float-to-double v2, v0
+    float-to-double v1, v0
 
-    const-wide v4, 0x3fed70a3d70a3d71L
+    const-wide v3, 0x3fed70a3d70a3d71L
 
-    cmpg-double v1, v2, v4
+    cmpg-double v1, v1, v3
 
     if-gez v1, :cond_0
 

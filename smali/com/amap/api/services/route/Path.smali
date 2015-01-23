@@ -100,7 +100,7 @@
 .end method
 
 .method public setDuration(J)V
-    .locals 1
+    .locals 0
 
     iput-wide p1, p0, Lcom/amap/api/services/route/Path;->b:J
 

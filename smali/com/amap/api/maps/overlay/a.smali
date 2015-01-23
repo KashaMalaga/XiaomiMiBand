@@ -26,19 +26,19 @@
 .end method
 
 .method public static a(Lcom/amap/api/services/core/LatLonPoint;)Lcom/amap/api/maps/model/LatLng;
-    .locals 6
+    .locals 5
 
     new-instance v0, Lcom/amap/api/maps/model/LatLng;
 
     invoke-virtual {p0}, Lcom/amap/api/services/core/LatLonPoint;->getLatitude()D
 
-    move-result-wide v2
+    move-result-wide v1
 
     invoke-virtual {p0}, Lcom/amap/api/services/core/LatLonPoint;->getLongitude()D
 
-    move-result-wide v4
+    move-result-wide v3
 
-    invoke-direct {v0, v2, v3, v4, v5}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     return-object v0
 .end method

@@ -7,6 +7,8 @@
 
 .field private static __instance:Lcn/com/smartdevices/bracelet/lua/LuaEvent;
 
+.field private static mSync:Ljava/lang/Object;
+
 
 # instance fields
 .field private cInfo:Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
@@ -23,6 +25,12 @@
     const/4 v0, 0x0
 
     sput-object v0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->__instance:Lcn/com/smartdevices/bracelet/lua/LuaEvent;
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->mSync:Ljava/lang/Object;
 
     return-void
 .end method
@@ -46,8 +54,13 @@
 .end method
 
 .method public static getInstance(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/lua/LuaEvent;
-    .locals 2
+    .locals 3
 
+    sget-object v1, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->mSync:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_0
     sget-object v0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->__instance:Lcn/com/smartdevices/bracelet/lua/LuaEvent;
 
     if-nez v0, :cond_0
@@ -60,19 +73,19 @@
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->getInstance()Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
 
-    move-result-object v1
+    move-result-object v2
 
-    iput-object v1, v0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->cInfo:Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
+    iput-object v2, v0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->cInfo:Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
 
-    iget-object v1, v0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->cInfo:Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
+    iget-object v2, v0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->cInfo:Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
 
-    invoke-virtual {v1, p0}, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->setLuaAction(Landroid/content/Context;)V
+    invoke-virtual {v2, p0}, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->setLuaAction(Landroid/content/Context;)V
 
     invoke-static {p0}, Lcn/com/smartdevices/bracelet/lua/LuaEventMsgs;->getInstance(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/lua/LuaEventMsgs;
 
-    move-result-object v1
+    move-result-object v2
 
-    iput-object v1, v0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->lEventMsgs:Lcn/com/smartdevices/bracelet/lua/LuaEventMsgs;
+    iput-object v2, v0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->lEventMsgs:Lcn/com/smartdevices/bracelet/lua/LuaEventMsgs;
 
     sput-object v0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->__instance:Lcn/com/smartdevices/bracelet/lua/LuaEvent;
 
@@ -80,18 +93,29 @@
 
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1}, Ljava/util/Locale;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/util/Locale;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->setLocale(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->setLocale(Ljava/lang/String;)V
 
     :cond_0
     sget-object v0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->__instance:Lcn/com/smartdevices/bracelet/lua/LuaEvent;
 
+    monitor-exit v1
+
     return-object v0
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
 .end method
 
 
@@ -143,11 +167,11 @@
 
     invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->setLuaAction(Landroid/content/Context;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/l;->a()Lcn/com/smartdevices/bracelet/l;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/p;->a()Lcn/com/smartdevices/bracelet/p;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/l;->b()Lde/greenrobot/daobracelet/LuaListDao;
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/p;->b()Lde/greenrobot/daobracelet/LuaListDao;
 
     move-result-object v2
 
@@ -179,11 +203,11 @@
 
     move-result-object v1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/l;->a()Lcn/com/smartdevices/bracelet/l;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/p;->a()Lcn/com/smartdevices/bracelet/p;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/l;->b()Lde/greenrobot/daobracelet/LuaListDao;
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/p;->b()Lde/greenrobot/daobracelet/LuaListDao;
 
     move-result-object v2
 
@@ -223,11 +247,11 @@
 
     move-result-object v1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/l;->a()Lcn/com/smartdevices/bracelet/l;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/p;->a()Lcn/com/smartdevices/bracelet/p;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/l;->b()Lde/greenrobot/daobracelet/LuaListDao;
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/p;->b()Lde/greenrobot/daobracelet/LuaListDao;
 
     move-result-object v2
 
@@ -333,7 +357,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->cInfo:Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
 
@@ -409,7 +433,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -513,7 +537,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->cInfo:Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
 
@@ -645,93 +669,93 @@
 .end method
 
 .method public setDefaultMsgs(Ljava/lang/Boolean;)V
-    .locals 7
+    .locals 9
 
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->c()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->c()Z
 
     move-result v2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->ab()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/B;->g()Z
 
     move-result v3
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/u;->h(Z)V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->ab()Z
 
-    const-string v4, "LuaEvent"
+    move-result v4
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/x;->f(Z)V
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v6, "support sensor hub = "
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/g/e;->a()Lcn/com/smartdevices/bracelet/g/e;
 
     move-result-object v5
 
-    iget-object v6, p0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->context:Landroid/content/Context;
-
-    invoke-static {v6}, Lcn/com/smartdevices/bracelet/y;->j(Landroid/content/Context;)Z
-
-    move-result v6
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    const-string v6, ", isBind bracelet ="
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->c()Z
-
-    move-result v6
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v4, v5}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->cInfo:Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
-
-    iget-object v5, p0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->context:Landroid/content/Context;
-
-    invoke-static {v5}, Lcn/com/smartdevices/bracelet/y;->j(Landroid/content/Context;)Z
+    invoke-virtual {v5}, Lcn/com/smartdevices/bracelet/g/e;->b()Z
 
     move-result v5
 
-    invoke-virtual {v4, v5}, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->setIsSupportSensorHub(Z)V
+    const-string v6, "LuaEvent"
 
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->cInfo:Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v4, v2}, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->setIsBind(Z)V
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->cInfo:Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
+    const-string v8, "support sensor hub = "
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b/a;->b()Z
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result v5
+    move-result-object v7
 
-    invoke-virtual {v4, v5}, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->setIsBindSensorHub(Z)V
+    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->cInfo:Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
+    move-result-object v7
 
-    invoke-virtual {v4, v3}, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->setLastBinded(Z)V
+    const-string v8, ", isBind bracelet ="
 
-    if-ne v2, v3, :cond_0
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->ac()Ljava/lang/String;
+    move-result-object v7
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/B;->g()Z
+
+    move-result v8
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v6, v7}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v6, p0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->cInfo:Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
+
+    invoke-virtual {v6, v5}, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->setIsSupportSensorHub(Z)V
+
+    iget-object v5, p0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->cInfo:Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
+
+    invoke-virtual {v5, v3}, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->setIsBind(Z)V
+
+    iget-object v5, p0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->cInfo:Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->b()Z
+
+    move-result v6
+
+    invoke-virtual {v5, v6}, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->setIsBindSensorHub(Z)V
+
+    iget-object v5, p0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->cInfo:Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
+
+    invoke-virtual {v5, v2}, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->setWeightBinded(Z)V
+
+    if-ne v3, v4, :cond_0
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->ac()Ljava/lang/String;
 
     move-result-object v2
 
@@ -750,10 +774,10 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/u;->o(Ljava/lang/String;)V
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/x;->p(Ljava/lang/String;)V
 
     :cond_1
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->ac()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->ac()Ljava/lang/String;
 
     move-result-object v2
 
@@ -761,7 +785,7 @@
 
     move-result-object v2
 
-    const-string v4, "LuaEvent"
+    const-string v3, "LuaEvent"
 
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -773,25 +797,25 @@
 
     move-result-object v5
 
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v4
 
     const-string v5, ", lastWelcomDay = "
 
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v4
 
     const-string v5, ", delta day= "
 
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v4
 
     new-instance v5, Lcn/com/smartdevices/bracelet/model/SportDay;
 
@@ -805,15 +829,15 @@
 
     move-result v5
 
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
-    invoke-static {v4, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v3, Lcn/com/smartdevices/bracelet/model/SportDay;
 
@@ -836,7 +860,7 @@
     :goto_0
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->context:Landroid/content/Context;
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/y;->c(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/B;->m(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -844,7 +868,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->context:Landroid/content/Context;
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/y;->d(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/B;->n(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -907,11 +931,11 @@
 
     move-result-object v1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/l;->a()Lcn/com/smartdevices/bracelet/l;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/p;->a()Lcn/com/smartdevices/bracelet/p;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/l;->b()Lde/greenrobot/daobracelet/LuaListDao;
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/p;->b()Lde/greenrobot/daobracelet/LuaListDao;
 
     move-result-object v2
 
@@ -1023,11 +1047,11 @@
 
     move-result-object v1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/l;->a()Lcn/com/smartdevices/bracelet/l;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/p;->a()Lcn/com/smartdevices/bracelet/p;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/l;->b()Lde/greenrobot/daobracelet/LuaListDao;
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/p;->b()Lde/greenrobot/daobracelet/LuaListDao;
 
     move-result-object v2
 
@@ -1163,7 +1187,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->getInstance()Lcn/com/smartdevices/bracelet/lua/LuaManager;
 
@@ -1173,11 +1197,11 @@
 
     move-result-object v1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/l;->a()Lcn/com/smartdevices/bracelet/l;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/p;->a()Lcn/com/smartdevices/bracelet/p;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/l;->b()Lde/greenrobot/daobracelet/LuaListDao;
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/p;->b()Lde/greenrobot/daobracelet/LuaListDao;
 
     move-result-object v2
 
@@ -1198,58 +1222,6 @@
     invoke-virtual {v1, v2}, Lorg/keplerproject/luajava/LuaState;->pushJavaObject(Ljava/lang/Object;)V
 
     invoke-virtual {v1, p1}, Lorg/keplerproject/luajava/LuaState;->pushJavaObject(Ljava/lang/Object;)V
-
-    const/4 v1, 0x3
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->callLua(II)V
-
-    return-void
-.end method
-
-.method public testAction()V
-    .locals 6
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->getInstance()Lcn/com/smartdevices/bracelet/lua/LuaManager;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lua/LuaManager;->getLuaState()Lorg/keplerproject/luajava/LuaState;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->context:Landroid/content/Context;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/lua/LuaAction;->getInstance(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/lua/LuaAction;
-
-    move-result-object v2
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/l;->a()Lcn/com/smartdevices/bracelet/l;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/l;->b()Lde/greenrobot/daobracelet/LuaListDao;
-
-    move-result-object v3
-
-    sget-object v4, Lorg/keplerproject/luajava/LuaState;->LUA_GLOBALSINDEX:Ljava/lang/Integer;
-
-    invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
-
-    move-result v4
-
-    const-string v5, "doAction2"
-
-    invoke-virtual {v1, v4, v5}, Lorg/keplerproject/luajava/LuaState;->getField(ILjava/lang/String;)V
-
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->context:Landroid/content/Context;
-
-    invoke-virtual {v1, v4}, Lorg/keplerproject/luajava/LuaState;->pushJavaObject(Ljava/lang/Object;)V
-
-    invoke-virtual {v1, v2}, Lorg/keplerproject/luajava/LuaState;->pushJavaObject(Ljava/lang/Object;)V
-
-    invoke-virtual {v1, v3}, Lorg/keplerproject/luajava/LuaState;->pushJavaObject(Ljava/lang/Object;)V
 
     const/4 v1, 0x3
 
@@ -1293,11 +1265,11 @@
 
     move-result-object v1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/l;->a()Lcn/com/smartdevices/bracelet/l;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/p;->a()Lcn/com/smartdevices/bracelet/p;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/l;->b()Lde/greenrobot/daobracelet/LuaListDao;
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/p;->b()Lde/greenrobot/daobracelet/LuaListDao;
 
     move-result-object v2
 

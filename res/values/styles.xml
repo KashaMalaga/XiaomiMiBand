@@ -33,15 +33,15 @@
         <item name="android:windowEnterAnimation">@anim/fw_in</item>
         <item name="android:windowExitAnimation">@anim/fw_out</item>
     </style>
+    <style name="WeightSelectAnim" parent="@android:style/Animation.Translucent">
+        <item name="android:windowEnterAnimation">@anim/fw_in</item>
+        <item name="android:windowExitAnimation">@anim/fw_out</item>
+    </style>
     <style name="NoneTransition">
         <item name="android:windowEnterAnimation">@null</item>
         <item name="android:windowExitAnimation">@null</item>
     </style>
-    <style name="MainActivityStyle" parent="@style/AppTheme">
-        <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowEnterAnimation">@null</item>
-        <item name="android:windowExitAnimation">@null</item>
-    </style>
+    <style name="MainActivityStyle" parent="@style/AppTheme" />
     <style name="MenuPanel" parent="@style/DimPanel">
         <item name="android:windowAnimationStyle">@style/Menu</item>
     </style>
@@ -126,6 +126,11 @@
         <item name="android:windowAnimationStyle">@style/FwUpgradeAnim</item>
         <item name="android:windowFullscreen">true</item>
     </style>
+    <style name="WeightSelectTheme" parent="@style/AppTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
     <style name="ListItemTitleText">
         <item name="android:textSize">@dimen/main_ui_item_title_size</item>
         <item name="android:textColor">@color/main_ui_title_color</item>
@@ -160,7 +165,7 @@
     </style>
     <style name="SportVoteItemText">
         <item name="android:textSize">13.299988sp</item>
-        <item name="android:textColor">#ff737373</item>
+        <item name="android:textColor">@color/sport_vote_text</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -168,9 +173,6 @@
         <item name="android:layout_marginBottom">13.0dip</item>
         <item name="android:singleLine">true</item>
         <item name="android:layout_centerHorizontal">true</item>
-    </style>
-    <style name="Switcher" parent="@android:style/Widget.CompoundButton.CheckBox">
-        <item name="android:button">@drawable/switch_selector</item>
     </style>
     <style name="RunningDetailValue">
         <item name="android:textSize">20.0sp</item>

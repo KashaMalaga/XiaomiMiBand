@@ -264,7 +264,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->a(Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/xiaomi/push/service/U;->m:Lcom/xiaomi/push/service/W;
 
@@ -275,7 +275,7 @@
 
     const-string v0, "status changed while the client dispatcher is missing"
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->c(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->c(Ljava/lang/String;)V
 
     :cond_2
     :goto_1

@@ -81,7 +81,7 @@
 .end method
 
 .method public containsKey(J)Z
-    .locals 5
+    .locals 3
 
     const/16 v0, 0x20
 
@@ -108,9 +108,9 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    iget-wide v2, v0, Lde/greenrobot/dao/internal/LongHashMap$Entry;->key:J
+    iget-wide v1, v0, Lde/greenrobot/dao/internal/LongHashMap$Entry;->key:J
 
-    cmp-long v1, v2, p1
+    cmp-long v1, v1, p1
 
     if-nez v1, :cond_0
 
@@ -131,7 +131,7 @@
 .end method
 
 .method public get(J)Ljava/lang/Object;
-    .locals 5
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(J)TT;"
@@ -163,9 +163,9 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    iget-wide v2, v0, Lde/greenrobot/dao/internal/LongHashMap$Entry;->key:J
+    iget-wide v1, v0, Lde/greenrobot/dao/internal/LongHashMap$Entry;->key:J
 
-    cmp-long v1, v2, p1
+    cmp-long v1, v1, p1
 
     if-nez v1, :cond_0
 
@@ -310,7 +310,7 @@
 .end method
 
 .method public put(JLjava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+    .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(JTT;)TT;"
@@ -344,9 +344,9 @@
     :goto_0
     if-eqz v1, :cond_1
 
-    iget-wide v4, v1, Lde/greenrobot/dao/internal/LongHashMap$Entry;->key:J
+    iget-wide v3, v1, Lde/greenrobot/dao/internal/LongHashMap$Entry;->key:J
 
-    cmp-long v3, v4, p1
+    cmp-long v3, v3, p1
 
     if-nez v3, :cond_0
 
@@ -396,7 +396,7 @@
 .end method
 
 .method public remove(J)Ljava/lang/Object;
-    .locals 9
+    .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(J)TT;"
@@ -407,9 +407,9 @@
 
     const/16 v1, 0x20
 
-    ushr-long v2, p1, v1
+    ushr-long v1, p1, v1
 
-    long-to-int v1, v2
+    long-to-int v1, v1
 
     long-to-int v2, p1
 
@@ -434,9 +434,9 @@
 
     iget-object v2, v1, Lde/greenrobot/dao/internal/LongHashMap$Entry;->next:Lde/greenrobot/dao/internal/LongHashMap$Entry;
 
-    iget-wide v6, v1, Lde/greenrobot/dao/internal/LongHashMap$Entry;->key:J
+    iget-wide v5, v1, Lde/greenrobot/dao/internal/LongHashMap$Entry;->key:J
 
-    cmp-long v5, v6, p1
+    cmp-long v5, v5, p1
 
     if-nez v5, :cond_2
 
@@ -484,7 +484,7 @@
 .end method
 
 .method public setCapacity(I)V
-    .locals 10
+    .locals 9
 
     new-array v3, p1, [Lde/greenrobot/dao/internal/LongHashMap$Entry;
 
@@ -506,15 +506,15 @@
     :goto_1
     if-eqz v0, :cond_0
 
-    iget-wide v6, v0, Lde/greenrobot/dao/internal/LongHashMap$Entry;->key:J
+    iget-wide v5, v0, Lde/greenrobot/dao/internal/LongHashMap$Entry;->key:J
 
     const/16 v1, 0x20
 
-    ushr-long v8, v6, v1
+    ushr-long v7, v5, v1
 
-    long-to-int v1, v8
+    long-to-int v1, v7
 
-    long-to-int v5, v6
+    long-to-int v5, v5
 
     xor-int/2addr v1, v5
 

@@ -135,7 +135,13 @@
 
     move-result-object v0
 
-    const-string v1, "\'STOP\' TEXT);"
+    const-string v1, "\'STOP\' TEXT,"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "\'EXPIRE_TIME\' TEXT);"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -351,6 +357,17 @@
     invoke-virtual {p1, v1, v0}, Landroid/database/sqlite/SQLiteStatement;->bindString(ILjava/lang/String;)V
 
     :cond_c
+    invoke-virtual {p2}, Lde/greenrobot/daobracelet/LuaList;->getExpireTime()Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_d
+
+    const/16 v1, 0xe
+
+    invoke-virtual {p1, v1, v0}, Landroid/database/sqlite/SQLiteStatement;->bindString(ILjava/lang/String;)V
+
+    :cond_d
     return-void
 .end method
 
@@ -403,277 +420,353 @@
 .end method
 
 .method public readEntity(Landroid/database/Cursor;I)Lde/greenrobot/daobracelet/LuaList;
-    .locals 14
+    .locals 16
 
-    new-instance v0, Lde/greenrobot/daobracelet/LuaList;
+    new-instance v1, Lde/greenrobot/daobracelet/LuaList;
 
-    add-int/lit8 v1, p2, 0x0
+    add-int/lit8 v2, p2, 0x0
 
-    invoke-interface {p1, v1}, Landroid/database/Cursor;->isNull(I)Z
+    move-object/from16 v0, p1
 
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    add-int/lit8 v2, p2, 0x1
-
-    invoke-interface {p1, v2}, Landroid/database/Cursor;->isNull(I)Z
+    invoke-interface {v0, v2}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v2
 
-    if-eqz v2, :cond_1
+    if-eqz v2, :cond_0
 
     const/4 v2, 0x0
 
-    :goto_1
-    add-int/lit8 v3, p2, 0x2
+    :goto_0
+    add-int/lit8 v3, p2, 0x1
 
-    invoke-interface {p1, v3}, Landroid/database/Cursor;->isNull(I)Z
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v3}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v3
 
-    if-eqz v3, :cond_2
+    if-eqz v3, :cond_1
 
     const/4 v3, 0x0
 
-    :goto_2
-    add-int/lit8 v4, p2, 0x3
+    :goto_1
+    add-int/lit8 v4, p2, 0x2
 
-    invoke-interface {p1, v4}, Landroid/database/Cursor;->isNull(I)Z
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v4}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v4
 
-    if-eqz v4, :cond_3
+    if-eqz v4, :cond_2
 
     const/4 v4, 0x0
 
-    :goto_3
-    add-int/lit8 v5, p2, 0x4
+    :goto_2
+    add-int/lit8 v5, p2, 0x3
 
-    invoke-interface {p1, v5}, Landroid/database/Cursor;->isNull(I)Z
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v5}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v5
 
-    if-eqz v5, :cond_4
+    if-eqz v5, :cond_3
 
     const/4 v5, 0x0
 
-    :goto_4
-    add-int/lit8 v6, p2, 0x5
+    :goto_3
+    add-int/lit8 v6, p2, 0x4
 
-    invoke-interface {p1, v6}, Landroid/database/Cursor;->isNull(I)Z
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v6}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v6
 
-    if-eqz v6, :cond_5
+    if-eqz v6, :cond_4
 
     const/4 v6, 0x0
 
-    :goto_5
-    add-int/lit8 v7, p2, 0x6
+    :goto_4
+    add-int/lit8 v7, p2, 0x5
 
-    invoke-interface {p1, v7}, Landroid/database/Cursor;->isNull(I)Z
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v7}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v7
 
-    if-eqz v7, :cond_6
+    if-eqz v7, :cond_5
 
     const/4 v7, 0x0
 
-    :goto_6
-    add-int/lit8 v8, p2, 0x7
+    :goto_5
+    add-int/lit8 v8, p2, 0x6
 
-    invoke-interface {p1, v8}, Landroid/database/Cursor;->isNull(I)Z
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v8}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v8
 
-    if-eqz v8, :cond_7
+    if-eqz v8, :cond_6
 
     const/4 v8, 0x0
 
-    :goto_7
-    add-int/lit8 v9, p2, 0x8
+    :goto_6
+    add-int/lit8 v9, p2, 0x7
 
-    invoke-interface {p1, v9}, Landroid/database/Cursor;->isNull(I)Z
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v9}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v9
 
-    if-eqz v9, :cond_8
+    if-eqz v9, :cond_7
 
     const/4 v9, 0x0
 
-    :goto_8
-    add-int/lit8 v10, p2, 0x9
+    :goto_7
+    add-int/lit8 v10, p2, 0x8
 
-    invoke-interface {p1, v10}, Landroid/database/Cursor;->isNull(I)Z
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v10}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v10
 
-    if-eqz v10, :cond_9
+    if-eqz v10, :cond_8
 
     const/4 v10, 0x0
 
-    :goto_9
-    add-int/lit8 v11, p2, 0xa
+    :goto_8
+    add-int/lit8 v11, p2, 0x9
 
-    invoke-interface {p1, v11}, Landroid/database/Cursor;->isNull(I)Z
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v11}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v11
 
-    if-eqz v11, :cond_a
+    if-eqz v11, :cond_9
 
     const/4 v11, 0x0
 
-    :goto_a
-    add-int/lit8 v12, p2, 0xb
+    :goto_9
+    add-int/lit8 v12, p2, 0xa
 
-    invoke-interface {p1, v12}, Landroid/database/Cursor;->isNull(I)Z
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v12}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v12
 
-    if-eqz v12, :cond_b
+    if-eqz v12, :cond_a
 
     const/4 v12, 0x0
 
-    :goto_b
-    add-int/lit8 v13, p2, 0xc
+    :goto_a
+    add-int/lit8 v13, p2, 0xb
 
-    invoke-interface {p1, v13}, Landroid/database/Cursor;->isNull(I)Z
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v13}, Landroid/database/Cursor;->isNull(I)Z
 
     move-result v13
 
-    if-eqz v13, :cond_c
+    if-eqz v13, :cond_b
 
     const/4 v13, 0x0
 
-    :goto_c
-    invoke-direct/range {v0 .. v13}, Lde/greenrobot/daobracelet/LuaList;-><init>(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    :goto_b
+    add-int/lit8 v14, p2, 0xc
 
-    return-object v0
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v14}, Landroid/database/Cursor;->isNull(I)Z
+
+    move-result v14
+
+    if-eqz v14, :cond_c
+
+    const/4 v14, 0x0
+
+    :goto_c
+    add-int/lit8 v15, p2, 0xd
+
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v15}, Landroid/database/Cursor;->isNull(I)Z
+
+    move-result v15
+
+    if-eqz v15, :cond_d
+
+    const/4 v15, 0x0
+
+    :goto_d
+    invoke-direct/range {v1 .. v15}, Lde/greenrobot/daobracelet/LuaList;-><init>(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v1
 
     :cond_0
-    add-int/lit8 v1, p2, 0x0
+    add-int/lit8 v2, p2, 0x0
 
-    invoke-interface {p1, v1}, Landroid/database/Cursor;->getLong(I)J
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v2}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v2
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v1
-
-    goto :goto_0
-
-    :cond_1
-    add-int/lit8 v2, p2, 0x1
-
-    invoke-interface {p1, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
     move-result-object v2
 
-    goto :goto_1
+    goto/16 :goto_0
 
-    :cond_2
-    add-int/lit8 v3, p2, 0x2
+    :cond_1
+    add-int/lit8 v3, p2, 0x1
 
-    invoke-interface {p1, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    goto :goto_2
+    goto/16 :goto_1
 
-    :cond_3
-    add-int/lit8 v4, p2, 0x3
+    :cond_2
+    add-int/lit8 v4, p2, 0x2
 
-    invoke-interface {p1, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
-    goto :goto_3
+    goto/16 :goto_2
 
-    :cond_4
-    add-int/lit8 v5, p2, 0x4
+    :cond_3
+    add-int/lit8 v5, p2, 0x3
 
-    invoke-interface {p1, v5}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v5}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
-    goto :goto_4
+    goto/16 :goto_3
 
-    :cond_5
-    add-int/lit8 v6, p2, 0x5
+    :cond_4
+    add-int/lit8 v6, p2, 0x4
 
-    invoke-interface {p1, v6}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v6}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v6
 
-    goto :goto_5
+    goto/16 :goto_4
 
-    :cond_6
-    add-int/lit8 v7, p2, 0x6
+    :cond_5
+    add-int/lit8 v7, p2, 0x5
 
-    invoke-interface {p1, v7}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v7}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v7
 
-    goto :goto_6
+    goto/16 :goto_5
 
-    :cond_7
-    add-int/lit8 v8, p2, 0x7
+    :cond_6
+    add-int/lit8 v8, p2, 0x6
 
-    invoke-interface {p1, v8}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v8}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
-    goto :goto_7
+    goto/16 :goto_6
 
-    :cond_8
-    add-int/lit8 v9, p2, 0x8
+    :cond_7
+    add-int/lit8 v9, p2, 0x7
 
-    invoke-interface {p1, v9}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v9}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v9
 
-    goto :goto_8
+    goto/16 :goto_7
 
-    :cond_9
-    add-int/lit8 v10, p2, 0x9
+    :cond_8
+    add-int/lit8 v10, p2, 0x8
 
-    invoke-interface {p1, v10}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v10}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v10
 
-    goto :goto_9
+    goto/16 :goto_8
 
-    :cond_a
-    add-int/lit8 v11, p2, 0xa
+    :cond_9
+    add-int/lit8 v11, p2, 0x9
 
-    invoke-interface {p1, v11}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v11}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v11
 
-    goto :goto_a
+    goto/16 :goto_9
 
-    :cond_b
-    add-int/lit8 v12, p2, 0xb
+    :cond_a
+    add-int/lit8 v12, p2, 0xa
 
-    invoke-interface {p1, v12}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v12}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v12
 
-    goto :goto_b
+    goto/16 :goto_a
 
-    :cond_c
-    add-int/lit8 v13, p2, 0xc
+    :cond_b
+    add-int/lit8 v13, p2, 0xb
 
-    invoke-interface {p1, v13}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v13}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v13
 
-    goto :goto_c
+    goto/16 :goto_b
+
+    :cond_c
+    add-int/lit8 v14, p2, 0xc
+
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v14}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v14
+
+    goto/16 :goto_c
+
+    :cond_d
+    add-int/lit8 v15, p2, 0xd
+
+    move-object/from16 v0, p1
+
+    invoke-interface {v0, v15}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v15
+
+    goto/16 :goto_d
 .end method
 
 .method public bridge synthetic readEntity(Landroid/database/Cursor;I)Ljava/lang/Object;
@@ -855,8 +948,21 @@
 
     if-eqz v0, :cond_c
 
+    move-object v0, v1
+
     :goto_c
-    invoke-virtual {p2, v1}, Lde/greenrobot/daobracelet/LuaList;->setStop(Ljava/lang/String;)V
+    invoke-virtual {p2, v0}, Lde/greenrobot/daobracelet/LuaList;->setStop(Ljava/lang/String;)V
+
+    add-int/lit8 v0, p3, 0xd
+
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->isNull(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_d
+
+    :goto_d
+    invoke-virtual {p2, v1}, Lde/greenrobot/daobracelet/LuaList;->setExpireTime(Ljava/lang/String;)V
 
     return-void
 
@@ -943,7 +1049,7 @@
 
     move-result-object v0
 
-    goto :goto_8
+    goto/16 :goto_8
 
     :cond_9
     add-int/lit8 v0, p3, 0x9
@@ -952,7 +1058,7 @@
 
     move-result-object v0
 
-    goto :goto_9
+    goto/16 :goto_9
 
     :cond_a
     add-int/lit8 v0, p3, 0xa
@@ -961,7 +1067,7 @@
 
     move-result-object v0
 
-    goto :goto_a
+    goto/16 :goto_a
 
     :cond_b
     add-int/lit8 v0, p3, 0xb
@@ -977,9 +1083,18 @@
 
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
     goto :goto_c
+
+    :cond_d
+    add-int/lit8 v0, p3, 0xd
+
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_d
 .end method
 
 .method public bridge synthetic readEntity(Landroid/database/Cursor;Ljava/lang/Object;I)V
@@ -1033,7 +1148,7 @@
 .end method
 
 .method protected updateKeyAfterInsert(Lde/greenrobot/daobracelet/LuaList;J)Ljava/lang/Long;
-    .locals 2
+    .locals 1
 
     invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -1049,7 +1164,7 @@
 .end method
 
 .method protected bridge synthetic updateKeyAfterInsert(Ljava/lang/Object;J)Ljava/lang/Object;
-    .locals 2
+    .locals 1
 
     check-cast p1, Lde/greenrobot/daobracelet/LuaList;
 

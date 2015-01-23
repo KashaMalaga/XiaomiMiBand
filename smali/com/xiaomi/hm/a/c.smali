@@ -3,7 +3,9 @@
 
 
 # static fields
-.field public static final a:Ljava/lang/String; = "com.xiaomi.hm.health.permission.MIPUSH_RECEIVE"
+.field public static final a:Ljava/lang/String; = "com.xiaomi.hm.health.permission.CONFIG"
+
+.field public static final b:Ljava/lang/String; = "com.xiaomi.hm.health.permission.MIPUSH_RECEIVE"
 
 
 # direct methods

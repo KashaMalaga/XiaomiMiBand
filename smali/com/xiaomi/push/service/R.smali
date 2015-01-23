@@ -47,7 +47,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/xiaomi/b/a/b/c;->a(Ljava/lang/String;)V
 
     invoke-static {v0}, Lcom/xiaomi/push/service/Q;->a(Ljava/lang/String;)V
 
@@ -81,7 +81,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/xiaomi/b/a/b/c;->a(Ljava/lang/String;)V
 
     invoke-virtual {v0}, Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;
 
@@ -98,7 +98,7 @@
     :cond_0
     const-string v0, "Network Checkup: cannot get gateway"
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->a(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -107,7 +107,7 @@
 
     const-string v0, "Network Checkup: cannot resolve the host www.baidu.com"
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->a(Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -132,7 +132,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->a(Ljava/lang/String;)V
 
     goto :goto_1
 .end method

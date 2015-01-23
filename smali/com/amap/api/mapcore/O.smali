@@ -257,9 +257,9 @@
 .end method
 
 .method public b()V
-    .locals 9
+    .locals 8
 
-    const/high16 v8, 0x40000000
+    const/high16 v7, 0x40000000
 
     :try_start_0
     iget-object v0, p0, Lcom/amap/api/mapcore/o;->e:Lcom/amap/api/mapcore/v;
@@ -298,7 +298,7 @@
 
     int-to-float v3, v3
 
-    div-float/2addr v3, v8
+    div-float/2addr v3, v7
 
     iget-object v4, p0, Lcom/amap/api/mapcore/o;->d:Landroid/widget/ImageView;
 
@@ -316,27 +316,27 @@
 
     int-to-float v4, v4
 
-    div-float/2addr v4, v8
+    div-float/2addr v4, v7
 
     invoke-virtual {v2, v1, v3, v4}, Landroid/graphics/Matrix;->postRotate(FFF)Z
 
     const/high16 v1, 0x3f800000
 
-    float-to-double v4, v0
+    float-to-double v3, v0
 
-    const-wide v6, 0x400921fb54442d18L
+    const-wide v5, 0x400921fb54442d18L
 
-    mul-double/2addr v4, v6
+    mul-double/2addr v3, v5
 
-    const-wide v6, 0x4066800000000000L
+    const-wide v5, 0x4066800000000000L
 
-    div-double/2addr v4, v6
+    div-double/2addr v3, v5
 
-    invoke-static {v4, v5}, Ljava/lang/Math;->cos(D)D
+    invoke-static {v3, v4}, Ljava/lang/Math;->cos(D)D
 
-    move-result-wide v4
+    move-result-wide v3
 
-    double-to-float v0, v4
+    double-to-float v0, v3
 
     iget-object v3, p0, Lcom/amap/api/mapcore/o;->d:Landroid/widget/ImageView;
 
@@ -354,7 +354,7 @@
 
     int-to-float v3, v3
 
-    div-float/2addr v3, v8
+    div-float/2addr v3, v7
 
     iget-object v4, p0, Lcom/amap/api/mapcore/o;->d:Landroid/widget/ImageView;
 
@@ -372,7 +372,7 @@
 
     int-to-float v4, v4
 
-    div-float/2addr v4, v8
+    div-float/2addr v4, v7
 
     invoke-virtual {v2, v1, v0, v3, v4}, Landroid/graphics/Matrix;->postScale(FFFF)Z
 

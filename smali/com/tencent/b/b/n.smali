@@ -260,7 +260,7 @@
 .end method
 
 .method static synthetic a(Lcom/tencent/b/b/n;J)J
-    .locals 1
+    .locals 0
 
     iput-wide p1, p0, Lcom/tencent/b/b/n;->M:J
 
@@ -507,29 +507,29 @@
 
     invoke-virtual {p1}, Landroid/location/Location;->getLatitude()D
 
-    move-result-wide v2
+    move-result-wide v1
 
-    const/4 v1, 0x6
+    const/4 v3, 0x6
 
-    invoke-static {v2, v3, v1}, Lcom/tencent/b/b/s;->a(DI)D
+    invoke-static {v1, v2, v3}, Lcom/tencent/b/b/s;->a(DI)D
 
-    move-result-wide v2
+    move-result-wide v1
 
-    iput-wide v2, v0, Lcom/tencent/b/a/a/d;->b:D
+    iput-wide v1, v0, Lcom/tencent/b/a/a/d;->b:D
 
     iget-object v0, p0, Lcom/tencent/b/b/n;->z:Lcom/tencent/b/a/a/d;
 
     invoke-virtual {p1}, Landroid/location/Location;->getLongitude()D
 
-    move-result-wide v2
+    move-result-wide v1
 
-    const/4 v1, 0x6
+    const/4 v3, 0x6
 
-    invoke-static {v2, v3, v1}, Lcom/tencent/b/b/s;->a(DI)D
+    invoke-static {v1, v2, v3}, Lcom/tencent/b/b/s;->a(DI)D
 
-    move-result-wide v2
+    move-result-wide v1
 
-    iput-wide v2, v0, Lcom/tencent/b/a/a/d;->c:D
+    iput-wide v1, v0, Lcom/tencent/b/a/a/d;->c:D
 
     iget-object v0, p0, Lcom/tencent/b/b/n;->w:Lcom/tencent/b/b/e$a;
 
@@ -555,13 +555,13 @@
 
     move-result v1
 
-    float-to-double v2, v1
+    float-to-double v1, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/b/b/s;->a(DI)D
+    invoke-static {v1, v2, v4}, Lcom/tencent/b/b/s;->a(DI)D
 
-    move-result-wide v2
+    move-result-wide v1
 
-    iput-wide v2, v0, Lcom/tencent/b/a/a/d;->e:D
+    iput-wide v1, v0, Lcom/tencent/b/a/a/d;->e:D
 
     iget-object v0, p0, Lcom/tencent/b/b/n;->z:Lcom/tencent/b/a/a/d;
 
@@ -573,13 +573,13 @@
 
     invoke-virtual {v1}, Landroid/location/Location;->getAltitude()D
 
-    move-result-wide v2
+    move-result-wide v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/b/b/s;->a(DI)D
+    invoke-static {v1, v2, v4}, Lcom/tencent/b/b/s;->a(DI)D
 
-    move-result-wide v2
+    move-result-wide v1
 
-    iput-wide v2, v0, Lcom/tencent/b/a/a/d;->d:D
+    iput-wide v1, v0, Lcom/tencent/b/a/a/d;->d:D
 
     iget-object v0, p0, Lcom/tencent/b/b/n;->z:Lcom/tencent/b/a/a/d;
 
@@ -593,13 +593,13 @@
 
     move-result v1
 
-    float-to-double v2, v1
+    float-to-double v1, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/b/b/s;->a(DI)D
+    invoke-static {v1, v2, v4}, Lcom/tencent/b/b/s;->a(DI)D
 
-    move-result-wide v2
+    move-result-wide v1
 
-    iput-wide v2, v0, Lcom/tencent/b/a/a/d;->f:D
+    iput-wide v1, v0, Lcom/tencent/b/a/a/d;->f:D
 
     iget-object v0, p0, Lcom/tencent/b/b/n;->z:Lcom/tencent/b/a/a/d;
 
@@ -613,13 +613,13 @@
 
     move-result v1
 
-    float-to-double v2, v1
+    float-to-double v1, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/b/b/s;->a(DI)D
+    invoke-static {v1, v2, v4}, Lcom/tencent/b/b/s;->a(DI)D
 
-    move-result-wide v2
+    move-result-wide v1
 
-    iput-wide v2, v0, Lcom/tencent/b/a/a/d;->g:D
+    iput-wide v1, v0, Lcom/tencent/b/a/a/d;->g:D
 
     iget-object v0, p0, Lcom/tencent/b/b/n;->z:Lcom/tencent/b/a/a/d;
 
@@ -1008,7 +1008,7 @@
 .end method
 
 .method static synthetic a(Lcom/tencent/b/b/n;Lcom/tencent/b/b/e$a;)V
-    .locals 7
+    .locals 6
 
     const/4 v1, 0x1
 
@@ -1056,33 +1056,33 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/tencent/b/b/n;->i:Lcom/tencent/b/b/b;
+    iget-object v0, p0, Lcom/tencent/b/b/n;->i:Lcom/tencent/b/b/b;
 
-    iget-object v0, p0, Lcom/tencent/b/b/n;->w:Lcom/tencent/b/b/e$a;
+    iget-object v1, p0, Lcom/tencent/b/b/n;->w:Lcom/tencent/b/b/e$a;
 
-    invoke-virtual {v0}, Lcom/tencent/b/b/e$a;->b()Landroid/location/Location;
+    invoke-virtual {v1}, Lcom/tencent/b/b/e$a;->b()Landroid/location/Location;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Landroid/location/Location;->getLatitude()D
+    invoke-virtual {v1}, Landroid/location/Location;->getLatitude()D
 
-    move-result-wide v2
+    move-result-wide v1
 
-    iget-object v0, p0, Lcom/tencent/b/b/n;->w:Lcom/tencent/b/b/e$a;
+    iget-object v3, p0, Lcom/tencent/b/b/n;->w:Lcom/tencent/b/b/e$a;
 
-    invoke-virtual {v0}, Lcom/tencent/b/b/e$a;->b()Landroid/location/Location;
+    invoke-virtual {v3}, Lcom/tencent/b/b/e$a;->b()Landroid/location/Location;
 
-    move-result-object v0
+    move-result-object v3
 
-    invoke-virtual {v0}, Landroid/location/Location;->getLongitude()D
+    invoke-virtual {v3}, Landroid/location/Location;->getLongitude()D
 
-    move-result-wide v4
+    move-result-wide v3
 
-    iget-object v0, p0, Lcom/tencent/b/b/n;->b:Landroid/content/Context;
+    iget-object v5, p0, Lcom/tencent/b/b/n;->b:Landroid/content/Context;
 
-    move-object v6, p0
+    move-object v5, p0
 
-    invoke-virtual/range {v1 .. v6}, Lcom/tencent/b/b/b;->a(DDLcom/tencent/b/b/b$a;)V
+    invoke-virtual/range {v0 .. v5}, Lcom/tencent/b/b/b;->a(DDLcom/tencent/b/b/b$a;)V
 
     goto :goto_0
 .end method
@@ -1127,9 +1127,9 @@
 
     iget-object v0, p0, Lcom/tencent/b/b/n;->e:Lcom/tencent/b/b/f;
 
-    const-wide/16 v2, 0x0
+    const-wide/16 v1, 0x0
 
-    invoke-virtual {v0, v2, v3}, Lcom/tencent/b/b/f;->a(J)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/b/b/f;->a(J)V
 
     :goto_0
     return-void
@@ -1446,15 +1446,15 @@
 
     invoke-virtual {v0, v5}, Lorg/json/JSONObject;->getDouble(Ljava/lang/String;)D
 
-    move-result-wide v6
+    move-result-wide v5
 
-    const/4 v5, 0x6
+    const/4 v7, 0x6
 
-    invoke-static {v6, v7, v5}, Lcom/tencent/b/b/s;->a(DI)D
+    invoke-static {v5, v6, v7}, Lcom/tencent/b/b/s;->a(DI)D
 
-    move-result-wide v6
+    move-result-wide v5
 
-    iput-wide v6, v4, Lcom/tencent/b/a/a/d;->b:D
+    iput-wide v5, v4, Lcom/tencent/b/a/a/d;->b:D
 
     iget-object v4, p0, Lcom/tencent/b/b/n;->z:Lcom/tencent/b/a/a/d;
 
@@ -1462,15 +1462,15 @@
 
     invoke-virtual {v0, v5}, Lorg/json/JSONObject;->getDouble(Ljava/lang/String;)D
 
-    move-result-wide v6
+    move-result-wide v5
 
-    const/4 v5, 0x6
+    const/4 v7, 0x6
 
-    invoke-static {v6, v7, v5}, Lcom/tencent/b/b/s;->a(DI)D
+    invoke-static {v5, v6, v7}, Lcom/tencent/b/b/s;->a(DI)D
 
-    move-result-wide v6
+    move-result-wide v5
 
-    iput-wide v6, v4, Lcom/tencent/b/a/a/d;->c:D
+    iput-wide v5, v4, Lcom/tencent/b/a/a/d;->c:D
 
     iget-object v4, p0, Lcom/tencent/b/b/n;->z:Lcom/tencent/b/a/a/d;
 
@@ -1478,15 +1478,15 @@
 
     invoke-virtual {v0, v5}, Lorg/json/JSONObject;->getDouble(Ljava/lang/String;)D
 
-    move-result-wide v6
+    move-result-wide v5
 
-    const/4 v5, 0x1
+    const/4 v7, 0x1
 
-    invoke-static {v6, v7, v5}, Lcom/tencent/b/b/s;->a(DI)D
+    invoke-static {v5, v6, v7}, Lcom/tencent/b/b/s;->a(DI)D
 
-    move-result-wide v6
+    move-result-wide v5
 
-    iput-wide v6, v4, Lcom/tencent/b/a/a/d;->d:D
+    iput-wide v5, v4, Lcom/tencent/b/a/a/d;->d:D
 
     iget-object v4, p0, Lcom/tencent/b/b/n;->z:Lcom/tencent/b/a/a/d;
 
@@ -1494,15 +1494,15 @@
 
     invoke-virtual {v0, v5}, Lorg/json/JSONObject;->getDouble(Ljava/lang/String;)D
 
-    move-result-wide v6
+    move-result-wide v5
 
     const/4 v0, 0x1
 
-    invoke-static {v6, v7, v0}, Lcom/tencent/b/b/s;->a(DI)D
+    invoke-static {v5, v6, v0}, Lcom/tencent/b/b/s;->a(DI)D
 
-    move-result-wide v6
+    move-result-wide v5
 
-    iput-wide v6, v4, Lcom/tencent/b/a/a/d;->e:D
+    iput-wide v5, v4, Lcom/tencent/b/a/a/d;->e:D
 
     iget-object v4, p0, Lcom/tencent/b/b/n;->z:Lcom/tencent/b/a/a/d;
 
@@ -1563,11 +1563,11 @@
 
     iget-object v5, p0, Lcom/tencent/b/b/n;->z:Lcom/tencent/b/a/a/d;
 
-    iget-wide v6, v5, Lcom/tencent/b/a/a/d;->e:D
+    iget-wide v5, v5, Lcom/tencent/b/a/a/d;->e:D
 
-    const/4 v5, 0x6
+    const/4 v7, 0x6
 
-    if-lt v1, v5, :cond_b
+    if-lt v1, v7, :cond_b
 
     const-wide/high16 v0, 0x4044000000000000L
 
@@ -1870,9 +1870,9 @@
     goto/16 :goto_0
 
     :cond_b
-    const/4 v5, 0x5
+    const/4 v7, 0x5
 
-    if-ne v1, v5, :cond_c
+    if-ne v1, v7, :cond_c
 
     const-wide/high16 v0, 0x404e000000000000L
 
@@ -1886,9 +1886,9 @@
     goto/16 :goto_1
 
     :cond_d
-    const/4 v5, 0x3
+    const/4 v7, 0x3
 
-    if-ne v1, v5, :cond_e
+    if-ne v1, v7, :cond_e
 
     const-wide v0, 0x4056800000000000L
 
@@ -1902,15 +1902,15 @@
     goto/16 :goto_1
 
     :cond_f
-    const/16 v5, -0x48
+    const/16 v7, -0x48
 
-    if-lt v0, v5, :cond_10
+    if-lt v0, v7, :cond_10
 
     if-nez v1, :cond_10
 
     const-wide v0, 0x3fdccccccccccccdL
 
-    mul-double/2addr v0, v6
+    mul-double/2addr v0, v5
 
     div-double/2addr v0, v8
 
@@ -1926,19 +1926,19 @@
     :cond_10
     const-wide/high16 v0, 0x4059000000000000L
 
-    cmpg-double v0, v6, v0
+    cmpg-double v0, v5, v0
 
     if-gtz v0, :cond_11
 
     const-wide/high16 v0, 0x3ff0000000000000L
 
-    sub-double v0, v6, v0
+    sub-double v0, v5, v0
 
     div-double/2addr v0, v8
 
-    const-wide/high16 v6, 0x3ff0000000000000L
+    const-wide/high16 v5, 0x3ff0000000000000L
 
-    add-double/2addr v0, v6
+    add-double/2addr v0, v5
 
     double-to-int v0, v0
 
@@ -1949,19 +1949,19 @@
     :cond_11
     const-wide/high16 v0, 0x4059000000000000L
 
-    cmpl-double v0, v6, v0
+    cmpl-double v0, v5, v0
 
     if-lez v0, :cond_12
 
     const-wide/high16 v0, 0x4089000000000000L
 
-    cmpg-double v0, v6, v0
+    cmpg-double v0, v5, v0
 
     if-gtz v0, :cond_12
 
     const-wide v0, 0x3feb333333333333L
 
-    mul-double/2addr v0, v6
+    mul-double/2addr v0, v5
 
     div-double/2addr v0, v8
 
@@ -1974,7 +1974,7 @@
     :cond_12
     const-wide v0, 0x3fe999999999999aL
 
-    mul-double/2addr v0, v6
+    mul-double/2addr v0, v5
 
     div-double/2addr v0, v8
 
@@ -2599,7 +2599,7 @@
 
 # virtual methods
 .method public final a(DD)V
-    .locals 5
+    .locals 4
 
     iget-object v1, p0, Lcom/tencent/b/b/n;->o:[B
 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@color/main_ui_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+<LinearLayout android:orientation="vertical" android:background="#fff6f6f6" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <include android:id="@id/title_back" layout="@layout/title_back" />
-    <ListView android:id="@id/lab_factory_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:cacheColorHint="#ff2f2f2f" android:divider="@null" android:dividerHeight="0.0dip" android:layout_below="@id/title_back" />
-</RelativeLayout>
+    <include layout="@layout/title_back" />
+    <ExpandableListView android:id="@id/list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:cacheColorHint="#ff2f2f2f" android:groupIndicator="@null" android:divider="@null" android:dividerHeight="0.0dip" />
+    <View android:background="@color/service_divider" android:layout_width="fill_parent" android:layout_height="1.0px" />
+</LinearLayout>

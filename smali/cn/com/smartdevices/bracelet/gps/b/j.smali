@@ -11,14 +11,14 @@
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;ILcn/com/smartdevices/bracelet/gps/b/u;)Lcn/com/smartdevices/bracelet/gps/b/r;
+.method public static a(Landroid/content/Context;ILcn/com/smartdevices/bracelet/gps/b/v;)Lcn/com/smartdevices/bracelet/gps/b/s;
     .locals 1
 
     packed-switch p1, :pswitch_data_0
 
     new-instance v0, Lcn/com/smartdevices/bracelet/gps/b/n;
 
-    invoke-direct {v0, p0, p2}, Lcn/com/smartdevices/bracelet/gps/b/n;-><init>(Landroid/content/Context;Lcn/com/smartdevices/bracelet/gps/b/u;)V
+    invoke-direct {v0, p0, p2}, Lcn/com/smartdevices/bracelet/gps/b/n;-><init>(Landroid/content/Context;Lcn/com/smartdevices/bracelet/gps/b/v;)V
 
     :goto_0
     return-object v0
@@ -26,7 +26,7 @@
     :pswitch_0
     new-instance v0, Lcn/com/smartdevices/bracelet/gps/b/n;
 
-    invoke-direct {v0, p0, p2}, Lcn/com/smartdevices/bracelet/gps/b/n;-><init>(Landroid/content/Context;Lcn/com/smartdevices/bracelet/gps/b/u;)V
+    invoke-direct {v0, p0, p2}, Lcn/com/smartdevices/bracelet/gps/b/n;-><init>(Landroid/content/Context;Lcn/com/smartdevices/bracelet/gps/b/v;)V
 
     goto :goto_0
 

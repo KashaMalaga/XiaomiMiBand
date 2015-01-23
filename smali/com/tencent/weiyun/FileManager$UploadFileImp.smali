@@ -461,9 +461,9 @@
 
     invoke-virtual {v0}, Ljava/io/File;->length()J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    iput-wide v2, p0, Lcom/tencent/weiyun/FileManager$UploadFileImp;->mFileSize:J
+    iput-wide v1, p0, Lcom/tencent/weiyun/FileManager$UploadFileImp;->mFileSize:J
 
     const/high16 v1, 0x80000
 

@@ -1,40 +1,93 @@
 .class Lcom/xiaomi/e/a/c;
-.super Ljava/util/HashMap;
+.super Ljava/lang/Object;
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/util/HashMap",
-        "<",
-        "Ljava/lang/String;",
-        "Ljava/lang/String;",
-        ">;"
-    }
-.end annotation
+# interfaces
+.implements Lcom/xiaomi/g/e/k;
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/String;
-
-.field final synthetic b:Lcom/xiaomi/e/a/b;
+.field final synthetic a:Lcom/xiaomi/e/a/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/xiaomi/e/a/b;Ljava/lang/String;)V
-    .locals 2
+.method constructor <init>(Lcom/xiaomi/e/a/a;)V
+    .locals 0
 
-    iput-object p1, p0, Lcom/xiaomi/e/a/c;->b:Lcom/xiaomi/e/a/b;
+    iput-object p1, p0, Lcom/xiaomi/e/a/c;->a:Lcom/xiaomi/e/a/a;
 
-    iput-object p2, p0, Lcom/xiaomi/e/a/c;->a:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
+    return-void
+.end method
 
-    const-string v0, "_client_id_"
 
-    iget-object v1, p0, Lcom/xiaomi/e/a/c;->a:Ljava/lang/String;
+# virtual methods
+.method public a(Ljava/lang/String;)V
+    .locals 3
 
-    invoke-virtual {p0, v0, v1}, Lcom/xiaomi/e/a/c;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v1, "SMACK "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/xiaomi/e/a/c;->a:Lcom/xiaomi/e/a/a;
+
+    invoke-static {v1}, Lcom/xiaomi/e/a/a;->a(Lcom/xiaomi/e/a/a;)Ljava/text/SimpleDateFormat;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/util/Date;
+
+    invoke-direct {v2}, Ljava/util/Date;-><init>()V
+
+    invoke-virtual {v1, v2}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " SENT ("
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/xiaomi/e/a/c;->a:Lcom/xiaomi/e/a/a;
+
+    invoke-static {v1}, Lcom/xiaomi/e/a/a;->b(Lcom/xiaomi/e/a/a;)Lcom/xiaomi/g/l;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "): "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->b(Ljava/lang/String;)V
 
     return-void
 .end method

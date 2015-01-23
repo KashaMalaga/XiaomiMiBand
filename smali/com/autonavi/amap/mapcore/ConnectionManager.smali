@@ -171,7 +171,7 @@
 .end method
 
 .method public run()V
-    .locals 6
+    .locals 5
 
     :goto_0
     iget-boolean v0, p0, Lcom/autonavi/amap/mapcore/ConnectionManager;->threadFlag:Z
@@ -235,15 +235,15 @@
     :cond_3
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    iget-wide v4, v0, Lcom/autonavi/amap/mapcore/MapLoader;->createtime:J
+    iget-wide v3, v0, Lcom/autonavi/amap/mapcore/MapLoader;->createtime:J
 
-    sub-long/2addr v2, v4
+    sub-long/2addr v1, v3
 
-    const-wide/16 v4, 0x32
+    const-wide/16 v3, 0x32
 
-    cmp-long v1, v2, v4
+    cmp-long v1, v1, v3
 
     if-lez v1, :cond_4
 
@@ -267,10 +267,10 @@
     goto :goto_1
 
     :cond_4
-    const-wide/16 v2, 0xa
+    const-wide/16 v1, 0xa
 
     :try_start_3
-    invoke-static {v2, v3}, Lcom/autonavi/amap/mapcore/ConnectionManager;->sleep(J)V
+    invoke-static {v1, v2}, Lcom/autonavi/amap/mapcore/ConnectionManager;->sleep(J)V
     :try_end_3
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_3
 

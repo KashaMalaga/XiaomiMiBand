@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <cn.com.smartdevices.bracelet.view.WeightProgressBar android:id="@id/weight_pb" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:orientation="horizontal" android:id="@id/weight_tv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:textSize="40.0sp" android:textColor="@android:color/white" android:id="@id/weight_value_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:fontFamily="miui-bold" />
+        <TextView android:textSize="12.0sp" android:textColor="#ffc1c3c5" android:id="@id/weight_unit_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/weight_value_tv" android:layout_alignBaseline="@id/weight_value_tv" />
+    </RelativeLayout>
+    <TextView android:textSize="12.0sp" android:textColor="#ff9da0a4" android:id="@id/weight_bmi_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/weight_tv" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="13.0sp" android:textColor="#ffe1e2e3" android:gravity="center" android:layout_gravity="center" android:id="@id/weight_tips_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:textAlignment="center" />
+</RelativeLayout>

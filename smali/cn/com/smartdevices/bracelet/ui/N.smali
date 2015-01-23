@@ -1,198 +1,83 @@
-.class Lcn/com/smartdevices/bracelet/ui/N;
-.super Landroid/os/Handler;
-
-
-# instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/M;
+.class public Lcn/com/smartdevices/bracelet/ui/N;
+.super Landroid/support/v13/app/h;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/M;)V
+.method public constructor <init>(Landroid/app/FragmentManager;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/N;->a:Lcn/com/smartdevices/bracelet/ui/M;
-
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+    invoke-direct {p0, p1}, Landroid/support/v13/app/h;-><init>(Landroid/app/FragmentManager;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public handleMessage(Landroid/os/Message;)V
-    .locals 3
+.method public a(I)Landroid/app/Fragment;
+    .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/N;->a:Lcn/com/smartdevices/bracelet/ui/M;
+    const/4 v0, 0x0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/N;->a:Lcn/com/smartdevices/bracelet/ui/M;
+    packed-switch p1, :pswitch_data_0
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/M;->a(Lcn/com/smartdevices/bracelet/ui/M;)Lcn/com/smartdevices/bracelet/o;
+    :goto_0
+    return-object v0
 
-    move-result-object v1
+    :pswitch_0
+    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->a()Z
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/o;->m()Lcn/com/smartdevices/bracelet/model/SportDay;
+    move-result v0
 
-    move-result-object v1
+    if-eqz v0, :cond_0
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/M;->a(Lcn/com/smartdevices/bracelet/ui/M;Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/SportDay;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/de;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/N;->a:Lcn/com/smartdevices/bracelet/ui/M;
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/de;-><init>()V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/N;->a:Lcn/com/smartdevices/bracelet/ui/M;
+    goto :goto_0
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/M;->a(Lcn/com/smartdevices/bracelet/ui/M;)Lcn/com/smartdevices/bracelet/o;
+    :cond_0
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/w;
 
-    move-result-object v1
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/w;-><init>()V
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/o;->l()Lcn/com/smartdevices/bracelet/model/SportDay;
+    goto :goto_0
 
-    move-result-object v1
+    :pswitch_1
+    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->c()Z
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/M;->b(Lcn/com/smartdevices/bracelet/ui/M;Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/SportDay;
+    move-result v0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/N;->a:Lcn/com/smartdevices/bracelet/ui/M;
+    if-eqz v0, :cond_1
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/N;->a:Lcn/com/smartdevices/bracelet/ui/M;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/dt;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/M;->b(Lcn/com/smartdevices/bracelet/ui/M;)Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/dt;-><init>()V
 
-    move-result-object v1
+    goto :goto_0
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/M;->c(Lcn/com/smartdevices/bracelet/ui/M;Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/SportDay;
+    :cond_1
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/x;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/N;->a:Lcn/com/smartdevices/bracelet/ui/M;
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/x;-><init>()V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/N;->a:Lcn/com/smartdevices/bracelet/ui/M;
+    goto :goto_0
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/M;->a(Lcn/com/smartdevices/bracelet/ui/M;)Lcn/com/smartdevices/bracelet/o;
+    nop
 
-    move-result-object v1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+.end method
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/o;->j()Lcn/com/smartdevices/bracelet/model/SportDay;
+.method public b()I
+    .locals 1
 
-    move-result-object v1
+    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->h()I
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/M;->d(Lcn/com/smartdevices/bracelet/ui/M;Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/SportDay;
+    move-result v0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/N;->a:Lcn/com/smartdevices/bracelet/ui/M;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/N;->a:Lcn/com/smartdevices/bracelet/ui/M;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/M;->a(Lcn/com/smartdevices/bracelet/ui/M;)Lcn/com/smartdevices/bracelet/o;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/o;->k()Lcn/com/smartdevices/bracelet/model/SportDay;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/M;->e(Lcn/com/smartdevices/bracelet/ui/M;Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/SportDay;
-
-    const-string v0, "Dynamic.Detail"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "Today : "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/N;->a:Lcn/com/smartdevices/bracelet/ui/M;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/M;->c(Lcn/com/smartdevices/bracelet/ui/M;)Lcn/com/smartdevices/bracelet/model/SportDay;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " , StartDay : "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/N;->a:Lcn/com/smartdevices/bracelet/ui/M;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/M;->d(Lcn/com/smartdevices/bracelet/ui/M;)Lcn/com/smartdevices/bracelet/model/SportDay;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " , StopDay : "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/N;->a:Lcn/com/smartdevices/bracelet/ui/M;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/M;->e(Lcn/com/smartdevices/bracelet/ui/M;)Lcn/com/smartdevices/bracelet/model/SportDay;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " , CurrentDay : "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/N;->a:Lcn/com/smartdevices/bracelet/ui/M;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/M;->f(Lcn/com/smartdevices/bracelet/ui/M;)Lcn/com/smartdevices/bracelet/model/SportDay;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/N;->a:Lcn/com/smartdevices/bracelet/ui/M;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/M;->g(Lcn/com/smartdevices/bracelet/ui/M;)Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->j()Lcn/com/smartdevices/bracelet/chart/b/d;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/b/d;->b()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/N;->a:Lcn/com/smartdevices/bracelet/ui/M;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/M;->g(Lcn/com/smartdevices/bracelet/ui/M;)Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->b()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/N;->a:Lcn/com/smartdevices/bracelet/ui/M;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/M;->g(Lcn/com/smartdevices/bracelet/ui/M;)Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->b(I)Lcn/com/smartdevices/bracelet/chart/b/e;
-
-    return-void
+    return v0
 .end method

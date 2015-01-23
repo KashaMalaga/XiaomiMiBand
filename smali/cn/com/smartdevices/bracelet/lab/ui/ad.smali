@@ -170,7 +170,7 @@
 
     sput-object v0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->e:Ljava/lang/String;
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/lab/n;->g:Ljava/lang/String;
+    sget-object v0, Lcn/com/smartdevices/bracelet/lab/o;->g:Ljava/lang/String;
 
     sput-object v0, Lcn/com/smartdevices/bracelet/lab/ui/ad;->f:Ljava/lang/String;
 

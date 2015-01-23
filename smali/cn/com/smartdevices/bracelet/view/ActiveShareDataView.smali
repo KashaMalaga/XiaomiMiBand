@@ -42,11 +42,11 @@
 
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    const v0, 0x7f030089
+    const v0, 0x7f0300b4
 
     invoke-static {p1, v0, p0}, Lcn/com/smartdevices/bracelet/view/ActiveShareDataView;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const v0, 0x7f0b0272
+    const v0, 0x7f08033b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/ActiveShareDataView;->findViewById(I)Landroid/view/View;
 
@@ -56,7 +56,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/ActiveShareDataView;->a:Lcn/com/smartdevices/bracelet/chart/DynamicShareChartView;
 
-    const v0, 0x7f0b026b
+    const v0, 0x7f080334
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/ActiveShareDataView;->findViewById(I)Landroid/view/View;
 
@@ -66,7 +66,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/ActiveShareDataView;->b:Landroid/widget/TextView;
 
-    const v0, 0x7f0b026d
+    const v0, 0x7f080336
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/ActiveShareDataView;->findViewById(I)Landroid/view/View;
 
@@ -76,7 +76,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/ActiveShareDataView;->c:Landroid/widget/TextView;
 
-    const v0, 0x7f0b0271
+    const v0, 0x7f08033a
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/ActiveShareDataView;->findViewById(I)Landroid/view/View;
 
@@ -86,7 +86,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/ActiveShareDataView;->d:Landroid/widget/TextView;
 
-    const v0, 0x7f0b0270
+    const v0, 0x7f080339
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/ActiveShareDataView;->findViewById(I)Landroid/view/View;
 
@@ -256,7 +256,7 @@
 
     aput-object v1, v0, v4
 
-    const v1, 0x7f0c0037
+    const v1, 0x7f070038
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -274,7 +274,7 @@
 
     aput-object v1, v0, v4
 
-    const v1, 0x7f0c0038
+    const v1, 0x7f070039
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

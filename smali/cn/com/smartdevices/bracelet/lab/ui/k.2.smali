@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/k;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/k;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,14 +22,12 @@
 
 
 # virtual methods
-.method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 2
+.method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/k;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/k;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;
 
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->b(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;Z)Z
+    invoke-static {v0, p2}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->a(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;Z)V
 
     return-void
 .end method

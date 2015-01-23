@@ -39,9 +39,9 @@
 
     new-instance v0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$UserInfo;
 
-    iget-wide v2, p1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->uid:J
+    iget-wide v1, p1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->uid:J
 
-    long-to-int v1, v2
+    long-to-int v1, v1
 
     iget v2, p1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->gender:I
 
@@ -55,7 +55,9 @@
 
     int-to-byte v4, v4
 
-    iget v5, p1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->weight:I
+    iget v5, p1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->weight:F
+
+    float-to-int v5, v5
 
     int-to-byte v5, v5
 

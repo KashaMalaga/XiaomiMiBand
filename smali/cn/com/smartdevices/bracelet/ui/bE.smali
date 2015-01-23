@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/bD;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/bD;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bE;->a:Lcn/com/smartdevices/bracelet/ui/bD;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bE;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,50 +22,24 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method public onClick(Landroid/view/View;)V
+    .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bE;->a:Lcn/com/smartdevices/bracelet/ui/bD;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bE;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/o;->a()Lcn/com/smartdevices/bracelet/o;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/o;->d()Lcn/com/smartdevices/bracelet/model/UserTotalSportData;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/bD;->a(Lcn/com/smartdevices/bracelet/ui/bD;Lcn/com/smartdevices/bracelet/model/UserTotalSportData;)Lcn/com/smartdevices/bracelet/model/UserTotalSportData;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bE;->a:Lcn/com/smartdevices/bracelet/ui/bD;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/bD;->getActivity()Landroid/app/Activity;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->g(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Lcn/com/smartdevices/bracelet/location/e;
 
     move-result-object v0
 
-    if-nez v0, :cond_0
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/location/e;->d()V
 
-    const-string v0, "PersonInfoFragment"
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bE;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    const-string v1, "getActivity is null"
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->g(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Lcn/com/smartdevices/bracelet/location/e;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v0
 
-    :goto_0
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/location/e;->c()V
+
     return-void
-
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bE;->a:Lcn/com/smartdevices/bracelet/ui/bD;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/bD;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bF;
-
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/bF;-><init>(Lcn/com/smartdevices/bracelet/ui/bE;)V
-
-    invoke-virtual {v0, v1}, Landroid/app/Activity;->runOnUiThread(Ljava/lang/Runnable;)V
-
-    goto :goto_0
 .end method

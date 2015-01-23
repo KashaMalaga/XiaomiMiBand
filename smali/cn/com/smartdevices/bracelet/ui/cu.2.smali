@@ -1,168 +1,132 @@
 .class Lcn/com/smartdevices/bracelet/ui/cu;
-.super Lcom/c/a/a/h;
+.super Landroid/content/BroadcastReceiver;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/cs;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/cs;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cu;->a:Lcn/com/smartdevices/bracelet/ui/cs;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cu;->a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
 
-    invoke-direct {p0}, Lcom/c/a/a/h;-><init>()V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
-    .locals 3
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cu;->a:Lcn/com/smartdevices/bracelet/ui/cs;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/cs;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    const-string v1, "\u53cd\u9988\u5931\u8d25\uff0c\u8bf7\u91cd\u8bd5!"
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    return-void
-.end method
-
-.method public onFinish()V
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cu;->a:Lcn/com/smartdevices/bracelet/ui/cs;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/cs;->a(Lcn/com/smartdevices/bracelet/ui/cs;)Landroid/view/View;
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    const/4 v1, 0x1
+    sget-object v1, Lcom/xiaomi/hm/bleservice/BLEService;->INTENT_ACTION_CONN_STATUS_CHANGED:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setEnabled(Z)V
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    return-void
-.end method
+    move-result v1
 
-.method public onStart()V
-    .locals 2
+    if-eqz v1, :cond_3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cu;->a:Lcn/com/smartdevices/bracelet/ui/cs;
+    sget-object v0, Lcom/xiaomi/hm/bleservice/BLEService;->INTENT_EXTRA_PARAM:Ljava/lang/String;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/cs;->a(Lcn/com/smartdevices/bracelet/ui/cs;)Landroid/view/View;
+    invoke-virtual {p2, v0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    check-cast v0, Lcom/xiaomi/hm/bleservice/HwConnStatus;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setEnabled(Z)V
+    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->g()Z
 
-    return-void
-.end method
+    move-result v1
 
-.method public onSuccess(I[Lorg/apache/http/Header;[B)V
-    .locals 5
+    if-nez v1, :cond_0
 
-    const/4 v4, 0x0
+    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->f()Z
 
-    invoke-static {p3}, Lcn/com/smartdevices/bracelet/y;->a([B)Ljava/lang/String;
+    move-result v1
 
-    move-result-object v0
+    if-eqz v1, :cond_2
 
-    const-string v1, "DDDD"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "Send Feedback : "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, ",content : "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/f;->b(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/g/g;
+    :cond_0
+    invoke-static {}, Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;->g()Landroid/os/Handler;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/g/g;->a()Z
+    const/16 v1, 0x1005
 
-    move-result v0
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cu;->a:Lcn/com/smartdevices/bracelet/ui/cs;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/cs;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    const-string v1, "\u53cd\u9988\u6210\u529f\uff0c\u8c22\u8c22!"
-
-    invoke-static {v0, v1, v4}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cu;->a:Lcn/com/smartdevices/bracelet/ui/cs;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/cs;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
-
+    :cond_1
     :goto_0
     return-void
 
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cu;->a:Lcn/com/smartdevices/bracelet/ui/cs;
+    :cond_2
+    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->h()Z
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/cs;->getActivity()Landroid/app/Activity;
+    move-result v0
 
-    move-result-object v0
+    if-eqz v0, :cond_1
 
-    const-string v1, "\u53cd\u9988\u5931\u8d25\uff0c\u8bf7\u91cd\u8bd5!"
-
-    invoke-static {v0, v1, v4}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;->g()Landroid/os/Handler;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+    const/16 v1, 0x1006
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    goto :goto_0
+
+    :cond_3
+    sget-object v1, Lcom/xiaomi/hm/bleservice/BLEService;->INTENT_ACTION_DEVICE_STATUS_CHANGED:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    sget-object v0, Lcom/xiaomi/hm/bleservice/BLEService;->INTENT_EXTRA_PARAM:Ljava/lang/String;
+
+    const/4 v1, -0x1
+
+    invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result v0
+
+    const/4 v1, 0x6
+
+    if-ne v0, v1, :cond_4
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;->g()Landroid/os/Handler;
+
+    move-result-object v0
+
+    const/16 v1, 0x1007
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    goto :goto_0
+
+    :cond_4
+    const/16 v1, 0x9
+
+    if-ne v0, v1, :cond_1
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;->g()Landroid/os/Handler;
+
+    move-result-object v0
+
+    const/16 v1, 0x1008
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     goto :goto_0
 .end method

@@ -1,46 +1,56 @@
-.class Lcom/f/a/w;
-.super Lcom/f/a/A;
+.class Lcom/f/a/W;
+.super Ljava/lang/ThreadLocal;
 
 
-# instance fields
-.field final synthetic a:Lcom/f/a/s;
-
-.field private final synthetic b:Ljava/lang/String;
-
-.field private final synthetic c:Ljava/lang/String;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/ThreadLocal",
+        "<",
+        "Ljava/util/ArrayList",
+        "<",
+        "Lcom/f/a/R;",
+        ">;>;"
+    }
+.end annotation
 
 
 # direct methods
-.method constructor <init>(Lcom/f/a/s;Ljava/lang/String;Ljava/lang/String;)V
+.method constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lcom/f/a/w;->a:Lcom/f/a/s;
-
-    iput-object p2, p0, Lcom/f/a/w;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Lcom/f/a/w;->c:Ljava/lang/String;
-
-    invoke-direct {p0}, Lcom/f/a/A;-><init>()V
+    invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()V
-    .locals 3
+.method protected a()Ljava/util/ArrayList;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/f/a/R;",
+            ">;"
+        }
+    .end annotation
 
-    iget-object v0, p0, Lcom/f/a/w;->a:Lcom/f/a/s;
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-static {v0}, Lcom/f/a/s;->a(Lcom/f/a/s;)Lb/a/dD;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    return-object v0
+.end method
+
+.method protected synthetic initialValue()Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/f/a/W;->a()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/f/a/w;->b:Ljava/lang/String;
-
-    iget-object v2, p0, Lcom/f/a/w;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Lb/a/dD;->b(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
+    return-object v0
 .end method

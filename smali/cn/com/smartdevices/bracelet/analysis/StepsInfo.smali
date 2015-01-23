@@ -44,6 +44,8 @@
 
 .field private continusActive:I
 
+.field private diffSteps:I
+
 .field private distance:I
 
 .field private runCalories:I
@@ -166,6 +168,8 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->activeList:Ljava/util/ArrayList;
 
+    iput v1, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->diffSteps:I
+
     new-instance v0, Lcn/com/smartdevices/bracelet/model/SportDay;
 
     invoke-direct {v0}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>()V
@@ -219,6 +223,8 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->activeList:Ljava/util/ArrayList;
+
+    iput v1, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->diffSteps:I
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->sDay:Lcn/com/smartdevices/bracelet/model/SportDay;
 
@@ -280,6 +286,14 @@
     .locals 1
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->continusActive:I
+
+    return v0
+.end method
+
+.method public getDiffSteps()I
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->diffSteps:I
 
     return v0
 .end method
@@ -489,11 +503,11 @@
     return-void
 .end method
 
-.method public setInfos(IIIIIIIIIIILjava/util/ArrayList;Ljava/util/ArrayList;)V
-    .locals 2
+.method public setInfos(IIIIIIIIIIIILjava/util/ArrayList;Ljava/util/ArrayList;)V
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(IIIIIIIIIII",
+            "(IIIIIIIIIIII",
             "Ljava/util/ArrayList",
             "<",
             "Lcn/com/smartdevices/bracelet/analysis/StageSteps;",
@@ -505,41 +519,59 @@
         }
     .end annotation
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->steps:I
+    if-lez p2, :cond_0
 
-    iput p2, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->time:I
+    if-le p1, p2, :cond_0
 
-    iput p3, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->runtime:I
+    sub-int v1, p1, p2
 
-    iput p4, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->distance:I
+    iput v1, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->steps:I
 
-    iput p5, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->runDistance:I
+    :goto_0
+    iput p2, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->diffSteps:I
 
-    iput p6, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->walkDistance:I
+    iput p3, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->time:I
 
-    iput p7, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->calories:I
+    iput p4, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->runtime:I
 
-    iput p8, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->runCalories:I
+    iput p5, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->distance:I
 
-    iput p9, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->walkCalories:I
+    iput p6, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->runDistance:I
 
-    iput p10, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->activeMinutes:I
+    iput p7, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->walkDistance:I
 
-    iput p11, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->continusActive:I
+    iput p8, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->calories:I
 
-    iput-object p12, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->sSteps:Ljava/util/ArrayList;
+    iput p9, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->runCalories:I
 
-    iput-object p13, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->activeList:Ljava/util/ArrayList;
+    iput p10, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->walkCalories:I
 
-    const-string v0, "StepsInfo"
+    iput p11, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->activeMinutes:I
+
+    iput p12, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->continusActive:I
+
+    move-object/from16 v0, p13
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->sSteps:Ljava/util/ArrayList;
+
+    move-object/from16 v0, p14
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->activeList:Ljava/util/ArrayList;
+
+    const-string v1, "StepsInfo"
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
+
+    :cond_0
+    iput p1, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->steps:I
+
+    goto :goto_0
 .end method
 
 .method public setRunCalories(I)V
@@ -635,6 +667,24 @@
     move-result-object v0
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->steps:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "\n"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "this.diffSteps:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->diffSteps:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

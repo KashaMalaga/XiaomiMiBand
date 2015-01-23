@@ -5,11 +5,11 @@
 # instance fields
 .field final synthetic a:Lcom/xiaomi/push/service/XMPushService;
 
-.field private b:Lcom/xiaomi/f/c/e;
+.field private b:Lcom/xiaomi/g/c/e;
 
 
 # direct methods
-.method public constructor <init>(Lcom/xiaomi/push/service/XMPushService;Lcom/xiaomi/f/c/e;)V
+.method public constructor <init>(Lcom/xiaomi/push/service/XMPushService;Lcom/xiaomi/g/c/e;)V
     .locals 1
 
     iput-object p1, p0, Lcom/xiaomi/push/service/h;->a:Lcom/xiaomi/push/service/XMPushService;
@@ -20,9 +20,9 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/xiaomi/push/service/h;->b:Lcom/xiaomi/f/c/e;
+    iput-object v0, p0, Lcom/xiaomi/push/service/h;->b:Lcom/xiaomi/g/c/e;
 
-    iput-object p2, p0, Lcom/xiaomi/push/service/h;->b:Lcom/xiaomi/f/c/e;
+    iput-object p2, p0, Lcom/xiaomi/push/service/h;->b:Lcom/xiaomi/g/c/e;
 
     return-void
 .end method
@@ -38,9 +38,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/xiaomi/push/service/h;->b:Lcom/xiaomi/f/c/e;
+    iget-object v1, p0, Lcom/xiaomi/push/service/h;->b:Lcom/xiaomi/g/c/e;
 
-    invoke-virtual {v0, v1}, Lcom/xiaomi/push/service/PacketSync;->a(Lcom/xiaomi/f/c/e;)V
+    invoke-virtual {v0, v1}, Lcom/xiaomi/push/service/PacketSync;->a(Lcom/xiaomi/g/c/e;)V
 
     return-void
 .end method

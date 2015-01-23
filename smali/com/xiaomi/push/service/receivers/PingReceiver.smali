@@ -46,7 +46,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->b(Ljava/lang/String;)V
 
     sget-object v0, Lcom/xiaomi/push/service/Y;->k:Ljava/lang/String;
 
@@ -76,7 +76,7 @@
 
     const-string v0, "Ping XMChannelService on timer"
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->b(Ljava/lang/String;)V
 
     :try_start_0
     new-instance v0, Landroid/content/Intent;
@@ -100,14 +100,14 @@
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
     :cond_1
     const-string v0, "cancel the old ping timer"
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->a(Ljava/lang/String;)V
 
     const-string v0, "alarm"
 

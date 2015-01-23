@@ -1,30 +1,77 @@
-.class public Lcom/f/a/i;
-.super Ljava/lang/Object;
+.class Lcom/f/a/I;
+.super Lcom/f/b/a;
 
 
-# static fields
-.field public static final a:I = 0x0
-
-.field public static final b:I = 0x1
-
-.field static final c:I = 0x2
-
-.field static final d:I = 0x3
-
-.field public static final e:I = 0x4
-
-.field public static final f:I = 0x5
-
-.field public static final g:I = 0x6
-
-.field public static final h:I = 0x7
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/f/b/a",
+        "<",
+        "Landroid/view/View;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lcom/f/b/a;-><init>(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Landroid/view/View;)Ljava/lang/Float;
+    .locals 1
+
+    invoke-static {p1}, Lcom/f/c/a/a;->a(Landroid/view/View;)Lcom/f/c/a/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/f/c/a/a;->e()F
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public bridge synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p0, p1}, Lcom/f/a/I;->a(Landroid/view/View;)Ljava/lang/Float;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public a(Landroid/view/View;F)V
+    .locals 1
+
+    invoke-static {p1}, Lcom/f/c/a/a;->a(Landroid/view/View;)Lcom/f/c/a/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p2}, Lcom/f/c/a/a;->e(F)V
+
+    return-void
+.end method
+
+.method public bridge synthetic a(Ljava/lang/Object;F)V
+    .locals 0
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p0, p1, p2}, Lcom/f/a/I;->a(Landroid/view/View;F)V
 
     return-void
 .end method

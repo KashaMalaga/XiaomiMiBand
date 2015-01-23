@@ -29,7 +29,7 @@
 
 # virtual methods
 .method public createFromParcel(Landroid/os/Parcel;)Lcom/amap/api/maps/model/CameraPosition;
-    .locals 12
+    .locals 9
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
@@ -55,11 +55,11 @@
 
     new-instance v6, Lcom/amap/api/maps/model/LatLng;
 
-    float-to-double v8, v1
+    float-to-double v7, v1
 
-    float-to-double v10, v2
+    float-to-double v1, v2
 
-    invoke-direct {v6, v8, v9, v10, v11}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v6, v7, v8, v1, v2}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     invoke-direct {v5, v6, v4, v3, v0}, Lcom/amap/api/maps/model/CameraPosition;-><init>(Lcom/amap/api/maps/model/LatLng;FFF)V
 

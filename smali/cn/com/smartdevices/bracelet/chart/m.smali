@@ -1,30 +1,10 @@
-.class public Lcn/com/smartdevices/bracelet/chart/m;
+.class public interface abstract Lcn/com/smartdevices/bracelet/chart/M;
 .super Ljava/lang/Object;
 
-
-# static fields
-.field public static final a:I = 0x3
-
-.field public static final b:I = 0x2
-
-.field public static final c:I = 0x1
-
-.field public static final d:I = 0x4
+# interfaces
+.implements Lcn/com/smartdevices/bracelet/chart/b/f;
 
 
-# instance fields
-.field public e:I
-
-.field public f:I
-
-.field public g:I
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
+# virtual methods
+.method public abstract a()V
 .end method

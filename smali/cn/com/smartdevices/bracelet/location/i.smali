@@ -14,3 +14,6 @@
 
 .method public abstract b()V
 .end method
+
+.method public abstract c()Lcn/com/smartdevices/bracelet/location/Location;
+.end method

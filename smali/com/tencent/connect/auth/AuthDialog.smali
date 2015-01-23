@@ -893,7 +893,7 @@
 
 # virtual methods
 .method public callJs(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 4
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -927,9 +927,9 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

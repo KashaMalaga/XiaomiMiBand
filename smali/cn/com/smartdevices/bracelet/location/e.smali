@@ -140,7 +140,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "ServiceSystem"
 
@@ -218,13 +218,31 @@
 .end method
 
 .method public b(Ljava/lang/String;)V
-    .locals 0
+    .locals 1
 
+    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->e()Lcn/com/smartdevices/bracelet/config/b;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/b;->l:Lcn/com/smartdevices/bracelet/config/q;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/q;->a:Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    :goto_0
+    return-void
+
+    :cond_0
     invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/location/e;->a(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/location/i;
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/location/e;->c()V
 
-    return-void
+    goto :goto_0
 .end method
 
 .method public c()V
@@ -238,7 +256,7 @@
 
     const-string v1, "LocationStart"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/e;->j:Lcn/com/smartdevices/bracelet/location/i;
 
@@ -261,4 +279,26 @@
 
     :cond_0
     return-void
+.end method
+
+.method public e()Lcn/com/smartdevices/bracelet/location/Location;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/e;->j:Lcn/com/smartdevices/bracelet/location/i;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/e;->j:Lcn/com/smartdevices/bracelet/location/i;
+
+    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/location/i;->c()Lcn/com/smartdevices/bracelet/location/Location;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

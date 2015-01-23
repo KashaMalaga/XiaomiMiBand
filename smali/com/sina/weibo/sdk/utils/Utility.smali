@@ -1002,7 +1002,7 @@
 .end method
 
 .method public static formBundle(Lcom/sina/weibo/sdk/auth/Oauth2AccessToken;)Landroid/os/Bundle;
-    .locals 6
+    .locals 5
 
     new-instance v0, Landroid/os/Bundle;
 
@@ -1030,9 +1030,9 @@
 
     invoke-virtual {p0}, Lcom/sina/weibo/sdk/auth/Oauth2AccessToken;->getExpiresTime()J
 
-    move-result-wide v4
+    move-result-wide v3
 
-    invoke-static {v4, v5}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    invoke-static {v3, v4}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v3
 

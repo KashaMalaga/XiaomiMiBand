@@ -266,7 +266,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -459,9 +459,9 @@
 .end method
 
 .method public a(Landroid/content/Context;Landroid/net/Uri;ZIF)V
-    .locals 5
+    .locals 4
 
-    const/4 v4, 0x1
+    const/4 v3, 0x1
 
     new-instance v0, Lcn/com/smartdevices/bracelet/lab/ui/Y;
 
@@ -471,11 +471,11 @@
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    iput-wide v2, v0, Lcn/com/smartdevices/bracelet/lab/ui/Y;->g:J
+    iput-wide v1, v0, Lcn/com/smartdevices/bracelet/lab/ui/Y;->g:J
 
-    iput v4, v0, Lcn/com/smartdevices/bracelet/lab/ui/Y;->a:I
+    iput v3, v0, Lcn/com/smartdevices/bracelet/lab/ui/Y;->a:I
 
     iput-object p1, v0, Lcn/com/smartdevices/bracelet/lab/ui/Y;->b:Landroid/content/Context;
 

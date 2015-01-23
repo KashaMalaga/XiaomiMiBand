@@ -206,7 +206,7 @@
 
     const-string v1, "erase the old account."
 
-    invoke-static {v1}, Lcom/xiaomi/channel/a/b/c;->c(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/xiaomi/b/a/b/c;->c(Ljava/lang/String;)V
 
     invoke-static {p0}, Lcom/xiaomi/push/service/E;->d(Landroid/content/Context;)V
     :try_end_1
@@ -418,7 +418,7 @@
 
     move-result-object v1
 
-    invoke-static {p0, v1, v2}, Lcom/xiaomi/channel/a/d/a;->a(Landroid/content/Context;Ljava/lang/String;Ljava/util/List;)Ljava/lang/String;
+    invoke-static {p0, v1, v2}, Lcom/xiaomi/b/a/d/a;->a(Landroid/content/Context;Ljava/lang/String;Ljava/util/List;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -482,7 +482,7 @@
 
     const/4 v7, 0x6
 
-    invoke-static {v7}, Lcom/xiaomi/channel/a/e/c;->a(I)Ljava/lang/String;
+    invoke-static {v7}, Lcom/xiaomi/b/a/e/c;->a(I)Ljava/lang/String;
 
     move-result-object v7
 
@@ -494,7 +494,7 @@
 
     move-result-object v1
 
-    invoke-static {}, Lcom/xiaomi/channel/a/c/a;->c()I
+    invoke-static {}, Lcom/xiaomi/b/a/c/a;->c()I
 
     move-result v7
 
@@ -531,7 +531,7 @@
     move-exception v1
 
     :try_start_3
-    invoke-static {v1}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/Throwable;)V
+    invoke-static {v1}, Lcom/xiaomi/b/a/b/c;->a(Ljava/lang/Throwable;)V
 
     move-object v1, v0
 
@@ -557,7 +557,7 @@
 
     invoke-static {p0, v3, v2}, Lcom/xiaomi/push/service/H;->a(Landroid/content/Context;ILjava/lang/String;)V
 
-    invoke-static {v1}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/xiaomi/b/a/b/c;->a(Ljava/lang/String;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
@@ -574,7 +574,7 @@
 .method public static a()Ljava/lang/String;
     .locals 2
 
-    invoke-static {}, Lcom/xiaomi/channel/a/c/a;->b()Z
+    invoke-static {}, Lcom/xiaomi/b/a/c/a;->b()Z
 
     move-result v0
 
@@ -596,7 +596,7 @@
 
     move-result-object v1
 
-    invoke-static {}, Lcom/xiaomi/channel/a/c/a;->a()Z
+    invoke-static {}, Lcom/xiaomi/b/a/c/a;->a()Z
 
     move-result v0
 
@@ -763,7 +763,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/e/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/xiaomi/b/a/e/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -785,7 +785,7 @@
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->a(Ljava/lang/Throwable;)V
 
     move-object v0, v1
 
@@ -859,7 +859,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/e/c;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/xiaomi/b/a/e/c;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -872,7 +872,7 @@
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->a(Ljava/lang/Throwable;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
@@ -938,7 +938,7 @@
 .end method
 
 .method private static f(Landroid/content/Context;)Ljava/lang/String;
-    .locals 7
+    .locals 5
 
     :try_start_0
     const-string v0, "phone"
@@ -957,11 +957,11 @@
 
     const/16 v1, 0xa
 
-    move v6, v1
+    move v4, v1
 
     move-object v1, v2
 
-    move v2, v6
+    move v2, v4
 
     :goto_0
     if-nez v1, :cond_0
@@ -970,10 +970,10 @@
 
     if-lez v2, :cond_0
 
-    const-wide/16 v4, 0x1f4
+    const-wide/16 v1, 0x1f4
 
     :try_start_1
-    invoke-static {v4, v5}, Ljava/lang/Thread;->sleep(J)V
+    invoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V
     :try_end_1
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
@@ -999,7 +999,7 @@
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->a(Ljava/lang/Throwable;)V
 
     const/4 v0, 0x0
 

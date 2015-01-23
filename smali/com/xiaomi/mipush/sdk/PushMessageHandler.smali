@@ -65,7 +65,7 @@
 .end method
 
 .method public static a(JLjava/lang/String;Ljava/lang/String;)V
-    .locals 4
+    .locals 3
 
     sget-object v1, Lcom/xiaomi/mipush/sdk/PushMessageHandler;->a:Ljava/util/List;
 
@@ -196,11 +196,11 @@
 .end method
 
 .method public static a(Landroid/content/Context;Lcom/xiaomi/mipush/sdk/k;)V
-    .locals 8
+    .locals 7
 
     const/4 v0, 0x0
 
-    const/4 v4, 0x0
+    const/4 v3, 0x0
 
     instance-of v1, p1, Lcom/xiaomi/mipush/sdk/j;
 
@@ -223,11 +223,11 @@
 
     invoke-virtual {p1}, Lcom/xiaomi/mipush/sdk/i;->a()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
     const-string v1, "register"
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -245,7 +245,7 @@
 
     if-nez v2, :cond_2
 
-    invoke-interface {v1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -254,20 +254,20 @@
     :cond_2
     invoke-virtual {p1}, Lcom/xiaomi/mipush/sdk/i;->c()J
 
-    move-result-wide v2
+    move-result-wide v1
 
     invoke-virtual {p1}, Lcom/xiaomi/mipush/sdk/i;->d()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-static {v2, v3, v1, v0}, Lcom/xiaomi/mipush/sdk/PushMessageHandler;->a(JLjava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3, v0}, Lcom/xiaomi/mipush/sdk/PushMessageHandler;->a(JLjava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_3
     const-string v1, "set-alias"
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -275,7 +275,7 @@
 
     const-string v1, "unset-alias"
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -283,7 +283,7 @@
 
     const-string v1, "accept-time"
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -292,30 +292,30 @@
     :cond_4
     invoke-virtual {p1}, Lcom/xiaomi/mipush/sdk/i;->e()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
     invoke-virtual {p1}, Lcom/xiaomi/mipush/sdk/i;->c()J
 
-    move-result-wide v4
+    move-result-wide v3
 
     invoke-virtual {p1}, Lcom/xiaomi/mipush/sdk/i;->d()Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v5
 
     invoke-virtual {p1}, Lcom/xiaomi/mipush/sdk/i;->b()Ljava/util/List;
 
-    move-result-object v7
+    move-result-object v6
 
-    move-object v1, p0
+    move-object v0, p0
 
-    invoke-static/range {v1 .. v7}, Lcom/xiaomi/mipush/sdk/PushMessageHandler;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Ljava/util/List;)V
+    invoke-static/range {v0 .. v6}, Lcom/xiaomi/mipush/sdk/PushMessageHandler;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Ljava/util/List;)V
 
     goto :goto_0
 
     :cond_5
     sget-object v1, Lcom/xiaomi/mipush/sdk/f;->d:Ljava/lang/String;
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -333,7 +333,7 @@
 
     if-nez v2, :cond_6
 
-    invoke-interface {v1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -368,7 +368,7 @@
     :cond_7
     sget-object v1, Lcom/xiaomi/mipush/sdk/f;->e:Ljava/lang/String;
 
-    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -386,7 +386,7 @@
 
     if-nez v2, :cond_8
 
-    invoke-interface {v1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -480,7 +480,7 @@
 .end method
 
 .method protected static a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Ljava/util/List;)V
-    .locals 9
+    .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -756,7 +756,7 @@
 
     const-string v0, "receive a message before application calling initialize"
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->c(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->c(Ljava/lang/String;)V
 
     goto :goto_0
 

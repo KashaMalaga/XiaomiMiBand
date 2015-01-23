@@ -10,9 +10,9 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 8
+    .locals 7
 
-    const/4 v2, 0x1
+    const/4 v1, 0x1
 
     const-string v0, "([0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3})"
 
@@ -22,21 +22,21 @@
 
     sput-object v0, Lcom/xiaomi/push/service/Q;->a:Ljava/util/regex/Pattern;
 
-    new-instance v1, Ljava/util/concurrent/ThreadPoolExecutor;
+    new-instance v0, Ljava/util/concurrent/ThreadPoolExecutor;
 
-    const-wide/16 v4, 0x14
+    const-wide/16 v3, 0x14
 
-    sget-object v6, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    sget-object v5, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    new-instance v7, Ljava/util/concurrent/LinkedBlockingQueue;
+    new-instance v6, Ljava/util/concurrent/LinkedBlockingQueue;
 
-    invoke-direct {v7}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
+    invoke-direct {v6}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
 
-    move v3, v2
+    move v2, v1
 
-    invoke-direct/range {v1 .. v7}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;)V
+    invoke-direct/range {v0 .. v6}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;)V
 
-    sput-object v1, Lcom/xiaomi/push/service/Q;->b:Ljava/util/concurrent/ThreadPoolExecutor;
+    sput-object v0, Lcom/xiaomi/push/service/Q;->b:Ljava/util/concurrent/ThreadPoolExecutor;
 
     return-void
 .end method
@@ -108,7 +108,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->a(Ljava/lang/String;)V
 
     :try_start_0
     const-string v0, "ping -W 500 -i 0.2 -c 3 %s"
@@ -180,7 +180,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->a(Ljava/lang/String;)V
 
     invoke-virtual {v3}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
@@ -216,7 +216,7 @@
 
     :goto_3
     :try_start_4
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->a(Ljava/lang/Throwable;)V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
@@ -237,7 +237,7 @@
 
     :goto_5
     :try_start_6
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->a(Ljava/lang/Throwable;)V
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
@@ -468,7 +468,7 @@
 
     :goto_5
     :try_start_5
-    invoke-static {v1}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/Throwable;)V
+    invoke-static {v1}, Lcom/xiaomi/b/a/b/c;->a(Ljava/lang/Throwable;)V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
@@ -500,7 +500,7 @@
 
     :goto_7
     :try_start_7
-    invoke-static {v1}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/Throwable;)V
+    invoke-static {v1}, Lcom/xiaomi/b/a/b/c;->a(Ljava/lang/Throwable;)V
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 

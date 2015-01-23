@@ -62,7 +62,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->a(Ljava/lang/String;)V
 
     :cond_0
     invoke-virtual {p0}, Lcom/xiaomi/push/service/e;->a()V

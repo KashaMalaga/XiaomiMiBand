@@ -704,7 +704,7 @@
 .end method
 
 .method public static getExternalStorageInfo(Landroid/content/Context;)Ljava/lang/String;
-    .locals 8
+    .locals 7
 
     const/4 v0, 0x0
 
@@ -752,47 +752,47 @@
 
     move-result v1
 
-    int-to-long v4, v1
+    int-to-long v3, v1
 
     invoke-virtual {v2}, Landroid/os/StatFs;->getBlockSize()I
 
     move-result v1
 
-    int-to-long v6, v1
+    int-to-long v5, v1
 
-    mul-long/2addr v4, v6
+    mul-long/2addr v3, v5
 
-    const-wide/32 v6, 0xf4240
+    const-wide/32 v5, 0xf4240
 
-    div-long/2addr v4, v6
+    div-long/2addr v3, v5
 
     invoke-virtual {v2}, Landroid/os/StatFs;->getAvailableBlocks()I
 
     move-result v1
 
-    int-to-long v6, v1
+    int-to-long v5, v1
 
     invoke-virtual {v2}, Landroid/os/StatFs;->getBlockSize()I
 
     move-result v1
 
-    int-to-long v2, v1
+    int-to-long v1, v1
 
-    mul-long/2addr v2, v6
+    mul-long/2addr v1, v5
 
-    const-wide/32 v6, 0xf4240
+    const-wide/32 v5, 0xf4240
 
-    div-long/2addr v2, v6
+    div-long/2addr v1, v5
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v5, Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {v2, v3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    invoke-static {v1, v2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -802,7 +802,7 @@
 
     move-result-object v1
 
-    invoke-static {v4, v5}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    invoke-static {v3, v4}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1238,7 +1238,7 @@
 .end method
 
 .method public static getSDKLongVersion(Ljava/lang/String;)J
-    .locals 6
+    .locals 5
 
     const-string v0, "."
 
@@ -1246,9 +1246,9 @@
 
     const/4 v2, 0x3
 
-    const-wide/16 v4, 0x0
+    const-wide/16 v3, 0x0
 
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 
@@ -1356,7 +1356,7 @@
 .end method
 
 .method public static getTomorrowStartMilliseconds()J
-    .locals 4
+    .locals 5
 
     const/4 v2, 0x0
 
@@ -1380,13 +1380,13 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->set(II)V
 
-    const-wide/32 v2, 0x5265c00
+    const-wide/32 v1, 0x5265c00
 
     invoke-virtual {v0}, Ljava/util/Calendar;->getTimeInMillis()J
 
-    move-result-wide v0
+    move-result-wide v3
 
-    add-long/2addr v0, v2
+    add-long v0, v1, v3
 
     return-wide v0
 .end method

@@ -68,7 +68,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/u;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/g;->c:Lcn/com/smartdevices/bracelet/ui/f;
 
@@ -106,7 +106,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0c0046
+    const v2, 0x7f070048
 
     invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 

@@ -86,4 +86,8 @@ localization_indonesia_table = {
     weather_tips_title_0 = "Tingkat polusi tinggi, hindari aktivitas di luar",
     weather_tips_title_0 = "Tingkat polusi tinggi, hindari aktivitas di luar",
     weather_tips_info = "Sit up atau lompat tali adalah olahraga dalam ruang yg baik",
+
+    ---------------Weight scale -------------------
+    welcome_use_weight_scale = "欢迎使用小米体重秤",
+    welcome_use_weight_scale_not_bind = "点击绑定小米体重秤",
 }

@@ -1,44 +1,74 @@
 .class Lkankan/wheel/widget/m;
-.super Landroid/database/DataSetObserver;
+.super Landroid/view/GestureDetector$SimpleOnGestureListener;
 
 
 # instance fields
-.field final synthetic a:Lkankan/wheel/widget/WheelView;
+.field final synthetic a:Lkankan/wheel/widget/l;
 
 
 # direct methods
-.method constructor <init>(Lkankan/wheel/widget/WheelView;)V
+.method constructor <init>(Lkankan/wheel/widget/l;)V
     .locals 0
 
-    iput-object p1, p0, Lkankan/wheel/widget/m;->a:Lkankan/wheel/widget/WheelView;
+    iput-object p1, p0, Lkankan/wheel/widget/m;->a:Lkankan/wheel/widget/l;
 
-    invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
+    invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onChanged()V
-    .locals 2
-
-    iget-object v0, p0, Lkankan/wheel/widget/m;->a:Lkankan/wheel/widget/WheelView;
+.method public onFling(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
+    .locals 9
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->b(Z)V
+    iget-object v0, p0, Lkankan/wheel/widget/m;->a:Lkankan/wheel/widget/l;
 
-    return-void
+    invoke-static {v0, v1}, Lkankan/wheel/widget/l;->a(Lkankan/wheel/widget/l;I)I
+
+    iget-object v0, p0, Lkankan/wheel/widget/m;->a:Lkankan/wheel/widget/l;
+
+    invoke-static {v0}, Lkankan/wheel/widget/l;->b(Lkankan/wheel/widget/l;)Landroid/widget/Scroller;
+
+    move-result-object v0
+
+    iget-object v2, p0, Lkankan/wheel/widget/m;->a:Lkankan/wheel/widget/l;
+
+    invoke-static {v2}, Lkankan/wheel/widget/l;->a(Lkankan/wheel/widget/l;)I
+
+    move-result v2
+
+    neg-float v3, p4
+
+    float-to-int v4, v3
+
+    const v7, -0x7fffffff
+
+    const v8, 0x7fffffff
+
+    move v3, v1
+
+    move v5, v1
+
+    move v6, v1
+
+    invoke-virtual/range {v0 .. v8}, Landroid/widget/Scroller;->fling(IIIIIIII)V
+
+    iget-object v0, p0, Lkankan/wheel/widget/m;->a:Lkankan/wheel/widget/l;
+
+    invoke-static {v0, v1}, Lkankan/wheel/widget/l;->b(Lkankan/wheel/widget/l;I)V
+
+    const/4 v0, 0x1
+
+    return v0
 .end method
 
-.method public onInvalidated()V
-    .locals 2
+.method public onScroll(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
+    .locals 1
 
-    iget-object v0, p0, Lkankan/wheel/widget/m;->a:Lkankan/wheel/widget/WheelView;
+    const/4 v0, 0x1
 
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->b(Z)V
-
-    return-void
+    return v0
 .end method

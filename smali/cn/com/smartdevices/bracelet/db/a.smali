@@ -5,7 +5,7 @@
 # static fields
 .field private static final a:Ljava/lang/String; = "origin_db"
 
-.field private static final b:I = 0x6
+.field private static final b:I = 0xa
 
 
 # direct methods
@@ -16,7 +16,7 @@
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x6
+    const/16 v2, 0xa
 
     invoke-direct {p0, p1, v0, v1, v2}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
 
@@ -43,11 +43,19 @@
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
+    const-string v0, "DELETE FROM contourtrack"
+
+    invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+
     const-string v0, "DELETE FROM cloud_config"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     const-string v0, "DELETE FROM parterconfig"
+
+    invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+
+    const-string v0, "DELETE FROM localcache"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
     :try_end_0
@@ -65,7 +73,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -89,11 +97,19 @@
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
+    const-string v0, "CREATE TABLE IF NOT EXISTS contourtrack(_id INTEGER PRIMARY KEY AUTOINCREMENT,trackid INTEGER,uri TEXT,summery TEXT,data TEXT,synced INTEGER DEFAULT 0,gcnt INTEGER DEFAULT 0,v INTEGER DEFAULT 0,type INTEGER DEFAULT 0, UNIQUE (trackid) ON CONFLICT REPLACE );"
+
+    invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+
     const-string v0, "CREATE TABLE IF NOT EXISTS cloud_config(_id INTEGER PRIMARY KEY AUTOINCREMENT,config TEXT,value TEXT,time_stamp BIGINT,dummy1 TEXT,dummy2 TEXT,dummy3 TEXT,dummy4 TEXT, dummy5 TEXT);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    const-string v0, "CREATE TABLE IF NOT EXISTS parterconfig(_id  INTEGER PRIMARY KEY AUTOINCREMENT,color TEXT,title TEXT,sub_title TEXT,icon ICON,third_app_id TEXT,expire_time INTEGER DEFAULT 0,status INTEGER DEFAULT 0,url TEXT );"
+    const-string v0, "CREATE TABLE IF NOT EXISTS parterconfig(_id  INTEGER PRIMARY KEY AUTOINCREMENT,color TEXT,title TEXT,sub_title TEXT,share_content TEXT,icon ICON,third_app_id TEXT,expire_time INTEGER DEFAULT 0,status INTEGER DEFAULT 0,url TEXT );"
+
+    invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+
+    const-string v0, "CREATE TABLE IF NOT EXISTS localcache(_id INTEGER PRIMARY KEY AUTOINCREMENT,key TEXT,value TEXT,expire_time BIGINT,sync INTEGER DEFAULT 0,reserved1 TEXT,reserved2 TEXT);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
@@ -120,7 +136,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -158,7 +174,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p1, :cond_1
 
@@ -183,7 +199,7 @@
 
     const-string v1, "clearGPSSportTable"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
@@ -203,7 +219,7 @@
 
     const-string v1, "dropAllDataTable"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
@@ -244,7 +260,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -256,7 +272,7 @@
 
     const-string v1, "onCreate"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "CREATE TABLE IF NOT EXISTS date_data(id INTEGER PRIMARY KEY AUTOINCREMENT,type INTEGER,source INTEGER,date TEXT,summary TEXT,indexs TEXT,data BLOB,sync INTEGER);"
 
@@ -269,6 +285,8 @@
 
 .method public onDowngrade(Landroid/database/sqlite/SQLiteDatabase;II)V
     .locals 3
+
+    invoke-super {p0, p1, p2, p3}, Landroid/database/sqlite/SQLiteOpenHelper;->onDowngrade(Landroid/database/sqlite/SQLiteDatabase;II)V
 
     const-string v0, "DB"
 
@@ -300,7 +318,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -338,7 +356,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "CREATE TABLE IF NOT EXISTS date_data(id INTEGER PRIMARY KEY AUTOINCREMENT,type INTEGER,source INTEGER,date TEXT,summary TEXT,indexs TEXT,data BLOB,sync INTEGER);"
 
@@ -394,6 +412,32 @@
 
     :cond_3
     :goto_2
+    const/16 v0, 0x9
+
+    if-lt p3, v0, :cond_4
+
+    :try_start_3
+    const-string v0, "ALTER TABLE contourtrack ADD COLUMN summery TEXT"
+
+    invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_3
+
+    :cond_4
+    :goto_3
+    const/16 v0, 0xa
+
+    if-lt p3, v0, :cond_5
+
+    :try_start_4
+    const-string v0, "ALTER TABLE parterconfig ADD COLUMN share_content TEXT"
+
+    invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_4
+
+    :cond_5
+    :goto_4
     return-void
 
     :catch_0
@@ -405,7 +449,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -418,7 +462,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -431,7 +475,33 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_2
+
+    :catch_3
+    move-exception v0
+
+    const-string v1, "DB"
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_3
+
+    :catch_4
+    move-exception v0
+
+    const-string v1, "DB"
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_4
 .end method

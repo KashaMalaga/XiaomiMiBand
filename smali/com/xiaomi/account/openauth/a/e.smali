@@ -1,4 +1,4 @@
-.class public final Lcom/xiaomi/account/openauth/a/e;
+.class final Lcom/xiaomi/account/openauth/a/e;
 .super Ljava/io/FilterInputStream;
 
 

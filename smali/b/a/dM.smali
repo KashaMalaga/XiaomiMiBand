@@ -34,9 +34,9 @@
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
-    .locals 4
+    .locals 3
 
-    const-wide/16 v2, 0x0
+    const-wide/16 v1, 0x0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -44,9 +44,9 @@
 
     iput v0, p0, Lb/a/dM;->d:I
 
-    iput-wide v2, p0, Lb/a/dM;->f:J
+    iput-wide v1, p0, Lb/a/dM;->f:J
 
-    iput-wide v2, p0, Lb/a/dM;->g:J
+    iput-wide v1, p0, Lb/a/dM;->g:J
 
     invoke-direct {p0, p1}, Lb/a/dM;->b(Landroid/content/Context;)V
 

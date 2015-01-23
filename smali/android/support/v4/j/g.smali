@@ -114,9 +114,9 @@
     :cond_0
     sget-object v2, Landroid/support/v4/j/g;->f:[C
 
-    const-wide/16 v4, 0x0
+    const-wide/16 v3, 0x0
 
-    cmp-long v3, p0, v4
+    cmp-long v3, p0, v3
 
     if-nez v3, :cond_2
 
@@ -144,9 +144,9 @@
     return v2
 
     :cond_2
-    const-wide/16 v4, 0x0
+    const-wide/16 v3, 0x0
 
-    cmp-long v3, p0, v4
+    cmp-long v3, p0, v3
 
     if-lez v3, :cond_4
 
@@ -155,25 +155,25 @@
     move v4, v3
 
     :goto_2
-    const-wide/16 v6, 0x3e8
+    const-wide/16 v5, 0x3e8
 
-    rem-long v6, p0, v6
+    rem-long v5, p0, v5
 
-    long-to-int v0, v6
+    long-to-int v0, v5
 
     move/from16 v16, v0
 
-    const-wide/16 v6, 0x3e8
+    const-wide/16 v5, 0x3e8
 
-    div-long v6, p0, v6
+    div-long v5, p0, v5
 
-    long-to-double v6, v6
+    long-to-double v5, v5
 
-    invoke-static {v6, v7}, Ljava/lang/Math;->floor(D)D
+    invoke-static {v5, v6}, Ljava/lang/Math;->floor(D)D
 
-    move-result-wide v6
+    move-result-wide v5
 
-    double-to-int v7, v6
+    double-to-int v7, v5
 
     const/4 v3, 0x0
 
@@ -619,7 +619,7 @@
 .end method
 
 .method public static a(JJLjava/io/PrintWriter;)V
-    .locals 4
+    .locals 3
 
     const-wide/16 v0, 0x0
 
@@ -645,7 +645,7 @@
 .end method
 
 .method public static a(JLjava/io/PrintWriter;)V
-    .locals 2
+    .locals 1
 
     const/4 v0, 0x0
 
@@ -655,7 +655,7 @@
 .end method
 
 .method public static a(JLjava/io/PrintWriter;I)V
-    .locals 6
+    .locals 5
 
     sget-object v1, Landroid/support/v4/j/g;->e:Ljava/lang/Object;
 

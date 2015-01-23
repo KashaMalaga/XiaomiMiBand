@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Landroid/view/View;
-
-.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/M;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/O;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/M;Landroid/view/View;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/O;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/Q;->b:Lcn/com/smartdevices/bracelet/ui/M;
-
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/Q;->a:Landroid/view/View;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/Q;->a:Lcn/com/smartdevices/bracelet/ui/O;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,20 +22,20 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 3
+.method public onClick(Landroid/view/View;)V
+    .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/Q;->b:Lcn/com/smartdevices/bracelet/ui/M;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/Q;->a:Lcn/com/smartdevices/bracelet/ui/O;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/Q;->a:Landroid/view/View;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/O;->b(Lcn/com/smartdevices/bracelet/ui/O;)Lcn/com/smartdevices/bracelet/ui/T;
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/Q;->b:Lcn/com/smartdevices/bracelet/ui/M;
+    move-result-object v0
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/M;->i(Lcn/com/smartdevices/bracelet/ui/M;)Landroid/view/View;
+    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/ui/T;->c()V
 
-    move-result-object v2
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/Q;->a:Lcn/com/smartdevices/bracelet/ui/O;
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/ui/M;->a(Lcn/com/smartdevices/bracelet/ui/M;Landroid/view/View;Landroid/view/View;)V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/O;->dismiss()V
 
     return-void
 .end method

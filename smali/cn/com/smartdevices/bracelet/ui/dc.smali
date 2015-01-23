@@ -1,23 +1,19 @@
-.class Lcn/com/smartdevices/bracelet/ui/dc;
+.class Lcn/com/smartdevices/bracelet/ui/dC;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
+.implements Lcom/tencent/tauth/IUiListener;
 
 
 # instance fields
-.field final synthetic a:Landroid/animation/Animator;
-
-.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/db;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/dz;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/db;Landroid/animation/Animator;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/dz;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dc;->b:Lcn/com/smartdevices/bracelet/ui/db;
-
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/dc;->a:Landroid/animation/Animator;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dC;->a:Lcn/com/smartdevices/bracelet/ui/dz;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,44 +22,66 @@
 
 
 # virtual methods
-.method public onAnimationCancel(Landroid/animation/Animator;)V
+.method public onCancel()V
     .locals 0
 
     return-void
 .end method
 
-.method public onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 4
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dc;->a:Landroid/animation/Animator;
-
-    const-wide/16 v2, 0x0
-
-    invoke-virtual {v0, v2, v3}, Landroid/animation/Animator;->setStartDelay(J)V
-
-    return-void
-.end method
-
-.method public onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onAnimationStart(Landroid/animation/Animator;)V
+.method public onComplete(Ljava/lang/Object;)V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dc;->b:Lcn/com/smartdevices/bracelet/ui/db;
+    const-string v0, "ShareDialog"
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/db;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->a(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
+    move-result-object v1
 
-    move-result-object v0
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    const/4 v1, 0x0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dC;->a:Lcn/com/smartdevices/bracelet/ui/dz;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->b(Z)V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/dz;->dismiss()V
+
+    return-void
+.end method
+
+.method public onError(Lcom/tencent/tauth/UiError;)V
+    .locals 3
+
+    const-string v0, "ShareDialog"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v2, p1, Lcom/tencent/tauth/UiError;->errorMessage:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "|"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget v2, p1, Lcom/tencent/tauth/UiError;->errorCode:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dC;->a:Lcn/com/smartdevices/bracelet/ui/dz;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/dz;->dismiss()V
 
     return-void
 .end method

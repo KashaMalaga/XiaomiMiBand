@@ -46,7 +46,7 @@
 .end method
 
 .method public static a(Landroid/content/Context;J)Ljava/lang/String;
-    .locals 7
+    .locals 6
 
     const-string v0, ""
 
@@ -90,17 +90,17 @@
 
     long-to-float v1, p1
 
-    float-to-double v2, v1
+    float-to-double v1, v1
 
-    const-wide v4, 0x408f400000000000L
+    const-wide v3, 0x408f400000000000L
 
-    div-double/2addr v2, v4
+    div-double/2addr v1, v3
 
-    invoke-static {v2, v3}, Ljava/lang/Math;->round(D)J
+    invoke-static {v1, v2}, Ljava/lang/Math;->round(D)J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    invoke-static {v2, v3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    invoke-static {v1, v2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v1
 

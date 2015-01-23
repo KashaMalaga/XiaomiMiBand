@@ -628,7 +628,7 @@
 .end method
 
 .method public static convertLuaNumber(Ljava/lang/Double;Ljava/lang/Class;)Ljava/lang/Number;
-    .locals 4
+    .locals 3
 
     invoke-virtual {p1}, Ljava/lang/Class;->isPrimitive()Z
 
@@ -663,9 +663,9 @@
 
     invoke-virtual {p0}, Ljava/lang/Double;->longValue()J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    invoke-direct {v0, v2, v3}, Ljava/lang/Long;-><init>(J)V
+    invoke-direct {v0, v1, v2}, Ljava/lang/Long;-><init>(J)V
 
     move-object p0, v0
 
@@ -768,9 +768,9 @@
 
     invoke-virtual {p0}, Ljava/lang/Double;->longValue()J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    invoke-direct {v0, v2, v3}, Ljava/lang/Long;-><init>(J)V
+    invoke-direct {v0, v1, v2}, Ljava/lang/Long;-><init>(J)V
 
     move-object p0, v0
 
@@ -1031,21 +1031,21 @@
 .end method
 
 .method public LloadBuffer([BLjava/lang/String;)I
-    .locals 7
+    .locals 6
 
-    iget-object v2, p0, Lorg/keplerproject/luajava/LuaState;->luaState:Lorg/keplerproject/luajava/CPtr;
+    iget-object v1, p0, Lorg/keplerproject/luajava/LuaState;->luaState:Lorg/keplerproject/luajava/CPtr;
 
     array-length v0, p1
 
-    int-to-long v4, v0
+    int-to-long v3, v0
 
-    move-object v1, p0
+    move-object v0, p0
 
-    move-object v3, p1
+    move-object v2, p1
 
-    move-object v6, p2
+    move-object v5, p2
 
-    invoke-direct/range {v1 .. v6}, Lorg/keplerproject/luajava/LuaState;->_LloadBuffer(Lorg/keplerproject/luajava/CPtr;[BJLjava/lang/String;)I
+    invoke-direct/range {v0 .. v5}, Lorg/keplerproject/luajava/LuaState;->_LloadBuffer(Lorg/keplerproject/luajava/CPtr;[BJLjava/lang/String;)I
 
     move-result v0
 
@@ -2582,7 +2582,7 @@
 .end method
 
 .method public declared-synchronized toJavaObject(I)Ljava/lang/Object;
-    .locals 4
+    .locals 3
 
     const/4 v0, 0x0
 
@@ -2674,9 +2674,9 @@
 
     invoke-virtual {p0, p1}, Lorg/keplerproject/luajava/LuaState;->toNumber(I)D
 
-    move-result-wide v2
+    move-result-wide v1
 
-    invoke-direct {v0, v2, v3}, Ljava/lang/Double;-><init>(D)V
+    invoke-direct {v0, v1, v2}, Ljava/lang/Double;-><init>(D)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 

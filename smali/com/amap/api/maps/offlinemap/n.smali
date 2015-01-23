@@ -44,7 +44,7 @@
 .end method
 
 .method public static a(Lorg/json/JSONObject;)Lcom/amap/api/maps/offlinemap/OfflineMapProvince;
-    .locals 4
+    .locals 3
 
     new-instance v0, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;
 
@@ -106,9 +106,9 @@
 
     invoke-static {v1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    invoke-virtual {v0, v2, v3}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->setSize(J)V
+    invoke-virtual {v0, v1, v2}, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->setSize(J)V
 
     invoke-static {p0}, Lcom/amap/api/maps/offlinemap/n;->b(Lorg/json/JSONObject;)Ljava/util/ArrayList;
 
@@ -395,63 +395,63 @@
 .method public static b(Ljava/io/File;Ljava/io/File;)V
     .locals 9
 
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
-    new-instance v7, Ljava/io/FileInputStream;
+    new-instance v6, Ljava/io/FileInputStream;
 
-    invoke-direct {v7, p0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+    invoke-direct {v6, p0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    new-instance v8, Ljava/io/FileOutputStream;
+    new-instance v7, Ljava/io/FileOutputStream;
 
-    invoke-direct {v8, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    invoke-direct {v7, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
     :try_start_0
-    invoke-virtual {v7}, Ljava/io/FileInputStream;->getChannel()Ljava/nio/channels/FileChannel;
+    invoke-virtual {v6}, Ljava/io/FileInputStream;->getChannel()Ljava/nio/channels/FileChannel;
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-object v1
+    move-result-object v0
 
     :try_start_1
-    invoke-virtual {v8}, Ljava/io/FileOutputStream;->getChannel()Ljava/nio/channels/FileChannel;
+    invoke-virtual {v7}, Ljava/io/FileOutputStream;->getChannel()Ljava/nio/channels/FileChannel;
 
-    move-result-object v6
+    move-result-object v5
 
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_0
 
-    const-wide/16 v2, 0x0
+    const-wide/16 v1, 0x0
 
-    invoke-virtual {v1}, Ljava/nio/channels/FileChannel;->size()J
+    invoke-virtual {v0}, Ljava/nio/channels/FileChannel;->size()J
 
-    move-result-wide v4
+    move-result-wide v3
 
-    invoke-virtual/range {v1 .. v6}, Ljava/nio/channels/FileChannel;->transferTo(JJLjava/nio/channels/WritableByteChannel;)J
+    invoke-virtual/range {v0 .. v5}, Ljava/nio/channels/FileChannel;->transferTo(JJLjava/nio/channels/WritableByteChannel;)J
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_2
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     :cond_0
-    if-eqz v7, :cond_1
+    if-eqz v6, :cond_1
 
-    invoke-virtual {v7}, Ljava/io/FileInputStream;->close()V
+    invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
 
     :cond_1
-    if-eqz v1, :cond_2
+    if-eqz v0, :cond_2
 
-    invoke-virtual {v1}, Ljava/nio/channels/FileChannel;->close()V
+    invoke-virtual {v0}, Ljava/nio/channels/FileChannel;->close()V
 
     :cond_2
-    if-eqz v8, :cond_3
+    if-eqz v7, :cond_3
 
-    invoke-virtual {v8}, Ljava/io/FileOutputStream;->close()V
+    invoke-virtual {v7}, Ljava/io/FileOutputStream;->close()V
 
     :cond_3
-    if-eqz v6, :cond_4
+    if-eqz v5, :cond_4
 
-    invoke-virtual {v6}, Ljava/nio/channels/FileChannel;->close()V
+    invoke-virtual {v5}, Ljava/nio/channels/FileChannel;->close()V
 
     :cond_4
     :goto_0
@@ -460,17 +460,17 @@
     :catch_0
     move-exception v0
 
-    move-object v1, v6
+    move-object v1, v5
 
     :goto_1
     :try_start_2
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
     :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    if-eqz v7, :cond_5
+    if-eqz v6, :cond_5
 
-    invoke-virtual {v7}, Ljava/io/FileInputStream;->close()V
+    invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
 
     :cond_5
     if-eqz v1, :cond_6
@@ -478,31 +478,31 @@
     invoke-virtual {v1}, Ljava/nio/channels/FileChannel;->close()V
 
     :cond_6
-    if-eqz v8, :cond_7
+    if-eqz v7, :cond_7
 
-    invoke-virtual {v8}, Ljava/io/FileOutputStream;->close()V
+    invoke-virtual {v7}, Ljava/io/FileOutputStream;->close()V
 
     :cond_7
-    if-eqz v6, :cond_4
+    if-eqz v5, :cond_4
 
-    invoke-virtual {v6}, Ljava/nio/channels/FileChannel;->close()V
+    invoke-virtual {v5}, Ljava/nio/channels/FileChannel;->close()V
 
     goto :goto_0
 
     :catch_1
     move-exception v0
 
-    move-object v1, v6
+    move-object v1, v5
 
     :goto_2
     :try_start_3
     invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
     :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    if-eqz v7, :cond_8
+    if-eqz v6, :cond_8
 
-    invoke-virtual {v7}, Ljava/io/FileInputStream;->close()V
+    invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
 
     :cond_8
     if-eqz v1, :cond_9
@@ -510,26 +510,26 @@
     invoke-virtual {v1}, Ljava/nio/channels/FileChannel;->close()V
 
     :cond_9
-    if-eqz v8, :cond_a
+    if-eqz v7, :cond_a
 
-    invoke-virtual {v8}, Ljava/io/FileOutputStream;->close()V
+    invoke-virtual {v7}, Ljava/io/FileOutputStream;->close()V
 
     :cond_a
-    if-eqz v6, :cond_4
+    if-eqz v5, :cond_4
 
-    invoke-virtual {v6}, Ljava/nio/channels/FileChannel;->close()V
+    invoke-virtual {v5}, Ljava/nio/channels/FileChannel;->close()V
 
     goto :goto_0
 
     :catchall_0
     move-exception v0
 
-    move-object v1, v6
+    move-object v1, v5
 
     :goto_3
-    if-eqz v7, :cond_b
+    if-eqz v6, :cond_b
 
-    invoke-virtual {v7}, Ljava/io/FileInputStream;->close()V
+    invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
 
     :cond_b
     if-eqz v1, :cond_c
@@ -537,30 +537,53 @@
     invoke-virtual {v1}, Ljava/nio/channels/FileChannel;->close()V
 
     :cond_c
-    if-eqz v8, :cond_d
+    if-eqz v7, :cond_d
 
-    invoke-virtual {v8}, Ljava/io/FileOutputStream;->close()V
+    invoke-virtual {v7}, Ljava/io/FileOutputStream;->close()V
 
     :cond_d
-    if-eqz v6, :cond_e
+    if-eqz v5, :cond_e
 
-    invoke-virtual {v6}, Ljava/nio/channels/FileChannel;->close()V
+    invoke-virtual {v5}, Ljava/nio/channels/FileChannel;->close()V
 
     :cond_e
     throw v0
 
     :catchall_1
+    move-exception v1
+
+    move-object v8, v1
+
+    move-object v1, v0
+
+    move-object v0, v8
+
+    goto :goto_3
+
+    :catchall_2
     move-exception v0
 
     goto :goto_3
 
     :catch_2
-    move-exception v0
+    move-exception v1
+
+    move-object v8, v1
+
+    move-object v1, v0
+
+    move-object v0, v8
 
     goto :goto_2
 
     :catch_3
-    move-exception v0
+    move-exception v1
+
+    move-object v8, v1
+
+    move-object v1, v0
+
+    move-object v0, v8
 
     goto :goto_1
 .end method
@@ -761,7 +784,7 @@
 .end method
 
 .method public static c(Lorg/json/JSONObject;)Lcom/amap/api/maps/offlinemap/OfflineMapCity;
-    .locals 4
+    .locals 3
 
     new-instance v0, Lcom/amap/api/maps/offlinemap/OfflineMapCity;
 
@@ -831,9 +854,9 @@
 
     invoke-static {v1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    invoke-virtual {v0, v2, v3}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->setSize(J)V
+    invoke-virtual {v0, v1, v2}, Lcom/amap/api/maps/offlinemap/OfflineMapCity;->setSize(J)V
 
     return-object v0
 .end method

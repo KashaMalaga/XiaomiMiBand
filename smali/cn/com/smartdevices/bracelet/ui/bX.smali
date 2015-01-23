@@ -1,65 +1,35 @@
-.class public Lcn/com/smartdevices/bracelet/ui/bX;
-.super Lcn/com/smartdevices/bracelet/ui/J;
+.class Lcn/com/smartdevices/bracelet/ui/bX;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/bW;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/bW;)V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/J;-><init>()V
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bX;->a:Lcn/com/smartdevices/bracelet/ui/bW;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected a()I
+.method public run()V
     .locals 1
 
-    const v0, 0x7f030056
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bX;->a:Lcn/com/smartdevices/bracelet/ui/bW;
 
-    return v0
-.end method
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/bW;->a:Lcn/com/smartdevices/bracelet/ui/bT;
 
-.method public onCreate(Landroid/os/Bundle;)V
-    .locals 0
-
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/J;->onCreate(Landroid/os/Bundle;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/bT;->d(Lcn/com/smartdevices/bracelet/ui/bT;)V
 
     return-void
-.end method
-
-.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 5
-
-    invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/J;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-
-    move-result-object v1
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/bX;->getArguments()Landroid/os/Bundle;
-
-    move-result-object v2
-
-    const v0, 0x7f0b018f
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    if-eqz v2, :cond_0
-
-    const-string v3, "REF_PROGRESS_INFO"
-
-    const-string v4, "..."
-
-    invoke-virtual {v2, v3, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    :cond_0
-    return-object v1
 .end method

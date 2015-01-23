@@ -28,7 +28,7 @@
 
     const-string v1, "BaseSCActivity"
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "android.net.conn.CONNECTIVITY_CHANGE"
 
@@ -40,7 +40,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/r;->a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->e(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->g(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
 
     :cond_0
     :goto_0
@@ -102,7 +102,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/r;->a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->f(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Landroid/os/Handler;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->h(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Landroid/os/Handler;
 
     move-result-object v1
 
@@ -112,7 +112,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/r;->a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->g(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Landroid/content/Context;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->i(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Landroid/content/Context;
 
     move-result-object v1
 
@@ -120,12 +120,12 @@
 
     const-string v3, "Successed"
 
-    invoke-static {v1, v2, v3}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_1
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/r;->a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->h(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->j(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
 
     :cond_3
     invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
@@ -139,7 +139,7 @@
     :cond_4
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/r;->a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->g(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Landroid/content/Context;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->i(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Landroid/content/Context;
 
     move-result-object v1
 
@@ -147,7 +147,7 @@
 
     const-string v3, "Failed"
 
-    invoke-static {v1, v2, v3}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -160,12 +160,6 @@
 
     if-eqz v1, :cond_6
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b/a;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
     const-string v0, "android.bluetooth.adapter.extra.STATE"
 
     const/high16 v1, -0x80000000
@@ -177,12 +171,12 @@
     packed-switch v0, :pswitch_data_0
 
     :pswitch_0
-    goto/16 :goto_0
+    goto :goto_0
 
     :pswitch_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/r;->a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->f(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Landroid/os/Handler;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->h(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -195,7 +189,7 @@
     :pswitch_2
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/r;->a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->f(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Landroid/os/Handler;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->h(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -216,7 +210,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/r;->a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->f(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Landroid/os/Handler;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->h(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Landroid/os/Handler;
 
     move-result-object v0
 
@@ -231,9 +225,9 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_8
 
     sget-object v0, Lcom/xiaomi/hm/bleservice/BLEService;->INTENT_EXTRA_PARAM:Ljava/lang/String;
 
@@ -248,6 +242,53 @@
     move-result-object v1
 
     invoke-virtual {v1, v0}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
+
+    goto/16 :goto_0
+
+    :cond_8
+    sget-object v1, Lcom/xiaomi/hm/bleservice/BLEService;->INTENT_ACTION_WEIGHT_CONN_STATUS_CHANGED:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lcom/xiaomi/hm/bleservice/BLEService;->INTENT_EXTRA_PARAM:Ljava/lang/String;
+
+    const/4 v1, -0x1
+
+    invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
+
+    move-result v0
+
+    new-instance v1, Landroid/os/Message;
+
+    invoke-direct {v1}, Landroid/os/Message;-><init>()V
+
+    const/16 v2, 0x1008
+
+    iput v2, v1, Landroid/os/Message;->what:I
+
+    iput v0, v1, Landroid/os/Message;->arg1:I
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/r;->a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
+
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->h(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Landroid/os/Handler;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
+
+    move-result-object v1
+
+    new-instance v2, Lcom/xiaomi/hm/bleservice/z;
+
+    invoke-direct {v2, v0}, Lcom/xiaomi/hm/bleservice/z;-><init>(I)V
+
+    invoke-virtual {v1, v2}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
 
     goto/16 :goto_0
 

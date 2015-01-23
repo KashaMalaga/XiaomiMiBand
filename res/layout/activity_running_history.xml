@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:background="@color/main_ui_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <include layout="@layout/title_back" />
-    <TextView android:textSize="20.0sp" android:textColor="@color/running_sub_text" android:id="@id/no_data" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sport_running_history_no_data" android:layout_centerInParent="true" />
-    <ExpandableListView android:id="@id/history_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:cacheColorHint="#ff2f2f2f" android:groupIndicator="@null" android:divider="@null" android:layout_below="@id/title_back" />
+    <include android:id="@id/title_back_container" layout="@layout/title_back" />
+    <RelativeLayout android:id="@id/no_data" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/logo_watermark" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/logo_watermark" android:layout_centerInParent="true" />
+        <TextView android:textSize="16.0dip" android:textColor="@color/running_sub_text" android:gravity="center" android:id="@id/no_data_refresh" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="35.0dip" android:text="@string/sport_running_history_no_data_refresh" android:layout_below="@id/logo_watermark" android:layout_centerInParent="true" />
+        <RelativeLayout android:gravity="center" android:id="@id/loading" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="35.0dip" android:layout_below="@id/logo_watermark">
+            <ProgressBar android:id="@id/progressbar" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="4.0dip" android:indeterminate="true" android:indeterminateDrawable="@drawable/custom_progress_draw" android:indeterminateDuration="700" android:layout_centerVertical="true" />
+            <TextView android:textColor="@color/running_sub_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/sport_running_history_no_data_refreshing" android:layout_toRightOf="@id/progressbar" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <com.handmark.pulltorefresh.library.PullToRefreshExpandableListView android:id="@id/history_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#ff2f2f2f" android:groupIndicator="@null" android:divider="@null" android:layout_below="@id/title_back_container" ptr:ptrHeaderBackground="@color/running_history_refresh_item_bg" ptr:ptrHeaderTextColor="@color/running_history_refresh_item_text" ptr:ptrMode="pullFromEnd" ptr:ptrHeaderTextAppearance="@dimen/running_pull_to_refresh_text_size" ptr:ptrDrawableBottom="@drawable/progress_icon" xmlns:ptr="http://schemas.android.com/apk/res-auto" />
 </RelativeLayout>

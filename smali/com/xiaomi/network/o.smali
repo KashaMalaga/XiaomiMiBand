@@ -206,9 +206,9 @@
 
     invoke-static {}, Ljava/lang/System;->nanoTime()J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    invoke-static {v2, v3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    invoke-static {v1, v2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v1
 
@@ -304,13 +304,13 @@
 .end method
 
 .method private a(Ljava/util/List;D)V
-    .locals 8
+    .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List",
             "<",
-            "Lcom/xiaomi/b/a/a/a/c;",
+            "Lcom/xiaomi/c/a/a/a/c;",
             ">;D)V"
         }
     .end annotation
@@ -333,23 +333,23 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/xiaomi/b/a/a/a/c;
+    check-cast v0, Lcom/xiaomi/c/a/a/a/c;
 
-    new-instance v2, Lcom/xiaomi/b/a/a/a/e;
+    new-instance v2, Lcom/xiaomi/c/a/a/a/e;
 
-    invoke-direct {v2}, Lcom/xiaomi/b/a/a/a/e;-><init>()V
+    invoke-direct {v2}, Lcom/xiaomi/c/a/a/a/e;-><init>()V
 
     const-string v3, "httpapi"
 
-    invoke-virtual {v2, v3}, Lcom/xiaomi/b/a/a/a/e;->a(Ljava/lang/String;)Lcom/xiaomi/b/a/a/a/e;
+    invoke-virtual {v2, v3}, Lcom/xiaomi/c/a/a/a/e;->a(Ljava/lang/String;)Lcom/xiaomi/c/a/a/a/e;
 
-    invoke-virtual {v2, v0}, Lcom/xiaomi/b/a/a/a/e;->a(Lcom/xiaomi/b/a/a/a/c;)Lcom/xiaomi/b/a/a/a/e;
+    invoke-virtual {v2, v0}, Lcom/xiaomi/c/a/a/a/e;->a(Lcom/xiaomi/c/a/a/a/c;)Lcom/xiaomi/c/a/a/a/e;
 
-    new-instance v0, Lcom/xiaomi/b/a/a/a;
+    new-instance v0, Lcom/xiaomi/c/a/a/a;
 
-    invoke-direct {v0}, Lcom/xiaomi/b/a/a/a;-><init>()V
+    invoke-direct {v0}, Lcom/xiaomi/c/a/a/a;-><init>()V
 
-    invoke-virtual {v2, v0}, Lcom/xiaomi/b/a/a/a/e;->a(Lcom/xiaomi/b/a/a/a;)Lcom/xiaomi/b/a/a/a/e;
+    invoke-virtual {v2, v0}, Lcom/xiaomi/c/a/a/a/e;->a(Lcom/xiaomi/c/a/a/a;)Lcom/xiaomi/c/a/a/a/e;
 
     new-instance v0, Ljava/lang/String;
 

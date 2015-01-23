@@ -13,7 +13,7 @@
 
 .field private e:Landroid/graphics/Paint;
 
-.field private w:Landroid/graphics/Bitmap;
+.field private i:Landroid/graphics/Bitmap;
 
 .field private x:Landroid/graphics/Bitmap;
 
@@ -56,7 +56,7 @@
 
     const/high16 v1, 0x41100000
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/chart/c;->o:F
+    iget v2, p0, Lcn/com/smartdevices/bracelet/chart/c;->p:F
 
     mul-float/2addr v1, v2
 
@@ -114,7 +114,7 @@
 
     const/high16 v1, 0x41000000
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/chart/c;->o:F
+    iget v2, p0, Lcn/com/smartdevices/bracelet/chart/c;->p:F
 
     mul-float/2addr v1, v2
 
@@ -124,13 +124,13 @@
 
     move-result v2
 
-    iget v3, p0, Lcn/com/smartdevices/bracelet/chart/c;->p:F
+    iget v3, p0, Lcn/com/smartdevices/bracelet/chart/c;->q:F
 
     const/4 v4, 0x0
 
     const/4 v5, 0x1
 
-    iget-object v6, p0, Lcn/com/smartdevices/bracelet/chart/c;->w:Landroid/graphics/Bitmap;
+    iget-object v6, p0, Lcn/com/smartdevices/bracelet/chart/c;->i:Landroid/graphics/Bitmap;
 
     const/4 v7, 0x0
 
@@ -160,7 +160,7 @@
 
     const/high16 v3, 0x41700000
 
-    iget v4, p0, Lcn/com/smartdevices/bracelet/chart/c;->o:F
+    iget v4, p0, Lcn/com/smartdevices/bracelet/chart/c;->p:F
 
     mul-float/2addr v3, v4
 
@@ -182,7 +182,7 @@
 
     const-wide v4, 0x3fe51eb851eb851fL
 
-    iget v6, p0, Lcn/com/smartdevices/bracelet/chart/c;->o:F
+    iget v6, p0, Lcn/com/smartdevices/bracelet/chart/c;->p:F
 
     float-to-double v6, v6
 
@@ -206,7 +206,7 @@
 
     const/high16 v1, 0x41000000
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/chart/c;->o:F
+    iget v2, p0, Lcn/com/smartdevices/bracelet/chart/c;->p:F
 
     mul-float/2addr v1, v2
 
@@ -220,7 +220,7 @@
 
     int-to-float v1, v1
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/chart/c;->p:F
+    iget v2, p0, Lcn/com/smartdevices/bracelet/chart/c;->q:F
 
     mul-float/2addr v1, v2
 
@@ -230,7 +230,7 @@
 
     move-result v2
 
-    iget v3, p0, Lcn/com/smartdevices/bracelet/chart/c;->p:F
+    iget v3, p0, Lcn/com/smartdevices/bracelet/chart/c;->q:F
 
     const/4 v4, 0x0
 
@@ -274,7 +274,7 @@
 
     const/high16 v3, 0x40c00000
 
-    iget v4, p0, Lcn/com/smartdevices/bracelet/chart/c;->o:F
+    iget v4, p0, Lcn/com/smartdevices/bracelet/chart/c;->p:F
 
     mul-float/2addr v3, v4
 
@@ -296,7 +296,7 @@
 
     const-wide v4, 0x3fe51eb851eb851fL
 
-    iget v6, p0, Lcn/com/smartdevices/bracelet/chart/c;->o:F
+    iget v6, p0, Lcn/com/smartdevices/bracelet/chart/c;->p:F
 
     float-to-double v6, v6
 
@@ -320,11 +320,11 @@
 .end method
 
 .method private b(Landroid/graphics/Canvas;Landroid/graphics/RectF;)V
-    .locals 12
+    .locals 13
 
-    const/high16 v11, 0x40000000
+    const/high16 v12, 0x40000000
 
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
     const/4 v1, 0x0
 
@@ -346,11 +346,11 @@
     return-void
 
     :cond_1
-    new-instance v6, Landroid/graphics/Rect;
+    new-instance v7, Landroid/graphics/Rect;
 
-    invoke-direct {v6}, Landroid/graphics/Rect;-><init>()V
+    invoke-direct {v7}, Landroid/graphics/Rect;-><init>()V
 
-    const/4 v7, 0x2
+    const/4 v8, 0x2
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c;->a:Lcn/com/smartdevices/bracelet/chart/a;
 
@@ -368,21 +368,39 @@
 
     add-int/lit8 v0, v0, 0x1
 
+    div-int/lit8 v0, v0, 0x6
+
     const/16 v2, 0x14
 
-    if-lt v0, v2, :cond_6
+    if-lt v0, v2, :cond_7
 
     const/4 v0, 0x1
 
     :goto_0
+    const/high16 v2, -0x80000000
+
+    move v3, v2
+
     move v2, v1
 
     :goto_1
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/chart/c;->a:Lcn/com/smartdevices/bracelet/chart/a;
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/chart/c;->a:Lcn/com/smartdevices/bracelet/chart/a;
 
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/chart/a;->b(Lcn/com/smartdevices/bracelet/chart/a;)I
+    invoke-static {v4}, Lcn/com/smartdevices/bracelet/chart/a;->b(Lcn/com/smartdevices/bracelet/chart/a;)I
 
-    move-result v3
+    move-result v4
+
+    iget-object v5, p0, Lcn/com/smartdevices/bracelet/chart/c;->a:Lcn/com/smartdevices/bracelet/chart/a;
+
+    invoke-static {v5}, Lcn/com/smartdevices/bracelet/chart/a;->a(Lcn/com/smartdevices/bracelet/chart/a;)I
+
+    move-result v5
+
+    sub-int/2addr v4, v5
+
+    add-int/lit8 v4, v4, 0x1
+
+    if-ge v2, v4, :cond_0
 
     iget-object v4, p0, Lcn/com/smartdevices/bracelet/chart/c;->a:Lcn/com/smartdevices/bracelet/chart/a;
 
@@ -390,157 +408,158 @@
 
     move-result v4
 
-    sub-int/2addr v3, v4
+    add-int/2addr v4, v2
 
-    add-int/lit8 v3, v3, 0x1
+    div-int/lit8 v4, v4, 0x6
 
-    if-ge v2, v3, :cond_0
+    if-gez v4, :cond_2
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/chart/c;->a:Lcn/com/smartdevices/bracelet/chart/a;
-
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/chart/a;->a(Lcn/com/smartdevices/bracelet/chart/a;)I
-
-    move-result v3
-
-    add-int/2addr v3, v2
-
-    if-gez v3, :cond_2
-
-    add-int/lit8 v3, v3, 0x18
+    add-int/lit8 v4, v4, 0x18
 
     :cond_2
-    rem-int v4, v3, v7
+    rem-int v5, v4, v8
 
-    if-eqz v4, :cond_3
+    if-nez v5, :cond_3
 
+    if-ne v4, v3, :cond_4
+
+    :cond_3
     :goto_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    :cond_3
-    iget v4, p0, Lcn/com/smartdevices/bracelet/chart/c;->q:F
+    :cond_4
+    iget v3, p0, Lcn/com/smartdevices/bracelet/chart/c;->r:F
 
-    iget v8, p0, Lcn/com/smartdevices/bracelet/chart/c;->c:F
+    iget v5, p0, Lcn/com/smartdevices/bracelet/chart/c;->c:F
 
-    div-float/2addr v4, v8
+    div-float/2addr v3, v5
 
-    const/high16 v8, 0x3f800000
+    const/high16 v5, 0x3f800000
 
-    rem-float/2addr v4, v8
+    rem-float/2addr v3, v5
 
-    cmpl-float v4, v4, v5
+    cmpl-float v3, v3, v6
 
-    if-nez v4, :cond_4
+    if-nez v3, :cond_5
 
-    move v4, v5
+    move v5, v6
 
     :goto_3
-    if-nez v0, :cond_5
+    if-nez v0, :cond_6
 
-    mul-int/lit8 v3, v3, 0x3c
+    mul-int/lit8 v3, v4, 0x3c
 
     invoke-static {v3}, Lcn/com/smartdevices/bracelet/chart/c/q;->a(I)Ljava/lang/String;
 
     move-result-object v3
 
     :goto_4
-    iget-object v8, p0, Lcn/com/smartdevices/bracelet/chart/c;->d:Landroid/graphics/Paint;
+    iget-object v9, p0, Lcn/com/smartdevices/bracelet/chart/c;->d:Landroid/graphics/Paint;
 
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
-    move-result v9
+    move-result v10
 
-    invoke-virtual {v8, v3, v1, v9, v6}, Landroid/graphics/Paint;->getTextBounds(Ljava/lang/String;IILandroid/graphics/Rect;)V
+    invoke-virtual {v9, v3, v1, v10, v7}, Landroid/graphics/Paint;->getTextBounds(Ljava/lang/String;IILandroid/graphics/Rect;)V
 
-    int-to-float v8, v2
+    int-to-float v9, v2
 
-    iget v9, p0, Lcn/com/smartdevices/bracelet/chart/c;->c:F
+    iget v10, p0, Lcn/com/smartdevices/bracelet/chart/c;->c:F
 
-    mul-float/2addr v8, v9
+    mul-float/2addr v9, v10
 
-    iget v9, p0, Lcn/com/smartdevices/bracelet/chart/c;->c:F
+    iget v10, p0, Lcn/com/smartdevices/bracelet/chart/c;->c:F
 
-    invoke-virtual {v6}, Landroid/graphics/Rect;->width()I
+    const/high16 v11, 0x40c00000
+
+    mul-float/2addr v10, v11
+
+    invoke-virtual {v7}, Landroid/graphics/Rect;->width()I
+
+    move-result v11
+
+    int-to-float v11, v11
+
+    sub-float/2addr v10, v11
+
+    div-float/2addr v10, v12
+
+    add-float/2addr v9, v10
+
+    iget v10, p2, Landroid/graphics/RectF;->left:F
+
+    add-float/2addr v9, v10
+
+    iget v10, p0, Lcn/com/smartdevices/bracelet/chart/c;->k:F
+
+    add-float/2addr v9, v10
+
+    add-float/2addr v5, v9
+
+    iget v9, p0, Lcn/com/smartdevices/bracelet/chart/c;->h:I
+
+    invoke-virtual {v7}, Landroid/graphics/Rect;->height()I
 
     move-result v10
 
-    int-to-float v10, v10
+    add-int/2addr v9, v10
 
-    sub-float/2addr v9, v10
+    int-to-float v9, v9
 
-    div-float/2addr v9, v11
+    div-float/2addr v9, v12
 
-    add-float/2addr v8, v9
+    iget v10, p2, Landroid/graphics/RectF;->top:F
 
-    iget v9, p2, Landroid/graphics/RectF;->left:F
+    add-float/2addr v9, v10
 
-    add-float/2addr v8, v9
+    iget-object v10, p0, Lcn/com/smartdevices/bracelet/chart/c;->d:Landroid/graphics/Paint;
 
-    iget v9, p0, Lcn/com/smartdevices/bracelet/chart/c;->j:F
+    invoke-virtual {p1, v3, v5, v9, v10}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    add-float/2addr v8, v9
-
-    add-float/2addr v4, v8
-
-    iget v8, p0, Lcn/com/smartdevices/bracelet/chart/c;->h:I
-
-    invoke-virtual {v6}, Landroid/graphics/Rect;->height()I
-
-    move-result v9
-
-    add-int/2addr v8, v9
-
-    int-to-float v8, v8
-
-    div-float/2addr v8, v11
-
-    iget v9, p2, Landroid/graphics/RectF;->top:F
-
-    add-float/2addr v8, v9
-
-    iget-object v9, p0, Lcn/com/smartdevices/bracelet/chart/c;->d:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, v3, v4, v8, v9}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
+    move v3, v4
 
     goto :goto_2
 
-    :cond_4
-    iget v4, p0, Lcn/com/smartdevices/bracelet/chart/c;->q:F
+    :cond_5
+    iget v3, p0, Lcn/com/smartdevices/bracelet/chart/c;->r:F
 
-    iget v8, p0, Lcn/com/smartdevices/bracelet/chart/c;->c:F
+    iget v5, p0, Lcn/com/smartdevices/bracelet/chart/c;->c:F
 
-    rem-float/2addr v4, v8
+    rem-float/2addr v3, v5
+
+    move v5, v3
 
     goto :goto_3
 
-    :cond_5
-    invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    :cond_6
+    invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v3
 
     goto :goto_4
 
-    :cond_6
+    :cond_7
     move v0, v1
 
-    goto :goto_0
+    goto/16 :goto_0
 .end method
 
-.method private w()V
+.method private j()V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c;->w:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c;->i:Landroid/graphics/Bitmap;
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c;->s:Landroid/content/Context;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c;->t:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f020062
+    const v1, 0x7f020092
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -552,20 +571,20 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c;->w:Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c;->i:Landroid/graphics/Bitmap;
 
     :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c;->x:Landroid/graphics/Bitmap;
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c;->s:Landroid/content/Context;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c;->t:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f020061
+    const v1, 0x7f020091
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -600,11 +619,11 @@
 
     mul-float/2addr v0, v1
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/c;->q:F
+    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/c;->r:F
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c;->a:Lcn/com/smartdevices/bracelet/chart/a;
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/c;->q:F
+    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/c;->r:F
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/chart/a;->a(Lcn/com/smartdevices/bracelet/chart/a;F)F
 
@@ -614,7 +633,7 @@
 .method protected a(F)V
     .locals 2
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/c;->q:F
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/c;->r:F
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/chart/c;->c:F
 
@@ -650,7 +669,7 @@
 
     if-ne v0, v1, :cond_1
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/chart/c;->w()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/chart/c;->j()V
 
     invoke-direct {p0, p1, p2}, Lcn/com/smartdevices/bracelet/chart/c;->a(Landroid/graphics/Canvas;Landroid/graphics/RectF;)V
 
@@ -699,7 +718,7 @@
 .method public c()F
     .locals 3
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/c;->q:F
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/c;->r:F
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/chart/c;->b:I
 
@@ -731,7 +750,7 @@
 .method public e()V
     .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c;->i:Landroid/graphics/RectF;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c;->j:Landroid/graphics/RectF;
 
     if-eqz v0, :cond_0
 
@@ -749,17 +768,17 @@
 
     if-eq v0, v1, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c;->i:Landroid/graphics/RectF;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c;->j:Landroid/graphics/RectF;
 
     invoke-virtual {v0}, Landroid/graphics/RectF;->width()F
 
     move-result v0
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/c;->j:F
+    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/c;->k:F
 
     sub-float/2addr v0, v1
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/c;->l:F
+    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/c;->m:F
 
     sub-float/2addr v0, v1
 
@@ -825,7 +844,7 @@
 
     mul-float/2addr v0, v1
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/c;->q:F
+    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/c;->r:F
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/chart/c;->c:F
 
@@ -841,7 +860,7 @@
 
     const/4 v3, 0x0
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/c;->q:F
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/c;->r:F
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/chart/c;->b:I
 
@@ -857,7 +876,7 @@
 
     if-gez v0, :cond_0
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/c;->q:F
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/c;->r:F
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/chart/c;->b:I
 

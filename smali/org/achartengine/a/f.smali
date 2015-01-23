@@ -18,7 +18,7 @@
 
 # direct methods
 .method public constructor <init>(Lorg/achartengine/b/g;Lorg/achartengine/c/f;[Ljava/lang/String;)V
-    .locals 8
+    .locals 7
 
     const/4 v0, 0x0
 
@@ -174,9 +174,9 @@
 
     invoke-virtual {p2, v4}, Lorg/achartengine/c/f;->j(I)D
 
-    move-result-wide v6
+    move-result-wide v5
 
-    invoke-virtual {v3, v6, v7}, Lorg/achartengine/c/f;->a(D)V
+    invoke-virtual {v3, v5, v6}, Lorg/achartengine/c/f;->a(D)V
 
     :cond_1
     invoke-virtual {p2, v4}, Lorg/achartengine/c/f;->m(I)Z
@@ -187,9 +187,9 @@
 
     invoke-virtual {p2, v4}, Lorg/achartengine/c/f;->l(I)D
 
-    move-result-wide v6
+    move-result-wide v5
 
-    invoke-virtual {v3, v6, v7}, Lorg/achartengine/c/f;->b(D)V
+    invoke-virtual {v3, v5, v6}, Lorg/achartengine/c/f;->b(D)V
 
     :cond_2
     invoke-virtual {p2, v4}, Lorg/achartengine/c/f;->o(I)Z
@@ -200,9 +200,9 @@
 
     invoke-virtual {p2, v4}, Lorg/achartengine/c/f;->n(I)D
 
-    move-result-wide v6
+    move-result-wide v5
 
-    invoke-virtual {v3, v6, v7}, Lorg/achartengine/c/f;->c(D)V
+    invoke-virtual {v3, v5, v6}, Lorg/achartengine/c/f;->c(D)V
 
     :cond_3
     invoke-virtual {p2, v4}, Lorg/achartengine/c/f;->q(I)Z

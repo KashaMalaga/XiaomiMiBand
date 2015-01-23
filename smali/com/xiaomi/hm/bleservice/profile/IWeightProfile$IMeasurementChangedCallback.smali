@@ -3,5 +3,5 @@
 
 
 # virtual methods
-.method public abstract onChanged(F)V
+.method public abstract onChanged(Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;)V
 .end method

@@ -3,11 +3,11 @@
 
 
 # instance fields
-.field public braceletMacAddress:Ljava/lang/String;
-
 .field public deviceId:Ljava/lang/String;
 
 .field public fwVersion:Ljava/lang/String;
+
+.field public macAddress:Ljava/lang/String;
 
 .field public miuiVersionCode:Ljava/lang/String;
 
@@ -34,7 +34,7 @@
 
     const-string v0, ""
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/SystemInfo;->braceletMacAddress:Ljava/lang/String;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/SystemInfo;->macAddress:Ljava/lang/String;
 
     const-string v0, ""
 
@@ -94,13 +94,13 @@
 
     move-result-object v0
 
-    const-string v1, "braceletMacAddress:"
+    const-string v1, "macAddress:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/model/SystemInfo;->braceletMacAddress:Ljava/lang/String;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/model/SystemInfo;->macAddress:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

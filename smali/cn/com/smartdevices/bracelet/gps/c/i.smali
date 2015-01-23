@@ -156,7 +156,7 @@
 
     div-float/2addr v0, v1
 
-    invoke-static {v0, v7}, Lcn/com/smartdevices/bracelet/gps/d/d;->a(FI)F
+    invoke-static {v0, v7}, Lcn/com/smartdevices/bracelet/gps/d/e;->a(FI)F
 
     move-result v0
 
@@ -170,7 +170,7 @@
 
     iget-wide v2, p1, Lcn/com/smartdevices/bracelet/gps/c/h;->c:J
 
-    invoke-static {v1, v2, v3}, Lcn/com/smartdevices/bracelet/lab/c/e;->b(Landroid/content/Context;J)Ljava/lang/String;
+    invoke-static {v1, v2, v3}, Lcn/com/smartdevices/bracelet/lab/b/f;->b(Landroid/content/Context;J)Ljava/lang/String;
 
     move-result-object v1
 
@@ -178,11 +178,11 @@
 
     iget v3, p1, Lcn/com/smartdevices/bracelet/gps/c/h;->b:F
 
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/gps/d/e;->c(F)J
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/gps/d/f;->c(F)J
 
-    move-result-wide v4
+    move-result-wide v3
 
-    invoke-static {v2, v4, v5}, Lcn/com/smartdevices/bracelet/lab/c/e;->b(Landroid/content/Context;J)Ljava/lang/String;
+    invoke-static {v2, v3, v4}, Lcn/com/smartdevices/bracelet/lab/b/f;->b(Landroid/content/Context;J)Ljava/lang/String;
 
     move-result-object v2
 
@@ -198,14 +198,14 @@
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/c/i;->j:Landroid/content/res/Resources;
 
-    const v4, 0x7f0c029b
+    const v4, 0x7f070304
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     :goto_1
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/c/i;->j:Landroid/content/res/Resources;
 
-    const v4, 0x7f0c0299
+    const v4, 0x7f070302
 
     const/4 v5, 0x3
 
@@ -232,7 +232,7 @@
     :cond_1
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/c/i;->j:Landroid/content/res/Resources;
 
-    const v4, 0x7f0c029a
+    const v4, 0x7f070303
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -291,7 +291,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/services/h;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/services/p;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

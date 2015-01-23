@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.implements Landroid/view/View$OnLongClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/cD;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/cF;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/cD;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/cF;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cI;->a:Lcn/com/smartdevices/bracelet/ui/cD;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cI;->a:Lcn/com/smartdevices/bracelet/ui/cF;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,18 +22,14 @@
 
 
 # virtual methods
-.method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .locals 2
+.method public onLongClick(Landroid/view/View;)Z
+    .locals 1
 
-    invoke-static {p2}, Lcn/com/smartdevices/bracelet/u;->f(Z)V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cI;->a:Lcn/com/smartdevices/bracelet/ui/cF;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/a/m;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/cF;->c(Lcn/com/smartdevices/bracelet/ui/cF;)V
 
-    const/4 v1, 0x0
+    const/4 v0, 0x1
 
-    invoke-direct {v0, v1, p2}, Lcn/com/smartdevices/bracelet/a/m;-><init>(Lcn/com/smartdevices/bracelet/a/b;Z)V
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/a/m;->d()V
-
-    return-void
+    return v0
 .end method

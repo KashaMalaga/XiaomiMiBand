@@ -77,9 +77,9 @@
 
     move-result-object v0
 
-    const-wide/16 v2, 0x0
+    const-wide/16 v1, 0x0
 
-    invoke-virtual {v0, v2, v3}, Lcom/tencent/b/b/f;->a(J)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/b/b/f;->a(J)V
 
     goto :goto_0
 

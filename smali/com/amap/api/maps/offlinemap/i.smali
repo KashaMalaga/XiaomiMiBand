@@ -30,7 +30,7 @@
 .end method
 
 .method private a(Ljava/lang/String;)V
-    .locals 6
+    .locals 5
 
     iget-object v0, p0, Lcom/amap/api/maps/offlinemap/i;->a:Landroid/content/Context;
 
@@ -94,11 +94,11 @@
     :goto_1
     invoke-virtual {p0}, Lcom/amap/api/maps/offlinemap/i;->a()J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    const-wide/32 v4, 0x100000
+    const-wide/32 v3, 0x100000
 
-    cmp-long v1, v2, v4
+    cmp-long v1, v1, v3
 
     if-lez v1, :cond_0
 

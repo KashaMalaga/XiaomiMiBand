@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="picker_number_of_items_selected">
+        <item quantity="other">选中了 %1$d 项</item>
+        <item quantity="zero">选中了 %1$d 项</item>
+        <item quantity="one">选中了 %1$d 项</item>
+    </plurals>
+    <plurals name="numberOfPullUpdateReport">
+        <item quantity="other">更新了%d条记录</item>
+        <item quantity="one">更新了%d条记录</item>
+    </plurals>
+</resources>

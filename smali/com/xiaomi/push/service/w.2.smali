@@ -26,7 +26,7 @@
 
     iget-object v0, p0, Lcom/xiaomi/push/service/w;->a:Lcom/xiaomi/push/service/XMPushService;
 
-    invoke-static {v0}, Lcom/xiaomi/push/service/XMPushService;->d(Lcom/xiaomi/push/service/XMPushService;)Lcom/xiaomi/f/l;
+    invoke-static {v0}, Lcom/xiaomi/push/service/XMPushService;->d(Lcom/xiaomi/push/service/XMPushService;)Lcom/xiaomi/g/l;
 
     move-result-object v0
 
@@ -34,23 +34,23 @@
 
     iget-object v0, p0, Lcom/xiaomi/push/service/w;->a:Lcom/xiaomi/push/service/XMPushService;
 
-    invoke-static {v0}, Lcom/xiaomi/push/service/XMPushService;->d(Lcom/xiaomi/push/service/XMPushService;)Lcom/xiaomi/f/l;
+    invoke-static {v0}, Lcom/xiaomi/push/service/XMPushService;->d(Lcom/xiaomi/push/service/XMPushService;)Lcom/xiaomi/g/l;
 
     move-result-object v0
 
-    new-instance v1, Lcom/xiaomi/f/c/g;
+    new-instance v1, Lcom/xiaomi/g/c/g;
 
-    sget-object v2, Lcom/xiaomi/f/c/i;->b:Lcom/xiaomi/f/c/i;
+    sget-object v2, Lcom/xiaomi/g/c/i;->b:Lcom/xiaomi/g/c/i;
 
-    invoke-direct {v1, v2}, Lcom/xiaomi/f/c/g;-><init>(Lcom/xiaomi/f/c/i;)V
+    invoke-direct {v1, v2}, Lcom/xiaomi/g/c/g;-><init>(Lcom/xiaomi/g/c/i;)V
 
     const/16 v2, 0xf
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/xiaomi/f/l;->a(Lcom/xiaomi/f/c/g;ILjava/lang/Exception;)V
+    invoke-virtual {v0, v1, v2, v3}, Lcom/xiaomi/g/l;->a(Lcom/xiaomi/g/c/g;ILjava/lang/Exception;)V
 
     iget-object v0, p0, Lcom/xiaomi/push/service/w;->a:Lcom/xiaomi/push/service/XMPushService;
 
-    invoke-static {v0, v3}, Lcom/xiaomi/push/service/XMPushService;->a(Lcom/xiaomi/push/service/XMPushService;Lcom/xiaomi/f/l;)Lcom/xiaomi/f/l;
+    invoke-static {v0, v3}, Lcom/xiaomi/push/service/XMPushService;->a(Lcom/xiaomi/push/service/XMPushService;Lcom/xiaomi/g/l;)Lcom/xiaomi/g/l;
 
     :cond_0
     return-void

@@ -1,278 +1,212 @@
-.class Lcom/d/a/N;
-.super Lcom/d/a/L;
+.class public abstract Lcom/d/a/N;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field h:Lcom/d/a/p;
-
-.field i:I
-
-.field private j:Lcom/d/b/b;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
 
 
 # direct methods
-.method public constructor <init>(Lcom/d/b/d;Lcom/d/a/p;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lcom/d/a/L;-><init>(Lcom/d/b/d;Lcom/d/a/L;)V
-
-    sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    iput-object v0, p0, Lcom/d/a/N;->d:Ljava/lang/Class;
-
-    iput-object p2, p0, Lcom/d/a/N;->e:Lcom/d/a/u;
-
-    iget-object v0, p0, Lcom/d/a/N;->e:Lcom/d/a/u;
-
-    check-cast v0, Lcom/d/a/p;
-
-    iput-object v0, p0, Lcom/d/a/N;->h:Lcom/d/a/p;
-
-    instance-of v0, p1, Lcom/d/b/b;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/d/a/N;->b:Lcom/d/b/d;
-
-    check-cast v0, Lcom/d/b/b;
-
-    iput-object v0, p0, Lcom/d/a/N;->j:Lcom/d/b/b;
-
-    :cond_0
-    return-void
-.end method
-
-.method public varargs constructor <init>(Lcom/d/b/d;[I)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lcom/d/a/L;-><init>(Lcom/d/b/d;Lcom/d/a/L;)V
-
-    invoke-virtual {p0, p2}, Lcom/d/a/N;->a([I)V
-
-    instance-of v0, p1, Lcom/d/b/b;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/d/a/N;->b:Lcom/d/b/d;
-
-    check-cast v0, Lcom/d/b/b;
-
-    iput-object v0, p0, Lcom/d/a/N;->j:Lcom/d/b/b;
-
-    :cond_0
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Lcom/d/a/p;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lcom/d/a/L;-><init>(Ljava/lang/String;Lcom/d/a/L;)V
-
-    sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    iput-object v0, p0, Lcom/d/a/N;->d:Ljava/lang/Class;
-
-    iput-object p2, p0, Lcom/d/a/N;->e:Lcom/d/a/u;
-
-    iget-object v0, p0, Lcom/d/a/N;->e:Lcom/d/a/u;
-
-    check-cast v0, Lcom/d/a/p;
-
-    iput-object v0, p0, Lcom/d/a/N;->h:Lcom/d/a/p;
-
-    return-void
-.end method
-
-.method public varargs constructor <init>(Ljava/lang/String;[I)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lcom/d/a/L;-><init>(Ljava/lang/String;Lcom/d/a/L;)V
-
-    invoke-virtual {p0, p2}, Lcom/d/a/N;->a([I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public synthetic a()Lcom/d/a/L;
+.method public final a()Lcom/d/a/N;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/d/a/N",
+            "<TT;>;"
+        }
+    .end annotation
 
-    invoke-virtual {p0}, Lcom/d/a/N;->e()Lcom/d/a/N;
+    new-instance v0, Lcom/d/a/O;
 
-    move-result-object v0
+    invoke-direct {v0, p0}, Lcom/d/a/O;-><init>(Lcom/d/a/N;)V
 
     return-object v0
 .end method
 
-.method a(F)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/d/a/N;->h:Lcom/d/a/p;
-
-    invoke-virtual {v0, p1}, Lcom/d/a/p;->b(F)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/d/a/N;->i:I
-
-    return-void
-.end method
-
-.method a(Ljava/lang/Class;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/d/a/N;->b:Lcom/d/b/d;
-
-    if-eqz v0, :cond_0
-
-    :goto_0
-    return-void
-
-    :cond_0
-    invoke-super {p0, p1}, Lcom/d/a/L;->a(Ljava/lang/Class;)V
-
-    goto :goto_0
-.end method
-
-.method public varargs a([I)V
-    .locals 1
-
-    invoke-super {p0, p1}, Lcom/d/a/L;->a([I)V
-
-    iget-object v0, p0, Lcom/d/a/N;->e:Lcom/d/a/u;
-
-    check-cast v0, Lcom/d/a/p;
-
-    iput-object v0, p0, Lcom/d/a/N;->h:Lcom/d/a/p;
-
-    return-void
-.end method
-
-.method d()Ljava/lang/Object;
-    .locals 1
-
-    iget v0, p0, Lcom/d/a/N;->i:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method d(Ljava/lang/Object;)V
-    .locals 3
-
-    iget-object v0, p0, Lcom/d/a/N;->j:Lcom/d/b/b;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/d/a/N;->j:Lcom/d/b/b;
-
-    iget v1, p0, Lcom/d/a/N;->i:I
-
-    invoke-virtual {v0, p1, v1}, Lcom/d/b/b;->a(Ljava/lang/Object;I)V
-
-    :cond_0
-    :goto_0
-    return-void
-
-    :cond_1
-    iget-object v0, p0, Lcom/d/a/N;->b:Lcom/d/b/d;
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcom/d/a/N;->b:Lcom/d/b/d;
-
-    iget v1, p0, Lcom/d/a/N;->i:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, p1, v1}, Lcom/d/b/d;->a(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lcom/d/a/N;->c:Ljava/lang/reflect/Method;
-
-    if-eqz v0, :cond_0
+.method public final a(Lcom/d/a/w;)Ljava/lang/Object;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/d/a/w;",
+            ")TT;"
+        }
+    .end annotation
 
     :try_start_0
-    iget-object v0, p0, Lcom/d/a/N;->g:[Ljava/lang/Object;
+    new-instance v0, Lcom/d/a/b/a/g;
 
-    const/4 v1, 0x0
+    invoke-direct {v0, p1}, Lcom/d/a/b/a/g;-><init>(Lcom/d/a/w;)V
 
-    iget v2, p0, Lcom/d/a/N;->i:I
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    aput-object v2, v0, v1
-
-    iget-object v0, p0, Lcom/d/a/N;->c:Ljava/lang/reflect/Method;
-
-    iget-object v1, p0, Lcom/d/a/N;->g:[Ljava/lang/Object;
-
-    invoke-virtual {v0, p1, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lcom/d/a/N;->b(Lcom/d/a/d/a;)Ljava/lang/Object;
     :try_end_0
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    move-result-object v0
+
+    return-object v0
 
     :catch_0
     move-exception v0
 
-    const-string v1, "PropertyValuesHolder"
+    new-instance v1, Lcom/d/a/x;
 
-    invoke-virtual {v0}, Ljava/lang/reflect/InvocationTargetException;->toString()Ljava/lang/String;
+    invoke-direct {v1, v0}, Lcom/d/a/x;-><init>(Ljava/lang/Throwable;)V
 
-    move-result-object v0
-
-    invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
-
-    :catch_1
-    move-exception v0
-
-    const-string v1, "PropertyValuesHolder"
-
-    invoke-virtual {v0}, Ljava/lang/IllegalAccessException;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    goto :goto_0
+    throw v1
 .end method
 
-.method public e()Lcom/d/a/N;
-    .locals 2
+.method public final a(Ljava/io/Reader;)Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/io/Reader;",
+            ")TT;"
+        }
+    .end annotation
 
-    invoke-super {p0}, Lcom/d/a/L;->a()Lcom/d/a/L;
+    new-instance v0, Lcom/d/a/d/a;
+
+    invoke-direct {v0, p1}, Lcom/d/a/d/a;-><init>(Ljava/io/Reader;)V
+
+    invoke-virtual {p0, v0}, Lcom/d/a/N;->b(Lcom/d/a/d/a;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/d/a/N;
+    return-object v0
+.end method
 
-    iget-object v1, v0, Lcom/d/a/N;->e:Lcom/d/a/u;
+.method public final a(Ljava/lang/String;)Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")TT;"
+        }
+    .end annotation
 
-    check-cast v1, Lcom/d/a/p;
+    new-instance v0, Ljava/io/StringReader;
 
-    iput-object v1, v0, Lcom/d/a/N;->h:Lcom/d/a/p;
+    invoke-direct {v0, p1}, Ljava/io/StringReader;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0, v0}, Lcom/d/a/N;->a(Ljava/io/Reader;)Ljava/lang/Object;
+
+    move-result-object v0
 
     return-object v0
+.end method
+
+.method public final a(Ljava/lang/Object;)Ljava/lang/String;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)",
+            "Ljava/lang/String;"
+        }
+    .end annotation
+
+    new-instance v0, Ljava/io/StringWriter;
+
+    invoke-direct {v0}, Ljava/io/StringWriter;-><init>()V
+
+    invoke-virtual {p0, v0, p1}, Lcom/d/a/N;->a(Ljava/io/Writer;Ljava/lang/Object;)V
+
+    invoke-virtual {v0}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public abstract a(Lcom/d/a/d/e;Ljava/lang/Object;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/d/a/d/e;",
+            "TT;)V"
+        }
+    .end annotation
+.end method
+
+.method public final a(Ljava/io/Writer;Ljava/lang/Object;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/io/Writer;",
+            "TT;)V"
+        }
+    .end annotation
+
+    new-instance v0, Lcom/d/a/d/e;
+
+    invoke-direct {v0, p1}, Lcom/d/a/d/e;-><init>(Ljava/io/Writer;)V
+
+    invoke-virtual {p0, v0, p2}, Lcom/d/a/N;->a(Lcom/d/a/d/e;Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final b(Ljava/lang/Object;)Lcom/d/a/w;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)",
+            "Lcom/d/a/w;"
+        }
+    .end annotation
+
+    :try_start_0
+    new-instance v0, Lcom/d/a/b/a/i;
+
+    invoke-direct {v0}, Lcom/d/a/b/a/i;-><init>()V
+
+    invoke-virtual {p0, v0, p1}, Lcom/d/a/N;->a(Lcom/d/a/d/e;Ljava/lang/Object;)V
+
+    invoke-virtual {v0}, Lcom/d/a/b/a/i;->a()Lcom/d/a/w;
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/d/a/x;
+
+    invoke-direct {v1, v0}, Lcom/d/a/x;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+.end method
+
+.method public abstract b(Lcom/d/a/d/a;)Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/d/a/d/a;",
+            ")TT;"
+        }
+    .end annotation
 .end method

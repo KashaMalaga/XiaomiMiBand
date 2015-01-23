@@ -50,6 +50,18 @@
     return v0
 .end method
 
+.method public static a(F)F
+    .locals 1
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/chart/c/t;->a()F
+
+    move-result v0
+
+    mul-float/2addr v0, p0
+
+    return v0
+.end method
+
 .method public static a(IFI)F
     .locals 3
 
@@ -153,6 +165,18 @@
 
     :cond_0
     sget v0, Lcn/com/smartdevices/bracelet/chart/c/t;->a:F
+
+    return v0
+.end method
+
+.method public static a(Landroid/content/Context;F)F
+    .locals 1
+
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/chart/c/t;->a(Landroid/content/Context;)F
+
+    move-result v0
+
+    mul-float/2addr v0, p1
 
     return v0
 .end method

@@ -88,7 +88,7 @@
 .end method
 
 .method public setFileSize(J)V
-    .locals 1
+    .locals 0
 
     iput-wide p1, p0, Lcom/tencent/weiyun/WeiyunFile;->d:J
 

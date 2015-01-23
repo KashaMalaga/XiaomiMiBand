@@ -197,7 +197,7 @@
 .end method
 
 .method private a(Lcom/amap/api/services/core/LatLonPoint;DD)V
-    .locals 14
+    .locals 13
 
     const-wide/high16 v0, 0x4000000000000000L
 
@@ -217,11 +217,11 @@
 
     new-instance v8, Lcom/amap/api/services/core/LatLonPoint;
 
-    sub-double v10, v4, v0
+    sub-double v9, v4, v0
 
-    sub-double v12, v6, v2
+    sub-double v11, v6, v2
 
-    invoke-direct {v8, v10, v11, v12, v13}, Lcom/amap/api/services/core/LatLonPoint;-><init>(DD)V
+    invoke-direct {v8, v9, v10, v11, v12}, Lcom/amap/api/services/core/LatLonPoint;-><init>(DD)V
 
     new-instance v9, Lcom/amap/api/services/core/LatLonPoint;
 
@@ -237,9 +237,9 @@
 .end method
 
 .method private a(Lcom/amap/api/services/core/LatLonPoint;Lcom/amap/api/services/core/LatLonPoint;)V
-    .locals 10
+    .locals 9
 
-    const-wide/high16 v8, 0x4000000000000000L
+    const-wide/high16 v7, 0x4000000000000000L
 
     iput-object p1, p0, Lcom/amap/api/services/poisearch/PoiSearch$SearchBound;->a:Lcom/amap/api/services/core/LatLonPoint;
 
@@ -293,35 +293,35 @@
 
     invoke-virtual {v1}, Lcom/amap/api/services/core/LatLonPoint;->getLatitude()D
 
-    move-result-wide v2
+    move-result-wide v1
 
-    iget-object v1, p0, Lcom/amap/api/services/poisearch/PoiSearch$SearchBound;->b:Lcom/amap/api/services/core/LatLonPoint;
+    iget-object v3, p0, Lcom/amap/api/services/poisearch/PoiSearch$SearchBound;->b:Lcom/amap/api/services/core/LatLonPoint;
 
-    invoke-virtual {v1}, Lcom/amap/api/services/core/LatLonPoint;->getLatitude()D
+    invoke-virtual {v3}, Lcom/amap/api/services/core/LatLonPoint;->getLatitude()D
 
-    move-result-wide v4
+    move-result-wide v3
 
-    add-double/2addr v2, v4
+    add-double/2addr v1, v3
 
-    div-double/2addr v2, v8
+    div-double/2addr v1, v7
 
-    iget-object v1, p0, Lcom/amap/api/services/poisearch/PoiSearch$SearchBound;->a:Lcom/amap/api/services/core/LatLonPoint;
+    iget-object v3, p0, Lcom/amap/api/services/poisearch/PoiSearch$SearchBound;->a:Lcom/amap/api/services/core/LatLonPoint;
 
-    invoke-virtual {v1}, Lcom/amap/api/services/core/LatLonPoint;->getLongitude()D
+    invoke-virtual {v3}, Lcom/amap/api/services/core/LatLonPoint;->getLongitude()D
 
-    move-result-wide v4
+    move-result-wide v3
 
-    iget-object v1, p0, Lcom/amap/api/services/poisearch/PoiSearch$SearchBound;->b:Lcom/amap/api/services/core/LatLonPoint;
+    iget-object v5, p0, Lcom/amap/api/services/poisearch/PoiSearch$SearchBound;->b:Lcom/amap/api/services/core/LatLonPoint;
 
-    invoke-virtual {v1}, Lcom/amap/api/services/core/LatLonPoint;->getLongitude()D
+    invoke-virtual {v5}, Lcom/amap/api/services/core/LatLonPoint;->getLongitude()D
 
-    move-result-wide v6
+    move-result-wide v5
 
-    add-double/2addr v4, v6
+    add-double/2addr v3, v5
 
-    div-double/2addr v4, v8
+    div-double/2addr v3, v7
 
-    invoke-direct {v0, v2, v3, v4, v5}, Lcom/amap/api/services/core/LatLonPoint;-><init>(DD)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lcom/amap/api/services/core/LatLonPoint;-><init>(DD)V
 
     iput-object v0, p0, Lcom/amap/api/services/poisearch/PoiSearch$SearchBound;->d:Lcom/amap/api/services/core/LatLonPoint;
 

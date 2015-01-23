@@ -31,48 +31,48 @@
 .end method
 
 .method public a(I)V
-    .locals 9
+    .locals 8
 
-    const/4 v7, 0x0
+    const/4 v6, 0x0
 
     packed-switch p1, :pswitch_data_0
 
     :goto_0
-    if-eqz v7, :cond_0
+    if-eqz v6, :cond_0
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    new-instance v1, Landroid/view/KeyEvent;
+    new-instance v0, Landroid/view/KeyEvent;
 
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
-    const/4 v8, 0x0
+    const/4 v7, 0x0
 
-    move-wide v4, v2
+    move-wide v3, v1
 
-    invoke-direct/range {v1 .. v8}, Landroid/view/KeyEvent;-><init>(JJIII)V
+    invoke-direct/range {v0 .. v7}, Landroid/view/KeyEvent;-><init>(JJIII)V
 
-    invoke-virtual {p0, v7, v1}, Landroid/support/v4/f/k;->a(ILandroid/view/KeyEvent;)Z
+    invoke-virtual {p0, v6, v0}, Landroid/support/v4/f/k;->a(ILandroid/view/KeyEvent;)Z
 
-    new-instance v1, Landroid/view/KeyEvent;
+    new-instance v0, Landroid/view/KeyEvent;
 
-    const/4 v6, 0x1
+    const/4 v5, 0x1
 
-    const/4 v8, 0x0
+    const/4 v7, 0x0
 
-    move-wide v4, v2
+    move-wide v3, v1
 
-    invoke-direct/range {v1 .. v8}, Landroid/view/KeyEvent;-><init>(JJIII)V
+    invoke-direct/range {v0 .. v7}, Landroid/view/KeyEvent;-><init>(JJIII)V
 
-    invoke-virtual {p0, v7, v1}, Landroid/support/v4/f/k;->b(ILandroid/view/KeyEvent;)Z
+    invoke-virtual {p0, v6, v0}, Landroid/support/v4/f/k;->b(ILandroid/view/KeyEvent;)Z
 
     :cond_0
     return-void
 
     :pswitch_0
-    const/16 v7, 0x7f
+    const/16 v6, 0x7f
 
     goto :goto_0
 

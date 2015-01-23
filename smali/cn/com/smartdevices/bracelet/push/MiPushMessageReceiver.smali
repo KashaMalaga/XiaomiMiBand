@@ -39,7 +39,7 @@
 
 .field private mRegId:Ljava/lang/String;
 
-.field private mResultCode:J
+.field private final mResultCode:J
 
 .field private mStartTime:Ljava/lang/String;
 
@@ -66,9 +66,9 @@
 
     const/4 v1, 0x0
 
-    const/4 v5, 0x1
+    const/4 v7, 0x1
 
-    const-wide/16 v6, 0x0
+    const-wide/16 v5, 0x0
 
     invoke-virtual {p2}, Lcom/xiaomi/mipush/sdk/i;->a()Ljava/lang/String;
 
@@ -103,9 +103,9 @@
 
     move-result v0
 
-    if-le v0, v5, :cond_2
+    if-le v0, v7, :cond_2
 
-    invoke-interface {v4, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v4, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -124,7 +124,7 @@
 
     move-result-wide v0
 
-    cmp-long v0, v0, v6
+    cmp-long v0, v0, v5
 
     if-nez v0, :cond_0
 
@@ -157,7 +157,7 @@
 
     move-result-wide v0
 
-    cmp-long v0, v0, v6
+    cmp-long v0, v0, v5
 
     if-nez v0, :cond_0
 
@@ -178,7 +178,7 @@
 
     move-result-wide v0
 
-    cmp-long v0, v0, v6
+    cmp-long v0, v0, v5
 
     if-nez v0, :cond_0
 
@@ -199,7 +199,7 @@
 
     move-result-wide v0
 
-    cmp-long v0, v0, v6
+    cmp-long v0, v0, v5
 
     if-nez v0, :cond_0
 
@@ -220,7 +220,7 @@
 
     move-result-wide v0
 
-    cmp-long v0, v0, v6
+    cmp-long v0, v0, v5
 
     if-nez v0, :cond_0
 
@@ -239,9 +239,9 @@
 
     invoke-virtual {p2}, Lcom/xiaomi/mipush/sdk/i;->c()J
 
-    move-result-wide v4
+    move-result-wide v3
 
-    cmp-long v1, v4, v6
+    cmp-long v1, v3, v5
 
     if-nez v1, :cond_0
 
@@ -331,19 +331,52 @@
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    move-result-object v2
+
+    const-string v3, ", debug = "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->a()Z
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    :try_start_0
+    new-instance v1, Lorg/json/JSONObject;
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/push/MiPushMessageReceiver;->mMessage:Ljava/lang/String;
+
+    invoke-direct {v1, v2}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+
+    const-string v2, "MiPushMessageReceiver"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
     move-result-object v0
 
-    const-string v2, ", debug = "
+    const-string v3, ", totalPushObj = "
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/r;->a()Z
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -351,20 +384,13 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    :try_start_0
-    new-instance v0, Lorg/json/JSONObject;
+    const-string v0, "expire"
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/push/MiPushMessageReceiver;->mMessage:Ljava/lang/String;
+    invoke-virtual {v1, v0}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
 
-    invoke-direct {v0, v1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
-
-    const-string v1, "expire"
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
-
-    move-result v1
+    move-result v0
 
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
@@ -378,17 +404,17 @@
 
     div-long/2addr v2, v4
 
-    int-to-long v4, v1
+    int-to-long v4, v0
 
-    cmp-long v1, v2, v4
+    cmp-long v0, v2, v4
 
-    if-lez v1, :cond_2
+    if-lez v0, :cond_2
 
     const-string v0, "MiPushMessageReceiver"
 
     const-string v1, "This message is expired!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -416,17 +442,17 @@
 
     :cond_2
     :try_start_1
-    const-string v1, "type"
+    const-string v0, "type"
 
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
     const-string v2, "data"
 
-    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
-    move-result-object v0
+    move-result-object v1
 
     const-string v2, "MiPushMessageReceiver"
 
@@ -440,7 +466,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object v4
 
@@ -452,13 +478,13 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v2, "android"
 
-    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
-    move-result-object v0
+    move-result-object v1
 
     const-string v2, "MiPushMessageReceiver"
 
@@ -472,7 +498,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object v4
 
@@ -484,19 +510,19 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v2, "dynamic"
 
-    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_4
 
-    const-string v1, "lua"
+    const-string v0, "lua"
 
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -520,11 +546,11 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz v0, :cond_3
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/u;->m(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->n(Ljava/lang/String;)V
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -548,15 +574,15 @@
     :try_start_2
     const-string v2, "intent"
 
-    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_3
+    if-eqz v0, :cond_3
 
-    const-string v1, "intent"
+    const-string v0, "intent"
 
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -566,7 +592,7 @@
 
     if-nez v1, :cond_3
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/u;->n(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->o(Ljava/lang/String;)V
     :try_end_2
     .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_0
 

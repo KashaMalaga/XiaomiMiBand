@@ -148,7 +148,7 @@
 .end method
 
 .method public static a(J)Lb/a/bc;
-    .locals 2
+    .locals 1
 
     new-instance v0, Lb/a/bc;
 

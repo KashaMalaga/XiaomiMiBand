@@ -1,77 +1,221 @@
-.class Lcom/d/a/F;
-.super Lcom/d/b/a;
+.class public final Lcom/d/a/F;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/util/Iterator;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/d/b/a",
+        "Ljava/lang/Object;",
+        "Ljava/util/Iterator",
         "<",
-        "Landroid/view/View;",
+        "Lcom/d/a/w;",
         ">;"
     }
 .end annotation
 
 
-# direct methods
-.method constructor <init>(Ljava/lang/String;)V
-    .locals 0
+# instance fields
+.field private final a:Lcom/d/a/d/a;
 
-    invoke-direct {p0, p1}, Lcom/d/b/a;-><init>(Ljava/lang/String;)V
+.field private final b:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Ljava/io/Reader;)V
+    .locals 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lcom/d/a/d/a;
+
+    invoke-direct {v0, p1}, Lcom/d/a/d/a;-><init>(Ljava/io/Reader;)V
+
+    iput-object v0, p0, Lcom/d/a/F;->a:Lcom/d/a/d/a;
+
+    iget-object v0, p0, Lcom/d/a/F;->a:Lcom/d/a/d/a;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/d/a/d/a;->a(Z)V
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lcom/d/a/F;->b:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
+
+    new-instance v0, Ljava/io/StringReader;
+
+    invoke-direct {v0, p1}, Ljava/io/StringReader;-><init>(Ljava/lang/String;)V
+
+    invoke-direct {p0, v0}, Lcom/d/a/F;-><init>(Ljava/io/Reader;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/view/View;)Ljava/lang/Float;
-    .locals 1
+.method public a()Lcom/d/a/w;
+    .locals 3
 
-    invoke-static {p1}, Lcom/d/c/a/a;->a(Landroid/view/View;)Lcom/d/c/a/a;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/d/c/a/a;->k()F
+    invoke-virtual {p0}, Lcom/d/a/F;->hasNext()Z
 
     move-result v0
 
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    if-nez v0, :cond_0
+
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw v0
+
+    :cond_0
+    :try_start_0
+    iget-object v0, p0, Lcom/d/a/F;->a:Lcom/d/a/d/a;
+
+    invoke-static {v0}, Lcom/d/a/b/G;->a(Lcom/d/a/d/a;)Lcom/d/a/w;
+    :try_end_0
+    .catch Ljava/lang/StackOverflowError; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Lcom/d/a/A; {:try_start_0 .. :try_end_0} :catch_2
+
+    move-result-object v0
+
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/d/a/A;
+
+    const-string v2, "Failed parsing JSON source to Json"
+
+    invoke-direct {v1, v2, v0}, Lcom/d/a/A;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v1
+
+    :catch_1
+    move-exception v0
+
+    new-instance v1, Lcom/d/a/A;
+
+    const-string v2, "Failed parsing JSON source to Json"
+
+    invoke-direct {v1, v2, v0}, Lcom/d/a/A;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v1
+
+    :catch_2
+    move-exception v0
+
+    invoke-virtual {v0}, Lcom/d/a/A;->getCause()Ljava/lang/Throwable;
+
+    move-result-object v1
+
+    instance-of v1, v1, Ljava/io/EOFException;
+
+    if-eqz v1, :cond_1
+
+    new-instance v0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    :cond_1
+    throw v0
+.end method
+
+.method public hasNext()Z
+    .locals 3
+
+    iget-object v1, p0, Lcom/d/a/F;->b:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_0
+    iget-object v0, p0, Lcom/d/a/F;->a:Lcom/d/a/d/a;
+
+    invoke-virtual {v0}, Lcom/d/a/d/a;->f()Lcom/d/a/d/d;
+
+    move-result-object v0
+
+    sget-object v2, Lcom/d/a/d/d;->j:Lcom/d/a/d/d;
+    :try_end_0
+    .catch Lcom/d/a/d/f; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eq v0, v2, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    :try_start_1
+    monitor-exit v1
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v2, Lcom/d/a/G;
+
+    invoke-direct {v2, v0}, Lcom/d/a/G;-><init>(Ljava/lang/Throwable;)V
+
+    throw v2
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+
+    :catch_1
+    move-exception v0
+
+    :try_start_2
+    new-instance v2, Lcom/d/a/x;
+
+    invoke-direct {v2, v0}, Lcom/d/a/x;-><init>(Ljava/lang/Throwable;)V
+
+    throw v2
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+.end method
+
+.method public synthetic next()Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/d/a/F;->a()Lcom/d/a/w;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public bridge synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
+.method public remove()V
     .locals 1
 
-    check-cast p1, Landroid/view/View;
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    invoke-virtual {p0, p1}, Lcom/d/a/F;->a(Landroid/view/View;)Ljava/lang/Float;
+    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public a(Landroid/view/View;F)V
-    .locals 1
-
-    invoke-static {p1}, Lcom/d/c/a/a;->a(Landroid/view/View;)Lcom/d/c/a/a;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p2}, Lcom/d/c/a/a;->i(F)V
-
-    return-void
-.end method
-
-.method public bridge synthetic a(Ljava/lang/Object;F)V
-    .locals 0
-
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p0, p1, p2}, Lcom/d/a/F;->a(Landroid/view/View;F)V
-
-    return-void
+    throw v0
 .end method

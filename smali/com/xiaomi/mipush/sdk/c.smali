@@ -5,7 +5,7 @@
 # static fields
 .field private static a:Z
 
-.field private static b:Lcom/xiaomi/channel/a/b/a;
+.field private static b:Lcom/xiaomi/b/a/b/a;
 
 
 # direct methods
@@ -18,7 +18,7 @@
 
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/xiaomi/mipush/sdk/c;->b:Lcom/xiaomi/channel/a/b/a;
+    sput-object v0, Lcom/xiaomi/mipush/sdk/c;->b:Lcom/xiaomi/b/a/b/a;
 
     return-void
 .end method
@@ -43,10 +43,10 @@
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;Lcom/xiaomi/channel/a/b/a;)V
+.method public static a(Landroid/content/Context;Lcom/xiaomi/b/a/b/a;)V
     .locals 0
 
-    sput-object p1, Lcom/xiaomi/mipush/sdk/c;->b:Lcom/xiaomi/channel/a/b/a;
+    sput-object p1, Lcom/xiaomi/mipush/sdk/c;->b:Lcom/xiaomi/b/a/b/a;
 
     invoke-static {p0}, Lcom/xiaomi/mipush/sdk/c;->c(Landroid/content/Context;)V
 
@@ -70,7 +70,7 @@
 
     const/4 v3, 0x0
 
-    sget-object v0, Lcom/xiaomi/mipush/sdk/c;->b:Lcom/xiaomi/channel/a/b/a;
+    sget-object v0, Lcom/xiaomi/mipush/sdk/c;->b:Lcom/xiaomi/b/a/b/a;
 
     if-eqz v0, :cond_0
 
@@ -95,11 +95,11 @@
 
     new-instance v0, Lcom/xiaomi/push/a/a;
 
-    sget-object v2, Lcom/xiaomi/mipush/sdk/c;->b:Lcom/xiaomi/channel/a/b/a;
+    sget-object v2, Lcom/xiaomi/mipush/sdk/c;->b:Lcom/xiaomi/b/a/b/a;
 
-    invoke-direct {v0, v2, v1}, Lcom/xiaomi/push/a/a;-><init>(Lcom/xiaomi/channel/a/b/a;Lcom/xiaomi/channel/a/b/a;)V
+    invoke-direct {v0, v2, v1}, Lcom/xiaomi/push/a/a;-><init>(Lcom/xiaomi/b/a/b/a;Lcom/xiaomi/b/a/b/a;)V
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->a(Lcom/xiaomi/channel/a/b/a;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->a(Lcom/xiaomi/b/a/b/a;)V
 
     :goto_1
     return-void
@@ -120,25 +120,25 @@
 
     if-eqz v2, :cond_2
 
-    invoke-static {v1}, Lcom/xiaomi/channel/a/b/c;->a(Lcom/xiaomi/channel/a/b/a;)V
+    invoke-static {v1}, Lcom/xiaomi/b/a/b/c;->a(Lcom/xiaomi/b/a/b/a;)V
 
     goto :goto_1
 
     :cond_2
     if-eqz v0, :cond_3
 
-    sget-object v0, Lcom/xiaomi/mipush/sdk/c;->b:Lcom/xiaomi/channel/a/b/a;
+    sget-object v0, Lcom/xiaomi/mipush/sdk/c;->b:Lcom/xiaomi/b/a/b/a;
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->a(Lcom/xiaomi/channel/a/b/a;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->a(Lcom/xiaomi/b/a/b/a;)V
 
     goto :goto_1
 
     :cond_3
     new-instance v0, Lcom/xiaomi/push/a/a;
 
-    invoke-direct {v0, v3, v3}, Lcom/xiaomi/push/a/a;-><init>(Lcom/xiaomi/channel/a/b/a;Lcom/xiaomi/channel/a/b/a;)V
+    invoke-direct {v0, v3, v3}, Lcom/xiaomi/push/a/a;-><init>(Lcom/xiaomi/b/a/b/a;Lcom/xiaomi/b/a/b/a;)V
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->a(Lcom/xiaomi/channel/a/b/a;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->a(Lcom/xiaomi/b/a/b/a;)V
 
     goto :goto_1
 .end method

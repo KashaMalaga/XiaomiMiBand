@@ -162,9 +162,13 @@
 .end method
 
 .method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 4
+    .locals 6
 
     const/4 v3, 0x0
+
+    const/16 v5, 0x8
+
+    const/4 v4, 0x0
 
     if-nez p2, :cond_0
 
@@ -176,13 +180,13 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/S;->c:Landroid/view/LayoutInflater;
 
-    const v2, 0x7f030010
+    const v2, 0x7f030014
 
     invoke-virtual {v0, v2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p2
 
-    const v0, 0x7f0b004b
+    const v0, 0x7f080069
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -192,7 +196,7 @@
 
     iput-object v0, v1, Lcn/com/smartdevices/bracelet/lab/ui/R;->b:Landroid/widget/ImageView;
 
-    const v0, 0x7f0b004c
+    const v0, 0x7f08006a
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -201,6 +205,16 @@
     check-cast v0, Landroid/widget/TextView;
 
     iput-object v0, v1, Lcn/com/smartdevices/bracelet/lab/ui/R;->a:Landroid/widget/TextView;
+
+    const v0, 0x7f080068
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, v1, Lcn/com/smartdevices/bracelet/lab/ui/R;->c:Landroid/widget/ImageView;
 
     invoke-virtual {p2, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
@@ -223,28 +237,36 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
 
-    const-string v2, "sportSelected"
-
-    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    const-string v2, "sportImgSelectedResId"
+    const-string v2, "sportDoneColorResId"
 
     invoke-virtual {v0, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
+    move-result v2
+
+    const-string v3, "sportSelected"
+
+    invoke-virtual {v0, v3}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    const-string v3, "sportImgSelectedResId"
+
+    invoke-virtual {v0, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+
     move-result v0
+
+    iget-object v3, v1, Lcn/com/smartdevices/bracelet/lab/ui/R;->c:Landroid/widget/ImageView;
+
+    invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setVisibility(I)V
 
     :goto_1
     if-gtz v0, :cond_2
 
     iget-object v0, v1, Lcn/com/smartdevices/bracelet/lab/ui/R;->b:Landroid/widget/ImageView;
 
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
+    invoke-virtual {v0, v5}, Landroid/widget/ImageView;->setVisibility(I)V
 
     :goto_2
     return-object p2
@@ -261,24 +283,40 @@
     goto :goto_0
 
     :cond_1
-    const-string v2, "sportImgResId"
+    const-string v3, "sportImgResId"
 
-    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+    invoke-virtual {v0, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v0
+
+    iget-object v3, v1, Lcn/com/smartdevices/bracelet/lab/ui/R;->c:Landroid/widget/ImageView;
+
+    invoke-virtual {v3, v5}, Landroid/widget/ImageView;->setVisibility(I)V
 
     goto :goto_1
 
     :cond_2
-    iget-object v2, v1, Lcn/com/smartdevices/bracelet/lab/ui/R;->b:Landroid/widget/ImageView;
+    iget-object v3, v1, Lcn/com/smartdevices/bracelet/lab/ui/R;->b:Landroid/widget/ImageView;
 
-    const/4 v3, 0x0
+    invoke-virtual {v3, v4}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setVisibility(I)V
+    iget-object v3, v1, Lcn/com/smartdevices/bracelet/lab/ui/R;->b:Landroid/widget/ImageView;
 
-    iget-object v1, v1, Lcn/com/smartdevices/bracelet/lab/ui/R;->b:Landroid/widget/ImageView;
+    invoke-virtual {v3, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
+    iget-object v0, v1, Lcn/com/smartdevices/bracelet/lab/ui/R;->a:Landroid/widget/TextView;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/S;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
     goto :goto_2
 .end method

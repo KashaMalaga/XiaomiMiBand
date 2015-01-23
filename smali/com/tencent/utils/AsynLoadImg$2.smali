@@ -23,7 +23,7 @@
 
 # virtual methods
 .method public run()V
-    .locals 8
+    .locals 7
 
     const/4 v1, 0x0
 
@@ -131,9 +131,9 @@
 
     invoke-static {v5}, Lcom/tencent/utils/AsynLoadImg;->d(Lcom/tencent/utils/AsynLoadImg;)J
 
-    move-result-wide v6
+    move-result-wide v5
 
-    sub-long/2addr v2, v6
+    sub-long/2addr v2, v5
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -203,9 +203,9 @@
 
     invoke-static {v5}, Lcom/tencent/utils/AsynLoadImg;->d(Lcom/tencent/utils/AsynLoadImg;)J
 
-    move-result-wide v6
+    move-result-wide v5
 
-    sub-long/2addr v2, v6
+    sub-long/2addr v2, v5
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 

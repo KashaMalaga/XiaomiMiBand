@@ -79,7 +79,7 @@
 .end method
 
 .method private static a(Ljava/lang/StringBuffer;)Z
-    .locals 6
+    .locals 5
 
     const/4 v0, 0x0
 
@@ -104,11 +104,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-wide v2
+    move-result-wide v1
 
-    const-wide v4, 0x40b3880000000000L
+    const-wide v3, 0x40b3880000000000L
 
-    cmpg-double v1, v2, v4
+    cmpg-double v1, v1, v3
 
     if-gez v1, :cond_0
 
@@ -267,17 +267,17 @@
 
     move-result-wide v0
 
-    iget-wide v6, p0, Lcom/tencent/b/b/c;->b:J
+    iget-wide v5, p0, Lcom/tencent/b/b/c;->b:J
 
-    sub-long/2addr v0, v6
+    sub-long/2addr v0, v5
 
     invoke-static {v0, v1}, Ljava/lang/Math;->abs(J)J
 
     move-result-wide v0
 
-    const-wide/16 v6, 0x7530
+    const-wide/16 v5, 0x7530
 
-    cmp-long v0, v0, v6
+    cmp-long v0, v0, v5
 
     if-gtz v0, :cond_0
 

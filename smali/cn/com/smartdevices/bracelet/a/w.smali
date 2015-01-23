@@ -3,13 +3,13 @@
 
 
 # static fields
-.field private static c:Ljava/lang/Object;
-
-.field private static d:Ljava/lang/Object;
+.field private static final d:Ljava/lang/Object;
 
 .field private static e:Ljava/lang/Object;
 
-.field private static f:Ljava/lang/Object;
+.field private static final f:Ljava/lang/Object;
+
+.field private static n:Ljava/lang/Object;
 
 
 # instance fields
@@ -17,16 +17,12 @@
 
 .field private b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
+.field private final c:Lcn/com/smartdevices/bracelet/config/b;
+
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lcn/com/smartdevices/bracelet/a/w;->c:Ljava/lang/Object;
 
     new-instance v0, Ljava/lang/Object;
 
@@ -46,6 +42,12 @@
 
     sput-object v0, Lcn/com/smartdevices/bracelet/a/w;->f:Ljava/lang/Object;
 
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/a/w;->n:Ljava/lang/Object;
+
     return-void
 .end method
 
@@ -60,6 +62,12 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/a/w;->b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
+    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->e()Lcn/com/smartdevices/bracelet/config/b;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/a/w;->c:Lcn/com/smartdevices/bracelet/config/b;
+
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/a/w;->b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     return-void
@@ -68,7 +76,7 @@
 .method public static a(I)V
     .locals 4
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/a/w;->c:Ljava/lang/Object;
+    sget-object v1, Lcn/com/smartdevices/bracelet/a/w;->d:Ljava/lang/Object;
 
     monitor-enter v1
 
@@ -77,12 +85,12 @@
 
     const-string v2, "before waiting..."
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     :try_start_1
-    sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->c:Ljava/lang/Object;
+    sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->d:Ljava/lang/Object;
 
     int-to-long v2, p0
 
@@ -105,7 +113,7 @@
 
     move-result-object v2
 
-    sget-object v3, Lcn/com/smartdevices/bracelet/a/w;->d:Ljava/lang/Object;
+    sget-object v3, Lcn/com/smartdevices/bracelet/a/w;->e:Ljava/lang/Object;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -115,7 +123,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     monitor-exit v1
 
@@ -159,16 +167,16 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/a/w;->c:Ljava/lang/Object;
+    sget-object v1, Lcn/com/smartdevices/bracelet/a/w;->d:Ljava/lang/Object;
 
     monitor-enter v1
 
     :try_start_0
-    sput-object p0, Lcn/com/smartdevices/bracelet/a/w;->d:Ljava/lang/Object;
+    sput-object p0, Lcn/com/smartdevices/bracelet/a/w;->e:Ljava/lang/Object;
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->c:Ljava/lang/Object;
+    sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->d:Ljava/lang/Object;
 
     invoke-virtual {v0}, Ljava/lang/Object;->notify()V
 
@@ -189,7 +197,7 @@
 .method public static b(I)V
     .locals 4
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/a/w;->e:Ljava/lang/Object;
+    sget-object v1, Lcn/com/smartdevices/bracelet/a/w;->f:Ljava/lang/Object;
 
     monitor-enter v1
 
@@ -198,12 +206,12 @@
 
     const-string v2, "before waitingReset..."
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     :try_start_1
-    sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->e:Ljava/lang/Object;
+    sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->f:Ljava/lang/Object;
 
     int-to-long v2, p0
 
@@ -226,7 +234,7 @@
 
     move-result-object v2
 
-    sget-object v3, Lcn/com/smartdevices/bracelet/a/w;->f:Ljava/lang/Object;
+    sget-object v3, Lcn/com/smartdevices/bracelet/a/w;->n:Ljava/lang/Object;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -236,7 +244,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     monitor-exit v1
 
@@ -280,16 +288,16 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/a/w;->e:Ljava/lang/Object;
+    sget-object v1, Lcn/com/smartdevices/bracelet/a/w;->f:Ljava/lang/Object;
 
     monitor-enter v1
 
     :try_start_0
-    sput-object p0, Lcn/com/smartdevices/bracelet/a/w;->f:Ljava/lang/Object;
+    sput-object p0, Lcn/com/smartdevices/bracelet/a/w;->n:Ljava/lang/Object;
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->e:Ljava/lang/Object;
+    sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->f:Ljava/lang/Object;
 
     invoke-virtual {v0}, Ljava/lang/Object;->notify()V
 
@@ -326,14 +334,14 @@
 
     move-result-object v0
 
-    sput-object v0, Lcn/com/smartdevices/bracelet/a/w;->d:Ljava/lang/Object;
+    sput-object v0, Lcn/com/smartdevices/bracelet/a/w;->e:Ljava/lang/Object;
 
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/a/b;->a()V
 
     :cond_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->E()Lcn/com/smartdevices/bracelet/model/SwitchOperator;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->G()Lcn/com/smartdevices/bracelet/model/SwitchOperator;
 
     move-result-object v11
 
@@ -351,21 +359,21 @@
 
     if-ne v1, v9, :cond_1
 
-    iget-wide v2, v11, Lcn/com/smartdevices/bracelet/model/SwitchOperator;->lastUid:J
+    iget-wide v1, v11, Lcn/com/smartdevices/bracelet/model/SwitchOperator;->lastUid:J
 
-    const-wide/16 v4, -0x1
+    const-wide/16 v3, -0x1
 
-    cmp-long v1, v2, v4
+    cmp-long v1, v1, v3
 
     if-eqz v1, :cond_1
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/a/w;->b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-    iget-wide v2, v1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->uid:J
+    iget-wide v1, v1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->uid:J
 
-    iget-wide v4, v11, Lcn/com/smartdevices/bracelet/model/SwitchOperator;->lastUid:J
+    iget-wide v3, v11, Lcn/com/smartdevices/bracelet/model/SwitchOperator;->lastUid:J
 
-    cmp-long v1, v2, v4
+    cmp-long v1, v1, v3
 
     if-nez v1, :cond_1
 
@@ -400,7 +408,7 @@
 
     array-length v0, v1
 
-    if-gt v0, v8, :cond_22
+    if-gt v0, v8, :cond_25
 
     array-length v0, v1
 
@@ -411,13 +419,13 @@
 
     iget-boolean v0, v11, Lcn/com/smartdevices/bracelet/model/SwitchOperator;->enableClearData:Z
 
-    if-eqz v0, :cond_21
+    if-eqz v0, :cond_24
 
     sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->l:Ljava/lang/String;
 
     const-string v1, "SWITCH_UNBIND will clear data!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v6, v9
 
@@ -426,9 +434,9 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/a/w;->b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-    iget-wide v2, v1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->uid:J
+    iget-wide v1, v1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->uid:J
 
-    long-to-int v1, v2
+    long-to-int v1, v1
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/a/w;->b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
@@ -450,7 +458,9 @@
 
     iget-object v5, p0, Lcn/com/smartdevices/bracelet/a/w;->b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-    iget v5, v5, Lcn/com/smartdevices/bracelet/model/PersonInfo;->weight:I
+    iget v5, v5, Lcn/com/smartdevices/bracelet/model/PersonInfo;->weight:F
+
+    float-to-int v5, v5
 
     int-to-byte v5, v5
 
@@ -481,7 +491,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->l:Ljava/lang/String;
 
@@ -505,7 +515,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/w;->m:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
@@ -548,7 +558,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->l:Ljava/lang/String;
 
@@ -572,7 +582,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p1, :cond_2
 
@@ -581,7 +591,7 @@
     goto :goto_2
 
     :cond_5
-    sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->d:Ljava/lang/Object;
+    sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->e:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Integer;
 
@@ -596,7 +606,7 @@
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/a/w;->a(I)V
 
     :cond_6
-    sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->d:Ljava/lang/Object;
+    sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->e:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Integer;
 
@@ -633,7 +643,7 @@
 
     if-nez v0, :cond_c
 
-    invoke-static {v11}, Lcn/com/smartdevices/bracelet/u;->a(Lcn/com/smartdevices/bracelet/model/SwitchOperator;)V
+    invoke-static {v11}, Lcn/com/smartdevices/bracelet/x;->a(Lcn/com/smartdevices/bracelet/model/SwitchOperator;)V
 
     if-eqz p1, :cond_3
 
@@ -642,7 +652,7 @@
     goto :goto_2
 
     :cond_8
-    sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->d:Ljava/lang/Object;
+    sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->e:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Integer;
 
@@ -658,13 +668,13 @@
 
     move-result-object v0
 
-    sput-object v0, Lcn/com/smartdevices/bracelet/a/w;->f:Ljava/lang/Object;
+    sput-object v0, Lcn/com/smartdevices/bracelet/a/w;->n:Ljava/lang/Object;
 
     const/16 v0, 0x7530
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/a/w;->b(I)V
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->f:Ljava/lang/Object;
+    sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->n:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Integer;
 
@@ -681,7 +691,7 @@
     goto/16 :goto_2
 
     :cond_9
-    sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->f:Ljava/lang/Object;
+    sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->n:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Integer;
 
@@ -700,7 +710,7 @@
     goto/16 :goto_2
 
     :cond_a
-    sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->f:Ljava/lang/Object;
+    sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->n:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Integer;
 
@@ -710,7 +720,7 @@
 
     if-eq v0, v8, :cond_7
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->f:Ljava/lang/Object;
+    sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->n:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Integer;
 
@@ -726,12 +736,12 @@
 
     const-string v1, "Cancel pair now!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_2
 
     :cond_b
-    sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->d:Ljava/lang/Object;
+    sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->e:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Integer;
 
@@ -810,7 +820,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v2, Lcn/com/smartdevices/bracelet/a/w;->l:Ljava/lang/String;
 
@@ -866,7 +876,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/r;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
@@ -890,13 +900,13 @@
 
     const-string v0, "ExceptDeviceReboot"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/A;->b(Ljava/lang/String;)V
 
     :cond_d
     :goto_3
     iget v0, v11, Lcn/com/smartdevices/bracelet/model/SwitchOperator;->type:I
 
-    if-eq v0, v12, :cond_15
+    if-eq v0, v12, :cond_16
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/w;->b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
@@ -932,7 +942,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/w;->m:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
@@ -1006,7 +1016,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->l:Ljava/lang/String;
 
@@ -1042,7 +1052,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/w;->m:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
@@ -1086,13 +1096,13 @@
 
     const-string v1, "can not get bracelet time after _setDateTime"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->l:Ljava/lang/String;
 
     const-string v1, "can not get bracelet time after _setDateTime"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_3
 
@@ -1101,7 +1111,7 @@
 
     const-string v1, "day sport goals is inValid!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_4
 
@@ -1115,7 +1125,7 @@
 
     iget-object v0, v0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
 
-    if-eqz v0, :cond_1c
+    if-eqz v0, :cond_1d
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/w;->b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
@@ -1123,7 +1133,7 @@
 
     iget-object v0, v0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->lightColor:Ljava/lang/String;
 
-    if-eqz v0, :cond_1c
+    if-eqz v0, :cond_1d
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/w;->b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
@@ -1139,7 +1149,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_19
+    if-eqz v2, :cond_1a
 
     const/16 v0, 0x606
 
@@ -1201,7 +1211,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/a/w;->m:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
@@ -1215,7 +1225,7 @@
 
     const-string v1, "setColorTheme failed"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_13
     :goto_8
@@ -1223,7 +1233,7 @@
 
     iget-object v0, v0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
 
-    if-eqz v0, :cond_1e
+    if-eqz v0, :cond_20
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/w;->b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
@@ -1231,7 +1241,7 @@
 
     iget-object v0, v0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->wearHand:Ljava/lang/String;
 
-    if-eqz v0, :cond_1e
+    if-eqz v0, :cond_20
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/w;->b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
@@ -1245,7 +1255,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_1d
+    if-eqz v1, :cond_1e
 
     move v0, v10
 
@@ -1270,7 +1280,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/a/w;->m:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
@@ -1284,20 +1294,58 @@
 
     const-string v1, "setWearLocation failed!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_14
     :goto_a
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/w;->c:Lcn/com/smartdevices/bracelet/config/b;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/b;->i:Lcn/com/smartdevices/bracelet/config/a;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/a;->a:Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_21
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/w;->b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
+
+    if-eqz v0, :cond_15
+
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/w;->m:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
-    invoke-virtual {v0, v10}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->_remind(B)Z
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/a/w;->b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    iget-object v1, v1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
+
+    iget v1, v1, Lcn/com/smartdevices/bracelet/model/MiliConfig;->disconnectedReminder:I
+
+    int-to-byte v1, v1
+
+    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->_remind(B)Z
+
+    :cond_15
+    :goto_b
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/w;->m:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/a/w;->b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    iget-object v1, v1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
+
+    iget-boolean v1, v1, Lcn/com/smartdevices/bracelet/model/MiliConfig;->enableConnectedBtAdv:Z
+
+    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->_enableConnectedBroadcast(Z)Z
 
     iput v12, v11, Lcn/com/smartdevices/bracelet/model/SwitchOperator;->type:I
 
-    :cond_15
+    :cond_16
     iget-boolean v0, v11, Lcn/com/smartdevices/bracelet/model/SwitchOperator;->enableSteps:Z
 
-    if-eqz v0, :cond_18
+    if-eqz v0, :cond_19
 
     iget-object v0, v11, Lcn/com/smartdevices/bracelet/model/SwitchOperator;->date:Ljava/lang/String;
 
@@ -1313,7 +1361,7 @@
 
     move-result v0
 
-    if-nez v0, :cond_16
+    if-nez v0, :cond_17
 
     iput v10, v11, Lcn/com/smartdevices/bracelet/model/SwitchOperator;->steps:I
 
@@ -1357,81 +1405,81 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_16
-    iget v0, v11, Lcn/com/smartdevices/bracelet/model/SwitchOperator;->steps:I
-
-    if-ge v0, v9, :cond_1f
-
-    :goto_b
-    if-nez v9, :cond_17
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->l:Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "setRealtimeSteps:"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget v2, v11, Lcn/com/smartdevices/bracelet/model/SwitchOperator;->steps:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " failed!!!"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->l:Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "setRealtimeSteps:"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget v2, v11, Lcn/com/smartdevices/bracelet/model/SwitchOperator;->steps:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " failed!!!"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_17
-    iput-boolean v10, v11, Lcn/com/smartdevices/bracelet/model/SwitchOperator;->enableSteps:Z
+    iget v0, v11, Lcn/com/smartdevices/bracelet/model/SwitchOperator;->steps:I
+
+    if-ge v0, v9, :cond_22
+
+    :goto_c
+    if-nez v9, :cond_18
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->l:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "setRealtimeSteps:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget v2, v11, Lcn/com/smartdevices/bracelet/model/SwitchOperator;->steps:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " failed!!!"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->l:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "setRealtimeSteps:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget v2, v11, Lcn/com/smartdevices/bracelet/model/SwitchOperator;->steps:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " failed!!!"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_18
-    invoke-static {v11}, Lcn/com/smartdevices/bracelet/u;->a(Lcn/com/smartdevices/bracelet/model/SwitchOperator;)V
+    iput-boolean v10, v11, Lcn/com/smartdevices/bracelet/model/SwitchOperator;->enableSteps:Z
+
+    :cond_19
+    invoke-static {v11}, Lcn/com/smartdevices/bracelet/x;->a(Lcn/com/smartdevices/bracelet/model/SwitchOperator;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/w;->m:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
@@ -1459,7 +1507,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v1, Lcn/com/smartdevices/bracelet/a/w;->l:Ljava/lang/String;
 
@@ -1481,7 +1529,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/w;->m:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
@@ -1509,7 +1557,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v1, Lcn/com/smartdevices/bracelet/a/w;->l:Ljava/lang/String;
 
@@ -1531,7 +1579,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p1, :cond_3
 
@@ -1539,21 +1587,8 @@
 
     goto/16 :goto_2
 
-    :cond_19
-    const-string v2, "GREEN"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1a
-
-    const v0, 0x40500
-
-    goto/16 :goto_7
-
     :cond_1a
-    const-string v2, "RED"
+    const-string v2, "GREEN"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1561,11 +1596,24 @@
 
     if-eqz v2, :cond_1b
 
-    const v0, 0x60102
+    const v0, 0x40500
 
     goto/16 :goto_7
 
     :cond_1b
+    const-string v2, "RED"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1c
+
+    const v0, 0x60102
+
+    goto/16 :goto_7
+
+    :cond_1c
     const-string v2, "ORANGE"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1578,38 +1626,58 @@
 
     goto/16 :goto_7
 
-    :cond_1c
+    :cond_1d
     sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->l:Ljava/lang/String;
 
     const-string v1, "miliConfig is null or lightColor is null"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_8
 
-    :cond_1d
+    :cond_1e
     const-string v1, "RIGHT_HAND"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v1
 
-    if-eqz v0, :cond_20
+    if-eqz v1, :cond_1f
 
     move v0, v9
 
     goto/16 :goto_9
 
-    :cond_1e
+    :cond_1f
+    const-string v1, "ONBODY"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_23
+
+    const/4 v0, 0x2
+
+    goto/16 :goto_9
+
+    :cond_20
     sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->l:Ljava/lang/String;
 
     const-string v1, "miliConfig is null or wearHand is null"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_a
 
-    :cond_1f
+    :cond_21
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/w;->m:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+
+    invoke-virtual {v0, v10}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->_remind(B)Z
+
+    goto/16 :goto_b
+
+    :cond_22
     sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->l:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1632,7 +1700,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v0, Lcn/com/smartdevices/bracelet/a/w;->l:Ljava/lang/String;
 
@@ -1656,7 +1724,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/w;->m:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
@@ -1666,19 +1734,19 @@
 
     move-result v9
 
-    goto/16 :goto_b
+    goto/16 :goto_c
 
-    :cond_20
+    :cond_23
     move v0, v10
 
     goto/16 :goto_9
 
-    :cond_21
+    :cond_24
     move v6, v10
 
     goto/16 :goto_1
 
-    :cond_22
+    :cond_25
     move v0, v8
 
     goto/16 :goto_0

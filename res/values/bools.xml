@@ -3,4 +3,5 @@
     <bool name="default_title_indicator_selected_bold">true</bool>
     <bool name="default_circle_indicator_centered">true</bool>
     <bool name="default_circle_indicator_snap">false</bool>
+    <bool name="api11">false</bool>
 </resources>

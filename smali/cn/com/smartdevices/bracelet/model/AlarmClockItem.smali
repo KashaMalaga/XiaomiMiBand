@@ -232,13 +232,13 @@
 .method public static fromJson(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/model/AlarmClockItem;
     .locals 2
 
-    new-instance v0, Lcom/b/a/k;
+    new-instance v0, Lcom/d/a/k;
 
-    invoke-direct {v0}, Lcom/b/a/k;-><init>()V
+    invoke-direct {v0}, Lcom/d/a/k;-><init>()V
 
     const-class v1, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;
 
-    invoke-virtual {v0, p0, v1}, Lcom/b/a/k;->a(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v0, p0, v1}, Lcom/d/a/k;->a(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -461,11 +461,11 @@
 .method public toJson()Ljava/lang/String;
     .locals 1
 
-    new-instance v0, Lcom/b/a/k;
+    new-instance v0, Lcom/d/a/k;
 
-    invoke-direct {v0}, Lcom/b/a/k;-><init>()V
+    invoke-direct {v0}, Lcom/d/a/k;-><init>()V
 
-    invoke-virtual {v0, p0}, Lcom/b/a/k;->b(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, p0}, Lcom/d/a/k;->b(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -630,7 +630,7 @@
 
     if-ne v0, v1, :cond_0
 
-    const v0, 0x7f0c002b
+    const v0, 0x7f07002c
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -646,7 +646,7 @@
 
     if-ne v0, v1, :cond_1
 
-    const v0, 0x7f0c0096
+    const v0, 0x7f070098
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -661,7 +661,7 @@
 
     if-ne v0, v1, :cond_2
 
-    const v0, 0x7f0c0097
+    const v0, 0x7f070099
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -676,7 +676,7 @@
 
     if-ne v0, v1, :cond_3
 
-    const v0, 0x7f0c0098
+    const v0, 0x7f07009a
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -710,7 +710,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0d0001
+    const v2, 0x7f0e0001
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -720,7 +720,7 @@
 
     move-result-object v2
 
-    const/high16 v3, 0x7f0d0000
+    const/high16 v3, 0x7f0e0000
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -781,7 +781,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0c0144
+    const v1, 0x7f070149
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

@@ -11,29 +11,35 @@
 
 .field public static final d:I = 0x100
 
-.field public static final e:Ljava/lang/String; = "Mode"
+.field public static final e:I = 0x0
 
-.field public static final f:Ljava/lang/String; = "DynamicActivityMode"
+.field public static final f:I = 0x1
 
-.field public static final g:Ljava/lang/String; = "From"
+.field public static final g:Ljava/lang/String; = "Source"
 
-.field public static final h:Ljava/lang/String; = "Action"
+.field public static final h:Ljava/lang/String; = "Mode"
 
-.field public static final i:Ljava/lang/String; = "DynamicActivitySubTitle"
+.field public static final i:Ljava/lang/String; = "DynamicActivityMode"
 
-.field public static final j:Ljava/lang/String; = "Key"
+.field public static final j:Ljava/lang/String; = "From"
 
-.field public static final k:Ljava/lang/String; = "DynamicView"
+.field public static final k:Ljava/lang/String; = "Action"
 
-.field public static final l:Ljava/lang/String; = "RefCompleteGoal"
+.field public static final l:Ljava/lang/String; = "DynamicActivitySubTitle"
 
-.field public static final m:I = 0x18
+.field public static final m:Ljava/lang/String; = "Key"
 
-.field public static final n:I = 0x3c
+.field public static final n:Ljava/lang/String; = "DynamicView"
 
-.field public static final o:I = 0x5a0
+.field public static final o:Ljava/lang/String; = "RefCompleteGoal"
 
-.field private static final p:Z
+.field public static final p:I = 0x18
+
+.field public static final q:I = 0x3c
+
+.field public static final r:I = 0x5a0
+
+.field private static final s:Z
 
 
 # direct methods
@@ -84,7 +90,7 @@
 
     if-nez v1, :cond_0
 
-    const v1, 0x7f0c011c
+    const v1, 0x7f070121
 
     const/4 v2, 0x2
 
@@ -106,7 +112,7 @@
     return-object v0
 
     :cond_0
-    const v1, 0x7f0c011d
+    const v1, 0x7f070122
 
     new-array v2, v5, [Ljava/lang/Object;
 
@@ -283,7 +289,7 @@
 
     if-nez v1, :cond_0
 
-    const v1, 0x7f0c011c
+    const v1, 0x7f070121
 
     const/4 v2, 0x2
 
@@ -305,7 +311,7 @@
     return-object v0
 
     :cond_0
-    const v1, 0x7f0c011d
+    const v1, 0x7f070122
 
     new-array v2, v5, [Ljava/lang/Object;
 
@@ -331,7 +337,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0c011c
+    const v1, 0x7f070121
 
     const/4 v2, 0x2
 
@@ -440,11 +446,11 @@
 .end method
 
 .method public static b(Landroid/content/Context;II)[Ljava/lang/String;
-    .locals 6
+    .locals 5
 
-    const/4 v5, 0x1
+    const/4 v4, 0x1
 
-    const/4 v4, 0x0
+    const/4 v3, 0x0
 
     const/4 v0, 0x2
 
@@ -460,21 +466,21 @@
 
     div-float/2addr v1, v2
 
-    float-to-double v2, v1
+    float-to-double v1, v1
 
-    invoke-static {v2, v3, p2}, Lcn/com/smartdevices/bracelet/chart/c/q;->a(DI)Ljava/lang/String;
+    invoke-static {v1, v2, p2}, Lcn/com/smartdevices/bracelet/chart/c/q;->a(DI)Ljava/lang/String;
 
     move-result-object v1
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v3
 
-    const v1, 0x7f0c0037
+    const v1, 0x7f070038
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    aput-object v1, v0, v5
+    aput-object v1, v0, v4
 
     :goto_0
     return-object v0
@@ -484,15 +490,15 @@
 
     move-result-object v1
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v3
 
-    const v1, 0x7f0c0038
+    const v1, 0x7f070039
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    aput-object v1, v0, v5
+    aput-object v1, v0, v4
 
     goto :goto_0
 .end method

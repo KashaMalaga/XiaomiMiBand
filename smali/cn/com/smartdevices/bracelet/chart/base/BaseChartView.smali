@@ -157,16 +157,6 @@
     return-object v0
 .end method
 
-.method public a(F)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->a(FZ)V
-
-    return-void
-.end method
-
 .method public a(Lcn/com/smartdevices/bracelet/chart/b/d;)V
     .locals 0
 
@@ -253,7 +243,7 @@
     return-object v0
 .end method
 
-.method public f()V
+.method public e()V
     .locals 1
 
     const/4 v0, 0x1
@@ -263,7 +253,17 @@
     return-void
 .end method
 
-.method public g()V
+.method public e(F)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->a(FZ)V
+
+    return-void
+.end method
+
+.method public f()V
     .locals 1
 
     const/4 v0, 0x0
@@ -273,7 +273,7 @@
     return-void
 .end method
 
-.method public h()Z
+.method public g()Z
     .locals 1
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->g:Z
@@ -281,7 +281,7 @@
     return v0
 .end method
 
-.method public i()Z
+.method public h()Z
     .locals 1
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->h:Z
@@ -289,7 +289,7 @@
     return v0
 .end method
 
-.method public j()Lcn/com/smartdevices/bracelet/chart/b/d;
+.method public i()Lcn/com/smartdevices/bracelet/chart/b/d;
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->b:Lcn/com/smartdevices/bracelet/chart/b/d;

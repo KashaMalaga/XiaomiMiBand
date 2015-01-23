@@ -7,7 +7,7 @@
 
 .field private static final c:I = 0x2
 
-.field private static d:Ljava/lang/Object;
+.field private static final d:Ljava/lang/Object;
 
 
 # instance fields
@@ -48,7 +48,7 @@
 .end method
 
 .method private a(J)V
-    .locals 5
+    .locals 4
 
     sget-object v1, Lcn/com/smartdevices/bracelet/a/o;->d:Ljava/lang/Object;
 
@@ -59,7 +59,7 @@
 
     const-string v2, "before waiting..."
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -95,7 +95,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     monitor-exit v1
 
@@ -139,7 +139,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v1, Lcn/com/smartdevices/bracelet/a/o;->d:Ljava/lang/Object;
 
@@ -224,7 +224,7 @@
 
     move-result-object v5
 
-    invoke-static {v2, v5}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v5}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz v0, :cond_4
 
@@ -252,7 +252,7 @@
 
     const-string v1, "same latency,return now!!!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     :goto_0
@@ -285,7 +285,7 @@
 
     const-string v1, "same latency,return now!!!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -300,7 +300,7 @@
 
     const-string v1, "same latency,return now!!!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -309,7 +309,7 @@
 
     const-string v2, "======================do set latency  in======================"
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v3
 
@@ -353,9 +353,9 @@
 
     if-ne v0, v13, :cond_5
 
-    const-wide/16 v6, 0x2710
+    const-wide/16 v5, 0x2710
 
-    invoke-direct {p0, v6, v7}, Lcn/com/smartdevices/bracelet/a/o;->a(J)V
+    invoke-direct {p0, v5, v6}, Lcn/com/smartdevices/bracelet/a/o;->a(J)V
 
     :cond_5
     sget-object v0, Lcn/com/smartdevices/bracelet/a/o;->a:Ljava/lang/Object;
@@ -373,7 +373,7 @@
 
     const-string v1, "======================do set latency out======================"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p1, :cond_1
 

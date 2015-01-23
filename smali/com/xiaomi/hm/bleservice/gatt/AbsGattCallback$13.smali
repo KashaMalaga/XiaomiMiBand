@@ -33,7 +33,7 @@
 
     iget-object v1, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$13;->val$descriptor:Landroid/bluetooth/BluetoothGattDescriptor;
 
-    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->GattCB_onDescriptorRead(Landroid/bluetooth/BluetoothGattDescriptor;)V
+    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->GattCB_onDescriptorWrite(Landroid/bluetooth/BluetoothGattDescriptor;)V
 
     return-void
 .end method

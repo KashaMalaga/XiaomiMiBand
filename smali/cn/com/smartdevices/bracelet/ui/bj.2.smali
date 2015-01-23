@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/bi;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/bi;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bj;->a:Lcn/com/smartdevices/bracelet/ui/bi;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bj;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -23,15 +23,23 @@
 
 # virtual methods
 .method public run()V
-    .locals 2
+    .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bj;->a:Lcn/com/smartdevices/bracelet/ui/bi;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bj;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/bi;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->a(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)V
 
-    const/4 v1, 0x0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bj;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->a(Z)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->b(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bj;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->c(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bj;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->d(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)V
 
     return-void
 .end method

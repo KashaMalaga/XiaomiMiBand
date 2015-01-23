@@ -89,7 +89,7 @@
 
     const/4 v1, 0x2
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/d/d;->a(FI)F
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/d/e;->a(FI)F
 
     move-result v0
 
@@ -97,7 +97,7 @@
 
     iget v0, p1, Lcn/com/smartdevices/bracelet/gps/c/h;->b:F
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/d/e;->c(F)J
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/d/f;->c(F)J
 
     move-result-wide v0
 

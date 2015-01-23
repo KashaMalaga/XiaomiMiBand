@@ -617,7 +617,7 @@
 .end method
 
 .method private a(Ljava/lang/String;Lorg/json/JSONObject;)Lorg/json/JSONObject;
-    .locals 10
+    .locals 9
 
     const/4 v0, 0x0
 
@@ -730,9 +730,9 @@
 
     array-length v1, v1
 
-    int-to-long v8, v1
+    int-to-long v7, v1
 
-    invoke-direct {v4, v6, v8, v9}, Lorg/apache/http/entity/InputStreamEntity;-><init>(Ljava/io/InputStream;J)V
+    invoke-direct {v4, v6, v7, v8}, Lorg/apache/http/entity/InputStreamEntity;-><init>(Ljava/io/InputStream;J)V
 
     invoke-virtual {v2, v4}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
 

@@ -1682,9 +1682,9 @@
 
     invoke-static {v7}, Lcom/amap/api/services/core/m;->k(Ljava/lang/String;)J
 
-    move-result-wide v8
+    move-result-wide v7
 
-    invoke-virtual {v6, v8, v9}, Lcom/amap/api/services/route/DrivePath;->setDuration(J)V
+    invoke-virtual {v6, v7, v8}, Lcom/amap/api/services/route/DrivePath;->setDuration(J)V
 
     const-string v7, "strategy"
 
@@ -2650,9 +2650,9 @@
 
     invoke-static {v7}, Lcom/amap/api/services/core/m;->k(Ljava/lang/String;)J
 
-    move-result-wide v8
+    move-result-wide v7
 
-    invoke-virtual {v6, v8, v9}, Lcom/amap/api/services/route/WalkPath;->setDuration(J)V
+    invoke-virtual {v6, v7, v8}, Lcom/amap/api/services/route/WalkPath;->setDuration(J)V
 
     const-string v7, "steps"
 

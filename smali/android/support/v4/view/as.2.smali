@@ -216,7 +216,7 @@
 .end method
 
 .method public static a(Landroid/view/View;Ljava/lang/Runnable;J)V
-    .locals 2
+    .locals 1
 
     sget-object v0, Landroid/support/v4/view/as;->n:Landroid/support/v4/view/aA;
 

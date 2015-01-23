@@ -6,9 +6,9 @@
 
 
 # static fields
-.field private static final o:[Ljava/lang/String;
+.field private static final n:[Ljava/lang/String;
 
-.field private static final p:[Ljava/lang/String;
+.field private static final o:[Ljava/lang/String;
 
 
 # instance fields
@@ -26,31 +26,31 @@
 
 .field private f:Landroid/widget/Button;
 
-.field private g:Landroid/widget/Button;
+.field private g:Landroid/widget/EditText;
 
-.field private h:Landroid/widget/EditText;
+.field private h:Landroid/widget/TextView;
 
 .field private i:Landroid/widget/TextView;
 
 .field private j:Landroid/widget/TextView;
 
-.field private k:Landroid/widget/TextView;
+.field private k:Landroid/widget/Button;
 
-.field private l:Landroid/widget/Button;
+.field private l:Landroid/widget/Spinner;
 
 .field private m:Landroid/widget/Spinner;
 
-.field private n:Landroid/widget/Spinner;
+.field private p:Ljava/lang/String;
 
-.field private q:Ljava/lang/String;
+.field private q:Ljava/io/File;
 
-.field private r:Ljava/io/File;
+.field private r:Landroid/os/PowerManager;
 
-.field private s:Landroid/os/PowerManager;
+.field private s:Landroid/os/PowerManager$WakeLock;
 
-.field private t:Landroid/os/PowerManager$WakeLock;
+.field private t:Lcn/com/smartdevices/bracelet/gaocept/a;
 
-.field private u:Lcn/com/smartdevices/bracelet/gaocept/b;
+.field private u:Lcn/com/smartdevices/bracelet/e/a;
 
 .field private v:Z
 
@@ -89,7 +89,7 @@
 
     aput-object v1, v0, v4
 
-    const-string v1, "Walk"
+    const-string v1, "Footwalk"
 
     aput-object v1, v0, v5
 
@@ -107,7 +107,7 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->o:[Ljava/lang/String;
+    sput-object v0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->n:[Ljava/lang/String;
 
     new-array v0, v7, [Ljava/lang/String;
 
@@ -127,7 +127,7 @@
 
     aput-object v1, v0, v6
 
-    sput-object v0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->p:[Ljava/lang/String;
+    sput-object v0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->o:[Ljava/lang/String;
 
     return-void
 .end method
@@ -143,11 +143,13 @@
 
     iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->a:Z
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->s:Landroid/os/PowerManager;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->r:Landroid/os/PowerManager;
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->t:Landroid/os/PowerManager$WakeLock;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->s:Landroid/os/PowerManager$WakeLock;
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->u:Lcn/com/smartdevices/bracelet/gaocept/b;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->t:Lcn/com/smartdevices/bracelet/gaocept/a;
+
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->u:Lcn/com/smartdevices/bracelet/e/a;
 
     iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->v:Z
 
@@ -178,18 +180,10 @@
     return-void
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;I)I
-    .locals 0
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->w:I
-
-    return p1
-.end method
-
 .method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->q:Ljava/lang/String;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->p:Ljava/lang/String;
 
     return-object p1
 .end method
@@ -221,15 +215,15 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setEnabled(Z)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->l:Landroid/widget/Button;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->k:Landroid/widget/Button;
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setEnabled(Z)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->m:Landroid/widget/Spinner;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->l:Landroid/widget/Spinner;
 
     invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setEnabled(Z)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->n:Landroid/widget/Spinner;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->m:Landroid/widget/Spinner;
 
     invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setEnabled(Z)V
 
@@ -246,9 +240,9 @@
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setEnabled(Z)V
 
     :try_start_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->u:Lcn/com/smartdevices/bracelet/gaocept/b;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->t:Lcn/com/smartdevices/bracelet/gaocept/a;
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/gaocept/b;->a(Z)I
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/gaocept/a;->a(Z)I
 
     move-result v0
 
@@ -293,15 +287,15 @@
 
     invoke-virtual {v0, v4}, Landroid/widget/Button;->setEnabled(Z)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->l:Landroid/widget/Button;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->k:Landroid/widget/Button;
 
     invoke-virtual {v0, v4}, Landroid/widget/Button;->setEnabled(Z)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->m:Landroid/widget/Spinner;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->l:Landroid/widget/Spinner;
 
     invoke-virtual {v0, v4}, Landroid/widget/Spinner;->setEnabled(Z)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->n:Landroid/widget/Spinner;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->m:Landroid/widget/Spinner;
 
     invoke-virtual {v0, v4}, Landroid/widget/Spinner;->setEnabled(Z)V
 
@@ -368,7 +362,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/b;->a()Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
@@ -380,7 +374,7 @@
 
     const-string v1, "MiLiProfile is null"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -410,7 +404,7 @@
 .method static synthetic b(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->e()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->on_start_button_click()V
 
     return-void
 .end method
@@ -426,7 +420,7 @@
 .method static synthetic b()[Ljava/lang/String;
     .locals 1
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->p:[Ljava/lang/String;
+    sget-object v0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->o:[Ljava/lang/String;
 
     return-object v0
 .end method
@@ -434,7 +428,7 @@
 .method static synthetic c(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->on_start_button_click()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->on_empty_button_click()V
 
     return-void
 .end method
@@ -442,56 +436,80 @@
 .method static synthetic c()[Ljava/lang/String;
     .locals 1
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->o:[Ljava/lang/String;
+    sget-object v0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->n:[Ljava/lang/String;
 
     return-object v0
 .end method
 
 .method private d()V
-    .locals 4
+    .locals 6
 
     :try_start_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->u:Lcn/com/smartdevices/bracelet/gaocept/b;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->u:Lcn/com/smartdevices/bracelet/e/a;
 
-    const/4 v1, 0x0
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/e/a;->a()Ljava/util/ArrayList;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gaocept/b;->a(Z)I
+    move-result-object v0
 
-    move-result v0
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
-    new-instance v1, Landroid/app/AlertDialog$Builder;
+    move-result v1
 
-    invoke-direct {v1, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+    int-to-long v1, v1
 
-    const-string v2, "Test c code successfully!"
+    new-instance v3, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {v1, v2}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+    invoke-direct {v3, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    const-string v4, "Zip success!"
+
+    invoke-virtual {v3, v4}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v3
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "Zip file length: "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    const-string v2, " B"
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v3, "Count: "
+    move-result-object v1
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    invoke-virtual {v3, v1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+    move-result-object v1
+
+    const-string v2, "Delete"
+
+    new-instance v3, Lcn/com/smartdevices/bracelet/lab/ui/p;
+
+    invoke-direct {v3, p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/p;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;Ljava/util/ArrayList;)V
+
+    invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, "Keep"
 
-    move-result-object v0
+    const/4 v2, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     move-result-object v0
 
@@ -509,7 +527,7 @@
 
     invoke-direct {v1, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    const-string v2, "Test Error"
+    const-string v2, "Zip file error"
 
     invoke-virtual {v1, v2}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
@@ -528,69 +546,7 @@
     goto :goto_0
 .end method
 
-.method static synthetic d(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->on_empty_button_click()V
-
-    return-void
-.end method
-
-.method private e()V
-    .locals 3
-
-    new-instance v0, Landroid/widget/NumberPicker;
-
-    invoke-direct {v0, p0}, Landroid/widget/NumberPicker;-><init>(Landroid/content/Context;)V
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/widget/NumberPicker;->setMinValue(I)V
-
-    const/16 v1, 0x2710
-
-    invoke-virtual {v0, v1}, Landroid/widget/NumberPicker;->setMaxValue(I)V
-
-    iget v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->w:I
-
-    invoke-virtual {v0, v1}, Landroid/widget/NumberPicker;->setValue(I)V
-
-    new-instance v1, Lcn/com/smartdevices/bracelet/lab/ui/n;
-
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/lab/ui/n;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/NumberPicker;->setOnValueChangedListener(Landroid/widget/NumberPicker$OnValueChangeListener;)V
-
-    new-instance v1, Landroid/app/AlertDialog$Builder;
-
-    invoke-direct {v1, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
-
-    const-string v2, "Correct number:"
-
-    invoke-virtual {v1, v2}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/app/AlertDialog$Builder;->setView(Landroid/view/View;)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v0
-
-    const-string v1, "ok"
-
-    new-instance v2, Lcn/com/smartdevices/bracelet/lab/ui/o;
-
-    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/lab/ui/o;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
-
-    invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
-
-    return-void
-.end method
-
-.method static synthetic e(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Z
+.method static synthetic d(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Z
     .locals 1
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->x:Z
@@ -598,7 +554,7 @@
     return v0
 .end method
 
-.method static synthetic f(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)I
+.method static synthetic e(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)I
     .locals 1
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->w:I
@@ -606,50 +562,12 @@
     return v0
 .end method
 
-.method private f()V
+.method private e()V
     .locals 3
 
     new-instance v0, Landroid/widget/ArrayAdapter;
 
     const v1, 0x109000a
-
-    sget-object v2, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->p:[Ljava/lang/String;
-
-    invoke-direct {v0, p0, v1, v2}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;I[Ljava/lang/Object;)V
-
-    const v1, 0x1090009
-
-    invoke-virtual {v0, v1}, Landroid/widget/ArrayAdapter;->setDropDownViewResource(I)V
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->n:Landroid/widget/Spinner;
-
-    invoke-virtual {v1, v0}, Landroid/widget/Spinner;->setAdapter(Landroid/widget/SpinnerAdapter;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->n:Landroid/widget/Spinner;
-
-    new-instance v1, Lcn/com/smartdevices/bracelet/lab/ui/p;
-
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/lab/ui/p;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
-
-    return-void
-.end method
-
-.method static synthetic g(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/TextView;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->k:Landroid/widget/TextView;
-
-    return-object v0
-.end method
-
-.method private g()V
-    .locals 3
-
-    new-instance v0, Landroid/widget/ArrayAdapter;
-
-    const v1, 0x1090008
 
     sget-object v2, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->o:[Ljava/lang/String;
 
@@ -674,22 +592,60 @@
     return-void
 .end method
 
-.method static synthetic h(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Lcn/com/smartdevices/bracelet/gaocept/b;
+.method static synthetic f(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/TextView;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->u:Lcn/com/smartdevices/bracelet/gaocept/b;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->j:Landroid/widget/TextView;
 
     return-object v0
 .end method
 
-.method private h()V
+.method private f()V
+    .locals 3
+
+    new-instance v0, Landroid/widget/ArrayAdapter;
+
+    const v1, 0x1090008
+
+    sget-object v2, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->n:[Ljava/lang/String;
+
+    invoke-direct {v0, p0, v1, v2}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;I[Ljava/lang/Object;)V
+
+    const v1, 0x1090009
+
+    invoke-virtual {v0, v1}, Landroid/widget/ArrayAdapter;->setDropDownViewResource(I)V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->l:Landroid/widget/Spinner;
+
+    invoke-virtual {v1, v0}, Landroid/widget/Spinner;->setAdapter(Landroid/widget/SpinnerAdapter;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->l:Landroid/widget/Spinner;
+
+    new-instance v1, Lcn/com/smartdevices/bracelet/lab/ui/r;
+
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/lab/ui/r;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
+
+    return-void
+.end method
+
+.method static synthetic g(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Lcn/com/smartdevices/bracelet/gaocept/a;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->t:Lcn/com/smartdevices/bracelet/gaocept/a;
+
+    return-object v0
+.end method
+
+.method private g()V
     .locals 5
 
     const-string v0, "Lab"
 
     const-string v1, "startRecord"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :try_start_0
     const-string v0, "power"
@@ -700,9 +656,9 @@
 
     check-cast v0, Landroid/os/PowerManager;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->s:Landroid/os/PowerManager;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->r:Landroid/os/PowerManager;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->s:Landroid/os/PowerManager;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->r:Landroid/os/PowerManager;
 
     const/4 v1, 0x1
 
@@ -718,9 +674,9 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->t:Landroid/os/PowerManager$WakeLock;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->s:Landroid/os/PowerManager$WakeLock;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->t:Landroid/os/PowerManager$WakeLock;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->s:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
@@ -730,7 +686,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->b:Ljava/lang/String;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->q:Ljava/lang/String;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->p:Ljava/lang/String;
 
     const-string v2, ","
 
@@ -742,7 +698,7 @@
 
     aget-object v1, v1, v2
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->q:Ljava/lang/String;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->p:Ljava/lang/String;
 
     const-string v3, ","
 
@@ -754,7 +710,7 @@
 
     aget-object v2, v2, v3
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->h:Landroid/widget/EditText;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->g:Landroid/widget/EditText;
 
     invoke-virtual {v3}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -764,9 +720,9 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->u:Lcn/com/smartdevices/bracelet/gaocept/b;
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->t:Lcn/com/smartdevices/bracelet/gaocept/a;
 
-    invoke-virtual {v4, v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/gaocept/b;->start(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v4, v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/gaocept/a;->start(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -796,12 +752,12 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
 
-.method static synthetic i(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/Button;
+.method static synthetic h(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/Button;
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->c:Landroid/widget/Button;
@@ -809,7 +765,7 @@
     return-object v0
 .end method
 
-.method private i()V
+.method private h()V
     .locals 3
 
     const/4 v2, 0x0
@@ -818,18 +774,18 @@
 
     const-string v1, "stopRecord"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->t:Landroid/os/PowerManager$WakeLock;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->s:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
     invoke-direct {p0, v2, p0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->a(ZLcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ISensorDataChangedCB;)V
 
     :try_start_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->u:Lcn/com/smartdevices/bracelet/gaocept/b;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->t:Lcn/com/smartdevices/bracelet/gaocept/a;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gaocept/b;->b()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gaocept/a;->b()V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->a()V
     :try_end_0
@@ -851,7 +807,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -867,10 +823,18 @@
     throw v0
 .end method
 
-.method static synthetic j(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/Button;
+.method static synthetic i(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/Button;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->l:Landroid/widget/Button;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->k:Landroid/widget/Button;
+
+    return-object v0
+.end method
+
+.method static synthetic j(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/Spinner;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->l:Landroid/widget/Spinner;
 
     return-object v0
 .end method
@@ -883,15 +847,7 @@
     return-object v0
 .end method
 
-.method static synthetic l(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/Spinner;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->n:Landroid/widget/Spinner;
-
-    return-object v0
-.end method
-
-.method static synthetic m(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/Button;
+.method static synthetic l(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/Button;
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->d:Landroid/widget/Button;
@@ -899,7 +855,7 @@
     return-object v0
 .end method
 
-.method static synthetic n(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/Button;
+.method static synthetic m(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/Button;
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->e:Landroid/widget/Button;
@@ -907,10 +863,18 @@
     return-object v0
 .end method
 
-.method static synthetic o(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/Button;
+.method static synthetic n(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/Button;
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->f:Landroid/widget/Button;
+
+    return-object v0
+.end method
+
+.method static synthetic o(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/EditText;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->g:Landroid/widget/EditText;
 
     return-object v0
 .end method
@@ -952,77 +916,68 @@
 .end method
 
 .method private on_start_button_click()V
-    .locals 5
+    .locals 3
 
-    const/4 v1, 0x1
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->a:Z
+
+    if-eqz v0, :cond_0
 
     const/4 v0, 0x0
 
-    iget-boolean v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->a:Z
-
-    if-eqz v2, :cond_1
-
     iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->a:Z
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->i()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->h()V
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->u:Lcn/com/smartdevices/bracelet/gaocept/b;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->t:Lcn/com/smartdevices/bracelet/gaocept/a;
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/gaocept/b;->j()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gaocept/a;->j()Z
 
-    move-result v2
+    move-result v0
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->c:Landroid/widget/Button;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->c:Landroid/widget/Button;
 
-    const-string v4, "Start"
+    const-string v2, "Start"
 
-    invoke-virtual {v3, v4}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1, v2}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->c:Landroid/widget/Button;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->c:Landroid/widget/Button;
 
-    invoke-virtual {v3, v2}, Landroid/widget/Button;->setEnabled(Z)V
+    invoke-virtual {v1, v0}, Landroid/widget/Button;->setEnabled(Z)V
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->m:Landroid/widget/Spinner;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->l:Landroid/widget/Spinner;
 
-    invoke-virtual {v3, v2}, Landroid/widget/Spinner;->setEnabled(Z)V
+    invoke-virtual {v1, v0}, Landroid/widget/Spinner;->setEnabled(Z)V
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->n:Landroid/widget/Spinner;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->m:Landroid/widget/Spinner;
 
-    invoke-virtual {v3, v2}, Landroid/widget/Spinner;->setEnabled(Z)V
+    invoke-virtual {v1, v0}, Landroid/widget/Spinner;->setEnabled(Z)V
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->h:Landroid/widget/EditText;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->g:Landroid/widget/EditText;
 
-    invoke-virtual {v3, v2}, Landroid/widget/EditText;->setEnabled(Z)V
+    invoke-virtual {v1, v0}, Landroid/widget/EditText;->setEnabled(Z)V
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->d:Landroid/widget/Button;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->d:Landroid/widget/Button;
 
-    invoke-virtual {v3, v2}, Landroid/widget/Button;->setEnabled(Z)V
+    invoke-virtual {v1, v0}, Landroid/widget/Button;->setEnabled(Z)V
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->e:Landroid/widget/Button;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->e:Landroid/widget/Button;
 
-    invoke-virtual {v3, v2}, Landroid/widget/Button;->setEnabled(Z)V
+    invoke-virtual {v1, v0}, Landroid/widget/Button;->setEnabled(Z)V
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->f:Landroid/widget/Button;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->f:Landroid/widget/Button;
 
-    invoke-virtual {v3, v2}, Landroid/widget/Button;->setEnabled(Z)V
+    invoke-virtual {v1, v0}, Landroid/widget/Button;->setEnabled(Z)V
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->g:Landroid/widget/Button;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->k:Landroid/widget/Button;
 
-    if-nez v2, :cond_0
-
-    move v0, v1
-
-    :cond_0
-    invoke-virtual {v3, v0}, Landroid/widget/Button;->setEnabled(Z)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->l:Landroid/widget/Button;
+    const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setEnabled(Z)V
 
     :goto_0
     return-void
 
-    :cond_1
+    :cond_0
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
     invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
@@ -1035,9 +990,9 @@
 
     const v1, 0x1040013
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/lab/ui/l;
+    new-instance v2, Lcn/com/smartdevices/bracelet/lab/ui/n;
 
-    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/lab/ui/l;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
+    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/lab/ui/n;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1045,9 +1000,9 @@
 
     const/high16 v1, 0x1040000
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/lab/ui/k;
+    new-instance v2, Lcn/com/smartdevices/bracelet/lab/ui/z;
 
-    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/lab/ui/k;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
+    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/lab/ui/z;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
 
     invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
@@ -1058,28 +1013,20 @@
     goto :goto_0
 .end method
 
-.method static synthetic p(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/EditText;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->h:Landroid/widget/EditText;
-
-    return-object v0
-.end method
-
-.method static synthetic q(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/Button;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->g:Landroid/widget/Button;
-
-    return-object v0
-.end method
-
-.method static synthetic r(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
+.method static synthetic p(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->h()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->g()V
 
     return-void
+.end method
+
+.method static synthetic q(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Lcn/com/smartdevices/bracelet/e/a;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->u:Lcn/com/smartdevices/bracelet/e/a;
+
+    return-object v0
 .end method
 
 
@@ -1094,7 +1041,7 @@
     const/4 v3, 0x1
 
     :try_start_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->r:Ljava/io/File;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->q:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -1102,19 +1049,19 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->i:Landroid/widget/TextView;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->h:Landroid/widget/TextView;
 
     const-string v1, "No data found"
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->j:Landroid/widget/TextView;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->i:Landroid/widget/TextView;
 
     const-string v1, ""
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->l:Landroid/widget/Button;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->k:Landroid/widget/Button;
 
     const/4 v1, 0x0
 
@@ -1124,9 +1071,9 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->u:Lcn/com/smartdevices/bracelet/gaocept/b;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->t:Lcn/com/smartdevices/bracelet/gaocept/a;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gaocept/b;->d()I
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gaocept/a;->d()I
 
     move-result v1
 
@@ -1156,7 +1103,7 @@
     const-string v0, "GB"
 
     :cond_1
-    iget-object v5, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->i:Landroid/widget/TextView;
+    iget-object v5, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->h:Landroid/widget/TextView;
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -1186,21 +1133,17 @@
 
     invoke-virtual {v5, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->j:Landroid/widget/TextView;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->i:Landroid/widget/TextView;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->u:Lcn/com/smartdevices/bracelet/gaocept/b;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->t:Lcn/com/smartdevices/bracelet/gaocept/a;
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gaocept/b;->e()Ljava/lang/String;
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gaocept/a;->e()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->l:Landroid/widget/Button;
-
-    invoke-virtual {v0, v2}, Landroid/widget/Button;->setEnabled(Z)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->g:Landroid/widget/Button;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->k:Landroid/widget/Button;
 
     invoke-virtual {v0, v2}, Landroid/widget/Button;->setEnabled(Z)V
 
@@ -1216,19 +1159,19 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setEnabled(Z)V
 
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->l:Landroid/widget/Spinner;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setEnabled(Z)V
+
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->m:Landroid/widget/Spinner;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setEnabled(Z)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->n:Landroid/widget/Spinner;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setEnabled(Z)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->h:Landroid/widget/EditText;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->g:Landroid/widget/EditText;
 
     const/4 v1, 0x1
 
@@ -1245,35 +1188,27 @@
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->f:Landroid/widget/Button;
 
     invoke-virtual {v0, v2}, Landroid/widget/Button;->setEnabled(Z)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->g:Landroid/widget/Button;
-
-    invoke-virtual {v0, v2}, Landroid/widget/Button;->setEnabled(Z)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto/16 :goto_0
+    goto :goto_0
 
     :catch_0
     move-exception v0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->i:Landroid/widget/TextView;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->h:Landroid/widget/TextView;
 
     const-string v1, "Read data error"
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->j:Landroid/widget/TextView;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->i:Landroid/widget/TextView;
 
     const-string v1, ""
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->l:Landroid/widget/Button;
-
-    invoke-virtual {v0, v4}, Landroid/widget/Button;->setEnabled(Z)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->g:Landroid/widget/Button;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->k:Landroid/widget/Button;
 
     invoke-virtual {v0, v4}, Landroid/widget/Button;->setEnabled(Z)V
 
@@ -1287,15 +1222,15 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/Button;->setEnabled(Z)V
 
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->l:Landroid/widget/Spinner;
+
+    invoke-virtual {v0, v3}, Landroid/widget/Spinner;->setEnabled(Z)V
+
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->m:Landroid/widget/Spinner;
 
     invoke-virtual {v0, v3}, Landroid/widget/Spinner;->setEnabled(Z)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->n:Landroid/widget/Spinner;
-
-    invoke-virtual {v0, v3}, Landroid/widget/Spinner;->setEnabled(Z)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->h:Landroid/widget/EditText;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->g:Landroid/widget/EditText;
 
     invoke-virtual {v0, v3}, Landroid/widget/EditText;->setEnabled(Z)V
 
@@ -1308,10 +1243,6 @@
     invoke-virtual {v0, v4}, Landroid/widget/Button;->setEnabled(Z)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->f:Landroid/widget/Button;
-
-    invoke-virtual {v0, v4}, Landroid/widget/Button;->setEnabled(Z)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->g:Landroid/widget/Button;
 
     invoke-virtual {v0, v4}, Landroid/widget/Button;->setEnabled(Z)V
 
@@ -1330,11 +1261,11 @@
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030013
+    const v0, 0x7f030017
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->setContentView(I)V
 
-    const v0, 0x7f0b005e
+    const v0, 0x7f08007c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->findViewById(I)Landroid/view/View;
 
@@ -1348,7 +1279,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/Button;->setEnabled(Z)V
 
-    const v0, 0x7f0b0064
+    const v0, 0x7f080082
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->findViewById(I)Landroid/view/View;
 
@@ -1360,13 +1291,13 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->d:Landroid/widget/Button;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/lab/ui/j;
+    new-instance v1, Lcn/com/smartdevices/bracelet/lab/ui/m;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/lab/ui/j;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/lab/ui/m;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0b0065
+    const v0, 0x7f080083
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->findViewById(I)Landroid/view/View;
 
@@ -1378,13 +1309,13 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->e:Landroid/widget/Button;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/lab/ui/r;
+    new-instance v1, Lcn/com/smartdevices/bracelet/lab/ui/s;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/lab/ui/r;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/lab/ui/s;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0b0066
+    const v0, 0x7f080084
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->findViewById(I)Landroid/view/View;
 
@@ -1396,31 +1327,13 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->f:Landroid/widget/Button;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/lab/ui/s;
-
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/lab/ui/s;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const v0, 0x7f0b0067
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/Button;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->g:Landroid/widget/Button;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->g:Landroid/widget/Button;
-
     new-instance v1, Lcn/com/smartdevices/bracelet/lab/ui/t;
 
     invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/lab/ui/t;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0b005d
+    const v0, 0x7f08007b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->findViewById(I)Landroid/view/View;
 
@@ -1428,9 +1341,19 @@
 
     check-cast v0, Landroid/widget/EditText;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->h:Landroid/widget/EditText;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->g:Landroid/widget/EditText;
 
-    const v0, 0x7f0b0060
+    const v0, 0x7f08007e
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->h:Landroid/widget/TextView;
+
+    const v0, 0x7f08007f
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->findViewById(I)Landroid/view/View;
 
@@ -1440,7 +1363,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->i:Landroid/widget/TextView;
 
-    const v0, 0x7f0b0061
+    const v0, 0x7f080081
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->findViewById(I)Landroid/view/View;
 
@@ -1450,17 +1373,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->j:Landroid/widget/TextView;
 
-    const v0, 0x7f0b0063
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->k:Landroid/widget/TextView;
-
-    const v0, 0x7f0b0062
+    const v0, 0x7f080080
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->findViewById(I)Landroid/view/View;
 
@@ -1468,9 +1381,19 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->l:Landroid/widget/Button;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->k:Landroid/widget/Button;
 
-    const v0, 0x7f0b005b
+    const v0, 0x7f080079
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/Spinner;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->l:Landroid/widget/Spinner;
+
+    const v0, 0x7f08007a
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->findViewById(I)Landroid/view/View;
 
@@ -1479,16 +1402,6 @@
     check-cast v0, Landroid/widget/Spinner;
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->m:Landroid/widget/Spinner;
-
-    const v0, 0x7f0b005c
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/Spinner;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->n:Landroid/widget/Spinner;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->c:Landroid/widget/Button;
 
@@ -1504,11 +1417,11 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->l:Landroid/widget/Button;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->k:Landroid/widget/Button;
 
     invoke-virtual {v0, v2}, Landroid/widget/Button;->setEnabled(Z)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->l:Landroid/widget/Button;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->k:Landroid/widget/Button;
 
     new-instance v1, Lcn/com/smartdevices/bracelet/lab/ui/v;
 
@@ -1528,9 +1441,9 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/Button;->setEnabled(Z)V
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->g()V
-
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->f()V
+
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->e()V
 
     invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
 
@@ -1544,17 +1457,15 @@
 
     if-eqz v0, :cond_1
 
-    new-instance v0, Ljava/io/File;
+    const-string v0, ".MISportLab"
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/j;->co:Ljava/io/File;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/c/a;->d(Ljava/lang/String;)Ljava/io/File;
 
-    const-string v2, ".MISportLab"
+    move-result-object v0
 
-    invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->q:Ljava/io/File;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->r:Ljava/io/File;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->r:Ljava/io/File;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->q:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -1562,23 +1473,35 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->r:Ljava/io/File;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->q:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->mkdir()Z
 
     :cond_0
     :goto_0
-    new-instance v0, Lcn/com/smartdevices/bracelet/gaocept/b;
+    new-instance v0, Lcn/com/smartdevices/bracelet/gaocept/a;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->r:Ljava/io/File;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->q:Ljava/io/File;
 
     invoke-virtual {v1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/gaocept/b;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/gaocept/a;-><init>(Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->u:Lcn/com/smartdevices/bracelet/gaocept/b;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->t:Lcn/com/smartdevices/bracelet/gaocept/a;
+
+    new-instance v0, Lcn/com/smartdevices/bracelet/e/a;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->q:Ljava/io/File;
+
+    invoke-virtual {v1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/e/a;-><init>(Ljava/lang/String;)V
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->u:Lcn/com/smartdevices/bracelet/e/a;
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->a()V
 
@@ -1605,7 +1528,7 @@
 
     move-result-object v0
 
-    const/high16 v1, 0x7f0f0000
+    const/high16 v1, 0x7f100000
 
     invoke-virtual {v0, v1, p1}, Landroid/view/MenuInflater;->inflate(ILandroid/view/Menu;)V
 
@@ -1621,7 +1544,7 @@
 
     move-result v0
 
-    const v1, 0x7f0b02a5
+    const v1, 0x7f080391
 
     if-ne v0, v1, :cond_0
 
@@ -1645,7 +1568,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->i()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->h()V
 
     :cond_0
     invoke-super {p0}, Landroid/app/Activity;->onPause()V
@@ -1657,25 +1580,25 @@
     .locals 3
 
     :try_start_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->u:Lcn/com/smartdevices/bracelet/gaocept/b;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->t:Lcn/com/smartdevices/bracelet/gaocept/a;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/gaocept/b;->a(III)Z
+    invoke-virtual {v0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/gaocept/a;->a(III)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->u:Lcn/com/smartdevices/bracelet/gaocept/b;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->t:Lcn/com/smartdevices/bracelet/gaocept/a;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gaocept/b;->c()I
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gaocept/a;->c()I
 
     move-result v0
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->w:I
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->u:Lcn/com/smartdevices/bracelet/gaocept/b;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->t:Lcn/com/smartdevices/bracelet/gaocept/a;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gaocept/b;->g()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gaocept/a;->g()Z
 
     move-result v0
 
@@ -1703,7 +1626,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "Lab"
 
@@ -1727,7 +1650,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Lcn/com/smartdevices/bracelet/lab/ui/w;
 
@@ -1761,7 +1684,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1776,7 +1699,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

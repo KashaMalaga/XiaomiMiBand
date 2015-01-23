@@ -1,40 +1,56 @@
-.class Lcom/f/a/t;
-.super Lcom/f/a/A;
+.class Lcom/f/a/T;
+.super Ljava/lang/ThreadLocal;
 
 
-# instance fields
-.field final synthetic a:Lcom/f/a/s;
-
-.field private final synthetic b:Landroid/content/Context;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/ThreadLocal",
+        "<",
+        "Ljava/util/ArrayList",
+        "<",
+        "Lcom/f/a/R;",
+        ">;>;"
+    }
+.end annotation
 
 
 # direct methods
-.method constructor <init>(Lcom/f/a/s;Landroid/content/Context;)V
+.method constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lcom/f/a/t;->a:Lcom/f/a/s;
-
-    iput-object p2, p0, Lcom/f/a/t;->b:Landroid/content/Context;
-
-    invoke-direct {p0}, Lcom/f/a/A;-><init>()V
+    invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()V
-    .locals 2
+.method protected a()Ljava/util/ArrayList;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/f/a/R;",
+            ">;"
+        }
+    .end annotation
 
-    iget-object v0, p0, Lcom/f/a/t;->a:Lcom/f/a/s;
+    new-instance v0, Ljava/util/ArrayList;
 
-    iget-object v1, p0, Lcom/f/a/t;->b:Landroid/content/Context;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    return-object v0
+.end method
 
-    move-result-object v1
+.method protected synthetic initialValue()Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {v0, v1}, Lcom/f/a/s;->a(Lcom/f/a/s;Landroid/content/Context;)V
+    invoke-virtual {p0}, Lcom/f/a/T;->a()Ljava/util/ArrayList;
 
-    return-void
+    move-result-object v0
+
+    return-object v0
 .end method

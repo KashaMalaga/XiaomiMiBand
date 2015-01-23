@@ -1,5 +1,5 @@
 .class Lcn/com/smartdevices/bracelet/weather/WeatherManager$4;
-.super Lcom/c/a/a/h;
+.super Lcom/e/a/a/h;
 
 
 # instance fields
@@ -16,7 +16,7 @@
 
     iput-object p2, p0, Lcn/com/smartdevices/bracelet/weather/WeatherManager$4;->val$finalCityCode:Ljava/lang/String;
 
-    invoke-direct {p0}, Lcom/c/a/a/h;-><init>()V
+    invoke-direct {p0}, Lcom/e/a/a/h;-><init>()V
 
     return-void
 .end method
@@ -30,7 +30,7 @@
 
     const-string v1, "Request Weather Failed!!"
 
-    invoke-static {v0, v1, p4}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, v1, p4}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-void
 .end method
@@ -42,7 +42,7 @@
 
     const-string v1, "Request Weather Successed!!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Ljava/lang/String;
 
@@ -68,16 +68,16 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :try_start_0
-    new-instance v1, Lcom/b/a/k;
+    new-instance v1, Lcom/d/a/k;
 
-    invoke-direct {v1}, Lcom/b/a/k;-><init>()V
+    invoke-direct {v1}, Lcom/d/a/k;-><init>()V
 
     const-class v2, Lcn/com/smartdevices/bracelet/weather/OriginalWeatherInfo;
 
-    invoke-virtual {v1, v0, v2}, Lcom/b/a/k;->a(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v1, v0, v2}, Lcom/d/a/k;->a(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -103,7 +103,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v1, Lcn/com/smartdevices/bracelet/weather/WeatherInfo;
 
@@ -229,7 +229,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/weather/WeatherManager$4;->this$0:Lcn/com/smartdevices/bracelet/weather/WeatherManager;
 
@@ -271,7 +271,7 @@
 
     const-string v3, "Weather_NoAqi"
 
-    invoke-static {v0, v2, v3}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2, v3}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -284,7 +284,7 @@
 
     const-string v2, "Parse WeatherInfo Error!!"
 
-    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/weather/WeatherManager$4;->this$0:Lcn/com/smartdevices/bracelet/weather/WeatherManager;
 
@@ -315,7 +315,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v2, v3}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/weather/WeatherManager$4;->this$0:Lcn/com/smartdevices/bracelet/weather/WeatherManager;
 
@@ -324,7 +324,7 @@
 
     move-result-object v1
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/Exception;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/A;->a(Landroid/content/Context;Ljava/lang/Exception;)V
 
     const/4 v0, 0x0
 

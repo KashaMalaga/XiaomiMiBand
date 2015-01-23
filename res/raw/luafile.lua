@@ -28,6 +28,7 @@ MODE_SLEEP = 0x10;
 NEW_RECORD_MIN = 4000;
 
 ---=============== Colors ===============
+COLOR_ALERT = 0xff2222
 COLOR_NORMAL_BLUE = 0x1898c4
 COLOR_REGISTER = 0xe53c44
 COLOR_REACH_GOAL = 0xee5734
@@ -39,42 +40,43 @@ COLOR_NORMAL_BLACK =  0x000000
 
 function getCaloriesString(calories)
     log('cal :'..calories)
-    -- test
-    --calories = math.random(100, 1000);
 
     defautMsg  = ""
-    threshHoldValue = 96
+    threshHoldValue = 14
 
     if calories < threshHoldValue then
         return defautMsg
     end
+	
+ t = {}
 
-    min = calories - 10
-    if min < threshHoldValue then
-        min  = threshHoldValue
-    end
-    max = calories + 10
+    best = 999999
 
-    t = {}
     for i,item in ipairs(getString('calories_table')) do
-        _s = item["str"]
         _c = item["calories"]
-        if _c >= min and _c <= max then
-            table.insert(t,_s)
+        if math.abs(calories - _c) < best then
+            best = math.abs(calories - _c)
         end
     end
 
+    lesscalfound = false
+
+    for i,item in ipairs(getString('calories_table')) do
+        _s = item["str"]
+        _c = item["calories"]
+        if _c == calories - best then
+            table.insert(t,_s)
+            lesscalfound = true
+        elseif _c == calories + best and lesscalfound == false then
+            table.insert(t,_s)
+        end
+    end
+	
     if #t > 0 then
         r = math.random(1,#t)
         return t[r]
     end
 
-    mod = calories % 9
-    fat = (calories - mod) / 9
-    msg = string.format(getString('get_over_format'), fat);
-
-    log('cal mod='..mod..', fat='..fat..', msg='..msg);
-    return msg
 end
 
 ---------------------------------------------------
@@ -257,10 +259,10 @@ end
 --
 --------------------------------------------------
 
---
+---
 --generate msg & insert into DB
---
-function setMessage(listDao,table)
+---
+function setMessageByExpireDate(listDao, table, expireDate)
     log('setMsg: '..table.t1.." / "..table.t2,'d')
 
     listItem = table.listItem
@@ -275,8 +277,11 @@ function setMessage(listDao,table)
 
     date = "" .. os.date("%Y-%m-%d",os.time())
     listItem:setDate(date)
-
     listItem:setScriptVersion(""..__luaVersion)
+
+    if (expireDate ~= nil) then
+        listItem:setExpireTime(expireDate)
+    end
 
     -- 2 set item according to table
     t = table
@@ -318,8 +323,11 @@ function setMessage(listDao,table)
         listItem:setRight(t.right)
     end
 
-
     listDao:insertOrReplace(listItem)
+end
+
+function setMessage(listDao,table)
+    setMessageByExpireDate(listDao, table, "")
 end
 
 --
@@ -344,12 +352,7 @@ function delMsgByType (listDao, ConfigInfo, stype)
     luaAction = ConfigInfo:getLuaAction()
     Properties = luajava.newInstance("de.greenrobot.daobracelet.LuaListDao$Properties")
 
-    today = "" .. os.date("%Y-%m-%d",os.time())
-    w1 = Properties.Date:eq(today)
     w2 = Properties.Type:eq(stype)
-
-
-    luaAction:queryWhere(qb,w1)
     luaAction:queryWhere(qb,w2)
     luaAction:queryDel(qb)
 end
@@ -442,43 +445,78 @@ function mergeSleepMsg(listDao,ConfigInfo,table)
 end
 
 --------------------------------------------------------------------------------------------------
---
---
---
 --  Message generators
---
---
---
 ------------------------------------------------------------------------------------------------
 DISABLE_TAG = "_DISABLE"
-TYPE_WELCOME = "1001"
-TYPE_WELCOME_WITH_SENSORHUB_NOT_BIND = "1000"
-TYPE_WELCOME_WITH_SENSORHUB_NOT_BIND_1 = "1000_1"..DISABLE_TAG
-function welcome(listDao,ConfigInfo)
-    log('----------welcome')
-    if (ConfigInfo:isSupportSensorHub()) then
-        log('is support sensor hub')
-        welcomeWithSensorHub(listDao, ConfigInfo)
+TYPE_WELCOME_BAND = "1001"
+
+TYPE_WELCOME_WITH_SENSORHUB_NOT_BIND = "sensorhub_1"
+TYPE_WELCOME_WITH_SENSORHUB_NOT_BIND_1 = "sensorhub_2"..DISABLE_TAG
+
+TYPE_WELCOME_SELECT_DEVICE = TYPE_WELCOME_BAND .. "SELECT_DEVICE"
+TYPE_WELCOME_INTRO = TYPE_WELCOME_BAND .. DISABLE_TAG
+---=================
+--- Weight constants
+---=================
+TYPE_WELCOME_WITH_WEIGHT_BIND = "weight_1"
+TYPE_WELCOME_WITH_WEIGHT_NOT_BIND = "weight_2"
+
+function showWelcomeIntro(listDao, ConfigInfo)
+    log("---------------showWelcomIntro")
+
+    t = {}
+
+    if (ConfigInfo:isSupportWeight()) then
+        t.t1 = getString('select_devices')
     else
-        welcomeNoSensorHub(listDao, ConfigInfo)
+        t.t1 = getString('not_binded_hint')
     end
 
+    t.t2 = ""
+    t.stype = TYPE_WELCOME_SELECT_DEVICE
+
+    t.strScript = "function doAction(context, luaAction) \
+        if luaAction:getIsBind() then\
+            return\
+        end\
+        local intent = luaAction:getIntentFromString('cn.com.smartdevices.bracelet.ui.SelectDevicesActivity');\
+        context:startActivity(intent)\
+    end";
+
+    uniqueMsg(listDao,ConfigInfo,t)
+
+    t1 = getString('welcome_use_mi_health')
+    t2 = ""
+    stype = TYPE_WELCOME_INTRO
+
+    t.t1 = t1
+    t.t2 = t2
+    t.stype = stype
+    t.strScript = ""
+
+    uniqueMsg(listDao,ConfigInfo,t)
 end
 
-function clearWelcome(listDao,ConfigInfo)
-    log("---------------clearWelcom")
-    clearRecord(listDao, ConfigInfo:getLuaAction(), TYPE_WELCOME)
-    clearRecord(listDao, ConfigInfo:getLuaAction(), TYPE_WELCOME_WITH_SENSORHUB_NOT_BIND)
-    clearRecord(listDao, ConfigInfo:getLuaAction(), TYPE_WELCOME_WITH_SENSORHUB_NOT_BIND_1)
+function clearWelcomeIntro(listDao,ConfigInfo)
+    log("---------------clearWelcome if not binded anything")
+    clearRecord(listDao, ConfigInfo:getLuaAction(), TYPE_WELCOME_INTRO)
+    clearRecord(listDao, ConfigInfo:getLuaAction(), TYPE_WELCOME_SELECT_DEVICE)
 end
 
-function showBindedWelcome(listDao, ConfigInfo)
-    log("---------------showBindedWelcom")
-    clearWelcome(listDao, ConfigInfo)
+function clearBindedBand(listDao, ConfigInfo)
+    clearRecord(listDao, ConfigInfo:getLuaAction(), TYPE_WELCOME_BAND)
+end
+
+function clearBindedWeight(listDao, ConfigInfo)
+    clearRecord(listDao, ConfigInfo:getLuaAction(), TYPE_WELCOME_WITH_WEIGHT_BIND)
+end
+
+function showBindedBand(listDao, ConfigInfo)
+    log("---------------showBindedBandWelcom")
 
     t1 = getString('welcome_use');
     t2 = getString('click_to_get_help');
-    stype = TYPE_WELCOME
+    stype = TYPE_WELCOME_BAND
 
     strScript = "function doAction(context, luaAction) \
         ConfigInfo = luaAction:getConfigInfo()\
@@ -496,108 +534,64 @@ function showBindedWelcome(listDao, ConfigInfo)
     uniqueMsg(listDao,ConfigInfo,t)
 end
 
-function showNotBindedWithSensorHub(listDao, ConfigInfo)
-    log("---------------showNotBindedWithSensorHub")
+function showBindedWeight(listDao, ConfigInfo)
+    stype = ""
+    strScript = ""
 
-    t1 = getString('welcome_use_mi_health')
+    stype = TYPE_WELCOME_WITH_WEIGHT_BIND
+    t1 = getString('welcome_use_weight_scale');
     t2 = ""
-    stype = TYPE_WELCOME_WITH_SENSORHUB_NOT_BIND_1
+    deviceType = "TYPE_WEIGHT"
+    strScript = "function doAction(context, luaAction) \
+                         ConfigInfo = luaAction:getConfigInfo()\
+        ConfigInfo:save()\
+        local intent = luaAction:getIntentFromString('cn.com.smartdevices.bracelet.ui.SettingActivity');\
+        luaAction:putExtra(intent,'REF_DEVICE_TYPE','"..deviceType.."')\
+        context:startActivity(intent)\
+        end"
 
     t = {}
     t.t1 = t1
     t.t2 = t2
     t.stype = stype
-
-    uniqueMsg(listDao,ConfigInfo,t)
-
-    t.t1 = getString('not_binded_hint')
-    t.t2 = getString('not_binded_hint_info')
-    t.stype = TYPE_WELCOME_WITH_SENSORHUB_NOT_BIND
-
-    t.strScript = "function doAction(context, luaAction) \
-        if luaAction:getIsBind() then\
-            return\
-        end\
-        local intent = luaAction:getIntentFromString('cn.com.smartdevices.bracelet.ui.SearchSingleBraceletActivity');\
-        intent:setFlags(0x10008000);\
-        context:startActivity(intent)\
-    end";
+    t.strScript = strScript
 
     uniqueMsg(listDao,ConfigInfo,t)
 end
 
-function welcomeWithSensorHub(listDao, ConfigInfo)
-    lastBinded = ConfigInfo:isLastBinded()
-    binded = ConfigInfo:getIsBind()
-    isNewUser = ConfigInfo:getNewUser()
-    bindedSensorHub = ConfigInfo:isBindSensorHub()
+function welcome(listDao,ConfigInfo)
+    log('----------welcome')
+    weightBinded = ConfigInfo:getWeightBinded()
+    bandBinded   = ConfigInfo:getIsBind()
 
+    if (weightBinded or bandBinded) then
+        clearWelcomeIntro(listDao, ConfigInfo)
 
-    if (isNewUser) then
-        log("is newuser")
-    else
-        log("is not newuser")
-    end
+        if (ConfigInfo:getNewUser()) then
+            log("welcome, is new user")
+            if (bandBinded) then
+                showBindedBand(listDao, ConfigInfo)
+            else
+                clearBindedBand(listDao, ConfigInfo)
+            end
 
-    if (binded) then
-        if (false == isNewUser) then
-            clearWelcome(listDao, ConfigInfo)
-            log('----------after clear welcome')
-            return
-        end
-
-        if (binded ~= lastBinded or
-                (judgeUniqueByDate_Type(listDao,ConfigInfo, TYPE_WELCOME))) then
-            clearWelcome(listDao, ConfigInfo)
-            showBindedWelcome(listDao, ConfigInfo)
-        end
-    else -- binded with sensor hub
-        if (bindedSensorHub) then
-            if (binded ~= lastBinded or
-                    (judgeUniqueByDate_Type(listDao,ConfigInfo, TYPE_WELCOME_WITH_SENSORHUB_NOT_BIND))) then
-                clearWelcome(listDao, ConfigInfo)
-                showNotBindedWithSensorHub(listDao, ConfigInfo)
+            if (weightBinded) then
+                showBindedWeight(listDao, ConfigInfo)
+            else
+                clearBindedWeight(listDao, ConfigInfo)
             end
         else
-            log("\n ============ERROR=========== Band not binded and SensorHub not binded!!!")
+            log("welcome, is not new user")
+            clearBindedBand(listDao, ConfigInfo)
+            clearBindedWeight(listDao, ConfigInfo)
         end
-        clearUnlockHint(listDao,ConfigInfo)
+    else
+        clearBindedBand(listDao, ConfigInfo)
+        clearBindedWeight(listDao, ConfigInfo)
+
+        showWelcomeIntro(listDao, ConfigInfo)
     end
 end
-
-function welcomeNoSensorHub(listDao,ConfigInfo)
-    log("welcomeNoSendorHub")
-    lastBinded = ConfigInfo:isLastBinded()
-    binded = ConfigInfo:getIsBind()
-
-    if (lastBinded == true) then
-        log("last binded true")
-    else
-        log("last binded false")
-    end
-
-    if (binded == true) then
-        log(" binded true")
-    else
-        log(" binded false")
-    end
-
-    if false == ConfigInfo:getIsBind() then
-        unbindHint(listDao,ConfigInfo)
-        clearWelcome(listDao, ConfigInfo)
-    else
-        if (binded ~= lastBinded or
-                (judgeUniqueByDate_Type(listDao,ConfigInfo, TYPE_WELCOME))) then
-            showBindedWelcome(listDao, ConfigInfo)
-        end
-        clearUnbindMsg(listDao,ConfigInfo)
-    end
-
-    if (false == ConfigInfo:getNewUser()) then
-        clearWelcome(listDao, ConfigInfo)
-    end
-end
-
 
 -- 1002
 function newUser(listDao,ConfigInfo)
@@ -696,6 +690,7 @@ function unbindHint(listDao,ConfigInfo)
     t.t2 = ""
     t.stype = "1005"
     t.right="This_is_important"
+    t.json = "{txtColor="..COLOR_ALERT.."}"
 
     t.strScript = "function doAction(context, luaAction) \
         if luaAction:getIsBind() then\
@@ -705,7 +700,7 @@ function unbindHint(listDao,ConfigInfo)
         intent:setFlags(0x10008000);\
         context:startActivity(intent)\
     end";
-    replaceMsgByType(listDao,ConfigInfo,t)
+    uniqueMsg(listDao, ConfigInfo, t)
 end
 
 
@@ -1385,6 +1380,7 @@ function braceletdisconnect(listDao,ConfigInfo)
     t = {}
     t.t1 = getString('bracelet_disconnect')
     t.t2 = ""
+    t.json = "{txtColor="..0xff2222.."}"
     t.index = "5004"
     t.strScript = strScript
     t.stype = "5004"
@@ -1474,7 +1470,12 @@ end
 
 function getDefaultMsgs(listDao, ConfigInfo)
     if ConfigInfo:getShowUnlockInfo() then
-        unlockHint(listDao,ConfigInfo)
+        bandBinded = ConfigInfo:getIsBind()
+        if (bandBinded) then
+            unlockHint(listDao,ConfigInfo)
+        else
+            clearUnlockHint(listDao,ConfigInfo)
+        end
     else
         clearUnlockHint(listDao,ConfigInfo)
     end
@@ -1559,11 +1560,8 @@ function getSysInfoMsgs(listDao,ConfigInfo)
     end
 end
 
-
---default doAction ?? maybe DANGER !
+--default doAction used as a place holder for lua injection
 function doAction(context, luaAction)
---    local intent = luaAction:getIntentFromString("cn.com.smartdevices.bracelet.ui.StatisticActivity")
---    context:startActivity(intent)
     log("default doAction called...")
 end
 
@@ -1573,7 +1571,7 @@ function testAddItem(listDao)
 
     t = {}
     time = os.date("%X",os.time())
-    t.t1 = r.."欢迎使用小米手环test ..." .. time
+    t.t1 = r.."欢迎使用小米运动test ..." .. time
     t.t2 = "点击查看如何玩转小米手环"
     t.stype = "0001"
     t.index = "0001"
@@ -1611,251 +1609,6 @@ end
 function getLuaVersion(Cinfo)
     Cinfo:setLuaVersion(""..__luaVersion);
     log("get lua version:" .. __luaVersion)
-end
-
----======================================
---              GAME AREA
----======================================
-KEY_WEBTYPE = "web_type";
-KEY_WEBURL = "web_url";
-KEY_ACTION_BAR_COLOR = "ActionBarColor";
-KEY_SHOW_SHARE = "ShowShare";
-KEY_EVENT_PAGE_TYPE = "EventPageType";
-WEBTYPE_SYSTEM_BLOG = 2;
-STR_GAME_REGISTER = "game_registered";
-STR_GAME_NOT_REGISTER = "game_not_registered";
-STR_GAME_DEFAULT = "game_default";
-STR_GAME_PLAYING = "game_playing";
-STR_GAME_PLAYING_FAIL = "game_playing_fail";
-STR_GAME_PLAYING_FAILED = "game_playing_failed";
-STR_GAME_BONUS = "game_bonus";
-STR_GAME_CLEAR_BANNER = "game_clear_banner";
-
-KEY_SHARE_CONTENT = "shareToContent"
-
-
-function getDayDif1(y, m, d)
-    date1 = os.date("*t")
-
-    time2 = os.time{year=y, month = m, day = d}
-    log("time 2 = ".. time2)
-    date2 = os.date("*t", time2)
-
-    return (date1.yday - date2.yday)
-end
-
-function getDayDif(timeStamp)
-    timeStamp = timeStamp + 1  -- +1s to fix bug: date.yday is yesterday if cur time is 0:00:00
-
-    date1 = os.date("*t")
-    date2 = os.date("*t", timeStamp)
-
-    day1 = date1.year * 365 + date1.yday;
-    day2 = date2.year * 365 + date2.yday;
-    log("date2 yday = "..day2.." date1 yday="..day1)
-
-    return (day2 - day1)
-end
-
-function getDayDifElapsed(timeStamp)
-    date1 = os.date("*t")
-    date2 = os.date("*t", timeStamp)
-
-    return (date1.yday - date2.yday)
-end
-
-function getTimeStamp(date1)
-    timeStamp = ((date1 - 1970) * 365 + date1.yday) * 24 * 3600 + ((date1.hour * 60) + date1.min) * 60 + date1.sec
-    return timeStamp
-end
-
-function showGameBanner(listDao, ConfigInfo)
-    -- Defaults
-    actionBarColor = COLOR_NORMAL_BLUE
-    listTxtColor = COLOR_NORMAL_BLUE
-    sharePageType = 0
-    shareContent = getString("share_to_content_for_event")
-
-    t = {}
-    t.t1 = getString("game_register")
-    t.t2 = getString("game_not_register_info")
-
-    title_str = ConfigInfo:getTitle();
-
-    if (title_str == STR_GAME_CLEAR_BANNER) then
-        clearRecord(listDao, ConfigInfo:getLuaAction(), ConfigInfo:getType())
-        return
-    end
-
-    if title_str == STR_GAME_REGISTER then
-        actionBarColor = COLOR_REGISTER
-        sharePageType = 1
-
-        daydif = 1
-        if (ConfigInfo:getTimeStamp() > 0) then
-            daydif = getDayDif(ConfigInfo:getTimeStamp())
-        end
-
-        if (daydif == 0) then
-            daydif = getString("less_than_one")
-        end
-        t.t1 = getString("game_register")
-        t.t2 = string.format(getString("game_register_info"), daydif)
-
-        shareContent = string.format(getString("game_share_to_registered"), daydif)
-
-    elseif title_str == STR_GAME_NOT_REGISTER then
-        actionBarColor = COLOR_REGISTER
-        sharePageType = 1
-
-        t.t1 = getString("game_register")
-        t.t2 = getString("game_not_register_info")
-        shareContent = getString("share_to_content_for_event")
-
-    elseif title_str == STR_GAME_PLAYING then
-        t.t2 = getString("click_to_show_result")
-
-        steps = ConfigInfo:getRecordStep()
-        startTime = ConfigInfo:getTimeStamp()
-        stopTime = ConfigInfo:getTimeStamp1()
-        bonusOpenTime = ConfigInfo:getTimeStamp2()
-        log("Game playing steps = "..steps.." starttime="..startTime)
-        goal = ConfigInfo:getGoal();
-        if (getDayDif(stopTime) == 0) then
-            if (steps >= goal) then
-                t.t1 = getString("game_playing_lastday_done")
-                if (bonusOpenTime ~= nil) then
-                    log("bonus open time =" .. bonusOpenTime)
-                    t.t2 = string.format(getString("game_playing_bonus_info"), os.date("%m", bonusOpenTime), os.date("%d", bonusOpenTime))
-                end
-                actionBarColor = COLOR_REACH_GOAL
-                listTxtColor =  COLOR_REACH_GOAL
-                shareContent = getString("game_share_to_finished")
-            else
-                t.t1 = getString("game_playing_lastday")
-                shareContent = getString("game_share_to_not_finished")
-            end
-        else
-            if (steps >= goal) then
-                t.t1 = string.format(getString("game_playing_done"), getDayDifElapsed(startTime) + 1)
-                actionBarColor = COLOR_REACH_GOAL
-                listTxtColor =  COLOR_REACH_GOAL
-                shareContent = getString("game_share_to_finished")
-            else
-                t.t1 = string.format(getString("game_playing"), getDayDifElapsed(startTime) + 1)
-                shareContent = getString("game_share_to_not_finished")
-            end
-        end
-
-    elseif title_str == STR_GAME_PLAYING_FAIL then
-        actionBarColor = COLOR_REACH_FAIL
-        listTxtColor =  COLOR_REACH_FAIL_APP
-        t.right = "";
-        timeStamp = ConfigInfo:getTimeStamp()
-        if (getDayDif(timeStamp) == -1) then
-            t.t1 = getString("game_fail_title_ytd")
-        else
-            t.t1 = string.format(getString("game_fail_title"), os.date("%m", timeStamp), os.date("%d", timeStamp))
-        end
-        t.t2 = getString("game_fail_info")
-        shareContent = getString("game_share_to_failed")
-
-    elseif title_str == STR_GAME_PLAYING_FAILED then
-        actionBarColor = COLOR_REACH_FAIL
-        listTxtColor =  COLOR_REACH_FAIL_APP
-        t.right = "";
-        t.t1 = getString("game_failed_title")
-        t.t2 = getString("game_fail_info")
-        shareContent = getString("game_share_to_failed")
-
-    elseif title_str == STR_GAME_BONUS then
-        bonusTime = ConfigInfo:getTimeStamp()
-        serverTime = ConfigInfo:getServerTimeStamp()
-        actionBarColor = COLOR_BONUS
-        totalSteps = ConfigInfo:getRecordStep();
-
-        continueReachGoal = ConfigInfo:getIsBind()
-        if (continueReachGoal) then
-            listTxtColor =  COLOR_REACH_GOAL
-            shareContent = string.format(getString("game_share_to_success"), totalSteps)
-        else
-            actionBarColor = COLOR_REACH_FAIL
-            listTxtColor =  COLOR_REACH_FAIL_APP
-            shareContent = getString("game_share_to_failed")
-        end
-
-        if (serverTime >= bonusTime) then
-            if (ConfigInfo:getBonus() > 0) then
-                t.t1 = getString("game_bonus_hit")
-                t.t2 = getString("game_bonus_hit_info")
-                shareContent = getString("game_share_to_hit_bonus")
-            else
-                t.t1 = getString("game_bonus_miss")
-                t.t2 = getString("game_bonus_miss_info")
-
-                if (continueReachGoal) then
-                    shareContent = getString("game_share_to_not_hit_bonus")
-                else
-                    shareContent = getString("game_share_to_failed")
-                end
-            end
-        else -- Before bonus open
-            if (getDayDif(bonusTime) == 1) then
-                t.t1 = getString("game_bonus_open_tomorrow")
-                t.t2 = getString("game_not_register_info")
-            elseif (getDayDif(bonusTime) == 0) then
-                t.t1 = getString("game_bonus_open_today")
-                t.t2 = getString("game_not_register_info")
-            else
-                t.t1 = string.format(getString("game_bonus_open"), os.date("%m", bonusTime), os.date("%d", bonusTime))
-            end
-        end
-    end
-
-    url = ConfigInfo:getUrl();
-    t.stype = ConfigInfo:getType();
-    t.right = ConfigInfo:getRight();
-
-    if (t.stype == nil) then
-        t.stype = ""
-    end
-    if (t.right == nil) then
-        t.right = ""
-    end
-    if (url == nil) then
-        url = ""
-    end
-
-    ---Uniform action bar color to RED
-    actionBarColor = COLOR_REGISTER
-    shareContent = shareContent .. " http://bbs.xiaomi.cn/thread-10683448-1-1.html"
-
-    t.json = "{txtColor="..listTxtColor.."}"
-
-    log("showGameBanner type =" .. title_str .. ", Title="..t.t1.."    "..t.t2..", type="..t.stype..", right="..t.right..",url=".. url)
-    log("shareContent =" .. shareContent)
-
-    t.strScript = "function doAction(context, luaAction) \
-        local intent = luaAction:getIntentFromString('cn.com.smartdevices.bracelet.activity.WebActivity');\
-        luaAction:putExtra(intent,'"..KEY_WEBTYPE.."',"..WEBTYPE_SYSTEM_BLOG..")\
-        luaAction:putExtra(intent,'"..KEY_WEBURL.."','"..url.."')\
-        luaAction:putExtra(intent,'"..KEY_SHOW_SHARE.."',1)\
-        luaAction:putExtra(intent,'"..KEY_EVENT_PAGE_TYPE.."',"..sharePageType..")\
-        luaAction:putExtra(intent,'"..KEY_ACTION_BAR_COLOR.."',"..actionBarColor..")\
-        luaAction:putExtra(intent,'"..KEY_SHARE_CONTENT.."','"..shareContent.."')\
-        context:startActivity(intent)\
-    end";
-
-    replaceMsgByType(listDao,ConfigInfo,t)
-    end
-
-function getGameInfo(Cinfo)
-    log("getGameInfo locale = "..getCurLocale())
-    if (getCurLocale() == zh_CN) then
-        Cinfo:setGameInfo("NewGame");
-    else
-        Cinfo:setGameInfo("NewGame_Only_in_Chinese_Mainland");
-    end
 end
 
 function getLabFactoryActivityMsgs(listDao, activityItem)
@@ -1914,35 +1667,4 @@ function setLocale(locale)
 
     log("Set locale to : "..locale..", lua version = "..__luaVersion)
     log("Test locale "..'ok'..'='..getString('ok'));
-end
-
------====================== Mi Push ==============================----
-function showLuaItem(listDao, configInfo, luaItem)
-    log("============= showLuaItem =============")
-    t = {}
-    t.t1 = luaItem:getT1();
-    t.t2 = luaItem:getT2();
-    t.stype = luaItem:getStype();
-    t.strScript = luaItem:getScript();
-    t.json = luaItem:getStyleJson();
-    t.right = luaItem:getRight();
-    expiredStamp = luaItem:getExpire();
-
-    log('expire = '..expiredStamp)
-    if (expiredStamp ~= 0) then
-
-        daydif = 0;
-        if (expiredStamp > 0) then
-            daydif = getDayDif(expiredStamp)
-        end
-
-        if (daydif <= 0) then
-            delMsgByType(listDao, configInfo, t.stype)
-        else
-            replaceMsgByType(listDao, configInfo, t)
-        end
-    else
-        replaceMsgByType(listDao, configInfo, t)
-    end
-
 end

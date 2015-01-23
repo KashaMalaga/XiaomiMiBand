@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_horizontal" android:id="@id/fl_camera" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="12.5sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/watermark_logo" android:background="@drawable/watermark_logo_bg" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:layout_marginRight="3.0dip" android:text="@string/share_to_title" android:layout_alignParentRight="true" />
+    <RelativeLayout android:id="@id/rl_drag_line_area" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:gravity="center_vertical" android:id="@id/rl_drag_line" android:paddingRight="@dimen/watermark_line_thumbnail_padding_r" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="91.0dip">
+            <ImageView android:id="@id/watermark_line_icon" android:layout_width="@dimen/watermark_line_thumbnail_size" android:layout_height="@dimen/watermark_line_thumbnail_size" android:layout_marginLeft="@dimen/watermark_line_thumbnail_padding_l" android:layout_marginRight="@dimen/watermark_line_thumbnail_padding_r" android:layout_centerVertical="true" />
+            <RelativeLayout android:gravity="center" android:orientation="vertical" android:id="@id/rl_watermark_1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toRightOf="@id/watermark_line_icon">
+                <RelativeLayout android:id="@id/km_rl" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:textSize="39.799988sp" android:textColor="@android:color/white" android:ellipsize="marquee" android:gravity="bottom" android:id="@id/tv_km_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/watermark_line_km_margin_r" android:text="00.00" android:singleLine="true" android:layout_centerVertical="true" android:fontFamily="miui-bold" />
+                    <TextView android:textSize="16.5dip" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/tv_km_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="KM" android:singleLine="true" android:layout_toRightOf="@id/tv_km_value" android:layout_alignBaseline="@id/tv_km_value" />
+                </RelativeLayout>
+                <View android:id="@id/line1" android:background="#ffd5d5d5" android:layout_width="@dimen/watermark_line_w" android:layout_height="0.20000005dip" android:layout_below="@id/km_rl" android:layout_alignParentLeft="true" android:layout_centerHorizontal="true" />
+                <LinearLayout android:gravity="center" android:id="@id/rl_watermark_2" android:layout_width="wrap_content" android:layout_height="27.0dip" android:layout_below="@id/line1" android:layout_centerHorizontal="true">
+                    <ImageView android:id="@id/iv_watermark_local" android:background="@drawable/watermark_location" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/watermark_line_locogo_pr" />
+                    <TextView android:textSize="13.0sp" android:textColor="@android:color/white" android:ellipsize="marquee" android:id="@id/tv_location" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/watermark_search_location" android:singleLine="true" />
+                </LinearLayout>
+                <View android:id="@id/line2" android:background="#ffd5d5d5" android:layout_width="@dimen/watermark_line_w" android:layout_height="0.20000005dip" android:layout_below="@id/rl_watermark_2" android:layout_alignParentLeft="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

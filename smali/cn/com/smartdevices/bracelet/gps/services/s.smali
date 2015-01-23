@@ -1,61 +1,30 @@
-.class final Lcn/com/smartdevices/bracelet/gps/services/s;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lcn/com/smartdevices/bracelet/gps/services/a/c;
+.class Lcn/com/smartdevices/bracelet/gps/services/S;
+.super Ljava/util/TimerTask;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/services/p;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/services/P;
 
 
 # direct methods
-.method private constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/p;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/P;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/services/s;->a:Lcn/com/smartdevices/bracelet/gps/services/p;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/services/S;->a:Lcn/com/smartdevices/bracelet/gps/services/P;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/p;Lcn/com/smartdevices/bracelet/gps/services/q;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/gps/services/s;-><init>(Lcn/com/smartdevices/bracelet/gps/services/p;)V
+    invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(I)V
-    .locals 0
+.method public run()V
+    .locals 1
 
-    return-void
-.end method
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/S;->a:Lcn/com/smartdevices/bracelet/gps/services/P;
 
-.method public a(Lcn/com/smartdevices/bracelet/gps/model/b;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public a(Ljava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public a(Ljava/lang/String;ILandroid/os/Bundle;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public b(Ljava/lang/String;)V
-    .locals 0
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/P;->c(Lcn/com/smartdevices/bracelet/gps/services/P;)V
 
     return-void
 .end method

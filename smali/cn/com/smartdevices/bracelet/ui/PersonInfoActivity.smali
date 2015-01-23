@@ -26,7 +26,7 @@
 
     move-result-object v0
 
-    const-class v1, Lcn/com/smartdevices/bracelet/ui/bD;
+    const-class v1, Lcn/com/smartdevices/bracelet/ui/bT;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -36,7 +36,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/bD;
+    check-cast v0, Lcn/com/smartdevices/bracelet/ui/bT;
 
     const-string v1, "PersonInfoActivity"
 
@@ -58,11 +58,11 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/bD;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-virtual {v0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/bT;->onActivityResult(IILandroid/content/Intent;)V
 
     :cond_0
     return-void
@@ -83,11 +83,11 @@
 
     const v1, 0x1020002
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/ui/bD;->b()Landroid/app/Fragment;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/ui/bT;->b()Landroid/app/Fragment;
 
     move-result-object v2
 
-    const-class v3, Lcn/com/smartdevices/bracelet/ui/bD;
+    const-class v3, Lcn/com/smartdevices/bracelet/ui/bT;
 
     invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -105,7 +105,7 @@
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onPause()V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/A;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -115,7 +115,7 @@
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onResume()V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;)V
 
     return-void
 .end method

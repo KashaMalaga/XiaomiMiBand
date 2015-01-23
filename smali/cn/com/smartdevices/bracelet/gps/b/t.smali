@@ -1,95 +1,46 @@
-.class public Lcn/com/smartdevices/bracelet/gps/b/t;
+.class public interface abstract Lcn/com/smartdevices/bracelet/gps/b/t;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Ljava/io/Serializable;
 
-
-# static fields
-.field private static final serialVersionUID:J = 0x1L
-
-
-# instance fields
-.field public a:I
-
-.field public b:Z
-
-.field public c:Z
-
-.field public d:Z
-
-.field public e:I
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->a:I
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->e:I
-
-    return-void
+# virtual methods
+.method public abstract a()I
 .end method
 
-.method public constructor <init>(Z)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->a:I
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->e:I
-
-    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->b:Z
-
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->c:Z
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->e:I
-
-    return-void
+.method public abstract a(I)V
 .end method
 
-.method public constructor <init>(ZI)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->a:I
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->e:I
-
-    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->b:Z
-
-    iput p2, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->e:I
-
-    return-void
+.method public abstract a(Ljava/util/List;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lcn/com/smartdevices/bracelet/gps/model/c;",
+            ">;)V"
+        }
+    .end annotation
 .end method
 
-.method public constructor <init>(ZZ)V
-    .locals 1
+.method public abstract a(Z)V
+.end method
 
-    const/4 v0, 0x0
+.method public abstract b()I
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract b(I)V
+.end method
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->a:I
+.method public abstract c()Z
+.end method
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->e:I
-
-    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->b:Z
-
-    iput-boolean p2, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->c:Z
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/t;->e:I
-
-    return-void
+.method public abstract d()Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcn/com/smartdevices/bracelet/gps/model/c;",
+            ">;"
+        }
+    .end annotation
 .end method

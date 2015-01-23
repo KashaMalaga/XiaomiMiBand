@@ -18,6 +18,7 @@
                 <View android:layout_gravity="bottom" android:id="@id/chart_date_line_bg" android:background="#fff2f2f2" android:layout_width="fill_parent" android:layout_height="28.0dip" />
                 <cn.com.smartdevices.bracelet.chart.StatisticChartView android:id="@id/statistic_chart" android:layout_width="fill_parent" android:layout_height="fill_parent" />
                 <cn.com.smartdevices.bracelet.chart.StatisticChartView android:id="@id/next_statistic_chart" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <cn.com.smartdevices.bracelet.weight.family.UserInfoImgWithName android:id="@id/user_picker" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="15.0dip" />
             </FrameLayout>
             <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
                 <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="160.0dip">
@@ -31,6 +32,9 @@
                         <include android:layout_gravity="center" android:id="@id/info_step_weekly_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/fragment_statistic_info_weekly_monthly_step" />
                         <include android:layout_gravity="center" android:id="@id/info_step_monthly_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/fragment_statistic_info_weekly_monthly_step" />
                     </FrameLayout>
+                </FrameLayout>
+                <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="160.0dip">
+                    <include android:layout_gravity="center" android:id="@id/info_weight_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/fragment_statistic_info_weight" />
                 </FrameLayout>
             </FrameLayout>
         </LinearLayout>

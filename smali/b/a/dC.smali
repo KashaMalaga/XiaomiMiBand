@@ -41,7 +41,7 @@
 .method private a(Ljava/lang/Throwable;)V
     .locals 2
 
-    sget-boolean v0, Lcom/f/a/a;->m:Z
+    sget-boolean v0, Lcom/h/a/a;->m:Z
 
     if-eqz v0, :cond_0
 

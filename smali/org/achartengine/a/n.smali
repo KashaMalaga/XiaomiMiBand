@@ -45,7 +45,7 @@
 .end method
 
 .method public a(D)Z
-    .locals 11
+    .locals 10
 
     const/4 v0, 0x1
 
@@ -53,17 +53,17 @@
 
     iget v1, p0, Lorg/achartengine/a/n;->a:F
 
-    float-to-double v2, v1
+    float-to-double v1, v1
 
-    cmpl-double v1, p1, v2
+    cmpl-double v1, p1, v1
 
     if-ltz v1, :cond_1
 
     iget v1, p0, Lorg/achartengine/a/n;->b:F
 
-    float-to-double v2, v1
+    float-to-double v1, v1
 
-    cmpg-double v1, p1, v2
+    cmpg-double v1, p1, v1
 
     if-gtz v1, :cond_1
 
@@ -72,33 +72,33 @@
     return v0
 
     :cond_1
-    rem-double v6, p1, v8
+    rem-double v5, p1, v8
 
     iget v1, p0, Lorg/achartengine/a/n;->a:F
 
-    float-to-double v4, v1
+    float-to-double v3, v1
 
     iget v1, p0, Lorg/achartengine/a/n;->b:F
 
-    float-to-double v2, v1
+    float-to-double v1, v1
 
     :goto_1
-    cmpl-double v1, v2, v8
+    cmpl-double v7, v1, v8
 
-    if-lez v1, :cond_2
+    if-lez v7, :cond_2
 
-    sub-double/2addr v4, v8
+    sub-double/2addr v3, v8
 
-    sub-double/2addr v2, v8
+    sub-double/2addr v1, v8
 
     goto :goto_1
 
     :cond_2
-    cmpl-double v1, v6, v4
+    cmpl-double v3, v5, v3
 
-    if-ltz v1, :cond_3
+    if-ltz v3, :cond_3
 
-    cmpg-double v1, v6, v2
+    cmpg-double v1, v5, v1
 
     if-lez v1, :cond_0
 

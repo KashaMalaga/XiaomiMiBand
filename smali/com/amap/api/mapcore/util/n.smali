@@ -104,7 +104,7 @@
 .end method
 
 .method public static a(Ljava/io/File;)J
-    .locals 4
+    .locals 5
 
     invoke-static {}, Lcom/amap/api/mapcore/util/w;->b()Z
 
@@ -132,15 +132,15 @@
 
     move-result v1
 
-    int-to-long v2, v1
+    int-to-long v1, v1
 
     invoke-virtual {v0}, Landroid/os/StatFs;->getAvailableBlocks()I
 
     move-result v0
 
-    int-to-long v0, v0
+    int-to-long v3, v0
 
-    mul-long/2addr v0, v2
+    mul-long v0, v1, v3
 
     goto :goto_0
 .end method

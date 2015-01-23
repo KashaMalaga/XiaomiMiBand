@@ -65,7 +65,7 @@
 .end method
 
 .method public declared-synchronized a(D)V
-    .locals 3
+    .locals 2
 
     monitor-enter p0
 
@@ -139,7 +139,7 @@
 .end method
 
 .method public declared-synchronized a(ILjava/lang/String;D)V
-    .locals 3
+    .locals 2
 
     monitor-enter p0
 

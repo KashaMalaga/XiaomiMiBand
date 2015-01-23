@@ -129,7 +129,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -227,7 +227,7 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 6
+    .locals 5
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/BraceletApp;->a()Landroid/content/Context;
 
@@ -237,7 +237,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0c0024
+    const v1, 0x7f070025
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -265,9 +265,9 @@
 
     invoke-virtual {v0}, Ljava/util/Calendar;->getTimeInMillis()J
 
-    move-result-wide v4
+    move-result-wide v3
 
-    invoke-direct {v2, v4, v5}, Ljava/util/Date;-><init>(J)V
+    invoke-direct {v2, v3, v4}, Ljava/util/Date;-><init>(J)V
 
     invoke-virtual {v1, v2}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 

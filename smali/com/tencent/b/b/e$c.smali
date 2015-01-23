@@ -79,9 +79,9 @@
 .end method
 
 .method public final onLocationChanged(Landroid/location/Location;)V
-    .locals 10
+    .locals 9
 
-    const-wide v8, 0x3e45798ee2308c3aL
+    const-wide v7, 0x3e45798ee2308c3aL
 
     const/4 v0, 0x0
 
@@ -89,23 +89,23 @@
 
     invoke-virtual {p1}, Landroid/location/Location;->getLatitude()D
 
-    move-result-wide v2
+    move-result-wide v1
 
     invoke-virtual {p1}, Landroid/location/Location;->getLongitude()D
 
-    move-result-wide v4
+    move-result-wide v3
 
-    const-wide v6, 0x403dffffe2000000L
+    const-wide v5, 0x403dffffe2000000L
 
-    cmpl-double v1, v2, v6
+    cmpl-double v5, v1, v5
 
-    if-eqz v1, :cond_0
+    if-eqz v5, :cond_0
 
-    const-wide v6, 0x4059fffffc800000L
+    const-wide v5, 0x4059fffffc800000L
 
-    cmpl-double v1, v4, v6
+    cmpl-double v5, v3, v5
 
-    if-nez v1, :cond_2
+    if-nez v5, :cond_2
 
     :cond_0
     :goto_0
@@ -116,43 +116,43 @@
     return-void
 
     :cond_2
-    invoke-static {v2, v3}, Ljava/lang/Math;->abs(D)D
+    invoke-static {v1, v2}, Ljava/lang/Math;->abs(D)D
 
-    move-result-wide v6
+    move-result-wide v5
 
-    cmpg-double v1, v6, v8
+    cmpg-double v5, v5, v7
 
-    if-ltz v1, :cond_0
+    if-ltz v5, :cond_0
 
-    invoke-static {v4, v5}, Ljava/lang/Math;->abs(D)D
+    invoke-static {v3, v4}, Ljava/lang/Math;->abs(D)D
 
-    move-result-wide v6
+    move-result-wide v5
 
-    cmpg-double v1, v6, v8
+    cmpg-double v5, v5, v7
 
-    if-ltz v1, :cond_0
+    if-ltz v5, :cond_0
 
-    const-wide v6, -0x3fa9800000000000L
+    const-wide v5, -0x3fa9800000000000L
 
-    cmpg-double v1, v2, v6
+    cmpg-double v5, v1, v5
 
-    if-ltz v1, :cond_0
+    if-ltz v5, :cond_0
 
-    const-wide v6, 0x4056800000000000L
+    const-wide v5, 0x4056800000000000L
 
-    cmpl-double v1, v2, v6
+    cmpl-double v1, v1, v5
 
     if-gtz v1, :cond_0
 
-    const-wide v2, -0x3f99800000000000L
+    const-wide v1, -0x3f99800000000000L
 
-    cmpg-double v1, v4, v2
+    cmpg-double v1, v3, v1
 
     if-ltz v1, :cond_0
 
-    const-wide v2, 0x4066800000000000L
+    const-wide v1, 0x4066800000000000L
 
-    cmpl-double v1, v4, v2
+    cmpl-double v1, v3, v1
 
     if-gtz v1, :cond_0
 
@@ -165,9 +165,9 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/b/b/e;->a(Lcom/tencent/b/b/e;J)J
+    invoke-static {v0, v1, v2}, Lcom/tencent/b/b/e;->a(Lcom/tencent/b/b/e;J)J
 
     iget-object v0, p0, Lcom/tencent/b/b/e$c;->a:Lcom/tencent/b/b/e;
 

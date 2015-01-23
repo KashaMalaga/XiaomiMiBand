@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/dlg_empty_area_btn" android:visibility="gone" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include android:id="@id/title_back_container" layout="@layout/title_back" />
+    <RelativeLayout android:background="#fff4f5f5" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/title_back_container">
+        <EditText android:id="@id/label_input" android:background="@drawable/lab_sport_edittext_bg_selector" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="@dimen/running_list_margin_left" android:layout_marginTop="32.0dip" android:layout_marginRight="@dimen/running_list_margin_right" android:hint="@string/sport_running_label_hint" android:singleLine="true" />
+        <TextView android:textSize="13.299988sp" android:textColor="#ff5b5b5b" android:gravity="center" android:id="@id/confirm" android:background="@drawable/click_btn_bg_lab_state_operation" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="@dimen/running_list_margin_left" android:layout_marginTop="40.0dip" android:layout_marginRight="@dimen/running_list_margin_right" android:layout_marginBottom="35.299988dip" android:text="@string/confirm" android:layout_alignParentBottom="true" />
+        <TextView android:textSize="13.299988sp" android:textColor="#ff5b5b5b" android:gravity="center_vertical" android:id="@id/hot_title" android:background="@color/running_progress_bg" android:paddingLeft="@dimen/running_list_margin_left" android:paddingRight="@dimen/running_list_margin_right" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="20.0dip" android:text="@string/sport_running_label_hint" />
+        <ListView android:id="@id/hot_list" android:background="@color/main_ui_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:cacheColorHint="#ff2f2f2f" android:divider="@null" android:dividerHeight="0.0dip" />
+    </RelativeLayout>
+</RelativeLayout>

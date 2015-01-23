@@ -6,7 +6,7 @@
 
 
 # instance fields
-.field a:Lcom/a/X;
+.field a:Lcom/b/X;
 
 .field b:Z
 
@@ -33,7 +33,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lcom/amap/api/location/c;->a:Lcom/a/X;
+    iput-object v0, p0, Lcom/amap/api/location/c;->a:Lcom/b/X;
 
     iput-boolean v2, p0, Lcom/amap/api/location/c;->c:Z
 
@@ -51,21 +51,21 @@
 
     iput-object p1, p0, Lcom/amap/api/location/c;->e:Landroid/content/Context;
 
-    new-instance v0, Lcom/a/a;
+    new-instance v0, Lcom/b/a;
 
-    invoke-direct {v0}, Lcom/a/a;-><init>()V
+    invoke-direct {v0}, Lcom/b/a;-><init>()V
 
-    iput-object v0, p0, Lcom/amap/api/location/c;->a:Lcom/a/X;
+    iput-object v0, p0, Lcom/amap/api/location/c;->a:Lcom/b/X;
 
     invoke-static {p1}, Lcom/amap/api/location/core/c;->a(Landroid/content/Context;)Lcom/amap/api/location/core/c;
 
-    iget-object v0, p0, Lcom/amap/api/location/c;->a:Lcom/a/X;
+    iget-object v0, p0, Lcom/amap/api/location/c;->a:Lcom/b/X;
 
     iget-object v1, p3, Lcom/amap/api/location/a;->a:Lcom/amap/api/location/d;
 
-    invoke-interface {v0, p1, v1}, Lcom/a/X;->a(Landroid/content/Context;Lcom/amap/api/location/d;)V
+    invoke-interface {v0, p1, v1}, Lcom/b/X;->a(Landroid/content/Context;Lcom/amap/api/location/d;)V
 
-    iget-object v0, p0, Lcom/amap/api/location/c;->a:Lcom/a/X;
+    iget-object v0, p0, Lcom/amap/api/location/c;->a:Lcom/b/X;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -103,7 +103,7 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/a/X;->a(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/b/X;->a(Ljava/lang/String;)V
 
     new-instance v1, Lorg/json/JSONObject;
 
@@ -155,7 +155,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/a/E;->a([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/b/E;->a([B)Ljava/lang/String;
 
     move-result-object v0
 
@@ -179,9 +179,9 @@
     .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_1
 
     :goto_1
-    iget-object v0, p0, Lcom/amap/api/location/c;->a:Lcom/a/X;
+    iget-object v0, p0, Lcom/amap/api/location/c;->a:Lcom/b/X;
 
-    invoke-interface {v0, v1}, Lcom/a/X;->a(Lorg/json/JSONObject;)V
+    invoke-interface {v0, v1}, Lcom/b/X;->a(Lorg/json/JSONObject;)V
 
     iput-object p2, p0, Lcom/amap/api/location/c;->g:Lcom/amap/api/location/a$a;
 
@@ -205,7 +205,7 @@
     goto :goto_1
 .end method
 
-.method private a(Lcom/a/K;)Lcom/amap/api/location/AMapLocation;
+.method private a(Lcom/b/K;)Lcom/amap/api/location/AMapLocation;
     .locals 4
 
     new-instance v0, Lcom/amap/api/location/AMapLocation;
@@ -218,43 +218,43 @@
 
     invoke-virtual {v0, v1}, Lcom/amap/api/location/AMapLocation;->setProvider(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/a/K;->e()D
+    invoke-virtual {p1}, Lcom/b/K;->e()D
 
-    move-result-wide v2
+    move-result-wide v1
 
-    invoke-virtual {v0, v2, v3}, Lcom/amap/api/location/AMapLocation;->setLatitude(D)V
+    invoke-virtual {v0, v1, v2}, Lcom/amap/api/location/AMapLocation;->setLatitude(D)V
 
-    invoke-virtual {p1}, Lcom/a/K;->d()D
+    invoke-virtual {p1}, Lcom/b/K;->d()D
 
-    move-result-wide v2
+    move-result-wide v1
 
-    invoke-virtual {v0, v2, v3}, Lcom/amap/api/location/AMapLocation;->setLongitude(D)V
+    invoke-virtual {v0, v1, v2}, Lcom/amap/api/location/AMapLocation;->setLongitude(D)V
 
-    invoke-virtual {p1}, Lcom/a/K;->f()F
+    invoke-virtual {p1}, Lcom/b/K;->f()F
 
     move-result v1
 
     invoke-virtual {v0, v1}, Lcom/amap/api/location/AMapLocation;->setAccuracy(F)V
 
-    invoke-virtual {p1}, Lcom/a/K;->g()J
+    invoke-virtual {p1}, Lcom/b/K;->g()J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    invoke-virtual {v0, v2, v3}, Lcom/amap/api/location/AMapLocation;->setTime(J)V
+    invoke-virtual {v0, v1, v2}, Lcom/amap/api/location/AMapLocation;->setTime(J)V
 
-    invoke-virtual {p1}, Lcom/a/K;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/b/K;->b()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/amap/api/location/AMapLocation;->setPoiId(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/a/K;->c()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/b/K;->c()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/amap/api/location/AMapLocation;->setFloor(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/a/K;->a()Lcom/amap/api/location/core/AMapLocException;
+    invoke-virtual {p1}, Lcom/b/K;->a()Lcom/amap/api/location/core/AMapLocException;
 
     move-result-object v1
 
@@ -266,7 +266,7 @@
 
     const-string v2, "citycode"
 
-    invoke-virtual {p1}, Lcom/a/K;->j()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/b/K;->j()Ljava/lang/String;
 
     move-result-object v3
 
@@ -274,7 +274,7 @@
 
     const-string v2, "desc"
 
-    invoke-virtual {p1}, Lcom/a/K;->k()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/b/K;->k()Ljava/lang/String;
 
     move-result-object v3
 
@@ -282,7 +282,7 @@
 
     const-string v2, "adcode"
 
-    invoke-virtual {p1}, Lcom/a/K;->l()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/b/K;->l()Ljava/lang/String;
 
     move-result-object v3
 
@@ -290,15 +290,15 @@
 
     invoke-virtual {v0, v1}, Lcom/amap/api/location/AMapLocation;->setExtras(Landroid/os/Bundle;)V
 
-    invoke-virtual {p1}, Lcom/a/K;->j()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/b/K;->j()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcom/a/K;->k()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/b/K;->k()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {p1}, Lcom/a/K;->l()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/b/K;->l()Ljava/lang/String;
 
     move-result-object v3
 
@@ -510,18 +510,18 @@
     goto :goto_0
 .end method
 
-.method private b()Lcom/a/K;
+.method private b()Lcom/b/K;
     .locals 3
 
-    invoke-direct {p0}, Lcom/amap/api/location/c;->c()Lcom/a/K;
+    invoke-direct {p0}, Lcom/amap/api/location/c;->c()Lcom/b/K;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lcom/a/K;
+    new-instance v0, Lcom/b/K;
 
-    invoke-direct {v0}, Lcom/a/K;-><init>()V
+    invoke-direct {v0}, Lcom/b/K;-><init>()V
 
     new-instance v1, Lcom/amap/api/location/core/AMapLocException;
 
@@ -529,7 +529,7 @@
 
     invoke-direct {v1, v2}, Lcom/amap/api/location/core/AMapLocException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/a/K;->a(Lcom/amap/api/location/core/AMapLocException;)V
+    invoke-virtual {v0, v1}, Lcom/b/K;->a(Lcom/amap/api/location/core/AMapLocException;)V
 
     const/4 v1, 0x0
 
@@ -539,7 +539,7 @@
     return-object v0
 .end method
 
-.method private c()Lcom/a/K;
+.method private c()Lcom/b/K;
     .locals 4
 
     const/4 v2, 0x0
@@ -547,13 +547,13 @@
     const/4 v1, 0x0
 
     :try_start_0
-    iget-object v0, p0, Lcom/amap/api/location/c;->a:Lcom/a/X;
+    iget-object v0, p0, Lcom/amap/api/location/c;->a:Lcom/b/X;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/amap/api/location/c;->a:Lcom/a/X;
+    iget-object v0, p0, Lcom/amap/api/location/c;->a:Lcom/b/X;
 
-    invoke-interface {v0}, Lcom/a/X;->a()Lcom/a/K;
+    invoke-interface {v0}, Lcom/b/X;->a()Lcom/b/K;
     :try_end_0
     .catch Lcom/amap/api/location/core/AMapLocException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
@@ -586,11 +586,11 @@
 
     move-object v1, v0
 
-    new-instance v0, Lcom/a/K;
+    new-instance v0, Lcom/b/K;
 
-    invoke-direct {v0}, Lcom/a/K;-><init>()V
+    invoke-direct {v0}, Lcom/b/K;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcom/a/K;->a(Lcom/amap/api/location/core/AMapLocException;)V
+    invoke-virtual {v0, v1}, Lcom/b/K;->a(Lcom/amap/api/location/core/AMapLocException;)V
 
     iput-boolean v2, p0, Lcom/amap/api/location/c;->b:Z
 
@@ -624,27 +624,27 @@
 .end method
 
 .method private d()Z
-    .locals 8
+    .locals 7
 
     const/4 v0, 0x0
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    iget-object v1, p0, Lcom/amap/api/location/c;->h:Lcom/amap/api/location/a;
+    iget-object v3, p0, Lcom/amap/api/location/c;->h:Lcom/amap/api/location/a;
 
-    iget-wide v4, v1, Lcom/amap/api/location/a;->d:J
+    iget-wide v3, v3, Lcom/amap/api/location/a;->d:J
 
-    sub-long/2addr v2, v4
+    sub-long/2addr v1, v3
 
-    const-wide/16 v4, 0x5
+    const-wide/16 v3, 0x5
 
-    iget-wide v6, p0, Lcom/amap/api/location/c;->f:J
+    iget-wide v5, p0, Lcom/amap/api/location/c;->f:J
 
-    mul-long/2addr v4, v6
+    mul-long/2addr v3, v5
 
-    cmp-long v1, v2, v4
+    cmp-long v1, v1, v3
 
     if-lez v1, :cond_0
 
@@ -676,19 +676,19 @@
     invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
 
     :cond_0
-    iget-object v0, p0, Lcom/amap/api/location/c;->a:Lcom/a/X;
+    iget-object v0, p0, Lcom/amap/api/location/c;->a:Lcom/b/X;
 
-    invoke-interface {v0}, Lcom/a/X;->b()V
+    invoke-interface {v0}, Lcom/b/X;->b()V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/amap/api/location/c;->a:Lcom/a/X;
+    iput-object v0, p0, Lcom/amap/api/location/c;->a:Lcom/b/X;
 
     return-void
 .end method
 
 .method a(J)V
-    .locals 3
+    .locals 2
 
     iget-wide v0, p0, Lcom/amap/api/location/c;->f:J
 
@@ -705,19 +705,19 @@
 .method a(Landroid/app/PendingIntent;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/amap/api/location/c;->a:Lcom/a/X;
+    iget-object v0, p0, Lcom/amap/api/location/c;->a:Lcom/b/X;
 
-    invoke-interface {v0, p1}, Lcom/a/X;->a(Landroid/app/PendingIntent;)V
+    invoke-interface {v0, p1}, Lcom/b/X;->a(Landroid/app/PendingIntent;)V
 
     return-void
 .end method
 
-.method a(Lcom/a/W;Landroid/app/PendingIntent;)V
+.method a(Lcom/b/W;Landroid/app/PendingIntent;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/amap/api/location/c;->a:Lcom/a/X;
+    iget-object v0, p0, Lcom/amap/api/location/c;->a:Lcom/b/X;
 
-    invoke-interface {v0, p1, p2}, Lcom/a/X;->a(Lcom/a/W;Landroid/app/PendingIntent;)V
+    invoke-interface {v0, p1, p2}, Lcom/b/X;->a(Lcom/b/W;Landroid/app/PendingIntent;)V
 
     return-void
 .end method
@@ -725,19 +725,19 @@
 .method b(Landroid/app/PendingIntent;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/amap/api/location/c;->a:Lcom/a/X;
+    iget-object v0, p0, Lcom/amap/api/location/c;->a:Lcom/b/X;
 
-    invoke-interface {v0, p1}, Lcom/a/X;->b(Landroid/app/PendingIntent;)V
+    invoke-interface {v0, p1}, Lcom/b/X;->b(Landroid/app/PendingIntent;)V
 
     return-void
 .end method
 
-.method b(Lcom/a/W;Landroid/app/PendingIntent;)V
+.method b(Lcom/b/W;Landroid/app/PendingIntent;)V
     .locals 1
 
-    iget-object v0, p0, Lcom/amap/api/location/c;->a:Lcom/a/X;
+    iget-object v0, p0, Lcom/amap/api/location/c;->a:Lcom/b/X;
 
-    invoke-interface {v0, p1, p2}, Lcom/a/X;->b(Lcom/a/W;Landroid/app/PendingIntent;)V
+    invoke-interface {v0, p1, p2}, Lcom/b/X;->b(Lcom/b/W;Landroid/app/PendingIntent;)V
 
     return-void
 .end method
@@ -889,13 +889,13 @@
 
     :cond_6
     :try_start_5
-    invoke-direct {p0}, Lcom/amap/api/location/c;->b()Lcom/a/K;
+    invoke-direct {p0}, Lcom/amap/api/location/c;->b()Lcom/b/K;
 
     move-result-object v0
 
     if-eqz v0, :cond_18
 
-    invoke-direct {p0, v0}, Lcom/amap/api/location/c;->a(Lcom/a/K;)Lcom/amap/api/location/AMapLocation;
+    invoke-direct {p0, v0}, Lcom/amap/api/location/c;->a(Lcom/b/K;)Lcom/amap/api/location/AMapLocation;
     :try_end_5
     .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_1
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
@@ -1036,9 +1036,9 @@
     goto/16 :goto_0
 
     :cond_d
-    const-wide/16 v2, 0x7530
+    const-wide/16 v1, 0x7530
 
-    invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
+    invoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V
     :try_end_a
     .catch Ljava/lang/Throwable; {:try_start_a .. :try_end_a} :catch_0
 
@@ -1113,9 +1113,9 @@
 
     if-eqz v1, :cond_d
 
-    iget-wide v2, p0, Lcom/amap/api/location/c;->f:J
+    iget-wide v1, p0, Lcom/amap/api/location/c;->f:J
 
-    invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
+    invoke-static {v1, v2}, Ljava/lang/Thread;->sleep(J)V
 
     goto :goto_3
 

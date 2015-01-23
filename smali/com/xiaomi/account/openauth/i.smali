@@ -35,7 +35,7 @@
 
 # direct methods
 .method constructor <init>(Lcom/xiaomi/account/openauth/h;Landroid/app/Activity;JLjava/lang/String;Ljava/lang/String;Landroid/os/Bundle;I)V
-    .locals 1
+    .locals 0
 
     iput-object p1, p0, Lcom/xiaomi/account/openauth/i;->a:Lcom/xiaomi/account/openauth/h;
 

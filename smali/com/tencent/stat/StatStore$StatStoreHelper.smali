@@ -62,44 +62,44 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
 
-    move-result-object v0
+    move-result-object v6
 
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
     :goto_0
-    invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
+    invoke-interface {v6}, Landroid/database/Cursor;->moveToNext()Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_0
 
-    invoke-interface {v0, v8}, Landroid/database/Cursor;->getLong(I)J
+    invoke-interface {v6, v8}, Landroid/database/Cursor;->getLong(I)J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    invoke-interface {v0, v9}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    invoke-interface {v6, v9}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v3
 
-    const/4 v1, 0x2
+    const/4 v0, 0x2
 
-    invoke-interface {v0, v1}, Landroid/database/Cursor;->getInt(I)I
+    invoke-interface {v6, v0}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v4
+
+    const/4 v0, 0x3
+
+    invoke-interface {v6, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v5
 
-    const/4 v1, 0x3
+    new-instance v0, Lcom/tencent/stat/StatStore$StoredEvent;
 
-    invoke-interface {v0, v1}, Landroid/database/Cursor;->getInt(I)I
+    invoke-direct/range {v0 .. v5}, Lcom/tencent/stat/StatStore$StoredEvent;-><init>(JLjava/lang/String;II)V
 
-    move-result v6
-
-    new-instance v1, Lcom/tencent/stat/StatStore$StoredEvent;
-
-    invoke-direct/range {v1 .. v6}, Lcom/tencent/stat/StatStore$StoredEvent;-><init>(JLjava/lang/String;II)V
-
-    invoke-interface {v7, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v7, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 

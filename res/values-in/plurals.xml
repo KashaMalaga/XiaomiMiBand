@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="numberOfPullUpdateReport">
+        <item quantity="other">Diperbarui %s item</item>
+        <item quantity="one">Diperbarui %s item</item>
+    </plurals>
+</resources>

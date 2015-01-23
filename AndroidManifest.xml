@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.xiaomi.hm.health" platformBuildVersionCode="19" platformBuildVersionName="4.4.2-1456859">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.xiaomi.hm.health" platformBuildVersionCode="21" platformBuildVersionName="APKTOOL">
     <original-package android:name="cn.com.smartdevices.bracelet"/>
     <uses-permission android:name="android.permission.REORDER_TASKS"/>
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
@@ -24,10 +24,16 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
     <permission android:name="com.xiaomi.hm.health.permission.MIPUSH_RECEIVE" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="com.xiaomi.hm.health.permission.CONFIG" android:protectionLevel="signatureOrSystem"/>
     <uses-permission android:name="com.xiaomi.hm.health.permission.MIPUSH_RECEIVE"/>
     <uses-permission android:name="miui.permission.READ_STEPS"/>
     <uses-permission android:name="com.xiaomi.market.sdk.UPDATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+    <uses-feature android:name="android.hardware.camera.front" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
     <application android:allowBackup="true" android:icon="@drawable/app_icon" android:label="@string/app_name" android:logo="@drawable/app_icon" android:name="cn.com.smartdevices.bracelet.BraceletApp" android:theme="@style/AppTheme">
         <activity android:exported="true" android:label="@string/app_name" android:launchMode="singleTop" android:name="com.hm.cheneehealth.wxapi.WXEntryActivity"/>
         <activity android:launchMode="singleTask" android:name="com.tencent.tauth.AuthActivity" android:noHistory="true">
@@ -39,7 +45,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.tencent.connect.common.AssistActivity" android:screenOrientation="portrait"/>
-        <activity android:label="@string/app_name" android:name="cn.com.smartdevices.bracelet.activity.MainActivity" android:screenOrientation="portrait" android:theme="@style/MainActivityStyle">
+        <activity android:label="@string/app_name" android:name="cn.com.smartdevices.bracelet.activity.MainActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -55,10 +61,10 @@
         <activity android:name="cn.com.smartdevices.bracelet.activity.LoginActivity" android:screenOrientation="portrait"/>
         <activity android:name="cn.com.smartdevices.bracelet.ui.SearchSingleBraceletActivity" android:screenOrientation="portrait"/>
         <activity android:name="com.xiaomi.account.openauth.AuthorizeActivity" android:screenOrientation="portrait"/>
-        <activity android:name="cn.com.smartdevices.bracelet.activity.BraceletNotFoundActivity" android:screenOrientation="portrait"/>
+        <activity android:name="cn.com.smartdevices.bracelet.activity.DeviceNotFoundActivity" android:screenOrientation="portrait"/>
         <activity android:name="cn.com.smartdevices.bracelet.activity.SystemLowActivity" android:screenOrientation="portrait"/>
         <activity android:name="cn.com.smartdevices.bracelet.activity.SystemNotSupportActivity" android:screenOrientation="portrait"/>
-        <activity android:name="cn.com.smartdevices.bracelet.activity.MultiBraceletErrActivity" android:screenOrientation="portrait"/>
+        <activity android:name="cn.com.smartdevices.bracelet.activity.MultiDevicesErrActivity" android:screenOrientation="portrait"/>
         <activity android:name="cn.com.smartdevices.bracelet.ui.HelpActivity" android:screenOrientation="portrait"/>
         <activity android:name="cn.com.smartdevices.bracelet.ui.InstructionActivity" android:screenOrientation="portrait"/>
         <activity android:name="cn.com.smartdevices.bracelet.ui.FwUpgradeFailedActivity" android:screenOrientation="portrait"/>
@@ -88,6 +94,7 @@
             </intent-filter>
         </activity>
         <activity android:name="org.achartengine.GraphicalActivity" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"/>
+        <activity android:name="cn.com.smartdevices.bracelet.ui.SettingInComingCallActivity" android:screenOrientation="portrait"/>
         <service android:name="com.xiaomi.hm.bleservice.BLEService"/>
         <service android:name="cn.com.smartdevices.bracelet.lab.sync.SyncSportDataService"/>
         <service android:name="cn.com.smartdevices.bracelet.upgrade.UpgradeService"/>
@@ -115,7 +122,6 @@
         <activity android:name="cn.com.smartdevices.bracelet.ui.BindWeixinActivity" android:screenOrientation="portrait"/>
         <activity android:name="cn.com.smartdevices.bracelet.ui.BindWeixinActivityNew" android:screenOrientation="portrait"/>
         <activity android:name="cn.com.smartdevices.bracelet.ui.BindQQHealthActivity" android:screenOrientation="portrait"/>
-        <activity android:name="cn.com.smartdevices.bracelet.ui.BindDevicesActivity" android:screenOrientation="portrait"/>
         <receiver android:name="cn.com.smartdevices.bracelet.PhoneStateReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.PHONE_STATE"/>
@@ -135,7 +141,9 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+        <activity android:launchMode="singleTop" android:name="cn.com.smartdevices.bracelet.partner.PartnerListActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
         <activity android:name="cn.com.smartdevices.bracelet.lab.ui.LabFactoryReminderActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
+        <activity android:name="cn.com.smartdevices.bracelet.lab.ui.LabFactoryConnectedAdvActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
         <activity android:name="cn.com.smartdevices.bracelet.lab.ui.SportFavoriteVoteGridActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
         <activity android:configChanges="keyboardHidden|orientation" android:name="cn.com.smartdevices.bracelet.lab.ui.LabFactoryTestActivity" android:screenOrientation="portrait">
             <intent-filter>
@@ -150,18 +158,34 @@
             </intent-filter>
         </activity>
         <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:launchMode="singleTop" android:name="cn.com.smartdevices.bracelet.lab.ui.SportVoteOthersActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible|adjustResize"/>
-        <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:launchMode="singleTop" android:name="cn.com.smartdevices.bracelet.gps.ui.GPSMainActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTop" android:name="cn.com.smartdevices.bracelet.gps.ui.GPSMainActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="hm.xiaomi.com" android:pathPrefix="/run" android:scheme="app"/>
+            </intent-filter>
+        </activity>
         <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:launchMode="singleTop" android:name="cn.com.smartdevices.bracelet.gps.ui.HistoryActivity" android:screenOrientation="portrait"/>
         <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:launchMode="singleTop" android:name="cn.com.smartdevices.bracelet.gps.ui.GPSResultActivity" android:screenOrientation="portrait"/>
         <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:name="cn.com.smartdevices.bracelet.gps.ui.GaodeTestActivity" android:screenOrientation="portrait"/>
-        <activity android:configChanges="keyboardHidden|orientation" android:label="@string/title_activity_open" android:name="cn.com.smartdevices.bracelet.open.OpenActivity" android:screenOrientation="portrait"/>
-        <activity android:configChanges="keyboardHidden|orientation" android:label="@string/title_activity_open" android:name="cn.com.smartdevices.bracelet.config.DebugActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="cn.com.smartdevices.bracelet.gps.ui.GalleryPickerActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="cn.com.smartdevices.bracelet.gps.ui.WatermarkActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:name="cn.com.smartdevices.bracelet.gps.ui.WatermarkShareActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:label="@string/title_activity_open" android:name="cn.com.smartdevices.bracelet.partner.WebActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:label="@string/title_health_link_service" android:name="cn.com.smartdevices.bracelet.partner.HealthLinkActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:exported="false" android:launchMode="singleTop" android:name="cn.com.smartdevices.bracelet.gps.ui.LabelInputActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible|adjustResize"/>
         <service android:enabled="true" android:name="com.baidu.location.f" android:process=":remote"/>
         <meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="dMGlsmpHOollXfGZ8jKfMpjQ"/>
         <meta-data android:name="com.amap.api.v2.apikey" android:value="c0795b73d5df927742aac5b9a41ec327"/>
         <meta-data android:name="UMENG_APPKEY" android:value="53eb6765fd98c559b700389d"/>
         <meta-data android:name="UMENG_CHANNEL" android:value="Normal"/>
+        <meta-data android:name="hm_channel" android:value="Normal"/>
+        <meta-data android:name="AA_DB_NAME" android:value="mihealth.db"/>
+        <meta-data android:name="AA_DB_VERSION" android:value="1"/>
+        <meta-data android:name="AA_MODELS" android:value="cn.com.smartdevices.bracelet.weight.WeightInfo,             cn.com.smartdevices.bracelet.weight.UserInfo"/>
         <provider android:authorities="cn.com.smartdevices.bracelet" android:exported="true" android:name="cn.com.smartdevices.bracelet.db.BraceletProvider"/>
+        <provider android:authorities="cn.com.smartdevices.bracelet.config" android:exported="true" android:name="cn.com.smartdevices.bracelet.config.ConfigProvider" android:permission="com.xiaomi.hm.health.permission.CONFIG"/>
         <service android:enabled="true" android:name="com.xiaomi.push.service.XMPushService" android:process=":pushservice"/>
         <service android:enabled="true" android:exported="true" android:name="com.xiaomi.mipush.sdk.PushMessageHandler"/>
         <service android:enabled="true" android:name="com.xiaomi.mipush.sdk.MessageHandleService"/>
@@ -184,6 +208,30 @@
                 <action android:name="com.xiaomi.mipush.ERROR"/>
             </intent-filter>
         </receiver>
+        <activity android:name="cn.com.smartdevices.ble.WeightTestAcitvity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
+        <activity android:name="cn.com.smartdevices.bracelet.ui.SearchWeightScaleActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
+        <activity android:name="cn.com.smartdevices.bracelet.weight.family.WeightFamilyMemberActivity" android:screenOrientation="portrait"/>
+        <activity android:name="cn.com.smartdevices.bracelet.weight.family.UserInfoActivity" android:screenOrientation="portrait"/>
+        <activity android:name="cn.com.smartdevices.bracelet.weight.family.MemberInfoSetGenderActivity" android:screenOrientation="portrait"/>
+        <activity android:name="cn.com.smartdevices.bracelet.weight.family.MemberInfoSetBirthActivity" android:screenOrientation="portrait"/>
+        <activity android:name="cn.com.smartdevices.bracelet.weight.family.MemberInfoSetHeightActivity" android:screenOrientation="portrait"/>
+        <activity android:name="cn.com.smartdevices.bracelet.weight.family.MemberInfoSetWeightActivity" android:screenOrientation="portrait"/>
+        <activity android:name="cn.com.smartdevices.bracelet.weight.family.MemberInfoSetNameActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="cn.com.smartdevices.bracelet.weight.WeightReportActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
+        <activity android:name="cn.com.smartdevices.bracelet.weight.WeightGoalSetActivity" android:screenOrientation="portrait"/>
+        <receiver android:exported="false" android:name="cn.com.smartdevices.bracelet.lab.sync.WifiConnectionReceiver">
+            <intent-filter>
+                <action android:name="android.net.wifi.STATE_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="cn.com.smartdevices.bracelet.weight.family.WeightChooseUserActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_weight_tips" android:name="cn.com.smartdevices.bracelet.weight.WeightTipsActivity" android:screenOrientation="portrait" android:theme="@style/WeightSelectTheme"/>
+        <activity android:name="cn.com.smartdevices.bracelet.weight.family.WeightSelectUserActivity" android:screenOrientation="portrait" android:theme="@style/WeightSelectTheme"/>
+        <activity android:label="@string/title_activity_mark" android:name="cn.com.smartdevices.bracelet.tag.TagActivity" android:parentActivityName="cn.com.smartdevices.bracelet.ui.SystemBarTintActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_tag_data" android:name="cn.com.smartdevices.bracelet.tag.TagDataActivity" android:screenOrientation="portrait"/>
+        <activity android:name="cn.com.smartdevices.bracelet.ui.SelectDevicesActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_tag_history" android:name="cn.com.smartdevices.bracelet.tag.TagHistoryActivity"/>
+        <activity android:name="cn.com.smartdevices.bracelet.ui.WeightReportShareActivity" android:screenOrientation="portrait"/>
         <activity android:label="" android:name="cn.com.smartdevices.bracelet.ExtendActivity"/>
         <activity android:label="" android:name="cn.com.smartdevices.bracelet.SettingAppActivity"/>
         <provider android:authorities="cn.com.smartdevices.bracelet.extend.AppsSettingProvider" android:exported="true" android:name="cn.com.smartdevices.bracelet.extend.AppsSettingProvider"/>
@@ -192,5 +240,5 @@
                 <action android:name="android.service.notification.NotificationListenerService"/>
             </intent-filter>
         </service>
-        </application>
+    </application>
 </manifest>

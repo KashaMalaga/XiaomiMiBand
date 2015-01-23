@@ -228,9 +228,9 @@
 
     invoke-virtual {p1}, Lb/a/df;->x()J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    iput-wide v2, p2, Lb/a/G;->d:J
+    iput-wide v1, p2, Lb/a/G;->d:J
 
     invoke-virtual {p2, v6}, Lb/a/G;->d(Z)V
 

@@ -23,7 +23,7 @@
             "()",
             "Ljava/util/List",
             "<",
-            "Lcom/xiaomi/b/a/a/a/c;",
+            "Lcom/xiaomi/c/a/a/a/c;",
             ">;"
         }
     .end annotation

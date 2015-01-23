@@ -58,11 +58,9 @@
 
     invoke-direct {v0, p0, p2, p3, p1}, Lcom/xiaomi/a/a/a/l;-><init>(Lcom/xiaomi/a/a/a/k;Landroid/accounts/Account;Landroid/os/Bundle;Landroid/content/Context;)V
 
-    new-instance v1, Landroid/content/Intent;
+    invoke-static {}, Lcom/xiaomi/a/a/a/c;->b()Landroid/content/Intent;
 
-    const-string v2, "android.intent.action.XIAOMI_ACCOUNT_AUTHORIZE"
-
-    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    move-result-object v1
 
     const/4 v2, 0x1
 

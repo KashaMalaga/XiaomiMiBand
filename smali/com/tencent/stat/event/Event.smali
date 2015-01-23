@@ -60,7 +60,7 @@
 
 # virtual methods
 .method public encode(Lorg/json/JSONObject;)Z
-    .locals 4
+    .locals 3
 
     :try_start_0
     const-string v0, "ky"
@@ -109,9 +109,9 @@
 
     const-string v0, "ts"
 
-    iget-wide v2, p0, Lcom/tencent/stat/event/Event;->timestamp:J
+    iget-wide v1, p0, Lcom/tencent/stat/event/Event;->timestamp:J
 
-    invoke-virtual {p1, v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-virtual {p1, v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
     invoke-virtual {p0, p1}, Lcom/tencent/stat/event/Event;->onEncode(Lorg/json/JSONObject;)Z
     :try_end_0

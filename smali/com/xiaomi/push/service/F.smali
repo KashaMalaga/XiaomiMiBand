@@ -179,7 +179,7 @@
 
     const-string v2, ","
 
-    invoke-static {v0, v2}, Lcom/xiaomi/channel/a/e/c;->a(Ljava/util/Collection;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2}, Lcom/xiaomi/b/a/e/c;->a(Ljava/util/Collection;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -244,7 +244,7 @@
 
     const-string v2, ","
 
-    invoke-static {v0, v2}, Lcom/xiaomi/channel/a/e/c;->a(Ljava/util/Collection;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2}, Lcom/xiaomi/b/a/e/c;->a(Ljava/util/Collection;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

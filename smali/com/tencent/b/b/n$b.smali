@@ -76,15 +76,15 @@
 .end method
 
 .method private a([BLjava/lang/String;)Ljava/lang/String;
-    .locals 4
+    .locals 3
 
     iget-object v0, p0, Lcom/tencent/b/b/n$b;->d:Lcom/tencent/b/b/n;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/b/b/n;->a(Lcom/tencent/b/b/n;J)J
+    invoke-static {v0, v1, v2}, Lcom/tencent/b/b/n;->a(Lcom/tencent/b/b/n;J)J
 
     new-instance v0, Ljava/lang/StringBuffer;
 
@@ -227,10 +227,10 @@
 
     if-gt v0, v3, :cond_2
 
-    const-wide/16 v4, 0x3e8
+    const-wide/16 v3, 0x3e8
 
     :try_start_2
-    invoke-static {v4, v5}, Lcom/tencent/b/b/n$b;->sleep(J)V
+    invoke-static {v3, v4}, Lcom/tencent/b/b/n$b;->sleep(J)V
 
     iget-object v3, p0, Lcom/tencent/b/b/n$b;->a:Ljava/lang/String;
 

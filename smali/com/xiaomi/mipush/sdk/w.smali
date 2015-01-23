@@ -74,7 +74,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/d/a;->d(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/xiaomi/b/a/d/a;->d(Landroid/content/Context;)Z
 
     move-result v0
 

@@ -63,7 +63,7 @@
 
     :cond_0
     :goto_0
-    invoke-static {p1}, Lcom/xiaomi/channel/a/d/a;->d(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/xiaomi/b/a/d/a;->d(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -91,7 +91,7 @@
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 .end method

@@ -1,0 +1,315 @@
+.class public Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;
+.super Landroid/widget/RelativeLayout;
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# annotations
+.annotation build Landroid/annotation/SuppressLint;
+    value = {
+        "NewApi"
+    }
+.end annotation
+
+
+# static fields
+.field private static final a:Ljava/lang/String;
+
+
+# instance fields
+.field private b:Landroid/widget/ImageButton;
+
+.field private c:Landroid/widget/TextView;
+
+.field private d:Lcn/com/smartdevices/bracelet/weight/UserInfo;
+
+.field private e:Lcn/com/smartdevices/bracelet/weight/family/f;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    const-class v0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x0
+
+    invoke-direct {p0, p1, v0, v1}, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, p2, v0}, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    .locals 3
+
+    invoke-direct {p0, p1, p2}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object v0
+
+    const v1, 0x7f0300b2
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object v1
+
+    const v0, 0x7f08032f
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageButton;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->b:Landroid/widget/ImageButton;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->b:Landroid/widget/ImageButton;
+
+    invoke-virtual {v0, p0}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    const v0, 0x7f080331
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->c:Landroid/widget/TextView;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(I)V
+    .locals 2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->b:Landroid/widget/ImageButton;
+
+    new-instance v1, Landroid/widget/RelativeLayout$LayoutParams;
+
+    invoke-direct {v1, p1, p1}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+.end method
+
+.method public a(Lcn/com/smartdevices/bracelet/weight/UserInfo;)V
+    .locals 3
+
+    if-eqz p1, :cond_0
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->a:Ljava/lang/String;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "bindUser "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/weight/UserInfo;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->d:Lcn/com/smartdevices/bracelet/weight/UserInfo;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->d:Lcn/com/smartdevices/bracelet/weight/UserInfo;
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->b(Lcn/com/smartdevices/bracelet/weight/UserInfo;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->d:Lcn/com/smartdevices/bracelet/weight/UserInfo;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/weight/UserInfo;->name:Ljava/lang/String;
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->a(Ljava/lang/String;)V
+
+    :goto_0
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->b:Landroid/widget/ImageButton;
+
+    const v1, 0x7f02006f
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setBackgroundResource(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->c:Landroid/widget/TextView;
+
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    goto :goto_0
+.end method
+
+.method public a(Lcn/com/smartdevices/bracelet/weight/family/f;)V
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->e:Lcn/com/smartdevices/bracelet/weight/family/f;
+
+    return-void
+.end method
+
+.method public a(Ljava/lang/String;)V
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->c:Landroid/widget/TextView;
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public a(Z)V
+    .locals 2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->c:Landroid/widget/TextView;
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+
+    if-eqz p1, :cond_0
+
+    const v0, 0x7f080332
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->c:Landroid/widget/TextView;
+
+    :goto_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->c:Landroid/widget/TextView;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+
+    return-void
+
+    :cond_0
+    const v0, 0x7f080331
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->c:Landroid/widget/TextView;
+
+    goto :goto_0
+.end method
+
+.method public b(Lcn/com/smartdevices/bracelet/weight/UserInfo;)V
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->b:Landroid/widget/ImageButton;
+
+    invoke-static {p1, v0}, Lcn/com/smartdevices/bracelet/B;->a(Lcn/com/smartdevices/bracelet/weight/UserInfo;Landroid/widget/ImageView;)V
+
+    return-void
+.end method
+
+.method public b(Z)V
+    .locals 2
+
+    const v0, 0x7f080330
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    if-eqz p1, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
+
+    return-void
+
+    :cond_0
+    const/16 v0, 0x8
+
+    goto :goto_0
+.end method
+
+.method public onClick(Landroid/view/View;)V
+    .locals 2
+
+    invoke-virtual {p1}, Landroid/view/View;->getId()I
+
+    move-result v0
+
+    packed-switch v0, :pswitch_data_0
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->e:Lcn/com/smartdevices/bracelet/weight/family/f;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->e:Lcn/com/smartdevices/bracelet/weight/family/f;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoImgWithName;->d:Lcn/com/smartdevices/bracelet/weight/UserInfo;
+
+    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/weight/family/f;->a(Lcn/com/smartdevices/bracelet/weight/UserInfo;)V
+
+    goto :goto_0
+
+    :pswitch_data_0
+    .packed-switch 0x7f08032f
+        :pswitch_0
+    .end packed-switch
+.end method

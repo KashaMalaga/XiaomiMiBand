@@ -50,7 +50,7 @@
 .end method
 
 .method private b()I
-    .locals 8
+    .locals 7
 
     const/16 v0, 0x28
 
@@ -92,11 +92,11 @@
     goto :goto_0
 
     :cond_2
-    iget-wide v4, p0, Lcom/xiaomi/push/service/ab;->c:J
+    iget-wide v3, p0, Lcom/xiaomi/push/service/ab;->c:J
 
-    const-wide/16 v6, 0x0
+    const-wide/16 v5, 0x0
 
-    cmp-long v3, v4, v6
+    cmp-long v3, v3, v5
 
     if-nez v3, :cond_3
 
@@ -107,17 +107,17 @@
     :cond_3
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v4
+    move-result-wide v3
 
-    iget-wide v6, p0, Lcom/xiaomi/push/service/ab;->c:J
+    iget-wide v5, p0, Lcom/xiaomi/push/service/ab;->c:J
 
-    sub-long/2addr v4, v6
+    sub-long/2addr v3, v5
 
-    const-wide/32 v6, 0x493e0
+    const-wide/32 v5, 0x493e0
 
-    cmp-long v3, v4, v6
+    cmp-long v5, v3, v5
 
-    if-gez v3, :cond_5
+    if-gez v5, :cond_5
 
     iget v0, p0, Lcom/xiaomi/push/service/ab;->b:I
 
@@ -134,24 +134,24 @@
 
     iget v1, p0, Lcom/xiaomi/push/service/ab;->b:I
 
-    int-to-double v2, v1
+    int-to-double v1, v1
 
-    const-wide/high16 v4, 0x3ff8000000000000L
+    const-wide/high16 v3, 0x3ff8000000000000L
 
-    mul-double/2addr v2, v4
+    mul-double/2addr v1, v3
 
-    double-to-int v1, v2
+    double-to-int v1, v1
 
     iput v1, p0, Lcom/xiaomi/push/service/ab;->b:I
 
     goto :goto_0
 
     :cond_5
-    const-wide/32 v6, 0xdbba0
+    const-wide/32 v5, 0xdbba0
 
-    cmp-long v3, v4, v6
+    cmp-long v5, v3, v5
 
-    if-gez v3, :cond_7
+    if-gez v5, :cond_7
 
     iget v1, p0, Lcom/xiaomi/push/service/ab;->b:I
 
@@ -167,9 +167,9 @@
     goto :goto_0
 
     :cond_7
-    const-wide/32 v6, 0x1b7740
+    const-wide/32 v5, 0x1b7740
 
-    cmp-long v0, v4, v6
+    cmp-long v0, v3, v5
 
     if-gez v0, :cond_9
 
@@ -224,7 +224,7 @@
 .end method
 
 .method public a(Z)V
-    .locals 6
+    .locals 5
 
     const/4 v1, 0x1
 
@@ -301,7 +301,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/xiaomi/b/a/b/c;->a(Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/xiaomi/push/service/ab;->a:Lcom/xiaomi/push/service/XMPushService;
 
@@ -315,9 +315,9 @@
 
     mul-int/lit16 v0, v0, 0x3e8
 
-    int-to-long v4, v0
+    int-to-long v3, v0
 
-    invoke-virtual {v1, v2, v4, v5}, Lcom/xiaomi/push/service/XMPushService;->a(Lcom/xiaomi/push/service/e;J)V
+    invoke-virtual {v1, v2, v3, v4}, Lcom/xiaomi/push/service/XMPushService;->a(Lcom/xiaomi/push/service/e;J)V
 
     iget v0, p0, Lcom/xiaomi/push/service/ab;->d:I
 
@@ -330,7 +330,7 @@
     :cond_2
     const-string v0, "should not reconnect as no client or network."
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->b(Ljava/lang/String;)V
 
     goto :goto_0
 .end method

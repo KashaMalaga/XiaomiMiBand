@@ -2,18 +2,30 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/handmark/pulltorefresh/library/PullToRefreshBase$OnRefreshListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lcom/handmark/pulltorefresh/library/PullToRefreshBase$OnRefreshListener",
+        "<",
+        "Landroid/widget/ExpandableListView;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/A;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/A;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/C;->a:Lcn/com/smartdevices/bracelet/gps/ui/A;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/C;->a:Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,26 +34,23 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 3
+.method public onRefresh(Lcom/handmark/pulltorefresh/library/PullToRefreshBase;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/handmark/pulltorefresh/library/PullToRefreshBase",
+            "<",
+            "Landroid/widget/ExpandableListView;",
+            ">;)V"
+        }
+    .end annotation
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/gps/d/c;->a()Landroid/content/Intent;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/C;->a:Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;
 
-    move-result-object v0
+    const/4 v1, 0x1
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/C;->a:Lcn/com/smartdevices/bracelet/gps/ui/A;
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/ui/A;->getActivity()Landroid/app/Activity;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/C;->a:Lcn/com/smartdevices/bracelet/gps/ui/A;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/ui/A;->dismiss()V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->b(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;Z)Z
 
     return-void
 .end method

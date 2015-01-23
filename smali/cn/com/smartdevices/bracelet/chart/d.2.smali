@@ -34,14 +34,14 @@
 
     const/high16 v3, 0x3f800000
 
-    iget-object v5, p0, Lcn/com/smartdevices/bracelet/chart/d;->r:Ljava/util/List;
+    iget-object v5, p0, Lcn/com/smartdevices/bracelet/chart/d;->s:Ljava/util/List;
 
     monitor-enter v5
 
     const v6, 0x3f19999a
 
     :try_start_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/d;->r:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/d;->s:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -74,7 +74,7 @@
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/d;->r:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/d;->s:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 

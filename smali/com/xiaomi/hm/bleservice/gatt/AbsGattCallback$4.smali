@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$4;->this$0:Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->disconnectInternal()V
+    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->GattCB_onConnected()V
 
     return-void
 .end method

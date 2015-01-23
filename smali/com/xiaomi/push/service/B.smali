@@ -48,7 +48,7 @@
 .end method
 
 .method static synthetic a(Lcom/xiaomi/push/service/B;J)J
-    .locals 1
+    .locals 0
 
     iput-wide p1, p0, Lcom/xiaomi/push/service/B;->a:J
 
@@ -149,7 +149,7 @@
     :cond_0
     const-string v0, "the job is pended, the controller is not ready."
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->a(Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/xiaomi/push/service/B;->d:Ljava/util/List;
 
@@ -268,7 +268,7 @@
 
     const-string v1, "executing the pending job."
 
-    invoke-static {v1}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/xiaomi/b/a/b/c;->a(Ljava/lang/String;)V
 
     iget-object v1, v0, Landroid/util/Pair;->first:Ljava/lang/Object;
 

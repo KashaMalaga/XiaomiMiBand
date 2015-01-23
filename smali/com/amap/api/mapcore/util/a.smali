@@ -98,7 +98,7 @@
 .end method
 
 .method protected b(Landroid/view/MotionEvent;)V
-    .locals 6
+    .locals 5
 
     iget-object v0, p0, Lcom/amap/api/mapcore/util/a;->c:Landroid/view/MotionEvent;
 
@@ -131,15 +131,15 @@
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
 
-    move-result-wide v2
+    move-result-wide v1
 
     invoke-virtual {v0}, Landroid/view/MotionEvent;->getEventTime()J
 
-    move-result-wide v4
+    move-result-wide v3
 
-    sub-long/2addr v2, v4
+    sub-long/2addr v1, v3
 
-    iput-wide v2, p0, Lcom/amap/api/mapcore/util/a;->g:J
+    iput-wide v1, p0, Lcom/amap/api/mapcore/util/a;->g:J
 
     invoke-virtual {p0, p1}, Lcom/amap/api/mapcore/util/a;->c(Landroid/view/MotionEvent;)I
 

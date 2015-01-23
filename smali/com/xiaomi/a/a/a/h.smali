@@ -54,13 +54,6 @@
     goto :goto_0
 
     :pswitch_2
-    new-instance v0, Lcom/xiaomi/a/a/a/n;
-
-    invoke-direct {v0}, Lcom/xiaomi/a/a/a/n;-><init>()V
-
-    goto :goto_0
-
-    :pswitch_3
     new-instance v0, Lcom/xiaomi/a/a/a/k;
 
     invoke-direct {v0}, Lcom/xiaomi/a/a/a/k;-><init>()V
@@ -74,7 +67,6 @@
         :pswitch_0
         :pswitch_1
         :pswitch_2
-        :pswitch_3
     .end packed-switch
 .end method
 
@@ -108,21 +100,21 @@
 
     aput v2, v0, v1
     :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_2
 
     :goto_1
     :try_start_1
-    sget-object v1, Lcom/xiaomi/a/a/a/i;->d:Lcom/xiaomi/a/a/a/i;
+    sget-object v1, Lcom/xiaomi/a/a/a/i;->c:Lcom/xiaomi/a/a/a/i;
 
     invoke-virtual {v1}, Lcom/xiaomi/a/a/a/i;->ordinal()I
 
     move-result v1
 
-    const/4 v2, 0x4
+    const/4 v2, 0x3
 
     aput v2, v0, v1
     :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
     :goto_2
     :try_start_2
@@ -136,23 +128,9 @@
 
     aput v2, v0, v1
     :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_0
 
     :goto_3
-    :try_start_3
-    sget-object v1, Lcom/xiaomi/a/a/a/i;->c:Lcom/xiaomi/a/a/a/i;
-
-    invoke-virtual {v1}, Lcom/xiaomi/a/a/a/i;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_0
-
-    :goto_4
     sput-object v0, Lcom/xiaomi/a/a/a/h;->a:[I
 
     goto :goto_0
@@ -160,19 +138,14 @@
     :catch_0
     move-exception v1
 
-    goto :goto_4
+    goto :goto_3
 
     :catch_1
     move-exception v1
 
-    goto :goto_3
-
-    :catch_2
-    move-exception v1
-
     goto :goto_2
 
-    :catch_3
+    :catch_2
     move-exception v1
 
     goto :goto_1

@@ -3,8 +3,5 @@
 
 
 # virtual methods
-.method public abstract a(Lkankan/wheel/widget/WheelView;)V
-.end method
-
-.method public abstract b(Lkankan/wheel/widget/WheelView;)V
+.method public abstract a(Lkankan/wheel/widget/WheelView;I)V
 .end method

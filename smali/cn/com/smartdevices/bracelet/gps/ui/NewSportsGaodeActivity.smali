@@ -39,7 +39,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -51,11 +51,11 @@
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030071
+    const v0, 0x7f030092
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/NewSportsGaodeActivity;->setContentView(I)V
 
-    const v0, 0x7f0b00b9
+    const v0, 0x7f0800dd
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/NewSportsGaodeActivity;->findViewById(I)Landroid/view/View;
 
@@ -71,7 +71,7 @@
 
     new-instance v0, Lcn/com/smartdevices/bracelet/gps/b/a;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/gps/b/u;
+    new-instance v1, Lcn/com/smartdevices/bracelet/gps/b/v;
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/NewSportsGaodeActivity;->b:Lcom/amap/api/maps/MapView;
 
@@ -79,9 +79,9 @@
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Lcn/com/smartdevices/bracelet/gps/b/u;-><init>(Lcom/amap/api/maps/AMap;)V
+    invoke-direct {v1, v2}, Lcn/com/smartdevices/bracelet/gps/b/v;-><init>(Lcom/amap/api/maps/AMap;)V
 
-    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/gps/b/a;-><init>(Landroid/content/Context;Lcn/com/smartdevices/bracelet/gps/b/u;)V
+    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/gps/b/a;-><init>(Landroid/content/Context;Lcn/com/smartdevices/bracelet/gps/b/v;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/NewSportsGaodeActivity;->a:Lcn/com/smartdevices/bracelet/gps/b/a;
 
@@ -105,7 +105,7 @@
 
     const-string v1, "onCreate"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -129,7 +129,7 @@
 
     const-string v1, "onDestroy"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -153,9 +153,9 @@
 .end method
 
 .method public onResume()V
-    .locals 10
+    .locals 9
 
-    const/4 v9, 0x1
+    const/4 v8, 0x1
 
     const/4 v1, 0x0
 
@@ -169,76 +169,76 @@
 
     invoke-virtual {v0}, Lcom/amap/api/maps/MapView;->onResume()V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/gps/a/c;->b(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/gps/a/d;->a(Landroid/content/Context;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v3
 
-    const-string v1, "Run"
+    const-string v0, "Run"
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "onResume getGaodeLocation = "
+    const-string v2, "onResume getGaodeLocation = "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v1
+    move-result v0
 
-    if-nez v1, :cond_0
+    if-nez v0, :cond_0
 
     :try_start_0
-    iget-object v8, p0, Lcn/com/smartdevices/bracelet/gps/ui/NewSportsGaodeActivity;->a:Lcn/com/smartdevices/bracelet/gps/b/a;
+    iget-object v7, p0, Lcn/com/smartdevices/bracelet/gps/ui/NewSportsGaodeActivity;->a:Lcn/com/smartdevices/bracelet/gps/b/a;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/gps/model/b;
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/model/c;
 
-    const-string v2, ","
+    const-string v1, ","
 
-    invoke-virtual {v0, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    invoke-virtual {v3, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v1
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    aget-object v2, v2, v3
+    aget-object v1, v1, v2
 
-    invoke-static {v2}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
+    invoke-static {v1}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
-    move-result-wide v2
+    move-result-wide v1
 
     const-string v4, ","
 
-    invoke-virtual {v0, v4}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    invoke-virtual {v3, v4}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v3
 
     const/4 v4, 0x1
 
-    aget-object v0, v0, v4
+    aget-object v3, v3, v4
 
-    invoke-static {v0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
+    invoke-static {v3}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
-    move-result-wide v4
+    move-result-wide v3
 
-    const-wide/16 v6, 0x0
+    const-wide/16 v5, 0x0
 
-    invoke-direct/range {v1 .. v7}, Lcn/com/smartdevices/bracelet/gps/model/b;-><init>(DDD)V
+    invoke-direct/range {v0 .. v6}, Lcn/com/smartdevices/bracelet/gps/model/c;-><init>(DDD)V
 
-    invoke-virtual {v8, v1}, Lcn/com/smartdevices/bracelet/gps/b/a;->c(Lcn/com/smartdevices/bracelet/gps/model/b;)V
+    invoke-virtual {v7, v0}, Lcn/com/smartdevices/bracelet/gps/b/a;->c(Lcn/com/smartdevices/bracelet/gps/model/c;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -246,7 +246,7 @@
     :goto_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/NewSportsGaodeActivity;->a:Lcn/com/smartdevices/bracelet/gps/b/a;
 
-    invoke-virtual {v0, v9}, Lcn/com/smartdevices/bracelet/gps/b/a;->a(Z)V
+    invoke-virtual {v0, v8}, Lcn/com/smartdevices/bracelet/gps/b/a;->a(Z)V
 
     return-void
 
@@ -259,7 +259,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

@@ -142,15 +142,15 @@
 .method public static a([B)J
     .locals 8
 
-    const/4 v5, 0x0
+    const/4 v7, 0x0
 
-    const-wide/16 v6, 0xff
+    const-wide/16 v5, 0xff
 
-    aget-byte v0, p0, v5
+    aget-byte v0, p0, v7
 
     int-to-long v0, v0
 
-    and-long/2addr v0, v6
+    and-long/2addr v0, v5
 
     const/16 v2, 0x38
 
@@ -162,7 +162,7 @@
 
     int-to-long v2, v2
 
-    and-long/2addr v2, v6
+    and-long/2addr v2, v5
 
     const/16 v4, 0x30
 
@@ -176,7 +176,7 @@
 
     int-to-long v2, v2
 
-    and-long/2addr v2, v6
+    and-long/2addr v2, v5
 
     const/16 v4, 0x28
 
@@ -190,7 +190,7 @@
 
     int-to-long v2, v2
 
-    and-long/2addr v2, v6
+    and-long/2addr v2, v5
 
     const/16 v4, 0x20
 
@@ -204,7 +204,7 @@
 
     int-to-long v2, v2
 
-    and-long/2addr v2, v6
+    and-long/2addr v2, v5
 
     const/16 v4, 0x18
 
@@ -218,7 +218,7 @@
 
     int-to-long v2, v2
 
-    and-long/2addr v2, v6
+    and-long/2addr v2, v5
 
     const/16 v4, 0x10
 
@@ -232,7 +232,7 @@
 
     int-to-long v2, v2
 
-    and-long/2addr v2, v6
+    and-long/2addr v2, v5
 
     const/16 v4, 0x8
 
@@ -246,9 +246,9 @@
 
     int-to-long v2, v2
 
-    and-long/2addr v2, v6
+    and-long/2addr v2, v5
 
-    shl-long/2addr v2, v5
+    shl-long/2addr v2, v7
 
     or-long/2addr v0, v2
 
@@ -256,15 +256,15 @@
 .end method
 
 .method public static a(J[BI)V
-    .locals 6
+    .locals 5
 
-    const-wide/16 v4, 0xff
+    const-wide/16 v3, 0xff
 
     add-int/lit8 v0, p3, 0x7
 
-    and-long v2, p0, v4
+    and-long v1, p0, v3
 
-    long-to-int v1, v2
+    long-to-int v1, v1
 
     int-to-byte v1, v1
 
@@ -274,11 +274,11 @@
 
     const/16 v1, 0x8
 
-    shr-long v2, p0, v1
+    shr-long v1, p0, v1
 
-    and-long/2addr v2, v4
+    and-long/2addr v1, v3
 
-    long-to-int v1, v2
+    long-to-int v1, v1
 
     int-to-byte v1, v1
 
@@ -288,11 +288,11 @@
 
     const/16 v1, 0x10
 
-    shr-long v2, p0, v1
+    shr-long v1, p0, v1
 
-    and-long/2addr v2, v4
+    and-long/2addr v1, v3
 
-    long-to-int v1, v2
+    long-to-int v1, v1
 
     int-to-byte v1, v1
 
@@ -302,11 +302,11 @@
 
     const/16 v1, 0x18
 
-    shr-long v2, p0, v1
+    shr-long v1, p0, v1
 
-    and-long/2addr v2, v4
+    and-long/2addr v1, v3
 
-    long-to-int v1, v2
+    long-to-int v1, v1
 
     int-to-byte v1, v1
 
@@ -316,11 +316,11 @@
 
     const/16 v1, 0x20
 
-    shr-long v2, p0, v1
+    shr-long v1, p0, v1
 
-    and-long/2addr v2, v4
+    and-long/2addr v1, v3
 
-    long-to-int v1, v2
+    long-to-int v1, v1
 
     int-to-byte v1, v1
 
@@ -330,11 +330,11 @@
 
     const/16 v1, 0x28
 
-    shr-long v2, p0, v1
+    shr-long v1, p0, v1
 
-    and-long/2addr v2, v4
+    and-long/2addr v1, v3
 
-    long-to-int v1, v2
+    long-to-int v1, v1
 
     int-to-byte v1, v1
 
@@ -344,11 +344,11 @@
 
     const/16 v1, 0x30
 
-    shr-long v2, p0, v1
+    shr-long v1, p0, v1
 
-    and-long/2addr v2, v4
+    and-long/2addr v1, v3
 
-    long-to-int v1, v2
+    long-to-int v1, v1
 
     int-to-byte v1, v1
 
@@ -358,11 +358,11 @@
 
     const/16 v1, 0x38
 
-    shr-long v2, p0, v1
+    shr-long v1, p0, v1
 
-    and-long/2addr v2, v4
+    and-long/2addr v1, v3
 
-    long-to-int v1, v2
+    long-to-int v1, v1
 
     int-to-byte v1, v1
 
@@ -372,32 +372,32 @@
 .end method
 
 .method public static a([BDI)V
-    .locals 7
+    .locals 6
 
     const/16 v5, 0x8
 
     invoke-static {p1, p2}, Ljava/lang/Double;->doubleToLongBits(D)J
 
-    move-result-wide v2
+    move-result-wide v1
 
     const/4 v0, 0x0
 
     :goto_0
     if-ge v0, v5, :cond_0
 
-    add-int v1, p3, v0
+    add-int v3, p3, v0
 
     new-instance v4, Ljava/lang/Long;
 
-    invoke-direct {v4, v2, v3}, Ljava/lang/Long;-><init>(J)V
+    invoke-direct {v4, v1, v2}, Ljava/lang/Long;-><init>(J)V
 
     invoke-virtual {v4}, Ljava/lang/Long;->byteValue()B
 
     move-result v4
 
-    aput-byte v4, p0, v1
+    aput-byte v4, p0, v3
 
-    shr-long/2addr v2, v5
+    shr-long/2addr v1, v5
 
     add-int/lit8 v0, v0, 0x1
 
@@ -476,15 +476,15 @@
 .end method
 
 .method public static a([BJI)V
-    .locals 5
+    .locals 3
 
     add-int/lit8 v0, p3, 0x7
 
     const/16 v1, 0x38
 
-    shr-long v2, p1, v1
+    shr-long v1, p1, v1
 
-    long-to-int v1, v2
+    long-to-int v1, v1
 
     int-to-byte v1, v1
 
@@ -494,9 +494,9 @@
 
     const/16 v1, 0x30
 
-    shr-long v2, p1, v1
+    shr-long v1, p1, v1
 
-    long-to-int v1, v2
+    long-to-int v1, v1
 
     int-to-byte v1, v1
 
@@ -506,9 +506,9 @@
 
     const/16 v1, 0x28
 
-    shr-long v2, p1, v1
+    shr-long v1, p1, v1
 
-    long-to-int v1, v2
+    long-to-int v1, v1
 
     int-to-byte v1, v1
 
@@ -518,9 +518,9 @@
 
     const/16 v1, 0x20
 
-    shr-long v2, p1, v1
+    shr-long v1, p1, v1
 
-    long-to-int v1, v2
+    long-to-int v1, v1
 
     int-to-byte v1, v1
 
@@ -530,9 +530,9 @@
 
     const/16 v1, 0x18
 
-    shr-long v2, p1, v1
+    shr-long v1, p1, v1
 
-    long-to-int v1, v2
+    long-to-int v1, v1
 
     int-to-byte v1, v1
 
@@ -542,9 +542,9 @@
 
     const/16 v1, 0x10
 
-    shr-long v2, p1, v1
+    shr-long v1, p1, v1
 
-    long-to-int v1, v2
+    long-to-int v1, v1
 
     int-to-byte v1, v1
 
@@ -554,9 +554,9 @@
 
     const/16 v1, 0x8
 
-    shr-long v2, p1, v1
+    shr-long v1, p1, v1
 
-    long-to-int v1, v2
+    long-to-int v1, v1
 
     int-to-byte v1, v1
 
@@ -566,9 +566,31 @@
 
     const/4 v1, 0x0
 
-    shr-long v2, p1, v1
+    shr-long v1, p1, v1
 
-    long-to-int v1, v2
+    long-to-int v1, v1
+
+    int-to-byte v1, v1
+
+    aput-byte v1, p0, v0
+
+    return-void
+.end method
+
+.method public static a([BSI)V
+    .locals 2
+
+    add-int/lit8 v0, p2, 0x1
+
+    shr-int/lit8 v1, p1, 0x8
+
+    int-to-byte v1, v1
+
+    aput-byte v1, p0, v0
+
+    add-int/lit8 v0, p2, 0x0
+
+    shr-int/lit8 v1, p1, 0x0
 
     int-to-byte v1, v1
 
@@ -626,7 +648,7 @@
 .end method
 
 .method public static a(J)[B
-    .locals 8
+    .locals 7
 
     const/16 v6, 0x8
 
@@ -741,6 +763,42 @@
     aput-byte v2, v0, v1
 
     return-object v0
+.end method
+
+.method public static a(S)[B
+    .locals 4
+
+    const/4 v0, 0x2
+
+    new-array v1, v0, [B
+
+    const/4 v0, 0x0
+
+    :goto_0
+    array-length v2, v1
+
+    if-ge v0, v2, :cond_0
+
+    new-instance v2, Ljava/lang/Integer;
+
+    and-int/lit16 v3, p0, 0xff
+
+    invoke-direct {v2, v3}, Ljava/lang/Integer;-><init>(I)V
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->byteValue()B
+
+    move-result v2
+
+    aput-byte v2, v1, v0
+
+    shr-int/lit8 p0, p0, 0x8
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-object v1
 .end method
 
 .method public static b([B)D
@@ -1007,125 +1065,125 @@
 
     aget-byte v3, p0, v3
 
-    int-to-long v4, v3
+    int-to-long v3, v3
 
-    and-long/2addr v4, v8
+    and-long/2addr v3, v8
 
-    const/16 v3, 0x38
+    const/16 v5, 0x38
 
-    shl-long/2addr v4, v3
+    shl-long/2addr v3, v5
 
-    mul-int/lit8 v3, v0, 0x8
+    mul-int/lit8 v5, v0, 0x8
 
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v5, v5, 0x1
 
-    aget-byte v3, p0, v3
+    aget-byte v5, p0, v5
 
-    int-to-long v6, v3
+    int-to-long v5, v5
 
-    and-long/2addr v6, v8
+    and-long/2addr v5, v8
 
-    const/16 v3, 0x30
+    const/16 v7, 0x30
 
-    shl-long/2addr v6, v3
+    shl-long/2addr v5, v7
 
-    or-long/2addr v4, v6
+    or-long/2addr v3, v5
 
-    mul-int/lit8 v3, v0, 0x8
+    mul-int/lit8 v5, v0, 0x8
 
-    add-int/lit8 v3, v3, 0x2
+    add-int/lit8 v5, v5, 0x2
 
-    aget-byte v3, p0, v3
+    aget-byte v5, p0, v5
 
-    int-to-long v6, v3
+    int-to-long v5, v5
 
-    and-long/2addr v6, v8
+    and-long/2addr v5, v8
 
-    const/16 v3, 0x28
+    const/16 v7, 0x28
 
-    shl-long/2addr v6, v3
+    shl-long/2addr v5, v7
 
-    or-long/2addr v4, v6
+    or-long/2addr v3, v5
 
-    mul-int/lit8 v3, v0, 0x8
+    mul-int/lit8 v5, v0, 0x8
 
-    add-int/lit8 v3, v3, 0x3
+    add-int/lit8 v5, v5, 0x3
 
-    aget-byte v3, p0, v3
+    aget-byte v5, p0, v5
 
-    int-to-long v6, v3
+    int-to-long v5, v5
 
-    and-long/2addr v6, v8
+    and-long/2addr v5, v8
 
-    const/16 v3, 0x20
+    const/16 v7, 0x20
 
-    shl-long/2addr v6, v3
+    shl-long/2addr v5, v7
 
-    or-long/2addr v4, v6
+    or-long/2addr v3, v5
 
-    mul-int/lit8 v3, v0, 0x8
+    mul-int/lit8 v5, v0, 0x8
 
-    add-int/lit8 v3, v3, 0x4
+    add-int/lit8 v5, v5, 0x4
 
-    aget-byte v3, p0, v3
+    aget-byte v5, p0, v5
 
-    int-to-long v6, v3
+    int-to-long v5, v5
 
-    and-long/2addr v6, v8
+    and-long/2addr v5, v8
 
-    const/16 v3, 0x18
+    const/16 v7, 0x18
 
-    shl-long/2addr v6, v3
+    shl-long/2addr v5, v7
 
-    or-long/2addr v4, v6
+    or-long/2addr v3, v5
 
-    mul-int/lit8 v3, v0, 0x8
+    mul-int/lit8 v5, v0, 0x8
 
-    add-int/lit8 v3, v3, 0x5
+    add-int/lit8 v5, v5, 0x5
 
-    aget-byte v3, p0, v3
+    aget-byte v5, p0, v5
 
-    int-to-long v6, v3
+    int-to-long v5, v5
 
-    and-long/2addr v6, v8
+    and-long/2addr v5, v8
 
-    const/16 v3, 0x10
+    const/16 v7, 0x10
 
-    shl-long/2addr v6, v3
+    shl-long/2addr v5, v7
 
-    or-long/2addr v4, v6
+    or-long/2addr v3, v5
 
-    mul-int/lit8 v3, v0, 0x8
+    mul-int/lit8 v5, v0, 0x8
 
-    add-int/lit8 v3, v3, 0x6
+    add-int/lit8 v5, v5, 0x6
 
-    aget-byte v3, p0, v3
+    aget-byte v5, p0, v5
 
-    int-to-long v6, v3
+    int-to-long v5, v5
 
-    and-long/2addr v6, v8
+    and-long/2addr v5, v8
 
-    const/16 v3, 0x8
+    const/16 v7, 0x8
 
-    shl-long/2addr v6, v3
+    shl-long/2addr v5, v7
 
-    or-long/2addr v4, v6
+    or-long/2addr v3, v5
 
-    mul-int/lit8 v3, v0, 0x8
+    mul-int/lit8 v5, v0, 0x8
 
-    add-int/lit8 v3, v3, 0x7
+    add-int/lit8 v5, v5, 0x7
 
-    aget-byte v3, p0, v3
+    aget-byte v5, p0, v5
 
-    int-to-long v6, v3
+    int-to-long v5, v5
 
-    and-long/2addr v6, v8
+    and-long/2addr v5, v8
 
-    shl-long/2addr v6, v1
+    shl-long/2addr v5, v1
 
-    or-long/2addr v4, v6
+    or-long/2addr v3, v5
 
-    aput-wide v4, v2, v0
+    aput-wide v3, v2, v0
 
     add-int/lit8 v0, v0, 0x1
 
@@ -1261,4 +1319,26 @@
     or-long/2addr v0, v2
 
     return-wide v0
+.end method
+
+.method public static e([BI)S
+    .locals 2
+
+    add-int/lit8 v0, p1, 0x1
+
+    aget-byte v0, p0, v0
+
+    shl-int/lit8 v0, v0, 0x8
+
+    add-int/lit8 v1, p1, 0x0
+
+    aget-byte v1, p0, v1
+
+    and-int/lit16 v1, v1, 0xff
+
+    or-int/2addr v0, v1
+
+    int-to-short v0, v0
+
+    return v0
 .end method

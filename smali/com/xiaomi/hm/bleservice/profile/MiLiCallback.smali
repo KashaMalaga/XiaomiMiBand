@@ -77,25 +77,7 @@
     return-void
 .end method
 
-.method public onConnected()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onConnectionFailed()V
-    .locals 0
-
-    return-void
-.end method
-
 .method public onDeviceStatusChanged(Landroid/bluetooth/BluetoothDevice;I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onDisconnected()V
     .locals 0
 
     return-void

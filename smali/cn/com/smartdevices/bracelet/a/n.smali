@@ -137,7 +137,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/a/n;->m:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 

@@ -9,7 +9,7 @@
 
 
 # instance fields
-.field private c:Lcn/com/smartdevices/bracelet/db/r;
+.field private c:Lcn/com/smartdevices/bracelet/db/v;
 
 
 # direct methods
@@ -54,11 +54,11 @@
 
     const/4 v1, 0x0
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/db/s;
+    new-instance v0, Lcn/com/smartdevices/bracelet/db/x;
 
-    invoke-direct {v0, p1, v1, v1}, Lcn/com/smartdevices/bracelet/db/s;-><init>(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)V
+    invoke-direct {v0, p1, v1, v1}, Lcn/com/smartdevices/bracelet/db/x;-><init>(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)V
 
-    iget-object v1, v0, Lcn/com/smartdevices/bracelet/db/s;->b:Ljava/lang/String;
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/db/x;->b:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -76,7 +76,7 @@
 
     move-result-object v1
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/db/s;->a:Ljava/lang/String;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/db/x;->a:Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -100,7 +100,7 @@
 
     move-result-object v1
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/db/s;->a:Ljava/lang/String;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/db/x;->a:Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -128,7 +128,7 @@
 
     const-string v1, "onCreate"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 

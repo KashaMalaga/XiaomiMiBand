@@ -1,13 +1,19 @@
-.class final Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$2;
+.class Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$2;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Thread$UncaughtExceptionHandler;
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field final synthetic this$0:Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;)V
     .locals 0
+
+    iput-object p1, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$2;->this$0:Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -16,12 +22,12 @@
 
 
 # virtual methods
-.method public uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
-    .locals 0
+.method public run()V
+    .locals 1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/r;->d()V
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$2;->this$0:Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;
 
-    invoke-virtual {p2}, Ljava/lang/Throwable;->printStackTrace()V
+    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->connectInternal()V
 
     return-void
 .end method

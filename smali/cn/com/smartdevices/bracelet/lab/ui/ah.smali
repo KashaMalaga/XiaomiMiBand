@@ -120,9 +120,9 @@
 
     iput v1, v0, Landroid/os/Message;->arg1:I
 
-    const-wide/16 v2, 0x7d0
+    const-wide/16 v1, 0x7d0
 
-    invoke-virtual {p0, v0, v2, v3}, Lcn/com/smartdevices/bracelet/lab/ui/ah;->sendMessageDelayed(Landroid/os/Message;J)Z
+    invoke-virtual {p0, v0, v1, v2}, Lcn/com/smartdevices/bracelet/lab/ui/ah;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     goto :goto_0
 

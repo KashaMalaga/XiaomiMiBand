@@ -220,7 +220,7 @@
 .end method
 
 .method public c(Lorg/achartengine/b/c;)Lorg/achartengine/b/e;
-    .locals 8
+    .locals 7
 
     invoke-virtual {p0, p1}, Lorg/achartengine/a/m;->b(Lorg/achartengine/b/c;)Z
 
@@ -230,60 +230,62 @@
 
     invoke-virtual {p0, p1}, Lorg/achartengine/a/m;->a(Lorg/achartengine/b/c;)D
 
-    move-result-wide v2
+    move-result-wide v1
 
     iget-object v0, p0, Lorg/achartengine/a/m;->a:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object v1
+    move-result-object v3
 
     :cond_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lorg/achartengine/a/n;
+    move-object v5, v0
 
-    invoke-virtual {v0, v2, v3}, Lorg/achartengine/a/n;->a(D)Z
+    check-cast v5, Lorg/achartengine/a/n;
 
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    new-instance v1, Lorg/achartengine/b/e;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0}, Lorg/achartengine/a/n;->c()I
-
-    move-result v3
-
-    invoke-virtual {v0}, Lorg/achartengine/a/n;->d()F
-
-    move-result v4
-
-    float-to-double v4, v4
-
-    invoke-virtual {v0}, Lorg/achartengine/a/n;->d()F
+    invoke-virtual {v5, v1, v2}, Lorg/achartengine/a/n;->a(D)Z
 
     move-result v0
 
-    float-to-double v6, v0
+    if-eqz v0, :cond_0
 
-    invoke-direct/range {v1 .. v7}, Lorg/achartengine/b/e;-><init>(IIDD)V
+    new-instance v0, Lorg/achartengine/b/e;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v5}, Lorg/achartengine/a/n;->c()I
+
+    move-result v2
+
+    invoke-virtual {v5}, Lorg/achartengine/a/n;->d()F
+
+    move-result v3
+
+    float-to-double v3, v3
+
+    invoke-virtual {v5}, Lorg/achartengine/a/n;->d()F
+
+    move-result v5
+
+    float-to-double v5, v5
+
+    invoke-direct/range {v0 .. v6}, Lorg/achartengine/b/e;-><init>(IIDD)V
 
     :goto_0
-    return-object v1
+    return-object v0
 
     :cond_1
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method

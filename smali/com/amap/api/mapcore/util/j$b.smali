@@ -46,7 +46,7 @@
 .end method
 
 .method static synthetic a(Lcom/amap/api/mapcore/util/j$b;J)J
-    .locals 1
+    .locals 0
 
     iput-wide p1, p0, Lcom/amap/api/mapcore/util/j$b;->f:J
 

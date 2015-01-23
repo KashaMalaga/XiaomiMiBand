@@ -3,8 +3,11 @@
 
 
 # virtual methods
-.method public abstract a(I)V
+.method public abstract a(IZ)V
 .end method
 
-.method public abstract a(Lcn/com/smartdevices/bracelet/gps/services/o;)V
+.method public abstract a(J)V
+.end method
+
+.method public abstract a(Lcn/com/smartdevices/bracelet/gps/services/x;)V
 .end method

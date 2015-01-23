@@ -1,235 +1,97 @@
-.class Lcn/com/smartdevices/bracelet/ui/cr;
-.super Lcom/c/a/a/h;
-
-
-# instance fields
-.field final synthetic a:Ljava/io/File;
-
-.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/ck;
+.class public Lcn/com/smartdevices/bracelet/ui/cr;
+.super Lcn/com/smartdevices/bracelet/ui/U;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/ck;Ljava/io/File;)V
+.method public constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cr;->b:Lcn/com/smartdevices/bracelet/ui/ck;
-
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/cr;->a:Ljava/io/File;
-
-    invoke-direct {p0}, Lcom/c/a/a/h;-><init>()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/U;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
-    .locals 2
+.method protected a()I
+    .locals 1
 
-    const-string v0, "WPJ"
+    const v0, 0x7f030071
 
-    const-string v1, "onFailure"
+    return v0
+.end method
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+.method public onCreate(Landroid/os/Bundle;)V
+    .locals 0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cr;->b:Lcn/com/smartdevices/bracelet/ui/ck;
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/U;->onCreate(Landroid/os/Bundle;)V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ck;->e(Lcn/com/smartdevices/bracelet/ui/ck;)Landroid/os/Handler;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Landroid/os/Message;
-
-    invoke-direct {v0}, Landroid/os/Message;-><init>()V
-
-    const/4 v1, 0x3
-
-    iput v1, v0, Landroid/os/Message;->what:I
-
-    const/4 v1, 0x0
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    iput-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cr;->b:Lcn/com/smartdevices/bracelet/ui/ck;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/ck;->e(Lcn/com/smartdevices/bracelet/ui/ck;)Landroid/os/Handler;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cr;->a:Ljava/io/File;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cr;->a:Ljava/io/File;
-
-    invoke-virtual {v0}, Ljava/io/File;->exists()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cr;->a:Ljava/io/File;
-
-    invoke-virtual {v0}, Ljava/io/File;->delete()Z
-
-    :cond_0
     return-void
 .end method
 
-.method public onProgress(II)V
-    .locals 2
+.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    .locals 6
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cr;->b:Lcn/com/smartdevices/bracelet/ui/ck;
+    invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/U;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ck;->e(Lcn/com/smartdevices/bracelet/ui/ck;)Landroid/os/Handler;
+    move-result-object v1
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/cr;->getArguments()Landroid/os/Bundle;
+
+    move-result-object v2
+
+    const v0, 0x7f080215
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    check-cast v0, Landroid/widget/TextView;
 
-    new-instance v0, Landroid/os/Message;
+    if-eqz v2, :cond_0
 
-    invoke-direct {v0}, Landroid/os/Message;-><init>()V
+    const-string v3, "REF_PROGRESS_INFO"
 
-    const/4 v1, 0x2
+    const-string v4, "..."
 
-    iput v1, v0, Landroid/os/Message;->what:I
+    invoke-virtual {v2, v3, v4}, Landroid/os/Bundle;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    mul-int/lit8 v1, p1, 0x64
+    move-result-object v3
 
-    div-int/2addr v1, p2
+    const-string v4, "REF_PROGRESS_CANCELABLE"
 
-    iput v1, v0, Landroid/os/Message;->arg1:I
+    const/4 v5, 0x1
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cr;->b:Lcn/com/smartdevices/bracelet/ui/ck;
+    invoke-virtual {v2, v4, v5}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/ck;->e(Lcn/com/smartdevices/bracelet/ui/ck;)Landroid/os/Handler;
+    move-result v2
 
-    move-result-object v1
+    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+    const-string v0, "dwy"
 
-    :cond_0
-    return-void
-.end method
+    new-instance v3, Ljava/lang/StringBuilder;
 
-.method public onSuccess(I[Lorg/apache/http/Header;[B)V
-    .locals 3
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v0, "WPJ"
+    const-string v4, "Cancelable = "
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    move-result-object v3
 
-    const-string v2, "onSuccess:"
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v3
 
-    move-result-object v1
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    new-instance v2, Ljava/lang/String;
+    move-result-object v3
 
-    invoke-direct {v2, p3}, Ljava/lang/String;-><init>([B)V
+    invoke-static {v0, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cr;->b:Lcn/com/smartdevices/bracelet/ui/ck;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ck;->e(Lcn/com/smartdevices/bracelet/ui/ck;)Landroid/os/Handler;
-
-    move-result-object v0
-
-    if-nez v0, :cond_1
+    invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/ui/cr;->setCancelable(Z)V
 
     :cond_0
-    :goto_0
-    return-void
-
-    :cond_1
-    new-instance v0, Landroid/os/Message;
-
-    invoke-direct {v0}, Landroid/os/Message;-><init>()V
-
-    const/4 v1, 0x3
-
-    iput v1, v0, Landroid/os/Message;->what:I
-
-    if-eqz p3, :cond_2
-
-    new-instance v1, Ljava/lang/String;
-
-    invoke-direct {v1, p3}, Ljava/lang/String;-><init>([B)V
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/g/f;->b(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/g/g;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/g/g;->a()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    const/4 v1, 0x1
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    iput-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    :goto_1
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cr;->b:Lcn/com/smartdevices/bracelet/ui/ck;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/ck;->e(Lcn/com/smartdevices/bracelet/ui/ck;)Landroid/os/Handler;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cr;->a:Ljava/io/File;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cr;->a:Ljava/io/File;
-
-    invoke-virtual {v0}, Ljava/io/File;->exists()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cr;->a:Ljava/io/File;
-
-    invoke-virtual {v0}, Ljava/io/File;->delete()Z
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v1, 0x0
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    iput-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    goto :goto_1
+    return-object v1
 .end method

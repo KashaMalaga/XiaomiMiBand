@@ -404,7 +404,7 @@
 .end method
 
 .method private a(FFLcom/autonavi/amap/mapcore/IPoint;)V
-    .locals 8
+    .locals 7
 
     const-wide v0, 0x400921fb54442d18L
 
@@ -420,53 +420,53 @@
 
     double-to-float v0, v0
 
-    float-to-double v2, p1
+    float-to-double v1, p1
 
-    float-to-double v4, v0
+    float-to-double v3, v0
 
-    invoke-static {v4, v5}, Ljava/lang/Math;->cos(D)D
+    invoke-static {v3, v4}, Ljava/lang/Math;->cos(D)D
 
-    move-result-wide v4
+    move-result-wide v3
 
-    mul-double/2addr v2, v4
+    mul-double/2addr v1, v3
 
-    float-to-double v4, p2
+    float-to-double v3, p2
 
-    float-to-double v6, v0
+    float-to-double v5, v0
 
-    invoke-static {v6, v7}, Ljava/lang/Math;->sin(D)D
+    invoke-static {v5, v6}, Ljava/lang/Math;->sin(D)D
 
-    move-result-wide v6
+    move-result-wide v5
 
-    mul-double/2addr v4, v6
+    mul-double/2addr v3, v5
 
-    add-double/2addr v2, v4
+    add-double/2addr v1, v3
 
-    double-to-int v1, v2
+    double-to-int v1, v1
 
     iput v1, p3, Lcom/autonavi/amap/mapcore/IPoint;->x:I
 
-    float-to-double v2, p2
+    float-to-double v1, p2
 
-    float-to-double v4, v0
+    float-to-double v3, v0
 
-    invoke-static {v4, v5}, Ljava/lang/Math;->cos(D)D
+    invoke-static {v3, v4}, Ljava/lang/Math;->cos(D)D
 
-    move-result-wide v4
+    move-result-wide v3
 
-    mul-double/2addr v2, v4
+    mul-double/2addr v1, v3
 
-    float-to-double v4, p1
+    float-to-double v3, p1
 
-    float-to-double v0, v0
+    float-to-double v5, v0
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->sin(D)D
+    invoke-static {v5, v6}, Ljava/lang/Math;->sin(D)D
 
-    move-result-wide v0
+    move-result-wide v5
 
-    mul-double/2addr v0, v4
+    mul-double/2addr v3, v5
 
-    sub-double v0, v2, v0
+    sub-double v0, v1, v3
 
     double-to-int v0, v0
 
@@ -1833,13 +1833,13 @@
 .end method
 
 .method public a(Ljavax/microedition/khronos/opengles/GL10;Lcom/amap/api/mapcore/v;)V
-    .locals 10
+    .locals 9
 
-    const/4 v9, 0x0
+    const/4 v8, 0x0
 
-    const/4 v8, 0x1
+    const/4 v7, 0x1
 
-    const/4 v7, 0x0
+    const/4 v6, 0x0
 
     iget-boolean v0, p0, Lcom/amap/api/mapcore/ap;->x:Z
 
@@ -1883,7 +1883,7 @@
 
     invoke-interface {p1, v0, v1, v2}, Ljavax/microedition/khronos/opengles/GL10;->glDeleteTextures(I[II)V
 
-    move v0, v7
+    move v0, v6
 
     :goto_1
     iget-object v1, p0, Lcom/amap/api/mapcore/ap;->D:[I
@@ -1923,7 +1923,7 @@
 
     move-result-object v2
 
-    move v1, v7
+    move v1, v6
 
     :goto_2
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
@@ -1974,7 +1974,7 @@
 
     move-result v0
 
-    if-ne v0, v8, :cond_9
+    if-ne v0, v7, :cond_9
 
     const/4 v0, 0x1
 
@@ -2009,17 +2009,17 @@
 
     iget-object v0, p0, Lcom/amap/api/mapcore/ap;->r:Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v2, v0, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v1, v0, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
     iget-object v0, p0, Lcom/amap/api/mapcore/ap;->r:Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v4, v0, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iget-wide v3, v0, Lcom/amap/api/maps/model/LatLng;->longitude:D
 
-    iget-object v6, p0, Lcom/amap/api/mapcore/ap;->k:Lcom/autonavi/amap/mapcore/FPoint;
+    iget-object v5, p0, Lcom/amap/api/mapcore/ap;->k:Lcom/autonavi/amap/mapcore/FPoint;
 
-    move-object v1, p2
+    move-object v0, p2
 
-    invoke-interface/range {v1 .. v6}, Lcom/amap/api/mapcore/v;->a(DDLcom/autonavi/amap/mapcore/FPoint;)V
+    invoke-interface/range {v0 .. v5}, Lcom/amap/api/mapcore/v;->a(DDLcom/autonavi/amap/mapcore/FPoint;)V
 
     :goto_5
     invoke-interface {p2}, Lcom/amap/api/mapcore/v;->z()F
@@ -2078,9 +2078,9 @@
 
     new-array v2, v2, [F
 
-    aput v9, v2, v7
+    aput v8, v2, v6
 
-    aput v1, v2, v8
+    aput v1, v2, v7
 
     const/4 v3, 0x2
 
@@ -2096,15 +2096,15 @@
 
     const/4 v0, 0x5
 
-    aput v9, v2, v0
+    aput v8, v2, v0
 
     const/4 v0, 0x6
 
-    aput v9, v2, v0
+    aput v8, v2, v0
 
     const/4 v0, 0x7
 
-    aput v9, v2, v0
+    aput v8, v2, v0
 
     invoke-static {v2}, Lcom/amap/api/mapcore/util/w;->a([F)Ljava/nio/FloatBuffer;
 
@@ -2113,7 +2113,7 @@
     iput-object v0, p0, Lcom/amap/api/mapcore/ap;->z:Ljava/nio/FloatBuffer;
 
     :cond_6
-    iput-boolean v8, p0, Lcom/amap/api/mapcore/ap;->b:Z
+    iput-boolean v7, p0, Lcom/amap/api/mapcore/ap;->b:Z
 
     :cond_7
     :try_start_1
@@ -2163,17 +2163,17 @@
     :cond_a
     iget-object v0, p0, Lcom/amap/api/mapcore/ap;->q:Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v2, v0, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v1, v0, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
     iget-object v0, p0, Lcom/amap/api/mapcore/ap;->q:Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v4, v0, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iget-wide v3, v0, Lcom/amap/api/maps/model/LatLng;->longitude:D
 
-    iget-object v6, p0, Lcom/amap/api/mapcore/ap;->k:Lcom/autonavi/amap/mapcore/FPoint;
+    iget-object v5, p0, Lcom/amap/api/mapcore/ap;->k:Lcom/autonavi/amap/mapcore/FPoint;
 
-    move-object v1, p2
+    move-object v0, p2
 
-    invoke-interface/range {v1 .. v6}, Lcom/amap/api/mapcore/v;->a(DDLcom/autonavi/amap/mapcore/FPoint;)V
+    invoke-interface/range {v0 .. v5}, Lcom/amap/api/mapcore/v;->a(DDLcom/autonavi/amap/mapcore/FPoint;)V
 
     goto/16 :goto_5
 

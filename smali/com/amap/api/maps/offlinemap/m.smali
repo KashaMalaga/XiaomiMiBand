@@ -378,7 +378,7 @@
 .end method
 
 .method public a(J)V
-    .locals 1
+    .locals 0
 
     iput-wide p1, p0, Lcom/amap/api/maps/offlinemap/m;->i:J
 
@@ -410,7 +410,7 @@
 .end method
 
 .method public b(J)V
-    .locals 1
+    .locals 0
 
     iput-wide p1, p0, Lcom/amap/api/maps/offlinemap/m;->h:J
 
@@ -434,7 +434,7 @@
 .end method
 
 .method public c(J)V
-    .locals 1
+    .locals 0
 
     iput-wide p1, p0, Lcom/amap/api/maps/offlinemap/m;->h:J
 
@@ -506,7 +506,7 @@
 .end method
 
 .method public g(Ljava/lang/String;)V
-    .locals 4
+    .locals 3
 
     :try_start_0
     new-instance v0, Lorg/json/JSONObject;
@@ -561,17 +561,17 @@
 
     invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optLong(Ljava/lang/String;)J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    iput-wide v2, p0, Lcom/amap/api/maps/offlinemap/m;->h:J
+    iput-wide v1, p0, Lcom/amap/api/maps/offlinemap/m;->h:J
 
     const-string v1, "lRemoteLength"
 
     invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optLong(Ljava/lang/String;)J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    iput-wide v2, p0, Lcom/amap/api/maps/offlinemap/m;->i:J
+    iput-wide v1, p0, Lcom/amap/api/maps/offlinemap/m;->i:J
 
     const-string v1, "mState"
 
@@ -585,9 +585,9 @@
 
     invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optLong(Ljava/lang/String;)J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    iput-wide v2, p0, Lcom/amap/api/maps/offlinemap/m;->b:J
+    iput-wide v1, p0, Lcom/amap/api/maps/offlinemap/m;->b:J
 
     const-string v1, "version"
 
@@ -719,15 +719,15 @@
 
     const-string v2, "lLocalLength"
 
-    iget-wide v4, p0, Lcom/amap/api/maps/offlinemap/m;->h:J
+    iget-wide v3, p0, Lcom/amap/api/maps/offlinemap/m;->h:J
 
-    invoke-virtual {v1, v2, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-virtual {v1, v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
     const-string v2, "lRemoteLength"
 
-    iget-wide v4, p0, Lcom/amap/api/maps/offlinemap/m;->i:J
+    iget-wide v3, p0, Lcom/amap/api/maps/offlinemap/m;->i:J
 
-    invoke-virtual {v1, v2, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-virtual {v1, v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
     const-string v2, "mState"
 
@@ -737,9 +737,9 @@
 
     const-string v2, "Schedule"
 
-    iget-wide v4, p0, Lcom/amap/api/maps/offlinemap/m;->b:J
+    iget-wide v3, p0, Lcom/amap/api/maps/offlinemap/m;->b:J
 
-    invoke-virtual {v1, v2, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-virtual {v1, v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
     const-string v2, "version"
 

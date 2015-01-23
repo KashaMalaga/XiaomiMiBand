@@ -61,7 +61,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    const v0, 0x7f010028
+    const v0, 0x7f01001a
 
     invoke-direct {p0, p1, p2, v0}, Lcn/com/smartdevices/bracelet/ui/widget/CirclePageIndicator;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -117,55 +117,55 @@
 
     move-result-object v0
 
-    const v1, 0x7f070069
+    const v1, 0x7f09007d
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v1
 
-    const v2, 0x7f070068
+    const v2, 0x7f09007c
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v2
 
-    const v3, 0x7f090002
+    const v3, 0x7f0b0002
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v3
 
-    const v4, 0x7f07006a
+    const v4, 0x7f09007e
 
     invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v4
 
-    const v5, 0x7f080009
+    const v5, 0x7f0a0009
 
     invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v5
 
-    const v6, 0x7f080008
+    const v6, 0x7f0a0008
 
     invoke-virtual {v0, v6}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v6
 
-    const v7, 0x7f0a0001
+    const v7, 0x7f0c0001
 
     invoke-virtual {v0, v7}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v7
 
-    const v8, 0x7f0a0002
+    const v8, 0x7f0c0002
 
     invoke-virtual {v0, v8}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v0
 
-    sget-object v8, Lcom/xiaomi/hm/a/s;->CirclePageIndicator:[I
+    sget-object v8, Lcom/xiaomi/hm/a/t;->CirclePageIndicator:[I
 
     invoke-virtual {p1, p2, v8, p3, v11}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 

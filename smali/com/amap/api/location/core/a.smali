@@ -127,13 +127,13 @@
 
     move-result-object v3
 
-    invoke-static {}, Lcom/a/Y;->a()Lcom/a/Y;
+    invoke-static {}, Lcom/b/Y;->a()Lcom/b/Y;
 
     move-result-object v4
 
     const-string v5, "loc"
 
-    invoke-virtual {v4, p0, v3, v0, v5}, Lcom/a/Y;->a(Landroid/content/Context;Ljava/lang/String;[BLjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v4, p0, v3, v0, v5}, Lcom/b/Y;->a(Landroid/content/Context;Ljava/lang/String;[BLjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

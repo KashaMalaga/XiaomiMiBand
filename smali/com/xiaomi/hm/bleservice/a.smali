@@ -1,97 +1,43 @@
-.class Lcom/xiaomi/hm/bleservice/a;
-.super Lcom/xiaomi/hm/bleservice/profile/MiLiCallback;
-
-
-# instance fields
-.field final synthetic a:Lcom/xiaomi/hm/bleservice/BLEService;
-
-
-# direct methods
-.method constructor <init>(Lcom/xiaomi/hm/bleservice/BLEService;)V
-    .locals 0
-
-    iput-object p1, p0, Lcom/xiaomi/hm/bleservice/a;->a:Lcom/xiaomi/hm/bleservice/BLEService;
-
-    invoke-direct {p0}, Lcom/xiaomi/hm/bleservice/profile/MiLiCallback;-><init>()V
-
-    return-void
-.end method
+.class public interface abstract Lcom/xiaomi/hm/bleservice/A;
+.super Ljava/lang/Object;
 
 
 # virtual methods
-.method public onBatteryStatusChanged(Landroid/bluetooth/BluetoothDevice;II)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/a;->a:Lcom/xiaomi/hm/bleservice/BLEService;
-
-    # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->onDeviceBatteryStatusChanged(II)V
-    invoke-static {v0, p2, p3}, Lcom/xiaomi/hm/bleservice/BLEService;->access$300(Lcom/xiaomi/hm/bleservice/BLEService;II)V
-
-    return-void
+.method public abstract a()Lcom/xiaomi/hm/bleservice/HwConnStatus;
 .end method
 
-.method public onConnected()V
-    .locals 0
-
-    return-void
+.method public abstract a(I)V
 .end method
 
-.method public onConnectionFailed()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/a;->a:Lcom/xiaomi/hm/bleservice/BLEService;
-
-    const/4 v1, 0x4
-
-    # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->notifyConnStatusChanged(I)V
-    invoke-static {v0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->access$000(Lcom/xiaomi/hm/bleservice/BLEService;I)V
-
-    return-void
+.method public abstract a(Landroid/bluetooth/BluetoothDevice;Z)V
 .end method
 
-.method public onDeviceStatusChanged(Landroid/bluetooth/BluetoothDevice;I)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/a;->a:Lcom/xiaomi/hm/bleservice/BLEService;
-
-    # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->onDeviceStatusChanged(I)V
-    invoke-static {v0, p2}, Lcom/xiaomi/hm/bleservice/BLEService;->access$200(Lcom/xiaomi/hm/bleservice/BLEService;I)V
-
-    return-void
+.method public abstract b()Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;
 .end method
 
-.method public onDisconnected()V
-    .locals 2
-
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/a;->a:Lcom/xiaomi/hm/bleservice/BLEService;
-
-    const/4 v1, 0x5
-
-    # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->notifyConnStatusChanged(I)V
-    invoke-static {v0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->access$000(Lcom/xiaomi/hm/bleservice/BLEService;I)V
-
-    return-void
+.method public abstract b(Landroid/bluetooth/BluetoothDevice;Z)V
 .end method
 
-.method public onInitializationFailed(Landroid/bluetooth/BluetoothDevice;)V
-    .locals 0
-
-    return-void
+.method public abstract c()V
 .end method
 
-.method public onInitializationSuccess(Landroid/bluetooth/BluetoothDevice;)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/a;->a:Lcom/xiaomi/hm/bleservice/BLEService;
-
-    # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->onDeviceInitializationSuccess()V
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->access$100(Lcom/xiaomi/hm/bleservice/BLEService;)V
-
-    return-void
+.method public abstract d()V
 .end method
 
-.method public onRealtimeStepsChanged(I)V
-    .locals 0
+.method public abstract e()Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+.end method
 
-    return-void
+.method public abstract f()Lcom/xiaomi/hm/bleservice/HwConnStatus;
+.end method
+
+.method public abstract g()Z
+.end method
+
+.method public abstract h()Lcom/xiaomi/hm/bleservice/profile/WeightProfile;
+.end method
+
+.method public abstract i()V
+.end method
+
+.method public abstract j()V
 .end method

@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/ui/L;
+.implements Lcom/tencent/tauth/IUiListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/m;
-
-.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;Lcn/com/smartdevices/bracelet/ui/m;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/z;->b:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
-
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/z;->a:Lcn/com/smartdevices/bracelet/ui/m;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/z;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,28 +22,36 @@
 
 
 # virtual methods
-.method public a(Landroid/app/DialogFragment;)V
+.method public onCancel()V
     .locals 0
 
     return-void
 .end method
 
-.method public b(Landroid/app/DialogFragment;)V
-    .locals 0
+.method public onComplete(Ljava/lang/Object;)V
+    .locals 3
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/z;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/z;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->b(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Landroid/widget/Button;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/z;->a:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
+
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->c(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)Landroid/widget/TextView;
+
+    move-result-object v2
+
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->a(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;Landroid/widget/Button;Landroid/widget/TextView;)V
 
     return-void
 .end method
 
-.method public c(Landroid/app/DialogFragment;)V
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/z;->b:Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->e(Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/z;->a:Lcn/com/smartdevices/bracelet/ui/m;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/m;->dismiss()V
+.method public onError(Lcom/tencent/tauth/UiError;)V
+    .locals 0
 
     return-void
 .end method

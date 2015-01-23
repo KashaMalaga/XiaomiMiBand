@@ -1,40 +1,48 @@
 .class Lcn/com/smartdevices/bracelet/ui/cE;
-.super Lcom/c/a/a/h;
+.super Landroid/content/BroadcastReceiver;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/cD;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/cD;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cE;->a:Lcn/com/smartdevices/bracelet/ui/cD;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cE;->a:Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;
 
-    invoke-direct {p0}, Lcom/c/a/a/h;-><init>()V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
-    .locals 3
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 5
 
-    const-string v0, "SettingFragment"
+    const-string v0, "intent"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "updateProfile onFailed: "
+    const-string v2, ""
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const-string v2, "extra_download_id"
+
+    const-wide/16 v3, 0x0
+
+    invoke-virtual {p2, v2, v3, v4}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
+
+    move-result-wide v2
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -42,35 +50,11 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    return-void
-.end method
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cE;->a:Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;
 
-.method public onSuccess(I[Lorg/apache/http/Header;[B)V
-    .locals 2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cE;->a:Lcn/com/smartdevices/bracelet/ui/cD;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/cD;->a(Lcn/com/smartdevices/bracelet/ui/cD;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->clearNeedSyncServer()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cE;->a:Lcn/com/smartdevices/bracelet/ui/cD;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/cD;->a(Lcn/com/smartdevices/bracelet/ui/cD;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/u;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
-
-    const-string v0, "SettingFragment"
-
-    const-string v1, "send person info to server ok!"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/B;->b(Landroid/app/Activity;)V
 
     return-void
 .end method

@@ -17,8 +17,5 @@
         <View android:id="@id/divider" android:background="@color/split_color" android:layout_width="wrap_content" android:layout_height="1.0px" android:layout_marginLeft="@dimen/mili_margin" android:layout_marginRight="@dimen/mili_margin" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
         <cn.com.smartdevices.bracelet.lua.MyListView android:id="@id/lv2" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" android:dividerHeight="0.0dip" android:overScrollMode="never" />
         <TextView android:textColor="#ffffffff" android:gravity="center" android:id="@id/listMsg" android:background="#e059a712" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="36.0dip" />
-        <FrameLayout android:id="@id/blankDV" android:layout_width="fill_parent" android:layout_height="fill_parent">
-            <ListView android:id="@id/fakelistView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@null" android:dividerHeight="0.0dip" />
-        </FrameLayout>
     </FrameLayout>
 </cn.com.smartdevices.bracelet.lua.SlidingUpPanelLayout>

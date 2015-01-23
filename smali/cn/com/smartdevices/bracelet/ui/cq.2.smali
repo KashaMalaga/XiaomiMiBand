@@ -1,33 +1,28 @@
 .class Lcn/com/smartdevices/bracelet/ui/cq;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/ck;
+.field a:Landroid/widget/TextView;
+
+.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/co;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/ck;)V
+.method private constructor <init>(Lcn/com/smartdevices/bracelet/ui/co;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cq;->a:Lcn/com/smartdevices/bracelet/ui/ck;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cq;->b:Lcn/com/smartdevices/bracelet/ui/co;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/ui/co;Lcn/com/smartdevices/bracelet/ui/cp;)V
+    .locals 0
 
-# virtual methods
-.method public run()V
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cq;->a:Lcn/com/smartdevices/bracelet/ui/ck;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ck;->d(Lcn/com/smartdevices/bracelet/ui/ck;)V
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/ui/cq;-><init>(Lcn/com/smartdevices/bracelet/ui/co;)V
 
     return-void
 .end method

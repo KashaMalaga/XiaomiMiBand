@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/A;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/A;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/B;->a:Lcn/com/smartdevices/bracelet/gps/ui/A;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/B;->a:Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,9 +25,9 @@
 .method public onClick(Landroid/view/View;)V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/B;->a:Lcn/com/smartdevices/bracelet/gps/ui/A;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/B;->a:Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/ui/A;->dismiss()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->finish()V
 
     return-void
 .end method

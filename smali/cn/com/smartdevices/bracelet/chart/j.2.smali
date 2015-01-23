@@ -29,7 +29,7 @@
 
     const-string v1, "Scroll OnStart!!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -49,7 +49,7 @@
 
     const-string v1, "Scroll OnJustify!!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -70,7 +70,7 @@
 
     check-cast v0, Lcn/com/smartdevices/bracelet/chart/a;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/a;->r()F
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/a;->s()F
 
     move-result v0
 
@@ -130,7 +130,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-nez v1, :cond_0
 
@@ -178,7 +178,7 @@
 
     const-string v1, "Scroll OnFinish!!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

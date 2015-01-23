@@ -27,13 +27,13 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/y;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->h(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Lcn/com/smartdevices/bracelet/gaocept/b;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->g(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Lcn/com/smartdevices/bracelet/gaocept/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gaocept/b;->a()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gaocept/a;->a()V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/lab/b/a;->b()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/lab/a/a;->b()V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/y;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
 

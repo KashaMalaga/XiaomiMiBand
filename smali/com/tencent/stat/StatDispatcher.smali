@@ -42,7 +42,7 @@
 .end method
 
 .method private constructor <init>()V
-    .locals 4
+    .locals 3
 
     const/4 v0, 0x0
 
@@ -63,9 +63,9 @@
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getId()J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    sput-wide v2, Lcom/tencent/stat/StatDispatcher;->dispatcherThreadId:J
+    sput-wide v1, Lcom/tencent/stat/StatDispatcher;->dispatcherThreadId:J
 
     new-instance v1, Landroid/os/Handler;
 
@@ -245,7 +245,7 @@
 .end method
 
 .method sendHttpPost(Ljava/util/List;Lcom/tencent/stat/StatDispatchCallback;)V
-    .locals 12
+    .locals 11
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -258,7 +258,7 @@
         }
     .end annotation
 
-    const-wide/16 v10, 0x0
+    const-wide/16 v9, 0x0
 
     const/16 v8, 0xc8
 
@@ -513,9 +513,9 @@
 
     invoke-interface {v0}, Lorg/apache/http/HttpEntity;->getContentLength()J
 
-    move-result-wide v4
+    move-result-wide v3
 
-    sget-object v3, Lcom/tencent/stat/StatDispatcher;->logger:Lcom/tencent/stat/common/StatLogger;
+    sget-object v5, Lcom/tencent/stat/StatDispatcher;->logger:Lcom/tencent/stat/common/StatLogger;
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -537,7 +537,7 @@
 
     move-result-object v6
 
-    invoke-virtual {v6, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v6
 
@@ -545,11 +545,11 @@
 
     move-result-object v6
 
-    invoke-virtual {v3, v6}, Lcom/tencent/stat/common/StatLogger;->i(Ljava/lang/Object;)V
+    invoke-virtual {v5, v6}, Lcom/tencent/stat/common/StatLogger;->i(Ljava/lang/Object;)V
 
-    cmp-long v3, v4, v10
+    cmp-long v5, v3, v9
 
-    if-nez v3, :cond_9
+    if-nez v5, :cond_9
 
     invoke-static {v0}, Lorg/apache/http/util/EntityUtils;->toString(Lorg/apache/http/HttpEntity;)Ljava/lang/String;
 
@@ -712,7 +712,7 @@
     goto/16 :goto_2
 
     :cond_9
-    cmp-long v3, v4, v10
+    cmp-long v3, v3, v9
 
     if-lez v3, :cond_11
 
@@ -726,9 +726,9 @@
 
     invoke-interface {v0}, Lorg/apache/http/HttpEntity;->getContentLength()J
 
-    move-result-wide v6
+    move-result-wide v5
 
-    long-to-int v0, v6
+    long-to-int v0, v5
 
     new-array v0, v0, [B
 

@@ -331,7 +331,7 @@
 .end method
 
 .method private g()V
-    .locals 6
+    .locals 5
 
     iget v0, p0, Lcom/amap/api/mapcore/aq;->i:I
 
@@ -354,13 +354,13 @@
 
     iget-object v1, p0, Lcom/amap/api/mapcore/aq;->e:Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v2, v1, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iget-wide v1, v1, Lcom/amap/api/maps/model/LatLng;->longitude:D
 
-    iget-object v1, p0, Lcom/amap/api/mapcore/aq;->e:Lcom/amap/api/maps/model/LatLng;
+    iget-object v3, p0, Lcom/amap/api/mapcore/aq;->e:Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v4, v1, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v3, v3, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
-    invoke-static {v2, v3, v4, v5, v0}, Lcom/autonavi/amap/mapcore/MapProjection;->lonlat2Geo(DDLcom/autonavi/amap/mapcore/IPoint;)V
+    invoke-static {v1, v2, v3, v4, v0}, Lcom/autonavi/amap/mapcore/MapProjection;->lonlat2Geo(DDLcom/autonavi/amap/mapcore/IPoint;)V
 
     iget-object v1, p0, Lcom/amap/api/mapcore/aq;->a:Lcom/amap/api/mapcore/v;
 
@@ -456,7 +456,7 @@
 .end method
 
 .method private j()V
-    .locals 8
+    .locals 7
 
     :try_start_0
     iget-object v0, p0, Lcom/amap/api/mapcore/aq;->a:Lcom/amap/api/mapcore/v;
@@ -505,11 +505,11 @@
 
     new-instance v2, Lcom/amap/api/maps/model/LatLng;
 
-    const-wide/16 v4, 0x0
+    const-wide/16 v3, 0x0
 
-    const-wide/16 v6, 0x0
+    const-wide/16 v5, 0x0
 
-    invoke-direct {v2, v4, v5, v6, v7}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v2, v3, v4, v5, v6}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     invoke-virtual {v1, v2}, Lcom/amap/api/maps/model/CircleOptions;->center(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/CircleOptions;
 
@@ -523,9 +523,9 @@
 
     iget-object v0, p0, Lcom/amap/api/mapcore/aq;->c:Lcom/amap/api/mapcore/x;
 
-    const-wide/high16 v2, 0x4069000000000000L
+    const-wide/high16 v1, 0x4069000000000000L
 
-    invoke-interface {v0, v2, v3}, Lcom/amap/api/mapcore/x;->a(D)V
+    invoke-interface {v0, v1, v2}, Lcom/amap/api/mapcore/x;->a(D)V
 
     iget-object v0, p0, Lcom/amap/api/mapcore/aq;->a:Lcom/amap/api/mapcore/v;
 
@@ -549,11 +549,11 @@
 
     new-instance v2, Lcom/amap/api/maps/model/LatLng;
 
-    const-wide/16 v4, 0x0
+    const-wide/16 v3, 0x0
 
-    const-wide/16 v6, 0x0
+    const-wide/16 v5, 0x0
 
-    invoke-direct {v2, v4, v5, v6, v7}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v2, v3, v4, v5, v6}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     invoke-virtual {v1, v2}, Lcom/amap/api/maps/model/MarkerOptions;->position(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/MarkerOptions;
 
@@ -595,7 +595,7 @@
 .end method
 
 .method private k()V
-    .locals 8
+    .locals 7
 
     iget-object v0, p0, Lcom/amap/api/mapcore/aq;->d:Lcom/amap/api/maps/model/MyLocationStyle;
 
@@ -648,11 +648,11 @@
 
     new-instance v2, Lcom/amap/api/maps/model/LatLng;
 
-    const-wide/16 v4, 0x0
+    const-wide/16 v3, 0x0
 
-    const-wide/16 v6, 0x0
+    const-wide/16 v5, 0x0
 
-    invoke-direct {v2, v4, v5, v6, v7}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v2, v3, v4, v5, v6}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     invoke-virtual {v1, v2}, Lcom/amap/api/maps/model/CircleOptions;->center(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/CircleOptions;
 
@@ -677,9 +677,9 @@
     :cond_1
     iget-object v0, p0, Lcom/amap/api/mapcore/aq;->c:Lcom/amap/api/mapcore/x;
 
-    iget-wide v2, p0, Lcom/amap/api/mapcore/aq;->f:D
+    iget-wide v1, p0, Lcom/amap/api/mapcore/aq;->f:D
 
-    invoke-interface {v0, v2, v3}, Lcom/amap/api/mapcore/x;->a(D)V
+    invoke-interface {v0, v1, v2}, Lcom/amap/api/mapcore/x;->a(D)V
 
     iget-object v0, p0, Lcom/amap/api/mapcore/aq;->a:Lcom/amap/api/mapcore/v;
 
@@ -721,11 +721,11 @@
 
     new-instance v2, Lcom/amap/api/maps/model/LatLng;
 
-    const-wide/16 v4, 0x0
+    const-wide/16 v3, 0x0
 
-    const-wide/16 v6, 0x0
+    const-wide/16 v5, 0x0
 
-    invoke-direct {v2, v4, v5, v6, v7}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v2, v3, v4, v5, v6}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     invoke-virtual {v1, v2}, Lcom/amap/api/maps/model/MarkerOptions;->position(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/MarkerOptions;
 
@@ -850,7 +850,7 @@
 .end method
 
 .method public a(Landroid/location/Location;)V
-    .locals 6
+    .locals 5
 
     if-nez p1, :cond_1
 
@@ -863,13 +863,13 @@
 
     invoke-virtual {p1}, Landroid/location/Location;->getLatitude()D
 
-    move-result-wide v2
+    move-result-wide v1
 
     invoke-virtual {p1}, Landroid/location/Location;->getLongitude()D
 
-    move-result-wide v4
+    move-result-wide v3
 
-    invoke-direct {v0, v2, v3, v4, v5}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     iput-object v0, p0, Lcom/amap/api/mapcore/aq;->e:Lcom/amap/api/maps/model/LatLng;
 
@@ -924,9 +924,9 @@
 
     iget-object v0, p0, Lcom/amap/api/mapcore/aq;->c:Lcom/amap/api/mapcore/x;
 
-    iget-wide v2, p0, Lcom/amap/api/mapcore/aq;->f:D
+    iget-wide v1, p0, Lcom/amap/api/mapcore/aq;->f:D
 
-    invoke-interface {v0, v2, v3}, Lcom/amap/api/mapcore/x;->a(D)V
+    invoke-interface {v0, v1, v2}, Lcom/amap/api/mapcore/x;->a(D)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 

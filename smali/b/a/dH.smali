@@ -125,7 +125,7 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    invoke-static {p1}, Lcom/f/a/a;->a(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/h/a/a;->a(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -269,7 +269,7 @@
 .end method
 
 .method private a([BLjava/lang/String;)[B
-    .locals 8
+    .locals 7
 
     const/4 v1, 0x0
 
@@ -337,9 +337,9 @@
 
     array-length v5, p1
 
-    int-to-long v6, v5
+    int-to-long v5, v5
 
-    invoke-direct {v2, v4, v6, v7}, Lorg/apache/http/entity/InputStreamEntity;-><init>(Ljava/io/InputStream;J)V
+    invoke-direct {v2, v4, v5, v6}, Lorg/apache/http/entity/InputStreamEntity;-><init>(Ljava/io/InputStream;J)V
 
     invoke-virtual {v0, v2}, Lorg/apache/http/client/methods/HttpPost;->setEntity(Lorg/apache/http/HttpEntity;)V
 
@@ -588,7 +588,7 @@
     const/4 v0, 0x0
 
     :goto_0
-    sget-object v2, Lcom/f/a/p;->f:[Ljava/lang/String;
+    sget-object v2, Lcom/h/a/p;->f:[Ljava/lang/String;
 
     array-length v2, v2
 
@@ -604,7 +604,7 @@
     return v0
 
     :cond_1
-    sget-object v1, Lcom/f/a/p;->f:[Ljava/lang/String;
+    sget-object v1, Lcom/h/a/p;->f:[Ljava/lang/String;
 
     aget-object v1, v1, v0
 

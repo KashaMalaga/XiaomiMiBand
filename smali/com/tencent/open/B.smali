@@ -211,7 +211,7 @@
 .end method
 
 .method private a(J)Ljava/lang/String;
-    .locals 3
+    .locals 2
 
     new-instance v0, Ljava/util/Date;
 

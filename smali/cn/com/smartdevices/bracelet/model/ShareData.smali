@@ -71,6 +71,8 @@
 
 .field public static final SHARE_TYPE_NEW_RECORD:I = 0x5
 
+.field public static final SHARE_TYPE_SERVICE:I = 0xd
+
 .field public static final SHARE_TYPE_SPORT_INFO:I = 0xc
 
 .field public static final SHARE_TYPE_WEEK_AVE_STEPS:I = 0x7
@@ -98,6 +100,8 @@
 .field public title:Ljava/lang/String;
 
 .field public type:I
+
+.field public url:Ljava/lang/String;
 
 
 # direct methods
@@ -150,6 +154,10 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->ranking:Ljava/lang/String;
 
+    const-string v0, ""
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->url:Ljava/lang/String;
+
     iput v1, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->color:I
 
     const/4 v0, 0x0
@@ -195,6 +203,10 @@
     const-string v0, ""
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->ranking:Ljava/lang/String;
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->url:Ljava/lang/String;
 
     iput v1, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->color:I
 
@@ -598,6 +610,18 @@
 
     move-result-object v0
 
+    const-string v1, "\nurl:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->url:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -633,6 +657,10 @@
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->ranking:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/ShareData;->url:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 

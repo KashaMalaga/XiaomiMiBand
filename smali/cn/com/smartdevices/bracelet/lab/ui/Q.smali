@@ -51,11 +51,11 @@
 
     const-string v3, "Others"
 
-    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-static {v1, v2, v3, v4}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3, v4}, Lcn/com/smartdevices/bracelet/A;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/Q;->b:Landroid/app/Dialog;
 
@@ -63,9 +63,9 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/Q;->c:Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;
 
-    const v2, 0x7f020086
+    const v2, 0x7f0200d0
 
-    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
 

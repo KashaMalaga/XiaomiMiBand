@@ -3,6 +3,10 @@
     <item type="id" name="gridview" />
     <item type="id" name="webview" />
     <item type="id" name="scrollview" />
+    <item type="id" name="groupId" />
+    <item type="id" name="childId" />
+    <item type="id" name="fragment_setting_sliding_layout">false</item>
+    <item type="id" name="dragView">false</item>
     <item type="id" name="bind_band">false</item>
     <item type="id" name="icon">false</item>
     <item type="id" name="about_mi_band">false</item>
@@ -23,25 +27,46 @@
     <item type="id" name="host_input_box">false</item>
     <item type="id" name="security_switch">false</item>
     <item type="id" name="host_list">false</item>
+    <item type="id" name="home_back_area">false</item>
+    <item type="id" name="family_members_dymantic_list">false</item>
+    <item type="id" name="staronme_layout">false</item>
+    <item type="id" name="line">false</item>
+    <item type="id" name="staronme_user_dymantic_list">false</item>
+    <item type="id" name="measure_dymantic_layout">false</item>
+    <item type="id" name="baby_weight">false</item>
+    <item type="id" name="baby_weight_drawable">false</item>
+    <item type="id" name="visitor_weight">false</item>
+    <item type="id" name="visitor_weight_drawable">false</item>
+    <item type="id" name="add_new_member_layout">false</item>
+    <item type="id" name="add_member_plus">false</item>
     <item type="id" name="fw_help_screen_home_back">false</item>
     <item type="id" name="fw_low_battery_help_tv">false</item>
     <item type="id" name="fw_low_battery_confirm_btn">false</item>
+    <item type="id" name="title_back_bar">false</item>
+    <item type="id" name="title_back">false</item>
+    <item type="id" name="bottom">false</item>
+    <item type="id" name="description">false</item>
+    <item type="id" name="call_button">false</item>
     <item type="id" name="header">false</item>
     <item type="id" name="view_pager">false</item>
     <item type="id" name="indicator">false</item>
     <item type="id" name="tip_bg">false</item>
     <item type="id" name="tip">false</item>
     <item type="id" name="gif_view">false</item>
+    <item type="id" name="lab_factory_connected_adv_back">false</item>
+    <item type="id" name="lab_factory_connected_adv">false</item>
+    <item type="id" name="lab_factory_connected_adv_switch">false</item>
+    <item type="id" name="lab_factory_connected_adv_mask_view">false</item>
     <item type="id" name="lab_list_item_sport_name">false</item>
     <item type="id" name="lab_list_item_group_name">false</item>
-    <item type="id" name="title_back">false</item>
-    <item type="id" name="lab_factory_list">false</item>
+    <item type="id" name="list">false</item>
     <item type="id" name="lab_sport_favorite_desc">false</item>
     <item type="id" name="lab_sport_favorite_sub_desc">false</item>
     <item type="id" name="favorite_sports_list">false</item>
     <item type="id" name="vote_result">false</item>
     <item type="id" name="vote_result_img">false</item>
     <item type="id" name="vote_result_name">false</item>
+    <item type="id" name="sport_done_flag">false</item>
     <item type="id" name="sport_item_img">false</item>
     <item type="id" name="sport_name">false</item>
     <item type="id" name="lab_factory_reminder_back">false</item>
@@ -69,8 +94,7 @@
     <item type="id" name="number_text">false</item>
     <item type="id" name="test_button">false</item>
     <item type="id" name="test_button2">false</item>
-    <item type="id" name="test_bluepackage_button">false</item>
-    <item type="id" name="correct_number_button">false</item>
+    <item type="id" name="upload_button">false</item>
     <item type="id" name="group_item_linker">false</item>
     <item type="id" name="group_item_member">false</item>
     <item type="id" name="share_content_ll">false</item>
@@ -100,8 +124,8 @@
     <item type="id" name="mi_login_btn">false</item>
     <item type="id" name="bracelet_login_info">false</item>
     <item type="id" name="mi_register_btn">false</item>
+    <item type="id" name="buy_band_txt">false</item>
     <item type="id" name="sliding_layout">false</item>
-    <item type="id" name="dragView">false</item>
     <item type="id" name="backView">false</item>
     <item type="id" name="msgDV">false</item>
     <item type="id" name="rightArrow">false</item>
@@ -112,13 +136,12 @@
     <item type="id" name="divider">false</item>
     <item type="id" name="lv2">false</item>
     <item type="id" name="listMsg">false</item>
-    <item type="id" name="blankDV">false</item>
-    <item type="id" name="fakelistView">false</item>
     <item type="id" name="dynamic_header">false</item>
     <item type="id" name="header_nav_left">false</item>
     <item type="id" name="header_nav_right">false</item>
     <item type="id" name="header_nav_right_new_sign">false</item>
     <item type="id" name="dynamic_subtitle">false</item>
+    <item type="id" name="history_button">false</item>
     <item type="id" name="cancel">false</item>
     <item type="id" name="new_alarm_small_titile_0">false</item>
     <item type="id" name="new_alarm_smart_splict_0">false</item>
@@ -132,12 +155,14 @@
     <item type="id" name="setting_alarm_wheel_ampm">false</item>
     <item type="id" name="setting_alarm_wheel_hour">false</item>
     <item type="id" name="setting_alarm_wheel_minute">false</item>
+    <item type="id" name="share_button">false</item>
     <item type="id" name="unbind_partner">false</item>
     <item type="id" name="open_web_container">false</item>
     <item type="id" name="error_page">false</item>
     <item type="id" name="progress">false</item>
     <item type="id" name="label">false</item>
     <item type="id" name="load_progress">false</item>
+    <item type="id" name="share_pane_container">false</item>
     <item type="id" name="person_info_part_1">false</item>
     <item type="id" name="person_info_year_picker">false</item>
     <item type="id" name="person_info_month_picker">false</item>
@@ -147,9 +172,15 @@
     <item type="id" name="info_gender_male">false</item>
     <item type="id" name="info_gender_female">false</item>
     <item type="id" name="person_info_height_picker">false</item>
+    <item type="id" name="info_name_edittext">false</item>
     <item type="id" name="bracelet_title_info">false</item>
     <item type="id" name="person_info_goal_picker">false</item>
     <item type="id" name="person_info_weight_picker">false</item>
+    <item type="id" name="weight_goal_set_cancel">false</item>
+    <item type="id" name="fragment_alarm_repeat_title">false</item>
+    <item type="id" name="weight_goal_set_ok">false</item>
+    <item type="id" name="person_info_set_weight_info">false</item>
+    <item type="id" name="weight_goal_seekbar">false</item>
     <item type="id" name="header_history">false</item>
     <item type="id" name="header_more">false</item>
     <item type="id" name="map">false</item>
@@ -157,6 +188,7 @@
     <item type="id" name="gps_signal_value">false</item>
     <item type="id" name="gps_locating">false</item>
     <item type="id" name="progressbar">false</item>
+    <item type="id" name="extra_info_tips">false</item>
     <item type="id" name="info_distance">false</item>
     <item type="id" name="time_icon">false</item>
     <item type="id" name="timing_hour">false</item>
@@ -166,19 +198,23 @@
     <item type="id" name="timing_second">false</item>
     <item type="id" name="second_unit">false</item>
     <item type="id" name="running_detail_info">false</item>
-    <item type="id" name="info_steps">false</item>
-    <item type="id" name="info_steps_desc">false</item>
+    <item type="id" name="info_steps_frequency">false</item>
+    <item type="id" name="info_steps_frequency_desc">false</item>
     <item type="id" name="info_pace">false</item>
     <item type="id" name="info_pace_desc">false</item>
-    <item type="id" name="info_speed">false</item>
-    <item type="id" name="info_speed_desc">false</item>
+    <item type="id" name="info_cal">false</item>
+    <item type="id" name="info_cal_desc">false</item>
     <item type="id" name="button_area">false</item>
     <item type="id" name="running_lock">false</item>
     <item type="id" name="slider_container">false</item>
     <item type="id" name="unlock_slider">false</item>
     <item type="id" name="start">false</item>
     <item type="id" name="running_info_area">false</item>
+    <item type="id" name="title_back_container">false</item>
     <item type="id" name="no_data">false</item>
+    <item type="id" name="logo_watermark">false</item>
+    <item type="id" name="no_data_refresh">false</item>
+    <item type="id" name="loading">false</item>
     <item type="id" name="history_list">false</item>
     <item type="id" name="date">false</item>
     <item type="id" name="distance">false</item>
@@ -189,7 +225,10 @@
     <item type="id" name="dot1">false</item>
     <item type="id" name="dot2">false</item>
     <item type="id" name="head_back">false</item>
-    <item type="id" name="share_pane_container">false</item>
+    <item type="id" name="strut">false</item>
+    <item type="id" name="btn_watermark">false</item>
+    <item type="id" name="rl_head_title">false</item>
+    <item type="id" name="tv_photo">false</item>
     <item type="id" name="search_single_frame">false</item>
     <item type="id" name="toggle_display_mode_btn">false</item>
     <item type="id" name="search_devices_title">false</item>
@@ -197,12 +236,19 @@
     <item type="id" name="search_single_area">false</item>
     <item type="id" name="searching_pie_chart">false</item>
     <item type="id" name="search_devices_mili_icon">false</item>
+    <item type="id" name="search_devices_weight_value">false</item>
+    <item type="id" name="search_devices_weight_smile">false</item>
     <item type="id" name="bracelet_hand_gifview">false</item>
     <item type="id" name="search_devices_exit">false</item>
     <item type="id" name="search_devices_not_response">false</item>
     <item type="id" name="search_single_device_list_area">false</item>
     <item type="id" name="device_list_lv">false</item>
     <item type="id" name="listview">false</item>
+    <item type="id" name="service_list">false</item>
+    <item type="id" name="service_name">false</item>
+    <item type="id" name="pager">false</item>
+    <item type="id" name="band_txt">false</item>
+    <item type="id" name="weight_txt">false</item>
     <item type="id" name="share_main_content_hour_unit">false</item>
     <item type="id" name="share_time">false</item>
     <item type="id" name="share_time_tips">false</item>
@@ -217,6 +263,19 @@
     <item type="id" name="share_to_qq_btn">false</item>
     <item type="id" name="share_to_line_btn">false</item>
     <item type="id" name="share_to_facebook_btn">false</item>
+    <item type="id" name="name">false</item>
+    <item type="id" name="tag_action_tips">false</item>
+    <item type="id" name="rl_time">false</item>
+    <item type="id" name="timer">false</item>
+    <item type="id" name="doing_label">false</item>
+    <item type="id" name="rl_connection">false</item>
+    <item type="id" name="action_button">false</item>
+    <item type="id" name="tag_connection">false</item>
+    <item type="id" name="rl_connection_f">false</item>
+    <item type="id" name="ic_fa">false</item>
+    <item type="id" name="tag_connection_f">false</item>
+    <item type="id" name="notice">false</item>
+    <item type="id" name="fragment_container">false</item>
     <item type="id" name="unlock_for_miuilock">false</item>
     <item type="id" name="unlock_screen_header_fl">false</item>
     <item type="id" name="unlock_screen_tips_tv">false</item>
@@ -227,17 +286,65 @@
     <item type="id" name="unlock_screen_set_unlock_ll">false</item>
     <item type="id" name="unlock_screen_set_unlock_tv">false</item>
     <item type="id" name="has_unlock_with_bracelet_ll">false</item>
+    <item type="id" name="unlock_screen_modify_unlock_tv">false</item>
     <item type="id" name="unlock_screen_invalid_tv">false</item>
     <item type="id" name="unlock_screen_miui_not_support_tv">false</item>
     <item type="id" name="unlock_for_smartlock">false</item>
     <item type="id" name="start_setting">false</item>
     <item type="id" name="unlock_screen_mask_view">false</item>
     <item type="id" name="unlock_screen_home_back">false</item>
-    <item type="id" name="unlock_screen_invalid_help_home_back">false</item>
+    <item type="id" name="rl_watermark_main">false</item>
+    <item type="id" name="rl_camera_head">false</item>
+    <item type="id" name="flash_lamp">false</item>
+    <item type="id" name="cam_switch">false</item>
+    <item type="id" name="rl_share_area">false</item>
+    <item type="id" name="fl_camera">false</item>
+    <item type="id" name="rl_share_area_mark">false</item>
+    <item type="id" name="iv_cover">false</item>
+    <item type="id" name="vp_mark_pager">false</item>
+    <item type="id" name="h_scrollview">false</item>
+    <item type="id" name="ll_panel">false</item>
+    <item type="id" name="avatar_mask">false</item>
+    <item type="id" name="btn_takephoto">false</item>
+    <item type="id" name="btn_share_back">false</item>
+    <item type="id" name="btn_save">false</item>
+    <item type="id" name="bg_layout">false</item>
+    <item type="id" name="wr_header">false</item>
+    <item type="id" name="wr_home_back">false</item>
+    <item type="id" name="wr_share">false</item>
+    <item type="id" name="wr_wv">false</item>
+    <item type="id" name="largerthansix_layout">false</item>
+    <item type="id" name="bmi_layout">false</item>
+    <item type="id" name="wr_over_goal_tips_title">false</item>
+    <item type="id" name="wr_over_goal_tips_tv">false</item>
+    <item type="id" name="wr_figure_tips_title">false</item>
+    <item type="id" name="wr_figure_tips_tv">false</item>
+    <item type="id" name="wr_bmi_tips_title">false</item>
+    <item type="id" name="wr_bmi_tips_tv">false</item>
+    <item type="id" name="right_arrow">false</item>
+    <item type="id" name="wr_help">false</item>
+    <item type="id" name="wr_suggestion_tv">false</item>
+    <item type="id" name="smallerthansix_layout">false</item>
+    <item type="id" name="child_icon">false</item>
+    <item type="id" name="child_name">false</item>
+    <item type="id" name="child_msg">false</item>
+    <item type="id" name="weight_report_edit_btn">false</item>
+    <item type="id" name="app_share_layout">false</item>
+    <item type="id" name="share_text">false</item>
+    <item type="id" name="btm_layout">false</item>
+    <item type="id" name="weight_devices_lv">false</item>
+    <item type="id" name="weight_tip_title">false</item>
+    <item type="id" name="weight_tip_divider1">false</item>
+    <item type="id" name="weight_tip_bmi_img">false</item>
+    <item type="id" name="weight_tip_bmi_name">false</item>
+    <item type="id" name="weight_tip_divider2">false</item>
+    <item type="id" name="weight_tip_bmi_content">false</item>
+    <item type="id" name="weight_tip_bmi_fat_name">false</item>
+    <item type="id" name="weight_tip_divider3">false</item>
+    <item type="id" name="weight_tip_bmi_fat_content">false</item>
+    <item type="id" name="bmi_view_cancel">false</item>
     <item type="id" name="show_image_iv">false</item>
-    <item type="id" name="home_back_area">false</item>
     <item type="id" name="alarm_clock_lv">false</item>
-    <item type="id" name="fragment_alarm_repeat_title">false</item>
     <item type="id" name="days_view">false</item>
     <item type="id" name="update_apk_content">false</item>
     <item type="id" name="multi_devices_err_title">false</item>
@@ -252,17 +359,29 @@
     <item type="id" name="CropImageView">false</item>
     <item type="id" name="ImageView_image">false</item>
     <item type="id" name="CropOverlayView">false</item>
+    <item type="id" name="content_txt">false</item>
     <item type="id" name="msg">false</item>
     <item type="id" name="bottom_bar_frame">false</item>
     <item type="id" name="left_button">false</item>
     <item type="id" name="bottom_bar_frame_split">false</item>
     <item type="id" name="right_button">false</item>
     <item type="id" name="dlg_empty_area_btn">false</item>
+    <item type="id" name="text_title">false</item>
+    <item type="id" name="weight_edit_delete">false</item>
+    <item type="id" name="text_first">false</item>
+    <item type="id" name="weight_edit_move">false</item>
+    <item type="id" name="text_second">false</item>
     <item type="id" name="txtMsg">false</item>
     <item type="id" name="btn1">false</item>
     <item type="id" name="btn2">false</item>
+    <item type="id" name="member_icon">false</item>
+    <item type="id" name="member_name">false</item>
+    <item type="id" name="member_content">false</item>
+    <item type="id" name="member_right_arrow">false</item>
     <item type="id" name="useragreement_info">false</item>
+    <item type="id" name="counter">false</item>
     <item type="id" name="dynamic_view">false</item>
+    <item type="id" name="header_sync_tip_split">false</item>
     <item type="id" name="header_sync_tip">false</item>
     <item type="id" name="day_active_chart">false</item>
     <item type="id" name="info_sleep_layout">false</item>
@@ -270,12 +389,16 @@
     <item type="id" name="info_step_piece_layout">false</item>
     <item type="id" name="float_sleep_info">false</item>
     <item type="id" name="float_step_info">false</item>
-    <item type="id" name="sleep_unwear_tip">false</item>
+    <item type="id" name="data_state_tip">false</item>
     <item type="id" name="mode_switch">false</item>
+    <item type="id" name="layout_prev_next">false</item>
+    <item type="id" name="btn_prev">false</item>
+    <item type="id" name="btn_next">false</item>
     <item type="id" name="float_sleep_type">false</item>
     <item type="id" name="float_sleep_extra">false</item>
     <item type="id" name="float_sleep_start_time">false</item>
     <item type="id" name="float_sleep_end_time">false</item>
+    <item type="id" name="float_time">false</item>
     <item type="id" name="float_step">false</item>
     <item type="id" name="info_step_unit">false</item>
     <item type="id" name="float_step_time_hour">false</item>
@@ -331,6 +454,11 @@
     <item type="id" name="sport_timeout_extra_notice_content">false</item>
     <item type="id" name="sport_timeout_notice_content">false</item>
     <item type="id" name="sport_timeout_operation_bn">false</item>
+    <item type="id" name="logout_title">false</item>
+    <item type="id" name="logout_content">false</item>
+    <item type="id" name="dimbtmbar">false</item>
+    <item type="id" name="desc">false</item>
+    <item type="id" name="action_list">false</item>
     <item type="id" name="mili_exit_login_info_tv">false</item>
     <item type="id" name="mili_edit_name">false</item>
     <item type="id" name="mili_rebind_top_area">false</item>
@@ -357,7 +485,8 @@
     <item type="id" name="info_height_wheel">false</item>
     <item type="id" name="info_nick_name">false</item>
     <item type="id" name="info_person_signature">false</item>
-    <item type="id" name="info_weight_wheel">false</item>
+    <item type="id" name="info_weight_int_wheel">false</item>
+    <item type="id" name="info_weight_decimal_wheel">false</item>
     <item type="id" name="person_info_left_hand_area">false</item>
     <item type="id" name="person_info_left_hand_txt">false</item>
     <item type="id" name="person_info_right_hand_area">false</item>
@@ -369,12 +498,15 @@
     <item type="id" name="progress_txt">false</item>
     <item type="id" name="ranking_lv">false</item>
     <item type="id" name="timing">false</item>
-    <item type="id" name="description">false</item>
+    <item type="id" name="info_steps">false</item>
+    <item type="id" name="info_speed">false</item>
+    <item type="id" name="label_input">false</item>
+    <item type="id" name="hot_title">false</item>
+    <item type="id" name="hot_list">false</item>
     <item type="id" name="pace_head_layout">false</item>
     <item type="id" name="listView">false</item>
     <item type="id" name="title_head">false</item>
     <item type="id" name="rl_head">false</item>
-    <item type="id" name="strut">false</item>
     <item type="id" name="tvv_miles_fastest">false</item>
     <item type="id" name="tvl_miles_fastest">false</item>
     <item type="id" name="tvv_km_slowest">false</item>
@@ -384,14 +516,18 @@
     <item type="id" name="tv_costtime">false</item>
     <item type="id" name="tv_pace">false</item>
     <item type="id" name="tv_speed">false</item>
-    <item type="id" name="line">false</item>
     <item type="id" name="tr_item">false</item>
-    <item type="id" name="switcher">false</item>
+    <item type="id" name="auto_pause_enabled">false</item>
+    <item type="id" name="auto_pause_switcher">false</item>
+    <item type="id" name="pace_notify_desc">false</item>
+    <item type="id" name="no_bracelet_desc">false</item>
+    <item type="id" name="pace_notify_switcher">false</item>
     <item type="id" name="speed_desc">false</item>
     <item type="id" name="set_speed">false</item>
     <item type="id" name="pace_containter">false</item>
     <item type="id" name="pace_desc">false</item>
     <item type="id" name="set_low_pace">false</item>
+    <item type="id" name="marathon_convert_desc">false</item>
     <item type="id" name="info_gender">false</item>
     <item type="id" name="goal_summary">false</item>
     <item type="id" name="info_age_area">false</item>
@@ -400,8 +536,10 @@
     <item type="id" name="speed_summary">false</item>
     <item type="id" name="info_time_cost">false</item>
     <item type="id" name="info_start_time">false</item>
-    <item type="id" name="info_average_speed">false</item>
+    <item type="id" name="bottom_button">false</item>
     <item type="id" name="share_content">false</item>
+    <item type="id" name="simple_track">false</item>
+    <item type="id" name="loading_track">false</item>
     <item type="id" name="select_image_camera_area">false</item>
     <item type="id" name="select_image_local_area">false</item>
     <item type="id" name="enable_hidden_feature">false</item>
@@ -431,19 +569,27 @@
     <item type="id" name="new_firmware_version">false</item>
     <item type="id" name="firmware_change_log">false</item>
     <item type="id" name="firmware_upgrade">false</item>
+    <item type="id" name="incoming_call_info_1">false</item>
+    <item type="id" name="incoming_call_help_img">false</item>
+    <item type="id" name="incoming_call_info_2">false</item>
+    <item type="id" name="incoming_call_cur_value">false</item>
     <item type="id" name="wheel">false</item>
+    <item type="id" name="share_list">false</item>
+    <item type="id" name="dismiss_button">false</item>
     <item type="id" name="share_to_miliao_target_friends_fl">false</item>
     <item type="id" name="share_to_miliao_target_union_fl">false</item>
     <item type="id" name="share_to_miliao_target_feeds_fl">false</item>
     <item type="id" name="chart_date_line_bg">false</item>
     <item type="id" name="statistic_chart">false</item>
     <item type="id" name="next_statistic_chart">false</item>
+    <item type="id" name="user_picker">false</item>
     <item type="id" name="info_sleep_daily_layout">false</item>
     <item type="id" name="info_sleep_weekly_layout">false</item>
     <item type="id" name="info_sleep_monthly_layout">false</item>
     <item type="id" name="info_step_daily_layout">false</item>
     <item type="id" name="info_step_weekly_layout">false</item>
     <item type="id" name="info_step_monthly_layout">false</item>
+    <item type="id" name="info_weight_layout">false</item>
     <item type="id" name="mode_statistic_zoom_in">false</item>
     <item type="id" name="mode_statistic_zoom_out">false</item>
     <item type="id" name="info_step_distance_average">false</item>
@@ -461,8 +607,26 @@
     <item type="id" name="info_step_run_duration_average">false</item>
     <item type="id" name="info_step_run_calories_average">false</item>
     <item type="id" name="info_step_run_calories_average_unit">false</item>
+    <item type="id" name="info_weight_body_type">false</item>
+    <item type="id" name="info_weight">false</item>
+    <item type="id" name="info_weight_unit">false</item>
+    <item type="id" name="info_weight_bmi">false</item>
     <item type="id" name="useragreement_ux_checkbox">false</item>
     <item type="id" name="useragreement_ux">false</item>
+    <item type="id" name="indicator_layout">false</item>
+    <item type="id" name="watermark_logo">false</item>
+    <item type="id" name="rl_drag_line_area">false</item>
+    <item type="id" name="rl_drag_line">false</item>
+    <item type="id" name="watermark_line_icon">false</item>
+    <item type="id" name="rl_watermark_1">false</item>
+    <item type="id" name="km_rl">false</item>
+    <item type="id" name="tv_km_value">false</item>
+    <item type="id" name="tv_km_unit">false</item>
+    <item type="id" name="line1">false</item>
+    <item type="id" name="rl_watermark_2">false</item>
+    <item type="id" name="iv_watermark_local">false</item>
+    <item type="id" name="tv_location">false</item>
+    <item type="id" name="line2">false</item>
     <item type="id" name="webview_container">false</item>
     <item type="id" name="webview_padding">false</item>
     <item type="id" name="webview_progress">false</item>
@@ -480,6 +644,7 @@
     <item type="id" name="gps_clean_button">false</item>
     <item type="id" name="gps_test_button">false</item>
     <item type="id" name="help_back_txt">false</item>
+    <item type="id" name="help_content_area">false</item>
     <item type="id" name="sport_progresscircle_view">false</item>
     <item type="id" name="bracelet_offline">false</item>
     <item type="id" name="circle_view_sport_progress_state">false</item>
@@ -487,6 +652,24 @@
     <item type="id" name="linearLayout1">false</item>
     <item type="id" name="textView1">false</item>
     <item type="id" name="textView2">false</item>
+    <item type="id" name="member_info_user_info_area">false</item>
+    <item type="id" name="member_info_edit_area">false</item>
+    <item type="id" name="info_gender_value">false</item>
+    <item type="id" name="info_age_value">false</item>
+    <item type="id" name="info_height_value">false</item>
+    <item type="id" name="info_weight_value">false</item>
+    <item type="id" name="device_set_goal">false</item>
+    <item type="id" name="device_set_goal_text">false</item>
+    <item type="id" name="del_member">false</item>
+    <item type="id" name="member_page_center_area">false</item>
+    <item type="id" name="member_page_icon">false</item>
+    <item type="id" name="member_page_center_right_area">false</item>
+    <item type="id" name="for_capture_focus_insteadof_edit">false</item>
+    <item type="id" name="member_page_nickname">false</item>
+    <item type="id" name="edit_member_name">false</item>
+    <item type="id" name="member_page_ave_steps">false</item>
+    <item type="id" name="member_page_bmi">false</item>
+    <item type="id" name="member_page_figure">false</item>
     <item type="id" name="device_battery_area">false</item>
     <item type="id" name="battery_pie_chart">false</item>
     <item type="id" name="device_battery_percent_text">false</item>
@@ -500,13 +683,10 @@
     <item type="id" name="multi_devices_err_search_again">false</item>
     <item type="id" name="person_info_user_info_area">false</item>
     <item type="id" name="person_info_edit_area">false</item>
-    <item type="id" name="device_set_goal">false</item>
-    <item type="id" name="device_set_goal_text">false</item>
-    <item type="id" name="info_gender_value">false</item>
-    <item type="id" name="info_age_value">false</item>
-    <item type="id" name="info_height_value">false</item>
-    <item type="id" name="info_weight">false</item>
-    <item type="id" name="info_weight_value">false</item>
+    <item type="id" name="info_weight_goal">false</item>
+    <item type="id" name="info_weight_goal_value">false</item>
+    <item type="id" name="info_unit_set">false</item>
+    <item type="id" name="info_unit_value">false</item>
     <item type="id" name="mili_exit_login">false</item>
     <item type="id" name="person_page_center_area">false</item>
     <item type="id" name="person_page_icon">false</item>
@@ -516,6 +696,7 @@
     <item type="id" name="person_page_signiture">false</item>
     <item type="id" name="person_page_location">false</item>
     <item type="id" name="person_page_uid">false</item>
+    <item type="id" name="person_info_static_layout_id">false</item>
     <item type="id" name="person_page_ave_steps">false</item>
     <item type="id" name="person_page_weared_days">false</item>
     <item type="id" name="person_page_odo">false</item>
@@ -523,9 +704,11 @@
     <item type="id" name="person_page_statistic_btn">false</item>
     <item type="id" name="person_page_exchange_area">false</item>
     <item type="id" name="person_page_exchange_btn">false</item>
+    <item type="id" name="picker_grid">false</item>
     <item type="id" name="fl_inner">false</item>
     <item type="id" name="pull_to_refresh_image">false</item>
     <item type="id" name="pull_to_refresh_progress">false</item>
+    <item type="id" name="loading_icon">false</item>
     <item type="id" name="pull_to_refresh_text">false</item>
     <item type="id" name="pull_to_refresh_sub_text">false</item>
     <item type="id" name="ruler_scroller_view">false</item>
@@ -551,7 +734,13 @@
     <item type="id" name="searched_device_item_mac_tv">false</item>
     <item type="id" name="searched_device_item_signal_tv">false</item>
     <item type="id" name="searched_device_item_signal_bar">false</item>
-    <item type="id" name="fragment_setting_sliding_layout">false</item>
+    <item type="id" name="select_devices_band_area">false</item>
+    <item type="id" name="select_devices_band_icon">false</item>
+    <item type="id" name="select_devices_band_txt">false</item>
+    <item type="id" name="select_devices_scale_area">false</item>
+    <item type="id" name="select_devices_scale_icon">false</item>
+    <item type="id" name="select_devices_scale_txt">false</item>
+    <item type="id" name="select_devices_exit">false</item>
     <item type="id" name="mili_top_bar">false</item>
     <item type="id" name="device_find_bracelet">false</item>
     <item type="id" name="device_find_bracelet_tv">false</item>
@@ -571,20 +760,27 @@
     <item type="id" name="bind_qq_heath_state">false</item>
     <item type="id" name="device_weixin_enter_ll">false</item>
     <item type="id" name="device_weixin_enter_text">false</item>
-    <item type="id" name="device_connected_broadcast">false</item>
-    <item type="id" name="connected_broadcast_text">false</item>
-    <item type="id" name="connected_broadcast_switch">false</item>
-    <item type="id" name="device_connected_broadcast_split">false</item>
     <item type="id" name="device_unbind">false</item>
     <item type="id" name="mili_rebind_tips">false</item>
     <item type="id" name="device_firmware_version">false</item>
     <item type="id" name="device_firmware_version_text">false</item>
     <item type="id" name="device_unbind_in_mask">false</item>
     <item type="id" name="mili_rebind_tips_in_mask">false</item>
+    <item type="id" name="weight_settings_family">false</item>
+    <item type="id" name="family_member">false</item>
+    <item type="id" name="weight_settings_merge_ll">false</item>
+    <item type="id" name="weight_settings_merge_switch">false</item>
+    <item type="id" name="weight_settings_about">false</item>
+    <item type="id" name="weight_settings_about_tv">false</item>
     <item type="id" name="device_not_support_title">false</item>
     <item type="id" name="device_not_support_info">false</item>
     <item type="id" name="system_not_support_info">false</item>
     <item type="id" name="exit">false</item>
+    <item type="id" name="head_title">false</item>
+    <item type="id" name="user_icon">false</item>
+    <item type="id" name="user_more">false</item>
+    <item type="id" name="user_name">false</item>
+    <item type="id" name="user_name_right">false</item>
     <item type="id" name="active_step">false</item>
     <item type="id" name="active_step_value">false</item>
     <item type="id" name="active_step_distance">false</item>
@@ -609,7 +805,6 @@
     <item type="id" name="step">false</item>
     <item type="id" name="step_unit">false</item>
     <item type="id" name="step_tip">false</item>
-    <item type="id" name="rl_info">false</item>
     <item type="id" name="step_distance">false</item>
     <item type="id" name="step_calorie">false</item>
     <item type="id" name="sleep_container">false</item>
@@ -619,6 +814,13 @@
     <item type="id" name="sleep_min_unit">false</item>
     <item type="id" name="sleep_tip">false</item>
     <item type="id" name="sleep_deep_time">false</item>
+    <item type="id" name="weight_container">false</item>
+    <item type="id" name="weight">false</item>
+    <item type="id" name="weight_unit">false</item>
+    <item type="id" name="weight_tip">false</item>
+    <item type="id" name="weight_info">false</item>
+    <item type="id" name="weight_bmi">false</item>
+    <item type="id" name="weight_bmi_description">false</item>
     <item type="id" name="button1">false</item>
     <item type="id" name="imagepart1">false</item>
     <item type="id" name="imagepart2">false</item>
@@ -631,19 +833,48 @@
     <item type="id" name="v2">false</item>
     <item type="id" name="menu_smart_alarms">false</item>
     <item type="id" name="v3">false</item>
+    <item type="id" name="menu_sensorhub">false</item>
+    <item type="id" name="menu_sensorhub_split">false</item>
     <item type="id" name="menu_person_info">false</item>
     <item type="id" name="v4">false</item>
     <item type="id" name="menu_lab_factory">false</item>
     <item type="id" name="menu_lab_factory_new_sign">false</item>
+    <item type="id" name="v8">false</item>
+    <item type="id" name="menu_service">false</item>
+    <item type="id" name="menu_service_new_sign">false</item>
     <item type="id" name="v5">false</item>
-    <item type="id" name="menu_share">false</item>
+    <item type="id" name="menu_weight">false</item>
     <item type="id" name="v6">false</item>
-    <item type="id" name="menu_about">false</item>
+    <item type="id" name="menu_share">false</item>
     <item type="id" name="v7">false</item>
+    <item type="id" name="menu_about">false</item>
     <item type="id" name="select_marker">false</item>
     <item type="id" name="week_tv">false</item>
     <item type="id" name="day_repeat_select_mark">false</item>
-    <item type="id" name="content_txt">false</item>
+    <item type="id" name="weight_pb">false</item>
+    <item type="id" name="weight_tv">false</item>
+    <item type="id" name="weight_value_tv">false</item>
+    <item type="id" name="weight_unit_tv">false</item>
+    <item type="id" name="weight_bmi_tv">false</item>
+    <item type="id" name="weight_tips_tv">false</item>
+    <item type="id" name="weight_test_info_ll">false</item>
+    <item type="id" name="weight_test_device_name">false</item>
+    <item type="id" name="weight_test_device_address">false</item>
+    <item type="id" name="weight_test_device_signal">false</item>
+    <item type="id" name="weight_test_device_status">false</item>
+    <item type="id" name="weight_test_device_version">false</item>
+    <item type="id" name="weight_test_device_fw_upgrade_btn">false</item>
+    <item type="id" name="top_changed_layout">false</item>
+    <item type="id" name="line_divider">false</item>
+    <item type="id" name="head_sub_title">false</item>
+    <item type="id" name="edit_layout">false</item>
+    <item type="id" name="other_img">false</item>
+    <item type="id" name="add_new_img">false</item>
+    <item type="id" name="frame_viewpager">false</item>
+    <item type="id" name="line_divider1">false</item>
+    <item type="id" name="chooseuser_view_pager">false</item>
+    <item type="id" name="chooseuser_indicator">false</item>
+    <item type="id" name="chooseuser_cancel">false</item>
     <item type="id" name="action_settings">false</item>
     <item type="id" name="action_pop_my_bracelet">false</item>
     <item type="id" name="action_pop_smart_alarms">false</item>
@@ -651,5 +882,6 @@
     <item type="id" name="action_pop_screen_unlock">false</item>
     <item type="id" name="action_pop_about">false</item>
     <item type="id" name="action_local_ota">false</item>
+    <item type="id" name="menu_done">false</item>
     <item type="id" name="dev_mode">false</item>
 </resources>

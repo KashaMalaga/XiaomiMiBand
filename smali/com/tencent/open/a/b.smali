@@ -1013,13 +1013,13 @@
 .end method
 
 .method private a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;Ljava/lang/String;)V
-    .locals 15
+    .locals 14
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    sub-long v8, v2, p3
+    sub-long v7, v2, p3
 
     const-string v2, "cgi_report_debug"
 
@@ -1057,7 +1057,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v3, v8, v9}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
@@ -1091,11 +1091,9 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    move-object/from16 v0, p1
+    move/from16 v0, p9
 
-    move/from16 v1, p9
-
-    invoke-direct {p0, v0, v1}, Lcom/tencent/open/a/b;->b(Landroid/content/Context;I)I
+    invoke-direct {p0, p1, v0}, Lcom/tencent/open/a/b;->b(Landroid/content/Context;I)I
 
     move-result v2
 
@@ -1103,56 +1101,64 @@
 
     div-int v2, v3, v2
 
-    if-gtz v2, :cond_1
+    if-gtz v2, :cond_0
 
     const/4 v2, 0x1
 
-    :cond_0
+    move v4, v2
+
     :goto_0
-    invoke-direct/range {p0 .. p1}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;)Ljava/lang/String;
+    invoke-direct {p0, p1}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;)Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v3
 
-    iget-object v3, p0, Lcom/tencent/open/a/b;->f:Lcom/tencent/open/a/d;
+    iget-object v2, p0, Lcom/tencent/open/a/b;->f:Lcom/tencent/open/a/d;
 
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v4
 
     const-string v5, ""
 
-    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v4
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v4
 
-    move-object/from16 v6, p2
+    move-object/from16 v5, p2
 
-    move/from16 v7, p9
+    move/from16 v6, p9
 
-    move-wide/from16 v10, p5
+    move-wide/from16 v9, p5
 
-    move-wide/from16 v12, p7
+    move-wide/from16 v11, p7
 
-    move-object/from16 v14, p11
+    move-object/from16 v13, p11
 
-    invoke-virtual/range {v3 .. v14}, Lcom/tencent/open/a/d;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IJJJLjava/lang/String;)Z
+    invoke-virtual/range {v2 .. v13}, Lcom/tencent/open/a/d;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IJJJLjava/lang/String;)Z
 
     return-void
 
-    :cond_1
+    :cond_0
     const/16 v3, 0x64
 
-    if-le v2, v3, :cond_0
+    if-le v2, v3, :cond_1
 
     const/16 v2, 0x64
+
+    move v4, v2
+
+    goto :goto_0
+
+    :cond_1
+    move v4, v2
 
     goto :goto_0
 .end method
@@ -1579,35 +1585,35 @@
 
 # virtual methods
 .method public a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;)V
-    .locals 15
+    .locals 13
 
-    const-string v12, ""
+    const-string v11, ""
 
-    const/4 v13, 0x0
+    const/4 v12, 0x0
 
-    move-object v1, p0
+    move-object v0, p0
 
-    move-object/from16 v2, p1
+    move-object v1, p1
 
-    move-object/from16 v3, p2
+    move-object v2, p2
 
-    move-wide/from16 v4, p3
+    move-wide/from16 v3, p3
 
-    move-wide/from16 v6, p5
+    move-wide/from16 v5, p5
 
-    move-wide/from16 v8, p7
+    move-wide/from16 v7, p7
 
-    move/from16 v10, p9
+    move/from16 v9, p9
 
-    move-object/from16 v11, p10
+    move-object/from16 v10, p10
 
-    invoke-virtual/range {v1 .. v13}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual/range {v0 .. v12}, Lcom/tencent/open/a/b;->a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 .method public a(Landroid/content/Context;Ljava/lang/String;JJJILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 3
+    .locals 2
 
     const/4 v1, 0x1
 

@@ -26,7 +26,7 @@
 .end method
 
 .method private a(J)J
-    .locals 5
+    .locals 4
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -44,7 +44,7 @@
 .end method
 
 .method private a(Landroid/app/AlarmManager;JLandroid/app/PendingIntent;)V
-    .locals 6
+    .locals 5
 
     const-class v0, Landroid/app/AlarmManager;
 
@@ -113,7 +113,7 @@
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 .end method
@@ -150,7 +150,7 @@
 
     const-string v0, "unregister timer"
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->b(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -221,7 +221,7 @@
     :goto_1
     const-string v0, "register timer"
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->b(Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -284,7 +284,7 @@
 
     :cond_0
     :try_start_1
-    invoke-static {}, Lcom/xiaomi/f/u;->d()I
+    invoke-static {}, Lcom/xiaomi/g/u;->d()I
 
     move-result v0
 

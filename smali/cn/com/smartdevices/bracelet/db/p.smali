@@ -3,11 +3,9 @@
 
 
 # static fields
-.field public static final a:Ljava/lang/String; = "CREATE TEMP VIEW trackinfoview AS SELECT *, strftime(\'%Y-%m\',trackinfo.date) AS month FROM trackinfo"
+.field public static final a:Ljava/lang/String; = "selfgoal"
 
-.field public static final b:Ljava/lang/String; = "DROP VIEW trackinfoview"
-
-.field public static final c:Ljava/lang/String; = "trackinfoview"
+.field static final b:Ljava/lang/String; = "CREATE TABLE IF NOT EXISTS selfgoal(_id INTEGER PRIMARY KEY AUTOINCREMENT,value INTEGER,weight INTEGER,reserved1 TEXT,reserved2 TEXT,sync INTEGER DEFAULT 0);"
 
 
 # direct methods

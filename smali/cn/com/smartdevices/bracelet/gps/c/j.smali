@@ -621,7 +621,7 @@
 
     move-result-object v0
 
-    invoke-static {v4, v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
@@ -798,7 +798,7 @@
 .end method
 
 .method a(Lcn/com/smartdevices/bracelet/gps/c/h;)Ljava/util/List;
-    .locals 7
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -811,7 +811,7 @@
         }
     .end annotation
 
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -819,7 +819,7 @@
 
     iget v1, p1, Lcn/com/smartdevices/bracelet/gps/c/h;->a:F
 
-    cmpl-float v1, v1, v6
+    cmpl-float v1, v1, v5
 
     if-lez v1, :cond_1
 
@@ -912,17 +912,17 @@
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_1
-    iget-wide v2, p1, Lcn/com/smartdevices/bracelet/gps/c/h;->c:J
+    iget-wide v1, p1, Lcn/com/smartdevices/bracelet/gps/c/h;->c:J
 
-    const-wide/16 v4, 0x0
+    const-wide/16 v3, 0x0
 
-    cmp-long v1, v2, v4
+    cmp-long v1, v1, v3
 
     if-lez v1, :cond_2
 
-    iget-wide v2, p1, Lcn/com/smartdevices/bracelet/gps/c/h;->c:J
+    iget-wide v1, p1, Lcn/com/smartdevices/bracelet/gps/c/h;->c:J
 
-    invoke-static {v2, v3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    invoke-static {v1, v2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v1
 
@@ -945,7 +945,7 @@
     :cond_2
     iget v1, p1, Lcn/com/smartdevices/bracelet/gps/c/h;->b:F
 
-    cmpl-float v1, v1, v6
+    cmpl-float v1, v1, v5
 
     if-lez v1, :cond_3
 
@@ -961,9 +961,9 @@
 
     iget v1, p1, Lcn/com/smartdevices/bracelet/gps/c/h;->b:F
 
-    float-to-long v2, v1
+    float-to-long v1, v1
 
-    invoke-static {v2, v3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+    invoke-static {v1, v2}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v1
 

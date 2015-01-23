@@ -3,7 +3,8 @@
   xmlns:android="http://schemas.android.com/apk/res/android">
     <RelativeLayout android:background="@color/bg_color_blue" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_h">
         <TextView android:id="@id/back_btn" android:text="@string/back" style="@style/BackButton" />
-        <TextView android:enabled="false" android:id="@id/unbind_partner" android:visibility="invisible" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/lab_factory_cancel_deauthorize" android:layout_alignParentRight="true" style="@style/RightButton" />
+        <ImageButton android:enabled="false" android:id="@id/unbind_partner" android:background="@drawable/ic_unbind_selector" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_toLeftOf="@id/share_button" android:layout_centerVertical="true" />
+        <ImageButton android:id="@id/share_button" android:background="@drawable/ic_share_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
     </RelativeLayout>
     <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
         <WebView android:id="@id/open_web_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
@@ -12,5 +13,6 @@
             <TextView android:id="@id/label" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/no_network_connection_retry" android:layout_centerInParent="true" />
         </RelativeLayout>
         <ProgressBar android:id="@id/load_progress" android:padding="0.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_margin="0.0dip" android:progress="1" android:progressDrawable="@drawable/bar_progress" style="?android:attr/progressBarStyleHorizontal" />
+        <FrameLayout android:layout_gravity="bottom" android:id="@id/share_pane_container" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="@dimen/running_share_pane_margin" />
     </FrameLayout>
 </LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="55.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/member_icon" android:background="@drawable/default_userinfo" android:layout_width="@dimen/icon_radius" android:layout_height="@dimen/icon_radius" android:layout_marginLeft="@dimen/member_left_margin" android:layout_marginTop="@dimen/icon_margin" android:layout_marginBottom="@dimen/icon_margin" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <TextView android:textColor="@color/text_color_black" android:id="@id/member_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/text_left_margin" android:singleLine="true" android:layout_toRightOf="@id/member_icon" android:layout_centerVertical="true" />
+    <TextView android:textColor="@color/text_color_gray" android:id="@id/member_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/text_right_margin" android:layout_toLeftOf="@id/member_right_arrow" android:layout_centerVertical="true" />
+    <ImageView android:id="@id/member_right_arrow" android:background="@drawable/ic_indicator_right_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/member_right_margin" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

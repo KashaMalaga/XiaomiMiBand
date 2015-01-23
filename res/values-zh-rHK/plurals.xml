@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="numberOfPullUpdateReport">
+        <item quantity="other">更新了%s條記錄</item>
+        <item quantity="one">更新了%s條記錄</item>
+    </plurals>
+</resources>

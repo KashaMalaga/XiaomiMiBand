@@ -1,63 +1,58 @@
-.class final Lcn/com/smartdevices/bracelet/lab/ui/E;
+.class Lcn/com/smartdevices/bracelet/lab/ui/E;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Landroid/view/animation/Animation$AnimationListener;
 
+# static fields
+.field static final a:I = 0x7d0
 
-# instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
+.field static b:J
 
 
 # direct methods
-.method private constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/E;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
+    const-wide/16 v0, 0x0
+
+    sput-wide v0, Lcn/com/smartdevices/bracelet/lab/ui/E;->b:J
+
+    return-void
+.end method
+
+.method private constructor <init>()V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;Lcn/com/smartdevices/bracelet/lab/ui/A;)V
-    .locals 0
+.method static a()Z
+    .locals 6
 
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/lab/ui/E;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;)V
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    return-void
-.end method
+    move-result-wide v0
 
+    sget-wide v2, Lcn/com/smartdevices/bracelet/lab/ui/E;->b:J
 
-# virtual methods
-.method public onAnimationEnd(Landroid/view/animation/Animation;)V
-    .locals 2
+    sub-long v2, v0, v2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/E;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
+    const-wide/16 v4, 0x7d0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->a(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;)Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;
+    cmp-long v2, v2, v4
 
-    move-result-object v0
+    if-gtz v2, :cond_0
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    :goto_0
+    return v0
 
-    move-result-object v1
+    :cond_0
+    sput-wide v0, Lcn/com/smartdevices/bracelet/lab/ui/E;->b:J
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->a(Ljava/lang/String;)V
+    const/4 v0, 0x1
 
-    return-void
-.end method
-
-.method public onAnimationRepeat(Landroid/view/animation/Animation;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onAnimationStart(Landroid/view/animation/Animation;)V
-    .locals 0
-
-    return-void
+    goto :goto_0
 .end method

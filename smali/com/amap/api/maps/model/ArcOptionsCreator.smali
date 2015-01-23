@@ -63,15 +63,15 @@
 
     invoke-virtual {v2, v5}, Landroid/os/Bundle;->getDouble(Ljava/lang/String;)D
 
-    move-result-wide v6
+    move-result-wide v5
 
-    const-string v5, "passedlng"
+    const-string v7, "passedlng"
 
-    invoke-virtual {v2, v5}, Landroid/os/Bundle;->getDouble(Ljava/lang/String;)D
+    invoke-virtual {v2, v7}, Landroid/os/Bundle;->getDouble(Ljava/lang/String;)D
 
-    move-result-wide v8
+    move-result-wide v7
 
-    invoke-direct {v4, v6, v7, v8, v9}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v4, v5, v6, v7, v8}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     new-instance v5, Lcom/amap/api/maps/model/LatLng;
 

@@ -5,11 +5,11 @@
 # instance fields
 .field private a:Z
 
-.field private b:Lcn/com/smartdevices/bracelet/b/b;
+.field private b:Lcn/com/smartdevices/bracelet/f/c;
 
 
 # direct methods
-.method public constructor <init>(Lcn/com/smartdevices/bracelet/a/b;ZLcn/com/smartdevices/bracelet/b/b;)V
+.method public constructor <init>(Lcn/com/smartdevices/bracelet/a/b;ZLcn/com/smartdevices/bracelet/f/c;)V
     .locals 1
 
     invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/a/v;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
@@ -20,11 +20,11 @@
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/a/k;->b:Lcn/com/smartdevices/bracelet/b/b;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/a/k;->b:Lcn/com/smartdevices/bracelet/f/c;
 
     iput-boolean p2, p0, Lcn/com/smartdevices/bracelet/a/k;->a:Z
 
-    iput-object p3, p0, Lcn/com/smartdevices/bracelet/a/k;->b:Lcn/com/smartdevices/bracelet/b/b;
+    iput-object p3, p0, Lcn/com/smartdevices/bracelet/a/k;->b:Lcn/com/smartdevices/bracelet/f/c;
 
     return-void
 .end method
@@ -53,9 +53,9 @@
 
     if-eq v0, v1, :cond_1
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/a/k;->b:Lcn/com/smartdevices/bracelet/b/b;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/a/k;->b:Lcn/com/smartdevices/bracelet/f/c;
 
-    invoke-interface {v1, v0}, Lcn/com/smartdevices/bracelet/b/b;->a(I)V
+    invoke-interface {v1, v0}, Lcn/com/smartdevices/bracelet/f/c;->a(I)V
 
     :cond_1
     sget-object v1, Lcn/com/smartdevices/bracelet/a/k;->l:Ljava/lang/String;
@@ -78,16 +78,16 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/k;->m:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/a/k;->a:Z
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/a/k;->b:Lcn/com/smartdevices/bracelet/b/b;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/a/k;->b:Lcn/com/smartdevices/bracelet/f/c;
 
-    invoke-virtual {v0, v1, v2}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->enableRealtimeStepNotification(ZLcn/com/smartdevices/bracelet/b/b;)Z
+    invoke-virtual {v0, v1, v2}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->enableRealtimeStepNotification(ZLcn/com/smartdevices/bracelet/f/c;)Z
 
     move-result v0
 
@@ -123,7 +123,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p1, :cond_3
 

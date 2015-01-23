@@ -66,7 +66,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -80,7 +80,7 @@
 
     const-string v1, "Start Location!!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/j;->c:Landroid/location/LocationManager;
 
@@ -124,7 +124,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -194,7 +194,7 @@
 
     const-string v1, "Stop Location!!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/j;->c:Landroid/location/LocationManager;
 
@@ -203,8 +203,16 @@
     return-void
 .end method
 
+.method public c()Lcn/com/smartdevices/bracelet/location/Location;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
 .method public onLocationChanged(Landroid/location/Location;)V
-    .locals 9
+    .locals 8
 
     const-string v0, "SystemLocationService"
 
@@ -230,7 +238,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "SystemLocationService"
 
@@ -256,7 +264,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "SystemLocationService"
 
@@ -282,28 +290,28 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v1, Landroid/location/Geocoder;
+    new-instance v0, Landroid/location/Geocoder;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/location/j;->b:Landroid/content/Context;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/location/j;->b:Landroid/content/Context;
 
-    invoke-direct {v1, v0}, Landroid/location/Geocoder;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Landroid/location/Geocoder;-><init>(Landroid/content/Context;)V
 
-    const/4 v7, 0x0
+    const/4 v6, 0x0
 
     :try_start_0
     invoke-virtual {p1}, Landroid/location/Location;->getLatitude()D
 
-    move-result-wide v2
+    move-result-wide v1
 
     invoke-virtual {p1}, Landroid/location/Location;->getLongitude()D
 
-    move-result-wide v4
+    move-result-wide v3
 
-    const/4 v6, 0x1
+    const/4 v5, 0x1
 
-    invoke-virtual/range {v1 .. v6}, Landroid/location/Geocoder;->getFromLocation(DDI)Ljava/util/List;
+    invoke-virtual/range {v0 .. v5}, Landroid/location/Geocoder;->getFromLocation(DDI)Ljava/util/List;
 
     move-result-object v0
 
@@ -327,7 +335,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz v0, :cond_2
 
@@ -436,7 +444,7 @@
 
     move-object v1, v0
 
-    move-object v0, v7
+    move-object v0, v6
 
     :goto_1
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
@@ -446,16 +454,16 @@
     :catch_1
     move-exception v0
 
-    move-object v8, v0
+    move-object v7, v0
 
     move-object v0, v1
 
-    move-object v1, v8
+    move-object v1, v7
 
     goto :goto_1
 
     :cond_2
-    move-object v0, v7
+    move-object v0, v6
 
     goto :goto_0
 .end method

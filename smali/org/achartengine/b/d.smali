@@ -33,7 +33,7 @@
 
 # virtual methods
 .method public declared-synchronized a(DD)V
-    .locals 3
+    .locals 2
 
     monitor-enter p0
 
@@ -155,7 +155,7 @@
 .end method
 
 .method public d()Lorg/achartengine/b/h;
-    .locals 8
+    .locals 7
 
     new-instance v1, Lorg/achartengine/b/h;
 
@@ -176,25 +176,25 @@
 
     add-int/lit8 v3, v0, 0x1
 
-    int-to-double v4, v3
+    int-to-double v3, v3
 
     invoke-virtual {p0, v0}, Lorg/achartengine/b/d;->d(I)D
 
-    move-result-wide v6
+    move-result-wide v5
 
-    invoke-virtual {v1, v4, v5, v6, v7}, Lorg/achartengine/b/h;->a(DD)V
+    invoke-virtual {v1, v3, v4, v5, v6}, Lorg/achartengine/b/h;->a(DD)V
 
-    int-to-double v4, v0
+    int-to-double v3, v0
 
-    const-wide v6, 0x3ff000010c6f7a0bL
+    const-wide v5, 0x3ff000010c6f7a0bL
 
-    add-double/2addr v4, v6
+    add-double/2addr v3, v5
 
     invoke-virtual {p0, v0}, Lorg/achartengine/b/d;->e(I)D
 
-    move-result-wide v6
+    move-result-wide v5
 
-    invoke-virtual {v1, v4, v5, v6, v7}, Lorg/achartengine/b/h;->a(DD)V
+    invoke-virtual {v1, v3, v4, v5, v6}, Lorg/achartengine/b/h;->a(DD)V
 
     add-int/lit8 v0, v0, 0x1
 

@@ -1,210 +1,207 @@
-.class Lcn/com/smartdevices/bracelet/ui/cl;
-.super Landroid/os/Handler;
+.class public Lcn/com/smartdevices/bracelet/ui/cl;
+.super Lcn/com/smartdevices/bracelet/ui/U;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/ck;
+.field private a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+.field private b:Landroid/widget/EditText;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/ck;)V
+.method public constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cl;->a:Lcn/com/smartdevices/bracelet/ui/ck;
-
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/U;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public handleMessage(Landroid/os/Message;)V
-    .locals 4
+.method protected a()I
+    .locals 1
+
+    const v0, 0x7f03006e
+
+    return v0
+.end method
+
+.method protected c()V
+    .locals 5
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cl;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->personSignature:Ljava/lang/String;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cl;->b:Landroid/widget/EditText;
+
+    invoke-virtual {v1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cl;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    const-string v2, ""
+
+    iput-object v2, v1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->personSignature:Ljava/lang/String;
+
+    :goto_0
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cl;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    iget-object v1, v1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->personSignature:Ljava/lang/String;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/B;->b(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/cl;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    const v1, 0x7f0700dd
 
     const/4 v2, 0x0
 
-    iget v0, p1, Landroid/os/Message;->what:I
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v0
 
-    :cond_0
-    :goto_0
-    :pswitch_0
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    :goto_1
     return-void
 
-    :pswitch_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cl;->a:Lcn/com/smartdevices/bracelet/ui/ck;
+    :cond_0
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cl;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ck;->a(Lcn/com/smartdevices/bracelet/ui/ck;)Landroid/app/ProgressDialog;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/cl;->b:Landroid/widget/EditText;
 
-    move-result-object v0
+    invoke-virtual {v2}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
-    if-nez v0, :cond_0
+    move-result-object v2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cl;->a:Lcn/com/smartdevices/bracelet/ui/ck;
+    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cl;->a:Lcn/com/smartdevices/bracelet/ui/ck;
+    move-result-object v2
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/ui/ck;->getActivity()Landroid/app/Activity;
+    const-string v3, "\\s+"
 
-    move-result-object v1
+    const-string v4, ""
 
-    const-string v2, "\u4e0a\u4f20\u65e5\u5fd7\u6587\u4ef6"
+    invoke-virtual {v2, v3, v4}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    const-string v3, "\u51c6\u5907\u4e0a\u4f20\u65e5\u5fd7\u6587\u4ef6"
+    move-result-object v2
 
-    invoke-static {v1, v2, v3}, Landroid/app/ProgressDialog;->show(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Landroid/app/ProgressDialog;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/ck;->a(Lcn/com/smartdevices/bracelet/ui/ck;Landroid/app/ProgressDialog;)Landroid/app/ProgressDialog;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cl;->a:Lcn/com/smartdevices/bracelet/ui/ck;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ck;->a(Lcn/com/smartdevices/bracelet/ui/ck;)Landroid/app/ProgressDialog;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setCancelable(Z)V
+    iput-object v2, v1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->personSignature:Ljava/lang/String;
 
     goto :goto_0
-
-    :pswitch_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cl;->a:Lcn/com/smartdevices/bracelet/ui/ck;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ck;->a(Lcn/com/smartdevices/bracelet/ui/ck;)Landroid/app/ProgressDialog;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cl;->a:Lcn/com/smartdevices/bracelet/ui/ck;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ck;->a(Lcn/com/smartdevices/bracelet/ui/ck;)Landroid/app/ProgressDialog;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "\u5df2\u4e0a\u4f20\uff1a"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget v2, p1, Landroid/os/Message;->arg1:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, "%"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
-
-    goto :goto_0
-
-    :pswitch_3
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cl;->a:Lcn/com/smartdevices/bracelet/ui/ck;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ck;->a(Lcn/com/smartdevices/bracelet/ui/ck;)Landroid/app/ProgressDialog;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cl;->a:Lcn/com/smartdevices/bracelet/ui/ck;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ck;->a(Lcn/com/smartdevices/bracelet/ui/ck;)Landroid/app/ProgressDialog;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cl;->a:Lcn/com/smartdevices/bracelet/ui/ck;
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/ck;->a(Lcn/com/smartdevices/bracelet/ui/ck;Landroid/app/ProgressDialog;)Landroid/app/ProgressDialog;
 
     :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cl;->a:Lcn/com/smartdevices/bracelet/ui/ck;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cl;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/ck;->getActivity()Landroid/app/Activity;
+    iget-object v1, v1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->personSignature:Ljava/lang/String;
 
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cl;->a:Lcn/com/smartdevices/bracelet/ui/ck;
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/cl;->dismiss()V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/ck;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    const-string v1, "\u4e0a\u4f20\u6210\u529f\uff0c\u611f\u8c22\u60a8\u7684\u652f\u6301\uff01"
-
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    goto/16 :goto_0
+    goto :goto_1
 
     :cond_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cl;->a:Lcn/com/smartdevices/bracelet/ui/ck;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cl;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/ck;->getActivity()Landroid/app/Activity;
+    const/4 v1, 0x2
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->setNeedSyncServer(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cl;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
+
+    invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
 
     move-result-object v0
 
-    const-string v1, "\u4e0a\u4f20\u5931\u8d25\uff0c\u60a8\u53ef\u4ee5\u91cd\u65b0\u4e0a\u4f20\uff0c\u611f\u8c22\u60a8\u7684\u652f\u6301\uff01"
+    new-instance v1, Lcn/com/smartdevices/bracelet/eventbus/EventPersonInfoUpdate;
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
+    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/eventbus/EventPersonInfoUpdate;-><init>()V
+
+    invoke-virtual {v0, v1}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/cl;->dismiss()V
+
+    goto :goto_1
+.end method
+
+.method public onCreate(Landroid/os/Bundle;)V
+    .locals 1
+
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/U;->onCreate(Landroid/os/Bundle;)V
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->i()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cl;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-    goto/16 :goto_0
+    return-void
+.end method
 
-    :pswitch_4
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cl;->a:Lcn/com/smartdevices/bracelet/ui/ck;
+.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    .locals 3
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/ui/ck;->a(Lcn/com/smartdevices/bracelet/ui/ck;I)I
+    invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/U;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
-    goto/16 :goto_0
+    move-result-object v1
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-        :pswitch_4
-        :pswitch_0
-    .end packed-switch
+    const v0, 0x7f08020a
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/EditText;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cl;->b:Landroid/widget/EditText;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cl;->b:Landroid/widget/EditText;
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/cl;->a:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    iget-object v2, v2, Lcn/com/smartdevices/bracelet/model/PersonInfo;->personSignature:Ljava/lang/String;
+
+    invoke-virtual {v0, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cl;->b:Landroid/widget/EditText;
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/cl;->b:Landroid/widget/EditText;
+
+    invoke-virtual {v2}, Landroid/widget/EditText;->length()I
+
+    move-result v2
+
+    invoke-virtual {v0, v2}, Landroid/widget/EditText;->setSelection(I)V
+
+    return-object v1
 .end method

@@ -43,7 +43,7 @@
 .end method
 
 .method private b(D)V
-    .locals 3
+    .locals 2
 
     iget-wide v0, p0, Lorg/achartengine/b/i;->b:D
 
@@ -99,20 +99,20 @@
 
 # virtual methods
 .method public declared-synchronized a(DD)V
-    .locals 9
+    .locals 7
 
     monitor-enter p0
 
-    const-wide/16 v6, 0x0
+    const-wide/16 v5, 0x0
 
-    move-object v1, p0
+    move-object v0, p0
 
-    move-wide v2, p1
+    move-wide v1, p1
 
-    move-wide v4, p3
+    move-wide v3, p3
 
     :try_start_0
-    invoke-virtual/range {v1 .. v7}, Lorg/achartengine/b/i;->a(DDD)V
+    invoke-virtual/range {v0 .. v6}, Lorg/achartengine/b/i;->a(DDD)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -129,7 +129,7 @@
 .end method
 
 .method public declared-synchronized a(DDD)V
-    .locals 3
+    .locals 2
 
     monitor-enter p0
 

@@ -1,5 +1,5 @@
 .class Lcom/xiaomi/push/a/c;
-.super Lcom/xiaomi/channel/a/c/d;
+.super Lcom/xiaomi/b/a/c/d;
 
 
 # instance fields
@@ -12,7 +12,7 @@
 
     iput-object p1, p0, Lcom/xiaomi/push/a/c;->a:Lcom/xiaomi/push/a/b;
 
-    invoke-direct {p0}, Lcom/xiaomi/channel/a/c/d;-><init>()V
+    invoke-direct {p0}, Lcom/xiaomi/b/a/c/d;-><init>()V
 
     return-void
 .end method
@@ -37,7 +37,7 @@
 
     :cond_0
     :try_start_0
-    invoke-static {}, Lcom/xiaomi/channel/a/a/a;->d()Z
+    invoke-static {}, Lcom/xiaomi/b/a/a/a;->d()Z
 
     move-result v0
 

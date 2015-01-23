@@ -184,7 +184,7 @@
 .end method
 
 .method public declared-synchronized a()Ljava/util/ArrayList;
-    .locals 8
+    .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -224,11 +224,11 @@
 
     invoke-virtual {v0}, Lcom/xiaomi/network/a;->c()J
 
-    move-result-wide v4
+    move-result-wide v3
 
-    iget-wide v6, p0, Lcom/xiaomi/network/q;->d:J
+    iget-wide v5, p0, Lcom/xiaomi/network/q;->d:J
 
-    cmp-long v3, v4, v6
+    cmp-long v3, v3, v5
 
     if-lez v3, :cond_0
 

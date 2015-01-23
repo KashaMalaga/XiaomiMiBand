@@ -76,7 +76,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/e/a;->a([B)[C
+    invoke-static {v0}, Lcom/xiaomi/b/a/e/a;->a([B)[C
 
     move-result-object v0
 
@@ -501,7 +501,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p0}, Lcom/xiaomi/channel/a/e/a;->a(Ljava/lang/String;)[B
+    invoke-static {p0}, Lcom/xiaomi/b/a/e/a;->a(Ljava/lang/String;)[B
 
     move-result-object v2
 
@@ -621,7 +621,7 @@
 .method public static b([BLjava/lang/String;)[B
     .locals 1
 
-    invoke-static {p1}, Lcom/xiaomi/channel/a/e/a;->a(Ljava/lang/String;)[B
+    invoke-static {p1}, Lcom/xiaomi/b/a/e/a;->a(Ljava/lang/String;)[B
 
     move-result-object v0
 

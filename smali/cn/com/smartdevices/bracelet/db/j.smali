@@ -3,11 +3,9 @@
 
 
 # static fields
-.field public static final a:Ljava/lang/String; = "parterconfig"
+.field public static final a:Ljava/lang/String; = "trackloc"
 
-.field static final b:Ljava/lang/String; = "CREATE TABLE IF NOT EXISTS parterconfig(_id  INTEGER PRIMARY KEY AUTOINCREMENT,color TEXT,title TEXT,sub_title TEXT,icon ICON,third_app_id TEXT,expire_time INTEGER DEFAULT 0,status INTEGER DEFAULT 0,url TEXT );"
-
-.field static final c:Ljava/lang/String; = "ALTER TABLE parterconfig ADD COLUMN status INTEGER DEFAULT 0"
+.field static final b:Ljava/lang/String; = "CREATE TABLE IF NOT EXISTS trackloc(_id INTEGER PRIMARY KEY AUTOINCREMENT,trackid INTEGER,latitude REAL,longitude REAL,altitude REAL,time INTEGER,extra TEXT, UNIQUE (time) ON CONFLICT REPLACE);"
 
 
 # direct methods

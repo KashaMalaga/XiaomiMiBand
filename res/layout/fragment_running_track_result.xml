@@ -2,7 +2,14 @@
 <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/share_content" android:background="@color/main_ui_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <TextView android:textSize="15.0sp" android:textColor="#e6ffffff" android:gravity="center" android:background="@color/bg_color_blue" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_h" android:text="@string/sport_running_helper" />
-    <com.amap.api.maps.MapView android:id="@id/map" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <com.amap.api.maps.MapView android:id="@id/map" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ImageView android:layout_gravity="center" android:id="@id/simple_track" android:background="#22000000" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <RelativeLayout android:gravity="center" android:id="@id/loading_track" android:background="@color/running_progress_bg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ProgressBar android:id="@id/progressbar" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_marginLeft="4.0dip" android:indeterminate="true" android:indeterminateDrawable="@drawable/custom_progress_draw" android:indeterminateDuration="700" android:layout_centerVertical="true" />
+            <TextView android:textColor="@color/running_sub_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/data_loading" android:layout_toRightOf="@id/progressbar" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </FrameLayout>
     <include layout="@layout/fragment_running_share_detail_info" />
     <TextView android:layout_width="fill_parent" android:layout_height="10.0dip" />
     <include layout="@layout/brand_pane" />

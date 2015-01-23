@@ -1,35 +1,13 @@
-.class Lcn/com/smartdevices/bracelet/ui/aP;
+.class public interface abstract Lcn/com/smartdevices/bracelet/ui/aP;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/aO;
-
-
-# direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/aO;)V
-    .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/aP;->a:Lcn/com/smartdevices/bracelet/ui/aO;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public run()V
-    .locals 1
+.method public abstract a(Landroid/os/Bundle;)V
+.end method
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aP;->a:Lcn/com/smartdevices/bracelet/ui/aO;
+.method public abstract a(Lcn/com/smartdevices/bracelet/ui/dF;)V
+.end method
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/aO;->a:Lcn/com/smartdevices/bracelet/ui/aJ;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/aJ;->dismiss()V
-
-    return-void
+.method public abstract a(ILcn/com/smartdevices/bracelet/ui/dF;)Z
 .end method

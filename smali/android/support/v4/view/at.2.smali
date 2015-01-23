@@ -33,23 +33,23 @@
 .end method
 
 .method public a(Landroid/view/View;IIII)V
-    .locals 8
+    .locals 7
 
     invoke-virtual {p0}, Landroid/support/v4/view/at;->a()J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    move-object v1, p1
+    move-object v0, p1
 
-    move v4, p2
+    move v3, p2
 
-    move v5, p3
+    move v4, p3
 
-    move v6, p4
+    move v5, p4
 
-    move v7, p5
+    move v6, p5
 
-    invoke-virtual/range {v1 .. v7}, Landroid/view/View;->postInvalidateDelayed(JIIII)V
+    invoke-virtual/range {v0 .. v6}, Landroid/view/View;->postInvalidateDelayed(JIIII)V
 
     return-void
 .end method
@@ -97,7 +97,7 @@
 .end method
 
 .method public a(Landroid/view/View;Ljava/lang/Runnable;J)V
-    .locals 3
+    .locals 2
 
     invoke-virtual {p0}, Landroid/support/v4/view/at;->a()J
 

@@ -30,27 +30,6 @@
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiCallback$1;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiCallback;
-
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiCallback;->onConnected()V
-
-    goto :goto_0
-
-    :pswitch_1
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiCallback$1;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiCallback;
-
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiCallback;->onDisconnected()V
-
-    goto :goto_0
-
-    :pswitch_2
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiCallback$1;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiCallback;
-
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiCallback;->onConnectionFailed()V
-
-    goto :goto_0
-
-    :pswitch_3
     iget-object v1, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiCallback$1;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiCallback;
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -61,7 +40,7 @@
 
     goto :goto_0
 
-    :pswitch_4
+    :pswitch_1
     iget-object v1, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiCallback$1;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiCallback;
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -72,7 +51,7 @@
 
     goto :goto_0
 
-    :pswitch_5
+    :pswitch_2
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiCallback$1;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiCallback;
 
     iget v1, p1, Landroid/os/Message;->arg1:I
@@ -81,7 +60,7 @@
 
     goto :goto_0
 
-    :pswitch_6
+    :pswitch_3
     iget-object v1, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiCallback$1;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiCallback;
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -94,7 +73,7 @@
 
     goto :goto_0
 
-    :pswitch_7
+    :pswitch_4
     iget-object v1, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiCallback$1;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiCallback;
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
@@ -110,14 +89,11 @@
     goto :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x0
+    .packed-switch 0x3
         :pswitch_0
         :pswitch_1
         :pswitch_2
         :pswitch_3
         :pswitch_4
-        :pswitch_5
-        :pswitch_6
-        :pswitch_7
     .end packed-switch
 .end method

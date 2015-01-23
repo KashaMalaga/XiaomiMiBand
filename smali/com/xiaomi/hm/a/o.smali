@@ -3,15 +3,17 @@
 
 
 # static fields
-.field public static final lab_factory_test_menu:I = 0x7f0f0000
+.field public static final lab_factory_test_menu:I = 0x7f100000
 
-.field public static final main_pop:I = 0x7f0f0001
+.field public static final main_pop:I = 0x7f100001
 
-.field public static final menu_open:I = 0x7f0f0002
+.field public static final menu_open:I = 0x7f100002
 
-.field public static final ota:I = 0x7f0f0003
+.field public static final ota:I = 0x7f100003
 
-.field public static final search:I = 0x7f0f0004
+.field public static final picker_gallery:I = 0x7f100004
+
+.field public static final search:I = 0x7f100005
 
 
 # direct methods

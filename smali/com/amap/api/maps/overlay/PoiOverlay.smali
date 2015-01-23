@@ -130,7 +130,7 @@
 .end method
 
 .method private a(I)Lcom/amap/api/maps/model/MarkerOptions;
-    .locals 8
+    .locals 7
 
     new-instance v1, Lcom/amap/api/maps/model/MarkerOptions;
 
@@ -152,7 +152,7 @@
 
     invoke-virtual {v0}, Lcom/amap/api/services/core/LatLonPoint;->getLatitude()D
 
-    move-result-wide v4
+    move-result-wide v3
 
     iget-object v0, p0, Lcom/amap/api/maps/overlay/PoiOverlay;->a:Ljava/util/List;
 
@@ -168,9 +168,9 @@
 
     invoke-virtual {v0}, Lcom/amap/api/services/core/LatLonPoint;->getLongitude()D
 
-    move-result-wide v6
+    move-result-wide v5
 
-    invoke-direct {v2, v4, v5, v6, v7}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v2, v3, v4, v5, v6}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     invoke-virtual {v1, v2}, Lcom/amap/api/maps/model/MarkerOptions;->position(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/MarkerOptions;
 
@@ -407,7 +407,7 @@
 .end method
 
 .method public zoomToSpan()V
-    .locals 8
+    .locals 7
 
     :try_start_0
     iget-object v0, p0, Lcom/amap/api/maps/overlay/PoiOverlay;->a:Ljava/util/List;
@@ -461,13 +461,13 @@
 
     invoke-virtual {v0}, Lcom/amap/api/services/core/LatLonPoint;->getLatitude()D
 
-    move-result-wide v4
+    move-result-wide v3
 
     iget-object v0, p0, Lcom/amap/api/maps/overlay/PoiOverlay;->a:Ljava/util/List;
 
-    const/4 v3, 0x0
+    const/4 v5, 0x0
 
-    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {v0, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -479,9 +479,9 @@
 
     invoke-virtual {v0}, Lcom/amap/api/services/core/LatLonPoint;->getLongitude()D
 
-    move-result-wide v6
+    move-result-wide v5
 
-    invoke-direct {v2, v4, v5, v6, v7}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v2, v3, v4, v5, v6}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     const/high16 v0, 0x41900000
 

@@ -3,9 +3,11 @@
 
 
 # static fields
-.field static final a:Ljava/lang/String; = "android.intent.action.XIAOMI_ACCOUNT_AUTHORIZE"
+.field static final a:Ljava/lang/String; = "XiaomiAuthUtil"
 
-.field static final b:Ljava/lang/String; = "XiaomiAuthUtil"
+.field private static final b:Ljava/lang/String; = "android.intent.action.XIAOMI_ACCOUNT_AUTHORIZE"
+
+.field private static final c:Ljava/lang/String; = "com.xiaomi.account"
 
 
 # direct methods
@@ -33,13 +35,9 @@
         }
     .end annotation
 
-    new-instance v0, Landroid/content/Intent;
+    invoke-static {}, Lcom/xiaomi/a/a/a/c;->b()Landroid/content/Intent;
 
-    invoke-virtual {p0}, Lcom/xiaomi/a/a/a/c;->a()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     const/4 v1, 0x0
 
@@ -161,6 +159,29 @@
 
     :cond_0
     return-void
+.end method
+
+.method public static b()Landroid/content/Intent;
+    .locals 3
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v1, "android.intent.action.XIAOMI_ACCOUNT_AUTHORIZE"
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v2, 0x15
+
+    if-lt v1, v2, :cond_0
+
+    const-string v1, "com.xiaomi.account"
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+
+    :cond_0
+    return-object v0
 .end method
 
 

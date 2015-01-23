@@ -270,9 +270,9 @@
 
     if-eqz v0, :cond_6
 
-    iget-wide v4, v0, Lcom/amap/api/location/g;->a:J
+    iget-wide v3, v0, Lcom/amap/api/location/g;->a:J
 
-    cmp-long v3, v4, v6
+    cmp-long v3, v3, v6
 
     if-nez v3, :cond_6
 

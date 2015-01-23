@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/ui/aT;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
@@ -22,55 +22,42 @@
 
 
 # virtual methods
-.method public a()V
+.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/br;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->c(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;Z)Z
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/br;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->j(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Landroid/content/Context;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->isSupport(Landroid/content/Context;)Z
+    check-cast v0, Ljava/lang/Float;
+
+    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/br;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/br;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->t(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Landroid/view/View;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->getWindow()Landroid/view/Window;
+    move-result-object v1
 
-    move-result-object v0
+    invoke-virtual {v1, v0}, Landroid/view/View;->setScaleX(F)V
 
-    invoke-virtual {v0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/br;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    move-result-object v0
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->t(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Landroid/view/View;
 
-    invoke-virtual {v0}, Landroid/view/View;->destroyDrawingCache()V
+    move-result-object v1
 
-    :cond_0
-    :goto_0
+    invoke-virtual {v1, v0}, Landroid/view/View;->setScaleY(F)V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/br;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->t(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->setAlpha(F)V
+
     return-void
-
-    :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/br;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
-
-    const v1, 0x1020002
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/view/View;->destroyDrawingCache()V
-
-    goto :goto_0
 .end method

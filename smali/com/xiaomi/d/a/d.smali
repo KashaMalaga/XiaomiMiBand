@@ -1,102 +1,34 @@
-.class Lcom/xiaomi/d/a/d;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lcom/xiaomi/f/q;
-
-
-# instance fields
-.field final synthetic a:Lcom/xiaomi/d/a/a;
+.class final Lcom/xiaomi/d/a/D;
+.super Lcom/xiaomi/d/a/v;
 
 
 # direct methods
-.method constructor <init>(Lcom/xiaomi/d/a/a;)V
-    .locals 0
+.method private constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
-    iput-object p1, p0, Lcom/xiaomi/d/a/d;->a:Lcom/xiaomi/d/a/a;
+    invoke-direct {p0, p1}, Lcom/xiaomi/d/a/v;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Lcom/xiaomi/d/a/D;->a(I)V
 
     return-void
 .end method
 
+.method static a(Ljava/lang/String;)Lcom/xiaomi/d/a/D;
+    .locals 1
 
-# virtual methods
-.method public a(Lcom/xiaomi/f/c/e;)V
-    .locals 3
+    if-nez p0, :cond_0
 
-    sget-boolean v0, Lcom/xiaomi/d/a/a;->a:Z
+    const/4 v0, 0x0
 
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "SMACK "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/xiaomi/d/a/d;->a:Lcom/xiaomi/d/a/a;
-
-    invoke-static {v1}, Lcom/xiaomi/d/a/a;->a(Lcom/xiaomi/d/a/a;)Ljava/text/SimpleDateFormat;
-
-    move-result-object v1
-
-    new-instance v2, Ljava/util/Date;
-
-    invoke-direct {v2}, Ljava/util/Date;-><init>()V
-
-    invoke-virtual {v1, v2}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, " RCV PKT ("
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/xiaomi/d/a/d;->a:Lcom/xiaomi/d/a/a;
-
-    invoke-static {v1}, Lcom/xiaomi/d/a/a;->b(Lcom/xiaomi/d/a/a;)Lcom/xiaomi/f/l;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "): "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Lcom/xiaomi/f/c/e;->c()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->b(Ljava/lang/String;)V
+    :goto_0
+    return-object v0
 
     :cond_0
-    return-void
+    new-instance v0, Lcom/xiaomi/d/a/D;
+
+    invoke-direct {v0, p0}, Lcom/xiaomi/d/a/D;-><init>(Ljava/lang/String;)V
+
+    goto :goto_0
 .end method

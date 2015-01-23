@@ -13,6 +13,46 @@
 
 
 # virtual methods
+.method public onDowngrade(Landroid/database/sqlite/SQLiteDatabase;II)V
+    .locals 3
+
+    const-string v0, "greenDAO"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "onDowngrade, from version: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " to "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    invoke-static {p1, p2, p3}, Lde/greenrobot/daobracelet/LuaListDaoHelper;->onDowngrade(Landroid/database/sqlite/SQLiteDatabase;II)V
+
+    return-void
+.end method
+
 .method public onUpgrade(Landroid/database/sqlite/SQLiteDatabase;II)V
     .locals 3
 
@@ -54,11 +94,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    const/4 v0, 0x1
-
-    invoke-static {p1, v0}, Lde/greenrobot/daobracelet/DaoMaster;->dropAllTables(Landroid/database/sqlite/SQLiteDatabase;Z)V
-
-    invoke-virtual {p0, p1}, Lde/greenrobot/daobracelet/DaoMaster$DevOpenHelper;->onCreate(Landroid/database/sqlite/SQLiteDatabase;)V
+    invoke-static {p1, p2, p3}, Lde/greenrobot/daobracelet/LuaListDaoHelper;->onUpgrade(Landroid/database/sqlite/SQLiteDatabase;II)V
 
     return-void
 .end method

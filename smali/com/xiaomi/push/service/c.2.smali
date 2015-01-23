@@ -42,7 +42,7 @@
     :cond_0
     const-string v0, "should not connect. quit the job."
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->a(Ljava/lang/String;)V
 
     goto :goto_0
 .end method

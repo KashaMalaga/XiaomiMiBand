@@ -70,9 +70,9 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 11
+    .locals 10
 
-    const/4 v10, 0x0
+    const/4 v9, 0x0
 
     new-instance v0, Lcom/amap/api/mapcore/util/g;
 
@@ -88,27 +88,27 @@
 
     sput-object v0, Lcom/amap/api/mapcore/util/f;->e:Ljava/util/concurrent/BlockingQueue;
 
-    new-instance v1, Ljava/util/concurrent/ThreadPoolExecutor;
+    new-instance v0, Ljava/util/concurrent/ThreadPoolExecutor;
 
-    const/4 v2, 0x5
+    const/4 v1, 0x5
 
-    const/16 v3, 0x80
+    const/16 v2, 0x80
 
-    const-wide/16 v4, 0x1
+    const-wide/16 v3, 0x1
 
-    sget-object v6, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    sget-object v5, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    sget-object v7, Lcom/amap/api/mapcore/util/f;->e:Ljava/util/concurrent/BlockingQueue;
+    sget-object v6, Lcom/amap/api/mapcore/util/f;->e:Ljava/util/concurrent/BlockingQueue;
 
-    sget-object v8, Lcom/amap/api/mapcore/util/f;->a:Ljava/util/concurrent/ThreadFactory;
+    sget-object v7, Lcom/amap/api/mapcore/util/f;->a:Ljava/util/concurrent/ThreadFactory;
 
-    new-instance v9, Ljava/util/concurrent/ThreadPoolExecutor$DiscardOldestPolicy;
+    new-instance v8, Ljava/util/concurrent/ThreadPoolExecutor$DiscardOldestPolicy;
 
-    invoke-direct {v9}, Ljava/util/concurrent/ThreadPoolExecutor$DiscardOldestPolicy;-><init>()V
+    invoke-direct {v8}, Ljava/util/concurrent/ThreadPoolExecutor$DiscardOldestPolicy;-><init>()V
 
-    invoke-direct/range {v1 .. v9}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;Ljava/util/concurrent/RejectedExecutionHandler;)V
+    invoke-direct/range {v0 .. v8}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;Ljava/util/concurrent/RejectedExecutionHandler;)V
 
-    sput-object v1, Lcom/amap/api/mapcore/util/f;->b:Ljava/util/concurrent/Executor;
+    sput-object v0, Lcom/amap/api/mapcore/util/f;->b:Ljava/util/concurrent/Executor;
 
     invoke-static {}, Lcom/amap/api/mapcore/util/w;->c()Z
 
@@ -118,7 +118,7 @@
 
     new-instance v0, Lcom/amap/api/mapcore/util/f$c;
 
-    invoke-direct {v0, v10}, Lcom/amap/api/mapcore/util/f$c;-><init>(Lcom/amap/api/mapcore/util/g;)V
+    invoke-direct {v0, v9}, Lcom/amap/api/mapcore/util/f$c;-><init>(Lcom/amap/api/mapcore/util/g;)V
 
     :goto_0
     sput-object v0, Lcom/amap/api/mapcore/util/f;->c:Ljava/util/concurrent/Executor;
@@ -135,7 +135,7 @@
 
     new-instance v0, Lcom/amap/api/mapcore/util/f$b;
 
-    invoke-direct {v0, v10}, Lcom/amap/api/mapcore/util/f$b;-><init>(Lcom/amap/api/mapcore/util/g;)V
+    invoke-direct {v0, v9}, Lcom/amap/api/mapcore/util/f$b;-><init>(Lcom/amap/api/mapcore/util/g;)V
 
     sput-object v0, Lcom/amap/api/mapcore/util/f;->f:Lcom/amap/api/mapcore/util/f$b;
 

@@ -124,73 +124,73 @@
 
     const/4 v7, 0x0
 
-    aget-wide v8, v5, v7
+    aget-wide v7, v5, v7
 
-    aget-object v7, v3, v1
+    aget-object v9, v3, v1
 
-    invoke-virtual {v7}, Lorg/achartengine/b/h;->g()D
+    invoke-virtual {v9}, Lorg/achartengine/b/h;->g()D
 
-    move-result-wide v10
+    move-result-wide v9
 
-    invoke-static {v8, v9, v10, v11}, Ljava/lang/Math;->min(DD)D
+    invoke-static {v7, v8, v9, v10}, Ljava/lang/Math;->min(DD)D
 
-    move-result-wide v8
+    move-result-wide v7
 
-    aput-wide v8, v5, v6
+    aput-wide v7, v5, v6
 
     const/4 v6, 0x1
 
     const/4 v7, 0x1
 
-    aget-wide v8, v5, v7
+    aget-wide v7, v5, v7
 
-    aget-object v7, v3, v1
+    aget-object v9, v3, v1
 
-    invoke-virtual {v7}, Lorg/achartengine/b/h;->i()D
+    invoke-virtual {v9}, Lorg/achartengine/b/h;->i()D
 
-    move-result-wide v10
+    move-result-wide v9
 
-    invoke-static {v8, v9, v10, v11}, Ljava/lang/Math;->max(DD)D
+    invoke-static {v7, v8, v9, v10}, Ljava/lang/Math;->max(DD)D
 
-    move-result-wide v8
+    move-result-wide v7
 
-    aput-wide v8, v5, v6
+    aput-wide v7, v5, v6
 
     const/4 v6, 0x2
 
     const/4 v7, 0x2
 
-    aget-wide v8, v5, v7
+    aget-wide v7, v5, v7
 
-    aget-object v7, v3, v1
+    aget-object v9, v3, v1
 
-    invoke-virtual {v7}, Lorg/achartengine/b/h;->h()D
+    invoke-virtual {v9}, Lorg/achartengine/b/h;->h()D
 
-    move-result-wide v10
+    move-result-wide v9
 
-    invoke-static {v8, v9, v10, v11}, Ljava/lang/Math;->min(DD)D
+    invoke-static {v7, v8, v9, v10}, Ljava/lang/Math;->min(DD)D
 
-    move-result-wide v8
+    move-result-wide v7
 
-    aput-wide v8, v5, v6
+    aput-wide v7, v5, v6
 
     const/4 v6, 0x3
 
     const/4 v7, 0x3
 
-    aget-wide v8, v5, v7
+    aget-wide v7, v5, v7
 
-    aget-object v7, v3, v1
+    aget-object v9, v3, v1
 
-    invoke-virtual {v7}, Lorg/achartengine/b/h;->j()D
+    invoke-virtual {v9}, Lorg/achartengine/b/h;->j()D
 
-    move-result-wide v10
+    move-result-wide v9
 
-    invoke-static {v8, v9, v10, v11}, Ljava/lang/Math;->max(DD)D
+    invoke-static {v7, v8, v9, v10}, Ljava/lang/Math;->max(DD)D
 
-    move-result-wide v8
+    move-result-wide v7
 
-    aput-wide v8, v5, v6
+    aput-wide v7, v5, v6
 
     :cond_4
     add-int/lit8 v1, v1, 0x1
@@ -264,21 +264,21 @@
 
     const/4 v7, 0x2
 
-    aget-wide v12, v5, v7
+    aget-wide v11, v5, v7
 
-    sub-double/2addr v12, v8
+    sub-double/2addr v11, v8
 
-    aput-wide v12, v10, v6
+    aput-wide v11, v10, v6
 
     const/4 v6, 0x3
 
     const/4 v7, 0x3
 
-    aget-wide v12, v5, v7
+    aget-wide v11, v5, v7
 
-    add-double/2addr v8, v12
+    add-double v7, v11, v8
 
-    aput-wide v8, v10, v6
+    aput-wide v7, v10, v6
 
     invoke-virtual {v1, v10, v0}, Lorg/achartengine/c/f;->a([DI)V
 
@@ -302,8 +302,6 @@
     invoke-virtual {v0, v1}, Lorg/achartengine/c/b;->d(F)V
 
     goto/16 :goto_0
-
-    nop
 
     :array_0
     .array-data 8

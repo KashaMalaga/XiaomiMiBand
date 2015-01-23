@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@color/main_ui_bg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:id="@id/home_back_area" android:background="@color/bg_mode_weight" android:layout_width="fill_parent" android:layout_height="@dimen/action_bar_h">
+            <TextView android:id="@id/home_back" android:text="@string/family_member" style="@style/BackButton" />
+        </LinearLayout>
+        <ScrollView android:background="@color/main_ui_bg" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <LinearLayout android:orientation="vertical" android:background="@color/main_ui_bg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ListView android:id="@id/family_members_dymantic_list" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scrollingCache="false" android:divider="@drawable/line_divider" android:dividerHeight="@dimen/divider_height" />
+                <View android:background="@color/line_color_gray" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" android:layout_marginLeft="@dimen/member_left_margin" android:layout_marginRight="@dimen/member_right_margin" />
+                <LinearLayout android:orientation="vertical" android:id="@id/staronme_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/text_color_gray" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/member_left_margin" android:layout_marginTop="@dimen/text_top_margin" android:text="@string/user_staron_me" />
+                    <View android:id="@id/line" android:background="@color/line_color_gray" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" android:layout_marginLeft="@dimen/member_left_margin" android:layout_marginRight="@dimen/member_right_margin" />
+                    <ListView android:id="@id/staronme_user_dymantic_list" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scrollingCache="false" android:divider="@drawable/line_divider" android:dividerHeight="@dimen/divider_height" />
+                    <View android:background="@color/line_color_gray" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" android:layout_marginLeft="@dimen/member_left_margin" android:layout_marginRight="@dimen/member_right_margin" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/text_color_gray" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/member_left_margin" android:layout_marginTop="@dimen/text_top_margin" android:text="@string/weight_measure" />
+                    <View android:background="@color/line_color_gray" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" android:layout_marginLeft="@dimen/member_left_margin" android:layout_marginRight="@dimen/member_right_margin" />
+                    <LinearLayout android:orientation="vertical" android:id="@id/measure_dymantic_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <RelativeLayout android:id="@id/baby_weight" android:layout_width="fill_parent" android:layout_height="@dimen/member_item_height">
+                            <ImageView android:id="@id/baby_weight_drawable" android:background="@drawable/baby_weight" android:layout_width="@dimen/icon_radius" android:layout_height="@dimen/icon_radius" android:layout_marginLeft="@dimen/member_left_margin" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/text_left_margin" android:text="@string/baby_weight" android:layout_toRightOf="@id/baby_weight_drawable" android:layout_centerVertical="true" />
+                            <ImageView android:background="@drawable/ic_indicator_right_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/member_right_margin" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                        </RelativeLayout>
+                        <View android:background="@color/line_color_gray" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" android:layout_marginLeft="@dimen/member_left_margin" android:layout_marginRight="@dimen/member_right_margin" />
+                        <RelativeLayout android:id="@id/visitor_weight" android:layout_width="fill_parent" android:layout_height="@dimen/member_item_height">
+                            <ImageView android:id="@id/visitor_weight_drawable" android:background="@drawable/visitor_weight" android:layout_width="@dimen/icon_radius" android:layout_height="@dimen/icon_radius" android:layout_marginLeft="@dimen/member_left_margin" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/text_left_margin" android:text="@string/visitor_weight" android:layout_toRightOf="@id/visitor_weight_drawable" android:layout_centerVertical="true" />
+                            <ImageView android:background="@drawable/ic_indicator_right_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/member_right_margin" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                        </RelativeLayout>
+                        <View android:background="@color/line_color_gray" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" android:layout_marginLeft="@dimen/member_left_margin" android:layout_marginRight="@dimen/member_left_margin" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <RelativeLayout android:id="@id/add_new_member_layout" android:layout_width="fill_parent" android:layout_height="@dimen/add_member_height">
+            <View android:background="@color/line_color_gray" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" />
+            <ImageView android:id="@id/add_member_plus" android:background="@drawable/add_new_member" android:layout_width="@dimen/add_member" android:layout_height="@dimen/add_member" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

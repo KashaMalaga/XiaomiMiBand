@@ -18,20 +18,32 @@
 .method public static a(Landroid/content/Context;)V
     .locals 2
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/push/a;->c(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/push/a;->d(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    const-string v0, "2882303761517163841"
+    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->e()Lcn/com/smartdevices/bracelet/config/b;
 
-    const-string v1, "5171716313841"
+    move-result-object v0
 
-    invoke-static {p0, v0, v1}, Lcom/xiaomi/mipush/sdk/f;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/config/b;->d:Lcn/com/smartdevices/bracelet/config/n;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v1, "2882303761517163841"
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/b;->d:Lcn/com/smartdevices/bracelet/config/n;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v0, "5171716313841"
+
+    invoke-static {p0, v1, v0}, Lcom/xiaomi/mipush/sdk/f;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/r;->a()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->a()Z
 
     move-result v0
 
@@ -41,16 +53,16 @@
 
     invoke-direct {v0}, Lcn/com/smartdevices/bracelet/push/b;-><init>()V
 
-    invoke-static {p0, v0}, Lcom/xiaomi/mipush/sdk/c;->a(Landroid/content/Context;Lcom/xiaomi/channel/a/b/a;)V
+    invoke-static {p0, v0}, Lcom/xiaomi/mipush/sdk/c;->a(Landroid/content/Context;Lcom/xiaomi/b/a/b/a;)V
 
     :cond_1
     return-void
 .end method
 
 .method public static b(Landroid/content/Context;)V
-    .locals 5
+    .locals 4
 
-    const/4 v4, 0x0
+    const/4 v3, 0x0
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -62,13 +74,13 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->b()Lcn/com/smartdevices/bracelet/model/LoginData;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->b()Lcn/com/smartdevices/bracelet/model/LoginData;
 
     move-result-object v1
 
-    iget-wide v2, v1, Lcn/com/smartdevices/bracelet/model/LoginData;->uid:J
+    iget-wide v1, v1, Lcn/com/smartdevices/bracelet/model/LoginData;->uid:J
 
-    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -76,43 +88,62 @@
 
     move-result-object v0
 
-    invoke-static {p0, v0, v4}, Lcom/xiaomi/mipush/sdk/f;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v0, v3}, Lcom/xiaomi/mipush/sdk/f;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    :try_start_0
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->a()Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v0, v0, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
+    invoke-static {p0, v0, v3}, Lcom/xiaomi/mipush/sdk/f;->d(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    const/4 v1, 0x0
+    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->c()Ljava/lang/String;
 
-    invoke-static {p0, v0, v1}, Lcom/xiaomi/mipush/sdk/f;->d(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object v0
 
-    :goto_0
+    invoke-static {p0, v0, v3}, Lcom/xiaomi/mipush/sdk/f;->d(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p0, v0, v3}, Lcom/xiaomi/mipush/sdk/f;->d(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/Locale;->getCountry()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p0, v0, v3}, Lcom/xiaomi/mipush/sdk/f;->d(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/Locale;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p0, v0, v3}, Lcom/xiaomi/mipush/sdk/f;->d(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+
     return-void
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
-
-    goto :goto_0
 .end method
 
-.method private static c(Landroid/content/Context;)Z
+.method public static c(Landroid/content/Context;)V
+    .locals 0
+
+    invoke-static {p0}, Lcom/xiaomi/mipush/sdk/f;->f(Landroid/content/Context;)V
+
+    return-void
+.end method
+
+.method private static d(Landroid/content/Context;)Z
     .locals 5
 
     const-string v0, "activity"

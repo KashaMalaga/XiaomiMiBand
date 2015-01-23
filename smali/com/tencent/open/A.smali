@@ -276,9 +276,9 @@
 
     check-cast v1, Ljava/lang/String;
 
-    const-wide/16 v4, 0x4
+    const-wide/16 v3, 0x4
 
-    const/4 v3, 0x4
+    const/4 v5, 0x4
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
@@ -286,17 +286,17 @@
 
     add-int/lit8 v6, v6, -0x1
 
-    invoke-virtual {v2, v3, v6}, Ljava/util/ArrayList;->subList(II)Ljava/util/List;
+    invoke-virtual {v2, v5, v6}, Ljava/util/ArrayList;->subList(II)Ljava/util/List;
 
     move-result-object v2
 
-    new-instance v3, Lcom/tencent/open/a$b;
+    new-instance v5, Lcom/tencent/open/a$b;
 
-    invoke-direct {v3, p1, v4, v5, p2}, Lcom/tencent/open/a$b;-><init>(Landroid/webkit/WebView;JLjava/lang/String;)V
+    invoke-direct {v5, p1, v3, v4, p2}, Lcom/tencent/open/a$b;-><init>(Landroid/webkit/WebView;JLjava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/webkit/WebView;->getUrl()Ljava/lang/String;
 
-    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/tencent/open/a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lcom/tencent/open/a$b;)V
+    invoke-virtual {p0, v0, v1, v2, v5}, Lcom/tencent/open/a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lcom/tencent/open/a$b;)V
 
     const/4 v0, 0x1
 

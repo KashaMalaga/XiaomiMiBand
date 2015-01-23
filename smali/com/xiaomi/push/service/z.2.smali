@@ -21,7 +21,7 @@
     return-void
 .end method
 
-.method private a(Lcom/xiaomi/f/c/e;)Lcom/xiaomi/push/service/U;
+.method private a(Lcom/xiaomi/g/c/e;)Lcom/xiaomi/push/service/U;
     .locals 6
 
     const/4 v1, 0x0
@@ -30,7 +30,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcom/xiaomi/f/c/e;->l()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/xiaomi/g/c/e;->l()Ljava/lang/String;
 
     move-result-object v2
 
@@ -72,11 +72,11 @@
     goto :goto_0
 
     :cond_2
-    invoke-virtual {p1}, Lcom/xiaomi/f/c/e;->n()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/xiaomi/g/c/e;->n()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {p1}, Lcom/xiaomi/f/c/e;->m()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/xiaomi/g/c/e;->m()Ljava/lang/String;
 
     move-result-object v4
 
@@ -262,7 +262,7 @@
 
     const-string v0, "mipush kicked by server"
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->c(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->c(Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -403,10 +403,10 @@
     goto :goto_0
 .end method
 
-.method public a(Lcom/xiaomi/push/service/XMPushService;Ljava/lang/String;Lcom/xiaomi/f/c/e;)V
+.method public a(Lcom/xiaomi/push/service/XMPushService;Ljava/lang/String;Lcom/xiaomi/g/c/e;)V
     .locals 7
 
-    invoke-direct {p0, p3}, Lcom/xiaomi/push/service/z;->a(Lcom/xiaomi/f/c/e;)Lcom/xiaomi/push/service/U;
+    invoke-direct {p0, p3}, Lcom/xiaomi/push/service/z;->a(Lcom/xiaomi/g/c/e;)Lcom/xiaomi/push/service/U;
 
     move-result-object v2
 
@@ -436,7 +436,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->c(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->c(Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -452,14 +452,14 @@
 
     iget-object v0, p0, Lcom/xiaomi/push/service/z;->a:Lcom/xiaomi/push/service/I;
 
-    invoke-virtual {v0, p1, p3, v2}, Lcom/xiaomi/push/service/I;->a(Lcom/xiaomi/push/service/XMPushService;Lcom/xiaomi/f/c/e;Lcom/xiaomi/push/service/U;)V
+    invoke-virtual {v0, p1, p3, v2}, Lcom/xiaomi/push/service/I;->a(Lcom/xiaomi/push/service/XMPushService;Lcom/xiaomi/g/c/e;Lcom/xiaomi/push/service/U;)V
 
     goto :goto_0
 
     :cond_1
     iget-object v1, v2, Lcom/xiaomi/push/service/U;->a:Ljava/lang/String;
 
-    instance-of v0, p3, Lcom/xiaomi/f/c/d;
+    instance-of v0, p3, Lcom/xiaomi/g/c/d;
 
     if-eqz v0, :cond_2
 
@@ -480,7 +480,7 @@
 
     const-string v0, "ext_packet"
 
-    invoke-virtual {p3}, Lcom/xiaomi/f/c/e;->b()Landroid/os/Bundle;
+    invoke-virtual {p3}, Lcom/xiaomi/g/c/e;->b()Landroid/os/Bundle;
 
     move-result-object v4
 
@@ -500,11 +500,11 @@
 
     invoke-static {p1, v3, v1}, Lcom/xiaomi/push/service/z;->a(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)V
 
-    invoke-virtual {p3}, Lcom/xiaomi/f/c/e;->c()Ljava/lang/String;
+    invoke-virtual {p3}, Lcom/xiaomi/g/c/e;->c()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/xiaomi/f/e/h;->a(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/xiaomi/g/e/h;->a(Ljava/lang/String;)I
 
     move-result v0
 
@@ -518,12 +518,12 @@
 
     move-object v0, p1
 
-    invoke-static/range {v0 .. v6}, Lcom/xiaomi/f/e/h;->a(Lcom/xiaomi/push/service/XMPushService;Ljava/lang/String;JZJ)V
+    invoke-static/range {v0 .. v6}, Lcom/xiaomi/g/e/h;->a(Lcom/xiaomi/push/service/XMPushService;Ljava/lang/String;JZJ)V
 
     goto :goto_0
 
     :cond_2
-    instance-of v0, p3, Lcom/xiaomi/f/c/b;
+    instance-of v0, p3, Lcom/xiaomi/g/c/b;
 
     if-eqz v0, :cond_3
 
@@ -532,7 +532,7 @@
     goto :goto_1
 
     :cond_3
-    instance-of v0, p3, Lcom/xiaomi/f/c/g;
+    instance-of v0, p3, Lcom/xiaomi/g/c/g;
 
     if-eqz v0, :cond_4
 
@@ -543,7 +543,7 @@
     :cond_4
     const-string v0, "unknown packet type, drop it"
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->c(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->c(Ljava/lang/String;)V
 
     goto :goto_0
 .end method

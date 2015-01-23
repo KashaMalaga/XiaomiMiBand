@@ -22,7 +22,7 @@
 
     const/4 v0, 0x6
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/e/c;->a(I)Ljava/lang/String;
+    invoke-static {v0}, Lcom/xiaomi/b/a/e/c;->a(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -56,7 +56,7 @@
 
     const-string v0, "use miui push service"
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->b(Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
@@ -90,7 +90,7 @@
 
     const/4 v0, 0x0
 
-    sget-boolean v1, Lcom/xiaomi/channel/a/c/a;->e:Z
+    sget-boolean v1, Lcom/xiaomi/b/a/c/a;->e:Z
 
     if-eqz v1, :cond_1
 

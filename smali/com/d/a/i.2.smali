@@ -1,28 +1,36 @@
-.class Lcom/d/a/i;
-.super Ljava/lang/Object;
-
-
-# static fields
-.field static final a:I = 0x0
-
-.field static final b:I = 0x1
-
-
-# instance fields
-.field public c:Lcom/d/a/k;
-
-.field public d:I
+.class final enum Lcom/d/a/i;
+.super Lcom/d/a/d;
 
 
 # direct methods
-.method public constructor <init>(Lcom/d/a/k;I)V
-    .locals 0
+.method constructor <init>(Ljava/lang/String;I)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lcom/d/a/i;->c:Lcom/d/a/k;
-
-    iput p2, p0, Lcom/d/a/i;->d:I
+    invoke-direct {p0, p1, p2, v0}, Lcom/d/a/d;-><init>(Ljava/lang/String;ILcom/d/a/e;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public a(Ljava/lang/reflect/Field;)Ljava/lang/String;
+    .locals 2
+
+    invoke-virtual {p1}, Ljava/lang/reflect/Field;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "-"
+
+    invoke-static {v0, v1}, Lcom/d/a/d;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

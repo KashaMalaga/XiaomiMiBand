@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/lang/Thread$UncaughtExceptionHandler;
 
 
 # instance fields
 .field final synthetic this$0:Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;
 
-.field final synthetic val$rssi:I
-
 
 # direct methods
-.method constructor <init>(Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;I)V
+.method constructor <init>(Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;)V
     .locals 0
 
     iput-object p1, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$15;->this$0:Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;
-
-    iput p2, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$15;->val$rssi:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,14 +22,12 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method public uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
+    .locals 0
 
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$15;->this$0:Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->d()V
 
-    iget v1, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$15;->val$rssi:I
-
-    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->GattCB_onReadRemoteRssi(I)V
+    invoke-virtual {p2}, Ljava/lang/Throwable;->printStackTrace()V
 
     return-void
 .end method

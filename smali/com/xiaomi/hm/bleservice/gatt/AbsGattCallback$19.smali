@@ -1,4 +1,4 @@
-.class final Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$19;
+.class Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$19;
 .super Ljava/lang/Object;
 
 # interfaces
@@ -6,6 +6,8 @@
 
 
 # instance fields
+.field final synthetic this$0:Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;
+
 .field final synthetic val$descriptor:Landroid/bluetooth/BluetoothGattDescriptor;
 
 .field final synthetic val$gatt:Landroid/bluetooth/BluetoothGatt;
@@ -14,14 +16,16 @@
 
 
 # direct methods
-.method constructor <init>(Landroid/bluetooth/BluetoothGatt;Landroid/bluetooth/BluetoothGattDescriptor;[B)V
+.method constructor <init>(Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;Landroid/bluetooth/BluetoothGatt;Landroid/bluetooth/BluetoothGattDescriptor;[B)V
     .locals 0
 
-    iput-object p1, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$19;->val$gatt:Landroid/bluetooth/BluetoothGatt;
+    iput-object p1, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$19;->this$0:Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;
 
-    iput-object p2, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$19;->val$descriptor:Landroid/bluetooth/BluetoothGattDescriptor;
+    iput-object p2, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$19;->val$gatt:Landroid/bluetooth/BluetoothGatt;
 
-    iput-object p3, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$19;->val$value:[B
+    iput-object p3, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$19;->val$descriptor:Landroid/bluetooth/BluetoothGattDescriptor;
+
+    iput-object p4, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$19;->val$value:[B
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -33,35 +37,41 @@
 .method public run()V
     .locals 2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/r;->d()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->d()V
+
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$19;->this$0:Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;
 
     # getter for: Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_GattQueueThread:Landroid/os/HandlerThread;
-    invoke-static {}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$100()Landroid/os/HandlerThread;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$100(Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;)Landroid/os/HandlerThread;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/Thread;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/Thread;)V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$19;->val$gatt:Landroid/bluetooth/BluetoothGatt;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/Object;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/Object;)V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$19;->val$gatt:Landroid/bluetooth/BluetoothGatt;
 
     if-nez v0, :cond_1
 
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$19;->this$0:Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;
+
     # getter for: Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_GattOperationLock:Ljava/util/concurrent/locks/ReentrantLock;
-    invoke-static {}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$200()Ljava/util/concurrent/locks/ReentrantLock;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$200(Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;)Ljava/util/concurrent/locks/ReentrantLock;
 
     move-result-object v0
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
-    const v0, 0xff01
-
     :try_start_0
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$19;->this$0:Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;
+
+    const v1, 0xff01
+
     # setter for: Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_ReturnValue:I
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$302(I)I
+    invoke-static {v0, v1}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$302(Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;I)I
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -73,8 +83,10 @@
 
     move-result-object v0
 
+    iget-object v1, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$19;->this$0:Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;
+
     # getter for: Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_ReturnValue:I
-    invoke-static {}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$300()I
+    invoke-static {v1}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$300(Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;)I
 
     move-result v1
 
@@ -86,15 +98,19 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;)V
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$19;->this$0:Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;
+
+    const/4 v1, 0x0
 
     # setter for: Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_isGattOperationLocking:Z
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$402(Z)Z
+    invoke-static {v0, v1}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$402(Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;Z)Z
+
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$19;->this$0:Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;
 
     # getter for: Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_condGattOperationComplete:Ljava/util/concurrent/locks/Condition;
-    invoke-static {}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$500()Ljava/util/concurrent/locks/Condition;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$500(Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;)Ljava/util/concurrent/locks/Condition;
 
     move-result-object v0
 
@@ -102,8 +118,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$19;->this$0:Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;
+
     # getter for: Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_GattOperationLock:Ljava/util/concurrent/locks/ReentrantLock;
-    invoke-static {}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$200()Ljava/util/concurrent/locks/ReentrantLock;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$200(Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;)Ljava/util/concurrent/locks/ReentrantLock;
 
     move-result-object v0
 
@@ -116,8 +134,10 @@
     :catchall_0
     move-exception v0
 
+    iget-object v1, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$19;->this$0:Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;
+
     # getter for: Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_GattOperationLock:Ljava/util/concurrent/locks/ReentrantLock;
-    invoke-static {}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$200()Ljava/util/concurrent/locks/ReentrantLock;
+    invoke-static {v1}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$200(Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;)Ljava/util/concurrent/locks/ReentrantLock;
 
     move-result-object v1
 
@@ -140,22 +160,26 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->c(Z)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->c(Z)V
 
     if-nez v0, :cond_0
 
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$19;->this$0:Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;
+
     # getter for: Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_GattOperationLock:Ljava/util/concurrent/locks/ReentrantLock;
-    invoke-static {}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$200()Ljava/util/concurrent/locks/ReentrantLock;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$200(Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;)Ljava/util/concurrent/locks/ReentrantLock;
 
     move-result-object v0
 
     invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
-    const v0, 0xff02
-
     :try_start_1
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$19;->this$0:Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;
+
+    const v1, 0xff02
+
     # setter for: Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_ReturnValue:I
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$302(I)I
+    invoke-static {v0, v1}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$302(Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;I)I
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -167,8 +191,10 @@
 
     move-result-object v0
 
+    iget-object v1, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$19;->this$0:Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;
+
     # getter for: Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_ReturnValue:I
-    invoke-static {}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$300()I
+    invoke-static {v1}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$300(Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;)I
 
     move-result v1
 
@@ -180,15 +206,19 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;)V
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$19;->this$0:Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;
+
+    const/4 v1, 0x0
 
     # setter for: Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_isGattOperationLocking:Z
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$402(Z)Z
+    invoke-static {v0, v1}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$402(Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;Z)Z
+
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$19;->this$0:Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;
 
     # getter for: Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_condGattOperationComplete:Ljava/util/concurrent/locks/Condition;
-    invoke-static {}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$500()Ljava/util/concurrent/locks/Condition;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$500(Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;)Ljava/util/concurrent/locks/Condition;
 
     move-result-object v0
 
@@ -196,8 +226,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$19;->this$0:Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;
+
     # getter for: Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_GattOperationLock:Ljava/util/concurrent/locks/ReentrantLock;
-    invoke-static {}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$200()Ljava/util/concurrent/locks/ReentrantLock;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$200(Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;)Ljava/util/concurrent/locks/ReentrantLock;
 
     move-result-object v0
 
@@ -208,8 +240,10 @@
     :catchall_1
     move-exception v0
 
+    iget-object v1, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$19;->this$0:Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;
+
     # getter for: Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->c_GattOperationLock:Ljava/util/concurrent/locks/ReentrantLock;
-    invoke-static {}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$200()Ljava/util/concurrent/locks/ReentrantLock;
+    invoke-static {v1}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->access$200(Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;)Ljava/util/concurrent/locks/ReentrantLock;
 
     move-result-object v1
 

@@ -119,7 +119,7 @@
 
     new-instance v0, Ljava/util/ArrayList;
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/o;->d:Ljava/util/ArrayList;
+    sget-object v1, Lcn/com/smartdevices/bracelet/s;->d:Ljava/util/ArrayList;
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
@@ -127,7 +127,7 @@
 
     new-instance v0, Ljava/util/ArrayList;
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/o;->c:Ljava/util/ArrayList;
+    sget-object v1, Lcn/com/smartdevices/bracelet/s;->c:Ljava/util/ArrayList;
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
@@ -341,7 +341,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p3, :cond_0
 
@@ -377,7 +377,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget v1, p2, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityData;->steps:I
 
@@ -424,7 +424,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-le v0, v2, :cond_6
 
@@ -523,7 +523,7 @@
 
     move-result-object v9
 
-    invoke-static {v8, v9}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v8, v9}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v0, v5}, Lcn/com/smartdevices/bracelet/model/SportData;->setStep(I)V
 
@@ -910,7 +910,7 @@
     invoke-virtual {v1, v0, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     :cond_1
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->h()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->i()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v0
 

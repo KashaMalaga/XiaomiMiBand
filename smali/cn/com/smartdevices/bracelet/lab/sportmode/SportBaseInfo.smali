@@ -65,9 +65,9 @@
 
 # direct methods
 .method public constructor <init>(IZ)V
-    .locals 6
+    .locals 5
 
-    const-wide/16 v4, 0x0
+    const-wide/16 v3, 0x0
 
     const/4 v1, -0x1
 
@@ -83,13 +83,13 @@
 
     iput v2, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mRoundCountOfPB:I
 
-    iput-wide v4, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupCostTimeOfPB:J
+    iput-wide v3, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupCostTimeOfPB:J
 
     iput v2, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupCountOfPB:I
 
     iput v1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mSavedGroupCountOfPB:I
 
-    iput-wide v4, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mRoundCostTimeOfPB:J
+    iput-wide v3, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mRoundCostTimeOfPB:J
 
     const/4 v0, 0x0
 
@@ -101,7 +101,7 @@
 
     iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mIsGroupType:Z
 
-    iput-wide v4, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mSportDayStartMilis:J
+    iput-wide v3, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mSportDayStartMilis:J
 
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
@@ -121,9 +121,9 @@
 
     invoke-virtual {v0}, Ljava/util/Calendar;->getTimeInMillis()J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    iput-wide v2, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mSportDayStartMilis:J
+    iput-wide v1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mSportDayStartMilis:J
 
     new-instance v1, Lcn/com/smartdevices/bracelet/model/SportDay;
 
@@ -170,7 +170,7 @@
 .end method
 
 .method private createASampleJson()Lorg/json/JSONObject;
-    .locals 6
+    .locals 5
 
     new-instance v1, Lorg/json/JSONObject;
 
@@ -193,9 +193,9 @@
 
     move-result-object v2
 
-    iget-wide v4, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mEndSecondTimeInDay:J
+    iget-wide v3, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mEndSecondTimeInDay:J
 
-    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -221,7 +221,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -277,7 +277,7 @@
 .end method
 
 .method private getSecondInDay(J)J
-    .locals 5
+    .locals 4
 
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
@@ -549,7 +549,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -581,37 +581,37 @@
 
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object v4
+    move-result-object v3
 
-    move-wide v2, v0
+    move-wide v1, v0
 
     :goto_0
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;
 
-    iget-wide v6, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mEndSecondTimeInDay:J
+    iget-wide v4, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mEndSecondTimeInDay:J
 
-    iget-wide v0, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mStartSecondTimeInDay:J
+    iget-wide v6, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mStartSecondTimeInDay:J
 
-    sub-long v0, v6, v0
+    sub-long/2addr v4, v6
 
-    add-long/2addr v0, v2
+    add-long v0, v1, v4
 
-    move-wide v2, v0
+    move-wide v1, v0
 
     goto :goto_0
 
     :cond_0
-    return-wide v2
+    return-wide v1
 .end method
 
 .method public getGroupCostTimeOfPB()J
@@ -661,40 +661,42 @@
 
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object v6
+    move-result-object v5
 
-    move-wide v2, v0
+    move-wide v3, v0
 
-    move-wide v4, v0
+    move-wide v10, v0
+
+    move-wide v1, v10
 
     :goto_0
-    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;
 
-    iget-wide v8, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mEndSecondTimeInDay:J
+    iget-wide v6, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mEndSecondTimeInDay:J
 
-    iget-wide v10, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mStartSecondTimeInDay:J
+    iget-wide v8, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mStartSecondTimeInDay:J
 
-    sub-long/2addr v8, v10
+    sub-long/2addr v6, v8
 
-    add-long/2addr v4, v8
+    add-long/2addr v3, v6
 
     iget v0, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mCount:I
 
-    int-to-long v0, v0
+    int-to-long v6, v0
 
-    add-long/2addr v0, v2
+    add-long v0, v1, v6
 
-    move-wide v2, v0
+    move-wide v1, v0
 
     goto :goto_0
 
@@ -703,13 +705,13 @@
 
     new-array v0, v0, [J
 
-    const/4 v1, 0x0
+    const/4 v5, 0x0
 
-    aput-wide v2, v0, v1
+    aput-wide v1, v0, v5
 
     const/4 v1, 0x1
 
-    aput-wide v4, v0, v1
+    aput-wide v3, v0, v1
 
     return-object v0
 .end method
@@ -787,7 +789,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -849,7 +851,7 @@
 .end method
 
 .method public getTotalTimeSpent()J
-    .locals 12
+    .locals 11
 
     const-wide/16 v4, 0x0
 
@@ -889,15 +891,15 @@
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
-    iget-wide v10, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mStartSecondTimeInDay:J
+    iget-wide v9, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mStartSecondTimeInDay:J
 
-    invoke-static {v6, v7, v10, v11}, Ljava/lang/Math;->min(JJ)J
+    invoke-static {v6, v7, v9, v10}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v6
 
-    iget-wide v10, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mEndSecondTimeInDay:J
+    iget-wide v9, v0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mEndSecondTimeInDay:J
 
-    invoke-static {v2, v3, v10, v11}, Ljava/lang/Math;->max(JJ)J
+    invoke-static {v2, v3, v9, v10}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide v2
 
@@ -944,13 +946,13 @@
 
     invoke-virtual {p1, v1}, Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    const-string v1, "glbr"
+    const-string v3, "glbr"
 
-    invoke-virtual {p1, v1}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+    invoke-virtual {p1, v3}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
-    move-result v1
+    move-result v3
 
     const-string v4, "gltc"
 
@@ -962,11 +964,11 @@
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->setRoundCountOfPB(I)V
 
-    invoke-virtual {p0, v2, v3}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->setRoundCostTimeOfPB(J)V
+    invoke-virtual {p0, v1, v2}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->setRoundCostTimeOfPB(J)V
 
-    invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->setSavedGroupCountOfPB(I)V
+    invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->setSavedGroupCountOfPB(I)V
 
-    invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->setGroupCountOfPB(I)V
+    invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->setGroupCountOfPB(I)V
 
     invoke-virtual {p0, v4, v5}, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->setGroupCostTimeOfPB(J)V
     :try_end_0
@@ -983,7 +985,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -1077,7 +1079,7 @@
 .end method
 
 .method public setGroupCostTimeOfPB(J)V
-    .locals 1
+    .locals 0
 
     iput-wide p1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mGroupCostTimeOfPB:J
 
@@ -1134,7 +1136,7 @@
 .end method
 
 .method public setRoundCostTimeOfPB(J)V
-    .locals 1
+    .locals 0
 
     iput-wide p1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/SportBaseInfo;->mRoundCostTimeOfPB:J
 

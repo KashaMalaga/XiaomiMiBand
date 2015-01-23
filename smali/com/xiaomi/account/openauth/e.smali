@@ -9,7 +9,7 @@
 
 .field public static c:I = 0x0
 
-.field private static final d:Ljava/lang/String; = "MyWebViewClient"
+.field private static final d:Ljava/lang/String; = "AuthorizeWebViewClient"
 
 .field private static final e:Ljava/lang/String; = "UTF-8"
 
@@ -165,35 +165,7 @@
 
 # virtual methods
 .method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
-    .locals 4
-
-    const-string v0, "MyWebViewClient"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "After Cookies: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {}, Landroid/webkit/CookieManager;->getInstance()Landroid/webkit/CookieManager;
-
-    move-result-object v2
-
-    sget-object v3, Lcom/xiaomi/account/openauth/c;->b:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Landroid/webkit/CookieManager;->getCookie(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    .locals 0
 
     invoke-super {p0, p1, p2}, Landroid/webkit/WebViewClient;->onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
 
@@ -205,7 +177,7 @@
 
     invoke-super {p0, p1, p2, p3}, Landroid/webkit/WebViewClient;->onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V
 
-    const-string v0, "MyWebViewClient"
+    const-string v0, "AuthorizeWebViewClient"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -214,34 +186,6 @@
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    const-string v0, "MyWebViewClient"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Before Cookies: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {}, Landroid/webkit/CookieManager;->getInstance()Landroid/webkit/CookieManager;
-
-    move-result-object v2
-
-    sget-object v3, Lcom/xiaomi/account/openauth/c;->b:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Landroid/webkit/CookieManager;->getCookie(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 

@@ -20,7 +20,7 @@
 
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
-    .locals 4
+    .locals 3
 
     iget-object v0, p0, Lcom/xiaomi/push/service/C;->a:Lcom/xiaomi/push/service/B;
 
@@ -32,9 +32,9 @@
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    invoke-static {v0, v2, v3}, Lcom/xiaomi/push/service/B;->a(Lcom/xiaomi/push/service/B;J)J
+    invoke-static {v0, v1, v2}, Lcom/xiaomi/push/service/B;->a(Lcom/xiaomi/push/service/B;J)J
 
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 

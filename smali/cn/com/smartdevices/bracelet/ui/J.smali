@@ -1,351 +1,137 @@
-.class public Lcn/com/smartdevices/bracelet/ui/J;
-.super Landroid/app/DialogFragment;
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.class Lcn/com/smartdevices/bracelet/ui/J;
+.super Lcom/e/a/a/h;
 
 
 # instance fields
-.field private a:Lcn/com/smartdevices/bracelet/ui/L;
-
-.field protected d:Landroid/widget/TextView;
-
-.field protected e:Landroid/widget/TextView;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;)V
+    .locals 0
 
-    invoke-direct {p0}, Landroid/app/DialogFragment;-><init>()V
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/J;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;
 
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/J;->a:Lcn/com/smartdevices/bracelet/ui/L;
-
-    return-void
-.end method
-
-.method public static a(Landroid/app/Activity;Landroid/app/DialogFragment;)V
-    .locals 2
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/app/FragmentManager;->beginTransaction()Landroid/app/FragmentTransaction;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, v1}, Landroid/app/DialogFragment;->show(Landroid/app/FragmentTransaction;Ljava/lang/String;)I
-
-    return-void
-.end method
-
-.method public static b(Landroid/app/Activity;Ljava/lang/Class;)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/app/Activity;",
-            "Ljava/lang/Class",
-            "<+",
-            "Landroid/app/DialogFragment;",
-            ">;)V"
-        }
-    .end annotation
-
-    :try_start_0
-    invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/app/FragmentManager;->beginTransaction()Landroid/app/FragmentTransaction;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p0, v0}, Landroid/app/Fragment;->instantiate(Landroid/content/Context;Ljava/lang/String;)Landroid/app/Fragment;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/app/DialogFragment;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/app/DialogFragment;->show(Landroid/app/FragmentTransaction;Ljava/lang/String;)I
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_0
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
-
-    goto :goto_0
-.end method
-
-.method public static b(Landroid/app/Activity;Ljava/lang/Class;Landroid/os/Bundle;)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/app/Activity;",
-            "Ljava/lang/Class",
-            "<+",
-            "Landroid/app/DialogFragment;",
-            ">;",
-            "Landroid/os/Bundle;",
-            ")V"
-        }
-    .end annotation
-
-    invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/app/FragmentManager;->beginTransaction()Landroid/app/FragmentTransaction;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p0, v0, p2}, Landroid/app/Fragment;->instantiate(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/app/Fragment;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/app/DialogFragment;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/app/DialogFragment;->show(Landroid/app/FragmentTransaction;Ljava/lang/String;)I
+    invoke-direct {p0}, Lcom/e/a/a/h;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected a()I
+.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
     .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/J;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;
 
-    return v0
-.end method
-
-.method protected a(Lcn/com/smartdevices/bracelet/ui/L;)V
-    .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/J;->a:Lcn/com/smartdevices/bracelet/ui/L;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->c(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;)V
 
     return-void
 .end method
 
-.method protected b()V
-    .locals 1
+.method public onSuccess(I[Lorg/apache/http/Header;[B)V
+    .locals 5
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/J;->a:Lcn/com/smartdevices/bracelet/ui/L;
+    const/4 v4, 0x1
 
-    if-eqz v0, :cond_0
+    if-eqz p3, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/J;->a:Lcn/com/smartdevices/bracelet/ui/L;
+    array-length v0, p3
 
-    invoke-interface {v0, p0}, Lcn/com/smartdevices/bracelet/ui/L;->b(Landroid/app/DialogFragment;)V
+    if-ge v0, v4, :cond_1
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/J;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->c(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;)V
 
     :goto_0
     return-void
 
-    :cond_0
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/J;->dismiss()V
+    :cond_1
+    new-instance v0, Ljava/lang/String;
 
-    goto :goto_0
-.end method
+    invoke-direct {v0, p3}, Ljava/lang/String;-><init>([B)V
 
-.method protected c()V
-    .locals 1
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/j/f;->b(Ljava/lang/String;)Ljava/lang/String;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/J;->a:Lcn/com/smartdevices/bracelet/ui/L;
+    move-result-object v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/J;->a:Lcn/com/smartdevices/bracelet/ui/L;
+    const-string v1, "BindWeixinActivityNew"
 
-    invoke-interface {v0, p0}, Lcn/com/smartdevices/bracelet/ui/L;->a(Landroid/app/DialogFragment;)V
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    :cond_0
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/J;->dismiss()V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    return-void
-.end method
+    const-string v3, "getWXAppSupportAPI:"
 
-.method protected d()V
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/J;->a:Lcn/com/smartdevices/bracelet/ui/L;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/J;->a:Lcn/com/smartdevices/bracelet/ui/L;
-
-    invoke-interface {v0, p0}, Lcn/com/smartdevices/bracelet/ui/L;->c(Landroid/app/DialogFragment;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public e()Landroid/widget/TextView;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/J;->e:Landroid/widget/TextView;
-
-    return-object v0
-.end method
-
-.method public onClick(Landroid/view/View;)V
-    .locals 1
-
-    invoke-virtual {p1}, Landroid/view/View;->getId()I
-
-    move-result v0
-
-    packed-switch v0, :pswitch_data_0
-
-    :goto_0
-    :pswitch_0
-    return-void
-
-    :pswitch_1
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/J;->b()V
-
-    goto :goto_0
-
-    :pswitch_2
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/J;->d()V
-
-    goto :goto_0
-
-    :pswitch_data_0
-    .packed-switch 0x7f0b011f
-        :pswitch_1
-        :pswitch_0
-        :pswitch_2
-    .end packed-switch
-.end method
-
-.method public onCreate(Landroid/os/Bundle;)V
-    .locals 3
-
-    invoke-super {p0, p1}, Landroid/app/DialogFragment;->onCreate(Landroid/os/Bundle;)V
-
-    const/4 v1, 0x0
-
-    const v0, 0x7f0e0005
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/J;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->isSupport(Landroid/content/Context;)Z
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/ui/J;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;
 
-    move-result v2
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->d(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;)Lcom/tencent/mm/sdk/openapi/IWXAPI;
 
-    if-eqz v2, :cond_0
+    move-result-object v3
 
-    const v0, 0x7f0e001a
+    invoke-interface {v3}, Lcom/tencent/mm/sdk/openapi/IWXAPI;->getWXAppSupportAPI()I
 
-    :cond_0
-    invoke-virtual {p0, v1, v0}, Lcn/com/smartdevices/bracelet/ui/J;->setStyle(II)V
+    move-result v3
 
-    return-void
-.end method
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 3
+    move-result-object v2
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/J;->a()I
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v1, Lcom/tencent/mm/sdk/modelbiz/JumpToBizProfile$Req;
+
+    invoke-direct {v1}, Lcom/tencent/mm/sdk/modelbiz/JumpToBizProfile$Req;-><init>()V
+
+    iput-object v0, v1, Lcom/tencent/mm/sdk/modelbiz/JumpToBizProfile$Req;->extMsg:Ljava/lang/String;
+
+    iput v4, v1, Lcom/tencent/mm/sdk/modelbiz/JumpToBizProfile$Req;->profileType:I
+
+    const-string v0, "gh_f65f9f1aa87a"
+
+    iput-object v0, v1, Lcom/tencent/mm/sdk/modelbiz/JumpToBizProfile$Req;->toUserName:Ljava/lang/String;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/J;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->d(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;)Lcom/tencent/mm/sdk/openapi/IWXAPI;
+
+    move-result-object v0
+
+    invoke-interface {v0, v1}, Lcom/tencent/mm/sdk/openapi/IWXAPI;->sendReq(Lcom/tencent/mm/sdk/modelbase/BaseReq;)Z
 
     move-result v0
 
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, p2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object v1
-
-    const v0, 0x7f0b011f
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/J;->d:Landroid/widget/TextView;
-
-    const v0, 0x7f0b0121
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/J;->e:Landroid/widget/TextView;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/J;->d:Landroid/widget/TextView;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/J;->d:Landroid/widget/TextView;
-
-    invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/J;->e:Landroid/widget/TextView;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/J;->e:Landroid/widget/TextView;
-
-    invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    :cond_1
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/J;->getDialog()Landroid/app/Dialog;
-
-    move-result-object v0
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v2}, Landroid/app/Dialog;->setCanceledOnTouchOutside(Z)V
-
-    const v0, 0x7f0b0122
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
     if-eqz v0, :cond_2
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/ui/K;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/J;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;
 
-    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/ui/K;-><init>(Lcn/com/smartdevices/bracelet/ui/J;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->e(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;)V
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    goto :goto_0
 
     :cond_2
-    return-object v1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/J;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->c(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;)V
+
+    goto :goto_0
+
+    :cond_3
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/J;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->c(Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;)V
+
+    goto :goto_0
 .end method

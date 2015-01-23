@@ -106,7 +106,40 @@
 
     move-result v0
 
-    if-nez v0, :cond_3
+    if-eqz v0, :cond_3
+
+    const-string v2, "sportEntrance"
+
+    invoke-virtual {v1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_3
+
+    new-instance v0, Landroid/content/Intent;
+
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/O;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/O;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;
+
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->startActivity(Landroid/content/Intent;)V
+
+    goto :goto_0
+
+    :cond_3
+    if-nez v0, :cond_4
 
     const/4 v0, 0x1
 
@@ -131,7 +164,7 @@
 
     move-result-object v3
 
-    invoke-static {v0, v2, v3}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2, v3}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/O;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;
 
@@ -159,9 +192,9 @@
 
     invoke-static {v2, v1, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;->a(Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;ILjava/lang/String;)V
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    :cond_3
+    :cond_4
     const/4 v0, 0x0
 
     goto :goto_1

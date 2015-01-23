@@ -61,7 +61,7 @@
 .end method
 
 .method private b(Ljava/util/Map;)Ljava/util/HashMap;
-    .locals 10
+    .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -165,9 +165,9 @@
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v8
+    move-result-wide v7
 
-    invoke-virtual {v6, v8, v9}, Lb/a/bc;->b(J)V
+    invoke-virtual {v6, v7, v8}, Lb/a/bc;->b(J)V
 
     goto :goto_1
 
@@ -180,9 +180,9 @@
 
     invoke-virtual {v0}, Ljava/lang/Integer;->longValue()J
 
-    move-result-wide v8
+    move-result-wide v7
 
-    invoke-virtual {v6, v8, v9}, Lb/a/bc;->b(J)V
+    invoke-virtual {v6, v7, v8}, Lb/a/bc;->b(J)V
 
     goto :goto_1
 
@@ -195,9 +195,9 @@
 
     invoke-virtual {v0}, Ljava/lang/Float;->longValue()J
 
-    move-result-wide v8
+    move-result-wide v7
 
-    invoke-virtual {v6, v8, v9}, Lb/a/bc;->b(J)V
+    invoke-virtual {v6, v7, v8}, Lb/a/bc;->b(J)V
 
     goto :goto_1
 
@@ -210,9 +210,9 @@
 
     invoke-virtual {v0}, Ljava/lang/Double;->longValue()J
 
-    move-result-wide v8
+    move-result-wide v7
 
-    invoke-virtual {v6, v8, v9}, Lb/a/bc;->b(J)V
+    invoke-virtual {v6, v7, v8}, Lb/a/bc;->b(J)V
 
     goto :goto_1
 .end method

@@ -118,7 +118,7 @@
 .end method
 
 .method private b(D)F
-    .locals 5
+    .locals 4
 
     const-wide v0, 0x400921fb54442d18L
 
@@ -154,7 +154,7 @@
 .end method
 
 .method private c(D)D
-    .locals 5
+    .locals 4
 
     const-wide/high16 v0, 0x3ff0000000000000L
 
@@ -172,7 +172,7 @@
 
 # virtual methods
 .method public a(D)V
-    .locals 1
+    .locals 0
 
     iput-wide p1, p0, Lcom/amap/api/mapcore/n;->b:D
 

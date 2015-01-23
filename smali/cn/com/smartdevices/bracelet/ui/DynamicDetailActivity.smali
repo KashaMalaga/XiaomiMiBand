@@ -43,7 +43,7 @@
 
     const v2, 0x1020002
 
-    const-class v3, Lcn/com/smartdevices/bracelet/ui/M;
+    const-class v3, Lcn/com/smartdevices/bracelet/ui/X;
 
     invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -101,11 +101,11 @@
 
     aput-object v2, v0, v1
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/a;->a([Ljava/lang/String;)Lcom/xiaomi/e/a/b;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/a;->a([Ljava/lang/String;)Lcom/xiaomi/f/a/b;
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/a;->a(Landroid/content/Context;)Lcom/xiaomi/e/a/b;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/a;->a(Landroid/content/Context;)Lcom/xiaomi/f/a/b;
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/A;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -115,19 +115,19 @@
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onResume()V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->h()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->i()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v0
 
     iget-wide v0, v0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->uid:J
 
-    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/a;->a(Landroid/content/Context;J)Lcom/xiaomi/e/a/b;
+    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/a;->a(Landroid/content/Context;J)Lcom/xiaomi/f/a/b;
 
     const-string v0, "EventDynamicDetailPage"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/a;->a(Ljava/lang/String;)Lcom/xiaomi/e/a/b;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/a;->a(Ljava/lang/String;)Lcom/xiaomi/f/a/b;
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;)V
 
     return-void
 .end method

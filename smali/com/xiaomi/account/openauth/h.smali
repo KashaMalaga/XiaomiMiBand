@@ -44,7 +44,7 @@
 .end method
 
 .method public static a(Landroid/app/Activity;JLjava/lang/String;Landroid/os/Bundle;I)V
-    .locals 9
+    .locals 8
 
     if-nez p4, :cond_0
 
@@ -94,7 +94,7 @@
 .end method
 
 .method public static b(Landroid/app/Activity;JLjava/lang/String;Landroid/os/Bundle;I)V
-    .locals 9
+    .locals 8
 
     if-nez p4, :cond_0
 
@@ -128,31 +128,31 @@
 .end method
 
 .method private d(Landroid/app/Activity;JLjava/lang/String;Ljava/lang/String;Landroid/os/Bundle;I)V
-    .locals 10
+    .locals 9
 
-    new-instance v1, Lcom/xiaomi/account/openauth/i;
+    new-instance v0, Lcom/xiaomi/account/openauth/i;
 
-    move-object v2, p0
+    move-object v1, p0
 
-    move-object v3, p1
+    move-object v2, p1
 
-    move-wide v4, p2
+    move-wide v3, p2
 
-    move-object v6, p4
+    move-object v5, p4
 
-    move-object v7, p5
+    move-object v6, p5
 
-    move-object/from16 v8, p6
+    move-object v7, p6
 
-    move/from16 v9, p7
+    move/from16 v8, p7
 
-    invoke-direct/range {v1 .. v9}, Lcom/xiaomi/account/openauth/i;-><init>(Lcom/xiaomi/account/openauth/h;Landroid/app/Activity;JLjava/lang/String;Ljava/lang/String;Landroid/os/Bundle;I)V
+    invoke-direct/range {v0 .. v8}, Lcom/xiaomi/account/openauth/i;-><init>(Lcom/xiaomi/account/openauth/h;Landroid/app/Activity;JLjava/lang/String;Ljava/lang/String;Landroid/os/Bundle;I)V
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    new-array v0, v0, [Ljava/lang/Void;
+    new-array v1, v1, [Ljava/lang/Void;
 
-    invoke-virtual {v1, v0}, Lcom/xiaomi/account/openauth/i;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    invoke-virtual {v0, v1}, Lcom/xiaomi/account/openauth/i;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     return-void
 .end method
@@ -174,7 +174,7 @@
 .end method
 
 .method protected a(Landroid/app/Activity;JLjava/lang/String;Ljava/lang/String;Landroid/os/Bundle;I)V
-    .locals 2
+    .locals 1
 
     invoke-virtual {p0, p1}, Lcom/xiaomi/account/openauth/h;->a(Landroid/app/Activity;)Z
 
@@ -301,35 +301,31 @@
 .end method
 
 .method protected c(Landroid/app/Activity;JLjava/lang/String;Ljava/lang/String;Landroid/os/Bundle;I)V
-    .locals 12
+    .locals 8
 
-    const-string v2, "scope"
+    const-string v0, "extra_scope"
 
-    move-object/from16 v0, p6
+    invoke-virtual {p6, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v5
 
-    move-result-object v8
+    const-string v0, "extra_state"
 
-    const-string v2, "state"
+    invoke-virtual {p6, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-object/from16 v0, p6
+    move-result-object v6
 
-    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    move-object v0, p1
 
-    move-result-object v9
+    move-wide v1, p2
 
-    move-object v3, p1
+    move-object v3, p4
 
-    move-wide v4, p2
+    move-object v4, p5
 
-    move-object/from16 v6, p4
+    move v7, p7
 
-    move-object/from16 v7, p5
-
-    move/from16 v10, p7
-
-    invoke-static/range {v3 .. v10}, Lcom/xiaomi/account/openauth/c;->a(Landroid/app/Activity;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-static/range {v0 .. v7}, Lcom/xiaomi/account/openauth/c;->a(Landroid/app/Activity;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
 
     return-void
 .end method

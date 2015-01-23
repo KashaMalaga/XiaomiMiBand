@@ -2,13 +2,13 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/xiaomi/channel/a/b/a;
+.implements Lcom/xiaomi/b/a/b/a;
 
 
 # static fields
 .field private static final a:Ljava/text/SimpleDateFormat;
 
-.field private static b:Lcom/xiaomi/channel/a/c/b;
+.field private static b:Lcom/xiaomi/b/a/c/b;
 
 .field private static c:Ljava/lang/String;
 
@@ -45,13 +45,13 @@
 
     sput-object v0, Lcom/xiaomi/push/a/b;->a:Ljava/text/SimpleDateFormat;
 
-    new-instance v0, Lcom/xiaomi/channel/a/c/b;
+    new-instance v0, Lcom/xiaomi/b/a/c/b;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Lcom/xiaomi/channel/a/c/b;-><init>(Z)V
+    invoke-direct {v0, v1}, Lcom/xiaomi/b/a/c/b;-><init>(Z)V
 
-    sput-object v0, Lcom/xiaomi/push/a/b;->b:Lcom/xiaomi/channel/a/c/b;
+    sput-object v0, Lcom/xiaomi/push/a/b;->b:Lcom/xiaomi/b/a/c/b;
 
     const-string v0, "/MiPushLog"
 
@@ -118,7 +118,7 @@
 .end method
 
 .method private b()V
-    .locals 10
+    .locals 9
 
     const/4 v2, 0x0
 
@@ -476,9 +476,9 @@
 
     move-result-wide v2
 
-    const-wide/32 v8, 0x100000
+    const-wide/32 v7, 0x100000
 
-    cmp-long v2, v2, v8
+    cmp-long v2, v2, v7
 
     if-ltz v2, :cond_c
 
@@ -846,13 +846,13 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    sget-object v0, Lcom/xiaomi/push/a/b;->b:Lcom/xiaomi/channel/a/c/b;
+    sget-object v0, Lcom/xiaomi/push/a/b;->b:Lcom/xiaomi/b/a/c/b;
 
     new-instance v1, Lcom/xiaomi/push/a/c;
 
     invoke-direct {v1, p0}, Lcom/xiaomi/push/a/c;-><init>(Lcom/xiaomi/push/a/b;)V
 
-    invoke-virtual {v0, v1}, Lcom/xiaomi/channel/a/c/b;->a(Lcom/xiaomi/channel/a/c/d;)V
+    invoke-virtual {v0, v1}, Lcom/xiaomi/b/a/c/b;->a(Lcom/xiaomi/b/a/c/d;)V
 
     return-void
 .end method

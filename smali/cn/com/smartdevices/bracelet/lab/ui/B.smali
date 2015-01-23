@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/view/View$OnLongClickListener;
 
 
 # instance fields
@@ -22,46 +22,45 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
+.method public onLongClick(Landroid/view/View;)Z
     .locals 3
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v1, "android.intent.action.GET_CONTENT"
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string v1, "*/*"
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
+
+    const-string v1, "android.intent.category.OPENABLE"
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
+
+    :try_start_0
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/B;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
+
+    const-string v2, "Select one music"
+
+    invoke-static {v0, v2}, Landroid/content/Intent;->createChooser(Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;
+
+    move-result-object v0
 
     const/4 v2, 0x0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/B;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
+    invoke-virtual {v1, v0, v2}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->startActivityForResult(Landroid/content/Intent;I)V
+    :try_end_0
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->m(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;)Landroid/widget/TextView;
+    :goto_0
+    const/4 v0, 0x1
 
-    move-result-object v0
+    return v0
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setEnabled(Z)V
+    :catch_0
+    move-exception v0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/B;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->n(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;)Lcn/com/smartdevices/bracelet/lab/ui/F;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/ui/F;->a()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/B;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
-
-    const/4 v1, 0x2
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->f(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/B;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->b(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;Z)Z
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/B;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
-
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->c(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;Z)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/B;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->finish()V
-
-    return-void
+    goto :goto_0
 .end method

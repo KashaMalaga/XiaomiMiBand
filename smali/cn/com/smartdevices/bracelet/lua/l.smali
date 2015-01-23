@@ -1,42 +1,69 @@
-.class Lcn/com/smartdevices/bracelet/lua/l;
+.class final Lcn/com/smartdevices/bracelet/lua/l;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Landroid/os/Parcelable$Creator;
 
-# instance fields
-.field public a:Ljava/lang/String;
-    .annotation runtime Lcom/b/a/a/b;
-        a = "content"
-    .end annotation
-.end field
 
-.field public b:Ljava/lang/String;
-    .annotation runtime Lcom/b/a/a/b;
-        a = "packdata"
-    .end annotation
-.end field
-
-.field public c:Ljava/lang/String;
-    .annotation runtime Lcom/b/a/a/b;
-        a = "version"
-    .end annotation
-.end field
-
-.field public d:Ljava/lang/String;
-    .annotation runtime Lcom/b/a/a/b;
-        a = "sync_time"
-    .end annotation
-.end field
-
-.field final synthetic e:Lcn/com/smartdevices/bracelet/lua/LuaManager;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator",
+        "<",
+        "Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$SavedState;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/lua/LuaManager;)V
+.method constructor <init>()V
     .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lua/l;->e:Lcn/com/smartdevices/bracelet/lua/LuaManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public a(Landroid/os/Parcel;)Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$SavedState;
+    .locals 2
+
+    new-instance v0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$SavedState;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$SavedState;-><init>(Landroid/os/Parcel;Lcn/com/smartdevices/bracelet/lua/j;)V
+
+    return-object v0
+.end method
+
+.method public a(I)[Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$SavedState;
+    .locals 1
+
+    new-array v0, p1, [Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$SavedState;
+
+    return-object v0
+.end method
+
+.method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/lua/l;->a(Landroid/os/Parcel;)Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$SavedState;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public synthetic newArray(I)[Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/lua/l;->a(I)[Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$SavedState;
+
+    move-result-object v0
+
+    return-object v0
 .end method

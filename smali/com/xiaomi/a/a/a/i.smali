@@ -20,16 +20,12 @@
 
 .field public static final enum c:Lcom/xiaomi/a/a/a/i;
 
-.field public static final enum d:Lcom/xiaomi/a/a/a/i;
-
-.field private static final synthetic e:[Lcom/xiaomi/a/a/a/i;
+.field private static final synthetic d:[Lcom/xiaomi/a/a/a/i;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
-
-    const/4 v5, 0x3
+    .locals 5
 
     const/4 v4, 0x2
 
@@ -47,7 +43,7 @@
 
     new-instance v0, Lcom/xiaomi/a/a/a/i;
 
-    const-string v1, "Sns"
+    const-string v1, "UserInfo"
 
     invoke-direct {v0, v1, v3}, Lcom/xiaomi/a/a/a/i;-><init>(Ljava/lang/String;I)V
 
@@ -55,21 +51,13 @@
 
     new-instance v0, Lcom/xiaomi/a/a/a/i;
 
-    const-string v1, "UserInfo"
+    const-string v1, "InvalidateToken"
 
     invoke-direct {v0, v1, v4}, Lcom/xiaomi/a/a/a/i;-><init>(Ljava/lang/String;I)V
 
     sput-object v0, Lcom/xiaomi/a/a/a/i;->c:Lcom/xiaomi/a/a/a/i;
 
-    new-instance v0, Lcom/xiaomi/a/a/a/i;
-
-    const-string v1, "InvalidateToken"
-
-    invoke-direct {v0, v1, v5}, Lcom/xiaomi/a/a/a/i;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/xiaomi/a/a/a/i;->d:Lcom/xiaomi/a/a/a/i;
-
-    const/4 v0, 0x4
+    const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/xiaomi/a/a/a/i;
 
@@ -85,11 +73,7 @@
 
     aput-object v1, v0, v4
 
-    sget-object v1, Lcom/xiaomi/a/a/a/i;->d:Lcom/xiaomi/a/a/a/i;
-
-    aput-object v1, v0, v5
-
-    sput-object v0, Lcom/xiaomi/a/a/a/i;->e:[Lcom/xiaomi/a/a/a/i;
+    sput-object v0, Lcom/xiaomi/a/a/a/i;->d:[Lcom/xiaomi/a/a/a/i;
 
     return-void
 .end method
@@ -121,7 +105,7 @@
 
     const/4 v3, 0x0
 
-    sget-object v0, Lcom/xiaomi/a/a/a/i;->e:[Lcom/xiaomi/a/a/a/i;
+    sget-object v0, Lcom/xiaomi/a/a/a/i;->d:[Lcom/xiaomi/a/a/a/i;
 
     array-length v1, v0
 

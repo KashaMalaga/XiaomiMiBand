@@ -2,26 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/lang/Thread$UncaughtExceptionHandler;
 
 
 # instance fields
-.field final synthetic a:Landroid/content/Context;
-
-.field final synthetic b:Landroid/content/Intent;
-
-.field final synthetic c:Lcom/xiaomi/hm/bleservice/i;
+.field final synthetic a:Lcom/xiaomi/hm/bleservice/BLEService;
 
 
 # direct methods
-.method constructor <init>(Lcom/xiaomi/hm/bleservice/i;Landroid/content/Context;Landroid/content/Intent;)V
+.method constructor <init>(Lcom/xiaomi/hm/bleservice/BLEService;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/xiaomi/hm/bleservice/j;->c:Lcom/xiaomi/hm/bleservice/i;
-
-    iput-object p2, p0, Lcom/xiaomi/hm/bleservice/j;->a:Landroid/content/Context;
-
-    iput-object p3, p0, Lcom/xiaomi/hm/bleservice/j;->b:Landroid/content/Intent;
+    iput-object p1, p0, Lcom/xiaomi/hm/bleservice/j;->a:Lcom/xiaomi/hm/bleservice/BLEService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -30,19 +22,12 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 3
+.method public uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
+    .locals 0
 
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/j;->c:Lcom/xiaomi/hm/bleservice/i;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->d()V
 
-    iget-object v0, v0, Lcom/xiaomi/hm/bleservice/i;->a:Lcom/xiaomi/hm/bleservice/BLEService;
-
-    iget-object v1, p0, Lcom/xiaomi/hm/bleservice/j;->a:Landroid/content/Context;
-
-    iget-object v2, p0, Lcom/xiaomi/hm/bleservice/j;->b:Landroid/content/Intent;
-
-    # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    invoke-static {v0, v1, v2}, Lcom/xiaomi/hm/bleservice/BLEService;->access$500(Lcom/xiaomi/hm/bleservice/BLEService;Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-virtual {p2}, Ljava/lang/Throwable;->printStackTrace()V
 
     return-void
 .end method

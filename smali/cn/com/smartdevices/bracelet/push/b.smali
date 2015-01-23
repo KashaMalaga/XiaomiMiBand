@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/xiaomi/channel/a/b/a;
+.implements Lcom/xiaomi/b/a/b/a;
 
 
 # direct methods

@@ -1,19 +1,19 @@
-.class Lcn/com/smartdevices/bracelet/ui/dq;
+.class Lcn/com/smartdevices/bracelet/ui/dQ;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcn/com/smartdevices/bracelet/chart/c/o;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/UnBindActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/UnBindActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dq;->a:Lcn/com/smartdevices/bracelet/ui/UnBindActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dQ;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,22 +22,21 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method public a(I)V
+    .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dq;->a:Lcn/com/smartdevices/bracelet/ui/UnBindActivity;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dQ;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->b(Landroid/app/Activity;)V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->getActivity()Landroid/app/Activity;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dq;->a:Lcn/com/smartdevices/bracelet/ui/UnBindActivity;
+    move-result-object v0
 
-    const/4 v1, -0x1
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/UnBindActivity;->setResult(I)V
+    check-cast v0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dq;->a:Lcn/com/smartdevices/bracelet/ui/UnBindActivity;
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->applyStatusBarTint(I)V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/UnBindActivity;->finish()V
-
+    :cond_0
     return-void
 .end method

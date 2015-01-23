@@ -6,14 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryConnectedAdvActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryConnectedAdvActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/g;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/g;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryConnectedAdvActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -23,11 +23,17 @@
 
 # virtual methods
 .method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .locals 1
+    .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/g;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;
+    new-instance v0, Lcn/com/smartdevices/bracelet/a/m;
 
-    invoke-static {v0, p2}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->a(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;Z)V
+    new-instance v1, Lcn/com/smartdevices/bracelet/lab/ui/h;
+
+    invoke-direct {v1, p0, p2}, Lcn/com/smartdevices/bracelet/lab/ui/h;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/g;Z)V
+
+    invoke-direct {v0, v1, p2}, Lcn/com/smartdevices/bracelet/a/m;-><init>(Lcn/com/smartdevices/bracelet/a/b;Z)V
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/a/m;->d()V
 
     return-void
 .end method

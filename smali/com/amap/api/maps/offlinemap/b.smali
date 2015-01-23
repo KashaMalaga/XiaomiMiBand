@@ -8,13 +8,13 @@
 
 # direct methods
 .method public constructor <init>()V
-    .locals 4
+    .locals 3
 
     const-string v0, ""
 
-    const-wide/16 v2, 0x0
+    const-wide/16 v1, 0x0
 
-    invoke-direct {p0, v0, v2, v3}, Lcom/amap/api/maps/offlinemap/b;-><init>(Ljava/lang/String;J)V
+    invoke-direct {p0, v0, v1, v2}, Lcom/amap/api/maps/offlinemap/b;-><init>(Ljava/lang/String;J)V
 
     return-void
 .end method

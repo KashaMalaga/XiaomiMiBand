@@ -1,115 +1,113 @@
-.class Lcn/com/smartdevices/bracelet/p;
-.super Lcom/c/a/a/h;
+.class public Lcn/com/smartdevices/bracelet/p;
+.super Ljava/lang/Object;
+
+
+# static fields
+.field private static b:Lcn/com/smartdevices/bracelet/p;
+
+.field private static c:Landroid/content/Context;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/q;
-
-.field final synthetic b:Lcn/com/smartdevices/bracelet/o;
+.field a:Lde/greenrobot/daobracelet/DaoSession;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/o;Lcn/com/smartdevices/bracelet/q;)V
+.method static constructor <clinit>()V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/p;->b:Lcn/com/smartdevices/bracelet/p;
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/p;->c:Landroid/content/Context;
+
+    return-void
+.end method
+
+.method private constructor <init>(Landroid/content/Context;)V
+    .locals 3
+
+    const/4 v2, 0x0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v2, p0, Lcn/com/smartdevices/bracelet/p;->a:Lde/greenrobot/daobracelet/DaoSession;
+
+    new-instance v0, Lde/greenrobot/daobracelet/DaoMaster$DevOpenHelper;
+
+    const-string v1, "user-db"
+
+    invoke-direct {v0, p1, v1, v2}, Lde/greenrobot/daobracelet/DaoMaster$DevOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;)V
+
+    invoke-virtual {v0}, Lde/greenrobot/daobracelet/DaoMaster$DevOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+
+    move-result-object v0
+
+    new-instance v1, Lde/greenrobot/daobracelet/DaoMaster;
+
+    invoke-direct {v1, v0}, Lde/greenrobot/daobracelet/DaoMaster;-><init>(Landroid/database/sqlite/SQLiteDatabase;)V
+
+    invoke-virtual {v1}, Lde/greenrobot/daobracelet/DaoMaster;->newSession()Lde/greenrobot/daobracelet/DaoSession;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/p;->a:Lde/greenrobot/daobracelet/DaoSession;
+
+    return-void
+.end method
+
+.method public static a()Lcn/com/smartdevices/bracelet/p;
+    .locals 2
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/p;->b:Lcn/com/smartdevices/bracelet/p;
+
+    if-nez v0, :cond_0
+
+    new-instance v0, Lcn/com/smartdevices/bracelet/p;
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/p;->c:Landroid/content/Context;
+
+    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/p;-><init>(Landroid/content/Context;)V
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/p;->b:Lcn/com/smartdevices/bracelet/p;
+
+    :cond_0
+    sget-object v0, Lcn/com/smartdevices/bracelet/p;->b:Lcn/com/smartdevices/bracelet/p;
+
+    return-object v0
+.end method
+
+.method public static a(Landroid/content/Context;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/p;->b:Lcn/com/smartdevices/bracelet/o;
-
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/p;->a:Lcn/com/smartdevices/bracelet/q;
-
-    invoke-direct {p0}, Lcom/c/a/a/h;-><init>()V
+    sput-object p0, Lcn/com/smartdevices/bracelet/p;->c:Landroid/content/Context;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
-    .locals 3
+.method public b()Lde/greenrobot/daobracelet/LuaListDao;
+    .locals 1
 
-    invoke-static {p3}, Lcn/com/smartdevices/bracelet/y;->a([B)Ljava/lang/String;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/p;->a:Lde/greenrobot/daobracelet/DaoSession;
 
-    const-string v0, "DataManager"
+    invoke-virtual {v0}, Lde/greenrobot/daobracelet/DaoSession;->getLuaListDao()Lde/greenrobot/daobracelet/LuaListDao;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "loadNetData onFailure:"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
+    return-object v0
 .end method
 
-.method public onSuccess(I[Lorg/apache/http/Header;[B)V
-    .locals 5
+.method public c()Lde/greenrobot/daobracelet/LuaZipFileDao;
+    .locals 1
 
-    new-instance v0, Ljava/util/ArrayList;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/p;->a:Lde/greenrobot/daobracelet/DaoSession;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    invoke-virtual {v0}, Lde/greenrobot/daobracelet/DaoSession;->getLuaZipFileDao()Lde/greenrobot/daobracelet/LuaZipFileDao;
 
-    const/4 v1, 0x0
+    move-result-object v0
 
-    new-instance v2, Ljava/lang/String;
-
-    invoke-direct {v2, p3}, Ljava/lang/String;-><init>([B)V
-
-    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/g/f;->a(ILjava/lang/String;Ljava/util/ArrayList;)Lcn/com/smartdevices/bracelet/g/g;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/g/g;->a()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/o;->a()Lcn/com/smartdevices/bracelet/o;
-
-    move-result-object v2
-
-    const/4 v3, 0x1
-
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/p;->a:Lcn/com/smartdevices/bracelet/q;
-
-    invoke-virtual {v2, v0, v3, v4}, Lcn/com/smartdevices/bracelet/o;->a(Ljava/util/ArrayList;ILcn/com/smartdevices/bracelet/q;)V
-
-    :cond_0
-    const-string v0, "DataManager"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "loadNetData onSuccess:"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    iget v1, v1, Lcn/com/smartdevices/bracelet/g/g;->f:I
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
+    return-object v0
 .end method

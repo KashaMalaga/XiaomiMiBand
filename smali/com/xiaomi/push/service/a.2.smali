@@ -43,7 +43,7 @@
 
     const-string v0, "trying bind while the connection is not created, quit!"
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->c(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->c(Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -73,22 +73,22 @@
 
     iget-object v0, p0, Lcom/xiaomi/push/service/a;->b:Lcom/xiaomi/push/service/XMPushService;
 
-    invoke-static {v0}, Lcom/xiaomi/push/service/XMPushService;->d(Lcom/xiaomi/push/service/XMPushService;)Lcom/xiaomi/f/l;
+    invoke-static {v0}, Lcom/xiaomi/push/service/XMPushService;->d(Lcom/xiaomi/push/service/XMPushService;)Lcom/xiaomi/g/l;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/xiaomi/push/service/a;->a:Lcom/xiaomi/push/service/U;
 
-    invoke-virtual {v0, v1}, Lcom/xiaomi/f/l;->a(Lcom/xiaomi/push/service/U;)V
+    invoke-virtual {v0, v1}, Lcom/xiaomi/g/l;->a(Lcom/xiaomi/push/service/U;)V
     :try_end_0
-    .catch Lcom/xiaomi/f/C; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Lcom/xiaomi/g/C; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->a(Ljava/lang/Throwable;)V
 
     iget-object v1, p0, Lcom/xiaomi/push/service/a;->b:Lcom/xiaomi/push/service/XMPushService;
 
@@ -122,9 +122,9 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->a(Ljava/lang/String;)V
     :try_end_1
-    .catch Lcom/xiaomi/f/C; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Lcom/xiaomi/g/C; {:try_start_1 .. :try_end_1} :catch_0
 
     goto :goto_0
 .end method

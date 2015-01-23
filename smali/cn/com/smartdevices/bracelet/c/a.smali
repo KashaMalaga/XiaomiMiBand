@@ -2,8 +2,112 @@
 .super Ljava/lang/Object;
 
 
+# static fields
+.field public static final a:Ljava/io/File;
+
+.field private static final b:Ljava/lang/String; = ".miband"
+
+.field private static final c:Ljava/io/File;
+
+.field private static final d:Ljava/io/File;
+
+.field private static final e:Ljava/io/File;
+
+.field private static final f:Ljava/io/File;
+
+.field private static final g:Ljava/io/File;
+
+.field private static final h:Ljava/io/File;
+
+.field private static final i:Ljava/io/File;
+
+.field private static final j:Ljava/lang/String; = ".track"
+
+
 # direct methods
-.method private constructor <init>()V
+.method static constructor <clinit>()V
+    .locals 3
+
+    invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
+
+    move-result-object v0
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/c/a;->a:Ljava/io/File;
+
+    new-instance v0, Ljava/io/File;
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/c/a;->a:Ljava/io/File;
+
+    const-string v2, ".miband"
+
+    invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/c/a;->c:Ljava/io/File;
+
+    new-instance v0, Ljava/io/File;
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/c/a;->c:Ljava/io/File;
+
+    const-string v2, "cache"
+
+    invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/c/a;->d:Ljava/io/File;
+
+    new-instance v0, Ljava/io/File;
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/c/a;->c:Ljava/io/File;
+
+    const-string v2, "data"
+
+    invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/c/a;->e:Ljava/io/File;
+
+    new-instance v0, Ljava/io/File;
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/c/a;->c:Ljava/io/File;
+
+    const-string v2, "file"
+
+    invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/c/a;->f:Ljava/io/File;
+
+    new-instance v0, Ljava/io/File;
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/c/a;->c:Ljava/io/File;
+
+    const-string v2, "log"
+
+    invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/c/a;->g:Ljava/io/File;
+
+    new-instance v0, Ljava/io/File;
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/c/a;->c:Ljava/io/File;
+
+    const-string v2, "thumb"
+
+    invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/c/a;->h:Ljava/io/File;
+
+    new-instance v0, Ljava/io/File;
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/c/a;->h:Ljava/io/File;
+
+    const-string v2, ".nomedia"
+
+    invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/c/a;->i:Ljava/io/File;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -11,279 +115,552 @@
     return-void
 .end method
 
-.method public static a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
-    .locals 5
+.method public static a(Ljava/lang/String;)Ljava/io/File;
+    .locals 2
 
-    const/4 v4, 0x0
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    const/16 v1, 0x64
+    move-result v0
 
-    new-instance v2, Ljava/io/ByteArrayOutputStream;
+    if-eqz v0, :cond_0
 
-    invoke-direct {v2}, Ljava/io/ByteArrayOutputStream;-><init>()V
-
-    sget-object v0, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
-
-    invoke-virtual {p0, v0, v1, v2}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
-
-    move v0, v1
+    const/4 v0, 0x0
 
     :goto_0
-    invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+    return-object v0
 
-    move-result-object v3
+    :cond_0
+    new-instance v0, Ljava/io/File;
 
-    array-length v3, v3
+    sget-object v1, Lcn/com/smartdevices/bracelet/c/a;->d:Ljava/io/File;
 
-    div-int/lit16 v3, v3, 0x400
+    invoke-direct {v0, v1, p0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    if-le v3, v1, :cond_0
+    goto :goto_0
+.end method
 
-    invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->reset()V
+.method public static a()V
+    .locals 6
 
-    sget-object v3, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
+    const/4 v0, 0x0
 
-    invoke-virtual {p0, v3, v0, v2}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
+    const/4 v1, 0x4
 
-    add-int/lit8 v0, v0, -0x14
+    new-array v1, v1, [Ljava/lang/String;
+
+    const-string v2, ".MISportLab"
+
+    aput-object v2, v1, v0
+
+    const/4 v2, 0x1
+
+    const-string v3, ".gpsLog.txt"
+
+    aput-object v3, v1, v2
+
+    const/4 v2, 0x2
+
+    const-string v3, "share.jpg"
+
+    aput-object v3, v1, v2
+
+    const/4 v2, 0x3
+
+    const-string v3, "tmpmap.jpg"
+
+    aput-object v3, v1, v2
+
+    array-length v2, v1
+
+    :goto_0
+    if-ge v0, v2, :cond_0
+
+    aget-object v3, v1, v0
+
+    new-instance v4, Ljava/io/File;
+
+    sget-object v5, Lcn/com/smartdevices/bracelet/c/a;->a:Ljava/io/File;
+
+    invoke-direct {v4, v5, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    invoke-static {v4}, Lcn/com/smartdevices/bracelet/c/a;->b(Ljava/io/File;)V
+
+    new-instance v4, Ljava/io/File;
+
+    sget-object v5, Lcn/com/smartdevices/bracelet/c/a;->c:Ljava/io/File;
+
+    invoke-direct {v4, v5, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    invoke-static {v4}, Lcn/com/smartdevices/bracelet/c/a;->b(Ljava/io/File;)V
+
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Ljava/io/ByteArrayInputStream;
+    return-void
+.end method
 
-    invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+.method public static a(J)V
+    .locals 6
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/c/a;->h:Ljava/io/File;
+
+    new-instance v1, Lcn/com/smartdevices/bracelet/c/b;
+
+    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/c/b;-><init>()V
+
+    invoke-virtual {v0, v1}, Ljava/io/File;->listFiles(Ljava/io/FileFilter;)[Ljava/io/File;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Ljava/io/ByteArrayInputStream;-><init>([B)V
+    if-nez v1, :cond_1
 
-    invoke-static {v0, v4, v4}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+    :cond_0
+    return-void
 
-    move-result-object v0
+    :cond_1
+    array-length v2, v1
 
-    return-object v0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-ge v0, v2, :cond_0
+
+    aget-object v3, v1, v0
+
+    invoke-virtual {v3}, Ljava/io/File;->lastModified()J
+
+    move-result-wide v4
+
+    cmp-long v4, v4, p0
+
+    if-ltz v4, :cond_2
+
+    :goto_1
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {v3}, Ljava/io/File;->deleteOnExit()V
+
+    goto :goto_1
 .end method
 
-.method public static a(Ljava/lang/String;)Landroid/graphics/Bitmap;
+.method public static a(Ljava/io/File;)Z
     .locals 7
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
-    new-instance v2, Landroid/graphics/BitmapFactory$Options;
+    invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
-    invoke-direct {v2}, Landroid/graphics/BitmapFactory$Options;-><init>()V
+    move-result v1
 
-    iput-boolean v0, v2, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
-
-    invoke-static {p0, v2}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, v2, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
-
-    iget v1, v2, Landroid/graphics/BitmapFactory$Options;->outWidth:I
-
-    iget v3, v2, Landroid/graphics/BitmapFactory$Options;->outHeight:I
-
-    const/high16 v4, 0x44480000
-
-    const/high16 v5, 0x43f00000
-
-    if-le v1, v3, :cond_0
-
-    int-to-float v6, v1
-
-    cmpl-float v6, v6, v5
-
-    if-lez v6, :cond_0
-
-    iget v1, v2, Landroid/graphics/BitmapFactory$Options;->outWidth:I
-
-    int-to-float v1, v1
-
-    div-float/2addr v1, v5
-
-    float-to-int v1, v1
-
-    :goto_0
-    if-gtz v1, :cond_1
-
-    :goto_1
-    iput v0, v2, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
-
-    invoke-static {p0, v2}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/c/a;->a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    return-object v0
+    if-nez v1, :cond_1
 
     :cond_0
-    if-ge v1, v3, :cond_2
+    return v0
 
-    int-to-float v1, v3
+    :cond_1
+    invoke-virtual {p0}, Ljava/io/File;->isDirectory()Z
 
-    cmpl-float v1, v1, v4
+    move-result v1
 
-    if-lez v1, :cond_2
+    if-eqz v1, :cond_0
 
-    iget v1, v2, Landroid/graphics/BitmapFactory$Options;->outHeight:I
+    invoke-virtual {p0}, Ljava/io/File;->list()[Ljava/lang/String;
 
-    int-to-float v1, v1
+    move-result-object v2
 
-    div-float/2addr v1, v4
+    array-length v3, v2
 
-    float-to-int v1, v1
+    move v1, v0
+
+    :goto_0
+    if-ge v1, v3, :cond_0
+
+    aget-object v4, v2, v1
+
+    new-instance v5, Ljava/io/File;
+
+    invoke-direct {v5, p0, v4}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    invoke-virtual {v5}, Ljava/io/File;->isFile()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_3
+
+    invoke-virtual {v5}, Ljava/io/File;->delete()Z
+
+    :cond_2
+    :goto_1
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    :cond_1
-    move v0, v1
+    :cond_3
+    invoke-virtual {v5}, Ljava/io/File;->isDirectory()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2
+
+    new-instance v0, Ljava/io/File;
+
+    invoke-direct {v0, p0, v4}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/c/a;->a(Ljava/io/File;)Z
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/c/a;->b(Ljava/io/File;)V
+
+    const/4 v0, 0x1
 
     goto :goto_1
+.end method
 
-    :cond_2
-    move v1, v0
+.method public static a(Ljava/io/File;Ljava/lang/String;)Z
+    .locals 1
+
+    if-eqz p0, :cond_0
+
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+
+    :cond_1
+    new-instance v0, Ljava/io/File;
+
+    invoke-direct {v0, p0, p1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
+
+    move-result v0
 
     goto :goto_0
 .end method
 
-.method public static b(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
-    .locals 9
+.method public static b(Ljava/lang/String;)Ljava/io/File;
+    .locals 2
 
-    const/4 v8, 0x0
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    const/4 v0, 0x1
+    move-result v0
 
-    new-instance v2, Ljava/io/ByteArrayOutputStream;
+    if-eqz v0, :cond_0
 
-    invoke-direct {v2}, Ljava/io/ByteArrayOutputStream;-><init>()V
-
-    sget-object v1, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
-
-    const/16 v3, 0x64
-
-    invoke-virtual {p0, v1, v3, v2}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
-
-    invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
-
-    move-result-object v1
-
-    array-length v1, v1
-
-    div-int/lit16 v1, v1, 0x400
-
-    const/16 v3, 0x400
-
-    if-le v1, v3, :cond_0
-
-    invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->reset()V
-
-    sget-object v1, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
-
-    const/16 v3, 0x32
-
-    invoke-virtual {p0, v1, v3, v2}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
-
-    :cond_0
-    new-instance v1, Ljava/io/ByteArrayInputStream;
-
-    invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
-
-    move-result-object v3
-
-    invoke-direct {v1, v3}, Ljava/io/ByteArrayInputStream;-><init>([B)V
-
-    new-instance v3, Landroid/graphics/BitmapFactory$Options;
-
-    invoke-direct {v3}, Landroid/graphics/BitmapFactory$Options;-><init>()V
-
-    iput-boolean v0, v3, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
-
-    invoke-static {v1, v8, v3}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, v3, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
-
-    iget v1, v3, Landroid/graphics/BitmapFactory$Options;->outWidth:I
-
-    iget v4, v3, Landroid/graphics/BitmapFactory$Options;->outHeight:I
-
-    const/high16 v5, 0x44480000
-
-    const/high16 v6, 0x43f00000
-
-    if-le v1, v4, :cond_1
-
-    int-to-float v7, v1
-
-    cmpl-float v7, v7, v6
-
-    if-lez v7, :cond_1
-
-    iget v1, v3, Landroid/graphics/BitmapFactory$Options;->outWidth:I
-
-    int-to-float v1, v1
-
-    div-float/2addr v1, v6
-
-    float-to-int v1, v1
+    const/4 v0, 0x0
 
     :goto_0
-    if-gtz v1, :cond_2
+    return-object v0
 
-    :goto_1
-    iput v0, v3, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
+    :cond_0
+    new-instance v0, Ljava/io/File;
 
-    new-instance v0, Ljava/io/ByteArrayInputStream;
+    sget-object v1, Lcn/com/smartdevices/bracelet/c/a;->e:Ljava/io/File;
 
-    invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+    invoke-direct {v0, v1, p0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    move-result-object v1
+    goto :goto_0
+.end method
 
-    invoke-direct {v0, v1}, Ljava/io/ByteArrayInputStream;-><init>([B)V
+.method public static b()Ljava/lang/String;
+    .locals 1
 
-    invoke-static {v0, v8, v3}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+    const-string v0, "share.jpg"
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/c/a;->c(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/c/a;->a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public static b(Ljava/io/File;)V
+    .locals 1
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    :cond_0
+    :goto_0
+    return-void
 
     :cond_1
-    if-ge v1, v4, :cond_3
+    :try_start_0
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/c/a;->a(Ljava/io/File;)Z
 
-    int-to-float v1, v4
-
-    cmpl-float v1, v1, v5
-
-    if-lez v1, :cond_3
-
-    iget v1, v3, Landroid/graphics/BitmapFactory$Options;->outHeight:I
-
-    int-to-float v1, v1
-
-    div-float/2addr v1, v5
-
-    float-to-int v1, v1
+    invoke-virtual {p0}, Ljava/io/File;->delete()Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    :cond_2
-    move v0, v1
+    :catch_0
+    move-exception v0
 
-    goto :goto_1
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
+    goto :goto_0
+.end method
+
+.method public static c(Ljava/lang/String;)Ljava/io/File;
+    .locals 2
+
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/io/File;
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/c/a;->f:Ljava/io/File;
+
+    invoke-direct {v0, v1, p0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    goto :goto_0
+.end method
+
+.method public static c()V
+    .locals 4
+
+    const/4 v3, 0x1
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/c/a;->c:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-nez v0, :cond_7
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/c/a;->c:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->mkdir()Z
+
+    :cond_0
+    :goto_0
+    sget-object v0, Lcn/com/smartdevices/bracelet/c/a;->d:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/c/a;->d:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->mkdir()Z
+
+    :cond_1
+    sget-object v0, Lcn/com/smartdevices/bracelet/c/a;->e:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/c/a;->e:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->mkdir()Z
+
+    :cond_2
+    sget-object v0, Lcn/com/smartdevices/bracelet/c/a;->f:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/c/a;->f:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->mkdir()Z
 
     :cond_3
-    move v1, v0
+    sget-object v0, Lcn/com/smartdevices/bracelet/c/a;->g:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/c/a;->g:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->mkdir()Z
+
+    :cond_4
+    sget-object v0, Lcn/com/smartdevices/bracelet/c/a;->h:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/c/a;->h:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->mkdir()Z
+
+    :cond_5
+    sget-object v0, Lcn/com/smartdevices/bracelet/c/a;->i:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-nez v0, :cond_6
+
+    :try_start_0
+    sget-object v0, Lcn/com/smartdevices/bracelet/c/a;->i:Ljava/io/File;
+
+    invoke-virtual {v0}, Ljava/io/File;->createNewFile()Z
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :cond_6
+    :goto_1
+    return-void
+
+    :cond_7
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->ai()Z
+
+    move-result v0
+
+    if-nez v0, :cond_8
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/c/a;->a()V
+
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/x;->k(Z)V
+
+    :cond_8
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->aj()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
+
+    move-result-object v0
+
+    const/16 v1, 0x7df
+
+    invoke-virtual {v0, v3, v1}, Ljava/util/Calendar;->set(II)V
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->set(II)V
+
+    const/4 v1, 0x5
+
+    const/16 v2, 0xa
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->set(II)V
+
+    invoke-virtual {v0}, Ljava/util/Calendar;->getTimeInMillis()J
+
+    move-result-wide v0
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/c/a;->a(J)V
+
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/x;->l(Z)V
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_1
+.end method
+
+.method public static d(Ljava/lang/String;)Ljava/io/File;
+    .locals 2
+
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/io/File;
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/c/a;->g:Ljava/io/File;
+
+    invoke-direct {v0, v1, p0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    goto :goto_0
+.end method
+
+.method public static e(Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/c/a;->c(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static f(Ljava/lang/String;)Ljava/io/File;
+    .locals 2
+
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    new-instance v0, Ljava/io/File;
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/c/a;->h:Ljava/io/File;
+
+    invoke-direct {v0, v1, p0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

@@ -343,10 +343,10 @@
 
     if-ge v0, v7, :cond_6
 
-    const-wide/16 v8, 0x3e8
+    const-wide/16 v7, 0x3e8
 
     :try_start_5
-    invoke-static {v8, v9}, Ljava/lang/Thread;->sleep(J)V
+    invoke-static {v7, v8}, Ljava/lang/Thread;->sleep(J)V
     :try_end_5
     .catch Ljava/lang/InterruptedException; {:try_start_5 .. :try_end_5} :catch_3
     .catchall {:try_start_5 .. :try_end_5} :catchall_0

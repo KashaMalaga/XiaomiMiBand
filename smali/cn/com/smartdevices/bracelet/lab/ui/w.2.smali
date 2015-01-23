@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/w;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->e(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Z
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->d(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Z
 
     move-result v0
 
@@ -44,7 +44,7 @@
 
     move-result-object v1
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/lab/b/a;->a:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/lab/a/a;->a:Z
 
     if-eqz v0, :cond_1
 
@@ -61,7 +61,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/w;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->g(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/TextView;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->f(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/TextView;
 
     move-result-object v1
 
@@ -71,7 +71,7 @@
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/ui/w;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
 
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->f(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)I
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->e(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)I
 
     move-result v3
 

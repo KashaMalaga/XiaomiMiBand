@@ -20,7 +20,7 @@
 
     invoke-direct {p0, p1, p2}, Landroid/support/v4/view/ViewPager;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget-object v0, Lcom/xiaomi/hm/a/s;->CustomViewPager:[I
+    sget-object v0, Lcom/xiaomi/hm/a/t;->CustomViewPager:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 

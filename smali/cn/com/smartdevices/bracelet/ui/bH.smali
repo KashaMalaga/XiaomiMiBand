@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/ui/L;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/bD;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/bG;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/bD;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/bG;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bH;->a:Lcn/com/smartdevices/bracelet/ui/bD;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bH;->a:Lcn/com/smartdevices/bracelet/ui/bG;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,28 +22,31 @@
 
 
 # virtual methods
-.method public a(Landroid/app/DialogFragment;)V
-    .locals 0
+.method public run()V
+    .locals 2
 
-    return-void
-.end method
+    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->e()Lcn/com/smartdevices/bracelet/config/b;
 
-.method public b(Landroid/app/DialogFragment;)V
-    .locals 1
+    move-result-object v0
 
-    invoke-virtual {p1}, Landroid/app/DialogFragment;->dismiss()V
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/b;->m:Lcn/com/smartdevices/bracelet/config/p;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bH;->a:Lcn/com/smartdevices/bracelet/ui/bD;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/p;->a:Ljava/lang/Boolean;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/bD;->c(Lcn/com/smartdevices/bracelet/ui/bD;)V
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    return-void
-.end method
+    move-result v0
 
-.method public c(Landroid/app/DialogFragment;)V
-    .locals 0
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p1}, Landroid/app/DialogFragment;->dismiss()V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bH;->a:Lcn/com/smartdevices/bracelet/ui/bG;
 
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/bG;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/B;->a(Landroid/app/Activity;Z)V
+
+    :cond_0
     return-void
 .end method

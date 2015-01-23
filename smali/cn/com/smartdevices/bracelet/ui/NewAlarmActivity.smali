@@ -59,7 +59,7 @@
 
 .field private u:Z
 
-.field private v:Lcn/com/smartdevices/bracelet/ui/bU;
+.field private v:Lcn/com/smartdevices/bracelet/ui/co;
 
 .field private w:Ljava/lang/String;
 
@@ -154,7 +154,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->k:Lcn/com/smartdevices/bracelet/model/AlarmClockItem;
 
@@ -180,35 +180,35 @@
     return-void
 
     :cond_0
-    const-class v0, Lcn/com/smartdevices/bracelet/ui/ah;
+    const-class v0, Lcn/com/smartdevices/bracelet/ui/au;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/ui/J;->instantiate(Landroid/content/Context;Ljava/lang/String;)Landroid/app/Fragment;
+    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/ui/U;->instantiate(Landroid/content/Context;Ljava/lang/String;)Landroid/app/Fragment;
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/ah;
+    check-cast v0, Lcn/com/smartdevices/bracelet/ui/au;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/by;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bO;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/by;-><init>(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/bO;-><init>(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;)V
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/ah;->a(Lcn/com/smartdevices/bracelet/ui/L;)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/au;->a(Lcn/com/smartdevices/bracelet/ui/W;)V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v1
 
-    const-class v2, Lcn/com/smartdevices/bracelet/ui/ah;
+    const-class v2, Lcn/com/smartdevices/bracelet/ui/au;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/ui/ah;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/ui/au;->show(Landroid/app/FragmentManager;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -238,7 +238,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->u:Z
 
@@ -270,7 +270,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-nez p1, :cond_2
 
@@ -300,7 +300,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->l:Lkankan/wheel/widget/WheelView;
 
@@ -384,7 +384,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->t:Lkankan/wheel/widget/WheelView;
 
@@ -483,7 +483,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
@@ -565,9 +565,9 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->r:Ljava/util/ArrayList;
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/ui/bx;
+    new-instance v2, Lcn/com/smartdevices/bracelet/ui/bN;
 
-    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/ui/bx;-><init>(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;)V
+    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/ui/bN;-><init>(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;)V
 
     invoke-direct {v0, v1, v2}, Lcn/com/smartdevices/bracelet/a/l;-><init>(Ljava/util/ArrayList;Lcn/com/smartdevices/bracelet/a/b;)V
 
@@ -629,9 +629,9 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f0b007d -> :sswitch_0
-        0x7f0b0098 -> :sswitch_1
-        0x7f0b009b -> :sswitch_2
+        0x7f08009a -> :sswitch_0
+        0x7f0800b4 -> :sswitch_1
+        0x7f0800b7 -> :sswitch_2
     .end sparse-switch
 .end method
 
@@ -640,7 +640,7 @@
 
     invoke-super/range {p0 .. p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f03001a
+    const v0, 0x7f03001f
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->setContentView(I)V
 
@@ -652,7 +652,7 @@
 
     invoke-virtual {v0, p0}, Lde/greenrobot/event/EventBus;->register(Ljava/lang/Object;)V
 
-    const v0, 0x7f0b009f
+    const v0, 0x7f0800bb
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->findViewById(I)Landroid/view/View;
 
@@ -662,13 +662,13 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->n:Landroid/view/View;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bv;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bL;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/bv;-><init>(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/bL;-><init>(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0b00a1
+    const v0, 0x7f0800bd
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->findViewById(I)Landroid/view/View;
 
@@ -678,7 +678,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->p:Landroid/widget/TextView;
 
-    const v0, 0x7f0b00a2
+    const v0, 0x7f0800be
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->findViewById(I)Landroid/view/View;
 
@@ -688,7 +688,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->t:Lkankan/wheel/widget/WheelView;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bU;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/co;
 
     const/16 v2, -0xb
 
@@ -700,7 +700,7 @@
 
     move-result-object v1
 
-    const v5, 0x7f07003c
+    const v5, 0x7f09003d
 
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -710,7 +710,7 @@
 
     move-result-object v1
 
-    const v6, 0x7f070011
+    const v6, 0x7f090011
 
     invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -732,15 +732,15 @@
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v13}, Lcn/com/smartdevices/bracelet/ui/bU;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
+    invoke-direct/range {v0 .. v13}, Lcn/com/smartdevices/bracelet/ui/co;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
 
     const-string v1, "normal"
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/bU;->a(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/co;->a(Ljava/lang/String;)V
 
     const/16 v1, 0x11
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/bU;->a(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/co;->a(I)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->t:Lkankan/wheel/widget/WheelView;
 
@@ -750,7 +750,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0200da
+    const v2, 0x7f02015d
 
     invoke-virtual {v1, v2}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
@@ -766,7 +766,7 @@
 
     invoke-virtual {v1, v0}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/a/f;)Lkankan/wheel/widget/WheelView;
 
-    const v0, 0x7f0b00a3
+    const v0, 0x7f0800bf
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->findViewById(I)Landroid/view/View;
 
@@ -776,7 +776,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->l:Lkankan/wheel/widget/WheelView;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bU;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/co;
 
     const/4 v2, 0x0
 
@@ -788,7 +788,7 @@
 
     move-result-object v1
 
-    const v5, 0x7f07003c
+    const v5, 0x7f09003d
 
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -798,7 +798,7 @@
 
     move-result-object v1
 
-    const v6, 0x7f070011
+    const v6, 0x7f090011
 
     invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -820,15 +820,15 @@
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v13}, Lcn/com/smartdevices/bracelet/ui/bU;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
+    invoke-direct/range {v0 .. v13}, Lcn/com/smartdevices/bracelet/ui/co;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->v:Lcn/com/smartdevices/bracelet/ui/bU;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->v:Lcn/com/smartdevices/bracelet/ui/co;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->v:Lcn/com/smartdevices/bracelet/ui/bU;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->v:Lcn/com/smartdevices/bracelet/ui/co;
 
     const/16 v1, 0x10
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/bU;->a(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/co;->a(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->l:Lkankan/wheel/widget/WheelView;
 
@@ -838,19 +838,19 @@
 
     move-result-object v0
 
-    const v1, 0x7f0200da
+    const v1, 0x7f02015d
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
     move-result-object v0
 
-    const v1, 0x7f0c00d9
+    const v1, 0x7f0700db
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    const v2, 0x7f07003c
+    const v2, 0x7f09003d
 
     const/high16 v3, 0x41900000
 
@@ -858,11 +858,11 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->v:Lcn/com/smartdevices/bracelet/ui/bU;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->v:Lcn/com/smartdevices/bracelet/ui/co;
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/a/f;)Lkankan/wheel/widget/WheelView;
 
-    const v0, 0x7f0b00a4
+    const v0, 0x7f0800c0
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->findViewById(I)Landroid/view/View;
 
@@ -880,19 +880,19 @@
 
     move-result-object v0
 
-    const v1, 0x7f0200da
+    const v1, 0x7f02015d
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
     move-result-object v0
 
-    const v1, 0x7f0c00cf
+    const v1, 0x7f0700d1
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    const v2, 0x7f07003c
+    const v2, 0x7f09003d
 
     const/high16 v3, 0x41900000
 
@@ -900,7 +900,7 @@
 
     move-result-object v14
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/bU;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/co;
 
     const/4 v2, 0x0
 
@@ -912,7 +912,7 @@
 
     move-result-object v1
 
-    const v5, 0x7f07003c
+    const v5, 0x7f09003d
 
     invoke-virtual {v1, v5}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -922,7 +922,7 @@
 
     move-result-object v1
 
-    const v6, 0x7f070011
+    const v6, 0x7f090011
 
     invoke-virtual {v1, v6}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -944,7 +944,7 @@
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v13}, Lcn/com/smartdevices/bracelet/ui/bU;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
+    invoke-direct/range {v0 .. v13}, Lcn/com/smartdevices/bracelet/ui/co;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
 
     invoke-virtual {v14, v0}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/a/f;)Lkankan/wheel/widget/WheelView;
 
@@ -960,7 +960,7 @@
 
     move-result v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->h()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->i()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v1
 
@@ -1014,9 +1014,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    const v0, 0x7f0b009d
+    const v0, 0x7f0800b9
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->findViewById(I)Landroid/view/View;
 
@@ -1073,7 +1073,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->s:Landroid/widget/Switch;
 
@@ -1081,13 +1081,13 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->s:Landroid/widget/Switch;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bw;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/bM;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/bw;-><init>(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/bM;-><init>(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    const v0, 0x7f0b009b
+    const v0, 0x7f0800b7
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->findViewById(I)Landroid/view/View;
 
@@ -1127,7 +1127,7 @@
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->d(I)Lkankan/wheel/widget/WheelView;
 
-    const v0, 0x7f0b007d
+    const v0, 0x7f08009a
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->findViewById(I)Landroid/view/View;
 
@@ -1135,7 +1135,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0b0098
+    const v0, 0x7f0800b4
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->findViewById(I)Landroid/view/View;
 
@@ -1222,9 +1222,9 @@
 
     const-string v0, "PageAlarmNew"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/A;->a(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/A;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -1254,24 +1254,24 @@
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->setVisibility(I)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->v:Lcn/com/smartdevices/bracelet/ui/bU;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->v:Lcn/com/smartdevices/bracelet/ui/co;
 
     const/16 v1, 0x9
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/bU;->a(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/co;->a(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->l:Lkankan/wheel/widget/WheelView;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->v:Lcn/com/smartdevices/bracelet/ui/bU;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->v:Lcn/com/smartdevices/bracelet/ui/co;
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/a/f;)Lkankan/wheel/widget/WheelView;
 
     :goto_0
     const-string v0, "PageAlarmNew"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/A;->c(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;)V
 
     return-void
 
@@ -1282,15 +1282,15 @@
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->setVisibility(I)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->v:Lcn/com/smartdevices/bracelet/ui/bU;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->v:Lcn/com/smartdevices/bracelet/ui/co;
 
     const/16 v1, 0x10
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/bU;->a(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/co;->a(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->l:Lkankan/wheel/widget/WheelView;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->v:Lcn/com/smartdevices/bracelet/ui/bU;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->v:Lcn/com/smartdevices/bracelet/ui/co;
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/a/f;)Lkankan/wheel/widget/WheelView;
 

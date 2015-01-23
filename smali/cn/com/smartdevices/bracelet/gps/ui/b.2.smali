@@ -20,7 +20,7 @@
 
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
-    .locals 4
+    .locals 3
 
     iget v0, p1, Landroid/os/Message;->what:I
 
@@ -32,7 +32,7 @@
     :pswitch_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/b;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/d/c;->c(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/d/d;->a(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -40,7 +40,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/b;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->c(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)Landroid/app/DialogFragment;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->i(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)Landroid/app/DialogFragment;
 
     move-result-object v0
 
@@ -48,7 +48,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/b;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->c(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)Landroid/app/DialogFragment;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->i(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)Landroid/app/DialogFragment;
 
     move-result-object v0
 
@@ -65,9 +65,9 @@
     :cond_0
     const/16 v0, 0xbb8
 
-    const-wide/16 v2, 0x3e8
+    const-wide/16 v1, 0x3e8
 
-    invoke-virtual {p0, v0, v2, v3}, Lcn/com/smartdevices/bracelet/gps/ui/b;->sendEmptyMessageDelayed(IJ)Z
+    invoke-virtual {p0, v0, v1, v2}, Lcn/com/smartdevices/bracelet/gps/ui/b;->sendEmptyMessageDelayed(IJ)Z
 
     goto :goto_0
 

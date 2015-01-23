@@ -574,62 +574,62 @@
 
     invoke-virtual {v1, v2}, Ljava/io/DataOutputStream;->writeInt(I)V
 
-    move v1, v0
+    move v3, v0
 
-    move-wide v2, v4
+    move-wide v1, v4
 
     :goto_0
     iget-object v6, p0, Lcom/amap/api/maps/offlinemap/k;->b:[J
 
     array-length v6, v6
 
-    if-ge v1, v6, :cond_1
+    if-ge v3, v6, :cond_1
 
-    if-nez v1, :cond_0
+    if-nez v3, :cond_0
 
     iget-object v6, p0, Lcom/amap/api/maps/offlinemap/k;->d:[Lcom/amap/api/maps/offlinemap/c;
 
-    aget-object v6, v6, v1
+    aget-object v6, v6, v3
 
     iget-wide v6, v6, Lcom/amap/api/maps/offlinemap/c;->b:J
 
-    add-long/2addr v2, v6
+    add-long/2addr v1, v6
 
     :goto_1
     iget-object v6, p0, Lcom/amap/api/maps/offlinemap/k;->i:Ljava/io/DataOutputStream;
 
     iget-object v7, p0, Lcom/amap/api/maps/offlinemap/k;->d:[Lcom/amap/api/maps/offlinemap/c;
 
-    aget-object v7, v7, v1
+    aget-object v7, v7, v3
 
-    iget-wide v8, v7, Lcom/amap/api/maps/offlinemap/c;->b:J
+    iget-wide v7, v7, Lcom/amap/api/maps/offlinemap/c;->b:J
 
-    invoke-virtual {v6, v8, v9}, Ljava/io/DataOutputStream;->writeLong(J)V
+    invoke-virtual {v6, v7, v8}, Ljava/io/DataOutputStream;->writeLong(J)V
 
     iget-object v6, p0, Lcom/amap/api/maps/offlinemap/k;->i:Ljava/io/DataOutputStream;
 
     iget-object v7, p0, Lcom/amap/api/maps/offlinemap/k;->d:[Lcom/amap/api/maps/offlinemap/c;
 
-    aget-object v7, v7, v1
+    aget-object v7, v7, v3
 
-    iget-wide v8, v7, Lcom/amap/api/maps/offlinemap/c;->c:J
+    iget-wide v7, v7, Lcom/amap/api/maps/offlinemap/c;->c:J
 
-    invoke-virtual {v6, v8, v9}, Ljava/io/DataOutputStream;->writeLong(J)V
+    invoke-virtual {v6, v7, v8}, Ljava/io/DataOutputStream;->writeLong(J)V
 
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :cond_0
     iget-object v6, p0, Lcom/amap/api/maps/offlinemap/k;->d:[Lcom/amap/api/maps/offlinemap/c;
 
-    aget-object v6, v6, v1
+    aget-object v6, v6, v3
 
     iget-wide v6, v6, Lcom/amap/api/maps/offlinemap/c;->b:J
 
     iget-object v8, p0, Lcom/amap/api/maps/offlinemap/k;->d:[Lcom/amap/api/maps/offlinemap/c;
 
-    add-int/lit8 v9, v1, -0x1
+    add-int/lit8 v9, v3, -0x1
 
     aget-object v8, v8, v9
 
@@ -637,34 +637,34 @@
 
     sub-long/2addr v6, v8
 
-    add-long/2addr v2, v6
+    add-long/2addr v1, v6
 
     goto :goto_1
 
     :cond_1
-    iget-object v1, p0, Lcom/amap/api/maps/offlinemap/k;->i:Ljava/io/DataOutputStream;
+    iget-object v3, p0, Lcom/amap/api/maps/offlinemap/k;->i:Ljava/io/DataOutputStream;
 
-    invoke-virtual {v1}, Ljava/io/DataOutputStream;->close()V
-
-    iget-wide v6, p0, Lcom/amap/api/maps/offlinemap/k;->e:J
-
-    cmp-long v1, v6, v4
-
-    if-lez v1, :cond_3
-
-    mul-long v4, v2, v10
+    invoke-virtual {v3}, Ljava/io/DataOutputStream;->close()V
 
     iget-wide v6, p0, Lcom/amap/api/maps/offlinemap/k;->e:J
 
-    div-long/2addr v4, v6
+    cmp-long v3, v6, v4
+
+    if-lez v3, :cond_3
+
+    mul-long v3, v1, v10
+
+    iget-wide v5, p0, Lcom/amap/api/maps/offlinemap/k;->e:J
+
+    div-long/2addr v3, v5
+
+    iget-object v5, p0, Lcom/amap/api/maps/offlinemap/k;->k:Lcom/amap/api/maps/offlinemap/m;
+
+    invoke-virtual {v5, v1, v2}, Lcom/amap/api/maps/offlinemap/m;->c(J)V
 
     iget-object v1, p0, Lcom/amap/api/maps/offlinemap/k;->k:Lcom/amap/api/maps/offlinemap/m;
 
-    invoke-virtual {v1, v2, v3}, Lcom/amap/api/maps/offlinemap/m;->c(J)V
-
-    iget-object v1, p0, Lcom/amap/api/maps/offlinemap/k;->k:Lcom/amap/api/maps/offlinemap/m;
-
-    long-to-int v2, v4
+    long-to-int v2, v3
 
     invoke-virtual {v1, v2}, Lcom/amap/api/maps/offlinemap/m;->b(I)V
 
@@ -680,17 +680,17 @@
 
     iget-object v2, p0, Lcom/amap/api/maps/offlinemap/k;->k:Lcom/amap/api/maps/offlinemap/m;
 
-    const/4 v3, 0x0
+    const/4 v5, 0x0
 
-    long-to-int v6, v4
+    long-to-int v6, v3
 
-    invoke-virtual {v1, v2, v3, v6}, Lcom/amap/api/maps/offlinemap/d;->a(Lcom/amap/api/maps/offlinemap/m;II)V
+    invoke-virtual {v1, v2, v5, v6}, Lcom/amap/api/maps/offlinemap/d;->a(Lcom/amap/api/maps/offlinemap/m;II)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
 
     :cond_2
-    cmp-long v1, v4, v10
+    cmp-long v1, v3, v10
 
     if-ltz v1, :cond_3
 
@@ -716,7 +716,7 @@
 .end method
 
 .method private g()Z
-    .locals 8
+    .locals 7
 
     const/4 v0, 0x0
 
@@ -740,15 +740,15 @@
     :try_start_1
     invoke-virtual {v2}, Ljava/io/DataInputStream;->readLong()J
 
-    move-result-wide v4
+    move-result-wide v3
 
-    iput-wide v4, p0, Lcom/amap/api/maps/offlinemap/k;->e:J
+    iput-wide v3, p0, Lcom/amap/api/maps/offlinemap/k;->e:J
 
-    iget-wide v4, p0, Lcom/amap/api/maps/offlinemap/k;->e:J
+    iget-wide v3, p0, Lcom/amap/api/maps/offlinemap/k;->e:J
 
-    const-wide/16 v6, 0x0
+    const-wide/16 v5, 0x0
 
-    cmp-long v1, v4, v6
+    cmp-long v1, v3, v5
 
     if-gtz v1, :cond_1
 
@@ -1089,9 +1089,9 @@
 .method public run()V
     .locals 11
 
-    const/4 v9, 0x1
+    const/4 v8, 0x1
 
-    const/4 v10, 0x0
+    const/4 v9, 0x0
 
     :try_start_0
     iget-object v0, p0, Lcom/amap/api/maps/offlinemap/k;->l:Landroid/content/Context;
@@ -1107,7 +1107,7 @@
     :cond_0
     sget v0, Lcom/amap/api/mapcore/k;->a:I
 
-    if-eq v0, v9, :cond_2
+    if-eq v0, v8, :cond_2
 
     :cond_1
     :goto_0
@@ -1156,70 +1156,70 @@
 
     iput-object v0, p0, Lcom/amap/api/maps/offlinemap/k;->d:[Lcom/amap/api/maps/offlinemap/c;
 
-    move v8, v10
+    move v7, v9
 
     :goto_2
     iget-object v0, p0, Lcom/amap/api/maps/offlinemap/k;->b:[J
 
     array-length v0, v0
 
-    if-ge v8, v0, :cond_8
+    if-ge v7, v0, :cond_8
 
-    iget-object v0, p0, Lcom/amap/api/maps/offlinemap/k;->d:[Lcom/amap/api/maps/offlinemap/c;
+    iget-object v10, p0, Lcom/amap/api/maps/offlinemap/k;->d:[Lcom/amap/api/maps/offlinemap/c;
 
-    new-instance v1, Lcom/amap/api/maps/offlinemap/c;
+    new-instance v0, Lcom/amap/api/maps/offlinemap/c;
 
-    iget-object v2, p0, Lcom/amap/api/maps/offlinemap/k;->a:Lcom/amap/api/maps/offlinemap/l;
+    iget-object v1, p0, Lcom/amap/api/maps/offlinemap/k;->a:Lcom/amap/api/maps/offlinemap/l;
 
-    invoke-virtual {v2}, Lcom/amap/api/maps/offlinemap/l;->a()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/amap/api/maps/offlinemap/l;->a()Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v3, p0, Lcom/amap/api/maps/offlinemap/k;->a:Lcom/amap/api/maps/offlinemap/l;
+
+    invoke-virtual {v3}, Lcom/amap/api/maps/offlinemap/l;->b()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    sget-object v3, Ljava/io/File;->separator:Ljava/lang/String;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/amap/api/maps/offlinemap/k;->a:Lcom/amap/api/maps/offlinemap/l;
+    move-result-object v2
 
-    invoke-virtual {v4}, Lcom/amap/api/maps/offlinemap/l;->b()Ljava/lang/String;
+    iget-object v3, p0, Lcom/amap/api/maps/offlinemap/k;->a:Lcom/amap/api/maps/offlinemap/l;
 
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3}, Lcom/amap/api/maps/offlinemap/l;->c()Ljava/lang/String;
 
     move-result-object v3
 
-    sget-object v4, Ljava/io/File;->separator:Ljava/lang/String;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v2
 
-    move-result-object v3
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/amap/api/maps/offlinemap/k;->a:Lcom/amap/api/maps/offlinemap/l;
+    move-result-object v2
 
-    invoke-virtual {v4}, Lcom/amap/api/maps/offlinemap/l;->c()Ljava/lang/String;
+    iget-object v3, p0, Lcom/amap/api/maps/offlinemap/k;->b:[J
 
-    move-result-object v4
+    aget-wide v3, v3, v7
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v5, p0, Lcom/amap/api/maps/offlinemap/k;->c:[J
 
-    move-result-object v3
+    aget-wide v5, v5, v7
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct/range {v0 .. v7}, Lcom/amap/api/maps/offlinemap/c;-><init>(Ljava/lang/String;Ljava/lang/String;JJI)V
 
-    move-result-object v3
-
-    iget-object v4, p0, Lcom/amap/api/maps/offlinemap/k;->b:[J
-
-    aget-wide v4, v4, v8
-
-    iget-object v6, p0, Lcom/amap/api/maps/offlinemap/k;->c:[J
-
-    aget-wide v6, v6, v8
-
-    invoke-direct/range {v1 .. v8}, Lcom/amap/api/maps/offlinemap/c;-><init>(Ljava/lang/String;Ljava/lang/String;JJI)V
-
-    aput-object v1, v0, v8
+    aput-object v0, v10, v7
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -1231,7 +1231,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -1243,9 +1243,9 @@
 
     iget-object v1, p0, Lcom/amap/api/maps/offlinemap/k;->b:[J
 
-    aget-wide v2, v1, v8
+    aget-wide v1, v1, v7
 
-    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -1257,9 +1257,9 @@
 
     iget-object v1, p0, Lcom/amap/api/maps/offlinemap/k;->c:[J
 
-    aget-wide v2, v1, v8
+    aget-wide v1, v1, v7
 
-    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -1271,11 +1271,11 @@
 
     iget-object v0, p0, Lcom/amap/api/maps/offlinemap/k;->d:[Lcom/amap/api/maps/offlinemap/c;
 
-    aget-object v0, v0, v8
+    aget-object v0, v0, v7
 
     invoke-virtual {v0}, Lcom/amap/api/maps/offlinemap/c;->start()V
 
-    add-int/lit8 v8, v8, 0x1
+    add-int/lit8 v7, v7, 0x1
 
     goto :goto_2
 
@@ -1307,7 +1307,7 @@
     goto/16 :goto_0
 
     :cond_5
-    move v0, v10
+    move v0, v9
 
     :goto_3
     :try_start_1
@@ -1340,7 +1340,7 @@
     goto :goto_3
 
     :cond_6
-    move v0, v10
+    move v0, v9
 
     :goto_4
     iget-object v1, p0, Lcom/amap/api/maps/offlinemap/k;->c:[J
@@ -1393,7 +1393,7 @@
     goto/16 :goto_0
 
     :cond_8
-    move v0, v10
+    move v0, v9
 
     :cond_9
     :try_start_2
@@ -1409,7 +1409,7 @@
 
     invoke-static {v1}, Lcom/amap/api/maps/offlinemap/n;->a(I)V
 
-    move v1, v10
+    move v1, v9
 
     :goto_5
     iget-object v2, p0, Lcom/amap/api/maps/offlinemap/k;->b:[J
@@ -1438,7 +1438,7 @@
 
     invoke-static {v1}, Lcom/amap/api/maps/offlinemap/n;->b(Ljava/lang/String;)V
 
-    move v1, v9
+    move v1, v8
 
     :goto_6
     invoke-virtual {p0}, Lcom/amap/api/maps/offlinemap/k;->isInterrupted()Z
@@ -1483,7 +1483,7 @@
 
     if-nez v2, :cond_d
 
-    move v1, v10
+    move v1, v9
 
     goto :goto_6
 
@@ -1493,7 +1493,7 @@
     goto :goto_5
 
     :cond_e
-    move v1, v9
+    move v1, v8
 
     goto :goto_6
 .end method

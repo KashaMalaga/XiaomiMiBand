@@ -206,7 +206,7 @@
 .end method
 
 .method public final a(J)V
-    .locals 3
+    .locals 2
 
     iget-object v0, p0, Lcom/tencent/b/b/f;->d:Landroid/os/Handler;
 

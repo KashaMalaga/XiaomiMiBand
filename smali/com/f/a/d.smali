@@ -1,44 +1,77 @@
-.class enum Lcom/f/a/d;
-.super Lcom/f/a/b;
+.class Lcom/f/a/D;
+.super Lcom/f/b/a;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/f/b/a",
+        "<",
+        "Landroid/view/View;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/String;II)V
-    .locals 1
+.method constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, p2, p3, v0}, Lcom/f/a/b;-><init>(Ljava/lang/String;IILcom/f/a/b;)V
+    invoke-direct {p0, p1}, Lcom/f/b/a;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public toString()Ljava/lang/String;
-    .locals 5
+.method public a(Landroid/view/View;)Ljava/lang/Float;
+    .locals 1
 
-    sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
+    invoke-static {p1}, Lcom/f/c/a/a;->a(Landroid/view/View;)Lcom/f/c/a/a;
 
-    const-string v1, "Female:%d"
+    move-result-object v0
 
-    const/4 v2, 0x1
+    invoke-virtual {v0}, Lcom/f/c/a/a;->b()F
 
-    new-array v2, v2, [Ljava/lang/Object;
+    move-result v0
 
-    const/4 v3, 0x0
-
-    iget v4, p0, Lcom/f/a/d;->d:I
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    invoke-static {v0, v1, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public bridge synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p0, p1}, Lcom/f/a/D;->a(Landroid/view/View;)Ljava/lang/Float;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public a(Landroid/view/View;F)V
+    .locals 1
+
+    invoke-static {p1}, Lcom/f/c/a/a;->a(Landroid/view/View;)Lcom/f/c/a/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p2}, Lcom/f/c/a/a;->b(F)V
+
+    return-void
+.end method
+
+.method public bridge synthetic a(Ljava/lang/Object;F)V
+    .locals 0
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-virtual {p0, p1, p2}, Lcom/f/a/D;->a(Landroid/view/View;F)V
+
+    return-void
 .end method

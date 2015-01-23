@@ -89,7 +89,7 @@
 .end method
 
 .method public static a(Landroid/animation/Animator;J)V
-    .locals 1
+    .locals 0
 
     invoke-virtual {p0, p1, p2}, Landroid/animation/Animator;->setDuration(J)Landroid/animation/Animator;
 
@@ -99,7 +99,7 @@
 .end method
 
 .method public static a(Landroid/animation/Animator;JJ)V
-    .locals 3
+    .locals 2
 
     invoke-virtual {p0, p3, p4}, Landroid/animation/Animator;->setStartDelay(J)V
 

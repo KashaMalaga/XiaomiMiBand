@@ -216,7 +216,7 @@
 .end method
 
 .method public makeKey()Ljava/lang/String;
-    .locals 10
+    .locals 9
 
     invoke-static {}, Ljava/lang/Math;->random()D
 
@@ -255,13 +255,13 @@
 
     invoke-static {}, Ljava/lang/Math;->random()D
 
-    move-result-wide v6
+    move-result-wide v5
 
-    int-to-double v8, v3
+    int-to-double v7, v3
 
-    mul-double/2addr v6, v8
+    mul-double/2addr v5, v7
 
-    double-to-int v5, v6
+    double-to-int v5, v5
 
     aget-char v5, v2, v5
 

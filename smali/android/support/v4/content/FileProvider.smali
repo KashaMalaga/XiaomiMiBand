@@ -675,7 +675,7 @@
 .end method
 
 .method public query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-    .locals 10
+    .locals 9
 
     const/4 v0, 0x0
 
@@ -755,9 +755,9 @@
 
     invoke-virtual {v3}, Ljava/io/File;->length()J
 
-    move-result-wide v8
+    move-result-wide v7
 
-    invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v7
 

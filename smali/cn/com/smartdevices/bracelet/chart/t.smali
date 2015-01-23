@@ -48,7 +48,7 @@
 
     const/high16 v1, 0x40d00000
 
-    iget v2, p0, Lcn/com/smartdevices/bracelet/chart/t;->o:F
+    iget v2, p0, Lcn/com/smartdevices/bracelet/chart/t;->p:F
 
     mul-float/2addr v1, v2
 

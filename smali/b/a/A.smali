@@ -2308,7 +2308,7 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 6
+    .locals 5
 
     const/4 v1, 0x0
 
@@ -2697,9 +2697,9 @@
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v4, p0, Lb/a/A;->n:J
+    iget-wide v3, p0, Lb/a/A;->n:J
 
-    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move v0, v1
 

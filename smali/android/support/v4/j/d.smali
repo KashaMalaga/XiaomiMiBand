@@ -81,7 +81,7 @@
 .end method
 
 .method private static a([JIIJ)I
-    .locals 7
+    .locals 5
 
     add-int v2, p1, p2
 
@@ -102,9 +102,9 @@
 
     div-int/lit8 v2, v2, 0x2
 
-    aget-wide v4, p0, v2
+    aget-wide v3, p0, v2
 
-    cmp-long v3, v4, p3
+    cmp-long v3, v3, p3
 
     if-gez v3, :cond_0
 
@@ -131,9 +131,9 @@
     return v0
 
     :cond_3
-    aget-wide v2, p0, v0
+    aget-wide v1, p0, v0
 
-    cmp-long v1, v2, p3
+    cmp-long v1, v1, p3
 
     if-eqz v1, :cond_2
 
@@ -174,7 +174,7 @@
 .end method
 
 .method private d()V
-    .locals 10
+    .locals 9
 
     const/4 v2, 0x0
 
@@ -199,9 +199,9 @@
 
     if-eq v1, v0, :cond_0
 
-    aget-wide v8, v4, v1
+    aget-wide v7, v4, v1
 
-    aput-wide v8, v4, v0
+    aput-wide v7, v4, v0
 
     aput-object v6, v5, v0
 
@@ -517,7 +517,7 @@
 .end method
 
 .method public b(JLjava/lang/Object;)V
-    .locals 7
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(JTE;)V"
@@ -736,7 +736,7 @@
 .end method
 
 .method public c(J)V
-    .locals 1
+    .locals 0
 
     invoke-virtual {p0, p1, p2}, Landroid/support/v4/j/d;->b(J)V
 
@@ -744,7 +744,7 @@
 .end method
 
 .method public c(JLjava/lang/Object;)V
-    .locals 7
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(JTE;)V"

@@ -42,9 +42,9 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lcom/xiaomi/hm/bleservice/t;
+    new-instance v0, Lcom/xiaomi/hm/bleservice/x;
 
-    invoke-direct {v0}, Lcom/xiaomi/hm/bleservice/t;-><init>()V
+    invoke-direct {v0}, Lcom/xiaomi/hm/bleservice/x;-><init>()V
 
     sput-object v0, Lcom/xiaomi/hm/bleservice/HwConnStatus;->CREATOR:Landroid/os/Parcelable$Creator;
 

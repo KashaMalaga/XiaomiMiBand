@@ -97,7 +97,7 @@
 .end method
 
 .method protected getRequestString(Z)Ljava/lang/String;
-    .locals 6
+    .locals 5
 
     new-instance v1, Ljava/lang/StringBuffer;
 
@@ -131,9 +131,9 @@
 
     invoke-virtual {v0}, Lcom/amap/api/services/core/LatLonPoint;->getLongitude()D
 
-    move-result-wide v4
+    move-result-wide v3
 
-    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuffer;->append(D)Ljava/lang/StringBuffer;
+    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuffer;->append(D)Ljava/lang/StringBuffer;
 
     move-result-object v0
 
@@ -153,9 +153,9 @@
 
     invoke-virtual {v0}, Lcom/amap/api/services/core/LatLonPoint;->getLatitude()D
 
-    move-result-wide v4
+    move-result-wide v3
 
-    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuffer;->append(D)Ljava/lang/StringBuffer;
+    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuffer;->append(D)Ljava/lang/StringBuffer;
 
     const-string v0, "&radius="
 

@@ -98,7 +98,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->i()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/B;->f()Ljava/lang/String;
 
     move-result-object v1
 
@@ -198,7 +198,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;->registerStage:Lcn/com/smartdevices/bracelet/model/game/GameStage;
 
@@ -459,7 +459,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;->registered:Z
 
@@ -491,7 +491,7 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 4
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -529,9 +529,9 @@
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;->startTime:I
 
-    int-to-long v2, v1
+    int-to-long v1, v1
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->toDate(J)Ljava/util/Date;
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->toDate(J)Ljava/util/Date;
 
     move-result-object v1
 
@@ -607,9 +607,9 @@
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;->bonusOpenTime:I
 
-    int-to-long v2, v1
+    int-to-long v1, v1
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->toDate(J)Ljava/util/Date;
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->toDate(J)Ljava/util/Date;
 
     move-result-object v1
 
@@ -625,9 +625,9 @@
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;->serverTime:I
 
-    int-to-long v2, v1
+    int-to-long v1, v1
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->toDate(J)Ljava/util/Date;
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->toDate(J)Ljava/util/Date;
 
     move-result-object v1
 

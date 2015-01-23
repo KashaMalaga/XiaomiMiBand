@@ -77,7 +77,7 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
-    const v0, 0x7f01002b
+    const v0, 0x7f01001d
 
     invoke-direct {p0, p1, p2, v0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
@@ -150,61 +150,61 @@
 
     move-result-object v0
 
-    const v1, 0x7f070065
+    const v1, 0x7f090079
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v1
 
-    const v2, 0x7f080002
+    const v2, 0x7f0a0002
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v2
 
-    const v3, 0x7f080004
+    const v3, 0x7f0a0004
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v3
 
-    const v4, 0x7f070066
+    const v4, 0x7f09007a
 
     invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v4
 
-    const/high16 v5, 0x7f0a0000
+    const/high16 v5, 0x7f0c0000
 
     invoke-virtual {v0, v5}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result v5
 
-    const v6, 0x7f070067
+    const v6, 0x7f09007b
 
     invoke-virtual {v0, v6}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v6
 
-    const v7, 0x7f080005
+    const v7, 0x7f0a0005
 
     invoke-virtual {v0, v7}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v7
 
-    const v8, 0x7f080006
+    const v8, 0x7f0a0006
 
     invoke-virtual {v0, v8}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v8
 
-    const v9, 0x7f080007
+    const v9, 0x7f0a0007
 
     invoke-virtual {v0, v9}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v0
 
-    sget-object v9, Lcom/xiaomi/hm/a/s;->TitlePageIndicator:[I
+    sget-object v9, Lcom/xiaomi/hm/a/t;->TitlePageIndicator:[I
 
     const/4 v10, 0x0
 
@@ -916,15 +916,15 @@
 .end method
 
 .method protected onDraw(Landroid/graphics/Canvas;)V
-    .locals 23
+    .locals 22
 
     invoke-super/range {p0 .. p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
 
-    if-nez v2, :cond_1
+    if-nez v1, :cond_1
 
     :cond_0
     :goto_0
@@ -933,645 +933,641 @@
     :cond_1
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
 
-    invoke-virtual {v2}, Landroid/support/v4/view/ViewPager;->b()Landroid/support/v4/view/ad;
+    invoke-virtual {v1}, Landroid/support/v4/view/ViewPager;->b()Landroid/support/v4/view/ad;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {v2}, Landroid/support/v4/view/ad;->b()I
+    invoke-virtual {v1}, Landroid/support/v4/view/ad;->b()I
 
-    move-result v15
+    move-result v14
 
-    if-eqz v15, :cond_0
-
-    move-object/from16 v0, p0
-
-    iget v2, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->f:I
-
-    const/4 v3, -0x1
-
-    if-ne v2, v3, :cond_2
+    if-eqz v14, :cond_0
 
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
+    iget v1, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->f:I
 
-    if-eqz v2, :cond_2
+    const/4 v2, -0x1
 
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
-
-    invoke-virtual {v2}, Landroid/support/v4/view/ViewPager;->c()I
-
-    move-result v2
+    if-ne v1, v2, :cond_2
 
     move-object/from16 v0, p0
 
-    iput v2, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->f:I
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
+
+    if-eqz v1, :cond_2
+
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->d:Landroid/support/v4/view/ViewPager;
+
+    invoke-virtual {v1}, Landroid/support/v4/view/ViewPager;->c()I
+
+    move-result v1
+
+    move-object/from16 v0, p0
+
+    iput v1, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->f:I
 
     :cond_2
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->i:Landroid/graphics/Paint;
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->i:Landroid/graphics/Paint;
 
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v2}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->a(Landroid/graphics/Paint;)Ljava/util/ArrayList;
+    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->a(Landroid/graphics/Paint;)Ljava/util/ArrayList;
 
-    move-result-object v16
+    move-result-object v15
 
-    invoke-virtual/range {v16 .. v16}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v15}, Ljava/util/ArrayList;->size()I
 
-    move-result v17
-
-    move-object/from16 v0, p0
-
-    iget v2, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->f:I
-
-    move/from16 v0, v17
-
-    if-lt v2, v0, :cond_3
-
-    add-int/lit8 v2, v17, -0x1
+    move-result v16
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->g(I)V
+    iget v1, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->f:I
+
+    move/from16 v0, v16
+
+    if-lt v1, v0, :cond_3
+
+    add-int/lit8 v1, v16, -0x1
+
+    move-object/from16 v0, p0
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->g(I)V
 
     goto :goto_0
 
     :cond_3
     invoke-virtual/range {p0 .. p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->getLeft()I
 
-    move-result v18
+    move-result v17
 
     invoke-virtual/range {p0 .. p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->getWidth()I
 
-    move-result v2
+    move-result v1
 
     invoke-virtual/range {p0 .. p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->getHeight()I
 
-    move-result v19
+    move-result v18
 
-    add-int v20, v18, v2
-
-    move-object/from16 v0, p0
-
-    iget v3, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->f:I
+    add-int v19, v17, v1
 
     move-object/from16 v0, p0
 
-    iget v2, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->g:F
-
-    float-to-double v4, v2
-
-    const-wide/high16 v6, 0x3fe0000000000000L
-
-    cmpg-double v2, v4, v6
-
-    if-gtz v2, :cond_a
+    iget v2, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->f:I
 
     move-object/from16 v0, p0
 
-    iget v2, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->g:F
+    iget v1, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->g:F
 
-    move v14, v3
+    float-to-double v3, v1
 
-    move v3, v2
+    const-wide/high16 v5, 0x3fe0000000000000L
 
-    :goto_1
-    const/high16 v2, 0x3e800000
+    cmpg-double v1, v3, v5
 
-    cmpg-float v2, v3, v2
+    if-gtz v1, :cond_a
 
-    if-gtz v2, :cond_b
+    move-object/from16 v0, p0
 
-    const/4 v2, 0x1
+    iget v1, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->g:F
 
     move v13, v2
 
+    move v2, v1
+
+    :goto_1
+    const/high16 v1, 0x3e800000
+
+    cmpg-float v1, v2, v1
+
+    if-gtz v1, :cond_b
+
+    const/4 v1, 0x1
+
+    move v12, v1
+
     :goto_2
-    const v2, 0x3d4ccccd
+    const v1, 0x3d4ccccd
 
-    cmpg-float v2, v3, v2
+    cmpg-float v1, v2, v1
 
-    if-gtz v2, :cond_c
+    if-gtz v1, :cond_c
 
-    const/4 v2, 0x1
+    const/4 v1, 0x1
 
-    move v10, v2
+    move v9, v1
 
     :goto_3
+    const/high16 v1, 0x3e800000
+
+    sub-float/2addr v1, v2
+
     const/high16 v2, 0x3e800000
 
-    sub-float/2addr v2, v3
-
-    const/high16 v3, 0x3e800000
-
-    div-float v21, v2, v3
+    div-float v20, v1, v2
 
     move-object/from16 v0, p0
 
-    iget v2, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->k:I
+    iget v1, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->k:I
 
-    ushr-int/lit8 v22, v2, 0x18
+    ushr-int/lit8 v21, v1, 0x18
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    move v12, v2
+    move v11, v1
 
     :goto_4
-    if-ge v12, v15, :cond_f
+    if-ge v11, v14, :cond_f
 
-    move-object/from16 v0, v16
+    invoke-virtual {v15, v11}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    invoke-virtual {v0, v12}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object v2
+    move-object v8, v1
 
-    move-object v9, v2
+    check-cast v8, Landroid/graphics/Rect;
 
-    check-cast v9, Landroid/graphics/Rect;
+    iget v1, v8, Landroid/graphics/Rect;->left:I
 
-    iget v2, v9, Landroid/graphics/Rect;->left:I
+    move/from16 v0, v17
 
-    move/from16 v0, v18
+    if-le v1, v0, :cond_4
 
-    if-le v2, v0, :cond_4
+    iget v1, v8, Landroid/graphics/Rect;->left:I
 
-    iget v2, v9, Landroid/graphics/Rect;->left:I
+    move/from16 v0, v19
 
-    move/from16 v0, v20
-
-    if-lt v2, v0, :cond_5
+    if-lt v1, v0, :cond_5
 
     :cond_4
-    iget v2, v9, Landroid/graphics/Rect;->right:I
+    iget v1, v8, Landroid/graphics/Rect;->right:I
 
-    move/from16 v0, v18
+    move/from16 v0, v17
 
-    if-le v2, v0, :cond_9
+    if-le v1, v0, :cond_9
 
-    iget v2, v9, Landroid/graphics/Rect;->right:I
+    iget v1, v8, Landroid/graphics/Rect;->right:I
 
-    move/from16 v0, v20
+    move/from16 v0, v19
 
-    if-ge v2, v0, :cond_9
+    if-ge v1, v0, :cond_9
 
     :cond_5
-    if-ne v12, v14, :cond_d
+    if-ne v11, v13, :cond_d
 
-    const/4 v2, 0x1
+    const/4 v1, 0x1
 
-    move v11, v2
+    move v10, v1
 
     :goto_5
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v12}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->f(I)Ljava/lang/CharSequence;
+    invoke-direct {v0, v11}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->f(I)Ljava/lang/CharSequence;
 
-    move-result-object v3
+    move-result-object v2
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->i:Landroid/graphics/Paint;
-
-    if-eqz v11, :cond_e
+    iget-object v3, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->i:Landroid/graphics/Paint;
 
     if-eqz v10, :cond_e
 
+    if-eqz v9, :cond_e
+
     move-object/from16 v0, p0
 
-    iget-boolean v2, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->j:Z
+    iget-boolean v1, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->j:Z
 
-    if-eqz v2, :cond_e
+    if-eqz v1, :cond_e
 
-    const/4 v2, 0x1
+    const/4 v1, 0x1
 
     :goto_6
-    invoke-virtual {v4, v2}, Landroid/graphics/Paint;->setFakeBoldText(Z)V
+    invoke-virtual {v3, v1}, Landroid/graphics/Paint;->setFakeBoldText(Z)V
 
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->i:Landroid/graphics/Paint;
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->i:Landroid/graphics/Paint;
 
     move-object/from16 v0, p0
 
-    iget v4, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->k:I
+    iget v3, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->k:I
 
-    invoke-virtual {v2, v4}, Landroid/graphics/Paint;->setColor(I)V
+    invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setColor(I)V
 
-    if-eqz v11, :cond_6
+    if-eqz v10, :cond_6
 
-    if-eqz v13, :cond_6
+    if-eqz v12, :cond_6
 
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->i:Landroid/graphics/Paint;
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->i:Landroid/graphics/Paint;
 
-    move/from16 v0, v22
+    move/from16 v0, v21
 
-    int-to-float v4, v0
+    int-to-float v3, v0
 
-    mul-float v4, v4, v21
+    mul-float v3, v3, v20
 
-    float-to-int v4, v4
+    float-to-int v3, v3
 
-    sub-int v4, v22, v4
+    sub-int v3, v21, v3
 
-    invoke-virtual {v2, v4}, Landroid/graphics/Paint;->setAlpha(I)V
+    invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setAlpha(I)V
 
     :cond_6
-    add-int/lit8 v2, v17, -0x1
+    add-int/lit8 v1, v16, -0x1
 
-    if-ge v12, v2, :cond_7
+    if-ge v11, v1, :cond_7
 
-    add-int/lit8 v2, v12, 0x1
+    add-int/lit8 v1, v11, 0x1
 
-    move-object/from16 v0, v16
+    invoke-virtual {v15, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object v2
+    check-cast v1, Landroid/graphics/Rect;
 
-    check-cast v2, Landroid/graphics/Rect;
-
-    iget v4, v9, Landroid/graphics/Rect;->right:I
-
-    int-to-float v4, v4
-
-    move-object/from16 v0, p0
-
-    iget v5, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->r:F
-
-    add-float/2addr v4, v5
-
-    iget v5, v2, Landroid/graphics/Rect;->left:I
-
-    int-to-float v5, v5
-
-    cmpl-float v4, v4, v5
-
-    if-lez v4, :cond_7
-
-    iget v4, v9, Landroid/graphics/Rect;->right:I
-
-    iget v5, v9, Landroid/graphics/Rect;->left:I
-
-    sub-int/2addr v4, v5
-
-    iget v2, v2, Landroid/graphics/Rect;->left:I
-
-    sub-int/2addr v2, v4
-
-    int-to-float v2, v2
-
-    move-object/from16 v0, p0
-
-    iget v5, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->r:F
-
-    sub-float/2addr v2, v5
-
-    float-to-int v2, v2
-
-    iput v2, v9, Landroid/graphics/Rect;->left:I
-
-    iget v2, v9, Landroid/graphics/Rect;->left:I
-
-    add-int/2addr v2, v4
-
-    iput v2, v9, Landroid/graphics/Rect;->right:I
-
-    :cond_7
-    const/4 v4, 0x0
-
-    invoke-interface {v3}, Ljava/lang/CharSequence;->length()I
-
-    move-result v5
-
-    iget v2, v9, Landroid/graphics/Rect;->left:I
-
-    int-to-float v6, v2
-
-    iget v2, v9, Landroid/graphics/Rect;->bottom:I
-
-    int-to-float v2, v2
-
-    move-object/from16 v0, p0
-
-    iget v7, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->u:F
-
-    add-float/2addr v7, v2
-
-    move-object/from16 v0, p0
-
-    iget-object v8, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->i:Landroid/graphics/Paint;
-
-    move-object/from16 v2, p1
-
-    invoke-virtual/range {v2 .. v8}, Landroid/graphics/Canvas;->drawText(Ljava/lang/CharSequence;IIFFLandroid/graphics/Paint;)V
-
-    if-eqz v11, :cond_8
-
-    if-eqz v13, :cond_8
-
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->i:Landroid/graphics/Paint;
-
-    move-object/from16 v0, p0
-
-    iget v4, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->l:I
-
-    invoke-virtual {v2, v4}, Landroid/graphics/Paint;->setColor(I)V
-
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->i:Landroid/graphics/Paint;
-
-    move-object/from16 v0, p0
-
-    iget v4, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->l:I
-
-    ushr-int/lit8 v4, v4, 0x18
-
-    int-to-float v4, v4
-
-    mul-float v4, v4, v21
-
-    float-to-int v4, v4
-
-    invoke-virtual {v2, v4}, Landroid/graphics/Paint;->setAlpha(I)V
-
-    const/4 v4, 0x0
-
-    invoke-interface {v3}, Ljava/lang/CharSequence;->length()I
-
-    move-result v5
-
-    iget v2, v9, Landroid/graphics/Rect;->left:I
-
-    int-to-float v6, v2
-
-    iget v2, v9, Landroid/graphics/Rect;->bottom:I
-
-    int-to-float v2, v2
-
-    move-object/from16 v0, p0
-
-    iget v7, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->u:F
-
-    add-float/2addr v7, v2
-
-    move-object/from16 v0, p0
-
-    iget-object v8, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->i:Landroid/graphics/Paint;
-
-    move-object/from16 v2, p1
-
-    invoke-virtual/range {v2 .. v8}, Landroid/graphics/Canvas;->drawText(Ljava/lang/CharSequence;IIFFLandroid/graphics/Paint;)V
-
-    :cond_8
-    invoke-static {v12}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    move-object/from16 v0, p0
-
-    iget-object v3, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->A:Ljava/util/Set;
-
-    invoke-interface {v3, v2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_9
-
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->i:Landroid/graphics/Paint;
-
-    move-object/from16 v0, p0
-
-    invoke-direct {v0, v12, v2}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->a(ILandroid/graphics/Paint;)Landroid/graphics/Rect;
-
-    move-result-object v2
-
-    iget v3, v2, Landroid/graphics/Rect;->right:I
-
-    iget v4, v2, Landroid/graphics/Rect;->left:I
-
-    sub-int/2addr v3, v4
-
-    iget v4, v2, Landroid/graphics/Rect;->bottom:I
-
-    iget v2, v2, Landroid/graphics/Rect;->top:I
-
-    sub-int v2, v4, v2
-
-    invoke-virtual/range {p0 .. p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    const v4, 0x7f020009
-
-    invoke-static {v2, v4}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
-
-    move-result-object v2
-
-    iget v4, v9, Landroid/graphics/Rect;->left:I
-
-    add-int/2addr v3, v4
-
-    add-int/lit8 v3, v3, 0x5
+    iget v3, v8, Landroid/graphics/Rect;->right:I
 
     int-to-float v3, v3
 
-    iget v4, v9, Landroid/graphics/Rect;->top:I
+    move-object/from16 v0, p0
 
-    invoke-virtual {v9}, Landroid/graphics/Rect;->height()I
+    iget v4, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->r:F
 
-    move-result v5
+    add-float/2addr v3, v4
 
-    div-int/lit8 v5, v5, 0x2
-
-    add-int/2addr v4, v5
+    iget v4, v1, Landroid/graphics/Rect;->left:I
 
     int-to-float v4, v4
 
-    const/4 v5, 0x0
+    cmpl-float v3, v3, v4
+
+    if-lez v3, :cond_7
+
+    iget v3, v8, Landroid/graphics/Rect;->right:I
+
+    iget v4, v8, Landroid/graphics/Rect;->left:I
+
+    sub-int/2addr v3, v4
+
+    iget v1, v1, Landroid/graphics/Rect;->left:I
+
+    sub-int/2addr v1, v3
+
+    int-to-float v1, v1
+
+    move-object/from16 v0, p0
+
+    iget v4, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->r:F
+
+    sub-float/2addr v1, v4
+
+    float-to-int v1, v1
+
+    iput v1, v8, Landroid/graphics/Rect;->left:I
+
+    iget v1, v8, Landroid/graphics/Rect;->left:I
+
+    add-int/2addr v1, v3
+
+    iput v1, v8, Landroid/graphics/Rect;->right:I
+
+    :cond_7
+    const/4 v3, 0x0
+
+    invoke-interface {v2}, Ljava/lang/CharSequence;->length()I
+
+    move-result v4
+
+    iget v1, v8, Landroid/graphics/Rect;->left:I
+
+    int-to-float v5, v1
+
+    iget v1, v8, Landroid/graphics/Rect;->bottom:I
+
+    int-to-float v1, v1
+
+    move-object/from16 v0, p0
+
+    iget v6, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->u:F
+
+    add-float/2addr v6, v1
+
+    move-object/from16 v0, p0
+
+    iget-object v7, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->i:Landroid/graphics/Paint;
+
+    move-object/from16 v1, p1
+
+    invoke-virtual/range {v1 .. v7}, Landroid/graphics/Canvas;->drawText(Ljava/lang/CharSequence;IIFFLandroid/graphics/Paint;)V
+
+    if-eqz v10, :cond_8
+
+    if-eqz v12, :cond_8
+
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->i:Landroid/graphics/Paint;
+
+    move-object/from16 v0, p0
+
+    iget v3, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->l:I
+
+    invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setColor(I)V
+
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->i:Landroid/graphics/Paint;
+
+    move-object/from16 v0, p0
+
+    iget v3, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->l:I
+
+    ushr-int/lit8 v3, v3, 0x18
+
+    int-to-float v3, v3
+
+    mul-float v3, v3, v20
+
+    float-to-int v3, v3
+
+    invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setAlpha(I)V
+
+    const/4 v3, 0x0
+
+    invoke-interface {v2}, Ljava/lang/CharSequence;->length()I
+
+    move-result v4
+
+    iget v1, v8, Landroid/graphics/Rect;->left:I
+
+    int-to-float v5, v1
+
+    iget v1, v8, Landroid/graphics/Rect;->bottom:I
+
+    int-to-float v1, v1
+
+    move-object/from16 v0, p0
+
+    iget v6, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->u:F
+
+    add-float/2addr v6, v1
+
+    move-object/from16 v0, p0
+
+    iget-object v7, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->i:Landroid/graphics/Paint;
+
+    move-object/from16 v1, p1
+
+    invoke-virtual/range {v1 .. v7}, Landroid/graphics/Canvas;->drawText(Ljava/lang/CharSequence;IIFFLandroid/graphics/Paint;)V
+
+    :cond_8
+    invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->A:Ljava/util/Set;
+
+    invoke-interface {v2, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_9
+
+    move-object/from16 v0, p0
+
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->i:Landroid/graphics/Paint;
+
+    move-object/from16 v0, p0
+
+    invoke-direct {v0, v11, v1}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->a(ILandroid/graphics/Paint;)Landroid/graphics/Rect;
+
+    move-result-object v1
+
+    iget v2, v1, Landroid/graphics/Rect;->right:I
+
+    iget v3, v1, Landroid/graphics/Rect;->left:I
+
+    sub-int/2addr v2, v3
+
+    iget v3, v1, Landroid/graphics/Rect;->bottom:I
+
+    iget v1, v1, Landroid/graphics/Rect;->top:I
+
+    sub-int v1, v3, v1
+
+    invoke-virtual/range {p0 .. p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v3, 0x7f02000b
+
+    invoke-static {v1, v3}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
+
+    move-result-object v1
+
+    iget v3, v8, Landroid/graphics/Rect;->left:I
+
+    add-int/2addr v2, v3
+
+    add-int/lit8 v2, v2, 0x5
+
+    int-to-float v2, v2
+
+    iget v3, v8, Landroid/graphics/Rect;->top:I
+
+    invoke-virtual {v8}, Landroid/graphics/Rect;->height()I
+
+    move-result v4
+
+    div-int/lit8 v4, v4, 0x2
+
+    add-int/2addr v3, v4
+
+    int-to-float v3, v3
+
+    const/4 v4, 0x0
 
     move-object/from16 v0, p1
 
-    invoke-virtual {v0, v2, v3, v4, v5}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
+    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
     :cond_9
-    add-int/lit8 v2, v12, 0x1
+    add-int/lit8 v1, v11, 0x1
 
-    move v12, v2
+    move v11, v1
 
     goto/16 :goto_4
 
     :cond_a
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v2, v2, 0x1
 
-    const/high16 v2, 0x3f800000
+    const/high16 v1, 0x3f800000
 
     move-object/from16 v0, p0
 
-    iget v4, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->g:F
+    iget v3, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->g:F
 
-    sub-float/2addr v2, v4
+    sub-float/2addr v1, v3
 
-    move v14, v3
+    move v13, v2
 
-    move v3, v2
+    move v2, v1
 
     goto/16 :goto_1
 
     :cond_b
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    move v13, v2
+    move v12, v1
 
     goto/16 :goto_2
 
     :cond_c
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    move v10, v2
+    move v9, v1
 
     goto/16 :goto_3
 
     :cond_d
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
-    move v11, v2
+    move v10, v1
 
     goto/16 :goto_5
 
     :cond_e
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
     goto/16 :goto_6
 
     :cond_f
     move-object/from16 v0, p0
 
-    iget v2, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->p:F
+    iget v1, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->p:F
 
     invoke-virtual/range {p0 .. p0}, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->getWidth()I
 
-    move-result v3
+    move-result v2
 
-    int-to-float v3, v3
-
-    move-object/from16 v0, p0
-
-    iget v4, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->s:F
-
-    sub-float/2addr v3, v4
+    int-to-float v2, v2
 
     move-object/from16 v0, p0
 
-    iget v4, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->t:F
+    iget v3, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->s:F
 
-    sub-float/2addr v3, v4
-
-    const/high16 v4, 0x3f800000
-
-    int-to-float v5, v15
-
-    mul-float/2addr v4, v5
-
-    div-float/2addr v3, v4
+    sub-float/2addr v2, v3
 
     move-object/from16 v0, p0
 
-    iget v4, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->s:F
+    iget v3, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->t:F
+
+    sub-float/2addr v2, v3
+
+    const/high16 v3, 0x3f800000
+
+    int-to-float v4, v14
+
+    mul-float/2addr v3, v4
+
+    div-float/2addr v2, v3
 
     move-object/from16 v0, p0
 
-    iget v5, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->f:I
-
-    int-to-float v5, v5
+    iget v3, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->s:F
 
     move-object/from16 v0, p0
 
-    iget v6, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->g:F
+    iget v4, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->f:I
 
-    add-float/2addr v5, v6
+    int-to-float v4, v4
 
-    mul-float/2addr v5, v3
+    move-object/from16 v0, p0
+
+    iget v5, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->g:F
 
     add-float/2addr v4, v5
 
-    const/high16 v5, 0x40000000
-
-    div-float/2addr v3, v5
+    mul-float/2addr v4, v2
 
     add-float/2addr v3, v4
 
+    const/high16 v4, 0x40000000
+
+    div-float/2addr v2, v4
+
+    add-float/2addr v2, v3
+
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->m:Landroid/graphics/Path;
+    iget-object v3, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->m:Landroid/graphics/Path;
 
-    invoke-virtual {v4}, Landroid/graphics/Path;->reset()V
+    invoke-virtual {v3}, Landroid/graphics/Path;->reset()V
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->m:Landroid/graphics/Path;
+    iget-object v3, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->m:Landroid/graphics/Path;
 
-    move/from16 v0, v19
+    move/from16 v0, v18
+
+    int-to-float v4, v0
+
+    sub-float/2addr v4, v1
+
+    invoke-virtual {v3, v2, v4}, Landroid/graphics/Path;->moveTo(FF)V
+
+    move-object/from16 v0, p0
+
+    iget-object v3, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->m:Landroid/graphics/Path;
+
+    add-float v4, v2, v1
+
+    move/from16 v0, v18
 
     int-to-float v5, v0
 
-    sub-float/2addr v5, v2
-
-    invoke-virtual {v4, v3, v5}, Landroid/graphics/Path;->moveTo(FF)V
+    invoke-virtual {v3, v4, v5}, Landroid/graphics/Path;->lineTo(FF)V
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->m:Landroid/graphics/Path;
+    iget-object v3, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->m:Landroid/graphics/Path;
 
-    add-float v5, v3, v2
+    sub-float v1, v2, v1
 
-    move/from16 v0, v19
+    move/from16 v0, v18
 
-    int-to-float v6, v0
+    int-to-float v2, v0
 
-    invoke-virtual {v4, v5, v6}, Landroid/graphics/Path;->lineTo(FF)V
-
-    move-object/from16 v0, p0
-
-    iget-object v4, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->m:Landroid/graphics/Path;
-
-    sub-float v2, v3, v2
-
-    move/from16 v0, v19
-
-    int-to-float v3, v0
-
-    invoke-virtual {v4, v2, v3}, Landroid/graphics/Path;->lineTo(FF)V
+    invoke-virtual {v3, v1, v2}, Landroid/graphics/Path;->lineTo(FF)V
 
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->m:Landroid/graphics/Path;
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->m:Landroid/graphics/Path;
 
-    invoke-virtual {v2}, Landroid/graphics/Path;->close()V
-
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->m:Landroid/graphics/Path;
+    invoke-virtual {v1}, Landroid/graphics/Path;->close()V
 
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->o:Landroid/graphics/Paint;
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->m:Landroid/graphics/Path;
+
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcn/com/smartdevices/bracelet/ui/widget/TitlePageIndicator;->o:Landroid/graphics/Paint;
 
     move-object/from16 v0, p1
 
-    invoke-virtual {v0, v2, v3}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
+    invoke-virtual {v0, v1, v2}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
     goto/16 :goto_0
 .end method

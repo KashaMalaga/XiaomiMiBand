@@ -14,7 +14,7 @@
 .method public static a(Landroid/content/Context;Landroid/accounts/Account;Landroid/os/Bundle;)Landroid/os/Bundle;
     .locals 1
 
-    sget-object v0, Lcom/xiaomi/a/a/a/i;->c:Lcom/xiaomi/a/a/a/i;
+    sget-object v0, Lcom/xiaomi/a/a/a/i;->b:Lcom/xiaomi/a/a/a/i;
 
     invoke-static {v0}, Lcom/xiaomi/a/a/a/h;->a(Lcom/xiaomi/a/a/a/i;)Lcom/xiaomi/a/a/a/c;
 
@@ -53,26 +53,10 @@
     return-object v0
 .end method
 
-.method public static c(Landroid/content/Context;Landroid/accounts/Account;Landroid/os/Bundle;)Landroid/os/Bundle;
-    .locals 1
-
-    sget-object v0, Lcom/xiaomi/a/a/a/i;->b:Lcom/xiaomi/a/a/a/i;
-
-    invoke-static {v0}, Lcom/xiaomi/a/a/a/h;->a(Lcom/xiaomi/a/a/a/i;)Lcom/xiaomi/a/a/a/c;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0, p1, p2}, Lcom/xiaomi/a/a/a/c;->a(Landroid/content/Context;Landroid/accounts/Account;Landroid/os/Bundle;)Landroid/os/Bundle;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static d(Landroid/content/Context;Landroid/accounts/Account;Landroid/os/Bundle;)Z
+.method public static c(Landroid/content/Context;Landroid/accounts/Account;Landroid/os/Bundle;)Z
     .locals 2
 
-    sget-object v0, Lcom/xiaomi/a/a/a/i;->b:Lcom/xiaomi/a/a/a/i;
+    sget-object v0, Lcom/xiaomi/a/a/a/i;->c:Lcom/xiaomi/a/a/a/i;
 
     invoke-static {v0}, Lcom/xiaomi/a/a/a/h;->a(Lcom/xiaomi/a/a/a/i;)Lcom/xiaomi/a/a/a/c;
 

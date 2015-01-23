@@ -75,7 +75,7 @@
 .end method
 
 .method public static a(Ljava/lang/String;Ljava/util/List;JLjava/lang/String;Ljava/lang/String;)Lcom/xiaomi/mipush/sdk/i;
-    .locals 2
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -108,20 +108,20 @@
     return-object v0
 .end method
 
-.method public static a(Lcom/xiaomi/g/a/z;Lcom/xiaomi/g/a/d;Z)Lcom/xiaomi/mipush/sdk/j;
+.method public static a(Lcom/xiaomi/h/a/z;Lcom/xiaomi/h/a/d;Z)Lcom/xiaomi/mipush/sdk/j;
     .locals 2
 
     new-instance v0, Lcom/xiaomi/mipush/sdk/j;
 
     invoke-direct {v0}, Lcom/xiaomi/mipush/sdk/j;-><init>()V
 
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/z;->c()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/xiaomi/h/a/z;->c()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/mipush/sdk/j;->a(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/z;->j()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/xiaomi/h/a/z;->j()Ljava/lang/String;
 
     move-result-object v1
 
@@ -135,30 +135,30 @@
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/mipush/sdk/j;->a(I)V
 
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/z;->j()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/xiaomi/h/a/z;->j()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/mipush/sdk/j;->c(Ljava/lang/String;)V
 
     :goto_0
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/z;->p()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/xiaomi/h/a/z;->p()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/mipush/sdk/j;->g(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/z;->l()Lcom/xiaomi/g/a/b;
+    invoke-virtual {p0}, Lcom/xiaomi/h/a/z;->l()Lcom/xiaomi/h/a/b;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/z;->l()Lcom/xiaomi/g/a/b;
+    invoke-virtual {p0}, Lcom/xiaomi/h/a/z;->l()Lcom/xiaomi/h/a/b;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/xiaomi/g/a/b;->e()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/xiaomi/h/a/b;->e()Ljava/lang/String;
 
     move-result-object v1
 
@@ -177,7 +177,7 @@
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/xiaomi/h/a/d;->b()Ljava/lang/String;
 
     move-result-object v1
 
@@ -194,44 +194,44 @@
 
     if-eqz v1, :cond_2
 
-    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->f()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/xiaomi/h/a/d;->f()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/mipush/sdk/j;->d(Ljava/lang/String;)V
 
     :cond_2
-    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->j()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/xiaomi/h/a/d;->j()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/mipush/sdk/j;->e(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->h()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/xiaomi/h/a/d;->h()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/mipush/sdk/j;->f(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->l()I
+    invoke-virtual {p1}, Lcom/xiaomi/h/a/d;->l()I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/mipush/sdk/j;->b(I)V
 
-    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->q()I
+    invoke-virtual {p1}, Lcom/xiaomi/h/a/d;->q()I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/mipush/sdk/j;->c(I)V
 
-    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->o()I
+    invoke-virtual {p1}, Lcom/xiaomi/h/a/d;->o()I
 
     move-result v1
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/mipush/sdk/j;->d(I)V
 
-    invoke-virtual {p1}, Lcom/xiaomi/g/a/d;->s()Ljava/util/Map;
+    invoke-virtual {p1}, Lcom/xiaomi/h/a/d;->s()Ljava/util/Map;
 
     move-result-object v1
 
@@ -243,7 +243,7 @@
     return-object v0
 
     :cond_4
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/z;->h()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/xiaomi/h/a/z;->h()Ljava/lang/String;
 
     move-result-object v1
 
@@ -257,7 +257,7 @@
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/mipush/sdk/j;->a(I)V
 
-    invoke-virtual {p0}, Lcom/xiaomi/g/a/z;->h()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/xiaomi/h/a/z;->h()Ljava/lang/String;
 
     move-result-object v1
 

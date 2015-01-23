@@ -79,71 +79,79 @@
 .end method
 
 .method public static calculateLineDistance(Lcom/amap/api/maps/model/LatLng;Lcom/amap/api/maps/model/LatLng;)F
-    .locals 21
+    .locals 20
 
     move-object/from16 v0, p0
 
-    iget-wide v2, v0, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iget-wide v1, v0, Lcom/amap/api/maps/model/LatLng;->longitude:D
 
     move-object/from16 v0, p0
 
-    iget-wide v4, v0, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v3, v0, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
     move-object/from16 v0, p1
 
-    iget-wide v6, v0, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iget-wide v5, v0, Lcom/amap/api/maps/model/LatLng;->longitude:D
 
     move-object/from16 v0, p1
 
-    iget-wide v8, v0, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v7, v0, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
-    const-wide v10, 0x3f91df46a2529d37L
+    const-wide v9, 0x3f91df46a2529d37L
 
-    mul-double/2addr v2, v10
+    mul-double/2addr v1, v9
 
-    const-wide v10, 0x3f91df46a2529d37L
+    const-wide v9, 0x3f91df46a2529d37L
 
-    mul-double/2addr v4, v10
+    mul-double/2addr v3, v9
 
-    const-wide v10, 0x3f91df46a2529d37L
+    const-wide v9, 0x3f91df46a2529d37L
 
-    mul-double/2addr v6, v10
+    mul-double/2addr v5, v9
 
-    const-wide v10, 0x3f91df46a2529d37L
+    const-wide v9, 0x3f91df46a2529d37L
 
-    mul-double/2addr v8, v10
+    mul-double/2addr v7, v9
 
-    invoke-static {v2, v3}, Ljava/lang/Math;->sin(D)D
+    invoke-static {v1, v2}, Ljava/lang/Math;->sin(D)D
 
-    move-result-wide v10
+    move-result-wide v9
 
-    invoke-static {v4, v5}, Ljava/lang/Math;->sin(D)D
+    invoke-static {v3, v4}, Ljava/lang/Math;->sin(D)D
 
-    move-result-wide v12
+    move-result-wide v11
 
-    invoke-static {v2, v3}, Ljava/lang/Math;->cos(D)D
+    invoke-static {v1, v2}, Ljava/lang/Math;->cos(D)D
 
-    move-result-wide v2
+    move-result-wide v1
 
-    invoke-static {v4, v5}, Ljava/lang/Math;->cos(D)D
+    invoke-static {v3, v4}, Ljava/lang/Math;->cos(D)D
 
-    move-result-wide v4
+    move-result-wide v3
 
-    invoke-static {v6, v7}, Ljava/lang/Math;->sin(D)D
+    invoke-static {v5, v6}, Ljava/lang/Math;->sin(D)D
 
-    move-result-wide v14
+    move-result-wide v13
 
-    invoke-static {v8, v9}, Ljava/lang/Math;->sin(D)D
+    invoke-static {v7, v8}, Ljava/lang/Math;->sin(D)D
 
-    move-result-wide v16
+    move-result-wide v15
 
-    invoke-static {v6, v7}, Ljava/lang/Math;->cos(D)D
+    invoke-static {v5, v6}, Ljava/lang/Math;->cos(D)D
 
-    move-result-wide v6
+    move-result-wide v5
 
-    invoke-static {v8, v9}, Ljava/lang/Math;->cos(D)D
+    invoke-static {v7, v8}, Ljava/lang/Math;->cos(D)D
 
-    move-result-wide v8
+    move-result-wide v7
+
+    const/16 v17, 0x3
+
+    move/from16 v0, v17
+
+    new-array v0, v0, [D
+
+    move-object/from16 v17, v0
 
     const/16 v18, 0x3
 
@@ -153,133 +161,125 @@
 
     move-object/from16 v18, v0
 
-    const/16 v19, 0x3
+    const/16 v19, 0x0
 
-    move/from16 v0, v19
+    mul-double/2addr v1, v3
 
-    new-array v0, v0, [D
+    aput-wide v1, v17, v19
 
-    move-object/from16 v19, v0
+    const/4 v1, 0x1
 
-    const/16 v20, 0x0
+    mul-double v2, v3, v9
 
-    mul-double/2addr v2, v4
+    aput-wide v2, v17, v1
 
-    aput-wide v2, v18, v20
+    const/4 v1, 0x2
 
-    const/4 v2, 0x1
+    aput-wide v11, v17, v1
 
-    mul-double/2addr v4, v10
+    const/4 v1, 0x0
 
-    aput-wide v4, v18, v2
+    mul-double v2, v7, v5
 
-    const/4 v2, 0x2
+    aput-wide v2, v18, v1
 
-    aput-wide v12, v18, v2
+    const/4 v1, 0x1
 
-    const/4 v2, 0x0
+    mul-double v2, v7, v13
 
-    mul-double v4, v8, v6
+    aput-wide v2, v18, v1
 
-    aput-wide v4, v19, v2
+    const/4 v1, 0x2
 
-    const/4 v2, 0x1
+    aput-wide v15, v18, v1
 
-    mul-double v4, v8, v14
+    const/4 v1, 0x0
 
-    aput-wide v4, v19, v2
+    aget-wide v1, v17, v1
 
-    const/4 v2, 0x2
+    const/4 v3, 0x0
 
-    aput-wide v16, v19, v2
+    aget-wide v3, v18, v3
 
-    const/4 v2, 0x0
+    sub-double/2addr v1, v3
 
-    aget-wide v2, v18, v2
+    const/4 v3, 0x0
 
-    const/4 v4, 0x0
+    aget-wide v3, v17, v3
 
-    aget-wide v4, v19, v4
+    const/4 v5, 0x0
 
-    sub-double/2addr v2, v4
+    aget-wide v5, v18, v5
 
-    const/4 v4, 0x0
+    sub-double/2addr v3, v5
 
-    aget-wide v4, v18, v4
+    mul-double/2addr v1, v3
 
-    const/4 v6, 0x0
+    const/4 v3, 0x1
 
-    aget-wide v6, v19, v6
+    aget-wide v3, v17, v3
 
-    sub-double/2addr v4, v6
+    const/4 v5, 0x1
 
-    mul-double/2addr v2, v4
+    aget-wide v5, v18, v5
 
-    const/4 v4, 0x1
+    sub-double/2addr v3, v5
 
-    aget-wide v4, v18, v4
+    const/4 v5, 0x1
 
-    const/4 v6, 0x1
+    aget-wide v5, v17, v5
 
-    aget-wide v6, v19, v6
+    const/4 v7, 0x1
 
-    sub-double/2addr v4, v6
+    aget-wide v7, v18, v7
 
-    const/4 v6, 0x1
+    sub-double/2addr v5, v7
 
-    aget-wide v6, v18, v6
+    mul-double/2addr v3, v5
 
-    const/4 v8, 0x1
+    add-double/2addr v1, v3
 
-    aget-wide v8, v19, v8
+    const/4 v3, 0x2
 
-    sub-double/2addr v6, v8
+    aget-wide v3, v17, v3
 
-    mul-double/2addr v4, v6
+    const/4 v5, 0x2
 
-    add-double/2addr v2, v4
+    aget-wide v5, v18, v5
 
-    const/4 v4, 0x2
+    sub-double/2addr v3, v5
 
-    aget-wide v4, v18, v4
+    const/4 v5, 0x2
 
-    const/4 v6, 0x2
+    aget-wide v5, v17, v5
 
-    aget-wide v6, v19, v6
+    const/4 v7, 0x2
 
-    sub-double/2addr v4, v6
+    aget-wide v7, v18, v7
 
-    const/4 v6, 0x2
+    sub-double/2addr v5, v7
 
-    aget-wide v6, v18, v6
+    mul-double/2addr v3, v5
 
-    const/4 v8, 0x2
+    add-double/2addr v1, v3
 
-    aget-wide v8, v19, v8
+    invoke-static {v1, v2}, Ljava/lang/Math;->sqrt(D)D
 
-    sub-double/2addr v6, v8
+    move-result-wide v1
 
-    mul-double/2addr v4, v6
+    const-wide/high16 v3, 0x4000000000000000L
 
-    add-double/2addr v2, v4
+    div-double/2addr v1, v3
 
-    invoke-static {v2, v3}, Ljava/lang/Math;->sqrt(D)D
+    invoke-static {v1, v2}, Ljava/lang/Math;->asin(D)D
 
-    move-result-wide v2
+    move-result-wide v1
 
-    const-wide/high16 v4, 0x4000000000000000L
+    const-wide v3, 0x41684dae328e2ad1L
 
-    div-double/2addr v2, v4
+    mul-double/2addr v1, v3
 
-    invoke-static {v2, v3}, Ljava/lang/Math;->asin(D)D
+    double-to-float v1, v1
 
-    move-result-wide v2
-
-    const-wide v4, 0x41684dae328e2ad1L
-
-    mul-double/2addr v2, v4
-
-    double-to-float v2, v2
-
-    return v2
+    return v1
 .end method

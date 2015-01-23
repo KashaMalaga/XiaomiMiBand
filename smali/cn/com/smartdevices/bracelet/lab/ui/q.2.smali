@@ -34,25 +34,15 @@
         }
     .end annotation
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->c()[Ljava/lang/String;
-
-    move-result-object v0
-
-    aget-object v0, v0, p3
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/q;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
-
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->b(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;Ljava/lang/String;)Ljava/lang/String;
-
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/q;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->p(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Landroid/widget/EditText;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->b()[Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    const-string v1, ""
+    aget-object v1, v1, p3
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->a(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;Ljava/lang/String;)Ljava/lang/String;
 
     const/4 v0, 0x0
 

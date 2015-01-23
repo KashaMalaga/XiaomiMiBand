@@ -133,71 +133,79 @@
 .end method
 
 .method public static a(Lcom/amap/api/maps/model/LatLng;Lcom/amap/api/maps/model/LatLng;)D
-    .locals 21
+    .locals 20
 
     move-object/from16 v0, p0
 
-    iget-wide v2, v0, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iget-wide v1, v0, Lcom/amap/api/maps/model/LatLng;->longitude:D
 
     move-object/from16 v0, p0
 
-    iget-wide v4, v0, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v3, v0, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
     move-object/from16 v0, p1
 
-    iget-wide v6, v0, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iget-wide v5, v0, Lcom/amap/api/maps/model/LatLng;->longitude:D
 
     move-object/from16 v0, p1
 
-    iget-wide v8, v0, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v7, v0, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
-    const-wide v10, 0x3f91df46a2529d37L
+    const-wide v9, 0x3f91df46a2529d37L
 
-    mul-double/2addr v2, v10
+    mul-double/2addr v1, v9
 
-    const-wide v10, 0x3f91df46a2529d37L
+    const-wide v9, 0x3f91df46a2529d37L
 
-    mul-double/2addr v4, v10
+    mul-double/2addr v3, v9
 
-    const-wide v10, 0x3f91df46a2529d37L
+    const-wide v9, 0x3f91df46a2529d37L
 
-    mul-double/2addr v6, v10
+    mul-double/2addr v5, v9
 
-    const-wide v10, 0x3f91df46a2529d37L
+    const-wide v9, 0x3f91df46a2529d37L
 
-    mul-double/2addr v8, v10
+    mul-double/2addr v7, v9
 
-    invoke-static {v2, v3}, Ljava/lang/Math;->sin(D)D
+    invoke-static {v1, v2}, Ljava/lang/Math;->sin(D)D
 
-    move-result-wide v10
+    move-result-wide v9
 
-    invoke-static {v4, v5}, Ljava/lang/Math;->sin(D)D
+    invoke-static {v3, v4}, Ljava/lang/Math;->sin(D)D
 
-    move-result-wide v12
+    move-result-wide v11
 
-    invoke-static {v2, v3}, Ljava/lang/Math;->cos(D)D
+    invoke-static {v1, v2}, Ljava/lang/Math;->cos(D)D
 
-    move-result-wide v2
+    move-result-wide v1
 
-    invoke-static {v4, v5}, Ljava/lang/Math;->cos(D)D
+    invoke-static {v3, v4}, Ljava/lang/Math;->cos(D)D
 
-    move-result-wide v4
+    move-result-wide v3
 
-    invoke-static {v6, v7}, Ljava/lang/Math;->sin(D)D
+    invoke-static {v5, v6}, Ljava/lang/Math;->sin(D)D
 
-    move-result-wide v14
+    move-result-wide v13
 
-    invoke-static {v8, v9}, Ljava/lang/Math;->sin(D)D
+    invoke-static {v7, v8}, Ljava/lang/Math;->sin(D)D
 
-    move-result-wide v16
+    move-result-wide v15
 
-    invoke-static {v6, v7}, Ljava/lang/Math;->cos(D)D
+    invoke-static {v5, v6}, Ljava/lang/Math;->cos(D)D
 
-    move-result-wide v6
+    move-result-wide v5
 
-    invoke-static {v8, v9}, Ljava/lang/Math;->cos(D)D
+    invoke-static {v7, v8}, Ljava/lang/Math;->cos(D)D
 
-    move-result-wide v8
+    move-result-wide v7
+
+    const/16 v17, 0x3
+
+    move/from16 v0, v17
+
+    new-array v0, v0, [D
+
+    move-object/from16 v17, v0
 
     const/16 v18, 0x3
 
@@ -207,133 +215,125 @@
 
     move-object/from16 v18, v0
 
-    const/16 v19, 0x3
+    const/16 v19, 0x0
 
-    move/from16 v0, v19
+    mul-double/2addr v1, v3
 
-    new-array v0, v0, [D
+    aput-wide v1, v17, v19
 
-    move-object/from16 v19, v0
+    const/4 v1, 0x1
 
-    const/16 v20, 0x0
+    mul-double v2, v3, v9
 
-    mul-double/2addr v2, v4
+    aput-wide v2, v17, v1
 
-    aput-wide v2, v18, v20
+    const/4 v1, 0x2
 
-    const/4 v2, 0x1
+    aput-wide v11, v17, v1
 
-    mul-double/2addr v4, v10
+    const/4 v1, 0x0
 
-    aput-wide v4, v18, v2
+    mul-double v2, v7, v5
 
-    const/4 v2, 0x2
+    aput-wide v2, v18, v1
 
-    aput-wide v12, v18, v2
+    const/4 v1, 0x1
 
-    const/4 v2, 0x0
+    mul-double v2, v7, v13
 
-    mul-double v4, v8, v6
+    aput-wide v2, v18, v1
 
-    aput-wide v4, v19, v2
+    const/4 v1, 0x2
 
-    const/4 v2, 0x1
+    aput-wide v15, v18, v1
 
-    mul-double v4, v8, v14
+    const/4 v1, 0x0
 
-    aput-wide v4, v19, v2
+    aget-wide v1, v17, v1
 
-    const/4 v2, 0x2
+    const/4 v3, 0x0
 
-    aput-wide v16, v19, v2
+    aget-wide v3, v18, v3
 
-    const/4 v2, 0x0
+    sub-double/2addr v1, v3
 
-    aget-wide v2, v18, v2
+    const/4 v3, 0x0
 
-    const/4 v4, 0x0
+    aget-wide v3, v17, v3
 
-    aget-wide v4, v19, v4
+    const/4 v5, 0x0
 
-    sub-double/2addr v2, v4
+    aget-wide v5, v18, v5
 
-    const/4 v4, 0x0
+    sub-double/2addr v3, v5
 
-    aget-wide v4, v18, v4
+    mul-double/2addr v1, v3
 
-    const/4 v6, 0x0
+    const/4 v3, 0x1
 
-    aget-wide v6, v19, v6
+    aget-wide v3, v17, v3
 
-    sub-double/2addr v4, v6
+    const/4 v5, 0x1
 
-    mul-double/2addr v2, v4
+    aget-wide v5, v18, v5
 
-    const/4 v4, 0x1
+    sub-double/2addr v3, v5
 
-    aget-wide v4, v18, v4
+    const/4 v5, 0x1
 
-    const/4 v6, 0x1
+    aget-wide v5, v17, v5
 
-    aget-wide v6, v19, v6
+    const/4 v7, 0x1
 
-    sub-double/2addr v4, v6
+    aget-wide v7, v18, v7
 
-    const/4 v6, 0x1
+    sub-double/2addr v5, v7
 
-    aget-wide v6, v18, v6
+    mul-double/2addr v3, v5
 
-    const/4 v8, 0x1
+    add-double/2addr v1, v3
 
-    aget-wide v8, v19, v8
+    const/4 v3, 0x2
 
-    sub-double/2addr v6, v8
+    aget-wide v3, v17, v3
 
-    mul-double/2addr v4, v6
+    const/4 v5, 0x2
 
-    add-double/2addr v2, v4
+    aget-wide v5, v18, v5
 
-    const/4 v4, 0x2
+    sub-double/2addr v3, v5
 
-    aget-wide v4, v18, v4
+    const/4 v5, 0x2
 
-    const/4 v6, 0x2
+    aget-wide v5, v17, v5
 
-    aget-wide v6, v19, v6
+    const/4 v7, 0x2
 
-    sub-double/2addr v4, v6
+    aget-wide v7, v18, v7
 
-    const/4 v6, 0x2
+    sub-double/2addr v5, v7
 
-    aget-wide v6, v18, v6
+    mul-double/2addr v3, v5
 
-    const/4 v8, 0x2
+    add-double/2addr v1, v3
 
-    aget-wide v8, v19, v8
+    invoke-static {v1, v2}, Ljava/lang/Math;->sqrt(D)D
 
-    sub-double/2addr v6, v8
+    move-result-wide v1
 
-    mul-double/2addr v4, v6
+    const-wide/high16 v3, 0x4000000000000000L
 
-    add-double/2addr v2, v4
+    div-double/2addr v1, v3
 
-    invoke-static {v2, v3}, Ljava/lang/Math;->sqrt(D)D
+    invoke-static {v1, v2}, Ljava/lang/Math;->asin(D)D
 
-    move-result-wide v2
+    move-result-wide v1
 
-    const-wide/high16 v4, 0x4000000000000000L
+    const-wide v3, 0x41684dae328e2ad1L
 
-    div-double/2addr v2, v4
+    mul-double/2addr v1, v3
 
-    invoke-static {v2, v3}, Ljava/lang/Math;->asin(D)D
-
-    move-result-wide v2
-
-    const-wide v4, 0x41684dae328e2ad1L
-
-    mul-double/2addr v2, v4
-
-    return-wide v2
+    return-wide v1
 .end method
 
 .method public static a(DDDD)F
@@ -698,7 +698,7 @@
 .end method
 
 .method private static a(Lcom/autonavi/amap/mapcore/FPoint;Lcom/autonavi/amap/mapcore/FPoint;Lcom/autonavi/amap/mapcore/FPoint;Lcom/autonavi/amap/mapcore/FPoint;)Lcom/autonavi/amap/mapcore/FPoint;
-    .locals 10
+    .locals 9
 
     const/4 v1, 0x0
 
@@ -736,13 +736,13 @@
 
     sub-float/2addr v1, v2
 
-    float-to-double v2, v1
+    float-to-double v1, v1
 
-    iget v1, p1, Lcom/autonavi/amap/mapcore/FPoint;->y:F
+    iget v3, p1, Lcom/autonavi/amap/mapcore/FPoint;->y:F
 
     iget v4, p0, Lcom/autonavi/amap/mapcore/FPoint;->y:F
 
-    sub-float/2addr v1, v4
+    sub-float/2addr v3, v4
 
     iget v4, p3, Lcom/autonavi/amap/mapcore/FPoint;->x:F
 
@@ -750,7 +750,7 @@
 
     sub-float/2addr v4, v5
 
-    mul-float/2addr v1, v4
+    mul-float/2addr v3, v4
 
     iget v4, p1, Lcom/autonavi/amap/mapcore/FPoint;->x:F
 
@@ -766,51 +766,51 @@
 
     mul-float/2addr v4, v5
 
-    sub-float/2addr v1, v4
+    sub-float/2addr v3, v4
 
-    float-to-double v4, v1
+    float-to-double v3, v3
 
-    iget v1, p2, Lcom/autonavi/amap/mapcore/FPoint;->x:F
+    iget v5, p2, Lcom/autonavi/amap/mapcore/FPoint;->x:F
 
-    float-to-double v6, v1
+    float-to-double v5, v5
 
-    iget v1, p3, Lcom/autonavi/amap/mapcore/FPoint;->x:F
+    iget v7, p3, Lcom/autonavi/amap/mapcore/FPoint;->x:F
 
     iget v8, p2, Lcom/autonavi/amap/mapcore/FPoint;->x:F
 
-    sub-float/2addr v1, v8
+    sub-float/2addr v7, v8
 
-    float-to-double v8, v1
+    float-to-double v7, v7
 
-    mul-double/2addr v8, v2
+    mul-double/2addr v7, v1
 
-    div-double/2addr v8, v4
+    div-double/2addr v7, v3
 
-    add-double/2addr v6, v8
+    add-double/2addr v5, v7
 
-    double-to-float v1, v6
+    double-to-float v5, v5
 
-    iput v1, v0, Lcom/autonavi/amap/mapcore/FPoint;->x:F
+    iput v5, v0, Lcom/autonavi/amap/mapcore/FPoint;->x:F
 
-    iget v1, p2, Lcom/autonavi/amap/mapcore/FPoint;->y:F
+    iget v5, p2, Lcom/autonavi/amap/mapcore/FPoint;->y:F
 
-    float-to-double v6, v1
+    float-to-double v5, v5
 
-    iget v1, p3, Lcom/autonavi/amap/mapcore/FPoint;->y:F
+    iget v7, p3, Lcom/autonavi/amap/mapcore/FPoint;->y:F
 
     iget v8, p2, Lcom/autonavi/amap/mapcore/FPoint;->y:F
 
-    sub-float/2addr v1, v8
+    sub-float/2addr v7, v8
 
-    float-to-double v8, v1
+    float-to-double v7, v7
 
-    mul-double/2addr v2, v8
+    mul-double/2addr v1, v7
 
-    div-double/2addr v2, v4
+    div-double/2addr v1, v3
 
-    add-double/2addr v2, v6
+    add-double/2addr v1, v5
 
-    double-to-float v1, v2
+    double-to-float v1, v1
 
     iput v1, v0, Lcom/autonavi/amap/mapcore/FPoint;->y:F
 
@@ -1721,83 +1721,83 @@
 .end method
 
 .method public static a(DDDDDDDD)Z
-    .locals 12
+    .locals 11
 
     const/4 v0, 0x0
 
-    sub-double v2, p4, p0
+    sub-double v1, p4, p0
 
-    sub-double v4, p14, p10
+    sub-double v3, p14, p10
 
-    mul-double/2addr v2, v4
+    mul-double/2addr v1, v3
 
-    sub-double v4, p6, p2
+    sub-double v3, p6, p2
 
-    sub-double v6, p12, p8
+    sub-double v5, p12, p8
 
-    mul-double/2addr v4, v6
+    mul-double/2addr v3, v5
 
-    sub-double/2addr v2, v4
+    sub-double/2addr v1, v3
 
-    const-wide/16 v4, 0x0
+    const-wide/16 v3, 0x0
 
-    cmpl-double v1, v2, v4
+    cmpl-double v3, v1, v3
 
-    if-eqz v1, :cond_0
+    if-eqz v3, :cond_0
 
-    sub-double v4, p2, p10
+    sub-double v3, p2, p10
 
-    sub-double v6, p12, p8
+    sub-double v5, p12, p8
 
-    mul-double/2addr v4, v6
+    mul-double/2addr v3, v5
 
-    sub-double v6, p0, p8
+    sub-double v5, p0, p8
 
-    sub-double v8, p14, p10
+    sub-double v7, p14, p10
 
-    mul-double/2addr v6, v8
+    mul-double/2addr v5, v7
 
-    sub-double/2addr v4, v6
+    sub-double/2addr v3, v5
 
-    div-double/2addr v4, v2
+    div-double/2addr v3, v1
 
-    sub-double v6, p2, p10
+    sub-double v5, p2, p10
 
-    sub-double v8, p4, p0
+    sub-double v7, p4, p0
 
-    mul-double/2addr v6, v8
+    mul-double/2addr v5, v7
 
-    sub-double v8, p0, p8
+    sub-double v7, p0, p8
 
-    sub-double v10, p6, p2
+    sub-double v9, p6, p2
 
-    mul-double/2addr v8, v10
+    mul-double/2addr v7, v9
 
-    sub-double/2addr v6, v8
+    sub-double/2addr v5, v7
 
-    div-double v2, v6, v2
+    div-double v1, v5, v1
 
-    const-wide/16 v6, 0x0
+    const-wide/16 v5, 0x0
 
-    cmpl-double v1, v4, v6
+    cmpl-double v5, v3, v5
 
-    if-ltz v1, :cond_0
+    if-ltz v5, :cond_0
 
-    const-wide/high16 v6, 0x3ff0000000000000L
+    const-wide/high16 v5, 0x3ff0000000000000L
 
-    cmpg-double v1, v4, v6
+    cmpg-double v3, v3, v5
 
-    if-gtz v1, :cond_0
+    if-gtz v3, :cond_0
 
-    const-wide/16 v4, 0x0
+    const-wide/16 v3, 0x0
 
-    cmpl-double v1, v2, v4
+    cmpl-double v3, v1, v3
 
-    if-ltz v1, :cond_0
+    if-ltz v3, :cond_0
 
-    const-wide/high16 v4, 0x3ff0000000000000L
+    const-wide/high16 v3, 0x3ff0000000000000L
 
-    cmpg-double v1, v2, v4
+    cmpg-double v1, v1, v3
 
     if-gtz v1, :cond_0
 
@@ -1808,7 +1808,7 @@
 .end method
 
 .method public static a(Lcom/amap/api/maps/model/LatLng;Ljava/util/List;)Z
-    .locals 32
+    .locals 31
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1822,7 +1822,7 @@
 
     const/16 v28, 0x0
 
-    const-wide v30, 0x3e112e0be826d695L
+    const-wide v29, 0x3e112e0be826d695L
 
     const/4 v7, 0x0
 
@@ -1925,7 +1925,7 @@
 
     move-result-wide v14
 
-    cmpg-double v14, v14, v30
+    cmpg-double v14, v14, v29
 
     if-gez v14, :cond_1
 
@@ -2829,45 +2829,45 @@
 .end method
 
 .method public static b(DDDDDD)Z
-    .locals 6
+    .locals 5
 
     const/4 v0, 0x0
 
-    const-wide v2, 0x3e112e0be826d695L
+    const-wide v1, 0x3e112e0be826d695L
 
     invoke-static/range {p0 .. p11}, Lcom/amap/api/mapcore/util/w;->a(DDDDDD)D
 
-    move-result-wide v4
+    move-result-wide v3
 
-    invoke-static {v4, v5}, Ljava/lang/Math;->abs(D)D
+    invoke-static {v3, v4}, Ljava/lang/Math;->abs(D)D
 
-    move-result-wide v4
+    move-result-wide v3
 
-    cmpg-double v1, v4, v2
+    cmpg-double v1, v3, v1
 
     if-gez v1, :cond_0
 
-    sub-double v2, p0, p4
+    sub-double v1, p0, p4
 
-    sub-double v4, p0, p8
+    sub-double v3, p0, p8
 
-    mul-double/2addr v2, v4
+    mul-double/2addr v1, v3
 
-    const-wide/16 v4, 0x0
+    const-wide/16 v3, 0x0
 
-    cmpg-double v1, v2, v4
+    cmpg-double v1, v1, v3
 
     if-gtz v1, :cond_0
 
-    sub-double v2, p2, p6
+    sub-double v1, p2, p6
 
-    sub-double v4, p2, p10
+    sub-double v3, p2, p10
 
-    mul-double/2addr v2, v4
+    mul-double/2addr v1, v3
 
-    const-wide/16 v4, 0x0
+    const-wide/16 v3, 0x0
 
-    cmpg-double v1, v2, v4
+    cmpg-double v1, v1, v3
 
     if-gtz v1, :cond_0
 

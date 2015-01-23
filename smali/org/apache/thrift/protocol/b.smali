@@ -192,37 +192,37 @@
 .end method
 
 .method private A()J
-    .locals 11
+    .locals 10
 
-    const/16 v10, 0x80
+    const/16 v9, 0x80
 
     const/4 v0, 0x0
 
-    const-wide/16 v2, 0x0
+    const-wide/16 v1, 0x0
 
-    iget-object v1, p0, Lorg/apache/thrift/protocol/b;->e:Lorg/apache/thrift/transport/c;
+    iget-object v3, p0, Lorg/apache/thrift/protocol/b;->e:Lorg/apache/thrift/transport/c;
 
-    invoke-virtual {v1}, Lorg/apache/thrift/transport/c;->c()I
+    invoke-virtual {v3}, Lorg/apache/thrift/transport/c;->c()I
 
-    move-result v1
+    move-result v3
 
     const/16 v4, 0xa
 
-    if-lt v1, v4, :cond_2
+    if-lt v3, v4, :cond_2
 
-    iget-object v1, p0, Lorg/apache/thrift/protocol/b;->e:Lorg/apache/thrift/transport/c;
+    iget-object v3, p0, Lorg/apache/thrift/protocol/b;->e:Lorg/apache/thrift/transport/c;
 
-    invoke-virtual {v1}, Lorg/apache/thrift/transport/c;->a()[B
+    invoke-virtual {v3}, Lorg/apache/thrift/transport/c;->a()[B
 
     move-result-object v4
 
-    iget-object v1, p0, Lorg/apache/thrift/protocol/b;->e:Lorg/apache/thrift/transport/c;
+    iget-object v3, p0, Lorg/apache/thrift/protocol/b;->e:Lorg/apache/thrift/transport/c;
 
-    invoke-virtual {v1}, Lorg/apache/thrift/transport/c;->b()I
+    invoke-virtual {v3}, Lorg/apache/thrift/transport/c;->b()I
 
     move-result v5
 
-    move v1, v0
+    move v3, v0
 
     :goto_0
     add-int v6, v5, v0
@@ -231,27 +231,27 @@
 
     and-int/lit8 v7, v6, 0x7f
 
-    int-to-long v8, v7
+    int-to-long v7, v7
 
-    shl-long/2addr v8, v1
+    shl-long/2addr v7, v3
 
-    or-long/2addr v2, v8
+    or-long/2addr v1, v7
 
     and-int/lit16 v6, v6, 0x80
 
-    if-eq v6, v10, :cond_0
+    if-eq v6, v9, :cond_0
 
-    iget-object v1, p0, Lorg/apache/thrift/protocol/b;->e:Lorg/apache/thrift/transport/c;
+    iget-object v3, p0, Lorg/apache/thrift/protocol/b;->e:Lorg/apache/thrift/transport/c;
 
     add-int/lit8 v0, v0, 0x1
 
-    invoke-virtual {v1, v0}, Lorg/apache/thrift/transport/c;->a(I)V
+    invoke-virtual {v3, v0}, Lorg/apache/thrift/transport/c;->a(I)V
 
     :goto_1
-    return-wide v2
+    return-wide v1
 
     :cond_0
-    add-int/lit8 v1, v1, 0x7
+    add-int/lit8 v3, v3, 0x7
 
     add-int/lit8 v0, v0, 0x1
 
@@ -263,27 +263,27 @@
     :cond_2
     invoke-virtual {p0}, Lorg/apache/thrift/protocol/b;->r()B
 
-    move-result v1
+    move-result v3
 
-    and-int/lit8 v4, v1, 0x7f
+    and-int/lit8 v4, v3, 0x7f
 
     int-to-long v4, v4
 
     shl-long/2addr v4, v0
 
-    or-long/2addr v2, v4
+    or-long/2addr v1, v4
 
-    and-int/lit16 v1, v1, 0x80
+    and-int/lit16 v3, v3, 0x80
 
-    if-eq v1, v10, :cond_1
+    if-eq v3, v9, :cond_1
 
     goto :goto_1
 .end method
 
 .method private a([B)J
-    .locals 8
+    .locals 7
 
-    const-wide/16 v6, 0xff
+    const-wide/16 v5, 0xff
 
     const/4 v0, 0x7
 
@@ -291,7 +291,7 @@
 
     int-to-long v0, v0
 
-    and-long/2addr v0, v6
+    and-long/2addr v0, v5
 
     const/16 v2, 0x38
 
@@ -303,7 +303,7 @@
 
     int-to-long v2, v2
 
-    and-long/2addr v2, v6
+    and-long/2addr v2, v5
 
     const/16 v4, 0x30
 
@@ -317,7 +317,7 @@
 
     int-to-long v2, v2
 
-    and-long/2addr v2, v6
+    and-long/2addr v2, v5
 
     const/16 v4, 0x28
 
@@ -331,7 +331,7 @@
 
     int-to-long v2, v2
 
-    and-long/2addr v2, v6
+    and-long/2addr v2, v5
 
     const/16 v4, 0x20
 
@@ -345,7 +345,7 @@
 
     int-to-long v2, v2
 
-    and-long/2addr v2, v6
+    and-long/2addr v2, v5
 
     const/16 v4, 0x18
 
@@ -359,7 +359,7 @@
 
     int-to-long v2, v2
 
-    and-long/2addr v2, v6
+    and-long/2addr v2, v5
 
     const/16 v4, 0x10
 
@@ -373,7 +373,7 @@
 
     int-to-long v2, v2
 
-    and-long/2addr v2, v6
+    and-long/2addr v2, v5
 
     const/16 v4, 0x8
 
@@ -387,7 +387,7 @@
 
     int-to-long v2, v2
 
-    and-long/2addr v2, v6
+    and-long/2addr v2, v5
 
     or-long/2addr v0, v2
 
@@ -532,7 +532,7 @@
 .end method
 
 .method private b(J)V
-    .locals 9
+    .locals 8
 
     const/4 v1, 0x0
 
@@ -749,7 +749,7 @@
 .end method
 
 .method private c(J)J
-    .locals 5
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -775,7 +775,7 @@
 .end method
 
 .method private d(J)J
-    .locals 5
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -993,7 +993,7 @@
 .end method
 
 .method public a(J)V
-    .locals 3
+    .locals 2
 
     invoke-direct {p0, p1, p2}, Lorg/apache/thrift/protocol/b;->c(J)J
 

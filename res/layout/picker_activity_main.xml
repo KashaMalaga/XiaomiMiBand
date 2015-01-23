@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title_back_container" layout="@layout/title_back" />
+    <cn.com.smartdevices.bracelet.view.OptimizeGridView android:scrollbarStyle="outsideOverlay" android:gravity="center" android:id="@id/picker_grid" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/picker_item_selector" android:drawSelectorOnTop="true" android:horizontalSpacing="4.0dip" android:verticalSpacing="4.0dip" android:stretchMode="columnWidth" android:columnWidth="@dimen/itemSize" android:numColumns="auto_fit" android:choiceMode="multipleChoiceModal" android:layout_below="@id/title_back_container" />
+</RelativeLayout>

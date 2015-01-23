@@ -32,11 +32,11 @@
 
     move-result-object v0
 
-    const v1, 0x7f030034
+    const v1, 0x7f030046
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const v0, 0x7f0b011f
+    const v0, 0x7f080190
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->findViewById(I)Landroid/view/View;
 
@@ -46,7 +46,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->c:Landroid/widget/TextView;
 
-    const v0, 0x7f0b0121
+    const v0, 0x7f080192
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->findViewById(I)Landroid/view/View;
 
@@ -56,13 +56,13 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->b:Landroid/widget/TextView;
 
-    const v0, 0x7f0b011e
+    const v0, 0x7f08018f
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
-    const v0, 0x7f0b0120
+    const v0, 0x7f080191
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->findViewById(I)Landroid/view/View;
 
@@ -72,7 +72,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/xiaomi/hm/a/s;->DimPanelFragmentBottomBar:[I
+    sget-object v1, Lcom/xiaomi/hm/a/t;->DimPanelFragmentBottomBar:[I
 
     invoke-virtual {v0, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -96,7 +96,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f070010
+    const v2, 0x7f090010
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -112,7 +112,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f070010
+    const v2, 0x7f090010
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -164,13 +164,13 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    const v2, 0x7f020040
+    const v2, 0x7f02005f
 
-    const v1, 0x7f020041
+    const v1, 0x7f020060
 
-    const v0, 0x7f020042
+    const v0, 0x7f020061
 
     const-string v11, "dark"
 
@@ -180,13 +180,13 @@
 
     if-eqz v10, :cond_0
 
-    const v2, 0x7f02003f
+    const v2, 0x7f02005e
 
-    const v1, 0x7f020044
+    const v1, 0x7f020067
 
-    const v0, 0x7f020045
+    const v0, 0x7f020068
 
-    const v10, 0x7f070005
+    const v10, 0x7f090005
 
     invoke-virtual {v4, v10}, Landroid/view/View;->setBackgroundResource(I)V
 
@@ -295,7 +295,7 @@
 
     invoke-virtual {v4, v0}, Landroid/view/View;->setVisibility(I)V
 
-    const v0, 0x7f070023
+    const v0, 0x7f090023
 
     invoke-virtual {v3, v0}, Landroid/view/View;->setBackgroundResource(I)V
 
@@ -304,6 +304,14 @@
 
 
 # virtual methods
+.method public a()Landroid/view/View;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->c:Landroid/widget/TextView;
+
+    return-object v0
+.end method
+
 .method public a(I)V
     .locals 1
 
@@ -314,12 +322,40 @@
     return-void
 .end method
 
+.method public a(Ljava/lang/String;)V
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->c:Landroid/widget/TextView;
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    return-void
+.end method
+
+.method public b()Landroid/view/View;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->b:Landroid/widget/TextView;
+
+    return-object v0
+.end method
+
 .method public b(I)V
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->b:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    return-void
+.end method
+
+.method public b(Ljava/lang/String;)V
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->b:Landroid/widget/TextView;
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     return-void
 .end method

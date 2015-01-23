@@ -1,7 +1,20 @@
-.class interface abstract Lcn/com/smartdevices/bracelet/view/T;
+.class Lcn/com/smartdevices/bracelet/view/T;
 .super Ljava/lang/Object;
 
 
-# virtual methods
-.method public abstract a(Landroid/support/v4/view/ad;Landroid/support/v4/view/ad;)V
+# instance fields
+.field a:Ljava/lang/Object;
+
+.field b:I
+
+.field c:Z
+
+
+# direct methods
+.method constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
 .end method

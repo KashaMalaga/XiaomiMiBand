@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnLongClickListener;
+.implements Lcn/com/smartdevices/bracelet/ui/W;
 
 
 # instance fields
@@ -22,10 +22,34 @@
 
 
 # virtual methods
-.method public onLongClick(Landroid/view/View;)Z
-    .locals 1
+.method public a(Landroid/app/DialogFragment;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    return-void
+.end method
 
-    return v0
+.method public b(Landroid/app/DialogFragment;)V
+    .locals 3
+
+    new-instance v0, Landroid/content/Intent;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/d;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
+
+    const-class v2, Lcn/com/smartdevices/bracelet/activity/LoginActivity;
+
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/d;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
+
+    const/16 v2, 0x2711
+
+    invoke-virtual {v1, v0, v2}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->startActivityForResult(Landroid/content/Intent;I)V
+
+    return-void
+.end method
+
+.method public c(Landroid/app/DialogFragment;)V
+    .locals 0
+
+    return-void
 .end method

@@ -46,7 +46,7 @@
 
     invoke-virtual {p1, p2}, Landroid/graphics/Canvas;->clipRect(Landroid/graphics/RectF;)Z
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/chart/u;->n:Lcn/com/smartdevices/bracelet/chart/base/r;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/chart/u;->o:Lcn/com/smartdevices/bracelet/chart/base/r;
 
     iget-object v2, v2, Lcn/com/smartdevices/bracelet/chart/base/r;->c:Landroid/graphics/Paint;
 

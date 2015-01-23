@@ -69,7 +69,7 @@
 
     const-string v0, "no account for mipush"
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->c(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->c(Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/xiaomi/push/service/G;->a:Lcom/xiaomi/push/service/XMPushService;
 
@@ -86,7 +86,7 @@
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->a(Ljava/lang/Throwable;)V
 
     move-object v0, v1
 
@@ -95,7 +95,7 @@
     :catch_1
     move-exception v0
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->a(Ljava/lang/Throwable;)V
 
     :cond_1
     move-object v0, v1
@@ -159,14 +159,14 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/xiaomi/push/service/XMPushService;->a(Ljava/lang/String;[B)V
     :try_end_1
-    .catch Lcom/xiaomi/f/C; {:try_start_1 .. :try_end_1} :catch_2
+    .catch Lcom/xiaomi/g/C; {:try_start_1 .. :try_end_1} :catch_2
 
     goto :goto_1
 
     :catch_2
     move-exception v0
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->a(Ljava/lang/Throwable;)V
 
     iget-object v1, p0, Lcom/xiaomi/push/service/G;->a:Lcom/xiaomi/push/service/XMPushService;
 
@@ -209,7 +209,7 @@
 
     invoke-virtual {v1, v2}, Lcom/xiaomi/push/service/XMPushService;->a(Lcom/xiaomi/push/service/e;)V
     :try_end_2
-    .catch Lcom/xiaomi/f/C; {:try_start_2 .. :try_end_2} :catch_2
+    .catch Lcom/xiaomi/g/C; {:try_start_2 .. :try_end_2} :catch_2
 
     goto :goto_1
 

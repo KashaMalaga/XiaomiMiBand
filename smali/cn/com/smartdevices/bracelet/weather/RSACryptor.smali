@@ -25,6 +25,13 @@
     .locals 2
 
     :try_start_0
+    sget-object v0, Lcn/com/smartdevices/bracelet/weather/RSACryptor;->sPrivateKey:Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/weather/RSACryptor;->genRSAKey()V
+
+    :cond_0
     const-string v0, "91260911122270127234998794195592609888073958094373010756710379192625130836419604330763856136850049911413204124223615647519195442106322096484402456126786185173546280736241523122414918124588757446468517350617150284870882239165712536054685980495005286151635113622783814352878825904710689839570887752503335468013"
 
     sget-object v1, Lcn/com/smartdevices/bracelet/weather/RSACryptor;->sPrivateKey:Ljava/lang/String;

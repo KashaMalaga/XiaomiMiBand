@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <size android:height="1.0px" />
+            <solid android:color="@color/service_divider" />
+        </shape>
+    </item>
+    <item android:top="1.0px" android:bottom="1.0px">
+        <shape>
+            <size android:height="15.0dip" />
+            <solid android:color="@color/lab_item_group_bg" />
+        </shape>
+    </item>
+</layer-list>

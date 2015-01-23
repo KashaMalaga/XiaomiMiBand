@@ -715,7 +715,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0c001f
+    const v3, 0x7f070020
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -757,7 +757,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0c001e
+    const v3, 0x7f07001f
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1167,7 +1167,9 @@
 .end method
 
 .method public offsetWeek(Lcn/com/smartdevices/bracelet/model/SportDay;)I
-    .locals 5
+    .locals 6
+
+    const/4 v5, 0x4
 
     const/4 v4, 0x3
 
@@ -1180,6 +1182,26 @@
     iget v3, p1, Lcn/com/smartdevices/bracelet/model/SportDay;->year:I
 
     if-ne v2, v3, :cond_0
+
+    invoke-virtual {v0, v4}, Ljava/util/Calendar;->get(I)I
+
+    move-result v2
+
+    invoke-virtual {v0, v5}, Ljava/util/Calendar;->get(I)I
+
+    move-result v3
+
+    if-lt v2, v3, :cond_0
+
+    invoke-virtual {v1, v4}, Ljava/util/Calendar;->get(I)I
+
+    move-result v2
+
+    invoke-virtual {v1, v5}, Ljava/util/Calendar;->get(I)I
+
+    move-result v3
+
+    if-lt v2, v3, :cond_0
 
     invoke-virtual {v0, v4}, Ljava/util/Calendar;->get(I)I
 

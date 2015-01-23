@@ -369,9 +369,9 @@
 
     invoke-virtual {p1}, Lb/a/ay;->f()J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    invoke-virtual {v0, v2, v3}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
+    invoke-virtual {v0, v1, v2}, Ljava/nio/ByteBuffer;->putLong(J)Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
 

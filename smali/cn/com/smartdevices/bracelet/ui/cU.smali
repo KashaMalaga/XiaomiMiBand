@@ -1,46 +1,51 @@
-.class public Lcn/com/smartdevices/bracelet/ui/cU;
+.class Lcn/com/smartdevices/bracelet/ui/cU;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/widget/TextView$OnEditorActionListener;
 
 
 # instance fields
-.field private a:Landroid/graphics/Bitmap;
-
-.field private b:Ljava/lang/String;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/cT;
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/Bitmap;Ljava/lang/String;)V
-    .locals 1
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/cT;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cU;->a:Lcn/com/smartdevices/bracelet/ui/cT;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cU;->a:Landroid/graphics/Bitmap;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cU;->b:Ljava/lang/String;
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cU;->a:Landroid/graphics/Bitmap;
-
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/cU;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Landroid/graphics/Bitmap;
-    .locals 1
+.method public onEditorAction(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
+    .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cU;->a:Landroid/graphics/Bitmap;
+    const/4 v0, 0x6
 
-    return-object v0
-.end method
+    if-ne v0, p2, :cond_0
 
-.method public b()Ljava/lang/String;
-    .locals 1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cU;->a:Lcn/com/smartdevices/bracelet/ui/cT;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cU;->b:Ljava/lang/String;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cU;->a:Lcn/com/smartdevices/bracelet/ui/cT;
 
-    return-object v0
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/cT;->a(Lcn/com/smartdevices/bracelet/ui/cT;)Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/cT;->onClick(Landroid/view/View;)V
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

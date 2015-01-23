@@ -12,11 +12,11 @@
 .end method
 
 .method static a([Lcom/autonavi/amap/mapcore/FPoint;)I
-    .locals 12
+    .locals 11
 
     const/4 v0, 0x0
 
-    const-wide/16 v10, 0x0
+    const-wide/16 v9, 0x0
 
     array-length v2, p0
 
@@ -55,17 +55,17 @@
 
     mul-float/2addr v5, v6
 
-    float-to-double v6, v5
+    float-to-double v5, v5
 
-    aget-object v5, p0, v3
+    aget-object v7, p0, v3
 
-    iget v5, v5, Lcom/autonavi/amap/mapcore/FPoint;->y:F
+    iget v7, v7, Lcom/autonavi/amap/mapcore/FPoint;->y:F
 
     aget-object v8, p0, v1
 
     iget v8, v8, Lcom/autonavi/amap/mapcore/FPoint;->y:F
 
-    sub-float/2addr v5, v8
+    sub-float/2addr v7, v8
 
     aget-object v4, p0, v4
 
@@ -77,15 +77,15 @@
 
     sub-float v3, v4, v3
 
-    mul-float/2addr v3, v5
+    mul-float/2addr v3, v7
 
-    float-to-double v4, v3
+    float-to-double v3, v3
 
-    sub-double v4, v6, v4
+    sub-double v3, v5, v3
 
-    cmpg-double v3, v4, v10
+    cmpg-double v5, v3, v9
 
-    if-gez v3, :cond_1
+    if-gez v5, :cond_1
 
     add-int/lit8 v0, v0, -0x1
 
@@ -96,7 +96,7 @@
     goto :goto_0
 
     :cond_1
-    cmpl-double v3, v4, v10
+    cmpl-double v3, v3, v9
 
     if-lez v3, :cond_0
 

@@ -8,20 +8,16 @@
 # instance fields
 .field final synthetic this$0:Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;
 
-.field final synthetic val$notifyCB:Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$INotifyCallback;
-
-.field final synthetic val$value:[B
+.field final synthetic val$characteristic:Landroid/bluetooth/BluetoothGattCharacteristic;
 
 
 # direct methods
-.method constructor <init>(Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$INotifyCallback;[B)V
+.method constructor <init>(Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;Landroid/bluetooth/BluetoothGattCharacteristic;)V
     .locals 0
 
     iput-object p1, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$11;->this$0:Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;
 
-    iput-object p2, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$11;->val$notifyCB:Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$INotifyCallback;
-
-    iput-object p3, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$11;->val$value:[B
+    iput-object p2, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$11;->val$characteristic:Landroid/bluetooth/BluetoothGattCharacteristic;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -33,11 +29,11 @@
 .method public run()V
     .locals 2
 
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$11;->val$notifyCB:Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$INotifyCallback;
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$11;->this$0:Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;
 
-    iget-object v1, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$11;->val$value:[B
+    iget-object v1, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$11;->val$characteristic:Landroid/bluetooth/BluetoothGattCharacteristic;
 
-    invoke-interface {v0, v1}, Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$INotifyCallback;->notify([B)V
+    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->GattCB_onCharacteristicChanged(Landroid/bluetooth/BluetoothGattCharacteristic;)V
 
     return-void
 .end method

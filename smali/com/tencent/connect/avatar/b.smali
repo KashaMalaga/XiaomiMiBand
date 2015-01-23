@@ -535,9 +535,9 @@
 
     iput-boolean v1, p0, Lcom/tencent/connect/avatar/b;->i:Z
 
-    const-wide/16 v2, 0x12c
+    const-wide/16 v1, 0x12c
 
-    invoke-virtual {v0, v2, v3}, Landroid/view/animation/Animation;->setDuration(J)V
+    invoke-virtual {v0, v1, v2}, Landroid/view/animation/Animation;->setDuration(J)V
 
     invoke-virtual {p0, v0}, Lcom/tencent/connect/avatar/b;->startAnimation(Landroid/view/animation/Animation;)V
 

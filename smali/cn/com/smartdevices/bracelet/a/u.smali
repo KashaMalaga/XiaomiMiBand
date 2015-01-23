@@ -26,7 +26,7 @@
 
     const-string v1, "run stopGetActivities!!!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/u;->a:Lcn/com/smartdevices/bracelet/a/t;
 

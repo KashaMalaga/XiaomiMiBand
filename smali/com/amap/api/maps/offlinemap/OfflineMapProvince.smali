@@ -153,7 +153,7 @@
 .end method
 
 .method public setSize(J)V
-    .locals 1
+    .locals 0
 
     iput-wide p1, p0, Lcom/amap/api/maps/offlinemap/OfflineMapProvince;->c:J
 

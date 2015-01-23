@@ -208,7 +208,7 @@
 .end method
 
 .method public a(J)V
-    .locals 9
+    .locals 8
 
     const/16 v7, 0x8
 
@@ -220,11 +220,11 @@
 
     const/16 v1, 0x38
 
-    shr-long v2, p1, v1
+    shr-long v1, p1, v1
 
-    and-long/2addr v2, v4
+    and-long/2addr v1, v4
 
-    long-to-int v1, v2
+    long-to-int v1, v1
 
     int-to-byte v1, v1
 

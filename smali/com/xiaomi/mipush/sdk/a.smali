@@ -14,7 +14,7 @@
 .method protected static a()I
     .locals 1
 
-    invoke-static {}, Lcom/xiaomi/channel/a/c/a;->c()I
+    invoke-static {}, Lcom/xiaomi/b/a/c/a;->c()I
 
     move-result v0
 

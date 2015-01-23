@@ -1,5 +1,5 @@
 version: 2.0.0-RC3
-apkFileName: 小米手环_1.2.171_295.apk
+apkFileName: 小米运动_1.2.663_338.apk
 isFrameworkApk: false
 usesFramework:
   ids:
@@ -10,11 +10,11 @@ sdkInfo:
 packageInfo:
   forced-package-id: '127'
 versionInfo:
-  versionCode: '295'
-  versionName: 1.2.171
+  versionCode: '338'
+  versionName: 1.2.663
 compressionType: false
 unknownFiles:
-  push_version: '0'
+  push_version: '8'
   org/achartengine/image/zoom-1.png: '8'
   org/achartengine/image/zoom_in.png: '8'
   org/achartengine/image/zoom_out.png: '8'

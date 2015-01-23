@@ -80,11 +80,11 @@
 
     move-result v0
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/f;->j:F
+    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/f;->k:F
 
     sub-float/2addr v0, v1
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/f;->l:F
+    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/f;->m:F
 
     sub-float/2addr v0, v1
 
@@ -122,7 +122,7 @@
 
     sub-float/2addr v0, v1
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/f;->o:F
+    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/f;->p:F
 
     mul-float/2addr v1, v3
 
@@ -130,7 +130,7 @@
 
     if-gez v1, :cond_1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/f;->o:F
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/f;->p:F
 
     mul-float/2addr v0, v3
 
@@ -185,7 +185,7 @@
 
     const v0, 0x4344999a
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/f;->o:F
+    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/f;->p:F
 
     mul-float/2addr v0, v1
 
@@ -215,7 +215,7 @@
     :cond_2
     const/high16 v0, 0x43200000
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/f;->o:F
+    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/f;->p:F
 
     mul-float/2addr v0, v1
 
@@ -270,11 +270,11 @@
 
     move-result v0
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/f;->j:F
+    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/f;->k:F
 
     sub-float/2addr v0, v1
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/f;->l:F
+    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/f;->m:F
 
     sub-float/2addr v0, v1
 
@@ -312,13 +312,13 @@
 
     mul-float/2addr v0, v1
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/f;->j:F
+    iget v1, p0, Lcn/com/smartdevices/bracelet/chart/f;->k:F
 
     add-float/2addr v1, v0
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/f;->b:Lcn/com/smartdevices/bracelet/chart/a;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/a;->g(Lcn/com/smartdevices/bracelet/chart/a;)Lcn/com/smartdevices/bracelet/chart/base/b;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/a;->h(Lcn/com/smartdevices/bracelet/chart/a;)Lcn/com/smartdevices/bracelet/chart/base/b;
 
     move-result-object v0
 
@@ -331,12 +331,4 @@
     add-float/2addr v0, v1
 
     goto :goto_0
-.end method
-
-.method protected d(Landroid/graphics/RectF;Lcn/com/smartdevices/bracelet/chart/base/c;)F
-    .locals 1
-
-    const/4 v0, 0x0
-
-    return v0
 .end method

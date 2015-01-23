@@ -1,0 +1,98 @@
+.class final Lcn/com/smartdevices/bracelet/weight/s;
+.super Landroid/os/AsyncTask;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Landroid/os/AsyncTask",
+        "<",
+        "Ljava/lang/Void;",
+        "Ljava/lang/Void;",
+        "Ljava/lang/Void;",
+        ">;"
+    }
+.end annotation
+
+
+# direct methods
+.method constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method protected varargs a([Ljava/lang/Void;)Ljava/lang/Void;
+    .locals 2
+
+    const/4 v0, 0x1
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/weight/q;->a(Z)Z
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/a;->a()Lcn/com/smartdevices/bracelet/weight/a;
+
+    move-result-object v0
+
+    new-instance v1, Lcn/com/smartdevices/bracelet/weight/t;
+
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/weight/t;-><init>(Lcn/com/smartdevices/bracelet/weight/s;)V
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/weight/a;->b(Lcn/com/smartdevices/bracelet/weight/v;)Z
+
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/weight/q;->a(Z)Z
+
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method protected a(Ljava/lang/Void;)V
+    .locals 1
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->o()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getNeedSyncServer()I
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->i()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/B;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method protected synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    check-cast p1, [Ljava/lang/Void;
+
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/weight/s;->a([Ljava/lang/Void;)Ljava/lang/Void;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method protected synthetic onPostExecute(Ljava/lang/Object;)V
+    .locals 0
+
+    check-cast p1, Ljava/lang/Void;
+
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/weight/s;->a(Ljava/lang/Void;)V
+
+    return-void
+.end method

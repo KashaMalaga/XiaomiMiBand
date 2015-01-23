@@ -3,11 +3,13 @@
 
 
 # instance fields
-.field public averageSteps:Ljava/lang/String;
+.field public avgSleepEndTime:I
 
-.field public calories:Ljava/lang/String;
+.field public avgSleepStartTime:I
 
-.field public distance:Ljava/lang/String;
+.field public highestStep:I
+
+.field public highestStepDay:Ljava/lang/String;
 
 .field public iAverageSteps:I
 
@@ -21,11 +23,22 @@
 
 .field public iTotalwearingdays:I
 
-.field public points:Ljava/lang/String;
+.field public longestSleepDay:Ljava/lang/String;
 
-.field public steps:Ljava/lang/String;
+.field public longestSleepDeepMin:I
 
-.field public totalwearingdays:Ljava/lang/String;
+.field public longestSleepMin:I
+
+.field public maxContinueRecord:I
+
+.field public maxContinueRecordDay:Ljava/lang/String;
+
+.field public startUseDay:Ljava/lang/String;
+    .annotation runtime Lcom/d/a/a/a;
+    .end annotation
+.end field
+
+.field public totalRunDist:I
 
 
 # direct methods
@@ -36,41 +49,47 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, ""
+    iput v1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->iCalories:I
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->distance:Ljava/lang/String;
-
-    const-string v0, ""
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->averageSteps:Ljava/lang/String;
+    iput v1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->iPoints:I
 
     const-string v0, ""
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->totalwearingdays:Ljava/lang/String;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->startUseDay:Ljava/lang/String;
+
+    iput v1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->highestStep:I
 
     const-string v0, ""
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->calories:Ljava/lang/String;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->highestStepDay:Ljava/lang/String;
+
+    iput v1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->maxContinueRecord:I
 
     const-string v0, ""
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->steps:Ljava/lang/String;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->maxContinueRecordDay:Ljava/lang/String;
 
     const-string v0, ""
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->points:Ljava/lang/String;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->longestSleepDay:Ljava/lang/String;
+
+    iput v1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->longestSleepMin:I
+
+    iput v1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->longestSleepDeepMin:I
 
     iput v1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->iDistance:I
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->iAverageSteps:I
-
     iput v1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->iTotalwearingdays:I
-
-    iput v1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->iCalories:I
 
     iput v1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->iSteps:I
 
-    iput v1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->iPoints:I
+    iput v1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->totalRunDist:I
+
+    iput v1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->iAverageSteps:I
+
+    iput v1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->avgSleepStartTime:I
+
+    iput v1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->avgSleepEndTime:I
 
     return-void
 .end method
@@ -78,13 +97,13 @@
 .method public static fromJsonStr(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/model/UserTotalSportData;
     .locals 2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->g()Lcom/b/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/B;->c()Lcom/d/a/k;
 
     move-result-object v0
 
     const-class v1, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;
 
-    invoke-virtual {v0, p0, v1}, Lcom/b/a/k;->a(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v0, p0, v1}, Lcom/d/a/k;->a(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -109,37 +128,19 @@
 .end method
 
 .method public isValid()Z
-    .locals 2
+    .locals 1
 
-    const-string v0, ""
+    iget v0, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->iAverageSteps:I
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->averageSteps:Ljava/lang/String;
+    if-lez v0, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget v0, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->iDistance:I
 
-    move-result v0
+    if-lez v0, :cond_0
 
-    if-nez v0, :cond_0
+    iget v0, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->iTotalwearingdays:I
 
-    const-string v0, ""
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->distance:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const-string v0, ""
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->totalwearingdays:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
+    if-lez v0, :cond_0
 
     const/4 v0, 0x1
 
@@ -155,11 +156,11 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->g()Lcom/b/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/B;->c()Lcom/d/a/k;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/b/a/k;->b(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, p0}, Lcom/d/a/k;->b(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -176,142 +177,4 @@
     move-result-object v0
 
     goto :goto_0
-.end method
-
-.method public translate()V
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, ""
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->iDistance:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->distance:Ljava/lang/String;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, ""
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->iAverageSteps:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->averageSteps:Ljava/lang/String;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, ""
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->iTotalwearingdays:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->totalwearingdays:Ljava/lang/String;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, ""
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->iCalories:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->calories:Ljava/lang/String;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, ""
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->iSteps:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->steps:Ljava/lang/String;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, ""
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->iPoints:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->points:Ljava/lang/String;
-
-    return-void
 .end method

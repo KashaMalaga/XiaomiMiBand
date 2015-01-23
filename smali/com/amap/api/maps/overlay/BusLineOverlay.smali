@@ -342,7 +342,7 @@
 .method private a(I)Lcom/amap/api/maps/model/MarkerOptions;
     .locals 8
 
-    const/high16 v3, 0x3f000000
+    const/high16 v7, 0x3f000000
 
     new-instance v1, Lcom/amap/api/maps/model/MarkerOptions;
 
@@ -364,7 +364,7 @@
 
     invoke-virtual {v0}, Lcom/amap/api/services/core/LatLonPoint;->getLatitude()D
 
-    move-result-wide v4
+    move-result-wide v3
 
     iget-object v0, p0, Lcom/amap/api/maps/overlay/BusLineOverlay;->e:Ljava/util/List;
 
@@ -380,9 +380,9 @@
 
     invoke-virtual {v0}, Lcom/amap/api/services/core/LatLonPoint;->getLongitude()D
 
-    move-result-wide v6
+    move-result-wide v5
 
-    invoke-direct {v2, v4, v5, v6, v7}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v2, v3, v4, v5, v6}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     invoke-virtual {v1, v2}, Lcom/amap/api/maps/model/MarkerOptions;->position(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/MarkerOptions;
 
@@ -435,7 +435,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-virtual {v0, v3, v3}, Lcom/amap/api/maps/model/MarkerOptions;->anchor(FF)Lcom/amap/api/maps/model/MarkerOptions;
+    invoke-virtual {v0, v7, v7}, Lcom/amap/api/maps/model/MarkerOptions;->anchor(FF)Lcom/amap/api/maps/model/MarkerOptions;
 
     invoke-virtual {p0}, Lcom/amap/api/maps/overlay/BusLineOverlay;->getBusBitmapDescriptor()Lcom/amap/api/maps/model/BitmapDescriptor;
 

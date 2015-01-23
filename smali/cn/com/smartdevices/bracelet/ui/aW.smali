@@ -1,91 +1,122 @@
-.class Lcn/com/smartdevices/bracelet/ui/aW;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
-
-
-# instance fields
-.field final synthetic a:F
-
-.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+.class public Lcn/com/smartdevices/bracelet/ui/aW;
+.super Lcn/com/smartdevices/bracelet/ui/aS;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;F)V
+.method public constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/aW;->b:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
-
-    iput p2, p0, Lcn/com/smartdevices/bracelet/ui/aW;->a:F
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/aS;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onAnimationEnd(Landroid/animation/Animator;)V
+.method public onCreate(Landroid/os/Bundle;)V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aW;->b:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/aS;->onCreate(Landroid/os/Bundle;)V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->y(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Landroid/widget/TextView;
+    const-string v0, "DDDD"
+
+    const-string v1, "Load Gif!!"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/aW;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const/16 v1, 0x8
+    const v1, 0x7f0200c7
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
-
-    return-void
-.end method
-
-.method public onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onAnimationStart(Landroid/animation/Animator;)V
-    .locals 2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aW;->b:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->y(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Landroid/widget/TextView;
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
 
     move-result-object v0
+
+    :try_start_0
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/InstructionActivity;->a(Ljava/io/InputStream;)[B
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aW;->a_:[B
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+
+    goto :goto_0
+.end method
+
+.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    .locals 3
+
+    const v0, 0x7f03000c
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aW;->b:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->y(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Landroid/widget/TextView;
+    invoke-virtual {p1, v0, p2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v0
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/ui/aW;->a:F
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/aW;->a(Landroid/view/View;)V
 
-    neg-float v1, v1
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aW;->c_:Landroid/widget/TextSwitcher;
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTranslationY(F)V
+    const v2, 0x7f07019d
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aW;->b:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+    invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/ui/aW;->getString(I)Ljava/lang/String;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->G(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;
+    move-result-object v2
 
-    move-result-object v0
+    invoke-virtual {v1, v2}, Landroid/widget/TextSwitcher;->setCurrentText(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->setFlagsToFalse()V
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aW;->b_:Lcom/xiaomi/hm/view/GifView;
 
+    sget-object v2, Lcom/xiaomi/hm/view/f;->c:Lcom/xiaomi/hm/view/f;
+
+    invoke-virtual {v1, v2}, Lcom/xiaomi/hm/view/GifView;->a(Lcom/xiaomi/hm/view/f;)V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aW;->b_:Lcom/xiaomi/hm/view/GifView;
+
+    invoke-virtual {v1}, Lcom/xiaomi/hm/view/GifView;->c()V
+
+    return-object v0
+.end method
+
+.method public setUserVisibleHint(Z)V
+    .locals 2
+
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/aS;->setUserVisibleHint(Z)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aW;->b_:Lcom/xiaomi/hm/view/GifView;
+
+    if-nez v0, :cond_0
+
+    :goto_0
     return-void
+
+    :cond_0
+    if-eqz p1, :cond_1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aW;->b_:Lcom/xiaomi/hm/view/GifView;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aW;->a_:[B
+
+    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/view/GifView;->a([B)V
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aW;->b_:Lcom/xiaomi/hm/view/GifView;
+
+    invoke-virtual {v0}, Lcom/xiaomi/hm/view/GifView;->f()V
+
+    goto :goto_0
 .end method

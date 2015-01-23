@@ -5,6 +5,8 @@
 # static fields
 .field public static final Date:Lde/greenrobot/dao/Property;
 
+.field public static final ExpireTime:Lde/greenrobot/dao/Property;
+
 .field public static final Id:Lde/greenrobot/dao/Property;
 
 .field public static final Index:Lde/greenrobot/dao/Property;
@@ -239,6 +241,22 @@
     invoke-direct/range {v2 .. v7}, Lde/greenrobot/dao/Property;-><init>(ILjava/lang/Class;Ljava/lang/String;ZLjava/lang/String;)V
 
     sput-object v2, Lde/greenrobot/daobracelet/LuaListDao$Properties;->Stop:Lde/greenrobot/dao/Property;
+
+    new-instance v2, Lde/greenrobot/dao/Property;
+
+    const/16 v3, 0xd
+
+    const-class v4, Ljava/lang/String;
+
+    const-string v5, "expireTime"
+
+    const-string v7, "EXPIRE_TIME"
+
+    move v6, v1
+
+    invoke-direct/range {v2 .. v7}, Lde/greenrobot/dao/Property;-><init>(ILjava/lang/Class;Ljava/lang/String;ZLjava/lang/String;)V
+
+    sput-object v2, Lde/greenrobot/daobracelet/LuaListDao$Properties;->ExpireTime:Lde/greenrobot/dao/Property;
 
     return-void
 .end method

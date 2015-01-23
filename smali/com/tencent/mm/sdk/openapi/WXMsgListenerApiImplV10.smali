@@ -77,7 +77,7 @@
 .end method
 
 .method public registerMsgListener(Ljava/lang/String;JJI)Z
-    .locals 8
+    .locals 7
 
     const/4 v6, 0x0
 

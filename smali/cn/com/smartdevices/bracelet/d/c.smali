@@ -3,8 +3,8 @@
 
 
 # virtual methods
-.method public abstract a(I)D
+.method public abstract a(IJF)I
 .end method
 
-.method public abstract a(Landroid/content/Context;I)Ljava/lang/String;
+.method public abstract b(IJ)I
 .end method

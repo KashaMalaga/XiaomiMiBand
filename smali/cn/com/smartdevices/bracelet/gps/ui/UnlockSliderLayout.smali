@@ -3,7 +3,7 @@
 
 
 # static fields
-.field private static final a:I = 0xfa
+.field private static final a:I = 0x190
 
 .field private static b:I
 
@@ -86,21 +86,21 @@
 
     iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->j:Z
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/R;
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/aq;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/R;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/aq;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->k:Ljava/lang/Runnable;
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->d:Landroid/content/Context;
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->f()I
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->c()I
 
     move-result v0
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->i:I
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->c()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->d()V
 
     return-void
 .end method
@@ -202,6 +202,30 @@
     return v0
 .end method
 
+.method private c()I
+    .locals 2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->d:Landroid/content/Context;
+
+    const-string v1, "window"
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/WindowManager;
+
+    invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/Display;->getWidth()I
+
+    move-result v0
+
+    return v0
+.end method
+
 .method static synthetic c(Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;)Landroid/os/Handler;
     .locals 1
 
@@ -210,7 +234,7 @@
     return-object v0
 .end method
 
-.method private c()V
+.method private d()V
     .locals 3
 
     new-instance v0, Landroid/graphics/BitmapFactory$Options;
@@ -227,7 +251,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0200b4
+    const v2, 0x7f020110
 
     invoke-static {v1, v2, v0}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
@@ -238,7 +262,15 @@
     return-void
 .end method
 
-.method private d()V
+.method static synthetic d(Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->e()V
+
+    return-void
+.end method
+
+.method private e()V
     .locals 2
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->e:I
@@ -262,7 +294,7 @@
 
     invoke-virtual {v0}, Landroid/widget/TextView;->invalidate()V
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->e()Z
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->f()Z
 
     move-result v0
 
@@ -271,15 +303,7 @@
     goto :goto_0
 .end method
 
-.method static synthetic d(Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->d()V
-
-    return-void
-.end method
-
-.method private e()Z
+.method private f()Z
     .locals 3
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->e:I
@@ -309,57 +333,20 @@
     goto :goto_0
 .end method
 
-.method private f()I
-    .locals 2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->d:Landroid/content/Context;
-
-    const-string v1, "window"
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/WindowManager;
-
-    invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/Display;->getWidth()I
-
-    move-result v0
-
-    return v0
-.end method
-
 .method private g()V
-    .locals 4
+    .locals 1
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->j:Z
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
-    :cond_0
     :goto_0
     return-void
 
-    :cond_1
+    :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->d:Landroid/content/Context;
 
-    const-string v1, "vibrator"
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/os/Vibrator;
-
-    if-eqz v0, :cond_0
-
-    const-wide/16 v2, 0xfa
-
-    invoke-virtual {v0, v2, v3}, Landroid/os/Vibrator;->vibrate(J)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/d/h;->a(Landroid/content/Context;)V
 
     const/4 v0, 0x1
 
@@ -383,7 +370,7 @@
 
     invoke-super {p0, p1}, Landroid/widget/RelativeLayout;->onDraw(Landroid/graphics/Canvas;)V
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->d()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->e()V
 
     return-void
 .end method
@@ -393,7 +380,7 @@
 
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onFinishInflate()V
 
-    const v0, 0x7f0b00d0
+    const v0, 0x7f0800f5
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->findViewById(I)Landroid/view/View;
 
@@ -450,12 +437,12 @@
     :pswitch_1
     iput v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->e:I
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->d()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->e()V
 
     goto :goto_0
 
     :pswitch_2
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->e()Z
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/UnlockSliderLayout;->f()Z
 
     move-result v1
 

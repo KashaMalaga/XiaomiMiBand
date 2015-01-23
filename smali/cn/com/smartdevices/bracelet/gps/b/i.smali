@@ -11,7 +11,7 @@
         "Ljava/lang/Void;",
         "Ljava/util/List",
         "<",
-        "Lcn/com/smartdevices/bracelet/gps/model/b;",
+        "Lcn/com/smartdevices/bracelet/gps/model/c;",
         ">;>;"
     }
 .end annotation
@@ -26,10 +26,14 @@
 
 .field private d:I
 
+.field private e:J
+
+.field private f:Ljava/lang/String;
+
 
 # direct methods
-.method public constructor <init>(Lcn/com/smartdevices/bracelet/gps/b/h;Landroid/content/Context;I)V
-    .locals 1
+.method public constructor <init>(Lcn/com/smartdevices/bracelet/gps/b/h;Landroid/content/Context;IJLjava/lang/String;)V
+    .locals 2
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->a:Lcn/com/smartdevices/bracelet/gps/b/h;
 
@@ -47,9 +51,21 @@
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->d:I
 
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->e:J
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->f:Ljava/lang/String;
+
     iput-object p2, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->b:Landroid/content/Context;
 
     iput p3, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->d:I
+
+    iput-wide p4, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->e:J
+
+    iput-object p6, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->f:Ljava/lang/String;
 
     return-void
 .end method
@@ -57,7 +73,7 @@
 
 # virtual methods
 .method protected varargs a([Ljava/lang/Long;)Ljava/util/List;
-    .locals 5
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "([",
@@ -65,22 +81,16 @@
             ")",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/gps/model/b;",
+            "Lcn/com/smartdevices/bracelet/gps/model/c;",
             ">;"
         }
     .end annotation
 
-    const/4 v4, 0x0
-
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->b:Landroid/content/Context;
 
-    aget-object v1, p1, v4
+    iget-wide v1, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->e:J
 
-    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    invoke-static {v0, v2, v3}, Lcn/com/smartdevices/bracelet/gps/a/a;->b(Landroid/content/Context;J)Ljava/util/List;
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/gps/a/b;->b(Landroid/content/Context;J)Ljava/util/List;
 
     move-result-object v0
 
@@ -98,19 +108,15 @@
     :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->b:Landroid/content/Context;
 
-    aget-object v1, p1, v4
+    iget-wide v1, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->e:J
 
-    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    invoke-static {v0, v2, v3}, Lcn/com/smartdevices/bracelet/lab/sync/b;->a(Landroid/content/Context;J)Z
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/lab/sync/l;->a(Landroid/content/Context;J)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    const-string v0, "Run"
+    const-string v0, "Track"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -122,9 +128,9 @@
 
     move-result-object v1
 
-    aget-object v2, p1, v4
+    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->e:J
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -132,7 +138,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -141,25 +147,9 @@
     :cond_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->b:Landroid/content/Context;
 
-    aget-object v1, p1, v4
+    iget-wide v1, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->e:J
 
-    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    iget v1, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->d:I
-
-    invoke-static {v0, v2, v3, v1}, Lcn/com/smartdevices/bracelet/gps/a/a;->b(Landroid/content/Context;JI)Z
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->b:Landroid/content/Context;
-
-    aget-object v1, p1, v4
-
-    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    invoke-static {v0, v2, v3}, Lcn/com/smartdevices/bracelet/gps/a/a;->b(Landroid/content/Context;J)Ljava/util/List;
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/gps/a/b;->b(Landroid/content/Context;J)Ljava/util/List;
 
     move-result-object v0
 
@@ -185,7 +175,7 @@
             "(",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/gps/model/b;",
+            "Lcn/com/smartdevices/bracelet/gps/model/c;",
             ">;)V"
         }
     .end annotation
@@ -205,25 +195,25 @@
     return-void
 
     :cond_1
-    new-instance v1, Lcn/com/smartdevices/bracelet/gps/b/t;
+    new-instance v1, Lcn/com/smartdevices/bracelet/gps/b/u;
 
-    invoke-direct {v1, v3}, Lcn/com/smartdevices/bracelet/gps/b/t;-><init>(Z)V
+    invoke-direct {v1, v3}, Lcn/com/smartdevices/bracelet/gps/b/u;-><init>(Z)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->a:Lcn/com/smartdevices/bracelet/gps/b/h;
 
-    iget-object v2, v0, Lcn/com/smartdevices/bracelet/gps/b/h;->a:Lcn/com/smartdevices/bracelet/gps/b/r;
+    iget-object v2, v0, Lcn/com/smartdevices/bracelet/gps/b/h;->a:Lcn/com/smartdevices/bracelet/gps/b/s;
 
     invoke-interface {p1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/gps/model/b;
+    check-cast v0, Lcn/com/smartdevices/bracelet/gps/model/c;
 
-    invoke-interface {v2, v0}, Lcn/com/smartdevices/bracelet/gps/b/r;->e(Lcn/com/smartdevices/bracelet/gps/model/b;)V
+    invoke-interface {v2, v0}, Lcn/com/smartdevices/bracelet/gps/b/s;->e(Lcn/com/smartdevices/bracelet/gps/model/c;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->a:Lcn/com/smartdevices/bracelet/gps/b/h;
 
-    iget-object v2, v0, Lcn/com/smartdevices/bracelet/gps/b/h;->a:Lcn/com/smartdevices/bracelet/gps/b/r;
+    iget-object v2, v0, Lcn/com/smartdevices/bracelet/gps/b/h;->a:Lcn/com/smartdevices/bracelet/gps/b/s;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -235,23 +225,98 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/gps/model/b;
+    check-cast v0, Lcn/com/smartdevices/bracelet/gps/model/c;
 
-    invoke-interface {v2, v0}, Lcn/com/smartdevices/bracelet/gps/b/r;->c(Lcn/com/smartdevices/bracelet/gps/model/b;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->a:Lcn/com/smartdevices/bracelet/gps/b/h;
-
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/gps/b/h;->a:Lcn/com/smartdevices/bracelet/gps/b/r;
-
-    invoke-interface {v0, p1, v1}, Lcn/com/smartdevices/bracelet/gps/b/r;->a(Ljava/util/List;Lcn/com/smartdevices/bracelet/gps/b/t;)V
+    invoke-interface {v2, v0}, Lcn/com/smartdevices/bracelet/gps/b/s;->c(Lcn/com/smartdevices/bracelet/gps/model/c;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->a:Lcn/com/smartdevices/bracelet/gps/b/h;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/gps/b/h;->a:Lcn/com/smartdevices/bracelet/gps/b/r;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/gps/b/h;->a:Lcn/com/smartdevices/bracelet/gps/b/s;
 
-    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/gps/b/r;->e()V
+    invoke-interface {v0, p1, v1}, Lcn/com/smartdevices/bracelet/gps/b/s;->a(Ljava/util/List;Lcn/com/smartdevices/bracelet/gps/b/u;)V
 
-    goto :goto_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->a:Lcn/com/smartdevices/bracelet/gps/b/h;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/gps/b/h;->a:Lcn/com/smartdevices/bracelet/gps/b/s;
+
+    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/gps/b/s;->e()V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->f:Ljava/lang/String;
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    new-instance v0, Ljava/io/File;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->f:Ljava/lang/String;
+
+    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    :cond_2
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->a:Lcn/com/smartdevices/bracelet/gps/b/h;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/b/h;->a(Lcn/com/smartdevices/bracelet/gps/b/h;)Lcn/com/smartdevices/bracelet/gps/services/h;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/services/m;
+
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/gps/services/m;-><init>()V
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->d:I
+
+    iput v1, v0, Lcn/com/smartdevices/bracelet/gps/services/m;->e:I
+
+    iget-wide v1, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->e:J
+
+    iput-wide v1, v0, Lcn/com/smartdevices/bracelet/gps/services/m;->d:J
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->a:Lcn/com/smartdevices/bracelet/gps/b/h;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/gps/b/h;->b(Lcn/com/smartdevices/bracelet/gps/b/h;)Lcn/com/smartdevices/bracelet/gps/b/v;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcn/com/smartdevices/bracelet/gps/services/m;->a:Lcn/com/smartdevices/bracelet/gps/b/v;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->a:Lcn/com/smartdevices/bracelet/gps/b/h;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/gps/b/h;->c(Lcn/com/smartdevices/bracelet/gps/b/h;)I
+
+    move-result v1
+
+    iput v1, v0, Lcn/com/smartdevices/bracelet/gps/services/m;->b:I
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->a:Lcn/com/smartdevices/bracelet/gps/b/h;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/gps/b/h;->d(Lcn/com/smartdevices/bracelet/gps/b/h;)I
+
+    move-result v1
+
+    iput v1, v0, Lcn/com/smartdevices/bracelet/gps/services/m;->c:I
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->a:Lcn/com/smartdevices/bracelet/gps/b/h;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/gps/b/h;->a(Lcn/com/smartdevices/bracelet/gps/b/h;)Lcn/com/smartdevices/bracelet/gps/services/h;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/b/i;->b:Landroid/content/Context;
+
+    invoke-virtual {v1, v2, p1, v0}, Lcn/com/smartdevices/bracelet/gps/services/h;->a(Landroid/content/Context;Ljava/util/List;Lcn/com/smartdevices/bracelet/gps/services/m;)Z
+
+    goto/16 :goto_0
 .end method
 
 .method protected synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
@@ -278,14 +343,6 @@
     check-cast p1, Ljava/util/List;
 
     invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/gps/b/i;->a(Ljava/util/List;)V
-
-    return-void
-.end method
-
-.method protected onPreExecute()V
-    .locals 0
-
-    invoke-super {p0}, Landroid/os/AsyncTask;->onPreExecute()V
 
     return-void
 .end method

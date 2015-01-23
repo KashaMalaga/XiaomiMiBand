@@ -728,23 +728,23 @@
 
     move-result-object v1
 
-    iget-wide v8, v1, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v7, v1, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
-    iget-wide v10, v2, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v9, v2, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
-    sub-double/2addr v8, v10
+    sub-double/2addr v7, v9
 
-    cmpl-double v3, v8, v12
+    cmpl-double v3, v7, v12
 
     if-gtz v3, :cond_6
 
-    iget-wide v8, v1, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iget-wide v7, v1, Lcom/amap/api/maps/model/LatLng;->longitude:D
 
-    iget-wide v10, v2, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iget-wide v9, v2, Lcom/amap/api/maps/model/LatLng;->longitude:D
 
-    sub-double/2addr v8, v10
+    sub-double/2addr v7, v9
 
-    cmpl-double v3, v8, v12
+    cmpl-double v3, v7, v12
 
     if-lez v3, :cond_7
 

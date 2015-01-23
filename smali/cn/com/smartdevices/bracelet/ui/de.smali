@@ -1,42 +1,34 @@
-.class Lcn/com/smartdevices/bracelet/ui/de;
+.class public Lcn/com/smartdevices/bracelet/ui/dE;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Lcn/com/smartdevices/bracelet/chart/c/o;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+.field public a:I
+
+.field public b:I
+
+.field public c:Z
+
+.field public d:Landroid/content/pm/ResolveInfo;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)V
-    .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/de;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+.method public constructor <init>(II)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    const/4 v0, 0x0
 
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/dE;->c:Z
 
-# virtual methods
-.method public a(I)V
-    .locals 1
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/de;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dE;->d:Landroid/content/pm/ResolveInfo;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->getActivity()Landroid/app/Activity;
+    iput p1, p0, Lcn/com/smartdevices/bracelet/ui/dE;->a:I
 
-    move-result-object v0
+    iput p2, p0, Lcn/com/smartdevices/bracelet/ui/dE;->b:I
 
-    if-eqz v0, :cond_0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;
-
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->applyStatusBarTint(I)V
-
-    :cond_0
     return-void
 .end method

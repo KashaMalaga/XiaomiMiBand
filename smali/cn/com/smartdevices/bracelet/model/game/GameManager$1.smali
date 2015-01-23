@@ -1,5 +1,5 @@
 .class Lcn/com/smartdevices/bracelet/model/game/GameManager$1;
-.super Lcom/c/a/a/h;
+.super Lcom/e/a/a/h;
 
 
 # instance fields
@@ -12,7 +12,7 @@
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$1;->this$0:Lcn/com/smartdevices/bracelet/model/game/GameManager;
 
-    invoke-direct {p0}, Lcom/c/a/a/h;-><init>()V
+    invoke-direct {p0}, Lcom/e/a/a/h;-><init>()V
 
     return-void
 .end method
@@ -42,7 +42,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -74,7 +74,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p3, :cond_0
 

@@ -37,13 +37,13 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/r;->a:Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->e(Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;)Lcn/com/smartdevices/bracelet/chart/base/g;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;->g(Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;)Lcn/com/smartdevices/bracelet/chart/base/g;
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/p;
+    check-cast v0, Lcn/com/smartdevices/bracelet/chart/base/q;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/p;->c(F)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/base/q;->g(F)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/r;->a:Lcn/com/smartdevices/bracelet/chart/DynamicPieChartView;
 

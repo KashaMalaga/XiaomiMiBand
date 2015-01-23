@@ -49,7 +49,7 @@
 
     move-result-object v0
 
-    iput p1, v0, Lcn/com/smartdevices/bracelet/chart/b/e;->e:I
+    iput p1, v0, Lcn/com/smartdevices/bracelet/chart/b/e;->f:I
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/b/d;->b:Landroid/util/SparseArray;
 

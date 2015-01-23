@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/e/a/b/f/a;
+.implements Lcom/g/a/b/f/a;
 
 
 # instance fields
@@ -29,7 +29,7 @@
 
     const-string v1, "onLoadingStarted"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -40,18 +40,18 @@
     return-void
 .end method
 
-.method public a(Ljava/lang/String;Landroid/view/View;Lcom/e/a/b/a/b;)V
+.method public a(Ljava/lang/String;Landroid/view/View;Lcom/g/a/b/a/b;)V
     .locals 2
 
     const-string v0, "LuaListAdapter"
 
     const-string v1, "onLoadingFailed"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     check-cast p2, Landroid/widget/ImageView;
 
-    const v0, 0x7f020054
+    const v0, 0x7f020078
 
     invoke-virtual {p2, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 

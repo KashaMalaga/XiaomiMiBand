@@ -3,7 +3,7 @@
 
 
 # static fields
-.field private static m:Lcn/com/smartdevices/bracelet/chart/c/r;
+.field private static s:Lcn/com/smartdevices/bracelet/chart/c/r;
 
 
 # instance fields
@@ -27,9 +27,21 @@
 
 .field private j:Z
 
-.field private k:I
+.field private k:F
 
-.field private l:Ljava/util/HashMap;
+.field private l:F
+
+.field private m:F
+
+.field private n:Ljava/lang/String;
+
+.field private o:F
+
+.field private p:Ljava/lang/String;
+
+.field private q:I
+
+.field private r:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashMap",
@@ -56,7 +68,7 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->l:Ljava/util/HashMap;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->r:Ljava/util/HashMap;
 
     return-void
 .end method
@@ -64,7 +76,7 @@
 .method public static a()Lcn/com/smartdevices/bracelet/chart/c/r;
     .locals 1
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/chart/c/r;->m:Lcn/com/smartdevices/bracelet/chart/c/r;
+    sget-object v0, Lcn/com/smartdevices/bracelet/chart/c/r;->s:Lcn/com/smartdevices/bracelet/chart/c/r;
 
     if-nez v0, :cond_0
 
@@ -72,10 +84,10 @@
 
     invoke-direct {v0}, Lcn/com/smartdevices/bracelet/chart/c/r;-><init>()V
 
-    sput-object v0, Lcn/com/smartdevices/bracelet/chart/c/r;->m:Lcn/com/smartdevices/bracelet/chart/c/r;
+    sput-object v0, Lcn/com/smartdevices/bracelet/chart/c/r;->s:Lcn/com/smartdevices/bracelet/chart/c/r;
 
     :cond_0
-    sget-object v0, Lcn/com/smartdevices/bracelet/chart/c/r;->m:Lcn/com/smartdevices/bracelet/chart/c/r;
+    sget-object v0, Lcn/com/smartdevices/bracelet/chart/c/r;->s:Lcn/com/smartdevices/bracelet/chart/c/r;
 
     return-object v0
 .end method
@@ -89,7 +101,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->l:Ljava/util/HashMap;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->r:Ljava/util/HashMap;
 
     invoke-virtual {v1, v0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -97,7 +109,7 @@
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->l:Ljava/util/HashMap;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->r:Ljava/util/HashMap;
 
     invoke-virtual {v1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -110,11 +122,11 @@
     return-object v0
 
     :cond_1
-    invoke-static {}, Lcn/com/smartdevices/bracelet/o;->a()Lcn/com/smartdevices/bracelet/o;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/s;->a()Lcn/com/smartdevices/bracelet/s;
 
     move-result-object v1
 
-    invoke-virtual {v1, p1}, Lcn/com/smartdevices/bracelet/o;->b(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/DaySportData$Summary;
+    invoke-virtual {v1, p1}, Lcn/com/smartdevices/bracelet/s;->b(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/DaySportData$Summary;
 
     move-result-object v2
 
@@ -138,9 +150,17 @@
 
     invoke-virtual {p0, p1, v0}, Lcn/com/smartdevices/bracelet/chart/c/r;->a(Lcn/com/smartdevices/bracelet/model/SportDay;Lcn/com/smartdevices/bracelet/model/UserSleepModify;)V
 
-    invoke-virtual {v1, p1}, Lcn/com/smartdevices/bracelet/o;->c(Lcn/com/smartdevices/bracelet/model/SportDay;)V
+    invoke-virtual {v1, p1}, Lcn/com/smartdevices/bracelet/s;->c(Lcn/com/smartdevices/bracelet/model/SportDay;)V
 
     goto :goto_0
+.end method
+
+.method public a(F)V
+    .locals 0
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->k:F
+
+    return-void
 .end method
 
 .method public a(I)V
@@ -154,7 +174,7 @@
 .method public a(Lcn/com/smartdevices/bracelet/model/SportDay;Lcn/com/smartdevices/bracelet/model/UserSleepModify;)V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->l:Ljava/util/HashMap;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->r:Ljava/util/HashMap;
 
     invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/model/SportDay;->getKey()Ljava/lang/String;
 
@@ -197,6 +217,14 @@
     return v0
 .end method
 
+.method public b(F)V
+    .locals 0
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->l:F
+
+    return-void
+.end method
+
 .method public b(I)V
     .locals 0
 
@@ -229,10 +257,26 @@
     return v0
 .end method
 
+.method public c(F)V
+    .locals 0
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->m:F
+
+    return-void
+.end method
+
 .method public c(I)V
     .locals 0
 
     iput p1, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->c:I
+
+    return-void
+.end method
+
+.method public c(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->n:Ljava/lang/String;
 
     return-void
 .end method
@@ -245,10 +289,26 @@
     return v0
 .end method
 
+.method public d(F)V
+    .locals 0
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->o:F
+
+    return-void
+.end method
+
 .method public d(I)V
     .locals 0
 
     iput p1, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->e:I
+
+    return-void
+.end method
+
+.method public d(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->p:Ljava/lang/String;
 
     return-void
 .end method
@@ -280,7 +340,7 @@
 .method public f(I)V
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->k:I
+    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->q:I
 
     return-void
 .end method
@@ -325,16 +385,64 @@
     return v0
 .end method
 
-.method public l()I
+.method public l()F
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->k:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->k:F
+
+    return v0
+.end method
+
+.method public m()F
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->l:F
+
+    return v0
+.end method
+
+.method public n()F
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->m:F
+
+    return v0
+.end method
+
+.method public o()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->n:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public p()F
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->o:F
+
+    return v0
+.end method
+
+.method public q()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->p:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public r()I
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->q:I
 
     return v0
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 3
+    .locals 4
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -449,6 +557,52 @@
     move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\nWeight : "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget v2, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->k:F
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "\nWeightBMI : "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget v2, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->o:F
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "\nWeightTip : "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->p:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

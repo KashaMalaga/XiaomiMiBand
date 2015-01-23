@@ -12,12 +12,12 @@
 .end method
 
 .method public static fromGpsToAMap(DD)Lcom/amap/api/location/core/GeoPoint;
-    .locals 8
+    .locals 7
 
-    const-wide v6, 0x412e848000000000L
+    const-wide v5, 0x412e848000000000L
 
     :try_start_0
-    invoke-static {p2, p3, p0, p1}, Lcom/a/an;->a(DD)[D
+    invoke-static {p2, p3, p0, p1}, Lcom/b/an;->a(DD)[D
 
     move-result-object v1
 
@@ -27,17 +27,17 @@
 
     aget-wide v2, v1, v2
 
-    mul-double/2addr v2, v6
+    mul-double/2addr v2, v5
 
     double-to-int v2, v2
 
     const/4 v3, 0x0
 
-    aget-wide v4, v1, v3
+    aget-wide v3, v1, v3
 
-    mul-double/2addr v4, v6
+    mul-double/2addr v3, v5
 
-    double-to-int v1, v4
+    double-to-int v1, v3
 
     invoke-direct {v0, v2, v1}, Lcom/amap/api/location/core/GeoPoint;-><init>(II)V
     :try_end_0
@@ -95,7 +95,7 @@
 
     move-result-wide v6
 
-    invoke-static {v4, v5, v6, v7}, Lcom/a/an;->a(DD)[D
+    invoke-static {v4, v5, v6, v7}, Lcom/b/an;->a(DD)[D
 
     move-result-object v4
 
@@ -135,7 +135,7 @@
 .end method
 
 .method public static fromSeveralGpsToAMap([D)[D
-    .locals 8
+    .locals 7
 
     const/4 v1, 0x0
 
@@ -151,15 +151,15 @@
 
     mul-int/lit8 v3, v1, 0x2
 
-    aget-wide v4, p0, v3
+    aget-wide v3, p0, v3
 
-    mul-int/lit8 v3, v1, 0x2
+    mul-int/lit8 v5, v1, 0x2
 
-    add-int/lit8 v3, v3, 0x1
+    add-int/lit8 v5, v5, 0x1
 
-    aget-wide v6, p0, v3
+    aget-wide v5, p0, v5
 
-    invoke-static {v4, v5, v6, v7}, Lcom/a/an;->a(DD)[D
+    invoke-static {v3, v4, v5, v6}, Lcom/b/an;->a(DD)[D
 
     move-result-object v3
 
@@ -167,9 +167,9 @@
 
     const/4 v5, 0x0
 
-    aget-wide v6, v3, v5
+    aget-wide v5, v3, v5
 
-    aput-wide v6, v0, v4
+    aput-wide v5, v0, v4
 
     mul-int/lit8 v4, v1, 0x2
 
@@ -177,9 +177,9 @@
 
     const/4 v5, 0x1
 
-    aget-wide v6, v3, v5
+    aget-wide v5, v3, v5
 
-    aput-wide v6, v0, v4
+    aput-wide v5, v0, v4
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 

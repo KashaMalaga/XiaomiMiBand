@@ -2,18 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemSelectedListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
+.field final synthetic a:Ljava/util/ArrayList;
+
+.field final synthetic b:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;Ljava/util/ArrayList;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/p;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/p;->b:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
+
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/lab/ui/p;->a:Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,44 +26,18 @@
 
 
 # virtual methods
-.method public onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+.method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/p;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/p;->b:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->b()[Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->q(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)Lcn/com/smartdevices/bracelet/e/a;
 
-    move-result-object v1
+    move-result-object v0
 
-    aget-object v1, v1, p3
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/p;->a:Ljava/util/ArrayList;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->a(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;Ljava/lang/String;)Ljava/lang/String;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0}, Landroid/widget/AdapterView;->setVisibility(I)V
-
-    return-void
-.end method
-
-.method public onNothingSelected(Landroid/widget/AdapterView;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;)V"
-        }
-    .end annotation
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/e/a;->a(Ljava/util/ArrayList;)V
 
     return-void
 .end method

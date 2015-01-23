@@ -48,8 +48,6 @@
 
 .field private isSupportSensorHub:Z
 
-.field private lastBinded:Z
-
 .field private luaAction:Lcn/com/smartdevices/bracelet/lua/LuaAction;
 
 .field private mDataStr:Ljava/lang/String;
@@ -129,6 +127,8 @@
 .field private weekReport:Lcn/com/smartdevices/bracelet/model/ReportData;
 
 .field private weekStep:I
+
+.field private weightBinded:Z
 
 
 # direct methods
@@ -313,7 +313,7 @@
 
     invoke-direct {v0}, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;-><init>()V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->x()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->z()Ljava/lang/String;
 
     move-result-object v1
 
@@ -772,18 +772,18 @@
     return v0
 .end method
 
-.method public isBindSensorHub()Z
+.method public getWeightBinded()Z
     .locals 1
 
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->isBindSensorHub:Z
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->weightBinded:Z
 
     return v0
 .end method
 
-.method public isLastBinded()Z
+.method public isBindSensorHub()Z
     .locals 1
 
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->lastBinded:Z
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->isBindSensorHub:Z
 
     return v0
 .end method
@@ -796,12 +796,38 @@
     return v0
 .end method
 
+.method public isSupportWeight()Z
+    .locals 1
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->e()Lcn/com/smartdevices/bracelet/config/b;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/b;->k:Lcn/com/smartdevices/bracelet/config/r;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/r;->a:Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public isWeightBinded()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->weightBinded:Z
+
+    return v0
+.end method
+
 .method public save()V
     .locals 5
 
-    new-instance v0, Lcom/b/a/k;
+    new-instance v0, Lcom/d/a/k;
 
-    invoke-direct {v0}, Lcom/b/a/k;-><init>()V
+    invoke-direct {v0}, Lcom/d/a/k;-><init>()V
 
     new-instance v1, Lcn/com/smartdevices/bracelet/lua/a;
 
@@ -837,7 +863,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->showUnlockInfo:Ljava/lang/Boolean;
 
@@ -849,11 +875,11 @@
 
     const-class v2, Lcn/com/smartdevices/bracelet/lua/a;
 
-    invoke-virtual {v0, v1, v2}, Lcom/b/a/k;->b(Ljava/lang/Object;Ljava/lang/reflect/Type;)Ljava/lang/String;
+    invoke-virtual {v0, v1, v2}, Lcom/d/a/k;->b(Ljava/lang/Object;Ljava/lang/reflect/Type;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/u;->d(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1015,14 +1041,6 @@
     return-void
 .end method
 
-.method public setLastBinded(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->lastBinded:Z
-
-    return-void
-.end method
-
 .method public setLuaAction(Landroid/content/Context;)V
     .locals 1
 
@@ -1092,7 +1110,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->newUser:Z
 
@@ -1156,7 +1174,7 @@
 .end method
 
 .method public setServerTimeStamp(J)V
-    .locals 1
+    .locals 0
 
     iput-wide p1, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->serverTimeStamp:J
 
@@ -1284,7 +1302,7 @@
 .end method
 
 .method public setTimeStamp(J)V
-    .locals 1
+    .locals 0
 
     iput-wide p1, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->timeStamp:J
 
@@ -1292,7 +1310,7 @@
 .end method
 
 .method public setTimeStamp1(J)V
-    .locals 1
+    .locals 0
 
     iput-wide p1, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->timeStamp1:J
 
@@ -1300,7 +1318,7 @@
 .end method
 
 .method public setTimeStamp2(J)V
-    .locals 1
+    .locals 0
 
     iput-wide p1, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->timeStamp2:J
 
@@ -1351,6 +1369,14 @@
     .locals 0
 
     iput p1, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->weekStep:I
+
+    return-void
+.end method
+
+.method public setWeightBinded(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->weightBinded:Z
 
     return-void
 .end method

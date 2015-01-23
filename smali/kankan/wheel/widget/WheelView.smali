@@ -23,7 +23,7 @@
 
 .field a:Z
 
-.field b:Lkankan/wheel/widget/j;
+.field b:Lkankan/wheel/widget/o;
 
 .field private h:I
 
@@ -37,7 +37,7 @@
 
 .field private m:Landroid/graphics/drawable/GradientDrawable;
 
-.field private n:Lkankan/wheel/widget/g;
+.field private n:Lkankan/wheel/widget/l;
 
 .field private o:Z
 
@@ -49,14 +49,14 @@
 
 .field private s:Lkankan/wheel/widget/a/f;
 
-.field private t:Lkankan/wheel/widget/f;
+.field private t:Lkankan/wheel/widget/k;
 
 .field private u:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List",
             "<",
-            "Lkankan/wheel/widget/b;",
+            "Lkankan/wheel/widget/c;",
             ">;"
         }
     .end annotation
@@ -67,7 +67,7 @@
         value = {
             "Ljava/util/List",
             "<",
-            "Lkankan/wheel/widget/d;",
+            "Lkankan/wheel/widget/e;",
             ">;"
         }
     .end annotation
@@ -78,7 +78,7 @@
         value = {
             "Ljava/util/List",
             "<",
-            "Lkankan/wheel/widget/c;",
+            "Lkankan/wheel/widget/d;",
             ">;"
         }
     .end annotation
@@ -132,11 +132,11 @@
 
     iput-boolean v1, p0, Lkankan/wheel/widget/WheelView;->a:Z
 
-    new-instance v0, Lkankan/wheel/widget/f;
+    new-instance v0, Lkankan/wheel/widget/k;
 
-    invoke-direct {v0, p0}, Lkankan/wheel/widget/f;-><init>(Lkankan/wheel/widget/WheelView;)V
+    invoke-direct {v0, p0}, Lkankan/wheel/widget/k;-><init>(Lkankan/wheel/widget/WheelView;)V
 
-    iput-object v0, p0, Lkankan/wheel/widget/WheelView;->t:Lkankan/wheel/widget/f;
+    iput-object v0, p0, Lkankan/wheel/widget/WheelView;->t:Lkankan/wheel/widget/k;
 
     new-instance v0, Ljava/util/LinkedList;
 
@@ -156,7 +156,7 @@
 
     iput-object v0, p0, Lkankan/wheel/widget/WheelView;->w:Ljava/util/List;
 
-    const v0, 0x7f0200d9
+    sget v0, Lkankan/wheel/widget/h;->wheel_custom_val_default:I
 
     iput v0, p0, Lkankan/wheel/widget/WheelView;->x:I
 
@@ -172,15 +172,15 @@
 
     iput v0, p0, Lkankan/wheel/widget/WheelView;->B:F
 
-    new-instance v0, Lkankan/wheel/widget/l;
+    new-instance v0, Lkankan/wheel/widget/q;
 
-    invoke-direct {v0, p0}, Lkankan/wheel/widget/l;-><init>(Lkankan/wheel/widget/WheelView;)V
+    invoke-direct {v0, p0}, Lkankan/wheel/widget/q;-><init>(Lkankan/wheel/widget/WheelView;)V
 
-    iput-object v0, p0, Lkankan/wheel/widget/WheelView;->b:Lkankan/wheel/widget/j;
+    iput-object v0, p0, Lkankan/wheel/widget/WheelView;->b:Lkankan/wheel/widget/o;
 
-    new-instance v0, Lkankan/wheel/widget/m;
+    new-instance v0, Lkankan/wheel/widget/r;
 
-    invoke-direct {v0, p0}, Lkankan/wheel/widget/m;-><init>(Lkankan/wheel/widget/WheelView;)V
+    invoke-direct {v0, p0}, Lkankan/wheel/widget/r;-><init>(Lkankan/wheel/widget/WheelView;)V
 
     iput-object v0, p0, Lkankan/wheel/widget/WheelView;->C:Landroid/database/DataSetObserver;
 
@@ -206,11 +206,11 @@
 
     iput-boolean v1, p0, Lkankan/wheel/widget/WheelView;->a:Z
 
-    new-instance v0, Lkankan/wheel/widget/f;
+    new-instance v0, Lkankan/wheel/widget/k;
 
-    invoke-direct {v0, p0}, Lkankan/wheel/widget/f;-><init>(Lkankan/wheel/widget/WheelView;)V
+    invoke-direct {v0, p0}, Lkankan/wheel/widget/k;-><init>(Lkankan/wheel/widget/WheelView;)V
 
-    iput-object v0, p0, Lkankan/wheel/widget/WheelView;->t:Lkankan/wheel/widget/f;
+    iput-object v0, p0, Lkankan/wheel/widget/WheelView;->t:Lkankan/wheel/widget/k;
 
     new-instance v0, Ljava/util/LinkedList;
 
@@ -230,7 +230,7 @@
 
     iput-object v0, p0, Lkankan/wheel/widget/WheelView;->w:Ljava/util/List;
 
-    const v0, 0x7f0200d9
+    sget v0, Lkankan/wheel/widget/h;->wheel_custom_val_default:I
 
     iput v0, p0, Lkankan/wheel/widget/WheelView;->x:I
 
@@ -246,15 +246,15 @@
 
     iput v0, p0, Lkankan/wheel/widget/WheelView;->B:F
 
-    new-instance v0, Lkankan/wheel/widget/l;
+    new-instance v0, Lkankan/wheel/widget/q;
 
-    invoke-direct {v0, p0}, Lkankan/wheel/widget/l;-><init>(Lkankan/wheel/widget/WheelView;)V
+    invoke-direct {v0, p0}, Lkankan/wheel/widget/q;-><init>(Lkankan/wheel/widget/WheelView;)V
 
-    iput-object v0, p0, Lkankan/wheel/widget/WheelView;->b:Lkankan/wheel/widget/j;
+    iput-object v0, p0, Lkankan/wheel/widget/WheelView;->b:Lkankan/wheel/widget/o;
 
-    new-instance v0, Lkankan/wheel/widget/m;
+    new-instance v0, Lkankan/wheel/widget/r;
 
-    invoke-direct {v0, p0}, Lkankan/wheel/widget/m;-><init>(Lkankan/wheel/widget/WheelView;)V
+    invoke-direct {v0, p0}, Lkankan/wheel/widget/r;-><init>(Lkankan/wheel/widget/WheelView;)V
 
     iput-object v0, p0, Lkankan/wheel/widget/WheelView;->C:Landroid/database/DataSetObserver;
 
@@ -280,11 +280,11 @@
 
     iput-boolean v1, p0, Lkankan/wheel/widget/WheelView;->a:Z
 
-    new-instance v0, Lkankan/wheel/widget/f;
+    new-instance v0, Lkankan/wheel/widget/k;
 
-    invoke-direct {v0, p0}, Lkankan/wheel/widget/f;-><init>(Lkankan/wheel/widget/WheelView;)V
+    invoke-direct {v0, p0}, Lkankan/wheel/widget/k;-><init>(Lkankan/wheel/widget/WheelView;)V
 
-    iput-object v0, p0, Lkankan/wheel/widget/WheelView;->t:Lkankan/wheel/widget/f;
+    iput-object v0, p0, Lkankan/wheel/widget/WheelView;->t:Lkankan/wheel/widget/k;
 
     new-instance v0, Ljava/util/LinkedList;
 
@@ -304,7 +304,7 @@
 
     iput-object v0, p0, Lkankan/wheel/widget/WheelView;->w:Ljava/util/List;
 
-    const v0, 0x7f0200d9
+    sget v0, Lkankan/wheel/widget/h;->wheel_custom_val_default:I
 
     iput v0, p0, Lkankan/wheel/widget/WheelView;->x:I
 
@@ -320,15 +320,15 @@
 
     iput v0, p0, Lkankan/wheel/widget/WheelView;->B:F
 
-    new-instance v0, Lkankan/wheel/widget/l;
+    new-instance v0, Lkankan/wheel/widget/q;
 
-    invoke-direct {v0, p0}, Lkankan/wheel/widget/l;-><init>(Lkankan/wheel/widget/WheelView;)V
+    invoke-direct {v0, p0}, Lkankan/wheel/widget/q;-><init>(Lkankan/wheel/widget/WheelView;)V
 
-    iput-object v0, p0, Lkankan/wheel/widget/WheelView;->b:Lkankan/wheel/widget/j;
+    iput-object v0, p0, Lkankan/wheel/widget/WheelView;->b:Lkankan/wheel/widget/o;
 
-    new-instance v0, Lkankan/wheel/widget/m;
+    new-instance v0, Lkankan/wheel/widget/r;
 
-    invoke-direct {v0, p0}, Lkankan/wheel/widget/m;-><init>(Lkankan/wheel/widget/WheelView;)V
+    invoke-direct {v0, p0}, Lkankan/wheel/widget/r;-><init>(Lkankan/wheel/widget/WheelView;)V
 
     iput-object v0, p0, Lkankan/wheel/widget/WheelView;->C:Landroid/database/DataSetObserver;
 
@@ -397,17 +397,17 @@
 .method private a(Landroid/content/Context;)V
     .locals 3
 
-    new-instance v0, Lkankan/wheel/widget/g;
+    new-instance v0, Lkankan/wheel/widget/l;
 
     invoke-virtual {p0}, Lkankan/wheel/widget/WheelView;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    iget-object v2, p0, Lkankan/wheel/widget/WheelView;->b:Lkankan/wheel/widget/j;
+    iget-object v2, p0, Lkankan/wheel/widget/WheelView;->b:Lkankan/wheel/widget/o;
 
-    invoke-direct {v0, v1, v2}, Lkankan/wheel/widget/g;-><init>(Landroid/content/Context;Lkankan/wheel/widget/j;)V
+    invoke-direct {v0, v1, v2}, Lkankan/wheel/widget/l;-><init>(Landroid/content/Context;Lkankan/wheel/widget/o;)V
 
-    iput-object v0, p0, Lkankan/wheel/widget/WheelView;->n:Lkankan/wheel/widget/g;
+    iput-object v0, p0, Lkankan/wheel/widget/WheelView;->n:Lkankan/wheel/widget/l;
 
     new-instance v0, Landroid/graphics/Paint;
 
@@ -415,11 +415,11 @@
 
     iput-object v0, p0, Lkankan/wheel/widget/WheelView;->y:Landroid/graphics/Paint;
 
-    new-instance v0, Lkankan/wheel/widget/k;
+    new-instance v0, Lkankan/wheel/widget/p;
 
-    invoke-direct {v0, p0}, Lkankan/wheel/widget/k;-><init>(Lkankan/wheel/widget/WheelView;)V
+    invoke-direct {v0, p0}, Lkankan/wheel/widget/p;-><init>(Lkankan/wheel/widget/WheelView;)V
 
-    invoke-virtual {p0, v0}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/b;)V
+    invoke-virtual {p0, v0}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/c;)V
 
     return-void
 .end method
@@ -502,10 +502,10 @@
     return p1
 .end method
 
-.method static synthetic b(Lkankan/wheel/widget/WheelView;)Lkankan/wheel/widget/g;
+.method static synthetic b(Lkankan/wheel/widget/WheelView;)Lkankan/wheel/widget/l;
     .locals 1
 
-    iget-object v0, p0, Lkankan/wheel/widget/WheelView;->n:Lkankan/wheel/widget/g;
+    iget-object v0, p0, Lkankan/wheel/widget/WheelView;->n:Lkankan/wheel/widget/l;
 
     return-object v0
 .end method
@@ -657,13 +657,13 @@
 
     div-int/lit8 v1, v1, 0x2
 
-    int-to-double v2, v1
+    int-to-double v1, v1
 
-    const-wide v4, 0x3ff3333333333333L
+    const-wide v3, 0x3ff3333333333333L
 
-    mul-double/2addr v2, v4
+    mul-double/2addr v1, v3
 
-    double-to-int v1, v2
+    double-to-int v1, v1
 
     iget-object v2, p0, Lkankan/wheel/widget/WheelView;->k:Landroid/graphics/drawable/Drawable;
 
@@ -1034,9 +1034,9 @@
 
     iget-object v0, p0, Lkankan/wheel/widget/WheelView;->s:Lkankan/wheel/widget/a/f;
 
-    iget-object v1, p0, Lkankan/wheel/widget/WheelView;->t:Lkankan/wheel/widget/f;
+    iget-object v1, p0, Lkankan/wheel/widget/WheelView;->t:Lkankan/wheel/widget/k;
 
-    invoke-virtual {v1}, Lkankan/wheel/widget/f;->b()Landroid/view/View;
+    invoke-virtual {v1}, Lkankan/wheel/widget/k;->b()Landroid/view/View;
 
     move-result-object v1
 
@@ -1061,9 +1061,9 @@
 
     iget-object v1, p0, Lkankan/wheel/widget/WheelView;->s:Lkankan/wheel/widget/a/f;
 
-    iget-object v2, p0, Lkankan/wheel/widget/WheelView;->t:Lkankan/wheel/widget/f;
+    iget-object v2, p0, Lkankan/wheel/widget/WheelView;->t:Lkankan/wheel/widget/k;
 
-    invoke-virtual {v2}, Lkankan/wheel/widget/f;->a()Landroid/view/View;
+    invoke-virtual {v2}, Lkankan/wheel/widget/k;->a()Landroid/view/View;
 
     move-result-object v2
 
@@ -1180,8 +1180,8 @@
     goto :goto_0
 .end method
 
-.method private k()Lkankan/wheel/widget/a;
-    .locals 6
+.method private k()Lkankan/wheel/widget/b;
+    .locals 7
 
     invoke-direct {p0}, Lkankan/wheel/widget/WheelView;->j()I
 
@@ -1242,22 +1242,22 @@
 
     sub-int/2addr v1, v2
 
-    int-to-double v4, v0
+    int-to-double v3, v0
 
-    int-to-double v2, v2
+    int-to-double v5, v2
 
-    invoke-static {v2, v3}, Ljava/lang/Math;->asin(D)D
+    invoke-static {v5, v6}, Ljava/lang/Math;->asin(D)D
 
-    move-result-wide v2
+    move-result-wide v5
 
-    add-double/2addr v2, v4
+    add-double v2, v3, v5
 
     double-to-int v0, v2
 
     :cond_3
-    new-instance v2, Lkankan/wheel/widget/a;
+    new-instance v2, Lkankan/wheel/widget/b;
 
-    invoke-direct {v2, v1, v0}, Lkankan/wheel/widget/a;-><init>(II)V
+    invoke-direct {v2, v1, v0}, Lkankan/wheel/widget/b;-><init>(II)V
 
     move-object v0, v2
 
@@ -1271,7 +1271,7 @@
 
     const/4 v1, 0x1
 
-    invoke-direct {p0}, Lkankan/wheel/widget/WheelView;->k()Lkankan/wheel/widget/a;
+    invoke-direct {p0}, Lkankan/wheel/widget/WheelView;->k()Lkankan/wheel/widget/b;
 
     move-result-object v4
 
@@ -1279,13 +1279,13 @@
 
     if-eqz v0, :cond_5
 
-    iget-object v0, p0, Lkankan/wheel/widget/WheelView;->t:Lkankan/wheel/widget/f;
+    iget-object v0, p0, Lkankan/wheel/widget/WheelView;->t:Lkankan/wheel/widget/k;
 
     iget-object v3, p0, Lkankan/wheel/widget/WheelView;->q:Landroid/widget/LinearLayout;
 
     iget v5, p0, Lkankan/wheel/widget/WheelView;->r:I
 
-    invoke-virtual {v0, v3, v5, v4}, Lkankan/wheel/widget/f;->a(Landroid/widget/LinearLayout;ILkankan/wheel/widget/a;)I
+    invoke-virtual {v0, v3, v5, v4}, Lkankan/wheel/widget/k;->a(Landroid/widget/LinearLayout;ILkankan/wheel/widget/b;)I
 
     move-result v3
 
@@ -1303,7 +1303,7 @@
 
     iget v0, p0, Lkankan/wheel/widget/WheelView;->r:I
 
-    invoke-virtual {v4}, Lkankan/wheel/widget/a;->a()I
+    invoke-virtual {v4}, Lkankan/wheel/widget/b;->a()I
 
     move-result v3
 
@@ -1315,7 +1315,7 @@
 
     move-result v0
 
-    invoke-virtual {v4}, Lkankan/wheel/widget/a;->c()I
+    invoke-virtual {v4}, Lkankan/wheel/widget/b;->c()I
 
     move-result v3
 
@@ -1328,7 +1328,7 @@
     :goto_2
     iget v3, p0, Lkankan/wheel/widget/WheelView;->r:I
 
-    invoke-virtual {v4}, Lkankan/wheel/widget/a;->a()I
+    invoke-virtual {v4}, Lkankan/wheel/widget/b;->a()I
 
     move-result v5
 
@@ -1336,7 +1336,7 @@
 
     iget v3, p0, Lkankan/wheel/widget/WheelView;->r:I
 
-    invoke-virtual {v4}, Lkankan/wheel/widget/a;->b()I
+    invoke-virtual {v4}, Lkankan/wheel/widget/b;->b()I
 
     move-result v5
 
@@ -1347,7 +1347,7 @@
     add-int/lit8 v3, v3, -0x1
 
     :goto_3
-    invoke-virtual {v4}, Lkankan/wheel/widget/a;->a()I
+    invoke-virtual {v4}, Lkankan/wheel/widget/b;->a()I
 
     move-result v5
 
@@ -1370,7 +1370,7 @@
     move-result v1
 
     :goto_5
-    invoke-virtual {v4}, Lkankan/wheel/widget/a;->c()I
+    invoke-virtual {v4}, Lkankan/wheel/widget/b;->c()I
 
     move-result v5
 
@@ -1426,7 +1426,7 @@
     goto :goto_3
 
     :cond_8
-    invoke-virtual {v4}, Lkankan/wheel/widget/a;->a()I
+    invoke-virtual {v4}, Lkankan/wheel/widget/b;->a()I
 
     move-result v1
 
@@ -1505,17 +1505,17 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lkankan/wheel/widget/WheelView;->t:Lkankan/wheel/widget/f;
+    iget-object v0, p0, Lkankan/wheel/widget/WheelView;->t:Lkankan/wheel/widget/k;
 
     iget-object v1, p0, Lkankan/wheel/widget/WheelView;->q:Landroid/widget/LinearLayout;
 
     iget v2, p0, Lkankan/wheel/widget/WheelView;->r:I
 
-    new-instance v3, Lkankan/wheel/widget/a;
+    new-instance v3, Lkankan/wheel/widget/b;
 
-    invoke-direct {v3}, Lkankan/wheel/widget/a;-><init>()V
+    invoke-direct {v3}, Lkankan/wheel/widget/b;-><init>()V
 
-    invoke-virtual {v0, v1, v2, v3}, Lkankan/wheel/widget/f;->a(Landroid/widget/LinearLayout;ILkankan/wheel/widget/a;)I
+    invoke-virtual {v0, v1, v2, v3}, Lkankan/wheel/widget/k;->a(Landroid/widget/LinearLayout;ILkankan/wheel/widget/b;)I
 
     :goto_0
     iget v0, p0, Lkankan/wheel/widget/WheelView;->i:I
@@ -1578,7 +1578,7 @@
 .method public a(Ljava/lang/String;F)Lkankan/wheel/widget/WheelView;
     .locals 6
 
-    const v2, 0x7f07003c
+    sget v2, Lkankan/wheel/widget/a;->bk:I
 
     const/16 v3, 0xa
 
@@ -1751,9 +1751,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lkankan/wheel/widget/b;
+    check-cast v0, Lkankan/wheel/widget/c;
 
-    invoke-interface {v0, p0, p1, p2}, Lkankan/wheel/widget/b;->a(Lkankan/wheel/widget/WheelView;II)V
+    invoke-interface {v0, p0, p1, p2}, Lkankan/wheel/widget/c;->a(Lkankan/wheel/widget/WheelView;II)V
 
     goto :goto_0
 
@@ -1881,14 +1881,14 @@
 .method public a(Landroid/view/animation/Interpolator;)V
     .locals 1
 
-    iget-object v0, p0, Lkankan/wheel/widget/WheelView;->n:Lkankan/wheel/widget/g;
+    iget-object v0, p0, Lkankan/wheel/widget/WheelView;->n:Lkankan/wheel/widget/l;
 
-    invoke-virtual {v0, p1}, Lkankan/wheel/widget/g;->a(Landroid/view/animation/Interpolator;)V
+    invoke-virtual {v0, p1}, Lkankan/wheel/widget/l;->a(Landroid/view/animation/Interpolator;)V
 
     return-void
 .end method
 
-.method public a(Lkankan/wheel/widget/b;)V
+.method public a(Lkankan/wheel/widget/c;)V
     .locals 1
 
     iget-object v0, p0, Lkankan/wheel/widget/WheelView;->u:Ljava/util/List;
@@ -1898,7 +1898,7 @@
     return-void
 .end method
 
-.method public a(Lkankan/wheel/widget/c;)V
+.method public a(Lkankan/wheel/widget/d;)V
     .locals 1
 
     iget-object v0, p0, Lkankan/wheel/widget/WheelView;->w:Ljava/util/List;
@@ -1908,7 +1908,7 @@
     return-void
 .end method
 
-.method public a(Lkankan/wheel/widget/d;)V
+.method public a(Lkankan/wheel/widget/e;)V
     .locals 1
 
     iget-object v0, p0, Lkankan/wheel/widget/WheelView;->v:Ljava/util/List;
@@ -1961,7 +1961,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     iget-object v0, p0, Lkankan/wheel/widget/WheelView;->s:Lkankan/wheel/widget/a/f;
 
@@ -1991,7 +1991,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_0
     invoke-virtual {p0, p1, p2}, Lkankan/wheel/widget/WheelView;->a(IZ)V
@@ -2027,9 +2027,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lkankan/wheel/widget/c;
+    check-cast v0, Lkankan/wheel/widget/d;
 
-    invoke-interface {v0, p0, p1}, Lkankan/wheel/widget/c;->a(Lkankan/wheel/widget/WheelView;I)V
+    invoke-interface {v0, p0, p1}, Lkankan/wheel/widget/d;->a(Lkankan/wheel/widget/WheelView;I)V
 
     goto :goto_0
 
@@ -2050,14 +2050,14 @@
 
     sub-int/2addr v0, v1
 
-    iget-object v1, p0, Lkankan/wheel/widget/WheelView;->n:Lkankan/wheel/widget/g;
+    iget-object v1, p0, Lkankan/wheel/widget/WheelView;->n:Lkankan/wheel/widget/l;
 
-    invoke-virtual {v1, v0, p2}, Lkankan/wheel/widget/g;->a(II)V
+    invoke-virtual {v1, v0, p2}, Lkankan/wheel/widget/l;->a(II)V
 
     return-void
 .end method
 
-.method public b(Lkankan/wheel/widget/b;)V
+.method public b(Lkankan/wheel/widget/c;)V
     .locals 1
 
     iget-object v0, p0, Lkankan/wheel/widget/WheelView;->u:Ljava/util/List;
@@ -2067,7 +2067,7 @@
     return-void
 .end method
 
-.method public b(Lkankan/wheel/widget/c;)V
+.method public b(Lkankan/wheel/widget/d;)V
     .locals 1
 
     iget-object v0, p0, Lkankan/wheel/widget/WheelView;->w:Ljava/util/List;
@@ -2077,7 +2077,7 @@
     return-void
 .end method
 
-.method public b(Lkankan/wheel/widget/d;)V
+.method public b(Lkankan/wheel/widget/e;)V
     .locals 1
 
     iget-object v0, p0, Lkankan/wheel/widget/WheelView;->v:Ljava/util/List;
@@ -2092,9 +2092,9 @@
 
     if-eqz p1, :cond_2
 
-    iget-object v0, p0, Lkankan/wheel/widget/WheelView;->t:Lkankan/wheel/widget/f;
+    iget-object v0, p0, Lkankan/wheel/widget/WheelView;->t:Lkankan/wheel/widget/k;
 
-    invoke-virtual {v0}, Lkankan/wheel/widget/f;->c()V
+    invoke-virtual {v0}, Lkankan/wheel/widget/k;->c()V
 
     iget-object v0, p0, Lkankan/wheel/widget/WheelView;->q:Landroid/widget/LinearLayout;
 
@@ -2120,17 +2120,17 @@
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lkankan/wheel/widget/WheelView;->t:Lkankan/wheel/widget/f;
+    iget-object v0, p0, Lkankan/wheel/widget/WheelView;->t:Lkankan/wheel/widget/k;
 
     iget-object v1, p0, Lkankan/wheel/widget/WheelView;->q:Landroid/widget/LinearLayout;
 
     iget v2, p0, Lkankan/wheel/widget/WheelView;->r:I
 
-    new-instance v3, Lkankan/wheel/widget/a;
+    new-instance v3, Lkankan/wheel/widget/b;
 
-    invoke-direct {v3}, Lkankan/wheel/widget/a;-><init>()V
+    invoke-direct {v3}, Lkankan/wheel/widget/b;-><init>()V
 
-    invoke-virtual {v0, v1, v2, v3}, Lkankan/wheel/widget/f;->a(Landroid/widget/LinearLayout;ILkankan/wheel/widget/a;)I
+    invoke-virtual {v0, v1, v2, v3}, Lkankan/wheel/widget/k;->a(Landroid/widget/LinearLayout;ILkankan/wheel/widget/b;)I
 
     goto :goto_0
 .end method
@@ -2165,9 +2165,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lkankan/wheel/widget/d;
+    check-cast v0, Lkankan/wheel/widget/e;
 
-    invoke-interface {v0, p0}, Lkankan/wheel/widget/d;->a(Lkankan/wheel/widget/WheelView;)V
+    invoke-interface {v0, p0}, Lkankan/wheel/widget/e;->a(Lkankan/wheel/widget/WheelView;)V
 
     goto :goto_0
 
@@ -2207,9 +2207,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lkankan/wheel/widget/d;
+    check-cast v0, Lkankan/wheel/widget/e;
 
-    invoke-interface {v0, p0}, Lkankan/wheel/widget/d;->b(Lkankan/wheel/widget/WheelView;)V
+    invoke-interface {v0, p0}, Lkankan/wheel/widget/e;->b(Lkankan/wheel/widget/WheelView;)V
 
     goto :goto_0
 
@@ -2301,9 +2301,9 @@
 .method public h()V
     .locals 1
 
-    iget-object v0, p0, Lkankan/wheel/widget/WheelView;->n:Lkankan/wheel/widget/g;
+    iget-object v0, p0, Lkankan/wheel/widget/WheelView;->n:Lkankan/wheel/widget/l;
 
-    invoke-virtual {v0}, Lkankan/wheel/widget/g;->a()V
+    invoke-virtual {v0}, Lkankan/wheel/widget/l;->a()V
 
     return-void
 .end method
@@ -2434,9 +2434,9 @@
 
     :cond_2
     :goto_1
-    iget-object v0, p0, Lkankan/wheel/widget/WheelView;->n:Lkankan/wheel/widget/g;
+    iget-object v0, p0, Lkankan/wheel/widget/WheelView;->n:Lkankan/wheel/widget/l;
 
-    invoke-virtual {v0, p1}, Lkankan/wheel/widget/g;->a(Landroid/view/MotionEvent;)Z
+    invoke-virtual {v0, p1}, Lkankan/wheel/widget/l;->a(Landroid/view/MotionEvent;)Z
 
     move-result v0
 

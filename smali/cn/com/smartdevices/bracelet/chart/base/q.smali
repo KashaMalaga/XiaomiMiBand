@@ -36,18 +36,6 @@
 
 
 # virtual methods
-.method public a(J)V
-    .locals 1
-
-    long-to-float v0, p1
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/base/q;->a:F
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/chart/base/q;->d()V
-
-    return-void
-.end method
-
 .method protected a(Landroid/graphics/Canvas;Landroid/graphics/RectF;F)V
     .locals 8
 
@@ -107,16 +95,6 @@
     return-void
 .end method
 
-.method public b(F)V
-    .locals 0
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/base/q;->b:F
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/chart/base/q;->d()V
-
-    return-void
-.end method
-
 .method public c()F
     .locals 1
 
@@ -128,7 +106,9 @@
 .method public c(F)V
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/base/q;->e:F
+    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/base/q;->a:F
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/chart/base/q;->d()V
 
     return-void
 .end method
@@ -174,4 +154,22 @@
     iput v0, p0, Lcn/com/smartdevices/bracelet/chart/base/q;->d:F
 
     goto :goto_0
+.end method
+
+.method public f(F)V
+    .locals 0
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/base/q;->b:F
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/chart/base/q;->d()V
+
+    return-void
+.end method
+
+.method public g(F)V
+    .locals 0
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/base/q;->e:F
+
+    return-void
 .end method

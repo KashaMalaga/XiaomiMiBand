@@ -92,7 +92,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->c:Landroid/graphics/Paint;
 
-    sget-object v0, Lcom/xiaomi/hm/a/s;->RoundProgressBar:[I
+    sget-object v0, Lcom/xiaomi/hm/a/t;->RoundProgressBar:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -213,7 +213,7 @@
 .end method
 
 .method private a(IFF)V
-    .locals 4
+    .locals 3
 
     if-gtz p1, :cond_1
 
@@ -248,9 +248,9 @@
 
     mul-int/lit8 v1, p1, 0x14
 
-    int-to-long v2, v1
+    int-to-long v1, v1
 
-    invoke-virtual {v0, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+    invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     new-instance v0, Landroid/view/animation/LinearInterpolator;
 
@@ -262,17 +262,17 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->q:Landroid/animation/ValueAnimator;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/view/y;
+    new-instance v1, Lcn/com/smartdevices/bracelet/view/z;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/view/y;-><init>(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/view/z;-><init>(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->q:Landroid/animation/ValueAnimator;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/view/z;
+    new-instance v1, Lcn/com/smartdevices/bracelet/view/A;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/view/z;-><init>(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/view/A;-><init>(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 

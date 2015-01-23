@@ -162,11 +162,11 @@
 
     invoke-virtual {v1}, Ljava/io/File;->length()J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    const-wide/32 v4, 0xa00000
+    const-wide/32 v3, 0xa00000
 
-    cmp-long v1, v2, v4
+    cmp-long v1, v1, v3
 
     if-lez v1, :cond_4
 

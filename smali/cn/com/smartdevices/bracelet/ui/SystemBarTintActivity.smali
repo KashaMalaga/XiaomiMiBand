@@ -7,7 +7,7 @@
 
 .field private mDisableStatusBarTintAuto:Z
 
-.field private mSystemBarTintManager:Lcn/com/smartdevices/bracelet/ui/dn;
+.field private mSystemBarTintManager:Lcn/com/smartdevices/bracelet/ui/ee;
 
 
 # direct methods
@@ -35,10 +35,10 @@
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;)Lcn/com/smartdevices/bracelet/ui/dn;
+.method static synthetic access$200(Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;)Lcn/com/smartdevices/bracelet/ui/ee;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mSystemBarTintManager:Lcn/com/smartdevices/bracelet/ui/dn;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mSystemBarTintManager:Lcn/com/smartdevices/bracelet/ui/ee;
 
     return-object v0
 .end method
@@ -48,7 +48,7 @@
 
     const/4 v0, 0x1
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->e(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/B;->f(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -95,9 +95,9 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mSystemBarTintManager:Lcn/com/smartdevices/bracelet/ui/dn;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mSystemBarTintManager:Lcn/com/smartdevices/bracelet/ui/ee;
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/ui/dn;->a(I)V
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/ui/ee;->a(I)V
 
     goto :goto_0
 .end method
@@ -122,9 +122,9 @@
     :cond_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mContentView:Landroid/view/View;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/dm;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/ed;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/dm;-><init>(Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/ed;-><init>(Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
@@ -144,9 +144,9 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mSystemBarTintManager:Lcn/com/smartdevices/bracelet/ui/dn;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mSystemBarTintManager:Lcn/com/smartdevices/bracelet/ui/ee;
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/ui/dn;->b(I)V
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/ui/ee;->b(I)V
 
     goto :goto_0
 .end method
@@ -164,25 +164,23 @@
     return-void
 
     :cond_0
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/dn;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/ee;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/dn;-><init>(Landroid/app/Activity;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/ee;-><init>(Landroid/app/Activity;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mSystemBarTintManager:Lcn/com/smartdevices/bracelet/ui/dn;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mSystemBarTintManager:Lcn/com/smartdevices/bracelet/ui/ee;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mSystemBarTintManager:Lcn/com/smartdevices/bracelet/ui/dn;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mSystemBarTintManager:Lcn/com/smartdevices/bracelet/ui/ee;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/dn;->a(Z)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/ee;->a(Z)V
 
     const v0, 0x1020002
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
-
-    check-cast v0, Landroid/view/ViewGroup;
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mContentView:Landroid/view/View;
 
@@ -199,6 +197,31 @@
     return-void
 .end method
 
+.method public getStatusBarHeight()I
+    .locals 2
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mSystemBarTintManager:Lcn/com/smartdevices/bracelet/ui/ee;
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->mSystemBarTintManager:Lcn/com/smartdevices/bracelet/ui/ee;
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/ui/ee;->a()Lcn/com/smartdevices/bracelet/ui/eg;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/ui/eg;->b()I
+
+    move-result v0
+
+    :cond_0
+    return v0
+.end method
+
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 1
 
@@ -210,7 +233,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0e0019
+    const v0, 0x7f0f001b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->setTheme(I)V
 

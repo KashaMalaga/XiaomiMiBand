@@ -1,77 +1,77 @@
-.class public Lcom/f/a/k;
-.super Lcom/f/a/n;
+.class Lcom/f/a/K;
+.super Lcom/f/b/a;
 
 
-# instance fields
-.field private a:J
-
-.field private b:J
-
-.field private c:Lb/a/dM;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/f/b/a",
+        "<",
+        "Landroid/view/View;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method public constructor <init>(Lb/a/dM;J)V
-    .locals 2
+.method constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
-    invoke-direct {p0}, Lcom/f/a/n;-><init>()V
-
-    const-wide/16 v0, 0x2710
-
-    iput-wide v0, p0, Lcom/f/a/k;->a:J
-
-    iput-object p1, p0, Lcom/f/a/k;->c:Lb/a/dM;
-
-    iget-wide v0, p0, Lcom/f/a/k;->a:J
-
-    cmp-long v0, p2, v0
-
-    if-gez v0, :cond_0
-
-    iget-wide p2, p0, Lcom/f/a/k;->a:J
-
-    :cond_0
-    iput-wide p2, p0, Lcom/f/a/k;->b:J
+    invoke-direct {p0, p1}, Lcom/f/b/a;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()J
-    .locals 2
+.method public a(Landroid/view/View;)Ljava/lang/Float;
+    .locals 1
 
-    iget-wide v0, p0, Lcom/f/a/k;->b:J
+    invoke-static {p1}, Lcom/f/c/a/a;->a(Landroid/view/View;)Lcom/f/c/a/a;
 
-    return-wide v0
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/f/c/a/a;->g()F
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
-.method public a(Z)Z
-    .locals 4
+.method public bridge synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    check-cast p1, Landroid/view/View;
 
-    move-result-wide v0
+    invoke-virtual {p0, p1}, Lcom/f/a/K;->a(Landroid/view/View;)Ljava/lang/Float;
 
-    iget-object v2, p0, Lcom/f/a/k;->c:Lb/a/dM;
+    move-result-object v0
 
-    iget-wide v2, v2, Lb/a/dM;->c:J
+    return-object v0
+.end method
 
-    sub-long/2addr v0, v2
+.method public a(Landroid/view/View;F)V
+    .locals 1
 
-    iget-wide v2, p0, Lcom/f/a/k;->b:J
+    invoke-static {p1}, Lcom/f/c/a/a;->a(Landroid/view/View;)Lcom/f/c/a/a;
 
-    cmp-long v0, v0, v2
+    move-result-object v0
 
-    if-ltz v0, :cond_0
+    invoke-virtual {v0, p2}, Lcom/f/c/a/a;->g(F)V
 
-    const/4 v0, 0x1
+    return-void
+.end method
 
-    :goto_0
-    return v0
+.method public bridge synthetic a(Ljava/lang/Object;F)V
+    .locals 0
 
-    :cond_0
-    const/4 v0, 0x0
+    check-cast p1, Landroid/view/View;
 
-    goto :goto_0
+    invoke-virtual {p0, p1, p2}, Lcom/f/a/K;->a(Landroid/view/View;F)V
+
+    return-void
 .end method

@@ -24,17 +24,17 @@
 
 # direct methods
 .method public constructor <init>(I)V
-    .locals 6
+    .locals 5
 
-    const-wide/16 v4, 0x0
+    const-wide/16 v3, 0x0
 
     const/4 v2, 0x0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide v4, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mStartSecondTimeInDay:J
+    iput-wide v3, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mStartSecondTimeInDay:J
 
-    iput-wide v4, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mEndSecondTimeInDay:J
+    iput-wide v3, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mEndSecondTimeInDay:J
 
     iput v2, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mCount:I
 
@@ -42,7 +42,7 @@
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mSportType:I
 
-    iput-wide v4, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mSportDayStartMilis:J
+    iput-wide v3, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mSportDayStartMilis:J
 
     iput p1, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mSportType:I
 
@@ -86,17 +86,17 @@
 .end method
 
 .method public constructor <init>(JJI)V
-    .locals 7
+    .locals 5
 
-    const-wide/16 v4, 0x0
+    const-wide/16 v3, 0x0
 
     const/4 v2, 0x0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide v4, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mStartSecondTimeInDay:J
+    iput-wide v3, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mStartSecondTimeInDay:J
 
-    iput-wide v4, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mEndSecondTimeInDay:J
+    iput-wide v3, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mEndSecondTimeInDay:J
 
     iput v2, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mCount:I
 
@@ -104,7 +104,7 @@
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mSportType:I
 
-    iput-wide v4, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mSportDayStartMilis:J
+    iput-wide v3, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mSportDayStartMilis:J
 
     iput p5, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mSportType:I
 
@@ -146,7 +146,7 @@
 .end method
 
 .method private getSecondInDay(J)J
-    .locals 9
+    .locals 8
 
     const-wide/16 v6, 0x3e8
 
@@ -160,9 +160,9 @@
 
     move-result-wide v0
 
-    iget-wide v4, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mSportDayStartMilis:J
+    iget-wide v3, p0, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->mSportDayStartMilis:J
 
-    sub-long/2addr v0, v4
+    sub-long/2addr v0, v3
 
     div-long/2addr v0, v6
 
@@ -260,7 +260,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -290,7 +290,7 @@
 .end method
 
 .method public setEndTime(J)V
-    .locals 3
+    .locals 2
 
     invoke-direct {p0, p1, p2}, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->getSecondInDay(J)J
 
@@ -302,7 +302,7 @@
 .end method
 
 .method public setStartTime(J)V
-    .locals 3
+    .locals 2
 
     invoke-direct {p0, p1, p2}, Lcn/com/smartdevices/bracelet/lab/sportmode/GroupItemBaseInfo;->getSecondInDay(J)J
 

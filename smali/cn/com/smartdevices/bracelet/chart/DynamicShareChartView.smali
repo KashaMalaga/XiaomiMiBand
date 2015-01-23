@@ -122,7 +122,7 @@
 
     check-cast v0, Lcn/com/smartdevices/bracelet/chart/s;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/s;->e(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/s;->f(Ljava/util/List;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicShareChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
 
@@ -221,7 +221,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
@@ -258,7 +258,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicShareChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
 

@@ -189,7 +189,7 @@
 .end method
 
 .method public get2(J)Ljava/lang/Object;
-    .locals 3
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(J)TT;"
@@ -343,7 +343,7 @@
 .end method
 
 .method public put2(JLjava/lang/Object;)V
-    .locals 3
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(JTT;)V"
@@ -382,7 +382,7 @@
 .end method
 
 .method public put2NoLock(JLjava/lang/Object;)V
-    .locals 3
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(JTT;)V"
@@ -430,7 +430,7 @@
 .end method
 
 .method public remove(Ljava/lang/Iterable;)V
-    .locals 6
+    .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -467,9 +467,9 @@
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v4
+    move-result-wide v3
 
-    invoke-virtual {v2, v4, v5}, Lde/greenrobot/dao/internal/LongHashMap;->remove(J)Ljava/lang/Object;
+    invoke-virtual {v2, v3, v4}, Lde/greenrobot/dao/internal/LongHashMap;->remove(J)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -493,7 +493,7 @@
 .end method
 
 .method public remove(Ljava/lang/Long;)V
-    .locals 4
+    .locals 3
 
     iget-object v0, p0, Lde/greenrobot/dao/identityscope/IdentityScopeLong;->lock:Ljava/util/concurrent/locks/ReentrantLock;
 
@@ -504,9 +504,9 @@
 
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    invoke-virtual {v0, v2, v3}, Lde/greenrobot/dao/internal/LongHashMap;->remove(J)Ljava/lang/Object;
+    invoke-virtual {v0, v1, v2}, Lde/greenrobot/dao/internal/LongHashMap;->remove(J)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

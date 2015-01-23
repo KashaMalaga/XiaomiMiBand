@@ -2,18 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/ui/L;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/at;
+
+.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/ar;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/ar;Lcn/com/smartdevices/bracelet/ui/at;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/as;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/as;->b:Lcn/com/smartdevices/bracelet/ui/ar;
+
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/as;->a:Lcn/com/smartdevices/bracelet/ui/at;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,46 +26,21 @@
 
 
 # virtual methods
-.method public a(Landroid/app/DialogFragment;)V
-    .locals 0
+.method public onClick(Landroid/view/View;)V
+    .locals 2
 
-    invoke-virtual {p1}, Landroid/app/DialogFragment;->dismiss()V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/as;->a:Lcn/com/smartdevices/bracelet/ui/at;
 
-    return-void
-.end method
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/at;->d:Landroid/net/Uri;
 
-.method public b(Landroid/app/DialogFragment;)V
-    .locals 3
+    if-eqz v0, :cond_0
 
-    new-instance v0, Landroid/content/Intent;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/as;->b:Lcn/com/smartdevices/bracelet/ui/ar;
 
-    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/as;->a:Lcn/com/smartdevices/bracelet/ui/at;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/as;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/ar;->a(Lcn/com/smartdevices/bracelet/ui/ar;Lcn/com/smartdevices/bracelet/ui/at;)V
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->c(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Landroid/content/Context;
-
-    move-result-object v1
-
-    const-class v2, Lcn/com/smartdevices/bracelet/ui/FwUpgradeFailedActivity;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/as;->a:Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;->c(Lcn/com/smartdevices/bracelet/ui/FwUpgradeActivity;)Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-
-    return-void
-.end method
-
-.method public c(Landroid/app/DialogFragment;)V
-    .locals 0
-
-    invoke-virtual {p1}, Landroid/app/DialogFragment;->dismiss()V
-
+    :cond_0
     return-void
 .end method

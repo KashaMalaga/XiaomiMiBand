@@ -1,127 +1,72 @@
-.class Lcom/xiaomi/account/openauth/a/f;
-.super Landroid/os/AsyncTask;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Landroid/os/AsyncTask",
-        "<",
-        "Ljava/lang/Void;",
-        "Ljava/lang/Void;",
-        "Ljava/lang/Boolean;",
-        ">;"
-    }
-.end annotation
+.class public Lcom/xiaomi/account/openauth/a/f;
+.super Ljava/lang/Object;
 
 
 # instance fields
-.field private a:Ljava/lang/String;
+.field public a:I
 
-.field private b:Ljava/io/OutputStream;
+.field public b:Ljava/lang/String;
 
-.field private c:Lcom/xiaomi/account/openauth/a/h;
+.field public c:Ljava/lang/String;
 
-.field private d:Z
+.field public d:Ljava/lang/String;
 
-.field private e:Landroid/content/Context;
+.field public e:Ljava/util/Map;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/io/OutputStream;Lcom/xiaomi/account/openauth/a/h;)V
-    .locals 6
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    invoke-direct/range {v0 .. v5}, Lcom/xiaomi/account/openauth/a/f;-><init>(Ljava/lang/String;Ljava/io/OutputStream;Lcom/xiaomi/account/openauth/a/h;ZLandroid/content/Context;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Ljava/io/OutputStream;Lcom/xiaomi/account/openauth/a/h;ZLandroid/content/Context;)V
+.method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
-
-    iput-object p1, p0, Lcom/xiaomi/account/openauth/a/f;->a:Ljava/lang/String;
-
-    iput-object p2, p0, Lcom/xiaomi/account/openauth/a/f;->b:Ljava/io/OutputStream;
-
-    iput-object p3, p0, Lcom/xiaomi/account/openauth/a/f;->c:Lcom/xiaomi/account/openauth/a/h;
-
-    iput-boolean p4, p0, Lcom/xiaomi/account/openauth/a/f;->d:Z
-
-    iput-object p5, p0, Lcom/xiaomi/account/openauth/a/f;->e:Landroid/content/Context;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected varargs a([Ljava/lang/Void;)Ljava/lang/Boolean;
+.method public toString()Ljava/lang/String;
     .locals 4
 
-    iget-object v0, p0, Lcom/xiaomi/account/openauth/a/f;->a:Ljava/lang/String;
+    const-string v0, "resCode = %1$d, headers = %2$s"
 
-    iget-object v1, p0, Lcom/xiaomi/account/openauth/a/f;->b:Ljava/io/OutputStream;
+    const/4 v1, 0x2
 
-    iget-boolean v2, p0, Lcom/xiaomi/account/openauth/a/f;->d:Z
+    new-array v1, v1, [Ljava/lang/Object;
 
-    iget-object v3, p0, Lcom/xiaomi/account/openauth/a/f;->e:Landroid/content/Context;
+    const/4 v2, 0x0
 
-    invoke-static {v0, v1, v2, v3}, Lcom/xiaomi/account/openauth/a/b;->a(Ljava/lang/String;Ljava/io/OutputStream;ZLandroid/content/Context;)Z
+    iget v3, p0, Lcom/xiaomi/account/openauth/a/f;->a:I
 
-    move-result v0
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    move-result-object v3
 
-    move-result-object v0
+    aput-object v3, v1, v2
 
-    return-object v0
-.end method
+    const/4 v2, 0x1
 
-.method protected a(Ljava/lang/Boolean;)V
-    .locals 2
+    iget-object v3, p0, Lcom/xiaomi/account/openauth/a/f;->e:Ljava/util/Map;
 
-    iget-object v0, p0, Lcom/xiaomi/account/openauth/a/f;->c:Lcom/xiaomi/account/openauth/a/h;
+    invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    move-result-object v3
 
-    move-result v1
+    aput-object v3, v1, v2
 
-    invoke-interface {v0, v1}, Lcom/xiaomi/account/openauth/a/h;->a(Z)V
-
-    return-void
-.end method
-
-.method protected varargs synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    check-cast p1, [Ljava/lang/Void;
-
-    invoke-virtual {p0, p1}, Lcom/xiaomi/account/openauth/a/f;->a([Ljava/lang/Void;)Ljava/lang/Boolean;
+    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
-.end method
-
-.method protected synthetic onPostExecute(Ljava/lang/Object;)V
-    .locals 0
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p0, p1}, Lcom/xiaomi/account/openauth/a/f;->a(Ljava/lang/Boolean;)V
-
-    return-void
 .end method

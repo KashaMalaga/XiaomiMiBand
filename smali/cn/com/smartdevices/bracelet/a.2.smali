@@ -17,7 +17,7 @@
 
 .field private static final g:Z
 
-.field private static h:Lcom/xiaomi/e/a/b;
+.field private static h:Lcom/xiaomi/f/a/b;
 
 
 # direct methods
@@ -29,26 +29,26 @@
     return-void
 .end method
 
-.method public static a()Lcom/xiaomi/e/a/b;
+.method public static a()Lcom/xiaomi/f/a/b;
     .locals 1
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/a;->h:Lcom/xiaomi/e/a/b;
+    sget-object v0, Lcn/com/smartdevices/bracelet/a;->h:Lcom/xiaomi/f/a/b;
 
     if-nez v0, :cond_0
 
-    invoke-static {}, Lcom/xiaomi/e/a/b;->a()Lcom/xiaomi/e/a/b;
+    invoke-static {}, Lcom/xiaomi/f/a/b;->a()Lcom/xiaomi/f/a/b;
 
     move-result-object v0
 
-    sput-object v0, Lcn/com/smartdevices/bracelet/a;->h:Lcom/xiaomi/e/a/b;
+    sput-object v0, Lcn/com/smartdevices/bracelet/a;->h:Lcom/xiaomi/f/a/b;
 
     :cond_0
-    sget-object v0, Lcn/com/smartdevices/bracelet/a;->h:Lcom/xiaomi/e/a/b;
+    sget-object v0, Lcn/com/smartdevices/bracelet/a;->h:Lcom/xiaomi/f/a/b;
 
     return-object v0
 .end method
 
-.method public static a(J)Lcom/xiaomi/e/a/b;
+.method public static a(J)Lcom/xiaomi/f/a/b;
     .locals 1
 
     const/4 v0, 0x0
@@ -56,7 +56,7 @@
     return-object v0
 .end method
 
-.method public static a(Landroid/content/Context;)Lcom/xiaomi/e/a/b;
+.method public static a(Landroid/content/Context;)Lcom/xiaomi/f/a/b;
     .locals 1
 
     const/4 v0, 0x0
@@ -64,7 +64,7 @@
     return-object v0
 .end method
 
-.method public static a(Landroid/content/Context;J)Lcom/xiaomi/e/a/b;
+.method public static a(Landroid/content/Context;J)Lcom/xiaomi/f/a/b;
     .locals 1
 
     const/4 v0, 0x0
@@ -72,7 +72,7 @@
     return-object v0
 .end method
 
-.method public static a(Ljava/lang/String;)Lcom/xiaomi/e/a/b;
+.method public static a(Ljava/lang/String;)Lcom/xiaomi/f/a/b;
     .locals 1
 
     const/4 v0, 0x0
@@ -80,7 +80,7 @@
     return-object v0
 .end method
 
-.method public static varargs a(Ljava/lang/String;[Ljava/lang/String;)Lcom/xiaomi/e/a/b;
+.method public static varargs a(Ljava/lang/String;[Ljava/lang/String;)Lcom/xiaomi/f/a/b;
     .locals 1
 
     const/4 v0, 0x0
@@ -88,7 +88,7 @@
     return-object v0
 .end method
 
-.method public static varargs a([Ljava/lang/String;)Lcom/xiaomi/e/a/b;
+.method public static varargs a([Ljava/lang/String;)Lcom/xiaomi/f/a/b;
     .locals 1
 
     const/4 v0, 0x0

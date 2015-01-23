@@ -3,21 +3,9 @@
 
 
 # static fields
-.field public static final exercise_db:I = 0x7f060000
+.field public static final numberOfPullUpdateReport:I = 0x7f0d0001
 
-.field public static final localization:I = 0x7f060001
-
-.field public static final localization_chinese:I = 0x7f060002
-
-.field public static final localization_english:I = 0x7f060003
-
-.field public static final localization_indo:I = 0x7f060004
-
-.field public static final localization_traditional_chinese:I = 0x7f060005
-
-.field public static final luafile:I = 0x7f060006
-
-.field public static final string_utils:I = 0x7f060007
+.field public static final picker_number_of_items_selected:I = 0x7f0d0000
 
 
 # direct methods

@@ -569,7 +569,7 @@
 .end method
 
 .method a(ILcom/amap/api/location/AMapLocalWeatherListener;Lcom/amap/api/location/AMapLocation;)V
-    .locals 8
+    .locals 7
 
     const/4 v0, 0x1
 
@@ -580,19 +580,19 @@
 
     if-nez p3, :cond_1
 
-    iget-object v1, p0, Lcom/amap/api/location/b;->c:Lcom/amap/api/location/a;
+    iget-object v0, p0, Lcom/amap/api/location/b;->c:Lcom/amap/api/location/a;
 
-    const-wide/16 v2, -0x1
+    const-wide/16 v1, -0x1
 
-    const/high16 v4, 0x41200000
+    const/high16 v3, 0x41200000
 
-    const-string v6, "lbs"
+    const-string v5, "lbs"
 
-    const/4 v7, 0x1
+    const/4 v6, 0x1
 
-    move-object v5, p0
+    move-object v4, p0
 
-    invoke-virtual/range {v1 .. v7}, Lcom/amap/api/location/a;->a(JFLcom/amap/api/location/AMapLocationListener;Ljava/lang/String;Z)V
+    invoke-virtual/range {v0 .. v6}, Lcom/amap/api/location/a;->a(JFLcom/amap/api/location/AMapLocationListener;Ljava/lang/String;Z)V
 
     :cond_0
     :goto_0
@@ -653,7 +653,7 @@
     const/4 v0, 0x0
 
     :try_start_0
-    invoke-static {}, Lcom/a/Y;->a()Lcom/a/Y;
+    invoke-static {}, Lcom/b/Y;->a()Lcom/b/Y;
 
     move-result-object v4
 
@@ -661,7 +661,7 @@
 
     const-string v6, "sea"
 
-    invoke-virtual {v4, v5, v3, v2, v6}, Lcom/a/Y;->a(Landroid/content/Context;Ljava/lang/String;[BLjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v4, v5, v3, v2, v6}, Lcom/b/Y;->a(Landroid/content/Context;Ljava/lang/String;[BLjava/lang/String;)Ljava/lang/String;
     :try_end_0
     .catch Lcom/amap/api/location/core/AMapLocException; {:try_start_0 .. :try_end_0} :catch_0
 

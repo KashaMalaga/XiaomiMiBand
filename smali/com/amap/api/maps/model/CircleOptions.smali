@@ -159,7 +159,7 @@
 .end method
 
 .method public radius(D)Lcom/amap/api/maps/model/CircleOptions;
-    .locals 1
+    .locals 0
 
     iput-wide p1, p0, Lcom/amap/api/maps/model/CircleOptions;->c:D
 

@@ -322,21 +322,21 @@
 
 # virtual methods
 .method public a()V
-    .locals 8
+    .locals 7
 
     const/4 v2, 0x1
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v4
+    move-result-wide v3
 
     iget-wide v0, p0, Lb/a/da;->d:J
 
-    sub-long v0, v4, v0
+    sub-long v0, v3, v0
 
-    iget-wide v6, p0, Lb/a/da;->e:J
+    iget-wide v5, p0, Lb/a/da;->e:J
 
-    cmp-long v0, v0, v6
+    cmp-long v0, v0, v5
 
     if-ltz v0, :cond_2
 
@@ -346,13 +346,13 @@
 
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    move-result-object v3
+    move-result-object v5
 
     move v1, v0
 
     :cond_0
     :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
@@ -365,13 +365,13 @@
     invoke-virtual {p0}, Lb/a/da;->f()V
 
     :cond_1
-    iput-wide v4, p0, Lb/a/da;->d:J
+    iput-wide v3, p0, Lb/a/da;->d:J
 
     :cond_2
     return-void
 
     :cond_3
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -400,7 +400,7 @@
 .end method
 
 .method public a(J)V
-    .locals 1
+    .locals 0
 
     iput-wide p1, p0, Lb/a/da;->e:J
 

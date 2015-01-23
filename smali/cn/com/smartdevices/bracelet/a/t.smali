@@ -18,6 +18,8 @@
 
 .field private f:I
 
+.field private n:Lcn/com/smartdevices/bracelet/config/b;
+
 
 # direct methods
 .method public constructor <init>(JLcn/com/smartdevices/bracelet/a/b;)V
@@ -46,6 +48,12 @@
     const/4 v0, -0x1
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/a/t;->f:I
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->e()Lcn/com/smartdevices/bracelet/config/b;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/a/t;->n:Lcn/com/smartdevices/bracelet/config/b;
 
     iput-wide p1, p0, Lcn/com/smartdevices/bracelet/a/t;->c:J
 
@@ -155,19 +163,19 @@
 
     const-string v1, ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v0, Lcn/com/smartdevices/bracelet/a/t;->l:Ljava/lang/String;
 
     const-string v1, "===========================start sync data================================"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v0, Lcn/com/smartdevices/bracelet/a/t;->l:Ljava/lang/String;
 
     const-string v1, ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p1, :cond_0
 
@@ -182,7 +190,7 @@
 
     const-string v1, "Can not obtain GattPeripheral. BleSyncDataTask task stopped."
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -200,7 +208,7 @@
 
     const-string v1, "getActivities return null, now finish!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     const-wide/16 v0, -0x1
 
@@ -280,7 +288,7 @@
 
     move-result-object v5
 
-    invoke-static {v0, v5}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v5}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -329,11 +337,11 @@
 
     add-int/2addr v9, v1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/o;->a()Lcn/com/smartdevices/bracelet/o;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/s;->a()Lcn/com/smartdevices/bracelet/s;
 
     move-result-object v1
 
-    invoke-virtual {v1, v6, v7, v8}, Lcn/com/smartdevices/bracelet/o;->a(III)Lcn/com/smartdevices/bracelet/model/DaySportData;
+    invoke-virtual {v1, v6, v7, v8}, Lcn/com/smartdevices/bracelet/s;->a(III)Lcn/com/smartdevices/bracelet/model/DaySportData;
 
     move-result-object v1
 
@@ -343,11 +351,11 @@
 
     invoke-direct {v1, v6, v7, v8}, Lcn/com/smartdevices/bracelet/model/DaySportData;-><init>(III)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/o;->a()Lcn/com/smartdevices/bracelet/o;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/s;->a()Lcn/com/smartdevices/bracelet/s;
 
     move-result-object v6
 
-    invoke-virtual {v6, v1}, Lcn/com/smartdevices/bracelet/o;->a(Lcn/com/smartdevices/bracelet/model/DaySportData;)V
+    invoke-virtual {v6, v1}, Lcn/com/smartdevices/bracelet/s;->a(Lcn/com/smartdevices/bracelet/model/DaySportData;)V
 
     :cond_3
     invoke-virtual {v1, v10}, Lcn/com/smartdevices/bracelet/model/DaySportData;->setNeedSync(Z)V
@@ -376,17 +384,29 @@
     goto/16 :goto_1
 
     :cond_5
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->b()Lcn/com/smartdevices/bracelet/f/a;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/t;->n:Lcn/com/smartdevices/bracelet/config/b;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/b;->c:Lcn/com/smartdevices/bracelet/config/m;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/m;->d:Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->getInstance()Lcn/com/smartdevices/bracelet/tencent/QQLogin;
 
     move-result-object v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a/d;->a()Lcn/com/smartdevices/bracelet/f/a/d;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->getInstance()Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;
 
     move-result-object v1
 
     if-eqz v0, :cond_6
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/f/a;->h()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->isLoginValid()Z
 
     move-result v0
 
@@ -394,68 +414,68 @@
 
     if-eqz v1, :cond_6
 
-    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/f/a/d;->a(Ljava/util/List;)V
+    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->addNeedSyncDays(Ljava/util/List;)V
 
     :cond_6
     sget-object v0, Lcn/com/smartdevices/bracelet/a/t;->l:Ljava/lang/String;
 
     const-string v1, "analysis...............................before"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/o;->a()Lcn/com/smartdevices/bracelet/o;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/o;->n()V
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/o;->a()Lcn/com/smartdevices/bracelet/o;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/s;->a()Lcn/com/smartdevices/bracelet/s;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/o;->p()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/s;->n()V
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/s;->a()Lcn/com/smartdevices/bracelet/s;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/s;->p()V
 
     sget-object v0, Lcn/com/smartdevices/bracelet/a/t;->l:Ljava/lang/String;
 
     const-string v1, "analysis...............................after"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v0, Lcn/com/smartdevices/bracelet/a/t;->l:Ljava/lang/String;
 
     const-string v1, "saveToDb...............................before"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/o;->a()Lcn/com/smartdevices/bracelet/o;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/s;->a()Lcn/com/smartdevices/bracelet/s;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/o;->o()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/s;->o()V
 
     sget-object v0, Lcn/com/smartdevices/bracelet/a/t;->l:Ljava/lang/String;
 
     const-string v1, "saveToDb...............................after"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v0, Lcn/com/smartdevices/bracelet/a/t;->l:Ljava/lang/String;
 
     const-string v1, "initDays...............................before"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/o;->a()Lcn/com/smartdevices/bracelet/o;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/s;->a()Lcn/com/smartdevices/bracelet/s;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/o;->c()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/s;->c()V
 
     sget-object v0, Lcn/com/smartdevices/bracelet/a/t;->l:Ljava/lang/String;
 
     const-string v1, "initDays...............................after"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-wide v0, p0, Lcn/com/smartdevices/bracelet/a/t;->c:J
 
@@ -473,19 +493,19 @@
 
     const-string v1, "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v0, Lcn/com/smartdevices/bracelet/a/t;->l:Ljava/lang/String;
 
     const-string v1, "============================stop sync data================================"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v0, Lcn/com/smartdevices/bracelet/a/t;->l:Ljava/lang/String;
 
     const-string v1, "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 .end method
@@ -513,7 +533,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/a/t;->a()V
 
@@ -534,7 +554,7 @@
 
     const-string v1, "getActivities onCommand"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     const/16 v0, 0x2ee0
 
@@ -566,7 +586,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -578,7 +598,7 @@
 
     const-string v1, "getActivities onMissData"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/t;->m:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
@@ -610,7 +630,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget v0, p1, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$Progress;->progress:I
 
@@ -641,7 +661,7 @@
 
     const-string v1, "getActivities onStart"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -653,7 +673,7 @@
 
     const-string v1, "getActivities onStop"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/a/t;->a()V
 

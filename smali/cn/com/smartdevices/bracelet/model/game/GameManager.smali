@@ -180,7 +180,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-gez v2, :cond_1
 
@@ -214,7 +214,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, -0x1
 
@@ -234,11 +234,11 @@
 
     move-result-object v3
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/o;->a()Lcn/com/smartdevices/bracelet/o;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/s;->a()Lcn/com/smartdevices/bracelet/s;
 
     move-result-object v4
 
-    invoke-virtual {v4, v3}, Lcn/com/smartdevices/bracelet/o;->b(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/DaySportData$Summary;
+    invoke-virtual {v4, v3}, Lcn/com/smartdevices/bracelet/s;->b(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/DaySportData$Summary;
 
     move-result-object v4
 
@@ -272,7 +272,7 @@
 
     move-result-object v6
 
-    invoke-static {v5, v6}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v5, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager;->mGameBriefInfo:Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
 
@@ -314,7 +314,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -351,13 +351,13 @@
 
     const-string v1, "start get game briefInfo "
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Lcn/com/smartdevices/bracelet/model/game/GameManager$1;
 
     invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/model/game/GameManager$1;-><init>(Lcn/com/smartdevices/bracelet/model/game/GameManager;)V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/e;->a(Lcom/c/a/a/h;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/j/e;->a(Lcom/e/a/a/h;)V
 
     const-string v0, "GameManager"
 
@@ -381,7 +381,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager;->mGameBriefInfo:Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
 
@@ -395,7 +395,7 @@
 
     invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/model/game/GameManager$2;-><init>(Lcn/com/smartdevices/bracelet/model/game/GameManager;)V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/e;->b(Lcom/c/a/a/h;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/j/e;->b(Lcom/e/a/a/h;)V
 
     return-void
 .end method
@@ -453,7 +453,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     const-string v0, "data"
@@ -468,7 +468,7 @@
 
     const-string v1, "dataObj is null"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
     :goto_0
@@ -506,7 +506,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "name"
 
@@ -590,7 +590,7 @@
 
     const-string v1, "configObj is null"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -694,9 +694,9 @@
 .end method
 
 .method private showBonusBanner(Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
-    .locals 8
+    .locals 7
 
-    const-wide/16 v6, 0x3e8
+    const-wide/16 v5, 0x3e8
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager;->mGameBriefInfo:Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
 
@@ -712,7 +712,7 @@
 
     move-result-wide v2
 
-    mul-long/2addr v2, v6
+    mul-long/2addr v2, v5
 
     invoke-virtual {v1, v2, v3}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
@@ -722,11 +722,11 @@
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->getStopTime()J
 
-    move-result-wide v4
+    move-result-wide v3
 
-    mul-long/2addr v4, v6
+    mul-long/2addr v3, v5
 
-    invoke-virtual {v2, v4, v5}, Ljava/util/Calendar;->setTimeInMillis(J)V
+    invoke-virtual {v2, v3, v4}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
     new-instance v3, Lcn/com/smartdevices/bracelet/model/SportDay;
 
@@ -758,9 +758,9 @@
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->getStartTime()J
 
-    move-result-wide v4
+    move-result-wide v3
 
-    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -772,9 +772,9 @@
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->getStopTime()J
 
-    move-result-wide v4
+    move-result-wide v3
 
-    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -782,7 +782,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -813,7 +813,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;->getConfigInfo()Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
 
@@ -902,9 +902,9 @@
 .end method
 
 .method private showGameRecord(Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
-    .locals 10
+    .locals 9
 
-    const-wide/16 v8, 0x3e8
+    const-wide/16 v7, 0x3e8
 
     const/4 v1, 0x1
 
@@ -922,11 +922,11 @@
 
     invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->getStartTime()J
 
-    move-result-wide v4
+    move-result-wide v3
 
-    mul-long/2addr v4, v8
+    mul-long/2addr v3, v7
 
-    invoke-virtual {v0, v4, v5}, Ljava/util/Calendar;->setTimeInMillis(J)V
+    invoke-virtual {v0, v3, v4}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
@@ -936,7 +936,7 @@
 
     move-result-wide v4
 
-    mul-long/2addr v4, v8
+    mul-long/2addr v4, v7
 
     invoke-virtual {v3, v4, v5}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
@@ -969,7 +969,7 @@
     :goto_1
     if-eqz v0, :cond_2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/o;->a()Lcn/com/smartdevices/bracelet/o;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/s;->a()Lcn/com/smartdevices/bracelet/s;
 
     move-result-object v0
 
@@ -977,7 +977,7 @@
 
     invoke-direct {v1}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/o;->b(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/DaySportData$Summary;
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/s;->b(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/DaySportData$Summary;
 
     move-result-object v0
 
@@ -1017,7 +1017,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;->getConfigInfo()Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
 
@@ -1025,9 +1025,9 @@
 
     invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->getStartTime()J
 
-    move-result-wide v4
+    move-result-wide v3
 
-    invoke-virtual {v1, v4, v5}, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->setTimeStamp(J)V
+    invoke-virtual {v1, v3, v4}, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->setTimeStamp(J)V
 
     invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;->getConfigInfo()Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
 
@@ -1097,7 +1097,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;->getConfigInfo()Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
 
@@ -1124,13 +1124,13 @@
     goto/16 :goto_1
 
     :cond_2
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->N()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->O()Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/u;->c(Z)V
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/x;->a(Z)V
 
     invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;->getConfigInfo()Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;
 
@@ -1157,9 +1157,9 @@
 
     move-result-object v0
 
-    int-to-long v2, v3
+    int-to-long v1, v3
 
-    invoke-virtual {v0, v2, v3}, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->setTimeStamp(J)V
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/lua/ConfigDynamicDataInfo;->setTimeStamp(J)V
 
     goto :goto_2
 

@@ -7,14 +7,16 @@
 
 .field b:Landroid/widget/ImageView;
 
-.field final synthetic c:Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;
+.field c:Landroid/widget/ImageView;
+
+.field final synthetic d:Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;
 
 
 # direct methods
 .method private constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/R;->c:Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/R;->d:Lcn/com/smartdevices/bracelet/lab/ui/SportFavoriteVoteGridActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

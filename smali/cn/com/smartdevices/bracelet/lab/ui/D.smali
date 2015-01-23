@@ -1,58 +1,59 @@
 .class Lcn/com/smartdevices/bracelet/lab/ui/D;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Lcn/com/smartdevices/bracelet/ui/W;
 
-# static fields
-.field static final a:I = 0x7d0
 
-.field static b:J
+# instance fields
+.field final synthetic a:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    const-wide/16 v0, 0x0
-
-    sput-wide v0, Lcn/com/smartdevices/bracelet/lab/ui/D;->b:J
-
-    return-void
-.end method
-
-.method private constructor <init>()V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;)V
     .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/D;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method static a()Z
-    .locals 6
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+# virtual methods
+.method public a(Landroid/app/DialogFragment;)V
+    .locals 0
 
-    move-result-wide v0
+    return-void
+.end method
 
-    sget-wide v2, Lcn/com/smartdevices/bracelet/lab/ui/D;->b:J
+.method public b(Landroid/app/DialogFragment;)V
+    .locals 2
 
-    sub-long v2, v0, v2
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/D;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
-    const-wide/16 v4, 0x7d0
+    const/4 v1, 0x1
 
-    cmp-long v2, v2, v4
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->b(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;Z)Z
 
-    if-gtz v2, :cond_0
+    invoke-virtual {p1}, Landroid/app/DialogFragment;->dismiss()V
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/D;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
-    :goto_0
-    return v0
+    const/4 v1, 0x0
 
-    :cond_0
-    sput-wide v0, Lcn/com/smartdevices/bracelet/lab/ui/D;->b:J
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->c(Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;Z)V
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/D;->a:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
-    goto :goto_0
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;->finish()V
+
+    return-void
+.end method
+
+.method public c(Landroid/app/DialogFragment;)V
+    .locals 0
+
+    return-void
 .end method

@@ -1,52 +1,46 @@
 .class Lcn/com/smartdevices/bracelet/ui/bC;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.super Landroid/content/BroadcastReceiver;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/bB;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/bB;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bC;->a:Lcn/com/smartdevices/bracelet/ui/bB;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bC;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 10
 
-    const-string v0, "NewAlarmActivity"
+    const/4 v3, -0x1
+
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string v0, "MainUIActivity"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "onItemClick: "
+    const-string v2, "action : "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -54,86 +48,196 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    packed-switch p3, :pswitch_data_0
+    const-string v0, "android.intent.action.DOWNLOAD_COMPLETE"
 
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const-string v0, "intent"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, ""
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "extra_download_id"
+
+    const-wide/16 v3, 0x0
+
+    invoke-virtual {p2, v2, v3, v4}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
+
+    move-result-wide v2
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bC;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/B;->b(Landroid/app/Activity;)V
+
+    :cond_0
     :goto_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bC;->a:Lcn/com/smartdevices/bracelet/ui/bB;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/bB;->dismiss()V
-
     return-void
 
-    :pswitch_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bC;->a:Lcn/com/smartdevices/bracelet/ui/bB;
+    :cond_1
+    const-string v0, "ACTION_OPEN_SETTINGS_PAGE"
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->a:[I
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    aget v1, v1, p3
+    move-result v0
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/bB;->a(Lcn/com/smartdevices/bracelet/ui/bB;I)I
+    if-nez v0, :cond_2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bC;->a:Lcn/com/smartdevices/bracelet/ui/bB;
+    const-string v0, "ACTION_OPEN_ALARM_PAGE"
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/bB;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    :cond_2
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bC;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+
+    const-string v1, "activity"
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
+    check-cast v0, Landroid/app/ActivityManager;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bC;->a:Lcn/com/smartdevices/bracelet/ui/bB;
+    const/16 v1, 0x32
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/bB;->a(Lcn/com/smartdevices/bracelet/ui/bB;)I
+    invoke-virtual {v0, v1}, Landroid/app/ActivityManager;->getRunningTasks(I)Ljava/util/List;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_3
+
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v5
+
+    move v2, v3
+
+    :goto_1
+    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->a(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;I)V
+    if-eqz v1, :cond_4
 
-    goto :goto_0
+    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    :pswitch_1
+    move-result-object v1
+
+    check-cast v1, Landroid/app/ActivityManager$RunningTaskInfo;
+
+    iget-object v6, v1, Landroid/app/ActivityManager$RunningTaskInfo;->baseActivity:Landroid/content/ComponentName;
+
+    const-string v7, "MainUIActivity"
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v9, "recent activity:"
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v6}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v7, v8}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v6}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
+
+    move-result-object v6
+
+    const-string v7, "cn.com.smartdevices.bracelet.ui.MainUIActivity"
+
+    invoke-virtual {v6, v7}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_7
+
+    iget v1, v1, Landroid/app/ActivityManager$RunningTaskInfo;->id:I
+
+    :goto_2
+    move v2, v1
+
+    goto :goto_1
+
+    :cond_3
+    move v2, v3
+
+    :cond_4
+    if-eq v2, v3, :cond_5
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v2, v1}, Landroid/app/ActivityManager;->moveTaskToFront(II)V
+
+    :cond_5
     new-instance v0, Landroid/content/Intent;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bC;->a:Lcn/com/smartdevices/bracelet/ui/bB;
+    const-class v1, Lcn/com/smartdevices/bracelet/ui/SettingActivity;
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/ui/bB;->getActivity()Landroid/app/Activity;
+    invoke-direct {v0, p1, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    move-result-object v1
+    const/high16 v1, 0x4000000
 
-    const-class v2, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    const-string v1, "ACTION_OPEN_ALARM_PAGE"
 
-    const-string v1, "Days"
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/bC;->a:Lcn/com/smartdevices/bracelet/ui/bB;
+    move-result v1
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/bB;->a(Lcn/com/smartdevices/bracelet/ui/bB;)I
+    if-eqz v1, :cond_6
 
-    move-result v2
+    const-class v1, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    invoke-virtual {v0, p1, v1}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bC;->a:Lcn/com/smartdevices/bracelet/ui/bB;
+    :cond_6
+    invoke-virtual {p1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/ui/bB;->getActivity()Landroid/app/Activity;
+    goto/16 :goto_0
 
-    move-result-object v1
+    :cond_7
+    move v1, v2
 
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, v0, v2}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
+    goto :goto_2
 .end method

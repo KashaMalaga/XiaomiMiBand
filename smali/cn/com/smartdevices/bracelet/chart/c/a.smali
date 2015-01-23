@@ -46,18 +46,18 @@
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    move-result-object v4
+    move-result-object v5
 
-    move-wide v2, v0
+    move-wide v1, v0
 
     :goto_0
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -65,28 +65,30 @@
 
     invoke-virtual {v0}, Landroid/animation/Animator;->getStartDelay()J
 
-    move-result-wide v6
+    move-result-wide v3
 
     invoke-virtual {v0}, Landroid/animation/Animator;->getDuration()J
 
-    move-result-wide v0
+    move-result-wide v6
 
-    add-long/2addr v0, v6
+    add-long/2addr v3, v6
 
-    cmp-long v5, v0, v2
+    cmp-long v0, v3, v1
 
-    if-lez v5, :cond_1
+    if-lez v0, :cond_1
+
+    move-wide v0, v3
 
     :goto_1
-    move-wide v2, v0
+    move-wide v1, v0
 
     goto :goto_0
 
     :cond_0
-    return-wide v2
+    return-wide v1
 
     :cond_1
-    move-wide v0, v2
+    move-wide v0, v1
 
     goto :goto_1
 .end method
@@ -301,9 +303,9 @@
 
     mul-int/lit8 v1, v1, 0x14
 
-    int-to-long v2, v1
+    int-to-long v1, v1
 
-    invoke-virtual {v0, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+    invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     return-object v0
 .end method
@@ -529,7 +531,7 @@
 .end method
 
 .method public static a(Ljava/lang/String;Ljava/lang/String;Landroid/widget/TextView;Landroid/widget/TextView;)Landroid/animation/Animator;
-    .locals 4
+    .locals 3
 
     const/4 v0, 0x2
 
@@ -553,9 +555,9 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    const-wide/16 v2, 0x258
+    const-wide/16 v1, 0x258
 
-    invoke-virtual {v0, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+    invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     return-object v0
 
@@ -579,9 +581,9 @@
 
     invoke-direct {v0}, Landroid/animation/LayoutTransition;-><init>()V
 
-    const-wide/16 v2, 0x5a
+    const-wide/16 v1, 0x5a
 
-    invoke-virtual {v0, v2, v3}, Landroid/animation/LayoutTransition;->setDuration(J)V
+    invoke-virtual {v0, v1, v2}, Landroid/animation/LayoutTransition;->setDuration(J)V
 
     new-instance v1, Landroid/view/animation/AccelerateDecelerateInterpolator;
 
@@ -802,7 +804,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, ""
 
@@ -962,7 +964,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
 
@@ -1002,7 +1004,7 @@
 .method public static a(Landroid/animation/AnimatorSet;J)V
     .locals 7
 
-    const-wide/16 v4, 0x0
+    const-wide/16 v3, 0x0
 
     if-eqz p0, :cond_3
 
@@ -1021,17 +1023,17 @@
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    move-result-object v1
+    move-result-object v5
 
     :cond_1
     :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1039,15 +1041,15 @@
 
     invoke-virtual {v0}, Landroid/animation/Animator;->getStartDelay()J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    sub-long v2, p1, v2
+    sub-long v1, p1, v1
 
-    cmp-long v6, v2, v4
+    cmp-long v6, v1, v3
 
     if-gez v6, :cond_2
 
-    move-wide v2, v4
+    move-wide v1, v3
 
     :cond_2
     instance-of v6, v0, Landroid/animation/ValueAnimator;
@@ -1056,7 +1058,7 @@
 
     check-cast v0, Landroid/animation/ValueAnimator;
 
-    invoke-virtual {v0, v2, v3}, Landroid/animation/ValueAnimator;->setCurrentPlayTime(J)V
+    invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setCurrentPlayTime(J)V
 
     goto :goto_0
 
@@ -1217,7 +1219,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     add-int/lit8 v0, v0, 0x1
 
@@ -1289,7 +1291,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     add-int/lit8 v0, v0, 0x1
 
@@ -1469,9 +1471,9 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    const-wide/16 v2, 0x14
+    const-wide/16 v1, 0x14
 
-    invoke-virtual {v0, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+    invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     return-object v0
 .end method
@@ -1559,6 +1561,20 @@
 .method public static b(I)Ljava/lang/CharSequence;
     .locals 7
 
+    invoke-static {}, Lcn/com/smartdevices/bracelet/B;->n()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
     new-instance v1, Landroid/text/SpannableStringBuilder;
 
     invoke-direct {v1}, Landroid/text/SpannableStringBuilder;-><init>()V
@@ -1575,12 +1591,12 @@
 
     const-string v0, ""
 
-    if-nez p0, :cond_1
+    if-nez p0, :cond_2
 
     const-string v0, "0000"
 
-    :cond_0
-    :goto_0
+    :cond_1
+    :goto_1
     new-instance v4, Landroid/text/SpannableString;
 
     invoke-direct {v4, v0}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
@@ -1599,21 +1615,23 @@
 
     invoke-direct {v0, v3}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
 
-    if-nez p0, :cond_2
+    if-nez p0, :cond_3
 
     invoke-virtual {v1, v4}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    :goto_1
-    return-object v1
+    :goto_2
+    move-object v0, v1
 
-    :cond_1
+    goto :goto_0
+
+    :cond_2
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
     move-result v4
 
     const/4 v5, 0x4
 
-    if-ge v4, v5, :cond_0
+    if-ge v4, v5, :cond_1
 
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
@@ -1621,31 +1639,31 @@
 
     packed-switch v4, :pswitch_data_0
 
-    goto :goto_0
+    goto :goto_1
 
     :pswitch_0
     const-string v0, "000"
 
-    goto :goto_0
+    goto :goto_1
 
     :pswitch_1
     const-string v0, "00"
 
-    goto :goto_0
+    goto :goto_1
 
     :pswitch_2
     const-string v0, "0"
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_2
+    :cond_3
     invoke-virtual {v1, v4}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
     move-result-object v2
 
     invoke-virtual {v2, v0}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    goto :goto_1
+    goto :goto_2
 
     nop
 
@@ -1772,9 +1790,9 @@
 
     add-int/lit8 v5, v0, 0x5a
 
-    int-to-long v6, v5
+    int-to-long v5, v5
 
-    invoke-virtual {p0, v4, v6, v7}, Landroid/view/ViewGroup;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {p0, v4, v5, v6}, Landroid/view/ViewGroup;->postDelayed(Ljava/lang/Runnable;J)Z
 
     :cond_3
     add-int/lit8 v2, v2, 0x1
@@ -1814,9 +1832,9 @@
 
     invoke-direct {v4, v3}, Lcn/com/smartdevices/bracelet/chart/c/d;-><init>(Landroid/view/View;)V
 
-    int-to-long v6, v0
+    int-to-long v5, v0
 
-    invoke-virtual {p1, v4, v6, v7}, Landroid/view/ViewGroup;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {p1, v4, v5, v6}, Landroid/view/ViewGroup;->postDelayed(Ljava/lang/Runnable;J)Z
 
     add-int/lit8 v1, v1, 0x1
 
@@ -1827,7 +1845,7 @@
 .end method
 
 .method public static c(IILandroid/widget/TextView;)Landroid/animation/Animator;
-    .locals 4
+    .locals 3
 
     const/4 v0, 0x2
 
@@ -1851,9 +1869,9 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 
-    const-wide/16 v2, 0x1f4
+    const-wide/16 v1, 0x1f4
 
-    invoke-virtual {v0, v2, v3}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+    invoke-virtual {v0, v1, v2}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
 
     return-object v0
 .end method

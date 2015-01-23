@@ -50,7 +50,7 @@
 
 # virtual methods
 .method public final a()Z
-    .locals 6
+    .locals 5
 
     const/4 v0, 0x0
 
@@ -76,15 +76,15 @@
     :cond_2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    iget-wide v4, p0, Lcom/tencent/b/b/e$a;->b:J
+    iget-wide v3, p0, Lcom/tencent/b/b/e$a;->b:J
 
-    sub-long/2addr v2, v4
+    sub-long/2addr v1, v3
 
-    const-wide/16 v4, 0x7530
+    const-wide/16 v3, 0x7530
 
-    cmp-long v1, v2, v4
+    cmp-long v1, v1, v3
 
     if-gtz v1, :cond_0
 

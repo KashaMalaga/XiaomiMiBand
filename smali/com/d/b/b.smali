@@ -1,73 +1,61 @@
 .class public abstract Lcom/d/b/b;
-.super Lcom/d/b/d;
+.super Ljava/lang/Object;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Ljava/lang/Object;",
-        ">",
-        "Lcom/d/b/d",
-        "<TT;",
-        "Ljava/lang/Integer;",
-        ">;"
-    }
-.end annotation
+# instance fields
+.field private final a:Lcom/d/b/h;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 1
+.method protected constructor <init>(Lcom/d/b/h;)V
+    .locals 0
 
-    const-class v0, Ljava/lang/Integer;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0, p1}, Lcom/d/b/d;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    iput-object p1, p0, Lcom/d/b/b;->a:Lcom/d/b/h;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a(Ljava/lang/Object;I)V
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;I)V"
-        }
-    .end annotation
+.method public abstract a(Lcom/d/b/h;)Lcom/d/b/b;
 .end method
 
-.method public final a(Ljava/lang/Object;Ljava/lang/Integer;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;",
-            "Ljava/lang/Integer;",
-            ")V"
-        }
-    .end annotation
+.method public abstract a(ILcom/d/b/c/a;)Lcom/d/b/c/a;
+.end method
 
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
+.method public a()Lcom/d/b/h;
+    .locals 1
+
+    iget-object v0, p0, Lcom/d/b/b;->a:Lcom/d/b/h;
+
+    return-object v0
+.end method
+
+.method public abstract b()Lcom/d/b/c/b;
+.end method
+
+.method public c()I
+    .locals 1
+
+    iget-object v0, p0, Lcom/d/b/b;->a:Lcom/d/b/h;
+
+    invoke-virtual {v0}, Lcom/d/b/h;->b()I
 
     move-result v0
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-virtual {p0, p1, v0}, Lcom/d/b/b;->a(Ljava/lang/Object;Ljava/lang/Integer;)V
-
-    return-void
+    return v0
 .end method
 
-.method public bridge synthetic a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public d()I
+    .locals 1
 
-    check-cast p1, Ljava/lang/Object;
+    iget-object v0, p0, Lcom/d/b/b;->a:Lcom/d/b/h;
 
-    check-cast p2, Ljava/lang/Integer;
+    invoke-virtual {v0}, Lcom/d/b/h;->c()I
 
-    invoke-virtual {p0, p1, p2}, Lcom/d/b/b;->a(Ljava/lang/Object;Ljava/lang/Integer;)V
+    move-result v0
 
-    return-void
+    return v0
 .end method

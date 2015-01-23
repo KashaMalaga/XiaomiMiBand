@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View android:enabled="false" android:gravity="center_vertical" android:background="@drawable/ic_service_list_category_bg" android:clickable="false" android:layout_width="fill_parent" android:layout_height="29.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

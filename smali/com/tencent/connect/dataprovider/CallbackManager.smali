@@ -172,7 +172,7 @@
 .end method
 
 .method private a(Ljava/lang/String;)I
-    .locals 6
+    .locals 5
 
     const/4 v0, 0x0
 
@@ -261,22 +261,22 @@
     :cond_5
     invoke-virtual {v1}, Ljava/io/File;->length()J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    const-wide/16 v4, 0x0
+    const-wide/16 v3, 0x0
 
-    cmp-long v1, v2, v4
+    cmp-long v3, v1, v3
 
-    if-nez v1, :cond_6
+    if-nez v3, :cond_6
 
     const/16 v0, -0x9
 
     goto :goto_0
 
     :cond_6
-    const-wide/32 v4, 0x40000000
+    const-wide/32 v3, 0x40000000
 
-    cmp-long v1, v2, v4
+    cmp-long v1, v1, v3
 
     if-lez v1, :cond_0
 

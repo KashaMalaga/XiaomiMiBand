@@ -845,12 +845,6 @@
 
     if-gtz v0, :cond_0
 
-    const-string v0, "CropOverlayView"
-
-    const-string v1, "initCropWindow skipped \'cause bitmapRect is empty"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
-
     :goto_0
     return-void
 

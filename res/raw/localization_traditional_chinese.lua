@@ -103,7 +103,7 @@ localization_zh_rTW_table = {
     personal_best_on_skip_day_info="連續達標每滿7天即可獲得假單, 未達標時會自動使用",
     manual_lazy_title="今天還未達標哦, 是否要使用假單？",
     manual_lazy_subtitle="不想今天中斷連續達標, 就用假單吧",
-    manual_lazy_title_used="今天已經使用假單, 好好放松一下吧",
+    manual_lazy_title_used="今天已經使用假單, 好好放鬆一下吧",
     manual_lazy_subtitle_used="明天將會繼續累計連續達標",
     manual_fail_ytd_title = "很遺憾昨天未達標, 連續達標中斷",
     manual_fail_ytd_subtitle = "截至前天已連續%d天達標",
@@ -184,5 +184,7 @@ localization_zh_rTW_table = {
     welcome_use_weight_scale = "小米智能秤綁定成功",
     welcome_use_weight_scale_not_bind = "点击綁定小米智能秤",
 
-    welcome_use_mi_health="歡迎使用小米健康",
+    welcome_use_mi_health="歡迎使用小米運動",
+
+    select_devices="还没有绑定设备哦, 点击绑定吧"
 }

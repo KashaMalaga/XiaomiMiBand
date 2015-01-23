@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/xiaomi/f/q;
+.implements Lcom/xiaomi/g/q;
 
 
 # instance fields
@@ -22,7 +22,7 @@
 
 
 # virtual methods
-.method public a(Lcom/xiaomi/f/c/e;)V
+.method public a(Lcom/xiaomi/g/c/e;)V
     .locals 3
 
     iget-object v0, p0, Lcom/xiaomi/push/service/p;->a:Lcom/xiaomi/push/service/XMPushService;
@@ -31,7 +31,7 @@
 
     iget-object v2, p0, Lcom/xiaomi/push/service/p;->a:Lcom/xiaomi/push/service/XMPushService;
 
-    invoke-direct {v1, v2, p1}, Lcom/xiaomi/push/service/h;-><init>(Lcom/xiaomi/push/service/XMPushService;Lcom/xiaomi/f/c/e;)V
+    invoke-direct {v1, v2, p1}, Lcom/xiaomi/push/service/h;-><init>(Lcom/xiaomi/push/service/XMPushService;Lcom/xiaomi/g/c/e;)V
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/push/service/XMPushService;->a(Lcom/xiaomi/push/service/e;)V
 

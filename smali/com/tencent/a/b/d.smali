@@ -58,9 +58,9 @@
 
     invoke-virtual {v0, v4, v5}, Lcom/tencent/a/b/d;->a(J)V
 
-    mul-long/2addr v2, v6
+    mul-long v1, v6, v2
 
-    invoke-virtual {v0, v2, v3}, Lcom/tencent/a/b/d;->b(J)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/a/b/d;->b(J)V
 
     return-object v0
 .end method
@@ -76,7 +76,7 @@
 .end method
 
 .method public a(J)V
-    .locals 1
+    .locals 0
 
     iput-wide p1, p0, Lcom/tencent/a/b/d;->b:J
 
@@ -100,7 +100,7 @@
 .end method
 
 .method public b(J)V
-    .locals 1
+    .locals 0
 
     iput-wide p1, p0, Lcom/tencent/a/b/d;->c:J
 
@@ -116,7 +116,7 @@
 .end method
 
 .method public toString()Ljava/lang/String;
-    .locals 6
+    .locals 5
 
     const-string v0, "[%s : %d / %d]"
 
@@ -140,9 +140,9 @@
 
     invoke-virtual {p0}, Lcom/tencent/a/b/d;->c()J
 
-    move-result-wide v4
+    move-result-wide v3
 
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 
@@ -152,9 +152,9 @@
 
     invoke-virtual {p0}, Lcom/tencent/a/b/d;->b()J
 
-    move-result-wide v4
+    move-result-wide v3
 
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 

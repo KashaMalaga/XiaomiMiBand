@@ -1,237 +1,261 @@
-.class public Lcom/f/a/a;
+.class public abstract Lcom/f/a/a;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Ljava/lang/Cloneable;
 
-# static fields
-.field public static a:Ljava/lang/String;
 
-.field public static b:Ljava/lang/String;
-
-.field public static c:I
-
-.field public static d:Ljava/lang/String;
-
-.field public static e:Ljava/lang/String;
-
-.field public static f:Lcom/f/a/b;
-
-.field public static g:I
-
-.field public static h:Ljava/lang/String;
-
-.field public static i:Ljava/lang/String;
-
-.field public static j:Z
-
-.field public static k:Z
-
-.field public static l:Z
-
-.field public static m:Z
-
-.field public static n:J
-
-.field public static o:Z
-
-.field private static p:Ljava/lang/String;
-
-.field private static q:Ljava/lang/String;
-
-.field private static r:[D
-
-.field private static s:[I
+# instance fields
+.field a:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/f/a/b;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    sput-object v1, Lcom/f/a/a;->p:Ljava/lang/String;
-
-    sput-object v1, Lcom/f/a/a;->q:Ljava/lang/String;
-
-    sput-object v1, Lcom/f/a/a;->a:Ljava/lang/String;
-
-    sput-object v1, Lcom/f/a/a;->b:Ljava/lang/String;
-
-    const-string v0, ""
-
-    sput-object v0, Lcom/f/a/a;->d:Ljava/lang/String;
-
-    const-string v0, ""
-
-    sput-object v0, Lcom/f/a/a;->e:Ljava/lang/String;
-
-    sput-object v1, Lcom/f/a/a;->r:[D
-
-    sput-boolean v2, Lcom/f/a/a;->j:Z
-
-    sput-boolean v2, Lcom/f/a/a;->k:Z
-
-    sput-boolean v2, Lcom/f/a/a;->l:Z
-
-    sput-boolean v2, Lcom/f/a/a;->m:Z
-
-    const-wide/16 v0, 0x7530
-
-    sput-wide v0, Lcom/f/a/a;->n:J
-
-    sput-boolean v2, Lcom/f/a/a;->o:Z
-
-    return-void
-.end method
-
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/f/a/a;->a:Ljava/util/ArrayList;
+
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;)Ljava/lang/String;
+
+# virtual methods
+.method public a()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public abstract a(J)V
+.end method
+
+.method public abstract a(Landroid/view/animation/Interpolator;)V
+.end method
+
+.method public a(Lcom/f/a/b;)V
     .locals 1
 
-    sget-object v0, Lcom/f/a/a;->p:Ljava/lang/String;
+    iget-object v0, p0, Lcom/f/a/a;->a:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
 
-    invoke-static {p0}, Lb/a/bW;->o(Landroid/content/Context;)Ljava/lang/String;
+    new-instance v0, Ljava/util/ArrayList;
 
-    move-result-object v0
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    sput-object v0, Lcom/f/a/a;->p:Ljava/lang/String;
+    iput-object v0, p0, Lcom/f/a/a;->a:Ljava/util/ArrayList;
 
     :cond_0
-    sget-object v0, Lcom/f/a/a;->p:Ljava/lang/String;
+    iget-object v0, p0, Lcom/f/a/a;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    return-void
+.end method
+
+.method public a(Ljava/lang/Object;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public abstract b(J)Lcom/f/a/a;
+.end method
+
+.method public b()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public b(Lcom/f/a/b;)V
+    .locals 1
+
+    iget-object v0, p0, Lcom/f/a/a;->a:Ljava/util/ArrayList;
+
+    if-nez v0, :cond_1
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    iget-object v0, p0, Lcom/f/a/a;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lcom/f/a/a;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/f/a/a;->a:Ljava/util/ArrayList;
+
+    goto :goto_0
+.end method
+
+.method public abstract c()J
+.end method
+
+.method public synthetic clone()Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0}, Lcom/f/a/a;->i()Lcom/f/a/a;
+
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method public static a(DD)V
-    .locals 2
+.method public abstract d()J
+.end method
 
-    sget-object v0, Lcom/f/a/a;->r:[D
+.method public abstract e()Z
+.end method
 
-    if-nez v0, :cond_0
+.method public f()Z
+    .locals 1
 
-    const/4 v0, 0x2
+    invoke-virtual {p0}, Lcom/f/a/a;->e()Z
 
-    new-array v0, v0, [D
+    move-result v0
 
-    sput-object v0, Lcom/f/a/a;->r:[D
+    return v0
+.end method
+
+.method public g()Ljava/util/ArrayList;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/ArrayList",
+            "<",
+            "Lcom/f/a/b;",
+            ">;"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcom/f/a/a;->a:Ljava/util/ArrayList;
+
+    return-object v0
+.end method
+
+.method public h()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/f/a/a;->a:Ljava/util/ArrayList;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/f/a/a;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/f/a/a;->a:Ljava/util/ArrayList;
 
     :cond_0
-    sget-object v0, Lcom/f/a/a;->r:[D
+    return-void
+.end method
+
+.method public i()Lcom/f/a/a;
+    .locals 6
+
+    :try_start_0
+    invoke-super {p0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/f/a/a;
+
+    iget-object v1, p0, Lcom/f/a/a;->a:Ljava/util/ArrayList;
+
+    if-eqz v1, :cond_0
+
+    iget-object v3, p0, Lcom/f/a/a;->a:Ljava/util/ArrayList;
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v1, v0, Lcom/f/a/a;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
+
+    move-result v4
 
     const/4 v1, 0x0
 
-    aput-wide p0, v0, v1
+    move v2, v1
 
-    sget-object v0, Lcom/f/a/a;->r:[D
-
-    const/4 v1, 0x1
-
-    aput-wide p2, v0, v1
-
-    return-void
-.end method
-
-.method public static a(II)V
-    .locals 2
-
-    sget-object v0, Lcom/f/a/a;->s:[I
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x2
-
-    new-array v0, v0, [I
-
-    sput-object v0, Lcom/f/a/a;->s:[I
+    :goto_0
+    if-lt v2, v4, :cond_1
 
     :cond_0
-    sget-object v0, Lcom/f/a/a;->s:[I
+    return-object v0
 
-    const/4 v1, 0x0
+    :cond_1
+    iget-object v5, v0, Lcom/f/a/a;->a:Ljava/util/ArrayList;
 
-    aput p0, v0, v1
+    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    sget-object v0, Lcom/f/a/a;->s:[I
+    move-result-object v1
 
-    const/4 v1, 0x1
+    check-cast v1, Lcom/f/a/b;
 
-    aput p1, v0, v1
+    invoke-virtual {v5, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :try_end_0
+    .catch Ljava/lang/CloneNotSupportedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-void
+    add-int/lit8 v1, v2, 0x1
+
+    move v2, v1
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    new-instance v0, Ljava/lang/AssertionError;
+
+    invoke-direct {v0}, Ljava/lang/AssertionError;-><init>()V
+
+    throw v0
 .end method
 
-.method public static a(Ljava/lang/String;)V
+.method public j()V
     .locals 0
 
-    sput-object p0, Lcom/f/a/a;->p:Ljava/lang/String;
-
     return-void
 .end method
 
-.method public static a()[D
-    .locals 1
-
-    sget-object v0, Lcom/f/a/a;->r:[D
-
-    return-object v0
-.end method
-
-.method public static b(Landroid/content/Context;)Ljava/lang/String;
-    .locals 1
-
-    sget-object v0, Lcom/f/a/a;->q:Ljava/lang/String;
-
-    if-nez v0, :cond_0
-
-    invoke-static {p0}, Lb/a/bW;->t(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/f/a/a;->q:Ljava/lang/String;
-
-    :cond_0
-    sget-object v0, Lcom/f/a/a;->q:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public static b(Ljava/lang/String;)V
+.method public k()V
     .locals 0
 
-    sput-object p0, Lcom/f/a/a;->q:Ljava/lang/String;
-
     return-void
 .end method
 
-.method public static c(Landroid/content/Context;)[I
-    .locals 1
+.method public start()V
+    .locals 0
 
-    sget-object v0, Lcom/f/a/a;->s:[I
-
-    if-nez v0, :cond_0
-
-    invoke-static {p0}, Lcom/f/a/B;->a(Landroid/content/Context;)Lcom/f/a/B;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/f/a/B;->a()[I
-
-    move-result-object v0
-
-    sput-object v0, Lcom/f/a/a;->s:[I
-
-    :cond_0
-    sget-object v0, Lcom/f/a/a;->s:[I
-
-    return-object v0
+    return-void
 .end method

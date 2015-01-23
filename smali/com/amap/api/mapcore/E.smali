@@ -20,7 +20,7 @@
 
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
-    .locals 12
+    .locals 11
 
     const/4 v7, 0x0
 
@@ -806,11 +806,11 @@
 
     new-instance v4, Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v6, v3, Lcom/autonavi/amap/mapcore/DPoint;->y:D
+    iget-wide v5, v3, Lcom/autonavi/amap/mapcore/DPoint;->y:D
 
-    iget-wide v8, v3, Lcom/autonavi/amap/mapcore/DPoint;->x:D
+    iget-wide v7, v3, Lcom/autonavi/amap/mapcore/DPoint;->x:D
 
-    invoke-direct {v4, v6, v7, v8, v9}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v4, v5, v6, v7, v8}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     iget-object v5, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
@@ -830,11 +830,11 @@
 
     new-instance v6, Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v8, v3, Lcom/autonavi/amap/mapcore/DPoint;->y:D
+    iget-wide v7, v3, Lcom/autonavi/amap/mapcore/DPoint;->y:D
 
-    iget-wide v10, v3, Lcom/autonavi/amap/mapcore/DPoint;->x:D
+    iget-wide v9, v3, Lcom/autonavi/amap/mapcore/DPoint;->x:D
 
-    invoke-direct {v6, v8, v9, v10, v11}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v6, v7, v8, v9, v10}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     iget-object v7, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 
@@ -842,11 +842,11 @@
 
     new-instance v0, Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v8, v3, Lcom/autonavi/amap/mapcore/DPoint;->y:D
+    iget-wide v7, v3, Lcom/autonavi/amap/mapcore/DPoint;->y:D
 
-    iget-wide v10, v3, Lcom/autonavi/amap/mapcore/DPoint;->x:D
+    iget-wide v9, v3, Lcom/autonavi/amap/mapcore/DPoint;->x:D
 
-    invoke-direct {v0, v8, v9, v10, v11}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v0, v7, v8, v9, v10}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     iget-object v1, p0, Lcom/amap/api/mapcore/e;->a:Lcom/amap/api/mapcore/b;
 

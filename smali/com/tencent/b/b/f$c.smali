@@ -339,9 +339,9 @@
 
     iget-object v0, p0, Lcom/tencent/b/b/f$c;->d:Lcom/tencent/b/b/f;
 
-    const-wide/16 v2, 0x0
+    const-wide/16 v1, 0x0
 
-    invoke-virtual {v0, v2, v3}, Lcom/tencent/b/b/f;->a(J)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/b/b/f;->a(J)V
 
     goto :goto_0
 
@@ -352,23 +352,23 @@
 
     iput-boolean v0, p0, Lcom/tencent/b/b/f$c;->c:Z
 
-    iget-object v0, p0, Lcom/tencent/b/b/f$c;->d:Lcom/tencent/b/b/f;
+    iget-object v6, p0, Lcom/tencent/b/b/f$c;->d:Lcom/tencent/b/b/f;
 
-    new-instance v1, Lcom/tencent/b/b/f$b;
+    new-instance v0, Lcom/tencent/b/b/f$b;
 
-    iget-object v2, p0, Lcom/tencent/b/b/f$c;->d:Lcom/tencent/b/b/f;
+    iget-object v1, p0, Lcom/tencent/b/b/f$c;->d:Lcom/tencent/b/b/f;
 
-    iget-object v3, p0, Lcom/tencent/b/b/f$c;->b:Ljava/util/List;
+    iget-object v2, p0, Lcom/tencent/b/b/f$c;->b:Ljava/util/List;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v4
+    move-result-wide v3
 
-    iget v6, p0, Lcom/tencent/b/b/f$c;->a:I
+    iget v5, p0, Lcom/tencent/b/b/f$c;->a:I
 
-    invoke-direct/range {v1 .. v6}, Lcom/tencent/b/b/f$b;-><init>(Lcom/tencent/b/b/f;Ljava/util/List;JI)V
+    invoke-direct/range {v0 .. v5}, Lcom/tencent/b/b/f$b;-><init>(Lcom/tencent/b/b/f;Ljava/util/List;JI)V
 
-    invoke-static {v0, v1}, Lcom/tencent/b/b/f;->a(Lcom/tencent/b/b/f;Lcom/tencent/b/b/f$b;)Lcom/tencent/b/b/f$b;
+    invoke-static {v6, v0}, Lcom/tencent/b/b/f;->a(Lcom/tencent/b/b/f;Lcom/tencent/b/b/f$b;)Lcom/tencent/b/b/f$b;
 
     iget-object v0, p0, Lcom/tencent/b/b/f$c;->d:Lcom/tencent/b/b/f;
 
@@ -401,13 +401,13 @@
 
     move-result v1
 
-    int-to-long v2, v1
+    int-to-long v1, v1
 
-    const-wide/16 v4, 0x4e20
+    const-wide/16 v3, 0x4e20
 
-    mul-long/2addr v2, v4
+    mul-long/2addr v1, v3
 
-    invoke-virtual {v0, v2, v3}, Lcom/tencent/b/b/f;->a(J)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/b/b/f;->a(J)V
 
     goto :goto_0
 .end method

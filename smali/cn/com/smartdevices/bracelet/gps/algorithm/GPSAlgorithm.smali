@@ -98,7 +98,7 @@
 .method public native start(Z)V
 .end method
 
-.method public native statusEstimation(DDI)I
+.method public native statusEstimation(II)I
 .end method
 
 .method public native stop()V

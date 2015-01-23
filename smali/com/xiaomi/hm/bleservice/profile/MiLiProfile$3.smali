@@ -36,7 +36,7 @@
     const/4 v0, 0x1
 
     :goto_0
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->c(Z)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->c(Z)V
 
     const/16 v0, 0x9
 
@@ -50,7 +50,7 @@
 
     const-string v0, ">>> UNEXPECTED <<<"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;)V
 
     :cond_0
     :goto_1
@@ -64,7 +64,7 @@
     :pswitch_0
     const-string v2, ">>> UNEXPECTED <<<"
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;)V
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;)V
 
     :goto_2
     iget-object v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$3;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
@@ -96,28 +96,28 @@
     :pswitch_1
     const-string v2, "Battery low"
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/r;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/v;->b(Ljava/lang/String;)V
 
     goto :goto_2
 
     :pswitch_2
     const-string v2, "Battery charging"
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/r;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/v;->b(Ljava/lang/String;)V
 
     goto :goto_2
 
     :pswitch_3
     const-string v2, "Battery full (charging)"
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/r;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/v;->b(Ljava/lang/String;)V
 
     goto :goto_2
 
     :pswitch_4
     const-string v2, "Battery charger off"
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/r;->b(Ljava/lang/String;)V
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/v;->b(Ljava/lang/String;)V
 
     goto :goto_2
 

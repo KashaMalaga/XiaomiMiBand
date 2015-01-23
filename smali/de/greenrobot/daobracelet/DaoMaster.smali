@@ -3,14 +3,14 @@
 
 
 # static fields
-.field public static final SCHEMA_VERSION:I = 0x6
+.field public static final SCHEMA_VERSION:I = 0x7
 
 
 # direct methods
 .method public constructor <init>(Landroid/database/sqlite/SQLiteDatabase;)V
     .locals 1
 
-    const/4 v0, 0x6
+    const/4 v0, 0x7
 
     invoke-direct {p0, p1, v0}, Lde/greenrobot/dao/AbstractDaoMaster;-><init>(Landroid/database/sqlite/SQLiteDatabase;I)V
 

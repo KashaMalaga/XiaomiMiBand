@@ -3,6 +3,8 @@
 
 
 # static fields
+.field public static final COMPATIABLE_VALUE:I = 0x3e8
+
 .field public static final INCOMING_CALL_DEFAULT:I = 0x102
 
 .field public static final INCOMING_CALL_DEFAULT_SEC:I = 0x2
@@ -71,18 +73,22 @@
 
 .field public state:I
 
+.field public targetWeight:F
+
 .field public totalSportData:Lcn/com/smartdevices/bracelet/model/UserTotalSportData;
 
 .field public uid:J
 
 .field private version:I
 
-.field public weight:I
+.field public weight:F
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 4
+
+    const/high16 v1, -0x40800000
 
     const/4 v3, 0x0
 
@@ -106,7 +112,9 @@
 
     iput v2, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->height:I
 
-    iput v2, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->weight:I
+    iput v1, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->weight:F
+
+    iput v1, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->targetWeight:F
 
     const-string v0, ""
 
@@ -198,7 +206,7 @@
     const/4 v1, 0x0
 
     :try_start_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->g()Lcom/b/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/B;->c()Lcom/d/a/k;
 
     move-result-object v0
 
@@ -210,7 +218,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, p0, v2}, Lcom/b/a/k;->a(Ljava/lang/String;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+    invoke-virtual {v0, p0, v2}, Lcom/d/a/k;->a(Ljava/lang/String;Ljava/lang/reflect/Type;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -280,7 +288,17 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public enableConnectedBtAdv(Z)V
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
+
+    iput-boolean p1, v0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->enableConnectedBtAdv:Z
 
     return-void
 .end method
@@ -322,7 +340,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -368,7 +386,7 @@
 
     if-ge v0, v5, :cond_2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->A()Ljava/util/ArrayList;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->C()Ljava/util/ArrayList;
 
     move-result-object v3
 
@@ -421,7 +439,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/u;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 
     const-string v0, "PersonInfo"
 
@@ -449,7 +467,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->alarmClockItems:Ljava/util/ArrayList;
@@ -558,6 +576,16 @@
     return v0
 .end method
 
+.method public isEnableConnectedBtAdv()Z
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
+
+    iget-boolean v0, v0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->enableConnectedBtAdv:Z
+
+    return v0
+.end method
+
 .method public isInComingCallEnabled()Z
     .locals 4
 
@@ -592,7 +620,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 
@@ -623,9 +651,13 @@
 
     if-eq v0, v4, :cond_0
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->weight:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->weight:F
 
-    if-eq v0, v4, :cond_0
+    const/high16 v1, -0x40800000
+
+    cmpl-float v0, v0, v1
+
+    if-eqz v0, :cond_0
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->age:I
 
@@ -673,7 +705,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -745,7 +777,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -821,11 +853,11 @@
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/y;->g()Lcom/b/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/B;->c()Lcom/d/a/k;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/b/a/k;->b(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, p0}, Lcom/d/a/k;->b(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 

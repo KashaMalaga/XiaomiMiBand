@@ -825,7 +825,7 @@
 .end method
 
 .method public f()Ljava/util/List;
-    .locals 10
+    .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -838,12 +838,12 @@
 
     const/4 v0, 0x0
 
-    new-instance v8, Ljava/util/ArrayList;
+    new-instance v7, Ljava/util/ArrayList;
 
-    invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
     :try_start_0
-    new-instance v9, Landroid/graphics/Rect;
+    new-instance v8, Landroid/graphics/Rect;
 
     const/4 v1, 0x0
 
@@ -861,13 +861,13 @@
 
     move-result v4
 
-    invoke-direct {v9, v1, v2, v3, v4}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-direct {v8, v1, v2, v3, v4}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    new-instance v6, Lcom/autonavi/amap/mapcore/IPoint;
+    new-instance v5, Lcom/autonavi/amap/mapcore/IPoint;
 
-    invoke-direct {v6}, Lcom/autonavi/amap/mapcore/IPoint;-><init>()V
+    invoke-direct {v5}, Lcom/autonavi/amap/mapcore/IPoint;-><init>()V
 
-    move v7, v0
+    move v6, v0
 
     :goto_0
     iget-object v0, p0, Lcom/amap/api/mapcore/an;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
@@ -876,11 +876,11 @@
 
     move-result v0
 
-    if-ge v7, v0, :cond_1
+    if-ge v6, v0, :cond_1
 
     iget-object v0, p0, Lcom/amap/api/mapcore/an;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    invoke-virtual {v0, v7}, Ljava/util/concurrent/CopyOnWriteArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v0, v6}, Ljava/util/concurrent/CopyOnWriteArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -888,23 +888,23 @@
 
     invoke-interface {v0}, Lcom/amap/api/mapcore/aa;->g()Lcom/amap/api/maps/model/LatLng;
 
-    move-result-object v0
+    move-result-object v3
 
-    if-eqz v0, :cond_0
+    if-eqz v3, :cond_0
 
-    iget-object v1, p0, Lcom/amap/api/mapcore/an;->a:Lcom/amap/api/mapcore/v;
+    iget-object v0, p0, Lcom/amap/api/mapcore/an;->a:Lcom/amap/api/mapcore/v;
 
-    iget-wide v2, v0, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v1, v3, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
-    iget-wide v4, v0, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iget-wide v3, v3, Lcom/amap/api/maps/model/LatLng;->longitude:D
 
-    invoke-interface/range {v1 .. v6}, Lcom/amap/api/mapcore/v;->b(DDLcom/autonavi/amap/mapcore/IPoint;)V
+    invoke-interface/range {v0 .. v5}, Lcom/amap/api/mapcore/v;->b(DDLcom/autonavi/amap/mapcore/IPoint;)V
 
-    iget v0, v6, Lcom/autonavi/amap/mapcore/IPoint;->x:I
+    iget v0, v5, Lcom/autonavi/amap/mapcore/IPoint;->x:I
 
-    iget v1, v6, Lcom/autonavi/amap/mapcore/IPoint;->y:I
+    iget v1, v5, Lcom/autonavi/amap/mapcore/IPoint;->y:I
 
-    invoke-virtual {p0, v9, v0, v1}, Lcom/amap/api/mapcore/an;->a(Landroid/graphics/Rect;II)Z
+    invoke-virtual {p0, v8, v0, v1}, Lcom/amap/api/mapcore/an;->a(Landroid/graphics/Rect;II)Z
 
     move-result v0
 
@@ -914,7 +914,7 @@
 
     iget-object v0, p0, Lcom/amap/api/mapcore/an;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
 
-    invoke-virtual {v0, v7}, Ljava/util/concurrent/CopyOnWriteArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v0, v6}, Ljava/util/concurrent/CopyOnWriteArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -922,14 +922,14 @@
 
     invoke-direct {v1, v0}, Lcom/amap/api/maps/model/Marker;-><init>(Lcom/amap/api/mapcore/aa;)V
 
-    invoke-interface {v8, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v7, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
     :cond_0
-    add-int/lit8 v0, v7, 0x1
+    add-int/lit8 v0, v6, 0x1
 
-    move v7, v0
+    move v6, v0
 
     goto :goto_0
 
@@ -939,7 +939,7 @@
     invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
 
     :cond_1
-    return-object v8
+    return-object v7
 .end method
 
 .method public f(Lcom/amap/api/mapcore/aa;)Z

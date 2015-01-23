@@ -1,79 +1,142 @@
 .class final Lcom/xiaomi/hm/bleservice/s;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Landroid/os/Parcelable$Creator;
 
+# instance fields
+.field final synthetic a:Lcom/xiaomi/hm/bleservice/BLEService;
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Landroid/os/Parcelable$Creator",
-        "<",
-        "Lcom/xiaomi/hm/bleservice/HwBatteryStatus;",
-        ">;"
-    }
-.end annotation
+.field private b:[I
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
+.method public constructor <init>(Lcom/xiaomi/hm/bleservice/BLEService;I)V
+    .locals 1
+
+    iput-object p1, p0, Lcom/xiaomi/hm/bleservice/s;->a:Lcom/xiaomi/hm/bleservice/BLEService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/xiaomi/hm/bleservice/s;->b:[I
+
+    new-array v0, p2, [I
+
+    iput-object v0, p0, Lcom/xiaomi/hm/bleservice/s;->b:[I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/os/Parcel;)Lcom/xiaomi/hm/bleservice/HwBatteryStatus;
+.method public a(I)V
     .locals 2
 
-    new-instance v0, Lcom/xiaomi/hm/bleservice/HwBatteryStatus;
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/s;->b:[I
 
-    invoke-direct {v0}, Lcom/xiaomi/hm/bleservice/HwBatteryStatus;-><init>()V
+    array-length v0, v0
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    if-ge p1, v0, :cond_0
 
-    move-result v1
+    if-gez p1, :cond_1
 
-    iput v1, v0, Lcom/xiaomi/hm/bleservice/HwBatteryStatus;->e:I
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
 
-    move-result v1
+    throw v0
 
-    iput v1, v0, Lcom/xiaomi/hm/bleservice/HwBatteryStatus;->f:I
+    :cond_1
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/s;->b:[I
 
-    return-object v0
+    aget v1, v0, p1
+
+    add-int/lit8 v1, v1, 0x1
+
+    aput v1, v0, p1
+
+    return-void
 .end method
 
-.method public a(I)[Lcom/xiaomi/hm/bleservice/HwBatteryStatus;
+.method public a(II)V
     .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/s;->b:[I
 
-    return-object v0
+    array-length v0, v0
+
+    if-ge p1, v0, :cond_0
+
+    if-gez p1, :cond_1
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw v0
+
+    :cond_1
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/s;->b:[I
+
+    aput p2, v0, p1
+
+    return-void
 .end method
 
-.method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+.method public b(I)I
     .locals 1
 
-    invoke-virtual {p0, p1}, Lcom/xiaomi/hm/bleservice/s;->a(Landroid/os/Parcel;)Lcom/xiaomi/hm/bleservice/HwBatteryStatus;
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/s;->b:[I
 
-    move-result-object v0
+    array-length v0, v0
 
-    return-object v0
+    if-ge p1, v0, :cond_0
+
+    if-gez p1, :cond_1
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw v0
+
+    :cond_1
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/s;->b:[I
+
+    aget v0, v0, p1
+
+    return v0
 .end method
 
-.method public synthetic newArray(I)[Ljava/lang/Object;
-    .locals 1
+.method public c(I)V
+    .locals 2
 
-    invoke-virtual {p0, p1}, Lcom/xiaomi/hm/bleservice/s;->a(I)[Lcom/xiaomi/hm/bleservice/HwBatteryStatus;
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/s;->b:[I
 
-    move-result-object v0
+    array-length v0, v0
 
-    return-object v0
+    if-ge p1, v0, :cond_0
+
+    if-gez p1, :cond_1
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw v0
+
+    :cond_1
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/s;->b:[I
+
+    aget v1, v0, p1
+
+    add-int/lit8 v1, v1, -0x1
+
+    aput v1, v0, p1
+
+    return-void
 .end method

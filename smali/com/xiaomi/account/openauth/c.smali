@@ -230,7 +230,7 @@
 
     invoke-direct {v1, v0}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p0, v1}, Lcom/xiaomi/account/openauth/a/b;->b(Landroid/content/Context;Ljava/net/URL;)Ljava/lang/String;
+    invoke-static {p0, v1}, Lcom/xiaomi/account/openauth/a/b;->a(Landroid/content/Context;Ljava/net/URL;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -349,7 +349,7 @@
 
     invoke-direct {v1, v0}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p0, v1}, Lcom/xiaomi/account/openauth/a/b;->b(Landroid/content/Context;Ljava/net/URL;)Ljava/lang/String;
+    invoke-static {p0, v1}, Lcom/xiaomi/account/openauth/a/b;->a(Landroid/content/Context;Ljava/net/URL;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -736,7 +736,7 @@
 .end method
 
 .method protected static a(Landroid/app/Activity;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
-    .locals 5
+    .locals 4
 
     const-wide/16 v0, 0x0
 

@@ -1,77 +1,201 @@
-.class Lcom/d/a/B;
-.super Lcom/d/b/a;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/d/b/a",
-        "<",
-        "Landroid/view/View;",
-        ">;"
-    }
-.end annotation
+.class public final Lcom/d/a/B;
+.super Ljava/lang/Object;
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/String;)V
+.method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/d/b/a;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/view/View;)Ljava/lang/Float;
-    .locals 1
+.method public a(Lcom/d/a/d/a;)Lcom/d/a/w;
+    .locals 5
 
-    invoke-static {p1}, Lcom/d/c/a/a;->a(Landroid/view/View;)Lcom/d/c/a/a;
+    invoke-virtual {p1}, Lcom/d/a/d/a;->p()Z
+
+    move-result v1
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Lcom/d/a/d/a;->a(Z)V
+
+    :try_start_0
+    invoke-static {p1}, Lcom/d/a/b/G;->a(Lcom/d/a/d/a;)Lcom/d/a/w;
+    :try_end_0
+    .catch Ljava/lang/StackOverflowError; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_1
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/d/c/a/a;->m()F
+    invoke-virtual {p1, v1}, Lcom/d/a/d/a;->a(Z)V
 
-    move-result v0
+    return-object v0
 
-    invoke-static {v0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    :catch_0
+    move-exception v0
+
+    :try_start_1
+    new-instance v2, Lcom/d/a/A;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Failed parsing JSON source: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " to Json"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3, v0}, Lcom/d/a/A;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {p1, v1}, Lcom/d/a/d/a;->a(Z)V
+
+    throw v0
+
+    :catch_1
+    move-exception v0
+
+    :try_start_2
+    new-instance v2, Lcom/d/a/A;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Failed parsing JSON source: "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, " to Json"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3, v0}, Lcom/d/a/A;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v2
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+.end method
+
+.method public a(Ljava/io/Reader;)Lcom/d/a/w;
+    .locals 3
+
+    :try_start_0
+    new-instance v0, Lcom/d/a/d/a;
+
+    invoke-direct {v0, p1}, Lcom/d/a/d/a;-><init>(Ljava/io/Reader;)V
+
+    invoke-virtual {p0, v0}, Lcom/d/a/B;->a(Lcom/d/a/d/a;)Lcom/d/a/w;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/d/a/w;->s()Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    invoke-virtual {v0}, Lcom/d/a/d/a;->f()Lcom/d/a/d/d;
+
+    move-result-object v0
+
+    sget-object v2, Lcom/d/a/d/d;->j:Lcom/d/a/d/d;
+
+    if-eq v0, v2, :cond_0
+
+    new-instance v0, Lcom/d/a/G;
+
+    const-string v1, "Did not consume the entire document."
+
+    invoke-direct {v0, v1}, Lcom/d/a/G;-><init>(Ljava/lang/String;)V
+
+    throw v0
+    :try_end_0
+    .catch Lcom/d/a/d/f; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_2
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Lcom/d/a/G;
+
+    invoke-direct {v1, v0}, Lcom/d/a/G;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+
+    :catch_1
+    move-exception v0
+
+    new-instance v1, Lcom/d/a/x;
+
+    invoke-direct {v1, v0}, Lcom/d/a/x;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+
+    :catch_2
+    move-exception v0
+
+    new-instance v1, Lcom/d/a/G;
+
+    invoke-direct {v1, v0}, Lcom/d/a/G;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+
+    :cond_0
+    return-object v1
+.end method
+
+.method public a(Ljava/lang/String;)Lcom/d/a/w;
+    .locals 1
+
+    new-instance v0, Ljava/io/StringReader;
+
+    invoke-direct {v0, p1}, Ljava/io/StringReader;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0, v0}, Lcom/d/a/B;->a(Ljava/io/Reader;)Lcom/d/a/w;
 
     move-result-object v0
 
     return-object v0
-.end method
-
-.method public bridge synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p0, p1}, Lcom/d/a/B;->a(Landroid/view/View;)Ljava/lang/Float;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public a(Landroid/view/View;F)V
-    .locals 1
-
-    invoke-static {p1}, Lcom/d/c/a/a;->a(Landroid/view/View;)Lcom/d/c/a/a;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p2}, Lcom/d/c/a/a;->k(F)V
-
-    return-void
-.end method
-
-.method public bridge synthetic a(Ljava/lang/Object;F)V
-    .locals 0
-
-    check-cast p1, Landroid/view/View;
-
-    invoke-virtual {p0, p1, p2}, Lcom/d/a/B;->a(Landroid/view/View;F)V
-
-    return-void
 .end method

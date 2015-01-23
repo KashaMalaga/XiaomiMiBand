@@ -69,7 +69,7 @@
 
     iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->i:Landroid/widget/ImageView;
 
-    sget-object v0, Lcom/xiaomi/hm/a/s;->LabCircleView:[I
+    sget-object v0, Lcom/xiaomi/hm/a/t;->LabCircleView:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -97,11 +97,11 @@
 
     move-result v4
 
-    const v0, 0x7f030075
+    const v0, 0x7f030096
 
     invoke-static {p1, v0, p0}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const v0, 0x7f0b0201
+    const v0, 0x7f0802ab
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->findViewById(I)Landroid/view/View;
 
@@ -111,7 +111,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->b:Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView$CircleView;
 
-    const v0, 0x7f0b0203
+    const v0, 0x7f0802ad
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->findViewById(I)Landroid/view/View;
 
@@ -121,7 +121,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->c:Landroid/widget/TextView;
 
-    const v0, 0x7f0b0202
+    const v0, 0x7f0802ac
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/view/LabCircleView;->findViewById(I)Landroid/view/View;
 

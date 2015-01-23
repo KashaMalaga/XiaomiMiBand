@@ -1,129 +1,166 @@
-.class public Lcn/com/smartdevices/bracelet/lab/sync/n;
-.super Ljava/lang/Object;
+.class final Lcn/com/smartdevices/bracelet/lab/sync/n;
+.super Lcom/e/a/a/h;
 
 
-# static fields
-.field public static final a:I = 0x1
+# instance fields
+.field final synthetic a:I
 
-.field public static final b:I = 0x2
+.field final synthetic b:Lcn/com/smartdevices/bracelet/lab/sync/y;
 
-.field public static final c:I = 0x3
-
-.field public static final d:I = 0x4
-
-.field public static final e:I = 0x5
-
-.field public static final f:I = 0x6
-
-.field public static final g:I = 0x7
-
-.field public static final h:I = 0x8
+.field final synthetic c:Landroid/content/Context;
 
 
 # direct methods
-.method private constructor <init>()V
+.method constructor <init>(ILcn/com/smartdevices/bracelet/lab/sync/y;Landroid/content/Context;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lcn/com/smartdevices/bracelet/lab/sync/n;->a:I
+
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/lab/sync/n;->b:Lcn/com/smartdevices/bracelet/lab/sync/y;
+
+    iput-object p3, p0, Lcn/com/smartdevices/bracelet/lab/sync/n;->c:Landroid/content/Context;
+
+    invoke-direct {p0}, Lcom/e/a/a/h;-><init>()V
 
     return-void
 .end method
 
-.method public static a(I)Ljava/lang/String;
-    .locals 1
 
-    packed-switch p0, :pswitch_data_0
+# virtual methods
+.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
+    .locals 4
 
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw v0
-
-    :pswitch_0
-    const-string v0, "huami.sport.storeUserSportConfig.json"
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/a;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p3}, Lcn/com/smartdevices/bracelet/B;->b([B)Ljava/lang/String;
 
     move-result-object v0
 
-    :goto_0
-    return-object v0
+    const-string v1, "Sync"
 
-    :pswitch_1
-    const-string v0, "huami.sport.getUserSportConfig.json"
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/a;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v0
+    const-string v3, "syncContourTrackFromServer onFailure statusCode = "
 
-    goto :goto_0
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :pswitch_2
-    const-string v0, "huami.sport.getSportSummary.json"
+    move-result-object v2
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/a;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    move-result-object v2
 
-    goto :goto_0
+    const-string v3, "  content = "
 
-    :pswitch_3
-    const-string v0, "huami.sport.storeSportSummary.json"
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/a;->b(Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    goto :goto_0
+    const-string v2, ", type = "
 
-    :pswitch_4
-    const-string v0, "huami.sport.getSportData.json"
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/a;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    goto :goto_0
+    iget v2, p0, Lcn/com/smartdevices/bracelet/lab/sync/n;->a:I
 
-    :pswitch_5
-    const-string v0, "huami.sport.storeSportData.json"
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/a;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    goto :goto_0
-
-    :pswitch_6
-    const-string v0, "huami.health.fetchInitSportData.json"
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/a;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    goto :goto_0
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    :pswitch_7
-    const-string v0, "huami.health.storeSportData.json"
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sync/n;->b:Lcn/com/smartdevices/bracelet/lab/sync/y;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/a;->b(Ljava/lang/String;)Ljava/lang/String;
+    const/4 v1, 0x0
+
+    iput-boolean v1, v0, Lcn/com/smartdevices/bracelet/lab/sync/y;->a:Z
+
+    return-void
+.end method
+
+.method public onSuccess(I[Lorg/apache/http/Header;[B)V
+    .locals 4
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v0, Ljava/lang/String;
+
+    invoke-direct {v0, p3}, Ljava/lang/String;-><init>([B)V
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/j/f;->a(Ljava/lang/String;Ljava/util/ArrayList;)Lcn/com/smartdevices/bracelet/j/g;
+
+    move-result-object v2
+
+    const/4 v0, 0x0
+
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/j/g;->a()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sync/n;->c:Landroid/content/Context;
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/sync/v;->a(Landroid/content/Context;Ljava/util/List;)Z
+
+    move-result v0
+
+    :cond_0
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/sync/n;->b:Lcn/com/smartdevices/bracelet/lab/sync/y;
+
+    iput-boolean v0, v1, Lcn/com/smartdevices/bracelet/lab/sync/y;->a:Z
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/sync/n;->b:Lcn/com/smartdevices/bracelet/lab/sync/y;
+
+    iget-boolean v1, v1, Lcn/com/smartdevices/bracelet/lab/sync/y;->a:Z
+
+    if-nez v1, :cond_1
+
+    const-string v1, "Sync"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "syncContourTrackFromServer isSucceededToSaveToDB = "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    goto :goto_0
+    const-string v2, ", type = "
 
-    nop
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_3
-        :pswitch_5
-        :pswitch_1
-        :pswitch_2
-        :pswitch_4
-        :pswitch_6
-        :pswitch_7
-    .end packed-switch
+    move-result-object v0
+
+    iget v2, p0, Lcn/com/smartdevices/bracelet/lab/sync/n;->a:I
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_1
+    return-void
 .end method

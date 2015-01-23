@@ -1,5 +1,5 @@
 .class Lb/a/dA;
-.super Lcom/f/a/A;
+.super Lcom/h/a/A;
 
 
 # instance fields
@@ -12,7 +12,7 @@
 
     iput-object p1, p0, Lb/a/dA;->a:Lb/a/dx;
 
-    invoke-direct {p0}, Lcom/f/a/A;-><init>()V
+    invoke-direct {p0}, Lcom/h/a/A;-><init>()V
 
     return-void
 .end method

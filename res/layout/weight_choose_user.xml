@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ff383f47" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/top_changed_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/line_divider">
+        <TextView android:textColor="@android:color/white" android:gravity="center" android:id="@id/head_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="100.0dip" android:text="@string/not_fount_available_userinfo" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+        <TextView android:textColor="@android:color/white" android:gravity="center" android:id="@id/head_sub_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/choose_userinfo_for_weight" android:layout_below="@id/head_title" android:layout_centerHorizontal="true" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/edit_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="140.0dip" android:layout_below="@id/head_sub_title" android:layout_centerHorizontal="true">
+            <RelativeLayout android:layout_width="60.0dip" android:layout_height="wrap_content">
+                <ImageButton android:id="@id/other_img" android:background="@drawable/choose_user_visitor_selector" android:layout_width="60.0dip" android:layout_height="60.0dip" />
+                <TextView android:textColor="@android:color/white" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="@string/visitor" android:layout_below="@id/other_img" android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+            <View android:layout_width="46.0dip" android:layout_height="1.0dip" />
+            <RelativeLayout android:layout_width="60.0dip" android:layout_height="wrap_content">
+                <ImageButton android:id="@id/add_new_img" android:background="@drawable/choose_user_adduser_selector" android:layout_width="60.0dip" android:layout_height="60.0dip" />
+                <TextView android:textColor="@android:color/white" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="@string/new_user" android:layout_below="@id/add_new_img" android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:id="@id/line_divider" android:background="#ff7b8188" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="34.0dip" android:layout_marginTop="30.0dip" android:layout_marginRight="34.0dip" android:layout_above="@id/frame_viewpager" />
+    <FrameLayout android:id="@id/frame_viewpager" android:layout_width="fill_parent" android:layout_height="166.0dip" android:layout_above="@id/line_divider1">
+        <android.support.v4.view.ViewPager android:id="@id/chooseuser_view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" />
+        <cn.com.smartdevices.bracelet.ui.widget.CirclePageIndicator android:layout_gravity="center_horizontal" android:id="@id/chooseuser_indicator" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="140.0dip" app:strokeWidth="0.0dip" app:fillColor="#ffffffff" app:pageColor="#33ffffff" app:radius="2.5999756dip" app:gap="8.0dip" xmlns:app="http://schemas.android.com/apk/res-auto" />
+    </FrameLayout>
+    <View android:id="@id/line_divider1" android:background="#ff7b8188" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginBottom="13.0dip" android:layout_above="@id/chooseuser_cancel" />
+    <ImageButton android:id="@id/chooseuser_cancel" android:background="@drawable/choose_user_close_selector" android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_marginBottom="13.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

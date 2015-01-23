@@ -26,7 +26,7 @@
 
 # direct methods
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;JJI)V
-    .locals 5
+    .locals 3
 
     const/4 v1, 0x0
 
@@ -52,9 +52,9 @@
 
     new-instance v0, Lcom/amap/api/maps/offlinemap/b;
 
-    iget-wide v2, p0, Lcom/amap/api/maps/offlinemap/c;->b:J
+    iget-wide v1, p0, Lcom/amap/api/maps/offlinemap/c;->b:J
 
-    invoke-direct {v0, p2, v2, v3}, Lcom/amap/api/maps/offlinemap/b;-><init>(Ljava/lang/String;J)V
+    invoke-direct {v0, p2, v1, v2}, Lcom/amap/api/maps/offlinemap/b;-><init>(Ljava/lang/String;J)V
 
     iput-object v0, p0, Lcom/amap/api/maps/offlinemap/c;->g:Lcom/amap/api/maps/offlinemap/b;
 
@@ -277,9 +277,9 @@
 
     move-result-object v0
 
-    iget-wide v2, p0, Lcom/amap/api/maps/offlinemap/c;->b:J
+    iget-wide v1, p0, Lcom/amap/api/maps/offlinemap/c;->b:J
 
-    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -350,9 +350,9 @@
 
     int-to-long v4, v1
 
-    add-long/2addr v2, v4
+    add-long v1, v2, v4
 
-    iput-wide v2, p0, Lcom/amap/api/maps/offlinemap/c;->b:J
+    iput-wide v1, p0, Lcom/amap/api/maps/offlinemap/c;->b:J
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
     .catchall {:try_start_4 .. :try_end_4} :catchall_0

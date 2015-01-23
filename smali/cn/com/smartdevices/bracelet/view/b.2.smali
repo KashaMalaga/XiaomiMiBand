@@ -22,6 +22,26 @@
     return-object v0
 
     :cond_0
+    const/4 v0, 0x3
+
+    invoke-static {p0, p1, p2, v0}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;III)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method public static a(Landroid/content/Context;III)Landroid/widget/Toast;
+    .locals 1
+
+    if-nez p0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -30,7 +50,7 @@
 
     move-result-object v0
 
-    invoke-static {p0, v0, p2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
+    invoke-static {p0, v0, p2, p3}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;Ljava/lang/String;II)Landroid/widget/Toast;
 
     move-result-object v0
 
@@ -38,6 +58,18 @@
 .end method
 
 .method public static a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
+    .locals 1
+
+    const/4 v0, 0x3
+
+    invoke-static {p0, p1, p2, v0}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;Ljava/lang/String;II)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static a(Landroid/content/Context;Ljava/lang/String;II)Landroid/widget/Toast;
     .locals 4
 
     const/4 v0, 0x0
@@ -56,7 +88,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f030032
+    const v3, 0x7f030044
 
     invoke-virtual {v1, v3, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -74,7 +106,11 @@
 
     invoke-virtual {v1, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    invoke-virtual {v1, p3}, Landroid/widget/TextView;->setGravity(I)V
+
     invoke-virtual {v2, v0}, Lcn/com/smartdevices/bracelet/view/b;->setView(Landroid/view/View;)V
+
+    invoke-virtual {v2, p2}, Lcn/com/smartdevices/bracelet/view/b;->setDuration(I)V
 
     move-object v0, v2
 

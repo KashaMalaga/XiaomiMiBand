@@ -24,7 +24,7 @@
 .method protected a(Landroid/graphics/Canvas;Landroid/graphics/RectF;F)V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/f;->n:Lcn/com/smartdevices/bracelet/chart/base/r;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/f;->o:Lcn/com/smartdevices/bracelet/chart/base/r;
 
     iget-object v0, v0, Lcn/com/smartdevices/bracelet/chart/base/r;->c:Landroid/graphics/Paint;
 

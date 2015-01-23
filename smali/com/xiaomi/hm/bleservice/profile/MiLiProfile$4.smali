@@ -56,7 +56,7 @@
 
     const-string v1, "sensor data notify packages index is -1 !!!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -77,7 +77,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -135,7 +135,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, p1, v0}, Lcn/com/smartdevices/bracelet/lab/b/a;->a(Ljava/lang/String;[BLjava/lang/String;)V
+    invoke-static {v1, p1, v0}, Lcn/com/smartdevices/bracelet/lab/a/a;->a(Ljava/lang/String;[BLjava/lang/String;)V
 
     goto :goto_0
 
@@ -158,9 +158,9 @@
 
     const-string v3, "sensor data notify packages index is not continuous!!!"
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/r;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/r;->a()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->a()Z
 
     move-result v2
 

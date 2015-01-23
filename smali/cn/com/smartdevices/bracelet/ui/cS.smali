@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/tencent/tauth/IUiListener;
+.implements Lcn/com/smartdevices/bracelet/chart/c/o;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/ShareActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/SettingActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/ShareActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/SettingActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cS;->a:Lcn/com/smartdevices/bracelet/ui/ShareActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cS;->a:Lcn/com/smartdevices/bracelet/ui/SettingActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,20 +22,12 @@
 
 
 # virtual methods
-.method public onCancel()V
-    .locals 0
+.method public a(I)V
+    .locals 1
 
-    return-void
-.end method
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cS;->a:Lcn/com/smartdevices/bracelet/ui/SettingActivity;
 
-.method public onComplete(Ljava/lang/Object;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public onError(Lcom/tencent/tauth/UiError;)V
-    .locals 0
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->applyStatusBarTint(I)V
 
     return-void
 .end method

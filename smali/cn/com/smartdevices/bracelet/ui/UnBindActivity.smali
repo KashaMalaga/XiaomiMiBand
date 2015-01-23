@@ -15,39 +15,39 @@
 .end method
 
 .method private a()V
-    .locals 6
+    .locals 5
 
-    const-wide/16 v4, -0x1
+    const-wide/16 v3, -0x1
 
     const/4 v2, 0x0
 
-    const v0, 0x7f0c014e
+    const v0, 0x7f070153
 
-    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/app/Activity;I)V
+    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/B;->a(Landroid/app/Activity;I)V
 
     const-string v0, "switch"
 
     const-string v1, "unbind device now!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b/a;->d()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->e()V
 
-    invoke-static {v4, v5}, Lcn/com/smartdevices/bracelet/u;->a(J)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->a(J)V
 
-    invoke-static {v4, v5}, Lcn/com/smartdevices/bracelet/u;->b(J)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->b(J)V
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/u;->c(I)V
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/x;->c(I)V
 
-    invoke-static {p0, v2}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;I)V
+    invoke-static {p0, v2}, Lcn/com/smartdevices/bracelet/B;->b(Landroid/content/Context;I)V
 
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/dq;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/eh;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/dq;-><init>(Lcn/com/smartdevices/bracelet/ui/UnBindActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/eh;-><init>(Lcn/com/smartdevices/bracelet/ui/UnBindActivity;)V
 
     const-wide/16 v2, 0xbb8
 
@@ -78,7 +78,7 @@
 
     const-string v1, "Confirmed"
 
-    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -90,7 +90,7 @@
     nop
 
     :pswitch_data_0
-    .packed-switch 0x7f0b011f
+    .packed-switch 0x7f080190
         :pswitch_1
         :pswitch_0
         :pswitch_2
@@ -102,11 +102,11 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f03004d
+    const v0, 0x7f030068
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnBindActivity;->setContentView(I)V
 
-    const v0, 0x7f0b011f
+    const v0, 0x7f080190
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnBindActivity;->findViewById(I)Landroid/view/View;
 
@@ -114,7 +114,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0b0121
+    const v0, 0x7f080192
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnBindActivity;->findViewById(I)Landroid/view/View;
 
@@ -122,13 +122,13 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->c(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/B;->m(Landroid/content/Context;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    const v0, 0x7f0b0170
+    const v0, 0x7f0801f5
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnBindActivity;->findViewById(I)Landroid/view/View;
 
@@ -151,7 +151,7 @@
 
     const-string v1, "Canceled"
 
-    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onHomeBackPressed()V
 
@@ -165,9 +165,9 @@
 
     const-string v0, "PageBraceletUnbind"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/A;->a(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/A;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -179,9 +179,9 @@
 
     const-string v0, "PageBraceletUnbind"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/A;->c(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;)V
 
     return-void
 .end method

@@ -10,7 +10,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    invoke-static {}, Lcom/xiaomi/g/a/a;->values()[Lcom/xiaomi/g/a/a;
+    invoke-static {}, Lcom/xiaomi/h/a/a;->values()[Lcom/xiaomi/h/a/a;
 
     move-result-object v0
 
@@ -23,9 +23,9 @@
     :try_start_0
     sget-object v0, Lcom/xiaomi/mipush/sdk/t;->a:[I
 
-    sget-object v1, Lcom/xiaomi/g/a/a;->a:Lcom/xiaomi/g/a/a;
+    sget-object v1, Lcom/xiaomi/h/a/a;->a:Lcom/xiaomi/h/a/a;
 
-    invoke-virtual {v1}, Lcom/xiaomi/g/a/a;->ordinal()I
+    invoke-virtual {v1}, Lcom/xiaomi/h/a/a;->ordinal()I
 
     move-result v1
 
@@ -39,9 +39,9 @@
     :try_start_1
     sget-object v0, Lcom/xiaomi/mipush/sdk/t;->a:[I
 
-    sget-object v1, Lcom/xiaomi/g/a/a;->b:Lcom/xiaomi/g/a/a;
+    sget-object v1, Lcom/xiaomi/h/a/a;->b:Lcom/xiaomi/h/a/a;
 
-    invoke-virtual {v1}, Lcom/xiaomi/g/a/a;->ordinal()I
+    invoke-virtual {v1}, Lcom/xiaomi/h/a/a;->ordinal()I
 
     move-result v1
 
@@ -55,9 +55,9 @@
     :try_start_2
     sget-object v0, Lcom/xiaomi/mipush/sdk/t;->a:[I
 
-    sget-object v1, Lcom/xiaomi/g/a/a;->e:Lcom/xiaomi/g/a/a;
+    sget-object v1, Lcom/xiaomi/h/a/a;->e:Lcom/xiaomi/h/a/a;
 
-    invoke-virtual {v1}, Lcom/xiaomi/g/a/a;->ordinal()I
+    invoke-virtual {v1}, Lcom/xiaomi/h/a/a;->ordinal()I
 
     move-result v1
 
@@ -71,9 +71,9 @@
     :try_start_3
     sget-object v0, Lcom/xiaomi/mipush/sdk/t;->a:[I
 
-    sget-object v1, Lcom/xiaomi/g/a/a;->c:Lcom/xiaomi/g/a/a;
+    sget-object v1, Lcom/xiaomi/h/a/a;->c:Lcom/xiaomi/h/a/a;
 
-    invoke-virtual {v1}, Lcom/xiaomi/g/a/a;->ordinal()I
+    invoke-virtual {v1}, Lcom/xiaomi/h/a/a;->ordinal()I
 
     move-result v1
 
@@ -87,9 +87,9 @@
     :try_start_4
     sget-object v0, Lcom/xiaomi/mipush/sdk/t;->a:[I
 
-    sget-object v1, Lcom/xiaomi/g/a/a;->d:Lcom/xiaomi/g/a/a;
+    sget-object v1, Lcom/xiaomi/h/a/a;->d:Lcom/xiaomi/h/a/a;
 
-    invoke-virtual {v1}, Lcom/xiaomi/g/a/a;->ordinal()I
+    invoke-virtual {v1}, Lcom/xiaomi/h/a/a;->ordinal()I
 
     move-result v1
 
@@ -103,9 +103,9 @@
     :try_start_5
     sget-object v0, Lcom/xiaomi/mipush/sdk/t;->a:[I
 
-    sget-object v1, Lcom/xiaomi/g/a/a;->j:Lcom/xiaomi/g/a/a;
+    sget-object v1, Lcom/xiaomi/h/a/a;->j:Lcom/xiaomi/h/a/a;
 
-    invoke-virtual {v1}, Lcom/xiaomi/g/a/a;->ordinal()I
+    invoke-virtual {v1}, Lcom/xiaomi/h/a/a;->ordinal()I
 
     move-result v1
 
@@ -119,9 +119,9 @@
     :try_start_6
     sget-object v0, Lcom/xiaomi/mipush/sdk/t;->a:[I
 
-    sget-object v1, Lcom/xiaomi/g/a/a;->i:Lcom/xiaomi/g/a/a;
+    sget-object v1, Lcom/xiaomi/h/a/a;->i:Lcom/xiaomi/h/a/a;
 
-    invoke-virtual {v1}, Lcom/xiaomi/g/a/a;->ordinal()I
+    invoke-virtual {v1}, Lcom/xiaomi/h/a/a;->ordinal()I
 
     move-result v1
 

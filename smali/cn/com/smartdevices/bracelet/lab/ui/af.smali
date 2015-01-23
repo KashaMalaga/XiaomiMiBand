@@ -31,7 +31,7 @@
 
 .field private j:Lcn/com/smartdevices/bracelet/lab/ui/V;
 
-.field private k:Lcn/com/smartdevices/bracelet/lab/a;
+.field private k:Lcn/com/smartdevices/bracelet/lab/b;
 
 .field private l:Landroid/content/Context;
 
@@ -58,7 +58,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/af;->j:Lcn/com/smartdevices/bracelet/lab/ui/V;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/af;->k:Lcn/com/smartdevices/bracelet/lab/a;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/af;->k:Lcn/com/smartdevices/bracelet/lab/b;
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/af;->l:Landroid/content/Context;
 
@@ -86,17 +86,17 @@
 
     iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/af;->j:Lcn/com/smartdevices/bracelet/lab/ui/V;
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/af;->k:Lcn/com/smartdevices/bracelet/lab/a;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/af;->k:Lcn/com/smartdevices/bracelet/lab/b;
 
     iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/af;->l:Landroid/content/Context;
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/af;->l:Landroid/content/Context;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/lab/a;
+    new-instance v0, Lcn/com/smartdevices/bracelet/lab/b;
 
-    invoke-direct {v0, p1}, Lcn/com/smartdevices/bracelet/lab/a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p1}, Lcn/com/smartdevices/bracelet/lab/b;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/af;->k:Lcn/com/smartdevices/bracelet/lab/a;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/af;->k:Lcn/com/smartdevices/bracelet/lab/b;
 
     new-instance v0, Lcn/com/smartdevices/bracelet/lab/ui/ah;
 
@@ -171,13 +171,13 @@
     throw v0
 
     :cond_0
-    new-instance v1, Lcn/com/smartdevices/bracelet/lab/a;
+    new-instance v1, Lcn/com/smartdevices/bracelet/lab/b;
 
-    invoke-direct {v1, p1}, Lcn/com/smartdevices/bracelet/lab/a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, p1}, Lcn/com/smartdevices/bracelet/lab/b;-><init>(Landroid/content/Context;)V
 
     if-nez p2, :cond_4
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/lab/a;->b()Landroid/net/Uri;
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/lab/b;->b()Landroid/net/Uri;
 
     move-result-object v1
 
@@ -226,7 +226,7 @@
 
     if-ne v2, p2, :cond_5
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/lab/a;->a()Landroid/net/Uri;
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/lab/b;->a()Landroid/net/Uri;
 
     move-result-object v1
 
@@ -243,7 +243,7 @@
     :cond_5
     if-ne v4, p2, :cond_6
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/lab/a;->c()Landroid/net/Uri;
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/lab/b;->c()Landroid/net/Uri;
 
     move-result-object v1
 
@@ -368,7 +368,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz v1, :cond_3
 
@@ -472,7 +472,7 @@
 
     new-array v0, v0, [B
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/c/b;->a([B)Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/b/b;->a([B)Ljava/lang/String;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
@@ -505,7 +505,7 @@
 
     move-result-object v0
 
-    invoke-static {v5, v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
@@ -527,7 +527,7 @@
 
     :cond_1
     :try_start_3
-    invoke-static {v4}, Lcn/com/smartdevices/bracelet/lab/c/b;->b(Ljava/io/File;)Ljava/lang/String;
+    invoke-static {v4}, Lcn/com/smartdevices/bracelet/lab/b/b;->b(Ljava/io/File;)Ljava/lang/String;
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
 
@@ -549,7 +549,7 @@
 
     move-result-object v2
 
-    invoke-static {v3, v2}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_4
 
@@ -724,27 +724,27 @@
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/ui/V;->stop()V
 
     :cond_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/af;->k:Lcn/com/smartdevices/bracelet/lab/a;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/af;->k:Lcn/com/smartdevices/bracelet/lab/b;
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/af;->k:Lcn/com/smartdevices/bracelet/lab/a;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/af;->k:Lcn/com/smartdevices/bracelet/lab/b;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/af;->e:Landroid/net/Uri;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lab/a;->a(Landroid/net/Uri;)Z
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lab/b;->a(Landroid/net/Uri;)Z
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/af;->k:Lcn/com/smartdevices/bracelet/lab/a;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/af;->k:Lcn/com/smartdevices/bracelet/lab/b;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/af;->g:Landroid/net/Uri;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lab/a;->b(Landroid/net/Uri;)Z
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lab/b;->b(Landroid/net/Uri;)Z
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/af;->k:Lcn/com/smartdevices/bracelet/lab/a;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/af;->k:Lcn/com/smartdevices/bracelet/lab/b;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/af;->f:Landroid/net/Uri;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lab/a;->c(Landroid/net/Uri;)Z
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lab/b;->c(Landroid/net/Uri;)Z
 
     :cond_3
     return-void

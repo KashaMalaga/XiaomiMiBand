@@ -89,7 +89,7 @@
 .end method
 
 .method public a(DI)V
-    .locals 1
+    .locals 0
 
     iput-wide p1, p0, Lorg/achartengine/c/e;->i:D
 
@@ -147,7 +147,7 @@
 .end method
 
 .method public b(DI)V
-    .locals 1
+    .locals 0
 
     iput-wide p1, p0, Lorg/achartengine/c/e;->k:D
 

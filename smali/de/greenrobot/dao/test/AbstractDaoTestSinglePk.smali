@@ -578,7 +578,7 @@
 .end method
 
 .method public testDeleteByKeyInTx()V
-    .locals 6
+    .locals 5
 
     const/4 v1, 0x0
 
@@ -680,15 +680,15 @@
 
     sub-int/2addr v1, v2
 
-    int-to-long v2, v1
+    int-to-long v1, v1
 
-    iget-object v1, p0, Lde/greenrobot/dao/test/AbstractDaoTestSinglePk;->dao:Lde/greenrobot/dao/AbstractDao;
+    iget-object v3, p0, Lde/greenrobot/dao/test/AbstractDaoTestSinglePk;->dao:Lde/greenrobot/dao/AbstractDao;
 
-    invoke-virtual {v1}, Lde/greenrobot/dao/AbstractDao;->count()J
+    invoke-virtual {v3}, Lde/greenrobot/dao/AbstractDao;->count()J
 
-    move-result-wide v4
+    move-result-wide v3
 
-    invoke-static {v2, v3, v4, v5}, Lde/greenrobot/dao/test/AbstractDaoTestSinglePk;->assertEquals(JJ)V
+    invoke-static {v1, v2, v3, v4}, Lde/greenrobot/dao/test/AbstractDaoTestSinglePk;->assertEquals(JJ)V
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -722,7 +722,7 @@
 .end method
 
 .method public testDeleteInTx()V
-    .locals 6
+    .locals 5
 
     const/4 v1, 0x0
 
@@ -800,15 +800,15 @@
 
     sub-int/2addr v1, v2
 
-    int-to-long v2, v1
+    int-to-long v1, v1
 
-    iget-object v1, p0, Lde/greenrobot/dao/test/AbstractDaoTestSinglePk;->dao:Lde/greenrobot/dao/AbstractDao;
+    iget-object v3, p0, Lde/greenrobot/dao/test/AbstractDaoTestSinglePk;->dao:Lde/greenrobot/dao/AbstractDao;
 
-    invoke-virtual {v1}, Lde/greenrobot/dao/AbstractDao;->count()J
+    invoke-virtual {v3}, Lde/greenrobot/dao/AbstractDao;->count()J
 
-    move-result-wide v4
+    move-result-wide v3
 
-    invoke-static {v2, v3, v4, v5}, Lde/greenrobot/dao/test/AbstractDaoTestSinglePk;->assertEquals(JJ)V
+    invoke-static {v1, v2, v3, v4}, Lde/greenrobot/dao/test/AbstractDaoTestSinglePk;->assertEquals(JJ)V
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1021,27 +1021,27 @@
 
     invoke-virtual {v1, v0}, Lde/greenrobot/dao/AbstractDao;->insert(Ljava/lang/Object;)J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    iget-object v1, p0, Lde/greenrobot/dao/test/AbstractDaoTestSinglePk;->dao:Lde/greenrobot/dao/AbstractDao;
+    iget-object v3, p0, Lde/greenrobot/dao/test/AbstractDaoTestSinglePk;->dao:Lde/greenrobot/dao/AbstractDao;
 
-    invoke-virtual {v1, v0}, Lde/greenrobot/dao/AbstractDao;->insertOrReplace(Ljava/lang/Object;)J
+    invoke-virtual {v3, v0}, Lde/greenrobot/dao/AbstractDao;->insertOrReplace(Ljava/lang/Object;)J
 
-    move-result-wide v0
+    move-result-wide v3
 
-    iget-object v4, p0, Lde/greenrobot/dao/test/AbstractDaoTestSinglePk;->dao:Lde/greenrobot/dao/AbstractDao;
+    iget-object v0, p0, Lde/greenrobot/dao/test/AbstractDaoTestSinglePk;->dao:Lde/greenrobot/dao/AbstractDao;
 
-    invoke-virtual {v4}, Lde/greenrobot/dao/AbstractDao;->getPkProperty()Lde/greenrobot/dao/Property;
+    invoke-virtual {v0}, Lde/greenrobot/dao/AbstractDao;->getPkProperty()Lde/greenrobot/dao/Property;
 
-    move-result-object v4
+    move-result-object v0
 
-    iget-object v4, v4, Lde/greenrobot/dao/Property;->type:Ljava/lang/Class;
+    iget-object v0, v0, Lde/greenrobot/dao/Property;->type:Ljava/lang/Class;
 
     const-class v5, Ljava/lang/Long;
 
-    if-ne v4, v5, :cond_0
+    if-ne v0, v5, :cond_0
 
-    invoke-static {v2, v3, v0, v1}, Lde/greenrobot/dao/test/AbstractDaoTestSinglePk;->assertEquals(JJ)V
+    invoke-static {v1, v2, v3, v4}, Lde/greenrobot/dao/test/AbstractDaoTestSinglePk;->assertEquals(JJ)V
 
     :cond_0
     return-void

@@ -373,8 +373,6 @@ Tertidur pada %5$s | Bangun pada %6$s"</string>
     <string name="unlock_screen_set_use_bracelet_tips">Konfirmasi pola buka kunci</string>
     <string name="unlock_screen_set_use_bracelet">Buka kunci perangkat dgn gelang</string>
     <string name="unlock_screen_set_success">Anda dpt buka perangkat ini dgn gelang.</string>
-    <string name="unlock_screen_modify_unlock">"Matikan fitur ini kapan saja di
-Setelan > Keamanan."</string>
     <string name="bind_weixin_title">Tambah Akun WeChat</string>
     <string name="bind_qq_health_title">Tambah Akun QQ</string>
     <string name="step1">Langkah 1) </string>
@@ -416,7 +414,6 @@ Bagus sekali!"</string>
     <string name="continue_reach_goal"> target</string>
     <string name="continue_tips_format">Beruntun terpanjang: %1$s hari</string>
     <string name="gram">g</string>
-    <string name="kilogram">kg</string>
     <string name="sync_to_server">Menyinkron…</string>
     <string name="unlock_screen_miui_version_low">Anda perlu perbarui ke versi terbaru MIUI.</string>
     <string name="share_uninstall_client">Apl ini belum diinstal.</string>
@@ -440,7 +437,6 @@ Bagus sekali!"</string>
     <string name="dynamic_pull_syncing_progress">Menyinkron (%s%%)</string>
     <string name="dynamic_pull_release_to_sync">Lepas untuk sinkron</string>
     <string name="dynamic_pull_pull_to_sync">Tarik untuk sinkron</string>
-    <string name="dynamic_pull_update_report">Diperbarui %s item</string>
     <string name="dynamic_pull_sync_error">Tidak dapat sinkron</string>
     <string name="bind_weixin_qrcode_name">Kode QR</string>
     <string name="mili_exit_login_info_unbind">Jika keluar, akan dilepas pemasangan gelang dengan perangkat ini. </string>
@@ -526,6 +522,16 @@ Tertidur pada %3$s | Bangun pada %4$s"</string>
     <string name="battery">baterai</string>
     <string name="signal_strength">Kekuatan sinyal: </string>
     <string name="confirm_lazy_day">Tandai hari ini sebagai hari malas?</string>
+    <string name="share_weibo_label">Weibo</string>
+    <string name="share_pengyouquan_label">Moments</string>
+    <string name="share_weixin_label">WeChat</string>
+    <string name="share_qq_label">QQ</string>
+    <string name="share_qq_zone_label">QZone</string>
+    <string name="share_miliao_label">Mi Talk</string>
+    <string name="share_line_label">Line</string>
+    <string name="share_facebook_label">Facebook</string>
+    <string name="health_link">HealthLink</string>
+    <string name="title_health_link_service">Health Care Service</string>
     <string name="lab_factory_title">Aktivitas</string>
     <string name="lab_factory_sport_type_situp">Sit up</string>
     <string name="lab_factory_sport_type_ropeskipping">Lompat tali</string>
@@ -636,13 +642,36 @@ Tertidur pada %3$s | Bangun pada %4$s"</string>
     <string name="sport_running_history_date" formatted="false">%d/%d/%d</string>
     <string name="sport_running_history_no_data">Tak ada data</string>
     <string name="sport_ranking_desc_poor">Anda selesai terakhir (%s).</string>
-    <string name="sport_ranking_desc_normal" formatted="false">Anda mengalahkan <b>%s%</b> penguna yang %s.</string>
+    <string name="sport_ranking_desc_normal" formatted="false">Anda mengalahkan &lt;b>%s&lt;/b> penguna yang %s.</string>
     <string name="sport_ranking_desc_great">Bagus sekali!</string>
     <string name="sport_new_record_ropeskipping">Rekor baru</string>
     <string name="percent_mark">%</string>
     <string name="share_step_ranking">Anda mengalahkan <b>%s</b> pengguna.</string>
+    <string name="action_mark">Behavior Tagging</string>
+    <string name="action_sleep">Sleep</string>
+    <string name="action_bath">Bath</string>
+    <string name="action_run">Run</string>
+    <string name="action_bike">Bike</string>
+    <string name="action_walk">Walk</string>
+    <string name="action_badminton">Badminton</string>
+    <string name="action_basketball">Basketball</string>
+    <string name="action_pingpong">Pingpong</string>
+    <string name="complete">Complete</string>
+    <string name="notice_for_tag_time">Notice: the number after X means that the number of times you marked</string>
+    <string name="choose_tag_item">Which item are you going to do?</string>
+    <string name="confirm_complete_tag">Are you sure to complete this tag task?</string>
+    <string name="tag_data_collecting">Data collecting, please waiting...</string>
+    <string name="toast_behavior_tag_failed">Behavior data collect failed!</string>
+    <string name="toast_enable_behavior_tag">Behavior tag feature enable！</string>
+    <string name="toast_disable_behavior_tag">Behavior tag feature disable！</string>
+    <string name="action_brush_tooth">Brush Tooth</string>
     <string name="sport_running_helper_test">Uji lari</string>
     <string name="sport_coming_soon">Segera hadir</string>
     <string name="age">Umur</string>
     <string name="ages">tahun</string>
+    <string name="unlock_screen_modify_unlock">"Matikan fitur ini kapan saja di
+Setelan > Keamanan."</string>
+    <string name="runner_unlogin_notice">You are not logged in, your sport data will not be sync to the cloud, so it maybe loose by some unknow causes. Do you want to login for better experience about this feature ?</string>
+    <string name="title_action_tag_agreement">Behavior Tagging Agreement</string>
+    <string name="action_type_error">Behavior type error</string>
 </resources>

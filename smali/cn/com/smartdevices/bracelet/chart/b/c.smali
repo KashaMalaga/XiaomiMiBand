@@ -65,7 +65,7 @@
 
     move-result v1
 
-    iput v1, v0, Lcn/com/smartdevices/bracelet/chart/b/e;->e:I
+    iput v1, v0, Lcn/com/smartdevices/bracelet/chart/b/e;->f:I
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/b/c;->a:Lcn/com/smartdevices/bracelet/chart/b/a;
 

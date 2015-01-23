@@ -47,8 +47,6 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 4
 
-    const/4 v3, 0x4
-
     const/4 v2, 0x1
 
     :try_start_0
@@ -67,7 +65,7 @@
     :goto_0
     instance-of v0, p2, Lcn/com/smartdevices/bracelet/gps/services/a/d;
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/c;->a:Lcn/com/smartdevices/bracelet/gps/b/a;
 
@@ -146,11 +144,19 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/c;->a:Lcn/com/smartdevices/bracelet/gps/b/a;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/gps/b/a;->a:Lcn/com/smartdevices/bracelet/gps/services/a/d;
-
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/c;->a:Lcn/com/smartdevices/bracelet/gps/b/a;
 
-    invoke-interface {v0, v1, v3}, Lcn/com/smartdevices/bracelet/gps/services/a/d;->d(Lcn/com/smartdevices/bracelet/gps/services/a/b;I)V
+    iget-object v1, v1, Lcn/com/smartdevices/bracelet/gps/b/a;->a:Lcn/com/smartdevices/bracelet/gps/services/a/d;
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/b/c;->a:Lcn/com/smartdevices/bracelet/gps/b/a;
+
+    const/4 v3, 0x4
+
+    invoke-interface {v1, v2, v3}, Lcn/com/smartdevices/bracelet/gps/services/a/d;->d(Lcn/com/smartdevices/bracelet/gps/services/a/b;I)J
+
+    move-result-wide v1
+
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/gps/b/a;->a(Lcn/com/smartdevices/bracelet/gps/b/a;J)J
 
     :cond_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/c;->a:Lcn/com/smartdevices/bracelet/gps/b/a;
@@ -172,23 +178,6 @@
     invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/gps/b/e;->a(Lcn/com/smartdevices/bracelet/gps/b/f;)V
 
     :cond_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/c;->a:Lcn/com/smartdevices/bracelet/gps/b/a;
-
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/gps/b/a;->a:Lcn/com/smartdevices/bracelet/gps/services/a/d;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/b/c;->a:Lcn/com/smartdevices/bracelet/gps/b/a;
-
-    invoke-interface {v0, v1, v3}, Lcn/com/smartdevices/bracelet/gps/services/a/d;->a(Lcn/com/smartdevices/bracelet/gps/services/a/b;I)I
-
-    move-result v0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/model/d;->a(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    :cond_3
     return-void
 
     :catch_0
@@ -200,9 +189,9 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto/16 :goto_0
+    goto :goto_0
 .end method
 
 .method public onServiceDisconnected(Landroid/content/ComponentName;)V

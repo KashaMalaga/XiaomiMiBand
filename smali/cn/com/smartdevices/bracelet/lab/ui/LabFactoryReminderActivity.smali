@@ -51,34 +51,10 @@
     return-object v0
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
-
-    return-void
-.end method
-
 .method static synthetic a(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;Z)V
     .locals 0
 
     invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->a(Z)V
-
-    return-void
-.end method
-
-.method private a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
-    .locals 2
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->b()Lcn/com/smartdevices/bracelet/model/LoginData;
-
-    move-result-object v0
-
-    new-instance v1, Lcn/com/smartdevices/bracelet/lab/ui/i;
-
-    invoke-direct {v1, p0, p1}, Lcn/com/smartdevices/bracelet/lab/ui/i;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
-
-    invoke-static {v0, p1, v1}, Lcn/com/smartdevices/bracelet/g/e;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Lcn/com/smartdevices/bracelet/model/PersonInfo;Lcom/c/a/a/h;)V
 
     return-void
 .end method
@@ -88,9 +64,9 @@
 
     new-instance v1, Lcn/com/smartdevices/bracelet/a/d;
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/lab/ui/h;
+    new-instance v2, Lcn/com/smartdevices/bracelet/lab/ui/l;
 
-    invoke-direct {v2, p0, p1}, Lcn/com/smartdevices/bracelet/lab/ui/h;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;Z)V
+    invoke-direct {v2, p0, p1}, Lcn/com/smartdevices/bracelet/lab/ui/l;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;Z)V
 
     if-eqz p1, :cond_0
 
@@ -158,29 +134,29 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030011
+    const v0, 0x7f030015
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->setContentView(I)V
 
-    const v0, 0x7f0b004d
+    const v0, 0x7f08006b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/lab/ui/e;
+    new-instance v2, Lcn/com/smartdevices/bracelet/lab/ui/i;
 
-    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/lab/ui/e;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;)V
+    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/lab/ui/i;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;)V
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->h()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->i()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v0
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->b:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-    const v0, 0x7f0b004e
+    const v0, 0x7f08006c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->findViewById(I)Landroid/view/View;
 
@@ -192,13 +168,13 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->c:Landroid/widget/LinearLayout;
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/lab/ui/f;
+    new-instance v2, Lcn/com/smartdevices/bracelet/lab/ui/j;
 
-    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/lab/ui/f;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;)V
+    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/lab/ui/j;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;)V
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0b004f
+    const v0, 0x7f08006d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->findViewById(I)Landroid/view/View;
 
@@ -234,7 +210,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->d:Landroid/widget/Switch;
 
@@ -253,13 +229,13 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->d:Landroid/widget/Switch;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/lab/ui/g;
+    new-instance v1, Lcn/com/smartdevices/bracelet/lab/ui/k;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/lab/ui/g;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/lab/ui/k;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    const v0, 0x7f0b0050
+    const v0, 0x7f08006e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryReminderActivity;->findViewById(I)Landroid/view/View;
 

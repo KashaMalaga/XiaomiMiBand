@@ -1,46 +1,46 @@
-.class public Lcn/com/smartdevices/bracelet/g;
+.class Lcn/com/smartdevices/bracelet/g;
 .super Ljava/lang/Object;
 
 
-# static fields
-.field public static final a:Z = false
+# instance fields
+.field a:Landroid/bluetooth/BluetoothDevice;
 
-.field public static final b:Z = true
+.field b:I
 
-.field public static final c:Z = true
+.field c:[B
 
-.field public static final d:Z = false
+.field d:Ljava/util/UUID;
 
-.field public static final e:Z = true
-
-.field public static final f:Z = false
-
-.field public static final g:Z = true
-
-.field public static final h:Z = true
-
-.field public static final i:Z = true
-
-.field public static final j:Z = true
-
-.field public static final k:Z = true
-
-.field public static final l:Z = false
-
-.field public static final m:Z = true
-
-.field public static final n:Z = false
-
-.field public static final o:Z = true
-
-.field public static final p:Z
+.field final synthetic e:Lcn/com/smartdevices/bracelet/d;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method public constructor <init>(Lcn/com/smartdevices/bracelet/d;Landroid/bluetooth/BluetoothDevice;I[BLjava/util/UUID;)V
+    .locals 2
+
+    const/4 v1, 0x0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/g;->e:Lcn/com/smartdevices/bracelet/d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/g;->a:Landroid/bluetooth/BluetoothDevice;
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcn/com/smartdevices/bracelet/g;->b:I
+
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/g;->c:[B
+
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/g;->d:Ljava/util/UUID;
+
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/g;->a:Landroid/bluetooth/BluetoothDevice;
+
+    iput p3, p0, Lcn/com/smartdevices/bracelet/g;->b:I
+
+    iput-object p4, p0, Lcn/com/smartdevices/bracelet/g;->c:[B
+
+    iput-object p5, p0, Lcn/com/smartdevices/bracelet/g;->d:Ljava/util/UUID;
 
     return-void
 .end method

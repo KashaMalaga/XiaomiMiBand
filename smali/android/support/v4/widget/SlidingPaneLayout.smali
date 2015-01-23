@@ -1309,7 +1309,7 @@
 .end method
 
 .method protected drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
-    .locals 7
+    .locals 6
 
     const/4 v1, 0x0
 

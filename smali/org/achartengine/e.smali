@@ -113,7 +113,7 @@
 .end method
 
 .method private a(FI)V
-    .locals 6
+    .locals 5
 
     const v0, 0x3f666666
 
@@ -127,19 +127,19 @@
 
     move-result v0
 
-    float-to-double v2, v0
+    float-to-double v1, v0
 
-    const-wide v4, 0x3feccccccccccccdL
+    const-wide v3, 0x3feccccccccccccdL
 
-    cmpl-double v1, v2, v4
+    cmpl-double v1, v1, v3
 
     if-lez v1, :cond_0
 
-    float-to-double v2, v0
+    float-to-double v1, v0
 
-    const-wide v4, 0x3ff199999999999aL
+    const-wide v3, 0x3ff199999999999aL
 
-    cmpg-double v1, v2, v4
+    cmpg-double v1, v1, v3
 
     if-gez v1, :cond_0
 

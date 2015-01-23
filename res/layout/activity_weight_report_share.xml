@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/share_content_ll" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/share_pic_iv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/btm_layout" android:background="#ffececec" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="63.0dip" android:baselineAligned="false" android:layout_alignParentBottom="true">
+        <ImageButton android:id="@id/share_to_weixin_btn" android:background="@color/trans" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/share_weixin_select" android:layout_weight="1.0" />
+        <ImageButton android:id="@id/share_to_pengyouquan_btn" android:background="@color/trans" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/share_pengyouquan_select" android:layout_weight="1.0" />
+        <ImageButton android:id="@id/share_to_miliao_btn" android:background="@color/trans" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/share_miliao" android:layout_weight="1.0" />
+        <ImageButton android:id="@id/share_to_weibo_btn" android:background="@color/trans" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/share_weibo_select" android:layout_weight="1.0" />
+        <ImageButton android:id="@id/share_to_qq_zone_btn" android:background="@color/trans" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/share_qq_zone_select" android:layout_weight="1.0" />
+        <ImageButton android:id="@id/share_to_qq_btn" android:background="@color/trans" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/share_qq_select" android:layout_weight="1.0" />
+        <ImageButton android:id="@id/share_to_line_btn" android:background="@color/trans" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/share_line" android:layout_weight="1.0" />
+        <ImageButton android:id="@id/share_to_facebook_btn" android:background="@color/trans" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/share_facebook" android:layout_weight="1.0" />
+    </LinearLayout>
+</RelativeLayout>

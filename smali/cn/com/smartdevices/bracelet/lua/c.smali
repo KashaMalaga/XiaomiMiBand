@@ -6,14 +6,18 @@
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;
+.field final synthetic a:Lde/greenrobot/daobracelet/LuaList;
+
+.field final synthetic b:Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;Lde/greenrobot/daobracelet/LuaList;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lua/c;->a:Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lua/c;->b:Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;
+
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/lua/c;->a:Lde/greenrobot/daobracelet/LuaList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,7 +29,7 @@
 .method public onClick(Landroid/view/View;)V
     .locals 4
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/c;->a:Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/c;->b:Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;
 
     # getter for: Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->mContext:Landroid/content/Context;
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->access$000(Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;)Landroid/content/Context;
@@ -36,7 +40,7 @@
 
     const-string v2, "DynamicListItemClick"
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -72,13 +76,85 @@
 
     :cond_1
     :try_start_0
+    const-string v2, "service"
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lua/c;->a:Lde/greenrobot/daobracelet/LuaList;
+
+    invoke-virtual {v3}, Lde/greenrobot/daobracelet/LuaList;->getRight()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lua/c;->a:Lde/greenrobot/daobracelet/LuaList;
+
+    invoke-virtual {v2}, Lde/greenrobot/daobracelet/LuaList;->getType()Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lua/c;->b:Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;
+
+    # getter for: Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->mServiceManager:Lcn/com/smartdevices/bracelet/partner/d;
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->access$100(Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;)Lcn/com/smartdevices/bracelet/partner/d;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v2}, Lcn/com/smartdevices/bracelet/partner/d;->a(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/partner/c;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/c;->b:Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;
+
+    # getter for: Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->mContext:Landroid/content/Context;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->access$000(Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;)Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/partner/c;)Landroid/content/Intent;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/c;->b:Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;
+
+    # getter for: Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->mContext:Landroid/content/Context;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->access$000(Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;)Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "chenee"
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_2
+    :try_start_1
     const-string v2, "http://"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_3
 
     const-string v0, "chenee"
 
@@ -106,34 +182,18 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    :catch_0
-    move-exception v0
-
-    const-string v1, "chenee"
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_2
-    :try_start_1
+    :cond_3
     const-string v2, "file://"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_4
 
     const-string v0, "chenee"
 
@@ -161,11 +221,11 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    :cond_3
+    :cond_4
     const-string v2, "GAME_20141001"
 
     invoke-virtual {v0}, Lde/greenrobot/daobracelet/LuaList;->getType()Ljava/lang/String;
@@ -176,29 +236,29 @@
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/c;->a:Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/c;->b:Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;
 
     # getter for: Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->mContext:Landroid/content/Context;
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->access$000(Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;)Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/y;->a(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/B;->j(Landroid/content/Context;)Z
 
     move-result v0
 
-    if-nez v0, :cond_4
+    if-nez v0, :cond_5
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/c;->a:Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/c;->b:Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;
 
     # getter for: Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->mContext:Landroid/content/Context;
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->access$000(Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;)Landroid/content/Context;
 
     move-result-object v0
 
-    const v1, 0x7f0c01c6
+    const v1, 0x7f0701cc
 
     const/4 v2, 0x1
 
@@ -210,8 +270,8 @@
 
     goto/16 :goto_0
 
-    :cond_4
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/c;->a:Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;
+    :cond_5
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lua/c;->b:Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;
 
     # getter for: Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->mContext:Landroid/content/Context;
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;->access$000(Lcn/com/smartdevices/bracelet/lua/LuaListAdapter;)Landroid/content/Context;

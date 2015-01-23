@@ -3,14 +3,15 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/d/a/a;)V
+.method public abstract a(Lcom/d/a/c;)Z
 .end method
 
-.method public abstract b(Lcom/d/a/a;)V
-.end method
-
-.method public abstract c(Lcom/d/a/a;)V
-.end method
-
-.method public abstract d(Lcom/d/a/a;)V
+.method public abstract a(Ljava/lang/Class;)Z
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class",
+            "<*>;)Z"
+        }
+    .end annotation
 .end method

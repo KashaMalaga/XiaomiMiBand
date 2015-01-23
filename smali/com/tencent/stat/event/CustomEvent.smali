@@ -70,9 +70,9 @@
 
     const-string v0, "du"
 
-    iget-wide v2, p0, Lcom/tencent/stat/event/CustomEvent;->duration:J
+    iget-wide v1, p0, Lcom/tencent/stat/event/CustomEvent;->duration:J
 
-    invoke-virtual {p1, v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-virtual {p1, v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
     :cond_0
     iget-object v0, p0, Lcom/tencent/stat/event/CustomEvent;->key:Lcom/tencent/stat/event/CustomEvent$Key;
@@ -145,7 +145,7 @@
 .end method
 
 .method public setDuration(J)V
-    .locals 1
+    .locals 0
 
     iput-wide p1, p0, Lcom/tencent/stat/event/CustomEvent;->duration:J
 

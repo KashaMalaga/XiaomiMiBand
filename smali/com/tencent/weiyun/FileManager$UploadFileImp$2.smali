@@ -20,7 +20,7 @@
 
 # virtual methods
 .method public run()V
-    .locals 8
+    .locals 7
 
     iget-object v0, p0, Lcom/tencent/weiyun/FileManager$UploadFileImp$2;->this$1:Lcom/tencent/weiyun/FileManager$UploadFileImp;
 
@@ -106,9 +106,9 @@
     # getter for: Lcom/tencent/weiyun/FileManager$UploadFileImp;->mFileSize:J
     invoke-static {v5}, Lcom/tencent/weiyun/FileManager$UploadFileImp;->access$800(Lcom/tencent/weiyun/FileManager$UploadFileImp;)J
 
-    move-result-wide v6
+    move-result-wide v5
 
-    invoke-virtual {v4, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v4
 

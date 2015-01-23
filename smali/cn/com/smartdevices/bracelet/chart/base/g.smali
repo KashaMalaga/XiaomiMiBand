@@ -20,9 +20,7 @@
 
 
 # instance fields
-.field protected i:Landroid/graphics/RectF;
-
-.field protected j:F
+.field protected j:Landroid/graphics/RectF;
 
 .field protected k:F
 
@@ -30,15 +28,17 @@
 
 .field protected m:F
 
-.field protected n:Lcn/com/smartdevices/bracelet/chart/base/r;
+.field protected n:F
 
-.field protected o:F
+.field protected o:Lcn/com/smartdevices/bracelet/chart/base/r;
 
 .field protected p:F
 
 .field protected q:F
 
-.field protected r:Ljava/util/List;
+.field protected r:F
+
+.field protected s:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List",
@@ -47,11 +47,11 @@
     .end annotation
 .end field
 
-.field protected s:Landroid/content/Context;
+.field protected t:Landroid/content/Context;
 
-.field protected t:Lcn/com/smartdevices/bracelet/chart/b/f;
+.field protected u:Lcn/com/smartdevices/bracelet/chart/b/f;
 
-.field protected u:Lcn/com/smartdevices/bracelet/chart/base/g;
+.field protected v:Lcn/com/smartdevices/bracelet/chart/base/g;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcn/com/smartdevices/bracelet/chart/base/g",
@@ -60,7 +60,7 @@
     .end annotation
 .end field
 
-.field protected v:Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;
+.field protected w:Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcn/com/smartdevices/bracelet/chart/base/BaseChartView",
@@ -82,19 +82,19 @@
 
     move-result v0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->o:F
+    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->p:F
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/chart/c/t;->b()F
 
     move-result v0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->p:F
+    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->q:F
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->r:Ljava/util/List;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->s:Ljava/util/List;
 
     return-void
 .end method
@@ -108,21 +108,21 @@
 
     move-result v0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->o:F
+    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->p:F
 
     invoke-static {p1}, Lcn/com/smartdevices/bracelet/chart/c/t;->b(Landroid/content/Context;)F
 
     move-result v0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->p:F
+    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->q:F
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->s:Landroid/content/Context;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->t:Landroid/content/Context;
 
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->r:Ljava/util/List;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->s:Ljava/util/List;
 
     return-void
 .end method
@@ -138,13 +138,13 @@
 .method public a(FFFF)V
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->j:F
+    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->k:F
 
-    iput p2, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->k:F
+    iput p2, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->l:F
 
-    iput p3, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->l:F
+    iput p3, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->m:F
 
-    iput p4, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->m:F
+    iput p4, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->n:F
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/chart/base/g;->e()V
 
@@ -164,7 +164,7 @@
 .method public a(Landroid/graphics/Canvas;F)V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->i:Landroid/graphics/RectF;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->j:Landroid/graphics/RectF;
 
     invoke-virtual {p0, p1, v0, p2}, Lcn/com/smartdevices/bracelet/chart/base/g;->a(Landroid/graphics/Canvas;Landroid/graphics/RectF;F)V
 
@@ -174,7 +174,7 @@
 .method protected a(Landroid/graphics/Canvas;FZ)V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->i:Landroid/graphics/RectF;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->j:Landroid/graphics/RectF;
 
     invoke-virtual {p0, p1, v0, p2, p3}, Lcn/com/smartdevices/bracelet/chart/base/g;->a(Landroid/graphics/Canvas;Landroid/graphics/RectF;FZ)V
 
@@ -199,9 +199,9 @@
 
     invoke-direct {v0, p1}, Landroid/graphics/RectF;-><init>(Landroid/graphics/Rect;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->i:Landroid/graphics/RectF;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->j:Landroid/graphics/RectF;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->i:Landroid/graphics/RectF;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->j:Landroid/graphics/RectF;
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/chart/base/g;->a(Landroid/graphics/RectF;)V
 
@@ -219,7 +219,7 @@
 .method public a(Lcn/com/smartdevices/bracelet/chart/b/f;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->t:Lcn/com/smartdevices/bracelet/chart/b/f;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->u:Lcn/com/smartdevices/bracelet/chart/b/f;
 
     return-void
 .end method
@@ -236,7 +236,7 @@
         }
     .end annotation
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->v:Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->w:Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;
 
     return-void
 .end method
@@ -251,7 +251,7 @@
         }
     .end annotation
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->u:Lcn/com/smartdevices/bracelet/chart/base/g;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->v:Lcn/com/smartdevices/bracelet/chart/base/g;
 
     return-void
 .end method
@@ -264,16 +264,16 @@
         }
     .end annotation
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->r:Ljava/util/List;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->s:Ljava/util/List;
 
     monitor-enter v1
 
     :try_start_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->r:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->s:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->r:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->s:Ljava/util/List;
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/chart/base/g;->a_(Ljava/util/List;)V
 
@@ -294,7 +294,7 @@
 .method public a(Lcn/com/smartdevices/bracelet/chart/base/r;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->n:Lcn/com/smartdevices/bracelet/chart/base/r;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->o:Lcn/com/smartdevices/bracelet/chart/base/r;
 
     return-void
 .end method
@@ -315,9 +315,9 @@
 .method public b(Landroid/graphics/RectF;)V
     .locals 1
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->i:Landroid/graphics/RectF;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->j:Landroid/graphics/RectF;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->i:Landroid/graphics/RectF;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->j:Landroid/graphics/RectF;
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/chart/base/g;->a(Landroid/graphics/RectF;)V
 
@@ -329,11 +329,11 @@
 .method public d(F)V
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->q:F
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->r:F
 
     add-float/2addr v0, p1
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->q:F
+    iput v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->r:F
 
     invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/chart/base/g;->a(F)V
 
@@ -351,58 +351,17 @@
 .method public e(F)V
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->q:F
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->r:F
 
     sub-float v0, p1, v0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->q:F
+    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->r:F
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/chart/base/g;->a(F)V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/chart/base/g;->e()V
 
     return-void
-.end method
-
-.method public e(Ljava/util/List;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<+TT;>;)V"
-        }
-    .end annotation
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->r:Ljava/util/List;
-
-    monitor-enter v1
-
-    :try_start_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->r:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->clear()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->r:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->r:Ljava/util/List;
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/chart/base/g;->a_(Ljava/util/List;)V
-
-    monitor-exit v1
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw v0
 .end method
 
 .method public f(Ljava/util/List;)V
@@ -415,16 +374,20 @@
         }
     .end annotation
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->r:Ljava/util/List;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->s:Ljava/util/List;
 
     monitor-enter v1
 
     :try_start_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->r:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->s:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->clear()V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->s:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->r:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->s:Ljava/util/List;
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/chart/base/g;->a_(Ljava/util/List;)V
 
@@ -442,34 +405,63 @@
     throw v0
 .end method
 
-.method public j()V
+.method public g(Ljava/util/List;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<+TT;>;)V"
+        }
+    .end annotation
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->s:Ljava/util/List;
+
+    monitor-enter v1
+
+    :try_start_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->s:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->s:Ljava/util/List;
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/chart/base/g;->a_(Ljava/util/List;)V
+
+    monitor-exit v1
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
+.end method
+
+.method public k()V
     .locals 0
 
     return-void
 .end method
 
-.method public k()Landroid/content/Context;
+.method public l()Landroid/content/Context;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->s:Landroid/content/Context;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->t:Landroid/content/Context;
 
     return-object v0
 .end method
 
-.method public l()Landroid/graphics/RectF;
+.method public m()Landroid/graphics/RectF;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->i:Landroid/graphics/RectF;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->j:Landroid/graphics/RectF;
 
     return-object v0
-.end method
-
-.method public m()F
-    .locals 1
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->j:F
-
-    return v0
 .end method
 
 .method public n()F
@@ -496,35 +488,43 @@
     return v0
 .end method
 
-.method public q()Lcn/com/smartdevices/bracelet/chart/base/r;
+.method public q()F
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->n:Lcn/com/smartdevices/bracelet/chart/base/r;
-
-    return-object v0
-.end method
-
-.method public r()F
-    .locals 1
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->q:F
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->n:F
 
     return v0
 .end method
 
-.method public s()V
+.method public r()Lcn/com/smartdevices/bracelet/chart/base/r;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->o:Lcn/com/smartdevices/bracelet/chart/base/r;
+
+    return-object v0
+.end method
+
+.method public s()F
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->r:F
+
+    return v0
+.end method
+
+.method public t()V
     .locals 2
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->r:Ljava/util/List;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->s:Ljava/util/List;
 
     monitor-enter v1
 
     :try_start_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->r:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->s:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->r:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->s:Ljava/util/List;
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/chart/base/g;->a_(Ljava/util/List;)V
 
@@ -542,7 +542,7 @@
     throw v0
 .end method
 
-.method public t()Ljava/util/List;
+.method public u()Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -552,12 +552,12 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->r:Ljava/util/List;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->s:Ljava/util/List;
 
     return-object v0
 .end method
 
-.method public u()Lcn/com/smartdevices/bracelet/chart/base/g;
+.method public v()Lcn/com/smartdevices/bracelet/chart/base/g;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -567,12 +567,12 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->u:Lcn/com/smartdevices/bracelet/chart/base/g;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->v:Lcn/com/smartdevices/bracelet/chart/base/g;
 
     return-object v0
 .end method
 
-.method public v()Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;
+.method public w()Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -584,7 +584,7 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->v:Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/g;->w:Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;
 
     return-object v0
 .end method

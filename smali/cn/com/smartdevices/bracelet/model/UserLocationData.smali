@@ -43,7 +43,7 @@
     invoke-direct {v1}, Lcn/com/smartdevices/bracelet/model/UserLocationData;-><init>()V
 
     :try_start_0
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->e(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/B;->f(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

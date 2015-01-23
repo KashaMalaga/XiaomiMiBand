@@ -564,7 +564,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/base/a;->t()Ljava/util/List;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/base/a;->u()Ljava/util/List;
 
     move-result-object v0
 
@@ -618,7 +618,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/base/a;->t()Ljava/util/List;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/base/a;->u()Ljava/util/List;
 
     move-result-object v0
 
@@ -647,7 +647,7 @@
     packed-switch v1, :pswitch_data_0
 
     :goto_1
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/chart/base/c;->l()Landroid/graphics/RectF;
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/chart/base/c;->m()Landroid/graphics/RectF;
 
     move-result-object v1
 
@@ -782,7 +782,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/base/a;->t()Ljava/util/List;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/base/a;->u()Ljava/util/List;
 
     move-result-object v0
 
@@ -808,7 +808,7 @@
 
     invoke-virtual {v2, v0}, Lcn/com/smartdevices/bracelet/chart/base/c;->a(Lcn/com/smartdevices/bracelet/chart/base/r;)V
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/chart/base/c;->l()Landroid/graphics/RectF;
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/chart/base/c;->m()Landroid/graphics/RectF;
 
     move-result-object v0
 
@@ -1038,7 +1038,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/base/a;->t()Ljava/util/List;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/base/a;->u()Ljava/util/List;
 
     move-result-object v0
 

@@ -42,7 +42,7 @@
 
     move-result-object v1
 
-    iget v2, p1, Lcn/com/smartdevices/bracelet/chart/b/e;->e:I
+    iget v2, p1, Lcn/com/smartdevices/bracelet/chart/b/e;->f:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

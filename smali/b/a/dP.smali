@@ -157,7 +157,7 @@
 
 # virtual methods
 .method public a()V
-    .locals 10
+    .locals 11
 
     const/4 v2, 0x0
 
@@ -217,9 +217,9 @@
 
     invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v8
+    move-result-wide v7
 
-    cmp-long v1, v8, v2
+    cmp-long v1, v7, v2
 
     if-lez v1, :cond_0
 
@@ -231,7 +231,7 @@
 
     invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v2
+    move-result-wide v1
 
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -240,6 +240,10 @@
     check-cast v0, Ljava/lang/String;
 
     move-object v4, v0
+
+    move-wide v9, v1
+
+    move-wide v2, v9
 
     goto :goto_0
 
@@ -504,13 +508,13 @@
     :cond_1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v2
+    move-result-wide v1
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v0
+    move-result-wide v3
 
-    sub-long v0, v2, v0
+    sub-long v0, v1, v3
 
     iget-object v2, p0, Lb/a/dP;->c:Ljava/util/ArrayList;
 

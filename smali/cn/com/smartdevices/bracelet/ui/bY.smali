@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.implements Lcn/com/smartdevices/bracelet/ui/W;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/bT;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/bT;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bY;->a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bY;->a:Lcn/com/smartdevices/bracelet/ui/bT;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,35 +22,28 @@
 
 
 # virtual methods
-.method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
+.method public a(Landroid/app/DialogFragment;)V
+    .locals 0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bY;->a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
+    return-void
+.end method
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bY;->a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
+.method public b(Landroid/app/DialogFragment;)V
+    .locals 1
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;->a(Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;)Ljava/util/ArrayList;
+    invoke-virtual {p1}, Landroid/app/DialogFragment;->dismiss()V
 
-    move-result-object v0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bY;->a:Lcn/com/smartdevices/bracelet/ui/bT;
 
-    invoke-virtual {v0, p3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/bT;->a(Lcn/com/smartdevices/bracelet/ui/bT;)V
 
-    move-result-object v0
+    return-void
+.end method
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/cf;
+.method public c(Landroid/app/DialogFragment;)V
+    .locals 0
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/cf;->a:Landroid/bluetooth/BluetoothDevice;
-
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;->a(Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;Landroid/bluetooth/BluetoothDevice;)V
+    invoke-virtual {p1}, Landroid/app/DialogFragment;->dismiss()V
 
     return-void
 .end method

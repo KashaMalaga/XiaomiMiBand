@@ -811,13 +811,13 @@
 
     iget-object v1, p0, Lcom/amap/api/maps/overlay/DrivingRouteOverlay;->startPoint:Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v4, v1, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v3, v1, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
     iget-object v1, p0, Lcom/amap/api/maps/overlay/DrivingRouteOverlay;->startPoint:Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v6, v1, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iget-wide v5, v1, Lcom/amap/api/maps/model/LatLng;->longitude:D
 
-    invoke-direct {v0, v4, v5, v6, v7}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v0, v3, v4, v5, v6}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     invoke-virtual {v2, v0}, Lcom/amap/api/maps/model/LatLngBounds$Builder;->include(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/LatLngBounds$Builder;
 
@@ -825,13 +825,13 @@
 
     iget-object v1, p0, Lcom/amap/api/maps/overlay/DrivingRouteOverlay;->endPoint:Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v4, v1, Lcom/amap/api/maps/model/LatLng;->latitude:D
+    iget-wide v3, v1, Lcom/amap/api/maps/model/LatLng;->latitude:D
 
     iget-object v1, p0, Lcom/amap/api/maps/overlay/DrivingRouteOverlay;->endPoint:Lcom/amap/api/maps/model/LatLng;
 
-    iget-wide v6, v1, Lcom/amap/api/maps/model/LatLng;->longitude:D
+    iget-wide v5, v1, Lcom/amap/api/maps/model/LatLng;->longitude:D
 
-    invoke-direct {v0, v4, v5, v6, v7}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v0, v3, v4, v5, v6}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
 
     invoke-virtual {v2, v0}, Lcom/amap/api/maps/model/LatLngBounds$Builder;->include(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/LatLngBounds$Builder;
 

@@ -2,42 +2,8 @@
 .super Ljava/lang/Object;
 
 
-# static fields
-.field public static a:Lcom/c/a/a/a;
-
-.field public static b:Lcom/c/a/a/X;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    const/16 v1, 0x4e20
-
-    new-instance v0, Lcom/c/a/a/a;
-
-    invoke-direct {v0}, Lcom/c/a/a/a;-><init>()V
-
-    sput-object v0, Lcn/com/smartdevices/bracelet/g/a;->a:Lcom/c/a/a/a;
-
-    new-instance v0, Lcom/c/a/a/X;
-
-    invoke-direct {v0}, Lcom/c/a/a/X;-><init>()V
-
-    sput-object v0, Lcn/com/smartdevices/bracelet/g/a;->b:Lcom/c/a/a/X;
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/g/a;->a:Lcom/c/a/a/a;
-
-    invoke-virtual {v0, v1}, Lcom/c/a/a/a;->b(I)V
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/g/a;->b:Lcom/c/a/a/X;
-
-    invoke-virtual {v0, v1}, Lcom/c/a/a/X;->b(I)V
-
-    return-void
-.end method
-
-.method public constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,640 +11,279 @@
     return-void
 .end method
 
-.method public static a(Lcn/com/smartdevices/bracelet/model/LoginData;)Lcom/c/a/a/O;
-    .locals 6
+.method public static a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+    .locals 5
 
-    new-instance v0, Lcom/c/a/a/O;
+    const/4 v4, 0x0
 
-    invoke-direct {v0}, Lcom/c/a/a/O;-><init>()V
+    const/16 v1, 0x64
 
-    const-string v1, "userid"
+    new-instance v2, Ljava/io/ByteArrayOutputStream;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-direct {v2}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    sget-object v0, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
-    const-string v3, ""
+    invoke-virtual {p0, v0, v1, v2}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    iget-wide v4, p0, Lcn/com/smartdevices/bracelet/model/LoginData;->uid:J
-
-    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lcom/c/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "security"
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/model/LoginData;->security:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Lcom/c/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "v"
-
-    const-string v2, "1.0"
-
-    invoke-virtual {v0, v1, v2}, Lcom/c/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "appid"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, ""
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    sget-object v3, Lcn/com/smartdevices/bracelet/g/b;->e:Ljava/lang/Long;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lcom/c/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "callid"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, ""
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v4
-
-    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lcom/c/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "lang"
-
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lcom/c/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "timezone"
-
-    invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/util/TimeZone;->getID()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lcom/c/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "device"
-
-    const-string v2, "android_570490883"
-
-    invoke-virtual {v0, v1, v2}, Lcom/c/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "cv"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/config/a;->b()I
-
-    move-result v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, "_"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/config/a;->a()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lcom/c/a/a/O;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public static a(Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "http://bao-sport-test.app-xae.xiaomi.com/"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "URL"
-
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method private static a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "https://hm.xiaomi.com/"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static a(Ljava/lang/String;Ljava/util/HashMap;)Ljava/lang/String;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "Ljava/util/HashMap",
-            "<",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ">;)",
-            "Ljava/lang/String;"
-        }
-    .end annotation
-
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/g/c;->a(Ljava/util/Map;)Ljava/util/HashMap;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/a;->a(Ljava/util/HashMap;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/g/a;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static a(Ljava/util/HashMap;)Ljava/lang/String;
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/HashMap",
-            "<",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ">;)",
-            "Ljava/lang/String;"
-        }
-    .end annotation
-
-    const-string v0, "?"
-
-    invoke-virtual {p0}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    move-object v1, v0
+    move v0, v1
 
     :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/Map$Entry;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v3
 
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    array-length v3, v3
 
-    move-result-object v1
+    div-int/lit16 v3, v3, 0x400
 
-    check-cast v1, Ljava/lang/String;
+    if-le v3, v1, :cond_0
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->reset()V
 
-    move-result-object v1
+    sget-object v3, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0, v3, v0, v2}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    move-result-object v1
+    add-int/lit8 v0, v0, -0x14
 
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v3, "="
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "&"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    goto :goto_0
 
     :cond_0
-    move-object v1, v0
+    new-instance v0, Ljava/io/ByteArrayInputStream;
+
+    invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/io/ByteArrayInputStream;-><init>([B)V
+
+    invoke-static {v0, v4, v4}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static a(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    .locals 7
+
+    const/4 v0, 0x1
+
+    new-instance v2, Landroid/graphics/BitmapFactory$Options;
+
+    invoke-direct {v2}, Landroid/graphics/BitmapFactory$Options;-><init>()V
+
+    iput-boolean v0, v2, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
+
+    invoke-static {p0, v2}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, v2, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
+
+    iget v1, v2, Landroid/graphics/BitmapFactory$Options;->outWidth:I
+
+    iget v3, v2, Landroid/graphics/BitmapFactory$Options;->outHeight:I
+
+    const/high16 v4, 0x44480000
+
+    const/high16 v5, 0x43f00000
+
+    if-le v1, v3, :cond_0
+
+    int-to-float v6, v1
+
+    cmpl-float v6, v6, v5
+
+    if-lez v6, :cond_0
+
+    iget v1, v2, Landroid/graphics/BitmapFactory$Options;->outWidth:I
+
+    int-to-float v1, v1
+
+    div-float/2addr v1, v5
+
+    float-to-int v1, v1
+
+    :goto_0
+    if-gtz v1, :cond_1
+
+    :goto_1
+    iput v0, v2, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
+
+    invoke-static {p0, v2}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/a;->a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    if-ge v1, v3, :cond_2
+
+    int-to-float v1, v3
+
+    cmpl-float v1, v1, v4
+
+    if-lez v1, :cond_2
+
+    iget v1, v2, Landroid/graphics/BitmapFactory$Options;->outHeight:I
+
+    int-to-float v1, v1
+
+    div-float/2addr v1, v4
+
+    float-to-int v1, v1
 
     goto :goto_0
 
     :cond_1
-    return-object v1
+    move v0, v1
+
+    goto :goto_1
+
+    :cond_2
+    move v1, v0
+
+    goto :goto_0
 .end method
 
-.method public static b(Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
+.method public static b(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+    .locals 9
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const/4 v8, 0x0
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    const/4 v0, 0x1
 
-    const-string v1, "https://hm.xiaomi.com/"
+    new-instance v2, Ljava/io/ByteArrayOutputStream;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v2}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    move-result-object v0
+    sget-object v1, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/16 v3, 0x64
 
-    move-result-object v0
+    invoke-virtual {p0, v1, v3, v2}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
-    move-result-object v0
+    move-result-object v1
 
-    const-string v1, "URL"
+    array-length v1, v1
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    div-int/lit16 v1, v1, 0x400
 
-    return-object v0
-.end method
+    const/16 v3, 0x400
 
-.method public static b(Ljava/lang/String;Ljava/util/HashMap;)Ljava/lang/String;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "Ljava/util/HashMap",
-            "<",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ">;)",
-            "Ljava/lang/String;"
-        }
-    .end annotation
+    if-le v1, v3, :cond_0
 
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/g/c;->b(Ljava/util/Map;)Ljava/util/HashMap;
+    invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->reset()V
 
-    move-result-object v0
+    sget-object v1, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/a;->a(Ljava/util/HashMap;)Ljava/lang/String;
+    const/16 v3, 0x32
 
-    move-result-object v0
+    invoke-virtual {p0, v1, v3, v2}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/g/a;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    :cond_0
+    new-instance v1, Ljava/io/ByteArrayInputStream;
 
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static b(Lcn/com/smartdevices/bracelet/model/LoginData;)Ljava/util/HashMap;
-    .locals 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcn/com/smartdevices/bracelet/model/LoginData;",
-            ")",
-            "Ljava/util/HashMap",
-            "<",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    const-string v1, "userid"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, ""
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    iget-wide v4, p0, Lcn/com/smartdevices/bracelet/model/LoginData;->uid:J
-
-    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v1, "security"
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/model/LoginData;->security:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v1, "v"
-
-    const-string v2, "1.0"
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v1, "appid"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, ""
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    sget-object v3, Lcn/com/smartdevices/bracelet/g/b;->e:Ljava/lang/Long;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v1, "callid"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, ""
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v4
-
-    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v1, "lang"
-
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v1, "timezone"
-
-    invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/util/TimeZone;->getID()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v1, "device"
-
-    const-string v2, "android_570490883"
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v1, "cv"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/config/a;->b()I
-
-    move-result v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, "_"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/config/a;->a()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v1, v3}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
-    move-result-object v2
+    new-instance v3, Landroid/graphics/BitmapFactory$Options;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {v3}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    move-result-object v2
+    iput-boolean v0, v3, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v1, v8, v3}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, v3, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
+
+    iget v1, v3, Landroid/graphics/BitmapFactory$Options;->outWidth:I
+
+    iget v4, v3, Landroid/graphics/BitmapFactory$Options;->outHeight:I
+
+    const/high16 v5, 0x44480000
+
+    const/high16 v6, 0x43f00000
+
+    if-le v1, v4, :cond_1
+
+    int-to-float v7, v1
+
+    cmpl-float v7, v7, v6
+
+    if-lez v7, :cond_1
+
+    iget v1, v3, Landroid/graphics/BitmapFactory$Options;->outWidth:I
+
+    int-to-float v1, v1
+
+    div-float/2addr v1, v6
+
+    float-to-int v1, v1
+
+    :goto_0
+    if-gtz v1, :cond_2
+
+    :goto_1
+    iput v0, v3, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
+
+    new-instance v0, Ljava/io/ByteArrayInputStream;
+
+    invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/io/ByteArrayInputStream;-><init>([B)V
+
+    invoke-static {v0, v8, v3}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/a;->a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+
+    move-result-object v0
 
     return-object v0
-.end method
 
-.method public static c(Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
+    :cond_1
+    if-ge v1, v4, :cond_3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    int-to-float v1, v4
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    cmpl-float v1, v1, v5
 
-    const-string v1, "http://hm.xiaomi.com/"
+    if-lez v1, :cond_3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v1, v3, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
-    move-result-object v0
+    int-to-float v1, v1
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    div-float/2addr v1, v5
 
-    move-result-object v0
+    float-to-int v1, v1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    goto :goto_0
 
-    move-result-object v0
+    :cond_2
+    move v0, v1
 
-    const-string v1, "URL"
+    goto :goto_1
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    :cond_3
+    move v1, v0
 
-    return-object v0
+    goto :goto_0
 .end method

@@ -337,7 +337,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0d0005
+    const v2, 0x7f0e0005
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -479,7 +479,7 @@
 
     if-eqz v1, :cond_1
 
-    const v0, 0x7f0c01dd
+    const v0, 0x7f0701e2
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -498,7 +498,7 @@
 
     if-eqz v1, :cond_2
 
-    const v0, 0x7f0c01de
+    const v0, 0x7f0701e3
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -515,7 +515,7 @@
 
     if-eqz v1, :cond_3
 
-    const v0, 0x7f0c01df
+    const v0, 0x7f0701e4
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -532,7 +532,7 @@
 
     if-eqz v1, :cond_4
 
-    const v0, 0x7f0c01e0
+    const v0, 0x7f0701e5
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -549,7 +549,7 @@
 
     if-eqz v1, :cond_5
 
-    const v0, 0x7f0c01e1
+    const v0, 0x7f0701e6
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -566,7 +566,7 @@
 
     if-eqz v1, :cond_6
 
-    const v0, 0x7f0c01e2
+    const v0, 0x7f0701e7
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -583,7 +583,7 @@
 
     if-eqz v1, :cond_7
 
-    const v0, 0x7f0c01e3
+    const v0, 0x7f0701e8
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -600,7 +600,7 @@
 
     if-eqz v1, :cond_8
 
-    const v0, 0x7f0c01e4
+    const v0, 0x7f0701e9
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -617,7 +617,7 @@
 
     if-eqz v1, :cond_0
 
-    const v0, 0x7f0c01e5
+    const v0, 0x7f0701ea
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -701,7 +701,7 @@
 .end method
 
 .method public setTime(J)V
-    .locals 1
+    .locals 0
 
     iput-wide p1, p0, Lcn/com/smartdevices/bracelet/weather/WeatherInfo;->time:J
 

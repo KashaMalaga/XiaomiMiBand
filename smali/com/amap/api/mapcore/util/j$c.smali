@@ -17,7 +17,7 @@
 
 # direct methods
 .method private constructor <init>(Lcom/amap/api/mapcore/util/j;Ljava/lang/String;J[Ljava/io/InputStream;)V
-    .locals 1
+    .locals 0
 
     iput-object p1, p0, Lcom/amap/api/mapcore/util/j$c;->a:Lcom/amap/api/mapcore/util/j;
 
@@ -33,7 +33,7 @@
 .end method
 
 .method synthetic constructor <init>(Lcom/amap/api/mapcore/util/j;Ljava/lang/String;J[Ljava/io/InputStream;Lcom/amap/api/mapcore/util/k;)V
-    .locals 1
+    .locals 0
 
     invoke-direct/range {p0 .. p5}, Lcom/amap/api/mapcore/util/j$c;-><init>(Lcom/amap/api/mapcore/util/j;Ljava/lang/String;J[Ljava/io/InputStream;)V
 

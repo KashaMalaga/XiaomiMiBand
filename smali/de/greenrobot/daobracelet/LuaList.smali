@@ -5,6 +5,8 @@
 # instance fields
 .field private date:Ljava/lang/String;
 
+.field private expireTime:Ljava/lang/String;
+
 .field private id:Ljava/lang/Long;
 
 .field private index:Ljava/lang/String;
@@ -49,7 +51,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -80,6 +82,8 @@
 
     iput-object p13, p0, Lde/greenrobot/daobracelet/LuaList;->stop:Ljava/lang/String;
 
+    iput-object p14, p0, Lde/greenrobot/daobracelet/LuaList;->expireTime:Ljava/lang/String;
+
     return-void
 .end method
 
@@ -89,6 +93,14 @@
     .locals 1
 
     iget-object v0, p0, Lde/greenrobot/daobracelet/LuaList;->date:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getExpireTime()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lde/greenrobot/daobracelet/LuaList;->expireTime:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -193,6 +205,14 @@
     .locals 0
 
     iput-object p1, p0, Lde/greenrobot/daobracelet/LuaList;->date:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public setExpireTime(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lde/greenrobot/daobracelet/LuaList;->expireTime:Ljava/lang/String;
 
     return-void
 .end method

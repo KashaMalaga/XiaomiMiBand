@@ -12,15 +12,15 @@
 .end method
 
 .method static a(Landroid/view/View;)V
-    .locals 4
+    .locals 3
 
     new-instance v0, Lcn/com/smartdevices/bracelet/chart/a/c;
 
     invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/chart/a/c;-><init>(Landroid/view/View;)V
 
-    const-wide/16 v2, 0xa
+    const-wide/16 v1, 0xa
 
-    invoke-virtual {p0, v0, v2, v3}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {p0, v0, v1, v2}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
 
     return-void
 .end method

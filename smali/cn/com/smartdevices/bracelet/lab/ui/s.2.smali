@@ -23,22 +23,13 @@
 
 # virtual methods
 .method public onClick(Landroid/view/View;)V
-    .locals 1
+    .locals 2
 
-    :try_start_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/s;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->a(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 v1, 0x1
 
-    :goto_0
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;->a(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryTestActivity;Z)V
+
     return-void
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
-
-    goto :goto_0
 .end method

@@ -22,7 +22,7 @@
     .end annotation
 .end field
 
-.field b:Lcom/xiaomi/g/a/a;
+.field b:Lcom/xiaomi/h/a/a;
 
 .field c:Z
 

@@ -246,9 +246,9 @@
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->c:I
 
-    int-to-long v2, v1
+    int-to-long v1, v1
 
-    invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+    invoke-virtual {v0, v1, v2}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
@@ -272,11 +272,11 @@
 .method public a(I)V
     .locals 5
 
-    const v4, 0x7f0b0069
+    const v4, 0x7f080086
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/view/CircleListScrollView;->d:Landroid/content/Context;
 
-    const v1, 0x7f030014
+    const v1, 0x7f030018
 
     const/4 v2, 0x0
 
@@ -306,7 +306,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f07005b
+    const v3, 0x7f09006c
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -322,7 +322,7 @@
 
     if-nez v0, :cond_0
 
-    const v2, 0x7f0b0068
+    const v2, 0x7f080085
 
     invoke-virtual {v1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

@@ -52,11 +52,11 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030006
+    const v0, 0x7f030008
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/FwLowBatteryActivity;->setContentView(I)V
 
-    const v0, 0x7f0b0039
+    const v0, 0x7f08004e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/FwLowBatteryActivity;->findViewById(I)Landroid/view/View;
 
@@ -78,13 +78,13 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/FwLowBatteryActivity;->a:Landroid/widget/TextView;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/aj;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/aw;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/aj;-><init>(Lcn/com/smartdevices/bracelet/ui/FwLowBatteryActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/aw;-><init>(Lcn/com/smartdevices/bracelet/ui/FwLowBatteryActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0b003a
+    const v0, 0x7f08004f
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/FwLowBatteryActivity;->findViewById(I)Landroid/view/View;
 
@@ -96,9 +96,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/FwLowBatteryActivity;->b:Landroid/widget/Button;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/ak;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/ax;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/ak;-><init>(Lcn/com/smartdevices/bracelet/ui/FwLowBatteryActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/ax;-><init>(Lcn/com/smartdevices/bracelet/ui/FwLowBatteryActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

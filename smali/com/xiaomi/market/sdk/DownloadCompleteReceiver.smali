@@ -18,9 +18,9 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 8
+    .locals 7
 
-    const-wide/16 v6, -0x1
+    const-wide/16 v5, -0x1
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -36,7 +36,7 @@
 
     const-string v0, "extra_download_id"
 
-    invoke-virtual {p2, v0, v6, v7}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
+    invoke-virtual {p2, v0, v5, v6}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
 
     move-result-wide v0
 
@@ -58,7 +58,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    cmp-long v2, v0, v6
+    cmp-long v2, v0, v5
 
     if-nez v2, :cond_1
 

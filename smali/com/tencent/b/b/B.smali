@@ -148,9 +148,9 @@
 .end method
 
 .method static synthetic a(Lcom/tencent/b/b/b;[BLjava/lang/String;)V
-    .locals 8
+    .locals 9
 
-    const-wide v6, 0x4076800000000000L
+    const-wide v7, 0x4076800000000000L
 
     new-instance v0, Ljava/lang/StringBuffer;
 
@@ -186,41 +186,41 @@
 
     invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getDouble(Ljava/lang/String;)D
 
-    move-result-wide v2
+    move-result-wide v1
 
-    const-string v1, "longitude"
+    const-string v3, "longitude"
 
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getDouble(Ljava/lang/String;)D
+    invoke-virtual {v0, v3}, Lorg/json/JSONObject;->getDouble(Ljava/lang/String;)D
 
-    move-result-wide v0
+    move-result-wide v3
 
-    iget-wide v4, p0, Lcom/tencent/b/b/b;->e:D
+    iget-wide v5, p0, Lcom/tencent/b/b/b;->e:D
 
-    sub-double v4, v2, v4
+    sub-double v5, v1, v5
 
-    iput-wide v4, p0, Lcom/tencent/b/b/b;->g:D
+    iput-wide v5, p0, Lcom/tencent/b/b/b;->g:D
 
-    iget-wide v4, p0, Lcom/tencent/b/b/b;->f:D
+    iget-wide v5, p0, Lcom/tencent/b/b/b;->f:D
 
-    sub-double v4, v0, v4
+    sub-double v5, v3, v5
 
-    iput-wide v4, p0, Lcom/tencent/b/b/b;->h:D
+    iput-wide v5, p0, Lcom/tencent/b/b/b;->h:D
 
-    iget-wide v4, p0, Lcom/tencent/b/b/b;->e:D
+    iget-wide v5, p0, Lcom/tencent/b/b/b;->e:D
 
-    iput-wide v4, p0, Lcom/tencent/b/b/b;->c:D
+    iput-wide v5, p0, Lcom/tencent/b/b/b;->c:D
 
-    iget-wide v4, p0, Lcom/tencent/b/b/b;->f:D
+    iget-wide v5, p0, Lcom/tencent/b/b/b;->f:D
 
-    iput-wide v4, p0, Lcom/tencent/b/b/b;->d:D
+    iput-wide v5, p0, Lcom/tencent/b/b/b;->d:D
 
-    iget-object v4, p0, Lcom/tencent/b/b/b;->i:Lcom/tencent/b/b/b$a;
+    iget-object v0, p0, Lcom/tencent/b/b/b;->i:Lcom/tencent/b/b/b$a;
 
-    if-eqz v4, :cond_1
+    if-eqz v0, :cond_1
 
-    iget-object v4, p0, Lcom/tencent/b/b/b;->i:Lcom/tencent/b/b/b$a;
+    iget-object v0, p0, Lcom/tencent/b/b/b;->i:Lcom/tencent/b/b/b$a;
 
-    invoke-interface {v4, v2, v3, v0, v1}, Lcom/tencent/b/b/b$a;->a(DD)V
+    invoke-interface {v0, v1, v2, v3, v4}, Lcom/tencent/b/b/b$a;->a(DD)V
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -237,7 +237,7 @@
 
     iget-object v1, p0, Lcom/tencent/b/b/b;->i:Lcom/tencent/b/b/b$a;
 
-    invoke-interface {v1, v6, v7, v6, v7}, Lcom/tencent/b/b/b$a;->a(DD)V
+    invoke-interface {v1, v7, v8, v7, v8}, Lcom/tencent/b/b/b$a;->a(DD)V
 
     goto :goto_0
 
@@ -250,7 +250,7 @@
 
     iget-object v0, p0, Lcom/tencent/b/b/b;->i:Lcom/tencent/b/b/b$a;
 
-    invoke-interface {v0, v6, v7, v6, v7}, Lcom/tencent/b/b/b$a;->a(DD)V
+    invoke-interface {v0, v7, v8, v7, v8}, Lcom/tencent/b/b/b$a;->a(DD)V
 
     goto :goto_1
 .end method
@@ -336,15 +336,15 @@
 
     iget-object v0, p0, Lcom/tencent/b/b/b;->i:Lcom/tencent/b/b/b$a;
 
-    iget-wide v2, p0, Lcom/tencent/b/b/b;->g:D
+    iget-wide v1, p0, Lcom/tencent/b/b/b;->g:D
 
-    add-double/2addr v2, p1
+    add-double/2addr v1, p1
 
-    iget-wide v4, p0, Lcom/tencent/b/b/b;->h:D
+    iget-wide v3, p0, Lcom/tencent/b/b/b;->h:D
 
-    add-double/2addr v4, p3
+    add-double/2addr v3, p3
 
-    invoke-interface {v0, v2, v3, v4, v5}, Lcom/tencent/b/b/b$a;->a(DD)V
+    invoke-interface {v0, v1, v2, v3, v4}, Lcom/tencent/b/b/b$a;->a(DD)V
 
     :cond_0
     :goto_0

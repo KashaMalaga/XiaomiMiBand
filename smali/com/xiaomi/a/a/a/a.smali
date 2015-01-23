@@ -14,11 +14,9 @@
 .method public static a(Landroid/content/Context;)Z
     .locals 3
 
-    new-instance v0, Landroid/content/Intent;
+    invoke-static {}, Lcom/xiaomi/a/a/a/c;->b()Landroid/content/Intent;
 
-    const-string v1, "android.intent.action.XIAOMI_ACCOUNT_AUTHORIZE"
-
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
     new-instance v1, Lcom/xiaomi/a/a/a/b;
 

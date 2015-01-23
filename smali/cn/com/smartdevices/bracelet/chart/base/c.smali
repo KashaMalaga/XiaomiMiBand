@@ -43,7 +43,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/c;->n:Lcn/com/smartdevices/bracelet/chart/base/r;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/c;->o:Lcn/com/smartdevices/bracelet/chart/base/r;
 
     if-nez v0, :cond_1
 
@@ -84,7 +84,7 @@
 
     sub-float v4, v0, v4
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/c;->n:Lcn/com/smartdevices/bracelet/chart/base/r;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/c;->o:Lcn/com/smartdevices/bracelet/chart/base/r;
 
     iget-object v0, v0, Lcn/com/smartdevices/bracelet/chart/base/r;->c:Landroid/graphics/Paint;
 
@@ -94,7 +94,7 @@
 
     invoke-virtual {v0, v5}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/c;->n:Lcn/com/smartdevices/bracelet/chart/base/r;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/c;->o:Lcn/com/smartdevices/bracelet/chart/base/r;
 
     iget-object v5, v0, Lcn/com/smartdevices/bracelet/chart/base/r;->c:Landroid/graphics/Paint;
 
@@ -114,7 +114,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/c;->n:Lcn/com/smartdevices/bracelet/chart/base/r;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/c;->o:Lcn/com/smartdevices/bracelet/chart/base/r;
 
     if-nez v0, :cond_1
 
@@ -157,7 +157,7 @@
 
     add-float/2addr v4, v0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/c;->n:Lcn/com/smartdevices/bracelet/chart/base/r;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/c;->o:Lcn/com/smartdevices/bracelet/chart/base/r;
 
     iget-object v0, v0, Lcn/com/smartdevices/bracelet/chart/base/r;->c:Landroid/graphics/Paint;
 
@@ -167,7 +167,7 @@
 
     invoke-virtual {v0, v5}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/c;->n:Lcn/com/smartdevices/bracelet/chart/base/r;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/c;->o:Lcn/com/smartdevices/bracelet/chart/base/r;
 
     iget-object v5, v0, Lcn/com/smartdevices/bracelet/chart/base/r;->c:Landroid/graphics/Paint;
 

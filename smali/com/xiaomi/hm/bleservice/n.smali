@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/bluetooth/BluetoothAdapter$LeScanCallback;
+.implements Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$IConnectionStateChangeCallback;
 
 
 # instance fields
@@ -22,13 +22,34 @@
 
 
 # virtual methods
-.method public onLeScan(Landroid/bluetooth/BluetoothDevice;I[B)V
-    .locals 1
+.method public onDeviceConnected(Landroid/bluetooth/BluetoothDevice;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onDeviceConnectionFailed(Landroid/bluetooth/BluetoothDevice;)V
+    .locals 2
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/n;->a:Lcom/xiaomi/hm/bleservice/BLEService;
 
-    # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->checkWeightScanRecord([B)V
-    invoke-static {v0, p3}, Lcom/xiaomi/hm/bleservice/BLEService;->access$1200(Lcom/xiaomi/hm/bleservice/BLEService;[B)V
+    const/4 v1, 0x4
+
+    # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->notifyConnStatusChanged(I)V
+    invoke-static {v0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->access$600(Lcom/xiaomi/hm/bleservice/BLEService;I)V
+
+    return-void
+.end method
+
+.method public onDeviceDisconnected(Landroid/bluetooth/BluetoothDevice;)V
+    .locals 2
+
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/n;->a:Lcom/xiaomi/hm/bleservice/BLEService;
+
+    const/4 v1, 0x5
+
+    # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->notifyConnStatusChanged(I)V
+    invoke-static {v0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->access$600(Lcom/xiaomi/hm/bleservice/BLEService;I)V
 
     return-void
 .end method

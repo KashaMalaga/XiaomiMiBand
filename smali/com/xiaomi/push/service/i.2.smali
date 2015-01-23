@@ -35,13 +35,13 @@
     :try_start_0
     iget-object v0, p0, Lcom/xiaomi/push/service/i;->a:Lcom/xiaomi/push/service/XMPushService;
 
-    invoke-static {v0}, Lcom/xiaomi/push/service/XMPushService;->d(Lcom/xiaomi/push/service/XMPushService;)Lcom/xiaomi/f/l;
+    invoke-static {v0}, Lcom/xiaomi/push/service/XMPushService;->d(Lcom/xiaomi/push/service/XMPushService;)Lcom/xiaomi/g/l;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/xiaomi/f/l;->c()V
+    invoke-virtual {v0}, Lcom/xiaomi/g/l;->c()V
     :try_end_0
-    .catch Lcom/xiaomi/f/C; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Lcom/xiaomi/g/C; {:try_start_0 .. :try_end_0} :catch_0
 
     :cond_0
     :goto_0
@@ -50,7 +50,7 @@
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/xiaomi/channel/a/b/c;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/xiaomi/b/a/b/c;->a(Ljava/lang/Throwable;)V
 
     iget-object v1, p0, Lcom/xiaomi/push/service/i;->a:Lcom/xiaomi/push/service/XMPushService;
 

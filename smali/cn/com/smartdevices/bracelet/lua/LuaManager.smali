@@ -84,19 +84,19 @@
 
     const/4 v5, 0x0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/l;->a()Lcn/com/smartdevices/bracelet/l;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/p;->a()Lcn/com/smartdevices/bracelet/p;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/l;->c()Lde/greenrobot/daobracelet/LuaZipFileDao;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/p;->c()Lde/greenrobot/daobracelet/LuaZipFileDao;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lde/greenrobot/daobracelet/LuaZipFileDao;->count()J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    long-to-int v1, v2
+    long-to-int v1, v1
 
     const-string v2, "LuaManager"
 
@@ -118,7 +118,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-lez v1, :cond_0
 
@@ -180,7 +180,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lde/greenrobot/daobracelet/LuaZipFile;->getZipFile()[B
 
@@ -214,7 +214,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -305,7 +305,7 @@
 
     const-string v2, "read res/raw/luafile.lua version error!!"
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -346,7 +346,7 @@
     sput-object v0, Lcn/com/smartdevices/bracelet/lua/LuaManager;->__instance:Lcn/com/smartdevices/bracelet/lua/LuaManager;
 
     :cond_0
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/y;->m(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/B;->h(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -374,7 +374,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v0, Lcn/com/smartdevices/bracelet/lua/LuaManager;->__instance:Lcn/com/smartdevices/bracelet/lua/LuaManager;
 
@@ -386,19 +386,19 @@
 
     const/4 v5, 0x0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/l;->a()Lcn/com/smartdevices/bracelet/l;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/p;->a()Lcn/com/smartdevices/bracelet/p;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/l;->c()Lde/greenrobot/daobracelet/LuaZipFileDao;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/p;->c()Lde/greenrobot/daobracelet/LuaZipFileDao;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lde/greenrobot/daobracelet/LuaZipFileDao;->count()J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    long-to-int v1, v2
+    long-to-int v1, v1
 
     const-string v2, "LuaManager"
 
@@ -420,7 +420,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     if-lez v1, :cond_2
 
@@ -496,7 +496,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -538,7 +538,7 @@
 
     move-result-object v1
 
-    invoke-static {v3, v1}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     :try_start_0
@@ -566,7 +566,7 @@
 
     const-string v1, "read DB zip file failed"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -574,15 +574,15 @@
 .method private getLatestLuaZipFile()V
     .locals 2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->b()Lcn/com/smartdevices/bracelet/model/LoginData;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->b()Lcn/com/smartdevices/bracelet/model/LoginData;
 
     move-result-object v0
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/lua/j;
+    new-instance v1, Lcn/com/smartdevices/bracelet/lua/g;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/lua/j;-><init>(Lcn/com/smartdevices/bracelet/lua/LuaManager;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/lua/g;-><init>(Lcn/com/smartdevices/bracelet/lua/LuaManager;)V
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/g/e;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Lcom/c/a/a/h;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/j/e;->b(Lcn/com/smartdevices/bracelet/model/LoginData;Lcom/e/a/a/h;)V
 
     return-void
 .end method
@@ -590,15 +590,15 @@
 .method private getLatestLuaZipFileWithVersionCheck()V
     .locals 2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->b()Lcn/com/smartdevices/bracelet/model/LoginData;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->b()Lcn/com/smartdevices/bracelet/model/LoginData;
 
     move-result-object v0
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/lua/i;
+    new-instance v1, Lcn/com/smartdevices/bracelet/lua/f;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/lua/i;-><init>(Lcn/com/smartdevices/bracelet/lua/LuaManager;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/lua/f;-><init>(Lcn/com/smartdevices/bracelet/lua/LuaManager;)V
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/g/e;->b(Lcn/com/smartdevices/bracelet/model/LoginData;Lcom/c/a/a/h;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/j/e;->c(Lcn/com/smartdevices/bracelet/model/LoginData;Lcom/e/a/a/h;)V
 
     return-void
 .end method
@@ -644,7 +644,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v1, Ljava/io/File;
 
@@ -676,7 +676,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     :try_start_0
@@ -732,7 +732,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -799,7 +799,7 @@
 
     const-string v1, "read sdcard/strangeName.zip failed"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -900,7 +900,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/r;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 
@@ -977,7 +977,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/u;->x()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->z()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1052,7 +1052,7 @@
 
     const-string v1, "read res/raw/luafile.lua failed"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, ""
 
@@ -1112,7 +1112,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -1399,7 +1399,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
     :try_end_3
@@ -1422,7 +1422,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/r;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="50.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/weight_test_info_ll" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="3.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+        <TextView android:textSize="16.0sp" android:id="@id/weight_test_device_name" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <TextView android:textSize="16.0sp" android:id="@id/weight_test_device_address" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <TextView android:textSize="16.0sp" android:id="@id/weight_test_device_signal" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_toRightOf="@id/weight_test_info_ll" android:layout_centerVertical="true">
+        <TextView android:textSize="16.0sp" android:textColor="@android:color/holo_red_light" android:id="@id/weight_test_device_status" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <TextView android:textSize="16.0sp" android:textColor="@android:color/holo_blue_bright" android:id="@id/weight_test_device_version" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+    </LinearLayout>
+    <Button android:textSize="12.0sp" android:id="@id/weight_test_device_fw_upgrade_btn" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="升级" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>
