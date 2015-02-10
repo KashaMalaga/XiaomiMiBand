@@ -1,96 +1,31 @@
 .class Lcn/com/smartdevices/bracelet/activity/h;
-.super Landroid/os/AsyncTask;
+.super Ljava/lang/Object;
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Landroid/os/AsyncTask",
-        "<",
-        "Ljava/lang/Void;",
-        "Ljava/lang/Void;",
-        "Ljava/lang/String;",
-        ">;"
-    }
-.end annotation
+# interfaces
+.implements Lcn/com/smartdevices/bracelet/P;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/activity/g;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/activity/LoginActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/activity/g;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/activity/h;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/activity/h;->a:Lcn/com/smartdevices/bracelet/activity/g;
 
-    invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected varargs a([Ljava/lang/Void;)Ljava/lang/String;
-    .locals 7
+.method public a(Lcn/com/smartdevices/bracelet/model/WeightGoalItem;)V
+    .locals 4
 
-    :try_start_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/h;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->d()Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/activity/h;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->k(Lcn/com/smartdevices/bracelet/activity/LoginActivity;)Lcn/com/smartdevices/bracelet/config/b;
-
-    move-result-object v2
-
-    iget-object v2, v2, Lcn/com/smartdevices/bracelet/config/b;->b:Lcn/com/smartdevices/bracelet/config/k;
-
-    iget-object v2, v2, Lcn/com/smartdevices/bracelet/config/k;->a:Ljava/lang/Long;
-
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/activity/h;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
-
-    iget-object v4, v4, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->h:Ljava/lang/String;
-
-    iget-object v5, p0, Lcn/com/smartdevices/bracelet/activity/h;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
-
-    iget-object v5, v5, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->d:Ljava/lang/String;
-
-    iget-object v6, p0, Lcn/com/smartdevices/bracelet/activity/h;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
-
-    iget-object v6, v6, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->e:Ljava/lang/String;
-
-    invoke-static/range {v0 .. v6}, Lcom/xiaomi/account/openauth/b;->a(Landroid/content/Context;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result-object v0
-
-    :goto_0
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
-
-    const-string v0, ""
-
-    goto :goto_0
-.end method
-
-.method protected a(Ljava/lang/String;)V
-    .locals 3
-
-    invoke-super {p0, p1}, Landroid/os/AsyncTask;->onPostExecute(Ljava/lang/Object;)V
+    if-eqz p1, :cond_0
 
     const-string v0, "LoginActivity"
 
@@ -98,13 +33,17 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "get user phone: "
+    const-string v2, "LoginAvtivity "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/model/WeightGoalItem;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -112,37 +51,44 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/h;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
-
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/j/f;->c(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->a(Lcn/com/smartdevices/bracelet/activity/LoginActivity;Ljava/lang/String;)Ljava/lang/String;
-
-    return-void
-.end method
-
-.method protected synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    check-cast p1, [Ljava/lang/Void;
-
-    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/activity/h;->a([Ljava/lang/Void;)Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->H()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/model/WeightGoalItem;->getGoalVal()F
 
-.method protected synthetic onPostExecute(Ljava/lang/Object;)V
-    .locals 0
+    move-result v1
 
-    check-cast p1, Ljava/lang/String;
+    iput v1, v0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->targetWeight:F
 
-    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/activity/h;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 
+    const-string v1, "LoginActivity"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "save goal "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    iget v0, v0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->targetWeight:F
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
     return-void
 .end method

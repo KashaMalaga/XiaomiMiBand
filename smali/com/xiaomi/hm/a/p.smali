@@ -3,9 +3,9 @@
 
 
 # static fields
-.field public static final numberOfPullUpdateReport:I = 0x7f0d0001
+.field public static final numberOfPullUpdateReport:I = 0x7f0e0001
 
-.field public static final picker_number_of_items_selected:I = 0x7f0d0000
+.field public static final picker_number_of_items_selected:I = 0x7f0e0000
 
 
 # direct methods

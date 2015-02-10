@@ -3,7 +3,7 @@
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
-.implements Lcn/com/smartdevices/bracelet/ui/aP;
+.implements Lcn/com/smartdevices/bracelet/ui/aR;
 
 
 # static fields
@@ -44,11 +44,15 @@
 
 .field private m:Lcn/com/smartdevices/bracelet/gps/ui/w;
 
-.field private n:Lcn/com/smartdevices/bracelet/gps/ui/ad;
+.field private n:Lcn/com/smartdevices/bracelet/gps/ui/af;
 
-.field private o:Lcn/com/smartdevices/bracelet/ui/dz;
+.field private o:Lcn/com/smartdevices/bracelet/ui/dD;
 
-.field private p:Z
+.field private p:Landroid/widget/Button;
+
+.field private q:Landroid/widget/Button;
+
+.field private r:Z
 
 
 # direct methods
@@ -75,7 +79,11 @@
 
     iput-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->m:Lcn/com/smartdevices/bracelet/gps/ui/w;
 
-    iput-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->n:Lcn/com/smartdevices/bracelet/gps/ui/ad;
+    iput-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->n:Lcn/com/smartdevices/bracelet/gps/ui/af;
+
+    iput-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->p:Landroid/widget/Button;
+
+    iput-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->q:Landroid/widget/Button;
 
     return-void
 .end method
@@ -97,7 +105,37 @@
 .end method
 
 .method private a()V
-    .locals 0
+    .locals 2
+
+    const/4 v1, 0x0
+
+    const v0, 0x7f07010d
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/Button;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->p:Landroid/widget/Button;
+
+    const v0, 0x7f07010e
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/Button;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->q:Landroid/widget/Button;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->q:Landroid/widget/Button;
+
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setEnabled(Z)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->p:Landroid/widget/Button;
+
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setEnabled(Z)V
 
     return-void
 .end method
@@ -135,7 +173,7 @@
 
     const/4 v4, 0x0
 
-    const v0, 0x7f080102
+    const v0, 0x7f070107
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->findViewById(I)Landroid/view/View;
 
@@ -187,21 +225,21 @@
 
     if-eqz v2, :cond_0
 
-    new-instance v3, Lcn/com/smartdevices/bracelet/gps/ui/ad;
+    new-instance v3, Lcn/com/smartdevices/bracelet/gps/ui/af;
 
-    invoke-direct {v3}, Lcn/com/smartdevices/bracelet/gps/ui/ad;-><init>()V
+    invoke-direct {v3}, Lcn/com/smartdevices/bracelet/gps/ui/af;-><init>()V
 
-    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->n:Lcn/com/smartdevices/bracelet/gps/ui/ad;
+    iput-object v3, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->n:Lcn/com/smartdevices/bracelet/gps/ui/af;
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->n:Lcn/com/smartdevices/bracelet/gps/ui/ad;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->n:Lcn/com/smartdevices/bracelet/gps/ui/af;
 
-    invoke-virtual {v3, v0}, Lcn/com/smartdevices/bracelet/gps/ui/ad;->setArguments(Landroid/os/Bundle;)V
+    invoke-virtual {v3, v0}, Lcn/com/smartdevices/bracelet/gps/ui/af;->setArguments(Landroid/os/Bundle;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->n:Lcn/com/smartdevices/bracelet/gps/ui/ad;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->n:Lcn/com/smartdevices/bracelet/gps/ui/af;
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    const v0, 0x7f080104
+    const v0, 0x7f070109
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->findViewById(I)Landroid/view/View;
 
@@ -209,7 +247,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->j:Landroid/view/View;
 
-    const v0, 0x7f080105
+    const v0, 0x7f07010a
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->findViewById(I)Landroid/view/View;
 
@@ -275,7 +313,7 @@
 .method private c()V
     .locals 2
 
-    const v0, 0x7f080051
+    const v0, 0x7f070035
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->findViewById(I)Landroid/view/View;
 
@@ -287,7 +325,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->l:Landroid/widget/TextView;
 
-    const v1, 0x7f0702da
+    const v1, 0x7f080308
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->getString(I)Ljava/lang/String;
 
@@ -355,25 +393,25 @@
 
     if-ne v0, v1, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->n:Lcn/com/smartdevices/bracelet/gps/ui/ad;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->n:Lcn/com/smartdevices/bracelet/gps/ui/af;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->n:Lcn/com/smartdevices/bracelet/gps/ui/ad;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->n:Lcn/com/smartdevices/bracelet/gps/ui/af;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/ui/ad;->a()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/ui/af;->a()V
 
     goto :goto_0
 .end method
 
-.method public a(Lcn/com/smartdevices/bracelet/ui/dF;)V
+.method public a(Lcn/com/smartdevices/bracelet/ui/dJ;)V
     .locals 2
 
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->p:Z
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->r:Z
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->o:Lcn/com/smartdevices/bracelet/ui/dz;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->o:Lcn/com/smartdevices/bracelet/ui/dD;
 
     if-nez v0, :cond_0
 
@@ -381,9 +419,9 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->o:Lcn/com/smartdevices/bracelet/ui/dz;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->o:Lcn/com/smartdevices/bracelet/ui/dD;
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/ui/dz;->b(Lcn/com/smartdevices/bracelet/ui/dF;)V
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/ui/dD;->b(Lcn/com/smartdevices/bracelet/ui/dJ;)V
 
     goto :goto_0
 
@@ -395,14 +433,54 @@
     goto :goto_0
 .end method
 
-.method public a(ILcn/com/smartdevices/bracelet/ui/dF;)Z
+.method public a(ILcn/com/smartdevices/bracelet/ui/dJ;)Z
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->o:Lcn/com/smartdevices/bracelet/ui/dz;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->o:Lcn/com/smartdevices/bracelet/ui/dD;
 
-    invoke-virtual {v0, p1, p2}, Lcn/com/smartdevices/bracelet/ui/dz;->a(ILcn/com/smartdevices/bracelet/ui/dF;)Z
+    invoke-virtual {v0, p1, p2}, Lcn/com/smartdevices/bracelet/ui/dD;->a(ILcn/com/smartdevices/bracelet/ui/dJ;)Z
 
     move-result v0
+
+    return v0
+.end method
+
+.method public b(Landroid/os/Bundle;)V
+    .locals 3
+
+    const/4 v2, 0x1
+
+    const-string v0, "UI"
+
+    const-string v1, "onDataLoaded"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->q:Landroid/widget/Button;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->q:Landroid/widget/Button;
+
+    invoke-virtual {v0, v2}, Landroid/widget/Button;->setEnabled(Z)V
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->p:Landroid/widget/Button;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->p:Landroid/widget/Button;
+
+    invoke-virtual {v0, v2}, Landroid/widget/Button;->setEnabled(Z)V
+
+    :cond_1
+    return-void
+.end method
+
+.method protected isExceptForMiNote()Z
+    .locals 1
+
+    const/4 v0, 0x1
 
     return v0
 .end method
@@ -433,7 +511,7 @@
     nop
 
     :pswitch_data_0
-    .packed-switch 0x7f0800b0
+    .packed-switch 0x7f0700b4
         :pswitch_0
     .end packed-switch
 .end method
@@ -487,7 +565,7 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->p:Z
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->r:Z
 
     :cond_0
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->c()V
@@ -506,9 +584,9 @@
 
     const-string v0, "PageRunResult"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/A;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->a(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/A;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -520,9 +598,9 @@
 
     const-string v0, "PageRunResult"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/A;->c(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->c(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -546,7 +624,7 @@
 
     const-string v0, "sc"
 
-    iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->p:Z
+    iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->r:Z
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
@@ -558,17 +636,17 @@
 
     const/4 v4, 0x1
 
-    iput-boolean v4, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->p:Z
+    iput-boolean v4, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->r:Z
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->o:Lcn/com/smartdevices/bracelet/ui/dz;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->o:Lcn/com/smartdevices/bracelet/ui/dD;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/dz;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/dD;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/dz;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/dD;-><init>()V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->o:Lcn/com/smartdevices/bracelet/ui/dz;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->o:Lcn/com/smartdevices/bracelet/ui/dD;
 
     :cond_0
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->getFragmentManager()Landroid/app/FragmentManager;
@@ -585,7 +663,7 @@
 
     const-string v2, "share_title"
 
-    const/high16 v3, 0x7f070000
+    const/high16 v3, 0x7f080000
 
     invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->getString(I)Ljava/lang/String;
 
@@ -593,13 +671,13 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->e()Lcn/com/smartdevices/bracelet/config/b;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->f()Lcn/com/smartdevices/bracelet/config/b;
 
     move-result-object v2
 
     const-string v3, "share_url"
 
-    iget-object v2, v2, Lcn/com/smartdevices/bracelet/config/b;->f:Lcn/com/smartdevices/bracelet/config/o;
+    iget-object v2, v2, Lcn/com/smartdevices/bracelet/config/b;->g:Lcn/com/smartdevices/bracelet/config/a/b;
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -607,19 +685,19 @@
 
     invoke-virtual {v1, v3, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->o:Lcn/com/smartdevices/bracelet/ui/dz;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->o:Lcn/com/smartdevices/bracelet/ui/dD;
 
-    invoke-virtual {v2, v4}, Lcn/com/smartdevices/bracelet/ui/dz;->a(Z)V
+    invoke-virtual {v2, v4}, Lcn/com/smartdevices/bracelet/ui/dD;->a(Z)V
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->o:Lcn/com/smartdevices/bracelet/ui/dz;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->o:Lcn/com/smartdevices/bracelet/ui/dD;
 
-    invoke-virtual {v2, v1}, Lcn/com/smartdevices/bracelet/ui/dz;->setArguments(Landroid/os/Bundle;)V
+    invoke-virtual {v2, v1}, Lcn/com/smartdevices/bracelet/ui/dD;->setArguments(Landroid/os/Bundle;)V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->o:Lcn/com/smartdevices/bracelet/ui/dz;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->o:Lcn/com/smartdevices/bracelet/ui/dD;
 
     const-string v2, ""
 
-    invoke-virtual {v1, v0, v2}, Lcn/com/smartdevices/bracelet/ui/dz;->show(Landroid/app/FragmentTransaction;Ljava/lang/String;)I
+    invoke-virtual {v1, v0, v2}, Lcn/com/smartdevices/bracelet/ui/dD;->show(Landroid/app/FragmentTransaction;Ljava/lang/String;)I
 
     return-void
 .end method
@@ -629,7 +707,7 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->p:Z
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;->r:Z
 
     new-instance v0, Landroid/os/Bundle;
 

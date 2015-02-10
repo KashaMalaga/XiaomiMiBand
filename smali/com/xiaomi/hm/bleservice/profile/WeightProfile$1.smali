@@ -23,33 +23,41 @@
 
 # virtual methods
 .method public notify([B)V
-    .locals 3
+    .locals 2
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile$1;->this$0:Lcom/xiaomi/hm/bleservice/profile/WeightProfile;
 
-    # getter for: Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_measurementCB:Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$IMeasurementChangedCallback;
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->access$000(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;)Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$IMeasurementChangedCallback;
+    # getter for: Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->mLowBatteryCB:Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$ILowBatteryCallback;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->access$000(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;)Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$ILowBatteryCallback;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile$1;->this$0:Lcom/xiaomi/hm/bleservice/profile/WeightProfile;
+    if-eqz p1, :cond_0
 
-    # getter for: Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_measurementCB:Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$IMeasurementChangedCallback;
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->access$000(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;)Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$IMeasurementChangedCallback;
-
-    move-result-object v0
+    array-length v0, p1
 
     const/4 v1, 0x1
 
-    const/4 v2, 0x0
+    if-ne v0, v1, :cond_0
 
-    invoke-static {p1, v1, v2}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->parseWeightData([BZZ)Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    const/4 v0, 0x0
 
-    move-result-object v1
+    aget-byte v0, p1, v0
 
-    invoke-interface {v0, v1}, Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$IMeasurementChangedCallback;->onChanged(Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;)V
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_0
+
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile$1;->this$0:Lcom/xiaomi/hm/bleservice/profile/WeightProfile;
+
+    # getter for: Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->mLowBatteryCB:Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$ILowBatteryCallback;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->access$000(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;)Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$ILowBatteryCallback;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$ILowBatteryCallback;->onLowBattery()V
 
     :cond_0
     return-void

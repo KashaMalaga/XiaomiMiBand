@@ -1,143 +1,127 @@
 .class final Lcn/com/smartdevices/bracelet/lab/sync/F;
-.super Landroid/os/Binder;
-
-# interfaces
-.implements Lcn/com/smartdevices/bracelet/lab/sync/e;
+.super Lcn/com/smartdevices/bracelet/lab/sync/D;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;
+.field public c:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/Long;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public d:J
 
 
 # direct methods
-.method private constructor <init>(Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/sync/F;->a:Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/sync/D;-><init>()V
 
-    invoke-direct {p0}, Landroid/os/Binder;-><init>()V
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sync/F;->c:Ljava/util/List;
+
+    const-wide/16 v0, -0x1
+
+    iput-wide v0, p0, Lcn/com/smartdevices/bracelet/lab/sync/F;->d:J
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sync/F;->c:Ljava/util/List;
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;Lcn/com/smartdevices/bracelet/lab/sync/C;)V
-    .locals 0
+.method public constructor <init>(I)V
+    .locals 2
 
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/lab/sync/F;-><init>(Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;)V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/lab/sync/D;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sync/F;->c:Ljava/util/List;
+
+    const-wide/16 v0, -0x1
+
+    iput-wide v0, p0, Lcn/com/smartdevices/bracelet/lab/sync/F;->d:J
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    if-lez p1, :cond_0
+
+    :goto_0
+    invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(I)V
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sync/F;->c:Ljava/util/List;
 
     return-void
+
+    :cond_0
+    const/4 p1, 0x0
+
+    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public a(Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;)V
-    .locals 3
+.method public a()V
+    .locals 1
 
-    const-string v0, "Sync"
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sync/F;->c:Ljava/util/List;
 
-    const-string v1, "SyncBinder syncDataFromServer"
+    if-eqz v0, :cond_0
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sync/F;->c:Ljava/util/List;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sync/F;->a:Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;
+    invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/sync/F;->a:Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;
+    :cond_0
+    return-void
+.end method
 
-    invoke-static {v1, p1}, Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;->a(Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;)Landroid/content/Intent;
+.method public a(J)V
+    .locals 2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sync/F;->c:Ljava/util/List;
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
 
-    const/4 v2, -0x1
-
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;->a(Landroid/content/Intent;I)V
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
-.method public a(Lcn/com/smartdevices/bracelet/lab/sync/d;)V
-    .locals 1
+.method public a(Lcn/com/smartdevices/bracelet/lab/sync/F;)V
+    .locals 2
 
-    if-nez p1, :cond_1
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/lab/sync/D;->a(Lcn/com/smartdevices/bracelet/lab/sync/D;)V
+
+    iget-wide v0, p1, Lcn/com/smartdevices/bracelet/lab/sync/F;->d:J
+
+    iput-wide v0, p0, Lcn/com/smartdevices/bracelet/lab/sync/F;->d:J
+
+    iget-object v0, p1, Lcn/com/smartdevices/bracelet/lab/sync/F;->c:Ljava/util/List;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sync/F;->c:Ljava/util/List;
+
+    iget-object v1, p1, Lcn/com/smartdevices/bracelet/lab/sync/F;->c:Ljava/util/List;
+
+    invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
     :cond_0
-    :goto_0
     return-void
-
-    :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sync/F;->a:Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;->a(Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;)Ljava/util/List;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sync/F;->a:Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;->a(Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sync/F;->a:Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;->a(Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-.end method
-
-.method public b(Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public b(Lcn/com/smartdevices/bracelet/lab/sync/d;)V
-    .locals 1
-
-    if-nez p1, :cond_1
-
-    :cond_0
-    :goto_0
-    return-void
-
-    :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sync/F;->a:Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;->a(Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;)Ljava/util/List;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sync/F;->a:Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;->a(Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sync/F;->a:Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;->a(Lcn/com/smartdevices/bracelet/lab/sync/SyncSportDataService;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
-
-    goto :goto_0
 .end method

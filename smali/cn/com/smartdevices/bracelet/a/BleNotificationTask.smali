@@ -1,5 +1,5 @@
 .class public Lcn/com/smartdevices/bracelet/a/BleNotificationTask;
-.super Lcn/com/smartdevices/bracelet/a/v;
+.super Lcn/com/smartdevices/bracelet/a/x;
 .source "BleNotificationTask.java"
 
 
@@ -106,7 +106,7 @@
 
     .prologue
     .line 35
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/a/v;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/a/x;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
 
     .line 36
     iput-object p2, p0, Lcn/com/smartdevices/bracelet/a/BleNotificationTask;->appSettingInfo:Lcn/com/smartdevices/bracelet/extend/AppSettingInfo;
@@ -265,7 +265,7 @@
     .line 77
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/BleNotificationTask;->m:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
-    const/4 v1, 0x1
+    const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->_sendNotification(B)Z
 
@@ -549,7 +549,7 @@
 
     .line 115
     :cond_5
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->i()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->H()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v12
 

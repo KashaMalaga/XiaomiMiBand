@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/ui/W;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/ah;
-
-.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/X;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/Z;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/X;Lcn/com/smartdevices/bracelet/ui/ah;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/Z;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/ag;->b:Lcn/com/smartdevices/bracelet/ui/X;
-
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/ag;->a:Lcn/com/smartdevices/bracelet/ui/ah;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/ag;->a:Lcn/com/smartdevices/bracelet/ui/Z;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,28 +22,47 @@
 
 
 # virtual methods
-.method public a(Landroid/app/DialogFragment;)V
+.method public onAnimationCancel(Landroid/animation/Animator;)V
     .locals 0
 
     return-void
 .end method
 
-.method public b(Landroid/app/DialogFragment;)V
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ag;->a:Lcn/com/smartdevices/bracelet/ui/Z;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/Z;->l(Lcn/com/smartdevices/bracelet/ui/Z;)I
+
+    move-result v0
+
+    and-int/lit8 v0, v0, 0x8
+
+    if-lez v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ag;->a:Lcn/com/smartdevices/bracelet/ui/Z;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/Z;->h(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->c(Z)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public onAnimationRepeat(Landroid/animation/Animator;)V
     .locals 0
 
     return-void
 .end method
 
-.method public c(Landroid/app/DialogFragment;)V
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ag;->a:Lcn/com/smartdevices/bracelet/ui/ah;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/ah;->dismiss()V
-
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->m(Z)V
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
 
     return-void
 .end method

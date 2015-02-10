@@ -1,28 +1,191 @@
 .class Lcn/com/smartdevices/bracelet/ui/cq;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Lkankan/wheel/widget/e;
+
 
 # instance fields
-.field a:Landroid/widget/TextView;
-
-.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/co;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/cp;
 
 
 # direct methods
-.method private constructor <init>(Lcn/com/smartdevices/bracelet/ui/co;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/cp;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cq;->b:Lcn/com/smartdevices/bracelet/ui/co;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cq;->a:Lcn/com/smartdevices/bracelet/ui/cp;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/ui/co;Lcn/com/smartdevices/bracelet/ui/cp;)V
+
+# virtual methods
+.method public a(Lkankan/wheel/widget/WheelView;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/ui/cq;-><init>(Lcn/com/smartdevices/bracelet/ui/co;)V
-
     return-void
+.end method
+
+.method public b(Lkankan/wheel/widget/WheelView;)V
+    .locals 14
+
+    const/4 v11, 0x7
+
+    const/4 v2, 0x0
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/ui/cp;->f()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "item "
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Lkankan/wheel/widget/WheelView;->f()I
+
+    move-result v3
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Lkankan/wheel/widget/WheelView;->f()I
+
+    move-result v0
+
+    const/16 v1, 0x93
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/ui/cp;->f()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, " should refresh month"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cs;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cq;->a:Lcn/com/smartdevices/bracelet/ui/cp;
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/ui/cp;->getActivity()Landroid/app/Activity;
+
+    move-result-object v1
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/ui/cq;->a:Lcn/com/smartdevices/bracelet/ui/cp;
+
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/ui/cp;->a(Lcn/com/smartdevices/bracelet/ui/cp;)Lkankan/wheel/widget/WheelView;
+
+    move-result-object v4
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/ui/cq;->a:Lcn/com/smartdevices/bracelet/ui/cp;
+
+    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/ui/cp;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    const v5, 0x7f09000c
+
+    invoke-virtual {v3, v5}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v5
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/ui/cq;->a:Lcn/com/smartdevices/bracelet/ui/cp;
+
+    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/ui/cp;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    const v6, 0x7f090011
+
+    invoke-virtual {v3, v6}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v6
+
+    const v7, -0x77666667
+
+    const/16 v9, 0x2e
+
+    const/16 v10, 0x8
+
+    const/4 v13, 0x1
+
+    move v3, v2
+
+    move v8, v2
+
+    move v12, v11
+
+    invoke-direct/range {v0 .. v13}, Lcn/com/smartdevices/bracelet/ui/cs;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
+
+    const/16 v1, 0x13
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/cs;->a(I)V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cq;->a:Lcn/com/smartdevices/bracelet/ui/cp;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/cp;->a(Lcn/com/smartdevices/bracelet/ui/cp;)Lkankan/wheel/widget/WheelView;
+
+    move-result-object v1
+
+    const v3, 0x7f020171
+
+    invoke-virtual {v1, v3}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
+
+    move-result-object v1
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/ui/cq;->a:Lcn/com/smartdevices/bracelet/ui/cp;
+
+    const v4, 0x7f080071
+
+    invoke-virtual {v3, v4}, Lcn/com/smartdevices/bracelet/ui/cp;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    const v4, 0x41c8fbe7
+
+    invoke-virtual {v1, v3, v4}, Lkankan/wheel/widget/WheelView;->a(Ljava/lang/String;F)Lkankan/wheel/widget/WheelView;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/a/f;)Lkankan/wheel/widget/WheelView;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Lkankan/wheel/widget/WheelView;->c(I)Lkankan/wheel/widget/WheelView;
+
+    :goto_0
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cq;->a:Lcn/com/smartdevices/bracelet/ui/cp;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/cp;->a(Lcn/com/smartdevices/bracelet/ui/cp;)Lkankan/wheel/widget/WheelView;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cq;->a:Lcn/com/smartdevices/bracelet/ui/cp;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/cp;->b(Lcn/com/smartdevices/bracelet/ui/cp;)Lcn/com/smartdevices/bracelet/ui/cs;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/a/f;)Lkankan/wheel/widget/WheelView;
+
+    goto :goto_0
 .end method

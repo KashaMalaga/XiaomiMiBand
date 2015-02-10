@@ -7,7 +7,7 @@
         </LinearLayout>
         <ScrollView android:background="@color/main_ui_bg" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
             <LinearLayout android:orientation="vertical" android:background="@color/main_ui_bg" android:layout_width="fill_parent" android:layout_height="fill_parent">
-                <ListView android:id="@id/family_members_dymantic_list" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scrollingCache="false" android:divider="@drawable/line_divider" android:dividerHeight="@dimen/divider_height" />
+                <ListView android:id="@id/family_members_dymantic_list" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scrollingCache="false" android:divider="@drawable/split_line_drawable" android:dividerHeight="@dimen/divider_height" />
                 <View android:background="@color/line_color_gray" android:layout_width="fill_parent" android:layout_height="@dimen/divider_height" android:layout_marginLeft="@dimen/member_left_margin" android:layout_marginRight="@dimen/member_right_margin" />
                 <LinearLayout android:orientation="vertical" android:id="@id/staronme_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
                     <TextView android:textColor="@color/text_color_gray" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/member_left_margin" android:layout_marginTop="@dimen/text_top_margin" android:text="@string/user_staron_me" />

@@ -18,9 +18,7 @@
 .end method
 
 .method private a()V
-    .locals 7
-
-    const/4 v6, 0x0
+    .locals 6
 
     new-instance v0, Landroid/content/Intent;
 
@@ -34,7 +32,7 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_1
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
@@ -58,22 +56,56 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->b()Lcn/com/smartdevices/bracelet/model/LoginData;
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/activity/MainActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->l()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/g/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/LoginData;->isValid()Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    :cond_0
+    const-class v1, Lcn/com/smartdevices/bracelet/activity/LoginActivity;
+
+    invoke-virtual {v0, p0, v1}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/MainActivity;->startActivity(Landroid/content/Intent;)V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/activity/MainActivity;->finish()V
+
+    :goto_1
+    return-void
+
+    :cond_1
+    const-string v1, "MainActivity"
+
+    const-string v2, "extras is null!"
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_2
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->I()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->a()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->a()Z
 
     move-result v3
 
-    if-eqz v3, :cond_0
+    if-eqz v3, :cond_3
 
     const-string v3, "MainActivity"
 
@@ -99,45 +131,13 @@
 
     invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v4
+    move-result-object v1
 
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v1
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/LoginData;->isValid()Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    :cond_1
-    const-class v1, Lcn/com/smartdevices/bracelet/activity/LoginActivity;
-
-    invoke-virtual {v0, p0, v1}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
-
-    :goto_1
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/MainActivity;->startActivity(Landroid/content/Intent;)V
-
-    invoke-virtual {p0, v6, v6}, Lcn/com/smartdevices/bracelet/activity/MainActivity;->overridePendingTransition(II)V
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/activity/MainActivity;->b()V
-
-    return-void
-
-    :cond_2
-    const-string v1, "MainActivity"
-
-    const-string v2, "extras is null!"
-
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
+    invoke-static {v3, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_3
     if-eqz v2, :cond_4
@@ -153,6 +153,10 @@
 
     invoke-virtual {v0, p0, v1}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/MainActivity;->startActivity(Landroid/content/Intent;)V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/activity/MainActivity;->finish()V
+
     goto :goto_1
 
     :cond_5
@@ -160,25 +164,11 @@
 
     invoke-virtual {v0, p0, v1}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/MainActivity;->startActivity(Landroid/content/Intent;)V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/activity/MainActivity;->finish()V
+
     goto :goto_1
-.end method
-
-.method private b()V
-    .locals 4
-
-    new-instance v0, Landroid/os/Handler;
-
-    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
-
-    new-instance v1, Lcn/com/smartdevices/bracelet/activity/i;
-
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/activity/i;-><init>(Lcn/com/smartdevices/bracelet/activity/MainActivity;)V
-
-    const-wide/16 v2, 0x1388
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    return-void
 .end method
 
 
@@ -199,11 +189,9 @@
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
-    .locals 3
+    .locals 2
 
     const/16 v1, 0x12
-
-    const/4 v2, 0x0
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
@@ -213,7 +201,11 @@
 
     if-ne v0, v1, :cond_1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->b()Lcn/com/smartdevices/bracelet/model/LoginData;
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/activity/MainActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
 
     move-result-object v0
 
@@ -238,8 +230,6 @@
 
     invoke-virtual {p0, v0, v1}, Lcn/com/smartdevices/bracelet/activity/MainActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    invoke-virtual {p0, v2, v2}, Lcn/com/smartdevices/bracelet/activity/MainActivity;->overridePendingTransition(II)V
-
     :goto_0
     return-void
 
@@ -254,7 +244,7 @@
 
     if-eqz v0, :cond_3
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/B;->a()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/E;->a()Z
 
     move-result v0
 
@@ -267,7 +257,7 @@
 
     const-string v1, "test:\n"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -282,9 +272,7 @@
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/MainActivity;->startActivity(Landroid/content/Intent;)V
 
-    invoke-virtual {p0, v2, v2}, Lcn/com/smartdevices/bracelet/activity/MainActivity;->overridePendingTransition(II)V
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/activity/MainActivity;->b()V
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/activity/MainActivity;->finish()V
 
     goto :goto_0
 .end method

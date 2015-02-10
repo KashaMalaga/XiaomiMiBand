@@ -1,364 +1,39 @@
 .class Lcn/com/smartdevices/bracelet/ui/an;
-.super Landroid/support/v13/app/h;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lcn/com/smartdevices/bracelet/chart/c/o;
 
 
 # instance fields
-.field final synthetic c:Lcn/com/smartdevices/bracelet/ui/aj;
-
-.field private d:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcn/com/smartdevices/bracelet/ui/ao;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/al;
 
 
 # direct methods
-.method public constructor <init>(Lcn/com/smartdevices/bracelet/ui/aj;Landroid/app/FragmentManager;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/al;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/an;->c:Lcn/com/smartdevices/bracelet/ui/aj;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/an;->a:Lcn/com/smartdevices/bracelet/ui/al;
 
-    invoke-direct {p0, p2}, Landroid/support/v13/app/h;-><init>(Landroid/app/FragmentManager;)V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/an;->d()V
-
-    return-void
-.end method
-
-.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/an;)Ljava/util/ArrayList;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/an;->d:Ljava/util/ArrayList;
-
-    return-object v0
-.end method
-
-.method private g(I)V
-    .locals 3
-
-    new-instance v0, Landroid/os/Bundle;
-
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
-
-    const-string v1, "Mode"
-
-    invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/an;->c:Lcn/com/smartdevices/bracelet/ui/aj;
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/ui/aj;->getActivity()Landroid/app/Activity;
-
-    move-result-object v1
-
-    const-class v2, Lcn/com/smartdevices/bracelet/ui/ao;
-
-    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2, v0}, Landroid/app/Fragment;->instantiate(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/app/Fragment;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/an;->d:Ljava/util/ArrayList;
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/ao;
-
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Ljava/lang/Object;)I
+.method public a(I)V
     .locals 1
 
-    const/4 v0, -0x2
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/an;->a:Lcn/com/smartdevices/bracelet/ui/al;
 
-    return v0
-.end method
-
-.method public a(I)Landroid/app/Fragment;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/an;->d:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/al;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Landroid/app/Fragment;
+    check-cast v0, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    return-object v0
-.end method
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->applyStatusBarTint(I)V
 
-.method public a(F)V
-    .locals 2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/an;->d:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/ao;
-
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/ui/ao;->a(F)V
-
-    goto :goto_0
-
-    :cond_0
     return-void
-.end method
-
-.method public a(Lcn/com/smartdevices/bracelet/ui/widget/c;)V
-    .locals 2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/an;->d:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/ao;
-
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/ui/ao;->a(Lcn/com/smartdevices/bracelet/ui/widget/c;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public a(Z)V
-    .locals 2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/an;->d:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/ao;
-
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/ui/ao;->a(Z)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public b()I
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/an;->d:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public b(Z)V
-    .locals 4
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/an;->d:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_0
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/ao;
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/ui/ao;->a(Ljava/lang/Boolean;)V
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ao;->a(Lcn/com/smartdevices/bracelet/ui/ao;)I
-
-    move-result v2
-
-    const/16 v3, 0x100
-
-    if-ne v2, v3, :cond_0
-
-    const/4 v2, 0x0
-
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/ui/ao;->a(Ljava/lang/Boolean;)V
-
-    goto :goto_0
-
-    :cond_1
-    return-void
-.end method
-
-.method public d()V
-    .locals 2
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/an;->d:Ljava/util/ArrayList;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/an;->c:Lcn/com/smartdevices/bracelet/ui/aj;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/aj;->i(Lcn/com/smartdevices/bracelet/ui/aj;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/16 v0, 0x10
-
-    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/ui/an;->g(I)V
-
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/an;->c:Lcn/com/smartdevices/bracelet/ui/aj;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/aj;->j(Lcn/com/smartdevices/bracelet/ui/aj;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 v0, 0x1
-
-    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/ui/an;->g(I)V
-
-    :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/an;->c:Lcn/com/smartdevices/bracelet/ui/aj;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/aj;->k(Lcn/com/smartdevices/bracelet/ui/aj;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const/16 v0, 0x100
-
-    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/ui/an;->g(I)V
-
-    :cond_2
-    return-void
-.end method
-
-.method public e(I)Lcn/com/smartdevices/bracelet/ui/ao;
-    .locals 3
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/an;->d:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/ao;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ao;->a(Lcn/com/smartdevices/bracelet/ui/ao;)I
-
-    move-result v2
-
-    if-ne v2, p1, :cond_0
-
-    :goto_0
-    return-object v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public f(I)Lcn/com/smartdevices/bracelet/view/DynamicView;
-    .locals 1
-
-    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/ui/an;->e(I)Lcn/com/smartdevices/bracelet/ui/ao;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ao;->b(Lcn/com/smartdevices/bracelet/ui/ao;)Lcn/com/smartdevices/bracelet/view/DynamicView;
-
-    move-result-object v0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method

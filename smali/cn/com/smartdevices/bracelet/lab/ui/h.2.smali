@@ -66,11 +66,15 @@
 
     iget-object v0, v0, Lcn/com/smartdevices/bracelet/lab/ui/g;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryConnectedAdvActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryConnectedAdvActivity;->b(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryConnectedAdvActivity;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/h;->c:Lcn/com/smartdevices/bracelet/lab/ui/g;
 
-    move-result-object v0
+    iget-object v1, v1, Lcn/com/smartdevices/bracelet/lab/ui/g;->a:Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryConnectedAdvActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/B;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryConnectedAdvActivity;->b(Lcn/com/smartdevices/bracelet/lab/ui/LabFactoryConnectedAdvActivity;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/E;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 
     :cond_0
     return-void

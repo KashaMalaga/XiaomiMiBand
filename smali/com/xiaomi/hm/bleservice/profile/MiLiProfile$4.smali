@@ -56,7 +56,7 @@
 
     const-string v1, "sensor data notify packages index is -1 !!!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Ljava/lang/RuntimeException;
 
@@ -77,7 +77,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -87,7 +87,7 @@
     iget-object v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$4;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     # getter for: Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->mLastSensorDataIndex:I
-    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$200(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)I
+    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$300(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)I
 
     move-result v2
 
@@ -102,7 +102,7 @@
     iget-object v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$4;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     # setter for: Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->mLastSensorDataIndex:I
-    invoke-static {v2, v1}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$202(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;I)I
+    invoke-static {v2, v1}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$302(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;I)I
 
     array-length v1, p1
 
@@ -123,7 +123,7 @@
     iget-object v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$4;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     # getter for: Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->m_SensorSourceOutputStream:Ljava/io/PipedOutputStream;
-    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$300(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)Ljava/io/PipedOutputStream;
+    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$400(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)Ljava/io/PipedOutputStream;
 
     move-result-object v2
 
@@ -143,7 +143,7 @@
     iget-object v2, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$4;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
     # getter for: Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->mLastSensorDataIndex:I
-    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$200(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)I
+    invoke-static {v2}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$300(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)I
 
     move-result v2
 
@@ -158,9 +158,9 @@
 
     const-string v3, "sensor data notify packages index is not continuous!!!"
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->a()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->a()Z
 
     move-result v2
 

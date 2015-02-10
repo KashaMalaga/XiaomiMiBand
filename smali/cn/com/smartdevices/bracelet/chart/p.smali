@@ -48,7 +48,9 @@
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
-    .locals 4
+    .locals 5
+
+    const v4, 0x4dffffff
 
     const v3, 0x3faa3d71
 
@@ -60,7 +62,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f020094
+    const v1, 0x7f0200a2
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -78,7 +80,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f020093
+    const v1, 0x7f0200a1
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -126,9 +128,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/p;->D:Landroid/graphics/Paint;
 
-    const v1, 0x4dffffff
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
+    invoke-virtual {v0, v4}, Landroid/graphics/Paint;->setColor(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/p;->D:Landroid/graphics/Paint;
 
@@ -168,9 +168,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/p;->F:Landroid/graphics/Paint;
 
-    const v1, 0x33ffffff
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
+    invoke-virtual {v0, v4}, Landroid/graphics/Paint;->setColor(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/p;->F:Landroid/graphics/Paint;
 
@@ -469,11 +467,40 @@
 .end method
 
 .method public a(I)V
-    .locals 0
+    .locals 2
 
     iput p1, p0, Lcn/com/smartdevices/bracelet/chart/p;->z:I
 
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/p;->z:I
+
+    sparse-switch v0, :sswitch_data_0
+
+    :goto_0
     return-void
+
+    :sswitch_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/p;->F:Landroid/graphics/Paint;
+
+    const v1, 0x66ffffff
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
+
+    goto :goto_0
+
+    :sswitch_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/p;->F:Landroid/graphics/Paint;
+
+    const v1, 0x4dffffff
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
+
+    goto :goto_0
+
+    :sswitch_data_0
+    .sparse-switch
+        0x1 -> :sswitch_0
+        0x10 -> :sswitch_1
+    .end sparse-switch
 .end method
 
 .method protected a(Landroid/graphics/Canvas;Landroid/graphics/RectF;FFFFF)V
@@ -481,7 +508,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/p;->K:Landroid/graphics/Bitmap;
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/chart/p;->M:Z
 
@@ -507,6 +534,23 @@
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
     :goto_0
+    iget v3, p0, Lcn/com/smartdevices/bracelet/chart/p;->q:F
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/chart/c/t;->c()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    float-to-double v0, v3
+
+    const-wide v2, 0x3fec28f5c28f5c29L
+
+    mul-double/2addr v0, v2
+
+    double-to-float v3, v0
+
+    :cond_1
     iget v0, p0, Lcn/com/smartdevices/bracelet/chart/p;->z:I
 
     sparse-switch v0, :sswitch_data_0
@@ -518,14 +562,14 @@
 
     cmpl-float v1, v0, v1
 
-    if-lez v1, :cond_1
+    if-lez v1, :cond_2
 
     const/high16 v0, 0x3f800000
 
-    :cond_1
+    :cond_2
     iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/chart/p;->y:Z
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_7
 
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
@@ -541,20 +585,20 @@
 
     cmpg-float v1, v0, v1
 
-    if-gez v1, :cond_2
+    if-gez v1, :cond_3
 
     const v0, 0x3e99999a
 
-    :cond_2
+    :cond_3
     const v1, 0x3f19999a
 
     cmpl-float v1, v0, v1
 
-    if-lez v1, :cond_3
+    if-lez v1, :cond_4
 
     const v0, 0x3f19999a
 
-    :cond_3
+    :cond_4
     iget-object v5, p0, Lcn/com/smartdevices/bracelet/chart/p;->C:Landroid/graphics/Paint;
 
     const/high16 v1, 0x43480000
@@ -577,11 +621,11 @@
 
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    :cond_4
+    :cond_5
     :goto_2
     return-void
 
-    :cond_5
+    :cond_6
     invoke-direct {p0, p3, p4, p5, p1}, Lcn/com/smartdevices/bracelet/chart/p;->a(FFFLandroid/graphics/Canvas;)V
 
     goto :goto_0
@@ -598,8 +642,6 @@
     invoke-virtual {v0}, Landroid/graphics/RectF;->centerY()F
 
     move-result v2
-
-    iget v3, p0, Lcn/com/smartdevices/bracelet/chart/p;->q:F
 
     iget-object v4, p0, Lcn/com/smartdevices/bracelet/chart/p;->A:Landroid/graphics/Bitmap;
 
@@ -624,8 +666,6 @@
 
     move-result v2
 
-    iget v3, p0, Lcn/com/smartdevices/bracelet/chart/p;->q:F
-
     iget-object v4, p0, Lcn/com/smartdevices/bracelet/chart/p;->B:Landroid/graphics/Bitmap;
 
     const/4 v5, 0x0
@@ -636,20 +676,20 @@
 
     goto :goto_1
 
-    :cond_6
+    :cond_7
     const/4 v1, 0x0
 
     cmpl-float v1, v0, v1
 
-    if-gtz v1, :cond_7
+    if-gtz v1, :cond_8
 
     const/high16 v1, 0x3f800000
 
     cmpg-float v1, v0, v1
 
-    if-gez v1, :cond_8
+    if-gez v1, :cond_9
 
-    :cond_7
+    :cond_8
     iget-object v5, p0, Lcn/com/smartdevices/bracelet/chart/p;->C:Landroid/graphics/Paint;
 
     const/high16 v1, 0x43480000
@@ -672,12 +712,12 @@
 
     goto :goto_2
 
-    :cond_8
+    :cond_9
     const/high16 v1, 0x3f800000
 
     cmpl-float v0, v0, v1
 
-    if-nez v0, :cond_4
+    if-nez v0, :cond_5
 
     iget-object v5, p0, Lcn/com/smartdevices/bracelet/chart/p;->C:Landroid/graphics/Paint;
 
@@ -709,9 +749,9 @@
 .method protected a(Landroid/graphics/RectF;)V
     .locals 7
 
-    const/4 v6, 0x0
+    const/high16 v6, 0x41f80000
 
-    const/high16 v5, 0x41f80000
+    const/4 v5, 0x0
 
     const/4 v4, 0x0
 
@@ -761,7 +801,7 @@
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/chart/p;->p:F
 
-    mul-float/2addr v2, v5
+    mul-float/2addr v2, v6
 
     add-float/2addr v1, v2
 
@@ -775,7 +815,7 @@
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/chart/p;->p:F
 
-    mul-float/2addr v2, v5
+    mul-float/2addr v2, v6
 
     add-float/2addr v1, v2
 
@@ -827,7 +867,7 @@
 
     iput v1, v0, Landroid/graphics/RectF;->bottom:F
 
-    iput-boolean v6, p0, Lcn/com/smartdevices/bracelet/chart/p;->M:Z
+    iput-boolean v5, p0, Lcn/com/smartdevices/bracelet/chart/p;->M:Z
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/p;->L:Landroid/graphics/Canvas;
 
@@ -860,7 +900,7 @@
 
     const/4 v2, 0x7
 
-    invoke-direct {v1, v6, v2}, Landroid/graphics/PaintFlagsDrawFilter;-><init>(II)V
+    invoke-direct {v1, v5, v2}, Landroid/graphics/PaintFlagsDrawFilter;-><init>(II)V
 
     invoke-virtual {v0, v1}, Landroid/graphics/Canvas;->setDrawFilter(Landroid/graphics/DrawFilter;)V
 
@@ -884,6 +924,12 @@
     move-result-object v0
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/p;->K:Landroid/graphics/Bitmap;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/p;->K:Landroid/graphics/Bitmap;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Bitmap;->setDensity(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/p;->L:Landroid/graphics/Canvas;
 

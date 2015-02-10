@@ -25,7 +25,7 @@
 .method public uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
     .locals 0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->d()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->d()V
 
     invoke-virtual {p2}, Ljava/lang/Throwable;->printStackTrace()V
 

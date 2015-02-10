@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/step_container" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:textSize="49.0sp" android:textColor="@android:color/white" android:ellipsize="none" android:id="@id/step" android:paddingTop="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true" android:layout_centerInParent="true" android:fontFamily="miui" />
+    <TextView android:textSize="11.0sp" android:textStyle="normal" android:textColor="@android:color/white" android:id="@id/step_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginBottom="10.0dip" android:text="@string/unit_step" android:layout_toRightOf="@id/step" android:layout_alignBottom="@id/step" android:alpha="0.0" />
+    <TextView android:textSize="12.0sp" android:textColor="#99ffffff" android:id="@id/step_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="53.0dip" android:text="@string/dynamic_step_tip" android:layout_centerHorizontal="true" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="53.0dip" android:layout_alignParentBottom="true">
+        <View android:id="@id/divider" android:background="#33ffffff" android:layout_width="1.0px" android:layout_height="10.0dip" android:layout_marginLeft="6.0dip" android:layout_marginRight="6.0dip" android:layout_centerInParent="true" />
+        <TextView android:textSize="12.0sp" android:textColor="#99ffffff" android:id="@id/step_distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:layout_toLeftOf="@id/divider" />
+        <TextView android:textSize="12.0sp" android:textColor="#99ffffff" android:id="@id/step_calorie" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:layout_toRightOf="@id/divider" />
+    </RelativeLayout>
+</RelativeLayout>

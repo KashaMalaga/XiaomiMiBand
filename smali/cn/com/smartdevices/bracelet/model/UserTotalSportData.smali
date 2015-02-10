@@ -13,15 +13,13 @@
 
 .field public iAverageSteps:I
 
-.field public iCalories:I
-
 .field public iDistance:I
-
-.field public iPoints:I
 
 .field public iSteps:I
 
 .field public iTotalwearingdays:I
+
+.field private lazyDaySkips:I
 
 .field public longestSleepDay:Ljava/lang/String;
 
@@ -33,12 +31,16 @@
 
 .field public maxContinueRecordDay:Ljava/lang/String;
 
+.field private reportData:Lcn/com/smartdevices/bracelet/model/ReportData;
+
 .field public startUseDay:Ljava/lang/String;
-    .annotation runtime Lcom/d/a/a/a;
+    .annotation runtime Lcom/c/a/a/a;
     .end annotation
 .end field
 
 .field public totalRunDist:I
+
+.field private weekReportData:Lcn/com/smartdevices/bracelet/model/ReportData;
 
 
 # direct methods
@@ -48,10 +50,6 @@
     const/4 v1, 0x0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput v1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->iCalories:I
-
-    iput v1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->iPoints:I
 
     const-string v0, ""
 
@@ -97,13 +95,13 @@
 .method public static fromJsonStr(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/model/UserTotalSportData;
     .locals 2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/B;->c()Lcom/d/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/E;->c()Lcom/c/a/k;
 
     move-result-object v0
 
     const-class v1, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;
 
-    invoke-virtual {v0, p0, v1}, Lcom/d/a/k;->a(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v0, p0, v1}, Lcom/c/a/k;->a(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -127,6 +125,22 @@
     return-void
 .end method
 
+.method public getReportData()Lcn/com/smartdevices/bracelet/model/ReportData;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->reportData:Lcn/com/smartdevices/bracelet/model/ReportData;
+
+    return-object v0
+.end method
+
+.method public getWeekReportData()Lcn/com/smartdevices/bracelet/model/ReportData;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->weekReportData:Lcn/com/smartdevices/bracelet/model/ReportData;
+
+    return-object v0
+.end method
+
 .method public isValid()Z
     .locals 1
 
@@ -142,6 +156,10 @@
 
     if-lez v0, :cond_0
 
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->weekReportData:Lcn/com/smartdevices/bracelet/model/ReportData;
+
+    if-eqz v0, :cond_0
+
     const/4 v0, 0x1
 
     :goto_0
@@ -153,14 +171,30 @@
     goto :goto_0
 .end method
 
+.method public setReportData(Lcn/com/smartdevices/bracelet/model/ReportData;)V
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->reportData:Lcn/com/smartdevices/bracelet/model/ReportData;
+
+    return-void
+.end method
+
+.method public setWeekReportData(Lcn/com/smartdevices/bracelet/model/ReportData;)V
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/model/UserTotalSportData;->weekReportData:Lcn/com/smartdevices/bracelet/model/ReportData;
+
+    return-void
+.end method
+
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/B;->c()Lcom/d/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/E;->c()Lcom/c/a/k;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/d/a/k;->b(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, p0}, Lcom/c/a/k;->b(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 

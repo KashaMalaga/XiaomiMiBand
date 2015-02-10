@@ -1,5 +1,5 @@
 .class Lcn/com/smartdevices/bracelet/ui/F;
-.super Lcom/e/a/a/h;
+.super Lcom/d/a/a/h;
 
 
 # instance fields
@@ -12,7 +12,7 @@
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/F;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
 
-    invoke-direct {p0}, Lcom/e/a/a/h;-><init>()V
+    invoke-direct {p0}, Lcom/d/a/a/h;-><init>()V
 
     return-void
 .end method
@@ -49,11 +49,17 @@
     return-void
 
     :cond_1
-    new-instance v0, Ljava/lang/String;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/F;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
 
-    invoke-direct {v0, p3}, Ljava/lang/String;-><init>([B)V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->getApplicationContext()Landroid/content/Context;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/j/f;->b(Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v0
+
+    new-instance v1, Ljava/lang/String;
+
+    invoke-direct {v1, p3}, Ljava/lang/String;-><init>([B)V
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/k/h;->a(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

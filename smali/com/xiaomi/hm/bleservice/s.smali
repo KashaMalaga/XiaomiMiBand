@@ -1,142 +1,43 @@
-.class final Lcom/xiaomi/hm/bleservice/s;
+.class Lcom/xiaomi/hm/bleservice/s;
 .super Ljava/lang/Object;
+
+# interfaces
+.implements Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$ILowBatteryCallback;
 
 
 # instance fields
 .field final synthetic a:Lcom/xiaomi/hm/bleservice/BLEService;
 
-.field private b:[I
-
 
 # direct methods
-.method public constructor <init>(Lcom/xiaomi/hm/bleservice/BLEService;I)V
-    .locals 1
+.method constructor <init>(Lcom/xiaomi/hm/bleservice/BLEService;)V
+    .locals 0
 
     iput-object p1, p0, Lcom/xiaomi/hm/bleservice/s;->a:Lcom/xiaomi/hm/bleservice/BLEService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/xiaomi/hm/bleservice/s;->b:[I
-
-    new-array v0, p2, [I
-
-    iput-object v0, p0, Lcom/xiaomi/hm/bleservice/s;->b:[I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(I)V
+.method public onLowBattery()V
     .locals 2
 
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/s;->b:[I
+    # getter for: Lcom/xiaomi/hm/bleservice/BLEService;->TAG:Ljava/lang/String;
+    invoke-static {}, Lcom/xiaomi/hm/bleservice/BLEService;->access$600()Ljava/lang/String;
 
-    array-length v0, v0
+    move-result-object v0
 
-    if-ge p1, v0, :cond_0
+    const-string v1, "onLowBattery"
 
-    if-gez p1, :cond_1
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/s;->a:Lcom/xiaomi/hm/bleservice/BLEService;
 
-    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw v0
-
-    :cond_1
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/s;->b:[I
-
-    aget v1, v0, p1
-
-    add-int/lit8 v1, v1, 0x1
-
-    aput v1, v0, p1
-
-    return-void
-.end method
-
-.method public a(II)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/s;->b:[I
-
-    array-length v0, v0
-
-    if-ge p1, v0, :cond_0
-
-    if-gez p1, :cond_1
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw v0
-
-    :cond_1
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/s;->b:[I
-
-    aput p2, v0, p1
-
-    return-void
-.end method
-
-.method public b(I)I
-    .locals 1
-
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/s;->b:[I
-
-    array-length v0, v0
-
-    if-ge p1, v0, :cond_0
-
-    if-gez p1, :cond_1
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw v0
-
-    :cond_1
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/s;->b:[I
-
-    aget v0, v0, p1
-
-    return v0
-.end method
-
-.method public c(I)V
-    .locals 2
-
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/s;->b:[I
-
-    array-length v0, v0
-
-    if-ge p1, v0, :cond_0
-
-    if-gez p1, :cond_1
-
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw v0
-
-    :cond_1
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/s;->b:[I
-
-    aget v1, v0, p1
-
-    add-int/lit8 v1, v1, -0x1
-
-    aput v1, v0, p1
+    # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->onWeightLowBattery()V
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->access$900(Lcom/xiaomi/hm/bleservice/BLEService;)V
 
     return-void
 .end method

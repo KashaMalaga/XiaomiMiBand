@@ -14,7 +14,9 @@
 
 
 # static fields
-.field public static final LASTEST_FW_VERSION:Ljava/lang/String; = "V0.1.8"
+.field public static final LASTEST_FW_VERSION:Ljava/lang/String; = "V0.2.9"
+
+.field public static final MERGE_TIME_DELTA:I = 0x7530
 
 .field public static final STATUS_CONNECTED:I = 0x2
 
@@ -39,6 +41,8 @@
 .field private mDeviceInfo:Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$WeightDeviceInfo;
 
 .field private mIsConnected:Z
+
+.field private mLowBatteryCB:Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$ILowBatteryCallback;
 
 .field private m_CharControlPoint:Landroid/bluetooth/BluetoothGattCharacteristic;
 
@@ -105,7 +109,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->c(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -137,6 +141,8 @@
 
     iput-object v1, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_measurementCB:Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$IMeasurementChangedCallback;
 
+    iput-object v1, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->mLowBatteryCB:Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$ILowBatteryCallback;
+
     invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v0
@@ -151,12 +157,20 @@
 
     iput-object v1, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->mDeviceInfo:Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$WeightDeviceInfo;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->d()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->d()V
 
     return-void
 .end method
 
-.method static synthetic access$000(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;)Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$IMeasurementChangedCallback;
+.method static synthetic access$000(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;)Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$ILowBatteryCallback;
+    .locals 1
+
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->mLowBatteryCB:Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$ILowBatteryCallback;
+
+    return-object v0
+.end method
+
+.method static synthetic access$100(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;)Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$IMeasurementChangedCallback;
     .locals 1
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_measurementCB:Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$IMeasurementChangedCallback;
@@ -164,7 +178,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$100(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;)[B
+.method static synthetic access$200(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;)[B
     .locals 1
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->cptValue:[B
@@ -172,7 +186,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$102(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;[B)[B
+.method static synthetic access$202(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;[B)[B
     .locals 0
 
     iput-object p1, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->cptValue:[B
@@ -180,7 +194,7 @@
     return-object p1
 .end method
 
-.method static synthetic access$200(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;Ljava/lang/String;Lcom/xiaomi/hm/bleservice/profile/IFirmwareUpgradeCb;)I
+.method static synthetic access$300(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;Ljava/lang/String;Lcom/xiaomi/hm/bleservice/profile/IFirmwareUpgradeCb;)I
     .locals 1
 
     invoke-direct {p0, p1, p2}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->upgradeFirmware(Ljava/lang/String;Lcom/xiaomi/hm/bleservice/profile/IFirmwareUpgradeCb;)I
@@ -190,7 +204,7 @@
     return v0
 .end method
 
-.method static synthetic access$300(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;)Landroid/bluetooth/BluetoothGattCharacteristic;
+.method static synthetic access$400(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;)Landroid/bluetooth/BluetoothGattCharacteristic;
     .locals 1
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_CharSyncControl:Landroid/bluetooth/BluetoothGattCharacteristic;
@@ -198,7 +212,7 @@
     return-object v0
 .end method
 
-.method static synthetic access$302(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;Landroid/bluetooth/BluetoothGattCharacteristic;)Landroid/bluetooth/BluetoothGattCharacteristic;
+.method static synthetic access$402(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;Landroid/bluetooth/BluetoothGattCharacteristic;)Landroid/bluetooth/BluetoothGattCharacteristic;
     .locals 0
 
     iput-object p1, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_CharSyncControl:Landroid/bluetooth/BluetoothGattCharacteristic;
@@ -206,7 +220,7 @@
     return-object p1
 .end method
 
-.method static synthetic access$400(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;)Landroid/bluetooth/BluetoothGattService;
+.method static synthetic access$500(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;)Landroid/bluetooth/BluetoothGattService;
     .locals 1
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->wsService:Landroid/bluetooth/BluetoothGattService;
@@ -410,7 +424,7 @@
 
     move-result-object v3
 
-    invoke-static {v1}, Lcom/xiaomi/hm/bleservice/v;->b([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/xiaomi/hm/bleservice/w;->b([B)Ljava/lang/String;
 
     move-result-object v4
 
@@ -422,7 +436,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v2, Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$PnP;
 
@@ -503,7 +517,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -537,7 +551,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "\\."
 
@@ -630,7 +644,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->d()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->d()V
 
     sget-object v0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->UUID_SERVICE_WEIGHT_SERVICE:Ljava/util/UUID;
 
@@ -638,7 +652,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/Object;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/Object;)V
 
     if-eqz v0, :cond_0
 
@@ -652,7 +666,19 @@
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->wsService:Landroid/bluetooth/BluetoothGattService;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/Object;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_CharControlPoint:Landroid/bluetooth/BluetoothGattCharacteristic;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_CharControlPoint:Landroid/bluetooth/BluetoothGattCharacteristic;
+
+    new-instance v3, Lcom/xiaomi/hm/bleservice/profile/WeightProfile$1;
+
+    invoke-direct {v3, p0}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile$1;-><init>(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;)V
+
+    invoke-virtual {p0, v0, v3}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->registerNotification(Landroid/bluetooth/BluetoothGattCharacteristic;Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$INotifyCallback;)Z
 
     :cond_0
     sget-object v0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->UUID_SERVICE_WEIGHT_SCALE_SERVICE:Ljava/util/UUID;
@@ -665,7 +691,7 @@
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->wsService:Landroid/bluetooth/BluetoothGattService;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/Object;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/Object;)V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->wsService:Landroid/bluetooth/BluetoothGattService;
 
@@ -688,7 +714,7 @@
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_CharMeasurement:Landroid/bluetooth/BluetoothGattCharacteristic;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/Object;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/Object;)V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_CharMeasurement:Landroid/bluetooth/BluetoothGattCharacteristic;
 
@@ -706,7 +732,7 @@
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_CharDateTime:Landroid/bluetooth/BluetoothGattCharacteristic;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/Object;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/Object;)V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_CharDateTime:Landroid/bluetooth/BluetoothGattCharacteristic;
 
@@ -725,7 +751,7 @@
     move v0, v1
 
     :goto_1
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->c(Z)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Z)V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_CharDateTime:Landroid/bluetooth/BluetoothGattCharacteristic;
 
@@ -740,7 +766,7 @@
     move v0, v1
 
     :goto_2
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->c(Z)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Z)V
 
     sget-object v0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->UUID_SERVICE_WEIGHT_DEVICE_SERVICE:Ljava/util/UUID;
 
@@ -748,7 +774,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/Object;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/Object;)V
 
     if-eqz v0, :cond_1
 
@@ -762,7 +788,7 @@
 
     iget-object v3, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_charDeviceSoftwareRevision:Landroid/bluetooth/BluetoothGattCharacteristic;
 
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/Object;)V
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/Object;)V
 
     iget-object v3, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_charDeviceSoftwareRevision:Landroid/bluetooth/BluetoothGattCharacteristic;
 
@@ -778,7 +804,7 @@
 
     iget-object v3, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_charDeviceSystemId:Landroid/bluetooth/BluetoothGattCharacteristic;
 
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/Object;)V
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/Object;)V
 
     iget-object v3, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_charDeviceSystemId:Landroid/bluetooth/BluetoothGattCharacteristic;
 
@@ -794,7 +820,7 @@
 
     iget-object v3, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_charDeviceSerialNumber:Landroid/bluetooth/BluetoothGattCharacteristic;
 
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/Object;)V
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/Object;)V
 
     sget-object v3, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->UUID_CHARACTERISTIC_DEVICE_PNP_ID:Ljava/util/UUID;
 
@@ -806,19 +832,19 @@
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_charDevicePnpId:Landroid/bluetooth/BluetoothGattCharacteristic;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/Object;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/Object;)V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_CharMeasurement:Landroid/bluetooth/BluetoothGattCharacteristic;
 
-    new-instance v3, Lcom/xiaomi/hm/bleservice/profile/WeightProfile$1;
+    new-instance v3, Lcom/xiaomi/hm/bleservice/profile/WeightProfile$2;
 
-    invoke-direct {v3, p0}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile$1;-><init>(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;)V
+    invoke-direct {v3, p0}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile$2;-><init>(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;)V
 
     invoke-virtual {p0, v0, v3}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->registerNotification(Landroid/bluetooth/BluetoothGattCharacteristic;Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$INotifyCallback;)Z
 
     move-result v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->c(Z)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Z)V
 
     if-eqz v0, :cond_1
 
@@ -860,7 +886,7 @@
 
     move-result-object v2
 
-    invoke-static {p0}, Lcom/xiaomi/hm/bleservice/v;->b([B)Ljava/lang/String;
+    invoke-static {p0}, Lcom/xiaomi/hm/bleservice/w;->b([B)Ljava/lang/String;
 
     move-result-object v4
 
@@ -872,7 +898,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     array-length v1, p0
 
@@ -891,11 +917,9 @@
 
     const-string v1, "wrong weight data,ignore!!!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v0, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
-
-    invoke-direct {v0}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;-><init>()V
+    const/4 v0, 0x0
 
     :goto_0
     return-object v0
@@ -915,17 +939,23 @@
 
     int-to-float v2, v1
 
-    aget-byte v1, p0, v0
+    aget-byte v1, p0, v9
 
-    sget v4, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->UNIT_MASK:I
+    and-int/lit16 v1, v1, 0xff
 
-    and-int/2addr v1, v4
+    const/16 v4, 0xff
 
-    if-nez v1, :cond_2
+    if-ne v1, v4, :cond_2
 
-    const/high16 v4, 0x43480000
+    aget-byte v1, p0, v3
 
-    div-float/2addr v2, v4
+    and-int/lit16 v1, v1, 0xff
+
+    const/16 v4, 0xf0
+
+    if-ne v1, v4, :cond_2
+
+    move v1, v0
 
     :goto_1
     new-instance v4, Ljava/util/GregorianCalendar;
@@ -940,7 +970,7 @@
 
     and-int/2addr v5, v6
 
-    if-nez v5, :cond_3
+    if-nez v5, :cond_4
 
     move v5, v0
 
@@ -951,7 +981,7 @@
 
     and-int/2addr v6, v7
 
-    if-nez v6, :cond_4
+    if-nez v6, :cond_5
 
     move v8, v0
 
@@ -1040,23 +1070,38 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     :cond_2
-    const/high16 v4, 0x42c80000
+    aget-byte v1, p0, v0
+
+    sget v4, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->UNIT_MASK:I
+
+    and-int/2addr v1, v4
+
+    if-nez v1, :cond_3
+
+    const/high16 v4, 0x43480000
 
     div-float/2addr v2, v4
 
     goto :goto_1
 
     :cond_3
+    const/high16 v4, 0x42c80000
+
+    div-float/2addr v2, v4
+
+    goto :goto_1
+
+    :cond_4
     move v5, v3
 
     goto :goto_2
 
-    :cond_4
+    :cond_5
     move v8, v3
 
     goto :goto_3
@@ -1065,7 +1110,7 @@
 .method private setDateTime(Ljava/util/Calendar;)Z
     .locals 11
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->d()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->d()V
 
     const/4 v0, 0x1
 
@@ -1121,7 +1166,7 @@
 
     const/4 v7, 0x0
 
-    invoke-static {v6, v7, v0}, Lcom/xiaomi/hm/bleservice/v;->a([BIS)V
+    invoke-static {v6, v7, v0}, Lcom/xiaomi/hm/bleservice/w;->a([BIS)V
 
     const/4 v0, 0x7
 
@@ -1159,7 +1204,7 @@
 
     move-result-object v8
 
-    invoke-static {v7, v8}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v7, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
 
@@ -1211,7 +1256,7 @@
 
     move-result-object v8
 
-    invoke-static {v7, v8}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v7, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_CharDateTime:Landroid/bluetooth/BluetoothGattCharacteristic;
 
@@ -1299,7 +1344,7 @@
 
     int-to-short v2, v2
 
-    invoke-static {v0, v1, v2}, Lcom/xiaomi/hm/bleservice/v;->a([BIS)V
+    invoke-static {v0, v1, v2}, Lcom/xiaomi/hm/bleservice/w;->a([BIS)V
 
     invoke-virtual {p0, p1, v0}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->write(Landroid/bluetooth/BluetoothGattCharacteristic;[B)Z
 
@@ -1325,7 +1370,7 @@
 
     const/16 v5, 0x1530
 
-    invoke-static {v3, v5}, Lcom/xiaomi/hm/bleservice/v;->a(Ljava/util/UUID;I)Ljava/util/UUID;
+    invoke-static {v3, v5}, Lcom/xiaomi/hm/bleservice/w;->a(Ljava/util/UUID;I)Ljava/util/UUID;
 
     move-result-object v5
 
@@ -1341,7 +1386,7 @@
 
     const-string v3, "service dfu is null!!!"
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v2, 0x1
 
@@ -1352,7 +1397,7 @@
     :cond_1
     const/16 v6, 0x1531
 
-    invoke-static {v3, v6}, Lcom/xiaomi/hm/bleservice/v;->a(Ljava/util/UUID;I)Ljava/util/UUID;
+    invoke-static {v3, v6}, Lcom/xiaomi/hm/bleservice/w;->a(Ljava/util/UUID;I)Ljava/util/UUID;
 
     move-result-object v6
 
@@ -1362,7 +1407,7 @@
 
     const/16 v6, 0x1532
 
-    invoke-static {v3, v6}, Lcom/xiaomi/hm/bleservice/v;->a(Ljava/util/UUID;I)Ljava/util/UUID;
+    invoke-static {v3, v6}, Lcom/xiaomi/hm/bleservice/w;->a(Ljava/util/UUID;I)Ljava/util/UUID;
 
     move-result-object v3
 
@@ -1379,18 +1424,18 @@
 
     const-string v3, "BluetoothGattCharacteristic cpt or pkt is null!!!"
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v2, 0x2
 
     goto :goto_0
 
     :cond_3
-    new-instance v3, Lcom/xiaomi/hm/bleservice/profile/WeightProfile$2;
+    new-instance v3, Lcom/xiaomi/hm/bleservice/profile/WeightProfile$3;
 
     move-object/from16 v0, p0
 
-    invoke-direct {v3, v0, v12}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile$2;-><init>(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;Landroid/bluetooth/BluetoothGattCharacteristic;)V
+    invoke-direct {v3, v0, v12}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile$3;-><init>(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;Landroid/bluetooth/BluetoothGattCharacteristic;)V
 
     move-object/from16 v0, p0
 
@@ -1404,7 +1449,7 @@
 
     const-string v3, "Fail subscribe to DFU control point!"
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v2, 0x3
 
@@ -1448,7 +1493,7 @@
 
     const/4 v6, 0x0
 
-    invoke-static {v5, v6, v4}, Lcom/xiaomi/hm/bleservice/v;->a([BII)V
+    invoke-static {v5, v6, v4}, Lcom/xiaomi/hm/bleservice/w;->a([BII)V
 
     shr-int/lit8 v14, v4, 0x8
 
@@ -1542,7 +1587,7 @@
 
     iget-object v5, v0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->cptValue:[B
 
-    invoke-static {v5}, Lcom/xiaomi/hm/bleservice/v;->b([B)Ljava/lang/String;
+    invoke-static {v5}, Lcom/xiaomi/hm/bleservice/w;->b([B)Ljava/lang/String;
 
     move-result-object v5
 
@@ -1570,7 +1615,7 @@
 
     move-result-object v4
 
-    invoke-static {v2, v4}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_c
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
@@ -1601,7 +1646,7 @@
 
     const-string v4, "Fail to operate on the firmware file"
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -1635,7 +1680,7 @@
 
     const-string v4, "write DFU_OPCODE_TRANSFER failed!!!"
 
-    invoke-static {v2, v4}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_c
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
@@ -1666,7 +1711,7 @@
 
     const-string v4, "Fail to operate on the firmware file"
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_2
 
@@ -1729,7 +1774,7 @@
 
     move-result-object v15
 
-    invoke-static {v10, v15}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v10, v15}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -1760,7 +1805,7 @@
 
     const-string v9, "Insert write request to clear GKI buffer!"
 
-    invoke-static {v6, v9}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v6, v9}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v6, 0x1
 
@@ -1784,7 +1829,7 @@
 
     const-string v4, "write DFU_OPCODE_DUMMY failed!!!"
 
-    invoke-static {v2, v4}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object/from16 v0, p0
 
@@ -1819,7 +1864,7 @@
 
     const-string v4, "Fail to operate on the firmware file"
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_4
 
@@ -1919,7 +1964,7 @@
 
     iget-object v5, v0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->cptValue:[B
 
-    invoke-static {v5}, Lcom/xiaomi/hm/bleservice/v;->b([B)Ljava/lang/String;
+    invoke-static {v5}, Lcom/xiaomi/hm/bleservice/w;->b([B)Ljava/lang/String;
 
     move-result-object v5
 
@@ -1931,7 +1976,7 @@
 
     move-result-object v4
 
-    invoke-static {v2, v4}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object/from16 v0, p0
 
@@ -1963,7 +2008,7 @@
     const/4 v4, 0x0
 
     :try_start_9
-    invoke-static {v10, v5, v4, v9}, Lcom/xiaomi/hm/bleservice/v;->a(I[BII)I
+    invoke-static {v10, v5, v4, v9}, Lcom/xiaomi/hm/bleservice/w;->a(I[BII)I
 
     move-result v10
 
@@ -1996,7 +2041,7 @@
 
     const-string v4, "write firmware data failed!!!"
 
-    invoke-static {v2, v4}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object/from16 v0, p0
 
@@ -2031,7 +2076,7 @@
 
     const-string v4, "Fail to operate on the firmware file"
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_7
 
@@ -2075,7 +2120,7 @@
 
     move-object/from16 v0, v17
 
-    invoke-static {v8, v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v8, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p2, :cond_23
 
@@ -2103,7 +2148,7 @@
 
     const-string v4, "Fail to operate on the firmware file"
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_5
 
@@ -2141,7 +2186,7 @@
 
     move-result-object v5
 
-    invoke-static {v4, v5}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v4, 0x3
 
@@ -2161,7 +2206,7 @@
 
     int-to-short v6, v6
 
-    invoke-static {v4, v5, v6}, Lcom/xiaomi/hm/bleservice/v;->a([BIS)V
+    invoke-static {v4, v5, v6}, Lcom/xiaomi/hm/bleservice/w;->a([BIS)V
 
     const/4 v5, 0x0
 
@@ -2253,7 +2298,7 @@
 
     iget-object v5, v0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->cptValue:[B
 
-    invoke-static {v5}, Lcom/xiaomi/hm/bleservice/v;->b([B)Ljava/lang/String;
+    invoke-static {v5}, Lcom/xiaomi/hm/bleservice/w;->b([B)Ljava/lang/String;
 
     move-result-object v5
 
@@ -2265,7 +2310,7 @@
 
     move-result-object v4
 
-    invoke-static {v2, v4}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v2, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
 
@@ -2305,7 +2350,7 @@
 
     move-result-object v4
 
-    invoke-static {v2, v4}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_c
     .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_c
     .catchall {:try_start_c .. :try_end_c} :catchall_1
@@ -2336,7 +2381,7 @@
 
     const-string v4, "Fail to operate on the firmware file"
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_8
 
@@ -2346,7 +2391,7 @@
 
     const-string v5, "reboot.................."
 
-    invoke-static {v4, v5}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v4, 0x0
 
@@ -2376,7 +2421,7 @@
 
     const-string v4, "Fail to issue restart command!"
 
-    invoke-static {v2, v4}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_e
     .catch Ljava/lang/Exception; {:try_start_e .. :try_end_e} :catch_c
     .catchall {:try_start_e .. :try_end_e} :catchall_1
@@ -2407,7 +2452,7 @@
 
     const-string v4, "Fail to operate on the firmware file"
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_9
 
@@ -2481,7 +2526,7 @@
 
     const-string v4, "Fail to wait restart command response!"
 
-    invoke-static {v2, v4}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_10
     .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_10} :catch_c
     .catchall {:try_start_10 .. :try_end_10} :catchall_1
@@ -2512,7 +2557,7 @@
 
     const-string v4, "Fail to operate on the firmware file"
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_a
 
@@ -2549,7 +2594,7 @@
 
     const-string v4, "Fail to operate on the firmware file"
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_b
 
@@ -2564,7 +2609,7 @@
 
     const-string v4, "exception happend!!"
 
-    invoke-static {v2, v4}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_14
     .catchall {:try_start_14 .. :try_end_14} :catchall_1
 
@@ -2594,7 +2639,7 @@
 
     const-string v4, "Fail to operate on the firmware file"
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_d
 
@@ -2625,7 +2670,7 @@
 
     const-string v4, "Fail to operate on the firmware file"
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_f
 
@@ -2675,6 +2720,14 @@
     return-void
 .end method
 
+.method public addLowBatteryCallback(Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$ILowBatteryCallback;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->mLowBatteryCB:Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$ILowBatteryCallback;
+
+    return-void
+.end method
+
 .method public addMeasurementChangedCallback(Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$IMeasurementChangedCallback;)V
     .locals 0
 
@@ -2700,7 +2753,7 @@
 .method public final cleanup()V
     .locals 0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->d()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->d()V
 
     invoke-super {p0}, Lcom/xiaomi/hm/bleservice/gatt/GattPeripheral;->cleanup()V
 
@@ -2728,7 +2781,7 @@
 
     const/4 v1, 0x1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->d()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->d()V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_CharDateTime:Landroid/bluetooth/BluetoothGattCharacteristic;
 
@@ -2740,7 +2793,9 @@
 
     array-length v0, v3
 
-    if-nez v0, :cond_1
+    const/16 v4, 0xa
+
+    if-eq v0, v4, :cond_1
 
     :cond_0
     const/4 v0, 0x0
@@ -2758,7 +2813,7 @@
     move v0, v1
 
     :goto_1
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->c(Z)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Z)V
 
     new-instance v0, Ljava/util/GregorianCalendar;
 
@@ -2823,37 +2878,37 @@
 .end method
 
 .method public final init()Z
-    .locals 4
+    .locals 7
 
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->d()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->d()V
 
     invoke-direct {p0}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->initCharacteristics()Z
 
     move-result v2
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/v;->c(Z)V
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/x;->a(Z)V
 
     if-nez v2, :cond_2
 
     :cond_0
     :goto_0
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_5
 
     const-string v1, "================================================="
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/v;->c(Ljava/lang/String;)V
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
 
     const-string v1, "============= INITIALIZATION SUCCESS ============"
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/v;->c(Ljava/lang/String;)V
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
 
     const-string v1, "================================================="
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/v;->c(Ljava/lang/String;)V
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;)V
 
     iput-boolean v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->mIsConnected:Z
 
@@ -2882,10 +2937,47 @@
 
     move-result v2
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/v;->c(Z)V
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/x;->a(Z)V
 
     if-eqz v2, :cond_0
 
+    invoke-virtual {p0}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->getDateTime()Ljava/util/Calendar;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_3
+
+    sget-object v4, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->TAG:Ljava/lang/String;
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v6, "old ble rtc date:"
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v3}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/util/Date;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v4, v3}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_3
     invoke-direct {p0}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->getDeviceInfo()Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$WeightDeviceInfo;
 
     move-result-object v3
@@ -2894,7 +2986,7 @@
 
     iget-object v3, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->mDeviceInfo:Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$WeightDeviceInfo;
 
-    if-eqz v3, :cond_3
+    if-eqz v3, :cond_4
 
     iget-object v3, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->mDeviceInfo:Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$WeightDeviceInfo;
 
@@ -2904,29 +2996,29 @@
 
     if-nez v3, :cond_0
 
-    :cond_3
+    :cond_4
     move v2, v1
 
     goto :goto_0
 
-    :cond_4
+    :cond_5
     const-string v0, "================================================="
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->e(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;)V
 
     const-string v0, "============= INITIALIZATION FAILED ============="
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->e(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;)V
 
     const-string v0, "================================================="
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->e(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;)V
 
     iput-boolean v1, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->mIsConnected:Z
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_InitCB:Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$IInitializationCallback;
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->m_InitCB:Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$IInitializationCallback;
 
@@ -2936,7 +3028,7 @@
 
     invoke-interface {v0, v2}, Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$IInitializationCallback;->onFailed(Landroid/bluetooth/BluetoothDevice;)V
 
-    :cond_5
+    :cond_6
     move v0, v1
 
     goto :goto_1
@@ -2981,7 +3073,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->getState()Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$STATE;
 
@@ -3069,13 +3161,13 @@
 
     const-string v1, "runFwUpgradeTask"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->fixedThreadPool:Ljava/util/concurrent/ExecutorService;
 
-    new-instance v1, Lcom/xiaomi/hm/bleservice/profile/WeightProfile$3;
+    new-instance v1, Lcom/xiaomi/hm/bleservice/profile/WeightProfile$4;
 
-    invoke-direct {v1, p0, p2, p1}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile$3;-><init>(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;Lcom/xiaomi/hm/bleservice/profile/IFirmwareUpgradeCb;Ljava/lang/String;)V
+    invoke-direct {v1, p0, p2, p1}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile$4;-><init>(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;Lcom/xiaomi/hm/bleservice/profile/IFirmwareUpgradeCb;Ljava/lang/String;)V
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
 
@@ -3089,7 +3181,7 @@
 
     const-string v1, "runSyncDataTask"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-wide/16 v0, -0x1
 
@@ -3101,7 +3193,7 @@
 
     const-string v1, "invalid uid!!!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -3109,9 +3201,9 @@
     :cond_0
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->fixedThreadPool:Ljava/util/concurrent/ExecutorService;
 
-    new-instance v1, Lcom/xiaomi/hm/bleservice/profile/WeightProfile$4;
+    new-instance v1, Lcom/xiaomi/hm/bleservice/profile/WeightProfile$5;
 
-    invoke-direct {v1, p0, p1, p2, p3}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile$4;-><init>(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;Lcom/xiaomi/hm/bleservice/profile/ISyncDataCb;J)V
+    invoke-direct {v1, p0, p1, p2, p3}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile$5;-><init>(Lcom/xiaomi/hm/bleservice/profile/WeightProfile;Lcom/xiaomi/hm/bleservice/profile/ISyncDataCb;J)V
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
 

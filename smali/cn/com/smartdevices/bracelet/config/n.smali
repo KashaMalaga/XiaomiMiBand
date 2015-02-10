@@ -4,20 +4,8 @@
 
 # instance fields
 .field public final a:Ljava/lang/Boolean;
-    .annotation runtime Lcom/d/a/a/b;
+    .annotation runtime Lcom/c/a/a/b;
         a = "enable"
-    .end annotation
-.end field
-
-.field public final b:Ljava/lang/String;
-    .annotation runtime Lcom/d/a/a/b;
-        a = "appId"
-    .end annotation
-.end field
-
-.field public final c:Ljava/lang/String;
-    .annotation runtime Lcom/d/a/a/b;
-        a = "appKey"
     .end annotation
 .end field
 
@@ -35,14 +23,6 @@
     move-result-object v0
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/config/n;->a:Ljava/lang/Boolean;
-
-    const-string v0, "2882303761517163841"
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/config/n;->b:Ljava/lang/String;
-
-    const-string v0, "5171716313841"
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/config/n;->c:Ljava/lang/String;
 
     return-void
 .end method

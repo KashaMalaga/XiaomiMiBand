@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/weight/family/f;
+.implements Lcom/tencent/tauth/IUiListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/dK;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/dK;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dM;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dM;->a:Lcn/com/smartdevices/bracelet/ui/dK;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,14 +22,20 @@
 
 
 # virtual methods
-.method public a(Lcn/com/smartdevices/bracelet/weight/UserInfo;)V
-    .locals 2
+.method public onCancel()V
+    .locals 0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dM;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+    return-void
+.end method
 
-    const/4 v1, 0x1
+.method public onComplete(Ljava/lang/Object;)V
+    .locals 0
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->a(Lcn/com/smartdevices/bracelet/ui/StatisticFragment;I)V
+    return-void
+.end method
+
+.method public onError(Lcom/tencent/tauth/UiError;)V
+    .locals 0
 
     return-void
 .end method

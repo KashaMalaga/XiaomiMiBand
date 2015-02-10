@@ -426,7 +426,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/G;->f:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
-    const v2, 0x7f0702c4
+    const v2, 0x7f0802f2
 
     new-array v3, v3, [Ljava/lang/Object;
 
@@ -502,11 +502,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/c;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/lab/c;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/d;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/lab/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/c;->c()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/d;->c()V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/G;->f:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 

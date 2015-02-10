@@ -1,5 +1,5 @@
 .class public Lcn/com/smartdevices/bracelet/a/n;
-.super Lcn/com/smartdevices/bracelet/a/v;
+.super Lcn/com/smartdevices/bracelet/a/x;
 
 
 # static fields
@@ -26,7 +26,7 @@
 .method public constructor <init>(Lcn/com/smartdevices/bracelet/a/b;I)V
     .locals 1
 
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/a/v;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/a/x;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
 
     const/16 v0, 0x606
 
@@ -48,7 +48,7 @@
 .method public constructor <init>(Lcn/com/smartdevices/bracelet/a/b;IB)V
     .locals 1
 
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/a/v;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/a/x;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
 
     const/16 v0, 0x606
 
@@ -137,7 +137,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/a/n;->m:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 

@@ -1,121 +1,55 @@
 .class Lcn/com/smartdevices/bracelet/ui/cz;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.super Lcom/d/a/a/h;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cz;->a:Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cz;->a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/d/a/a/h;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onSuccess(I[Lorg/apache/http/Header;[B)V
     .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cz;->a:Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
+    if-eqz p3, :cond_0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->e(Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;)V
+    new-instance v0, Ljava/lang/String;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cz;->a:Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
+    invoke-direct {v0, p3}, Ljava/lang/String;-><init>([B)V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->j(Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;)I
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cz;->a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
 
-    move-result v0
-
-    const/4 v1, -0x1
-
-    if-eq v0, v1, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cz;->a:Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->k(Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;)V
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->f()V
-
-    invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
-
-    move-result-object v0
-
-    new-instance v1, Lcn/com/smartdevices/bracelet/eventbus/EventDevicesBindStateChanged;
-
-    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/eventbus/EventDevicesBindStateChanged;-><init>()V
-
-    invoke-virtual {v0, v1}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
-
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cz;->a:Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
-
-    invoke-static {v0, p3}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->b(Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;I)I
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cz;->a:Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cz;->a:Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->a(Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;)Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/model/BtDevice;
-
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/model/BtDevice;->device:Landroid/bluetooth/BluetoothDevice;
-
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->a(Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;Landroid/bluetooth/BluetoothDevice;)Landroid/bluetooth/BluetoothDevice;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cz;->a:Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cz;->a:Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->i(Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;)Landroid/bluetooth/BluetoothDevice;
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->b(Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;Landroid/bluetooth/BluetoothDevice;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/k/i;->a(Landroid/content/Context;Ljava/lang/String;)Lcn/com/smartdevices/bracelet/k/i;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cz;->a:Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
+    move-result-object v0
 
-    const/4 v1, 0x0
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/k/i;->c()Z
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->b(Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;Z)Z
+    move-result v0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cz;->a:Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
+    if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cz;->a:Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->f(Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;)Z
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->a(Z)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cz;->a:Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->applyStatusBarTintAuto()V
-
+    :cond_0
     return-void
 .end method

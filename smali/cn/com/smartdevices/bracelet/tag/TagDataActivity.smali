@@ -3,7 +3,7 @@
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
-.implements Lcn/com/smartdevices/bracelet/tag/a/i;
+.implements Lcn/com/smartdevices/bracelet/tag/a/j;
 .implements Lcn/com/smartdevices/bracelet/tag/b;
 
 
@@ -54,9 +54,9 @@
 
 .field private x:Landroid/content/BroadcastReceiver;
 
-.field private y:Lcn/com/smartdevices/bracelet/ui/W;
+.field private y:Lcn/com/smartdevices/bracelet/ui/Y;
 
-.field private z:Lcn/com/smartdevices/bracelet/ui/W;
+.field private z:Lcn/com/smartdevices/bracelet/ui/Y;
 
 
 # direct methods
@@ -97,13 +97,13 @@
 
     invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/tag/f;-><init>(Lcn/com/smartdevices/bracelet/tag/TagDataActivity;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->y:Lcn/com/smartdevices/bracelet/ui/W;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->y:Lcn/com/smartdevices/bracelet/ui/Y;
 
     new-instance v0, Lcn/com/smartdevices/bracelet/tag/g;
 
     invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/tag/g;-><init>(Lcn/com/smartdevices/bracelet/tag/TagDataActivity;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->z:Lcn/com/smartdevices/bracelet/ui/W;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->z:Lcn/com/smartdevices/bracelet/ui/Y;
 
     return-void
 .end method
@@ -147,13 +147,13 @@
 .end method
 
 .method private a()V
-    .locals 4
+    .locals 5
 
-    const/4 v3, 0x1
+    const/4 v4, 0x1
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    const/16 v1, 0x8
+    const/16 v2, 0x8
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->j:Lcn/com/smartdevices/bracelet/tag/a/c;
 
@@ -163,7 +163,7 @@
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->i:I
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/B;->a(Landroid/app/Activity;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/E;->a(Landroid/app/Activity;)V
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->t:Z
 
@@ -181,9 +181,9 @@
     return-void
 
     :pswitch_1
-    const v0, 0x7f070349
+    const v0, 0x7f08037d
 
-    invoke-static {p0, v0, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
+    invoke-static {p0, v0, v3}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
     move-result-object v0
 
@@ -196,34 +196,35 @@
 
     packed-switch v0, :pswitch_data_1
 
+    :pswitch_2
     goto :goto_1
 
-    :pswitch_2
+    :pswitch_3
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->f()V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->l:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->q:Landroid/widget/LinearLayout;
 
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->r:Landroid/widget/RelativeLayout;
 
-    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->n:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->s:Landroid/widget/RelativeLayout;
 
-    invoke-virtual {v0, v2}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+    invoke-virtual {v0, v3}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->o:Landroid/widget/Button;
 
-    invoke-virtual {v0, v3}, Landroid/widget/Button;->setEnabled(Z)V
+    invoke-virtual {v0, v4}, Landroid/widget/Button;->setEnabled(Z)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->o:Landroid/widget/Button;
 
@@ -233,14 +234,16 @@
 
     goto :goto_1
 
-    :pswitch_3
+    :pswitch_4
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->f()V
+
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->l:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->q:Landroid/widget/LinearLayout;
 
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->r:Landroid/widget/RelativeLayout;
 
@@ -248,15 +251,54 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->n:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+    const v1, 0x7f080383
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->n:Landroid/widget/TextView;
+
+    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->s:Landroid/widget/RelativeLayout;
 
-    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->o:Landroid/widget/Button;
 
-    invoke-virtual {v0, v2}, Landroid/widget/Button;->setEnabled(Z)V
+    invoke-virtual {v0, v4}, Landroid/widget/Button;->setEnabled(Z)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->o:Landroid/widget/Button;
+
+    const-string v1, "\u5f00\u59cb"
+
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
+
+    goto :goto_1
+
+    :pswitch_5
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->l:Landroid/widget/TextView;
+
+    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->q:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->r:Landroid/widget/RelativeLayout;
+
+    invoke-virtual {v0, v3}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->n:Landroid/widget/TextView;
+
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->s:Landroid/widget/RelativeLayout;
+
+    invoke-virtual {v0, v2}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->o:Landroid/widget/Button;
+
+    invoke-virtual {v0, v3}, Landroid/widget/Button;->setEnabled(Z)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->o:Landroid/widget/Button;
 
@@ -264,32 +306,32 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    goto :goto_1
+    goto/16 :goto_1
 
-    :pswitch_4
+    :pswitch_6
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->l:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->q:Landroid/widget/LinearLayout;
 
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->r:Landroid/widget/RelativeLayout;
 
-    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->n:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->s:Landroid/widget/RelativeLayout;
 
-    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->o:Landroid/widget/Button;
 
-    invoke-virtual {v0, v3}, Landroid/widget/Button;->setEnabled(Z)V
+    invoke-virtual {v0, v4}, Landroid/widget/Button;->setEnabled(Z)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->o:Landroid/widget/Button;
 
@@ -299,30 +341,30 @@
 
     goto/16 :goto_1
 
-    :pswitch_5
+    :pswitch_7
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->l:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->q:Landroid/widget/LinearLayout;
 
-    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    invoke-virtual {v0, v3}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->r:Landroid/widget/RelativeLayout;
 
-    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->n:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->s:Landroid/widget/RelativeLayout;
 
-    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->o:Landroid/widget/Button;
 
-    invoke-virtual {v0, v3}, Landroid/widget/Button;->setEnabled(Z)V
+    invoke-virtual {v0, v4}, Landroid/widget/Button;->setEnabled(Z)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->o:Landroid/widget/Button;
 
@@ -332,32 +374,38 @@
 
     goto/16 :goto_1
 
-    :pswitch_6
+    :pswitch_8
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->f()V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->l:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->q:Landroid/widget/LinearLayout;
 
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->r:Landroid/widget/RelativeLayout;
 
-    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->n:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->n:Landroid/widget/TextView;
+
+    const v1, 0x7f080007
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->s:Landroid/widget/RelativeLayout;
 
-    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->o:Landroid/widget/Button;
 
-    invoke-virtual {v0, v3}, Landroid/widget/Button;->setEnabled(Z)V
+    invoke-virtual {v0, v4}, Landroid/widget/Button;->setEnabled(Z)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->o:Landroid/widget/Button;
 
@@ -374,15 +422,19 @@
         :pswitch_0
         :pswitch_1
         :pswitch_1
+        :pswitch_0
+        :pswitch_1
     .end packed-switch
 
     :pswitch_data_1
     .packed-switch 0x0
-        :pswitch_2
         :pswitch_3
-        :pswitch_4
         :pswitch_5
         :pswitch_6
+        :pswitch_7
+        :pswitch_8
+        :pswitch_2
+        :pswitch_4
     .end packed-switch
 .end method
 
@@ -428,6 +480,19 @@
     return-void
 
     :pswitch_1
+    invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->isEnabled()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->enable()Z
+
+    :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->j:Lcn/com/smartdevices/bracelet/tag/a/c;
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/tag/a/c;->g()V
@@ -444,12 +509,16 @@
 
     goto :goto_0
 
+    nop
+
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
         :pswitch_0
         :pswitch_2
         :pswitch_3
+        :pswitch_2
+        :pswitch_0
         :pswitch_2
     .end packed-switch
 .end method
@@ -473,7 +542,7 @@
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    const v1, 0x7f070347
+    const v1, 0x7f08037b
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->getString(I)Ljava/lang/String;
 
@@ -487,9 +556,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->y:Lcn/com/smartdevices/bracelet/ui/W;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->y:Lcn/com/smartdevices/bracelet/ui/Y;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/a;->a(Lcn/com/smartdevices/bracelet/ui/W;)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/a;->a(Lcn/com/smartdevices/bracelet/ui/Y;)V
 
     return-void
 .end method
@@ -527,7 +596,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/app/FragmentTransaction;->setCustomAnimations(II)Landroid/app/FragmentTransaction;
 
-    const v1, 0x7f080139
+    const v1, 0x7f070136
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->u:Landroid/app/Fragment;
 
@@ -617,7 +686,7 @@
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    const v1, 0x7f070347
+    const v1, 0x7f08037b
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->getString(I)Ljava/lang/String;
 
@@ -631,9 +700,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->z:Lcn/com/smartdevices/bracelet/ui/W;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->z:Lcn/com/smartdevices/bracelet/ui/Y;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/a;->a(Lcn/com/smartdevices/bracelet/ui/W;)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/a;->a(Lcn/com/smartdevices/bracelet/ui/Y;)V
 
     const/4 v0, 0x0
 
@@ -734,7 +803,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->o:Landroid/widget/Button;
 
@@ -793,8 +862,8 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f080051 -> :sswitch_1
-        0x7f080133 -> :sswitch_0
+        0x7f070035 -> :sswitch_1
+        0x7f070130 -> :sswitch_0
     .end sparse-switch
 .end method
 
@@ -807,11 +876,17 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
+    const-string v0, "TagDataActivity"
+
+    const-string v1, "onCreate"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;Ljava/lang/String;)V
+
     const v0, 0x7f030034
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->setContentView(I)V
 
-    const v0, 0x7f08012d
+    const v0, 0x7f07012a
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->findViewById(I)Landroid/view/View;
 
@@ -821,7 +896,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->k:Landroid/widget/TextView;
 
-    const v0, 0x7f08002e
+    const v0, 0x7f070032
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->findViewById(I)Landroid/view/View;
 
@@ -831,7 +906,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->p:Landroid/widget/ImageView;
 
-    const v0, 0x7f08012e
+    const v0, 0x7f07012b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->findViewById(I)Landroid/view/View;
 
@@ -841,7 +916,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->l:Landroid/widget/TextView;
 
-    const v0, 0x7f08012f
+    const v0, 0x7f07012c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->findViewById(I)Landroid/view/View;
 
@@ -851,7 +926,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->q:Landroid/widget/LinearLayout;
 
-    const v0, 0x7f080131
+    const v0, 0x7f07012e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->findViewById(I)Landroid/view/View;
 
@@ -859,7 +934,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f080130
+    const v1, 0x7f07012d
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->findViewById(I)Landroid/view/View;
 
@@ -869,7 +944,7 @@
 
     iput-object v1, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->m:Landroid/widget/TextView;
 
-    const v1, 0x7f080132
+    const v1, 0x7f07012f
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->findViewById(I)Landroid/view/View;
 
@@ -879,7 +954,7 @@
 
     iput-object v1, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->r:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f080135
+    const v1, 0x7f070132
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->findViewById(I)Landroid/view/View;
 
@@ -889,7 +964,7 @@
 
     iput-object v1, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->s:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f080138
+    const v1, 0x7f070135
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->findViewById(I)Landroid/view/View;
 
@@ -899,7 +974,7 @@
 
     iput-object v1, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->n:Landroid/widget/TextView;
 
-    const v1, 0x7f080133
+    const v1, 0x7f070130
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->findViewById(I)Landroid/view/View;
 
@@ -956,7 +1031,7 @@
 
     if-eqz v3, :cond_1
 
-    const v0, 0x7f070352
+    const v0, 0x7f080389
 
     invoke-static {p0, v0, v6}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -974,7 +1049,7 @@
 
     invoke-virtual {v3, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v3, 0x7f080051
+    const v3, 0x7f070035
 
     invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->findViewById(I)Landroid/view/View;
 
@@ -996,7 +1071,7 @@
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->l:Landroid/widget/TextView;
 
-    const v4, 0x7f070353
+    const v4, 0x7f080001
 
     new-array v5, v7, [Ljava/lang/Object;
 
@@ -1008,7 +1083,7 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v3, 0x7f070354
+    const v3, 0x7f080002
 
     new-array v4, v7, [Ljava/lang/Object;
 
@@ -1016,9 +1091,9 @@
 
     invoke-virtual {p0, v3, v4}, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v3
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     new-instance v0, Lcn/com/smartdevices/bracelet/tag/a/c;
 
@@ -1028,7 +1103,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->j:Lcn/com/smartdevices/bracelet/tag/a/c;
 
-    invoke-virtual {v0, p0}, Lcn/com/smartdevices/bracelet/tag/a/c;->a(Lcn/com/smartdevices/bracelet/tag/a/i;)V
+    invoke-virtual {v0, p0}, Lcn/com/smartdevices/bracelet/tag/a/c;->a(Lcn/com/smartdevices/bracelet/tag/a/j;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->j:Lcn/com/smartdevices/bracelet/tag/a/c;
 
@@ -1036,13 +1111,23 @@
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->a()V
 
+    const-string v0, "TagDataEnter"
+
+    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+
     goto :goto_0
 .end method
 
 .method protected onDestroy()V
-    .locals 1
+    .locals 2
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onDestroy()V
+
+    const-string v0, "TagDataActivity"
+
+    const-string v1, "onDestroy"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->j:Lcn/com/smartdevices/bracelet/tag/a/c;
 
@@ -1062,11 +1147,25 @@
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onPause()V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/A;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->a(Landroid/content/Context;)V
 
     const-string v0, "PageBehaviorTagData"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/A;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->a(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method protected onRestoreInstanceState(Landroid/os/Bundle;)V
+    .locals 2
+
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onRestoreInstanceState(Landroid/os/Bundle;)V
+
+    const-string v0, "TagDataActivity"
+
+    const-string v1, "onRestoreInstanceState"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1076,11 +1175,25 @@
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onResume()V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;)V
 
     const-string v0, "PageBehaviorTagData"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/A;->c(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->c(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method protected onSaveInstanceState(Landroid/os/Bundle;)V
+    .locals 2
+
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onSaveInstanceState(Landroid/os/Bundle;)V
+
+    const-string v0, "TagDataActivity"
+
+    const-string v1, "onSaveInstanceState"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

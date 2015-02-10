@@ -7,6 +7,10 @@
 
 .field private static b:F
 
+.field private static c:F
+
+.field private static d:Z
+
 
 # direct methods
 .method static constructor <clinit>()V
@@ -17,6 +21,12 @@
     sput v0, Lcn/com/smartdevices/bracelet/chart/c/t;->a:F
 
     sput v0, Lcn/com/smartdevices/bracelet/chart/c/t;->b:F
+
+    sput v0, Lcn/com/smartdevices/bracelet/chart/c/t;->c:F
+
+    const/4 v0, 0x0
+
+    sput-boolean v0, Lcn/com/smartdevices/bracelet/chart/c/t;->d:Z
 
     return-void
 .end method
@@ -143,9 +153,9 @@
 .method public static a(Landroid/content/Context;)F
     .locals 2
 
-    sget v0, Lcn/com/smartdevices/bracelet/chart/c/t;->a:F
-
     const/4 v1, 0x0
+
+    sget v0, Lcn/com/smartdevices/bracelet/chart/c/t;->a:F
 
     cmpg-float v0, v0, v1
 
@@ -162,6 +172,16 @@
     iget v0, v0, Landroid/util/DisplayMetrics;->density:F
 
     sput v0, Lcn/com/smartdevices/bracelet/chart/c/t;->a:F
+
+    sget v0, Lcn/com/smartdevices/bracelet/chart/c/t;->c:F
+
+    cmpg-float v0, v0, v1
+
+    if-gez v0, :cond_0
+
+    sget v0, Lcn/com/smartdevices/bracelet/chart/c/t;->a:F
+
+    sput v0, Lcn/com/smartdevices/bracelet/chart/c/t;->c:F
 
     :cond_0
     sget v0, Lcn/com/smartdevices/bracelet/chart/c/t;->a:F
@@ -415,6 +435,8 @@
     sput v3, Lcn/com/smartdevices/bracelet/chart/c/t;->a:F
 
     sput v3, Lcn/com/smartdevices/bracelet/chart/c/t;->b:F
+
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/chart/c/t;->a(Landroid/content/Context;)F
 
     return-void
 .end method
@@ -757,4 +779,65 @@
     sget v0, Lcn/com/smartdevices/bracelet/chart/c/t;->b:F
 
     return v0
+.end method
+
+.method public static c(Landroid/content/Context;)F
+    .locals 2
+
+    sget v0, Lcn/com/smartdevices/bracelet/chart/c/t;->c:F
+
+    const/4 v1, 0x0
+
+    cmpg-float v0, v0, v1
+
+    if-gez v0, :cond_0
+
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/chart/c/t;->a(Landroid/content/Context;)F
+
+    :cond_0
+    sget v0, Lcn/com/smartdevices/bracelet/chart/c/t;->c:F
+
+    return v0
+.end method
+
+.method public static c()Z
+    .locals 1
+
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/chart/c/t;->d:Z
+
+    return v0
+.end method
+
+.method public static d(Landroid/content/Context;)Z
+    .locals 2
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/E;->h()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/chart/c/t;->c(Landroid/content/Context;)F
+
+    move-result v0
+
+    const/high16 v1, 0x40400000
+
+    cmpl-float v0, v0, v1
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    sput-boolean v0, Lcn/com/smartdevices/bracelet/chart/c/t;->d:Z
+
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/chart/c/t;->d:Z
+
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

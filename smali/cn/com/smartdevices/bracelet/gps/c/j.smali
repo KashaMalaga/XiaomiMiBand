@@ -108,9 +108,38 @@
 
     move-result v1
 
-    div-int/lit16 v2, v1, 0x3e8
+    div-int/lit16 v2, v1, 0x2710
 
     if-lez v2, :cond_0
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/c/j;->a:Ljava/util/HashMap;
+
+    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v3, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/c/j;->a:Ljava/util/HashMap;
+
+    const-string v3, "10000"
+
+    invoke-virtual {v2, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    rem-int/lit16 v2, v1, 0x2710
+
+    div-int/lit16 v2, v2, 0x3e8
+
+    if-lez v2, :cond_1
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/c/j;->a:Ljava/util/HashMap;
 
@@ -134,12 +163,12 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    :cond_0
+    :cond_1
     rem-int/lit16 v2, v1, 0x3e8
 
     div-int/lit8 v2, v2, 0x64
 
-    if-lez v2, :cond_1
+    if-lez v2, :cond_2
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/c/j;->a:Ljava/util/HashMap;
 
@@ -163,15 +192,54 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    :cond_1
+    :cond_2
     rem-int/lit16 v2, v1, 0x3e8
 
     rem-int/lit8 v2, v2, 0x64
 
     div-int/lit8 v2, v2, 0xa
 
-    if-lez v2, :cond_2
+    rem-int/lit16 v1, v1, 0x3e8
 
+    rem-int/lit8 v1, v1, 0x64
+
+    rem-int/lit8 v1, v1, 0xa
+
+    if-lez v2, :cond_5
+
+    const/4 v3, 0x1
+
+    if-ne v2, v3, :cond_4
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/c/j;->a:Ljava/util/HashMap;
+
+    const-string v3, "10"
+
+    invoke-virtual {v2, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    if-eqz v1, :cond_3
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/c/j;->a:Ljava/util/HashMap;
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_3
+    :goto_0
+    return-object v0
+
+    :cond_4
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/c/j;->a:Ljava/util/HashMap;
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -194,13 +262,7 @@
 
     invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    :cond_2
-    rem-int/lit16 v1, v1, 0x3e8
-
-    rem-int/lit8 v1, v1, 0x64
-
-    rem-int/lit8 v1, v1, 0xa
-
+    :cond_5
     if-lez v1, :cond_3
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/c/j;->a:Ljava/util/HashMap;
@@ -215,8 +277,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    :cond_3
-    return-object v0
+    goto :goto_0
 .end method
 
 .method private c(Ljava/lang/String;)Ljava/util/List;
@@ -418,6 +479,12 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
+    const-string v1, "10000"
+
+    const-string v2, "voice/10000.mp3"
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
     const-string v1, "dot"
 
     const-string v2, "voice/dot.mp3"
@@ -430,15 +497,9 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v1, "near_kilometer"
+    const-string v1, "near_kilometer_spent"
 
-    const-string v2, "voice/near_kilometer.mp3"
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v1, "av_speed"
-
-    const-string v2, "voice/av_speed.mp3"
+    const-string v2, "voice/near_kilometer_spent.mp3"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -466,9 +527,9 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v1, "already"
+    const-string v1, "already_run"
 
-    const-string v2, "voice/already.mp3"
+    const-string v2, "voice/already_run.mp3"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -487,12 +548,6 @@
     const-string v1, "great"
 
     const-string v2, "voice/great.mp3"
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v1, "run"
-
-    const-string v2, "voice/run.mp3"
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -621,7 +676,7 @@
 
     move-result-object v0
 
-    invoke-static {v4, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
@@ -825,17 +880,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/c/j;->a:Ljava/util/HashMap;
 
-    const-string v2, "already"
-
-    invoke-virtual {v1, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/c/j;->a:Ljava/util/HashMap;
-
-    const-string v2, "run"
+    const-string v2, "already_run"
 
     invoke-virtual {v1, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -951,7 +996,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/c/j;->a:Ljava/util/HashMap;
 
-    const-string v2, "near_kilometer"
+    const-string v2, "near_kilometer_spent"
 
     invoke-virtual {v1, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -967,21 +1012,29 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/c/j;->a:Ljava/util/HashMap;
-
-    const-string v3, "time_spent"
-
-    invoke-virtual {v2, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
     invoke-direct {p0, v1}, Lcn/com/smartdevices/bracelet/gps/c/j;->c(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v1
 
     invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+
+    iget v1, p1, Lcn/com/smartdevices/bracelet/gps/c/h;->b:F
+
+    const/high16 v2, 0x43b40000
+
+    cmpg-float v1, v1, v2
+
+    if-gtz v1, :cond_3
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/c/j;->a:Ljava/util/HashMap;
+
+    const-string v2, "great"
+
+    invoke-virtual {v1, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_3
     return-object v0

@@ -156,7 +156,7 @@
 
     sub-long v1, v5, v1
 
-    sget-wide v7, Lcom/h/a/a;->n:J
+    sget-wide v7, Lcom/g/a/a;->n:J
 
     cmp-long v1, v1, v7
 
@@ -175,7 +175,7 @@
     :cond_1
     sub-long v1, v5, v3
 
-    sget-wide v3, Lcom/h/a/a;->n:J
+    sget-wide v3, Lcom/g/a/a;->n:J
 
     cmp-long v1, v1, v3
 
@@ -262,7 +262,7 @@
 
     invoke-virtual {v7, v0, v1}, Lb/a/g;->c(J)Lb/a/bs;
 
-    invoke-static {}, Lcom/h/a/a;->a()[D
+    invoke-static {}, Lcom/g/a/a;->a()[D
 
     move-result-object v3
 
@@ -349,7 +349,7 @@
 
     move-result-object v0
 
-    invoke-static {p1}, Lcom/h/a/a;->a(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/g/a/a;->a(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -512,7 +512,7 @@
 
     if-nez v1, :cond_1
 
-    sget-boolean v1, Lcom/h/a/a;->j:Z
+    sget-boolean v1, Lcom/g/a/a;->j:Z
 
     if-eqz v1, :cond_1
 

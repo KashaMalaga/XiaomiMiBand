@@ -62,11 +62,11 @@
 
     move-result-object v0
 
-    const v1, 0x7f0300c0
+    const v1, 0x7f0300ca
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const v0, 0x7f080379
+    const v0, 0x7f070390
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/WeightView;->findViewById(I)Landroid/view/View;
 
@@ -76,7 +76,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/WeightView;->a:Lcn/com/smartdevices/bracelet/view/WeightProgressBar;
 
-    const v0, 0x7f08037b
+    const v0, 0x7f070392
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/WeightView;->findViewById(I)Landroid/view/View;
 
@@ -86,7 +86,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/WeightView;->b:Landroid/widget/TextView;
 
-    const v0, 0x7f08037c
+    const v0, 0x7f070393
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/WeightView;->findViewById(I)Landroid/view/View;
 
@@ -96,7 +96,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/WeightView;->c:Landroid/widget/TextView;
 
-    const v0, 0x7f08037d
+    const v0, 0x7f070394
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/WeightView;->findViewById(I)Landroid/view/View;
 
@@ -106,7 +106,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/view/WeightView;->d:Landroid/widget/TextView;
 
-    const v0, 0x7f08037e
+    const v0, 0x7f070395
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/view/WeightView;->findViewById(I)Landroid/view/View;
 

@@ -11,7 +11,7 @@
 
 .field private d:[Ljava/lang/String;
 
-.field private e:Lcn/com/smartdevices/bracelet/view/Z;
+.field private e:Lcn/com/smartdevices/bracelet/view/aa;
 
 
 # direct methods
@@ -50,13 +50,13 @@
 
     move-result-object v0
 
-    const v1, 0x7f0300b6
+    const v1, 0x7f0300bb
 
     invoke-virtual {v0, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v1
 
-    const v0, 0x7f080342
+    const v0, 0x7f07035a
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -76,9 +76,9 @@
 .method public a()I
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->e:Lcn/com/smartdevices/bracelet/view/Z;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->e:Lcn/com/smartdevices/bracelet/view/aa;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/view/Z;->a()I
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/view/aa;->a()I
 
     move-result v0
 
@@ -88,9 +88,9 @@
 .method public a(I)V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->e:Lcn/com/smartdevices/bracelet/view/Z;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->e:Lcn/com/smartdevices/bracelet/view/aa;
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/view/Z;->a(I)V
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/view/aa;->a(I)V
 
     return-void
 .end method
@@ -105,10 +105,10 @@
     return-void
 .end method
 
-.method public a(Lcn/com/smartdevices/bracelet/view/Z;)V
+.method public a(Lcn/com/smartdevices/bracelet/view/aa;)V
     .locals 1
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->e:Lcn/com/smartdevices/bracelet/view/Z;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->e:Lcn/com/smartdevices/bracelet/view/aa;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->a:Landroid/widget/ListView;
 

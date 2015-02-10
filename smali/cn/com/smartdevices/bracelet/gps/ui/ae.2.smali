@@ -1,158 +1,124 @@
-.class Lcn/com/smartdevices/bracelet/gps/ui/ae;
-.super Landroid/widget/BaseAdapter;
-
-
-# instance fields
-.field private final a:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List",
-            "<",
-            "Lcn/com/smartdevices/bracelet/gps/model/g;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private final b:Landroid/view/LayoutInflater;
+.class public Lcn/com/smartdevices/bracelet/gps/ui/ae;
+.super Lcn/com/smartdevices/bracelet/ui/W;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/util/List;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/content/Context;",
-            "Ljava/util/List",
-            "<",
-            "Lcn/com/smartdevices/bracelet/gps/model/g;",
-            ">;)V"
-        }
-    .end annotation
+.method public constructor <init>()V
+    .locals 0
 
-    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
-
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/gps/ui/ae;->a:Ljava/util/List;
-
-    const-string v0, "layout_inflater"
-
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/LayoutInflater;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/ae;->b:Landroid/view/LayoutInflater;
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/W;-><init>()V
 
     return-void
 .end method
 
+.method public static a(Landroid/app/Activity;Ljava/lang/Class;)Landroid/app/DialogFragment;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/app/Activity;",
+            "Ljava/lang/Class",
+            "<+",
+            "Landroid/app/DialogFragment;",
+            ">;)",
+            "Landroid/app/DialogFragment;"
+        }
+    .end annotation
 
-# virtual methods
-.method public getCount()I
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/ae;->a:Ljava/util/List;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/ae;->a:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public getItem(I)Ljava/lang/Object;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/ae;->a:Ljava/util/List;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/ae;->a:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    :try_start_0
+    invoke-virtual {p0}, Landroid/app/Activity;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/gps/model/g;
+    invoke-virtual {v0}, Landroid/app/FragmentManager;->beginTransaction()Landroid/app/FragmentTransaction;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p0, v0}, Landroid/app/Fragment;->instantiate(Landroid/content/Context;Ljava/lang/String;)Landroid/app/Fragment;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/app/DialogFragment;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/app/DialogFragment;->show(Landroid/app/FragmentTransaction;Ljava/lang/String;)I
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     :goto_0
     return-object v0
 
-    :cond_0
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
+
     const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
-.method public getItemId(I)J
-    .locals 2
 
-    int-to-long v0, p1
+# virtual methods
+.method protected a()I
+    .locals 1
 
-    return-wide v0
+    const v0, 0x7f030077
+
+    return v0
 .end method
 
-.method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+.method protected c()V
     .locals 3
 
-    if-nez p2, :cond_1
+    invoke-static {}, Lcn/com/smartdevices/bracelet/gps/d/d;->a()Landroid/content/Intent;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/ae;->b:Landroid/view/LayoutInflater;
+    move-result-object v0
 
-    const v1, 0x7f030078
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/ui/ae;->getActivity()Landroid/app/Activity;
+
+    move-result-object v1
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, p3, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-virtual {v1, v0, v2}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    move-result-object p2
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/ui/ae;->dismiss()V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/af;
+    return-void
+.end method
 
-    invoke-direct {v0, p0, p2}, Lcn/com/smartdevices/bracelet/gps/ui/af;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/ae;Landroid/view/View;)V
+.method protected d()V
+    .locals 0
 
-    invoke-virtual {p2, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/ui/ae;->dismiss()V
 
-    move-object v1, v0
+    return-void
+.end method
 
-    :goto_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/ae;->a:Ljava/util/List;
+.method protected d_()V
+    .locals 0
 
-    if-eqz v0, :cond_0
+    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/W;->d_()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/ae;->a:Ljava/util/List;
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/ui/ae;->dismiss()V
 
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object v0
+.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    .locals 1
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/gps/model/g;
-
-    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/gps/ui/af;->a(Lcn/com/smartdevices/bracelet/gps/model/g;)V
-
-    :cond_0
-    return-object p2
-
-    :cond_1
-    invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
+    invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/W;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/gps/ui/af;
-
-    move-object v1, v0
-
-    goto :goto_0
+    return-object v0
 .end method

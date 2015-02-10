@@ -277,6 +277,16 @@
     goto :goto_0
 .end method
 
+.method public static getToday()Lcn/com/smartdevices/bracelet/model/SportDay;
+    .locals 1
+
+    new-instance v0, Lcn/com/smartdevices/bracelet/model/SportDay;
+
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>()V
+
+    return-object v0
+.end method
+
 .method public static toCalenday(Ljava/lang/String;)Ljava/util/Calendar;
     .locals 5
 
@@ -715,7 +725,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f070020
+    const v3, 0x7f080028
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -757,7 +767,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f07001f
+    const v3, 0x7f080027
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

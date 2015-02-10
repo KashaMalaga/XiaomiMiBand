@@ -14,5 +14,5 @@
         <TextView android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sport_running_average_speed" style="@style/ListItemTitleText" />
         <TextView android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/average_speed" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" style="@style/ListItemTitleText" />
     </LinearLayout>
-    <ImageView android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="@dimen/item_height" android:src="@drawable/ic_indicator_right_arrow" />
+    <ImageView android:layout_gravity="center|right" android:layout_width="wrap_content" android:layout_height="@dimen/item_height" android:src="@drawable/ic_indicator_right_arrow" />
 </LinearLayout>

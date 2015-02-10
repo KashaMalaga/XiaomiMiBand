@@ -10,7 +10,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/g/c;->values()[Lcn/com/smartdevices/bracelet/g/c;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/h/c;->values()[Lcn/com/smartdevices/bracelet/h/c;
 
     move-result-object v0
 
@@ -23,9 +23,9 @@
     :try_start_0
     sget-object v0, Lcn/com/smartdevices/bracelet/db/w;->a:[I
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/g/c;->a:Lcn/com/smartdevices/bracelet/g/c;
+    sget-object v1, Lcn/com/smartdevices/bracelet/h/c;->a:Lcn/com/smartdevices/bracelet/h/c;
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/g/c;->ordinal()I
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/h/c;->ordinal()I
 
     move-result v1
 
@@ -39,9 +39,9 @@
     :try_start_1
     sget-object v0, Lcn/com/smartdevices/bracelet/db/w;->a:[I
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/g/c;->b:Lcn/com/smartdevices/bracelet/g/c;
+    sget-object v1, Lcn/com/smartdevices/bracelet/h/c;->b:Lcn/com/smartdevices/bracelet/h/c;
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/g/c;->ordinal()I
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/h/c;->ordinal()I
 
     move-result v1
 
@@ -55,9 +55,9 @@
     :try_start_2
     sget-object v0, Lcn/com/smartdevices/bracelet/db/w;->a:[I
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/g/c;->c:Lcn/com/smartdevices/bracelet/g/c;
+    sget-object v1, Lcn/com/smartdevices/bracelet/h/c;->c:Lcn/com/smartdevices/bracelet/h/c;
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/g/c;->ordinal()I
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/h/c;->ordinal()I
 
     move-result v1
 
@@ -71,9 +71,9 @@
     :try_start_3
     sget-object v0, Lcn/com/smartdevices/bracelet/db/w;->a:[I
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/g/c;->d:Lcn/com/smartdevices/bracelet/g/c;
+    sget-object v1, Lcn/com/smartdevices/bracelet/h/c;->d:Lcn/com/smartdevices/bracelet/h/c;
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/g/c;->ordinal()I
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/h/c;->ordinal()I
 
     move-result v1
 

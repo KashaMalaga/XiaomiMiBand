@@ -1,150 +1,134 @@
-.class public Lcn/com/smartdevices/bracelet/ui/en;
-.super Lcn/com/smartdevices/bracelet/ui/U;
+.class Lcn/com/smartdevices/bracelet/ui/en;
+.super Lcn/com/smartdevices/bracelet/a/b;
 
 
 # instance fields
-.field private a:Landroid/widget/TextView;
-
-.field private b:Landroid/widget/TextView;
-
-.field private c:Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;
-
-.field private f:Ljava/lang/String;
-
-.field private g:Ljava/lang/String;
-
-.field private h:Ljava/lang/String;
-
-.field private i:Ljava/lang/String;
+.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;)V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/U;-><init>()V
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/en;->b:Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;
+
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/a/b;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected a()I
-    .locals 1
+.method public b()V
+    .locals 0
 
-    const v0, 0x7f030061
+    invoke-super {p0}, Lcn/com/smartdevices/bracelet/a/b;->b()V
 
-    return v0
+    return-void
 .end method
 
-.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+.method public c(Ljava/lang/Object;)V
     .locals 3
 
-    invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/U;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    const/4 v2, 0x0
 
-    move-result-object v1
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->c(Ljava/lang/Object;)V
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/en;->getArguments()Landroid/os/Bundle;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/en;->b:Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;
 
-    move-result-object v0
+    const v1, 0x7f070145
 
-    const-string v2, "TITLE"
-
-    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/en;->f:Ljava/lang/String;
+    const/4 v1, 0x1
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/en;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {v0, v1}, Landroid/view/View;->setEnabled(Z)V
 
-    move-result-object v0
+    if-eqz p1, :cond_0
 
-    const-string v2, "CONTENT"
+    check-cast p1, Ljava/lang/Boolean;
 
-    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result-object v0
+    move-result v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/en;->g:Ljava/lang/String;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/en;->getArguments()Landroid/os/Bundle;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/en;->b:Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;
 
-    move-result-object v0
+    const-string v1, "Pair_For_SmartLock_Success"
 
-    const-string v2, "NEGATIVETEXT"
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/en;->b:Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;
 
-    move-result-object v0
+    const v1, 0x7f080190
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/en;->h:Ljava/lang/String;
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/en;->getArguments()Landroid/os/Bundle;
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
     move-result-object v0
 
-    const-string v2, "POSITIVETEXT"
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    :try_start_0
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v1, "android.settings.SECURITY_SETTINGS"
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/en;->b:Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;
+
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->startActivity(Landroid/content/Intent;)V
+    :try_end_0
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Landroid/content/ActivityNotFoundException;->printStackTrace()V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/en;->b:Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;
+
+    const-string v1, "Pair_For_SmartLock_Success_NoSecuritySetting"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v1, "android.settings.SETTINGS"
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/en;->b:Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;
+
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;->startActivity(Landroid/content/Intent;)V
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/en;->b:Lcn/com/smartdevices/bracelet/ui/UnlockScreenHelperActivity;
+
+    const v1, 0x7f080191
+
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/en;->i:Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    const v0, 0x7f0801ec
+    goto :goto_0
+.end method
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+.method public d(Ljava/lang/Object;)V
+    .locals 0
 
-    move-result-object v0
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->d(Ljava/lang/Object;)V
 
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/en;->a:Landroid/widget/TextView;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/en;->a:Landroid/widget/TextView;
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/en;->f:Ljava/lang/String;
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    const v0, 0x7f0801ed
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/en;->b:Landroid/widget/TextView;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/en;->b:Landroid/widget/TextView;
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/en;->g:Ljava/lang/String;
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    const v0, 0x7f0801ee
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/en;->c:Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/en;->c:Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/en;->i:Ljava/lang/String;
-
-    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->a(Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/en;->c:Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/en;->h:Ljava/lang/String;
-
-    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->b(Ljava/lang/String;)V
-
-    return-object v1
+    return-void
 .end method

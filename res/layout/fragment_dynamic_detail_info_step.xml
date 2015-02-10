@@ -1,58 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GridLayout android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:columnCount="3"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="@dimen/dynamic_info_width" android:layout_height="@dimen/dynamic_info_height">
-        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#99000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stat_step_distance_daily" />
-        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip">
-            <TextView android:textSize="@dimen/dynamic_info_value" android:textColor="#cc000000" android:id="@id/info_step_distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:fontFamily="miui" />
-            <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#99000000" android:id="@id/info_step_distance_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="-1.0dip" android:text="@string/unit_meter" />
-        </LinearLayout>
+    <LinearLayout style="@style/ChartInfoItem">
+        <TextView android:text="@string/stat_step_distance_daily" style="@style/ChartInfoItemTitle" />
+        <include android:id="@id/info_step_distance" layout="@layout/view_chart_info_item_value" />
     </LinearLayout>
-    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="@dimen/dynamic_info_width" android:layout_height="@dimen/dynamic_info_height">
-        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#99000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stat_step_daily" />
-        <TextView android:textSize="@dimen/dynamic_info_value" android:textColor="#cc000000" android:id="@id/info_step" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="--" android:fontFamily="miui" />
+    <LinearLayout style="@style/ChartInfoItem">
+        <TextView android:text="@string/stat_step_daily" style="@style/ChartInfoItemTitle" />
+        <TextView android:id="@id/info_step" android:layout_marginTop="@dimen/dynamic_info_title_value_margin" style="@style/ChartInfoItemValue" />
     </LinearLayout>
-    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="@dimen/dynamic_info_width" android:layout_height="@dimen/dynamic_info_height">
-        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#99000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stat_step_calorie_daily" />
-        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip">
-            <TextView android:textSize="@dimen/dynamic_info_value" android:textColor="#cc000000" android:id="@id/info_step_calorie" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:fontFamily="miui" />
-            <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#99000000" android:id="@id/info_step_calorie_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="-1.0dip" android:text="@string/unit_calorie" />
-        </LinearLayout>
+    <LinearLayout style="@style/ChartInfoItem">
+        <TextView android:text="@string/stat_step_calorie_daily" style="@style/ChartInfoItemTitle" />
+        <include android:id="@id/info_step_calorie" layout="@layout/view_chart_info_item_value" />
     </LinearLayout>
-    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="@dimen/dynamic_info_width" android:layout_height="@dimen/dynamic_info_height">
-        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#99000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stat_step_walk_distance" />
-        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip">
-            <TextView android:textSize="@dimen/dynamic_info_value" android:textColor="#cc000000" android:id="@id/info_step_walk_distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:fontFamily="miui" />
-            <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#99000000" android:id="@id/info_step_walk_distance_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="-1.0dip" android:text="@string/unit_meter" />
-        </LinearLayout>
+    <LinearLayout style="@style/ChartInfoItem">
+        <TextView android:text="@string/stat_step_walk_distance" style="@style/ChartInfoItemTitle" />
+        <include android:id="@id/info_step_walk_distance" layout="@layout/view_chart_info_item_value" />
     </LinearLayout>
-    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="@dimen/dynamic_info_width" android:layout_height="@dimen/dynamic_info_height">
-        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#99000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stat_step_walk_duration" />
-        <TextView android:textSize="@dimen/dynamic_info_value" android:textColor="#cc000000" android:id="@id/info_step_walk_duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="--" android:fontFamily="miui" />
+    <LinearLayout style="@style/ChartInfoItem">
+        <TextView android:text="@string/stat_step_walk_duration" style="@style/ChartInfoItemTitle" />
+        <include android:id="@id/info_step_walk_duration" layout="@layout/view_chart_info_item_value_time_length" />
     </LinearLayout>
-    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="@dimen/dynamic_info_width" android:layout_height="@dimen/dynamic_info_height">
-        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#99000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stat_step_walk_calorie" />
-        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip">
-            <TextView android:textSize="@dimen/dynamic_info_value" android:textColor="#cc000000" android:id="@id/info_step_walk_calorie" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:fontFamily="miui" />
-            <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#99000000" android:id="@id/info_step_walk_calorie_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="-1.0dip" android:text="@string/unit_calorie" />
-        </LinearLayout>
+    <LinearLayout style="@style/ChartInfoItem">
+        <TextView android:text="@string/stat_step_walk_calorie" style="@style/ChartInfoItemTitle" />
+        <include android:id="@id/info_step_walk_calorie" layout="@layout/view_chart_info_item_value" />
     </LinearLayout>
-    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="@dimen/dynamic_info_width" android:layout_height="@dimen/dynamic_info_height">
-        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#99000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stat_step_run_distance" />
-        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip">
-            <TextView android:textSize="@dimen/dynamic_info_value" android:textColor="#cc000000" android:id="@id/info_step_run_distance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:fontFamily="miui" />
-            <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#99000000" android:id="@id/info_step_run_distance_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="-1.0dip" android:text="@string/unit_meter" />
-        </LinearLayout>
+    <LinearLayout style="@style/ChartInfoItem">
+        <TextView android:text="@string/stat_step_run_distance" style="@style/ChartInfoItemTitle" />
+        <include android:id="@id/info_step_run_distance" layout="@layout/view_chart_info_item_value" />
     </LinearLayout>
-    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="@dimen/dynamic_info_width" android:layout_height="@dimen/dynamic_info_height">
-        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#99000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stat_step_run_duration" />
-        <TextView android:textSize="@dimen/dynamic_info_value" android:textColor="#cc000000" android:id="@id/info_step_run_duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="--" android:fontFamily="miui" />
+    <LinearLayout style="@style/ChartInfoItem">
+        <TextView android:text="@string/stat_step_run_duration" style="@style/ChartInfoItemTitle" />
+        <include android:id="@id/info_step_run_duration" layout="@layout/view_chart_info_item_value_time_length" />
     </LinearLayout>
-    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="@dimen/dynamic_info_width" android:layout_height="@dimen/dynamic_info_height">
-        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#99000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stat_step_run_calorie" />
-        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip">
-            <TextView android:textSize="@dimen/dynamic_info_value" android:textColor="#cc000000" android:id="@id/info_step_run_calorie" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:fontFamily="miui" />
-            <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#99000000" android:id="@id/info_step_run_calorie_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="-1.0dip" android:text="@string/unit_calorie" />
-        </LinearLayout>
+    <LinearLayout style="@style/ChartInfoItem">
+        <TextView android:text="@string/stat_step_run_calorie" style="@style/ChartInfoItemTitle" />
+        <include android:id="@id/info_step_run_calorie" layout="@layout/view_chart_info_item_value" />
     </LinearLayout>
 </GridLayout>

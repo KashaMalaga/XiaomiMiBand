@@ -1,5 +1,5 @@
 .class Lcn/com/smartdevices/bracelet/tencent/health/QQHealth$2;
-.super Lcom/e/a/a/h;
+.super Lcom/d/a/a/h;
 
 
 # instance fields
@@ -20,7 +20,7 @@
 
     iput-object p3, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth$2;->val$paramsStr:Ljava/lang/String;
 
-    invoke-direct {p0}, Lcom/e/a/a/h;-><init>()V
+    invoke-direct {p0}, Lcom/d/a/a/h;-><init>()V
 
     return-void
 .end method
@@ -40,7 +40,7 @@
 
     const-string v1, "Post Sleep Failed!!"
 
-    invoke-static {v0, v1, p4}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v0, v1, p4}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     if-eqz p3, :cond_0
 
@@ -68,7 +68,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -83,7 +83,7 @@
 
     const-string v1, "Post Sleep Successed!!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Ljava/lang/String;
 
@@ -109,7 +109,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth$2;->this$0:Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;
 

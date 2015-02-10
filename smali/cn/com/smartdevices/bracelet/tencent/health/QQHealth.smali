@@ -142,7 +142,7 @@
 
     const-string v2, "QQ_Health_SyncData_Success"
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     :cond_0
     :goto_0
@@ -173,7 +173,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/v;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/x;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->mQQLogin:Lcn/com/smartdevices/bracelet/tencent/QQLogin;
 
@@ -198,7 +198,7 @@
 
     const-string v2, "QQ_Health_SyncData_Fail"
 
-    invoke-static {v1, v2, p2}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, p2}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -211,7 +211,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->mContext:Landroid/content/Context;
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/A;->a(Landroid/content/Context;Ljava/lang/Exception;)V
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/D;->a(Landroid/content/Context;Ljava/lang/Exception;)V
 
     goto :goto_0
 .end method
@@ -347,7 +347,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v1, Ljava/util/ArrayList;
 
@@ -392,7 +392,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->mContext:Landroid/content/Context;
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/A;->a(Landroid/content/Context;Ljava/lang/Exception;)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/D;->a(Landroid/content/Context;Ljava/lang/Exception;)V
 
     :cond_1
     const-string v0, "QQ.Health"
@@ -415,7 +415,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-object v1
 .end method
@@ -488,7 +488,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->mPrefs:Landroid/content/SharedPreferences;
 
@@ -556,7 +556,7 @@
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -728,7 +728,7 @@
 
     const-string v4, "Sync Step Data To QQ Health!!"
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p0, p1, v1}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->postStep(Lcn/com/smartdevices/bracelet/model/SportDay;Lcn/com/smartdevices/bracelet/tencent/health/HealthStep;)V
 
@@ -747,7 +747,7 @@
 
     const/16 v1, 0x10
 
-    invoke-static {v2, p1, v1}, Lcn/com/smartdevices/bracelet/ui/X;->a(Lcn/com/smartdevices/bracelet/f/b;Lcn/com/smartdevices/bracelet/model/SportDay;I)Lcn/com/smartdevices/bracelet/chart/k;
+    invoke-static {v2, p1, v1}, Lcn/com/smartdevices/bracelet/ui/Z;->a(Lcn/com/smartdevices/bracelet/f/b;Lcn/com/smartdevices/bracelet/model/SportDay;I)Lcn/com/smartdevices/bracelet/chart/k;
 
     move-result-object v1
 
@@ -767,7 +767,7 @@
 
     const-string v2, "Sync Sleep Data To QQ Health!!"
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p0, p1, v0}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->postSleep(Lcn/com/smartdevices/bracelet/model/SportDay;Lcn/com/smartdevices/bracelet/tencent/health/HealthSleep;)V
 
@@ -986,7 +986,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->mContext:Landroid/content/Context;
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/A;->a(Landroid/content/Context;Ljava/lang/Exception;)V
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/D;->a(Landroid/content/Context;Ljava/lang/Exception;)V
 
     goto :goto_0
 .end method
@@ -1048,7 +1048,7 @@
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/tencent/health/HealthStep;->setDuration(I)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->p()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->J()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v1
 
@@ -1113,7 +1113,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->mContext:Landroid/content/Context;
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/A;->a(Landroid/content/Context;Ljava/lang/Exception;)V
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/D;->a(Landroid/content/Context;Ljava/lang/Exception;)V
 
     goto :goto_1
 .end method
@@ -1173,7 +1173,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->mNeedSyncDays:Ljava/util/List;
 
@@ -1264,7 +1264,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->mNeedSyncDays:Ljava/util/List;
 
@@ -1378,7 +1378,7 @@
 
     const-string v1, "Login is invalid!!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -1398,11 +1398,11 @@
 
     invoke-interface {v1, v2}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
-    new-instance v2, Lcom/e/a/a/O;
+    new-instance v2, Lcom/d/a/a/O;
 
-    invoke-direct {v2, v1}, Lcom/e/a/a/O;-><init>(Ljava/util/Map;)V
+    invoke-direct {v2, v1}, Lcom/d/a/a/O;-><init>(Ljava/util/Map;)V
 
-    invoke-virtual {v2}, Lcom/e/a/a/O;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/d/a/a/O;->toString()Ljava/lang/String;
 
     move-result-object v1
 
@@ -1472,7 +1472,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -1507,21 +1507,21 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->mContext:Landroid/content/Context;
 
     const-string v4, "QQ_Health_SyncData"
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
 
-    sget-object v3, Lcn/com/smartdevices/bracelet/j/a;->b:Lcom/e/a/a/X;
+    sget-object v3, Lcn/com/smartdevices/bracelet/k/a;->b:Lcom/d/a/a/X;
 
     new-instance v4, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth$2;
 
     invoke-direct {v4, p0, p1, v1}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth$2;-><init>(Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;Lcn/com/smartdevices/bracelet/model/SportDay;Ljava/lang/String;)V
 
-    invoke-virtual {v3, v0, v2, v4}, Lcom/e/a/a/X;->c(Ljava/lang/String;Lcom/e/a/a/O;Lcom/e/a/a/S;)Lcom/e/a/a/N;
+    invoke-virtual {v3, v0, v2, v4}, Lcom/d/a/a/X;->c(Ljava/lang/String;Lcom/d/a/a/O;Lcom/d/a/a/S;)Lcom/d/a/a/N;
 
     goto/16 :goto_0
 .end method
@@ -1546,7 +1546,7 @@
 
     const-string v1, "Login is invalid!!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -1566,9 +1566,9 @@
 
     invoke-interface {v1, v2}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
-    new-instance v2, Lcom/e/a/a/O;
+    new-instance v2, Lcom/d/a/a/O;
 
-    invoke-direct {v2, v1}, Lcom/e/a/a/O;-><init>(Ljava/util/Map;)V
+    invoke-direct {v2, v1}, Lcom/d/a/a/O;-><init>(Ljava/util/Map;)V
 
     const-string v1, "QQ.Health"
 
@@ -1600,21 +1600,21 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->mContext:Landroid/content/Context;
 
     const-string v3, "QQ_Health_SyncData"
 
-    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/j/a;->b:Lcom/e/a/a/X;
+    sget-object v1, Lcn/com/smartdevices/bracelet/k/a;->b:Lcom/d/a/a/X;
 
     new-instance v3, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth$1;
 
     invoke-direct {v3, p0, p1}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth$1;-><init>(Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;Lcn/com/smartdevices/bracelet/model/SportDay;)V
 
-    invoke-virtual {v1, v0, v2, v3}, Lcom/e/a/a/X;->c(Ljava/lang/String;Lcom/e/a/a/O;Lcom/e/a/a/S;)Lcom/e/a/a/N;
+    invoke-virtual {v1, v0, v2, v3}, Lcom/d/a/a/X;->c(Ljava/lang/String;Lcom/d/a/a/O;Lcom/d/a/a/S;)Lcom/d/a/a/N;
 
     goto :goto_0
 .end method
@@ -1672,7 +1672,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->mNeedSyncDays:Ljava/util/List;
 
@@ -1721,7 +1721,7 @@
 
     const-string v1, "Login is invalid!!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -1775,7 +1775,7 @@
 
     const-string v1, "Login is invalid!!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     :goto_0

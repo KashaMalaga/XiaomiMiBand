@@ -4,19 +4,19 @@
 
 # instance fields
 .field public a:I
-    .annotation runtime Lcom/d/a/a/b;
+    .annotation runtime Lcom/c/a/a/b;
         a = "code"
     .end annotation
 .end field
 
 .field public b:Ljava/lang/String;
-    .annotation runtime Lcom/d/a/a/b;
+    .annotation runtime Lcom/c/a/a/b;
         a = "message"
     .end annotation
 .end field
 
 .field public c:Lcn/com/smartdevices/bracelet/lua/i;
-    .annotation runtime Lcom/d/a/a/b;
+    .annotation runtime Lcom/c/a/a/b;
         a = "data"
     .end annotation
 .end field

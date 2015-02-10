@@ -1,19 +1,20 @@
-.class Lcn/com/smartdevices/bracelet/gps/ui/aO;
+.class public Lcn/com/smartdevices/bracelet/gps/ui/aO;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;
+.field public a:I
+
+.field public b:I
+
+.field public c:I
+
+.field public d:I
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;)V
+.method public constructor <init>()V
     .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/aO;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,12 +23,16 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 1
+.method public a(IIII)V
+    .locals 0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/aO;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;
+    iput p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/aO;->a:I
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkShareActivity;->finish()V
+    iput p2, p0, Lcn/com/smartdevices/bracelet/gps/ui/aO;->b:I
+
+    iput p3, p0, Lcn/com/smartdevices/bracelet/gps/ui/aO;->c:I
+
+    iput p4, p0, Lcn/com/smartdevices/bracelet/gps/ui/aO;->d:I
 
     return-void
 .end method

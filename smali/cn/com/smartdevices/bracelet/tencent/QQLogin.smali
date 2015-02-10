@@ -46,6 +46,8 @@
     .end annotation
 .end field
 
+.field private mLoginCanceled:Z
+
 .field private mLoginListener:Lcom/tencent/tauth/IUiListener;
 
 .field private mMiID:Ljava/lang/String;
@@ -105,7 +107,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->mContext:Landroid/content/Context;
 
@@ -153,7 +155,7 @@
 .method public static fetchMiID()Ljava/lang/String;
     .locals 2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->n()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->L()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v0
 
@@ -260,7 +262,7 @@
 
     const-string v3, "Request User Info Success!"
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v2, Lcn/com/smartdevices/bracelet/tencent/QQLogin$QQUserInfo;
 
@@ -296,7 +298,7 @@
 
     const-string v2, "QQ_Request_UserInfo_Success"
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -310,7 +312,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v2, v3}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -323,7 +325,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->mContext:Landroid/content/Context;
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/A;->a(Landroid/content/Context;Ljava/lang/Exception;)V
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/D;->a(Landroid/content/Context;Ljava/lang/Exception;)V
 
     goto :goto_0
 .end method
@@ -514,7 +516,7 @@
 
     move-result-object v2
 
-    invoke-static {v3, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz v0, :cond_2
 
@@ -601,17 +603,17 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz v0, :cond_1
 
-    new-instance v1, Lcom/d/a/k;
+    new-instance v1, Lcom/c/a/k;
 
-    invoke-direct {v1}, Lcom/d/a/k;-><init>()V
+    invoke-direct {v1}, Lcom/c/a/k;-><init>()V
 
     const-class v2, Lcn/com/smartdevices/bracelet/tencent/QQLogin$QQUserInfo;
 
-    invoke-virtual {v1, v0, v2}, Lcom/d/a/k;->a(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v1, v0, v2}, Lcom/c/a/k;->a(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -626,11 +628,11 @@
 .method private saveQQUserInfo(Lcn/com/smartdevices/bracelet/tencent/QQLogin$QQUserInfo;)V
     .locals 4
 
-    new-instance v0, Lcom/d/a/k;
+    new-instance v0, Lcom/c/a/k;
 
-    invoke-direct {v0}, Lcom/d/a/k;-><init>()V
+    invoke-direct {v0}, Lcom/c/a/k;-><init>()V
 
-    invoke-virtual {v0, p1}, Lcom/d/a/k;->b(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, p1}, Lcom/c/a/k;->b(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -654,7 +656,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->mPrefs:Landroid/content/SharedPreferences;
 
@@ -919,6 +921,14 @@
     return-object v0
 .end method
 
+.method public isLoginCanceled()Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->mLoginCanceled:Z
+
+    return v0
+.end method
+
 .method public isLoginValid()Z
     .locals 1
 
@@ -949,7 +959,7 @@
     goto :goto_0
 .end method
 
-.method public isNeedLoginIn()Z
+.method public isNeedLogin()Z
     .locals 1
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->mNeedLogin:Z
@@ -957,7 +967,7 @@
     return v0
 .end method
 
-.method public isNeedSwitchLoginIn()Z
+.method public isNeedSwitchLogin()Z
     .locals 1
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->mNeedSwitchLogin:Z
@@ -997,7 +1007,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->isLoginValid()Z
 
@@ -1031,7 +1041,7 @@
 
     const-string v1, "Logout"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->mTencent:Lcom/tencent/tauth/Tencent;
 
@@ -1049,13 +1059,13 @@
 
     const-string v1, "Login Cancel!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->mContext:Landroid/content/Context;
 
     const-string v1, "QQ_Login_Cancel"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1083,7 +1093,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :try_start_0
     move-object v0, p1
@@ -1106,7 +1116,7 @@
 
     const-string v2, "QQ_Login_Success"
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -1120,7 +1130,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v2, v3}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1133,7 +1143,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->mContext:Landroid/content/Context;
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/A;->a(Landroid/content/Context;Ljava/lang/Exception;)V
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/D;->a(Landroid/content/Context;Ljava/lang/Exception;)V
 
     goto :goto_0
 .end method
@@ -1161,7 +1171,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p1, :cond_0
 
@@ -1213,7 +1223,7 @@
 
     const-string v2, "QQ_Login_Error"
 
-    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -1223,7 +1233,7 @@
 
     const-string v1, "QQ_Login_Error"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -1265,7 +1275,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->isLoginValid()Z
 
@@ -1299,7 +1309,7 @@
 
     const-string v1, "QQ_Request_UserInfo"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -1366,7 +1376,7 @@
 
     move-result-object v5
 
-    invoke-static {v4, v5}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v4, p0, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->mPrefs:Landroid/content/SharedPreferences;
 
@@ -1462,6 +1472,14 @@
     .end annotation
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->mLaunchActivity:Ljava/lang/Class;
+
+    return-void
+.end method
+
+.method public setLoginCanceled(Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->mLoginCanceled:Z
 
     return-void
 .end method

@@ -174,7 +174,7 @@
 
     invoke-direct {v1, v2}, Lcn/com/smartdevices/bracelet/lab/ui/M;-><init>(Lcn/com/smartdevices/bracelet/lab/ui/L;)V
 
-    const v0, 0x7f08011b
+    const v0, 0x7f070121
 
     invoke-virtual {p4, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -184,7 +184,7 @@
 
     iput-object v0, v1, Lcn/com/smartdevices/bracelet/lab/ui/M;->a:Landroid/widget/TextView;
 
-    const v0, 0x7f0800ab
+    const v0, 0x7f0700ae
 
     invoke-virtual {p4, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

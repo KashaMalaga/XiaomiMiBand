@@ -1,5 +1,5 @@
 .class public Lcn/com/smartdevices/bracelet/gps/ui/a;
-.super Lcn/com/smartdevices/bracelet/ui/U;
+.super Lcn/com/smartdevices/bracelet/ui/W;
 
 
 # static fields
@@ -7,18 +7,18 @@
 
 
 # instance fields
-.field private b:Lcn/com/smartdevices/bracelet/ui/W;
+.field private b:Lcn/com/smartdevices/bracelet/ui/Y;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 1
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/U;-><init>()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/W;-><init>()V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->b:Lcn/com/smartdevices/bracelet/ui/W;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->b:Lcn/com/smartdevices/bracelet/ui/Y;
 
     return-void
 .end method
@@ -62,15 +62,15 @@
 .method protected a()I
     .locals 1
 
-    const v0, 0x7f03007c
+    const v0, 0x7f03007e
 
     return v0
 .end method
 
-.method public a(Lcn/com/smartdevices/bracelet/ui/W;)V
+.method public a(Lcn/com/smartdevices/bracelet/ui/Y;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->b:Lcn/com/smartdevices/bracelet/ui/W;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->b:Lcn/com/smartdevices/bracelet/ui/Y;
 
     return-void
 .end method
@@ -85,19 +85,19 @@
     packed-switch v0, :pswitch_data_0
 
     :pswitch_0
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/U;->onClick(Landroid/view/View;)V
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/W;->onClick(Landroid/view/View;)V
 
     :goto_0
     return-void
 
     :pswitch_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->b:Lcn/com/smartdevices/bracelet/ui/W;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->b:Lcn/com/smartdevices/bracelet/ui/Y;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->b:Lcn/com/smartdevices/bracelet/ui/W;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->b:Lcn/com/smartdevices/bracelet/ui/Y;
 
-    invoke-interface {v0, p0}, Lcn/com/smartdevices/bracelet/ui/W;->b(Landroid/app/DialogFragment;)V
+    invoke-interface {v0, p0}, Lcn/com/smartdevices/bracelet/ui/Y;->b(Landroid/app/DialogFragment;)V
 
     :cond_0
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/ui/a;->dismiss()V
@@ -105,13 +105,13 @@
     goto :goto_0
 
     :pswitch_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->b:Lcn/com/smartdevices/bracelet/ui/W;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->b:Lcn/com/smartdevices/bracelet/ui/Y;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->b:Lcn/com/smartdevices/bracelet/ui/W;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/a;->b:Lcn/com/smartdevices/bracelet/ui/Y;
 
-    invoke-interface {v0, p0}, Lcn/com/smartdevices/bracelet/ui/W;->c(Landroid/app/DialogFragment;)V
+    invoke-interface {v0, p0}, Lcn/com/smartdevices/bracelet/ui/Y;->c(Landroid/app/DialogFragment;)V
 
     :cond_1
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/ui/a;->dismiss()V
@@ -121,7 +121,7 @@
     nop
 
     :pswitch_data_0
-    .packed-switch 0x7f080190
+    .packed-switch 0x7f0701a5
         :pswitch_1
         :pswitch_0
         :pswitch_2
@@ -131,7 +131,7 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 3
 
-    invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/U;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/W;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object v1
 
@@ -145,7 +145,7 @@
 
     move-result-object v2
 
-    const v0, 0x7f080053
+    const v0, 0x7f070056
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -155,7 +155,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f080190
+    const v0, 0x7f0701a5
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -163,7 +163,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f080192
+    const v0, 0x7f0701a7
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

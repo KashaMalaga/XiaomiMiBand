@@ -1,60 +1,77 @@
 .class Lcn/com/smartdevices/bracelet/ui/cE;
-.super Landroid/content/BroadcastReceiver;
+.super Lcom/d/a/a/h;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cE;->a:Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cE;->a:Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    invoke-direct {p0}, Lcom/d/a/a/h;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 5
+.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
+    .locals 0
 
-    const-string v0, "intent"
+    return-void
+.end method
 
-    new-instance v1, Ljava/lang/StringBuilder;
+.method public onSuccess(I[Lorg/apache/http/Header;[B)V
+    .locals 4
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    if-eqz p3, :cond_0
 
-    const-string v2, ""
+    new-instance v0, Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, p3}, Ljava/lang/String;-><init>([B)V
+
+    const-string v1, "SearchWeightScaleActivity"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "updateBindedWeightInfo result:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cE;->a:Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
-    const-string v2, "extra_download_id"
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/k/i;->a(Landroid/content/Context;Ljava/lang/String;)Lcn/com/smartdevices/bracelet/k/i;
 
-    const-wide/16 v3, 0x0
+    move-result-object v0
 
-    invoke-virtual {p2, v2, v3, v4}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/k/i;->c()Z
 
-    move-result-wide v2
+    move-result v0
 
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_0
 
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cE;->a:Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/B;->b(Landroid/app/Activity;)V
-
+    :cond_0
     return-void
 .end method

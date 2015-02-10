@@ -3,43 +3,194 @@
 
 
 # static fields
-.field public static final a:I = 0x1
+.field public static final a:Ljava/lang/String; = "LEFT_HAND"
 
-.field public static final b:I = 0x2
+.field public static final b:Ljava/lang/String; = "RIGHT_HAND"
 
-.field public static final c:I = 0x4
+.field public static final c:Ljava/lang/String; = "Reverse"
+
+.field public static final d:Ljava/lang/String; = "Front"
+
+
+# instance fields
+.field private e:Ljava/lang/String;
+
+.field private f:Ljava/lang/String;
+
+.field private g:Ljava/lang/String;
+
+.field private h:I
+
+.field private i:Ljava/lang/String;
 
 
 # direct methods
-.method private constructor <init>()V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-string v0, "LEFT_HAND"
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/q;->e:Ljava/lang/String;
+
+    const-string v0, "Reverse"
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/q;->f:Ljava/lang/String;
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/q;->g:Ljava/lang/String;
+
+    const/16 v0, 0x19
+
+    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/q;->h:I
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/q;->i:Ljava/lang/String;
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/q;->i:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static a(I)Z
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x2
+    const-string v0, "LEFT_HAND"
 
-    if-eq p0, v1, :cond_0
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/q;->e:Ljava/lang/String;
 
-    if-eq p0, v0, :cond_0
+    const-string v0, "Reverse"
 
-    const/4 v1, 0x4
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/q;->f:Ljava/lang/String;
 
-    if-ne p0, v1, :cond_1
+    const-string v0, ""
 
-    :cond_0
-    :goto_0
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/q;->g:Ljava/lang/String;
+
+    const/16 v0, 0x19
+
+    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/q;->h:I
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/q;->i:Ljava/lang/String;
+
+    iput-object p3, p0, Lcn/com/smartdevices/bracelet/lab/q;->f:Ljava/lang/String;
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/q;->i:Ljava/lang/String;
+
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/lab/q;->e:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-string v0, "LEFT_HAND"
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/q;->e:Ljava/lang/String;
+
+    const-string v0, "Reverse"
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/q;->f:Ljava/lang/String;
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/q;->g:Ljava/lang/String;
+
+    const/16 v0, 0x19
+
+    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/q;->h:I
+
+    const-string v0, ""
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/q;->i:Ljava/lang/String;
+
+    iput-object p4, p0, Lcn/com/smartdevices/bracelet/lab/q;->g:Ljava/lang/String;
+
+    iput-object p3, p0, Lcn/com/smartdevices/bracelet/lab/q;->f:Ljava/lang/String;
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/q;->i:Ljava/lang/String;
+
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/lab/q;->e:Ljava/lang/String;
+
+    iput p5, p0, Lcn/com/smartdevices/bracelet/lab/q;->h:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/q;->g:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public a(I)V
+    .locals 0
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/lab/q;->h:I
+
+    return-void
+.end method
+
+.method public a(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/q;->g:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public a(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/q;->e:Ljava/lang/String;
+
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/lab/q;->f:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public b()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/q;->e:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public c()I
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/lab/q;->h:I
+
     return v0
+.end method
 
-    :cond_1
-    const/4 v0, 0x0
+.method public d()Ljava/lang/String;
+    .locals 1
 
-    goto :goto_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/q;->f:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public e()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/q;->i:Ljava/lang/String;
+
+    return-object v0
 .end method

@@ -113,7 +113,7 @@
 .method protected getDefaultDrawableResId()I
     .locals 1
 
-    const v0, 0x7f0200ff
+    const v0, 0x7f020110
 
     return v0
 .end method

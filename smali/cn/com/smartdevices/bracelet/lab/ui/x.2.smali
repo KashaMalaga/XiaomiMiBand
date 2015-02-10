@@ -41,9 +41,7 @@
 
     iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/x;->b:Z
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/x;->c:Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ISensorDataChangedCB;
-
-    invoke-virtual {v0, v1, v2}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->enableGetSensorData(ZLcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ISensorDataChangedCB;)Z
+    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->enableGetSensorData(Z)Z
 
     move-result v0
 
@@ -79,7 +77,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/x;->b:Z
 
@@ -87,7 +85,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/x;->a:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->startParseSensorData()V
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/x;->c:Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ISensorDataChangedCB;
+
+    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->startParseSensorData(Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ISensorDataChangedCB;)V
 
     :cond_0
     return-void

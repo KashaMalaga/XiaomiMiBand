@@ -1,5 +1,5 @@
 .class public Lcn/com/smartdevices/bracelet/view/c;
-.super Lcn/com/smartdevices/bracelet/view/Z;
+.super Lcn/com/smartdevices/bracelet/view/aa;
 
 
 # static fields
@@ -10,7 +10,7 @@
 .method public constructor <init>(Landroid/content/Context;[Ljava/lang/String;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/view/Z;-><init>(Landroid/content/Context;[Ljava/lang/String;I)V
+    invoke-direct {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/view/aa;-><init>(Landroid/content/Context;[Ljava/lang/String;I)V
 
     return-void
 .end method
@@ -28,7 +28,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0300bc
+    const v1, 0x7f0300c6
 
     const/4 v2, 0x0
 
@@ -37,7 +37,7 @@
     move-result-object p2
 
     :cond_0
-    const v0, 0x7f080377
+    const v0, 0x7f07038e
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -65,7 +65,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    const v0, 0x7f080378
+    const v0, 0x7f07038f
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -120,9 +120,9 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    const v1, 0x7f02004d
+    const v1, 0x7f020055
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -135,7 +135,7 @@
     goto :goto_0
 
     :cond_2
-    const v1, 0x7f02004e
+    const v1, 0x7f020056
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 

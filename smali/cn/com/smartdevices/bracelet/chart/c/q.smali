@@ -41,6 +41,8 @@
 
 .field private static final s:Z
 
+.field private static t:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
 
 # direct methods
 .method public constructor <init>()V
@@ -90,7 +92,7 @@
 
     if-nez v1, :cond_0
 
-    const v1, 0x7f070121
+    const v1, 0x7f080135
 
     const/4 v2, 0x2
 
@@ -112,7 +114,7 @@
     return-object v0
 
     :cond_0
-    const v1, 0x7f070122
+    const v1, 0x7f080136
 
     new-array v2, v5, [Ljava/lang/Object;
 
@@ -289,7 +291,7 @@
 
     if-nez v1, :cond_0
 
-    const v1, 0x7f070121
+    const v1, 0x7f080135
 
     const/4 v2, 0x2
 
@@ -311,7 +313,7 @@
     return-object v0
 
     :cond_0
-    const v1, 0x7f070122
+    const v1, 0x7f080136
 
     new-array v2, v5, [Ljava/lang/Object;
 
@@ -326,6 +328,141 @@
     goto :goto_0
 .end method
 
+.method public static a(Landroid/view/View;ILandroid/content/Context;)V
+    .locals 10
+
+    const/16 v9, 0x8
+
+    const/4 v8, 0x1
+
+    const/4 v7, 0x0
+
+    const v0, 0x7f070021
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    const v1, 0x7f070023
+
+    invoke-virtual {p0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/TextView;
+
+    const v2, 0x7f070022
+
+    invoke-virtual {p0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/widget/TextView;
+
+    const v3, 0x7f070024
+
+    invoke-virtual {p0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/widget/TextView;
+
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/chart/c/q;->d(I)[Ljava/lang/String;
+
+    move-result-object v4
+
+    aget-object v5, v4, v7
+
+    const-string v6, "0"
+
+    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_0
+
+    const v5, 0x7f080045
+
+    invoke-virtual {p2, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v5
+
+    const v6, 0x7f080047
+
+    invoke-virtual {p2, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v0, v7}, Landroid/widget/TextView;->setVisibility(I)V
+
+    invoke-virtual {v2, v7}, Landroid/widget/TextView;->setVisibility(I)V
+
+    aget-object v7, v4, v7
+
+    invoke-virtual {v0, v7}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {v2, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    aget-object v0, v4, v8
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {v3, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    :goto_0
+    return-void
+
+    :cond_0
+    const v5, 0x7f080046
+
+    invoke-virtual {p2, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v0, v9}, Landroid/widget/TextView;->setVisibility(I)V
+
+    invoke-virtual {v2, v9}, Landroid/widget/TextView;->setVisibility(I)V
+
+    aget-object v0, v4, v8
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {v3, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    goto :goto_0
+.end method
+
+.method public static a(Landroid/view/View;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 2
+
+    const v0, 0x7f070021
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    const v1, 0x7f070022
+
+    invoke-virtual {p0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/TextView;
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    if-eqz p2, :cond_0
+
+    invoke-virtual {v1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    :cond_0
+    return-void
+.end method
+
 .method public static b(Landroid/content/Context;I)Ljava/lang/String;
     .locals 6
 
@@ -337,7 +474,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070121
+    const v1, 0x7f080135
 
     const/4 v2, 0x2
 
@@ -446,11 +583,13 @@
 .end method
 
 .method public static b(Landroid/content/Context;II)[Ljava/lang/String;
-    .locals 5
+    .locals 8
 
-    const/4 v4, 0x1
+    const/high16 v7, 0x45a50000
 
-    const/4 v3, 0x0
+    const/4 v6, 0x0
+
+    const/4 v5, 0x1
 
     const/4 v0, 0x2
 
@@ -458,9 +597,91 @@
 
     int-to-float v1, p1
 
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->H()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    move-result-object v2
+
+    sput-object v2, Lcn/com/smartdevices/bracelet/chart/c/q;->t:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    sget-object v2, Lcn/com/smartdevices/bracelet/chart/c/q;->t:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getUnit()I
+
+    move-result v2
+
+    if-ne v2, v5, :cond_2
+
+    const-wide v1, 0x400a3d70a3d70a3dL
+
+    int-to-double v3, p1
+
+    mul-double/2addr v1, v3
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->round(D)J
+
+    move-result-wide v1
+
+    long-to-float v1, v1
+
+    cmpl-float v2, v1, v7
+
+    if-ltz v2, :cond_1
+
+    div-float/2addr v1, v7
+
+    float-to-double v1, v1
+
+    invoke-static {v1, v2, p2}, Lcn/com/smartdevices/bracelet/chart/c/q;->a(DI)Ljava/lang/String;
+
+    move-result-object v1
+
+    aput-object v1, v0, v6
+
+    const v1, 0x7f080049
+
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    aput-object v1, v0, v5
+
+    :cond_0
+    :goto_0
+    return-object v0
+
+    :cond_1
+    invoke-static {v1}, Ljava/lang/Math;->round(F)I
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    aput-object v1, v0, v6
+
+    const v1, 0x7f08006e
+
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    aput-object v1, v0, v5
+
+    goto :goto_0
+
+    :cond_2
+    sget-object v2, Lcn/com/smartdevices/bracelet/chart/c/q;->t:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getUnit()I
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
     const/16 v2, 0x3e8
 
-    if-lt p1, v2, :cond_0
+    if-lt p1, v2, :cond_3
 
     const/high16 v2, 0x447a0000
 
@@ -472,33 +693,32 @@
 
     move-result-object v1
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v6
 
-    const v1, 0x7f070038
+    const v1, 0x7f080040
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v5
 
-    :goto_0
-    return-object v0
+    goto :goto_0
 
-    :cond_0
+    :cond_3
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v1
 
-    aput-object v1, v0, v3
+    aput-object v1, v0, v6
 
-    const v1, 0x7f070039
+    const v1, 0x7f080041
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    aput-object v1, v0, v4
+    aput-object v1, v0, v5
 
     goto :goto_0
 .end method

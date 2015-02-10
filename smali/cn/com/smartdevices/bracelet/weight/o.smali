@@ -1,115 +1,224 @@
 .class Lcn/com/smartdevices/bracelet/weight/o;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lcn/com/smartdevices/bracelet/ui/T;
+.super Lcom/d/a/a/h;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/model/SyncResult;
+
+.field final synthetic b:Landroid/content/Context;
+
+.field final synthetic c:Lcn/com/smartdevices/bracelet/weight/C;
+
+.field final synthetic d:Lcn/com/smartdevices/bracelet/weight/m;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/weight/m;Lcn/com/smartdevices/bracelet/model/SyncResult;Landroid/content/Context;Lcn/com/smartdevices/bracelet/weight/C;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/weight/o;->a:Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/weight/o;->d:Lcn/com/smartdevices/bracelet/weight/m;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/weight/o;->a:Lcn/com/smartdevices/bracelet/model/SyncResult;
+
+    iput-object p3, p0, Lcn/com/smartdevices/bracelet/weight/o;->b:Landroid/content/Context;
+
+    iput-object p4, p0, Lcn/com/smartdevices/bracelet/weight/o;->c:Lcn/com/smartdevices/bracelet/weight/C;
+
+    invoke-direct {p0}, Lcom/d/a/a/h;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()V
-    .locals 3
+.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
+    .locals 4
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->a()Ljava/lang/String;
+    const-string v0, "WeightInfoManager"
 
-    move-result-object v0
+    const-string v1, "Sync WeightInfos To Local Failure!!"
 
-    const-string v1, "del and del"
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    if-eqz p3, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/o;->a:Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;
+    new-instance v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->a(Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;)V
+    invoke-direct {v0, p3}, Ljava/lang/String;-><init>([B)V
 
-    invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
+    const-string v1, "WeightInfoManager"
 
-    move-result-object v0
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/eventbus/EventWeightDel;
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/weight/o;->a:Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;
+    const-string v3, "Response : "
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->b(Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;)Ljava/lang/String;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    invoke-direct {v1, v2}, Lcn/com/smartdevices/bracelet/eventbus/EventWeightDel;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
+    move-result-object v0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/o;->a:Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->finish()V
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/o;->a:Lcn/com/smartdevices/bracelet/model/SyncResult;
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, v0, Lcn/com/smartdevices/bracelet/model/SyncResult;->result:Z
 
     return-void
 .end method
 
-.method public b()V
-    .locals 2
+.method public onSuccess(I[Lorg/apache/http/Header;[B)V
+    .locals 5
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->a()Ljava/lang/String;
+    const/4 v4, 0x1
 
-    move-result-object v0
+    const-string v0, "WeightInfoManager"
 
-    const-string v1, "del and cancle"
+    const-string v1, "Sync WeightInfos To Local Success!!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    return-void
-.end method
+    if-eqz p3, :cond_1
 
-.method public c()V
-    .locals 3
+    new-instance v0, Ljava/lang/String;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->a()Ljava/lang/String;
+    invoke-direct {v0, p3}, Ljava/lang/String;-><init>([B)V
 
-    move-result-object v0
+    const-string v1, "WeightInfoManager"
 
-    const-string v1, "move"
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    new-instance v0, Landroid/content/Intent;
+    const-string v3, "Response : "
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/o;->a:Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->c(Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;)Landroid/content/Context;
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/o;->b:Landroid/content/Context;
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/k/i;->a(Landroid/content/Context;Ljava/lang/String;)Lcn/com/smartdevices/bracelet/k/i;
 
     move-result-object v1
 
-    const-class v2, Lcn/com/smartdevices/bracelet/weight/family/WeightSelectUserActivity;
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/k/i;->c()Z
 
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    move-result v2
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/o;->a:Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;
+    if-eqz v2, :cond_2
 
-    const/16 v2, 0x11
+    const-string v1, "WeightInfoManager"
 
-    invoke-virtual {v1, v0, v2}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->startActivityForResult(Landroid/content/Intent;I)V
+    const-string v2, "Result OK!!"
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/o;->a:Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    const v1, 0x7f040004
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/o;->a:Lcn/com/smartdevices/bracelet/model/SyncResult;
 
-    const v2, 0x7f040007
+    iput-boolean v4, v1, Lcn/com/smartdevices/bracelet/model/SyncResult;->result:Z
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/weight/WeightReportActivity;->overridePendingTransition(II)V
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/o;->d:Lcn/com/smartdevices/bracelet/weight/m;
 
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/weight/m;->a(Lcn/com/smartdevices/bracelet/weight/m;Ljava/lang/String;)Ljava/util/List;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;
+
+    iput v4, v0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->synced:I
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/o;->d:Lcn/com/smartdevices/bracelet/weight/m;
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/weight/m;->c(Ljava/util/List;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-static {v4}, Lcn/com/smartdevices/bracelet/z;->e(Z)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/o;->c:Lcn/com/smartdevices/bracelet/weight/C;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/o;->c:Lcn/com/smartdevices/bracelet/weight/C;
+
+    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/weight/C;->a()V
+
+    :cond_1
+    :goto_1
     return-void
+
+    :cond_2
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/k/i;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const-string v0, "WeightInfoManager"
+
+    const-string v1, "Result OK!!"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {v4}, Lcn/com/smartdevices/bracelet/z;->e(Z)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/o;->c:Lcn/com/smartdevices/bracelet/weight/C;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/o;->c:Lcn/com/smartdevices/bracelet/weight/C;
+
+    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/weight/C;->a()V
+
+    goto :goto_1
 .end method

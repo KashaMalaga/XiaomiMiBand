@@ -36,7 +36,9 @@
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
-    .locals 4
+    .locals 5
+
+    const v4, 0x4dffffff
 
     const/high16 v2, 0x41700000
 
@@ -48,7 +50,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f020095
+    const v1, 0x7f0200a3
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -102,9 +104,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->x:Landroid/graphics/Paint;
 
-    const v1, 0x4dffffff
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
+    invoke-virtual {v0, v4}, Landroid/graphics/Paint;->setColor(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->x:Landroid/graphics/Paint;
 
@@ -158,9 +158,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->z:Landroid/graphics/Paint;
 
-    const v1, 0x33ffffff
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
+    invoke-virtual {v0, v4}, Landroid/graphics/Paint;->setColor(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->z:Landroid/graphics/Paint;
 
@@ -242,6 +240,23 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
 
+    iget v3, p0, Lcn/com/smartdevices/bracelet/chart/v;->q:F
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/chart/c/t;->c()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    float-to-double v0, v3
+
+    const-wide v2, 0x3fec28f5c28f5c29L
+
+    mul-double/2addr v0, v2
+
+    double-to-float v3, v0
+
+    :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->D:Landroid/graphics/RectF;
 
     invoke-virtual {v0}, Landroid/graphics/RectF;->centerX()F
@@ -253,8 +268,6 @@
     invoke-virtual {v0}, Landroid/graphics/RectF;->centerY()F
 
     move-result v2
-
-    iget v3, p0, Lcn/com/smartdevices/bracelet/chart/v;->q:F
 
     iget-object v4, p0, Lcn/com/smartdevices/bracelet/chart/v;->h:Landroid/graphics/Bitmap;
 
@@ -288,7 +301,7 @@
 
     cmpl-float v0, v6, v0
 
-    if-lez v0, :cond_0
+    if-lez v0, :cond_1
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/v;->B:Landroid/graphics/RectF;
 
@@ -304,14 +317,14 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
 
-    :cond_0
+    :cond_1
     iget v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->G:F
 
     const/4 v1, 0x0
 
     cmpg-float v0, v0, v1
 
-    if-lez v0, :cond_1
+    if-lez v0, :cond_2
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->G:F
 
@@ -319,13 +332,13 @@
 
     cmpl-float v0, v0, v1
 
-    if-lez v0, :cond_2
+    if-lez v0, :cond_3
 
-    :cond_1
+    :cond_2
     :goto_0
     return-void
 
-    :cond_2
+    :cond_3
     iget v0, p0, Lcn/com/smartdevices/bracelet/chart/v;->F:F
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/chart/v;->G:F

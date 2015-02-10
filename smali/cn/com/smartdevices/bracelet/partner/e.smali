@@ -1,11 +1,11 @@
 .class Lcn/com/smartdevices/bracelet/partner/e;
-.super Lcom/e/a/a/p;
+.super Lcom/d/a/a/p;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/e/a/a/p",
+        "Lcom/d/a/a/p",
         "<",
         "Ljava/util/List",
         "<",
@@ -25,7 +25,7 @@
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/partner/e;->a:Lcn/com/smartdevices/bracelet/partner/d;
 
-    invoke-direct {p0}, Lcom/e/a/a/p;-><init>()V
+    invoke-direct {p0}, Lcom/d/a/a/p;-><init>()V
 
     return-void
 .end method

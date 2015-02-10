@@ -54,7 +54,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -126,13 +126,20 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/activity/p;->a:Lcn/com/smartdevices/bracelet/activity/WebActivity;
+
+    # getter for: Lcn/com/smartdevices/bracelet/activity/WebActivity;->mContext:Landroid/content/Context;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->access$700(Lcn/com/smartdevices/bracelet/activity/WebActivity;)Landroid/content/Context;
+
+    move-result-object v1
 
     invoke-static {p1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-static {v1, v2, p2}, Lcn/com/smartdevices/bracelet/x;->a(JLjava/lang/String;)V
+    invoke-static {v1, v2, v3, p2}, Lcn/com/smartdevices/bracelet/g/a;->a(Landroid/content/Context;JLjava/lang/String;)V
 
     invoke-static {p5}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -163,13 +170,13 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->i()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->H()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v1
 
-    invoke-static {p6, v1}, Lcn/com/smartdevices/bracelet/j/f;->b(Ljava/lang/String;Lcn/com/smartdevices/bracelet/model/PersonInfo;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {p6, v1}, Lcn/com/smartdevices/bracelet/k/h;->a(Ljava/lang/String;Lcn/com/smartdevices/bracelet/model/PersonInfo;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     invoke-static {p1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
@@ -177,7 +184,7 @@
 
     iput-wide v2, v1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->uid:J
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/x;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/z;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 
     :cond_0
     new-instance v1, Landroid/content/Intent;

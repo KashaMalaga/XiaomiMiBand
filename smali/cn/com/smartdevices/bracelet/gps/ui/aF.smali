@@ -1,46 +1,66 @@
-.class Lcn/com/smartdevices/bracelet/gps/ui/aF;
+.class public Lcn/com/smartdevices/bracelet/gps/ui/aF;
 .super Ljava/lang/Object;
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+
+# static fields
+.field public static final a:I = 0x1
+
+.field public static final b:I = 0x2
+
+.field public static final c:I = 0x3
+
+.field public static final d:I = 0x4
+
+.field public static final e:I = 0x5
+
+.field public static final f:I = 0x6
+
+.field public static final g:I = 0x7
+
+.field public static final h:I = 0x8
+
+.field public static final i:I = 0x9
+
+.field public static final j:I = 0xa
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/aE;
+.field public k:Ljava/lang/String;
+
+.field public l:Ljava/lang/String;
+
+.field public m:Ljava/lang/String;
+
+.field public n:Ljava/lang/String;
+
+.field public o:I
+
+.field public p:I
+
+.field public q:Ljava/lang/String;
+
+.field public r:I
+
+.field public s:D
+
+.field public t:I
+
+.field public u:Ljava/lang/String;
+
+.field public v:Ljava/lang/String;
+
+.field public w:Ljava/lang/String;
+
+.field public x:Ljava/lang/String;
+
+.field public y:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/aE;)V
+.method public constructor <init>()V
     .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/aF;->a:Lcn/com/smartdevices/bracelet/gps/ui/aE;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/aF;->a:Lcn/com/smartdevices/bracelet/gps/ui/aE;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/aE;->a(Lcn/com/smartdevices/bracelet/gps/ui/aE;)Lcn/com/smartdevices/bracelet/gps/ui/aG;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/aF;->a:Lcn/com/smartdevices/bracelet/gps/ui/aE;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/aE;->a(Lcn/com/smartdevices/bracelet/gps/ui/aE;)Lcn/com/smartdevices/bracelet/gps/ui/aG;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/ui/aG;->h()V
-
-    :cond_0
     return-void
 .end method

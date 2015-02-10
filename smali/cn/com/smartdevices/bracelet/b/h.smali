@@ -69,7 +69,7 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b/a;->a:Ljava/util/concurrent/Executor;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b/a;->c:Ljava/util/concurrent/Executor;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/b/h;->b:Ljava/lang/Runnable;
 

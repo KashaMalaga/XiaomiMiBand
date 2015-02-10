@@ -100,7 +100,7 @@
 
     invoke-virtual {v0}, Landroid/animation/ValueAnimator;->start()V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->R()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->ag()Z
 
     move-result v0
 
@@ -122,9 +122,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/b;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
-    const-class v1, Lcn/com/smartdevices/bracelet/ui/ek;
+    const-class v1, Lcn/com/smartdevices/bracelet/ui/ep;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/U;->b(Landroid/app/Activity;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/W;->b(Landroid/app/Activity;Ljava/lang/Class;)V
 
     :cond_0
     return-void

@@ -31,7 +31,7 @@
 
 # virtual methods
 .method public run()V
-    .locals 4
+    .locals 3
 
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
@@ -51,62 +51,13 @@
 
     invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/s;->a(II)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->b()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->aa()Lcn/com/smartdevices/bracelet/i/h;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/i/h;->a()I
-
-    move-result v2
-
-    const/4 v3, -0x1
-
-    if-ne v2, v3, :cond_0
-
-    new-instance v2, Lcn/com/smartdevices/bracelet/model/SportDay;
-
-    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>()V
-
-    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/s;->f(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/DaySportData;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/DaySportData;->getStepsInfo()Lcn/com/smartdevices/bracelet/analysis/StepsInfo;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->getStepsCount()I
-
-    move-result v0
-
-    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/i/h;->a(I)V
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/i/a;->a()Lcn/com/smartdevices/bracelet/i/a;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/i/a;->a(Lcn/com/smartdevices/bracelet/i/h;)V
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/x;->a(Lcn/com/smartdevices/bracelet/i/h;)V
-
-    :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/v;->c:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->h(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Landroid/os/Handler;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/v;->c:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
 
@@ -118,6 +69,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    :cond_1
+    :cond_0
     return-void
 .end method

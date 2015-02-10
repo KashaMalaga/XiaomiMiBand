@@ -173,7 +173,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/v;->a(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/w;->a(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
@@ -208,7 +208,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/v;->a(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/w;->a(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
@@ -242,7 +242,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/v;->b(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/w;->b(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
@@ -276,7 +276,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/v;->b(Ljava/lang/String;)Ljava/util/UUID;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/w;->b(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v0
 
@@ -481,11 +481,7 @@
 
     iget-object v1, p0, Lcom/xiaomi/hm/bleservice/a;->n:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
 
-    invoke-virtual {v1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

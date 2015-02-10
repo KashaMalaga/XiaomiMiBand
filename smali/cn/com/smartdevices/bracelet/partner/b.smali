@@ -28,3 +28,9 @@
 .field public static final l:Ljava/lang/String; = "content"
 
 .field public static final m:Ljava/lang/String; = "topic"
+
+.field public static final n:Ljava/lang/String; = "show_dialog"
+
+.field public static final o:Ljava/lang/String; = "set_title_visible"
+
+.field public static final p:Ljava/lang/String; = "exit"

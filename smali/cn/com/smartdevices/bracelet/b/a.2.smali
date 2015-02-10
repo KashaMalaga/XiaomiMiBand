@@ -18,15 +18,15 @@
 
 
 # static fields
-.field public static final a:Ljava/util/concurrent/Executor;
+.field private static final a:Ljava/lang/String; = "AsyncTask"
 
-.field public static final b:Ljava/util/concurrent/Executor;
+.field private static final b:I = 0x5
 
 .field public static final c:Ljava/util/concurrent/Executor;
 
-.field private static final d:Ljava/lang/String; = "AsyncTask"
+.field public static final d:Ljava/util/concurrent/Executor;
 
-.field private static final e:I = 0x5
+.field public static final e:Ljava/util/concurrent/Executor;
 
 .field private static final f:I = 0x80
 
@@ -120,7 +120,7 @@
 
     invoke-direct/range {v0 .. v8}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;Ljava/util/concurrent/RejectedExecutionHandler;)V
 
-    sput-object v0, Lcn/com/smartdevices/bracelet/b/a;->a:Ljava/util/concurrent/Executor;
+    sput-object v0, Lcn/com/smartdevices/bracelet/b/a;->c:Ljava/util/concurrent/Executor;
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/b/E;->c()Z
 
@@ -133,7 +133,7 @@
     invoke-direct {v0, v9}, Lcn/com/smartdevices/bracelet/b/h;-><init>(Lcn/com/smartdevices/bracelet/b/b;)V
 
     :goto_0
-    sput-object v0, Lcn/com/smartdevices/bracelet/b/a;->b:Ljava/util/concurrent/Executor;
+    sput-object v0, Lcn/com/smartdevices/bracelet/b/a;->d:Ljava/util/concurrent/Executor;
 
     const/4 v0, 0x2
 
@@ -143,7 +143,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcn/com/smartdevices/bracelet/b/a;->c:Ljava/util/concurrent/Executor;
+    sput-object v0, Lcn/com/smartdevices/bracelet/b/a;->e:Ljava/util/concurrent/Executor;
 
     new-instance v0, Lcn/com/smartdevices/bracelet/b/g;
 
@@ -151,7 +151,7 @@
 
     sput-object v0, Lcn/com/smartdevices/bracelet/b/a;->l:Lcn/com/smartdevices/bracelet/b/g;
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/b/a;->b:Ljava/util/concurrent/Executor;
+    sget-object v0, Lcn/com/smartdevices/bracelet/b/a;->d:Ljava/util/concurrent/Executor;
 
     sput-object v0, Lcn/com/smartdevices/bracelet/b/a;->m:Ljava/util/concurrent/Executor;
 

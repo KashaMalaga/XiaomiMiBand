@@ -1,67 +1,300 @@
-.class Lcn/com/smartdevices/bracelet/ui/cY;
-.super Landroid/os/Handler;
+.class public Lcn/com/smartdevices/bracelet/ui/cY;
+.super Lcn/com/smartdevices/bracelet/ui/n;
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# static fields
+.field private static final e:Ljava/lang/String; = "^[\\w\\-\\.]+@[\\w\\-]+(\\.\\w+)+$"
+
+.field private static final f:Ljava/lang/String; = "^\\d+$"
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/cW;
+.field private b:Landroid/widget/EditText;
+
+.field private c:Landroid/widget/EditText;
+
+.field private d:Landroid/view/View;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/cW;)V
+.method public constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cY;->a:Lcn/com/smartdevices/bracelet/ui/cW;
-
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/n;-><init>()V
 
     return-void
 .end method
 
+.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/cY;)Landroid/view/View;
+    .locals 1
 
-# virtual methods
-.method public handleMessage(Landroid/os/Message;)V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cY;->d:Landroid/view/View;
+
+    return-object v0
+.end method
+
+.method private a(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    iget v0, p1, Landroid/os/Message;->what:I
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/cY;->getActivity()Landroid/app/Activity;
 
-    sparse-switch v0, :sswitch_data_0
+    move-result-object v0
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
+
+    move-result-object v0
+
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/da;
+
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/da;-><init>(Lcn/com/smartdevices/bracelet/ui/cY;)V
+
+    invoke-static {v0, p1, p2, v1}, Lcn/com/smartdevices/bracelet/k/g;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Ljava/lang/String;Lcom/d/a/a/h;)V
+
+    return-void
+.end method
+
+.method public static b(Ljava/lang/String;)Z
+    .locals 1
+
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static c(Ljava/lang/String;)Z
+    .locals 2
+
+    const/4 v0, 0x1
+
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    const-string v1, "^[\\w\\-\\.]+@[\\w\\-]+(\\.\\w+)+$"
+
+    invoke-static {v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/util/regex/Matcher;->matches()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
+    const-string v1, "^\\d+$"
+
+    invoke-static {v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/util/regex/Matcher;->matches()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    :cond_2
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+
+# virtual methods
+.method protected b()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public onClick(Landroid/view/View;)V
+    .locals 4
+
+    const/4 v3, 0x0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cY;->b:Landroid/widget/EditText;
+
+    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cY;->c:Landroid/widget/EditText;
+
+    invoke-virtual {v1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/cY;->b(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/cY;->c(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-direct {p0, v0, v1}, Lcn/com/smartdevices/bracelet/ui/cY;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/cY;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    const-string v1, "AboutSendFeedback"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     :goto_0
     return-void
 
-    :sswitch_0
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cY;->a:Lcn/com/smartdevices/bracelet/ui/cW;
+    :cond_0
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/cY;->getActivity()Landroid/app/Activity;
 
-    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;
+    const-string v1, "\u8054\u7cfb\u65b9\u5f0f\u65e0\u6548\uff0c\u8bf7\u91cd\u586b!"
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/ui/cW;->b(Lcn/com/smartdevices/bracelet/ui/cW;Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;)Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;
+    invoke-static {v0, v1, v3}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cY;->a:Lcn/com/smartdevices/bracelet/ui/cW;
+    move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cY;->a:Lcn/com/smartdevices/bracelet/ui/cW;
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/cW;->a(Lcn/com/smartdevices/bracelet/ui/cW;)Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/cY;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    const-string v1, "\u8bf7\u586b\u5199\u53cd\u9988\u5185\u5bb9!"
+
+    invoke-static {v0, v1, v3}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    goto :goto_0
+.end method
+
+.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    .locals 3
+
+    const v0, 0x7f030084
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, p2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/cW;->c(Lcn/com/smartdevices/bracelet/ui/cW;Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;)V
+    const v0, 0x7f070272
 
-    goto :goto_0
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    :sswitch_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cY;->a:Lcn/com/smartdevices/bracelet/ui/cW;
+    move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/cW;->b(Lcn/com/smartdevices/bracelet/ui/cW;)V
+    check-cast v0, Landroid/widget/EditText;
 
-    goto :goto_0
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cY;->b:Landroid/widget/EditText;
 
-    nop
+    const v0, 0x7f070271
 
-    :sswitch_data_0
-    .sparse-switch
-        0x1 -> :sswitch_0
-        0x1002 -> :sswitch_1
-    .end sparse-switch
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/EditText;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cY;->c:Landroid/widget/EditText;
+
+    const v0, 0x7f070273
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cY;->d:Landroid/view/View;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cY;->d:Landroid/view/View;
+
+    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cY;->c:Landroid/widget/EditText;
+
+    new-instance v2, Lcn/com/smartdevices/bracelet/ui/cZ;
+
+    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/ui/cZ;-><init>(Lcn/com/smartdevices/bracelet/ui/cY;)V
+
+    invoke-virtual {v0, v2}, Landroid/widget/EditText;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
+
+    return-object v1
+.end method
+
+.method public onPause()V
+    .locals 1
+
+    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/n;->onPause()V
+
+    const-string v0, "PageFeedback"
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->a(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public onResume()V
+    .locals 1
+
+    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/n;->onResume()V
+
+    const-string v0, "PageFeedback"
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->c(Ljava/lang/String;)V
+
+    return-void
 .end method

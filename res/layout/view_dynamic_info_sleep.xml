@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/sleep_container" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:paddingTop="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:textSize="36.5sp" android:textColor="@android:color/white" android:ellipsize="none" android:id="@id/sleep_hour" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00" android:singleLine="true" android:fontFamily="miui" />
+        <TextView android:textSize="28.0sp" android:textColor="@android:color/white" android:id="@id/sleep_hour_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-3.0dip" android:text="@string/unit_hour" />
+        <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:textSize="36.5sp" android:textColor="@android:color/white" android:ellipsize="none" android:id="@id/sleep_min" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00" android:singleLine="true" android:fontFamily="miui" />
+        <TextView android:textSize="28.0sp" android:textColor="@android:color/white" android:id="@id/sleep_min_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-3.0dip" android:text="@string/unit_min_short" />
+    </LinearLayout>
+    <TextView android:textSize="12.0sp" android:textColor="#99ffffff" android:id="@id/sleep_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="53.0dip" android:text="@string/dynamic_sleep_tip" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="12.0sp" android:textColor="#99ffffff" android:id="@id/sleep_deep_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="53.0dip" android:text="--" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

@@ -2,22 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/GestureDetector$OnGestureListener;
 
 
 # instance fields
-.field final synthetic a:Landroid/view/View;
-
-.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/X;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/Z;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/X;Landroid/view/View;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/Z;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/ab;->b:Lcn/com/smartdevices/bracelet/ui/X;
-
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/ab;->a:Landroid/view/View;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/ab;->a:Lcn/com/smartdevices/bracelet/ui/Z;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,20 +22,46 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 3
+.method public onDown(Landroid/view/MotionEvent;)Z
+    .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ab;->b:Lcn/com/smartdevices/bracelet/ui/X;
+    const/4 v0, 0x0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/ab;->a:Landroid/view/View;
+    return v0
+.end method
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/ab;->b:Lcn/com/smartdevices/bracelet/ui/X;
+.method public onFling(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
+    .locals 1
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/X;->j(Lcn/com/smartdevices/bracelet/ui/X;)Landroid/view/View;
+    const/4 v0, 0x1
 
-    move-result-object v2
+    return v0
+.end method
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/ui/X;->a(Lcn/com/smartdevices/bracelet/ui/X;Landroid/view/View;Landroid/view/View;)V
+.method public onLongPress(Landroid/view/MotionEvent;)V
+    .locals 0
 
     return-void
+.end method
+
+.method public onScroll(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public onShowPress(Landroid/view/MotionEvent;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onSingleTapUp(Landroid/view/MotionEvent;)Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
 .end method

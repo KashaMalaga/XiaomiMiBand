@@ -1,32 +1,74 @@
-.class public interface abstract annotation Lcom/d/a/a/a;
+.class Lcom/d/a/a/A;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/annotation/Annotation;
+.implements Ljava/lang/Runnable;
 
 
-# annotations
-.annotation system Ldalvik/annotation/AnnotationDefault;
-    value = .subannotation Lcom/d/a/a/a;
-        a = true
-        b = true
-    .end subannotation
-.end annotation
+# instance fields
+.field final synthetic a:[B
 
-.annotation runtime Ljava/lang/annotation/Retention;
-    value = .enum Ljava/lang/annotation/RetentionPolicy;->RUNTIME:Ljava/lang/annotation/RetentionPolicy;
-.end annotation
+.field final synthetic b:I
 
-.annotation runtime Ljava/lang/annotation/Target;
-    value = {
-        .enum Ljava/lang/annotation/ElementType;->FIELD:Ljava/lang/annotation/ElementType;
-    }
-.end annotation
+.field final synthetic c:[Lorg/apache/http/Header;
+
+.field final synthetic d:Lcom/d/a/a/z;
+
+
+# direct methods
+.method constructor <init>(Lcom/d/a/a/z;[BI[Lorg/apache/http/Header;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/d/a/a/A;->d:Lcom/d/a/a/z;
+
+    iput-object p2, p0, Lcom/d/a/a/A;->a:[B
+
+    iput p3, p0, Lcom/d/a/a/A;->b:I
+
+    iput-object p4, p0, Lcom/d/a/a/A;->c:[Lorg/apache/http/Header;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a()Z
-.end method
+.method public run()V
+    .locals 3
 
-.method public abstract b()Z
+    :try_start_0
+    iget-object v0, p0, Lcom/d/a/a/A;->d:Lcom/d/a/a/z;
+
+    iget-object v1, p0, Lcom/d/a/a/A;->a:[B
+
+    invoke-virtual {v0, v1}, Lcom/d/a/a/z;->a([B)Ljava/lang/Object;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/d/a/a/A;->d:Lcom/d/a/a/z;
+
+    new-instance v2, Lcom/d/a/a/B;
+
+    invoke-direct {v2, p0, v0}, Lcom/d/a/a/B;-><init>(Lcom/d/a/a/A;Ljava/lang/Object;)V
+
+    invoke-virtual {v1, v2}, Lcom/d/a/a/z;->postRunnable(Ljava/lang/Runnable;)V
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    iget-object v1, p0, Lcom/d/a/a/A;->d:Lcom/d/a/a/z;
+
+    new-instance v2, Lcom/d/a/a/C;
+
+    invoke-direct {v2, p0, v0}, Lcom/d/a/a/C;-><init>(Lcom/d/a/a/A;Lorg/json/JSONException;)V
+
+    invoke-virtual {v1, v2}, Lcom/d/a/a/z;->postRunnable(Ljava/lang/Runnable;)V
+
+    goto :goto_0
 .end method

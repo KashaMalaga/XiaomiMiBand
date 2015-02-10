@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/rl_head_title" android:background="@color/bg_color_blue" android:layout_width="fill_parent" android:layout_height="wrap_content"
+<FrameLayout android:id="@id/rl_head_title" android:background="@color/bg_color_blue" android:layout_width="fill_parent" android:layout_height="wrap_content"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <TextView android:id="@id/title_back" android:background="@color/bg_color_blue" android:layout_centerVertical="true" style="@style/BackButton" />
-    <TextView android:textSize="15.5sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/head_title" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" />
-</RelativeLayout>
+    <TextView android:id="@id/home_back" style="@style/BackButton" />
+</FrameLayout>

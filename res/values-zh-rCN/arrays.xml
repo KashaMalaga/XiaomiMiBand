@@ -68,4 +68,10 @@
         <item>偏胖</item>
         <item>肥胖</item>
     </string-array>
+    <string-array name="weight_dynamic_list_bmi_tips">
+        <item>有点偏瘦哦，点击查看详情</item>
+        <item>恭喜你身材很标准</item>
+        <item>有点偏胖哦，点击查看详情</item>
+        <item>有点偏胖哦，点击查看详情</item>
+    </string-array>
 </resources>

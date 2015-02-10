@@ -1,8 +1,5 @@
 .class Lcn/com/smartdevices/bracelet/ui/bX;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.super Lcom/d/a/a/h;
 
 
 # instance fields
@@ -15,21 +12,47 @@
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bX;->a:Lcn/com/smartdevices/bracelet/ui/bW;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/d/a/a/h;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 1
+.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
+    .locals 0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bX;->a:Lcn/com/smartdevices/bracelet/ui/bW;
+    return-void
+.end method
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/bW;->a:Lcn/com/smartdevices/bracelet/ui/bT;
+.method public onSuccess(I[Lorg/apache/http/Header;[B)V
+    .locals 3
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/bT;->d(Lcn/com/smartdevices/bracelet/ui/bT;)V
+    const-string v0, "switch"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "loginOut:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-static {p3}, Lcn/com/smartdevices/bracelet/E;->b([B)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

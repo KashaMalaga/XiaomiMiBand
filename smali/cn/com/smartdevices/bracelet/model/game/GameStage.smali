@@ -4,25 +4,25 @@
 
 # instance fields
 .field private startTime:J
-    .annotation runtime Lcom/d/a/a/b;
+    .annotation runtime Lcom/c/a/a/b;
         a = "stime"
     .end annotation
 .end field
 
 .field private status:I
-    .annotation runtime Lcom/d/a/a/b;
+    .annotation runtime Lcom/c/a/a/b;
         a = "status"
     .end annotation
 .end field
 
 .field private stopTime:J
-    .annotation runtime Lcom/d/a/a/b;
+    .annotation runtime Lcom/c/a/a/b;
         a = "etime"
     .end annotation
 .end field
 
 .field private url:Ljava/lang/String;
-    .annotation runtime Lcom/d/a/a/b;
+    .annotation runtime Lcom/c/a/a/b;
         a = "url"
     .end annotation
 .end field
@@ -121,10 +121,10 @@
     return-wide v0
 .end method
 
-.method public getUrl()Ljava/lang/String;
+.method public getUrl(Landroid/content/Context;)Ljava/lang/String;
     .locals 3
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/B;->f()Ljava/lang/String;
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/E;->j(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 

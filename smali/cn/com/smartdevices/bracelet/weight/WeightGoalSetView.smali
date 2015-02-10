@@ -86,7 +86,7 @@
 
 .field private y:F
 
-.field private z:Lcn/com/smartdevices/bracelet/weight/h;
+.field private z:Lcn/com/smartdevices/bracelet/weight/l;
 
 
 # direct methods
@@ -303,11 +303,13 @@
 
     iput v1, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->G:I
 
-    const/4 v1, 0x4
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->H()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-    invoke-virtual {v0, v1, v4}, Landroid/content/res/TypedArray;->getInteger(II)I
+    move-result-object v1
 
-    move-result v1
+    iget-object v1, v1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
+
+    iget v1, v1, Lcn/com/smartdevices/bracelet/model/MiliConfig;->weightUnit:I
 
     iput v1, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->B:I
 
@@ -315,7 +317,7 @@
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->B:I
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/weight/q;->a(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/weight/x;->a(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -343,7 +345,7 @@
 
     sget-object v0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->e:Landroid/content/Context;
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/B;->b(FLandroid/content/Context;)F
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/E;->b(FLandroid/content/Context;)F
 
     move-result v0
 
@@ -355,7 +357,7 @@
 
     sget-object v1, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->e:Landroid/content/Context;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/B;->b(FLandroid/content/Context;)F
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/E;->b(FLandroid/content/Context;)F
 
     move-result v0
 
@@ -365,7 +367,7 @@
 
     sget-object v0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->e:Landroid/content/Context;
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/B;->b(FLandroid/content/Context;)F
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/E;->b(FLandroid/content/Context;)F
 
     move-result v0
 
@@ -377,7 +379,7 @@
 
     sget-object v1, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->e:Landroid/content/Context;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/B;->b(FLandroid/content/Context;)F
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/E;->b(FLandroid/content/Context;)F
 
     move-result v0
 
@@ -389,7 +391,7 @@
 
     sget-object v1, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->e:Landroid/content/Context;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/B;->b(FLandroid/content/Context;)F
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/E;->b(FLandroid/content/Context;)F
 
     move-result v0
 
@@ -401,7 +403,7 @@
 
     sget-object v1, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->e:Landroid/content/Context;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/B;->b(FLandroid/content/Context;)F
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/E;->b(FLandroid/content/Context;)F
 
     move-result v0
 
@@ -413,7 +415,7 @@
 
     sget-object v1, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->e:Landroid/content/Context;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/B;->a(FLandroid/content/Context;)I
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/E;->a(FLandroid/content/Context;)I
 
     move-result v0
 
@@ -423,7 +425,7 @@
 
     sget-object v1, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->e:Landroid/content/Context;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/B;->a(FLandroid/content/Context;)I
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/E;->a(FLandroid/content/Context;)I
 
     move-result v0
 
@@ -433,7 +435,7 @@
 
     sget-object v1, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->e:Landroid/content/Context;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/B;->b(FLandroid/content/Context;)F
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/E;->b(FLandroid/content/Context;)F
 
     move-result v0
 
@@ -445,7 +447,7 @@
 
     sget-object v1, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->e:Landroid/content/Context;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/B;->b(FLandroid/content/Context;)F
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/E;->b(FLandroid/content/Context;)F
 
     move-result v0
 
@@ -485,7 +487,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     cmpl-float v1, p1, v0
 
@@ -763,7 +765,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iput p1, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->y:F
 
@@ -813,7 +815,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iput p1, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->t:F
 
@@ -836,10 +838,10 @@
     return-void
 .end method
 
-.method public a(Lcn/com/smartdevices/bracelet/weight/h;)V
+.method public a(Lcn/com/smartdevices/bracelet/weight/l;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->z:Lcn/com/smartdevices/bracelet/weight/h;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->z:Lcn/com/smartdevices/bracelet/weight/l;
 
     return-void
 .end method
@@ -871,7 +873,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -938,19 +940,31 @@
 .end method
 
 .method protected onDraw(Landroid/graphics/Canvas;)V
-    .locals 10
+    .locals 14
+
+    const-wide/high16 v12, 0x3fe0000000000000L
+
+    const/4 v11, 0x1
+
+    const/high16 v10, 0x40000000
+
+    const-wide/high16 v8, 0x3fd0000000000000L
+
+    const/high16 v7, 0x3f000000
 
     invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->K:I
 
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_0
+    if-ne v0, v11, :cond_0
 
     const/4 v0, 0x0
 
     sput v0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->j:I
+
+    const/4 v0, 0x0
+
+    sput v0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->k:I
 
     :cond_0
     iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->p:I
@@ -965,7 +979,7 @@
 
     mul-int/lit8 v1, v1, 0x2
 
-    sub-int v8, v0, v1
+    sub-int v6, v0, v1
 
     sget-object v0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->x:Ljava/lang/String;
 
@@ -1001,7 +1015,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->a:Landroid/graphics/Paint;
 
@@ -1043,91 +1057,11 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    iget-object v9, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->a:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->a:Landroid/graphics/Paint;
 
-    new-instance v0, Landroid/graphics/LinearGradient;
+    iget v1, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->C:I
 
-    sget v1, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->k:I
-
-    sget v2, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->j:I
-
-    add-int/2addr v1, v2
-
-    sget v2, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->i:I
-
-    add-int/2addr v1, v2
-
-    int-to-float v1, v1
-
-    iget v2, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->q:I
-
-    sget v3, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->h:I
-
-    sub-int/2addr v2, v3
-
-    div-int/lit8 v2, v2, 0x2
-
-    int-to-float v2, v2
-
-    sget v3, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->k:I
-
-    sget v4, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->j:I
-
-    add-int/2addr v3, v4
-
-    add-int/2addr v3, v8
-
-    sget v4, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->i:I
-
-    sub-int/2addr v3, v4
-
-    int-to-float v3, v3
-
-    iget v4, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->q:I
-
-    sget v5, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->h:I
-
-    add-int/2addr v4, v5
-
-    div-int/lit8 v4, v4, 0x2
-
-    int-to-float v4, v4
-
-    const/4 v5, 0x4
-
-    new-array v5, v5, [I
-
-    const/4 v6, 0x0
-
-    iget v7, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->C:I
-
-    aput v7, v5, v6
-
-    const/4 v6, 0x1
-
-    iget v7, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->D:I
-
-    aput v7, v5, v6
-
-    const/4 v6, 0x2
-
-    iget v7, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->E:I
-
-    aput v7, v5, v6
-
-    const/4 v6, 0x3
-
-    iget v7, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->F:I
-
-    aput v7, v5, v6
-
-    const/4 v6, 0x0
-
-    sget-object v7, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
-
-    invoke-direct/range {v0 .. v7}, Landroid/graphics/LinearGradient;-><init>(FFFF[I[FLandroid/graphics/Shader$TileMode;)V
-
-    invoke-virtual {v9, v0}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
     sget v0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->k:I
 
@@ -1157,7 +1091,179 @@
 
     add-int/2addr v0, v3
 
-    add-int/2addr v0, v8
+    div-int/lit8 v3, v6, 0x4
+
+    add-int/2addr v0, v3
+
+    int-to-float v3, v0
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->q:I
+
+    sget v4, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->h:I
+
+    add-int/2addr v0, v4
+
+    div-int/lit8 v0, v0, 0x2
+
+    int-to-float v4, v0
+
+    iget-object v5, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->a:Landroid/graphics/Paint;
+
+    move-object v0, p1
+
+    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->a:Landroid/graphics/Paint;
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->D:I
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
+
+    sget v0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->k:I
+
+    sget v1, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->j:I
+
+    add-int/2addr v0, v1
+
+    div-int/lit8 v1, v6, 0x4
+
+    add-int/2addr v0, v1
+
+    int-to-float v1, v0
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->q:I
+
+    sget v2, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->h:I
+
+    sub-int/2addr v0, v2
+
+    div-int/lit8 v0, v0, 0x2
+
+    int-to-float v2, v0
+
+    sget v0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->k:I
+
+    sget v3, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->j:I
+
+    add-int/2addr v0, v3
+
+    div-int/lit8 v3, v6, 0x2
+
+    add-int/2addr v0, v3
+
+    int-to-float v3, v0
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->q:I
+
+    sget v4, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->h:I
+
+    add-int/2addr v0, v4
+
+    div-int/lit8 v0, v0, 0x2
+
+    int-to-float v4, v0
+
+    iget-object v5, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->a:Landroid/graphics/Paint;
+
+    move-object v0, p1
+
+    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->a:Landroid/graphics/Paint;
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->E:I
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
+
+    sget v0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->k:I
+
+    sget v1, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->j:I
+
+    add-int/2addr v0, v1
+
+    div-int/lit8 v1, v6, 0x2
+
+    add-int/2addr v0, v1
+
+    int-to-float v1, v0
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->q:I
+
+    sget v2, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->h:I
+
+    sub-int/2addr v0, v2
+
+    div-int/lit8 v0, v0, 0x2
+
+    int-to-float v2, v0
+
+    sget v0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->k:I
+
+    sget v3, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->j:I
+
+    add-int/2addr v0, v3
+
+    mul-int/lit8 v3, v6, 0x3
+
+    div-int/lit8 v3, v3, 0x4
+
+    add-int/2addr v0, v3
+
+    int-to-float v3, v0
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->q:I
+
+    sget v4, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->h:I
+
+    add-int/2addr v0, v4
+
+    div-int/lit8 v0, v0, 0x2
+
+    int-to-float v4, v0
+
+    iget-object v5, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->a:Landroid/graphics/Paint;
+
+    move-object v0, p1
+
+    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->a:Landroid/graphics/Paint;
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->F:I
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
+
+    sget v0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->k:I
+
+    sget v1, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->j:I
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v1, v6, 0x3
+
+    div-int/lit8 v1, v1, 0x4
+
+    add-int/2addr v0, v1
+
+    int-to-float v1, v0
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->q:I
+
+    sget v2, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->h:I
+
+    sub-int/2addr v0, v2
+
+    div-int/lit8 v0, v0, 0x2
+
+    int-to-float v2, v0
+
+    sget v0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->k:I
+
+    sget v3, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->j:I
+
+    add-int/2addr v0, v3
+
+    add-int/2addr v0, v6
 
     sget v3, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->i:I
 
@@ -1193,7 +1299,7 @@
 
     add-int/2addr v0, v1
 
-    add-int/2addr v0, v8
+    add-int/2addr v0, v6
 
     sget v1, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->i:I
 
@@ -1239,9 +1345,11 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->c:Landroid/graphics/Paint;
 
-    const/4 v1, 0x1
+    invoke-virtual {v0, v11}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
+    iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->K:I
+
+    if-eq v0, v11, :cond_4
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->c:Landroid/graphics/Paint;
 
@@ -1251,7 +1359,11 @@
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->t:F
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    add-float/2addr v2, v7
+
+    float-to-int v2, v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -1269,36 +1381,45 @@
 
     move-result v0
 
-    float-to-int v1, v0
+    float-to-int v0, v0
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->K:I
-
-    if-nez v0, :cond_5
-
-    sget v0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->f:I
+    sget v1, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->f:I
 
     sget v2, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->g:I
 
-    add-int/2addr v0, v2
+    add-int/2addr v1, v2
 
     sget v2, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->h:I
 
     div-int/lit8 v2, v2, 0x2
 
-    sub-int/2addr v0, v2
+    sub-int/2addr v1, v2
 
     sget v2, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->g:I
 
-    add-int/2addr v0, v2
+    add-int/2addr v1, v2
 
-    :goto_0
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->c:Landroid/graphics/Paint;
+
+    const-string v3, "#ff9da0a4"
+
+    invoke-static {v3}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setColor(I)V
+
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
     iget v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->t:F
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    add-float/2addr v3, v7
+
+    float-to-int v3, v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -1318,15 +1439,15 @@
 
     add-int/2addr v3, v4
 
-    div-int/lit8 v4, v8, 0x4
+    div-int/lit8 v4, v6, 0x4
 
     add-int/2addr v3, v4
 
-    div-int/lit8 v1, v1, 0x2
+    div-int/lit8 v0, v0, 0x2
 
-    sub-int v1, v3, v1
+    sub-int v0, v3, v0
 
-    int-to-float v1, v1
+    int-to-float v0, v0
 
     iget v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->q:I
 
@@ -1336,15 +1457,15 @@
 
     add-int/2addr v3, v4
 
-    add-int/2addr v3, v0
+    add-int/2addr v3, v1
 
     int-to-float v3, v3
 
     iget-object v4, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->c:Landroid/graphics/Paint;
 
-    invoke-virtual {p1, v2, v1, v3, v4}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
+    invoke-virtual {p1, v2, v0, v3, v4}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->c:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->c:Landroid/graphics/Paint;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1352,7 +1473,11 @@
 
     iget v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->u:F
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    add-float/2addr v3, v7
+
+    float-to-int v3, v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -1366,11 +1491,11 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
+    invoke-virtual {v0, v2}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
 
-    move-result v1
+    move-result v0
 
-    float-to-int v1, v1
+    float-to-int v0, v0
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1378,7 +1503,11 @@
 
     iget v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->u:F
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    add-float/2addr v3, v7
+
+    float-to-int v3, v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -1398,15 +1527,15 @@
 
     add-int/2addr v3, v4
 
-    div-int/lit8 v4, v8, 0x2
+    div-int/lit8 v4, v6, 0x2
 
     add-int/2addr v3, v4
 
-    div-int/lit8 v1, v1, 0x2
+    div-int/lit8 v0, v0, 0x2
 
-    sub-int v1, v3, v1
+    sub-int v0, v3, v0
 
-    int-to-float v1, v1
+    int-to-float v0, v0
 
     iget v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->q:I
 
@@ -1416,15 +1545,15 @@
 
     add-int/2addr v3, v4
 
-    add-int/2addr v3, v0
+    add-int/2addr v3, v1
 
     int-to-float v3, v3
 
     iget-object v4, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->c:Landroid/graphics/Paint;
 
-    invoke-virtual {p1, v2, v1, v3, v4}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
+    invoke-virtual {p1, v2, v0, v3, v4}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->c:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->c:Landroid/graphics/Paint;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1432,7 +1561,11 @@
 
     iget v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->v:F
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    add-float/2addr v3, v7
+
+    float-to-int v3, v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -1446,11 +1579,11 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
+    invoke-virtual {v0, v2}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
 
-    move-result v1
+    move-result v0
 
-    float-to-int v1, v1
+    float-to-int v0, v0
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1458,7 +1591,11 @@
 
     iget v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->v:F
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    add-float/2addr v3, v7
+
+    float-to-int v3, v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -1478,17 +1615,17 @@
 
     add-int/2addr v3, v4
 
-    mul-int/lit8 v4, v8, 0x3
+    mul-int/lit8 v4, v6, 0x3
 
     div-int/lit8 v4, v4, 0x4
 
     add-int/2addr v3, v4
 
-    div-int/lit8 v1, v1, 0x2
+    div-int/lit8 v0, v0, 0x2
 
-    sub-int v1, v3, v1
+    sub-int v0, v3, v0
 
-    int-to-float v1, v1
+    int-to-float v0, v0
 
     iget v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->q:I
 
@@ -1498,13 +1635,204 @@
 
     add-int/2addr v3, v4
 
-    add-int/2addr v0, v3
+    add-int/2addr v1, v3
 
-    int-to-float v0, v0
+    int-to-float v1, v1
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->c:Landroid/graphics/Paint;
 
-    invoke-virtual {p1, v2, v1, v0, v3}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
+    invoke-virtual {p1, v2, v0, v1, v3}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
+
+    :goto_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->d:Landroid/graphics/Paint;
+
+    const/4 v1, -0x1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->d:Landroid/graphics/Paint;
+
+    const/high16 v1, 0x420c0000
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextSize(F)V
+
+    const-string v0, "\u504f\u7626"
+
+    sget v1, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->k:I
+
+    sget v2, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->j:I
+
+    add-int/2addr v1, v2
+
+    sget v2, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->i:I
+
+    add-int/2addr v1, v2
+
+    int-to-float v1, v1
+
+    div-int/lit8 v2, v6, 0x4
+
+    int-to-float v2, v2
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->d:Landroid/graphics/Paint;
+
+    const-string v4, "\u504f\u7626"
+
+    invoke-virtual {v3, v4}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
+
+    move-result v3
+
+    sub-float/2addr v2, v3
+
+    div-float/2addr v2, v10
+
+    add-float/2addr v1, v2
+
+    iget v2, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->q:I
+
+    div-int/lit8 v2, v2, 0x2
+
+    add-int/lit8 v2, v2, 0xd
+
+    int-to-float v2, v2
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->d:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
+
+    const-string v0, "\u6807\u51c6"
+
+    sget v1, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->k:I
+
+    sget v2, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->j:I
+
+    add-int/2addr v1, v2
+
+    div-int/lit8 v2, v6, 0x4
+
+    add-int/2addr v1, v2
+
+    int-to-float v1, v1
+
+    div-int/lit8 v2, v6, 0x4
+
+    int-to-float v2, v2
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->d:Landroid/graphics/Paint;
+
+    const-string v4, "\u6807\u51c6"
+
+    invoke-virtual {v3, v4}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
+
+    move-result v3
+
+    sub-float/2addr v2, v3
+
+    div-float/2addr v2, v10
+
+    add-float/2addr v1, v2
+
+    iget v2, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->q:I
+
+    div-int/lit8 v2, v2, 0x2
+
+    add-int/lit8 v2, v2, 0xd
+
+    int-to-float v2, v2
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->d:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
+
+    const-string v0, "\u504f\u80d6"
+
+    sget v1, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->k:I
+
+    sget v2, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->j:I
+
+    add-int/2addr v1, v2
+
+    div-int/lit8 v2, v6, 0x2
+
+    add-int/2addr v1, v2
+
+    int-to-float v1, v1
+
+    div-int/lit8 v2, v6, 0x4
+
+    int-to-float v2, v2
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->d:Landroid/graphics/Paint;
+
+    const-string v4, "\u504f\u80d6"
+
+    invoke-virtual {v3, v4}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
+
+    move-result v3
+
+    sub-float/2addr v2, v3
+
+    div-float/2addr v2, v10
+
+    add-float/2addr v1, v2
+
+    iget v2, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->q:I
+
+    div-int/lit8 v2, v2, 0x2
+
+    add-int/lit8 v2, v2, 0xd
+
+    int-to-float v2, v2
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->d:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
+
+    const-string v0, "\u80a5\u80d6"
+
+    sget v1, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->k:I
+
+    sget v2, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->j:I
+
+    add-int/2addr v1, v2
+
+    mul-int/lit8 v2, v6, 0x3
+
+    div-int/lit8 v2, v2, 0x4
+
+    add-int/2addr v1, v2
+
+    int-to-float v1, v1
+
+    div-int/lit8 v2, v6, 0x4
+
+    int-to-float v2, v2
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->d:Landroid/graphics/Paint;
+
+    const-string v4, "\u80a5\u80d6"
+
+    invoke-virtual {v3, v4}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
+
+    move-result v3
+
+    sub-float/2addr v2, v3
+
+    div-float/2addr v2, v10
+
+    add-float/2addr v1, v2
+
+    iget v2, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->q:I
+
+    div-int/lit8 v2, v2, 0x2
+
+    add-int/lit8 v2, v2, 0xd
+
+    int-to-float v2, v2
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->d:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->r:I
 
@@ -1517,23 +1845,21 @@
     :cond_1
     iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->K:I
 
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_9
+    if-ne v0, v11, :cond_8
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->r:I
 
-    if-ltz v0, :cond_6
+    if-ltz v0, :cond_5
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->r:I
 
     sget v1, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->j:I
 
-    div-int/lit8 v2, v8, 0x4
+    div-int/lit8 v2, v6, 0x4
 
     add-int/2addr v1, v2
 
-    if-ge v0, v1, :cond_6
+    if-ge v0, v1, :cond_5
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->b:Landroid/graphics/Paint;
 
@@ -1619,211 +1945,6 @@
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
     :goto_2
-    iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->K:I
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->d:Landroid/graphics/Paint;
-
-    const/4 v1, -0x1
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->d:Landroid/graphics/Paint;
-
-    const/high16 v1, 0x420c0000
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextSize(F)V
-
-    const-string v0, "\u504f\u7626"
-
-    sget v1, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->k:I
-
-    sget v2, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->j:I
-
-    add-int/2addr v1, v2
-
-    sget v2, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->i:I
-
-    add-int/2addr v1, v2
-
-    int-to-float v1, v1
-
-    div-int/lit8 v2, v8, 0x4
-
-    int-to-float v2, v2
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->d:Landroid/graphics/Paint;
-
-    const-string v4, "\u504f\u7626"
-
-    invoke-virtual {v3, v4}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
-
-    move-result v3
-
-    sub-float/2addr v2, v3
-
-    const/high16 v3, 0x40000000
-
-    div-float/2addr v2, v3
-
-    add-float/2addr v1, v2
-
-    iget v2, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->q:I
-
-    div-int/lit8 v2, v2, 0x2
-
-    add-int/lit8 v2, v2, 0xd
-
-    int-to-float v2, v2
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->d:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
-
-    const-string v0, "\u6807\u51c6"
-
-    sget v1, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->k:I
-
-    sget v2, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->j:I
-
-    add-int/2addr v1, v2
-
-    div-int/lit8 v2, v8, 0x4
-
-    add-int/2addr v1, v2
-
-    int-to-float v1, v1
-
-    div-int/lit8 v2, v8, 0x4
-
-    int-to-float v2, v2
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->d:Landroid/graphics/Paint;
-
-    const-string v4, "\u6807\u51c6"
-
-    invoke-virtual {v3, v4}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
-
-    move-result v3
-
-    sub-float/2addr v2, v3
-
-    const/high16 v3, 0x40000000
-
-    div-float/2addr v2, v3
-
-    add-float/2addr v1, v2
-
-    iget v2, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->q:I
-
-    div-int/lit8 v2, v2, 0x2
-
-    add-int/lit8 v2, v2, 0xd
-
-    int-to-float v2, v2
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->d:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
-
-    const-string v0, "\u504f\u80d6"
-
-    sget v1, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->k:I
-
-    sget v2, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->j:I
-
-    add-int/2addr v1, v2
-
-    div-int/lit8 v2, v8, 0x2
-
-    add-int/2addr v1, v2
-
-    int-to-float v1, v1
-
-    div-int/lit8 v2, v8, 0x4
-
-    int-to-float v2, v2
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->d:Landroid/graphics/Paint;
-
-    const-string v4, "\u504f\u80d6"
-
-    invoke-virtual {v3, v4}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
-
-    move-result v3
-
-    sub-float/2addr v2, v3
-
-    const/high16 v3, 0x40000000
-
-    div-float/2addr v2, v3
-
-    add-float/2addr v1, v2
-
-    iget v2, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->q:I
-
-    div-int/lit8 v2, v2, 0x2
-
-    add-int/lit8 v2, v2, 0xd
-
-    int-to-float v2, v2
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->d:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
-
-    const-string v0, "\u80a5\u80d6"
-
-    sget v1, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->k:I
-
-    sget v2, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->j:I
-
-    add-int/2addr v1, v2
-
-    mul-int/lit8 v2, v8, 0x3
-
-    div-int/lit8 v2, v2, 0x4
-
-    add-int/2addr v1, v2
-
-    int-to-float v1, v1
-
-    div-int/lit8 v2, v8, 0x4
-
-    int-to-float v2, v2
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->d:Landroid/graphics/Paint;
-
-    const-string v4, "\u80a5\u80d6"
-
-    invoke-virtual {v3, v4}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
-
-    move-result v3
-
-    sub-float/2addr v2, v3
-
-    const/high16 v3, 0x40000000
-
-    div-float/2addr v2, v3
-
-    add-float/2addr v1, v2
-
-    iget v2, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->q:I
-
-    div-int/lit8 v2, v2, 0x2
-
-    add-int/lit8 v2, v2, 0xd
-
-    int-to-float v2, v2
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->d:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
-
-    :cond_2
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->d:Landroid/graphics/Paint;
 
     invoke-virtual {v0}, Landroid/graphics/Paint;->reset()V
@@ -1836,9 +1957,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->d:Landroid/graphics/Paint;
 
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
+    invoke-virtual {v0, v11}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->d:Landroid/graphics/Paint;
 
@@ -1860,7 +1979,7 @@
 
     int-to-float v0, v0
 
-    int-to-float v1, v8
+    int-to-float v1, v6
 
     div-float v1, v0, v1
 
@@ -1920,7 +2039,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -1928,15 +2047,13 @@
 
     cmpl-float v2, v1, v2
 
-    if-ltz v2, :cond_d
+    if-ltz v2, :cond_c
 
     float-to-double v2, v1
 
-    const-wide/high16 v4, 0x3fd0000000000000L
+    cmpg-double v2, v2, v8
 
-    cmpg-double v2, v2, v4
-
-    if-gez v2, :cond_d
+    if-gez v2, :cond_c
 
     const-wide/16 v2, 0x0
 
@@ -1950,15 +2067,13 @@
 
     float-to-double v0, v0
 
-    const-wide/high16 v4, 0x3fd0000000000000L
-
-    div-double/2addr v0, v4
+    div-double/2addr v0, v8
 
     add-double/2addr v0, v2
 
     double-to-float v0, v0
 
-    :cond_3
+    :cond_2
     :goto_3
     const/high16 v1, 0x41200000
 
@@ -1974,20 +2089,24 @@
 
     div-float/2addr v0, v1
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->z:Lcn/com/smartdevices/bracelet/weight/h;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->z:Lcn/com/smartdevices/bracelet/weight/l;
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_3
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->z:Lcn/com/smartdevices/bracelet/weight/h;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->z:Lcn/com/smartdevices/bracelet/weight/l;
 
-    invoke-interface {v1, v0}, Lcn/com/smartdevices/bracelet/weight/h;->a(F)V
+    add-float v2, v0, v7
 
-    :cond_4
+    float-to-int v2, v2
+
+    int-to-float v2, v2
+
+    invoke-interface {v1, v2}, Lcn/com/smartdevices/bracelet/weight/l;->a(F)V
+
+    :cond_3
     iget v1, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->K:I
 
-    const/4 v2, 0x1
-
-    if-ne v1, v2, :cond_10
+    if-ne v1, v11, :cond_f
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2039,9 +2158,7 @@
 
     move-result v2
 
-    const/high16 v3, 0x40000000
-
-    div-float/2addr v2, v3
+    div-float/2addr v2, v10
 
     sub-float/2addr v1, v2
 
@@ -2070,41 +2187,273 @@
     :goto_4
     return-void
 
-    :cond_5
-    const/4 v0, 0x5
+    :cond_4
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->c:Landroid/graphics/Paint;
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->c:Landroid/graphics/Paint;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v3, "#ff9da0a4"
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {v3}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
+    iget v2, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->t:F
 
-    move-result v3
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setColor(I)V
+    move-result-object v1
+
+    const-string v2, ""
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
+
+    move-result v0
+
+    float-to-int v0, v0
+
+    const/4 v1, 0x5
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->t:F
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    sget v3, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->k:I
+
+    sget v4, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->j:I
+
+    add-int/2addr v3, v4
+
+    div-int/lit8 v4, v6, 0x4
+
+    add-int/2addr v3, v4
+
+    div-int/lit8 v0, v0, 0x2
+
+    sub-int v0, v3, v0
+
+    int-to-float v0, v0
+
+    iget v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->q:I
+
+    div-int/lit8 v3, v3, 0x2
+
+    sget v4, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->f:I
+
+    add-int/2addr v3, v4
+
+    add-int/2addr v3, v1
+
+    int-to-float v3, v3
+
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->c:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v2, v0, v3, v4}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->c:Landroid/graphics/Paint;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->u:F
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
+
+    move-result v0
+
+    float-to-int v0, v0
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->u:F
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    sget v3, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->k:I
+
+    sget v4, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->j:I
+
+    add-int/2addr v3, v4
+
+    div-int/lit8 v4, v6, 0x2
+
+    add-int/2addr v3, v4
+
+    div-int/lit8 v0, v0, 0x2
+
+    sub-int v0, v3, v0
+
+    int-to-float v0, v0
+
+    iget v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->q:I
+
+    div-int/lit8 v3, v3, 0x2
+
+    sget v4, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->f:I
+
+    add-int/2addr v3, v4
+
+    add-int/2addr v3, v1
+
+    int-to-float v3, v3
+
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->c:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v2, v0, v3, v4}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->c:Landroid/graphics/Paint;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->v:F
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
+
+    move-result v0
+
+    float-to-int v0, v0
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->v:F
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    sget v3, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->k:I
+
+    sget v4, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->j:I
+
+    add-int/2addr v3, v4
+
+    mul-int/lit8 v4, v6, 0x3
+
+    div-int/lit8 v4, v4, 0x4
+
+    add-int/2addr v3, v4
+
+    div-int/lit8 v0, v0, 0x2
+
+    sub-int v0, v3, v0
+
+    int-to-float v0, v0
+
+    iget v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->q:I
+
+    div-int/lit8 v3, v3, 0x2
+
+    sget v4, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->f:I
+
+    add-int/2addr v3, v4
+
+    add-int/2addr v1, v3
+
+    int-to-float v1, v1
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->c:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v2, v0, v1, v3}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
     goto/16 :goto_0
 
-    :cond_6
+    :cond_5
     iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->r:I
 
     sget v1, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->j:I
 
-    div-int/lit8 v2, v8, 0x4
+    div-int/lit8 v2, v6, 0x4
 
     add-int/2addr v1, v2
 
-    if-lt v0, v1, :cond_7
+    if-lt v0, v1, :cond_6
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->r:I
 
     sget v1, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->j:I
 
-    div-int/lit8 v2, v8, 0x2
+    div-int/lit8 v2, v6, 0x2
 
     add-int/2addr v1, v2
 
-    if-ge v0, v1, :cond_7
+    if-ge v0, v1, :cond_6
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->b:Landroid/graphics/Paint;
 
@@ -2114,28 +2463,28 @@
 
     goto/16 :goto_1
 
-    :cond_7
+    :cond_6
     iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->r:I
 
     sget v1, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->j:I
 
-    div-int/lit8 v2, v8, 0x2
+    div-int/lit8 v2, v6, 0x2
 
     add-int/2addr v1, v2
 
-    if-lt v0, v1, :cond_8
+    if-lt v0, v1, :cond_7
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->r:I
 
     sget v1, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->j:I
 
-    mul-int/lit8 v2, v8, 0x3
+    mul-int/lit8 v2, v6, 0x3
 
     div-int/lit8 v2, v2, 0x4
 
     add-int/2addr v1, v2
 
-    if-ge v0, v1, :cond_8
+    if-ge v0, v1, :cond_7
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->b:Landroid/graphics/Paint;
 
@@ -2145,7 +2494,7 @@
 
     goto/16 :goto_1
 
-    :cond_8
+    :cond_7
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->b:Landroid/graphics/Paint;
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->F:I
@@ -2154,7 +2503,7 @@
 
     goto/16 :goto_1
 
-    :cond_9
+    :cond_8
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->b:Landroid/graphics/Paint;
 
     const/4 v1, -0x1
@@ -2163,9 +2512,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->b:Landroid/graphics/Paint;
 
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
+    invoke-virtual {v0, v11}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->r:I
 
@@ -2189,7 +2536,7 @@
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->r:I
 
-    if-ltz v0, :cond_a
+    if-ltz v0, :cond_9
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->r:I
 
@@ -2199,11 +2546,11 @@
 
     add-int/2addr v1, v2
 
-    div-int/lit8 v2, v8, 0x4
+    div-int/lit8 v2, v6, 0x4
 
     add-int/2addr v1, v2
 
-    if-ge v0, v1, :cond_a
+    if-ge v0, v1, :cond_9
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->b:Landroid/graphics/Paint;
 
@@ -2230,6 +2577,43 @@
 
     goto/16 :goto_2
 
+    :cond_9
+    iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->r:I
+
+    sget v1, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->k:I
+
+    sget v2, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->j:I
+
+    add-int/2addr v1, v2
+
+    div-int/lit8 v2, v6, 0x4
+
+    add-int/2addr v1, v2
+
+    if-lt v0, v1, :cond_a
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->r:I
+
+    sget v1, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->k:I
+
+    sget v2, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->j:I
+
+    add-int/2addr v1, v2
+
+    div-int/lit8 v2, v6, 0x2
+
+    add-int/2addr v1, v2
+
+    if-ge v0, v1, :cond_a
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->b:Landroid/graphics/Paint;
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->D:I
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
+
+    goto :goto_5
+
     :cond_a
     iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->r:I
 
@@ -2239,7 +2623,7 @@
 
     add-int/2addr v1, v2
 
-    div-int/lit8 v2, v8, 0x4
+    div-int/lit8 v2, v6, 0x2
 
     add-int/2addr v1, v2
 
@@ -2253,50 +2637,13 @@
 
     add-int/2addr v1, v2
 
-    div-int/lit8 v2, v8, 0x2
-
-    add-int/2addr v1, v2
-
-    if-ge v0, v1, :cond_b
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->b:Landroid/graphics/Paint;
-
-    iget v1, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->D:I
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
-
-    goto :goto_5
-
-    :cond_b
-    iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->r:I
-
-    sget v1, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->k:I
-
-    sget v2, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->j:I
-
-    add-int/2addr v1, v2
-
-    div-int/lit8 v2, v8, 0x2
-
-    add-int/2addr v1, v2
-
-    if-lt v0, v1, :cond_c
-
-    iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->r:I
-
-    sget v1, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->k:I
-
-    sget v2, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->j:I
-
-    add-int/2addr v1, v2
-
-    mul-int/lit8 v2, v8, 0x3
+    mul-int/lit8 v2, v6, 0x3
 
     div-int/lit8 v2, v2, 0x4
 
     add-int/2addr v1, v2
 
-    if-ge v0, v1, :cond_c
+    if-ge v0, v1, :cond_b
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->b:Landroid/graphics/Paint;
 
@@ -2306,7 +2653,7 @@
 
     goto :goto_5
 
-    :cond_c
+    :cond_b
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->b:Landroid/graphics/Paint;
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->F:I
@@ -2315,22 +2662,18 @@
 
     goto :goto_5
 
-    :cond_d
+    :cond_c
     float-to-double v2, v1
 
-    const-wide/high16 v4, 0x3fd0000000000000L
+    cmpl-double v2, v2, v8
 
-    cmpl-double v2, v2, v4
-
-    if-ltz v2, :cond_e
+    if-ltz v2, :cond_d
 
     float-to-double v2, v1
 
-    const-wide/high16 v4, 0x3fe0000000000000L
+    cmpg-double v2, v2, v12
 
-    cmpg-double v2, v2, v4
-
-    if-gez v2, :cond_e
+    if-gez v2, :cond_d
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->t:F
 
@@ -2338,9 +2681,7 @@
 
     float-to-double v0, v1
 
-    const-wide/high16 v4, 0x3fd0000000000000L
-
-    sub-double/2addr v0, v4
+    sub-double/2addr v0, v8
 
     iget v4, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->u:F
 
@@ -2352,9 +2693,7 @@
 
     mul-double/2addr v0, v4
 
-    const-wide/high16 v4, 0x3fd0000000000000L
-
-    div-double/2addr v0, v4
+    div-double/2addr v0, v8
 
     add-double/2addr v0, v2
 
@@ -2362,14 +2701,12 @@
 
     goto/16 :goto_3
 
-    :cond_e
+    :cond_d
     float-to-double v2, v1
 
-    const-wide/high16 v4, 0x3fe0000000000000L
+    cmpl-double v2, v2, v12
 
-    cmpl-double v2, v2, v4
-
-    if-ltz v2, :cond_f
+    if-ltz v2, :cond_e
 
     float-to-double v2, v1
 
@@ -2377,7 +2714,7 @@
 
     cmpg-double v2, v2, v4
 
-    if-gez v2, :cond_f
+    if-gez v2, :cond_e
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->u:F
 
@@ -2385,9 +2722,7 @@
 
     float-to-double v0, v1
 
-    const-wide/high16 v4, 0x3fe0000000000000L
-
-    sub-double/2addr v0, v4
+    sub-double/2addr v0, v12
 
     iget v4, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->v:F
 
@@ -2399,9 +2734,7 @@
 
     mul-double/2addr v0, v4
 
-    const-wide/high16 v4, 0x3fd0000000000000L
-
-    div-double/2addr v0, v4
+    div-double/2addr v0, v8
 
     add-double/2addr v0, v2
 
@@ -2409,14 +2742,14 @@
 
     goto/16 :goto_3
 
-    :cond_f
+    :cond_e
     float-to-double v2, v1
 
     const-wide/high16 v4, 0x3fe8000000000000L
 
     cmpl-double v2, v2, v4
 
-    if-ltz v2, :cond_3
+    if-ltz v2, :cond_2
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->v:F
 
@@ -2438,9 +2771,7 @@
 
     mul-double/2addr v0, v4
 
-    const-wide/high16 v4, 0x3fd0000000000000L
-
-    div-double/2addr v0, v4
+    div-double/2addr v0, v8
 
     add-double/2addr v0, v2
 
@@ -2448,7 +2779,7 @@
 
     goto/16 :goto_3
 
-    :cond_10
+    :cond_f
     sget-object v1, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->x:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2481,17 +2812,21 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->L:Z
 
-    if-eqz v1, :cond_11
+    if-eqz v1, :cond_10
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    add-float/2addr v0, v7
+
+    float-to-int v0, v0
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -2535,9 +2870,7 @@
 
     move-result v2
 
-    const/high16 v3, 0x40000000
-
-    div-float/2addr v2, v3
+    div-float/2addr v2, v10
 
     sub-float/2addr v1, v2
 
@@ -2565,14 +2898,18 @@
 
     goto/16 :goto_4
 
-    :cond_11
+    :cond_10
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->y:F
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    add-float/2addr v2, v7
+
+    float-to-int v2, v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -2614,9 +2951,7 @@
 
     move-result v0
 
-    const/high16 v3, 0x40000000
-
-    div-float/2addr v0, v3
+    div-float/2addr v0, v10
 
     sub-float v0, v2, v0
 
@@ -2652,7 +2987,7 @@
 
     const-string v1, "onFling"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -2712,7 +3047,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->q:I
 
@@ -2823,7 +3158,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 

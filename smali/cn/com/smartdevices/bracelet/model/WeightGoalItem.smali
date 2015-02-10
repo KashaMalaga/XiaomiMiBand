@@ -9,6 +9,8 @@
 # instance fields
 .field private currentVal:F
 
+.field private fuid:I
+
 .field private goalType:I
 
 .field private goalVal:F
@@ -90,6 +92,14 @@
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/model/WeightGoalItem;->goalVal:F
 
+    const-string v0, "fuid"
+
+    invoke-virtual {p1, v0}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    iput v0, p0, Lcn/com/smartdevices/bracelet/model/WeightGoalItem;->fuid:I
+
     return-void
 .end method
 
@@ -99,6 +109,14 @@
     .locals 1
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/model/WeightGoalItem;->currentVal:F
+
+    return v0
+.end method
+
+.method public getFuid()I
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/model/WeightGoalItem;->fuid:I
 
     return v0
 .end method
@@ -139,6 +157,14 @@
     .locals 0
 
     iput p1, p0, Lcn/com/smartdevices/bracelet/model/WeightGoalItem;->currentVal:F
+
+    return-void
+.end method
+
+.method public setFuid(I)V
+    .locals 0
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/model/WeightGoalItem;->fuid:I
 
     return-void
 .end method
@@ -193,6 +219,34 @@
     move-result-object v1
 
     iget v2, p0, Lcn/com/smartdevices/bracelet/model/WeightGoalItem;->uid:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "\n"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "fuid"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget v2, p0, Lcn/com/smartdevices/bracelet/model/WeightGoalItem;->fuid:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

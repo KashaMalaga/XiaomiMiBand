@@ -1,3 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView android:enabled="false" android:textSize="11.299988sp" android:textColor="@color/lab_item_group_name" android:gravity="left|center" android:id="@id/lab_list_item_group_name" android:background="@drawable/ic_service_list_category_bg" android:clickable="false" android:layout_width="fill_parent" android:layout_height="29.0dip"
+<TextView android:enabled="false" android:textSize="11.299988sp" android:textColor="@color/lab_item_group_name" android:gravity="center|left" android:id="@id/lab_list_item_group_name" android:background="@drawable/ic_service_list_category_bg" android:clickable="false" android:layout_width="fill_parent" android:layout_height="29.0dip"
   xmlns:android="http://schemas.android.com/apk/res/android" />

@@ -248,7 +248,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0702fc
+    const v2, 0x7f08032a
 
     const/4 v3, 0x3
 
@@ -312,7 +312,7 @@
 .method public static b(Landroid/content/Context;J)Ljava/lang/String;
     .locals 13
 
-    const v12, 0x7f07029f
+    const v12, 0x7f0802cd
 
     const/4 v11, 0x2
 
@@ -373,7 +373,7 @@
 
     if-gtz v0, :cond_2
 
-    const v0, 0x7f07029e
+    const v0, 0x7f0802cc
 
     new-array v1, v10, [Ljava/lang/Object;
 
@@ -409,7 +409,7 @@
     goto :goto_0
 
     :cond_3
-    const v0, 0x7f0702a2
+    const v0, 0x7f0802d0
 
     new-array v1, v11, [Ljava/lang/Object;
 
@@ -440,7 +440,7 @@
 
     if-gtz v6, :cond_5
 
-    const v4, 0x7f0702a0
+    const v4, 0x7f0802ce
 
     new-array v5, v11, [Ljava/lang/Object;
 
@@ -471,7 +471,7 @@
 
     if-gtz v6, :cond_6
 
-    const v2, 0x7f07029d
+    const v2, 0x7f0802cb
 
     new-array v3, v10, [Ljava/lang/Object;
 
@@ -496,7 +496,7 @@
 
     if-lez v6, :cond_7
 
-    const v2, 0x7f0702a1
+    const v2, 0x7f0802cf
 
     new-array v3, v11, [Ljava/lang/Object;
 
@@ -519,7 +519,7 @@
     goto/16 :goto_0
 
     :cond_7
-    const v6, 0x7f0702a3
+    const v6, 0x7f0802d1
 
     const/4 v7, 0x3
 
@@ -709,7 +709,7 @@
 .method public static c(Landroid/content/Context;J)Ljava/lang/String;
     .locals 11
 
-    const v10, 0x7f0702a3
+    const v10, 0x7f0802d1
 
     const/4 v6, 0x3
 

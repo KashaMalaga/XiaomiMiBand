@@ -1,83 +1,37 @@
-.class public Lcn/com/smartdevices/bracelet/ui/N;
-.super Landroid/support/v13/app/h;
+.class Lcn/com/smartdevices/bracelet/ui/N;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lcn/com/smartdevices/bracelet/v;
+
+
+# instance fields
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/FragmentManager;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Landroid/support/v13/app/h;-><init>(Landroid/app/FragmentManager;)V
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/N;->a:Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(I)Landroid/app/Fragment;
+.method public a(Lcn/com/smartdevices/bracelet/model/UserTotalSportData;)V
     .locals 1
 
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/N;->a:Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;
 
-    packed-switch p1, :pswitch_data_0
+    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;->a(Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;Lcn/com/smartdevices/bracelet/model/UserTotalSportData;)Lcn/com/smartdevices/bracelet/model/UserTotalSportData;
 
-    :goto_0
-    return-object v0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/N;->a:Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;
 
-    :pswitch_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->a()Z
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;->b(Lcn/com/smartdevices/bracelet/ui/DailySportReportActivity;)V
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/de;
-
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/de;-><init>()V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/w;
-
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/w;-><init>()V
-
-    goto :goto_0
-
-    :pswitch_1
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->c()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/dt;
-
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/dt;-><init>()V
-
-    goto :goto_0
-
-    :cond_1
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/x;
-
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/x;-><init>()V
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
-.end method
-
-.method public b()I
-    .locals 1
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->h()I
-
-    move-result v0
-
-    return v0
+    return-void
 .end method

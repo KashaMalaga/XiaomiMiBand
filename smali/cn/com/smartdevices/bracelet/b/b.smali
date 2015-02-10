@@ -22,9 +22,9 @@
 
 
 # instance fields
-.field final synthetic d:Lcn/com/smartdevices/bracelet/b/z;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/b/z;
 
-.field private final e:Ljava/lang/Object;
+.field private final b:Ljava/lang/Object;
 
 .field private final f:Ljava/lang/ref/WeakReference;
     .annotation system Ldalvik/annotation/Signature;
@@ -42,11 +42,11 @@
 .method public constructor <init>(Lcn/com/smartdevices/bracelet/b/z;Ljava/lang/Object;Landroid/widget/ImageView;)V
     .locals 1
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/b/B;->d:Lcn/com/smartdevices/bracelet/b/z;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/b/B;->a:Lcn/com/smartdevices/bracelet/b/z;
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/b/a;-><init>()V
 
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/b/B;->e:Ljava/lang/Object;
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/b/B;->b:Ljava/lang/Object;
 
     new-instance v0, Ljava/lang/ref/WeakReference;
 
@@ -60,7 +60,7 @@
 .method static synthetic a(Lcn/com/smartdevices/bracelet/b/B;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/b/B;->e:Ljava/lang/Object;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/b/B;->b:Ljava/lang/Object;
 
     return-object v0
 .end method
@@ -115,13 +115,13 @@
     move-result v0
 
     :cond_0
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/b/B;->e:Ljava/lang/Object;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/b/B;->b:Ljava/lang/Object;
 
     invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/b/B;->d:Lcn/com/smartdevices/bracelet/b/z;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/b/B;->a:Lcn/com/smartdevices/bracelet/b/z;
 
     invoke-static {v2}, Lcn/com/smartdevices/bracelet/b/z;->a(Lcn/com/smartdevices/bracelet/b/z;)Ljava/lang/Object;
 
@@ -131,7 +131,7 @@
 
     :goto_0
     :try_start_0
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/b/B;->d:Lcn/com/smartdevices/bracelet/b/z;
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/b/B;->a:Lcn/com/smartdevices/bracelet/b/z;
 
     iget-boolean v4, v4, Lcn/com/smartdevices/bracelet/b/z;->f:Z
 
@@ -146,7 +146,7 @@
     if-nez v4, :cond_1
 
     :try_start_1
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/b/B;->d:Lcn/com/smartdevices/bracelet/b/z;
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/b/B;->a:Lcn/com/smartdevices/bracelet/b/z;
 
     invoke-static {v4}, Lcn/com/smartdevices/bracelet/b/z;->a(Lcn/com/smartdevices/bracelet/b/z;)Ljava/lang/Object;
 
@@ -170,7 +170,7 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/b/B;->d:Lcn/com/smartdevices/bracelet/b/z;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/b/B;->a:Lcn/com/smartdevices/bracelet/b/z;
 
     invoke-static {v2}, Lcn/com/smartdevices/bracelet/b/z;->b(Lcn/com/smartdevices/bracelet/b/z;)Lcn/com/smartdevices/bracelet/b/s;
 
@@ -190,7 +190,7 @@
 
     if-eqz v2, :cond_6
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/b/B;->d:Lcn/com/smartdevices/bracelet/b/z;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/b/B;->a:Lcn/com/smartdevices/bracelet/b/z;
 
     invoke-static {v2}, Lcn/com/smartdevices/bracelet/b/z;->c(Lcn/com/smartdevices/bracelet/b/z;)Z
 
@@ -198,7 +198,7 @@
 
     if-nez v2, :cond_6
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/b/B;->d:Lcn/com/smartdevices/bracelet/b/z;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/b/B;->a:Lcn/com/smartdevices/bracelet/b/z;
 
     invoke-static {v2}, Lcn/com/smartdevices/bracelet/b/z;->b(Lcn/com/smartdevices/bracelet/b/z;)Lcn/com/smartdevices/bracelet/b/s;
 
@@ -223,7 +223,7 @@
 
     if-eqz v4, :cond_2
 
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/b/B;->d:Lcn/com/smartdevices/bracelet/b/z;
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/b/B;->a:Lcn/com/smartdevices/bracelet/b/z;
 
     invoke-static {v4}, Lcn/com/smartdevices/bracelet/b/z;->c(Lcn/com/smartdevices/bracelet/b/z;)Z
 
@@ -231,9 +231,9 @@
 
     if-nez v4, :cond_2
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/b/B;->d:Lcn/com/smartdevices/bracelet/b/z;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/b/B;->a:Lcn/com/smartdevices/bracelet/b/z;
 
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/b/B;->e:Ljava/lang/Object;
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/b/B;->b:Ljava/lang/Object;
 
     invoke-virtual {v2, v4, v0}, Lcn/com/smartdevices/bracelet/b/z;->a(Ljava/lang/Object;I)Landroid/graphics/Bitmap;
 
@@ -252,14 +252,14 @@
 
     new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/b/B;->d:Lcn/com/smartdevices/bracelet/b/z;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/b/B;->a:Lcn/com/smartdevices/bracelet/b/z;
 
     iget-object v1, v1, Lcn/com/smartdevices/bracelet/b/z;->g:Landroid/content/res/Resources;
 
     invoke-direct {v0, v1, v2}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
     :goto_2
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/b/B;->d:Lcn/com/smartdevices/bracelet/b/z;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/b/B;->a:Lcn/com/smartdevices/bracelet/b/z;
 
     invoke-static {v1}, Lcn/com/smartdevices/bracelet/b/z;->b(Lcn/com/smartdevices/bracelet/b/z;)Lcn/com/smartdevices/bracelet/b/s;
 
@@ -267,7 +267,7 @@
 
     if-eqz v1, :cond_3
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/b/B;->d:Lcn/com/smartdevices/bracelet/b/z;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/b/B;->a:Lcn/com/smartdevices/bracelet/b/z;
 
     invoke-static {v1}, Lcn/com/smartdevices/bracelet/b/z;->b(Lcn/com/smartdevices/bracelet/b/z;)Lcn/com/smartdevices/bracelet/b/s;
 
@@ -292,7 +292,7 @@
     :cond_4
     new-instance v0, Lcn/com/smartdevices/bracelet/b/D;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/b/B;->d:Lcn/com/smartdevices/bracelet/b/z;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/b/B;->a:Lcn/com/smartdevices/bracelet/b/z;
 
     iget-object v1, v1, Lcn/com/smartdevices/bracelet/b/z;->g:Landroid/content/res/Resources;
 
@@ -332,7 +332,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/b/B;->d:Lcn/com/smartdevices/bracelet/b/z;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/b/B;->a:Lcn/com/smartdevices/bracelet/b/z;
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/b/z;->c(Lcn/com/smartdevices/bracelet/b/z;)Z
 
@@ -352,7 +352,7 @@
 
     if-eqz v0, :cond_2
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/b/B;->d:Lcn/com/smartdevices/bracelet/b/z;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/b/B;->a:Lcn/com/smartdevices/bracelet/b/z;
 
     invoke-static {v1, v0, p1}, Lcn/com/smartdevices/bracelet/b/z;->a(Lcn/com/smartdevices/bracelet/b/z;Landroid/widget/ImageView;Landroid/graphics/drawable/Drawable;)V
 
@@ -375,7 +375,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/b/a;->b(Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/b/B;->d:Lcn/com/smartdevices/bracelet/b/z;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/b/B;->a:Lcn/com/smartdevices/bracelet/b/z;
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/b/z;->a(Lcn/com/smartdevices/bracelet/b/z;)Ljava/lang/Object;
 
@@ -384,7 +384,7 @@
     monitor-enter v1
 
     :try_start_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/b/B;->d:Lcn/com/smartdevices/bracelet/b/z;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/b/B;->a:Lcn/com/smartdevices/bracelet/b/z;
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/b/z;->a(Lcn/com/smartdevices/bracelet/b/z;)Ljava/lang/Object;
 

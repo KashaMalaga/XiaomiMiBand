@@ -530,7 +530,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/B;->a(Ljava/util/ArrayList;)Ljava/util/ArrayList;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/E;->a(Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
     move-result-object v2
 
@@ -541,7 +541,7 @@
 
     move-result-object v4
 
-    invoke-static {v4}, Lcn/com/smartdevices/bracelet/B;->a(Ljava/util/ArrayList;)Ljava/util/ArrayList;
+    invoke-static {v4}, Lcn/com/smartdevices/bracelet/E;->a(Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
     move-result-object v4
 
@@ -552,7 +552,7 @@
 
     move-result-object v5
 
-    invoke-static {v5}, Lcn/com/smartdevices/bracelet/B;->a(Ljava/util/ArrayList;)Ljava/util/ArrayList;
+    invoke-static {v5}, Lcn/com/smartdevices/bracelet/E;->a(Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
     move-result-object v5
 
@@ -829,7 +829,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_a
     sget-boolean v2, Lcn/com/smartdevices/bracelet/analysis/DataAnalysis;->DEBUG:Z
@@ -888,10 +888,10 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_b
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->l()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->I()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v47
 
@@ -928,7 +928,7 @@
 
     const-string v3, "sleepReference not valid!!!"
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v10, 0x0
 
@@ -939,7 +939,7 @@
 
     const-string v3, "sleepReference2 not valid!!!"
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/16 v19, 0x0
 
@@ -1330,7 +1330,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_18
     iget v3, v2, Lcn/com/smartdevices/bracelet/analysis/DataAnalysis$sleepResult;->startOnBed:I
@@ -1402,7 +1402,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1a
     sget-boolean v2, Lcn/com/smartdevices/bracelet/analysis/DataAnalysis;->DEBUG:Z
@@ -1447,7 +1447,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1b
     move-object/from16 v0, v47
@@ -1534,7 +1534,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1d
     aget-object v3, v21, v2
@@ -1707,7 +1707,7 @@
 
     move-result-object v4
 
-    invoke-static {v2, v4}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_28
     const/16 v29, 0x0
@@ -1833,7 +1833,7 @@
 
     move-result-object v4
 
-    invoke-static {v2, v4}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_29
     sget-boolean v2, Lcn/com/smartdevices/bracelet/analysis/DataAnalysis;->DEBUG:Z
@@ -1864,7 +1864,7 @@
 
     move-result-object v4
 
-    invoke-static {v2, v4}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v4}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2a
     const/16 v2, 0x78
@@ -2121,7 +2121,7 @@
 
     move-result-object v2
 
-    invoke-static {v15, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v15, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2c
     add-int v16, v25, v27
@@ -2790,7 +2790,7 @@
 
     move-result-object v6
 
-    invoke-static {v5, v6}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v6}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_3a
     const/4 v5, 0x6
@@ -3078,7 +3078,7 @@
 
     move-result-object v7
 
-    invoke-static {v2, v7}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v7}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_48
     new-instance v2, Ljava/util/HashMap;
@@ -3886,7 +3886,7 @@
 
     const-string v3, "filter done"
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_5c
     new-instance v17, Lcn/com/smartdevices/bracelet/analysis/SleepInfo;
@@ -4308,7 +4308,7 @@
 
     move-result-object v2
 
-    invoke-static {v3, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_5f
     move-object/from16 v0, p2
@@ -4552,7 +4552,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -4676,7 +4676,7 @@
 
     const/4 v5, 0x0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->i()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->H()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v0
 
@@ -4805,7 +4805,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
     new-instance v8, Ljava/util/ArrayList;
@@ -5034,7 +5034,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_7
     new-instance v2, Lcn/com/smartdevices/bracelet/analysis/ActiveItem;
@@ -5854,7 +5854,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
     :goto_0
@@ -6885,7 +6885,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
     :goto_0
@@ -7075,7 +7075,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
     :goto_0
@@ -7320,7 +7320,7 @@
 
     move-result-object v8
 
-    invoke-static {v3, v8}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v8}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     invoke-virtual/range {p0 .. p0}, Ljava/util/ArrayList;->size()I
@@ -7611,7 +7611,7 @@
 
     const-string v7, "do Analyze"
 
-    invoke-static {v3, v7}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v7}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_f
     add-int/lit8 v9, p1, 0x1
@@ -8037,7 +8037,7 @@
 
     move-result-object v7
 
-    invoke-static {v3, v7}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v7}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_19
     move v3, v11
@@ -8125,7 +8125,7 @@
 
     move-result-object v7
 
-    invoke-static {v3, v7}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v7}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_23
     invoke-virtual/range {v26 .. v26}, Ljava/util/ArrayList;->size()I
@@ -8199,7 +8199,7 @@
 
     move-result-object v8
 
-    invoke-static {v3, v8}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v8}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_24
     const-string v3, "sleepAnalyze"
@@ -8392,7 +8392,7 @@
 
     move-result-object v14
 
-    invoke-static {v3, v14}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v14}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_28
     move-object/from16 v0, v26
@@ -8528,7 +8528,7 @@
 
     move-result-object v14
 
-    invoke-static {v3, v14}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v14}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2a
     int-to-double v0, v9
@@ -8603,7 +8603,7 @@
 
     move-result-object v9
 
-    invoke-static {v3, v9}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v9}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2d
     new-instance v30, Ljava/util/ArrayList;
@@ -8693,7 +8693,7 @@
 
     move-result-object v11
 
-    invoke-static {v3, v11}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v11}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2e
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -8737,7 +8737,7 @@
 
     move-result-object v9
 
-    invoke-static {v3, v9}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v9}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_31
     move-object/from16 v0, p0
@@ -8812,7 +8812,7 @@
 
     move-result-object v12
 
-    invoke-static {v3, v12}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v12}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v3, "sleepAnalyze"
 
@@ -9010,7 +9010,7 @@
 
     move-result-object v13
 
-    invoke-static {v3, v13}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v13}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_36
     const/16 v3, 0x41
@@ -9099,7 +9099,7 @@
 
     move-result-object v11
 
-    invoke-static {v3, v11}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v11}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_39
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -9898,7 +9898,7 @@
 
     move-result-object v13
 
-    invoke-static {v3, v13}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v13}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_49
     invoke-virtual/range {v33 .. v33}, Ljava/util/ArrayList;->size()I
@@ -10043,7 +10043,7 @@
 
     const-string v11, "not del last"
 
-    invoke-static {v3, v11}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v11}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_1e
 
@@ -10072,7 +10072,7 @@
 
     move-result-object v11
 
-    invoke-static {v3, v11}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v11}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_51
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -10490,7 +10490,7 @@
 
     move-object/from16 v0, v16
 
-    invoke-static {v3, v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_59
     move-object/from16 v0, p0
@@ -10655,7 +10655,7 @@
 
     move-result-object v14
 
-    invoke-static {v3, v14}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v14}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_5e
     move-object/from16 v0, p0
@@ -10728,7 +10728,7 @@
 
     move-result-object v8
 
-    invoke-static {v7, v8}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_61
     move-object/from16 v0, v26
@@ -10854,7 +10854,7 @@
 
     const-string v7, "totalSize too small, so clear"
 
-    invoke-static {v3, v7}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v7}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_66
     invoke-virtual/range {v26 .. v26}, Ljava/util/ArrayList;->size()I
@@ -10947,7 +10947,7 @@
 
     move-result-object v7
 
-    invoke-static {v3, v7}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v7}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_68
     if-lez v14, :cond_99
@@ -11307,7 +11307,7 @@
 
     move-result-object v13
 
-    invoke-static {v3, v13}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v13}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_6d
     if-ge v11, v9, :cond_97
@@ -11413,7 +11413,7 @@
 
     move-result-object v14
 
-    invoke-static {v3, v14}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v14}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_6f
     sub-int v3, v11, v16
@@ -11526,7 +11526,7 @@
 
     move-result-object v11
 
-    invoke-static {v3, v11}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v11}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_71
     add-int/lit8 v3, v16, -0x1
@@ -11563,7 +11563,7 @@
 
     move-result-object v13
 
-    invoke-static {v11, v13}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v11, v13}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_72
     add-int/lit8 v13, v9, 0x1
@@ -11628,7 +11628,7 @@
 
     move-result-object v9
 
-    invoke-static {v3, v9}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v9}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_75
     move v3, v8
@@ -12217,7 +12217,7 @@
 
     move-result-object v9
 
-    invoke-static {v3, v9}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v9}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_90
     if-ge v4, v5, :cond_92
@@ -12639,7 +12639,7 @@
 
     move-result-object v0
 
-    invoke-static {v6, v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v6, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     invoke-interface {v5}, Landroid/content/SharedPreferences$Editor;->commit()Z

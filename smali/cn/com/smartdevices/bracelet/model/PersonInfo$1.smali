@@ -1,11 +1,11 @@
 .class final Lcn/com/smartdevices/bracelet/model/PersonInfo$1;
-.super Lcom/d/a/c/a;
+.super Lcom/c/a/c/a;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/d/a/c/a",
+        "Lcom/c/a/c/a",
         "<",
         "Ljava/util/ArrayList",
         "<",
@@ -19,7 +19,7 @@
 .method constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lcom/d/a/c/a;-><init>()V
+    invoke-direct {p0}, Lcom/c/a/c/a;-><init>()V
 
     return-void
 .end method

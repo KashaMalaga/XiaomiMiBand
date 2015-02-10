@@ -115,7 +115,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0300c1
+    const v2, 0x7f0300cb
 
     const/4 v3, 0x0
 
@@ -123,7 +123,7 @@
 
     move-result-object p2
 
-    const v0, 0x7f080380
+    const v0, 0x7f070397
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -133,7 +133,7 @@
 
     iput-object v0, v1, Lcn/com/smartdevices/ble/f;->a:Landroid/widget/TextView;
 
-    const v0, 0x7f080381
+    const v0, 0x7f070398
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -143,7 +143,7 @@
 
     iput-object v0, v1, Lcn/com/smartdevices/ble/f;->b:Landroid/widget/TextView;
 
-    const v0, 0x7f080382
+    const v0, 0x7f070399
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -153,7 +153,7 @@
 
     iput-object v0, v1, Lcn/com/smartdevices/ble/f;->c:Landroid/widget/TextView;
 
-    const v0, 0x7f080384
+    const v0, 0x7f07039b
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -163,7 +163,7 @@
 
     iput-object v0, v1, Lcn/com/smartdevices/ble/f;->d:Landroid/widget/TextView;
 
-    const v0, 0x7f080383
+    const v0, 0x7f07039a
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -173,7 +173,7 @@
 
     iput-object v0, v1, Lcn/com/smartdevices/ble/f;->e:Landroid/widget/TextView;
 
-    const v0, 0x7f080385
+    const v0, 0x7f07039c
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

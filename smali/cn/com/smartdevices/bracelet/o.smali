@@ -1,173 +1,162 @@
-.class public Lcn/com/smartdevices/bracelet/o;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/lang/Thread$UncaughtExceptionHandler;
-
-
-# static fields
-.field public static final a:Ljava/lang/String; = "crash"
-
-.field private static b:Lcn/com/smartdevices/bracelet/o;
+.class final Lcn/com/smartdevices/bracelet/O;
+.super Lcom/d/a/a/h;
 
 
 # instance fields
-.field private c:Ljava/lang/Thread$UncaughtExceptionHandler;
+.field final synthetic a:Landroid/content/Context;
+
+.field final synthetic b:Lcn/com/smartdevices/bracelet/P;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method constructor <init>(Landroid/content/Context;Lcn/com/smartdevices/bracelet/P;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/O;->a:Landroid/content/Context;
 
-    sput-object v0, Lcn/com/smartdevices/bracelet/o;->b:Lcn/com/smartdevices/bracelet/o;
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/O;->b:Lcn/com/smartdevices/bracelet/P;
 
-    return-void
-.end method
+    invoke-direct {p0}, Lcom/d/a/a/h;-><init>()V
 
-.method private constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/o;->c:Ljava/lang/Thread$UncaughtExceptionHandler;
-
-    invoke-static {}, Ljava/lang/Thread;->getDefaultUncaughtExceptionHandler()Ljava/lang/Thread$UncaughtExceptionHandler;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/o;->c:Ljava/lang/Thread$UncaughtExceptionHandler;
-
-    invoke-static {p0}, Ljava/lang/Thread;->setDefaultUncaughtExceptionHandler(Ljava/lang/Thread$UncaughtExceptionHandler;)V
-
-    return-void
-.end method
-
-.method public static a()Lcn/com/smartdevices/bracelet/o;
-    .locals 1
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/o;->b:Lcn/com/smartdevices/bracelet/o;
-
-    return-object v0
-.end method
-
-.method private a(Ljava/lang/Throwable;)V
-    .locals 4
-
-    if-nez p1, :cond_0
-
-    const-string v0, "crash"
-
-    const-string v1, "Throwable is null!!!"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    :goto_0
-    return-void
-
-    :cond_0
-    new-instance v1, Ljava/lang/StringBuffer;
-
-    invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
-
-    new-instance v2, Ljava/io/StringWriter;
-
-    invoke-direct {v2}, Ljava/io/StringWriter;-><init>()V
-
-    new-instance v3, Ljava/io/PrintWriter;
-
-    invoke-direct {v3, v2}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V
-
-    invoke-virtual {p1, v3}, Ljava/lang/Throwable;->printStackTrace(Ljava/io/PrintWriter;)V
-
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
-
-    move-result-object v0
-
-    :goto_1
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0, v3}, Ljava/lang/Throwable;->printStackTrace(Ljava/io/PrintWriter;)V
-
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
-
-    move-result-object v0
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v3}, Ljava/io/PrintWriter;->close()V
-
-    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    const-string v0, "crash"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "\n"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-.end method
-
-.method public static b()V
-    .locals 1
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/o;->b:Lcn/com/smartdevices/bracelet/o;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/o;
-
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/o;-><init>()V
-
-    sput-object v0, Lcn/com/smartdevices/bracelet/o;->b:Lcn/com/smartdevices/bracelet/o;
-
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
-    .locals 1
+.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
+    .locals 2
 
-    invoke-direct {p0, p2}, Lcn/com/smartdevices/bracelet/o;->a(Ljava/lang/Throwable;)V
+    const-string v0, "Utils"
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/o;->c:Ljava/lang/Thread$UncaughtExceptionHandler;
+    const-string v1, "get from server fail"
 
-    if-eqz v0, :cond_0
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/o;->c:Ljava/lang/Thread$UncaughtExceptionHandler;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/O;->b:Lcn/com/smartdevices/bracelet/P;
 
-    invoke-interface {v0, p1, p2}, Ljava/lang/Thread$UncaughtExceptionHandler;->uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
+    const/4 v1, 0x0
+
+    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/P;->a(Lcn/com/smartdevices/bracelet/model/WeightGoalItem;)V
+
+    return-void
+.end method
+
+.method public onSuccess(I[Lorg/apache/http/Header;[B)V
+    .locals 5
+
+    const/4 v4, 0x0
+
+    if-eqz p3, :cond_0
+
+    new-instance v0, Ljava/lang/String;
+
+    invoke-direct {v0, p3}, Ljava/lang/String;-><init>([B)V
+
+    const-string v1, "Utils"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Response getTargetWeightGoalFromServer : "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/O;->a:Landroid/content/Context;
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/k/i;->a(Landroid/content/Context;Ljava/lang/String;)Lcn/com/smartdevices/bracelet/k/i;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/k/i;->c()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/E;->g(Ljava/lang/String;)Ljava/util/List;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-lez v1, :cond_1
+
+    const-string v1, "Utils"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "item size is "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/O;->b:Lcn/com/smartdevices/bracelet/P;
+
+    const/4 v2, 0x0
+
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/model/WeightGoalItem;
+
+    invoke-interface {v1, v0}, Lcn/com/smartdevices/bracelet/P;->a(Lcn/com/smartdevices/bracelet/model/WeightGoalItem;)V
 
     :cond_0
+    :goto_0
     return-void
+
+    :cond_1
+    const-string v0, "Utils"
+
+    const-string v1, " info size is null or 0"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/O;->b:Lcn/com/smartdevices/bracelet/P;
+
+    invoke-interface {v0, v4}, Lcn/com/smartdevices/bracelet/P;->a(Lcn/com/smartdevices/bracelet/model/WeightGoalItem;)V
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/O;->b:Lcn/com/smartdevices/bracelet/P;
+
+    invoke-interface {v0, v4}, Lcn/com/smartdevices/bracelet/P;->a(Lcn/com/smartdevices/bracelet/model/WeightGoalItem;)V
+
+    goto :goto_0
 .end method

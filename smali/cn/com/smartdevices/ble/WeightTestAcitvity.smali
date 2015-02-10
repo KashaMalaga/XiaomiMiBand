@@ -157,7 +157,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eq p1, v3, :cond_0
 
@@ -276,7 +276,7 @@
 .method static synthetic a(Lcn/com/smartdevices/ble/WeightTestAcitvity;)V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/ble/WeightTestAcitvity;->d()V
+    invoke-direct {p0}, Lcn/com/smartdevices/ble/WeightTestAcitvity;->e()V
 
     return-void
 .end method
@@ -297,7 +297,23 @@
     return-object v0
 .end method
 
-.method private b()V
+.method static synthetic b(Lcn/com/smartdevices/ble/WeightTestAcitvity;Landroid/bluetooth/BluetoothDevice;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/ble/WeightTestAcitvity;->a(Landroid/bluetooth/BluetoothDevice;)V
+
+    return-void
+.end method
+
+.method static synthetic c(Lcn/com/smartdevices/ble/WeightTestAcitvity;)I
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/ble/WeightTestAcitvity;->i:I
+
+    return v0
+.end method
+
+.method private c()V
     .locals 6
 
     const/4 v5, 0x0
@@ -332,7 +348,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->h()Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->aj()Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;
 
     move-result-object v1
 
@@ -432,23 +448,15 @@
     return-void
 .end method
 
-.method static synthetic b(Lcn/com/smartdevices/ble/WeightTestAcitvity;Landroid/bluetooth/BluetoothDevice;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/ble/WeightTestAcitvity;->a(Landroid/bluetooth/BluetoothDevice;)V
-
-    return-void
-.end method
-
-.method static synthetic c(Lcn/com/smartdevices/ble/WeightTestAcitvity;)I
+.method static synthetic d(Lcn/com/smartdevices/ble/WeightTestAcitvity;)Lcn/com/smartdevices/ble/d;
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/ble/WeightTestAcitvity;->i:I
+    iget-object v0, p0, Lcn/com/smartdevices/ble/WeightTestAcitvity;->f:Lcn/com/smartdevices/ble/d;
 
-    return v0
+    return-object v0
 .end method
 
-.method private c()V
+.method private d()V
     .locals 2
 
     iget-object v0, p0, Lcn/com/smartdevices/ble/WeightTestAcitvity;->m:Lcn/com/smartdevices/bracelet/d;
@@ -460,15 +468,15 @@
     return-void
 .end method
 
-.method static synthetic d(Lcn/com/smartdevices/ble/WeightTestAcitvity;)Lcn/com/smartdevices/ble/d;
+.method static synthetic e(Lcn/com/smartdevices/ble/WeightTestAcitvity;)Landroid/bluetooth/BluetoothDevice;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/ble/WeightTestAcitvity;->f:Lcn/com/smartdevices/ble/d;
+    iget-object v0, p0, Lcn/com/smartdevices/ble/WeightTestAcitvity;->j:Landroid/bluetooth/BluetoothDevice;
 
     return-object v0
 .end method
 
-.method private d()V
+.method private e()V
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/ble/WeightTestAcitvity;->m:Lcn/com/smartdevices/bracelet/d;
@@ -476,14 +484,6 @@
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/d;->a()V
 
     return-void
-.end method
-
-.method static synthetic e(Lcn/com/smartdevices/ble/WeightTestAcitvity;)Landroid/bluetooth/BluetoothDevice;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/ble/WeightTestAcitvity;->j:Landroid/bluetooth/BluetoothDevice;
-
-    return-object v0
 .end method
 
 .method static synthetic f(Lcn/com/smartdevices/ble/WeightTestAcitvity;)Landroid/app/Activity;
@@ -590,6 +590,12 @@
     return-void
 .end method
 
+.method public b()V
+    .locals 0
+
+    return-void
+.end method
+
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 2
 
@@ -615,7 +621,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/ble/WeightTestAcitvity;->f:Lcn/com/smartdevices/ble/d;
 
-    const v0, 0x7f080172
+    const v0, 0x7f07017b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/ble/WeightTestAcitvity;->findViewById(I)Landroid/view/View;
 
@@ -639,9 +645,9 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    invoke-direct {p0}, Lcn/com/smartdevices/ble/WeightTestAcitvity;->b()V
-
     invoke-direct {p0}, Lcn/com/smartdevices/ble/WeightTestAcitvity;->c()V
+
+    invoke-direct {p0}, Lcn/com/smartdevices/ble/WeightTestAcitvity;->d()V
 
     return-void
 .end method
@@ -651,7 +657,7 @@
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onDestroy()V
 
-    invoke-direct {p0}, Lcn/com/smartdevices/ble/WeightTestAcitvity;->d()V
+    invoke-direct {p0}, Lcn/com/smartdevices/ble/WeightTestAcitvity;->e()V
 
     iget-object v0, p0, Lcn/com/smartdevices/ble/WeightTestAcitvity;->k:Landroid/content/BroadcastReceiver;
 

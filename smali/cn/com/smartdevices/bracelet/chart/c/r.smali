@@ -3,7 +3,7 @@
 
 
 # static fields
-.field private static s:Lcn/com/smartdevices/bracelet/chart/c/r;
+.field private static t:Lcn/com/smartdevices/bracelet/chart/c/r;
 
 
 # instance fields
@@ -39,9 +39,11 @@
 
 .field private p:Ljava/lang/String;
 
-.field private q:I
+.field private q:Lcn/com/smartdevices/bracelet/weight/k;
 
-.field private r:Ljava/util/HashMap;
+.field private r:I
+
+.field private s:Ljava/util/HashMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashMap",
@@ -68,7 +70,7 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->r:Ljava/util/HashMap;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->s:Ljava/util/HashMap;
 
     return-void
 .end method
@@ -76,7 +78,7 @@
 .method public static a()Lcn/com/smartdevices/bracelet/chart/c/r;
     .locals 1
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/chart/c/r;->s:Lcn/com/smartdevices/bracelet/chart/c/r;
+    sget-object v0, Lcn/com/smartdevices/bracelet/chart/c/r;->t:Lcn/com/smartdevices/bracelet/chart/c/r;
 
     if-nez v0, :cond_0
 
@@ -84,10 +86,10 @@
 
     invoke-direct {v0}, Lcn/com/smartdevices/bracelet/chart/c/r;-><init>()V
 
-    sput-object v0, Lcn/com/smartdevices/bracelet/chart/c/r;->s:Lcn/com/smartdevices/bracelet/chart/c/r;
+    sput-object v0, Lcn/com/smartdevices/bracelet/chart/c/r;->t:Lcn/com/smartdevices/bracelet/chart/c/r;
 
     :cond_0
-    sget-object v0, Lcn/com/smartdevices/bracelet/chart/c/r;->s:Lcn/com/smartdevices/bracelet/chart/c/r;
+    sget-object v0, Lcn/com/smartdevices/bracelet/chart/c/r;->t:Lcn/com/smartdevices/bracelet/chart/c/r;
 
     return-object v0
 .end method
@@ -101,7 +103,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->r:Ljava/util/HashMap;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->s:Ljava/util/HashMap;
 
     invoke-virtual {v1, v0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -109,7 +111,7 @@
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->r:Ljava/util/HashMap;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->s:Ljava/util/HashMap;
 
     invoke-virtual {v1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -174,13 +176,21 @@
 .method public a(Lcn/com/smartdevices/bracelet/model/SportDay;Lcn/com/smartdevices/bracelet/model/UserSleepModify;)V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->r:Ljava/util/HashMap;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->s:Ljava/util/HashMap;
 
     invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/model/SportDay;->getKey()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public a(Lcn/com/smartdevices/bracelet/weight/k;)V
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->q:Lcn/com/smartdevices/bracelet/weight/k;
 
     return-void
 .end method
@@ -209,12 +219,12 @@
     return-void
 .end method
 
-.method public b()I
+.method public b()Lcn/com/smartdevices/bracelet/weight/k;
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->a:I
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->q:Lcn/com/smartdevices/bracelet/weight/k;
 
-    return v0
+    return-object v0
 .end method
 
 .method public b(F)V
@@ -252,7 +262,7 @@
 .method public c()I
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->b:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->a:I
 
     return v0
 .end method
@@ -284,7 +294,7 @@
 .method public d()I
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->c:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->b:I
 
     return v0
 .end method
@@ -313,12 +323,12 @@
     return-void
 .end method
 
-.method public e()Ljava/lang/String;
+.method public e()I
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->d:Ljava/lang/String;
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->c:I
 
-    return-object v0
+    return v0
 .end method
 
 .method public e(I)V
@@ -329,18 +339,18 @@
     return-void
 .end method
 
-.method public f()I
+.method public f()Ljava/lang/String;
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->e:I
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->d:Ljava/lang/String;
 
-    return v0
+    return-object v0
 .end method
 
 .method public f(I)V
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->q:I
+    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->r:I
 
     return-void
 .end method
@@ -348,12 +358,20 @@
 .method public g()I
     .locals 1
 
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->e:I
+
+    return v0
+.end method
+
+.method public h()I
+    .locals 1
+
     iget v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->f:I
 
     return v0
 .end method
 
-.method public h()Ljava/util/Date;
+.method public i()Ljava/util/Date;
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->g:Ljava/util/Date;
@@ -361,7 +379,7 @@
     return-object v0
 .end method
 
-.method public i()Ljava/util/Date;
+.method public j()Ljava/util/Date;
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->h:Ljava/util/Date;
@@ -369,7 +387,7 @@
     return-object v0
 .end method
 
-.method public j()Ljava/lang/String;
+.method public k()Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->i:Ljava/lang/String;
@@ -377,7 +395,7 @@
     return-object v0
 .end method
 
-.method public k()Z
+.method public l()Z
     .locals 1
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->j:Z
@@ -385,7 +403,7 @@
     return v0
 .end method
 
-.method public l()F
+.method public m()F
     .locals 1
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->k:F
@@ -393,7 +411,7 @@
     return v0
 .end method
 
-.method public m()F
+.method public n()F
     .locals 1
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->l:F
@@ -401,7 +419,7 @@
     return v0
 .end method
 
-.method public n()F
+.method public o()F
     .locals 1
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->m:F
@@ -409,7 +427,7 @@
     return v0
 .end method
 
-.method public o()Ljava/lang/String;
+.method public p()Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->n:Ljava/lang/String;
@@ -417,7 +435,7 @@
     return-object v0
 .end method
 
-.method public p()F
+.method public q()F
     .locals 1
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->o:F
@@ -425,7 +443,7 @@
     return v0
 .end method
 
-.method public q()Ljava/lang/String;
+.method public r()Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->p:Ljava/lang/String;
@@ -433,10 +451,10 @@
     return-object v0
 .end method
 
-.method public r()I
+.method public s()I
     .locals 1
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->q:I
+    iget v0, p0, Lcn/com/smartdevices/bracelet/chart/c/r;->r:I
 
     return v0
 .end method

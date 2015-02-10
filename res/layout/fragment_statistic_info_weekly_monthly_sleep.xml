@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GridLayout android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:columnCount="3"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="@dimen/dynamic_info_width" android:layout_height="@dimen/dynamic_info_height">
-        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#99000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stat_sleep_average" />
-        <TextView android:textSize="@dimen/dynamic_info_value" android:textColor="#cc000000" android:id="@id/info_sleep" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="--" android:fontFamily="miui" />
+    <LinearLayout android:layout_height="@dimen/chart_info_item_height_large" style="@style/ChartInfoItem">
+        <TextView android:text="@string/stat_sleep_average" style="@style/ChartInfoItemTitle" />
+        <include android:id="@id/info_sleep" layout="@layout/view_chart_info_item_value_time_length" />
     </LinearLayout>
-    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="@dimen/dynamic_info_width" android:layout_height="@dimen/dynamic_info_height">
-        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#99000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stat_sleep_deep_average" />
-        <TextView android:textSize="@dimen/dynamic_info_value" android:textColor="#cc000000" android:id="@id/info_sleep_deep" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="--" android:fontFamily="miui" />
+    <LinearLayout android:layout_height="@dimen/chart_info_item_height_large" style="@style/ChartInfoItem">
+        <TextView android:text="@string/stat_sleep_deep_average" style="@style/ChartInfoItemTitle" />
+        <include android:id="@id/info_sleep_deep" layout="@layout/view_chart_info_item_value_time_length" />
     </LinearLayout>
-    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="@dimen/dynamic_info_width" android:layout_height="@dimen/dynamic_info_height">
-        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#99000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stat_sleep_shallow_average" />
-        <TextView android:textSize="@dimen/dynamic_info_value" android:textColor="#cc000000" android:id="@id/info_sleep_shallow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="--" android:fontFamily="miui" />
+    <LinearLayout android:layout_height="@dimen/chart_info_item_height_large" style="@style/ChartInfoItem">
+        <TextView android:text="@string/stat_sleep_shallow_average" style="@style/ChartInfoItemTitle" />
+        <include android:id="@id/info_sleep_shallow" layout="@layout/view_chart_info_item_value_time_length" />
     </LinearLayout>
-    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="@dimen/dynamic_info_width" android:layout_height="@dimen/dynamic_info_height">
-        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#99000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stat_sleep_time_average" />
-        <TextView android:textSize="@dimen/dynamic_info_value" android:textColor="#cc000000" android:id="@id/info_sleep_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="--" android:fontFamily="miui" />
+    <LinearLayout android:layout_height="@dimen/chart_info_item_height_large" style="@style/ChartInfoItem">
+        <TextView android:text="@string/stat_sleep_time_average" style="@style/ChartInfoItemTitle" />
+        <TextView android:id="@id/info_sleep_time" android:layout_marginTop="@dimen/dynamic_info_title_value_margin" style="@style/ChartInfoItemValue" />
     </LinearLayout>
-    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="@dimen/dynamic_info_width" android:layout_height="@dimen/dynamic_info_height">
-        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#99000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stat_sleep_rise_time_average" />
-        <TextView android:textSize="@dimen/dynamic_info_value" android:textColor="#cc000000" android:id="@id/info_sleep_rise_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="--" android:fontFamily="miui" />
+    <LinearLayout android:layout_height="@dimen/chart_info_item_height_large" style="@style/ChartInfoItem">
+        <TextView android:text="@string/stat_sleep_rise_time_average" style="@style/ChartInfoItemTitle" />
+        <TextView android:id="@id/info_sleep_rise_time" android:layout_marginTop="@dimen/dynamic_info_title_value_margin" style="@style/ChartInfoItemValue" />
     </LinearLayout>
-    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="@dimen/dynamic_info_width" android:layout_height="@dimen/dynamic_info_height">
-        <TextView android:textSize="@dimen/dynamic_info_title" android:textColor="#99000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stat_sleep_wake_average" />
-        <TextView android:textSize="@dimen/dynamic_info_value" android:textColor="#cc000000" android:id="@id/info_sleep_wake" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="--" android:fontFamily="miui" />
+    <LinearLayout android:layout_height="@dimen/chart_info_item_height_large" style="@style/ChartInfoItem">
+        <TextView android:text="@string/stat_sleep_wake_average" style="@style/ChartInfoItemTitle" />
+        <include android:id="@id/info_sleep_wake" layout="@layout/view_chart_info_item_value_time_length" />
     </LinearLayout>
 </GridLayout>

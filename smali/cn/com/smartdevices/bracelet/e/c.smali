@@ -344,113 +344,7 @@
     return v1
 .end method
 
-.method public a(Ljava/lang/String;)V
-    .locals 4
-
-    const/4 v3, 0x1
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "End: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "\n"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0, v3}, Lcn/com/smartdevices/bracelet/e/c;->a(Ljava/lang/String;Z)V
-
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/e/c;->j:Z
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/io/FileInputStream;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/e/c;->c:Ljava/io/File;
-
-    invoke-direct {v0, v1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
-
-    invoke-virtual {v0}, Ljava/io/FileInputStream;->available()I
-
-    move-result v1
-
-    new-array v1, v1, [B
-
-    invoke-virtual {v0, v1}, Ljava/io/FileInputStream;->read([B)I
-
-    invoke-virtual {v0}, Ljava/io/FileInputStream;->close()V
-
-    new-instance v0, Ljava/io/FileOutputStream;
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/e/c;->b:Ljava/io/File;
-
-    invoke-direct {v0, v2, v3}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;Z)V
-
-    new-instance v2, Ljava/io/DataOutputStream;
-
-    invoke-direct {v2, v0}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
-
-    invoke-virtual {v2, v1}, Ljava/io/DataOutputStream;->write([B)V
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/e/d;->a:[I
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/e/c;->k:Lcn/com/smartdevices/bracelet/e/e;
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/e/e;->ordinal()I
-
-    move-result v1
-
-    aget v0, v0, v1
-
-    packed-switch v0, :pswitch_data_0
-
-    :goto_0
-    invoke-virtual {v2}, Ljava/io/DataOutputStream;->flush()V
-
-    invoke-virtual {v2}, Ljava/io/DataOutputStream;->close()V
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    const/16 v0, -0x8000
-
-    invoke-virtual {v2, v0}, Ljava/io/DataOutputStream;->writeShort(I)V
-
-    goto :goto_0
-
-    :pswitch_1
-    const-wide/16 v0, -0x1
-
-    invoke-virtual {v2, v0, v1}, Ljava/io/DataOutputStream;->writeLong(J)V
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
-.end method
-
-.method public a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method public a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 4
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -467,17 +361,7 @@
 
     move-result-object v0
 
-    const-string v1, "/\n"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ",\n"
+    const-string v1, "/"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -487,7 +371,39 @@
 
     move-result-object v0
 
-    const-string v1, "\nx\ty\tz\n"
+    const-string v1, "\n"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "UserID: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "\n"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "StartTime: "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "\n"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -498,6 +414,40 @@
     move-result-object v0
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/e/c;->h:Ljava/lang/String;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/e/c;->k:Lcn/com/smartdevices/bracelet/e/e;
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/e/e;->a:Lcn/com/smartdevices/bracelet/e/e;
+
+    if-ne v0, v1, :cond_2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/e/c;->h:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "x\ty\tz\n"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/e/c;->h:Ljava/lang/String;
+
+    :cond_0
+    :goto_0
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/e/c;->j:Z
+
+    if-eqz v0, :cond_1
 
     new-instance v0, Ljava/io/File;
 
@@ -543,7 +493,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -561,11 +511,43 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/e/c;->c:Ljava/io/File;
 
+    :cond_1
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/e/c;->i:Z
 
     return-void
+
+    :cond_2
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/e/c;->k:Lcn/com/smartdevices/bracelet/e/e;
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/e/e;->b:Lcn/com/smartdevices/bracelet/e/e;
+
+    if-ne v0, v1, :cond_0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/e/c;->h:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "TimeStamp, Longitude, Latitude, Altitude, Accuracy\n"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/e/c;->h:Ljava/lang/String;
+
+    goto :goto_0
 .end method
 
 .method public a(Ljava/lang/String;Z)V
@@ -621,7 +603,7 @@
 
     iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/e/c;->i:Z
 
-    if-eqz v1, :cond_0
+    if-nez v1, :cond_0
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/e/c;->h:Ljava/lang/String;
 
@@ -937,7 +919,162 @@
     return-void
 .end method
 
-.method public h()Ljava/io/File;
+.method public h()V
+    .locals 5
+
+    const/16 v2, 0xfff
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/e/c;->k:Lcn/com/smartdevices/bracelet/e/e;
+
+    sget-object v1, Lcn/com/smartdevices/bracelet/e/e;->a:Lcn/com/smartdevices/bracelet/e/e;
+
+    if-ne v0, v1, :cond_0
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-static {v2}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-static {v2}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-static {v2}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v1
+
+    const-wide/16 v3, 0x3e8
+
+    div-long/2addr v1, v3
+
+    long-to-int v1, v1
+
+    and-int/lit16 v2, v1, 0xfff
+
+    int-to-short v2, v2
+
+    invoke-static {v2}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    shr-int/lit8 v1, v1, 0xc
+
+    and-int/lit16 v2, v1, 0xfff
+
+    int-to-short v2, v2
+
+    invoke-static {v2}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    shr-int/lit8 v1, v1, 0xc
+
+    and-int/lit16 v1, v1, 0xfff
+
+    int-to-short v1, v1
+
+    invoke-static {v1}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/e/c;->a(Ljava/util/List;)V
+
+    :cond_0
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/e/c;->j:Z
+
+    if-nez v0, :cond_1
+
+    new-instance v0, Ljava/io/FileInputStream;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/e/c;->c:Ljava/io/File;
+
+    invoke-direct {v0, v1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+
+    invoke-virtual {v0}, Ljava/io/FileInputStream;->available()I
+
+    move-result v1
+
+    new-array v1, v1, [B
+
+    invoke-virtual {v0, v1}, Ljava/io/FileInputStream;->read([B)I
+
+    invoke-virtual {v0}, Ljava/io/FileInputStream;->close()V
+
+    new-instance v0, Ljava/io/FileOutputStream;
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/e/c;->b:Ljava/io/File;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v0, v2, v3}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;Z)V
+
+    new-instance v2, Ljava/io/DataOutputStream;
+
+    invoke-direct {v2, v0}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
+
+    invoke-virtual {v2, v1}, Ljava/io/DataOutputStream;->write([B)V
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/e/d;->a:[I
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/e/c;->k:Lcn/com/smartdevices/bracelet/e/e;
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/e/e;->ordinal()I
+
+    move-result v1
+
+    aget v0, v0, v1
+
+    packed-switch v0, :pswitch_data_0
+
+    :goto_0
+    invoke-virtual {v2}, Ljava/io/DataOutputStream;->flush()V
+
+    invoke-virtual {v2}, Ljava/io/DataOutputStream;->close()V
+
+    :cond_1
+    return-void
+
+    :pswitch_0
+    const/16 v0, -0x8000
+
+    invoke-virtual {v2, v0}, Ljava/io/DataOutputStream;->writeShort(I)V
+
+    goto :goto_0
+
+    :pswitch_1
+    const-wide/16 v0, -0x1
+
+    invoke-virtual {v2, v0, v1}, Ljava/io/DataOutputStream;->writeLong(J)V
+
+    goto :goto_0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public i()Ljava/io/File;
     .locals 14
 
     const/4 v1, 0x1

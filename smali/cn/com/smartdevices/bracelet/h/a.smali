@@ -1,335 +1,289 @@
-.class public abstract Lcn/com/smartdevices/bracelet/h/a;
+.class public Lcn/com/smartdevices/bracelet/h/a;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Lcn/com/smartdevices/bracelet/h/c;
-
-
-# static fields
-.field protected static a:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map",
-            "<",
-            "Ljava/lang/Integer;",
-            "Ljava/lang/Double;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
-# instance fields
-.field protected b:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    sput-object v0, Lcn/com/smartdevices/bracelet/h/a;->a:Ljava/util/Map;
-
-    return-void
-.end method
-
-.method public constructor <init>(I)V
-    .locals 1
+.method private constructor <init>()V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x1
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/h/a;->b:I
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/h/a;->a:Ljava/util/Map;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0, p1}, Ljava/util/HashMap;-><init>(I)V
-
-    sput-object v0, Lcn/com/smartdevices/bracelet/h/a;->a:Ljava/util/Map;
-
-    :cond_0
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/h/a;->a()V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/h/a;->b()I
-
-    move-result v0
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/h/a;->b:I
-
     return-void
 .end method
 
-.method private b(I)I
-    .locals 2
+.method public static a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+    .locals 5
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/h/a;->b:I
+    const/4 v4, 0x0
 
-    if-nez v0, :cond_0
+    const/16 v1, 0x64
 
-    new-instance v0, Ljava/lang/IllegalStateException;
+    new-instance v2, Ljava/io/ByteArrayOutputStream;
 
-    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
+    invoke-direct {v2}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    throw v0
+    sget-object v0, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
-    :cond_0
-    iget v0, p0, Lcn/com/smartdevices/bracelet/h/a;->b:I
+    invoke-virtual {p0, v0, v1, v2}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    div-int v0, p1, v0
-
-    iget v1, p0, Lcn/com/smartdevices/bracelet/h/a;->b:I
-
-    mul-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public static b(Landroid/content/Context;Ljava/lang/String;)V
-    .locals 4
-
-    const-string v0, "connectivity"
-
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/net/ConnectivityManager;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/net/ConnectivityManager;->getNetworkInfo(I)Landroid/net/NetworkInfo;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
+    move v0, v1
 
     :goto_0
-    return-void
-
-    :cond_0
-    new-instance v1, Ljava/util/HashMap;
-
-    const/4 v2, 0x3
-
-    invoke-direct {v1, v2}, Ljava/util/HashMap;-><init>(I)V
-
-    const-string v2, "type"
-
-    invoke-virtual {v1, v2, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v2, "avl"
-
-    invoke-virtual {v0}, Landroid/net/NetworkInfo;->isAvailable()Z
-
-    move-result v3
-
-    invoke-static {v3}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v3
 
-    invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    array-length v3, v3
 
-    const-string v2, "con"
+    div-int/lit16 v3, v3, 0x400
 
-    invoke-virtual {v0}, Landroid/net/NetworkInfo;->isConnected()Z
+    if-le v3, v1, :cond_0
 
-    move-result v0
+    invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->reset()V
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(Z)Ljava/lang/String;
+    sget-object v3, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
-    move-result-object v0
+    invoke-virtual {p0, v3, v0, v2}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v0, "WifiState"
-
-    invoke-static {p0, v0, v1}, Lcn/com/smartdevices/bracelet/A;->a(Landroid/content/Context;Ljava/lang/String;Ljava/util/HashMap;)V
-
-    goto :goto_0
-.end method
-
-
-# virtual methods
-.method public a(I)D
-    .locals 3
-
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/h/a;->b(I)I
-
-    move-result v1
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/h/a;->a:Ljava/util/Map;
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-interface {v0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Double;
-
-    :goto_0
-    if-nez v0, :cond_0
-
-    iget v2, p0, Lcn/com/smartdevices/bracelet/h/a;->b:I
-
-    sub-int/2addr v1, v2
-
-    if-ltz v1, :cond_0
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/h/a;->a:Ljava/util/Map;
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-interface {v0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Double;
+    add-int/lit8 v0, v0, -0x14
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Ljava/lang/Double;->doubleValue()D
+    new-instance v0, Ljava/io/ByteArrayInputStream;
 
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public a(Landroid/content/Context;I)Ljava/lang/String;
-    .locals 6
-
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v1
 
-    invoke-virtual {p0, p2}, Lcn/com/smartdevices/bracelet/h/a;->a(I)D
+    invoke-direct {v0, v1}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
-    move-result-wide v2
-
-    const-wide/16 v4, 0x0
-
-    cmpl-double v0, v2, v4
-
-    if-nez v0, :cond_0
-
-    const v0, 0x7f07030e
-
-    const/4 v2, 0x1
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    const-string v4, ""
-
-    aput-object v4, v2, v3
-
-    invoke-virtual {v1, v0, v2}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v0, v4, v4}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    invoke-static {v0}, Landroid/text/Html;->fromHtml(Ljava/lang/String;)Landroid/text/Spanned;
+    return-object v0
+.end method
 
-    move-result-object v0
+.method public static a(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    .locals 7
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    const/4 v0, 0x1
 
-    move-result-object v0
+    new-instance v2, Landroid/graphics/BitmapFactory$Options;
+
+    invoke-direct {v2}, Landroid/graphics/BitmapFactory$Options;-><init>()V
+
+    iput-boolean v0, v2, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
+
+    invoke-static {p0, v2}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, v2, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
+
+    iget v1, v2, Landroid/graphics/BitmapFactory$Options;->outWidth:I
+
+    iget v3, v2, Landroid/graphics/BitmapFactory$Options;->outHeight:I
+
+    const/high16 v4, 0x44480000
+
+    const/high16 v5, 0x43f00000
+
+    if-le v1, v3, :cond_0
+
+    int-to-float v6, v1
+
+    cmpl-float v6, v6, v5
+
+    if-lez v6, :cond_0
+
+    iget v1, v2, Landroid/graphics/BitmapFactory$Options;->outWidth:I
+
+    int-to-float v1, v1
+
+    div-float/2addr v1, v5
+
+    float-to-int v1, v1
 
     :goto_0
+    if-gtz v1, :cond_1
+
+    :goto_1
+    iput v0, v2, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
+
+    invoke-static {p0, v2}, Landroid/graphics/BitmapFactory;->decodeFile(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/h/a;->a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
     return-object v0
 
     :cond_0
-    const-wide v4, 0x4058f8f5c28f5c29L
+    if-ge v1, v3, :cond_2
 
-    cmpl-double v0, v2, v4
+    int-to-float v1, v3
 
-    if-ltz v0, :cond_1
+    cmpl-float v1, v1, v4
 
-    const v0, 0x7f070310
+    if-lez v1, :cond_2
 
-    invoke-virtual {v1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    iget v1, v2, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
-    move-result-object v0
+    int-to-float v1, v1
 
-    invoke-static {v0}, Landroid/text/Html;->fromHtml(Ljava/lang/String;)Landroid/text/Spanned;
+    div-float/2addr v1, v4
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
+    float-to-int v1, v1
 
     goto :goto_0
 
     :cond_1
-    const-string v0, ""
+    move v0, v1
 
-    const-wide v4, 0x4058c00000000000L
+    goto :goto_1
 
-    cmpg-double v0, v2, v4
+    :cond_2
+    move v1, v0
 
-    if-gtz v0, :cond_2
+    goto :goto_0
+.end method
 
-    double-to-int v0, v2
+.method public static b(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+    .locals 9
 
-    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    const/4 v8, 0x0
 
-    move-result-object v0
+    const/4 v0, 0x1
 
-    :goto_1
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/io/ByteArrayOutputStream;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v2}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget-object v1, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
-    move-result-object v0
+    const/16 v3, 0x64
 
-    const v2, 0x7f070312
+    invoke-virtual {p0, v1, v3, v2}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    array-length v1, v1
+
+    div-int/lit16 v1, v1, 0x400
+
+    const/16 v3, 0x400
+
+    if-le v1, v3, :cond_0
+
+    invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->reset()V
+
+    sget-object v1, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
+
+    const/16 v3, 0x32
+
+    invoke-virtual {p0, v1, v3, v2}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
+
+    :cond_0
+    new-instance v1, Ljava/io/ByteArrayInputStream;
+
+    invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+
+    move-result-object v3
+
+    invoke-direct {v1, v3}, Ljava/io/ByteArrayInputStream;-><init>([B)V
+
+    new-instance v3, Landroid/graphics/BitmapFactory$Options;
+
+    invoke-direct {v3}, Landroid/graphics/BitmapFactory$Options;-><init>()V
+
+    iput-boolean v0, v3, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
+
+    invoke-static {v1, v8, v3}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, v3, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
+
+    iget v1, v3, Landroid/graphics/BitmapFactory$Options;->outWidth:I
+
+    iget v4, v3, Landroid/graphics/BitmapFactory$Options;->outHeight:I
+
+    const/high16 v5, 0x44480000
+
+    const/high16 v6, 0x43f00000
+
+    if-le v1, v4, :cond_1
+
+    int-to-float v7, v1
+
+    cmpl-float v7, v7, v6
+
+    if-lez v7, :cond_1
+
+    iget v1, v3, Landroid/graphics/BitmapFactory$Options;->outWidth:I
+
+    int-to-float v1, v1
+
+    div-float/2addr v1, v6
+
+    float-to-int v1, v1
+
+    :goto_0
+    if-gtz v1, :cond_2
+
+    :goto_1
+    iput v0, v3, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
+
+    new-instance v0, Ljava/io/ByteArrayInputStream;
+
+    invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/io/ByteArrayInputStream;-><init>([B)V
+
+    invoke-static {v0, v8, v3}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/h/a;->a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    invoke-virtual {p0, p1, v0}, Lcn/com/smartdevices/bracelet/h/a;->a(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    return-object v0
 
-    move-result-object v0
+    :cond_1
+    if-ge v1, v4, :cond_3
+
+    int-to-float v1, v4
+
+    cmpl-float v1, v1, v5
+
+    if-lez v1, :cond_3
+
+    iget v1, v3, Landroid/graphics/BitmapFactory$Options;->outHeight:I
+
+    int-to-float v1, v1
+
+    div-float/2addr v1, v5
+
+    float-to-int v1, v1
 
     goto :goto_0
 
     :cond_2
-    invoke-static {v2, v3}, Ljava/lang/String;->valueOf(D)Ljava/lang/String;
-
-    move-result-object v0
+    move v0, v1
 
     goto :goto_1
-.end method
 
-.method protected abstract a(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
-.end method
+    :cond_3
+    move v1, v0
 
-.method public abstract a()V
-.end method
-
-.method public abstract b()I
+    goto :goto_0
 .end method

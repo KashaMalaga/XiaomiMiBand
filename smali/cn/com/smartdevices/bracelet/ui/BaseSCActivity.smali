@@ -26,13 +26,13 @@
 
 .field private static final j:I = 0x1009
 
-.field private static final k:Z
+.field private static final k:Z = false
+
+.field private static final m:Ljava/lang/String; = "BaseSCActivity"
 
 
 # instance fields
 .field private l:Landroid/os/Handler;
-
-.field private final m:Ljava/lang/String;
 
 .field private n:Landroid/content/BroadcastReceiver;
 
@@ -48,42 +48,60 @@
 
 .field private t:Z
 
+.field private u:Z
+
+.field private v:Z
+
+.field private w:Z
+
+.field private x:Z
+
+.field private y:Z
+
 
 # direct methods
 .method public constructor <init>()V
-    .locals 3
-
-    const/4 v2, 0x0
+    .locals 2
 
     const/4 v1, 0x0
 
+    const/4 v0, 0x0
+
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;-><init>()V
 
-    iput-object v2, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->l:Landroid/os/Handler;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->l:Landroid/os/Handler;
 
-    const-string v0, "BaseSCActivity"
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->n:Landroid/content/BroadcastReceiver;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->m:Ljava/lang/String;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->o:Landroid/content/Context;
 
-    iput-object v2, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->n:Landroid/content/BroadcastReceiver;
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->p:Z
 
-    iput-object v2, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->o:Landroid/content/Context;
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->q:Z
 
-    iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->p:Z
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->r:Z
 
-    iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->q:Z
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->s:Lcn/com/smartdevices/bracelet/d;
 
-    iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->r:Z
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->t:Z
 
-    iput-object v2, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->s:Lcn/com/smartdevices/bracelet/d;
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->u:Z
 
-    iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->t:Z
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->v:Z
+
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->w:Z
+
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->x:Z
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->y:Z
 
     return-void
 .end method
 
-.method private a(Lcn/com/smartdevices/bracelet/weight/UserInfo;Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;Ljava/lang/String;)Ljava/lang/String;
-    .locals 4
+.method public static a(Lcn/com/smartdevices/bracelet/weight/UserInfo;Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;Ljava/lang/String;)Ljava/lang/String;
+    .locals 3
 
     const-string v0, "BaseSCActivity"
 
@@ -97,67 +115,11 @@
 
     move-result-object v1
 
-    invoke-virtual {p2}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getMax()F
+    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->toJsonString()Ljava/lang/String;
 
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " "
+    move-result-object v2
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {p2}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getValue()F
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {p2}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getBmi()F
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {p2}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getType()I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {p2}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getTimestamp()J
-
-    move-result-wide v2
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -165,35 +127,23 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "function doAction(context, luaAction)  \n   local intent = luaAction:getIntentFromString(\'cn.com.smartdevices.bracelet.weight.WeightReportActivity\'); \n   luaAction:putExtra(intent,\'"
+    const-string v1, "function doAction(context, luaAction)  \n   local intent = luaAction:getIntentFromString(\'cn.com.smartdevices.bracelet.weight.WeightReportActivity\'); \n   luaAction:putExtra(intent,\'WEIGHTADVDATA_KEY\',\'"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    sget-object v1, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->KEY_MAX:Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->toJsonString()Ljava/lang/String;
+
+    move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "\',\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {p2}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getMax()F
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -209,7 +159,7 @@
 
     move-result-object v0
 
-    sget-object v1, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->KEY_VALUE:Ljava/lang/String;
+    const-string v1, "USERINFO_KEY"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -221,165 +171,11 @@
 
     move-result-object v0
 
-    invoke-virtual {p2}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getValue()F
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/weight/UserInfo;->toString()Ljava/lang/String;
 
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "\')  \n"
+    move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "   luaAction:putExtra(intent,\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->KEY_BMI:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "\',\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {p2}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getBmi()F
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "\')  \n"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "   luaAction:putExtra(intent,\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->KEY_TIMESTAMP:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "\',\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {p2}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getTimestamp()J
-
-    move-result-wide v1
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "\')  \n"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "   luaAction:putExtra(intent,\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->KEY_UNIT:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "\',"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {p2}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getType()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")  \n"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "   luaAction:putExtra(intent,\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "uid"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "\',"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget v1, p1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->uid:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ")  \n"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "   luaAction:putExtra(intent,\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->KEY_ID:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "\',\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -433,7 +229,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->t:Z
 
@@ -490,447 +286,7 @@
     return-void
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;I)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->a(I)V
-
-    return-void
-.end method
-
-.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method private a(Lcn/com/smartdevices/bracelet/weight/UserInfo;Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;)V
-    .locals 12
-
-    const/4 v11, 0x3
-
-    const/4 v10, 0x2
-
-    const/4 v9, 0x1
-
-    const/4 v8, 0x0
-
-    new-instance v0, Ljava/text/SimpleDateFormat;
-
-    const-string v1, "HH:mm"
-
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
-
-    move-result-object v2
-
-    invoke-direct {v0, v1, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
-
-    invoke-virtual {p2}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getTimestamp()J
-
-    move-result-wide v1
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/text/SimpleDateFormat;->format(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v0, "TIMESTAMP"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "timestamp in BaseSCActivity "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {p2}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getTimestamp()J
-
-    move-result-wide v3
-
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p2}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getType()I
-
-    move-result v0
-
-    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/weight/q;->a(Landroid/content/Context;I)Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v0, ""
-
-    iget v0, p1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->uid:I
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p2}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getBmi()F
-
-    move-result v0
-
-    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/weight/q;->b(Landroid/content/Context;F)Ljava/lang/String;
-
-    move-result-object v0
-
-    :goto_0
-    const-string v3, "BaseSCActivity"
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v5, "BMI is "
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {p2}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getBmi()F
-
-    move-result v5
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v3, Lcn/com/smartdevices/bracelet/model/LuaItem;
-
-    invoke-direct {v3}, Lcn/com/smartdevices/bracelet/model/LuaItem;-><init>()V
-
-    invoke-virtual {p2}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getTimestamp()J
-
-    move-result-wide v4
-
-    iget v6, p1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->uid:I
-
-    invoke-static {v4, v5, v6}, Lcn/com/smartdevices/bracelet/weight/q;->a(JI)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Lcn/com/smartdevices/bracelet/model/LuaItem;->setStype(Ljava/lang/String;)V
-
-    const-string v5, "BaseSCActivity"
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v7, "stype is "
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-static {v5, v6}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget v5, p1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->uid:I
-
-    if-nez v5, :cond_1
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    const v5, 0x7f07020f
-
-    new-array v6, v11, [Ljava/lang/Object;
-
-    aput-object v1, v6, v8
-
-    invoke-virtual {p2}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getValue()F
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v1
-
-    aput-object v1, v6, v9
-
-    aput-object v2, v6, v10
-
-    invoke-virtual {v4, v5, v6}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v3, v1}, Lcn/com/smartdevices/bracelet/model/LuaItem;->setT1(Ljava/lang/String;)V
-
-    invoke-direct {p0, p2}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->b(Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v3, v1}, Lcn/com/smartdevices/bracelet/model/LuaItem;->setScript(Ljava/lang/String;)V
-
-    :goto_1
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v2, 0x7f070210
-
-    new-array v4, v9, [Ljava/lang/Object;
-
-    aput-object v0, v4, v8
-
-    invoke-virtual {v1, v2, v4}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v3, v0}, Lcn/com/smartdevices/bracelet/model/LuaItem;->setT2(Ljava/lang/String;)V
-
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->getInstance(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/lua/LuaEvent;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/lua/LuaEvent;->showLuaItem(Lcn/com/smartdevices/bracelet/model/LuaItem;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->l:Landroid/os/Handler;
-
-    const/16 v1, 0x1007
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
-
-    return-void
-
-    :cond_0
-    const v0, 0x7f070227
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto/16 :goto_0
-
-    :cond_1
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    const v6, 0x7f07020e
-
-    const/4 v7, 0x4
-
-    new-array v7, v7, [Ljava/lang/Object;
-
-    aput-object v1, v7, v8
-
-    iget-object v1, p1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->name:Ljava/lang/String;
-
-    aput-object v1, v7, v9
-
-    invoke-virtual {p2}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getValue()F
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v1
-
-    aput-object v1, v7, v10
-
-    aput-object v2, v7, v11
-
-    invoke-virtual {v5, v6, v7}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v3, v1}, Lcn/com/smartdevices/bracelet/model/LuaItem;->setT1(Ljava/lang/String;)V
-
-    invoke-direct {p0, p1, p2, v4}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->a(Lcn/com/smartdevices/bracelet/weight/UserInfo;Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v3, v1}, Lcn/com/smartdevices/bracelet/model/LuaItem;->setScript(Ljava/lang/String;)V
-
-    goto :goto_1
-.end method
-
-.method private a(Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;)V
-    .locals 8
-
-    const/4 v5, 0x0
-
-    const/4 v4, 0x0
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/weight/g;
-
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/weight/g;-><init>()V
-
-    iput-object p1, v0, Lcn/com/smartdevices/bracelet/weight/g;->a:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
-
-    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->isStable()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v2, 0x7f070266
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lcn/com/smartdevices/bracelet/weight/g;->b:Ljava/lang/String;
-
-    iput v5, v0, Lcn/com/smartdevices/bracelet/weight/g;->c:I
-
-    iput v4, v0, Lcn/com/smartdevices/bracelet/weight/g;->d:F
-
-    :goto_0
-    invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_0
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/weight/q;->a(Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;)Lcn/com/smartdevices/bracelet/weight/UserInfo;
-
-    move-result-object v1
-
-    iget v2, v1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->uid:I
-
-    if-eqz v2, :cond_1
-
-    iget v2, v1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->height:I
-
-    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getValueKg()F
-
-    move-result v3
-
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/weight/q;->a(IF)F
-
-    move-result v2
-
-    invoke-virtual {p1, v2}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->setBmi(F)V
-
-    iget-object v2, v1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->name:Ljava/lang/String;
-
-    iput-object v2, v0, Lcn/com/smartdevices/bracelet/weight/g;->b:Ljava/lang/String;
-
-    iget v2, v1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->uid:I
-
-    iput v2, v0, Lcn/com/smartdevices/bracelet/weight/g;->c:I
-
-    iget v2, v1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->targetWeight:F
-
-    iput v2, v0, Lcn/com/smartdevices/bracelet/weight/g;->d:F
-
-    :goto_1
-    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->isFinish()Z
-
-    move-result v2
-
-    if-nez v2, :cond_3
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/i;->a()Lcn/com/smartdevices/bracelet/weight/i;
-
-    move-result-object v2
-
-    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getTimestamp()J
-
-    move-result-wide v3
-
-    invoke-virtual {v2, v3, v4}, Lcn/com/smartdevices/bracelet/weight/i;->a(J)Lcn/com/smartdevices/bracelet/weight/WeightInfo;
-
-    move-result-object v3
-
-    if-nez v3, :cond_2
-
-    new-instance v3, Lcn/com/smartdevices/bracelet/weight/WeightInfo;
-
-    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getValueKg()F
-
-    move-result v4
-
-    iget v5, v1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->uid:I
-
-    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getTimestamp()J
-
-    move-result-wide v6
-
-    invoke-direct {v3, v4, v5, v6, v7}, Lcn/com/smartdevices/bracelet/weight/WeightInfo;-><init>(FIJ)V
-
-    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/weight/i;->a(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
-
-    invoke-direct {p0, v1, p1}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->a(Lcn/com/smartdevices/bracelet/weight/UserInfo;Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;)V
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    const v3, 0x7f070211
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    iput-object v2, v0, Lcn/com/smartdevices/bracelet/weight/g;->b:Ljava/lang/String;
-
-    iput v5, v0, Lcn/com/smartdevices/bracelet/weight/g;->c:I
-
-    iput v4, v0, Lcn/com/smartdevices/bracelet/weight/g;->d:F
-
-    goto :goto_1
-
-    :cond_2
-    const-string v1, "BaseSCActivity"
-
-    const-string v2, "the data exist in database!!!"
-
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_3
-    const-string v1, "BaseSCActivity"
-
-    const-string v2, "the data is finish not save!!!"
-
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-.end method
-
-.method private a(Ljava/lang/String;Ljava/lang/String;)V
+.method private a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
     const-string v0, "BaseSCActivity"
@@ -945,7 +301,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -953,13 +309,13 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->b()Lcn/com/smartdevices/bracelet/model/LoginData;
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/g/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
 
     move-result-object v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->r()Ljava/lang/String;
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/g/a;->d(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -967,15 +323,766 @@
 
     invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/ui/u;-><init>(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
 
-    invoke-static {v0, v1, p1, p2, v2}, Lcn/com/smartdevices/bracelet/j/e;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/e/a/a/h;)V
+    invoke-static {v0, v1, p2, p3, v2}, Lcn/com/smartdevices/bracelet/k/g;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/d/a/a/h;)V
 
     return-void
+.end method
+
+.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;I)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->a(I)V
+
+    return-void
+.end method
+
+.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method private a(Lcn/com/smartdevices/bracelet/weight/UserInfo;Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;)V
+    .locals 13
+
+    const/4 v12, 0x3
+
+    const/4 v11, 0x2
+
+    const/4 v10, 0x1
+
+    const/4 v9, 0x0
+
+    new-instance v1, Ljava/text/SimpleDateFormat;
+
+    const-string v0, "HH:mm"
+
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v2
+
+    invoke-direct {v1, v0, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
+
+    invoke-virtual {p2}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getTimestamp()J
+
+    move-result-wide v2
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Ljava/text/SimpleDateFormat;->format(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v0, "TIMESTAMP"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "timestamp in BaseSCActivity "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {p2}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getTimestamp()J
+
+    move-result-wide v4
+
+    invoke-virtual {v3, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v0, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p2}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getType()I
+
+    move-result v0
+
+    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/weight/x;->a(Landroid/content/Context;I)Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v0, ""
+
+    iget-object v0, p1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->birthday:Ljava/lang/String;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/model/Birthday;->fromStr(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/model/Birthday;
+
+    move-result-object v0
+
+    iget v4, p1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->uid:I
+
+    if-eqz v4, :cond_2
+
+    invoke-virtual {p2}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getBmi()F
+
+    move-result v4
+
+    const-string v5, "BaseSCActivity"
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "bmi is "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v5, v6}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/Birthday;->getAge()I
+
+    move-result v0
+
+    const/4 v5, 0x7
+
+    if-ge v0, v5, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->o:Landroid/content/Context;
+
+    invoke-static {v0, p1, p2}, Lcn/com/smartdevices/bracelet/weight/x;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/weight/UserInfo;Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;)Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_0
+    new-instance v4, Lde/greenrobot/daobracelet/LuaList;
+
+    invoke-direct {v4}, Lde/greenrobot/daobracelet/LuaList;-><init>()V
+
+    new-instance v5, Ljava/util/Date;
+
+    invoke-direct {v5}, Ljava/util/Date;-><init>()V
+
+    new-instance v6, Ljava/text/SimpleDateFormat;
+
+    const-string v7, "yyyy-MM-dd"
+
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v8
+
+    invoke-direct {v6, v7, v8}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
+
+    invoke-virtual {v6, v5}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v4, v6}, Lde/greenrobot/daobracelet/LuaList;->setDate(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v5}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v1}, Lde/greenrobot/daobracelet/LuaList;->setTime(Ljava/lang/String;)V
+
+    invoke-virtual {p2}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getTimestamp()J
+
+    move-result-wide v5
+
+    iget v1, p1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->uid:I
+
+    invoke-static {v5, v6, v1}, Lcn/com/smartdevices/bracelet/weight/x;->a(JI)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v4, v1}, Lde/greenrobot/daobracelet/LuaList;->setType(Ljava/lang/String;)V
+
+    const-string v5, "BaseSCActivity"
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v7, "lua type is "
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v5, v6}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget v5, p1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->uid:I
+
+    if-nez v5, :cond_3
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v5
+
+    const v6, 0x7f080225
+
+    new-array v7, v12, [Ljava/lang/Object;
+
+    aput-object v2, v7, v9
+
+    invoke-virtual {p2}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getValue()F
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v2
+
+    aput-object v2, v7, v10
+
+    aput-object v3, v7, v11
+
+    invoke-virtual {v5, v6, v7}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v4, v2}, Lde/greenrobot/daobracelet/LuaList;->setText1(Ljava/lang/String;)V
+
+    invoke-direct {p0, p2}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->b(Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v4, v2}, Lde/greenrobot/daobracelet/LuaList;->setLuaActionScript(Ljava/lang/String;)V
+
+    :goto_1
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v3, 0x7f080226
+
+    new-array v5, v10, [Ljava/lang/Object;
+
+    aput-object v0, v5, v9
+
+    invoke-virtual {v2, v3, v5}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v4, v0}, Lde/greenrobot/daobracelet/LuaList;->setText2(Ljava/lang/String;)V
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/p;->a()Lcn/com/smartdevices/bracelet/p;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/p;->b()Lde/greenrobot/daobracelet/LuaListDao;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v4}, Lde/greenrobot/daobracelet/LuaListDao;->insert(Ljava/lang/Object;)J
+
+    invoke-virtual {v0}, Lde/greenrobot/daobracelet/LuaListDao;->queryBuilder()Lde/greenrobot/dao/query/QueryBuilder;
+
+    move-result-object v0
+
+    sget-object v2, Lde/greenrobot/daobracelet/LuaListDao$Properties;->Type:Lde/greenrobot/dao/Property;
+
+    invoke-virtual {v2, v1}, Lde/greenrobot/dao/Property;->eq(Ljava/lang/Object;)Lde/greenrobot/dao/query/WhereCondition;
+
+    move-result-object v1
+
+    new-array v2, v9, [Lde/greenrobot/dao/query/WhereCondition;
+
+    invoke-virtual {v0, v1, v2}, Lde/greenrobot/dao/query/QueryBuilder;->where(Lde/greenrobot/dao/query/WhereCondition;[Lde/greenrobot/dao/query/WhereCondition;)Lde/greenrobot/dao/query/QueryBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lde/greenrobot/dao/query/QueryBuilder;->list()Ljava/util/List;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_4
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-lez v1, :cond_4
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_2
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lde/greenrobot/daobracelet/LuaList;
+
+    const-string v2, "BaseSCActivity"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "id:"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v0}, Lde/greenrobot/daobracelet/LuaList;->getId()Ljava/lang/Long;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, ",type:"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v0}, Lde/greenrobot/daobracelet/LuaList;->getType()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, ",date:"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v0}, Lde/greenrobot/daobracelet/LuaList;->getDate()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, ",time:"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v0}, Lde/greenrobot/daobracelet/LuaList;->getTime()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, ",script:"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v0}, Lde/greenrobot/daobracelet/LuaList;->getLuaActionScript()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, ",text1:"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v0}, Lde/greenrobot/daobracelet/LuaList;->getText1()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, ",text2:"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v0}, Lde/greenrobot/daobracelet/LuaList;->getText2()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_2
+
+    :cond_0
+    iget v0, p1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->height:I
+
+    const/16 v5, 0x64
+
+    if-ge v0, v5, :cond_1
+
+    const-string v0, "\u8eab\u9ad8\u672a\u8fbe\u5230100\u5398\u7c73\uff0c\u65e0\u6cd5\u5206\u6790\u4f53\u578b"
+
+    goto/16 :goto_0
+
+    :cond_1
+    invoke-static {p0, v4}, Lcn/com/smartdevices/bracelet/weight/x;->b(Landroid/content/Context;F)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto/16 :goto_0
+
+    :cond_2
+    const v0, 0x7f08023d
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto/16 :goto_0
+
+    :cond_3
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v5
+
+    const v6, 0x7f080224
+
+    const/4 v7, 0x4
+
+    new-array v7, v7, [Ljava/lang/Object;
+
+    aput-object v2, v7, v9
+
+    iget-object v2, p1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->name:Ljava/lang/String;
+
+    aput-object v2, v7, v10
+
+    invoke-virtual {p2}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getValue()F
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v2
+
+    aput-object v2, v7, v11
+
+    aput-object v3, v7, v12
+
+    invoke-virtual {v5, v6, v7}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v4, v2}, Lde/greenrobot/daobracelet/LuaList;->setText1(Ljava/lang/String;)V
+
+    invoke-static {p1, p2, v1}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->a(Lcn/com/smartdevices/bracelet/weight/UserInfo;Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v4, v2}, Lde/greenrobot/daobracelet/LuaList;->setLuaActionScript(Ljava/lang/String;)V
+
+    goto/16 :goto_1
+
+    :cond_4
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->l:Landroid/os/Handler;
+
+    const/16 v1, 0x1007
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    return-void
+.end method
+
+.method private a(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
+    .locals 7
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/m;->a()Lcn/com/smartdevices/bracelet/weight/m;
+
+    move-result-object v0
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->ak()Z
+
+    move-result v1
+
+    iget v2, p1, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->uid:I
+
+    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/weight/m;->f(I)Lcn/com/smartdevices/bracelet/weight/WeightInfo;
+
+    move-result-object v2
+
+    iget v3, p1, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->uid:I
+
+    if-eqz v3, :cond_0
+
+    if-eqz v1, :cond_0
+
+    if-eqz v2, :cond_0
+
+    iget-wide v3, p1, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->timestamp:J
+
+    iget-wide v5, v2, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->timestamp:J
+
+    sub-long/2addr v3, v5
+
+    const-wide/16 v5, 0x7530
+
+    cmp-long v1, v3, v5
+
+    if-gtz v1, :cond_0
+
+    const-string v1, "BaseSCActivity"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "<<merge>> realtime weighting:<"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, "><"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string v4, ">"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/weight/x;->a(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
+
+    :cond_0
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/weight/m;->c(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
+
+    return-void
+.end method
+
+.method private a(Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;)V
+    .locals 7
+
+    const/4 v5, 0x0
+
+    const/4 v4, 0x0
+
+    new-instance v0, Lcn/com/smartdevices/bracelet/weight/k;
+
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/weight/k;-><init>()V
+
+    iput-object p1, v0, Lcn/com/smartdevices/bracelet/weight/k;->a:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+
+    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->isStable()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f08027d
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcn/com/smartdevices/bracelet/weight/k;->b:Ljava/lang/String;
+
+    iput v5, v0, Lcn/com/smartdevices/bracelet/weight/k;->c:I
+
+    iput v4, v0, Lcn/com/smartdevices/bracelet/weight/k;->d:F
+
+    :goto_0
+    invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_0
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/weight/x;->a(Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;)Lcn/com/smartdevices/bracelet/weight/UserInfo;
+
+    move-result-object v1
+
+    iget v2, v1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->uid:I
+
+    if-eqz v2, :cond_1
+
+    iget v2, v1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->height:I
+
+    iget-object v3, v1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->birthday:Ljava/lang/String;
+
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/model/Birthday;->fromStr(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/model/Birthday;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/model/Birthday;->getAge()I
+
+    move-result v3
+
+    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getValueKg()F
+
+    move-result v4
+
+    invoke-static {v2, v3, v4}, Lcn/com/smartdevices/bracelet/weight/x;->a(IIF)F
+
+    move-result v2
+
+    invoke-virtual {p1, v2}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->setBmi(F)V
+
+    iget-object v2, v1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->name:Ljava/lang/String;
+
+    iput-object v2, v0, Lcn/com/smartdevices/bracelet/weight/k;->b:Ljava/lang/String;
+
+    iget v2, v1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->uid:I
+
+    iput v2, v0, Lcn/com/smartdevices/bracelet/weight/k;->c:I
+
+    iget v2, v1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->targetWeight:F
+
+    iput v2, v0, Lcn/com/smartdevices/bracelet/weight/k;->d:F
+
+    :goto_1
+    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->isFinish()Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/m;->a()Lcn/com/smartdevices/bracelet/weight/m;
+
+    move-result-object v2
+
+    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getTimestamp()J
+
+    move-result-wide v3
+
+    invoke-virtual {v2, v3, v4}, Lcn/com/smartdevices/bracelet/weight/m;->a(J)Lcn/com/smartdevices/bracelet/weight/WeightInfo;
+
+    move-result-object v2
+
+    if-nez v2, :cond_2
+
+    new-instance v2, Lcn/com/smartdevices/bracelet/weight/WeightInfo;
+
+    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getValueKg()F
+
+    move-result v3
+
+    iget v4, v1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->uid:I
+
+    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getTimestamp()J
+
+    move-result-wide v5
+
+    invoke-direct {v2, v3, v4, v5, v6}, Lcn/com/smartdevices/bracelet/weight/WeightInfo;-><init>(FIJ)V
+
+    invoke-direct {p0, v2}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->a(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
+
+    invoke-direct {p0, v1, p1}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->a(Lcn/com/smartdevices/bracelet/weight/UserInfo;Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;)V
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v3, 0x7f080227
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    iput-object v2, v0, Lcn/com/smartdevices/bracelet/weight/k;->b:Ljava/lang/String;
+
+    iput v5, v0, Lcn/com/smartdevices/bracelet/weight/k;->c:I
+
+    iput v4, v0, Lcn/com/smartdevices/bracelet/weight/k;->d:F
+
+    goto :goto_1
+
+    :cond_2
+    const-string v1, "BaseSCActivity"
+
+    const-string v2, "the data exist in database!!!"
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_3
+    const-string v1, "BaseSCActivity"
+
+    const-string v2, "the data is finish not save!!!"
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
 .end method
 
 .method static synthetic a(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Z
     .locals 1
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->n()Z
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->q()Z
 
     move-result v0
 
@@ -985,33 +1092,47 @@
 .method private b(Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;)Ljava/lang/String;
     .locals 3
 
+    const-string v0, "BaseSCActivity"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "getChooseUserLuaScript"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->toJsonString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "function doAction(context, luaAction)  \n   local intent = luaAction:getIntentFromString(\'cn.com.smartdevices.bracelet.weight.family.WeightChooseUserActivity\'); \n   luaAction:putExtra(intent,\'"
+    const-string v1, "function doAction(context, luaAction)  \n   local intent = luaAction:getIntentFromString(\'cn.com.smartdevices.bracelet.weight.family.WeightChooseUserActivity\'); \n   luaAction:putExtra(intent,\'WEIGHTADVDATA_KEY\',\'"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    sget-object v1, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->KEY_TIMESTAMP:Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->toJsonString()Ljava/lang/String;
+
+    move-result-object v1
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "\',\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getTimestamp()J
-
-    move-result-wide v1
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -1063,7 +1184,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
@@ -1076,21 +1197,7 @@
     if-ne p1, v0, :cond_2
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->o:Landroid/content/Context;
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->a(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->c()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->h()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->l()V
 
     :cond_1
     :goto_0
@@ -1118,15 +1225,35 @@
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
     :cond_3
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->i()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->m()V
 
     goto :goto_0
+.end method
+
+.method private b(Landroid/content/Context;)V
+    .locals 4
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v0
+
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/g/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
+
+    move-result-object v2
+
+    new-instance v3, Lcn/com/smartdevices/bracelet/ui/s;
+
+    invoke-direct {v3, p0, v0, v1}, Lcn/com/smartdevices/bracelet/ui/s;-><init>(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;J)V
+
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/k/g;->e(Lcn/com/smartdevices/bracelet/model/LoginData;Lcom/d/a/a/h;)V
+
+    return-void
 .end method
 
 .method static synthetic b(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->m()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->p()V
 
     return-void
 .end method
@@ -1142,25 +1269,173 @@
 .method static synthetic c(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->r()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->t()V
 
     return-void
+.end method
+
+.method private c(Z)Z
+    .locals 4
+
+    const/4 v2, 0x1
+
+    const/4 v1, 0x0
+
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->p:Z
+
+    if-nez v0, :cond_0
+
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->q:Z
+
+    if-eqz v0, :cond_4
+
+    :cond_0
+    move v0, v2
+
+    :goto_0
+    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->a()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_5
+
+    if-eqz p1, :cond_2
+
+    if-eqz v0, :cond_2
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->o()Lcom/xiaomi/hm/bleservice/HwConnStatus;
+
+    move-result-object v0
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->q()Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;->e()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lde/greenrobot/event/EventBus;->postSticky(Ljava/lang/Object;)V
+
+    :cond_1
+    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->m()V
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->n()V
+
+    :cond_2
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->u:Z
+
+    if-nez v0, :cond_3
+
+    iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->u:Z
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->h()V
+
+    :cond_3
+    :goto_1
+    return v2
+
+    :cond_4
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_5
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->u:Z
+
+    if-eqz v0, :cond_6
+
+    iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->u:Z
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->i()V
+
+    :cond_6
+    move v2, v1
+
+    goto :goto_1
 .end method
 
 .method static synthetic d(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Z
     .locals 1
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->t()Z
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->v()Z
 
     move-result v0
 
     return v0
 .end method
 
+.method private d(Z)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->c()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    if-eqz p1, :cond_0
+
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->k()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->l:Landroid/os/Handler;
+
+    const/16 v2, 0x1009
+
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    :cond_0
+    :goto_0
+    iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->v:Z
+
+    if-nez v1, :cond_1
+
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->v:Z
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->f()V
+
+    :cond_1
+    :goto_1
+    return v0
+
+    :cond_2
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->l()V
+
+    goto :goto_0
+
+    :cond_3
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->v:Z
+
+    if-eqz v0, :cond_4
+
+    iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->v:Z
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->g()V
+
+    :cond_4
+    move v0, v1
+
+    goto :goto_1
+.end method
+
 .method static synthetic e(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->i()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->m()V
 
     return-void
 .end method
@@ -1168,7 +1443,7 @@
 .method static synthetic f(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->h()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->l()V
 
     return-void
 .end method
@@ -1176,12 +1451,97 @@
 .method static synthetic g(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->o()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->r()V
 
     return-void
 .end method
 
-.method private g()Z
+.method static synthetic h(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Landroid/os/Handler;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->l:Landroid/os/Handler;
+
+    return-object v0
+.end method
+
+.method static synthetic i(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Landroid/content/Context;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->o:Landroid/content/Context;
+
+    return-object v0
+.end method
+
+.method static synthetic j(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->u()V
+
+    return-void
+.end method
+
+.method private j()Z
+    .locals 4
+
+    const/4 v2, 0x1
+
+    const/4 v1, 0x0
+
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->p:Z
+
+    if-nez v0, :cond_0
+
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->q:Z
+
+    if-eqz v0, :cond_3
+
+    :cond_0
+    move v0, v2
+
+    :goto_0
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/E;->o(Landroid/content/Context;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_4
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->b()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->n()V
+
+    :cond_1
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->d()V
+
+    if-eqz v0, :cond_2
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/j/a;->a()Lcn/com/smartdevices/bracelet/j/a;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->o:Landroid/content/Context;
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/j/a;->b(Landroid/content/Context;)V
+
+    :cond_2
+    :goto_1
+    return v2
+
+    :cond_3
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_4
+    move v2, v1
+
+    goto :goto_1
+.end method
+
+.method private k()Z
     .locals 1
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/b;->j()Lcom/xiaomi/hm/bleservice/profile/WeightProfile;
@@ -1207,16 +1567,10 @@
     goto :goto_0
 .end method
 
-.method static synthetic h(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Landroid/os/Handler;
-    .locals 1
+.method private l()V
+    .locals 3
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->l:Landroid/os/Handler;
-
-    return-object v0
-.end method
-
-.method private h()V
-    .locals 2
+    const/4 v1, 0x0
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->s:Lcn/com/smartdevices/bracelet/d;
 
@@ -1229,24 +1583,47 @@
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->s:Lcn/com/smartdevices/bracelet/d;
 
     :cond_0
+    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->c()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->o:Landroid/content/Context;
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->a(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    const/4 v0, 0x1
+
+    :goto_0
+    iget-boolean v2, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->y:Z
+
+    or-int/2addr v0, v2
+
+    if-eqz v0, :cond_1
+
+    iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->y:Z
+
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->s:Lcn/com/smartdevices/bracelet/d;
 
     sget-object v1, Lcom/xiaomi/hm/bleservice/profile/IWeightProfile;->UUID_SERVICE_WEIGHT_SCALE_SERVICE:Ljava/util/UUID;
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/d;->a(Ljava/util/UUID;)V
 
+    :cond_1
     return-void
+
+    :cond_2
+    move v0, v1
+
+    goto :goto_0
 .end method
 
-.method static synthetic i(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Landroid/content/Context;
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->o:Landroid/content/Context;
-
-    return-object v0
-.end method
-
-.method private i()V
+.method private m()V
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->s:Lcn/com/smartdevices/bracelet/d;
@@ -1261,129 +1638,35 @@
     return-void
 .end method
 
-.method private j()V
+.method private n()V
     .locals 5
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->b()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/B;->l(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const/4 v0, -0x1
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/s;->a()Lcn/com/smartdevices/bracelet/s;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/s;->k()Lcn/com/smartdevices/bracelet/model/SportDay;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/s;->f(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/DaySportData;
-
-    move-result-object v1
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/s;->g(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/DaySportData;
-
-    move-result-object v1
-
-    :cond_0
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/DaySportData;->getStepsInfo()Lcn/com/smartdevices/bracelet/analysis/StepsInfo;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->getStepsCount()I
-
-    move-result v0
-
-    :cond_1
-    new-instance v1, Lcn/com/smartdevices/bracelet/i/h;
+    new-instance v0, Lcn/com/smartdevices/bracelet/j/h;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v2
+    move-result-wide v1
 
-    const/4 v4, 0x1
+    const/4 v3, 0x1
 
-    invoke-direct {v1, v2, v3, v4, v0}, Lcn/com/smartdevices/bracelet/i/h;-><init>(JII)V
+    const/4 v4, 0x0
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/f/a;->a(Lcn/com/smartdevices/bracelet/i/h;)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lcn/com/smartdevices/bracelet/j/h;-><init>(JII)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/i/a;->a()Lcn/com/smartdevices/bracelet/i/a;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/f/a;->a(Lcn/com/smartdevices/bracelet/j/h;)V
 
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/i/a;->a(Lcn/com/smartdevices/bracelet/i/h;)V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->d()V
-
-    :cond_2
-    return-void
-.end method
-
-.method static synthetic j(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->s()V
-
-    return-void
-.end method
-
-.method private k()V
-    .locals 2
-
-    const-string v0, "BaseSCActivity"
-
-    const-string v1, "in initBleStatus......"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->n()Lcom/xiaomi/hm/bleservice/HwConnStatus;
-
-    move-result-object v0
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->p()Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/j/a;->a()Lcn/com/smartdevices/bracelet/j/a;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;->e()Z
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/j/a;->a(Lcn/com/smartdevices/bracelet/j/h;)V
 
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lde/greenrobot/event/EventBus;->postSticky(Ljava/lang/Object;)V
-
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->o:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/b;->b(Landroid/content/Context;)V
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->e()V
 
     return-void
 .end method
 
-.method private l()V
+.method private o()V
     .locals 2
 
     new-instance v0, Lcn/com/smartdevices/bracelet/ui/p;
@@ -1437,7 +1720,7 @@
     return-void
 .end method
 
-.method private m()V
+.method private p()V
     .locals 2
 
     new-instance v0, Landroid/content/Intent;
@@ -1453,7 +1736,7 @@
     return-void
 .end method
 
-.method private n()Z
+.method private q()Z
     .locals 6
 
     const/4 v0, 0x0
@@ -1508,7 +1791,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {v1}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->getVersionCodeFromFwStream(Ljava/io/InputStream;)I
 
@@ -1568,7 +1851,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget v1, v1, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$DeviceInfo;->firmwareVersion:I
 
@@ -1578,7 +1861,7 @@
 
     const-string v2, "bracelet firmware is the lastest,do nothing!"
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -1591,7 +1874,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -1601,7 +1884,7 @@
     goto :goto_0
 .end method
 
-.method private o()V
+.method private r()V
     .locals 7
 
     const/4 v1, 0x0
@@ -1652,7 +1935,7 @@
 
     if-eqz v2, :cond_0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->p()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->s()V
 
     :cond_0
     return-void
@@ -1720,10 +2003,10 @@
     goto :goto_1
 .end method
 
-.method private p()V
+.method private s()V
     .locals 2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->o()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->K()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v0
 
@@ -1737,54 +2020,48 @@
 
     const-string v1, "Sync person info when net connected"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->i()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->o:Landroid/content/Context;
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->H()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/E;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->o:Landroid/content/Context;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/E;->v(Landroid/content/Context;)V
+
+    invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/B;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
+    new-instance v1, Lcn/com/smartdevices/bracelet/eventbus/EventWifiConnected;
 
-    :cond_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/B;->m()V
+    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/eventbus/EventWifiConnected;-><init>()V
 
-    return-void
-.end method
-
-.method private q()V
-    .locals 4
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v0
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->b()Lcn/com/smartdevices/bracelet/model/LoginData;
-
-    move-result-object v2
-
-    new-instance v3, Lcn/com/smartdevices/bracelet/ui/s;
-
-    invoke-direct {v3, p0, v0, v1}, Lcn/com/smartdevices/bracelet/ui/s;-><init>(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;J)V
-
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/j/e;->e(Lcn/com/smartdevices/bracelet/model/LoginData;Lcom/e/a/a/h;)V
+    invoke-virtual {v0, v1}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method private r()V
+.method private t()V
     .locals 4
 
     const-string v0, "BaseSCActivity"
 
     const-string v1, "in statisticBracelet"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->F()J
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->m()J
 
     move-result-wide v2
 
@@ -1807,7 +2084,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/B;->j(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/E;->m(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -1822,7 +2099,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->o:Landroid/content/Context;
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/B;->n(Landroid/content/Context;)Z
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/E;->q(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -1831,15 +2108,15 @@
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
     :goto_1
-    new-instance v1, Lcn/com/smartdevices/bracelet/a/s;
+    new-instance v1, Lcn/com/smartdevices/bracelet/a/t;
 
     new-instance v2, Lcn/com/smartdevices/bracelet/ui/t;
 
     invoke-direct {v2, p0, v0}, Lcn/com/smartdevices/bracelet/ui/t;-><init>(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;Lorg/json/JSONObject;)V
 
-    invoke-direct {v1, v2}, Lcn/com/smartdevices/bracelet/a/s;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
+    invoke-direct {v1, v2}, Lcn/com/smartdevices/bracelet/a/t;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/a/s;->c()V
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/a/t;->c()V
 
     goto :goto_0
 
@@ -1849,7 +2126,7 @@
     goto :goto_1
 .end method
 
-.method private s()V
+.method private u()V
     .locals 6
 
     const/4 v5, 0x6
@@ -1858,7 +2135,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->c()J
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->Z()J
 
     move-result-wide v1
 
@@ -1868,7 +2145,7 @@
 
     if-lez v1, :cond_0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->c()J
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->Z()J
 
     move-result-wide v1
 
@@ -1899,13 +2176,13 @@
 
     const-string v2, "BleSyncDataFirst"
 
-    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/A;->a(Landroid/content/Context;Ljava/lang/String;I)V
+    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/D;->a(Landroid/content/Context;Ljava/lang/String;I)V
 
     :cond_1
     return-void
 .end method
 
-.method private t()Z
+.method private v()Z
     .locals 9
 
     const/4 v8, -0x1
@@ -1929,7 +2206,7 @@
     return v0
 
     :cond_1
-    const-string v2, "V0.1.8"
+    const-string v2, "V0.2.9"
 
     invoke-static {v2}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->getVersionCodeFromVersionName(Ljava/lang/String;)I
 
@@ -1981,7 +2258,7 @@
 
     move-result-object v1
 
-    invoke-static {v5, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "BaseSCActivity"
 
@@ -2013,7 +2290,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eq v3, v8, :cond_0
 
@@ -2037,15 +2314,9 @@
 .method public a(Lcom/xiaomi/hm/bleservice/a;)V
     .locals 3
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->h()Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->aj()Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;
 
     move-result-object v0
-
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;->isValid()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
 
     iget-object v0, v0, Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;->address:Ljava/lang/String;
 
@@ -2081,7 +2352,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p1, Lcom/xiaomi/hm/bleservice/a;->a:Landroid/bluetooth/BluetoothDevice;
 
@@ -2091,15 +2362,7 @@
 
     iget-object v0, p1, Lcom/xiaomi/hm/bleservice/a;->n:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->isValid()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p1, Lcom/xiaomi/hm/bleservice/a;->n:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->onEvent(Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;)V
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->onEventBackgroundThread(Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;)V
 
     :cond_0
     return-void
@@ -2170,7 +2433,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v3, "BaseSCActivity"
 
@@ -2196,7 +2459,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/v;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
@@ -2223,18 +2486,18 @@
     goto :goto_0
 .end method
 
-.method protected b()V
+.method public b()V
     .locals 0
 
     return-void
 .end method
 
 .method public b(Z)Z
-    .locals 3
-
-    const/4 v1, 0x1
+    .locals 4
 
     const/4 v0, 0x0
+
+    const/4 v1, 0x1
 
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
@@ -2258,7 +2521,7 @@
     return v0
 
     :cond_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->q()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->r()Z
 
     move-result v2
 
@@ -2269,15 +2532,17 @@
     goto :goto_0
 
     :cond_1
-    new-instance v1, Landroid/content/Intent;
+    new-instance v2, Landroid/content/Intent;
 
-    const-string v2, "android.bluetooth.adapter.action.REQUEST_ENABLE"
+    const-string v3, "android.bluetooth.adapter.action.REQUEST_ENABLE"
 
-    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    const/16 v2, 0x2001
+    const/16 v3, 0x2001
 
-    invoke-virtual {p0, v1, v2}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v2, v3}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->startActivityForResult(Landroid/content/Intent;I)V
+
+    iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->y:Z
 
     goto :goto_0
 
@@ -2306,6 +2571,24 @@
 .end method
 
 .method protected f()V
+    .locals 0
+
+    return-void
+.end method
+
+.method protected g()V
+    .locals 0
+
+    return-void
+.end method
+
+.method protected h()V
+    .locals 0
+
+    return-void
+.end method
+
+.method protected i()V
     .locals 0
 
     return-void
@@ -2340,7 +2623,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/16 v0, 0x2001
 
@@ -2353,22 +2636,12 @@
     return-void
 
     :pswitch_0
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->k()V
-
     iput-boolean v3, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->r:Z
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->c()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->h()V
 
     goto :goto_0
 
     :pswitch_1
-    const v0, 0x7f07000e
+    const v0, 0x7f080016
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->getString(I)Ljava/lang/String;
 
@@ -2412,21 +2685,51 @@
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
-    .locals 2
+    .locals 3
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    iput-object p0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->o:Landroid/content/Context;
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->o:Landroid/content/Context;
 
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->q:Z
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->l()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->a()Z
 
-    invoke-direct {p0, v1, v1}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->a(II)V
+    move-result v0
+
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->u:Z
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->b()Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->w:Z
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->c()Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->v:Z
+
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->u:Z
+
+    iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->w:Z
+
+    or-int/2addr v0, v1
+
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->x:Z
+
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->o()V
+
+    invoke-direct {p0, v2, v2}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->a(II)V
 
     invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
 
@@ -2434,13 +2737,11 @@
 
     invoke-virtual {v0, p0}, Lde/greenrobot/event/EventBus;->register(Ljava/lang/Object;)V
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->o:Landroid/content/Context;
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/sync/B;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/a/b;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/lab/sync/G;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/a/b;)V
 
     return-void
 .end method
@@ -2460,7 +2761,7 @@
 
     const-string v1, "onDestory.........................................."
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->l:Landroid/os/Handler;
 
@@ -2481,12 +2782,8 @@
     return-void
 .end method
 
-.method public onEvent(Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;)V
-    .locals 12
-
-    const/4 v11, 0x1
-
-    const/4 v10, 0x0
+.method public onEvent(Lcn/com/smartdevices/bracelet/eventbus/EventWeightDel;)V
+    .locals 4
 
     const-string v0, "BaseSCActivity"
 
@@ -2494,27 +2791,17 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "EventUserWEight "
+    const-string v2, "weightDel timestamp "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    iget-object v2, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->weightAdvData:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/eventbus/EventWeightDel;->getTimestamp()J
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result-wide v2
 
-    move-result-object v1
-
-    const-string v2, " weight.userinfo "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->userInfo:Lcn/com/smartdevices/bracelet/weight/UserInfo;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -2522,300 +2809,115 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/p;->a()Lcn/com/smartdevices/bracelet/p;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/m;->a()Lcn/com/smartdevices/bracelet/weight/m;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/p;->b()Lde/greenrobot/daobracelet/LuaListDao;
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/eventbus/EventWeightDel;->getTimestamp()J
+
+    move-result-wide v1
+
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/weight/m;->a(J)Lcn/com/smartdevices/bracelet/weight/WeightInfo;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/weight/x;->a(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->l:Landroid/os/Handler;
+
+    const/16 v1, 0x1007
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    return-void
+.end method
+
+.method public onEventBackgroundThread(Lcn/com/smartdevices/bracelet/eventbus/EventUserDel;)V
+    .locals 4
+
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/eventbus/EventUserDel;->getUid()I
+
+    move-result v0
+
+    const-string v1, "BaseSCActivity"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "del user "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/m;->a()Lcn/com/smartdevices/bracelet/weight/m;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lde/greenrobot/daobracelet/LuaListDao;->queryBuilder()Lde/greenrobot/dao/query/QueryBuilder;
-
-    move-result-object v0
-
-    sget-object v2, Lde/greenrobot/daobracelet/LuaListDao$Properties;->Type:Lde/greenrobot/dao/Property;
-
-    iget-object v3, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->sType:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Lde/greenrobot/dao/Property;->eq(Ljava/lang/Object;)Lde/greenrobot/dao/query/WhereCondition;
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/weight/m;->b(I)Ljava/util/List;
 
     move-result-object v2
 
-    new-array v3, v10, [Lde/greenrobot/dao/query/WhereCondition;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, v2, v3}, Lde/greenrobot/dao/query/QueryBuilder;->where(Lde/greenrobot/dao/query/WhereCondition;[Lde/greenrobot/dao/query/WhereCondition;)Lde/greenrobot/dao/query/QueryBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lde/greenrobot/dao/query/QueryBuilder;->list()Ljava/util/List;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v2
-
-    if-lt v2, v11, :cond_0
-
-    invoke-interface {v0, v10}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-nez v2, :cond_1
-
-    :cond_0
-    const-string v0, "BaseSCActivity"
-
-    const-string v1, "not match dynamic item!!!"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    move v1, v0
 
     :goto_0
+    invoke-interface {v2}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-ge v1, v0, :cond_0
+
+    invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/weight/x;->a(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
+
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->l:Landroid/os/Handler;
+
+    const/16 v1, 0x1007
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
     return-void
+.end method
 
-    :cond_1
-    invoke-interface {v0, v10}, Ljava/util/List;->get(I)Ljava/lang/Object;
+.method public onEventBackgroundThread(Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;)V
+    .locals 13
 
-    move-result-object v0
+    const/4 v12, 0x3
 
-    check-cast v0, Lde/greenrobot/daobracelet/LuaList;
+    const/4 v11, 0x2
 
-    const-string v2, "BaseSCActivity"
+    const/4 v10, 0x1
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    const/4 v9, 0x0
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "new lualist "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v2, Ljava/text/SimpleDateFormat;
-
-    const-string v3, "HH:mm"
-
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
-
-    move-result-object v4
-
-    invoke-direct {v2, v3, v4}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
-
-    iget-object v3, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->weightAdvData:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
-
-    invoke-virtual {v3}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getTimestamp()J
-
-    move-result-wide v3
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/text/SimpleDateFormat;->format(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    iget-object v3, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->weightAdvData:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
-
-    invoke-virtual {v3}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getType()I
-
-    move-result v3
-
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->o:Landroid/content/Context;
-
-    invoke-static {v4, v3}, Lcn/com/smartdevices/bracelet/weight/q;->a(Landroid/content/Context;I)Ljava/lang/String;
-
-    move-result-object v3
-
-    iget-object v4, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->weightAdvData:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
-
-    invoke-virtual {v4}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getBmi()F
-
-    move-result v4
-
-    iget-object v5, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->o:Landroid/content/Context;
-
-    invoke-static {v5, v4}, Lcn/com/smartdevices/bracelet/weight/q;->b(Landroid/content/Context;F)Ljava/lang/String;
-
-    move-result-object v4
-
-    iget-object v5, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->weightAdvData:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
-
-    invoke-virtual {v5}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getTimestamp()J
-
-    move-result-wide v5
-
-    iget-object v7, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->userInfo:Lcn/com/smartdevices/bracelet/weight/UserInfo;
-
-    iget v7, v7, Lcn/com/smartdevices/bracelet/weight/UserInfo;->uid:I
-
-    invoke-static {v5, v6, v7}, Lcn/com/smartdevices/bracelet/weight/q;->a(JI)Ljava/lang/String;
-
-    move-result-object v5
-
-    const-string v6, "BaseSCActivity"
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v8, "stype is "
-
-    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {v7, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-static {v6, v7}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v5}, Lde/greenrobot/daobracelet/LuaList;->setType(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v6
-
-    const v7, 0x7f07020e
-
-    const/4 v8, 0x4
-
-    new-array v8, v8, [Ljava/lang/Object;
-
-    aput-object v2, v8, v10
-
-    iget-object v2, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->userInfo:Lcn/com/smartdevices/bracelet/weight/UserInfo;
-
-    iget-object v2, v2, Lcn/com/smartdevices/bracelet/weight/UserInfo;->name:Ljava/lang/String;
-
-    aput-object v2, v8, v11
-
-    const/4 v2, 0x2
-
-    iget-object v9, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->weightAdvData:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
-
-    invoke-virtual {v9}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getValue()F
-
-    move-result v9
-
-    invoke-static {v9}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v9
-
-    aput-object v9, v8, v2
-
-    const/4 v2, 0x3
-
-    aput-object v3, v8, v2
-
-    invoke-virtual {v6, v7, v8}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Lde/greenrobot/daobracelet/LuaList;->setText1(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    const v3, 0x7f070210
-
-    new-array v6, v11, [Ljava/lang/Object;
-
-    aput-object v4, v6, v10
-
-    invoke-virtual {v2, v3, v6}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Lde/greenrobot/daobracelet/LuaList;->setText2(Ljava/lang/String;)V
-
-    iget-object v2, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->userInfo:Lcn/com/smartdevices/bracelet/weight/UserInfo;
-
-    iget-object v3, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->weightAdvData:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
-
-    invoke-direct {p0, v2, v3, v5}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->a(Lcn/com/smartdevices/bracelet/weight/UserInfo;Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Lde/greenrobot/daobracelet/LuaList;->setLuaActionScript(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Lde/greenrobot/daobracelet/LuaListDao;->update(Ljava/lang/Object;)V
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/weight/g;
-
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/weight/g;-><init>()V
-
-    iget-object v1, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->weightAdvData:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
-
-    iput-object v1, v0, Lcn/com/smartdevices/bracelet/weight/g;->a:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
-
-    iget-object v1, v0, Lcn/com/smartdevices/bracelet/weight/g;->a:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
-
-    invoke-virtual {v1, v11}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->setStable(Z)V
-
-    iget-object v1, v0, Lcn/com/smartdevices/bracelet/weight/g;->a:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
-
-    invoke-virtual {v1, v10}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->setFinish(Z)V
-
-    iget-object v1, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->userInfo:Lcn/com/smartdevices/bracelet/weight/UserInfo;
-
-    iget-object v1, v1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->name:Ljava/lang/String;
-
-    iput-object v1, v0, Lcn/com/smartdevices/bracelet/weight/g;->b:Ljava/lang/String;
-
-    iget-object v1, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->userInfo:Lcn/com/smartdevices/bracelet/weight/UserInfo;
-
-    iget v1, v1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->uid:I
-
-    iput v1, v0, Lcn/com/smartdevices/bracelet/weight/g;->c:I
-
-    iget-object v1, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->userInfo:Lcn/com/smartdevices/bracelet/weight/UserInfo;
-
-    iget v1, v1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->targetWeight:F
-
-    iput v1, v0, Lcn/com/smartdevices/bracelet/weight/g;->d:F
-
-    invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/a;->a()Lcn/com/smartdevices/bracelet/weight/a;
-
-    move-result-object v0
-
-    iget-object v1, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->userInfo:Lcn/com/smartdevices/bracelet/weight/UserInfo;
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/weight/a;->d(Lcn/com/smartdevices/bracelet/weight/UserInfo;)V
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/i;->a()Lcn/com/smartdevices/bracelet/weight/i;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/m;->a()Lcn/com/smartdevices/bracelet/weight/m;
 
     move-result-object v0
 
@@ -2825,11 +2927,11 @@
 
     move-result-wide v1
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/weight/i;->a(J)Lcn/com/smartdevices/bracelet/weight/WeightInfo;
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/weight/m;->a(J)Lcn/com/smartdevices/bracelet/weight/WeightInfo;
 
     move-result-object v1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_1
 
     const-string v2, "BaseSCActivity"
 
@@ -2865,89 +2967,138 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v2, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->userInfo:Lcn/com/smartdevices/bracelet/weight/UserInfo;
 
     iget v2, v2, Lcn/com/smartdevices/bracelet/weight/UserInfo;->uid:I
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/weight/i;->a(Lcn/com/smartdevices/bracelet/weight/WeightInfo;I)V
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/weight/m;->a(Lcn/com/smartdevices/bracelet/weight/WeightInfo;I)V
 
-    :goto_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->l:Landroid/os/Handler;
-
-    const/16 v1, 0x1007
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
-
-    goto/16 :goto_0
-
-    :cond_2
+    :goto_0
     const-string v0, "BaseSCActivity"
 
-    const-string v1, "can not go here,something wrong!!!"
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    goto :goto_1
-.end method
+    const-string v2, "EventUserWEight "
 
-.method public onEvent(Lcn/com/smartdevices/bracelet/eventbus/EventWeightDel;)V
-    .locals 6
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v5, 0x0
+    move-result-object v1
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/eventbus/EventWeightDel;->getStype()Ljava/lang/String;
+    iget-object v2, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->weightAdvData:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
 
-    move-result-object v0
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " weight.userinfo "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->userInfo:Lcn/com/smartdevices/bracelet/weight/UserInfo;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/p;->a()Lcn/com/smartdevices/bracelet/p;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/p;->b()Lde/greenrobot/daobracelet/LuaListDao;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lde/greenrobot/daobracelet/LuaListDao;->queryBuilder()Lde/greenrobot/dao/query/QueryBuilder;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/p;->b()Lde/greenrobot/daobracelet/LuaListDao;
 
     move-result-object v2
 
-    sget-object v3, Lde/greenrobot/daobracelet/LuaListDao$Properties;->Type:Lde/greenrobot/dao/Property;
-
-    invoke-virtual {v3, v0}, Lde/greenrobot/dao/Property;->eq(Ljava/lang/Object;)Lde/greenrobot/dao/query/WhereCondition;
+    invoke-virtual {v2}, Lde/greenrobot/daobracelet/LuaListDao;->queryBuilder()Lde/greenrobot/dao/query/QueryBuilder;
 
     move-result-object v0
 
-    new-array v3, v5, [Lde/greenrobot/dao/query/WhereCondition;
+    sget-object v1, Lde/greenrobot/daobracelet/LuaListDao$Properties;->Type:Lde/greenrobot/dao/Property;
 
-    invoke-virtual {v2, v0, v3}, Lde/greenrobot/dao/query/QueryBuilder;->where(Lde/greenrobot/dao/query/WhereCondition;[Lde/greenrobot/dao/query/WhereCondition;)Lde/greenrobot/dao/query/QueryBuilder;
+    iget-object v3, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->sType:Ljava/lang/String;
+
+    invoke-virtual {v1, v3}, Lde/greenrobot/dao/Property;->eq(Ljava/lang/Object;)Lde/greenrobot/dao/query/WhereCondition;
+
+    move-result-object v1
+
+    new-array v3, v9, [Lde/greenrobot/dao/query/WhereCondition;
+
+    invoke-virtual {v0, v1, v3}, Lde/greenrobot/dao/query/QueryBuilder;->where(Lde/greenrobot/dao/query/WhereCondition;[Lde/greenrobot/dao/query/WhereCondition;)Lde/greenrobot/dao/query/QueryBuilder;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lde/greenrobot/dao/query/QueryBuilder;->list()Ljava/util/List;
 
-    move-result-object v2
+    move-result-object v0
 
-    if-eqz v2, :cond_0
+    if-eqz v0, :cond_0
 
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-lt v1, v10, :cond_0
+
+    invoke-interface {v0, v9}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-nez v1, :cond_2
+
+    :cond_0
     const-string v0, "BaseSCActivity"
+
+    const-string v1, "not match dynamic item!!!"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_1
+    return-void
+
+    :cond_1
+    const-string v0, "BaseSCActivity"
+
+    const-string v1, "can not go here,something wrong!!!"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_2
+    invoke-interface {v0, v9}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lde/greenrobot/daobracelet/LuaList;
+
+    const-string v1, "BaseSCActivity"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "list size is "
+    const-string v4, "new lualist "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    invoke-interface {v2}, Ljava/util/List;->size()I
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    move-result v4
+    move-result-object v4
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
@@ -2955,158 +3106,112 @@
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_0
-    if-eqz v2, :cond_1
+    new-instance v1, Ljava/text/SimpleDateFormat;
 
-    invoke-interface {v2}, Ljava/util/List;->size()I
+    const-string v3, "HH:mm"
 
-    move-result v0
-
-    if-lez v0, :cond_1
-
-    invoke-interface {v2, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    const-string v3, "BaseSCActivity"
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "new lualist "
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v4
 
-    invoke-interface {v2, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-direct {v1, v3, v4}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    move-result-object v0
+    iget-object v3, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->weightAdvData:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
 
-    check-cast v0, Lde/greenrobot/daobracelet/LuaList;
+    invoke-virtual {v3}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getTimestamp()J
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    move-result-wide v3
 
-    move-result-object v0
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v3
 
-    move-result-object v0
+    invoke-virtual {v1, v3}, Ljava/text/SimpleDateFormat;->format(Ljava/lang/Object;)Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v3
 
-    move-result-object v0
+    iget-object v1, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->weightAdvData:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
 
-    invoke-static {v3, v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getType()I
 
-    invoke-interface {v2, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    move-result v1
 
-    move-result-object v0
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->o:Landroid/content/Context;
 
-    invoke-virtual {v1, v0}, Lde/greenrobot/daobracelet/LuaListDao;->delete(Ljava/lang/Object;)V
-
-    :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->l:Landroid/os/Handler;
-
-    const/16 v1, 0x1007
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
-
-    return-void
-.end method
-
-.method public onEvent(Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;)V
-    .locals 3
-
-    const-string v0, "BaseSCActivity"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "onEvent WeightAdvData:"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->a(Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;)V
-
-    return-void
-.end method
-
-.method public onEventBackgroundThread(Lcn/com/smartdevices/bracelet/eventbus/EventUserDel;)V
-    .locals 10
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/eventbus/EventUserDel;->getUid()I
-
-    move-result v3
-
-    const-string v0, "BaseSCActivity"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "del user "
-
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/i;->a()Lcn/com/smartdevices/bracelet/weight/i;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/weight/i;->b(I)Ljava/util/List;
+    invoke-static {v4, v1}, Lcn/com/smartdevices/bracelet/weight/x;->a(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v4
 
-    move v1, v2
+    iget-object v1, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->weightAdvData:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
 
-    :goto_0
-    invoke-interface {v4}, Ljava/util/List;->size()I
+    invoke-virtual {v1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getBmi()F
 
-    move-result v0
+    move-result v1
 
-    if-ge v1, v0, :cond_1
+    const-string v5, "BaseSCActivity"
 
-    invoke-interface {v4, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;
+    const-string v7, "bmi "
 
-    iget-wide v5, v0, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->timestamp:J
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v5, v6, v3}, Lcn/com/smartdevices/bracelet/weight/q;->a(JI)Ljava/lang/String;
+    move-result-object v6
+
+    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v5, v6}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v5, ""
+
+    iget-object v5, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->userInfo:Lcn/com/smartdevices/bracelet/weight/UserInfo;
+
+    iget-object v5, v5, Lcn/com/smartdevices/bracelet/weight/UserInfo;->birthday:Ljava/lang/String;
+
+    invoke-static {v5}, Lcn/com/smartdevices/bracelet/model/Birthday;->fromStr(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/model/Birthday;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Lcn/com/smartdevices/bracelet/model/Birthday;->getAge()I
+
+    move-result v5
+
+    const/4 v6, 0x7
+
+    if-ge v5, v6, :cond_3
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->o:Landroid/content/Context;
+
+    iget-object v5, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->userInfo:Lcn/com/smartdevices/bracelet/weight/UserInfo;
+
+    iget-object v6, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->weightAdvData:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+
+    invoke-static {v1, v5, v6}, Lcn/com/smartdevices/bracelet/weight/x;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/weight/UserInfo;Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;)Ljava/lang/String;
+
+    move-result-object v1
+
+    :goto_2
+    iget-object v5, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->weightAdvData:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+
+    invoke-virtual {v5}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getTimestamp()J
+
+    move-result-wide v5
+
+    iget-object v7, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->userInfo:Lcn/com/smartdevices/bracelet/weight/UserInfo;
+
+    iget v7, v7, Lcn/com/smartdevices/bracelet/weight/UserInfo;->uid:I
+
+    invoke-static {v5, v6, v7}, Lcn/com/smartdevices/bracelet/weight/x;->a(JI)Ljava/lang/String;
 
     move-result-object v5
 
@@ -3130,101 +3235,240 @@
 
     move-result-object v7
 
-    invoke-static {v6, v7}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/p;->a()Lcn/com/smartdevices/bracelet/p;
+    invoke-virtual {v0, v5}, Lde/greenrobot/daobracelet/LuaList;->setType(Ljava/lang/String;)V
 
-    move-result-object v6
+    iget-object v6, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->userInfo:Lcn/com/smartdevices/bracelet/weight/UserInfo;
 
-    invoke-virtual {v6}, Lcn/com/smartdevices/bracelet/p;->b()Lde/greenrobot/daobracelet/LuaListDao;
+    iget v6, v6, Lcn/com/smartdevices/bracelet/weight/UserInfo;->uid:I
 
-    move-result-object v6
+    if-nez v6, :cond_5
 
-    invoke-virtual {v6}, Lde/greenrobot/daobracelet/LuaListDao;->queryBuilder()Lde/greenrobot/dao/query/QueryBuilder;
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v7
+    move-result-object v1
 
-    sget-object v8, Lde/greenrobot/daobracelet/LuaListDao$Properties;->Type:Lde/greenrobot/dao/Property;
+    const v5, 0x7f080225
 
-    invoke-virtual {v8, v5}, Lde/greenrobot/dao/Property;->eq(Ljava/lang/Object;)Lde/greenrobot/dao/query/WhereCondition;
+    new-array v6, v12, [Ljava/lang/Object;
 
-    move-result-object v5
+    aput-object v3, v6, v9
 
-    new-array v8, v2, [Lde/greenrobot/dao/query/WhereCondition;
+    iget-object v3, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->weightAdvData:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
 
-    invoke-virtual {v7, v5, v8}, Lde/greenrobot/dao/query/QueryBuilder;->where(Lde/greenrobot/dao/query/WhereCondition;[Lde/greenrobot/dao/query/WhereCondition;)Lde/greenrobot/dao/query/QueryBuilder;
+    invoke-virtual {v3}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getValue()F
 
-    move-result-object v5
+    move-result v3
 
-    invoke-virtual {v5}, Lde/greenrobot/dao/query/QueryBuilder;->list()Ljava/util/List;
+    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    move-result-object v5
+    move-result-object v3
 
-    if-eqz v5, :cond_0
+    aput-object v3, v6, v10
 
-    invoke-interface {v5}, Ljava/util/List;->size()I
+    aput-object v4, v6, v11
 
-    move-result v7
+    invoke-virtual {v1, v5, v6}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
-    if-lez v7, :cond_0
+    move-result-object v1
 
-    invoke-interface {v5, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lde/greenrobot/daobracelet/LuaList;->setText1(Ljava/lang/String;)V
 
-    move-result-object v7
+    const v1, 0x7f08023d
 
-    if-eqz v7, :cond_0
+    invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->getString(I)Ljava/lang/String;
 
-    const-string v7, "BaseSCActivity"
+    move-result-object v1
 
-    new-instance v8, Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Lde/greenrobot/daobracelet/LuaList;->setText2(Ljava/lang/String;)V
 
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+    iget-object v1, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->weightAdvData:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
 
-    const-string v9, "delete lua list:"
+    invoke-direct {p0, v1}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->b(Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;)Ljava/lang/String;
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    move-result-object v8
+    invoke-virtual {v0, v1}, Lde/greenrobot/daobracelet/LuaList;->setLuaActionScript(Ljava/lang/String;)V
 
-    invoke-interface {v5, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    :goto_3
+    invoke-virtual {v2, v0}, Lde/greenrobot/daobracelet/LuaListDao;->update(Ljava/lang/Object;)V
 
-    move-result-object v9
+    new-instance v0, Lcn/com/smartdevices/bracelet/weight/k;
 
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/weight/k;-><init>()V
 
-    move-result-object v8
+    iget-object v1, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->weightAdvData:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
 
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iput-object v1, v0, Lcn/com/smartdevices/bracelet/weight/k;->a:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
 
-    move-result-object v8
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/weight/k;->a:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
 
-    invoke-static {v7, v8}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v1, v10}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->setStable(Z)V
 
-    invoke-interface {v5, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/weight/k;->a:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
 
-    move-result-object v5
+    invoke-virtual {v1, v9}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->setFinish(Z)V
 
-    invoke-virtual {v6, v5}, Lde/greenrobot/daobracelet/LuaListDao;->delete(Ljava/lang/Object;)V
+    iget-object v1, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->userInfo:Lcn/com/smartdevices/bracelet/weight/UserInfo;
 
-    :cond_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/i;->a()Lcn/com/smartdevices/bracelet/weight/i;
+    iget-object v1, v1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->name:Ljava/lang/String;
 
-    move-result-object v5
+    iput-object v1, v0, Lcn/com/smartdevices/bracelet/weight/k;->b:Ljava/lang/String;
 
-    invoke-virtual {v5, v0}, Lcn/com/smartdevices/bracelet/weight/i;->c(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
+    iget-object v1, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->userInfo:Lcn/com/smartdevices/bracelet/weight/UserInfo;
 
-    add-int/lit8 v0, v1, 0x1
+    iget v1, v1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->uid:I
 
-    move v1, v0
+    iput v1, v0, Lcn/com/smartdevices/bracelet/weight/k;->c:I
 
-    goto/16 :goto_0
+    iget-object v1, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->userInfo:Lcn/com/smartdevices/bracelet/weight/UserInfo;
 
-    :cond_1
+    iget v1, v1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->targetWeight:F
+
+    iput v1, v0, Lcn/com/smartdevices/bracelet/weight/k;->d:F
+
+    invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
+
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->l:Landroid/os/Handler;
 
     const/16 v1, 0x1007
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    goto/16 :goto_1
+
+    :cond_3
+    iget-object v5, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->userInfo:Lcn/com/smartdevices/bracelet/weight/UserInfo;
+
+    iget v5, v5, Lcn/com/smartdevices/bracelet/weight/UserInfo;->height:I
+
+    const/16 v6, 0x64
+
+    if-ge v5, v6, :cond_4
+
+    const-string v1, "\u8eab\u9ad8\u672a\u8fbe\u5230100\u5398\u7c73\uff0c\u65e0\u6cd5\u5206\u6790\u4f53\u578b"
+
+    goto/16 :goto_2
+
+    :cond_4
+    iget-object v5, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->o:Landroid/content/Context;
+
+    invoke-static {v5, v1}, Lcn/com/smartdevices/bracelet/weight/x;->b(Landroid/content/Context;F)Ljava/lang/String;
+
+    move-result-object v1
+
+    goto/16 :goto_2
+
+    :cond_5
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v6
+
+    const v7, 0x7f080224
+
+    const/4 v8, 0x4
+
+    new-array v8, v8, [Ljava/lang/Object;
+
+    aput-object v3, v8, v9
+
+    iget-object v3, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->userInfo:Lcn/com/smartdevices/bracelet/weight/UserInfo;
+
+    iget-object v3, v3, Lcn/com/smartdevices/bracelet/weight/UserInfo;->name:Ljava/lang/String;
+
+    aput-object v3, v8, v10
+
+    iget-object v3, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->weightAdvData:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+
+    invoke-virtual {v3}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getValue()F
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v3
+
+    aput-object v3, v8, v11
+
+    aput-object v4, v8, v12
+
+    invoke-virtual {v6, v7, v8}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Lde/greenrobot/daobracelet/LuaList;->setText1(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    const v4, 0x7f080226
+
+    new-array v6, v10, [Ljava/lang/Object;
+
+    aput-object v1, v6, v9
+
+    invoke-virtual {v3, v4, v6}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lde/greenrobot/daobracelet/LuaList;->setText2(Ljava/lang/String;)V
+
+    iget-object v1, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->userInfo:Lcn/com/smartdevices/bracelet/weight/UserInfo;
+
+    iget-object v3, p1, Lcn/com/smartdevices/bracelet/eventbus/EventUserWeight;->weightAdvData:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+
+    invoke-static {v1, v3, v5}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->a(Lcn/com/smartdevices/bracelet/weight/UserInfo;Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lde/greenrobot/daobracelet/LuaList;->setLuaActionScript(Ljava/lang/String;)V
+
+    goto/16 :goto_3
+.end method
+
+.method public onEventBackgroundThread(Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;)V
+    .locals 3
+
+    const-string v0, "BaseSCActivity"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "onEvent WeightAdvData:"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    if-eqz p1, :cond_0
+
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->a(Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method protected onNewIntent(Landroid/content/Intent;)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onNewIntent(Landroid/content/Intent;)V
 
     return-void
 .end method
@@ -3242,123 +3486,57 @@
 .end method
 
 .method protected onResume()V
-    .locals 3
+    .locals 4
 
-    const/4 v1, 0x0
+    const/4 v3, 0x1
+
+    const/4 v2, 0x0
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onResume()V
 
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->p:Z
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->o:Landroid/content/Context;
 
-    if-nez v0, :cond_0
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/b;->b(Landroid/content/Context;)V
 
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->q:Z
+    invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->b(Z)Z
 
-    if-eqz v0, :cond_5
+    move-result v0
 
-    :cond_0
-    const/4 v0, 0x1
-
-    :goto_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->a()Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->c()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    :cond_1
-    invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->b(Z)Z
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->c(Z)Z
 
     move-result v1
 
-    :cond_2
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->a()Z
+    if-eqz v1, :cond_1
 
-    move-result v2
+    iput-boolean v3, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->x:Z
 
-    if-eqz v2, :cond_6
+    :cond_0
+    :goto_0
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->d(Z)Z
 
-    if-eqz v1, :cond_3
-
-    if-eqz v0, :cond_3
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->k()V
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->m()V
-
-    const/16 v0, 0x27
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/b;->a(I)V
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->q()V
-
-    :cond_3
-    :goto_1
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->c()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    if-eqz v1, :cond_4
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->g()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_8
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->l:Landroid/os/Handler;
-
-    const/16 v1, 0x1009
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
-
-    :cond_4
-    :goto_2
     return-void
 
-    :cond_5
-    move v0, v1
+    :cond_1
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->j()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    iput-boolean v3, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->x:Z
 
     goto :goto_0
 
-    :cond_6
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/B;->l(Landroid/content/Context;)Z
+    :cond_2
+    iget-boolean v1, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->x:Z
 
-    move-result v2
+    if-eqz v1, :cond_0
 
-    if-eqz v2, :cond_7
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->j()V
+    iput-boolean v2, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->x:Z
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->c()V
 
-    if-eqz v0, :cond_3
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/i/a;->a()Lcn/com/smartdevices/bracelet/i/a;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/i/a;->b()V
-
-    goto :goto_1
-
-    :cond_7
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->b()V
-
-    goto :goto_1
-
-    :cond_8
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->h()V
-
-    goto :goto_2
+    goto :goto_0
 .end method
 
 .method protected onStop()V
@@ -3382,18 +3560,8 @@
 
     iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->r:Z
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/16 v0, 0x1e0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/b;->a(I)V
-
     :cond_0
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->i()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->m()V
 
     return-void
 .end method

@@ -1,5 +1,5 @@
 .class public Lcn/com/smartdevices/bracelet/a/e;
-.super Lcn/com/smartdevices/bracelet/a/v;
+.super Lcn/com/smartdevices/bracelet/a/x;
 
 
 # static fields
@@ -56,7 +56,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, p3}, Lcn/com/smartdevices/bracelet/a/v;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
+    invoke-direct {p0, p3}, Lcn/com/smartdevices/bracelet/a/x;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/a/e;->a:Ljava/lang/String;
 
@@ -76,7 +76,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, p3}, Lcn/com/smartdevices/bracelet/a/v;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
+    invoke-direct {p0, p3}, Lcn/com/smartdevices/bracelet/a/x;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/a/e;->a:Ljava/lang/String;
 
@@ -103,7 +103,7 @@
 
     const-string v2, "BleFwUpgradeTask before waiting..."
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -141,7 +141,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     monitor-exit v1
 
@@ -185,7 +185,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v1, Lcn/com/smartdevices/bracelet/a/e;->d:Ljava/lang/Object;
 
@@ -224,7 +224,7 @@
 
     const-string v2, "BleFwUpgradeTask before waitingFwUpdate..."
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -262,7 +262,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     monitor-exit v1
 
@@ -306,7 +306,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     sget-object v1, Lcn/com/smartdevices/bracelet/a/e;->f:Ljava/lang/Object;
 
@@ -404,7 +404,7 @@
 
     const-string v1, "no fw data!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -451,7 +451,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/a/e;->b:Ljava/lang/String;
 
@@ -531,7 +531,7 @@
 
     iget-object v4, p0, Lcn/com/smartdevices/bracelet/a/e;->c:[B
 
-    invoke-static {v4}, Lcom/xiaomi/hm/bleservice/v;->c([B)I
+    invoke-static {v4}, Lcom/xiaomi/hm/bleservice/w;->c([B)I
 
     move-result v4
 
@@ -561,7 +561,7 @@
 
     const-string v1, "prepareFirmwareUpdate failed!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -626,7 +626,7 @@
 
     const-string v1, "sendFirmwareData failed!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

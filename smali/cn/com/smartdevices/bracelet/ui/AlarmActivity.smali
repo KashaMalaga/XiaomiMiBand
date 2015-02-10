@@ -147,7 +147,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "content://com.android.deskclock/alarm"
 
@@ -294,7 +294,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "hour"
 
@@ -398,25 +398,25 @@
 
     const-string v1, "AlarmActivity"
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/B;->c()Lcom/d/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/E;->c()Lcom/c/a/k;
 
     move-result-object v3
 
-    invoke-virtual {v3, v0}, Lcom/d/a/k;->b(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v3, v0}, Lcom/c/a/k;->b(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/B;->c()Lcom/d/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/E;->c()Lcom/c/a/k;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/d/a/k;->b(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v1, v0}, Lcom/c/a/k;->b(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->g(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->l(Ljava/lang/String;)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
@@ -430,7 +430,7 @@
     :try_start_3
     const-string v0, ""
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->g(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->l(Ljava/lang/String;)V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -524,7 +524,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->setCalendar(Ljava/util/Calendar;)V
@@ -676,7 +676,7 @@
 .method private e()V
     .locals 2
 
-    const v0, 0x7f08017e
+    const v0, 0x7f070187
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->findViewById(I)Landroid/view/View;
 
@@ -698,7 +698,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    const v0, 0x7f08003c
+    const v0, 0x7f070040
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->findViewById(I)Landroid/view/View;
 
@@ -706,7 +706,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->y:Landroid/view/View;
 
-    const v0, 0x7f080041
+    const v0, 0x7f070045
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->findViewById(I)Landroid/view/View;
 
@@ -800,13 +800,13 @@
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     :try_start_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/B;->c()Lcom/d/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/E;->c()Lcom/c/a/k;
 
     move-result-object v0
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->u:Ljava/util/ArrayList;
 
-    invoke-virtual {v0, v2}, Lcom/d/a/k;->b(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Lcom/c/a/k;->b(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -840,18 +840,24 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
     :goto_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->r:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->p:Landroid/app/Activity;
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/ui/c;
+    invoke-virtual {v0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
-    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/ui/c;-><init>(Lcn/com/smartdevices/bracelet/ui/AlarmActivity;)V
+    move-result-object v0
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/B;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;Ljava/util/HashMap;Lcn/com/smartdevices/bracelet/L;)V
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->r:Lcn/com/smartdevices/bracelet/model/PersonInfo;
+
+    new-instance v3, Lcn/com/smartdevices/bracelet/ui/c;
+
+    invoke-direct {v3, p0}, Lcn/com/smartdevices/bracelet/ui/c;-><init>(Lcn/com/smartdevices/bracelet/ui/AlarmActivity;)V
+
+    invoke-static {v0, v2, v1, v3}, Lcn/com/smartdevices/bracelet/E;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/PersonInfo;Ljava/util/HashMap;Lcn/com/smartdevices/bracelet/Q;)V
 
     return-void
 
@@ -957,13 +963,21 @@
     :cond_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->r:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->t:Lcn/com/smartdevices/bracelet/ui/e;
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/e;->notifyDataSetChanged()V
 
     return-void
+.end method
+
+.method protected isExceptForMiNote()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
 .end method
 
 .method public onActivityResult(IILandroid/content/Intent;)V
@@ -1016,7 +1030,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->r:Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->g()V
 
@@ -1046,7 +1060,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->q:Landroid/os/Handler;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->i()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->H()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v0
 
@@ -1179,7 +1193,7 @@
 
     const-string v2, "AlarmSetting"
 
-    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 
@@ -1222,9 +1236,9 @@
 
     const-string v0, "PageAlarm"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/A;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->a(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/A;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -1257,9 +1271,9 @@
     :cond_0
     const-string v0, "PageAlarm"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/A;->c(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->c(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;)V
 
     return-void
 .end method

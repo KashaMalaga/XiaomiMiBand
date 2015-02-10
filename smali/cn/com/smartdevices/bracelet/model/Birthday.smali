@@ -129,7 +129,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -139,6 +139,16 @@
 .method public getAge()I
     .locals 2
 
+    const/4 v0, -0x1
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/model/Birthday;->year:I
+
+    if-ne v1, v0, :cond_0
+
+    :goto_0
+    return v0
+
+    :cond_0
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
@@ -153,7 +163,7 @@
 
     sub-int/2addr v0, v1
 
-    return v0
+    goto :goto_0
 .end method
 
 .method public getDay()I
@@ -237,7 +247,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070025
+    const v1, 0x7f08002d
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

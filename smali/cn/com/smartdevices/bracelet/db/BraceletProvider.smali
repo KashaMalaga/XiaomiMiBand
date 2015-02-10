@@ -122,13 +122,7 @@
 .end method
 
 .method public onCreate()Z
-    .locals 2
-
-    const-string v0, "BraceletProvider"
-
-    const-string v1, "onCreate"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
     const/4 v0, 0x0
 

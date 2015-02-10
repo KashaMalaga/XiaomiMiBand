@@ -1,52 +1,37 @@
-.class public Lcn/com/smartdevices/bracelet/gps/ui/aA;
-.super Landroid/support/v13/app/h;
+.class Lcn/com/smartdevices/bracelet/gps/ui/aA;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lcn/com/smartdevices/bracelet/gps/ui/aK;
 
 
 # instance fields
-.field final synthetic c:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
 
 
 # direct methods
-.method public constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;Landroid/app/FragmentManager;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/aA;->c:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/aA;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
 
-    invoke-direct {p0, p2}, Landroid/support/v13/app/h;-><init>(Landroid/app/FragmentManager;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(I)Landroid/app/Fragment;
-    .locals 1
+.method public a(Landroid/graphics/Bitmap;)V
+    .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/aA;->c:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/aA;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;->j(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;)Ljava/util/List;
+    new-instance v1, Lcn/com/smartdevices/bracelet/gps/ui/aB;
 
-    move-result-object v0
+    invoke-direct {v1, p0, p1}, Lcn/com/smartdevices/bracelet/gps/ui/aB;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/aA;Landroid/graphics/Bitmap;)V
 
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/app/Fragment;
-
-    return-object v0
-.end method
-
-.method public b()I
-    .locals 1
-
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public e(I)V
-    .locals 0
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;->runOnUiThread(Ljava/lang/Runnable;)V
 
     return-void
 .end method

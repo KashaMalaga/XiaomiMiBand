@@ -2,19 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/handmark/pulltorefresh/library/PullToRefreshBase$OnRefreshListener;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Lcom/handmark/pulltorefresh/library/PullToRefreshBase$OnRefreshListener",
-        "<",
-        "Landroid/widget/ExpandableListView;",
-        ">;"
-    }
-.end annotation
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
@@ -34,23 +22,12 @@
 
 
 # virtual methods
-.method public onRefresh(Lcom/handmark/pulltorefresh/library/PullToRefreshBase;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/handmark/pulltorefresh/library/PullToRefreshBase",
-            "<",
-            "Landroid/widget/ExpandableListView;",
-            ">;)V"
-        }
-    .end annotation
+.method public onClick(Landroid/view/View;)V
+    .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/C;->a:Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;
 
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->b(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;Z)Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->finish()V
 
     return-void
 .end method

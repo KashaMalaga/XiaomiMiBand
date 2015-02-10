@@ -11,7 +11,7 @@
         "Ljava/lang/Object;",
         "Landroid/os/Parcelable$Creator",
         "<",
-        "Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;",
+        "Lcom/xiaomi/hm/bleservice/HwConnStatus;",
         ">;"
     }
 .end annotation
@@ -28,45 +28,23 @@
 
 
 # virtual methods
-.method public a(Landroid/os/Parcel;)Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;
-    .locals 3
+.method public a(Landroid/os/Parcel;)Lcom/xiaomi/hm/bleservice/HwConnStatus;
+    .locals 2
 
-    const/4 v0, 0x1
+    new-instance v0, Lcom/xiaomi/hm/bleservice/HwConnStatus;
 
-    new-instance v1, Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;
-
-    invoke-direct {v1}, Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;-><init>()V
+    invoke-direct {v0}, Lcom/xiaomi/hm/bleservice/HwConnStatus;-><init>()V
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
-    move-result v2
+    move-result v1
 
-    invoke-static {v1, v2}, Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;->a(Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;I)I
+    invoke-static {v0, v1}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->a(Lcom/xiaomi/hm/bleservice/HwConnStatus;I)I
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v2
-
-    invoke-static {v1, v2}, Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;->b(Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;I)I
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v2
-
-    if-ne v2, v0, :cond_0
-
-    :goto_0
-    invoke-static {v1, v0}, Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;->a(Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;Z)Z
-
-    return-object v1
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
+    return-object v0
 .end method
 
-.method public a(I)[Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;
+.method public a(I)[Lcom/xiaomi/hm/bleservice/HwConnStatus;
     .locals 1
 
     const/4 v0, 0x0
@@ -77,7 +55,7 @@
 .method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 1
 
-    invoke-virtual {p0, p1}, Lcom/xiaomi/hm/bleservice/y;->a(Landroid/os/Parcel;)Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;
+    invoke-virtual {p0, p1}, Lcom/xiaomi/hm/bleservice/y;->a(Landroid/os/Parcel;)Lcom/xiaomi/hm/bleservice/HwConnStatus;
 
     move-result-object v0
 
@@ -87,7 +65,7 @@
 .method public synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
 
-    invoke-virtual {p0, p1}, Lcom/xiaomi/hm/bleservice/y;->a(I)[Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;
+    invoke-virtual {p0, p1}, Lcom/xiaomi/hm/bleservice/y;->a(I)[Lcom/xiaomi/hm/bleservice/HwConnStatus;
 
     move-result-object v0
 

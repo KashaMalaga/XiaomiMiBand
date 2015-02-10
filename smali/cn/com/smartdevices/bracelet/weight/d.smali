@@ -1,26 +1,30 @@
 .class Lcn/com/smartdevices/bracelet/weight/d;
-.super Lcom/e/a/a/h;
+.super Lcom/d/a/a/h;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/model/SyncResult;
+.field final synthetic a:Landroid/content/Context;
 
-.field final synthetic b:Ljava/util/List;
+.field final synthetic b:Lcn/com/smartdevices/bracelet/model/SyncResult;
 
-.field final synthetic c:Lcn/com/smartdevices/bracelet/weight/a;
+.field final synthetic c:Ljava/util/List;
+
+.field final synthetic d:Lcn/com/smartdevices/bracelet/weight/a;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/weight/a;Lcn/com/smartdevices/bracelet/model/SyncResult;Ljava/util/List;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/weight/a;Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/SyncResult;Ljava/util/List;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/weight/d;->c:Lcn/com/smartdevices/bracelet/weight/a;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/weight/d;->d:Lcn/com/smartdevices/bracelet/weight/a;
 
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/weight/d;->a:Lcn/com/smartdevices/bracelet/model/SyncResult;
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/weight/d;->a:Landroid/content/Context;
 
-    iput-object p3, p0, Lcn/com/smartdevices/bracelet/weight/d;->b:Ljava/util/List;
+    iput-object p3, p0, Lcn/com/smartdevices/bracelet/weight/d;->b:Lcn/com/smartdevices/bracelet/model/SyncResult;
 
-    invoke-direct {p0}, Lcom/e/a/a/h;-><init>()V
+    iput-object p4, p0, Lcn/com/smartdevices/bracelet/weight/d;->c:Ljava/util/List;
+
+    invoke-direct {p0}, Lcom/d/a/a/h;-><init>()V
 
     return-void
 .end method
@@ -34,7 +38,7 @@
 
     const-string v1, "Sync Deleted UserInfos To Server Failure!!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p3, :cond_0
 
@@ -62,10 +66,10 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/d;->a:Lcn/com/smartdevices/bracelet/model/SyncResult;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/d;->b:Lcn/com/smartdevices/bracelet/model/SyncResult;
 
     const/4 v1, 0x0
 
@@ -81,7 +85,7 @@
 
     const-string v1, "Sync Deleted UserInfos To Server Success!!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz p3, :cond_0
 
@@ -109,13 +113,15 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/j/f;->a(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/j/g;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/d;->a:Landroid/content/Context;
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/k/i;->a(Landroid/content/Context;Ljava/lang/String;)Lcn/com/smartdevices/bracelet/k/i;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/j/g;->a()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/k/i;->c()Z
 
     move-result v0
 
@@ -125,17 +131,17 @@
 
     const-string v1, "Result OK!!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/d;->a:Lcn/com/smartdevices/bracelet/model/SyncResult;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/d;->b:Lcn/com/smartdevices/bracelet/model/SyncResult;
 
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcn/com/smartdevices/bracelet/model/SyncResult;->result:Z
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/d;->c:Lcn/com/smartdevices/bracelet/weight/a;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/d;->d:Lcn/com/smartdevices/bracelet/weight/a;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/d;->b:Ljava/util/List;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/d;->c:Ljava/util/List;
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/weight/a;->c(Ljava/util/List;)V
 

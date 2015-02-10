@@ -2,11 +2,21 @@
 .super Landroid/database/ContentObserver;
 
 
-# direct methods
-.method public constructor <init>(Landroid/os/Handler;)V
-    .locals 0
+# instance fields
+.field private a:Landroid/content/Context;
 
-    invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;Landroid/os/Handler;)V
+    .locals 1
+
+    invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/config/d;->a:Landroid/content/Context;
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/config/d;->a:Landroid/content/Context;
 
     return-void
 .end method
@@ -19,7 +29,7 @@
     :try_start_0
     new-instance v0, Ljava/io/FileInputStream;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->h()Ljava/io/File;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->i()Ljava/io/File;
 
     move-result-object v1
 
@@ -31,7 +41,7 @@
 
     if-nez v0, :cond_1
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/config/b;->p:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/config/b;->r:Z
 
     if-eqz v0, :cond_0
 
@@ -46,39 +56,43 @@
     return-void
 
     :cond_1
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->L()Ljava/lang/String;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/config/d;->a:Landroid/content/Context;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/g/a;->b(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-static {v1}, Lcn/com/smartdevices/bracelet/config/b;->a(Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->K()Ljava/lang/String;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/config/d;->a:Landroid/content/Context;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/g/a;->a(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-static {v1}, Lcn/com/smartdevices/bracelet/config/b;->b(Ljava/lang/String;)Ljava/lang/String;
 
-    iget-object v1, v0, Lcn/com/smartdevices/bracelet/config/b;->j:Lcn/com/smartdevices/bracelet/config/j;
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/config/b;->k:Lcn/com/smartdevices/bracelet/config/h;
 
-    iget-object v1, v1, Lcn/com/smartdevices/bracelet/config/j;->d:Ljava/lang/Boolean;
+    iget-object v1, v1, Lcn/com/smartdevices/bracelet/config/h;->d:Ljava/lang/Boolean;
 
     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v1
 
-    iget-object v2, v0, Lcn/com/smartdevices/bracelet/config/b;->j:Lcn/com/smartdevices/bracelet/config/j;
+    iget-object v2, v0, Lcn/com/smartdevices/bracelet/config/b;->k:Lcn/com/smartdevices/bracelet/config/h;
 
-    iget-object v2, v2, Lcn/com/smartdevices/bracelet/config/j;->e:Ljava/lang/Boolean;
+    iget-object v2, v2, Lcn/com/smartdevices/bracelet/config/h;->e:Ljava/lang/Boolean;
 
     invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(ZZ)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->a(ZZ)V
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/config/b;->a(Lcn/com/smartdevices/bracelet/config/b;)V
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/config/b;->p:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/config/b;->r:Z
 
     if-eqz v0, :cond_0
 
@@ -95,7 +109,7 @@
     :catch_0
     move-exception v0
 
-    sget-boolean v1, Lcn/com/smartdevices/bracelet/config/b;->p:Z
+    sget-boolean v1, Lcn/com/smartdevices/bracelet/config/b;->r:Z
 
     if-eqz v1, :cond_0
 

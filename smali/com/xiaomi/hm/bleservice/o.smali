@@ -25,12 +25,14 @@
 .method public onDeviceConnected(Landroid/bluetooth/BluetoothDevice;)V
     .locals 2
 
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/o;->a:Lcom/xiaomi/hm/bleservice/BLEService;
+    # getter for: Lcom/xiaomi/hm/bleservice/BLEService;->TAG:Ljava/lang/String;
+    invoke-static {}, Lcom/xiaomi/hm/bleservice/BLEService;->access$600()Ljava/lang/String;
 
-    const/4 v1, 0x2
+    move-result-object v0
 
-    # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->notifyWeightStatusChanged(ILandroid/bluetooth/BluetoothDevice;)V
-    invoke-static {v0, v1, p1}, Lcom/xiaomi/hm/bleservice/BLEService;->access$700(Lcom/xiaomi/hm/bleservice/BLEService;ILandroid/bluetooth/BluetoothDevice;)V
+    const-string v1, "onDeviceConnected................"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -38,23 +40,21 @@
 .method public onDeviceConnectionFailed(Landroid/bluetooth/BluetoothDevice;)V
     .locals 2
 
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/o;->a:Lcom/xiaomi/hm/bleservice/BLEService;
-
-    # getter for: Lcom/xiaomi/hm/bleservice/BLEService;->m_Handler:Landroid/os/Handler;
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->access$500(Lcom/xiaomi/hm/bleservice/BLEService;)Landroid/os/Handler;
+    # getter for: Lcom/xiaomi/hm/bleservice/BLEService;->TAG:Ljava/lang/String;
+    invoke-static {}, Lcom/xiaomi/hm/bleservice/BLEService;->access$600()Ljava/lang/String;
 
     move-result-object v0
 
-    const/16 v1, 0x14
+    const-string v1, "onDeviceConnectionFailed................"
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/o;->a:Lcom/xiaomi/hm/bleservice/BLEService;
 
-    const/4 v1, 0x1
+    const/4 v1, 0x4
 
-    # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->notifyWeightStatusChanged(ILandroid/bluetooth/BluetoothDevice;)V
-    invoke-static {v0, v1, p1}, Lcom/xiaomi/hm/bleservice/BLEService;->access$700(Lcom/xiaomi/hm/bleservice/BLEService;ILandroid/bluetooth/BluetoothDevice;)V
+    # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->notifyConnStatusChanged(I)V
+    invoke-static {v0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->access$700(Lcom/xiaomi/hm/bleservice/BLEService;I)V
 
     return-void
 .end method
@@ -62,23 +62,21 @@
 .method public onDeviceDisconnected(Landroid/bluetooth/BluetoothDevice;)V
     .locals 2
 
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/o;->a:Lcom/xiaomi/hm/bleservice/BLEService;
-
-    # getter for: Lcom/xiaomi/hm/bleservice/BLEService;->m_Handler:Landroid/os/Handler;
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->access$500(Lcom/xiaomi/hm/bleservice/BLEService;)Landroid/os/Handler;
+    # getter for: Lcom/xiaomi/hm/bleservice/BLEService;->TAG:Ljava/lang/String;
+    invoke-static {}, Lcom/xiaomi/hm/bleservice/BLEService;->access$600()Ljava/lang/String;
 
     move-result-object v0
 
-    const/16 v1, 0x14
+    const-string v1, "onDeviceDisconnected................"
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/o;->a:Lcom/xiaomi/hm/bleservice/BLEService;
 
-    const/4 v1, 0x0
+    const/4 v1, 0x5
 
-    # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->notifyWeightStatusChanged(ILandroid/bluetooth/BluetoothDevice;)V
-    invoke-static {v0, v1, p1}, Lcom/xiaomi/hm/bleservice/BLEService;->access$700(Lcom/xiaomi/hm/bleservice/BLEService;ILandroid/bluetooth/BluetoothDevice;)V
+    # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->notifyConnStatusChanged(I)V
+    invoke-static {v0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->access$700(Lcom/xiaomi/hm/bleservice/BLEService;I)V
 
     return-void
 .end method

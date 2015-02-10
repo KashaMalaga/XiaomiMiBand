@@ -11,7 +11,7 @@
 
 .field private b:I
 
-.field private c:Lcn/com/smartdevices/bracelet/h/c;
+.field private c:Lcn/com/smartdevices/bracelet/i/c;
 
 
 # direct methods
@@ -28,7 +28,7 @@
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/A;->b:I
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/A;->c:Lcn/com/smartdevices/bracelet/h/c;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/A;->c:Lcn/com/smartdevices/bracelet/i/c;
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/ui/A;->a:Landroid/content/Context;
 
@@ -40,11 +40,11 @@
 
     if-ne v0, v1, :cond_1
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/h/e;
+    new-instance v0, Lcn/com/smartdevices/bracelet/i/f;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/h/e;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/i/f;-><init>()V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/A;->c:Lcn/com/smartdevices/bracelet/h/c;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/A;->c:Lcn/com/smartdevices/bracelet/i/c;
 
     :cond_0
     :goto_0
@@ -57,11 +57,11 @@
 
     if-ne v0, v1, :cond_0
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/h/f;
+    new-instance v0, Lcn/com/smartdevices/bracelet/i/g;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/h/f;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/i/g;-><init>()V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/A;->c:Lcn/com/smartdevices/bracelet/h/c;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/A;->c:Lcn/com/smartdevices/bracelet/i/c;
 
     goto :goto_0
 .end method
@@ -140,7 +140,7 @@
 
     if-ne v0, p2, :cond_0
 
-    const v0, 0x7f07028b
+    const v0, 0x7f0802b9
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -154,7 +154,7 @@
 
     if-ne v0, p2, :cond_1
 
-    const v0, 0x7f07028a
+    const v0, 0x7f0802b8
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -185,7 +185,7 @@
         }
     .end annotation
 
-    const v6, 0x7f090068
+    const v6, 0x7f09006a
 
     const/4 v5, 0x2
 
@@ -225,7 +225,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/A;->a:Landroid/content/Context;
 
-    const v1, 0x7f070311
+    const v1, 0x7f080340
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -244,7 +244,7 @@
     :goto_2
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/A;->a:Landroid/content/Context;
 
-    const v1, 0x7f0702b7
+    const v1, 0x7f0802e5
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -270,11 +270,11 @@
 
     iput-object v0, v3, Lcn/com/smartdevices/bracelet/model/ShareData;->content:Ljava/lang/String;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/A;->c:Lcn/com/smartdevices/bracelet/h/c;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/A;->c:Lcn/com/smartdevices/bracelet/i/c;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/A;->a:Landroid/content/Context;
 
-    invoke-interface {v0, v1, v2}, Lcn/com/smartdevices/bracelet/h/c;->a(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-interface {v0, v1, v2}, Lcn/com/smartdevices/bracelet/i/c;->a(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -300,7 +300,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/A;->a:Landroid/content/Context;
 
-    const v1, 0x7f07029b
+    const v1, 0x7f0802c9
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -321,7 +321,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/A;->a:Landroid/content/Context;
 
-    const v1, 0x7f0702d4
+    const v1, 0x7f080302
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -329,7 +329,7 @@
 
     iput-object v0, v3, Lcn/com/smartdevices/bracelet/model/ShareData;->title:Ljava/lang/String;
 
-    const v0, 0x7f090066
+    const v0, 0x7f090068
 
     invoke-virtual {v4, v0}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -350,7 +350,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/A;->a:Landroid/content/Context;
 
-    const v1, 0x7f0702d5
+    const v1, 0x7f080303
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -358,7 +358,7 @@
 
     iput-object v0, v3, Lcn/com/smartdevices/bracelet/model/ShareData;->title:Ljava/lang/String;
 
-    const v0, 0x7f090067
+    const v0, 0x7f090069
 
     invoke-virtual {v4, v0}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -381,11 +381,11 @@
 .method public a(IJ)Ljava/lang/String;
     .locals 12
 
-    const v11, 0x7f0702c5
+    const v11, 0x7f0802f3
 
-    const v10, 0x7f0702be
+    const v10, 0x7f0802ec
 
-    const v9, 0x7f07029a
+    const v9, 0x7f0802c8
 
     const/4 v8, 0x1
 
@@ -419,7 +419,7 @@
 
     iget-object v4, p0, Lcn/com/smartdevices/bracelet/lab/ui/A;->a:Landroid/content/Context;
 
-    const v5, 0x7f0702d6
+    const v5, 0x7f080304
 
     new-array v6, v8, [Ljava/lang/Object;
 
@@ -499,7 +499,7 @@
 
     move-result-object v0
 
-    invoke-static {v4, v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
@@ -560,7 +560,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/ui/A;->a:Landroid/content/Context;
 
-    const v5, 0x7f0702c6
+    const v5, 0x7f0802f4
 
     new-array v6, v8, [Ljava/lang/Object;
 

@@ -29,7 +29,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/x;->a:Lcn/com/smartdevices/bracelet/gps/ui/w;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/w;->b(Lcn/com/smartdevices/bracelet/gps/ui/w;)Lcn/com/smartdevices/bracelet/view/CustomViewPager;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/w;->d(Lcn/com/smartdevices/bracelet/gps/ui/w;)Lcn/com/smartdevices/bracelet/view/CustomViewPager;
 
     move-result-object v0
 
@@ -52,7 +52,7 @@
     :cond_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/x;->a:Lcn/com/smartdevices/bracelet/gps/ui/w;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/w;->b(Lcn/com/smartdevices/bracelet/gps/ui/w;)Lcn/com/smartdevices/bracelet/view/CustomViewPager;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/w;->d(Lcn/com/smartdevices/bracelet/gps/ui/w;)Lcn/com/smartdevices/bracelet/view/CustomViewPager;
 
     move-result-object v0
 
@@ -63,7 +63,7 @@
     :cond_2
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/x;->a:Lcn/com/smartdevices/bracelet/gps/ui/w;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/w;->b(Lcn/com/smartdevices/bracelet/gps/ui/w;)Lcn/com/smartdevices/bracelet/view/CustomViewPager;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/w;->d(Lcn/com/smartdevices/bracelet/gps/ui/w;)Lcn/com/smartdevices/bracelet/view/CustomViewPager;
 
     move-result-object v0
 

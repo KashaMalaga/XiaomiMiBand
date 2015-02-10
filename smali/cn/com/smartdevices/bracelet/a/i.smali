@@ -1,12 +1,12 @@
 .class public Lcn/com/smartdevices/bracelet/a/i;
-.super Lcn/com/smartdevices/bracelet/a/v;
+.super Lcn/com/smartdevices/bracelet/a/x;
 
 
 # direct methods
 .method public constructor <init>(Lcn/com/smartdevices/bracelet/a/b;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/a/v;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/a/x;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
 
     return-void
 .end method

@@ -445,7 +445,7 @@
 
     invoke-virtual {p2, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/b/a;->c:Ljava/util/concurrent/Executor;
+    sget-object v1, Lcn/com/smartdevices/bracelet/b/a;->e:Ljava/util/concurrent/Executor;
 
     const/4 v2, 0x0
 
@@ -510,7 +510,7 @@
 
     invoke-virtual {p2, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/b/a;->c:Ljava/util/concurrent/Executor;
+    sget-object v1, Lcn/com/smartdevices/bracelet/b/a;->e:Ljava/util/concurrent/Executor;
 
     const/4 v2, 0x1
 

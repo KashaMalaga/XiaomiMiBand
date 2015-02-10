@@ -50,7 +50,7 @@
     :pswitch_2
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/D;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
 
-    const v1, 0x7f070186
+    const v1, 0x7f08019a
 
     invoke-static {v0, v1, v4}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -84,7 +84,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/D;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
 
-    const v3, 0x7f070188
+    const v3, 0x7f08019c
 
     invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->getString(I)Ljava/lang/String;
 
@@ -96,7 +96,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/D;->a:Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;
 
-    const/high16 v3, 0x7f070000
+    const/high16 v3, 0x7f080000
 
     invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivity;->getString(I)Ljava/lang/String;
 

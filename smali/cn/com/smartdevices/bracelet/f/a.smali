@@ -15,10 +15,10 @@
     return-void
 .end method
 
-.method public static a(Lcn/com/smartdevices/bracelet/i/h;)V
+.method public static a(Lcn/com/smartdevices/bracelet/j/h;)V
     .locals 0
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->a(Lcn/com/smartdevices/bracelet/i/h;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/z;->a(Lcn/com/smartdevices/bracelet/j/h;)V
 
     return-void
 .end method
@@ -26,7 +26,7 @@
 .method public static a(Lcn/com/smartdevices/bracelet/model/BraceletBtInfo;)V
     .locals 0
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->a(Lcn/com/smartdevices/bracelet/model/BraceletBtInfo;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/z;->a(Lcn/com/smartdevices/bracelet/model/BraceletBtInfo;)V
 
     return-void
 .end method
@@ -34,7 +34,7 @@
 .method public static a(Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;)V
     .locals 0
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->a(Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/z;->a(Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;)V
 
     return-void
 .end method
@@ -42,7 +42,7 @@
 .method public static a()Z
     .locals 1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->g()Lcn/com/smartdevices/bracelet/model/BraceletBtInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->l()Lcn/com/smartdevices/bracelet/model/BraceletBtInfo;
 
     move-result-object v0
 
@@ -70,13 +70,13 @@
 .method public static b()Z
     .locals 1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->aa()Lcn/com/smartdevices/bracelet/i/h;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->T()Lcn/com/smartdevices/bracelet/j/h;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/i/h;->e()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/j/h;->e()Z
 
     move-result v0
 
@@ -96,7 +96,7 @@
 .method public static c()Z
     .locals 1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->h()Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->aj()Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;
 
     move-result-object v0
 
@@ -159,7 +159,7 @@
 
     invoke-direct {v0}, Lcn/com/smartdevices/bracelet/model/BraceletBtInfo;-><init>()V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Lcn/com/smartdevices/bracelet/model/BraceletBtInfo;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->a(Lcn/com/smartdevices/bracelet/model/BraceletBtInfo;)V
 
     return-void
 .end method
@@ -171,7 +171,7 @@
 
     invoke-direct {v0}, Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;-><init>()V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->a(Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;)V
 
     return-void
 .end method
@@ -179,11 +179,11 @@
 .method public static g()V
     .locals 1
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/i/h;
+    new-instance v0, Lcn/com/smartdevices/bracelet/j/h;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/i/h;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/j/h;-><init>()V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Lcn/com/smartdevices/bracelet/i/h;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->a(Lcn/com/smartdevices/bracelet/j/h;)V
 
     return-void
 .end method
@@ -191,13 +191,13 @@
 .method public static h()I
     .locals 1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->e()Lcn/com/smartdevices/bracelet/config/b;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->f()Lcn/com/smartdevices/bracelet/config/b;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/b;->k:Lcn/com/smartdevices/bracelet/config/r;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/b;->l:Lcn/com/smartdevices/bracelet/config/o;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/r;->a:Ljava/lang/Boolean;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/o;->a:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 

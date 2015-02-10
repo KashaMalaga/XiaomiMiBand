@@ -4,19 +4,19 @@
 
 # instance fields
 .field public final a:Ljava/lang/Boolean;
-    .annotation runtime Lcom/d/a/a/b;
+    .annotation runtime Lcom/c/a/a/b;
         a = "reminder"
     .end annotation
 .end field
 
 .field public final b:Ljava/lang/Boolean;
-    .annotation runtime Lcom/d/a/a/b;
+    .annotation runtime Lcom/c/a/a/b;
         a = "sensorWhiteListEnable"
     .end annotation
 .end field
 
 .field public final c:Ljava/lang/Boolean;
-    .annotation runtime Lcom/d/a/a/b;
+    .annotation runtime Lcom/c/a/a/b;
         a = "connectedBroadcastEnable"
     .end annotation
 .end field

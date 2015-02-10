@@ -11,7 +11,7 @@
         "Ljava/lang/Object;",
         "Landroid/os/Parcelable$Creator",
         "<",
-        "Lcom/xiaomi/hm/bleservice/HwConnStatus;",
+        "Lcom/xiaomi/hm/bleservice/HwBatteryStatus;",
         ">;"
     }
 .end annotation
@@ -28,23 +28,29 @@
 
 
 # virtual methods
-.method public a(Landroid/os/Parcel;)Lcom/xiaomi/hm/bleservice/HwConnStatus;
+.method public a(Landroid/os/Parcel;)Lcom/xiaomi/hm/bleservice/HwBatteryStatus;
     .locals 2
 
-    new-instance v0, Lcom/xiaomi/hm/bleservice/HwConnStatus;
+    new-instance v0, Lcom/xiaomi/hm/bleservice/HwBatteryStatus;
 
-    invoke-direct {v0}, Lcom/xiaomi/hm/bleservice/HwConnStatus;-><init>()V
+    invoke-direct {v0}, Lcom/xiaomi/hm/bleservice/HwBatteryStatus;-><init>()V
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    invoke-static {v0, v1}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->a(Lcom/xiaomi/hm/bleservice/HwConnStatus;I)I
+    iput v1, v0, Lcom/xiaomi/hm/bleservice/HwBatteryStatus;->e:I
+
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    iput v1, v0, Lcom/xiaomi/hm/bleservice/HwBatteryStatus;->f:I
 
     return-object v0
 .end method
 
-.method public a(I)[Lcom/xiaomi/hm/bleservice/HwConnStatus;
+.method public a(I)[Lcom/xiaomi/hm/bleservice/HwBatteryStatus;
     .locals 1
 
     const/4 v0, 0x0
@@ -55,7 +61,7 @@
 .method public synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 1
 
-    invoke-virtual {p0, p1}, Lcom/xiaomi/hm/bleservice/x;->a(Landroid/os/Parcel;)Lcom/xiaomi/hm/bleservice/HwConnStatus;
+    invoke-virtual {p0, p1}, Lcom/xiaomi/hm/bleservice/x;->a(Landroid/os/Parcel;)Lcom/xiaomi/hm/bleservice/HwBatteryStatus;
 
     move-result-object v0
 
@@ -65,7 +71,7 @@
 .method public synthetic newArray(I)[Ljava/lang/Object;
     .locals 1
 
-    invoke-virtual {p0, p1}, Lcom/xiaomi/hm/bleservice/x;->a(I)[Lcom/xiaomi/hm/bleservice/HwConnStatus;
+    invoke-virtual {p0, p1}, Lcom/xiaomi/hm/bleservice/x;->a(I)[Lcom/xiaomi/hm/bleservice/HwBatteryStatus;
 
     move-result-object v0
 

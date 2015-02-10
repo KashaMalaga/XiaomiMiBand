@@ -89,6 +89,7 @@ localization_zh_rTW_table = {
     new_record_info="恭喜, 你創造自己的最高行走紀錄",
     new_record_format="新紀錄, %d步, %d月%d日",
     today_goal_reached="恭喜, 今天已達成目標",
+    today_goal_reached_click_info="檢視今天的運動成績",
     week_continue_reach_goal="連續一周達成目標, 贊！",
 
     -- Continue reach goals string
@@ -186,5 +187,6 @@ localization_zh_rTW_table = {
 
     welcome_use_mi_health="歡迎使用小米運動",
 
-    select_devices="还没有绑定设备哦, 点击绑定吧"
+    select_devices="还没有绑定设备哦, 点击绑定吧",
+    daily_steps_not_comlete = "今天還差%s步就達成目標啦！",
 }

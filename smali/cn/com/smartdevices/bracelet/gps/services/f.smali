@@ -29,7 +29,7 @@
 
     const-string v1, "AMapLocationListener Location onLocationChanged"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/F;->a:Lcn/com/smartdevices/bracelet/gps/services/D;
 

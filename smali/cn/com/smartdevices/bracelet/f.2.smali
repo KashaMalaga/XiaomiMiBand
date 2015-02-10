@@ -77,7 +77,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v6, Landroid/os/Message;
 
@@ -105,7 +105,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/f;->b:Lcn/com/smartdevices/bracelet/d;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/d;->b(Lcn/com/smartdevices/bracelet/d;)Landroid/os/Handler;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/d;->c(Lcn/com/smartdevices/bracelet/d;)Landroid/os/Handler;
 
     move-result-object v0
 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/dialog_empty_area" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:background="#fff4f5f5" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/main_ui_dialog_title_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="@dimen/dialog_title_margin_bottom" android:text="@string/weight_overload_title" />
+            <include layout="@layout/split_line_with_margin" />
+            <TextView android:textSize="@dimen/info_content_size" android:textColor="#ff919394" android:gravity="center" android:id="@id/mili_exit_login_info_tv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:text="@string/weight_overload_content" />
+        </LinearLayout>
+        <RelativeLayout android:paddingTop="4.0dip" android:paddingBottom="6.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/item_height" android:layout_marginTop="22.0dip" android:layout_marginBottom="22.0dip" android:minHeight="@dimen/item_height">
+            <TextView android:textSize="@dimen/click_button_text_size" android:gravity="center" android:id="@id/weight_overload_confirm_tv" android:background="@drawable/click_btn_bg_3" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="23.0dip" android:layout_marginRight="23.0dip" android:text="@string/weight_overload_confirm" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -522,6 +522,7 @@ Tertidur pada %3$s | Bangun pada %4$s"</string>
     <string name="battery">baterai</string>
     <string name="signal_strength">Kekuatan sinyal: </string>
     <string name="confirm_lazy_day">Tandai hari ini sebagai hari malas?</string>
+    <string name="bind_weight_ok">成功绑定小米体重秤</string>
     <string name="share_weibo_label">Weibo</string>
     <string name="share_pengyouquan_label">Moments</string>
     <string name="share_weixin_label">WeChat</string>
@@ -531,7 +532,18 @@ Tertidur pada %3$s | Bangun pada %4$s"</string>
     <string name="share_line_label">Line</string>
     <string name="share_facebook_label">Facebook</string>
     <string name="health_link">HealthLink</string>
-    <string name="title_health_link_service">Health Care Service</string>
+    <string name="not_fount_available_userinfo">未能找到合适成员</string>
+    <string name="choose_userinfo_for_weight">为本次称重选个主人吧</string>
+    <string name="visitor">访客</string>
+    <string name="new_user">新成员</string>
+    <string name="set_goal_weight_tips">根据你提供的身体信息，我们通过BMI指数计算得出你的标准体重区间为%1$s-%2$s%3$s</string>
+    <string name="set_weight_goal">设置体重目标</string>
+    <string name="set_weight_goal_yes">设定目标</string>
+    <string name="set_weight_goal_no">不设置了</string>
+    <string name="weight_tip_bmi_name">什么是BMI</string>
+    <string name="weight_tip_bmi_content">BMI是Body Mass Index的缩写,表示身体质量的指数。国际上广泛使用,因为和身体中所含脂肪量有很大关系,BMI是体重(公斤)除以身高(米)的二次方的值。</string>
+    <string name="weight_tip_fat_name">单看BMI值不能判定虚胖</string>
+    <string name="weight_tip_fat_content">BMI是从身高和体重计算的值,为简单判定肥胖度的标准,即使是标准体重,也存在脂肪多的\"虚胖\"。因此体重变化时确认是肌肉还是脂肪增加是很重要的。</string>
     <string name="lab_factory_title">Aktivitas</string>
     <string name="lab_factory_sport_type_situp">Sit up</string>
     <string name="lab_factory_sport_type_ropeskipping">Lompat tali</string>
@@ -647,6 +659,7 @@ Tertidur pada %3$s | Bangun pada %4$s"</string>
     <string name="sport_new_record_ropeskipping">Rekor baru</string>
     <string name="percent_mark">%</string>
     <string name="share_step_ranking">Anda mengalahkan <b>%s</b> pengguna.</string>
+    <string name="label_runner_group">Runner Club</string>
     <string name="action_mark">Behavior Tagging</string>
     <string name="action_sleep">Sleep</string>
     <string name="action_bath">Bath</string>
@@ -656,6 +669,10 @@ Tertidur pada %3$s | Bangun pada %4$s"</string>
     <string name="action_badminton">Badminton</string>
     <string name="action_basketball">Basketball</string>
     <string name="action_pingpong">Pingpong</string>
+    <string name="action_sit">sit</string>
+    <string name="action_stand">stand</string>
+    <string name="action_bus">bus</string>
+    <string name="title_action_tag_agreement">Behavior Tagging Agreement</string>
     <string name="complete">Complete</string>
     <string name="notice_for_tag_time">Notice: the number after X means that the number of times you marked</string>
     <string name="choose_tag_item">Which item are you going to do?</string>
@@ -665,6 +682,8 @@ Tertidur pada %3$s | Bangun pada %4$s"</string>
     <string name="toast_enable_behavior_tag">Behavior tag feature enable！</string>
     <string name="toast_disable_behavior_tag">Behavior tag feature disable！</string>
     <string name="action_brush_tooth">Brush Tooth</string>
+    <string name="toast_url_parse_error">Url format is error!</string>
+    <string name="tag_reconnect_notice">Bracelet reconnected, please try again!</string>
     <string name="sport_running_helper_test">Uji lari</string>
     <string name="sport_coming_soon">Segera hadir</string>
     <string name="age">Umur</string>
@@ -672,6 +691,5 @@ Tertidur pada %3$s | Bangun pada %4$s"</string>
     <string name="unlock_screen_modify_unlock">"Matikan fitur ini kapan saja di
 Setelan > Keamanan."</string>
     <string name="runner_unlogin_notice">You are not logged in, your sport data will not be sync to the cloud, so it maybe loose by some unknow causes. Do you want to login for better experience about this feature ?</string>
-    <string name="title_action_tag_agreement">Behavior Tagging Agreement</string>
     <string name="action_type_error">Behavior type error</string>
 </resources>

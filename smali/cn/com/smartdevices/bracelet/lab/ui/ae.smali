@@ -1,5 +1,5 @@
 .class public Lcn/com/smartdevices/bracelet/lab/ui/ae;
-.super Lcn/com/smartdevices/bracelet/ui/U;
+.super Lcn/com/smartdevices/bracelet/ui/W;
 
 
 # static fields
@@ -20,12 +20,12 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/U;-><init>()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/W;-><init>()V
 
     return-void
 .end method
 
-.method public static a(Landroid/app/Activity;Ljava/lang/Class;Landroid/os/Bundle;Lcn/com/smartdevices/bracelet/ui/W;)V
+.method public static a(Landroid/app/Activity;Ljava/lang/Class;Landroid/os/Bundle;Lcn/com/smartdevices/bracelet/ui/Y;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -36,7 +36,7 @@
             "Landroid/app/DialogFragment;",
             ">;",
             "Landroid/os/Bundle;",
-            "Lcn/com/smartdevices/bracelet/ui/W;",
+            "Lcn/com/smartdevices/bracelet/ui/Y;",
             ")V"
         }
     .end annotation
@@ -59,7 +59,7 @@
 
     check-cast v0, Lcn/com/smartdevices/bracelet/lab/ui/ae;
 
-    invoke-virtual {v0, p3}, Lcn/com/smartdevices/bracelet/lab/ui/ae;->a(Lcn/com/smartdevices/bracelet/ui/W;)V
+    invoke-virtual {v0, p3}, Lcn/com/smartdevices/bracelet/lab/ui/ae;->a(Lcn/com/smartdevices/bracelet/ui/Y;)V
 
     invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -75,7 +75,7 @@
 .method protected a()I
     .locals 1
 
-    const v0, 0x7f030060
+    const v0, 0x7f030061
 
     return v0
 .end method
@@ -89,11 +89,11 @@
 
     const/4 v4, 0x0
 
-    invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/U;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/W;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object v1
 
-    const v0, 0x7f0801ea
+    const v0, 0x7f0701fa
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -103,7 +103,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/ae;->f:Landroid/widget/TextView;
 
-    const v0, 0x7f0801e9
+    const v0, 0x7f0701f9
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

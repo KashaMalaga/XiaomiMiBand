@@ -115,15 +115,23 @@
     nop
 
     :pswitch_data_0
-    .packed-switch 0x7f080133
+    .packed-switch 0x7f070130
         :pswitch_0
     .end packed-switch
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 0
+    .locals 2
 
     invoke-super {p0, p1}, Landroid/app/Fragment;->onCreate(Landroid/os/Bundle;)V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/tag/h;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    const-string v1, "TagGuideEnter"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -131,7 +139,7 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 2
 
-    const v0, 0x7f030063
+    const v0, 0x7f030064
 
     const/4 v1, 0x0
 
@@ -139,7 +147,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f080133
+    const v1, 0x7f070130
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -171,11 +179,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/A;->a(Landroid/content/Context;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->a(Landroid/content/Context;)V
 
     const-string v0, "PageBehaviorTagGuide"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/A;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->a(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -189,11 +197,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;)V
 
     const-string v0, "PageBehaviorTagGuide"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/A;->c(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->c(Ljava/lang/String;)V
 
     return-void
 .end method

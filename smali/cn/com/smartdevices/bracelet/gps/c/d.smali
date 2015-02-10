@@ -74,7 +74,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-nez v1, :cond_0
 
     check-cast p1, Lcn/com/smartdevices/bracelet/gps/c/d;
 

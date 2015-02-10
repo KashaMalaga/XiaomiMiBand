@@ -146,11 +146,11 @@
 .end method
 
 .method private a(Landroid/graphics/Canvas;Landroid/graphics/Path;Landroid/graphics/Paint;[Landroid/graphics/PointF;)V
-    .locals 6
+    .locals 8
 
     const/4 v0, 0x0
 
-    const/high16 v5, 0x40000000
+    const/high16 v7, 0x40000000
 
     aget-object v1, p4, v0
 
@@ -175,25 +175,25 @@
 
     iget v3, v1, Landroid/graphics/PointF;->x:F
 
-    iget v4, v2, Landroid/graphics/PointF;->x:F
-
-    add-float/2addr v3, v4
-
-    div-float/2addr v3, v5
-
     iget v4, v1, Landroid/graphics/PointF;->y:F
 
-    iget v2, v2, Landroid/graphics/PointF;->y:F
+    iget v5, v1, Landroid/graphics/PointF;->x:F
 
-    add-float/2addr v2, v4
+    iget v6, v2, Landroid/graphics/PointF;->x:F
 
-    div-float/2addr v2, v5
+    add-float/2addr v5, v6
 
-    iget v4, v1, Landroid/graphics/PointF;->x:F
+    div-float/2addr v5, v7
 
     iget v1, v1, Landroid/graphics/PointF;->y:F
 
-    invoke-virtual {p2, v4, v1, v3, v2}, Landroid/graphics/Path;->quadTo(FFFF)V
+    iget v2, v2, Landroid/graphics/PointF;->y:F
+
+    add-float/2addr v1, v2
+
+    div-float/2addr v1, v7
+
+    invoke-virtual {p2, v3, v4, v5, v1}, Landroid/graphics/Path;->quadTo(FFFF)V
 
     add-int/lit8 v0, v0, 0x1
 
@@ -1202,15 +1202,19 @@
 
     if-le v4, v2, :cond_0
 
-    iget v2, v0, Lcn/com/smartdevices/bracelet/chart/base/c;->b:I
+    iget v4, v0, Lcn/com/smartdevices/bracelet/chart/base/c;->b:I
 
-    add-int/lit8 v2, v2, -0x1
+    sub-int/2addr v4, v2
 
-    div-int/lit8 v2, v2, 0x32
+    div-int/lit8 v4, v4, 0x32
 
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v4, v4, 0x1
 
-    mul-int/lit8 v2, v2, 0x32
+    mul-int/lit8 v4, v4, 0x32
+
+    add-int/2addr v2, v4
+
+    sub-int/2addr v1, v4
 
     :cond_0
     iget v4, v0, Lcn/com/smartdevices/bracelet/chart/base/c;->b:I
@@ -1219,9 +1223,17 @@
 
     iget v0, v0, Lcn/com/smartdevices/bracelet/chart/base/c;->b:I
 
+    sub-int v0, v1, v0
+
     div-int/lit8 v0, v0, 0x32
 
-    mul-int/lit8 v1, v0, 0x32
+    add-int/lit8 v0, v0, 0x1
+
+    mul-int/lit8 v0, v0, 0x32
+
+    add-int/2addr v2, v0
+
+    sub-int/2addr v1, v0
 
     move v0, v1
 
@@ -1247,7 +1259,7 @@
 
     invoke-static {v0, v7}, Lcn/com/smartdevices/bracelet/chart/z;->a(Lcn/com/smartdevices/bracelet/chart/z;[F)[F
 
-    invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/chart/G;->g(I)V
+    invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/chart/G;->h(I)V
 
     invoke-virtual {p0, v6}, Lcn/com/smartdevices/bracelet/chart/G;->a(Z)V
 
@@ -1264,7 +1276,7 @@
 
     invoke-static {v0, v7}, Lcn/com/smartdevices/bracelet/chart/z;->a(Lcn/com/smartdevices/bracelet/chart/z;[F)[F
 
-    invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/chart/G;->h(I)V
+    invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/chart/G;->i(I)V
 
     invoke-virtual {p0, v6}, Lcn/com/smartdevices/bracelet/chart/G;->a(Z)V
 

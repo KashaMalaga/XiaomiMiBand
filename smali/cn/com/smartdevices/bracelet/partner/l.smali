@@ -19,6 +19,135 @@
 
 
 # virtual methods
+.method public a(Landroid/webkit/ValueCallback;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/webkit/ValueCallback",
+            "<",
+            "Landroid/net/Uri;",
+            ">;)V"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/l;->a:Lcn/com/smartdevices/bracelet/partner/WebActivity;
+
+    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->a(Lcn/com/smartdevices/bracelet/partner/WebActivity;Landroid/webkit/ValueCallback;)Landroid/webkit/ValueCallback;
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v1, "android.intent.action.GET_CONTENT"
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string v1, "android.intent.category.OPENABLE"
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
+
+    const-string v1, "image/*"
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/partner/l;->a:Lcn/com/smartdevices/bracelet/partner/WebActivity;
+
+    const-string v2, "File Chooser"
+
+    invoke-static {v0, v2}, Landroid/content/Intent;->createChooser(Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;
+
+    move-result-object v0
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v0, v2}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->startActivityForResult(Landroid/content/Intent;I)V
+
+    return-void
+.end method
+
+.method public a(Landroid/webkit/ValueCallback;Ljava/lang/String;)V
+    .locals 3
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/l;->a:Lcn/com/smartdevices/bracelet/partner/WebActivity;
+
+    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->a(Lcn/com/smartdevices/bracelet/partner/WebActivity;Landroid/webkit/ValueCallback;)Landroid/webkit/ValueCallback;
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v1, "android.intent.action.GET_CONTENT"
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string v1, "android.intent.category.OPENABLE"
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
+
+    const-string v1, "*/*"
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/partner/l;->a:Lcn/com/smartdevices/bracelet/partner/WebActivity;
+
+    const-string v2, "File Browser"
+
+    invoke-static {v0, v2}, Landroid/content/Intent;->createChooser(Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;
+
+    move-result-object v0
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v0, v2}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->startActivityForResult(Landroid/content/Intent;I)V
+
+    return-void
+.end method
+
+.method public a(Landroid/webkit/ValueCallback;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/webkit/ValueCallback",
+            "<",
+            "Landroid/net/Uri;",
+            ">;",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ")V"
+        }
+    .end annotation
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/l;->a:Lcn/com/smartdevices/bracelet/partner/WebActivity;
+
+    invoke-static {v0, p1}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->a(Lcn/com/smartdevices/bracelet/partner/WebActivity;Landroid/webkit/ValueCallback;)Landroid/webkit/ValueCallback;
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v1, "android.intent.action.GET_CONTENT"
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string v1, "android.intent.category.OPENABLE"
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
+
+    const-string v1, "image/*"
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/partner/l;->a:Lcn/com/smartdevices/bracelet/partner/WebActivity;
+
+    const-string v2, "File Chooser"
+
+    invoke-static {v0, v2}, Landroid/content/Intent;->createChooser(Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;
+
+    move-result-object v0
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v0, v2}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->startActivityForResult(Landroid/content/Intent;I)V
+
+    return-void
+.end method
+
 .method public onJsAlert(Landroid/webkit/WebView;Ljava/lang/String;Ljava/lang/String;Landroid/webkit/JsResult;)Z
     .locals 3
 

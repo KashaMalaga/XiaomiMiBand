@@ -79,6 +79,8 @@
 
 .field public uid:J
 
+.field public unit:I
+
 .field private version:I
 
 .field public weight:F
@@ -115,6 +117,8 @@
     iput v1, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->weight:F
 
     iput v1, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->targetWeight:F
+
+    iput v3, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->unit:I
 
     const-string v0, ""
 
@@ -206,7 +210,7 @@
     const/4 v1, 0x0
 
     :try_start_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/B;->c()Lcom/d/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/E;->c()Lcom/c/a/k;
 
     move-result-object v0
 
@@ -218,7 +222,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, p0, v2}, Lcom/d/a/k;->a(Ljava/lang/String;Ljava/lang/reflect/Type;)Ljava/lang/Object;
+    invoke-virtual {v0, p0, v2}, Lcom/c/a/k;->a(Ljava/lang/String;Ljava/lang/reflect/Type;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -288,7 +292,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -340,7 +344,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -386,7 +390,7 @@
 
     if-ge v0, v5, :cond_2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->C()Ljava/util/ArrayList;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->F()Ljava/util/ArrayList;
 
     move-result-object v3
 
@@ -439,7 +443,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/z;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 
     const-string v0, "PersonInfo"
 
@@ -467,7 +471,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_2
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->alarmClockItems:Ljava/util/ArrayList;
@@ -530,6 +534,14 @@
     return-object v0
 .end method
 
+.method public getMiliConfig()Lcn/com/smartdevices/bracelet/model/MiliConfig;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
+
+    return-object v0
+.end method
+
 .method public getMiliDisconnectedReminder()I
     .locals 1
 
@@ -568,10 +580,60 @@
     return v0
 .end method
 
+.method public getNickname()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->nickname:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getPersonInfoUnit()I
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
+
+    iget v0, v0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->unit:I
+
+    return v0
+.end method
+
+.method public getTargetWeight()F
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->targetWeight:F
+
+    return v0
+.end method
+
+.method public getTotalSportData()Lcn/com/smartdevices/bracelet/model/UserTotalSportData;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->totalSportData:Lcn/com/smartdevices/bracelet/model/UserTotalSportData;
+
+    return-object v0
+.end method
+
+.method public getUnit()I
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->unit:I
+
+    return v0
+.end method
+
 .method public getVersion()I
     .locals 1
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->version:I
+
+    return v0
+.end method
+
+.method public getWeight()F
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->weight:F
 
     return v0
 .end method
@@ -620,7 +682,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 
@@ -705,7 +767,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -777,7 +839,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -842,6 +904,94 @@
     return-void
 .end method
 
+.method public setPersonInfoUnit(I)V
+    .locals 3
+
+    const-string v0, "SCORPIONEAL"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "----------unitType: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " ; miliConfig.unit"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
+
+    iget v2, v2, Lcn/com/smartdevices/bracelet/model/MiliConfig;->unit:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
+
+    iput p1, v0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->unit:I
+
+    const-string v0, "SCORPIONEAL"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "----------miliConfig.unit: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
+
+    iget v2, v2, Lcn/com/smartdevices/bracelet/model/MiliConfig;->unit:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public setTargetWeight(F)V
+    .locals 0
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->targetWeight:F
+
+    return-void
+.end method
+
+.method public setUnit(I)V
+    .locals 0
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->unit:I
+
+    return-void
+.end method
+
 .method public setVersion(I)V
     .locals 0
 
@@ -850,14 +1000,22 @@
     return-void
 .end method
 
+.method public setWeight(F)V
+    .locals 0
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->weight:F
+
+    return-void
+.end method
+
 .method public toString()Ljava/lang/String;
     .locals 1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/B;->c()Lcom/d/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/E;->c()Lcom/c/a/k;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/d/a/k;->b(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, p0}, Lcom/c/a/k;->b(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 

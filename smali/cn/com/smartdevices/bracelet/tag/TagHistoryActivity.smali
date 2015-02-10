@@ -41,7 +41,7 @@
 
     move-result v0
 
-    const v1, 0x7f080051
+    const v1, 0x7f070035
 
     if-ne v0, v1, :cond_0
 
@@ -60,7 +60,7 @@
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/tag/TagHistoryActivity;->setContentView(I)V
 
-    const v0, 0x7f080051
+    const v0, 0x7f070035
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/tag/TagHistoryActivity;->findViewById(I)Landroid/view/View;
 
@@ -68,7 +68,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0800fd
+    const v0, 0x7f070102
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/tag/TagHistoryActivity;->findViewById(I)Landroid/view/View;
 
@@ -108,6 +108,10 @@
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/tag/i;->notifyDataSetChanged()V
 
+    const-string v0, "TagHistoryEnter"
+
+    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
+
     return-void
 .end method
 
@@ -116,11 +120,11 @@
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onPause()V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/A;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->a(Landroid/content/Context;)V
 
     const-string v0, "PageBehaviorTagHistory"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/A;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->a(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -130,11 +134,11 @@
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onResume()V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;)V
 
     const-string v0, "PageBehaviorTagHistory"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/A;->c(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->c(Ljava/lang/String;)V
 
     return-void
 .end method

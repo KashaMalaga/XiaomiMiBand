@@ -1,53 +1,60 @@
 .class Lcn/com/smartdevices/bracelet/ui/cJ;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.super Landroid/content/BroadcastReceiver;
 
 
 # instance fields
-.field final synthetic a:Landroid/widget/Switch;
-
-.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/cF;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/cF;Landroid/widget/Switch;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cJ;->b:Lcn/com/smartdevices/bracelet/ui/cF;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cJ;->a:Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;
 
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/cJ;->a:Landroid/widget/Switch;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 2
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 5
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cJ;->a:Landroid/widget/Switch;
+    const-string v0, "intent"
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cJ;->a:Landroid/widget/Switch;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Landroid/widget/Switch;->isChecked()Z
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result v0
+    const-string v2, ""
 
-    if-nez v0, :cond_0
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v0, 0x1
+    move-result-object v1
 
-    :goto_0
-    invoke-virtual {v1, v0}, Landroid/widget/Switch;->setChecked(Z)V
+    const-string v2, "extra_download_id"
+
+    const-wide/16 v3, 0x0
+
+    invoke-virtual {p2, v2, v3, v4}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
+
+    move-result-wide v2
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cJ;->a:Lcn/com/smartdevices/bracelet/ui/SettingAboutActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/E;->b(Landroid/app/Activity;)V
 
     return-void
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method

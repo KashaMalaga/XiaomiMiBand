@@ -1,38 +1,40 @@
-.class Lcn/com/smartdevices/bracelet/a/u;
-.super Ljava/util/TimerTask;
-
-
-# instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/a/t;
+.class public Lcn/com/smartdevices/bracelet/a/u;
+.super Lcn/com/smartdevices/bracelet/a/x;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/a/t;)V
+.method public constructor <init>(Lcn/com/smartdevices/bracelet/a/b;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/a/u;->a:Lcn/com/smartdevices/bracelet/a/t;
-
-    invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/a/x;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method public a(Lcn/com/smartdevices/bracelet/a/b;)V
+    .locals 1
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/a/v;->l:Ljava/lang/String;
+    if-eqz p1, :cond_0
 
-    const-string v1, "run stopGetActivities!!!"
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/a/b;->a()V
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/u;->m:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/u;->a:Lcn/com/smartdevices/bracelet/a/t;
+    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->_sync()Z
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/a/t;->m:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+    move-result v0
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->stopGetActivities()V
+    if-eqz p1, :cond_1
 
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lcn/com/smartdevices/bracelet/a/b;->a(Ljava/lang/Object;)V
+
+    :cond_1
     return-void
 .end method

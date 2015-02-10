@@ -1,66 +1,44 @@
-.class synthetic Lcom/g/a/c/c;
-.super Ljava/lang/Object;
-
-
-# static fields
-.field static final synthetic a:[I
+.class enum Lcom/g/a/c/c;
+.super Lcom/g/a/c/b;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Ljava/lang/String;II)V
+    .locals 1
 
-    invoke-static {}, Lcom/g/a/b/a/i;->values()[Lcom/g/a/b/a/i;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    invoke-direct {p0, p1, p2, p3, v0}, Lcom/g/a/c/b;-><init>(Ljava/lang/String;IILcom/g/a/c/b;)V
 
-    array-length v0, v0
+    return-void
+.end method
 
-    new-array v0, v0, [I
 
-    sput-object v0, Lcom/g/a/c/c;->a:[I
+# virtual methods
+.method public toString()Ljava/lang/String;
+    .locals 5
 
-    :try_start_0
-    sget-object v0, Lcom/g/a/c/c;->a:[I
+    sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    sget-object v1, Lcom/g/a/b/a/i;->a:Lcom/g/a/b/a/i;
-
-    invoke-virtual {v1}, Lcom/g/a/b/a/i;->ordinal()I
-
-    move-result v1
+    const-string v1, "Male:%d"
 
     const/4 v2, 0x1
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_1
+    new-array v2, v2, [Ljava/lang/Object;
 
-    :goto_0
-    :try_start_1
-    sget-object v0, Lcom/g/a/c/c;->a:[I
+    const/4 v3, 0x0
 
-    sget-object v1, Lcom/g/a/b/a/i;->b:Lcom/g/a/b/a/i;
+    iget v4, p0, Lcom/g/a/c/c;->c:I
 
-    invoke-virtual {v1}, Lcom/g/a/b/a/i;->ordinal()I
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result v1
+    move-result-object v4
 
-    const/4 v2, 0x2
+    aput-object v4, v2, v3
 
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_0
+    invoke-static {v0, v1, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    :goto_1
-    return-void
+    move-result-object v0
 
-    :catch_0
-    move-exception v0
-
-    goto :goto_1
-
-    :catch_1
-    move-exception v0
-
-    goto :goto_0
+    return-object v0
 .end method

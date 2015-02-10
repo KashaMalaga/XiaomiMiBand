@@ -55,7 +55,11 @@
 
 .field public static final slide_out_to_top:I = 0x7f040019
 
-.field public static final watermark_activity_scroll_to_top:I = 0x7f04001a
+.field public static final tips_in:I = 0x7f04001a
+
+.field public static final tips_out:I = 0x7f04001b
+
+.field public static final watermark_activity_scroll_to_top:I = 0x7f04001c
 
 
 # direct methods

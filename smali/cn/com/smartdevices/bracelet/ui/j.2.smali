@@ -1,5 +1,5 @@
 .class public Lcn/com/smartdevices/bracelet/ui/j;
-.super Lcn/com/smartdevices/bracelet/ui/U;
+.super Lcn/com/smartdevices/bracelet/ui/W;
 
 
 # static fields
@@ -22,7 +22,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/U;-><init>()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/W;-><init>()V
 
     return-void
 .end method
@@ -46,7 +46,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0700fc
+    const v1, 0x7f08010e
 
     invoke-static {v0, v1, v3}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -96,7 +96,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const/high16 v2, 0x7f070000
+    const/high16 v2, 0x7f080000
 
     invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/ui/j;->getString(I)Ljava/lang/String;
 
@@ -141,7 +141,7 @@
 
     move-result-wide v3
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->e(J)V
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/z;->b(J)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -219,7 +219,7 @@
 
     move-result-wide v0
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->e(J)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/z;->b(J)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
@@ -262,7 +262,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 .end method
@@ -270,13 +270,13 @@
 .method protected d()V
     .locals 2
 
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/U;->d()V
+    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/W;->d()V
 
     const-string v0, "ApkUpgradeFragment"
 
     const-string v1, "onEmptyAreaClicked()"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -292,13 +292,13 @@
 .method public onCancel(Landroid/content/DialogInterface;)V
     .locals 2
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/U;->onCancel(Landroid/content/DialogInterface;)V
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/W;->onCancel(Landroid/content/DialogInterface;)V
 
     const-string v0, "ApkUpgradeFragment"
 
     const-string v1, "onCancel();"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -306,7 +306,7 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 0
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/U;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/W;->onCreate(Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -314,7 +314,7 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 3
 
-    invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/U;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/W;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object v1
 
@@ -346,7 +346,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/j;->h:Ljava/lang/String;
 
-    const v0, 0x7f080180
+    const v0, 0x7f070189
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

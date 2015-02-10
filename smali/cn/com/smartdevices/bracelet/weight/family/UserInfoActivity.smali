@@ -9,7 +9,7 @@
 # instance fields
 .field private b:I
 
-.field private c:Lcn/com/smartdevices/bracelet/weight/family/d;
+.field private c:Lcn/com/smartdevices/bracelet/weight/family/e;
 
 
 # direct methods
@@ -50,7 +50,7 @@
 
     move-result-object v0
 
-    const-class v1, Lcn/com/smartdevices/bracelet/weight/family/d;
+    const-class v1, Lcn/com/smartdevices/bracelet/weight/family/e;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -60,11 +60,11 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/weight/family/d;
+    check-cast v0, Lcn/com/smartdevices/bracelet/weight/family/e;
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/weight/family/d;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-virtual {v0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/weight/family/e;->onActivityResult(IILandroid/content/Intent;)V
 
     :cond_0
     return-void
@@ -87,7 +87,7 @@
 
     const-string v1, "USER_INFO_UID"
 
-    const/4 v2, 0x0
+    const/4 v2, -0x1
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
@@ -117,7 +117,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/weight/a;->a()Lcn/com/smartdevices/bracelet/weight/a;
 
@@ -153,18 +153,18 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     iget v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoActivity;->b:I
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/weight/family/d;->a(I)Landroid/app/Fragment;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/weight/family/e;->b(I)Landroid/app/Fragment;
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/weight/family/d;
+    check-cast v0, Lcn/com/smartdevices/bracelet/weight/family/e;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoActivity;->c:Lcn/com/smartdevices/bracelet/weight/family/d;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoActivity;->c:Lcn/com/smartdevices/bracelet/weight/family/e;
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/weight/family/UserInfoActivity;->getFragmentManager()Landroid/app/FragmentManager;
 
@@ -176,9 +176,9 @@
 
     const v1, 0x1020002
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoActivity;->c:Lcn/com/smartdevices/bracelet/weight/family/d;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/weight/family/UserInfoActivity;->c:Lcn/com/smartdevices/bracelet/weight/family/e;
 
-    const-class v3, Lcn/com/smartdevices/bracelet/weight/family/d;
+    const-class v3, Lcn/com/smartdevices/bracelet/weight/family/e;
 
     invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

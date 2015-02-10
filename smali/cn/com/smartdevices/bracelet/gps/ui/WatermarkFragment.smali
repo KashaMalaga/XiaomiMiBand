@@ -33,7 +33,7 @@
 
 .field private final I:Landroid/view/View$OnTouchListener;
 
-.field private final b:Lcn/com/smartdevices/bracelet/gps/ui/aD;
+.field private final b:Lcn/com/smartdevices/bracelet/gps/ui/aF;
 
 .field private c:Landroid/content/Context;
 
@@ -85,7 +85,7 @@
 
 
 # direct methods
-.method public constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/aD;)V
+.method public constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/aF;)V
     .locals 1
 
     invoke-direct {p0}, Landroid/app/Fragment;-><init>()V
@@ -102,13 +102,13 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;->D:Ljava/lang/String;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/aL;
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/aN;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/aL;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/aN;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;->I:Landroid/view/View$OnTouchListener;
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;->b:Lcn/com/smartdevices/bracelet/gps/ui/aD;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;->b:Lcn/com/smartdevices/bracelet/gps/ui/aF;
 
     return-void
 .end method
@@ -137,12 +137,12 @@
     return-object v0
 .end method
 
-.method public static a(Lcn/com/smartdevices/bracelet/gps/ui/aD;)Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;
+.method public static a(Lcn/com/smartdevices/bracelet/gps/ui/aF;)Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;
     .locals 1
 
     new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/aD;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/aF;)V
 
     return-object v0
 .end method
@@ -332,7 +332,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;->B:Landroid/content/res/Resources;
 
-    const v1, 0x7f0a0090
+    const v1, 0x7f0a0084
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -342,7 +342,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;->B:Landroid/content/res/Resources;
 
-    const v1, 0x7f0a0091
+    const v1, 0x7f0a0085
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -352,7 +352,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;->B:Landroid/content/res/Resources;
 
-    const v1, 0x7f0a0092
+    const v1, 0x7f0a0086
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -424,13 +424,13 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;->H:Landroid/widget/TextView;
 
-    const v1, 0x7f020063
+    const v1, 0x7f02006b
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;->H:Landroid/widget/TextView;
 
-    const v1, 0x7f070339
+    const v1, 0x7f080368
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -464,7 +464,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;->k:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f020149
+    const v1, 0x7f02015c
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setBackgroundResource(I)V
 
@@ -624,9 +624,9 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;->c:Landroid/content/Context;
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/gps/ui/aK;
+    new-instance v2, Lcn/com/smartdevices/bracelet/gps/ui/aM;
 
-    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/gps/ui/aK;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;)V
+    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/gps/ui/aM;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;)V
 
     invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/gps/services/v;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/gps/services/L;)V
 
@@ -726,9 +726,9 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;->b:Lcn/com/smartdevices/bracelet/gps/ui/aD;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;->b:Lcn/com/smartdevices/bracelet/gps/ui/aF;
 
-    iget v0, v0, Lcn/com/smartdevices/bracelet/gps/ui/aD;->o:I
+    iget v0, v0, Lcn/com/smartdevices/bracelet/gps/ui/aF;->o:I
 
     packed-switch v0, :pswitch_data_0
 
@@ -738,7 +738,7 @@
     return-object v0
 
     :pswitch_0
-    const v0, 0x7f03008f
+    const v0, 0x7f030092
 
     const/4 v1, 0x0
 
@@ -768,7 +768,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;->B:Landroid/content/res/Resources;
 
-    const v1, 0x7f0a0095
+    const v1, 0x7f0a0089
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -778,7 +778,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;->B:Landroid/content/res/Resources;
 
-    const v1, 0x7f0a0098
+    const v1, 0x7f0a008c
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -788,7 +788,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;->l:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f08028e
+    const v1, 0x7f0702a3
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -800,7 +800,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;->l:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f08028f
+    const v1, 0x7f0702a4
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -812,7 +812,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;->l:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f080292
+    const v1, 0x7f0702a7
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -824,7 +824,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;->l:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f080293
+    const v1, 0x7f0702a8
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -836,7 +836,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;->l:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f080296
+    const v1, 0x7f0702ab
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -848,7 +848,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;->l:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f080297
+    const v1, 0x7f0702ac
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -860,7 +860,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;->l:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f080294
+    const v1, 0x7f0702a9
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -870,7 +870,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;->l:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f080298
+    const v1, 0x7f0702ad
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -880,9 +880,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;->d:Landroid/widget/ImageView;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;->b:Lcn/com/smartdevices/bracelet/gps/ui/aD;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;->b:Lcn/com/smartdevices/bracelet/gps/ui/aF;
 
-    iget-object v1, v1, Lcn/com/smartdevices/bracelet/gps/ui/aD;->m:Ljava/lang/String;
+    iget-object v1, v1, Lcn/com/smartdevices/bracelet/gps/ui/aF;->m:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -892,9 +892,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;->e:Landroid/widget/TextView;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;->b:Lcn/com/smartdevices/bracelet/gps/ui/aD;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;->b:Lcn/com/smartdevices/bracelet/gps/ui/aF;
 
-    iget-object v1, v1, Lcn/com/smartdevices/bracelet/gps/ui/aD;->v:Ljava/lang/String;
+    iget-object v1, v1, Lcn/com/smartdevices/bracelet/gps/ui/aF;->v:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -904,9 +904,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/gps/ui/aJ;
+    new-instance v1, Lcn/com/smartdevices/bracelet/gps/ui/aL;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/gps/ui/aJ;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/gps/ui/aL;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkFragment;)V
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 

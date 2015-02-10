@@ -57,17 +57,17 @@
 
 .field public static final counter_text_bg:I = 0x7f090002
 
-.field public static final default_circle_indicator_fill_color:I = 0x7f09007c
+.field public static final default_circle_indicator_fill_color:I = 0x7f09007f
 
-.field public static final default_circle_indicator_page_color:I = 0x7f09007d
+.field public static final default_circle_indicator_page_color:I = 0x7f090080
 
-.field public static final default_circle_indicator_stroke_color:I = 0x7f09007e
+.field public static final default_circle_indicator_stroke_color:I = 0x7f090081
 
-.field public static final default_title_indicator_footer_color:I = 0x7f090079
+.field public static final default_title_indicator_footer_color:I = 0x7f09007c
 
-.field public static final default_title_indicator_selected_color:I = 0x7f09007a
+.field public static final default_title_indicator_selected_color:I = 0x7f09007d
 
-.field public static final default_title_indicator_text_color:I = 0x7f09007b
+.field public static final default_title_indicator_text_color:I = 0x7f09007e
 
 .field public static final disable_text_color_dark:I = 0x7f090043
 
@@ -75,7 +75,7 @@
 
 .field public static final fat_color:I = 0x7f090057
 
-.field public static final focus_color:I = 0x7f090080
+.field public static final focus_color:I = 0x7f090083
 
 .field public static final game_color:I = 0x7f09004e
 
@@ -113,37 +113,37 @@
 
 .field public static final item_stroke_disable:I = 0x7f09001c
 
-.field public static final lab_circle_dynamic_color:I = 0x7f09006b
+.field public static final lab_circle_dynamic_color:I = 0x7f09006d
 
-.field public static final lab_favorite_btn_selected_state:I = 0x7f090065
+.field public static final lab_favorite_btn_selected_state:I = 0x7f090067
 
-.field public static final lab_favorite_btn_unselected_state:I = 0x7f090064
+.field public static final lab_favorite_btn_unselected_state:I = 0x7f090066
 
-.field public static final lab_group_item_current_round:I = 0x7f09006c
+.field public static final lab_group_item_current_round:I = 0x7f09006e
 
-.field public static final lab_item_group_bg:I = 0x7f090069
+.field public static final lab_item_group_bg:I = 0x7f09006b
 
-.field public static final lab_item_group_name:I = 0x7f09006a
+.field public static final lab_item_group_name:I = 0x7f09006c
 
-.field public static final lab_list_divider:I = 0x7f09006d
+.field public static final lab_list_divider:I = 0x7f09006f
 
-.field public static final lab_operation_btn_text_normal_bg:I = 0x7f090062
+.field public static final lab_operation_btn_text_normal_bg:I = 0x7f090064
 
-.field public static final lab_operation_btn_text_pressed_bg:I = 0x7f090061
+.field public static final lab_operation_btn_text_pressed_bg:I = 0x7f090063
 
-.field public static final lab_operation_unenable_text_state:I = 0x7f090063
+.field public static final lab_operation_unenable_text_state:I = 0x7f090065
 
-.field public static final lab_record_broken_bg:I = 0x7f090068
+.field public static final lab_record_broken_bg:I = 0x7f09006a
 
-.field public static final lab_ropeskipping_bg:I = 0x7f090066
+.field public static final lab_ropeskipping_bg:I = 0x7f090068
 
-.field public static final lab_situp_bg:I = 0x7f090067
+.field public static final lab_situp_bg:I = 0x7f090069
 
 .field public static final light_color:I = 0x7f090054
 
 .field public static final line_color_gray:I = 0x7f090053
 
-.field public static final list_divider:I = 0x7f09007f
+.field public static final list_divider:I = 0x7f090082
 
 .field public static final list_header:I = 0x7f090001
 
@@ -195,23 +195,25 @@
 
 .field public static final primary_text_inverse:I = 0x7f090020
 
-.field public static final running_history_list_category_bg:I = 0x7f090070
+.field public static final running_history_list_category_bg:I = 0x7f090072
 
-.field public static final running_history_refresh_item_bg:I = 0x7f090077
+.field public static final running_history_refresh_item_bg:I = 0x7f09007a
 
-.field public static final running_history_refresh_item_text:I = 0x7f090078
+.field public static final running_history_refresh_item_text:I = 0x7f09007b
 
-.field public static final running_main_text:I = 0x7f090071
+.field public static final running_light_text:I = 0x7f090076
 
-.field public static final running_minor_text:I = 0x7f090073
+.field public static final running_main_text:I = 0x7f090073
 
-.field public static final running_progress_bg:I = 0x7f090074
+.field public static final running_minor_text:I = 0x7f090075
 
-.field public static final running_start_normal:I = 0x7f09006e
+.field public static final running_progress_bg:I = 0x7f090077
 
-.field public static final running_sub_text:I = 0x7f090072
+.field public static final running_start_normal:I = 0x7f090070
 
-.field public static final separator:I = 0x7f09006f
+.field public static final running_sub_text:I = 0x7f090074
+
+.field public static final separator:I = 0x7f090071
 
 .field public static final service_divider:I = 0x7f09005a
 
@@ -219,17 +221,21 @@
 
 .field public static final share_divide_succ:I = 0x7f09002f
 
+.field public static final share_panel_bg:I = 0x7f090062
+
 .field public static final share_unit_color:I = 0x7f090030
 
 .field public static final sleep_goal_color:I = 0x7f090028
 
 .field public static final split_color:I = 0x7f09002c
 
-.field public static final sport_done_text:I = 0x7f090075
+.field public static final split_color_trans:I = 0x7f090061
+
+.field public static final sport_done_text:I = 0x7f090078
 
 .field public static final sport_goal_color:I = 0x7f090029
 
-.field public static final sport_vote_text:I = 0x7f090076
+.field public static final sport_vote_text:I = 0x7f090079
 
 .field public static final statistic_data_item_title:I = 0x7f090031
 
@@ -237,7 +243,7 @@
 
 .field public static final statistic_data_item_value_step:I = 0x7f090032
 
-.field public static final tab_host_title:I = 0x7f090081
+.field public static final tab_host_title:I = 0x7f090084
 
 .field public static final text_color_black:I = 0x7f090052
 
@@ -247,7 +253,7 @@
 
 .field public static final trans:I = 0x7f090023
 
-.field public static final txt_with_drawable:I = 0x7f090082
+.field public static final txt_with_drawable:I = 0x7f090085
 
 .field public static final weight_report_white_30:I = 0x7f090060
 

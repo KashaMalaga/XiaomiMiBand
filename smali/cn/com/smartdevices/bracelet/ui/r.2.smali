@@ -28,7 +28,7 @@
 
     const-string v1, "BaseSCActivity"
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "android.net.conn.CONNECTIVITY_CHANGE"
 
@@ -120,7 +120,7 @@
 
     const-string v3, "Successed"
 
-    invoke-static {v1, v2, v3}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_1
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/r;->a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
@@ -147,7 +147,7 @@
 
     const-string v3, "Failed"
 
-    invoke-static {v1, v2, v3}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2, v3}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -284,9 +284,9 @@
 
     move-result-object v1
 
-    new-instance v2, Lcom/xiaomi/hm/bleservice/z;
+    new-instance v2, Lcom/xiaomi/hm/bleservice/A;
 
-    invoke-direct {v2, v0}, Lcom/xiaomi/hm/bleservice/z;-><init>(I)V
+    invoke-direct {v2, v0}, Lcom/xiaomi/hm/bleservice/A;-><init>(I)V
 
     invoke-virtual {v1, v2}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
 

@@ -16,24 +16,24 @@
 
 
 # instance fields
+.field private mContext:Landroid/content/Context;
+
 .field final synthetic this$0:Lcn/com/smartdevices/bracelet/model/game/GameManager;
 
 
 # direct methods
-.method private constructor <init>(Lcn/com/smartdevices/bracelet/model/game/GameManager;)V
-    .locals 0
+.method public constructor <init>(Lcn/com/smartdevices/bracelet/model/game/GameManager;Landroid/content/Context;)V
+    .locals 1
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->this$0:Lcn/com/smartdevices/bracelet/model/game/GameManager;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    return-void
-.end method
+    const/4 v0, 0x0
 
-.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/model/game/GameManager;Lcn/com/smartdevices/bracelet/model/game/GameManager$1;)V
-    .locals 0
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->mContext:Landroid/content/Context;
 
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;-><init>(Lcn/com/smartdevices/bracelet/model/game/GameManager;)V
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->mContext:Landroid/content/Context;
 
     return-void
 .end method
@@ -61,8 +61,10 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->this$0:Lcn/com/smartdevices/bracelet/model/game/GameManager;
 
-    # invokes: Lcn/com/smartdevices/bracelet/model/game/GameManager;->getGameBriefInfo()Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$100(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->mContext:Landroid/content/Context;
+
+    # invokes: Lcn/com/smartdevices/bracelet/model/game/GameManager;->getGameBriefInfo(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$000(Lcn/com/smartdevices/bracelet/model/game/GameManager;Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
 
     move-result-object v0
 
@@ -128,7 +130,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;->getLike()I
 
@@ -149,8 +151,10 @@
     :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->this$0:Lcn/com/smartdevices/bracelet/model/game/GameManager;
 
-    # invokes: Lcn/com/smartdevices/bracelet/model/game/GameManager;->clearGameUI(Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$200(Lcn/com/smartdevices/bracelet/model/game/GameManager;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->mContext:Landroid/content/Context;
+
+    # invokes: Lcn/com/smartdevices/bracelet/model/game/GameManager;->clearGameUI(Landroid/content/Context;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
+    invoke-static {v0, v2, v1}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$100(Lcn/com/smartdevices/bracelet/model/game/GameManager;Landroid/content/Context;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
 
     :goto_0
     return-object v5
@@ -164,8 +168,10 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->this$0:Lcn/com/smartdevices/bracelet/model/game/GameManager;
 
-    # invokes: Lcn/com/smartdevices/bracelet/model/game/GameManager;->getRegisterInfo()V
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$300(Lcn/com/smartdevices/bracelet/model/game/GameManager;)V
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->mContext:Landroid/content/Context;
+
+    # invokes: Lcn/com/smartdevices/bracelet/model/game/GameManager;->getRegisterInfo(Landroid/content/Context;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$200(Lcn/com/smartdevices/bracelet/model/game/GameManager;Landroid/content/Context;)V
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;->isInRegisterStage()Z
 
@@ -176,7 +182,7 @@
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->this$0:Lcn/com/smartdevices/bracelet/model/game/GameManager;
 
     # getter for: Lcn/com/smartdevices/bracelet/model/game/GameManager;->mGameBriefInfo:Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$400(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$300(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
 
     move-result-object v0
 
@@ -201,11 +207,13 @@
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->this$0:Lcn/com/smartdevices/bracelet/model/game/GameManager;
 
     # getter for: Lcn/com/smartdevices/bracelet/model/game/GameManager;->mGameBriefInfo:Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$400(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$300(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;->getRegisterUrl()Ljava/lang/String;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;->getRegisterUrl(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -218,7 +226,7 @@
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->this$0:Lcn/com/smartdevices/bracelet/model/game/GameManager;
 
     # getter for: Lcn/com/smartdevices/bracelet/model/game/GameManager;->mGameBriefInfo:Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$400(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$300(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
 
     move-result-object v2
 
@@ -252,11 +260,13 @@
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->this$0:Lcn/com/smartdevices/bracelet/model/game/GameManager;
 
     # getter for: Lcn/com/smartdevices/bracelet/model/game/GameManager;->mGameBriefInfo:Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$400(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$300(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;->getRegisterUrl()Ljava/lang/String;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;->getRegisterUrl(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -280,7 +290,7 @@
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->this$0:Lcn/com/smartdevices/bracelet/model/game/GameManager;
 
     # getter for: Lcn/com/smartdevices/bracelet/model/game/GameManager;->mGameBriefInfo:Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$400(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$300(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
 
     move-result-object v0
 
@@ -292,16 +302,20 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->this$0:Lcn/com/smartdevices/bracelet/model/game/GameManager;
 
-    # invokes: Lcn/com/smartdevices/bracelet/model/game/GameManager;->clearGameUI(Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$200(Lcn/com/smartdevices/bracelet/model/game/GameManager;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->mContext:Landroid/content/Context;
+
+    # invokes: Lcn/com/smartdevices/bracelet/model/game/GameManager;->clearGameUI(Landroid/content/Context;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
+    invoke-static {v0, v2, v1}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$100(Lcn/com/smartdevices/bracelet/model/game/GameManager;Landroid/content/Context;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
 
     goto/16 :goto_0
 
     :cond_4
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->this$0:Lcn/com/smartdevices/bracelet/model/game/GameManager;
 
-    # invokes: Lcn/com/smartdevices/bracelet/model/game/GameManager;->showGameRecord(Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$500(Lcn/com/smartdevices/bracelet/model/game/GameManager;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->mContext:Landroid/content/Context;
+
+    # invokes: Lcn/com/smartdevices/bracelet/model/game/GameManager;->showGameRecord(Landroid/content/Context;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
+    invoke-static {v0, v2, v1}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$400(Lcn/com/smartdevices/bracelet/model/game/GameManager;Landroid/content/Context;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
 
     goto/16 :goto_0
 
@@ -315,7 +329,7 @@
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->this$0:Lcn/com/smartdevices/bracelet/model/game/GameManager;
 
     # getter for: Lcn/com/smartdevices/bracelet/model/game/GameManager;->mGameBriefInfo:Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$400(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$300(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
 
     move-result-object v0
 
@@ -327,16 +341,20 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->this$0:Lcn/com/smartdevices/bracelet/model/game/GameManager;
 
-    # invokes: Lcn/com/smartdevices/bracelet/model/game/GameManager;->clearGameUI(Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$200(Lcn/com/smartdevices/bracelet/model/game/GameManager;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->mContext:Landroid/content/Context;
+
+    # invokes: Lcn/com/smartdevices/bracelet/model/game/GameManager;->clearGameUI(Landroid/content/Context;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
+    invoke-static {v0, v2, v1}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$100(Lcn/com/smartdevices/bracelet/model/game/GameManager;Landroid/content/Context;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
 
     goto/16 :goto_0
 
     :cond_6
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->this$0:Lcn/com/smartdevices/bracelet/model/game/GameManager;
 
-    # invokes: Lcn/com/smartdevices/bracelet/model/game/GameManager;->showBonusBanner(Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$600(Lcn/com/smartdevices/bracelet/model/game/GameManager;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->mContext:Landroid/content/Context;
+
+    # invokes: Lcn/com/smartdevices/bracelet/model/game/GameManager;->showBonusBanner(Landroid/content/Context;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
+    invoke-static {v0, v2, v1}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$500(Lcn/com/smartdevices/bracelet/model/game/GameManager;Landroid/content/Context;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
 
     goto/16 :goto_0
 
@@ -356,11 +374,13 @@
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->this$0:Lcn/com/smartdevices/bracelet/model/game/GameManager;
 
     # getter for: Lcn/com/smartdevices/bracelet/model/game/GameManager;->mGameBriefInfo:Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$400(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$300(Lcn/com/smartdevices/bracelet/model/game/GameManager;)Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;->getDefaultUrl()Ljava/lang/String;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;->getDefaultUrl(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -377,8 +397,10 @@
     :cond_8
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->this$0:Lcn/com/smartdevices/bracelet/model/game/GameManager;
 
-    # invokes: Lcn/com/smartdevices/bracelet/model/game/GameManager;->clearGameUI(Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$200(Lcn/com/smartdevices/bracelet/model/game/GameManager;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/model/game/GameManager$GameTask;->mContext:Landroid/content/Context;
+
+    # invokes: Lcn/com/smartdevices/bracelet/model/game/GameManager;->clearGameUI(Landroid/content/Context;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
+    invoke-static {v0, v2, v1}, Lcn/com/smartdevices/bracelet/model/game/GameManager;->access$100(Lcn/com/smartdevices/bracelet/model/game/GameManager;Landroid/content/Context;Lcn/com/smartdevices/bracelet/eventbus/EventGameUpdate;)V
 
     goto/16 :goto_0
 .end method

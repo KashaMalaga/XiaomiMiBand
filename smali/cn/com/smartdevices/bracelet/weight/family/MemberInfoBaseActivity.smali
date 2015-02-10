@@ -12,29 +12,19 @@
 
 .field public static final c:Ljava/lang/String; = "set_visitor_mode"
 
-.field public static final e:Ljava/lang/String; = "weight_choose_user"
+.field public static final d:Ljava/lang/String; = "weight_choose_user"
 
 
 # instance fields
-.field protected d:Z
+.field protected e:Z
 
 .field protected f:Z
 
-.field protected g:Ljava/lang/String;
+.field protected g:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
 
-.field protected h:Ljava/lang/String;
+.field private h:Landroid/view/View;
 
-.field protected i:Ljava/lang/String;
-
-.field protected j:Ljava/lang/String;
-
-.field protected k:Ljava/lang/String;
-
-.field protected l:Ljava/lang/String;
-
-.field private m:Landroid/view/View;
-
-.field private n:Landroid/view/View;
+.field private i:Landroid/view/View;
 
 
 # direct methods
@@ -61,11 +51,11 @@
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;-><init>()V
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->m:Landroid/view/View;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->h:Landroid/view/View;
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->n:Landroid/view/View;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->i:Landroid/view/View;
 
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->d:Z
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->e:Z
 
     iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->f:Z
 
@@ -77,27 +67,27 @@
 .method protected a()V
     .locals 1
 
-    const v0, 0x7f080192
+    const v0, 0x7f0701a7
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->m:Landroid/view/View;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->h:Landroid/view/View;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->m:Landroid/view/View;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->h:Landroid/view/View;
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f080190
+    const v0, 0x7f0701a5
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->n:Landroid/view/View;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->i:Landroid/view/View;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->n:Landroid/view/View;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->i:Landroid/view/View;
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -111,7 +101,7 @@
 
     const-string v1, "onCancel"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -191,7 +181,7 @@
     goto :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x7f080190
+    .packed-switch 0x7f0701a5
         :pswitch_1
         :pswitch_0
         :pswitch_2

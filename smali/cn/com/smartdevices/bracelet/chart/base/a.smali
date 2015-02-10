@@ -591,18 +591,10 @@
     throw v0
 .end method
 
-.method public g(I)V
-    .locals 0
-
-    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/base/a;->d:I
-
-    return-void
-.end method
-
 .method public h(I)V
     .locals 0
 
-    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/base/a;->e:I
+    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/base/a;->d:I
 
     return-void
 .end method
@@ -613,6 +605,14 @@
     iget v0, p0, Lcn/com/smartdevices/bracelet/chart/base/a;->d:I
 
     return v0
+.end method
+
+.method public i(I)V
+    .locals 0
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/chart/base/a;->e:I
+
+    return-void
 .end method
 
 .method public j()I

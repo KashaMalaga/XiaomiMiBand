@@ -21,6 +21,8 @@
 
 
 # instance fields
+.field public dayReportNoti:Ljava/lang/String;
+
 .field public disconnectedReminder:I
 
 .field public enableConnectedBtAdv:Z
@@ -33,9 +35,13 @@
 
 .field public lightColor:Ljava/lang/String;
 
+.field public unit:I
+
 .field public vibrate:Z
 
 .field public wearHand:Ljava/lang/String;
+
+.field public weightUnit:I
 
 
 # direct methods
@@ -58,15 +64,23 @@
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->goalStepsCount:I
 
+    const-string v0, "OFF"
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->dayReportNoti:Ljava/lang/String;
+
     const/16 v0, 0x102
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->inComingCallNotifyTime:I
 
     iput v1, p0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->disconnectedReminder:I
 
+    iput v1, p0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->unit:I
+
     iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->vibrate:Z
 
     iput-boolean v1, p0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->enableConnectedBtAdv:Z
+
+    iput v1, p0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->weightUnit:I
 
     return-void
 .end method
@@ -94,15 +108,15 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/B;->c()Lcom/d/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/E;->c()Lcom/c/a/k;
 
     move-result-object v0
 
     const-class v1, Lcn/com/smartdevices/bracelet/model/MiliConfig;
 
-    invoke-virtual {v0, p0, v1}, Lcom/d/a/k;->a(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v0, p0, v1}, Lcom/c/a/k;->a(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -120,6 +134,14 @@
 
 
 # virtual methods
+.method public getDailySportNofity()Ljava/lang/String;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->dayReportNoti:Ljava/lang/String;
+
+    return-object v0
+.end method
+
 .method public isValid()Z
     .locals 4
 
@@ -199,7 +221,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return v0
 
@@ -209,14 +231,22 @@
     goto :goto_0
 .end method
 
+.method public setDailySportNotify(Ljava/lang/String;)V
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/model/MiliConfig;->dayReportNoti:Ljava/lang/String;
+
+    return-void
+.end method
+
 .method public toString()Ljava/lang/String;
     .locals 4
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/B;->c()Lcom/d/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/E;->c()Lcom/c/a/k;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/d/a/k;->b(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, p0}, Lcom/c/a/k;->b(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -234,7 +264,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "the MiliConfig toString is "
+    const-string v3, "the MiliConfig ---toString--- is "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -252,7 +282,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Ljava/lang/String;->toString()Ljava/lang/String;
 

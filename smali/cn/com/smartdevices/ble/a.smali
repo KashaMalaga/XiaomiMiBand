@@ -123,9 +123,9 @@
 
     move-result-object v0
 
-    const v1, 0x7f07022c
+    const v1, 0x7f080242
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/B;->a(Landroid/app/Activity;I)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/E;->a(Landroid/app/Activity;I)V
 
     return-void
 .end method

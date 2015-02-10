@@ -44,7 +44,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     packed-switch v0, :pswitch_data_0
 
@@ -87,6 +87,25 @@
 
     goto :goto_0
 
+    :pswitch_6
+    new-instance v0, Lcn/com/smartdevices/bracelet/a/u;
+
+    new-instance v1, Lcn/com/smartdevices/bracelet/tag/a/h;
+
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/tag/a/h;-><init>(Lcn/com/smartdevices/bracelet/tag/a/g;)V
+
+    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/a/u;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/a/u;->d()V
+
+    const/16 v0, 0x1007
+
+    const-wide/32 v1, 0xea60
+
+    invoke-virtual {p0, v0, v1, v2}, Lcn/com/smartdevices/bracelet/tag/a/g;->sendEmptyMessageDelayed(IJ)Z
+
+    goto :goto_0
+
     :pswitch_data_0
     .packed-switch 0x1001
         :pswitch_1
@@ -95,5 +114,6 @@
         :pswitch_0
         :pswitch_4
         :pswitch_5
+        :pswitch_6
     .end packed-switch
 .end method

@@ -1,30 +1,35 @@
 .class Lcn/com/smartdevices/bracelet/ui/bh;
-.super Landroid/app/Dialog;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/aY;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/bf;
 
 
 # direct methods
-.method public constructor <init>(Lcn/com/smartdevices/bracelet/ui/aY;Landroid/content/Context;I)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/bf;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bh;->a:Lcn/com/smartdevices/bracelet/ui/aY;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bh;->a:Lcn/com/smartdevices/bracelet/ui/bf;
 
-    invoke-direct {p0, p2, p3}, Landroid/app/Dialog;-><init>(Landroid/content/Context;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public cancel()V
+.method public run()V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bh;->a:Lcn/com/smartdevices/bracelet/ui/aY;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bh;->a:Lcn/com/smartdevices/bracelet/ui/bf;
 
-    invoke-virtual {v0, p0}, Lcn/com/smartdevices/bracelet/ui/aY;->onCancel(Landroid/content/DialogInterface;)V
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/bf;->a:Lcn/com/smartdevices/bracelet/ui/ba;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/ba;->dismiss()V
 
     return-void
 .end method

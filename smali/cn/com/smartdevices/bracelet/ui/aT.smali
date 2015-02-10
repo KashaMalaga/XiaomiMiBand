@@ -1,40 +1,54 @@
-.class public Lcn/com/smartdevices/bracelet/ui/aT;
-.super Lcn/com/smartdevices/bracelet/ui/aS;
+.class Lcn/com/smartdevices/bracelet/ui/aT;
+.super Landroid/support/v13/app/h;
+
+
+# instance fields
+.field final synthetic c:Lcn/com/smartdevices/bracelet/ui/InstructionActivity;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Lcn/com/smartdevices/bracelet/ui/InstructionActivity;Landroid/app/FragmentManager;)V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/aS;-><init>()V
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/aT;->c:Lcn/com/smartdevices/bracelet/ui/InstructionActivity;
+
+    invoke-direct {p0, p2}, Landroid/support/v13/app/h;-><init>(Landroid/app/FragmentManager;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 3
+.method public a(I)Landroid/app/Fragment;
+    .locals 1
 
-    const v0, 0x7f03000b
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aT;->c:Lcn/com/smartdevices/bracelet/ui/InstructionActivity;
 
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, p2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/InstructionActivity;->a(Lcn/com/smartdevices/bracelet/ui/InstructionActivity;)Ljava/util/ArrayList;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/aT;->a(Landroid/view/View;)V
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aT;->c_:Landroid/widget/TextSwitcher;
+    move-result-object v0
 
-    const v2, 0x7f070197
-
-    invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/ui/aT;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/widget/TextSwitcher;->setCurrentText(Ljava/lang/CharSequence;)V
+    check-cast v0, Landroid/app/Fragment;
 
     return-object v0
+.end method
+
+.method public b()I
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aT;->c:Lcn/com/smartdevices/bracelet/ui/InstructionActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/InstructionActivity;->a(Lcn/com/smartdevices/bracelet/ui/InstructionActivity;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    return v0
 .end method

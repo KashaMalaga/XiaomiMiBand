@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/ui/W;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
@@ -22,34 +22,33 @@
 
 
 # virtual methods
-.method public a(Landroid/app/DialogFragment;)V
-    .locals 0
+.method public run()V
+    .locals 2
 
+    :try_start_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/d;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->m(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)Lcom/amap/api/maps/MapView;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/amap/api/maps/MapView;->onDestroy()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
     return-void
-.end method
 
-.method public b(Landroid/app/DialogFragment;)V
-    .locals 3
+    :catch_0
+    move-exception v0
 
-    new-instance v0, Landroid/content/Intent;
+    const-string v1, "Run"
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/d;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
-    const-class v2, Lcn/com/smartdevices/bracelet/activity/LoginActivity;
+    move-result-object v0
 
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/d;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
-
-    const/16 v2, 0x2711
-
-    invoke-virtual {v1, v0, v2}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->startActivityForResult(Landroid/content/Intent;I)V
-
-    return-void
-.end method
-
-.method public c(Landroid/app/DialogFragment;)V
-    .locals 0
-
-    return-void
+    goto :goto_0
 .end method

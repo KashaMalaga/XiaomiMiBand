@@ -170,7 +170,7 @@
 
     const/16 v1, 0x258
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/g;->g(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/g;->h(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->A:Lcn/com/smartdevices/bracelet/chart/g;
 
@@ -360,7 +360,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->u:Lcn/com/smartdevices/bracelet/chart/b/f;
 
@@ -422,7 +422,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     iget v1, p0, Lcn/com/smartdevices/bracelet/chart/a;->r:F
 
@@ -472,7 +472,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iput p1, p0, Lcn/com/smartdevices/bracelet/chart/a;->B:I
 
@@ -720,7 +720,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->E:I
 
@@ -826,7 +826,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->f:Lcn/com/smartdevices/bracelet/chart/base/b;
 

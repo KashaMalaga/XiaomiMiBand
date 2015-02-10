@@ -26,7 +26,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/g/d;->a(Landroid/app/Activity;Z)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/h/d;->a(Landroid/app/Activity;Z)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/d;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
@@ -38,7 +38,7 @@
 
     const-string v2, "login"
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

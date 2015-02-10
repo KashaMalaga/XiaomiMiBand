@@ -742,7 +742,7 @@
 
     check-cast v0, Lcn/com/smartdevices/bracelet/chart/z;
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/chart/z;->d(I)V
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/chart/z;->e(I)V
 
     return-void
 .end method
@@ -813,6 +813,24 @@
     return-object v0
 .end method
 
+.method public b(F)V
+    .locals 2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/chart/z;
+
+    const/high16 v1, 0x41200000
+
+    mul-float/2addr v1, p1
+
+    float-to-int v1, v1
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/z;->d(I)V
+
+    return-void
+.end method
+
 .method public b(I)V
     .locals 1
 
@@ -820,7 +838,7 @@
 
     check-cast v0, Lcn/com/smartdevices/bracelet/chart/z;
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/chart/z;->e(I)V
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/chart/z;->f(I)V
 
     return-void
 .end method
@@ -1023,7 +1041,7 @@
 
     neg-int v1, p1
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/z;->f(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/z;->g(I)V
 
     return-void
 .end method

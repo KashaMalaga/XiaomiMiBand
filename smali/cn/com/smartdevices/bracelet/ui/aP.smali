@@ -1,13 +1,52 @@
-.class public interface abstract Lcn/com/smartdevices/bracelet/ui/aP;
-.super Ljava/lang/Object;
+.class Lcn/com/smartdevices/bracelet/ui/aP;
+.super Landroid/webkit/WebViewClient;
+
+
+# instance fields
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/aO;
+
+
+# direct methods
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/aO;)V
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/aP;->a:Lcn/com/smartdevices/bracelet/ui/aO;
+
+    invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a(Landroid/os/Bundle;)V
+.method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
+    .locals 2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aP;->a:Lcn/com/smartdevices/bracelet/ui/aO;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/aO;->a(Lcn/com/smartdevices/bracelet/ui/aO;)Landroid/widget/ProgressBar;
+
+    move-result-object v0
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
+
+    return-void
 .end method
 
-.method public abstract a(Lcn/com/smartdevices/bracelet/ui/dF;)V
-.end method
+.method public onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V
+    .locals 2
 
-.method public abstract a(ILcn/com/smartdevices/bracelet/ui/dF;)Z
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aP;->a:Lcn/com/smartdevices/bracelet/ui/aO;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/aO;->a(Lcn/com/smartdevices/bracelet/ui/aO;)Landroid/widget/ProgressBar;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
+
+    return-void
 .end method

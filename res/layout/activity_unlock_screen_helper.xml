@@ -15,7 +15,7 @@
                         <TextView android:id="@id/unlock_screen_set_password_tv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/unlock_screen_set_password" style="@style/ListItemTitleText" />
                     </LinearLayout>
                     <TextView android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="9.0dip" android:text="" style="@style/ListItemValueText" />
-                    <ImageView android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_indicator_right_arrow" />
+                    <ImageView android:layout_gravity="center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_indicator_right_arrow" />
                 </LinearLayout>
                 <include layout="@layout/split_line_with_margin" />
                 <TextView android:textColor="#ffc5c5c5" android:paddingLeft="@dimen/mili_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="34.0dip" android:layout_marginBottom="5.0dip" android:text="@string/unlock_screen_set_use_bracelet_tips" />
@@ -25,7 +25,7 @@
                         <TextView android:id="@id/unlock_screen_set_unlock_tv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/unlock_screen_set_use_bracelet" style="@style/ListItemTitleText" />
                     </LinearLayout>
                     <TextView android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="9.0dip" android:text="" style="@style/ListItemValueText" />
-                    <ImageView android:layout_gravity="right|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_indicator_right_arrow" />
+                    <ImageView android:layout_gravity="center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_indicator_right_arrow" />
                 </LinearLayout>
                 <include layout="@layout/split_line_with_margin" />
             </LinearLayout>
@@ -53,5 +53,5 @@
             <TextView android:textColor="@color/content_color_brighter" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/unlock_screen_not_connect" android:drawableLeft="@drawable/info" android:drawablePadding="5.0dip" />
         </LinearLayout>
     </LinearLayout>
-    <TextView android:id="@id/unlock_screen_home_back" android:text="@string/action_pop_unlock_screen" style="@style/BackButton" />
+    <TextView android:id="@id/home_back" android:text="@string/action_pop_unlock_screen" style="@style/BackButton" />
 </FrameLayout>

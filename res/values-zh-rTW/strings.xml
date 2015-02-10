@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">小米手環</string>
+    <string name="app_name">小米運動</string>
     <string name="action_exit">退出</string>
     <string name="register">註冊</string>
     <string name="login">登入</string>
@@ -136,11 +136,10 @@
     <string name="set_mili_name_fail">設定手環名稱失敗</string>
     <string name="mili_name_too_long">輸入名稱過長, 請縮短後再試</string>
     <string name="mili_rename_fail">手環重新命名失敗</string>
-    <string name="mili_unbind_question">解除綁定後, 手機將停止記錄運動和睡眠數據</string>
+    <string name="mili_unbind_question">解除綁定後, 手環將停止記錄運動和睡眠數據</string>
     <string name="share_to_title">小米手環</string>
     <string name="share_to_content">小米手環運動分享</string>
-    <string name="share_goal_tips_succ">"再偉大的目標
-也是一步一步走出來的"</string>
+    <string name="share_goal_tips_succ">再偉大的目標也是一步一步走出來的</string>
     <string name="share_goal_tips_fail">革命尚未成功, 足下仍需努力</string>
     <string name="person_info_goal_info">根據世界衛生組織的建議, 你每天需要進行中等強度的運動40分鐘, 相當於快走8000步</string>
     <string name="person_info_goal_info_young">根據世界衛生組織的建議, 你每天需要進行中等強度的運動60分鐘, 相當於快走12000步</string>
@@ -267,6 +266,7 @@
     <string name="please_knock_bracelet">請敲擊幾下手環來綁定</string>
     <string name="dynamic_title_sleep">昨晚睡眠</string>
     <string name="dynamic_title_step">今日活動</string>
+    <string name="dynamic_title_bracelet_unbind">未綁定手環</string>
     <string name="dynamic_step_tip">目前總步數</string>
     <string name="dynamic_sleep_tip">昨晚共睡眠</string>
     <string name="dynamic_sleep_deep_title">深層睡眠%s</string>
@@ -389,6 +389,10 @@
     <string name="unlock_screen_set_use_bracelet_tips">需確認第一步中設定的密碼</string>
     <string name="unlock_screen_set_use_bracelet">第二步, 設定使用手環解鎖</string>
     <string name="unlock_screen_set_success">已成功設定手環解鎖</string>
+    <string name="unlock_screen_modify_unlock_v5">"如需修改請打開
+設定->安全和隱私->螢幕安全保護->藍牙裝置解鎖"</string>
+    <string name="unlock_screen_modify_unlock_v6">"如需修改請打開
+設定->螢幕鎖定和密碼->藍牙裝置解鎖"</string>
     <string name="unlock_for_smartlock_tip">使用手環解鎖需要小米手環APP一直在後臺運行</string>
     <string name="unlock_for_smartlock_tip_step1">第一步:進入系統 <b>設定</b> - <b>安全性</b></string>
     <string name="unlock_for_smartlock_tip_step2">第二步:設定 <b>螢幕鎖定</b> 方式為圖案、PIN碼或者密碼</string>
@@ -417,6 +421,8 @@
     <string name="unlock_screen_help_title0">手環是否貼近手機</string>
     <string name="unlock_screen_help_title1">嘗試重新啟動藍牙</string>
     <string name="unlock_screen_help_title2">嘗試重新設定手環解鎖</string>
+    <string name="unlock_screen_help_title3">嘗試重啟手機</string>
+    <string name="unlock_screen_help_info3">請嘗試重新啟動手機, 啟動後檢查手環解鎖功能是否恢復。</string>
     <string name="unlock_screen_help_info0">為了保證手機的安全性, 只有當手環貼近手機時解鎖才有效, 手機遠離手環將無法進行解鎖。</string>
     <string name="unlock_screen_help_info1">如果貼近手機仍然無法解鎖, 可以嘗試將手機的藍牙關閉然後重新打開, 稍等一會後, 檢查手環解鎖功能是否恢復。</string>
     <string name="unlock_screen_help_info2">如果重啟藍牙無效, 可以前往系統設定->安全和隱私中找到螢幕解鎖相關設定, 進入藍牙設備解鎖頁面, 刪除目前已經綁定的手環, 然後返回小米手環應用中重新設定手環解鎖。</string>
@@ -591,6 +597,7 @@
     <string name="weight_help_title_3">尝试重新启动蓝牙</string>
     <string name="weight_help_info_3">如果体重秤有电, 且手机贴近后仍无法查找到, 可以尝试将手机的蓝牙关闭后重新打开, 稍等会后, 重新搜索体重秤。</string>
     <string name="weight_not_response">我的体重秤没有显示上图内容</string>
+    <string name="bind_weight_ok">成功绑定小米体重秤</string>
     <string name="share_weibo_label">微博</string>
     <string name="share_pengyouquan_label">朋友圈</string>
     <string name="share_weixin_label">微信</string>
@@ -599,14 +606,47 @@
     <string name="share_miliao_label">米聊</string>
     <string name="share_line_label">Line</string>
     <string name="share_facebook_label">Facebook</string>
-    <string name="health_link">遠盟康健</string>
-    <string name="title_health_link_service">安全健康保障服務</string>
+    <string name="health_link">安全健康保障服務</string>
+    <string name="connected_broadcast">藍牙廣播</string>
+    <string name="connected_broadcast_tips">使手環可以被其他設備發現, 該功能會略微減少手環續航時長</string>
+    <string name="connected_broadcast_disconnect_tips">請先連接手環, 再進行設置</string>
     <string name="incomingcall_info_1">使用來電提醒需要小米手環壹直在後臺運行</string>
     <string name="incomingcall_info_2">"請參照圖示鎖定小米手環應用
 並將小米手環添加到第三方手機助手白名單中"</string>
     <string name="incomingcall_info_3">"如果手機安裝有第三方手機助手
 請將小米手環添加到白名單中"</string>
     <string name="incoming_call_notify_closed">關閉來電提醒</string>
+    <string name="not_fount_available_userinfo">未能找到合适成员</string>
+    <string name="choose_userinfo_for_weight">为本次称重选个主人吧</string>
+    <string name="visitor">访客</string>
+    <string name="new_user">新成员</string>
+    <string name="set_goal_weight_tips">根据你提供的身体信息, 我们通过BMI指数计算得出你的标准体重区间为%1$s-%2$s%3$s</string>
+    <string name="set_weight_goal">设置体重目标</string>
+    <string name="set_weight_goal_yes">设定目标</string>
+    <string name="set_weight_goal_no">不设置了</string>
+    <string name="weight_tip_bmi_name">什么是BMI</string>
+    <string name="weight_tip_bmi_content">BMI是Body Mass Index的缩写,表示身体质量的指数。国际上广泛使用,因为和身体中所含脂肪量有很大关系,BMI是体重(公斤)除以身高(米)的二次方的值。</string>
+    <string name="weight_tip_fat_name">单看BMI值不能判定虚胖</string>
+    <string name="weight_tip_fat_content">BMI是从身高和体重计算的值,为简单判定肥胖度的标准,即使是标准体重,也存在脂肪多的\"虚胖\"。因此体重变化时确认是肌肉还是脂肪增加是很重要的。</string>
+    <string name="daily_sport_report">今日運動成績</string>
+    <string name="today_steps">今日步數</string>
+    <string name="daily_consume">今日消耗（大卡）</string>
+    <string name="week_total_distance">本週里程（公里）</string>
+    <string name="continue_reach_goal_days">連續達標天數</string>
+    <string name="equals_fat">"相當於
+減掉%1$s克贅肉"</string>
+    <string name="daily_sport_report_contintue_info">"%1$s張假條可用
+個人紀錄%2$s天"</string>
+    <string name="daily_sport_report_week_info">"%1$s步
+节省汽油%2$s升"</string>
+    <string name="mi_band">小米手環</string>
+    <string name="daily_sport_report_notify">今天走了%s步, 讚!</string>
+    <string name="daily_sport_report_notify_content">點選檢視活動詳情</string>
+    <string name="exceed_user">超過用戶</string>
+    <string name="setting_daily_sport_notify_info">晚上9:30提醒我今天的運動情況</string>
+    <string name="setting_daily_sport_notify">今日運動成績提示</string>
+    <string name="daily_sport_report_notify_hurry">今天還差%1$s步就達成目標啦！</string>
+    <string name="connect_to_retrive">No internet.</string>
     <string name="lab_factory_title">實驗室</string>
     <string name="lab_factory_sport_type_situp">仰臥起坐</string>
     <string name="lab_factory_sport_type_ropeskipping">跳繩</string>
@@ -724,6 +764,7 @@
     <string name="sport_running_history_date" formatted="false">"%d月%d日
 %d年"</string>
     <string name="sport_running_history_no_data">暫無數據</string>
+    <string name="sport_running_history_no_more_data">已无多事</string>
     <string name="sport_running_history_no_data_refresh">暫無數據，點擊屏幕刷新</string>
     <string name="sport_running_history_no_data_refreshing">正在刷新，請稍候……</string>
     <string name="sport_running_cost_cal">%.1f千卡</string>
@@ -741,21 +782,21 @@
     <string name="sport_running_share">分享</string>
     <string name="sport_running_watermark">水印照片</string>
     <string name="sport_ranking_desc_poor">你的成绩在所有%s用户中垫底，加油啊！</string>
-    <string name="sport_ranking_desc_normal" formatted="false">你打敗了 &lt;b>%s&lt;/b> 的小米手環%s用户！</string>
+    <string name="sport_ranking_desc_normal" formatted="false">你打敗了 &lt;b>%s&lt;/b> 的小米運動%s用户！</string>
     <string name="sport_ranking_desc_great">你已经到了独孤求败的境界！</string>
     <string name="sport_new_record_ropeskipping">連跳新紀錄</string>
     <string name="percent_mark">%</string>
-    <string name="share_step_ranking">超過 &lt;b>%s&lt;/b> 的小米手環用戶！</string>
+    <string name="share_step_ranking">超過 &lt;b>%s&lt;/b> 的小米運動用戶！</string>
     <string name="buy_bracelet_desc">先買個手環吧</string>
     <string name="bracelet_store_desc">手環商城</string>
     <string name="title_activity_open">合作夥伴授權頁面</string>
     <string name="state_deauthorization_success">取消授權成功</string>
-    <string name="state_deauthorization_doing">取消授權中...</string>
+    <string name="state_deauthorization_doing">取消授權中……</string>
     <string name="state_deauthorization_error">取消授權失敗</string>
     <string name="state_authorization_error">授權失敗</string>
-    <string name="state_authorization_doing">授權中...</string>
+    <string name="state_authorization_doing">授權中……</string>
     <string name="state_authorization_success">授權成功</string>
-    <string name="share_image_preparing">正在準備分享內容...</string>
+    <string name="share_image_preparing">正在準備分享內容……</string>
     <string name="enable_hidden_feature">隐藏功能已開啓</string>
     <string name="disable_hidden_feature">隐藏功能已關閉</string>
     <string name="btn_save">保存</string>
@@ -780,11 +821,12 @@
     <string name="sport_running_failed_to_get_history_neterror">网络唔畀力</string>
     <string name="sport_running_get_history_no_more_data">已无历史数</string>
     <string name="sport_running_delete_track_item_confirm">確定删除该記錄？删除後無法恢復</string>
-    <string name="sport_running_backgroud_notification">跑步中...，加油加油</string>
+    <string name="sport_running_backgroud_notification">跑步中……加油加油</string>
     <string name="watermark_search_location">\#正在獲取你的位置#</string>
     <string name="watermark_btn_confirm">完成</string>
-    <string name="watermark_guide_tips">長按移動水印</string>
+    <string name="watermark_guide_tips">拖拽移動水印</string>
     <string name="no_bracelet_tips">(僅限手環連接時設置)</string>
+    <string name="label_runner_group">跑跑團</string>
     <string name="action_mark">行為標註</string>
     <string name="action_sleep">睡覺</string>
     <string name="action_bath">洗澡</string>
@@ -794,20 +836,25 @@
     <string name="action_badminton">羽毛球</string>
     <string name="action_basketball">籃球</string>
     <string name="action_pingpong">乒乓球</string>
+    <string name="action_sit">靜坐</string>
+    <string name="action_stand">站立</string>
+    <string name="action_bus">乘車</string>
+    <string name="title_action_tag_agreement">用戶行為標註協議</string>
     <string name="complete">完成</string>
     <string name="notice_for_tag_time">提示：符號x後的數字是你對該項目的標註次數</string>
     <string name="choose_tag_item">你將標註什麼項目？</string>
     <string name="confirm_complete_tag">你確定已經完成了本次標註嗎？</string>
-    <string name="tag_data_collecting">數據收集中，請稍候...</string>
+    <string name="tag_data_collecting">數據收集中，請稍候……</string>
     <string name="toast_behavior_tag_failed">標註失敗了，請檢查一下手環是否連接以及sdcard是否存在。</string>
     <string name="toast_enable_behavior_tag">開啟行為標註功能！</string>
     <string name="toast_disable_behavior_tag">關閉行為標註功能！</string>
     <string name="action_brush_tooth">刷牙</string>
     <string name="data_loading">正在加載數據，請稍候……</string>
+    <string name="toast_url_parse_error">網頁地址格式錯誤</string>
+    <string name="tag_reconnect_notice">手環與app已經重連，請重新標註。</string>
     <string name="unlock_screen_modify_unlock">"如需修改請打開
 設定->安全和隱私"</string>
     <string name="runner_unlogin_notice">你還未登錄app，使用過程中的數據將無法為你同步到服務器，數據可能會在一些情況下丟失。現在去登錄？</string>
-    <string name="title_action_tag_agreement">用戶行為標註協議</string>
     <string name="action_type_error">行為類型出錯</string>
     <string name="congrats">恭喜</string>
     <string name="bind_qq_health_tip_init">登錄後繼續完成綁定QQ健康</string>

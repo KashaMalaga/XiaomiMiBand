@@ -913,13 +913,13 @@
     :cond_3
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mMainView:Landroid/view/View;
 
-    invoke-static {v1}, Lcom/f/c/a/a;->a(Landroid/view/View;)Lcom/f/c/a/a;
+    invoke-static {v1}, Lcom/e/c/a/a;->a(Landroid/view/View;)Lcom/e/c/a/a;
 
     move-result-object v1
 
     int-to-float v0, v0
 
-    invoke-virtual {v1, v0}, Lcom/f/c/a/a;->j(F)V
+    invoke-virtual {v1, v0}, Lcom/e/c/a/a;->j(F)V
 
     goto :goto_1
 .end method
@@ -2401,7 +2401,7 @@
 
     const-string v2, "onMeasure: More than two child views are not supported."
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     move v1, v0
 
@@ -2956,7 +2956,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->mIsSlidingEnabled:Z
 

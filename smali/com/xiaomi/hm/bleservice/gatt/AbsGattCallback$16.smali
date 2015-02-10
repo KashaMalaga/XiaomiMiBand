@@ -33,7 +33,7 @@
 .method public run()V
     .locals 2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->d()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->d()V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$16;->this$0:Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;
 
@@ -42,11 +42,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/Thread;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/Thread;)V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$16;->val$gatt:Landroid/bluetooth/BluetoothGatt;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/Object;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/Object;)V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$16;->val$gatt:Landroid/bluetooth/BluetoothGatt;
 
@@ -94,7 +94,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$16;->this$0:Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;
 
@@ -150,7 +150,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->c(Z)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Z)V
 
     if-nez v0, :cond_0
 
@@ -196,7 +196,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->b(Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback$16;->this$0:Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;
 

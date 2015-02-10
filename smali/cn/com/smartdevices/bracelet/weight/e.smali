@@ -2,22 +2,22 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/weight/v;
+.implements Lcn/com/smartdevices/bracelet/weight/C;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/weight/v;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/weight/C;
 
 .field final synthetic b:Lcn/com/smartdevices/bracelet/weight/a;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/weight/a;Lcn/com/smartdevices/bracelet/weight/v;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/weight/a;Lcn/com/smartdevices/bracelet/weight/C;)V
     .locals 0
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/weight/e;->b:Lcn/com/smartdevices/bracelet/weight/a;
 
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/weight/e;->a:Lcn/com/smartdevices/bracelet/weight/v;
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/weight/e;->a:Lcn/com/smartdevices/bracelet/weight/C;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,13 +29,13 @@
 .method public a()V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/e;->a:Lcn/com/smartdevices/bracelet/weight/v;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/e;->a:Lcn/com/smartdevices/bracelet/weight/C;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/e;->a:Lcn/com/smartdevices/bracelet/weight/v;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/e;->a:Lcn/com/smartdevices/bracelet/weight/C;
 
-    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/weight/v;->a()V
+    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/weight/C;->a()V
 
     :cond_0
     return-void
@@ -44,13 +44,13 @@
 .method public b()V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/e;->a:Lcn/com/smartdevices/bracelet/weight/v;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/e;->a:Lcn/com/smartdevices/bracelet/weight/C;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/e;->a:Lcn/com/smartdevices/bracelet/weight/v;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/e;->a:Lcn/com/smartdevices/bracelet/weight/C;
 
-    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/weight/v;->b()V
+    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/weight/C;->b()V
 
     :cond_0
     return-void

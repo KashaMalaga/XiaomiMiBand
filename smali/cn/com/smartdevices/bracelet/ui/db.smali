@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/tencent/tauth/IUiListener;
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # instance fields
@@ -22,28 +22,10 @@
 
 
 # virtual methods
-.method public onCancel()V
+.method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
     .locals 0
 
-    return-void
-.end method
-
-.method public onComplete(Ljava/lang/Object;)V
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dB;->a:Lcn/com/smartdevices/bracelet/ui/dz;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/dz;->dismiss()V
-
-    return-void
-.end method
-
-.method public onError(Lcom/tencent/tauth/UiError;)V
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dB;->a:Lcn/com/smartdevices/bracelet/ui/dz;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/dz;->dismiss()V
+    invoke-static {p2}, Lcn/com/smartdevices/bracelet/z;->o(Z)V
 
     return-void
 .end method

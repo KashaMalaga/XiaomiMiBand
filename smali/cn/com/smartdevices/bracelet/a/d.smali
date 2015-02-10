@@ -1,5 +1,5 @@
 .class public Lcn/com/smartdevices/bracelet/a/d;
-.super Lcn/com/smartdevices/bracelet/a/v;
+.super Lcn/com/smartdevices/bracelet/a/x;
 
 
 # static fields
@@ -16,7 +16,7 @@
 .method public constructor <init>(Lcn/com/smartdevices/bracelet/a/b;B)V
     .locals 1
 
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/a/v;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/a/x;-><init>(Lcn/com/smartdevices/bracelet/a/b;)V
 
     const/4 v0, 0x0
 

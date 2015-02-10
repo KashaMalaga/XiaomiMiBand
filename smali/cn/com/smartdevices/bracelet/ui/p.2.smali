@@ -64,7 +64,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
 
@@ -150,17 +150,10 @@
     goto :goto_0
 
     :pswitch_5
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->c()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/p;->a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->f(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)V
 
-    :cond_3
     invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->a()Z
 
     move-result v0

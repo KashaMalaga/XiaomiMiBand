@@ -6,11 +6,8 @@
 .method public abstract a(Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;)V
 .end method
 
-.method public abstract a(Lcn/com/smartdevices/bracelet/lab/sync/d;)V
-.end method
-
 .method public abstract b(Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;)V
 .end method
 
-.method public abstract b(Lcn/com/smartdevices/bracelet/lab/sync/d;)V
+.method public abstract c(Lcn/com/smartdevices/bracelet/lab/sync/DataSyncObject;)V
 .end method

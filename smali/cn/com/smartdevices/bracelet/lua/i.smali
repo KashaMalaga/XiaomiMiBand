@@ -4,25 +4,25 @@
 
 # instance fields
 .field public a:Ljava/lang/String;
-    .annotation runtime Lcom/d/a/a/b;
+    .annotation runtime Lcom/c/a/a/b;
         a = "content"
     .end annotation
 .end field
 
 .field public b:Ljava/lang/String;
-    .annotation runtime Lcom/d/a/a/b;
+    .annotation runtime Lcom/c/a/a/b;
         a = "packdata"
     .end annotation
 .end field
 
 .field public c:Ljava/lang/String;
-    .annotation runtime Lcom/d/a/a/b;
+    .annotation runtime Lcom/c/a/a/b;
         a = "version"
     .end annotation
 .end field
 
 .field public d:Ljava/lang/String;
-    .annotation runtime Lcom/d/a/a/b;
+    .annotation runtime Lcom/c/a/a/b;
         a = "sync_time"
     .end annotation
 .end field

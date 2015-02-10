@@ -8,3 +8,6 @@
 
 .method public abstract a(Lcom/xiaomi/hm/bleservice/a;)V
 .end method
+
+.method public abstract b()V
+.end method

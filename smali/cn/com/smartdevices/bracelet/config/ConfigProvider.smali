@@ -370,7 +370,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :try_start_0
     new-instance v0, Ljava/io/InputStreamReader;
@@ -424,11 +424,19 @@
     move-object v1, v0
 
     :goto_0
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->K()Ljava/lang/String;
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/config/ConfigProvider;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/a;->a(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->L()Ljava/lang/String;
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/config/ConfigProvider;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/g/a;->b(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -555,7 +563,11 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/x;->j(Ljava/lang/String;)V
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/config/ConfigProvider;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    invoke-static {v3, v2}, Lcn/com/smartdevices/bracelet/g/a;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     const-string v3, "ConfigProvider"
 
@@ -580,7 +592,11 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/x;->k(Ljava/lang/String;)V
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/config/ConfigProvider;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    invoke-static {v3, v2}, Lcn/com/smartdevices/bracelet/g/a;->c(Landroid/content/Context;Ljava/lang/String;)V
 
     move v2, v0
 

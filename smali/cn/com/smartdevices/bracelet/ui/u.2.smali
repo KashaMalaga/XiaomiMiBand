@@ -1,5 +1,5 @@
 .class Lcn/com/smartdevices/bracelet/ui/u;
-.super Lcom/e/a/a/h;
+.super Lcom/d/a/a/h;
 
 
 # instance fields
@@ -12,7 +12,7 @@
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/u;->a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
 
-    invoke-direct {p0}, Lcom/e/a/a/h;-><init>()V
+    invoke-direct {p0}, Lcom/d/a/a/h;-><init>()V
 
     return-void
 .end method
@@ -34,11 +34,17 @@
 
     invoke-direct {v0, p3}, Ljava/lang/String;-><init>([B)V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/j/f;->a(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/j/g;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/u;->a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->i(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/k/i;->a(Landroid/content/Context;Ljava/lang/String;)Lcn/com/smartdevices/bracelet/k/i;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/j/g;->a()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/k/i;->c()Z
 
     move-result v0
 
@@ -48,7 +54,7 @@
 
     move-result-wide v0
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->f(J)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/z;->a(J)V
 
     :cond_0
     return-void

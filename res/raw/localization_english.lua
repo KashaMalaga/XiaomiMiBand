@@ -98,6 +98,8 @@ localization_English_table = {
     welcome_use_weight_scale_not_bind = "Click to bind weight scale",
     welcome_use_mi_health="Welcome use MI health",
 }
+
+
 localization_French_table = {
     calories_table={
         {str="≈1 duo d'oeufs durs",	calories=96},
@@ -305,6 +307,7 @@ localization_Portuguese_table = {
     weather_tips_title_1 = "Mau tempo, fique em casa",
     weather_tips_info = "Em casa faça abdominais e salte à corda!",
 }
+ 
 localization_Spanish_table = {
     calories_table={
 		{str="≈ Pepino (100g)", calories=14},
@@ -518,119 +521,8 @@ localization_Spanish_table = {
     weather_tips_title_1 = "Gran contaminación, intente estar a cubierto.",
     weather_tips_info = "¡Hacer abdominales o saltar la cuerda son grandes deportes de interior!",
  }
-    calories_table={
-        {str="≈1 duo d'oeufs durs",	calories=96},
-        {str="≈1 tranche de pain",	calories=100},
-        {str="≈1 canette de thé glacé",	calories=112},
-        {str="≈1 omelette",	calories=118},
-        {str="≈2 brochettes",	calories=124},
-        {str="≈1 canette de Coca-Cola",	calories=153},
-        {str="≈3 brochettes",	calories=186},
-        {str="≈2 duo d'oeufs durs",	calories=192},
-        {str="≈2 tranches de pain",	calories=200},
-        {str="≈1 bol de riz",	calories=210},
-        {str="≈1 pain",	calories=221},
-        {str="≈1 paquet de dragibus",	calories=223},
-        {str="≈2 canettes de thé glacé",	calories=224},
-        {str="≈1 petite frite",	calories=224},
-        {str="≈1 tartelette",	calories=224},
-        {str="≈2 omelettes",	calories=236},
-        {str="≈4 brochettes",	calories=248},
-        {str="≈1 hamburger",	calories=260},
-        {str="≈1 beignet",	calories=270},
-        {str="≈1 petit pain de viande",	calories=272},
-        {str="≈3 duo d'oeufs durs",	calories=288},
-        {str="≈1 cône",	calories=290},
-        {str="≈3 tranches de pain",	calories=300},
-        {str="≈2 canettes de Coca-Cola",	calories=306},
-        {str="≈1 moyenne frite",	calories=328},
-        {str="≈3 omelettes",	calories=354},
-        {str="≈1 tartelette aux œufs",	calories=375},
-        {str="≈4 tranches de pain",	calories=400},
-        {str="≈1 grande frite",	calories=402},
-        {str="≈2 bols de riz",	calories=420},
-        {str="≈2 pains",	calories=442},
-        {str="≈2 paquet de dragibus",	calories=446},
-        {str="≈2 tartelettes",	calories=448},
-        {str="≈1 paquet de nouilles instantanées",	calories=470},
-        {str="≈5 tranches de pain",	calories=500},
-        {str="≈1 assiette de riz frit",	calories=516},
-        {str="≈2 hamburgers",	calories=520},
-        {str="≈2 beignets",	calories=540},
-        {str="≈2 petits pains de viande",	calories=544},
-        {str="≈2 cônes",	calories=580},
-        {str="≈1 bol de nouilles instantanées",	calories=581},
-        {str="≈1 bol de nouilles au boeuf",	calories=593},
-        {str="≈10 brochettes",	calories=620},
-        {str="≈3 bols de riz",	calories=630},
-        {str="≈3 pains",	calories=663},
-        {str="≈2 tartelettes aux œufs",	calories=750},
-        {str="≈3 beignets",	calories=810},
-        {str="≈3 petits pains de viande",	calories=816},
-    },
 
-    ok='OK',
 
-    hour='h',
-    minute='min',
-    month='mois',
-    day='jour',
-    step="pas",
-    km='KM',
-    minute_format='%dmin',
-    hour_minute_format='%dh%dmin',
-    hour_format='%dh',
-
-    welcome_use="Salut, je suis ton Mi Band.",
-    last_week_walked_format='La semaine dernier, tu as marché %d pas.',
-    last_week_walked_info_format='%d km parcourus, %d cal. brûlées',
-    last_month_walked_format='Le mois dernier, tu as marché %d pas.',
-    last_month_walked_info_format='%d km parcourus, %d cal. brûlées',
-
-    get_over_format=", environ %d gr de graisse.",
-    click_to_get_help="Comment mieux utiliser le Mi Band.",
-    take_a_walk="Va faire un tour avec Mi Band.",
-    take_a_walk_info="Mi Band suivra ton activité et t'aidera à être en meilleur santé.",
-    unlock_hint="Dévérouiller le téléphone avec votre Mi Band",
-    unlock_hint_info="Dis au revoir au temps d'avant.",
-    no_data_hint_0="Continuer de bouger, fais du sport une partie de ta vie.",
-    no_data_hint_1="Tu veux rester heureux? Alors cours.",
-    no_data_hint_2="L'entrainement cardio te rendra léger et frais chaque jour! ",
-    no_data_hint_3="Un adulte normal passe 15%-20% de son temps de sommeil en phase de sommeil profond. ",
-    not_binded_hint="Aucun Mi Band n'est associé à ce compte, en appairer un. ",
-    new_record_info="WoW! Tu viens d'exploser un record en marchant.",
-    new_record_format="Nouveau record, %d pas, %s %d",
-    today_goal_reached="Félicitation! You have achieved your goal today. ",
-    week_continue_reach_goal="Tu as atteint ton objectif chaque jour de cette semaine! Quelle semaine incroyable!",
-    challenge_format="Tu as atteint ton objectif %d jours d'affilé!",
-    personal_best_format="Ton meilleur record est %d jours!",
-    active_time_format_0="%dh",
-    active_time_format_1="%dh",
-    active_time_format_2="%dh%dmin",
-    activie_run_format_0="Couru %s. Bon boulot!",
-    activie_run_format_1="Couru %s. Tu fais des micracles!",
-    activie_run_format_2="Couru %s. Incroyable endurance!",
-    activie_run_consumed="%d cal brûlées. %s",
-
-    get_distance_format=", pour un total de %dm.",
-    activity_walk_format="%s a marché %d pas %s",
-    activity_walk_consumed_format="%d cal brûlées %s",
-
-    activity_activity_format="%s %s d'entrainement %s",
-    last_night_sleeped_good_format="La nuit dernière, tu as dormi %dh%dmin. Quelle bonne nuit!",
-    last_night_sleeped_normal_format="La nuit dernière, tu as dormi %dh%dmin.",
-    deep_sleep_format="En phase de sommeil profond pendant %dh%dmin.",
-
-    battery_low_info="Batterie faible, branche ton Mi Band.",
-    battery_very_low_info="Brancher au secteur",
-
-    cannot_find_bracelet="Impossible de trouver ton Mi Band?",
-    cannot_find_bracelet_info="Assure toi que ton Mi Band soit chargé et proche du téléphone.",
-
-    challenge_to_get="A %s jours de battre un nouveau record!",
-    record_reach_max="Tu as atteint ton meilleur record!",
-    new_record_born="Nouveau record!",
- }
 localization_Croatian_table = {
 	calories_table={
 	
@@ -698,100 +590,7 @@ localization_Croatian_table = {
 	record_reach_max="Postigli ste svoj najveći novi rekord!",
 	new_record_born="Novi rekord!",
  }
-localization_German_table = {
-    calories_table={
 
-    },
-
-    ok='OK',
-
-    hour='Std.',
-    minute='Min.',
-    month='Monat',
-    day='Tag',
-    step="Schritte",
-    km='km',
-    minute_format='%dmin',
-    hour_minute_format='%dh %dm',
-    hour_format='%dStd.',
-
-    welcome_use="Willkommen",
-    last_week_walked_format='Du bist letzte Woche %d Schritte gelaufen.',
-    last_week_walked_info_format='%dkm gelaufen, %dkcal verbrannt.',
-    last_month_walked_format='Du bist letzte Woche %d Schritte gelaufen.',
-    last_month_walked_info_format='%dkm gelaufen, %dkcal verbrannt.',
-
-    get_over_format=", ungefähr %d Gramm Fett.",
-    click_to_get_help="Mehr über das Band lernen",
-    take_a_walk="Gehe mit deinem Band spazieren",
-    take_a_walk_info="Dein Band behält den Überblick über jeden Deiner Schritte.",
-    unlock_hint="Sesam öffne Dich!",
-    unlock_hint_info="Nutze Dein Band, um dein Smartphone zu entsperren.",
-    no_data_hint_0="Wissenschaftler empfehlen zwischen 7,5 und 9 Stunden Schlaf jede Nacht.",
-    no_data_hint_1="Wiederholung ist die Mutter des Erfolgs.",
-    no_data_hint_2="Strebe nach Fortschritt, nicht nach Perfektion.",
-    no_data_hint_3="Egal wie langsam du läufst, du überrundest trotzdem jeden auf dem Sofa.",
-    not_binded_hint="Kein Band wurde diesem Konto hinzugefügt.",
-    new_record_info="Neuen Rekord aufgestellt!",
-    new_record_format="%d Schritte, %s %d",
-    today_goal_reached="Du hast Dein Ziel heute erreicht!",
-    week_continue_reach_goal="Du",
-
-    challenge_format="Du hast Dein Ziel für %d Tage hintereinander erreicht!",
-    personal_best_format="Deine längste Serie dauerte %d Tage!",
-    continue_with_skips_title="Du hast Dein Ziel gestern nicht erreicht. Nennen wir es einen Ruhetag ;)",
-    continue_with_skips_title_today="Du hast Dein Ziel heute nicht erreicht. Nennen wir es einen Ruhetag ;)",
-    personal_best_with_skips_format="Du hast %d Ruhetage übrig ;)",
-    continue_used_n_skips_format="Du hast Dein Ziel %d Tage hintereinander erreicht und hast noch %d Ruhetage.",
-    continue_used_0_skips_format="Du hast Dein Ziel %d Tage hintereinander erreicht und hast keinen Ruhetag übrig.",
-    personal_best_on_skip_day_title="%d-Tage-Serie! Du hast einen Ruhetag verdient!",
-    personal_best_on_skip_day_info="Nach jeder 7-Tage-Serie verdienst Du einen Ruhetag, den du nutzen kannst, falls Du Dein Ziel nicht erreicht hast.",
-    manual_lazy_title="Du hast Dein Ziel heute nicht erreicht.",
-    manual_lazy_subtitle="Deine Serie wird nicht unterbrochen, wenn heute ein Ruhetag für Dich ist.",
-    manual_lazy_title_used="Heute ist ein Ruhetag.",
-    manual_lazy_subtitle_used="You can earn more Lazy Days by breaking personal records.",
-    manual_fail_ytd_title = "Du hast Deine Serie gestern beendet.",
-    manual_fail_ytd_subtitle = "Serie war %d lang.",
-
-    active_time_format_0="%dm",
-    active_time_format_1="%dh",
-    active_time_format_2="%dh %dm",
-    activie_run_format_0="Ran %s. Sehr gut!",
-    activie_run_format_1="Ran %s. Das machst Du gut!",
-    activie_run_format_2="Ran %s.",
-    activie_run_consumed="%dkcal verbrannt. %s",
-
-    get_distance_format="ungefähr %dm.",
-    activity_walk_format="%s %d Schritte gelaufen, %s",
-    activity_walk_consumed_format="Burned %dcal%s.",
-    activity_rope_skipping_format="%s jumped rope %d times",
-    activity_situp_format="%s %d Sit-Ups",
-    activity_consumed_format="%dkcal verbrannt %s",
-    activity_activity_format="%s Worked out for %s, %s",
-    activity_activity_format_run="%s Worked out for %s, ran %s",
-    last_night_sleeped_good_format="Du hast Dich letzte Nacht für %s ausgeruht.",
-    last_night_sleeped_normal_format="Du hast letzte Nacht %s geschlafen.",
-    deep_sleep_format="Tieflschlaf (REM) dauerte %s.",
-
-    battery_low_info="Lade Dein Band",
-    battery_very_low_info="Der Akku deines Bands geht zur Neige.",
-
-    cannot_find_bracelet="Kann das Band nicht finden.",
-    cannot_find_bracelet_info="Stelle sicher, dass Dein Band aufgeladen ist.",
-    challenge_to_get="%s days from setting a new record!",
-    record_reach_max="You've tied your existing record!",
-    new_record_born="Du hast einen neuen Rekord aufgestellt.",
-
-    ---====== Weather tips ===============
-    weather_tips_title_0 = "Starke Luftverschmutzung, bleib drinnen",
-    weather_tips_title_1 = "Starke Luftverschmutzung, bleib drinnen",
-    weather_tips_info = "Sit-ups oder Seilsprung sind tolle Übungen für drinnen!",
-	
-	---------------Weight scale -------------------
-    welcome_use_weight_scale = "Welcome use weight scale",
-    welcome_use_weight_scale_not_bind = "Click to bind weight scale",
-    welcome_use_mi_health="Welcome use MI health",
-}
 localization_Russian_table = {
     calories_table={
 		{str="≈ Огурец грунт. (100г)",	calories=14},
@@ -1228,70 +1027,3 @@ localization_Italian_table = {
      game_share_to_not_hit_bonus = "no disegnato quando il premio successivo è quello di salvare il carattere di",
      less_than_one = "meno di un",
 }
-
-	calories_table={
-	
-	},
-	
-	ok='U redu',
-	
-	hour='sati',
-	minute='min',
-	month='mjesec',
-	day='dan',
-	step="korak",
-	km='KM',
-	minute_format='%d min',
-	hour_minute_format='%d sati %d min',
-	hour_format='%d sati',
-	
-	welcome_use="Pozdrav, Ja sam tvoj Mi Band.",
-	last_week_walked_format='Prošli tjedan, prohodali ste %d koraka.',
-	last_week_walked_info_format='Prohodano %d km, potrošeno %d kal.',
-	last_month_walked_format='Prošli mjesec, prohodali ste %d koraka.',
-	last_month_walked_info_format='Prohodano %d km, potrošeno %d kal.',
-	
-	get_over_format=", O %d grama ili masti.",
-	click_to_get_help="Saznajte što sve možete s Mi Band.",
-	take_a_walk="Prošetajte s Mi Band.",
-	take_a_walk_info="Mi Band će pratiti vaše aktivnosti i pomoći vam da se osjećate zdravije.",
-	unlock_hint="Otključajte telefon vašim Mi Band,",
-	unlock_hint_info="recite \"Zbogom\" starim vremenima.",
-	no_data_hint_0="Nastavite se kretati, neka sport postane dijelom vašeg života.",
-	no_data_hint_1="Želite oststi sretni? Samo trčite.",
-	no_data_hint_2="Kardio vježba će vam omogućiti da se osjećate laganije i svježe svaki dan! ",
-	no_data_hint_3="Normalna odrasla troši 15% -20% ukupnog vremena sna u dubokoj fazi sna. ",
-	not_binded_hint="Nijedan Mi Band nije povezan na ovaj račun, povežite jedan sada. ",
-	new_record_info="WoW! Oborili ste rekord u hodanju.",
-	new_record_format="Novi rekord, %d koraka, %s %d",
-	today_goal_reached="Čestitke! Postigli ste danjašnji cilj. ",
-	week_continue_reach_goal="Postigli ste cilj svakog dana ovog tjedna! Stvarno fantastičan tjedan!",
-	challenge_format="Postigli ste svoj cilj za %d dan(a)!",
-	personal_best_format="Vaš najveći rekord je %d dan(a)!",
-	active_time_format_0="%d sati",
-	active_time_format_1="%d sati",
-	active_time_format_2="%d sati %d min",
-	activie_run_format_0="Trčano %s. Dobro je!",
-	activie_run_format_1="Trčano %s. Ide vam fantastično!",
-	activie_run_format_2="Trčano %s, Nevjerojatno ste izdržljivi!",
-	activie_run_consumed="Potrošeno %d kal. %s",
-	
-	get_distance_format=", ukupno od %d m.",
-	activity_walk_format="%s Prohodano %d koraka %s",
-	activity_walk_consumed_format="Potrošeno %d kal %s",
-	
-	activity_activity_format="%s Napravljeno %s %s",
-	last_night_sleeped_good_format="Prošle noći ste spavali %d sati %d min. Sad ste stvarno naspavani!",
-	last_night_sleeped_normal_format="Prošle noći ste spavali %d sati %d min.",
-	deep_sleep_format="Faza dubokog sna je bila %d sati %d min.",
-	
-	battery_low_info="Slaba baterija, stavite Mi Band na punjenje.",
-	battery_very_low_info="Priključite na punjač",
-	
-	cannot_find_bracelet="Ne možete pronaći svoj Mi Band?",
-	cannot_find_bracelet_info="Uvjerite se da vaš MiBand ima energije i nalazi se u blizini vašeg telefona.",
-	
-	challenge_to_get="%s dana od postizanja novog rekorda!",
-	record_reach_max="Postigli ste svoj najveći novi rekord!",
-	new_record_born="Novi rekord!",
- }

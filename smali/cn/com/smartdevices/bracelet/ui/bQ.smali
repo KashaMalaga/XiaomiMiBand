@@ -1,152 +1,68 @@
 .class Lcn/com/smartdevices/bracelet/ui/bQ;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.super Lcn/com/smartdevices/bracelet/a/b;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/bP;
+.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/bP;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->a:Lcn/com/smartdevices/bracelet/ui/bP;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->b:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/a/b;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
+.method public c(Ljava/lang/Object;)V
+    .locals 2
+
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->c(Ljava/lang/Object;)V
 
     const-string v0, "NewAlarmActivity"
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const-string v1, "set alarm to mili OK"
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v2, "onItemClick: "
+    return-void
+.end method
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public d(Ljava/lang/Object;)V
+    .locals 3
 
-    move-result-object v1
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->d(Ljava/lang/Object;)V
 
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->b:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
 
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->WEEK_MASK:[I
-
-    aget v0, v0, p3
-
-    const/4 v1, 0x1
-
-    shl-int/2addr v1, p3
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->a:Lcn/com/smartdevices/bracelet/ui/bP;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/bP;->a(Lcn/com/smartdevices/bracelet/ui/bP;)I
-
-    move-result v2
-
-    and-int/2addr v1, v2
-
-    shr-int/2addr v1, p3
-
-    const-string v2, "NewAlarmActivity"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "thebit at position: "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string v4, ", thebit="
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->a:Lcn/com/smartdevices/bracelet/ui/bP;
-
-    if-nez v1, :cond_0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->a:Lcn/com/smartdevices/bracelet/ui/bP;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/bP;->a(Lcn/com/smartdevices/bracelet/ui/bP;)I
-
-    move-result v1
-
-    or-int/2addr v0, v1
-
-    :goto_0
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/ui/bP;->a(Lcn/com/smartdevices/bracelet/ui/bP;I)I
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->a:Lcn/com/smartdevices/bracelet/ui/bP;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/bP;->b(Lcn/com/smartdevices/bracelet/ui/bP;)Lcn/com/smartdevices/bracelet/view/SelectDaysView;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->b(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;)Landroid/content/Context;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->a:Lcn/com/smartdevices/bracelet/ui/bP;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->b:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/bP;->a(Lcn/com/smartdevices/bracelet/ui/bP;)I
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->b(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;)Landroid/content/Context;
 
-    move-result v1
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->a(I)V
+    const v2, 0x7f080051
+
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
     return-void
-
-    :cond_0
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bQ;->a:Lcn/com/smartdevices/bracelet/ui/bP;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/bP;->a(Lcn/com/smartdevices/bracelet/ui/bP;)I
-
-    move-result v1
-
-    xor-int/lit8 v0, v0, -0x1
-
-    and-int/2addr v0, v1
-
-    goto :goto_0
 .end method

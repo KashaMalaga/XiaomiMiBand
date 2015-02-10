@@ -115,10 +115,15 @@
 
     packed-switch v0, :pswitch_data_0
 
+    :cond_0
     :goto_0
     return-void
 
     :pswitch_0
+    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    if-eqz v0, :cond_0
+
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Ljava/lang/Long;

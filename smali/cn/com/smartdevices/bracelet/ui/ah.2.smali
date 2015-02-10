@@ -1,77 +1,116 @@
 .class Lcn/com/smartdevices/bracelet/ui/ah;
-.super Lcn/com/smartdevices/bracelet/ui/U;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/X;
+.field final synthetic a:Landroid/view/View;
+
+.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/Z;
+
+.field private c:Z
 
 
 # direct methods
-.method private constructor <init>(Lcn/com/smartdevices/bracelet/ui/X;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/Z;Landroid/view/View;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/ah;->a:Lcn/com/smartdevices/bracelet/ui/X;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/ah;->b:Lcn/com/smartdevices/bracelet/ui/Z;
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/U;-><init>()V
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/ah;->a:Landroid/view/View;
 
-    return-void
-.end method
-
-.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/ui/X;Lcn/com/smartdevices/bracelet/ui/Y;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/ui/ah;-><init>(Lcn/com/smartdevices/bracelet/ui/X;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected a()I
-    .locals 1
+.method public onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 2
 
-    const v0, 0x7f03004a
+    const-string v0, "Dynamic.Detail"
 
-    return v0
+    const-string v1, "Dismiss Anim Canceled!!"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/ah;->c:Z
+
+    return-void
 .end method
 
-.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 4
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 2
 
-    invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/U;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/ah;->c:Z
 
-    move-result-object v1
+    if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/ah;->getArguments()Landroid/os/Bundle;
+    const-string v0, "Dynamic.Detail"
 
-    move-result-object v2
+    const-string v1, "Dismiss Anim Ended!!"
 
-    if-eqz v2, :cond_0
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v0, "Msg"
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ah;->a:Landroid/view/View;
 
-    invoke-virtual {v2, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ah;->b:Lcn/com/smartdevices/bracelet/ui/Z;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/Z;->a(Lcn/com/smartdevices/bracelet/ui/Z;Z)Z
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ah;->b:Lcn/com/smartdevices/bracelet/ui/Z;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/Z;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f08018e
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ah;->b:Lcn/com/smartdevices/bracelet/ui/Z;
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/Z;->k(Lcn/com/smartdevices/bracelet/ui/Z;)I
 
-    move-result-object v0
+    move-result v0
 
-    check-cast v0, Landroid/widget/TextView;
+    const/4 v1, 0x1
 
-    const-string v3, "Msg"
+    if-ne v0, v1, :cond_0
 
-    invoke-virtual {v2, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ah;->b:Lcn/com/smartdevices/bracelet/ui/Z;
 
-    move-result-object v2
+    const v1, 0x7f080126
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/Z;->a(I)V
 
     :cond_0
-    return-object v1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ah;->b:Lcn/com/smartdevices/bracelet/ui/Z;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/Z;->b(Lcn/com/smartdevices/bracelet/ui/Z;Landroid/animation/Animator;)Landroid/animation/Animator;
+
+    return-void
+.end method
+
+.method public onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
 .end method

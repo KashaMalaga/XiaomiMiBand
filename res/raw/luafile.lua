@@ -40,43 +40,42 @@ COLOR_NORMAL_BLACK =  0x000000
 
 function getCaloriesString(calories)
     log('cal :'..calories)
+    -- test
+    --calories = math.random(100, 1000);
 
     defautMsg  = ""
-    threshHoldValue = 14
+    threshHoldValue = 96
 
     if calories < threshHoldValue then
         return defautMsg
     end
-	
- t = {}
 
-    best = 999999
-
-    for i,item in ipairs(getString('calories_table')) do
-        _c = item["calories"]
-        if math.abs(calories - _c) < best then
-            best = math.abs(calories - _c)
-        end
+    min = calories - 10
+    if min < threshHoldValue then
+        min  = threshHoldValue
     end
+    max = calories + 10
 
-    lesscalfound = false
-
+    t = {}
     for i,item in ipairs(getString('calories_table')) do
         _s = item["str"]
         _c = item["calories"]
-        if _c == calories - best then
-            table.insert(t,_s)
-            lesscalfound = true
-        elseif _c == calories + best and lesscalfound == false then
+        if _c >= min and _c <= max then
             table.insert(t,_s)
         end
     end
-	
+
     if #t > 0 then
         r = math.random(1,#t)
         return t[r]
     end
 
+    mod = calories % 9
+    fat = (calories - mod) / 9
+    msg = string.format(getString('get_over_format'), fat);
+
+    log('cal mod='..mod..', fat='..fat..', msg='..msg);
+    return msg
 end
 
 ---------------------------------------------------
@@ -220,6 +219,35 @@ function judgeUniqueByDate_Type(listDao,ConfigInfo,stype)
     end
 end
 
+function judgeUnique(listDao,ConfigInfo, table)
+    luaAction = ConfigInfo:getLuaAction()
+    qb = listDao:queryBuilder()
+
+    Properties = luajava.newInstance("de.greenrobot.daobracelet.LuaListDao$Properties")
+
+    today = "" .. os.date("%Y-%m-%d",os.time())
+    w1 = Properties.Date:eq(today)
+    w2 = Properties.Type:eq(table.stype)
+    whereT1 = Properties.Text1:eq(table.t1)
+    whereT2 = Properties.Text2:eq(table.t2)
+
+    luaAction:queryWhere(qb,w1)
+    luaAction:queryWhere(qb,w2)
+    luaAction:queryWhere(qb,whereT1)
+    luaAction:queryWhere(qb,whereT2)
+
+    n = luaAction:queryCount(qb)
+    if n >= 1 then
+        log(" judgeUnique, already add msg, type is: ".. stype)
+        return false
+    else
+        log(" judgeUnique, true "..stype .. " t1 = " .. table.t1)
+        return true
+    end
+end
+
+
+
 function getTimeString1(time)
     m1 = time % 60
     h1 = (time - m1) / 60
@@ -330,14 +358,15 @@ function setMessage(listDao,table)
     setMessageByExpireDate(listDao, table, "")
 end
 
---
--- if exist return
---
+----------
+--if exist with same type and t1/t2 then return
+----------
 function uniqueMsg(listDao,ConfigInfo,table)
-    if false == judgeUniqueByDate_Type(listDao,ConfigInfo,table.stype) then
+    if false == judgeUnique(listDao,ConfigInfo,table) then
         return
     end
 
+    delMsgByType(listDao, ConfigInfo, table.stype)
     setMessage(listDao,table)
 end
 
@@ -612,8 +641,16 @@ end
 
 -- 1003
 function unlockHint(listDao,ConfigInfo)
-    t1 = getString('unlock_hint')
-    t2 = getString('unlock_hint_info')
+
+    if true == ConfigInfo:isSetScreenUnlock() then
+        t1 = getString('unlock_hint')
+        t2 = getString('unlock_hint_info')
+        log("unlock, unlockState: true , t1: "..t1..", t2: "..t2)
+    else
+        t1 = getString('unlock_password_hint')
+        t2 = getString('unlock_password_hint_info')
+        log("unlock, unlockState: false , t1: "..t1..", t2: "..t2)
+    end
     stype = "1003"
 
     strScript = "function doAction(context, luaAction) \
@@ -633,6 +670,28 @@ function unlockHint(listDao,ConfigInfo)
     t.strScript = strScript
 
     uniqueMsg(listDao,ConfigInfo,t)
+end
+
+function isShown24Hour(listDao ,ConfigInfo)
+
+    i = 1
+
+    if 1 == i then
+        createdTime = "" ..os.date("%X" ,os.time())
+        log("unlock , createdTime :" ..createdTime)
+        i = 2
+    else
+        nowTime = "" ..os.date("%X" , os.time())
+        log("unlock , nowTime :" ..nowTime)
+    end
+
+    --log("unlock , isShown24Hour.createTime: " ..createdTime ..", nowTime: " ..nowTime())
+    if createdTime == nowTime then
+        return true
+    else
+        return false
+    end
+
 end
 
 function clearUnlockHint(listDao,ConfigInfo)
@@ -742,11 +801,7 @@ end
 
 
 --2002
-function dayComplete(listDao,ConfigInfo)
-
--- XXX
--- qb:where() has problem not fixed yet !!!!
---
+function dayComplete(listDao, ConfigInfo, stepsObj, stepsGoalObj)
 --[[
     Properties = luajava.newInstance("de.greenrobot.daobracelet.LuaListDao$Properties")
 
@@ -766,19 +821,26 @@ function dayComplete(listDao,ConfigInfo)
     n = w(w1,w2);
  --   ]]
 
-
     t1 = getString('today_goal_reached')
-    t2 = ""
+    t2 = getString('today_goal_reached_click_info')
     stype = "2002"
 
---    uniqueMsg(listDao,ConfigInfo,t1,t2,stype)
+    steps = stepsObj:intValue()
+    stepsGoal = stepsGoalObj:intValue()
+
+    log("dayComplete steps = ".. steps)
+    if (steps < stepsGoal) then
+        stepsLeft = stepsGoal - steps
+        t1 =string.format(getString('daily_steps_not_comlete'),  stepsLeft)
+    end
+
     t = {}
     t.t1 = t1
     t.t2 = t2
     t.stype = stype
     t.strScript =
     "function doAction(context, luaAction) \
-        local intent = luaAction:getIntentFromString('cn.com.smartdevices.bracelet.ui.DynamicDetailActivity');\
+        local intent = luaAction:getIntentFromString('cn.com.smartdevices.bracelet.ui.DailySportReportActivity');\
         luaAction:putExtra(intent,'Mode',0x01)\
         luaAction:putExtra(intent,'From','FromDynamicList')\
         luaAction:putExtra(intent,'Action','RefCompleteGoal')\
@@ -840,7 +902,7 @@ function challenge(listDao,ConfigInfo)
 
     cr = ConfigInfo:getContinueReport()
 
-    isValid = cr:isValid()
+    isValid = cr:isChallengeValid()
     if (isValid == false) then
         log("clear the continue record because it's invalid");
         clearRecord(listDao, ConfigInfo:getLuaAction(), stype)
@@ -967,11 +1029,12 @@ end
 -- challengefailed
 
 --2006
-function weekReport(listDao,ConfigInfo)
+function weekReport(listDao,ConfigInfo,personInfo)
     wr = ConfigInfo:getWeekReport()
 
     t1 = string.format(getString('last_week_walked_format'), wr:getSteps());
-    t2 = string.format(getString('last_week_walked_info_format'),(wr:getDistance() / 1000), wr:getCalories());
+    t2 = string.format(getString('last_week_walked_info_format'),getReportDistanceByUnit(wr,personInfo:getUnit() ), wr:getCalories());
+    log( 'getActivityMsgs,weekreport ...t2:'..t2)
     stype = "2006"
 
 --    uniqueMsg(listDao,ConfigInfo,t1,t2,stype)
@@ -988,11 +1051,29 @@ function weekReport(listDao,ConfigInfo)
     uniqueMsg(listDao,ConfigInfo,t)
 end
 
+function getReportDistanceByUnit(report, unit_type)
+    --wr = ConfigInfo:getWeekReport()
+    if unit_type == 0 then
+        local dis = ( report:getDistance() / 1000 )
+        return round(dis ,0 )..getString('km')
+    else
+        local dis_british = ( report:getDistance() / 1000 ) * 0.621
+        return  round(dis_british , 0)..getString('mile')
+    end
+end
+
+function round(val, decimal)
+    if (decimal) then
+        return math.floor( (val * 10^decimal) + 0.5) / (10^decimal)
+    else
+        return math.floor(val+0.5)
+    end
+end
 --2007
-function monthReport(listDao,ConfigInfo)
+function monthReport(listDao,ConfigInfo,personInfo)
     mr = ConfigInfo:getMonthReport()
     t1 = string.format(getString('last_month_walked_format'), mr:getSteps());
-    t2 = string.format(getString('last_month_walked_info_format'),(mr:getDistance() / 1000), mr:getCalories());
+    t2 = string.format(getString('last_month_walked_info_format'),getReportDistanceByUnit(mr,personInfo:getUnit()), mr:getCalories());
     stype = "2007"
 
 --    uniqueMsg(listDao,ConfigInfo,t1,t2,stype)
@@ -1054,7 +1135,7 @@ function getActivityLabScript(activityItem)
 end
 
 --3001
-function activityRun(listDao,ConfigInfo)
+function activityRun(listDao,ConfigInfo ,personInfo)
     activityItem = ConfigInfo:getActiveItem()
 
     time = activityItem:getActiveTime()
@@ -1072,8 +1153,8 @@ function activityRun(listDao,ConfigInfo)
 
     timestring = getTimeString2(activityItem:getStart(), activityItem:getStop()).." "
     msgTable = {
-        string.format(getString('activie_run_format_0'), getDistanceString(activityItem:getDistance())),
-        string.format(getString('activie_run_format_1'), getDistanceString(activityItem:getDistance())),
+        string.format(getString('activie_run_format_0'), getDistanceStringByUnit(activityItem:getDistance(),personInfo:getUnit())),
+        string.format(getString('activie_run_format_1'), getDistanceStringByUnit(activityItem:getDistance(),personInfo:getUnit())),
         string.format(getString('activie_run_format_2'), activeTime),
     }
 
@@ -1100,6 +1181,7 @@ function activityRun(listDao,ConfigInfo)
 end
 
 function getDistanceString(meter)
+    log('getActivityMsgs,  getDistanceString,distance='..meter.."m")
     if string.len(meter) > 3 then
         m2 = string.sub(meter,-3,-3) --1234 get 2
         m1 = string.sub(meter,1,-4)  --xxx234 get xxx
@@ -1114,8 +1196,34 @@ function getDistanceString(meter)
     end
 end
 
+function getDistanceStringByUnit(meter ,unit_type)
+
+    --unit_type = personInfo:getUnit()
+    if unit_type == 0 then
+        return getDistanceString(meter)
+
+    else
+        british_meter = 3.28 * meter
+        log('getActivityMsgs, getDistanceStringByUnit ,unit_type='..unit_type.."; meter:"..meter.."; british_meter:"..british_meter)
+
+        if british_meter < 5280 then
+            return string.format(getString('get_distance_format_british'), british_meter)
+        else
+            british_meter = string.format( "%d" ,(british_meter / 5280) * 10 )
+            british_m2 = string.sub(british_meter ,-1 ,-1)  -- 1234  get 4
+            british_m1 = string.sub(british_meter ,1 ,-2)   -- 1234  get 123
+
+            if british_m2 ~= "0" then
+                return british_m1.."."..british_m2..getString('mile')
+            else
+                return british_m1..getString('mile')
+            end
+
+        end
+    end
+end
 --3002
-function activityWalk(listDao,ConfigInfo)
+function activityWalk(listDao,ConfigInfo,PersionInfo)
     activityItem = ConfigInfo:getActiveItem()
 
     timestring = getTimeString2(activityItem:getStart(),activityItem:getStop()).." "
@@ -1124,7 +1232,8 @@ function activityWalk(listDao,ConfigInfo)
         timestring = getTimebyMinutes(activityItem:getStart()).." "
     end
 
-    t1 = string.format(getString('activity_walk_format'), timestring, activityItem:getSteps(), getDistanceString(activityItem:getDistance()))
+    t1 = string.format(getString('activity_walk_format'), timestring, activityItem:getSteps(), getDistanceStringByUnit(activityItem:getDistance(), PersionInfo:getUnit()))
+    log('getActivityMsgs, activityWalk---t1='..t1)
     t2 = string.format(getString('activity_walk_consumed_format'), activityItem:getCalories(), getCaloriesString(activityItem:getCalories()))
 
     stype = "3002"
@@ -1145,7 +1254,8 @@ function activityWalk(listDao,ConfigInfo)
 end
 
 --3003
-function activityActivity(listDao,ConfigInfo)
+function activityActivity(listDao,ConfigInfo ,personInfo)
+    log('getActivityMsgs, activityActivity----personInfo:unit='..personInfo:getUnit())
     activityItem = ConfigInfo:getActiveItem()
 
     timestring1 = getTimeString1(activityItem:getActiveTime())
@@ -1154,13 +1264,16 @@ function activityActivity(listDao,ConfigInfo)
         timestring2 = getTimebyMinutes(activityItem:getStart()).." "
         runDis = activityItem:getRunDistance()
         if (runDis > 0) then
-            t1 = string.format(getString('activity_activity_format_run'), timestring2, timestring1, getDistanceString(runDis))
+            t1 = string.format(getString('activity_activity_format_run'), timestring2, timestring1, getDistanceStringByUnit(runDis ,personInfo:getUnit()))
+            log('getActivityMsgs, activityActivity---t1='..t1)
         else
-            t1 = string.format(getString('activity_activity_format'), timestring2, timestring1, getDistanceString(activityItem:getDistance()))
+            t1 = string.format(getString('activity_activity_format'), timestring2, timestring1, getDistanceStringByUnit(activityItem:getDistance(),personInfo:getUnit()))
+            log('getActivityMsgs, activityActivity---t1='..t1)
         end
     else
         timestring2 = getTimeString2(activityItem:getStart(), activityItem:getStop()).." "
-        t1 = string.format(getString('activity_activity_format'), timestring2, timestring1, getDistanceString(activityItem:getDistance()))
+        t1 = string.format(getString('activity_activity_format'), timestring2, timestring1, getDistanceStringByUnit(activityItem:getDistance(),personInfo:getUnit()))
+        log('getActivityMsgs, activityActivity---t1='..t1)
     end
 
     t2 = string.format(getString('activity_walk_consumed_format'), activityItem:getCalories(), getCaloriesString(activityItem:getCalories()))
@@ -1380,7 +1493,7 @@ function braceletdisconnect(listDao,ConfigInfo)
     t = {}
     t.t1 = getString('bracelet_disconnect')
     t.t2 = ""
-    t.json = "{txtColor="..0xff2222.."}"
+    t.json = ""
     t.index = "5004"
     t.strScript = strScript
     t.stype = "5004"
@@ -1472,7 +1585,11 @@ function getDefaultMsgs(listDao, ConfigInfo)
     if ConfigInfo:getShowUnlockInfo() then
         bandBinded = ConfigInfo:getIsBind()
         if (bandBinded) then
-            unlockHint(listDao,ConfigInfo)
+            if isShown24Hour() then
+                clearUnlockHint(listDao,ConfigInfo)
+            else
+                unlockHint(listDao,ConfigInfo)
+            end
         else
             clearUnlockHint(listDao,ConfigInfo)
         end
@@ -1484,7 +1601,8 @@ function getDefaultMsgs(listDao, ConfigInfo)
 end
 
 
-function getAchievementMsgs(listDao, ConfigInfo)
+function getAchievementMsgs(listDao, ConfigInfo, personInfo)
+    log('getActivityMsgs ,getAchievementMsgs-------')
     --new record
     if true == ConfigInfo:getShowNewRecord() then
         newRecord(listDao,ConfigInfo)
@@ -1503,15 +1621,15 @@ function getAchievementMsgs(listDao, ConfigInfo)
     --show weekreport
     if true == ConfigInfo:getShowWeekReport() then
         log('getAchievementMsgs .... 2')
-        weekReport(listDao,ConfigInfo)
+        weekReport(listDao,ConfigInfo,personInfo)
     end
     --show monthreport
     if true == ConfigInfo:getShowMonthReport() then
-        monthReport(listDao,ConfigInfo)
+        monthReport(listDao,ConfigInfo,personInfo)
     end
 end
 
-function getActivityMsgs(listDao, ConfigInfo)
+function getActivityMsgs(listDao, ConfigInfo ,personInfo)
     log('getActivityMsgs ')
 
     activityItem = ConfigInfo:getActiveItem()
@@ -1521,13 +1639,13 @@ function getActivityMsgs(listDao, ConfigInfo)
 
     --activity
     if mode == 0 then
-        activityActivity(listDao,ConfigInfo)
+        activityActivity(listDao,ConfigInfo,personInfo)
     --walk
     elseif mode == 1 then
-        activityWalk(listDao,ConfigInfo)
+        activityWalk(listDao,ConfigInfo ,personInfo)
     --run
     elseif mode == 2 then
-        activityRun(listDao,ConfigInfo)
+        activityRun(listDao,ConfigInfo ,personInfo)
     elseif mode == 3 then
         activitySitup(listDao, ConfigInfo)
     elseif mode == 4 then
@@ -1611,6 +1729,251 @@ function getLuaVersion(Cinfo)
     log("get lua version:" .. __luaVersion)
 end
 
+---======================================
+--              GAME AREA
+---======================================
+KEY_WEBTYPE = "web_type";
+KEY_WEBURL = "web_url";
+KEY_ACTION_BAR_COLOR = "ActionBarColor";
+KEY_SHOW_SHARE = "ShowShare";
+KEY_EVENT_PAGE_TYPE = "EventPageType";
+WEBTYPE_SYSTEM_BLOG = 2;
+STR_GAME_REGISTER = "game_registered";
+STR_GAME_NOT_REGISTER = "game_not_registered";
+STR_GAME_DEFAULT = "game_default";
+STR_GAME_PLAYING = "game_playing";
+STR_GAME_PLAYING_FAIL = "game_playing_fail";
+STR_GAME_PLAYING_FAILED = "game_playing_failed";
+STR_GAME_BONUS = "game_bonus";
+STR_GAME_CLEAR_BANNER = "game_clear_banner";
+
+KEY_SHARE_CONTENT = "shareToContent"
+
+
+function getDayDif1(y, m, d)
+    date1 = os.date("*t")
+
+    time2 = os.time{year=y, month = m, day = d}
+    log("time 2 = ".. time2)
+    date2 = os.date("*t", time2)
+
+    return (date1.yday - date2.yday)
+end
+
+function getDayDif(timeStamp)
+    timeStamp = timeStamp + 1  -- +1s to fix bug: date.yday is yesterday if cur time is 0:00:00
+
+    date1 = os.date("*t")
+    date2 = os.date("*t", timeStamp)
+
+    day1 = date1.year * 365 + date1.yday;
+    day2 = date2.year * 365 + date2.yday;
+    log("date2 yday = "..day2.." date1 yday="..day1)
+
+    return (day2 - day1)
+end
+
+function getDayDifElapsed(timeStamp)
+    date1 = os.date("*t")
+    date2 = os.date("*t", timeStamp)
+
+    return (date1.yday - date2.yday)
+end
+
+function getTimeStamp(date1)
+    timeStamp = ((date1 - 1970) * 365 + date1.yday) * 24 * 3600 + ((date1.hour * 60) + date1.min) * 60 + date1.sec
+    return timeStamp
+end
+
+function showGameBanner(listDao, ConfigInfo)
+    -- Defaults
+    actionBarColor = COLOR_NORMAL_BLUE
+    listTxtColor = COLOR_NORMAL_BLUE
+    sharePageType = 0
+    shareContent = getString("share_to_content_for_event")
+
+    t = {}
+    t.t1 = getString("game_register")
+    t.t2 = getString("game_not_register_info")
+
+    title_str = ConfigInfo:getTitle();
+
+    if (title_str == STR_GAME_CLEAR_BANNER) then
+        clearRecord(listDao, ConfigInfo:getLuaAction(), ConfigInfo:getType())
+        return
+    end
+
+    if title_str == STR_GAME_REGISTER then
+        actionBarColor = COLOR_REGISTER
+        sharePageType = 1
+
+        daydif = 1
+        if (ConfigInfo:getTimeStamp() > 0) then
+            daydif = getDayDif(ConfigInfo:getTimeStamp())
+        end
+
+        if (daydif == 0) then
+            daydif = getString("less_than_one")
+        end
+        t.t1 = getString("game_register")
+        t.t2 = string.format(getString("game_register_info"), daydif)
+
+        shareContent = string.format(getString("game_share_to_registered"), daydif)
+
+    elseif title_str == STR_GAME_NOT_REGISTER then
+        actionBarColor = COLOR_REGISTER
+        sharePageType = 1
+
+        t.t1 = getString("game_register")
+        t.t2 = getString("game_not_register_info")
+        shareContent = getString("share_to_content_for_event")
+
+    elseif title_str == STR_GAME_PLAYING then
+        t.t2 = getString("click_to_show_result")
+
+        steps = ConfigInfo:getRecordStep()
+        startTime = ConfigInfo:getTimeStamp()
+        stopTime = ConfigInfo:getTimeStamp1()
+        bonusOpenTime = ConfigInfo:getTimeStamp2()
+        log("Game playing steps = "..steps.." starttime="..startTime)
+        goal = ConfigInfo:getGoal();
+        if (getDayDif(stopTime) == 0) then
+            if (steps >= goal) then
+                t.t1 = getString("game_playing_lastday_done")
+                if (bonusOpenTime ~= nil) then
+                    log("bonus open time =" .. bonusOpenTime)
+                    t.t2 = string.format(getString("game_playing_bonus_info"), os.date("%m", bonusOpenTime), os.date("%d", bonusOpenTime))
+                end
+                actionBarColor = COLOR_REACH_GOAL
+                listTxtColor =  COLOR_REACH_GOAL
+                shareContent = getString("game_share_to_finished")
+            else
+                t.t1 = getString("game_playing_lastday")
+                shareContent = getString("game_share_to_not_finished")
+            end
+        else
+            if (steps >= goal) then
+                t.t1 = string.format(getString("game_playing_done"), getDayDifElapsed(startTime) + 1)
+                actionBarColor = COLOR_REACH_GOAL
+                listTxtColor =  COLOR_REACH_GOAL
+                shareContent = getString("game_share_to_finished")
+            else
+                t.t1 = string.format(getString("game_playing"), getDayDifElapsed(startTime) + 1)
+                shareContent = getString("game_share_to_not_finished")
+            end
+        end
+
+    elseif title_str == STR_GAME_PLAYING_FAIL then
+        actionBarColor = COLOR_REACH_FAIL
+        listTxtColor =  COLOR_REACH_FAIL_APP
+        t.right = "";
+        timeStamp = ConfigInfo:getTimeStamp()
+        if (getDayDif(timeStamp) == -1) then
+            t.t1 = getString("game_fail_title_ytd")
+        else
+            t.t1 = string.format(getString("game_fail_title"), os.date("%m", timeStamp), os.date("%d", timeStamp))
+        end
+        t.t2 = getString("game_fail_info")
+        shareContent = getString("game_share_to_failed")
+
+    elseif title_str == STR_GAME_PLAYING_FAILED then
+        actionBarColor = COLOR_REACH_FAIL
+        listTxtColor =  COLOR_REACH_FAIL_APP
+        t.right = "";
+        t.t1 = getString("game_failed_title")
+        t.t2 = getString("game_fail_info")
+        shareContent = getString("game_share_to_failed")
+
+    elseif title_str == STR_GAME_BONUS then
+        bonusTime = ConfigInfo:getTimeStamp()
+        serverTime = ConfigInfo:getServerTimeStamp()
+        actionBarColor = COLOR_BONUS
+        totalSteps = ConfigInfo:getRecordStep();
+
+        continueReachGoal = ConfigInfo:getIsBind()
+        if (continueReachGoal) then
+            listTxtColor =  COLOR_REACH_GOAL
+            shareContent = string.format(getString("game_share_to_success"), totalSteps)
+        else
+            actionBarColor = COLOR_REACH_FAIL
+            listTxtColor =  COLOR_REACH_FAIL_APP
+            shareContent = getString("game_share_to_failed")
+        end
+
+        if (serverTime >= bonusTime) then
+            if (ConfigInfo:getBonus() > 0) then
+                t.t1 = getString("game_bonus_hit")
+                t.t2 = getString("game_bonus_hit_info")
+                shareContent = getString("game_share_to_hit_bonus")
+            else
+                t.t1 = getString("game_bonus_miss")
+                t.t2 = getString("game_bonus_miss_info")
+
+                if (continueReachGoal) then
+                    shareContent = getString("game_share_to_not_hit_bonus")
+                else
+                    shareContent = getString("game_share_to_failed")
+                end
+            end
+        else -- Before bonus open
+            if (getDayDif(bonusTime) == 1) then
+                t.t1 = getString("game_bonus_open_tomorrow")
+                t.t2 = getString("game_not_register_info")
+            elseif (getDayDif(bonusTime) == 0) then
+                t.t1 = getString("game_bonus_open_today")
+                t.t2 = getString("game_not_register_info")
+            else
+                t.t1 = string.format(getString("game_bonus_open"), os.date("%m", bonusTime), os.date("%d", bonusTime))
+            end
+        end
+    end
+
+    url = ConfigInfo:getUrl();
+    t.stype = ConfigInfo:getType();
+    t.right = ConfigInfo:getRight();
+
+    if (t.stype == nil) then
+        t.stype = ""
+    end
+    if (t.right == nil) then
+        t.right = ""
+    end
+    if (url == nil) then
+        url = ""
+    end
+
+    ---Uniform action bar color to RED
+    actionBarColor = COLOR_REGISTER
+    shareContent = shareContent .. " http://bbs.xiaomi.cn/thread-10683448-1-1.html"
+
+    t.json = "{txtColor="..listTxtColor.."}"
+
+    log("showGameBanner type =" .. title_str .. ", Title="..t.t1.."    "..t.t2..", type="..t.stype..", right="..t.right..",url=".. url)
+    log("shareContent =" .. shareContent)
+
+    t.strScript = "function doAction(context, luaAction) \
+        local intent = luaAction:getIntentFromString('cn.com.smartdevices.bracelet.activity.WebActivity');\
+        luaAction:putExtra(intent,'"..KEY_WEBTYPE.."',"..WEBTYPE_SYSTEM_BLOG..")\
+        luaAction:putExtra(intent,'"..KEY_WEBURL.."','"..url.."')\
+        luaAction:putExtra(intent,'"..KEY_SHOW_SHARE.."',1)\
+        luaAction:putExtra(intent,'"..KEY_EVENT_PAGE_TYPE.."',"..sharePageType..")\
+        luaAction:putExtra(intent,'"..KEY_ACTION_BAR_COLOR.."',"..actionBarColor..")\
+        luaAction:putExtra(intent,'"..KEY_SHARE_CONTENT.."','"..shareContent.."')\
+        context:startActivity(intent)\
+    end";
+
+    replaceMsgByType(listDao,ConfigInfo,t)
+    end
+
+function getGameInfo(Cinfo)
+    log("getGameInfo locale = "..getCurLocale())
+    if (getCurLocale() == zh_CN) then
+        Cinfo:setGameInfo("NewGame");
+    else
+        Cinfo:setGameInfo("NewGame_Only_in_Chinese_Mainland");
+    end
+end
+
 function getLabFactoryActivityMsgs(listDao, activityItem)
     mode = activityItem:getMode()
 
@@ -1667,4 +2030,41 @@ function setLocale(locale)
 
     log("Set locale to : "..locale..", lua version = "..__luaVersion)
     log("Test locale "..'ok'..'='..getString('ok'));
+end
+
+-----====================== Mi Push ==============================----
+function showLuaItem(listDao, configInfo, luaItem)
+    log("============= showLuaItem =============")
+    t = {}
+    t.t1 = luaItem:getT1();
+    t.t2 = luaItem:getT2();
+    t.stype = luaItem:getStype();
+    t.strScript = luaItem:getScript();
+    t.json = luaItem:getStyleJson();
+    t.right = luaItem:getRight();
+    expiredStamp = luaItem:getExpire();
+
+    log('expire = '..expiredStamp)
+    if (expiredStamp ~= 0) then
+        clearRecord(listDao, configInfo:getLuaAction(), t.stype)
+
+        expireDate = "" .. os.date("%Y-%m-%d", expiredStamp)
+        if (expireDate == nil) then
+            log('expire date is nil')
+        else
+            log('expire date = ' .. expireDate)
+        end
+
+        daydif = 0;
+        if (expiredStamp > 0) then
+            daydif = getDayDif(expiredStamp)
+        end
+
+        if (daydif >= 0) then
+            setMessageByExpireDate(listDao, t, expireDate)
+        end
+    else
+        uniqueMsg(listDao, configInfo, t)
+    end
+
 end

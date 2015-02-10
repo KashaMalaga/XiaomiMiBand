@@ -1,469 +1,197 @@
-.class Lcn/com/smartdevices/bracelet/lab/sync/x;
-.super Ljava/lang/Object;
+.class final Lcn/com/smartdevices/bracelet/lab/sync/x;
+.super Lcom/d/a/a/h;
+
+
+# instance fields
+.field final synthetic a:I
+
+.field final synthetic b:Landroid/content/Context;
+
+.field final synthetic c:Lcn/com/smartdevices/bracelet/lab/sync/F;
 
 
 # direct methods
-.method private constructor <init>()V
+.method constructor <init>(ILandroid/content/Context;Lcn/com/smartdevices/bracelet/lab/sync/F;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lcn/com/smartdevices/bracelet/lab/sync/x;->a:I
+
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/lab/sync/x;->b:Landroid/content/Context;
+
+    iput-object p3, p0, Lcn/com/smartdevices/bracelet/lab/sync/x;->c:Lcn/com/smartdevices/bracelet/lab/sync/F;
+
+    invoke-direct {p0}, Lcom/d/a/a/h;-><init>()V
 
     return-void
 .end method
 
-.method static a(ILjava/util/List;)Lcn/com/smartdevices/bracelet/lab/sync/w;
-    .locals 11
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I",
-            "Ljava/util/List",
-            "<",
-            "Lcn/com/smartdevices/bracelet/gps/model/c;",
-            ">;)",
-            "Lcn/com/smartdevices/bracelet/lab/sync/w;"
-        }
-    .end annotation
 
-    const/16 v10, 0xf00
+# virtual methods
+.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
+    .locals 4
 
-    const/16 v9, 0x3c
+    invoke-static {p3}, Lcn/com/smartdevices/bracelet/E;->b([B)Ljava/lang/String;
 
-    const/4 v3, 0x0
+    move-result-object v0
 
-    new-instance v5, Lcn/com/smartdevices/bracelet/lab/sync/w;
+    const-string v1, "Sync"
 
-    invoke-direct {v5}, Lcn/com/smartdevices/bracelet/lab/sync/w;-><init>()V
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/gps/services/t;->a(I)I
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result v6
+    const-string v3, "syncSportSummaryFromServer onFailure statusCode = "
 
-    if-ge p0, v9, :cond_1
-
-    mul-int/lit8 v0, p0, 0x40
-
-    new-array v0, v0, [B
-
-    :goto_0
-    move-object v1, v0
-
-    move v4, v3
-
-    move v0, v3
-
-    :goto_1
-    if-lez v4, :cond_3
-
-    if-lt p0, v9, :cond_3
-
-    rem-int/lit8 v2, v4, 0x3c
-
-    if-nez v2, :cond_3
-
-    add-int/lit8 v0, v0, 0x1
-
-    new-instance v2, Lcn/com/smartdevices/bracelet/gps/model/j;
-
-    invoke-direct {v2, v1}, Lcn/com/smartdevices/bracelet/gps/model/j;-><init>([B)V
-
-    iget-object v1, v5, Lcn/com/smartdevices/bracelet/lab/sync/w;->a:Lorg/json/JSONArray;
-
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/gps/model/j;->c()Ljava/lang/String;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    add-int/lit8 v1, v0, 0x1
+    move-result-object v2
 
-    if-lt v1, v6, :cond_2
+    const-string v3, ",content = "
 
-    sub-int v1, p0, v4
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    mul-int/lit8 v1, v1, 0x40
+    move-result-object v2
 
-    new-array v1, v1, [B
-
-    move-object v2, v1
-
-    move v1, v0
-
-    :goto_2
-    invoke-interface {p1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/gps/model/c;
+    const-string v2, ",type = "
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/sync/x;->a(Lcn/com/smartdevices/bracelet/gps/model/c;)[B
-
-    move-result-object v0
-
-    rem-int/lit8 v7, v4, 0x3c
-
-    mul-int/lit8 v7, v7, 0x40
-
-    array-length v8, v0
-
-    invoke-static {v0, v3, v2, v7, v8}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    add-int/lit8 v0, v4, 0x1
-
-    if-lt v0, p0, :cond_4
-
-    if-ge v1, v6, :cond_0
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/model/j;
-
-    invoke-direct {v0, v2}, Lcn/com/smartdevices/bracelet/gps/model/j;-><init>([B)V
-
-    iget-object v2, v5, Lcn/com/smartdevices/bracelet/lab/sync/w;->a:Lorg/json/JSONArray;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/model/j;->c()Ljava/lang/String;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-virtual {v2, v0}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+    iget v2, p0, Lcn/com/smartdevices/bracelet/lab/sync/x;->a:I
 
-    add-int/lit8 v1, v1, 0x1
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    :cond_0
-    iput v1, v5, Lcn/com/smartdevices/bracelet/lab/sync/w;->b:I
+    move-result-object v0
 
-    return-object v5
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :cond_1
-    new-array v0, v10, [B
+    move-result-object v0
 
-    goto :goto_0
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    :cond_2
-    new-array v1, v10, [B
-
-    move-object v2, v1
-
-    move v1, v0
-
-    goto :goto_2
-
-    :cond_3
-    move-object v2, v1
-
-    move v1, v0
-
-    goto :goto_2
-
-    :cond_4
-    move v4, v0
-
-    move v0, v1
-
-    move-object v1, v2
-
-    goto :goto_1
+    return-void
 .end method
 
-.method static a(Landroid/content/Context;JLjava/util/List;)Z
-    .locals 11
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/content/Context;",
-            "J",
-            "Ljava/util/List",
-            "<",
-            "Lcn/com/smartdevices/bracelet/gps/model/j;",
-            ">;)Z"
-        }
-    .end annotation
+.method public onSuccess(I[Lorg/apache/http/Header;[B)V
+    .locals 3
 
-    const/4 v0, 0x1
+    new-instance v1, Lcn/com/smartdevices/bracelet/gps/model/k;
 
-    const/4 v2, 0x0
+    invoke-direct {v1}, Lcn/com/smartdevices/bracelet/gps/model/k;-><init>()V
 
-    if-nez p0, :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sync/x;->b:Landroid/content/Context;
 
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    new-instance v2, Ljava/lang/String;
 
-    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
+    invoke-direct {v2, p3}, Ljava/lang/String;-><init>([B)V
 
-    throw v0
+    invoke-static {v0, v2, v1}, Lcn/com/smartdevices/bracelet/lab/sync/i;->a(Landroid/content/Context;Ljava/lang/String;Lcn/com/smartdevices/bracelet/gps/model/k;)Lcn/com/smartdevices/bracelet/k/i;
 
-    :cond_0
-    if-eqz p3, :cond_1
-
-    invoke-interface {p3}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    if-gtz v1, :cond_3
-
-    :cond_1
-    move v1, v0
-
-    :cond_2
-    return v1
-
-    :cond_3
-    invoke-interface {p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v4
-
-    move v1, v0
-
-    :goto_0
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/gps/model/j;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/model/j;->d()[B
-
-    move-result-object v5
-
-    array-length v0, v5
-
-    div-int/lit8 v6, v0, 0x40
-
-    new-instance v7, Ljava/util/ArrayList;
-
-    invoke-direct {v7, v6}, Ljava/util/ArrayList;-><init>(I)V
-
-    move v0, v2
-
-    move v3, v2
-
-    :goto_1
-    if-ge v0, v6, :cond_4
-
-    new-instance v8, Lcn/com/smartdevices/bracelet/gps/model/c;
-
-    invoke-direct {v8}, Lcn/com/smartdevices/bracelet/gps/model/c;-><init>()V
-
-    invoke-static {v5, v3}, Lcn/com/smartdevices/bracelet/gps/d/b;->a([BI)D
-
-    move-result-wide v9
-
-    iput-wide v9, v8, Lcn/com/smartdevices/bracelet/gps/model/c;->m:D
-
-    add-int/lit8 v3, v3, 0x8
-
-    invoke-static {v5, v3}, Lcn/com/smartdevices/bracelet/gps/d/b;->a([BI)D
-
-    move-result-wide v9
-
-    iput-wide v9, v8, Lcn/com/smartdevices/bracelet/gps/model/c;->n:D
-
-    add-int/lit8 v3, v3, 0x8
-
-    invoke-static {v5, v3}, Lcn/com/smartdevices/bracelet/gps/d/b;->a([BI)D
-
-    move-result-wide v9
-
-    iput-wide v9, v8, Lcn/com/smartdevices/bracelet/gps/model/c;->l:D
-
-    add-int/lit8 v3, v3, 0x8
-
-    invoke-static {v5, v3}, Lcn/com/smartdevices/bracelet/gps/d/b;->d([BI)J
-
-    move-result-wide v9
-
-    iput-wide v9, v8, Lcn/com/smartdevices/bracelet/gps/model/c;->o:J
-
-    add-int/lit8 v3, v3, 0x8
-
-    invoke-static {v5, v3}, Lcn/com/smartdevices/bracelet/gps/d/b;->c([BI)I
-
-    move-result v9
-
-    iput v9, v8, Lcn/com/smartdevices/bracelet/gps/model/c;->q:I
-
-    add-int/lit8 v3, v3, 0x4
-
-    invoke-static {v5, v3}, Lcn/com/smartdevices/bracelet/gps/d/b;->b([BI)F
-
-    move-result v9
-
-    iput v9, v8, Lcn/com/smartdevices/bracelet/gps/model/c;->p:F
-
-    add-int/lit8 v3, v3, 0x4
-
-    invoke-static {v5, v3}, Lcn/com/smartdevices/bracelet/gps/d/b;->b([BI)F
-
-    move-result v9
-
-    iput v9, v8, Lcn/com/smartdevices/bracelet/gps/model/c;->s:F
-
-    add-int/lit8 v3, v3, 0x4
-
-    invoke-static {v5, v3}, Lcn/com/smartdevices/bracelet/gps/d/b;->b([BI)F
-
-    move-result v9
-
-    iput v9, v8, Lcn/com/smartdevices/bracelet/gps/model/c;->r:F
-
-    add-int/lit8 v3, v3, 0x4
-
-    invoke-static {v5, v3}, Lcn/com/smartdevices/bracelet/gps/d/b;->c([BI)I
-
-    move-result v9
-
-    invoke-virtual {v8, v9}, Lcn/com/smartdevices/bracelet/gps/model/c;->a(I)V
-
-    add-int/lit8 v3, v3, 0x4
-
-    add-int/lit8 v3, v3, 0xc
-
-    invoke-interface {v7, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_1
-
-    :cond_4
-    invoke-static {p0, v7, p1, p2}, Lcn/com/smartdevices/bracelet/gps/a/b;->a(Landroid/content/Context;Ljava/util/List;J)Z
-
-    move-result v0
-
-    or-int/2addr v0, v1
-
-    move v1, v0
-
-    goto :goto_0
-.end method
-
-.method static a(Lcn/com/smartdevices/bracelet/gps/model/c;)[B
-    .locals 4
-
-    const/16 v0, 0x40
-
-    new-array v1, v0, [B
+    move-result-object v2
 
     const/4 v0, 0x0
 
-    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/gps/model/c;->m:D
-
-    invoke-static {v1, v2, v3, v0}, Lcn/com/smartdevices/bracelet/gps/d/b;->a([BDI)V
-
-    const/16 v0, 0x8
-
-    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/gps/model/c;->n:D
-
-    invoke-static {v1, v2, v3, v0}, Lcn/com/smartdevices/bracelet/gps/d/b;->a([BDI)V
-
-    const/16 v0, 0x10
-
-    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/gps/model/c;->l:D
-
-    invoke-static {v1, v2, v3, v0}, Lcn/com/smartdevices/bracelet/gps/d/b;->a([BDI)V
-
-    const/16 v0, 0x18
-
-    iget-wide v2, p0, Lcn/com/smartdevices/bracelet/gps/model/c;->o:J
-
-    invoke-static {v1, v2, v3, v0}, Lcn/com/smartdevices/bracelet/gps/d/b;->a([BJI)V
-
-    const/16 v0, 0x20
-
-    :try_start_0
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/model/c;->c()Lorg/json/JSONObject;
-
-    move-result-object v2
-
-    const-string v3, "p"
-
-    invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
-
-    move-result v3
-
-    invoke-static {v1, v3, v0}, Lcn/com/smartdevices/bracelet/gps/d/b;->a([BII)V
-
-    const/16 v0, 0x24
-
-    const-string v3, "s"
-
-    invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v3}, Ljava/lang/Float;->valueOf(Ljava/lang/String;)Ljava/lang/Float;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/Float;->floatValue()F
-
-    move-result v3
-
-    invoke-static {v1, v3, v0}, Lcn/com/smartdevices/bracelet/gps/d/b;->a([BFI)V
-
-    const/16 v0, 0x28
-
-    const-string v3, "a"
-
-    invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v3}, Ljava/lang/Float;->valueOf(Ljava/lang/String;)Ljava/lang/Float;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/Float;->floatValue()F
-
-    move-result v3
-
-    invoke-static {v1, v3, v0}, Lcn/com/smartdevices/bracelet/gps/d/b;->a([BFI)V
-
-    const/16 v0, 0x2c
-
-    const-string v3, "b"
-
-    invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v3}, Ljava/lang/Float;->valueOf(Ljava/lang/String;)Ljava/lang/Float;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/Float;->floatValue()F
-
-    move-result v3
-
-    invoke-static {v1, v3, v0}, Lcn/com/smartdevices/bracelet/gps/d/b;->a([BFI)V
-
-    const/16 v0, 0x30
-
-    const-string v3, "t"
-
-    invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/k/i;->c()Z
 
     move-result v2
 
-    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/gps/d/b;->a([BII)V
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+    if-eqz v2, :cond_0
 
-    :goto_0
-    return-object v1
+    iget-object v0, v1, Lcn/com/smartdevices/bracelet/gps/model/k;->b:Ljava/util/ArrayList;
 
-    :catch_0
-    move-exception v0
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
-    const-string v2, "Sync"
+    move-result v0
 
-    invoke-virtual {v0}, Lorg/json/JSONException;->getMessage()Ljava/lang/String;
+    if-lez v0, :cond_3
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sync/x;->b:Landroid/content/Context;
+
+    iget-object v2, v1, Lcn/com/smartdevices/bracelet/gps/model/k;->b:Ljava/util/ArrayList;
+
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/lab/sync/E;->a(Landroid/content/Context;Ljava/util/List;)Lcn/com/smartdevices/bracelet/lab/sync/F;
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+    :goto_0
+    iget-wide v1, v1, Lcn/com/smartdevices/bracelet/gps/model/k;->c:J
+
+    iput-wide v1, v0, Lcn/com/smartdevices/bracelet/lab/sync/F;->d:J
+
+    :cond_0
+    if-eqz v0, :cond_1
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/sync/x;->c:Lcn/com/smartdevices/bracelet/lab/sync/F;
+
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/lab/sync/F;->a(Lcn/com/smartdevices/bracelet/lab/sync/F;)V
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/lab/sync/F;->a()V
+
+    :cond_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sync/x;->c:Lcn/com/smartdevices/bracelet/lab/sync/F;
+
+    iget-boolean v0, v0, Lcn/com/smartdevices/bracelet/lab/sync/F;->a:Z
+
+    if-nez v0, :cond_2
+
+    const-string v0, "Sync"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "syncSportSummaryFromServer onSuccess isSucceeded = "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/lab/sync/x;->c:Lcn/com/smartdevices/bracelet/lab/sync/F;
+
+    iget-boolean v2, v2, Lcn/com/smartdevices/bracelet/lab/sync/F;->a:Z
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, ", type = "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget v2, p0, Lcn/com/smartdevices/bracelet/lab/sync/x;->a:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_2
+    return-void
+
+    :cond_3
+    new-instance v0, Lcn/com/smartdevices/bracelet/lab/sync/F;
+
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/lab/sync/F;-><init>()V
+
+    const/4 v2, 0x1
+
+    iput-boolean v2, v0, Lcn/com/smartdevices/bracelet/lab/sync/F;->a:Z
 
     goto :goto_0
 .end method

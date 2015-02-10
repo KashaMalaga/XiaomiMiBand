@@ -133,7 +133,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;->p:Lcn/com/smartdevices/bracelet/b/x;
 
-    const v2, 0x7f0200f6
+    const v2, 0x7f020107
 
     invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/b/x;->b(I)V
 
@@ -169,7 +169,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;->l:Lcn/com/smartdevices/bracelet/gps/ui/q;
 
-    const v0, 0x7f0802e6
+    const v0, 0x7f0702f8
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;->findViewById(I)Landroid/view/View;
 
@@ -227,7 +227,7 @@
 .method private c()V
     .locals 2
 
-    const v0, 0x7f080051
+    const v0, 0x7f070035
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;->findViewById(I)Landroid/view/View;
 
@@ -235,7 +235,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f070332
+    const v1, 0x7f080361
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;->getString(I)Ljava/lang/String;
 
@@ -302,7 +302,7 @@
 
     move-result v2
 
-    const v3, 0x7f080398
+    const v3, 0x7f0703b0
 
     if-ne v2, v3, :cond_1
 
@@ -391,7 +391,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f03009f
+    const v0, 0x7f0300a3
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;->setContentView(I)V
 
@@ -415,7 +415,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a0089
+    const v1, 0x7f0a007d
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -427,7 +427,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0a008a
+    const v1, 0x7f0a007e
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -524,7 +524,7 @@
 
     move-result-object v1
 
-    const/high16 v2, 0x7f0d0000
+    const/high16 v2, 0x7f0e0000
 
     const/4 v3, 0x1
 
@@ -719,9 +719,9 @@
 
     const-string v0, "PageWaterMarkGallery"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/A;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->a(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/A;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -751,9 +751,9 @@
 
     const-string v0, "PageWaterMarkGallery"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/A;->c(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->c(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;)V
 
     return-void
 .end method

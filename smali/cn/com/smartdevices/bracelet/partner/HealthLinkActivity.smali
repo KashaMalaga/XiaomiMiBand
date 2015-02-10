@@ -27,18 +27,17 @@
 
     move-result v0
 
-    packed-switch v0, :pswitch_data_0
+    sparse-switch v0, :sswitch_data_0
 
     :goto_0
-    :pswitch_0
     return-void
 
-    :pswitch_1
+    :sswitch_0
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/partner/HealthLinkActivity;->finish()V
 
     goto :goto_0
 
-    :pswitch_2
+    :sswitch_1
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.CALL"
@@ -59,17 +58,15 @@
 
     const-string v1, "DialHealthService"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_0
 
-    :pswitch_data_0
-    .packed-switch 0x7f080051
-        :pswitch_1
-        :pswitch_0
-        :pswitch_0
-        :pswitch_2
-    .end packed-switch
+    :sswitch_data_0
+    .sparse-switch
+        0x7f070035 -> :sswitch_0
+        0x7f070057 -> :sswitch_1
+    .end sparse-switch
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
@@ -83,7 +80,7 @@
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/HealthLinkActivity;->setContentView(I)V
 
-    const v0, 0x7f080051
+    const v0, 0x7f070035
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/HealthLinkActivity;->findViewById(I)Landroid/view/View;
 
@@ -91,13 +88,13 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v2, 0x7f070251
+    const v2, 0x7f080268
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
 
     invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f080054
+    const v0, 0x7f070057
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/HealthLinkActivity;->findViewById(I)Landroid/view/View;
 
@@ -117,7 +114,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f080053
+    const v0, 0x7f070056
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/HealthLinkActivity;->findViewById(I)Landroid/view/View;
 
@@ -129,7 +126,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0e000e
+    const/high16 v3, 0x7f0d0000
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -139,7 +136,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0e000f
+    const v3, 0x7f0d0001
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
@@ -156,7 +153,7 @@
 
     if-ge v3, v1, :cond_0
 
-    const v1, 0x7f0300b9
+    const v1, 0x7f0300c3
 
     const/4 v2, 0x0
 
@@ -164,7 +161,7 @@
 
     move-result-object v7
 
-    const v1, 0x7f0801da
+    const v1, 0x7f0701ea
 
     invoke-virtual {v7, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -172,7 +169,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f080003
+    const v2, 0x7f070003
 
     invoke-virtual {v7, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -199,7 +196,7 @@
     :cond_0
     const-string v0, "PartnerHealthIn"
 
-    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -211,9 +208,9 @@
 
     const-string v0, "PageHealthLink"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/A;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->a(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/A;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -225,9 +222,9 @@
 
     const-string v0, "PageHealthLink"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/A;->c(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->c(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;)V
 
     return-void
 .end method

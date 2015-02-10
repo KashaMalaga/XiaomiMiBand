@@ -11,6 +11,8 @@
 
 .field public static final d:Ljava/lang/String; = "cds"
 
+.field public static final e:I = 0x168
+
 
 # direct methods
 .method public constructor <init>()V

@@ -111,7 +111,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/t;->k:Lcn/com/smartdevices/bracelet/d/c;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->l()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->I()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v0
 
@@ -265,7 +265,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -715,6 +715,10 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/t;->g:Ljava/util/List;
 
+    if-eqz v0, :cond_6
+
+    iget-object v0, p1, Lcn/com/smartdevices/bracelet/gps/algorithm/TrackStatistics;->mKilometerSpeeds:Ljava/util/ArrayList;
+
     if-nez v0, :cond_7
 
     :cond_6
@@ -1061,7 +1065,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Lcn/com/smartdevices/bracelet/gps/services/x;
 
@@ -1073,7 +1077,7 @@
 
     move v4, p3
 
-    move-object v5, p5
+    move-object v5, p4
 
     invoke-direct/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/gps/services/x;-><init>(Lorg/json/JSONObject;JILjava/lang/String;)V
 

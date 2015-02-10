@@ -19,13 +19,13 @@
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
     .locals 1
 
-    instance-of v0, p2, Lcom/xiaomi/hm/bleservice/t;
+    instance-of v0, p2, Lcom/xiaomi/hm/bleservice/u;
 
     if-eqz v0, :cond_0
 
-    check-cast p2, Lcom/xiaomi/hm/bleservice/A;
+    check-cast p2, Lcom/xiaomi/hm/bleservice/B;
 
-    invoke-static {p2}, Lcn/com/smartdevices/bracelet/b;->a(Lcom/xiaomi/hm/bleservice/A;)Lcom/xiaomi/hm/bleservice/A;
+    invoke-static {p2}, Lcn/com/smartdevices/bracelet/b;->a(Lcom/xiaomi/hm/bleservice/B;)Lcom/xiaomi/hm/bleservice/B;
 
     :cond_0
     return-void
@@ -36,7 +36,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/b;->a(Lcom/xiaomi/hm/bleservice/A;)Lcom/xiaomi/hm/bleservice/A;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/b;->a(Lcom/xiaomi/hm/bleservice/B;)Lcom/xiaomi/hm/bleservice/B;
 
     return-void
 .end method

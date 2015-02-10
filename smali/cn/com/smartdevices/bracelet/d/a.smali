@@ -79,7 +79,7 @@
 .method public b(IJ)I
     .locals 1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->l()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->I()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v0
 

@@ -2,6 +2,12 @@
 .super Landroid/app/Activity;
 
 
+# static fields
+.field public static final MI_NOTE_APP_DPI:I = 0x1e0
+
+.field public static final MI_NOTE_ORIGINAL_DPI:I = 0x1b8
+
+
 # instance fields
 .field private mConfig:Lcn/com/smartdevices/bracelet/config/b;
 
@@ -14,7 +20,7 @@
 
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->e()Lcn/com/smartdevices/bracelet/config/b;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->f()Lcn/com/smartdevices/bracelet/config/b;
 
     move-result-object v0
 
@@ -26,7 +32,7 @@
 .method private initHomeBack()V
     .locals 2
 
-    const v0, 0x7f080031
+    const v0, 0x7f070035
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BaseActivity;->findViewById(I)Landroid/view/View;
 
@@ -48,12 +54,71 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
+    invoke-static {}, Lcn/com/smartdevices/bracelet/chart/c/t;->c()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseActivity;->isExceptForMiNote()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseActivity;->mHomeBack:Landroid/widget/TextView;
+
+    const/high16 v1, 0x41600000
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextSize(F)V
+
     :cond_0
     return-void
 .end method
 
 
 # virtual methods
+.method protected isExceptForMiNote()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method protected onCreate(Landroid/os/Bundle;)V
+    .locals 1
+
+    invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
+
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/chart/c/t;->d(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseActivity;->isExceptForMiNote()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const/16 v0, 0x1e0
+
+    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/chart/c/t;->a(Landroid/content/Context;I)V
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    const/16 v0, 0x1b8
+
+    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/chart/c/t;->a(Landroid/content/Context;I)V
+
+    goto :goto_0
+.end method
+
 .method protected onHomeBackPressed()V
     .locals 0
 
@@ -65,23 +130,23 @@
 .method protected onResume()V
     .locals 9
 
-    const/4 v1, 0x0
-
     const/4 v3, 0x1
+
+    const/4 v1, 0x0
 
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseActivity;->mConfig:Lcn/com/smartdevices/bracelet/config/b;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/b;->c:Lcn/com/smartdevices/bracelet/config/m;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/b;->c:Lcn/com/smartdevices/bracelet/config/k;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/m;->d:Ljava/lang/Boolean;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/k;->d:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_4
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/BaseActivity;->getApplicationContext()Landroid/content/Context;
 
@@ -99,7 +164,7 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_a
+    if-eqz v2, :cond_b
 
     invoke-virtual {v2}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
@@ -156,7 +221,7 @@
 
     move-result-object v0
 
-    invoke-static {v6, v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v6, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -219,7 +284,7 @@
 
     move-result-object v7
 
-    invoke-static {v6, v7}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz v5, :cond_1
 
@@ -243,8 +308,21 @@
 
     invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/ui/BaseActivity;->setIntent(Landroid/content/Intent;)V
 
+    invoke-virtual {v4, v1}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->setLoginCanceled(Z)V
+
     :cond_3
     :goto_1
+    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->isLoginCanceled()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_5
+
+    :cond_4
+    :goto_2
+    return-void
+
+    :cond_5
     invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->getTencent()Lcom/tencent/tauth/Tencent;
 
     move-result-object v2
@@ -253,29 +331,29 @@
 
     move-result-object v2
 
-    if-eqz v2, :cond_7
+    if-eqz v2, :cond_8
 
     invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->isLoginValid()Z
 
     move-result v2
 
-    if-nez v2, :cond_7
+    if-nez v2, :cond_8
 
     move v2, v3
 
-    :goto_2
-    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->isNeedLoginIn()Z
+    :goto_3
+    invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->isNeedLogin()Z
 
     move-result v5
 
-    if-nez v5, :cond_4
+    if-nez v5, :cond_6
 
-    if-eqz v2, :cond_5
+    if-eqz v2, :cond_7
 
-    :cond_4
+    :cond_6
     move v1, v3
 
-    :cond_5
+    :cond_7
     const-string v2, "QQ.Login"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -296,47 +374,39 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_4
 
     instance-of v1, p0, Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
-    if-eqz v1, :cond_8
+    if-eqz v1, :cond_9
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_9
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/m;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/l;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/m;-><init>()V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/l;-><init>(Lcn/com/smartdevices/bracelet/ui/BaseActivity;)V
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/l;
-
-    invoke-direct {v1, p0, v0}, Lcn/com/smartdevices/bracelet/ui/l;-><init>(Lcn/com/smartdevices/bracelet/ui/BaseActivity;Lcn/com/smartdevices/bracelet/ui/m;)V
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/m;->a(Lcn/com/smartdevices/bracelet/ui/W;)V
-
-    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/ui/U;->a(Landroid/app/Activity;Landroid/app/DialogFragment;)V
+    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/ui/W;->a(Landroid/app/Activity;Landroid/app/DialogFragment;)V
 
     const-class v0, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
     invoke-virtual {v4, v0}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->setLaunchActivity(Ljava/lang/Class;)V
 
-    :cond_6
-    :goto_3
-    return-void
-
-    :cond_7
-    move v2, v1
-
     goto :goto_2
 
     :cond_8
+    move v2, v1
+
+    goto :goto_3
+
+    :cond_9
     invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->getLaunchActivity()Ljava/lang/Class;
 
     move-result-object v0
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_a
 
     invoke-virtual {v4}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->getLaunchActivity()Ljava/lang/Class;
 
@@ -346,16 +416,16 @@
 
     move-result-object v1
 
-    if-ne v0, v1, :cond_6
+    if-ne v0, v1, :cond_4
 
-    :cond_9
+    :cond_a
     const/4 v0, 0x0
 
     invoke-virtual {v4, v0}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->setLaunchActivity(Ljava/lang/Class;)V
 
     instance-of v0, p0, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;
 
-    if-nez v0, :cond_6
+    if-nez v0, :cond_4
 
     new-instance v0, Landroid/content/Intent;
 
@@ -365,9 +435,9 @@
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/BaseActivity;->startActivity(Landroid/content/Intent;)V
 
-    goto :goto_3
+    goto :goto_2
 
-    :cond_a
+    :cond_b
     move v0, v1
 
     goto :goto_1
@@ -399,6 +469,26 @@
     invoke-super {p0, p1, p2}, Landroid/app/Activity;->setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/BaseActivity;->initHomeBack()V
+
+    return-void
+.end method
+
+.method protected updateTitle(I)V
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseActivity;->mHomeBack:Landroid/widget/TextView;
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(I)V
+
+    return-void
+.end method
+
+.method protected updateTitle(Ljava/lang/String;)V
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BaseActivity;->mHomeBack:Landroid/widget/TextView;
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     return-void
 .end method

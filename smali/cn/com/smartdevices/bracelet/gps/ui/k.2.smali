@@ -37,7 +37,7 @@
 
     const-string v1, "RunShareTrack"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     :goto_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/k;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;
@@ -58,7 +58,7 @@
 
     check-cast v0, Landroid/view/View;
 
-    const v1, 0x7f020139
+    const v1, 0x7f02014a
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
@@ -74,7 +74,7 @@
 
     check-cast v0, Landroid/view/View;
 
-    const v1, 0x7f020138
+    const v1, 0x7f020149
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
@@ -87,7 +87,7 @@
 
     const-string v1, "RunSharePace"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

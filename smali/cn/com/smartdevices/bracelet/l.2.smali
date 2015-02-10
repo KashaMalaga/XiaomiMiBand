@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field private b:Lcom/g/a/b/d;
+.field private b:Lcom/f/a/b/d;
 
-.field private c:Lcom/g/a/b/g;
+.field private c:Lcom/f/a/b/g;
 
 
 # direct methods
@@ -52,107 +52,107 @@
 
     new-instance v0, Ljava/io/File;
 
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/B;->h(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/E;->k(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    new-instance v1, Lcom/g/a/b/l;
+    new-instance v1, Lcom/f/a/b/l;
 
-    invoke-direct {v1, p1}, Lcom/g/a/b/l;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, p1}, Lcom/f/a/b/l;-><init>(Landroid/content/Context;)V
 
     const/4 v2, 0x5
 
-    invoke-virtual {v1, v2}, Lcom/g/a/b/l;->b(I)Lcom/g/a/b/l;
+    invoke-virtual {v1, v2}, Lcom/f/a/b/l;->b(I)Lcom/f/a/b/l;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/g/a/b/l;->a()Lcom/g/a/b/l;
+    invoke-virtual {v1}, Lcom/f/a/b/l;->a()Lcom/f/a/b/l;
 
     move-result-object v1
 
-    new-instance v2, Lcom/g/a/a/a/b/c;
+    new-instance v2, Lcom/f/a/a/a/b/c;
 
-    invoke-direct {v2}, Lcom/g/a/a/a/b/c;-><init>()V
+    invoke-direct {v2}, Lcom/f/a/a/a/b/c;-><init>()V
 
-    invoke-virtual {v1, v2}, Lcom/g/a/b/l;->b(Lcom/g/a/a/a/b/a;)Lcom/g/a/b/l;
-
-    move-result-object v1
-
-    sget-object v2, Lcom/g/a/b/a/h;->b:Lcom/g/a/b/a/h;
-
-    invoke-virtual {v1, v2}, Lcom/g/a/b/l;->a(Lcom/g/a/b/a/h;)Lcom/g/a/b/l;
+    invoke-virtual {v1, v2}, Lcom/f/a/b/l;->b(Lcom/f/a/a/a/b/a;)Lcom/f/a/b/l;
 
     move-result-object v1
 
-    new-instance v2, Lcom/g/a/a/b/a/f;
+    sget-object v2, Lcom/f/a/b/a/h;->b:Lcom/f/a/b/a/h;
 
-    invoke-direct {v2, v4}, Lcom/g/a/a/b/a/f;-><init>(I)V
-
-    invoke-virtual {v1, v2}, Lcom/g/a/b/l;->a(Lcom/g/a/a/b/c;)Lcom/g/a/b/l;
+    invoke-virtual {v1, v2}, Lcom/f/a/b/l;->a(Lcom/f/a/b/a/h;)Lcom/f/a/b/l;
 
     move-result-object v1
 
-    invoke-virtual {v1, v4}, Lcom/g/a/b/l;->c(I)Lcom/g/a/b/l;
+    new-instance v2, Lcom/f/a/a/b/a/f;
+
+    invoke-direct {v2, v4}, Lcom/f/a/a/b/a/f;-><init>(I)V
+
+    invoke-virtual {v1, v2}, Lcom/f/a/b/l;->a(Lcom/f/a/a/b/c;)Lcom/f/a/b/l;
 
     move-result-object v1
 
-    new-instance v2, Lcom/g/a/a/a/a/c;
+    invoke-virtual {v1, v4}, Lcom/f/a/b/l;->c(I)Lcom/f/a/b/l;
 
-    invoke-direct {v2, v0}, Lcom/g/a/a/a/a/c;-><init>(Ljava/io/File;)V
+    move-result-object v1
 
-    invoke-virtual {v1, v2}, Lcom/g/a/b/l;->b(Lcom/g/a/a/a/b;)Lcom/g/a/b/l;
+    new-instance v2, Lcom/f/a/a/a/a/c;
+
+    invoke-direct {v2, v0}, Lcom/f/a/a/a/a/c;-><init>(Ljava/io/File;)V
+
+    invoke-virtual {v1, v2}, Lcom/f/a/b/l;->b(Lcom/f/a/a/a/b;)Lcom/f/a/b/l;
 
     move-result-object v0
 
     const/high16 v1, 0x3200000
 
-    invoke-virtual {v0, v1}, Lcom/g/a/b/l;->f(I)Lcom/g/a/b/l;
+    invoke-virtual {v0, v1}, Lcom/f/a/b/l;->f(I)Lcom/f/a/b/l;
 
     move-result-object v0
 
     const/16 v1, 0x3e8
 
-    invoke-virtual {v0, v1}, Lcom/g/a/b/l;->h(I)Lcom/g/a/b/l;
+    invoke-virtual {v0, v1}, Lcom/f/a/b/l;->h(I)Lcom/f/a/b/l;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/g/a/b/l;->b()Lcom/g/a/b/l;
+    invoke-virtual {v0}, Lcom/f/a/b/l;->b()Lcom/f/a/b/l;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/g/a/b/l;->c()Lcom/g/a/b/j;
+    invoke-virtual {v0}, Lcom/f/a/b/l;->c()Lcom/f/a/b/j;
 
     move-result-object v0
 
-    invoke-static {}, Lcom/g/a/b/g;->a()Lcom/g/a/b/g;
+    invoke-static {}, Lcom/f/a/b/g;->a()Lcom/f/a/b/g;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/l;->c:Lcom/g/a/b/g;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/l;->c:Lcom/f/a/b/g;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/l;->c:Lcom/g/a/b/g;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/l;->c:Lcom/f/a/b/g;
 
-    invoke-virtual {v1, v0}, Lcom/g/a/b/g;->a(Lcom/g/a/b/j;)V
+    invoke-virtual {v1, v0}, Lcom/f/a/b/g;->a(Lcom/f/a/b/j;)V
 
-    new-instance v0, Lcom/g/a/b/f;
+    new-instance v0, Lcom/f/a/b/f;
 
-    invoke-direct {v0}, Lcom/g/a/b/f;-><init>()V
+    invoke-direct {v0}, Lcom/f/a/b/f;-><init>()V
 
-    invoke-virtual {v0, v3}, Lcom/g/a/b/f;->b(Z)Lcom/g/a/b/f;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Lcom/g/a/b/f;->d(Z)Lcom/g/a/b/f;
+    invoke-virtual {v0, v3}, Lcom/f/a/b/f;->b(Z)Lcom/f/a/b/f;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/g/a/b/f;->d()Lcom/g/a/b/d;
+    invoke-virtual {v0, v3}, Lcom/f/a/b/f;->d(Z)Lcom/f/a/b/f;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/l;->b:Lcom/g/a/b/d;
+    invoke-virtual {v0}, Lcom/f/a/b/f;->d()Lcom/f/a/b/d;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/l;->b:Lcom/f/a/b/d;
 
     return-void
 .end method
@@ -162,21 +162,21 @@
 .method public a(Ljava/lang/String;)Landroid/graphics/Bitmap;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/l;->c:Lcom/g/a/b/g;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/l;->c:Lcom/f/a/b/g;
 
-    invoke-virtual {v0, p1}, Lcom/g/a/b/g;->a(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    invoke-virtual {v0, p1}, Lcom/f/a/b/g;->a(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public a(Ljava/lang/String;Lcom/g/a/b/a/f;)Landroid/graphics/Bitmap;
+.method public a(Ljava/lang/String;Lcom/f/a/b/a/f;)Landroid/graphics/Bitmap;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/l;->c:Lcom/g/a/b/g;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/l;->c:Lcom/f/a/b/g;
 
-    invoke-virtual {v0, p1, p2}, Lcom/g/a/b/g;->a(Ljava/lang/String;Lcom/g/a/b/a/f;)Landroid/graphics/Bitmap;
+    invoke-virtual {v0, p1, p2}, Lcom/f/a/b/g;->a(Ljava/lang/String;Lcom/f/a/b/a/f;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -186,63 +186,63 @@
 .method public a(Ljava/lang/String;Landroid/widget/ImageView;)V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/l;->c:Lcom/g/a/b/g;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/l;->c:Lcom/f/a/b/g;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/l;->b:Lcom/g/a/b/d;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/l;->b:Lcom/f/a/b/d;
 
-    invoke-virtual {v0, p1, p2, v1}, Lcom/g/a/b/g;->a(Ljava/lang/String;Landroid/widget/ImageView;Lcom/g/a/b/d;)V
+    invoke-virtual {v0, p1, p2, v1}, Lcom/f/a/b/g;->a(Ljava/lang/String;Landroid/widget/ImageView;Lcom/f/a/b/d;)V
 
     return-void
 .end method
 
-.method public a(Ljava/lang/String;Landroid/widget/ImageView;Lcom/g/a/b/f/a;)V
+.method public a(Ljava/lang/String;Landroid/widget/ImageView;Lcom/f/a/b/f/a;)V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/l;->c:Lcom/g/a/b/g;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/l;->c:Lcom/f/a/b/g;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/l;->b:Lcom/g/a/b/d;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/l;->b:Lcom/f/a/b/d;
 
-    invoke-virtual {v0, p1, p2, v1, p3}, Lcom/g/a/b/g;->a(Ljava/lang/String;Landroid/widget/ImageView;Lcom/g/a/b/d;Lcom/g/a/b/f/a;)V
+    invoke-virtual {v0, p1, p2, v1, p3}, Lcom/f/a/b/g;->a(Ljava/lang/String;Landroid/widget/ImageView;Lcom/f/a/b/d;Lcom/f/a/b/f/a;)V
 
     return-void
 .end method
 
-.method public a(Ljava/lang/String;Lcom/g/a/b/a/f;Lcom/g/a/b/f/a;)V
+.method public a(Ljava/lang/String;Lcom/f/a/b/a/f;Lcom/f/a/b/f/a;)V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/l;->c:Lcom/g/a/b/g;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/l;->c:Lcom/f/a/b/g;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/g/a/b/g;->a(Ljava/lang/String;Lcom/g/a/b/a/f;Lcom/g/a/b/f/a;)V
+    invoke-virtual {v0, p1, p2, p3}, Lcom/f/a/b/g;->a(Ljava/lang/String;Lcom/f/a/b/a/f;Lcom/f/a/b/f/a;)V
 
     return-void
 .end method
 
-.method public a(Ljava/lang/String;Lcom/g/a/b/f/a;)V
+.method public a(Ljava/lang/String;Lcom/f/a/b/f/a;)V
     .locals 2
 
-    new-instance v0, Lcom/g/a/b/f;
+    new-instance v0, Lcom/f/a/b/f;
 
-    invoke-direct {v0}, Lcom/g/a/b/f;-><init>()V
+    invoke-direct {v0}, Lcom/f/a/b/f;-><init>()V
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/g/a/b/f;->b(Z)Lcom/g/a/b/f;
+    invoke-virtual {v0, v1}, Lcom/f/a/b/f;->b(Z)Lcom/f/a/b/f;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/g/a/b/f;->d(Z)Lcom/g/a/b/f;
+    invoke-virtual {v0, v1}, Lcom/f/a/b/f;->d(Z)Lcom/f/a/b/f;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/g/a/b/f;->d()Lcom/g/a/b/d;
+    invoke-virtual {v0}, Lcom/f/a/b/f;->d()Lcom/f/a/b/d;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/l;->c:Lcom/g/a/b/g;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/l;->c:Lcom/f/a/b/g;
 
-    invoke-virtual {v1, p1, v0, p2}, Lcom/g/a/b/g;->a(Ljava/lang/String;Lcom/g/a/b/d;Lcom/g/a/b/f/a;)V
+    invoke-virtual {v1, p1, v0, p2}, Lcom/f/a/b/g;->a(Ljava/lang/String;Lcom/f/a/b/d;Lcom/f/a/b/f/a;)V
 
     return-void
 .end method
@@ -261,13 +261,13 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/l;->c:Lcom/g/a/b/g;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/l;->c:Lcom/f/a/b/g;
 
-    invoke-virtual {v0}, Lcom/g/a/b/g;->c()Lcom/g/a/a/b/c;
+    invoke-virtual {v0}, Lcom/f/a/b/g;->c()Lcom/f/a/a/b/c;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/g/a/c/g;->a(Ljava/lang/String;Lcom/g/a/a/b/c;)Ljava/util/List;
+    invoke-static {p1, v0}, Lcom/f/a/c/g;->a(Ljava/lang/String;Lcom/f/a/a/b/c;)Ljava/util/List;
 
     move-result-object v0
 
@@ -279,15 +279,15 @@
 
     const/4 v1, 0x1
 
-    new-instance v0, Lcom/g/a/b/f;
+    new-instance v0, Lcom/f/a/b/f;
 
-    invoke-direct {v0}, Lcom/g/a/b/f;-><init>()V
+    invoke-direct {v0}, Lcom/f/a/b/f;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcom/g/a/b/f;->b(Z)Lcom/g/a/b/f;
+    invoke-virtual {v0, v1}, Lcom/f/a/b/f;->b(Z)Lcom/f/a/b/f;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcom/g/a/b/f;->d(Z)Lcom/g/a/b/f;
+    invoke-virtual {v0, v1}, Lcom/f/a/b/f;->d(Z)Lcom/f/a/b/f;
 
     move-result-object v0
 
@@ -295,27 +295,27 @@
 
     invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/m;-><init>(Lcn/com/smartdevices/bracelet/l;)V
 
-    invoke-virtual {v0, v1}, Lcom/g/a/b/f;->a(Lcom/g/a/b/c/a;)Lcom/g/a/b/f;
+    invoke-virtual {v0, v1}, Lcom/f/a/b/f;->a(Lcom/f/a/b/c/a;)Lcom/f/a/b/f;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/g/a/b/f;->d()Lcom/g/a/b/d;
+    invoke-virtual {v0}, Lcom/f/a/b/f;->d()Lcom/f/a/b/d;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/l;->c:Lcom/g/a/b/g;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/l;->c:Lcom/f/a/b/g;
 
-    invoke-virtual {v1, p1, p2, v0}, Lcom/g/a/b/g;->a(Ljava/lang/String;Landroid/widget/ImageView;Lcom/g/a/b/d;)V
+    invoke-virtual {v1, p1, p2, v0}, Lcom/f/a/b/g;->a(Ljava/lang/String;Landroid/widget/ImageView;Lcom/f/a/b/d;)V
 
     return-void
 .end method
 
-.method public b(Ljava/lang/String;Lcom/g/a/b/f/a;)V
+.method public b(Ljava/lang/String;Lcom/f/a/b/f/a;)V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/l;->c:Lcom/g/a/b/g;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/l;->c:Lcom/f/a/b/g;
 
-    invoke-virtual {v0, p1, p2}, Lcom/g/a/b/g;->a(Ljava/lang/String;Lcom/g/a/b/f/a;)V
+    invoke-virtual {v0, p1, p2}, Lcom/f/a/b/g;->a(Ljava/lang/String;Lcom/f/a/b/f/a;)V
 
     return-void
 .end method
@@ -323,13 +323,13 @@
 .method public c(Ljava/lang/String;)Ljava/io/File;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/l;->c:Lcom/g/a/b/g;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/l;->c:Lcom/f/a/b/g;
 
-    invoke-virtual {v0}, Lcom/g/a/b/g;->f()Lcom/g/a/a/a/b;
+    invoke-virtual {v0}, Lcom/f/a/b/g;->f()Lcom/f/a/a/a/b;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/g/a/c/a;->a(Ljava/lang/String;Lcom/g/a/a/a/b;)Ljava/io/File;
+    invoke-static {p1, v0}, Lcom/f/a/c/a;->a(Ljava/lang/String;Lcom/f/a/a/a/b;)Ljava/io/File;
 
     move-result-object v0
 
@@ -339,21 +339,21 @@
 .method public d(Ljava/lang/String;)V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/l;->c:Lcom/g/a/b/g;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/l;->c:Lcom/f/a/b/g;
 
-    invoke-virtual {v0}, Lcom/g/a/b/g;->c()Lcom/g/a/a/b/c;
-
-    move-result-object v0
-
-    invoke-static {p1, v0}, Lcom/g/a/c/g;->c(Ljava/lang/String;Lcom/g/a/a/b/c;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/l;->c:Lcom/g/a/b/g;
-
-    invoke-virtual {v0}, Lcom/g/a/b/g;->f()Lcom/g/a/a/a/b;
+    invoke-virtual {v0}, Lcom/f/a/b/g;->c()Lcom/f/a/a/b/c;
 
     move-result-object v0
 
-    invoke-static {p1, v0}, Lcom/g/a/c/a;->b(Ljava/lang/String;Lcom/g/a/a/a/b;)Z
+    invoke-static {p1, v0}, Lcom/f/a/c/g;->c(Ljava/lang/String;Lcom/f/a/a/b/c;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/l;->c:Lcom/f/a/b/g;
+
+    invoke-virtual {v0}, Lcom/f/a/b/g;->f()Lcom/f/a/a/a/b;
+
+    move-result-object v0
+
+    invoke-static {p1, v0}, Lcom/f/a/c/a;->b(Ljava/lang/String;Lcom/f/a/a/a/b;)Z
 
     return-void
 .end method

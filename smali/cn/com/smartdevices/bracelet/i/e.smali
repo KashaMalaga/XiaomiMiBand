@@ -1,139 +1,394 @@
-.class Lcn/com/smartdevices/bracelet/i/e;
-.super Lcom/e/a/a/h;
+.class public Lcn/com/smartdevices/bracelet/i/e;
+.super Lcn/com/smartdevices/bracelet/i/a;
 
 
-# instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/u;
-
-.field final synthetic b:Lcn/com/smartdevices/bracelet/s;
-
-.field final synthetic c:Ljava/util/ArrayList;
-
-.field final synthetic d:Lcn/com/smartdevices/bracelet/i/a;
+# static fields
+.field private static final c:I = 0x15
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/i/a;Lcn/com/smartdevices/bracelet/u;Lcn/com/smartdevices/bracelet/s;Ljava/util/ArrayList;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/i/e;->d:Lcn/com/smartdevices/bracelet/i/a;
+    const/16 v0, 0x15
 
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/i/e;->a:Lcn/com/smartdevices/bracelet/u;
-
-    iput-object p3, p0, Lcn/com/smartdevices/bracelet/i/e;->b:Lcn/com/smartdevices/bracelet/s;
-
-    iput-object p4, p0, Lcn/com/smartdevices/bracelet/i/e;->c:Ljava/util/ArrayList;
-
-    invoke-direct {p0}, Lcom/e/a/a/h;-><init>()V
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/i/a;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
-    .locals 4
+.method protected a(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    .locals 3
 
-    invoke-static {p3}, Lcn/com/smartdevices/bracelet/B;->b([B)Ljava/lang/String;
+    const-string v0, "weeklywalk"
+
+    invoke-static {p1, v0}, Lcn/com/smartdevices/bracelet/i/e;->b(Landroid/content/Context;Ljava/lang/String;)V
+
+    const v0, 0x7f080342
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const/4 v2, 0x0
+
+    aput-object p2, v1, v2
+
+    invoke-virtual {p1, v0, v1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "SensorHubController"
+    return-object v0
+.end method
 
-    new-instance v2, Ljava/lang/StringBuilder;
+.method public a()V
+    .locals 4
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    sget-object v0, Lcn/com/smartdevices/bracelet/i/e;->a:Ljava/util/Map;
 
-    const-string v3, "syncToServer onFailure:"
+    const/4 v1, 0x0
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-wide/16 v2, 0x0
+
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v2
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v0
+    sget-object v0, Lcn/com/smartdevices/bracelet/i/e;->a:Ljava/util/Map;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/16 v1, 0x4e20
 
-    move-result-object v0
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v1
+
+    const-wide/high16 v2, 0x4030000000000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/i/e;->a:Ljava/util/Map;
+
+    const v1, 0x9c40
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-wide/high16 v2, 0x4039000000000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/i/e;->a:Ljava/util/Map;
+
+    const v1, 0xea60
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-wide v2, 0x4040800000000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/i/e;->a:Ljava/util/Map;
+
+    const v1, 0x13880
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-wide/high16 v2, 0x4044000000000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/i/e;->a:Ljava/util/Map;
+
+    const v1, 0x186a0
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-wide v2, 0x4047800000000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/i/e;->a:Ljava/util/Map;
+
+    const v1, 0x1d4c0
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-wide v2, 0x404a800000000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/i/e;->a:Ljava/util/Map;
+
+    const v1, 0x222e0
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-wide/high16 v2, 0x404d000000000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/i/e;->a:Ljava/util/Map;
+
+    const v1, 0x27100
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-wide v2, 0x404f800000000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/i/e;->a:Ljava/util/Map;
+
+    const v1, 0x2bf20
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-wide/high16 v2, 0x4051000000000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/i/e;->a:Ljava/util/Map;
+
+    const v1, 0x30d40
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-wide/high16 v2, 0x4052000000000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/i/e;->a:Ljava/util/Map;
+
+    const v1, 0x35b60
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-wide/high16 v2, 0x4053000000000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/i/e;->a:Ljava/util/Map;
+
+    const v1, 0x3a980
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-wide/high16 v2, 0x4054000000000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/i/e;->a:Ljava/util/Map;
+
+    const v1, 0x3f7a0
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-wide v2, 0x4054c00000000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/i/e;->a:Ljava/util/Map;
+
+    const v1, 0x445c0
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-wide v2, 0x4055800000000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/i/e;->a:Ljava/util/Map;
+
+    const v1, 0x493e0
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-wide v2, 0x4056400000000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/i/e;->a:Ljava/util/Map;
+
+    const v1, 0x4e200
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-wide v2, 0x4056b9999999999aL
+
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/i/e;->a:Ljava/util/Map;
+
+    const v1, 0x53020
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-wide v2, 0x40572ccccccccccdL
+
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/i/e;->a:Ljava/util/Map;
+
+    const v1, 0x57e40
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-wide v2, 0x4057a66666666666L
+
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/i/e;->a:Ljava/util/Map;
+
+    const v1, 0x5cc60
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-wide v2, 0x4058070a3d70a3d7L
+
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/i/e;->a:Ljava/util/Map;
+
+    const v1, 0x61a80
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-wide v2, 0x40584147ae147ae1L
+
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public onSuccess(I[Lorg/apache/http/Header;[B)V
-    .locals 4
+.method public b()I
+    .locals 1
 
-    invoke-static {p3}, Lcn/com/smartdevices/bracelet/B;->b([B)Ljava/lang/String;
+    const/16 v0, 0x4e20
 
-    move-result-object v0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/j/f;->a(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/j/g;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/j/g;->a()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const-string v1, "SensorHubController"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "syncToServer onSuccess:"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v2, "  type = "
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/i/e;->a:Lcn/com/smartdevices/bracelet/u;
-
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/u;->b()I
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/i/e;->b:Lcn/com/smartdevices/bracelet/s;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/i/e;->c:Ljava/util/ArrayList;
-
-    const/4 v2, 0x1
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/i/e;->a:Lcn/com/smartdevices/bracelet/u;
-
-    invoke-virtual {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/s;->b(Ljava/util/ArrayList;ILcn/com/smartdevices/bracelet/u;)Z
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->g(J)V
-
-    :cond_0
-    return-void
+    return v0
 .end method

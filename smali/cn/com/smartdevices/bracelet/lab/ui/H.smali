@@ -123,7 +123,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/ui/H;->c:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/c;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/lab/c;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/lab/d;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/lab/d;
 
     move-result-object v0
 
@@ -135,7 +135,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/lab/c;->a(Lcn/com/smartdevices/bracelet/lab/m;Ljava/lang/String;)Z
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/lab/d;->a(Lcn/com/smartdevices/bracelet/lab/n;Ljava/lang/String;)Z
 
     goto :goto_0
 .end method

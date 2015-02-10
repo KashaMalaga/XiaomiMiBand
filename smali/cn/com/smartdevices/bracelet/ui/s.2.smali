@@ -1,5 +1,5 @@
 .class Lcn/com/smartdevices/bracelet/ui/s;
-.super Lcom/e/a/a/h;
+.super Lcom/d/a/a/h;
 
 
 # instance fields
@@ -16,7 +16,7 @@
 
     iput-wide p2, p0, Lcn/com/smartdevices/bracelet/ui/s;->a:J
 
-    invoke-direct {p0}, Lcom/e/a/a/h;-><init>()V
+    invoke-direct {p0}, Lcom/d/a/a/h;-><init>()V
 
     return-void
 .end method
@@ -32,7 +32,7 @@
 .method public onSuccess(I[Lorg/apache/http/Header;[B)V
     .locals 9
 
-    invoke-static {p3}, Lcn/com/smartdevices/bracelet/B;->b([B)Ljava/lang/String;
+    invoke-static {p3}, Lcn/com/smartdevices/bracelet/E;->b([B)Ljava/lang/String;
 
     move-result-object v0
 
@@ -43,11 +43,17 @@
 
     invoke-direct {v1, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/j/f;->a(Lorg/json/JSONObject;)Lcn/com/smartdevices/bracelet/j/g;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/s;->b:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->i(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/j/g;->a()Z
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/k/i;->a(Landroid/content/Context;Lorg/json/JSONObject;)Lcn/com/smartdevices/bracelet/k/i;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/k/i;->c()Z
 
     move-result v0
 
@@ -93,7 +99,7 @@
 
     const-string v4, "yyyy-MM-dd HH:mm:ss"
 
-    invoke-static {v0, v3, v4}, Lcn/com/smartdevices/bracelet/B;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v3, v4}, Lcn/com/smartdevices/bracelet/E;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -152,7 +158,7 @@
 
     move-result-object v1
 
-    invoke-static {v6, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v6, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "BaseSCActivity"
 
@@ -188,7 +194,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v4}, Ljava/util/Date;->getTime()J
 
@@ -284,7 +290,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/s;->b:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
 
@@ -292,7 +298,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070204
+    const v1, 0x7f08021a
 
     const/4 v2, 0x1
 

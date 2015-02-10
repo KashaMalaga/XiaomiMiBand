@@ -105,6 +105,10 @@
 
     div-long/2addr v0, v5
 
+    const-wide/16 v2, 0x1
+
+    sub-long/2addr v0, v2
+
     return-wide v0
 
     :cond_0
@@ -114,9 +118,13 @@
 .end method
 
 .method public static a(JI)J
-    .locals 6
+    .locals 8
 
-    const-wide/16 v4, 0x3e8
+    const-wide/16 v6, 0x3e8
+
+    const/4 v5, 0x1
+
+    const/4 v4, 0x2
 
     const/4 v3, 0x0
 
@@ -128,7 +136,7 @@
 
     cmp-long v0, p0, v0
 
-    if-gtz v0, :cond_1
+    if-gtz v0, :cond_0
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -137,18 +145,16 @@
     :goto_0
     invoke-virtual {v2, v0, v1}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    if-eqz p2, :cond_0
+    if-lez p2, :cond_1
 
-    const/4 v0, 0x2
+    add-int/lit8 v0, p2, 0x1
 
-    invoke-virtual {v2, v0, p2}, Ljava/util/Calendar;->add(II)V
+    invoke-virtual {v2, v4, v0}, Ljava/util/Calendar;->add(II)V
 
-    :cond_0
+    :goto_1
     const/4 v0, 0x5
 
-    const/4 v1, 0x1
-
-    invoke-virtual {v2, v0, v1}, Ljava/util/Calendar;->set(II)V
+    invoke-virtual {v2, v0, v5}, Ljava/util/Calendar;->set(II)V
 
     const/16 v0, 0xb
 
@@ -166,14 +172,32 @@
 
     move-result-wide v0
 
-    div-long/2addr v0, v4
+    div-long/2addr v0, v6
+
+    const-wide/16 v2, 0x1
+
+    sub-long/2addr v0, v2
 
     return-wide v0
 
-    :cond_1
-    mul-long v0, p0, v4
+    :cond_0
+    mul-long v0, p0, v6
 
     goto :goto_0
+
+    :cond_1
+    if-gez p2, :cond_2
+
+    add-int/lit8 v0, p2, -0x1
+
+    invoke-virtual {v2, v4, v0}, Ljava/util/Calendar;->add(II)V
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {v2, v4, v5}, Ljava/util/Calendar;->add(II)V
+
+    goto :goto_1
 .end method
 
 .method public static a(Ljava/lang/String;)Ljava/util/Date;
@@ -306,7 +330,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -365,6 +389,69 @@
     return-wide v0
 
     :cond_0
+    mul-long v0, p0, v4
+
+    goto :goto_0
+.end method
+
+.method public static b(JI)J
+    .locals 6
+
+    const-wide/16 v4, 0x3e8
+
+    const/4 v3, 0x0
+
+    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
+
+    move-result-object v2
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, p0, v0
+
+    if-gtz v0, :cond_1
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    :goto_0
+    invoke-virtual {v2, v0, v1}, Ljava/util/Calendar;->setTimeInMillis(J)V
+
+    if-eqz p2, :cond_0
+
+    const/4 v0, 0x2
+
+    invoke-virtual {v2, v0, p2}, Ljava/util/Calendar;->add(II)V
+
+    :cond_0
+    const/4 v0, 0x5
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v2, v0, v1}, Ljava/util/Calendar;->set(II)V
+
+    const/16 v0, 0xb
+
+    invoke-virtual {v2, v0, v3}, Ljava/util/Calendar;->set(II)V
+
+    const/16 v0, 0xc
+
+    invoke-virtual {v2, v0, v3}, Ljava/util/Calendar;->set(II)V
+
+    const/16 v0, 0xd
+
+    invoke-virtual {v2, v0, v3}, Ljava/util/Calendar;->set(II)V
+
+    invoke-virtual {v2}, Ljava/util/Calendar;->getTimeInMillis()J
+
+    move-result-wide v0
+
+    div-long/2addr v0, v4
+
+    return-wide v0
+
+    :cond_1
     mul-long v0, p0, v4
 
     goto :goto_0

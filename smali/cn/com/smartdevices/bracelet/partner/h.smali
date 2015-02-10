@@ -1,5 +1,5 @@
 .class Lcn/com/smartdevices/bracelet/partner/h;
-.super Lcom/e/a/a/h;
+.super Lcom/d/a/a/h;
 
 
 # instance fields
@@ -16,7 +16,7 @@
 
     iput-object p2, p0, Lcn/com/smartdevices/bracelet/partner/h;->a:Ljava/lang/String;
 
-    invoke-direct {p0}, Lcom/e/a/a/h;-><init>()V
+    invoke-direct {p0}, Lcom/d/a/a/h;-><init>()V
 
     return-void
 .end method
@@ -126,7 +126,7 @@
 
     const-wide/16 v0, 0x0
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(J)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/z;->g(J)V
 
     :cond_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/h;->b:Lcn/com/smartdevices/bracelet/partner/d;

@@ -9,6 +9,6 @@
                 <EditText android:textSize="16.0sp" android:layout_gravity="center_vertical" android:id="@id/info_nick_name" android:background="@null" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/modify_nickname" android:singleLine="true" android:maxLength="20" />
             </FrameLayout>
         </LinearLayout>
-        <cn.com.smartdevices.bracelet.ui.widget.DimPanelBottomBar android:layout_width="fill_parent" android:layout_height="wrap_content" app:left_text="" app:right_text="@string/confirm" xmlns:app="http://schemas.android.com/apk/res-auto" />
+        <cn.com.smartdevices.bracelet.ui.widget.DimPanelBottomBar android:layout_width="fill_parent" android:layout_height="wrap_content" app:left_text="@string/cancel" app:right_text="@string/confirm" xmlns:app="http://schemas.android.com/apk/res-auto" />
     </LinearLayout>
 </LinearLayout>

@@ -66,7 +66,7 @@
 
     move-result-object v0
 
-    instance-of v2, v0, Lcn/com/smartdevices/bracelet/view/r;
+    instance-of v2, v0, Lcn/com/smartdevices/bracelet/view/s;
 
     if-nez v2, :cond_2
 
@@ -138,13 +138,13 @@
 
     sub-int v2, v1, v2
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/view/r;
+    check-cast v0, Lcn/com/smartdevices/bracelet/view/s;
 
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/view/r;->a()Ljava/util/List;
+    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/view/s;->a()Ljava/util/List;
 
     move-result-object v1
 
@@ -155,7 +155,7 @@
     :goto_2
     if-ge v1, v2, :cond_3
 
-    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/view/r;->b()Ljava/lang/Object;
+    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/view/s;->b()Ljava/lang/Object;
 
     move-result-object v4
 
@@ -166,7 +166,7 @@
     goto :goto_2
 
     :cond_3
-    invoke-interface {v0, v3}, Lcn/com/smartdevices/bracelet/view/r;->a(Ljava/util/List;)V
+    invoke-interface {v0, v3}, Lcn/com/smartdevices/bracelet/view/s;->a(Ljava/util/List;)V
 
     goto :goto_1
 .end method

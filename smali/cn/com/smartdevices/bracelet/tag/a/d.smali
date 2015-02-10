@@ -23,7 +23,7 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 2
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/a/d;->a:Lcn/com/smartdevices/bracelet/tag/a/c;
 
@@ -31,7 +31,9 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->startParseSensorData()V
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/a/d;->a:Lcn/com/smartdevices/bracelet/tag/a/c;
+
+    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->startParseSensorData(Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ISensorDataChangedCB;)V
 
     return-void
 .end method

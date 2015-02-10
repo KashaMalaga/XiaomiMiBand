@@ -1,365 +1,177 @@
 .class Lcn/com/smartdevices/bracelet/ui/am;
-.super Landroid/os/Handler;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/support/v4/view/ba;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/aj;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/al;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/aj;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/al;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/aj;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/al;
 
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public handleMessage(Landroid/os/Message;)V
-    .locals 8
+.method public a(I)V
+    .locals 2
 
-    const/16 v7, 0x100
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/al;
 
-    const/4 v6, 0x0
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/al;->a(Lcn/com/smartdevices/bracelet/ui/al;)I
 
-    const/4 v5, 0x1
+    move-result v0
 
-    iget v0, p1, Landroid/os/Message;->what:I
+    if-nez v0, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    :goto_0
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/al;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/al;->b(Lcn/com/smartdevices/bracelet/ui/al;)Lcn/com/smartdevices/bracelet/ui/ap;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/ui/ap;->a(I)Landroid/app/Fragment;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/al;
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/ui/aq;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/aq;->a(Lcn/com/smartdevices/bracelet/ui/aq;)I
+
+    move-result v0
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/ui/al;->a(Lcn/com/smartdevices/bracelet/ui/al;I)V
+
+    goto :goto_0
+.end method
+
+.method public a(IFI)V
+    .locals 4
+
+    const/4 v3, 0x1
+
+    const/high16 v2, 0x3f800000
+
+    const/4 v1, 0x0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/al;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/al;->c(Lcn/com/smartdevices/bracelet/ui/al;)Landroid/animation/ValueAnimator;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/al;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/al;->d(Lcn/com/smartdevices/bracelet/ui/al;)Landroid/animation/ValueAnimator;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_3
+
+    if-nez p1, :cond_1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/al;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/al;->c(Lcn/com/smartdevices/bracelet/ui/al;)Landroid/animation/ValueAnimator;
+
+    move-result-object v0
+
+    invoke-static {v0, p2}, Lcn/com/smartdevices/bracelet/chart/c/a;->a(Landroid/animation/ValueAnimator;F)V
 
     :cond_0
     :goto_0
     return-void
 
-    :pswitch_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/aj;
-
-    const-string v1, "\u52a0\u8f7d\u8fd0\u52a8\u6570\u636e"
-
-    const-string v2, "\u6b63\u5728\u52a0\u8f7d\u8fd0\u52a8\u6570\u636e\uff0c\u8bf7\u7a0d\u5019..."
-
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/ui/aj;->a(Lcn/com/smartdevices/bracelet/ui/aj;Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :pswitch_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/aj;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/aj;->e(Lcn/com/smartdevices/bracelet/ui/aj;)V
-
-    const-string v0, "DDDD"
-
-    const-string v1, "Dynamic Update : Data Loaded,Prev/Next Day,Animation"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/aj;
-
-    invoke-static {v0, v6}, Lcn/com/smartdevices/bracelet/ui/aj;->a(Lcn/com/smartdevices/bracelet/ui/aj;Z)V
-
-    goto :goto_0
-
-    :pswitch_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/aj;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/aj;->f(Lcn/com/smartdevices/bracelet/ui/aj;)I
-
-    move-result v0
-
-    iget v1, p1, Landroid/os/Message;->arg1:I
-
-    if-eq v0, v1, :cond_1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/aj;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/aj;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    const-string v1, "DynamicRealStepUpdate"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;Ljava/lang/String;)V
-
     :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/aj;
+    if-ne p1, v3, :cond_2
 
-    iget v1, p1, Landroid/os/Message;->arg1:I
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/al;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/aj;->b(Lcn/com/smartdevices/bracelet/ui/aj;I)I
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->i()Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/al;->d(Lcn/com/smartdevices/bracelet/ui/al;)Landroid/animation/ValueAnimator;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->getDaySportGoalSteps()I
+    invoke-static {v0, p2}, Lcn/com/smartdevices/bracelet/chart/c/a;->a(Landroid/animation/ValueAnimator;F)V
 
-    move-result v0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/aj;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/aj;->g(Lcn/com/smartdevices/bracelet/ui/aj;)Lcn/com/smartdevices/bracelet/s;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/aj;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/aj;->g(Lcn/com/smartdevices/bracelet/ui/aj;)Lcn/com/smartdevices/bracelet/s;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/s;->m()Lcn/com/smartdevices/bracelet/model/SportDay;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/s;->f(Lcn/com/smartdevices/bracelet/model/SportDay;)Lcn/com/smartdevices/bracelet/model/DaySportData;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/DaySportData;->getStepsInfo()Lcn/com/smartdevices/bracelet/analysis/StepsInfo;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_2
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/aj;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/aj;->f(Lcn/com/smartdevices/bracelet/ui/aj;)I
-
-    move-result v2
-
-    if-le v2, v0, :cond_2
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/analysis/StepsInfo;->getStepsCount()I
-
-    move-result v1
-
-    if-ge v1, v0, :cond_2
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->p()Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;->e()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    const-string v0, "DynamicFragment"
-
-    const-string v1, "sync data for realtime step large than synced steps!!!"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->f(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->l()V
+    goto :goto_0
 
     :cond_2
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    const/4 v0, 0x2
 
-    move-result-wide v0
+    if-ne p1, v0, :cond_0
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->b(J)V
+    cmpl-float v0, p2, v1
 
-    const-string v0, "DDDD"
+    if-nez v0, :cond_0
 
-    const-string v1, "Dynamic Update : Real Steps."
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/al;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/al;->d(Lcn/com/smartdevices/bracelet/ui/al;)Landroid/animation/ValueAnimator;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/aj;
+    move-result-object v0
 
-    invoke-static {v0, v5}, Lcn/com/smartdevices/bracelet/ui/aj;->a(Lcn/com/smartdevices/bracelet/ui/aj;Z)V
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/chart/c/a;->a(Landroid/animation/ValueAnimator;F)V
 
-    goto/16 :goto_0
-
-    :pswitch_3
-    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/weight/g;
-
-    iget-object v1, v0, Lcn/com/smartdevices/bracelet/weight/g;->a:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
-
-    invoke-virtual {v1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->isStable()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/aj;
-
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/ui/aj;->a(Lcn/com/smartdevices/bracelet/ui/aj;Lcn/com/smartdevices/bracelet/weight/g;)Lcn/com/smartdevices/bracelet/weight/g;
+    goto :goto_0
 
     :cond_3
-    invoke-virtual {v1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->isFinish()Z
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/al;
 
-    move-result v2
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/al;->c(Lcn/com/smartdevices/bracelet/ui/al;)Landroid/animation/ValueAnimator;
 
-    if-eqz v2, :cond_6
+    move-result-object v0
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/aj;
+    if-eqz v0, :cond_0
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/aj;
+    if-nez p1, :cond_4
 
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/ui/aj;->h(Lcn/com/smartdevices/bracelet/ui/aj;)Lcn/com/smartdevices/bracelet/weight/g;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/al;
 
-    move-result-object v3
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/al;->c(Lcn/com/smartdevices/bracelet/ui/al;)Landroid/animation/ValueAnimator;
 
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/ui/aj;->b(Lcn/com/smartdevices/bracelet/ui/aj;Lcn/com/smartdevices/bracelet/weight/g;)Lcn/com/smartdevices/bracelet/weight/g;
+    move-result-object v0
 
-    :goto_1
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/aj;
+    invoke-static {v0, p2}, Lcn/com/smartdevices/bracelet/chart/c/a;->a(Landroid/animation/ValueAnimator;F)V
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/ui/aj;->isAdded()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    const-string v2, "DynamicFragment"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v4, "Dynamic Update : WeightAdvData receive:"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/aj;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/aj;->a(Lcn/com/smartdevices/bracelet/ui/aj;)I
-
-    move-result v2
-
-    if-eq v2, v7, :cond_4
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/aj;
-
-    invoke-static {v2, v7, v5}, Lcn/com/smartdevices/bracelet/ui/aj;->a(Lcn/com/smartdevices/bracelet/ui/aj;IZ)I
-
-    move-result v2
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/aj;
-
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/ui/aj;->a(Lcn/com/smartdevices/bracelet/ui/aj;)I
-
-    move-result v3
-
-    if-nez v3, :cond_4
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/aj;
-
-    invoke-static {v3, v2}, Lcn/com/smartdevices/bracelet/ui/aj;->a(Lcn/com/smartdevices/bracelet/ui/aj;I)V
+    goto :goto_0
 
     :cond_4
-    invoke-virtual {v1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->isFinish()Z
+    if-ne p1, v3, :cond_0
 
-    move-result v2
+    cmpl-float v0, p2, v1
 
-    if-eqz v2, :cond_7
+    if-nez v0, :cond_0
 
-    invoke-virtual {v1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->isStable()Z
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/al;
 
-    move-result v2
-
-    if-nez v2, :cond_7
-
-    invoke-virtual {v1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->isMeasurement()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_7
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/aj;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/aj;->getActivity()Landroid/app/Activity;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/al;->c(Lcn/com/smartdevices/bracelet/ui/al;)Landroid/animation/ValueAnimator;
 
     move-result-object v0
 
-    const v1, 0x7f07026d
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/chart/c/a;->a(Landroid/animation/ValueAnimator;F)V
 
-    const/16 v2, 0x11
+    goto :goto_0
+.end method
 
-    invoke-static {v0, v1, v6, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;III)Landroid/widget/Toast;
+.method public b(I)V
+    .locals 0
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    :cond_5
-    :goto_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/aj;
-
-    invoke-static {v0, v5}, Lcn/com/smartdevices/bracelet/ui/aj;->a(Lcn/com/smartdevices/bracelet/ui/aj;Z)V
-
-    goto/16 :goto_0
-
-    :cond_6
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/aj;
-
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/ui/aj;->b(Lcn/com/smartdevices/bracelet/ui/aj;Lcn/com/smartdevices/bracelet/weight/g;)Lcn/com/smartdevices/bracelet/weight/g;
-
-    goto :goto_1
-
-    :cond_7
-    invoke-virtual {v1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->isFinish()Z
-
-    move-result v2
-
-    if-nez v2, :cond_5
-
-    invoke-virtual {v1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->isStable()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_5
-
-    iget v0, v0, Lcn/com/smartdevices/bracelet/weight/g;->c:I
-
-    if-nez v0, :cond_5
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/am;->a:Lcn/com/smartdevices/bracelet/ui/aj;
-
-    invoke-virtual {v1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getTimestamp()J
-
-    move-result-wide v1
-
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/ui/aj;->a(Lcn/com/smartdevices/bracelet/ui/aj;J)V
-
-    goto :goto_2
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1011
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-    .end packed-switch
+    return-void
 .end method

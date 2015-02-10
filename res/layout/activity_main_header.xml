@@ -4,11 +4,11 @@
     <FrameLayout android:id="@id/dynamic_header" android:layout_width="fill_parent" android:layout_height="46.0dip">
         <TextView android:textSize="15.5sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/dynamic_title" android:layout_width="fill_parent" android:layout_height="fill_parent" />
         <FrameLayout android:id="@id/header_nav_left" android:paddingLeft="13.0dip" android:paddingRight="20.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent">
-            <ImageView android:layout_gravity="center_vertical" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_statistic" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/btn" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_statistic" />
         </FrameLayout>
         <FrameLayout android:layout_gravity="right" android:id="@id/header_nav_right" android:paddingLeft="20.0dip" android:paddingRight="13.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent">
-            <ImageView android:layout_gravity="right|center" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_more" />
-            <ImageView android:layout_gravity="right|center" android:id="@id/header_nav_right_new_sign" android:background="@null" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/new_dot_icon" />
+            <ImageView android:layout_gravity="center|right" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_more" />
+            <ImageView android:layout_gravity="center|right" android:id="@id/header_nav_right_new_sign" android:background="@null" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/new_dot_icon" />
         </FrameLayout>
     </FrameLayout>
     <TextView android:textSize="13.0sp" android:textColor="#99ffffff" android:layout_gravity="center_horizontal" android:id="@id/dynamic_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="33.0dip" />

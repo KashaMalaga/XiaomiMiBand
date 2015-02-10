@@ -1,76 +1,67 @@
 .class Lcn/com/smartdevices/bracelet/ui/df;
-.super Lcom/e/a/a/h;
+.super Landroid/os/Handler;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/de;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/db;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/de;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/db;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/df;->a:Lcn/com/smartdevices/bracelet/ui/de;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/df;->a:Lcn/com/smartdevices/bracelet/ui/db;
 
-    invoke-direct {p0}, Lcom/e/a/a/h;-><init>()V
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
-    .locals 3
-
-    const-string v0, "SettingFragment"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "updateProfile onFailed: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public onSuccess(I[Lorg/apache/http/Header;[B)V
+.method public handleMessage(Landroid/os/Message;)V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/df;->a:Lcn/com/smartdevices/bracelet/ui/de;
+    iget v0, p1, Landroid/os/Message;->what:I
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/de;->a(Lcn/com/smartdevices/bracelet/ui/de;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
+    sparse-switch v0, :sswitch_data_0
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/PersonInfo;->clearNeedSyncServer()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/df;->a:Lcn/com/smartdevices/bracelet/ui/de;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/de;->a(Lcn/com/smartdevices/bracelet/ui/de;)Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
-
-    const-string v0, "SettingFragment"
-
-    const-string v1, "send person info to server ok!"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
-
+    :goto_0
     return-void
+
+    :sswitch_0
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/df;->a:Lcn/com/smartdevices/bracelet/ui/db;
+
+    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/ui/db;->a(Lcn/com/smartdevices/bracelet/ui/db;Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;)Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/df;->a:Lcn/com/smartdevices/bracelet/ui/db;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/df;->a:Lcn/com/smartdevices/bracelet/ui/db;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/db;->c(Lcn/com/smartdevices/bracelet/ui/db;)Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/db;->b(Lcn/com/smartdevices/bracelet/ui/db;Lcn/com/smartdevices/bracelet/upgrade/OtaVersionInfo;)V
+
+    goto :goto_0
+
+    :sswitch_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/df;->a:Lcn/com/smartdevices/bracelet/ui/db;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/db;->b(Lcn/com/smartdevices/bracelet/ui/db;)V
+
+    goto :goto_0
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        0x1 -> :sswitch_0
+        0x1002 -> :sswitch_1
+    .end sparse-switch
 .end method

@@ -3,15 +3,15 @@
 
 
 # static fields
-.field public static final CropOverlayView:I = 0x7f08018c
+.field public static final CropOverlayView:I = 0x7f070195
 
-.field public static final ImageView_image:I = 0x7f08018b
+.field public static final ImageView_image:I = 0x7f070194
 
-.field public static final off:I = 0x7f080002
+.field public static final off:I = 0x7f070002
 
-.field public static final on:I = 0x7f080000
+.field public static final on:I = 0x7f070000
 
-.field public static final onTouch:I = 0x7f080001
+.field public static final onTouch:I = 0x7f070001
 
 
 # direct methods

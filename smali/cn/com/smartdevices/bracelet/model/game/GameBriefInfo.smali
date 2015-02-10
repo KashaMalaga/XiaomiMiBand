@@ -73,19 +73,19 @@
     return-object v0
 .end method
 
-.method public getBonusUrl()Ljava/lang/String;
+.method public getBonusUrl(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;->bonusStage:Lcn/com/smartdevices/bracelet/model/game/GameStage;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->getUrl()Ljava/lang/String;
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->getUrl(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public getDefaultUrl()Ljava/lang/String;
+.method public getDefaultUrl(Landroid/content/Context;)Ljava/lang/String;
     .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -98,7 +98,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/B;->f()Ljava/lang/String;
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/E;->j(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -113,12 +113,12 @@
     return-object v0
 .end method
 
-.method public getGamePlayingUrl()Ljava/lang/String;
+.method public getGamePlayingUrl(Landroid/content/Context;)Ljava/lang/String;
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;->playingStage:Lcn/com/smartdevices/bracelet/model/game/GameStage;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->getUrl()Ljava/lang/String;
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->getUrl(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -169,7 +169,7 @@
     return-wide v0
 .end method
 
-.method public getRegisterUrl()Ljava/lang/String;
+.method public getRegisterUrl(Landroid/content/Context;)Ljava/lang/String;
     .locals 3
 
     const-string v0, "GameBriefInfo"
@@ -186,7 +186,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;->registerStage:Lcn/com/smartdevices/bracelet/model/game/GameStage;
 
-    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->getUrl()Ljava/lang/String;
+    invoke-virtual {v2, p1}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->getUrl(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -198,11 +198,11 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;->registerStage:Lcn/com/smartdevices/bracelet/model/game/GameStage;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->getUrl()Ljava/lang/String;
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/model/game/GameStage;->getUrl(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -459,7 +459,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/model/game/GameBriefInfo;->registered:Z
 

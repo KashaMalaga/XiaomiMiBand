@@ -5,12 +5,16 @@
 .implements Landroid/view/View$OnClickListener;
 
 
+# static fields
+.field public static final a:Ljava/lang/String; = "WEIGHTTIPSACTIVITY_BMI"
+
+
 # instance fields
-.field private a:Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;
+.field private b:Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;
 
-.field private b:Landroid/widget/ImageButton;
+.field private c:Landroid/widget/ImageButton;
 
-.field private c:F
+.field private d:F
 
 
 # direct methods
@@ -24,8 +28,24 @@
 
 
 # virtual methods
+.method public onBackPressed()V
+    .locals 2
+
+    invoke-super {p0}, Landroid/app/Activity;->onBackPressed()V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/weight/WeightTipsActivity;->finish()V
+
+    const/4 v0, -0x1
+
+    const v1, 0x7f04001b
+
+    invoke-virtual {p0, v0, v1}, Lcn/com/smartdevices/bracelet/weight/WeightTipsActivity;->overridePendingTransition(II)V
+
+    return-void
+.end method
+
 .method public onClick(Landroid/view/View;)V
-    .locals 1
+    .locals 2
 
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
@@ -39,10 +59,18 @@
     :pswitch_0
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/weight/WeightTipsActivity;->finish()V
 
+    const/4 v0, -0x1
+
+    const v1, 0x7f04001b
+
+    invoke-virtual {p0, v0, v1}, Lcn/com/smartdevices/bracelet/weight/WeightTipsActivity;->overridePendingTransition(II)V
+
     goto :goto_0
 
+    nop
+
     :pswitch_data_0
-    .packed-switch 0x7f08017c
+    .packed-switch 0x7f070185
         :pswitch_0
     .end packed-switch
 .end method
@@ -50,15 +78,29 @@
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 4
 
-    const/high16 v3, 0x41c40000
+    const/4 v1, 0x4
+
+    const/high16 v3, 0x41c00000
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/weight/WeightTipsActivity;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1, v1}, Landroid/view/Window;->setFlags(II)V
+
+    const v0, 0x7f04001a
+
+    const/4 v1, -0x1
+
+    invoke-virtual {p0, v0, v1}, Lcn/com/smartdevices/bracelet/weight/WeightTipsActivity;->overridePendingTransition(II)V
 
     const v0, 0x7f03003b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/WeightTipsActivity;->setContentView(I)V
 
-    const v0, 0x7f080175
+    const v0, 0x7f07017e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/WeightTipsActivity;->findViewById(I)Landroid/view/View;
 
@@ -66,9 +108,9 @@
 
     check-cast v0, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightTipsActivity;->a:Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightTipsActivity;->b:Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightTipsActivity;->a:Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightTipsActivity;->b:Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;
 
     const/high16 v1, 0x41940000
 
@@ -80,15 +122,15 @@
 
     move-result-object v0
 
-    const-string v1, "BMI"
+    const-string v1, "WEIGHTTIPSACTIVITY_BMI"
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->getFloatExtra(Ljava/lang/String;F)F
 
     move-result v0
 
-    iput v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightTipsActivity;->c:F
+    iput v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightTipsActivity;->d:F
 
-    iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightTipsActivity;->c:F
+    iget v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightTipsActivity;->d:F
 
     const/4 v1, 0x0
 
@@ -96,16 +138,16 @@
 
     if-gtz v0, :cond_0
 
-    iput v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightTipsActivity;->c:F
+    iput v3, p0, Lcn/com/smartdevices/bracelet/weight/WeightTipsActivity;->d:F
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightTipsActivity;->a:Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightTipsActivity;->b:Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;
 
-    iget v1, p0, Lcn/com/smartdevices/bracelet/weight/WeightTipsActivity;->c:F
+    iget v1, p0, Lcn/com/smartdevices/bracelet/weight/WeightTipsActivity;->d:F
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/weight/WeightGoalSetView;->a(F)V
 
-    const v0, 0x7f08017c
+    const v0, 0x7f070185
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/WeightTipsActivity;->findViewById(I)Landroid/view/View;
 
@@ -113,9 +155,9 @@
 
     check-cast v0, Landroid/widget/ImageButton;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightTipsActivity;->b:Landroid/widget/ImageButton;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightTipsActivity;->c:Landroid/widget/ImageButton;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightTipsActivity;->b:Landroid/widget/ImageButton;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/WeightTipsActivity;->c:Landroid/widget/ImageButton;
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -129,7 +171,7 @@
 
     move-result v0
 
-    const v1, 0x7f080391
+    const v1, 0x7f0703a9
 
     if-ne v0, v1, :cond_0
 

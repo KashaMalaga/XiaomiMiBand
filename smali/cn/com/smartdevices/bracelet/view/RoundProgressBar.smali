@@ -262,17 +262,17 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->q:Landroid/animation/ValueAnimator;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/view/z;
+    new-instance v1, Lcn/com/smartdevices/bracelet/view/A;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/view/z;-><init>(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/view/A;-><init>(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->q:Landroid/animation/ValueAnimator;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/view/A;
+    new-instance v1, Lcn/com/smartdevices/bracelet/view/B;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/view/A;-><init>(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/view/B;-><init>(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
 

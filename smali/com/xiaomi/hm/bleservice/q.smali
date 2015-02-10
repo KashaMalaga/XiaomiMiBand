@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$IMeasurementChangedCallback;
+.implements Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$IInitializationCallback;
 
 
 # instance fields
@@ -22,21 +22,39 @@
 
 
 # virtual methods
-.method public onChanged(Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;)V
-    .locals 1
+.method public onFailed(Landroid/bluetooth/BluetoothDevice;)V
+    .locals 2
 
-    invoke-virtual {p1}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->isValid()Z
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/q;->a:Lcom/xiaomi/hm/bleservice/BLEService;
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
+    # getter for: Lcom/xiaomi/hm/bleservice/BLEService;->m_Handler:Landroid/os/Handler;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->access$500(Lcom/xiaomi/hm/bleservice/BLEService;)Landroid/os/Handler;
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
+    const/16 v1, 0x14
 
-    :cond_0
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/q;->a:Lcom/xiaomi/hm/bleservice/BLEService;
+
+    const/4 v1, 0x4
+
+    # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->notifyWeightStatusChanged(ILandroid/bluetooth/BluetoothDevice;)V
+    invoke-static {v0, v1, p1}, Lcom/xiaomi/hm/bleservice/BLEService;->access$800(Lcom/xiaomi/hm/bleservice/BLEService;ILandroid/bluetooth/BluetoothDevice;)V
+
+    return-void
+.end method
+
+.method public onSuccess(Landroid/bluetooth/BluetoothDevice;)V
+    .locals 2
+
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/q;->a:Lcom/xiaomi/hm/bleservice/BLEService;
+
+    const/4 v1, 0x3
+
+    # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->notifyWeightStatusChanged(ILandroid/bluetooth/BluetoothDevice;)V
+    invoke-static {v0, v1, p1}, Lcom/xiaomi/hm/bleservice/BLEService;->access$800(Lcom/xiaomi/hm/bleservice/BLEService;ILandroid/bluetooth/BluetoothDevice;)V
+
     return-void
 .end method

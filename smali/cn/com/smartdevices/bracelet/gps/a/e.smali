@@ -101,7 +101,7 @@
 
     iput v2, p0, Lcn/com/smartdevices/bracelet/gps/a/e;->B:I
 
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/lab/q;->a(I)Z
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/lab/r;->a(I)Z
 
     move-result v0
 
@@ -156,7 +156,7 @@
 
     iput v2, p0, Lcn/com/smartdevices/bracelet/gps/a/e;->B:I
 
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/lab/q;->a(I)Z
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/lab/r;->a(I)Z
 
     move-result v0
 
@@ -362,7 +362,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -395,7 +395,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v1
 
@@ -635,7 +635,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

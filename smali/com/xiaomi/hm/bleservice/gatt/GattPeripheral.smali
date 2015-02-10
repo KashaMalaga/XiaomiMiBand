@@ -33,7 +33,7 @@
 
     iput-object v1, p0, Lcom/xiaomi/hm/bleservice/gatt/GattPeripheral;->__android_bug_FileLock:Ljava/nio/channels/FileLock;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->d()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->d()V
 
     iput-object p3, p0, Lcom/xiaomi/hm/bleservice/gatt/GattPeripheral;->mCallback:Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$IConnectionStateChangeCallback;
 
@@ -43,7 +43,7 @@
 .method private __lockFile()V
     .locals 2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->d()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->d()V
 
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
@@ -110,7 +110,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/GattPeripheral;->__android_bug_FileOutputStream:Ljava/io/FileOutputStream;
 
@@ -142,7 +142,7 @@
 .method private __releaseFile()V
     .locals 2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->d()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->d()V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/GattPeripheral;->__android_bug_FileOutputStream:Ljava/io/FileOutputStream;
 
@@ -186,7 +186,7 @@
 .method protected GattCB_onCharacteristicChanged(Landroid/bluetooth/BluetoothGattCharacteristic;)V
     .locals 0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->d()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->d()V
 
     return-void
 .end method
@@ -194,7 +194,7 @@
 .method protected GattCB_onCharacteristicRead(Landroid/bluetooth/BluetoothGattCharacteristic;)V
     .locals 0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->d()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->d()V
 
     return-void
 .end method
@@ -202,7 +202,7 @@
 .method protected GattCB_onCharacteristicWrite(Landroid/bluetooth/BluetoothGattCharacteristic;)V
     .locals 0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->d()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->d()V
 
     return-void
 .end method
@@ -215,7 +215,7 @@
         }
     .end annotation
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->d()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->d()V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/GattPeripheral;->mCallback:Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$IConnectionStateChangeCallback;
 
@@ -242,7 +242,7 @@
 .method protected GattCB_onConnectionFailed()V
     .locals 2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->d()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->d()V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/GattPeripheral;->mCallback:Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$IConnectionStateChangeCallback;
 
@@ -265,7 +265,7 @@
 .method protected GattCB_onDescriptorRead(Landroid/bluetooth/BluetoothGattDescriptor;)V
     .locals 0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->d()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->d()V
 
     return-void
 .end method
@@ -273,7 +273,7 @@
 .method protected GattCB_onDescriptorWrite(Landroid/bluetooth/BluetoothGattDescriptor;)V
     .locals 0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->d()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->d()V
 
     return-void
 .end method
@@ -281,7 +281,7 @@
 .method protected GattCB_onDisconnected()V
     .locals 2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->d()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->d()V
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/gatt/GattPeripheral;->mCallback:Lcom/xiaomi/hm/bleservice/gatt/IGattCallback$IConnectionStateChangeCallback;
 
@@ -304,7 +304,7 @@
 .method protected GattCB_onReadRemoteRssi(I)V
     .locals 0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->d()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->d()V
 
     return-void
 .end method
@@ -317,7 +317,7 @@
         }
     .end annotation
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->d()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->d()V
 
     invoke-virtual {p0}, Lcom/xiaomi/hm/bleservice/gatt/GattPeripheral;->getGatt()Landroid/bluetooth/BluetoothGatt;
 
@@ -371,7 +371,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/xiaomi/hm/bleservice/v;->c(Ljava/util/UUID;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/xiaomi/hm/bleservice/w;->c(Ljava/util/UUID;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -383,7 +383,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/v;->b(Ljava/lang/String;)V
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothGattService;->getCharacteristics()Ljava/util/List;
 
@@ -420,7 +420,7 @@
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/xiaomi/hm/bleservice/v;->c(Ljava/util/UUID;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/xiaomi/hm/bleservice/w;->c(Ljava/util/UUID;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -432,7 +432,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/v;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -448,7 +448,7 @@
 
     move-result v4
 
-    invoke-static {v4}, Lcom/xiaomi/hm/bleservice/v;->b(I)Ljava/lang/String;
+    invoke-static {v4}, Lcom/xiaomi/hm/bleservice/w;->b(I)Ljava/lang/String;
 
     move-result-object v4
 
@@ -460,7 +460,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/v;->b(Ljava/lang/String;)V
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothGattCharacteristic;->getDescriptors()Ljava/util/List;
 
@@ -497,7 +497,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/v;->c(Ljava/util/UUID;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/w;->c(Ljava/util/UUID;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -509,7 +509,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -523,7 +523,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->c(Z)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Z)V
 
     if-nez v0, :cond_4
 
@@ -546,7 +546,7 @@
 .method public cleanup()V
     .locals 0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->d()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->d()V
 
     return-void
 .end method
@@ -554,7 +554,7 @@
 .method protected cleanupInternal()V
     .locals 3
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->d()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->d()V
 
     invoke-virtual {p0}, Lcom/xiaomi/hm/bleservice/gatt/GattPeripheral;->cleanup()V
 
@@ -586,7 +586,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;)V
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/x;->f(Ljava/lang/String;)V
 
     iget-boolean v1, p0, Lcom/xiaomi/hm/bleservice/gatt/GattPeripheral;->m_AutoReconnect:Z
 
@@ -604,7 +604,7 @@
     :try_start_0
     const-string v0, "Delay 1 second before reconnect..."
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
 
     const-wide/16 v0, 0x1388
 
@@ -632,11 +632,11 @@
         }
     .end annotation
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->d()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->d()V
 
     const-string v0, "device:"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -664,7 +664,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -692,7 +692,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcom/xiaomi/hm/bleservice/gatt/GattPeripheral;->getDevice()Landroid/bluetooth/BluetoothDevice;
 
@@ -723,49 +723,49 @@
     :pswitch_0
     const-string v0, "   bond state: BONDED"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
 
     goto :goto_0
 
     :pswitch_1
     const-string v0, "   bond state: BONDING"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
 
     goto :goto_0
 
     :pswitch_2
     const-string v0, "   bond state: NONE"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
 
     goto :goto_0
 
     :pswitch_3
     const-string v0, "         type: LE"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
 
     goto :goto_1
 
     :pswitch_4
     const-string v0, "         type: CLASSIC"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
 
     goto :goto_1
 
     :pswitch_5
     const-string v0, "         type: DUAL"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
 
     goto :goto_1
 
     :pswitch_6
     const-string v0, "         type: UNKNOWN"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;)V
 
     goto :goto_1
 
@@ -788,7 +788,7 @@
 .method protected final disconnectInternal()V
     .locals 0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->d()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->d()V
 
     invoke-super {p0}, Lcom/xiaomi/hm/bleservice/gatt/AbsGattCallback;->disconnectInternal()V
 
@@ -806,7 +806,7 @@
 .method public init()Z
     .locals 1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->d()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->d()V
 
     const/4 v0, 0x1
 
@@ -823,9 +823,9 @@
 
     const/4 v1, 0x0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->d()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->d()V
 
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/Object;)V
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/Object;)V
 
     if-nez p1, :cond_0
 
@@ -842,7 +842,7 @@
     const/4 v0, 0x1
 
     :goto_1
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->c(Z)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Z)V
 
     if-nez v2, :cond_2
 
@@ -889,11 +889,11 @@
 
     const/4 v2, 0x0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/v;->d()V
+    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->d()V
 
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/Object;)V
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/Object;)V
 
-    invoke-static {p2}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/Object;)V
+    invoke-static {p2}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/Object;)V
 
     if-eqz p1, :cond_0
 
@@ -916,7 +916,7 @@
     move v0, v1
 
     :goto_1
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/v;->c(Z)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/x;->a(Z)V
 
     if-eqz v3, :cond_1
 

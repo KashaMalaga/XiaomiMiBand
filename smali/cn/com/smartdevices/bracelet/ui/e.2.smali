@@ -28,7 +28,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0700f7
+    const v1, 0x7f080109
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -48,7 +48,7 @@
 
     const-string v1, "getCount"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/e;->a:Lcn/com/smartdevices/bracelet/ui/AlarmActivity;
 
@@ -110,7 +110,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0300b5
+    const v2, 0x7f0300ba
 
     const/4 v3, 0x0
 
@@ -118,7 +118,7 @@
 
     move-result-object v5
 
-    const v1, 0x7f08033d
+    const v1, 0x7f070355
 
     invoke-virtual {v5, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -126,7 +126,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f08033f
+    const v2, 0x7f070357
 
     invoke-virtual {v5, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -134,7 +134,7 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    const v3, 0x7f08033e
+    const v3, 0x7f070356
 
     invoke-virtual {v5, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -142,7 +142,7 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    const v4, 0x7f080340
+    const v4, 0x7f070358
 
     invoke-virtual {v5, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -218,7 +218,7 @@
     invoke-virtual {v4, v8}, Landroid/widget/TextView;->setVisibility(I)V
 
     :goto_1
-    const v1, 0x7f080341
+    const v1, 0x7f070359
 
     invoke-virtual {v5, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -238,7 +238,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    const v0, 0x7f08033c
+    const v0, 0x7f070354
 
     invoke-virtual {v5, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -275,14 +275,14 @@
 
     if-nez v6, :cond_1
 
-    const v6, 0x7f070147
+    const v6, 0x7f08015b
 
     invoke-virtual {v3, v6}, Landroid/widget/TextView;->setText(I)V
 
     goto/16 :goto_0
 
     :cond_1
-    const v6, 0x7f070148
+    const v6, 0x7f08015c
 
     invoke-virtual {v3, v6}, Landroid/widget/TextView;->setText(I)V
 

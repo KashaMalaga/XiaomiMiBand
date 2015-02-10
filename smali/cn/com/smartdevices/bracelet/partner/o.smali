@@ -9,7 +9,7 @@
         "<",
         "Ljava/lang/String;",
         "Ljava/lang/Integer;",
-        "Lcn/com/smartdevices/bracelet/ui/dF;",
+        "Lcn/com/smartdevices/bracelet/ui/dJ;",
         ">;"
     }
 .end annotation
@@ -32,7 +32,7 @@
 
 
 # virtual methods
-.method protected varargs a([Ljava/lang/String;)Lcn/com/smartdevices/bracelet/ui/dF;
+.method protected varargs a([Ljava/lang/String;)Lcn/com/smartdevices/bracelet/ui/dJ;
     .locals 5
 
     const/4 v1, 0x0
@@ -91,15 +91,15 @@
 
     const/16 v3, 0x64
 
-    invoke-static {v2, v0, v3}, Lcn/com/smartdevices/bracelet/B;->a(Ljava/lang/String;Landroid/graphics/Bitmap;I)Z
+    invoke-static {v2, v0, v3}, Lcn/com/smartdevices/bracelet/E;->a(Ljava/lang/String;Landroid/graphics/Bitmap;I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/dF;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/dJ;
 
-    invoke-direct {v1, v2}, Lcn/com/smartdevices/bracelet/ui/dF;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Lcn/com/smartdevices/bracelet/ui/dJ;-><init>(Ljava/lang/String;)V
 
     :cond_0
     return-object v1
@@ -128,12 +128,12 @@
     goto :goto_1
 .end method
 
-.method protected a(Lcn/com/smartdevices/bracelet/ui/dF;)V
+.method protected a(Lcn/com/smartdevices/bracelet/ui/dJ;)V
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/o;->a:Lcn/com/smartdevices/bracelet/partner/WebActivity;
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->a(Lcn/com/smartdevices/bracelet/ui/dF;)V
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->a(Lcn/com/smartdevices/bracelet/ui/dJ;)V
 
     return-void
 .end method
@@ -143,7 +143,7 @@
 
     check-cast p1, [Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/partner/o;->a([Ljava/lang/String;)Lcn/com/smartdevices/bracelet/ui/dF;
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/partner/o;->a([Ljava/lang/String;)Lcn/com/smartdevices/bracelet/ui/dJ;
 
     move-result-object v0
 
@@ -153,9 +153,9 @@
 .method protected synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
-    check-cast p1, Lcn/com/smartdevices/bracelet/ui/dF;
+    check-cast p1, Lcn/com/smartdevices/bracelet/ui/dJ;
 
-    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/partner/o;->a(Lcn/com/smartdevices/bracelet/ui/dF;)V
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/partner/o;->a(Lcn/com/smartdevices/bracelet/ui/dJ;)V
 
     return-void
 .end method

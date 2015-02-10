@@ -1,25 +1,18 @@
-.class final Lcn/com/smartdevices/bracelet/y;
-.super Lcom/d/a/c/a;
+.class public final Lcn/com/smartdevices/bracelet/y;
+.super Ljava/lang/Object;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/d/a/c/a",
-        "<",
-        "Ljava/util/ArrayList",
-        "<",
-        "Ljava/util/Calendar;",
-        ">;>;"
-    }
-.end annotation
+# static fields
+.field public static final a:Ljava/lang/String; = "cn.com.smartdevices.bracele.action.START_LAB_FACTORY_TEST_ACTIVITY"
+
+.field public static final b:Ljava/lang/String; = "cn.com.smartdevices.bracelet.action.START_LAB_SPORT_ANALYSE"
 
 
 # direct methods
-.method constructor <init>()V
+.method private constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lcom/d/a/c/a;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

@@ -198,14 +198,14 @@
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/c/i;->j:Landroid/content/res/Resources;
 
-    const v4, 0x7f070304
+    const v4, 0x7f080333
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     :goto_1
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/c/i;->j:Landroid/content/res/Resources;
 
-    const v4, 0x7f070302
+    const v4, 0x7f080331
 
     const/4 v5, 0x3
 
@@ -232,7 +232,7 @@
     :cond_1
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/gps/c/i;->j:Landroid/content/res/Resources;
 
-    const v4, 0x7f070303
+    const v4, 0x7f080332
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

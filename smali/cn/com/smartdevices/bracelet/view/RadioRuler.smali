@@ -55,7 +55,7 @@
 
 .field private y:Landroid/widget/Scroller;
 
-.field private z:Lcn/com/smartdevices/bracelet/view/y;
+.field private z:Lcn/com/smartdevices/bracelet/view/z;
 
 
 # direct methods
@@ -106,7 +106,7 @@
 
     iput-object v1, p0, Lcn/com/smartdevices/bracelet/view/RadioRuler;->y:Landroid/widget/Scroller;
 
-    iput-object v1, p0, Lcn/com/smartdevices/bracelet/view/RadioRuler;->z:Lcn/com/smartdevices/bracelet/view/y;
+    iput-object v1, p0, Lcn/com/smartdevices/bracelet/view/RadioRuler;->z:Lcn/com/smartdevices/bracelet/view/z;
 
     new-instance v0, Landroid/widget/Scroller;
 
@@ -179,7 +179,7 @@
 
     const/high16 v1, 0x41700000
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/view/x;->c(FF)F
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/view/y;->c(FF)F
 
     move-result v0
 
@@ -207,19 +207,19 @@
 
     const/high16 v3, 0x3f800000
 
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/view/x;->c(FF)F
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/view/y;->c(FF)F
 
     move-result v3
 
-    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/view/x;->b(FF)F
+    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/view/y;->b(FF)F
 
     move-result v1
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/view/x;->a(FF)F
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/view/y;->a(FF)F
 
     move-result v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/view/x;->a(FF)F
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/view/y;->a(FF)F
 
     move-result v0
 
@@ -232,19 +232,19 @@
 
     int-to-float v1, v1
 
-    invoke-static {v4, v4}, Lcn/com/smartdevices/bracelet/view/x;->c(FF)F
+    invoke-static {v4, v4}, Lcn/com/smartdevices/bracelet/view/y;->c(FF)F
 
     move-result v3
 
-    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/view/x;->b(FF)F
+    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/view/y;->b(FF)F
 
     move-result v1
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/view/x;->a(FF)F
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/view/y;->a(FF)F
 
     move-result v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/view/x;->a(FF)F
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/view/y;->a(FF)F
 
     move-result v0
 
@@ -707,7 +707,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "Ruler"
 
@@ -731,7 +731,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/view/RadioRuler;->j:F
 
@@ -797,10 +797,10 @@
     return-void
 .end method
 
-.method public a(Lcn/com/smartdevices/bracelet/view/y;)V
+.method public a(Lcn/com/smartdevices/bracelet/view/z;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/RadioRuler;->z:Lcn/com/smartdevices/bracelet/view/y;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/view/RadioRuler;->z:Lcn/com/smartdevices/bracelet/view/z;
 
     return-void
 .end method
@@ -881,13 +881,13 @@
 
     invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/view/RadioRuler;->b(F)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/RadioRuler;->z:Lcn/com/smartdevices/bracelet/view/y;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/RadioRuler;->z:Lcn/com/smartdevices/bracelet/view/z;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/RadioRuler;->z:Lcn/com/smartdevices/bracelet/view/y;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/RadioRuler;->z:Lcn/com/smartdevices/bracelet/view/z;
 
-    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/view/y;->a()V
+    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/view/z;->a()V
 
     goto :goto_0
 
@@ -902,17 +902,17 @@
 
     invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/view/RadioRuler;->c(F)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/RadioRuler;->z:Lcn/com/smartdevices/bracelet/view/y;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/RadioRuler;->z:Lcn/com/smartdevices/bracelet/view/z;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/RadioRuler;->z:Lcn/com/smartdevices/bracelet/view/y;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/RadioRuler;->z:Lcn/com/smartdevices/bracelet/view/z;
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/view/RadioRuler;->b()F
 
     move-result v1
 
-    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/view/y;->a(F)V
+    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/view/z;->a(F)V
 
     goto :goto_0
 

@@ -13,6 +13,14 @@
 
 
 # virtual methods
+.method protected isExceptForMiNote()Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
 .method protected onActivityResult(IILandroid/content/Intent;)V
     .locals 0
 
@@ -36,11 +44,11 @@
 
     const v1, 0x1020002
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/ui/dm;
+    new-instance v2, Lcn/com/smartdevices/bracelet/ui/ds;
 
-    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/ui/dm;-><init>()V
+    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/ui/ds;-><init>()V
 
-    const-class v3, Lcn/com/smartdevices/bracelet/ui/dm;
+    const-class v3, Lcn/com/smartdevices/bracelet/ui/ds;
 
     invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -58,7 +66,7 @@
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onPause()V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/A;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -68,7 +76,7 @@
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onResume()V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;)V
 
     return-void
 .end method

@@ -4,12 +4,13 @@
     "partner" : {
         "enable":true,
         "loadEnable" : true,
-        "healthLinkEnable" : true,
-        "QQHealthEnable":true
+        "healthLinkEnable" : false,
+        "QQHealthEnable":false
     },
 
     "runner" : {
-        "enable" : true
+        "enable" : true,
+        "runnerGroupEnnable" : true
     },
 
     "mall" : {
@@ -25,16 +26,16 @@
     },
 
     "lab" : {
-        "enableSportVote" : true,
+        "enableSportVote" : false,
         "enableActionTag" : true
     },
 
     "push" : {
-        "enable" : true
+        "enable" : false
     },
 
     "weight" : {
-        "enable" : false
+        "enable" : true
     }, 
 
     "log" : {

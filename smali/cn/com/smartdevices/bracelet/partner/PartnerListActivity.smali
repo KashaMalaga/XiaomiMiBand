@@ -30,7 +30,7 @@
 .method private b()V
     .locals 2
 
-    const v0, 0x7f080051
+    const v0, 0x7f070035
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->findViewById(I)Landroid/view/View;
 
@@ -38,7 +38,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f07032d
+    const v1, 0x7f08035c
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->getString(I)Ljava/lang/String;
 
@@ -164,7 +164,7 @@
 
     if-eqz v3, :cond_6
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/B;->o(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/E;->r(Landroid/content/Context;)Z
 
     move-result v2
 
@@ -221,7 +221,7 @@
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->setContentView(I)V
 
-    const v0, 0x7f080051
+    const v0, 0x7f070035
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->findViewById(I)Landroid/view/View;
 
@@ -229,7 +229,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f07032d
+    const v1, 0x7f08035c
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -253,7 +253,7 @@
 
     iput-object v1, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->b:Lcn/com/smartdevices/bracelet/partner/j;
 
-    const v0, 0x7f08011a
+    const v0, 0x7f070120
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->findViewById(I)Landroid/view/View;
 
@@ -392,9 +392,9 @@
 
     const-string v0, "PagePartnerList"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/A;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->a(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/A;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->a(Landroid/content/Context;)V
 
     return-void
 .end method
@@ -406,9 +406,9 @@
 
     const-string v0, "PagePartnerList"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/A;->c(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->c(Ljava/lang/String;)V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/A;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;)V
 
     return-void
 .end method

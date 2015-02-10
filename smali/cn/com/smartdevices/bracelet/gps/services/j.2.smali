@@ -177,7 +177,7 @@
 
     const-string v1, "CoordinateCreatorTask  mResultUri = null"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -192,7 +192,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -204,13 +204,13 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/j;->f:Landroid/content/Context;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/a/b;->a(Landroid/content/Context;Ljava/util/List;)Z
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/a/b;->b(Landroid/content/Context;Ljava/util/List;)Z
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/j;->f:Landroid/content/Context;
 
     iget-wide v1, p0, Lcn/com/smartdevices/bracelet/gps/services/j;->g:J
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/lab/sync/B;->a(Landroid/content/Context;J)V
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/lab/sync/G;->a(Landroid/content/Context;J)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 

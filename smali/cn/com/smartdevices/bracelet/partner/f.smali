@@ -1,11 +1,11 @@
 .class Lcn/com/smartdevices/bracelet/partner/f;
-.super Lcom/e/a/a/p;
+.super Lcom/d/a/a/p;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/e/a/a/p",
+        "Lcom/d/a/a/p",
         "<",
         "Ljava/util/List",
         "<",
@@ -25,7 +25,7 @@
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/partner/f;->a:Lcn/com/smartdevices/bracelet/partner/d;
 
-    invoke-direct {p0}, Lcom/e/a/a/p;-><init>()V
+    invoke-direct {p0}, Lcom/d/a/a/p;-><init>()V
 
     return-void
 .end method
@@ -203,7 +203,7 @@
 
     move-result-wide v1
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(J)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/z;->g(J)V
 
     goto/16 :goto_0
 .end method
@@ -252,7 +252,7 @@
 
     move-result-wide v1
 
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(J)V
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/z;->g(J)V
 
     invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
 

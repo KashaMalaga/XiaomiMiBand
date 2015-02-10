@@ -16,14 +16,14 @@
 
 
 # instance fields
-.field final synthetic d:Lcn/com/smartdevices/bracelet/b/z;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/b/z;
 
 
 # direct methods
 .method protected constructor <init>(Lcn/com/smartdevices/bracelet/b/z;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/b/C;->d:Lcn/com/smartdevices/bracelet/b/z;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/b/C;->a:Lcn/com/smartdevices/bracelet/b/z;
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/b/a;-><init>()V
 
@@ -63,28 +63,28 @@
     return-object v0
 
     :pswitch_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/b/C;->d:Lcn/com/smartdevices/bracelet/b/z;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/b/C;->a:Lcn/com/smartdevices/bracelet/b/z;
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/b/z;->b()V
 
     goto :goto_0
 
     :pswitch_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/b/C;->d:Lcn/com/smartdevices/bracelet/b/z;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/b/C;->a:Lcn/com/smartdevices/bracelet/b/z;
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/b/z;->a()V
 
     goto :goto_0
 
     :pswitch_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/b/C;->d:Lcn/com/smartdevices/bracelet/b/z;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/b/C;->a:Lcn/com/smartdevices/bracelet/b/z;
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/b/z;->c()V
 
     goto :goto_0
 
     :pswitch_3
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/b/C;->d:Lcn/com/smartdevices/bracelet/b/z;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/b/C;->a:Lcn/com/smartdevices/bracelet/b/z;
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/b/z;->d()V
 

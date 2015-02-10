@@ -7,6 +7,6 @@
             <TextView android:textSize="@dimen/main_ui_dialog_title_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="@dimen/dialog_title_margin_bottom" android:text="@string/weight_delete_confirm_title" />
             <TextView android:textSize="@dimen/info_content_size" android:textColor="#ff919394" android:gravity="center" android:id="@id/msg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:text="@string/weight_delete_confirm_msg" />
         </LinearLayout>
-        <cn.com.smartdevices.bracelet.ui.widget.DimPanelBottomBar android:layout_width="fill_parent" android:layout_height="wrap_content" app:left_text="@string/confirm" app:right_text="@string/cancel" app:right_text_color="@color/button_cancel_color" xmlns:app="http://schemas.android.com/apk/res-auto" />
+        <cn.com.smartdevices.bracelet.ui.widget.DimPanelBottomBar android:layout_width="fill_parent" android:layout_height="wrap_content" app:left_text="@string/cancel" app:right_text="@string/confirm" app:left_text_color="@color/button_cancel_color" app:right_text_color="@color/button_confirm_color" xmlns:app="http://schemas.android.com/apk/res-auto" />
     </LinearLayout>
 </LinearLayout>

@@ -1,69 +1,192 @@
-.class Lcn/com/smartdevices/bracelet/gps/ui/V;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.class final Lcn/com/smartdevices/bracelet/gps/ui/V;
+.super Landroid/widget/BaseAdapter;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/U;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;
+
+.field private b:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private c:Landroid/view/LayoutInflater;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/U;)V
-    .locals 0
+.method public constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;Landroid/content/Context;Ljava/util/List;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/V;->a:Lcn/com/smartdevices/bracelet/gps/ui/U;
+    const/4 v0, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/V;->a:Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;
+
+    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/V;->b:Ljava/util/List;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/V;->c:Landroid/view/LayoutInflater;
+
+    iput-object p3, p0, Lcn/com/smartdevices/bracelet/gps/ui/V;->b:Ljava/util/List;
+
+    invoke-static {p2}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/V;->c:Landroid/view/LayoutInflater;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
+.method public a(I)Ljava/lang/String;
+    .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/V;->a:Lcn/com/smartdevices/bracelet/gps/ui/U;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/V;->b:Ljava/util/List;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/U;->b(Lcn/com/smartdevices/bracelet/gps/ui/U;)Lcn/com/smartdevices/bracelet/gps/ui/Z;
+    if-eqz v0, :cond_0
 
-    move-result-object v0
+    if-ltz p1, :cond_0
 
-    invoke-virtual {v0, p3}, Lcn/com/smartdevices/bracelet/gps/ui/Z;->a(I)Ljava/lang/String;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/V;->b:Ljava/util/List;
 
-    move-result-object v0
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    if-nez v0, :cond_1
+    move-result v0
+
+    if-lt p1, v0, :cond_1
 
     :cond_0
+    const/4 v0, 0x0
+
     :goto_0
-    return-void
+    return-object v0
 
     :cond_1
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/V;->b:Ljava/util/List;
 
-    move-result v1
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    if-nez v1, :cond_0
+    move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/V;->a:Lcn/com/smartdevices/bracelet/gps/ui/U;
+    check-cast v0, Ljava/lang/String;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/gps/ui/U;->c(Lcn/com/smartdevices/bracelet/gps/ui/U;)Landroid/widget/EditText;
+    goto :goto_0
+.end method
 
-    move-result-object v1
+.method public getCount()I
+    .locals 1
 
-    invoke-virtual {v1, v0}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/V;->b:Ljava/util/List;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/V;->b:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    goto :goto_0
+.end method
+
+.method public synthetic getItem(I)Ljava/lang/Object;
+    .locals 1
+
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/gps/ui/V;->a(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getItemId(I)J
+    .locals 2
+
+    int-to-long v0, p1
+
+    return-wide v0
+.end method
+
+.method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    .locals 4
+
+    const/4 v3, 0x0
+
+    if-nez p2, :cond_0
+
+    new-instance v1, Lcn/com/smartdevices/bracelet/gps/ui/T;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/V;->a:Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;
+
+    invoke-direct {v1, v0, v3}, Lcn/com/smartdevices/bracelet/gps/ui/T;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/LabelInputActivity;Lcn/com/smartdevices/bracelet/gps/ui/S;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/V;->c:Landroid/view/LayoutInflater;
+
+    const v2, 0x7f0300ab
+
+    invoke-virtual {v0, v2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object p2
+
+    const v0, 0x7f0700cb
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, v1, Lcn/com/smartdevices/bracelet/gps/ui/T;->a:Landroid/widget/TextView;
+
+    invoke-virtual {p2, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+
+    :goto_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/V;->b:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    iget-object v1, v1, Lcn/com/smartdevices/bracelet/gps/ui/T;->a:Landroid/widget/TextView;
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    return-object p2
+
+    :cond_0
+    invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/gps/ui/T;
+
+    move-object v1, v0
 
     goto :goto_0
 .end method

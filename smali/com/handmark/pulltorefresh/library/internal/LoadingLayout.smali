@@ -89,12 +89,12 @@
 
     move-result-object v0
 
-    const v1, 0x7f0300a1
+    const v1, 0x7f0300a5
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     :goto_0
-    const v0, 0x7f0802e7
+    const v0, 0x7f0702f9
 
     invoke-virtual {p0, v0}, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->findViewById(I)Landroid/view/View;
 
@@ -106,7 +106,7 @@
 
     iget-object v0, p0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->mInnerLayout:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f0802eb
+    const v1, 0x7f0702fd
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -118,7 +118,7 @@
 
     iget-object v0, p0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->mInnerLayout:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f0802e9
+    const v1, 0x7f0702fb
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -130,7 +130,7 @@
 
     iget-object v0, p0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->mInnerLayout:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f0802ec
+    const v1, 0x7f0702fe
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -142,7 +142,7 @@
 
     iget-object v0, p0, Lcom/handmark/pulltorefresh/library/internal/LoadingLayout;->mInnerLayout:Landroid/widget/RelativeLayout;
 
-    const v1, 0x7f0802e8
+    const v1, 0x7f0702fa
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
 
@@ -378,7 +378,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0300a0
+    const v1, 0x7f0300a4
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -440,7 +440,7 @@
     goto :goto_6
 
     :cond_9
-    const v0, 0x7f070005
+    const v0, 0x7f08000d
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -451,7 +451,7 @@
     goto :goto_7
 
     :cond_a
-    const v0, 0x7f070007
+    const v0, 0x7f08000f
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -462,7 +462,7 @@
     goto :goto_8
 
     :cond_b
-    const v0, 0x7f070006
+    const v0, 0x7f08000e
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -478,7 +478,7 @@
     goto/16 :goto_1
 
     :cond_d
-    const v0, 0x7f070002
+    const v0, 0x7f08000a
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -489,7 +489,7 @@
     goto/16 :goto_2
 
     :cond_e
-    const v0, 0x7f070004
+    const v0, 0x7f08000c
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -500,7 +500,7 @@
     goto/16 :goto_3
 
     :cond_f
-    const v0, 0x7f070003
+    const v0, 0x7f08000b
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

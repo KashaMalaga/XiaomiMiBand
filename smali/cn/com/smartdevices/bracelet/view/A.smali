@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
@@ -22,28 +22,99 @@
 
 
 # virtual methods
-.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 2
+.method public onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object v0
+.method public onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 4
 
-    check-cast v0, Ljava/lang/Float;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/A;->a:Lcn/com/smartdevices/bracelet/view/RoundProgressBar;
 
-    invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->a(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;)I
 
     move-result v0
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/A;->a:Lcn/com/smartdevices/bracelet/view/RoundProgressBar;
 
-    float-to-int v0, v0
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->b(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;)I
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->b(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;I)I
+    move-result v1
+
+    if-ge v0, v1, :cond_0
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/A;->a:Lcn/com/smartdevices/bracelet/view/RoundProgressBar;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->postInvalidate()V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->c(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;)I
+
+    move-result v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/A;->a:Lcn/com/smartdevices/bracelet/view/RoundProgressBar;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->b(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;)I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/A;->a:Lcn/com/smartdevices/bracelet/view/RoundProgressBar;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/A;->a:Lcn/com/smartdevices/bracelet/view/RoundProgressBar;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->b(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;)I
+
+    move-result v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->a(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;I)I
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/A;->a:Lcn/com/smartdevices/bracelet/view/RoundProgressBar;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/view/A;->a:Lcn/com/smartdevices/bracelet/view/RoundProgressBar;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->a(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;)I
+
+    move-result v1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/view/A;->a:Lcn/com/smartdevices/bracelet/view/RoundProgressBar;
+
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->c(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;)I
+
+    move-result v2
+
+    sub-int/2addr v1, v2
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/view/A;->a:Lcn/com/smartdevices/bracelet/view/RoundProgressBar;
+
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->c(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;)I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/view/A;->a:Lcn/com/smartdevices/bracelet/view/RoundProgressBar;
+
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->a(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;)I
+
+    move-result v3
+
+    int-to-float v3, v3
+
+    invoke-static {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/view/RoundProgressBar;->a(Lcn/com/smartdevices/bracelet/view/RoundProgressBar;IFF)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
 
     return-void
 .end method

@@ -20,14 +20,14 @@
 
 
 # virtual methods
-.method public b()V
+.method public c()V
     .locals 3
 
     const-string v0, "BindDevicesBandFragment"
 
     const-string v1, "On start bind clicked!!"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v0, Landroid/content/Intent;
 
@@ -63,19 +63,19 @@
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/g/d;->a(Landroid/app/Activity;Z)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/h/d;->a(Landroid/app/Activity;Z)V
 
     goto :goto_0
 
     :pswitch_1
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/w;->b()V
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/w;->c()V
 
     goto :goto_0
 
     nop
 
     :pswitch_data_0
-    .packed-switch 0x7f08002f
+    .packed-switch 0x7f070033
         :pswitch_0
         :pswitch_1
     .end packed-switch
@@ -92,7 +92,7 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 4
 
-    const v3, 0x7f08002f
+    const v3, 0x7f070033
 
     const/high16 v0, 0x7f030000
 
@@ -108,7 +108,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v2, 0x7f070215
+    const v2, 0x7f08022b
 
     invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/ui/w;->getString(I)Ljava/lang/String;
 
@@ -126,7 +126,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f080030
+    const v0, 0x7f070034
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

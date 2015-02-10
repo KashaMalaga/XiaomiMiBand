@@ -41,7 +41,11 @@
         <item name="android:windowEnterAnimation">@null</item>
         <item name="android:windowExitAnimation">@null</item>
     </style>
-    <style name="MainActivityStyle" parent="@style/AppTheme" />
+    <style name="MainActivityStyle" parent="@style/AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowEnterAnimation">@null</item>
+        <item name="android:windowExitAnimation">@null</item>
+    </style>
     <style name="MenuPanel" parent="@style/DimPanel">
         <item name="android:windowAnimationStyle">@style/Menu</item>
     </style>
@@ -63,7 +67,7 @@
     <style name="drawerMenuButton2">
         <item name="android:textSize">16.0dip</item>
         <item name="android:textColor">#ff4a4a4a</item>
-        <item name="android:gravity">left|center</item>
+        <item name="android:gravity">center|left</item>
         <item name="android:background">@drawable/btn_drawer_menu</item>
         <item name="android:paddingLeft">8.0dip</item>
         <item name="android:paddingRight">8.0dip</item>
@@ -129,30 +133,29 @@
     <style name="WeightSelectTheme" parent="@style/AppTheme">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowFullscreen">true</item>
     </style>
     <style name="ListItemTitleText">
-        <item name="android:textSize">@dimen/main_ui_item_title_size</item>
+        <item name="android:textSize">@dimen/common_list_item_main_font</item>
         <item name="android:textColor">@color/main_ui_title_color</item>
         <item name="android:gravity">center_vertical</item>
     </style>
     <style name="ListItemValueText">
-        <item name="android:textSize">@dimen/info_content_size</item>
+        <item name="android:textSize">@dimen/common_list_item_sub_font</item>
         <item name="android:textColor">@color/main_ui_content_color</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:layout_marginRight">@dimen/item_value_margin_right</item>
         <item name="android:singleLine">true</item>
     </style>
     <style name="BackButton">
-        <item name="android:textSize">15.0sp</item>
+        <item name="android:textSize">@dimen/common_header_back_title_font</item>
         <item name="android:textColor">#e6ffffff</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:paddingLeft">10.0dip</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">@dimen/common_header_padding</item>
         <item name="android:clickable">true</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">@dimen/action_bar_h</item>
+        <item name="android:layout_height">@dimen/common_header_height</item>
         <item name="android:drawableLeft">@drawable/btn_prev_selector</item>
-        <item name="android:drawablePadding">10.0dip</item>
+        <item name="android:drawablePadding">@dimen/common_header_padding</item>
     </style>
     <style name="RightButton">
         <item name="android:textSize">15.0sp</item>
@@ -162,6 +165,33 @@
         <item name="android:clickable">true</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">@dimen/action_bar_h</item>
+    </style>
+    <style name="ChartInfoItem">
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">@dimen/dynamic_info_width</item>
+        <item name="android:layout_height">@dimen/dynamic_info_height</item>
+    </style>
+    <style name="ChartInfoItemTitle">
+        <item name="android:textSize">@dimen/dynamic_info_title</item>
+        <item name="android:textColor">@color/main_ui_content_color</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="ChartInfoItemValue">
+        <item name="android:textSize">@dimen/dynamic_info_value</item>
+        <item name="android:textColor">@color/main_ui_title_color</item>
+        <item name="android:id">@id/item_value</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">--</item>
+    </style>
+    <style name="ChartInfoItemValueUnit">
+        <item name="android:textSize">@dimen/dynamic_info_value_non_digital</item>
+        <item name="android:textColor">@color/main_ui_title_color</item>
+        <item name="android:id">@id/item_value_unit</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="SportVoteItemText">
         <item name="android:textSize">13.299988sp</item>
@@ -179,7 +209,7 @@
         <item name="android:textColor">@color/running_sub_text</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:text">--</item>
+        <item name="android:text">@string/data_not_supported</item>
         <item name="android:singleLine">true</item>
         <item name="android:layout_centerHorizontal">true</item>
         <item name="android:fontFamily">miui-bold</item>

@@ -32,7 +32,7 @@
 .end method
 
 .method public c(Ljava/lang/Object;)V
-    .locals 2
+    .locals 3
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->c(Ljava/lang/Object;)V
 
@@ -40,15 +40,21 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/t;->c:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
 
-    check-cast p1, Ljava/lang/String;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/t;->c:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/t;->b:Lorg/json/JSONObject;
-
-    invoke-virtual {v1}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->i(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v0, p1, v1}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->a(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;Ljava/lang/String;Ljava/lang/String;)V
+    check-cast p1, Ljava/lang/String;
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/t;->b:Lorg/json/JSONObject;
+
+    invoke-virtual {v2}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v1, p1, v2}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->a(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void

@@ -1,149 +1,262 @@
-.class public Lcn/com/smartdevices/bracelet/lab/k;
-.super Ljava/lang/Object;
+.class Lcn/com/smartdevices/bracelet/lab/k;
+.super Lcn/com/smartdevices/bracelet/a/b;
+
+
+# instance fields
+.field final synthetic b:Z
+
+.field final synthetic c:Lcn/com/smartdevices/bracelet/lab/i;
 
 
 # direct methods
-.method private constructor <init>()V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/lab/i;Z)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/k;->c:Lcn/com/smartdevices/bracelet/lab/i;
+
+    iput-boolean p2, p0, Lcn/com/smartdevices/bracelet/lab/k;->b:Z
+
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/a/b;-><init>()V
 
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;)V
-    .locals 2
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/B;->a(Landroid/content/Context;)Ljava/lang/String;
+# virtual methods
+.method public c(Ljava/lang/Object;)V
+    .locals 5
 
-    move-result-object v0
+    const/4 v0, 0x1
 
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    const/4 v1, 0x2
 
-    move-result v1
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->c(Ljava/lang/Object;)V
 
-    if-eqz v1, :cond_1
+    check-cast p1, Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    iget-boolean v3, p0, Lcn/com/smartdevices/bracelet/lab/k;->b:Z
+
+    if-eqz v3, :cond_3
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/k;->c:Lcn/com/smartdevices/bracelet/lab/i;
+
+    iget-object v3, v3, Lcn/com/smartdevices/bracelet/lab/i;->c:Lcn/com/smartdevices/bracelet/lab/h;
+
+    if-eqz v2, :cond_0
+
+    move v0, v1
 
     :cond_0
-    :goto_0
-    return-void
+    invoke-static {v3, v0}, Lcn/com/smartdevices/bracelet/lab/h;->a(Lcn/com/smartdevices/bracelet/lab/h;I)I
 
-    :cond_1
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->z()Ljava/lang/String;
+    const-string v0, "Lab"
 
-    move-result-object v1
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result v0
+    const-string v4, "MSG_SWITCH_DEVICE_SAMPLE isSucceeded = "
 
-    if-nez v0, :cond_0
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->U()V
-
-    goto :goto_0
-.end method
-
-.method public static a()Z
-    .locals 6
-
-    const/4 v0, 0x0
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->T()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/lab/l;->values()[Lcn/com/smartdevices/bracelet/lab/l;
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    array-length v4, v3
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    move v1, v0
+    move-result-object v3
 
-    :goto_0
-    if-ge v1, v4, :cond_0
+    const-string v4, "  isEnable = "
 
-    aget-object v5, v3, v1
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5}, Lcn/com/smartdevices/bracelet/lab/l;->toString()Ljava/lang/String;
+    move-result-object v3
 
-    move-result-object v5
+    iget-boolean v4, p0, Lcn/com/smartdevices/bracelet/lab/k;->b:Z
 
-    invoke-virtual {v2, v5}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    move-result v5
+    move-result-object v3
 
-    if-nez v5, :cond_1
+    const-string v4, "  mIsDeviceReady = "
 
-    const/4 v0, 0x1
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_0
-    return v0
+    move-result-object v3
+
+    iget-object v4, p0, Lcn/com/smartdevices/bracelet/lab/k;->c:Lcn/com/smartdevices/bracelet/lab/i;
+
+    iget-object v4, v4, Lcn/com/smartdevices/bracelet/lab/i;->c:Lcn/com/smartdevices/bracelet/lab/h;
+
+    invoke-static {v4}, Lcn/com/smartdevices/bracelet/lab/h;->b(Lcn/com/smartdevices/bracelet/lab/h;)I
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v0, v3}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/k;->c:Lcn/com/smartdevices/bracelet/lab/i;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/lab/i;->c:Lcn/com/smartdevices/bracelet/lab/h;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/lab/h;->a:Lcn/com/smartdevices/bracelet/lab/d;
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/k;->c:Lcn/com/smartdevices/bracelet/lab/i;
+
+    iget-object v3, v3, Lcn/com/smartdevices/bracelet/lab/i;->c:Lcn/com/smartdevices/bracelet/lab/h;
+
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/lab/h;->b(Lcn/com/smartdevices/bracelet/lab/h;)I
+
+    move-result v3
+
+    invoke-static {v0, v3}, Lcn/com/smartdevices/bracelet/lab/d;->a(Lcn/com/smartdevices/bracelet/lab/d;I)V
+
+    if-eqz v2, :cond_1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/k;->c:Lcn/com/smartdevices/bracelet/lab/i;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/lab/i;->c:Lcn/com/smartdevices/bracelet/lab/h;
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/k;->c:Lcn/com/smartdevices/bracelet/lab/i;
+
+    iget-object v3, v3, Lcn/com/smartdevices/bracelet/lab/i;->c:Lcn/com/smartdevices/bracelet/lab/h;
+
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/lab/h;->a(Lcn/com/smartdevices/bracelet/lab/h;)Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->_getLEParams()Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$LEParams;
+
+    move-result-object v3
+
+    invoke-static {v0, v3}, Lcn/com/smartdevices/bracelet/lab/h;->a(Lcn/com/smartdevices/bracelet/lab/h;Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$LEParams;)Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$LEParams;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/k;->c:Lcn/com/smartdevices/bracelet/lab/i;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/lab/i;->c:Lcn/com/smartdevices/bracelet/lab/h;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/lab/h;->a:Lcn/com/smartdevices/bracelet/lab/d;
+
+    const/16 v3, 0x27
+
+    invoke-virtual {v0, v3}, Lcn/com/smartdevices/bracelet/lab/d;->a(I)V
 
     :cond_1
-    add-int/lit8 v1, v1, 0x1
+    if-eqz v2, :cond_2
 
-    goto :goto_0
-.end method
+    new-instance v0, Ljava/lang/Thread;
 
-.method public static a(Lcn/com/smartdevices/bracelet/lab/l;)Z
-    .locals 2
+    new-instance v2, Lcn/com/smartdevices/bracelet/lab/l;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->T()Ljava/lang/String;
+    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/lab/l;-><init>(Lcn/com/smartdevices/bracelet/lab/k;)V
 
-    move-result-object v0
+    invoke-direct {v0, v2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    move-result v1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/k;->c:Lcn/com/smartdevices/bracelet/lab/i;
 
-    if-nez v1, :cond_0
+    const-wide/32 v2, 0xea60
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/lab/l;->toString()Ljava/lang/String;
+    invoke-virtual {v0, v1, v2, v3}, Lcn/com/smartdevices/bracelet/lab/i;->sendEmptyMessageDelayed(IJ)Z
 
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public static b(Lcn/com/smartdevices/bracelet/lab/l;)V
-    .locals 2
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->T()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/lab/l;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
+    :cond_2
     :goto_0
     return-void
 
-    :cond_0
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/x;->a(Lcn/com/smartdevices/bracelet/lab/l;)V
+    :cond_3
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/k;->c:Lcn/com/smartdevices/bracelet/lab/i;
+
+    iget-object v3, v3, Lcn/com/smartdevices/bracelet/lab/i;->c:Lcn/com/smartdevices/bracelet/lab/h;
+
+    if-nez v2, :cond_4
+
+    move v0, v1
+
+    :cond_4
+    invoke-static {v3, v0}, Lcn/com/smartdevices/bracelet/lab/h;->a(Lcn/com/smartdevices/bracelet/lab/h;I)I
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/k;->c:Lcn/com/smartdevices/bracelet/lab/i;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/lab/i;->c:Lcn/com/smartdevices/bracelet/lab/h;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/lab/h;->a:Lcn/com/smartdevices/bracelet/lab/d;
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/k;->c:Lcn/com/smartdevices/bracelet/lab/i;
+
+    iget-object v3, v3, Lcn/com/smartdevices/bracelet/lab/i;->c:Lcn/com/smartdevices/bracelet/lab/h;
+
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/lab/h;->b(Lcn/com/smartdevices/bracelet/lab/h;)I
+
+    move-result v3
+
+    invoke-static {v0, v3}, Lcn/com/smartdevices/bracelet/lab/d;->a(Lcn/com/smartdevices/bracelet/lab/d;I)V
+
+    const-string v0, "Lab"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "MSG_SWITCH_DEVICE_SAMPLE isSucceeded = "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, "  isEnable = "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    iget-boolean v3, p0, Lcn/com/smartdevices/bracelet/lab/k;->b:Z
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, "  mIsDeviceReady = "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/k;->c:Lcn/com/smartdevices/bracelet/lab/i;
+
+    iget-object v3, v3, Lcn/com/smartdevices/bracelet/lab/i;->c:Lcn/com/smartdevices/bracelet/lab/h;
+
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/lab/h;->b(Lcn/com/smartdevices/bracelet/lab/h;)I
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/k;->c:Lcn/com/smartdevices/bracelet/lab/i;
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lab/i;->removeMessages(I)V
 
     goto :goto_0
 .end method

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/weight_container" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <cn.com.smartdevices.bracelet.chart.typeface.TypefaceTextView android:textSize="49.0sp" android:textColor="@android:color/white" android:ellipsize="none" android:id="@id/weight" android:paddingTop="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true" android:layout_centerInParent="true" android:fontFamily="miui" />
+    <TextView android:textSize="11.0sp" android:textStyle="normal" android:textColor="@android:color/white" android:id="@id/weight_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginBottom="10.0dip" android:text="@string/unit_weight" android:layout_toRightOf="@id/weight" android:layout_alignBottom="@id/weight" />
+    <TextView android:textSize="18.0sp" android:textColor="#99ffffff" android:gravity="center_horizontal" android:id="@id/weight_tip" android:layout_width="130.0dip" android:layout_height="wrap_content" android:layout_marginTop="160.0dip" android:text="" android:singleLine="true" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="12.0sp" android:textColor="#99ffffff" android:gravity="center_horizontal" android:id="@id/weight_bmi" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="53.0dip" android:text="BMI -- --" android:layout_alignParentBottom="true" />
+</RelativeLayout>

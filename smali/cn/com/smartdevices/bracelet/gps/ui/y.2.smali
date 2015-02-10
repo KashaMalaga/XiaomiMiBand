@@ -28,7 +28,7 @@
     :try_start_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/y;->a:Lcn/com/smartdevices/bracelet/gps/ui/w;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/w;->c(Lcn/com/smartdevices/bracelet/gps/ui/w;)Lcom/amap/api/maps/MapView;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/w;->e(Lcn/com/smartdevices/bracelet/gps/ui/w;)Lcom/amap/api/maps/MapView;
 
     move-result-object v0
 
@@ -48,7 +48,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/v;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

@@ -1,52 +1,32 @@
 .class Lcn/com/smartdevices/bracelet/ui/aN;
-.super Landroid/webkit/WebViewClient;
+.super Ljava/lang/Object;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/aM;
+.field a:I
+
+.field b:I
+
+.field final synthetic c:Lcn/com/smartdevices/bracelet/ui/HelpActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/aM;)V
-    .locals 0
+.method public constructor <init>(Lcn/com/smartdevices/bracelet/ui/HelpActivity;II)V
+    .locals 1
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/aN;->a:Lcn/com/smartdevices/bracelet/ui/aM;
+    const/4 v0, -0x1
 
-    invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/aN;->c:Lcn/com/smartdevices/bracelet/ui/HelpActivity;
 
-    return-void
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    iput v0, p0, Lcn/com/smartdevices/bracelet/ui/aN;->a:I
 
-# virtual methods
-.method public onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
-    .locals 2
+    iput v0, p0, Lcn/com/smartdevices/bracelet/ui/aN;->b:I
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aN;->a:Lcn/com/smartdevices/bracelet/ui/aM;
+    iput p2, p0, Lcn/com/smartdevices/bracelet/ui/aN;->a:I
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/aM;->a(Lcn/com/smartdevices/bracelet/ui/aM;)Landroid/widget/ProgressBar;
-
-    move-result-object v0
-
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
-
-    return-void
-.end method
-
-.method public onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V
-    .locals 2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aN;->a:Lcn/com/smartdevices/bracelet/ui/aM;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/aM;->a(Lcn/com/smartdevices/bracelet/ui/aM;)Landroid/widget/ProgressBar;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
+    iput p3, p0, Lcn/com/smartdevices/bracelet/ui/aN;->b:I
 
     return-void
 .end method

@@ -165,6 +165,8 @@
 
 .field public static final split_color:I = 0x7f09002c
 
+.field public static final split_color_trans:I = 0x7f090061
+
 .field public static final sport_goal_color:I = 0x7f090029
 
 .field public static final statistic_data_item_title:I = 0x7f090031

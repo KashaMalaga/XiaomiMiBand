@@ -1,394 +1,321 @@
 .class public Lcn/com/smartdevices/bracelet/h/d;
-.super Lcn/com/smartdevices/bracelet/h/a;
-
-
-# static fields
-.field private static final c:I = 0x15
+.super Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method private constructor <init>()V
+    .locals 0
 
-    const/16 v0, 0x15
-
-    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/h/a;-><init>(I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method protected a(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+.method public static a(IIII)I
     .locals 3
 
-    const-string v0, "weeklywalk"
+    if-gt p0, p2, :cond_1
 
-    invoke-static {p1, v0}, Lcn/com/smartdevices/bracelet/h/d;->b(Landroid/content/Context;Ljava/lang/String;)V
+    if-gt p1, p3, :cond_1
 
-    const v0, 0x7f070313
+    const/4 v0, 0x1
+
+    :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
+    int-to-float v0, p0
+
+    int-to-float v1, p2
+
+    div-float/2addr v0, v1
+
+    invoke-static {v0}, Ljava/lang/Math;->round(F)I
+
+    move-result v0
+
+    int-to-float v1, p1
+
+    int-to-float v2, p3
+
+    div-float/2addr v1, v2
+
+    invoke-static {v1}, Ljava/lang/Math;->round(F)I
+
+    move-result v1
+
+    if-lt v1, v0, :cond_0
+
+    move v0, v1
+
+    goto :goto_0
+.end method
+
+.method public static a(Landroid/graphics/BitmapFactory$Options;II)I
+    .locals 2
+
+    iget v0, p0, Landroid/graphics/BitmapFactory$Options;->outWidth:I
+
+    iget v1, p0, Landroid/graphics/BitmapFactory$Options;->outHeight:I
+
+    invoke-static {v0, v1, p1, p2}, Lcn/com/smartdevices/bracelet/h/d;->a(IIII)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static a(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
+    .locals 4
+
+    if-nez p0, :cond_1
+
+    if-nez p1, :cond_1
+
+    const/4 p0, 0x0
+
+    :cond_0
+    :goto_0
+    return-object p0
+
+    :cond_1
+    if-nez p0, :cond_2
+
+    move-object p0, p1
+
+    goto :goto_0
+
+    :cond_2
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0}, Landroid/graphics/Bitmap;->isMutable()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    sget-object v0, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
     const/4 v1, 0x1
 
-    new-array v1, v1, [Ljava/lang/Object;
+    invoke-virtual {p0, v0, v1}, Landroid/graphics/Bitmap;->copy(Landroid/graphics/Bitmap$Config;Z)Landroid/graphics/Bitmap;
 
-    const/4 v2, 0x0
+    move-result-object p0
 
-    aput-object p2, v1, v2
+    :cond_3
+    new-instance v0, Landroid/graphics/Paint;
 
-    invoke-virtual {p1, v0, v1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
+
+    new-instance v1, Landroid/graphics/Canvas;
+
+    invoke-direct {v1, p0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
+
+    int-to-float v2, p2
+
+    int-to-float v3, p3
+
+    invoke-virtual {v1, p1, v2, v3, v0}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
+
+    const/16 v0, 0x1f
+
+    invoke-virtual {v1, v0}, Landroid/graphics/Canvas;->save(I)I
+
+    invoke-virtual {v1}, Landroid/graphics/Canvas;->restore()V
+
+    goto :goto_0
+.end method
+
+.method public static a(Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;IIII)Landroid/graphics/Bitmap;
+    .locals 5
+
+    const/4 v4, 0x1
+
+    if-nez p0, :cond_1
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x0
+
+    :cond_0
+    :goto_0
+    return-object p1
+
+    :cond_1
+    if-eqz p0, :cond_0
+
+    if-nez p1, :cond_2
+
+    move-object p1, p0
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p0}, Landroid/graphics/Bitmap;->isMutable()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    sget-object v0, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
+
+    invoke-virtual {p0, v0, v4}, Landroid/graphics/Bitmap;->copy(Landroid/graphics/Bitmap$Config;Z)Landroid/graphics/Bitmap;
+
+    move-result-object p0
+
+    :cond_3
+    new-instance v0, Landroid/graphics/Paint;
+
+    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
+
+    new-instance v1, Landroid/graphics/Canvas;
+
+    invoke-direct {v1, p0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
+
+    int-to-float v2, p2
+
+    int-to-float v3, p3
+
+    invoke-virtual {v1, p1, v2, v3, v0}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
+
+    const/16 v0, 0x1f
+
+    invoke-virtual {v1, v0}, Landroid/graphics/Canvas;->save(I)I
+
+    invoke-virtual {v1}, Landroid/graphics/Canvas;->restore()V
+
+    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v0
+
+    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v1
+
+    invoke-static {v0, v1, p4, p5}, Lcn/com/smartdevices/bracelet/h/d;->a(IIII)I
+
+    move-result v2
+
+    div-int/2addr v0, v2
+
+    div-int/2addr v1, v2
+
+    invoke-static {p0, v0, v1, v4}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
+
+    move-result-object p1
+
+    goto :goto_0
+.end method
+
+.method public static a(Landroid/app/Activity;Z)V
+    .locals 3
+
+    if-nez p0, :cond_0
+
+    :goto_0
+    return-void
+
+    :cond_0
+    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->f()Lcn/com/smartdevices/bracelet/config/b;
 
     move-result-object v0
 
-    return-object v0
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/config/b;->h:Lcn/com/smartdevices/bracelet/config/j;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v1, "com.xiaomi.shop.action_show_m_site"
+
+    invoke-static {p0, v1}, Lcn/com/smartdevices/bracelet/h/d;->a(Landroid/content/Context;Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    new-instance v1, Landroid/content/Intent;
+
+    iget-object v2, v0, Lcn/com/smartdevices/bracelet/config/b;->h:Lcn/com/smartdevices/bracelet/config/j;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v2, "com.xiaomi.shop.action_show_m_site"
+
+    invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string v2, "url"
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/b;->h:Lcn/com/smartdevices/bracelet/config/j;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v0, "http://s1.mi.com/m/product/shouhuan/index.html"
+
+    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    invoke-virtual {p0, v1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
+
+    goto :goto_0
+
+    :cond_1
+    if-eqz p1, :cond_2
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/b;->h:Lcn/com/smartdevices/bracelet/config/j;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v0, "http://s1.mi.com/m/product/shouhuan/index.html"
+
+    const v1, 0x7f080344
+
+    invoke-static {v0, v1, p0}, Lcn/com/smartdevices/bracelet/E;->a(Ljava/lang/String;ILandroid/app/Activity;)V
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/b;->h:Lcn/com/smartdevices/bracelet/config/j;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v0, "http://s1.mi.com/m/product/shouhuan/index.html"
+
+    const v1, 0x7f080343
+
+    invoke-static {v0, v1, p0}, Lcn/com/smartdevices/bracelet/E;->a(Ljava/lang/String;ILandroid/app/Activity;)V
+
+    goto :goto_0
 .end method
 
-.method public a()V
-    .locals 4
+.method public static a(Landroid/content/Context;Ljava/lang/String;)Z
+    .locals 3
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/h/d;->a:Ljava/util/Map;
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    const/4 v1, 0x0
+    move-result-object v0
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    new-instance v1, Landroid/content/Intent;
 
-    move-result-object v1
+    invoke-direct {v1, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    const-wide/16 v2, 0x0
+    const/high16 v2, 0x10000
 
-    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    invoke-virtual {v0, v1, v2}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/h/d;->a:Ljava/util/Map;
+    move-result v0
 
-    const/16 v1, 0x4e20
+    if-lez v0, :cond_0
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/4 v0, 0x1
 
-    move-result-object v1
-
-    const-wide/high16 v2, 0x4030000000000000L
-
-    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/h/d;->a:Ljava/util/Map;
-
-    const v1, 0x9c40
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-wide/high16 v2, 0x4039000000000000L
-
-    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/h/d;->a:Ljava/util/Map;
-
-    const v1, 0xea60
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-wide v2, 0x4040800000000000L
-
-    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/h/d;->a:Ljava/util/Map;
-
-    const v1, 0x13880
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-wide/high16 v2, 0x4044000000000000L
-
-    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/h/d;->a:Ljava/util/Map;
-
-    const v1, 0x186a0
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-wide v2, 0x4047800000000000L
-
-    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/h/d;->a:Ljava/util/Map;
-
-    const v1, 0x1d4c0
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-wide v2, 0x404a800000000000L
-
-    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/h/d;->a:Ljava/util/Map;
-
-    const v1, 0x222e0
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-wide/high16 v2, 0x404d000000000000L
-
-    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/h/d;->a:Ljava/util/Map;
-
-    const v1, 0x27100
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-wide v2, 0x404f800000000000L
-
-    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/h/d;->a:Ljava/util/Map;
-
-    const v1, 0x2bf20
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-wide/high16 v2, 0x4051000000000000L
-
-    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/h/d;->a:Ljava/util/Map;
-
-    const v1, 0x30d40
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-wide/high16 v2, 0x4052000000000000L
-
-    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/h/d;->a:Ljava/util/Map;
-
-    const v1, 0x35b60
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-wide/high16 v2, 0x4053000000000000L
-
-    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/h/d;->a:Ljava/util/Map;
-
-    const v1, 0x3a980
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-wide/high16 v2, 0x4054000000000000L
-
-    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/h/d;->a:Ljava/util/Map;
-
-    const v1, 0x3f7a0
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-wide v2, 0x4054c00000000000L
-
-    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/h/d;->a:Ljava/util/Map;
-
-    const v1, 0x445c0
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-wide v2, 0x4055800000000000L
-
-    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/h/d;->a:Ljava/util/Map;
-
-    const v1, 0x493e0
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-wide v2, 0x4056400000000000L
-
-    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/h/d;->a:Ljava/util/Map;
-
-    const v1, 0x4e200
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-wide v2, 0x4056b9999999999aL
-
-    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/h/d;->a:Ljava/util/Map;
-
-    const v1, 0x53020
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-wide v2, 0x40572ccccccccccdL
-
-    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/h/d;->a:Ljava/util/Map;
-
-    const v1, 0x57e40
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-wide v2, 0x4057a66666666666L
-
-    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/h/d;->a:Ljava/util/Map;
-
-    const v1, 0x5cc60
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-wide v2, 0x4058070a3d70a3d7L
-
-    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/h/d;->a:Ljava/util/Map;
-
-    const v1, 0x61a80
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const-wide v2, 0x40584147ae147ae1L
-
-    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public b()I
-    .locals 1
-
-    const/16 v0, 0x4e20
-
+    :goto_0
     return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

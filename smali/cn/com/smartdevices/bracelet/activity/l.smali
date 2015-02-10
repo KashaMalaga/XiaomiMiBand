@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/l;->a:Lcn/com/smartdevices/bracelet/activity/WebActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/B;->j(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/E;->m(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -53,7 +53,7 @@
     :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/l;->a:Lcn/com/smartdevices/bracelet/activity/WebActivity;
 
-    const v1, 0x7f070026
+    const v1, 0x7f08002e
 
     const/4 v2, 0x1
 

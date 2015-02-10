@@ -84,13 +84,13 @@
 .method public static fromJsonStr(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/model/ReportData;
     .locals 2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/B;->c()Lcom/d/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/E;->c()Lcom/c/a/k;
 
     move-result-object v0
 
     const-class v1, Lcn/com/smartdevices/bracelet/model/ReportData;
 
-    invoke-virtual {v0, p0, v1}, Lcom/d/a/k;->a(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v0, p0, v1}, Lcom/c/a/k;->a(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -233,12 +233,32 @@
     return-object v0
 .end method
 
+.method public isChallengeValid()Z
+    .locals 2
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/model/ReportData;->continueDays:I
+
+    const/4 v1, 0x2
+
+    if-lt v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 .method public isValid()Z
     .locals 1
 
     iget v0, p0, Lcn/com/smartdevices/bracelet/model/ReportData;->steps:I
 
-    if-eqz v0, :cond_0
+    if-lez v0, :cond_0
 
     const/4 v0, 0x1
 
@@ -279,16 +299,6 @@
     .locals 0
 
     iput p1, p0, Lcn/com/smartdevices/bracelet/model/ReportData;->distance:I
-
-    return-void
-.end method
-
-.method public setInValid()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcn/com/smartdevices/bracelet/model/ReportData;->steps:I
 
     return-void
 .end method
@@ -392,11 +402,11 @@
 .method public toJsonStr()Ljava/lang/String;
     .locals 1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/B;->c()Lcom/d/a/k;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/E;->c()Lcom/c/a/k;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/d/a/k;->b(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0, p0}, Lcom/c/a/k;->b(Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 

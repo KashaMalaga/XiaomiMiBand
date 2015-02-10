@@ -1,32 +1,42 @@
-.class public final Lcn/com/smartdevices/bracelet/lab/sync/D;
+.class Lcn/com/smartdevices/bracelet/lab/sync/D;
 .super Ljava/lang/Object;
 
 
-# static fields
-.field public static final a:Ljava/lang/String; = "trackId"
+# instance fields
+.field protected a:Z
 
-.field public static final b:Ljava/lang/String; = "nextLatestTrackId"
-
-.field public static final c:Ljava/lang/String; = "fromDate"
-
-.field public static final d:Ljava/lang/String; = "toDate"
-
-.field public static final e:Ljava/lang/String; = "result"
-
-.field public static final f:Ljava/lang/String; = "message"
-
-.field static final g:Ljava/lang/String; = "type"
-
-.field static final h:Ljava/lang/String; = "bundle"
-
-.field static final i:Ljava/lang/String; = "id"
+.field protected b:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 0
+.method constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/lab/sync/D;->a:Z
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/sync/D;->b:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Lcn/com/smartdevices/bracelet/lab/sync/D;)V
+    .locals 1
+
+    iget v0, p1, Lcn/com/smartdevices/bracelet/lab/sync/D;->b:I
+
+    iput v0, p0, Lcn/com/smartdevices/bracelet/lab/sync/D;->b:I
+
+    iget-boolean v0, p1, Lcn/com/smartdevices/bracelet/lab/sync/D;->a:Z
+
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/lab/sync/D;->a:Z
 
     return-void
 .end method

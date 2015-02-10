@@ -86,13 +86,13 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/v;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const v0, 0x7f03003c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/ShowImageActivity;->setContentView(I)V
 
-    const v0, 0x7f08017d
+    const v0, 0x7f070186
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/ShowImageActivity;->findViewById(I)Landroid/view/View;
 
@@ -110,13 +110,13 @@
 
     move-result-object v0
 
-    new-instance v1, Lcom/g/a/b/a/f;
+    new-instance v1, Lcom/f/a/b/a/f;
 
     iget v2, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
     iget v0, v0, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    invoke-direct {v1, v2, v0}, Lcom/g/a/b/a/f;-><init>(II)V
+    invoke-direct {v1, v2, v0}, Lcom/f/a/b/a/f;-><init>(II)V
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/l;->a()Lcn/com/smartdevices/bracelet/l;
 
@@ -128,11 +128,11 @@
 
     move-result-object v2
 
-    new-instance v3, Lcn/com/smartdevices/bracelet/ui/dK;
+    new-instance v3, Lcn/com/smartdevices/bracelet/ui/dO;
 
-    invoke-direct {v3, p0}, Lcn/com/smartdevices/bracelet/ui/dK;-><init>(Lcn/com/smartdevices/bracelet/ui/ShowImageActivity;)V
+    invoke-direct {v3, p0}, Lcn/com/smartdevices/bracelet/ui/dO;-><init>(Lcn/com/smartdevices/bracelet/ui/ShowImageActivity;)V
 
-    invoke-virtual {v0, v2, v1, v3}, Lcn/com/smartdevices/bracelet/l;->a(Ljava/lang/String;Lcom/g/a/b/a/f;Lcom/g/a/b/f/a;)V
+    invoke-virtual {v0, v2, v1, v3}, Lcn/com/smartdevices/bracelet/l;->a(Ljava/lang/String;Lcom/f/a/b/a/f;Lcom/f/a/b/f/a;)V
 
     return-void
 .end method

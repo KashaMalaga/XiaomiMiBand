@@ -33,9 +33,9 @@
 # instance fields
 .field e:Z
 
-.field f:Lcom/e/a/a/h;
+.field f:Lcom/d/a/a/h;
 
-.field g:Lcom/e/a/a/h;
+.field g:Lcom/d/a/a/h;
 
 .field private final q:Lcn/com/smartdevices/bracelet/config/b;
 
@@ -54,7 +54,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->e()Lcn/com/smartdevices/bracelet/config/b;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/config/b;->f()Lcn/com/smartdevices/bracelet/config/b;
 
     move-result-object v0
 
@@ -72,17 +72,17 @@
 
     invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/partner/e;-><init>(Lcn/com/smartdevices/bracelet/partner/d;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/partner/d;->f:Lcom/e/a/a/h;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/partner/d;->f:Lcom/d/a/a/h;
 
     new-instance v0, Lcn/com/smartdevices/bracelet/partner/f;
 
     invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/partner/f;-><init>(Lcn/com/smartdevices/bracelet/partner/d;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/partner/d;->g:Lcom/e/a/a/h;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/partner/d;->g:Lcom/d/a/a/h;
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/partner/d;->r:Landroid/content/Context;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->b()Lcn/com/smartdevices/bracelet/model/LoginData;
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/g/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
 
     move-result-object v0
 
@@ -675,9 +675,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/d;->q:Lcn/com/smartdevices/bracelet/config/b;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/b;->c:Lcn/com/smartdevices/bracelet/config/m;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/b;->c:Lcn/com/smartdevices/bracelet/config/k;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/m;->c:Ljava/lang/Boolean;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/k;->c:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -691,9 +691,9 @@
     :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/d;->s:Lcn/com/smartdevices/bracelet/model/LoginData;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/partner/d;->f:Lcom/e/a/a/h;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/partner/d;->f:Lcom/d/a/a/h;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/j/e;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Lcom/e/a/a/h;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/k/g;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Lcom/d/a/a/h;)V
 
     goto :goto_0
 .end method
@@ -705,9 +705,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/d;->q:Lcn/com/smartdevices/bracelet/config/b;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/b;->c:Lcn/com/smartdevices/bracelet/config/m;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/b;->c:Lcn/com/smartdevices/bracelet/config/k;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/m;->c:Ljava/lang/Boolean;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/k;->c:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -720,7 +720,7 @@
     return-void
 
     :cond_1
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->k()J
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->e()J
 
     move-result-wide v0
 
@@ -732,9 +732,9 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/partner/d;->q:Lcn/com/smartdevices/bracelet/config/b;
 
-    iget-object v2, v2, Lcn/com/smartdevices/bracelet/config/b;->c:Lcn/com/smartdevices/bracelet/config/m;
+    iget-object v2, v2, Lcn/com/smartdevices/bracelet/config/b;->c:Lcn/com/smartdevices/bracelet/config/k;
 
-    iget-object v2, v2, Lcn/com/smartdevices/bracelet/config/m;->a:Ljava/lang/Integer;
+    iget-object v2, v2, Lcn/com/smartdevices/bracelet/config/k;->a:Ljava/lang/Integer;
 
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
@@ -754,9 +754,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/d;->s:Lcn/com/smartdevices/bracelet/model/LoginData;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/partner/d;->g:Lcom/e/a/a/h;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/partner/d;->g:Lcom/d/a/a/h;
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/j/e;->f(Lcn/com/smartdevices/bracelet/model/LoginData;Lcom/e/a/a/h;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/k/g;->f(Lcn/com/smartdevices/bracelet/model/LoginData;Lcom/d/a/a/h;)V
 
     goto :goto_0
 
@@ -810,9 +810,9 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/partner/d;->q:Lcn/com/smartdevices/bracelet/config/b;
 
-    iget-object v2, v2, Lcn/com/smartdevices/bracelet/config/b;->c:Lcn/com/smartdevices/bracelet/config/m;
+    iget-object v2, v2, Lcn/com/smartdevices/bracelet/config/b;->c:Lcn/com/smartdevices/bracelet/config/k;
 
-    iget-object v2, v2, Lcn/com/smartdevices/bracelet/config/m;->e:Ljava/lang/Boolean;
+    iget-object v2, v2, Lcn/com/smartdevices/bracelet/config/k;->e:Ljava/lang/Boolean;
 
     invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -830,7 +830,7 @@
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/partner/d;->r:Landroid/content/Context;
 
-    const v4, 0x7f070250
+    const v4, 0x7f080267
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -855,7 +855,7 @@
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/partner/d;->r:Landroid/content/Context;
 
-    const v4, 0x7f070127
+    const v4, 0x7f08013b
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -871,7 +871,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/partner/d;->q:Lcn/com/smartdevices/bracelet/config/b;
 
-    iget-object v2, v2, Lcn/com/smartdevices/bracelet/config/b;->o:Ljava/lang/Boolean;
+    iget-object v2, v2, Lcn/com/smartdevices/bracelet/config/b;->q:Ljava/lang/Boolean;
 
     invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -889,7 +889,7 @@
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/partner/d;->r:Landroid/content/Context;
 
-    const v4, 0x7f070128
+    const v4, 0x7f08013c
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -916,7 +916,7 @@
 
     invoke-direct {v1, p0, p1}, Lcn/com/smartdevices/bracelet/partner/g;-><init>(Lcn/com/smartdevices/bracelet/partner/d;Ljava/lang/String;)V
 
-    invoke-static {v0, p1, v1}, Lcn/com/smartdevices/bracelet/j/e;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Lcom/e/a/a/h;)V
+    invoke-static {v0, p1, v1}, Lcn/com/smartdevices/bracelet/k/g;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Lcom/d/a/a/h;)V
 
     return-void
 .end method
@@ -930,7 +930,7 @@
 
     invoke-direct {v1, p0, p1}, Lcn/com/smartdevices/bracelet/partner/h;-><init>(Lcn/com/smartdevices/bracelet/partner/d;Ljava/lang/String;)V
 
-    invoke-static {v0, p1, v1}, Lcn/com/smartdevices/bracelet/j/e;->f(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Lcom/e/a/a/h;)V
+    invoke-static {v0, p1, v1}, Lcn/com/smartdevices/bracelet/k/g;->f(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/lang/String;Lcom/d/a/a/h;)V
 
     return-void
 .end method

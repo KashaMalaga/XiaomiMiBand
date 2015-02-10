@@ -4,20 +4,20 @@
 
 # instance fields
 .field public final a:Ljava/lang/Boolean;
-    .annotation runtime Lcom/d/a/a/b;
+    .annotation runtime Lcom/c/a/a/b;
         a = "enable"
     .end annotation
 .end field
 
 .field public final b:Ljava/lang/String;
-    .annotation runtime Lcom/d/a/a/b;
-        a = "url"
+    .annotation runtime Lcom/c/a/a/b;
+        a = "appId"
     .end annotation
 .end field
 
 .field public final c:Ljava/lang/String;
-    .annotation runtime Lcom/d/a/a/b;
-        a = "action"
+    .annotation runtime Lcom/c/a/a/b;
+        a = "appKey"
     .end annotation
 .end field
 
@@ -28,7 +28,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -36,11 +36,11 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/config/l;->a:Ljava/lang/Boolean;
 
-    const-string v0, "http://s1.mi.com/m/product/shouhuan/index.html"
+    const-string v0, "2882303761517163841"
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/config/l;->b:Ljava/lang/String;
 
-    const-string v0, "com.xiaomi.shop.action_show_m_site"
+    const-string v0, "5171716313841"
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/config/l;->c:Ljava/lang/String;
 

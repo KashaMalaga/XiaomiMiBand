@@ -1,5 +1,5 @@
 .class public Lcn/com/smartdevices/bracelet/lab/ui/a/a;
-.super Lcn/com/smartdevices/bracelet/ui/U;
+.super Lcn/com/smartdevices/bracelet/ui/W;
 
 
 # instance fields
@@ -12,7 +12,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/U;-><init>()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/W;-><init>()V
 
     return-void
 .end method
@@ -22,7 +22,7 @@
 .method protected a()I
     .locals 1
 
-    const v0, 0x7f03005f
+    const v0, 0x7f030060
 
     return v0
 .end method
@@ -51,7 +51,7 @@
     goto :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x7f0801e3
+    .packed-switch 0x7f0701f3
         :pswitch_1
         :pswitch_0
         :pswitch_0
@@ -62,7 +62,7 @@
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 0
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/U;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/W;->onCreate(Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -70,7 +70,7 @@
 .method public onDestroy()V
     .locals 0
 
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/U;->onDestroy()V
+    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/W;->onDestroy()V
 
     return-void
 .end method
@@ -78,11 +78,11 @@
 .method public onPause()V
     .locals 1
 
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/U;->onPause()V
+    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/W;->onPause()V
 
     const-string v0, "PageBraceletHand"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/A;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->a(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -90,11 +90,11 @@
 .method public onResume()V
     .locals 1
 
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/U;->onResume()V
+    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/W;->onResume()V
 
     const-string v0, "PageBraceletHand"
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/A;->c(Ljava/lang/String;)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->c(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -102,9 +102,9 @@
 .method public onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
     .locals 1
 
-    invoke-super {p0, p1, p2}, Lcn/com/smartdevices/bracelet/ui/U;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
+    invoke-super {p0, p1, p2}, Lcn/com/smartdevices/bracelet/ui/W;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
-    const v0, 0x7f0801e3
+    const v0, 0x7f0701f3
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -116,7 +116,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0801e6
+    const v0, 0x7f0701f6
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

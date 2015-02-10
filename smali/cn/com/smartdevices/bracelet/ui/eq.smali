@@ -1,92 +1,50 @@
-.class public Lcn/com/smartdevices/bracelet/ui/eq;
-.super Lcn/com/smartdevices/bracelet/ui/U;
+.class Lcn/com/smartdevices/bracelet/ui/eq;
+.super Landroid/text/style/ClickableSpan;
 
 
 # instance fields
-.field private a:Landroid/os/Handler;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/ep;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/ep;)V
     .locals 0
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/U;-><init>()V
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/eq;->a:Lcn/com/smartdevices/bracelet/ui/ep;
+
+    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected a()I
+.method public onClick(Landroid/view/View;)V
     .locals 1
 
-    const v0, 0x7f030091
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/eq;->a:Lcn/com/smartdevices/bracelet/ui/ep;
 
-    return v0
-.end method
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/ep;->getActivity()Landroid/app/Activity;
 
-.method protected c()V
-    .locals 0
+    move-result-object v0
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/eq;->dismiss()V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/E;->t(Landroid/content/Context;)V
 
     return-void
 .end method
 
-.method protected d_()V
-    .locals 4
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/eq;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    :goto_0
-    return-void
-
-    :cond_0
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/eq;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    const v1, 0x7f07021d
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/B;->a(Landroid/app/Activity;I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/eq;->a:Landroid/os/Handler;
-
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/er;
-
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/er;-><init>(Lcn/com/smartdevices/bracelet/ui/eq;)V
-
-    const-wide/16 v2, 0xbb8
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    goto :goto_0
-.end method
-
-.method public onCreate(Landroid/os/Bundle;)V
+.method public updateDrawState(Landroid/text/TextPaint;)V
     .locals 1
 
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/U;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Landroid/text/style/ClickableSpan;->updateDrawState(Landroid/text/TextPaint;)V
 
-    new-instance v0, Landroid/os/Handler;
+    const/high16 v0, -0x1000000
 
-    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
+    invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setColor(I)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/eq;->a:Landroid/os/Handler;
+    const/4 v0, 0x1
+
+    invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setUnderlineText(Z)V
 
     return-void
-.end method
-
-.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 1
-
-    invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/U;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-
-    move-result-object v0
-
-    return-object v0
 .end method

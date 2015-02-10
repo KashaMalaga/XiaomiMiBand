@@ -1,192 +1,142 @@
-.class public final Lcom/xiaomi/hm/bleservice/t;
-.super Landroid/os/Binder;
-
-# interfaces
-.implements Lcom/xiaomi/hm/bleservice/A;
+.class final Lcom/xiaomi/hm/bleservice/t;
+.super Ljava/lang/Object;
 
 
 # instance fields
-.field private final a:Lcom/xiaomi/hm/bleservice/BLEService;
+.field final synthetic a:Lcom/xiaomi/hm/bleservice/BLEService;
+
+.field private b:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/xiaomi/hm/bleservice/BLEService;)V
-    .locals 0
-
-    invoke-direct {p0}, Landroid/os/Binder;-><init>()V
+.method public constructor <init>(Lcom/xiaomi/hm/bleservice/BLEService;I)V
+    .locals 1
 
     iput-object p1, p0, Lcom/xiaomi/hm/bleservice/t;->a:Lcom/xiaomi/hm/bleservice/BLEService;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/xiaomi/hm/bleservice/t;->b:[I
+
+    new-array v0, p2, [I
+
+    iput-object v0, p0, Lcom/xiaomi/hm/bleservice/t;->b:[I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Lcom/xiaomi/hm/bleservice/HwConnStatus;
-    .locals 1
-
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/t;->a:Lcom/xiaomi/hm/bleservice/BLEService;
-
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getConnStatus()Lcom/xiaomi/hm/bleservice/HwConnStatus;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method public a(I)V
-    .locals 1
+    .locals 2
 
-    const/16 v0, 0x27
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/t;->b:[I
 
-    if-ne p1, v0, :cond_1
+    array-length v0, v0
 
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/t;->a:Lcom/xiaomi/hm/bleservice/BLEService;
+    if-ge p1, v0, :cond_0
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->setMinLatency()V
+    if-gez p1, :cond_1
 
     :cond_0
-    :goto_0
-    return-void
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw v0
 
     :cond_1
-    const/16 v0, 0x1e0
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/t;->b:[I
 
-    if-ne p1, v0, :cond_0
+    aget v1, v0, p1
 
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/t;->a:Lcom/xiaomi/hm/bleservice/BLEService;
+    add-int/lit8 v1, v1, 0x1
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->alarmSetMaxLatency()V
+    aput v1, v0, p1
 
-    goto :goto_0
+    return-void
 .end method
 
-.method public a(Landroid/bluetooth/BluetoothDevice;Z)V
+.method public a(II)V
     .locals 1
 
-    if-eqz p1, :cond_0
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/t;->b:[I
 
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/t;->a:Lcom/xiaomi/hm/bleservice/BLEService;
+    array-length v0, v0
 
-    invoke-virtual {v0, p1, p2}, Lcom/xiaomi/hm/bleservice/BLEService;->doConnect(Landroid/bluetooth/BluetoothDevice;Z)V
+    if-ge p1, v0, :cond_0
 
-    :goto_0
-    return-void
+    if-gez p1, :cond_1
 
     :cond_0
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/t;->a:Lcom/xiaomi/hm/bleservice/BLEService;
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->connectDevice()V
+    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
 
-    goto :goto_0
-.end method
+    throw v0
 
-.method public b()Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;
-    .locals 1
+    :cond_1
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/t;->b:[I
 
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/t;->a:Lcom/xiaomi/hm/bleservice/BLEService;
-
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getSyncDataStatus()Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public b(Landroid/bluetooth/BluetoothDevice;Z)V
-    .locals 1
-
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/t;->a:Lcom/xiaomi/hm/bleservice/BLEService;
-
-    invoke-virtual {v0, p1, p2}, Lcom/xiaomi/hm/bleservice/BLEService;->connectWeight(Landroid/bluetooth/BluetoothDevice;Z)V
+    aput p2, v0, p1
 
     return-void
 .end method
 
-.method public c()V
+.method public b(I)I
     .locals 1
 
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/t;->a:Lcom/xiaomi/hm/bleservice/BLEService;
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/t;->b:[I
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->checkSyncData()V
+    array-length v0, v0
 
-    return-void
-.end method
+    if-ge p1, v0, :cond_0
 
-.method public d()V
-    .locals 1
+    if-gez p1, :cond_1
 
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/t;->a:Lcom/xiaomi/hm/bleservice/BLEService;
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->startSyncData()V
+    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
 
-    return-void
-.end method
+    throw v0
 
-.method public e()Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
-    .locals 1
+    :cond_1
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/t;->b:[I
 
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/t;->a:Lcom/xiaomi/hm/bleservice/BLEService;
-
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getMiliProfile()Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public f()Lcom/xiaomi/hm/bleservice/HwConnStatus;
-    .locals 1
-
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/t;->a:Lcom/xiaomi/hm/bleservice/BLEService;
-
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getLastConnStatus()Lcom/xiaomi/hm/bleservice/HwConnStatus;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public g()Z
-    .locals 1
-
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/t;->a:Lcom/xiaomi/hm/bleservice/BLEService;
-
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->isBluetoothRestarting()Z
-
-    move-result v0
+    aget v0, v0, p1
 
     return v0
 .end method
 
-.method public h()Lcom/xiaomi/hm/bleservice/profile/WeightProfile;
-    .locals 1
+.method public c(I)V
+    .locals 2
 
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/t;->a:Lcom/xiaomi/hm/bleservice/BLEService;
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/t;->b:[I
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getWeigthProfile()Lcom/xiaomi/hm/bleservice/profile/WeightProfile;
+    array-length v0, v0
 
-    move-result-object v0
+    if-ge p1, v0, :cond_0
 
-    return-object v0
-.end method
+    if-gez p1, :cond_1
 
-.method public i()V
-    .locals 1
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/t;->a:Lcom/xiaomi/hm/bleservice/BLEService;
+    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->disconnectWeight()V
+    throw v0
 
-    return-void
-.end method
+    :cond_1
+    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/t;->b:[I
 
-.method public j()V
-    .locals 1
+    aget v1, v0, p1
 
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/t;->a:Lcom/xiaomi/hm/bleservice/BLEService;
+    add-int/lit8 v1, v1, -0x1
 
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->startWeightSyncData()V
+    aput v1, v0, p1
 
     return-void
 .end method
