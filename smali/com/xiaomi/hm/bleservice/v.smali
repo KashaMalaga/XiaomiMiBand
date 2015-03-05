@@ -73,7 +73,7 @@
 
     if-lt p2, p3, :cond_0
 
-    const v1, 0x7f0802a1
+    const v1, 0x7f0802a8
 
     new-array v2, v6, [Ljava/lang/Object;
 
@@ -88,7 +88,7 @@
     move-result-object v1
 
     :goto_0
-    const v2, 0x7f0802a2
+    const v2, 0x7f0802a9
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -149,7 +149,7 @@
     return-void
 
     :cond_0
-    const v1, 0x7f0802a6
+    const v1, 0x7f0802ad
 
     new-array v2, v6, [Ljava/lang/Object;
 
@@ -890,7 +890,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->al()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->ak()Ljava/lang/String;
 
     move-result-object v1
 
@@ -990,7 +990,7 @@
 
     new-instance v3, Landroid/content/Intent;
 
-    sget-object v4, Lcn/com/smartdevices/bracelet/n;->aN:Ljava/lang/String;
+    sget-object v4, Lcn/com/smartdevices/bracelet/n;->aW:Ljava/lang/String;
 
     invoke-direct {v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 

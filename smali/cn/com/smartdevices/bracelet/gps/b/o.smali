@@ -609,7 +609,7 @@
 
     const-string v1, "add point at the end"
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/services/p;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/services/s;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -677,7 +677,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/services/p;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/services/s;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -788,7 +788,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/gps/services/p;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcn/com/smartdevices/bracelet/gps/services/s;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -1058,7 +1058,7 @@
 
     invoke-virtual {v1, v0}, Lcom/amap/api/maps/model/MarkerOptions;->position(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/MarkerOptions;
 
-    const v0, 0x7f020119
+    const v0, 0x7f020120
 
     invoke-static {v0}, Lcom/amap/api/maps/model/BitmapDescriptorFactory;->fromResource(I)Lcom/amap/api/maps/model/BitmapDescriptor;
 
@@ -1445,7 +1445,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/o;->q:Lcom/amap/api/maps/model/MarkerOptions;
 
-    const v1, 0x7f02011d
+    const v1, 0x7f020124
 
     invoke-static {v1}, Lcom/amap/api/maps/model/BitmapDescriptorFactory;->fromResource(I)Lcom/amap/api/maps/model/BitmapDescriptor;
 
@@ -1693,7 +1693,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f02008a
+    const v1, 0x7f020094
 
     invoke-static {v0, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
@@ -1787,7 +1787,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f020089
+    const v1, 0x7f020093
 
     invoke-static {v0, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
@@ -3428,7 +3428,7 @@
 
     invoke-virtual {v0, v1}, Lcom/amap/api/maps/model/MarkerOptions;->draggable(Z)Lcom/amap/api/maps/model/MarkerOptions;
 
-    const v1, 0x7f020118
+    const v1, 0x7f02011f
 
     invoke-static {v1}, Lcom/amap/api/maps/model/BitmapDescriptorFactory;->fromResource(I)Lcom/amap/api/maps/model/BitmapDescriptor;
 
@@ -3518,7 +3518,7 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    const v1, 0x7f020087
+    const v1, 0x7f020091
 
     invoke-static {v1}, Lcom/amap/api/maps/model/BitmapDescriptorFactory;->fromResource(I)Lcom/amap/api/maps/model/BitmapDescriptor;
 
@@ -3526,7 +3526,7 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    const v1, 0x7f020088
+    const v1, 0x7f020092
 
     invoke-static {v1}, Lcom/amap/api/maps/model/BitmapDescriptorFactory;->fromResource(I)Lcom/amap/api/maps/model/BitmapDescriptor;
 
@@ -3552,7 +3552,7 @@
 
     invoke-virtual {v1, v2}, Lcom/amap/api/maps/model/MyLocationStyle;->radiusFillColor(I)Lcom/amap/api/maps/model/MyLocationStyle;
 
-    const v2, 0x7f02008b
+    const v2, 0x7f020095
 
     invoke-static {v2}, Lcom/amap/api/maps/model/BitmapDescriptorFactory;->fromResource(I)Lcom/amap/api/maps/model/BitmapDescriptor;
 
@@ -3702,7 +3702,7 @@
 
     invoke-virtual {v1, v0}, Lcom/amap/api/maps/model/MarkerOptions;->position(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/MarkerOptions;
 
-    const v0, 0x7f020119
+    const v0, 0x7f020120
 
     invoke-static {v0}, Lcom/amap/api/maps/model/BitmapDescriptorFactory;->fromResource(I)Lcom/amap/api/maps/model/BitmapDescriptor;
 
@@ -3834,7 +3834,7 @@
 
     invoke-virtual {v1, v0}, Lcom/amap/api/maps/model/MarkerOptions;->draggable(Z)Lcom/amap/api/maps/model/MarkerOptions;
 
-    const v0, 0x7f02011a
+    const v0, 0x7f020121
 
     invoke-static {v0}, Lcom/amap/api/maps/model/BitmapDescriptorFactory;->fromResource(I)Lcom/amap/api/maps/model/BitmapDescriptor;
 

@@ -3,14 +3,14 @@
 
 
 # instance fields
-.field final synthetic c:Lcn/com/smartdevices/bracelet/weight/family/WeightChooseUserActivity;
+.field final synthetic c:Lcn/com/smartdevices/bracelet/weight/family/WeightSelectUserActivity;
 
 .field private d:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List",
             "<",
-            "Landroid/widget/LinearLayout;",
+            "Landroid/widget/GridLayout;",
             ">;"
         }
     .end annotation
@@ -18,19 +18,19 @@
 
 
 # direct methods
-.method public constructor <init>(Lcn/com/smartdevices/bracelet/weight/family/WeightChooseUserActivity;Ljava/util/List;)V
+.method public constructor <init>(Lcn/com/smartdevices/bracelet/weight/family/WeightSelectUserActivity;Ljava/util/List;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List",
             "<",
-            "Landroid/widget/LinearLayout;",
+            "Landroid/widget/GridLayout;",
             ">;)V"
         }
     .end annotation
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/weight/family/p;->c:Lcn/com/smartdevices/bracelet/weight/family/WeightChooseUserActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/weight/family/p;->c:Lcn/com/smartdevices/bracelet/weight/family/WeightSelectUserActivity;
 
     invoke-direct {p0}, Landroid/support/v4/view/ad;-><init>()V
 

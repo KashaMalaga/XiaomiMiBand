@@ -70,7 +70,7 @@
     <string name="bt_operation_failed_tips">藍牙連接異常, 請稍後重試！</string>
     <string name="multi_devices_info">你的附近可能有多個小米手環。請嘗試將你的手環貼近手機並離開其他的手環10公尺以外再重新搜尋</string>
     <string name="multi_devices_title">無法綁定</string>
-    <string name="search_bracelet_again">重新搜尋</string>
+    <string name="search_again">重新搜尋</string>
     <string name="search_devices_info">請將手環佩戴到手腕上, 並靠近手機</string>
     <string name="search_bracelet_ok">找到一個手環！</string>
     <string name="found_bracelet_info">當手環上的藍燈閃爍時, 敲擊幾下手環來綁定</string>
@@ -90,7 +90,14 @@
     <string name="bracelet_login_info">登入後將使用小米雲智慧分析你的活動和睡眠情況給出科學的建議</string>
     <string name="male">男</string>
     <string name="female">女</string>
+    <string name="unit_metric">公制</string>
+    <string name="unit_british">英制</string>
+    <string name="unit_metric_detail">公制（米、公里）</string>
+    <string name="unit_british_detail">英制（英尺、英里）</string>
     <string name="cm">公分</string>
+    <string name="metre">米</string>
+    <string name="unit_inch">英寸</string>
+    <string name="unit_foot">英尺</string>
     <string name="share">分享</string>
     <string name="person_info_finished_info">手環設定成功</string>
     <string name="kg">公斤</string>
@@ -137,6 +144,7 @@
     <string name="mili_name_too_long">輸入名稱過長, 請縮短後再試</string>
     <string name="mili_rename_fail">手環重新命名失敗</string>
     <string name="mili_unbind_question">解除綁定後, 手環將停止記錄運動和睡眠數據</string>
+    <string name="weight_unbind_question">解除绑定后, 手机将无法获取称重记录</string>
     <string name="share_to_title">小米手環</string>
     <string name="share_to_content">小米手環運動分享</string>
     <string name="share_goal_tips_succ">再偉大的目標也是一步一步走出來的</string>
@@ -647,6 +655,12 @@
     <string name="setting_daily_sport_notify">今日運動成績提示</string>
     <string name="daily_sport_report_notify_hurry">今天還差%1$s步就達成目標啦！</string>
     <string name="connect_to_retrive">No internet.</string>
+    <string name="week_total_distance_miles">本周里程（英里）</string>
+    <string name="found_weight_scale_title">已发现体重秤, 请确认秤的显示的数值和下方数值一样, 即可确认绑定</string>
+    <string name="confirm_pair">确认绑定</string>
+    <string name="signal_strong">強</string>
+    <string name="signal_weak">弱</string>
+    <string name="signal_none">無</string>
     <string name="lab_factory_title">實驗室</string>
     <string name="lab_factory_sport_type_situp">仰臥起坐</string>
     <string name="lab_factory_sport_type_ropeskipping">跳繩</string>
@@ -822,6 +836,7 @@
     <string name="watermark_btn_confirm">完成</string>
     <string name="watermark_guide_tips">拖拽移動水印</string>
     <string name="no_bracelet_tips">(僅限手環連接時設置)</string>
+    <string name="watermark_failed_to_create_contour_track">水印建置失败，请检查储存空间系咪充足</string>
     <string name="label_runner_group">跑跑團</string>
     <string name="action_mark">行為標註</string>
     <string name="action_sleep">睡覺</string>

@@ -49,13 +49,13 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetGenderActivity;->c:Landroid/widget/ImageView;
 
-    const v1, 0x7f0200f1
+    const v1, 0x7f0200f8
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetGenderActivity;->d:Landroid/widget/ImageView;
 
-    const v1, 0x7f02007f
+    const v1, 0x7f020089
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -97,13 +97,13 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetGenderActivity;->d:Landroid/widget/ImageView;
 
-    const v1, 0x7f020080
+    const v1, 0x7f02008a
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetGenderActivity;->c:Landroid/widget/ImageView;
 
-    const v1, 0x7f0200f0
+    const v1, 0x7f0200f7
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -190,7 +190,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f080111
+    const v0, 0x7f080112
 
     const/4 v1, 0x0
 

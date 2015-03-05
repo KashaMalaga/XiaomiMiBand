@@ -37,7 +37,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/g;->a:Lcn/com/smartdevices/bracelet/tag/TagDataActivity;
 
-    const v1, 0x7f08037c
+    const v1, 0x7f08038a
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/E;->a(Landroid/app/Activity;I)V
 

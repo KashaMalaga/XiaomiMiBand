@@ -1,126 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="health_link_title">
-        <item>1、24小时应急响应</item>
-        <item>2、应急建议</item>
-        <item>3、协助安排急救车辆</item>
-        <item>4、协助出险报案</item>
-        <item>5、联络家属</item>
-        <item>6、急救医院推介</item>
-        <item>7、住院指导</item>
+        <item>1. Скорая помощь 24/7</item>
+        <item>2. Совет от скорой помощи</item>
+        <item>3. Помощь в предоставлении транспортных средств</item>
+        <item>4. Помощь в предоставлении данных об происшествии</item>
+        <item>5. Связаться с родными</item>
+        <item>6. Доступные больницы</item>
+        <item>7. Руководство по госпитализации</item>
     </string-array>
     <string-array name="health_link_content">
-        <item>专业医护人员24小时中、英双语提供应急帮助，7x24小时，365天全年无休。</item>
-        <item>在用户告知真实情况下，远盟将通过电话方式提供白金十分钟的“自救”或“互救”应急建议。</item>
-        <item>远盟呼叫中心接到用户电话，立即拨打当地急救中心电话（“120”或“999”），建立三方通话，并由用户向急救中心自述出险位置，跟踪急救车的救援进程。</item>
-        <item>在出现意外时协助用户向有关部门报案。</item>
-        <item>根据用户意愿及提供的联系方式通知家属或紧急联络人。</item>
-        <item>在不影响“就急、就近、就病情、就病人及家属意愿”的急救原则之下，远盟可向用户推介实施急救的医疗医院，最终由用户自主决定，或根据实际情况由急救车上的医生安排。</item>
-        <item>指导办理住院手续，提供住院注意事项咨询。</item>
+        <item>Круглосуточная поддержка двуязычных специалистов скорой помощи.</item>
+        <item>В реальных случаях, пользователь по телефону может запросить совет от скорой помощи.</item>
+        <item>После получения звонка от пользователя, колл-центр осуществит вызов скорой помощи (120 или 999).</item>
+        <item>Поддержка пользователей при предоставлении информации об происшествии.</item>
+        <item>Данные предоставлены пользователями для уведомления родственников или немедленной связи.</item>
+        <item>Пользователю будет предоставлена ближайшая больница для госпитализации. Так же он имеет право выбрать по своему желанию и усмотрению.</item>
+        <item>Предоставление всей информации по процессу госпитализации.</item>
     </string-array>
     <string-array name="weeks">
-        <item>Mon.</item>
-        <item>Tues.</item>
-        <item>Wed.</item>
-        <item>Thurs.</item>
-        <item>Fri.</item>
-        <item>Sat.</item>
-        <item>Sun.</item>
+        <item>Пн.</item>
+        <item>Вт.</item>
+        <item>Ср.</item>
+        <item>Чт.</item>
+        <item>Пт.</item>
+        <item>Сб.</item>
+        <item>Вс.</item>
     </string-array>
     <string-array name="weeks_short">
-        <item>Mon.</item>
-        <item>Tues.</item>
-        <item>Wed.</item>
-        <item>Thurs.</item>
-        <item>Fri.</item>
-        <item>Sat.</item>
-        <item>Sun.</item>
+        <item>Пн.</item>
+        <item>Вт.</item>
+        <item>Ср.</item>
+        <item>Чт.</item>
+        <item>Пт.</item>
+        <item>Сб.</item>
+        <item>Вс.</item>
     </string-array>
     <string-array name="months">
-        <item>January</item>
-        <item>February</item>
-        <item>March</item>
-        <item>April</item>
-        <item>May</item>
-        <item>June</item>
-        <item>July</item>
-        <item>August</item>
-        <item>September</item>
-        <item>October</item>
-        <item>November</item>
-        <item>December</item>
+        <item>Январь</item>
+        <item>Февраль</item>
+        <item>Март</item>
+        <item>Апрель</item>
+        <item>Май</item>
+        <item>Июнь</item>
+        <item>Июль</item>
+        <item>Август</item>
+        <item>Сентябрь</item>
+        <item>Октябрь</item>
+        <item>Ноябрь</item>
+        <item>Декабрь</item>
     </string-array>
     <string-array name="select_days_simple">
-        <item>Once</item>
-        <item>Everyday</item>
-        <item>Weekdays</item>
-        <item>Customize</item>
+        <item>Один раз</item>
+        <item>Каждый день</item>
+        <item>С Пн. по Пт.</item>
+        <item>Настроить</item>
     </string-array>
     <string-array name="fortune">
-        <item>There is no substitute for consistency.</item>
-        <item>Strive for progress, not perfection.</item>
-        <item>Repetition is the father of success.</item>
-        <item>Energy and persistence conquer all things.</item>
-        <item>Set small goals and build upon them.</item>
-        <item>Every journey begins with a single step.</item>
-        <item>Achieve one goal a day.</item>
-        <item>"No matter how slow you go, you're still lapping everybody on the couch."</item>
-        <item>Run when you can. Walk if you have to. Crawl if you must. Just never give up.</item>
-        <item>Remember, the feeling you get from a good workout is far better than the feeling you get from sitting around wishing you had worked out.</item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
     </string-array>
     <string-array name="weather_aqi_descriptions">
-        <item>Great</item>
-        <item>Good</item>
-        <item>Moderate</item>
-        <item>Caution</item>
-        <item>Unhealthy</item>
-        <item>Very Unhealthy</item>
+        <item>Отлично</item>
+        <item>Хорошо</item>
+        <item>Низкое загрязнение</item>
+        <item>Среднее загрязнение</item>
+        <item>Тяжелое загрязнение</item>
+        <item>Сильное загрязнение</item>
     </string-array>
     <string-array name="weight_unit">
-        <item>Kg</item>
-        <item>jin</item>
-        <item>lb</item>
+        <item>кг</item>
+        <item>кг</item>
+        <item>фунт</item>
     </string-array>
     <string-array name="weight_body_figures">
-        <item>Underweight</item>
-        <item>Normal weight</item>
-        <item>Overweight</item>
-        <item>Obese</item>
-        <item>Obese</item>
+        <item>Слишком легкий</item>
+        <item>Нормальный</item>
+        <item>Перевес</item>
+        <item>Ожирение</item>
+        <item>Очень толстый</item>
     </string-array>
     <string-array name="weight_dynamic_list_bmi_tips">
-        <item>BMI Category: Underweight</item>
-        <item>BMI Category: Normal weight</item>
-        <item>BMI Category: Overweight</item>
-        <item>BMI Category: Obese</item>
+        <item>Индекс Массы Тела: Худощавое</item>
+        <item>Индекс Массы Тела: Обычное</item>
+        <item>Индекс Массы Тела: Полное</item>
+        <item>Индекс Массы Тела: Жирное</item>
     </string-array>
     <string-array name="weight_report_suggestions_boy">
-        <item>身体是革命的本钱，况且你还要保护心爱的人。建议加大无氧运动增加蛋白质摄入，让自己变成一个肌肉猛男吧。</item>
-        <item>身材非常标准，建议保持目前的生活饮食习惯，一定要将好身材保持下去哦。</item>
-        <item>建议减少脂肪摄入，保持蛋白质的摄入。在现有运动基础上加大有氧运动，每次有氧运动前先进行30分钟无氧运动，有利于提高减肥效果。</item>
-        <item>建议减少脂肪摄入，保持蛋白质的摄入。在现有运动基础上加大有氧运动，每次有氧运动前先进行30分钟无氧运动，有利于提高减肥效果。</item>
+        <item>Ваше тело - дар божий, заботьтесь о нем. Мы советуем вам делать анаэробные упражнения и употреблять протеин.</item>
+        <item>У вас стандартное тело. Следуйте привычному питанию и упражнениям!</item>
+        <item>Уменьшайте прием жиров, но не протеинов. За 30 минут до анаэробных упражнений, займитесь аэробными.</item>
+        <item>Уменьшайте прием жиров, но не протеинов. За 30 минут до анаэробных упражнений, займитесь аэробными.</item>
     </string-array>
     <string-array name="weight_report_suggestions_girl">
-        <item>爱美也要注意健康哦，平时要多观察体重避免继续下降。建议多增加无氧运动，增加体重的同时也可以保持较好的身材。</item>
-        <item>身材非常标准，建议保持目前的生活饮食习惯，一定要将好身材保持下去哦。</item>
-        <item>建议减少脂肪摄入，保持蛋白质的摄入。在现有运动基础上加大有氧运动，每次有氧运动前先进行30分钟无氧运动，有利于提高减肥效果。</item>
-        <item>建议减少脂肪摄入，保持蛋白质的摄入。在现有运动基础上加大有氧运动，每次有氧运动前先进行30分钟无氧运动，有利于提高减肥效果。</item>
+        <item>Ваше тело - дар божий, заботьтесь о нем. Мы советуем вам делать анаэробные упражнения и употреблять протеин.</item>
+        <item>У вас стандартное тело. Следуйте привычному питанию и упражнениям!</item>
+        <item>Уменьшайте прием жиров, но не протеинов. За 30 минут до анаэробных упражнений, займитесь аэробными.</item>
+        <item>Уменьшайте прием жиров, но не протеинов. За 30 минут до анаэробных упражнений, займитесь аэробными.</item>
     </string-array>
     <string-array name="weight_report_result_without_goal">
-        <item>Surpassed goal</item>
-        <item>"Didn't reach your goal"</item>
-        <item>You reached your goal!</item>
+        <item>Превысили цель</item>
+        <item>Не выполнили цель</item>
+        <item>Выполнили цель!</item>
     </string-array>
     <string-array name="weight_report_result_with_goal_gainweight">
-        <item>"You haven't reached your goal yet"</item>
-        <item>"You haven't reached your goal yet"</item>
-        <item>"You haven't reached your goal yet"</item>
-        <item>You reached your goal (%1$s%2$s)!</item>
+        <item>Еще не выполнили свою цель</item>
+        <item>Еще не выполнили свою цель</item>
+        <item>Еще не выполнили свою цель</item>
+        <item>Выполнили свою цель (%1$s%2$s)!</item>
     </string-array>
     <string-array name="weight_report_result_with_goal_loseweight">
-        <item>"You haven't reached your goal yet"</item>
-        <item>"You haven't reached your goal yet"</item>
-        <item>"You haven't reached your goal yet"</item>
-        <item>You reached your goal (%1$s%2$s)!</item>
+        <item>Еще не выполнили свою цель</item>
+        <item>Еще не выполнили свою цель</item>
+        <item>Еще не выполнили свою цель</item>
+        <item>Выполнили свою цель (%1$s%2$s)!</item>
     </string-array>
 </resources>

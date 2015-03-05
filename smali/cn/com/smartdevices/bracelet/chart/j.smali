@@ -63,7 +63,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/J;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->c(I)V
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->d(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/J;->a:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 

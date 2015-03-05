@@ -75,6 +75,10 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
+    const-string v0, "ExceptSyncDataBeforeHead"
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->b(Ljava/lang/String;)V
+
     :cond_0
     :goto_0
     const/4 v0, 0x1
@@ -139,6 +143,10 @@
     const-string v1, "package lenght != 20 and current currentDataLen != currentDataTotalLen!!!"
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v0, "ExceptSyncDataLengthError"
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->b(Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -477,6 +485,10 @@
     const-string v1, "get data not complete but head coming!!!"
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v0, "ExceptSyncDataHeadComing"
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/D;->b(Ljava/lang/String;)V
 
     move v0, v7
 

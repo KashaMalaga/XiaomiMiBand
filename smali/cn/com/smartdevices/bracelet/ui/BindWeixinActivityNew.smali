@@ -117,7 +117,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->j:Landroid/widget/TextView;
 
-    const v1, 0x7f0801f4
+    const v1, 0x7f0801f5
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -165,7 +165,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/BindWeixinActivityNew;->j:Landroid/widget/TextView;
 
-    const v1, 0x7f0801f6
+    const v1, 0x7f0801f7
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -229,7 +229,7 @@
 .method private f()V
     .locals 1
 
-    const v0, 0x7f0801f5
+    const v0, 0x7f0801f6
 
     invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/E;->a(Landroid/app/Activity;I)V
 
@@ -309,7 +309,7 @@
     goto :goto_0
 
     :cond_0
-    const v0, 0x7f0801e2
+    const v0, 0x7f0801e3
 
     const/4 v1, 0x0
 

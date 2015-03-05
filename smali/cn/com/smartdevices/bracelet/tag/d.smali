@@ -39,7 +39,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/tag/d;->b:Lcn/com/smartdevices/bracelet/tag/TagDataActivity;
 
-    iget-boolean v0, v0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->d:Z
+    iget-boolean v0, v0, Lcn/com/smartdevices/bracelet/tag/TagDataActivity;->f:Z
 
     if-eqz v0, :cond_0
 

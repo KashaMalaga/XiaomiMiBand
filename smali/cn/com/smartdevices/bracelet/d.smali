@@ -375,57 +375,57 @@
 
 .field public static final d:Ljava/lang/String; = "PageDynamicDetailModifySleepEnd"
 
-.field public static final dA:Ljava/lang/String; = "LocationException"
+.field public static final dA:Ljava/lang/String; = "WeatherException"
 
-.field public static final dB:Ljava/lang/String; = "Call_Ring"
+.field public static final dB:Ljava/lang/String; = "LocationStart"
 
-.field public static final dC:Ljava/lang/String; = "Call_Offhook"
+.field public static final dC:Ljava/lang/String; = "LocationOK"
 
-.field public static final dD:Ljava/lang/String; = "Call_Idle"
+.field public static final dD:Ljava/lang/String; = "LocationException"
 
-.field public static final dE:Ljava/lang/String; = "Call_Notify"
+.field public static final dE:Ljava/lang/String; = "Call_Ring"
 
-.field public static final dF:Ljava/lang/String; = "User_Binded_Start"
+.field public static final dF:Ljava/lang/String; = "Call_Offhook"
 
-.field public static final dG:Ljava/lang/String; = "User_CallNotify_Start"
+.field public static final dG:Ljava/lang/String; = "Call_Idle"
 
-.field public static final dH:Ljava/lang/String; = "User_QQ_Health_Start"
+.field public static final dH:Ljava/lang/String; = "Call_Notify"
 
-.field public static final dI:Ljava/lang/String; = "User_VibrateNotifyClosed"
+.field public static final dI:Ljava/lang/String; = "User_Binded_Start"
 
-.field public static final dJ:Ljava/lang/String; = "Game_ViewSignup"
+.field public static final dJ:Ljava/lang/String; = "User_CallNotify_Start"
 
-.field public static final dK:Ljava/lang/String; = "Game_Dislike"
+.field public static final dK:Ljava/lang/String; = "User_QQ_Health_Start"
 
-.field public static final dL:Ljava/lang/String; = "QQ_Login"
+.field public static final dL:Ljava/lang/String; = "User_VibrateNotifyClosed"
 
-.field public static final dM:Ljava/lang/String; = "QQ_Login_Cancel"
+.field public static final dM:Ljava/lang/String; = "Game_ViewSignup"
 
-.field public static final dN:Ljava/lang/String; = "QQ_Login_Error"
+.field public static final dN:Ljava/lang/String; = "Game_Dislike"
 
-.field public static final dO:Ljava/lang/String; = "QQ_Login_Success"
+.field public static final dO:Ljava/lang/String; = "QQ_Login"
 
-.field public static final dP:Ljava/lang/String; = "QQ_Login_Fail"
+.field public static final dP:Ljava/lang/String; = "QQ_Login_Cancel"
 
-.field public static final dQ:Ljava/lang/String; = "QQ_Logout"
+.field public static final dQ:Ljava/lang/String; = "QQ_Login_Error"
 
-.field public static final dR:Ljava/lang/String; = "QQ_Request_UserInfo"
+.field public static final dR:Ljava/lang/String; = "QQ_Login_Success"
 
-.field public static final dS:Ljava/lang/String; = "QQ_Request_UserInfo_Error"
+.field public static final dS:Ljava/lang/String; = "QQ_Login_Fail"
 
-.field public static final dT:Ljava/lang/String; = "QQ_Request_UserInfo_Success"
+.field public static final dT:Ljava/lang/String; = "QQ_Logout"
 
-.field public static final dU:Ljava/lang/String; = "QQ_Request_UserInfo_Fail"
+.field public static final dU:Ljava/lang/String; = "QQ_Request_UserInfo"
 
-.field public static final dV:Ljava/lang/String; = "QQ_Health_SyncData"
+.field public static final dV:Ljava/lang/String; = "QQ_Request_UserInfo_Error"
 
-.field public static final dW:Ljava/lang/String; = "QQ_Health_SyncData_Success"
+.field public static final dW:Ljava/lang/String; = "QQ_Request_UserInfo_Success"
 
-.field public static final dX:Ljava/lang/String; = "QQ_Health_SyncData_Fail"
+.field public static final dX:Ljava/lang/String; = "QQ_Request_UserInfo_Fail"
 
-.field public static final dY:Ljava/lang/String; = "confirm_manual_lazy_day"
+.field public static final dY:Ljava/lang/String; = "QQ_Health_SyncData"
 
-.field public static final dZ:Ljava/lang/String; = "Pair_For_SmartLock_Start"
+.field public static final dZ:Ljava/lang/String; = "QQ_Health_SyncData_Success"
 
 .field public static final da:Ljava/lang/String; = "UserSettingAge"
 
@@ -463,35 +463,41 @@
 
 .field public static final dr:Ljava/lang/String; = "ExceptDeviceReboot"
 
-.field public static final ds:Ljava/lang/String; = "WeatherRequestCity"
+.field public static final ds:Ljava/lang/String; = "ExceptSyncDataBeforeHead"
 
-.field public static final dt:Ljava/lang/String; = "WeatherRequestCityCode"
+.field public static final dt:Ljava/lang/String; = "ExceptSyncDataLengthError"
 
-.field public static final du:Ljava/lang/String; = "WeatherRequestWeather"
+.field public static final du:Ljava/lang/String; = "ExceptSyncDataHeadComing"
 
-.field public static final dv:Ljava/lang/String; = "WeatherStart"
+.field public static final dv:Ljava/lang/String; = "WeatherRequestCity"
 
-.field public static final dw:Ljava/lang/String; = "WeatherOK"
+.field public static final dw:Ljava/lang/String; = "WeatherRequestCityCode"
 
-.field public static final dx:Ljava/lang/String; = "WeatherException"
+.field public static final dx:Ljava/lang/String; = "WeatherRequestWeather"
 
-.field public static final dy:Ljava/lang/String; = "LocationStart"
+.field public static final dy:Ljava/lang/String; = "WeatherStart"
 
-.field public static final dz:Ljava/lang/String; = "LocationOK"
+.field public static final dz:Ljava/lang/String; = "WeatherOK"
 
 .field public static final e:Ljava/lang/String; = "PageStatistic"
 
-.field public static final ea:Ljava/lang/String; = "Pair_For_SmartLock_Success"
+.field public static final ea:Ljava/lang/String; = "QQ_Health_SyncData_Fail"
 
-.field public static final eb:Ljava/lang/String; = "Pair_For_SmartLock_Success_NoSecuritySetting"
+.field public static final eb:Ljava/lang/String; = "confirm_manual_lazy_day"
 
-.field public static final ec:Ljava/lang/String; = "Page_Help"
+.field public static final ec:Ljava/lang/String; = "Pair_For_SmartLock_Start"
 
-.field private static final ed:Ljava/lang/String; = "UmengAnalyticsTracker"
+.field public static final ed:Ljava/lang/String; = "Pair_For_SmartLock_Success"
 
-.field private static ee:Z = false
+.field public static final ee:Ljava/lang/String; = "Pair_For_SmartLock_Success_NoSecuritySetting"
 
-.field private static ef:Landroid/content/Context; = null
+.field public static final ef:Ljava/lang/String; = "Page_Help"
+
+.field private static final eg:Ljava/lang/String; = "UmengAnalyticsTracker"
+
+.field private static eh:Z = false
+
+.field private static ei:Landroid/content/Context; = null
 
 .field public static final f:Ljava/lang/String; = "PagePersonInfo"
 
@@ -542,7 +548,7 @@
 
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcn/com/smartdevices/bracelet/D;->ee:Z
+    sput-boolean v0, Lcn/com/smartdevices/bracelet/D;->eh:Z
 
     return-void
 .end method
@@ -558,7 +564,7 @@
 .method public static a(Landroid/content/Context;)V
     .locals 3
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/D;->ee:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/D;->eh:Z
 
     if-nez v0, :cond_0
 
@@ -588,7 +594,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {p0}, Lcom/g/a/f;->a(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/h/a/f;->a(Landroid/content/Context;)V
 
     goto :goto_0
 .end method
@@ -596,7 +602,7 @@
 .method public static a(Landroid/content/Context;Ljava/lang/Exception;)V
     .locals 1
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/D;->ee:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/D;->eh:Z
 
     if-nez v0, :cond_0
 
@@ -604,7 +610,7 @@
     return-void
 
     :cond_0
-    invoke-static {p0, p1}, Lcom/g/a/f;->a(Landroid/content/Context;Ljava/lang/Throwable;)V
+    invoke-static {p0, p1}, Lcom/h/a/f;->a(Landroid/content/Context;Ljava/lang/Throwable;)V
 
     goto :goto_0
 .end method
@@ -632,7 +638,7 @@
 .method public static a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/D;->ee:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/D;->eh:Z
 
     if-nez v0, :cond_0
 
@@ -674,12 +680,12 @@
 
     if-nez p2, :cond_1
 
-    invoke-static {p0, p1}, Lcom/g/a/f;->d(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lcom/h/a/f;->d(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_1
-    invoke-static {p0, p1, p2}, Lcom/g/a/f;->d(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, p1, p2}, Lcom/h/a/f;->d(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -687,7 +693,7 @@
 .method public static a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/D;->ee:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/D;->eh:Z
 
     if-nez v0, :cond_0
 
@@ -743,7 +749,7 @@
 
     invoke-virtual {v0, p2, p3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {p0, p1, v0}, Lcom/g/a/f;->a(Landroid/content/Context;Ljava/lang/String;Ljava/util/Map;)V
+    invoke-static {p0, p1, v0}, Lcom/h/a/f;->a(Landroid/content/Context;Ljava/lang/String;Ljava/util/Map;)V
 
     goto :goto_0
 .end method
@@ -777,7 +783,7 @@
         }
     .end annotation
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/D;->ee:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/D;->eh:Z
 
     if-nez v0, :cond_0
 
@@ -817,7 +823,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {p0, p1, p2}, Lcom/g/a/f;->a(Landroid/content/Context;Ljava/lang/String;Ljava/util/Map;)V
+    invoke-static {p0, p1, p2}, Lcom/h/a/f;->a(Landroid/content/Context;Ljava/lang/String;Ljava/util/Map;)V
 
     goto :goto_0
 .end method
@@ -837,7 +843,7 @@
         }
     .end annotation
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/D;->ee:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/D;->eh:Z
 
     if-nez v0, :cond_0
 
@@ -887,7 +893,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {p0, p1, p2, p3}, Lcom/g/a/f;->a(Landroid/content/Context;Ljava/lang/String;Ljava/util/Map;I)V
+    invoke-static {p0, p1, p2, p3}, Lcom/h/a/f;->a(Landroid/content/Context;Ljava/lang/String;Ljava/util/Map;I)V
 
     goto :goto_0
 .end method
@@ -895,7 +901,7 @@
 .method public static a(Ljava/lang/String;)V
     .locals 3
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/D;->ee:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/D;->eh:Z
 
     if-nez v0, :cond_0
 
@@ -925,7 +931,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {p0}, Lcom/g/a/f;->b(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/h/a/f;->b(Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -955,17 +961,17 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    sput-boolean p0, Lcn/com/smartdevices/bracelet/D;->ee:Z
+    sput-boolean p0, Lcn/com/smartdevices/bracelet/D;->eh:Z
 
-    invoke-static {p1}, Lcom/g/a/f;->e(Z)V
+    invoke-static {p1}, Lcom/h/a/f;->e(Z)V
 
-    invoke-static {p2}, Lcom/g/a/f;->d(Z)V
+    invoke-static {p2}, Lcom/h/a/f;->d(Z)V
 
-    sput-object p3, Lcn/com/smartdevices/bracelet/D;->ef:Landroid/content/Context;
+    sput-object p3, Lcn/com/smartdevices/bracelet/D;->ei:Landroid/content/Context;
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/D;->ee:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/D;->eh:Z
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->n(Z)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->m(Z)V
 
     return-void
 .end method
@@ -973,7 +979,7 @@
 .method public static a()Z
     .locals 1
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/D;->ee:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/D;->eh:Z
 
     return v0
 .end method
@@ -981,7 +987,7 @@
 .method public static b(Landroid/content/Context;)V
     .locals 3
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/D;->ee:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/D;->eh:Z
 
     if-nez v0, :cond_0
 
@@ -1011,7 +1017,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {p0}, Lcom/g/a/f;->b(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/h/a/f;->b(Landroid/content/Context;)V
 
     goto :goto_0
 .end method
@@ -1019,7 +1025,7 @@
 .method public static b(Landroid/content/Context;Ljava/lang/String;)V
     .locals 3
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/D;->ee:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/D;->eh:Z
 
     if-nez v0, :cond_0
 
@@ -1049,7 +1055,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {p0, p1}, Lcom/g/a/f;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lcom/h/a/f;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -1057,7 +1063,7 @@
 .method public static b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/D;->ee:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/D;->eh:Z
 
     if-nez v0, :cond_0
 
@@ -1097,7 +1103,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {p0, p1, p2}, Lcom/g/a/f;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, p1, p2}, Lcom/h/a/f;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -1105,7 +1111,7 @@
 .method public static b(Ljava/lang/String;)V
     .locals 1
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/D;->ef:Landroid/content/Context;
+    sget-object v0, Lcn/com/smartdevices/bracelet/D;->ei:Landroid/content/Context;
 
     invoke-static {v0, p0}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
 
@@ -1115,7 +1121,7 @@
 .method public static c(Landroid/content/Context;Ljava/lang/String;)V
     .locals 1
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/D;->ee:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/D;->eh:Z
 
     if-nez v0, :cond_0
 
@@ -1123,7 +1129,7 @@
     return-void
 
     :cond_0
-    invoke-static {p0, p1}, Lcom/g/a/f;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lcom/h/a/f;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -1131,7 +1137,7 @@
 .method public static c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/D;->ee:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/D;->eh:Z
 
     if-nez v0, :cond_0
 
@@ -1173,12 +1179,12 @@
 
     if-nez p2, :cond_1
 
-    invoke-static {p0, p1}, Lcom/g/a/f;->c(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lcom/h/a/f;->c(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_1
-    invoke-static {p0, p1, p2}, Lcom/g/a/f;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, p1, p2}, Lcom/h/a/f;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -1186,7 +1192,7 @@
 .method public static c(Ljava/lang/String;)V
     .locals 3
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/D;->ee:Z
+    sget-boolean v0, Lcn/com/smartdevices/bracelet/D;->eh:Z
 
     if-nez v0, :cond_0
 
@@ -1216,7 +1222,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {p0}, Lcom/g/a/f;->a(Ljava/lang/String;)V
+    invoke-static {p0}, Lcom/h/a/f;->a(Ljava/lang/String;)V
 
     goto :goto_0
 .end method

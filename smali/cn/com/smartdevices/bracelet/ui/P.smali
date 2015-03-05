@@ -1,18 +1,26 @@
 .class public Lcn/com/smartdevices/bracelet/ui/P;
-.super Landroid/support/v13/app/h;
+.super Landroid/support/v13/app/i;
 
 
 # direct methods
 .method public constructor <init>(Landroid/app/FragmentManager;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Landroid/support/v13/app/h;-><init>(Landroid/app/FragmentManager;)V
+    invoke-direct {p0, p1}, Landroid/support/v13/app/i;-><init>(Landroid/app/FragmentManager;)V
 
     return-void
 .end method
 
 
 # virtual methods
+.method public a(Ljava/lang/Object;)I
+    .locals 1
+
+    const/4 v0, -0x2
+
+    return v0
+.end method
+
 .method public a(I)Landroid/app/Fragment;
     .locals 1
 
@@ -30,9 +38,9 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/dj;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/do;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/dj;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/do;-><init>()V
 
     goto :goto_0
 
@@ -50,9 +58,9 @@
 
     if-eqz v0, :cond_1
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/dz;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/dE;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/dz;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/dE;-><init>()V
 
     goto :goto_0
 

@@ -122,7 +122,7 @@
 
     const-string v1, "REF_DEVICE_TYPE"
 
-    const-string v2, "TYPE_WEIGHT"
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/activity/DeviceNotFoundActivity;->a:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -133,7 +133,7 @@
     nop
 
     :pswitch_data_0
-    .packed-switch 0x7f07018d
+    .packed-switch 0x7f0701a6
         :pswitch_1
         :pswitch_2
         :pswitch_0
@@ -145,11 +145,11 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030040
+    const v0, 0x7f030041
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/DeviceNotFoundActivity;->setContentView(I)V
 
-    const v0, 0x7f07018f
+    const v0, 0x7f0701a8
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/DeviceNotFoundActivity;->findViewById(I)Landroid/view/View;
 
@@ -159,7 +159,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f07018e
+    const v0, 0x7f0701a7
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/DeviceNotFoundActivity;->findViewById(I)Landroid/view/View;
 
@@ -167,7 +167,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f07018d
+    const v0, 0x7f0701a6
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/DeviceNotFoundActivity;->findViewById(I)Landroid/view/View;
 
@@ -185,7 +185,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f080158
+    const v2, 0x7f080159
 
     invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/activity/DeviceNotFoundActivity;->getString(I)Ljava/lang/String;
 
@@ -213,7 +213,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f07018a
+    const v0, 0x7f0701a3
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/DeviceNotFoundActivity;->findViewById(I)Landroid/view/View;
 
@@ -221,7 +221,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f07018b
+    const v1, 0x7f0701a4
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/activity/DeviceNotFoundActivity;->findViewById(I)Landroid/view/View;
 
@@ -229,7 +229,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f07018c
+    const v2, 0x7f0701a5
 
     invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/activity/DeviceNotFoundActivity;->findViewById(I)Landroid/view/View;
 
@@ -237,7 +237,7 @@
 
     check-cast v2, Landroid/widget/ImageView;
 
-    const v3, 0x7f070116
+    const v3, 0x7f07012a
 
     invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/activity/DeviceNotFoundActivity;->findViewById(I)Landroid/view/View;
 
@@ -269,15 +269,15 @@
 
     if-eqz v4, :cond_1
 
-    const v4, 0x7f08023a
+    const v4, 0x7f080241
 
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setText(I)V
 
-    const v0, 0x7f08023b
+    const v0, 0x7f080242
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(I)V
 
-    const v0, 0x7f020172
+    const v0, 0x7f02017c
 
     invoke-virtual {v2, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 

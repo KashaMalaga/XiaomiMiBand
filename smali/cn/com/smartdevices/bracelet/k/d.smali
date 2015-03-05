@@ -33,6 +33,8 @@
 
 .field public static final O:Ljava/lang/String; = "huami.health.scale.usergoal.getusergoallast.json"
 
+.field public static final P:Ljava/lang/String; = "huami.health.scale.usergoal.deleteusergoal.json"
+
 .field public static final a:Ljava/lang/String; = "huami.health.receiveData.json"
 
 .field public static final b:Ljava/lang/String; = "huami.health.bindProfile.json"

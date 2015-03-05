@@ -1,20 +1,21 @@
 version: 2.0.0-RC3
-apkFileName: 小米运动_1.3.114_361.apk
+apkFileName: 小米运动_1.3.312_375.apk
 isFrameworkApk: false
 usesFramework:
   ids:
   - 1
 sdkInfo:
-  minSdkVersion: '14'
+  minSdkVersion: '18'
   targetSdkVersion: '18'
 packageInfo:
   forced-package-id: '127'
 versionInfo:
-  versionCode: '361'
-  versionName: 1.3.114
+  versionCode: '375'
+  versionName: 1.3.312
 compressionType: false
 unknownFiles:
-  push_version: '0'
+  push_version: '8'
+  com/robotium/solo/RobotiumWeb.js: '8'
   org/achartengine/image/zoom-1.png: '8'
   org/achartengine/image/zoom_in.png: '8'
   org/achartengine/image/zoom_out.png: '8'

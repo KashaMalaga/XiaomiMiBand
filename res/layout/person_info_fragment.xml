@@ -49,17 +49,17 @@
                 <include layout="@layout/split_line_with_margin" />
                 <LinearLayout android:id="@id/info_weight_goal" android:background="@drawable/bg_item" android:paddingLeft="@dimen/common_list_item_left_right_padding" android:paddingRight="@dimen/common_list_item_left_right_padding" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/common_list_item_1_height" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus">
                     <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
-                        <TextView android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="体重目标" style="@style/ListItemTitleText" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Objetivo de Peso" style="@style/ListItemTitleText" />
                     </LinearLayout>
-                    <TextView android:id="@id/info_weight_goal_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="未设置" style="@style/ListItemValueText" />
+                    <TextView android:id="@id/info_weight_goal_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="No establecido" style="@style/ListItemValueText" />
                     <ImageView android:layout_gravity="center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_indicator_right_arrow" />
                 </LinearLayout>
                 <include layout="@layout/split_line_with_margin" />
                 <LinearLayout android:id="@id/info_unit_set" android:background="@drawable/bg_item" android:paddingLeft="@dimen/common_list_item_left_right_padding" android:paddingRight="@dimen/common_list_item_left_right_padding" android:clickable="true" android:layout_width="fill_parent" android:layout_height="@dimen/common_list_item_1_height" android:layout_marginTop="@dimen/stroke_width_minus" android:layout_marginBottom="@dimen/stroke_width_minus">
                     <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
-                        <TextView android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="单位设置" style="@style/ListItemTitleText" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Unidad de Medida" style="@style/ListItemTitleText" />
                     </LinearLayout>
-                    <TextView android:id="@id/info_unit_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="未设置" style="@style/ListItemValueText" />
+                    <TextView android:id="@id/info_unit_value" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Не заданно" style="@style/ListItemValueText" />
                     <ImageView android:layout_gravity="center|right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_indicator_right_arrow" />
                 </LinearLayout>
                 <include layout="@layout/split_line_with_margin" />

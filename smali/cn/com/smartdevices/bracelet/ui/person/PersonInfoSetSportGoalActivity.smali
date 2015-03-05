@@ -129,9 +129,9 @@
 
     iput-wide v1, p1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->uid:J
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/person/d;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/person/f;
 
-    invoke-direct {v1, p0, p1}, Lcn/com/smartdevices/bracelet/ui/person/d;-><init>(Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetSportGoalActivity;Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
+    invoke-direct {v1, p0, p1}, Lcn/com/smartdevices/bracelet/ui/person/f;-><init>(Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetSportGoalActivity;Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 
     invoke-static {v0, p1, v1}, Lcn/com/smartdevices/bracelet/k/g;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Lcn/com/smartdevices/bracelet/model/PersonInfo;Lcom/d/a/a/h;)V
 
@@ -199,7 +199,7 @@
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetSportGoalActivity;->a()V
 
-    const v0, 0x7f0700d9
+    const v0, 0x7f0700da
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetSportGoalActivity;->findViewById(I)Landroid/view/View;
 
@@ -217,7 +217,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f02016f
+    const v1, 0x7f020179
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
@@ -241,7 +241,7 @@
 
     move-result-object v14
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cs;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cx;
 
     const/4 v2, 0x2
 
@@ -293,11 +293,11 @@
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v13}, Lcn/com/smartdevices/bracelet/ui/cs;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
+    invoke-direct/range {v0 .. v13}, Lcn/com/smartdevices/bracelet/ui/cx;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
 
     invoke-virtual {v14, v0}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/a/f;)Lkankan/wheel/widget/WheelView;
 
-    const v0, 0x7f0700d8
+    const v0, 0x7f0700d9
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetSportGoalActivity;->findViewById(I)Landroid/view/View;
 

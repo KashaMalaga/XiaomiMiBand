@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/ui/Y;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
@@ -22,32 +22,32 @@
 
 
 # virtual methods
-.method public a(Landroid/app/DialogFragment;)V
-    .locals 0
+.method public onClick(Landroid/view/View;)V
+    .locals 3
 
-    return-void
-.end method
+    new-instance v0, Landroid/os/Bundle;
 
-.method public b(Landroid/app/DialogFragment;)V
-    .locals 0
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    invoke-virtual {p1}, Landroid/app/DialogFragment;->dismiss()V
+    const-string v1, "Days"
 
-    return-void
-.end method
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/bR;->a:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
 
-.method public c(Landroid/app/DialogFragment;)V
-    .locals 2
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->a(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;)Lcn/com/smartdevices/bracelet/model/AlarmClockItem;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bR;->a:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
+    move-result-object v2
 
-    const/4 v1, 0x0
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/model/AlarmClockItem;->getCoded()I
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->setResult(I)V
+    move-result v2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bR;->a:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->finish()V
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bR;->a:Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
+
+    const-class v2, Lcn/com/smartdevices/bracelet/ui/bX;
+
+    invoke-static {v1, v2, v0}, Lcn/com/smartdevices/bracelet/ui/W;->a(Landroid/app/Activity;Ljava/lang/Class;Landroid/os/Bundle;)V
 
     return-void
 .end method

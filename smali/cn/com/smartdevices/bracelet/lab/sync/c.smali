@@ -34,7 +34,7 @@
 
     invoke-direct {v5}, Lcn/com/smartdevices/bracelet/lab/sync/B;-><init>()V
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/gps/services/t;->a(I)I
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/gps/services/w;->a(I)I
 
     move-result v6
 

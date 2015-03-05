@@ -33,7 +33,9 @@
 
 .field public static final center_pie_size:I = 0x7f0a008d
 
-.field public static final chart_info_item_height_large:I = 0x7f0a00b6
+.field public static final chart_info_item_height_large:I = 0x7f0a00b7
+
+.field public static final chart_info_layout_padding_top_bottom:I = 0x7f0a00b6
 
 .field public static final click_button_h:I = 0x7f0a0039
 
@@ -85,7 +87,7 @@
 
 .field public static final common_sliding_panel_top_height:I = 0x7f0a00a7
 
-.field public static final daily_sport_icon_margin:I = 0x7f0a00b7
+.field public static final daily_sport_icon_margin:I = 0x7f0a00b8
 
 .field public static final default_circle_indicator_radius:I = 0x7f0a0008
 
@@ -159,9 +161,9 @@
 
 .field public static final goal_step_left_yong_inner:I = 0x7f0a0050
 
-.field public static final header_footer_left_right_padding:I = 0x7f0a00dc
+.field public static final header_footer_left_right_padding:I = 0x7f0a00dd
 
-.field public static final header_footer_top_bottom_padding:I = 0x7f0a00dd
+.field public static final header_footer_top_bottom_padding:I = 0x7f0a00de
 
 .field public static final help_title_margin:I = 0x7f0a0065
 
@@ -173,11 +175,11 @@
 
 .field public static final image_thumbnail_spacing:I = 0x7f0a007e
 
-.field public static final indicator_corner_radius:I = 0x7f0a00da
+.field public static final indicator_corner_radius:I = 0x7f0a00db
 
-.field public static final indicator_internal_padding:I = 0x7f0a00db
+.field public static final indicator_internal_padding:I = 0x7f0a00dc
 
-.field public static final indicator_right_padding:I = 0x7f0a00d9
+.field public static final indicator_right_padding:I = 0x7f0a00da
 
 .field public static final info_birth_marging_top:I = 0x7f0a0024
 
@@ -203,9 +205,9 @@
 
 .field public static final input_txt_size:I = 0x7f0a001c
 
-.field public static final itemBorderWidth:I = 0x7f0a00d8
+.field public static final itemBorderWidth:I = 0x7f0a00d9
 
-.field public static final itemSize:I = 0x7f0a00d7
+.field public static final itemSize:I = 0x7f0a00d8
 
 .field public static final item_height:I = 0x7f0a0010
 
@@ -219,7 +221,7 @@
 
 .field public static final item_value_margin_right:I = 0x7f0a0060
 
-.field public static final lab_factory_sport_progress_state:I = 0x7f0a00b8
+.field public static final lab_factory_sport_progress_state:I = 0x7f0a00b9
 
 .field public static final light_color_w:I = 0x7f0a006a
 
@@ -269,9 +271,9 @@
 
 .field public static final multi_devices_txt_space:I = 0x7f0a0011
 
-.field public static final open_title_left_margin:I = 0x7f0a00c6
+.field public static final open_title_left_margin:I = 0x7f0a00c7
 
-.field public static final open_title_right_margin:I = 0x7f0a00c7
+.field public static final open_title_right_margin:I = 0x7f0a00c8
 
 .field public static final person_avatar_size:I = 0x7f0a0056
 
@@ -305,43 +307,43 @@
 
 .field public static final ruler_small_num_size:I = 0x7f0a001e
 
-.field public static final running_bottom_bar_height:I = 0x7f0a00ca
+.field public static final running_bottom_bar_height:I = 0x7f0a00cb
 
-.field public static final running_distance_large_text_size:I = 0x7f0a00cd
+.field public static final running_distance_large_text_size:I = 0x7f0a00ce
 
-.field public static final running_history_list_category_height:I = 0x7f0a00c2
+.field public static final running_history_list_category_height:I = 0x7f0a00c3
 
-.field public static final running_history_list_item_height:I = 0x7f0a00c3
+.field public static final running_history_list_item_height:I = 0x7f0a00c4
 
-.field public static final running_list_margin_left:I = 0x7f0a00c4
+.field public static final running_list_margin_left:I = 0x7f0a00c5
 
-.field public static final running_list_margin_right:I = 0x7f0a00c5
+.field public static final running_list_margin_right:I = 0x7f0a00c6
 
-.field public static final running_pace_dot_padding:I = 0x7f0a00c8
+.field public static final running_pace_dot_padding:I = 0x7f0a00c9
 
-.field public static final running_progressbar_bottom_margin:I = 0x7f0a00d6
+.field public static final running_progressbar_bottom_margin:I = 0x7f0a00d7
 
-.field public static final running_progressbar_top_margin:I = 0x7f0a00d5
+.field public static final running_progressbar_top_margin:I = 0x7f0a00d6
 
-.field public static final running_pull_to_refresh_text_size:I = 0x7f0a00cb
+.field public static final running_pull_to_refresh_text_size:I = 0x7f0a00cc
 
-.field public static final running_setting_top_margin:I = 0x7f0a00d4
+.field public static final running_setting_top_margin:I = 0x7f0a00d5
 
-.field public static final running_share_pane_margin:I = 0x7f0a00c9
+.field public static final running_share_pane_margin:I = 0x7f0a00ca
 
-.field public static final running_sport_desc_text_size:I = 0x7f0a00cc
+.field public static final running_sport_desc_text_size:I = 0x7f0a00cd
 
-.field public static final running_track_result_item_vertical_space:I = 0x7f0a00d3
+.field public static final running_track_result_item_vertical_space:I = 0x7f0a00d4
 
-.field public static final running_track_result_left_margin:I = 0x7f0a00d1
+.field public static final running_track_result_left_margin:I = 0x7f0a00d2
 
-.field public static final running_track_result_top_margin:I = 0x7f0a00d0
+.field public static final running_track_result_top_margin:I = 0x7f0a00d1
 
-.field public static final running_track_result_vertical_space:I = 0x7f0a00d2
+.field public static final running_track_result_vertical_space:I = 0x7f0a00d3
 
-.field public static final running_unit_large_text_size:I = 0x7f0a00ce
+.field public static final running_unit_large_text_size:I = 0x7f0a00cf
 
-.field public static final running_unit_left_margin:I = 0x7f0a00cf
+.field public static final running_unit_left_margin:I = 0x7f0a00d0
 
 .field public static final select_item_padding_left:I = 0x7f0a006d
 
@@ -357,23 +359,23 @@
 
 .field public static final single_button_padding:I = 0x7f0a006f
 
-.field public static final sport_running_button_bottom:I = 0x7f0a00ba
+.field public static final sport_running_button_bottom:I = 0x7f0a00bb
 
-.field public static final sport_running_detail_height:I = 0x7f0a00be
+.field public static final sport_running_detail_height:I = 0x7f0a00bf
 
-.field public static final sport_running_detail_large_height:I = 0x7f0a00bf
+.field public static final sport_running_detail_large_height:I = 0x7f0a00c0
 
-.field public static final sport_running_detail_wide_width:I = 0x7f0a00bd
+.field public static final sport_running_detail_wide_width:I = 0x7f0a00be
 
-.field public static final sport_running_distance_font_size:I = 0x7f0a00c1
+.field public static final sport_running_distance_font_size:I = 0x7f0a00c2
 
-.field public static final sport_running_history_item_height:I = 0x7f0a00bc
+.field public static final sport_running_history_item_height:I = 0x7f0a00bd
 
-.field public static final sport_running_info_width:I = 0x7f0a00bb
+.field public static final sport_running_info_width:I = 0x7f0a00bc
 
-.field public static final sport_running_slider_panel_height:I = 0x7f0a00b9
+.field public static final sport_running_slider_panel_height:I = 0x7f0a00ba
 
-.field public static final sport_running_time_cost_desc_size:I = 0x7f0a00c0
+.field public static final sport_running_time_cost_desc_size:I = 0x7f0a00c1
 
 .field public static final statistic_chart_height:I = 0x7f0a00b3
 

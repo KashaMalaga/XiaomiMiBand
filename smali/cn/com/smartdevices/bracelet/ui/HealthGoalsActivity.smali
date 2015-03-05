@@ -41,7 +41,7 @@
 
     const/16 v11, 0xf
 
-    const v0, 0x7f0700d9
+    const v0, 0x7f0700da
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->findViewById(I)Landroid/view/View;
 
@@ -59,7 +59,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f020171
+    const v1, 0x7f02017b
 
     invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
@@ -83,7 +83,7 @@
 
     move-result-object v14
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cs;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cx;
 
     const/4 v2, 0x2
 
@@ -133,11 +133,11 @@
 
     move v12, v11
 
-    invoke-direct/range {v0 .. v13}, Lcn/com/smartdevices/bracelet/ui/cs;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
+    invoke-direct/range {v0 .. v13}, Lcn/com/smartdevices/bracelet/ui/cx;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
 
     invoke-virtual {v14, v0}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/a/f;)Lkankan/wheel/widget/WheelView;
 
-    const v0, 0x7f0700d8
+    const v0, 0x7f0700d9
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->findViewById(I)Landroid/view/View;
 
@@ -332,9 +332,9 @@
 
     move-result v2
 
-    new-instance v3, Lcn/com/smartdevices/bracelet/ui/aL;
+    new-instance v3, Lcn/com/smartdevices/bracelet/ui/aM;
 
-    invoke-direct {v3, p0}, Lcn/com/smartdevices/bracelet/ui/aL;-><init>(Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;)V
+    invoke-direct {v3, p0}, Lcn/com/smartdevices/bracelet/ui/aM;-><init>(Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;)V
 
     invoke-direct {v0, v2, v3}, Lcn/com/smartdevices/bracelet/a/q;-><init>(ILcn/com/smartdevices/bracelet/a/b;)V
 
@@ -397,9 +397,9 @@
 
     iput-wide v1, p1, Lcn/com/smartdevices/bracelet/model/PersonInfo;->uid:J
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/aM;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/aN;
 
-    invoke-direct {v1, p0, p1}, Lcn/com/smartdevices/bracelet/ui/aM;-><init>(Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
+    invoke-direct {v1, p0, p1}, Lcn/com/smartdevices/bracelet/ui/aN;-><init>(Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 
     invoke-static {v0, p1, v1}, Lcn/com/smartdevices/bracelet/k/g;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Lcn/com/smartdevices/bracelet/model/PersonInfo;Lcom/d/a/a/h;)V
 
@@ -440,7 +440,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030098
+    const v0, 0x7f03009c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/HealthGoalsActivity;->setContentView(I)V
 

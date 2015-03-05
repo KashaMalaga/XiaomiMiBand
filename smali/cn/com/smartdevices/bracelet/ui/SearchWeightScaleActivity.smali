@@ -46,6 +46,8 @@
 
 .field private E:Landroid/widget/ImageView;
 
+.field private F:Z
+
 .field private j:Lcn/com/smartdevices/bracelet/chart/LinePieChartView;
 
 .field private k:Landroid/widget/TextView;
@@ -257,7 +259,7 @@
 
     move-result-object v1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->aj()Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->ai()Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;
 
     move-result-object v2
 
@@ -381,9 +383,9 @@
 
     const/4 v0, 0x1
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/ui/cE;
+    new-instance v2, Lcn/com/smartdevices/bracelet/ui/cJ;
 
-    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/ui/cE;-><init>(Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;)V
+    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/ui/cJ;-><init>(Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;)V
 
     invoke-static {v1, v3, v0, v2}, Lcn/com/smartdevices/bracelet/k/g;->b(Lcn/com/smartdevices/bracelet/model/LoginData;Lcn/com/smartdevices/bracelet/model/SystemInfo;ILcom/d/a/a/h;)V
 
@@ -430,15 +432,15 @@
 .method private c()V
     .locals 2
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cB;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cG;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/cB;-><init>(Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/cG;-><init>(Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->u:Landroid/os/Handler;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cC;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cH;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/cC;-><init>(Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/cH;-><init>(Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->z:Landroid/content/BroadcastReceiver;
 
@@ -478,7 +480,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->l:Lcn/com/smartdevices/bracelet/ui/L;
 
-    const v0, 0x7f07011d
+    const v0, 0x7f070131
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->findViewById(I)Landroid/view/View;
 
@@ -488,11 +490,11 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->mHomeBack:Landroid/widget/TextView;
 
-    const v1, 0x7f080231
+    const v1, 0x7f080238
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    const v0, 0x7f07011e
+    const v0, 0x7f070132
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->findViewById(I)Landroid/view/View;
 
@@ -510,13 +512,13 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->n:Landroid/widget/ListView;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/cD;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/cI;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/cD;-><init>(Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/cI;-><init>(Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    const v0, 0x7f070115
+    const v0, 0x7f070129
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->findViewById(I)Landroid/view/View;
 
@@ -524,7 +526,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->o:Landroid/view/View;
 
-    const v0, 0x7f070113
+    const v0, 0x7f070127
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->findViewById(I)Landroid/view/View;
 
@@ -534,7 +536,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->p:Landroid/widget/TextView;
 
-    const v0, 0x7f070114
+    const v0, 0x7f070128
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->findViewById(I)Landroid/view/View;
 
@@ -546,7 +548,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->p:Landroid/widget/TextView;
 
-    const v1, 0x7f08023f
+    const v1, 0x7f080246
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -556,7 +558,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f07011b
+    const v0, 0x7f07012f
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->findViewById(I)Landroid/view/View;
 
@@ -578,7 +580,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f080158
+    const v2, 0x7f080159
 
     invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->getString(I)Ljava/lang/String;
 
@@ -614,7 +616,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    const v0, 0x7f07011c
+    const v0, 0x7f070130
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->findViewById(I)Landroid/view/View;
 
@@ -634,7 +636,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    const v0, 0x7f070117
+    const v0, 0x7f07012b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->findViewById(I)Landroid/view/View;
 
@@ -646,11 +648,11 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->s:Landroid/widget/ImageView;
 
-    const v1, 0x7f0200f6
+    const v1, 0x7f0200fd
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    const v0, 0x7f070116
+    const v0, 0x7f07012a
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->findViewById(I)Landroid/view/View;
 
@@ -702,7 +704,7 @@
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/LinePieChartView;->c_()V
 
-    const v0, 0x7f070118
+    const v0, 0x7f07012c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->findViewById(I)Landroid/view/View;
 
@@ -712,7 +714,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->D:Landroid/widget/TextView;
 
-    const v0, 0x7f070119
+    const v0, 0x7f07012d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->findViewById(I)Landroid/view/View;
 
@@ -722,7 +724,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->E:Landroid/widget/ImageView;
 
-    const v0, 0x7f070111
+    const v0, 0x7f070125
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->findViewById(I)Landroid/view/View;
 
@@ -796,9 +798,7 @@
 .end method
 
 .method private f()V
-    .locals 4
-
-    const/4 v3, 0x3
+    .locals 2
 
     const-string v0, "SearchWeightScaleActivity"
 
@@ -811,16 +811,6 @@
     sget-object v1, Lcom/xiaomi/hm/bleservice/profile/IWeightProfile;->UUID_SERVICE_WEIGHT_SCALE_SERVICE:Ljava/util/UUID;
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/d;->a(Ljava/util/UUID;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->u:Landroid/os/Handler;
-
-    invoke-virtual {v0, v3}, Landroid/os/Handler;->removeMessages(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->u:Landroid/os/Handler;
-
-    const-wide/32 v1, 0xea60
-
-    invoke-virtual {v0, v3, v1, v2}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
     return-void
 .end method
@@ -928,7 +918,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->w:Landroid/app/Activity;
 
-    const v1, 0x7f08025b
+    const v1, 0x7f080262
 
     const/4 v2, 0x0
 
@@ -1096,38 +1086,87 @@
     return-void
 
     :cond_0
-    iget-object v0, p1, Lcom/xiaomi/hm/bleservice/a;->a:Landroid/bluetooth/BluetoothDevice;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->y:Landroid/bluetooth/BluetoothDevice;
-
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->u:Landroid/os/Handler;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/cF;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/cK;
 
-    invoke-direct {v1, p0, p1}, Lcn/com/smartdevices/bracelet/ui/cF;-><init>(Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;Lcom/xiaomi/hm/bleservice/a;)V
+    invoke-direct {v1, p0, p1}, Lcn/com/smartdevices/bracelet/ui/cK;-><init>(Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;Lcom/xiaomi/hm/bleservice/a;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
 .end method
 
-.method public a(Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;)V
+.method protected a(Z)V
     .locals 3
 
-    if-nez p1, :cond_1
+    const/16 v2, 0x8
 
-    const-string v0, "SearchWeightScaleActivity"
+    const/4 v1, 0x0
 
-    const-string v1, "weight Data is null!"
+    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->x:Z
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->x:Z
 
-    :cond_0
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->o:Landroid/view/View;
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->m:Landroid/view/View;
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
     :goto_0
     return-void
 
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->o:Landroid/view/View;
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->m:Landroid/view/View;
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+
+    goto :goto_0
+.end method
+
+.method public b()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public b(Lcom/xiaomi/hm/bleservice/a;)V
+    .locals 4
+
+    if-eqz p1, :cond_0
+
+    iget-object v0, p1, Lcom/xiaomi/hm/bleservice/a;->n:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p1, Lcom/xiaomi/hm/bleservice/a;->a:Landroid/bluetooth/BluetoothDevice;
+
+    if-nez v0, :cond_2
+
+    :cond_0
+    const-string v0, "SearchWeightScaleActivity"
+
+    const-string v1, "weight Data is null or device is null!"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+
     :cond_1
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->B:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    :goto_0
+    return-void
+
+    :cond_2
+    iget-object v0, p1, Lcom/xiaomi/hm/bleservice/a;->n:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->B:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
 
     const-string v0, "SearchWeightScaleActivity"
 
@@ -1199,22 +1238,6 @@
 
     move-result-object v1
 
-    const-string v2, ", addr="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->y:Landroid/bluetooth/BluetoothDevice;
-
-    invoke-virtual {v2}, Landroid/bluetooth/BluetoothDevice;->getAddress()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -1261,7 +1284,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->B:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
 
@@ -1269,65 +1292,147 @@
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
+
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->g()V
+
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->F:Z
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p1, Lcom/xiaomi/hm/bleservice/a;->a:Landroid/bluetooth/BluetoothDevice;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->y:Landroid/bluetooth/BluetoothDevice;
+
+    const-string v0, "SearchWeightScaleActivity"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "device addr="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->y:Landroid/bluetooth/BluetoothDevice;
+
+    invoke-virtual {v2}, Landroid/bluetooth/BluetoothDevice;->getAddress()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->B:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->C:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->g()V
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    const-string v1, "KEY_WEIGHT_VALUE"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->B:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+
+    invoke-virtual {v3}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getValue()F
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ""
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "SearchWeightScaleActivity"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "found weight = "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->B:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+
+    invoke-virtual {v3}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->getValue()F
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-class v1, Lcn/com/smartdevices/bracelet/ui/ax;
+
+    invoke-static {p0, v1, v0}, Lcn/com/smartdevices/bracelet/ui/W;->a(Landroid/app/Activity;Ljava/lang/Class;Landroid/os/Bundle;)V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->F:Z
+
+    goto/16 :goto_0
+.end method
+
+.method public b(Z)V
+    .locals 1
+
+    if-eqz p1, :cond_0
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->y:Landroid/bluetooth/BluetoothDevice;
 
     invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->a(Landroid/bluetooth/BluetoothDevice;)V
 
-    goto/16 :goto_0
-.end method
-
-.method protected a(Z)V
-    .locals 3
-
-    const/16 v2, 0x8
-
-    const/4 v1, 0x0
-
-    iput-boolean p1, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->x:Z
-
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->x:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->o:Landroid/view/View;
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->m:Landroid/view/View;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
     :goto_0
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->F:Z
+
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->o:Landroid/view/View;
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->m:Landroid/view/View;
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->f()V
 
     goto :goto_0
 .end method
 
-.method public b()V
-    .locals 0
-
-    return-void
-.end method
-
 .method protected onActivityResult(IILandroid/content/Intent;)V
-    .locals 3
+    .locals 4
+
+    const/4 v3, 0x3
 
     const-string v0, "SearchWeightScaleActivity"
 
@@ -1374,6 +1479,16 @@
     return-void
 
     :pswitch_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->u:Landroid/os/Handler;
+
+    invoke-virtual {v0, v3}, Landroid/os/Handler;->removeMessages(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->u:Landroid/os/Handler;
+
+    const-wide/32 v1, 0xea60
+
+    invoke-virtual {v0, v3, v1, v2}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
+
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->f()V
 
     goto :goto_0
@@ -1431,20 +1546,22 @@
     goto :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x7f07011b
+    .packed-switch 0x7f07012f
         :pswitch_0
         :pswitch_1
     .end packed-switch
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
-    .locals 3
+    .locals 4
+
+    const/4 v3, 0x3
 
     const/4 v2, 0x0
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f03002d
+    const v0, 0x7f03002e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->setContentView(I)V
 
@@ -1518,6 +1635,16 @@
     move-result v0
 
     if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->u:Landroid/os/Handler;
+
+    invoke-virtual {v0, v3}, Landroid/os/Handler;->removeMessages(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->u:Landroid/os/Handler;
+
+    const-wide/32 v1, 0xea60
+
+    invoke-virtual {v0, v3, v1, v2}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->f()V
 

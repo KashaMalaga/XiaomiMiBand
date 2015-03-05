@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lkankan/wheel/widget/e;
+.implements Lcn/com/smartdevices/bracelet/weight/family/h;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/weight/family/i;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/weight/family/WeightChooseUserActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/weight/family/i;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/weight/family/WeightChooseUserActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/weight/family/j;->a:Lcn/com/smartdevices/bracelet/weight/family/i;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/weight/family/j;->a:Lcn/com/smartdevices/bracelet/weight/family/WeightChooseUserActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,203 +22,46 @@
 
 
 # virtual methods
-.method public a(Lkankan/wheel/widget/WheelView;)V
+.method public a(Lcn/com/smartdevices/bracelet/weight/UserInfo;)V
     .locals 3
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/family/i;->f()Ljava/lang/String;
+    new-instance v0, Landroid/content/Intent;
 
-    move-result-object v0
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/j;->a:Lcn/com/smartdevices/bracelet/weight/family/WeightChooseUserActivity;
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "onScrollingStarted "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/weight/family/WeightChooseUserActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lkankan/wheel/widget/WheelView;->f()I
+    const-class v2, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetNameActivity;
 
-    move-result v2
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public b(Lkankan/wheel/widget/WheelView;)V
-    .locals 14
-
-    const/4 v11, 0x7
+    const-string v1, "weight_choose_user"
 
     const/4 v2, 0x1
 
-    const/4 v8, 0x0
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/family/i;->f()Ljava/lang/String;
+    const-string v1, "WEIGHTADVDATA_KEY"
 
-    move-result-object v0
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/weight/family/j;->a:Lcn/com/smartdevices/bracelet/weight/family/WeightChooseUserActivity;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/weight/family/WeightChooseUserActivity;->a(Lcn/com/smartdevices/bracelet/weight/family/WeightChooseUserActivity;)Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    move-result-object v2
 
-    const-string v3, "onScrollingFinished "
+    invoke-virtual {v2}, Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;->toJsonString()Ljava/lang/String;
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v2
 
-    move-result-object v1
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    invoke-virtual {p1}, Lkankan/wheel/widget/WheelView;->f()I
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/j;->a:Lcn/com/smartdevices/bracelet/weight/family/WeightChooseUserActivity;
 
-    move-result v3
+    const/16 v2, 0x111
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0, v2}, Lcn/com/smartdevices/bracelet/weight/family/WeightChooseUserActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v0, 0x64
-
-    invoke-virtual {p1}, Lkankan/wheel/widget/WheelView;->f()I
-
-    move-result v1
-
-    if-ne v0, v1, :cond_1
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/family/i;->f()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, " should refresh month"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cs;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/j;->a:Lcn/com/smartdevices/bracelet/weight/family/i;
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/weight/family/i;->getActivity()Landroid/app/Activity;
-
-    move-result-object v1
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/family/j;->a:Lcn/com/smartdevices/bracelet/weight/family/i;
-
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/weight/family/i;->a(Lcn/com/smartdevices/bracelet/weight/family/i;)I
-
-    move-result v3
-
-    add-int/lit8 v3, v3, 0x1
-
-    iget-object v4, p0, Lcn/com/smartdevices/bracelet/weight/family/j;->a:Lcn/com/smartdevices/bracelet/weight/family/i;
-
-    invoke-static {v4}, Lcn/com/smartdevices/bracelet/weight/family/i;->b(Lcn/com/smartdevices/bracelet/weight/family/i;)Lkankan/wheel/widget/WheelView;
-
-    move-result-object v4
-
-    iget-object v5, p0, Lcn/com/smartdevices/bracelet/weight/family/j;->a:Lcn/com/smartdevices/bracelet/weight/family/i;
-
-    invoke-virtual {v5}, Lcn/com/smartdevices/bracelet/weight/family/i;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    const v6, 0x7f09000c
-
-    invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v5
-
-    iget-object v6, p0, Lcn/com/smartdevices/bracelet/weight/family/j;->a:Lcn/com/smartdevices/bracelet/weight/family/i;
-
-    invoke-virtual {v6}, Lcn/com/smartdevices/bracelet/weight/family/i;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v6
-
-    const v7, 0x7f090011
-
-    invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v6
-
-    const v7, -0x77666667
-
-    const/16 v9, 0x2e
-
-    const/16 v10, 0x8
-
-    move v12, v11
-
-    move v13, v2
-
-    invoke-direct/range {v0 .. v13}, Lcn/com/smartdevices/bracelet/ui/cs;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/j;->a:Lcn/com/smartdevices/bracelet/weight/family/i;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/weight/family/i;->b(Lcn/com/smartdevices/bracelet/weight/family/i;)Lkankan/wheel/widget/WheelView;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/weight/family/j;->a:Lcn/com/smartdevices/bracelet/weight/family/i;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/weight/family/i;->a(Lcn/com/smartdevices/bracelet/weight/family/i;)I
-
-    move-result v2
-
-    add-int/lit8 v2, v2, 0x1
-
-    if-gez v2, :cond_0
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/weight/family/j;->a:Lcn/com/smartdevices/bracelet/weight/family/i;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/weight/family/i;->a(Lcn/com/smartdevices/bracelet/weight/family/i;)I
-
-    move-result v2
-
-    add-int/lit8 v8, v2, 0x1
-
-    :cond_0
-    invoke-virtual {v1, v8}, Lkankan/wheel/widget/WheelView;->c(I)Lkankan/wheel/widget/WheelView;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/j;->a:Lcn/com/smartdevices/bracelet/weight/family/i;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/weight/family/i;->b(Lcn/com/smartdevices/bracelet/weight/family/i;)Lkankan/wheel/widget/WheelView;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/a/f;)Lkankan/wheel/widget/WheelView;
-
-    :goto_0
     return-void
-
-    :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/j;->a:Lcn/com/smartdevices/bracelet/weight/family/i;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/weight/family/i;->b(Lcn/com/smartdevices/bracelet/weight/family/i;)Lkankan/wheel/widget/WheelView;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/j;->a:Lcn/com/smartdevices/bracelet/weight/family/i;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/weight/family/i;->c(Lcn/com/smartdevices/bracelet/weight/family/i;)Lcn/com/smartdevices/bracelet/ui/cs;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/a/f;)Lkankan/wheel/widget/WheelView;
-
-    goto :goto_0
 .end method

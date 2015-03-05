@@ -26,23 +26,23 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/c;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
 
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->h(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)Landroid/widget/TextView;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/c;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->i(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)Landroid/widget/TextView;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/c;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
+
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->j(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)Landroid/widget/TextView;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/c;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->k(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)Landroid/widget/TextView;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/c;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->l(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)Landroid/widget/TextView;
 
     move-result-object v0
 
@@ -69,7 +69,7 @@
 
     iget-object v6, p0, Lcn/com/smartdevices/bracelet/gps/ui/c;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
 
-    invoke-static {v6}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->j(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)Landroid/widget/TextView;
+    invoke-static {v6}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->h(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)Landroid/widget/TextView;
 
     move-result-object v6
 
@@ -81,7 +81,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/c;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->k(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)Landroid/widget/TextView;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->i(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)Landroid/widget/TextView;
 
     move-result-object v0
 
@@ -93,7 +93,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/c;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->l(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)Landroid/widget/TextView;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->j(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)Landroid/widget/TextView;
 
     move-result-object v0
 

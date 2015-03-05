@@ -47,8 +47,6 @@
 
 .field public static final MAC_ADDRESS_FILTER:Ljava/lang/String; = "88:0F:10"
 
-.field public static final MESSAGE_CHECK_SYNC_DATA:I = 0x11
-
 .field public static final MESSAGE_DEVICE_BT_OFF:I = 0xa
 
 .field public static final MESSAGE_DEVICE_BT_ON:I = 0x8
@@ -107,13 +105,9 @@
 
 .field private final mNotificationId:I
 
-.field private mSyncBlockCount:I
-
 .field private mSyncDataStatus:Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;
 
 .field private final mSyncRetryTimes:Lcom/xiaomi/hm/bleservice/t;
-
-.field private final mSyncServerCount:I
 
 .field private final mWeightNotificationId:I
 
@@ -582,10 +576,6 @@
 
     iput-boolean v2, p0, Lcom/xiaomi/hm/bleservice/BLEService;->isSyncDataRunning:Z
 
-    const/16 v0, 0xc
-
-    iput v0, p0, Lcom/xiaomi/hm/bleservice/BLEService;->mSyncBlockCount:I
-
     iput-object v1, p0, Lcom/xiaomi/hm/bleservice/BLEService;->m_LeScanCallback:Landroid/bluetooth/BluetoothAdapter$LeScanCallback;
 
     iput-object v1, p0, Lcom/xiaomi/hm/bleservice/BLEService;->m_StopScanRunnable:Ljava/lang/Runnable;
@@ -607,8 +597,6 @@
     invoke-direct {v0}, Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;-><init>()V
 
     iput-object v0, p0, Lcom/xiaomi/hm/bleservice/BLEService;->mSyncDataStatus:Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;
-
-    iput v2, p0, Lcom/xiaomi/hm/bleservice/BLEService;->mSyncServerCount:I
 
     iput-boolean v2, p0, Lcom/xiaomi/hm/bleservice/BLEService;->mIsDisableBluetooth:Z
 
@@ -731,15 +719,7 @@
     return p1
 .end method
 
-.method static synthetic access$1402(Lcom/xiaomi/hm/bleservice/BLEService;I)I
-    .locals 0
-
-    iput p1, p0, Lcom/xiaomi/hm/bleservice/BLEService;->mSyncBlockCount:I
-
-    return p1
-.end method
-
-.method static synthetic access$1500(Lcom/xiaomi/hm/bleservice/BLEService;IIZ)V
+.method static synthetic access$1400(Lcom/xiaomi/hm/bleservice/BLEService;IIZ)V
     .locals 0
 
     invoke-direct {p0, p1, p2, p3}, Lcom/xiaomi/hm/bleservice/BLEService;->notifySyncDataStatusChanged(IIZ)V
@@ -747,7 +727,7 @@
     return-void
 .end method
 
-.method static synthetic access$1600(Lcom/xiaomi/hm/bleservice/BLEService;)V
+.method static synthetic access$1500(Lcom/xiaomi/hm/bleservice/BLEService;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/xiaomi/hm/bleservice/BLEService;->syncToServerNew()V
@@ -755,7 +735,7 @@
     return-void
 .end method
 
-.method static synthetic access$1700(Lcom/xiaomi/hm/bleservice/BLEService;)V
+.method static synthetic access$1600(Lcom/xiaomi/hm/bleservice/BLEService;)V
     .locals 0
 
     invoke-direct {p0}, Lcom/xiaomi/hm/bleservice/BLEService;->syncToQQHealth()V
@@ -763,7 +743,7 @@
     return-void
 .end method
 
-.method static synthetic access$1810(Lcom/xiaomi/hm/bleservice/BLEService;)I
+.method static synthetic access$1710(Lcom/xiaomi/hm/bleservice/BLEService;)I
     .locals 2
 
     iget v0, p0, Lcom/xiaomi/hm/bleservice/BLEService;->mNoDataSyncCount:I
@@ -775,7 +755,7 @@
     return v0
 .end method
 
-.method static synthetic access$1900(Lcom/xiaomi/hm/bleservice/BLEService;)Lcom/xiaomi/hm/bleservice/t;
+.method static synthetic access$1800(Lcom/xiaomi/hm/bleservice/BLEService;)Lcom/xiaomi/hm/bleservice/t;
     .locals 1
 
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/BLEService;->mSyncRetryTimes:Lcom/xiaomi/hm/bleservice/t;
@@ -783,18 +763,18 @@
     return-object v0
 .end method
 
-.method static synthetic access$200(Lcom/xiaomi/hm/bleservice/BLEService;II)V
+.method static synthetic access$1900(Lcom/xiaomi/hm/bleservice/BLEService;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lcom/xiaomi/hm/bleservice/BLEService;->onDeviceBatteryStatusChanged(II)V
+    invoke-direct {p0, p1}, Lcom/xiaomi/hm/bleservice/BLEService;->handleSyncDataToServerFailed(I)V
 
     return-void
 .end method
 
-.method static synthetic access$2000(Lcom/xiaomi/hm/bleservice/BLEService;I)V
+.method static synthetic access$200(Lcom/xiaomi/hm/bleservice/BLEService;II)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/xiaomi/hm/bleservice/BLEService;->handleSyncDataToServerFailed(I)V
+    invoke-direct {p0, p1, p2}, Lcom/xiaomi/hm/bleservice/BLEService;->onDeviceBatteryStatusChanged(II)V
 
     return-void
 .end method
@@ -1254,33 +1234,28 @@
     goto :goto_0
 
     :pswitch_3
-    invoke-virtual {p0}, Lcom/xiaomi/hm/bleservice/BLEService;->checkSyncData()V
-
-    goto :goto_0
-
-    :pswitch_4
     invoke-direct {p0}, Lcom/xiaomi/hm/bleservice/BLEService;->syncWeightData()V
 
     goto :goto_0
 
-    :pswitch_5
+    :pswitch_4
     invoke-virtual {p0}, Lcom/xiaomi/hm/bleservice/BLEService;->disconnectWeight()V
 
     goto :goto_0
 
-    :pswitch_6
+    :pswitch_5
     invoke-direct {p0}, Lcom/xiaomi/hm/bleservice/BLEService;->syncToServerNew()V
 
     goto :goto_0
 
-    :pswitch_7
+    :pswitch_6
     invoke-virtual {p0}, Lcom/xiaomi/hm/bleservice/BLEService;->disconnectMili()V
 
     invoke-virtual {p0}, Lcom/xiaomi/hm/bleservice/BLEService;->enableBluetooth()V
 
     goto :goto_0
 
-    :pswitch_8
+    :pswitch_7
     invoke-direct {p0}, Lcom/xiaomi/hm/bleservice/BLEService;->initBluetoothState()V
 
     invoke-virtual {p0}, Lcom/xiaomi/hm/bleservice/BLEService;->connectDevice()V
@@ -1296,19 +1271,19 @@
         :pswitch_0
         :pswitch_0
         :pswitch_0
-        :pswitch_8
-        :pswitch_1
         :pswitch_7
+        :pswitch_1
+        :pswitch_6
         :pswitch_1
         :pswitch_2
         :pswitch_0
         :pswitch_1
         :pswitch_1
         :pswitch_1
-        :pswitch_3
-        :pswitch_6
-        :pswitch_4
+        :pswitch_0
         :pswitch_5
+        :pswitch_3
+        :pswitch_4
     .end packed-switch
 .end method
 
@@ -1563,7 +1538,7 @@
     return v0
 
     :pswitch_1
-    const v0, 0x7f08020d
+    const v0, 0x7f08020e
 
     invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
 
@@ -1592,7 +1567,7 @@
 
     check-cast v0, Landroid/app/NotificationManager;
 
-    const v4, 0x7f08020c
+    const v4, 0x7f08020d
 
     invoke-virtual {p0, v4}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
 
@@ -1647,19 +1622,6 @@
     goto :goto_0
 
     :pswitch_2
-    const v1, 0x7f08020e
-
-    invoke-virtual {p0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    move-object v2, v1
-
-    move-object v1, v0
-
-    goto :goto_1
-
-    :pswitch_3
     const v1, 0x7f08020f
 
     invoke-virtual {p0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
@@ -1672,22 +1634,12 @@
 
     goto :goto_1
 
-    :pswitch_4
-    const v0, 0x7f080210
+    :pswitch_3
+    const v1, 0x7f080210
 
-    invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
 
     move-result-object v1
-
-    new-instance v0, Landroid/content/Intent;
-
-    const-string v4, "ACTION_OPEN_ALARM_PAGE"
-
-    invoke-direct {v0, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p0, v2, v0, v5}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
-
-    move-result-object v0
 
     move-object v2, v1
 
@@ -1695,7 +1647,7 @@
 
     goto :goto_1
 
-    :pswitch_5
+    :pswitch_4
     const v0, 0x7f080211
 
     invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
@@ -1718,20 +1670,30 @@
 
     goto :goto_1
 
-    :pswitch_6
-    const v1, 0x7f080212
+    :pswitch_5
+    const v0, 0x7f080212
 
-    invoke-virtual {p0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
 
     move-result-object v1
+
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v4, "ACTION_OPEN_ALARM_PAGE"
+
+    invoke-direct {v0, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p0, v2, v0, v5}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+
+    move-result-object v0
 
     move-object v2, v1
 
     move-object v1, v0
 
-    goto/16 :goto_1
+    goto :goto_1
 
-    :pswitch_7
+    :pswitch_6
     const v1, 0x7f080213
 
     invoke-virtual {p0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
@@ -1744,7 +1706,7 @@
 
     goto/16 :goto_1
 
-    :pswitch_8
+    :pswitch_7
     const v1, 0x7f080214
 
     invoke-virtual {p0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
@@ -1757,7 +1719,7 @@
 
     goto/16 :goto_1
 
-    :pswitch_9
+    :pswitch_8
     const v1, 0x7f080215
 
     invoke-virtual {p0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
@@ -1770,8 +1732,21 @@
 
     goto/16 :goto_1
 
-    :pswitch_a
+    :pswitch_9
     const v1, 0x7f080216
+
+    invoke-virtual {p0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    move-object v2, v1
+
+    move-object v1, v0
+
+    goto/16 :goto_1
+
+    :pswitch_a
+    const v1, 0x7f080217
 
     invoke-virtual {p0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
 
@@ -3215,13 +3190,13 @@
 
     check-cast v0, Landroid/app/NotificationManager;
 
-    const v1, 0x7f0802aa
+    const v1, 0x7f0802b1
 
     invoke-virtual {p0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    const v2, 0x7f0802ab
+    const v2, 0x7f0802b2
 
     invoke-virtual {p0, v2}, Lcom/xiaomi/hm/bleservice/BLEService;->getString(I)Ljava/lang/String;
 

@@ -108,7 +108,7 @@
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f080147
+    const v0, 0x7f080148
 
     invoke-virtual {p1, v0}, Landroid/widget/Button;->setText(I)V
 
@@ -163,7 +163,7 @@
     goto :goto_0
 
     :cond_1
-    const v0, 0x7f08013d
+    const v0, 0x7f08013e
 
     invoke-virtual {p1, v0}, Landroid/widget/Button;->setText(I)V
 
@@ -493,7 +493,7 @@
 
     const-string v2, "Msg"
 
-    const v3, 0x7f0802b4
+    const v3, 0x7f0802be
 
     invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/ui/BindQQHealthActivity;->getString(I)Ljava/lang/String;
 

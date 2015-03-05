@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/az;->a:Lcn/com/smartdevices/bracelet/ui/FwLowBatteryActivity;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/FwLowBatteryActivity;->finish()V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/FwLowBatteryActivity;->a(Lcn/com/smartdevices/bracelet/ui/FwLowBatteryActivity;)V
 
     return-void
 .end method

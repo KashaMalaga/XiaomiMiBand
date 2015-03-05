@@ -85,7 +85,15 @@
 
     move-result-wide v1
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/j/i;->a(J)Ljava/util/LinkedList;
+    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/util/Calendar;->getTimeInMillis()J
+
+    move-result-wide v3
+
+    invoke-virtual {v0, v1, v2, v3, v4}, Lcn/com/smartdevices/bracelet/j/i;->a(JJ)Ljava/util/LinkedList;
 
     move-result-object v0
 

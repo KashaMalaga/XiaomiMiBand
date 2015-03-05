@@ -151,7 +151,7 @@
 .method protected a()I
     .locals 1
 
-    const v0, 0x7f030090
+    const v0, 0x7f030094
 
     return v0
 .end method
@@ -203,7 +203,7 @@
 
     iput v0, p0, Lcn/com/smartdevices/bracelet/weight/g;->k:I
 
-    const v0, 0x7f07029f
+    const v0, 0x7f0702bd
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -213,7 +213,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/g;->f:Landroid/widget/ListView;
 
-    const v0, 0x7f07029e
+    const v0, 0x7f0702bc
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

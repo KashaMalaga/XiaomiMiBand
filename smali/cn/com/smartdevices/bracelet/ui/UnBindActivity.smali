@@ -29,7 +29,7 @@
 
     const/4 v3, 0x0
 
-    const v0, 0x7f080167
+    const v0, 0x7f080168
 
     invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/E;->a(Landroid/app/Activity;I)V
 
@@ -82,9 +82,9 @@
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/em;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/ep;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/em;-><init>(Lcn/com/smartdevices/bracelet/ui/UnBindActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/ep;-><init>(Lcn/com/smartdevices/bracelet/ui/UnBindActivity;)V
 
     const-wide/16 v2, 0xbb8
 
@@ -142,7 +142,7 @@
     nop
 
     :pswitch_data_0
-    .packed-switch 0x7f0701a5
+    .packed-switch 0x7f0701bf
         :pswitch_1
         :pswitch_0
         :pswitch_2
@@ -150,15 +150,13 @@
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
-    .locals 5
-
-    const/16 v4, 0x8
+    .locals 4
 
     const/4 v3, 0x4
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030069
+    const v0, 0x7f03006b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnBindActivity;->setContentView(I)V
 
@@ -177,7 +175,7 @@
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/UnBindActivity;->a:Ljava/lang/String;
 
     :cond_0
-    const v0, 0x7f0701a5
+    const v0, 0x7f0701bf
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnBindActivity;->findViewById(I)Landroid/view/View;
 
@@ -185,7 +183,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0701a7
+    const v0, 0x7f0701c1
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnBindActivity;->findViewById(I)Landroid/view/View;
 
@@ -193,7 +191,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070208
+    const v0, 0x7f070223
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnBindActivity;->findViewById(I)Landroid/view/View;
 
@@ -213,7 +211,7 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
-    const v0, 0x7f070205
+    const v0, 0x7f070220
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnBindActivity;->findViewById(I)Landroid/view/View;
 
@@ -225,23 +223,19 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    const v0, 0x7f070207
+    const v0, 0x7f070222
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnBindActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
+    check-cast v0, Landroid/widget/TextView;
 
-    const v0, 0x7f070206
+    const v1, 0x7f0800af
 
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnBindActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    move-result-object v0
-
-    invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
-
-    const v0, 0x7f070204
+    const v0, 0x7f07021f
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/UnBindActivity;->findViewById(I)Landroid/view/View;
 
@@ -249,7 +243,7 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    const v1, 0x7f020169
+    const v1, 0x7f020173
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 

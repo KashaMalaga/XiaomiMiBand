@@ -550,7 +550,7 @@
     return-void
 
     :cond_7
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->ae()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->ad()Z
 
     move-result v0
 
@@ -558,10 +558,10 @@
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/c/a;->a()V
 
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/z;->k(Z)V
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/z;->j(Z)V
 
     :cond_8
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->ad()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->ac()Z
 
     move-result v0
 
@@ -593,7 +593,7 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/c/a;->a(J)V
 
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/z;->j(Z)V
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/z;->i(Z)V
 
     goto :goto_0
 

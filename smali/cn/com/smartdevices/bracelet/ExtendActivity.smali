@@ -168,7 +168,7 @@
     if-nez v1, :cond_0
 
     .line 31
-    const-string v1, "\u00a1Acceso a notificaciones no activado!"
+    const-string v1, "No Activada Notificacion del Sistema"
 
     const/4 v2, 0x0
 

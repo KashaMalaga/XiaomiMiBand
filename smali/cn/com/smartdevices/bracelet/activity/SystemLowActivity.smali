@@ -48,7 +48,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f0300b3
+    const v0, 0x7f0300b7
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/SystemLowActivity;->setContentView(I)V
 

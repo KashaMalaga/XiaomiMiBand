@@ -96,7 +96,7 @@
 .method public static c()Z
     .locals 1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->aj()Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->ai()Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;
 
     move-result-object v0
 

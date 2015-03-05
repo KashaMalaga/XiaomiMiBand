@@ -72,7 +72,7 @@
     move-result v1
 
     # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->handleSyncDataToServerFailed(I)V
-    invoke-static {v0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->access$2000(Lcom/xiaomi/hm/bleservice/BLEService;I)V
+    invoke-static {v0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->access$1900(Lcom/xiaomi/hm/bleservice/BLEService;I)V
 
     return-void
 .end method
@@ -144,7 +144,7 @@
     iget-object v0, p0, Lcom/xiaomi/hm/bleservice/j;->d:Lcom/xiaomi/hm/bleservice/BLEService;
 
     # getter for: Lcom/xiaomi/hm/bleservice/BLEService;->mSyncRetryTimes:Lcom/xiaomi/hm/bleservice/t;
-    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->access$1900(Lcom/xiaomi/hm/bleservice/BLEService;)Lcom/xiaomi/hm/bleservice/t;
+    invoke-static {v0}, Lcom/xiaomi/hm/bleservice/BLEService;->access$1800(Lcom/xiaomi/hm/bleservice/BLEService;)Lcom/xiaomi/hm/bleservice/t;
 
     move-result-object v0
 
@@ -187,7 +187,7 @@
     move-result v1
 
     # invokes: Lcom/xiaomi/hm/bleservice/BLEService;->handleSyncDataToServerFailed(I)V
-    invoke-static {v0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->access$2000(Lcom/xiaomi/hm/bleservice/BLEService;I)V
+    invoke-static {v0, v1}, Lcom/xiaomi/hm/bleservice/BLEService;->access$1900(Lcom/xiaomi/hm/bleservice/BLEService;I)V
 
     goto :goto_0
 .end method

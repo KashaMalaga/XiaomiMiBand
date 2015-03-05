@@ -29,21 +29,59 @@
 .end method
 
 .method public b(Landroid/app/DialogFragment;)V
-    .locals 2
+    .locals 3
+
+    const/4 v2, 0x0
 
     invoke-virtual {p1}, Landroid/app/DialogFragment;->dismiss()V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/f;->a:Lcn/com/smartdevices/bracelet/weight/family/e;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/weight/family/e;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/E;->m(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     new-instance v0, Lcn/com/smartdevices/bracelet/weight/family/g;
 
     invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/weight/family/g;-><init>(Lcn/com/smartdevices/bracelet/weight/family/f;)V
 
-    const/4 v1, 0x0
-
-    new-array v1, v1, [Ljava/lang/Void;
+    new-array v1, v2, [Ljava/lang/Void;
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/weight/family/g;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
+    :goto_0
     return-void
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/f;->a:Lcn/com/smartdevices/bracelet/weight/family/e;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/weight/family/e;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    const-string v1, "\u8bf7\u8054\u7f51\u64cd\u4f5c"
+
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    goto :goto_0
 .end method
 
 .method public c(Landroid/app/DialogFragment;)V

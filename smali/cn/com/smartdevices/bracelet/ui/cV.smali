@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/SettingActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/cP;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/SettingActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/cP;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cV;->a:Lcn/com/smartdevices/bracelet/ui/SettingActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cV;->a:Lcn/com/smartdevices/bracelet/ui/cP;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,20 +22,24 @@
 
 
 # virtual methods
-.method public onClick(Landroid/view/View;)V
-    .locals 3
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cV;->a:Lcn/com/smartdevices/bracelet/ui/SettingActivity;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cV;->a:Lcn/com/smartdevices/bracelet/ui/cP;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/SettingActivity;->d(Lcn/com/smartdevices/bracelet/ui/SettingActivity;)Landroid/support/v4/view/ViewPager;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cV;->a:Lcn/com/smartdevices/bracelet/ui/cP;
 
-    move-result-object v0
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/cP;->c(Lcn/com/smartdevices/bracelet/ui/cP;)Landroid/content/Context;
 
-    const/4 v1, 0x0
+    move-result-object v1
 
-    const/4 v2, 0x1
+    invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    invoke-virtual {v0, v1, v2}, Landroid/support/v4/view/ViewPager;->a(IZ)V
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/cP;->a(Lcn/com/smartdevices/bracelet/ui/cP;Landroid/content/Context;)V
+
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
     return-void
 .end method

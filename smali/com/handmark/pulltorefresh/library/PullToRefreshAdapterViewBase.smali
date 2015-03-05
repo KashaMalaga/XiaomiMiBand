@@ -114,7 +114,7 @@
 
     const/4 v7, 0x0
 
-    const v6, 0x7f0a00d9
+    const v6, 0x7f0a00da
 
     const/4 v5, -0x2
 

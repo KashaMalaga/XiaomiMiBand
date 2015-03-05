@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/P;
+.implements Lcn/com/smartdevices/bracelet/S;
 
 
 # instance fields
@@ -22,7 +22,7 @@
 
 
 # virtual methods
-.method public a(Lcn/com/smartdevices/bracelet/model/WeightGoalItem;)V
+.method public a(Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;)V
     .locals 4
 
     if-eqz p1, :cond_0
@@ -39,7 +39,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/model/WeightGoalItem;->toString()Ljava/lang/String;
+    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;->toString()Ljava/lang/String;
 
     move-result-object v2
 
@@ -57,9 +57,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p1}, Lcn/com/smartdevices/bracelet/model/WeightGoalItem;->getGoalVal()F
-
-    move-result v1
+    iget v1, p1, Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;->goal:F
 
     iput v1, v0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->targetWeight:F
 

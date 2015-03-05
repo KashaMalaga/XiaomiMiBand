@@ -115,7 +115,7 @@
     nop
 
     :pswitch_data_0
-    .packed-switch 0x7f070130
+    .packed-switch 0x7f070144
         :pswitch_0
     .end packed-switch
 .end method
@@ -139,7 +139,7 @@
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 2
 
-    const v0, 0x7f030064
+    const v0, 0x7f030066
 
     const/4 v1, 0x0
 
@@ -147,7 +147,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f070130
+    const v1, 0x7f070144
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

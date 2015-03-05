@@ -1,146 +1,130 @@
 .class Lcn/com/smartdevices/bracelet/gps/services/ag;
-.super Ljava/lang/Object;
+.super Lcn/com/smartdevices/bracelet/gps/services/a;
 
-# interfaces
-.implements Landroid/location/GpsStatus$Listener;
+
+# static fields
+.field private static final e:J = 0x7d0L
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/services/af;
+.field private d:Landroid/location/LocationListener;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/af;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Z)V
+    .locals 2
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/services/ag;->a:Lcn/com/smartdevices/bracelet/gps/services/af;
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/gps/services/a;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/ag;->d:Landroid/location/LocationListener;
+
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/services/ah;
+
+    invoke-direct {v0, p0, p2}, Lcn/com/smartdevices/bracelet/gps/services/ah;-><init>(Lcn/com/smartdevices/bracelet/gps/services/ag;Z)V
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/ag;->d:Landroid/location/LocationListener;
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/services/ag;->c()V
+
+    const-string v0, "GPS"
+
+    const-string v1, "SystemGpsLocationListener inited"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/services/s;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method private d()V
+    .locals 2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/ag;->d:Landroid/location/LocationListener;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/ag;->c:Landroid/location/LocationManager;
+
+    if-nez v0, :cond_1
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Listener and location manager is null"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/ag;->c:Landroid/location/LocationManager;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/ag;->d:Landroid/location/LocationListener;
+
+    invoke-virtual {v0, v1}, Landroid/location/LocationManager;->removeUpdates(Landroid/location/LocationListener;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/ag;->c:Landroid/location/LocationManager;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/ag;->a:Lcn/com/smartdevices/bracelet/gps/services/c;
+
+    invoke-virtual {v0, v1}, Landroid/location/LocationManager;->removeGpsStatusListener(Landroid/location/GpsStatus$Listener;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onGpsStatusChanged(I)V
-    .locals 3
+.method public a()V
+    .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/ag;->a:Lcn/com/smartdevices/bracelet/gps/services/af;
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/services/ag;->d()V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/af;->a(Lcn/com/smartdevices/bracelet/gps/services/af;)Landroid/location/LocationManager;
+    const/4 v0, 0x0
 
-    move-result-object v0
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/ag;->d:Landroid/location/LocationListener;
 
-    if-nez v0, :cond_0
-
-    :goto_0
     return-void
+.end method
+
+.method c()V
+    .locals 6
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/ag;->d:Landroid/location/LocationListener;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/ag;->c:Landroid/location/LocationManager;
+
+    if-nez v0, :cond_1
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/ag;->a:Lcn/com/smartdevices/bracelet/gps/services/af;
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/af;->b(Lcn/com/smartdevices/bracelet/gps/services/af;)I
+    const-string v1, "Listener and location manager is null"
 
-    move-result v0
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/ag;->a:Lcn/com/smartdevices/bracelet/gps/services/af;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/af;->b(Lcn/com/smartdevices/bracelet/gps/services/af;)I
-
-    move-result v0
-
-    rem-int/lit8 v0, v0, 0xf
-
-    if-nez v0, :cond_2
-
-    const/4 v0, 0x4
-
-    if-ne v0, p1, :cond_2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/ag;->a:Lcn/com/smartdevices/bracelet/gps/services/af;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/af;->a(Lcn/com/smartdevices/bracelet/gps/services/af;)Landroid/location/LocationManager;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/location/LocationManager;->getGpsStatus(Landroid/location/GpsStatus;)Landroid/location/GpsStatus;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/ag;->a:Lcn/com/smartdevices/bracelet/gps/services/af;
-
-    const/4 v2, 0x0
-
-    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/gps/services/af;->a(Lcn/com/smartdevices/bracelet/gps/services/af;I)I
-
-    invoke-virtual {v0}, Landroid/location/GpsStatus;->getSatellites()Ljava/lang/Iterable;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/ag;->a:Lcn/com/smartdevices/bracelet/gps/services/af;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/gps/services/af;->c(Lcn/com/smartdevices/bracelet/gps/services/af;)I
-
-    goto :goto_1
+    throw v0
 
     :cond_1
-    const-string v0, "GPS"
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/ag;->c:Landroid/location/LocationManager;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/ag;->d:Landroid/location/LocationListener;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v0, v1}, Landroid/location/LocationManager;->removeUpdates(Landroid/location/LocationListener;)V
 
-    const-string v2, "\n onGpsStatusChanged event = "
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/ag;->c:Landroid/location/LocationManager;
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v1, "gps"
 
-    move-result-object v1
+    const-wide/16 v2, 0x7d0
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const/high16 v4, 0x40a00000
 
-    move-result-object v1
+    iget-object v5, p0, Lcn/com/smartdevices/bracelet/gps/services/ag;->d:Landroid/location/LocationListener;
 
-    const-string v2, ",mSatellitesCnt= "
+    invoke-virtual/range {v0 .. v5}, Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String;JFLandroid/location/LocationListener;)V
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/services/ag;->a:Lcn/com/smartdevices/bracelet/gps/services/af;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/gps/services/af;->d(Lcn/com/smartdevices/bracelet/gps/services/af;)I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/ag;->a:Lcn/com/smartdevices/bracelet/gps/services/af;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/af;->e(Lcn/com/smartdevices/bracelet/gps/services/af;)I
-
-    goto :goto_0
+    return-void
 .end method

@@ -7,13 +7,13 @@
 
 .field final synthetic b:Lcn/com/smartdevices/bracelet/model/SyncResult;
 
-.field final synthetic c:Lcn/com/smartdevices/bracelet/weight/C;
+.field final synthetic c:Lcn/com/smartdevices/bracelet/weight/D;
 
 .field final synthetic d:Lcn/com/smartdevices/bracelet/weight/a;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/weight/a;Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/SyncResult;Lcn/com/smartdevices/bracelet/weight/C;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/weight/a;Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/SyncResult;Lcn/com/smartdevices/bracelet/weight/D;)V
     .locals 0
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/weight/c;->d:Lcn/com/smartdevices/bracelet/weight/a;
@@ -22,7 +22,7 @@
 
     iput-object p3, p0, Lcn/com/smartdevices/bracelet/weight/c;->b:Lcn/com/smartdevices/bracelet/model/SyncResult;
 
-    iput-object p4, p0, Lcn/com/smartdevices/bracelet/weight/c;->c:Lcn/com/smartdevices/bracelet/weight/C;
+    iput-object p4, p0, Lcn/com/smartdevices/bracelet/weight/c;->c:Lcn/com/smartdevices/bracelet/weight/D;
 
     invoke-direct {p0}, Lcom/d/a/a/h;-><init>()V
 
@@ -149,6 +149,14 @@
 
     if-nez v0, :cond_1
 
+    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/goal/a;->a()Lcn/com/smartdevices/bracelet/weight/goal/a;
+
+    move-result-object v0
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/weight/c;->a:Landroid/content/Context;
+
+    invoke-virtual {v0, v2, v1}, Lcn/com/smartdevices/bracelet/weight/goal/a;->a(Landroid/content/Context;Ljava/util/List;)V
+
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -193,13 +201,13 @@
 
     iput-boolean v4, v0, Lcn/com/smartdevices/bracelet/model/SyncResult;->result:Z
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/c;->c:Lcn/com/smartdevices/bracelet/weight/C;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/c;->c:Lcn/com/smartdevices/bracelet/weight/D;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/c;->c:Lcn/com/smartdevices/bracelet/weight/C;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/c;->c:Lcn/com/smartdevices/bracelet/weight/D;
 
-    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/weight/C;->a()V
+    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/weight/D;->a()V
 
     :cond_1
     :goto_1
@@ -224,13 +232,13 @@
 
     invoke-static {v4}, Lcn/com/smartdevices/bracelet/z;->d(Z)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/c;->c:Lcn/com/smartdevices/bracelet/weight/C;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/c;->c:Lcn/com/smartdevices/bracelet/weight/D;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/c;->c:Lcn/com/smartdevices/bracelet/weight/C;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/c;->c:Lcn/com/smartdevices/bracelet/weight/D;
 
-    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/weight/C;->a()V
+    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/weight/D;->a()V
 
     goto :goto_1
 .end method

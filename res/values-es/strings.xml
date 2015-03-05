@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Mi Fit</string>
+    <string name="tag_action_tips">Asegúrese que su Mi Fit está a menos de 5 metros del teléfono y no hay interferencias.</string>
+    <string name="tag_doing_label">%s Progreso …</string>
+    <string name="tag_connection">Conectado</string>
+    <string name="tag_waiting">Por favor еspere………</string>
+    <string name="tag_connection_f">Conexión fallida, Reintentar</string>
+    <string name="tag_connection_f1">Acerque su Mi Fit al teléfono.</string>
+    <string name="tag_error_notice">Pulsera y/o Teléfono desconectados acerque su Mi Fit al teléfono</string>
+    <string name="data_not_supported">--</string>
     <string name="picker_menu_done">Hecho</string>
     <string name="pull_to_refresh_pull_label">Arrastre para actualizar</string>
     <string name="pull_to_refresh_release_label">Suelte para actualizar</string>
@@ -65,6 +73,7 @@
     <string name="unit_min">min</string>
     <string name="unit_min_short">min</string>
     <string name="unit_sec_short">seg</string>
+    <string name="unit_mile">Milla</string>
     <string name="upgrade_tip">Notificación de actualizaciones</string>
     <string name="hot_des">Energía</string>
     <string name="noti_bracelet_low_battery_title">Batería baja</string>
@@ -75,7 +84,6 @@
     <string name="bt_operation_failed_tips">El Bluetooth no funciona correctamente, por favor inténtelo más tarde.</string>
     <string name="multi_devices_info">Lo siento, hay varias Mi Fit cerca. Aleje su Mi Fit y su teléfono al menos a 10 metros de distancia de otras Mi Fit, a continuación, busque de nuevo.</string>
     <string name="multi_devices_title">No se puede vincular.</string>
-    <string name="search_bracelet_again">Buscar de nuevo</string>
     <string name="search_devices_info">Por favor, coloque su Mi Fit cerca del teléfono.</string>
     <string name="search_bracelet_ok">¡Mi Fit encontrada!</string>
     <string name="found_bracelet_info">Cuando las luces de la Mi Fit empiezan a parpadear, golpee su pulsera varias veces para vincularla.</string>
@@ -94,7 +102,14 @@
     <string name="bracelet_login_info">Mi Cloud proporcionará sugerencias profesionales basadas ​​en sus actividades y el desempeño de su sueño.</string>
     <string name="male">Masculino</string>
     <string name="female">Femenino</string>
+    <string name="unit_metric">Sistema Métrico</string>
+    <string name="unit_british">Inglés</string>
+    <string name="unit_metric_detail">Métrico (m, km)</string>
+    <string name="unit_british_detail">Inglés (pies, millas)</string>
     <string name="cm">cm</string>
+    <string name="metre">m</string>
+    <string name="unit_inch">Pulgada</string>
+    <string name="unit_foot">Pie</string>
     <string name="share">Compartir</string>
     <string name="person_info_finished_info">Su Mi Fit se ha configurado con éxito.</string>
     <string name="kg">kg</string>
@@ -653,13 +668,14 @@ Modded ES KashaMalaga, Daneel_,Pecha2k"</string>
     <string name="weight_delete_confirm_msg">¿%s peso record?</string>
     <string name="weighting_failed">Peso Inestable No te peses hasta que el LED parpadee.</string>
     <string name="select_devices">Selecciona dispositivos</string>
-    <string name="select_devices_info">Seleccione dispositivos Mi para emparejar</string>
+    <string name="select_devices_info">Selecciona dispositivos para emparejar</string>
     <string name="weight_settings_merge_title">Fusionar informes de peso frecuentes</string>
     <string name="weight_settings_merge_tips">Dos pesos en menos de 30 segundos</string>
     <string name="not_fount_available_userinfo">No puedo seleccionar perfil</string>
     <string name="choose_userinfo_for_weight">Elige un perfil</string>
     <string name="visitor">Invitado</string>
     <string name="new_user">Nuevo perfil</string>
+    <string name="set_goal_weight_tips">Basado en tu información, tu peso normal es %1$s-%2$s%3$s.</string>
     <string name="set_weight_goal">Objetivo de peso</string>
     <string name="set_weight_goal_yes">Establecer objetivo de peso</string>
     <string name="set_weight_goal_no">No establecer</string>
@@ -692,6 +708,14 @@ ahorrados %2$s litros de gasolina"</string>
     <string name="weight_overload_confirm">Confirmar</string>
     <string name="noti_weight_low_battery_title">Batería baja</string>
     <string name="noti_weight_low_battery_content">Sincronice la hora después de cambiar la batería</string>
+    <string name="connect_to_retrive">No internet.</string>
+    <string name="week_total_distance_miles">"Distancia semanal 
+(miles)"</string>
+    <string name="found_weight_scale_title">Escala de peso encontrada</string>
+    <string name="confirm_pair">Emparejamiento</string>
+    <string name="signal_strong">Señal Fuerte</string>
+    <string name="signal_weak">Señal Débil</string>
+    <string name="signal_none">Sin Señal</string>
     <string name="lab_factory_title">Ajustes de Laboratorio</string>
     <string name="lab_factory_sport_type_situp">Abdominales</string>
     <string name="lab_factory_sport_type_ropeskipping">Saltar a la comba</string>
@@ -870,6 +894,8 @@ ahorrados %2$s litros de gasolina"</string>
     <string name="watermark_btn_confirm">OK</string>
     <string name="watermark_guide_tips">Mantega el movimiento</string>
     <string name="no_bracelet_tips">(Disponible sólo cuando se conecta a una Mi Fit)</string>
+    <string name="watermark_failed_to_create_contour_track">Fallo al crear ruta, Chequea espacio libre de almacenamiento.</string>
+    <string name="label_runner_group">Club de Correr</string>
     <string name="action_mark">Análisis de Comportamiento</string>
     <string name="action_sleep">Dormir</string>
     <string name="action_bath">Baño</string>
@@ -893,13 +919,6 @@ ahorrados %2$s litros de gasolina"</string>
     <string name="title_activity_tag_history">TagHistoryActivity</string>
     <string name="sport_running_helper_test">Probando el asistente</string>
     <string name="sport_coming_soon">Siga la actualidad!</string>
-    <string name="tag_action_tips">Asegúrese que su Mi Fit está a menos de 5 metros del teléfono y no hay interferencias.</string>
-    <string name="tag_doing_label">%s Progreso …</string>
-    <string name="tag_connection">Conectado</string>
-    <string name="tag_waiting">Por favor еspere………</string>
-    <string name="tag_connection_f">Conexión fallida, Reintentar</string>
-    <string name="tag_connection_f1">Acerque su Mi Fit al teléfono.</string>
-    <string name="tag_error_notice">Pulsera y/o Teléfono desconectados acerque su Mi Fit al teléfono</string>
     <string name="lab_factory_internal_test">Pruebas y análisis</string>
     <string name="debug_host_label">Añadir host de prueba:</string>
     <string name="host_can_not_be_empty">Host no puede estar vacío</string>
@@ -917,6 +936,7 @@ ahorrados %2$s litros de gasolina"</string>
     <string name="share_to_content_for_event">I enrolled in the \"National Day seven days, on line 4 thousand steps too millet phone\" activity, you are willing to stand by silently blessing or together to participate in it? ¡Venga y regístrese ahora!</string>
     <string name="weight_test_dynamic_detail">Peso：%1$s%2$s</string>
     <string name="lab_action_tag_agree">De acuerdo</string>
+    <string name="search_bracelet_again">Buscar de nuevo</string>
     <string name="kilogram">Kg</string>
     <string name="dynamic_pull_update_report">Actualizados %s registros</string>
     <string name="weight_test_dynamic_title">%1$s</string>

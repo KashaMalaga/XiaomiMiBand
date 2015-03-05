@@ -426,7 +426,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/lab/ui/G;->f:Lcn/com/smartdevices/bracelet/lab/ui/SportAnalyserActivity;
 
-    const v2, 0x7f0802f2
+    const v2, 0x7f0802ff
 
     new-array v3, v3, [Ljava/lang/Object;
 

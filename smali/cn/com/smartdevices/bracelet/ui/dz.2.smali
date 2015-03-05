@@ -1,647 +1,363 @@
 .class public Lcn/com/smartdevices/bracelet/ui/dz;
-.super Lcn/com/smartdevices/bracelet/ui/n;
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.super Ljava/lang/Object;
 
 
 # static fields
-.field public static final b:Ljava/lang/String; = "REF_MILI_NAME"
+.field private static final a:Ljava/lang/String; = "SettingPreferences"
 
-.field public static final c:J = 0x1f4L
+.field private static final b:Ljava/lang/String; = "SettingPreferences"
 
-.field private static final d:Ljava/lang/String; = "SettingWeightFragment"
-
-.field private static final e:I = 0x101
-
-
-# instance fields
-.field private f:Landroid/widget/TextView;
-
-.field private g:Landroid/widget/TextView;
-
-.field private h:Landroid/view/View;
-
-.field private i:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
-
-.field private j:Landroid/widget/Switch;
-
-.field private k:Lcn/com/smartdevices/bracelet/chart/LinePieChartView;
-
-.field private l:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$PanelSlideListener;
+.field private static c:Landroid/content/SharedPreferences;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method private constructor <init>()V
+    .locals 0
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/n;-><init>()V
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dz;->g:Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dz;->j:Landroid/widget/Switch;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dz;->k:Lcn/com/smartdevices/bracelet/chart/LinePieChartView;
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/dA;
-
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/dA;-><init>(Lcn/com/smartdevices/bracelet/ui/dz;)V
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dz;->l:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$PanelSlideListener;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method private a(F)V
-    .locals 1
+.method public static a(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/Object;
+    .locals 5
 
-    const/4 v0, 0x0
+    sget-object v0, Lcn/com/smartdevices/bracelet/ui/dz;->c:Landroid/content/SharedPreferences;
 
-    cmpg-float v0, p1, v0
+    if-nez v0, :cond_0
 
-    if-ltz v0, :cond_0
+    const-string v0, "SettingPreferences"
 
-    const/high16 v0, 0x3f800000
+    const/4 v1, 0x0
 
-    cmpl-float v0, p1, v0
+    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
-    if-lez v0, :cond_0
+    move-result-object v0
+
+    sput-object v0, Lcn/com/smartdevices/bracelet/ui/dz;->c:Landroid/content/SharedPreferences;
 
     :cond_0
-    return-void
+    const/4 v1, 0x0
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/ui/dz;->c:Landroid/content/SharedPreferences;
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->getAll()Ljava/util/Map;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/util/Map;->keySet()Ljava/util/Set;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :cond_1
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    invoke-interface {v2, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    :goto_0
+    if-nez v0, :cond_2
+
+    const-string v1, "SettingPreferences"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Not Found Value For : "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_2
+    const-string v1, "SettingPreferences"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Read : "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ","
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
+
+    :cond_3
+    move-object v0, v1
+
+    goto :goto_0
 .end method
 
-.method private a(Landroid/view/View;)V
-    .locals 2
+.method public static a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Object;)V
+    .locals 5
 
-    const/4 v1, 0x1
+    sget-object v1, Lcn/com/smartdevices/bracelet/ui/dz;->c:Landroid/content/SharedPreferences;
 
-    const v0, 0x7f07002f
+    if-nez v1, :cond_0
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    const-string v1, "SettingPreferences"
 
-    move-result-object v0
+    const/4 v2, 0x0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    invoke-virtual {p0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dz;->i:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    move-result-object v1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dz;->i:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    sput-object v1, Lcn/com/smartdevices/bracelet/ui/dz;->c:Landroid/content/SharedPreferences;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->setOverlayed(Z)V
+    :cond_0
+    const-string v1, "SettingPreferences"
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dz;->i:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->setEnableDragViewTouchEvents(Z)V
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dz;->i:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;
+    const-string v3, "Save : "
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/dz;->l:Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$PanelSlideListener;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout;->setPanelSlideListener(Lcn/com/smartdevices/bracelet/lua/SlidingUpPanelLayout$PanelSlideListener;)V
+    move-result-object v2
 
-    const v0, 0x7f070337
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    move-result-object v2
 
-    move-result-object v0
+    const-string v3, ","
 
-    check-cast v0, Landroid/widget/TextView;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dz;->f:Landroid/widget/TextView;
+    move-result-object v2
 
-    const v0, 0x7f070335
+    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    move-result-object v2
 
-    move-result-object v0
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    check-cast v0, Landroid/widget/TextView;
+    move-result-object v2
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dz;->g:Landroid/widget/TextView;
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    const v0, 0x7f070334
+    sget-object v1, Lcn/com/smartdevices/bracelet/ui/dz;->c:Landroid/content/SharedPreferences;
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    move-result-object v0
+    move-result-object v2
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    instance-of v1, p2, Ljava/lang/Boolean;
 
-    const v0, 0x7f070336
+    if-eqz v1, :cond_1
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    check-cast p2, Ljava/lang/Boolean;
 
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const v0, 0x7f070338
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const v0, 0x7f070040
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dz;->h:Landroid/view/View;
-
-    const v0, 0x7f07033a
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcn/com/smartdevices/bracelet/chart/LinePieChartView;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dz;->k:Lcn/com/smartdevices/bracelet/chart/LinePieChartView;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dz;->k:Lcn/com/smartdevices/bracelet/chart/LinePieChartView;
-
-    const/4 v1, 0x3
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/LinePieChartView;->a(I)V
-
-    const v0, 0x7f07033c
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const v0, 0x7f070340
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const v0, 0x7f07033e
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const v0, 0x7f07033f
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/Switch;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dz;->j:Landroid/widget/Switch;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dz;->j:Landroid/widget/Switch;
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->ak()Z
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Landroid/widget/Switch;->setChecked(Z)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dz;->j:Landroid/widget/Switch;
-
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/dB;
-
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/ui/dB;-><init>(Lcn/com/smartdevices/bracelet/ui/dz;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->c()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dz;->g:Landroid/widget/TextView;
-
-    const v1, 0x7f080147
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
+    invoke-interface {v2, p1, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     :goto_0
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dz;->g:Landroid/widget/TextView;
-
-    const v1, 0x7f080236
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
-
-    goto :goto_0
-.end method
-
-.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/dz;F)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/ui/dz;->a(F)V
+    invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
-.end method
-
-.method public static c()Lcn/com/smartdevices/bracelet/ui/dz;
-    .locals 2
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/dz;
-
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/dz;-><init>()V
-
-    new-instance v1, Landroid/os/Bundle;
-
-    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/dz;->setArguments(Landroid/os/Bundle;)V
-
-    return-object v0
-.end method
-
-.method private d()V
-    .locals 3
-
-    new-instance v0, Landroid/content/Intent;
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/dz;->getActivity()Landroid/app/Activity;
-
-    move-result-object v1
-
-    const-class v2, Lcn/com/smartdevices/bracelet/ui/UnBindActivity;
-
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const-string v1, "0"
-
-    const-string v2, "TYPE_WEIGHT"
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    const/16 v1, 0x101
-
-    invoke-virtual {p0, v0, v1}, Lcn/com/smartdevices/bracelet/ui/dz;->startActivityForResult(Landroid/content/Intent;I)V
-
-    return-void
-.end method
-
-.method private e()V
-    .locals 2
-
-    const-string v0, "SettingWeightFragment"
-
-    const-string v1, "enableUI"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dz;->h:Landroid/view/View;
-
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dz;->g:Landroid/widget/TextView;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
-
-    return-void
-.end method
-
-.method private f()V
-    .locals 0
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/dz;->g()V
-
-    return-void
-.end method
-
-.method private g()V
-    .locals 2
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->j()Lcom/xiaomi/hm/bleservice/profile/WeightProfile;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/profile/WeightProfile;->getCachedDeviceInfo()Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$WeightDeviceInfo;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v1, v0, Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$WeightDeviceInfo;->firmwareRevision:Ljava/lang/String;
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/dz;->f:Landroid/widget/TextView;
-
-    iget-object v0, v0, Lcom/xiaomi/hm/bleservice/profile/IWeightProfile$WeightDeviceInfo;->firmwareRevision:Ljava/lang/String;
-
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    :cond_0
-    return-void
-.end method
-
-
-# virtual methods
-.method public onActivityResult(IILandroid/content/Intent;)V
-    .locals 3
-
-    invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/n;->onActivityResult(IILandroid/content/Intent;)V
-
-    const-string v0, "SettingWeightFragment"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, "onActivityResult: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " result:"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/16 v0, 0x101
-
-    if-ne p1, v0, :cond_0
-
-    const/4 v0, -0x1
-
-    if-ne p2, v0, :cond_0
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/dz;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/dz;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public onClick(Landroid/view/View;)V
-    .locals 7
-
-    const/4 v6, 0x1
-
-    invoke-virtual {p1}, Landroid/view/View;->getId()I
-
-    move-result v0
-
-    packed-switch v0, :pswitch_data_0
-
-    :cond_0
-    :goto_0
-    :pswitch_0
-    return-void
-
-    :pswitch_1
-    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->c()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/dz;->d()V
-
-    goto :goto_0
 
     :cond_1
-    new-instance v0, Landroid/content/Intent;
+    instance-of v1, p2, Ljava/lang/Float;
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/dz;->getActivity()Landroid/app/Activity;
+    if-eqz v1, :cond_2
 
-    move-result-object v1
+    check-cast p2, Ljava/lang/Float;
 
-    const-class v2, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
+    invoke-virtual {p2}, Ljava/lang/Float;->floatValue()F
 
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    move-result v1
 
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/dz;->startActivity(Landroid/content/Intent;)V
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/dz;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
+    invoke-interface {v2, p1, v1}, Landroid/content/SharedPreferences$Editor;->putFloat(Ljava/lang/String;F)Landroid/content/SharedPreferences$Editor;
 
     goto :goto_0
 
-    :pswitch_2
-    invoke-static {}, Lcn/com/smartdevices/bracelet/E;->e()Z
+    :cond_2
+    instance-of v1, p2, Ljava/lang/Integer;
 
-    move-result v0
+    if-eqz v1, :cond_3
 
-    if-eqz v0, :cond_0
+    check-cast p2, Ljava/lang/Integer;
 
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/dz;->d()V
+    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
-    goto :goto_0
+    move-result v1
 
-    :pswitch_3
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->aj()Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/dz;->getActivity()Landroid/app/Activity;
-
-    move-result-object v1
-
-    const v2, 0x7f08001b
-
-    const/4 v3, 0x2
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    const/4 v4, 0x0
-
-    iget-object v5, v0, Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;->name:Ljava/lang/String;
-
-    aput-object v5, v3, v4
-
-    iget-object v0, v0, Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;->address:Ljava/lang/String;
-
-    aput-object v0, v3, v6
-
-    invoke-virtual {v1, v2, v3}, Landroid/app/Activity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/dz;->getActivity()Landroid/app/Activity;
-
-    move-result-object v1
-
-    invoke-static {v1, v0, v6}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+    invoke-interface {v2, p1, v1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
     goto :goto_0
 
-    :pswitch_4
-    new-instance v0, Landroid/content/Intent;
+    :cond_3
+    instance-of v1, p2, Ljava/lang/Long;
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/dz;->getActivity()Landroid/app/Activity;
+    if-eqz v1, :cond_4
 
-    move-result-object v1
+    check-cast p2, Ljava/lang/Long;
 
-    const-class v2, Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;
+    invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
 
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    move-result-wide v3
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/dz;->getActivity()Landroid/app/Activity;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
+    invoke-interface {v2, p1, v3, v4}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
 
     goto :goto_0
 
-    :pswitch_5
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/dz;->getActivity()Landroid/app/Activity;
+    :cond_4
+    instance-of v1, p2, Ljava/lang/String;
+
+    if-eqz v1, :cond_5
+
+    check-cast p2, Ljava/lang/String;
+
+    invoke-interface {v2, p1, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    goto :goto_0
+
+    :cond_5
+    instance-of v1, p2, Ljava/util/Set;
+
+    if-eqz v1, :cond_6
+
+    :try_start_0
+    move-object v0, p2
+
+    check-cast v0, Ljava/util/Set;
+
+    move-object v1, v0
+
+    invoke-interface {v2, p1, v1}, Landroid/content/SharedPreferences$Editor;->putStringSet(Ljava/lang/String;Ljava/util/Set;)Landroid/content/SharedPreferences$Editor;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v1
+
+    invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
+
+    const-string v1, "SettingPreferences"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Not Support Value Type : "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/x;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_6
+    const-string v1, "SettingPreferences"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "Not Support Value Type : "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v1, v3}, Lcn/com/smartdevices/bracelet/x;->f(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+.end method
+
+.method public static b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p0, p1}, Lcn/com/smartdevices/bracelet/ui/dz;->a(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-static {v0, v6}, Lcn/com/smartdevices/bracelet/h/d;->a(Landroid/app/Activity;Z)V
+    if-nez v0, :cond_0
+
+    :goto_0
+    return-object p2
+
+    :cond_0
+    move-object p2, v0
 
     goto :goto_0
-
-    :pswitch_6
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dz;->j:Landroid/widget/Switch;
-
-    invoke-virtual {v0}, Landroid/widget/Switch;->toggle()V
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x7f070334
-        :pswitch_1
-        :pswitch_0
-        :pswitch_3
-        :pswitch_0
-        :pswitch_2
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_4
-        :pswitch_0
-        :pswitch_6
-        :pswitch_0
-        :pswitch_5
-    .end packed-switch
-.end method
-
-.method public onCreate(Landroid/os/Bundle;)V
-    .locals 0
-
-    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/n;->onCreate(Landroid/os/Bundle;)V
-
-    return-void
-.end method
-
-.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 2
-
-    const v0, 0x7f0300af
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v0, p2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/ui/dz;->a(Landroid/view/View;)V
-
-    return-object v0
-.end method
-
-.method public onDestroy()V
-    .locals 0
-
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/n;->onDestroy()V
-
-    return-void
-.end method
-
-.method public onDestroyView()V
-    .locals 2
-
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/n;->onDestroyView()V
-
-    const-string v0, "SettingWeightFragment"
-
-    const-string v1, "onDestroyView"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public onPause()V
-    .locals 0
-
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/n;->onPause()V
-
-    return-void
-.end method
-
-.method public onResume()V
-    .locals 2
-
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/n;->onResume()V
-
-    const-string v0, "SettingWeightFragment"
-
-    const-string v1, "onResume"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/dz;->f()V
-
-    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/dz;->e()V
-
-    return-void
 .end method

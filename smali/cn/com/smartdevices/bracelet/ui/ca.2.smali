@@ -1,49 +1,58 @@
 .class Lcn/com/smartdevices/bracelet/ui/ca;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lcn/com/smartdevices/bracelet/ui/Y;
+.super Lcom/d/a/a/h;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/bW;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/bZ;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/bW;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/bZ;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/ca;->a:Lcn/com/smartdevices/bracelet/ui/bW;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/ca;->a:Lcn/com/smartdevices/bracelet/ui/bZ;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/d/a/a/h;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Landroid/app/DialogFragment;)V
+.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
     .locals 0
 
     return-void
 .end method
 
-.method public b(Landroid/app/DialogFragment;)V
-    .locals 1
+.method public onSuccess(I[Lorg/apache/http/Header;[B)V
+    .locals 3
 
-    invoke-virtual {p1}, Landroid/app/DialogFragment;->dismiss()V
+    const-string v0, "switch"
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ca;->a:Lcn/com/smartdevices/bracelet/ui/bW;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/bW;->a(Lcn/com/smartdevices/bracelet/ui/bW;)V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    return-void
-.end method
+    const-string v2, "loginOut:"
 
-.method public c(Landroid/app/DialogFragment;)V
-    .locals 0
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Landroid/app/DialogFragment;->dismiss()V
+    move-result-object v1
+
+    invoke-static {p3}, Lcn/com/smartdevices/bracelet/E;->b([B)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

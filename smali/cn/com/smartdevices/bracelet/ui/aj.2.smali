@@ -30,7 +30,7 @@
 .method protected a()I
     .locals 1
 
-    const v0, 0x7f03004b
+    const v0, 0x7f03004c
 
     return v0
 .end method
@@ -56,7 +56,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f0701a3
+    const v0, 0x7f0701bd
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

@@ -430,12 +430,6 @@
 
     iput-object v1, v0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
 
-    iget-object v1, v0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
-
-    iget v1, v1, Lcn/com/smartdevices/bracelet/model/MiliConfig;->unit:I
-
-    iput v1, v0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->unit:I
-
     invoke-static {}, Lcn/com/smartdevices/bracelet/z;->i()Ljava/util/ArrayList;
 
     move-result-object v1
@@ -1741,22 +1735,6 @@
 
     sget-object v0, Lcn/com/smartdevices/bracelet/z;->h:Landroid/content/SharedPreferences;
 
-    const-string v1, "TmpQQSwitcher"
-
-    const/4 v2, 0x1
-
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static ad()Z
-    .locals 3
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/z;->h:Landroid/content/SharedPreferences;
-
     const-string v1, "ref_track_thumb_cleaned"
 
     const/4 v2, 0x0
@@ -1768,7 +1746,7 @@
     return v0
 .end method
 
-.method public static ae()Z
+.method public static ad()Z
     .locals 3
 
     sget-object v0, Lcn/com/smartdevices/bracelet/z;->h:Landroid/content/SharedPreferences;
@@ -1784,7 +1762,7 @@
     return v0
 .end method
 
-.method public static af()Z
+.method public static ae()Z
     .locals 3
 
     sget-object v0, Lcn/com/smartdevices/bracelet/z;->h:Landroid/content/SharedPreferences;
@@ -1800,7 +1778,7 @@
     return v0
 .end method
 
-.method public static ag()Z
+.method public static af()Z
     .locals 3
 
     sget-object v0, Lcn/com/smartdevices/bracelet/z;->h:Landroid/content/SharedPreferences;
@@ -1816,7 +1794,7 @@
     return v0
 .end method
 
-.method public static ah()Ljava/lang/String;
+.method public static ag()Ljava/lang/String;
     .locals 3
 
     sget-object v0, Lcn/com/smartdevices/bracelet/z;->h:Landroid/content/SharedPreferences;
@@ -1832,7 +1810,7 @@
     return-object v0
 .end method
 
-.method public static ai()Ljava/lang/String;
+.method public static ah()Ljava/lang/String;
     .locals 3
 
     sget-object v0, Lcn/com/smartdevices/bracelet/z;->h:Landroid/content/SharedPreferences;
@@ -1848,7 +1826,7 @@
     return-object v0
 .end method
 
-.method public static aj()Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;
+.method public static ai()Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;
     .locals 4
 
     new-instance v0, Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;
@@ -1882,7 +1860,7 @@
     return-object v0
 .end method
 
-.method public static ak()Z
+.method public static aj()Z
     .locals 3
 
     sget-object v0, Lcn/com/smartdevices/bracelet/z;->h:Landroid/content/SharedPreferences;
@@ -1898,7 +1876,7 @@
     return v0
 .end method
 
-.method public static al()Ljava/lang/String;
+.method public static ak()Ljava/lang/String;
     .locals 3
 
     sget-object v0, Lcn/com/smartdevices/bracelet/z;->h:Landroid/content/SharedPreferences;
@@ -2671,7 +2649,7 @@
 
     move-result-object v0
 
-    const-string v1, "TmpQQSwitcher"
+    const-string v1, "ref_track_thumb_cleaned"
 
     invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
@@ -2723,7 +2701,7 @@
 
     move-result-object v0
 
-    const-string v1, "ref_track_thumb_cleaned"
+    const-string v1, "ref_trash_cleaned"
 
     invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
@@ -2781,11 +2759,11 @@
 
     move-result-object v0
 
-    const-string v1, "ref_trash_cleaned"
+    const-string v1, "user_agree_upload_enable"
 
     invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
     return-void
 .end method
@@ -2867,11 +2845,11 @@
 
     move-result-object v0
 
-    const-string v1, "user_agree_upload_enable"
+    const-string v1, "agree_user_agreement"
 
     invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
 .end method
@@ -2919,7 +2897,7 @@
 
     move-result-object v0
 
-    const-string v1, "agree_user_agreement"
+    const-string v1, "ref_UX_config"
 
     invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
@@ -2971,7 +2949,7 @@
 
     move-result-object v0
 
-    const-string v1, "ref_UX_config"
+    const-string v1, "weight_merge_enable"
 
     invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
@@ -3041,7 +3019,7 @@
 
     move-result-object v0
 
-    const-string v1, "weight_merge_enable"
+    const-string v1, "behaviorTagEnable"
 
     invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
@@ -3080,24 +3058,6 @@
     invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
-
-    return-void
-.end method
-
-.method public static p(Z)V
-    .locals 2
-
-    sget-object v0, Lcn/com/smartdevices/bracelet/z;->h:Landroid/content/SharedPreferences;
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    const-string v1, "behaviorTagEnable"
-
-    invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     return-void
 .end method

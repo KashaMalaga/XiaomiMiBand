@@ -44,11 +44,11 @@
 
     const v1, 0x1020002
 
-    new-instance v2, Lcn/com/smartdevices/bracelet/ui/ds;
+    new-instance v2, Lcn/com/smartdevices/bracelet/ui/dx;
 
-    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/ui/ds;-><init>()V
+    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/ui/dx;-><init>()V
 
-    const-class v3, Lcn/com/smartdevices/bracelet/ui/ds;
+    const-class v3, Lcn/com/smartdevices/bracelet/ui/dx;
 
     invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

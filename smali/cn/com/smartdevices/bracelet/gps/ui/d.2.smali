@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/amap/api/maps/AMap$OnMyLocationChangeListener;
 
 
 # instance fields
@@ -22,33 +22,64 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method public onMyLocationChange(Landroid/location/Location;)V
+    .locals 7
 
-    :try_start_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/d;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->m(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)Lcom/amap/api/maps/MapView;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->k(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)Z
 
-    move-result-object v0
+    move-result v0
 
-    invoke-virtual {v0}, Lcom/amap/api/maps/MapView;->onDestroy()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    if-eqz v0, :cond_0
 
     :goto_0
     return-void
 
-    :catch_0
-    move-exception v0
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/d;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
 
-    const-string v1, "Run"
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->d(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)Lcom/amap/api/maps/AMap;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/d;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->l(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)Lcom/amap/api/maps/model/CameraPosition$Builder;
+
+    move-result-object v1
+
+    new-instance v2, Lcom/amap/api/maps/model/LatLng;
+
+    invoke-virtual {p1}, Landroid/location/Location;->getLatitude()D
+
+    move-result-wide v3
+
+    invoke-virtual {p1}, Landroid/location/Location;->getLongitude()D
+
+    move-result-wide v5
+
+    invoke-direct {v2, v3, v4, v5, v6}, Lcom/amap/api/maps/model/LatLng;-><init>(DD)V
+
+    invoke-virtual {v1, v2}, Lcom/amap/api/maps/model/CameraPosition$Builder;->target(Lcom/amap/api/maps/model/LatLng;)Lcom/amap/api/maps/model/CameraPosition$Builder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/amap/api/maps/model/CameraPosition$Builder;->build()Lcom/amap/api/maps/model/CameraPosition;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/amap/api/maps/CameraUpdateFactory;->newCameraPosition(Lcom/amap/api/maps/model/CameraPosition;)Lcom/amap/api/maps/CameraUpdate;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/amap/api/maps/AMap;->moveCamera(Lcom/amap/api/maps/CameraUpdate;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/d;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->b(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;Z)Z
 
     goto :goto_0
 .end method

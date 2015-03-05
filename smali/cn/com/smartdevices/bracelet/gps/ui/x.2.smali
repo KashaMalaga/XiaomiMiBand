@@ -1,75 +1,110 @@
-.class Lcn/com/smartdevices/bracelet/gps/ui/x;
+.class final Lcn/com/smartdevices/bracelet/gps/ui/x;
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/amap/api/maps/AMap$OnMapTouchListener;
+.implements Lcn/com/smartdevices/bracelet/gps/services/n;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/w;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/v;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/w;)V
+.method private constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/v;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/x;->a:Lcn/com/smartdevices/bracelet/gps/ui/w;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/x;->a:Lcn/com/smartdevices/bracelet/gps/ui/v;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
+.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/v;Lcn/com/smartdevices/bracelet/gps/ui/w;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/gps/ui/x;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/v;)V
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public onTouch(Landroid/view/MotionEvent;)V
+.method public a(JLjava/lang/String;)V
     .locals 3
 
-    const/4 v2, 0x1
+    const-string v0, "Map"
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/x;->a:Lcn/com/smartdevices/bracelet/gps/ui/w;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/w;->d(Lcn/com/smartdevices/bracelet/gps/ui/w;)Lcn/com/smartdevices/bracelet/view/CustomViewPager;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "onContourTrackCreated uri = "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/x;->a:Lcn/com/smartdevices/bracelet/gps/ui/v;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/v;->a(Lcn/com/smartdevices/bracelet/gps/ui/v;)Lcn/com/smartdevices/bracelet/gps/ui/y;
 
     move-result-object v0
 
-    if-nez v0, :cond_0
+    const/4 v1, 0x1
 
-    :goto_0
-    return-void
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/y;->obtainMessage(I)Landroid/os/Message;
 
-    :cond_0
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+    move-result-object v0
+
+    iput-object p3, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/x;->a:Lcn/com/smartdevices/bracelet/gps/ui/v;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/gps/ui/v;->a(Lcn/com/smartdevices/bracelet/gps/ui/v;)Lcn/com/smartdevices/bracelet/gps/ui/y;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/gps/ui/y;->sendMessage(Landroid/os/Message;)Z
+
+    invoke-static {p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    if-eq v2, v0, :cond_1
+    if-eqz v0, :cond_0
 
-    const/4 v1, 0x3
+    const-string v0, "Map"
 
-    if-ne v1, v0, :cond_2
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    :cond_1
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/x;->a:Lcn/com/smartdevices/bracelet/gps/ui/w;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/w;->d(Lcn/com/smartdevices/bracelet/gps/ui/w;)Lcn/com/smartdevices/bracelet/view/CustomViewPager;
+    const-string v2, "onContourTrackCreated watermark_failed_to_create_contour_track trackId = "
 
-    move-result-object v0
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/view/CustomViewPager;->b(Z)V
+    move-result-object v1
 
-    goto :goto_0
+    invoke-virtual {v1, p1, p2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    :cond_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/x;->a:Lcn/com/smartdevices/bracelet/gps/ui/w;
+    move-result-object v1
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/w;->d(Lcn/com/smartdevices/bracelet/gps/ui/w;)Lcn/com/smartdevices/bracelet/view/CustomViewPager;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    const/4 v1, 0x0
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/view/CustomViewPager;->b(Z)V
-
-    goto :goto_0
+    :cond_0
+    return-void
 .end method

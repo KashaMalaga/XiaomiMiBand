@@ -830,7 +830,7 @@
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/partner/d;->r:Landroid/content/Context;
 
-    const v4, 0x7f080267
+    const v4, 0x7f08026e
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -855,7 +855,7 @@
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/partner/d;->r:Landroid/content/Context;
 
-    const v4, 0x7f08013b
+    const v4, 0x7f08013c
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -889,7 +889,7 @@
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/partner/d;->r:Landroid/content/Context;
 
-    const v4, 0x7f08013c
+    const v4, 0x7f08013d
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

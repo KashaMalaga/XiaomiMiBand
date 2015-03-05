@@ -2,19 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcom/handmark/pulltorefresh/library/PullToRefreshBase$OnRefreshListener;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Lcom/handmark/pulltorefresh/library/PullToRefreshBase$OnRefreshListener",
-        "<",
-        "Landroid/widget/ExpandableListView;",
-        ">;"
-    }
-.end annotation
+.implements Landroid/widget/AdapterView$OnItemLongClickListener;
 
 
 # instance fields
@@ -34,45 +22,66 @@
 
 
 # virtual methods
-.method public onRefresh(Lcom/handmark/pulltorefresh/library/PullToRefreshBase;)V
-    .locals 2
+.method public onItemLongClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)Z
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/handmark/pulltorefresh/library/PullToRefreshBase",
-            "<",
-            "Landroid/widget/ExpandableListView;",
-            ">;)V"
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)Z"
         }
     .end annotation
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/D;->a:Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;
+    const/4 v3, 0x1
 
-    const/4 v1, 0x0
+    const v0, 0x7f07002e
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->a(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;Ljava/util/List;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/D;->a:Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->i(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;)Lcom/handmark/pulltorefresh/library/PullToRefreshExpandableListView;
+    invoke-virtual {p2, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/handmark/pulltorefresh/library/PullToRefreshExpandableListView;->onRefreshComplete()V
+    check-cast v0, Ljava/lang/Integer;
 
-    :goto_0
-    return-void
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    if-gez v1, :cond_1
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/D;->a:Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;
+    :goto_0
+    return v3
 
-    const/4 v1, 0x1
+    :cond_1
+    const v0, 0x7f07002d
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->b(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;Z)Z
+    invoke-virtual {p2, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/D;->a:Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;
+
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->c(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;)Lcn/com/smartdevices/bracelet/gps/ui/L;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/L;->a(II)Lcn/com/smartdevices/bracelet/gps/services/y;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/D;->a:Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->a(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;Lcn/com/smartdevices/bracelet/gps/services/y;)V
 
     goto :goto_0
 .end method

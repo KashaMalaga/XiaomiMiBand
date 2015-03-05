@@ -1,5 +1,5 @@
 .class Lcn/com/smartdevices/bracelet/ui/bG;
-.super Landroid/os/Handler;
+.super Landroid/content/BroadcastReceiver;
 
 
 # instance fields
@@ -12,122 +12,281 @@
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bG;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public handleMessage(Landroid/os/Message;)V
-    .locals 6
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 10
 
-    const/4 v5, 0x1
+    const/4 v3, -0x1
 
-    iget v0, p1, Landroid/os/Message;->what:I
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    sparse-switch v0, :sswitch_data_0
+    move-result-object v4
 
-    :cond_0
-    :goto_0
-    return-void
+    const-string v0, "MainUIActivity"
 
-    :sswitch_0
-    const-string v0, "SCORPIONEAL"
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v1, "receive the msg reconnect timeout"
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "action : "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v0, "android.intent.action.DOWNLOAD_COMPLETE"
+
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const-string v0, "intent"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, ""
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, "extra_download_id"
+
+    const-wide/16 v3, 0x0
+
+    invoke-virtual {p2, v2, v3, v4}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
+
+    move-result-wide v2
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bG;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bG;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/E;->b(Landroid/app/Activity;)V
 
-    const v2, 0x7f0801c7
+    :cond_0
+    :goto_0
+    return-void
 
-    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->getString(I)Ljava/lang/String;
+    :cond_1
+    const-string v0, "ACTION_OPEN_SETTINGS_PAGE"
 
-    move-result-object v1
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/bG;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+    move-result v0
 
-    const v3, 0x7f0801c8
+    if-nez v0, :cond_2
 
-    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->getString(I)Ljava/lang/String;
+    const-string v0, "ACTION_OPEN_ALARM_PAGE"
 
-    move-result-object v2
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    const/4 v3, 0x2
+    move-result v0
 
-    const/4 v4, 0x0
+    if-nez v0, :cond_2
 
-    invoke-static {v0, v1, v2, v3, v4}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->a(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;Ljava/lang/String;Ljava/lang/String;IF)V
+    const-string v0, "ACTION_OPEN_WEIGHT_SETTINGS_PAGE"
 
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_8
+
+    :cond_2
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bG;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    invoke-static {v0, v5}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->a(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;Z)V
+    const-string v1, "activity"
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bG;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
-
-    invoke-static {v0, v5}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->b(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;Z)Z
-
-    goto :goto_0
-
-    :sswitch_1
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->o()Lcom/xiaomi/hm/bleservice/HwConnStatus;
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/b;->q()Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;
+    check-cast v0, Landroid/app/ActivityManager;
+
+    const/16 v1, 0x32
+
+    invoke-virtual {v0, v1}, Landroid/app/ActivityManager;->getRunningTasks(I)Ljava/util/List;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;->e()Z
+    if-eqz v1, :cond_3
 
-    move-result v2
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    if-eqz v2, :cond_1
+    move-result-object v5
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bG;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+    move v2, v3
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->onEvent(Lcom/xiaomi/hm/bleservice/HwSyncDataStatus;)V
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v0}, Lcom/xiaomi/hm/bleservice/HwConnStatus;->b()Z
+    :goto_1
+    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    if-nez v1, :cond_0
+    if-eqz v1, :cond_4
+
+    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/app/ActivityManager$RunningTaskInfo;
+
+    iget-object v6, v1, Landroid/app/ActivityManager$RunningTaskInfo;->baseActivity:Landroid/content/ComponentName;
+
+    const-string v7, "MainUIActivity"
+
+    new-instance v8, Ljava/lang/StringBuilder;
+
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v9, "recent activity:"
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v6}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-static {v7, v8}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v6}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
+
+    move-result-object v6
+
+    const-string v7, "cn.com.smartdevices.bracelet.ui.MainUIActivity"
+
+    invoke-virtual {v6, v7}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_9
+
+    iget v1, v1, Landroid/app/ActivityManager$RunningTaskInfo;->id:I
+
+    :goto_2
+    move v2, v1
+
+    goto :goto_1
+
+    :cond_3
+    move v2, v3
+
+    :cond_4
+    if-eq v2, v3, :cond_5
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v2, v1}, Landroid/app/ActivityManager;->moveTaskToFront(II)V
+
+    :cond_5
+    new-instance v0, Landroid/content/Intent;
+
+    const-class v1, Lcn/com/smartdevices/bracelet/ui/SettingActivity;
+
+    invoke-direct {v0, p1, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const/high16 v1, 0x4000000
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+
+    const-string v1, "ACTION_OPEN_ALARM_PAGE"
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_7
+
+    const-class v1, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;
+
+    invoke-virtual {v0, p1, v1}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
+
+    :cond_6
+    :goto_3
+    invoke-virtual {p1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    goto/16 :goto_0
+
+    :cond_7
+    const-string v1, "ACTION_OPEN_WEIGHT_SETTINGS_PAGE"
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_6
+
+    const-string v1, "REF_DEVICE_TYPE"
+
+    const-string v2, "TYPE_WEIGHT"
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    goto :goto_3
+
+    :cond_8
+    sget-object v0, Lcn/com/smartdevices/bracelet/n;->aW:Ljava/lang/String;
+
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Lcom/xiaomi/hm/bleservice/v;->a()Lcom/xiaomi/hm/bleservice/v;
+
+    move-result-object v0
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bG;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
 
-    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->onEvent(Lcom/xiaomi/hm/bleservice/HwConnStatus;)V
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->g(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)Landroid/content/Context;
 
-    goto :goto_0
+    move-result-object v1
 
-    :sswitch_2
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bG;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+    invoke-virtual {v0, v1}, Lcom/xiaomi/hm/bleservice/v;->c(Landroid/content/Context;)V
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->h(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;)V
+    goto/16 :goto_0
 
-    goto :goto_0
+    :cond_9
+    move v1, v2
 
-    :sswitch_3
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bG;->a:Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
-
-    const-wide/16 v1, -0x1
-
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->a(Lcn/com/smartdevices/bracelet/ui/MainUIActivity;J)J
-
-    goto :goto_0
-
-    :sswitch_data_0
-    .sparse-switch
-        0x110 -> :sswitch_0
-        0x111 -> :sswitch_1
-        0x112 -> :sswitch_2
-        0x208 -> :sswitch_3
-    .end sparse-switch
+    goto :goto_2
 .end method

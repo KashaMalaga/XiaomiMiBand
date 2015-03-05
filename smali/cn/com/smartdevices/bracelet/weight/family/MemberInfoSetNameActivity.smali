@@ -120,7 +120,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f08024c
+    const v1, 0x7f080253
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -330,7 +330,7 @@
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetNameActivity;->a()V
 
-    const v0, 0x7f0700d7
+    const v0, 0x7f0700d8
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetNameActivity;->findViewById(I)Landroid/view/View;
 
@@ -589,9 +589,15 @@
 .end method
 
 .method protected onPause()V
-    .locals 1
+    .locals 2
 
     invoke-super {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->onPause()V
+
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x10
+
+    if-lt v0, v1, :cond_0
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoSetNameActivity;->getWindow()Landroid/view/Window;
 
@@ -607,6 +613,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
+    :cond_0
     return-void
 .end method
 

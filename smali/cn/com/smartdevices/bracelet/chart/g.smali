@@ -42,7 +42,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/G;->y:Landroid/graphics/Paint;
 
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/chart/z;->g(Lcn/com/smartdevices/bracelet/chart/z;)F
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/chart/z;->h(Lcn/com/smartdevices/bracelet/chart/z;)F
 
     move-result v1
 
@@ -54,7 +54,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/G;->y:Landroid/graphics/Paint;
 
-    invoke-static {p1}, Lcn/com/smartdevices/bracelet/chart/z;->h(Lcn/com/smartdevices/bracelet/chart/z;)I
+    invoke-static {p1}, Lcn/com/smartdevices/bracelet/chart/z;->i(Lcn/com/smartdevices/bracelet/chart/z;)I
 
     move-result v1
 
@@ -1159,13 +1159,13 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/G;->b:Lcn/com/smartdevices/bracelet/chart/z;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/z;->i(Lcn/com/smartdevices/bracelet/chart/z;)I
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/z;->j(Lcn/com/smartdevices/bracelet/chart/z;)I
 
     move-result v1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/G;->b:Lcn/com/smartdevices/bracelet/chart/z;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/z;->j(Lcn/com/smartdevices/bracelet/chart/z;)I
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/z;->k(Lcn/com/smartdevices/bracelet/chart/z;)I
 
     move-result v0
 
@@ -1259,7 +1259,7 @@
 
     invoke-static {v0, v7}, Lcn/com/smartdevices/bracelet/chart/z;->a(Lcn/com/smartdevices/bracelet/chart/z;[F)[F
 
-    invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/chart/G;->h(I)V
+    invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/chart/G;->i(I)V
 
     invoke-virtual {p0, v6}, Lcn/com/smartdevices/bracelet/chart/G;->a(Z)V
 
@@ -1276,7 +1276,7 @@
 
     invoke-static {v0, v7}, Lcn/com/smartdevices/bracelet/chart/z;->a(Lcn/com/smartdevices/bracelet/chart/z;[F)[F
 
-    invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/chart/G;->i(I)V
+    invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/chart/G;->j(I)V
 
     invoke-virtual {p0, v6}, Lcn/com/smartdevices/bracelet/chart/G;->a(Z)V
 

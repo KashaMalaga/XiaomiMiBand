@@ -203,10 +203,10 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f07018d -> :sswitch_2
-        0x7f07026b -> :sswitch_3
-        0x7f0702e3 -> :sswitch_1
-        0x7f0702e4 -> :sswitch_0
+        0x7f0701a6 -> :sswitch_2
+        0x7f070287 -> :sswitch_3
+        0x7f070301 -> :sswitch_1
+        0x7f070302 -> :sswitch_0
     .end sparse-switch
 .end method
 
@@ -215,7 +215,7 @@
 
     const v8, 0x7f080053
 
-    const v7, 0x7f0702e2
+    const v7, 0x7f070300
 
     const/16 v6, 0x8
 
@@ -223,7 +223,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f0300a0
+    const v0, 0x7f0300a4
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/MultiDevicesErrActivity;->setContentView(I)V
 
@@ -282,7 +282,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     :cond_0
-    const v0, 0x7f070116
+    const v0, 0x7f07012a
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/MultiDevicesErrActivity;->findViewById(I)Landroid/view/View;
 
@@ -290,7 +290,7 @@
 
     check-cast v0, Lcn/com/smartdevices/bracelet/chart/LinePieChartView;
 
-    const v1, 0x7f0702e4
+    const v1, 0x7f070302
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/activity/MultiDevicesErrActivity;->findViewById(I)Landroid/view/View;
 
@@ -298,7 +298,7 @@
 
     invoke-virtual {v1, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v1, 0x7f0702e3
+    const v1, 0x7f070301
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/activity/MultiDevicesErrActivity;->findViewById(I)Landroid/view/View;
 
@@ -312,7 +312,7 @@
 
     invoke-virtual {v1, p0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v1, 0x7f07026b
+    const v1, 0x7f070287
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/activity/MultiDevicesErrActivity;->findViewById(I)Landroid/view/View;
 
@@ -320,7 +320,7 @@
 
     invoke-virtual {v2, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v1, 0x7f07018d
+    const v1, 0x7f0701a6
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/activity/MultiDevicesErrActivity;->findViewById(I)Landroid/view/View;
 
@@ -338,7 +338,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f080158
+    const v4, 0x7f080159
 
     invoke-virtual {p0, v4}, Lcn/com/smartdevices/bracelet/activity/MultiDevicesErrActivity;->getString(I)Ljava/lang/String;
 
@@ -383,7 +383,7 @@
     invoke-virtual {v2, v5}, Landroid/view/View;->setVisibility(I)V
 
     :goto_0
-    const v1, 0x7f07018a
+    const v1, 0x7f0701a3
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/activity/MultiDevicesErrActivity;->findViewById(I)Landroid/view/View;
 
@@ -423,7 +423,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/activity/MultiDevicesErrActivity;->e:Landroid/widget/Button;
 
-    const v3, 0x7f080165
+    const v3, 0x7f080166
 
     invoke-virtual {v1, v3}, Landroid/widget/Button;->setText(I)V
 
@@ -482,13 +482,13 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/activity/MultiDevicesErrActivity;->d:Landroid/widget/TextView;
 
-    const v3, 0x7f080243
+    const v3, 0x7f08024a
 
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setText(I)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/activity/MultiDevicesErrActivity;->e:Landroid/widget/Button;
 
-    const v3, 0x7f080244
+    const v3, 0x7f08024b
 
     invoke-virtual {v1, v3}, Landroid/widget/Button;->setText(I)V
 

@@ -2,7 +2,7 @@
 .super Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/ui/aR;
+.implements Lcn/com/smartdevices/bracelet/ui/aS;
 
 
 # instance fields
@@ -22,7 +22,7 @@
 
 .field private h:Landroid/widget/TextView;
 
-.field private i:Lcn/com/smartdevices/bracelet/ui/dK;
+.field private i:Lcn/com/smartdevices/bracelet/ui/dP;
 
 .field private j:Landroid/view/View;
 
@@ -152,7 +152,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    const v0, 0x7f070192
+    const v0, 0x7f0701ab
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->findViewById(I)Landroid/view/View;
 
@@ -182,7 +182,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v3, 0x7f0801a2
+    const v3, 0x7f0801a3
 
     invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->getString(I)Ljava/lang/String;
 
@@ -510,9 +510,9 @@
     goto :goto_2
 
     :cond_4
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/dC;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/dH;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/dC;-><init>(Lcn/com/smartdevices/bracelet/ui/ShareActivity;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/ui/dH;-><init>(Lcn/com/smartdevices/bracelet/ui/ShareActivity;)V
 
     invoke-static {p0, v2, v0}, Lcn/com/smartdevices/bracelet/E;->a(Landroid/content/Context;Landroid/os/Bundle;Lcn/com/smartdevices/bracelet/i/d;)V
 
@@ -544,7 +544,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->a:Landroid/widget/ImageView;
 
-    const v0, 0x7f070190
+    const v0, 0x7f0701a9
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->findViewById(I)Landroid/view/View;
 
@@ -600,7 +600,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->e:Landroid/widget/TextView;
 
-    const v0, 0x7f070125
+    const v0, 0x7f070139
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->findViewById(I)Landroid/view/View;
 
@@ -668,7 +668,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->k:Landroid/widget/TextView;
 
-    const v0, 0x7f070126
+    const v0, 0x7f07013a
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->findViewById(I)Landroid/view/View;
 
@@ -678,7 +678,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->b:Landroid/widget/TextView;
 
-    const v0, 0x7f070127
+    const v0, 0x7f07013b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->findViewById(I)Landroid/view/View;
 
@@ -704,19 +704,19 @@
 .method private c()V
     .locals 3
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/dK;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/dP;
 
     const v1, 0x7f090062
 
-    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/ui/dK;-><init>(I)V
+    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/ui/dP;-><init>(I)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->i:Lcn/com/smartdevices/bracelet/ui/dK;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->i:Lcn/com/smartdevices/bracelet/ui/dP;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->i:Lcn/com/smartdevices/bracelet/ui/dK;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->i:Lcn/com/smartdevices/bracelet/ui/dP;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/dK;->a(Z)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/dP;->a(Z)V
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->getFragmentManager()Landroid/app/FragmentManager;
 
@@ -728,7 +728,7 @@
 
     const v1, 0x7f0700cd
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->i:Lcn/com/smartdevices/bracelet/ui/dK;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->i:Lcn/com/smartdevices/bracelet/ui/dP;
 
     invoke-virtual {v0, v1, v2}, Landroid/app/FragmentTransaction;->add(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
 
@@ -775,6 +775,42 @@
 
 # virtual methods
 .method public a(Landroid/os/Bundle;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public a(Lcn/com/smartdevices/bracelet/ui/dO;)V
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->i:Lcn/com/smartdevices/bracelet/ui/dP;
+
+    if-nez v0, :cond_0
+
+    :goto_0
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->i:Lcn/com/smartdevices/bracelet/ui/dP;
+
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/ui/dP;->a(Lcn/com/smartdevices/bracelet/ui/dO;)V
+
+    goto :goto_0
+.end method
+
+.method public a(ILcn/com/smartdevices/bracelet/ui/dO;)Z
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->i:Lcn/com/smartdevices/bracelet/ui/dP;
+
+    invoke-virtual {v0, p1, p2}, Lcn/com/smartdevices/bracelet/ui/dP;->a(ILcn/com/smartdevices/bracelet/ui/dO;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public b(Landroid/os/Bundle;)V
     .locals 2
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->u:Landroid/view/View;
@@ -791,13 +827,13 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->o:Ljava/lang/String;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/dJ;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/dO;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->o:Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/ui/dJ;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/ui/dO;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->a(Lcn/com/smartdevices/bracelet/ui/dJ;)V
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->a(Lcn/com/smartdevices/bracelet/ui/dO;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->u:Landroid/view/View;
 
@@ -808,48 +844,12 @@
     return-void
 .end method
 
-.method public a(Lcn/com/smartdevices/bracelet/ui/dJ;)V
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->i:Lcn/com/smartdevices/bracelet/ui/dK;
-
-    if-nez v0, :cond_0
-
-    :goto_0
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->i:Lcn/com/smartdevices/bracelet/ui/dK;
-
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/ui/dK;->a(Lcn/com/smartdevices/bracelet/ui/dJ;)V
-
-    goto :goto_0
-.end method
-
-.method public a(ILcn/com/smartdevices/bracelet/ui/dJ;)Z
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->i:Lcn/com/smartdevices/bracelet/ui/dK;
-
-    invoke-virtual {v0, p1, p2}, Lcn/com/smartdevices/bracelet/ui/dK;->a(ILcn/com/smartdevices/bracelet/ui/dJ;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public b(Landroid/os/Bundle;)V
-    .locals 0
-
-    return-void
-.end method
-
 .method protected onCreate(Landroid/os/Bundle;)V
     .locals 4
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030033
+    const v0, 0x7f030034
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->setContentView(I)V
 
@@ -994,7 +994,7 @@
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f0801e8
+    const v0, 0x7f0801e9
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/ShareActivity;->getText(I)Ljava/lang/CharSequence;
 

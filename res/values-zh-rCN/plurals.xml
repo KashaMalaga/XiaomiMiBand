@@ -9,4 +9,10 @@
         <item quantity="other">更新了%d条记录</item>
         <item quantity="one">更新了%d条记录</item>
     </plurals>
+    <plurals name="numberFoot">
+        <item quantity="other">%s英尺</item>
+    </plurals>
+    <plurals name="numberInch">
+        <item quantity="other">%s英寸</item>
+    </plurals>
 </resources>

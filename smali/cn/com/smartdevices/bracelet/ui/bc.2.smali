@@ -2,18 +2,18 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/ba;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/bb;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/ba;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/bb;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bc;->a:Lcn/com/smartdevices/bracelet/ui/ba;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bc;->a:Lcn/com/smartdevices/bracelet/ui/bb;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -22,38 +22,22 @@
 
 
 # virtual methods
-.method public onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 4
+.method public run()V
+    .locals 2
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bc;->a:Lcn/com/smartdevices/bracelet/ui/bb;
 
-    move-result-object v0
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bc;->a:Lcn/com/smartdevices/bracelet/ui/bb;
 
-    check-cast v0, Ljava/lang/Integer;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/bb;->a(Lcn/com/smartdevices/bracelet/ui/bb;)Landroid/graphics/Bitmap;
 
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+    move-result-object v1
 
-    move-result v1
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/bb;->a(Lcn/com/smartdevices/bracelet/ui/bb;Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bc;->a:Lcn/com/smartdevices/bracelet/ui/ba;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bc;->a:Lcn/com/smartdevices/bracelet/ui/bb;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/ba;->b(Lcn/com/smartdevices/bracelet/ui/ba;)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/View;
-
-    new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
-
-    const/4 v3, -0x1
-
-    invoke-direct {v2, v3, v1}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/bb;->a()V
 
     return-void
 .end method

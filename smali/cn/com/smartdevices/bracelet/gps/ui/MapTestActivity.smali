@@ -4,7 +4,7 @@
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 .implements Lcn/com/smartdevices/bracelet/gps/services/a/a;
-.implements Lcn/com/smartdevices/bracelet/gps/ui/aq;
+.implements Lcn/com/smartdevices/bracelet/gps/ui/ao;
 .implements Lcom/amap/api/maps/AMap$OnMapLoadedListener;
 
 
@@ -37,7 +37,7 @@
 
 .field private final i:J
 
-.field private j:Lcn/com/smartdevices/bracelet/gps/ui/ad;
+.field private j:Lcn/com/smartdevices/bracelet/gps/ui/ab;
 
 .field private k:Lcom/amap/api/maps/AMap;
 
@@ -81,9 +81,9 @@
 
     iput-wide v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->i:J
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/gps/ui/ad;->b:Lcn/com/smartdevices/bracelet/gps/ui/ad;
+    sget-object v0, Lcn/com/smartdevices/bracelet/gps/ui/ab;->b:Lcn/com/smartdevices/bracelet/gps/ui/ab;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->j:Lcn/com/smartdevices/bracelet/gps/ui/ad;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->j:Lcn/com/smartdevices/bracelet/gps/ui/ab;
 
     iput-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->k:Lcom/amap/api/maps/AMap;
 
@@ -97,9 +97,9 @@
 
     iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->p:Z
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/ac;
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/aa;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/ac;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/gps/ui/aa;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;)V
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->q:Landroid/os/Handler;
 
@@ -167,7 +167,7 @@
 .method private b()V
     .locals 1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/gps/ui/j;->a()Ljava/util/List;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/gps/ui/i;->a()Ljava/util/List;
 
     move-result-object v0
 
@@ -288,7 +288,7 @@
     return-void
 .end method
 
-.method public a(Lcn/com/smartdevices/bracelet/gps/services/x;)V
+.method public a(Lcn/com/smartdevices/bracelet/gps/services/A;)V
     .locals 2
 
     if-nez p1, :cond_0
@@ -319,9 +319,9 @@
 .method public onBackPressed()V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->j:Lcn/com/smartdevices/bracelet/gps/ui/ad;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->j:Lcn/com/smartdevices/bracelet/gps/ui/ab;
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/gps/ui/ad;->b:Lcn/com/smartdevices/bracelet/gps/ui/ad;
+    sget-object v1, Lcn/com/smartdevices/bracelet/gps/ui/ab;->b:Lcn/com/smartdevices/bracelet/gps/ui/ab;
 
     if-eq v0, v1, :cond_0
 
@@ -347,21 +347,21 @@
     return-void
 
     :sswitch_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->j:Lcn/com/smartdevices/bracelet/gps/ui/ad;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->j:Lcn/com/smartdevices/bracelet/gps/ui/ab;
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/gps/ui/ad;->c:Lcn/com/smartdevices/bracelet/gps/ui/ad;
+    sget-object v1, Lcn/com/smartdevices/bracelet/gps/ui/ab;->c:Lcn/com/smartdevices/bracelet/gps/ui/ab;
 
     if-eq v0, v1, :cond_0
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/gps/ui/ad;->c:Lcn/com/smartdevices/bracelet/gps/ui/ad;
+    sget-object v0, Lcn/com/smartdevices/bracelet/gps/ui/ab;->c:Lcn/com/smartdevices/bracelet/gps/ui/ab;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->j:Lcn/com/smartdevices/bracelet/gps/ui/ad;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->j:Lcn/com/smartdevices/bracelet/gps/ui/ab;
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->c()V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->h:Landroid/widget/TextView;
 
-    const v1, 0x7f08031a
+    const v1, 0x7f080327
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->getString(I)Ljava/lang/String;
 
@@ -372,15 +372,15 @@
     goto :goto_0
 
     :cond_0
-    sget-object v0, Lcn/com/smartdevices/bracelet/gps/ui/ad;->d:Lcn/com/smartdevices/bracelet/gps/ui/ad;
+    sget-object v0, Lcn/com/smartdevices/bracelet/gps/ui/ab;->d:Lcn/com/smartdevices/bracelet/gps/ui/ab;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->j:Lcn/com/smartdevices/bracelet/gps/ui/ad;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->j:Lcn/com/smartdevices/bracelet/gps/ui/ab;
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->d()V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->h:Landroid/widget/TextView;
 
-    const v1, 0x7f080319
+    const v1, 0x7f080326
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->getString(I)Ljava/lang/String;
 
@@ -391,9 +391,9 @@
     goto :goto_0
 
     :sswitch_1
-    sget-object v0, Lcn/com/smartdevices/bracelet/gps/ui/ad;->b:Lcn/com/smartdevices/bracelet/gps/ui/ad;
+    sget-object v0, Lcn/com/smartdevices/bracelet/gps/ui/ab;->b:Lcn/com/smartdevices/bracelet/gps/ui/ab;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->j:Lcn/com/smartdevices/bracelet/gps/ui/ad;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->j:Lcn/com/smartdevices/bracelet/gps/ui/ab;
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->f()V
 
@@ -426,9 +426,9 @@
     goto :goto_0
 
     :sswitch_2
-    sget-object v0, Lcn/com/smartdevices/bracelet/gps/ui/ad;->a:Lcn/com/smartdevices/bracelet/gps/ui/ad;
+    sget-object v0, Lcn/com/smartdevices/bracelet/gps/ui/ab;->a:Lcn/com/smartdevices/bracelet/gps/ui/ab;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->j:Lcn/com/smartdevices/bracelet/gps/ui/ad;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->j:Lcn/com/smartdevices/bracelet/gps/ui/ab;
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->e()V
 
@@ -454,9 +454,9 @@
     :sswitch_data_0
     .sparse-switch
         0x7f0700b4 -> :sswitch_3
-        0x7f0700fb -> :sswitch_2
-        0x7f0701a5 -> :sswitch_0
-        0x7f0701a7 -> :sswitch_1
+        0x7f07010f -> :sswitch_2
+        0x7f0701bf -> :sswitch_0
+        0x7f0701c1 -> :sswitch_1
     .end sparse-switch
 .end method
 
@@ -469,11 +469,11 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030028
+    const v0, 0x7f030029
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->setContentView(I)V
 
-    const v0, 0x7f0700e2
+    const v0, 0x7f0700f5
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/MapTestActivity;->findViewById(I)Landroid/view/View;
 
@@ -746,7 +746,7 @@
 
     if-nez v0, :cond_0
 
-    const-class v0, Lcn/com/smartdevices/bracelet/gps/ui/ae;
+    const-class v0, Lcn/com/smartdevices/bracelet/gps/ui/ac;
 
     invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/ui/W;->b(Landroid/app/Activity;Ljava/lang/Class;)V
 

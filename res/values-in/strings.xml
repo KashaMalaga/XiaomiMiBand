@@ -69,7 +69,7 @@ Persyaratan Layanan: %2$s"</string>
     <string name="bt_operation_failed_tips">Bluetooth tidak bekerja dengan benar. Tunggu sebentar dan coba lagi.</string>
     <string name="multi_devices_info">Pastikan jarak Anda dan gelang lainnya setidaknya 10 meter dan coba lagi.</string>
     <string name="multi_devices_title">Banyak gelang di sekitar</string>
-    <string name="search_bracelet_again">Coba lagi</string>
+    <string name="search_again">Coba lagi</string>
     <string name="search_devices_info">Ikat gelang ke pergelangan tangan dan dekatkan ke perangkat.</string>
     <string name="search_bracelet_ok">Gelang terdeteksi</string>
     <string name="found_bracelet_info">Saat lampu gelang mulai kedip, ketuk sensor logam utk pasangkan.</string>

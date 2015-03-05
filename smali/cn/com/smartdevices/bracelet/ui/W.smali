@@ -199,12 +199,15 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/W;->a:Lcn/com/smartdevices/bracelet/ui/Y;
 
-    invoke-interface {v0, p0}, Lcn/com/smartdevices/bracelet/ui/Y;->a(Landroid/app/DialogFragment;)V
+    invoke-interface {v0, p0}, Lcn/com/smartdevices/bracelet/ui/Y;->b(Landroid/app/DialogFragment;)V
+
+    :goto_0
+    return-void
 
     :cond_0
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/W;->dismiss()V
 
-    return-void
+    goto :goto_0
 .end method
 
 .method protected d_()V
@@ -216,15 +219,12 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/W;->a:Lcn/com/smartdevices/bracelet/ui/Y;
 
-    invoke-interface {v0, p0}, Lcn/com/smartdevices/bracelet/ui/Y;->b(Landroid/app/DialogFragment;)V
-
-    :goto_0
-    return-void
+    invoke-interface {v0, p0}, Lcn/com/smartdevices/bracelet/ui/Y;->a(Landroid/app/DialogFragment;)V
 
     :cond_0
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/W;->dismiss()V
 
-    goto :goto_0
+    return-void
 .end method
 
 .method public e()Landroid/widget/TextView;
@@ -249,7 +249,7 @@
     return-void
 
     :pswitch_1
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/W;->d_()V
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/W;->d()V
 
     goto :goto_0
 
@@ -259,7 +259,7 @@
     goto :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x7f0701a5
+    .packed-switch 0x7f0701bf
         :pswitch_1
         :pswitch_0
         :pswitch_2
@@ -306,7 +306,7 @@
 
     move-result-object v1
 
-    const v0, 0x7f0701a5
+    const v0, 0x7f0701bf
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -316,7 +316,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/W;->d:Landroid/widget/TextView;
 
-    const v0, 0x7f0701a7
+    const v0, 0x7f0701c1
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -352,7 +352,7 @@
 
     invoke-virtual {v0, v2}, Landroid/app/Dialog;->setCanceledOnTouchOutside(Z)V
 
-    const v0, 0x7f0701a8
+    const v0, 0x7f0701c2
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

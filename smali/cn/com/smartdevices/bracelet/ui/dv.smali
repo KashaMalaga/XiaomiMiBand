@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/chart/c/o;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
@@ -22,21 +22,22 @@
 
 
 # virtual methods
-.method public a(I)V
-    .locals 1
+.method public run()V
+    .locals 2
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dV;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->getActivity()Landroid/app/Activity;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->b:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
-    move-result-object v0
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->d()V
 
-    if-eqz v0, :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dV;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->b:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->applyStatusBarTint(I)V
+    const/4 v1, 0x0
 
-    :cond_0
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->d(I)V
+
     return-void
 .end method

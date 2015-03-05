@@ -163,7 +163,7 @@
     :catch_0
     move-exception v0
 
-    const v0, 0x7f0802ba
+    const v0, 0x7f0802c7
 
     invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->a(I)V
 
@@ -202,7 +202,7 @@
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->setContentView(I)V
 
-    const v0, 0x7f07010f
+    const v0, 0x7f070123
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->findViewById(I)Landroid/view/View;
 
@@ -218,7 +218,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f0802b7
+    const v1, 0x7f0802c4
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->getString(I)Ljava/lang/String;
 
@@ -317,7 +317,7 @@
     const/4 v0, 0x1
 
     :goto_0
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->p(Z)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->o(Z)V
 
     invoke-static {p0}, Lcn/com/smartdevices/bracelet/lab/p;->a(Landroid/content/Context;)Landroid/util/SparseArray;
 
@@ -329,7 +329,7 @@
 
     if-eqz v2, :cond_2
 
-    const v0, 0x7f08037f
+    const v0, 0x7f08038d
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->getString(I)Ljava/lang/String;
 
@@ -351,7 +351,7 @@
     goto :goto_0
 
     :cond_2
-    const v0, 0x7f08037e
+    const v0, 0x7f08038c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/lab/ui/SportFactoryMainActivity;->getString(I)Ljava/lang/String;
 

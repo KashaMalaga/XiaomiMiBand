@@ -55,7 +55,7 @@
 
     iget-object v1, p0, Lb/a/dD;->c:Lb/a/dB;
 
-    sget-boolean v0, Lcom/g/a/a;->l:Z
+    sget-boolean v0, Lcom/h/a/a;->l:Z
 
     if-eqz v0, :cond_1
 

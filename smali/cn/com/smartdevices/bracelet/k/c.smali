@@ -107,6 +107,8 @@
 
 .field public static final ay:Ljava/lang/String; = "tag"
 
+.field public static final az:Ljava/lang/String; = "md5"
+
 .field public static final b:Ljava/lang/String; = "callid"
 
 .field public static final c:Ljava/lang/String; = "v"

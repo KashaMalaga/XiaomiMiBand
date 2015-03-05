@@ -149,7 +149,7 @@
     if-nez v1, :cond_5
 
     :cond_4
-    const-class v1, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetGenderActivity;
+    const-class v1, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoSetNameActivity;
 
     invoke-virtual {v0, p0, v1}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 

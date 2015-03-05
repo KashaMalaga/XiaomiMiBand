@@ -541,7 +541,7 @@
 
     invoke-direct {v6}, Ljava/util/LinkedList;-><init>()V
 
-    const-string v3, "_begin_time>=? AND _begin_time<=?"
+    const-string v3, "_begin_time>=? AND _end_time<=?"
 
     const/4 v0, 0x2
 

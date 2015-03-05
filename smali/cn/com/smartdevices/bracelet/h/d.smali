@@ -266,7 +266,7 @@
 
     const-string v0, "http://s1.mi.com/m/product/shouhuan/index.html"
 
-    const v1, 0x7f080344
+    const v1, 0x7f080351
 
     invoke-static {v0, v1, p0}, Lcn/com/smartdevices/bracelet/E;->a(Ljava/lang/String;ILandroid/app/Activity;)V
 
@@ -279,7 +279,7 @@
 
     const-string v0, "http://s1.mi.com/m/product/shouhuan/index.html"
 
-    const v1, 0x7f080343
+    const v1, 0x7f080350
 
     invoke-static {v0, v1, p0}, Lcn/com/smartdevices/bracelet/E;->a(Ljava/lang/String;ILandroid/app/Activity;)V
 

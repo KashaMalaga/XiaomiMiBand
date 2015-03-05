@@ -7,18 +7,18 @@
 
 .field final synthetic b:Landroid/content/Context;
 
-.field final synthetic c:Lcn/com/smartdevices/bracelet/gps/services/t;
+.field final synthetic c:Lcn/com/smartdevices/bracelet/gps/services/w;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/lab/sync/D;Landroid/content/Context;Lcn/com/smartdevices/bracelet/gps/services/t;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/lab/sync/D;Landroid/content/Context;Lcn/com/smartdevices/bracelet/gps/services/w;)V
     .locals 0
 
     iput-object p1, p0, Lcn/com/smartdevices/bracelet/lab/sync/z;->a:Lcn/com/smartdevices/bracelet/lab/sync/D;
 
     iput-object p2, p0, Lcn/com/smartdevices/bracelet/lab/sync/z;->b:Landroid/content/Context;
 
-    iput-object p3, p0, Lcn/com/smartdevices/bracelet/lab/sync/z;->c:Lcn/com/smartdevices/bracelet/gps/services/t;
+    iput-object p3, p0, Lcn/com/smartdevices/bracelet/lab/sync/z;->c:Lcn/com/smartdevices/bracelet/gps/services/w;
 
     invoke-direct {p0}, Lcom/d/a/a/h;-><init>()V
 
@@ -98,9 +98,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/lab/sync/z;->b:Landroid/content/Context;
 
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/sync/z;->c:Lcn/com/smartdevices/bracelet/gps/services/t;
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/lab/sync/z;->c:Lcn/com/smartdevices/bracelet/gps/services/w;
 
-    invoke-static {v0, v3}, Lcn/com/smartdevices/bracelet/lab/sync/o;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/gps/services/t;)Z
+    invoke-static {v0, v3}, Lcn/com/smartdevices/bracelet/lab/sync/o;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/gps/services/w;)Z
 
     move-result v0
 

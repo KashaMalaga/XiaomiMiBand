@@ -466,7 +466,7 @@
     .end packed-switch
 .end method
 
-.method public a(J)Lcn/com/smartdevices/bracelet/gps/services/x;
+.method public a(J)Lcn/com/smartdevices/bracelet/gps/services/A;
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/a;->a:Lcn/com/smartdevices/bracelet/gps/services/a/d;
@@ -481,7 +481,7 @@
     :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/a;->a:Lcn/com/smartdevices/bracelet/gps/services/a/d;
 
-    invoke-interface {v0, p1, p2}, Lcn/com/smartdevices/bracelet/gps/services/a/d;->a(J)Lcn/com/smartdevices/bracelet/gps/services/x;
+    invoke-interface {v0, p1, p2}, Lcn/com/smartdevices/bracelet/gps/services/a/d;->a(J)Lcn/com/smartdevices/bracelet/gps/services/A;
 
     move-result-object v0
 
@@ -707,75 +707,6 @@
     return-void
 .end method
 
-.method public b(Landroid/content/Context;)V
-    .locals 3
-
-    const/4 v1, 0x2
-
-    const/4 v2, 0x0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/a;->a:Lcn/com/smartdevices/bracelet/gps/services/a/d;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/a;->a:Lcn/com/smartdevices/bracelet/gps/services/a/d;
-
-    invoke-interface {v0}, Lcn/com/smartdevices/bracelet/gps/services/a/d;->b()I
-
-    move-result v0
-
-    if-ne v0, v1, :cond_1
-
-    const-string v0, " Current is GPS "
-
-    invoke-static {p1, v0, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/a;->a:Lcn/com/smartdevices/bracelet/gps/services/a/d;
-
-    const/4 v1, 0x4
-
-    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/gps/services/a/d;->a(I)I
-
-    const-string v0, " Changed to LBS "
-
-    invoke-static {p1, v0, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    :cond_0
-    :goto_0
-    return-void
-
-    :cond_1
-    const-string v0, " Current is LBS "
-
-    invoke-static {p1, v0, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/a;->a:Lcn/com/smartdevices/bracelet/gps/services/a/d;
-
-    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/gps/services/a/d;->a(I)I
-
-    const-string v0, " Changed to GPS "
-
-    invoke-static {p1, v0, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    goto :goto_0
-.end method
-
 .method public b(Lcn/com/smartdevices/bracelet/gps/b/e;)V
     .locals 1
 
@@ -817,6 +748,15 @@
 
     invoke-interface {v0, p1}, Lcn/com/smartdevices/bracelet/gps/b/s;->d(Lcn/com/smartdevices/bracelet/gps/model/c;)V
 
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/a;->j:Lcn/com/smartdevices/bracelet/gps/b/d;
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/a;->j:Lcn/com/smartdevices/bracelet/gps/b/d;
+
+    invoke-interface {v0, p1}, Lcn/com/smartdevices/bracelet/gps/b/d;->a(Lcn/com/smartdevices/bracelet/gps/model/c;)V
+
+    :cond_2
     return-void
 .end method
 

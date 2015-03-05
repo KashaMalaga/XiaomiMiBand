@@ -1,80 +1,70 @@
-.class public Lcom/g/a/p;
+.class Lcom/g/a/P;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final a:Ljava/lang/String; = "Android"
 
-.field public static final b:Ljava/lang/String; = "Android"
+# instance fields
+.field final synthetic a:Landroid/widget/TimePicker;
 
-.field public static final c:Ljava/lang/String; = "5.2.4"
+.field final synthetic b:I
 
-.field public static final d:Ljava/lang/String; = "5.2.4.1"
+.field final synthetic c:I
 
-.field public static final e:Ljava/lang/String; = "MobclickAgent"
-
-.field public static final f:[Ljava/lang/String;
-
-.field public static final g:[Ljava/lang/String;
-
-.field public static final h:Ljava/lang/String; = "umeng_net_report_policy"
-
-.field public static final i:Ljava/lang/String; = "umeng_net_report_interval"
-
-.field public static final j:Ljava/lang/String; = "umeng_last_config_time"
-
-.field public static final k:Ljava/lang/String; = "umeng_local_report_policy"
-
-.field public static final l:Ljava/lang/String; = "umeng_local_report_interval"
-
-.field public static final m:J = 0x5265c00L
-
-.field public static final n:J = 0x36ee80L
-
-.field public static final o:Z
+.field final synthetic d:Lcom/g/a/N;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
-
-    const/4 v4, 0x2
-
-    const/4 v3, 0x1
-
-    const/4 v2, 0x0
-
-    new-array v0, v4, [Ljava/lang/String;
-
-    const-string v1, "http://alog.umeng.com/app_logs"
-
-    aput-object v1, v0, v2
-
-    const-string v1, "http://alog.umeng.co/app_logs"
-
-    aput-object v1, v0, v3
-
-    sput-object v0, Lcom/g/a/p;->f:[Ljava/lang/String;
-
-    new-array v0, v4, [Ljava/lang/String;
-
-    const-string v1, "http://oc.umeng.com/check_config_update"
-
-    aput-object v1, v0, v2
-
-    const-string v1, "http://oc.umeng.co/check_config_update"
-
-    aput-object v1, v0, v3
-
-    sput-object v0, Lcom/g/a/p;->g:[Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
+.method constructor <init>(Lcom/g/a/N;Landroid/widget/TimePicker;II)V
     .locals 0
+
+    iput-object p1, p0, Lcom/g/a/P;->d:Lcom/g/a/N;
+
+    iput-object p2, p0, Lcom/g/a/P;->a:Landroid/widget/TimePicker;
+
+    iput p3, p0, Lcom/g/a/P;->b:I
+
+    iput p4, p0, Lcom/g/a/P;->c:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public run()V
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lcom/g/a/P;->a:Landroid/widget/TimePicker;
+
+    iget v1, p0, Lcom/g/a/P;->b:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TimePicker;->setCurrentHour(Ljava/lang/Integer;)V
+
+    iget-object v0, p0, Lcom/g/a/P;->a:Landroid/widget/TimePicker;
+
+    iget v1, p0, Lcom/g/a/P;->c:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/TimePicker;->setCurrentMinute(Ljava/lang/Integer;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
 .end method

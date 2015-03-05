@@ -20,7 +20,7 @@
 .method private static a(Landroid/content/Context;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
     .locals 5
 
-    const/4 v2, 0x0
+    const/4 v4, 0x0
 
     const-string v0, "connectivity"
 
@@ -36,9 +36,13 @@
 
     if-nez p2, :cond_0
 
+    new-array v2, v4, [Ljava/lang/Class;
+
     invoke-virtual {v1, p1, v2}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v1
+
+    new-array v2, v4, [Ljava/lang/Object;
 
     invoke-virtual {v1, v0, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -52,13 +56,11 @@
 
     new-array v2, v2, [Ljava/lang/Class;
 
-    const/4 v3, 0x0
-
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v4
+    move-result-object v3
 
-    aput-object v4, v2, v3
+    aput-object v3, v2, v4
 
     invoke-virtual {v1, p1, v2}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 

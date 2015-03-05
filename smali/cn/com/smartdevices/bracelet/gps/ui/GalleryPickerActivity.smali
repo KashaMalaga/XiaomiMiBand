@@ -54,7 +54,7 @@
 # instance fields
 .field private k:Landroid/widget/GridView;
 
-.field private l:Lcn/com/smartdevices/bracelet/gps/ui/q;
+.field private l:Lcn/com/smartdevices/bracelet/gps/ui/p;
 
 .field private m:Z
 
@@ -133,7 +133,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;->p:Lcn/com/smartdevices/bracelet/b/x;
 
-    const v2, 0x7f020107
+    const v2, 0x7f02010e
 
     invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/b/x;->b(I)V
 
@@ -148,10 +148,10 @@
     return-void
 .end method
 
-.method static synthetic b(Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;)Lcn/com/smartdevices/bracelet/gps/ui/q;
+.method static synthetic b(Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;)Lcn/com/smartdevices/bracelet/gps/ui/p;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;->l:Lcn/com/smartdevices/bracelet/gps/ui/q;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;->l:Lcn/com/smartdevices/bracelet/gps/ui/p;
 
     return-object v0
 .end method
@@ -161,15 +161,15 @@
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;->c()V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/q;
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/p;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;->p:Lcn/com/smartdevices/bracelet/b/x;
 
-    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/q;-><init>(Landroid/content/Context;Lcn/com/smartdevices/bracelet/b/x;)V
+    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/p;-><init>(Landroid/content/Context;Lcn/com/smartdevices/bracelet/b/x;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;->l:Lcn/com/smartdevices/bracelet/gps/ui/q;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;->l:Lcn/com/smartdevices/bracelet/gps/ui/p;
 
-    const v0, 0x7f0702f8
+    const v0, 0x7f070316
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;->findViewById(I)Landroid/view/View;
 
@@ -181,7 +181,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;->k:Landroid/widget/GridView;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;->l:Lcn/com/smartdevices/bracelet/gps/ui/q;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;->l:Lcn/com/smartdevices/bracelet/gps/ui/p;
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
@@ -195,9 +195,9 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;->k:Landroid/widget/GridView;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/gps/ui/n;
+    new-instance v1, Lcn/com/smartdevices/bracelet/gps/ui/m;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/gps/ui/n;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/gps/ui/m;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setOnScrollListener(Landroid/widget/AbsListView$OnScrollListener;)V
 
@@ -207,9 +207,9 @@
 
     move-result-object v0
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/gps/ui/o;
+    new-instance v1, Lcn/com/smartdevices/bracelet/gps/ui/n;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/gps/ui/o;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/gps/ui/n;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
@@ -235,7 +235,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f080361
+    const v1, 0x7f08036e
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;->getString(I)Ljava/lang/String;
 
@@ -243,9 +243,9 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/gps/ui/p;
+    new-instance v1, Lcn/com/smartdevices/bracelet/gps/ui/o;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/gps/ui/p;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/gps/ui/o;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -284,9 +284,9 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;->l:Lcn/com/smartdevices/bracelet/gps/ui/q;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;->l:Lcn/com/smartdevices/bracelet/gps/ui/p;
 
-    invoke-virtual {v0, p2}, Lcn/com/smartdevices/bracelet/gps/ui/q;->swapCursor(Landroid/database/Cursor;)Landroid/database/Cursor;
+    invoke-virtual {v0, p2}, Lcn/com/smartdevices/bracelet/gps/ui/p;->swapCursor(Landroid/database/Cursor;)Landroid/database/Cursor;
 
     return-void
 .end method
@@ -302,7 +302,7 @@
 
     move-result v2
 
-    const v3, 0x7f0703b0
+    const v3, 0x7f0703cb
 
     if-ne v2, v3, :cond_1
 
@@ -391,7 +391,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f0300a3
+    const v0, 0x7f0300a7
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;->setContentView(I)V
 
@@ -596,9 +596,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/gps/ui/r;
+    check-cast v0, Lcn/com/smartdevices/bracelet/gps/ui/q;
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/gps/ui/r;->b:Ljava/lang/String;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/gps/ui/q;->b:Ljava/lang/String;
 
     const-string v1, "GalleryPickerActivity"
 
@@ -661,11 +661,11 @@
         }
     .end annotation
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;->l:Lcn/com/smartdevices/bracelet/gps/ui/q;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;->l:Lcn/com/smartdevices/bracelet/gps/ui/p;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/q;->swapCursor(Landroid/database/Cursor;)Landroid/database/Cursor;
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/p;->swapCursor(Landroid/database/Cursor;)Landroid/database/Cursor;
 
     return-void
 .end method
@@ -745,9 +745,9 @@
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/b/x;->b(Z)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;->l:Lcn/com/smartdevices/bracelet/gps/ui/q;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;->l:Lcn/com/smartdevices/bracelet/gps/ui/p;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/ui/q;->notifyDataSetChanged()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/ui/p;->notifyDataSetChanged()V
 
     const-string v0, "PageWaterMarkGallery"
 

@@ -170,7 +170,7 @@
 
     const/16 v1, 0x258
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/g;->h(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/g;->i(I)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/a;->A:Lcn/com/smartdevices/bracelet/chart/g;
 
@@ -511,7 +511,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->h()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->j()Z
 
     move-result v0
 

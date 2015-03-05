@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:background="#fff9f9f9" android:layout_width="fill_parent" android:layout_height="fill_parent"
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <FrameLayout android:id="@id/header" android:layout_width="fill_parent" android:layout_height="@dimen/common_header_height">
         <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">

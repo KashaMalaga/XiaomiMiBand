@@ -27,7 +27,7 @@
 
 .field private i:Lcn/com/smartdevices/bracelet/ui/widget/c;
 
-.field private j:Lcn/com/smartdevices/bracelet/weight/family/u;
+.field private j:Lcn/com/smartdevices/bracelet/weight/family/p;
 
 .field private k:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -199,7 +199,7 @@
     goto :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x7f0703a8
+    .packed-switch 0x7f0703c3
         :pswitch_0
     .end packed-switch
 .end method
@@ -230,7 +230,7 @@
 
     invoke-virtual {p0, v0, v1}, Lcn/com/smartdevices/bracelet/weight/family/WeightSelectUserActivity;->overridePendingTransition(II)V
 
-    const v0, 0x7f0300cd
+    const v0, 0x7f0300d1
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/WeightSelectUserActivity;->setContentView(I)V
 
@@ -301,7 +301,7 @@
     iput v0, p0, Lcn/com/smartdevices/bracelet/weight/family/WeightSelectUserActivity;->p:I
 
     :cond_0
-    const v0, 0x7f0703a8
+    const v0, 0x7f0703c3
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/WeightSelectUserActivity;->findViewById(I)Landroid/view/View;
 
@@ -315,7 +315,7 @@
 
     invoke-virtual {v0, p0}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0703a6
+    const v0, 0x7f0703c0
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/WeightSelectUserActivity;->findViewById(I)Landroid/view/View;
 
@@ -325,7 +325,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/WeightSelectUserActivity;->h:Landroid/support/v4/view/ViewPager;
 
-    const v0, 0x7f0703a7
+    const v0, 0x7f0703c2
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/WeightSelectUserActivity;->findViewById(I)Landroid/view/View;
 
@@ -335,7 +335,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/WeightSelectUserActivity;->i:Lcn/com/smartdevices/bracelet/ui/widget/c;
 
-    const v0, 0x7f0701ea
+    const v0, 0x7f070204
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/weight/family/WeightSelectUserActivity;->findViewById(I)Landroid/view/View;
 
@@ -575,17 +575,17 @@
     goto :goto_2
 
     :cond_9
-    new-instance v0, Lcn/com/smartdevices/bracelet/weight/family/u;
+    new-instance v0, Lcn/com/smartdevices/bracelet/weight/family/p;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/WeightSelectUserActivity;->k:Ljava/util/List;
 
-    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/weight/family/u;-><init>(Lcn/com/smartdevices/bracelet/weight/family/WeightSelectUserActivity;Ljava/util/List;)V
+    invoke-direct {v0, p0, v1}, Lcn/com/smartdevices/bracelet/weight/family/p;-><init>(Lcn/com/smartdevices/bracelet/weight/family/WeightSelectUserActivity;Ljava/util/List;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/WeightSelectUserActivity;->j:Lcn/com/smartdevices/bracelet/weight/family/u;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/WeightSelectUserActivity;->j:Lcn/com/smartdevices/bracelet/weight/family/p;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/WeightSelectUserActivity;->h:Landroid/support/v4/view/ViewPager;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/WeightSelectUserActivity;->j:Lcn/com/smartdevices/bracelet/weight/family/u;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/WeightSelectUserActivity;->j:Lcn/com/smartdevices/bracelet/weight/family/p;
 
     invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPager;->a(Landroid/support/v4/view/ad;)V
 

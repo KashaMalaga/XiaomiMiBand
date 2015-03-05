@@ -77,7 +77,7 @@ Terms of Service: %2$s"</string>
     <string name="unit_min">min</string>
     <string name="unit_min_short">m</string>
     <string name="unit_sec_short">s</string>
-    <string name="unit_mile">英里</string>
+    <string name="unit_mile">miles</string>
     <string name="upgrade_tip">Update available</string>
     <string name="hot_des">Energy</string>
     <string name="noti_bracelet_low_battery_title">Low battery</string>
@@ -88,7 +88,7 @@ Terms of Service: %2$s"</string>
     <string name="bt_operation_failed_tips">Bluetooth is not working properly. Wait a minute or two and try again.</string>
     <string name="multi_devices_info">"Make sure you're at least 10 meters away from other bands and try again."</string>
     <string name="multi_devices_title">Too many devices nearby</string>
-    <string name="search_bracelet_again">Try again</string>
+    <string name="search_again">Try again</string>
     <string name="search_devices_info">Strap the band around your wrist and keep your device close by.</string>
     <string name="search_bracelet_ok">Band detected</string>
     <string name="found_bracelet_info">"When the band's lights start flashing, tap the metal sensor to pair."</string>
@@ -107,14 +107,14 @@ Terms of Service: %2$s"</string>
     <string name="bracelet_login_info">Use your Mi Account to set, track, and follow your health and fitness data.</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
-    <string name="unit_metric">公制</string>
-    <string name="unit_british">英制</string>
-    <string name="unit_metric_detail">公制（米、公里）</string>
-    <string name="unit_british_detail">英制（英尺、英里）</string>
+    <string name="unit_metric">Metric System</string>
+    <string name="unit_british">British System</string>
+    <string name="unit_metric_detail">Metric System (meter, kilometer)</string>
+    <string name="unit_british_detail">British System (foot, inch)</string>
     <string name="cm">cm</string>
     <string name="metre">m</string>
-    <string name="unit_inch">英寸</string>
-    <string name="unit_foot">英尺</string>
+    <string name="unit_inch">inches</string>
+    <string name="unit_foot">feet</string>
     <string name="share">Share</string>
     <string name="person_info_finished_info">"OK, you're all set!"</string>
     <string name="kg">kg</string>
@@ -161,7 +161,7 @@ Terms of Service: %2$s"</string>
     <string name="mili_name_too_long">The name you entered is too long.</string>
     <string name="mili_rename_fail">"Couldn't change band name."</string>
     <string name="mili_unbind_question">"Your band won't be able to record your activity and sleep data."</string>
-    <string name="weight_unbind_question">"Your band won't be able to record your weight data."</string>
+    <string name="weight_unbind_question">"Your scale won't be able to record your weight data."</string>
     <string name="share_to_title">Mi Band</string>
     <string name="share_to_content">Share your progress.</string>
     <string name="share_goal_tips_succ">I reached my goal today!</string>
@@ -181,6 +181,7 @@ or about 12,000 steps a day for a healthy lifestyle."</string>
     <string name="mon_sat">Mon to Sat</string>
     <string name="device_not_found_not_knocked">"Can't find band. To pair, tap the metal part of the band when it flashes."</string>
     <string name="statistic">States</string>
+    <string name="mili_weight_unbind_info">解除绑定后，手机将无法连接到体重称，此时手机可以绑定其他体重称</string>
     <string name="mili_unbind_question_content">After you unpair, you can pair with a new band.</string>
     <string name="mili_unbind_question_content_1" />
     <string name="mili_reset_info">Reset band to factory settings?</string>
@@ -583,6 +584,12 @@ Fell asleep at %3$s | Woke up at %4$s"</string>
     <string name="weight_dynamic_visitor_title">%1$s weight %2$s%3$s</string>
     <string name="weight_dynamic_detail">%1$s</string>
     <string name="weight_guest">Guest</string>
+    <string name="set_length_unit">设置长度单位</string>
+    <string name="set_weight_unit">设置重量单位</string>
+    <string name="weight_unit_metric">公制（公斤、千克）</string>
+    <string name="weight_unit_british">英制（镑）</string>
+    <string name="weight_unit_shijin">市斤(1斤=500克)</string>
+    <string name="weight_unit_text_info">你已经绑定了体重称，重量单位将以体重称的设置为准，打开体重称反面的电池盖可以调整重量单位</string>
     <string name="bind_devices">Pair devices</string>
     <string name="bind_mi_band">Pair Mi Band</string>
     <string name="bind_mi_weight">Pair scale</string>
@@ -697,7 +704,8 @@ add Mi Fit to the white list of the 3rd party manager if exists."</string>
     <string name="daily_sport_report">Daily sport result</string>
     <string name="today_steps">Today steps</string>
     <string name="daily_consume">Consumed today（Cal）</string>
-    <string name="week_total_distance">Week distance（Km）</string>
+    <string name="week_total_distance">"Week distance 
+(km)"</string>
     <string name="continue_reach_goal_days">"Longest 
 streak"</string>
     <string name="equals_fat">"Equals to burn 
@@ -723,6 +731,13 @@ saved %2$s gallons of gas"</string>
     <string name="noti_weight_low_battery_title">"Scale's battery is low"</string>
     <string name="noti_weight_low_battery_content">"You need to replace the scale's battery. You'll need to pair the scale again after switching out the battery."</string>
     <string name="connect_to_retrive">No internet.</string>
+    <string name="week_total_distance_miles">"Week total 
+(miles)"</string>
+    <string name="found_weight_scale_title">已发现体重秤, 请确认秤的显示的数值和下方数值一样, 即可确认绑定</string>
+    <string name="confirm_pair">确认绑定</string>
+    <string name="signal_strong">Strong</string>
+    <string name="signal_weak">Weak</string>
+    <string name="signal_none">None</string>
     <string name="lab_factory_title">Additional features</string>
     <string name="lab_factory_sport_type_situp">Sit-ups</string>
     <string name="lab_factory_sport_type_ropeskipping">Jumping rope</string>
@@ -902,6 +917,7 @@ saved %2$s gallons of gas"</string>
     <string name="watermark_btn_confirm">OK</string>
     <string name="watermark_guide_tips">Touch to move</string>
     <string name="no_bracelet_tips">(only available when Mi Band connected)</string>
+    <string name="watermark_failed_to_create_contour_track">Failed to create track, please check storage left.</string>
     <string name="label_runner_group">Runner Club</string>
     <string name="action_mark">Behavior tagging</string>
     <string name="action_sleep">Sleep</string>

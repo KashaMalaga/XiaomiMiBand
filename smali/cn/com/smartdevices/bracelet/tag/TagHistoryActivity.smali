@@ -56,7 +56,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030035
+    const v0, 0x7f030036
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/tag/TagHistoryActivity;->setContentView(I)V
 
@@ -68,7 +68,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f070102
+    const v0, 0x7f070116
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/tag/TagHistoryActivity;->findViewById(I)Landroid/view/View;
 

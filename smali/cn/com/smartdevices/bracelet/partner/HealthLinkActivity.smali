@@ -88,7 +88,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v2, 0x7f080268
+    const v2, 0x7f08026f
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
 
@@ -153,7 +153,7 @@
 
     if-ge v3, v1, :cond_0
 
-    const v1, 0x7f0300c3
+    const v1, 0x7f0300c7
 
     const/4 v2, 0x0
 
@@ -161,7 +161,7 @@
 
     move-result-object v7
 
-    const v1, 0x7f0701ea
+    const v1, 0x7f070204
 
     invoke-virtual {v7, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

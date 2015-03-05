@@ -592,7 +592,7 @@
 
     const/4 v3, 0x0
 
-    const v10, 0x7f0702c5
+    const v10, 0x7f0702e3
 
     const/16 v9, 0x8
 
@@ -612,13 +612,13 @@
 
     move-result-object v0
 
-    const v2, 0x7f03009c
+    const v2, 0x7f0300a0
 
     invoke-virtual {v0, v2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p2
 
-    const v0, 0x7f0702c6
+    const v0, 0x7f0702e4
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -628,7 +628,7 @@
 
     iput-object v0, v1, Lcn/com/smartdevices/bracelet/lua/e;->a:Landroid/widget/TextView;
 
-    const v0, 0x7f0702c7
+    const v0, 0x7f0702e5
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -638,7 +638,7 @@
 
     iput-object v0, v1, Lcn/com/smartdevices/bracelet/lua/e;->b:Landroid/widget/TextView;
 
-    const v0, 0x7f0702c4
+    const v0, 0x7f0702e2
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

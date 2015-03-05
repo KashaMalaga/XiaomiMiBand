@@ -9,7 +9,7 @@
         "<",
         "Ljava/lang/String;",
         "Ljava/lang/Integer;",
-        "Lcn/com/smartdevices/bracelet/ui/dJ;",
+        "Lcn/com/smartdevices/bracelet/ui/dO;",
         ">;"
     }
 .end annotation
@@ -32,7 +32,7 @@
 
 
 # virtual methods
-.method protected varargs a([Ljava/lang/String;)Lcn/com/smartdevices/bracelet/ui/dJ;
+.method protected varargs a([Ljava/lang/String;)Lcn/com/smartdevices/bracelet/ui/dO;
     .locals 5
 
     const/4 v1, 0x0
@@ -97,9 +97,9 @@
 
     if-eqz v0, :cond_0
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/ui/dJ;
+    new-instance v1, Lcn/com/smartdevices/bracelet/ui/dO;
 
-    invoke-direct {v1, v2}, Lcn/com/smartdevices/bracelet/ui/dJ;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Lcn/com/smartdevices/bracelet/ui/dO;-><init>(Ljava/lang/String;)V
 
     :cond_0
     return-object v1
@@ -128,12 +128,12 @@
     goto :goto_1
 .end method
 
-.method protected a(Lcn/com/smartdevices/bracelet/ui/dJ;)V
+.method protected a(Lcn/com/smartdevices/bracelet/ui/dO;)V
     .locals 1
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/o;->a:Lcn/com/smartdevices/bracelet/partner/WebActivity;
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->a(Lcn/com/smartdevices/bracelet/ui/dJ;)V
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->a(Lcn/com/smartdevices/bracelet/ui/dO;)V
 
     return-void
 .end method
@@ -143,7 +143,7 @@
 
     check-cast p1, [Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/partner/o;->a([Ljava/lang/String;)Lcn/com/smartdevices/bracelet/ui/dJ;
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/partner/o;->a([Ljava/lang/String;)Lcn/com/smartdevices/bracelet/ui/dO;
 
     move-result-object v0
 
@@ -153,9 +153,9 @@
 .method protected synthetic onPostExecute(Ljava/lang/Object;)V
     .locals 0
 
-    check-cast p1, Lcn/com/smartdevices/bracelet/ui/dJ;
+    check-cast p1, Lcn/com/smartdevices/bracelet/ui/dO;
 
-    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/partner/o;->a(Lcn/com/smartdevices/bracelet/ui/dJ;)V
+    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/partner/o;->a(Lcn/com/smartdevices/bracelet/ui/dO;)V
 
     return-void
 .end method

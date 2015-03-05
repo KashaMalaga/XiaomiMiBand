@@ -26,7 +26,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/view/PersonPageUserInfoView;->b:Landroid/view/LayoutInflater;
 
-    const v1, 0x7f0300a2
+    const v1, 0x7f0300a6
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 

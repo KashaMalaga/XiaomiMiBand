@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:background="#fff9f9f9" android:layout_width="fill_parent" android:layout_height="fill_parent"
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <FrameLayout android:id="@id/header" android:layout_width="fill_parent" android:layout_height="@dimen/common_header_height">
         <LinearLayout android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
@@ -13,38 +13,20 @@
         <View android:layout_gravity="bottom" android:background="#1affffff" android:layout_width="fill_parent" android:layout_height="1.0px" />
     </FrameLayout>
     <view android:scrollbars="none" android:fadingEdgeLength="25.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:overScrollMode="never" android:requiresFadingEdge="vertical" class="cn.com.smartdevices.bracelet.ui.StatisticFragment$FadingEdgeScrollView">
-        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <FrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/statistic_chart_height">
-                <View android:layout_gravity="bottom" android:id="@id/chart_date_line_bg" android:background="#fff2f2f2" android:layout_width="fill_parent" android:layout_height="28.0dip" />
-                <cn.com.smartdevices.bracelet.chart.StatisticChartView android:id="@id/statistic_chart" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-                <cn.com.smartdevices.bracelet.chart.StatisticChartView android:id="@id/next_statistic_chart" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-                <cn.com.smartdevices.bracelet.weight.family.UserInfoImgWithName android:id="@id/user_picker" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="15.0dip" />
-            </FrameLayout>
-            <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
-                <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/statistic_info_min_height">
-                    <include android:layout_gravity="center" android:id="@id/info_sleep_daily_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/fragment_dynamic_detail_info_sleep" />
-                    <include android:layout_gravity="center" android:id="@id/info_sleep_weekly_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/fragment_statistic_info_weekly_monthly_sleep" />
-                    <include android:layout_gravity="center" android:id="@id/info_sleep_monthly_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/fragment_statistic_info_weekly_monthly_sleep" />
-                </FrameLayout>
-                <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/statistic_info_min_height">
-                    <include android:layout_gravity="center" android:id="@id/info_step_daily_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/fragment_dynamic_detail_info_step" />
-                    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/statistic_info_min_height">
-                        <include android:layout_gravity="center" android:id="@id/info_step_weekly_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/fragment_statistic_info_weekly_monthly_step" />
-                        <include android:layout_gravity="center" android:id="@id/info_step_monthly_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/fragment_statistic_info_weekly_monthly_step" />
-                    </FrameLayout>
-                </FrameLayout>
-                <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/statistic_info_min_height">
-                    <include android:layout_gravity="center" android:id="@id/info_weight_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/fragment_statistic_info_weight" />
-                </FrameLayout>
-            </FrameLayout>
-        </LinearLayout>
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ViewStub android:id="@id/chart_stepsleep_layout" android:layout="@layout/fragment_statistic_chart_layout_stepsleep" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <ViewStub android:id="@id/chart_weight_layout" android:layout="@layout/fragment_statistic_chart_layout_weight" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </FrameLayout>
     </view>
     <FrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/common_footer_height">
         <View android:background="#33000000" android:layout_width="fill_parent" android:layout_height="1.0px" />
-        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
-            <ImageButton android:id="@id/mode_statistic_zoom_in" android:background="@null" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_statistic_mode_zoom_in" />
-            <ImageButton android:id="@id/mode_switch" android:background="@null" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" />
-            <ImageButton android:id="@id/mode_statistic_zoom_out" android:background="@null" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:src="@drawable/btn_statistic_mode_zoom_out" />
-        </LinearLayout>
+        <RelativeLayout android:gravity="center_vertical" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageButton android:id="@id/mode_statistic_zoom_in" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="63.0dip" android:src="@drawable/btn_statistic_mode_zoom_in" android:layout_toLeftOf="@id/center" android:layout_centerVertical="true" />
+            <ImageButton android:id="@id/weight_report_dele_btn" android:background="@null" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/btn_statistic_dele" android:layout_toLeftOf="@id/center" android:layout_centerVertical="true" />
+            <ImageButton android:id="@id/mode_switch" android:background="@null" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+            <View android:id="@id/center" android:layout_width="1.0px" android:layout_height="1.0px" android:layout_centerInParent="true" />
+            <ImageButton android:id="@id/weight_report_edit_btn" android:background="@null" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:src="@drawable/btn_statistic_edit" android:layout_toRightOf="@id/center" android:layout_centerVertical="true" />
+            <ImageButton android:id="@id/mode_statistic_zoom_out" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="63.0dip" android:src="@drawable/btn_statistic_mode_zoom_out" android:layout_toRightOf="@id/center" android:layout_centerVertical="true" />
+        </RelativeLayout>
     </FrameLayout>
 </LinearLayout>

@@ -62,7 +62,7 @@
 .method protected a()I
     .locals 1
 
-    const v0, 0x7f03007e
+    const v0, 0x7f030080
 
     return v0
 .end method
@@ -121,7 +121,7 @@
     nop
 
     :pswitch_data_0
-    .packed-switch 0x7f0701a5
+    .packed-switch 0x7f0701bf
         :pswitch_1
         :pswitch_0
         :pswitch_2
@@ -155,7 +155,7 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0701a5
+    const v0, 0x7f0701bf
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -163,7 +163,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0701a7
+    const v0, 0x7f0701c1
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

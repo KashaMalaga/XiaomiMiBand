@@ -51,11 +51,11 @@
 
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030096
+    const v0, 0x7f03009a
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/NewSportsGaodeActivity;->setContentView(I)V
 
-    const v0, 0x7f0700e2
+    const v0, 0x7f0700f5
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/NewSportsGaodeActivity;->findViewById(I)Landroid/view/View;
 

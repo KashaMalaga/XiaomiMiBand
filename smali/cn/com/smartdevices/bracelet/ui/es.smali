@@ -1,31 +1,22 @@
 .class public Lcn/com/smartdevices/bracelet/ui/es;
 .super Lcn/com/smartdevices/bracelet/ui/W;
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
 
 # static fields
-.field public static final a:Ljava/lang/String; = "TITLE"
-
-.field public static final b:Ljava/lang/String; = "CONTENT"
-
-.field public static final c:Ljava/lang/String; = "NEGATIVETEXT"
-
-.field public static final f:Ljava/lang/String; = "POSITIVETEXT"
+.field private static final a:Ljava/lang/String; = "UserAgreementFragment"
 
 
 # instance fields
+.field private b:Landroid/widget/TextView;
+
+.field private c:Z
+
+.field private f:Landroid/widget/CheckBox;
+
 .field private g:Landroid/widget/TextView;
-
-.field private h:Landroid/widget/TextView;
-
-.field private i:Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;
-
-.field private j:Ljava/lang/String;
-
-.field private k:Ljava/lang/String;
-
-.field private l:Ljava/lang/String;
-
-.field private m:Ljava/lang/String;
 
 
 # direct methods
@@ -42,87 +33,169 @@
 .method protected a()I
     .locals 1
 
-    const v0, 0x7f030062
+    const v0, 0x7f030093
 
     return v0
 .end method
 
+.method protected c()V
+    .locals 2
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/W;->c()V
+
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/es;->c:Z
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/es;->dismiss()V
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->l(Z)V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/es;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v1, v1, v1, v0}, Lcn/com/smartdevices/bracelet/D;->a(ZZZLandroid/content/Context;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/es;->f:Landroid/widget/CheckBox;
+
+    invoke-virtual {v0}, Landroid/widget/CheckBox;->isChecked()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    :cond_0
+    return-void
+.end method
+
+.method protected d()V
+    .locals 1
+
+    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/W;->d()V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/es;->dismiss()V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/es;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
+
+    return-void
+.end method
+
+.method protected d_()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onCreate(Landroid/os/Bundle;)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/W;->onCreate(Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
 .method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 3
+    .locals 7
+
+    const/16 v6, 0x8
+
+    const/4 v5, 0x0
 
     invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/W;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object v1
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/es;->getArguments()Landroid/os/Bundle;
+    const v0, 0x7f0701cf
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    const-string v2, "TITLE"
+    check-cast v0, Landroid/widget/TextView;
 
-    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/es;->b:Landroid/widget/TextView;
 
-    move-result-object v0
+    const v0, 0x7f0800e0
 
-    if-nez v0, :cond_0
-
-    const-string v0, "TITLE"
-
-    :goto_0
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/es;->j:Ljava/lang/String;
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/es;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/es;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v2, "CONTENT"
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/es;->b:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    const v3, 0x7f08021e
 
-    move-result-object v0
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
 
-    if-nez v0, :cond_1
+    new-instance v2, Landroid/text/SpannableString;
 
-    const-string v0, "CONTENT"
+    invoke-direct {v2, v0}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
 
-    :goto_1
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/es;->k:Ljava/lang/String;
+    new-instance v3, Lcn/com/smartdevices/bracelet/ui/et;
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/es;->getArguments()Landroid/os/Bundle;
+    invoke-direct {v3, p0}, Lcn/com/smartdevices/bracelet/ui/et;-><init>(Lcn/com/smartdevices/bracelet/ui/es;)V
 
-    move-result-object v0
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-    const-string v2, "NEGATIVETEXT"
+    move-result v0
 
-    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    const/16 v4, 0x21
 
-    move-result-object v0
+    invoke-virtual {v2, v3, v5, v0, v4}, Landroid/text/SpannableString;->setSpan(Ljava/lang/Object;III)V
 
-    if-nez v0, :cond_2
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/es;->b:Landroid/widget/TextView;
 
-    const-string v0, "NEGATIVETEXT"
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/E;->a(Landroid/widget/TextView;Landroid/text/SpannableString;)V
 
-    :goto_2
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/es;->l:Ljava/lang/String;
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/es;->getArguments()Landroid/os/Bundle;
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
 
-    const-string v2, "POSITIVETEXT"
-
-    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
 
     move-result-object v0
 
-    if-nez v0, :cond_3
+    sget-object v2, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
-    const-string v0, "POSITIVETEXT"
+    invoke-virtual {v2}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
 
-    :goto_3
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/es;->m:Ljava/lang/String;
+    move-result-object v2
 
-    const v0, 0x7f0701fc
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/es;->b:Landroid/widget/TextView;
+
+    const-string v2, "."
+
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->append(Ljava/lang/CharSequence;)V
+
+    :cond_0
+    const v0, 0x7f0702ba
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/CheckBox;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/es;->f:Landroid/widget/CheckBox;
+
+    const v0, 0x7f0702bb
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -132,101 +205,90 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/es;->g:Landroid/widget/TextView;
 
+    sget-object v0, Ljava/util/Locale;->TRADITIONAL_CHINESE:Ljava/util/Locale;
+
+    invoke-virtual {v0}, Ljava/util/Locale;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/util/Locale;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/es;->f:Landroid/widget/CheckBox;
+
+    invoke-virtual {v0, v5}, Landroid/widget/CheckBox;->setVisibility(I)V
+
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/es;->g:Landroid/widget/TextView;
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/es;->j:Ljava/lang/String;
+    invoke-virtual {v0, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/es;->g:Landroid/widget/TextView;
 
-    const v0, 0x7f0701fd
+    const v2, 0x7f080235
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
 
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/es;->h:Landroid/widget/TextView;
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/es;->h:Landroid/widget/TextView;
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/es;->k:Ljava/lang/String;
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    const v0, 0x7f0701fe
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/es;->e()Landroid/widget/TextView;
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/es;->f:Landroid/widget/CheckBox;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/es;->i:Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;
+    new-instance v3, Lcn/com/smartdevices/bracelet/ui/eu;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/es;->i:Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;
+    invoke-direct {v3, p0, v0}, Lcn/com/smartdevices/bracelet/ui/eu;-><init>(Lcn/com/smartdevices/bracelet/ui/es;Landroid/widget/TextView;)V
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/es;->m:Ljava/lang/String;
+    invoke-virtual {v2, v3}, Landroid/widget/CheckBox;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->a(Ljava/lang/String;)V
+    :goto_0
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/es;->getDialog()Landroid/app/Dialog;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/es;->i:Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;
+    move-result-object v0
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/es;->l:Ljava/lang/String;
+    const/4 v2, 0x1
 
-    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/ui/widget/DimPanelBottomBar;->b(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Landroid/app/Dialog;->setCanceledOnTouchOutside(Z)V
 
     return-object v1
 
-    :cond_0
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/es;->getArguments()Landroid/os/Bundle;
+    :cond_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/es;->f:Landroid/widget/CheckBox;
 
-    move-result-object v0
+    invoke-virtual {v0, v6}, Landroid/widget/CheckBox;->setVisibility(I)V
 
-    const-string v2, "TITLE"
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/es;->g:Landroid/widget/TextView;
 
-    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    invoke-virtual {v0, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto :goto_0
+.end method
 
-    :cond_1
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/es;->getArguments()Landroid/os/Bundle;
+.method public onDestroy()V
+    .locals 1
 
-    move-result-object v0
+    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/W;->onDestroy()V
 
-    const-string v2, "CONTENT"
+    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/es;->c:Z
 
-    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    if-nez v0, :cond_0
 
-    move-result-object v0
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/es;->getArguments()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/es;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    const-string v2, "NEGATIVETEXT"
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
-    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_2
-
-    :cond_3
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/es;->getArguments()Landroid/os/Bundle;
-
-    move-result-object v0
-
-    const-string v2, "POSITIVETEXT"
-
-    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_3
+    :cond_0
+    return-void
 .end method

@@ -348,7 +348,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->aj()Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->ai()Lcom/xiaomi/hm/bleservice/profile/WeightHwInfo;
 
     move-result-object v1
 
@@ -601,7 +601,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f03003a
+    const v0, 0x7f03003b
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/ble/WeightTestAcitvity;->setContentView(I)V
 
@@ -621,7 +621,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/ble/WeightTestAcitvity;->f:Lcn/com/smartdevices/ble/d;
 
-    const v0, 0x7f07017b
+    const v0, 0x7f07018f
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/ble/WeightTestAcitvity;->findViewById(I)Landroid/view/View;
 

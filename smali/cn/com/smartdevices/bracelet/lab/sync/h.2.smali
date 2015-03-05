@@ -422,7 +422,7 @@
 
     const-string v1, "uuid"
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->ai()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->ah()Ljava/lang/String;
 
     move-result-object v2
 

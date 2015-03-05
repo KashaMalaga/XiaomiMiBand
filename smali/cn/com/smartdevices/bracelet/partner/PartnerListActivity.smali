@@ -38,7 +38,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f08035c
+    const v1, 0x7f080369
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->getString(I)Ljava/lang/String;
 
@@ -217,7 +217,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f03002f
+    const v0, 0x7f030030
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->setContentView(I)V
 
@@ -229,7 +229,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f08035c
+    const v1, 0x7f080369
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -253,7 +253,7 @@
 
     iput-object v1, p0, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->b:Lcn/com/smartdevices/bracelet/partner/j;
 
-    const v0, 0x7f070120
+    const v0, 0x7f070134
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/PartnerListActivity;->findViewById(I)Landroid/view/View;
 

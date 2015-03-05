@@ -156,7 +156,7 @@
 
     iget-object v3, v3, Lcn/com/smartdevices/bracelet/activity/f;->b:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
-    const v4, 0x7f0800e0
+    const v4, 0x7f0800e1
 
     invoke-virtual {v3, v4}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->getString(I)Ljava/lang/String;
 
@@ -325,7 +325,7 @@
 
     invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/activity/h;-><init>(Lcn/com/smartdevices/bracelet/activity/g;)V
 
-    invoke-static {v0, v1, v4, v5, v2}, Lcn/com/smartdevices/bracelet/E;->a(Landroid/content/Context;Ljava/lang/String;JLcn/com/smartdevices/bracelet/P;)V
+    invoke-static {v0, v1, v4, v5, v2}, Lcn/com/smartdevices/bracelet/E;->a(Landroid/content/Context;Ljava/lang/String;JLcn/com/smartdevices/bracelet/S;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/g;->a:Lcn/com/smartdevices/bracelet/activity/f;
 

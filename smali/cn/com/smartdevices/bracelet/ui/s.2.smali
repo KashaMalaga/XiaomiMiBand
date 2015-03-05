@@ -218,21 +218,21 @@
 
     move-result-wide v2
 
-    sub-long/2addr v0, v2
+    sub-long v2, v0, v2
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->abs(J)J
+    invoke-static {v2, v3}, Ljava/lang/Math;->abs(J)J
 
-    move-result-wide v0
+    move-result-wide v2
 
-    const-wide/32 v2, 0xea60
+    const-wide/32 v6, 0xea60
 
-    div-long/2addr v0, v2
+    div-long/2addr v2, v6
 
-    const-wide/16 v2, 0x0
+    const-wide/16 v6, 0x0
 
-    cmp-long v0, v0, v2
+    cmp-long v2, v2, v6
 
-    if-lez v0, :cond_0
+    if-lez v2, :cond_2
 
     const-string v0, "BaseSCActivity"
 
@@ -292,28 +292,63 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/s;->b:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;->i(Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;)Landroid/content/Context;
-
-    move-result-object v0
-
-    const v1, 0x7f08021a
-
-    const/4 v2, 0x1
-
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
     goto/16 :goto_0
 
     :catch_0
     move-exception v0
+
+    goto/16 :goto_0
+
+    :cond_2
+    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0, v1}, Ljava/util/Calendar;->setTimeInMillis(J)V
+
+    invoke-static {}, Lcn/com/smartdevices/bracelet/s;->a()Lcn/com/smartdevices/bracelet/s;
+
+    move-result-object v0
+
+    new-instance v1, Lcn/com/smartdevices/bracelet/model/SportDay;
+
+    invoke-direct {v1, v2}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>(Ljava/util/Calendar;)V
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/SportDay;->getKey()Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v2, Lcn/com/smartdevices/bracelet/w;
+
+    invoke-direct {v2}, Lcn/com/smartdevices/bracelet/w;-><init>()V
+
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/s;->a(Ljava/lang/String;Lcn/com/smartdevices/bracelet/w;)I
+
+    move-result v0
+
+    const-string v1, "BaseSCActivity"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "deleteDataAfterDate:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto/16 :goto_0
 .end method

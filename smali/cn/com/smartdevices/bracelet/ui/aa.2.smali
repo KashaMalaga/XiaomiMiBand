@@ -102,7 +102,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/aa;->a:Lcn/com/smartdevices/bracelet/ui/Z;
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/Z;->b(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/Z;->c(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
 
     move-result-object v2
 
@@ -150,7 +150,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/aa;->a:Lcn/com/smartdevices/bracelet/ui/Z;
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/Z;->c(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/Z;->b(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
 
     move-result-object v2
 
@@ -166,7 +166,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aa;->a:Lcn/com/smartdevices/bracelet/ui/Z;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/Z;->c(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/Z;->b(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
 
     move-result-object v0
 
@@ -180,11 +180,11 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aa;->a:Lcn/com/smartdevices/bracelet/ui/Z;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/Z;->c(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/Z;->b(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
 
     move-result-object v0
 
@@ -198,7 +198,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aa;->a:Lcn/com/smartdevices/bracelet/ui/Z;
 
@@ -223,7 +223,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->i()Lcn/com/smartdevices/bracelet/chart/b/d;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->k()Lcn/com/smartdevices/bracelet/chart/b/d;
 
     move-result-object v0
 
@@ -254,51 +254,20 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aa;->a:Lcn/com/smartdevices/bracelet/ui/Z;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/Z;->c(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
-
-    move-result-object v0
-
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aa;->a:Lcn/com/smartdevices/bracelet/ui/Z;
 
     invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/Z;->b(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/model/SportDay;->equals(Lcn/com/smartdevices/bracelet/model/SportDay;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aa;->a:Lcn/com/smartdevices/bracelet/ui/Z;
-
-    const v1, 0x7f080126
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/Z;->a(I)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/Z;->e(Lcn/com/smartdevices/bracelet/ui/Z;Lcn/com/smartdevices/bracelet/model/SportDay;)V
 
     goto/16 :goto_0
 
     :cond_2
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aa;->a:Lcn/com/smartdevices/bracelet/ui/Z;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/aa;->a:Lcn/com/smartdevices/bracelet/ui/Z;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/Z;->c(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/SportDay;->formatStringDay()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/Z;->a(Ljava/lang/String;)V
-
-    goto/16 :goto_0
-
-    :cond_3
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aa;->a:Lcn/com/smartdevices/bracelet/ui/Z;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/Z;->c(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/Z;->b(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
 
     move-result-object v0
 
@@ -312,7 +281,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_3
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aa;->a:Lcn/com/smartdevices/bracelet/ui/Z;
 
@@ -332,10 +301,10 @@
 
     goto :goto_1
 
-    :cond_4
+    :cond_3
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aa;->a:Lcn/com/smartdevices/bracelet/ui/Z;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/Z;->c(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/Z;->b(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
 
     move-result-object v0
 
@@ -349,7 +318,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_4
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aa;->a:Lcn/com/smartdevices/bracelet/ui/Z;
 
@@ -367,9 +336,9 @@
 
     invoke-virtual {v0, v4}, Landroid/view/View;->setEnabled(Z)V
 
-    goto/16 :goto_1
+    goto :goto_1
 
-    :cond_5
+    :cond_4
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aa;->a:Lcn/com/smartdevices/bracelet/ui/Z;
 
     invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/Z;->f(Lcn/com/smartdevices/bracelet/ui/Z;)Landroid/view/View;

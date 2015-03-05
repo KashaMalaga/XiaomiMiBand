@@ -54,7 +54,7 @@
 .method private a(Landroid/view/View;)V
     .locals 2
 
-    const v0, 0x7f0701ab
+    const v0, 0x7f0701c5
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -83,7 +83,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     :cond_0
-    const v0, 0x7f0701ad
+    const v0, 0x7f0701c7
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -112,7 +112,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     :cond_1
-    const v0, 0x7f0701aa
+    const v0, 0x7f0701c4
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -120,7 +120,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/Q;->g:Landroid/view/View;
 
-    const v0, 0x7f0701ac
+    const v0, 0x7f0701c6
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -202,7 +202,7 @@
 .method protected a()I
     .locals 1
 
-    const v0, 0x7f03004c
+    const v0, 0x7f03004d
 
     return v0
 .end method

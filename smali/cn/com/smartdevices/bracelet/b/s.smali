@@ -445,9 +445,15 @@
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
     :cond_0
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/b/s;->a(Landroid/content/Context;)Ljava/io/File;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
     invoke-static {p0}, Lcn/com/smartdevices/bracelet/b/s;->a(Landroid/content/Context;)Ljava/io/File;
 
     move-result-object v0
@@ -486,6 +492,17 @@
     return-object v1
 
     :cond_1
+    invoke-virtual {p0}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_2
     invoke-virtual {p0}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
 
     move-result-object v0

@@ -904,7 +904,7 @@
 
     move-result v4
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/m;->a()Lcn/com/smartdevices/bracelet/weight/m;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/o;->a()Lcn/com/smartdevices/bracelet/weight/o;
 
     move-result-object v5
 
@@ -1012,7 +1012,7 @@
 
     iget-wide v7, v1, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->timestamp:J
 
-    invoke-virtual {v5, v7, v8}, Lcn/com/smartdevices/bracelet/weight/m;->a(J)Lcn/com/smartdevices/bracelet/weight/WeightInfo;
+    invoke-virtual {v5, v7, v8}, Lcn/com/smartdevices/bracelet/weight/o;->a(J)Lcn/com/smartdevices/bracelet/weight/WeightInfo;
 
     move-result-object v1
 
@@ -1024,14 +1024,14 @@
 
     invoke-static {v7, v8}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/weight/x;->a(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/weight/y;->a(Lcn/com/smartdevices/bracelet/weight/WeightInfo;)V
 
     goto :goto_2
 
     :cond_3
     iget-wide v7, v1, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->timestamp:J
 
-    invoke-virtual {v5, v7, v8}, Lcn/com/smartdevices/bracelet/weight/m;->a(J)Lcn/com/smartdevices/bracelet/weight/WeightInfo;
+    invoke-virtual {v5, v7, v8}, Lcn/com/smartdevices/bracelet/weight/o;->a(J)Lcn/com/smartdevices/bracelet/weight/WeightInfo;
 
     move-result-object v7
 
@@ -1099,7 +1099,7 @@
 
     iget-wide v6, v1, Lcn/com/smartdevices/bracelet/weight/WeightInfo;->timestamp:J
 
-    invoke-virtual {v5, v6, v7}, Lcn/com/smartdevices/bracelet/weight/m;->a(J)Lcn/com/smartdevices/bracelet/weight/WeightInfo;
+    invoke-virtual {v5, v6, v7}, Lcn/com/smartdevices/bracelet/weight/o;->a(J)Lcn/com/smartdevices/bracelet/weight/WeightInfo;
 
     move-result-object v0
 
@@ -1201,7 +1201,7 @@
     return v0
 
     :cond_1
-    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/m;->a()Lcn/com/smartdevices/bracelet/weight/m;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/o;->a()Lcn/com/smartdevices/bracelet/weight/o;
 
     move-result-object v3
 
@@ -1209,7 +1209,7 @@
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->ak()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->aj()Z
 
     move-result v4
 
@@ -1235,11 +1235,11 @@
 
     move-result-wide v6
 
-    invoke-virtual {v3, v6, v7}, Lcn/com/smartdevices/bracelet/weight/m;->a(J)Lcn/com/smartdevices/bracelet/weight/WeightInfo;
+    invoke-virtual {v3, v6, v7}, Lcn/com/smartdevices/bracelet/weight/o;->a(J)Lcn/com/smartdevices/bracelet/weight/WeightInfo;
 
     move-result-object v6
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/weight/x;->a(Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;)Lcn/com/smartdevices/bracelet/weight/UserInfo;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/weight/y;->a(Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;)Lcn/com/smartdevices/bracelet/weight/UserInfo;
 
     move-result-object v7
 
@@ -1329,7 +1329,7 @@
     iget v0, p0, Lcom/xiaomi/hm/bleservice/profile/WeightProfile$5;->sizeAfterMerge:I
 
     :goto_2
-    invoke-virtual {v3, v1}, Lcn/com/smartdevices/bracelet/weight/m;->c(Ljava/util/List;)Z
+    invoke-virtual {v3, v1}, Lcn/com/smartdevices/bracelet/weight/o;->c(Ljava/util/List;)Z
 
     goto/16 :goto_0
 

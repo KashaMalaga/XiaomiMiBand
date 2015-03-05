@@ -1,46 +1,37 @@
-.class Lcom/g/a/y;
-.super Lcom/g/a/A;
+.class Lcom/g/a/Y;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lcom/g/a/n;
 
 
 # instance fields
-.field final synthetic a:Lcom/g/a/s;
-
-.field private final synthetic b:Ljava/lang/String;
-
-.field private final synthetic c:Ljava/lang/String;
+.field final synthetic a:Lcom/g/a/U;
 
 
 # direct methods
-.method constructor <init>(Lcom/g/a/s;Ljava/lang/String;Ljava/lang/String;)V
+.method constructor <init>(Lcom/g/a/U;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/g/a/y;->a:Lcom/g/a/s;
+    iput-object p1, p0, Lcom/g/a/Y;->a:Lcom/g/a/U;
 
-    iput-object p2, p0, Lcom/g/a/y;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Lcom/g/a/y;->c:Ljava/lang/String;
-
-    invoke-direct {p0}, Lcom/g/a/A;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()V
-    .locals 3
+.method public a()Z
+    .locals 1
 
-    iget-object v0, p0, Lcom/g/a/y;->a:Lcom/g/a/s;
+    iget-object v0, p0, Lcom/g/a/Y;->a:Lcom/g/a/U;
 
-    invoke-static {v0}, Lcom/g/a/s;->a(Lcom/g/a/s;)Lb/a/dD;
+    iget-object v0, v0, Lcom/g/a/U;->g:Lcom/g/a/a;
 
-    move-result-object v0
+    invoke-virtual {v0}, Lcom/g/a/a;->f()Z
 
-    iget-object v1, p0, Lcom/g/a/y;->b:Ljava/lang/String;
+    move-result v0
 
-    iget-object v2, p0, Lcom/g/a/y;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Lb/a/dD;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
+    return v0
 .end method

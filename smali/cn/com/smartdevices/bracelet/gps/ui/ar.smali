@@ -1,120 +1,67 @@
-.class final enum Lcn/com/smartdevices/bracelet/gps/ui/ar;
-.super Ljava/lang/Enum;
+.class Lcn/com/smartdevices/bracelet/gps/ui/ar;
+.super Landroid/os/Handler;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Enum",
-        "<",
-        "Lcn/com/smartdevices/bracelet/gps/ui/ar;",
-        ">;"
-    }
-.end annotation
-
-
-# static fields
-.field public static final enum a:Lcn/com/smartdevices/bracelet/gps/ui/ar;
-
-.field public static final enum b:Lcn/com/smartdevices/bracelet/gps/ui/ar;
-
-.field public static final enum c:Lcn/com/smartdevices/bracelet/gps/ui/ar;
-
-.field private static final synthetic d:[Lcn/com/smartdevices/bracelet/gps/ui/ar;
+# instance fields
+.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
-
-    const/4 v4, 0x2
-
-    const/4 v3, 0x1
-
-    const/4 v2, 0x0
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/ar;
-
-    const-string v1, "ANCHORED"
-
-    invoke-direct {v0, v1, v2}, Lcn/com/smartdevices/bracelet/gps/ui/ar;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcn/com/smartdevices/bracelet/gps/ui/ar;->a:Lcn/com/smartdevices/bracelet/gps/ui/ar;
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/ar;
-
-    const-string v1, "COLLAPSED"
-
-    invoke-direct {v0, v1, v3}, Lcn/com/smartdevices/bracelet/gps/ui/ar;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcn/com/smartdevices/bracelet/gps/ui/ar;->b:Lcn/com/smartdevices/bracelet/gps/ui/ar;
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/ui/ar;
-
-    const-string v1, "EXPANDED"
-
-    invoke-direct {v0, v1, v4}, Lcn/com/smartdevices/bracelet/gps/ui/ar;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcn/com/smartdevices/bracelet/gps/ui/ar;->c:Lcn/com/smartdevices/bracelet/gps/ui/ar;
-
-    const/4 v0, 0x3
-
-    new-array v0, v0, [Lcn/com/smartdevices/bracelet/gps/ui/ar;
-
-    sget-object v1, Lcn/com/smartdevices/bracelet/gps/ui/ar;->a:Lcn/com/smartdevices/bracelet/gps/ui/ar;
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Lcn/com/smartdevices/bracelet/gps/ui/ar;->b:Lcn/com/smartdevices/bracelet/gps/ui/ar;
-
-    aput-object v1, v0, v3
-
-    sget-object v1, Lcn/com/smartdevices/bracelet/gps/ui/ar;->c:Lcn/com/smartdevices/bracelet/gps/ui/ar;
-
-    aput-object v1, v0, v4
-
-    sput-object v0, Lcn/com/smartdevices/bracelet/gps/ui/ar;->d:[Lcn/com/smartdevices/bracelet/gps/ui/ar;
-
-    return-void
-.end method
-
-.method private constructor <init>(Ljava/lang/String;I)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/ar;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
+
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lcn/com/smartdevices/bracelet/gps/ui/ar;
-    .locals 1
 
-    const-class v0, Lcn/com/smartdevices/bracelet/gps/ui/ar;
+# virtual methods
+.method public handleMessage(Landroid/os/Message;)V
+    .locals 3
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    move-result-object v0
+    iget v0, p1, Landroid/os/Message;->what:I
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/gps/ui/ar;
+    packed-switch v0, :pswitch_data_0
 
-    return-object v0
-.end method
+    :goto_0
+    return-void
 
-.method public static values()[Lcn/com/smartdevices/bracelet/gps/ui/ar;
-    .locals 1
+    :pswitch_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/ar;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
 
-    sget-object v0, Lcn/com/smartdevices/bracelet/gps/ui/ar;->d:[Lcn/com/smartdevices/bracelet/gps/ui/ar;
-
-    invoke-virtual {v0}, [Lcn/com/smartdevices/bracelet/gps/ui/ar;->clone()Ljava/lang/Object;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;->a(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;)Landroid/widget/RelativeLayout;
 
     move-result-object v0
 
-    check-cast v0, [Lcn/com/smartdevices/bracelet/gps/ui/ar;
+    const/4 v1, 0x0
 
-    return-object v0
+    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/ar;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;->a(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;)Landroid/widget/RelativeLayout;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/ar;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
+
+    const v2, 0x7f04001c
+
+    invoke-static {v1, v2}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->startAnimation(Landroid/view/animation/Animation;)V
+
+    goto :goto_0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

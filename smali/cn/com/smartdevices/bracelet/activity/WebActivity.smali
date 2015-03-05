@@ -544,7 +544,7 @@
 
     invoke-virtual {v3, v0}, Landroid/view/View;->setBackgroundColor(I)V
 
-    const v3, 0x7f0702af
+    const v3, 0x7f0702cd
 
     invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -808,7 +808,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mShare:Landroid/view/View;
 
-    const v0, 0x7f070128
+    const v0, 0x7f07013c
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -826,7 +826,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebView:Landroid/webkit/WebView;
 
-    const v0, 0x7f0702b1
+    const v0, 0x7f0702cf
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -836,7 +836,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebErrorTip:Landroid/widget/TextView;
 
-    const v0, 0x7f0702ae
+    const v0, 0x7f0702cc
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -844,7 +844,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/WebActivity;->mWebViewContainer:Landroid/view/View;
 
-    const v0, 0x7f0702b2
+    const v0, 0x7f0702d0
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -866,7 +866,7 @@
 
     invoke-virtual {v0, v2}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
 
-    const v0, 0x7f0702b0
+    const v0, 0x7f0702ce
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->findViewById(I)Landroid/view/View;
 
@@ -1147,7 +1147,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f030093
+    const v0, 0x7f030097
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->setContentView(I)V
 
@@ -1318,7 +1318,7 @@
     goto :goto_0
 
     :pswitch_2
-    const v1, 0x7f0800df
+    const v1, 0x7f0800e0
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->getString(I)Ljava/lang/String;
 
@@ -1370,7 +1370,7 @@
     goto :goto_0
 
     :pswitch_2
-    const v1, 0x7f0800df
+    const v1, 0x7f0800e0
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/activity/WebActivity;->getString(I)Ljava/lang/String;
 

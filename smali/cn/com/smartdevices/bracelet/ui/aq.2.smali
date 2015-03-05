@@ -176,7 +176,15 @@
 
     move-result v0
 
-    invoke-virtual {p1, v0}, Lcn/com/smartdevices/bracelet/view/DynamicView;->b(F)V
+    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/chart/c/r;->t()I
+
+    move-result v1
+
+    invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/chart/c/r;->u()I
+
+    move-result v2
+
+    invoke-virtual {p1, v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/DynamicView;->a(FII)V
 
     invoke-virtual {p2}, Lcn/com/smartdevices/bracelet/chart/c/r;->r()Ljava/lang/String;
 

@@ -34,7 +34,7 @@
     :pswitch_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/activity/a;->a:Lcn/com/smartdevices/bracelet/activity/LoginActivity;
 
-    const v1, 0x7f0800ee
+    const v1, 0x7f0800ef
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/E;->a(Landroid/app/Activity;I)V
 

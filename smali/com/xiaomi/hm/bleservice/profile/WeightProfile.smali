@@ -14,7 +14,7 @@
 
 
 # static fields
-.field public static final LASTEST_FW_VERSION:Ljava/lang/String; = "V0.2.9"
+.field public static final LASTEST_FW_VERSION:Ljava/lang/String; = "V0.3.2"
 
 .field public static final MERGE_TIME_DELTA:I = 0x7530
 

@@ -79,7 +79,7 @@
     <string name="bt_operation_failed_tips">蓝牙连接异常, 请稍后重试！</string>
     <string name="multi_devices_info">你的附近可能有多个小米手环。请尝试将你的手环贴近手机并离开其他的手环10米以外再重新搜索</string>
     <string name="multi_devices_title">无法绑定</string>
-    <string name="search_bracelet_again">重新搜索</string>
+    <string name="search_again">重新搜索</string>
     <string name="search_devices_info">请将手环佩戴到手腕上, 并靠近手机</string>
     <string name="search_bracelet_ok">找到一个手环！</string>
     <string name="found_bracelet_info">当手环上的蓝灯闪烁时, 敲击几下手环来绑定</string>
@@ -154,6 +154,7 @@
     <string name="mili_name_too_long">输入名称过长, 请缩短后再试</string>
     <string name="mili_rename_fail">手环重命名失败</string>
     <string name="mili_unbind_question">解除绑定后, 手环将停止记录运动和睡眠数据</string>
+    <string name="weight_unbind_question">解除绑定后, 手机将无法获取称重记录</string>
     <string name="share_to_title">小米运动</string>
     <string name="share_to_content">小米运动分享</string>
     <string name="share_goal_tips_succ">再伟大的目标也是一步一步走出来的</string>
@@ -172,6 +173,7 @@
     <string name="mon_sat">周一至周六</string>
     <string name="device_not_found_not_knocked">蓝灯闪烁时没有敲击手环, 请重新搜索</string>
     <string name="statistic">统计</string>
+    <string name="mili_weight_unbind_info">解除绑定后，手机将无法连接到体重称，此时手机可以绑定其他体重称</string>
     <string name="mili_unbind_question_content">解除绑定后, 可以使用其他手机连接手环, 或更换新手环。</string>
     <string name="mili_unbind_question_content_1">如果你已设置使用该手环来进行手机解锁, 解除绑定后将无法继续使用。</string>
     <string name="mili_reset_info">"将清除手环上的所有信息, 并恢复到出厂状态
@@ -586,6 +588,12 @@
     <string name="weight_dynamic_visitor_title">%1$s 体重%2$s%3$s</string>
     <string name="weight_dynamic_detail">%1$s</string>
     <string name="weight_guest">访客</string>
+    <string name="set_length_unit">设置长度单位</string>
+    <string name="set_weight_unit">设置重量单位</string>
+    <string name="weight_unit_metric">公制（公斤、千克）</string>
+    <string name="weight_unit_british">英制（镑）</string>
+    <string name="weight_unit_shijin">市斤(1斤=500克)</string>
+    <string name="weight_unit_text_info">你已经绑定了体重称，重量单位将以体重称的设置为准，打开体重称反面的电池盖可以调整重量单位</string>
     <string name="bind_devices">绑定设备</string>
     <string name="bind_mi_band">绑定小米手环</string>
     <string name="bind_mi_weight">绑定体重秤</string>
@@ -596,7 +604,7 @@
     <string name="search_weight_scale">搜索体重秤</string>
     <string name="search_weight_scale_info">正在搜索, 请靠近体重秤</string>
     <string name="weight_device_list">附近的体重秤</string>
-    <string name="set_unit">单位设定</string>
+    <string name="set_unit">单位设置</string>
     <string name="weight_unbinded">正在解除体重秤绑定</string>
     <string name="weight_scale">小米体重秤</string>
     <string name="bind_weight_scale">绑定新体重秤</string>
@@ -679,8 +687,8 @@
     <string name="select_devices_info">请选择你需要绑定的小米智能健康设备</string>
     <string name="weight_settings_merge_title">合并频繁称重记录</string>
     <string name="weight_settings_merge_tips">同一成员两次称重间隔30秒内，覆盖前一条记录</string>
-    <string name="not_fount_available_userinfo">未能找到合适成员</string>
-    <string name="choose_userinfo_for_weight">为本次称重选个主人吧</string>
+    <string name="not_fount_available_userinfo">未匹配家庭成员</string>
+    <string name="choose_userinfo_for_weight">设置后可查看详细测量报告</string>
     <string name="visitor">访客</string>
     <string name="new_user">新成员</string>
     <string name="set_goal_weight_tips">根据你提供的身体信息, 我们通过BMI指数计算得出你的标准体重区间为%1$s-%2$s%3$s</string>
@@ -717,6 +725,12 @@
     <string name="weight_overload_content">最大称重不超过150公斤</string>
     <string name="weight_overload_confirm">确定</string>
     <string name="connect_to_retrive">联网后查看</string>
+    <string name="week_total_distance_miles">本周里程（英里）</string>
+    <string name="found_weight_scale_title">已发现体重秤, 请确认秤的显示的数值和下方数值一样, 即可确认绑定</string>
+    <string name="confirm_pair">确认绑定</string>
+    <string name="signal_strong">强</string>
+    <string name="signal_weak">弱</string>
+    <string name="signal_none">无</string>
     <string name="lab_factory_title">实验室</string>
     <string name="lab_factory_sport_type_situp">仰卧起坐</string>
     <string name="lab_factory_sport_type_ropeskipping">跳绳</string>
@@ -896,6 +910,7 @@
     <string name="watermark_btn_confirm">完成</string>
     <string name="watermark_guide_tips">拖拽移动水印</string>
     <string name="no_bracelet_tips">(仅限手环连接时设置)</string>
+    <string name="watermark_failed_to_create_contour_track">水印生成失败，请检查存储空间是否充足</string>
     <string name="label_runner_group">跑跑团</string>
     <string name="action_mark">行为标注</string>
     <string name="action_sleep">睡觉</string>
@@ -924,11 +939,11 @@
     <string name="runner_unlogin_notice">你还未登录app，使用过程中的数据将无法为你同步到服务器，数据可能会在一些情况下丢失。 现在去登录？</string>
     <string name="action_type_error">行为类型出错</string>
     <string name="congrats">恭喜</string>
+    <string name="action_pop_sensorhub">手机计步</string>
     <string name="bind_qq_health_tip_init">登录后即可完成绑定QQ健康</string>
     <string name="bind_qq_health_tip_another_qq">需要切换至手机QQ当前登录的账号, 才能在QQ健康中查看到数据</string>
-    <string name="please_input_name">请输入你的名称</string>
-    <string name="action_pop_sensorhub">手机计步</string>
     <string name="share_to_content_for_event">我报名参加了“国庆七天,日行万步得小米手机4”的活动, 你愿意站在一旁默默祝福还是一起来参加呢？快来报名吧！</string>
     <string name="weight_test_dynamic_detail">体重：%1$s%2$s</string>
     <string name="lab_action_tag_agree">同意</string>
+    <string name="please_input_name">请输入你的名称</string>
 </resources>

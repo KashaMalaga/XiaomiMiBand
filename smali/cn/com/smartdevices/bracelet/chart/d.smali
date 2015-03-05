@@ -122,7 +122,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/D;->a:Lcn/com/smartdevices/bracelet/chart/z;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/chart/z;->p(Lcn/com/smartdevices/bracelet/chart/z;)Lcn/com/smartdevices/bracelet/chart/base/b;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/chart/z;->r(Lcn/com/smartdevices/bracelet/chart/z;)Lcn/com/smartdevices/bracelet/chart/base/b;
 
     move-result-object v1
 
@@ -132,7 +132,7 @@
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/chart/D;->a:Lcn/com/smartdevices/bracelet/chart/z;
 
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/chart/z;->n(Lcn/com/smartdevices/bracelet/chart/z;)I
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/chart/z;->o(Lcn/com/smartdevices/bracelet/chart/z;)I
 
     move-result v3
 
@@ -146,7 +146,7 @@
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/chart/D;->a:Lcn/com/smartdevices/bracelet/chart/z;
 
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/chart/z;->n(Lcn/com/smartdevices/bracelet/chart/z;)I
+    invoke-static {v3}, Lcn/com/smartdevices/bracelet/chart/z;->o(Lcn/com/smartdevices/bracelet/chart/z;)I
 
     move-result v3
 
@@ -167,7 +167,53 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/D;->a:Lcn/com/smartdevices/bracelet/chart/z;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/z;->n(Lcn/com/smartdevices/bracelet/chart/z;)I
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/z;->g(Lcn/com/smartdevices/bracelet/chart/z;)I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/D;->a:Lcn/com/smartdevices/bracelet/chart/z;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/z;->o(Lcn/com/smartdevices/bracelet/chart/z;)I
+
+    move-result v0
+
+    iget v1, p2, Lcn/com/smartdevices/bracelet/chart/base/c;->c:I
+
+    sub-int/2addr v0, v1
+
+    int-to-float v0, v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/D;->a:Lcn/com/smartdevices/bracelet/chart/z;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/chart/z;->a(Lcn/com/smartdevices/bracelet/chart/z;)F
+
+    move-result v1
+
+    mul-float/2addr v0, v1
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/D;->a:Lcn/com/smartdevices/bracelet/chart/z;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/chart/z;->p(Lcn/com/smartdevices/bracelet/chart/z;)Lcn/com/smartdevices/bracelet/chart/base/b;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/chart/base/b;->s()F
+
+    move-result v1
+
+    sub-float/2addr v0, v1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/D;->a:Lcn/com/smartdevices/bracelet/chart/z;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/z;->o(Lcn/com/smartdevices/bracelet/chart/z;)I
 
     move-result v0
 
@@ -187,7 +233,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/chart/D;->a:Lcn/com/smartdevices/bracelet/chart/z;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/chart/z;->o(Lcn/com/smartdevices/bracelet/chart/z;)Lcn/com/smartdevices/bracelet/chart/base/b;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/chart/z;->q(Lcn/com/smartdevices/bracelet/chart/z;)Lcn/com/smartdevices/bracelet/chart/base/b;
 
     move-result-object v1
 
@@ -197,5 +243,5 @@
 
     add-float/2addr v0, v1
 
-    return v0
+    goto :goto_0
 .end method

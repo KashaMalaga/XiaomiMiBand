@@ -1,52 +1,48 @@
-.class Lcom/g/a/x;
-.super Lcom/g/a/A;
+.class Lcom/g/a/X;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/g/a/s;
+.field final synthetic a:Landroid/app/Activity;
 
-.field private final synthetic b:Ljava/lang/String;
-
-.field private final synthetic c:Ljava/util/HashMap;
-
-.field private final synthetic d:Ljava/lang/String;
+.field final synthetic b:Lcom/g/a/U;
 
 
 # direct methods
-.method constructor <init>(Lcom/g/a/s;Ljava/lang/String;Ljava/util/HashMap;Ljava/lang/String;)V
+.method constructor <init>(Lcom/g/a/U;Landroid/app/Activity;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/g/a/x;->a:Lcom/g/a/s;
+    iput-object p1, p0, Lcom/g/a/X;->b:Lcom/g/a/U;
 
-    iput-object p2, p0, Lcom/g/a/x;->b:Ljava/lang/String;
+    iput-object p2, p0, Lcom/g/a/X;->a:Landroid/app/Activity;
 
-    iput-object p3, p0, Lcom/g/a/x;->c:Ljava/util/HashMap;
-
-    iput-object p4, p0, Lcom/g/a/x;->d:Ljava/lang/String;
-
-    invoke-direct {p0}, Lcom/g/a/A;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()V
-    .locals 4
+.method public run()V
+    .locals 2
 
-    iget-object v0, p0, Lcom/g/a/x;->a:Lcom/g/a/s;
+    iget-object v0, p0, Lcom/g/a/X;->a:Landroid/app/Activity;
 
-    invoke-static {v0}, Lcom/g/a/s;->a(Lcom/g/a/s;)Lb/a/dD;
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/g/a/X;->a:Landroid/app/Activity;
+
+    invoke-virtual {v0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/g/a/x;->b:Ljava/lang/String;
+    const/high16 v1, 0x400000
 
-    iget-object v2, p0, Lcom/g/a/x;->c:Ljava/util/HashMap;
+    invoke-virtual {v0, v1}, Landroid/view/Window;->addFlags(I)V
 
-    iget-object v3, p0, Lcom/g/a/x;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2, v3}, Lb/a/dD;->a(Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;)V
-
+    :cond_0
     return-void
 .end method

@@ -1,46 +1,43 @@
-.class Lcom/g/a/w;
-.super Lcom/g/a/A;
+.class Lcom/g/a/W;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/g/a/s;
+.field final synthetic a:Landroid/webkit/WebView;
 
-.field private final synthetic b:Ljava/lang/String;
-
-.field private final synthetic c:Ljava/lang/String;
+.field final synthetic b:Lcom/g/a/U;
 
 
 # direct methods
-.method constructor <init>(Lcom/g/a/s;Ljava/lang/String;Ljava/lang/String;)V
+.method constructor <init>(Lcom/g/a/U;Landroid/webkit/WebView;)V
     .locals 0
 
-    iput-object p1, p0, Lcom/g/a/w;->a:Lcom/g/a/s;
+    iput-object p1, p0, Lcom/g/a/W;->b:Lcom/g/a/U;
 
-    iput-object p2, p0, Lcom/g/a/w;->b:Ljava/lang/String;
+    iput-object p2, p0, Lcom/g/a/W;->a:Landroid/webkit/WebView;
 
-    iput-object p3, p0, Lcom/g/a/w;->c:Ljava/lang/String;
-
-    invoke-direct {p0}, Lcom/g/a/A;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()V
-    .locals 3
+.method public run()V
+    .locals 2
 
-    iget-object v0, p0, Lcom/g/a/w;->a:Lcom/g/a/s;
+    iget-object v0, p0, Lcom/g/a/W;->b:Lcom/g/a/U;
 
-    invoke-static {v0}, Lcom/g/a/s;->a(Lcom/g/a/s;)Lb/a/dD;
+    iget-object v1, p0, Lcom/g/a/W;->a:Landroid/webkit/WebView;
 
-    move-result-object v0
+    invoke-virtual {v1}, Landroid/webkit/WebView;->getUrl()Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/g/a/w;->b:Ljava/lang/String;
+    move-result-object v1
 
-    iget-object v2, p0, Lcom/g/a/w;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Lb/a/dD;->b(Ljava/lang/String;Ljava/lang/String;)V
+    iput-object v1, v0, Lcom/g/a/U;->x:Ljava/lang/String;
 
     return-void
 .end method

@@ -1,42 +1,53 @@
-.class Lcn/com/smartdevices/bracelet/gps/services/b;
-.super Ljava/util/TimerTask;
+.class public final Lcn/com/smartdevices/bracelet/gps/services/b;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Lcn/com/smartdevices/bracelet/gps/services/a/c;
 
 
 # instance fields
-.field final synthetic a:Landroid/content/Context;
-
-.field final synthetic b:Lcn/com/smartdevices/bracelet/gps/services/a;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/services/a;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/a;Landroid/content/Context;)V
+.method protected constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/a;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/services/b;->b:Lcn/com/smartdevices/bracelet/gps/services/a;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/services/b;->a:Lcn/com/smartdevices/bracelet/gps/services/a;
 
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/gps/services/b;->a:Landroid/content/Context;
-
-    invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 6
+.method public a(I)V
+    .locals 0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/b;->b:Lcn/com/smartdevices/bracelet/gps/services/a;
+    return-void
+.end method
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/b;->a:Landroid/content/Context;
+.method public a(Lcn/com/smartdevices/bracelet/gps/model/c;)V
+    .locals 0
 
-    const-wide/16 v2, 0x1388
+    return-void
+.end method
 
-    const/high16 v4, 0x41200000
+.method public a(Ljava/lang/String;)V
+    .locals 0
 
-    const-string v5, "gps"
+    return-void
+.end method
 
-    invoke-static/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/gps/services/a;->a(Lcn/com/smartdevices/bracelet/gps/services/a;Landroid/content/Context;JFLjava/lang/String;)V
+.method public a(Ljava/lang/String;ILandroid/os/Bundle;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public b(Ljava/lang/String;)V
+    .locals 0
 
     return-void
 .end method

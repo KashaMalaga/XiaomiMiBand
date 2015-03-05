@@ -55,6 +55,12 @@
 
     if-eqz v1, :cond_2
 
+    invoke-static {}, Lcn/com/smartdevices/bracelet/f/a;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
     sget-object v0, Lcom/xiaomi/hm/bleservice/BLEService;->INTENT_EXTRA_PARAM:Ljava/lang/String;
 
     invoke-virtual {p2, v0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -171,7 +177,7 @@
     packed-switch v0, :pswitch_data_0
 
     :pswitch_0
-    goto :goto_0
+    goto/16 :goto_0
 
     :pswitch_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/r;->a:Lcn/com/smartdevices/bracelet/ui/BaseSCActivity;
@@ -291,8 +297,6 @@
     invoke-virtual {v1, v2}, Lde/greenrobot/event/EventBus;->post(Ljava/lang/Object;)V
 
     goto/16 :goto_0
-
-    nop
 
     :pswitch_data_0
     .packed-switch 0xa

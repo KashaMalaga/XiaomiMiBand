@@ -13,5 +13,5 @@
             <TextView android:textColor="@color/content_color" android:id="@id/select_devices_scale_txt" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/weight_scale" />
         </LinearLayout>
     </RelativeLayout>
-    <TextView android:textSize="@dimen/info_content_size" android:textColor="@color/normal" android:gravity="center_horizontal" android:id="@id/select_devices_exit" android:paddingTop="20.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/bottom_btn_maring_bottom" android:text="@string/donot_bind" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="@dimen/info_content_size" android:textColor="@color/content_color_darker" android:gravity="center_horizontal" android:id="@id/select_devices_exit" android:paddingTop="20.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/bottom_btn_maring_bottom" android:text="@string/donot_bind" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
 </LinearLayout>

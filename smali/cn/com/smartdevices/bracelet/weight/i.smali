@@ -86,7 +86,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0300b7
+    const v1, 0x7f0300bb
 
     const/4 v2, 0x0
 
@@ -98,7 +98,7 @@
 
     invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/weight/j;-><init>(Lcn/com/smartdevices/bracelet/weight/i;)V
 
-    const v0, 0x7f07034a
+    const v0, 0x7f070368
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -108,7 +108,7 @@
 
     iput-object v0, v1, Lcn/com/smartdevices/bracelet/weight/j;->a:Landroid/widget/TextView;
 
-    const v0, 0x7f070349
+    const v0, 0x7f070367
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

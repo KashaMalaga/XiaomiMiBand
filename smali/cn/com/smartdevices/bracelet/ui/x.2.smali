@@ -173,7 +173,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v2, 0x7f08022c
+    const v2, 0x7f080233
 
     invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/ui/x;->getString(I)Ljava/lang/String;
 

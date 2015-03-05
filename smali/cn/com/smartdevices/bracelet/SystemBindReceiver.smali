@@ -60,7 +60,7 @@
 
     invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/n;->aL:Ljava/lang/String;
+    sget-object v1, Lcn/com/smartdevices/bracelet/n;->aU:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -109,7 +109,7 @@
     return-void
 
     :cond_1
-    sget-object v1, Lcn/com/smartdevices/bracelet/n;->aM:Ljava/lang/String;
+    sget-object v1, Lcn/com/smartdevices/bracelet/n;->aV:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 

@@ -1,16 +1,36 @@
-.class public interface abstract Lcn/com/smartdevices/bracelet/ui/aR;
-.super Ljava/lang/Object;
+.class Lcn/com/smartdevices/bracelet/ui/aR;
+.super Landroid/webkit/WebChromeClient;
+
+
+# instance fields
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/aP;
+
+
+# direct methods
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/aP;)V
+    .locals 0
+
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/aR;->a:Lcn/com/smartdevices/bracelet/ui/aP;
+
+    invoke-direct {p0}, Landroid/webkit/WebChromeClient;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a(Landroid/os/Bundle;)V
-.end method
+.method public onProgressChanged(Landroid/webkit/WebView;I)V
+    .locals 2
 
-.method public abstract a(Lcn/com/smartdevices/bracelet/ui/dJ;)V
-.end method
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/aR;->a:Lcn/com/smartdevices/bracelet/ui/aP;
 
-.method public abstract a(ILcn/com/smartdevices/bracelet/ui/dJ;)Z
-.end method
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/aP;->a(Lcn/com/smartdevices/bracelet/ui/aP;)Landroid/widget/ProgressBar;
 
-.method public abstract b(Landroid/os/Bundle;)V
+    move-result-object v0
+
+    add-int/lit8 v1, p2, 0x5
+
+    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setProgress(I)V
+
+    return-void
 .end method

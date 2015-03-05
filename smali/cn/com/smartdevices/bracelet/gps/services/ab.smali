@@ -1,32 +1,32 @@
 .class final Lcn/com/smartdevices/bracelet/gps/services/ab;
-.super Ljava/util/TimerTask;
+.super Landroid/os/Handler;
+
+
+# static fields
+.field static final a:I = 0x1
+
+.field static final b:I = 0x2
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/services/Z;
-
-.field private b:Z
+.field final synthetic c:Lcn/com/smartdevices/bracelet/gps/services/aa;
 
 
 # direct methods
-.method private constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/Z;)V
-    .locals 1
+.method private constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/aa;)V
+    .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/services/ab;->a:Lcn/com/smartdevices/bracelet/gps/services/Z;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/services/ab;->c:Lcn/com/smartdevices/bracelet/gps/services/aa;
 
-    invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/services/ab;->b:Z
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/Z;Lcn/com/smartdevices/bracelet/gps/services/X;)V
+.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/aa;Lcn/com/smartdevices/bracelet/gps/services/Y;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/gps/services/ab;-><init>(Lcn/com/smartdevices/bracelet/gps/services/Z;)V
+    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/gps/services/ab;-><init>(Lcn/com/smartdevices/bracelet/gps/services/aa;)V
 
     return-void
 .end method
@@ -38,43 +38,84 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/services/ab;->b:Z
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/services/ab;->removeMessages(I)V
+
+    const/4 v0, 0x2
+
+    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/services/ab;->removeMessages(I)V
 
     return-void
 .end method
 
-.method public run()V
-    .locals 3
+.method public handleMessage(Landroid/os/Message;)V
+    .locals 2
 
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/services/ab;->b:Z
+    iget v0, p1, Landroid/os/Message;->what:I
 
-    if-eqz v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
+    :cond_0
     :goto_0
     return-void
 
-    :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/ab;->a:Lcn/com/smartdevices/bracelet/gps/services/Z;
+    :pswitch_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/ab;->c:Lcn/com/smartdevices/bracelet/gps/services/aa;
 
-    const-wide/16 v1, 0x3e8
+    iget v1, p1, Landroid/os/Message;->arg1:I
 
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/gps/services/Z;->a(Lcn/com/smartdevices/bracelet/gps/services/Z;J)J
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/services/aa;->a(Lcn/com/smartdevices/bracelet/gps/services/aa;I)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/ab;->a:Lcn/com/smartdevices/bracelet/gps/services/Z;
+    goto :goto_0
 
-    iget-object v0, v0, Lcn/com/smartdevices/bracelet/gps/services/Z;->a:Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;
+    :pswitch_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/ab;->c:Lcn/com/smartdevices/bracelet/gps/services/aa;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->a(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;)Lcn/com/smartdevices/bracelet/gps/services/s;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/gps/services/aa;->a:Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->a(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;)Lcn/com/smartdevices/bracelet/gps/services/ag;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/ab;->a:Lcn/com/smartdevices/bracelet/gps/services/Z;
+    if-eqz v0, :cond_1
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/gps/services/Z;->a(Lcn/com/smartdevices/bracelet/gps/services/Z;)J
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/ab;->c:Lcn/com/smartdevices/bracelet/gps/services/aa;
 
-    move-result-wide v1
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/gps/services/aa;->a:Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/gps/services/s;->a(J)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->a(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;)Lcn/com/smartdevices/bracelet/gps/services/ag;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/ag;->c()V
+
+    :cond_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/ab;->c:Lcn/com/smartdevices/bracelet/gps/services/aa;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/gps/services/aa;->a:Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->b(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;)Lcn/com/smartdevices/bracelet/gps/services/G;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/ab;->c:Lcn/com/smartdevices/bracelet/gps/services/aa;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/gps/services/aa;->a:Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;->b(Lcn/com/smartdevices/bracelet/gps/services/SubGPSSportService;)Lcn/com/smartdevices/bracelet/gps/services/G;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/G;->d()V
 
     goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method

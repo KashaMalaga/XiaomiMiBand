@@ -1,205 +1,191 @@
 .class Lcn/com/smartdevices/bracelet/weight/family/o;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lkankan/wheel/widget/e;
+.super Landroid/widget/BaseAdapter;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/weight/family/n;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;
+
+.field private b:Landroid/widget/ImageView;
+
+.field private c:Landroid/widget/TextView;
+
+.field private d:Landroid/widget/TextView;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/weight/family/n;)V
+.method public constructor <init>(Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/weight/family/o;->a:Lcn/com/smartdevices/bracelet/weight/family/n;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/weight/family/o;->a:Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lkankan/wheel/widget/WheelView;)V
-    .locals 0
+.method public getCount()I
+    .locals 1
 
-    return-void
-.end method
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/o;->a:Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;
 
-.method public b(Lkankan/wheel/widget/WheelView;)V
-    .locals 14
-
-    const/4 v11, 0x7
-
-    const/4 v2, 0x0
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/family/n;->f()Ljava/lang/String;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;->c(Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;)Ljava/util/List;
 
     move-result-object v0
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v3, "item "
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {p1}, Lkankan/wheel/widget/WheelView;->f()I
-
-    move-result v3
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Lkankan/wheel/widget/WheelView;->f()I
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    const/16 v1, 0x93
+    return v0
+.end method
 
-    if-ne v0, v1, :cond_0
+.method public getItem(I)Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/family/n;->f()Ljava/lang/String;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/o;->a:Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;
 
-    move-result-object v0
-
-    const-string v1, " should refresh month"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cs;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/o;->a:Lcn/com/smartdevices/bracelet/weight/family/n;
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/weight/family/n;->getActivity()Landroid/app/Activity;
-
-    move-result-object v1
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/family/o;->a:Lcn/com/smartdevices/bracelet/weight/family/n;
-
-    invoke-static {v3}, Lcn/com/smartdevices/bracelet/weight/family/n;->a(Lcn/com/smartdevices/bracelet/weight/family/n;)Lkankan/wheel/widget/WheelView;
-
-    move-result-object v4
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/family/o;->a:Lcn/com/smartdevices/bracelet/weight/family/n;
-
-    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/weight/family/n;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    const v5, 0x7f09000c
-
-    invoke-virtual {v3, v5}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v5
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/family/o;->a:Lcn/com/smartdevices/bracelet/weight/family/n;
-
-    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/weight/family/n;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    const v6, 0x7f090011
-
-    invoke-virtual {v3, v6}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v6
-
-    const v7, -0x77666667
-
-    const/16 v9, 0x2e
-
-    const/16 v10, 0x8
-
-    const/4 v13, 0x1
-
-    move v3, v2
-
-    move v8, v2
-
-    move v12, v11
-
-    invoke-direct/range {v0 .. v13}, Lcn/com/smartdevices/bracelet/ui/cs;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
-
-    const/16 v1, 0x13
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/cs;->a(I)V
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/o;->a:Lcn/com/smartdevices/bracelet/weight/family/n;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/weight/family/n;->a(Lcn/com/smartdevices/bracelet/weight/family/n;)Lkankan/wheel/widget/WheelView;
-
-    move-result-object v1
-
-    const v3, 0x7f020171
-
-    invoke-virtual {v1, v3}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
-
-    move-result-object v1
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/weight/family/o;->a:Lcn/com/smartdevices/bracelet/weight/family/n;
-
-    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/weight/family/n;->getActivity()Landroid/app/Activity;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->H()Lcn/com/smartdevices/bracelet/model/PersonInfo;
-
-    move-result-object v4
-
-    iget-object v4, v4, Lcn/com/smartdevices/bracelet/model/PersonInfo;->miliConfig:Lcn/com/smartdevices/bracelet/model/MiliConfig;
-
-    iget v4, v4, Lcn/com/smartdevices/bracelet/model/MiliConfig;->weightUnit:I
-
-    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/weight/x;->a(Landroid/content/Context;I)Ljava/lang/String;
-
-    move-result-object v3
-
-    const v4, 0x41c8fbe7
-
-    invoke-virtual {v1, v3, v4}, Lkankan/wheel/widget/WheelView;->a(Ljava/lang/String;F)Lkankan/wheel/widget/WheelView;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/a/f;)Lkankan/wheel/widget/WheelView;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;->c(Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;)Ljava/util/List;
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Lkankan/wheel/widget/WheelView;->c(I)Lkankan/wheel/widget/WheelView;
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    :goto_0
-    return-void
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public getItemId(I)J
+    .locals 2
+
+    int-to-long v0, p1
+
+    return-wide v0
+.end method
+
+.method public getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    .locals 3
+
+    if-nez p2, :cond_2
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/o;->a:Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;->b(Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;)Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object v0
+
+    const v1, 0x7f030050
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object p2
+
+    const v0, 0x7f0701cb
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/o;->b:Landroid/widget/ImageView;
+
+    const v0, 0x7f0701cc
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/o;->c:Landroid/widget/TextView;
+
+    const v0, 0x7f0701cd
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/o;->d:Landroid/widget/TextView;
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/o;->a:Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;->c(Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/weight/UserInfo;
+
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/weight/UserInfo;->avatarUrl:Ljava/lang/String;
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/weight/UserInfo;->avatarUrl:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/o;->b:Landroid/widget/ImageView;
+
+    const v2, 0x7f020005
+
+    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/o;->a:Lcn/com/smartdevices/bracelet/weight/family/n;
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/weight/UserInfo;->avatarUrl:Ljava/lang/String;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/weight/family/n;->a(Lcn/com/smartdevices/bracelet/weight/family/n;)Lkankan/wheel/widget/WheelView;
+    if-eqz v1, :cond_1
 
-    move-result-object v0
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/weight/UserInfo;->avatarUrl:Ljava/lang/String;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/o;->a:Lcn/com/smartdevices/bracelet/weight/family/n;
+    invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/weight/family/n;->b(Lcn/com/smartdevices/bracelet/weight/family/n;)Lcn/com/smartdevices/bracelet/ui/cs;
+    move-result v1
 
-    move-result-object v1
+    if-nez v1, :cond_1
 
-    invoke-virtual {v0, v1}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/a/f;)Lkankan/wheel/widget/WheelView;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/o;->d:Landroid/widget/TextView;
 
-    goto :goto_0
+    const-string v2, "content tmp"
+
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    :cond_1
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/weight/UserInfo;->name:Ljava/lang/String;
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, v0, Lcn/com/smartdevices/bracelet/weight/UserInfo;->name:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/o;->c:Landroid/widget/TextView;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/weight/UserInfo;->name:Ljava/lang/String;
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    :cond_2
+    return-object p2
 .end method

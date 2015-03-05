@@ -100,7 +100,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->d:Landroid/widget/TextView;
 
-    const v3, 0x7f080160
+    const v3, 0x7f080161
 
     invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->getString(I)Ljava/lang/String;
 
@@ -152,7 +152,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0700dc
+    const v0, 0x7f0701a0
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->findViewById(I)Landroid/view/View;
 
@@ -162,7 +162,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->d:Landroid/widget/TextView;
 
-    const v0, 0x7f070188
+    const v0, 0x7f0701a1
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->findViewById(I)Landroid/view/View;
 
@@ -295,7 +295,7 @@
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
-    const v0, 0x7f03003e
+    const v0, 0x7f03003f
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;->setContentView(I)V
 

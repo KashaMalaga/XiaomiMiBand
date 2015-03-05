@@ -1,52 +1,68 @@
-.class public Lcn/com/smartdevices/bracelet/gps/ui/aC;
-.super Landroid/support/v13/app/h;
+.class Lcn/com/smartdevices/bracelet/gps/ui/aC;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic c:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;
 
 
 # direct methods
-.method public constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;Landroid/app/FragmentManager;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/aC;->c:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/aC;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;
 
-    invoke-direct {p0, p2}, Landroid/support/v13/app/h;-><init>(Landroid/app/FragmentManager;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(I)Landroid/app/Fragment;
-    .locals 1
+.method public onClick(Landroid/view/View;)V
+    .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/aC;->c:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;->j(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;)Ljava/util/List;
+    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Landroid/app/Fragment;
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    return-object v0
-.end method
+    move-result-object v0
 
-.method public b()I
-    .locals 1
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    const/4 v0, 0x1
+    move-result v0
 
-    return v0
-.end method
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/aC;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;
 
-.method public e(I)V
-    .locals 0
+    invoke-virtual {v1, v0}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->a(I)V
 
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/aC;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->a(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;)Lcn/com/smartdevices/bracelet/gps/ui/aD;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/aC;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;->a(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkBar;)Lcn/com/smartdevices/bracelet/gps/ui/aD;
+
+    move-result-object v1
+
+    invoke-interface {v1, v0}, Lcn/com/smartdevices/bracelet/gps/ui/aD;->a(I)V
+
+    :cond_0
     return-void
 .end method

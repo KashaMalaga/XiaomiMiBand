@@ -96,7 +96,7 @@
 .method private a(Landroid/view/View;)V
     .locals 14
 
-    const v0, 0x7f0701e5
+    const v0, 0x7f0701ff
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -106,7 +106,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ak;->b:Landroid/widget/TextView;
 
-    const v0, 0x7f0701e6
+    const v0, 0x7f070200
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -116,7 +116,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ak;->c:Landroid/widget/TextView;
 
-    const v0, 0x7f0701e7
+    const v0, 0x7f070201
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -126,7 +126,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ak;->f:Lkankan/wheel/widget/WheelView;
 
-    const v0, 0x7f0701e8
+    const v0, 0x7f070202
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -222,7 +222,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     :goto_1
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cs;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cx;
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/ak;->getActivity()Landroid/app/Activity;
 
@@ -268,11 +268,11 @@
 
     const/4 v13, 0x1
 
-    invoke-direct/range {v0 .. v13}, Lcn/com/smartdevices/bracelet/ui/cs;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
+    invoke-direct/range {v0 .. v13}, Lcn/com/smartdevices/bracelet/ui/cx;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
 
     const/16 v1, 0x9
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/cs;->a(I)V
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/cx;->a(I)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/ak;->f:Lkankan/wheel/widget/WheelView;
 
@@ -282,13 +282,13 @@
 
     move-result-object v1
 
-    const v2, 0x7f020171
+    const v2, 0x7f02017b
 
     invoke-virtual {v1, v2}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
     move-result-object v1
 
-    const v2, 0x7f0800ed
+    const v2, 0x7f0800ee
 
     invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/ui/ak;->getString(I)Ljava/lang/String;
 
@@ -316,7 +316,7 @@
 
     invoke-virtual {v0, p0}, Lkankan/wheel/widget/WheelView;->a(Lkankan/wheel/widget/e;)V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cs;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/cx;
 
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/ak;->getActivity()Landroid/app/Activity;
 
@@ -362,7 +362,7 @@
 
     const/4 v13, 0x1
 
-    invoke-direct/range {v0 .. v13}, Lcn/com/smartdevices/bracelet/ui/cs;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
+    invoke-direct/range {v0 .. v13}, Lcn/com/smartdevices/bracelet/ui/cx;-><init>(Landroid/content/Context;IILkankan/wheel/widget/WheelView;IIIZIIIII)V
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/ak;->g:Lkankan/wheel/widget/WheelView;
 
@@ -372,13 +372,13 @@
 
     move-result-object v1
 
-    const v2, 0x7f020171
+    const v2, 0x7f02017b
 
     invoke-virtual {v1, v2}, Lkankan/wheel/widget/WheelView;->e(I)Lkankan/wheel/widget/WheelView;
 
     move-result-object v1
 
-    const v2, 0x7f0800e3
+    const v2, 0x7f0800e4
 
     invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/ui/ak;->getString(I)Ljava/lang/String;
 
@@ -411,7 +411,7 @@
     :sswitch_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ak;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f080133
+    const v1, 0x7f080134
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -420,7 +420,7 @@
     :sswitch_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ak;->b:Landroid/widget/TextView;
 
-    const v1, 0x7f080134
+    const v1, 0x7f080135
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -599,7 +599,7 @@
 .method protected a()I
     .locals 1
 
-    const v0, 0x7f030059
+    const v0, 0x7f03005a
 
     return v0
 .end method

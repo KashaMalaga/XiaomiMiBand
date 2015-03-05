@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="health_link_title">
+        <item>1. Ambulancia 24/7</item>
+        <item>2. Consejo de Emergencia</item>
+        <item>3. Asistencia para proporcionar vehículos</item>
+        <item>4. Asistencia para proporcionar información sobre el incidente</item>
+        <item>5. El contacto de emergencia</item>
+        <item>6. Disponible hospital</item>
+        <item>7. Guía de admisión</item>
+    </string-array>
+    <string-array name="health_link_content">
+        <item>Apoyo Reloj profesionales bilingües ambulancia.</item>
+        <item>En los casos reales, el usuario en el teléfono puede solicitar el asesoramiento de la ambulancia.</item>
+        <item>Después de recibir una llamada de un usuario, el centro de llamadas realizará llamada de emergencia (123).</item>
+        <item>Apoyo a los usuarios en la prestación de información sobre el incidente.</item>
+        <item>Los datos facilitados por los usuarios para notificar a los familiares o conexión inmediata.</item>
+        <item>El usuario se le dará a la admisión del hospital más cercano. Él también tiene el derecho de elegir a voluntad y discreción.</item>
+        <item>Proporcionar toda la información sobre el proceso de admisión.</item>
+    </string-array>
     <string-array name="weeks">
         <item>Lunes</item>
         <item>Martes</item>
@@ -64,24 +82,6 @@
         <item>Sobrepeso</item>
         <item>Obesidad</item>
         <item>Muy grueso</item>
-    </string-array>
-    <string-array name="health_link_title">
-        <item>1. Ambulancia 24/7</item>
-        <item>2. Consejo de Emergencia</item>
-        <item>3. Asistencia para proporcionar vehículos</item>
-        <item>4. Asistencia para proporcionar información sobre el incidente</item>
-        <item>5. El contacto de emergencia</item>
-        <item>6. Disponible hospital</item>
-        <item>7. Guía de admisión</item>
-    </string-array>
-    <string-array name="health_link_content">
-        <item>Apoyo Reloj profesionales bilingües ambulancia.</item>
-        <item>En los casos reales, el usuario en el teléfono puede solicitar el asesoramiento de la ambulancia.</item>
-        <item>Después de recibir una llamada de un usuario, el centro de llamadas realizará llamada de emergencia (123).</item>
-        <item>Apoyo a los usuarios en la prestación de información sobre el incidente.</item>
-        <item>Los datos facilitados por los usuarios para notificar a los familiares o conexión inmediata.</item>
-        <item>El usuario se le dará a la admisión del hospital más cercano. Él también tiene el derecho de elegir a voluntad y discreción.</item>
-        <item>Proporcionar toda la información sobre el proceso de admisión.</item>
     </string-array>
     <string-array name="weight_test_unit">
         <item>kg</item>

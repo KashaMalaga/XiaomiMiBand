@@ -3,9 +3,9 @@
 
 
 # static fields
-.field public static final CropOverlayView:I = 0x7f070195
+.field public static final CropOverlayView:I = 0x7f0701ae
 
-.field public static final ImageView_image:I = 0x7f070194
+.field public static final ImageView_image:I = 0x7f0701ad
 
 .field public static final off:I = 0x7f070002
 

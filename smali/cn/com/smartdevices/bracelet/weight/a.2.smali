@@ -349,7 +349,7 @@
 
     invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/m;->a()Lcn/com/smartdevices/bracelet/weight/m;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/o;->a()Lcn/com/smartdevices/bracelet/weight/o;
 
     move-result-object v7
 
@@ -478,7 +478,7 @@
     :cond_1
     iget v1, v0, Lcn/com/smartdevices/bracelet/weight/UserInfo;->uid:I
 
-    invoke-virtual {v7, v1}, Lcn/com/smartdevices/bracelet/weight/m;->b(I)Ljava/util/List;
+    invoke-virtual {v7, v1}, Lcn/com/smartdevices/bracelet/weight/o;->b(I)Ljava/util/List;
 
     move-result-object v9
 
@@ -512,7 +512,7 @@
     goto :goto_3
 
     :cond_2
-    invoke-virtual {v7, v9}, Lcn/com/smartdevices/bracelet/weight/m;->c(Ljava/util/List;)Z
+    invoke-virtual {v7, v9}, Lcn/com/smartdevices/bracelet/weight/o;->c(Ljava/util/List;)Z
 
     :cond_3
     if-eqz v2, :cond_4
@@ -1097,7 +1097,7 @@
     return v0
 .end method
 
-.method public a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/weight/C;)Z
+.method public a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/weight/D;)Z
     .locals 5
 
     const-string v0, "UserInfoManager"
@@ -1120,7 +1120,7 @@
 
     new-instance v4, Lcn/com/smartdevices/bracelet/weight/c;
 
-    invoke-direct {v4, p0, p1, v0, p2}, Lcn/com/smartdevices/bracelet/weight/c;-><init>(Lcn/com/smartdevices/bracelet/weight/a;Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/SyncResult;Lcn/com/smartdevices/bracelet/weight/C;)V
+    invoke-direct {v4, p0, p1, v0, p2}, Lcn/com/smartdevices/bracelet/weight/c;-><init>(Lcn/com/smartdevices/bracelet/weight/a;Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/SyncResult;Lcn/com/smartdevices/bracelet/weight/D;)V
 
     invoke-static {v1, v2, v3, v4}, Lcn/com/smartdevices/bracelet/k/g;->a(Lcn/com/smartdevices/bracelet/model/LoginData;IZLcom/d/a/a/h;)V
 
@@ -1552,7 +1552,7 @@
     throw v0
 .end method
 
-.method public b(Landroid/content/Context;Lcn/com/smartdevices/bracelet/weight/C;)Z
+.method public b(Landroid/content/Context;Lcn/com/smartdevices/bracelet/weight/D;)Z
     .locals 5
 
     const/4 v1, 0x1
@@ -1592,9 +1592,9 @@
 
     new-instance v0, Lcn/com/smartdevices/bracelet/weight/e;
 
-    invoke-direct {v0, p0, p2}, Lcn/com/smartdevices/bracelet/weight/e;-><init>(Lcn/com/smartdevices/bracelet/weight/a;Lcn/com/smartdevices/bracelet/weight/C;)V
+    invoke-direct {v0, p0, p2}, Lcn/com/smartdevices/bracelet/weight/e;-><init>(Lcn/com/smartdevices/bracelet/weight/a;Lcn/com/smartdevices/bracelet/weight/D;)V
 
-    invoke-virtual {p0, p1, v0}, Lcn/com/smartdevices/bracelet/weight/a;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/weight/C;)Z
+    invoke-virtual {p0, p1, v0}, Lcn/com/smartdevices/bracelet/weight/a;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/weight/D;)Z
 
     move-result v1
 
@@ -1610,7 +1610,7 @@
     :cond_2
     if-eqz p2, :cond_0
 
-    invoke-interface {p2}, Lcn/com/smartdevices/bracelet/weight/C;->a()V
+    invoke-interface {p2}, Lcn/com/smartdevices/bracelet/weight/D;->a()V
 
     goto :goto_1
 .end method
@@ -1948,10 +1948,6 @@
     invoke-static {}, Lcn/com/smartdevices/bracelet/z;->H()Lcn/com/smartdevices/bracelet/model/PersonInfo;
 
     move-result-object v0
-
-    iget v1, p1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->weight:F
-
-    iput v1, v0, Lcn/com/smartdevices/bracelet/model/PersonInfo;->weight:F
 
     iget v1, p1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->targetWeight:F
 

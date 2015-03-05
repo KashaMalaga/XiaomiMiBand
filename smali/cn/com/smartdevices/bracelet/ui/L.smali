@@ -91,7 +91,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0300ac
+    const v1, 0x7f0300b0
 
     const/4 v2, 0x0
 
@@ -107,7 +107,7 @@
 
     check-cast v0, Lcn/com/smartdevices/bracelet/model/BtDevice;
 
-    const v1, 0x7f070313
+    const v1, 0x7f070331
 
     invoke-virtual {v4, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -115,7 +115,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    const v2, 0x7f070314
+    const v2, 0x7f070332
 
     invoke-virtual {v4, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -123,7 +123,7 @@
 
     check-cast v2, Landroid/widget/TextView;
 
-    const v3, 0x7f070315
+    const v3, 0x7f070333
 
     invoke-virtual {v4, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -179,7 +179,7 @@
 
     iget-object v3, p0, Lcn/com/smartdevices/bracelet/ui/L;->b:Landroid/content/Context;
 
-    const v5, 0x7f08021f
+    const v5, 0x7f080220
 
     invoke-virtual {v3, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

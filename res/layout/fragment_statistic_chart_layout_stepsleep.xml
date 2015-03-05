@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="@dimen/statistic_chart_height">
+        <View android:layout_gravity="bottom" android:id="@id/chart_date_line_bg" android:background="#fff2f2f2" android:layout_width="fill_parent" android:layout_height="28.0dip" />
+        <cn.com.smartdevices.bracelet.chart.StatisticChartView android:id="@id/statistic_chart" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <cn.com.smartdevices.bracelet.chart.StatisticChartView android:id="@id/next_statistic_chart" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/statistic_info_min_height">
+            <include android:layout_gravity="center" android:id="@id/info_sleep_daily_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/fragment_dynamic_detail_info_sleep" />
+            <include android:layout_gravity="center" android:id="@id/info_sleep_weekly_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/fragment_statistic_info_weekly_monthly_sleep" />
+            <include android:layout_gravity="center" android:id="@id/info_sleep_monthly_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/fragment_statistic_info_weekly_monthly_sleep" />
+        </FrameLayout>
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/statistic_info_min_height">
+            <include android:layout_gravity="center" android:id="@id/info_step_daily_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/fragment_dynamic_detail_info_step" />
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="@dimen/statistic_info_min_height">
+                <include android:layout_gravity="center" android:id="@id/info_step_weekly_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/fragment_statistic_info_weekly_monthly_step" />
+                <include android:layout_gravity="center" android:id="@id/info_step_monthly_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/fragment_statistic_info_weekly_monthly_step" />
+            </FrameLayout>
+        </FrameLayout>
+    </FrameLayout>
+</LinearLayout>

@@ -8,6 +8,8 @@
 # static fields
 .field private static final b:Ljava/lang/String; = "BindDevicesBandFragment"
 
+.field private static final c:I = 0x101
+
 
 # direct methods
 .method public constructor <init>()V
@@ -39,7 +41,70 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/w;->startActivity(Landroid/content/Intent;)V
+    const/16 v1, 0x101
+
+    invoke-virtual {p0, v0, v1}, Lcn/com/smartdevices/bracelet/ui/w;->startActivityForResult(Landroid/content/Intent;I)V
+
+    return-void
+.end method
+
+.method public onActivityResult(IILandroid/content/Intent;)V
+    .locals 3
+
+    const-string v0, "BindDevicesBandFragment"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "onActivityResult requestCode = "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, ", resultCode "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/16 v0, 0x101
+
+    if-ne p1, v0, :cond_0
+
+    const/4 v0, -0x1
+
+    if-ne p2, v0, :cond_0
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/w;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/w;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
+
+    :cond_0
+    invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/n;->onActivityResult(IILandroid/content/Intent;)V
 
     return-void
 .end method
@@ -108,7 +173,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v2, 0x7f08022b
+    const v2, 0x7f080232
 
     invoke-virtual {p0, v2}, Lcn/com/smartdevices/bracelet/ui/w;->getString(I)Ljava/lang/String;
 

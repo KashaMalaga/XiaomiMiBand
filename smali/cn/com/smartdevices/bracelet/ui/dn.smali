@@ -1,41 +1,34 @@
-.class Lcn/com/smartdevices/bracelet/ui/dN;
+.class public Lcn/com/smartdevices/bracelet/ui/dN;
 .super Ljava/lang/Object;
-
-# interfaces
-.implements Lcom/tencent/tauth/IUiListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/dK;
+.field public a:I
+
+.field public b:I
+
+.field public c:Z
+
+.field public d:Landroid/content/pm/ResolveInfo;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/dK;)V
-    .locals 0
-
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/dN;->a:Lcn/com/smartdevices/bracelet/ui/dK;
+.method public constructor <init>(II)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    const/4 v0, 0x0
 
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/ui/dN;->c:Z
 
-# virtual methods
-.method public onCancel()V
-    .locals 0
+    const/4 v0, 0x0
 
-    return-void
-.end method
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/dN;->d:Landroid/content/pm/ResolveInfo;
 
-.method public onComplete(Ljava/lang/Object;)V
-    .locals 0
+    iput p1, p0, Lcn/com/smartdevices/bracelet/ui/dN;->a:I
 
-    return-void
-.end method
-
-.method public onError(Lcom/tencent/tauth/UiError;)V
-    .locals 0
+    iput p2, p0, Lcn/com/smartdevices/bracelet/ui/dN;->b:I
 
     return-void
 .end method

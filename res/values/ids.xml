@@ -176,19 +176,39 @@
     <item type="id" name="person_info_set_gender_title">false</item>
     <item type="id" name="info_gender_male">false</item>
     <item type="id" name="info_gender_female">false</item>
+    <item type="id" name="info_height_foot_wheel">false</item>
     <item type="id" name="person_info_height_picker">false</item>
     <item type="id" name="info_name_edittext">false</item>
     <item type="id" name="bracelet_title_info">false</item>
     <item type="id" name="person_info_goal_picker">false</item>
     <item type="id" name="person_info_weight_picker">false</item>
-    <item type="id" name="weight_goal_set_cancel">false</item>
-    <item type="id" name="fragment_alarm_repeat_title">false</item>
-    <item type="id" name="weight_goal_set_ok">false</item>
     <item type="id" name="person_info_set_weight_info">false</item>
     <item type="id" name="weight_goal_seekbar">false</item>
+    <item type="id" name="set_weight_goal_ok">false</item>
+    <item type="id" name="set_weight_goal_del_or_cle">false</item>
+    <item type="id" name="person_info_length_unit_metric_area">false</item>
+    <item type="id" name="length_unit_metric">false</item>
+    <item type="id" name="length_unit_metric_txt">false</item>
+    <item type="id" name="person_info_length_unit_british_area">false</item>
+    <item type="id" name="length_unit_british">false</item>
+    <item type="id" name="length_unit_british_txt">false</item>
+    <item type="id" name="weight_set_unit_area">false</item>
+    <item type="id" name="person_info_weight_unit_metric_area">false</item>
+    <item type="id" name="weight_unit_metric">false</item>
+    <item type="id" name="weight_unit_metric_txt">false</item>
+    <item type="id" name="person_info_weight_unit_british_area">false</item>
+    <item type="id" name="weight_unit_british">false</item>
+    <item type="id" name="weight_unit_british_txt">false</item>
+    <item type="id" name="person_info_weight_unit_shijin_area">false</item>
+    <item type="id" name="weight_unit_shijin">false</item>
+    <item type="id" name="weight_unit_shijin_txt">false</item>
+    <item type="id" name="person_info_weight_unit_text_hint_area">false</item>
+    <item type="id" name="weight_unit_image">false</item>
+    <item type="id" name="weight_unit_text_hint">false</item>
     <item type="id" name="header_history">false</item>
     <item type="id" name="header_more">false</item>
     <item type="id" name="map">false</item>
+    <item type="id" name="gps_signal_container">false</item>
     <item type="id" name="gps_signal_key">false</item>
     <item type="id" name="gps_signal_value">false</item>
     <item type="id" name="gps_locating">false</item>
@@ -342,6 +362,7 @@
     <item type="id" name="share_to_line_btn">false</item>
     <item type="id" name="share_to_facebook_btn">false</item>
     <item type="id" name="weight_devices_lv">false</item>
+    <item type="id" name="tips_bg">false</item>
     <item type="id" name="weight_tip_title">false</item>
     <item type="id" name="weight_tip_divider1">false</item>
     <item type="id" name="weight_tip_bmi_img">false</item>
@@ -351,9 +372,13 @@
     <item type="id" name="weight_tip_bmi_fat_name">false</item>
     <item type="id" name="weight_tip_divider3">false</item>
     <item type="id" name="weight_tip_bmi_fat_content">false</item>
+    <item type="id" name="weight_tip_weight_ref_title">false</item>
+    <item type="id" name="weight_tip_divider4">false</item>
+    <item type="id" name="weight_tip_weight_ref_content">false</item>
     <item type="id" name="bmi_view_cancel">false</item>
     <item type="id" name="show_image_iv">false</item>
     <item type="id" name="alarm_clock_lv">false</item>
+    <item type="id" name="fragment_alarm_repeat_title">false</item>
     <item type="id" name="days_view">false</item>
     <item type="id" name="update_apk_content">false</item>
     <item type="id" name="multi_devices_err_title">false</item>
@@ -379,6 +404,7 @@
     <item type="id" name="daily_consume_info_txt">false</item>
     <item type="id" name="daily_reach_goals_txt">false</item>
     <item type="id" name="daily_reach_goals_info_txt">false</item>
+    <item type="id" name="daily_total_distance_title_txt">false</item>
     <item type="id" name="daily_total_distance_txt">false</item>
     <item type="id" name="daily_total_distance_info_txt">false</item>
     <item type="id" name="msg">false</item>
@@ -454,6 +480,7 @@
     <item type="id" name="dynamic_lv">false</item>
     <item type="id" name="title">false</item>
     <item type="id" name="summary">false</item>
+    <item type="id" name="found_weight_value">false</item>
     <item type="id" name="fw_title_tv">false</item>
     <item type="id" name="fw_tips_tv">false</item>
     <item type="id" name="fw_progress_pb">false</item>
@@ -501,6 +528,7 @@
     <item type="id" name="info_gender_male_txt">false</item>
     <item type="id" name="person_info_female_area">false</item>
     <item type="id" name="info_gender_female_txt">false</item>
+    <item type="id" name="wheel_split_line">false</item>
     <item type="id" name="info_height_wheel">false</item>
     <item type="id" name="info_nick_name">false</item>
     <item type="id" name="info_person_signature">false</item>
@@ -605,19 +633,21 @@
     <item type="id" name="share_to_miliao_target_friends_fl">false</item>
     <item type="id" name="share_to_miliao_target_union_fl">false</item>
     <item type="id" name="share_to_miliao_target_feeds_fl">false</item>
+    <item type="id" name="chart_stepsleep_layout">false</item>
+    <item type="id" name="chart_weight_layout">false</item>
+    <item type="id" name="mode_statistic_zoom_in">false</item>
+    <item type="id" name="mode_statistic_zoom_out">false</item>
     <item type="id" name="chart_date_line_bg">false</item>
     <item type="id" name="statistic_chart">false</item>
     <item type="id" name="next_statistic_chart">false</item>
-    <item type="id" name="user_picker">false</item>
     <item type="id" name="info_sleep_daily_layout">false</item>
     <item type="id" name="info_sleep_weekly_layout">false</item>
     <item type="id" name="info_sleep_monthly_layout">false</item>
     <item type="id" name="info_step_daily_layout">false</item>
     <item type="id" name="info_step_weekly_layout">false</item>
     <item type="id" name="info_step_monthly_layout">false</item>
+    <item type="id" name="user_picker">false</item>
     <item type="id" name="info_weight_layout">false</item>
-    <item type="id" name="mode_statistic_zoom_in">false</item>
-    <item type="id" name="mode_statistic_zoom_out">false</item>
     <item type="id" name="info_step_distance_average">false</item>
     <item type="id" name="info_step_average">false</item>
     <item type="id" name="info_step_calorie_average">false</item>
@@ -891,12 +921,9 @@
     <item type="id" name="line_divider">false</item>
     <item type="id" name="head_title">false</item>
     <item type="id" name="head_sub_title">false</item>
-    <item type="id" name="edit_layout">false</item>
-    <item type="id" name="other_img">false</item>
-    <item type="id" name="add_new_img">false</item>
-    <item type="id" name="frame_viewpager">false</item>
-    <item type="id" name="line_divider1">false</item>
+    <item type="id" name="weight_value">false</item>
     <item type="id" name="chooseuser_view_pager">false</item>
+    <item type="id" name="line_divider1">false</item>
     <item type="id" name="chooseuser_indicator">false</item>
     <item type="id" name="chooseuser_cancel">false</item>
     <item type="id" name="action_settings">false</item>

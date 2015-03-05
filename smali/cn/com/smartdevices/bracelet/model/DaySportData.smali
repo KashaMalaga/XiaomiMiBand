@@ -218,46 +218,6 @@
     goto :goto_0
 .end method
 
-.method public static sFromBinaryData(Lcn/com/smartdevices/bracelet/model/SportDay;[B)Lcn/com/smartdevices/bracelet/model/DaySportData;
-    .locals 7
-
-    array-length v1, p1
-
-    new-instance v2, Lcn/com/smartdevices/bracelet/model/DaySportData;
-
-    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/model/DaySportData;-><init>(Lcn/com/smartdevices/bracelet/model/SportDay;)V
-
-    const/4 v0, 0x0
-
-    :goto_0
-    if-ge v0, v1, :cond_0
-
-    new-instance v3, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityData;
-
-    add-int/lit8 v4, v0, 0x1
-
-    aget-byte v4, p1, v4
-
-    add-int/lit8 v5, v0, 0x2
-
-    aget-byte v5, p1, v5
-
-    aget-byte v6, p1, v0
-
-    invoke-direct {v3, v4, v5, v6}, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityData;-><init>(BBB)V
-
-    div-int/lit8 v4, v0, 0x3
-
-    invoke-virtual {v2, v4, v3}, Lcn/com/smartdevices/bracelet/model/DaySportData;->add(ILcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityData;)V
-
-    add-int/lit8 v0, v0, 0x3
-
-    goto :goto_0
-
-    :cond_0
-    return-object v2
-.end method
-
 
 # virtual methods
 .method public add(ILcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityData;)V

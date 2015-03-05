@@ -1,172 +1,162 @@
 .class final Lcn/com/smartdevices/bracelet/H;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lcom/xiaomi/market/sdk/e;
+.super Lcom/d/a/a/h;
 
 
 # instance fields
-.field final synthetic a:Landroid/app/Activity;
+.field final synthetic a:Landroid/content/Context;
 
-.field final synthetic b:Z
+.field final synthetic b:Lcn/com/smartdevices/bracelet/S;
 
 
 # direct methods
-.method constructor <init>(Landroid/app/Activity;Z)V
+.method constructor <init>(Landroid/content/Context;Lcn/com/smartdevices/bracelet/S;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/H;->a:Landroid/app/Activity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/H;->a:Landroid/content/Context;
 
-    iput-boolean p2, p0, Lcn/com/smartdevices/bracelet/H;->b:Z
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/H;->b:Lcn/com/smartdevices/bracelet/S;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/d/a/a/h;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(ILcom/xiaomi/market/sdk/b;)V
-    .locals 3
-    .annotation build Landroid/annotation/SuppressLint;
-        value = {
-            "NewApi"
-        }
-    .end annotation
+.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
+    .locals 2
 
-    const v1, 0x7f08002e
+    const-string v0, "Utils"
 
-    const/4 v2, 0x1
+    const-string v1, "get from server fail"
 
-    packed-switch p1, :pswitch_data_0
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/H;->b:Lcn/com/smartdevices/bracelet/S;
+
+    const/4 v1, 0x0
+
+    invoke-interface {v0, v1}, Lcn/com/smartdevices/bracelet/S;->a(Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;)V
+
+    return-void
+.end method
+
+.method public onSuccess(I[Lorg/apache/http/Header;[B)V
+    .locals 5
+
+    const/4 v4, 0x0
+
+    if-eqz p3, :cond_0
+
+    new-instance v0, Ljava/lang/String;
+
+    invoke-direct {v0, p3}, Ljava/lang/String;-><init>([B)V
+
+    const-string v1, "Utils"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Response getTargetWeightGoalFromServer : "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/H;->a:Landroid/content/Context;
+
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/k/i;->a(Landroid/content/Context;Ljava/lang/String;)Lcn/com/smartdevices/bracelet/k/i;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/k/i;->c()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/E;->g(Ljava/lang/String;)Ljava/util/List;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-lez v1, :cond_1
+
+    const-string v1, "Utils"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "item size is "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/H;->b:Lcn/com/smartdevices/bracelet/S;
+
+    const/4 v2, 0x0
+
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;
+
+    invoke-interface {v1, v0}, Lcn/com/smartdevices/bracelet/S;->a(Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;)V
 
     :cond_0
     :goto_0
     return-void
 
-    :pswitch_0
+    :cond_1
     const-string v0, "Utils"
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v2, " UpdateResponse: "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
+    const-string v1, " info size is null or 0"
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/H;->a:Landroid/app/Activity;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/H;->b:Lcn/com/smartdevices/bracelet/S;
 
-    invoke-virtual {v0}, Landroid/app/Activity;->isDestroyed()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/H;->a:Landroid/app/Activity;
-
-    invoke-static {p2, v0}, Lcn/com/smartdevices/bracelet/E;->a(Lcom/xiaomi/market/sdk/b;Landroid/app/Activity;)V
+    invoke-interface {v0, v4}, Lcn/com/smartdevices/bracelet/S;->a(Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;)V
 
     goto :goto_0
 
-    :pswitch_1
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/H;->b:Z
+    :cond_2
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/H;->b:Lcn/com/smartdevices/bracelet/S;
 
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/H;->a:Landroid/app/Activity;
-
-    const v1, 0x7f080115
-
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+    invoke-interface {v0, v4}, Lcn/com/smartdevices/bracelet/S;->a(Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;)V
 
     goto :goto_0
-
-    :pswitch_2
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/H;->b:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/H;->a:Landroid/app/Activity;
-
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    goto :goto_0
-
-    :pswitch_3
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/H;->b:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/H;->a:Landroid/app/Activity;
-
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    goto :goto_0
-
-    :pswitch_4
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/H;->b:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/H;->a:Landroid/app/Activity;
-
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    goto :goto_0
-
-    :pswitch_5
-    iget-boolean v0, p0, Lcn/com/smartdevices/bracelet/H;->b:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/H;->a:Landroid/app/Activity;
-
-    const v1, 0x7f080116
-
-    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    goto :goto_0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-        :pswitch_4
-        :pswitch_5
-    .end packed-switch
 .end method

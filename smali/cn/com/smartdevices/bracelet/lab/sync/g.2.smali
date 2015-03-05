@@ -814,7 +814,7 @@
 
     move-object/from16 v0, p2
 
-    invoke-virtual {v1, v0, v2}, Lcn/com/smartdevices/bracelet/db/v;->b(Ljava/lang/String;Lcn/com/smartdevices/bracelet/w;)[B
+    invoke-virtual {v1, v0, v2}, Lcn/com/smartdevices/bracelet/db/v;->c(Ljava/lang/String;Lcn/com/smartdevices/bracelet/w;)[B
 
     move-result-object v1
 
@@ -1118,7 +1118,7 @@
 
     invoke-direct {v1, p3}, Lcn/com/smartdevices/bracelet/w;-><init>(I)V
 
-    invoke-virtual {v0, p2, v1}, Lcn/com/smartdevices/bracelet/db/v;->a(Ljava/lang/String;Lcn/com/smartdevices/bracelet/w;)[B
+    invoke-virtual {v0, p2, v1}, Lcn/com/smartdevices/bracelet/db/v;->b(Ljava/lang/String;Lcn/com/smartdevices/bracelet/w;)[B
 
     move-result-object v1
 
@@ -1765,7 +1765,7 @@
 
     invoke-direct {v7, p2}, Lcn/com/smartdevices/bracelet/w;-><init>(I)V
 
-    invoke-virtual {v0, v3, v7}, Lcn/com/smartdevices/bracelet/db/v;->a(Ljava/lang/String;Lcn/com/smartdevices/bracelet/w;)[B
+    invoke-virtual {v0, v3, v7}, Lcn/com/smartdevices/bracelet/db/v;->b(Ljava/lang/String;Lcn/com/smartdevices/bracelet/w;)[B
 
     move-result-object v0
 

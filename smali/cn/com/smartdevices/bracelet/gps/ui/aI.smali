@@ -1,151 +1,264 @@
-.class public Lcn/com/smartdevices/bracelet/gps/ui/aI;
-.super Lcom/commonsware/cwac/camera/a;
+.class Lcn/com/smartdevices/bracelet/gps/ui/aI;
+.super Lcom/commonsware/cwac/camera/o;
+
+# interfaces
+.implements Landroid/hardware/Camera$FaceDetectionListener;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/aG;
+.field a:Z
 
-.field private b:Ljava/lang/String;
+.field final synthetic b:Lcn/com/smartdevices/bracelet/gps/ui/aH;
 
 
 # direct methods
-.method public constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/aG;)V
-    .locals 0
+.method public constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/aH;Landroid/content/Context;)V
+    .locals 1
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/aI;->a:Lcn/com/smartdevices/bracelet/gps/ui/aG;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/aI;->b:Lcn/com/smartdevices/bracelet/gps/ui/aH;
 
-    invoke-direct {p0}, Lcom/commonsware/cwac/camera/a;-><init>()V
+    invoke-direct {p0, p2}, Lcom/commonsware/cwac/camera/o;-><init>(Landroid/content/Context;)V
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/aI;->a:Z
 
     return-void
+.end method
+
+.method private a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
+    .locals 7
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v3
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v4
+
+    new-instance v5, Landroid/graphics/Matrix;
+
+    invoke-direct {v5}, Landroid/graphics/Matrix;-><init>()V
+
+    const/high16 v0, -0x40800000
+
+    const/high16 v2, 0x3f800000
+
+    invoke-virtual {v5, v0, v2}, Landroid/graphics/Matrix;->postScale(FF)Z
+
+    const/4 v6, 0x1
+
+    move-object v0, p1
+
+    move v2, v1
+
+    invoke-static/range {v0 .. v6}, Landroid/graphics/Bitmap;->createBitmap(Landroid/graphics/Bitmap;IIIILandroid/graphics/Matrix;Z)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method a()V
+.method public a(Landroid/hardware/Camera$Parameters;)Landroid/hardware/Camera$Parameters;
+    .locals 1
+
+    invoke-super {p0, p1}, Lcom/commonsware/cwac/camera/o;->a(Landroid/hardware/Camera$Parameters;)Landroid/hardware/Camera$Parameters;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public a(Lcom/commonsware/cwac/camera/c;)V
+    .locals 3
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/aI;->b:Lcn/com/smartdevices/bracelet/gps/ui/aH;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/gps/ui/aH;->a:Lcn/com/smartdevices/bracelet/gps/ui/aF;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/aF;->f(Lcn/com/smartdevices/bracelet/gps/ui/aF;)Landroid/content/Context;
+
+    move-result-object v0
+
+    const-string v1, "Sorry, but you cannot use the camera now!"
+
+    const/4 v2, 0x1
+
+    invoke-static {v0, v1, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    return-void
+.end method
+
+.method public a(Lcom/commonsware/cwac/camera/m;Landroid/graphics/Bitmap;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public a(Lcom/commonsware/cwac/camera/m;[B)V
     .locals 2
 
-    new-instance v0, Lcom/commonsware/cwac/camera/m;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/aI;->b:Lcn/com/smartdevices/bracelet/gps/ui/aH;
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/ui/aI;->b()Lcom/commonsware/cwac/camera/b;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/gps/ui/aH;->a:Lcn/com/smartdevices/bracelet/gps/ui/aF;
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/aI;->b:Lcn/com/smartdevices/bracelet/gps/ui/aH;
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/ui/aH;->getView()Landroid/view/View;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/commonsware/cwac/camera/m;-><init>(Lcom/commonsware/cwac/camera/b;)V
+    invoke-virtual {v1}, Landroid/view/View;->getWidth()I
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/aI;->b:Ljava/lang/String;
+    move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/commonsware/cwac/camera/m;->a(Ljava/lang/String;)Lcom/commonsware/cwac/camera/m;
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/aF;->a(Lcn/com/smartdevices/bracelet/gps/ui/aF;I)I
 
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/aI;->a(Lcom/commonsware/cwac/camera/m;)V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/aI;->b:Lcn/com/smartdevices/bracelet/gps/ui/aH;
 
-    return-void
-.end method
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/gps/ui/aH;->a:Lcn/com/smartdevices/bracelet/gps/ui/aF;
 
-.method public a(ILjava/lang/Runnable;)V
-    .locals 1
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/aI;->b:Lcn/com/smartdevices/bracelet/gps/ui/aH;
 
-    invoke-virtual {p0, p1}, Lcn/com/smartdevices/bracelet/gps/ui/aI;->a(I)Lcom/commonsware/cwac/camera/u;
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/gps/ui/aH;->getView()Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/view/View;->getHeight()I
+
+    move-result v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/aF;->b(Lcn/com/smartdevices/bracelet/gps/ui/aF;I)I
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/aI;->b:Lcn/com/smartdevices/bracelet/gps/ui/aH;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/gps/ui/aH;->a:Lcn/com/smartdevices/bracelet/gps/ui/aF;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/aF;->b(Lcn/com/smartdevices/bracelet/gps/ui/aF;)I
+
+    move-result v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/aI;->b:Lcn/com/smartdevices/bracelet/gps/ui/aH;
+
+    iget-object v1, v1, Lcn/com/smartdevices/bracelet/gps/ui/aH;->a:Lcn/com/smartdevices/bracelet/gps/ui/aF;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/gps/ui/aF;->c(Lcn/com/smartdevices/bracelet/gps/ui/aF;)I
+
+    move-result v1
+
+    invoke-static {p2, v0, v1}, Lcn/com/smartdevices/bracelet/E;->a([BII)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    invoke-virtual {v0, p2}, Lcom/commonsware/cwac/camera/u;->a(Ljava/lang/Runnable;)Lcom/commonsware/cwac/camera/u;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/aI;->b:Lcn/com/smartdevices/bracelet/gps/ui/aH;
 
-    move-result-object v0
+    iget-object v1, v1, Lcn/com/smartdevices/bracelet/gps/ui/aH;->a:Lcn/com/smartdevices/bracelet/gps/ui/aF;
 
-    invoke-virtual {v0}, Lcom/commonsware/cwac/camera/u;->a()V
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/gps/ui/aF;->d(Lcn/com/smartdevices/bracelet/gps/ui/aF;)Lcn/com/smartdevices/bracelet/gps/ui/aJ;
 
-    return-void
-.end method
+    move-result-object v1
 
-.method public a(Z)V
-    .locals 1
+    if-eqz v1, :cond_0
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/ui/aI;->getView()Landroid/view/View;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/aI;->b:Lcn/com/smartdevices/bracelet/gps/ui/aH;
 
-    move-result-object v0
+    iget-object v1, v1, Lcn/com/smartdevices/bracelet/gps/ui/aH;->a:Lcn/com/smartdevices/bracelet/gps/ui/aF;
 
-    if-eqz v0, :cond_0
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/gps/ui/aF;->e(Lcn/com/smartdevices/bracelet/gps/ui/aF;)Z
 
-    invoke-super {p0, p1}, Lcom/commonsware/cwac/camera/a;->a(Z)V
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/aI;->b:Lcn/com/smartdevices/bracelet/gps/ui/aH;
+
+    iget-object v1, v1, Lcn/com/smartdevices/bracelet/gps/ui/aH;->a:Lcn/com/smartdevices/bracelet/gps/ui/aF;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/gps/ui/aF;->d(Lcn/com/smartdevices/bracelet/gps/ui/aF;)Lcn/com/smartdevices/bracelet/gps/ui/aJ;
+
+    move-result-object v1
+
+    invoke-interface {v1, v0}, Lcn/com/smartdevices/bracelet/gps/ui/aJ;->a(Landroid/graphics/Bitmap;)V
 
     :cond_0
+    :goto_0
     return-void
-.end method
 
-.method public onCreate(Landroid/os/Bundle;)V
-    .locals 3
+    :cond_1
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/aI;->b:Lcn/com/smartdevices/bracelet/gps/ui/aH;
 
-    invoke-super {p0, p1}, Lcom/commonsware/cwac/camera/a;->onCreate(Landroid/os/Bundle;)V
+    iget-object v1, v1, Lcn/com/smartdevices/bracelet/gps/ui/aH;->a:Lcn/com/smartdevices/bracelet/gps/ui/aF;
 
-    new-instance v0, Lcom/commonsware/cwac/camera/p;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/gps/ui/aF;->d(Lcn/com/smartdevices/bracelet/gps/ui/aF;)Lcn/com/smartdevices/bracelet/gps/ui/aJ;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/gps/ui/aJ;
+    move-result-object v1
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/ui/aI;->getActivity()Landroid/app/Activity;
-
-    move-result-object v2
-
-    invoke-direct {v1, p0, v2}, Lcn/com/smartdevices/bracelet/gps/ui/aJ;-><init>(Lcn/com/smartdevices/bracelet/gps/ui/aI;Landroid/content/Context;)V
-
-    invoke-direct {v0, v1}, Lcom/commonsware/cwac/camera/p;-><init>(Lcom/commonsware/cwac/camera/o;)V
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcom/commonsware/cwac/camera/p;->d(Z)Lcom/commonsware/cwac/camera/p;
+    invoke-direct {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/aI;->a(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/commonsware/cwac/camera/p;->a()Lcom/commonsware/cwac/camera/o;
+    invoke-interface {v1, v0}, Lcn/com/smartdevices/bracelet/gps/ui/aJ;->a(Landroid/graphics/Bitmap;)V
 
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/aI;->a(Lcom/commonsware/cwac/camera/b;)V
-
-    return-void
+    goto :goto_0
 .end method
 
-.method public onDestroy()V
-    .locals 0
-
-    invoke-super {p0}, Lcom/commonsware/cwac/camera/a;->onDestroy()V
-
-    return-void
-.end method
-
-.method public onDestroyView()V
-    .locals 0
-
-    invoke-super {p0}, Lcom/commonsware/cwac/camera/a;->onDestroyView()V
-
-    return-void
-.end method
-
-.method public onPause()V
-    .locals 0
-
-    invoke-super {p0}, Lcom/commonsware/cwac/camera/a;->onPause()V
-
-    return-void
-.end method
-
-.method public onResume()V
-    .locals 0
-
-    invoke-super {p0}, Lcom/commonsware/cwac/camera/a;->onResume()V
-
-    return-void
-.end method
-
-.method public onSaveInstanceState(Landroid/os/Bundle;)V
+.method public a()Z
     .locals 2
 
-    invoke-super {p0, p1}, Lcom/commonsware/cwac/camera/a;->onSaveInstanceState(Landroid/os/Bundle;)V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/aI;->b:Lcn/com/smartdevices/bracelet/gps/ui/aH;
 
-    const-string v0, "WatermarkCameraFragment"
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/ui/aH;->getArguments()Landroid/os/Bundle;
 
-    const-string v1, "DemoCameraFragment onSaveInstanceState"
+    move-result-object v0
 
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/aI;->b:Lcn/com/smartdevices/bracelet/gps/ui/aH;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/ui/aH;->getArguments()Landroid/os/Bundle;
+
+    move-result-object v0
+
+    const-string v1, "com.example.wm.USE_FFC"
+
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
+
+    move-result v0
+
+    goto :goto_0
+.end method
+
+.method public b()Z
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public c()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onFaceDetection([Landroid/hardware/Camera$Face;Landroid/hardware/Camera;)V
+    .locals 0
 
     return-void
 .end method

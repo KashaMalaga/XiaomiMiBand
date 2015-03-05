@@ -1,139 +1,158 @@
-.class Lcn/com/smartdevices/bracelet/ui/bV;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.class public Lcn/com/smartdevices/bracelet/ui/bV;
+.super Lcn/com/smartdevices/bracelet/ui/W;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/bU;
+.field private a:Lcn/com/smartdevices/bracelet/view/SelectDaysView;
+
+.field private b:I
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/bU;)V
+.method public constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/bV;->a:Lcn/com/smartdevices/bracelet/ui/bU;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/W;-><init>()V
 
     return-void
 .end method
 
+.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/bV;)I
+    .locals 1
+
+    iget v0, p0, Lcn/com/smartdevices/bracelet/ui/bV;->b:I
+
+    return v0
+.end method
+
+.method static synthetic a(Lcn/com/smartdevices/bracelet/ui/bV;I)I
+    .locals 0
+
+    iput p1, p0, Lcn/com/smartdevices/bracelet/ui/bV;->b:I
+
+    return p1
+.end method
+
+.method static synthetic b(Lcn/com/smartdevices/bracelet/ui/bV;)Lcn/com/smartdevices/bracelet/view/SelectDaysView;
+    .locals 1
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bV;->a:Lcn/com/smartdevices/bracelet/view/SelectDaysView;
+
+    return-object v0
+.end method
+
 
 # virtual methods
-.method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
+.method protected a()I
+    .locals 1
 
-    const-string v0, "NewAlarmActivity"
+    const v0, 0x7f030084
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    return v0
+.end method
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+.method protected c()V
+    .locals 2
 
-    const-string v2, "onItemClick: "
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/bV;->dismiss()V
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    packed-switch p3, :pswitch_data_0
-
-    :goto_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bV;->a:Lcn/com/smartdevices/bracelet/ui/bU;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/bU;->dismiss()V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bV;->a:Lcn/com/smartdevices/bracelet/ui/bU;
-
-    sget-object v1, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->a:[I
-
-    aget v1, v1, p3
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/bU;->a(Lcn/com/smartdevices/bracelet/ui/bU;I)I
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bV;->a:Lcn/com/smartdevices/bracelet/ui/bU;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/bU;->getActivity()Landroid/app/Activity;
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/bV;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
     check-cast v0, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bV;->a:Lcn/com/smartdevices/bracelet/ui/bU;
-
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/bU;->a(Lcn/com/smartdevices/bracelet/ui/bU;)I
-
-    move-result v1
+    iget v1, p0, Lcn/com/smartdevices/bracelet/ui/bV;->b:I
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;->a(Lcn/com/smartdevices/bracelet/ui/NewAlarmActivity;I)V
 
-    goto :goto_0
+    return-void
+.end method
 
-    :pswitch_1
-    new-instance v0, Landroid/content/Intent;
+.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    .locals 6
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bV;->a:Lcn/com/smartdevices/bracelet/ui/bU;
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/ui/bU;->getActivity()Landroid/app/Activity;
-
-    move-result-object v1
-
-    const-class v2, Lcn/com/smartdevices/bracelet/ui/AlarmRepeatActivity;
-
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const-string v1, "Days"
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/bV;->a:Lcn/com/smartdevices/bracelet/ui/bU;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/bU;->a(Lcn/com/smartdevices/bracelet/ui/bU;)I
-
-    move-result v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/bV;->a:Lcn/com/smartdevices/bracelet/ui/bU;
-
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/ui/bU;->getActivity()Landroid/app/Activity;
+    invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/W;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
     move-result-object v1
 
-    const/4 v2, 0x1
+    const v0, 0x7f0701a1
 
-    invoke-virtual {v1, v0, v2}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    goto :goto_0
+    move-result-object v0
 
-    nop
+    check-cast v0, Lcn/com/smartdevices/bracelet/view/SelectDaysView;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bV;->a:Lcn/com/smartdevices/bracelet/view/SelectDaysView;
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/bV;->getArguments()Landroid/os/Bundle;
+
+    move-result-object v0
+
+    const-string v2, "Days"
+
+    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    iput v0, p0, Lcn/com/smartdevices/bracelet/ui/bV;->b:I
+
+    const-string v0, "DDDD"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "Days : "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    iget v3, p0, Lcn/com/smartdevices/bracelet/ui/bV;->b:I
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/bV;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v2, 0x7f0d0002
+
+    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/bV;->a:Lcn/com/smartdevices/bracelet/view/SelectDaysView;
+
+    new-instance v3, Lcn/com/smartdevices/bracelet/view/aa;
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/bV;->getActivity()Landroid/app/Activity;
+
+    move-result-object v4
+
+    iget v5, p0, Lcn/com/smartdevices/bracelet/ui/bV;->b:I
+
+    invoke-direct {v3, v4, v0, v5}, Lcn/com/smartdevices/bracelet/view/aa;-><init>(Landroid/content/Context;[Ljava/lang/String;I)V
+
+    invoke-virtual {v2, v3}, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->a(Lcn/com/smartdevices/bracelet/view/aa;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/bV;->a:Lcn/com/smartdevices/bracelet/view/SelectDaysView;
+
+    new-instance v2, Lcn/com/smartdevices/bracelet/ui/bW;
+
+    invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/ui/bW;-><init>(Lcn/com/smartdevices/bracelet/ui/bV;)V
+
+    invoke-virtual {v0, v2}, Lcn/com/smartdevices/bracelet/view/SelectDaysView;->a(Landroid/widget/AdapterView$OnItemClickListener;)V
+
+    return-object v1
 .end method

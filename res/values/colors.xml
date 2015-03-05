@@ -68,7 +68,6 @@
     <color name="bg_color_cyan">#ff30a791</color>
     <color name="bg_color_orange">#ffe16528</color>
     <color name="disable_text_color_dark">#33ffffff</color>
-    <color name="main_ui_bg">#fffbfbfb</color>
     <color name="menu_item_normal">#00000000</color>
     <color name="menu_item_pressed">@color/disable_text_color_dark</color>
     <color name="wheel_band_bg">#ffe3e3e3</color>
@@ -98,6 +97,7 @@
     <color name="weight_report_white_40">#66ffffff</color>
     <color name="weight_report_white_30">#4cffffff</color>
     <color name="split_color_trans">#99e5e5e5</color>
+    <color name="main_ui_bg">#fff8f8f8</color>
     <color name="share_panel_bg">#ffececec</color>
     <color name="lab_operation_btn_text_pressed_bg">#ffffffff</color>
     <color name="lab_operation_btn_text_normal_bg">#ff191919</color>
@@ -124,6 +124,11 @@
     <color name="sport_vote_text">#ff737373</color>
     <color name="running_history_refresh_item_bg">#ff3f3f3f</color>
     <color name="running_history_refresh_item_text">#ffb0b0b0</color>
+    <color name="btn_share_watermark_content_disabled">#ffaaaaaa</color>
+    <color name="btn_share_watermark_content_pressed">#ffffffff</color>
+    <color name="btn_share_normal_content_disabled">#ffaaaaaa</color>
+    <color name="btn_share_normal_content_pressed">#60000000</color>
+    <color name="btn_share_item_bg_disabled">#ffdcdcdc</color>
     <color name="default_title_indicator_footer_color">#ff33b5e5</color>
     <color name="default_title_indicator_selected_color">#ffffffff</color>
     <color name="default_title_indicator_text_color">#bbffffff</color>

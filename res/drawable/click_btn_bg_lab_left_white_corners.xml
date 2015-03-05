@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector
   xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false">
+        <shape>
+            <solid android:color="@color/btn_share_item_bg_disabled" />
+            <stroke android:width="@dimen/round_bg_stroke" android:color="@color/item_stroke" />
+            <corners android:topLeftRadius="@dimen/btn_bg_radius" android:bottomLeftRadius="@dimen/btn_bg_radius" />
+            <padding android:left="@dimen/round_bg_stroke" android:top="@dimen/round_bg_stroke" android:right="@dimen/round_bg_stroke" android:bottom="@dimen/round_bg_stroke" />
+        </shape>
+    </item>
     <item android:state_pressed="true">
         <shape>
             <solid android:color="@color/item_bg_pressed" />

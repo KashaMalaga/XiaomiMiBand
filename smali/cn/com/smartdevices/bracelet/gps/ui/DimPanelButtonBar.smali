@@ -32,11 +32,11 @@
 
     move-result-object v0
 
-    const v1, 0x7f030048
+    const v1, 0x7f030049
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    const v0, 0x7f0701a5
+    const v0, 0x7f0701bf
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/DimPanelButtonBar;->findViewById(I)Landroid/view/View;
 
@@ -46,7 +46,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/DimPanelButtonBar;->c:Landroid/widget/TextView;
 
-    const v0, 0x7f0701a7
+    const v0, 0x7f0701c1
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/DimPanelButtonBar;->findViewById(I)Landroid/view/View;
 
@@ -56,13 +56,13 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/DimPanelButtonBar;->b:Landroid/widget/TextView;
 
-    const v0, 0x7f0701a4
+    const v0, 0x7f0701be
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/DimPanelButtonBar;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
-    const v0, 0x7f0701a6
+    const v0, 0x7f0701c0
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/gps/ui/DimPanelButtonBar;->findViewById(I)Landroid/view/View;
 
@@ -166,11 +166,11 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    const v2, 0x7f020067
+    const v2, 0x7f020071
 
-    const v1, 0x7f020068
+    const v1, 0x7f020072
 
-    const v0, 0x7f020069
+    const v0, 0x7f020073
 
     const-string v11, "dark"
 
@@ -180,11 +180,11 @@
 
     if-eqz v10, :cond_0
 
-    const v2, 0x7f020066
+    const v2, 0x7f020070
 
-    const v1, 0x7f02006f
+    const v1, 0x7f020079
 
-    const v0, 0x7f020070
+    const v0, 0x7f02007a
 
     const v10, 0x7f090005
 

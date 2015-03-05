@@ -182,6 +182,7 @@
     <dimen name="statistic_chart_height">355.0dip</dimen>
     <dimen name="statistic_info_min_height">160.0dip</dimen>
     <dimen name="statistic_info_item_height">67.0dip</dimen>
+    <dimen name="chart_info_layout_padding_top_bottom">0.0dip</dimen>
     <dimen name="chart_info_item_height_large">67.0dip</dimen>
     <dimen name="daily_sport_icon_margin">10.0dip</dimen>
     <dimen name="lab_factory_sport_progress_state">100.0dip</dimen>

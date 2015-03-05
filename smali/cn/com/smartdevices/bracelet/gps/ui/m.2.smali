@@ -1,99 +1,70 @@
-.class final Lcn/com/smartdevices/bracelet/gps/ui/m;
-.super Landroid/support/v13/app/h;
+.class Lcn/com/smartdevices/bracelet/gps/ui/m;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/widget/AbsListView$OnScrollListener;
 
 
 # instance fields
-.field final synthetic c:Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;
-
-.field private final d:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List",
-            "<",
-            "Landroid/app/Fragment;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;
 
 
 # direct methods
-.method public constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;Landroid/app/FragmentManager;Ljava/util/List;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/app/FragmentManager;",
-            "Ljava/util/List",
-            "<",
-            "Landroid/app/Fragment;",
-            ">;)V"
-        }
-    .end annotation
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/m;->c:Lcn/com/smartdevices/bracelet/gps/ui/GPSResultActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/m;->a:Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;
 
-    invoke-direct {p0, p2}, Landroid/support/v13/app/h;-><init>(Landroid/app/FragmentManager;)V
-
-    iput-object p3, p0, Lcn/com/smartdevices/bracelet/gps/ui/m;->d:Ljava/util/List;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(I)Landroid/app/Fragment;
-    .locals 1
+.method public onScroll(Landroid/widget/AbsListView;III)V
+    .locals 0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/m;->d:Ljava/util/List;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/m;->d:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/app/Fragment;
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
+    return-void
 .end method
 
-.method public a(Landroid/view/ViewGroup;I)Ljava/lang/Object;
-    .locals 1
+.method public onScrollStateChanged(Landroid/widget/AbsListView;I)V
+    .locals 2
 
-    invoke-super {p0, p1, p2}, Landroid/support/v13/app/h;->a(Landroid/view/ViewGroup;I)Ljava/lang/Object;
+    const/4 v0, 0x2
 
-    move-result-object v0
+    if-ne p2, v0, :cond_1
 
-    return-object v0
-.end method
-
-.method public b()I
-    .locals 1
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/m;->d:Ljava/util/List;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/m;->d:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    invoke-static {}, Lcn/com/smartdevices/bracelet/b/E;->c()Z
 
     move-result v0
 
-    :goto_0
-    return v0
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/m;->a:Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;->a(Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;)Lcn/com/smartdevices/bracelet/b/x;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/b/x;->c(Z)V
 
     :cond_0
-    const/4 v0, 0x0
+    :goto_0
+    return-void
+
+    :cond_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/m;->a:Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;->a(Lcn/com/smartdevices/bracelet/gps/ui/GalleryPickerActivity;)Lcn/com/smartdevices/bracelet/b/x;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/b/x;->c(Z)V
 
     goto :goto_0
 .end method

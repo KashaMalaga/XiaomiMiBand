@@ -59,7 +59,7 @@
 
     move-result-object v1
 
-    sget-boolean v2, Lcn/com/smartdevices/bracelet/weight/x;->h:Z
+    sget-boolean v2, Lcn/com/smartdevices/bracelet/weight/y;->h:Z
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -77,7 +77,7 @@
 
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcn/com/smartdevices/bracelet/weight/x;->h:Z
+    sput-boolean v0, Lcn/com/smartdevices/bracelet/weight/y;->h:Z
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/weight/a;->a()Lcn/com/smartdevices/bracelet/weight/a;
 
@@ -93,9 +93,9 @@
 
     invoke-direct {v2, p0}, Lcn/com/smartdevices/bracelet/weight/family/c;-><init>(Lcn/com/smartdevices/bracelet/weight/family/b;)V
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/weight/a;->b(Landroid/content/Context;Lcn/com/smartdevices/bracelet/weight/C;)Z
+    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/weight/a;->b(Landroid/content/Context;Lcn/com/smartdevices/bracelet/weight/D;)Z
 
-    sput-boolean v3, Lcn/com/smartdevices/bracelet/weight/x;->h:Z
+    sput-boolean v3, Lcn/com/smartdevices/bracelet/weight/y;->h:Z
 
     sget-object v0, Lcn/com/smartdevices/bracelet/weight/family/MemberInfoBaseActivity;->a:Ljava/lang/String;
 
@@ -315,7 +315,7 @@
 
     move-result v3
 
-    invoke-static {v1, v2, v3}, Lcn/com/smartdevices/bracelet/weight/x;->a(IIF)F
+    invoke-static {v1, v2, v3}, Lcn/com/smartdevices/bracelet/weight/y;->a(IIF)F
 
     move-result v1
 
@@ -509,7 +509,7 @@
 
     check-cast v0, Landroid/app/Activity;
 
-    const v1, 0x7f08029f
+    const v1, 0x7f0802a6
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/E;->a(Landroid/app/Activity;I)V
 

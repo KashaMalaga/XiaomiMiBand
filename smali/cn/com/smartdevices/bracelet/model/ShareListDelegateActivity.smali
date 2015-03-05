@@ -144,7 +144,7 @@
 
     const/4 v0, 0x0
 
-    const v6, 0x7f08019f
+    const v6, 0x7f0801a0
 
     const v12, 0x7f080043
 
@@ -328,7 +328,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v3, 0x7f080204
+    const v3, 0x7f080205
 
     invoke-virtual {p0, v3}, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->getString(I)Ljava/lang/String;
 
@@ -576,7 +576,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const v1, 0x7f0801a0
+    const v1, 0x7f0801a1
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->getString(I)Ljava/lang/String;
 
@@ -715,7 +715,7 @@
 
     invoke-virtual {v10, v0}, Lcn/com/smartdevices/bracelet/model/ShareData;->setType(I)V
 
-    const v0, 0x7f0801b4
+    const v0, 0x7f0801b5
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->getString(I)Ljava/lang/String;
 
@@ -795,7 +795,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f0801b5
+    const v5, 0x7f0801b6
 
     const/4 v6, 0x2
 
@@ -903,7 +903,7 @@
 
     invoke-virtual {v10, v0}, Lcn/com/smartdevices/bracelet/model/ShareData;->setType(I)V
 
-    const v0, 0x7f0801f2
+    const v0, 0x7f0801f3
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->getString(I)Ljava/lang/String;
 
@@ -916,7 +916,7 @@
 
     iget v0, v0, Lcn/com/smartdevices/bracelet/model/ReportData;->continueDays:I
 
-    const v1, 0x7f0800e7
+    const v1, 0x7f0800e8
 
     invoke-virtual {p0, v1}, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->getString(I)Ljava/lang/String;
 
@@ -924,11 +924,11 @@
 
     iput-object v1, v10, Lcn/com/smartdevices/bracelet/model/ShareData;->contentUnit:Ljava/lang/String;
 
-    const v1, 0x7f0801f1
+    const v1, 0x7f0801f2
 
     new-array v2, v11, [Ljava/lang/Object;
 
-    invoke-virtual {v7}, Lcn/com/smartdevices/bracelet/model/SportDay;->formatStringDayShort()Ljava/lang/String;
+    invoke-virtual {v7}, Lcn/com/smartdevices/bracelet/model/SportDay;->formatStringDay()Ljava/lang/String;
 
     move-result-object v4
 
@@ -959,7 +959,7 @@
 
     invoke-virtual {v10, v0}, Lcn/com/smartdevices/bracelet/model/ShareData;->setType(I)V
 
-    const v0, 0x7f0801b6
+    const v0, 0x7f0801b7
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/model/ShareListDelegateActivity;->getString(I)Ljava/lang/String;
 

@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <plurals name="picker_number_of_items_selected">
-        <item quantity="other">%1$d selected</item>
-        <item quantity="zero">%1$d selected</item>
-        <item quantity="one">%1$d selected</item>
+        <item quantity="other">Выбрано записей: %1$d</item>
+        <item quantity="zero">Выбрано записей: %1$d</item>
+        <item quantity="one">Выбрано записей: %1$d</item>
     </plurals>
     <plurals name="numberOfPullUpdateReport">
-        <item quantity="other">Updated %d items.</item>
-        <item quantity="one">Updated %d item.</item>
+        <item quantity="other">Обновлено записей: %d</item>
+        <item quantity="one">Обновлено записей: %d</item>
+    </plurals>
+    <plurals name="numberFoot">
+        <item quantity="other">%sфут.</item>
+        <item quantity="one">%sфут.</item>
+    </plurals>
+    <plurals name="numberInch">
+        <item quantity="other">%sдюйм.</item>
+        <item quantity="one">%sдюйм.</item>
     </plurals>
 </resources>

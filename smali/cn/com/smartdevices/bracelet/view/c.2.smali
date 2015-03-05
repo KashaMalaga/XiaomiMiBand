@@ -28,7 +28,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0300c6
+    const v1, 0x7f0300ca
 
     const/4 v2, 0x0
 
@@ -37,7 +37,7 @@
     move-result-object p2
 
     :cond_0
-    const v0, 0x7f07038e
+    const v0, 0x7f0703ac
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -65,7 +65,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    const v0, 0x7f07038f
+    const v0, 0x7f0703ad
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -122,7 +122,7 @@
 
     invoke-static {v1, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    const v1, 0x7f020055
+    const v1, 0x7f02005f
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -135,7 +135,7 @@
     goto :goto_0
 
     :cond_2
-    const v1, 0x7f020056
+    const v1, 0x7f020060
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 

@@ -39,7 +39,7 @@
 .method protected a()V
     .locals 1
 
-    const v0, 0x7f0701a7
+    const v0, 0x7f0701c1
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoBaseActivity;->findViewById(I)Landroid/view/View;
 
@@ -51,7 +51,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0701a5
+    const v0, 0x7f0701bf
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/person/PersonInfoBaseActivity;->findViewById(I)Landroid/view/View;
 
@@ -259,7 +259,7 @@
     goto :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x7f0701a5
+    .packed-switch 0x7f0701bf
         :pswitch_1
         :pswitch_0
         :pswitch_2

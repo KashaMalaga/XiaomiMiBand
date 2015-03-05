@@ -32,7 +32,7 @@
 .method protected a()I
     .locals 1
 
-    const v0, 0x7f03003f
+    const v0, 0x7f030040
 
     return v0
 .end method
@@ -46,7 +46,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f08010e
+    const v1, 0x7f08010f
 
     invoke-static {v0, v1, v3}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -268,23 +268,23 @@
 .end method
 
 .method protected d()V
+    .locals 0
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/j;->dismiss()V
+
+    return-void
+.end method
+
+.method protected d_()V
     .locals 2
 
-    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/W;->d()V
+    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/W;->d_()V
 
     const-string v0, "ApkUpgradeFragment"
 
     const-string v1, "onEmptyAreaClicked()"
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method protected d_()V
-    .locals 0
-
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/j;->dismiss()V
 
     return-void
 .end method
@@ -346,7 +346,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/j;->h:Ljava/lang/String;
 
-    const v0, 0x7f070189
+    const v0, 0x7f0701a2
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

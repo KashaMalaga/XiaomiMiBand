@@ -676,7 +676,7 @@
 .method private e()V
     .locals 2
 
-    const v0, 0x7f070187
+    const v0, 0x7f07019f
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->findViewById(I)Landroid/view/View;
 
@@ -857,7 +857,7 @@
 
     invoke-direct {v3, p0}, Lcn/com/smartdevices/bracelet/ui/c;-><init>(Lcn/com/smartdevices/bracelet/ui/AlarmActivity;)V
 
-    invoke-static {v0, v2, v1, v3}, Lcn/com/smartdevices/bracelet/E;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/PersonInfo;Ljava/util/HashMap;Lcn/com/smartdevices/bracelet/Q;)V
+    invoke-static {v0, v2, v1, v3}, Lcn/com/smartdevices/bracelet/E;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/PersonInfo;Ljava/util/HashMap;Lcn/com/smartdevices/bracelet/V;)V
 
     return-void
 
@@ -1048,7 +1048,7 @@
 
     invoke-virtual {v0, p0}, Lde/greenrobot/event/EventBus;->register(Ljava/lang/Object;)V
 
-    const v0, 0x7f03003d
+    const v0, 0x7f03003e
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/ui/AlarmActivity;->setContentView(I)V
 

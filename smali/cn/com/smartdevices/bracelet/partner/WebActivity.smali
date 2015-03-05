@@ -4,7 +4,7 @@
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 .implements Lcn/com/smartdevices/bracelet/partner/b;
-.implements Lcn/com/smartdevices/bracelet/ui/aR;
+.implements Lcn/com/smartdevices/bracelet/ui/aS;
 
 
 # static fields
@@ -16,7 +16,7 @@
 # instance fields
 .field private A:Lcn/com/smartdevices/bracelet/partner/a;
 
-.field private B:Lcn/com/smartdevices/bracelet/ui/dD;
+.field private B:Lcn/com/smartdevices/bracelet/ui/dI;
 
 .field private C:Landroid/view/View;
 
@@ -144,15 +144,15 @@
 .method private a()V
     .locals 4
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/WebActivity;->B:Lcn/com/smartdevices/bracelet/ui/dD;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/WebActivity;->B:Lcn/com/smartdevices/bracelet/ui/dI;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/ui/dD;
+    new-instance v0, Lcn/com/smartdevices/bracelet/ui/dI;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/dD;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/ui/dI;-><init>()V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/partner/WebActivity;->B:Lcn/com/smartdevices/bracelet/ui/dD;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/partner/WebActivity;->B:Lcn/com/smartdevices/bracelet/ui/dI;
 
     :cond_0
     invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->getFragmentManager()Landroid/app/FragmentManager;
@@ -197,15 +197,15 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/partner/WebActivity;->B:Lcn/com/smartdevices/bracelet/ui/dD;
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/partner/WebActivity;->B:Lcn/com/smartdevices/bracelet/ui/dI;
 
-    invoke-virtual {v2, v1}, Lcn/com/smartdevices/bracelet/ui/dD;->setArguments(Landroid/os/Bundle;)V
+    invoke-virtual {v2, v1}, Lcn/com/smartdevices/bracelet/ui/dI;->setArguments(Landroid/os/Bundle;)V
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/partner/WebActivity;->B:Lcn/com/smartdevices/bracelet/ui/dD;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/partner/WebActivity;->B:Lcn/com/smartdevices/bracelet/ui/dI;
 
     const-string v2, "ServiceActivity"
 
-    invoke-virtual {v1, v0, v2}, Lcn/com/smartdevices/bracelet/ui/dD;->show(Landroid/app/FragmentTransaction;Ljava/lang/String;)I
+    invoke-virtual {v1, v0, v2}, Lcn/com/smartdevices/bracelet/ui/dI;->show(Landroid/app/FragmentTransaction;Ljava/lang/String;)I
 
     const-string v0, "PartenerShareClick"
 
@@ -605,31 +605,15 @@
 
 # virtual methods
 .method public a(Landroid/os/Bundle;)V
-    .locals 4
-
-    new-instance v0, Lcn/com/smartdevices/bracelet/partner/o;
-
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/partner/o;-><init>(Lcn/com/smartdevices/bracelet/partner/WebActivity;)V
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Ljava/lang/String;
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Lcn/com/smartdevices/bracelet/partner/WebActivity;->D:Ljava/lang/String;
-
-    aput-object v3, v1, v2
-
-    invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+    .locals 0
 
     return-void
 .end method
 
-.method public a(Lcn/com/smartdevices/bracelet/ui/dJ;)V
+.method public a(Lcn/com/smartdevices/bracelet/ui/dO;)V
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/WebActivity;->B:Lcn/com/smartdevices/bracelet/ui/dD;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/WebActivity;->B:Lcn/com/smartdevices/bracelet/ui/dI;
 
     if-nez v0, :cond_0
 
@@ -637,9 +621,9 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/WebActivity;->B:Lcn/com/smartdevices/bracelet/ui/dD;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/WebActivity;->B:Lcn/com/smartdevices/bracelet/ui/dI;
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/ui/dD;->b(Lcn/com/smartdevices/bracelet/ui/dJ;)V
+    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/ui/dI;->b(Lcn/com/smartdevices/bracelet/ui/dO;)V
 
     goto :goto_0
 .end method
@@ -658,12 +642,12 @@
     return-void
 .end method
 
-.method public a(ILcn/com/smartdevices/bracelet/ui/dJ;)Z
+.method public a(ILcn/com/smartdevices/bracelet/ui/dO;)Z
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/WebActivity;->B:Lcn/com/smartdevices/bracelet/ui/dD;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/partner/WebActivity;->B:Lcn/com/smartdevices/bracelet/ui/dI;
 
-    invoke-virtual {v0, p1, p2}, Lcn/com/smartdevices/bracelet/ui/dD;->a(ILcn/com/smartdevices/bracelet/ui/dJ;)Z
+    invoke-virtual {v0, p1, p2}, Lcn/com/smartdevices/bracelet/ui/dI;->a(ILcn/com/smartdevices/bracelet/ui/dO;)Z
 
     move-result v0
 
@@ -671,7 +655,23 @@
 .end method
 
 .method public b(Landroid/os/Bundle;)V
-    .locals 0
+    .locals 4
+
+    new-instance v0, Lcn/com/smartdevices/bracelet/partner/o;
+
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/partner/o;-><init>(Lcn/com/smartdevices/bracelet/partner/WebActivity;)V
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lcn/com/smartdevices/bracelet/partner/WebActivity;->D:Ljava/lang/String;
+
+    aput-object v3, v1, v2
+
+    invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
     return-void
 .end method
@@ -793,7 +793,7 @@
 
     iput-boolean v0, p0, Lcn/com/smartdevices/bracelet/partner/WebActivity;->x:Z
 
-    const v0, 0x7f080347
+    const v0, 0x7f080354
 
     invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/E;->a(Landroid/app/Activity;I)V
 
@@ -1066,7 +1066,7 @@
     :catch_0
     move-exception v0
 
-    const v0, 0x7f080382
+    const v0, 0x7f080390
 
     invoke-static {p0, v0, v4}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -1145,7 +1145,7 @@
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f080346
+    const v0, 0x7f080353
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->getString(I)Ljava/lang/String;
 
@@ -1158,7 +1158,7 @@
     return-void
 
     :cond_1
-    const v0, 0x7f080348
+    const v0, 0x7f080355
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->getString(I)Ljava/lang/String;
 
@@ -1197,7 +1197,7 @@
 
     if-eqz v0, :cond_3
 
-    const v0, 0x7f08034b
+    const v0, 0x7f080358
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->getString(I)Ljava/lang/String;
 
@@ -1208,7 +1208,7 @@
     goto :goto_0
 
     :cond_3
-    const v0, 0x7f080349
+    const v0, 0x7f080356
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/partner/WebActivity;->getString(I)Ljava/lang/String;
 

@@ -36,7 +36,7 @@
 
     move-result v1
 
-    iput v1, v0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->k:F
+    iput v1, v0, Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;->o:F
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/base/h;->a:Lcn/com/smartdevices/bracelet/chart/base/BaseChartView;
 

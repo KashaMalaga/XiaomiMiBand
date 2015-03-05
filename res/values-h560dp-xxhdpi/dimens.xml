@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dynamic_detail_chart_height">320.0dip</dimen>
+    <dimen name="dynamic_detail_piece_chart_height">380.0dip</dimen>
+    <dimen name="dynamic_detail_info_min_height">142.0dip</dimen>
+    <dimen name="dynamic_detail_piece_info_min_height">200.0dip</dimen>
+    <dimen name="dynamic_info_height">54.0dip</dimen>
+    <dimen name="statistic_chart_height">320.0dip</dimen>
+    <dimen name="statistic_info_min_height">140.0dip</dimen>
+    <dimen name="statistic_info_item_height">54.0dip</dimen>
+    <dimen name="chart_info_layout_padding_top_bottom">10.0dip</dimen>
+    <dimen name="chart_info_item_height_large">60.0dip</dimen>
+</resources>

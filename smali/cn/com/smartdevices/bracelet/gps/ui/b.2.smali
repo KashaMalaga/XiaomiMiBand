@@ -40,7 +40,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/b;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->i(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)Landroid/app/DialogFragment;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->g(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)Landroid/app/DialogFragment;
 
     move-result-object v0
 
@@ -48,7 +48,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/b;->a:Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->i(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)Landroid/app/DialogFragment;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;->g(Lcn/com/smartdevices/bracelet/gps/ui/GPSMainActivity;)Landroid/app/DialogFragment;
 
     move-result-object v0
 

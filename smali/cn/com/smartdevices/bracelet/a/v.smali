@@ -153,11 +153,11 @@
 
 # virtual methods
 .method public a(Lcn/com/smartdevices/bracelet/a/b;)V
-    .locals 12
+    .locals 13
 
-    const/16 v11, 0xc
+    const/16 v12, 0xc
 
-    const/4 v10, 0x1
+    const/4 v11, 0x1
 
     sget-object v0, Lcn/com/smartdevices/bracelet/a/v;->l:Ljava/lang/String;
 
@@ -221,22 +221,26 @@
     goto :goto_0
 
     :cond_2
-    new-instance v2, Ljava/util/ArrayList;
+    invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+    move-result-object v2
+
+    new-instance v3, Ljava/util/ArrayList;
+
+    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object v3
+    move-result-object v4
 
     :goto_1
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_6
 
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -244,138 +248,177 @@
 
     iget-object v1, v0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityDataFragment;->data:Ljava/util/List;
 
-    iget-object v4, v0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityDataFragment;->timestamp:Ljava/util/Calendar;
+    iget-object v5, v0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityDataFragment;->timestamp:Ljava/util/Calendar;
 
     sget-object v0, Lcn/com/smartdevices/bracelet/a/v;->l:Ljava/lang/String;
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "data size:"
+    const-string v7, "data size:"
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v5
+    move-result-object v6
 
     invoke-interface {v1}, Ljava/util/List;->size()I
 
-    move-result v6
+    move-result v7
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    const-string v6, ",data time:"
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v4}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v6
 
-    invoke-virtual {v6}, Ljava/util/Date;->toString()Ljava/lang/String;
+    const-string v7, ",data time:"
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v6
 
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
 
-    move-result-object v5
+    move-result-object v7
 
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v7}, Ljava/util/Date;->toString()Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v7
 
-    invoke-static {v0, v5}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
+    move-result-object v6
+
+    const-string v7, ",phone time:"
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v2}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/util/Date;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v0, v6}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v5}, Ljava/util/Calendar;->getTimeInMillis()J
+
+    move-result-wide v6
+
+    invoke-virtual {v2}, Ljava/util/Calendar;->getTimeInMillis()J
+
+    move-result-wide v8
+
+    cmp-long v0, v6, v8
+
+    if-lez v0, :cond_3
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/a/v;->l:Ljava/lang/String;
+
+    const-string v1, "the synced data Calendar is wrong,drop!!!"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_1
+
+    :cond_3
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object v5
+    move-result-object v6
 
     :goto_2
-    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
-    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityData;
 
-    invoke-virtual {v4, v10}, Ljava/util/Calendar;->get(I)I
-
-    move-result v6
-
-    const/4 v1, 0x2
-
-    invoke-virtual {v4, v1}, Ljava/util/Calendar;->get(I)I
+    invoke-virtual {v5, v11}, Ljava/util/Calendar;->get(I)I
 
     move-result v7
 
-    const/4 v1, 0x5
+    const/4 v1, 0x2
 
-    invoke-virtual {v4, v1}, Ljava/util/Calendar;->get(I)I
+    invoke-virtual {v5, v1}, Ljava/util/Calendar;->get(I)I
 
     move-result v8
 
-    const/16 v1, 0xb
+    const/4 v1, 0x5
 
-    invoke-virtual {v4, v1}, Ljava/util/Calendar;->get(I)I
-
-    move-result v1
-
-    invoke-virtual {v4, v11}, Ljava/util/Calendar;->get(I)I
+    invoke-virtual {v5, v1}, Ljava/util/Calendar;->get(I)I
 
     move-result v9
 
+    const/16 v1, 0xb
+
+    invoke-virtual {v5, v1}, Ljava/util/Calendar;->get(I)I
+
+    move-result v1
+
+    invoke-virtual {v5, v12}, Ljava/util/Calendar;->get(I)I
+
+    move-result v10
+
     mul-int/lit8 v1, v1, 0x3c
 
-    add-int/2addr v9, v1
+    add-int/2addr v10, v1
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/s;->a()Lcn/com/smartdevices/bracelet/s;
 
     move-result-object v1
 
-    invoke-virtual {v1, v6, v7, v8}, Lcn/com/smartdevices/bracelet/s;->a(III)Lcn/com/smartdevices/bracelet/model/DaySportData;
+    invoke-virtual {v1, v7, v8, v9}, Lcn/com/smartdevices/bracelet/s;->a(III)Lcn/com/smartdevices/bracelet/model/DaySportData;
 
     move-result-object v1
 
-    if-nez v1, :cond_3
+    if-nez v1, :cond_4
 
     new-instance v1, Lcn/com/smartdevices/bracelet/model/DaySportData;
 
-    invoke-direct {v1, v6, v7, v8}, Lcn/com/smartdevices/bracelet/model/DaySportData;-><init>(III)V
+    invoke-direct {v1, v7, v8, v9}, Lcn/com/smartdevices/bracelet/model/DaySportData;-><init>(III)V
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/s;->a()Lcn/com/smartdevices/bracelet/s;
 
-    move-result-object v6
+    move-result-object v7
 
-    invoke-virtual {v6, v1}, Lcn/com/smartdevices/bracelet/s;->a(Lcn/com/smartdevices/bracelet/model/DaySportData;)V
+    invoke-virtual {v7, v1}, Lcn/com/smartdevices/bracelet/s;->a(Lcn/com/smartdevices/bracelet/model/DaySportData;)V
 
-    :cond_3
-    invoke-virtual {v1, v10}, Lcn/com/smartdevices/bracelet/model/DaySportData;->setNeedSync(Z)V
+    :cond_4
+    invoke-virtual {v1, v11}, Lcn/com/smartdevices/bracelet/model/DaySportData;->setNeedSync(Z)V
 
-    invoke-virtual {v1, v10}, Lcn/com/smartdevices/bracelet/model/DaySportData;->setNeedPostProcess(Z)V
+    invoke-virtual {v1, v11}, Lcn/com/smartdevices/bracelet/model/DaySportData;->setNeedPostProcess(Z)V
 
-    invoke-virtual {v1, v9, v0}, Lcn/com/smartdevices/bracelet/model/DaySportData;->add(ILcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityData;)V
+    invoke-virtual {v1, v10, v0}, Lcn/com/smartdevices/bracelet/model/DaySportData;->add(ILcom/xiaomi/hm/bleservice/profile/IMiLiProfile$ActivityData;)V
 
     invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/model/DaySportData;->getSportDay()Lcn/com/smartdevices/bracelet/model/SportDay;
 
     move-result-object v0
 
-    invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {v4, v11, v10}, Ljava/util/Calendar;->add(II)V
+    invoke-virtual {v5, v12, v11}, Ljava/util/Calendar;->add(II)V
 
     goto :goto_2
 
-    :cond_4
-    invoke-virtual {v4}, Ljava/util/Calendar;->getTimeInMillis()J
+    :cond_5
+    invoke-virtual {v5}, Ljava/util/Calendar;->getTimeInMillis()J
 
     move-result-wide v0
 
@@ -383,7 +426,7 @@
 
     goto/16 :goto_1
 
-    :cond_5
+    :cond_6
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/a/v;->n:Lcn/com/smartdevices/bracelet/config/b;
 
     iget-object v0, v0, Lcn/com/smartdevices/bracelet/config/b;->c:Lcn/com/smartdevices/bracelet/config/k;
@@ -394,7 +437,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->getInstance()Lcn/com/smartdevices/bracelet/tencent/QQLogin;
 
@@ -404,19 +447,19 @@
 
     move-result-object v1
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/tencent/QQLogin;->isLoginValid()Z
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_7
 
-    invoke-virtual {v1, v2}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->addNeedSyncDays(Ljava/util/List;)V
+    invoke-virtual {v1, v3}, Lcn/com/smartdevices/bracelet/tencent/health/QQHealth;->addNeedSyncDays(Ljava/util/List;)V
 
-    :cond_6
+    :cond_7
     sget-object v0, Lcn/com/smartdevices/bracelet/a/v;->l:Ljava/lang/String;
 
     const-string v1, "analysis...............................before"
@@ -429,6 +472,18 @@
 
     invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/s;->n()V
 
+    sget-object v0, Lcn/com/smartdevices/bracelet/a/v;->l:Ljava/lang/String;
+
+    const-string v1, "analysis...............................after"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v0, Lcn/com/smartdevices/bracelet/a/v;->l:Ljava/lang/String;
+
+    const-string v1, "updateStepInfoWithRealtimeSteps...............................before"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
+
     invoke-static {}, Lcn/com/smartdevices/bracelet/s;->a()Lcn/com/smartdevices/bracelet/s;
 
     move-result-object v0
@@ -437,7 +492,7 @@
 
     sget-object v0, Lcn/com/smartdevices/bracelet/a/v;->l:Ljava/lang/String;
 
-    const-string v1, "analysis...............................after"
+    const-string v1, "updateStepInfoWithRealtimeSteps...............................before"
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 

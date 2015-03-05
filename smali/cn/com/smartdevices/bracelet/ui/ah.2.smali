@@ -69,30 +69,6 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/ui/Z;->a(Lcn/com/smartdevices/bracelet/ui/Z;Z)Z
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ah;->b:Lcn/com/smartdevices/bracelet/ui/Z;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/Z;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ah;->b:Lcn/com/smartdevices/bracelet/ui/Z;
-
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/Z;->k(Lcn/com/smartdevices/bracelet/ui/Z;)I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ah;->b:Lcn/com/smartdevices/bracelet/ui/Z;
-
-    const v1, 0x7f080126
-
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/Z;->a(I)V
-
     :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ah;->b:Lcn/com/smartdevices/bracelet/ui/Z;
 

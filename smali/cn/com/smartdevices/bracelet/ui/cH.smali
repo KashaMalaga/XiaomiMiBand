@@ -1,55 +1,38 @@
 .class Lcn/com/smartdevices/bracelet/ui/cH;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.super Landroid/content/BroadcastReceiver;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/SelectDevicesActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/SelectDevicesActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cH;->a:Lcn/com/smartdevices/bracelet/ui/SelectDevicesActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cH;->a:Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 3
+.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 2
 
-    new-instance v0, Landroid/content/Intent;
+    sget-object v0, Lcom/xiaomi/hm/bleservice/BLEService;->INTENT_EXTRA_PARAM:Ljava/lang/String;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cH;->a:Lcn/com/smartdevices/bracelet/ui/SelectDevicesActivity;
+    const/4 v1, -0x1
 
-    const-class v2, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
+    invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    move-result v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cH;->a:Lcn/com/smartdevices/bracelet/ui/SelectDevicesActivity;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cH;->a:Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
 
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, v0, v2}, Lcn/com/smartdevices/bracelet/ui/SelectDevicesActivity;->startActivityForResult(Landroid/content/Intent;I)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cH;->a:Lcn/com/smartdevices/bracelet/ui/SelectDevicesActivity;
-
-    const v1, 0x7f040004
-
-    const v2, 0x7f040007
-
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/ui/SelectDevicesActivity;->overridePendingTransition(II)V
-
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cH;->a:Lcn/com/smartdevices/bracelet/ui/SelectDevicesActivity;
-
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/SelectDevicesActivity;->finish()V
+    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->a(Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;I)V
 
     return-void
 .end method

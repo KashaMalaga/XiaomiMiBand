@@ -133,6 +133,8 @@
     <style name="WeightSelectTheme" parent="@style/AppTheme">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowIsTranslucent">true</item>
+        <item name="android:fitsSystemWindows">false</item>
+        <item name="android:backgroundDimEnabled">true</item>
     </style>
     <style name="ListItemTitleText">
         <item name="android:textSize">@dimen/common_list_item_main_font</item>
@@ -149,7 +151,7 @@
     <style name="BackButton">
         <item name="android:textSize">@dimen/common_header_back_title_font</item>
         <item name="android:textColor">#e6ffffff</item>
-        <item name="android:gravity">center</item>
+        <item name="android:gravity">center_vertical</item>
         <item name="android:paddingLeft">@dimen/common_header_padding</item>
         <item name="android:clickable">true</item>
         <item name="android:layout_width">wrap_content</item>

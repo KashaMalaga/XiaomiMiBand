@@ -337,6 +337,18 @@
 
     iput v1, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->u:I
 
+    iget v1, p0, Lcn/com/smartdevices/bracelet/gps/model/c;->p:F
+
+    iput v1, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->p:F
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/gps/model/c;->q:I
+
+    iput v1, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->q:I
+
+    iget v1, p0, Lcn/com/smartdevices/bracelet/gps/model/c;->r:F
+
+    iput v1, v0, Lcn/com/smartdevices/bracelet/gps/model/c;->r:F
+
     return-object v0
 .end method
 
@@ -524,7 +536,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/x;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 .end method

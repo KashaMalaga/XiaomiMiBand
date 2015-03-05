@@ -144,6 +144,22 @@
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
+    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/goal/a;->a()Lcn/com/smartdevices/bracelet/weight/goal/a;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/g;->a:Lcn/com/smartdevices/bracelet/weight/family/f;
+
+    iget-object v1, v1, Lcn/com/smartdevices/bracelet/weight/family/f;->a:Lcn/com/smartdevices/bracelet/weight/family/e;
+
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/weight/family/e;->a(Lcn/com/smartdevices/bracelet/weight/family/e;)Lcn/com/smartdevices/bracelet/weight/UserInfo;
+
+    move-result-object v1
+
+    iget v1, v1, Lcn/com/smartdevices/bracelet/weight/UserInfo;->uid:I
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/weight/goal/a;->b(I)V
+
     invoke-static {}, Lde/greenrobot/event/EventBus;->getDefault()Lde/greenrobot/event/EventBus;
 
     move-result-object v0
@@ -246,7 +262,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0802a0
+    const v1, 0x7f0802a7
 
     invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/E;->a(Landroid/app/Activity;I)V
 

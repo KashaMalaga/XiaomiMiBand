@@ -27,7 +27,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/X;->a:Lcn/com/smartdevices/bracelet/ui/W;
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/W;->d()V
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/W;->d_()V
 
     return-void
 .end method

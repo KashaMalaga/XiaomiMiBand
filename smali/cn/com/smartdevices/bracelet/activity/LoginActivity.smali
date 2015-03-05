@@ -584,7 +584,7 @@
 
     if-eqz v0, :cond_0
 
-    const v0, 0x7f080271
+    const v0, 0x7f080278
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->getString(I)Ljava/lang/String;
 
@@ -651,7 +651,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->C:Landroid/widget/TextView;
 
-    const v0, 0x7f0800df
+    const v0, 0x7f0800e0
 
     invoke-virtual {p0, v0}, Lcn/com/smartdevices/bracelet/activity/LoginActivity;->getString(I)Ljava/lang/String;
 
@@ -663,7 +663,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f080110
+    const v3, 0x7f080111
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 

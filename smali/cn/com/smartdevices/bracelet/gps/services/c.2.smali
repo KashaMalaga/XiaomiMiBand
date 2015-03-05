@@ -1,42 +1,139 @@
-.class Lcn/com/smartdevices/bracelet/gps/services/c;
-.super Ljava/util/TimerTask;
+.class public final Lcn/com/smartdevices/bracelet/gps/services/c;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Landroid/location/GpsStatus$Listener;
 
 
 # instance fields
-.field final synthetic a:Landroid/content/Context;
-
-.field final synthetic b:Lcn/com/smartdevices/bracelet/gps/services/a;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/services/a;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/a;Landroid/content/Context;)V
+.method protected constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/a;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/services/c;->b:Lcn/com/smartdevices/bracelet/gps/services/a;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/services/c;->a:Lcn/com/smartdevices/bracelet/gps/services/a;
 
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/gps/services/c;->a:Landroid/content/Context;
-
-    invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 6
+.method public onGpsStatusChanged(I)V
+    .locals 5
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/c;->b:Lcn/com/smartdevices/bracelet/gps/services/a;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/c;->a:Lcn/com/smartdevices/bracelet/gps/services/a;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/c;->a:Landroid/content/Context;
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/gps/services/a;->c:Landroid/location/LocationManager;
 
-    const-wide/16 v2, 0x1388
+    if-eqz v0, :cond_0
 
-    const/high16 v4, 0x41200000
+    const/4 v0, 0x4
 
-    const-string v5, "gps"
+    if-eq v0, p1, :cond_1
 
-    invoke-static/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/gps/services/a;->a(Lcn/com/smartdevices/bracelet/gps/services/a;Landroid/content/Context;JFLjava/lang/String;)V
-
+    :cond_0
+    :goto_0
     return-void
+
+    :cond_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/c;->a:Lcn/com/smartdevices/bracelet/gps/services/a;
+
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/gps/services/a;->c:Landroid/location/LocationManager;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/location/LocationManager;->getGpsStatus(Landroid/location/GpsStatus;)Landroid/location/GpsStatus;
+
+    move-result-object v1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {v1}, Landroid/location/GpsStatus;->getSatellites()Ljava/lang/Iterable;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    move v1, v0
+
+    :cond_2
+    :goto_1
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/location/GpsSatellite;
+
+    invoke-virtual {v0}, Landroid/location/GpsSatellite;->usedInFix()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_1
+
+    :cond_3
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/gps/services/t;->a(I)Lcn/com/smartdevices/bracelet/gps/services/u;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/u;->a()I
+
+    move-result v0
+
+    const-string v2, "GPS"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v4, "AMapLocationListener onGpsStatusChanged curCnt = "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v3, ",curLevel = "
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v2, v1}, Lcn/com/smartdevices/bracelet/gps/services/s;->a(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/services/c;->a:Lcn/com/smartdevices/bracelet/gps/services/a;
+
+    iget-object v1, v1, Lcn/com/smartdevices/bracelet/gps/services/a;->b:Lcn/com/smartdevices/bracelet/gps/services/a/c;
+
+    invoke-interface {v1, v0}, Lcn/com/smartdevices/bracelet/gps/services/a/c;->a(I)V
+
+    goto :goto_0
 .end method

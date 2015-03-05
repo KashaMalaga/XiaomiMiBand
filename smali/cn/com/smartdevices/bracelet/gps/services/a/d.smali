@@ -25,7 +25,7 @@
 .method public abstract a()Landroid/location/Location;
 .end method
 
-.method public abstract a(J)Lcn/com/smartdevices/bracelet/gps/services/x;
+.method public abstract a(J)Lcn/com/smartdevices/bracelet/gps/services/A;
 .end method
 
 .method public abstract a(Lcn/com/smartdevices/bracelet/gps/services/a/a;)V
@@ -85,14 +85,17 @@
 .method public abstract g()Ljava/io/File;
 .end method
 
-.method public abstract h()I
+.method public abstract h()F
 .end method
 
-.method public abstract i()Ljava/io/File;
+.method public abstract i()I
 .end method
 
-.method public abstract j()V
+.method public abstract j()Ljava/io/File;
 .end method
 
-.method public abstract k()I
+.method public abstract k()V
+.end method
+
+.method public abstract l()I
 .end method

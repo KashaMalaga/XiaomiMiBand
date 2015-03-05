@@ -14,11 +14,11 @@
 
 
 # static fields
-.field private static final m:Ljava/lang/String; = "Chart.DynamicShareChartView"
+.field private static final a:Ljava/lang/String; = "Chart.DynamicShareChartView"
 
 
 # instance fields
-.field private n:Lcn/com/smartdevices/bracelet/chart/base/r;
+.field private b:Lcn/com/smartdevices/bracelet/chart/base/r;
 
 
 # direct methods
@@ -51,7 +51,7 @@
 
     invoke-direct {v0, p1}, Lcn/com/smartdevices/bracelet/chart/s;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicShareChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicShareChartView;->e:Lcn/com/smartdevices/bracelet/chart/base/g;
 
     new-instance v0, Lcn/com/smartdevices/bracelet/chart/base/p;
 
@@ -59,7 +59,7 @@
 
     invoke-direct {v0, v1}, Lcn/com/smartdevices/bracelet/chart/base/p;-><init>(I)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicShareChartView;->n:Lcn/com/smartdevices/bracelet/chart/base/r;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicShareChartView;->b:Lcn/com/smartdevices/bracelet/chart/base/r;
 
     return-void
 .end method
@@ -109,7 +109,7 @@
 
     iput v0, v3, Lcn/com/smartdevices/bracelet/chart/u;->c:I
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicShareChartView;->n:Lcn/com/smartdevices/bracelet/chart/base/r;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicShareChartView;->b:Lcn/com/smartdevices/bracelet/chart/base/r;
 
     invoke-virtual {v3, v0}, Lcn/com/smartdevices/bracelet/chart/u;->a(Lcn/com/smartdevices/bracelet/chart/base/r;)V
 
@@ -118,13 +118,13 @@
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicShareChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicShareChartView;->e:Lcn/com/smartdevices/bracelet/chart/base/g;
 
     check-cast v0, Lcn/com/smartdevices/bracelet/chart/s;
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/chart/s;->f(Ljava/util/List;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicShareChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicShareChartView;->e:Lcn/com/smartdevices/bracelet/chart/base/g;
 
     check-cast v0, Lcn/com/smartdevices/bracelet/chart/s;
 
@@ -152,7 +152,7 @@
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicShareChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicShareChartView;->e:Lcn/com/smartdevices/bracelet/chart/base/g;
 
     check-cast v0, Lcn/com/smartdevices/bracelet/chart/s;
 
@@ -260,7 +260,7 @@
 
     invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicShareChartView;->a:Lcn/com/smartdevices/bracelet/chart/base/g;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/chart/DynamicShareChartView;->e:Lcn/com/smartdevices/bracelet/chart/base/g;
 
     check-cast v0, Lcn/com/smartdevices/bracelet/chart/s;
 

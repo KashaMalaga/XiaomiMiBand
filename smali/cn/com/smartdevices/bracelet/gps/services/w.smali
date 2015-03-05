@@ -1,41 +1,41 @@
-.class final Lcn/com/smartdevices/bracelet/gps/services/W;
-.super Ljava/lang/Object;
-
-# interfaces
-.implements Lcn/com/smartdevices/bracelet/f/c;
+.class Lcn/com/smartdevices/bracelet/gps/services/W;
+.super Lcn/com/smartdevices/bracelet/a/b;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/services/U;
+.field final synthetic b:Lcn/com/smartdevices/bracelet/gps/services/V;
 
 
 # direct methods
-.method private constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/U;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/V;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/services/W;->a:Lcn/com/smartdevices/bracelet/gps/services/U;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/services/W;->b:Lcn/com/smartdevices/bracelet/gps/services/V;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Lcn/com/smartdevices/bracelet/gps/services/U;Lcn/com/smartdevices/bracelet/gps/services/V;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lcn/com/smartdevices/bracelet/gps/services/W;-><init>(Lcn/com/smartdevices/bracelet/gps/services/U;)V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/a/b;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(I)V
-    .locals 1
+.method public a(Ljava/lang/Object;)V
+    .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/W;->a:Lcn/com/smartdevices/bracelet/gps/services/U;
+    instance-of v0, p1, Ljava/lang/Integer;
 
-    invoke-virtual {v0, p1}, Lcn/com/smartdevices/bracelet/gps/services/U;->a(I)V
+    if-eqz v0, :cond_0
 
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/services/W;->b:Lcn/com/smartdevices/bracelet/gps/services/V;
+
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/services/V;->a(I)V
+
+    :cond_0
     return-void
 .end method

@@ -1575,6 +1575,14 @@
     return-object p0
 .end method
 
+.method public a(Ljava/lang/String;)Lkankan/wheel/widget/WheelView;
+    .locals 0
+
+    iput-object p1, p0, Lkankan/wheel/widget/WheelView;->z:Ljava/lang/String;
+
+    return-object p0
+.end method
+
 .method public a(Ljava/lang/String;F)Lkankan/wheel/widget/WheelView;
     .locals 6
 
@@ -2111,6 +2119,12 @@
 
     :cond_1
     :goto_0
+    const-string v0, "Height"
+
+    const-string v1, "invalidateWheel"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
     invoke-virtual {p0}, Lkankan/wheel/widget/WheelView;->invalidate()V
 
     return-void
@@ -2348,7 +2362,7 @@
 .end method
 
 .method protected onMeasure(II)V
-    .locals 5
+    .locals 6
 
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
@@ -2365,6 +2379,12 @@
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
+
+    const-string v4, "Height"
+
+    const-string v5, "onMeasure"
+
+    invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     invoke-direct {p0}, Lkankan/wheel/widget/WheelView;->o()V
 

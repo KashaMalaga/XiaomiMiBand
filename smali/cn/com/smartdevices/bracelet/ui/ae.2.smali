@@ -159,7 +159,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/Z;
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/Z;->c(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/Z;->b(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
 
     move-result-object v2
 
@@ -340,7 +340,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->g()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->i()Z
 
     move-result v0
 
@@ -462,7 +462,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/Z;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/Z;->c(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/Z;->b(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
 
     move-result-object v0
 
@@ -539,7 +539,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/Z;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/Z;->c(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/Z;->b(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
 
     move-result-object v0
 
@@ -587,7 +587,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/Z;
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/Z;->b(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/Z;->c(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
 
     move-result-object v2
 
@@ -606,7 +606,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/Z;
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/Z;->c(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/Z;->b(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
 
     move-result-object v2
 
@@ -616,7 +616,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/ui/Z;->e(Lcn/com/smartdevices/bracelet/ui/Z;Lcn/com/smartdevices/bracelet/model/SportDay;)Ljava/lang/String;
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/ui/Z;->f(Lcn/com/smartdevices/bracelet/ui/Z;Lcn/com/smartdevices/bracelet/model/SportDay;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -633,7 +633,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/Z;
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/Z;->b(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/Z;->c(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
 
     move-result-object v2
 
@@ -652,7 +652,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/Z;
 
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/Z;->c(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-static {v2}, Lcn/com/smartdevices/bracelet/ui/Z;->b(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
 
     move-result-object v2
 
@@ -660,7 +660,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/ui/Z;->e(Lcn/com/smartdevices/bracelet/ui/Z;Lcn/com/smartdevices/bracelet/model/SportDay;)Ljava/lang/String;
+    invoke-static {v0, v2}, Lcn/com/smartdevices/bracelet/ui/Z;->f(Lcn/com/smartdevices/bracelet/ui/Z;Lcn/com/smartdevices/bracelet/model/SportDay;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -670,7 +670,7 @@
 .method public c(I)V
     .locals 9
 
-    const v7, 0x7f0801c4
+    const v7, 0x7f0801c5
 
     const/16 v8, 0x10
 
@@ -694,7 +694,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->g()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/chart/DynamicDetailChartView;->i()Z
 
     move-result v0
 
@@ -736,7 +736,7 @@
     :cond_2
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/Z;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/Z;->c(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/Z;->b(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
 
     move-result-object v0
 
@@ -805,7 +805,7 @@
 
     move-result-object v1
 
-    const v5, 0x7f0801c5
+    const v5, 0x7f0801c6
 
     invoke-virtual {v1, v5}, Landroid/widget/TextView;->setText(I)V
 
@@ -950,7 +950,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/Z;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/Z;->c(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/Z;->b(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
 
     move-result-object v0
 
@@ -980,7 +980,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/ae;->a:Lcn/com/smartdevices/bracelet/ui/Z;
 
-    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/Z;->c(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/ui/Z;->b(Lcn/com/smartdevices/bracelet/ui/Z;)Lcn/com/smartdevices/bracelet/model/SportDay;
 
     move-result-object v1
 

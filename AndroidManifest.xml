@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.xiaomi.hm.health">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.xiaomi.hm.health" platformBuildVersionCode="21" platformBuildVersionName="APKTOOL">
     <original-package android:name="cn.com.smartdevices.bracelet"/>
     <uses-permission android:name="android.permission.REORDER_TASKS"/>
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
@@ -192,8 +192,8 @@
         <meta-data android:name="UMENG_CHANNEL" android:value="Normal"/>
         <meta-data android:name="hm_channel" android:value="Normal"/>
         <meta-data android:name="AA_DB_NAME" android:value="mihealth.db"/>
-        <meta-data android:name="AA_DB_VERSION" android:value="1"/>
-        <meta-data android:name="AA_MODELS" android:value="cn.com.smartdevices.bracelet.weight.WeightInfo,             cn.com.smartdevices.bracelet.weight.UserInfo"/>
+        <meta-data android:name="AA_DB_VERSION" android:value="2"/>
+        <meta-data android:name="AA_MODELS" android:value="cn.com.smartdevices.bracelet.weight.WeightInfo,             cn.com.smartdevices.bracelet.weight.UserInfo,             cn.com.smartdevices.bracelet.weight.goal.WeightGoal"/>
         <provider android:authorities="cn.com.smartdevices.bracelet" android:exported="true" android:name="cn.com.smartdevices.bracelet.db.BraceletProvider"/>
         <provider android:authorities="cn.com.smartdevices.bracelet.config" android:exported="true" android:name="cn.com.smartdevices.bracelet.config.ConfigProvider" android:permission="com.xiaomi.hm.health.permission.CONFIG"/>
         <activity android:name="cn.com.smartdevices.ble.WeightTestAcitvity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
@@ -203,7 +203,6 @@
         <activity android:name="cn.com.smartdevices.bracelet.weight.family.MemberInfoSetGenderActivity" android:screenOrientation="portrait"/>
         <activity android:name="cn.com.smartdevices.bracelet.weight.family.MemberInfoSetBirthActivity" android:screenOrientation="portrait"/>
         <activity android:name="cn.com.smartdevices.bracelet.weight.family.MemberInfoSetHeightActivity" android:screenOrientation="portrait"/>
-        <activity android:name="cn.com.smartdevices.bracelet.weight.family.MemberInfoSetWeightActivity" android:screenOrientation="portrait"/>
         <activity android:name="cn.com.smartdevices.bracelet.weight.family.MemberInfoSetNameActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
         <activity android:name="cn.com.smartdevices.bracelet.weight.WeightReportActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
         <activity android:name="cn.com.smartdevices.bracelet.weight.WeightGoalSetActivity" android:screenOrientation="portrait"/>
@@ -222,6 +221,7 @@
         <activity android:name="cn.com.smartdevices.bracelet.ui.WeightReportShareActivity" android:screenOrientation="portrait"/>
         <activity android:name="cn.com.smartdevices.bracelet.ui.DailySportReportActivity" android:screenOrientation="portrait"/>
         <activity android:name="cn.com.smartdevices.bracelet.ui.person.PersonInfoSetNameActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="cn.com.smartdevices.bracelet.ui.PersonInfoSettingUnitActivity"/>
         <activity android:label="" android:name="cn.com.smartdevices.bracelet.ExtendActivity"/>
         <activity android:label="" android:name="cn.com.smartdevices.bracelet.SettingAppActivity"/>
         <provider android:authorities="cn.com.smartdevices.bracelet.extend.AppsSettingProvider" android:exported="true" android:name="cn.com.smartdevices.bracelet.extend.AppsSettingProvider"/>

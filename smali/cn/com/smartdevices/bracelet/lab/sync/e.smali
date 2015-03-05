@@ -19,16 +19,16 @@
     return-void
 .end method
 
-.method static a(Lcn/com/smartdevices/bracelet/gps/services/t;)Lcn/com/smartdevices/bracelet/gps/model/j;
+.method static a(Lcn/com/smartdevices/bracelet/gps/services/w;)Lcn/com/smartdevices/bracelet/gps/model/j;
     .locals 7
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/services/t;->D()Z
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/services/w;->D()Z
 
     move-result v1
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/services/t;->a()Lorg/json/JSONArray;
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/services/w;->a()Lorg/json/JSONArray;
 
     move-result-object v2
 
@@ -36,7 +36,7 @@
 
     new-instance v0, Lcn/com/smartdevices/bracelet/gps/model/j;
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/services/t;->b()Lorg/json/JSONObject;
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/services/w;->b()Lorg/json/JSONObject;
 
     move-result-object v1
 
@@ -62,7 +62,7 @@
 
     new-instance v0, Lcn/com/smartdevices/bracelet/gps/model/j;
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/services/t;->b()Lorg/json/JSONObject;
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/services/w;->b()Lorg/json/JSONObject;
 
     move-result-object v1
 
@@ -178,7 +178,7 @@
     :cond_2
     new-instance v0, Lcn/com/smartdevices/bracelet/gps/model/j;
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/services/t;->b()Lorg/json/JSONObject;
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/services/w;->b()Lorg/json/JSONObject;
 
     move-result-object v1
 
@@ -205,7 +205,7 @@
 
     new-instance v0, Lcn/com/smartdevices/bracelet/gps/model/j;
 
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/services/t;->b()Lorg/json/JSONObject;
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/gps/services/w;->b()Lorg/json/JSONObject;
 
     move-result-object v1
 
@@ -452,7 +452,7 @@
     invoke-virtual {v10, v0}, Lcn/com/smartdevices/bracelet/gps/model/j;->a(Ljava/lang/String;)V
 
     :cond_2
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/services/t;
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/services/w;
 
     invoke-virtual {v10}, Lcn/com/smartdevices/bracelet/gps/model/j;->b()Ljava/lang/String;
 
@@ -464,7 +464,7 @@
 
     move-wide v6, v1
 
-    invoke-direct/range {v4 .. v9}, Lcn/com/smartdevices/bracelet/gps/services/t;-><init>(IJLjava/lang/String;Z)V
+    invoke-direct/range {v4 .. v9}, Lcn/com/smartdevices/bracelet/gps/services/w;-><init>(IJLjava/lang/String;Z)V
 
     invoke-virtual {v10}, Lcn/com/smartdevices/bracelet/gps/model/j;->b()Ljava/lang/String;
 
@@ -474,9 +474,9 @@
 
     move-result-object v5
 
-    invoke-virtual/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/gps/services/t;->a(JILjava/lang/String;Ljava/lang/String;)V
+    invoke-virtual/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/gps/services/w;->a(JILjava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/t;->D()Z
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/services/w;->D()Z
 
     move-result v4
 
@@ -494,10 +494,10 @@
 
     move-result-object v4
 
-    invoke-virtual {v0, v1, v2, v4}, Lcn/com/smartdevices/bracelet/gps/services/t;->a(JLjava/lang/String;)V
+    invoke-virtual {v0, v1, v2, v4}, Lcn/com/smartdevices/bracelet/gps/services/w;->a(JLjava/lang/String;)V
 
     :goto_1
-    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/gps/a/b;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/gps/services/t;)Z
+    invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/gps/a/b;->a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/gps/services/w;)Z
 
     move-result v0
 
@@ -521,7 +521,7 @@
 
     invoke-direct {v4, v5}, Ljava/lang/String;-><init>([B)V
 
-    invoke-virtual {v0, v1, v2, v4}, Lcn/com/smartdevices/bracelet/gps/services/t;->a(JLjava/lang/String;)V
+    invoke-virtual {v0, v1, v2, v4}, Lcn/com/smartdevices/bracelet/gps/services/w;->a(JLjava/lang/String;)V
 
     goto :goto_1
 

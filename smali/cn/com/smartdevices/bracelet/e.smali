@@ -137,6 +137,18 @@
     return-void
 .end method
 
+.method public static a(F)D
+    .locals 4
+
+    const-wide v0, 0x400a3d70a3d70a3dL
+
+    float-to-double v2, p0
+
+    mul-double/2addr v0, v2
+
+    return-wide v0
+.end method
+
 .method public static a(FLandroid/content/Context;)I
     .locals 4
 
@@ -159,6 +171,24 @@
     add-double/2addr v0, v2
 
     double-to-int v0, v0
+
+    return v0
+.end method
+
+.method public static a(I)I
+    .locals 4
+
+    const-wide v0, 0x3fd9374bc6a7ef9eL
+
+    int-to-double v2, p0
+
+    mul-double/2addr v0, v2
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->round(D)J
+
+    move-result-wide v0
+
+    long-to-int v0, v0
 
     return v0
 .end method
@@ -598,7 +628,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f080170
+    const v3, 0x7f080171
 
     const/4 v4, 0x3
 
@@ -643,7 +673,7 @@
 
     invoke-virtual {p6, v7}, Lcn/com/smartdevices/bracelet/model/ShareData;->setType(I)V
 
-    const v1, 0x7f08016e
+    const v1, 0x7f08016f
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -713,7 +743,7 @@
     return-object p6
 
     :cond_0
-    const v2, 0x7f08016f
+    const v2, 0x7f080170
 
     new-array v3, v8, [Ljava/lang/Object;
 
@@ -734,7 +764,7 @@
     :cond_1
     invoke-virtual {p6, v6}, Lcn/com/smartdevices/bracelet/model/ShareData;->setType(I)V
 
-    const v1, 0x7f08016c
+    const v1, 0x7f08016d
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -765,30 +795,6 @@
     move-result-object v0
 
     goto :goto_1
-.end method
-
-.method public static a(I)Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/text/DecimalFormat;
-
-    const-string v1, "#.#"
-
-    invoke-direct {v0, v1}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
-
-    int-to-float v1, p0
-
-    const v2, 0x38d1b717
-
-    mul-float/2addr v1, v2
-
-    float-to-double v1, v1
-
-    invoke-virtual {v0, v1, v2}, Ljava/text/DecimalFormat;->format(D)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
 .end method
 
 .method public static a(Landroid/content/Context;)Ljava/lang/String;
@@ -882,7 +888,7 @@
 
     if-nez v0, :cond_0
 
-    const v0, 0x7f08033d
+    const v0, 0x7f08034a
 
     new-array v2, v4, [Ljava/lang/Object;
 
@@ -912,7 +918,7 @@
 
     if-ltz v0, :cond_1
 
-    const v0, 0x7f08033f
+    const v0, 0x7f08034c
 
     invoke-virtual {v1, v0}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -950,7 +956,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f080341
+    const v2, 0x7f08034e
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -964,7 +970,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f080342
+    const v2, 0x7f08034f
 
     new-array v3, v4, [Ljava/lang/Object;
 
@@ -999,7 +1005,7 @@
 
     if-nez v2, :cond_0
 
-    const v0, 0x7f0801c9
+    const v0, 0x7f0801ca
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1071,7 +1077,7 @@
 
     move-result-object v0
 
-    invoke-static {p2}, Lcn/com/smartdevices/bracelet/E;->a(I)Ljava/lang/String;
+    invoke-static {p2}, Lcn/com/smartdevices/bracelet/E;->b(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1139,7 +1145,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f080175
+    const v4, 0x7f080176
 
     const/4 v5, 0x6
 
@@ -1195,7 +1201,7 @@
     return-object v0
 
     :cond_0
-    const v3, 0x7f080174
+    const v3, 0x7f080175
 
     const/4 v4, 0x6
 
@@ -1324,7 +1330,7 @@
     move-result-object v0
 
     :cond_0
-    const v2, 0x7f080171
+    const v2, 0x7f080172
 
     const/4 v3, 0x5
 
@@ -1420,7 +1426,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f080172
+    const v3, 0x7f080173
 
     const/4 v4, 0x5
 
@@ -1571,7 +1577,7 @@
 
     if-gtz v3, :cond_1
 
-    const v1, 0x7f08017a
+    const v1, 0x7f08017b
 
     new-array v3, v12, [Ljava/lang/Object;
 
@@ -1641,7 +1647,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f08017b
+    const v3, 0x7f08017c
 
     new-array v5, v12, [Ljava/lang/Object;
 
@@ -2016,7 +2022,7 @@
 
     move-result-object v0
 
-    const-class v1, Lcn/com/smartdevices/bracelet/ui/cv;
+    const-class v1, Lcn/com/smartdevices/bracelet/ui/cA;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -2080,7 +2086,7 @@
 
     invoke-virtual {v0, v1, p2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    const-class v1, Lcn/com/smartdevices/bracelet/ui/cv;
+    const-class v1, Lcn/com/smartdevices/bracelet/ui/cA;
 
     invoke-static {p0, v1, v0}, Lcn/com/smartdevices/bracelet/ui/W;->a(Landroid/app/Activity;Ljava/lang/Class;Landroid/os/Bundle;)V
     :try_end_0
@@ -2129,7 +2135,7 @@
 
     if-eqz p1, :cond_1
 
-    const v0, 0x7f080117
+    const v0, 0x7f080118
 
     const/4 v1, 0x0
 
@@ -2154,7 +2160,7 @@
 .end method
 
 .method public static a(Landroid/content/Context;Landroid/os/Bundle;Lcn/com/smartdevices/bracelet/i/d;)V
-    .locals 3
+    .locals 7
 
     if-nez p1, :cond_0
 
@@ -2214,54 +2220,80 @@
 
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/db/v;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/v;
+    invoke-static {v1}, Lcn/com/smartdevices/bracelet/db/v;->a(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/db/v;
 
-    move-result-object v0
+    move-result-object v1
 
-    const-string v1, "step_daily_ranking"
+    const-string v2, "step_daily_ranking"
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    invoke-virtual {v0, v1, v2}, Lcn/com/smartdevices/bracelet/db/v;->a(Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-virtual {v1, v2, v3}, Lcn/com/smartdevices/bracelet/db/v;->a(Ljava/lang/String;Z)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    :try_start_0
+    new-instance v2, Lorg/json/JSONObject;
+
+    invoke-direct {v2, v1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+
+    const-string v1, "date"
+
+    invoke-virtual {v2, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v3, "date"
+
+    invoke-virtual {p1, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v4, "record"
+
+    invoke-virtual {v2, v4}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+
+    move-result v4
+
+    const-string v5, "record"
+
+    invoke-virtual {p1, v5}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+
+    move-result v5
+
+    const-string v6, "time_type"
+
+    invoke-virtual {v2, v6}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
+
+    move-result v6
+
+    if-eqz v1, :cond_3
+
+    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-nez v1, :cond_3
+    if-eqz v1, :cond_3
 
-    :try_start_0
-    new-instance v1, Lorg/json/JSONObject;
+    div-int/lit8 v1, v4, 0x64
 
-    invoke-direct {v1, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+    div-int/lit8 v3, v5, 0x64
 
-    const-string v0, "date"
+    if-ne v1, v3, :cond_3
 
-    invoke-virtual {v1, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v2, "date"
-
-    invoke-virtual {p1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
+    if-ne v6, v0, :cond_3
 
     const-string v0, "value"
 
-    invoke-virtual {v1, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v0}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -2405,7 +2437,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f080206
+    const v2, 0x7f080207
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -2463,7 +2495,7 @@
     invoke-virtual {p2, v8}, Lcn/com/smartdevices/bracelet/model/ShareData;->setType(I)V
 
     :goto_1
-    const v2, 0x7f080205
+    const v2, 0x7f080206
 
     new-array v4, v10, [Ljava/lang/Object;
 
@@ -2569,14 +2601,14 @@
 
     if-ne v5, v7, :cond_6
 
-    const v0, 0x7f080209
+    const v0, 0x7f08020a
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     :goto_2
-    const v1, 0x7f080207
+    const v1, 0x7f080208
 
     const/4 v5, 0x4
 
@@ -2601,7 +2633,7 @@
     :cond_6
     if-le v5, v7, :cond_7
 
-    const v1, 0x7f080208
+    const v1, 0x7f080209
 
     new-array v5, v7, [Ljava/lang/Object;
 
@@ -2655,16 +2687,16 @@
 
     move-result-object v0
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/L;
+    new-instance v1, Lcn/com/smartdevices/bracelet/N;
 
-    invoke-direct {v1, p1, p0}, Lcn/com/smartdevices/bracelet/L;-><init>(Lcn/com/smartdevices/bracelet/model/PersonInfo;Landroid/content/Context;)V
+    invoke-direct {v1, p1, p0}, Lcn/com/smartdevices/bracelet/N;-><init>(Lcn/com/smartdevices/bracelet/model/PersonInfo;Landroid/content/Context;)V
 
     invoke-static {v0, p1, v1}, Lcn/com/smartdevices/bracelet/k/g;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Lcn/com/smartdevices/bracelet/model/PersonInfo;Lcom/d/a/a/h;)V
 
     goto :goto_0
 .end method
 
-.method public static a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/PersonInfo;Ljava/util/HashMap;Lcn/com/smartdevices/bracelet/Q;)V
+.method public static a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/PersonInfo;Ljava/util/HashMap;Lcn/com/smartdevices/bracelet/V;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -2676,7 +2708,7 @@
             "Ljava/lang/String;",
             "Ljava/lang/String;",
             ">;",
-            "Lcn/com/smartdevices/bracelet/Q;",
+            "Lcn/com/smartdevices/bracelet/V;",
             ")V"
         }
     .end annotation
@@ -2685,17 +2717,17 @@
 
     move-result-object v0
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/M;
+    new-instance v1, Lcn/com/smartdevices/bracelet/O;
 
-    invoke-direct {v1, p3, p0, p1}, Lcn/com/smartdevices/bracelet/M;-><init>(Lcn/com/smartdevices/bracelet/Q;Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
+    invoke-direct {v1, p3, p0, p1}, Lcn/com/smartdevices/bracelet/O;-><init>(Lcn/com/smartdevices/bracelet/V;Landroid/content/Context;Lcn/com/smartdevices/bracelet/model/PersonInfo;)V
 
     invoke-static {v0, p2, v1}, Lcn/com/smartdevices/bracelet/k/g;->a(Lcn/com/smartdevices/bracelet/model/LoginData;Ljava/util/HashMap;Lcom/d/a/a/h;)V
 
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;Ljava/lang/String;FF)V
-    .locals 7
+.method public static a(Landroid/content/Context;Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;Lcn/com/smartdevices/bracelet/T;)V
+    .locals 10
 
     const-string v0, "Utils"
 
@@ -2737,7 +2769,201 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    iget v2, p1, Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;->currentVal:F
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v0, "Utils"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "fuid"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget v2, p1, Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;->fuid:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v0, "Utils"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "targetWeigt "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget v2, p1, Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;->goal:F
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v0, "Utils"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "height "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget v2, p1, Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;->height:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v0, "Utils"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "timestamp "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    iget-wide v2, p1, Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;->datetime:J
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/g/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
+
+    move-result-object v1
+
+    iget-wide v1, v1, Lcn/com/smartdevices/bracelet/model/LoginData;->uid:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget v2, p1, Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;->fuid:I
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v2, ""
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v3, 0x1
+
+    iget v4, p1, Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;->currentVal:F
+
+    iget v5, p1, Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;->goal:F
+
+    iget v6, p1, Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;->height:I
+
+    iget-wide v7, p1, Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;->datetime:J
+
+    new-instance v9, Lcn/com/smartdevices/bracelet/Q;
+
+    invoke-direct {v9, p2, p1}, Lcn/com/smartdevices/bracelet/Q;-><init>(Lcn/com/smartdevices/bracelet/T;Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;)V
+
+    move-object v0, p0
+
+    invoke-static/range {v0 .. v9}, Lcn/com/smartdevices/bracelet/k/g;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;IFFIJLcom/d/a/a/h;)V
+
+    return-void
+.end method
+
+.method public static a(Landroid/content/Context;Ljava/lang/String;JLcn/com/smartdevices/bracelet/R;)V
+    .locals 7
+
+    const-string v0, "Utils"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Keeper.readLoginData().uid "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/g/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
+
+    move-result-object v2
+
+    iget-wide v2, v2, Lcn/com/smartdevices/bracelet/model/LoginData;->uid:J
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -2775,13 +3001,13 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "targetWeigt "
+    const-string v2, "timestamp "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, p2, p3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -2817,24 +3043,22 @@
 
     const/4 v3, 0x1
 
-    new-instance v6, Lcn/com/smartdevices/bracelet/N;
+    new-instance v6, Lcn/com/smartdevices/bracelet/G;
 
-    invoke-direct {v6}, Lcn/com/smartdevices/bracelet/N;-><init>()V
+    invoke-direct {v6, p4}, Lcn/com/smartdevices/bracelet/G;-><init>(Lcn/com/smartdevices/bracelet/R;)V
 
     move-object v0, p0
 
     move-object v2, p1
 
-    move v4, p2
+    move-wide v4, p2
 
-    move v5, p3
-
-    invoke-static/range {v0 .. v6}, Lcn/com/smartdevices/bracelet/k/g;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;IFFLcom/d/a/a/h;)V
+    invoke-static/range {v0 .. v6}, Lcn/com/smartdevices/bracelet/k/g;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;IJLcom/d/a/a/h;)V
 
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;Ljava/lang/String;JLcn/com/smartdevices/bracelet/P;)V
+.method public static a(Landroid/content/Context;Ljava/lang/String;JLcn/com/smartdevices/bracelet/S;)V
     .locals 7
 
     const/4 v3, 0x1
@@ -2881,9 +3105,9 @@
 
     move-result-object v4
 
-    new-instance v6, Lcn/com/smartdevices/bracelet/O;
+    new-instance v6, Lcn/com/smartdevices/bracelet/H;
 
-    invoke-direct {v6, p0, p4}, Lcn/com/smartdevices/bracelet/O;-><init>(Landroid/content/Context;Lcn/com/smartdevices/bracelet/P;)V
+    invoke-direct {v6, p0, p4}, Lcn/com/smartdevices/bracelet/H;-><init>(Landroid/content/Context;Lcn/com/smartdevices/bracelet/S;)V
 
     move-object v0, p0
 
@@ -2892,6 +3116,146 @@
     move v5, v3
 
     invoke-static/range {v0 .. v6}, Lcn/com/smartdevices/bracelet/k/g;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;ILcom/d/a/a/h;)V
+
+    return-void
+.end method
+
+.method public static a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcn/com/smartdevices/bracelet/U;)V
+    .locals 7
+
+    const-string v0, "Utils"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "Keeper.readLoginData().uid "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/g/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
+
+    move-result-object v2
+
+    iget-wide v2, v2, Lcn/com/smartdevices/bracelet/model/LoginData;->uid:J
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v0, "Utils"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "fuid"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v0, "Utils"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "stime "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v0, "Utils"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "etime "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/g/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
+
+    move-result-object v1
+
+    iget-wide v1, v1, Lcn/com/smartdevices/bracelet/model/LoginData;->uid:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v3, 0x1
+
+    new-instance v6, Lcn/com/smartdevices/bracelet/P;
+
+    invoke-direct {v6, p0, p4}, Lcn/com/smartdevices/bracelet/P;-><init>(Landroid/content/Context;Lcn/com/smartdevices/bracelet/U;)V
+
+    move-object v0, p0
+
+    move-object v2, p1
+
+    move-object v4, p2
+
+    move-object v5, p3
+
+    invoke-static/range {v0 .. v6}, Lcn/com/smartdevices/bracelet/k/g;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Lcom/d/a/a/h;)V
 
     return-void
 .end method
@@ -3089,7 +3453,7 @@
 
     const/4 v1, 0x0
 
-    const v5, 0x7f020078
+    const v5, 0x7f020082
 
     if-eqz p0, :cond_3
 
@@ -4383,6 +4747,30 @@
     return-wide v0
 .end method
 
+.method public static b(I)Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/text/DecimalFormat;
+
+    const-string v1, "#.#"
+
+    invoke-direct {v0, v1}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
+
+    int-to-float v1, p0
+
+    const v2, 0x38d1b717
+
+    mul-float/2addr v1, v2
+
+    float-to-double v1, v1
+
+    invoke-virtual {v0, v1, v2}, Ljava/text/DecimalFormat;->format(D)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public static b(Landroid/content/Context;)Ljava/lang/String;
     .locals 3
 
@@ -4757,7 +5145,7 @@
 
     invoke-virtual {p0, v1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
-    const v0, 0x7f08010f
+    const v0, 0x7f080110
 
     invoke-static {p0, v0, v6}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -4788,7 +5176,7 @@
 
     invoke-static {v7, v8}, Lcn/com/smartdevices/bracelet/z;->b(J)V
 
-    const v0, 0x7f08010d
+    const v0, 0x7f08010e
 
     invoke-static {p0, v0, v6}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -4821,9 +5209,9 @@
 
     invoke-static {v0}, Lcom/xiaomi/market/sdk/d;->a(Z)V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/H;
+    new-instance v0, Lcn/com/smartdevices/bracelet/J;
 
-    invoke-direct {v0, p0, p1}, Lcn/com/smartdevices/bracelet/H;-><init>(Landroid/app/Activity;Z)V
+    invoke-direct {v0, p0, p1}, Lcn/com/smartdevices/bracelet/J;-><init>(Landroid/app/Activity;Z)V
 
     invoke-static {v0}, Lcom/xiaomi/market/sdk/d;->a(Lcom/xiaomi/market/sdk/e;)V
 
@@ -4926,41 +5314,45 @@
 .end method
 
 .method public static b(Landroid/content/Context;Landroid/os/Bundle;Lcn/com/smartdevices/bracelet/i/d;)V
-    .locals 6
+    .locals 8
 
     const-string v0, "date"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v2
 
-    invoke-static {p0}, Lcn/com/smartdevices/bracelet/g/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
+    const-string v0, "record"
 
-    move-result-object v1
-
-    const-string v2, "record"
-
-    invoke-virtual {p1, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
-
-    move-result v2
-
-    const-string v3, "data_type"
-
-    invoke-virtual {p1, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v3
 
-    const-string v4, "time_type"
+    const-string v0, "time_type"
 
-    invoke-virtual {p1, v4}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
 
     move-result v4
 
-    new-instance v5, Lcn/com/smartdevices/bracelet/G;
+    invoke-static {p0}, Lcn/com/smartdevices/bracelet/g/a;->f(Landroid/content/Context;)Lcn/com/smartdevices/bracelet/model/LoginData;
 
-    invoke-direct {v5, p2, v0, p0}, Lcn/com/smartdevices/bracelet/G;-><init>(Lcn/com/smartdevices/bracelet/i/d;Ljava/lang/String;Landroid/content/Context;)V
+    move-result-object v6
 
-    invoke-static {v1, v2, v3, v4, v5}, Lcn/com/smartdevices/bracelet/k/g;->a(Lcn/com/smartdevices/bracelet/model/LoginData;IIILcom/d/a/a/h;)V
+    const-string v0, "data_type"
+
+    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
+
+    move-result v7
+
+    new-instance v0, Lcn/com/smartdevices/bracelet/I;
+
+    move-object v1, p2
+
+    move-object v5, p0
+
+    invoke-direct/range {v0 .. v5}, Lcn/com/smartdevices/bracelet/I;-><init>(Lcn/com/smartdevices/bracelet/i/d;Ljava/lang/String;IILandroid/content/Context;)V
+
+    invoke-static {v6, v3, v7, v4, v0}, Lcn/com/smartdevices/bracelet/k/g;->a(Lcn/com/smartdevices/bracelet/model/LoginData;IIILcom/d/a/a/h;)V
 
     return-void
 .end method
@@ -5722,7 +6114,7 @@
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    sget-object v1, Lcn/com/smartdevices/bracelet/n;->aM:Ljava/lang/String;
+    sget-object v1, Lcn/com/smartdevices/bracelet/n;->aV:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
@@ -5969,7 +6361,7 @@
 
     if-gez v0, :cond_1
 
-    const v0, 0x7f080176
+    const v0, 0x7f080177
 
     new-array v2, v7, [Ljava/lang/Object;
 
@@ -6015,7 +6407,7 @@
     return-object v0
 
     :cond_1
-    const v0, 0x7f080177
+    const v0, 0x7f080178
 
     new-array v2, v7, [Ljava/lang/Object;
 
@@ -6040,7 +6432,7 @@
 
     const-string v0, "1"
 
-    const v1, 0x7f080178
+    const v1, 0x7f080179
 
     new-array v2, v7, [Ljava/lang/Object;
 
@@ -6057,7 +6449,7 @@
 
     if-le p1, v0, :cond_4
 
-    const v0, 0x7f080179
+    const v0, 0x7f08017a
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -6102,7 +6494,7 @@
     goto :goto_0
 
     :cond_6
-    const v0, 0x7f080173
+    const v0, 0x7f080174
 
     new-array v2, v7, [Ljava/lang/Object;
 
@@ -6292,11 +6684,11 @@
 
     move-result-object v2
 
-    new-instance v3, Lcn/com/smartdevices/bracelet/I;
+    new-instance v3, Lcn/com/smartdevices/bracelet/K;
 
-    invoke-direct {v3}, Lcn/com/smartdevices/bracelet/I;-><init>()V
+    invoke-direct {v3}, Lcn/com/smartdevices/bracelet/K;-><init>()V
 
-    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/I;->getType()Ljava/lang/reflect/Type;
+    invoke-virtual {v3}, Lcn/com/smartdevices/bracelet/K;->getType()Ljava/lang/reflect/Type;
 
     move-result-object v3
 
@@ -6326,9 +6718,9 @@
 .method public static d(Landroid/content/Context;)V
     .locals 1
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/J;
+    new-instance v0, Lcn/com/smartdevices/bracelet/L;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/J;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/L;-><init>(Landroid/content/Context;)V
 
     invoke-static {p0, v0}, Lcn/com/smartdevices/bracelet/k/g;->c(Landroid/content/Context;Lcom/d/a/a/h;)V
 
@@ -6575,7 +6967,7 @@
             ")",
             "Ljava/util/List",
             "<",
-            "Lcn/com/smartdevices/bracelet/model/WeightGoalItem;",
+            "Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;",
             ">;"
         }
     .end annotation
@@ -6614,9 +7006,9 @@
 
     move-result-object v3
 
-    new-instance v4, Lcn/com/smartdevices/bracelet/model/WeightGoalItem;
+    new-instance v4, Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;
 
-    invoke-direct {v4, v3}, Lcn/com/smartdevices/bracelet/model/WeightGoalItem;-><init>(Lorg/json/JSONObject;)V
+    invoke-direct {v4, v3}, Lcn/com/smartdevices/bracelet/weight/goal/WeightGoal;-><init>(Lorg/json/JSONObject;)V
 
     invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_0
@@ -6802,7 +7194,7 @@
 
     const-string v1, "username"
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->ah()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->ag()Ljava/lang/String;
 
     move-result-object v2
 
@@ -6992,7 +7384,7 @@
 .method public static l(Landroid/content/Context;)V
     .locals 9
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->ai()Ljava/lang/String;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->ah()Ljava/lang/String;
 
     move-result-object v0
 
@@ -7660,7 +8052,7 @@
 
     const-string v0, "https://hm.xiaomi.com/huami.health.agreement.do"
 
-    const v1, 0x7f0800df
+    const v1, 0x7f0800e0
 
     const/4 v2, 0x3
 
@@ -7672,9 +8064,9 @@
 .method public static u(Landroid/content/Context;)V
     .locals 2
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/K;
+    new-instance v0, Lcn/com/smartdevices/bracelet/M;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/K;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/M;-><init>()V
 
     invoke-static {}, Lcn/com/smartdevices/bracelet/z;->A()Ljava/lang/String;
 

@@ -22,7 +22,7 @@
 .method protected a()I
     .locals 1
 
-    const v0, 0x7f030060
+    const v0, 0x7f030062
 
     return v0
 .end method
@@ -51,7 +51,7 @@
     goto :goto_0
 
     :pswitch_data_0
-    .packed-switch 0x7f0701f3
+    .packed-switch 0x7f07020e
         :pswitch_1
         :pswitch_0
         :pswitch_0
@@ -104,7 +104,7 @@
 
     invoke-super {p0, p1, p2}, Lcn/com/smartdevices/bracelet/ui/W;->onViewCreated(Landroid/view/View;Landroid/os/Bundle;)V
 
-    const v0, 0x7f0701f3
+    const v0, 0x7f07020e
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -116,7 +116,7 @@
 
     invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0701f6
+    const v0, 0x7f070211
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

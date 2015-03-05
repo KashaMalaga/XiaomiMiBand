@@ -11,7 +11,7 @@
 
 .field private d:Lcn/com/smartdevices/bracelet/gps/b/v;
 
-.field private e:Lcn/com/smartdevices/bracelet/gps/services/h;
+.field private e:Lcn/com/smartdevices/bracelet/gps/services/k;
 
 .field private f:I
 
@@ -19,7 +19,7 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lcn/com/smartdevices/bracelet/gps/b/v;Lcn/com/smartdevices/bracelet/gps/services/k;)V
+.method public constructor <init>(Landroid/content/Context;Lcn/com/smartdevices/bracelet/gps/b/v;Lcn/com/smartdevices/bracelet/gps/services/n;)V
     .locals 3
 
     const/4 v2, 0x1
@@ -38,7 +38,7 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/h;->d:Lcn/com/smartdevices/bracelet/gps/b/v;
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/h;->e:Lcn/com/smartdevices/bracelet/gps/services/h;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/h;->e:Lcn/com/smartdevices/bracelet/gps/services/k;
 
     iput v1, p0, Lcn/com/smartdevices/bracelet/gps/b/h;->f:I
 
@@ -56,25 +56,25 @@
 
     iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/h;->c:Ljava/util/concurrent/ExecutorService;
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/gps/services/h;
+    new-instance v0, Lcn/com/smartdevices/bracelet/gps/services/k;
 
-    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/gps/services/h;-><init>()V
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/gps/services/k;-><init>()V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/h;->e:Lcn/com/smartdevices/bracelet/gps/services/h;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/h;->e:Lcn/com/smartdevices/bracelet/gps/services/k;
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/h;->e:Lcn/com/smartdevices/bracelet/gps/services/h;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/h;->e:Lcn/com/smartdevices/bracelet/gps/services/k;
 
-    invoke-virtual {v0, p3}, Lcn/com/smartdevices/bracelet/gps/services/h;->a(Lcn/com/smartdevices/bracelet/gps/services/k;)V
+    invoke-virtual {v0, p3}, Lcn/com/smartdevices/bracelet/gps/services/k;->a(Lcn/com/smartdevices/bracelet/gps/services/n;)V
 
     iput-object p2, p0, Lcn/com/smartdevices/bracelet/gps/b/h;->d:Lcn/com/smartdevices/bracelet/gps/b/v;
 
     return-void
 .end method
 
-.method static synthetic a(Lcn/com/smartdevices/bracelet/gps/b/h;)Lcn/com/smartdevices/bracelet/gps/services/h;
+.method static synthetic a(Lcn/com/smartdevices/bracelet/gps/b/h;)Lcn/com/smartdevices/bracelet/gps/services/k;
     .locals 1
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/h;->e:Lcn/com/smartdevices/bracelet/gps/services/h;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/b/h;->e:Lcn/com/smartdevices/bracelet/gps/services/k;
 
     return-object v0
 .end method
@@ -105,7 +105,7 @@
 
 
 # virtual methods
-.method public a(Landroid/content/Context;J)Lcn/com/smartdevices/bracelet/gps/services/t;
+.method public a(Landroid/content/Context;J)Lcn/com/smartdevices/bracelet/gps/services/w;
     .locals 2
 
     if-eqz p1, :cond_0
@@ -124,7 +124,7 @@
     throw v0
 
     :cond_1
-    invoke-static {p1, p2, p3}, Lcn/com/smartdevices/bracelet/gps/a/b;->a(Landroid/content/Context;J)Lcn/com/smartdevices/bracelet/gps/services/t;
+    invoke-static {p1, p2, p3}, Lcn/com/smartdevices/bracelet/gps/a/b;->a(Landroid/content/Context;J)Lcn/com/smartdevices/bracelet/gps/services/w;
 
     move-result-object v0
 

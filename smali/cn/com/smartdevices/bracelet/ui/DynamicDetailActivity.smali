@@ -61,7 +61,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v1, v2, v0}, Landroid/app/FragmentTransaction;->add(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
+    invoke-virtual {v1, v2, v0}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
 
     invoke-virtual {v1}, Landroid/app/FragmentTransaction;->commit()I
 

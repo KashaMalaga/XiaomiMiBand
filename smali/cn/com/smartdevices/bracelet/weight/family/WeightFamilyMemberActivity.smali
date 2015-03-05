@@ -14,7 +14,7 @@
 
 .field private c:Landroid/widget/ListView;
 
-.field private d:Lcn/com/smartdevices/bracelet/weight/family/r;
+.field private d:Lcn/com/smartdevices/bracelet/weight/family/m;
 
 .field private e:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -29,7 +29,7 @@
 
 .field private f:Landroid/widget/ListView;
 
-.field private g:Lcn/com/smartdevices/bracelet/weight/family/t;
+.field private g:Lcn/com/smartdevices/bracelet/weight/family/o;
 
 .field private h:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -400,6 +400,14 @@
     return-void
 
     :pswitch_1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;->a:Landroid/content/Context;
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/E;->m(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
     new-instance v0, Landroid/content/Intent;
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;->a:Landroid/content/Context;
@@ -414,7 +422,20 @@
 
     goto :goto_0
 
-    nop
+    :cond_0
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;->a:Landroid/content/Context;
+
+    const-string v1, "\u8bf7\u8054\u7f51\u64cd\u4f5c"
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    goto :goto_0
 
     :pswitch_data_0
     .packed-switch 0x7f07004b
@@ -456,35 +477,35 @@
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;->c()V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/weight/family/r;
+    new-instance v0, Lcn/com/smartdevices/bracelet/weight/family/m;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/weight/family/r;-><init>(Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/weight/family/m;-><init>(Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;->d:Lcn/com/smartdevices/bracelet/weight/family/r;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;->d:Lcn/com/smartdevices/bracelet/weight/family/m;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;->c:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;->d:Lcn/com/smartdevices/bracelet/weight/family/r;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;->d:Lcn/com/smartdevices/bracelet/weight/family/m;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;->c:Landroid/widget/ListView;
 
-    new-instance v1, Lcn/com/smartdevices/bracelet/weight/family/q;
+    new-instance v1, Lcn/com/smartdevices/bracelet/weight/family/l;
 
-    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/weight/family/q;-><init>(Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;)V
+    invoke-direct {v1, p0}, Lcn/com/smartdevices/bracelet/weight/family/l;-><init>(Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    new-instance v0, Lcn/com/smartdevices/bracelet/weight/family/t;
+    new-instance v0, Lcn/com/smartdevices/bracelet/weight/family/o;
 
-    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/weight/family/t;-><init>(Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;)V
+    invoke-direct {v0, p0}, Lcn/com/smartdevices/bracelet/weight/family/o;-><init>(Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;)V
 
-    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;->g:Lcn/com/smartdevices/bracelet/weight/family/t;
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;->g:Lcn/com/smartdevices/bracelet/weight/family/o;
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;->f:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;->g:Lcn/com/smartdevices/bracelet/weight/family/t;
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/weight/family/WeightFamilyMemberActivity;->g:Lcn/com/smartdevices/bracelet/weight/family/o;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 

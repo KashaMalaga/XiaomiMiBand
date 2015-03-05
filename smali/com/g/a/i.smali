@@ -1,30 +1,43 @@
-.class public Lcom/g/a/i;
+.class Lcom/g/a/I;
 .super Ljava/lang/Object;
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final a:I = 0x0
 
-.field public static final b:I = 0x1
+# instance fields
+.field final synthetic a:Landroid/widget/AbsListView;
 
-.field static final c:I = 0x2
+.field final synthetic b:I
 
-.field static final d:I = 0x3
-
-.field public static final e:I = 0x4
-
-.field public static final f:I = 0x5
-
-.field public static final g:I = 0x6
-
-.field public static final h:I = 0x7
+.field final synthetic c:Lcom/g/a/E;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcom/g/a/E;Landroid/widget/AbsListView;I)V
     .locals 0
 
+    iput-object p1, p0, Lcom/g/a/I;->c:Lcom/g/a/E;
+
+    iput-object p2, p0, Lcom/g/a/I;->a:Landroid/widget/AbsListView;
+
+    iput p3, p0, Lcom/g/a/I;->b:I
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public run()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/g/a/I;->a:Landroid/widget/AbsListView;
+
+    iget v1, p0, Lcom/g/a/I;->b:I
+
+    invoke-virtual {v0, v1}, Landroid/widget/AbsListView;->setSelection(I)V
 
     return-void
 .end method

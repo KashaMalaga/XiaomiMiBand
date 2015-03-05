@@ -1,66 +1,85 @@
 .class Lcn/com/smartdevices/bracelet/ui/cf;
-.super Lcom/d/a/a/h;
+.super Lcn/com/smartdevices/bracelet/a/b;
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/cg;
-
-.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/ce;
+.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/bZ;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/ce;Lcn/com/smartdevices/bracelet/ui/cg;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/bZ;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cf;->b:Lcn/com/smartdevices/bracelet/ui/ce;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cf;->b:Lcn/com/smartdevices/bracelet/ui/bZ;
 
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/cf;->a:Lcn/com/smartdevices/bracelet/ui/cg;
-
-    invoke-direct {p0}, Lcom/d/a/a/h;-><init>()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/a/b;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onFailure(I[Lorg/apache/http/Header;[BLjava/lang/Throwable;)V
-    .locals 2
+.method public b()V
+    .locals 0
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cf;->a:Lcn/com/smartdevices/bracelet/ui/cg;
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, v0, Lcn/com/smartdevices/bracelet/ui/cg;->a:Z
+    invoke-super {p0}, Lcn/com/smartdevices/bracelet/a/b;->b()V
 
     return-void
 .end method
 
-.method public onSuccess(I[Lorg/apache/http/Header;[B)V
+.method public c(Ljava/lang/Object;)V
     .locals 2
 
-    invoke-static {p3}, Lcn/com/smartdevices/bracelet/E;->b([B)Ljava/lang/String;
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->c(Ljava/lang/Object;)V
+
+    const-string v0, "PersonInfoFragment"
+
+    const-string v1, "sync to bracelet ok"
+
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public d(Ljava/lang/Object;)V
+    .locals 3
+
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/a/b;->d(Ljava/lang/Object;)V
+
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cf;->b:Lcn/com/smartdevices/bracelet/ui/bZ;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/bZ;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cf;->b:Lcn/com/smartdevices/bracelet/ui/ce;
+    if-eqz v0, :cond_0
 
-    iget-object v1, v1, Lcn/com/smartdevices/bracelet/ui/ce;->a:Lcn/com/smartdevices/bracelet/ui/bW;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cf;->b:Lcn/com/smartdevices/bracelet/ui/bZ;
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/ui/bW;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/bZ;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cf;->b:Lcn/com/smartdevices/bracelet/ui/bZ;
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/ui/bZ;->getActivity()Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/k/i;->a(Landroid/content/Context;Ljava/lang/String;)Lcn/com/smartdevices/bracelet/k/i;
+    const v2, 0x7f080051
+
+    invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v1, v2}, Lcn/com/smartdevices/bracelet/view/b;->a(Landroid/content/Context;Ljava/lang/String;I)Landroid/widget/Toast;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cf;->a:Lcn/com/smartdevices/bracelet/ui/cg;
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/k/i;->c()Z
-
-    move-result v0
-
-    iput-boolean v0, v1, Lcn/com/smartdevices/bracelet/ui/cg;->a:Z
-
+    :cond_0
     return-void
 .end method

@@ -4622,48 +4622,6 @@
     return v0
 .end method
 
-.method public setRealtimeSteps(I)Z
-    .locals 4
-
-    invoke-static {}, Lcn/com/smartdevices/bracelet/x;->d()V
-
-    iget-object v0, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->m_CharControlPoint:Landroid/bluetooth/BluetoothGattCharacteristic;
-
-    const/4 v1, 0x3
-
-    new-array v1, v1, [B
-
-    const/4 v2, 0x0
-
-    const/16 v3, 0x10
-
-    aput-byte v3, v1, v2
-
-    const/4 v2, 0x1
-
-    and-int/lit16 v3, p1, 0xff
-
-    int-to-byte v3, v3
-
-    aput-byte v3, v1, v2
-
-    const/4 v2, 0x2
-
-    shr-int/lit8 v3, p1, 0x8
-
-    and-int/lit16 v3, v3, 0xff
-
-    int-to-byte v3, v3
-
-    aput-byte v3, v1, v2
-
-    invoke-virtual {p0, v0, v1}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->write(Landroid/bluetooth/BluetoothGattCharacteristic;[B)Z
-
-    move-result v0
-
-    return v0
-.end method
-
 .method public setTimer(BBLjava/util/Calendar;BB)Z
     .locals 10
 

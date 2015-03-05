@@ -31,25 +31,9 @@
 
     const/4 v2, 0x0
 
-    if-nez p1, :cond_1
-
-    # getter for: Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->TAG:Ljava/lang/String;
-    invoke-static {}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$100()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "value is null!!!"
-
-    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    :goto_0
-    return-void
-
-    :cond_1
     array-length v0, p1
 
-    if-ne v0, v4, :cond_2
+    if-ne v0, v4, :cond_1
 
     aget-byte v0, p1, v2
 
@@ -63,12 +47,7 @@
 
     or-int/2addr v0, v1
 
-    :goto_1
-    iget-object v1, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$2;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
-
-    # invokes: Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->onRealtimeStepsChanged(I)V
-    invoke-static {v1, v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$200(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;I)V
-
+    :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -91,6 +70,11 @@
 
     iget-object v1, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$2;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
 
+    # invokes: Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->onRealtimeStepsChanged(I)V
+    invoke-static {v1, v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$200(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;I)V
+
+    iget-object v1, p0, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile$2;->this$0:Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;
+
     # getter for: Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->miliCallback:Lcom/xiaomi/hm/bleservice/profile/MiLiCallback;
     invoke-static {v1}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$000(Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;)Lcom/xiaomi/hm/bleservice/profile/MiLiCallback;
 
@@ -107,12 +91,14 @@
 
     invoke-virtual {v1, v0}, Lcom/xiaomi/hm/bleservice/profile/MiLiCallback;->sendOnRealtimeStepsChangedMsg(I)V
 
-    goto :goto_0
+    :cond_0
+    :goto_1
+    return-void
 
-    :cond_2
+    :cond_1
     const/4 v1, 0x4
 
-    if-ne v0, v1, :cond_3
+    if-ne v0, v1, :cond_2
 
     aget-byte v0, p1, v2
 
@@ -144,9 +130,9 @@
 
     or-int/2addr v0, v1
 
-    goto :goto_1
+    goto :goto_0
 
-    :cond_3
+    :cond_2
     # getter for: Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/xiaomi/hm/bleservice/profile/MiLiProfile;->access$100()Ljava/lang/String;
 
@@ -172,5 +158,5 @@
 
     invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/x;->c(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_0
+    goto :goto_1
 .end method

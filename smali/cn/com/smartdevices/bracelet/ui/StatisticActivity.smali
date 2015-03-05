@@ -2,6 +2,10 @@
 .super Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;
 
 
+# instance fields
+.field private a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+
+
 # direct methods
 .method public constructor <init>()V
     .locals 0
@@ -22,7 +26,7 @@
 .end method
 
 .method protected onCreate(Landroid/os/Bundle;)V
-    .locals 4
+    .locals 3
 
     invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onCreate(Landroid/os/Bundle;)V
 
@@ -41,31 +45,85 @@
     move-result-object v0
 
     :cond_0
-    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/StatisticActivity;->getFragmentManager()Landroid/app/FragmentManager;
+    const-class v1, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/app/FragmentManager;->beginTransaction()Landroid/app/FragmentTransaction;
-
-    move-result-object v1
-
-    const v2, 0x1020002
-
-    const-class v3, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
-
-    invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {p0, v3, v0}, Landroid/app/Fragment;->instantiate(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/app/Fragment;
+    invoke-static {p0, v1, v0}, Landroid/app/Fragment;->instantiate(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Landroid/app/Fragment;
 
     move-result-object v0
 
-    invoke-virtual {v1, v2, v0}, Landroid/app/FragmentTransaction;->add(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
+    check-cast v0, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
 
-    invoke-virtual {v1}, Landroid/app/FragmentTransaction;->commit()I
+    iput-object v0, p0, Lcn/com/smartdevices/bracelet/ui/StatisticActivity;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/StatisticActivity;->getFragmentManager()Landroid/app/FragmentManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/FragmentManager;->beginTransaction()Landroid/app/FragmentTransaction;
+
+    move-result-object v0
+
+    const v1, 0x1020002
+
+    iget-object v2, p0, Lcn/com/smartdevices/bracelet/ui/StatisticActivity;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+
+    invoke-virtual {v0, v1, v2}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
+
+    invoke-virtual {v0}, Landroid/app/FragmentTransaction;->commit()I
 
     return-void
+.end method
+
+.method public onKeyDown(ILandroid/view/KeyEvent;)Z
+    .locals 2
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p2}, Landroid/view/KeyEvent;->getAction()I
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    packed-switch p1, :pswitch_data_0
+
+    :cond_0
+    invoke-super {p0, p1, p2}, Lcn/com/smartdevices/bracelet/ui/SystemBarTintActivity;->onKeyDown(ILandroid/view/KeyEvent;)Z
+
+    move-result v0
+
+    :goto_0
+    return v0
+
+    :pswitch_0
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/StatisticActivity;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+
+    iget-object v1, v1, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->b:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->e()V
+
+    goto :goto_0
+
+    :pswitch_1
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/StatisticActivity;->a:Lcn/com/smartdevices/bracelet/ui/StatisticFragment;
+
+    iget-object v1, v1, Lcn/com/smartdevices/bracelet/ui/StatisticFragment;->b:Lcn/com/smartdevices/bracelet/chart/StatisticChartView;
+
+    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/chart/StatisticChartView;->f()V
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x15
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method
 
 .method protected onPause()V

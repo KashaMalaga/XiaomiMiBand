@@ -1381,10 +1381,6 @@
 
     sput-object v0, Lcn/com/smartdevices/bracelet/config/b;->C:Ljava/lang/String;
 
-    sget-boolean v0, Lcn/com/smartdevices/bracelet/config/b;->r:Z
-
-    if-eqz v0, :cond_3
-
     invoke-static {p1}, Lcn/com/smartdevices/bracelet/g/a;->b(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
@@ -1411,7 +1407,6 @@
     sput-object v0, Lcn/com/smartdevices/bracelet/config/b;->E:Ljava/lang/String;
 
     :cond_1
-    :goto_2
     return-void
 
     :catch_0
@@ -1424,18 +1419,11 @@
     goto :goto_0
 
     :cond_2
-    const-string v0, "http://hmapi.app-xae.xiaomi.com/"
-
-    sput-object v0, Lcn/com/smartdevices/bracelet/config/b;->F:Ljava/lang/String;
-
-    goto :goto_1
-
-    :cond_3
     const-string v0, "https://hm.xiaomi.com/"
 
     sput-object v0, Lcn/com/smartdevices/bracelet/config/b;->F:Ljava/lang/String;
 
-    goto :goto_2
+    goto :goto_1
 .end method
 
 .method public static d()Ljava/lang/String;

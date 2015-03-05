@@ -38,7 +38,7 @@
 
     iget-object v2, p0, Lcn/com/smartdevices/bracelet/tag/TagActivity;->c:Landroid/widget/TextView;
 
-    const v3, 0x7f08036b
+    const v3, 0x7f080379
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(I)V
 
@@ -70,7 +70,7 @@
     :pswitch_0
     const/4 v0, 0x1
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->l(Z)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/z;->k(Z)V
 
     invoke-direct {p0}, Lcn/com/smartdevices/bracelet/tag/TagActivity;->a()V
 
@@ -85,7 +85,7 @@
 .method public onBackPressed()V
     .locals 1
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->af()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->ae()Z
 
     move-result v0
 
@@ -180,7 +180,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->af()Z
+    invoke-static {}, Lcn/com/smartdevices/bracelet/z;->ae()Z
 
     move-result v1
 
@@ -188,7 +188,7 @@
 
     iget-object v1, p0, Lcn/com/smartdevices/bracelet/tag/TagActivity;->c:Landroid/widget/TextView;
 
-    const v2, 0x7f080377
+    const v2, 0x7f080385
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 

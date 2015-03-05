@@ -6,14 +6,18 @@
 
 
 # instance fields
-.field final synthetic a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
+.field final synthetic a:Landroid/graphics/Bitmap;
+
+.field final synthetic b:Lcn/com/smartdevices/bracelet/gps/ui/at;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/gps/ui/at;Landroid/graphics/Bitmap;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/au;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/gps/ui/au;->b:Lcn/com/smartdevices/bracelet/gps/ui/at;
+
+    iput-object p2, p0, Lcn/com/smartdevices/bracelet/gps/ui/au;->a:Landroid/graphics/Bitmap;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,15 +29,17 @@
 .method public run()V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/au;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/au;->b:Lcn/com/smartdevices/bracelet/gps/ui/at;
 
-    const-string v1, "#00000000"
+    iget-object v0, v0, Lcn/com/smartdevices/bracelet/gps/ui/at;->a:Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;
 
-    invoke-static {v1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;->c(Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;)Landroid/widget/ImageView;
 
-    move-result v1
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/WatermarkActivity;->applyStatusBarTint(I)V
+    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/au;->a:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
     return-void
 .end method

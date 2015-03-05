@@ -6,18 +6,14 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/xiaomi/hm/bleservice/a;
-
-.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
+.field final synthetic a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;Lcom/xiaomi/hm/bleservice/a;)V
+.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;)V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cF;->b:Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
-
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/cF;->a:Lcom/xiaomi/hm/bleservice/a;
+    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/cF;->a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,13 +25,15 @@
 .method public run()V
     .locals 2
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cF;->b:Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cF;->a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/cF;->a:Lcom/xiaomi/hm/bleservice/a;
+    const/4 v1, -0x1
 
-    iget-object v1, v1, Lcom/xiaomi/hm/bleservice/a;->n:Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;->setResult(I)V
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/ui/SearchWeightScaleActivity;->a(Lcom/xiaomi/hm/bleservice/profile/WeightAdvData;)V
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/cF;->a:Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/SearchSingleBraceletActivity;->finish()V
 
     return-void
 .end method

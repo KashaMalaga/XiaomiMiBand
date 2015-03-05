@@ -1,44 +1,126 @@
-.class enum Lcom/g/a/c;
-.super Lcom/g/a/b;
+.class Lcom/g/a/C;
+.super Ljava/lang/Object;
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field final synthetic a:Lcom/g/a/A;
+
+.field private b:Landroid/view/View;
+
+.field private c:Ljava/lang/String;
+
+.field private d:I
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/String;II)V
-    .locals 1
+.method public constructor <init>(Lcom/g/a/A;Landroid/view/View;Ljava/lang/String;I)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lcom/g/a/C;->a:Lcom/g/a/A;
 
-    invoke-direct {p0, p1, p2, p3, v0}, Lcom/g/a/b;-><init>(Ljava/lang/String;IILcom/g/a/b;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lcom/g/a/C;->b:Landroid/view/View;
+
+    iput-object p3, p0, Lcom/g/a/C;->c:Ljava/lang/String;
+
+    iput p4, p0, Lcom/g/a/C;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public toString()Ljava/lang/String;
-    .locals 5
+.method public run()V
+    .locals 4
 
-    sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
+    iget-object v0, p0, Lcom/g/a/C;->b:Landroid/view/View;
 
-    const-string v1, "Male:%d"
+    if-eqz v0, :cond_2
 
-    const/4 v2, 0x1
+    iget-object v0, p0, Lcom/g/a/C;->b:Landroid/view/View;
 
-    new-array v2, v2, [Ljava/lang/Object;
+    instance-of v0, v0, Landroid/webkit/WebView;
 
-    const/4 v3, 0x0
+    if-eqz v0, :cond_0
 
-    iget v4, p0, Lcom/g/a/c;->d:I
+    iget-object v1, p0, Lcom/g/a/C;->a:Lcom/g/a/A;
 
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v0, p0, Lcom/g/a/C;->b:Landroid/view/View;
 
-    move-result-object v4
+    check-cast v0, Landroid/webkit/WebView;
 
-    aput-object v4, v2, v3
-
-    invoke-static {v0, v1, v2}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v1, v0}, Lcom/g/a/A;->a(Lcom/g/a/A;Landroid/webkit/WebView;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    return-object v0
+    :goto_0
+    if-eqz v0, :cond_1
+
+    iget-object v1, p0, Lcom/g/a/C;->a:Lcom/g/a/A;
+
+    invoke-static {v1}, Lcom/g/a/A;->d(Lcom/g/a/A;)Lcom/g/a/B;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/g/a/C;->c:Ljava/lang/String;
+
+    iget v3, p0, Lcom/g/a/C;->d:I
+
+    invoke-virtual {v1, v0, v2, v3}, Lcom/g/a/B;->a(Landroid/graphics/Bitmap;Ljava/lang/String;I)V
+
+    :goto_1
+    return-void
+
+    :cond_0
+    iget-object v0, p0, Lcom/g/a/C;->a:Lcom/g/a/A;
+
+    iget-object v1, p0, Lcom/g/a/C;->b:Landroid/view/View;
+
+    invoke-static {v0, v1}, Lcom/g/a/A;->a(Lcom/g/a/A;Landroid/view/View;)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_1
+    const-string v0, "Robotium"
+
+    const-string v1, "NULL BITMAP!!"
+
+    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_2
+    iget-object v0, p0, Lcom/g/a/C;->a:Lcom/g/a/A;
+
+    invoke-static {v0}, Lcom/g/a/A;->e(Lcom/g/a/A;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    monitor-enter v1
+
+    :try_start_0
+    iget-object v0, p0, Lcom/g/a/C;->a:Lcom/g/a/A;
+
+    invoke-static {v0}, Lcom/g/a/A;->e(Lcom/g/a/A;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->notify()V
+
+    monitor-exit v1
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw v0
 .end method

@@ -34,7 +34,7 @@
 
     move-result-object v0
 
-    const-class v1, Lcn/com/smartdevices/bracelet/ui/bW;
+    const-class v1, Lcn/com/smartdevices/bracelet/ui/bZ;
 
     invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -44,7 +44,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcn/com/smartdevices/bracelet/ui/bW;
+    check-cast v0, Lcn/com/smartdevices/bracelet/ui/bZ;
 
     const-string v1, "PersonInfoActivity"
 
@@ -70,7 +70,7 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/bW;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-virtual {v0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/bZ;->onActivityResult(IILandroid/content/Intent;)V
 
     :cond_0
     return-void
@@ -91,11 +91,11 @@
 
     const v1, 0x1020002
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/ui/bW;->c()Landroid/app/Fragment;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/ui/bZ;->c()Landroid/app/Fragment;
 
     move-result-object v2
 
-    const-class v3, Lcn/com/smartdevices/bracelet/ui/bW;
+    const-class v3, Lcn/com/smartdevices/bracelet/ui/bZ;
 
     invoke-virtual {v3}, Ljava/lang/Class;->getName()Ljava/lang/String;
 

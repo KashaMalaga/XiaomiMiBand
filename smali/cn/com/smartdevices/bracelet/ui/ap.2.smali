@@ -264,7 +264,7 @@
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ap;->c:Lcn/com/smartdevices/bracelet/ui/al;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/al;->j(Lcn/com/smartdevices/bracelet/ui/al;)Z
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/al;->l(Lcn/com/smartdevices/bracelet/ui/al;)Z
 
     move-result v0
 
@@ -277,7 +277,7 @@
     :cond_0
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ap;->c:Lcn/com/smartdevices/bracelet/ui/al;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/al;->k(Lcn/com/smartdevices/bracelet/ui/al;)Z
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/al;->m(Lcn/com/smartdevices/bracelet/ui/al;)Z
 
     move-result v0
 
@@ -290,7 +290,7 @@
     :cond_1
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/ap;->c:Lcn/com/smartdevices/bracelet/ui/al;
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/al;->l(Lcn/com/smartdevices/bracelet/ui/al;)Z
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/ui/al;->n(Lcn/com/smartdevices/bracelet/ui/al;)Z
 
     move-result v0
 

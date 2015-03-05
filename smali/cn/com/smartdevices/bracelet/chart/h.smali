@@ -73,7 +73,7 @@
 
     move-result v1
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/z;->k(Lcn/com/smartdevices/bracelet/chart/z;)F
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/z;->l(Lcn/com/smartdevices/bracelet/chart/z;)F
 
     move-result v3
 
@@ -90,11 +90,11 @@
     if-lez v4, :cond_2
 
     :cond_1
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/z;->h(Lcn/com/smartdevices/bracelet/chart/z;)I
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/z;->i(Lcn/com/smartdevices/bracelet/chart/z;)I
 
     move-result v1
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/z;->g(Lcn/com/smartdevices/bracelet/chart/z;)F
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/z;->h(Lcn/com/smartdevices/bracelet/chart/z;)F
 
     move-result v0
 
@@ -163,11 +163,11 @@
 
     if-ltz v4, :cond_4
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/z;->h(Lcn/com/smartdevices/bracelet/chart/z;)I
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/z;->i(Lcn/com/smartdevices/bracelet/chart/z;)I
 
     move-result v1
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/z;->g(Lcn/com/smartdevices/bracelet/chart/z;)F
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/z;->h(Lcn/com/smartdevices/bracelet/chart/z;)F
 
     move-result v0
 
@@ -191,11 +191,11 @@
 
     if-nez v2, :cond_5
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/z;->l(Lcn/com/smartdevices/bracelet/chart/z;)I
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/z;->m(Lcn/com/smartdevices/bracelet/chart/z;)I
 
     move-result v1
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/z;->m(Lcn/com/smartdevices/bracelet/chart/z;)F
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/z;->n(Lcn/com/smartdevices/bracelet/chart/z;)F
 
     move-result v0
 
@@ -204,11 +204,11 @@
     :cond_5
     div-float v2, v1, v3
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/z;->l(Lcn/com/smartdevices/bracelet/chart/z;)I
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/z;->m(Lcn/com/smartdevices/bracelet/chart/z;)I
 
     move-result v1
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/z;->h(Lcn/com/smartdevices/bracelet/chart/z;)I
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/z;->i(Lcn/com/smartdevices/bracelet/chart/z;)I
 
     move-result v3
 
@@ -216,15 +216,15 @@
 
     move-result v1
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/z;->m(Lcn/com/smartdevices/bracelet/chart/z;)F
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/z;->n(Lcn/com/smartdevices/bracelet/chart/z;)F
 
     move-result v3
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/z;->m(Lcn/com/smartdevices/bracelet/chart/z;)F
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/z;->n(Lcn/com/smartdevices/bracelet/chart/z;)F
 
     move-result v4
 
-    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/z;->g(Lcn/com/smartdevices/bracelet/chart/z;)F
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/chart/z;->h(Lcn/com/smartdevices/bracelet/chart/z;)F
 
     move-result v0
 

@@ -54,7 +54,7 @@
 
     move-result-object v2
 
-    const-string v3, "  content = "
+    const-string v3, ",content = "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -64,7 +64,7 @@
 
     move-result-object v0
 
-    const-string v2, ", type = "
+    const-string v2, ",type = "
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -92,7 +92,7 @@
 .end method
 
 .method public onSuccess(I[Lorg/apache/http/Header;[B)V
-    .locals 4
+    .locals 7
 
     new-instance v1, Ljava/util/ArrayList;
 
@@ -109,6 +109,56 @@
     move-result-object v2
 
     const/4 v0, 0x0
+
+    const-string v3, "Sync"
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v5, "syncSportDataFromServer w.success = "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/k/i;->c()Z
+
+    move-result v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, ",type = "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    iget v5, p0, Lcn/com/smartdevices/bracelet/lab/sync/w;->a:I
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v5, ",trackId = "
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    iget-wide v5, p0, Lcn/com/smartdevices/bracelet/lab/sync/w;->d:J
+
+    invoke-virtual {v4, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Lcn/com/smartdevices/bracelet/x;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v2}, Lcn/com/smartdevices/bracelet/k/i;->c()Z
 
@@ -159,7 +209,7 @@
 
     move-result-object v0
 
-    const-string v2, ", type = "
+    const-string v2, ",type = "
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

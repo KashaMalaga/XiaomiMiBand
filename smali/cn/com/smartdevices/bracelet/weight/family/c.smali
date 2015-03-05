@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Lcn/com/smartdevices/bracelet/weight/C;
+.implements Lcn/com/smartdevices/bracelet/weight/D;
 
 
 # instance fields
@@ -45,7 +45,7 @@
 
     invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/weight/a;->a(Landroid/content/Context;)Z
 
-    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/m;->a()Lcn/com/smartdevices/bracelet/weight/m;
+    invoke-static {}, Lcn/com/smartdevices/bracelet/weight/o;->a()Lcn/com/smartdevices/bracelet/weight/o;
 
     move-result-object v0
 
@@ -57,7 +57,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/weight/m;->b(Landroid/content/Context;)Z
+    invoke-virtual {v0, v1}, Lcn/com/smartdevices/bracelet/weight/o;->b(Landroid/content/Context;)Z
 
     iget-object v0, p0, Lcn/com/smartdevices/bracelet/weight/family/c;->a:Lcn/com/smartdevices/bracelet/weight/family/b;
 

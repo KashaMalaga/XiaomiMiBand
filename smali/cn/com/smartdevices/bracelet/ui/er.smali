@@ -1,83 +1,96 @@
-.class Lcn/com/smartdevices/bracelet/ui/er;
-.super Ljava/lang/Object;
+.class public Lcn/com/smartdevices/bracelet/ui/er;
+.super Lcn/com/smartdevices/bracelet/ui/W;
 
 # interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.implements Landroid/view/View$OnClickListener;
 
 
-# instance fields
-.field final synthetic a:Landroid/widget/TextView;
-
-.field final synthetic b:Lcn/com/smartdevices/bracelet/ui/ep;
+# static fields
+.field private static final a:Ljava/lang/String; = "UseLazyDaysFragment"
 
 
 # direct methods
-.method constructor <init>(Lcn/com/smartdevices/bracelet/ui/ep;Landroid/widget/TextView;)V
+.method public constructor <init>()V
     .locals 0
 
-    iput-object p1, p0, Lcn/com/smartdevices/bracelet/ui/er;->b:Lcn/com/smartdevices/bracelet/ui/ep;
-
-    iput-object p2, p0, Lcn/com/smartdevices/bracelet/ui/er;->a:Landroid/widget/TextView;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcn/com/smartdevices/bracelet/ui/W;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .locals 3
+.method protected a()I
+    .locals 1
 
-    if-eqz p2, :cond_0
+    const v0, 0x7f030051
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/er;->a:Landroid/widget/TextView;
+    return v0
+.end method
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/er;->b:Lcn/com/smartdevices/bracelet/ui/ep;
+.method protected c()V
+    .locals 2
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/ui/ep;->getResources()Landroid/content/res/Resources;
+    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/W;->c()V
 
-    move-result-object v1
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/er;->dismiss()V
 
-    const v2, 0x7f090010
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/er;->getActivity()Landroid/app/Activity;
 
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+    move-result-object v0
 
-    move-result v1
+    const-string v1, "confirm_manual_lazy_day"
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-static {v0, v1}, Lcn/com/smartdevices/bracelet/D;->b(Landroid/content/Context;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/er;->a:Landroid/widget/TextView;
+    new-instance v0, Lcn/com/smartdevices/bracelet/model/SportDay;
 
-    const/4 v1, 0x1
+    invoke-direct {v0}, Lcn/com/smartdevices/bracelet/model/SportDay;-><init>()V
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setClickable(Z)V
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/E;->a(Lcn/com/smartdevices/bracelet/model/SportDay;)Ljava/util/ArrayList;
 
-    :goto_0
-    return-void
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/er;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {v0}, Lcn/com/smartdevices/bracelet/E;->u(Landroid/content/Context;)V
+
+    check-cast v0, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/ui/MainUIActivity;->m()V
 
     :cond_0
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/er;->a:Landroid/widget/TextView;
+    return-void
+.end method
 
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/ui/er;->b:Lcn/com/smartdevices/bracelet/ui/ep;
+.method protected d()V
+    .locals 0
 
-    invoke-virtual {v1}, Lcn/com/smartdevices/bracelet/ui/ep;->getResources()Landroid/content/res/Resources;
+    invoke-super {p0}, Lcn/com/smartdevices/bracelet/ui/W;->d()V
 
-    move-result-object v1
+    invoke-virtual {p0}, Lcn/com/smartdevices/bracelet/ui/er;->dismiss()V
 
-    const v2, 0x7f090011
+    return-void
+.end method
 
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+.method public onCreate(Landroid/os/Bundle;)V
+    .locals 0
 
-    move-result v1
+    invoke-super {p0, p1}, Lcn/com/smartdevices/bracelet/ui/W;->onCreate(Landroid/os/Bundle;)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
+    return-void
+.end method
 
-    iget-object v0, p0, Lcn/com/smartdevices/bracelet/ui/er;->a:Landroid/widget/TextView;
+.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    .locals 1
 
-    const/4 v1, 0x0
+    invoke-super {p0, p1, p2, p3}, Lcn/com/smartdevices/bracelet/ui/W;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setClickable(Z)V
+    move-result-object v0
 
-    goto :goto_0
+    return-object v0
 .end method

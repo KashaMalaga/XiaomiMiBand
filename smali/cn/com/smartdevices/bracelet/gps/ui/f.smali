@@ -2,7 +2,7 @@
 .super Ljava/lang/Object;
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemLongClickListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
@@ -22,66 +22,12 @@
 
 
 # virtual methods
-.method public onItemLongClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)Z
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)Z"
-        }
-    .end annotation
+.method public onClick(Landroid/view/View;)V
+    .locals 1
 
-    const/4 v3, 0x1
+    iget-object v0, p0, Lcn/com/smartdevices/bracelet/gps/ui/F;->a:Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;
 
-    const v0, 0x7f07002e
+    invoke-virtual {v0}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->finish()V
 
-    invoke-virtual {p2, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    if-gez v1, :cond_1
-
-    :cond_0
-    :goto_0
-    return v3
-
-    :cond_1
-    const v0, 0x7f07002d
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    iget-object v2, p0, Lcn/com/smartdevices/bracelet/gps/ui/F;->a:Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;
-
-    invoke-static {v2}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->c(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;)Lcn/com/smartdevices/bracelet/gps/ui/N;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0, v1}, Lcn/com/smartdevices/bracelet/gps/ui/N;->a(II)Lcn/com/smartdevices/bracelet/gps/services/v;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v1, p0, Lcn/com/smartdevices/bracelet/gps/ui/F;->a:Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;
-
-    invoke-static {v1, v0}, Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;->a(Lcn/com/smartdevices/bracelet/gps/ui/HistoryActivity;Lcn/com/smartdevices/bracelet/gps/services/v;)V
-
-    goto :goto_0
+    return-void
 .end method
